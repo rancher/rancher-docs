@@ -3,7 +3,7 @@
 module.exports = {
   title: 'Rancher Manager',
   tagline: '',
-  url: 'https://rancher.com/docs/rancher',
+  url: 'http://docs.ranchermanager.rancher.io/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -90,7 +90,7 @@ module.exports = {
           /* other docs plugin options */
           sidebarPath: require.resolve('./sidebars.js'),
           showLastUpdateTime: true,
-          editUrl: 'https://github.com/rancher/docs/edit/master/',
+          editUrl: 'https://github.com/rancher/rancher-docs/edit/main/',
           lastVersion: 'current',
           versions: {
             current: {
