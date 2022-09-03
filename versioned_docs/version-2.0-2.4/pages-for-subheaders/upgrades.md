@@ -26,7 +26,7 @@ For the instructions to upgrade Rancher installed with Docker, refer to [this pa
 
 To upgrade the components in your Kubernetes cluster, or the definition of the [Kubernetes services](https://rancher.com/docs/rke/latest/en/config-options/services/) or [add-ons](https://rancher.com/docs/rke/latest/en/config-options/add-ons/), refer to the [upgrade documentation for RKE](https://rancher.com/docs/rke/latest/en/upgrades/), the Rancher Kubernetes Engine.
 
-If you installed Rancher using the RKE Add-on yaml, follow the directions to [migrate or upgrade](upgrades/upgrades/migrating-from-rke-add-on).
+If you installed Rancher using the RKE Add-on yaml, follow the directions to [migrate or upgrade](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/migrating-from-rke-add-on.md).
 
 - [Prerequisites](#prerequisites)
 - [Upgrade Outline](#upgrade-outline)
@@ -55,7 +55,7 @@ Note that upgrades _to_ or _from_ any chart in the [rancher-alpha repository](..
 
 The upgrade instructions assume you are using Helm 3.
 
-For migration of installs started with Helm 2, refer to the official [Helm 2 to 3 migration docs.](https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/) The [Helm 2 upgrade page here](installation/upgrades-rollbacks/upgrades/ha/helm2)provides a copy of the older upgrade instructions that used Helm 2, and it is intended to be used if upgrading to Helm 3 is not feasible.
+For migration of installs started with Helm 2, refer to the official [Helm 2 to 3 migration docs.](https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/) The [Helm 2 upgrade page here](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/helm2.md)provides a copy of the older upgrade instructions that used Helm 2, and it is intended to be used if upgrading to Helm 3 is not feasible.
 
 ### For air gap installs: Populate private registry
 
@@ -67,7 +67,7 @@ If you are upgrading Rancher from v2.x to v2.3+, and you are using external TLS 
 
 ### For upgrades with cert-manager older than 0.8.0
 
-[Let's Encrypt will be blocking cert-manager instances older than 0.8.0 starting November 1st 2019.](https://community.letsencrypt.org/t/blocking-old-cert-manager-versions/98753) Upgrade cert-manager to the latest version by following [these instructions.](installation/options/upgrading-cert-manager)
+[Let's Encrypt will be blocking cert-manager instances older than 0.8.0 starting November 1st 2019.](https://community.letsencrypt.org/t/blocking-old-cert-manager-versions/98753) Upgrade cert-manager to the latest version by following [these instructions.](../getting-started/installation-and-upgrade/resources/upgrade-cert-manager.md)
 
 # Upgrade Outline
 
@@ -285,4 +285,4 @@ Upgrading from v2.0.7 or earlier | Rancher introduced the `system` project, whic
 
 Please use the Rancher helm chart to install Rancher on a Kubernetes cluster. For details, see the [Kubernetes Install](install-upgrade-on-a-kubernetes-cluster.md).
 
-If you are currently using the RKE add-on install method, see [Migrating from a RKE add-on install](upgrades/upgrades/migrating-from-rke-add-on/) for details on how to move to using the helm chart.
+If you are currently using the RKE add-on install method, see [Migrating from a RKE add-on install](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/migrating-from-rke-add-on.md) for details on how to move to using the helm chart.

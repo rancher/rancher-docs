@@ -23,8 +23,8 @@ When installing Rancher, there are several advanced options that can be enabled 
 
 | Advanced Option                                                                                                         | Available as of |
 | ----------------------------------------------------------------------------------------------------------------------- | --------------- |
-| [Custom CA Certificate](installation/options/custom-ca-root-certificate/)                 | v2.0.0          |
-| [API Audit Log](installation/options/api-audit-log/)                                      | v2.0.0          |
-| [TLS Settings](installation/options/tls-settings/)                                        | v2.1.7          |
-| [etcd configuration](installation/options/etcd/)                                          | v2.2.0          |
-| [Local System Charts for Air Gap Installations](installation/options/local-system-charts) | v2.3.0          |
+| [Custom CA Certificate](../getting-started/installation-and-upgrade/resources/custom-ca-root-certificates.md)                 | v2.0.0          |
+| [API Audit Log](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/enable-api-audit-log.md)                                      | v2.0.0          |
+| [TLS Settings](../reference-guides/installation-references/tls-settings.md)                                        | v2.1.7          |
+| [etcd configuration](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/tune-etcd-for-large-installs.md)                                          | v2.2.0          |
+| [Local System Charts for Air Gap Installations](../getting-started/installation-and-upgrade/resources/local-system-charts.md) | v2.3.0          |

@@ -60,9 +60,9 @@ Out of the box, Rancher is compatible with the following network providers:
 
 **Notes on Canal:**
 
-In v2.0.0 - v2.0.4 and v2.0.6, this was the default option for these clusters was Canal with network isolation. With the network isolation automatically enabled, it prevented any pod communication between [projects](k8s-in-rancher/projects-and-namespaces/).
+In v2.0.0 - v2.0.4 and v2.0.6, this was the default option for these clusters was Canal with network isolation. With the network isolation automatically enabled, it prevented any pod communication between [projects](../../../how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces.md).
 
-As of v2.0.7, if you use Canal, you also have the option of using **Project Network Isolation**, which will enable or disable communication between pods in different [projects](k8s-in-rancher/projects-and-namespaces/).
+As of v2.0.7, if you use Canal, you also have the option of using **Project Network Isolation**, which will enable or disable communication between pods in different [projects](../../../how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces.md).
 
 >**Attention Rancher v2.0.0 - v2.0.6 Users**
 >
@@ -79,7 +79,7 @@ When Weave is selected as network provider, Rancher will automatically enable en
 
 ### Kubernetes Cloud Providers
 
-You can configure a [Kubernetes cloud provider](cluster-provisioning/rke-clusters/options/cloud-providers). If you want to use [volumes and storage](k8s-in-rancher/volumes-and-storage/) in Kubernetes, typically you must select the specific cloud provider in order to use it. For example, if you want to use Amazon EBS, you would need to select the `aws` cloud provider.
+You can configure a [Kubernetes cloud provider](../../../pages-for-subheaders/set-up-cloud-providers.md). If you want to use [volumes and storage](../../../pages-for-subheaders/create-kubernetes-persistent-storage.md) in Kubernetes, typically you must select the specific cloud provider in order to use it. For example, if you want to use Amazon EBS, you would need to select the `aws` cloud provider.
 
 >**Note:** If the cloud provider you want to use is not listed as an option, you will need to use the [config file option](#cluster-config-file) to configure the cloud provider. Please reference the [RKE cloud provider documentation](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/) on how to configure the cloud provider.
 
@@ -371,7 +371,7 @@ See [Docker Root Directory](#docker-root-directory).
 
 ### enable_cluster_monitoring
 
-Option to enable or disable [Cluster Monitoring](monitoring-alerting/legacy/monitoring/cluster-monitoring/).
+Option to enable or disable [Cluster Monitoring](../../../pages-for-subheaders/cluster-monitoring.md).
 
 ### enable_network_policy
 

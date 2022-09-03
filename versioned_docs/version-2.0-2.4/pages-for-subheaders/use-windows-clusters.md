@@ -97,7 +97,7 @@ Windows requires that containers must be built on the same Windows Server versio
 
 ### Cloud Provider Specific Requirements
 
-If you set a Kubernetes cloud provider in your cluster, some additional steps are required. You might want to set a cloud provider if you want to want to leverage a cloud provider's capabilities, for example, to automatically provision storage, load balancers, or other infrastructure for your cluster. Refer to [this page](cluster-provisioning/rke-clusters/options/cloud-providers/) for details on how to configure a cloud provider cluster of nodes that meet the prerequisites.
+If you set a Kubernetes cloud provider in your cluster, some additional steps are required. You might want to set a cloud provider if you want to want to leverage a cloud provider's capabilities, for example, to automatically provision storage, load balancers, or other infrastructure for your cluster. Refer to [this page](../pages-for-subheaders/set-up-cloud-providers.md) for details on how to configure a cloud provider cluster of nodes that meet the prerequisites.
 
 If you are using the GCE (Google Compute Engine) cloud provider, you must do the following:
 
@@ -142,7 +142,7 @@ You will provision three nodes:
 | Node 2 | Linux (Ubuntu Server 18.04 recommended)                      |
 | Node 3 | Windows (Windows Server core version 1809 or above required) |
 
-If your nodes are hosted by a **Cloud Provider** and you want automation support such as loadbalancers or persistent storage devices, your nodes have additional configuration requirements. For details, see [Selecting Cloud Providers.](cluster-provisioning/rke-clusters/options/cloud-providers)
+If your nodes are hosted by a **Cloud Provider** and you want automation support such as loadbalancers or persistent storage devices, your nodes have additional configuration requirements. For details, see [Selecting Cloud Providers.](../pages-for-subheaders/set-up-cloud-providers.md)
 
 # 2. Create the Cluster on Existing Nodes
 
@@ -171,18 +171,18 @@ The first node in your cluster should be a Linux host has both the **Control Pla
 
 1. In the **Node Operating System** section, click **Linux**.
 1. In the **Node Role** section, choose at least **etcd** and **Control Plane**. We recommend selecting all three.
-1. Optional: If you click **Show advanced options,** you can customize the settings for the [Rancher agent](admin-settings/agent-options/) and [node labels.](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+1. Optional: If you click **Show advanced options,** you can customize the settings for the [Rancher agent](../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) and [node labels.](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
 1. Copy the command displayed on the screen to your clipboard.
 1. SSH into your Linux host and run the command that you copied to your clipboard.
 1. When you are finished provisioning your Linux node(s), select **Done**.
 
-**Result:** 
+**Result:**
 
 Your cluster is created and assigned a state of **Provisioning.** Rancher is standing up your cluster.
 
 You can access your cluster after its state is updated to **Active.**
 
-**Active** clusters are assigned two Projects: 
+**Active** clusters are assigned two Projects:
 
 - `Default`, containing the `default` namespace
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces

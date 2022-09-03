@@ -45,7 +45,7 @@ Run the command below and check the following:
 
 ```
 kubectl get nodes -o wide
-``` 
+```
 
 Example output:
 
@@ -266,6 +266,6 @@ kubectl get pods --all-namespaces -o go-template='{{range .items}}{{if eq .statu
 
 ### Job does not complete
 
-If you have enabled Istio, and you are having issues with a Job you deployed not completing, you will need to add an annotation to your pod using [these steps.](istio/v2.3.x-v2.4.x/setup/enable-istio-in-namespace/#excluding-workloads-from-being-injected-with-the-istio-sidecar)
+If you have enabled Istio, and you are having issues with a Job you deployed not completing, you will need to add an annotation to your pod using [these steps.](../../how-to-guides/advanced-user-guides/istio-setup-guide/enable-istio-in-namespace.md#excluding-workloads-from-being-injected-with-the-istio-sidecar)
 
 Since Istio Sidecars run indefinitely, a Job cannot be considered complete even after its task has completed. This is a temporary workaround and will disable Istio for any traffic to/from the annotated Pod. Keep in mind this may not allow you to continue to use a Job for integration testing, as the Job will not have access to the service mesh.
