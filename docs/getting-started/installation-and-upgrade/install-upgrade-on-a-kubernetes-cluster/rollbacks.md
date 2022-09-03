@@ -39,13 +39,13 @@ A restore is performed by creating a Restore custom resource.
 1. Go to the local cluster and click **Explore**.
 1. In the left navigation bar, click **Rancher Backups > Restore**.
 	:::note
-	
+
 	If the Rancher Backups app is not visible, you will need to install it from the Charts page in **Apps & Marketplace**. Refer [here](../../../pages-for-subheaders/helm-charts-in-rancher.md#charts) for more information.
 
 	:::
-	
+
 1. Click **Create**.
-1. Create the Restore with the form or with YAML. For help creating the Restore resource using the online form, refer to the [configuration reference](../../../reference-guides/backup-restore-configuration/restore-configuration.md) and to the [examples.](../../../reference-guides/backup-restore-configuration/examples.md) 
+1. Create the Restore with the form or with YAML. For help creating the Restore resource using the online form, refer to the [configuration reference](../../../reference-guides/backup-restore-configuration/restore-configuration.md) and to the [examples.](../../../reference-guides/backup-restore-configuration/examples.md)
 1. To use the YAML editor, you can click **Create > Create from YAML.** Enter the Restore YAML. The following is an example Restore custom resource:
 
     ```yaml
@@ -65,7 +65,7 @@ A restore is performed by creating a Restore custom resource.
 	      region: us-west-2
 	      endpoint: s3.us-west-2.amazonaws.com
       ```
-	For help configuring the Restore, refer to the [configuration reference](../../../reference-guides/backup-restore-configuration/restore-configuration.md) and to the [examples.](../../../reference-guides/backup-restore-configuration/examples.md) 
+	For help configuring the Restore, refer to the [configuration reference](../../../reference-guides/backup-restore-configuration/restore-configuration.md) and to the [examples.](../../../reference-guides/backup-restore-configuration/examples.md)
 
 1. Click **Create**.
 
@@ -104,7 +104,7 @@ helm rollback rancher 3 -n cattle-system
 
 # Rolling Back to Rancher v2.2-v2.4+
 
-To roll back to Rancher before v2.5, follow the procedure detailed here: [Restoring Backups — Kubernetes installs]({{<baseurl>}}/rancher/v2.0-v2.4/en/backups/restore/rke-restore/) Restoring a snapshot of the Rancher server cluster will revert Rancher to the version and state at the time of the snapshot.
+To roll back to Rancher before v2.5, follow the procedure detailed here: [Restoring Backups — Kubernetes installs](../../../../versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md) Restoring a snapshot of the Rancher server cluster will revert Rancher to the version and state at the time of the snapshot.
 
 For information on how to roll back Rancher installed with Docker, refer to [this page.](../other-installation-methods/rancher-on-a-single-node-with-docker/roll-back-docker-installed-rancher.md)
 
@@ -116,4 +116,4 @@ Managed clusters are authoritative for their state. This means restoring the Ran
 
 # Rolling Back to Rancher v2.0-v2.1
 
-Rolling back to Rancher v2.0-v2.1 is no longer supported. The instructions for rolling back to these versions are preserved [here]({{<baseurl>}}/rancher/v2.0-v2.4/en/backups/restore/rke-restore/v2.0-v2.1) and are intended to be used only in cases where upgrading to Rancher v2.2+ is not feasible.
+Rolling back to Rancher v2.0-v2.1 is no longer supported. The instructions for rolling back to these versions are preserved [here](../../../../versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup/roll-back-to-v2.0-v2.1.md) and are intended to be used only in cases where upgrading to Rancher v2.2+ is not feasible.

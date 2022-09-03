@@ -121,7 +121,7 @@ For information on enabling the logging application for SELinux-enabled nodes, s
 
 ### Additional Logging Sources
 
-By default, Rancher collects logs for control plane components and node components for all cluster types. In some cases additional logs can be collected. For details, see [this section.](logginlogging/helm-chart-options/#enabling-the-logging-application-to-work-with-selinux)
+By default, Rancher collects logs for control plane components and node components for all cluster types. In some cases additional logs can be collected. For details, see [this section.](../explanations/integrations-in-rancher/logging/logging-helm-chart-options.md#additional-logging-sources)
 
 
 # Troubleshooting

@@ -20,7 +20,7 @@ import TabItem from '@theme/TabItem';
 | Ability to [backup](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters.md) and [restore](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md) Rancher-launched clusters | ✓ | ✓ | | ✓<sup>4</sup> |
 | [Cleaning Kubernetes components when clusters are no longer reachable from Rancher](../how-to-guides/advanced-user-guides/manage-clusters/clean-cluster-nodes.md) | ✓ | | | |
 | [Configuring Pod Security Policies](../how-to-guides/advanced-user-guides/manage-clusters/add-a-pod-security-policy.md) | ✓ | ✓ | | |
-| [Authorized Cluster Endpoint](cluster-provisioning/rke-clusters/options/#authorized-cluster-endpoint) | ✓ | | | |
+| [Authorized Cluster Endpoint](../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#authorized-cluster-endpoint) | ✓ | | | |
 
 1. Registered GKE and EKS clusters have the same options available as GKE and EKS clusters created from the Rancher UI. The  difference is that when a registered cluster is deleted from the Rancher UI, [it is not destroyed.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md#additional-features-for-registered-eks-and-gke-clusters)
 

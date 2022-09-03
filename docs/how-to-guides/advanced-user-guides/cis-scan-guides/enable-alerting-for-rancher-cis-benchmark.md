@@ -5,11 +5,11 @@ weight: 7
 
 Alerts can be configured to be sent out for a scan that runs on a schedule.
 
-:::note Prerequisite: 
+:::note Prerequisite:
 
-Before enabling alerts for `rancher-cis-benchmark`, make sure to install the `rancher-monitoring` application and configure the Receivers and Routes. For more information, see [this section.](monitoring-alertincis-scans/configuration)
+Before enabling alerts for `rancher-cis-benchmark`, make sure to install the `rancher-monitoring` application and configure the Receivers and Routes. For more information, see [this section.](../../../reference-guides/monitoring-v2-configuration/receivers.md)
 
-While configuring the routes for `rancher-cis-benchmark` alerts, you can specify the matching using the key-value pair `job: rancher-cis-scan`. An example route configuration is [here.](monitoring-alertincis-scans/configuration/receiver/#example-route-config-for-cis-scan-alerts)
+While configuring the routes for `rancher-cis-benchmark` alerts, you can specify the matching using the key-value pair `job: rancher-cis-scan`. An example route configuration is [here.](../../../reference-guides/monitoring-v2-configuration/receivers.md#example-route-config-for-cis-scan-alerts)
 
 :::
 

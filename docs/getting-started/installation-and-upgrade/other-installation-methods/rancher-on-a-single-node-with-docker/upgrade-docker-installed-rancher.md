@@ -151,7 +151,7 @@ If you have selected to use the Rancher generated self-signed certificate, you a
 
 Placeholder | Description
 ------------|-------------
-`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](installation/resources/chart-options/) that you want to upgrade to.
+`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../../../reference-guides/installation-references/helm-chart-options.md) that you want to upgrade to.
 
 ```
 docker run -d --volumes-from rancher-data \
@@ -394,7 +394,7 @@ Log into Rancher. Confirm that the upgrade succeeded by checking the version dis
 
 :::note Having network issues in your user clusters following upgrade?
 
-See [Restoring Cluster Networking]({{<baseurl>}}/rancher/v2.0-v2.4/en/installation/install-rancher-on-k8s/upgrades/namespace-migration).
+See [Restoring Cluster Networking](../../../../../versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md).
 
 :::
 

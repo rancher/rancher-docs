@@ -51,7 +51,7 @@ The report contains the following information:
 | `actual_value` | The test's actual value, present if reported by `kube-bench`. |
 | `expected_result` | The test's expected result, present if reported by `kube-bench`. |
 
-Refer to <a href="security/" target="_blank">the table in the cluster hardening guide</a> for information on which versions of Kubernetes, the Benchmark, Rancher, and our cluster hardening guide correspond to each other. Also refer to the hardening guide for configuration files of CIS-compliant clusters and information on remediating failed tests.
+Refer to [the table in the cluster hardening guide](./rancher-security.md) for information on which versions of Kubernetes, the Benchmark, Rancher, and our cluster hardening guide correspond to each other. Also refer to the hardening guide for configuration files of CIS-compliant clusters and information on remediating failed tests.
 
 # Test Profiles
 

@@ -19,7 +19,7 @@ aliases:
 ---
 The following instructions will guide you through upgrading a Rancher server that was installed on a Kubernetes cluster with Helm. These steps also apply to air gap installs with Helm.
 
-For the instructions to upgrade Rancher installed on Kubernetes with RancherD, refer to [this page.](installation/install-rancher-on-linux/upgrades)
+For the instructions to upgrade Rancher installed on Kubernetes with RancherD, refer to [this page.](../other-installation-methods/install-rancher-on-linux/upgrade-rancherd.md)
 
 For the instructions to upgrade Rancher installed with Docker, refer to [this page.](../other-installation-methods/rancher-on-a-single-node-with-docker/upgrade-docker-installed-rancher.md)
 
@@ -36,7 +36,7 @@ To upgrade the components in your Kubernetes cluster, or the definition of the [
 
 Helm should be run from the same location as your kubeconfig file, or the same location where you run your kubectl commands from.
 
-If you installed Kubernetes with RKE, the config will have been created in the directory you ran `rke up` in. 
+If you installed Kubernetes with RKE, the config will have been created in the directory you ran `rke up` in.
 
 The kubeconfig can also be manually targeted for the intended cluster with the `--kubeconfig` tag (see: https://helm.sh/docs/helm/helm/)
 
@@ -50,7 +50,7 @@ Note that upgrades _to_ or _from_ any chart in the [rancher-alpha repository](..
 
 The upgrade instructions assume you are using Helm 3.
 
-For migration of installs started with Helm 2, refer to the official [Helm 2 to 3 migration docs.](https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/) The [Helm 2 upgrade page here]({{<baseurl>}}/rancher/v2.0-v2.4/en/installation/upgrades-rollbacks/upgrades/ha/helm2)provides a copy of the older upgrade instructions that used Helm 2, and it is intended to be used if upgrading to Helm 3 is not feasible.
+For migration of installs started with Helm 2, refer to the official [Helm 2 to 3 migration docs.](https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/) The [Helm 2 upgrade page here](../../../../version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/helm2.md) provides a copy of the older upgrade instructions that used Helm 2, and it is intended to be used if upgrading to Helm 3 is not feasible.
 
 ### For air gap installs: Populate private registry
 
@@ -62,7 +62,7 @@ If you are upgrading to Rancher v2.5 from a Rancher server that was started with
 
 ### For upgrades with cert-manager older than 0.8.0
 
-[Let's Encrypt will be blocking cert-manager instances older than 0.8.0 starting November 1st 2019.](https://community.letsencrypt.org/t/blocking-old-cert-manager-versions/98753) Upgrade cert-manager to the latest version by following [these instructions.](installation/options/upgrading-cert-manager)
+[Let's Encrypt will be blocking cert-manager instances older than 0.8.0 starting November 1st 2019.](https://community.letsencrypt.org/t/blocking-old-cert-manager-versions/98753) Upgrade cert-manager to the latest version by following [these instructions.](../resources/upgrade-cert-manager.md)
 
 # Upgrade Outline
 
@@ -112,7 +112,7 @@ You'll use the backup as a restoration point if something goes wrong during upgr
     helm fetch rancher-<CHART_REPO>/rancher
     ```
     You can fetch the chart for the specific version you are upgrading to by adding in the `--version=` tag.  For example:
-    
+
     ```plain
     helm fetch rancher-<CHART_REPO>/rancher --version=v2.4.11
     ```
@@ -165,7 +165,7 @@ helm upgrade rancher rancher-<CHART_REPO>/rancher \
 
 ### Option B: Reinstalling Rancher and cert-manager
 
-If you are currently running the cert-manager whose version is older than v0.11, and want to upgrade both Rancher and cert-manager to a newer version, then you need to reinstall both Rancher and cert-manager due to the API change in cert-manager v0.11. 
+If you are currently running the cert-manager whose version is older than v0.11, and want to upgrade both Rancher and cert-manager to a newer version, then you need to reinstall both Rancher and cert-manager due to the API change in cert-manager v0.11.
 
 1. Uninstall Rancher
 
@@ -189,7 +189,7 @@ Log into Rancher to confirm that the upgrade succeeded.
 
 >**Having network issues following upgrade?**
 >
-> See [Restoring Cluster Networking]({{<baseurl>}}/rancher/v2.0-v2.4/en/installation/install-rancher-on-k8s/upgrades/namespace-migration).
+> See [Restoring Cluster Networking](../../../../version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md).
 
 # Known Upgrade Issues
 

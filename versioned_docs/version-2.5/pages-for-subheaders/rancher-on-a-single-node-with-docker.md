@@ -73,7 +73,7 @@ In development or testing environments where your team will access your Rancher 
 > Create a self-signed certificate using [OpenSSL](https://www.openssl.org/) or another method of your choice.
 >
 > - The certificate files must be in PEM format.
-> - In your certificate file, include all intermediate certificates in the chain. Order your certificates with your certificate first, followed by the intermediates. For an example, see [Certificate Troubleshooting.](installation/other-installation-methods/single-node-dockeinstallation/other-installation-methods/single-node-docker/troubleshooting)
+> - In your certificate file, include all intermediate certificates in the chain. Order your certificates with your certificate first, followed by the intermediates. For an example, see [Certificate Troubleshooting.](../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/certificate-troubleshooting.md)
 
 After creating your certificate, run the Docker command below to install Rancher. Use the `-v` flag and provide the path to your certificates to mount them in your container.
 
