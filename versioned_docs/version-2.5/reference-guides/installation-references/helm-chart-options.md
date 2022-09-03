@@ -76,7 +76,7 @@ For information on enabling experimental features, refer to [this page.](../../p
 
 ### API Audit Log
 
-Enabling the [API Audit Log](installation/api-auditing/).
+Enabling the [API Audit Log](../../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/enable-api-audit-log.md).
 
 You can collect this log as you would any container log. Enable [logging](../../pages-for-subheaders/logging.md) for the `System` Project on the Rancher server cluster.
 

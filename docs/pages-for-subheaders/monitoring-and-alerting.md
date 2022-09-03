@@ -51,7 +51,7 @@ These default exporters automatically scrape metrics for CPU and memory from all
 
 ### Default Alerts
 
-The monitoring application deploys some alerts by default. To see the default alerts, go to the [Alertmanager UI](monitoring-alertinmonitoring-alerting/dashboards/#alertmanager-ui) and click **Expand all groups.**
+The monitoring application deploys some alerts by default. To see the default alerts, go to the [Alertmanager UI](../explanations/integrations-in-rancher/monitoring-and-alerting/built-in-dashboards.md#alertmanager-ui) and click **Expand all groups.**
 
 ### Components Exposed in the Rancher UI
 

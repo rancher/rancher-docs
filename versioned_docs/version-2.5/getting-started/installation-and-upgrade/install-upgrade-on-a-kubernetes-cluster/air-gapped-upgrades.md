@@ -131,7 +131,7 @@ Log into Rancher to confirm that the upgrade succeeded.
 
 >**Having network issues following upgrade?**
 >
-> See [Restoring Cluster Networking]({{<baseurl>}}/rancher/v2.0-v2.4/en/installation/install-rancher-on-k8s/upgrades/namespace-migration).
+> See [Restoring Cluster Networking](../../../../version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md).
 
 # Known Upgrade Issues
 

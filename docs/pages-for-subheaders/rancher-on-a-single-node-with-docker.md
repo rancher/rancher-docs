@@ -106,7 +106,7 @@ The Docker install is not recommended for production. These instructions are pro
 :::note Prerequisites:
 
 - The certificate files must be in PEM format.
-- In your certificate file, include all intermediate certificates provided by the recognized CA. Order your certificates with your certificate first, followed by the intermediates. For an example, see [Certificate Troubleshooting.](installation/other-installation-methods/single-node-dockeinstallation/other-installation-methods/single-node-docker/troubleshooting)
+- In your certificate file, include all intermediate certificates provided by the recognized CA. Order your certificates with your certificate first, followed by the intermediates. For an example, see [Certificate Troubleshooting.](../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/certificate-troubleshooting.md)
 
 :::
 

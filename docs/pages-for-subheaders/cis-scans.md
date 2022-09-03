@@ -20,7 +20,7 @@ The Center for Internet Security is a 501(c\)(3) non-profit organization, formed
 
 CIS Benchmarks are best practices for the secure configuration of a target system. CIS Benchmarks are developed through the generous volunteer efforts of subject matter experts, technology vendors, public and private community members, and the CIS Benchmark Development team.
 
-The official Benchmark documents are available through the CIS website. The sign-up form to access the documents is 
+The official Benchmark documents are available through the CIS website. The sign-up form to access the documents is
 <a href="https://learn.cisecurity.org/benchmarks" target="_blank">here.</a>
 
 # About the Generated Report
@@ -33,7 +33,7 @@ The Benchmark version is included in the generated report.
 
 The Benchmark provides recommendations of two types: Automated and Manual. Recommendations marked as Manual in the Benchmark are not included in the generated report.
 
-Some tests are designated as "Not Applicable." These tests will not be run on any CIS scan because of the way that Rancher provisions RKE clusters. For information on how test results can be audited, and why some tests are designated to be not applicable, refer to Rancher's <a href="security/#the-cis-benchmark-and-self-assessment" target="_blank">self-assessment guide for the corresponding Kubernetes version.</a>
+Some tests are designated as "Not Applicable." These tests will not be run on any CIS scan because of the way that Rancher provisions RKE clusters. For information on how test results can be audited, and why some tests are designated to be not applicable, refer to Rancher's [self-assessment guide](./rancher-security.md##the-cis-benchmark-and-self-assessment) for the corresponding Kubernetes version.
 
 The report contains the following information:
 
@@ -52,7 +52,7 @@ The report contains the following information:
 | `actual_value` | The test's actual value, present if reported by `kube-bench`. |
 | `expected_result` | The test's expected result, present if reported by `kube-bench`. |
 
-Refer to <a href="security/" target="_blank">the table in the cluster hardening guide</a> for information on which versions of Kubernetes, the Benchmark, Rancher, and our cluster hardening guide correspond to each other. Also refer to the hardening guide for configuration files of CIS-compliant clusters and information on remediating failed tests.
+Refer to [the table in the cluster hardening guide](./rancher-security.md) for information on which versions of Kubernetes, the Benchmark, Rancher, and our cluster hardening guide correspond to each other. Also refer to the hardening guide for configuration files of CIS-compliant clusters and information on remediating failed tests.
 
 # Test Profiles
 
@@ -83,7 +83,7 @@ There are two types of RKE cluster scan profiles:
 
 The EKS and GKE cluster scan profiles are based on CIS Benchmark versions that are specific to those types of clusters.
 
-In order to pass the "Hardened" profile, you will need to follow the steps on the <a href="security/#rancher-hardening-guide" target="_blank">hardening guide</a> and use the `cluster.yml` defined in the hardening guide to provision a hardened cluster.
+In order to pass the "Hardened" profile, you will need to follow the steps on the [hardening guide](./rancher-security.md#rancher-hardening-guide) and use the `cluster.yml` defined in the hardening guide to provision a hardened cluster.
 
 The default profile and the supported CIS benchmark version depends on the type of cluster that will be scanned:
 
@@ -96,7 +96,7 @@ The `rancher-cis-benchmark` supports the CIS 1.6 Benchmark version.
 
 # About Skipped and Not Applicable Tests
 
-For a list of skipped and not applicable tests, refer to <a href="cis-scans/skipped-tests" target="_blank">this page.</a>
+For a list of skipped and not applicable tests, refer to [this page](../how-to-guides/advanced-user-guides/cis-scan-guides/skip-tests.md).
 
 For now, only user-defined skipped tests are marked as skipped in the generated report.
 
@@ -104,8 +104,8 @@ Any skipped tests that are defined as being skipped by one of the default profil
 
 # Roles-based Access Control
 
-For information about permissions, refer to <a href="cis-scancis-scans/rbac" target="_blank">this page.</a>
+For information about permissions, refer to [this page](../explanations/integrations-in-rancher/cis-scans/rbac-for-cis-scans.md)
 
 # Configuration
 
-For more information about configuring the custom resources for the scans, profiles, and benchmark versions, refer to <a href="cis-scancis-scans/configuration" target="_blank">this page.</a>
+For more information about configuring the custom resources for the scans, profiles, and benchmark versions, refer to [this page](../explanations/integrations-in-rancher/cis-scans/configuration-reference.md)

@@ -77,7 +77,7 @@ After creating your certificate, log into your Linux host, and then run the inst
 | `<PRIVATE_KEY.pem>`              | The path to the private key for your certificate.                                                                             |
 | `<CA_CERTS.pem>`                     | The path to the certificate authority's certificate.                                                                          |
 | `<REGISTRY.YOURDOMAIN.COM:PORT>` | Your private registry URL and port.                                                                                           |
-| `<RANCHER_VERSION_TAG>`          | The release tag of the [Rancher version](installation/resources/chart-options/) that you want to install. |
+| `<RANCHER_VERSION_TAG>`          | The release tag of the [Rancher version](../../../../reference-guides/installation-references/helm-chart-options.md) that you want to install. |
 
 Privileged access is [required.](#privileged-access-for-rancher)
 
