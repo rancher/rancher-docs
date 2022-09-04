@@ -31,7 +31,7 @@ This section covers the following topics:
 
 # Alerts Scope
 
-The scope for alerts can be set at either the [cluster level](cluster-admin/tools/alerts/) or project level.
+The scope for alerts can be set at either the [cluster level](../../pages-for-subheaders/cluster-alerts.md) or project level.
 
 At the project level, Rancher monitors specific deployments and sends alerts for:
 
@@ -49,7 +49,7 @@ When you enable monitoring for the project, some project-level alerts are provid
 | Less than half workload available | A critical alert is triggered if less than half of a workload is available, based on workloads where the key is `app` and the value is `workload`. |
 | Memory usage close to the quota | A warning alert is triggered if the workload's memory usage exceeds the memory resource quota that is set for the workload. You can see the memory limit in the Rancher UI if you go to the workload under the **Security & Host Config** tab. |
 
-For information on other default alerts, refer to the section on [cluster-level alerts.](cluster-admin/tools/alerts/default-alerts)
+For information on other default alerts, refer to the section on [cluster-level alerts.](../../explanations/integrations-in-rancher/cluster-alerts/default-alerts.md)
 
 # Adding Project Alerts
 

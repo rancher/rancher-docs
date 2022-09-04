@@ -158,7 +158,7 @@ stages:
 
 _Available as of v2.2.0_
 
-The **Publish Catalog Template** step publishes a version of a catalog app template (i.e. Helm chart) to a [git hosted chart repository](catalog/custom/). It generates a git commit and pushes it to your chart repository. This process requires a chart folder in your source code's repository and a pre-configured secret in the dedicated pipeline namespace to complete successfully. Any variables in the [pipeline variable substitution reference](#pipeline-variable-substitution-reference) is supported for any file in the chart folder.
+The **Publish Catalog Template** step publishes a version of a catalog app template (i.e. Helm chart) to a [git hosted chart repository](../../how-to-guides/new-user-guides/helm-charts-in-rancher/creating-apps.md). It generates a git commit and pushes it to your chart repository. This process requires a chart folder in your source code's repository and a pre-configured secret in the dedicated pipeline namespace to complete successfully. Any variables in the [pipeline variable substitution reference](#pipeline-variable-substitution-reference) is supported for any file in the chart folder.
 
 ### Configuring Publishing a Catalog Template by UI
 
@@ -309,7 +309,7 @@ timeout: 30
 
 # Notifications
 
-You can enable notifications to any [notifiers](../../explanations/integrations-in-rancher/notifiers.md) based on the build status of a pipeline. Before enabling notifications, Rancher recommends [setting up notifiers](monitoring-alerting/legacy/notifiers/) so it will be easy to add recipients immediately.
+You can enable notifications to any [notifiers](../../explanations/integrations-in-rancher/notifiers.md) based on the build status of a pipeline. Before enabling notifications, Rancher recommends [setting up notifiers](../../explanations/integrations-in-rancher/notifiers.md) so it will be easy to add recipients immediately.
 
 ### Configuring Notifications by UI
 
@@ -653,8 +653,8 @@ If you want to use a version control provider with a certificate from a custom/i
 
 The internal Docker registry and the Minio workloads use ephemeral volumes by default. This default storage works out-of-the-box and makes testing easy, but you lose the build images and build logs if the node running the Docker Registry or Minio fails. In most cases this is fine. If you want build images and logs to survive node failures, you can configure the Docker Registry and Minio to use persistent volumes.
 
-For details on setting up persistent storage for pipelines, refer to [this page.](k8s-in-rancher/pipelines/storage)
+For details on setting up persistent storage for pipelines, refer to [this page.](./configure-persistent-data.md)
 
 # Example rancher-pipeline.yml
 
-An example pipeline configuration file is on [this page.](k8s-in-rancher/pipelines/example)
+An example pipeline configuration file is on [this page.](./example-yaml.md)

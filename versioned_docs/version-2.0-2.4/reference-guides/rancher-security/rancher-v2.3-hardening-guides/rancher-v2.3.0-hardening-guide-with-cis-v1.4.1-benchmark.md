@@ -17,7 +17,7 @@ Hardening Guide v2.3 | Rancher v2.3.0-v2.3.2 | Benchmark v1.4.1 | Kubernetes 1.1
 
 [Click here to download a PDF version of this document](https://releases.rancher.com/documents/security/2.3.x/Rancher_Hardening_Guide.pdf)
 
-For more detail about evaluating a hardened cluster against the official CIS benchmark, refer to the [CIS Benchmark Rancher Self-Assessment Guide - Rancher v2.3.x](security/benchmark-2.3/).
+For more detail about evaluating a hardened cluster against the official CIS benchmark, refer to the [CIS Benchmark Rancher Self-Assessment Guide - Rancher v2.3.x](./rancher-v2.3.0-self-assessment-guide-with-cis-v1.4.1-benchmark.md).
 
 ### Profile Definitions
 
@@ -434,7 +434,7 @@ etcd is a highly-available key-value store used by Kubernetes deployments for pe
 
 On a etcd server node, get the etcd data directory, passed as an argument `--data-dir`, from the below command:
 
-``` bash 
+``` bash
 ps -ef | grep etcd
 ```
 

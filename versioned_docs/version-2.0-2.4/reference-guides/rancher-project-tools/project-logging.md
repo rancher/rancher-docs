@@ -12,7 +12,7 @@ aliases:
 
 Rancher can integrate with a variety of popular logging services and tools that exist outside of your Kubernetes clusters.
 
-For background information about how logging integrations work, refer to the [cluster administration section.](logging/v2.0.x-v2.4.x/cluster-logging/#how-logging-integrations-work)
+For background information about how logging integrations work, refer to the [cluster administration section.](../../pages-for-subheaders/cluster-logging.md#how-logging-integrations-work)
 
 Rancher supports the following services:
 
@@ -48,7 +48,7 @@ Setting up a logging service to collect logs from your cluster/project has sever
 
 You can configure logging at either cluster level or project level.
 
-- [Cluster logging](cluster-admin/tools/logging/) writes logs for every pod in the cluster, i.e. in all the projects. For [RKE clusters](../../pages-for-subheaders/launch-kubernetes-with-rancher.md), it also writes logs for all the Kubernetes system components.
+- [Cluster logging](../../pages-for-subheaders/cluster-logging.md) writes logs for every pod in the cluster, i.e. in all the projects. For [RKE clusters](../../pages-for-subheaders/launch-kubernetes-with-rancher.md), it also writes logs for all the Kubernetes system components.
 
 - Project logging writes logs for every pod in that particular project.
 
@@ -66,11 +66,11 @@ Logs that are sent to your logging service are from the following locations:
 
 1. Select a logging service and enter the configuration. Refer to the specific service for detailed configuration. Rancher supports the following services:
 
-   - [Elasticsearch](cluster-admin/tools/logging/elasticsearch/)
-   - [Splunk](cluster-admin/tools/logging/splunk/)
-   - [Kafka](cluster-admin/tools/logging/kafka/)
-   - [Syslog](cluster-admin/tools/logging/syslog/)
-   - [Fluentd](cluster-admin/tools/logging/fluentd/)
+   - [Elasticsearch](../../explanations/integrations-in-rancher/cluster-logging/elasticsearch.md)
+   - [Splunk](../../explanations/integrations-in-rancher/cluster-logging/splunk.md)
+   - [Kafka](../../explanations/integrations-in-rancher/cluster-logging/kafka.md)
+   - [Syslog](../../explanations/integrations-in-rancher/cluster-logging/syslog.md)
+   - [Fluentd](../../explanations/integrations-in-rancher/cluster-logging/fluentd.md)
 
 1. (Optional) Instead of using the UI to configure the logging services, you can enter custom advanced configurations by clicking on **Edit as File**, which is located above the logging targets. This link is only visible after you select a logging service.
 
@@ -92,7 +92,7 @@ Logs that are sent to your logging service are from the following locations:
                 ```
                 openssl req -x509 -newkey rsa:2048 -keyout myservice.key -out myservice.cert -days 365 -nodes -subj "/CN=myservice.example.com"
                 ```
-       2. If you are using a self-signed certificate, provide the **CA Certificate PEM**.  
+       2. If you are using a self-signed certificate, provide the **CA Certificate PEM**.
 
 1. (Optional) Complete the **Additional Logging Configuration** form.
 

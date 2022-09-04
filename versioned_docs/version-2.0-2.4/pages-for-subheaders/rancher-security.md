@@ -60,12 +60,12 @@ Each version of the hardening guide is intended to be used with specific version
 
 Hardening Guide Version | Rancher Version | CIS Benchmark Version | Kubernetes Version
 ------------------------|----------------|-----------------------|------------------
-[Hardening Guide v2.4](security/hardening-2.4/) | Rancher v2.4 | Benchmark v1.5 | Kubernetes v1.15
-[Hardening Guide v2.3.5](security/hardening-2.3.5/) | Rancher v2.3.5 | Benchmark v1.5 | Kubernetes v1.15
-[Hardening Guide v2.3.3](security/hardening-2.3.3/) | Rancher v2.3.3 | Benchmark v1.4.1 | Kubernetes v1.14, v1.15, and v1.16
-[Hardening Guide v2.3](security/hardening-2.3/) | Rancher v2.3.0-v2.3.2 | Benchmark v1.4.1 | Kubernetes v1.15
-[Hardening Guide v2.2](security/hardening-2.2/) | Rancher v2.2.x | Benchmark v1.4.1 and 1.4.0 | Kubernetes v1.13
-[Hardening Guide v2.1](security/hardening-2.1/) | Rancher v2.1.x | Benchmark v1.3.0 | Kubernetes v1.11
+[Hardening Guide v2.4](../reference-guides/rancher-security/rancher-v2.4-hardening-guides/hardening-guide-with-cis-v1.5-benchmark.md) | Rancher v2.4 | Benchmark v1.5 | Kubernetes v1.15
+[Hardening Guide v2.3.5](../reference-guides/rancher-security/rancher-v2.3-hardening-guides/rancher-v2.3.5-hardening-guide-with-cis-v1.5-benchmark.md) | Rancher v2.3.5 | Benchmark v1.5 | Kubernetes v1.15
+[Hardening Guide v2.3.3](../reference-guides/rancher-security/rancher-v2.3-hardening-guides/rancher-v2.3.3-hardening-guide-with-cis-v1.4.1-benchmark.md) | Rancher v2.3.3 | Benchmark v1.4.1 | Kubernetes v1.14, v1.15, and v1.16
+[Hardening Guide v2.3](../reference-guides/rancher-security/rancher-v2.3-hardening-guides/rancher-v2.3.0-hardening-guide-with-cis-v1.4.1-benchmark.md) | Rancher v2.3.0-v2.3.2 | Benchmark v1.4.1 | Kubernetes v1.15
+[Hardening Guide v2.2](../reference-guides/rancher-security/rancher-v2.2-hardening-guides/hardening-guide-with-cis-v1.4-benchmark.md) | Rancher v2.2.x | Benchmark v1.4.1 and 1.4.0 | Kubernetes v1.13
+[Hardening Guide v2.1](../reference-guides/rancher-security/rancher-v2.1-hardening-guides/hardening-guide-with-cis-v1.3-benchmark.md) | Rancher v2.1.x | Benchmark v1.3.0 | Kubernetes v1.11
 
 ### The CIS Benchmark and Self-Assessment
 

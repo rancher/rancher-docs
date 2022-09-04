@@ -41,7 +41,7 @@ After you download the tools, complete the following actions:
 
 # Logs
 
-The logs subcommand will collect log files of core Kubernetes cluster components from nodes in [Rancher-launched Kubernetes clusters](../pages-for-subheaders/launch-kubernetes-with-rancher.md) or nodes on an [RKE Kubernetes cluster that Rancher is installed on.](../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md). See [Troubleshooting]({{<baseurl>}}//rancher/v2.0-v2.4/en/troubleshooting/) for a list of core Kubernetes cluster components.
+The logs subcommand will collect log files of core Kubernetes cluster components from nodes in [Rancher-launched Kubernetes clusters](../pages-for-subheaders/launch-kubernetes-with-rancher.md) or nodes on an [RKE Kubernetes cluster that Rancher is installed on.](../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md). See [Troubleshooting](../troubleshooting.md) for a list of core Kubernetes cluster components.
 
 System Tools will use the provided kubeconfig file to deploy a DaemonSet, that will copy all the logfiles from the core Kubernetes cluster components and add them to a single tar file (`cluster-logs.tar` by default). If you only want to collect logging from a single node, you can specify the node by using `--node NODENAME` or `-n NODENAME`.
 
@@ -81,7 +81,7 @@ The following are the options for the stats command:
 
 # Remove
 
->**Warning:** This command will remove data from your etcd nodes. Make sure you have created a [backup of etcd](backups/backups) before executing the command.
+>**Warning:** This command will remove data from your etcd nodes. Make sure you have created a [backup of etcd](../pages-for-subheaders/backup-restore-and-disaster-recovery.md) before executing the command.
 
 When you install Rancher on a Kubernetes cluster, it will create Kubernetes resources to run and to store configuration data. If you want to remove Rancher from your cluster, you can use the `remove` subcommand to remove the Kubernetes resources. When you use the `remove` subcommand, the following resources will be removed:
 

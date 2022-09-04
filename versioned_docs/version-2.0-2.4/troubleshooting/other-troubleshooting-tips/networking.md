@@ -52,7 +52,7 @@ To test the overlay network, you can launch the following `DaemonSet` definition
     #!/bin/bash
     echo "=> Start network overlay test"
       kubectl get pods -l name=overlaytest -o jsonpath='{range .items[*]}{@.metadata.name}{" "}{@.spec.nodeName}{"\n"}{end}' |
-      while read spod shost 
+      while read spod shost
         do kubectl get pods -l name=overlaytest -o jsonpath='{range .items[*]}{@.status.podIP}{" "}{@.spec.nodeName}{"\n"}{end}' |
         while read tip thost
           do kubectl --request-timeout='10s' exec $spod -c overlaytest -- /bin/sh -c "ping -c2 $tip > /dev/null 2>&1"
@@ -125,7 +125,7 @@ If there is no output, the cluster is not affected.
 |------------|------------|
 | GitHub issue | [#15146](https://github.com/rancher/rancher/issues/15146) |
 
-If pods in system namespaces cannot communicate with pods in other system namespaces, you will need to follow the instructions in [Upgrading to v2.0.7+ — Namespace Migration](upgrades/upgrades/namespace-migration/) to restore connectivity. Symptoms include:
+If pods in system namespaces cannot communicate with pods in other system namespaces, you will need to follow the instructions in [Upgrading to v2.0.7+ — Namespace Migration](../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md) to restore connectivity. Symptoms include:
 
 - NGINX ingress controller showing `504 Gateway Time-out` when accessed.
 - NGINX ingress controller logging `upstream timed out (110: Connection timed out) while connecting to upstream` when accessed.
