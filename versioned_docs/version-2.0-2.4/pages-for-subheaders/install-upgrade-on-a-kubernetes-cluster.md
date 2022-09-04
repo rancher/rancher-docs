@@ -22,7 +22,7 @@ The cluster requirements depend on the Rancher version:
 - **In Rancher v2.4.x,** Rancher needs to be installed on a K3s Kubernetes cluster or an RKE Kubernetes cluster.
 - **In Rancher before v2.4,** Rancher needs to be installed on an RKE Kubernetes cluster.
 
-For the tutorial to install an RKE Kubernetes cluster, refer to [this page.](installation/resources/k8s-tutorials/ha-rke/) For help setting up the infrastructure for a high-availability RKE cluster, refer to [this page.](../how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster.md)
+For the tutorial to install an RKE Kubernetes cluster, refer to [this page.](../how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher.md) For help setting up the infrastructure for a high-availability RKE cluster, refer to [this page.](../how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster.md)
 
 For the tutorial to install a K3s Kubernetes cluster, refer to [this page.](../how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher.md) For help setting up the infrastructure for a high-availability K3s cluster, refer to [this page.](../how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster.md)
 
@@ -32,13 +32,13 @@ Rancher is installed using the Helm package manager for Kubernetes. Helm charts 
 
 With Helm, we can create configurable deployments instead of just using static files. For more information about creating your own catalog of deployments, check out the docs at https://helm.sh/.
 
-For systems without direct internet access, see [Air Gap: Kubernetes install](installation/air-gap-installation/install-rancher/).
+For systems without direct internet access, see [Air Gap: Kubernetes install](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/air-gap-helm2/install-rancher.md).
 
-To choose a Rancher version to install, refer to [Choosing a Rancher Version.](installation/options/server-tags)
+To choose a Rancher version to install, refer to [Choosing a Rancher Version.](../getting-started/installation-and-upgrade/resources/choose-a-rancher-version.md)
 
-To choose a version of Helm to install Rancher with, refer to the [Helm version requirements](installation/options/helm-version)
+To choose a version of Helm to install Rancher with, refer to the [Helm version requirements](../getting-started/installation-and-upgrade/resources/helm-version-requirements.md)
 
-> **Note:** The installation instructions assume you are using Helm 3. For migration of installs started with Helm 2, refer to the official [Helm 2 to 3 migration docs.](https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/) This [section](installation/options/helm2) provides a copy of the older installation instructions for Rancher installed on an RKE Kubernetes cluster with Helm 2, and it is intended to be used if upgrading to Helm 3 is not feasible.
+> **Note:** The installation instructions assume you are using Helm 3. For migration of installs started with Helm 2, refer to the official [Helm 2 to 3 migration docs.](https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/) This [section](../getting-started/installation-and-upgrade/resources/helm-version-requirements.md) provides a copy of the older installation instructions for Rancher installed on an RKE Kubernetes cluster with Helm 2, and it is intended to be used if upgrading to Helm 3 is not feasible.
 
 To set up Rancher,
 
@@ -58,7 +58,7 @@ The following CLI tools are required for setting up the Kubernetes cluster. Plea
 Refer to the [instructions provided by the Helm project](https://helm.sh/docs/intro/install/) for your specific platform.
 
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) - Kubernetes command-line tool.
-- [helm](https://docs.helm.sh/using_helm/#installing-helm) - Package management for Kubernetes. Refer to the [Helm version requirements](installation/options/helm-version) to choose a version of Helm to install Rancher.
+- [helm](https://docs.helm.sh/using_helm/#installing-helm) - Package management for Kubernetes. Refer to the [Helm version requirements](../getting-started/installation-and-upgrade/resources/helm-version-requirements.md) to choose a version of Helm to install Rancher.
 
 ### 2. Add the Helm Chart Repository
 
@@ -106,7 +106,7 @@ This step is only required to use certificates issued by Rancher's generated CA 
 <details id="cert-manager">
   <summary>Click to Expand</summary>
 
-> **Important:** Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.11.0, please see our [upgrade documentation](installation/options/upgrading-cert-manager/).
+> **Important:** Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.11.0, please see our [upgrade documentation](../getting-started/installation-and-upgrade/resources/upgrade-cert-manager.md).
 
 These instructions are adapted from the [official cert-manager documentation](https://cert-manager.io/docs/installation/kubernetes/#installing-with-helm).
 
@@ -242,7 +242,7 @@ helm install rancher rancher-<CHART_REPO>/rancher \
   --set privateCA=true
 ```
 
-Now that Rancher is deployed, see [Adding TLS Secrets](installation/resources/encryption/tls-secrets/) to publish the certificate files so Rancher and the Ingress controller can use them.
+Now that Rancher is deployed, see [Adding TLS Secrets](../getting-started/installation-and-upgrade/resources/add-tls-secrets.md) to publish the certificate files so Rancher and the Ingress controller can use them.
 
 </TabItem>
 </Tabs>
@@ -253,7 +253,7 @@ The Rancher chart configuration has many options for customizing the installatio
 - [Private Docker Image Registry](../reference-guides/installation-references/helm-chart-options.md#private-registry-and-air-gap-installs)
 - [TLS Termination on an External Load Balancer](../reference-guides/installation-references/helm-chart-options.md#external-tls-termination)
 
-See the [Chart Options](installation/resources/chart-options/) for the full list of options.
+See the [Chart Options](../reference-guides/installation-references/helm-chart-options.md) for the full list of options.
 
 
 ### 7. Verify that the Rancher Server is Successfully Deployed
@@ -286,7 +286,7 @@ That's it. You should have a functional Rancher server.
 
 In a web browser, go to the DNS name that forwards traffic to your load balancer. Then you should be greeted by the colorful login page.
 
-Doesn't work? Take a look at the [Troubleshooting](installation/options/troubleshooting/) Page
+Doesn't work? Take a look at the [Troubleshooting](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/troubleshooting.md) Page
 
 
 ### Optional Next Steps
