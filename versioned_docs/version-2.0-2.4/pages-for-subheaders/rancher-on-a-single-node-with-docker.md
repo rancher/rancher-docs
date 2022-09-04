@@ -13,7 +13,7 @@ Rancher can be installed by running a single Docker container.
 In this installation scenario, you'll install Docker on a single Linux host, and then deploy Rancher on your host using a single Docker container.
 
 > **Want to use an external load balancer?**
-> See [Docker Install with an External Load Balancer](installation/options/single-node-install-external-lb) instead.
+> See [Docker Install with an External Load Balancer](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/configure-layer-7-nginx-load-balancer.md) instead.
 
 A Docker installation of Rancher is recommended only for development and testing purposes.
 
@@ -34,9 +34,9 @@ For security purposes, SSL (Secure Sockets Layer) is required when using Rancher
 > **Do you want to...**
 >
 > - Use a proxy? See [HTTP Proxy Configuration](../reference-guides/single-node-rancher-in-docker/http-proxy-configuration.md)
-> - Configure custom CA root certificate to access your services? See [Custom CA root certificate](installation/other-installation-methods/single-node-dockeinstallation/other-installation-methods/single-node-docker/advanced/#custom-ca-certificate/)
-> - Complete an Air Gap Installation? See [Air Gap: Docker Install](installation/air-gap-single-node/)
-> - Record all transactions with the Rancher API? See [API Auditing](installation/other-installation-methods/single-node-dockeinstallation/other-installation-methods/single-node-docker/advanced/#api-audit-log)
+> - Configure custom CA root certificate to access your services? See [Custom CA root certificate](../reference-guides/single-node-rancher-in-docker/advanced-options.md#custom-ca-certificate)
+> - Complete an Air Gap Installation? See [Air Gap: Docker Install](./air-gap-helm2.md)
+> - Record all transactions with the Rancher API? See [API Auditing](../reference-guides/single-node-rancher-in-docker/advanced-options.md#api-audit-log)
 
 Choose from the following options:
 
@@ -65,7 +65,7 @@ In development or testing environments where your team will access your Rancher 
 > Create a self-signed certificate using [OpenSSL](https://www.openssl.org/) or another method of your choice.
 >
 > - The certificate files must be in PEM format.
-> - In your certificate file, include all intermediate certificates in the chain. Order your certificates with your certificate first, followed by the intermediates. For an example, see [Certificate Troubleshooting.](installation/other-installation-methods/single-node-dockeinstallation/other-installation-methods/single-node-docker/troubleshooting)
+> - In your certificate file, include all intermediate certificates in the chain. Order your certificates with your certificate first, followed by the intermediates. For an example, see [Certificate Troubleshooting.](../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/certificate-troubleshooting.md)
 
 After creating your certificate, run the Docker command below to install Rancher. Use the `-v` flag and provide the path to your certificates to mount them in your container.
 
@@ -92,7 +92,7 @@ In production environments where you're exposing an app publicly, use a certific
 > **Prerequisites:**
 >
 > - The certificate files must be in PEM format.
-> - In your certificate file, include all intermediate certificates provided by the recognized CA. Order your certificates with your certificate first, followed by the intermediates. For an example, see [Certificate Troubleshooting.](installation/other-installation-methods/single-node-dockeinstallation/other-installation-methods/single-node-docker/troubleshooting)
+> - In your certificate file, include all intermediate certificates provided by the recognized CA. Order your certificates with your certificate first, followed by the intermediates. For an example, see [Certificate Troubleshooting.](../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/certificate-troubleshooting.md)
 
 After obtaining your certificate, run the Docker command below.
 
@@ -159,5 +159,5 @@ Refer to [this page](../getting-started/installation-and-upgrade/other-installat
 
 ## What's Next?
 
-- **Recommended:** Review [Single Node Backup and Restore](installation/backups-and-restoration/single-node-backup-and-restoration/). Although you don't have any data you need to back up right now, we recommend creating backups after regular Rancher use.
+- **Recommended:** Review Single Node [Backup](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-docker-installed-rancher.md) and [Restore](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-docker-installed-rancher.md). Although you don't have any data you need to back up right now, we recommend creating backups after regular Rancher use.
 - Create a Kubernetes cluster: [Provisioning Kubernetes Clusters](kubernetes-clusters-in-rancher-setup.md).

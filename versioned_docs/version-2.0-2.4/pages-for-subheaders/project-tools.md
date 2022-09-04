@@ -19,7 +19,7 @@ Rancher contains a variety of tools that aren't included in Kubernetes to assist
 
 # Alerts
 
-[Alerts](cluster-admin/tools/alerts) are rules that trigger notifications. Before you can receive alerts, you must configure one or more notifier in Rancher. The scope for alerts can be set at either the cluster or project level.
+[Alerts](./cluster-alerts.md) are rules that trigger notifications. Before you can receive alerts, you must configure one or more notifier in Rancher. The scope for alerts can be set at either the cluster or project level.
 
 For details on project-level alerts, see [this page.](../reference-guides/rancher-project-tools/project-alerts.md)
 
@@ -35,7 +35,7 @@ Logging is helpful because it allows you to:
 
 Rancher can integrate with Elasticsearch, splunk, kafka, syslog, and fluentd.
 
-For details on setting up logging at the cluster level, refer to the [logging section.](cluster-admin/tools/logging)
+For details on setting up logging at the cluster level, refer to the [logging section.](./cluster-logging.md)
 
 For details on project-level logging, see [this section.](../reference-guides/rancher-project-tools/project-logging.md)
 

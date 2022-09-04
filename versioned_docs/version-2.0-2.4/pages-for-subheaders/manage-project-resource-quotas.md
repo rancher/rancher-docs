@@ -19,7 +19,7 @@ Resource quotas in Rancher include the same functionality as the [native version
 
 _Available as of v2.0.1_
 
-Edit [resource quotas](k8s-in-rancher/projects-and-namespaces/resource-quotas) when:
+Edit [resource quotas](./manage-project-resource-quotas.md) when:
 
 - You want to limit the resources that a project and its namespaces can use.
 - You want to scale the resources available to a project up or down when a research quota is already in effect.

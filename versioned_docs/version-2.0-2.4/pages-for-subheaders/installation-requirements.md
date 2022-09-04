@@ -38,7 +38,7 @@ The `ntp` (Network Time Protocol) package should be installed. This prevents err
 
 Some distributions of Linux may have default firewall rules that block communication with Helm. We recommend disabling firewalld. For Kubernetes 1.19, firewalld must be turned off.
 
-If you plan to run Rancher on ARM64, see [Running on ARM64 (Experimental).](installation/options/arm64-platform/)
+If you plan to run Rancher on ARM64, see [Running on ARM64 (Experimental).](../getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/rancher-on-arm64.md)
 
 ### RKE Specific Requirements
 
