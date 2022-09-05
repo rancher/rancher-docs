@@ -12,7 +12,7 @@ You can fill your custom catalogs with either Helm Charts or Rancher Charts, alt
 
 > For a complete walkthrough of developing charts, see the upstream Helm chart [developer reference](https://helm.sh/docs/chart_template_guide/).
 
-1. Within the GitHub repo that you're using as your custom catalog, create a directory structure that mirrors the structure listed in the [Chart Directory Structure](helm-charts/legacy-catalogs/creating-apps/#chart-directory-structure). 
+1. Within the GitHub repo that you're using as your custom catalog, create a directory structure that mirrors the structure listed in the [Chart Directory Structure](./creating-apps.md#chart-directory-structure).
 
     Rancher requires this directory structure, although `app-readme.md` and `questions.yml` are optional.
 
@@ -42,7 +42,7 @@ You can fill your custom catalogs with either Helm Charts or Rancher Charts, alt
     The example below creates a form that prompts users for persistent volume size and a storage class.
     <br/>
     <br/>
-    For a list of variables you can use when creating a `questions.yml` file, see [Question Variable Reference](helm-charts/legacy-catalogs/creating-apps/#question-variable-reference).
+    For a list of variables you can use when creating a `questions.yml` file, see [Question Variable Reference](./creating-apps.md#question-variable-reference).
 
     ```yaml
         categories:

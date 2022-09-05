@@ -28,7 +28,7 @@ Before installing v2.x, provision one host or more to function as your Rancher S
 
 After provisioning your node(s), install Rancher:
 
-- [Docker Install](installation/single-node)
+- [Docker Install](../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md)
 
     For development environments, Rancher can be installed on a single node using Docker. This installation procedure deploys a single Rancher container to your host.
 
@@ -77,7 +77,7 @@ Rancher v2.x lets you launch a Kubernetes cluster anywhere. Host your cluster us
 
 ### Projects
 
-Additionally, Rancher v2.x introduces [projects](k8s-in-rancher/projects-and-namespaces/), which are objects that divide clusters into different application groups that are useful for applying user permissions. This model of clusters and projects allow for multi-tenancy because hosts are owned by the cluster, and the cluster can be further divided into multiple projects where users can manage their apps, but not those of others.
+Additionally, Rancher v2.x introduces [projects](../../advanced-user-guides/manage-clusters/projects-and-namespaces.md), which are objects that divide clusters into different application groups that are useful for applying user permissions. This model of clusters and projects allow for multi-tenancy because hosts are owned by the cluster, and the cluster can be further divided into multiple projects where users can manage their apps, but not those of others.
 
 When you create a cluster, two projects are automatically created:
 
@@ -86,11 +86,11 @@ When you create a cluster, two projects are automatically created:
 
 However, for production environments, we recommend [creating your own project](../../advanced-user-guides/manage-clusters/projects-and-namespaces.md#creating-projects) and giving it a descriptive name.
 
-After provisioning a new cluster and project, you can authorize your users to access and use project resources. Similarly to Rancher v1.6 environments, Rancher v2.x allows you to [assign users to projects](k8s-in-rancher/projects-and-namespaces/editing-projects/). By assigning users to projects, you can limit what applications and resources a user can access.
+After provisioning a new cluster and project, you can authorize your users to access and use project resources. Similarly to Rancher v1.6 environments, Rancher v2.x allows you to [assign users to projects](../../../pages-for-subheaders/manage-projects.md). By assigning users to projects, you can limit what applications and resources a user can access.
 
 ## D. Create Stacks
 
-In Rancher v1.6, _stacks_ were used to group together the services that belong to your application. In v2.x, you need to [create namespaces](k8s-in-rancher/projects-and-namespaces/), which are the v2.x equivalent of stacks, for the same purpose.
+In Rancher v1.6, _stacks_ were used to group together the services that belong to your application. In v2.x, you need to [create namespaces](), which are the v2.x equivalent of stacks, for the same purpose.
 
 In Rancher v2.x, namespaces are child objects to projects. When you create a project, a `default` namespace is added to the project, but you can create your own to parallel your stacks from v1.6.
 

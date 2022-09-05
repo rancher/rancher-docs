@@ -298,16 +298,16 @@ Directive | Instructions
 [scale][5] | In v1.6, scale refers to the number of container replicas running on a single node. In v2.x, this feature is replaced by replica sets.
 start_on_create | No Kubernetes equivalent. No action is required from you.
 
-[1]:v1.6-migration/monitor-apps/#configuring-probes-in-rancher-v2-x
-[2]:v1.6-migration/schedule-workloads/#scheduling-using-labels
-[3]:v1.6-migration/discover-services
-[4]:v1.6-migration/expose-services
-[5]:v1.6-migration/schedule-workloads/#scheduling-pods-to-a-specific-node
+[1]:./monitor-apps.md#configuring-probes-in-rancher-v2-x
+[2]:./schedule-services.md#scheduling-using-labels
+[3]:./discover-services.md
+[4]:./expose-services.md
+[5]:./schedule-services.md#scheduling-pods-to-a-specific-node
 
 <!-- MB: oops, skipped 6 -->
 
-[7]:v1.6-migration/schedule-workloads/#scheduling-using-labels
-[8]:v1.6-migration/schedule-workloads/#scheduling-global-services
-[9]:v1.6-migration/schedule-workloads/#label-affinity-antiaffinity
+[7]:./schedule-services.md#scheduling-using-labels
+[8]:./schedule-services.md#scheduling-global-services
+[9]:./schedule-services.md#label-affinity-antiaffinity
 
 ### [Next: Expose Your Services](expose-services.md)

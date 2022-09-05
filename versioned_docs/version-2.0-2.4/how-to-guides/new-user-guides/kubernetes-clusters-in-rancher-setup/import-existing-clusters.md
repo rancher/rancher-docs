@@ -32,10 +32,10 @@ Rancher v2.4 added the capability to import a K3s cluster into Rancher, as well 
 After importing a cluster, the cluster owner can:
 
 - [Manage cluster access](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md) through role-based access control
-- Enable [monitoring](monitoring-alerting/legacy/monitoring/cluster-monitoring/) and [logging](cluster-admin/tools/logging/)
+- Enable [monitoring](../../../pages-for-subheaders/cluster-monitoring.md) and [logging](../../../pages-for-subheaders/cluster-logging.md)
 - Enable [Istio](../../../pages-for-subheaders/istio.md)
 - Use [pipelines](../../advanced-user-guides/manage-projects/ci-cd-pipelines.md)
-- Configure [alerts](cluster-admin/tools/alerts/) and [notifiers](../../../explanations/integrations-in-rancher/notifiers.md)
+- Configure [alerts](../../../pages-for-subheaders/cluster-alerts.md) and [notifiers](../../../explanations/integrations-in-rancher/notifiers.md)
 - Manage [projects](../../../pages-for-subheaders/manage-projects.md) and [workloads](../../../pages-for-subheaders/workloads-and-pods.md)
 
 After importing a K3s cluster, the cluster owner can also [upgrade Kubernetes from the Rancher UI.](../../../getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes.md)

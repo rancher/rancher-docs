@@ -88,14 +88,14 @@ To skip tests by editing a ConfigMap resource,
     ```json
     {
       "skip": {
-        "rke-cis-1.4": [ 
-          "1.1.1", 
+        "rke-cis-1.4": [
+          "1.1.1",
           "1.2.2"
         ]
       }
     }
     ```
-    
+
     In the example above, the CIS benchmark version is specified alongside the tests to be skipped for that version.
 
 **Result:** These tests will be skipped on subsequent scans that use the defined CIS Benchmark version.
@@ -127,7 +127,7 @@ To create a new alert,
 
 1. Go to the cluster view and click **Tools > CIS Scans.**
 1. Click **Add Alert.**
-1. Fill out the form. 
+1. Fill out the form.
 1. Enter a name for the alert.
 1. In the **Is** field, set the alert to be triggered when a scan is completed or when a scan has a failure.
 1. In the **Send a** field, set the alert as a **Critical,** **Warning,** or **Info** alert level.
@@ -135,7 +135,7 @@ To create a new alert,
 
 **Result:** The alert is created and activated. The notifications will be triggered when the a scan is run on a cluster and the active alerts have satisfied conditions.
 
-For more information about alerts, refer to [this page.](cluster-admin/tools/alerts/)
+For more information about alerts, refer to [this page.](./cluster-alerts.md)
 
 # Deleting a Report
 
@@ -153,4 +153,4 @@ For more information about alerts, refer to [this page.](cluster-admin/tools/ale
 
 # List of Skipped and Not Applicable Tests
 
-For a list of skipped and not applicable tests, refer to <a href="cis-scans/legacy/skipped-tests" target="_blank">this page.</a>
+For a list of skipped and not applicable tests, refer to [this page](../explanations/integrations-in-rancher/cis-scans/skipped-and-not-applicable-tests.md).
