@@ -43,10 +43,10 @@ The following table lists which node options are available for each type of clus
 | [Download Keys](#ssh-into-a-node-hosted-by-an-infrastructure-provider) | ✓                                                |                  |                     |                     | Download SSH key for in order to SSH into the node.                     |
 | [Node Scaling](#scaling-nodes)                   | ✓                                                |                  |                     |                     | Scale the number of nodes in the node pool up or down.               |
 
-[1]: cluster-provisioning/rke-clusters/node-pools/
-[2]: cluster-provisioning/rke-clusters/custom-nodes/
-[3]: cluster-provisioning/hosted-kubernetes-clusters/
-[4]: cluster-provisioning/imported-clusters/
+[1]: ../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md
+[2]: ../../../pages-for-subheaders/use-existing-nodes.md
+[3]: ../../../pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers.md
+[4]: ../../new-user-guides/kubernetes-clusters-in-rancher-setup/import-existing-clusters.md
 
 ### Nodes Hosted by an Infrastructure Provider
 

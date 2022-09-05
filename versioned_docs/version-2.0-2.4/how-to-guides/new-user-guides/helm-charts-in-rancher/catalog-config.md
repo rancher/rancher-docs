@@ -38,7 +38,7 @@ In Rancher, you can add the custom Helm chart repository with only a catalog nam
 
 # Catalog Fields
 
-When [adding your catalog](catalog/custom/adding/) to Rancher, you'll provide the following information:
+When [adding your catalog](./adding-catalogs.md) to Rancher, you'll provide the following information:
 
 
 | Variable              |  Description  |
@@ -49,7 +49,7 @@ When [adding your catalog](catalog/custom/adding/) to Rancher, you'll provide th
 | Username (Optional) | Username or OAuth Token |
 | Password (Optional) | If you are authenticating using a username, enter the associated password. If you are using an OAuth token, use `x-oauth-basic`. |
 | 	Branch              | For a Git repository, the branch name. Default: `master`. For a Helm Chart repository, this field is ignored.  |
-| Helm version | The Helm version that will be used to deploy all of the charts in the catalog. This field cannot be changed later. For more information, refer to the [section on Helm versions.](helm-charts/legacy-catalogs/#catalog-helm-deployment-versions) |
+| Helm version | The Helm version that will be used to deploy all of the charts in the catalog. This field cannot be changed later. For more information, refer to the [section on Helm versions.](../../../pages-for-subheaders/helm-charts-in-rancher.md#catalog-helm-deployment-versions) |
 
 # Private Repositories
 
@@ -59,7 +59,7 @@ Private Git or Helm chart repositories can be added into Rancher using either cr
 
 ### Using Username and Password
 
-1. When [adding the catalog](catalog/custom/adding/), select the **Use private catalog** checkbox.
+1. When [adding the catalog](./adding-catalogs.md), select the **Use private catalog** checkbox.
 
 2. Provide the `Username` and `Password` for your Git or Helm repository.
 
@@ -70,6 +70,6 @@ Read [using Git over HTTPS and OAuth](https://github.blog/2012-09-21-easier-buil
 1. Create an [OAuth token](https://github.com/settings/tokens)
 with `repo` permission selected, and click **Generate token**.
 
-2. When [adding the catalog](catalog/custom/adding/), select the **Use private catalog** checkbox.
+2. When [adding the catalog](./adding-catalogs.md), select the **Use private catalog** checkbox.
 
-3. For `Username`, provide the Git generated OAuth token. For `Password`, enter `x-oauth-basic`.  
+3. For `Username`, provide the Git generated OAuth token. For `Password`, enter `x-oauth-basic`.

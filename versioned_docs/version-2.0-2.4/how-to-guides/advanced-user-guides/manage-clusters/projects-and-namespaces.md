@@ -6,7 +6,7 @@ aliases:
   - /rancher/v2.0-v2.4/en/concepts/projects/
   - /rancher/v2.0-v2.4/en/tasks/projects/
   - /rancher/v2.0-v2.4/en/tasks/projects/create-project/
-  - /rancher/v2.0-v2.4/en/tasks/projects/create-project/  
+  - /rancher/v2.0-v2.4/en/tasks/projects/create-project/
 ---
 
 A namespace is a Kubernetes concept that allows a virtual cluster within a cluster, which is useful for dividing the cluster into separate "virtual clusters" that each have their own access control and resource quotas.
@@ -42,7 +42,7 @@ You can assign the following resources directly to namespaces:
 - [Workloads](../../../pages-for-subheaders/workloads-and-pods.md)
 - [Load Balancers/Ingress](../../../pages-for-subheaders/load-balancer-and-ingress-controller.md)
 - [Service Discovery Records](../../new-user-guides/kubernetes-resources-setup/create-services.md)
-- [Persistent Volume Claims](k8s-in-rancher/volumes-and-storage/persistent-volume-claims/)
+- [Persistent Volume Claims](../../../pages-for-subheaders/create-kubernetes-persistent-storage.md)
 - [Certificates](../../new-user-guides/kubernetes-resources-setup/encrypt-http-communication.md)
 - [ConfigMaps](../../new-user-guides/kubernetes-resources-setup/configmaps.md)
 - [Registries](../../new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries.md)
@@ -60,7 +60,7 @@ This means that when standard users with project-scoped permissions create a nam
 
 If your permissions are restricted to the project level, it is better to [create a namespace through Rancher](../manage-projects/manage-namespaces.md) to ensure that you will have permission to access the namespace.
 
-If a standard user is a project owner, the user will be able to create namespaces within that project. The Rancher UI will prevent that user from creating namespaces outside the scope of the projects they have access to. 
+If a standard user is a project owner, the user will be able to create namespaces within that project. The Rancher UI will prevent that user from creating namespaces outside the scope of the projects they have access to.
 
 # About Projects
 
@@ -75,7 +75,7 @@ In the base version of Kubernetes, features like role-based access rights or clu
 
 You can use projects to perform actions such as:
 
-- Assign users to a group of namespaces (i.e., [project membership](k8s-in-rancher/projects-and-namespaces/project-members)).
+- Assign users to a group of namespaces (i.e., [project membership](../manage-projects/add-users-to-projects.md)).
 - Assign users specific roles in a project. A role can be owner, member, read-only, or [custom](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/custom-roles.md).
 - Assign resources to the project.
 - Assign Pod Security Policies.
@@ -163,7 +163,7 @@ By default, your user is added as the project `Owner`.
 >
 >- Users assigned the `Owner` or `Member` role for a project automatically inherit the `namespace creation` role. However, this role is a [Kubernetes ClusterRole](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#role-and-clusterrole), meaning its scope extends to all projects in the cluster. Therefore, users explicitly assigned the `Owner` or `Member` role for a project can create namespaces in other projects they're assigned to, even with only the `Read Only` role assigned.
 >
->- By default, the Rancher role of `project-member` inherits from the `Kubernetes-edit` role, and the `project-owner` role inherits from the `Kubernetes-admin` role. As such, both `project-member` and `project-owner` roles will allow for namespace management, including the ability to create and delete namespaces. 
+>- By default, the Rancher role of `project-member` inherits from the `Kubernetes-edit` role, and the `project-owner` role inherits from the `Kubernetes-admin` role. As such, both `project-member` and `project-owner` roles will allow for namespace management, including the ability to create and delete namespaces.
 >
 >- Choose `Custom` to create a custom role on the fly: [Custom Project Roles](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#custom-project-roles).
 
@@ -177,12 +177,12 @@ To add members:
 
 _Available as of v2.1.0_
 
-Resource quotas limit the resources that a project (and its namespaces) can consume. For more information, see [Resource Quotas](k8s-in-rancher/projects-and-namespaces/resource-quotas).
+Resource quotas limit the resources that a project (and its namespaces) can consume. For more information, see [Resource Quotas](../../../pages-for-subheaders/manage-project-resource-quotas.md).
 
 To add a resource quota,
 
 1. Click **Add Quota**.
-1. Select a Resource Type. For more information, see [Resource Quotas.](k8s-in-rancher/projects-and-namespaces/resource-quotas/).
+1. Select a Resource Type. For more information, see [Resource Quotas.](../../../pages-for-subheaders/manage-project-resource-quotas.md).
 1. Enter values for the **Project Limit** and the **Namespace Default Limit**.
 1. **Optional:** Specify **Container Default Resource Limit**, which will be applied to every container started in the project. The parameter is recommended if you have CPU or Memory limits set by the Resource Quota. It can be overridden on per an individual namespace or a container level. For more information, see [Container Default Resource Limit](../../../pages-for-subheaders/manage-project-resource-quotas.md) Note: This option is available as of v2.2.0.
 1. Click **Create**.
