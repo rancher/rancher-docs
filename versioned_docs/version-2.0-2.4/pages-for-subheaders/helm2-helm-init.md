@@ -11,7 +11,7 @@ Helm is the package management tool of choice for Kubernetes. Helm "charts" prov
 
 For systems without direct internet access, see [Helm - Air Gap](air-gapped-helm-cli-install.md) for install details.
 
-Refer to the [Helm version requirements](installation/options/helm-version) to choose a version of Helm to install Rancher.
+Refer to the [Helm version requirements](../getting-started/installation-and-upgrade/resources/helm-version-requirements.md) to choose a version of Helm to install Rancher.
 
 > **Note:** The installation instructions assume you are using Helm 2. The instructions will be updated for Helm 3 soon. In the meantime, if you want to use Helm 3, refer to [these instructions.](https://github.com/ibrokethecloud/rancher-helm3)
 
@@ -34,8 +34,8 @@ kubectl create clusterrolebinding tiller \
 
 helm init --service-account tiller
 
-# Users in China: You will need to specify a specific tiller-image in order to initialize tiller. 
-# The list of tiller image tags are available here: https://dev.aliyun.com/detail.html?spm=5176.1972343.2.18.ErFNgC&repoId=62085. 
+# Users in China: You will need to specify a specific tiller-image in order to initialize tiller.
+# The list of tiller image tags are available here: https://dev.aliyun.com/detail.html?spm=5176.1972343.2.18.ErFNgC&repoId=62085.
 # When initializing tiller, you'll need to pass in --tiller-image
 
 helm init --service-account tiller \
@@ -64,6 +64,6 @@ Server: &version.Version{SemVer:"v2.12.1", GitCommit:"02a47c7249b1fc6d8fd3b94e6b
 
 ### Issues or errors?
 
-See the [Troubleshooting](installation/options/helm2/helm-init/troubleshooting/) page.
+See the [Troubleshooting](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/helm-init/troubleshooting.md) page.
 
-### [Next: Install Rancher](installation/options/helm2/helm-rancher/)
+### [Next: Install Rancher](./helm-rancher.md)

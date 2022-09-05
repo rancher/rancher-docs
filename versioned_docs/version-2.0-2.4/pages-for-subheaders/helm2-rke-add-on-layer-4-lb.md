@@ -8,9 +8,9 @@ aliases:
 
 > #### **Important: RKE add-on install is only supported up to Rancher v2.0.8**
 >
->Please use the Rancher helm chart to install Rancher on a Kubernetes cluster. For details, see the [Kubernetes Install ](installation/options/helm2/).
+>Please use the Rancher helm chart to install Rancher on a Kubernetes cluster. For details, see the [Kubernetes Install ](../getting-started/installation-and-upgrade/resources/helm-version-requirements.md).
 >
->If you are currently using the RKE add-on install method, see [Migrating from a High-availability Kubernetes install with an RKE add-on](upgrades/upgrades/migrating-from-rke-add-on/) for details on how to move to using the Helm chart.
+>If you are currently using the RKE add-on install method, see [Migrating from a High-availability Kubernetes install with an RKE add-on](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/migrating-from-rke-add-on.md) for details on how to move to using the Helm chart.
 
 This procedure walks you through setting up a 3-node cluster using the Rancher Kubernetes Engine (RKE). The cluster's sole purpose is running pods for Rancher. The setup is based on:
 
@@ -170,7 +170,7 @@ RKE uses a `.yml` config file to install and configure your Kubernetes cluster. 
 
     >**Advanced Config Options:**
     >
-    >- Want records of all transactions with the Rancher API? Enable the [API Auditing](installation/api-auditing) feature by editing your RKE config file. For more information, see how to enable it in [your RKE config file](installation/options/helm2/rke-add-on/api-auditing/).
+    >- Want records of all transactions with the Rancher API? Enable the [API Auditing](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/enable-api-audit-log.md) feature by editing your RKE config file. For more information, see how to enable it in [your RKE config file](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/rke-add-on/api-auditing.md).
     >- Want to know the other config options available for your RKE template? See the [RKE Documentation: Config Options](https://rancher.com/docs/rke/latest/en/config-options/).
 
 
@@ -393,7 +393,7 @@ During installation, RKE automatically generates a config file named `kube_confi
 
 You have a couple of options:
 
-- Create a backup of your Rancher Server in case of a disaster scenario: [High Availability Back Up and Restore](installation/backups-and-restoration/ha-backup-and-restoration).
+- Create a backup of your Rancher Server in case of a disaster scenario: [High Availability Back Up and Restore](./backup-restore-and-disaster-recovery.md).
 - Create a Kubernetes cluster: [Provisioning Kubernetes Clusters](kubernetes-clusters-in-rancher-setup.md).
 
 <br/>

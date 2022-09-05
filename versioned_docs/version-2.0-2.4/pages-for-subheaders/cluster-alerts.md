@@ -36,7 +36,7 @@ Before you can receive alerts, you must configure one or more notifier in Ranche
 
 When you create a cluster, some alert rules are predefined. You can receive these alerts if you configure a [notifier](../explanations/integrations-in-rancher/notifiers.md) for them.
 
-For details about what triggers the predefined alerts, refer to the [documentation on default alerts.](cluster-admin/tools/alerts/default-alerts)
+For details about what triggers the predefined alerts, refer to the [documentation on default alerts.](../explanations/integrations-in-rancher/cluster-alerts/default-alerts.md)
 
 ### Alert Event Examples
 
@@ -49,9 +49,9 @@ Some examples of alert events are:
 
 ### Alerts Triggered by Prometheus Queries
 
-When you edit an alert rule, you will have the opportunity to configure the alert to be triggered based on a Prometheus expression. For examples of expressions, refer to [this page.](monitoring-alerting/v2.0.x-v2.4.x/cluster-monitoring/expression/)
+When you edit an alert rule, you will have the opportunity to configure the alert to be triggered based on a Prometheus expression. For examples of expressions, refer to [this page.](../explanations/integrations-in-rancher/cluster-monitoring/expression.md)
 
-Monitoring must be [enabled](monitoring-alerting/v2.0.x-v2.4.x/cluster-monitoring/) before you can trigger alerts with custom Prometheus queries or expressions.
+Monitoring must be [enabled](./cluster-monitoring.md) before you can trigger alerts with custom Prometheus queries or expressions.
 
 ### Urgency Levels
 
@@ -59,7 +59,7 @@ You can set an urgency level for each alert. This urgency appears in the notific
 
 ### Scope of Alerts
 
-The scope for alerts can be set at either the cluster level or [project level](project-admin/tools/alerts/).
+The scope for alerts can be set at either the cluster level or [project level](../reference-guides/rancher-project-tools/project-alerts.md).
 
 At the cluster level, Rancher monitors components in your Kubernetes cluster, and sends you alerts related to:
 
@@ -82,7 +82,7 @@ After you set up cluster alerts, you can manage each alert object. To manage ale
 
 As a [cluster owner](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles), you can configure Rancher to send you alerts for cluster events.
 
->**Prerequisite:** Before you can receive cluster alerts, you must [add a notifier](monitoring-alerting/legacy/notifiers/).
+>**Prerequisite:** Before you can receive cluster alerts, you must [add a notifier](../explanations/integrations-in-rancher/notifiers.md).
 
 1. From the **Global** view, navigate to the cluster that you want to configure cluster alerts for. Select **Tools > Alerts**. Then click **Add Alert Group**.
 1. Enter a **Name** for the alert that describes its purpose, you could group alert rules for the different purpose.
@@ -307,7 +307,7 @@ Input or select an **Expression**, the dropdown shows the original metrics from 
 - [**ETCD**](https://etcd.io/docs/v3.4.0/op-guide/monitoring/)
 - [**Kubernetes Components**](https://github.com/kubernetes/metrics)
 - [**Kubernetes Resources**](https://github.com/kubernetes/kube-state-metrics)
-- [**Fluentd**](https://docs.fluentd.org/v1.0/articles/monitoring-prometheus) (supported by [Logging]({{<baseurl>}}/rancher/v2.0-v2.4//en/cluster-admin/tools/logging))
+- [**Fluentd**](https://docs.fluentd.org/v1.0/articles/monitoring-prometheus) (supported by [Logging](./cluster-logging.md))
 - [**Cluster Level Grafana**](http://docs.grafana.org/administration/metrics/)
 - **Cluster Level Prometheus**
 

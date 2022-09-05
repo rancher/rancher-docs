@@ -8,9 +8,9 @@ aliases:
 
 Rancher installation is managed using the Helm package manager for Kubernetes.  Use `helm` to install the prerequisite and charts to install Rancher.
 
-For systems without direct internet access, see [Air Gap: Kubernetes install](installation/air-gap-installation/install-rancher/).
+For systems without direct internet access, see [Air Gap: Kubernetes install](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/air-gap-helm2/install-rancher.md).
 
-Refer to the [Helm version requirements](installation/options/helm-version) to choose a version of Helm to install Rancher.
+Refer to the [Helm version requirements](../getting-started/installation-and-upgrade/resources/helm-version-requirements.md) to choose a version of Helm to install Rancher.
 
 > **Note:** The installation instructions assume you are using Helm 2. The instructions will be updated for Helm 3 soon. In the meantime, if you want to use Helm 3, refer to [these instructions.](https://github.com/ibrokethecloud/rancher-helm3)
 
@@ -30,7 +30,7 @@ Rancher Server is designed to be secure by default and requires SSL/TLS configur
 
 There are three recommended options for the source of the certificate.
 
-> **Note:** If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](installation/options/helm2/helm-rancher/chart-options/#external-tls-termination).
+> **Note:** If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/helm-rancher/chart-options.md#external-tls-termination).
 
 | Configuration | Chart option | Description | Requires cert-manager |
 |-----|-----|-----|-----|
@@ -40,12 +40,12 @@ There are three recommended options for the source of the certificate.
 
 ### Optional: Install cert-manager
 
-**Note:** cert-manager is only required for certificates issued by Rancher's generated CA (`ingress.tls.source=rancher`) and Let's Encrypt issued certificates (`ingress.tls.source=letsEncrypt`). You should skip this step if you are using your own certificate files (option `ingress.tls.source=secret`) or if you use [TLS termination on an External Load Balancer](installation/options/helm2/helm-rancher/chart-options/#external-tls-termination).
+**Note:** cert-manager is only required for certificates issued by Rancher's generated CA (`ingress.tls.source=rancher`) and Let's Encrypt issued certificates (`ingress.tls.source=letsEncrypt`). You should skip this step if you are using your own certificate files (option `ingress.tls.source=secret`) or if you use [TLS termination on an External Load Balancer](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/helm-rancher/chart-options.md#external-tls-termination).
 
 > **Important:**
 > Due to an issue with Helm v2.12.0 and cert-manager, please use Helm v2.12.1 or higher.
 
-> Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.12.0, please see our [upgrade documentation](installation/options/upgrading-cert-manager/).
+> Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.12.0, please see our [upgrade documentation](../getting-started/installation-and-upgrade/resources/upgrade-cert-manager.md).
 
 Rancher relies on [cert-manager](https://github.com/jetstack/cert-manager) to issue certificates from Rancher's own generated CA or to request Let's Encrypt certificates.
 
@@ -108,7 +108,7 @@ If the ‘webhook’ pod (2nd line) is in a ContainerCreating state, it may stil
 The default is for Rancher to generate a CA and uses `cert-manager` to issue the certificate for access to the Rancher server interface. Because `rancher` is the default option for `ingress.tls.source`, we are not specifying `ingress.tls.source` when running the `helm install` command.
 
 - Set the `hostname` to the DNS name you pointed at your load balancer.
-- If you are installing an alpha version, Helm requires adding the `--devel` option to the command. 
+- If you are installing an alpha version, Helm requires adding the `--devel` option to the command.
 
 ```
 helm install rancher-<CHART_REPO>/rancher \
@@ -137,7 +137,7 @@ In the following command,
 - Set `ingress.tls.source` to `letsEncrypt`.
 - Set `letsEncrypt.email` to the email address used for communication about your certificate (for example, expiry notices).
 - Set `letsEncrypt.ingress.class` to whatever your ingress controller is, e.g., `traefik`, `nginx`, `haproxy`, etc.
-- If you are installing an alpha version, Helm requires adding the `--devel` option to the command. 
+- If you are installing an alpha version, Helm requires adding the `--devel` option to the command.
 
 ```
 helm install rancher-<CHART_REPO>/rancher \
@@ -145,7 +145,7 @@ helm install rancher-<CHART_REPO>/rancher \
   --namespace cattle-system \
   --set hostname=rancher.my.org \
   --set ingress.tls.source=letsEncrypt \
-  --set letsEncrypt.email=me@example.org \ 
+  --set letsEncrypt.email=me@example.org \
   --set letsEncrypt.ingress.class=nginx
 ```
 
@@ -165,7 +165,7 @@ Create Kubernetes secrets from your own certificates for Rancher to use.
 > **Note:** The `Common Name` or a `Subject Alternative Names` entry in the server certificate must match the `hostname` option, or the ingress controller will fail to configure correctly. Although an entry in the `Subject Alternative Names` is technically required, having a matching `Common Name` maximizes compatibility with older browsers/applications. If you want to check if your certificates are correct, see [How do I check Common Name and Subject Alternative Names in my server certificate?](../faq/technical-items.md#how-do-i-check-common-name-and-subject-alternative-names-in-my-server-certificate)
 
 - Set `hostname` and set `ingress.tls.source` to `secret`.
-- If you are installing an alpha version, Helm requires adding the `--devel` option to the command. 
+- If you are installing an alpha version, Helm requires adding the `--devel` option to the command.
 
 ```
 helm install rancher-<CHART_REPO>/rancher \
@@ -186,7 +186,7 @@ helm install rancher-<CHART_REPO>/rancher \
   --set privateCA=true
 ```
 
-Now that Rancher is deployed, see [Adding TLS Secrets](installation/options/helm2/helm-rancher/tls-secrets/) to publish the certificate files so Rancher and the ingress controller can use them.
+Now that Rancher is deployed, see [Adding TLS Secrets](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/helm-rancher/tls-secrets.md) to publish the certificate files so Rancher and the ingress controller can use them.
 
 After adding the secrets, check if Rancher was rolled out successfully:
 
@@ -212,9 +212,9 @@ The Rancher chart configuration has many options for customizing the install to 
 
 * [HTTP Proxy](../reference-guides/installation-references/helm-chart-options.md)
 * [Private Docker Image Registry](../reference-guides/installation-references/helm-chart-options.md#private-registry-and-air-gap-installs)
-* [TLS Termination on an External Load Balancer](installation/options/helm2/helm-rancher/chart-options/#external-tls-termination)
+* [TLS Termination on an External Load Balancer](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/helm-rancher/chart-options.md#external-tls-termination)
 
-See the [Chart Options](installation/options/helm2/helm-rancher/chart-options/) for the full list of options.
+See the [Chart Options](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/helm-rancher/chart-options.md) for the full list of options.
 
 ### Save your options
 
@@ -224,4 +224,4 @@ Make sure you save the `--set` options you used. You will need to use the same o
 
 That's it you should have a functional Rancher server. Point a browser at the hostname you picked and you should be greeted by the colorful login page.
 
-Doesn't work? Take a look at the [Troubleshooting](installation/options/helm2/helm-rancher/troubleshooting/) Page
+Doesn't work? Take a look at the [Troubleshooting](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/helm-rancher/troubleshooting.md) Page
