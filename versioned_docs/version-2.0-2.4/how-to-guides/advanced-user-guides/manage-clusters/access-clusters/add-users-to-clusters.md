@@ -9,7 +9,7 @@ aliases:
 
 If you want to provide a user with access and permissions to _all_ projects, nodes, and resources within a cluster, assign the user a cluster membership.
 
->**Tip:** Want to provide a user with access to a _specific_ project within a cluster? See [Adding Project Members](k8s-in-rancher/projects-and-namespaces/project-members/) instead.
+>**Tip:** Want to provide a user with access to a _specific_ project within a cluster? See [Adding Project Members](../../manage-projects/add-users-to-projects.md) instead.
 
 There are two contexts where you can add cluster members:
 
@@ -42,7 +42,7 @@ Cluster administrators can edit the membership for a cluster, controlling which 
 
 		>**Note:** If you are logged in as a local user, external users do not display in your search results. For more information, see [External Authentication Configuration and Principal Users](../../../../pages-for-subheaders/about-authentication.md#external-authentication-configuration-and-principal-users).
 
-4. Assign the user or group **Cluster** roles.  
+4. Assign the user or group **Cluster** roles.
 
 	[What are Cluster Roles?](../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)
 

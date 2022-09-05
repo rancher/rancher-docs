@@ -39,7 +39,7 @@ The following table lists the first version of Rancher each provider debuted.
 
 # Global DNS Entries
 
-For each application that you want to route traffic to, you will need to create a Global DNS Entry. This entry will use a fully qualified domain name (a.k.a FQDN) from a global DNS provider to target applications. The applications can either resolve to a single [multi-cluster application](catalog/multi-cluster-apps/) or to specific projects. You must [add specific annotation labels](#adding-annotations-to-ingresses-to-program-the-external-dns) to the ingresses in order for traffic to be routed correctly to the applications. Without this annotation, the programming for the DNS entry will not work.
+For each application that you want to route traffic to, you will need to create a Global DNS Entry. This entry will use a fully qualified domain name (a.k.a FQDN) from a global DNS provider to target applications. The applications can either resolve to a single [multi-cluster application](../deploy-apps-across-clusters.md) or to specific projects. You must [add specific annotation labels](#adding-annotations-to-ingresses-to-program-the-external-dns) to the ingresses in order for traffic to be routed correctly to the applications. Without this annotation, the programming for the DNS entry will not work.
 
 # Permissions for Global DNS Providers and Entries
 
@@ -91,13 +91,13 @@ Permission checks are relaxed for removing target projects in order to support s
 1. For the Global DNS entry that you want to edit, click the **&#8942; > Edit**.
 
 
-# Global DNS Entry Configuration 
+# Global DNS Entry Configuration
 
 | Field | Description |
 |----------|--------------------|
 | FQDN | Enter the **FQDN** you wish to program on the external DNS. |
 | Provider | Select a Global DNS **Provider** from the list. |
-| Resolves To |   Select if this DNS entry will be for a [multi-cluster application](catalog/multi-cluster-apps/) or for workloads in different [projects](k8s-in-rancher/projects-and-namespaces/).   |
+| Resolves To |   Select if this DNS entry will be for a [multi-cluster application](../deploy-apps-across-clusters.md) or for workloads in different [projects](../../advanced-user-guides/manage-clusters/projects-and-namespaces.md).   |
 | Multi-Cluster App Target | The target for the global DNS entry. You will need to ensure that [annotations are added to any ingresses](#adding-annotations-to-ingresses-to-program-the-external-dns) for the applications that you want to target. |
 | DNS TTL | Configure the DNS time to live value in seconds. By default, it will be 300 seconds. |
 | Member Access | Search for any users that you want to have the ability to manage this Global DNS entry. |
@@ -158,4 +158,4 @@ In order for the DNS to be programmed, the following requirements must be met:
 * The ingress routing rule must be set to use a `hostname` that matches the FQDN of the Global DNS entry.
 * The ingress must have an annotation (`rancher.io/globalDNS.hostname`) and the value of this annotation should match the FQDN of the Global DNS entry.
 
-Once the ingress in your [multi-cluster application](catalog/multi-cluster-apps/) or in your target projects is in an `active` state, the FQDN will be programmed on the external DNS against the Ingress IP addresses.
+Once the ingress in your [multi-cluster application](../deploy-apps-across-clusters.md) or in your target projects is in an `active` state, the FQDN will be programmed on the external DNS against the Ingress IP addresses.

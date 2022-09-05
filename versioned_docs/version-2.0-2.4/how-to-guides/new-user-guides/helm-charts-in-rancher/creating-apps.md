@@ -128,4 +128,4 @@ This reference contains variables that you can use in `questions.yml` nested und
 
 # Tutorial: Example Custom Chart Creation
 
-For a tutorial on adding a custom Helm chart to a custom catalog, refer to [this page.](catalog/tutorial)
+For a tutorial on adding a custom Helm chart to a custom catalog, refer to [this page.](./tutorial.md)

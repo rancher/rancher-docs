@@ -75,7 +75,7 @@ In the **Upgrades** section, select the upgrade strategy to use, when you decide
 
 ### Roles
 
-In the **Roles** section, you define the role of the multi-cluster application. Typically, when a user [launches catalog applications](catalog/launching-apps), that specific user's permissions are used for creation of all workloads/resources that is required by the app.
+In the **Roles** section, you define the role of the multi-cluster application. Typically, when a user [launches catalog applications](./helm-charts-in-rancher/launching-apps.md), that specific user's permissions are used for creation of all workloads/resources that is required by the app.
 
 For multi-cluster applications, the application is deployed by a _system user_ and is assigned as the creator of all underlying resources. A _system user_ is used instead of the actual user due to the fact that the actual user could be removed from one of the target projects. If the actual user was removed from one of the projects, then that user would no longer be able to manage the application for the other projects.
 
@@ -101,7 +101,7 @@ If the Helm chart that you are deploying contains a `questions.yml` file, Ranche
 
 ### Key Value Pairs for Native Helm Charts
 
-For native Helm charts (i.e., charts from the **Helm Stable** or **Helm Incubator** catalogs or a [custom Helm chart repository](catalog/custom/), answers are provided as key value pairs in the **Answers** section. These answers are used to override the default values.
+For native Helm charts (i.e., charts from the **Helm Stable** or **Helm Incubator** catalogs or a [custom Helm chart repository](./helm-charts-in-rancher/creating-apps.md), answers are provided as key value pairs in the **Answers** section. These answers are used to override the default values.
 
 ### Members
 

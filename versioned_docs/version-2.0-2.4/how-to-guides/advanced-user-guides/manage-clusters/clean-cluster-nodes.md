@@ -27,10 +27,10 @@ When cleaning nodes provisioned using Rancher, the following components are dele
 | All resources create under the `management.cattle.io` API Group                | ✓               | ✓                 | ✓                   |                     |
 | All CRDs created by Rancher v2.x                                               | ✓               | ✓                 | ✓                   |                     |
 
-[1]: cluster-provisioning/rke-clusters/node-pools/
-[2]: cluster-provisioning/rke-clusters/custom-nodes/
-[3]: cluster-provisioning/hosted-kubernetes-clusters/
-[4]: cluster-provisioning/imported-clusters/
+[1]: ../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md
+[2]: ../../../pages-for-subheaders/use-existing-nodes.md
+[3]: ../../../pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers.md
+[4]: ../../new-user-guides/kubernetes-clusters-in-rancher-setup/import-existing-clusters.md
 
 ## Removing a Node from a Cluster by Rancher UI
 
