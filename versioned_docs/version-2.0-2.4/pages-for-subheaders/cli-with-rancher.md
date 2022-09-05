@@ -1,5 +1,5 @@
 ---
-title: Using the Rancher Command Line Interface 
+title: Using the Rancher Command Line Interface
 description: The Rancher CLI is a unified tool that you can use to interact with Rancher. With it, you can operate Rancher using a command line interface rather than the GUI
 metaTitle: "Using the Rancher Command Line Interface "
 metaDescription: "The Rancher CLI is a unified tool that you can use to interact with Rancher. With it, you can operate Rancher using a command line interface rather than the GUI"
@@ -34,16 +34,16 @@ If Rancher Server uses a self-signed certificate, Rancher CLI prompts you to con
 
 ### Project Selection
 
-Before you can perform any commands, you must select a Rancher project to perform those commands against. To select a [project](k8s-in-rancher/projects-and-namespaces/) to work on, use the command `./rancher context switch`. When you enter this command, a list of available projects displays. Enter a number to choose your project.
+Before you can perform any commands, you must select a Rancher project to perform those commands against. To select a [project](../how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces.md) to work on, use the command `./rancher context switch`. When you enter this command, a list of available projects displays. Enter a number to choose your project.
 
 **Example: `./rancher context switch` Output**
 ```
 User:rancher-cli-directory user$ ./rancher context switch
-NUMBER    CLUSTER NAME   PROJECT ID              PROJECT NAME   
-1         cluster-2      c-7q96s:p-h4tmb         project-2      
-2         cluster-2      c-7q96s:project-j6z6d   Default        
-3         cluster-1      c-lchzv:p-xbpdt         project-1      
-4         cluster-1      c-lchzv:project-s2mch   Default       
+NUMBER    CLUSTER NAME   PROJECT ID              PROJECT NAME
+1         cluster-2      c-7q96s:p-h4tmb         project-2
+2         cluster-2      c-7q96s:project-j6z6d   Default
+3         cluster-1      c-lchzv:p-xbpdt         project-1
+4         cluster-1      c-lchzv:project-s2mch   Default
 Select a Project:
 ```
 
@@ -61,10 +61,10 @@ The following commands are available for use in Rancher CLI.
 | Command  | Result  |
 |---|---|
 | `apps, [app]`  | Performs operations on catalog applications (i.e. individual [Helm charts](https://docs.helm.sh/developing_charts/) or Rancher charts.  |
-| `catalog`  | Performs operations on [catalogs](catalog/).  |
+| `catalog`  | Performs operations on [catalogs](./helm-charts-in-rancher.md).  |
 | `clusters, [cluster]`  | Performs operations on your [clusters](kubernetes-clusters-in-rancher-setup.md).  |
 | `context`  | Switches between Rancher [projects](../how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces.md). For an example, see [Project Selection](#project-selection).  |
-| `inspect [OPTIONS] [RESOURCEID RESOURCENAME]`  | Displays details about [Kubernetes resources](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#resource-types) or Rancher resources (i.e.: [projects](k8s-in-rancher/projects-and-namespaces/) and [workloads](workloads-and-pods.md)). Specify resources by name or ID.  |
+| `inspect [OPTIONS] [RESOURCEID RESOURCENAME]`  | Displays details about [Kubernetes resources](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#resource-types) or Rancher resources (i.e.: [projects](../how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces.md) and [workloads](workloads-and-pods.md)). Specify resources by name or ID.  |
 | `kubectl`  |Runs [kubectl commands](https://kubernetes.io/docs/reference/kubectl/overview/#operations).   |
 | `login, [l]`  | Logs into a Rancher Server. For an example, see [CLI Authentication](#cli-authentication).  |
 | `namespaces, [namespace]`  |Performs operations on namespaces.   |

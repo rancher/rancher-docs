@@ -10,7 +10,7 @@ aliases:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Within a project, when you want to deploy applications from catalogs, the applications available in your project will be based on the [scope of the catalogs](helm-charts/legacy-catalogs/#catalog-scopes).
+Within a project, when you want to deploy applications from catalogs, the applications available in your project will be based on the [scope of the catalogs](../../../pages-for-subheaders/helm-charts-in-rancher.md#catalog-scopes).
 
 If your application is using ingresses, you can program the ingress hostname to an external DNS by setting up a [Global DNS entry](globaldns.md).
 
@@ -27,7 +27,7 @@ To launch an app from a catalog in Rancher, you must have at least one of the fo
 - A [project-member role](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-roles) in the target cluster, which gives you the ability to create, read, update, and delete the workloads
 - A [cluster owner role](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles) for the cluster that include the target project
 
-Before launching an app, you'll need to either [enable a built-in global catalog](catalog/built-in) or [add your own custom catalog.](catalog/adding-catalogs)
+Before launching an app, you'll need to either [enable a built-in global catalog](./built-in.md) or [add your own custom catalog.](./adding-catalogs.md)
 
 # Launching a Catalog App
 
@@ -69,7 +69,7 @@ If the Helm chart that you are deploying contains a `questions.yml` file, Ranche
 
 ### Key Value Pairs for Native Helm Charts
 
-For native Helm charts (i.e., charts from the **Helm Stable** or **Helm Incubator** catalogs or a [custom Helm chart repository](helm-charts/legacy-catalogs/catalog-config/#custom-helm-chart-repository)), answers are provided as key value pairs in the **Answers** section. These answers are used to override the default values.
+For native Helm charts (i.e., charts from the **Helm Stable** or **Helm Incubator** catalogs or a [custom Helm chart repository](./catalog-config.md#custom-helm-chart-repository)), answers are provided as key value pairs in the **Answers** section. These answers are used to override the default values.
 
 </TabItem>
 <TabItem value="Editing YAML Files">

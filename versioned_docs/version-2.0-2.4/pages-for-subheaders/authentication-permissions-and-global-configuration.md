@@ -57,4 +57,4 @@ For more information on how metadata works and how to configure metadata config,
 
 _Available as of v2.3.0_
 
-Rancher includes some features that are experimental and disabled by default. Feature flags were introduced to allow you to try these features. For more information, refer to the section about [feature flags.](installation/options/feature-flags/)
+Rancher includes some features that are experimental and disabled by default. Feature flags were introduced to allow you to try these features. For more information, refer to the section about [feature flags.](../reference-guides/installation-references/feature-flags.md)
