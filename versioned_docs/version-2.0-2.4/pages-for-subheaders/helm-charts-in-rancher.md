@@ -43,7 +43,7 @@ Project | This specific cluster can access the Helm charts in this catalog |  v2
 
 _Applicable as of v2.4.0_
 
-In November 2019, Helm 3 was released, and some features were deprecated or refactored. It is not fully [backwards compatible](helm-charts/legacy-catalogs/#helm-3-backwards-compatibility) with Helm 2. Therefore, catalogs in Rancher need to be separated, with each catalog only using one Helm version. This will help reduce app deployment issues as your Rancher users will not need to know which version of your chart is compatible with which Helm version - they can just select a catalog, select an app and deploy a version that has already been vetted for compatibility.
+In November 2019, Helm 3 was released, and some features were deprecated or refactored. It is not fully [backwards compatible](#helm-3-backwards-compatibility) with Helm 2. Therefore, catalogs in Rancher need to be separated, with each catalog only using one Helm version. This will help reduce app deployment issues as your Rancher users will not need to know which version of your chart is compatible with which Helm version - they can just select a catalog, select an app and deploy a version that has already been vetted for compatibility.
 
 When you create a custom catalog, you will have to configure the catalog to use either Helm 2 or Helm 3. This version cannot be changed later. If the catalog is added with the wrong Helm version, it will need to be deleted and re-added.
 
@@ -68,29 +68,29 @@ _Applicable as of v2.4.0_
 
 With the use of the OpenAPI schema to validate your rendered templates in Helm 3, you will find charts that worked in Helm 2 may not work in Helm 3. This will require you to update your chart templates to meet the new validation requirements. This is one of the main reasons support for Helm 2 and Helm 3 was provided starting in Rancher 2.4.x, as not all charts can be deployed immediately in Helm 3.
 
-Helm 3 does not create a namespace for you, so you will have to provide an existing one. This can cause issues if you have integrated code with Helm 2, as you will need to make code changes to ensure a namespace is being created and passed in for Helm 3. Rancher will continue to manage namespaces for Helm to ensure this does not impact your app deployment.  
+Helm 3 does not create a namespace for you, so you will have to provide an existing one. This can cause issues if you have integrated code with Helm 2, as you will need to make code changes to ensure a namespace is being created and passed in for Helm 3. Rancher will continue to manage namespaces for Helm to ensure this does not impact your app deployment.
 
 apiVersion `v2` is now reserved for Helm 3 charts. This apiVersion enforcement could cause issues as older versions of Helm 2 did not validate the apiVersion in the `Chart.yaml` file. In general, your Helm 2 chart’s apiVersion should be set to `v1` and your Helm 3 chart’s apiVersion should be set to `v2`. You can install charts with apiVersion `v1` with Helm 3, but you cannot install `v2` charts into Helm 2.
 
 # Built-in Global Catalogs
 
-Within Rancher, there are default catalogs packaged as part of Rancher. These can be enabled or disabled by an administrator. For details, refer to the section on managing [built-in global catalogs.](catalog/built-in)
+Within Rancher, there are default catalogs packaged as part of Rancher. These can be enabled or disabled by an administrator. For details, refer to the section on managing [built-in global catalogs.](../how-to-guides/new-user-guides/helm-charts-in-rancher/built-in.md)
 
 # Custom Catalogs
 
-There are two types of catalogs in Rancher: [Built-in global catalogs](catalog/built-in/) and [custom catalogs.](catalog/adding-catalogs/)
+There are two types of catalogs in Rancher: [Built-in global catalogs](../how-to-guides/new-user-guides/helm-charts-in-rancher/built-in.md) and [custom catalogs.](../how-to-guides/new-user-guides/helm-charts-in-rancher/adding-catalogs.md)
 
-Any user can create custom catalogs to add into Rancher.  Custom catalogs can be added into Rancher at the global level, cluster level, or project level. For details, refer to the [section on adding custom catalogs](catalog/adding-catalogs) and the [catalog configuration reference.](catalog/catalog-config)
+Any user can create custom catalogs to add into Rancher.  Custom catalogs can be added into Rancher at the global level, cluster level, or project level. For details, refer to the [section on adding custom catalogs](../how-to-guides/new-user-guides/helm-charts-in-rancher/adding-catalogs.md) and the [catalog configuration reference.](../how-to-guides/new-user-guides/helm-charts-in-rancher/catalog-config.md)
 
 # Creating and Launching Applications
 
 In Rancher, applications are deployed from the templates in a catalog. This section covers the following topics:
 
-* [Multi-cluster applications](catalog/multi-cluster-apps/)
-* [Creating catalog apps](catalog/creating-apps)
-* [Launching catalog apps within a project](catalog/launching-apps)
-* [Managing catalog apps](catalog/managing-apps)
-* [Tutorial: Example custom chart creation](catalog/tutorial)
+* [Multi-cluster applications](../how-to-guides/new-user-guides/helm-charts-in-rancher/multi-cluster-apps.md)
+* [Creating catalog apps](../how-to-guides/new-user-guides/helm-charts-in-rancher/creating-apps.md)
+* [Launching catalog apps within a project](../how-to-guides/new-user-guides/helm-charts-in-rancher/launching-apps.md)
+* [Managing catalog apps](../how-to-guides/new-user-guides/helm-charts-in-rancher/managing-apps.md)
+* [Tutorial: Example custom chart creation](../how-to-guides/new-user-guides/helm-charts-in-rancher/tutorial.md)
 
 # Chart Compatibility with Rancher
 

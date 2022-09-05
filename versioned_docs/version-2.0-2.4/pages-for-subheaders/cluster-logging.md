@@ -62,7 +62,7 @@ Logging Driver: json-file
 You can configure logging at either cluster level or project level.
 
 - Cluster logging writes logs for every pod in the cluster, i.e. in all the projects. For [RKE clusters](launch-kubernetes-with-rancher.md), it also writes logs for all the Kubernetes system components.
-- [Project logging](project-admin/tools/logging/) writes logs for every pod in that particular project.
+- [Project logging](../reference-guides/rancher-project-tools/project-logging.md) writes logs for every pod in that particular project.
 
 Logs that are sent to your logging service are from the following locations:
 
@@ -79,11 +79,11 @@ As an [administrator](../how-to-guides/advanced-user-guides/authentication-permi
 
 1. Select a logging service and enter the configuration. Refer to the specific service for detailed configuration. Rancher supports integration with the following services:
 
-   - [Elasticsearch](cluster-admin/tools/logging/elasticsearch/)
-   - [Splunk](cluster-admin/tools/logging/splunk/)
-   - [Kafka](cluster-admin/tools/logging/kafka/)
-   - [Syslog](cluster-admin/tools/logging/syslog/)
-   - [Fluentd](cluster-admin/tools/logging/fluentd/)
+   - [Elasticsearch](../explanations/integrations-in-rancher/cluster-logging/elasticsearch.md)
+   - [Splunk](../explanations/integrations-in-rancher/cluster-logging/splunk.md)
+   - [Kafka](../explanations/integrations-in-rancher/cluster-logging/kafka.md)
+   - [Syslog](../explanations/integrations-in-rancher/cluster-logging/syslog.md)
+   - [Fluentd](../explanations/integrations-in-rancher/cluster-logging/fluentd.md)
 
 1. (Optional) Instead of using the UI to configure the logging services, you can enter custom advanced configurations by clicking on **Edit as File**, which is located above the logging targets. This link is only visible after you select a logging service.
 

@@ -29,7 +29,7 @@ This section covers the following topics:
 
 Prometheus provides a _time series_ of your data, which is, according to [Prometheus documentation](https://prometheus.io/docs/concepts/data_model/):
 
-You can configure these services to collect logs at either the cluster level or the project level. This page describes how to enable monitoring for a cluster. For details on enabling monitoring for a project, refer to the [project administration section](project-admin/tools/monitoring/).
+You can configure these services to collect logs at either the cluster level or the project level. This page describes how to enable monitoring for a cluster. For details on enabling monitoring for a project, refer to the [project administration section](../explanations/integrations-in-rancher/cluster-monitoring/project-monitoring.md).
 
 >A stream of timestamped values belonging to the same metric and the same set of labeled dimensions, along with comprehensive statistics and metrics of the monitored cluster.
 
@@ -41,7 +41,7 @@ Multi-tenancy support in terms of cluster-only and project-only Prometheus insta
 
 # Monitoring Scope
 
-Using Prometheus, you can monitor Rancher at both the cluster level and [project level](project-admin/tools/monitoring/). For each cluster and project that is enabled for monitoring, Rancher deploys a Prometheus server.
+Using Prometheus, you can monitor Rancher at both the cluster level and [project level](../explanations/integrations-in-rancher/cluster-monitoring/project-monitoring.md). For each cluster and project that is enabled for monitoring, Rancher deploys a Prometheus server.
 
 - Cluster monitoring allows you to view the health of your Kubernetes cluster. Prometheus collects metrics from the cluster components below, which you can view in graphs and charts.
 
@@ -49,7 +49,7 @@ Using Prometheus, you can monitor Rancher at both the cluster level and [project
     - etcd database
     - All nodes (including workers)
 
-- [Project monitoring](project-admin/tools/monitoring/) allows you to view the state of pods running in a given project. Prometheus collects metrics from the project's deployed HTTP and TCP/UDP workloads.
+- [Project monitoring](../explanations/integrations-in-rancher/cluster-monitoring/project-monitoring.md) allows you to view the state of pods running in a given project. Prometheus collects metrics from the project's deployed HTTP and TCP/UDP workloads.
 
 # Enabling Cluster Monitoring
 
@@ -66,17 +66,17 @@ As an [administrator](../how-to-guides/advanced-user-guides/authentication-permi
 > | 10252 | Controlplane | Kube controller manager |
 > | 2379 | Etcd | Etcd server |
 
-> Monitoring V1 requires a Kubernetes verison less than or equal to v1.20.x. To install monitoring on Kubernetes v1.21+, you will need to [migrate to Monitoring V2.]({{<baseurl>}}/rancher/v2.5/en/monitoring-alerting/migrating/)
+> Monitoring V1 requires a Kubernetes verison less than or equal to v1.20.x. To install monitoring on Kubernetes v1.21+, you will need to [migrate to Monitoring V2.](../../version-2.5/how-to-guides/advanced-user-guides/monitoring-alerting-guides/migrate-to-rancher-v2.5%2B-monitoring.md)
 
 1. From the **Global** view, navigate to the cluster that you want to configure cluster monitoring.
 
 1. Select **Tools > Monitoring** in the navigation bar.
 
-1. Select **Enable** to show the [Prometheus configuration options](monitoring-alerting/legacy/monitoring/cluster-monitoring/prometheus/). Review the [resource consumption recommendations](#resource-consumption) to ensure you have enough resources for Prometheus and on your worker nodes to enable monitoring. Enter in your desired configuration options.
+1. Select **Enable** to show the [Prometheus configuration options](../explanations/integrations-in-rancher/cluster-monitoring/prometheus.md). Review the [resource consumption recommendations](#resource-consumption) to ensure you have enough resources for Prometheus and on your worker nodes to enable monitoring. Enter in your desired configuration options.
 
 1. Click **Save**.
 
-**Result:** The Prometheus server will be deployed as well as two monitoring applications. The two monitoring applications, `cluster-monitoring` and `monitoring-operator`, are added as an [application](catalog/apps/) to the cluster's `system` project. After the applications are `active`, you can start viewing [cluster metrics](monitoring-alerting/legacy/monitoring/cluster-monitoring/cluster-metrics/) through the Rancher dashboard or directly from Grafana.
+**Result:** The Prometheus server will be deployed as well as two monitoring applications. The two monitoring applications, `cluster-monitoring` and `monitoring-operator`, are added as an [application](./helm-charts-in-rancher.md) to the cluster's `system` project. After the applications are `active`, you can start viewing [cluster metrics](../explanations/integrations-in-rancher/cluster-monitoring/cluster-metrics.md) through the Rancher dashboard or directly from Grafana.
 
 > The default username and password for the Grafana instance will be `admin/admin`. However, Grafana dashboards are served via the Rancher authentication proxy, so only users who are currently authenticated into the Rancher server have access to the Grafana dashboard.
 

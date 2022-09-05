@@ -37,25 +37,25 @@ The following CLI tools are required for this install. Please make sure these to
 
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) - Kubernetes command-line tool.
 - [rke](https://rancher.com/docs/rke/latest/en/installation/) - Rancher Kubernetes Engine, cli for building Kubernetes clusters.
-- [helm](https://docs.helm.sh/using_helm/#installing-helm) - Package management for Kubernetes. Refer to the [Helm version requirements](installation/options/helm-version) to choose a version of Helm to install Rancher.
+- [helm](https://docs.helm.sh/using_helm/#installing-helm) - Package management for Kubernetes. Refer to the [Helm version requirements](../getting-started/installation-and-upgrade/resources/helm-version-requirements.md) to choose a version of Helm to install Rancher.
 
 ## Installation Outline
 
-- [Create Nodes and Load Balancer](installation/options/helm2/create-nodes-lb/)
-- [Install Kubernetes with RKE](installation/options/helm2/kubernetes-rke/)
-- [Initialize Helm (tiller)](installation/options/helm2/helm-init/)
-- [Install Rancher](installation/options/helm2/helm-rancher/)
+- [Create Nodes and Load Balancer](./helm2-create-nodes-lb.md)
+- [Install Kubernetes with RKE](./helm2-kubernetes-rke.md)
+- [Initialize Helm (tiller)](./helm2-helm-init.md)
+- [Install Rancher](./helm-rancher.md)
 
 ## Additional Install Options
 
-- [Migrating from a Kubernetes Install with an RKE Add-on](upgrades/upgrades/migrating-from-rke-add-on/)
+- [Migrating from a Kubernetes Install with an RKE Add-on](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/migrating-from-rke-add-on.md)
 
 ## Previous Methods
 
-[RKE add-on install](installation/options/helm2/rke-add-on/)
+[RKE add-on install](./helm2-rke-add-on.md)
 
 > **Important: RKE add-on install is only supported up to Rancher v2.0.8**
 >
-> Please use the Rancher helm chart to install Rancher on a Kubernetes cluster. For details, see the [Kubernetes Install ](installation/options/helm2/).
+> Please use the Rancher helm chart to install Rancher on a Kubernetes cluster. For details, see the [Kubernetes Install ](../getting-started/installation-and-upgrade/resources/helm-version-requirements.md).
 >
 > If you are currently using the RKE add-on install method, see [Migrating from a Kubernetes Install with an RKE Add-on](upgrades/upgrades/migrating-from-rke-add-on/) for details on how to move to using the Helm chart.

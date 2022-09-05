@@ -8,7 +8,7 @@ aliases:
 
 Use RKE to install Kubernetes with a high availability etcd configuration.
 
->**Note:** For systems without direct internet access see [Air Gap: Kubernetes install](installation/air-gap-high-availability/) for install details.
+>**Note:** For systems without direct internet access see [Air Gap: Kubernetes install](./air-gap-helm2.md) for install details.
 
 ### Create the `rancher-cluster.yml` File
 
@@ -55,7 +55,7 @@ RKE has many configuration options for customizing the install to suit your spec
 
 Please see the [RKE Documentation](https://rancher.com/docs/rke/latest/en/config-options/) for the full list of options and capabilities.
 
-For tuning your etcd cluster for larger Rancher installations see the [etcd settings guide](installation/options/etcd/).
+For tuning your etcd cluster for larger Rancher installations see the [etcd settings guide](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/tune-etcd-for-large-installs.md).
 
 ### Run RKE
 
@@ -130,6 +130,6 @@ Save a copy of the following files in a secure location:
 
 ### Issues or errors?
 
-See the [Troubleshooting](installation/options/helm2/kubernetes-rke/troubleshooting/) page.
+See the [Troubleshooting](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/kubernetes-rke/troubleshooting.md) page.
 
-### [Next: Initialize Helm (Install tiller)](installation/options/helm2/helm-init/)
+### [Next: Initialize Helm (Install tiller)](./helm2-helm-init.md)
