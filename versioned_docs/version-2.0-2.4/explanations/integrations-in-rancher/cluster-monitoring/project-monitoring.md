@@ -43,7 +43,7 @@ Only [administrators](../../../how-to-guides/advanced-user-guides/authentication
 
 1. Select **Tools > Monitoring** in the navigation bar.
 
-1. Select **Enable** to show the [Prometheus configuration options](../../../pages-for-subheaders/cluster-monitoring.md/prometheus/). Enter in your desired configuration options.
+1. Select **Enable** to show the [Prometheus configuration options](./prometheus.md). Enter in your desired configuration options.
 
 1. Click **Save**.
 

@@ -173,7 +173,7 @@ If you are currently running the cert-manager whose version is older than v0.11,
     helm delete rancher -n cattle-system
     ```
 
-2. Uninstall and reinstall `cert-manager` according to the instructions on the [Upgrading Cert-Manager](installation/options/upgrading-cert-manager) page.
+2. Uninstall and reinstall `cert-manager` according to the instructions on the [Upgrading Cert-Manager](../resources/upgrade-cert-manager.md) page.
 
 3. Reinstall Rancher to the latest version with all your settings. Take all the values from the step 1 and append them to the command using `--set key=value`. Note: There will be many more options from the step 1 that need to be appended.
 
