@@ -1,6 +1,5 @@
 ---
 title: Enable Alerting for Rancher CIS Benchmark
-weight: 7
 ---
 
 Alerts can be configured to be sent out for a scan that runs on a schedule.

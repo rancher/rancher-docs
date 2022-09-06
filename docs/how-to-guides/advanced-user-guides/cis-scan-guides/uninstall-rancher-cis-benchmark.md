@@ -1,6 +1,5 @@
 ---
 title: Uninstall Rancher CIS Benchmark
-weight: 2
 ---
 
 1. From the **Cluster Dashboard,** go to the left navigation bar and click **Apps & Marketplace > Installed Apps**.

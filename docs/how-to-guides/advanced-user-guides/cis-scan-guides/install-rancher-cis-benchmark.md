@@ -1,6 +1,5 @@
 ---
 title: Install Rancher CIS Benchmark
-weight: 1
 ---
 
 1. In the upper left corner, click **☰ > Cluster Management**.

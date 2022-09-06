@@ -11,8 +11,9 @@ The `rancher-cis-benchmark` app leverages <a href="https://github.com/aquasecuri
 - [About the Generated Report](#about-the-generated-report)
 - [Test Profiles](#test-profiles)
 - [About Skipped and Not Applicable Tests](#about-skipped-and-not-applicable-tests)
-- [Roles-based Access Control](../explanations/integrations-in-rancher/cis-scans/rbac-for-cis-scans.md)
-- [Configuration](../explanations/integrations-in-rancher/cis-scans/configuration-reference.md)
+- [Role-based Access Control](#role-based-access-control)
+- [Configuration](#configuration)
+- [How-to Guides](#how-to-guides)
 
 # About the CIS Benchmark
 
@@ -109,3 +110,7 @@ For information about permissions, refer to [this page](../explanations/integrat
 # Configuration
 
 For more information about configuring the custom resources for the scans, profiles, and benchmark versions, refer to [this page](../explanations/integrations-in-rancher/cis-scans/configuration-reference.md)
+
+# How-to Guides
+
+Please refer [here](../pages-for-subheaders/cis-scan-guides.md) for how-to guides on CIS scans.

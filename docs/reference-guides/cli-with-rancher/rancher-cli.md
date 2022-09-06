@@ -11,7 +11,7 @@ weight: 21
   - [Project Selection](#project-selection)
   - [Commands](#commands)
   - [Rancher CLI Help](#rancher-cli-help)
-  - [Limitations](#limitations)
+  - [Limitations](#limitations) 
 
 The Rancher CLI (Command Line Interface) is a unified tool that you can use to interact with Rancher. With this tool, you can operate Rancher using a command line rather than the GUI.
 

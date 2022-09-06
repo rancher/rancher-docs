@@ -1,6 +1,5 @@
 ---
 title: Skip Tests
-weight: 5
 ---
 
 CIS scans can be run using test profiles with user-defined skips.

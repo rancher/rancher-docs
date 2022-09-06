@@ -1,6 +1,5 @@
 ---
 title: Configure Alerts for Periodic Scan on a Schedule
-weight: 8
 ---
 
 It is possible to run a ClusterScan on a schedule.
