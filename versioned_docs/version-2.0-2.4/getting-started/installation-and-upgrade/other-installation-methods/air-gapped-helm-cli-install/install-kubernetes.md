@@ -158,7 +158,7 @@ From a system that can access ports 22/TCP and 6443/TCP on the Linux host node(s
 
 This file is an RKE configuration file, which is a configuration for the cluster you're deploying Rancher to.
 
-Replace values in the code sample below with help of the _RKE Options_ table. Use the IP address or DNS names of the [3 nodes](installation/air-gap-high-availability/provision-hosts) you created.
+Replace values in the code sample below with help of the _RKE Options_ table. Use the IP address or DNS names of the [3 nodes](../../advanced-options/advanced-use-cases/air-gap-helm2/prepare-nodes.md) you created.
 
 > **Tip:** For more details on the options available, see the RKE [Config Options](https://rancher.com/docs/rke/latest/en/config-options/).
 
@@ -225,6 +225,6 @@ Save a copy of the following files in a secure location:
 
 ### Issues or errors?
 
-See the [Troubleshooting](installation/options/troubleshooting/) page.
+See the [Troubleshooting](../../install-upgrade-on-a-kubernetes-cluster/troubleshooting.md) page.
 
 ### [Next: Install Rancher](install-rancher-ha.md)

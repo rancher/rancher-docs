@@ -3,7 +3,7 @@ title: 3. Install Rancher
 weight: 300
 ---
 
-Now that you have a running RKE cluster, you can install Rancher in it. For security reasons all traffic to Rancher must be encrypted with TLS. For this tutorial you are going to automatically issue a self-signed certificate through [cert-manager](https://cert-manager.io/). In a real-world use-case you will likely use Let's Encrypt or provide your own certificate. 
+Now that you have a running RKE cluster, you can install Rancher in it. For security reasons all traffic to Rancher must be encrypted with TLS. For this tutorial you are going to automatically issue a self-signed certificate through [cert-manager](https://cert-manager.io/). In a real-world use-case you will likely use Let's Encrypt or provide your own certificate.
 
 > **Note:** These installation instructions assume you are using Helm 3.
 
@@ -81,6 +81,6 @@ You can now navigate to `https://rancher.example.com` and start using Rancher.
 
 These resources could be helpful when installing Rancher:
 
-- [Rancher Helm chart options](installation/resources/chart-options/)
-- [Adding TLS secrets](installation/resources/encryption/tls-secrets/)
-- [Troubleshooting Rancher Kubernetes Installations](installation/options/troubleshooting/)
+- [Rancher Helm chart options](../../../../reference-guides/installation-references/helm-chart-options.md)
+- [Adding TLS secrets](../../resources/add-tls-secrets.md)
+- [Troubleshooting Rancher Kubernetes Installations](../../install-upgrade-on-a-kubernetes-cluster/troubleshooting.md)
