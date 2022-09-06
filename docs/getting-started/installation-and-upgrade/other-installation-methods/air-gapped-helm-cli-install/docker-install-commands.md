@@ -116,7 +116,7 @@ After obtaining your certificate, log into your Linux host, and then run the ins
 | `<FULL_CHAIN.pem>`               | The path to your full certificate chain.                                                                                      |
 | `<PRIVATE_KEY.pem>`              | The path to the private key for your certificate.                                                                             |
 | `<REGISTRY.YOURDOMAIN.COM:PORT>` | Your private registry URL and port.                                                                                           |
-| `<RANCHER_VERSION_TAG>`          | The release tag of the [Rancher version](installation/resources/chart-options/) that you want to install. |
+| `<RANCHER_VERSION_TAG>`          | The release tag of the [Rancher version](../../../../reference-guides/installation-references/helm-chart-options.md) that you want to install. |
 
 :::note
 

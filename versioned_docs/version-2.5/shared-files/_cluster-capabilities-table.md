@@ -41,7 +41,7 @@ import TabItem from '@theme/TabItem';
 | [Managing Nodes](../how-to-guides/advanced-user-guides/manage-clusters/nodes-and-node-pools.md) | ✓ | ✓ | ✓ | ✓<sup>2</sup> |
 | [Managing Persistent Volumes and Storage Classes](../pages-for-subheaders/create-kubernetes-persistent-storage.md) | ✓ | ✓ | ✓ | ✓ |
 | [Managing Projects, Namespaces and Workloads](../how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces.md) | ✓ | ✓ | ✓ | ✓ |
-| [Using App Catalogs](catalog/) | ✓ | ✓ | ✓ | ✓ |
+| [Using App Catalogs](../pages-for-subheaders/helm-charts-in-rancher.md) | ✓ | ✓ | ✓ | ✓ |
 | Configuring Tools (Alerts, Notifiers, Logging, Monitoring, Istio) | ✓ | ✓ | ✓ | ✓ |
 | [Running Security Scans](security/security-scan/) | ✓ | ✓ | ✓ | ✓ |
 | [Use existing configuration to create additional clusters](../how-to-guides/advanced-user-guides/manage-clusters/clone-cluster-configuration.md)| ✓ | ✓ |✓ | |

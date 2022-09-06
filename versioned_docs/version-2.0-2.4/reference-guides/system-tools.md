@@ -101,7 +101,7 @@ When you install Rancher on a Kubernetes cluster, it will create Kubernetes reso
 
 When you run the command below, all the resources listed [above](#remove) will be removed from the cluster.
 
->**Warning:** This command will remove data from your etcd nodes. Make sure you have created a [backup of etcd](backups/backups) before executing the command.
+>**Warning:** This command will remove data from your etcd nodes. Make sure you have created a [backup of etcd](../pages-for-subheaders/backup-restore-and-disaster-recovery.md) before executing the command.
 
 ```
 ./system-tools remove --kubeconfig <KUBECONFIG> --namespace <NAMESPACE>

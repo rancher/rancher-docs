@@ -73,14 +73,14 @@ The following commands are available for use in Rancher CLI.
 | `apps, [app]`  | Performs operations on catalog applications (i.e., individual [Helm charts](https://docs.helm.sh/developing_charts/)) or Rancher charts.  |
 | `catalog`  | Performs operations on [catalogs](../../pages-for-subheaders/helm-charts-in-rancher.md).  |
 | `clusters, [cluster]`  | Performs operations on your [clusters](../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md).  |
-| `context`  | Switches between Rancher [projects](../how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces.md). For an example, see [Project Selection](#project-selection).  |
-| `inspect [OPTIONS] [RESOURCEID RESOURCENAME]`  | Displays details about [Kubernetes resources](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#resource-types) or Rancher resources (i.e.: [projects](../how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces.md) and [workloads](../../pages-for-subheaders/workloads-and-pods.md)). Specify resources by name or ID.  |
+| `context`  | Switches between Rancher [projects](../../how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces.md). For an example, see [Project Selection](#project-selection).  |
+| `inspect [OPTIONS] [RESOURCEID RESOURCENAME]`  | Displays details about [Kubernetes resources](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#resource-types) or Rancher resources (i.e.: [projects](../../how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces.md) and [workloads](../../pages-for-subheaders/workloads-and-pods.md)). Specify resources by name or ID.  |
 | `kubectl`  |Runs [kubectl commands](https://kubernetes.io/docs/reference/kubectl/overview/#operations).   |
 | `login, [l]`  | Logs into a Rancher Server. For an example, see [CLI Authentication](#cli-authentication).  |
 | `namespaces, [namespace]`  |Performs operations on namespaces.   |
 | `nodes, [node]`  |Performs operations on nodes.   |
-| `projects, [project]`  | Performs operations on [projects](../how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces.md).  |
-| `ps`  | Displays [workloads](workloads-and-pods.md) in a project.  |
+| `projects, [project]`  | Performs operations on [projects](../../how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces.md).  |
+| `ps`  | Displays [workloads](../../pages-for-subheaders/workloads-and-pods.md) in a project.  |
 | `settings, [setting]`  | Shows the current settings for your Rancher Server.  |
 | `ssh`  | Connects to one of your cluster nodes using the SSH protocol.  |
 | `help, [h]`  | Shows a list of commands or help for one command.  |
