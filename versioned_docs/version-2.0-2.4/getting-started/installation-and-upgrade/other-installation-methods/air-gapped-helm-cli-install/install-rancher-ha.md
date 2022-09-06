@@ -31,7 +31,7 @@ This section describes installing Rancher in five parts:
 
 From a system that has access to the internet, fetch the latest Helm chart and copy the resulting manifests to a system that has access to the Rancher server cluster.
 
-1. If you haven't already, install `helm` locally on a workstation that has internet access. Note: Refer to the [Helm version requirements](installation/options/helm-version) to choose a version of Helm to install Rancher.
+1. If you haven't already, install `helm` locally on a workstation that has internet access. Note: Refer to the [Helm version requirements](../../resources/helm-version-requirements.md) to choose a version of Helm to install Rancher.
 
 2. Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher](../../../../reference-guides/installation-references/helm-chart-options.md#helm-chart-repositories).
   {{< release-channel >}}
@@ -82,7 +82,7 @@ Based on the choice your made in [B. Choose your SSL Configuration](#b-choose-yo
 By default, Rancher generates a CA and uses cert-manager to issue the certificate for access to the Rancher server interface.
 
 > **Note:**
-> Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.11.0, please see our [upgrade cert-manager documentation](installation/options/upgrading-cert-manager/).
+> Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.11.0, please see our [upgrade cert-manager documentation](../../resources/upgrade-cert-manager.md).
 
 1. From a system connected to the internet, add the cert-manager repo to Helm.
     ```plain
@@ -174,7 +174,7 @@ If you are using a Private CA signed cert, add `--set privateCA=true` following 
 
 **Optional**: To install a specific Rancher version, set the `rancherImageTag` value, example: `--set rancherImageTag=v2.3.6`
 
-Then refer to [Adding TLS Secrets](installation/resources/encryption/tls-secrets/) to publish the certificate files so Rancher and the ingress controller can use them.
+Then refer to [Adding TLS Secrets](../../resources/add-tls-secrets.md) to publish the certificate files so Rancher and the ingress controller can use them.
 
 </details>
 
@@ -231,9 +231,9 @@ If you are installing Rancher versions before v2.3.0, you will not be able to us
 
 These resources could be helpful when installing Rancher:
 
-- [Rancher Helm chart options](installation/resources/chart-options/)
-- [Adding TLS secrets](installation/resources/encryption/tls-secrets/)
-- [Troubleshooting Rancher Kubernetes Installations](installation/options/troubleshooting/)
+- [Rancher Helm chart options](../../../../reference-guides/installation-references/helm-chart-options.md)
+- [Adding TLS secrets](../../resources/add-tls-secrets.md)
+- [Troubleshooting Rancher Kubernetes Installations](../../install-upgrade-on-a-kubernetes-cluster/troubleshooting.md)
 
 </TabItem>
 <TabItem value="Docker Install">
@@ -253,7 +253,7 @@ For security purposes, SSL (Secure Sockets Layer) is required when using Rancher
 
 > **Do you want to...**
 >
-> - Configure custom CA root certificate to access your services? See [Custom CA root certificate](installation/options/custom-ca-root-certificate/).
+> - Configure custom CA root certificate to access your services? See [Custom CA root certificate](../../resources/custom-ca-root-certificates.md).
 > - Record all transactions with the Rancher API? See [API Auditing](../../../../reference-guides/single-node-rancher-in-docker/advanced-options.md#api-audit-log).
 
 - For Rancher before v2.3.0, you will need to mirror the `system-charts` repository to a location in your network that Rancher can reach. Then, after Rancher is installed, you will need to configure Rancher to use that repository. For details, refer to the documentation on [setting up the system charts for Rancher before v2.3.0.](../../resources/local-system-charts.md)
@@ -272,7 +272,7 @@ Log into your Linux host, and then run the installation command below. When ente
 | Placeholder                      | Description                                                                                                                   |
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | `<REGISTRY.YOURDOMAIN.COM:PORT>` | Your private registry URL and port.                                                                                           |
-| `<RANCHER_VERSION_TAG>`          | The release tag of the [Rancher version](installation/resources/chart-options/) that you want to install. |
+| `<RANCHER_VERSION_TAG>`          | The release tag of the [Rancher version](../../../../reference-guides/installation-references/helm-chart-options.md) that you want to install. |
 
 ```
 docker run -d --restart=unless-stopped \
@@ -306,7 +306,7 @@ After creating your certificate, log into your Linux host, and then run the inst
 | `<PRIVATE_KEY.pem>`              | The path to the private key for your certificate.                                                                             |
 | `<CA_CERTS.pem>`                     | The path to the certificate authority's certificate.                                                                          |
 | `<REGISTRY.YOURDOMAIN.COM:PORT>` | Your private registry URL and port.                                                                                           |
-| `<RANCHER_VERSION_TAG>`          | The release tag of the [Rancher version](installation/resources/chart-options/) that you want to install. |
+| `<RANCHER_VERSION_TAG>`          | The release tag of the [Rancher version](../../../../reference-guides/installation-references/helm-chart-options.md) that you want to install. |
 
 
 
@@ -340,7 +340,7 @@ After obtaining your certificate, log into your Linux host, and then run the ins
 | `<FULL_CHAIN.pem>`               | The path to your full certificate chain.                                                                                      |
 | `<PRIVATE_KEY.pem>`              | The path to the private key for your certificate.                                                                             |
 | `<REGISTRY.YOURDOMAIN.COM:PORT>` | Your private registry URL and port.                                                                                           |
-| `<RANCHER_VERSION_TAG>`          | The release tag of the [Rancher version](installation/resources/chart-options/) that you want to install. |
+| `<RANCHER_VERSION_TAG>`          | The release tag of the [Rancher version](../../../../reference-guides/installation-references/helm-chart-options.md) that you want to install. |
 
 > **Note:** Use the `--no-cacerts` as argument to the container to disable the default CA certificate generated by Rancher.
 

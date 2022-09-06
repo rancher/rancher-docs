@@ -51,7 +51,7 @@ New password for default administrator (user-xxxxx):
 
 > #### **Important: RKE add-on install is only supported up to Rancher v2.0.8**
 >
->If you are currently using the RKE add-on install method, see [Migrating from a Kubernetes Install with an RKE Add-on](upgrades/upgrades/migrating-from-rke-add-on/) for details on how to move to using the helm chart.
+>If you are currently using the RKE add-on install method, see [Migrating from a Kubernetes Install with an RKE Add-on](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/migrating-from-rke-add-on.md) for details on how to move to using the helm chart.
 
 Kubernetes install (RKE add-on):
 ```

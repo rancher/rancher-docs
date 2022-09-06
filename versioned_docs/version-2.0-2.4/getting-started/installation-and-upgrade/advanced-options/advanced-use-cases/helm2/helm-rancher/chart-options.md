@@ -50,7 +50,7 @@ aliases:
 
 ### API Audit Log
 
-Enabling the [API Audit Log](installation/api-auditing/).
+Enabling the [API Audit Log](../../enable-api-audit-log.md).
 
 You can collect this log as you would any container log. Enable the [Logging service under Rancher Tools](../../../../../../pages-for-subheaders/cluster-logging.md) for the `System` Project on the Rancher server cluster.
 

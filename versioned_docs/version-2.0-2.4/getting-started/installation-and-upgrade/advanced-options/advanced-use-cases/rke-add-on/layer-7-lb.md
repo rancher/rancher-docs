@@ -283,7 +283,7 @@ During installation, RKE automatically generates a config file named `kube_confi
 ## What's Next?
 
 - **Recommended:** Review [Creating Backups—High Availability Back Up and Restoration](../../../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters.md) to learn how to backup your Rancher Server in case of a disaster scenario.
-- Create a Kubernetes cluster: [Creating a Cluster](tasks/clusters/creating-a-cluster/).
+- Create a Kubernetes cluster: [Creating a Cluster](../../../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md).
 
 <br/>
 

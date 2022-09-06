@@ -245,7 +245,7 @@ For security purposes, SSL (Secure Sockets Layer) is required when using Rancher
 > - Configure custom CA root certificate to access your services? See [Custom CA root certificate](../../../../../reference-guides/installation-references/helm-chart-options#additional-trusted-cas).
 > - Record all transactions with the Rancher API? See [API Auditing](../../../../../reference-guides/single-node-rancher-in-docker/advanced-options.md#api-audit-log).
 
-- For Rancher before v2.3.0, you will need to mirror the `system-charts` repository to a location in your network that Rancher can reach. Then, after Rancher is installed, you will need to configure Rancher to use that repository. For details, refer to the documentation on [setting up the system charts for Rancher before v2.3.0.](installation/options/local-system-charts/)
+- For Rancher before v2.3.0, you will need to mirror the `system-charts` repository to a location in your network that Rancher can reach. Then, after Rancher is installed, you will need to configure Rancher to use that repository. For details, refer to the documentation on [setting up the system charts for Rancher before v2.3.0.](../../../resources/local-system-charts.md)
 
 Choose from the following options:
 
@@ -338,7 +338,7 @@ docker run -d --restart=unless-stopped \
 
 If you are installing Rancher v2.3.0+, the installation is complete.
 
-If you are installing Rancher versions before v2.3.0, you will not be able to use the packaged system charts. Since the Rancher system charts are hosted in Github, an air gapped installation will not be able to access these charts. Therefore, you must [configure the Rancher system charts](installation/options/local-system-charts/).
+If you are installing Rancher versions before v2.3.0, you will not be able to use the packaged system charts. Since the Rancher system charts are hosted in Github, an air gapped installation will not be able to access these charts. Therefore, you must [configure the Rancher system charts](../../../resources/local-system-charts.md).
 
 </TabItem>
 </Tabs>

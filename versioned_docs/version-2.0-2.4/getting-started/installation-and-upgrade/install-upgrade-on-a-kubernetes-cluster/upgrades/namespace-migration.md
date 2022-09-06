@@ -65,7 +65,7 @@ You can prevent cluster networking issues from occurring during your upgrade to 
 
 1. Repeat these steps for each cluster where you've assigned system namespaces to projects.
 
-**Result:** All system namespaces are moved out of Rancher projects. You can now safely begin the [upgrade](upgrades/upgrades).
+**Result:** All system namespaces are moved out of Rancher projects. You can now safely begin the [upgrade](../../../../pages-for-subheaders/upgrades.md).
 
 ## Restoring Cluster Networking
 
@@ -181,7 +181,7 @@ Reset the cluster nodes' network policies to restore connectivity.
 
 If you can access Rancher, but one or more of the clusters that you launched using Rancher has no networking, you can repair them by moving them:
 
-- Using the cluster's [embedded kubectl shell](k8s-in-rancher/kubectl/).
+- Using the cluster's [embedded kubectl shell](../../../../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md).
 - By [downloading the cluster kubeconfig file and running it](../../../../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md) from your workstation.
 
     ```

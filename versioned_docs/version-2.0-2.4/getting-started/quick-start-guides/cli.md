@@ -47,5 +47,5 @@ As of CLI [v2.4.10](https://github.com/ranchquick-start-guide/cli/releases/tag/v
 _**Current Known Issues**_
 
 1. If [authorized cluster endpoint](../../pages-for-subheaders/rancher-manager-architecture.md#4-authorized-cluster-endpoint) is enabled for RKE clusters to [authenticate directly with downstream cluster](../../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster) and Rancher server goes down, all kubectl calls will fail after the kubeconfig token expires. No new kubeconfig tokens can be generated if Rancher server isn't accessible.
-2. If a kubeconfig token is deleted from Rancher [API tokens]({{<baseurl>}}/rancher/v2.0-v2api/api-tokens/#deleting-tokens) page, and the token is still cached, cli won't ask you to login again until the token expires or is deleted. 
+2. If a kubeconfig token is deleted from Rancher [API tokens](../../reference-guides/about-the-api/api-tokens.md#deleting-tokens) page, and the token is still cached, cli won't ask you to login again until the token expires or is deleted.
 `kubectl` calls will result into an error like `error: You must be logged in to the server (the server has asked for the client to provide credentials`. Tokens can be deleted using `rancher token delete`.
