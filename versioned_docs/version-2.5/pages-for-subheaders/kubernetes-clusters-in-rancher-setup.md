@@ -26,7 +26,7 @@ This section covers the following topics:
   - [Launching Kubernetes on Existing Custom Nodes](#launching-kubernetes-on-existing-custom-nodes)
 - [Registering Existing Clusters](#registering-existing-clusters)
 
-  <!-- /TOC -->
+<!-- /TOC -->
 
 ### Cluster Management Capabilities by Cluster Type
 

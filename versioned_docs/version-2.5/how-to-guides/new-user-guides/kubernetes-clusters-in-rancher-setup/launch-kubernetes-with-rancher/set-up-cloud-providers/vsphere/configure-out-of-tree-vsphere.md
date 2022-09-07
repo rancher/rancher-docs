@@ -38,9 +38,9 @@ The Cloud Provider Interface (CPI) should be installed first before installing t
 1. Select the **vSphere CPI** chart. Fill out the required vCenter details.
 1. vSphere CPI initializes all nodes with ProviderID which is needed by the vSphere CSI driver. Check if all nodes are initialized with the ProviderID before installing CSI driver with the following command:
 
-	```
-	kubectl describe nodes | grep "ProviderID"
-	```
+    ```
+    kubectl describe nodes | grep "ProviderID"
+    ```
 
 ### 3. Installing the CSI plugin
 

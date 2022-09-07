@@ -52,9 +52,9 @@ To install Rancher on your host, connect to it and then use a shell to install.
 
 1.  From your shell, enter the following command:
 
-	```
-  sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 --privileged rancher/rancher
-  ```
+    ```
+    sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 --privileged rancher/rancher
+    ```
 
 **Result:** Rancher is installed.
 
