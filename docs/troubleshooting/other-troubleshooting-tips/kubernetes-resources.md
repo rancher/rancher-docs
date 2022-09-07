@@ -1,5 +1,5 @@
 ---
-title: Kubernetes resources
+title: Kubernetes Resources
 weight: 101
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Registered clusters
+title: Registered Clusters
 weight: 105
 ---
 

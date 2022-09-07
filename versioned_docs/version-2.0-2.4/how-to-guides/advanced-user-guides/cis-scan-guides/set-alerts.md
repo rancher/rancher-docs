@@ -19,8 +19,8 @@ To activate an existing alert for a CIS scan result,
 
 1. From the cluster view in Rancher, click **Tools > Alerts.**
 1. Go to the section called **A set of alerts for cluster scans.**
-1. Go to the alert you want to activate and click **&#8942; > Activate.**
-1. Go to the alert rule group **A set of alerts for cluster scans** and click **&#8942; > Edit.**
+1. Go to the alert you want to activate and click **⋮ > Activate.**
+1. Go to the alert rule group **A set of alerts for cluster scans** and click **⋮ > Edit.**
 1. Scroll down to the **Alert** section. In the **To** field, select the notifier that you would like to use for sending alert notifications.
 1. Optional: To limit the frequency of the notifications, click on **Show advanced options** and configure the time interval of the alerts.
 1. Click **Save.**
