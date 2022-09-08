@@ -1,6 +1,5 @@
 ---
 title: View Reports
-weight: 6
 ---
 
 To view the generated CIS scan reports,

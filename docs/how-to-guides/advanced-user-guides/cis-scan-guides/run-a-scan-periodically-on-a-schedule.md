@@ -1,6 +1,5 @@
 ---
 title: Run a Scan Periodically on a Schedule
-weight: 4
 ---
 
 To run a ClusterScan on a schedule,

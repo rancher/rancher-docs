@@ -1,6 +1,5 @@
 ---
 title: Run a Scan
-weight: 3
 ---
 
 When a ClusterScan custom resource is created, it launches a new CIS scan on the cluster for the chosen ClusterScanProfile.

@@ -88,7 +88,7 @@ To enable project network isolation as a cluster option, you will need to use Ca
 
 ### Kubernetes Cloud Providers
 
-You can configure a [Kubernetes cloud provider](cluster-provisioning/rke-clusters/options/cloud-providers). If you want to use [volumes and storage](../../../pages-for-subheaders/create-kubernetes-persistent-storage.md) in Kubernetes, typically you must select the specific cloud provider in order to use it. For example, if you want to use Amazon EBS, you would need to select the `aws` cloud provider.
+You can configure a [Kubernetes cloud provider](../../../pages-for-subheaders/set-up-cloud-providers.md). If you want to use [volumes and storage](../../../pages-for-subheaders/create-kubernetes-persistent-storage.md) in Kubernetes, typically you must select the specific cloud provider in order to use it. For example, if you want to use Amazon EBS, you would need to select the `aws` cloud provider.
 
 >**Note:** If the cloud provider you want to use is not listed as an option, you will need to use the [config file option](#cluster-config-file) to configure the cloud provider. Please reference the [RKE cloud provider documentation](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/) on how to configure the cloud provider.
 

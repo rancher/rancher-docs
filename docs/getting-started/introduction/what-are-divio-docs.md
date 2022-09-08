@@ -27,7 +27,7 @@ To get up and running with Rancher quickly, we have included a **Getting Started
 
 The goal of this section is to be able to assist users in deploying Rancher and workloads and to install or upgrade Rancher quickly and effectively.
 
-Please see the [introduction](../docs/pages-for-subheaders/introduction.md), [quick start guides](../docs/pages-for-subheaders/quick-start-guides.md), and the [installation and upgrade](../docs/pages-for-subheaders/installation-and-upgrade.md) sections for more.
+Please see the [introduction](../../pages-for-subheaders/introduction.md), [quick start guides](../../pages-for-subheaders/quick-start-guides.md), and the [installation and upgrade](../../pages-for-subheaders/installation-and-upgrade.md) sections for more.
 
 ## How-to Guides
 
@@ -71,7 +71,7 @@ For our new docs, we are working to build up this section as most of our previou
 
 ### Integrations in Rancher
 
-Over time, Rancher has accrued several products and projects that have been integrated into the Rancher UI. To assist users in learning more about these [integrations](../../pages-for-subheaders/integrations-in-rancher.md), this subsection has been added under **references**. 
+Over time, Rancher has accrued several products and projects that have been integrated into the Rancher UI. To assist users in learning more about these integrations, this subsection has been added under **Explanations**. 
 
 Examples of some of these integrations are [Harvester](../../explanations/integrations-in-rancher/harvester.md) and [NeuVector](../../explanations/integrations-in-rancher/neuvector.md). 
 

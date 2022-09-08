@@ -6,6 +6,12 @@ Feature flags were introduced to allow you to try experimental features that are
 
 To learn about feature values and how to enable features, refer [here](../../pages-for-subheaders/enable-experimental-features.md).
 
+:::note
+
+There are some feature flags that may require a restart of the Rancher server container. These features that require a restart are marked in the table of these docs and in the UI.
+
+:::
+
 The following is a list of the feature flags available in Rancher:
 
 - `harvester`: This feature flag is available starting in v2.6.1. It is used to manage access to the Virtualization Management page where users can navigate directly to Harvester clusters and access the Harvester UI. For more information, see [this page](../../explanations/integrations-in-rancher/harvester.md#feature-flag/).
