@@ -73,7 +73,7 @@ For our new docs, we are working to build up this section as most of our previou
 
 Over time, Rancher has accrued several products and projects that have been integrated into the Rancher UI. To assist users in learning more about these integrations, this subsection has been added under **Explanations**. 
 
-Examples of some of these integrations are [Harvester](../../explanations/integrations-in-rancher/harvester.md) and [NeuVector](../../explanations/integrations-in-rancher/neuvector.md). 
+Examples of some of these integrations are [Istio](../../pages-for-subheaders/istio.md) and [CIS Scans](../../pages-for-subheaders/cis-scans.md).
 
 ## Other Docs Categories
 

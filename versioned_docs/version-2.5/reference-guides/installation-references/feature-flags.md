@@ -13,10 +13,9 @@ There are some feature flags that may require a restart of the Rancher server co
 :::
 
 The following is a list of the feature flags available in Rancher:
-
 - `fleet`: Rancher comes with Fleet preinstalled in v2.5+.
-- `istio-virtual-service-ui`: This feature enables a [UI to create, read, update, and delete Istio virtual services and destination rules,](../getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/istio-traffic-management-features.md) which are traffic management features of Istio.
-- `unsupported-storage-drivers`: This feature [allows unsupported storage drivers.](../getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/unsupported-storage-drivers.md). In other words, it enables types for storage providers and provisioners that are not enabled by default.
+- `istio-virtual-service-ui`: This feature enables a [UI to create, read, update, and delete Istio virtual services and destination rules,](../../getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/istio-traffic-management-features.md) which are traffic management features of Istio.
+- `unsupported-storage-drivers`: This feature [allows unsupported storage drivers.](../../getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/unsupported-storage-drivers.md). In other words, it enables types for storage providers and provisioners that are not enabled by default.
 
 The below table shows the availability and default value for feature flags in Rancher:
 

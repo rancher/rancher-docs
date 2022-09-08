@@ -11,7 +11,7 @@ Rancher provides a set of alerts for cluster scans. which are not configured to 
 
 :::note Prerequisite
 
-You need to configure a [notifier](../explanations/integrations-in-rancher/notifiers.md) before configuring, sending, or receiving alerts.
+You need to configure a [notifier](../../../explanations/integrations-in-rancher/notifiers.md) before configuring, sending, or receiving alerts.
 
 :::
 
@@ -35,8 +35,8 @@ To create a new alert,
 1. Enter a name for the alert.
 1. In the **Is** field, set the alert to be triggered when a scan is completed or when a scan has a failure.
 1. In the **Send a** field, set the alert as a **Critical,** **Warning,** or **Info** alert level.
-1. Choose a [notifier](../explanations/integrations-in-rancher/notifiers.md) for the alert.
+1. Choose a [notifier](../../../explanations/integrations-in-rancher/notifiers.md) for the alert.
 
 **Result:** The alert is created and activated. The notifications will be triggered when the a scan is run on a cluster and the active alerts have satisfied conditions.
 
-For more information about alerts, refer to [this page.](./cluster-alerts.md)
+For more information about alerts, refer to [this page.](../../../pages-for-subheaders/cluster-alerts.md)

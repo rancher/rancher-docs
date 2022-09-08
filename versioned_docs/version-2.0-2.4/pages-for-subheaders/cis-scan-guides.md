@@ -8,4 +8,3 @@ title: CIS Scan Guides
 - [Set Alerts](../how-to-guides/advanced-user-guides/cis-scan-guides/set-alerts.md)
 - [Delete a Report](../how-to-guides/advanced-user-guides/cis-scan-guides/delete-a-report.md)
 - [Download a Report](../how-to-guides/advanced-user-guides/cis-scan-guides/download-a-report.md)
-- [Skipped and Not Applicable Tests](../how-to-guides/advanced-user-guides/cis-scan-guides/skipped-and-not-applicable-tests)
