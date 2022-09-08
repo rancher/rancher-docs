@@ -6,11 +6,11 @@ Fleet is GitOps at scale. Fleet is designed to manage up to a million clusters. 
 
 Fleet is a separate project from Rancher, and can be installed on any Kubernetes cluster with Helm.
 
-- [Architecture](../explanations/integrations-in-rancher/fleet-gitops-at-scale/architecture.md)
+- [Architecture](#architecture)
 - [Accessing Fleet in the Rancher UI](#accessing-fleet-in-the-rancher-ui)
-- [Windows Support](../explanations/integrations-in-rancher/fleet-gitops-at-scale/windows-support.md)
+- [Windows Support](#windows-support)
 - [GitHub Repository](#github-repository)
-- [Use Fleet Behind a Proxy](../explanations/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy.md)
+- [Use Fleet Behind a Proxy](#use-fleet-behind-a-proxy)
 - [Helm Chart Dependencies](#helm-chart-dependencies)
 - [Troubleshooting](#troubleshooting)
 - [Documentation](#documentation)

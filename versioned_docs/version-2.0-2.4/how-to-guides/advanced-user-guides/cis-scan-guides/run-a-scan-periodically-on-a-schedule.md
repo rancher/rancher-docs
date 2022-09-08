@@ -1,5 +1,5 @@
 ---
-title: Schedule Recurring Scans
+title: Run a Scan Periodically on a Schedule
 ---
 
 Recurring scans can be scheduled to run on any RKE Kubernetes cluster.

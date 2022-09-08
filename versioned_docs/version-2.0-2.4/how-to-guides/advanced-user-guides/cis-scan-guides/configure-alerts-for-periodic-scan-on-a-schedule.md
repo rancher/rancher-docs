@@ -1,5 +1,5 @@
 ---
-title: Set Alerts
+title: Configure Alerts for Periodic Scan on a Schedule
 ---
 
 Rancher provides a set of alerts for cluster scans. which are not configured to have notifiers by default:

@@ -19,7 +19,7 @@ The `rancher-cis-benchmark` app leverages <a href="https://github.com/aquasecuri
 - [About the Generated Report](#about-the-generated-report)
 - [Test Profiles](#test-profiles)
 - [About Skipped and Not Applicable Tests](#about-skipped-and-not-applicable-tests)
-- [Role-based Access Control](#role-based-access-control)
+- [Roles-based Access Control](#roles-based-access-control)
 - [Configuration](#configuration)
 - [How-to Guides](#how-to-guides)
 
