@@ -45,7 +45,6 @@ This subsection covers the generic machine pool configurations. For infrastructu
 - [Azure](../downstream-cluster-configuration/machine-configuration/azure.md)
 - [DigitalOcean](../downstream-cluster-configuration/machine-configuration/digitalocean.md)
 - [EC2](../downstream-cluster-configuration/machine-configuration/amazon-ec2.md)
-- [vSphere](../downstream-cluster-configuration/machine-configuration/vsphere.md)
 
 ### Pool Name
 

@@ -13,7 +13,7 @@ If you have installed Rancher using the "Rancher Setup" AWS Marketplace offering
 > **Note:** Each entitlement grants access to support for a certain amount of nodes. You can purchase more licenses as necessary later on.
 
 ### 2. Create an EKS Cluster
-Follow the [Rancher docs](../../install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks.md) to create an EKS cluster. When you get to the [final step to install Rancher](../../install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks.md#8-install-the-rancher-helm-chart), **stop and return to this page**. This cluster will need to meet the following requirements:
+Follow the [Rancher docs](../../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks.md) to create an EKS cluster. When you get to the [final step to install Rancher](../../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks.md#8-install-the-rancher-helm-chart), **stop and return to this page**. This cluster will need to meet the following requirements:
 
 - EKS version 1.22.
 - Each node in the cluster has access to the registry containing Rancher and its related images.
