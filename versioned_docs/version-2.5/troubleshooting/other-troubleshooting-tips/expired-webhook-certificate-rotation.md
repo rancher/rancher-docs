@@ -5,7 +5,7 @@ weight: 120
 
 For Rancher versions that have `rancher-webhook` installed, certain versions created certificates that will expire after one year. It will be necessary for you to rotate your webhook certificate if the certificate did not renew.
 
-In Rancher v2.6.3 and up, rancher-webhook deployments will automatically renew their TLS certificate when it is within 30 or fewer days of its expiration date. If you are using v2.6.2 or below, there are two methods to work around this issue:
+In Rancher v2.5.12 and up, rancher-webhook deployments will automatically renew their TLS certificate when it is within 30 or fewer days of its expiration date. If you are using v2.5.11 or below, there are two methods to work around this issue:
 
 ##### 1. Users with cluster access, run the following commands:
 ```
@@ -22,8 +22,4 @@ kubectl delete pod -n cattle-system -l app=rancher-webhook
 
 3. Delete the `rancher-webhook` pod in the `cattle-system` namespace in the local cluster.
 
-:::note
-
-The webhook certificate expiration issue is not specific to `cattle-webhook-tls` as listed in the examples. You will fill in your expired certificate secret accordingly.
-
-:::
+**Note:** The webhook certificate expiration issue is not specific to `cattle-webhook-tls` as listed in the examples. You will fill in your expired certificate secret accordingly.

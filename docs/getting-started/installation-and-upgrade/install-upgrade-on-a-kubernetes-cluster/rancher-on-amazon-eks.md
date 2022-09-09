@@ -83,10 +83,12 @@ Then enter the following values:
 
 To create an EKS cluster, run the following command. Use the AWS region that applies to your use case. When choosing a Kubernetes version, be sure to first consult the [support matrix](https://rancher.com/support-matrix/) to find the highest version of Kubernetes that has been validated for your Rancher version.
 
+**Note:** If the version of Kubernetes is updated to v1.22 or later, the version of ingress-nginx would also need to be [updated](https://kubernetes.github.io/ingress-nginx/#faq-migration-to-apiversion-networkingk8siov1).
+
 ```
 eksctl create cluster \
   --name rancher-server \
-  --version 1.20 \
+  --version <VERSION> \
   --region us-west-2 \
   --nodegroup-name ranchernodes \
   --nodes 3 \
@@ -128,7 +130,7 @@ helm upgrade --install \
   ingress-nginx ingress-nginx/ingress-nginx \
   --namespace ingress-nginx \
   --set controller.service.type=LoadBalancer \
-  --version 3.12.0 \
+  --version 4.0.18 \
   --create-namespace
 ```
 
@@ -143,9 +145,9 @@ kubectl get service ingress-nginx-controller --namespace=ingress-nginx
 The result should look similar to the following:
 
 ```
-NAME                       TYPE           CLUSTER-IP     EXTERNAL-IP                                                              PORT(S)                     
+NAME                       TYPE           CLUSTER-IP     EXTERNAL-IP                                                              PORT(S)
  AGE
-ingress-nginx-controller   LoadBalancer   10.100.90.18   a904a952c73bf4f668a17c46ac7c56ab-962521486.us-west-2.elb.amazonaws.com   80:31229/TCP,443:31050/TCP  
+ingress-nginx-controller   LoadBalancer   10.100.90.18   a904a952c73bf4f668a17c46ac7c56ab-962521486.us-west-2.elb.amazonaws.com   80:31229/TCP,443:31050/TCP
  27m
 ```
 
@@ -164,3 +166,13 @@ There are many valid ways to set up the DNS. For help, refer to the AWS document
 Next, install the Rancher Helm chart by following the instructions on [this page.](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#install-the-rancher-helm-chart) The Helm instructions are the same for installing Rancher on any Kubernetes distribution.
 
 Use that DNS name from the previous step as the Rancher server URL when you install Rancher. It can be passed in as a Helm option. For example, if the DNS name is `rancher.my.org`, you could run the Helm installation command with the option `--set hostname=rancher.my.org`.
+
+**_New in v2.6.7_**
+
+When installing Rancher on top of this setup, you will also need to pass the value below into the Rancher Helm install command in order to set the name of the ingress controller to be used with Rancher's ingress resource:
+
+```
+--set ingress.ingressClassName=nginx
+```
+
+Refer [here for the Helm install command](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#5-install-rancher-with-helm-and-your-chosen-certificate-option) for your chosen certificate option.
