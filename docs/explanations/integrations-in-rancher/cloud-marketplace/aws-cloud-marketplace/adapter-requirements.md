@@ -23,7 +23,7 @@ Follow the [Rancher docs](../../../../getting-started/installation-and-upgrade/i
 
 ### 3. Install Rancher
 
-In addition to the options specified to install Rancher in the [Rancher docs]({{<baseurl>}}/rancher/v2.6/en/installation/resources/k8s-tutorials/amazon-eks/#8-install-the-rancher-helm-chart), you will also need to enable extra metrics.
+In addition to the options specified to install Rancher in the [Rancher docs](../../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks.md#8-install-the-rancher-helm-chart), you will also need to enable extra metrics.
 This can be done through the Helm CLI through the following options:
 
 ```bash
