@@ -1259,7 +1259,8 @@
             "troubleshooting/other-troubleshooting-tips/dns",
             "troubleshooting/other-troubleshooting-tips/rancher-ha",
             "troubleshooting/other-troubleshooting-tips/registered-clusters",
-            "troubleshooting/other-troubleshooting-tips/logging"
+            "troubleshooting/other-troubleshooting-tips/logging",
+            "troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation"
                  ]
                 }
               ]

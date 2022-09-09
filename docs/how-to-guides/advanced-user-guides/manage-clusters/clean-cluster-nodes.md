@@ -18,14 +18,14 @@ When removing nodes from your Rancher launched Kubernetes cluster (provided that
 When cleaning nodes provisioned using Rancher, the following components are deleted based on the type of cluster node you're removing.
 
 | Removed Component                                                              | [Nodes Hosted by Infrastructure Provider][1] | [Custom Nodes][2] | [Hosted Cluster][3] | [Registered Nodes][4] |
-| ------------------------------------------------------------------------------ | --------------- | ----------------- | ------------------- | ------------------- |
-| The Rancher deployment namespace (`cattle-system` by default)                  | ✓               | ✓                 | ✓                   | ✓                   |
-| `serviceAccount`, `clusterRoles`, and `clusterRoleBindings` labeled by Rancher | ✓               | ✓                 | ✓                   | ✓                   |
-| Labels, Annotations, and Finalizers                                            | ✓               | ✓                 | ✓                   | ✓                   |
-| Rancher Deployment                                                             | ✓               | ✓                 | ✓                   |                     |
-| Machines, clusters, projects, and user custom resource definitions (CRDs)      | ✓               | ✓                 | ✓                   |                     |
-| All resources create under the `management.cattle.io` API Group                | ✓               | ✓                 | ✓                   |                     |
-| All CRDs created by Rancher v2.x                                               | ✓               | ✓                 | ✓                   |                     |
+|--------------------------------------------------------------------------------|----------------------------------------------|-------------------|---------------------|-----------------------|
+| The Rancher deployment namespace (`cattle-system` by default)                  | ✓                                            | ✓                 | ✓                   | ✓                     |
+| `serviceAccount`, `clusterRoles`, and `clusterRoleBindings` labeled by Rancher | ✓                                            | ✓                 | ✓                   | ✓                     |
+| Labels, Annotations, and Finalizers                                            | ✓                                            | ✓                 | ✓                   | ✓                     |
+| Rancher Deployment                                                             | ✓                                            | ✓                 | ✓                   |                       |
+| Machines, clusters, projects, and user custom resource definitions (CRDs)      | ✓                                            | ✓                 | ✓                   |                       |
+| All resources create under the `management.cattle.io` API Group                | ✓                                            | ✓                 | ✓                   |                       |
+| All CRDs created by Rancher v2.x                                               | ✓                                            | ✓                 | ✓                   |                       |
 
 [1]: ../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md
 [2]: ../../../pages-for-subheaders/use-existing-nodes.md
@@ -120,6 +120,11 @@ Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 </TabItem>
 </Tabs>
 
+## Cleaning up Nodes
+
+<Tabs>
+<TabItem value="RKE1">
+
 ### Windows Nodes
 
 To clean up a Windows node, you can run a cleanup script located in `c:\etc\rancher`. The script deletes Kubernetes generated resources and the execution binary. It also drops the firewall rules and network settings.
@@ -150,17 +155,68 @@ docker volume rm $(docker volume ls -q)
 
 Kubernetes components and secrets leave behind mounts on the system that need to be unmounted.
 
-Mounts |
---------|
-`/var/lib/kubelet/pods/XXX` (miscellaneous mounts)  |
-`/var/lib/kubelet` |
-`/var/lib/rancher` |
+| Mounts                                             |
+|----------------------------------------------------|
+| `/var/lib/kubelet/pods/XXX` (miscellaneous mounts) |
+| `/var/lib/kubelet`                                 |
+| `/var/lib/rancher`                                 |
 
 **To unmount all mounts:**
 
 ```
 for mount in $(mount | grep tmpfs | grep '/var/lib/kubelet' | awk '{ print $3 }') /var/lib/kubelet /var/lib/rancher; do umount $mount; done
 ```
+
+</TabItem>
+<TabItem value="RKE2">
+
+There are two components that need to be removed on nodes of an RKE2 cluster that was provisioned through Rancher:
+
+* The rancher-system-agent, which connects to Rancher and installs and manages RKE2
+* RKE2 itself
+
+### Removing rancher-system-agent
+
+To remove the rancher-system-agent, run the [system-agent-uninstall.sh](https://github.com/rancher/system-agent/blob/main/system-agent-uninstall.sh) script:
+
+```
+curl https://raw.githubusercontent.com/rancher/system-agent/main/system-agent-uninstall.sh | sudo sh
+```
+
+### Removing RKE2
+
+To remove the RKE2 installation, run the `rke2-uninstall` script that is already present on the node:
+
+```
+sudo rke2-uninstall.sh
+```
+
+</TabItem>
+<TabItem value="K3s">
+
+There are two components that need to be removed on nodes of a K3s cluster that was provisioned through Rancher:
+
+* The rancher-system-agent, which connects to Rancher and installs and manages K3s
+* K3s itself
+
+### Removing rancher-system-agent
+
+To remove the rancher-system-agent, run the [system-agent-uninstall.sh](https://github.com/rancher/system-agent/blob/main/system-agent-uninstall.sh) script:
+
+```
+curl https://raw.githubusercontent.com/rancher/system-agent/main/system-agent-uninstall.sh | sudo sh
+```
+
+### Removing K3s
+
+To remove the K3s installation, run the `k3s-uninstall` script that is already present on the node:
+
+```
+sudo k3s-uninstall.sh
+```
+
+</TabItem>
+</Tabs>
 
 ### Directories and Files
 
@@ -172,25 +228,26 @@ Depending on the role you assigned to the node, some of the directories will or 
 
 :::
 
-Directories |
---------|
-`/etc/ceph` |
-`/etc/cni` |
-`/etc/kubernetes` |
-`/opt/cni` |
-`/opt/rke` |
-`/run/secrets/kubernetes.io` |
-`/run/calico` |
-`/run/flannel` |
-`/var/lib/calico` |
-`/var/lib/etcd` |
-`/var/lib/cni` |
-`/var/lib/kubelet` |
-`/var/lib/rancher/rke/log` |
-`/var/log/containers` |
-`/var/log/kube-audit` |
-`/var/log/pods` |
-`/var/run/calico` |
+| Directories                  |
+|------------------------------|
+| `/etc/ceph`                  |
+| `/etc/cni`                   |
+| `/etc/kubernetes`            |
+| `/etc/rancher`               |
+| `/opt/cni`                   |
+| `/opt/rke`                   |
+| `/run/secrets/kubernetes.io` |
+| `/run/calico`                |
+| `/run/flannel`               |
+| `/var/lib/calico`            |
+| `/var/lib/etcd`              |
+| `/var/lib/cni`               |
+| `/var/lib/kubelet`           |
+| `/var/lib/rancher`           |
+| `/var/log/containers`        |
+| `/var/log/kube-audit`        |
+| `/var/log/pods`              |
+| `/var/run/calico`            |
 
 **To clean the directories:**
 
@@ -198,6 +255,7 @@ Directories |
 rm -rf /etc/ceph \
        /etc/cni \
        /etc/kubernetes \
+       /etc/rancher \
        /opt/cni \
        /opt/rke \
        /run/secrets/kubernetes.io \
@@ -207,7 +265,7 @@ rm -rf /etc/ceph \
        /var/lib/etcd \
        /var/lib/cni \
        /var/lib/kubelet \
-       /var/lib/rancher/rke/log \
+       /var/lib/rancher\
        /var/log/containers \
        /var/log/kube-audit \
        /var/log/pods \
@@ -238,13 +296,13 @@ Depending on the network provider configured for the cluster the node was part o
 
 :::
 
-Interfaces |
---------|
-`flannel.1` |
-`cni0` |
-`tunl0` |
-`caliXXXXXXXXXXX` (random interface names)  |
-`vethXXXXXXXX` (random interface names)  |
+| Interfaces                                 |
+|--------------------------------------------|
+| `flannel.1`                                |
+| `cni0`                                     |
+| `tunl0`                                    |
+| `caliXXXXXXXXXXX` (random interface names) |
+| `vethXXXXXXXX` (random interface names)    |
 
 **To list all interfaces:**
 
@@ -272,32 +330,32 @@ Depending on the network provider configured for the cluster the node was part o
 
 Iptables rules are used to route traffic from and to containers. The created rules are not persistent, so restarting the node will restore iptables to its original state.
 
-Chains |
---------|
-`cali-failsafe-in` |
-`cali-failsafe-out` |
-`cali-fip-dnat` |
-`cali-fip-snat` |
-`cali-from-hep-forward` |
-`cali-from-host-endpoint` |
-`cali-from-wl-dispatch` |
-`cali-fw-caliXXXXXXXXXXX` (random chain names) |
-`cali-nat-outgoing` |
-`cali-pri-kns.NAMESPACE` (chain per namespace) |
-`cali-pro-kns.NAMESPACE` (chain per namespace) |
-`cali-to-hep-forward` |
-`cali-to-host-endpoint` |
-`cali-to-wl-dispatch` |
-`cali-tw-caliXXXXXXXXXXX` (random chain names) |
-`cali-wl-to-host` |
-`KUBE-EXTERNAL-SERVICES` |
-`KUBE-FIREWALL` |
-`KUBE-MARK-DROP` |
-`KUBE-MARK-MASQ` |
-`KUBE-NODEPORTS` |
-`KUBE-SEP-XXXXXXXXXXXXXXXX` (random chain names) |
-`KUBE-SERVICES` |
-`KUBE-SVC-XXXXXXXXXXXXXXXX` (random chain names) |
+| Chains                                           |
+|--------------------------------------------------|
+| `cali-failsafe-in`                               |
+| `cali-failsafe-out`                              |
+| `cali-fip-dnat`                                  |
+| `cali-fip-snat`                                  |
+| `cali-from-hep-forward`                          |
+| `cali-from-host-endpoint`                        |
+| `cali-from-wl-dispatch`                          |
+| `cali-fw-caliXXXXXXXXXXX` (random chain names)   |
+| `cali-nat-outgoing`                              |
+| `cali-pri-kns.NAMESPACE` (chain per namespace)   |
+| `cali-pro-kns.NAMESPACE` (chain per namespace)   |
+| `cali-to-hep-forward`                            |
+| `cali-to-host-endpoint`                          |
+| `cali-to-wl-dispatch`                            |
+| `cali-tw-caliXXXXXXXXXXX` (random chain names)   |
+| `cali-wl-to-host`                                |
+| `KUBE-EXTERNAL-SERVICES`                         |
+| `KUBE-FIREWALL`                                  |
+| `KUBE-MARK-DROP`                                 |
+| `KUBE-MARK-MASQ`                                 |
+| `KUBE-NODEPORTS`                                 |
+| `KUBE-SEP-XXXXXXXXXXXXXXXX` (random chain names) |
+| `KUBE-SERVICES`                                  |
+| `KUBE-SVC-XXXXXXXXXXXXXXXX` (random chain names) |
 
 **To list all iptables rules:**
 
