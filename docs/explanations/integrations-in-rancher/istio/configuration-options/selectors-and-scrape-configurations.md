@@ -9,10 +9,6 @@ This ensures you can view traffic, metrics and graphs for resources deployed in 
 
 If you would like to limit Prometheus to specific namespaces, set `prometheus.prometheusSpec.ignoreNamespaceSelectors=true`. Once you do this, you will need to add additional configuration to continue to monitor your resources.
 
-- [Limiting Monitoring to Specific Namespaces by Setting ignoreNamespaceSelectors to True](#limiting-monitoring-to-specific-namespaces-by-setting-ignorenamespaceselectors-to-true)
-- [Enabling Prometheus to Detect Resources in Other Namespaces](#enabling-prometheus-to-detect-resources-in-other-namespaces)
-- [Monitoring Specific Namespaces: Create a Service Monitor or Pod Monitor](#monitoring-specific-namespaces-create-a-service-monitor-or-pod-monitor)
-- [Monitoring Across Namespaces: Set ignoreNamespaceSelectors to False](#monitoring-across-namespaces-set-ignorenamespaceselectors-to-false)
 
 ### Limiting Monitoring to Specific Namespaces by Setting ignoreNamespaceSelectors to True
 

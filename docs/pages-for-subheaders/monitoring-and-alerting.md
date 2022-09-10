@@ -7,13 +7,6 @@ weight: 13
 
 Using the `rancher-monitoring` application, you can quickly deploy leading open-source monitoring and alerting solutions onto your cluster.
 
-- [Features](#features)
-- [How Monitoring Works](#how-monitoring-works)
-- [Default Components and Deployments](#default-components-and-deployments)
-- [Role-based Access Control](#role-based-access-control)
-- [Guides](#guides)
-- [Windows Cluster Support](#windows-cluster-support)
-- [Known Issues](#known-issues)
 
 ### Features
 

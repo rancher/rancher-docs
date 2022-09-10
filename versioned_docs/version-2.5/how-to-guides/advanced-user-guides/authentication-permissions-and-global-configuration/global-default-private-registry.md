@@ -15,7 +15,7 @@ For instructions on setting up a private registry with command line options duri
 
 If your private registry requires credentials, it cannot be used as the default registry. There is no global way to set up a private registry with authorization for every Rancher-provisioned cluster. Therefore, if you want a Rancher-provisioned cluster to pull images from a private registry with credentials, you will have to [pass in the registry credentials through the advanced cluster options](#setting-a-private-registry-with-credentials-when-deploying-a-cluster) every time you create a new cluster.
 
-# Setting a Private Registry with No Credentials as the Default Registry
+## Setting a Private Registry with No Credentials as the Default Registry
 
 1. Log into Rancher and configure the default administrator password.
 
@@ -33,7 +33,7 @@ If your private registry requires credentials, it cannot be used as the default 
 
 **Result:** Rancher will use your private registry to pull system images.
 
-# Setting a Private Registry with Credentials when Deploying a Cluster
+## Setting a Private Registry with Credentials when Deploying a Cluster
 
 You can follow these steps to configure a private registry when you provision a cluster with Rancher:
 

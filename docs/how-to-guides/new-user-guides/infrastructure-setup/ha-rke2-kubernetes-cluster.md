@@ -11,7 +11,7 @@ The recommended infrastructure for the Rancher-only Kubernetes cluster differs d
 
 These nodes must be in the same region. You may place these servers in separate availability zones (datacenter).
 
-::
+:::
 
 To install the Rancher management server on a high-availability RKE2 cluster, we recommend setting up the following infrastructure:
 

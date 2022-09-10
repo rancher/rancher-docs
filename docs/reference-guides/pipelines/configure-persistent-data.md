@@ -31,24 +31,24 @@ This section assumes that you understand how persistent storage works in Kuberne
 
 1.  Complete the form that displays to choose a persistent volume for the internal Docker registry.
     <Tabs>
-      <TabItem value="Add a new persistent volume">
+    <TabItem value="Add a new persistent volume">
 
-        1. Enter a **Name** for the volume claim.
-        1. Select a volume claim **Source**:
-            - If you select **Use a Storage Class to provision a new persistent volume**, select a storage class and enter a **Capacity**.
-            - If you select **Use an existing persistent volume**, choose a **Persistent Volume** from the drop-down.
-        1. From the **Customize** section, choose the read/write access for the volume.
-        1. Click **Define**.
+      1. Enter a **Name** for the volume claim.
+      1. Select a volume claim **Source**:
+          - If you select **Use a Storage Class to provision a new persistent volume**, select a storage class and enter a **Capacity**.
+          - If you select **Use an existing persistent volume**, choose a **Persistent Volume** from the drop-down.
+      1. From the **Customize** section, choose the read/write access for the volume.
+      1. Click **Define**.
 
-      </TabItem>
-      <TabItem value="Use an existing persistent volume">
+    </TabItem>
+    <TabItem value="Use an existing persistent volume">
 
-        1. Enter a **Name** for the volume claim.
-        1. Choose a **Persistent Volume Claim** from the dropdown.
-        1. From the **Customize** section, choose the read/write access for the volume.
-        1. Click **Define**.
+      1. Enter a **Name** for the volume claim.
+      1. Choose a **Persistent Volume Claim** from the dropdown.
+      1. From the **Customize** section, choose the read/write access for the volume.
+      1. Click **Define**.
 
-      </TabItem>
+    </TabItem>
     </Tabs>
 
 1. From the **Mount Point** field, enter `/var/lib/registry`, which is the data storage path inside the Docker registry container.
@@ -69,24 +69,24 @@ This section assumes that you understand how persistent storage works in Kuberne
 
 1.  Complete the form that displays to choose a persistent volume for the internal Docker registry.
     <Tabs>
-      <TabItem value="Add a new persistent volume">
+    <TabItem value="Add a new persistent volume">
 
-        1. Enter a **Name** for the volume claim.
-        1. Select a volume claim **Source**:
-            - If you select **Use a Storage Class to provision a new persistent volume**, select a storage class and enter a **Capacity**.
-            - If you select **Use an existing persistent volume**, choose a **Persistent Volume** from the drop-down.
-        1. From the **Customize** section, choose the read/write access for the volume.
-        1. Click **Define**.
+      1. Enter a **Name** for the volume claim.
+      1. Select a volume claim **Source**:
+          - If you select **Use a Storage Class to provision a new persistent volume**, select a storage class and enter a **Capacity**.
+          - If you select **Use an existing persistent volume**, choose a **Persistent Volume** from the drop-down.
+      1. From the **Customize** section, choose the read/write access for the volume.
+      1. Click **Define**.
 
-      </TabItem>
-      <TabItem value="Use an existing persistent volume">
+    </TabItem>
+    <TabItem value="Use an existing persistent volume">
 
-        1. Enter a **Name** for the volume claim.
-        1. Choose a **Persistent Volume Claim** from the drop-down.
-        1. From the **Customize** section, choose the read/write access for the volume.
-        1. Click **Define**.
+      1. Enter a **Name** for the volume claim.
+      1. Choose a **Persistent Volume Claim** from the drop-down.
+      1. From the **Customize** section, choose the read/write access for the volume.
+      1. Click **Define**.
 
-      </TabItem>
+    </TabItem>
     </Tabs>
 
 1. From the **Mount Point** field, enter `/data`, which is the data storage path inside the Minio container.

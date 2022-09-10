@@ -8,17 +8,14 @@ _Available as of v2.5.8_
 
 Starting at Monitoring V2 14.5.100 (used by default in Rancher 2.5.8), Monitoring V2 can now be deployed on a Windows cluster and will scrape metrics from Windows nodes using [prometheus-community/windows_exporter](https://github.com/prometheus-community/windows_exporter) (previously named `wmi_exporter`).
 
-- [Comparison to Monitoring V1](#comparison-to-monitoring-v1)
-- [Cluster Requirements](#cluster-requirements)
-  - [Upgrading Existing Clusters to wins v0.1.0](#upgrading-existing-clusters-to-wins-v0-1-0)
 
-# Comparison to Monitoring V1
+## Comparison to Monitoring V1
 
 Unlike Monitoring V1 for Windows, metrics collected by `windows_exporter` will be labeled as `windows_` instead of `wmi_` in accordance to a naming change from upstream from `wmi_exporter` to `windows_exporter`.
 
 In addition, Monitoring V2 for Windows will no longer require users to keep port 9796 open on Windows hosts since the host metrics will published directly onto a port exposed on the windows-exporter Pod. This feature was powered by recent changes made by `wins` v0.1.0 to support publishing ports exposed on the hostNetwork on Pods that use wins to run a privileged Windows binary as a host process.
 
-# Cluster Requirements
+## Cluster Requirements
 
 Monitoring V2 for Windows can only scrape metrics from Windows hosts that have a minimum `wins` version of v0.1.0.  To be able to fully deploy Monitoring V2 for Windows, all of your hosts must meet this requirement.
 

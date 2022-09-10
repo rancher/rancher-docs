@@ -5,19 +5,7 @@ weight: 2
 
 For the full details on configuring `Outputs` and `ClusterOutputs`, see the [Banzai Cloud Logging operator documentation.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/output/)
 
-- [Configuration](#configuration)
-- [YAML Examples](#yaml-examples)
-  - [Cluster Output to ElasticSearch](#cluster-output-to-elasticsearch)
-  - [Output to Splunk](#output-to-splunk)
-  - [Output to Syslog](#output-to-syslog)
-  - [Unsupported Outputs](#unsupported-outputs)
-
-# Configuration
-
-- [Outputs](#outputs)
-- [ClusterOutputs](#clusteroutputs)
-
-# Outputs
+## Outputs
 
 The `Output` resource defines where your `Flows` can send the log messages. `Outputs` are the final stage for a logging `Flow`.
 
@@ -53,7 +41,7 @@ The Rancher UI provides forms for configuring the `Output` type, target, and acc
 
 For example configuration for each logging plugin supported by the logging operator, see the [logging operator documentation.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/plugins/outputs/)
 
-# ClusterOutputs
+## ClusterOutputs
 
 `ClusterOutput` defines an `Output` without namespace restrictions. It is only effective when deployed in the same namespace as the logging operator.
 
@@ -61,7 +49,7 @@ For example configuration for each logging plugin supported by the logging opera
 
 For the details of the `ClusterOutput` custom resource, see [ClusterOutput.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/clusteroutput_types/)
 
-# YAML Examples
+## YAML Examples
 
 Once logging is installed, you can use these examples to help craft your own logging pipeline.
 

@@ -6,14 +6,7 @@ weight: 1
 
 Rancher v2.5 introduced the capability to deploy Rancher on any Kubernetes cluster. For that reason, we now provide separate security hardening guides for Rancher deployments on each of Rancher's Kubernetes distributions.
 
-- [Rancher Kubernetes Distributions](#rancher-kubernetes-distributions)
-- [Hardening Guides and Benchmark Versions](#hardening-guides-and-benchmark-versions)
-  - [RKE Guides](#rke-guides)
-  - [RKE2 Guides](#rke2-guides)
-  - [K3s Guides](#k3s)
-- [Rancher with SELinux](#rancher-with-selinux)
-
-# Rancher Kubernetes Distributions
+## Rancher Kubernetes Distributions
 
 Rancher has the following Kubernetes distributions:
 
@@ -23,7 +16,7 @@ Rancher has the following Kubernetes distributions:
 
 To harden a Kubernetes cluster outside of Rancher's distributions, refer to your Kubernetes provider docs.
 
-# Hardening Guides and Benchmark Versions
+## Hardening Guides and Benchmark Versions
 
 These guides have been tested along with the Rancher v2.5 release. Each self-assessment guide is accompanied with a hardening guide and tested on a specific Kubernetes version and CIS benchmark version. If a CIS benchmark has not been validated for your Kubernetes version, you can choose to use the existing guides until a newer version is added.
 
@@ -48,7 +41,7 @@ Kubernetes Version | CIS Benchmark Version | Self Assessment Guide | Hardening G
 Kubernetes v1.17, v1.18, & v1.19 | CIS v1.5 | [Link](https://rancher.com/docs/k3s/latest/en/security/self_assessment/) | [Link](https://rancher.com/docs/k3s/latest/en/security/hardening_guide/)
 
 
-# Rancher with SELinux
+## Rancher with SELinux
 
 _Available as of v2.5.8_
 

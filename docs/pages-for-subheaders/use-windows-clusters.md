@@ -18,17 +18,8 @@ For the full list of requirements, see [this section.](#requirements-for-windows
 
 For a summary of Kubernetes features supported in Windows, see the Kubernetes documentation on [supported functionality and limitations for using Kubernetes with Windows](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#supported-functionality-and-limitations) or the [guide for scheduling Windows containers in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/user-guide-windows-containers/).
 
-This guide covers the following topics:
 
-<!-- TOC -->
-
-- [Changes in Rancher v2.6](#changes-in-rancher-v2-6)
-- [Requirements](#requirements-for-windows-clusters)
-- [Tutorial: How to Create a Cluster with Windows Support](#tutorial-how-to-create-a-cluster-with-windows-support)
-- [Configuration for Storage Classes in Azure](#configuration-for-storage-classes-in-azure)
-<!-- /TOC -->
-
-# Changes in Rancher v2.6
+## Changes in Rancher v2.6
 
 Rancher v2.6 introduces provisioning for [RKE2](https://docs.rke2.io/) clusters directly from the Rancher UI. RKE2, also known as RKE Government, is a fully conformant Kubernetes distribution that focuses on security and compliance within the U.S. Federal Government sector.
 
@@ -55,7 +46,7 @@ Rancher will allow Windows workload pods to deploy on both Windows and Linux wor
 
 - HostProcess containers in Windows RKE2 are supported in Kubernetes v1.24.1 and up. See [the upstream documentation](https://kubernetes.io/docs/tasks/configure-pod-container/create-hostprocess-pod/) for more information.
 
-# Requirements for Windows Clusters
+## Requirements for Windows Clusters
 
 The general node requirements for networking, operating systems, and Docker are the same as the node requirements for a [Rancher installation](installation-requirements.md).
 
@@ -156,7 +147,7 @@ If you are using the GCE (Google Compute Engine) cloud provider, you must do the
 - Enable the GCE cloud provider in the `cluster.yml` by following [these steps.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/google-compute-engine.md)
 - When provisioning the cluster in Rancher, choose **Custom cloud provider** as the cloud provider in the Rancher UI.
 
-# Tutorial: How to Create a Cluster with Windows Support
+## Tutorial: How to Create a Cluster with Windows Support
 
 This tutorial describes how to create a Rancher-provisioned cluster with the three nodes in the [recommended architecture.](#guide-architecture)
 
@@ -164,15 +155,8 @@ When you provision a cluster with Rancher on existing nodes, you will add nodes 
 
 To set up a cluster with support for Windows nodes and containers, you will need to complete the tasks below.
 
-<!-- TOC -->
 
-1. [Provision Hosts](#1-provision-hosts)
-1. [Create the Cluster on Existing Nodes](#2-create-the-cluster-on-existing-nodes)
-1. [Add Nodes to the Cluster](#3-add-nodes-to-the-cluster)
-1. [Optional: Configuration for Azure Files](#4-optional-configuration-for-azure-files)
-<!-- /TOC -->
-
-# 1. Provision Hosts
+### 1. Provision Hosts
 
 To begin provisioning a cluster on existing nodes with Windows support, prepare your hosts.
 
@@ -196,7 +180,7 @@ You will provision three nodes:
 
 If your nodes are hosted by a **Cloud Provider** and you want automation support such as loadbalancers or persistent storage devices, your nodes have additional configuration requirements. For details, see [Selecting Cloud Providers.](set-up-cloud-providers.md)
 
-# 2. Create the Cluster on Existing Nodes
+### 2. Create the Cluster on Existing Nodes
 
 The instructions for creating a Windows cluster on existing nodes are very similar to the general [instructions for creating a custom cluster](use-existing-nodes.md) with some Windows-specific requirements.
 
@@ -216,11 +200,11 @@ For <b>Host Gateway (L2bridge)</b> networking, it's best to use the same Layer 2
 
 :::
 
-# 3. Add Nodes to the Cluster
+### 3. Add Nodes to the Cluster
 
 This section describes how to register your Linux and Worker nodes to your cluster. You will run a command on each node, which will install the Rancher agent and allow Rancher to manage each node.
 
-### Add Linux Master Node
+#### Add Linux Master Node
 
 In this section, we fill out a form on the Rancher UI to get a custom command to install the Rancher agent on the Linux master node. Then we will copy the command and run it on our Linux master node to register the node in the cluster.
 
@@ -247,7 +231,7 @@ You can access your cluster after its state is updated to **Active**.
 
 It may take a few minutes for the node to be registered in your cluster.
 
-### Add Linux Worker Node
+#### Add Linux Worker Node
 
 In this section, we run a command to register the Linux worker node to the cluster.
 
@@ -275,7 +259,7 @@ For each Linux worker node added into the cluster, the following taints will be 
 
 :::
 
-### Add a Windows Worker Node
+#### Add a Windows Worker Node
 
 In this section, we run a command to register the Windows worker node to the cluster.
 
@@ -298,6 +282,6 @@ After creating your cluster, you can access it through the Rancher UI. As a best
 - **Access your cluster with the kubectl CLI:** Follow [these steps](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#accessing-clusters-with-kubectl-on-your-workstation) to access clusters with kubectl on your workstation. In this case, you will be authenticated through the Rancher server’s authentication proxy, then Rancher will connect you to the downstream cluster. This method lets you manage the cluster without the Rancher UI.
 - **Access your cluster with the kubectl CLI, using the authorized cluster endpoint:** Follow [these steps](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster) to access your cluster with kubectl directly, without authenticating through the Rancher server. We recommend setting up this alternative method to access your cluster so that in case you can’t connect to Rancher, you can still access the cluster.
 
-# Configuration for Storage Classes in Azure
+## Configuration for Storage Classes in Azure
 
 If you are using Azure VMs for your nodes, you can use [Azure files](https://docs.microsoft.com/en-us/azure/aks/azure-files-dynamic-pv) as a StorageClass for the cluster. For details, refer to [this section.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/azure-storageclass-configuration.md)

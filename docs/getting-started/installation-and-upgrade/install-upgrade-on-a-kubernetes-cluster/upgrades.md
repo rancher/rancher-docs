@@ -8,12 +8,8 @@ For the instructions to upgrade Rancher installed with Docker, refer to [this pa
 
 To upgrade the components in your Kubernetes cluster, or the definition of the [Kubernetes services](https://rancher.com/docs/rke/latest/en/config-options/services/) or [add-ons](https://rancher.com/docs/rke/latest/en/config-options/add-ons/), refer to the [upgrade documentation for RKE](https://rancher.com/docs/rke/latest/en/upgrades/), the Rancher Kubernetes Engine.
 
-- [Prerequisites](#prerequisites)
-- [Upgrade Outline](#upgrade-outline)
-- [Known Upgrade Issues](#known-upgrade-issues)
-- [RKE Add-on Installs](#rke-add-on-installs)
 
-# Prerequisites
+## Prerequisites
 
 ### Access to kubeconfig
 
@@ -47,22 +43,18 @@ If you are upgrading to Rancher v2.5 from a Rancher server that was started with
 
 [Let's Encrypt will be blocking cert-manager instances older than 0.8.0 starting November 1st 2019.](https://community.letsencrypt.org/t/blocking-old-cert-manager-versions/98753) Upgrade cert-manager to the latest version by following [these instructions.](../resources/upgrade-cert-manager.md)
 
-# Upgrade Outline
+## Upgrade Outline
 
 Follow the steps to upgrade Rancher server:
 
-- [1. Back up your Kubernetes cluster that is running Rancher server](#1-back-up-your-kubernetes-cluster-that-is-running-rancher-server)
-- [2. Update the Helm chart repository](#2-update-the-helm-chart-repository)
-- [3. Upgrade Rancher](#3-upgrade-rancher)
-- [4. Verify the Upgrade](#4-verify-the-upgrade)
 
-# 1. Back up Your Kubernetes Cluster that is Running Rancher Server
+### 1. Back up Your Kubernetes Cluster that is Running Rancher Server
 
 Use the [backup application](../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher.md) to back up Rancher.
 
 You'll use the backup as a restore point if something goes wrong during upgrade.
 
-# 2. Update the Helm chart repository
+### 2. Update the Helm chart repository
 
 1. Update your local helm repo cache.
 
@@ -115,7 +107,7 @@ You'll use the backup as a restore point if something goes wrong during upgrade.
     helm fetch rancher-<CHART_REPO>/rancher --version=v2.4.11
     ```
 
-# 3. Upgrade Rancher
+### 3. Upgrade Rancher
 
 This section describes how to upgrade normal (Internet-connected) or air-gapped installations of Rancher with Helm.
 
@@ -143,7 +135,7 @@ There will be more values that are listed with this command. This is just an exa
 
 If you are upgrading cert-manager to the latest version from v1.5 or below, follow the [cert-manager upgrade docs](../resources/upgrade-cert-manager.md#option-c-upgrade-cert-manager-from-versions-1-5-and-below) to learn how to upgrade cert-manager without needing to perform an uninstall or reinstall of Rancher. Otherwise, follow the [steps to upgrade Rancher](#steps-to-upgrade-rancher) below.
 
-### Steps to Upgrade Rancher
+#### Steps to Upgrade Rancher
 
 Upgrade Rancher to the latest version with all your settings.
 
@@ -172,7 +164,7 @@ helm upgrade rancher rancher-<CHART_REPO>/rancher \
   --version=2.4.5
 ```
 
-# 4. Verify the Upgrade
+### 4. Verify the Upgrade
 
 Log into Rancher to confirm that the upgrade succeeded.
 
@@ -184,6 +176,6 @@ See [Restoring Cluster Networking](../../../../versioned_docs/version-2.0-2.4/ge
 
 :::
 
-# Known Upgrade Issues
+## Known Upgrade Issues
 
 A list of known issues for each Rancher version can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums.](https://forums.rancher.com/c/announcements/12)

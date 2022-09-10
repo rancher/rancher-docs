@@ -29,7 +29,7 @@ Terraform allows you to:
 - Incorporate infrastructure changes into standard development practices
 - Prevent configuration drift, in which some servers become configured differently than others
 
-# How Does Terraform Work?
+## How Does Terraform Work?
 
 Terraform is written in files with the extension `.tf`. It is written in HashiCorp Configuration Language, which is a declarative language that lets you define the infrastructure you want in your cluster, the cloud provider you are using, and your credentials for the provider. Then Terraform makes API calls to the provider in order to efficiently create that infrastructure.
 
@@ -39,7 +39,7 @@ Then Terraform calls the Rancher API to provision your infrastructure, and Ranch
 
 When you need to make changes to your infrastructure, instead of manually updating the servers, you can make changes in the Terraform configuration files. Then those files can be committed to version control, validated, and reviewed as necessary. Then when you run `terraform apply`, the changes would be deployed.
 
-# Tips for Working with Terraform
+## Tips for Working with Terraform
 
 - There are examples of how to provide most aspects of a cluster in the [documentation for the Rancher 2 provider.](https://www.terraform.io/docs/providers/rancher2/)
 
@@ -51,7 +51,7 @@ When you need to make changes to your infrastructure, instead of manually updati
 
 - If you want to manage Kubernetes cluster settings, Rancher settings, and hardware settings all in one place, use [Terraform modules](https://github.com/rancher/terraform-modules). You can pass a cluster configuration YAML file or an RKE template configuration file to a Terraform module so that the Terraform module will create it. In that case, you could use your infrastructure-as-code to manage the version control and revision history of both your Kubernetes cluster and its underlying hardware.
 
-# Tip for Creating CIS Benchmark Compliant Clusters
+## Tip for Creating CIS Benchmark Compliant Clusters
 
 This section describes one way that you can make security and compliance-related config files standard in your clusters.
 
@@ -63,7 +63,7 @@ Then you would make sure that the `kube-api-server` flag in your RKE template us
 
 In this way, you can create flags that comply with the CIS benchmark.
 
-# Resources
+## Resources
 
 - [Terraform documentation](https://www.terraform.io/docs/)
 - [Rancher2 Terraform provider documentation](https://www.terraform.io/docs/providers/rancher2/)

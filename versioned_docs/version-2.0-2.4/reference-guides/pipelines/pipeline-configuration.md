@@ -7,26 +7,8 @@ aliases:
 
 In this section, you'll learn how to configure pipelines.
 
-- [Step Types](#step-types)
-- [Step Type: Run Script](#step-type-run-script)
-- [Step Type: Build and Publish Images](#step-type-build-and-publish-images)
-- [Step Type: Publish Catalog Template](#step-type-publish-catalog-template)
-- [Step Type: Deploy YAML](#step-type-deploy-yaml)
-- [Step Type: Deploy Catalog App](#step-type-deploy-catalog-app)
-- [Notifications](#notifications)
-- [Timeouts](#timeouts)
-- [Triggers and Trigger Rules](#triggers-and-trigger-rules)
-- [Environment Variables](#environment-variables)
-- [Secrets](#secrets)
-- [Pipeline Variable Substitution Reference](#pipeline-variable-substitution-reference)
-- [Global Pipeline Execution Settings](#global-pipeline-execution-settings)
-  - [Executor Quota](#executor-quota)
-  - [Resource Quota for Executors](#resource-quota-for-executors)
-  - [Custom CA](#custom-ca)
-- [Persistent Data for Pipeline Components](#persistent-data-for-pipeline-components)
-- [Example rancher-pipeline.yml](#example-rancher-pipeline-yml)
 
-# Step Types
+## Step Types
 
 Within each stage, you can add as many steps as you'd like. When there are multiple steps in one stage, they run concurrently.
 
@@ -82,7 +64,7 @@ stages:
         pushRemote: true
         registry: reg.example.com
 ```
-# Step Type: Run Script
+## Step Type: Run Script
 
 The **Run Script** step executes arbitrary commands in the workspace inside a specified container. You can use it to build, test and do more, given whatever utilities the base image provides. For your convenience, you can use variables to refer to metadata of a pipeline execution. Please refer to the [pipeline variable substitution reference](#pipeline-variable-substitution-reference) for the list of available variables.
 
@@ -102,7 +84,7 @@ stages:
       image: golang
       shellScript: go build
 ```
-# Step Type: Build and Publish Images
+## Step Type: Build and Publish Images
 
 _Available as of Rancher v2.1.0_
 
@@ -154,7 +136,7 @@ stages:
       PLUGIN_INSECURE: "true"
 ```
 
-# Step Type: Publish Catalog Template
+## Step Type: Publish Catalog Template
 
 _Available as of v2.2.0_
 
@@ -212,7 +194,7 @@ stages:
       sourceKey: DEPLOY_KEY
 ```
 
-# Step Type: Deploy YAML
+## Step Type: Deploy YAML
 
 This step deploys arbitrary Kubernetes resources to the project. This deployment requires a Kubernetes manifest file to be present in the source code repository. Pipeline variable substitution is supported in the manifest file. You can view an example file at [GitHub](https://github.com/rancher/pipeline-example-go/blob/master/deployment.yaml). Please refer to the [pipeline variable substitution reference](#pipeline-variable-substitution-reference) for the list of available variables.
 
@@ -235,7 +217,7 @@ stages:
       path: ./deployment.yaml
 ```
 
-# Step Type :Deploy Catalog App
+## Step Type :Deploy Catalog App
 
 _Available as of v2.2.0_
 
@@ -283,7 +265,7 @@ stages:
       targetNamespace: test
 ```
 
-# Timeouts
+## Timeouts
 
 By default, each pipeline execution has a timeout of 60 minutes. If the pipeline execution cannot complete within its timeout period, the pipeline is aborted.
 
@@ -307,7 +289,7 @@ stages:
 timeout: 30
 ```
 
-# Notifications
+## Notifications
 
 You can enable notifications to any [notifiers](../../explanations/integrations-in-rancher/notifiers.md) based on the build status of a pipeline. Before enabling notifications, Rancher recommends [setting up notifiers](../../explanations/integrations-in-rancher/notifiers.md) so it will be easy to add recipients immediately.
 
@@ -358,7 +340,7 @@ notification:
   message: "my-message"
 ```
 
-# Triggers and Trigger Rules
+## Triggers and Trigger Rules
 
 After you configure a pipeline, you can trigger it using different methods:
 
@@ -382,12 +364,6 @@ If all conditions evaluate to `true`, then the pipeline/stage/step is executed. 
 
 Wildcard character (`*`) expansion is supported in `branch` conditions.
 
-This section covers the following topics:
-
-- [Configuring pipeline triggers](#configuring-pipeline-triggers)
-- [Configuring stage triggers](#configuring-stage-triggers)
-- [Configuring step triggers](#configuring-step-triggers)
-- [Configuring triggers by YAML](#configuring-triggers-by-yaml)
 
 ### Configuring Pipeline Triggers
 
@@ -483,7 +459,7 @@ branch:
   exclude: [ dev ]
 ```
 
-# Environment Variables
+## Environment Variables
 
 When configuring a pipeline, certain [step types](#step-types) allow you to use environment variables to configure the step's script.
 
@@ -520,7 +496,7 @@ stages:
         SECOND_KEY: VALUE2
 ```
 
-# Secrets
+## Secrets
 
 If you need to use security-sensitive information in your pipeline scripts (like a password), you can pass them in using Kubernetes [secrets](../../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md).
 
@@ -563,7 +539,7 @@ stages:
         targetKey: ALIAS_ENV
 ```
 
-# Pipeline Variable Substitution Reference
+## Pipeline Variable Substitution Reference
 
 For your convenience, the following variables are available for your pipeline configuration scripts. During pipeline executions, these variables are replaced by metadata. You can reference them in the form of `${VAR_NAME}`.
 
@@ -582,7 +558,7 @@ Variable Name           | Description
 `CICD_REGISTRY`           | Address for the Docker registry for the previous publish image step, available in the Kubernetes manifest file of a `Deploy YAML` step.
 `CICD_IMAGE`              | Name of the image built from the previous publish image step, available in the Kubernetes manifest file of a `Deploy YAML` step. It does not contain the image tag.<br/><br/> [Example](https://github.com/rancher/pipeline-example-go/blob/master/deployment.yaml)
 
-# Global Pipeline Execution Settings
+## Global Pipeline Execution Settings
 
 After configuring a version control provider, there are several options that can be configured globally on how pipelines are executed in Rancher. These settings can be edited by selecting **Tools > Pipelines** in the navigation bar. In versions before v2.2.0, you can select **Resources > Pipelines**.
 
@@ -649,12 +625,12 @@ If you want to use a version control provider with a certificate from a custom/i
 
 **Result:** Pipelines can be used and new pods will be able to work with the self-signed-certificate.
 
-# Persistent Data for Pipeline Components
+## Persistent Data for Pipeline Components
 
 The internal Docker registry and the Minio workloads use ephemeral volumes by default. This default storage works out-of-the-box and makes testing easy, but you lose the build images and build logs if the node running the Docker Registry or Minio fails. In most cases this is fine. If you want build images and logs to survive node failures, you can configure the Docker Registry and Minio to use persistent volumes.
 
 For details on setting up persistent storage for pipelines, refer to [this page.](./configure-persistent-data.md)
 
-# Example rancher-pipeline.yml
+## Example rancher-pipeline.yml
 
 An example pipeline configuration file is on [this page.](./example-yaml.md)

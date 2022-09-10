@@ -28,7 +28,7 @@ Deploying to Amazon AWS will incur charges.
 
 The AWS module just creates an EC2 KeyPair, an EC2 SecurityGroup and an EC2 instance. A simple policy would be:
 
-```
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -50,17 +50,18 @@ The AWS module just creates an EC2 KeyPair, an EC2 SecurityGroup and an EC2 inst
 3. Rename the `terraform.tfvars.example` file to `terraform.tfvars`.
 
 4. Edit `terraform.tfvars` and customize the following variables:
+
     - `aws_access_key` - Amazon AWS Access Key
     - `aws_secret_key` - Amazon AWS Secret Key
     - `rancher_server_admin_password` - Admin password for created Rancher server
 
-5. **Optional:** Modify optional variables within `terraform.tfvars`.
-See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [AWS Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/aws) for more information.
+5. **Optional:** Modify optional variables within `terraform.tfvars`. See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [AWS Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/aws) for more information.
 Suggestions include:
-    - `aws_region` - Amazon AWS region, choose the closest instead of the default (`us-east-1`)
-    - `prefix` - Prefix for all created resources
-    - `instance_type` - EC2 instance size used, minimum is `t3a.medium` but `t3a.large` or `t3a.xlarge` could be used if within budget
-    - `add_windows_node` - If true, an additional Windows worker node is added to the workload cluster
+
+   - `aws_region` - Amazon AWS region, choose the closest instead of the default (`us-east-1`)
+   - `prefix` - Prefix for all created resources
+   - `instance_type` - EC2 instance size used, minimum is `t3a.medium` but `t3a.large` or `t3a.xlarge` could be used if within budget
+   - `add_windows_node` - If true, an additional Windows worker node is added to the workload cluster
 
 6. Run `terraform init`.
 

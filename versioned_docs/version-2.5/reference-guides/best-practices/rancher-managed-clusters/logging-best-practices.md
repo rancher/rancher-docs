@@ -12,7 +12,7 @@ In this guide, we recommend best practices for cluster-level logging and applica
 - [Application Logging](#application-logging)
 - [General Best Practices](#general-best-practices)
 
-# Changes in Logging in Rancher v2.5
+## Changes in Logging in Rancher v2.5
 
 Before Rancher v2.5, logging in Rancher has historically been a pretty static integration. There were a fixed list of aggregators to choose from (ElasticSearch, Splunk, Kafka, Fluentd and Syslog), and only two configuration points to choose (Cluster-level and Project-level).
 
@@ -20,7 +20,7 @@ Logging in 2.5 has been completely overhauled to provide a more flexible experie
 
 "Under the hood", Rancher logging uses the Banzai Cloud logging operator. We provide manageability of this operator (and its resources), and tie that experience in with managing your Rancher clusters. 
 
-# Cluster-level Logging
+## Cluster-level Logging
 
 ### Cluster-wide Scraping
 
@@ -38,7 +38,7 @@ Currently (as of v2.5.1) the logs from RKE containers are collected, but are not
 
 A future release of Rancher will include the source container name which will enable filtering of these component logs. Once that change is made, you will be able to customize a _ClusterFlow_ to retrieve **only** the Kubernetes component logs, and direct them to an appropriate output.
 
-# Application Logging
+## Application Logging
 
 Best practice not only in Kubernetes but in all container-based applications is to direct application logs to `stdout`/`stderr`. The container runtime will then trap these logs and do **something** with them - typically writing them to a file. Depending on the container runtime (and its configuration), these logs can end up in any number of locations.
 
@@ -54,7 +54,7 @@ The goal of setting up a streaming sidecar is to take log files that are written
 
 To set this up, edit your workload resource (e.g. Deployment) and add the following sidecar definition:
 
-```
+```yaml
 ...
 containers:
 - args:
@@ -74,7 +74,7 @@ This will add a container to your workload definition that will now stream the c
 
 This log stream is then automatically collected according to any _Flows_ or _ClusterFlows_ you have setup. You may also wish to consider creating a _Flow_ specifically for this log file by targeting the name of the container. See example:
 
-```
+```yaml
 ...
 spec:
   match:
@@ -85,7 +85,7 @@ spec:
 ```
 
 
-# General Best Practices
+## General Best Practices
 
 - Where possible, output structured log entries (e.g. `syslog`, JSON). This makes handling of the log entry easier as there are already parsers written for these formats. 
 - Try to provide the name of the application that is creating the log entry, in the entry itself. This can make troubleshooting easier as Kubernetes objects do not always carry the name of the application as the object name. For instance, a pod ID may be something like `myapp-098kjhsdf098sdf98` which does not provide much information about the application running inside the container. 

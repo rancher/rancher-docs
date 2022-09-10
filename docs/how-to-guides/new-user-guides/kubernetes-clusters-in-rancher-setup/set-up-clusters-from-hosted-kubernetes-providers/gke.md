@@ -4,15 +4,8 @@ shortTitle: Google Kubernetes Engine
 weight: 2105
 ---
 
-- [Prerequisites](#prerequisites)
-- [Provisioning a GKE Cluster](#provisioning-a-gke-cluster)
-- [Private Clusters](#private-clusters)
-- [Configuration Reference](#configuration-reference)
-- [Updating Kubernetes Version](#updating-kubernetes-version)
-- [Syncing](#syncing)
-- [Programmatically Creating GKE Clusters](#programmatically-creating-gke-clusters)
 
-# Prerequisites
+## Prerequisites
 
 Some setup in Google Kubernetes Engine is required.
 
@@ -39,7 +32,7 @@ To create a new project, refer to the Google cloud documentation [here.](https:/
 
 To get the project ID of an existing project, refer to the Google cloud documentation [here.](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects)
 
-# Provisioning a GKE Cluster
+## Provisioning a GKE Cluster
 
 :::caution
 
@@ -82,14 +75,14 @@ You can access your cluster after its state is updated to **Active**.
 - `Default`, containing the `default` namespace
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces
 
-# Private Clusters
+## Private Clusters
 
 Private GKE clusters are supported. Note: This advanced setup can require more steps during the cluster provisioning process. For details, see [this section.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters.md)
 
-# Configuration Reference
+## Configuration Reference
 
 For details on configuring GKE clusters in Rancher, see [this page.](../../../../pages-for-subheaders/gke-cluster-configuration.md)
-# Updating Kubernetes Version
+## Updating Kubernetes Version
 
 The Kubernetes version of a cluster can be upgraded to any version available in the region or zone fo the GKE cluster. Upgrading the master Kubernetes version does not automatically upgrade worker nodes. Nodes can be upgraded independently.
 
@@ -99,12 +92,12 @@ GKE has removed basic authentication in 1.19+. In order to upgrade a cluster to 
 
 :::
 
-# Syncing
+## Syncing
 
 The GKE provisioner can synchronize the state of a GKE cluster between Rancher and the provider. For an in-depth technical explanation of how this works, see [Syncing.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters.md)
 
 For information on configuring the refresh interval, see [this section.](../../../../pages-for-subheaders/gke-cluster-configuration.md#configuring-the-refresh-interval)
 
-# Programmatically Creating GKE Clusters
+## Programmatically Creating GKE Clusters
 
 The most common way to programmatically deploy GKE clusters through Rancher is by using the Rancher2 Terraform provider. The documentation for creating clusters with Terraform is [here.](https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster)

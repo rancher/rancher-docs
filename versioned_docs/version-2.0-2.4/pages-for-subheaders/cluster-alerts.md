@@ -11,22 +11,6 @@ aliases:
 
 To keep your clusters and applications healthy and driving your organizational productivity forward, you need to stay informed of events occurring in your clusters and projects, both planned and unplanned. When an event occurs, your alert is triggered, and you are sent a notification. You can then, if necessary, follow up with corrective actions.
 
-This section covers the following topics:
-
-- [About Alerts](#about-alerts)
-  - [Alert Event Examples](#alert-event-examples)
-  - [Alerts Triggered by Prometheus Queries](#alerts-triggered-by-prometheus-queries)
-  - [Urgency Levels](#urgency-levels)
-  - [Scope of Alerts](#scope-of-alerts)
-  - [Managing Cluster Alerts](#managing-cluster-alerts)
-- [Adding Cluster Alerts](#adding-cluster-alerts)
-- [Cluster Alert Configuration](#cluster-alert-configuration)
-  - [System Service Alerts](#system-service-alerts)
-  - [Resource Event Alerts](#resource-event-alerts)
-  - [Node Alerts](#node-alerts)
-  - [Node Selector Alerts](#node-selector-alerts)
-  - [CIS Scan Alerts](#cis-scan-alerts)
-  - [Metric Expression Alerts](#metric-expression-alerts)
 
 # About Alerts
 

@@ -15,19 +15,6 @@ This section assumes a basic familiarity with Docker and Kubernetes. For a brief
 
 For a conceptual overview of how the Rancher server provisions clusters and what tools it uses to provision them, refer to the [architecture](rancher-manager-architecture.md) page.
 
-This section covers the following topics:
-
-<!-- TOC -->
-
-- [Cluster Management Capabilities by Cluster Type](#cluster-management-capabilities-by-cluster-type)
-- [Setting up clusters in a hosted Kubernetes provider](#setting-up-clusters-in-a-hosted-kubernetes-provider)
-- [Launching Kubernetes with Rancher](#launching-kubernetes-with-rancher)
-  - [Launching Kubernetes and Provisioning Nodes in an Infrastructure Provider](#launching-kubernetes-and-provisioning-nodes-in-an-infrastructure-provider)
-  - [Launching Kubernetes on Existing Custom Nodes](#launching-kubernetes-on-existing-custom-nodes)
-- [Registering Existing Clusters](#registering-existing-clusters)
-
-<!-- /TOC -->
-
 ### Cluster Management Capabilities by Cluster Type
 
 The following table summarizes the options and settings available for each cluster type:
@@ -36,7 +23,7 @@ import ClusterCapabilitiesTable from '../shared-files/_cluster-capabilities-tabl
 
 <ClusterCapabilitiesTable />
 
-# Setting up Clusters in a Hosted Kubernetes Provider
+## Setting up Clusters in a Hosted Kubernetes Provider
 
 In this scenario, Rancher does not provision Kubernetes because it is installed by providers such as Google Kubernetes Engine (GKE), Amazon Elastic Container Service for Kubernetes, or Azure Kubernetes Service.
 
@@ -44,7 +31,7 @@ If you use a Kubernetes provider such as Google GKE, Rancher integrates with its
 
 For more information, refer to the section on [hosted Kubernetes clusters.](set-up-clusters-from-hosted-kubernetes-providers.md)
 
-# Launching Kubernetes with Rancher
+## Launching Kubernetes with Rancher
 
 Rancher uses the [Rancher Kubernetes Engine (RKE)](https://rancher.com/docs/rke/latest/en/) as a library when provisioning Kubernetes on your own nodes. RKE is Rancher’s own lightweight Kubernetes installer.
 
@@ -76,7 +63,7 @@ You can bring any nodes you want to Rancher and use them to create a cluster.
 
 These nodes include on-prem bare metal servers, cloud-hosted virtual machines, or on-prem virtual machines.
 
-# Registering Existing Clusters
+## Registering Existing Clusters
 
 The cluster registration feature replaces the feature to import clusters.
 

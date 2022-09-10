@@ -19,14 +19,6 @@ This hardening guide is intended to be used for RKE2 clusters and associated wit
 
 [Click here to download a PDF version of this document](https://releases.rancher.com/documents/security/2.6/Rancher_RKE2_v2-6_CIS_v1-6_Hardening_Guide.pdf).
 
-- [Overview](#overview)
-- [Host-level requirements](#host-level-requirements)
-- [Setting up hosts](#setting-up-hosts)
-- [Kubernetes runtime requirements](#kubernetes-runtime-requirements)
-- [API Server audit configuration](#api-server-audit-configuration)
-- [Known issues](#known-issues)
-- [Reference Hardened RKE2 Template Configuration](#reference-hardened-rke2-template-configuration)
-- [Conclusion](#conclusion)
 
 ### Overview
 

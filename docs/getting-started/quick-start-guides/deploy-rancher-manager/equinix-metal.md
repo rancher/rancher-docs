@@ -20,18 +20,6 @@ The intent of these guides is to quickly launch a sandbox that you can use to ev
 
 This Quick Start Guide is divided into different tasks for easier consumption.
 
-<!-- TOC -->
-
-
-1. [Provision a Equinix Metal Host](#1-provision-a-equinix-metal-host)
-
-1. [Install Rancher](#2-install-rancher)
-
-1. [Log In](#3-log-in)
-
-1. [Create the Cluster](#4-create-the-cluster)
-
-<!-- /TOC -->
 <br/>
 
 ## Prerequisites

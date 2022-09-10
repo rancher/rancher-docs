@@ -3,14 +3,8 @@ title: Nutanix Node Template Configuration
 weight: 2
 ---
 
-- [Account Access](#account-access)
-- [Scheduling](#scheduling)
-- [Instance Options](#instance-options)
-- [Networks](#networks)
-- [VM Categories](#vm-categories)
-- [cloud-init](#cloud-init)
 
-# Account Access
+## Account Access
 
 | Parameter                    | Required | Description | Default
 |:-----------------------------|:--------:|:-----------------------------------------------------------------|:-----
@@ -19,7 +13,7 @@ weight: 2
 | Password                     |   ✓      | Password of the Prism Central user                               |
 | Allow insecure communication |          | Set to true to allow insecure SSL communication to Prism Central | False
 
-# Scheduling
+## Scheduling
 
 Choose what Nutanix cluster the virtual machine will be scheduled to. 
 
@@ -27,7 +21,7 @@ Choose what Nutanix cluster the virtual machine will be scheduled to.
 |:----------|:--------:|:----------------------------------------------------------------------------
 | Cluster   |   ✓      | Name of the Nutanix cluster where the VM should be deployed (case sensitive)
 
-# Instance Options
+## Instance Options
 
 In the **Instance Options** section, configure the number of vCPUs, memory, and disk size for the VMs created by this template.
 
@@ -45,15 +39,15 @@ In the **Instance Options** section, configure the number of vCPUs, memory, and 
 
 The VM may use any modern Linux operating system that is configured with support for [cloud-init](https://cloudinit.readthedocs.io/en/latest/) using the [Config Drive v2 datasource](https://cloudinit.readthedocs.io/en/latest/topics/datasources/configdrive.html).
 
-# Networks
+## Networks
 
 The node template allows a VM to be provisioned with multiple networks. In the **Network** field, you can click **Add** to add any networks available to you in AOS.
 
-# VM Categories
+## VM Categories
 
 A category is a grouping of entities into a key value pair. Typically, VMs are assigned to a category based on some criteria. Policies can then be tied to those entities that are assigned (grouped by) a specific category value.
 
-# cloud-init
+## cloud-init
 
 [Cloud-init](https://cloudinit.readthedocs.io/en/latest/) allows you to initialize your nodes by applying configuration on the first boot. This may involve things such as creating users or authorizing SSH keys.
 

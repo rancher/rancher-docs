@@ -45,7 +45,7 @@ Create the registries.yaml file at `/etc/rancher/k3s/registries.yaml`. This will
 
 The registries.yaml file should look like this before plugging in the necessary information:
 
-```
+```yaml
 ---
 mirrors:
   customreg:
@@ -109,7 +109,7 @@ To use this `kubeconfig` file,
 2. Copy the file at `/etc/rancher/k3s/k3s.yaml` and save it to the directory `~/.kube/config` on your local machine.
 3. In the kubeconfig file, the `server` directive is defined as localhost. Configure the server as the DNS of your load balancer, referring to port 6443. (The Kubernetes API server will be reached at port 6443, while the Rancher server will be reached at ports 80 and 443.) Here is an example `k3s.yaml`:
 
-```
+```yaml
 apiVersion: v1
 clusters:
 - cluster:

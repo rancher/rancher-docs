@@ -15,17 +15,6 @@ Global Permissions define user authorization outside the scope of any particular
 
 You cannot update or delete the built-in Global Permissions.
 
-This section covers the following topics:
-
-- [Global permission assignment](#global-permission-assignment)
-  - [Global permissions for new local users](#global-permissions-for-new-local-users)
-  - [Global permissions for users with external authentication](#global-permissions-for-users-with-external-authentication)
-- [Custom global permissions](#custom-global-permissions)
-  - [Custom global permissions reference](#custom-global-permissions-reference)
-  - [Configuring default global permissions for new users](#configuring-default-global-permissions)
-  - [Configuring global permissions for existing individual users](#configuring-global-permissions-for-existing-individual-users)
-  - [Configuring global permissions for groups](#configuring-global-permissions-for-groups)
-  - [Refreshing group memberships](#refreshing-group-memberships)
 
 # Global Permission Assignment
 

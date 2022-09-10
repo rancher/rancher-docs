@@ -9,11 +9,6 @@ For further details on configuring OpenLDAP, refer to the [official documentatio
 
 > Before you proceed with the configuration, please familiarize yourself with the concepts of [External Authentication Configuration and Principal Users](../../pages-for-subheaders/about-authentication.md#external-authentication-configuration-and-principal-users).
 
-- [Background: OpenLDAP Authentication Flow](#background-openldap-authentication-flow)
-- [OpenLDAP server configuration](#openldap-server-configuration)
-- [User/group schema configuration](#user-group-schema-configuration)
-  - [User schema configuration](#user-schema-configuration)
-  - [Group schema configuration](#group-schema-configuration)
 
 ## Background: OpenLDAP Authentication Flow
 

@@ -11,13 +11,13 @@ In this section, you'll learn how to install Rancher using Google Kubernetes Eng
 
 If you already have a GKE Kubernetes cluster, skip to the step about [installing an ingress.](#7-install-an-ingress) Then install the Rancher Helm chart following the instructions on [this page.](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#install-the-rancher-helm-chart)
 
-# Prerequisites
+## Prerequisites
 
 - You will need a Google account.
 - You will need a Google Cloud billing account. You can manage your Cloud Billing accounts using the Google Cloud Console. For more information about the Cloud Console, visit [General guide to the console.](https://support.google.com/cloud/answer/3465889?hl=en&ref_topic=3340599)
 - You will need a cloud quota for at least one in-use IP address and at least 2 CPUs. For more details about hardware requirements for the Rancher server, refer to [this section.](../../../pages-for-subheaders/installation-requirements.md#rke-and-hosted-kubernetes)
 
-# 1. Enable the Kubernetes Engine API
+## 1. Enable the Kubernetes Engine API
 
 Take the following steps to enable the Kubernetes Engine API:
 
@@ -26,7 +26,7 @@ Take the following steps to enable the Kubernetes Engine API:
 1. Open the project and enable the Kubernetes Engine API for the project. Wait for the API and related services to be enabled. This can take several minutes.
 1. Make sure that billing is enabled for your Cloud project. For information on how to enable billing for your project, refer to the [Google Cloud documentation.](https://cloud.google.com/billing/docs/how-to/modify-project#enable_billing_for_a_project)
 
-# 2. Open the Cloud Shell
+## 2. Open the Cloud Shell
 
 Cloud Shell is a shell environment for managing resources hosted on Google Cloud. Cloud Shell comes preinstalled with the `gcloud` command-line tool and kubectl command-line tool. The `gcloud` tool provides the primary command-line interface for Google Cloud, and `kubectl` provides the primary command-line interface for running commands against Kubernetes clusters.
 
@@ -65,7 +65,7 @@ To install `gcloud` and `kubectl`, perform the following steps:
 
 
 
-# 3. Configure the gcloud CLI
+## 3. Configure the gcloud CLI
 
  Set up default gcloud settings using one of the following methods:
 
@@ -93,7 +93,7 @@ To install `gcloud` and `kubectl`, perform the following steps:
 </TabItem>
 </Tabs>
 
-# 4. Confirm that gcloud is configured correctly
+## 4. Confirm that gcloud is configured correctly
 
 Run:
 
@@ -115,7 +115,7 @@ project = <Your project ID>
 Your active configuration is: [default]
 ```
 
-# 5. Create a GKE Cluster
+## 5. Create a GKE Cluster
 
 The following command creates a three-node cluster.
 
@@ -129,7 +129,7 @@ When choosing a Kubernetes version, be sure to first consult the [support matrix
 gcloud container clusters create cluster-name --num-nodes=3 --cluster-version=<VERSION>
 ```
 
-# 6. Get Authentication Credentials
+## 6. Get Authentication Credentials
 
 After creating your cluster, you need to get authentication credentials to interact with the cluster:
 
@@ -139,7 +139,7 @@ gcloud container clusters get-credentials cluster-name
 
 This command configures `kubectl` to use the cluster you created.
 
-# 7. Install an Ingress
+## 7. Install an Ingress
 
 The cluster needs an Ingress so that Rancher can be accessed from outside the cluster.
 
@@ -156,7 +156,7 @@ helm upgrade --install \
   --create-namespace
 ```
 
-# 8. Get the Load Balancer IP
+## 8. Get the Load Balancer IP
 
 To get the address of the load balancer, run:
 
@@ -173,7 +173,7 @@ ingress-nginx-controller   LoadBalancer   10.3.244.156   35.233.206.34   80:3187
 
 Save the `EXTERNAL-IP`.
 
-# 9. Set up DNS
+## 9. Set up DNS
 
 External traffic to the Rancher server will need to be directed at the load balancer you created.
 
@@ -181,7 +181,7 @@ Set up a DNS to point at the external IP that you saved. This DNS will be used a
 
 There are many valid ways to set up the DNS. For help, refer to the Google Cloud documentation about [managing DNS records.](https://cloud.google.com/dns/docs/records)
 
-# 10. Install the Rancher Helm chart
+## 10. Install the Rancher Helm chart
 
 Next, install the Rancher Helm chart by following the instructions on [this page.](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#install-the-rancher-helm-chart) The Helm instructions are the same for installing Rancher on any Kubernetes distribution.
 

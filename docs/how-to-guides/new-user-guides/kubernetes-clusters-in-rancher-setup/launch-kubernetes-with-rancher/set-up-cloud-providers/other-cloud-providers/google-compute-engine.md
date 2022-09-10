@@ -18,7 +18,7 @@ If you are using Calico,
 1. Click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the custom cluster and click **⋮ > Edit YAML.* Enter the following configuration:
 
-    ```
+    ```yaml
     rancher_kubernetes_engine_config:
       cloud_provider:
         name: gce
@@ -40,7 +40,7 @@ If you are using Canal or Flannel,
 1. Click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the custom cluster and click **⋮ > Edit YAML.* Enter the following configuration:
 
-    ```
+    ```yaml
     rancher_kubernetes_engine_config:
       cloud_provider: 
         name: gce

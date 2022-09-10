@@ -6,18 +6,8 @@ weight: 2115
 
 You can use Rancher to create a cluster hosted in Microsoft Azure Kubernetes Service (AKS).
 
-- [Prerequisites in Microsoft Azure](#prerequisites-in-microsoft-azure)
-- [Setting Up the Service Principal with the Azure Command Line Tool](#setting-up-the-service-principal-with-the-azure-command-line-tool)
-  - [Setting Up the Service Principal from the Azure Portal](#setting-up-the-service-principal-from-the-azure-portal)
-- [1. Create the AKS Cloud Credentials](#1-create-the-aks-cloud-credentials)
-- [2. Create the AKS Cluster](#2-create-the-aks-cluster)
-- [Role-based Access Control](#role-based-access-control)
-- [AKS Cluster Configuration Reference](#aks-cluster-configuration-reference)
-- [Private Clusters](#private-clusters)
-- [Syncing](#syncing)
-- [Programmatically Creating AKS Clusters](#programmatically-creating-aks-clusters)
 
-# Prerequisites in Microsoft Azure
+## Prerequisites in Microsoft Azure
 
 :::caution
 
@@ -104,7 +94,7 @@ To give role-based access to your service principal,
 
 **Result:** Your service principal now has access to AKS.
 
-# 1. Create the AKS Cloud Credentials
+## 1. Create the AKS Cloud Credentials
 
 1. In the Rancher UI, click **☰ > Cluster Management**.
 1. Click **Cloud Credentials**.
@@ -113,7 +103,7 @@ To give role-based access to your service principal,
 1. Fill out the form. For help with filling out the form, see the [configuration reference.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration.md#cloud-credentials)
 1. Click **Create**.
 
-# 2. Create the AKS Cluster
+## 2. Create the AKS Cluster
 
 Use Rancher to set up and configure your Kubernetes cluster.
 
@@ -127,16 +117,16 @@ Use Rancher to set up and configure your Kubernetes cluster.
 
 You can access your cluster after its state is updated to **Active**.
 
-# Role-based Access Control
+## Role-based Access Control
 When provisioning an AKS cluster in the Rancher UI, RBAC is not configurable because it is required to be enabled.
 
 RBAC is required for AKS clusters that are registered or imported into Rancher.
 
-# AKS Cluster Configuration Reference
+## AKS Cluster Configuration Reference
 
 For more information about how to configure AKS clusters from the Rancher UI, see the [configuration reference.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration.md)
 
-# Private Clusters
+## Private Clusters
 
 Typically, AKS worker nodes do not get public IPs, regardless of whether the cluster is private. In a private cluster, the control plane does not have a public endpoint.
 
@@ -154,12 +144,12 @@ Please be aware that when registering an existing AKS cluster, the cluster might
 
 For more information about connecting to an AKS private cluster, see the [AKS documentation.](https://docs.microsoft.com/en-us/azure/aks/private-clusters#options-for-connecting-to-the-private-cluster)
 
-# Syncing
+## Syncing
 
 The AKS provisioner can synchronize the state of an AKS cluster between Rancher and the provider. For an in-depth technical explanation of how this works, see [Syncing.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters.md)
 
 For information on configuring the refresh interval, see [this section.](../../../../pages-for-subheaders/gke-cluster-configuration.md#configuring-the-refresh-interval)
 
-# Programmatically Creating AKS Clusters
+## Programmatically Creating AKS Clusters
 
 The most common way to programmatically deploy AKS clusters through Rancher is by using the Rancher2 Terraform provider. The documentation for creating clusters with Terraform is [here.](https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster)

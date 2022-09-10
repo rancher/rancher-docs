@@ -57,7 +57,7 @@ If you are installing Rancher in a development or testing environment where iden
 
 Log into your host, and run the command below:
 
-```bash
+```
 docker run -d --restart=unless-stopped \
   -p 80:80 -p 443:443 \
   --privileged \
@@ -87,7 +87,7 @@ After creating your certificate, run the Docker command below to install Rancher
 
 Log into your host, and run the command below:
 
-```bash
+```
 docker run -d --restart=unless-stopped \
   -p 80:80 -p 443:443 \
   -v /<CERT_DIRECTORY>/<FULL_CHAIN.pem>:/etc/rancher/ssl/cert.pem \
@@ -123,7 +123,7 @@ After obtaining your certificate, run the Docker command below.
 
 Log into your host, and run the command below:
 
-```bash
+```
 docker run -d --restart=unless-stopped \
   -p 80:80 -p 443:443 \
   -v /<CERT_DIRECTORY>/<FULL_CHAIN.pem>:/etc/rancher/ssl/cert.pem \
@@ -177,7 +177,7 @@ If you are installing Rancher in a development or testing environment where you 
 
 Log into your host, and run the command below:
 
-```bash
+```
 docker run -d --restart=unless-stopped \
   -p 80:80 -p 443:443 \
   --privileged \

@@ -10,11 +10,6 @@ aliases:
 
 This page is intended to answer questions about what happens if you don't want Rancher anymore, if you don't want a cluster to be managed by Rancher anymore, or if the Rancher server is deleted.
 
-- [If the Rancher server is deleted, what happens to the workloads in my downstream clusters?](#if-the-rancher-server-is-deleted-what-happens-to-the-workloads-in-my-downstream-clusters)
-- [If the Rancher server is deleted, how do I access my downstream clusters?](#if-the-rancher-server-is-deleted-how-do-i-access-my-downstream-clusters)
-- [What if I don't want Rancher anymore?](#what-if-i-don-t-want-rancher-anymore)
-- [What if I don't want my imported cluster managed by Rancher?](#what-if-i-don-t-want-my-imported-cluster-managed-by-rancher)
-- [What if I don't want my RKE cluster or hosted Kubernetes cluster managed by Rancher?](#what-if-i-don-t-want-my-rke-cluster-or-hosted-kubernetes-cluster-managed-by-rancher)
 
 ### If the Rancher server is deleted, what happens to the workloads in my downstream clusters?
 

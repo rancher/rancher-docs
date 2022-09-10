@@ -3,13 +3,8 @@ title: How Monitoring Works
 weight: 1
 ---
 
-1. [Architecture Overview](#1-architecture-overview)
-2. [How Prometheus Works](#2-how-prometheus-works)
-3. [How Alertmanager Works](#3-how-alertmanager-works)
-4. [Monitoring V2 Specific Components](#4-monitoring-v2-specific-components)
-5. [Scraping and Exposing Metrics](#5-scraping-and-exposing-metrics)
 
-# 1. Architecture Overview
+## 1. Architecture Overview
 
 _**The following sections describe how data flows through the Monitoring V2 application:**_
 
@@ -67,7 +62,7 @@ Once Prometheus determines that an alert needs to be fired, alerts are forwarded
 <figcaption>How data flows through the monitoring application:</figcaption>
 
 
-# 2. How Prometheus Works
+## 2. How Prometheus Works
 
 ### Storing Time Series Data
 
@@ -111,7 +106,7 @@ The Rule file adds labels and annotations to alerts before firing them, dependin
 
 - Annotations denote information that doesn't affect where an alert is routed, for example, a runbook or an error message.
 
-# 3. How Alertmanager Works
+## 3. How Alertmanager Works
 
 The Alertmanager handles alerts sent by client applications such as the Prometheus server. It takes care of the following tasks:
 
@@ -139,7 +134,7 @@ By editing the forms in the Rancher UI, you can set up a Receiver resource with 
 
 By editing custom YAML in the Alertmanager or Receiver configuration, you can also send alerts to multiple notification systems. For more information, see the section on configuring [Receivers.](../../../reference-guides/monitoring-v2-configuration/receivers.md#configuring-multiple-receivers)
 
-# 4. Monitoring V2 Specific Components
+## 4. Monitoring V2 Specific Components
 
 Prometheus Operator introduces a set of [Custom Resource Definitions](https://github.com/prometheus-operator/prometheus-operator#customresourcedefinitions) that allow users to deploy and manage Prometheus and Alertmanager instances by creating and modifying those custom resources on a cluster.
 
@@ -185,7 +180,7 @@ Since the metrics for Kubernetes components are generally exposed on the host ne
 
 Refer to [Scraping Metrics with PushProx](#scraping-metrics-with-pushprox) for more.
 
-# 5. Scraping and Exposing Metrics
+## 5. Scraping and Exposing Metrics
 
 ### Defining what Metrics are Scraped
 

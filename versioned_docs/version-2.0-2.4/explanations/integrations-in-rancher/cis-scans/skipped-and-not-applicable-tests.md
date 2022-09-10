@@ -12,10 +12,8 @@ This section lists the tests that are skipped in the permissive test profile for
 
 All the tests that are skipped and not applicable on this page will be counted as Not Applicable in the generated report. The skipped test count will only mention the user-defined skipped tests. This allows user-skipped tests to be distinguished from the tests that are skipped by default in the RKE permissive test profile.
 
-- [CIS Benchmark v1.5](#cis-benchmark-v1-5)
-- [CIS Benchmark v1.4](#cis-benchmark-v1-4)
 
-# CIS Benchmark v1.5
+## CIS Benchmark v1.5
 
 ### CIS Benchmark v1.5 Skipped Tests
 
@@ -61,7 +59,7 @@ All the tests that are skipped and not applicable on this page will be counted a
 | 4.1.10 |  Ensure that the kubelet configuration file ownership is set to root:root (Scored) |  Clusters provisioned by RKE doesn’t require or maintain a configuration file for the kubelet. All configuration is passed in as arguments at container run time.     |
 | 4.2.12 |  Ensure that the RotateKubeletServerCertificate argument is set to true (Scored) |  Clusters provisioned by RKE handles certificate rotation directly through RKE.     |
 
-# CIS Benchmark v1.4
+## CIS Benchmark v1.4
 
 The skipped and not applicable tests for CIS Benchmark v1.4 are as follows:
 

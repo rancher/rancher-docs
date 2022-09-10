@@ -10,29 +10,30 @@ In order to have the Azure platform create the required storage resources, follo
 1.  [Configure the Azure cloud provider.](../set-up-cloud-providers/other-cloud-providers/azure.md)
 1.  Configure `kubectl` to connect to your cluster.
 1.  Copy the `ClusterRole` and `ClusterRoleBinding` manifest for the service account:
-
-        ---
-        apiVersion: rbac.authorization.k8s.io/v1
+      ```yml
+      ---
+      apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRole
+      metadata:
+        name: system:azure-cloud-provider
+      rules:
+      - apiGroups: ['']
+        resources: ['secrets']
+        verbs:     ['get','create']
+      ---
+      apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRoleBinding
+      metadata:
+        name: system:azure-cloud-provider
+      roleRef:
         kind: ClusterRole
-        metadata:
-          name: system:azure-cloud-provider
-        rules:
-        - apiGroups: ['']
-          resources: ['secrets']
-          verbs:     ['get','create']
-        ---
-        apiVersion: rbac.authorization.k8s.io/v1
-        kind: ClusterRoleBinding
-        metadata:
-          name: system:azure-cloud-provider
-        roleRef:
-          kind: ClusterRole
-          apiGroup: rbac.authorization.k8s.io
-          name: system:azure-cloud-provider
-        subjects:
-        - kind: ServiceAccount
-          name: persistent-volume-binder
-          namespace: kube-system
+        apiGroup: rbac.authorization.k8s.io
+        name: system:azure-cloud-provider
+      subjects:
+      - kind: ServiceAccount
+        name: persistent-volume-binder
+        namespace: kube-system
+      ```
 
 1.  Create these in your cluster using one of the follow command.
 

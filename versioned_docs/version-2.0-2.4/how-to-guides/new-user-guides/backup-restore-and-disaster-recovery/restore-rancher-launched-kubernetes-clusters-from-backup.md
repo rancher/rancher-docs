@@ -17,16 +17,6 @@ This will restore the Kubernetes configuration and the Rancher database and stat
 
 > **Note:** This document covers clusters set up with RKE >= v0.2.x, for older RKE versions refer to the [RKE Documentation](https://rancher.com/docs/rke/latest/en/etcd-snapshots/restoring-from-backup).
 
-## Restore Outline
-
-<!-- TOC -->
-
-- [1. Preparation](#1-preparation)
-- [2. Place Snapshot](#2-place-snapshot)
-- [3. Configure RKE](#3-configure-rke)
-- [4. Restore the Database and bring up the Cluster](#4-restore-the-database-and-bring-up-the-cluster)
-
-<!-- /TOC -->
 
 ### 1. Preparation
 

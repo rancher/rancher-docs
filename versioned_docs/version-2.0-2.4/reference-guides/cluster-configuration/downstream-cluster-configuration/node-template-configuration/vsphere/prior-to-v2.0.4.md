@@ -6,14 +6,8 @@ aliases:
   - /rancher/v2.x/en/cluster-provisioning/rke-clusters/node-pools/vsphere/vsphere-node-template-config/prior-to-2.0.4/
 ---
 
-- [Account access](#account-access)
-- [Scheduling](#scheduling)
-- [Instance options](#instance-options)
-- [Disk UUIDs](#disk-uuids)
-- [Node Tags and Custom Attributes](#node-tags-and-custom-attributes)
-- [Cloud Init](#cloud-init)
 
-# Account Access
+## Account Access
 In the **Account Access** section, enter the vCenter FQDN or IP address and the credentials for the vSphere user account.
 
 | Parameter                | Required | Description |
@@ -24,7 +18,7 @@ In the **Account Access** section, enter the vCenter FQDN or IP address and the 
 | Password                 |   *      | User's password. |
 
 
-# Scheduling
+## Scheduling
 
 Choose what hypervisor the virtual machine will be scheduled to.
 
@@ -37,7 +31,7 @@ Choose what hypervisor the virtual machine will be scheduled to.
 | Data Store               |   *      | Datastore to store the VM disks. |
 | Folder                   |          | Name of a folder in the datacenter to create the VMs in. Must already exist. The folder name should be prefaced with `vm/` in your vSphere config file. |
 
-# Instance Options
+## Instance Options
 In the **Instance Options** section, configure the number of vCPUs, memory, and disk size for the VMs created by this template.
 
 Only VMs booting from RancherOS ISO are supported.
@@ -54,7 +48,7 @@ Ensure that the OS ISO URL contains the URL of the VMware ISO release for Ranche
 | OS ISO URL               |   *      | URL of a RancherOS vSphere ISO file to boot the VMs from. You can find URLs for specific versions in the [Rancher OS GitHub Repo](https://github.com/rancher/os). |
 | Configuration Parameters |          | Additional configuration parameters for the VMs. These correspond to the [Advanced Settings](https://kb.vmware.com/s/article/1016098) in the vSphere console. Example use cases include providing RancherOS [guestinfo]({{<baseurl>}}/os/v1.x/en/installation/cloud/vmware-esxi/#vmware-guestinfo) parameters or enabling disk UUIDs for the VMs (`disk.EnableUUID=TRUE`). |
 
-# Disk UUIDs
+## Disk UUIDs
 
 In order to provision nodes with RKE, all nodes must be configured with disk UUIDs. Follow these instructions to enable UUIDs for the nodes in your vSphere cluster.
 
@@ -71,7 +65,7 @@ To enable disk UUIDs for all VMs created for a cluster,
 
 **Result:** The disk UUID is enabled in the vSphere node template.
 
-# Node Tags and Custom Attributes
+## Node Tags and Custom Attributes
 
 These attributes allow you to attach metadata to objects in the vSphere inventory to make it easier to sort and search for these objects.
 
@@ -83,7 +77,7 @@ Optionally, you can:
 
 > **Note:** Custom attributes are a legacy feature that will eventually be removed from vSphere.
 
-# Cloud Init
+## Cloud Init
 
 [Cloud-init](https://cloudinit.readthedocs.io/en/latest/) allows you to initialize your nodes by applying configuration on the first boot. This may involve things such as creating users, authorizing SSH keys or setting up the network.
 

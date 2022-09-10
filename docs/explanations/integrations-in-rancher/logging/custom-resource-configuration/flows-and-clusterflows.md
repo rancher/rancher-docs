@@ -5,18 +5,8 @@ weight: 1
 
 For the full details on configuring `Flows` and `ClusterFlows`, see the [Banzai Cloud Logging operator documentation.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/flow/)
 
-- [Configuration](#configuration)
-- [YAML Example](#yaml-example)
 
-# Configuration
-
-- [Flows](#flows)
-  - [Matches](#matches)
-  - [Filters](#filters)
-  - [Outputs](#outputs)
-- [ClusterFlows](#clusterflows)
-
-# Flows
+## Flows
 
 A `Flow` defines which logs to collect and filter and which output to send the logs to.
 
@@ -50,7 +40,7 @@ This `Output` will receive logs from the `Flow`. Because the `Flow` is a namespa
 
 `Outputs` can be referenced when filling out the `Flow` or `ClusterFlow` forms in the Rancher UI.
 
-# ClusterFlows
+## ClusterFlows
 
 Matches, filters and `Outputs` are configured for `ClusterFlows` in the same way that they are configured for `Flows`. The key difference is that the `ClusterFlow` is scoped at the cluster level and can configure log collection across all namespaces.
 
@@ -58,7 +48,7 @@ Matches, filters and `Outputs` are configured for `ClusterFlows` in the same way
 
 After `ClusterFlow` selects logs from all namespaces in the cluster, logs from the cluster will be collected and logged to the selected `ClusterOutput`.
 
-# YAML Example
+## YAML Example
 
 The following example `Flow` transforms the log messages from the default namespace and sends them to an S3 `Output`:
 

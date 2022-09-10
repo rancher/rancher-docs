@@ -11,16 +11,6 @@ If you also configure OpenLDAP as the back end to Shibboleth, it will return a S
 
 > The instructions in this section assume that you understand how Rancher, Shibboleth, and OpenLDAP work together. For a more detailed explanation of how it works, refer to [this page.](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/configure-shibboleth-saml/about-group-permissions.md)
 
-This section covers the following topics:
-
-- [Setting up Shibboleth in Rancher](#setting-up-shibboleth-in-rancher)
-  - [Shibboleth Prerequisites](#shibboleth-prerequisites)
-  - [Configure Shibboleth in Rancher](#configure-shibboleth-in-rancher)
-  - [SAML Provider Caveats](#saml-provider-caveats)
-- [Setting up OpenLDAP in Rancher](#setting-up-openldap-in-rancher)
-  - [OpenLDAP Prerequisites](#openldap-prerequisites)
-  - [Configure OpenLDAP in Rancher](#configure-openldap-in-rancher)
-  - [Troubleshooting](#troubleshooting)
 
 # Setting up Shibboleth in Rancher
 

@@ -3,8 +3,6 @@ title: Setting up Monitoring for a Workload
 weight: 4
 ---
 
-- [Display CPU and Memory Metrics for a Workload](#display-cpu-and-memory-metrics-for-a-workload)
-- [Setting up Metrics Beyond CPU and Memory](#setting-up-metrics-beyond-cpu-and-memory)
 
 If you only need CPU and memory time series for the workload, you don't need to deploy a ServiceMonitor or PodMonitor because the monitoring application already collects metrics data on resource usage by default.
 

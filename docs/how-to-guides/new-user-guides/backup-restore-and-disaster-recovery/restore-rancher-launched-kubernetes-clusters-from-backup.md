@@ -9,13 +9,6 @@ Rancher recommends enabling the [ability to set up recurring snapshots of etcd](
 
 Clusters can also be restored to a prior Kubernetes version and cluster configuration.
 
-This section covers the following topics:
-
-- [Viewing Available Snapshots](#viewing-available-snapshots)
-- [Restoring a Cluster from a Snapshot](#restoring-a-cluster-from-a-snapshot)
-- [Recovering etcd without a Snapshot](#recovering-etcd-without-a-snapshot)
-- [Enabling snapshot features for clusters created before Rancher v2.2.0](#enabling-snapshot-features-for-clusters-created-before-rancher-v2-2-0)
-
 ## Viewing Available Snapshots
 
 The list of all available snapshots for the cluster is available.

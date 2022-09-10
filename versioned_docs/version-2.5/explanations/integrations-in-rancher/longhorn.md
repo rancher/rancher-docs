@@ -22,6 +22,7 @@ With Longhorn, you can:
 - Upgrade Longhorn without disrupting persistent volumes
 
 <figcaption>Longhorn Dashboard</figcaption>
+
 ![Longhorn Dashboard](/img/longhorn-screenshot.png)
 
 ### New in Rancher v2.5

@@ -11,15 +11,7 @@ For a complete walkthrough of developing charts, see the [Chart Template Develop
 
 :::
 
-- [Chart types](#chart-types)
-  - [Helm charts](#helm-charts)
-  - [Rancher charts](#rancher-charts)
-- [Chart directory structure](#chart-directory-structure)
-- [Additional Files for Rancher Charts](#additional-files-for-rancher-charts)
-  - [questions.yml](#questions-yml)
-  - [Min/Max Rancher versions](#min-max-rancher-versions)
-  - [Question variable reference](#question-variable-reference)
-- [Tutorial: Example Custom Chart Creation](#tutorial-example-custom-chart-creation)
+
 
 # Chart Types
 

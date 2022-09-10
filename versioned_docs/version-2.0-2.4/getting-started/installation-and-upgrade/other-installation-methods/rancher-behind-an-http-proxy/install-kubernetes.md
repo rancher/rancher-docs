@@ -87,7 +87,7 @@ sudo ./get_helm.sh
 
 Next, create a YAML file that describes the RKE cluster. Ensure that the IP addresses of the nodes and the SSH username are correct. For more information on the cluster YAML, have a look at the [RKE documentation](https://rancher.com/docs/rke/latest/en/example-yamls/).
 
-```
+```yml
 nodes:
   - address: 10.0.1.200
     user: ubuntu

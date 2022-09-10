@@ -21,13 +21,6 @@ This section describes how to set up a custom cluster.
 >
 >See [Configuring Custom Clusters for Windows](use-windows-clusters.md) before you start.
 
-<!-- TOC -->
-
-- [1. Provision a Linux Host](#1-provision-a-linux-host)
-- [2. Create the Custom Cluster](#2-create-the-custom-cluster)
-- [3. Amazon Only: Tag Resources](#3-amazon-only-tag-resources)
-
-<!-- /TOC -->
 
 ### 1. Provision a Linux Host
 

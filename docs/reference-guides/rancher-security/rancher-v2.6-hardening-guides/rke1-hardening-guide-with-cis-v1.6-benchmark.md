@@ -21,14 +21,6 @@ This hardening guide is intended to be used for RKE clusters and associated with
 
 [Click here to download a PDF version of this document](https://releases.rancher.com/documents/security/2.6/Rancher_v2-6_CIS_v1-6_Hardening_Guide.pdf).
 
-- [Overview](#overview)
-- [Configure Kernel Runtime Parameters](#configure-kernel-runtime-parameters)
-- [Configure `etcd` user and group](#configure-etcd-user-and-group)
-- [Configure `default` service account](#configure-default-service-account)
-- [Configure Network Policy](#configure-network-policy)
-- [Reference Hardened RKE `cluster.yml` Configuration](#reference-hardened-rke-cluster-yml-configuration)
-- [Reference Hardened RKE Template Configuration](#reference-hardened-rke-template-configuration)
-- [Reference Hardened **cloud-config** Configuration](#reference-hardened-cloud-config-configuration)
 
 ### Overview
 

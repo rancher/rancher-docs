@@ -20,15 +20,6 @@ For example, for the image below, we would configure liveness probes for the `we
 
 ![Resolve health_check](/img/resolve-health-checks.png)
 
-## In This Document
-
-<!-- TOC -->
-
-- [Rancher v1.6 Health Checks](#rancher-v1-6-health-checks)
-- [Rancher v2.x Health Checks](#rancher-v2-x-health-checks)
-- [Configuring Probes in Rancher v2.x](#configuring-probes-in-rancher-v2-x)
-
-<!-- /TOC -->
 
 ## Rancher v1.6 Health Checks
 

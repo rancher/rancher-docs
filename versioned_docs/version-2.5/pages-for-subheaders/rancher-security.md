@@ -24,16 +24,7 @@ aliases:
 
 Security is at the heart of all Rancher features. From integrating with all the popular authentication tools and services, to an enterprise grade [RBAC capability,](manage-role-based-access-control-rbac.md) Rancher makes your Kubernetes clusters even more secure.
 
-On this page, we provide security related documentation along with resources to help you secure your Rancher installation and your downstream Kubernetes clusters:
-
-- [Running a CIS security scan on a Kubernetes cluster](#running-a-cis-security-scan-on-a-kubernetes-cluster)
-- [SELinux RPM](#selinux-rpm)
-- [Guide to hardening Rancher installations](#rancher-hardening-guide)
-- [The CIS Benchmark and self-assessment](#the-cis-benchmark-and-self-assessment)
-- [Third-party penetration test reports](#third-party-penetration-test-reports)
-- [Rancher Security Advisories and CVEs](#rancher-security-advisories-and-cves)
-- [Kubernetes Security Best Practices](#kubernetes-security-best-practices)
-
+On this page, we provide security related documentation along with resources to help you secure your Rancher installation and your downstream Kubernetes clusters.
 ### Running a CIS Security Scan on a Kubernetes Cluster
 
 Rancher leverages [kube-bench](https://github.com/aquasecurity/kube-bench) to run a security scan to check whether Kubernetes is deployed according to security best practices as defined in the [CIS](https://www.cisecurity.org/cis-benchmarks/) (Center for Internet Security) Kubernetes Benchmark.

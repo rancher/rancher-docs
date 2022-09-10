@@ -69,7 +69,7 @@ The secret has to be created in the same namespace where the workload gets deplo
 
 Below is an example `pod.yml` for a workload that uses an image from a private registry. In this example, the pod uses an image from Quay.io, and the .yml specifies the path to the image. The pod authenticates with the registry using credentials stored in a Kubernetes secret called `testquay`, which is specified in `spec.imagePullSecrets` in the `name` field:
 
-```
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:

@@ -19,7 +19,7 @@ Note: If you were using the `cis-edit` role added in Rancher v2.5 setup, it has 
 Rancher v2.5.2 because it essentially is same as `cis-admin`. If you happen to create any clusterrolebindings
 for `cis-edit`, please update them to use `cis-admin` ClusterRole instead.
 
-# Cluster-Admin Access
+## Cluster-Admin Access
 
 Rancher CIS Scans is a cluster-admin only feature by default.
 This means only the Rancher global admins, and the cluster’s cluster-owner can:
@@ -32,7 +32,7 @@ This means only the Rancher global admins, and the cluster’s cluster-owner can
 - View and Download the ClusterScanReport created after the ClusterScan is complete
 
 
-# Summary of Default Permissions for Kubernetes Default Roles
+## Summary of Default Permissions for Kubernetes Default Roles
 
 The rancher-cis-benchmark creates three `ClusterRoles` and adds the CIS Benchmark CRD access to the following default K8s `ClusterRoles`:
 

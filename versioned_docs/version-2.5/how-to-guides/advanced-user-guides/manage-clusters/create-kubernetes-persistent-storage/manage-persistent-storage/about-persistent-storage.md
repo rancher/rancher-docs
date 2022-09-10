@@ -21,15 +21,8 @@ For dynamic storage provisioning, your application will need to use a PVC that i
 
 For more information, refer to the [official Kubernetes documentation on storage](https://kubernetes.io/docs/concepts/storage/volumes/)
 
-This section covers the following topics:
 
-- [About persistent volume claims](#about-persistent-volume-claims)
-  - [PVCs are required for both new and existing persistent storage](#pvcs-are-required-for-both-new-and-existing-persistent-storage)
-- [Setting up existing storage with a PVC and PV](#setting-up-existing-storage-with-a-pvc-and-pv)
- - [Binding PVs to PVCs](#binding-pvs-to-pvcs)
-- [Provisioning new storage with a PVC and storage class](#provisioning-new-storage-with-a-pvc-and-storage-class)
-
-# About Persistent Volume Claims
+## About Persistent Volume Claims
 
 Persistent volume claims (PVCs) are objects that request storage resources from your cluster. They're similar to a voucher that your deployment can redeem for storage access. A PVC is mounted into a workloads as a volume so that the workload can claim its specified share of the persistent storage.
 
@@ -49,7 +42,7 @@ Rancher lets you create as many PVCs within a project as you'd like.
 
 You can mount PVCs to a deployment as you create it, or later, after the deployment is running.
 
-# Setting up Existing Storage with a PVC and PV
+## Setting up Existing Storage with a PVC and PV
 
 Your pods can store data in [volumes,](https://kubernetes.io/docs/concepts/storage/volumes/) but if the pod fails, that data is lost. To solve this issue, Kubernetes offers persistent volumes (PVs), which are Kubernetes resources that correspond to external storage disks or file systems that your pods can access. If a pod crashes, its replacement pod can access the data in persistent storage without any data loss.
 
@@ -69,7 +62,7 @@ In other words, you can create unlimited PVCs, but they will only be bound to PV
 
 To dynamically provision new storage, the PVC mounted in the pod would have to correspond to a storage class instead of a persistent volume.
 
-# Provisioning New Storage with a PVC and Storage Class
+## Provisioning New Storage with a PVC and Storage Class
 
 Storage Classes allow you to create PVs dynamically without having to create persistent storage in an infrastructure provider first.
 

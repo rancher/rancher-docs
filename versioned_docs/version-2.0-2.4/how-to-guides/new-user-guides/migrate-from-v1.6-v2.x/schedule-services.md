@@ -17,22 +17,9 @@ You can schedule your migrated v1.6 services while editing a deployment. Schedul
 
 ![Workload Type and Node Scheduling Sections](/img/migrate-schedule-workloads.png)
 
-## In This Document
 
 <!-- NEED DOCS ABOUT CHANGING DEPLOYMENTS TO DAEMONSETS -->
 
-<!-- TOC -->
-
-- [What's Different for Scheduling Services?](#whats-different-for-scheduling-services)
-- [Node Scheduling Options](#node-scheduling-options)
-- [Scheduling Pods to a Specific Node](#scheduling-pods-to-a-specific-node)
-- [Scheduling Using Labels](#scheduling-using-labels)
-- [Scheduling Pods Using Resource Constraints](#scheduling-pods-using-resource-constraints)
-- [Preventing Scheduling Specific Services to Specific Nodes](#preventing-scheduling-specific-services-to-specific-nodes)
-- [Scheduling Global Services](#scheduling-global-services)
-
-
-<!-- /TOC -->
 
 ## What's Different for Scheduling Services?
 

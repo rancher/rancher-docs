@@ -15,18 +15,6 @@ If you encounter the `output.txt` text below after parsing your v1.6 Compose fil
 
 ![Resolve Load Balancer Directive](/img/resolve-load-balancer.png)
 
-## In This Document
-
-<!-- TOC -->
-
-- [Load Balancing Protocol Options](#load-balancing-protocol-options)
-- [Load Balancer Deployment](#load-balancer-deployment)
-- [Load Balancing Architecture](#load-balancing-architecture)
-- [Ingress Caveats](#ingress-caveats)
-- [Deploying Ingress](#deploying-ingress)
-- [Rancher v2.x Load Balancing Limitations](#rancher-v2-x-load-balancing-limitations)
-
-<!-- /TOC -->
 
 ## Load Balancing Protocol Options
 

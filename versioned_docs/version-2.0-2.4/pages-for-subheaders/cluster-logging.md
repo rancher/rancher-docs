@@ -29,12 +29,6 @@ Rancher supports integration with the following services:
 - Syslog
 - Fluentd
 
-This section covers the following topics:
-
-- [How logging integrations work](#how-logging-integrations-work)
-- [Requirements](#requirements)
-- [Logging scope](#logging-scope)
-- [Enabling cluster logging](#enabling-cluster-logging)
 
 # How Logging Integrations Work
 

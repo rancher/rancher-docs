@@ -5,16 +5,7 @@ weight: 100
 
 Cluster templates encompass both Kubernetes configuration and node pool configuration, allowing a single template to contain all the information Rancher needs to provision new nodes in a cloud provider and install Kubernetes on those nodes.
 
-- [Overview](#overview)
-- [RKE2 Cluster Template](#rke2-cluster-template)
-- [Adding a Cluster Template to Rancher](#adding-a-cluster-template-to-rancher)
-- [Creating a Cluster from a Cluster Template](#creating-a-cluster-from-a-cluster-template)
-- [Updating a Cluster Created from a Cluster Template](#updating-a-cluster-created-from-a-cluster-template)
-- [Deploying Clusters from a Template with Fleet](#deploying-clusters-from-a-template-with-fleet)
-- [Uninstalling Cluster Templates](#uninstalling-cluster-templates)
-- [Configuration Options](#configuration-options)
-
-# Overview
+## Overview
 
 Cluster templates are provided as Helm charts. To use them, you will need to clone and fork the templates, change them according to your use case, and then install the Helm charts on the Rancher management cluster. When the Helm chart is installed on the Rancher management cluster, a new cluster resource is created, which Rancher uses to provision the new cluster.
 
@@ -28,11 +19,11 @@ Cluster templates can use any Kubernetes distribution. For now, we provide an ex
 
 Rancher doesn't manage version control for cluster templates. Version control is handled in the repository containing the template's Helm chart.
 
-# RKE2 Cluster Template
+## RKE2 Cluster Template
 
 The example repository for an RKE2 cluster template is [here](https://github.com/rancher/cluster-template-examples). As of Rancher v2.6.0, we provide an RKE2 cluster template and may add more in the future.
 
-# Adding a Cluster Template to Rancher
+## Adding a Cluster Template to Rancher
 
 In this section, you'll learn how to add the cluster template to the `local` cluster's chart repo list. The result is that Rancher will include the cluster template as an option when users install new Kubernetes clusters.
 
@@ -64,7 +55,7 @@ If you are a restricted admin and don’t have access to the `local` cluster, yo
 
 :::
 
-# Creating a Cluster from a Cluster Template
+## Creating a Cluster from a Cluster Template
 
 :::note Prerequisites:
 
@@ -81,11 +72,11 @@ If you are a restricted admin and don’t have access to the `local` cluster, yo
 
 **Result:** After Rancher provisions the new cluster, it is managed in the same way as any other Rancher-launched Kubernetes cluster. You can configure any options through the UI if the cluster template has options for the user to choose from.
 
-# Updating a Cluster Created from a Cluster Template
+## Updating a Cluster Created from a Cluster Template
 
 You can update any clusters using a template from the **Apps & Marketplace > Installed Apps** page, given there is a new version of a template being used by those clusters.
 
-# Deploying Clusters from a Template with Fleet
+## Deploying Clusters from a Template with Fleet
 
 :::note Prerequisites:
 
@@ -104,7 +95,7 @@ You can update any clusters using a template from the **Apps & Marketplace > Ins
 
 **Result:** After Rancher provisions the new cluster, it is managed by Fleet.
 
-# Uninstalling Cluster Templates
+## Uninstalling Cluster Templates
 
 1. Click **☰ > Cluster Management**.
 1. Go to the `local` cluster and click **Apps & Marketplace > Chart Repositories.**
@@ -115,7 +106,7 @@ You can update any clusters using a template from the **Apps & Marketplace > Ins
 
 An admin with access to the `local` cluster can also remove a cluster deployed via cluster templates through the **Apps & Marketplace > Installed Apps** page.
 
-# Configuration Options
+## Configuration Options
 
 Cluster templates are flexible enough that they can be used to configure all of the following options:
 

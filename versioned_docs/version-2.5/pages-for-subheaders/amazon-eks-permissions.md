@@ -8,19 +8,8 @@ aliases:
 ---
 Amazon EKS provides a managed control plane for your Kubernetes cluster. Amazon EKS runs the Kubernetes control plane instances across multiple Availability Zones to ensure high availability. Rancher provides an intuitive user interface for managing and deploying the Kubernetes clusters you run in Amazon EKS. With this guide, you will use Rancher to quickly and easily launch an Amazon EKS Kubernetes cluster in your AWS account. For more information on Amazon EKS, see this [documentation](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html).
 
-- [Prerequisites in Amazon Web Services](#prerequisites-in-amazon-web-services)
-  - [Amazon VPC](#amazon-vpc)
-  - [IAM Policies](#iam-policies)
-- [Create the EKS Cluster](#create-the-eks-cluster)
-- [EKS Cluster Configuration Reference](#eks-cluster-configuration-reference)
-- [Architecture](#architecture)
-- [AWS Service Events](#aws-service-events)
-- [Security and Compliance](#security-and-compliance)
-- [Tutorial](#tutorial)
-- [Minimum EKS Permissions](#minimum-eks-permissions)
-- [Syncing](#syncing)
-- [Troubleshooting](#troubleshooting)
-# Prerequisites in Amazon Web Services
+
+## Prerequisites in Amazon Web Services
 
 >**Note**
 >Deploying to Amazon AWS will incur charges. For more information, refer to the [EKS pricing page](https://aws.amazon.com/eks/pricing/).
@@ -46,7 +35,7 @@ Rancher needs access to your AWS account in order to provision and administer yo
 For more detailed information on IAM policies for EKS, refer to the official [documentation on Amazon EKS IAM Policies, Roles, and Permissions](https://docs.aws.amazon.com/eks/latest/userguide/IAM_policies.html).
 
 
-# Create the EKS Cluster
+## Create the EKS Cluster
 
 Use Rancher to set up and configure your Kubernetes cluster.
 
@@ -73,11 +62,11 @@ You can access your cluster after its state is updated to **Active.**
 - `Default`, containing the `default` namespace
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces
 
-# EKS Cluster Configuration Reference
+## EKS Cluster Configuration Reference
 
 For the full list of EKS cluster configuration options, see [this page.](../reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration.md)
 
-# Architecture
+## Architecture
 
 The figure below illustrates the high-level architecture of Rancher 2.x. The figure depicts a Rancher Server installation that manages two Kubernetes clusters: one created by RKE and another created by EKS.
 
@@ -85,31 +74,31 @@ The figure below illustrates the high-level architecture of Rancher 2.x. The fig
 
 ![Architecture](/img/rancher-architecture-rancher-api-server.svg)
 
-# AWS Service Events
+## AWS Service Events
 
 To find information on any AWS Service events, please see [this page](https://status.aws.amazon.com/).
 
-# Security and Compliance
+## Security and Compliance
 
 By default only the IAM user or role that created a cluster has access to it. Attempting to access the cluster with any other user or role without additional configuration will lead to an error. In Rancher, this means using a credential that maps to a user or role that was not used to create the cluster will cause an unauthorized error. For example, an EKSCtl cluster will not register in Rancher unless the credentials used to register the cluster match the role or user used by EKSCtl. Additional users and roles can be authorized to access a cluster by being added to the aws-auth configmap in the kube-system namespace. For a more in-depth explanation and detailed instructions, please see this [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/amazon-eks-cluster-access/).
 
 For more information on security and compliance with your Amazon EKS Kubernetes cluster, please see this [documentation](https://docs.aws.amazon.com/eks/latest/userguide/shared-responsibilty.html).
 
-# Tutorial
+## Tutorial
 
 This [tutorial](https://aws.amazon.com/blogs/opensource/managing-eks-clusters-rancher/) on the AWS Open Source Blog will walk you through how to set up an EKS cluster with Rancher, deploy a publicly accessible app to test the cluster, and deploy a sample project to track real-time geospatial data using a combination of other open-source software such as Grafana and InfluxDB.
 
-# Minimum EKS Permissions
+## Minimum EKS Permissions
 
 See [this page](../reference-guides/amazon-eks-permissions/minimum-eks-permissions.md) for the minimum set of permissions necessary to use all functionality of the EKS driver in Rancher.
 
-# Syncing
+## Syncing
 
 The EKS provisioner can synchronize the state of an EKS cluster between Rancher and the provider. For an in-depth technical explanation of how this works, see [Syncing.](../reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters.md)
 
 For information on configuring the refresh interval, refer to [this section.](../reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration.md#configuring-the-refresh-interval)
 
-# Troubleshooting
+## Troubleshooting
 
 If your changes were overwritten, it could be due to the way the cluster data is synced with EKS. Changes shouldn't be made to the cluster from another source, such as in the EKS console, and in Rancher within a five-minute span. For information on how this works and how to configure the refresh interval, refer to [Syncing.](#syncing)
 

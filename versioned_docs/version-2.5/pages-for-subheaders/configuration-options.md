@@ -6,14 +6,6 @@ aliases:
   - /rancher/v2.x/en/istio/v2.5/configuration-reference/
 ---
 
-- [Egress Support](#egress-support)
-- [Enabling Automatic Sidecar Injection](#enabling-automatic-sidecar-injection)
-- [Overlay File](#overlay-file)
-- [Selectors and Scrape Configs](#selectors-and-scrape-configs)
-- [Enable Istio with Pod Security Policies](#enable-istio-with-pod-security-policies)
-- [Additional Steps for Installing Istio on an RKE2 Cluster](#additional-steps-for-installing-istio-on-an-rke2-cluster)
-- [Additional Steps for Project Network Isolation](#additional-steps-for-project-network-isolation)
-
 ### Egress Support
 
 By default the Egress gateway is disabled, but can be enabled on install or upgrade through the values.yaml or via the [overlay file](#overlay-file).

@@ -11,18 +11,8 @@ The Backup Create page lets you configure a schedule, enable encryption and spec
 
 ![](/img/backup_restore/backup/backup.png)
 
-- [Schedule](#schedule)
-- [Encryption](#encryption)
-- [Storage Location](#storage-location)
-  - [S3](#s3)
-  - [Example S3 Storage Configuration](#example-s3-storage-configuration)
-  - [Example MinIO Configuration](#example-minio-configuration)
-  - [Example credentialSecret](#example-credentialsecret)
-  - [IAM Permissions for EC2 Nodes to Access S3](#iam-permissions-for-ec2-nodes-to-access-s3)
-- [Examples](#examples)
 
-
-# Schedule
+## Schedule
 
 Select the first option to perform a one-time backup, or select the second option to schedule recurring backups. Selecting **Recurring Backups** lets you configure following two fields:
 
@@ -38,7 +28,7 @@ Select the first option to perform a one-time backup, or select the second optio
 | `schedule` |  Provide the cron string for scheduling recurring backups.  |
 | `retentionCount` |  Provide the number of backup files to be retained.  |
 
-# Encryption
+## Encryption
 
 The rancher-backup gathers resources by making calls to the kube-apiserver. Objects returned by apiserver are decrypted, so even if [encryption At rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/) is enabled, even the encrypted objects gathered by the backup will be in plaintext.
 
@@ -74,7 +64,7 @@ In the example command above, the name `encryptionconfig` can be changed to anyt
 | ---------------- | ---------------- |
 | `encryptionConfigSecretName` |  Provide the name of the Secret from `cattle-resources-system` namespace, that contains the encryption config file.  |
 
-# Storage Location
+## Storage Location
 
 ![](/img/backup_restore/backup/storageLocation.png)
 
@@ -181,6 +171,6 @@ To allow a node to access S3, follow the instructions in the [AWS documentation]
 
 After the role is created, and you have attached the corresponding instance profile to your EC2 instance(s), the `credentialSecretName` directive can be left empty in the Backup custom resource.
 
-# Examples
+## Examples
 
 For example Backup custom resources, refer to [this page.](examples.md#backup)

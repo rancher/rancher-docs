@@ -4,15 +4,6 @@ description: Interact with Rancher using command line interface (CLI) tools from
 weight: 21
 ---
 
-- [Rancher CLI](#rancher-cli)
-  - [Download Rancher CLI](#download-rancher-cli)
-  - [Requirements](#requirements)
-  - [CLI Authentication](#cli-authentication)
-  - [Project Selection](#project-selection)
-  - [Commands](#commands)
-  - [Rancher CLI Help](#rancher-cli-help)
-  - [Limitations](#limitations) 
-
 The Rancher CLI (Command Line Interface) is a unified tool that you can use to interact with Rancher. With this tool, you can operate Rancher using a command line rather than the GUI.
 
 ### Download Rancher CLI

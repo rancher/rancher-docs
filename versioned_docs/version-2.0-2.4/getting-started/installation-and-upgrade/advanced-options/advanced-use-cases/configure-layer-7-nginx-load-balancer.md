@@ -23,13 +23,6 @@ Make sure that your node fulfills the general [installation requirements.](../..
 
 ## Installation Outline
 
-<!-- TOC -->
-
-- [1. Provision Linux Host](#1-provision-linux-host)
-- [2. Choose an SSL Option and Install Rancher](#2-choose-an-ssl-option-and-install-rancher)
-- [3. Configure Load Balancer](#3-configure-load-balancer)
-
-<!-- /TOC -->
 
 ## 1. Provision Linux Host
 

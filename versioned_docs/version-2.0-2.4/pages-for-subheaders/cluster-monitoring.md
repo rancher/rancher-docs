@@ -16,15 +16,6 @@ _Available as of v2.2.0_
 
 Using Rancher, you can monitor the state and processes of your cluster nodes, Kubernetes components, and software deployments through integration with [Prometheus](https://prometheus.io/), a leading open-source monitoring solution.
 
-This section covers the following topics:
-
-- [About Prometheus](#about-prometheus)
-- [Monitoring scope](#monitoring-scope)
-- [Enabling cluster monitoring](#enabling-cluster-monitoring)
-- [Resource consumption](#resource-consumption)
-  - [Resource consumption of Prometheus pods](#resource-consumption-of-prometheus-pods)
-  - [Resource consumption of other pods](#resource-consumption-of-other-pods)
-
 # About Prometheus
 
 Prometheus provides a _time series_ of your data, which is, according to [Prometheus documentation](https://prometheus.io/docs/concepts/data_model/):

@@ -5,7 +5,7 @@ weight: 1
 
 There are three roles that can be assigned to nodes: `etcd`, `controlplane` and `worker`. 
 
-# Separating Worker Nodes from Nodes with Other Roles
+## Separating Worker Nodes from Nodes with Other Roles
 
 When designing your cluster(s), you have two options:
 
@@ -21,7 +21,7 @@ Therefore, each node should have one of the following role configurations:
   * Both `etcd` and `controlplane`
   * `worker`
 
-# Recommended Number of Nodes with Each Role
+## Recommended Number of Nodes with Each Role
 
 The cluster should have:
 
@@ -69,6 +69,6 @@ You may have noticed that our [Kubernetes Install](../../../../pages-for-subhead
 * It maintains multiple instances of the master components by having multiple `controlplane` nodes.
 * No other workloads than Rancher itself should be created on this cluster.
 
-# References
+## References
 
 * [Kubernetes: Master Components](https://kubernetes.io/docs/concepts/overview/components/#master-components)

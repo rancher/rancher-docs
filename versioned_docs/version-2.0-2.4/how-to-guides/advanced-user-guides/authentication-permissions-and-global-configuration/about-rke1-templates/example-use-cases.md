@@ -11,7 +11,7 @@ These example scenarios describe how an organization could use templates to stan
 - **Sharing ownership of a template:** When a template owner no longer wants to maintain a template, or wants to delegate ownership of the template, this scenario describes how [template ownership can be shared.](#allowing-other-users-to-control-and-share-a-template)
 
 
-# Enforcing a Template Setting for Everyone
+## Enforcing a Template Setting for Everyone
 
 Let's say there is an organization in which the administrators decide that all new clusters should be created with Kubernetes version 1.14.
 
@@ -27,7 +27,7 @@ Let's say there is an organization in which the administrators decide that all n
 
 In this way, the administrators enforce the Kubernetes version across the organization, while still allowing end users to configure everything else.
 
-# Templates for Basic and Advanced Users
+## Templates for Basic and Advanced Users
 
 Let's say an organization has both basic and advanced users. Administrators want the basic users to be required to use a template, while the advanced users and administrators create their clusters however they want.
 
@@ -42,7 +42,7 @@ Let's say an organization has both basic and advanced users. Administrators want
 
 **Result:** All Rancher users, except for administrators, are required to use a template when creating a cluster. Everyone has access to the restrictive template, but only advanced users have permission to use the more permissive template. The basic users are more restricted, while advanced users have more freedom when configuring their Kubernetes clusters.
 
-# Updating Templates and Clusters Created with Them
+## Updating Templates and Clusters Created with Them
 
 Let's say an organization has a template that requires clusters to use Kubernetes v1.14. However, as time goes on, the administrators change their minds. They decide they want users to be able to upgrade their clusters to use newer versions of Kubernetes.
 
@@ -54,7 +54,7 @@ The template owner has several options for allowing the cluster creators to upgr
 - **Allow any Kubernetes version on the template:** When creating a template revision, the template owner can also mark the the Kubernetes version as **Allow User Override** using the switch near that setting on the Rancher UI. This will allow clusters that upgrade to this template revision to use any version of Kubernetes.
 - **Allow the latest minor Kubernetes version on the template:** The template owner can also create a template revision in which the Kubernetes version is defined as **Latest v1.14 (Allows patch version upgrades).** This means clusters that use that revision will be able to get patch version upgrades, but major version upgrades will not be allowed.
 
-# Allowing Other Users to Control and Share a Template
+## Allowing Other Users to Control and Share a Template
 
 Let's say Alice is a Rancher administrator. She owns an RKE template that reflects her organization's agreed-upon best practices for creating a cluster.
 

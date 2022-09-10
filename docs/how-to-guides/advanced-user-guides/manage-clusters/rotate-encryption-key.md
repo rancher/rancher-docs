@@ -13,7 +13,7 @@ weight: 2043
 
     - OR, apply the following YAML:
 
-    ```
+    ```yaml
     rancher_kubernetes_engine_config:
       services:
         kube_api:

@@ -6,18 +6,6 @@ aliases:
 ---
 Get started with your migration to Rancher v2.x by installing Rancher and configuring your new Rancher environment.
 
-## Outline
-
-<!-- TOC -->
-
-- [A. Install Rancher v2.x](#a-install-rancher-v2-x)
-- [B. Configure Authentication](#b-configure-authentication)
-- [C. Provision a Cluster and Project](#c-provision-a-cluster-and-project)
-- [D. Create Stacks](#d-create-stacks)
-
-
-<!-- /TOC -->
-
 ## A. Install Rancher v2.x
 
 The first step in migrating from v1.6 to v2.x is to install the Rancher v2.x Server side-by-side with your v1.6 Server, as you'll need your old install during the migration process. Due to the architecture changes between v1.6 and v2.x, there is no direct path for upgrade. You'll have to install v2.x independently and then migrate your v1.6 services to v2.x.

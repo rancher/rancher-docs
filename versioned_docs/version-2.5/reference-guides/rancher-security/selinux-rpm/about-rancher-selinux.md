@@ -8,7 +8,7 @@ The `rancher-selinux` RPM only contains policies for the [rancher-logging applic
 
 The `rancher-selinux` GitHub repository is [here.](https://github.com/rancher/rancher-selinux)
 
-# Installing the rancher-selinux RPM
+## Installing the rancher-selinux RPM
 
 :::note Requirement:
 
@@ -53,7 +53,7 @@ Install the RPM:
 yum -y install rancher-selinux
 ```
 
-# Configuring the Logging Application to Work with SELinux
+## Configuring the Logging Application to Work with SELinux
 
 :::note Requirement:
 

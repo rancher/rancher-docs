@@ -12,10 +12,8 @@ The second is a guide for installing an EKS cluster with an ingress by using com
 
 If you already have an EKS Kubernetes cluster, skip to the step about [installing an ingress.](#5-install-an-ingress) Then install the Rancher Helm chart following the instructions on [this page.](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#install-the-rancher-helm-chart)
 
-- [Automated Quickstart using AWS Best Practices](#automated-quickstart-using-aws-best-practices)
-- [Creating an EKS Cluster for the Rancher Server](#creating-an-eks-cluster-for-the-rancher-server)
 
-# Automated Quickstart using AWS Best Practices
+## Automated Quickstart using AWS Best Practices
 
 Rancher and Amazon Web Services collaborated on a quick start guide for deploying Rancher on an EKS cluster following AWS best practices. The deployment guide is [here.](https://aws-quickstart.github.io/quickstart-eks-rancher/)
 
@@ -41,7 +39,7 @@ Deploying this Quick Start for a new virtual private cloud (VPC) and new Amazon 
 
 \* The CloudFormation template that deploys the Quick Start into an existing Amazon EKS cluster skips the components marked by asterisks and prompts you for your existing VPC configuration.
 
-# Creating an EKS Cluster for the Rancher Server
+## Creating an EKS Cluster for the Rancher Server
 
 In this section, you'll install an EKS cluster with an ingress by using command line tools. This guide may be useful if you want to use fewer resources while trying out Rancher on EKS.
 

@@ -6,20 +6,6 @@ The [Divio documentation system](https://documentation.divio.com/) is a software
 
 In our docs, we have used this guideline to craft a unique set of docs which include [getting started](../../getting-started.md), [how-to guides](../../how-to-guides.md) (including [new](../../pages-for-subheaders/new-user-guides.md) and [advanced user guides](../../pages-for-subheaders/advanced-user-guides.md)), [reference guides](../../reference-guides.md), [explanations](../../explanations.md), an [FAQ section](../../faq.md), [troubleshooting tips](../../troubleshooting.md), and the ability to [contribute to Rancher](../../contribute-to-rancher.md). 
 
-- [Getting Started](#getting-started)
-- [How-to Guides](#how-to-guides)
-    - [New User Guides](#new-user-guides)
-    - [Advanced User Guides](#advanced-user-guides)
-- [Reference Guides](#reference-guides)
-- [Explanations](#explanations)
-    - [Integrations in Rancher](#integrations-in-rancher)    
-- [Other Docs Categories](#other-docs-categories)
-    - [FAQ](#faq)
-    - [Troubleshooting](#troubleshooting)
-    - [Contribute to Rancher](#contribute-to-rancher)
-- [Overlapping of Categories](#overlapping-of-categories)
-- [New Structure Goals](#new-structure-goals)
-
 
 ## Getting Started
 

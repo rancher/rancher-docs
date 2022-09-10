@@ -11,7 +11,7 @@ For the full details on configuring `Flows` and `ClusterFlows`, see the [Banzai 
 - [Configuration](#configuration)
 - [YAML Example](#yaml-example)
 
-# Configuration
+## Configuration
 
 <Tabs>
 <TabItem value="Rancher v2.5.8+">
@@ -22,14 +22,14 @@ For the full details on configuring `Flows` and `ClusterFlows`, see the [Banzai 
   - [Outputs](#outputs-2-5-8)
 - [ClusterFlows](#clusterflows-2-5-8)
 
-# Changes in v2.5.8
+## Changes in v2.5.8
 
 The `Flows` and `ClusterFlows` can now be configured by filling out forms in the Rancher UI.
 
 
 <a id="flows-2-5-8"></a>
 
-# Flows
+## Flows
 
 A `Flow` defines which logs to collect and filter and which output to send the logs to.
 
@@ -70,7 +70,7 @@ This `Output` will receive logs from the `Flow`. Because the `Flow` is a namespa
 
 <a id="clusterflows-2-5-8"></a>
 
-# ClusterFlows
+## ClusterFlows
 
 Matches, filters and `Outputs` are configured for `ClusterFlows` in the same way that they are configured for `Flows`. The key difference is that the `ClusterFlow` is scoped at the cluster level and can configure log collection across all namespaces.
 
@@ -89,7 +89,7 @@ After `ClusterFlow` selects logs from all namespaces in the cluster, logs from t
 
 <a id="flows-2-5-0"></a>
 
-# Flows
+## Flows
 
 A `Flow` defines which logs to collect and filter and which `Output` to send the logs to. The `Flow` is a namespaced resource, which means logs will only be collected from the namespace that the `Flow` is deployed in.
 
@@ -126,7 +126,7 @@ Because the `Flow` is a namespaced resource, the `Output` must reside in same na
 
 <a id="clusterflows-2-5-0"></a>
 
-# ClusterFlows
+## ClusterFlows
 
 Matches, filters and `Outputs` are also configured for `ClusterFlows`. The only difference is that the `ClusterFlow` is scoped at the cluster level and can configure log collection across all namespaces.
 
@@ -138,7 +138,7 @@ Matches, filters and `Outputs` are also configured for `ClusterFlows`. The only 
 </Tabs>
 
 
-# YAML Example
+## YAML Example
 
 The following example `Flow` transforms the log messages from the default namespace and sends them to an S3 `Output`:
 

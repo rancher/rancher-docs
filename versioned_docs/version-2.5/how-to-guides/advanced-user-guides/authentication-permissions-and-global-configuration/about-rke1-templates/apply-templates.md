@@ -13,12 +13,6 @@ You can [save the configuration of an existing cluster as an RKE template.](#con
 
 You can't change a cluster to use a different RKE template. You can only update the cluster to a new revision of the same template.
 
-This section covers the following topics:
-
-- [Creating a cluster from an RKE template](#creating-a-cluster-from-an-rke-template)
-- [Updating a cluster created with an RKE template](#updating-a-cluster-created-with-an-rke-template)
-- [Converting an existing cluster to use an RKE template](#converting-an-existing-cluster-to-use-an-rke-template)
-
 ### Creating a Cluster from an RKE Template
 
 To add a cluster [hosted by an infrastructure provider](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) using an RKE template, use these steps:

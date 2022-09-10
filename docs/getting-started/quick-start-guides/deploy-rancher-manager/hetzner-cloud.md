@@ -39,9 +39,10 @@ Deploying to Hetzner Cloud will incur charges.
 5. **Optional:** Modify optional variables within `terraform.tfvars`.
 See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [Hetzner Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/hcloud) for more information.
 Suggestions include:
-    - `prefix` - Prefix for all created resources
-    - `instance_type` - Instance type, minimum required is `cx21`
-    - `hcloud_location` - Hetzner Cloud location, choose the closest instead of the default (`fsn1`)
+
+   - `prefix` - Prefix for all created resources
+   - `instance_type` - Instance type, minimum required is `cx21`
+   - `hcloud_location` - Hetzner Cloud location, choose the closest instead of the default (`fsn1`)
 
 6. Run `terraform init`.
 

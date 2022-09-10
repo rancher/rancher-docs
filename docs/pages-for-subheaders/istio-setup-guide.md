@@ -18,7 +18,9 @@ The workloads and services that you want to be controlled by Istio must meet [Is
 
 # Install
 
-:::tip Quick Setup Tip: If you don't need external traffic to reach Istio, and you just want to set up Istio for monitoring and tracing traffic within the cluster, skip the steps for [setting up the Istio gateway](../how-to-guides/advanced-user-guides/istio-setup-guide/set-up-istio-gateway.md) and [setting up Istio's components for traffic management.](../how-to-guides/advanced-user-guides/istio-setup-guide/set-up-traffic-management.md)
+:::tip Quick Setup Tip:
+
+If you don't need external traffic to reach Istio, and you just want to set up Istio for monitoring and tracing traffic within the cluster, skip the steps for [setting up the Istio gateway](../how-to-guides/advanced-user-guides/istio-setup-guide/set-up-istio-gateway.md) and [setting up Istio's components for traffic management.](../how-to-guides/advanced-user-guides/istio-setup-guide/set-up-traffic-management.md)
 
 :::
 

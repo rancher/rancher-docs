@@ -2,10 +2,6 @@
 title: kubectl Utility
 ---
 
-- [kubectl](#kubectl)
-  - [kubectl Utility](#kubectl-utility)
-  - [Authentication with kubectl and kubeconfig Tokens with TTL](#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl)
-
 # kubectl
 
 Interact with Rancher using kubectl.

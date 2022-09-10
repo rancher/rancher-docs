@@ -14,14 +14,8 @@ The cluster registration feature replaced the feature to import clusters.
 
 The control that Rancher has to manage a registered cluster depends on the type of cluster. For details, see [Management Capabilities for Registered Clusters.](#management-capabilities-for-registered-clusters)
 
-- [Prerequisites](#prerequisites)
-- [Registering a Cluster](#registering-a-cluster)
-- [Management Capabilities for Registered Clusters](#management-capabilities-for-registered-clusters)
-- [Configuring K3s Cluster Upgrades](#configuring-k3s-cluster-upgrades)
-- [Debug Logging and Troubleshooting for Registered K3s Clusters](#debug-logging-and-troubleshooting-for-registered-k3s-clusters)
-- [Annotating Registered Clusters](#annotating-registered-clusters)
 
-# Prerequisites
+## Prerequisites
 
 <Tabs>
 <TabItem value="v2.5.9+">
@@ -82,7 +76,7 @@ EKS clusters must have at least one managed node group to be imported into Ranch
 </TabItem>
 </Tabs>
 
-# Registering a Cluster
+## Registering a Cluster
 
 1. From the **Clusters** page, click **Add Cluster**.
 2. Under **Register an existing Kubernetes cluster**, click the type of Kubernetes cluster you want to register.
@@ -150,7 +144,7 @@ resource "rancher2_cluster" "my-eks-to-import" {
 }
 ```
 
-# Management Capabilities for Registered Clusters
+## Management Capabilities for Registered Clusters
 
 The control that Rancher has to manage a registered cluster depends on the type of cluster.
 
@@ -242,7 +236,7 @@ The capabilities for registered EKS clusters are listed in the table on [this pa
 </TabItem>
 </Tabs>
 
-# Configuring K3s Cluster Upgrades
+## Configuring K3s Cluster Upgrades
 
 > It is a Kubernetes best practice to back up the cluster before upgrading. When upgrading a high-availability K3s cluster with an external database, back up the database in whichever way is recommended by the relational database provider.
 
@@ -255,7 +249,7 @@ In the K3s documentation, controlplane nodes are called server nodes. These node
 
 Also in the K3s documentation, nodes with the worker role are called agent nodes. Any workloads or pods that are deployed in the cluster can be scheduled to these nodes by default.
 
-# Debug Logging and Troubleshooting for Registered K3s Clusters
+## Debug Logging and Troubleshooting for Registered K3s Clusters
 
 Nodes are upgraded by the system upgrade controller running in the downstream cluster. Based on the cluster configuration, Rancher deploys two [plans](https://github.com/rancher/system-upgrade-controller#example-upgrade-plan) to upgrade K3s nodes: one for controlplane nodes and one for workers. The system upgrade controller follows the plans and upgrades the nodes.
 
@@ -280,7 +274,7 @@ To prevent issues when upgrading, the [Kubernetes upgrade best practices](https:
 
 
 
-# Annotating Registered Clusters
+## Annotating Registered Clusters
 
 For all types of registered Kubernetes clusters except for K3s Kubernetes clusters, Rancher doesn't have any information about how the cluster is provisioned or configured.
 

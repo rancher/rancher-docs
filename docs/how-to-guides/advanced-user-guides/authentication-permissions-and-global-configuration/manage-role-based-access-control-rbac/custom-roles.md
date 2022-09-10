@@ -7,29 +7,21 @@ Within Rancher, _roles_ determine what actions a user can make within a cluster 
 
 Note that _roles_ are different from _permissions_, which determine what clusters and projects you can access.
 
-:::tip
+:::danger
 
 It is possible for a custom role to enable privilege escalation. For details, see [this section.](#privilege-escalation)
 
 :::
 
-This section covers the following topics:
 
-- [Prerequisites](#prerequisites)
-- [Creating a custom role](#creating-a-custom-role)
-- [Creating a custom role that inherits from another role](#creating-a-custom-role-that-inherits-from-another-role)
-- [Deleting a custom role](#deleting-a-custom-role)
-- [Assigning a custom role to a group](#assigning-a-custom-role-to-a-group)
-- [Privilege escalation](#privilege-escalation)
-
-# Prerequisites
+## Prerequisites
 
 To complete the tasks on this page, one of the following permissions are required:
 
  - [Administrator Global Permissions](global-permissions.md).
  - [Custom Global Permissions](global-permissions.md#custom-global-permissions) with the [Manage Roles](global-permissions.md) role assigned.
 
-# Creating A Custom Role
+## Creating A Custom Role
 
 While Rancher comes out-of-the-box with a set of default user roles, you can also create default custom roles to provide users with very specific permissions within Rancher.
 
@@ -61,7 +53,7 @@ The steps to add custom roles differ depending on the version of Rancher.
 
 1.  Click **Create**.
 
-# Creating a Custom Role that Inherits from Another Role
+## Creating a Custom Role that Inherits from Another Role
 
 If you have a group of individuals that need the same level of access in Rancher, it can save time to create a custom role in which all of the rules from another role, such as the administrator role, are copied into a new role. This allows you to only configure the variations between the existing role and the new role.
 
@@ -80,7 +72,7 @@ To create a custom role based on an existing role,
 1. Optional: Assign the role as default.
 1. Click **Create**.
 
-# Deleting a Custom Role
+## Deleting a Custom Role
 
 When deleting a custom role, all global role bindings with this custom role are deleted.
 
@@ -95,7 +87,7 @@ To delete a custom role,
 2. Go to the custom global role that should be deleted and click **⋮ (…) > Delete**.
 3. Click **Delete**.
 
-# Assigning a Custom Role to a Group
+## Assigning a Custom Role to a Group
 
 If you have a group of individuals that need the same level of access in Rancher, it can save time to create a custom role. When the role is assigned to a group, the users in the group have the appropriate level of access the first time they sign into Rancher.
 
@@ -124,6 +116,6 @@ To assign a custom role to a group, follow these steps:
 
 **Result:** The custom role will take effect when the users in the group log into Rancher.
 
-# Privilege Escalation
+## Privilege Escalation
 
 The `Configure Catalogs` custom permission is powerful and should be used with caution. When an admin assigns the  `Configure Catalogs` permission to a standard user, it could result in privilege escalation in which the user could give themselves admin access to Rancher provisioned clusters. Anyone with this permission should be considered equivalent to an admin.

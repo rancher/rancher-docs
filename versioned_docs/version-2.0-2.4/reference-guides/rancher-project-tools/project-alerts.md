@@ -16,20 +16,8 @@ Before you can receive alerts, one or more [notifier](../../explanations/integra
 
 Only [administrators](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md), [cluster owners or members](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles), or [project owners](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-roles) can manage project alerts.
 
-This section covers the following topics:
 
-- [Alerts scope](#alerts-scope)
-- [Default project-level alerts](#default-project-level-alerts)
-- [Adding project alerts](#adding-project-alerts)
-- [Managing project alerts](#managing-project-alerts)
-- [Project Alert Rule Configuration](#project-alert-rule-configuration)
-  - [Pod Alerts](#pod-alerts)
-  - [Workload Alerts](#workload-alerts)
-  - [Workload Selector Alerts](#workload-selector-alerts)
-  - [Metric Expression Alerts](#metric-expression-alerts)
-
-
-# Alerts Scope
+## Alerts Scope
 
 The scope for alerts can be set at either the [cluster level](../../pages-for-subheaders/cluster-alerts.md) or project level.
 
@@ -40,7 +28,7 @@ At the project level, Rancher monitors specific deployments and sends alerts for
 * Pod status
 * The Prometheus expression cross the thresholds
 
-# Default Project-level Alerts
+## Default Project-level Alerts
 
 When you enable monitoring for the project, some project-level alerts are provided. You can receive these alerts if a [notifier](../../explanations/integrations-in-rancher/notifiers.md) for them is configured at the cluster level.
 
@@ -51,7 +39,7 @@ When you enable monitoring for the project, some project-level alerts are provid
 
 For information on other default alerts, refer to the section on [cluster-level alerts.](../../explanations/integrations-in-rancher/cluster-alerts/default-alerts.md)
 
-# Adding Project Alerts
+## Adding Project Alerts
 
 >**Prerequisite:** Before you can receive project alerts, you must add a notifier.
 
@@ -75,7 +63,7 @@ For information on other default alerts, refer to the section on [cluster-level 
 **Result:** Your alert is configured. A notification is sent when the alert is triggered.
 
 
-# Managing Project Alerts
+## Managing Project Alerts
 
 To manage project alerts, browse to the project that alerts you want to manage. Then select **Tools > Alerts**. In versions before v2.2.0, you can choose **Resources > Alerts**. You can:
 
@@ -86,14 +74,14 @@ To manage project alerts, browse to the project that alerts you want to manage. 
 - Unmute muted alerts
 
 
-# Project Alert Rule Configuration
+## Project Alert Rule Configuration
 
 - [Pod Alerts](#pod-alerts)
 - [Workload Alerts](#workload-alerts)
 - [Workload Selector Alerts](#workload-selector-alerts)
 - [Metric Expression Alerts](#metric-expression-alerts)
 
-# Pod Alerts
+## Pod Alerts
 
 This alert type monitors for the status of a specific pod.
 
@@ -131,7 +119,7 @@ You can disable these advanced options when configuring a specific rule.
 - **Group Interval Time**: How long to wait before sending an alert that has been added to a group which contains already fired alerts, default to 30 seconds.
 - **Repeat Wait Time**: How long to wait before sending an alert that has been added to a group which contains already fired alerts, default to 1 hour.
 
-# Workload Alerts
+## Workload Alerts
 
 This alert type monitors for the availability of a workload.
 
@@ -165,7 +153,7 @@ You can disable these advanced options when configuring a specific rule.
 - **Group Interval Time**: How long to wait before sending an alert that has been added to a group which contains already fired alerts, default to 30 seconds.
 - **Repeat Wait Time**: How long to wait before sending an alert that has been added to a group which contains already fired alerts, default to 1 hour.
 
-# Workload Selector Alerts
+## Workload Selector Alerts
 
 This alert type monitors for the availability of all workloads marked with tags that you've specified.
 
@@ -199,7 +187,7 @@ You can disable these advanced options when configuring a specific rule.
 - **Group Interval Time**: How long to wait before sending an alert that has been added to a group which contains already fired alerts, default to 30 seconds.
 - **Repeat Wait Time**: How long to wait before sending an alert that has been added to a group which contains already fired alerts, default to 1 hour.
 
-# Metric Expression Alerts
+## Metric Expression Alerts
 _Available as of v2.2.4_
 
 If you enable [project monitoring](../../pages-for-subheaders/project-tools.md#monitoring), this alert type monitors for the overload from Prometheus expression querying.

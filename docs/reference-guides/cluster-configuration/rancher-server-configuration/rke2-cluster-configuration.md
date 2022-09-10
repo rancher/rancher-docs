@@ -6,21 +6,21 @@ weight: 5
 
 This section covers the configuration options that are available in Rancher for a new or existing RKE2 Kubernetes cluster.
 
-# Overview
+## Overview
 
 You can configure the Kubernetes options in one of the two following ways:
 
 - [Rancher UI](#configuration-options-in-the-rancher-ui): Use the Rancher UI to select options that are commonly customized when setting up a Kubernetes cluster.
 - [Cluster Config File](#cluster-config-file): Instead of using the Rancher UI to choose Kubernetes options for the cluster, advanced users can create an RKE2 config file. Using a config file allows you to set many additional [options](https://docs.rke2.io/install/install_options/install_options) available for an RKE2 installation.
 
-# Editing Clusters with a Form in the Rancher UI
+## Editing Clusters with a Form in the Rancher UI
 
 To edit your cluster,
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. Go to the cluster you want to configure and click **⋮ > Edit Config**.
 
-# Editing Clusters with YAML
+## Editing Clusters with YAML
 
 Instead of using the Rancher UI to choose Kubernetes options for the cluster, advanced users can create an RKE2 config file. Using a config file allows you to set any of the options available in an RKE2 installation by specifying them in YAML.
 
@@ -30,7 +30,7 @@ To edit an RKE2 config file directly from the Rancher UI,
 1. Go to the cluster you want to configure and click **⋮ > Edit as YAML**.
 1. Edit the RKE options under the `rkeConfig` directive.
 
-# Configuration Options in the Rancher UI
+## Configuration Options in the Rancher UI
 
 :::tip
 

@@ -3,10 +3,8 @@ title: Enable Prometheus Federator
 weight: 1
 ---
 
-- [Requirements](#requirements)
-- [Install the Prometheus Federator Application](#install-the-prometheus-federator-application)
 
-# Requirements
+## Requirements
 
 By default, Prometheus Federator is configured and intended to be deployed alongside [rancher-monitoring](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/), which deploys Prometheus Operator alongside a Cluster Prometheus that each Project Monitoring Stack is configured to federate namespace-scoped metrics from by default.
 
@@ -18,7 +16,7 @@ The default configuration should already be compatible with your rancher-monitor
 - [Configure rancher-monitoring to only watch for resources created by the Helm chart itself](#configure-rancher-monitoring-to-only-watch-for-resources-created-by-the-helm-chart-itself).
 - [Increase the CPU / memory limits of the Cluster Prometheus](#increase-the-cpu--memory-limits-of-the-cluster-prometheus).
 
-## Ensure the cattle-monitoring-system namespace is placed into the System Project (or a similarly locked down Project that has access to other Projects in the cluster)
+### Ensure the cattle-monitoring-system namespace is placed into the System Project (or a similarly locked down Project that has access to other Projects in the cluster)
 
 ![Select Projects-Namespaces](/img/install-in-system-project.png)
 
@@ -37,7 +35,7 @@ Prometheus Operator's security model expects that the namespace it is deployed i
 
         ![Move to a New Project](/img/move-to-new-project.png)
 
-## Configure rancher-monitoring to only watch for resources created by the Helm chart itself
+### Configure rancher-monitoring to only watch for resources created by the Helm chart itself
 
 Since each Project Monitoring Stack will watch the other namespaces and collect additional custom workload metrics or dashboards already, it's recommended to configure the following settings on all selectors to ensure that the Cluster Prometheus Stack only monitors resources created by the Helm Chart itself:
 
@@ -61,7 +59,7 @@ If you don't want to allow users to be able to create ServiceMonitors and PodMon
 
 :::
 
-## Increase the CPU / memory limits of the Cluster Prometheus
+### Increase the CPU / memory limits of the Cluster Prometheus
 
 Depending on a cluster's setup, it's generally recommended to give a large amount of dedicated memory to the Cluster Prometheus to avoid restarts due to out-of-memory errors (OOMKilled) usually caused by churn created in the cluster that causes a large number of high cardinality metrics to be generated and ingested by Prometheus within one block of time. This is one of the reasons why the default Rancher Monitoring stack expects around 4GB of RAM to be able to operate in a normal-sized cluster. However, when introducing Project Monitoring Stacks that are all sending `/federate` requests to the same Cluster Prometheus and are reliant on the Cluster Prometheus being "up" to federate that system data on their namespaces, it's even more important that the Cluster Prometheus has an ample amount of CPU / memory assigned to it to prevent an outage that can cause data gaps across all Project Prometheis in the cluster.
 
@@ -71,7 +69,7 @@ There are no specific recommendations on how much memory the Cluster Prometheus 
 
 :::
 
-# Install the Prometheus Federator Application
+## Install the Prometheus Federator Application
 
 1. Click **☰ > Cluster Management**.
 1. Go to the cluster that you want to install Prometheus Federator and click **Explore**.

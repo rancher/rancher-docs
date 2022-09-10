@@ -34,15 +34,6 @@ Before you start, we recommend creating an empty text file. You can use this fil
 
 :::
 
-<!-- TOC -->
-
-- [1. Register Rancher with Azure](#1-register-rancher-with-azure)
-- [2. Create a new client secret](#2-create-a-new-client-secret)
-- [3. Set Required Permissions for Rancher](#3-set-required-permissions-for-rancher)
-- [4. Copy Azure Application Data](#5-copy-azure-application-data)
-- [5. Configure Azure AD in Rancher](#6-configure-azure-ad-in-rancher)
-
-<!-- /TOC -->
 
 #### 1. Register Rancher with Azure
 

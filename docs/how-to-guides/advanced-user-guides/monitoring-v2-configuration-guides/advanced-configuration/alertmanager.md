@@ -13,7 +13,7 @@ This section assumes familiarity with how monitoring components work together. F
 
 :::
 
-# About the Alertmanager Custom Resource
+## About the Alertmanager Custom Resource
 
 By default, Rancher Monitoring deploys a single Alertmanager onto a cluster that uses a default Alertmanager Config Secret.
 

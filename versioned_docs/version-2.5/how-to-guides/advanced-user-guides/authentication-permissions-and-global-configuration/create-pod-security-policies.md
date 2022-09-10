@@ -12,16 +12,8 @@ _Pod Security Policies_ (or PSPs) are objects that control security-sensitive as
 
 If a pod does not meet the conditions specified in the PSP, Kubernetes will not allow it to start, and Rancher will display an error message of `Pod <NAME> is forbidden: unable to validate...`.
 
-- [How PSPs Work](#how-psps-work)
-- [Default PSPs](#default-psps)
-  - [Restricted](#restricted)
-  - [Unrestricted](#unrestricted)
-- [Creating PSPs](#creating-psps)
-  - [Requirements](#requirements)
-  - [Creating PSPs in the Rancher UI](#creating-psps-in-the-rancher-ui)
-- [Configuration](#configuration)
 
-# How PSPs Work
+## How PSPs Work
 
 You can assign PSPs at the cluster or project level.
 
@@ -35,7 +27,7 @@ Any workloads that are already running in a cluster or project before a PSP is a
 
 Read more about Pod Security Policies in the [Kubernetes Documentation](https://kubernetes.io/docs/concepts/policy/pod-security-policy/).
 
-# Default PSPs
+## Default PSPs
 
 Rancher ships with two default Pod Security Policies (PSPs): the `restricted` and `unrestricted` policies.
 
@@ -50,7 +42,7 @@ This policy is based on the Kubernetes [example restricted policy](https://raw.g
 
 This policy is equivalent to running Kubernetes with the PSP controller disabled. It has no restrictions on what pods can be deployed into a cluster or project.
 
-# Creating PSPs
+## Creating PSPs
 
 Using Rancher, you can create a Pod Security Policy using our GUI rather than creating a YAML file.
 
@@ -75,7 +67,7 @@ We recommend adding PSPs during cluster and project creation instead of adding i
 3. Complete each section of the form. Refer to the [Kubernetes documentation](https://kubernetes.io/docs/concepts/policy/pod-security-policy/) for more information on what each policy does.
 
 
-# Configuration
+## Configuration
 
 The Kubernetes documentation on PSPs is [here.](https://kubernetes.io/docs/concepts/policy/pod-security-policy/)
 

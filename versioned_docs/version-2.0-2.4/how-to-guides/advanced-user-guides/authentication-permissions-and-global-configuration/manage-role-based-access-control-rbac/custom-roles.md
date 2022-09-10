@@ -12,13 +12,6 @@ Within Rancher, _roles_ determine what actions a user can make within a cluster 
 
 Note that _roles_ are different from _permissions_, which determine what clusters and projects you can access.
 
-This section covers the following topics:
-
-- [Prerequisites](#prerequisites)
-- [Creating a custom role for a cluster or project](#creating-a-custom-role-for-a-cluster-or-project)
-- [Creating a custom global role](#creating-a-custom-global-role)
-- [Deleting a custom global role](#deleting-a-custom-global-role)
-- [Assigning a custom global role to a group](#assigning-a-custom-global-role-to-a-group)
 
 ## Prerequisites
 

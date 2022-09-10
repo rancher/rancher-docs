@@ -42,7 +42,7 @@ You can access your cluster after its state is updated to **Active.**
 - `Default`, containing the `default` namespace
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces
 
-# Huawei CCE Configuration
+## Huawei CCE Configuration
 
 |Settings|Description|
 |---|---|
@@ -61,7 +61,7 @@ You can access your cluster after its state is updated to **Active.**
 
 **Note:** If you are editing the cluster in the `cluster.yml` instead of the Rancher UI, note that as of Rancher v2.3.0, cluster configuration directives must be nested under the `rancher_kubernetes_engine_config` directive in `cluster.yml`. For more information, refer to the section on [the config file structure in Rancher v2.3.0+.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#config-file-structure-in-rancher-v2-3-0)
 
-# Node Configuration
+## Node Configuration
 
 |Settings|Description|
 |---|---|

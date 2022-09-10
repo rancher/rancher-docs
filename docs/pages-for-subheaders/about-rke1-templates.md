@@ -26,7 +26,7 @@ The core features of RKE templates allow DevOps and security teams to:
 - Control which users can create templates
 - Require users to create clusters from a template
 
-# Configurable Settings
+## Configurable Settings
 
 RKE templates can be created in the Rancher UI or defined in YAML format. They can define all the same parameters that can be specified when you use Rancher to provision custom nodes or nodes from an infrastructure provider:
 
@@ -42,7 +42,7 @@ RKE templates can be created in the Rancher UI or defined in YAML format. They c
 
 The [add-on section](#add-ons) of an RKE template is especially powerful because it allows a wide range of customization options.
 
-# Scope of RKE Templates
+## Scope of RKE Templates
 
 RKE templates are supported for Rancher-provisioned clusters. The templates can be used to provision custom clusters or clusters that are launched by an infrastructure provider.
 
@@ -53,7 +53,7 @@ RKE templates can be created from scratch to pre-define cluster configuration. T
 The settings of an existing cluster can be [saved as an RKE template.](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#converting-an-existing-cluster-to-use-an-rke-template) This creates a new template and binds the cluster settings to the template, so that the cluster can only be upgraded if the [template is updated](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md#updating-a-template), and the cluster is upgraded to [use a newer version of the template.](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md#upgrading-a-cluster-to-use-a-new-template-revision) The new template can also be used to create new clusters.
 
 
-# Example Scenarios
+## Example Scenarios
 When an organization has both basic and advanced Rancher users, administrators might want to give the advanced users more options for cluster creation, while restricting the options for basic users.
 
 These [example scenarios](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md) describe how an organization could use templates to standardize cluster creation.
@@ -65,7 +65,7 @@ Some of the example scenarios include the following:
 - **Updating template settings:** If an organization's security and DevOps teams decide to embed best practices into the required settings for new clusters, those best practices could change over time. If the best practices change, [a template can be updated to a new revision](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#updating-templates-and-clusters-created-with-them) and clusters created from the template can [upgrade to the new version](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md#upgrading-a-cluster-to-use-a-new-template-revision) of the template.
 - **Sharing ownership of a template:** When a template owner no longer wants to maintain a template, or wants to share ownership of the template, this scenario describes how [template ownership can be shared.](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#allowing-other-users-to-control-and-share-a-template)
 
-# Template Management
+## Template Management
 
 When you create an RKE template, it is available in the Rancher UI from the **Cluster Management** view under **RKE Templates**. When you create a template, you become the template owner, which gives you permission to revise and share the template. You can share the RKE templates with specific users or groups, and you can also make it public.
 
@@ -88,7 +88,7 @@ The documents in this section explain the details of RKE template management:
 
 An [example YAML configuration file for a template](../reference-guides/rke1-template-example-yaml.md) is provided for reference.
 
-# Applying Templates
+## Applying Templates
 
 You can [create a cluster from a template](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#creating-a-cluster-from-an-rke-template) that you created, or from a template that has been [shared with you.](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates.md)
 
@@ -98,13 +98,13 @@ RKE templates can be created from scratch to pre-define cluster configuration. T
 
 You can [save the configuration of an existing cluster as an RKE template.](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#converting-an-existing-cluster-to-use-an-rke-template) Then the cluster's settings can only be changed if the template is updated.
 
-# Standardizing Hardware
+## Standardizing Hardware
 
 RKE templates are designed to standardize Kubernetes and Rancher settings. If you want to standardize your infrastructure as well, one option is to use RKE templates [in conjunction with other tools](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/infrastructure.md).
 
 Another option is to use [cluster templates,](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates.md) which include node pool configuration options, but don't provide configuration enforcement.
 
-# YAML Customization
+## YAML Customization
 
 If you define an RKE template as a YAML file, you can modify this [example RKE template YAML](../reference-guides/rke1-template-example-yaml.md). The YAML in the RKE template uses the same customization that Rancher uses when creating an RKE cluster, but since the YAML is located within the context of a Rancher provisioned cluster, you will need to nest the RKE template customization under the `rancher_kubernetes_engine_config` directive in the YAML.
 

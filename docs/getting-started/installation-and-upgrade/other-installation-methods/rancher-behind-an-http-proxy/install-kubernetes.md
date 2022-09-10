@@ -5,8 +5,6 @@ weight: 200
 
 Once the infrastructure is ready, you can continue with setting up an RKE cluster to install Rancher in.
 
-### Installing Docker
-
 First, you have to install Docker and setup the HTTP proxy on all three Linux nodes. For this perform the following steps on all three nodes.
 
 For convenience, export the IP address and port of your proxy into an environment variable and set up the HTTP_PROXY variables for your current shell:
@@ -105,7 +103,7 @@ sudo ./get_helm.sh
 
 Next, create a YAML file that describes the RKE cluster. Ensure that the IP addresses of the nodes and the SSH username are correct. For more information on the cluster YAML, have a look at the [RKE documentation](https://rancher.com/docs/rke/latest/en/example-yamls/).
 
-```
+```yml
 nodes:
   - address: 10.0.1.200
     user: ubuntu

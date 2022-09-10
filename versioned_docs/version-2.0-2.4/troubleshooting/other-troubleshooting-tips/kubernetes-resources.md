@@ -7,31 +7,7 @@ The commands/steps listed on this page can be used to check the most important K
 
 Make sure you configured the correct kubeconfig (for example, `export KUBECONFIG=$PWD/kube_config_rancher-cluster.yml` for Rancher HA) or are using the embedded kubectl via the UI.
 
-- [Nodes](#nodes)
-  - [Get nodes](#get-nodes)
-  - [Get node conditions](#get-node-conditions)
-- [Kubernetes leader election](#kubernetes-leader-election)
-  - [Kubernetes controller manager leader](#kubernetes-controller-manager-leader)
-  - [Kubernetes scheduler leader](#kubernetes-scheduler-leader)
-- [Ingress controller](#ingress-controller)
-  - [Pod details](#pod-details)
-  - [Pod container logs](#pod-container-logs)
-  - [Namespace events](#namespace-events)
-  - [Debug logging](#debug-logging)
-  - [Check configuration](#check-configuration)
-- [Rancher agents](#rancher-agents)
-  - [cattle-node-agent](#cattle-node-agent)
-  - [cattle-cluster-agent](#cattle-cluster-agent)
-- [Jobs and pods](#jobs-and-pods)
-  - [Check that pods or jobs have status Running/Completed](#check-that-pods-or-jobs-have-status-running-completed)
-  - [Describe pod](#describe-pod)
-  - [Pod container logs](#pod-container-logs)
-  - [Describe job](#describe-job)
-  - [Logs from the containers of pods of the job](#logs-from-the-containers-of-pods-of-the-job)
-  - [Evicted pods](#evicted-pods)
-  - [Job does not complete](#job-does-not-complete)
-
-# Nodes
+## Nodes
 
 ### Get nodes
 
@@ -76,7 +52,7 @@ Example output:
 worker-0: DiskPressure:True
 ```
 
-# Kubernetes leader election
+## Kubernetes leader election
 
 ### Kubernetes Controller Manager leader
 
@@ -96,7 +72,7 @@ kubectl -n kube-system get endpoints kube-scheduler -o jsonpath='{.metadata.anno
 {"holderIdentity":"controlplane-0_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx","leaseDurationSeconds":15,"acquireTime":"2018-12-27T08:59:45Z","renewTime":"2018-12-27T09:44:57Z","leaderTransitions":0}>
 ```
 
-# Ingress Controller
+## Ingress Controller
 
 The default Ingress Controller is NGINX and is deployed as a DaemonSet in the `ingress-nginx` namespace. The pods are only scheduled to nodes with the `worker` role.
 
@@ -152,7 +128,7 @@ Retrieve generated configuration in each pod:
 kubectl -n ingress-nginx get pods -l app=ingress-nginx --no-headers -o custom-columns=.NAME:.metadata.name | while read pod; do kubectl -n ingress-nginx exec $pod -- cat /etc/nginx/nginx.conf; done
 ```
 
-# Rancher agents
+## Rancher agents
 
 Communication to the cluster (Kubernetes API via `cattle-cluster-agent`) and communication to the nodes (cluster provisioning via `cattle-node-agent`) is done through Rancher agents.
 
@@ -204,7 +180,7 @@ Check logging of cattle-cluster-agent pod:
 kubectl -n cattle-system logs -l app=cattle-cluster-agent
 ```
 
-# Jobs and Pods
+## Jobs and Pods
 
 ### Check that pods or jobs have status **Running**/**Completed**
 

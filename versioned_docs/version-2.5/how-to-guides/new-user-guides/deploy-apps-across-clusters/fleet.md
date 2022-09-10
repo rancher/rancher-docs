@@ -11,20 +11,12 @@ Fleet is GitOps at scale. Fleet is designed to manage up to a million clusters. 
 
 Fleet is a separate project from Rancher, and can be installed on any Kubernetes cluster with Helm.
 
-- [Architecture](#architecture)
-- [Accessing Fleet in the Rancher UI](#accessing-fleet-in-the-rancher-ui)
-- [Windows Support](#windows-support)
-- [GitHub Repository](#github-repository)
-- [Using Fleet Behind a Proxy](#using-fleet-behind-a-proxy)
-- [Helm Chart Dependencies](#helm-chart-dependencies)
-- [Troubleshooting](#troubleshooting)
-- [Documentation](#documentation)
 
-# Architecture
+## Architecture
 
 For information about how Fleet works, see [this page.](../../../explanations/integrations-in-rancher/fleet-gitops-at-scale/architecture.md)
 
-# Accessing Fleet in the Rancher UI
+## Accessing Fleet in the Rancher UI
 
 Fleet comes preinstalled in Rancher v2.5. Users can leverage continuous delivery to deploy their applications to the Kubernetes clusters in the git repository without any manual operation by following **gitops** practice. For additional information on Continuous Delivery and other Fleet troubleshooting tips, refer [here](https://fleet.rancher.io/troubleshooting/).
 
@@ -45,31 +37,31 @@ Follow the steps below to access Continuous Delivery in the Rancher UI:
 
 1. Once the gitrepo is deployed, you can monitor the application through the Rancher UI.
 
-# Windows Support
+## Windows Support
 
 _Available as of v2.5.6_
 
 For details on support for clusters with Windows nodes, see [this page.](../../../explanations/integrations-in-rancher/fleet-gitops-at-scale/windows-support.md)
 
 
-# GitHub Repository
+## GitHub Repository
 
 The Fleet Helm charts are available [here.](https://github.com/rancher/fleet/releases/latest)
 
 
-# Using Fleet Behind a Proxy
+## Using Fleet Behind a Proxy
 
 _Available as of v2.5.8_
 
 For details on using Fleet behind a proxy, see [this page.](../../../explanations/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy.md)
 
-# Helm Chart Dependencies
+## Helm Chart Dependencies
 
 In order for Helm charts with dependencies to deploy successfully, you must run a manual command (as listed below), as it is up to the user to fulfill the dependency list. If you do not do this and proceed to clone your repository and run `helm install`, your installation will fail because the dependencies will be missing.
 
 The Helm chart in the git repository must include its dependencies in the charts subdirectory. You must either manually run `helm dependencies update $chart` OR run `helm dependencies build $chart` locally, then commit the complete charts directory to your git repository. Note that you will update your commands with the applicable parameters.
 
-# Troubleshooting
+## Troubleshooting
 ---
 * **Known Issue:** Fleet becomes inoperable after a restore using the [backup-restore-operator](../backup-restore-and-disaster-recovery/back-up-rancher.md#1-install-the-rancher-backup-operator). We will update the community once a permanent solution is in place.
 
@@ -88,6 +80,6 @@ By default, user-defined secrets are not backed up in Fleet. It is necessary to 
 
 ---
 
-# Documentation
+## Documentation
 
 The Fleet documentation is at [https://fleet.rancher.io/.](https://fleet.rancher.io/)

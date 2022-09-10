@@ -6,17 +6,12 @@ weight: 3
 
 This guide outlines a reference architecture for installing Rancher on an RKE Kubernetes cluster in a vSphere environment, in addition to standard vSphere best practices as documented by VMware.
 
-- [1. Load Balancer Considerations](#1-load-balancer-considerations)
-- [2. VM Considerations](#2-vm-considerations)
-- [3. Network Considerations](#3-network-considerations)
-- [4. Storage Considerations](#4-storage-considerations)
-- [5. Backups and Disaster Recovery](#5-backups-and-disaster-recovery)
 
 <figcaption>Solution Overview</figcaption>
 
 ![Solution Overview](/img/rancher-on-prem-vsphere.svg)
 
-# 1. Load Balancer Considerations
+## 1. Load Balancer Considerations
 
 A load balancer is required to direct traffic to the Rancher workloads residing on the RKE nodes.
 
@@ -42,7 +37,7 @@ Avoid implementing a software load balancer within the management cluster.
 
 Configure appropriate Firewall / ACL rules to only expose access to Rancher
 
-# 2. VM Considerations
+## 2. VM Considerations
 
 ### Size the VM's According to Rancher Documentation
 
@@ -64,7 +59,7 @@ Doing so will ensure node VM's are spread across multiple datastores - preventin
 
 It’s important to follow K8s and etcd best practices when deploying your nodes, including disabling swap, double-checking you have full network connectivity between all machines in the cluster, using unique hostnames, MAC addresses, and product_uuids for every node.
 
-# 3. Network Considerations 
+## 3. Network Considerations 
 
 ### Leverage Low Latency, High Bandwidth Connectivity Between ETCD Nodes
 
@@ -74,13 +69,13 @@ Deploy etcd members within a single data center where possible to avoid latency 
 
 Each node used should have a static IP configured. In the case of DHCP, each node should have a DHCP reservation to make sure the node gets the same IP allocated.
 
-# 4. Storage Considerations
+## 4. Storage Considerations
 
 ### Leverage SSD Drives for ETCD Nodes
 
 ETCD is very sensitive to write latency. Therefore, leverage SSD disks where possible. 
 
-# 5. Backups and Disaster Recovery
+## 5. Backups and Disaster Recovery
 
 ### Perform Regular Management Cluster Backups
 

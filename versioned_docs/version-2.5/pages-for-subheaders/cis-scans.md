@@ -14,16 +14,7 @@ Rancher can run a security scan to check whether Kubernetes is deployed accordin
 
 The `rancher-cis-benchmark` app leverages <a href="https://github.com/aquasecurity/kube-bench" target="_blank">kube-bench,</a> an open-source tool from Aqua Security, to check clusters for CIS Kubernetes Benchmark compliance. Also, to generate a cluster-wide report, the application utilizes <a href="https://github.com/vmware-tanzu/sonobuoy" target="_blank">Sonobuoy</a> for report aggregation.
 
-- [Changes in Rancher v2.5](#changes-in-rancher-v2-5)
-- [About the CIS Benchmark](#about-the-cis-benchmark)
-- [About the Generated Report](#about-the-generated-report)
-- [Test Profiles](#test-profiles)
-- [About Skipped and Not Applicable Tests](#about-skipped-and-not-applicable-tests)
-- [Roles-based Access Control](#roles-based-access-control)
-- [Configuration](#configuration)
-- [How-to Guides](#how-to-guides)
-
-# Changes in Rancher v2.5
+## Changes in Rancher v2.5
 
 We now support running CIS scans on any Kubernetes cluster, including hosted Kubernetes providers such as EKS, AKS, and GKE. Previously it was only supported to run CIS scans on RKE Kubernetes clusters.
 
@@ -89,7 +80,7 @@ The `rancher-cis-benchmark` supports the CIS 1.5 Benchmark version.
 
 > **Note:** CIS v1 cannot run on a cluster when CIS v2 is deployed. In other words, after `rancher-cis-benchmark` is installed, you can't run scans by going to the Cluster Manager view in the Rancher UI and clicking <b>Tools > CIS Scans.</b>
 
-# About the CIS Benchmark
+## About the CIS Benchmark
 
 The Center for Internet Security is a 501(c\)(3) non-profit organization, formed in October 2000, with a mission to "identify, develop, validate, promote, and sustain best practice solutions for cyber defense and build and lead communities to enable an environment of trust in cyberspace". The organization is headquartered in East Greenbush, New York, with members including large corporations, government agencies, and academic institutions.
 
@@ -98,7 +89,7 @@ CIS Benchmarks are best practices for the secure configuration of a target syste
 The official Benchmark documents are available through the CIS website. The sign-up form to access the documents is
 <a href="https://learn.cisecurity.org/benchmarks" target="_blank">here.</a>
 
-# About the Generated Report
+## About the Generated Report
 
 Each scan generates a report can be viewed in the Rancher UI and can be downloaded in CSV format.
 
@@ -129,7 +120,7 @@ The report contains the following information:
 
 Refer to the [table in the cluster hardening guide](./rancher-security.md) for information on which versions of Kubernetes, the Benchmark, Rancher, and our cluster hardening guide correspond to each other. Also refer to the hardening guide for configuration files of CIS-compliant clusters and information on remediating failed tests.
 
-# Test Profiles
+## Test Profiles
 
 The following profiles are available:
 
@@ -172,7 +163,7 @@ The EKS and GKE cluster scan profiles are based on CIS Benchmark versions that a
 
 In order to pass the "Hardened" profile, you will need to follow the steps on the [hardening guide](./rancher-security.md#rancher-hardening-guide) and use the `cluster.yml` defined in the hardening guide to provision a hardened cluster.
 
-# About Skipped and Not Applicable Tests
+## About Skipped and Not Applicable Tests
 
 For a list of skipped and not applicable tests, refer to [this page](../explanations/integrations-in-rancher/cis-scans/skipped-and-not-applicable-tests.md).
 
@@ -180,14 +171,14 @@ For now, only user-defined skipped tests are marked as skipped in the generated 
 
 Any skipped tests that are defined as being skipped by one of the default profiles are marked as not applicable.
 
-# Roles-based Access Control
+## Roles-based Access Control
 
 For information about permissions, refer to [this page](../explanations/integrations-in-rancher/cis-scans/rbac-for-cis-scans.md).
 
-# Configuration
+## Configuration
 
 For more information about configuring the custom resources for the scans, profiles, and benchmark versions, refer to [this page](../explanations/integrations-in-rancher/cis-scans/configuration-reference.md).
 
-# How-to Guides
+## How-to Guides
 
 Please refer [here](../pages-for-subheaders/cis-scan-guides.md) for how-to guides on CIS scans.
