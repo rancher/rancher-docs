@@ -40,29 +40,29 @@ A restore is performed by creating a Restore custom resource.
 ### Create the Restore Custom Resource
 
 1. In the **Cluster Explorer,** go to the dropdown menu in the upper left corner and click **Rancher Backups.**
-	* **Note:** If the Rancher Backups app is not visible in the dropdown, you will need to install it from the Charts page in **Apps & Marketplace**. Refer [here](../../../pages-for-subheaders/helm-charts-in-rancher.md#charts) for more information.
+    * **Note:** If the Rancher Backups app is not visible in the dropdown, you will need to install it from the Charts page in **Apps & Marketplace**. Refer [here](../../../pages-for-subheaders/helm-charts-in-rancher.md#charts) for more information.
 1. Click **Restore.**
 1. Create the Restore with the form or with YAML. For help creating the Restore resource using the online form, refer to the [configuration reference](../../../reference-guides/backup-restore-configuration/restore-configuration.md) and to the [examples.](../../../reference-guides/backup-restore-configuration/examples.md)
 1. To use the YAML editor, you can click **Create > Create from YAML.** Enter the Restore YAML. The following is an example Restore custom resource:
 
     ```yaml
     apiVersion: resources.cattle.io/v1
-	kind: Restore
-	metadata:
-	  name: restore-migration
-	spec:
-	  backupFilename: backup-b0450532-cee1-4aa1-a881-f5f48a007b1c-2020-09-15T07-27-09Z.tar.gz
-	  encryptionConfigSecretName: encryptionconfig
-	  storageLocation:
-	    s3:
-	      credentialSecretName: s3-creds
-	      credentialSecretNamespace: default
-	      bucketName: rancher-backups
-	      folder: rancher
-	      region: us-west-2
-	      endpoint: s3.us-west-2.amazonaws.com
-      ```
-	For help configuring the Restore, refer to the [configuration reference](../../../reference-guides/backup-restore-configuration/restore-configuration.md) and to the [examples.](../../../reference-guides/backup-restore-configuration/examples.md)
+    kind: Restore
+    metadata:
+      name: restore-migration
+    spec:
+      backupFilename: backup-b0450532-cee1-4aa1-a881-f5f48a007b1c-2020-09-15T07-27-09Z.tar.gz
+      encryptionConfigSecretName: encryptionconfig
+      storageLocation:
+        s3:
+          credentialSecretName: s3-creds
+          credentialSecretNamespace: default
+          bucketName: rancher-backups
+          folder: rancher
+          region: us-west-2
+          endpoint: s3.us-west-2.amazonaws.com
+    ```
+    For help configuring the Restore, refer to the [configuration reference](../../../reference-guides/backup-restore-configuration/restore-configuration.md) and to the [examples.](../../../reference-guides/backup-restore-configuration/examples.md)
 
 1. Click **Create.**
 

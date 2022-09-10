@@ -24,8 +24,8 @@ If your organization uses Keycloak Identity Provider (IdP) for user authenticati
       `Client Protocol` | `SAML`
       `Valid Redirect URI` | `https://yourRancherHostURL/v1-saml/keycloak/saml/acs`
 
-      ><sup>1</sup>: Optionally, you can enable either one or both of these settings.
-      ><sup>2</sup>: Rancher SAML metadata won't be generated until a SAML provider is configured and saved.
+    ><sup>1</sup>: Optionally, you can enable either one or both of these settings.
+    ><sup>2</sup>: Rancher SAML metadata won't be generated until a SAML provider is configured and saved.
 
   ![](/img/keycloak/keycloak-saml-client-configuration.png)
 

@@ -62,9 +62,9 @@ To install Rancher on your Equinix Metal host, connect to it and then use a shel
 
 2.  From your shell, enter the following command:
 
-	```
+    ```
     sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 --privileged rancher/rancher
-  ```
+    ```
 
 **Result:** Rancher is installed.
 

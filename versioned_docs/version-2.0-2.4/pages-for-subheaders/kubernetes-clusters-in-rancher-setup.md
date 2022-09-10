@@ -24,7 +24,7 @@ This section covers the following topics:
   - [Launching Kubernetes on Existing Custom Nodes](#launching-kubernetes-on-existing-custom-nodes)
 - [Importing Existing Clusters](#importing-existing-clusters)
 
-  <!-- /TOC -->
+<!-- /TOC -->
 
 The following table summarizes the options and settings available for each cluster type:
 

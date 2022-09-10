@@ -26,7 +26,7 @@ This guide covers the following topics:
 - [Requirements](#requirements-for-windows-clusters)
 - [Tutorial: How to Create a Cluster with Windows Support](#tutorial-how-to-create-a-cluster-with-windows-support)
 - [Configuration for Storage Classes in Azure](#configuration-for-storage-classes-in-azure)
-  <!-- /TOC -->
+<!-- /TOC -->
 
 # Changes in Rancher v2.6
 
@@ -170,7 +170,7 @@ To set up a cluster with support for Windows nodes and containers, you will need
 1. [Create the Cluster on Existing Nodes](#2-create-the-cluster-on-existing-nodes)
 1. [Add Nodes to the Cluster](#3-add-nodes-to-the-cluster)
 1. [Optional: Configuration for Azure Files](#4-optional-configuration-for-azure-files)
-   <!-- /TOC -->
+<!-- /TOC -->
 
 # 1. Provision Hosts
 

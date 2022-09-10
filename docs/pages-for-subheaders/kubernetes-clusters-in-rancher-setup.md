@@ -22,7 +22,7 @@ This section covers the following topics:
 - [Registering Existing Clusters](#registering-existing-clusters)
 - [Programmatically Creating Clusters](#programmatically-creating-clusters)
 
-  <!-- /TOC -->
+<!-- /TOC -->
 
 ### Cluster Management Capabilities by Cluster Type
 
