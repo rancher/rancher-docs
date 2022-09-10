@@ -59,7 +59,19 @@ Because the rancher-alpha repository contains only alpha charts, switching betwe
 
 :::
 
-{{< release-channel >}}
+- Latest: Recommended for trying out the newest features
+    ```
+    helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
+    ```
+- Stable: Recommended for production environments
+    ```
+    helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+    ```
+- Alpha: Experimental preview of upcoming releases.
+    ```
+    helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+    ```
+    Note: Upgrades are not supported to, from, or between Alphas.
 
 1. List the current Helm chart repositories.
 

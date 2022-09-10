@@ -4,22 +4,11 @@ description: Read about port requirements needed in order for Rancher to operate
 weight: 300
 ---
 
-To operate properly, Rancher requires a number of ports to be open on Rancher nodes and on downstream Kubernetes cluster nodes.
+import PortsIaasNodes from '@site/src/components/PortsIaasNodes'
+import PortsCustomNodes from '@site/src/components/PortsCustomNodes'
+import PortsImportedHosted from '@site/src/components/PortsImportedHosted'
 
-- [Rancher Nodes](#rancher-nodes)
-  - [Ports for Rancher Server Nodes on K3s](#ports-for-rancher-server-nodes-on-k3s)
-  - [Ports for Rancher Server Nodes on RKE](#ports-for-rancher-server-nodes-on-rke)
-  - [Ports for Rancher Server in Docker](#ports-for-rancher-server-in-docker)
-- [Downstream Kubernetes Cluster Nodes](#downstream-kubernetes-cluster-nodes)
-  - [Ports for Rancher Launched Kubernetes Clusters using Node Pools](#ports-for-rancher-launched-kubernetes-clusters-using-node-pools)
-  - [Ports for Rancher Launched Kubernetes Clusters using Custom Nodes](#ports-for-rancher-launched-kubernetes-clusters-using-custom-nodes)
-  - [Ports for Hosted Kubernetes Clusters](#ports-for-hosted-kubernetes-clusters)
-  - [Ports for Imported Clusters](#ports-for-imported-clusters)
-- [Other Port Considerations](#other-port-considerations)
-  - [Commonly Used Ports](#commonly-used-ports)
-  - [Local Node Traffic](#local-node-traffic)
-  - [Rancher AWS EC2 Security Group](#rancher-aws-ec2-security-group)
-  - [Opening SUSE Linux Ports](#opening-suse-linux-ports)
+To operate properly, Rancher requires a number of ports to be open on Rancher nodes and on downstream Kubernetes cluster nodes.
 
 # Rancher Nodes
 
@@ -165,7 +154,7 @@ The following table depicts the port requirements for [Rancher Launched Kubernet
 >**Note:**
 >The required ports are automatically opened by Rancher during creation of clusters in cloud providers like Amazon EC2 or DigitalOcean.
 
-{{< ports-iaas-nodes >}}
+<PortsIaasNodes/>
 
 </details>
 
@@ -176,7 +165,7 @@ The following table depicts the port requirements for [Rancher Launched Kubernet
 
 The following table depicts the port requirements for [Rancher Launched Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) with [Custom Nodes](../../../pages-for-subheaders/use-existing-nodes.md).
 
-{{< ports-custom-nodes >}}
+<PortsCustomNodes/>
 
 </details>
 
@@ -187,7 +176,7 @@ The following table depicts the port requirements for [Rancher Launched Kubernet
 
 The following table depicts the port requirements for [hosted clusters](../../../pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers.md).
 
-{{< ports-imported-hosted >}}
+<PortsImportedHosted/>
 
 </details>
 
@@ -199,7 +188,7 @@ The following table depicts the port requirements for [hosted clusters](../../..
 
 The following table depicts the port requirements for [imported clusters](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/import-existing-clusters.md).
 
-{{< ports-imported-hosted >}}
+<PortsImportedHosted/>
 
 </details>
 

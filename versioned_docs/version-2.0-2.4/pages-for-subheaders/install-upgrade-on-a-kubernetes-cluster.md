@@ -64,11 +64,19 @@ Refer to the [instructions provided by the Helm project](https://helm.sh/docs/in
 
 Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher](../reference-guides/installation-references/helm-chart-options.md#helm-chart-repositories).
 
-{{< release-channel >}}
-
-```
-helm repo add rancher-<CHART_REPO> https://releases.rancher.com/server-charts/<CHART_REPO>
-```
+- Latest: Recommended for trying out the newest features
+    ```
+    helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
+    ```
+- Stable: Recommended for production environments
+    ```
+    helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+    ```
+- Alpha: Experimental preview of upcoming releases.
+    ```
+    helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+    ```
+    Note: Upgrades are not supported to, from, or between Alphas.
 
 ### 3. Create a Namespace for Rancher
 
