@@ -3,8 +3,11 @@ title: Configuring Azure AD
 weight: 1115
 ---
 
-{{% tabs %}}
-{{% tab "Rancher v2.5.16+" %}}
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="Rancher v2.5.16+">
 
 ## Microsoft Graph API
 
@@ -73,20 +76,16 @@ From the Azure portal, create a client secret. Rancher will use this key to auth
 
 1. Use search to open **App registrations** services. Then open the entry for Rancher that you created in the last procedure.
 
-     ![Open Rancher Registration](/img/open-rancher-app-reg.png)
+    ![Open Rancher Registration](/img/open-rancher-app-reg.png)
 
 1. From the navigation pane on left, click **Certificates and Secrets**.
 
 1. Click **New client secret**.
-
-     ![Create new client secret](/img//new-client-secret.png)
-
-    3.1. Enter a **Description** (something like `Rancher`).
-
-    3.2. Select duration for the key from the options under **Expires**. This drop-down sets the expiration date for the key. Shorter durations are more secure, but require you to create a new key after expiration.
-
-    3.3. Click **Add** (you don't need to enter a value—it will automatically populate after you save).
-<a id="secret"></a>
+    ![Create new client secret](/img//new-client-secret.png)
+    - 3.1. Enter a **Description** (something like `Rancher`).
+    - 3.2. Select duration for the key from the options under **Expires**. This drop-down sets the expiration date for the key. Shorter durations are more secure, but require you to create a new key after expiration.
+    - 3.3. Click **Add** (you don't need to enter a value—it will automatically populate after you save).
+    <a id="secret"></a>
 
 1.  Copy the key value and save it to an [empty text file](#tip).
 
@@ -114,7 +113,7 @@ Ensure that you set the permissions of type Application and NOT Delegated. Other
     - `Group.Read.All`
     - `User.Read.All`
 
-    ![Select API Permissions]/img/api-permissions.png)
+<!-- ![Select API Permissions]/img/api-permissions.png) -->
 
 1. Return to **API permissions** in the left nav bar. From there, click **Grant admin consent**. Then click **Yes**.
 
@@ -194,19 +193,19 @@ Enter the values that you copied to your [text file](#tip).
     | Endpoint           | https://login.microsoftonline.com/    |
 
 
-    >**For Custom Endpoints:**
-    ><br/>
-    >The following table maps the custom config values you copied in the Azure portal to the fields in Rancher:
-    >
-    >| Rancher Field      | Azure Value                           |
-    >| ------------------ | ------------------------------------- |
-    >| Graph Endpoint     | Microsoft Graph API Endpoint          |
-    >| Token Endpoint     | OAuth 2.0 Token Endpoint              |
-    >| Auth Endpoint      | OAuth 2.0 Authorization Endpoint      |
-    ><br/>
-    >**Important:** When entering the Graph Endpoint in a custom config, remove the tenant ID from the URL, like below:
-    >
-    ><code>http<span>s://g</span>raph.microsoft.com/<del>abb5adde-bee8-4821-8b03-e63efdc7701c</del></code>
+>**For Custom Endpoints:**
+><br/>
+>The following table maps the custom config values you copied in the Azure portal to the fields in Rancher:
+>
+>| Rancher Field      | Azure Value                           |
+>| ------------------ | ------------------------------------- |
+>| Graph Endpoint     | Microsoft Graph API Endpoint          |
+>| Token Endpoint     | OAuth 2.0 Token Endpoint              |
+>| Auth Endpoint      | OAuth 2.0 Authorization Endpoint      |
+><br/>
+>**Important:** When entering the Graph Endpoint in a custom config, remove the tenant ID from the URL, like below:
+>
+><code>http<span>s://g</span>raph.microsoft.com/<del>abb5adde-bee8-4821-8b03-e63efdc7701c</del></code>
 
 1. Click **Enable**.
 
@@ -291,8 +290,8 @@ Graph Endpoint   | https://microsoftgraph.chinacloudapi.cn
 Token Endpoint   | https://login.partner.microsoftonline.cn/{tenantID}/oauth2/v2.0/token
 
 
-{{% /tab %}}
-{{% tab "Rancher v2.5.0 - v2.5.15" %}}
+  </TabItem>
+  <TabItem value="Rancher v2.5.0 - v2.5.15">
 
 ## Azure AD Graph API
 
@@ -309,5 +308,5 @@ Token Endpoint   | https://login.partner.microsoftonline.cn/{tenantID}/oauth2/v2
     - Use another third-party auth system and set that up in Rancher. Please see the [authentication docs](../../../../../pages-for-subheaders/about-authentication.md) to learn how to configure other open authentication providers.
 
 
-{{% /tab %}}
-{{% /tabs %}}
+  </TabItem>
+</Tabs>

@@ -75,17 +75,17 @@ To install `gcloud` and `kubectl`, perform the following steps:
 <Tabs>
 <TabItem value="Using gcloud init">
 
-1. Run gcloud init and follow the directions:
+  1. Run gcloud init and follow the directions:
 
-    ```
-    gcloud init
-    ```
-    If you are using SSH on a remote server, use the --console-only flag to prevent the command from launching a browser:
+      ```
+      gcloud init
+      ```
+      If you are using SSH on a remote server, use the --console-only flag to prevent the command from launching a browser:
 
-    ```
-    gcloud init --console-only
-    ```
-2. Follow the instructions to authorize gcloud to use your Google Cloud account and select the new project that you created.
+      ```
+      gcloud init --console-only
+      ```
+  2. Follow the instructions to authorize gcloud to use your Google Cloud account and select the new project that you created.
 
 
 </TabItem>

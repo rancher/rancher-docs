@@ -72,7 +72,7 @@ From the Azure portal, create a client secret. Rancher will use this key to auth
 
 1. Click **New client secret**.
 
-     ![Create new client secret](/img/select-client-secret.png)
+    ![Create new client secret](/img/select-client-secret.png)
 
     1. Enter a **Description** (something like `Rancher`).
 

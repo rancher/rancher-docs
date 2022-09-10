@@ -96,14 +96,10 @@ From the Azure portal, create a client secret. Rancher will use this key to auth
 1. From the navigation pane on left, click **Certificates and Secrets**.
 
 1. Click **New client secret**.
-
-     ![Create new client secret](/img/new-client-secret.png)
-
-    1. Enter a **Description** (something like `Rancher`).
-
-    1. Select duration for the key from the options under **Expires**. This drop-down sets the expiration date for the key. Shorter durations are more secure, but require you to create a new key after expiration.
-
-    1. Click **Add** (you don't need to enter a value—it will automatically populate after you save).
+    ![Create new client secret](/img/new-client-secret.png)
+1. Enter a **Description** (something like `Rancher`).
+1. Select duration for the key from the options under **Expires**. This drop-down sets the expiration date for the key. Shorter durations are more secure, but require you to create a new key after expiration.
+1. Click **Add** (you don't need to enter a value—it will automatically populate after you save).
 <a id="secret"></a>
 
 1.  Copy the key value and save it to an [empty text file](#tip).
@@ -174,21 +170,20 @@ As your final step in Azure, copy the data that you'll use to configure Rancher 
 
 ![Standard Endpoint Options](/img/tenant-application-id-secret.png)
 
->**For Custom Endpoints:**
->
->**Warning:** Custom Endpoints are not supported nor fully tested by Rancher.
->
-> You will need to also manually enter the Graph, Token, and Auth Endpoints.
->
->- From <b>App registrations</b>, click <b>Endpoints</b>:
->
->![Click Endpoints](/img/endpoints.png)
->
->- Copy the following endpoints to your clipboard and paste them into your [text file](#tip) (these values will be your Rancher endpoint values). Make sure to copy the v1 version of the endpoints.
->
->   - **Microsoft Graph API endpoint** (Graph Endpoint)
->   - **OAuth 2.0 token endpoint (v1)** (Token Endpoint)
->   - **OAuth 2.0 authorization endpoint (v1)** (Auth Endpoint)
+**For Custom Endpoints:**
+
+**Warning:** Custom Endpoints are not supported nor fully tested by Rancher.
+
+You will need to also manually enter the Graph, Token, and Auth Endpoints.
+
+- From <b>App registrations</b>, click <b>Endpoints</b>:
+
+![Click Endpoints](/img/endpoints.png)
+
+- Copy the following endpoints to your clipboard and paste them into your [text file](#tip) (these values will be your Rancher endpoint values). Make sure to copy the v1 version of the endpoints.
+  - **Microsoft Graph API endpoint** (Graph Endpoint)
+  - **OAuth 2.0 token endpoint (v1)** (Token Endpoint)
+  - **OAuth 2.0 authorization endpoint (v1)** (Auth Endpoint)
 
 #### 5. Configure Azure AD in Rancher
 
@@ -212,19 +207,19 @@ Enter the values that you copied to your [text file](#tip).
     | Endpoint           | https://login.microsoftonline.com/    |
 
 
-    >**For Custom Endpoints:**
-    ><br/>
-    >The following table maps the custom config values you copied in the Azure portal to the fields in Rancher:
-    >
-    >| Rancher Field      | Azure Value                           |
-    >| ------------------ | ------------------------------------- |
-    >| Graph Endpoint     | Microsoft Graph API Endpoint          |
-    >| Token Endpoint     | OAuth 2.0 Token Endpoint              |
-    >| Auth Endpoint      | OAuth 2.0 Authorization Endpoint      |
-    ><br/>
-    >**Important:** When entering the Graph Endpoint in a custom config, remove the tenant ID from the URL, like below:
-    >
-    ><code>http<span>s://g</span>raph.microsoft.com/<del>abb5adde-bee8-4821-8b03-e63efdc7701c</del></code>
+**For Custom Endpoints:**
+
+The following table maps the custom config values you copied in the Azure portal to the fields in Rancher:
+
+| Rancher Field      | Azure Value                           |
+| ------------------ | ------------------------------------- |
+| Graph Endpoint     | Microsoft Graph API Endpoint          |
+| Token Endpoint     | OAuth 2.0 Token Endpoint              |
+| Auth Endpoint      | OAuth 2.0 Authorization Endpoint      |
+
+**Important:** When entering the Graph Endpoint in a custom config, remove the tenant ID from the URL, like below:
+
+<code>http<span>s://g</span>raph.microsoft.com/<del>abb5adde-bee8-4821-8b03-e63efdc7701c</del></code>
 
 1. Click **Enable**.
 
