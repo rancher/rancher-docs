@@ -4,6 +4,7 @@ weight: 28
 aliases:
   - /rancher/v2.x/en/v1.6-migration/
 ---
+import YouTube from '@site/src/components/YouTube'
 
 Rancher v2.x has been rearchitected and rewritten with the goal of providing a complete management solution for Kubernetes and Docker.  Due to these extensive changes, there is no direct upgrade path from v1.6 to v2.x, but rather a migration of your v1.6 services into v2.x as Kubernetes workloads.  In v1.6, the most common orchestration used was Rancher's own engine called Cattle. The following guide explains and educates our Cattle users on running workloads in a Kubernetes environment.
 
@@ -11,7 +12,7 @@ Rancher v2.x has been rearchitected and rewritten with the goal of providing a c
 
 This video demonstrates a complete walk through of migration from Rancher v1.6 to v2.x.
 
-{{< youtube OIifcqj5Srw >}}
+<YouTube id="OIifcqj5Srw"/>
 
 ## Migration Plan
 

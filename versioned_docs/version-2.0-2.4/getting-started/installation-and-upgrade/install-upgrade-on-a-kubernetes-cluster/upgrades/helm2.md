@@ -62,7 +62,19 @@ of your Kubernetes cluster running Rancher server. You'll use the snapshot as a 
 
     For information about the repos and their differences, see [Helm Chart Repositories](../../../../reference-guides/installation-references/helm-chart-options.md#helm-chart-repositories).
 
-    {{< release-channel >}}
+    - Latest: Recommended for trying out the newest features
+        ```
+        helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
+        ```
+    - Stable: Recommended for production environments
+        ```
+        helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+        ```
+    - Alpha: Experimental preview of upcoming releases.
+        ```
+        helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+        ```
+        Note: Upgrades are not supported to, from, or between Alphas.
 
     ```
     helm repo list

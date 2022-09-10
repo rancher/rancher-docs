@@ -5,6 +5,7 @@ aliases:
   - /rancher/v2.0-v2.4/en/installation/options/helm2/rke-add-on/layer-4-lb
   - /rancher/v2.x/en/installation/resources/advanced/helm2/rke-add-on/layer-4-lb/
 ---
+import SslFaqHa from '@site/src/components/SslFaqHa'
 
 > #### **Important: RKE add-on install is only supported up to Rancher v2.0.8**
 >
@@ -400,4 +401,4 @@ You have a couple of options:
 
 ## FAQ and Troubleshooting
 
-{{< ssl_faq_ha >}}
+<SslFaqHa/>

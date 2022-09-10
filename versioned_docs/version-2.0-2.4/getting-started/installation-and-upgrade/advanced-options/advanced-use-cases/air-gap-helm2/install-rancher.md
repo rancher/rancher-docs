@@ -39,10 +39,19 @@ From a system that has access to the internet, fetch the latest Helm chart and c
     ```
 
 2. Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher](../../../resources/choose-a-rancher-version.md).
-  {{< release-channel >}}
-    ```
-    helm repo add rancher-<CHART_REPO> https://releases.rancher.com/server-charts/<CHART_REPO>
-    ```
+    - Latest: Recommended for trying out the newest features
+        ```
+        helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
+        ```
+    - Stable: Recommended for production environments
+        ```
+        helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+        ```
+    - Alpha: Experimental preview of upcoming releases.
+        ```
+        helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+        ```
+        Note: Upgrades are not supported to, from, or between Alphas.
 
 3. Fetch the latest Rancher chart. This will pull down the chart and save it in the current directory as a `.tgz` file.
 ```plain

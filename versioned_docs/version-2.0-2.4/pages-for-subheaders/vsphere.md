@@ -7,6 +7,7 @@ weight: 2225
 aliases:
   - /rancher/v2.0-v2.4/en/tasks/clusters/creating-a-cluster/create-cluster-vsphere/
 ---
+import YouTube from '@site/src/components/YouTube'
 
 By using Rancher with vSphere, you can bring cloud operations on-premises.
 
@@ -49,7 +50,7 @@ In Rancher before v2.3.3, the vSphere node driver included in Rancher only suppo
 
 In this YouTube video, we demonstrate how to set up a node template with the new features designed to help you bring cloud operations to on-premises clusters.
 
-{{< youtube id="dPIwg6x1AlU">}}
+<YouTube id="dPIwg6x1AlU"/>
 
 # Creating a vSphere Cluster
 

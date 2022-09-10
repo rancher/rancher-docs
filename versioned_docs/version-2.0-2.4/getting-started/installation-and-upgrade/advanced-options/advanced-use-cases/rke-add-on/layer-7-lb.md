@@ -7,6 +7,7 @@ aliases:
   - /rancher/v2.0-v2.4/en/installation/options/rke-add-on/layer-7-lb
   - /rancher/v2.x/en/installation/resources/advanced/rke-add-on/layer-7-lb/
 ---
+import SslFaqHa from '@site/src/components/SslFaqHa'
 
 > #### **Important: RKE add-on install is only supported up to Rancher v2.0.8**
 >
@@ -289,4 +290,4 @@ During installation, RKE automatically generates a config file named `kube_confi
 
 ## FAQ and Troubleshooting
 
-{{< ssl_faq_ha >}}
+<SslFaqHa/>
