@@ -11,13 +11,6 @@ _Available as of v2.2.4_
 
 Using Rancher, you can monitor the state and processes of your cluster nodes, Kubernetes components, and software deployments through integration with [Prometheus](https://prometheus.io/), a leading open-source monitoring solution.
 
-This section covers the following topics:
-
-- [Monitoring scope](#monitoring-scope)
-- [Permissions to configure project monitoring](#permissions-to-configure-project-monitoring)
-- [Enabling project monitoring](#enabling-project-monitoring)
-- [Project-level monitoring resource requirements](#project-level-monitoring-resource-requirements)
-- [Project metrics](#project-metrics)
 
 ### Monitoring Scope
 

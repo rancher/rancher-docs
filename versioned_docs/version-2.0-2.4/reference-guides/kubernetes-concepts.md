@@ -5,34 +5,24 @@ weight: 4
 
 This page explains concepts related to Kubernetes that are important for understanding how Rancher works. The descriptions below provide a simplified interview of Kubernetes components. For more details, refer to the [official documentation on Kubernetes components.](https://kubernetes.io/docs/concepts/overview/components/)
 
-This section covers the following topics:
 
-- [About Docker](#about-docker)
-- [About Kubernetes](#about-kubernetes)
-- [What is a Kubernetes Cluster?](#what-is-a-kubernetes-cluster)
-- [Roles for Nodes in Kubernetes Clusters](#roles-for-nodes-in-kubernetes-clusters)
-  - [etcd Nodes](#etcd-nodes)
-  - [Controlplane Nodes](#controlplane-nodes)
-  - [Worker Nodes](#worker-nodes)
-- [About Helm](#about-helm)
-
-# About Docker
+## About Docker
 
 Docker is the container packaging and runtime standard. Developers build container images from Dockerfiles and distribute container images from Docker registries. [Docker Hub](https://hub.docker.com) is the most popular public registry. Many organizations also set up private Docker registries. Docker is primarily used to manage containers on individual nodes.
 
 >**Note:** Although Rancher 1.6 supported Docker Swarm clustering technology, it is no longer supported in Rancher 2.x due to the success of Kubernetes.
 
-# About Kubernetes
+## About Kubernetes
 
 Kubernetes is the container cluster management standard. YAML files specify containers and other resources that form an application. Kubernetes performs functions such as scheduling, scaling, service discovery, health check, secret management, and configuration management.
 
-# What is a Kubernetes Cluster?
+## What is a Kubernetes Cluster?
 
 A cluster is a group of computers that work together as a single system.
 
 A _Kubernetes Cluster_ is a cluster that uses the [Kubernetes container-orchestration system](https://kubernetes.io/) to deploy, maintain, and scale Docker containers, allowing your organization to automate application operations.
 
-# Roles for Nodes in Kubernetes Clusters
+## Roles for Nodes in Kubernetes Clusters
 
 Each computing resource in a Kubernetes cluster is called a _node_. Nodes can be either bare-metal servers or virtual machines. Kubernetes classifies nodes into three types: _etcd_ nodes, _control plane_ nodes, and _worker_ nodes.
 
@@ -63,7 +53,7 @@ Each [worker node](https://kubernetes.io/docs/concepts/architecture/nodes/) runs
 
 Worker nodes also run storage and networking drivers, and ingress controllers when required. You create as many worker nodes as necessary to run your  [workloads](../pages-for-subheaders/workloads-and-pods.md).
 
-# About Helm
+## About Helm
 
 For high-availability installations of Rancher, Helm is the tool used to install Rancher on a Kubernetes cluster.
 

@@ -36,6 +36,7 @@ After installing NGINX, you need to update the NGINX configuration file, `nginx.
     :::
 
     <figcaption>Example NGINX config</figcaption>
+    
     ```
     worker_processes 4;
     worker_rlimit_nofile 40000;

@@ -1,5 +1,5 @@
 ---
-title: Example YAML
+title: RKE1 Example YAML
 weight: 60
 ---
 

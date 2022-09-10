@@ -12,14 +12,8 @@ aliases:
 
 Rancher provides specific security hardening guides for each supported Rancher's Kubernetes distributions.
 
-- [Rancher Kubernetes Distributions](#rancher-kubernetes-distributions)
-- [Hardening Guides and Benchmark Versions](#hardening-guides-and-benchmark-versions)
-  - [RKE Guides](#rke-guides)
-  - [RKE2 Guides](#rke2-guides)
-  - [K3s Guides](#k3s)
-- [Rancher with SELinux](#rancher-with-selinux)
 
-# Rancher Kubernetes Distributions
+## Rancher Kubernetes Distributions
 
 Rancher uses the following Kubernetes distributions:
 
@@ -29,7 +23,7 @@ Rancher uses the following Kubernetes distributions:
 
 To harden a Kubernetes cluster outside of Rancher's distributions, refer to your Kubernetes provider docs.
 
-# Hardening Guides and Benchmark Versions
+## Hardening Guides and Benchmark Versions
 
 These guides have been tested along with the Rancher v2.6 release. Each self-assessment guide is accompanied with a hardening guide and tested on a specific Kubernetes version and CIS benchmark version. If a CIS benchmark has not been validated for your Kubernetes version, you can choose to use the existing guides until a newer version is added.
 
@@ -58,7 +52,7 @@ These guides have been tested along with the Rancher v2.6 release. Each self-ass
 | ------------------ | --------------------- | --------------------- | ---------------- |
 | Kubernetes v1.21 and v1.22 | CIS v1.6 | [Link](https://rancher.com/docs/k3s/latest/en/security/self_assessment/) | [Link](https://rancher.com/docs/k3s/latest/en/security/hardening_guide/) |
 
-# Rancher with SELinux
+## Rancher with SELinux
 
 [Security-Enhanced Linux (SELinux)](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) is a security enhancement to Linux. After being historically used by government agencies, SELinux is now industry standard and is enabled by default on RHEL and CentOS.
 

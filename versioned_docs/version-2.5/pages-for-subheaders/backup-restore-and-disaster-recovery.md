@@ -14,20 +14,7 @@ The backup-restore operator needs to be installed in the local cluster, and only
 
 > When restoring a backup into a new Rancher setup, the version of the new setup should be the same as the one where the backup is made.
 
-- [Changes in Rancher v2.5](#changes-in-rancher-v2-5)
-  - [Backup and Restore for Rancher v2.5 installed with Docker](#backup-and-restore-for-rancher-v2-5-installed-with-docker)
-- [How Backups and Restores Work](#how-backups-and-restores-work)
-- [Installing the rancher-backup Operator](#installing-the-rancher-backup-operator)
-  - [Installing rancher-backup with the Rancher UI](#installing-rancher-backup-with-the-rancher-ui)
-  - [Installing rancher-backup with the Helm CLI](#installing-rancher-backup-with-the-helm-cli)
-  - [RBAC](#rbac)
-- [Backing up Rancher](#backing-up-rancher)
-- [Restoring Rancher](#restoring-rancher)
-- [Migrating Rancher to a New Cluster](#migrating-rancher-to-a-new-cluster)
-- [Default Storage Location Configuration](#default-storage-location-configuration)
-  - [Example values.yaml for the rancher-backup Helm Chart](#example-values-yaml-for-the-rancher-backup-helm-chart)
-
-# Changes in Rancher v2.5
+## Changes in Rancher v2.5
 
 The new `rancher-backup` operator allows Rancher to be backed up and restored on any Kubernetes cluster. This application is a Helm chart, and it can be deployed through the Rancher **Apps & Marketplace** page, or by using the Helm CLI.
 
@@ -41,7 +28,7 @@ In Rancher v2.5, it is now supported to install Rancher hosted Kubernetes cluste
 
 For Rancher installed with Docker, refer to the same steps used up till 2.5 for [backups](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-docker-installed-rancher.md) and [restores.](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-docker-installed-rancher.md)
 
-# How Backups and Restores Work
+## How Backups and Restores Work
 
 The `rancher-backup` operator introduces three custom resources: Backups, Restores, and ResourceSets. The following cluster-scoped custom resource definitions are added to the cluster:
 
@@ -59,7 +46,7 @@ When a Restore custom resource is created, the operator accesses the backup .tar
 
 The Backup and Restore custom resources can be created in the Rancher UI, or by using `kubectl apply`.
 
-# Installing the rancher-backup Operator
+## Installing the rancher-backup Operator
 
 The `rancher-backup` operator can be installed from the Rancher UI, or with the Helm CLI. In both cases, the `rancher-backup` Helm chart is installed on the Kubernetes cluster running the Rancher server. It is a cluster-admin only feature and available only for the **local** cluster.  (*If you do not see `rancher-backup` in the Rancher UI, you may have selected the wrong cluster.*)
 
@@ -99,19 +86,19 @@ Only the rancher admins and the local cluster’s cluster-owner can:
 * Perform a backup or restore by creating a Backup CR and Restore CR respectively
 * List backups/restores performed so far
 
-# Backing up Rancher
+## Backing up Rancher
 
 A backup is performed by creating a Backup custom resource. For a tutorial, refer to [this page.](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher.md)
 
-# Restoring Rancher
+## Restoring Rancher
 
 A restore is performed by creating a Restore custom resource. For a tutorial, refer to [this page.](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher.md)
 
-# Migrating Rancher to a New Cluster
+## Migrating Rancher to a New Cluster
 
 A migration is performed by following [these steps.](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md)
 
-# Default Storage Location Configuration
+## Default Storage Location Configuration
 
 Configure a storage location where all backups are saved by default. You will have the option to override this with each backup, but will be limited to using an S3-compatible or Minio object store.
 

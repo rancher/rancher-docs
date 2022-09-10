@@ -13,15 +13,6 @@ Rancher's catalog service requires any custom catalogs to be structured in a spe
 
 > For a complete walkthrough of developing charts, see the [Chart Template Developer's Guide](https://helm.sh/docs/chart_template_guide/) in the official Helm documentation.
 
-- [Chart types](#chart-types)
-  - [Helm charts](#helm-charts)
-  - [Rancher charts](#rancher-charts)
-- [Chart directory structure](#chart-directory-structure)
-- [Additional Files for Rancher Charts](#additional-files-for-rancher-charts)
-  - [questions.yml](#questions-yml)
-  - [Min/Max Rancher versions](#min-max-rancher-versions)
-  - [Question variable reference](#question-variable-reference)
-- [Tutorial: Example Custom Chart Creation](#tutorial-example-custom-chart-creation)
 
 # Chart Types
 

@@ -8,15 +8,8 @@ The Restore Create page lets you provide details of the backup to restore from
 
 ![](/img/backup_restore/restore/restore.png)
 
-- [Backup Source](#backup-source)
-	- [An Existing Backup Config](#an-existing-backup-config)
-	- [The default storage target](#the-default-storage-target)
-	- [An S3-compatible object store](#an-s3-compatible-object-store)
-- [Encryption](#encryption)
-- [Prune during restore](#prune-during-restore)
-- [Getting the Backup Filename from S3](#getting-the-backup-filename-from-s3)
 
-# Backup Source
+## Backup Source
 Provide details of the backup file and its storage location, which the operator will then use to perform the restore. Select from the following options to provide these details
 
 
@@ -43,7 +36,7 @@ Select this option if no default storage location is configured at the operator-
 
 ![](/img/backup_restore/restore/s3store.png) 
 
-# Encryption
+## Encryption
 
 If the backup was created with encryption enabled, its file will have `.enc` suffix. Choosing such a Backup, or providing a backup filename with `.enc` suffix will display another dropdown named **Encryption Config Secret**.
 
@@ -63,7 +56,7 @@ This field should only be set if the backup was created with encryption enabled.
 
 :::
 
-# Prune During Restore
+## Prune During Restore
 
 * **Prune**:  In order to fully restore Rancher from a backup, and to go back to the exact state it was at when the backup was performed, we need to delete any additional resources that were created by Rancher after the backup was taken. The operator does so if the **Prune** flag is enabled. Prune is enabled by default and it is recommended to keep it enabled.
 * **Delete Timeout**: This is the amount of time the operator will wait while deleting a resource before editing the resource to remove finalizers and attempt deletion again.
@@ -73,7 +66,7 @@ This field should only be set if the backup was created with encryption enabled.
 | `prune` |  Delete the resources managed by Rancher that are not present in the backup (Recommended).  |
 | `deleteTimeoutSeconds` |  Amount of time the operator will wait while deleting a resource before editing the resource to remove finalizers and attempt deletion again.  |
 
-# Getting the Backup Filename from S3
+## Getting the Backup Filename from S3
 
 This is the name of the backup file that the `rancher-backup` operator will use to perform the restore.
 

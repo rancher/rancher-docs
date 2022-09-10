@@ -23,17 +23,8 @@ After [setting up istio](istio-setup-guide.md) you can leverage Istio's control 
 
 Istio needs to be set up by a `cluster-admin` before it can be used in a project.
 
-- [What's New in Rancher v2.5](#what-s-new-in-rancher-v2-5)
-- [Tools Bundled with Istio](#tools-bundled-with-istio)
-- [Prerequisites](#prerequisites)
-- [Setup Guide](#setup-guide)
-- [Remove Istio](#remove-istio)
-- [Migrate from Previous Istio Version](#migrate-from-previous-istio-version)
-- [Accessing Visualizations](#accessing-visualizations)
-- [Architecture](#architecture)
-- [Additional steps for installing Istio on an RKE2 cluster](#additional-steps-for-installing-istio-on-an-rke2-cluster)
 
-# What's New in Rancher v2.5
+## What's New in Rancher v2.5
 
 The overall architecture of Istio has been simplified. A single component, Istiod, has been created by combining Pilot, Citadel, Galley and the sidecar injector. Node Agent functionality has also been merged into istio-agent.
 
@@ -45,7 +36,7 @@ Istio has migrated away from Helm as a way to install Istio and now provides ins
 
 This Helm chart will be available via the Apps and Marketplace in the UI. A user that has access to the Rancher Chart's catalog will need to set up Istio before it can be used in the project.
 
-# Tools Bundled with Istio
+## Tools Bundled with Istio
 
 Our [Istio](https://istio.io/) installer wraps the istioctl binary commands in a handy Helm chart, including an overlay file option to allow complex customization.
 
@@ -65,21 +56,21 @@ Our Istio installer includes a quick-start, all-in-one installation of [Jaeger,]
 
 Note that this is not a production-qualified deployment of Jaeger. This deployment uses an in-memory storage component, while a persistent storage component is recommended for production. For more information on which deployment strategy you may need, refer to the [Jaeger documentation.](https://www.jaegertracing.io/docs/latest/operator/#production-strategy)
 
-# Prerequisites
+## Prerequisites
 
 Before enabling Istio, we recommend that you confirm that your Rancher worker nodes have enough [CPU and memory](../explanations/integrations-in-rancher/istio/cpu-and-memory-allocations.md) to run all of the components of Istio.
 
 If you are installing Istio on RKE2 cluster, some additional steps are required. For details, see [this section.](#additional-steps-for-installing-istio-on-an-rke2-cluster)
 
-# Setup Guide
+## Setup Guide
 
 Refer to the [setup guide](istio-setup-guide.md) for instructions on how to set up Istio and use it in a project.
 
-# Remove Istio
+## Remove Istio
 
 To remove Istio components from a cluster, namespace, or workload, refer to the section on [uninstalling Istio.](../explanations/integrations-in-rancher/istio/disable-istio.md)
 
-# Migrate From Previous Istio Version
+## Migrate From Previous Istio Version
 
 There is no upgrade path for Istio versions less than 1.7.x. To successfully install Istio in the **Cluster Explorer**, you will need to disable your existing Istio in the **Cluster Manager**.
 
@@ -87,7 +78,7 @@ If you have a significant amount of additional Istio CRDs you might consider man
 
 Another option is to manually uninstall istio resources one at a time, but leave the resources that are supported in both versions of Istio and that will not be installed by the newest version. This method is more likely to result in issues installing the new version, but could be a good option depending on your situation.
 
-# Accessing Visualizations
+## Accessing Visualizations
 
 > By default, only cluster-admins have access to Kiali. For instructions on how to allow admin, edit or views roles to access them, see [this section.](../explanations/integrations-in-rancher/istio/rbac-for-istio.md)
 
@@ -101,7 +92,7 @@ By default, all namespace will picked up by prometheus and make data available f
 
 Your access to the visualizations depend on your role. Grafana and Prometheus are only available for `cluster-admin` roles. The Kiali UI is available only to `cluster-admin` by default, but `cluster-admin` can allow other roles to access them by editing the Istio values.yaml.
 
-# Architecture
+## Architecture
 
 Istio installs a service mesh that uses [Envoy](https://www.envoyproxy.io/learn/service-mesh) sidecar proxies to intercept traffic to each workload. These sidecars intercept and manage service-to-service communication, allowing fine-grained observation and control over traffic within the cluster.
 
@@ -123,6 +114,6 @@ By default, each Rancher-provisioned cluster has one NGINX ingress controller al
 
 By default the Egress gateway is disabled, but can be enabled on install or upgrade through the values.yaml or via the [overlay file](./configuration-options.md#overlay-file).
 
-# Additional Steps for Installing Istio on an RKE2 Cluster
+## Additional Steps for Installing Istio on an RKE2 Cluster
 
 To install Istio on an RKE2 cluster, follow the steps in [this section.](../explanations/integrations-in-rancher/istio/configuration-options/install-istio-on-rke2-cluster.md)

@@ -13,29 +13,14 @@ Any Helm charts from a global catalog can be used to deploy and manage multi-clu
 
 After creating a multi-cluster application, you can program a global DNS entry to make it easier to access the application.
 
-- [Prerequisites](#prerequisites)
-- [Launching a multi-cluster app](#launching-a-multi-cluster-app)
-- [Multi-cluster app configuration options](#multi-cluster-app-configuration-options)
-  - [Targets](#targets)
-  - [Upgrades](#upgrades)
-  - [Roles](#roles)
-- [Application configuration options](#application-configuration-options)
-  - [Using a questions.yml file](#using-a-questions-yml-file)
-  - [Key value pairs for native Helm charts](#key-value-pairs-for-native-helm-charts)
-  - [Members](#members)
-  - [Overriding application configuration options for specific projects](#overriding-application-configuration-options-for-specific-projects)
-- [Upgrading multi-cluster app roles and projects](#upgrading-multi-cluster-app-roles-and-projects)
-- [Multi-cluster application management](#multi-cluster-application-management)
-- [Deleting a multi-cluster application](#deleting-a-multi-cluster-application)
-
-# Prerequisites
+## Prerequisites
 
 To create a multi-cluster app in Rancher, you must have at least one of the following permissions:
 
 - A [project-member role](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-roles) in the target cluster(s), which gives you the ability to create, read, update, and delete the workloads
 - A [cluster owner role](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles) for the clusters(s) that include the target project(s)
 
-# Launching a Multi-Cluster App
+## Launching a Multi-Cluster App
 
 1. From the **Global** view, choose **Apps** in the navigation bar. Click **Launch**.
 
@@ -57,7 +42,7 @@ To create a multi-cluster app in Rancher, you must have at least one of the foll
 
 **Result**: Your application is deployed to your chosen namespace. You can view the application status from the project's:
 
-# Multi-cluster App Configuration Options
+## Multi-cluster App Configuration Options
 
 Rancher has divided the configuration option for the multi-cluster application into several sections.
 
@@ -89,7 +74,7 @@ When launching the application, Rancher will confirm if you have these permissio
 
 > **Note:** There are some applications like _Grafana_ or _Datadog_ that require access to specific cluster-scoped resources. These applications will require the _Cluster_ role. If you find out later that the application requires cluster roles, the multi-cluster application can be upgraded to update the roles.
 
-# Application Configuration Options
+## Application Configuration Options
 
 For each Helm chart, there are a list of desired answers that must be entered in order to successfully deploy the chart. When entering answers, you must format them using the syntax rules found in [Using Helm: The format and limitations of –set](https://helm.sh/docs/intro/using_helm/#the-format-and-limitations-of---set), as Rancher passes them as `--set` flags to Helm.
 
@@ -133,7 +118,7 @@ The ability to use the same configuration to deploy the same application across 
 
 	- **Answer**: Enter the answer that you want to be used instead.
 
-# Upgrading Multi-Cluster App Roles and Projects
+## Upgrading Multi-Cluster App Roles and Projects
 
 - **Changing Roles on an existing Multi-Cluster app**
 The creator and any users added with the access-type "owner" to a multi-cluster app, can upgrade its Roles. When adding a new Role, we check if the user has that exact role in all current target projects. These checks allow the same relaxations for global admins, cluster owners and project-owners as described in the installation section for the field `Roles`.
@@ -143,7 +128,7 @@ The creator and any users added with the access-type "owner" to a multi-cluster 
 2. We do not do these membership checks when removing target projects. This is because the caller's permissions could have with respect to the target project, or the project could have been deleted and hence the caller wants to remove it from targets list.
 
 
-# Multi-Cluster Application Management
+## Multi-Cluster Application Management
 
 One of the benefits of using a multi-cluster application as opposed to multiple individual applications of the same type, is the ease of management. Multi-cluster applications can be cloned, upgraded or rolled back.
 
@@ -155,7 +140,7 @@ One of the benefits of using a multi-cluster application as opposed to multiple 
    * **Upgrade**: Upgrade your multi-cluster application to change some part of the configuration. When performing an upgrade for multi-cluster application, the [upgrade strategy](#upgrades) can be modified if you have the correct [access type](#members).
    * **Rollback**: Rollback your application to a specific version. If after an upgrade, there are issues for your multi-cluster application for one or more of your [targets](#targets), Rancher has stored up to 10 versions of the multi-cluster application. Rolling back a multi-cluster application reverts the application for **all** target clusters and projects, not just the targets(s) affected by the upgrade issue.
 
-# Deleting a Multi-Cluster Application
+## Deleting a Multi-Cluster Application
 
 1. From the **Global** view, choose **Apps** in the navigation bar.
 

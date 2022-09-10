@@ -14,18 +14,8 @@ For help choosing a Helm chart version, refer to [this page.](../../getting-star
 
 For information on enabling experimental features, refer to [this page.](../../pages-for-subheaders/enable-experimental-features.md)
 
-- [Common Options](#common-options)
-- [Advanced Options](#advanced-options)
-- [API Audit Log](#api-audit-log)
-- [Setting Extra Environment Variables](#setting-extra-environment-variables)
-- [TLS Settings](#tls-settings)
-- [Customizing your Ingress](#customizing-your-ingress)
-- [HTTP Proxy](#http-proxy)
-- [Additional Trusted CAs](#additional-trusted-cas)
-- [Private Registry and Air Gap Installs](#private-registry-and-air-gap-installs)
-- [External TLS Termination](#external-tls-termination)
 
-### Common Options
+## Common Options
 
 | Option                    | Default Value | Description                                                                        |
 | ------------------------- | ------------- | ---------------------------------------------------------------------------------- |
@@ -37,7 +27,7 @@ For information on enabling experimental features, refer to [this page.](../../p
 
 <br/>
 
-### Advanced Options
+## Advanced Options
 
 | Option                         | Default Value                                         | Description                                                                                                                                       |
 | ------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |

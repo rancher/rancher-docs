@@ -13,21 +13,6 @@ Template revisions can be used in two ways: to create a new cluster, or to upgra
 
 The template owner has full control over template revisions, and can create new revisions to update the template, delete or disable revisions that should not be used to create clusters, and choose which template revision is the default.
 
-This section covers the following topics:
-
-- [Prerequisites](#prerequisites)
-- [Creating a template](#creating-a-template)
-- [Updating a template](#updating-a-template)
-- [Deleting a template](#deleting-a-template)
-- [Creating a revision based on the default revision](#creating-a-revision-based-on-the-default-revision)
-- [Creating a revision based on a cloned revision](#creating-a-revision-based-on-a-cloned-revision)
-- [Disabling a template revision](#disabling-a-template-revision)
-- [Re-enabling a disabled template revision](#re-enabling-a-disabled-template-revision)
-- [Setting a template revision as default](#setting-a-template-revision-as-default)
-- [Deleting a template revision](#deleting-a-template-revision)
-- [Upgrading a cluster to use a new template revision](#upgrading-a-cluster-to-use-a-new-template-revision)
-- [Exporting a running cluster to a new RKE template and revision](#exporting-a-running-cluster-to-a-new-rke-template-and-revision)
-
 ### Prerequisites
 
 You can create RKE templates if you have the **Create RKE Templates** permission, which can be [given by an administrator.](creator-permissions.md)

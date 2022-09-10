@@ -19,13 +19,9 @@ This section assumes familiarity with how monitoring components work together. F
 
 :::
 
-- [Route Restrictions](#route-restrictions)
-- [Route Configuration](#route-configuration)
-  - [Receiver](#receiver)
-  - [Grouping](#grouping)
-  - [Matching](#matching)
 
-# Route Restrictions
+
+## Route Restrictions
 
 Alertmanager proxies alerts for Prometheus based on its receivers and a routing tree that filters alerts to certain receivers based on labels.
 
@@ -35,7 +31,7 @@ In the Rancher UI for configuring routes and receivers, you can configure routin
 
 Each receiver is for one or more notification providers. So if you know that every alert for Slack should also go to PagerDuty, you can configure both in the same receiver.
 
-# Route Configuration
+## Route Configuration
 
 ### Note on Labels and Annotations
 

@@ -8,12 +8,6 @@ This section describes how to manipulate your downstream Kubernetes cluster with
 
 For more information on using kubectl, see [Kubernetes Documentation: Overview of kubectl](https://kubernetes.io/docs/reference/kubectl/overview/).
 
-- [Accessing clusters with kubectl shell in the Rancher UI](#accessing-clusters-with-kubectl-shell-in-the-rancher-ui)
-- [Accessing clusters with kubectl from your workstation](#accessing-clusters-with-kubectl-from-your-workstation)
-- [Note on Resources created using kubectl](#note-on-resources-created-using-kubectl)
-- [Authenticating Directly with a Downstream Cluster](#authenticating-directly-with-a-downstream-cluster)
-  - [Connecting Directly to Clusters with FQDN Defined](#connecting-directly-to-clusters-with-fqdn-defined)
-  - [Connecting Directly to Clusters without FQDN Defined](#connecting-directly-to-clusters-without-fqdn-defined)
 
 
 ### Accessing Clusters with kubectl Shell in the Rancher UI
@@ -50,7 +44,7 @@ These instructions assume that you have already created a Kubernetes cluster, an
 
 Rancher will discover and show resources created by `kubectl`. However, these resources might not have all the necessary annotations on discovery. If an operation (for instance, scaling the workload) is done to the resource using the Rancher UI/API, this may trigger recreation of the resources due to the missing annotations. This should only happen the first time an operation is done to the discovered resource.
 
-# Authenticating Directly with a Downstream Cluster
+## Authenticating Directly with a Downstream Cluster
 
 This section intended to help you set up an alternative method to access an [RKE cluster.](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)
 

@@ -37,11 +37,10 @@ Deploying to DigitalOcean will incur charges.
     - `rancher_server_admin_password` - Admin password for created Rancher server
 
 5. **Optional:** Modify optional variables within `terraform.tfvars`.
-See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [DO Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/do) for more information.
-Suggestions include:
-    - `do_region` - DigitalOcean region, choose the closest instead of the default (`nyc1`)
-    - `prefix` - Prefix for all created resources
-    - `droplet_size` - Droplet size used, minimum is `s-2vcpu-4gb` but `s-4vcpu-8gb` could be used if within budget
+See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [DO Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/do) for more information. Suggestions include:
+   - `do_region` - DigitalOcean region, choose the closest instead of the default (`nyc1`)
+   - `prefix` - Prefix for all created resources
+   - `droplet_size` - Droplet size used, minimum is `s-2vcpu-4gb` but `s-4vcpu-8gb` could be used if within budget
 
 6. Run `terraform init`.
 

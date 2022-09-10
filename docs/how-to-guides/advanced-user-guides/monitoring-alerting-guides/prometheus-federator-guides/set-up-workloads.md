@@ -3,9 +3,6 @@ title: Setting up Prometheus Federator for a Workload
 weight: 4
 ---
 
-- [Display CPU and Memory Metrics for a Workload](#display-cpu-and-memory-metrics-for-a-workload)
-- [Setting up Metrics Beyond CPU and Memory](#setting-up-metrics-beyond-cpu-and-memory)
-<!-- - [Custom Metrics](#custom-metrics) -->
 
 ### Display CPU and Memory Metrics for a Workload
 

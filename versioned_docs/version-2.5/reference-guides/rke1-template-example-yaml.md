@@ -1,5 +1,5 @@
 ---
-title: Example YAML
+title: RKE1 Example YAML
 weight: 60
 aliases:
   - /rancher/v2.x/en/admin-settings/rke-templates/example-yaml/

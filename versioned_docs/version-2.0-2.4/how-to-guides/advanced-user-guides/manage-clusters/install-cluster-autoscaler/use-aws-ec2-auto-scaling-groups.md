@@ -7,18 +7,8 @@ This guide will show you how to install and use [Kubernetes cluster-autoscaler](
 
 We are going to install a Rancher RKE custom cluster with a fixed number of nodes with the etcd and controlplane roles, and a variable nodes with the worker role, managed by `cluster-autoscaler`.
 
-- [Prerequisites](#prerequisites)
-- [1. Create a Custom Cluster](#1-create-a-custom-cluster)
-- [2. Configure the Cloud Provider](#2-configure-the-cloud-provider)
-- [3. Deploy Nodes](#3-deploy-nodes)
-- [4. Install cluster-autoscaler](#4-install-cluster-autoscaler)
-  - [Parameters](#parameters)
-  - [Deployment](#deployment)
-- [Testing](#testing)
-  - [Generating Load](#generating-load)
-  - [Checking Scale](#checking-scale)
 
-# Prerequisites
+## Prerequisites
 
 These elements are required to follow this guide:
 

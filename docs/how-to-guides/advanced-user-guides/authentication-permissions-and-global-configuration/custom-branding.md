@@ -8,13 +8,7 @@ import TabItem from '@theme/TabItem';
 
 Rancher v2.6 introduced the ability to customize Rancher’s branding and navigation links.
 
-- [Changing Brand Settings](#changing-brand-settings)
-- [Brand Configuration](#brand-configuration)
-- [Custom Navigation Links](#custom-navigation-links)
-- [Link Configuration](#link-configuration)
-- [Link Examples](#link-examples)
-
-# Changing Brand Settings
+## Changing Brand Settings
 
 :::note Prerequisite:
 
@@ -27,7 +21,7 @@ To configure the brand settings,
 1. Click **☰ > Global settings**.
 2. Click **Branding**.
 
-# Brand Configuration
+## Brand Configuration
 
 ### Private Label Company Name
 
@@ -67,7 +61,7 @@ To configure banner settings,
 </TabItem>
 </Tabs>
 
-# Custom Navigation Links
+## Custom Navigation Links
 
 In this section, you'll learn how to configure the links in the left navigation bar of the **Cluster Dashboard**. To get to the cluster dashboard,
 
@@ -101,7 +95,7 @@ You will need to have at least cluster member or project member permissions.
     For more details on setting up links, including optional fields, see [Link Configuration.](#link-configuration)
 6. Click **Create**.
 
-# Link Configuration
+## Link Configuration
 
 ### `name`
 

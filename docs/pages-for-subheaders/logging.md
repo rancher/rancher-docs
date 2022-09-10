@@ -10,22 +10,8 @@ The [Banzai Cloud Logging operator](https://banzaicloud.com/docs/one-eye/logging
 
 For an overview of the changes in v2.5, see [this section.](../explanations/integrations-in-rancher/logging/logging-architecture.md#changes-in-rancher-v2-5) For information about migrating from Logging V1, see [this page.](../explanations/integrations-in-rancher/logging/migrate-to-rancher-v2.5+-logging.md)
 
-- [Enabling Logging](#enabling-logging)
-- [Uninstall Logging](#uninstall-logging)
-- [Architecture](#architecture)
-- [Role-based Access Control](#role-based-access-control)
-- [Configuring the Logging Custom Resources](#configuring-the-logging-custom-resources)
-  - [Flows and ClusterFlows](#flows-and-clusterflows)
-  - [Outputs and ClusterOutputs](#outputs-and-clusteroutputs)
-- [Configuring the Logging Helm Chart](#configuring-the-logging-helm-chart)
-  - [Windows Support](#windows-support)
-  - [Working with a Custom Docker Root Directory](#working-with-a-custom-docker-root-directory)
-  - [Working with Taints and Tolerations](#working-with-taints-and-tolerations)
-  - [Logging V2 with SELinux](#logging-v2-with-selinux)
-  - [Additional Logging Sources](#additional-logging-sources)
-- [Troubleshooting](#troubleshooting)
 
-# Enabling Logging
+## Enabling Logging
 
 You can enable the logging for a Rancher managed cluster by going to the Apps page and installing the logging app.
 
@@ -35,7 +21,7 @@ You can enable the logging for a Rancher managed cluster by going to the Apps pa
 
 **Result:** The logging app is deployed in the `cattle-logging-system` namespace.
 
-# Uninstall Logging
+## Uninstall Logging
 
 1. Go to the cluster where you want to install logging and click **Apps & Marketplace**.
 1. Click **Installed Apps**.
@@ -45,17 +31,17 @@ You can enable the logging for a Rancher managed cluster by going to the Apps pa
 
 **Result** `rancher-logging` is uninstalled.
 
-# Architecture
+## Architecture
 
 For more information about how the logging application works, see [this section.](../explanations/integrations-in-rancher/logging/logging-architecture.md)
 
 
 
-# Role-based Access Control
+## Role-based Access Control
 
 Rancher logging has two roles, `logging-admin` and `logging-view`. For more information on how and when to use these roles, see [this page.](../explanations/integrations-in-rancher/logging/rbac-for-logging.md)
 
-# Configuring Logging Custom Resources
+## Configuring Logging Custom Resources
 
 To manage `Flows,` `ClusterFlows`, `Outputs`, and `ClusterOutputs`,
 
@@ -71,7 +57,7 @@ For help with configuring `Flows` and `ClusterFlows`, see [this page.](../explan
 
 For help with configuring `Outputs` and `ClusterOutputs`, see [this page.](../explanations/integrations-in-rancher/logging/custom-resource-configuration/outputs-and-clusteroutputs.md)
 
-# Configuring the Logging Helm Chart
+## Configuring the Logging Helm Chart
 
 For a list of options that can be configured when the logging application is installed or upgraded, see [this page.](../explanations/integrations-in-rancher/logging/logging-helm-chart-options.md)
 
@@ -100,7 +86,7 @@ For information on enabling the logging application for SELinux-enabled nodes, s
 By default, Rancher collects logs for control plane components and node components for all cluster types. In some cases additional logs can be collected. For details, see [this section.](../explanations/integrations-in-rancher/logging/logging-helm-chart-options.md#additional-logging-sources)
 
 
-# Troubleshooting
+## Troubleshooting
 
 ### The `cattle-logging` Namespace Being Recreated
 

@@ -23,14 +23,6 @@ For the full list of requirements, see [this section.](#requirements-for-windows
 
 For a summary of Kubernetes features supported in Windows, see the Kubernetes documentation on [supported functionality and limitations for using Kubernetes with Windows](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#supported-functionality-and-limitations) or the [guide for scheduling Windows containers in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/user-guide-windows-containers/).
 
-This guide covers the following topics:
-
-<!-- TOC -->
-
-- [Requirements](#requirements-for-windows-clusters)
-- [Tutorial: How to Create a Cluster with Windows Support](#tutorial-how-to-create-a-cluster-with-windows-support)
-- [Configuration for Storage Classes in Azure](#configuration-for-storage-classes-in-azure)
-<!-- /TOC -->
 
 # Requirements for Windows Clusters
 
@@ -156,13 +148,6 @@ When you provision a cluster with Rancher on existing nodes, you will add nodes 
 
 To set up a cluster with support for Windows nodes and containers, you will need to complete the tasks below.
 
-<!-- TOC -->
-
-1. [Provision Hosts](#1-provision-hosts)
-1. [Create the Cluster on Existing Nodes](#2-create-the-cluster-on-existing-nodes)
-1. [Add Nodes to the Cluster](#3-add-nodes-to-the-cluster)
-1. [Optional: Configuration for Azure Files](#4-optional-configuration-for-azure-files)
-<!-- /TOC -->
 
 # 1. Provision Hosts
 

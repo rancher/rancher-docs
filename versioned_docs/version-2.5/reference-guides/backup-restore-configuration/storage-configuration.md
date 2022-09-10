@@ -11,15 +11,8 @@ Configure a storage location where all backups are saved by default. You will ha
 
 Only one storage location can be configured at the operator level.
 
-- [Storage Location Configuration](#storage-location-configuration)
-  - [No Default Storage Location](#no-default-storage-location)
-  - [S3-compatible Object Store](#s3-compatible-object-store)
-  - [Use an existing StorageClass](#existing-storageclass)
-  - [Use an existing PersistentVolume](#existing-persistent-volume)
-- [Encryption](#encryption)
-- [Example values.yaml for the rancher-backup Helm Chart](#example-values-yaml-for-the-rancher-backup-helm-chart)
 
-# Storage Location Configuration
+## Storage Location Configuration
 
 ### No Default Storage Location
 
@@ -55,7 +48,7 @@ Select an existing Persistent Volume (PV) that will be used to store your backup
 It is highly recommended to use a Persistent Volume with a reclaim policy of "Retain". Otherwise if the PVC created by the `rancher-backup` chart gets deleted (either during app upgrade, or accidentally), the PV will get deleted too, which means all backups saved in it will get deleted.
 
 
-# Example values.yaml for the rancher-backup Helm Chart
+## Example values.yaml for the rancher-backup Helm Chart
 
 The documented `values.yaml` file that can be used to configure `rancher-backup` operator when the Helm CLI is used can be found in the [backup-restore-operator repository.](https://github.com/rancher/backup-restore-operator/blob/release/v1.0/charts/rancher-backup/values.yaml)
 

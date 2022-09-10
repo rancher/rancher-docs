@@ -8,14 +8,8 @@ import TabItem from '@theme/TabItem';
 
 For the full details on configuring `Outputs` and `ClusterOutputs`, see the [Banzai Cloud Logging operator documentation.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/output/)
 
-- [Configuration](#configuration)
-- [YAML Examples](#yaml-examples)
-  - [Cluster Output to ElasticSearch](#cluster-output-to-elasticsearch)
-  - [Output to Splunk](#output-to-splunk)
-  - [Output to Syslog](#output-to-syslog)
-  - [Unsupported Outputs](#unsupported-outputs)
 
-# Configuration
+## Configuration
 
 <Tabs>
 <TabItem value="v2.5.8+">
@@ -23,7 +17,7 @@ For the full details on configuring `Outputs` and `ClusterOutputs`, see the [Ban
 - [Outputs](#outputs-2-5-8)
 - [ClusterOutputs](#clusteroutputs-2-5-8)
 
-# Changes in v2.5.8
+## Changes in v2.5.8
 
 The `Outputs` and `ClusterOutputs` can now be configured by filling out forms in the Rancher UI.
 
@@ -65,7 +59,7 @@ For example configuration for each logging plugin supported by the logging opera
 
 <a id="clusteroutputs-2-5-8"></a>
 
-# ClusterOutputs
+## ClusterOutputs
 
 `ClusterOutput` defines an `Output` without namespace restrictions. It is only effective when deployed in the same namespace as the logging operator.
 
@@ -93,7 +87,7 @@ For examples of configuration for each logging plugin supported by the logging o
 
 <a id="clusteroutputs-2-5-0"></a>
 
-# ClusterOutputs
+## ClusterOutputs
 
 `ClusterOutput` defines an `Output` without namespace restrictions. It is only effective when deployed in the same namespace as the logging operator.
 
@@ -107,7 +101,7 @@ For example configuration for each logging plugin supported by the logging opera
 </Tabs>
 
 
-# YAML Examples
+## YAML Examples
 
 Once logging is installed, you can use these examples to help craft your own logging pipeline.
 

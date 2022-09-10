@@ -3,11 +3,8 @@ title: Built-in Dashboards
 weight: 3
 ---
 
-- [Grafana UI](#grafana-ui)
-- [Alertmanager UI](#alertmanager-ui)
-- [Prometheus UI](#prometheus-ui)
 
-# Grafana UI
+## Grafana UI
 
 [Grafana](https://grafana.com/grafana/) allows you to query, visualize, alert on and understand your metrics no matter where they are stored. Create, explore, and share dashboards with your team and foster a data driven culture.
 
@@ -26,7 +23,7 @@ To create a persistent Grafana dashboard, see [this page.](../../../how-to-guide
 For information about role-based access control for Grafana, see [this section.](rbac-for-monitoring.md#role-based-access-control-for-grafana)
 
 
-# Alertmanager UI
+## Alertmanager UI
 
 When `rancher-monitoring` is installed, the Prometheus Alertmanager UI is deployed, allowing you to view your alerts and the current Alertmanager configuration.
 
@@ -66,7 +63,7 @@ For more information on configuring Alertmanager in Rancher, see [this page.](..
 To see alerts that are fired by default, go to the Alertmanager UI and click **Expand all groups**.
 
 
-# Prometheus UI
+## Prometheus UI
 
 By default, the [kube-state-metrics service](https://github.com/kubernetes/kube-state-metrics) provides a wealth of information about CPU and memory utilization to the monitoring application. These metrics cover Kubernetes resources across namespaces. This means that in order to see resource metrics for a service, you don't need to create a new ServiceMonitor for it. Because the data is already in the time series database, you can go to the Prometheus UI and run a PromQL query to get the information. The same query can be used to configure a Grafana dashboard to show a graph of those metrics over time.
 
@@ -78,6 +75,7 @@ To see the Prometheus UI, install `rancher-monitoring`. Then:
 1. Click **Prometheus Graph**.
 
 <figcaption>Prometheus Graph UI</figcaption>
+
 ![Prometheus Graph UI](/img/prometheus-graph-ui.png)
 
 ### Viewing the Prometheus Targets

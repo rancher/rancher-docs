@@ -4,12 +4,6 @@ shortTitle: Helm Chart Options
 weight: 4
 ---
 
-- [Enable/Disable Windows Node Logging](#enable-disable-windows-node-logging)
-- [Working with a Custom Docker Root Directory](#working-with-a-custom-docker-root-directory)
-- [Adding NodeSelector Settings and Tolerations for Custom Taints](#adding-nodeselector-settings-and-tolerations-for-custom-taints)
-- [Enabling the Logging Application to Work with SELinux](#enabling-the-logging-application-to-work-with-selinux)
-- [Additional Logging Sources](#additional-logging-sources)
-- [Systemd Configuration](#systemd-configuration)
 
 ### Enable/Disable Windows Node Logging
 

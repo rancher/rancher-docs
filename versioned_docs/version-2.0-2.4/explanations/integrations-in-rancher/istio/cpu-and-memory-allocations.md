@@ -35,7 +35,7 @@ istio-pilot |discovery| 500m | 2048Mi | 1000m | 4096Mi | Y
  **Total**           | **-**        | **3950m**         | **5546Mi**        | **>12300m**         | **>14848Mi**         | **-**   
 
 
-# Configuring Resource Allocations
+## Configuring Resource Allocations
 
 You can individually configure the resource allocation for each type of Istio component. This section includes the default resource allocations for each component.
 

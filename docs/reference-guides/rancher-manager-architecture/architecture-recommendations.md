@@ -5,15 +5,6 @@ weight: 3
 
 If you are installing Rancher on a single node, the main architecture recommendation that applies to your installation is that the node running Rancher should be [separate from downstream clusters.](#separation-of-rancher-and-user-clusters)
 
-This section covers the following topics:
-
-- [Separation of Rancher and User Clusters](#separation-of-rancher-and-user-clusters)
-- [Why HA is Better for Rancher in Production](#why-ha-is-better-for-rancher-in-production)
-- [Recommended Load Balancer Configuration for Kubernetes Installations](#recommended-load-balancer-configuration-for-kubernetes-installations)
-- [Environment for Kubernetes Installations](#environment-for-kubernetes-installations)
-- [Recommended Node Roles for Kubernetes Installations](#recommended-node-roles-for-kubernetes-installations)
-- [Architecture for an Authorized Cluster Endpoint (ACE)](#architecture-for-an-authorized-cluster-endpoint-ace)
-
 # Separation of Rancher and User Clusters
 
 A user cluster is a downstream Kubernetes cluster that runs your apps and services.

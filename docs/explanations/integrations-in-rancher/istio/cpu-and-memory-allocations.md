@@ -27,7 +27,7 @@ In Kubernetes, the resource request indicates that the workload will not deploye
 | proxy          |  10m         | 10mi            | 2000m        | 1024mi   |
 | **Totals:** | **710m** | **2314Mi** | **6000m** | **3072Mi** |
 
-# Configuring Resource Allocations
+## Configuring Resource Allocations
 
 You can individually configure the resource allocation for each type of Istio component. This section includes the default resource allocations for each component.
 

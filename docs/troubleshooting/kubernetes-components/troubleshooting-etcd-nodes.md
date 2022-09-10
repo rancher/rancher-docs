@@ -5,25 +5,8 @@ weight: 1
 
 This section contains commands and tips for troubleshooting nodes with the `etcd` role.
 
-This page covers the following topics:
 
-- [Checking if the etcd Container is Running](#checking-if-the-etcd-container-is-running)
-- [etcd Container Logging](#etcd-container-logging)
-- [etcd Cluster and Connectivity Checks](#etcd-cluster-and-connectivity-checks)
-  - [Check etcd Members on all Nodes](#check-etcd-members-on-all-nodes)
-  - [Check Endpoint Status](#check-endpoint-status)
-  - [Check Endpoint Health](#check-endpoint-health)
-  - [Check Connectivity on Port TCP/2379](#check-connectivity-on-port-tcp-2379)
-  - [Check Connectivity on Port TCP/2380](#check-connectivity-on-port-tcp-2380)
-- [etcd Alarms](#etcd-alarms)
-- [etcd Space Errors](#etcd-space-errors)
-- [Log Level](#log-level)
-- [etcd Content](#etcd-content)
-  - [Watch Streaming Events](#watch-streaming-events)
-  - [Query etcd Directly](#query-etcd-directly)
-- [Replacing Unhealthy etcd Nodes](#replacing-unhealthy-etcd-nodes)
-
-# Checking if the etcd Container is Running
+## Checking if the etcd Container is Running
 
 The container for etcd should have status **Up**. The duration shown after **Up** is the time the container has been running.
 
@@ -37,7 +20,7 @@ CONTAINER ID        IMAGE                         COMMAND                  CREAT
 605a124503b9        rancher/coreos-etcd:v3.2.18   "/usr/local/bin/et..."   2 hours ago         Up 2 hours                              etcd
 ```
 
-# etcd Container Logging
+## etcd Container Logging
 
 The logging of the container can contain information on what the problem could be.
 
@@ -52,7 +35,7 @@ docker logs etcd
 | `rafthttp: request cluster ID mismatch` | The node with the etcd instance logging `rafthttp: request cluster ID mismatch` is trying to join a cluster that has already been formed with another peer. The node should be removed from the cluster, and re-added. |
 | `rafthttp: failed to find member` | The cluster state (`/var/lib/etcd`) contains wrong information to join the cluster. The node should be removed from the cluster, the state directory should be cleaned and the node should be re-added.
 
-# etcd Cluster and Connectivity Checks
+## etcd Cluster and Connectivity Checks
 
 The address where etcd is listening depends on the address configuration of the host etcd is running on. If an internal address is configured for the host etcd is running on, the endpoint for `etcdctl` needs to be specified explicitly. If any of the commands respond with `Error:  context deadline exceeded`, the etcd instance is unhealthy (either quorum is lost or the instance is not correctly joined in the cluster)
 
@@ -177,7 +160,7 @@ Validating connection to https://IP:2380/version
 {"etcdserver":"3.2.18","etcdcluster":"3.2.0"}
 ```
 
-# etcd Alarms
+## etcd Alarms
 
 etcd will trigger alarms, for instance when it runs out of space.
 
@@ -198,7 +181,7 @@ memberID:x alarm:NOSPACE
 memberID:x alarm:NOSPACE
 ```
 
-# etcd Space Errors
+## etcd Space Errors
 
 Related error messages are `etcdserver: mvcc: database space exceeded` or `applying raft message exceeded backend quota`. Alarm `NOSPACE` will be triggered.
 
@@ -298,7 +281,7 @@ docker exec etcd etcdctl alarm disarm
 docker exec etcd etcdctl alarm list
 ```
 
-# Log Level
+## Log Level
 
 The log level of etcd can be changed dynamically via the API. You can configure debug logging using the commands below.
 
@@ -324,7 +307,7 @@ Command when using etcd version lower than 3.3.x (Kubernetes 1.13.x and lower) a
 docker run --net=host -v $(docker inspect kubelet --format '{{ range .Mounts }}{{ if eq .Destination "/etc/kubernetes" }}{{ .Source }}{{ end }}{{ end }}')/ssl:/etc/kubernetes/ssl:ro appropriate/curl -s -XPUT -d '{"Level":"INFO"}' --cacert $(docker exec etcd printenv ETCDCTL_CACERT) --cert $(docker exec etcd printenv ETCDCTL_CERT) --key $(docker exec etcd printenv ETCDCTL_KEY) $(docker exec etcd printenv ETCDCTL_ENDPOINT)/config/local/log
 ```
 
-# etcd Content
+## etcd Content
 
 If you want to investigate the contents of your etcd, you can either watch streaming events or you can query etcd directly, see below for examples.
 
@@ -360,6 +343,6 @@ You can process the data to get a summary of count per key, using the command be
 docker exec etcd etcdctl get /registry --prefix=true --keys-only | grep -v ^$ | awk -F'/' '{ if ($3 ~ /cattle.io/) {h[$3"/"$4]++} else { h[$3]++ }} END { for(k in h) print h[k], k }' | sort -nr
 ```
 
-# Replacing Unhealthy etcd Nodes
+## Replacing Unhealthy etcd Nodes
 
 When a node in your etcd cluster becomes unhealthy, the recommended approach is to fix or remove the failed or unhealthy node before adding a new etcd node to the cluster.

@@ -26,25 +26,12 @@ After configuring Rancher and GitHub, you can deploy containers running Jenkins 
 >- Still using v2.0.x? See the pipeline documentation for [previous versions](../reference-guides/pipelines/v2.0.x.md).
 >- Rancher's pipeline provides a simple CI/CD experience, but it does not offer the full power and flexibility of and is not a replacement of enterprise-grade Jenkins or other CI tools your team uses.
 
-This section covers the following topics:
 
-- [Concepts](#concepts)
-- [How Pipelines Work](#how-pipelines-work)
-- [Roles-based Access Control for Pipelines](#roles-based-access-control-for-pipelines)
-- [Setting up Pipelines](#setting-up-pipelines)
-  - [Configure version control providers](#1-configure-version-control-providers)
-  - [Configure repositories](#2-configure-repositories)
-  - [Configure the pipeline](#3-configure-the-pipeline)
-- [Pipeline Configuration Reference](#pipeline-configuration-reference)
-- [Running your Pipelines](#running-your-pipelines)
-- [Triggering a Pipeline](#triggering-a-pipeline)
-  - [Modifying the Event Triggers for the Repository](#modifying-the-event-triggers-for-the-repository)
-
-# Concepts
+## Concepts
 
 For an explanation of concepts and terminology used in this section, refer to [this page.](../reference-guides/pipelines/concepts.md)
 
-# How Pipelines Work
+## How Pipelines Work
 
 After enabling the ability to use pipelines in a project, you can configure multiple pipelines in each project. Each pipeline is unique and can be configured independently.
 
@@ -70,7 +57,7 @@ When you configure a pipeline in one of your projects, a namespace specifically 
 
   >**Note:** The managed Jenkins instance works statelessly, so don't worry about its data persistency. The Docker Registry and Minio instances use ephemeral volumes by default, which is fine for most use cases. If you want to make sure pipeline logs can survive node failures, you can configure persistent volumes for them, as described in [data persistency for pipeline components](../reference-guides/pipelines/configure-persistent-data.md).
 
-# Roles-based Access Control for Pipelines
+## Roles-based Access Control for Pipelines
 
 If you can access a project, you can enable repositories to start building pipelines.
 
@@ -78,7 +65,7 @@ Only [administrators](../how-to-guides/advanced-user-guides/authentication-permi
 
 Project members can only configure repositories and pipelines.
 
-# Setting up Pipelines
+## Setting up Pipelines
 
 To set up pipelines, you will need to do the following:
 
@@ -228,7 +215,7 @@ Now that repositories are added to your project, you can start configuring the p
 **Results:** Your pipeline is now configured and ready to be run.
 
 
-# Pipeline Configuration Reference
+## Pipeline Configuration Reference
 
 Refer to [this page](../reference-guides/pipelines/pipeline-configuration.md) for details on how to configure a pipeline to:
 
@@ -247,7 +234,7 @@ The configuration reference also covers how to configure:
 - Secrets
 
 
-# Running your Pipelines
+## Running your Pipelines
 
 Run your pipeline for the first time. From the project view in Rancher, go to **Resources > Pipelines.** (In versions before v2.3.0, go to the **Pipelines** tab.) Find your pipeline and select the vertical **&#8942; > Run**.
 
@@ -259,7 +246,7 @@ During this initial run, your pipeline is tested, and the following pipeline com
 
 This process takes several minutes. When it completes, you can view each pipeline component from the project **Workloads** tab.
 
-# Triggering a Pipeline
+## Triggering a Pipeline
 
 When a repository is enabled, a webhook is automatically set in the version control provider. By default, the pipeline is triggered by a **push** event to a repository, but you can modify the event(s) that trigger running the pipeline.
 

@@ -12,19 +12,6 @@ One benefit of installing Kubernetes on node pools hosted by an infrastructure p
 
 The available cloud providers to create a node template are decided based on active [node drivers](use-new-nodes-in-an-infra-provider.md#node-drivers).
 
-This section covers the following topics:
-
-- [Node templates](#node-templates)
-  - [Node labels](#node-labels)
-  - [Node taints](#node-taints)
-  - [Administrator control of node templates](#administrator-control-of-node-templates)
-- [Node pools](#node-pools)
-  - [Node pool taints](#node-pool-taints)
-  - [About node auto-replace](#about-node-auto-replace)
-  - [Enabling node auto-replace](#enabling-node-auto-replace)
-  - [Disabling node auto-replace](#disabling-node-auto-replace)
-- [Cloud credentials](#cloud-credentials)
-- [Node drivers](#node-drivers)
 
 # Node Templates
 

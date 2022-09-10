@@ -4,13 +4,13 @@ shortTitle: GKE Cluster Configuration
 weight: 3
 ---
 
-# Changes in Rancher v2.6
+## Changes in Rancher v2.6
 
 - Support for additional configuration options:
   - Project network isolation
   - Network tags
 
-# Cluster Location
+## Cluster Location
 
 | Value | Description |
 |--------|--------------|
@@ -19,7 +19,7 @@ weight: 3
 | Additional Zones | For zonal clusters, you can select additional zones to create a [multi-zone cluster.](https://cloud.google.com/kubernetes-engine/docs/concepts/types-of-clusters#multi-zonal_clusters) |
 | Region | For [regional clusters,](https://cloud.google.com/kubernetes-engine/docs/concepts/types-of-clusters#regional_clusters) you can select a region. For more information about available regions and zones, refer to [this section](https://cloud.google.com/compute/docs/regions-zones#available). The first part of each zone name is the name of the region. |
 
-# Cluster Options
+## Cluster Options
 
 ### Kubernetes Version
 

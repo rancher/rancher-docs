@@ -11,26 +11,8 @@ If you want to manage the _cluster_ and not individual nodes, see [Editing Clust
 
 :::
 
-This section covers the following topics:
 
-- [Node options available for each cluster creation option](#node-options-available-for-each-cluster-creation-option)
-  - [Nodes hosted by an infrastructure provider](#nodes-hosted-by-an-infrastructure-provider)
-  - [Nodes provisioned by hosted Kubernetes providers](#nodes-provisioned-by-hosted-kubernetes-providers)
-  - [Registered nodes](#registered-nodes)
-- [Managing and editing individual nodes](#managing-and-editing-individual-nodes)
-- [Viewing a node in the Rancher API](#viewing-a-node-in-the-rancher-api)
-- [Deleting a node](#deleting-a-node)
-- [Scaling nodes](#scaling-nodes)
-- [SSH into a node hosted by an infrastructure provider](#ssh-into-a-node-hosted-by-an-infrastructure-provider)
-- [Cordoning a node](#cordoning-a-node)
-- [Draining a node](#draining-a-node)
-  - [Aggressive and safe draining options](#aggressive-and-safe-draining-options)
-  - [Grace period](#grace-period)
-  - [Timeout](#timeout)
-  - [Drained and cordoned state](#drained-and-cordoned-state)
-- [Labeling a node to be ignored by Rancher](#labeling-a-node-to-be-ignored-by-rancher)
-
-# Node Options Available for Each Cluster Creation Option
+## Node Options Available for Each Cluster Creation Option
 
 The following table lists which node options are available for each type of cluster in Rancher. Click the links in the **Option** column for more detailed information about each feature.
 
@@ -71,7 +53,7 @@ Options for managing nodes [hosted by a Kubernetes provider](../../../pages-for-
 
 Although you can deploy workloads to a [registered cluster](../../new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md) using Rancher, you cannot manage individual cluster nodes. All management of imported cluster nodes must take place outside of Rancher.
 
-# Managing and Editing Individual Nodes
+## Managing and Editing Individual Nodes
 
 Editing a node lets you:
 
@@ -82,11 +64,11 @@ Editing a node lets you:
 
 To manage individual nodes, browse to the cluster that you want to manage and then select **Nodes** from the main menu. You can open the options menu for a node by clicking its **⋮** icon (**..**.).
 
-# Viewing a Node in the Rancher API
+## Viewing a Node in the Rancher API
 
 Select this option to view the node's [API endpoints](../../../pages-for-subheaders/about-the-api.md).
 
-# Deleting a Node
+## Deleting a Node
 
 Use **Delete** to remove defective nodes from the cloud provider.
 
@@ -98,11 +80,11 @@ If your cluster is hosted by an infrastructure provider, and you want to scale y
 
 :::
 
-# Scaling Nodes
+## Scaling Nodes
 
 For nodes hosted by an infrastructure provider, you can scale the number of nodes in each [node pool](../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#node-pools) by using the scale controls. This option isn't available for other cluster types.
 
-# SSH into a Node Hosted by an Infrastructure Provider
+## SSH into a Node Hosted by an Infrastructure Provider
 
 For [nodes hosted by an infrastructure provider](../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md), you have the option of downloading its SSH key so that you can connect to it remotely from your desktop.
 
@@ -117,11 +99,11 @@ For [nodes hosted by an infrastructure provider](../../../pages-for-subheaders/u
     ssh -i id_rsa root@<IP_OF_HOST>
     ```
 
-# Cordoning a Node
+## Cordoning a Node
 
 _Cordoning_ a node marks it as unschedulable. This feature is useful for performing short tasks on the node during small maintenance windows, like reboots, upgrades, or decommissions.  When you're done, power back on and make the node schedulable again by uncordoning it.
 
-# Draining a Node
+## Draining a Node
 
 _Draining_ is the process of first cordoning the node, and then evicting all its pods. This feature is useful for performing node maintenance (like kernel upgrades or hardware maintenance). It prevents new pods from deploying to the node while redistributing existing pods so that users don't experience service interruption.
 
@@ -170,7 +152,7 @@ Once drain successfully completes, the node will be in a state of `drained`. You
 
 **Want to know more about cordon and drain?** See the [Kubernetes documentation](https://kubernetes.io/docs/tasks/administer-cluster/cluster-management/#maintenance-on-a-node).
 
-# Labeling a Node to be Ignored by Rancher
+## Labeling a Node to be Ignored by Rancher
 
 Some solutions, such as F5's BIG-IP integration, may require creating a node that is never registered to a cluster.
 

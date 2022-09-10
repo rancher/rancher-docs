@@ -3,23 +3,6 @@ title: Launching Kubernetes on New Nodes in an Infrastructure Provider
 weight: 2205
 ---
 
-This section covers the following topics:
-
-- [RKE Clusters](#rke-clusters)
-  - [Node templates](#node-templates)
-    - [Node labels](#node-labels)
-    - [Node taints](#node-taints)
-    - [Administrator control of node templates](#administrator-control-of-node-templates)
-  - [Node pools](#node-pools)
-    - [Node pool taints](#node-pool-taints)
-    - [About node auto-replace](#about-node-auto-replace)
-    - [Enabling node auto-replace](#enabling-node-auto-replace)
-    - [Disabling node auto-replace](#disabling-node-auto-replace)
-  - [Cloud credentials](#cloud-credentials)
-  - [Node drivers](#node-drivers)
-- [RKE2 Clusters](#rke2-clusters)
-  - [Node roles in RKE2](#node-roles-in-rke2)
-
 When you create an RKE or RKE2 cluster using a node template in Rancher, each resulting node pool is shown in a new **Machine Pools** tab. You can see the machine pools by doing the following:
 
 1. Click  **☰ > Cluster Management**.
@@ -85,6 +68,7 @@ The recommended setup is to have:
 By default, Rancher tries to run the Docker Install script when provisioning RKE1 downstream cluster nodes, such as in vSphere. However, the Rancher Docker installation script would fail in air-gapped environments. To work around this issue, you may choose to skip installing Docker when creating a Node Template where Docker is pre-installed onto a VM image. You can accomplish this by selecting **None** in the dropdown list for `Docker Install URL` under **Engine Options** in the Rancher UI.
 
 <figcaption>**Engine Options Dropdown:**</figcaption>
+
 ![Engine Options Dropdown](/img/node-template-engine-options-rke1.png)
 
 #### Node Pool Taints

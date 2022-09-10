@@ -9,11 +9,6 @@ To provide stateful workloads with vSphere storage, we recommend creating a vSph
 
 In order to dynamically provision storage in vSphere, the vSphere provider must be [enabled.](../../../../new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/vsphere.md)
 
-- [Prerequisites](#prerequisites)
-- [Creating a StorageClass](#creating-a-storageclass)
-- [Creating a Workload with a vSphere Volume](#creating-a-workload-with-a-vsphere-volume)
-- [Verifying Persistence of the Volume](#verifying-persistence-of-the-volume)
-- [Why to Use StatefulSets Instead of Deployments](#why-to-use-statefulsets-instead-of-deployments)
 
 ### Prerequisites
 

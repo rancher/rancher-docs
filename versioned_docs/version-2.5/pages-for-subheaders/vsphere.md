@@ -47,15 +47,15 @@ In this YouTube video, we demonstrate how to set up a node template with the new
 
 <YouTube id="dPIwg6x1AlU"/>
 
-# Creating a vSphere Cluster
+## Creating a vSphere Cluster
 
 In [this section,](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere.md) you'll learn how to use Rancher to install an [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes cluster in vSphere.
 
-# Provisioning Storage
+## Provisioning Storage
 
 For an example of how to provision storage in vSphere using Rancher, refer to [this section.](../how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/provisioning-storage-examples/vsphere-storage.md) In order to dynamically provision storage in vSphere, the vSphere provider must be [enabled.](vsphere-cloud-provider.md)
 
-# Enabling the vSphere Cloud Provider
+## Enabling the vSphere Cloud Provider
 
 When a cloud provider is set up in Rancher, the Rancher server can automatically provision new infrastructure for the cluster, including new nodes or persistent storage devices.
 

@@ -3,11 +3,8 @@ title: Rollbacks
 weight: 3
 ---
 
-- [Rolling Back to Rancher v2.5.0+](#rolling-back-to-rancher-v2-5-0)
-- [Rolling Back to Rancher v2.2-v2.4+](#rolling-back-to-rancher-v2-2-v2-4)
-- [Rolling Back to Rancher v2.0-v2.1](#rolling-back-to-rancher-v2-0-v2-1)
 
-# Rolling Back to Rancher v2.5.0+
+## Rolling Back to Rancher v2.5.0+
 
 To roll back to Rancher v2.5.0+, use the **Rancher Backups** application and restore Rancher from backup.
 
@@ -102,7 +99,7 @@ When the target revision is determined, perform the rollback. This example will 
 helm rollback rancher 3 -n cattle-system
 ```
 
-# Rolling Back to Rancher v2.2-v2.4+
+## Rolling Back to Rancher v2.2-v2.4+
 
 To roll back to Rancher before v2.5, follow the procedure detailed here: [Restoring Backups — Kubernetes installs](../../../../versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md) Restoring a snapshot of the Rancher server cluster will revert Rancher to the version and state at the time of the snapshot.
 
@@ -114,6 +111,6 @@ Managed clusters are authoritative for their state. This means restoring the Ran
 
 :::
 
-# Rolling Back to Rancher v2.0-v2.1
+## Rolling Back to Rancher v2.0-v2.1
 
 Rolling back to Rancher v2.0-v2.1 is no longer supported. The instructions for rolling back to these versions are preserved [here](../../../../versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup/roll-back-to-v2.0-v2.1.md) and are intended to be used only in cases where upgrading to Rancher v2.2+ is not feasible.

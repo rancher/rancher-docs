@@ -5,28 +5,12 @@ weight: 10
 
 These instructions are about using the external Ceph driver in an RKE2 cluster. If you are using RKE, additional steps are required. For details, refer to [this section.](#using-the-ceph-driver-with-rke)
 
-- [Requirements](#requirements)
-- [Using the Ceph Driver with RKE](#using-the-ceph-driver-with-rke)
-- [Installing the ceph-csi driver on an RKE2 cluster](#installing-the-ceph-csi-driver-on-an-rke2-cluster)
-- [Install the ceph-csi driver using Helm](#install-the-ceph-csi-driver-using-helm)
-- [Creating RBD Ceph Resources](#creating-rbd-ceph-resources)
-- [Configure RBD Ceph Access Secrets](#configure-rbd-ceph-access-secrets)
-  - [User Account](#user-account)
-  - [Admin Account](#admin-account)
-- [Create RBD Testing Resources](#create-rbd-testing-resources)
-  - [Using RBD in Pods](#using-rbd-in-pods)
-  - [Using RBD in Persistent Volumes](#using-rbd-in-persistent-volumes)
-  - [Using RBD in Storage Classes](#using-rbd-in-storage-classes)
-  - [RKE2 Server/Master Provisioning](#rke2-server-master-provisioning)
-  - [RKE2 Agent/Worker provisioning](#rke2-agent-worker-provisioning)
-- [Tested Versions](#tested-versions)
-- [Troubleshooting](#troubleshooting)
 
-# Requirements
+## Requirements
 
 Make sure ceph-common and xfsprogs packages are installed on SLE worker nodes.
 
-# Using the Ceph Driver with RKE
+## Using the Ceph Driver with RKE
 
 The resources below are fully compatible with RKE based clusters, but there is a need to do an additional kubelet configuration for RKE.
 
@@ -45,7 +29,7 @@ services:
 
 For more information about the `extra_binds` directive, refer to [this section.](https://rancher.com/docs/rke/latest/en/config-options/services/services-extras/#extra-binds)
 
-# Installing the ceph-csi driver on an RKE2 cluster
+## Installing the ceph-csi driver on an RKE2 cluster
 
 :::note
 
@@ -77,7 +61,7 @@ min_mon_release 15 (octopus)
 
 Later you'll need the fsid and mon addresses values.
 
-# Install the ceph-csi Driver Using Helm
+## Install the ceph-csi Driver Using Helm
 
 Run these commands:
 
@@ -119,7 +103,7 @@ helm upgrade \
   --namespace ceph-csi-rbd ceph-csi-rbd ceph-csi/ceph-csi-rbd --values ceph-csi-rbd-values.yaml
 ```
 
-# Creating RBD Ceph Resources
+## Creating RBD Ceph Resources
 
 ```
 # Create a ceph pool:
@@ -147,7 +131,7 @@ QVFCK0hDVmdXSjQ1T0JBQXBrc0VtcVhlZFpjc0JwaStIcmU5M3c9PQ==
 echo "myPoolAdmin" | tr -d '\n' | base64
 bXlQb29sQWRtaW4=
 ```
-# Configure RBD Ceph Access Secrets
+## Configure RBD Ceph Access Secrets
 
 ### User Account
 
@@ -189,11 +173,11 @@ EOF
 kubectl apply -f ceph-admin-secret.yaml
 ```
 
-# Create RBD Testing Resources
+## Create RBD Testing Resources
 
 ### Using RBD in Pods
 
-```
+```yaml
 # pod
 cat > ceph-rbd-pod-inline.yaml << EOF
 apiVersion: v1
@@ -231,7 +215,7 @@ kubectl exec pod/ceph-rbd-pod-inline -- df -k | grep rbd
 
 ### Using RBD in Persistent Volumes
 
-```
+```yaml
 # pod-pvc-pv
 cat > ceph-rbd-pod-pvc-pv-allinone.yaml << EOF
 apiVersion: v1
@@ -294,7 +278,7 @@ kubectl exec pod/ceph-rbd-pod-pvc-pv -- df -k | grep rbd
 
 This example is for dynamic provisioning. The ceph-csi driver is needed.
 
-```
+```yaml
 # pod-pvc-sc
 cat > ceph-rbd-pod-pvc-sc-allinone.yaml <<EOF
 apiVersion: storage.k8s.io/v1
@@ -386,7 +370,7 @@ systemctl enable --now rke2-agent.service
 
 To import the cluster into Rancher, click **☰ > Cluster Management**. Then on the **Clusters** page, click **Import Existing**. Then run the provided kubectl command on the server/master node.
 
-# Tested Versions
+## Tested Versions
 
 OS for running RKE2 nodes: JeOS SLE15-SP2 with installed kernel-default-5.3.18-24.49
 
@@ -401,7 +385,7 @@ version.BuildInfo{Version:"3.4.1", GitCommit:"c4e74854886b2efe3321e185578e6db9be
 
 Kubernetes version on RKE2 cluster: v1.19.7+rke2r1
 
-# Troubleshooting
+## Troubleshooting
 
 In case you are using SUSE's ceph-rook based on SES7, it might be useful to expose the monitors on hostNetwork by editing `rook-1.4.5/ceph/cluster.yaml` and setting `spec.network.hostNetwork=true`.
 

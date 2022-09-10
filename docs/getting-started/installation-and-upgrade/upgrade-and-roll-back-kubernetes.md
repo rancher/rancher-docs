@@ -7,33 +7,19 @@ Following an upgrade to the latest version of Rancher, downstream Kubernetes clu
 
 Rancher calls RKE (Rancher Kubernetes Engine) as a library when provisioning and editing RKE clusters. For more information on configuring the upgrade strategy for RKE clusters, refer to the [RKE documentation](https://rancher.com/docs/rke/latest/en/).
 
-This section covers the following topics:
 
-- [New Features](#new-features)
-- [Tested Kubernetes Versions](#tested-kubernetes-versions)
-- [How Upgrades Work](#how-upgrades-work)
-- [Recommended Best Practice for Upgrades](#recommended-best-practice-for-upgrades)
-- [Upgrading the Kubernetes Version](#upgrading-the-kubernetes-version)
-- [Rolling Back](#rolling-back)
-- [Configuring the Upgrade Strategy](#configuring-the-upgrade-strategy)
-  - [Configuring the Maximum Unavailable Worker Nodes in the Rancher UI](#configuring-the-maximum-unavailable-worker-nodes-in-the-rancher-ui)
-  - [Enabling Draining Nodes During Upgrades from the Rancher UI](#enabling-draining-nodes-during-upgrades-from-the-rancher-ui)
-  - [Maintaining Availability for Applications During Upgrades](#maintaining-availability-for-applications-during-upgrades)
-  - [Configuring the Upgrade Strategy in the cluster.yml](#configuring-the-upgrade-strategy-in-the-cluster-yml)
-- [Troubleshooting](#troubleshooting)
-
-# Tested Kubernetes Versions
+## Tested Kubernetes Versions
 
 Before a new version of Rancher is released, it's tested with the latest minor versions of Kubernetes to ensure compatibility. For details on which versions of Kubernetes were tested on each Rancher version, refer to the [support maintenance terms.](https://rancher.com/support-maintenance-terms/all-supported-versions/rancher-v2.6.0/)
 
-# How Upgrades Work
+## How Upgrades Work
 
 RKE v1.1.0 changed the way that clusters are upgraded.
 
 In this section of the [RKE documentation,](https://rancher.com/docs/rke/latest/en/upgrades/how-upgrades-work) you'll learn what happens when you edit or upgrade your RKE Kubernetes cluster.
 
 
-# Recommended Best Practice for Upgrades
+## Recommended Best Practice for Upgrades
 
 When upgrading the Kubernetes version of a cluster, we recommend that you:
 
@@ -43,7 +29,7 @@ When upgrading the Kubernetes version of a cluster, we recommend that you:
 
 The restore operation will work on a cluster that is not in a healthy or active state.
 
-# Upgrading the Kubernetes Version
+## Upgrading the Kubernetes Version
 
 :::note Prerequisites:
 
@@ -59,14 +45,14 @@ The restore operation will work on a cluster that is not in a healthy or active 
 
 **Result:** Kubernetes begins upgrading for the cluster.
 
-# Rolling Back
+## Rolling Back
 
 A cluster can be restored to a backup in which the previous Kubernetes version was used. For more information, refer to the following sections:
 
 - [Backing up a cluster](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters.md#how-snapshots-work)
 - [Restoring a cluster from backup](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md#restoring-a-cluster-from-a-snapshot)
 
-# Configuring the Upgrade Strategy
+## Configuring the Upgrade Strategy
 
 As of RKE v1.1.0, additional upgrade options became available to give you more granular control over the upgrade process. These options can be used to maintain availability of your applications during a cluster upgrade if certain [conditions and requirements](https://rancher.com/docs/rke/latest/en/upgrades/maintaining-availability) are met.
 
@@ -122,7 +108,7 @@ More advanced upgrade strategy configuration options are available by editing th
 
 For details, refer to [Configuring the Upgrade Strategy](https://rancher.com/docs/rke/latest/en/upgrades/configuring-strategy) in the RKE documentation. The section also includes an example `cluster.yml` for configuring the upgrade strategy.
 
-# Troubleshooting
+## Troubleshooting
 
 If a node doesn't come up after an upgrade, the `rke up` command errors out.
 

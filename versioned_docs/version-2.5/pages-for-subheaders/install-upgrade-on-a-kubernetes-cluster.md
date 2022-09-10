@@ -16,9 +16,6 @@ import TabItem from '@theme/TabItem';
 
 In this section, you'll learn how to deploy Rancher on a Kubernetes cluster using the Helm CLI.
 
-- [Prerequisites](#prerequisites)
-- [Install the Rancher Helm Chart](#install-the-rancher-helm-chart)
-
 # Prerequisites
 
 - [Kubernetes Cluster](#kubernetes-cluster)

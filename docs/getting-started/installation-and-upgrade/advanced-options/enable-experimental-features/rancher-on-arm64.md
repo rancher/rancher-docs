@@ -3,7 +3,7 @@ title: "Running on ARM64 (Experimental)"
 weight: 3
 ---
 
-:::caution:
+:::caution
 
 Running on an ARM64 platform is currently an experimental feature and is not yet officially supported in Rancher. Therefore, we do not recommend using ARM64 based nodes in a production environment.
 
@@ -21,6 +21,7 @@ The following options are available when using an ARM64 platform:
     --privileged \
     rancher/rancher:vX.Y.Z
   ```
+
 :::note
 
 To check if your specific released version is compatible with the ARM64 architecture, you may navigate to your

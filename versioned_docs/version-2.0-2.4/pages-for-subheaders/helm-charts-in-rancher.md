@@ -17,19 +17,7 @@ Rancher provides the ability to use a catalog of Helm charts that make it easy t
 
 Rancher improves on Helm catalogs and charts. All native Helm charts can work within Rancher, but Rancher adds several enhancements to improve their user experience.
 
-This section covers the following topics:
-
-- [Catalog scopes](#catalog-scopes)
-- [Catalog Helm Deployment Versions](#catalog-helm-deployment-versions)
-- [When to use Helm 3](#when-to-use-helm-3)
-- [Helm 3 Backwards Compatibility](#helm-3-backwards-compatibility)
-- [Built-in global catalogs](#built-in-global-catalogs)
-- [Custom catalogs](#custom-catalogs)
-- [Creating and launching applications](#creating-and-launching-applications)
-- [Chart compatibility with Rancher](#chart-compatibility-with-rancher)
-- [Global DNS](#global-dns)
-
-# Catalog Scopes
+## Catalog Scopes
 
 Within Rancher, you can manage catalogs at three different scopes. Global catalogs are shared across all clusters and project. There are some use cases where you might not want to share catalogs between different clusters or even projects in the same cluster. By leveraging cluster and project scoped catalogs, you will be able to provide applications for specific teams without needing to share them with all clusters and/or projects.
 
@@ -39,7 +27,7 @@ Global | All clusters and all projects can access the Helm charts in this catalo
 Cluster | All projects in the specific cluster can access the Helm charts in this catalog | v2.2.0 |
 Project | This specific cluster can access the Helm charts in this catalog |  v2.2.0 |
 
-# Catalog Helm Deployment Versions
+## Catalog Helm Deployment Versions
 
 _Applicable as of v2.4.0_
 
@@ -53,7 +41,7 @@ By default, catalogs are assumed to be deployed using Helm 2. If you run an app 
 
 Charts that are specific to Helm 2 should only be added to a Helm 2 catalog, and Helm 3 specific charts should only be added to a Helm 3 catalog.
 
-# When to use Helm 3
+## When to use Helm 3
 
 _Applicable as of v2.4.0_
 
@@ -62,7 +50,7 @@ _Applicable as of v2.4.0_
 
 Overall Helm 3 is a movement towards a more standardized Kubernetes feel. As the Kubernetes community has evolved, standards and best practices have as well. Helm 3 is an attempt to adopt those practices and streamline how charts are maintained.
 
-# Helm 3 Backwards Compatibility
+## Helm 3 Backwards Compatibility
 
 _Applicable as of v2.4.0_
 
@@ -72,31 +60,25 @@ Helm 3 does not create a namespace for you, so you will have to provide an exist
 
 apiVersion `v2` is now reserved for Helm 3 charts. This apiVersion enforcement could cause issues as older versions of Helm 2 did not validate the apiVersion in the `Chart.yaml` file. In general, your Helm 2 chart’s apiVersion should be set to `v1` and your Helm 3 chart’s apiVersion should be set to `v2`. You can install charts with apiVersion `v1` with Helm 3, but you cannot install `v2` charts into Helm 2.
 
-# Built-in Global Catalogs
+## Built-in Global Catalogs
 
 Within Rancher, there are default catalogs packaged as part of Rancher. These can be enabled or disabled by an administrator. For details, refer to the section on managing [built-in global catalogs.](../how-to-guides/new-user-guides/helm-charts-in-rancher/built-in.md)
 
-# Custom Catalogs
+## Custom Catalogs
 
 There are two types of catalogs in Rancher: [Built-in global catalogs](../how-to-guides/new-user-guides/helm-charts-in-rancher/built-in.md) and [custom catalogs.](../how-to-guides/new-user-guides/helm-charts-in-rancher/adding-catalogs.md)
 
 Any user can create custom catalogs to add into Rancher.  Custom catalogs can be added into Rancher at the global level, cluster level, or project level. For details, refer to the [section on adding custom catalogs](../how-to-guides/new-user-guides/helm-charts-in-rancher/adding-catalogs.md) and the [catalog configuration reference.](../how-to-guides/new-user-guides/helm-charts-in-rancher/catalog-config.md)
 
-# Creating and Launching Applications
+## Creating and Launching Applications
 
-In Rancher, applications are deployed from the templates in a catalog. This section covers the following topics:
+In Rancher, applications are deployed from the templates in a catalog.
 
-* [Multi-cluster applications](../how-to-guides/new-user-guides/helm-charts-in-rancher/multi-cluster-apps.md)
-* [Creating catalog apps](../how-to-guides/new-user-guides/helm-charts-in-rancher/creating-apps.md)
-* [Launching catalog apps within a project](../how-to-guides/new-user-guides/helm-charts-in-rancher/launching-apps.md)
-* [Managing catalog apps](../how-to-guides/new-user-guides/helm-charts-in-rancher/managing-apps.md)
-* [Tutorial: Example custom chart creation](../how-to-guides/new-user-guides/helm-charts-in-rancher/tutorial.md)
-
-# Chart Compatibility with Rancher
+## Chart Compatibility with Rancher
 
 Charts now support the fields `rancher_min_version` and `rancher_max_version` in the [`questions.yml` file](https://github.com/rancher/integration-test-charts/blob/master/charts/chartmuseum/v1.6.0/questions.yml) to specify the versions of Rancher that the chart is compatible with. When using the UI, only app versions that are valid for the version of Rancher running will be shown. API validation is done to ensure apps that don't meet the Rancher requirements cannot be launched. An app that is already running will not be affected on a Rancher upgrade if the newer Rancher version does not meet the app's requirements.
 
-# Global DNS
+## Global DNS
 
 _Available as v2.2.0_
 

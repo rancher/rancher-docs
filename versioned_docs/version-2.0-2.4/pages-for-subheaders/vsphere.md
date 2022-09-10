@@ -15,12 +15,7 @@ Rancher can provision nodes in vSphere and install Kubernetes on them. When crea
 
 A vSphere cluster may consist of multiple groups of VMs with distinct properties, such as the amount of memory or the number of vCPUs. This grouping allows for fine-grained control over the sizing of nodes for each Kubernetes role.
 
-- [vSphere Enhancements in Rancher v2.3](#vsphere-enhancements-in-rancher-v2-3)
-- [Creating a vSphere Cluster](#creating-a-vsphere-cluster)
-- [Provisioning Storage](#provisioning-storage)
-- [Enabling the vSphere Cloud Provider](#enabling-the-vsphere-cloud-provider)
-
-# vSphere Enhancements in Rancher v2.3
+## vSphere Enhancements in Rancher v2.3
 
 The vSphere node templates have been updated, allowing you to bring cloud operations on-premises with the following enhancements:
 
@@ -52,15 +47,15 @@ In this YouTube video, we demonstrate how to set up a node template with the new
 
 <YouTube id="dPIwg6x1AlU"/>
 
-# Creating a vSphere Cluster
+## Creating a vSphere Cluster
 
 In [this section,](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere.md) you'll learn how to use Rancher to install an [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes cluster in vSphere.
 
-# Provisioning Storage
+## Provisioning Storage
 
 For an example of how to provision storage in vSphere using Rancher, refer to [this section.](../how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/provisioning-storage-examples/vsphere-storage.md) In order to dynamically provision storage in vSphere, the vSphere provider must be [enabled.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/vsphere.md)
 
-# Enabling the vSphere Cloud Provider
+## Enabling the vSphere Cloud Provider
 
 When a cloud provider is set up in Rancher, the Rancher server can automatically provision new infrastructure for the cluster, including new nodes or persistent storage devices.
 

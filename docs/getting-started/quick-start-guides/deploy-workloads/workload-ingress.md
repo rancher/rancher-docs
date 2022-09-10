@@ -28,7 +28,6 @@ For this workload, you'll be deploying the application Rancher Hello-World.
 * Your workload is deployed. This process might take a few minutes to complete.
 * When your workload completes deployment, it's assigned a state of **Active**. You can view this status from the project's **Workloads** page.
 
-<br/>
 ### 2. Expose The Application Via An Ingress
 
 Now that the application is up and running, it needs to be exposed so that other services can connect.

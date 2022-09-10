@@ -14,11 +14,6 @@ When a cluster scan is run, you need to select a Profile which points to a speci
 
 Follow all the steps below to add a custom Benchmark Version and run a scan using it.
 
-1. [Prepare the Custom Benchmark Version ConfigMap](#1-prepare-the-custom-benchmark-version-configmap)
-2. [Add a Custom Benchmark Version to a Cluster](#2-add-a-custom-benchmark-version-to-a-cluster)
-3. [Create a New Profile for the Custom Benchmark Version](#3-create-a-new-profile-for-the-custom-benchmark-version)
-4. [Run a Scan Using the Custom Benchmark Version](#4-run-a-scan-using-the-custom-benchmark-version)
-
 ### 1. Prepare the Custom Benchmark Version ConfigMap
 
 To create a custom benchmark version, first you need to create a ConfigMap containing the benchmark version's config files and upload it to your Kubernetes cluster where you want to run the scan.

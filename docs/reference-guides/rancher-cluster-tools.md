@@ -1,22 +1,12 @@
 ---
-title: Tools for Logging, Monitoring, and Visibility
+title: Cluster Tools for Logging, Monitoring, and Visibility
 weight: 2033
 ---
 
 Rancher contains a variety of tools that aren't included in Kubernetes to assist in your DevOps operations. Rancher can integrate with external services to help your clusters run more efficiently. Tools are divided into following categories:
 
-<!-- TOC -->
 
-- [Logging](#logging)
-- [Monitoring and Alerts](#monitoring-and-alerts)
-- [Istio](#istio)
-- [OPA Gatekeeper](#opa-gatekeeper)
-- [CIS Scans](#cis-scans)
-
-<!-- /TOC -->
-
-
-# Logging
+## Logging
 
 Logging is helpful because it allows you to:
 
@@ -29,7 +19,7 @@ Logging is helpful because it allows you to:
 Rancher can integrate with Elasticsearch, splunk, kafka, syslog, and fluentd.
 
 For more information, refer to the logging documentation [here.](../pages-for-subheaders/logging.md)
-# Monitoring and Alerts
+## Monitoring and Alerts
 
 Using Rancher, you can monitor the state and processes of your cluster nodes, Kubernetes components, and software deployments through integration with [Prometheus](https://prometheus.io/), a leading open-source monitoring solution.
 
@@ -41,18 +31,18 @@ Alerts are rules that trigger those notifications. Before you can receive alerts
 
 For more information, refer to the monitoring documentation [here.](../pages-for-subheaders/monitoring-and-alerting.md)
 
-# Istio
+## Istio
 
 [Istio](https://istio.io/) is an open-source tool that makes it easier for DevOps teams to observe, control, troubleshoot, and secure the traffic within a complex network of microservices.
 
 Rancher's integration with Istio was improved in Rancher v2.5.
 
 For more information, refer to the Istio documentation [here.](../pages-for-subheaders/istio.md)
-# OPA Gatekeeper
+## OPA Gatekeeper
 
 [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper) is an open-source project that provides integration between OPA and Kubernetes to provide policy control via admission controller webhooks. For details on how to enable Gatekeeper in Rancher, refer to the [OPA Gatekeeper section.](../explanations/integrations-in-rancher/opa-gatekeeper.md)
 
-# CIS Scans
+## CIS Scans
 
 Rancher can run a security scan to check whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark.
 

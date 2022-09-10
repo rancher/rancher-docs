@@ -7,15 +7,8 @@ The cluster registration feature replaced the feature to import clusters.
 
 The control that Rancher has to manage a registered cluster depends on the type of cluster. For details, see [Management Capabilities for Registered Clusters.](#management-capabilities-for-registered-clusters)
 
-- [Prerequisites](#prerequisites)
-- [Registering a Cluster](#registering-a-cluster)
-- [Management Capabilities for Registered Clusters](#management-capabilities-for-registered-clusters)
-- [Configuring K3s Cluster Upgrades](#configuring-k3s-cluster-upgrades)
-- [Debug Logging and Troubleshooting for Registered K3s Clusters](#debug-logging-and-troubleshooting-for-registered-k3s-clusters)
-- [Authorized Cluster Endpoint Support for RKE2 and K3s Clusters](#authorized-cluster-endpoint-support-for-rke2-and-k3s-clusters)
-- [Annotating Registered Clusters](#annotating-registered-clusters)
 
-# Prerequisites
+## Prerequisites
 
 ### Kubernetes Node Roles
 
@@ -45,7 +38,7 @@ If you are registering a K3s cluster, make sure the `cluster.yml` is readable. I
 
 EKS clusters must have at least one managed node group to be imported into Rancher or provisioned from Rancher successfully.
 
-# Registering a Cluster
+## Registering a Cluster
 
 1. Click **☰ > Cluster Management**.
 1. On the **Clusters** page, **Import Existing**.
@@ -121,7 +114,7 @@ resource "rancher2_cluster" "my-eks-to-import" {
 }
 ```
 
-# Management Capabilities for Registered Clusters
+## Management Capabilities for Registered Clusters
 
 The control that Rancher has to manage a registered cluster depends on the type of cluster.
 
@@ -160,7 +153,7 @@ When you delete an EKS cluster or GKE cluster that was created in Rancher, the c
 
 The capabilities for registered clusters are listed in the table on [this page.](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)
 
-# Configuring K3s Cluster Upgrades
+## Configuring K3s Cluster Upgrades
 
 :::tip
 
@@ -177,7 +170,7 @@ In the K3s documentation, controlplane nodes are called server nodes. These node
 
 Also in the K3s documentation, nodes with the worker role are called agent nodes. Any workloads or pods that are deployed in the cluster can be scheduled to these nodes by default.
 
-# Debug Logging and Troubleshooting for Registered K3s Clusters
+## Debug Logging and Troubleshooting for Registered K3s Clusters
 
 Nodes are upgraded by the system upgrade controller running in the downstream cluster. Based on the cluster configuration, Rancher deploys two [plans](https://github.com/rancher/system-upgrade-controller#example-upgrade-plan) to upgrade K3s nodes: one for controlplane nodes and one for workers. The system upgrade controller follows the plans and upgrades the nodes.
 
@@ -199,7 +192,7 @@ If the cluster becomes stuck in upgrading, restart the `system-upgrade-controlle
 
 To prevent issues when upgrading, the [Kubernetes upgrade best practices](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/) should be followed.
 
-# Authorized Cluster Endpoint Support for RKE2 and K3s Clusters
+## Authorized Cluster Endpoint Support for RKE2 and K3s Clusters
 
 _Available as of v2.6.3_
 
@@ -218,29 +211,31 @@ Authorized Cluster Endpoint (ACE) support has been added for registered RKE2 and
 ###### **Manual steps to be taken on the control plane of each downstream cluster to enable ACE:**
 
 1. Create a file at `/var/lib/rancher/{rke2,k3s}/kube-api-authn-webhook.yaml` with the following contents:
-
-        apiVersion: v1
-        kind: Config
-        clusters:
-        - name: Default
-          cluster:
-            insecure-skip-tls-verify: true
-            server: http://127.0.0.1:6440/v1/authenticate
-        users:
-        - name: Default
-          user:
-            insecure-skip-tls-verify: true
-        current-context: webhook
-        contexts:
-        - name: webhook
-          context:
-            user: Default
-            cluster: Default
+    ```yaml
+    apiVersion: v1
+    kind: Config
+    clusters:
+    - name: Default
+      cluster:
+        insecure-skip-tls-verify: true
+        server: http://127.0.0.1:6440/v1/authenticate
+    users:
+    - name: Default
+      user:
+        insecure-skip-tls-verify: true
+    current-context: webhook
+    contexts:
+    - name: webhook
+      context:
+        user: Default
+        cluster: Default
+    ```
 
 1. Add the following to the config file (or create one if it doesn’t exist); note that the default location is `/etc/rancher/{rke2,k3s}/config.yaml`:
-
-        kube-apiserver-arg:
-            - authentication-token-webhook-config-file=/var/lib/rancher/{rke2,k3s}/kube-api-authn-webhook.yaml
+    ```yaml
+    kube-apiserver-arg:
+        - authentication-token-webhook-config-file=/var/lib/rancher/{rke2,k3s}/kube-api-authn-webhook.yaml
+    ```
 
 1. Run the following commands:
 
@@ -249,13 +244,13 @@ Authorized Cluster Endpoint (ACE) support has been added for registered RKE2 and
 
 1. Finally, you **must** go back to the Rancher UI and edit the imported cluster there to complete the ACE enablement. Click on **⋮ > Edit Config**, then click the **Networking** tab under Cluster Configuration. Finally, click the **Enabled** button for **Authorized Endpoint**. Once the ACE is enabled, you then have the option of entering a fully qualified domain name (FQDN) and certificate information.
 
-      :::note
+:::note
 
-      The <b>FQDN</b> field is optional, and if one is entered, it should point to the downstream cluster. Certificate information is only needed if there is a load balancer in front of the downstream cluster that is using an untrusted certificate. If you have a valid certificate, then nothing needs to be added to the <b>CA Certificates</b> field.
+The <b>FQDN</b> field is optional, and if one is entered, it should point to the downstream cluster. Certificate information is only needed if there is a load balancer in front of the downstream cluster that is using an untrusted certificate. If you have a valid certificate, then nothing needs to be added to the <b>CA Certificates</b> field.
 
-      :::
+:::
 
-# Annotating Registered Clusters
+## Annotating Registered Clusters
 
 For all types of registered Kubernetes clusters except for K3s Kubernetes clusters, Rancher doesn't have any information about how the cluster is provisioned or configured.
 
@@ -267,13 +262,13 @@ By annotating a registered cluster, it is possible to indicate to Rancher that a
 
 This example annotation indicates that a pod security policy is enabled:
 
-```
+```json
 "capabilities.cattle.io/pspEnabled": "true"
 ```
 
 The following annotation indicates Ingress capabilities. Note that that the values of non-primitive objects need to be JSON encoded, with quotations escaped.
 
-```
+```json
 "capabilities.cattle.io/ingressCapabilities": "[
   {
     "customDefaultBackend":true,

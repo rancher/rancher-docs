@@ -7,23 +7,6 @@ weight: 3
 
 This document covers how end users can migrate their Windows workloads from RKE1 to RKE2.
 
-- [RKE1 Windows Scheduling](#rke1-windows-scheduling)
-- [RKE2 Windows Scheduling](#rke2-windows-scheduling)
-- [Example Migrations](#example-migrations)
-  - [RKE1 to RKE2 Windows Workload](#rke1-to-rke2-windows-workload)
-  - [RKE1 Windows Cluster Linux-Only Deployment](#rke1-windows-cluster-linux-only-deployment)
-- [RKE1 Windows-Supported Windows Server Versions](#rke1-windows-supported-windows-server-versions)
-  - [Long-Term Servicing Channel (LTSC)](#long-term-servicing-channel-ltsc)
-  - [Semi-Annual Channel (SAC)](#semi-annual-channel-sac)
-- [RKE2 Windows-Supported Windows Server Versions](#rke2-windows-supported-windows-server-versions)
-  - [Long-Term Servicing Channel in RKE2](#long-term-servicing-channel-in-rke2)
-- [Kubernetes Version Support](#kubernetes-version-support)
-  - [Rancher 2.5 vs. Rancher 2.6 Support Matrix for Windows Clusters](#rancher-2-5-vs-rancher-2-6-support-matrix-for-windows-clusters)
-  - [Rancher 2.5 vs. Rancher 2.6 Supported Kubernetes Versions for Provisioning RKE1 and RKE2 Windows Clusters](#rancher-2-5-vs-rancher-2-6-supported-kubernetes-versions-for-provisioning-rke1-and-rke2-windows-clusters)
-- [Guiding Migrations of Workloads to RKE2 Windows](#guiding-migrations-of-workloads-to-rke2-windows)
-  - [In-Place Upgrade of Rancher 2.5](#in-place-upgrade-of-rancher-2-5)
-  - [Migrating Windows Workloads to a new Rancher environment](#migrating-windows-workloads-to-a-new-rancher-environment)
-
 ## RKE1 Windows Scheduling
 
 RKE1 Windows workload scheduling is based on taints and tolerations.

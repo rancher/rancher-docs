@@ -40,10 +40,10 @@ Deploying to Google GCP will incur charges.
 5. **Optional:** Modify optional variables within `terraform.tfvars`.
 See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [GCP Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/gcp) for more information.
 Suggestions include:
-    - `gcp_region` - Google GCP region, choose the closest instead of the default (`us-east4`)
-    - `gcp_zone` - Google GCP zone, choose the closest instead of the default (`us-east4-a`)
-    - `prefix` - Prefix for all created resources
-    - `machine_type` - Compute instance size used, minimum is `n1-standard-1` but `n1-standard-2` or `n1-standard-4` could be used if within budget
+   - `gcp_region` - Google GCP region, choose the closest instead of the default (`us-east4`)
+   - `gcp_zone` - Google GCP zone, choose the closest instead of the default (`us-east4-a`)
+   - `prefix` - Prefix for all created resources
+   - `machine_type` - Compute instance size used, minimum is `n1-standard-1` but `n1-standard-2` or `n1-standard-4` could be used if within budget
 
 6. Run `terraform init`.
 

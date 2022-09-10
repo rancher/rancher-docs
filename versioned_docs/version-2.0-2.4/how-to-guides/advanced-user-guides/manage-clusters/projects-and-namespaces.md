@@ -15,16 +15,8 @@ A project is a group of namespaces, and it is a concept introduced by Rancher. P
 
 This section describes how projects and namespaces work with Rancher. It covers the following topics:
 
-- [About namespaces](#about-namespaces)
-- [About projects](#about-projects)
-  - [The cluster's default project](#the-cluster-s-default-project)
-  - [The system project](#the-system-project)
-- [Project authorization](#project-authorization)
-- [Pod security policies](#pod-security-policies)
-- [Creating projects](#creating-projects)
-- [Switching between clusters and projects](#switching-between-clusters-and-projects)
 
-# About Namespaces
+## About Namespaces
 
 A namespace is a concept introduced by Kubernetes. According to the [official Kubernetes documentation on namespaces,](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
 
@@ -62,7 +54,7 @@ If your permissions are restricted to the project level, it is better to [create
 
 If a standard user is a project owner, the user will be able to create namespaces within that project. The Rancher UI will prevent that user from creating namespaces outside the scope of the projects they have access to.
 
-# About Projects
+## About Projects
 
 In terms of hierarchy:
 
@@ -115,18 +107,18 @@ The `system` project:
 >
 >The `system` project overrides the Project Network Isolation option so that it can communicate with other projects, collect logs, and check health.
 
-# Project Authorization
+## Project Authorization
 
 Standard users are only authorized for project access in two situations:
 
 - An administrator, cluster owner or cluster member explicitly adds the standard user to the project's **Members** tab.
 - Standard users can access projects that they create themselves.
 
-# Pod Security Policies
+## Pod Security Policies
 
 Rancher extends Kubernetes to allow the application of [Pod Security Policies](https://kubernetes.io/docs/concepts/policluster-admin/pod-security-policy/) at the [project level](../manage-projects/manage-pod-security-policies.md) in addition to the [cluster level.](./add-a-pod-security-policy.md) However, as a best practice, we recommend applying Pod Security Policies at the cluster level.
 
-# Creating Projects
+## Creating Projects
 
 This section describes how to create a new project with a name and with optional pod security policy, members, and resource quotas.
 
@@ -194,7 +186,7 @@ To add a resource quota,
 | Project Limit           | The overall resource limit for the project.                                                              |
 | Namespace Default Limit | The default resource limit available for each namespace. This limit is propagated to each namespace in the project when created. The combined limit of all project namespaces shouldn't exceed the project limit.  |
 
-# Switching between Clusters and Projects
+## Switching between Clusters and Projects
 
 To switch between clusters and projects, use the **Global** drop-down available in the main menu.
 

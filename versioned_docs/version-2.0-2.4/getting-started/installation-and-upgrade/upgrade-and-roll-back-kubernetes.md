@@ -10,20 +10,6 @@ Following an upgrade to the latest version of Rancher, downstream Kubernetes clu
 
 Rancher calls RKE (Rancher Kubernetes Engine) as a library when provisioning and editing RKE clusters. For more information on configuring the upgrade strategy for RKE clusters, refer to the [RKE documentation](https://rancher.com/docs/rke/latest/en/).
 
-This section covers the following topics:
-
-- [New Features](#new-features)
-- [Tested Kubernetes Versions](#tested-kubernetes-versions)
-- [How Upgrades Work](#how-upgrades-work)
-- [Recommended Best Practice for Upgrades](#recommended-best-practice-for-upgrades)
-- [Upgrading the Kubernetes Version](#upgrading-the-kubernetes-version)
-- [Rolling Back](#rolling-back)
-- [Configuring the Upgrade Strategy](#configuring-the-upgrade-strategy)
-  - [Configuring the Maximum Unavailable Worker Nodes in the Rancher UI](#configuring-the-maximum-unavailable-worker-nodes-in-the-rancher-ui)
-  - [Enabling Draining Nodes During Upgrades from the Rancher UI](#enabling-draining-nodes-during-upgrades-from-the-rancher-ui)
-  - [Maintaining Availability for Applications During Upgrades](#maintaining-availability-for-applications-during-upgrades)
-  - [Configuring the Upgrade Strategy in the cluster.yml](#configuring-the-upgrade-strategy-in-the-cluster-yml)
-- [Troubleshooting](#troubleshooting)
 
 # New Features
 

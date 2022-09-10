@@ -14,18 +14,6 @@ This section assumes a basic familiarity with Docker and Kubernetes. For a brief
 
 For a conceptual overview of how the Rancher server provisions clusters and what tools it uses to provision them, refer to the [architecture](rancher-manager-architecture.md) page.
 
-This section covers the following topics:
-
-<!-- TOC -->
-
-- [Setting up clusters in a hosted Kubernetes provider](#setting-up-clusters-in-a-hosted-kubernetes-provider)
-- [Launching Kubernetes with Rancher](#launching-kubernetes-with-rancher)
-  - [Launching Kubernetes and Provisioning Nodes in an Infrastructure Provider](#launching-kubernetes-and-provisioning-nodes-in-an-infrastructure-provider)
-  - [Launching Kubernetes on Existing Custom Nodes](#launching-kubernetes-on-existing-custom-nodes)
-- [Importing Existing Clusters](#importing-existing-clusters)
-
-<!-- /TOC -->
-
 The following table summarizes the options and settings available for each cluster type:
 
 import ClusterCapabilitiesTable from '../shared-files/_cluster-capabilities-table.md';

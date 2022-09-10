@@ -99,6 +99,7 @@ Because the rancher-alpha repository contains only alpha charts, switching betwe
 
 </TabItem>
 <TabItem value="Docker Images">
+
 When performing [Docker installs](../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md), upgrades, or rollbacks, you can use _tags_ to install a specific version of Rancher.
 
 ### Server Tags

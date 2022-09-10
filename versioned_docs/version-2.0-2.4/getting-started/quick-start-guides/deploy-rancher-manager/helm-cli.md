@@ -14,18 +14,6 @@ Howdy Partner! This tutorial walks you through:
 
 This Quick Start Guide is divided into different tasks for easier consumption.
 
-<!-- TOC -->
-
-
-1. [Provision a Linux Host](#1-provision-a-linux-host)
-
-1. [Install Rancher](#2-install-rancher)
-
-1. [Log In](#3-log-in)
-
-1. [Create the Cluster](#4-create-the-cluster)
-
-<!-- /TOC -->
 <br/>
 ### 1. Provision a Linux Host
 

@@ -9,7 +9,7 @@ When Receivers and Routes are updated, the monitoring application will automatic
 
 > This section assumes familiarity with how monitoring components work together. For more information about Alertmanager, see [this section.](../../../../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#how-alertmanager-works)
 
-# About the Alertmanager Custom Resource
+## About the Alertmanager Custom Resource
 
 By default, Rancher Monitoring deploys a single Alertmanager onto a cluster that uses a default Alertmanager Config Secret.
 

@@ -17,26 +17,8 @@ The [Alertmanager Config](https://prometheus.io/docs/alerting/latest/configurati
 
 > This section assumes familiarity with how monitoring components work together. For more information about Alertmanager, see [this section.](../../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#3-how-alertmanager-works)
 
-- [Creating Receivers in the Rancher UI](#creating-receivers-in-the-rancher-ui)
-- [Receiver Configuration](#receiver-configuration)
-  - [Slack](#slack)
-  - [Email](#email)
-  - [PagerDuty](#pagerduty)
-  - [Opsgenie](#opsgenie)
-  - [Webhook](#webhook)
-  - [Custom](#custom)
-  - [Teams](#teams)
-  - [SMS](#sms)
-- [Route Configuration](#route-configuration)
-  - [Receiver](#receiver)
-  - [Grouping](#grouping)
-  - [Matching](#matching)
-- [Configuring Multiple Receivers](#configuring-multiple-receivers)
-- [Example Alertmanager Config](examples.md#example-alertmanager-config)
-- [Example Route Config for CIS Scan Alerts](#example-route-config-for-cis-scan-alerts)
-- [Trusted CA for Notifiers](#trusted-ca-for-notifiers)
 
-# Creating Receivers in the Rancher UI
+## Creating Receivers in the Rancher UI
 _Available as of v2.5.4_
 
 > **Prerequisites:**
@@ -53,7 +35,7 @@ To create notification receivers in the Rancher UI,
 
 **Result:** Alerts can be configured to send notifications to the receiver(s).
 
-# Receiver Configuration
+## Receiver Configuration
 
 The notification integrations are configured with the `receiver`, which is explained in the [Prometheus documentation.](https://prometheus.io/docs/alerting/latest/configuration/#receiver)
 
@@ -91,7 +73,7 @@ The following types of receivers can be configured in the Rancher UI:
 
 The custom receiver option can be used to configure any receiver in YAML that cannot be configured by filling out the other forms in the Rancher UI.
 
-# Slack
+## Slack
 
 | Field | Type | Description |
 |------|--------------|------|
@@ -100,7 +82,7 @@ The custom receiver option can be used to configure any receiver in YAML that ca
 | Proxy URL   |    String    |  Proxy for the webhook notifications.  |
 | Enable Send Resolved Alerts |   Bool    |  Whether to send a follow-up notification if an alert has been resolved (e.g. [Resolved] High CPU Usage). |
 
-# Email
+## Email
 
 | Field | Type | Description |
 |------|--------------|------|
@@ -117,7 +99,7 @@ SMTP options:
 | Username |   String   | Enter a username to authenticate with the SMTP server. |
 | Password |   String    | Enter a password to authenticate with the SMTP server. |
 
-# PagerDuty
+## PagerDuty
 
 | Field | Type | Description |
 |------|------|-------|
@@ -126,7 +108,7 @@ SMTP options:
 | Proxy URL | String |  Proxy for the PagerDuty notifications.  |
 | Enable Send Resolved Alerts |  Bool    |   Whether to send a follow-up notification if an alert has been resolved (e.g. [Resolved] High CPU Usage). |
 
-# Opsgenie
+## Opsgenie
 
 | Field | Description |
 |------|-------------|
@@ -141,7 +123,7 @@ Opsgenie Responders:
 | Type | String | Schedule, Team, User, or Escalation. For more information on alert responders, refer to the [Opsgenie documentation.](https://docs.opsgenie.com/docs/alert-recipients-and-teams) |
 | Send To | String | Id, Name, or Username of the Opsgenie recipient. |
 
-# Webhook
+## Webhook
 
 | Field |    Description |
 |-------|--------------|
@@ -151,11 +133,11 @@ Opsgenie Responders:
 
 <!-- TODO add info on webhook for teams and sms and link to them -->
 
-# Custom
+## Custom
 
 The YAML provided here will be directly appended to your receiver within the Alertmanager Config Secret.
 
-# Teams
+## Teams
 
 ### Enabling the Teams Receiver for Rancher Managed Clusters
 
@@ -189,7 +171,7 @@ url: http://rancher-alerting-drivers-prom2teams.ns-1.svc:8089/v2/teams-instance-
 
 <!-- https://github.com/idealista/prom2teams -->
 
-# SMS
+## SMS
 
 ### Enabling the SMS Receiver for Rancher Managed Clusters
 
@@ -315,7 +297,7 @@ The Alertmanager must be configured in YAML, as shown in these [examples.](#exam
 </TabItem>
 </Tabs>
 
-# Configuring Multiple Receivers
+## Configuring Multiple Receivers
 
 By editing the forms in the Rancher UI, you can set up a Receiver resource with all the information Alertmanager needs to send alerts to your notification system.
 
@@ -324,7 +306,7 @@ It is also possible to send alerts to multiple notification systems. One way is 
 You can also set up multiple receivers by using the `continue` option for a route, so that the alerts sent to a receiver continue being evaluated in the next level of the routing tree, which could contain another receiver.
 
 
-# Example Alertmanager Configs
+## Example Alertmanager Configs
 
 ### Slack
 To set up notifications via Slack, the following Alertmanager Config YAML can be placed into the `alertmanager.yaml` key of the Alertmanager Config Secret, where the `api_url` should be updated to use your Webhook URL from Slack:
@@ -371,7 +353,7 @@ receivers:
   - service_key: 'database-integration-key'
 ```
 
-# Example Route Config for CIS Scan Alerts
+## Example Route Config for CIS Scan Alerts
 
 While configuring the routes for `rancher-cis-benchmark` alerts, you can specify the matching using the key-value pair `job: rancher-cis-scan`.
 
@@ -396,6 +378,6 @@ spec:
 For more information on enabling alerting for `rancher-cis-benchmark`, see [this section.](../../pages-for-subheaders/cis-scan-guides.md#enabling-alerting-for-rancher-cis-benchmark)
 
 
-# Trusted CA for Notifiers
+## Trusted CA for Notifiers
 
 If you need to add a trusted CA to your notifier, follow the steps in [this section.](helm-chart-options.md#trusted-ca-for-notifiers)

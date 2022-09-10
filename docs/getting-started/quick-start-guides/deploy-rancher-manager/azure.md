@@ -43,13 +43,12 @@ Deploying to Microsoft Azure will incur charges.
     - `rancher_server_admin_password` - Admin password for created Rancher server
 
 5. **Optional:** Modify optional variables within `terraform.tfvars`.
-See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [Azure Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/azure) for more information.
-Suggestions include:
-    - `azure_location` - Microsoft Azure region, choose the closest instead of the default (`East US`)
-    - `prefix` - Prefix for all created resources
-    - `instance_type` - Compute instance size used, minimum is `Standard_DS2_v2` but `Standard_DS2_v3` or `Standard_DS3_v2` could be used if within budget
-    - `add_windows_node` - If true, an additional Windows worker node is added to the workload cluster
-    - `windows_admin_password` - The admin password of the windows worker node
+See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [Azure Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/azure) for more information. Suggestions include:
+   - `azure_location` - Microsoft Azure region, choose the closest instead of the default (`East US`)
+   - `prefix` - Prefix for all created resources
+   - `instance_type` - Compute instance size used, minimum is `Standard_DS2_v2` but `Standard_DS2_v3` or `Standard_DS3_v2` could be used if within budget
+   - `add_windows_node` - If true, an additional Windows worker node is added to the workload cluster
+   - `windows_admin_password` - The admin password of the windows worker node
 
 6. Run `terraform init`.
 

@@ -14,12 +14,12 @@ The following instructions will guide you through upgrading a Rancher server tha
 
 :::
 
-# Prerequisites
+## Prerequisites
 
 - **Review the [known upgrade issues](../../install-upgrade-on-a-kubernetes-cluster/upgrades.md#known-upgrade-issues)** section in the Rancher documentation for the most noteworthy issues to consider when upgrading Rancher. A more complete list of known issues for each Rancher version can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums](https://forums.rancher.com/c/announcements/12). Note that upgrades to or from any chart in the [rancher-alpha repository](../../../../reference-guides/installation-references/helm-chart-options.md#helm-chart-repositories/) aren’t supported.
 - **For [air gap installs only,](../../../../pages-for-subheaders/air-gapped-helm-cli-install.md) collect and populate images for the new Rancher server version**. Follow the guide to [populate your private registry](../air-gapped-helm-cli-install/publish-images.md) with the images for the Rancher version that you want to upgrade to.
 
-# Placeholder Review
+## Placeholder Review
 
 During upgrade, you'll enter a series of commands, filling placeholders with data from your environment. These placeholders are denoted with angled brackets and all capital letters (`<EXAMPLE>`).
 
@@ -31,7 +31,7 @@ docker stop <RANCHER_CONTAINER_NAME>
 
 In this command, `<RANCHER_CONTAINER_NAME>` is the name of your Rancher container.
 
-# Get Data for Upgrade Commands
+## Get Data for Upgrade Commands
 
 To obtain the data to replace the placeholders, run:
 
@@ -55,18 +55,10 @@ Write down or copy this information before starting the upgrade.
 
 You can obtain `<RANCHER_CONTAINER_TAG>` and `<RANCHER_CONTAINER_NAME>` by logging into your Rancher server by remote connection and entering the command to view the containers that are running: `docker ps`. You can also view containers that are stopped using a different command: `docker ps -a`. Use these commands for help anytime during while creating backups.
 
-# Upgrade Outline
+## Upgrade 
 
-During upgrade, you create a copy of the data from your current Rancher container and a backup in case something goes wrong. Then you deploy the new version of Rancher in a new container using your existing data. Follow the steps to upgrade Rancher server:
-
-- [1. Create a copy of the data from your Rancher server container](#1-create-a-copy-of-the-data-from-your-rancher-server-container)
-- [2. Create a backup tarball](#2-create-a-backup-tarball)
-- [3. Pull the new Docker image](#3-pull-the-new-docker-image)
-- [4. Start the new Rancher server container](#4-start-the-new-rancher-server-container)
-- [5. Verify the Upgrade](#5-verify-the-upgrade)
-- [6. Clean up your old Rancher server container](#6-clean-up-your-old-rancher-server-container)
-
-# 1. Create a copy of the data from your Rancher server container
+During upgrade, you create a copy of the data from your current Rancher container and a backup in case something goes wrong. Then you deploy the new version of Rancher in a new container using your existing data.
+### 1. Create a copy of the data from your Rancher server container
 
 1. Using a remote Terminal connection, log into the node running your Rancher server.
 
@@ -82,13 +74,11 @@ During upgrade, you create a copy of the data from your current Rancher containe
     docker create --volumes-from <RANCHER_CONTAINER_NAME> --name rancher-data rancher/rancher:<RANCHER_CONTAINER_TAG>
     ```
 
-# 2. Create a backup tarball
+### 2. Create a backup tarball
 
 1. <a id="tarball"></a>From the data container that you just created (<code>rancher-data</code>), create a backup tarball (<code>rancher-data-backup-&lt;RANCHER_VERSION&gt;-&lt;DATE&gt;.tar.gz</code>).
 
     This tarball will serve as a rollback point if something goes wrong during upgrade. Use the following command, replacing each placeholder.
-
-
     ```
     docker run --volumes-from rancher-data -v "$PWD:/backup" --rm busybox tar zcvf /backup/rancher-data-backup-<RANCHER_VERSION>-<DATE>.tar.gz /var/lib/rancher
     ```
@@ -104,7 +94,7 @@ During upgrade, you create a copy of the data from your current Rancher containe
 
 1. Move your backup tarball to a safe location external from your Rancher server.
 
-# 3. Pull the New Docker Image
+### 3. Pull the New Docker Image
 
 Pull the image of the Rancher version that you want to upgrade to.
 
@@ -116,7 +106,7 @@ Placeholder | Description
 docker pull rancher/rancher:<RANCHER_VERSION_TAG>
 ```
 
-# 4. Start the New Rancher Server Container
+### 4. Start the New Rancher Server Container
 
 Start a new Rancher server container using the data from the `rancher-data` container. Remember to pass in all the environment variables that you had used when you started the original container.
 
@@ -142,7 +132,7 @@ To see the command to use when starting the new Rancher server container, choose
 
 Select which option you had installed Rancher server
 
-### Option A: Default Self-Signed Certificate
+#### Option A: Default Self-Signed Certificate
 
 <details id="option-a">
   <summary>Click to expand</summary>
@@ -165,10 +155,10 @@ Privileged access is [required.](../../../../pages-for-subheaders/rancher-on-a-s
 
 </details>
 
-### Option B: Bring Your Own Certificate: Self-Signed
+#### Option B: Bring Your Own Certificate: Self-Signed
 
 <details id="option-b">
-  <summary>Click to expand</summary>
+<summary>Click to expand</summary>
 
 If you have selected to bring your own self-signed certificate, you add the `--volumes-from rancher-data` to the command that you had started your original Rancher server container and need to have access to the same certificate that you had originally installed with.
 
@@ -201,7 +191,7 @@ Privileged access is [required.](../../../../pages-for-subheaders/rancher-on-a-s
 
 </details>
 
-### Option C: Bring Your Own Certificate: Signed by Recognized CA
+#### Option C: Bring Your Own Certificate: Signed by Recognized CA
 
 <details id="option-c">
   <summary>Click to expand</summary>
@@ -235,7 +225,7 @@ docker run -d --volumes-from rancher-data \
 Privileged access is [required.](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
 </details>
 
-### Option D: Let's Encrypt Certificate
+#### Option D: Let's Encrypt Certificate
 
 <details id="option-d">
   <summary>Click to expand</summary>
@@ -280,7 +270,7 @@ For security purposes, SSL (Secure Sockets Layer) is required when using Rancher
 
 When starting the new Rancher server container, choose from the following options:
 
-### Option A: Default Self-Signed Certificate
+#### Option A: Default Self-Signed Certificate
 
 <details id="option-a">
   <summary>Click to expand</summary>
@@ -305,7 +295,7 @@ Placeholder | Description
 Privileged access is [required.](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
 </details>
 
-### Option B: Bring Your Own Certificate: Self-Signed
+#### Option B: Bring Your Own Certificate: Self-Signed
 
 <details id="option-b">
   <summary>Click to expand</summary>
@@ -341,7 +331,7 @@ docker run -d --restart=unless-stopped \
 Privileged access is [required.](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
 </details>
 
-### Option C: Bring Your Own Certificate: Signed by Recognized CA
+#### Option C: Bring Your Own Certificate: Signed by Recognized CA
 
 <details id="option-c">
   <summary>Click to expand</summary>
@@ -388,7 +378,7 @@ privileged access is [required.](../../../../pages-for-subheaders/rancher-on-a-s
 
 **Result:** You have upgraded Rancher. Data from your upgraded server is now saved to the `rancher-data` container for use in future upgrades.
 
-# 5. Verify the Upgrade
+### 5. Verify the Upgrade
 
 Log into Rancher. Confirm that the upgrade succeeded by checking the version displayed in the bottom-left corner of the browser window.
 
@@ -398,10 +388,10 @@ See [Restoring Cluster Networking](../../../../../versioned_docs/version-2.0-2.4
 
 :::
 
-# 6. Clean up Your Old Rancher Server Container
+### 6. Clean up Your Old Rancher Server Container
 
 Remove the previous Rancher server container. If you only stop the previous Rancher server container (and don't remove it), the container may restart after the next server reboot.
 
-# Rolling Back
+## Rolling Back
 
 If your upgrade does not complete successfully, you can roll back Rancher server and its data back to its last healthy state. For more information, see [Docker Rollback](roll-back-docker-installed-rancher.md).

@@ -4,20 +4,20 @@ title: AKS Cluster Configuration Reference
 weight: 4
 ---
 
-# Changes in Rancher v2.6
+## Changes in Rancher v2.6
 
 - Support for adding more than one node pool
 - Support for private clusters
 - Enabled autoscaling node pools
 - The AKS permissions are now configured in cloud credentials
 
-# Role-based Access Control
+## Role-based Access Control
 
 When provisioning an AKS cluster in the Rancher UI, RBAC cannot be disabled. If role-based access control is disabled for the cluster in AKS, the cluster cannot be registered or imported into Rancher.
 
 Rancher can configure member roles for AKS clusters in the same way as any other cluster. For more information, see the section on [role-based access control.](../../../pages-for-subheaders/manage-role-based-access-control-rbac.md)
 
-# Cloud Credentials
+## Cloud Credentials
 
 :::note
 
@@ -50,19 +50,19 @@ Microsoft provides multiple [clouds](https://docs.microsoft.com/en-us/cli/azure/
 - AzureChinaCloud
 - AzureUSGovernmentCloud
 
-# Account Access
+## Account Access
 
 In this section you will need to select an existing Azure cloud credential or create a new one.
 
 For help configuring your Azure cloud credential, see [this section.](#cloud-credentials)
 
-# Cluster Location
+## Cluster Location
 
 Configure the cluster and node location. For more information on availability zones for AKS, see the [AKS documentation.](https://docs.microsoft.com/en-us/azure/aks/availability-zones)
 
 The high availability locations include multiple availability zones.
 
-# Cluster Options
+## Cluster Options
 
 ### Kubernetes Version
 
@@ -92,7 +92,7 @@ The key used to create an SSH connection to the Linux nodes.
 
 Cluster tags can be useful if your organization uses tags as a way to organize resources across multiple Azure services. These tags don't apply to resources within the cluster.
 
-# Networking Options
+## Networking Options
 
 ### LoadBalancer SKU
 
@@ -177,7 +177,7 @@ Please be aware that when registering an existing AKS cluster, the cluster might
 
 For more information about connecting to an AKS private cluster, see the [AKS documentation.](https://docs.microsoft.com/en-us/azure/aks/private-clusters#options-for-connecting-to-the-private-cluster)
 
-# Node Pools
+## Node Pools
 
 ### Mode
 

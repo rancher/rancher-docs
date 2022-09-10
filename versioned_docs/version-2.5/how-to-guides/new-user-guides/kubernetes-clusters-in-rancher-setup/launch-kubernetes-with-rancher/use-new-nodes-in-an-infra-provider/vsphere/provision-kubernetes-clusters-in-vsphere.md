@@ -18,7 +18,7 @@ For details on configuring RKE Kubernetes clusters in Rancher, refer to the [clu
 - [Preparation in vSphere](#preparation-in-vsphere)
 - [Creating a vSphere Cluster](#creating-a-vsphere-cluster)
 
-# Preparation in vSphere
+## Preparation in vSphere
 
 This section describes the requirements for setting up vSphere so that Rancher can provision VMs and clusters.
 
@@ -48,7 +48,7 @@ The free ESXi license does not support API access. The vSphere servers must have
 
 If you have a cluster with DRS enabled, setting up [VM-VM Affinity Rules](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-7297C302-378F-4AF2-9BD6-6EDB1E0A850A.html) is recommended. These rules allow VMs assigned the etcd and control-plane roles to operate on separate ESXi hosts when they are assigned to different node pools. This practice ensures that the failure of a single physical machine does not affect the availability of those planes.
 
-# Creating a vSphere Cluster
+## Creating a vSphere Cluster
 
 The a vSphere cluster is created in Rancher depends on the Rancher version.
 
@@ -102,7 +102,7 @@ You can access your cluster after its state is updated to **Active.**
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces
 
 
-# Optional Next Steps
+## Optional Next Steps
 
 After creating your cluster, you can access it through the Rancher UI. As a best practice, we recommend setting up these alternate ways of accessing your cluster:
 

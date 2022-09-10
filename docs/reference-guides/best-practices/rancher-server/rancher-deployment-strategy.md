@@ -8,7 +8,7 @@ There are two recommended deployment strategies for a Rancher server that manage
 * [Hub and Spoke](#hub-and-spoke-strategy)
 * [Regional](#regional-strategy)
 
-# Hub & Spoke Strategy
+## Hub & Spoke Strategy
 ---
 
 In this deployment scenario, there is a single Rancher control plane managing Kubernetes clusters across the globe. The control plane would be run on a high-availability Kubernetes cluster, and there would be impact due to latencies.
@@ -26,7 +26,7 @@ In this deployment scenario, there is a single Rancher control plane managing Ku
 * Subject to network latencies.
 * If the control plane goes out, global provisioning of new services is unavailable until it is restored. However, each Kubernetes cluster can continue to be managed individually.
 
-# Regional Strategy
+## Regional Strategy
 ---
 In the regional deployment model a control plane is deployed in close proximity to the compute nodes.
 

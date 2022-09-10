@@ -19,31 +19,8 @@ You can configure the Kubernetes options one of two ways:
 
 The RKE cluster config options are nested under the `rancher_kubernetes_engine_config` directive. For more information, see the section about the [cluster config file.](#cluster-config-file)
 
-This section is a cluster configuration reference, covering the following topics:
 
-- [Rancher UI Options](#rancher-ui-options)
-  - [Kubernetes version](#kubernetes-version)
-  - [Network provider](#network-provider)
-  - [Project network isolation](#project-network-isolation)
-  - [Kubernetes cloud providers](#kubernetes-cloud-providers)
-  - [Private registries](#private-registries)
-  - [Authorized cluster endpoint](#authorized-cluster-endpoint)
-  - [Node pools](#node-pools)
-- [Advanced Options](#advanced-options)
-  - [NGINX Ingress](#nginx-ingress)
-  - [Node port range](#node-port-range)
-  - [Metrics server monitoring](#metrics-server-monitoring)
-  - [Pod security policy support](#pod-security-policy-support)
-  - [Docker version on nodes](#docker-version-on-nodes)
-  - [Docker root directory](#docker-root-directory)
-  - [Recurring etcd snapshots](#recurring-etcd-snapshots)
-  - [Agent Environment Variables](#agent-environment-variables)
-- [Cluster config file](#cluster-config-file)
-  - [Config file structure in Rancher v2.3.0+](#config-file-structure-in-rancher-v2-3-0)
-  - [Default DNS provider](#default-dns-provider)
-- [Rancher specific parameters](#rancher-specific-parameters)
-
-# Rancher UI Options
+## Rancher UI Options
 
 When creating a cluster using one of the options described in [Rancher Launched Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md), you can configure basic Kubernetes options using the **Cluster Options** section.
 
@@ -125,7 +102,7 @@ We recommend using a load balancer with the authorized cluster endpoint. For det
 
 For information on using the Rancher UI to set up node pools in an RKE cluster, refer to [this page.](../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)
 
-# Advanced Options
+## Advanced Options
 
 The following options are available when you create clusters in the Rancher UI. They are located under **Advanced Options.**
 
@@ -164,7 +141,7 @@ _Available as of v2.5.6_
 Option to set environment variables for [rancher agents](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/about-rancher-agents.md). The environment variables can be set using key value pairs. If rancher agent requires use of proxy to communicate with Rancher server, `HTTP_PROXY`, `HTTPS_PROXY` and `NO_PROXY` environment variables can be set using agent environment variables.
 
 
-# Cluster Config File
+## Cluster Config File
 
 Instead of using the Rancher UI to choose Kubernetes options for the cluster, advanced users can create an RKE config file. Using a config file allows you to set any of the [options available](https://rancher.com/docs/rke/latest/en/config-options/) in an RKE installation, except for `system_images` configuration. The `system_images` option is not supported when creating a cluster with the Rancher UI or API.
 

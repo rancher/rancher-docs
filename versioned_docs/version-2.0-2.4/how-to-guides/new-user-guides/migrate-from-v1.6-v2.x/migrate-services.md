@@ -18,19 +18,6 @@ This command line interface tool will:
 
 - Parse Compose files that you’ve exported from your Rancher v1.6 stacks and converts them to Kubernetes manifests that Rancher v2.x can consume. The tool also outputs a list of directives present in the Compose files that cannot be converted automatically to Rancher v2.x. These are directives that you’ll have to manually configure using the Rancher v2.x UI.
 
-## Outline
-
-<!-- TOC -->
-
-- [A. Download the migration-tools CLI](#a-download-the-migration-tools-cli)
-- [B. Configure the migration-tools CLI](#b-configure-the-migration-tools-cli)
-- [C. Run the migration-tools CLI](#c-run-the-migration-tools-cli)
-- [D. Deploy Services Using Rancher CLI](#d-re-deploy-services-as-kubernetes-manifests)
-- [What Now?](#what-now)
-
-
-<!-- /TOC -->
-
 
 ## A. Download the migration-tools CLI
 

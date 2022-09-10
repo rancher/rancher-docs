@@ -12,14 +12,8 @@ This page describes the requirements for the Rancher managed Kubernetes clusters
 
 > If Rancher is installed on a high-availability Kubernetes cluster, the Rancher server three-node cluster and downstream clusters have different requirements. For Rancher installation requirements, refer to the node requirements in the [installation section.](../../../pages-for-subheaders/installation-requirements.md)
 
-Make sure the nodes for the Rancher server fulfill the following requirements:
 
-- [Operating systems and container runtime requirements](#operating-systems-and-container-runtime-requirements)
-- [Hardware Requirements](#hardware-requirements)
-- [Networking Requirements](#networking-requirements)
-- [Optional: Security Considerations](#optional-security-considerations)
-
-# Operating Systems and Container Runtime Requirements
+## Operating Systems and Container Runtime Requirements
 
 Rancher should work with any modern Linux distribution and any modern Docker version. Linux is required for the etcd and controlplane nodes of all downstream clusters. Worker nodes may run Linux or [Windows Server.](#windows-nodes)
 
@@ -35,12 +29,12 @@ For information on how to install Docker, refer to the official [Docker document
 
 Some distributions of Linux derived from RHEL, including Oracle Linux, may have default firewall rules that block communication with Helm. We recommend disabling firewalld. For Kubernetes 1.19, firewalld must be turned off.
 
->**Note:** In RHEL 8.4, two extra services are included on the NetworkManager: `nm-cloud-setup.service` and `nm-cloud-setup.timer`. These services add a routing table that interferes with the CNI plugin's configuration. If these services are enabled, you must disable them using the command below, and then reboot the node to restore connectivity:
->
->  ```
-   systemctl disable nm-cloud-setup.service nm-cloud-setup.timer
-   reboot
-   ```
+**Note:** In RHEL 8.4, two extra services are included on the NetworkManager: `nm-cloud-setup.service` and `nm-cloud-setup.timer`. These services add a routing table that interferes with the CNI plugin's configuration. If these services are enabled, you must disable them using the command below, and then reboot the node to restore connectivity:
+
+```
+systemctl disable nm-cloud-setup.service nm-cloud-setup.timer
+reboot
+```
 
 ### SUSE Linux Nodes
 
@@ -101,7 +95,7 @@ Nodes with Windows Server must run Docker Enterprise Edition.
 
 Windows nodes can be used for worker nodes only. See [Configuring Custom Clusters for Windows](../../../pages-for-subheaders/use-windows-clusters.md)
 
-# Hardware Requirements
+## Hardware Requirements
 
 The hardware requirements for nodes with the `worker` role mostly depend on your workloads. The minimum to run the Kubernetes node components is 1 CPU (core) and 1GB of memory.
 
@@ -111,7 +105,7 @@ For hardware recommendations for large Kubernetes clusters, refer to the officia
 
 For hardware recommendations for etcd clusters in production, refer to the official [etcd documentation.](https://etcd.io/docs/v3.4.0/op-guide/hardware/)
 
-# Networking Requirements
+## Networking Requirements
 
 For a production cluster, we recommend that you restrict traffic by opening only the ports defined in the port requirements below.
 
@@ -123,7 +117,7 @@ For a breakdown of the port requirements for etcd nodes, controlplane nodes, and
 
 Details on which ports are used in each situation are found under [Downstream Cluster Port Requirements](../../../getting-started/installation-and-upgrade/installation-requirements/port-requirements.md#downstream-kubernetes-cluster-nodes).
 
-# Optional: Security Considerations
+## Optional: Security Considerations
 
 If you want to provision a Kubernetes cluster that is compliant with the CIS (Center for Internet Security) Kubernetes Benchmark, we recommend to following our hardening guide to configure your nodes before installing Kubernetes.
 

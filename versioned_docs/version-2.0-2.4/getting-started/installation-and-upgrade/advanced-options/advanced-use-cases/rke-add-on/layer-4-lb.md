@@ -29,22 +29,6 @@ In an HA setup that uses a layer 4 load balancer, the load balancer accepts Ranc
 
 Installation of Rancher in a high-availability configuration involves multiple procedures. Review this outline to learn about each procedure you need to complete.
 
-<!-- TOC -->
-
-- [1. Provision Linux Hosts](#1-provision-linux-hosts)
-- [2. Configure Load Balancer](#2-configure-load-balancer)
-- [3. Configure DNS](#3-configure-dns)
-- [4. Install RKE](#4-install-rke)
-- [5. Download RKE Config File Template](#5-download-rke-config-file-template)
-- [6. Configure Nodes](#6-configure-nodes)
-- [7. Configure Certificates](#7-configure-certificates)
-- [8. Configure FQDN](#8-configure-fqdn)
-- [9. Configure Rancher version](#9-configure-rancher-version)
-- [10. Back Up Your RKE Config File](#10-back-up-your-rke-config-file)
-- [11. Run RKE](#11-run-rke)
-- [12. Back Up Auto-Generated Config File](#12-back-up-auto-generated-config-file)
-
-<!-- /TOC -->
 
 <br/>
 

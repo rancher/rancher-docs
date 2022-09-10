@@ -9,25 +9,7 @@ The default backup storage location is configured when the `rancher-backup` oper
 
 Encrypted backups can only be restored if the Restore custom resource uses the same encryption configuration secret that was used to create the backup.
 
-- [Backup](#backup)
-  - [Backup in the default location with encryption](#backup-in-the-default-location-with-encryption)
-  - [Recurring backup in the default location](#recurring-backup-in-the-default-location)
-  - [Encrypted recurring backup in the default location](#encrypted-recurring-backup-in-the-default-location)
-  - [Encrypted backup in Minio](#encrypted-backup-in-minio)
-  - [Backup in S3 using AWS credential secret](#backup-in-s3-using-aws-credential-secret)
-  - [Recurring backup in S3 using AWS credential secret](#recurring-backup-in-s3-using-aws-credential-secret)
-  - [Backup from EC2 nodes with IAM permission to access S3](#backup-from-ec2-nodes-with-iam-permission-to-access-s3)
-- [Restore](#restore)
-  - [Restore using the default backup file location](#restore-using-the-default-backup-file-location)
-  - [Restore for Rancher migration](#restore-for-rancher-migration)
-  - [Restore from encrypted backup](#restore-from-encrypted-backup)
-  - [Restore an encrypted backup from Minio](#restore-an-encrypted-backup-from-minio)
-  - [Restore from backup using an AWS credential secret to access S3](#restore-from-backup-using-an-aws-credential-secret-to-access-s3)
-  - [Restore from EC2 nodes with IAM permissions to access S3](#restore-from-ec2-nodes-with-iam-permissions-to-access-s3)
-- [Example Credential Secret for Storing Backups in S3](#example-credential-secret-for-storing-backups-in-s3)
-- [Example EncryptionConfiguration](#example-encryptionconfiguration)
-
-# Backup
+## Backup
 
 This section contains example Backup custom resources.
 
@@ -153,7 +135,7 @@ spec:
   encryptionConfigSecretName: encryptionconfig
 ```
 
-# Restore
+## Restore
 
 This section contains example Restore custom resources.
 

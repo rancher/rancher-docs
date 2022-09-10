@@ -3,15 +3,8 @@ title: Helm Chart Options
 weight: 8
 ---
 
-- [Configuring Resource Limits and Requests](#configuring-resource-limits-and-requests)
-- [Trusted CA for Notifiers](#trusted-ca-for-notifiers)
-- [Additional Scrape Configurations](#additional-scrape-configurations)
-- [Configuring Applications Packaged within Monitoring V2](#configuring-applications-packaged-within-monitoring-v2)
-- [Increase the Replicas of Alertmanager](#increase-the-replicas-of-alertmanager)
-- [Configuring the Namespace for a Persistent Grafana Dashboard](#configuring-the-namespace-for-a-persistent-grafana-dashboard)
 
-
-# Configuring Resource Limits and Requests
+## Configuring Resource Limits and Requests
 
 The resource requests and limits can be configured when installing `rancher-monitoring`.
 
@@ -32,7 +25,7 @@ The default values in the table below are the minimum required resource limits a
 At least 50Gi storage is recommended.
 
 
-# Trusted CA for Notifiers
+## Trusted CA for Notifiers
 
 If you need to add a trusted CA to your notifier, follow these steps:
 
@@ -43,7 +36,7 @@ If you need to add a trusted CA to your notifier, follow these steps:
 **Result:** The default Alertmanager custom resource will have access to your trusted CA.
 
 
-# Additional Scrape Configurations
+## Additional Scrape Configurations
 
 If the scrape configuration you want cannot be specified via a ServiceMonitor or PodMonitor at the moment, you can provide an `additionalScrapeConfigSecret` on deploying or upgrading `rancher-monitoring`.
 
@@ -52,7 +45,7 @@ A [scrape_config section](https://prometheus.io/docs/prometheus/latest/configura
 An example of where this might be used is with Istio. For more information, see [this section.](../../explanations/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md)
 
 
-# Configuring Applications Packaged within Monitoring v2
+## Configuring Applications Packaged within Monitoring v2
 
 We deploy kube-state-metrics and node-exporter with monitoring v2. Node exporter are deployed as DaemonSets. In the monitoring v2 helm chart, in the values.yaml, each of the things are deployed as sub charts.
 

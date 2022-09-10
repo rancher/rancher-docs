@@ -178,7 +178,7 @@ Your registry must support manifests. As of April 2020, Amazon Elastic Container
 
 Append your private registry address to the `allow-nondistributable-artifacts` config field in the Docker daemon (`C:\ProgramData\Docker\config\daemon.json`). Since the base image of Windows images are maintained by the `mcr.microsoft.com` registry, this step is required as the layers in the Microsoft registry are missing from Docker Hub and need to be pulled into the private registry.
 
-   ```
+   ```json
    {
      ...
      "allow-nondistributable-artifacts": [

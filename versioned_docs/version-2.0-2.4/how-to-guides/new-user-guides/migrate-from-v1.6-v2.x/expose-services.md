@@ -14,18 +14,6 @@ Use this document to correct workloads that list `ports` in `output.txt`. You ca
 ![Resolve Ports](/img/resolve-ports.png)
 
 
-## In This Document
-
-<!-- TOC -->
-
-- [What's Different About Exposing Services in Rancher v2.x?](#what-s-different-about-exposing-services-in-rancher-v2-x)
-- [HostPorts](#hostport)
-- [Setting HostPort](#setting-hostport)
-- [NodePorts](#nodeport)
-- [Setting NodePort](#setting-nodeport)
-
-<!-- /TOC -->
-
 ## What's Different About Exposing Services in Rancher v2.x?
 
 In Rancher v1.6, we used the term _Port Mapping_ for exposing an IP address and port where your you and your users can access a service. 

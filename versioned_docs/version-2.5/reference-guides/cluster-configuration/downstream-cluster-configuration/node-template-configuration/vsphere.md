@@ -9,14 +9,8 @@ aliases:
 
 The following node template configuration reference applies to Rancher v2.3.3+.
 
-- [Account Access](#account-access)
-- [Scheduling](#scheduling)
-- [Instance Options](#instance-options)
-- [Networks](#networks)
-- [Node tags and custom attributes](#node-tags-and-custom-attributes)
-- [cloud-init](#cloud-init)
 
-# Account Access
+## Account Access
 
 | Parameter                | Required | Description |
 |:----------------------|:--------:|:-----|
@@ -44,7 +38,7 @@ The fields in the **Scheduling** section should auto-populate with the data cent
 | Folder |    |  Name of a folder in the datacenter to create the VMs in. Must already exist. The VM folders in this dropdown menu directly correspond to your VM folders in vSphere. The folder name should be prefaced with `vm/` in your vSphere config file. |
 | Host |  | The IP of the host system to schedule VMs in. Leave this field blank for a standalone ESXi or for a cluster with DRS (Distributed Resource Scheduler). If specified, the host system's pool will be used and the **Resource Pool** parameter will be ignored.   |
 
-# Instance Options
+## Instance Options
 
 In the **Instance Options** section, configure the number of vCPUs, memory, and disk size for the VMs created by this template.
 
@@ -72,11 +66,11 @@ Choose the way that the VM will be created:
 - **Clone an existing virtual machine:** In the **Virtual machine** field, choose an existing VM that the new VM will be cloned from.
 - **Install from boot2docker ISO:** Ensure that the **OS ISO URL** field contains the URL of a VMware ISO release for RancherOS (`rancheros-vmware.iso`). Note that this URL must be accessible from the nodes running your Rancher server installation.
 
-# Networks
+## Networks
 
 The node template now allows a VM to be provisioned with multiple networks. In the **Networks** field, you can now click **Add Network** to add any networks available to you in vSphere.
 
-# Node Tags and Custom Attributes
+## Node Tags and Custom Attributes
 
 Tags allow you to attach metadata to objects in the vSphere inventory to make it easier to sort and search for these objects.
 
@@ -86,7 +80,7 @@ In the custom attributes, Rancher will let you select all the custom attributes 
 
 > **Note:** Custom attributes are a legacy feature that will eventually be removed from vSphere.
 
-# cloud-init
+## cloud-init
 
 [Cloud-init](https://cloudinit.readthedocs.io/en/latest/) allows you to initialize your nodes by applying configuration on the first boot. This may involve things such as creating users, authorizing SSH keys or setting up the network.
 

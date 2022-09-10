@@ -6,7 +6,7 @@ weight: 2130
 
 You can use Rancher to create a cluster hosted in Huawei Cloud Container Engine (CCE). Rancher has already implemented and packaged the [cluster driver](../../../advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-cluster-drivers.md) for CCE, but by default, this cluster driver is `inactive`. In order to launch CCE clusters, you will need to [enable the CCE cluster driver](../../../advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-cluster-drivers.md#activating-deactivating-cluster-drivers). After enabling the cluster driver, you can start provisioning CCE clusters.
 
-# Prerequisites in Huawei
+## Prerequisites in Huawei
 
 :::caution
 
@@ -18,7 +18,7 @@ Deploying to CCE will incur charges.
 
 2. Create an [Access Key ID and Secret Access Key](https://support.huaweicloud.com/en-us/usermanual-iam/en-us_topic_0079477318.html).
 
-# Prerequisite in Rancher
+## Prerequisite in Rancher
 
 You will need to enable the Huawei CCE cluster driver:
 
@@ -28,11 +28,11 @@ You will need to enable the Huawei CCE cluster driver:
 
 When the cluster driver is finished downloading, you will be able to create Huawei CCE clusters in Rancher.
 
-# Limitations
+## Limitations
 
 Huawei CCE service doesn't support the ability to create clusters with public access through their API. You are required to run Rancher in the same VPC as the CCE clusters that you want to provision.
 
-# Create the CCE Cluster
+## Create the CCE Cluster
 
 1. From the **Clusters** page, click **Create**.
 1. Click **Huawei CCE**.
@@ -53,7 +53,7 @@ You can access your cluster after its state is updated to **Active**.
 - `Default`, containing the `default` namespace
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces
 
-# Huawei CCE Configuration
+## Huawei CCE Configuration
 
 |Settings|Description|
 |---|---|
@@ -76,7 +76,7 @@ If you are editing the cluster in the `cluster.yml` instead of the Rancher UI, n
 
 :::
 
-# Node Configuration
+## Node Configuration
 
 |Settings|Description|
 |---|---|

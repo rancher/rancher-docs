@@ -22,13 +22,6 @@ Rancher integrates with a variety of popular IT services, including:
 - **DingTalk**: (Available as of v2.4.6) Send alert notifications to DingTalk using a webhook.
 - **Microsoft Teams**: (Available as of v2.4.6) Send alert notifications to Teams using a webhook.
 
-This section covers the following topics:
-
-- [Roles-based access control for notifiers](#roles-based-access-control-for-notifiers)
-- [Adding notifiers](#adding-notifiers)
-- [Configuration](#configuration)
-- [Managing notifiers](#managing-notifiers)
-- [Example payload for a webhook alert notifier](#example-payload-for-a-webhook-alert-notifier)
 
 # Roles-based Access Control for Notifiers
 

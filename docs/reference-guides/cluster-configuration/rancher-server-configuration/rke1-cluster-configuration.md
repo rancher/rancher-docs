@@ -8,38 +8,8 @@ When Rancher installs Kubernetes, it uses [RKE](../../../pages-for-subheaders/la
 
 This section covers the configuration options that are available in Rancher for a new or existing RKE Kubernetes cluster.
 
-- [Overview](#overview)
-- [Editing Clusters with a Form in the Rancher UI](#editing-clusters-with-a-form-in-the-rancher-ui)
-- [Editing Clusters with YAML](#editing-clusters-with-yaml)
-- [Configuration Options in the Rancher UI](#configuration-options-in-the-rancher-ui)
-  - [Kubernetes Version](#kubernetes-version)
-  - [Network Provider](#network-provider)
-  - [Project Network Isolation](#project-network-isolation)
-  - [Kubernetes Cloud Providers](#kubernetes-cloud-providers)
-  - [Private Registries](#private-registries)
-  - [Authorized Cluster Endpoint](#authorized-cluster-endpoint)
-  - [Node Pools](#node-pools)
-  - [NGINX Ingress](#nginx-ingress)
-  - [Metrics Server Monitoring](#metrics-server-monitoring)
-  - [Pod Security Policy Support](#pod-security-policy-support)
-  - [Docker Version on Nodes](#docker-version-on-nodes)
-  - [Docker Root Directory](#docker-root-directory)
-  - [Default Pod Security Policy](#default-pod-security-policy)
-  - [Node Port Range](#node-port-range)
-  - [Recurring etcd Snapshots](#recurring-etcd-snapshots)
-  - [Agent Environment Variables](#agent-environment-variables)
-  - [Updating ingress-nginx](#updating-ingress-nginx)
-- [RKE Cluster Config File Reference](#rke-cluster-config-file-reference)
-  - [Config File Structure in Rancher](#config-file-structure-in-rancher)
-  - [Default DNS Provider](#default-dns-provider)
-- [Rancher Specific Parameters in YAML](#rancher-specific-parameters-in-yaml)
-  - [docker_root_dir](#docker_root_dir)
-  - [enable_cluster_monitoring](#enable_cluster_monitoring)
-  - [enable_network_policy](#enable_network_policy)
-  - [local_cluster_auth_endpoint](#local_cluster_auth_endpoint)
-  - [Custom Network Plug-in](#custom-network-plug-in)
 
-# Overview
+## Overview
 
 You can configure the Kubernetes options one of two ways:
 
@@ -54,7 +24,7 @@ For an example of RKE config file syntax, see the [RKE documentation](https://ra
 
 The forms in the Rancher UI don't include all advanced options for configuring RKE. For the complete reference of configurable options for RKE Kubernetes clusters in YAML, see the [RKE documentation.](https://rancher.com/docs/rke/latest/en/config-options/)
 
-# Editing Clusters with a Form in the Rancher UI
+## Editing Clusters with a Form in the Rancher UI
 
 To edit your cluster,
 
@@ -62,7 +32,7 @@ To edit your cluster,
 1. Go to the cluster you want to configure and click **⋮ > Edit Config**.
 
 
-# Editing Clusters with YAML
+## Editing Clusters with YAML
 
 Instead of using the Rancher UI to choose Kubernetes options for the cluster, advanced users can create an RKE config file. Using a config file allows you to set any of the options available in an RKE installation, except for system_images configuration, by specifying them in YAML.
 
@@ -75,7 +45,7 @@ To edit an RKE config file directly from the Rancher UI,
 1. In the configuration form, scroll down and click **Edit as YAML**.
 1. Edit the RKE options under the `rancher_kubernetes_engine_config` directive.
 
-# Configuration Options in the Rancher UI
+## Configuration Options in the Rancher UI
 
 :::tip
 
@@ -217,7 +187,7 @@ If the `updateStrategy` of `ingress-nginx` is `OnDelete`, you will need to delet
 
 
 
-# RKE Cluster Config File Reference
+## RKE Cluster Config File Reference
 
 Instead of using the Rancher UI to choose Kubernetes options for the cluster, advanced users can create an RKE config file. Using a config file allows you to set any of the [options available](https://rancher.com/docs/rke/latest/en/config-options/) in an RKE installation, except for `system_images` configuration. The `system_images` option is not supported when creating a cluster with the Rancher UI or API.
 
@@ -332,7 +302,7 @@ The table below indicates what DNS provider is deployed by default. See [RKE doc
 | v2.2.5 and higher | v1.13.x and lower | kube-dns |
 | v2.2.4 and lower | any | kube-dns |
 
-# Rancher Specific Parameters in YAML
+## Rancher Specific Parameters in YAML
 
 Besides the RKE config file options, there are also Rancher specific settings that can be configured in the Config File (YAML):
 

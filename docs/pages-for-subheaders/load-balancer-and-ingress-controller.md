@@ -27,10 +27,9 @@ Load Balancers have a couple of limitations you should be aware of:
 
 - If you want to use a load balancer with a Hosted Kubernetes cluster (i.e., clusters hosted in GKE, EKS, or AKS), the load balancer must be running within that cloud provider's infrastructure. Please review the compatibility tables regarding support for load balancers based on how you've provisioned your clusters:
 
+- [Support for Layer-4 Load Balancing](../how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md#support-for-layer-4-load-balancing)
 
-    - [Support for Layer-4 Load Balancing](../how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md#support-for-layer-4-load-balancing)
-
-    - [Support for Layer-7 Load Balancing](../how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md#support-for-layer-7-load-balancing)
+- [Support for Layer-7 Load Balancing](../how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md#support-for-layer-7-load-balancing)
 
 ## Ingress
 

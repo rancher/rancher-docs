@@ -15,7 +15,7 @@ For more detailed information on how to contribute to the development of Rancher
 
 On the Rancher Users Slack, the channel for developers is **#developer**.
 
-# Repositories
+## Repositories
 
 All of repositories are located within our main GitHub organization. There are many repositories used for Rancher, but we'll provide descriptions of some of the main ones used in Rancher.
 
@@ -39,13 +39,13 @@ To see all libraries/projects used in Rancher, see the [`go.mod` file](https://g
 ![Rancher diagram](/img/ranchercomponentsdiagram-2.6.svg)<br/>
 <sup>Rancher components used for provisioning/managing Kubernetes clusters.</sup>
 
-# Building
+## Building
 
 Every repository should have a Makefile and can be built using the `make` command. The `make` targets are based on the scripts in the `/scripts` directory in the repository, and each target will use [Dapper](https://github.com/rancher/dapper) to run the target in an isolated environment. The `Dockerfile.dapper` will be used for this process, and includes all the necessary build tooling needed.
 
 The default target is `ci`, and will run `./scripts/validate`, `./scripts/build`, `./scripts/test` and `./scripts/package`. The resulting binaries of the build will be in `./build/bin` and are usually also packaged in a Docker image.
 
-# Bugs, Issues or Questions
+## Bugs, Issues or Questions
 
 If you find any bugs or are having any trouble, please search the [reported issue](https://github.com/rancher/rancher/issues) as someone may have experienced the same issue or we are actively working on a solution.
 
@@ -128,7 +128,7 @@ Please remove any sensitive data as it will be publicly viewable.
       - `/var/log/docker.log`
 - **Metrics:** If you are experiencing performance issues, please provide as much of data (files or screenshots) of metrics which can help determining what is going on. If you have an issue related to a machine, it helps to supply output of `top`, `free -m`, `df` which shows processes/memory/disk usage.
 
-# Docs
+## Docs
 
 If you have any updates to our documentation, please make any pull request to our docs repo.
 

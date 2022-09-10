@@ -14,12 +14,6 @@ Rancher recommends enabling the [ability to set up recurring snapshots of etcd](
 
 As of Rancher v2.4.0, clusters can also be restored to a prior Kubernetes version and cluster configuration.
 
-This section covers the following topics:
-
-- [Viewing Available Snapshots](#viewing-available-snapshots)
-- [Restoring a Cluster from a Snapshot](#restoring-a-cluster-from-a-snapshot)
-- [Recovering etcd without a Snapshot](#recovering-etcd-without-a-snapshot)
-- [Enabling snapshot features for clusters created before Rancher v2.2.0](#enabling-snapshot-features-for-clusters-created-before-rancher-v2-2-0)
 
 ## Viewing Available Snapshots
 
@@ -111,6 +105,6 @@ If the group of etcd nodes loses quorum, the Kubernetes cluster will report a fa
 
 6. After the single nodes is up and running, Rancher recommends adding additional etcd nodes to your cluster. If you have a [custom cluster](../../../pages-for-subheaders/use-existing-nodes.md) and you want to reuse an old node, you are required to [clean up the nodes](./clean-cluster-nodes.md) before attempting to add them back into a cluster.
 
-# Enabling Snapshot Features for Clusters Created Before Rancher v2.2.0
+## Enabling Snapshot Features for Clusters Created Before Rancher v2.2.0
 
 If you have any Rancher launched Kubernetes clusters that were created before v2.2.0, after upgrading Rancher, you must [edit the cluster](../../../pages-for-subheaders/cluster-configuration.md) and _save_ it, in order to enable the updated snapshot features. Even if you were already creating snapshots before v2.2.0, you must do this step as the older snapshots will not be available to use to [back up and restore etcd through the UI](restoring-etcd.md).

@@ -9,24 +9,6 @@ After you launch a Kubernetes cluster in Rancher, you can manage individual node
 
 > If you want to manage the _cluster_ and not individual nodes, see [Editing Clusters](../../../pages-for-subheaders/cluster-configuration.md).
 
-This section covers the following topics:
-
-- [Node options available for each cluster creation option](#node-options-available-for-each-cluster-creation-option)
-  - [Nodes hosted by an infrastructure provider](#nodes-hosted-by-an-infrastructure-provider)
-  - [Nodes provisioned by hosted Kubernetes providers](#nodes-provisioned-by-hosted-kubernetes-providers)
-  - [Registered nodes](#registered-nodes)
-- [Managing and editing individual nodes](#managing-and-editing-individual-nodes)
-- [Viewing a node in the Rancher API](#viewing-a-node-in-the-rancher-api)
-- [Deleting a node](#deleting-a-node)
-- [Scaling nodes](#scaling-nodes)
-- [SSH into a node hosted by an infrastructure provider](#ssh-into-a-node-hosted-by-an-infrastructure-provider)
-- [Cordoning a node](#cordoning-a-node)
-- [Draining a node](#draining-a-node)
-  - [Aggressive and safe draining options](#aggressive-and-safe-draining-options)
-  - [Grace period](#grace-period)
-  - [Timeout](#timeout)
-  - [Drained and cordoned state](#drained-and-cordoned-state)
-- [Labeling a node to be ignored by Rancher](#labeling-a-node-to-be-ignored-by-rancher)
 
 # Node Options Available for Each Cluster Creation Option
 
