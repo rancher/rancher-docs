@@ -88,7 +88,7 @@ Use `helm repo add` command to add the Helm chart repository that contains chart
     ```
 - Alpha: Experimental preview of upcoming releases.
     ```
-    helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+    helm repo add rancher-alpha https://releases.rancher.com/server-charts/alpha
     ```
     Note: Upgrades are not supported to, from, or between Alphas.
 
@@ -197,7 +197,6 @@ Because `rancher` is the default option for `ingress.tls.source`, we are not spe
 
 - Set the `hostname` to the DNS name you pointed at your load balancer.
 - Set the `bootstrapPassword` to something unique for the `admin` user.
-- If you are installing an alpha version, Helm requires adding the `--devel` option to the command.
 - To install a specific Rancher version, use the `--version` flag, example: `--version 2.3.6`
 
 ```
@@ -206,7 +205,11 @@ helm install rancher rancher-<CHART_REPO>/rancher \
   --set hostname=rancher.my.org \
   --set bootstrapPassword=admin
 ```
-
+If you are installing an alpha version, Helm requires adding the `--devel` option to the install command:
+```
+helm install rancher rancher-alpha/rancher --devel
+```
+  
 Wait for Rancher to be rolled out:
 
 ```
@@ -233,7 +236,6 @@ In the following command,
 - `ingress.tls.source` is set to `letsEncrypt`
 - `letsEncrypt.email` is set to the email address used for communication about your certificate (for example, expiry notices)
 - Set `letsEncrypt.ingress.class` to whatever your ingress controller is, e.g., `traefik`, `nginx`, `haproxy`, etc.
-- If you are installing an alpha version, Helm requires adding the `--devel` option to the command.
 
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \
@@ -243,6 +245,11 @@ helm install rancher rancher-<CHART_REPO>/rancher \
   --set ingress.tls.source=letsEncrypt \
   --set letsEncrypt.email=me@example.org \
   --set letsEncrypt.ingress.class=nginx
+```
+  
+If you are installing an alpha version, Helm requires adding the `--devel` option to the install command:
+```
+helm install rancher rancher-alpha/rancher --devel
 ```
 
 Wait for Rancher to be rolled out:
@@ -270,7 +277,6 @@ If you want to check if your certificates are correct, see [How do I check Commo
 - Set the `hostname`.
 - Set the `bootstrapPassword` to something unique for the `admin` user.
 - Set `ingress.tls.source` to `secret`.
-- If you are installing an alpha version, Helm requires adding the `--devel` option to the command.
 
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \
@@ -279,7 +285,12 @@ helm install rancher rancher-<CHART_REPO>/rancher \
   --set bootstrapPassword=admin \
   --set ingress.tls.source=secret
 ```
+If you are installing an alpha version, Helm requires adding the `--devel` option to the install command:
 
+```
+helm install rancher rancher-alpha/rancher --devel
+```
+  
 If you are using a Private CA signed certificate , add `--set privateCA=true` to the command:
 
 ```
