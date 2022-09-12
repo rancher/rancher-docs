@@ -49,7 +49,7 @@ module.exports = {
         alt: 'logo',
         src: 'img/rancher-logo-horiz-color.svg',
         // href: 'en',
-      }, 
+      },
       items: [
            {
            type: 'doc',
