@@ -51,13 +51,13 @@ module.exports = {
         // href: 'en',
       },
       items: [
-           {
-           type: 'doc',
-           docId: 'rancher-manager',
-           position: 'right',
-           label: 'Docs',
-           className: 'navbar__docs',
-           },
+          {
+          type: 'doc',
+          docId: 'rancher-manager',
+          position: 'right',
+          label: 'Docs',
+          className: 'navbar__docs',
+          },
         {
           href: 'https://github.com/rancher/rancher-docs',
           label: 'GitHub',
