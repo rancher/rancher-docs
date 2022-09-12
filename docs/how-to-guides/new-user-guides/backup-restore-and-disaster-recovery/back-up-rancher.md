@@ -9,7 +9,7 @@ The backup-restore operator needs to be installed in the local cluster, and only
 
 Note that the rancher-backup operator version 2.x.x is for Rancher v2.6.x.
 
-::: caution
+:::caution
 
 When restoring a backup into a new Rancher setup, the version of the new setup should be the same as the one where the backup is made. The Kubernetes version should also be considered when restoring a backup, since the supported apiVersion in the cluster and in the backup file could be different.
 
