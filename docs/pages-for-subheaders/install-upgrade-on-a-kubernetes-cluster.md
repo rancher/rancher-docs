@@ -205,11 +205,13 @@ helm install rancher rancher-<CHART_REPO>/rancher \
   --set hostname=rancher.my.org \
   --set bootstrapPassword=admin
 ```
+
 If you are installing an alpha version, Helm requires adding the `--devel` option to the install command:
+
 ```
 helm install rancher rancher-alpha/rancher --devel
 ```
-  
+
 Wait for Rancher to be rolled out:
 
 ```
@@ -246,8 +248,9 @@ helm install rancher rancher-<CHART_REPO>/rancher \
   --set letsEncrypt.email=me@example.org \
   --set letsEncrypt.ingress.class=nginx
 ```
-  
+
 If you are installing an alpha version, Helm requires adding the `--devel` option to the install command:
+
 ```
 helm install rancher rancher-alpha/rancher --devel
 ```
@@ -290,7 +293,7 @@ If you are installing an alpha version, Helm requires adding the `--devel` optio
 ```
 helm install rancher rancher-alpha/rancher --devel
 ```
-  
+
 If you are using a Private CA signed certificate , add `--set privateCA=true` to the command:
 
 ```
