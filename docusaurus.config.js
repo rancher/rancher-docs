@@ -11,6 +11,18 @@ module.exports = {
   organizationName: 'rancher', // Usually your GitHub org/user name.
   projectName: 'rancher-docs', // Usually your repo name.
   trailingSlash: false,
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "zh"],
+    localeConfigs: {
+      en: {
+        label: "English",
+      },
+      zh: {
+        label: "简体中文",
+      },
+    },
+  },
   themeConfig: {
     algolia: {
       // The application ID provided by Algolia
@@ -57,6 +69,10 @@ module.exports = {
           position: 'right',
           label: 'Docs',
           className: 'navbar__docs',
+        },
+        {
+            type: "localeDropdown",
+            position: "right",
         },
         {
           href: 'https://github.com/rancher/',
