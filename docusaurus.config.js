@@ -49,17 +49,17 @@ module.exports = {
         alt: 'logo',
         src: 'img/rancher-logo-horiz-color.svg',
         // href: 'en',
-      },
+      }, 
       items: [
+           {
+           type: 'doc',
+           docId: 'rancher-manager',
+           position: 'right',
+           label: 'Docs',
+           className: 'navbar__docs',
+           },
         {
-          type: 'doc',
-          docId: 'rancher-manager',
-          position: 'right',
-          label: 'Docs',
-          className: 'navbar__docs',
-        },
-        {
-          href: 'https://github.com/rancher/',
+          href: 'https://github.com/rancher/rancher-docs',
           label: 'GitHub',
           position: 'right',
           className: 'navbar__github btn btn-secondary icon-github',
