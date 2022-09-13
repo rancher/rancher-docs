@@ -55,7 +55,7 @@ If you're using Amazon EC2 as your host and want to use the [dual-stack](https:/
 
     :::
 
-6.	<a id="step-6"></a>Click **Next**.
+6. Click **Next**.
 
 4. Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.
 
@@ -68,7 +68,7 @@ If you're using Amazon EC2 as your host and want to use the [dual-stack](https:/
 
 :::
 
-8.	<a id="step-8"></a>**Optional**: Click **[Show advanced options](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/about-rancher-agents.md)** to specify IP address(es) to use when registering the node, override the hostname of the node, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
+8. **Optional**: Click **[Show advanced options](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/about-rancher-agents.md)** to specify IP address(es) to use when registering the node, override the hostname of the node, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
 
 9. Copy the command displayed on screen to your clipboard.
 
