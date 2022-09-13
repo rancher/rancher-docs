@@ -248,11 +248,14 @@ Option to remove all pods from the node prior to upgrading.
 
 Option to set kubelet options for different nodes. For available options, refer to the [Kubernetes documentation](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/).
 
-# Cluster Config File Reference
+## Cluster Config File Reference
 
 Instead of using the Rancher UI to choose Kubernetes options for the cluster, advanced users can create a config file. Using a config file allows you to set the [options available](https://docs.rke2.io/install/install_options/server_config/) in an RKE2 installation, including those already listed in [Configuration Options in the Rancher UI](#configuration-options-in-the-rancher-ui), as well as Rancher-specific parameters.
 
-{{% accordion id="rke2-cluster-config-file" label="Example Cluster Config File Snippet" %}}
+<details>
+    <summary>
+        <b>Example Cluster Config File Snippet</b>
+    </summary>
 
 ```yaml
 spec:
@@ -300,6 +303,7 @@ spec:
         ignoreDaemonSets: true
         timeout: 120
 ```
+</details>
 
 ### chartValues
 
