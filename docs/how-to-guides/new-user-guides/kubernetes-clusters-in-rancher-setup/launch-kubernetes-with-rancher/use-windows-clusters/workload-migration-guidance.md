@@ -217,7 +217,7 @@ spec:
 
 ### Semi-Annual Channel (SAC)
 
-- Windows Server 20H2 SAC &#10071; Will reach EOL on Aug 9, 2022
+- Windows Server 20H2 SAC &#10060; EOL Reached on Aug 9, 2022
 - Windows Server 2004 SAC &#10060; EOL Reached on Dec 14, 2021
 - Windows Server 1909 SAC &#10060; EOL Reached on May 11, 2021
 - Windows Server 1903 SAC &#10060; EOL Reached on Dec 8, 2020
@@ -272,7 +272,7 @@ For more information, please see the following references:
 
 
 ## Guiding Migrations of Workloads to RKE2 Windows
-<br/>
+
 Referencing the tables in [Rancher 2.5 vs. Rancher 2.6 Support Matrix for Windows Clusters](#rancher-2-5-vs-rancher-2-6-support-matrix-for-windows-clusters) and [Rancher 2.5 vs. Rancher 2.6 Supported Kubernetes Versions for Provisioning RKE1 and RKE2 Windows Clusters](#rancher-2-5-vs-rancher-2-6-supported-kubernetes-versions-for-provisioning-rke1-and-rke2-windows-clusters), you will find the overlap in Kubernetes versions between RKE1 and RKE2 occurs in 1.22. This will be the base version required to migrate RKE1 Windows workloads when following the Rancher recommended approach.
 
 ### In-Place Upgrade of Rancher 2.5
