@@ -23,7 +23,7 @@ For this workload, you'll be deploying the application Rancher Hello-World.
 
 5.  Click **Deploy**.
 
-	**Step Result:** The **Deploy Workload** page opens.
+    **Step Result:** The **Deploy Workload** page opens.
 
 6.  Enter a **Name** for your workload.
 
@@ -33,15 +33,15 @@ For this workload, you'll be deploying the application Rancher Hello-World.
 
 9.  From the **As a** drop-down, make sure that **NodePort (On every node)** is selected.
 
-	![As a dropdown, NodePort (On every node selected)](/img/nodeport-dropdown.png)
+    ![As a dropdown, NodePort (On every node selected)](/img/nodeport-dropdown.png)
 
 10.  From the **On Listening Port** field, leave the **Random** value in place.
 
-	![On Listening Port, Random selected](/img/listening-port-field.png)
+    ![On Listening Port, Random selected](/img/listening-port-field.png)
 
 11. From the **Publish the container port** field, enter port `80`.
 
-	![Publish the container port, 80 entered](/img/container-port-field.png)
+    ![Publish the container port, 80 entered](/img/container-port-field.png)
 
 12. Leave the remaining options on their default setting. We'll tell you about them later.
 

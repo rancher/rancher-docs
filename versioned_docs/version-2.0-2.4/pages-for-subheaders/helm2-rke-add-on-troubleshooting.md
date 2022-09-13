@@ -20,16 +20,16 @@ Choose from the following options:
 
 - [Generic troubleshooting](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/rke-add-on/troubleshooting/generic-troubleshooting.md)
 
-	In this section, you can find generic ways to debug your Kubernetes cluster.
+    In this section, you can find generic ways to debug your Kubernetes cluster.
 
 - [Failed to set up SSH tunneling for host](https://rancher.com/docs/rke/latest/en/troubleshooting/ssh-connectivity-errors/)
 
-	In this section, you can find errors related to SSH tunneling when you run the `rke` command to setup your nodes.
+    In this section, you can find errors related to SSH tunneling when you run the `rke` command to setup your nodes.
 
 - [Failed to get job complete status](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/rke-add-on/troubleshooting/job-complete-status.md)
 
-	In this section, you can find errors related to deploying addons.
+    In this section, you can find errors related to deploying addons.
 
 - [404 - default backend](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/rke-add-on/troubleshooting/404-default-backend.md)
 
-	In this section, you can find errors related to the `404 - default backend` page that is shown when trying to access Rancher.
+    In this section, you can find errors related to the `404 - default backend` page that is shown when trying to access Rancher.

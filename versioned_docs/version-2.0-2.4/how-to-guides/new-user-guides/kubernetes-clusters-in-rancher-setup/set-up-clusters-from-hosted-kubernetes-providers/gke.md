@@ -36,11 +36,11 @@ Use Rancher to set up and configure your Kubernetes cluster.
 
 5. Either paste your service account private key in the **Service Account** text box or **Read from a file**. Then click **Next: Configure Nodes**.
 
-	>**Note:** After submitting your private key, you may have to enable the Google Kubernetes Engine API. If prompted, browse to the URL displayed in the Rancher UI to enable the API.
+    >**Note:** After submitting your private key, you may have to enable the Google Kubernetes Engine API. If prompted, browse to the URL displayed in the Rancher UI to enable the API.
 
 6. Select your **Cluster Options**
 7. Customize your **Node Options**
-	* Enabling the Auto Upgrade feature for Nodes is not recommended.
+    * Enabling the Auto Upgrade feature for Nodes is not recommended.
 8. Select your **Security Options**
 9. Review your options to confirm they're correct. Then click **Create**.
 

@@ -99,8 +99,8 @@ RKE uses a YAML config file to install and configure your Kubernetes cluster. Th
 
 1. Download one of following templates, depending on the SSL certificate you're using.
 
-	- [Template for self-signed certificate<br/> `3-node-externalssl-certificate.yml`](../cluster-yml-templates/node-externalssl-certificate.md)installation/options/cluster-yml-templates/3-node-externalssl-certificate)
-	- [Template for certificate signed by recognized CA<br/> `3-node-externalssl-recognizedca.yml`](../cluster-yml-templates/node-externalssl-recognizedca.md)
+    - [Template for self-signed certificate<br/> `3-node-externalssl-certificate.yml`](../cluster-yml-templates/node-externalssl-certificate.md)installation/options/cluster-yml-templates/3-node-externalssl-certificate)
+    - [Template for certificate signed by recognized CA<br/> `3-node-externalssl-recognizedca.yml`](../cluster-yml-templates/node-externalssl-recognizedca.md)
 
 
 

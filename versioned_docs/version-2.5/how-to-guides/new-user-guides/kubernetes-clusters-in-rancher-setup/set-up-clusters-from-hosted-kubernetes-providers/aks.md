@@ -135,7 +135,7 @@ Use Rancher to set up and configure your Kubernetes cluster.
 
 1. Use **Nodes** to provision each node in your cluster and choose a geographical region.
 
-	[Microsoft Documentation: How to create and use an SSH public and private key pair](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys)
+    [Microsoft Documentation: How to create and use an SSH public and private key pair](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys)
 <br/>
 1. Click **Create**.
 <br/>

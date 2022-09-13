@@ -56,10 +56,10 @@ Clusters won't begin provisioning until all three node roles (worker, etcd and c
 
 7.	From **Node Role**, choose the roles that you want filled by a cluster node. You must provision at least one node for each role: `etcd`, `worker`, and `control plane`. All three roles are required for a custom cluster to finish provisioning. For more information on roles, see [this section.](../reference-guides/kubernetes-concepts.md#roles-for-nodes-in-kubernetes-clusters)
 
-	>**Notes:**
-	>
+    >**Notes:**
+    >
     >- Using Windows nodes as Kubernetes workers? See [this section](use-windows-clusters.md).
-	>- Bare-Metal Server Reminder: If you plan on dedicating bare-metal servers to each role, you must provision a bare-metal server for each role (i.e. provision multiple bare-metal servers).
+    >- Bare-Metal Server Reminder: If you plan on dedicating bare-metal servers to each role, you must provision a bare-metal server for each role (i.e. provision multiple bare-metal servers).
 
 8.	<a id="step-8"></a>**Optional**: Click **[Show advanced options](admin-settings/agent-options/)** to specify IP address(es) to use when registering the node, override the hostname of the node, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
 
@@ -67,7 +67,7 @@ Clusters won't begin provisioning until all three node roles (worker, etcd and c
 
 10. Log in to your Linux host using your preferred shell, such as PuTTy or a remote Terminal connection. Run the command copied to your clipboard.
 
-	>**Note:** Repeat steps 7-10 if you want to dedicate specific hosts to specific node roles. Repeat the steps as many times as needed.
+    >**Note:** Repeat steps 7-10 if you want to dedicate specific hosts to specific node roles. Repeat the steps as many times as needed.
 
 11. When you finish running the command(s) on your Linux host(s), click **Done**.
 
@@ -98,7 +98,7 @@ The following resources need to be tagged with a `ClusterID`:
 - **Subnet**: The subnet used for your cluster
 - **Security Group**: The security group used for your cluster.
 
-	>**Note:** Do not tag multiple security groups. Tagging multiple groups generates an error when creating Elastic Load Balancer.
+    >**Note:** Do not tag multiple security groups. Tagging multiple groups generates an error when creating Elastic Load Balancer.
 
 The tag that should be used is:
 

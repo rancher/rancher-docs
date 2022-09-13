@@ -31,8 +31,8 @@ The Rancher API server is built on top of an embedded Kubernetes API server and 
 
 ### Authorization and Role-Based Access Control
 
--  **User management:** The Rancher API server [manages user identities](../../pages-for-subheaders/about-authentication.md) that correspond to external authentication providers like Active Directory or GitHub, in addition to local users.
--	**Authorization:** The Rancher API server manages [access control](../../pages-for-subheaders/manage-role-based-access-control-rbac.md) and [security](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) policies.
+- **User management:** The Rancher API server [manages user identities](../../pages-for-subheaders/about-authentication.md) that correspond to external authentication providers like Active Directory or GitHub, in addition to local users.
+- **Authorization:** The Rancher API server manages [access control](../../pages-for-subheaders/manage-role-based-access-control-rbac.md) and [security](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) policies.
 
 ### Working with Kubernetes
 
@@ -44,7 +44,7 @@ The Rancher API server is built on top of an embedded Kubernetes API server and 
 
 ### Working with Cloud Infrastructure
 
--  **Tracking nodes:** The Rancher API server tracks identities of all the [nodes](../../how-to-guides/advanced-user-guides/manage-clusters/nodes-and-node-pools.md) in all clusters.
+- **Tracking nodes:** The Rancher API server tracks identities of all the [nodes](../../how-to-guides/advanced-user-guides/manage-clusters/nodes-and-node-pools.md) in all clusters.
 - **Setting up infrastructure:**  When configured to use a cloud provider, Rancher can dynamically provision [new nodes](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md) and [persistent storage](../../pages-for-subheaders/create-kubernetes-persistent-storage.md) in the cloud.
 
 ### Cluster Visibility

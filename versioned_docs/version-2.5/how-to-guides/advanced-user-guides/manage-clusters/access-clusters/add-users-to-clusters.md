@@ -33,25 +33,25 @@ Cluster administrators can edit the membership for a cluster, controlling which 
 
 3. Search for the user or group that you want to add to the cluster.
 
- 	If external authentication is configured:
+    If external authentication is configured:
 
-	-  Rancher returns users from your [external authentication](../../../../pages-for-subheaders/about-authentication.md) source as you type.
+    - Rancher returns users from your [external authentication](../../../../pages-for-subheaders/about-authentication.md) source as you type.
 
-		>**Using AD but can't find your users?**
-		>There may be an issue with your search attribute configuration. See [Configuring Active Directory Authentication: Step 5](../../authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-active-directory.md).
+        >**Using AD but can't find your users?**
+        >There may be an issue with your search attribute configuration. See [Configuring Active Directory Authentication: Step 5](../../authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-active-directory.md).
 
-	- A drop-down allows you to add groups instead of individual users. The drop-down only lists groups that you, the logged in user, are part of.
+    - A drop-down allows you to add groups instead of individual users. The drop-down only lists groups that you, the logged in user, are part of.
 
-		>**Note:** If you are logged in as a local user, external users do not display in your search results. For more information, see [External Authentication Configuration and Principal Users](../../../../pages-for-subheaders/about-authentication.md#external-authentication-configuration-and-principal-users).
+        >**Note:** If you are logged in as a local user, external users do not display in your search results. For more information, see [External Authentication Configuration and Principal Users](../../../../pages-for-subheaders/about-authentication.md#external-authentication-configuration-and-principal-users).
 
 4. Assign the user or group **Cluster** roles.  
 
-	[What are Cluster Roles?](../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)
+    [What are Cluster Roles?](../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)
 
-	>**Tip:** For Custom Roles, you can modify the list of individual roles available for assignment.
-	>
-	> - To add roles to the list, [Add a Custom Role](../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/custom-roles.md).
-	> - To remove roles from the list, [Lock/Unlock Roles](../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/locked-roles.md).
+    >**Tip:** For Custom Roles, you can modify the list of individual roles available for assignment.
+    >
+    > - To add roles to the list, [Add a Custom Role](../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/custom-roles.md).
+    > - To remove roles from the list, [Lock/Unlock Roles](../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/locked-roles.md).
 
 **Result:** The chosen users are added to the cluster.
 

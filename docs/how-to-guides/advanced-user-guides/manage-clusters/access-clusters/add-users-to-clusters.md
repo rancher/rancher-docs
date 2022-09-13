@@ -30,9 +30,9 @@ Cluster administrators can edit the membership for a cluster, controlling which 
 1. In the **Member Roles** tab, click **Add Member**.
 1. Search for the user or group that you want to add to the cluster.
 
- 	If external authentication is configured:
+    If external authentication is configured:
 
-	-  Rancher returns users from your [external authentication](../../../../pages-for-subheaders/about-authentication.md) source as you type.
+    - Rancher returns users from your [external authentication](../../../../pages-for-subheaders/about-authentication.md) source as you type.
 
 		:::note Using AD but can't find your users?
 
@@ -40,7 +40,7 @@ Cluster administrators can edit the membership for a cluster, controlling which 
 
 		:::
 
-	- A drop-down allows you to add groups instead of individual users. The drop-down only lists groups that you, the logged in user, are part of.
+    - A drop-down allows you to add groups instead of individual users. The drop-down only lists groups that you, the logged in user, are part of.
 
 		:::note
 
@@ -50,16 +50,16 @@ Cluster administrators can edit the membership for a cluster, controlling which 
 
 1. Assign the user or group **Cluster** roles.
 
-	[What are Cluster Roles?](../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)
+    [What are Cluster Roles?](../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)
 
-	:::tip
+    :::tip
 
-	For Custom Roles, you can modify the list of individual roles available for assignment.
+    For Custom Roles, you can modify the list of individual roles available for assignment.
 
-	- To add roles to the list, [Add a Custom Role](../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/custom-roles.md).
-	- To remove roles from the list, [Lock/Unlock Roles](../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/locked-roles.md).
+    - To add roles to the list, [Add a Custom Role](../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/custom-roles.md).
+    - To remove roles from the list, [Lock/Unlock Roles](../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/locked-roles.md).
 
-	:::
+    :::
 
 **Result:** The chosen users are added to the cluster.
 

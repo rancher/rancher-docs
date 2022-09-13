@@ -42,11 +42,11 @@ Backing up your high-availability Rancher cluster is process that involves compl
 
 1.  [Take Snapshots of the `etcd` Database](#1-take-snapshots-of-the-etcd-database)
 
-	Take snapshots of your current `etcd` database using Rancher Kubernetes Engine (RKE).
+    Take snapshots of your current `etcd` database using Rancher Kubernetes Engine (RKE).
 
 1.  [Store Snapshot(s) Externally](#2-back-up-local-snapshots-to-a-safe-location)
 
-	After taking your snapshots, export them to a safe location that won't be affected if your cluster encounters issues.
+    After taking your snapshots, export them to a safe location that won't be affected if your cluster encounters issues.
 
 
 # 1. Take Snapshots of the `etcd` Database
@@ -55,11 +55,11 @@ Take snapshots of your `etcd` database. You can use these snapshots later to rec
 
 - [Option A: Recurring Snapshots](#option-a-recurring-snapshots)
 
-	After you stand up a high-availability Rancher install, we recommend configuring RKE to automatically take recurring snapshots so that you always have a safe restore point available.
+    After you stand up a high-availability Rancher install, we recommend configuring RKE to automatically take recurring snapshots so that you always have a safe restore point available.
 
 - [Option B: One-Time Snapshots](#option-b-one-time-snapshots)
 
-	We advise taking one-time snapshots before events like upgrades or restore of another snapshot.
+    We advise taking one-time snapshots before events like upgrades or restore of another snapshot.
 
 ### Option A: Recurring Snapshots
 

@@ -127,11 +127,11 @@ The ability to use the same configuration to deploy the same application across 
 
 2. For each override, you can select the following:
 
-	- **Scope**: Select which target projects you want to override the answer in the configuration option.
+    - **Scope**: Select which target projects you want to override the answer in the configuration option.
 
-	- **Question**: Select which question you want to override.
+    - **Question**: Select which question you want to override.
 
-	- **Answer**: Enter the answer that you want to be used instead.
+    - **Answer**: Enter the answer that you want to be used instead.
 
 # Upgrading Multi-Cluster App Roles and Projects
 

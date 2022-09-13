@@ -19,15 +19,15 @@ Configuring an Amazon ALB is a multistage process. We've broken it down into mul
 
 1. [Create Target Group](#create-target-group)
 
-	Begin by creating one target group for the http protocol. You'll add your Linux nodes to this group.
+    Begin by creating one target group for the http protocol. You'll add your Linux nodes to this group.
 
 2. [Register Targets](#register-targets)
 
-	Add your Linux nodes to the target group.
+    Add your Linux nodes to the target group.
 
 3. [Create Your ALB](#create-your-alb)
 
-	Use Amazon's Wizard to create an Application Load Balancer. As part of this process, you'll add the target groups you created in **1. Create Target Groups**.
+    Use Amazon's Wizard to create an Application Load Balancer. As part of this process, you'll add the target groups you created in **1. Create Target Groups**.
 
 
 ## Create Target Group
@@ -71,32 +71,32 @@ Use Amazon's Wizard to create an Application Load Balancer. As part of this proc
 4. Choose **Application Load Balancer**.
 
 5. Complete the **Step 1: Configure Load Balancer** form.
-	- **Basic Configuration**
+    - **Basic Configuration**
 
-	   - Name: `rancher-http`
-	   - Scheme: `internet-facing`
-	   - IP address type: `ipv4`
-	- **Listeners**
+       - Name: `rancher-http`
+       - Scheme: `internet-facing`
+       - IP address type: `ipv4`
+    - **Listeners**
 
-		Add the **Load Balancer Protocols** and **Load Balancer Ports** below.
-		- `HTTP`: `80`
-		- `HTTPS`: `443`
+        Add the **Load Balancer Protocols** and **Load Balancer Ports** below.
+        - `HTTP`: `80`
+        - `HTTPS`: `443`
 
-	- **Availability Zones**
+    - **Availability Zones**
 
-	   - Select Your **VPC** and **Availability Zones**.
+       - Select Your **VPC** and **Availability Zones**.
 
 6. Complete the **Step 2: Configure Security Settings** form.
 
-	Configure the certificate you want to use for SSL termination.
+    Configure the certificate you want to use for SSL termination.
 
 7. Complete the **Step 3: Configure Security Groups** form.
 
 8. Complete the **Step 4: Configure Routing** form.
 
-	- From the **Target Group** drop-down, choose **Existing target group**.
+    - From the **Target Group** drop-down, choose **Existing target group**.
 
-	- Add target group `rancher-http-80`.
+    - Add target group `rancher-http-80`.
 
 9. Complete **Step 5: Register Targets**. Since you registered your targets earlier, all you have to do it click **Next: Review**.
 

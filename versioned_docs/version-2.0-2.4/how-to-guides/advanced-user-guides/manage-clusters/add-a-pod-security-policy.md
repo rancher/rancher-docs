@@ -19,7 +19,7 @@ You can assign a pod security policy when you provision a cluster. However, if y
 
 4. From the **Default Pod Security Policy** drop-down, select the policy you want to apply to the cluster.
 
-	Rancher ships with [policies](../authentication-permissions-and-global-configuration/create-pod-security-policies.md#default-pod-security-policies) of `restricted` and `unrestricted`, although you can [create custom policies](../authentication-permissions-and-global-configuration/create-pod-security-policies.md#default-pod-security-policies) as well.
+    Rancher ships with [policies](../authentication-permissions-and-global-configuration/create-pod-security-policies.md#default-pod-security-policies) of `restricted` and `unrestricted`, although you can [create custom policies](../authentication-permissions-and-global-configuration/create-pod-security-policies.md#default-pod-security-policies) as well.
 
 5. Click **Save**.
 

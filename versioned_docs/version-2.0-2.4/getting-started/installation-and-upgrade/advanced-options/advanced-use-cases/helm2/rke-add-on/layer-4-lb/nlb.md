@@ -19,15 +19,15 @@ Configuring an Amazon NLB is a multistage process. We've broken it down into mul
 
 1. [Create Target Groups](#create-target-groups)
 
-	Begin by creating two target groups for the **TCP** protocol, one regarding TCP port 443 and one regarding TCP port 80 (providing redirect to TCP port 443). You'll add your Linux nodes to these groups.
+    Begin by creating two target groups for the **TCP** protocol, one regarding TCP port 443 and one regarding TCP port 80 (providing redirect to TCP port 443). You'll add your Linux nodes to these groups.
 
 2. [Register Targets](#register-targets)
 
-	Add your Linux nodes to the target groups.
+    Add your Linux nodes to the target groups.
 
 3. [Create Your NLB](#create-your-nlb)
 
-	Use Amazon's Wizard to create an Network Load Balancer. As part of this process, you'll add the target groups you created in **1. Create Target Groups**.
+    Use Amazon's Wizard to create an Network Load Balancer. As part of this process, you'll add the target groups you created in **1. Create Target Groups**.
 
 
 ## Create Target Groups
@@ -141,26 +141,26 @@ Use Amazon's Wizard to create an Network Load Balancer. As part of this process,
 4. Choose **Network Load Balancer** and click **Create**.
 
 5. Complete the **Step 1: Configure Load Balancer** form.
-	- **Basic Configuration**
+    - **Basic Configuration**
 
-	   - Name: `rancher`
-	   - Scheme: `internet-facing`
-	- **Listeners**
+       - Name: `rancher`
+       - Scheme: `internet-facing`
+    - **Listeners**
 
-		Add the **Load Balancer Protocols** and **Load Balancer Ports** below.
-		- `TCP`: `443`
+        Add the **Load Balancer Protocols** and **Load Balancer Ports** below.
+        - `TCP`: `443`
 
-	- **Availability Zones**
+    - **Availability Zones**
 
-	   - Select Your **VPC** and **Availability Zones**.
+       - Select Your **VPC** and **Availability Zones**.
 
 6. Complete the **Step 2: Configure Routing** form.
 
-	- From the **Target Group** drop-down, choose **Existing target group**.
+    - From the **Target Group** drop-down, choose **Existing target group**.
 
-	- From the **Name** drop-down, choose `rancher-tcp-443`.
+    - From the **Name** drop-down, choose `rancher-tcp-443`.
 
-	- Open **Advanced health check settings**, and configure **Interval** to `10 seconds`.
+    - Open **Advanced health check settings**, and configure **Interval** to `10 seconds`.
 
 7. Complete **Step 3: Register Targets**. Since you registered your targets earlier, all you have to do is click **Next: Review**.
 
