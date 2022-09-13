@@ -18,7 +18,7 @@ Run `kubectl cluster-info` or `kubectl get pods` successfully.
 
 _Requirements_
 
-If admins have [kubeconfig token generation turned off](../about-the-api/api-tokens.md##disable-tokens-in-generated-kubeconfigs), the kubeconfig file requires the [Rancher CLI](./rancher-cli.md) to be present in your PATH when you run `kubectl`. Otherwise, you’ll see an error like:
+If admins have [kubeconfig token generation turned off](../about-the-api/api-tokens.md#disable-tokens-in-generated-kubeconfigs), the kubeconfig file requires the [Rancher CLI](./rancher-cli.md) to be present in your PATH when you run `kubectl`. Otherwise, you’ll see an error like:
 `Unable to connect to the server: getting credentials: exec: exec: "rancher": executable file not found in $PATH`.
 
 This feature enables kubectl to authenticate with the Rancher server and get a new kubeconfig token when required. The following auth providers are currently supported:
