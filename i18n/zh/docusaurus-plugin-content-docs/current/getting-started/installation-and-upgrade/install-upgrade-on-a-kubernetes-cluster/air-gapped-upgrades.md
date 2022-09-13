@@ -82,7 +82,7 @@ kubectl -n cattle-system apply -R -f ./rancher
 
 升级后出现网络问题
 
-请参见[恢复集群网络](../../../../versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md)。
+请参见[恢复集群网络](/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md)。
 
 :::
 
