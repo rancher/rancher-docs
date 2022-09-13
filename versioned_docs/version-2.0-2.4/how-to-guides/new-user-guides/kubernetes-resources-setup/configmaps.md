@@ -26,10 +26,10 @@ ConfigMaps accept key value pairs in common string formats, like config files or
 
 1. Click **Save**.
 
-	>**Note:** Don't use ConfigMaps to store sensitive data [use a secret](secrets.md).
-	>
-	>**Tip:** You can add multiple key value pairs to the ConfigMap by copying and pasting.
-	>
+    >**Note:** Don't use ConfigMaps to store sensitive data [use a secret](secrets.md).
+    >
+    >**Tip:** You can add multiple key value pairs to the ConfigMap by copying and pasting.
+    >
     > ![](/img/bulk-key-values.gif)
 
 **Result:** Your ConfigMap is added to the namespace. You can view it in the Rancher UI from the **Resources > Config Maps** view.

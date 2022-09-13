@@ -61,8 +61,8 @@ If you're using Amazon EC2 as your host and want to use the [dual-stack](https:/
 
 7.	From **Node Role**, choose the roles that you want filled by a cluster node. You must provision at least one node for each role: `etcd`, `worker`, and `control plane`. All three roles are required for a custom cluster to finish provisioning. For more information on roles, see [this section.](../reference-guides/kubernetes-concepts.md#roles-for-nodes-in-kubernetes-clusters)
 
-:::note Notes:
-	
+:::note
+
 - Using Windows nodes as Kubernetes workers? See [this section](use-windows-clusters.md).
 - Bare-Metal Server Reminder: If you plan on dedicating bare-metal servers to each role, you must provision a bare-metal server for each role (i.e. provision multiple bare-metal servers).
 

@@ -24,21 +24,21 @@ A restore is performed by creating a Restore custom resource.
 
     ```yaml
     apiVersion: resources.cattle.io/v1
-	kind: Restore
-	metadata:
-	  name: restore-migration
-	spec:
-	  backupFilename: backup-b0450532-cee1-4aa1-a881-f5f48a007b1c-2020-09-15T07-27-09Z.tar.gz
-	  encryptionConfigSecretName: encryptionconfig
-	  storageLocation:
-	    s3:
-	      credentialSecretName: s3-creds
-	      credentialSecretNamespace: default
-	      bucketName: rancher-backups
-	      folder: rancher
-	      region: us-west-2
-	      endpoint: s3.us-west-2.amazonaws.com
-      ```
+    kind: Restore
+    metadata:
+      name: restore-migration
+    spec:
+      backupFilename: backup-b0450532-cee1-4aa1-a881-f5f48a007b1c-2020-09-15T07-27-09Z.tar.gz
+      encryptionConfigSecretName: encryptionconfig
+      storageLocation:
+        s3:
+          credentialSecretName: s3-creds
+          credentialSecretNamespace: default
+          bucketName: rancher-backups
+          folder: rancher
+          region: us-west-2
+          endpoint: s3.us-west-2.amazonaws.com
+    ```
 
       For help configuring the Restore, refer to the [configuration reference](../../../reference-guides/backup-restore-configuration/restore-configuration.md) and to the [examples.](../../../reference-guides/backup-restore-configuration/examples.md)
 

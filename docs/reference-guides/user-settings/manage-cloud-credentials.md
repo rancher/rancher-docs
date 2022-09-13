@@ -47,6 +47,6 @@ In order to delete cloud credentials, there must not be any node template associ
 1. Click **Cloud Credentials**.
 1. You can either individually delete a cloud credential or bulk delete.
 
-	- To individually delete one, choose the cloud credential you want to edit and click the **⋮ > Delete**.
-	- To bulk delete cloud credentials, select one or more cloud credentials from the list. Click **Delete**.
+    - To individually delete one, choose the cloud credential you want to edit and click the **⋮ > Delete**.
+    - To bulk delete cloud credentials, select one or more cloud credentials from the list. Click **Delete**.
 1. Confirm that you want to delete these cloud credentials.

@@ -15,35 +15,35 @@ You're ready to create your first Kubernetes [workload](https://kubernetes.io/do
 
 For this workload, you'll be deploying the application Rancher Hello-World.
 
-1.  From the **Clusters** page, open the cluster that you just created.
+1. From the **Clusters** page, open the cluster that you just created.
 
-2.  From the main menu of the **Dashboard**, select **Projects/Namespaces**.
+2. From the main menu of the **Dashboard**, select **Projects/Namespaces**.
 
-3.  Open the **Project: Default** project.
+3. Open the **Project: Default** project.
 
-4.  Click **Resources > Workloads.**
+4. Click **Resources > Workloads.**
 
-5.  Click **Deploy**.
+5. Click **Deploy**.
 
-	**Step Result:** The **Deploy Workload** page opens.
+    **Step Result:** The **Deploy Workload** page opens.
 
-6.  Enter a **Name** for your workload.
+6. Enter a **Name** for your workload.
 
-7.  From the **Docker Image** field, enter `rancher/hello-world`. This field is case-sensitive.
+7. From the **Docker Image** field, enter `rancher/hello-world`. This field is case-sensitive.
 
-8.  From **Port Mapping**, click **Add Port**.
+8. From **Port Mapping**, click **Add Port**.
 
-9.  From the **As a** drop-down, make sure that **NodePort (On every node)** is selected.
+9. From the **As a** drop-down, make sure that **NodePort (On every node)** is selected.
 
-	![As a dropdown, NodePort (On every node selected)](/img/nodeport-dropdown.png)
+    ![As a dropdown, NodePort (On every node selected)](/img/nodeport-dropdown.png)
 
 10.  From the **On Listening Port** field, leave the **Random** value in place.
 
-	![On Listening Port, Random selected](/img/listening-port-field.png)
+    ![On Listening Port, Random selected](/img/listening-port-field.png)
 
 11. From the **Publish the container port** field, enter port `80`.
 
-	![Publish the container port, 80 entered](/img/container-port-field.png)
+    ![Publish the container port, 80 entered](/img/container-port-field.png)
 
 12. Leave the remaining options on their default setting. We'll tell you about them later.
 

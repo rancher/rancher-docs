@@ -60,7 +60,7 @@ We recommend adding PSPs during cluster and project creation instead of adding i
 
 1.	From the **Global** view, select **Security** > **Pod Security Policies** from the main menu. Then click **Add Policy**.
 
-	**Step Result:** The **Add Policy** form opens.
+    **Step Result:** The **Add Policy** form opens.
 
 2. Name the policy.
 

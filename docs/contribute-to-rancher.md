@@ -77,15 +77,15 @@ Please remove any sensitive data as it will be publicly viewable.
 - **Steps to reproduce the issue:** Provide as much detail on how you got into the reported situation. This helps the person to reproduce the situation you are in.
   - Provide manual steps or automation scripts used to get from a newly created setup to the situation you reported.
 - **Logs:** Provide data/logs from the used resources.
-  - Rancher
-      - Docker install
+    - Rancher
+        - Docker install
 
         ```
         docker logs \
         --timestamps \
         $(docker ps | grep -E "rancher/rancher:|rancher/rancher " | awk '{ print $1 }')
         ```
-      - Kubernetes install using `kubectl`
+        - Kubernetes install using `kubectl`
 
         :::note
         
@@ -99,14 +99,14 @@ Please remove any sensitive data as it will be publicly viewable.
         -l app=rancher \
         --timestamps=true
         ```
-      - Docker install using `docker` on each of the nodes in the RKE cluster
+        - Docker install using `docker` on each of the nodes in the RKE cluster
 
         ```
         docker logs \
         --timestamps \
         $(docker ps | grep -E "rancher/rancher@|rancher_rancher" | awk '{ print $1 }')
         ```
-      - Kubernetes Install with RKE Add-On
+        - Kubernetes Install with RKE Add-On
 
         :::note
         
@@ -120,12 +120,12 @@ Please remove any sensitive data as it will be publicly viewable.
         --timestamps=true \
         -f $(kubectl --kubeconfig $KUBECONFIG get pods -n cattle-system -o json | jq -r '.items[] | select(.spec.containers[].name="cattle-server") | .metadata.name')
         ```
-  - System logging (these might not all exist, depending on operating system)
-      - `/var/log/messages`
-      - `/var/log/syslog`
-      - `/var/log/kern.log`
-  - Docker daemon logging (these might not all exist, depending on operating system)
-      - `/var/log/docker.log`
+    - System logging (these might not all exist, depending on operating system)
+        - `/var/log/messages`
+        - `/var/log/syslog`
+        - `/var/log/kern.log`
+    - Docker daemon logging (these might not all exist, depending on operating system)
+        - `/var/log/docker.log`
 - **Metrics:** If you are experiencing performance issues, please provide as much of data (files or screenshots) of metrics which can help determining what is going on. If you have an issue related to a machine, it helps to supply output of `top`, `free -m`, `df` which shows processes/memory/disk usage.
 
 ## Docs

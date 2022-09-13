@@ -28,13 +28,13 @@ Following project creation, you can add users as project members so that they ca
 1. In the **Members** tab, click **Add**.
 1. Search for the user or group that you want to add to the project.
 
- 	If external authentication is configured:
+    If external authentication is configured:
 
-	-  Rancher returns users from your external authentication source as you type.  
+    -  Rancher returns users from your external authentication source as you type.  
 
-	- A drop-down allows you to add groups instead of individual users. The dropdown only lists groups that you, the logged in user, are included in.
+    - A drop-down allows you to add groups instead of individual users. The dropdown only lists groups that you, the logged in user, are included in.
 
-	:::note
+    :::note
     
     If you are logged in as a local user, external users do not display in your search results.
 
@@ -42,7 +42,7 @@ Following project creation, you can add users as project members so that they ca
 
 1. Assign the user or group **Project** roles.  
 
-	[What are Project Roles?](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)
+    [What are Project Roles?](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)
 
     :::note Notes:
     
