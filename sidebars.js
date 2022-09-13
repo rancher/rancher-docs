@@ -1216,10 +1216,10 @@ const sidebars = {
                     id: "pages-for-subheaders/aws-cloud-marketplace"
                   },
                   items: [
+                    'explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements',
                     'explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter',
                     'explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/uninstall-adapter',
-                    'explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues',
-                    'explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements'
+                    'explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues'
                   ]
                 },
                 'explanations/integrations-in-rancher/cloud-marketplace/supportconfig'

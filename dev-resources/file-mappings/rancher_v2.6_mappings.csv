@@ -103,6 +103,7 @@ pages-for-subheaders/use-windows-clusters, cluster-provisioning/rke-clusters/win
 how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/azure-storageclass-configuration, cluster-provisioning/rke-clusters/windows-clusters/azure-storageclass
 how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/windows-linux-cluster-feature-parity, cluster-provisioning/rke-clusters/windows-clusters/windows-parity
 how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/network-requirements-for-host-gateway, cluster-provisioning/rke-clusters/windows-clusters/host-gateway-requirements
+how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/workload-migration-guidance, cluster-provisioning/rke-clusters/windows-clusters/workload-migration-guidance
 pages-for-subheaders/set-up-cloud-providers, cluster-provisioning/rke-clusters/cloud-providers
 pages-for-subheaders/other-cloud-providers, tbd
 how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/amazon, cluster-provisioning/rke-clusters/cloud-providers/amazon
@@ -211,6 +212,7 @@ how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-
 how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces, cluster-admin/projects-and-namespaces
 how-to-guides/advanced-user-guides/manage-clusters/clone-cluster-configuration, cluster-admin/cloning-clusters
 how-to-guides/advanced-user-guides/manage-clusters/rotate-certificates, cluster-admin/certificate-rotation
+how-to-guides/advanced-user-guides/manage-clusters/rotate-encryption-key, cluster-admin/encryption-key-rotation
 how-to-guides/advanced-user-guides/manage-clusters/nodes-and-node-pools, cluster-admin/nodes
 how-to-guides/advanced-user-guides/manage-clusters/clean-cluster-nodes, cluster-admin/cleaning-cluster-nodes
 how-to-guides/advanced-user-guides/manage-clusters/add-a-pod-security-policy, cluster-admin/pod-security-policy
@@ -345,6 +347,13 @@ reference-guides/rancher-security/kubernetes-security-best-practices, security/b
 reference-guides/rancher-security/security-advisories-and-cves, security/cve
 explanations, tbd
 pages-for-subheaders/integrations-in-rancher, tbd
+pages-for-subheaders/cloud-marketplace, installation/cloud-marketplace
+pages-for-subheaders/aws-cloud-marketplace, installation/cloud-marketplace/aws
+explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter, installation/cloud-marketplace/aws/adapter-install
+explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/uninstall-adapter, installation/cloud-marketplace/aws/adapter-uninstall
+explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues, installation/cloud-marketplace/aws/common-issues
+explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements, installation/cloud-marketplace/aws/prerequisites
+explanations/integrations-in-rancher/cloud-marketplace/supportconfig, installation/cloud-marketplace/supportconfig
 pages-for-subheaders/cis-scans, cis-scans
 explanations/integrations-in-rancher/cis-scans/configuration-reference, cis-scans/configuration
 explanations/integrations-in-rancher/cis-scans/rbac-for-cis-scans, cis-scans/rbac
@@ -419,6 +428,7 @@ how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federat
 how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/enable-prometheus-federator, monitoring-alerting/prometheus-federator/guides/enable-prom-fed
 how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads, monitoring-alerting/prometheus-federator/guides/prom-fed-workloads
 how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/uninstall-prometheus-federator, monitoring-alerting/prometheus-federator/guides/uninstall-prom-fed
+how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/project-monitors, monitoring-alerting/prometheus-federator/guides/project-monitors
 reference-guides/prometheus-federator/rbac, monitoring-alerting/prometheus-federator/rbac
 reference-guides/rancher-security/rancher-v2.6-hardening-guides/rke1-self-assessment-guide-with-cis-v1.6-benchmark, security/hardening-guides/rke-1.6-benchmark-2.6
 reference-guides/rancher-security/rancher-v2.6-hardening-guides/rke1-hardening-guide-with-cis-v1.6-benchmark, security/hardening-guides/rke-1.6-hardening-2.6
