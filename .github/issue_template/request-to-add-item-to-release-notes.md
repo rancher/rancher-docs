@@ -14,4 +14,3 @@ Briefly describe the issue. Please also include any corresponding tracking issue
 **Details:**
 - Tag issue with appropriate release milestone and `release-note` label.
 - Ensure that you have also filed a request for new feature docs if applicable.
-- If issue is to be filed as a known issue and there is a workaround, please describe.
