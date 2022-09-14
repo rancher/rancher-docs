@@ -78,7 +78,7 @@ module.exports = {
           href: 'https://github.com/rancher/rancher-docs',
           label: 'GitHub',
           position: 'right',
-          className: 'navbar__github btn btn-secondary icon-github',
+          className: 'navbar__github',
         },
         {
           type: 'docsVersionDropdown',
