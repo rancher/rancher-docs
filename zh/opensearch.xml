@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Rancher Manager</ShortName>
+  <Description>Search Rancher Manager</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">http://docs.ranchermanager.rancher.io/zh/img/favicon.png</Image>
+  <Url type="text/html" method="get" template="http://docs.ranchermanager.rancher.io/zh/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="http://docs.ranchermanager.rancher.io/zh/opensearch.xml" />
+  <moz:SearchForm>http://docs.ranchermanager.rancher.io/zh/</moz:SearchForm>
+</OpenSearchDescription>
