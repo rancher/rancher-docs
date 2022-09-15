@@ -76,7 +76,7 @@ You'll use the backup as a restore point if something goes wrong during upgrade.
         ```
     - Alpha: Experimental preview of upcoming releases.
         ```
-        helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+        helm repo add rancher-alpha https://releases.rancher.com/server-charts/alpha
         ```
         Note: Upgrades are not supported to, from, or between Alphas.
 
