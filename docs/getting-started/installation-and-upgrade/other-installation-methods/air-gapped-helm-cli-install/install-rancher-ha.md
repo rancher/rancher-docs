@@ -34,7 +34,7 @@ From a system that has access to the internet, fetch the latest Helm chart and c
         ```
     - Alpha: Experimental preview of upcoming releases.
         ```
-        helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+        helm repo add rancher-alpha https://releases.rancher.com/server-charts/alpha
         ```
         Note: Upgrades are not supported to, from, or between Alphas.
 
