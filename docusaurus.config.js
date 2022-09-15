@@ -24,6 +24,11 @@ module.exports = {
     },
   },
   themeConfig: {
+    docs: {
+      sidebar: {
+        autoCollapseCategories: true,
+      },
+    },
     algolia: {
       // The application ID provided by Algolia
       appId: '30NEY6C9UY',
