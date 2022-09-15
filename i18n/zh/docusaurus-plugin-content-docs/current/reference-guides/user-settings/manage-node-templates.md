@@ -25,11 +25,11 @@ weight: 7010
 1. 单击 **RKE1 配置 > 节点模板**。
 1. 选择要编辑的节点模板并单击 **⋮ > 编辑**。
 
-       :::note
+   :::note
 
-       默认的 `active` [主机驱动](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md) 和任何标记了 `password` 字段的主机驱动都需要使用[云凭证](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#云凭证)。
+   默认的 `active` [主机驱动](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md)和任何标记了 `password` 字段的主机驱动都需要使用[云凭证](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#云凭证)。
 
-       :::
+   :::
 
 1. 编辑所需信息并单击**保存**。
 

@@ -50,7 +50,7 @@ kubectl create secret generic encryptionconfig \
 
 这将确保密文包含一个名为 `encryption-provider-config.yaml` 的 key，而且 operator 会使用该 key 来获取加密配置。
 
-`加密配置密文` 下拉菜单将过滤并仅列出拥有这个 key 的密文。
+`Encryption Config Secret` 下拉菜单将过滤并仅列出拥有这个 key 的密文。
 
 ![](/img/backup_restore/backup/encryption.png)
 

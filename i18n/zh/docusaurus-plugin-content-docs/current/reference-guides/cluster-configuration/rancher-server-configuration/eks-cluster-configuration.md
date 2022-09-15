@@ -133,8 +133,8 @@ Spot 实例现在[受 EKS 支持](https://docs.aws.amazon.com/eks/latest/usergui
 | 期望 ASG 大小 | 期望的实例数量。 |
 | 最大 ASG 大小 | 最大的实例数量。在安装 [Cluster Autoscaler](https://docs.aws.amazon.com/eks/latest/userguide/cluster-autoscaler.html) 之前，此设置不会生效。 |
 | 最小 ASG 大小 | 最小的实例数量。在安装 [Cluster Autoscaler](https://docs.aws.amazon.com/eks/latest/userguide/cluster-autoscaler.html) 之前，此设置不会生效。 |
-| 标签 | 应用于管理的节点组中节点的 Kubernetes 标签。 |
-| 标签 | 管理的节点组的标签，这些标签不会传播到任何相关资源。 |
+| Labels | 应用于管理的节点组中节点的 Kubernetes 标签。 |
+| Tags | 管理的节点组的标签，这些标签不会传播到任何相关资源。 |
 
 
 ### 配置刷新间隔

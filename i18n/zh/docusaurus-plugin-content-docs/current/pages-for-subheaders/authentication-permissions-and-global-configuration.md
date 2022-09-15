@@ -31,7 +31,7 @@ Rancher 通过 _用户_ 进行授权管理。用户的 _授权_ 或系统访问�
 
 _Pod 安全策略（PSP）_ 是用来控制安全敏感相关 Pod 规范（例如 root 特权）的对象。如果某个 Pod 不满足 PSP 指定的条件，Kubernetes 将不允许它启动，并在 Rancher 中显示错误消息。
 
-有关如何创建和使用 PSP，请参见[Pod 安全策略](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)。
+有关如何创建和使用 PSP，请参见 [Pod 安全策略](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)。
 
 ## 配置驱动
 

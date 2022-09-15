@@ -55,20 +55,20 @@ weight: 2225
 
    :::
 
-6. <a id="step-6"></a>单击**下一步**。
+6. 点击**下一步**。
 
 4. 使用**成员角色**为集群配置用户授权。点击**添加成员**添加可以访问集群的用户。使用**角色**下拉菜单为每个用户设置权限。
 
 7. 从**节点角色**中，选择要由集群节点充当的角色。你必须为 `etcd`、`worker` 和 `controlplane` 角色配置至少一个节点。自定义集群需要所有三个角色才能完成配置。有关角色的详细信息，请参阅[本节](../reference-guides/kubernetes-concepts.md#kubernetes-集群中节点的角色)。
 
-:::note 注意事项：
+:::note
 
 - 使用 Windows 主机作为 Kubernetes Worker 节点？请参阅[本节](use-windows-clusters.md)。
 - 裸机服务器提醒：如果你想将裸机服务器专用于每个角色，则必须为每个角色配置一个裸机服务器（即配置多个裸机服务器）。
 
 :::
 
-8. <a id="step-8"></a>**可选**：点击[显示高级选项](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/about-rancher-agents.md)来指定注册节点时使用的 IP 地址，覆盖节点的主机名，或将[标签](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)或[污点](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)添加到节点。
+8. **可选**：点击[显示高级选项](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/about-rancher-agents.md)来指定注册节点时使用的 IP 地址，覆盖节点的主机名，或将[标签](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)或[污点](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)添加到节点。
 
 9. 将屏幕上显示的命令复制到剪贴板。
 

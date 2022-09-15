@@ -8,6 +8,7 @@ weight: 2
 在下图中，Rancher 管理员的项目有一个已生效的资源配额。但是，管理员想要覆盖 `Namespace 3` 的命名空间限制，以便让该命名空间使用更多资源。因此，管理员[提高了 `Namespace 3` 的命名空间限制](../../manage-clusters/projects-and-namespaces.md)，以便命名空间可以访问更多资源。
 
 <sup>命名空间默认限制覆盖</sup>
+
 ![命名空间默认限制覆盖](/img/rancher-resource-quota-override.svg)
 
 有关详细信息，请参阅[如何编辑命名空间资源配额](../../manage-clusters/projects-and-namespaces.md)。

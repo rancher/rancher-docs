@@ -272,6 +272,7 @@ spec:
 
 
 ## 将工作负载迁移到 RKE2 Windows 的指南
+
 参考[对比 Rancher 2.5 与 Rancher 2.6：Windows 集群的支持矩阵](#对比-rancher-25-与-rancher-26windows-集群的支持矩阵)和[对比 Rancher 2.5 与 Rancher 2.6：支持用于配置 RKE1 和 RKE2 Windows 集群的 Kubernetes 版本](#对比-rancher-25-与-rancher-26支持用于配置-rke1-和-rke2-windows-集群的-kubernetes-版本)中的表格，你会发现 RKE1 和 RKE2 的 Kubernetes 1.22 版本发生了重叠。因此，当遵循 Rancher 推荐的方法时，这将是迁移 RKE1 Windows 工作负载所需的基本版本。
 
 ### Rancher 2.5 的就地升级

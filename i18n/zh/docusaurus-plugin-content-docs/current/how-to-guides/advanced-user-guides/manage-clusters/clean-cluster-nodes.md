@@ -63,7 +63,7 @@ $ sudo shutdown -r now
 将注册集群分离 Rancher 后，集群的工作负载将不受影响，你可以使用与集群注册到 Rancher 之前相同的方法来访问集群。
 
 <Tabs>
-<TabItem value="By UI / API">
+<TabItem value="使用 UI/API">
 
 :::danger
 
@@ -82,7 +82,7 @@ $ sudo shutdown -r now
 **结果**：已删除[移除了什么](#移除了什么)章节中为注册集群列出的所有组件。
 
 </TabItem>
-<TabItem value="By Script">
+<TabItem value="使用脚本">
 
 你可以运行脚本，而不是使用 Rancher UI 来清理已注册的集群节点。
 

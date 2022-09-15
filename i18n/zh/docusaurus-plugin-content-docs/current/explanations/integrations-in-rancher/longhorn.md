@@ -68,4 +68,5 @@ Longhorn 为每个卷创建专用的存储控制器，并在存储在多个节�
 有关其架构的更多信息，请参阅[此处](https://longhorn.io/docs/latest/concepts/)。
 
 <figcaption>Longhorn 架构</figcaption>
+
 ![Longhorn 架构](/img/longhorn-architecture.svg)

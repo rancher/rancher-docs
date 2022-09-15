@@ -4,7 +4,7 @@ title: Divio 文档介绍
 
 [Divio 文档系统](https://documentation.divio.com/)是一种软件文档范式，它以功能为基础，旨在为用户提供具体、简明而且目的明确的文档。一般来说，Divio 由四个类别组成，分别是教程、操作指南、参考指南和解释。
 
-我们将文档划分为以下章节：
+我们将文档划分为[开始使用](../../getting-started.md)、[操作指南](../../how-to-guides.md)（包括[新用户指南](../../pages-for-subheaders/new-user-guides.md)和[高级用户指南](../../pages-for-subheaders/advanced-user-guides.md)）、[参考指南](../../reference-guides.md)、[说明](../../explanations.md)、[常见问题](../../faq.md)、[故障排除](../../troubleshooting.md)，以及[参与 Rancher 社区贡献](../../contribute-to-rancher.md)几个部分。
 
 
 ## 开始使用

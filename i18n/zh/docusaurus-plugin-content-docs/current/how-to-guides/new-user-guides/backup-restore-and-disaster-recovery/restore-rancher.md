@@ -45,20 +45,20 @@ Rancher 将在运行 `cleanup` 脚本时关闭，因为它会删除 Rancher 创�
 
    ```yaml
    apiVersion: resources.cattle.io/v1
-   	kind: Restore
-   	metadata:
-   	  name: restore-migration
-   	spec:
-   	  backupFilename: backup-b0450532-cee1-4aa1-a881-f5f48a007b1c-2020-09-15T07-27-09Z.tar.gz
-   	  encryptionConfigSecretName: encryptionconfig
-   	  storageLocation:
-   	    s3:
-   	      credentialSecretName: s3-creds
-   	      credentialSecretNamespace: default
-   	      bucketName: rancher-backups
-   	      folder: rancher
-   	      region: us-west-2
-   	      endpoint: s3.us-west-2.amazonaws.com
+   kind: Restore
+   metadata:
+     name: restore-migration
+   spec:
+     backupFilename: backup-b0450532-cee1-4aa1-a881-f5f48a007b1c-2020-09-15T07-27-09Z.tar.gz
+     encryptionConfigSecretName: encryptionconfig
+     storageLocation:
+       s3:
+         credentialSecretName: s3-creds
+         credentialSecretNamespace: default
+         bucketName: rancher-backups
+         folder: rancher
+         region: us-west-2
+         endpoint: s3.us-west-2.amazonaws.com
    ```
 
    如需获得配置 Restore 的帮助，请参见[配置参考](../../../reference-guides/backup-restore-configuration/restore-configuration.md)和[示例](../../../reference-guides/backup-restore-configuration/examples.md)。

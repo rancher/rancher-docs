@@ -66,6 +66,6 @@ Bob 是一位高级用户，可以就集群配置做出明智的决策。随着�
 
 - 当最佳实践发生变化时[修改模板](manage-rke1-templates.md#更新模板)
 - [禁用模板的过时修订](manage-rke1-templates.md#禁用模板修订版)，以禁止使用该模板来创建集群
-- 如果组织想要改变方向，则[删除整个模板](manage-rke1-templates.md##删除模板)
+- 如果组织想要改变方向，则[删除整个模板](manage-rke1-templates.md#删除模板)
 - [将某个版本设置为默认值](manage-rke1-templates.md#将模板修订版设置为默认)，用于用户创建集群。模板的最终用户仍然可以选择他们想要使用哪个版本来创建集群。
 - [与特定用户共享模板](access-or-share-templates.md)，让所有 Rancher 用户都可以使用该模板，或与其他用户共享该模板的所有权。

@@ -55,6 +55,7 @@ Alertmanager UI 可让你查看最近触发的告警。
 有关在 Rancher 中配置 Alertmanager 的更多信息，请参阅[此页面](../../../how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/alertmanager.md)。
 
 <figcaption>Alertmanager UI</figcaption>
+
 ![Alertmanager UI](/img/alertmanager-ui.png)
 
 
@@ -91,6 +92,7 @@ Alertmanager UI 可让你查看最近触发的告警。
 1. 单击 **Prometheus 目标**。
 
 <figcaption>Prometheus UI 中的目标</figcaption>
+
 ![Prometheus 目标 UI](/img/prometheus-targets-ui.png)
 
 ### 查看 PrometheusRules
@@ -107,6 +109,7 @@ Alertmanager UI 可让你查看最近触发的告警。
 你还可以在 Prometheus UI 中查看规则：
 
 <figcaption>Prometheus UI 中的规则</figcaption>
+
 ![PrometheusRules UI](/img/prometheus-rules-ui.png)
 
 有关在 Rancher 中配置 PrometheusRule 的更多信息，请参阅[此页面](../../../how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/prometheusrules.md)。
