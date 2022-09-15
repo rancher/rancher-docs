@@ -8,6 +8,20 @@ import TabItem from '@theme/TabItem';
 
 > **Important:** If you are attempting to re-install the adapter, you may experience errant out-of-compliance messages for up to an hour.
 
+### Rancher vs. Adapter Compatibility Matrix
+
+:::note Important:
+
+Different versions of the CSP adapter rely on features found in specific versions of Rancher.
+In order to deploy and run the adapter successfully, you need to ensure its version corresponds to the necessary version of Rancher.
+
+:::
+
+| Rancher Version | Adapter Version |
+| --------------- | :-------------: |
+| v2.6.7          |     v1.0.1      |
+| v2.6.8          |     v1.0.1      |
+
 ### 1. Gain Access to the Local Cluster
 
 > **Note:** Only admin users should have access to the local cluster. Because the CSP adapter must be installed in the local cluster, this installation must be carried out by an admin user.
