@@ -23,6 +23,7 @@ This procedure walks you through setting up a 3-node cluster using the Rancher K
 In an HA setup that uses a layer 7 load balancer, the load balancer accepts Rancher client connections over the HTTP protocol (i.e., the application level). This application-level access allows the load balancer to read client requests and then redirect to them to cluster nodes using logic that optimally distributes load.
 
 <sup>Rancher installed on a Kubernetes cluster with layer 7 load balancer, depicting SSL termination at load balancer</sup>
+
 ![Rancher HA](/img/ha/rancher2ha-l7.svg)
 
 ## Installation Outline

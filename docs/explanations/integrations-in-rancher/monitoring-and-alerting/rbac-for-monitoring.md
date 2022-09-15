@@ -165,7 +165,9 @@ To see the Grafana UI, install `rancher-monitoring`. Then:
 1. Click **Grafana**.
 
 <figcaption>Cluster Compute Resources Dashboard in Grafana</figcaption>
+
 ![Cluster Compute Resources Dashboard in Grafana](/img/cluster-compute-resources-dashboard.png)
 
 <figcaption>Default Dashboards in Grafana</figcaption>
+
 ![Default Dashboards in Grafana](/img/grafana-default-dashboard.png)

@@ -67,6 +67,7 @@ Using the v2.x UI, use the context menu to navigate to the `Project` view. Then 
 Click **Add Record** to create new DNS records. Then view the various options supported to link to external services or to create aliases for another workload, DNS record, or set of pods.
 
 <figcaption>Add Service Discovery Record</figcaption>
+
 ![Add Service Discovery Record](/img/add-record.png)
 
 The following table indicates which alias options are implemented natively by Kubernetes and which options are implemented by Rancher leveraging Kubernetes.

@@ -163,7 +163,9 @@ However, users can choose to log in to Grafana as an [Admin](https://grafana.com
 To see the Grafana UI, install `rancher-monitoring`. Then go to the **Cluster Explorer.** In the top left corner, click **Cluster Explorer > Monitoring.** Then click **Grafana.
 
 <figcaption>Cluster Compute Resources Dashboard in Grafana</figcaption>
+
 ![Cluster Compute Resources Dashboard in Grafana](/img/cluster-compute-resources-dashboard.png)
 
 <figcaption>Default Dashboards in Grafana</figcaption>
+
 ![Default Dashboards in Grafana](/img/grafana-default-dashboard.png)

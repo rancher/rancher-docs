@@ -28,6 +28,7 @@ We don't recommend installing Rancher in a single Docker container, because if t
 One option for the underlying Kubernetes cluster is to use K3s Kubernetes. K3s is Rancher's CNCF certified Kubernetes distribution. It is easy to install and uses half the memory of Kubernetes, all in a binary of less than 100 MB. Another advantage of K3s is that it allows an external datastore to hold the cluster data, allowing the K3s server nodes to be treated as ephemeral.
 
 <figcaption>Architecture of a K3s Kubernetes Cluster Running the Rancher Management Server</figcaption>
+
 ![Architecture of a K3s Kubernetes Cluster Running the Rancher Management Server](/img/k3s-server-storage.svg)
 
 ### RKE Kubernetes Cluster Installations
@@ -35,6 +36,7 @@ One option for the underlying Kubernetes cluster is to use K3s Kubernetes. K3s i
 In an RKE installation, the cluster data is replicated on each of three etcd nodes in the cluster, providing redundancy and data duplication in case one of the nodes fails.
 
 <figcaption>Architecture of an RKE Kubernetes Cluster Running the Rancher Management Server</figcaption>
+
 ![Architecture of an RKE Kubernetes cluster running the Rancher management server](/img/rke-server-storage.svg)
 
 # Recommended Load Balancer Configuration for Kubernetes Installations
@@ -47,6 +49,7 @@ We recommend the following configurations for the load balancer and Ingress cont
 * The Ingress controller will forward traffic to port TCP/80 on the pod in the Rancher deployment.
 
 <figcaption>Rancher installed on a Kubernetes cluster with layer 4 load balancer, depicting SSL termination at Ingress controllers</figcaption>
+
 ![Rancher HA](/img/ha/rancher2ha.svg)
 
 # Environment for Kubernetes Installations

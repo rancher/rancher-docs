@@ -32,6 +32,7 @@ If you are installing Rancher v2.4 for the first time, we recommend installing i
 The option to install Rancher on a K3s cluster is a feature introduced in Rancher v2.4. K3s is easy to install, with half the memory of Kubernetes, all in a binary less than 100 MB.
 
 <figcaption>Architecture of a K3s Kubernetes Cluster Running the Rancher Management Server</figcaption>
+
 ![Architecture of a K3s Kubernetes Cluster Running the Rancher Management Server](/img/k3s-server-storage.svg)
 
 ### RKE Kubernetes Cluster Installations
@@ -41,6 +42,7 @@ If you are installing Rancher before v2.4, you will need to install Rancher on a
 In an RKE installation, the cluster data is replicated on each of three etcd nodes in the cluster, providing redundancy and data duplication in case one of the nodes fails.
 
 <figcaption>Architecture of an RKE Kubernetes Cluster Running the Rancher Management Server</figcaption>
+
 ![Architecture of an RKE Kubernetes cluster running the Rancher management server](/img/rke-server-storage.svg)
 
 # Recommended Load Balancer Configuration for Kubernetes Installations
@@ -53,6 +55,7 @@ We recommend the following configurations for the load balancer and Ingress cont
 * The Ingress controller will forward traffic to port TCP/80 on the pod in the Rancher deployment.
 
 <figcaption>Rancher installed on a Kubernetes cluster with layer 4 load balancer, depicting SSL termination at Ingress controllers</figcaption>
+
 ![Rancher HA](/img/ha/rancher2ha.svg)
 
 # Environment for Kubernetes Installations
