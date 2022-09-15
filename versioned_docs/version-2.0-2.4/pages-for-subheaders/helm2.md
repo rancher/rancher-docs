@@ -28,6 +28,7 @@ This procedure walks you through setting up a 3-node cluster with Rancher Kubern
 - The Ingress controller will forward traffic to port TCP/80 on the pod in the Rancher deployment.
 
 <figcaption>Kubernetes Rancher install with layer 4 load balancer, depicting SSL termination at ingress controllers</figcaption>
+
 ![High-availability Kubernetes Install](/img/ha/rancher2ha.svg)
 <sup>Kubernetes Rancher install with Layer 4 load balancer (TCP), depicting SSL termination at ingress controllers</sup>
 

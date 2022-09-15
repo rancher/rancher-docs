@@ -31,6 +31,7 @@ After installing NGINX, you need to update the NGINX configuration file, `nginx.
     > **Note:** See [NGINX Documentation: TCP and UDP Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/tcp-udp-load-balancer/) for all configuration options.
 
     <figcaption>Example NGINX config</figcaption>
+    
     ```
     worker_processes 4;
     worker_rlimit_nofile 40000;

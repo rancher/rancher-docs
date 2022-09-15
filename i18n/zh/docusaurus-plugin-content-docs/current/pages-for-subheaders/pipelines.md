@@ -51,13 +51,13 @@ Rancher 的流水线提供简单的 CI/CD 体验，但不提供完整的功能�
 
 - **Jenkins**：
 
-   流水线的构建引擎。由于项目用户不直接与 Jenkins 交互，因此 Jenkins 是被托管和锁定的。
+	流水线的构建引擎。由于项目用户不直接与 Jenkins 交互，因此 Jenkins 是被托管和锁定的。
 
-   :::note
+	:::note
 
-   没有使用现有 Jenkins deployment 作为流水线引擎的选项。
+	没有使用现有 Jenkins deployment 作为流水线引擎的选项。
 
-   :::
+	:::
 
 - **Docker 镜像仓库**：
 
@@ -65,13 +65,13 @@ Rancher 的流水线提供简单的 CI/CD 体验，但不提供完整的功能�
 
 - **Minio**：
 
-   Minio 存储用于存储流水线执行的日志。
+	Minio 存储用于存储流水线执行的日志。
 
-:::note
+	:::note
 
-托管的 Jenkins 实例是无状态工作的，因此你不用担心它的数据持久性。Docker 镜像仓库和 Minio 实例默认使用临时卷，这种做法适用于大多数用例。如果你想确保流水线日志能够在节点故障的情况下也能保存，你可以为它们配置持久卷（参见[流水线组件的数据持久性](../reference-guides/pipelines/configure-persistent-data.md)）。
+	托管的 Jenkins 实例是无状态工作的，因此你不用担心它的数据持久性。Docker 镜像仓库和 Minio 实例默认使用临时卷，这种做法适用于大多数用例。如果你想确保流水线日志能够在节点故障的情况下也能保存，你可以为它们配置持久卷（参见[流水线组件的数据持久性](../reference-guides/pipelines/configure-persistent-data.md)）。
 
-:::
+	:::
 
 ## 流水线的 RBAC
 

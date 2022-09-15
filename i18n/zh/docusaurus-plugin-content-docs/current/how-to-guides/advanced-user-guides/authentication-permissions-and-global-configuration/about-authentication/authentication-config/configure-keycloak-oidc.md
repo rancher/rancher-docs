@@ -81,9 +81,9 @@ weight: 1200
 | 私钥/证书 | 在 Rancher 和你的 IdP 之间创建安全外壳（SSH）的密钥/证书对。如果你的 Keycloak 服务器上启用了 HTTPS/SSL，则为必填。 |
 | 端点 | 选择为 `Rancher URL`、`发行者`和 `Auth 端点`字段使用生成的值，还是在不正确时进行手动覆盖。 |
 | Keycloak URL | 你的 Keycloak 服务器的 URL。 |
-| Keycloak Realm | 创建 Keycloak 客户端的领域的名称。 |
+| Keycloak Realm | 创建 Keycloak 客户端的 Realm 的名称。 |
 | Rancher URL | Rancher Server 的 URL。 |
-| 发行者 | 你的 IdP 的 URL。 |
+| Issuer | 你的 IdP 的 URL。 |
 | Auth 端点 | 重定向用户进行身份验证的 URL。 |
 
 ## 从 SAML 迁移到 OIDC
@@ -136,7 +136,7 @@ weight: 1200
 
 * 验证你的 Keycloak 客户端配置。
 
-### 生成的`发行者`和 `Auth 端点`不正确
+### 生成的 `Issuer` 和 `Auth 端点`不正确
 
 * 在**配置 Keycloak OIDC 账号**表单中，将**端点**更改为`指定（高级设置）`并覆盖`发行者` 和 `Auth 端点`的值。要查找这些值，前往 Keycloak 控制台并选择 **Realm Settings**，选择 **General** 选项卡，然后单击 **OpenID Endpoint Configuration**。JSON 输出将显示 `issuer` 和 `authorization_endpoint` 的值。
 

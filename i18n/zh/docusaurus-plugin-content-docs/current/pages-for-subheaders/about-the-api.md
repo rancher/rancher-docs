@@ -18,7 +18,7 @@ API 有自己的用户界面，你可以从 Web 浏览器访问它。这是查�
 1. 在 **API 密钥**下，找到 **API 端点**字段并单击链接。该链接类似于 `https://<RANCHER_FQDN>/v3`，其中 `<RANCHER_FQDN>` 是 Rancher deployment 的完全限定域名。
 
 </TabItem>
-<TabItem value="Rancher before v2.6.4">
+<TabItem value="Rancher v2.6.4 之前的版本">
 
 转到位于 `https://<RANCHER_FQDN>/v3` 的 URL 端点，其中 `<RANCHER_FQDN>` 是你的 Rancher deployment 的完全限定域名。
 

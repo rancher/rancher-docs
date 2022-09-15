@@ -165,7 +165,9 @@ Rancher 部署的默认角色（即 cluster-owner、cluster-member、project-own
 1. 点击 **Grafana**。
 
 <figcaption>Grafana 中的集群计算资源仪表板</figcaption>
+
 ![Grafana 中的集群计算资源仪表板](/img/cluster-compute-resources-dashboard.png)
 
 <figcaption>Grafana 中的默认仪表板</figcaption>
+
 ![Grafana 中的默认仪表板](/img/grafana-default-dashboard.png)

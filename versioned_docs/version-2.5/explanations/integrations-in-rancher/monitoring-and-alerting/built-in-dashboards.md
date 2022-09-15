@@ -40,6 +40,7 @@ To see the Alertmanager UI, go to the **Cluster Explorer.** In the top left corn
 **Result:** The Alertmanager UI opens in a new tab. For help with configuration, refer to the [official Alertmanager documentation.](https://prometheus.io/docs/alerting/latest/alertmanager/)
 
 <figcaption>The Alertmanager UI</figcaption>
+
 ![Alertmanager UI](/img/alertmanager-ui.png)
 
 
@@ -65,6 +66,7 @@ To see what services you are monitoring, you will need to see your targets. Targ
 To see the Prometheus Targets, install `rancher-monitoring`. Then go to the **Cluster Explorer.** In the top left corner, click **Cluster Explorer > Monitoring.** Then click **Prometheus Targets.**
 
 <figcaption>Targets in the Prometheus UI</figcaption>
+
 ![Prometheus Targets UI](/img/prometheus-targets-ui.png)
 
 ### Viewing the PrometheusRules
@@ -76,4 +78,5 @@ To see the PrometheusRules, install `rancher-monitoring`. Then go to the **Clust
 You can also see the rules in the Prometheus UI:
 
 <figcaption>Rules in the Prometheus UI</figcaption>
+
 ![PrometheusRules UI](/img/prometheus-rules-ui.png)

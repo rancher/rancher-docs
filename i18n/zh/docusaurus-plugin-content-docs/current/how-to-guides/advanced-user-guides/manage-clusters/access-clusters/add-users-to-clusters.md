@@ -34,19 +34,19 @@ weight: 2020
 
    - 在你键入时，Rancher 会从你的[外部身份验证](../../../../pages-for-subheaders/about-authentication.md)源返回用户。
 
-      :::note 使用 AD 但找不到你的用户？
+		:::note 使用 AD 但找不到你的用户？
 
-      你的搜索属性配置可能存在问题。请参阅[配置 Active Directory 身份验证：步骤 5](../../authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-active-directory.md)。
+		你的搜索属性配置可能存在问题。请参阅[配置 Active Directory 身份验证：步骤 5](../../authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-active-directory.md)。
 
-      :::
+		:::
 
    - 你可以在下拉菜单中添加组，而不是单个用户。下拉列表仅列出你（登录用户）所属的组。
 
-      :::note
+		:::note
 
-      如果你以本地用户身份登录，外部用户不会显示在你的搜索结果中。有关详细信息，请参阅[外部身份验证配置和主体用户](../../../../pages-for-subheaders/about-authentication.md#外部身份验证配置和用户主体)。
+		如果你以本地用户身份登录，外部用户不会显示在你的搜索结果中。有关详细信息，请参阅[外部身份验证配置和主体用户](../../../../pages-for-subheaders/about-authentication.md#外部身份验证配置和用户主体)。
 
-      :::
+		:::
 
 1. 分配用户或组的**集群**角色。
 

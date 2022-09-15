@@ -8,11 +8,11 @@ Rancher CLI（命令行界面）是一个命令行工具，可用于与 Rancher 
 
 ### 下载 Rancher CLI
 
-你可以直接 UI 下载二进制文件。链接位于 UI 页脚的右侧。我们提供用于 Windows、Mac 和 Linux 的二进制文件。你还可以访问我们的 CLI [发布页面](https://github.com/ranchcli/releases)直接下载二进制文件。
+你可以直接 UI 下载二进制文件。链接位于 UI 页脚的右侧。我们提供用于 Windows、Mac 和 Linux 的二进制文件。你还可以访问我们的 CLI [发布页面](https://github.com/rancher/cli/releases)直接下载二进制文件。
 
 1. 点击左上角的 **☰**。
 1. 单击底部的 **v2.6.x**，**v2.6.x** 是一个超链接文本，表示已安装的 Rancher 版本。
-1. 在 **CLI 下载**中，有 Windows、Mac 和 Linux 的二进制文件下载链接。你还可以访问我们的 CLI [发布页面](https://github.com/ranchcli/releases)直接下载二进制文件。
+1. 在 **CLI 下载**中，有 Windows、Mac 和 Linux 的二进制文件下载链接。你还可以访问我们的 CLI [发布页面](https://github.com/rancher/cli/releases)直接下载二进制文件。
 
 ### 要求
 

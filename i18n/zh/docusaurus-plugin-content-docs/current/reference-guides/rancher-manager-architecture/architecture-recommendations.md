@@ -25,7 +25,8 @@ weight: 3
 
 底层 Kubernetes 集群的一种选择是使用 K3s Kubernetes。K3s 是 Rancher CNCF 认证的 Kubernetes 发行版。K3s 易于安装，仅需要 Kubernetes 内存的一半，所有组件都在一个小于 100 MB 的二进制文件中。K3s 的另一个优点是允许外部 Datastore 保存集群数据，因此可以把 K3s 服务器节点视为无状态。
 
-<figcaption>运行 Rancher Management Server 的 K3s Kubernetes 集群架构</figcaption>
+<figcaption>运行 Rancher Management Server 的 K3s Kubernetes 集群的架构</figcaption>
+
 ![运行 Rancher Management Server 的 K3s Kubernetes 集群的架构](/img/k3s-server-storage.svg)
 
 ### RKE Kubernetes 集群安装
@@ -33,6 +34,7 @@ weight: 3
 在 RKE 安装中，集群数据在集群中的三个 etcd 节点上复制，以在某个节点发生故障时提供冗余和进行数据复制。
 
 <figcaption>运行 Rancher Management Server 的 RKE Kubernetes 集群的架构</figcaption>
+
 ![运行 Rancher Management Server 的 RKE Kubernetes 集群的架构](/img/rke-server-storage.svg)
 
 # Kubernetes 安装的负载均衡器推荐配置
@@ -45,6 +47,7 @@ weight: 3
 * Ingress Controller 会把流量转发到 Rancher deployment 的 Pod 上的 TCP/80 端口。
 
 <figcaption>在 Kubernetes 集群中安装 Rancher，并使用四层负载均衡器，SSL 终止在 Ingress Controller 中</figcaption>
+
 ![Rancher HA](/img/ha/rancher2ha.svg)
 
 # Kubernetes 安装环境

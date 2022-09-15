@@ -30,7 +30,7 @@ helm repo update
 helm install rancher-backup-crd rancher-charts/rancher-backup-crd -n cattle-resources-system --create-namespace --version $CHART_VERSION
 helm install rancher-backup rancher-charts/rancher-backup -n cattle-resources-system --version $CHART_VERSION
 ```
-<br/>
+
 如果是**离线环境**，在安装 `rancher-backup-crd` Helm Chart 时，使用以下选项从私有镜像仓库拉取 `backup-restore-operator` 镜像：
 ```
 --set image.repository $REGISTRY/rancher/backup-restore-operator

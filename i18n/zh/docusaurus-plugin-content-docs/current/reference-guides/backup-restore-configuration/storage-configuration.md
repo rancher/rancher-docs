@@ -33,7 +33,7 @@ weight: 3
 
 关于创建存储类的信息，请参见[本章节](../../how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/dynamically-provision-new-storage.md)。
 
-::: note 重要提示：
+:::note 重要提示：
 
 强烈建议使用回收策略为 "Retain" 的 StorageClass。否则，如果 `rancher-backup` Chart 创建的 PVC 在应用升级期间或意外被删除后，PV 也会被删除，也就是说所有保存在其中的备份都会被删除。  
 如果没有这样的 StorageClass，则在设置 PV 之后，一定要将它的回收策略设置为 "Retain"，然后再将备份存储在其中。

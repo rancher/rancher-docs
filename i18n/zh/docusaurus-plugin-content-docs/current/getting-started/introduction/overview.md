@@ -7,7 +7,7 @@ Rancher 是一个为使用容器的公司打造的容器管理平台。Rancher �
 
 # Run Kubernetes Everywhere
 
-Kubernetes 已经成为容器编排标准。现在，大多数云和虚拟化提供商都提供容器编排服务。Rancher 用户可以选择使用 Rancher Kubernetes Engine（RKE）或云 Kubernetes 服务（例如 GKE、AKS 和 EKS）创建 Kubernetes 集群。还可以导入和管理使用任何 Kubernetes 发行版或安装程序创建的现有 Kubernetes 集群。
+Kubernetes 已经成为容器编排标准。现在，大多数云和虚拟化提供商都提供容器编排服务。Rancher 用户可以选择使用 Rancher Kubernetes Engine（RKE）或云 Kubernetes 服务（例如 GKE、AKS 和 EKS）创建 Kubernetes 集群，还可以导入和管理使用任何 Kubernetes 发行版或安装程序创建的现有 Kubernetes 集群。
 
 # 满足 IT 需求规范
 
@@ -39,7 +39,7 @@ Rancher API Server 是基于嵌入式 Kubernetes API Server 和 etcd 数据库�
 - **配置 Kubernetes 集群**：Rancher API Server 可以在已有节点上[配置 Kubernetes](../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)，或进行 [Kubernetes 版本升级](../installation-and-upgrade/upgrade-and-roll-back-kubernetes.md)。
 - **管理应用商店**：Rancher 支持使用 [Helm Chart 应用商店](../../pages-for-subheaders/helm-charts-in-rancher.md)实现轻松重复部署应用。
 - **管理项目**：项目由集群中多个命名空间和访问控制策略组成，是 Rancher 中的一个概念，Kubernetes 中并没有这个概念。你可以使用项目实现以组为单位，管理多个命名空间，并进行 Kubernetes 相关操作。Rancher UI 提供用于[项目管理](../../pages-for-subheaders/manage-projects.md)和[项目内应用管理](../../pages-for-subheaders/kubernetes-resources-setup.md)的功能。
-- **流水线**：[流水线](../../how-to-guides/advanced-user-guides/manage-projects/ci-cd-pipelines.md)可以帮助开发者快速高效地上线新软件。Rancher 支持给每个项目单独设置流水线。
+- **Fleet 持续交付**：在 Rancher 中，你可以使用 [Fleet 持续交付](../../pages-for-subheaders/fleet-gitops-at-scale.md)将应用程序从 Git 仓库部署到目标下游 Kubernetes 集群，无需任何手动操作。
 - **Istio**：[Rancher 与 Istio 集成](../../pages-for-subheaders/istio.md)，使得管理员或集群所有者可以将 Istio 交给开发者，然后开发者使用 Istio 执行安全策略，排查问题，或为蓝绿部署，金丝雀部署，和 A/B 测试进行流量管理。
 
 ### 配置云基础设施

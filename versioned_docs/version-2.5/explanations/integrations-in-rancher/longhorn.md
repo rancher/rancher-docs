@@ -77,4 +77,5 @@ The storage controller and replicas are themselves orchestrated using Kubernetes
 You can learn more about its architecture [here.](https://longhorn.io/docs/1.0.2/concepts/)
 
 <figcaption>Longhorn Architecture</figcaption>
+
 ![Longhorn Architecture](/img/longhorn-architecture.svg)

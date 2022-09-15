@@ -82,9 +82,11 @@ The NeuVector security solution contains four types of security containers: Cont
 - **Updater:** Updates the CVE database for Neuvector (when run); redeploys scanner pods.
 
 <figcaption>**NeuVector Security Containers:**</figcaption>
+
 ![NeuVector Security Containers](/img/neuvector-security-containers.png)
 
 <figcaption>**NeuVector Architecture:**</figcaption>
+
 ![NeuVector Architecture](/img/neuvector-architecture.png)
 
 To learn more about NeuVector's architecture, please refer [here](https://open-docs.neuvector.com/basics/overview#architecture).

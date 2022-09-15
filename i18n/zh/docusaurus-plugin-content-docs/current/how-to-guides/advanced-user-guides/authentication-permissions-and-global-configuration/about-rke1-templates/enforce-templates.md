@@ -27,7 +27,7 @@ weight: 32
 
    :::note 重要提示：
 
-   如果管理员将 `cluster-template-enforcement` 设置为 <b>True</b>，还需要与用户共享`clusterTemplates`，以便用户可以选择其中一个模板来创建集群。
+   如果管理员将 `cluster-template-enforcement` 设置为 <b>True</b>，还需要与用户共享 `clusterTemplates`，以便用户可以选择其中一个模板来创建集群。
 
    :::
 

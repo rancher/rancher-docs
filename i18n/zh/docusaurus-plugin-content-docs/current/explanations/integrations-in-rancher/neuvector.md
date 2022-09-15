@@ -82,9 +82,11 @@ NeuVector 安全解决方案包含四种类型的安全容器，分别是 Contro
 - **Updater**：更新 Neuvector 的 CVE 数据库（运行的时候）；重新部署 scanner pod。
 
 <figcaption>**NeuVector 安全容器：**</figcaption>
+
 ![NeuVector 安全容器](/img/neuvector-security-containers.png)
 
 <figcaption>**NeuVector 架构：**</figcaption>
+
 ![NeuVector 架构](/img/neuvector-architecture.png)
 
 要了解有关 NeuVector 架构的更多信息，请参阅[此处](https://open-docs.neuvector.com/basics/overview#architecture)。
