@@ -1,8 +1,8 @@
 ---
 name: Request a New Feature
 about: For requesting new feature(s) to be added to the docs.
-title: "[Rancher Manager] "
-labels: Rancher Manager
+title: ''
+labels: ''
 assignees: ''
 
 ---
@@ -12,8 +12,8 @@ Briefly describe the new feature. If QA has not yet tested the new feature/proce
 
 
 **Details:**
-- What page(s) in the current docs does request apply to? Please include link(s).
-- What does the new process/feature do and how does it work?
-- What are the steps involved in installing/running feature? Please describe.
-- What version(s) of Rancher does the feature affect?
-- List/attach all pertinent information, e.g., screenshots, resource requirements, code blocks, workarounds, links, etc.
+1. Include all pertinent information, e.g., screenshots, resource requirements, workarounds, links, etc.
+1. Tag issue with appropriate release milestone.
+1. List page link(s) in the current docs where the new feature applies, if applicable.
+1. Explain the new process/feature and how it works.
+1. List the steps involved in installing/running/uninstalling feature.
