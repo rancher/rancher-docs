@@ -11,7 +11,7 @@ ctaBanner: 0
 aliases:
   - /rancher/v2.x/en/
 ---
-Rancher was originally built to work with multiple orchestrators, and it included its own orchestrator called Cattle. With the rise of Kubernetes in the marketplace, Rancher 2 exclusively deploys and manages Kubernetes clusters running anywhere, on any provider.
+Rancher is a Kubernetes management tool to deploy and run clusters anywhere and on any provider.
 
 Rancher can provision Kubernetes from a hosted provider, provision compute nodes and then install Kubernetes onto them, or import existing Kubernetes clusters running anywhere.
 
