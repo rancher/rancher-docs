@@ -8,6 +8,20 @@ import TabItem from '@theme/TabItem';
 
 > **重要提示**：如果你尝试重新安装 Adapter，你可能会在长达一小时的时间内收到不合规的错误消息。
 
+### Rancher 与 Adapter 的兼容性矩阵
+
+:::note 重要提示：
+
+不同版本的 CSP Adapter 依赖于特定 Rancher 版本的功能。
+为了成功部署和运行 Adapter，你需要确保 Adapter 版本与必要的 Rancher 版本对应。
+
+:::
+
+| Rancher 版本 | Adapter 版本 |
+| --------------- | :-------------: |
+| v2.6.7 | v1.0.1 |
+| v2.6.8 | v1.0.1 |
+
 ### 1. 获取对 Local 集群的访问权限
 
 > **注意**：只有管理员用户才能访问 Local 集群。因为 CSP Adapter 必须安装在 Local 集群中，所以此安装必须由管理员用户执行。
@@ -67,7 +81,7 @@ helm repo add rancher-charts https://charts.rancher.io
 > **注意**：请务必严格按照以下说明进行操作。尤其需要注意安装 1.0.1 版本 Adapter 的命令（使用 `--set image.tag=v1.0.1`），这是确保节点数量准确的关键。
 
 <Tabs>
-<TabItem value="Let's Encrypt/ Public Certificate Authority">
+<TabItem value="Let's Encrypt/公有 CA">
 
 ```bash
 helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter --namespace cattle-csp-adapter-system --set aws.enabled=true --set aws.roleName=$MY_ROLE_NAME --set-string aws.accountNumber=$MY_ACC_NUM --set image.tag=v1.0.1
@@ -94,7 +108,7 @@ helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter -f values.ya
 ```
 
 </TabItem>
-  <TabItem value="Private CA Authority / Rancher-generated Certificates">
+  <TabItem value="私有 CA/Rancher 生成的证书">
 
 ```bash
 helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter --namespace cattle-csp-adapter-system --set aws.enabled=true --set aws.roleName=$MY_ROLE_NAME --set-string aws.accountNumber=$MY_ACC_NUM --set additionalTrustedCAs=true --set image.tag=v1.0.1
