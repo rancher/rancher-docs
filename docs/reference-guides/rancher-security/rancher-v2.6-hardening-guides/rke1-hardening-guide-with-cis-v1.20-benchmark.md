@@ -1,8 +1,8 @@
 ---
-title: RKE Hardening Guide with CIS v1.6 Benchmark
+title: RKE Hardening Guide with CIS v1.20 Benchmark
 weight: 100
 aliases:
-  - /rancher/v2.6/en/security/hardening-guides/1.6-hardening-2.6/
+  - /rancher/v2.6/en/security/hardening-guides/1.20-hardening-2.6/
 ---
 
 This document provides prescriptive guidance for hardening a production installation of a RKE cluster to be used with Rancher v2.6. It outlines the configurations and controls required to address Kubernetes benchmark controls from the Center for Information Security (CIS).
@@ -13,9 +13,9 @@ This hardening guide is intended to be used for RKE clusters and associated with
 
 | Rancher Version | CIS Benchmark Version | Kubernetes Version |
 | --------------- | --------------------- | ------------------ |
-| Rancher v2.6 | Benchmark v1.6 | Kubernetes v1.16 up to v1.18 |
+| Rancher v2.6 | Benchmark v1.20 | Kubernetes v1.19 up to v1.21 |
 
-[Click here to download a PDF version of this document](https://releases.rancher.com/documents/security/2.6/Rancher_v2-6_CIS_v1-6_Hardening_Guide.pdf).
+[Click here to download a PDF version of this document](https://releases.rancher.com/documents/security/2.6/Rancher_v2-6_CIS_v1-20_Hardening_Guide.pdf).
 
 - [Overview](#overview)
 - [Configure Kernel Runtime Parameters](#configure-kernel-runtime-parameters)
@@ -28,14 +28,14 @@ This hardening guide is intended to be used for RKE clusters and associated with
 
 ### Overview
 
-This document provides prescriptive guidance for hardening a RKE cluster to be used for installing Rancher v2.6 with Kubernetes v1.16 up to v1.18 or provisioning a RKE cluster with Kubernetes v1.16 up to v1.18 to be used within Rancher v2.6. It outlines the configurations required to address Kubernetes benchmark controls from the Center for Information Security (CIS).
+This document provides prescriptive guidance for hardening a RKE cluster to be used for installing Rancher v2.6 with Kubernetes v1.19 up to v1.21 or provisioning a RKE cluster with Kubernetes v1.19 up to v1.21 to be used within Rancher v2.6. It outlines the configurations required to address Kubernetes benchmark controls from the Center for Information Security (CIS).
 
-For more details about evaluating a hardened cluster against the official CIS benchmark, refer to the [CIS 1.6 Benchmark - Self-Assessment Guide - Rancher v2.6]({{<baseurl>}}/rancher/v2.6/en/security/hardening-guides/1.6-benchmark-2.6/).
+For more details about evaluating a hardened cluster against the official CIS benchmark, refer to the [CIS 1.20 Benchmark - Self-Assessment Guide - Rancher v2.6]({{<baseurl>}}/rancher/v2.6/en/security/hardening-guides/1.20-benchmark-2.6/).
 
 #### Known Issues
 
-- Rancher **exec shell** and **view logs** for pods are **not** functional in a CIS v1.6 hardened setup when only public IP is provided when registering custom nodes. This functionality requires a private IP to be provided when registering the custom nodes.
-- When setting the `default_pod_security_policy_template_id:` to `restricted` or `restricted-noroot`, based on the pod security policies (PSP) [provided]({{<baseurl>}}/rancher/v2.6/en/admin-settings/pod-security-policies/) by Rancher, Rancher creates **RoleBindings** and **ClusterRoleBindings** on the default service accounts. The CIS v1.6 check 5.1.5 requires that the default service accounts have no roles or cluster roles bound to it apart from the defaults. In addition the default service accounts should be configured such that it does not provide a service account token and does not have any explicit rights assignments.
+- Rancher **exec shell** and **view logs** for pods are **not** functional in a CIS v1.20 hardened setup when only public IP is provided when registering custom nodes. This functionality requires a private IP to be provided when registering the custom nodes.
+- When setting the `default_pod_security_policy_template_id:` to `restricted` or `restricted-noroot`, based on the pod security policies (PSP) [provided]({{<baseurl>}}/rancher/v2.6/en/admin-settings/pod-security-policies/) by Rancher, Rancher creates **RoleBindings** and **ClusterRoleBindings** on the default service accounts. The CIS v1.20 check 5.1.5 requires that the default service accounts have no roles or cluster roles bound to it apart from the defaults. In addition the default service accounts should be configured such that it does not provide a service account token and does not have any explicit rights assignments.
 
 ### Configure Kernel Runtime Parameters
 
@@ -149,8 +149,6 @@ Execute this script to apply the `default-allow-all.yaml` configuration with the
 ### Reference Hardened RKE `cluster.yml` Configuration
 
 The reference `cluster.yml` is used by the RKE CLI that provides the configuration needed to achieve a hardened install of Rancher Kubernetes Engine (RKE). RKE install [documentation]({{<baseurl>}}/rke/latest/en/installation/) is provided with additional details about the configuration items. This reference `cluster.yml` does not include the required **nodes** directive which will vary depending on your environment. Documentation for node configuration in RKE can be found [here]({{<baseurl>}}/rke/latest/en/config-options/nodes/).
-
-> For a Kubernetes v1.18 cluster, the configuration `spec.volumes: 'ephemeral'` should be removed from the `PodSecurityPolicy`, since it's not supported in this Kubernetes release.
 
 ```yaml
 # If you intend to deploy Kubernetes in an air-gapped environment,
@@ -283,7 +281,6 @@ addons: |
       # Assume that ephemeral CSI drivers & persistentVolumes set up by the cluster admin are safe to use.
       - 'csi'
       - 'persistentVolumeClaim'
-      - 'ephemeral'
     hostNetwork: false
     hostIPC: false
     hostPID: false

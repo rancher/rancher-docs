@@ -58,10 +58,18 @@ The following profiles are available:
 - RKE hardened 1.5
 - RKE permissive 1.6
 - RKE hardened 1.6
+- RKE permissive 1.20
+- RKE hardened 1.20
+- RKE permissive 1.23
+- RKE hardened 1.23
 - RKE2 permissive 1.5
 - RKE2 hardened 1.5
 - RKE2 permissive 1.6
 - RKE2 hardened 1.6
+- RKE2 permissive 1.20
+- RKE2 hardened 1.20
+- RKE2 permissive 1.23
+- RKE2 hardened 1.23
 - AKS
 - EKS
 - GKE
