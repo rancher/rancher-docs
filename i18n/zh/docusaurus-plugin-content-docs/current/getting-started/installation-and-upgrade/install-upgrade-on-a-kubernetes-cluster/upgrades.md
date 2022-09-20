@@ -76,7 +76,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
       ```
    - Alpha：即将发布的实验性预览。
       ```
-      helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+      helm repo add rancher-alpha https://releases.rancher.com/server-charts/alpha
       ```
       注意：不支持升级到 Alpha 版、从 Alpha 版升级或在 Alpha 版之间升级。
 
@@ -170,7 +170,7 @@ helm upgrade rancher rancher-<CHART_REPO>/rancher \
 
 :::tip
 
-升级后出现网络问题
+升级后出现网络问题？
 
 请参见[恢复集群网络](/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md)。
 

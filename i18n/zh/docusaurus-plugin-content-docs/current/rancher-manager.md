@@ -11,7 +11,7 @@ ctaBanner: 0
 aliases:
   - /rancher/v2.x/en/
 ---
-Rancher 最初是为了支持多种容器编排引擎而构建的，其中包括 Rancher 自己的容器编排引擎 Cattle。随着 Kubernetes 的兴起，Rancher 2 开始转向部署和管理在任何地方、任何提供商上运行的 Kubernetes 集群。
+Rancher 是一个 Kubernetes 管理工具，让你能在任何地方和任何提供商上部署和运行集群。
 
 Rancher 可以创建来自 Kubernetes 托管服务提供商的集群，创建节点并安装 Kubernetes，或者导入在任何地方运行的现有 Kubernetes 集群。
 

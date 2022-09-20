@@ -34,7 +34,7 @@ weight: 400
       ```
    - Alpha：即将发布的实验性预览。
       ```
-      helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+      helm repo add rancher-alpha https://releases.rancher.com/server-charts/alpha
       ```
       注意：不支持升级到 Alpha 版、从 Alpha 版升级或在 Alpha 版之间升级。
 
