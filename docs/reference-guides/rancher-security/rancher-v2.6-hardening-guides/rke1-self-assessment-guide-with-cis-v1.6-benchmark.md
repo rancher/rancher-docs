@@ -11,7 +11,7 @@ aliases:
 
 #### Overview
 
-This document is a companion to the [Rancher v2.6 RKE security hardening guide]({{<baseurl>}}/rancher/v2.6/en/security/hardening-guides/rke-1.6-hardening-2.6/). The hardening guide provides prescriptive guidance for hardening a production installation of Rancher, and this benchmark guide is meant to help you evaluate the level of security of the hardened cluster against each control in the benchmark.
+This document is a companion to the [Rancher v2.6 RKE security hardening guide](./rke1-hardening-guide-with-cis-v1.6-benchmark.md). The hardening guide provides prescriptive guidance for hardening a production installation of Rancher, and this benchmark guide is meant to help you evaluate the level of security of the hardened cluster against each control in the benchmark.
 
 This guide corresponds to specific versions of the hardening guide, Rancher, CIS Benchmark and Kubernetes:
 
@@ -31,7 +31,11 @@ Rancher and RKE install Kubernetes services via Docker containers. Configuration
 
 Where control audits differ from the original CIS benchmark, the audit commands specific to Rancher are provided for testing. When performing the tests, you will need access to the command line on the hosts of all RKE nodes. The commands also make use of the [kubectl](https://kubernetes.io/docs/tasks/tools/) (with a valid configuration file) and [jq](https://stedolan.github.io/jq/) tools, which are required in the testing and evaluation of test results.
 
-> NOTE: Only `automated` tests (previously called `scored`) are covered in this guide.
+:::note
+
+Only `automated` tests (previously called `scored`) are covered in this guide.
+
+:::
 
 ### Controls
 ## 1.1 Master Node Configuration Files
@@ -558,7 +562,7 @@ root 121142 121120 7 12:27 ? 00:06:27 kube-apiserver --audit-log-maxsize=100 --e
 **Remediation:**
 Follow the documentation and configure alternate mechanisms for authentication. Then,
 edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml
-on the master node and remove the --basic-auth-file=<filename> parameter.
+on the master node and remove the `--basic-auth-file=<filename>` parameter.
 
 **Audit:**
 
@@ -586,7 +590,7 @@ root 121142 121120 7 12:27 ? 00:06:27 kube-apiserver --audit-log-maxsize=100 --e
 **Remediation:**
 Follow the documentation and configure alternate mechanisms for authentication. Then,
 edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml
-on the master node and remove the --token-auth-file=<filename> parameter.
+on the master node and remove the `--token-auth-file=<filename>` parameter.
 
 **Audit:**
 
@@ -674,7 +678,7 @@ Follow the Kubernetes documentation and setup the TLS connection between
 the apiserver and kubelets. Then, edit the API server pod specification file
 /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the
 --kubelet-certificate-authority parameter to the path to the cert file for the certificate authority.
---kubelet-certificate-authority=<ca-string>
+`--kubelet-certificate-authority=<ca-string>`
 
 **Audit:**
 
@@ -1284,7 +1288,7 @@ root 121142 121120 7 12:27 ? 00:06:28 kube-apiserver --audit-log-maxsize=100 --e
 Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml
 on the master node and set the --service-account-key-file parameter
 to the public key file for service accounts:
---service-account-key-file=<filename>
+`--service-account-key-file=<filename>`
 
 **Audit:**
 
@@ -1622,7 +1626,7 @@ root 121366 121346 1 12:27 ? 00:01:13 kube-controller-manager --cluster-cidr=10.
 Edit the Controller Manager pod specification file /etc/kubernetes/manifests/kube-controller-manager.yaml
 on the master node and set the --service-account-private-key-file parameter
 to the private key file for service accounts.
---service-account-private-key-file=<filename>
+`--service-account-private-key-file=<filename>`
 
 **Audit:**
 
@@ -2141,7 +2145,7 @@ root:root
 
 **Remediation:**
 Run the following command to modify the file permissions of the
---client-ca-file chmod 644 <filename>
+`--client-ca-file chmod 644 <filename>`
 
 **Audit Script:** `check_cafile_permissions.sh`
 
@@ -2173,7 +2177,7 @@ if test -e $CAFILE; then stat -c permissions=%a $CAFILE; fi
 
 **Remediation:**
 Run the following command to modify the ownership of the --client-ca-file.
-chown root:root <filename>
+`chown root:root <filename>`
 
 **Audit Script:** `check_cafile_ownership.sh`
 

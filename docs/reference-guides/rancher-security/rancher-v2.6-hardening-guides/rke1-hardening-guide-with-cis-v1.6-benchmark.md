@@ -7,7 +7,11 @@ aliases:
 
 This document provides prescriptive guidance for hardening a production installation of a RKE cluster to be used with Rancher v2.6. It outlines the configurations and controls required to address Kubernetes benchmark controls from the Center for Information Security (CIS).
 
-> This hardening guide describes how to secure the nodes in your cluster, and it is recommended to follow this guide before installing Kubernetes.
+:::note
+
+This hardening guide describes how to secure the nodes in your cluster, and it is recommended to follow this guide before installing Kubernetes.
+
+:::
 
 This hardening guide is intended to be used for RKE clusters and associated with specific versions of the CIS Kubernetes Benchmark, Kubernetes, and Rancher:
 
@@ -30,12 +34,12 @@ This hardening guide is intended to be used for RKE clusters and associated with
 
 This document provides prescriptive guidance for hardening a RKE cluster to be used for installing Rancher v2.6 with Kubernetes v1.16 up to v1.18 or provisioning a RKE cluster with Kubernetes v1.16 up to v1.18 to be used within Rancher v2.6. It outlines the configurations required to address Kubernetes benchmark controls from the Center for Information Security (CIS).
 
-For more details about evaluating a hardened cluster against the official CIS benchmark, refer to the [CIS 1.6 Benchmark - Self-Assessment Guide - Rancher v2.6]({{<baseurl>}}/rancher/v2.6/en/security/hardening-guides/1.6-benchmark-2.6/).
+For more details about evaluating a hardened cluster against the official CIS benchmark, refer to the [CIS 1.6 Benchmark - Self-Assessment Guide - Rancher v2.6](./rke1-self-assessment-guide-with-cis-v1.6-benchmark.md).
 
 #### Known Issues
 
 - Rancher **exec shell** and **view logs** for pods are **not** functional in a CIS v1.6 hardened setup when only public IP is provided when registering custom nodes. This functionality requires a private IP to be provided when registering the custom nodes.
-- When setting the `default_pod_security_policy_template_id:` to `restricted` or `restricted-noroot`, based on the pod security policies (PSP) [provided]({{<baseurl>}}/rancher/v2.6/en/admin-settings/pod-security-policies/) by Rancher, Rancher creates **RoleBindings** and **ClusterRoleBindings** on the default service accounts. The CIS v1.6 check 5.1.5 requires that the default service accounts have no roles or cluster roles bound to it apart from the defaults. In addition the default service accounts should be configured such that it does not provide a service account token and does not have any explicit rights assignments.
+- When setting the `default_pod_security_policy_template_id:` to `restricted` or `restricted-noroot`, based on the pod security policies (PSP) [provided](../../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) by Rancher, Rancher creates **RoleBindings** and **ClusterRoleBindings** on the default service accounts. The CIS v1.6 check 5.1.5 requires that the default service accounts have no roles or cluster roles bound to it apart from the defaults. In addition the default service accounts should be configured such that it does not provide a service account token and does not have any explicit rights assignments.
 
 ### Configure Kernel Runtime Parameters
 
@@ -115,7 +119,11 @@ Network Policies are namespace scoped. When a network policy is introduced to a 
 
 Once a CNI provider is enabled on a cluster a default network policy can be applied. For reference purposes a **permissive** example is provided below. If you want to allow all traffic to all pods in a namespace (even if policies are added that cause some pods to be treated as “isolated”), you can create a policy that explicitly allows all traffic in that namespace. Save the following configuration as `default-allow-all.yaml`. Additional [documentation](https://kubernetes.io/docs/concepts/services-networking/network-policies/) about network policies can be found on the Kubernetes site.
 
-> This `NetworkPolicy` is just an example and is not recommended for production use.
+:::note
+
+This `NetworkPolicy` is just an example and is not recommended for production use.
+
+:::
 
 ```yaml
 ---
@@ -148,9 +156,13 @@ Execute this script to apply the `default-allow-all.yaml` configuration with the
 
 ### Reference Hardened RKE `cluster.yml` Configuration
 
-The reference `cluster.yml` is used by the RKE CLI that provides the configuration needed to achieve a hardened install of Rancher Kubernetes Engine (RKE). RKE install [documentation]({{<baseurl>}}/rke/latest/en/installation/) is provided with additional details about the configuration items. This reference `cluster.yml` does not include the required **nodes** directive which will vary depending on your environment. Documentation for node configuration in RKE can be found [here]({{<baseurl>}}/rke/latest/en/config-options/nodes/).
+The reference `cluster.yml` is used by the RKE CLI that provides the configuration needed to achieve a hardened install of Rancher Kubernetes Engine (RKE). RKE install [documentation](https://rancher.com/docs/rke/latest/en/installation/) is provided with additional details about the configuration items. This reference `cluster.yml` does not include the required **nodes** directive which will vary depending on your environment. Documentation for node configuration in RKE can be found [here](https://rancher.com/docs/rke/latest/en/config-options/nodes/).
 
-> For a Kubernetes v1.18 cluster, the configuration `spec.volumes: 'ephemeral'` should be removed from the `PodSecurityPolicy`, since it's not supported in this Kubernetes release.
+:::note
+
+For a Kubernetes v1.18 cluster, the configuration `spec.volumes: 'ephemeral'` should be removed from the `PodSecurityPolicy`, since it's not supported in this Kubernetes release.
+
+:::
 
 ```yaml
 # If you intend to deploy Kubernetes in an air-gapped environment,
@@ -445,7 +457,7 @@ upgrade_strategy:
 
 ### Reference Hardened RKE Template Configuration
 
-The reference RKE template provides the configuration needed to achieve a hardened install of Kubernetes. RKE templates are used to provision Kubernetes and define Rancher settings. Follow the Rancher [documentation]({{<baseurl>}}/rancher/v2.6/en/installation) for additional installation and RKE template details.
+The reference RKE template provides the configuration needed to achieve a hardened install of Kubernetes. RKE templates are used to provision Kubernetes and define Rancher settings. Follow the Rancher [documentation](../../../pages-for-subheaders/installation-and-upgrade.md) for additional installation and RKE template details.
 
 ```yaml
 #

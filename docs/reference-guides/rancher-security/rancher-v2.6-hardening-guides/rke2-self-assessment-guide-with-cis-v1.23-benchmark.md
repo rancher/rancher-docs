@@ -9,7 +9,7 @@ weight: 101
 
 #### Overview
 
-This document is a companion to the [Rancher v2.6 RKE2 security hardening guide]({{<baseurl>}}/rancher/v2.6/en/security/hardening-guides/rke2-1.23-hardening-2.6/). The hardening guide provides prescriptive guidance for hardening a production installation of Rancher with RKE2 provisioned clusters, and this benchmark guide is meant to help you evaluate the level of security of the hardened cluster against each control in the benchmark.
+This document is a companion to the [Rancher v2.6 RKE2 security hardening guide](./rke2-hardening-guide-with-cis-v1.23-benchmark.md/). The hardening guide provides prescriptive guidance for hardening a production installation of Rancher with RKE2 provisioned clusters, and this benchmark guide is meant to help you evaluate the level of security of the hardened cluster against each control in the benchmark.
 
 This guide corresponds to specific versions of the hardening guide, Rancher, CIS Benchmark and Kubernetes:
 
@@ -29,7 +29,11 @@ RKE2 launches control plane components as static pods, managed by the kubelet, a
 
 Where control audits differ from the original CIS benchmark, the audit commands specific to Rancher are provided for testing. When performing the tests, you will need access to the command line on the hosts of all RKE2 nodes. The commands also make use of the [kubectl](https://kubernetes.io/docs/tasks/tools/) (with a valid configuration file) and [jq](https://stedolan.github.io/jq/) tools, which are required in the testing and evaluation of test results.
 
-> NOTE: Only `automated` tests (previously called `scored`) are covered in this guide.
+:::note
+
+Only `automated` tests (previously called `scored`) are covered in this guide.
+
+:::
 
 ### Controls
 
@@ -667,7 +671,7 @@ on the control plane node and set the below parameter.
 **Remediation:**
 Follow the documentation and configure alternate mechanisms for authentication. Then,
 edit the API server pod specification file /var/lib/rancher/rke2/agent/pod-manifests/kube-apiserver.yaml
-on the control plane node and remove the --token-auth-file=<filename> parameter.
+on the control plane node and remove the `--token-auth-file=<filename>` parameter.
 
 **Audit:**
 
@@ -783,7 +787,7 @@ Follow the Kubernetes documentation and setup the TLS connection between
 the apiserver and kubelets. Then, edit the API server pod specification file
 /var/lib/rancher/rke2/agent/pod-manifests/kube-apiserver.yaml on the control plane node and set the
 --kubelet-certificate-authority parameter to the path to the cert file for the certificate authority.
---kubelet-certificate-authority=<ca-string>
+`--kubelet-certificate-authority=<ca-string>`
 
 **Audit:**
 
@@ -1257,7 +1261,7 @@ root 1772 1712 21 13:36 ? 00:01:56 kube-apiserver --advertise-address=172.31.15.
 Edit the API server pod specification file /var/lib/rancher/rke2/agent/pod-manifests/kube-apiserver.yaml
 on the control plane node and set the --service-account-key-file parameter
 to the public key file for service accounts. For example,
---service-account-key-file=<filename>
+`--service-account-key-file=<filename>`
 
 **Audit:**
 
@@ -1562,7 +1566,7 @@ root 1938 1828 2 13:36 ? 00:00:11 kube-controller-manager --flex-volume-plugin-d
 Edit the Controller Manager pod specification file /var/lib/rancher/rke2/agent/pod-manifests/kube-controller-manager.yaml
 on the control plane node and set the --service-account-private-key-file parameter
 to the private key file for service accounts.
---service-account-private-key-file=<filename>
+`--service-account-private-key-file=<filename>`
 
 **Audit:**
 
@@ -2009,7 +2013,7 @@ root:root root:root root:root
 
 **Remediation:**
 Run the following command to modify the file permissions of the
---client-ca-file chmod 644 <filename>
+`--client-ca-file chmod 644 <filename>`
 
 **Audit Script:** `check_cafile_permissions.sh`
 
@@ -2048,7 +2052,7 @@ permissions=600 permissions=600 permissions=600
 
 **Remediation:**
 Run the following command to modify the ownership of the --client-ca-file.
-chown root:root <filename>
+`chown root:root <filename>`
 
 **Audit Script:** `check_cafile_ownership.sh`
 
