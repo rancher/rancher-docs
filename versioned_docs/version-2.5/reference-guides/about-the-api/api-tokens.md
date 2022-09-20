@@ -24,7 +24,6 @@ Here is the complete list of tokens that are generated with `ttl=0`:
 | `agent-*` | Token for agent deployment |
 | `compose-token-*` | Token for compose |
 | `helm-token-*` | Token for Helm chart deployment |
-| `*-pipeline*` | Pipeline token for project |
 | `telemetry-*` | Telemetry token |
 | `drain-node-*` | Token for drain (we use `kubectl` for drain because there is no native Kubernetes API) |
 
