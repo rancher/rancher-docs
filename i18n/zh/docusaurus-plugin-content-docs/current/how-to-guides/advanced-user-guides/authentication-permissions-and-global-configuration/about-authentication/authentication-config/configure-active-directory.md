@@ -1,6 +1,5 @@
 ---
 title: 配置 Active Directory (AD)
-weight: 1112
 ---
 
 如果你的组织使用 Microsoft Active Directory 作为中心用户仓库，你可以将 Rancher 配置为与 Active Directory 服务器通信，从而对用户进行身份验证。这使 Rancher 管理员可以对外部用户系统中的用户和组进行集群和项目的访问控制，同时允许最终用户在登录 Rancher UI 时使用 Active Directory 凭证进行身份验证。

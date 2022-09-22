@@ -1,6 +1,5 @@
 ---
 title: Resources
-weight: 5
 ---
 
 ### Docker Installations

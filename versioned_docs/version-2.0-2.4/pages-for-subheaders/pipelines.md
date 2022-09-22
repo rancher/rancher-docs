@@ -1,8 +1,5 @@
 ---
 title: Pipelines
-weight: 11
-aliases:
-  - /rancher/v2.0-v2.4/en/k8s-in-rancher/pipelines
 ---
 
 import Tabs from '@theme/Tabs';

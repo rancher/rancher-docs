@@ -1,7 +1,5 @@
 ---
 title: K3s Cluster Configuration Reference
-shortTitle: K3s Cluster Configuration
-weight: 6
 ---
 
 This section covers the configuration options that are available in Rancher for a new or existing K3s Kubernetes cluster.
@@ -34,7 +32,7 @@ Option to enable or disable secrets encryption. When enabled, secrets will be en
 
 #### Project Network Isolation
 
-If your network provider allows project network isolation, you can choose whether to enable or disable inter-project communication. 
+If your network provider allows project network isolation, you can choose whether to enable or disable inter-project communication.
 
 #### SELinux
 

@@ -1,6 +1,5 @@
 ---
 title: Rancher HA
-weight: 104
 ---
 
 本文列出的命令/步骤可用于检查你的 Rancher Kubernetes 安装。

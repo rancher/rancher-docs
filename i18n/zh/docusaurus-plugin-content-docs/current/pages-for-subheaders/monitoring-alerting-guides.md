@@ -1,7 +1,5 @@
 ---
 title: Monitoring 指南
-shortTitle: 指南
-weight: 4
 ---
 
 - [启用 monitoring](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/enable-monitoring.md)

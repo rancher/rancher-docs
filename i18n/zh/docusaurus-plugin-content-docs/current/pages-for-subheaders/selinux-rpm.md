@@ -1,6 +1,5 @@
 ---
 title: SELinux RPM
-weight: 4
 ---
 
 [安全增强型 Linux (SELinux)](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) 是对 Linux 的安全增强。

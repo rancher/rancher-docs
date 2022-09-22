@@ -1,6 +1,5 @@
 ---
 title: Installing the Adapter
-weight: 2
 ---
 
 import Tabs from '@theme/Tabs';

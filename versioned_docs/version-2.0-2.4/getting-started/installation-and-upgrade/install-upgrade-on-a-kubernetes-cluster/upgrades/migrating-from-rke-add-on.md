@@ -1,13 +1,5 @@
 ---
 title: Migrating from a Kubernetes Install with an RKE Add-on
-weight: 1030
-aliases:
-  - /rancher/v2.0-v2.4/en/upgrades/ha-server-upgrade/
-  - /rancher/v2.0-v2.4/en/upgrades/upgrades/ha-server-upgrade/
-  - /rancher/v2.0-v2.4/en/upgrades/upgrades/migrating-from-rke-add-on
-  - /rancher/v2.0-v2.4/en/installation/upgrades-rollbacks/upgrades/migrating-from-rke-add-on
-  - /rancher/v2.0-v2.4/en/installation/install-rancher-on-k8s/upgrades-rollbacks/upgrades/migrating-from-rke-add-on
-  - /rancher/v2.x/en/installation/install-rancher-on-k8s/upgrades/migrating-from-rke-add-on/
 ---
 
 > **Important: RKE add-on install is only supported up to Rancher v2.0.8**

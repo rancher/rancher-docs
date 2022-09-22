@@ -1,8 +1,5 @@
 ---
 title: Node Requirements for Rancher Managed Clusters
-weight: 1
-aliases:
-  - /rancher/v2.x/en/cluster-provisioning/node-requirements/
 ---
 
 import Tabs from '@theme/Tabs';

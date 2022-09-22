@@ -1,6 +1,5 @@
 ---
 title: Logging
-weight: 110
 ---
 
 Rancher 使用了以下日志级别：

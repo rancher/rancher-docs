@@ -1,8 +1,5 @@
 ---
 title: RKE Cluster Configuration Reference
-weight: 2250
-aliases:
-  - /rancher/v2.x/en/cluster-provisioning/rke-clusters/options/
 ---
 
 import Tabs from '@theme/Tabs';

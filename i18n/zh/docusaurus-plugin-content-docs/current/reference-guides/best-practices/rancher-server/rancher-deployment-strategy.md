@@ -1,6 +1,5 @@
 ---
 title: Rancher 部署策略
-weight: 100
 ---
 
 本文提供 Rancher Server 的两种部署策略，用于管理下游 Kubernetes 集群。每种策略都有优缺点。请按照你的实际情况选择最适合的部署策略：

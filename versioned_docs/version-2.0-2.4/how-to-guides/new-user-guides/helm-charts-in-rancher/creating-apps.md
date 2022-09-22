@@ -1,12 +1,5 @@
 ---
 title: Creating Catalog Apps
-weight: 400
-aliases:
-  - /rancher/v2.0-v2.4/en/tasks/global-configuration/catalog/customizing-charts/
-  - /rancher/v2.0-v2.4/en/catalog/custom/creating
-  - /rancher/v2.0-v2.4/en/catalog/custom
-  - /rancher/v2.0-v2.4/en/catalog/creating-apps
-  - /rancher/v2.0-v2.4/en/helm-charts/legacy-catalogs/creating-apps
 ---
 
 Rancher's catalog service requires any custom catalogs to be structured in a specific format for the catalog service to be able to leverage it in Rancher.

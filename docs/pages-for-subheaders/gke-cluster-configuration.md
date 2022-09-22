@@ -1,7 +1,5 @@
 ---
 title: GKE Cluster Configuration Reference
-shortTitle: GKE Cluster Configuration
-weight: 3
 ---
 
 ## Changes in Rancher v2.6

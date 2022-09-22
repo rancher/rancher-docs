@@ -1,8 +1,5 @@
 ---
 title: Hardening Guide with CIS 1.5 Benchmark
-weight: 200
-aliases:
-  - /rancher/v2.x/en/security/rancher-2.5/1.5-hardening-2.5/
 ---
 
 This document provides prescriptive guidance for hardening a production installation of a RKE cluster to be used with Rancher v2.5. It outlines the configurations and controls required to address Kubernetes benchmark controls from the Center for Information Security (CIS).
@@ -65,7 +62,7 @@ services:
 ```
 
 #### Set `automountServiceAccountToken` to `false` for `default` service accounts
-Kubernetes provides a default service account which is used by cluster workloads where no specific service account is assigned to the pod. Where access to the Kubernetes API from a pod is required, a specific service account should be created for that pod, and rights granted to that service account. The default service account should be configured such that it does not provide a service account token and does not have any explicit rights assignments.  
+Kubernetes provides a default service account which is used by cluster workloads where no specific service account is assigned to the pod. Where access to the Kubernetes API from a pod is required, a specific service account should be created for that pod, and rights granted to that service account. The default service account should be configured such that it does not provide a service account token and does not have any explicit rights assignments.
 
 For each namespace including **default** and **kube-system** on a standard RKE install the **default** service account must include this value:
 

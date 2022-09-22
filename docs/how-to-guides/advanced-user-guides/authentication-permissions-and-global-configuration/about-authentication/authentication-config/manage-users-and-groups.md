@@ -1,6 +1,5 @@
 ---
 title: Users and Groups
-weight: 1
 ---
 
 Rancher relies on users and groups to determine who is allowed to log in to Rancher and which resources they can access. When you configure an external authentication provider, users from that provider will be able to log in to your Rancher server. When a user logs in, the authentication provider will supply your Rancher server with a list of groups to which the user belongs.
@@ -30,7 +29,7 @@ Whenever a user logs in to the UI using an authentication provider, Rancher auto
 
 ### Automatically Refreshing User Information
 
-Rancher will periodically refresh the user information even before a user logs in through the UI. You can control how often Rancher performs this refresh. 
+Rancher will periodically refresh the user information even before a user logs in through the UI. You can control how often Rancher performs this refresh.
 
 Two settings control this behavior:
 

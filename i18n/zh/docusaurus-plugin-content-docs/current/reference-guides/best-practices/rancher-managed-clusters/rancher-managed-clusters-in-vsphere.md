@@ -1,6 +1,5 @@
 ---
 title: Rancher 管理 vSphere 集群的最佳实践
-shortTitle: Rancher 在 vSphere 托管的集群
 ---
 
 本指南概述了在 vSphere 环境中配置下游 Rancher 集群的参考架构，以及 VMware 记录的标准 vSphere 最佳实践。

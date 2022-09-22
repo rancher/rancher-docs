@@ -1,8 +1,5 @@
 ---
 title: Upgrading Kubernetes without Upgrading Rancher
-weight: 1120
-aliases:
-  - /rancher/v2.x/en/admin-settings/k8s-metadata/
 ---
 
 The RKE metadata feature allows you to provision clusters with new versions of Kubernetes as soon as they are released, without upgrading Rancher. This feature is useful for taking advantage of patch versions of Kubernetes, for example, if you want to upgrade to Kubernetes v1.14.7 when your Rancher server originally supported v1.14.6.
@@ -11,7 +8,7 @@ The RKE metadata feature allows you to provision clusters with new versions of K
 
 Rancher's Kubernetes metadata contains information specific to the Kubernetes version that Rancher uses to provision [RKE clusters](../../pages-for-subheaders/launch-kubernetes-with-rancher.md). Rancher syncs the data periodically and creates custom resource definitions (CRDs) for **system images,** **service options** and **addon templates.** Consequently, when a new Kubernetes version is compatible with the Rancher server version, the Kubernetes metadata makes the new version available to Rancher for provisioning clusters. The metadata gives you an overview of the information that the [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/) (RKE) uses for deploying various Kubernetes versions.
 
-This table below describes the CRDs that are affected by the periodic data sync. 
+This table below describes the CRDs that are affected by the periodic data sync.
 
 > **Note:** Only administrators can edit metadata CRDs. It is recommended not to update existing objects unless explicitly advised.
 
@@ -31,7 +28,7 @@ Administrators might configure the RKE metadata settings to do the following:
 
 The option to refresh the Kubernetes metadata is available for administrators by default, or for any user who has the **Manage Cluster Drivers** [global role.](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)
 
-To force Rancher to refresh the Kubernetes metadata, a manual refresh action is available under **Tools > Drivers > Refresh Kubernetes Metadata** on the right side corner. 
+To force Rancher to refresh the Kubernetes metadata, a manual refresh action is available under **Tools > Drivers > Refresh Kubernetes Metadata** on the right side corner.
 
 You can configure Rancher to only refresh metadata when desired by setting `refresh-interval-minutes` to `0` (see below) and using this button to perform the metadata refresh manually when desired.
 

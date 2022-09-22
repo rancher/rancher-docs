@@ -1,6 +1,5 @@
 ---
 title: RBAC
-weight: 20
 ---
 
 Rancher 通过 _用户_ 进行授权管理。如[身份验证](about-authentication.md)中所述，用户可以是本地用户，也可以是外部用户。

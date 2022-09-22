@@ -1,7 +1,5 @@
 ---
 title: Managing GKE Clusters
-shortTitle: Google Kubernetes Engine
-weight: 2105
 ---
 
 
@@ -17,7 +15,7 @@ The service account requires the following roles:
 
 - **Compute Viewer:** `roles/compute.viewer`
 - **Project Viewer:** `roles/viewer`
-- **Kubernetes Engine Admin:** `roles/container.admin` 
+- **Kubernetes Engine Admin:** `roles/container.admin`
 - **Service Account User:** `roles/iam.serviceAccountUser`
 
 [Google Documentation: Creating and Enabling Service Accounts](https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances)
@@ -70,7 +68,7 @@ Your cluster is created and assigned a state of **Provisioning**. Rancher is sta
 
 You can access your cluster after its state is updated to **Active**.
 
-**Active** clusters are assigned two Projects: 
+**Active** clusters are assigned two Projects:
 
 - `Default`, containing the `default` namespace
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces

@@ -1,6 +1,5 @@
 ---
 title: Workload with Ingress Quick Start
-weight: 100
 ---
 
 ### Prerequisite

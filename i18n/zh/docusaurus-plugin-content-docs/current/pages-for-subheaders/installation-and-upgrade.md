@@ -1,7 +1,6 @@
 ---
 title: 安装/升级 Rancher
 description: 了解如何在开发和生产环境中安装 Rancher。了解单节点和高可用安装
-weight: 3
 ---
 
 本节介绍了 Rancher 各种安装方式以及每个安装方式的优点。

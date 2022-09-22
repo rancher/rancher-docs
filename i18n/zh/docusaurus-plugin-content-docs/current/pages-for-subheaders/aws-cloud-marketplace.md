@@ -1,6 +1,5 @@
 ---
 title: AWS Marketplace 集成
-weight: 1
 ---
 
 # 概述

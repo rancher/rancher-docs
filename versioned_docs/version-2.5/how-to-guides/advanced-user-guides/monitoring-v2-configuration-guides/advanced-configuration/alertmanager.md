@@ -1,6 +1,5 @@
 ---
 title: Alertmanager Configuration
-weight: 1
 ---
 
 It is usually not necessary to directly edit the Alertmanager custom resource. For most use cases, you will only need to edit the Receivers and Routes to configure notifications.
@@ -24,9 +23,9 @@ While the Rancher UI only supports a routing tree that is two levels deep, you c
 ### Multiple Alertmanager Replicas
 
 As part of the chart deployment options, you can opt to increase the number of replicas of the Alertmanager deployed onto your cluster. The replicas can all be managed using the same underlying Alertmanager Config Secret.
- 
+
 This Secret should be updated or modified any time you want to:
- 
+
 - Add in new notifiers or receivers
 - Change the alerts that should be sent to specific notifiers or receivers
 - Change the group of alerts that are sent out

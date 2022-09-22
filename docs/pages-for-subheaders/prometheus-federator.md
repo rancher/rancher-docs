@@ -1,6 +1,5 @@
 ---
 title: Prometheus Federator
-weight: 7
 ---
 
 Prometheus Federator, also referred to as Project Monitoring v2, deploys a Helm Project Operator (based on the [rancher/helm-project-operator](https://github.com/rancher/helm-project-operator)), an operator that manages deploying Helm charts each containing a Project Monitoring Stack, where each stack contains:

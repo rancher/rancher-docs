@@ -1,6 +1,5 @@
 ---
 title: Monitoring 的工作原理
-weight: 1
 ---
 
 

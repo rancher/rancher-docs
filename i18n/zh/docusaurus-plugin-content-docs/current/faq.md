@@ -1,6 +1,5 @@
 ---
 title: 常见问题
-weight: 500
 ---
 
 本文包含了用户常见的 Rancher 2.x 问题。

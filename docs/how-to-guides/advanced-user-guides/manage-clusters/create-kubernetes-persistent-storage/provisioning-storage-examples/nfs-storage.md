@@ -1,6 +1,5 @@
 ---
 title: NFS Storage
-weight: 3054
 ---
 
 Before you can use the NFS storage volume plug-in with Rancher deployments, you need to provision an NFS server.
@@ -45,11 +44,11 @@ To simplify the process of managing firewall rules, use NFSv4.
         ```
 
         :::tip
-        
+
         You can replace the IP addresses with a subnet. For example: `10.212.50.12&#47;24`
 
         :::
-        
+
     1. Update the NFS table by entering the following command:
 
         ```

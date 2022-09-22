@@ -1,16 +1,15 @@
 ---
 title: Enable Istio with Pod Security Policies
-weight: 1
 ---
 
-If you have restrictive Pod Security Policies enabled, then Istio may not be able to function correctly, because it needs certain permissions in order to install itself and manage pod infrastructure. In this section, we will configure a cluster with PSPs enabled for an Istio install, and also set up the Istio CNI plugin. 
+If you have restrictive Pod Security Policies enabled, then Istio may not be able to function correctly, because it needs certain permissions in order to install itself and manage pod infrastructure. In this section, we will configure a cluster with PSPs enabled for an Istio install, and also set up the Istio CNI plugin.
 
 The Istio CNI plugin removes the need for each application pod to have a privileged `NET_ADMIN` container. For further information, see the [Istio CNI Plugin docs](https://istio.io/docs/setup/additional-setup/cni). Please note that the [Istio CNI Plugin is in alpha](https://istio.io/about/feature-stages/).
 
 :::note Prerequisites:
 
 - The cluster must be an RKE Kubernetes cluster.
-- The cluster must have been created with a default PodSecurityPolicy. 
+- The cluster must have been created with a default PodSecurityPolicy.
 
 To enable pod security policy support when creating a Kubernetes cluster in the Rancher UI, go to <b>Advanced Options.</b> In the <b>Pod Security Policy Support</b> section, click <b>Enabled.</b> Then select a default pod security policy.
 

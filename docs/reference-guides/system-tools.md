@@ -1,6 +1,5 @@
 ---
 title: System Tools
-weight: 22
 ---
 
 :::note
@@ -8,6 +7,7 @@ weight: 22
 System Tools has been deprecated since June 2022.
 
 :::
+
 # Logs
 
 Please use [logs-collector](https://github.com/rancherlabs/support-tools/tree/master/collection/rancher/v2.x/logs-collector) to collect logs from your cluster.

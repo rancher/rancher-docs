@@ -1,6 +1,5 @@
 ---
 title: Shibboleth 和 OpenLDAP 的组权限
-weight: 1
 ---
 
 本文为打算在 Rancher 中设置 Shibboleth 身份验证的用户提供背景信息和上下文。

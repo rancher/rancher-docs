@@ -1,7 +1,5 @@
 ---
-shortTitle: RBAC
 title: Logging 的 RBAC
-weight: 3
 ---
 
 Rancher Logging 有两个角色，分别是 `logging-admin` 和 `logging-view`。

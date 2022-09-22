@@ -1,6 +1,5 @@
 ---
 title: 设置 Amazon 云提供商
-weight: 1
 ---
 
 使用 `Amazon` 云提供商时，你可以利用以下功能：

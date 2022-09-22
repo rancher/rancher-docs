@@ -1,6 +1,5 @@
 ---
 title: Troubleshooting
-weight: 600
 ---
 
 This section contains information to help you troubleshoot issues when using Rancher.
@@ -40,6 +39,6 @@ This section contains information to help you troubleshoot issues when using Ran
 
     Read more about how a Rancher Admin can trace an event from the Rancher audit logs and into the Kubernetes audit logs using the external Identity Provider username.
 
-- [Expired Webhook Certificates](troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation.md)  
+- [Expired Webhook Certificates](troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation.md)
 
     Read more about how to rotate a Rancher webhook certificate secret after it expires on an annual basis.

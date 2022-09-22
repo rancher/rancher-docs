@@ -1,6 +1,5 @@
 ---
 title: Behavior Differences Between RKE1 and RKE2
-weight: 2450
 ---
 
 RKE2, also known as RKE Government, is a Kubernetes distribution that focuses on security and compliance for U.S. Federal Government entities. It is considered the next iteration of the Rancher Kubernetes Engine, now known as RKE1.
@@ -13,7 +12,7 @@ RKE1 uses Docker for deploying and managing control plane components, and it als
 
 ### Cluster API
 
-RKE2/K3s provisioning is built on top of the Cluster API (CAPI) upstream framework which often makes RKE2-provisioned clusters behave differently than RKE1-provisioned clusters. 
+RKE2/K3s provisioning is built on top of the Cluster API (CAPI) upstream framework which often makes RKE2-provisioned clusters behave differently than RKE1-provisioned clusters.
 
 When you make changes to your cluster configuration in RKE2, this **may** result in nodes reprovisioning. This is controlled by CAPI controllers and not by Rancher itself. Note that for etcd nodes, the same behavior does not apply.
 

@@ -1,14 +1,5 @@
 ---
 title: Restoring Rancher Installed on a K3s Kubernetes Cluster
-shortTitle: K3s Installs
-weight: 1
-aliases:
-  - /rancher/v2.0-v2.4/en/backups/restorations/k3s-restoration
-  - /rancher/v2.0-v2.4/en/backups/restorations/k8s-restore/k3s-restore
-  - /rancher/v2.0-v2.4/en/backups/legacy/restore/k8s-restore/k3s-restore/
-  - /rancher/v2.0-v2.4/en/backups/legacy/restore/k3s-restore
-  - /rancher/v2.0-v2.4/en/backups/v2.0.x-v2.4.x/restore/k3s-restore
-  - /rancher/v2.x/en/backups/v2.0.x-v2.4.x/restore/k3s-restore/
 ---
 
 When Rancher is installed on a high-availability Kubernetes cluster, we recommend using an external database to store the cluster data.

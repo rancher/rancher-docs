@@ -1,9 +1,5 @@
 ---
 title: Creating an AKS Cluster
-shortTitle: Azure Kubernetes Service
-weight: 2115
-aliases:
-  - /rancher/v2.0-v2.4/en/tasks/clusters/creating-a-cluster/create-cluster-azure-container-service/
 ---
 
 You can use Rancher to create a cluster hosted in Microsoft Azure Kubernetes Service (AKS).
@@ -81,7 +77,7 @@ You can also follow these instructions to set up a service principal and give it
 
 1. Click **Register.**
 
-1. You should now see the name of your service principal under **Azure Active Directory > App registrations.** 
+1. You should now see the name of your service principal under **Azure Active Directory > App registrations.**
 
 1. Click the name of your service principal. Take note of the tenant ID and application ID (also called app ID or client ID) so that you can use it when provisioning your AKS cluster. Then click **Certificates & secrets.**
 
@@ -89,7 +85,7 @@ You can also follow these instructions to set up a service principal and give it
 
 1. Enter a short description, pick an expiration time, and click **Add.** Take note of the client secret so that you can use it when provisioning the AKS cluster.
 
-**Result:** You have created a service principal and you should be able to see it listed in the **Azure Active Directory** section under **App registrations.** You still need to give the service principal access to AKS. 
+**Result:** You have created a service principal and you should be able to see it listed in the **Azure Active Directory** section under **App registrations.** You still need to give the service principal access to AKS.
 
 To give role-based access to your service principal,
 
@@ -123,8 +119,8 @@ Use Rancher to set up and configure your Kubernetes cluster.
 1. Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.
 
 1. Use your subscription ID, tenant ID, app ID, and client secret to give your cluster access to AKS. If you don't have all of that information, you can retrieve it using these instructions:
-  - **App ID and tenant ID:** To get the app ID and tenant ID, you can go to the Azure Portal, then click **Azure Active Directory**, then click **App registrations,** then click the name of the service principal. The app ID and tenant ID are both on the app registration detail page. 
-  - **Client secret:** If you didn't copy the client secret when creating the service principal, you can get a new one if you go to the app registration detail page, then click **Certificates & secrets**, then click **New client secret.** 
+  - **App ID and tenant ID:** To get the app ID and tenant ID, you can go to the Azure Portal, then click **Azure Active Directory**, then click **App registrations,** then click the name of the service principal. The app ID and tenant ID are both on the app registration detail page.
+  - **Client secret:** If you didn't copy the client secret when creating the service principal, you can get a new one if you go to the app registration detail page, then click **Certificates & secrets**, then click **New client secret.**
   - **Subscription ID:** You can get the subscription ID is available in the portal from **All services > Subscriptions.**
 
 1. Use **Cluster Options** to choose the version of Kubernetes, what network provider will be used and if you want to enable project network isolation. To see more cluster options, click on **Show advanced options.**
@@ -139,13 +135,13 @@ Use Rancher to set up and configure your Kubernetes cluster.
 <br/>
 1. Review your options to confirm they're correct. Then click **Create**.
 
-**Result:** 
+**Result:**
 
 Your cluster is created and assigned a state of **Provisioning.** Rancher is standing up your cluster.
 
 You can access your cluster after its state is updated to **Active.**
 
-**Active** clusters are assigned two Projects: 
+**Active** clusters are assigned two Projects:
 
 - `Default`, containing the `default` namespace
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces

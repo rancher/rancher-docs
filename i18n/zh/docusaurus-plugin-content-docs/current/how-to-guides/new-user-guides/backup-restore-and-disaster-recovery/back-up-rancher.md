@@ -1,6 +1,5 @@
 ---
 title: 备份 Rancher
-weight: 1
 ---
 
 在本节中，你将学习如何备份运行在任何 Kubernetes 集群上的 Rancher。要备份通过 Docker 安装的 Rancher，请参见[单节点备份](back-up-docker-installed-rancher.md)。

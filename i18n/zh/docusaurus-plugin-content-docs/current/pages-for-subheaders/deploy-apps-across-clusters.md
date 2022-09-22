@@ -1,6 +1,5 @@
 ---
 title: 跨集群部署应用
-weight: 12
 ---
 ### Fleet
 

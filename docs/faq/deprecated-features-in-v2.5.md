@@ -1,6 +1,5 @@
 ---
 title: Deprecated Features in Rancher
-weight: 100
 ---
 
 ### What is Rancher's Deprecation policy?
@@ -14,7 +13,7 @@ Rancher will publish deprecated features as part of the [release notes](https://
 | Patch Version |  Release Date |
 |---------------|---------------|
 | [2.6.0](https://github.com/rancher/rancher/releases/tag/v2.6.0) |  Aug 31, 2021  |
-| [2.6.1](https://github.com/rancher/rancher/releases/tag/v2.6.1) |  Oct 11, 2021  | 
+| [2.6.1](https://github.com/rancher/rancher/releases/tag/v2.6.1) |  Oct 11, 2021  |
 | [2.6.2](https://github.com/rancher/rancher/releases/tag/v2.6.2) |  Oct 19, 2021  |
 | [2.6.3](https://github.com/rancher/rancher/releases/tag/v2.6.3) |  Dec 21, 2021  |
 | [2.6.4](https://github.com/rancher/rancher/releases/tag/v2.6.4) |  Mar 31, 2022  |

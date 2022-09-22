@@ -1,7 +1,6 @@
 ---
 title: Ingress 配置
 description: Ingress 配置
-weight: 9999
 ---
 
 ### Kubernetes 1.21 中的 NGINX Ingress Controller 变更

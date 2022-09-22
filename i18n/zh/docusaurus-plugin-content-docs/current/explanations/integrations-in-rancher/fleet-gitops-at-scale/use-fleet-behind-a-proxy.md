@@ -1,6 +1,5 @@
 ---
 title: 在代理后使用 Fleet
-weight: 3
 ---
 
 在本节中，你将学习如何在一个设置中启用 Fleet，该设置有一个具有公共 IP 的 Rancher Server，以及一个没有公共 IP 但配置为使用代理的 Kubernetes 集群。

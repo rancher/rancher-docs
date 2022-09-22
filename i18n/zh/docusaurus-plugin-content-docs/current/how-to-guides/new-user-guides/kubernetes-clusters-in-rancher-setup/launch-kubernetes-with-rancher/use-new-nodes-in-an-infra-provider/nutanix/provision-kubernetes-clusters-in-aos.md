@@ -1,6 +1,5 @@
 ---
 title: 在 Nutanix AOS 中配置 Kubernetes 集群
-weight: 1
 ---
 
 要使用 Rancher 在 Nutanix AOS (AHV) 中安装 [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes 集群：

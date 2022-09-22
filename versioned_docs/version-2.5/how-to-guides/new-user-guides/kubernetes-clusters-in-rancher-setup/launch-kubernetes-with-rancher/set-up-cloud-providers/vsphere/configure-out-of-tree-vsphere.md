@@ -1,10 +1,7 @@
 ---
 title: How to Configure Out-of-tree vSphere Cloud Provider
-shortTitle: Out-of-tree Cloud Provider
-weight: 10
-aliases:
-  - /rancher/v2.x/en/cluster-provisioning/rke-clusters/cloud-providers/vsphere/out-of-tree/
 ---
+
 _Available as of v2.5+_
 
 Kubernetes is moving away from maintaining cloud providers in-tree. vSphere has an out-of-tree cloud provider that can be used by installing the vSphere cloud provider and cloud storage plugins.
@@ -16,7 +13,7 @@ This page covers how to install the Cloud Provider Interface (CPI) and Cloud Sto
 The vSphere versions supported:
 
 * 6.7u3
-* 7.0u1 or higher. 
+* 7.0u1 or higher.
 
 The Kubernetes version must be 1.19 or higher.
 
@@ -33,7 +30,7 @@ The Cloud Provider Interface (CPI) should be installed first before installing t
 1. Finish creating your cluster.
 
 ### 2. Install the CPI plugin
- 
+
 1. From the **Cluster Explorer** view, go to the top left dropdown menu and click **Apps & Marketplace.**
 1. Select the **vSphere CPI** chart. Fill out the required vCenter details.
 1. vSphere CPI initializes all nodes with ProviderID which is needed by the vSphere CSI driver. Check if all nodes are initialized with the ProviderID before installing CSI driver with the following command:

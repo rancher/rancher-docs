@@ -1,9 +1,7 @@
 ---
 title: Certificate Troubleshooting
-weight: 4
-aliases:
-  - /rancher/v2.x/en/installation/other-installation-methods/single-node-docker/troubleshooting/
 ---
+
 ### How Do I Know if My Certificates are in PEM Format?
 
 You can recognize the PEM format by the following traits:

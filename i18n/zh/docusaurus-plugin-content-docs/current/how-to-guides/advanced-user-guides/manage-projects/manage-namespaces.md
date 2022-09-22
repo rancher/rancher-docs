@@ -1,6 +1,5 @@
 ---
 title: 命名空间
-weight: 2520
 ---
 
 在 Rancher 中，你可以将项目进一步划分为多个[命名空间](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)，项目是由物理集群支持的，而命名空间是项目中的虚拟集群。当项目和 `default` 命名空间不能满足你的需求时，你可以在项目中创建多个命名空间来隔离应用和资源。

@@ -1,6 +1,5 @@
 ---
 title: Backing up a Cluster
-weight: 2045
 ---
 
 import Tabs from '@theme/Tabs';

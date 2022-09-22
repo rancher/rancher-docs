@@ -1,6 +1,5 @@
 ---
 title: Example Repositories
-weight: 500
 ---
 
 Rancher ships with several example repositories that you can use to familiarize yourself with pipelines. We recommend configuring and testing the example repository that most resembles your environment before using pipelines with your own repositories in a production environment. Use this example repository as a sandbox for repo configuration, build demonstration, etc. Rancher includes example repositories for:
@@ -10,7 +9,7 @@ Rancher ships with several example repositories that you can use to familiarize 
 - php
 
 :::note Prerequisites:
- 
+
 - The example repositories are only available if you have not [configured a version control provider](../../how-to-guides/advanced-user-guides/manage-projects/ci-cd-pipelines.md).
 - Because the pipelines app was deprecated in favor of Fleet, you will need to turn on the feature flag for legacy features before using pipelines.
 - Note that pipelines in Kubernetes 1.21+ are no longer supported.
@@ -38,7 +37,7 @@ By default, the example pipeline repositories are disabled. Enable one (or more)
 1. In the **Pipelines** tab, click **Configure Repositories**.
 
     :::note
-    
+
     Example repositories only display if you haven't fetched your own repos.
 
     :::
@@ -78,11 +77,11 @@ After enabling an example repository, run the pipeline to see how it works.
 1. In the **Pipelines** tab, go to the pipeline and select the vertical **⋮ > Run**.
 
     :::note
-    
+
     When you run a pipeline the first time, it takes a few minutes to pull relevant images and provision necessary pipeline components.
 
     :::
-    
+
 **Result:** The pipeline runs. You can see the results in the logs.
 
 ### What's Next?

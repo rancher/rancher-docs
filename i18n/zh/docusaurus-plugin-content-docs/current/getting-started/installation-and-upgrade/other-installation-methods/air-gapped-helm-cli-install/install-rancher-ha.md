@@ -1,6 +1,5 @@
 ---
 title: 4. 安装 Rancher
-weight: 400
 ---
 
 本文介绍如何在高可用 Kubernetes 安装的离线环境部署 Rancher。离线环境可以是 Rancher Server 离线安装、防火墙后面或代理后面。

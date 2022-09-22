@@ -1,6 +1,5 @@
 ---
 title: 配置 GitHub
-weight: 1116
 ---
 
 在使用 GitHub 的环境中，你可以通过配置 Rancher 允许用户使用 GitHub 凭证登录。

@@ -1,6 +1,5 @@
 ---
 title: Upgrading and Rolling Back Kubernetes
-weight: 70
 ---
 
 Following an upgrade to the latest version of Rancher, downstream Kubernetes clusters can be upgraded to use the latest supported version of Kubernetes.

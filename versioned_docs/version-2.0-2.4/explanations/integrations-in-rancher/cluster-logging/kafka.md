@@ -1,12 +1,5 @@
 ---
 title: Kafka
-weight: 400
-aliases:
-  - /rancher/v2.0-v2.4/en/tools/logging/kafka/
-  - /rancher/v2.0-v2.4/en/cluster-admin/tools/logging/kafka
-  - /rancher/v2.0-v2.4/en/logging/legacy/cluster-logging/kafka
-  - /rancher/v2.0-v2.4/en/logging/v2.0.x-v2.4.x/cluster-logging/kafka
-  - /rancher/v2.x/en/logging/v2.0.x-v2.4.x/cluster-logging/kafka/
 ---
 
 If your organization uses [Kafka](https://kafka.apache.org/), you can configure Rancher to send it Kubernetes logs.  Afterwards, you can log into your Kafka server to view logs.
@@ -32,7 +25,7 @@ If your Kafka cluster is using SSL for the **Broker**, you need to complete the 
 
 1. Provide the **CA Certificate PEM**. You can either copy and paste the certificate or upload it using the **Read from a file** button.
 
->**Note:** Kafka does not support self-signed certificates when client authentication is enabled. 
+>**Note:** Kafka does not support self-signed certificates when client authentication is enabled.
 
 ### SASL configuration
 

@@ -1,6 +1,5 @@
 ---
 title: Rancher Agent 选项
-weight: 2500
 ---
 
 Rancher 在每个节点上部署一个 Agent 来与节点通信。本文描述了可以传递给 Agent 的选项。要使用这些选项，你需要[使用自定义节点创建集群](../../../../pages-for-subheaders/use-existing-nodes.md)，并在添加节点时将选项添加到生成的 `docker run` 命令。

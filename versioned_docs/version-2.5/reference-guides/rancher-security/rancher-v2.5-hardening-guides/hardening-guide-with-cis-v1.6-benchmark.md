@@ -1,8 +1,5 @@
 ---
 title: Hardening Guide with CIS 1.6 Benchmark
-weight: 100
-aliases:
-  - /rancher/v2.x/en/security/rancher-2.5/1.6-hardening-2.5/
 ---
 
 This document provides prescriptive guidance for hardening a production installation of a RKE cluster to be used with Rancher v2.5.4. It outlines the configurations and controls required to address Kubernetes benchmark controls from the Center for Information Security (CIS).
@@ -67,7 +64,7 @@ services:
 ```
 
 #### Set `automountServiceAccountToken` to `false` for `default` service accounts
-Kubernetes provides a default service account which is used by cluster workloads where no specific service account is assigned to the pod. Where access to the Kubernetes API from a pod is required, a specific service account should be created for that pod, and rights granted to that service account. The default service account should be configured such that it does not provide a service account token and does not have any explicit rights assignments.  
+Kubernetes provides a default service account which is used by cluster workloads where no specific service account is assigned to the pod. Where access to the Kubernetes API from a pod is required, a specific service account should be created for that pod, and rights granted to that service account. The default service account should be configured such that it does not provide a service account token and does not have any explicit rights assignments.
 
 For each namespace including **default** and **kube-system** on a standard RKE install the **default** service account must include this value:
 
@@ -431,48 +428,48 @@ RKE Templates are used to provision Kubernetes and define Rancher settings. Foll
 [documentaion](https://rancher.com/docs/rancher/v2.5/en/installation) for additional installation and RKE Template details.
 
 ```yaml
-# 
+#
 # Cluster Config
-# 
+#
 default_pod_security_policy_template_id: restricted
 docker_root_dir: /var/lib/docker
 enable_cluster_alerting: false
 enable_cluster_monitoring: false
 enable_network_policy: true
-# 
+#
 # Rancher Config
-# 
+#
 rancher_kubernetes_engine_config:
   addon_job_timeout: 45
   ignore_docker_version: true
   kubernetes_version: v1.18.12-rancher1-1
-# 
+#
 #   If you are using calico on AWS
-# 
+#
 #    network:
 #      plugin: calico
 #      calico_network_provider:
 #        cloud_provider: aws
-# 
+#
 # # To specify flannel interface
-# 
+#
 #    network:
 #      plugin: flannel
 #      flannel_network_provider:
 #      iface: eth1
-# 
+#
 # # To specify flannel interface for canal plugin
-# 
+#
 #    network:
 #      plugin: canal
 #      canal_network_provider:
 #        iface: eth1
-# 
+#
   network:
     mtu: 0
     plugin: canal
   rotate_encryption_key: false
-# 
+#
 #    services:
 #      kube-api:
 #        service_cluster_ip_range: 10.43.0.0/16
@@ -482,7 +479,7 @@ rancher_kubernetes_engine_config:
 #      kubelet:
 #        cluster_domain: cluster.local
 #        cluster_dns_server: 10.43.0.10
-# 
+#
   services:
     etcd:
       backup_config:

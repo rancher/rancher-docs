@@ -1,22 +1,7 @@
 ---
 title: Upgrades
-weight: 2
-aliases:
-  - /rancher/v2.5/en/upgrades/upgrades
-  - /rancher/v2.5/en/installation/upgrades-rollbacks/upgrades
-  - /rancher/v2.5/en/upgrades/upgrades/ha-server-upgrade-helm-airgap
-  - /rancher/v2.5/en/upgradeinstallation/install-rancher-on-k8s/upgrades/air-gap-upgrade/
-  - /rancher/v2.5/en/upgrades/upgrades/ha
-  - /rancher/v2.5/en/installation/install-rancher-on-k8s/upgrades/upgrades/ha
-  - /rancher/v2.5/en/installation/upgrades-rollbacks/upgrades/
-  - /rancher/v2.5/en/upgrades/upgrades/ha-server-upgrade-helm/
-  - /rancher/v2.5/en/installation/upgrades-rollbacks/upgrades/ha
-  - /rancher/v2.5/en/installation/install-rancher-on-k8s/upgrades-rollbacks/upgrades
-  - /rancher/v2.5/en/installation/install-rancher-on-k8s/upgrades-rollbacks/upgrades/ha
-  - /rancher/v2.5/en/installation/upgrades-rollbacks/
-  - /rancher/v2.5/en/upgrades/
-  - /rancher/v2.x/en/installation/install-rancher-on-k8s/upgrades/
 ---
+
 The following instructions will guide you through upgrading a Rancher server that was installed on a Kubernetes cluster with Helm. These steps also apply to air gap installs with Helm.
 
 For the instructions to upgrade Rancher installed on Kubernetes with RancherD, refer to [this page.](../other-installation-methods/install-rancher-on-linux/upgrade-rancherd.md)

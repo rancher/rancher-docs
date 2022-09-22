@@ -1,6 +1,5 @@
 ---
 title: 高级配置
-weight: 500
 ---
 
 ### Alertmanager

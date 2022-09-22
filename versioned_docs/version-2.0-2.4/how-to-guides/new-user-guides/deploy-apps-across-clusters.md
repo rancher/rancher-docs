@@ -1,8 +1,5 @@
 ---
 title: Deploying Applications across Clusters
-weight: 13
-aliases:
-  - /rancher/v2.0-v2.4/en/deploy-across-clusters/multi-cluster-apps
 ---
 
 _Available as of v2.2.0_

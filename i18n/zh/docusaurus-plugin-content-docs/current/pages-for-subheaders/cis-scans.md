@@ -1,6 +1,5 @@
 ---
 title: CIS 扫描
-weight: 17
 ---
 
 Rancher 可以通过运行安全扫描来检查 Kubernetes 是否按照 CIS Kubernetes Benchmark 中定义的安全最佳实践进行部署。CIS 扫描可以运行在任何 Kubernetes 集群，包括托管的 Kubernetes，例如 EKS、AKS 和 GKE。

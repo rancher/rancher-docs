@@ -1,7 +1,5 @@
 ---
 title: 路由配置
-shortTitle: 路由
-weight: 5
 ---
 
 import Tabs from '@theme/Tabs';

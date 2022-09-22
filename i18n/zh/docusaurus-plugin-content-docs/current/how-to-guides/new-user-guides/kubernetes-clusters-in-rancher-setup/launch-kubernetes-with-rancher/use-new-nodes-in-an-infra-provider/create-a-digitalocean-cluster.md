@@ -1,7 +1,5 @@
 ---
 title: 创建 DigitalOcean 集群
-shortTitle: DigitalOcean
-weight: 2215
 ---
 
 import Tabs from '@theme/Tabs';

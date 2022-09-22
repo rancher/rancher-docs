@@ -1,6 +1,5 @@
 ---
 title: 配置 Azure AD
-weight: 1115
 ---
 
 import Tabs from '@theme/Tabs';

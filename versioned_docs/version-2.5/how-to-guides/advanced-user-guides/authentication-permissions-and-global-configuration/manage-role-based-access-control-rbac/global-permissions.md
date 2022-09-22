@@ -1,8 +1,5 @@
 ---
 title: Global Permissions
-weight: 1126
-aliases:
-  - /rancher/v2.x/en/admin-settings/rbac/global-permissions/
 ---
 
 import Tabs from '@theme/Tabs';

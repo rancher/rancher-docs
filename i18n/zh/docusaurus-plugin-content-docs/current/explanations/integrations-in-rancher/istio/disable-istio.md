@@ -1,6 +1,5 @@
 ---
 title: 禁用 Istio
-weight: 4
 ---
 
 本文介绍如何在集群中卸载 Istio，以及如何在命名空间或工作负载中禁用 Istio。

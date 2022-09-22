@@ -1,6 +1,5 @@
 ---
 title: Troubleshooting etcd Nodes
-weight: 1
 ---
 
 This section contains commands and tips for troubleshooting nodes with the `etcd` role.

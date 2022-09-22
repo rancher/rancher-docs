@@ -1,7 +1,5 @@
 ---
 title: Creating an Aliyun ACK Cluster
-shortTitle: Alibaba Cloud Container Service for Kubernetes
-weight: 2120
 ---
 
 _Available as of v2.2.0_
@@ -45,13 +43,13 @@ You can use Rancher to create a cluster hosted in Alibaba Cloud Kubernetes (ACK)
 
 1. Review your options to confirm they're correct. Then click **Create**.
 
-**Result:** 
+**Result:**
 
 Your cluster is created and assigned a state of **Provisioning.** Rancher is standing up your cluster.
 
 You can access your cluster after its state is updated to **Active.**
 
-**Active** clusters are assigned two Projects: 
+**Active** clusters are assigned two Projects:
 
 - `Default`, containing the `default` namespace
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces

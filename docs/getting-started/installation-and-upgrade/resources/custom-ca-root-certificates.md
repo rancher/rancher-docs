@@ -1,6 +1,5 @@
 ---
 title: About Custom CA Root Certificates
-weight: 1
 ---
 
 If you're using Rancher in an internal production environment where you aren't exposing apps publicly, use a certificate from a private certificate authority (CA).

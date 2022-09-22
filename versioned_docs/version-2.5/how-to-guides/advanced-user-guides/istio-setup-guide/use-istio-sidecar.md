@@ -1,13 +1,8 @@
 ---
 title: 3. Add Deployments and Services with the Istio Sidecar
-weight: 4
-aliases:
-  - /rancher/v2.5/en/istio/setup/deploy-workloads
-  - /rancher/v2.5/en/istio/v2.5/setup/deploy-workloads
-  - /rancher/v2.x/en/istio/v2.5/setup/deploy-workloads/
 ---
 
-> **Prerequisite:** To enable Istio for a workload, the cluster and namespace must have the Istio app installed.  
+> **Prerequisite:** To enable Istio for a workload, the cluster and namespace must have the Istio app installed.
 
 Enabling Istio in a namespace only enables automatic sidecar injection for new workloads. To enable the Envoy sidecar for existing workloads, you need to enable it manually for each workload.
 
@@ -23,7 +18,7 @@ There are a few ways to add new **Deployments** in your namespace
 1. Click **Create.**
 1. Select **Deployment** from the various workload options.
 1. Fill out the form, or **Edit as Yaml.**
-1. Click **Create.** 
+1. Click **Create.**
 
 Alternatively, you can select the specific workload you want to deploy from the **Workload** section of the left navigation bar and create it from there.
 
@@ -33,12 +28,12 @@ To add a **Service** to your namespace
 1. Click **Create**
 1. Select the type of service you want to create from the various options
 1. Fill out the form, or **Edit as Yaml**
-1. Click **Create** 
+1. Click **Create**
 
 You can also create deployments and services using the kubectl **shell**
 
 1. Run `kubectl create -f <name of service/deployment file>.yaml` if your file is stored locally in the cluster
-1. Or run `cat<< EOF | kubectl apply -f -`, paste the file contents into the terminal, then run `EOF` to complete the command. 
+1. Or run `cat<< EOF | kubectl apply -f -`, paste the file contents into the terminal, then run `EOF` to complete the command.
 
 ### Example Deployments and Services
 

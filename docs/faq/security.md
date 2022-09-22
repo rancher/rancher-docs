@@ -1,6 +1,5 @@
 ---
 title: Security
-weight: 8007
 
 ---
 

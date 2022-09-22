@@ -1,6 +1,5 @@
 ---
 title: 集群配置
-weight: 2025
 ---
 
 使用 Rancher 配置 Kubernetes 集群后，你仍然可以编辑集群的选项和设置。

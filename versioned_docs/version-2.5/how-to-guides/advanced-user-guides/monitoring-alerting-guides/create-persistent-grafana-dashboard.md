@@ -1,9 +1,5 @@
 ---
 title: Persistent Grafana Dashboards
-weight: 6
-aliases:
-  - /rancher/v2.5/en/monitoring-alerting/persist-grafana
-  - /rancher/v2.x/en/monitoring-alerting/v2.5/persist-grafana/
 ---
 
 import Tabs from '@theme/Tabs';

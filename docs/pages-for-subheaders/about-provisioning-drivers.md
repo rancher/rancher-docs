@@ -1,6 +1,5 @@
 ---
 title: Provisioning Drivers
-weight: 70
 ---
 
 Drivers in Rancher allow you to manage which providers can be used to deploy [hosted Kubernetes clusters](set-up-clusters-from-hosted-kubernetes-providers.md) or [nodes in an infrastructure provider](use-new-nodes-in-an-infra-provider.md) to allow Rancher to deploy and manage Kubernetes.
@@ -14,7 +13,7 @@ There are two types of drivers within Rancher:
 * [Cluster Drivers](#cluster-drivers)
 * [Node Drivers](#node-drivers)
 
-### Cluster Drivers   
+### Cluster Drivers
 
 Cluster drivers are used to provision [hosted Kubernetes clusters](set-up-clusters-from-hosted-kubernetes-providers.md), such as GKE, EKS, AKS, etc.. The availability of which cluster driver to display when creating a cluster is defined based on the cluster driver's status. Only `active` cluster drivers will be displayed as an option for creating clusters for hosted Kubernetes clusters. By default, Rancher is packaged with several existing cluster drivers, but you can also create custom cluster drivers to add to Rancher.
 
@@ -43,6 +42,6 @@ Rancher supports several major cloud providers, but by default, these node drive
 *   [Digital Ocean](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-a-digitalocean-cluster.md)
 *   [vSphere](vsphere.md)
 
-There are several other node drivers that are disabled by default, but are packaged in Rancher: 
+There are several other node drivers that are disabled by default, but are packaged in Rancher:
 
 *   [Harvester](../explanations/integrations-in-rancher/harvester.md#harvester-node-driver/), available in Rancher v2.6.1

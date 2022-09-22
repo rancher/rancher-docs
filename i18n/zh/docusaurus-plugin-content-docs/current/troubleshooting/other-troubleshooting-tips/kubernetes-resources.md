@@ -1,6 +1,5 @@
 ---
 title: Kubernetes 资源
-weight: 101
 ---
 
 本文列出的命令/步骤可用于检查最重要的 Kubernetes 资源，并应用于 [Rancher 启动的 Kubernetes](../../pages-for-subheaders/launch-kubernetes-with-rancher.md) 集群。

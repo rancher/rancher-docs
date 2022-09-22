@@ -1,6 +1,5 @@
 ---
 title: 密文
-weight: 3062
 ---
 
 [密文（secret）](https://kubernetes.io/docs/concepts/configuration/secret/#overview-of-secrets)存储敏感数据，例如密码、令牌或密钥。它们可能包含一个或多个键值对。

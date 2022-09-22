@@ -1,6 +1,5 @@
 ---
 title: 架构
-weight: 1
 ---
 
 本章节重点介绍 [Rancher Server 及其组件](../reference-guides/rancher-manager-architecture/rancher-server-and-components.md) 以及 [Rancher 如何与下游 Kubernetes 集群通信](../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md)。

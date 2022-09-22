@@ -1,6 +1,5 @@
 ---
 title: User Preferences
-weight: 7012
 ---
 
 Each user can choose preferences to personalize their Rancher experience. To change preference settings, open the **User Settings** menu and then select **Preferences**.

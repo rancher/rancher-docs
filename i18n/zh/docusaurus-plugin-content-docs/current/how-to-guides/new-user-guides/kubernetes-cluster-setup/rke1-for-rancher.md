@@ -1,7 +1,5 @@
 ---
 title: 配置高可用的 RKE Kubernetes 集群
-shortTitle: 配置 RKE Kubernetes
-weight: 3
 ---
 
 

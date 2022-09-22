@@ -1,6 +1,5 @@
 ---
 title: Restoring a Cluster from Backup
-weight: 2050
 ---
 
 import Tabs from '@theme/Tabs';

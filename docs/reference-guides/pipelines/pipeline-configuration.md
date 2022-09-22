@@ -1,6 +1,5 @@
 ---
 title: Pipeline Configuration Reference
-weight: 1
 ---
 
 In this section, you'll learn how to configure pipelines.

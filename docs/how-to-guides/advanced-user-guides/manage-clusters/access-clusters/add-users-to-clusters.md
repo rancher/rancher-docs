@@ -1,6 +1,5 @@
 ---
 title: Adding Users to Clusters
-weight: 2020
 ---
 
 If you want to provide a user with access and permissions to _all_ projects, nodes, and resources within a cluster, assign the user a cluster membership.

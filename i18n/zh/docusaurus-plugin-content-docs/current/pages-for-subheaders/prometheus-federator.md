@@ -1,6 +1,5 @@
 ---
 title: Prometheus Federator
-weight: 7
 ---
 
 Prometheus Federator（也称为 Project Monitoring V2）基于 [rancher/helm-project-operator](https://github.com/rancher/helm-project-operator) 部署一个 Helm Project Operator。该 Operator 管理 Helm Chart 的部署，每个 Operator 都包含一个 Project Monitoring Stack，而每个堆栈都包含：

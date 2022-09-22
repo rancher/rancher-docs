@@ -1,6 +1,5 @@
 ---
 title: 安装 Project Monitor
-weight: 5
 ---
 
 在要启用项目监控的各个项目中安装 **Project Monitor**。

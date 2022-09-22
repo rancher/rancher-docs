@@ -1,9 +1,5 @@
 ---
 title: Creating a GKE Cluster
-shortTitle: Google Kubernetes Engine
-weight: 2105
-aliases:
-  - /rancher/v2.0-v2.4/en/tasks/clusters/creating-a-cluster/create-cluster-gke/
 ---
 
 ## Prerequisites in Google Kubernetes Engine
@@ -17,7 +13,7 @@ The service account requires the following roles:
 
 - **Compute Viewer:** `roles/compute.viewer`
 - **Project Viewer:** `roles/viewer`
-- **Kubernetes Engine Admin:** `roles/container.admin` 
+- **Kubernetes Engine Admin:** `roles/container.admin`
 - **Service Account User:** `roles/iam.serviceAccountUser`
 
 [Google Documentation: Creating and Enabling Service Accounts](https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances)
@@ -44,13 +40,13 @@ Use Rancher to set up and configure your Kubernetes cluster.
 8. Select your **Security Options**
 9. Review your options to confirm they're correct. Then click **Create**.
 
-**Result:** 
+**Result:**
 
 Your cluster is created and assigned a state of **Provisioning.** Rancher is standing up your cluster.
 
 You can access your cluster after its state is updated to **Active.**
 
-**Active** clusters are assigned two Projects: 
+**Active** clusters are assigned two Projects:
 
 - `Default`, containing the `default` namespace
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces

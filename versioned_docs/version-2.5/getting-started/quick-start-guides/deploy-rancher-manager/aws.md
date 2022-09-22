@@ -1,7 +1,6 @@
 ---
 title: Rancher AWS Quick Start Guide
 description: Read this step by step Rancher AWS guide to quickly deploy a Rancher server with a single-node downstream Kubernetes cluster attached.
-weight: 100
 ---
 The following steps will quickly deploy a Rancher server on AWS in a single-node K3s Kubernetes cluster, with a single-node downstream Kubernetes cluster attached.
 

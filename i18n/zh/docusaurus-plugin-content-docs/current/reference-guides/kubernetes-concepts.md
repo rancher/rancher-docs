@@ -1,6 +1,5 @@
 ---
 title: Kubernetes 概念
-weight: 4
 ---
 
 本文解释了 Kubernetes 的相关概念，以便让你更好地了解 Rancher 的运行机制。本文仅对 Kubernetes 组件进行了简单的描述。如需了解更多详情，请参见 [Kubernetes 组件的官方文档](https://kubernetes.io/docs/concepts/overview/components/)。

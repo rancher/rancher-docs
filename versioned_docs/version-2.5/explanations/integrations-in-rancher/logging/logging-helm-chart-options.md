@@ -1,7 +1,5 @@
 ---
 title: rancher-logging Helm Chart Options
-shortTitle: Helm Chart Options
-weight: 4
 ---
 
 

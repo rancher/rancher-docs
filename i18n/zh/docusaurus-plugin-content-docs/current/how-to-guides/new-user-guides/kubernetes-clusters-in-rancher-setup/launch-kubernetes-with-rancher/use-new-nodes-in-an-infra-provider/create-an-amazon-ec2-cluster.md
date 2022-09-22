@@ -1,8 +1,6 @@
 ---
 title: 创建 Amazon EC2 集群
-shortTitle: Amazon EC2
 description: 了解使用 Rancher 创建 Amazon EC2 集群所需的先决条件和步骤
-weight: 2210
 ---
 
 import Tabs from '@theme/Tabs';

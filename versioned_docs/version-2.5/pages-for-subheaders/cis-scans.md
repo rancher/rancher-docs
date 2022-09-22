@@ -1,10 +1,5 @@
 ---
 title: CIS Scans
-weight: 17
-aliases:
-  - /rancher/v2.5/en/cis-scans/v2.5
-  - /rancher/v2.x/en/cis-scans/
-  - /rancher/v2.x/en/cis-scans/v2.5/
 ---
 
 import Tabs from '@theme/Tabs';

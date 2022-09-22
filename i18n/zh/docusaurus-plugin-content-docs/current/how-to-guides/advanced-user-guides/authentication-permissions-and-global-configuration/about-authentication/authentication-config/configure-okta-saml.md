@@ -1,6 +1,5 @@
 ---
 title: 配置 Okta (SAML)
-weight: 1210
 ---
 
 如果你的组织使用 Okta Identity Provider (IdP) 进行用户身份验证，你可以通过配置 Rancher 来允许用户使用 IdP 凭证登录。

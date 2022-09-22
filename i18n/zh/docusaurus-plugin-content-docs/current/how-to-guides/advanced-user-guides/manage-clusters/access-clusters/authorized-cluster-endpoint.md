@@ -1,6 +1,5 @@
 ---
 title: 授权集群端点的工作原理
-weight: 2015
 ---
 
 本文介绍 kubectl CLI、kubeconfig 文件和授权集群端点如何协同工作，使你可以直接访问下游 Kubernetes 集群，而无需通过 Rancher Server 进行身份验证。本文旨在为[设置 kubectl 以直接访问集群的说明](use-kubectl-and-kubeconfig.md#直接使用下游集群进行身份验证)提供背景信息和上下文。

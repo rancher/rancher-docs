@@ -1,11 +1,10 @@
 ---
 title: Group Permissions with Shibboleth and OpenLDAP
-weight: 1
 ---
 
 _Available as of Rancher v2.4_
 
-This page provides background information and context for Rancher users who intend to set up the Shibboleth authentication provider in Rancher. 
+This page provides background information and context for Rancher users who intend to set up the Shibboleth authentication provider in Rancher.
 
 Because Shibboleth is a SAML provider, it does not support searching for groups. While a Shibboleth integration can validate user credentials, it can't be used to assign permissions to groups in Rancher without additional configuration.
 
@@ -31,4 +30,3 @@ When a member of the OpenLDAP group logs in to Rancher, she is redirected to Shi
 Shibboleth validates her credentials, and retrieves user attributes from OpenLDAP, including groups. Then Shibboleth sends a SAML assertion to Rancher including the user attributes. Rancher uses the group data so that she can access all of the resources and permissions that her groups have permissions for.
 
 ![Adding OpenLDAP Group Permissions to Rancher Resources](/img/shibboleth-with-openldap-groups.svg)
- 

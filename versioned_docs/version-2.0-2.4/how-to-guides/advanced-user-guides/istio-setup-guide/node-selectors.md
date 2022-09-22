@@ -1,11 +1,5 @@
 ---
 title: 3. Select the Nodes Where Istio Components Will be Deployed
-weight: 3
-aliases:
-  - /rancher/v2.0-v2.4/en/cluster-admin/tools/istio/setup/node-selectors
-  - /rancher/v2.0-v2.4/en/istio/legacy/setup/node-selectors
-  - /rancher/v2.0-v2.4/en/istio/v2.3.x-v2.4.x/setup/node-selectors
-  - /rancher/v2.x/en/istio/v2.3.x-v2.4.x/setup/node-selectors/
 ---
 
 > **Prerequisite:** Your cluster needs a worker node that can designated for Istio. The worker node should meet the [resource requirements.](../../../explanations/integrations-in-rancher/istio/cpu-and-memory-allocations.md)

@@ -1,7 +1,5 @@
 ---
 title: Installing Rancher on Amazon EKS
-shortTitle: Amazon EKS
-weight: 3
 ---
 
 This page covers two ways to install Rancher on EKS.

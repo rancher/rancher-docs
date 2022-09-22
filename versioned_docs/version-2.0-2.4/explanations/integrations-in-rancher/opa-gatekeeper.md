@@ -1,11 +1,7 @@
 ---
 title: OPA Gatekeeper
-weight: 17
-aliases:
- - /rancher/v2.0-v2.4/en/cluster-admin/tools/opa-gatekeeper
- - /rancher/v2.0-v2.4/en/opa-gatekeper/Open%20Policy%20Agent
- - /rancher/v2.0-v2.4/en/opa-gatekeper
 ---
+
 _Available as of v2.4.0_
 
 To ensure consistency and compliance, every organization needs the ability to define and enforce policies in its environment in an automated way. [OPA (Open Policy Agent)](https://www.openpolicyagent.org/) is a policy engine that facilitates policy-based control for cloud native environments. Rancher provides the ability to enable OPA Gatekeeper in Kubernetes clusters, and also installs a couple of built-in policy definitions, which are also called constraint templates.

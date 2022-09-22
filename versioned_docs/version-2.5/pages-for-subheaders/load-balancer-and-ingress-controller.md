@@ -1,10 +1,6 @@
 ---
 title: Set Up Load Balancer and Ingress Controller within Rancher
 description: Learn how you can set up load balancers and ingress controllers to redirect service requests within Rancher, and learn about the limitations of load balancers
-weight: 3040
-aliases:
-  - /rancher/v2.5/en/k8s-in-rancher/load-balancers-and-ingress
-  - /rancher/v2.x/en/k8s-in-rancher/load-balancers-and-ingress/
 ---
 
 Within Rancher, you can set up load balancers and ingress controllers to redirect service requests.
@@ -43,7 +39,7 @@ As mentioned in the limitations above, the disadvantages of using a load balance
 - If you run multiple services in your cluster, you must have a load balancer for each service.
 - It can be expensive to have a load balancer for every service.
 
-In contrast, when an ingress is used as the entrypoint into a cluster, the ingress can route traffic to multiple services with greater flexibility. It can map multiple HTTP requests to services without individual IP addresses for each service. 
+In contrast, when an ingress is used as the entrypoint into a cluster, the ingress can route traffic to multiple services with greater flexibility. It can map multiple HTTP requests to services without individual IP addresses for each service.
 
 Therefore, it is useful to have an ingress if you want multiple services to be exposed with the same IP address, the same Layer 7 protocol, or the same privileged node-ports: 80 and 443.
 

@@ -1,6 +1,5 @@
 ---
 title: 为流水线组件配置持久数据
-weight: 600
 ---
 
 import Tabs from '@theme/Tabs';

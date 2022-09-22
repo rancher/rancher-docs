@@ -1,6 +1,5 @@
 ---
 title: 2. 在 Rancher 中配置 Microsoft AD FS
-weight: 1205
 ---
 
 完成[在 Microsoft AD FS 中配置 Rancher](configure-ms-adfs-for-rancher.md) 后，将你的 AD FS 信息输入 Rancher，来允许 Rancher 通过 AD FS 进行身份验证。

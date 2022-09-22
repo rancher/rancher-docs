@@ -1,6 +1,5 @@
 ---
 title: Nutanix 节点模板配置
-weight: 2
 ---
 
 

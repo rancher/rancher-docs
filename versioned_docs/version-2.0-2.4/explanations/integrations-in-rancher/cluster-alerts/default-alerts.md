@@ -1,10 +1,5 @@
 ---
 title: Default Alerts for Cluster Monitoring
-weight: 1
-aliases:
-  - /rancher/v2.0-v2.4/en/cluster-admin/tools/alerts/default-alerts
-  - /rancher/v2.0-v2.4/en/monitoring-alerting/legacy/alerts/cluster-alerts/default-alerts
-  - /rancher/v2.0-v2.4/en/monitoring-alerting/v2.0.x-v2.4.x/cluster-alerts/default-alerts
 ---
 
 When you create a cluster, some alert rules are predefined. These alerts notify you about signs that the cluster could be unhealthy. You can receive these alerts if you configure a [notifier](../notifiers.md) for them.

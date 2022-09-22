@@ -1,6 +1,5 @@
 ---
-title: Restoring a Cluster from Backup 
-weight: 2050
+title: Restoring a Cluster from Backup
 ---
 
 etcd backup and recovery for [Rancher launched Kubernetes clusters](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) can be easily performed. Snapshots of the etcd database are taken and saved either locally onto the etcd nodes or to a S3 compatible target. The advantages of configuring S3 is that if all etcd nodes are lost, your snapshot is saved remotely and can be used to restore the cluster.
@@ -37,7 +36,7 @@ To restore snapshots from S3, the cluster needs to be configured to [take recurr
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. In the **Clusters** page, go to the cluster where you want to view the snapshots and click the name of the cluster.
-1. Click the **Snapshots** tab to view the list of saved snapshots. 
+1. Click the **Snapshots** tab to view the list of saved snapshots.
 1. Go to the snapshot you want to restore and click **⋮ > Restore Snapshot**.
 1. Click **Restore**.
 
@@ -71,7 +70,7 @@ If the group of etcd nodes loses quorum, the Kubernetes cluster will report a fa
 
 5. Run the revised command.
 
-6. After the single nodes is up and running, Rancher recommends adding additional etcd nodes to your cluster. If you have a [custom cluster](../../../pages-for-subheaders/use-existing-nodes.md) and you want to reuse an old node, you are required to [clean up the nodes](../../advanced-user-guides/manage-clusters/clean-cluster-nodes.md) before attempting to add them back into a cluster.  
+6. After the single nodes is up and running, Rancher recommends adding additional etcd nodes to your cluster. If you have a [custom cluster](../../../pages-for-subheaders/use-existing-nodes.md) and you want to reuse an old node, you are required to [clean up the nodes](../../advanced-user-guides/manage-clusters/clean-cluster-nodes.md) before attempting to add them back into a cluster.
 
 # Enabling Snapshot Features for Clusters Created Before Rancher v2.2.0
 

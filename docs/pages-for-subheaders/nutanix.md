@@ -1,9 +1,6 @@
 ---
 title: Creating a Nutanix AOS Cluster
-shortTitle: Nutanix
 description: Use Rancher to create a Nutanix AOS (AHV) cluster. It may consist of groups of VMs with distinct properties which allow for fine-grained control over the sizing of nodes.
-metaDescription: Use Rancher to create a Nutanix AOS (AHV) cluster. It may consist of groups of VMs with distinct properties which allow for fine-grained control over the sizing of nodes.
-weight: 2225
 ---
 
 [Nutanix Acropolis Operating System](https://www.nutanix.com/products/acropolis) (Nutanix AOS) is an operating system for the Nutanix hyper-converged infrastructure platform. AOS comes with a built-in hypervisor called [Acropolis Hypervisor](https://www.nutanix.com/products/ahv), or AHV. By using Rancher with Nutanix AOS (AHV), you can bring cloud operations on-premises.

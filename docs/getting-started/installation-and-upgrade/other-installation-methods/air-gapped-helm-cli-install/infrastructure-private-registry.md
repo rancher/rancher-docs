@@ -1,6 +1,5 @@
 ---
 title: '1. Set up Infrastructure and Private Registry'
-weight: 100
 ---
 
 import Tabs from '@theme/Tabs';

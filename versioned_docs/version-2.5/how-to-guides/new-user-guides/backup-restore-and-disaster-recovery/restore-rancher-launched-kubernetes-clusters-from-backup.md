@@ -1,8 +1,5 @@
 ---
 title: Restoring a Cluster from Backup
-weight: 2050
-aliases:
-  - /rancher/v2.x/en/cluster-admin/restoring-etcd/
 ---
 
 etcd backup and recovery for [Rancher launched Kubernetes clusters](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) can be easily performed. Snapshots of the etcd database are taken and saved either locally onto the etcd nodes or to a S3 compatible target. The advantages of configuring S3 is that if all etcd nodes are lost, your snapshot is saved remotely and can be used to restore the cluster.

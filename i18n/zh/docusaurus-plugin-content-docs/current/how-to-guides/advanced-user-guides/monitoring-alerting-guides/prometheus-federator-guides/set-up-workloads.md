@@ -1,6 +1,5 @@
 ---
 title: 为工作负载设置 Prometheus Federator
-weight: 4
 ---
 
 

@@ -1,7 +1,5 @@
 ---
 title: 在离线环境中渲染 Helm 模板
-shortTitle: 离线升级
-weight: 1
 ---
 
 :::note

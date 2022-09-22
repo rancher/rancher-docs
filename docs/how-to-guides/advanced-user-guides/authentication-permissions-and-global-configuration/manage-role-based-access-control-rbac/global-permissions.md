@@ -1,6 +1,5 @@
 ---
 title: Global Permissions
-weight: 1126
 ---
 
 _Permissions_ are individual access rights that you can assign when selecting a custom permission for a user.
@@ -35,8 +34,8 @@ CATTLE_RESTRICTED_DEFAULT_ADMIN=true
 The following table lists the permissions and actions that a `restricted-admin` should have in comparison with the `Administrator` and `Standard User` roles:
 
 | Category | Action | Global Admin | Standard User | Restricted Admin | Notes for Restricted Admin role |
-| -------- | ------ | ------------ | ------------- | ---------------- | ------------------------------- | 
-| Local Cluster functions | Manage Local Cluster (List, Edit, Import Host) | Yes | No | No | | 
+| -------- | ------ | ------------ | ------------- | ---------------- | ------------------------------- |
+| Local Cluster functions | Manage Local Cluster (List, Edit, Import Host) | Yes | No | No | |
 | | Create Projects/namespaces | Yes | No | No | |
 | | Add cluster/project members | Yes | No | No | |
 | | Deploy MulticlusterApp in local cluster | Yes | No | No | |
@@ -111,7 +110,7 @@ You can [change the default global permissions to meet your needs.](#configuring
 
 When a user logs into Rancher using an external authentication provider for the first time, they are automatically assigned the  **New User Default** global permissions. By default, Rancher assigns the **Standard User** permission for new users.
 
-To see the default permissions for new users, 
+To see the default permissions for new users,
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
 1. In the left navigation bar, click **Roles**.
@@ -214,7 +213,7 @@ For new users, the new permissions take effect when the users log in to Rancher 
 
 If a user is removed from the external authentication provider group, they would lose their permissions from the custom global role that was assigned to the group. They would continue to have any remaining roles that were assigned to them, which would typically include the roles marked as **New User Default**. Rancher will remove the permissions that are associated with the group when the user logs out, or when an administrator [refreshes group memberships,](#refreshing-group-memberships) whichever comes first.
 
-:::note Prerequisites: 
+:::note Prerequisites:
 
 You can only assign a global role to a group if:
 

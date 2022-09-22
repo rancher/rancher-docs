@@ -1,13 +1,10 @@
 ---
 title: Configuring OpenLDAP
-weight: 1113
-aliases:
-    - /rancher/v2.0-v2.4/en/tasks/global-configuration/authentication/openldap/
 ---
 
 _Available as of v2.0.5_
 
-If your organization uses LDAP for user authentication, you can configure Rancher to communicate with an OpenLDAP server to authenticate users. This allows Rancher admins to control access to clusters and projects based on users and groups managed externally in the organisation's central user repository, while allowing end-users to authenticate with their LDAP credentials when logging in to the Rancher UI. 
+If your organization uses LDAP for user authentication, you can configure Rancher to communicate with an OpenLDAP server to authenticate users. This allows Rancher admins to control access to clusters and projects based on users and groups managed externally in the organisation's central user repository, while allowing end-users to authenticate with their LDAP credentials when logging in to the Rancher UI.
 
 ## Prerequisites
 

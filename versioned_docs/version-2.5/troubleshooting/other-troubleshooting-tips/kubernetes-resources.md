@@ -1,8 +1,5 @@
 ---
 title: Kubernetes resources
-weight: 101
-aliases:
-  - /rancher/v2.x/en/troubleshooting/kubernetes-resources/
 ---
 
 The commands/steps listed on this page can be used to check the most important Kubernetes resources and apply to [Rancher Launched Kubernetes](../../pages-for-subheaders/launch-kubernetes-with-rancher.md) clusters.
@@ -24,7 +21,7 @@ Run the command below and check the following:
 
 ```
 kubectl get nodes -o wide
-``` 
+```
 
 Example output:
 

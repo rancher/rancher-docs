@@ -1,7 +1,5 @@
 ---
 title: 配置树外 vSphere 云提供商
-shortTitle: 树外云提供商
-weight: 10
 ---
 
 Kubernetes 正在逐渐不在树内维护云提供商。vSphere 有一个树外云提供商，可通过安装 vSphere 云提供商和云存储插件来使用。

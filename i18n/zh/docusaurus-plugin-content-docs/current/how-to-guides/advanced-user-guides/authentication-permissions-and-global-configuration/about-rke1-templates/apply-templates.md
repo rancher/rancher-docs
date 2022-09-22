@@ -1,6 +1,5 @@
 ---
 title: 应用模板
-weight: 50
 ---
 
 你可以使用你自己创建的 RKE 模板来创建集群，也可以使用[与你共享的模板](access-or-share-templates.md)来创建集群。

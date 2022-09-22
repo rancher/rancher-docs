@@ -1,13 +1,10 @@
 ---
 title: Azure Node Template Configuration
-weight: 1
-aliases:
-  - /rancher/v2.x/en/cluster-provisioning/rke-clusters/node-pools/azure/azure-node-template-config/
 ---
 
 For more information about Azure, refer to the official [Azure documentation.](https://docs.microsoft.com/en-us/azure/?product=featured)
 
-Account access information is stored as a cloud credential. Cloud credentials are stored as Kubernetes secrets. Multiple node templates can use the same cloud credential. You can use an existing cloud credential or create a new one. 
+Account access information is stored as a cloud credential. Cloud credentials are stored as Kubernetes secrets. Multiple node templates can use the same cloud credential. You can use an existing cloud credential or create a new one.
 
 - **Placement** sets the geographical region where your cluster is hosted and other location metadata.
 - **Network** configures the networking used in your cluster.

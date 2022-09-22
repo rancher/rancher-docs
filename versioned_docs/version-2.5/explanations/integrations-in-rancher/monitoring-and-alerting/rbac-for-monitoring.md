@@ -1,13 +1,7 @@
 ---
 title: Role-based Access Control
-shortTitle: RBAC
-weight: 2
-aliases:
-  - /rancher/v2.5/en/cluster-admin/tools/monitoring/rbac
-  - /rancher/v2.5/en/monitoring-alerting/rbac
-  - /rancher/v2.5/en/monitoring-alerting/grafana
-  - /rancher/v2.x/en/monitoring-alerting/v2.5/rbac/
 ---
+
 This section describes the expectations for RBAC for Rancher Monitoring.
 
 ## Cluster Admins
@@ -81,10 +75,10 @@ Monitoring also creates additional `ClusterRoles` that are not assigned to users
 
 ### Assigning Roles and ClusterRoles with kubectl
 
-An alternative method to using Rancher to attach a `Role` or `ClusterRole` to a user or group is by defining bindings in YAML files that you create. You must first configure the `RoleBinding` with the YAML file, then you apply the config changes by running the `kubectl apply` command. 
+An alternative method to using Rancher to attach a `Role` or `ClusterRole` to a user or group is by defining bindings in YAML files that you create. You must first configure the `RoleBinding` with the YAML file, then you apply the config changes by running the `kubectl apply` command.
 
 
-* **Roles**: Below is an example of a YAML file to help you configure `RoleBindings` in Kubernetes to attach to a user. You will need to fill in the name below, and name is case-sensitive. 
+* **Roles**: Below is an example of a YAML file to help you configure `RoleBindings` in Kubernetes to attach to a user. You will need to fill in the name below, and name is case-sensitive.
 
 ```yaml
 # monitoring-config-view-role-binding.yaml

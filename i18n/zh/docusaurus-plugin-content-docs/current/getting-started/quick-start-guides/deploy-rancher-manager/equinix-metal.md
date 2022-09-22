@@ -1,6 +1,5 @@
 ---
 title: Rancher Equinix Metal 快速入门
-weight: 250
 ---
 
 ## 本章节引导你：

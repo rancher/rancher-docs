@@ -1,11 +1,10 @@
 ---
 title: Configuration
-weight: 5
 ---
 
 This page captures some of the most important options for configuring Monitoring V2 in the Rancher UI.
 
-For information on configuring custom scrape targets and rules for Prometheus, please refer to the upstream documentation for the [Prometheus Operator.](https://github.com/prometheus-operator/prometheus-operator) Some of the most important custom resources are explained in the Prometheus Operator [design documentation.](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/design.md) The Prometheus Operator documentation can help also you set up RBAC, Thanos, or custom configuration. 
+For information on configuring custom scrape targets and rules for Prometheus, please refer to the upstream documentation for the [Prometheus Operator.](https://github.com/prometheus-operator/prometheus-operator) Some of the most important custom resources are explained in the Prometheus Operator [design documentation.](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/design.md) The Prometheus Operator documentation can help also you set up RBAC, Thanos, or custom configuration.
 
 # Setting Resource Limits and Requests
 
@@ -13,7 +12,7 @@ The resource requests and limits for the monitoring application can be configure
 
 :::note
 
-On an idle cluster, Monitoring V2 has significantly higher CPU usage (up to 70%) as compared to Monitoring V1. To improve performance and achieve similar results as in Monitoring V1, turn off the Prometheus adapter. 
+On an idle cluster, Monitoring V2 has significantly higher CPU usage (up to 70%) as compared to Monitoring V1. To improve performance and achieve similar results as in Monitoring V1, turn off the Prometheus adapter.
 
 :::
 

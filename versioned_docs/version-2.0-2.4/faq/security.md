@@ -1,7 +1,5 @@
 ---
 title: Security
-weight: 8007
-
 ---
 
 **Is there a Hardening Guide?**

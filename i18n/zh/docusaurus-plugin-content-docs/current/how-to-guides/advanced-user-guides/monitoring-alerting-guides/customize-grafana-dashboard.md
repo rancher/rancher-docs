@@ -1,6 +1,5 @@
 ---
 title: 自定义 Grafana 仪表板
-weight: 5
 ---
 
 在本文中，你将学习通过自定义 Grafana 仪表板来显示特定容器的指标。

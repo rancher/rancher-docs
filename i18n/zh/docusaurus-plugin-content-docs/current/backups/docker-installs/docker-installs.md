@@ -1,7 +1,5 @@
 ---
 title: 备份和恢复 Docker 安装的 Rancher
-shortTitle: Docker 安装
-weight: 10
 ---
 
 - [备份](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-docker-installed-rancher.md)

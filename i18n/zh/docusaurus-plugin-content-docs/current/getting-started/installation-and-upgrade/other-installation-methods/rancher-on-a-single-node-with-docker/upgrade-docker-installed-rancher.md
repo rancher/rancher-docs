@@ -1,6 +1,5 @@
 ---
 title: 升级 Docker 安装的 Rancher
-weight: 1010
 ---
 
 import Tabs from '@theme/Tabs';

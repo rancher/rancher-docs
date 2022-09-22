@@ -1,7 +1,5 @@
 ---
 title: 为 Rancher 设置高可用的 RKE2 Kubernetes 集群
-shortTitle: 为 Rancher 配置 RKE2
-weight: 2
 ---
 _已在 2.5.6 版本测试_
 

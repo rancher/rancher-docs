@@ -1,6 +1,5 @@
 ---
 title: Using Fleet Behind a Proxy
-weight: 3
 ---
 
 In this section, you'll learn how to enable Fleet in a setup that has a Rancher server with a public IP a Kubernetes cluster that has no public IP, but is configured to use a proxy.

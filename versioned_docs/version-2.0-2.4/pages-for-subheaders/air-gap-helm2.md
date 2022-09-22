@@ -1,12 +1,5 @@
 ---
 title: Installing Rancher in an Air Gapped Environment with Helm 2
-weight: 2
-aliases:
-  - /rancher/v2.0-v2.4/en/installation/air-gap-installation/
-  - /rancher/v2.0-v2.4/en/installation/air-gap-high-availability/
-  - /rancher/v2.0-v2.4/en/installation/air-gap-single-node/
-  - /rancher/v2.0-v2.4/en/installation/options/air-gap-helm2
-  - /rancher/v2.x/en/installation/resources/advanced/air-gap-helm2/
 ---
 
 > After Helm 3 was released, the Rancher installation instructions were updated to use Helm 3.

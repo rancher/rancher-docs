@@ -1,6 +1,5 @@
 ---
 title: 设置 Cloud Provider
-weight: 2300
 ---
 _cloud provider_ 是 Kubernetes 中的一个模块，它提供了一个用于管理节点、负载均衡器和网络路由的接口。
 

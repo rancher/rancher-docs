@@ -1,7 +1,5 @@
 ---
 title: 在 Azure Kubernetes Service 上安装 Rancher
-shortTitle: AKS
-weight: 3
 ---
 
 本文介绍了如何在微软的 Azure Kubernetes Service (AKS) 上安装 Rancher。

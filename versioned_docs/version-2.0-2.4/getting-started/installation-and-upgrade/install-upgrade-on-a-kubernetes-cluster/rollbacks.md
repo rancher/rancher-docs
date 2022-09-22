@@ -1,13 +1,5 @@
 ---
 title: Rollbacks
-weight: 3
-aliases:
-  - /rancher/v2.0-v2.4/en/upgrades/rollbacks
-  - /rancher/v2.0-v2.4/en/installation/upgrades-rollbacks/rollbacks
-  - /rancher/v2.0-v2.4/en/upgrades/ha-server-rollbacks
-  - /rancher/v2.0-v2.4/en/upgrades/rollbacks/ha-server-rollbacks
-  - /rancher/v2.0-v2.4/en/installation/upgrades-rollbacks/rollbacks/ha-server-rollbacks
-  - /rancher/v2.0-v2.4/en/installation/install-rancher-on-k8s/upgrades-rollbacks/rollbacks
 ---
 
 ### Rolling Back to Rancher v2.2-v2.4

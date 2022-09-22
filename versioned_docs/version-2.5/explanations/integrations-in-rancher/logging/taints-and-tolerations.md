@@ -1,6 +1,5 @@
 ---
 title: Working with Taints and Tolerations
-weight: 6
 ---
 
 import Tabs from '@theme/Tabs';

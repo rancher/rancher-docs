@@ -1,6 +1,5 @@
 ---
 title: Uninstall Monitoring
-weight: 2
 ---
 
 1.  Click **☰ > Cluster Management**.

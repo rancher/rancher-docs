@@ -1,7 +1,6 @@
 ---
 title:  Rancher CI/CD 流水线
 description: 使用 Rancher 的 CI/CD 流水线自动检出代码、运行构建或脚本、发布 Docker 镜像以及向用户部署软件
-weight: 4000
 ---
 你可以使用 Rancher 与 GitHub 仓库集成，从而设置持续集成（CI）流水线。
 

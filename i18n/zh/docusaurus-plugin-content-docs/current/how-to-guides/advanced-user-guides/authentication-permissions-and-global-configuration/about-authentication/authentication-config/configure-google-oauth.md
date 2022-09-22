@@ -1,6 +1,5 @@
 ---
 title: 配置 Google OAuth
-weight: 10
 ---
 
 如果你的组织使用 G Suite 进行用户身份验证，你可以通过配置 Rancher 来允许你的用户使用 G Suite 凭证登录。

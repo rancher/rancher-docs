@@ -1,12 +1,5 @@
 ---
 title: Prometheus Expressions
-weight: 4
-aliases:
-  - /rancher/v2.0-v2.4/en/project-admin/tools/monitoring/expression
-  - /rancher/v2.0-v2.4/en/cluster-admin/tools/monitoring/expression
-  - /rancher/v2.0-v2.4/en/monitoring-alerting/legacy/monitoring/cluster-monitoring/expression
-  - /rancher/v2.0-v2.4/en/monitoring-alerting/v2.0.x-v2.4.x/cluster-monitoring/expression
-  - /rancher/v2.x/en/monitoring-alerting/v2.0.x-v2.4.x/cluster-monitoring/expression/
 ---
 
 The PromQL expressions in this doc can be used to configure [alerts.](../../../pages-for-subheaders/cluster-alerts.md)

@@ -1,6 +1,5 @@
 ---
 title: Upgrading and Rolling Back Kubernetes
-weight: 70
 ---
 
 import Tabs from '@theme/Tabs';

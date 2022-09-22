@@ -1,7 +1,6 @@
 ---
 title: Installation Requirements
 description: Learn the node requirements for each node running Rancher server when you’re configuring  Rancher to run either in a Docker or Kubernetes setup
-weight: 1
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,7 +1,6 @@
 ---
 title: Install/Upgrade Rancher on a Kubernetes Cluster
 description: Learn how to install Rancher in development and production environments. Read about single node and high availability installation
-weight: 2
 ---
 
 import Tabs from '@theme/Tabs';

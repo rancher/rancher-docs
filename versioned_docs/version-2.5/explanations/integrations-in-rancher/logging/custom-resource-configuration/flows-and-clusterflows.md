@@ -1,6 +1,5 @@
 ---
 title: Flows and ClusterFlows
-weight: 1
 ---
 
 import Tabs from '@theme/Tabs';

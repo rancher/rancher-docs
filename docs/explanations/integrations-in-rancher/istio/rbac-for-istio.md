@@ -1,6 +1,5 @@
 ---
 title: Role-based Access Control
-weight: 3
 ---
 
 This section describes the permissions required to access Istio features.

@@ -1,6 +1,5 @@
 ---
 title: Opening Ports with firewalld
-weight: 1
 ---
 
 > We recommend disabling firewalld. For Kubernetes 1.19.x and higher, firewalld must be turned off.

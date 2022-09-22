@@ -1,6 +1,5 @@
 ---
 title: RKE1 示例 YAML
-weight: 60
 ---
 
 以下是一个供参考的 RKE 模板配置文件示例。

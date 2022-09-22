@@ -1,8 +1,5 @@
 ---
 title: Architecture
-weight: 1
-aliases:
-  - /rancher/v2.x/en/overview/architecture/
 ---
 
 This section focuses on the [Rancher server and its components](../reference-guides/rancher-manager-architecture/rancher-server-and-components.md) and how [Rancher communicates with downstream Kubernetes clusters](../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md).

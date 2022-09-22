@@ -1,14 +1,9 @@
 ---
 title: Kubernetes Registry and Docker Registry
 description: Learn about the Docker registry and Kubernetes registry, their use cases and how to use a private registry with the Rancher UI
-weight: 3063
-aliases:
-  - /rancher/v2.5/en/tasks/projects/add-registries/
-  - /rancher/v2.5/en/k8s-in-rancher/registries
-  - /rancher/v2.5/en/k8s-resources/k8s-in-rancher/registries  
-  - /rancher/v2.x/en/k8s-in-rancher/registries/
 ---
-Registries are Kubernetes secrets containing credentials used to authenticate with [private Docker registries](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/). 
+
+Registries are Kubernetes secrets containing credentials used to authenticate with [private Docker registries](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).
 
 The word "registry" can mean two things, depending on whether it is used to refer to a Docker or Kubernetes registry:
 
@@ -25,7 +20,7 @@ Currently, deployments pull the private registry credentials automatically only 
 
 1. From the **Global** view, select the project containing the namespace(s) where you want to add a registry.
 
-1. From the main menu, click **Resources > Secrets > Registry Credentials.** 
+1. From the main menu, click **Resources > Secrets > Registry Credentials.**
 
 1. Click **Add Registry.**
 
@@ -39,7 +34,7 @@ Currently, deployments pull the private registry credentials automatically only 
 
 1. Click **Save**.
 
-**Result:** 
+**Result:**
 
 - Your secret is added to the project or namespace, depending on the scope you chose.
 - You can view the secret in the Rancher UI from the **Resources > Registries** view.

@@ -1,6 +1,5 @@
 ---
 title: "Running on ARM64 (Experimental)"
-weight: 3
 ---
 
 :::caution

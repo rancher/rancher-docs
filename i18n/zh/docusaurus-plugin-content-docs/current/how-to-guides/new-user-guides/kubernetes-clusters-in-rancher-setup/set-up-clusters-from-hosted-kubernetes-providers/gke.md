@@ -1,7 +1,5 @@
 ---
 title: 管理 GKE 集群
-shortTitle: Google Kubernetes Engine
-weight: 2105
 ---
 
 

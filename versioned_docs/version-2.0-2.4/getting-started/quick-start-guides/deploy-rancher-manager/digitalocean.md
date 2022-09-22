@@ -1,7 +1,6 @@
 ---
 title: Rancher DigitalOcean Quick Start Guide
 description: Read this step by step Rancher DigitalOcean guide to quickly deploy a Rancher Server with a single node cluster attached.
-weight: 100
 ---
 The following steps will quickly deploy a Rancher Server on DigitalOcean with a single node cluster attached.
 

@@ -1,6 +1,5 @@
 ---
 title: EC2 Node Template Configuration
-weight: 1
 ---
 
 import Tabs from '@theme/Tabs';

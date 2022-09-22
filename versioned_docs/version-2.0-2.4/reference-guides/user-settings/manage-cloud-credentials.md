@@ -1,6 +1,5 @@
 ---
 title: Managing Cloud Credentials
-weight: 7011
 ---
 
 _Available as of v2.2.0_
@@ -31,7 +30,7 @@ All cloud credentials are bound to the user profile of who created it. They **ca
 
 ## Updating a Cloud Credential
 
-When access credentials are changed or compromised, updating a cloud credential allows you to rotate those credentials while keeping the same node template.  
+When access credentials are changed or compromised, updating a cloud credential allows you to rotate those credentials while keeping the same node template.
 
 1. From your user settings, select **User Avatar > Cloud Credentials**.
 1. Choose the cloud credential you want to edit and click the **&#8942; > Edit**.

@@ -1,6 +1,5 @@
 ---
 title: 选择 Rancher 版本
-weight: 1
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,6 +1,5 @@
 ---
 title: Registered Clusters
-weight: 105
 ---
 
 The commands/steps listed on this page can be used to check clusters that you are registering or that are registered in Rancher.
@@ -11,7 +10,7 @@ Make sure you configured the correct kubeconfig (for example, `export KUBECONFIG
 
 Communication to the cluster (Kubernetes API via cattle-cluster-agent) and communication to the nodes is done through Rancher agents.
 
-If the cattle-cluster-agent cannot connect to the configured `server-url`, the cluster will remain in **Pending** state, showing `Waiting for full cluster configuration`. 
+If the cattle-cluster-agent cannot connect to the configured `server-url`, the cluster will remain in **Pending** state, showing `Waiting for full cluster configuration`.
 
 #### cattle-node-agent
 

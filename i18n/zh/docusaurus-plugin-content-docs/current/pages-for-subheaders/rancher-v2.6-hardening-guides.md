@@ -1,13 +1,5 @@
 ---
 title: Rancher 2.6 的自我评估和强化指南
-shortTitle: Rancher 2.6 强化指南
-weight: 1
-aliases:
-  - /rancher/v2.6/en/security/rancher-2.5/
-  - /rancher/v2.6/en/security/rancher-2.5/1.5-hardening-2.5/
-  - /rancher/v2.6/en/security/rancher-2.5/1.5-benchmark-2.5/
-  - /rancher/v2.6/en/security/rancher-2.5/1.6-hardening-2.5/
-  - /rancher/v2.6/en/security/rancher-2.5/1.6-benchmark-2.5/
 ---
 
 Rancher 为每个受支持的 Rancher Kubernetes 发行版提供了对应的安全强化指南。

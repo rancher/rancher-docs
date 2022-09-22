@@ -1,7 +1,5 @@
 ---
 title: RKE 集群配置参考
-shortTitle: RKE 集群配置
-weight: 1
 ---
 
 Rancher 安装 Kubernetes 时，它使用 [RKE](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) 或 [RKE2](https://docs.rke2.io/) 作为 Kubernetes 发行版。

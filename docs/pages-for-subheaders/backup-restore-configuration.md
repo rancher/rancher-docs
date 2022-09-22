@@ -1,7 +1,5 @@
 ---
 title: Rancher Backup Configuration Reference
-shortTitle: Configuration
-weight: 4
 ---
 
 - [Backup configuration](../reference-guides/backup-restore-configuration/backup-configuration.md)

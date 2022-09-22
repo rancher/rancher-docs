@@ -1,6 +1,5 @@
 ---
 title: Using an External Ceph Driver
-weight: 10
 ---
 
 These instructions are about using the external Ceph driver in an RKE2 cluster. If you are using RKE, additional steps are required. For details, refer to [this section.](#using-the-ceph-driver-with-rke)
@@ -207,7 +206,7 @@ spec:
       fsType: ext4
       readOnly: false
 EOF
- 
+
 kubectl apply -f ceph-rbd-pod-inline.yaml
 kubectl get pod
 kubectl exec pod/ceph-rbd-pod-inline -- df -k | grep rbd
@@ -232,9 +231,9 @@ spec:
     - 10.85.8.118:6789
     - 10.85.8.123:6789
     - 10.85.8.124:6789
-    pool: myPool 
+    pool: myPool
     image: image
-    user: myPoolUser 
+    user: myPoolUser
     secretRef:
       name: ceph-user
     fsType: ext4
@@ -268,13 +267,13 @@ spec:
     persistentVolumeClaim:
       claimName: ceph-rbd-pvc
 EOF
- 
+
 kubectl apply -f ceph-rbd-pod-pvc-pv-allinone.yaml
 kubectl get pv,pvc,pod
 kubectl exec pod/ceph-rbd-pod-pvc-pv -- df -k | grep rbd
 ```
 
-### Using RBD in Storage Classes 
+### Using RBD in Storage Classes
 
 This example is for dynamic provisioning. The ceph-csi driver is needed.
 
@@ -314,7 +313,7 @@ spec:
     requests:
       storage: 2Gi
   storageClassName: ceph-rbd-sc
----    
+---
 apiVersion: v1
 kind: Pod
 metadata:
@@ -332,7 +331,7 @@ spec:
     persistentVolumeClaim:
       claimName: ceph-rbd-sc-pvc
 EOF
- 
+
 kubectl apply -f ceph-rbd-pod-pvc-sc-allinone.yaml
 kubectl get pv,pvc,sc,pod
 kubectl exec pod/ceph-rbd-pod-pvc-sc -- df -k | grep rbd

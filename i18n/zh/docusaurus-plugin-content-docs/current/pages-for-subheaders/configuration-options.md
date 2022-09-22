@@ -1,6 +1,5 @@
 ---
 title: 配置选项
-weight: 3
 ---
 
 ### Egress 支持

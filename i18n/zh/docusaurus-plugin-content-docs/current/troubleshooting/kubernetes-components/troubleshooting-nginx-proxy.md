@@ -1,6 +1,5 @@
 ---
 title: nginx-proxy 故障排除
-weight: 3
 ---
 
 每个没有 `controlplane` 角色的节点上都部署了 `nginx-proxy` 容器。`nginx-proxy` 基于具有 `controlplane` 角色的可用节点来动态生成 NGINX 配置，从而提供对这些 `controlplane` 角色节点的访问。

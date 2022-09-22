@@ -1,7 +1,6 @@
 ---
 title: 在 Rancher 中设置 Kubernetes 集群
 description: 配置 Kubernetes 集群
-weight: 7
 ---
 
 Rancher 允许你通过 Rancher UI 来创建集群，从而简化了集群的创建流程。Rancher 提供了多种启动集群的选项。你可以选择最适合你的用例的选项。

@@ -1,6 +1,5 @@
 ---
 title: Examples
-weight: 5
 ---
 
 This section contains examples of Backup and Restore custom resources.
@@ -260,7 +259,7 @@ data:
 
 The snippet below demonstrates two different types of secrets and their relevance with respect to Backup and Restore of custom resources.
 
-The first example is that of a secret that is used to encrypt the backup files. The backup operator, in this case, will not be able to read the secrets encryption file. It only uses the contents of the secret. 
+The first example is that of a secret that is used to encrypt the backup files. The backup operator, in this case, will not be able to read the secrets encryption file. It only uses the contents of the secret.
 
 The second example is that of a Kubernetes secrets encryption config file that is used to encrypt secrets when stored in etcd. **When backing up the etcd datastore, be sure to also back up the EncryptionConfiguration.** Failure to do so will result in an inability to use the restored data if secrets encryption was in use at the time the data was backed up.
 

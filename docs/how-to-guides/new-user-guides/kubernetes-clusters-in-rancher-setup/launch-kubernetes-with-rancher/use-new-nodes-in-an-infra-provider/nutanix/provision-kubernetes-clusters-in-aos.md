@@ -1,13 +1,12 @@
 ---
 title: Provisioning Kubernetes Clusters in Nutanix AOS
-weight: 1
 ---
 
 To use Rancher to install an [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes cluster in Nutanix AOS (AHV):
 
 1. Locate Rancher's built-in Nutanix [node driver and activate it](../../../../../advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#activating-deactivating-node-drivers).
 
-1. Create a node template, which Rancher will use to provision nodes in Nutanix AOS. 
+1. Create a node template, which Rancher will use to provision nodes in Nutanix AOS.
 
 1. Create a Nutanix AOS cluster in Rancher. When configuring the new cluster, you will define node pools for it. Each node pool will have a Kubernetes role of etcd, controlplane, or worker. Rancher will install RKE Kubernetes on the new nodes, and it will set up each node with the Kubernetes role defined by the node pool.
 
@@ -78,7 +77,7 @@ Use Rancher to create a Kubernetes cluster in Nutanix AOS.
 
 You can access your cluster after its state is updated to **Active**.
 
-**Active** clusters are assigned two Projects: 
+**Active** clusters are assigned two Projects:
 
 - `Default`, containing the `default` namespace
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces

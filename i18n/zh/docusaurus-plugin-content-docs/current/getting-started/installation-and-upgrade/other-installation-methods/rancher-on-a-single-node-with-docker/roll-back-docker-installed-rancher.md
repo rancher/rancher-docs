@@ -1,6 +1,5 @@
 ---
 title: 回滚 Docker 安装的 Rancher
-weight: 1015
 ---
 
 如果 Rancher 升级没有成功完成，你需要回滚到你在 [Docker 升级](upgrade-docker-installed-rancher.md)之前使用的 Rancher 设置。回滚可以恢复：

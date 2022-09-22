@@ -1,7 +1,5 @@
 ---
 title: 为 Rancher 设置高可用 K3s Kubernetes 集群
-shortTitle: 为 Rancher 配置 K3s
-weight: 2
 ---
 
 本文介绍了如何根据 [Rancher Server 环境的最佳实践](../../../reference-guides/rancher-manager-architecture/architecture-recommendations.md#kubernetes-安装环境)安装 Kubernetes 集群。

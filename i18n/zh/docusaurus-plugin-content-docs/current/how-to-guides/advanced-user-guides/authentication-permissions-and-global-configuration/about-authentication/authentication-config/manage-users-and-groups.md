@@ -1,6 +1,5 @@
 ---
 title: 用户和组
-weight: 1
 ---
 
 Rancher 依赖用户和组来决定允许登录到 Rancher 的用户，以及他们可以访问哪些资源。你配置外部身份验证提供程序后，该提供程序的用户将能够登录到你的 Rancher Server。用户登录时，验证提供程序将向你的 Rancher Server 提供该用户所属的组列表。

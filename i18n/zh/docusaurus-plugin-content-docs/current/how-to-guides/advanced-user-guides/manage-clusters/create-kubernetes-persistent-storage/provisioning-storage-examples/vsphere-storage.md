@@ -1,6 +1,5 @@
 ---
 title: vSphere 存储
-weight: 3055
 ---
 
 要为有状态的工作负载提供 vSphere 存储，我们建议创建一个 vSphereVolume StorageClass。当工作负载通过 PersistentVolumeClaim 请求卷时，这种做法会动态调配 vSphere 存储。

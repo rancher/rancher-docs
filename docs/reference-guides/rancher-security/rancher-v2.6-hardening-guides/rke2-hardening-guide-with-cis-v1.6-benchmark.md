@@ -1,6 +1,5 @@
 ---
 title: RKE2 Hardening Guide with CIS v1.6 Benchmark
-weight: 100
 ---
 
 This document provides prescriptive guidance for hardening a production installation of a RKE2 cluster to be provisioned with Rancher v2.6.5. It outlines the configurations and controls required to address Kubernetes benchmark controls from the Center for Information Security (CIS).
@@ -316,7 +315,7 @@ spec:
           profile: cis-1.6
           protect-kernel-defaults: true
 #      - config:
-#          
+#
 #        machineLabelSelector:
 #          matchExpressions:
 #            - key: string

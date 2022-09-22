@@ -1,6 +1,5 @@
 ---
 title: Services
-weight: 3045
 ---
 
 Deployment、StatefulSet 和 Daemonset 会管理 Pod 配置，而 Service 使用选择器将流量引导到 Pod。

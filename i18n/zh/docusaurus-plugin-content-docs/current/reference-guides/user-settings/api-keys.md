@@ -1,6 +1,5 @@
 ---
 title: API 密钥
-weight: 7005
 ---
 
 ## API 密钥和用户身份验证

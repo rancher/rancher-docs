@@ -1,10 +1,5 @@
 ---
 title: Custom Catalog Configuration Reference
-weight: 300
-aliases:
-  - /rancher/v2.0-v2.4/en/catalog/catalog-config
-  - /rancher/v2.0-v2.4/en/catalog/catalog-config
-  - /rancher/v2.0-v2.4/en/helm-charts/legacy-catalogs/catalog-config
 ---
 
 Any user can create custom catalogs to add into Rancher. Besides the content of the catalog, users must ensure their catalogs are able to be added into Rancher.

@@ -1,7 +1,5 @@
 ---
-shortTitle: AKS Cluster Configuration
 title: AKS Cluster Configuration Reference
-weight: 4
 ---
 
 ## Changes in Rancher v2.6
@@ -149,7 +147,7 @@ Container monitoring gives you performance visibility by collecting memory and p
 
 ### Log Analytics Workspace Resource Group
 
-The [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview#resource-groups) containing the Log Analytics Workspace. You must create at least one workspace to use Azure Monitor Logs. 
+The [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview#resource-groups) containing the Log Analytics Workspace. You must create at least one workspace to use Azure Monitor Logs.
 
 ### Log Analytics Workspace Name
 

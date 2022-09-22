@@ -1,6 +1,5 @@
 ---
 title: Kubernetes resources
-weight: 101
 ---
 
 The commands/steps listed on this page can be used to check the most important Kubernetes resources and apply to [Rancher Launched Kubernetes](../../pages-for-subheaders/launch-kubernetes-with-rancher.md) clusters.

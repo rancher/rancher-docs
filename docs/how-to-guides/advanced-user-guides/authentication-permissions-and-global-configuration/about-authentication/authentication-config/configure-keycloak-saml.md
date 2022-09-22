@@ -1,7 +1,6 @@
 ---
 title: Configure Keycloak (SAML)
 description: Create a Keycloak SAML client and configure Rancher to work with Keycloak. By the end your users will be able to sign into Rancher using their Keycloak logins
-weight: 1200
 ---
 
 import Tabs from '@theme/Tabs';

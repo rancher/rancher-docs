@@ -1,7 +1,5 @@
 ---
 title: Role-Based Access Control
-shortTitle: RBAC
-weight: 2
 ---
 
 This section describes the expectations for Role-Based Access Control (RBAC) for Prometheus Federator.

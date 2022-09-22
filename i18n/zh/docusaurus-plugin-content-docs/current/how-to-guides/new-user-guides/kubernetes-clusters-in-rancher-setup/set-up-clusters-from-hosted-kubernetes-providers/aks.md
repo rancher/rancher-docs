@@ -1,7 +1,5 @@
 ---
 title: 创建 AKS 集群
-shortTitle: Azure Kubernetes 服务
-weight: 2115
 ---
 
 你可以使用 Rancher 创建托管在 Microsoft Azure Kubernetes 服务 (AKS) 中的集群。

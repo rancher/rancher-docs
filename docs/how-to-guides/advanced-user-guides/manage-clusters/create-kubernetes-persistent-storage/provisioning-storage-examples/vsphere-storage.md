@@ -1,6 +1,5 @@
 ---
 title: vSphere Storage
-weight: 3055
 ---
 
 To provide stateful workloads with vSphere storage, we recommend creating a vSphereVolume StorageClass. This practice dynamically provisions vSphere storage when workloads request volumes through a PersistentVolumeClaim.

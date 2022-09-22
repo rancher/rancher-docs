@@ -1,7 +1,5 @@
 ---
 title: Creating a DigitalOcean Cluster
-shortTitle: DigitalOcean
-weight: 2215
 ---
 
 import Tabs from '@theme/Tabs';

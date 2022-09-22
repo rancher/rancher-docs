@@ -1,6 +1,5 @@
 ---
 title: Rancher 项目中资源配额的工作原理
-weight: 1
 ---
 
 Rancher 中的资源配额包含与 [Kubernetes 原生版本](https://kubernetes.io/docs/concepts/policy/resource-quotas/)相同的功能。Rancher 还扩展了资源配额的功能，让你将资源配额应用于项目。

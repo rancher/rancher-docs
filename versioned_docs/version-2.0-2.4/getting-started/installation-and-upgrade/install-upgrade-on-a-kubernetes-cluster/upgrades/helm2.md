@@ -1,13 +1,5 @@
 ---
 title: Upgrading Rancher Installed on Kubernetes with Helm 2
-weight: 1050
-aliases:
-  - /rancher/v2.0-v2.4/en/upgrades/upgrades/ha/helm2
-  - /rancher/v2.0-v2.4/en/upgrades/helm2
-  - /rancher/v2.0-v2.4/en/installation/upgrades-rollbacks/upgrades/ha/helm2
-  - /rancher/v2.0-v2.4/en/installation/install-rancher-on-k8s/upgrades-rollbacks/upgrades/ha/helm2
-  - /rancher/v2.0-v2.4/en/installation/install-rancher-on-k8s/upgrades-rollbacks/upgrades/helm2
-  - /rancher/v2.x/en/installation/install-rancher-on-k8s/upgrades/helm2/
 ---
 
 import Tabs from '@theme/Tabs';

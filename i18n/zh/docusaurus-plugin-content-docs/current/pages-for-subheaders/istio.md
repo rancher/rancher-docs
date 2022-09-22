@@ -1,6 +1,5 @@
 ---
 title: Istio
-weight: 14
 ---
 
 [Istio](https://istio.io/) 是一种开源工具，可以让 DevOps 团队更轻松地观察、控制、排查并保护复杂的微服务网络中的流量。

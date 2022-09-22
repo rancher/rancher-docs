@@ -1,6 +1,5 @@
 ---
 title: OpenLDAP 配置参考
-weight: 2
 ---
 
 本文提供在 Rancher 中设置 OpenLDAP 身份验证的参考。

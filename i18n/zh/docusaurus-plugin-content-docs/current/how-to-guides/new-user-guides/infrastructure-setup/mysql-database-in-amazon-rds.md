@@ -1,6 +1,5 @@
 ---
 title: 在 Amazon RDS 中创建 MySQL 数据库
-weight: 4
 ---
 本教程介绍如何在 Amazon RDS 中创建 MySQL 数据库。
 

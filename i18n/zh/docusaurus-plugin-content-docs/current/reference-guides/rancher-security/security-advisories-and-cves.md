@@ -1,8 +1,5 @@
 ---
 title: 安全公告和 CVE
-weight: 300
-aliases:
-  - /rancher/v2.x/en/security/cve/
 ---
 
 Rancher 致力于向社区披露我们产品的安全问题。我们会针对已解决的问题发布安全公告和 CVE（Common Vulnerabilities and Exposures，通用漏洞披露）。Rancher GitHub 上的[安全页面](https://github.com/rancher/rancher/security/advisories)也会发布新的安全公告。

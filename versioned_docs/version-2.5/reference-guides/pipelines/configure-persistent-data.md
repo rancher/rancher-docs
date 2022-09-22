@@ -1,9 +1,5 @@
 ---
 title: Configuring Persistent Data for Pipeline Components
-weight: 600
-aliases:
-  - /rancher/v2.5/en/k8s-in-rancher/pipelines/storage
-  - /rancher/v2.x/en/pipelines/storage/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,6 +1,5 @@
 ---
 title: 架构
-weight: 1
 ---
 
 本节介绍了 Rancher Logging 应用程序的架构。

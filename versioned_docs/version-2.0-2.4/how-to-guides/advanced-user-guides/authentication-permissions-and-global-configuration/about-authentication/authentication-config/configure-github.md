@@ -1,8 +1,5 @@
 ---
 title: Configuring GitHub
-weight: 1116
-aliases:
-    - /rancher/v2.0-v2.4/en/tasks/global-configuration/authentication/github/
 ---
 
 In environments using GitHub, you can configure Rancher to allow sign on using GitHub credentials.

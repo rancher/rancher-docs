@@ -1,10 +1,5 @@
 ---
 title: Authentication
-weight: 1115
-aliases:
-  - /rancher/v2.5/en/concepts/global-configuration/authentication/
-  - /rancher/v2.5/en/tasks/global-configuration/authentication/
-  - /rancher/v2.x/en/admin-settings/authentication/
 ---
 
 One of the key features that Rancher adds to Kubernetes is centralized user authentication. This feature allows your users to use one set of credentials to authenticate with any of your Kubernetes clusters.
@@ -25,8 +20,8 @@ The Rancher authentication proxy integrates with the following external authenti
 | [Microsoft AD FS](configure-microsoft-ad-federation-service-saml.md) |
 | [PingIdentity](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-pingidentity.md)     |
 | [Keycloak](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-keycloak.md)              |
-| [Okta](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-okta-saml.md)                      | 
-| [Google OAuth](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-google-oauth.md)            | 
+| [Okta](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-okta-saml.md)                      |
+| [Google OAuth](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-google-oauth.md)            |
 | [Shibboleth](configure-shibboleth-saml.md)           |
 
 <br/>

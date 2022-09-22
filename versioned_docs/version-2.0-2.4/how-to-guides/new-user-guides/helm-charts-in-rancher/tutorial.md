@@ -1,9 +1,5 @@
 ---
 title: "Tutorial: Example Custom Chart Creation"
-weight: 800
-aliases:
-  - /rancher/v2.0-v2.4/en/catalog/tutorial
-  - /rancher/v2.0-v2.4/en/helm-charts/legacy-catalogs/tutorial
 ---
 
 In this tutorial, you'll learn how to create a Helm chart and deploy it to a  repository. The repository can then be used as a source for a custom catalog in Rancher.

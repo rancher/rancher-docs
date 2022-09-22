@@ -1,7 +1,5 @@
 ---
 title: Receiver Configuration
-shortTitle: Receivers
-weight: 1
 ---
 
 import Tabs from '@theme/Tabs';

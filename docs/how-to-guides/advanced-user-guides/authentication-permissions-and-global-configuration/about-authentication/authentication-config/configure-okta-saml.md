@@ -1,6 +1,5 @@
 ---
 title: Configure Okta (SAML)
-weight: 1210
 ---
 
 If your organization uses Okta Identity Provider (IdP) for user authentication, you can configure Rancher to allow your users to log in using their IdP credentials.
@@ -14,7 +13,7 @@ Okta integration only supports Service Provider initiated logins.
 
 In Okta, create a SAML Application with the settings below. See the [Okta documentation](https://developer.okta.com/standards/SAML/setting_up_a_saml_application_in_okta) for help.
 
-Setting | Value    
+Setting | Value
 ------------|------------
 `Single Sign on URL` | `https://yourRancherHostURL/v1-saml/okta/saml/acs`
 `Audience URI (SP Entity ID)` | `https://yourRancherHostURL/v1-saml/okta/saml/metadata`
@@ -37,9 +36,9 @@ Setting | Value
     | Metadata XML              | The `Identity Provider metadata` file that you find in the application `Sign On` section.  |
 
     :::tip
-    
+
     You can generate a key/certificate pair using an openssl command. For example:
-    
+
     ```
     openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout myservice.key -out myservice.crt
     ```
@@ -52,11 +51,11 @@ Setting | Value
     Rancher redirects you to the IdP login page. Enter credentials that authenticate with Okta IdP to validate your Rancher Okta configuration.
 
     :::note
-    
+
     If nothing seems to happen, it's likely because your browser blocked the pop-up. Make sure you disable the pop-up blocker for your rancher domain and whitelist it in any other extensions you might utilize.
 
     :::
-    
+
 **Result:** Rancher is configured to work with Okta. Your users can now sign into Rancher using their Okta logins.
 
 :::note SAML Provider Caveats:

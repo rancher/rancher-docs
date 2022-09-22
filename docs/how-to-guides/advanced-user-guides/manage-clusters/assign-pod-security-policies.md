@@ -1,6 +1,5 @@
 ---
 title: Assigning Pod Security Policies
-weight: 2260
 ---
 
 _Pod Security Policies_ are objects that control security-sensitive aspects of pod specification (like root privileges).

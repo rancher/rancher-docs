@@ -1,9 +1,5 @@
 ---
 title: Managing Catalog Apps
-weight: 500
-aliases:
-  - /rancher/v2.0-v2.4/en/catalog/managing-apps
-  - /rancher/v2.0-v2.4/en/helm-charts/legacy-catalogs/managing-apps
 ---
 
 After deploying an application, one of the benefits of using an application versus individual workloads/resources is the ease of being able to manage many workloads/resources applications. Apps can be cloned, upgraded or rolled back.

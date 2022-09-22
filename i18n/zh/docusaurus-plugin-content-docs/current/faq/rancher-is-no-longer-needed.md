@@ -1,6 +1,5 @@
 ---
 title: 卸载 Rancher
-weight: 8010
 ---
 
 本文介绍了如果你不再需要 Rancher、不想再由 Rancher 管理集群、或想删除 Rancher Server 需要怎么做。

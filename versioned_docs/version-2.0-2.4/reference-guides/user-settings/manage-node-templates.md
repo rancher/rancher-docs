@@ -1,6 +1,5 @@
 ---
 title: Managing Node Templates
-weight: 7010
 ---
 
 When you provision a cluster [hosted by an infrastructure provider](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md), [node templates](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#node-templates) are used to provision the cluster nodes. These templates use Docker Machine configuration options to define an operating system image and settings/parameters for the node. You can create node templates in two contexts:

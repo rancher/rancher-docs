@@ -1,9 +1,6 @@
 ---
 title: 创建 Nutanix AOS 集群
-shortTitle: Nutanix
 description: 使用 Rancher 创建 Nutanix AOS (AHV) 集群。集群可能包括具有不同属性的 VM 组，这些属性可用于细粒度控制节点的大小。
-metaDescription: 使用 Rancher 创建 Nutanix AOS (AHV) 集群。集群可能包括具有不同属性的 VM 组，这些属性可用于细粒度控制节点的大小。
-weight: 2225
 ---
 
 [Nutanix Acropolis 操作系统](https://www.nutanix.com/products/acropolis) (Nutanix AOS) 是适用于 Nutanix 超融合基础架构平台的操作系统。AOS 带有一个名为 [Acropolis Hypervisor（AHV）](https://www.nutanix.com/products/ahv)的内置虚拟机监控程序。你可以结合使用 Rancher 与 Nutanix AOS (AHV)，从而在本地体验云环境的操作。

@@ -1,6 +1,5 @@
 ---
 title: Docker Install with TLS Termination at Layer-7 NGINX Load Balancer
-weight: 252
 ---
 
 For development and testing environments that have a special requirement to terminate TLS/SSL at a load balancer instead of your Rancher Server container, deploy Rancher and configure a load balancer to work with it conjunction.

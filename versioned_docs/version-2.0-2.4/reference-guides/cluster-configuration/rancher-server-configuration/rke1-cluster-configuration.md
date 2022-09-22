@@ -1,6 +1,5 @@
 ---
 title: RKE Cluster Configuration Reference
-weight: 2250
 ---
 
 When Rancher installs Kubernetes, it uses [RKE](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) as the Kubernetes distribution.

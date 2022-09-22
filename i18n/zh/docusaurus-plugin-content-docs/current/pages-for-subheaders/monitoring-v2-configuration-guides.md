@@ -1,6 +1,5 @@
 ---
 title: 配置
-weight: 5
 ---
 
 本文介绍在 Rancher UI 中配置 Monitoring V2 的一些最重要选项。

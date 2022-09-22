@@ -1,6 +1,5 @@
 ---
 title: 处理污点和容忍度
-weight: 6
 ---
 
 在 Kubernetes 节点上添加污点会导致 pod 排斥在该节点上运行。

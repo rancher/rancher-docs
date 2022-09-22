@@ -1,6 +1,5 @@
 ---
 title: Cluster Templates
-weight: 100
 ---
 
 Cluster templates encompass both Kubernetes configuration and node pool configuration, allowing a single template to contain all the information Rancher needs to provision new nodes in a cloud provider and install Kubernetes on those nodes.

@@ -1,6 +1,5 @@
 ---
 title: Uninstalling The Adapter
-weight: 3
 ---
 
 ### 1. Uninstall the adapter chart using helm.

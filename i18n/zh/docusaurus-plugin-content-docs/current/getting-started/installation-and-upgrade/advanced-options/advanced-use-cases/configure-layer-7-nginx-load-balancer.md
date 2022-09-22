@@ -1,6 +1,5 @@
 ---
 title: 7 层 NGINX 负载均衡器上的 TLS 终止（Docker 安装）
-weight: 252
 ---
 
 如果你的开发或测试环境要求在负载均衡器上终止 TLS/SSL，而不是在 Rancher Server 上，请部署 Rancher 并配置负载均衡器。

@@ -1,7 +1,6 @@
 ---
 title: 配置 Keycloak (SAML)
 description: 创建 Keycloak SAML 客户端并配置 Rancher 以使用 Keycloak。你的用户将能够使用他们的 Keycloak 登录名登录 Rancher。
-weight: 1200
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,6 +1,5 @@
 ---
 title: Services
-weight: 3045
 ---
 
 Pod configuration is managed by Deployments, StatefulSets and Daemonsets, whereas services direct traffic to pods using selectors.
@@ -15,7 +14,7 @@ You can create additional services so that a given namespace resolves with one o
 1. Click **Service Discovery > Services**.
 1. Click **Create**.
 1. Choose the type of service you want to create.
-1. Select a **Namespace** from the drop-down list. 
+1. Select a **Namespace** from the drop-down list.
 1. Enter a **Name** for the service. This name is used for DNS resolution.
 1. Fill out the rest of the form. For help, refer to the upstream Kubernetes documentation about [services.](https://kubernetes.io/docs/concepts/services-networking/service/)
 1. Click **Create**.

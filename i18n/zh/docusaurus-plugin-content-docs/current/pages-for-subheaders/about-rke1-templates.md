@@ -1,6 +1,5 @@
 ---
 title: RKE 模板
-weight: 80
 ---
 
 RKE 模板旨在让 DevOps 和安全团队标准化和简化 Kubernetes 集群创建的流程。

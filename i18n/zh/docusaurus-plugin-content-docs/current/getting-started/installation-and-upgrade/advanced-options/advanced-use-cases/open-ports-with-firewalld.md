@@ -1,6 +1,5 @@
 ---
 title: 使用 firewalld 打开端口
-weight: 1
 ---
 
 > 我们建议禁用 firewalld。如果你使用的是 Kubernetes 1.19 或更高版本，则必须关闭 firewalld。

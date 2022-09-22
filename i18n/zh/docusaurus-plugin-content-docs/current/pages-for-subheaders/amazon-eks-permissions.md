@@ -1,7 +1,5 @@
 ---
 title: 创建 EKS 集群
-shortTitle: Amazon EKS
-weight: 2110
 ---
 Amazon EKS 为 Kubernetes 集群提供托管的 controlplane。Amazon EKS 跨多个可用区运行 Kubernetes controlplane 实例，以确保高可用性。Rancher 提供了一个直观的用户界面，用于管理和部署你运行在 Amazon EKS 中的 Kubernetes 集群。通过本指南，你将使用 Rancher 在你的 AWS 账户中快速轻松地启动 Amazon EKS Kubernetes 集群。有关 Amazon EKS 的更多信息，请参阅此[文档](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html)。
 

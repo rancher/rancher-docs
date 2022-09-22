@@ -1,6 +1,5 @@
 ---
 title: Configure FreeIPA
-weight: 1114
 ---
 
 If your organization uses FreeIPA for user authentication, you can configure Rancher to allow your users to login using their FreeIPA credentials.

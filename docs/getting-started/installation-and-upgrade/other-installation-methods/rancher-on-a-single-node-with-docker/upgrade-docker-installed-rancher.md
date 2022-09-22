@@ -1,6 +1,5 @@
 ---
 title: Upgrading Rancher Installed with Docker
-weight: 1010
 ---
 
 import Tabs from '@theme/Tabs';
@@ -55,7 +54,7 @@ Write down or copy this information before starting the upgrade.
 
 You can obtain `<RANCHER_CONTAINER_TAG>` and `<RANCHER_CONTAINER_NAME>` by logging into your Rancher server by remote connection and entering the command to view the containers that are running: `docker ps`. You can also view containers that are stopped using a different command: `docker ps -a`. Use these commands for help anytime during while creating backups.
 
-## Upgrade 
+## Upgrade
 
 During upgrade, you create a copy of the data from your current Rancher container and a backup in case something goes wrong. Then you deploy the new version of Rancher in a new container using your existing data.
 ### 1. Create a copy of the data from your Rancher server container

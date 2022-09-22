@@ -1,6 +1,5 @@
 ---
 title: 使用 kubectl 测试 HPA
-weight: 3031
 ---
 
 本文介绍如何在使用负载测试工具扩缩 HPA 后检查 HPA 的状态。有关使用 Rancher UI（最低版本 2.3.x）检查状态的信息，请参阅[使用 Rancher UI 管理 HPA](k8s-in-rancher/horizontal-pod-autoscaler/manage-hpa-with-kubectl/)。

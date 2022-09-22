@@ -1,6 +1,5 @@
 ---
 title: Authentication, Permissions and Global Configuration
-weight: 6
 ---
 
 After installation, the [system administrator](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md) should configure Rancher to configure authentication, authorization, security, default settings, security policies, drivers and global DNS entries.

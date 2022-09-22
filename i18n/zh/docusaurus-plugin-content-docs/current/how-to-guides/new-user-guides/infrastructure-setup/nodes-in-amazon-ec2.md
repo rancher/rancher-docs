@@ -1,6 +1,5 @@
 ---
 title: 在 Amazon EC2 中配置节点
-weight: 3
 ---
 
 在本教程中，你将学习一种为 Rancher Mangement Server 创建 Linux 节点的方法。这些节点将满足[操作系统、Docker、硬件和网络的要求](../../../pages-for-subheaders/installation-requirements.md)。

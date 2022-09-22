@@ -1,6 +1,5 @@
 ---
 title: Creating a vSphere Virtual Machine Template
-weight: 4
 ---
 
 Creating virtual machines in a repeatable and reliable fashion can often be difficult. VMware vSphere offers the ability to build one VM that can then be converted to a template. The template can then be used to create identically configured VMs. Rancher leverages this capability within node pools to create identical RKE1 and RKE2 nodes.
@@ -22,7 +21,7 @@ If you have any specific firewall rules or configuration, you will need to add t
 
 The packages that need to be installed on the template are listed below. These will have slightly different names based on distribution; some distributions ship these by default, for example.
 
-* curl 
+* curl
 * wget
 * git
 * net-tools

@@ -1,6 +1,5 @@
 ---
 title: Updating the Rancher Certificate
-weight: 10
 ---
 
 # Updating a Private CA Certificate
@@ -81,7 +80,7 @@ Also get the version string of the currently deployed Rancher chart:
 $ helm ls -A
 ```
 
-Upgrade the Helm application instance using the original configuration values and making sure to specify `ingress.tls.source=secret` as well as the current chart version to prevent an application upgrade.    
+Upgrade the Helm application instance using the original configuration values and making sure to specify `ingress.tls.source=secret` as well as the current chart version to prevent an application upgrade.
 
 If the certificate was signed by a private CA, add the `set privateCA=true` argument as well. Also make sure to read the documentation describing the initial installation using custom certificates.
 
@@ -228,7 +227,7 @@ Also get the version string of the currently deployed Rancher chart:
 $ helm ls -A
 ```
 
-Upgrade the Helm application instance using the original configuration values and making sure to specify the current chart version to prevent an application upgrade.    
+Upgrade the Helm application instance using the original configuration values and making sure to specify the current chart version to prevent an application upgrade.
 
 Also make sure to read the documentation describing the initial installation using custom certificates.
 
@@ -240,9 +239,9 @@ helm upgrade rancher rancher-stable/rancher \
   --set ...
 ```
 
-On upgrade, you can either 
+On upgrade, you can either
 
-- remove `--set ingress.tls.source=secret \` from the Helm upgrade command, as shown above, or 
+- remove `--set ingress.tls.source=secret \` from the Helm upgrade command, as shown above, or
 
 - remove the `privateCA` parameter or set it to `false` because the CA is valid:
 

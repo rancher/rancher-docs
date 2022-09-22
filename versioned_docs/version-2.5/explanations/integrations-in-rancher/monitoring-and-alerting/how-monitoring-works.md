@@ -1,6 +1,5 @@
 ---
 title: How Monitoring Works
-weight: 1
 ---
 
 

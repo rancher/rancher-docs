@@ -1,6 +1,5 @@
 ---
 title: Launching Kubernetes on Windows Clusters
-weight: 2240
 ---
 
 _Available as of v2.3.0_

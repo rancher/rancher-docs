@@ -1,6 +1,5 @@
 ---
 title: 6. Generate and View Traffic
-weight: 7
 ---
 
 This section describes how to view the traffic that is being managed by Istio.
@@ -20,7 +19,7 @@ To see the traffic graph,
 1. In the cluster where Istio is installed, click **Istio** in the left navigation bar.
 1. Click the **Kiali** link.
 1. Click on **Graph** in the side nav.
-1. Change the namespace in the **Namespace** dropdown to view the traffic for each namespace. 
+1. Change the namespace in the **Namespace** dropdown to view the traffic for each namespace.
 
 If you refresh the URL to the BookInfo app several times, you should be able to see green arrows on the Kiali graph showing traffic to `v1` and `v3` of the `reviews` service. The control panel on the right side of the graph lets you configure details including how many minutes of the most recent traffic should be shown on the graph.
 

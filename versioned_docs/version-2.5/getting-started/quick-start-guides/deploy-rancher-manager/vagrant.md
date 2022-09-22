@@ -1,9 +1,7 @@
 ---
 title: Vagrant Quick Start
-weight: 200
-aliases:
-  - /rancher/v2.x/en/quick-start-guide/deployment/quickstart-vagrant/
 ---
+
 The following steps quickly deploy a Rancher Server with a single node cluster attached.
 
 >**Note:** The intent of these guides is to quickly launch a sandbox that you can use to evaluate Rancher. These guides are not intended for production environments. For comprehensive setup instructions, see [Installation](../../../pages-for-subheaders/installation-and-upgrade.md).

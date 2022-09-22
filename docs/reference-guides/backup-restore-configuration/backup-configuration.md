@@ -1,7 +1,5 @@
 ---
 title: Backup Configuration
-shortTitle: Backup
-weight: 1
 ---
 
 The Backup Create page lets you configure a schedule, enable encryption and specify the storage location for your backups.
@@ -131,7 +129,7 @@ There are two ways to set up the `rancher-backup` operator to use S3 as the back
 
 One way is to configure the `credentialSecretName` in the Backup custom resource, which refers to AWS credentials that have access to S3.
 
-If the cluster nodes are in Amazon EC2, the S3 access can also be set up by assigning IAM permissions to the EC2 nodes so that they can access S3. 
+If the cluster nodes are in Amazon EC2, the S3 access can also be set up by assigning IAM permissions to the EC2 nodes so that they can access S3.
 
 To allow a node to access S3, follow the instructions in the [AWS documentation](https://aws.amazon.com/premiumsupport/knowledge-center/ec2-instance-access-s3-bucket/) to create an IAM role for EC2. When you add a custom policy to the role, add the following permissions, and replace the `Resource` with your bucket name:
 
@@ -164,7 +162,7 @@ To allow a node to access S3, follow the instructions in the [AWS documentation]
 }
 ```
 
-After the role is created, and you have attached the corresponding instance profile to your EC2 instance(s), the `credentialSecretName` directive can be left empty in the Backup custom resource. 
+After the role is created, and you have attached the corresponding instance profile to your EC2 instance(s), the `credentialSecretName` directive can be left empty in the Backup custom resource.
 
 ## Examples
 

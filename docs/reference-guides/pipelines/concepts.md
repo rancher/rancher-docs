@@ -1,6 +1,5 @@
 ---
 title: Concepts
-weight: 1
 ---
 
 The purpose of this page is to explain common concepts and terminology related to pipelines.

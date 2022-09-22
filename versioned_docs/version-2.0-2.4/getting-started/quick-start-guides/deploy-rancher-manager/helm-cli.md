@@ -1,7 +1,7 @@
 ---
 title: Manual Quick Start
-weight: 300
 ---
+
 Howdy Partner! This tutorial walks you through:
 
 - Installation of Rancher 2.x

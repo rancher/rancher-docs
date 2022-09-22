@@ -1,7 +1,5 @@
 ---
 title: 在 vSphere 环境中安装 Rancher
-shortTitle: vSphere 环境中的 Rancher
-weight: 3
 ---
 
 本指南概述了在 vSphere 环境中在 RKE Kubernetes 集群上安装 Rancher 的参考架构，以及 VMware 记录的标准 vSphere 最佳实践。

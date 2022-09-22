@@ -1,6 +1,5 @@
 ---
 title: 项目工具：Logging，Monitoring 和可视化
-weight: 2525
 ---
 
 Rancher 包含 Kubernetes 中未包含的各种工具来协助你进行 DevOps 操作。Rancher 可以与外部服务集成，让你的集群更高效地运行。

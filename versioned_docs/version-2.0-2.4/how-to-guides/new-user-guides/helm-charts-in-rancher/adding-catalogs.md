@@ -1,12 +1,5 @@
 ---
 title: Creating Custom Catalogs
-weight: 200
-aliases:
-  - /rancher/v2.0-v2.4/en/tasks/global-configuration/catalog/adding-custom-catalogs/
-  - /rancher/v2.0-v2.4/en/catalog/custom/adding
-  - /rancher/v2.0-v2.4/en/catalog/adding-catalogs
-  - /rancher/v2.0-v2.4/en/catalog/custom/
-  - /rancher/v2.0-v2.4/en/helm-charts/legacy-catalogs/adding-catalogs
 ---
 
 Custom catalogs can be added into Rancher at a global scope, cluster scope, or project scope.

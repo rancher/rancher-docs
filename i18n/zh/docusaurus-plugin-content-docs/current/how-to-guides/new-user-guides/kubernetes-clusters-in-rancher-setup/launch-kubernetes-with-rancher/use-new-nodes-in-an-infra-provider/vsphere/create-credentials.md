@@ -1,6 +1,5 @@
 ---
 title: 在 vSphere 控制台中创建凭证
-weight: 3
 ---
 
 本节介绍如何创建 vSphere 用户名和密码。你需要将这些 vSphere 凭证提供给 Rancher，Rancher 才能在 vSphere 中配置资源。

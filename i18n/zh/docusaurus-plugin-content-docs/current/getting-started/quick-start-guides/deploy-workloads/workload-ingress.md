@@ -1,6 +1,5 @@
 ---
 title: 部署带有 Ingress 的工作负载
-weight: 100
 ---
 
 ### 先决条件

@@ -1,7 +1,5 @@
 ---
 title: GKE 集群配置参考
-shortTitle: GKE 集群配置
-weight: 3
 ---
 
 ## Rancher 2.6 变更

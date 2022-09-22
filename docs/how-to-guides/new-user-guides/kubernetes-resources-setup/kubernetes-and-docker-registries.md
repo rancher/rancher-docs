@@ -1,9 +1,8 @@
 ---
 title: Kubernetes Registry and Docker Registry
 description: Learn about the Docker registry and Kubernetes registry, their use cases and how to use a private registry with the Rancher UI
-weight: 3063
 ---
-Registries are Kubernetes secrets containing credentials used to authenticate with [private Docker registries](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/). 
+Registries are Kubernetes secrets containing credentials used to authenticate with [private Docker registries](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).
 
 The word "registry" can mean two things, depending on whether it is used to refer to a Docker or Kubernetes registry:
 
@@ -24,13 +23,13 @@ You must have a [private registry](https://docs.docker.com/registry/deploying/) 
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. Go to the cluster where you want to add a registry and click **Explore**.
-1. In the left navigation, click either **Storage > Secrets** or **More Resources > Core > Secrets**. 
+1. In the left navigation, click either **Storage > Secrets** or **More Resources > Core > Secrets**.
 1. Click **Create**.
 1. Click **Registry**.
 1. Enter a **Name** for the registry.
 
     :::note
-    
+
     Kubernetes classifies secrets, certificates, and registries all as [secrets](https://kubernetes.io/docs/concepts/configuration/secret/), and no two secrets in a project or namespace can have duplicate names. Therefore, to prevent conflicts, your registry must have a unique name among all secrets within your workspace.
 
     :::
@@ -39,15 +38,15 @@ You must have a [private registry](https://docs.docker.com/registry/deploying/) 
 1. Select the website that hosts your private registry. Then enter credentials that authenticate with the registry. For example, if you use DockerHub, provide your DockerHub username and password.
 1. Click **Save**.
 
-**Result:** 
+**Result:**
 
 - Your secret is added to the namespace you chose.
-- You can view the secret in the Rancher UI by clicking either **Storage > Secrets** or **More Resources > Core > Secrets**. 
+- You can view the secret in the Rancher UI by clicking either **Storage > Secrets** or **More Resources > Core > Secrets**.
 - Any workload that you create in the Rancher UI will have the credentials to access the registry if the workload is within the registry's scope.
 
 # Creating a Registry in Projects
 
-:::note Prerequisites: 
+:::note Prerequisites:
 
 You must have a [private registry](https://docs.docker.com/registry/deploying/) available to use.
 
@@ -60,14 +59,14 @@ Before v2.6, secrets were required to be in a project scope. Projects are no lon
 1. Go to the `legacy` feature flag and click **Activate**.
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. Go to the cluster where you want to add a registry and click **Explore**.
-1. In the left navigation, click either **Storage > Secrets** or **More Resources > Core > Secrets**. 
+1. In the left navigation, click either **Storage > Secrets** or **More Resources > Core > Secrets**.
 1. Click **Create**.
 1. Click **Registry**.
 1. In the top navigation bar, filter to see only one project.
 1. Enter a **Name** for the registry.
 
     :::note
-    
+
     Kubernetes classifies secrets, certificates, and registries all as [secrets](https://kubernetes.io/docs/concepts/configuration/secret/), and no two secrets in a project or namespace can have duplicate names. Therefore, to prevent conflicts, your registry must have a unique name among all secrets within your workspace.
 
     :::
@@ -76,7 +75,7 @@ Before v2.6, secrets were required to be in a project scope. Projects are no lon
 1. Select the website that hosts your private registry. Then enter credentials that authenticate with the registry. For example, if you use DockerHub, provide your DockerHub username and password.
 1. Click **Save**.
 
-**Result:** 
+**Result:**
 
 - Your secret is added to the individual project you chose.
 - You can view the secret in the Rancher UI by clicking either **Storage > Secrets** or **More Resources > Core > Secrets**.

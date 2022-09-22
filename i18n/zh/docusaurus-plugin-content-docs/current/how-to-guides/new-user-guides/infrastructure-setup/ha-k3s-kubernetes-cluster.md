@@ -1,6 +1,5 @@
 ---
 title: '为高可用 K3s Kubernetes 集群设置基础设施'
-weight: 1
 ---
 
 本教程旨在帮助你为 Rancher Management Server 配置底层基础设施。

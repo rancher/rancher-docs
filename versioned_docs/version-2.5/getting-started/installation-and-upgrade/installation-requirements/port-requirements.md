@@ -1,9 +1,6 @@
 ---
 title: Port Requirements
 description: Read about port requirements needed in order for Rancher to operate properly, both for Rancher nodes and downstream Kubernetes cluster nodes
-weight: 300
-aliases:
-  - /rancher/v2.x/en/installation/requirements/ports/
 ---
 
 import Tabs from '@theme/Tabs';

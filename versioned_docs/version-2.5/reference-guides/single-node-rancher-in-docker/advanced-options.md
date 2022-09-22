@@ -1,8 +1,5 @@
 ---
 title: Advanced Options for Docker Installs
-weight: 5
-aliases:
-  - /rancher/v2.x/en/installation/other-installation-methods/single-node-docker/advanced/
 ---
 
 When installing Rancher, there are several [advanced options](../../pages-for-subheaders/resources.md) that can be enabled:

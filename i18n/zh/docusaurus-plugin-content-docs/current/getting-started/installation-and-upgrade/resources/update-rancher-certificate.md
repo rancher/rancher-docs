@@ -1,6 +1,5 @@
 ---
 title: 更新 Rancher 证书
-weight: 10
 ---
 
 # 更新私有 CA 证书

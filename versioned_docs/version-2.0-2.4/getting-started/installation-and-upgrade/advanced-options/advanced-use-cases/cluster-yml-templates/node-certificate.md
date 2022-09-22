@@ -1,10 +1,7 @@
 ---
 title: Template for an RKE Cluster with a Self-signed Certificate and Layer 4 Load Balancer
-weight: 2
-aliases:	
-  - /rancher/v2.0-v2.4/en/installation/options/cluster-yml-templates/3-node-certificate
-  - /rancher/v2.x/en/installation/resources/advanced/cluster-yml-templates/3-node-certificate/
 ---
+
 RKE uses a cluster.yml file to install and configure your Kubernetes cluster.
 
 This template is intended to be used for RKE add-on installs, which are only supported up to Rancher v2.0.8. Please use the Rancher Helm chart if you are installing a newer Rancher version.

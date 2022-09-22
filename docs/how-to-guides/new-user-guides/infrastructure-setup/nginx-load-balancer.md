@@ -1,6 +1,5 @@
 ---
 title: Setting up an NGINX Load Balancer
-weight: 4
 ---
 
 NGINX will be configured as Layer 4 load balancer (TCP) that forwards connections to one of your Rancher nodes.
@@ -30,13 +29,13 @@ After installing NGINX, you need to update the NGINX configuration file, `nginx.
 2.  From `nginx.conf`, replace both occurrences (port 80 and port 443) of `<IP_NODE_1>`, `<IP_NODE_2>`, and `<IP_NODE_3>` with the IPs of your nodes.
 
     :::note
-    
+
     See [NGINX Documentation: TCP and UDP Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/tcp-udp-load-balancer/) for all configuration options.
 
     :::
 
     <figcaption>Example NGINX config</figcaption>
-    
+
     ```
     worker_processes 4;
     worker_rlimit_nofile 40000;

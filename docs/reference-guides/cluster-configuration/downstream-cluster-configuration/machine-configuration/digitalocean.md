@@ -1,6 +1,5 @@
 ---
 title: DigitalOcean Machine Configuration
-weight: 2
 ---
 
 For more details about DigitalOcean, Droplets, refer to the [official documentation](https://docs.digitalocean.com/products/compute/).

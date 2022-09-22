@@ -1,7 +1,6 @@
 ---
 title: Port Requirements
 description: Read about port requirements needed in order for Rancher to operate properly, both for Rancher nodes and downstream Kubernetes cluster nodes
-weight: 300
 ---
 
 import PortsIaasNodes from '@site/src/components/PortsIaasNodes'

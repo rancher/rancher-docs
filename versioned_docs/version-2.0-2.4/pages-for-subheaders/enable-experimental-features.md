@@ -1,9 +1,5 @@
 ---
 title: Enabling Experimental Features
-weight: 17
-aliases:
-  - /rancher/v2.0-v2.4/en/installation/options/feature-flags/
-  - /rancher/v2.0-v2.4/en/admin-settings/feature-flags/
 ---
 
 import Tabs from '@theme/Tabs';

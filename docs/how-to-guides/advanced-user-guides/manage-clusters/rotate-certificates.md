@@ -1,6 +1,5 @@
 ---
 title: Certificate Rotation
-weight: 2040
 ---
 
 import Tabs from '@theme/Tabs';

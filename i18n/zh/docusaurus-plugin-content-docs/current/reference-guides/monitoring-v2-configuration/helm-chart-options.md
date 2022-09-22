@@ -1,6 +1,5 @@
 ---
 title: Helm Chart 选项
-weight: 8
 ---
 
 

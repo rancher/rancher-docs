@@ -1,6 +1,5 @@
 ---
 title: 设置容器默认资源限制
-weight: 3
 ---
 
 在设置资源配额时，如果你在项目或命名空间上设置了任何与 CPU 或内存相关的内容（即限制或预留），所有容器都需要在创建期间设置各自的 CPU 或内存字段。详情请参阅 [Kubernetes 文档](https://kubernetes.io/docs/concepts/policy/resource-quotas/#requests-vs-limits)。

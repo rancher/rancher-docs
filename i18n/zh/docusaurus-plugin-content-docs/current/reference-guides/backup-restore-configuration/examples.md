@@ -1,6 +1,5 @@
 ---
 title: 示例
-weight: 5
 ---
 
 本节包含 Backup 和 Restore 自定义资源的示例。

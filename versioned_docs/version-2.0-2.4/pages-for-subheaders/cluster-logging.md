@@ -1,16 +1,6 @@
 ---
 title: Cluster Logging
-shortTitle: Logging
 description: Rancher integrates with popular logging services. Learn the requirements and benefits of integrating with logging services, and enable logging on your cluster.
-metaDescription: "Rancher integrates with popular logging services. Learn the requirements and benefits of integrating with logging services, and enable logging on your cluster."
-weight: 3
-aliases:
-  - /rancher/v2.0-v2.4/en/tasks/logging/
-  - /rancher/v2.0-v2.4/en/cluster-admin/tools/logging
-  - /rancher/v2.0-v2.4/en/logging/legacy/cluster-logging
-  - /rancher/v2.0-v2.4/en/logging/v2.0.x-v2.4.x/cluster-logging/
-  - /rancher/v2.x/en/logging/v2.0.x-v2.4.x/
-  - /rancher/v2.x/en/logging/v2.0.x-v2.4.x/cluster-logging/
 ---
 
 Logging is helpful because it allows you to:

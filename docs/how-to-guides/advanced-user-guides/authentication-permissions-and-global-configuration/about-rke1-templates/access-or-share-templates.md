@@ -1,6 +1,5 @@
 ---
 title: Access and Sharing
-weight: 31
 ---
 
 If you are an RKE template owner, you can share it with users or groups of users, who can then use the template to create clusters.
@@ -12,7 +11,7 @@ When you share a template, each user can have one of two access levels:
 - **Owner:** This user can update, delete, and share the templates that they own. The owner can also share the template with other users.
 - **User:** These users can create clusters using the template. They can also upgrade those clusters to new revisions of the same template. When you share a template as **Make Public (read-only),** all users in your Rancher setup have the User access level for the template.
 
-If you create a template, you automatically become an owner of that template. 
+If you create a template, you automatically become an owner of that template.
 
 If you want to delegate responsibility for updating the template, you can share ownership of the template. For details on how owners can modify templates, refer to the [documentation about revising templates.](manage-rke1-templates.md)
 

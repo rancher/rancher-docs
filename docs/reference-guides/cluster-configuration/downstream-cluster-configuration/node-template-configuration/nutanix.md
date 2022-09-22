@@ -1,6 +1,5 @@
 ---
 title: Nutanix Node Template Configuration
-weight: 2
 ---
 
 
@@ -15,7 +14,7 @@ weight: 2
 
 ## Scheduling
 
-Choose what Nutanix cluster the virtual machine will be scheduled to. 
+Choose what Nutanix cluster the virtual machine will be scheduled to.
 
 | Parameter | Required | Description
 |:----------|:--------:|:----------------------------------------------------------------------------
@@ -53,6 +52,6 @@ A category is a grouping of entities into a key value pair. Typically, VMs are a
 
 To make use of cloud-init initialization, paste a cloud config using valid YAML syntax into the **Cloud Config YAML** field. Refer to the [cloud-init documentation](https://cloudinit.readthedocs.io/en/latest/topics/examples.html) for a commented set of examples of supported cloud config directives.
 
-Note that cloud-init based network configuration is not recommended and only supported via user data `runcmd` rather than by NoCloud or other network configuration datasources. 
+Note that cloud-init based network configuration is not recommended and only supported via user data `runcmd` rather than by NoCloud or other network configuration datasources.
 
 Nutanix IP Address Management (IPAM) or another DHCP service is recommended.

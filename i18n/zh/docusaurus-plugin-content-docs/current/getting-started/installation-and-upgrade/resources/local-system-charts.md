@@ -1,6 +1,5 @@
 ---
 title: 离线安装中设置本地 System Charts
-weight: 120
 ---
 
 [System Charts](https://github.com/rancher/system-charts) 仓库包含 Monitoring、Logging、告警和全局 DNS 等功能所需的所有应用项。

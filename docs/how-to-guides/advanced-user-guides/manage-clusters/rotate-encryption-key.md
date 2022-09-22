@@ -1,6 +1,5 @@
 ---
 title: Encryption Key Rotation
-weight: 2043
 ---
 
 ### RKE1 Encryption Key Rotation

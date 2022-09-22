@@ -1,8 +1,5 @@
 ---
 title: Managing Cloud Credentials
-weight: 7011
-aliases:
-  - /rancher/v2.x/en/user-settings/cloud-credentials/
 ---
 
 When you create a cluster [hosted by an infrastructure provider](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md), [node templates](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#node-templates) are used to provision the cluster nodes. These templates use Docker Machine configuration options to define an operating system image and settings/parameters for the node.
@@ -31,7 +28,7 @@ All cloud credentials are bound to the user profile of who created it. They **ca
 
 ## Updating a Cloud Credential
 
-When access credentials are changed or compromised, updating a cloud credential allows you to rotate those credentials while keeping the same node template.  
+When access credentials are changed or compromised, updating a cloud credential allows you to rotate those credentials while keeping the same node template.
 
 1. From your user settings, select **User Avatar > Cloud Credentials**.
 1. Choose the cloud credential you want to edit and click the **&#8942; > Edit**.

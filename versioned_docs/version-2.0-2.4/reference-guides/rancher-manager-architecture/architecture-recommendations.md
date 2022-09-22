@@ -1,6 +1,5 @@
 ---
 title: Architecture Recommendations
-weight: 3
 ---
 
 Kubernetes cluster. If you are installing Rancher on a single node, the main architecture recommendation that applies to your installation is that the cluster running Rancher should be [separate from downstream clusters.](#separation-of-rancher-and-user-clusters)

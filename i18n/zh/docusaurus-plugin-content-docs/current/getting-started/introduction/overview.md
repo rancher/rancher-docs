@@ -1,6 +1,5 @@
 ---
 title: 概述
-weight: 1
 ---
 
 Rancher 是一个为使用容器的公司打造的容器管理平台。Rancher 使得开发者可以随处运行 Kubernetes（Run Kubernetes Everywhere），满足 IT 需求规范，赋能 DevOps 团队。

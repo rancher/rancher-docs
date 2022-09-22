@@ -1,6 +1,5 @@
 ---
 title: Overriding Template Settings
-weight: 33
 ---
 
 When a user creates an RKE template, each setting in the template has a switch in the Rancher UI that indicates if users can override the setting. This switch marks those settings as **Allow User Override.**

@@ -1,6 +1,5 @@
 ---
 title: 参与 Rancher 社区贡献
-weight: 700
 ---
 
 本节介绍 Rancher 使用的仓库、如何构建仓库以及提交 issue 时要包含的信息。

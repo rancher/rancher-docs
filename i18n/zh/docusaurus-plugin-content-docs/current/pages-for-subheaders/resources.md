@@ -1,6 +1,5 @@
 ---
 title: 资源
-weight: 5
 ---
 
 ### Docker 安装

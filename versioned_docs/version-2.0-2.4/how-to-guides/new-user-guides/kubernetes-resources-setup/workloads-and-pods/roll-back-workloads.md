@@ -1,9 +1,5 @@
 ---
 title: Rolling Back Workloads
-weight: 3027
-aliases:
-  - /rancher/v2.0-v2.4/en/tasks/workloads/rollback-workloads/
-  - /rancher/v2.0-v2.4/en/k8s-in-rancher/workloads/rollback-workloads
 ---
 
 Sometimes there is a need to rollback to the previous version of the application, either for debugging purposes or because an upgrade did not go as planned.

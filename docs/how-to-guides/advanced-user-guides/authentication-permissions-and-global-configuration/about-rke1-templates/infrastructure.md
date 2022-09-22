@@ -1,6 +1,5 @@
 ---
 title: RKE Templates and Infrastructure
-weight: 90
 ---
 
 In Rancher, RKE templates are used to provision Kubernetes and define Rancher settings, while node templates are used to provision nodes.

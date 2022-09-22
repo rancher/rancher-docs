@@ -1,7 +1,5 @@
 ---
 title: Rendering the Helm Template in an Air Gapped Environment
-shortTitle: Air Gap Upgrade
-weight: 1
 ---
 
 import Tabs from '@theme/Tabs';

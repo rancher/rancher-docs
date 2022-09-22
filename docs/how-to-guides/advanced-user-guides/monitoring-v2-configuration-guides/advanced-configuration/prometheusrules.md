@@ -1,6 +1,5 @@
 ---
 title: Configuring PrometheusRules
-weight: 3
 ---
 
 A PrometheusRule defines a group of Prometheus alerting and/or recording rules.

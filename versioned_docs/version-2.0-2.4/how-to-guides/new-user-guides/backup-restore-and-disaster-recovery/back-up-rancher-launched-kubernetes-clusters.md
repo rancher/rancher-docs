@@ -1,17 +1,5 @@
 ---
 title: Backing up Rancher Installed on an RKE Kubernetes Cluster
-shortTitle: RKE Installs
-weight: 2
-aliases:
-  - /rancher/v2.0-v2.4/en/installation/after-installation/k8s-install-backup-and-restoration/
-  - /rancher/v2.0-v2.4/en/installation/backups-and-restoration/ha-backup-and-restoration/
-  - /rancher/v2.0-v2.4/en/backups/backups/ha-backups
-  - /rancher/v2.0-v2.4/en/backups/backups/k8s-backups/ha-backups
-  - /rancher/v2.0-v2.4/en/backups/legacy/backup/k8s-backups/ha-backups/
-  - /rancher/v2.0-v2.4/en/backups/legacy/backups/ha-backups
-  - /rancher/v2.0-v2.4/en/backups/legacy/backup/ha-backups
-  - /rancher/v2.0-v2.4/en/backups/v2.0.x-v2.4.x/backup/rke-backups
-  - /rancher/v2.x/en/backups/v2.0.x-v2.4.x/backup/rke-backups/
 ---
 
 import Tabs from '@theme/Tabs';

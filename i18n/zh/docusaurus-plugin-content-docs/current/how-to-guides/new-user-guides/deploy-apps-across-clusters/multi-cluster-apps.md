@@ -1,6 +1,5 @@
 ---
 title: 多集群应用
-weight: 2
 ---
 
 > Rancher v2.5 开始已弃用多集群应用。我们现在建议使用 [Fleet](fleet.md) 来跨集群部署应用。

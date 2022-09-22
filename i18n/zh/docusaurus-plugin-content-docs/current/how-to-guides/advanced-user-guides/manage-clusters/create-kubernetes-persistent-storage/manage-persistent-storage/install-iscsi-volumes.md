@@ -1,6 +1,5 @@
 ---
 title:  iSCSI 卷
-weight: 6000
 ---
 
 在将数据存储在 iSCSI 卷上的 [Rancher 启动的 Kubernetes 集群](../../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)中，你可能会遇到 kubelet 无法自动连接 iSCSI 卷的问题。成此问题的原因很可能是 iSCSI 启动器工具不兼容。你可以在每个集群节点上安装 iSCSI 启动器工具来解决此问题。

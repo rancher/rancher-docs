@@ -1,9 +1,5 @@
 ---
 title: Rolling Back Rancher Installed with Docker
-weight: 1015
-aliases:
-  - /rancher/v2.0-v2.4/en/upgrades/single-node-rollbacks
-  - /rancher/v2.0-v2.4/en/upgrades/rollbacks/single-node-rollbacks
 ---
 
 If a Rancher upgrade does not complete successfully, you'll have to roll back to your Rancher setup that you were using before [Docker Upgrade](./upgrade-docker-installed-rancher.md). Rolling back restores:

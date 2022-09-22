@@ -1,9 +1,5 @@
 ---
 title: Template for an RKE Cluster with a Self-signed Certificate and SSL Termination on Layer 7 Load Balancer
-weight: 3
-aliases:	
-  - /rancher/v2.0-v2.4/en/installation/options/cluster-yml-templates/3-node-externalssl-certificate
-  - /rancher/v2.x/en/installation/resources/advanced/cluster-yml-templates/3-node-externalssl-certificate/
 ---
 
 RKE uses a cluster.yml file to install and configure your Kubernetes cluster.
@@ -13,7 +9,7 @@ This template is intended to be used for RKE add-on installs, which are only sup
 The following template can be used for the cluster.yml if you have a setup with:
 
 - Layer 7 load balancer with self-signed SSL termination (HTTPS)
-- [NGINX Ingress controller](https://kubernetes.github.io/ingress-nginx/) 
+- [NGINX Ingress controller](https://kubernetes.github.io/ingress-nginx/)
 
 > For more options, refer to [RKE Documentation: Config Options](https://rancher.com/docs/rke/latest/en/config-options/).
 

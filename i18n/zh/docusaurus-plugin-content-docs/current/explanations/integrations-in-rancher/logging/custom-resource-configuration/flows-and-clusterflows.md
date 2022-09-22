@@ -1,6 +1,5 @@
 ---
 title: Flows 和 ClusterFlows
-weight: 1
 ---
 
 有关配置 `Flow` 和 `ClusterFlow` 的完整详细信息，请参阅 [Banzai Cloud Logging Operator 文档](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/flow/)。

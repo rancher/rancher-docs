@@ -1,6 +1,5 @@
 ---
 title: Migrating vSphere In-tree Volumes to CSI
-weight: 5
 ---
 Kubernetes is moving away from maintaining cloud providers in-tree. vSphere has an out-of-tree cloud provider that can be used by installing the vSphere cloud provider and cloud storage plugins.
 
@@ -44,7 +43,7 @@ Before installing CPI, we need to taint all nodes with `node.cloudprovider.kuber
 This can be done by running the following commands:
 
 ```
-curl -O https://raw.githubusercontent.com/rancher/helm3-charts/56b622f519728378abeddfe95074f1b87ab73b1e/charts/vsphere-cpi/taints.sh 
+curl -O https://raw.githubusercontent.com/rancher/helm3-charts/56b622f519728378abeddfe95074f1b87ab73b1e/charts/vsphere-cpi/taints.sh
 ```
 
 Or:
@@ -52,10 +51,10 @@ Or:
 ```
 wget https://raw.githubusercontent.com/rancher/helm3-charts/56b622f519728378abeddfe95074f1b87ab73b1e/charts/vsphere-cpi/taints.sh
 chmod +x taints.sh
-./taints.sh <path to kubeconfig if running the command outside the cluster> 
+./taints.sh <path to kubeconfig if running the command outside the cluster>
 ```
 
-Once all nodes are tainted by the running the script, launch the Helm vSphere CPI chart. 
+Once all nodes are tainted by the running the script, launch the Helm vSphere CPI chart.
 
 1. Click **☰ > Cluster Management**.
 1. Go to the cluster where the vSphere CPI chart will be installed and click **Explore**.
@@ -92,17 +91,17 @@ kubectl describe nodes | grep "ProviderID"
 
     ```yaml
       extra_args:
-        feature-gates: "CSIMigration=true,CSIMigrationvSphere=true" 
+        feature-gates: "CSIMigration=true,CSIMigrationvSphere=true"
     ```
 
 ### 4. Drain worker nodes
 
-Worker nodes must be drained during the upgrade before changing the kubelet and kube-controller-manager args. 
+Worker nodes must be drained during the upgrade before changing the kubelet and kube-controller-manager args.
 
 
 1. Click **☰ > Cluster Management**.
 1. Go to the cluster where you will drain worker nodes and click **⋮ > Edit Config**.
 1. In the **Advanced Options** section, set the field **Maximum Worker Nodes Unavailable** to 1.
-1. To drain the nodes during upgrade, select **Drain Nodes > Yes**. 
+1. To drain the nodes during upgrade, select **Drain Nodes > Yes**.
 1. Set **Force** and **Delete Local Data** to **true**.
 1. Click **Save** to upgrade the cluster.

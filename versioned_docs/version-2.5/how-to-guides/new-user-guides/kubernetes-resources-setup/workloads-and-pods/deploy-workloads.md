@@ -1,11 +1,6 @@
 ---
 title: Deploying Workloads
 description: Read this step by step guide for deploying workloads. Deploy a workload to run an application in one or more containers.
-weight: 3026
-aliases:
-  - /rancher/v2.5/en/tasks/workloads/deploy-workloads/
-  - /rancher/v2.5/en/k8s-in-rancher/workloads/deploy-workloads
-  - /rancher/v2.x/en/k8s-in-rancher/workloads/deploy-workloads/
 ---
 
 Deploy a workload to run an application in one or more containers.

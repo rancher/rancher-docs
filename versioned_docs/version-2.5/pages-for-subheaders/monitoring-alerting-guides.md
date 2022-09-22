@@ -1,7 +1,5 @@
 ---
 title: Monitoring Guides
-shortTitle: Guides
-weight: 4
 ---
 
 - [Enable monitoring](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/enable-monitoring.md)

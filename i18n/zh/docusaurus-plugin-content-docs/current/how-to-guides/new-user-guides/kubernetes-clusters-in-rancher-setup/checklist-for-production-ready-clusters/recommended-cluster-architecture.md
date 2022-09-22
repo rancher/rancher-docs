@@ -1,6 +1,5 @@
 ---
 title: 推荐的集群架构
-weight: 1
 ---
 
 有三个角色可以分配给节点，分别是 `etcd`、`controlplane` 和 `worker`。

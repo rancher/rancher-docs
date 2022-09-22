@@ -1,11 +1,7 @@
 ---
 title: Creating a DigitalOcean Cluster
-shortTitle: DigitalOcean
-weight: 2215
-aliases:
-  - /rancher/v2.5/en/tasks/clusters/creating-a-cluster/create-cluster-digital-ocean/
-  - /rancher/v2.x/en/cluster-provisioning/rke-clusters/node-pools/digital-ocean/
 ---
+
 In this section, you'll learn how to use Rancher to install an [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes cluster in DigitalOcean.
 
 First, you will set up your DigitalOcean cloud credentials in Rancher. Then you will use your cloud credentials to create a node template, which Rancher will use to provision new nodes in DigitalOcean.

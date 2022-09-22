@@ -1,16 +1,12 @@
 ---
 title: Migrating to Rancher v2.5 Monitoring
-weight: 9
-aliases:
-  - /rancher/v2.5/en/monitoring-alerting/migrating
-  - /rancher/v2.x/en/monitoring-alerting/v2.5/migrating/
 ---
 
 If you previously enabled Monitoring, Alerting, or Notifiers in Rancher before v2.5, there is no automatic upgrade path for switching to the new monitoring/alerting solution. Before deploying the new monitoring solution via Cluster Explore, you will need to disable and remove all existing custom alerts, notifiers and monitoring installations for the whole cluster and in all projects.
 
 ## Monitoring Before Rancher v2.5
 
-As of v2.2.0, Rancher's Cluster Manager allowed users to enable Monitoring & Alerting V1 (both powered by [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator)) independently within a cluster. 
+As of v2.2.0, Rancher's Cluster Manager allowed users to enable Monitoring & Alerting V1 (both powered by [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator)) independently within a cluster.
 
 When Monitoring is enabled, Monitoring V1 deploys [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/docs/grafana/latest/getting-started/what-is-grafana/) onto a cluster to monitor the state of processes of your cluster nodes, Kubernetes components, and software deployments and create custom dashboards to make it easy to visualize collected metrics.
 
@@ -20,7 +16,7 @@ When Alerts or Notifiers are enabled, Alerting V1 deploys [Prometheus Alertmanag
 
 ## Monitoring and Alerting via Cluster Explorer in Rancher 2.5
 
-As of v2.5.0, Rancher's Cluster Explorer now allows users to enable Monitoring & Alerting V2 (both powered by [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator)) together within a cluster. 
+As of v2.5.0, Rancher's Cluster Explorer now allows users to enable Monitoring & Alerting V2 (both powered by [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator)) together within a cluster.
 
 Unlike in Monitoring & Alerting V1, both features are packaged in a single Helm chart found [here](https://github.com/rancher/charts/blob/main/charts/rancher-monitoring). The behavior of this chart and configurable fields closely matches [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack), a Prometheus Community Helm chart, and any deviations from the upstream chart can be found in the [CHANGELOG.md](https://github.com/rancher/charts/blob/main/charts/rancher-monitoring/CHANGELOG.md) maintained with the chart.
 
@@ -80,8 +76,8 @@ metadata:
     grafana_dashboard: "1"
 data:
   custom-dashboard.json: |
-    { 
-      ... 
+    {
+      ...
     }
 ```
 

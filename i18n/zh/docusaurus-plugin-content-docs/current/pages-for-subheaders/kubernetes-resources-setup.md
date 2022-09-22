@@ -1,6 +1,5 @@
 ---
 title: Kubernetes 资源
-weight: 18
 ---
 
 你可以在 Rancher UI 中查看和操作 Kubernetes 集群中的所有自定义资源和 CRD。

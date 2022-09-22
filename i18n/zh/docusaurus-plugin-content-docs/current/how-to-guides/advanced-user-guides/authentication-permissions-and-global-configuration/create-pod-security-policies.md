@@ -1,6 +1,5 @@
 ---
 title: Pod 安全策略
-weight: 60
 ---
 
 _Pod 安全策略（PSP）_ 是用来控制安全敏感相关 Pod 规范（例如 root 特权）的对象。

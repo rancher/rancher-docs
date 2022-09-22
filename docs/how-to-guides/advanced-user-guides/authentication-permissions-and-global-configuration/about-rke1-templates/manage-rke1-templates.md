@@ -1,6 +1,5 @@
 ---
 title: Creating and Revising RKE Templates
-weight: 32
 ---
 
 This section describes how to manage RKE templates and revisions. You an create, share, update, and delete templates from the **Cluster Management** view under **RKE1 Configuration > RKE Templates**.

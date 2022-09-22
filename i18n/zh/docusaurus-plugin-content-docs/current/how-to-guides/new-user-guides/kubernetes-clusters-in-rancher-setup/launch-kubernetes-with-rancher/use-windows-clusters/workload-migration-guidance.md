@@ -1,6 +1,5 @@
 ---
 title: 将 Windows 工作负载从 RKE2 迁移到 RKE2
-weight: 3
 ---
 
 **注意**：Rancher Support 的 SLA 不涵盖本文档的内容。因此，请谨慎继续。

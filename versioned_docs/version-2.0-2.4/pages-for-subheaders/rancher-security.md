@@ -1,6 +1,5 @@
 ---
 title: Security
-weight: 20
 ---
 
 <table width="100%">

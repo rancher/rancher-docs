@@ -1,12 +1,5 @@
 ---
 title: Upgrading Rancher Installed with Docker
-weight: 1010
-aliases:
-  - /rancher/v2.0-v2.4/en/upgrades/single-node-upgrade/
-  - /rancher/v2.0-v2.4/en/upgrades/upgrades/single-node-air-gap-upgrade
-  - /rancher/v2.0-v2.4/en/upgrades/upgrades/single-node
-  - /rancher/v2.0-v2.4/en/upgrades/upgrades/single-node-upgrade/
-  - /rancher/v2.0-v2.4/en/installation/install-rancher-on-k8s/upgrades/upgrades/single-node/
 ---
 
 import Tabs from '@theme/Tabs';

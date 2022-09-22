@@ -1,6 +1,5 @@
 ---
 title: Rancher 弃用的功能
-weight: 100
 ---
 
 ### Rancher 的弃用策略是什么？

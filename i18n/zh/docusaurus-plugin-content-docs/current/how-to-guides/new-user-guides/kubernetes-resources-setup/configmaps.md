@@ -1,6 +1,5 @@
 ---
 title: ConfigMap
-weight: 3061
 ---
 
 大多数 Kubernetes 密文用于存储敏感信息，但是 [ConfigMap](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) 会存储一般配置信息，例如一组配置文件。由于 ConfigMap 不存储敏感信息，因此 ConfigMap 可以自动更新，不需要在更新后重启其容器（其他类型的密文大多需要手动更新和重启容器后才能生效）。

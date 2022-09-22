@@ -1,10 +1,9 @@
 ---
 title: Migrating to Rancher v2.5 Logging
-weight: 2
 ---
 Starting in v2.5, the logging feature available within Rancher has been completely overhauled. The [logging operator](https://github.com/banzaicloud/logging-operator) from Banzai Cloud has been adopted; Rancher configures this tooling for use when deploying logging.
 
-Among the many features and changes in the new logging functionality is the removal of project-specific logging configurations. Instead, one now configures logging at the namespace level. Cluster-level logging remains available, but configuration options differ. 
+Among the many features and changes in the new logging functionality is the removal of project-specific logging configurations. Instead, one now configures logging at the namespace level. Cluster-level logging remains available, but configuration options differ.
 
 ## Installation
 
@@ -12,27 +11,27 @@ To install logging in Rancher v2.5+, refer to the [installation instructions](..
 
 ### Terminology
 
-In v2.5+, logging configuration in the **Cluster Dashboard**. To configure logging custom resources after the Logging application is installed, go to the left navigation bar and click **Logging**. It is from this menu option that logging for both cluster and namespace is configured. 
+In v2.5+, logging configuration in the **Cluster Dashboard**. To configure logging custom resources after the Logging application is installed, go to the left navigation bar and click **Logging**. It is from this menu option that logging for both cluster and namespace is configured.
 
 :::note
 
-Logging is installed on a per-cluster basis. You will need to navigate between clusters to configure logging for each cluster. 
+Logging is installed on a per-cluster basis. You will need to navigate between clusters to configure logging for each cluster.
 
 :::
 
 There are four key concepts to understand for v2.5+ logging:
 
 1. Outputs
-   
+
     `Outputs` are a configuration resource that determine a destination for collected logs. This is where settings for aggregators such as ElasticSearch, Kafka, etc. are stored. `Outputs` are namespaced resources.
 
 2. Flows
 
-    `Flows` are a configuration resource that determine collection, filtering, and destination rules for logs. It is within a flow that one will configure what logs to collect, how to mutate or filter them, and which `Outputs` to send the logs to. `Flows` are namespaced resources, and can connect either to an `Output` in the same namespace, or a `ClusterOutput`. 
+    `Flows` are a configuration resource that determine collection, filtering, and destination rules for logs. It is within a flow that one will configure what logs to collect, how to mutate or filter them, and which `Outputs` to send the logs to. `Flows` are namespaced resources, and can connect either to an `Output` in the same namespace, or a `ClusterOutput`.
 
 3. ClusterOutputs
 
-    `ClusterOutputs` serve the same functionality as `Outputs`, except they are a cluster-scoped resource. `ClusterOutputs` are necessary when collecting logs cluster-wide, or if you wish to provide an `Output` to all namespaces in your cluster. 
+    `ClusterOutputs` serve the same functionality as `Outputs`, except they are a cluster-scoped resource. `ClusterOutputs` are necessary when collecting logs cluster-wide, or if you wish to provide an `Output` to all namespaces in your cluster.
 
 4. ClusterFlows
 
@@ -40,7 +39,7 @@ There are four key concepts to understand for v2.5+ logging:
 
 ## Cluster Logging
 
-To configure cluster-wide logging for v2.5+ logging, one needs to set up a `ClusterFlow`. This object defines the source of logs, any transformations or filters to be applied, and finally the `Output` (or `Outputs`) for the logs. 
+To configure cluster-wide logging for v2.5+ logging, one needs to set up a `ClusterFlow`. This object defines the source of logs, any transformations or filters to be applied, and finally the `Output` (or `Outputs`) for the logs.
 
 :::note Important:
 
@@ -56,17 +55,17 @@ In legacy logging, in order to collect logs from across the entire cluster, one 
    2. You do not need to configure any filters if you do not wish - default behavior does not require their creation
    3. Define your cluster `Output` or `Outputs`
 
-This will result in logs from all sources in the cluster (all pods, and all system components) being collected and sent to the `Output` or `Outputs` you defined in the `ClusterFlow`. 
+This will result in logs from all sources in the cluster (all pods, and all system components) being collected and sent to the `Output` or `Outputs` you defined in the `ClusterFlow`.
 
 ## Project Logging
 
-Logging in v2.5+ is not project-aware. This means that in order to collect logs from pods running in project namespaces, you will need to define `Flows` for those namespaces. 
+Logging in v2.5+ is not project-aware. This means that in order to collect logs from pods running in project namespaces, you will need to define `Flows` for those namespaces.
 
 To collect logs from a specific namespace, follow these steps:
 
 1. Define an `Output` or `ClusterOutput` according to the instructions found under [Output Configuration](#output-configuration)
 2. Create a `Flow`, ensuring that it is set to be created in the namespace in which you want to gather logs.
-   1. If you wish to define _Include_ or _Exclude_ rules, you may do so. Otherwise, removal of all rules will result in all pods in the target namespace having their logs collected. 
+   1. If you wish to define _Include_ or _Exclude_ rules, you may do so. Otherwise, removal of all rules will result in all pods in the target namespace having their logs collected.
    2. You do not need to configure any filters if you do not wish - default behavior does not require their creation
    3. Define your outputs - these can be either `ClusterOutput` or `Output` objects.
 
@@ -79,7 +78,7 @@ To collect logs from a project, repeat the above steps for every namespace withi
 :::
 
 ## Output Configuration
-In legacy logging, there are five logging destinations to choose from: Elasticsearch, Splunk, Kafka, Fluentd, and Syslog. With the exception of Syslog, all of these destinations are available in logging v2.5+. 
+In legacy logging, there are five logging destinations to choose from: Elasticsearch, Splunk, Kafka, Fluentd, and Syslog. With the exception of Syslog, all of these destinations are available in logging v2.5+.
 
 
 ### Elasticsearch
@@ -164,7 +163,7 @@ _(1) These values are to be specified as paths to files. Those files must be mou
 
 ### Syslog
 
-As of v2.5.2, syslog is not currently supported for `Outputs` using v2.5+ logging. 
+As of v2.5.2, syslog is not currently supported for `Outputs` using v2.5+ logging.
 
 ## Custom Log Fields
 
@@ -185,5 +184,5 @@ spec:
 
 In legacy logging, collecting logs from system components was accomplished by checking a box labeled "Include System Log" when setting up cluster logging. In v2.5+ logging, system logs are gathered in one of two ways:
 
-1. Gather all cluster logs, not specifying any match or exclusion rules. This results in all container logs from the cluster being collected, which includes system logs. 
-2. Specifically target system logs by adding match rules for system components. Specific match rules depend on the component being collected. 
+1. Gather all cluster logs, not specifying any match or exclusion rules. This results in all container logs from the cluster being collected, which includes system logs.
+2. Specifically target system logs by adding match rules for system components. Specific match rules depend on the component being collected.

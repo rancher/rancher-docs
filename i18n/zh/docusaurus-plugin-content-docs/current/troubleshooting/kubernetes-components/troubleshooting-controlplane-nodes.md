@@ -1,6 +1,5 @@
 ---
 title: Controlplane 节点故障排除
-weight: 2
 ---
 
 本文适用于具有 `controlplane` 角色的节点。

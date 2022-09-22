@@ -1,6 +1,5 @@
 ---
 title: Setting up Existing Storage
-weight: 1
 ---
 
 This section describes how to set up existing persistent storage for workloads in Rancher.
@@ -23,9 +22,9 @@ To set up storage, follow these steps:
 
 Creating a persistent volume in Rancher will not create a storage volume. It only creates a Kubernetes resource that maps to an existing volume. Therefore, before you can create a persistent volume as a Kubernetes resource, you must have storage provisioned.
 
-The steps to set up a persistent storage device will differ based on your infrastructure. We provide examples of how to set up storage using [vSphere,](../provisioning-storage-examples/vsphere-storage.md) [NFS,](../provisioning-storage-examples/nfs-storage.md) or Amazon's [EBS.](../provisioning-storage-examples/persistent-storage-in-amazon-ebs.md) 
+The steps to set up a persistent storage device will differ based on your infrastructure. We provide examples of how to set up storage using [vSphere,](../provisioning-storage-examples/vsphere-storage.md) [NFS,](../provisioning-storage-examples/nfs-storage.md) or Amazon's [EBS.](../provisioning-storage-examples/persistent-storage-in-amazon-ebs.md)
 
-If you have a pool of block storage, and you don't want to use a cloud provider, Longhorn could help you provide persistent storage to your Kubernetes cluster. 
+If you have a pool of block storage, and you don't want to use a cloud provider, Longhorn could help you provide persistent storage to your Kubernetes cluster.
 
 ### 2. Add a persistent volume that refers to the persistent storage
 
@@ -57,7 +56,7 @@ These steps describe how to set up a PVC in the namespace where your stateful wo
 
 1. Go to the project containing a workload that you want to add a persistent volume claim to.
 
-1. Then click the **Volumes** tab and click **Add Volume**. (In versions before v2.3.0, click **Workloads** on the main navigation bar, then **Volumes.**) 
+1. Then click the **Volumes** tab and click **Add Volume**. (In versions before v2.3.0, click **Workloads** on the main navigation bar, then **Volumes.**)
 
 1. Enter a **Name** for the volume claim.
 

@@ -1,6 +1,5 @@
 ---
 title: Pod 安全策略
-weight: 5600
 ---
 
 :::note

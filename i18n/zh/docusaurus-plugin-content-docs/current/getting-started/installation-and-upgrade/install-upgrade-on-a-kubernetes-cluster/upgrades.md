@@ -1,6 +1,5 @@
 ---
 title: 升级
-weight: 2
 ---
 本文介绍如何升级使用 Helm 安装在 Kubernetes 集群上的 Rancher Server。这些步骤也适用于使用 Helm 进行的离线安装。
 

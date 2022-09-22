@@ -1,6 +1,5 @@
 ---
 title: RKE1 和 RKE2 差​​异
-weight: 2450
 ---
 
 RKE2，也称为 RKE Government，是一个完全符合标准的 Kubernetes 发行版，它专注于安全性和合规性。它被认为是 Rancher Kubernetes Engine（即 RKE1）的下一个迭代。

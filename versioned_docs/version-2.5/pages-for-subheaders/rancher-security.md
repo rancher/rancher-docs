@@ -1,8 +1,5 @@
 ---
 title: Security
-weight: 20
-aliases:
-  - /rancher/v2.x/en/security/rancher-2.5/
 ---
 
 <table width="100%">

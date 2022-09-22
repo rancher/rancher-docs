@@ -1,6 +1,5 @@
 ---
 title: Uninstall Prometheus Federator
-weight: 2
 ---
 
 1. Click **☰ > Cluster Management**.

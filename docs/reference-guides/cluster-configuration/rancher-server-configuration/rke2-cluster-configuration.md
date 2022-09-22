@@ -1,7 +1,5 @@
 ---
 title: RKE2 Cluster Configuration Reference
-shortTitle: RKE2 Cluster Configuration
-weight: 5
 ---
 
 This section covers the configuration options that are available in Rancher for a new or existing RKE2 Kubernetes cluster.

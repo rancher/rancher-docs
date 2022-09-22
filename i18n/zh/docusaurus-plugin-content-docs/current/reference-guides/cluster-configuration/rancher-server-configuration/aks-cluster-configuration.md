@@ -1,7 +1,5 @@
 ---
-shortTitle: AKS 集群配置
 title: AKS 集群配置参考
-weight: 4
 ---
 
 ## Rancher 2.6 变更

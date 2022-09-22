@@ -1,7 +1,5 @@
 ---
 title: EKS Cluster Configuration Reference
-shortTitle: EKS Cluster Configuration
-weight: 2
 ---
 
 import Tabs from '@theme/Tabs';

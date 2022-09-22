@@ -1,6 +1,5 @@
 ---
 title: 离线 Helm CLI 安装
-weight: 1
 ---
 
 本文介绍如何使用 Helm CLI 在离线环境中安装 Rancher Server。离线环境可以是 Rancher Server 离线安装、防火墙后面或代理后面。

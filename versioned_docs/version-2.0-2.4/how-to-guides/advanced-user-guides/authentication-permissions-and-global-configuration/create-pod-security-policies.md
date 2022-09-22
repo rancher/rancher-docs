@@ -1,10 +1,5 @@
 ---
 title: Pod Security Policies
-weight: 1135
-aliases:
-    - /rancher/v2.0-v2.4/en/concepts/global-configuration/pod-security-policies/
-    - /rancher/v2.0-v2.4/en/tasks/global-configuration/pod-security-policies/
-    - /rancher/v2.0-v2.4/en/tasks/clusters/adding-a-pod-security-policy/
 ---
 
 _Pod Security Policies_ (or PSPs) are objects that control security-sensitive aspects of pod specification (like root privileges).

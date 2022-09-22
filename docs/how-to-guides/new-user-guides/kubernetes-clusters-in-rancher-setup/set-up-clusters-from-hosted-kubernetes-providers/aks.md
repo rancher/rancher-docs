@@ -1,7 +1,5 @@
 ---
 title: Creating an AKS Cluster
-shortTitle: Azure Kubernetes Service
-weight: 2115
 ---
 
 You can use Rancher to create a cluster hosted in Microsoft Azure Kubernetes Service (AKS).
@@ -75,12 +73,12 @@ You can also follow these instructions to set up a service principal and give it
 1. Enter a name. This will be the name of your service principal.
 1. Optional: Choose which accounts can use the service principal.
 1. Click **Register**.
-1. You should now see the name of your service principal under **Azure Active Directory > App registrations**. 
+1. You should now see the name of your service principal under **Azure Active Directory > App registrations**.
 1. Click the name of your service principal. Take note of the application ID (also called app ID or client ID) so that you can use it when provisioning your AKS cluster. Then click **Certificates & secrets**.
 1. Click **New client secret**.
 1. Enter a short description, pick an expiration time, and click **Add**. Take note of the client secret so that you can use it when provisioning the AKS cluster.
 
-**Result:** You have created a service principal and you should be able to see it listed in the **Azure Active Directory** section under **App registrations**. You still need to give the service principal access to AKS. 
+**Result:** You have created a service principal and you should be able to see it listed in the **Azure Active Directory** section under **App registrations**. You still need to give the service principal access to AKS.
 
 To give role-based access to your service principal,
 
@@ -138,7 +136,7 @@ The second way is to run a command to register the cluster with Rancher. Once th
 
 :::note
 
-Please be aware that when registering an existing AKS cluster, the cluster might take some time, possibly hours, to appear in the `Cluster To register` dropdown list. This outcome will be based on region. 
+Please be aware that when registering an existing AKS cluster, the cluster might take some time, possibly hours, to appear in the `Cluster To register` dropdown list. This outcome will be based on region.
 
 :::
 

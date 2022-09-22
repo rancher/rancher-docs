@@ -1,7 +1,5 @@
 ---
 title: EKS Cluster Configuration Reference
-shortTitle: EKS Cluster Configuration
-weight: 2
 ---
 
 ### Account Access
@@ -80,7 +78,7 @@ For more information on EKS control plane logging, refer to the official [docume
 
 ### Managed Node Groups
 
-Amazon EKS managed node groups automate the provisioning and lifecycle management of nodes (Amazon EC2 instances) for Amazon EKS Kubernetes clusters. 
+Amazon EKS managed node groups automate the provisioning and lifecycle management of nodes (Amazon EC2 instances) for Amazon EKS Kubernetes clusters.
 
 For more information about how node groups work and how they are configured, refer to the [EKS documentation.](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html)
 

@@ -1,15 +1,6 @@
 ---
 title: Rancher Integration with Logging Services
-shortTitle: Logging
 description: Rancher integrates with popular logging services. Learn the requirements and benefits of integrating with logging services, and enable logging on your cluster.
-metaDescription: "Rancher integrates with popular logging services. Learn the requirements and benefits of integrating with logging services, and enable logging on your cluster."
-weight: 15
-aliases:
-  - /rancher/v2.5/en/dashboard/logging
-  - /rancher/v2.5/en/logging/v2.5
-  - /rancher/v2.5/en/cluster-admin/tools/logging
-  - /rancher/v2.x/en/logging/
-  - /rancher/v2.x/en/logging/v2.5/
 ---
 
 import Tabs from '@theme/Tabs';

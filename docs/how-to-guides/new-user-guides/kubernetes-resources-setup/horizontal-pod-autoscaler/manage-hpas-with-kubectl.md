@@ -1,6 +1,5 @@
 ---
 title: Managing HPAs with kubectl
-weight: 3029
 ---
 
 This section describes HPA management with `kubectl`. This document has instructions for how to:

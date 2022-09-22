@@ -1,6 +1,5 @@
 ---
 title: 过期 Webhook 证书轮换
-weight: 120
 ---
 
 如果你的 Rancher 版本安装了 `rancher-webhook`，某些版本创建的证书将在一年后过期。如果证书未续订，你需要轮换你的 webhook 证书。

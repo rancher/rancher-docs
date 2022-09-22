@@ -1,6 +1,5 @@
 ---
 title: Networking
-weight: 102
 ---
 
 The commands/steps listed on this page can be used to check networking related issues in your cluster.
@@ -56,7 +55,7 @@ This container [does not support ARM nodes](https://github.com/leodotcloud/swiss
     #!/bin/bash
     echo "=> Start network overlay test"
       kubectl get pods -l name=overlaytest -o jsonpath='{range .items[*]}{@.metadata.name}{" "}{@.spec.nodeName}{"\n"}{end}' |
-      while read spod shost 
+      while read spod shost
         do kubectl get pods -l name=overlaytest -o jsonpath='{range .items[*]}{@.status.podIP}{" "}{@.spec.nodeName}{"\n"}{end}' |
         while read tip thost
           do kubectl --request-timeout='10s' exec $spod -c overlaytest -- /bin/sh -c "ping -c2 $tip > /dev/null 2>&1"

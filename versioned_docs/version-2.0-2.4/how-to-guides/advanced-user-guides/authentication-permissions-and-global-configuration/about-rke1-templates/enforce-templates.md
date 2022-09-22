@@ -1,6 +1,5 @@
 ---
 title: Template Enforcement
-weight: 32
 ---
 
 This section describes how template administrators can enforce templates in Rancher, restricting the ability of users to create clusters without a template.

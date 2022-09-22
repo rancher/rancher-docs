@@ -1,6 +1,5 @@
 ---
 title: PromQL Expression Reference
-weight: 6
 ---
 
 The PromQL expressions in this doc can be used to configure alerts.

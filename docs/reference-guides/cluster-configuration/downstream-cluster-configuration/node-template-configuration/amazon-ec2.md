@@ -1,22 +1,21 @@
 ---
 title: EC2 Node Template Configuration
-weight: 1
 ---
 
-For more details about EC2, nodes, refer to the official documentation for the [EC2 Management Console](https://aws.amazon.com/ec2). 
+For more details about EC2, nodes, refer to the official documentation for the [EC2 Management Console](https://aws.amazon.com/ec2).
 ### Region
 
 In the **Region** field, select the same region that you used when creating your cloud credentials.
 
 ### Cloud Credentials
 
-Your AWS account access information, stored in a [cloud credential.](../../../user-settings/manage-cloud-credentials.md) 
+Your AWS account access information, stored in a [cloud credential.](../../../user-settings/manage-cloud-credentials.md)
 
 See [Amazon Documentation: Creating Access Keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) how to create an Access Key and Secret Key.
 
 See [Amazon Documentation: Creating IAM Policies (Console)](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html#access_policies_create-start) how to create an IAM policy.
 
-See [Amazon Documentation: Adding Permissions to a User (Console)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_change-permissions.html#users_change_permissions-add-console) how to attach an IAM 
+See [Amazon Documentation: Adding Permissions to a User (Console)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_change-permissions.html#users_change_permissions-add-console) how to attach an IAM
 
 See our three example JSON policies:
 
@@ -26,7 +25,7 @@ See our three example JSON policies:
 
 ### Authenticate & Configure Nodes
 
-Choose an availability zone and network settings for your cluster. 
+Choose an availability zone and network settings for your cluster.
 
 ### Security Group
 

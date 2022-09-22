@@ -1,6 +1,5 @@
 ---
 title: 创建应用
-weight: 400
 ---
 
 Rancher 的应用市场基于 Helm 仓库和 Helm Chart。你可以添加基于 HTTP 的标准 Helm 仓库以及任何包含 Chart 的 Git 仓库。

@@ -1,6 +1,5 @@
 ---
 title: Dockershim
-weight: 300
 ---
 
 The Dockershim is the CRI compliant layer between the Kubelet and the Docker daemon. As part of the Kubernetes 1.20 release, the [deprecation of the in-tree Dockershim was announced](https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/). Removal is currently scheduled for Kubernetes 1.24. For more information on the deprecation and its timelines, see the [Kubernetes Dockershim Deprecation FAQ](https://kubernetes.io/blog/2020/12/02/dockershim-faq/#when-will-dockershim-be-removed).

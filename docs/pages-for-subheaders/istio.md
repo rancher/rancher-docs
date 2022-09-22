@@ -1,6 +1,5 @@
 ---
 title: Istio
-weight: 14
 ---
 
 [Istio](https://istio.io/) is an open-source tool that makes it easier for DevOps teams to observe, secure, control, and troubleshoot the traffic within a complex network of microservices.
@@ -34,13 +33,13 @@ This Helm chart will be available via the Apps and Marketplace in the UI. A user
 
 ## Tools Bundled with Istio
 
-Our [Istio](https://istio.io/) installer wraps the istioctl binary commands in a handy Helm chart, including an overlay file option to allow complex customization. 
+Our [Istio](https://istio.io/) installer wraps the istioctl binary commands in a handy Helm chart, including an overlay file option to allow complex customization.
 
 It also includes the following:
 
 ### Kiali
 
-Kiali is a comprehensive visualization aid used for graphing traffic flow throughout the service mesh. It allows you to see how they are connected, including the traffic rates and latencies between them. 
+Kiali is a comprehensive visualization aid used for graphing traffic flow throughout the service mesh. It allows you to see how they are connected, including the traffic rates and latencies between them.
 
 You can check the health of the service mesh, or drill down to see the incoming and outgoing requests to a single component.
 
@@ -70,7 +69,7 @@ To remove Istio components from a cluster, namespace, or workload, refer to the 
 
 There is no upgrade path for Istio versions less than 1.7.x. To successfully install Istio through **Apps & Marketplace,** you will need to disable your existing Istio from the global view in the legacy Rancher UI.
 
-If you have a significant amount of additional Istio CRDs you might consider manually migrating CRDs that are supported in both versions of Istio. You can do this by running `kubectl get <resource> -n istio-system -o yaml`, save the output yaml and re-apply in the new version. 
+If you have a significant amount of additional Istio CRDs you might consider manually migrating CRDs that are supported in both versions of Istio. You can do this by running `kubectl get <resource> -n istio-system -o yaml`, save the output yaml and re-apply in the new version.
 
 Another option is to manually uninstall istio resources one at a time, but leave the resources that are supported in both versions of Istio and that will not be installed by the newest version. This method is more likely to result in issues installing the new version, but could be a good option depending on your situation.
 
@@ -78,7 +77,7 @@ Another option is to manually uninstall istio resources one at a time, but leave
 
 > By default, only cluster-admins have access to Kiali. For instructions on how to allow admin, edit or views roles to access them, see [this section.](../explanations/integrations-in-rancher/istio/rbac-for-istio.md)
 
-After Istio is set up in a cluster, Grafana, Prometheus, and Kiali are available in the Rancher UI. 
+After Istio is set up in a cluster, Grafana, Prometheus, and Kiali are available in the Rancher UI.
 
 To access the Grafana and Prometheus visualizations,
 
@@ -92,9 +91,9 @@ To access the Kiali visualization,
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to see Kiali and click **Explore**.
 1. In the left navigation bar, click **Istio**.
-1. Click **Kiali**. From here you can access the **Traffic Graph** tab or the **Traffic Metrics** tab to see network visualizations and metrics. 
+1. Click **Kiali**. From here you can access the **Traffic Graph** tab or the **Traffic Metrics** tab to see network visualizations and metrics.
 
-By default, all namespace will picked up by prometheus and make data available for Kiali graphs. Refer to [selector/scrape config setup](../explanations/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md) if you would like to use a different configuration for prometheus data scraping. 
+By default, all namespace will picked up by prometheus and make data available for Kiali graphs. Refer to [selector/scrape config setup](../explanations/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md) if you would like to use a different configuration for prometheus data scraping.
 
 Your access to the visualizations depend on your role. Grafana and Prometheus are only available for `cluster-admin` roles. The Kiali UI is available only to `cluster-admin` by default, but `cluster-admin` can allow other roles to access them by editing the Istio values.yaml.
 
@@ -113,7 +112,7 @@ For more information on the Istio sidecar, refer to the [Istio sidecare-injectio
 By default, each Rancher-provisioned cluster has one NGINX ingress controller allowing traffic into the cluster. Istio also installs an ingress gateway by default into the `istio-system` namespace.  The result is that your cluster will have two ingresses in your cluster.
 
 ![In an Istio-enabled cluster, you can have two ingresses: the default Nginx ingress, and the default Istio controller.](/img/istio-ingress.svg)
- 
+
  Additional Istio Ingress gateways can be enabled via the [overlay file](configuration-options.md#overlay-file).
 
 ### Egress Support

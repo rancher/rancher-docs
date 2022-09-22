@@ -1,6 +1,5 @@
 ---
 title: Pod Security Policies
-weight: 60
 ---
 
 _Pod Security Policies_ (or PSPs) are objects that control security-sensitive aspects of pod specification (like root privileges).

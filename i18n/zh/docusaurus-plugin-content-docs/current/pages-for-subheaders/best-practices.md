@@ -1,6 +1,5 @@
 ---
 title: 最佳实践
-weight: 4
 ---
 
 本节介绍 Rancher 实现的最佳实践，其中包括对 Kubernetes、Docker、容器等技术的使用建议。最佳实践旨在利用 Rancher 及其客户的运营经验，助你更好地实现 Rancher。

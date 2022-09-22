@@ -1,6 +1,5 @@
 ---
 title: 升级和回滚 Kubernetes
-weight: 70
 ---
 
 升级到最新版本的 Rancher 之后，下游 Kubernetes 集群可以升级为 Rancher 支持的最新的 Kubernetes 版本。

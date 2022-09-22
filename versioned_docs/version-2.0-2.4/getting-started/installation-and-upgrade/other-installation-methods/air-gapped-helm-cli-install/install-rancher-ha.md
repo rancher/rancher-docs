@@ -1,12 +1,5 @@
 ---
 title: 4. Install Rancher
-weight: 400
-aliases:
-  - /rancher/v2.0-v2.4/en/installation/air-gap-high-availability/config-rancher-system-charts/
-  - /rancher/v2.0-v2.4/en/installation/air-gap-high-availability/config-rancher-for-private-reg/
-  - /rancher/v2.0-v2.4/en/installation/air-gap-single-node/install-rancher
-  - /rancher/v2.0-v2.4/en/installation/air-gap/install-rancher
-  - /rancher/v2.0-v2.4/en/installation/air-gap-high-availability/install-rancher/
 ---
 
 import Tabs from '@theme/Tabs';

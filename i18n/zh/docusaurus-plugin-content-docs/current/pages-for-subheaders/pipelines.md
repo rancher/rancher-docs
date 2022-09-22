@@ -1,6 +1,5 @@
 ---
 title: 流水线
-weight: 10
 ---
 
 import Tabs from '@theme/Tabs';

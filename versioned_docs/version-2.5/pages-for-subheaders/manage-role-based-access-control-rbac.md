@@ -1,9 +1,5 @@
 ---
 title: Role-Based Access Control (RBAC)
-weight: 1120
-aliases:
-  - /rancher/v2.5/en/concepts/global-configuration/users-permissions-roles/
-  - /rancher/v2.x/en/admin-settings/rbac/
 ---
 
 Within Rancher, each person authenticates as a _user_, which is a login that grants you access to Rancher. As mentioned in [Authentication](about-authentication.md), users can either be local or external.
@@ -16,7 +12,7 @@ After you configure external authentication, the users that display on the **Use
 
 ## Users and Roles
 
-Once the user logs in to Rancher, their _authorization_, or their access rights within the system, is determined by _global permissions_, and _cluster and project roles_.  
+Once the user logs in to Rancher, their _authorization_, or their access rights within the system, is determined by _global permissions_, and _cluster and project roles_.
 
 - [Global Permissions](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md):
 

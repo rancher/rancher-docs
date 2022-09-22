@@ -1,9 +1,5 @@
 ---
 title: RancherD Configuration Reference
-weight: 1
-aliases:
-  - /rancher/v2.5/en/installation/install-rancher-on-linux/rancherd-configuration
-  - /rancher/v2.x/en/installation/install-rancher-on-linux/rancherd-configuration/
 ---
 
 > **Note:** RancherD was an experimental feature available as part of Rancher v2.5.4 through v2.5.10 but is now deprecated and not available for recent releases.
@@ -230,7 +226,7 @@ It can be run with the following options:
 |  `--server value, -s value`   | Server to connect to, used to join a cluster |
 |  `--cluster-reset`  | Forget all peers and become sole member of a new cluster |
 | `--secrets-encryption`  | Enable Secret encryption at rest |
- 
+
 
 
 # RancherD Agent CLI Options

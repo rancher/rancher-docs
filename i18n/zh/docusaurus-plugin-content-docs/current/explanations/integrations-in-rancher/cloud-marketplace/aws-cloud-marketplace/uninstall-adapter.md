@@ -1,6 +1,5 @@
 ---
 title: 卸载 Adapter
-weight: 3
 ---
 
 ### 1. 使用 Helm 卸载 Adapter Chart：

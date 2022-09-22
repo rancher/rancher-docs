@@ -1,6 +1,5 @@
 ---
 title: Customizing Grafana Dashboards
-weight: 5
 ---
 
 In this section, you'll learn how to customize the Grafana dashboard to show metrics that apply to a certain container.
@@ -27,12 +26,12 @@ For any panel, you can click the title and click **Explore** to get the PromQL q
 For this example, we would like to get the CPU usage for the Alertmanager container, so we click **CPU Utilization > Inspect.**
 
 The **Data** tab shows the underlying data as a time series, with the time in first column and the PromQL query result in the second column. Copy the PromQL query.
-    
+
 ```
 (1 - (avg(irate({__name__=~"node_cpu_seconds_total|windows_cpu_time_total",mode="idle"}[5m])))) * 100
 ```
 
-You can then modify the query in the Grafana panel or create a new Grafana panel using the query. 
+You can then modify the query in the Grafana panel or create a new Grafana panel using the query.
 
 See also:
 

@@ -1,6 +1,5 @@
 ---
 title: 在 vSphere 中配置 Kubernetes 集群
-weight: 1
 ---
 
 在本节中，你将学习如何使用 Rancher 在 vSphere 中安装 [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes 集群。

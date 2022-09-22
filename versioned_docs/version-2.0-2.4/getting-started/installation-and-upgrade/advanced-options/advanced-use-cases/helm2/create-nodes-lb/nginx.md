@@ -1,10 +1,7 @@
 ---
 title: NGINX
-weight: 270
-aliases:
-  - /rancher/v2.0-v2.4/en/installation/options/helm2/create-nodes-lb/nginx
-  - /rancher/v2.x/en/installation/resources/advanced/helm2/create-nodes-lb/nginx/
 ---
+
 NGINX will be configured as Layer 4 load balancer (TCP) that forwards connections to one of your Rancher nodes.
 
 >**Note:**
@@ -29,7 +26,7 @@ After installing NGINX, you need to update the NGINX configuration file, `nginx.
     >**Note:** See [NGINX Documentation: TCP and UDP Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/tcp-udp-load-balancer/) for all configuration options.
 
     <figcaption>Example NGINX config</figcaption>
-    
+
     ```
     worker_processes 4;
     worker_rlimit_nofile 40000;

@@ -1,12 +1,5 @@
 ---
 title: Prometheus Configuration
-weight: 1
-aliases:
-  - /rancher/v2.0-v2.4/en/project-admin/tools/monitoring/prometheus
-  - /rancher/v2.0-v2.4/en/cluster-admin/tools/monitoring/prometheus/
-  - /rancher/v2.0-v2.4/en/monitoring-alerting/legacy/monitoring/cluster-monitoring/prometheus
-  - /rancher/v2.0-v2.4/en/monitoring-alerting/v2.0.x-v2.4.x/cluster-monitoring/prometheus
-  - /rancher/v2.x/en/monitoring-alerting/v2.0.x-v2.4.x/cluster-monitoring/prometheus/
 ---
 
 _Available as of v2.2.0_

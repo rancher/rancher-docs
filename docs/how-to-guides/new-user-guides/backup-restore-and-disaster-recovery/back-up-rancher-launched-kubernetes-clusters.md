@@ -1,6 +1,5 @@
 ---
 title: Backing up a Cluster
-weight: 2045
 ---
 
 In the Rancher UI, etcd backup and recovery for [Rancher launched Kubernetes clusters](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) can be easily performed.
@@ -13,7 +12,7 @@ Snapshots of the etcd database are taken and saved either [locally onto the etcd
 
 ### Snapshot Components
 
-When Rancher creates a snapshot, it includes three components: 
+When Rancher creates a snapshot, it includes three components:
 
 - The cluster data in etcd
 - The Kubernetes version
@@ -141,7 +140,7 @@ The list of all available snapshots for the cluster is available in the Rancher 
 
 # Safe Timestamps
 
-Snapshot files are timestamped to simplify processing the files using external tools and scripts, but in some S3 compatible backends, these timestamps were unusable. 
+Snapshot files are timestamped to simplify processing the files using external tools and scripts, but in some S3 compatible backends, these timestamps were unusable.
 
 The option `safe_timestamp` is added to support compatible file names. When this flag is set to `true`, all special characters in the snapshot filename timestamp are replaced.
 

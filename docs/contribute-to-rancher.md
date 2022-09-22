@@ -1,6 +1,5 @@
 ---
 title: Contributing to Rancher
-weight: 700
 ---
 
 This section explains the repositories used for Rancher, how to build the repositories, and what information to include when you file an issue.
@@ -88,7 +87,7 @@ Please remove any sensitive data as it will be publicly viewable.
         - Kubernetes install using `kubectl`
 
         :::note
-        
+
         Make sure you configured the correct kubeconfig (for example, `export KUBECONFIG=$PWD/kube_config_cluster.yml` if Rancher is installed on a Kubernetes cluster) or are using the embedded kubectl via the UI.
 
         :::
@@ -109,7 +108,7 @@ Please remove any sensitive data as it will be publicly viewable.
         - Kubernetes Install with RKE Add-On
 
         :::note
-        
+
         Make sure you configured the correct kubeconfig (for example, `export KUBECONFIG=$PWD/kube_config_cluster.yml` if the Rancher server is installed on a Kubernetes cluster) or are using the embedded kubectl via the UI.
 
         :::

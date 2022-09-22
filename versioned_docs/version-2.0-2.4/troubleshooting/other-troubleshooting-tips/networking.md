@@ -1,6 +1,5 @@
 ---
 title: Networking
-weight: 102
 ---
 
 The commands/steps listed on this page can be used to check networking related issues in your cluster.

@@ -1,6 +1,5 @@
 ---
 title: Rancher Server Kubernetes 集群的问题排查
-weight: 276
 ---
 
 本文介绍如何对安装在 Kubernetes 集群上的 Rancher 进行故障排除。

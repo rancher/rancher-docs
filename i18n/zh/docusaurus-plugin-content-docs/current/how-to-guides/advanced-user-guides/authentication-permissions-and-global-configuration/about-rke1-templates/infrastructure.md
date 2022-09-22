@@ -1,6 +1,5 @@
 ---
 title: RKE 模板和基础设施
-weight: 90
 ---
 
 在 Rancher 中，RKE 模板用于配置 Kubernetes 和定义 Rancher 设置，而节点模板则用于配置节点。

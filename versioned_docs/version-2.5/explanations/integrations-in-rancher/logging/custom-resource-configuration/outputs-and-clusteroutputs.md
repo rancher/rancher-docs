@@ -1,6 +1,5 @@
 ---
 title: Outputs and ClusterOutputs
-weight: 2
 ---
 
 import Tabs from '@theme/Tabs';

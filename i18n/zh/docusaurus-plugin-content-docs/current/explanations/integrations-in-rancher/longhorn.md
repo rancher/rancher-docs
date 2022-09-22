@@ -1,7 +1,5 @@
 ---
 title: Longhorn - Kubernetes 的云原生分布式块存储
-shortTitle: Longhorn 存储
-weight: 19
 ---
 
 [Longhorn](https://longhorn.io/) 是一个轻量级、可靠、易用的 Kubernetes 分布式块存储系统。

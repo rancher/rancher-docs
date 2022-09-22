@@ -1,8 +1,6 @@
 ---
 title: 监控和告警
-shortTitle: 监控/告警
 description: Prometheus 允许你查看来自不同 Rancher 和 Kubernetes 对象的指标。了解监控范围以及如何启用集群监控
-weight: 13
 ---
 
 你可以使用 `rancher-monitoring` 应用，将业界领先的开源监控和告警解决方案快速部署到你的集群中。

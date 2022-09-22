@@ -1,8 +1,5 @@
 ---
 title: Choosing a Rancher Version
-weight: 1
-aliases:
-  - /rancher/v2.0-v2.4/en/installation/options/server-tags
 ---
 
 import Tabs from '@theme/Tabs';

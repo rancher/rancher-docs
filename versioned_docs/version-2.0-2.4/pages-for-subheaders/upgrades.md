@@ -1,20 +1,5 @@
 ---
 title: Upgrades
-weight: 2
-aliases:
-  - /rancher/v2.0-v2.4/en/upgrades/upgrades
-  - /rancher/v2.0-v2.4/en/installation/upgrades-rollbacks/upgrades
-  - /rancher/v2.0-v2.4/en/upgrades/upgrades/ha-server-upgrade-helm-airgap
-  - /rancher/v2.0-v2.4/en/upgrades/air-gap-upgrade/
-  - /rancher/v2.0-v2.4/en/upgrades/upgrades/ha
-  - /rancher/v2.0-v2.4/en/installation/install-rancher-on-k8s/upgrades/upgrades/ha
-  - /rancher/v2.0-v2.4/en/installation/upgrades-rollbacks/upgrades/
-  - /rancher/v2.0-v2.4/en/upgrades/upgrades/ha-server-upgrade-helm/
-  - /rancher/v2.0-v2.4/en/installation/upgrades-rollbacks/upgrades/ha
-  - /rancher/v2.0-v2.4/en/installation/install-rancher-on-k8s/upgrades-rollbacks/upgrades
-  - /rancher/v2.0-v2.4/en/installation/install-rancher-on-k8s/upgrades-rollbacks/upgrades/ha
-  - /rancher/v2.0-v2.4/en/installation/upgrades-rollbacks/
-  - /rancher/v2.0-v2.4/en/upgrades/
 ---
 
 import Tabs from '@theme/Tabs';

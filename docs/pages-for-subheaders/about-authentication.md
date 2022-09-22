@@ -1,6 +1,5 @@
 ---
 title: Authentication
-weight: 10
 ---
 
 One of the key features that Rancher adds to Kubernetes is centralized user authentication. This feature allows your users to use one set of credentials to authenticate with any of your Kubernetes clusters.
@@ -22,8 +21,8 @@ The Rancher authentication proxy integrates with the following external authenti
 | [PingIdentity](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-pingidentity.md)     |
 | [Keycloak (OIDC)](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-keycloak-oidc.md)  |
 | [Keycloak (SAML)](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-keycloak-saml.md)  |
-| [Okta](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-okta-saml.md)                      | 
-| [Google OAuth](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-google-oauth.md)            | 
+| [Okta](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-okta-saml.md)                      |
+| [Google OAuth](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-google-oauth.md)            |
 | [Shibboleth](configure-shibboleth-saml.md)           |
 
 <br/>

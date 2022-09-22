@@ -1,7 +1,5 @@
 ---
 title: Restore Configuration
-shortTitle: Restore
-weight: 2
 ---
 
 The Restore Create page lets you provide details of the backup to restore from
@@ -34,13 +32,13 @@ Select this option if you are restoring from a backup file that exists in the de
 
 Select this option if no default storage location is configured at the operator-level, OR if the backup file exists in a different S3 bucket than the one configured as the default storage location. Provide the exact filename in the **Backup Filename** field. Refer to [this section](#getting-the-backup-filename-from-s3) for exact steps on getting the backup filename from s3. Fill in all the details for the S3 compatible object store. Its fields are exactly same as ones for the `backup.StorageLocation` configuration in the [Backup custom resource.](backup-configuration.md#storage-location)
 
-![](/img/backup_restore/restore/s3store.png) 
+![](/img/backup_restore/restore/s3store.png)
 
 ## Encryption
 
 If the backup was created with encryption enabled, its file will have `.enc` suffix. Choosing such a Backup, or providing a backup filename with `.enc` suffix will display another dropdown named **Encryption Config Secret**.
 
-![](/img/backup_restore/restore/encryption.png) 
+![](/img/backup_restore/restore/encryption.png)
 
 The Secret selected from this dropdown must have the same contents as the one used for the Backup custom resource while performing the backup. If the encryption configuration doesn't match, the restore will fail
 

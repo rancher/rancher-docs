@@ -1,6 +1,5 @@
 ---
 title: 使用备份恢复集群
-weight: 2050
 ---
 
 你可以轻松备份和恢复 [Rancher 启动的 Kubernetes 集群](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)的 etcd。etcd 数据库的快照会保存在 etcd 节点或 S3 兼容目标上。配置 S3 的好处是，如果所有 etcd 节点都丢失了，你的快照会保存到远端并能用于恢复集群。

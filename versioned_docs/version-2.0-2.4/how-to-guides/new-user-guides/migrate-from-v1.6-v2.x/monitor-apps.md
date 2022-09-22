@@ -1,8 +1,5 @@
 ---
 title: "4. Configure Health Checks"
-weight: 400
-aliases:
-  - /rancher/v2.x/en/v1.6-migration/monitor-apps/
 ---
 
 import Tabs from '@theme/Tabs';
