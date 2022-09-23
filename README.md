@@ -16,6 +16,12 @@ $ yarn start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
+You can also use Docker to launch the website without needing to install and configure yarn:
+
+```
+docker run --rm -it -v $PWD:$PWD -w $PWD -p 3000:3000 node yarn start -h 0.0.0.0
+```
+
 ### Build
 
 ```
