@@ -1,5 +1,5 @@
 ---
-title: RKE2 Hardening Guide with CIS v1.6 Benchmark
+title: RKE2 Hardening Guide with CIS v1.23 Benchmark
 weight: 100
 ---
 
@@ -15,34 +15,42 @@ This hardening guide is intended to be used for RKE2 clusters and associated wit
 
 | Rancher Version | CIS Benchmark Version | Kubernetes Version |
 | --------------- | --------------------- | ------------------ |
-| Rancher v2.6.5+ | Benchmark v1.6 | Kubernetes v1.21 up to v1.23 |
+| Rancher v2.6.5+ | Benchmark v1.23 | Kubernetes v1.22 up to v1.24 |
 
-[Click here to download a PDF version of this document](https://releases.rancher.com/documents/security/2.6/Rancher_RKE2_v2-6_CIS_v1-6_Hardening_Guide.pdf).
+[Click here to download a PDF version of this document](https://releases.rancher.com/documents/security/2.6/Rancher_RKE2_v2-6_CIS_v1-23_Hardening_Guide.pdf).
 
+- [Overview](#overview)
+- [Host-level requirements](#host-level-requirements)
+- [Setting up hosts](#setting-up-hosts)
+- [Kubernetes runtime requirements](#kubernetes-runtime-requirements)
+- [API Server audit configuration](#api-server-audit-configuration)
+- [Known issues](#known-issues)
+- [Reference Hardened RKE2 Template Configuration](#reference-hardened-rke2-template-configuration)
+- [Conclusion](#conclusion)
 
 ### Overview
 
-This document provides prescriptive guidance for hardening a RKE2 cluster to be provisioned through Rancher v2.6.5+ with Kubernetes v1.21 up to v1.23. It outlines the configurations required to address Kubernetes benchmark controls from the Center for Information Security (CIS).
+This document provides prescriptive guidance for hardening a RKE2 cluster to be provisioned through Rancher v2.6.5+ with Kubernetes v1.22 up to v1.24. It outlines the configurations required to address Kubernetes benchmark controls from the Center for Information Security (CIS).
 
-For more details about evaluating a hardened RKE2 cluster against the official CIS benchmark, refer to the [RKE2 - CIS 1.6 Benchmark - Self-Assessment Guide - Rancher v2.6](rke2-self-assessment-guide-with-cis-v1.6-benchmark.md).
+For more details about evaluating a hardened RKE2 cluster against the official CIS benchmark, refer to the [RKE2 - CIS 1.23 Benchmark - Self-Assessment Guide - Rancher v2.6](./rke2-self-assessment-guide-with-cis-v1.23-benchmark.md).
 
 RKE2 is designed to be "hardened by default" and pass the majority of the Kubernetes CIS controls without modification. There are a few notable exceptions to this that require manual intervention to fully pass the CIS Benchmark:
 
 1. RKE2 will not modify the host operating system. Therefore, you, the operator, must make a few host-level modifications.
 2. Certain CIS policy controls for `PodSecurityPolicies` and `NetworkPolicies` will restrict the functionality of the cluster. You must opt into having RKE2 configuring these out of the box.
 
-To help ensure these above requirements are met, RKE2 can be started with the `profile` flag set to `cis-1.6`. This flag generally does two things:
+To help ensure these above requirements are met, RKE2 can be started with the `profile` flag set to `cis-1.23`. This flag generally does two things:
 
 1. Checks that host-level requirements have been met. If they haven't, RKE2 will exit with a fatal error describing the unmet requirements.
 2. Configures runtime pod security policies and network policies that allow the cluster to pass associated controls.
 
 :::note
 
-The profile's flag only valid values are `cis-1.5` or `cis-1.6`. It accepts a string value to allow for other profiles in the future.
+The profile's flag only valid values are `cis-1.5` or `cis-1.6` or `cis-1.23`. It accepts a string value to allow for other profiles in the future.
 
 :::
 
-The following section outlines the specific actions that are taken when the `profile` flag is set to `cis-1.6`.
+The following section outlines the specific actions that are taken when the `profile` flag is set to `cis-1.23`.
 
 ### Host-level requirements
 
@@ -69,7 +77,7 @@ spec:
   rkeConfig:
     machineSelectorConfig:
       - config:
-          profile: cis-1.6
+          profile: cis-1.23
           protect-kernel-defaults: true
 ```
 
@@ -118,7 +126,11 @@ RKE2 always runs with the `PodSecurityPolicy` admission controller turned on. Ho
 
 When ran with a valid "cis-1.x" profile, RKE2 will put a much more restrictive set of policies in place. These policies meet the requirements outlined in section 5.2 of the CIS Benchmark.
 
-> The Kubernetes control plane components and critical additions such as CNI, DNS, and Ingress are ran as pods in the `kube-system` namespace. Therefore, this namespace will have a policy that is less restrictive so that these components can run properly.
+:::note
+
+The Kubernetes control plane components and critical additions such as CNI, DNS, and Ingress are ran as pods in the `kube-system` namespace. Therefore, this namespace will have a policy that is less restrictive so that these components can run properly.
+
+:::
 
 #### `NetworkPolicies`
 
@@ -131,6 +143,7 @@ The `NetworkPolicy` used will only allow pods within the same namespace to talk 
 Operators must manage network policies as normal for additional namespaces that are created.
 
 :::
+
 #### Configure `default` service account
 
 **Set `automountServiceAccountToken` to `false` for `default` service accounts**
@@ -170,11 +183,11 @@ Execute this script to apply the `account_update.yaml` configuration to `default
 
 ### API Server audit configuration
 
-CIS requirements 1.2.22 to 1.2.25 are related to configuring audit logs for the API Server. When RKE2 is started with the `profile` flag set to `cis-1.6`, it will automatically configure hardened `--audit-log-` parameters in the API Server to pass those CIS checks.
+CIS requirements 1.2.19 to 1.2.22 are related to configuring audit logs for the API Server. When RKE2 is started with the `profile` flag set to `cis-1.23`, it will automatically configure hardened `--audit-log-` parameters in the API Server to pass those CIS checks.
 
 RKE2's default audit policy is configured to not log requests in the API Server. This is done to allow cluster operators flexibility to customize an audit policy that suits their auditing requirements and needs, as these are specific to each users' environment and policies.
 
-A default audit policy is created by RKE2 when started with the `profile` flag set to `cis-1.6`. The policy is defined in `/etc/rancher/rke2/audit-policy.yaml`.
+A default audit policy is created by RKE2 when started with the `profile` flag set to `cis-1.23`. The policy is defined in `/etc/rancher/rke2/audit-policy.yaml`.
 
 ```yaml
 apiVersion: audit.k8s.io/v1
@@ -231,7 +244,7 @@ Running different applications on the same Kubernetes cluster creates a risk of 
 Network Policies are namespace scoped. When a network policy is introduced to a given namespace, all traffic not allowed by the policy is denied. However, if there are no network policies in a namespace all traffic will be allowed into and out of the pods in that namespace.
 
 **Remediation**
-This can be remediated by setting `profile: "cis-1.6"` in RKE2 template configuration file. An example can be found below.
+This can be remediated by setting `profile: "cis-1.23"` in RKE2 template configuration file. An example can be found below.
 
 ### Reference Hardened RKE2 Template Configuration
 
@@ -313,7 +326,7 @@ spec:
 #        workerRole: boolean
     machineSelectorConfig:
       - config:
-          profile: cis-1.6
+          profile: cis-1.23
           protect-kernel-defaults: true
 #      - config:
 #          
@@ -407,4 +420,4 @@ __clone: true
 
 ### Conclusion
 
-If you have followed this guide, your RKE2 custom cluster provisioned by Rancher will be configured to pass the CIS Kubernetes Benchmark. You can review our RKE2 CIS Benchmark Self-Assessment Guide [v1.6](rke2-self-assessment-guide-with-cis-v1.6-benchmark.md) to understand how we verified each of the benchmarks and how you can do the same on your cluster.
+If you have followed this guide, your RKE2 custom cluster provisioned by Rancher will be configured to pass the CIS Kubernetes Benchmark. You can review our RKE2 CIS Benchmark Self-Assessment Guide [v1.23](./rke2-self-assessment-guide-with-cis-v1.23-benchmark.md) to understand how we verified each of the benchmarks and how you can do the same on your cluster.
