@@ -42,7 +42,7 @@ To create the Secret, the encryption configuration file must be named `encryptio
 
 Save the `EncryptionConfiguration` in a file called `encryption-provider-config.yaml` and run this command:
 
-```
+```bash
 kubectl create secret generic encryptionconfig \
   --from-file=./encryption-provider-config.yaml \
   -n cattle-resources-system
@@ -121,9 +121,20 @@ metadata:
   name: creds
 type: Opaque
 data:
-  accessKey: <Enter your base64-encoded access key>
-  secretKey: <Enter your base64-encoded secret key>
+  accessKey: <base64-encoded access key>
+  secretKey: <base64-encoded secret key>
 ```
+
+:::note
+
+To avoid encoding issues, the credentialSecret can be created with the below command, updating the values for `accessKey` and `secretKey`.
+```bash
+kubectl create secret generic s3-creds \
+  --from-literal=accessKey=<access key> \
+  --from-literal=secretKey=<secret key>
+```
+
+:::
 
 ### IAM Permissions for EC2 Nodes to Access S3
 

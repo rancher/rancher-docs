@@ -23,18 +23,34 @@ Rancher can be installed on any Kubernetes cluster, including hosted Kubernetes 
 - [K3s Kubernetes installation docs](https://rancher.com/docs/k3s/latest/en/installation/)
 
 ### 1. Install the rancher-backup Helm chart
-Install version 2.x.x of the rancher-backup chart. The following assumes a connected environment with access to DockerHub:
-```
-helm repo add rancher-charts https://charts.rancher.io
-helm repo update
-helm install rancher-backup-crd rancher-charts/rancher-backup-crd -n cattle-resources-system --create-namespace --version $CHART_VERSION
-helm install rancher-backup rancher-charts/rancher-backup -n cattle-resources-system --version $CHART_VERSION
-```
+Install the [rancher-backup chart](https://github.com/rancher/backup-restore-operator/tags), using a version in the 2.x.x major version range:
 
-For an **air-gapped environment**, use the option below to pull the `backup-restore-operator` image from your private registry when installing the rancher-backup-crd helm chart.
-```
---set image.repository $REGISTRY/rancher/backup-restore-operator
-```
+  1. Add the helm repository:
+     ```bash
+     helm repo add rancher-charts https://charts.rancher.io
+     helm repo update
+     ```
+  1. Select and set `CHART_VERSION` variable with a 2.x.x rancher-backup release version:
+     ```bash
+     helm search repo --versions rancher-charts/rancher-backup
+     CHART_VERSION=<2.x.x>
+     ```
+  2. Install the charts:
+     ```bash
+     helm install rancher-backup-crd rancher-charts/rancher-backup-crd -n cattle-resources-system --create-namespace --version $CHART_VERSION
+     helm install rancher-backup rancher-charts/rancher-backup -n cattle-resources-system --version $CHART_VERSION
+     ```
+
+     :::note
+
+     The above assumes an environment with outbound connectivity to Docker Hub
+
+     For an **air-gapped environment**, use the helm value below to pull the `backup-restore-operator` image from your private registry when installing the rancher-backup helm chart.
+     ```bash
+     --set image.repository $REGISTRY/rancher/backup-restore-operator
+     ```
+
+     :::
 
 ### 2. Restore from backup using a Restore custom resource
 
@@ -45,86 +61,80 @@ Kubernetes v1.22, available as an experimental feature of v2.6.3, does not suppo
 1. Update the default `resourceSet` to collect the CRDs with the apiVersion v1.
 1. Update the default `resourceSet` and the client to use the new APIs internally, with `apiextensions.k8s.io/v1` as the replacement.
 
-- Note that when making or restoring backups for v1.22, the Rancher version and the local cluster's Kubernetes version should be the same. The Kubernetes version should be considered when restoring a backup since the supported apiVersion in the cluster and in the backup file could be different.
+  :::note
+
+  When making or restoring backups for v1.22, the Rancher version and the local cluster's Kubernetes version should be the same. The Kubernetes version should be considered when restoring a backup since the supported apiVersion in the cluster and in the backup file could be different.
+
+  :::
 
 :::
 
-If you are using an S3 store as the backup source and need to use your S3 credentials for restore, create a secret in this cluster using your S3 credentials. The Secret data must have two keys - `accessKey` and `secretKey` - that contain the S3 credentials.
+1. When using S3 object storage that as the backup source for restore that requires credentials, create a `Secret` object in this cluster to add the S3 credentials. The secret data must have two keys - `accessKey`, and `secretKey`, that contain the S3 credentials.
 
-:::caution
+   The secret can be created in any namespace, this example uses the default namespace.
 
-The values `accessKey` and `secretKey` in the example below must be base64-encoded first when creating the object directly. If not encoded first, the pasted values will cause errors when you are attempting to backup or restore.
+   ```bash
+   kubectl create secret generic s3-creds \
+     --from-literal=accessKey=<access key> \
+     --from-literal=secretKey=<secret key>
+   ```
 
-:::
+   :::note
 
-```yaml
-apiVersion: v1
-kind: Secret
-metadata:
-  name: s3-creds
-type: Opaque
-data:
-  accessKey: <Enter your base64-encoded access key>
-  secretKey: <Enter your base64-encoded secret key>
-```
+   Add your access key and secret key as values for `accessKey` and `secretKey` in the command below.
 
-This secret can be created in any namespace; with the above example, it will get created in the default namespace.
+   :::
 
-In the Restore custom resource, `prune` must be set to false.
+1. Create a `Restore` object:
 
-Create a Restore custom resource like the example below:
+   During a migration, `prune` must be set to `false`, the example below:
 
-```yaml
-# migrationResource.yaml
-apiVersion: resources.cattle.io/v1
-kind: Restore
-metadata:
-  name: restore-migration
-spec:
-  backupFilename: backup-b0450532-cee1-4aa1-a881-f5f48a007b1c-2020-09-15T07-27-09Z.tar.gz
-  prune: false
-  encryptionConfigSecretName: encryptionconfig
-  storageLocation:
-    s3:
-      credentialSecretName: s3-creds
-      credentialSecretNamespace: default
-      bucketName: backup-test
-      folder: ecm1
-      region: us-west-2
-      endpoint: s3.us-west-2.amazonaws.com
-```
+   ```yaml
+   # restore-migration.yaml
+   apiVersion: resources.cattle.io/v1
+   kind: Restore
+   metadata:
+     name: restore-migration
+   spec:
+     backupFilename: backup-b0450532-cee1-4aa1-a881-f5f48a007b1c-2020-09-15T07-27-09Z.tar.gz
+     prune: false
+     encryptionConfigSecretName: encryptionconfig
+     storageLocation:
+       s3:
+         credentialSecretName: s3-creds
+         credentialSecretNamespace: default
+         bucketName: backup-test
+         folder: ecm1
+         region: us-west-2
+         endpoint: s3.us-west-2.amazonaws.com
+   ```
 
-:::note Important:
+   :::note Important:
 
-The field `encryptionConfigSecretName` must be set only if your backup was created with encryption enabled. Provide the name of the Secret containing the encryption config file. If you only have the encryption config file, but don't have a secret created with it in this cluster, use the following steps to create the secret:
+   The field `encryptionConfigSecretName` must be set only if your backup was created with encryption enabled. Provide the name of the `Secret` object containing the encryption config file. If you only have the encryption config file, but don't have a secret created with it in this cluster, use the following steps to create the secret:
 
-:::
+   :::
 
-1. The encryption configuration file must be named `encryption-provider-config.yaml`, and the `--from-file` flag must be used to create this secret. So save your `EncryptionConfiguration` in a file called `encryption-provider-config.yaml` and run this command:
-```
-kubectl create secret generic encryptionconfig \
-  --from-file=./encryption-provider-config.yaml \
-  -n cattle-resources-system
-```
-
-1. Apply the manifest, and watch for the Restore resources status:
-
-    Apply the resource:
-```
-kubectl apply -f migrationResource.yaml
-```
-
-    Watch the Restore status:
-```
-kubectl get restore
-```
-
-    Watch the restoration logs:
-```
-kubectl logs -n cattle-resources-system --tail 100 -f rancher-backup-xxx-xxx
-```
-
-Once the Restore resource has the status `Completed`, you can continue the Rancher installation.
+   1. The [encryption configuration file](reference-guides/backup-restore-configuration/backup-configuration.md#encryption) must be named `encryption-provider-config.yaml`, and the `--from-file` flag must be used to create this secret. So save your `EncryptionConfiguration` in a file called `encryption-provider-config.yaml` and run this command:
+      ```bash
+      kubectl create secret generic encryptionconfig \
+        --from-file=./encryption-provider-config.yaml \
+        -n cattle-resources-system
+      ```
+1. Apply the manifest, and monitor the Restore status:
+   1. Apply the `Restore` object resource:
+      ```bash
+      kubectl apply -f restore-migration.yaml
+      ```
+   1. Watch the Restore status:
+      ```bash
+      kubectl get restore
+      ```
+   1. Watch the restoration logs:
+      ```bash
+      kubectl logs -n cattle-resources-system --tail 100 -f -l app.kubernetes.io/instance=rancher-backup
+      ```
+   1. Once the Restore resource has the status `Completed`, you can continue the Rancher installation.
 
 ### 3. Install cert-manager
 
@@ -134,8 +144,25 @@ Follow the steps to [install cert-manager](../../../pages-for-subheaders/install
 
 Use the same version of Helm to install Rancher, that was used on the first cluster.
 
-```
+```bash
 helm install rancher rancher-latest/rancher \
   --namespace cattle-system \
   --set hostname=<same hostname as the server URL from the first Rancher server> \
+  --version x.y.z
 ```
+
+:::note
+
+If the original Rancher environment is running, you can collect the current values with a kubeconfig for the original environment:
+
+```bash
+helm get values rancher -n cattle-system -o yaml > rancher-values.yaml
+```
+
+These values can be reused using the `rancher-values.yaml` file:
+
+```bash
+helm install rancher rancher-latest/rancher -n cattle-system -f rancher-values.yaml --version x.y.z
+```
+
+:::
