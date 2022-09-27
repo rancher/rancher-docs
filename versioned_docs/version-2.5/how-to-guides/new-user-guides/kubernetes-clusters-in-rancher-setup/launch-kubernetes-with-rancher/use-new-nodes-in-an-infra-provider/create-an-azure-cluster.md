@@ -1,10 +1,5 @@
 ---
 title: Creating an Azure Cluster
-shortTitle: Azure
-weight: 2220
-aliases:
-  - /rancher/v2.5/en/tasks/clusters/creating-a-cluster/create-cluster-azure/
-  - /rancher/v2.x/en/cluster-provisioning/rke-clusters/node-pools/azure/
 ---
 
 In this section, you'll learn how to install an [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes cluster in Azure through Rancher.

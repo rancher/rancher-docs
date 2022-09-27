@@ -1,7 +1,5 @@
 ---
 title: Role-based Access Control
-shortTitle: RBAC
-weight: 2
 ---
 This section describes the expectations for RBAC for Rancher Monitoring.
 
@@ -77,10 +75,10 @@ Monitoring also creates additional `ClusterRoles` that are not assigned to users
 
 ### Assigning Roles and ClusterRoles with kubectl
 
-An alternative method to using Rancher to attach a `Role` or `ClusterRole` to a user or group is by defining bindings in YAML files that you create. You must first configure the `RoleBinding` with the YAML file, then you apply the config changes by running the `kubectl apply` command. 
+An alternative method to using Rancher to attach a `Role` or `ClusterRole` to a user or group is by defining bindings in YAML files that you create. You must first configure the `RoleBinding` with the YAML file, then you apply the config changes by running the `kubectl apply` command.
 
 
-* **Roles**: Below is an example of a YAML file to help you configure `RoleBindings` in Kubernetes. You will need to fill in the name below, and name is case-sensitive. 
+* **Roles**: Below is an example of a YAML file to help you configure `RoleBindings` in Kubernetes. You will need to fill in the name below, and name is case-sensitive.
 
 ```yaml
 # monitoring-config-view-role-binding.yaml
@@ -102,7 +100,7 @@ subjects:
 * **kubectl**: Below is an example of a `kubectl` command used to apply the binding you've created in the YAML file. As noted, you will need to fill in your YAML filename accordingly.
 
   * **`kubectl apply -f monitoring-config-view-role-binding.yaml`
- 
+
 
 ## Users with Rancher Based Permissions
 

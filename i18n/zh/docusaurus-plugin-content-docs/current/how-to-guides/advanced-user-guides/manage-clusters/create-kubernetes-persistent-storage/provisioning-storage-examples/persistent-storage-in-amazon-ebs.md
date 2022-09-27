@@ -1,6 +1,5 @@
 ---
 title: 在 Amazon EBS 中创建持久存储
-weight: 3053
 ---
 
 本文介绍如何在 EC2 中设置 Amazon 的 Elastic Block Store。

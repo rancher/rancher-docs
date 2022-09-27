@@ -1,10 +1,6 @@
 ---
 title: Adding Ingresses to Your Project
 description: Ingresses can be added for workloads to provide load balancing, SSL termination and host/path-based routing. Learn how to add Rancher ingress to your project
-weight: 3042
-aliases:
-  - /rancher/v2.0-v2.4/en/tasks/workloads/add-ingress/
-  - /rancher/v2.0-v2.4/en/k8s-in-rancher/load-balancers-and-ingress/ingress
 ---
 
 Ingress can be added for workloads to provide load balancing, SSL termination and host/path based routing. When using ingresses in a project, you can program the ingress hostname to an external DNS by setting up a [Global DNS entry](../../helm-charts-in-rancher/globaldns.md).

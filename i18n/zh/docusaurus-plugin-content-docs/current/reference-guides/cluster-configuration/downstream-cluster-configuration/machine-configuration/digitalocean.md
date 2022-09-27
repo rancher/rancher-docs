@@ -1,6 +1,5 @@
 ---
 title: DigitalOcean 主机配置
-weight: 2
 ---
 
 有关 DigitalOcean、Droplet 的更多详细信息，请参阅[官方文档](https://docs.digitalocean.com/products/compute/)。

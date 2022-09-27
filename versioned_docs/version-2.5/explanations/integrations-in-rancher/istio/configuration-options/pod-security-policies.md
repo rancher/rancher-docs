@@ -1,12 +1,5 @@
 ---
 title: Enable Istio with Pod Security Policies
-weight: 1
-aliases:
-  - /rancher/v2.5/en/istio/setup/enable-istio-in-cluster/enable-istio-with-psp
-  - /rancher/v2.5/en/istio/legacy/setup/enable-istio-in-cluster/enable-istio-with-psp
-  - /rancher/v2.5/en/istio/v2.5/setup/enable-istio-in-cluster/enable-istio-with-psp
-  - /rancher/v2.5/en/istio/v2.5/configuration-reference/enable-istio-with-psp
-  - /rancher/v2.x/en/istio/v2.5/configuration-reference/enable-istio-with-psp/
 ---
 
 import Tabs from '@theme/Tabs';

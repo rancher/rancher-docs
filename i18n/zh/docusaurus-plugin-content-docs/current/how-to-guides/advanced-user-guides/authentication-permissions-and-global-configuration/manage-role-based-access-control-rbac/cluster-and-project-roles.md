@@ -1,6 +1,5 @@
 ---
 title: 集群和项目角色
-weight: 1127
 ---
 
 import Tabs from '@theme/Tabs';

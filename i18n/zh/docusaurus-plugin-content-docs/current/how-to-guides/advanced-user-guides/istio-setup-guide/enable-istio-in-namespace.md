@@ -1,6 +1,5 @@
 ---
 title: 2. 在命名空间中启用 Istio
-weight: 2
 ---
 
 你需要在需要由 Istio 跟踪或控制的每个命名空间中手动启用 Istio。在命名空间中启用 Istio 时，Envoy sidecar 代理将自动注入到部署在命名空间中的所有新工作负载中。

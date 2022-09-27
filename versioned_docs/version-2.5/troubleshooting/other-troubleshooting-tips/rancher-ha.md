@@ -1,8 +1,5 @@
 ---
 title: Rancher HA
-weight: 104
-aliases:
-  - /rancher/v2.x/en/troubleshooting/rancherha/
 ---
 
 The commands/steps listed on this page can be used to check your Rancher Kubernetes Installation.
@@ -28,7 +25,7 @@ rancher-7dbd7875f7-qbj5k   1/1     Running   0          8m    x.x.x.x     x.x.x.
 rancher-7dbd7875f7-qw7wb   1/1     Running   0          8m    x.x.x.x     x.x.x.x
 ```
 
-If a pod is unable to run (Status is not **Running**, Ready status is not showing `1/1` or you see a high count of Restarts), check the pod details, logs and namespace events.                                                                                                       
+If a pod is unable to run (Status is not **Running**, Ready status is not showing `1/1` or you see a high count of Restarts), check the pod details, logs and namespace events.
 
 #### Pod details
 

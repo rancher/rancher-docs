@@ -1,6 +1,5 @@
 ---
 title: ConfigMaps
-weight: 3061
 ---
 
 While most types of Kubernetes secrets store sensitive information, [ConfigMaps](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) store general configuration information, such as a group of config files. Because ConfigMaps don't store sensitive information, they can be updated automatically, and therefore don't require their containers to be restarted following update (unlike most secret types, which require manual updates and a container restart to take effect).
@@ -14,11 +13,11 @@ ConfigMaps accept key value pairs in common string formats, like config files or
 1. Enter a **Name** for the Config Map.
 
     :::note
-    
+
     Kubernetes classifies ConfigMaps as [secrets](https://kubernetes.io/docs/concepts/configuration/secret/), and no two secrets in a project or namespace can have duplicate names. Therefore, to prevent conflicts, your ConfigMaps must have a unique name among the other certificates, registries, and secrets within your workspace.
 
     :::
-    
+
 1. Select the **Namespace** you want to add Config Map to.
 
 1. On the **Data** tab, add a key-value pair to your ConfigMap. Add as many values as you need.  You can add multiple key value pairs to the ConfigMap by copying and pasting. Alternatively, use **Read from File** to add the data. Note: If you need to store sensitive data, [use a secret](secrets.md), not a ConfigMap.

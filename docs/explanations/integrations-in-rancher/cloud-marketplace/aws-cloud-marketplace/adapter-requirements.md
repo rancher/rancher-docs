@@ -1,6 +1,5 @@
 ---
 title: Prerequisites
-weight: 1
 ---
 
 ### 1. Setting Up License Manager and Purchasing Support

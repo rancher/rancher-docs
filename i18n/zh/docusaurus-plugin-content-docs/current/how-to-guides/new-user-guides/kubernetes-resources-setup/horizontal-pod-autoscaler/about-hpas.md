@@ -1,6 +1,5 @@
 ---
 title: Horizontal Pod Autoscaler 介绍
-weight: 3027
 ---
 
 [Horizontal Pod Autoscaler（HPA）](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)是一项 Kubernetes 功能，用于将集群配置为自动扩缩其运行的服务。本节介绍 HPA 如何与 Kubernetes 一起工作。

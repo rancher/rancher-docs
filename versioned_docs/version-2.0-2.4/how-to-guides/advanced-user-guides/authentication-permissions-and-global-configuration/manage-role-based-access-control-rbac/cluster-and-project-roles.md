@@ -1,6 +1,5 @@
 ---
 title: Cluster and Project Roles
-weight: 1127
 ---
 
 Cluster and project roles define user authorization inside a cluster or project. You can manage these roles from the **Global > Security > Roles** page.

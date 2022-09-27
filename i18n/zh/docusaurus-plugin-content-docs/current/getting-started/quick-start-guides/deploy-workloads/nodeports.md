@@ -1,6 +1,5 @@
 ---
 title: 部署带有 NodePort 的工作负载
-weight: 200
 ---
 
 ### 先决条件

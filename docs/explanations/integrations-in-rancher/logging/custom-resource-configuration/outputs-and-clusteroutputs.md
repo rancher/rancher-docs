@@ -1,6 +1,5 @@
 ---
 title: Outputs and ClusterOutputs
-weight: 2
 ---
 
 For the full details on configuring `Outputs` and `ClusterOutputs`, see the [Banzai Cloud Logging operator documentation.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/output/)
@@ -11,7 +10,7 @@ The `Output` resource defines where your `Flows` can send the log messages. `Out
 
 The `Output` is a namespaced resource, which means only a `Flow` within the same namespace can access it.
 
-You can use secrets in these definitions, but they must also be in the same namespace. 
+You can use secrets in these definitions, but they must also be in the same namespace.
 
 `Outputs` can be configured by filling out forms in the Rancher UI.
 

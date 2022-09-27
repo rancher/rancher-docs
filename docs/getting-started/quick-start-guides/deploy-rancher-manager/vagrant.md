@@ -1,6 +1,5 @@
 ---
 title: Vagrant Quick Start
-weight: 200
 ---
 The following steps quickly deploy a Rancher Server with a single node cluster attached.
 

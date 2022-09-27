@@ -1,8 +1,5 @@
 ---
 title: Rancher Helm Chart 选项
-weight: 1
-aliases:
-  - /rancher/v2.6/en/installation/resources/chart-options
 ---
 
 本文提供了 Rancher Helm Chart 的配置参考。

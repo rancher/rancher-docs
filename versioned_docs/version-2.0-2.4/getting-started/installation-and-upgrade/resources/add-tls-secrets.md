@@ -1,13 +1,12 @@
 ---
 title: Adding TLS Secrets
-weight: 2
 ---
 
 Kubernetes will create all the objects and services for Rancher, but it will not become available until we populate the `tls-rancher-ingress` secret in the `cattle-system` namespace with the certificate and key.
 
 Combine the server certificate followed by any intermediate certificate(s) needed into a file named `tls.crt`. Copy your certificate key into a file named `tls.key`.
 
-For example, [acme.sh](https://acme.sh) provides server certificate and CA chains in `fullchain.cer` file. 
+For example, [acme.sh](https://acme.sh) provides server certificate and CA chains in `fullchain.cer` file.
 This `fullchain.cer` should be renamed to `tls.crt` & certificate key file as `tls.key`.
 
 Use `kubectl` with the `tls` secret type to create the secrets.

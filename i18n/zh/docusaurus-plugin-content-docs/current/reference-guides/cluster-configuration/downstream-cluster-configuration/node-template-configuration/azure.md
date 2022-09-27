@@ -1,6 +1,5 @@
 ---
 title: Azure 节点模板配置
-weight: 1
 ---
 
 有关 Azure 的更多信息，请参阅官方 [Azure 文档](https://docs.microsoft.com/en-us/azure/?product=featured)。

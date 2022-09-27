@@ -1,7 +1,5 @@
 ---
 title: Roles-based Access Control
-shortTitle: RBAC
-weight: 3
 ---
 
 This section describes the permissions required to use the rancher-cis-benchmark App.
@@ -13,7 +11,7 @@ However, the `rancher-cis-benchmark` chart installs these two default `ClusterRo
 - cis-admin
 - cis-view
 
-In Rancher, only cluster owners and global administrators have `cis-admin` access by default. 
+In Rancher, only cluster owners and global administrators have `cis-admin` access by default.
 
 Note: If you were using the `cis-edit` role added in Rancher v2.5 setup, it has now been removed since
 Rancher v2.5.2 because it essentially is same as `cis-admin`. If you happen to create any clusterrolebindings

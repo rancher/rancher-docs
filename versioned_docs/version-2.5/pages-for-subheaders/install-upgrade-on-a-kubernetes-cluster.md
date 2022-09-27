@@ -1,14 +1,6 @@
 ---
 title: Install/Upgrade Rancher on a Kubernetes Cluster
 description: Learn how to install Rancher in development and production environments. Read about single node and high availability installation
-weight: 2
-aliases:
-  - /rancher/v2.5/en/installation/k8s-install/
-  - /rancher/v2.5/en/installation/k8s-install/helm-rancher
-  - /rancher/v2.5/en/installation/k8s-install/kubernetes-rke
-  - /rancher/v2.5/en/installation/ha-server-install
-  - /rancher/v2.5/en/installation/install-rancher-on-k8s/install
-  - /rancher/v2.x/en/installation/install-rancher-on-k8s/
 ---
 
 import Tabs from '@theme/Tabs';

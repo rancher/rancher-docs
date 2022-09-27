@@ -1,6 +1,5 @@
 ---
 title: Setup Guide
-weight: 2
 ---
 
 This section describes how to enable Istio and start using it in your projects.

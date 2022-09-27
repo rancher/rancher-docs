@@ -1,7 +1,5 @@
 ---
 title: Longhorn - Cloud native distributed block storage for Kubernetes
-shortTitle: Longhorn Storage
-weight: 19
 ---
 
 [Longhorn](https://longhorn.io/) is a lightweight, reliable, and easy-to-use distributed block storage system for Kubernetes.

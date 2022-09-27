@@ -1,6 +1,5 @@
 ---
 title: 证书轮换
-weight: 2040
 ---
 
 import Tabs from '@theme/Tabs';

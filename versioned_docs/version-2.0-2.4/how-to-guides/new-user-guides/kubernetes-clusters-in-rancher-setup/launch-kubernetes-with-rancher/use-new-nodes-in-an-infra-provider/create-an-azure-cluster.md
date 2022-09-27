@@ -1,9 +1,5 @@
 ---
 title: Creating an Azure Cluster
-shortTitle: Azure
-weight: 2220
-aliases:
-  - /rancher/v2.0-v2.4/en/tasks/clusters/creating-a-cluster/create-cluster-azure/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,8 +1,7 @@
 ---
 title: Setting up a High-availability RKE2 Kubernetes Cluster for Rancher
-shortTitle: Set up RKE2 for Rancher
-weight: 2
 ---
+
 _Tested on v2.5.6_
 
 This section describes how to install a Kubernetes cluster according to the [best practices for the Rancher server environment.](../../../reference-guides/rancher-manager-architecture/architecture-recommendations.md#environment-for-kubernetes-installations)
@@ -85,7 +84,7 @@ Then test the health of the cluster pods:
 
 When you installed RKE2 on each Rancher server node, a `kubeconfig` file was created on the node at `/etc/rancher/rke2/rke2.yaml`. This file contains credentials for full access to the cluster, and you should save this file in a secure location.
 
-To use this `kubeconfig` file, 
+To use this `kubeconfig` file,
 
 1. Install [kubectl,](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) a Kubernetes command-line tool.
 2. Copy the file at `/etc/rancher/rke2/rke2.yaml` and save it to the directory `~/.kube/config` on your local machine.

@@ -1,6 +1,5 @@
 ---
 title: Rotation of Expired Webhook Certificates
-weight: 120
 ---
 
 For Rancher versions that have `rancher-webhook` installed, certain versions created certificates that will expire after one year. It will be necessary for you to rotate your webhook certificate if the certificate did not renew.

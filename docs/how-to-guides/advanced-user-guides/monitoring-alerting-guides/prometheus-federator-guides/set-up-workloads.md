@@ -1,6 +1,5 @@
 ---
 title: Setting up Prometheus Federator for a Workload
-weight: 4
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: Windows 支持
-weight: 2
 ---
 
 

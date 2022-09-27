@@ -1,14 +1,5 @@
 ---
 title: Backing up Rancher Installed with Docker
-shortTitle: Backups
-weight: 3
-aliases:
-  - /rancher/v2.5/en/installation/after-installation/single-node-backup-and-restoration/
-  - /rancher/v2.5/en/installation/after-installation/single-node-backup-and-restoration/
-  - /rancher/v2.5/en/backups/backups/single-node-backups/
-  - /rancher/v2.5/en/backups/legacy/backup/single-node-backups/
-  - /rancher/v2.5/en/backups/v2.5/docker-installs/docker-backups/
-  - /rancher/v2.x/en/backups/v2.5/docker-installs/docker-backups/
 ---
 
 

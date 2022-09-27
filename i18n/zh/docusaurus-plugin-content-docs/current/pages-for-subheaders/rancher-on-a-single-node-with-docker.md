@@ -1,7 +1,6 @@
 ---
 title: 使用 Docker 将 Rancher 安装到单个节点中
 description: 在开发和测试环境中，你可以使用 Docker 安装。在单个 Linux 主机上安装 Docker，然后使用一个 Docker 容器部署 Rancher。
-weight: 2
 ---
 
 Rancher 可以通过运行单个 Docker 容器进行安装。

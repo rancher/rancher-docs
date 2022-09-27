@@ -1,6 +1,5 @@
 ---
 title: 配置 FreeIPA
-weight: 1114
 ---
 
 如果你的组织使用 FreeIPA 进行用户身份验证，你可以通过配置 Rancher 来允许你的用户使用 FreeIPA 凭证登录。

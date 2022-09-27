@@ -1,6 +1,5 @@
 ---
 title: '2. Collect and Publish Images to your Private Registry'
-weight: 200
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,6 +1,5 @@
 ---
 title: Dockershim
-weight: 300
 ---
 
 Dockershim 是 Kubelet 和 Docker Daemon 之间的 CRI 兼容层。Kubernetes 1.20 版本宣布了[移除树内 Dockershim](https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/)。目前计划在 Kubernetes 1.24 中移除。有关此移除的更多信息以及时间线，请参见 [Kubernetes Dockershim 弃用相关的常见问题](https://kubernetes.io/blog/2020/12/02/dockershim-faq/#when-will-dockershim-be-removed)。

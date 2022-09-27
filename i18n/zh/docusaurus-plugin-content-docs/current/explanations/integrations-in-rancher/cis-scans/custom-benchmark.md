@@ -1,6 +1,5 @@
 ---
 title: 为集群扫描创建自定义 Benchmark 版本
-weight: 4
 ---
 
 每个 Benchmark 版本都定义了一组测试配置文件，这些文件定义了由 <a href="https://github.com/aquasecurity/kube-bench" target="_blank">kube-bench</a> 工具运行的 CIS 测试。

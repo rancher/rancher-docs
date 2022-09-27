@@ -1,11 +1,5 @@
 ---
 title: '1. Prepare your Node(s)'
-weight: 100
-aliases:
-  - /rancher/v2.0-v2.4/en/installation/air-gap-high-availability/provision-hosts
-  - /rancher/v2.0-v2.4/en/installation/air-gap-single-node/provision-host
-  - /rancher/v2.0-v2.4/en/installation/options/air-gap-helm2/prepare-nodes
-  - /rancher/v2.x/en/installation/resources/advanced/air-gap-helm2/prepare-nodes/
 ---
 
 import Tabs from '@theme/Tabs';

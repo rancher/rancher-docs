@@ -1,6 +1,5 @@
 ---
 title: Setting Container Default Resource Limits
-weight: 3
 ---
 
 _Available as of v2.2.0_

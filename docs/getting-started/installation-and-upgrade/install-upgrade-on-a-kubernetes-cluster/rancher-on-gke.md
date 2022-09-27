@@ -1,7 +1,5 @@
 ---
 title: Installing Rancher on a Google Kubernetes Engine Cluster
-shortTitle: GKE
-weight: 3
 ---
 
 import Tabs from '@theme/Tabs';

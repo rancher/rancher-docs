@@ -1,8 +1,5 @@
 ---
 title: Launching Kubernetes with Rancher
-weight: 4
-aliases:
-  - /rancher/v2.x/en/cluster-provisioning/rke-clusters/
 ---
 
 You can have Rancher launch a Kubernetes cluster using any nodes you want. When Rancher deploys Kubernetes onto these nodes, it uses [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/) (RKE), which is Rancher's own lightweight Kubernetes installer. It can launch Kubernetes on any computers, including:

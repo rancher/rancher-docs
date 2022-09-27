@@ -1,6 +1,5 @@
 ---
 title: Advanced Options for Docker Installs
-weight: 5
 ---
 
 

@@ -1,17 +1,14 @@
 ---
 title: Recommended Cluster Architecture
-weight: 1
-aliases:
-  - /rancher/v2.x/en/cluster-provisioning/production/recommended-architecture/
 ---
 
-There are three roles that can be assigned to nodes: `etcd`, `controlplane` and `worker`. 
+There are three roles that can be assigned to nodes: `etcd`, `controlplane` and `worker`.
 
 ## Separating Worker Nodes from Nodes with Other Roles
 
 When designing your cluster(s), you have two options:
 
-* Use dedicated nodes for each role. This ensures resource availability for the components needed for the specified role. It also strictly isolates network traffic between each of the roles according to the [port requirements](../node-requirements-for-rancher-managed-clusters.md#networking-requirements). 
+* Use dedicated nodes for each role. This ensures resource availability for the components needed for the specified role. It also strictly isolates network traffic between each of the roles according to the [port requirements](../node-requirements-for-rancher-managed-clusters.md#networking-requirements).
 * Assign the `etcd` and `controlplane` roles to the same nodes. These nodes must meet the hardware requirements for both roles.
 
 In either case, the `worker` role should not be used or added to nodes with the `etcd` or `controlplane` role.

@@ -1,10 +1,5 @@
 ---
 title: 2. Enable Istio in a Namespace
-weight: 2
-aliases:
-  - /rancher/v2.5/en/istio/setup/enable-istio-in-namespace
-  - /rancher/v2.5/en/istio/v2.5/setup/enable-istio-in-namespace
-  - /rancher/v2.x/en/istio/v2.5/setup/enable-istio-in-namespace/
 ---
 
 You will need to manually enable Istio in each namespace that you want to be tracked or controlled by Istio. When Istio is enabled in a namespace, the Envoy sidecar proxy will be automatically injected into all new workloads that are deployed in the namespace.

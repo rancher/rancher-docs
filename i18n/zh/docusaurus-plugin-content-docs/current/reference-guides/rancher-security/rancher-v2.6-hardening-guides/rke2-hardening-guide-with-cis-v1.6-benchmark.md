@@ -1,6 +1,5 @@
 ---
 title: 使用 CIS 1.6 Benchmark 的 RKE2 强化指南
-weight: 100
 ---
 
 本文档提供了用于强化 RKE2 集群（使用 Rancher 2.6.5 进行配置）生产安装的说明。此处概述了遵循 CIS 的 Kubernetes Benchmark 管控所需的配置和控制。
@@ -316,7 +315,7 @@ spec:
           profile: cis-1.6
           protect-kernel-defaults: true
 #      - config:
-#          
+#
 #        machineLabelSelector:
 #          matchExpressions:
 #            - key: string

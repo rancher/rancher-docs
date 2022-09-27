@@ -1,7 +1,5 @@
 ---
 title: ServiceMonitor 和 PodMonitor 配置
-shortTitle: ServiceMonitor 和 PodMonitor
-weight: 7
 ---
 
 ServiceMonitor 和 PodMonitor 都是伪 CRD，它们映射 Prometheus 自定义资源的抓取配置。

@@ -1,7 +1,6 @@
 ---
 title: CNI 网络插件
 description: 了解容器网络接口 (CNI)、Rancher 提供的 CNI 网络插件、提供商的功能，以及如何选择网络提供商
-weight: 2300
 ---
 
 ## 什么是 CNI？

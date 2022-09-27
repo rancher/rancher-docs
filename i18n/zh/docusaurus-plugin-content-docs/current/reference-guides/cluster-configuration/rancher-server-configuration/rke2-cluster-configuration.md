@@ -1,7 +1,5 @@
 ---
 title: RKE2 集群配置参考
-shortTitle: RKE2 集群配置
-weight: 5
 ---
 
 本文介绍 Rancher 中可用于新的或现有的 RKE2 Kubernetes 集群的配置选项。

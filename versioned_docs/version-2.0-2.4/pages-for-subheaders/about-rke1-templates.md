@@ -1,6 +1,5 @@
 ---
 title: RKE Templates
-weight: 7010
 ---
 
 _Available as of Rancher v2.3.0_
@@ -83,7 +82,7 @@ The documents in this section explain the details of RKE template management:
 
 - [Getting permission to create templates](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/creator-permissions.md)
 - [Creating and revising templates](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md)
-- [Enforcing template settings](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/enforce-templates.md#requiring-new-clusters-to-use-an-rke-template) 
+- [Enforcing template settings](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/enforce-templates.md#requiring-new-clusters-to-use-an-rke-template)
 - [Overriding template settings](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/override-template-settings.md)
 - [Sharing templates with cluster creators](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates.md#sharing-templates-with-specific-users-or-groups)
 - [Sharing ownership of a template](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates.md#sharing-ownership-of-templates)

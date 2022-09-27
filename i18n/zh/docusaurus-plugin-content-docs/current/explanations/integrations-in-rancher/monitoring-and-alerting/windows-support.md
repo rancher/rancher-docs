@@ -1,7 +1,5 @@
 ---
 title: Monitoring V2 的 Windows 集群支持
-shortTitle: Windows 支持
-weight: 5
 ---
 
 _从 v2.5.8 起可用_

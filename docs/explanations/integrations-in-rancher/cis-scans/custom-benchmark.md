@@ -1,16 +1,15 @@
 ---
 title: Creating a Custom Benchmark Version for Running a Cluster Scan
-weight: 4
 ---
 
 Each Benchmark Version defines a set of test configuration files that define the CIS tests to be run by the <a href="https://github.com/aquasecurity/kube-bench" target="_blank">kube-bench</a> tool.
 The `rancher-cis-benchmark` application installs a few default Benchmark Versions which are listed under CIS Benchmark application menu.
- 
+
 But there could be some Kubernetes cluster setups that require custom configurations of the Benchmark tests. For example, the path to the Kubernetes config files or certs might be different than the standard location where the upstream CIS Benchmarks look for them.
 
 It is now possible to create a custom Benchmark Version for running a cluster scan using the `rancher-cis-benchmark` application.
 
-When a cluster scan is run, you need to select a Profile which points to a specific Benchmark Version. 
+When a cluster scan is run, you need to select a Profile which points to a specific Benchmark Version.
 
 Follow all the steps below to add a custom Benchmark Version and run a scan using it.
 
@@ -21,7 +20,7 @@ To create a custom benchmark version, first you need to create a ConfigMap conta
 To prepare a custom benchmark version ConfigMap, suppose we want to add a custom Benchmark Version named `foo`.
 
 1. Create a directory named `foo` and inside this directory, place all the config YAML files that the <a href="https://github.com/aquasecurity/kube-bench" target="_blank">kube-bench</a> tool looks for. For example, here are the config YAML files for a Generic CIS 1.5 Benchmark Version https://github.com/aquasecurity/kube-bench/tree/master/cfg/cis-1.5
-1. Place the complete `config.yaml` file, which includes all the components that should be tested. 
+1. Place the complete `config.yaml` file, which includes all the components that should be tested.
 1. Add the Benchmark version name to the `target_mapping` section of the `config.yaml`:
 
     ```yaml

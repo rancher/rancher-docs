@@ -1,11 +1,6 @@
 ---
 title: Importing Existing Clusters
 description: Learn how you can create a cluster in Rancher by importing an existing Kubernetes cluster. Then, you can manage it using Rancher
-metaTitle: 'Kubernetes Cluster Management'
-metaDescription: 'Learn how you can import an existing Kubernetes cluster and then manage it using Rancher'
-weight: 5
-aliases:
-  - /rancher/v2.0-v2.4/en/tasks/clusters/import-cluster/
 ---
 
 _Available as of v2.0.x-v2.4.x_

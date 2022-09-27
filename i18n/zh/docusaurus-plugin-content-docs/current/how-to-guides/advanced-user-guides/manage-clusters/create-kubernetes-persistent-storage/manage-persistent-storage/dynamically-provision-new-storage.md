@@ -1,6 +1,5 @@
 ---
 title: 在 Rancher 中动态配置新存储
-weight: 2
 ---
 
 本文介绍如何为 Rancher 中的工作负载配置新的持久存储。

@@ -1,6 +1,5 @@
 ---
 title: How Persistent Storage Works
-weight: 1
 ---
 
 A persistent volume (PV) is a piece of storage in the Kubernetes cluster, while a persistent volume claim (PVC) is a request for storage.

@@ -1,6 +1,5 @@
 ---
 title: 配置 NGINX 负载均衡器
-weight: 4
 ---
 
 将 NGINX 配置为四层负载均衡器（TCP），用于将连接转发到 Rancher 节点。

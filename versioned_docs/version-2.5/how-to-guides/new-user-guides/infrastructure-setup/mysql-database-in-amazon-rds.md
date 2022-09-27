@@ -1,10 +1,7 @@
 ---
 title: Setting up a MySQL Database in Amazon RDS
-weight: 4
-aliases:
-  - /rancher/v2.5/en/installation/options/rds
-  - /rancher/v2.x/en/installation/resources/k8s-tutorials/infrastructure-tutorials/rds/
 ---
+
 This tutorial describes how to set up a MySQL database in Amazon's RDS.
 
 This database can later be used as an external datastore for a high-availability K3s Kubernetes cluster.

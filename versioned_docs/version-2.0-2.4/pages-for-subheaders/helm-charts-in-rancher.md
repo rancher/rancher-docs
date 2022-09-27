@@ -1,13 +1,6 @@
 ---
 title: Helm Charts in Rancher
-weight: 12
 description: Rancher enables the use of catalogs to repeatedly deploy applications easily. Catalogs are GitHub or Helm Chart repositories filled with deployment-ready apps.
-aliases:
-  - /rancher/v2.0-v2.4/en/concepts/global-configuration/catalog/
-  - /rancher/v2.0-v2.4/en/concepts/catalogs/
-  - /rancher/v2.0-v2.4/en/tasks/global-configuration/catalog/
-  - /rancher/v2.0-v2.4/en/catalog
-  - /rancher/v2.0-v2.4/en/catalog/apps
 ---
 
 Rancher provides the ability to use a catalog of Helm charts that make it easy to repeatedly deploy applications.

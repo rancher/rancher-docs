@@ -1,7 +1,5 @@
 ---
 title: 接收器配置
-shortTitle: 接收器
-weight: 1
 ---
 
 import Tabs from '@theme/Tabs';

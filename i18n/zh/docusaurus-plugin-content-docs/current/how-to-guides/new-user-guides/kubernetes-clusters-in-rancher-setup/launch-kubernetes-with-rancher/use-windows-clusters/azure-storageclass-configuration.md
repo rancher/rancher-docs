@@ -1,6 +1,5 @@
 ---
 title: Azure 中存储类的配置
-weight: 3
 ---
 
 如果你的节点使用 Azure VM，则可以使用 [Azure 文件](https://docs.microsoft.com/en-us/azure/aks/azure-files-dynamic-pv)作为集群的存储类（StorageClass）。

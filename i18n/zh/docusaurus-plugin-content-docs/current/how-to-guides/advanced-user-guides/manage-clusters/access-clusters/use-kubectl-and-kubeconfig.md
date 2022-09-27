@@ -1,7 +1,6 @@
 ---
 title: "使用 Kubectl 和 kubeconfig 访问集群"
 description: "了解如何通过 kubectl Shell 使用 kubectl，或通过 kubectl CLI 和 kubeconfig 文件，来访问和管理 Kubernetes 集群。kubeconfig 文件用于配置对 Kubernetes 的访问。当你使用 Rancher 创建集群时，Rancher 会自动为你的集群创建 kubeconfig。"
-weight: 2010
 ---
 
 本文介绍如何通过 Rancher UI 或工作站来使用 kubectl 操作下游 Kubernetes 集群。

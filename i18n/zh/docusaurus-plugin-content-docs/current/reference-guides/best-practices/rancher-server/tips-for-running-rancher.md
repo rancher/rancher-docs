@@ -1,6 +1,5 @@
 ---
 title: Rancher 运行技巧
-weight: 100
 ---
 
 本指南适用于使用 Rancher 管理下游 Kubernetes 集群的用例。高可用设置可以防止 Rancher Server 不可用时无法访问下游集群。

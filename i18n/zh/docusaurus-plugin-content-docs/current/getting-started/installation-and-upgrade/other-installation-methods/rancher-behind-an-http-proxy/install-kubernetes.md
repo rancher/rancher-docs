@@ -1,6 +1,5 @@
 ---
 title: '2. 安装 Kubernetes'
-weight: 200
 ---
 
 基础设施配置好后，你可以设置一个 RKE 集群来安装 Rancher。

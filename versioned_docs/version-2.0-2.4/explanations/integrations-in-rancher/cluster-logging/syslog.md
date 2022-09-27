@@ -1,12 +1,5 @@
 ---
 title: Syslog
-weight: 500
-aliases:
-  - /rancher/v2.0-v2.4/en/tools/logging/syslog/
-  - /rancher/v2.0-v2.4/en/cluster-admin/tools/logging/syslog
-  - /rancher/v2.0-v2.4/en/logging/legacy/cluster-logging/syslog
-  - /rancher/v2.0-v2.4/en/logging/v2.0.x-v2.4.x/cluster-logging/syslog
-  - /rancher/v2.x/en/logging/v2.0.x-v2.4.x/cluster-logging/syslog/
 ---
 
 If your organization uses [Syslog](https://tools.ietf.org/html/rfc5424), you can configure Rancher to send it Kubernetes logs. Afterwards, you can log into your Syslog server to view logs.
@@ -43,5 +36,5 @@ If your Syslog server is using **TCP** protocol and uses TLS, you need to select
 
 1. Select whether or not you want to verify your SSL.
 
-    * If you are using a self-signed certificate, select **Enabled - Input trusted server certificate**, provide the **CA Certificate PEM**. You can copy and paste the certificate or upload it using the **Read from a file** button.  
+    * If you are using a self-signed certificate, select **Enabled - Input trusted server certificate**, provide the **CA Certificate PEM**. You can copy and paste the certificate or upload it using the **Read from a file** button.
     * If you are using a certificate from a certificate authority, select **Enabled - Input trusted server certificate**. You do not need to provide a **CA Certificate PEM**.

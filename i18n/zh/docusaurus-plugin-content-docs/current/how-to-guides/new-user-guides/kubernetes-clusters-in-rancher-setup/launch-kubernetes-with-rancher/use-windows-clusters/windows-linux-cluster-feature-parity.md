@@ -1,6 +1,5 @@
 ---
 title: Windows 和 Linux 集群的功能奇偶一致性
-weight: 3
 ---
 
 Windows 集群与 Linux 集群的功能支持不相同。

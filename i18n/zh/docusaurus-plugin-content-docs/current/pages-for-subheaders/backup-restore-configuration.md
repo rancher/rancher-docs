@@ -1,7 +1,5 @@
 ---
 title: Rancher 备份配置参考
-shortTitle: 配置
-weight: 4
 ---
 
 - [备份配置](../reference-guides/backup-restore-configuration/backup-configuration.md)

@@ -1,6 +1,5 @@
 ---
 title: 配置 Microsoft AD FS (SAML)
-weight: 1205
 ---
 
 如果你的组织使用 Microsoft 联合身份验证服务 (AD FS) 进行用户身份验证，你可以通过配置 Rancher 来允许用户使用 AD FS 凭证登录。

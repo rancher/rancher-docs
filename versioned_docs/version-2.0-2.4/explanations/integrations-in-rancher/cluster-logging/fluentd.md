@@ -1,11 +1,5 @@
 ---
 title: Fluentd
-weight: 600
-aliases:
-  - /rancher/v2.0-v2.4/en/cluster-admin/tools/logging/fluentd
-  - /rancher/v2.0-v2.4/en/logging/legacy/cluster-logging/fluentd
-  - /rancher/v2.0-v2.4/en/logging/v2.0.x-v2.4.x/cluster-logging/fluentd
-  - /rancher/v2.x/en/logging/v2.0.x-v2.4.x/cluster-logging/fluentd/
 ---
 
 If your organization uses [Fluentd](https://www.fluentd.org/), you can configure Rancher to send it Kubernetes logs.  Afterwards, you can log into your Fluentd server to view logs.
@@ -36,4 +30,4 @@ After adding all the Fluentd servers, you have the option to select **Enable Gzi
 
 If your Fluentd servers are using TLS, you need to select **Use TLS**. If you are using a self-signed certificate, provide the **CA Certificate PEM**. You can copy and paste the certificate or upload it using the **Read from a file** button.
 
->**Note:** Fluentd does not support self-signed certificates when client authentication is enabled. 
+>**Note:** Fluentd does not support self-signed certificates when client authentication is enabled.

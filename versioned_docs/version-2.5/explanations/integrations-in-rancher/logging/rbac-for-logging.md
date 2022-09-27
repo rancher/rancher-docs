@@ -1,7 +1,5 @@
 ---
-shortTitle: Role-based Access Control
 title: Role-based Access Control for Logging
-weight: 3
 ---
 
 Rancher logging has two roles, `logging-admin` and `logging-view`.

@@ -1,6 +1,5 @@
 ---
 title: HTTP 代理配置
-weight: 251
 ---
 
 如果你通过代理来操作 Rancher，并想要通过代理访问服务（例如拉取应用商店），你需要提供 Rancher 代理的信息。由于 Rancher 是用 Go 编写的，Rancher 使用如下常见的代理环境变量。

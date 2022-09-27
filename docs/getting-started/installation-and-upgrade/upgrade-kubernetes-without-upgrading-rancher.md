@@ -1,6 +1,5 @@
 ---
 title: Upgrading Kubernetes without Upgrading Rancher
-weight: 30
 ---
 
 The RKE metadata feature allows you to provision clusters with new versions of Kubernetes as soon as they are released, without upgrading Rancher. This feature is useful for taking advantage of patch versions of Kubernetes, for example, if you want to upgrade to Kubernetes v1.14.7 when your Rancher server originally supported v1.14.6.
@@ -13,9 +12,9 @@ The Kubernetes API can change between minor versions. Therefore, we don't suppor
 
 Rancher's Kubernetes metadata contains information specific to the Kubernetes version that Rancher uses to provision [RKE clusters](../../pages-for-subheaders/launch-kubernetes-with-rancher.md). Rancher syncs the data periodically and creates custom resource definitions (CRDs) for **system images,** **service options** and **addon templates**. Consequently, when a new Kubernetes version is compatible with the Rancher server version, the Kubernetes metadata makes the new version available to Rancher for provisioning clusters. The metadata gives you an overview of the information that the [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/) (RKE) uses for deploying various Kubernetes versions.
 
-This table below describes the CRDs that are affected by the periodic data sync. 
+This table below describes the CRDs that are affected by the periodic data sync.
 
-:::note 
+:::note
 
 Only administrators can edit metadata CRDs. It is recommended not to update existing objects unless explicitly advised.
 

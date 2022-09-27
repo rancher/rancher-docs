@@ -1,6 +1,5 @@
 ---
 title: Debugging High Memory Usage
-weight: 8
 ---
 
 Every time series in Prometheus is uniquely identified by its [metric name](https://prometheus.io/docs/practices/naming/#metric-names) and optional key-value pairs called [labels.](https://prometheus.io/docs/practices/naming/#labels)

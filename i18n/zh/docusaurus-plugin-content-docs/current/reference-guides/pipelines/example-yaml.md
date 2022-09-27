@@ -1,6 +1,5 @@
 ---
 title: 示例 YAML 文件
-weight: 501
 ---
 
 你可以通过 UI 或使用仓库中的 YAML 文件（即 `.rancher-pipeline.yml` 或 `.rancher-pipeline.yaml`）配置流水线。

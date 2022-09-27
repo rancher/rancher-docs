@@ -1,8 +1,5 @@
 ---
 title: RKE CIS 1.6 Benchmark - 自我评估指南 - Rancher 2.6
-weight: 101
-aliases:
-  - /rancher/v2.6/en/security/hardening-guides/1.6-benchmark-2.6/
 ---
 
 ### RKE CIS 1.6 Kubernetes Benchmark - Rancher 2.6 与 Kubernetes 1.18 到 1.23

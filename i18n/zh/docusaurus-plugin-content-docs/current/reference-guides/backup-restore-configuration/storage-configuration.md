@@ -1,7 +1,5 @@
 ---
 title: 备份存储位置配置
-shortTitle: 存储
-weight: 3
 ---
 
 配置一个用于保存所有备份的默认存储位置。你可以选择对每个备份进行覆盖，但仅限于使用 S3 对象存储。
@@ -35,7 +33,7 @@ weight: 3
 
 :::note 重要提示：
 
-强烈建议使用回收策略为 "Retain" 的 StorageClass。否则，如果 `rancher-backup` Chart 创建的 PVC 在应用升级期间或意外被删除后，PV 也会被删除，也就是说所有保存在其中的备份都会被删除。  
+强烈建议使用回收策略为 "Retain" 的 StorageClass。否则，如果 `rancher-backup` Chart 创建的 PVC 在应用升级期间或意外被删除后，PV 也会被删除，也就是说所有保存在其中的备份都会被删除。
 如果没有这样的 StorageClass，则在设置 PV 之后，一定要将它的回收策略设置为 "Retain"，然后再将备份存储在其中。
 
 :::

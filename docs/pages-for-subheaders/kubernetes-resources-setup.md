@@ -1,6 +1,5 @@
 ---
 title: Kubernetes Resources
-weight: 18
 ---
 
 You can view and manipulate all of the custom resources and CRDs in a Kubernetes cluster from the Rancher UI.

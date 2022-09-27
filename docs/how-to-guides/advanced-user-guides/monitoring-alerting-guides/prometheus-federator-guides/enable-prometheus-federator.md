@@ -1,6 +1,5 @@
 ---
 title: Enable Prometheus Federator
-weight: 1
 ---
 
 

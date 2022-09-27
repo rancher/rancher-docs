@@ -1,7 +1,5 @@
 ---
 title: Best Practices for the Rancher Server
-shortTitle: Rancher Server
-weight: 1
 ---
 
 This guide contains our recommendations for running the Rancher server, and is intended to be used in situations in which Rancher manages downstream Kubernetes clusters.

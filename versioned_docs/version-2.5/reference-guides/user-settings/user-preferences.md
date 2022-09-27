@@ -1,8 +1,5 @@
 ---
 title: User Preferences
-weight: 7012
-aliases:
-  - /rancher/v2.x/en/user-settings/preferences/
 ---
 
 import Tabs from '@theme/Tabs';

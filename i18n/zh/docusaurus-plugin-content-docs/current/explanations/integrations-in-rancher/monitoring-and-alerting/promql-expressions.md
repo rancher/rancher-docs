@@ -1,6 +1,5 @@
 ---
 title: PromQL 表达式参考
-weight: 6
 ---
 
 本文档中的 PromQL 表达式可用于配置告警。

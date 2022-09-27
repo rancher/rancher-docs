@@ -1,6 +1,5 @@
 ---
 title: 4. Install Rancher
-weight: 400
 ---
 
 This section is about how to deploy Rancher for your air gapped environment in a high-availability Kubernetes installation. An air gapped environment could be where Rancher server will be installed offline, behind a firewall, or behind a proxy.

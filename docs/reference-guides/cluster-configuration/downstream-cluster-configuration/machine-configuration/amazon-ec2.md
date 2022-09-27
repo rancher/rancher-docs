@@ -1,6 +1,5 @@
 ---
 title: EC2 Machine Configuration Reference
-weight: 2
 ---
 
 For more details about EC2 nodes, refer to the official documentation for the [EC2 Management Console](https://aws.amazon.com/ec2).

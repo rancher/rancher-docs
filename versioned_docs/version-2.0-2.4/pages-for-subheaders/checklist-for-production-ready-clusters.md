@@ -1,6 +1,5 @@
 ---
 title: Checklist for Production-Ready Clusters
-weight: 2
 ---
 
 In this section, we recommend best practices for creating the production-ready Kubernetes clusters that will run your apps and services.

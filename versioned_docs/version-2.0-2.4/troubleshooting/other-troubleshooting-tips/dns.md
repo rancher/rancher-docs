@@ -1,6 +1,5 @@
 ---
 title: DNS
-weight: 103
 ---
 
 The commands/steps listed on this page can be used to check name resolution issues in your cluster.

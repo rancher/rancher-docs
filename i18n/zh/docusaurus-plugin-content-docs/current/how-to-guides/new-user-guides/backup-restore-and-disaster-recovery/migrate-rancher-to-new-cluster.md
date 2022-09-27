@@ -1,6 +1,5 @@
 ---
 title: 将 Rancher 迁移到新集群
-weight: 3
 ---
 
 如果你要将 Rancher 迁移到一个新的 Kubernetes 集群，先不要在新集群上安装 Rancher。这是因为如果将 Rancher 还原到已安装 Rancher 的新集群，可能会导致问题。

@@ -1,7 +1,5 @@
 ---
 title: RBAC
-shortTitle: RBAC
-weight: 2
 ---
 
 本文介绍 Prometheus Federator RBAC。

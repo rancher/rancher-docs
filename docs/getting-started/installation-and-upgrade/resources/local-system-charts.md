@@ -1,6 +1,5 @@
 ---
 title: Setting up Local System Charts for Air Gapped Installations
-weight: 120
 ---
 
 The [System Charts](https://github.com/rancher/system-charts) repository contains all the catalog items required for features such as monitoring, logging, alerting and global DNS.

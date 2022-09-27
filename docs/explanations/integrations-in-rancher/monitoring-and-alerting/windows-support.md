@@ -1,7 +1,5 @@
 ---
 title: Windows Cluster Support for Monitoring V2
-shortTitle: Windows Support
-weight: 5
 ---
 
 _Available as of v2.5.8_
@@ -32,22 +30,22 @@ To facilitate this upgrade, Rancher 2.5.8 has released a brand new Helm chart ca
 1. Deploy `rancher-wins-upgrader` with the following override:
     ```yaml
     # Masquerading bootstraps the wins-upgrader installation via
-    # a previously whitelisted process path since the normal install path, 
-    # c:\etc\rancher\wins\wins-upgrade.exe is not normally whitelisted. 
-    # In this case, we are using the previously whitelisted process 
+    # a previously whitelisted process path since the normal install path,
+    # c:\etc\rancher\wins\wins-upgrade.exe is not normally whitelisted.
+    # In this case, we are using the previously whitelisted process
     # path used by Monitoring V1.
     masquerade:
       enabled: true
       as: c:\\etc\wmi-exporter\wmi-exporter.exe
     ```
     :::note Note for Non-Default Windows Prefix Path:
-    
-    - If you set up the RKE cluster with a `cluster.yml` that has a non-default `win_prefix_path`, you will need to update the `masquerade.as` field with your prefix path in place of  `c:\\`. 
-    
+
+    - If you set up the RKE cluster with a `cluster.yml` that has a non-default `win_prefix_path`, you will need to update the `masquerade.as` field with your prefix path in place of  `c:\\`.
+
     - For example, if you have `win_prefix_path: 'c:\host\opt\'`, then you will need to set `as: c:\host\opt\etc\wmi-exporter\wmi-exporter.exe`.
 
     :::
-    
+
 2. Once all your hosts have been successfully upgraded, please ensure that you deploy the Helm chart once again with default values to avoid conflicts with the following settings:
     ```yaml
     masquerade:

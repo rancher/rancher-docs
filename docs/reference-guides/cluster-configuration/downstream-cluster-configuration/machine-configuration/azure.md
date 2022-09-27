@@ -1,6 +1,5 @@
 ---
 title: Azure Machine Configuration
-weight: 2
 ---
 
 For more information about Azure, refer to the official [Azure documentation.](https://docs.microsoft.com/en-us/azure/?product=featured)

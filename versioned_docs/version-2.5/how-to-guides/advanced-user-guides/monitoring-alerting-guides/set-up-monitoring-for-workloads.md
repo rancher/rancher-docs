@@ -1,6 +1,5 @@
 ---
 title: Setting up Monitoring for a Workload
-weight: 4
 ---
 
 If you only need CPU and memory time series for the workload, you don't need to deploy a ServiceMonitor or PodMonitor because the monitoring application already collects metrics data on resource usage by default.

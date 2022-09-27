@@ -1,7 +1,5 @@
 ---
 title: Installing Rancher on Azure Kubernetes Service
-shortTitle: AKS
-weight: 4
 ---
 
 This page covers how to install Rancher on Microsoft's Azure Kubernetes Service (AKS).
@@ -96,9 +94,9 @@ kubectl get service ingress-nginx-controller --namespace=ingress-nginx
 The result should look similar to the following:
 
 ```
-NAME                       TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)                     
+NAME                       TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)
  AGE
-ingress-nginx-controller   LoadBalancer   10.0.116.18    40.31.180.83   80:31229/TCP,443:31050/TCP  
+ingress-nginx-controller   LoadBalancer   10.0.116.18    40.31.180.83   80:31229/TCP,443:31050/TCP
  67s
 ```
 

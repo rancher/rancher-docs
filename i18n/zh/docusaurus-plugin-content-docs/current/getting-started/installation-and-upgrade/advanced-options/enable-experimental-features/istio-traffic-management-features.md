@@ -1,6 +1,5 @@
 ---
 title: UI 管理 Istio 虚拟服务和目标规则
-weight: 2
 ---
 
 此功能可启动一个 UI，用于管理 Istio 的流量，其中包括创建、读取、更新和删除虚拟服务（Virtual Service）和目标规则（Destination Rule）。

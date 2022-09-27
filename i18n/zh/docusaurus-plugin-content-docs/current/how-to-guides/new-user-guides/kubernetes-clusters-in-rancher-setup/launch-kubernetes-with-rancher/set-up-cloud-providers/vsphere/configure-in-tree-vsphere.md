@@ -1,7 +1,5 @@
 ---
 title: 配置树内 vSphere 云提供商
-shortTitle: 树内云提供商
-weight: 10
 ---
 
 要设置树内 vSphere 云提供商，请在 Rancher 中创建 vSphere 集群时按照以下步骤操作：

@@ -1,6 +1,5 @@
 ---
 title: Kubernetes 组件
-weight: 100
 ---
 
 本文列出的命令和步骤适用于 [Rancher 启动的 Kubernetes](launch-kubernetes-with-rancher.md) 集群上的核心 Kubernetes 组件。

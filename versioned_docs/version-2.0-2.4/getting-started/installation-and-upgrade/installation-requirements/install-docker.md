@@ -1,6 +1,5 @@
 ---
 title: Installing Docker
-weight: 1
 ---
 
 Docker is required to be installed on nodes where the Rancher server will be installed with Helm or Docker.

@@ -1,6 +1,5 @@
 ---
 title: Skipped and Not Applicable Tests
-weight: 3
 ---
 
 This section lists the tests that are skipped in the permissive test profile for RKE.

@@ -1,6 +1,5 @@
 ---
 title: RKE2 CIS 1.6 Benchmark - 自我评估指南 - Rancher 2.6
-weight: 101
 ---
 
 ### CIS 1.6 Kubernetes Benchmark - Rancher 2.6 RKE2 与 Kubernetes 1.21 到 1.23

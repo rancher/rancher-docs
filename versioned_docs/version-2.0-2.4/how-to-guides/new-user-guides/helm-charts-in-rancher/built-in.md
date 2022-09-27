@@ -1,10 +1,5 @@
 ---
 title: Enabling and Disabling Built-in Global Catalogs
-weight: 100
-aliases:
-  - /rancher/v2.0-v2.4/en/tasks/global-configuration/catalog/enabling-default-catalogs/
-  - /rancher/v2.0-v2.4/en/catalog/built-in
-  - /rancher/v2.0-v2.4/en/helm-charts/legacy-catalogs/built-in
 ---
 
 There are default global catalogs packaged as part of Rancher.

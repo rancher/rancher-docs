@@ -1,12 +1,5 @@
 ---
 title: Elasticsearch
-weight: 200
-aliases:
-  - /rancher/v2.0-v2.4/en/tools/logging/elasticsearch/
-  - /rancher/v2.0-v2.4/en/cluster-admin/tools/logging/elasticsearch
-  - /rancher/v2.0-v2.4/en/logging/legacy/cluster-logging/elasticsearch
-  - /rancher/v2.0-v2.4/en/logging/v2.0.x-v2.4.x/cluster-logging/elasticsearch
-  - /rancher/v2.x/en/logging/v2.0.x-v2.4.x/cluster-logging/elasticsearch/
 ---
 
 If your organization uses [Elasticsearch](https://www.elastic.co/), either on premise or in the cloud, you can configure Rancher to send it Kubernetes logs. Afterwards, you can log into your Elasticsearch deployment to view logs.
@@ -43,5 +36,5 @@ If your instance of Elasticsearch uses SSL, your **Endpoint** will need to begin
 
 1. Select whether or not you want to verify your SSL.
 
-    * If you are using a self-signed certificate, select **Enabled - Input trusted server certificate**, provide the **CA Certificate PEM**. You can copy and paste the certificate or upload it using the **Read from a file** button.  
+    * If you are using a self-signed certificate, select **Enabled - Input trusted server certificate**, provide the **CA Certificate PEM**. You can copy and paste the certificate or upload it using the **Read from a file** button.
     * If you are using a certificate from a certificate authority, select **Enabled - Input trusted server certificate**. You do not need to provide a **CA Certificate PEM**.

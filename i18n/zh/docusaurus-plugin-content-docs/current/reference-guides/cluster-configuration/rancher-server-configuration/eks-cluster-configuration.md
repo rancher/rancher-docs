@@ -1,7 +1,5 @@
 ---
 title: EKS 集群配置参考
-shortTitle: EKS 集群配置
-weight: 2
 ---
 
 ### 账号访问

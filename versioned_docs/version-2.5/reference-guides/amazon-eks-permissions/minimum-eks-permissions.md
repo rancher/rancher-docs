@@ -1,11 +1,10 @@
 ---
 title: Minimum EKS Permissions
-weight: 1
 ---
 
 Documented here is a minimum set of permissions necessary to use all functionality of the EKS driver in Rancher. Additional permissions are required for Rancher to provision the `Service Role` and `VPC` resources. Optionally these resources can be created **before** the cluster creation and will be selectable when defining the cluster configuration.
 
-Resource | Description 
+Resource | Description
 ---------|------------
 Service Role | The service role provides Kubernetes the permissions it requires to manage resources on your behalf. Rancher can create the service role with the following [Service Role Permissions](#service-role-permissions).
 VPC | Provides isolated network resources utilised by EKS and worker nodes. Rancher can create the VPC resources with the following [VPC Permissions](#vpc-permissions).

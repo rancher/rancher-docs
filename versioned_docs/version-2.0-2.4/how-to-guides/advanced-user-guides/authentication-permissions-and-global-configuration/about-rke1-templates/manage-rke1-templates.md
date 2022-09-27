@@ -1,6 +1,5 @@
 ---
 title: Creating and Revising Templates
-weight: 32
 ---
 
 This section describes how to manage RKE templates and revisions. You an create, share, update, and delete templates from the **Global** view under **Tools > RKE Templates.**

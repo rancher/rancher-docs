@@ -1,6 +1,5 @@
 ---
 title: Using Fleet Behind a Proxy
-weight: 3
 ---
 
 _Available as of v2.5.8_

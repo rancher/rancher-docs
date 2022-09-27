@@ -1,6 +1,5 @@
 ---
 title: Cluster and Project Roles
-weight: 1127
 ---
 
 import Tabs from '@theme/Tabs';

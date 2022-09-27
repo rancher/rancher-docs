@@ -1,6 +1,5 @@
 ---
 title: Provisioning Kubernetes Clusters in vSphere
-weight: 1
 ---
 
 In this section, you'll learn how to use Rancher to install an [RKE](https://rancher.com/docs/rke/latest/en/)  Kubernetes cluster in vSphere.

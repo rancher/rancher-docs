@@ -1,6 +1,5 @@
 ---
 title: Template Creator Permissions
-weight: 10
 ---
 
 Administrators have the permission to create RKE templates, and only administrators can give that permission to other users.

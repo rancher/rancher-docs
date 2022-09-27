@@ -1,6 +1,5 @@
 ---
 title: Flows and ClusterFlows
-weight: 1
 ---
 
 For the full details on configuring `Flows` and `ClusterFlows`, see the [Banzai Cloud Logging operator documentation.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/flow/)
@@ -12,7 +11,7 @@ A `Flow` defines which logs to collect and filter and which output to send the l
 
 The `Flow` is a namespaced resource, which means logs will only be collected from the namespace that the `Flow` is deployed in.
 
-`Flows` can be configured by filling out forms in the Rancher UI. 
+`Flows` can be configured by filling out forms in the Rancher UI.
 
 For more details about the `Flow` custom resource, see [FlowSpec.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/flow_types/)
 

@@ -1,6 +1,5 @@
 ---
 title: Configuration for Storage Classes in Azure
-weight: 3
 ---
 
 If you are using Azure VMs for your nodes, you can use [Azure files](https://docs.microsoft.com/en-us/azure/aks/azure-files-dynamic-pv) as a StorageClass for the cluster.

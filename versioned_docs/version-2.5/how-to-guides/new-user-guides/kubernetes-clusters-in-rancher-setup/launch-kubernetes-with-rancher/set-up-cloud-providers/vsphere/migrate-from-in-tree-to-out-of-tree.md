@@ -1,9 +1,7 @@
 ---
 title: Migrating vSphere In-tree Volumes to CSI
-weight: 5
-aliases:
-  - /rancher/v2.x/en/cluster-provisioning/rke-clusters/cloud-providers/vsphere/out-of-tree/vsphere-volume-migration/
 ---
+
 _Available as of v2.5+_
 
 Kubernetes is moving away from maintaining cloud providers in-tree. vSphere has an out-of-tree cloud provider that can be used by installing the vSphere cloud provider and cloud storage plugins.
@@ -48,7 +46,7 @@ Before installing CPI, we need to taint all nodes with `node.cloudprovider.kuber
 This can be done by running the following commands:
 
 ```
-curl -O https://raw.githubusercontent.com/rancher/helm3-charts/56b622f519728378abeddfe95074f1b87ab73b1e/charts/vsphere-cpi/taints.sh 
+curl -O https://raw.githubusercontent.com/rancher/helm3-charts/56b622f519728378abeddfe95074f1b87ab73b1e/charts/vsphere-cpi/taints.sh
 ```
 
 Or:
@@ -56,10 +54,10 @@ Or:
 ```
 wget https://raw.githubusercontent.com/rancher/helm3-charts/56b622f519728378abeddfe95074f1b87ab73b1e/charts/vsphere-cpi/taints.sh
 chmod +x taints.sh
-./taints.sh <path to kubeconfig if running the command outside the cluster> 
+./taints.sh <path to kubeconfig if running the command outside the cluster>
 ```
 
-Once all nodes are tainted by the running the script, launch the Helm vSphere CPI chart. 
+Once all nodes are tainted by the running the script, launch the Helm vSphere CPI chart.
 
 1. From the **Cluster Explorer** view, go to the top left dropdown menu and click **Apps & Marketplace.**
 2. Select the **vSphere CPI** chart.
@@ -76,7 +74,7 @@ kubectl describe nodes | grep "ProviderID"
 ### 2. Install the CSI driver
 
 1. From the **Cluster Explorer** view, go to the top left dropdown menu and click **Apps & Marketplace.**
-1. Select the **vSphere CSI** chart. 
+1. Select the **vSphere CSI** chart.
 1. Fill out the required vCenter details and click **Launch**.
 1. Set **Enable CSI Migration** to **true**.
 1. This chart creates a StorageClass with the `csi.vsphere.vmware.com` as the provisioner. You can provide the URL of the datastore to be used for CSI volume provisioning while creating this StorageClass. The datastore URL can be found in the vSphere client by selecting the datastore and going to the Summary tab. Fill out the details for the StorageClass and click **Launch**.
@@ -88,15 +86,15 @@ kubectl describe nodes | grep "ProviderID"
 
     ```yaml
       extra_args:
-        feature-gates: "CSIMigration=true,CSIMigrationvSphere=true" 
+        feature-gates: "CSIMigration=true,CSIMigrationvSphere=true"
     ```
 
 ### 4. Drain worker nodes
 
-Worker nodes must be drained during the upgrade before changing the kubelet and kube-controller-manager args. 
+Worker nodes must be drained during the upgrade before changing the kubelet and kube-controller-manager args.
 
 1. Click **Edit as Form** and then click on "Advanced Options."
 1. Set the field **Maximum Worker Nodes Unavailable** to count of 1.
-1. To drain the nodes during upgrade, select **Drain Nodes > Yes**. 
+1. To drain the nodes during upgrade, select **Drain Nodes > Yes**.
 1. Set **Force** and **Delete Local Data** to **true**.
 1. Click **Save** to upgrade the cluster.

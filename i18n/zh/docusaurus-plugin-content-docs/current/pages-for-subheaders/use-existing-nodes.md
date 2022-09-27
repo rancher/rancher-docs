@@ -1,8 +1,6 @@
 ---
 title: 在现有自定义节点上启动 Kubernetes
 description: 要创建具有自定义节点的集群，你需要访问集群中的服务器，并根据 Rancher 的要求配置服务器。
-metaDescription: "要创建具有自定义节点的集群，你需要访问集群中的服务器，并根据 Rancher 的要求配置服务器。"
-weight: 2225
 ---
 
 创建自定义集群时，Rancher 使用 RKE（Rancher Kubernetes Engine）在本地裸机服务器、本地虚拟机或云服务器节点中创建 Kubernetes 集群。

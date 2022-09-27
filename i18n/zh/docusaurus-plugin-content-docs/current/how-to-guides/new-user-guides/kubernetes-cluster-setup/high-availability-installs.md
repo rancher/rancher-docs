@@ -1,6 +1,5 @@
 ---
 title: 高可用安装
-weight: 1
 ---
 
 我们建议使用 Helm（ Kubernetes 包管理器 ）在专用的 Kubernetes 集群上安装 Rancher。由于 Rancher 运行在多个节点上提升了可用性，因此这种安装方式叫做高可用 Kubernetes 安装。

@@ -1,6 +1,5 @@
 ---
 title: 添加 TLS 密文
-weight: 2
 ---
 
 我们使用证书和密钥将 `cattle-system` 命名空间中的 `tls-rancher-ingress` 密文配置好后，Kubernetes 会为 Rancher 创建对象和服务。

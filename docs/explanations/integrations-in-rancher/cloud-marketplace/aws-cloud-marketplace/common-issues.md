@@ -1,6 +1,5 @@
 ---
 title: Common Issues
-weight: 4
 ---
 
 **After installing the adapter, a banner message appears in Rancher that says "AWS Marketplace Adapter: Unable to run the adapter, please check the adapter logs"**

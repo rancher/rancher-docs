@@ -1,7 +1,5 @@
 ---
 title: RBAC
-shortTitle: RBAC
-weight: 2
 ---
 本节描述了 RBAC 在 Rancher Monitoring 中的作用。
 

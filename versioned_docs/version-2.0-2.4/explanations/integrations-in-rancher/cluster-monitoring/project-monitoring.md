@@ -1,10 +1,5 @@
 ---
 title: Project Monitoring
-weight: 2
-aliases:
-  - /rancher/v2.0-v2.4/en/project-admin/tools/monitoring
-  - /rancher/v2.0-v2.4/en/monitoring-alerting/v2.0.x-v2.4.x/monitoring/project-monitoring
-  - /rancher/v2.0-v2.4/en/monitoring-alerting/v2.0.x-v2.4.x/cluster-monitoring/project-monitoring
 ---
 
 _Available as of v2.2.4_

@@ -1,6 +1,5 @@
 ---
 title: 调试高内存用量
-weight: 8
 ---
 
 Prometheus 中的每个时间序列都由其[指标名称](https://prometheus.io/docs/practices/naming/#metric-names)和称为[标签](https://prometheus.io/docs/practices/naming/#labels)的可选键值对唯一标识。

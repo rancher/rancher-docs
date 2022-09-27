@@ -1,6 +1,5 @@
 ---
 title: Rancher 中的 Helm Chart
-weight: 11
 ---
 
 在本节中，你将学习如何在 Rancher 中管理 Helm Chart 仓库和应用。你可以在**应用 & 应用市场**中管理 Helm Chart 仓库。它使用类似目录的系统从仓库中导入 Chart 包，然后使用这些 Chart 来部署自定义 Helm 应用或 Rancher 工具（例如监控和 Istio）。Rancher 工具以预加载仓库的方式提供，并能部署为独立的 Helm Chart 。其他仓库只会添加到当前集群。

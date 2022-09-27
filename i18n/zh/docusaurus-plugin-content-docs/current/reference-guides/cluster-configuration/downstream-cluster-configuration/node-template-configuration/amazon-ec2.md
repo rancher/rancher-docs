@@ -1,6 +1,5 @@
 ---
 title: EC2 节点模板配置
-weight: 1
 ---
 
 有关 EC2 和节点的更多详细信息，请参阅 [EC2 管理控制台](https://aws.amazon.com/ec2)的官方文档。

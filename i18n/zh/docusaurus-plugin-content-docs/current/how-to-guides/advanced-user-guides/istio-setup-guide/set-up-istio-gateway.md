@@ -1,6 +1,5 @@
 ---
 title: 4. 设置 Istio Gateway
-weight: 5
 ---
 
 每个集群的网关可以有自己的端口或负载均衡器，这与服务网格无关。默认情况下，每个 Rancher 配置的集群都有一个 NGINX Ingress Controller 来允许流量进入集群。

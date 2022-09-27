@@ -1,6 +1,5 @@
 ---
 title: 身份验证、权限和全局配置
-weight: 6
 ---
 
 安装完成后，[系统管理员](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)需要配置 Rancher 来配置身份验证，安全，默认设定，安全策略，驱动和全局 DNS 条目。

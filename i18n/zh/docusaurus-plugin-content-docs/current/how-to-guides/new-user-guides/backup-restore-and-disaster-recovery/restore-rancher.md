@@ -1,6 +1,5 @@
 ---
 title: 还原 Rancher
-weight: 2
 ---
 
 本页概述了如何使用 Rancher 执行恢复。

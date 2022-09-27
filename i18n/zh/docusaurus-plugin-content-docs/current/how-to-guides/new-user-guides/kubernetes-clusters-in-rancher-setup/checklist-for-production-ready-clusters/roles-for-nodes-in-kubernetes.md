@@ -1,6 +1,5 @@
 ---
 title: Kubernetes 中节点的角色
-weight: 1
 ---
 
 本节介绍 Kubernetes 中 etcd 节点、controlplane 节点和 worker 节点的角色，以及这些角色如何在集群中协同工作。

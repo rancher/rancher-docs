@@ -1,7 +1,5 @@
 ---
 title: Backing up Rancher Installed with Docker
-shortTitle: Backups
-weight: 3
 ---
 
 After completing your Docker installation of Rancher, we recommend creating backups of it on a regular basis. Having a recent backup will let you recover quickly from an unexpected disaster.

@@ -1,7 +1,6 @@
 ---
 title: Configure Keycloak (OIDC)
 description: Create a Keycloak OpenID Connect (OIDC) client and configure Rancher to work with Keycloak. By the end your users will be able to sign into Rancher using their Keycloak logins
-weight: 1200
 ---
 If your organization uses [Keycloak Identity Provider (IdP)](https://www.keycloak.org) for user authentication, you can configure Rancher to allow your users to log in using their IdP credentials. Rancher supports integration with Keycloak using the OpenID Connect (OIDC) protocol and the SAML protocol. Both implementations are functionally equivalent when used with Rancher. This page describes the process to configure Rancher to work with Keycloak using the OIDC protocol.
 
@@ -22,7 +21,7 @@ If you have an existing configuration using the SAML protocol and want to switch
      `Client Protocol` | `openid-connect`
      `Access Type` | `confidential`
      `Valid Redirect URI` | `https://yourRancherHostURL/verify-auth`
- 
+
 - In the new OIDC client, create [Mappers](https://www.keycloak.org/docs/latest/server_admin/#_protocol-mappers) to expose the users fields.
   - Create a new "Groups Mapper" with the settings below.
 
@@ -65,7 +64,7 @@ If you have an existing configuration using the SAML protocol and want to switch
     Rancher redirects you to the IdP login page. Enter credentials that authenticate with Keycloak IdP to validate your Rancher Keycloak configuration.
 
     :::note
-    
+
     You may need to disable your popup blocker to see the IdP login page.
 
     :::
@@ -109,7 +108,7 @@ This section describes the process to transition from using Rancher with Keycloa
 
 ### Reconfigure Rancher
 
-Before configuring Rancher to use Keycloak (OIDC), Keycloak (SAML) must be first disabled. 
+Before configuring Rancher to use Keycloak (OIDC), Keycloak (SAML) must be first disabled.
 
 1. In the Rancher UI, click **☰ > Users & Authentication**.
 1. In the left navigation bar, click **Auth Provider**.

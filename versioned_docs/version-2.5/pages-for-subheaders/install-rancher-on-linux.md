@@ -1,9 +1,5 @@
 ---
 title: Install/Upgrade Rancher with RancherD
-weight: 3
-aliases:
-  - /rancher/v2.5/en/installation/install-rancher-on-linux
-  - /rancher/v2.x/en/installation/install-rancher-on-linux/
 ---
 
 > **Note:** RancherD was an experimental feature available as part of Rancher v2.5.4 through v2.5.10 but is now deprecated and not available for recent releases.

@@ -1,6 +1,5 @@
 ---
 title: 常见问题
-weight: 4
 ---
 
 **安装 Adapter 后，Rancher 中出现一条横幅消息，上面写着 "AWS Marketplace Adapter: Unable to run the adapter, please check the adapter logs"**

@@ -1,6 +1,5 @@
 ---
 title: 1. 在集群中启用 Istio
-weight: 1
 ---
 
 :::note 先决条件：

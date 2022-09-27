@@ -1,9 +1,5 @@
 ---
 title: Global DNS
-weight: 5010
-aliases:
-  - /rancher/v2.0-v2.4/en/catalog/globaldns
-  - /rancher/v2.0-v2.4/en/helm-charts/legacy-catalogs/globaldns
 ---
 
 _Available as of v2.2.0_

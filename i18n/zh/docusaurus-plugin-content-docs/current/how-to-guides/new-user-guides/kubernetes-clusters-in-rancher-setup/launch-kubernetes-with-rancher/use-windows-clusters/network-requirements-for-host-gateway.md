@@ -1,6 +1,5 @@
 ---
 title: Host Gateway (L2bridge) 的网络要求
-weight: 1000
 ---
 
 本节介绍如何配置使用 *Host Gateway (L2bridge)* 模式的自定义 Windows 集群。

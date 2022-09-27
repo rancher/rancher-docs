@@ -1,6 +1,5 @@
 ---
 title: Rancher is No Longer Needed
-weight: 8010
 ---
 
 This page is intended to answer questions about what happens if you don't want Rancher anymore, if you don't want a cluster to be managed by Rancher anymore, or if the Rancher server is deleted.

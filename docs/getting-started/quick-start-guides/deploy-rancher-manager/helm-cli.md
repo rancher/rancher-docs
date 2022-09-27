@@ -1,6 +1,5 @@
 ---
 title: Helm CLI Quick Start
-weight: 300
 ---
 
 import Tabs from '@theme/Tabs';

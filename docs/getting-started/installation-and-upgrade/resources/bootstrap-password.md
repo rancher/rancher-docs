@@ -1,6 +1,5 @@
 ---
 title: Bootstrap Password
-weight: 800
 ---
 
 When Rancher starts for the first time, a password is randomly generated for the first admin user. When the admin first logs in to Rancher, the UI shows commands that can be used to retrieve the bootstrap password. The admin needs to run those commands and log in with the bootstrap password. Then Rancher gives the admin an opportunity to reset the password.

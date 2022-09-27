@@ -1,6 +1,5 @@
 ---
 title: Supportconfig Bundle
-weight: 100
 ---
 
 安装 CSP Adapter 后，你将能够生成一个 Supportconfig Bundle。此 Bundle 是一个 tar 包，可用于快速提供支持信息。

@@ -1,6 +1,5 @@
 ---
 title: AWS Marketplace Integration
-weight: 1
 ---
 
 # Overview

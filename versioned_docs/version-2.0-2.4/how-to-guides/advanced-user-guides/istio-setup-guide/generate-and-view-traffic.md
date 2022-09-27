@@ -1,11 +1,5 @@
 ---
 title: 7. Generate and View Traffic
-weight: 7
-aliases:
-  - /rancher/v2.0-v2.4/en/cluster-admin/tools/istio/setup/view-traffic
-  - /rancher/v2.0-v2.4/en/istio/legacy/setup/view-traffic
-  - /rancher/v2.0-v2.4/en/istio/v2.3.x-v2.4.x/setup/view-traffic
-  - /rancher/v2.x/en/istio/v2.3.x-v2.4.x/setup/view-traffic/
 ---
 
 This section describes how to view the traffic that is being managed by Istio.

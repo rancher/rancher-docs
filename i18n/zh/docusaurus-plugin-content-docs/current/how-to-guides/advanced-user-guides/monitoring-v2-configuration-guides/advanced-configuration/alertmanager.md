@@ -1,6 +1,5 @@
 ---
 title: Alertmanager 配置
-weight: 1
 ---
 
 通常情况下，你不需要直接编辑 Alertmanager 自定义资源。对于大多数用例，只需要编辑接收器和路由即可配置通知。

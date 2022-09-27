@@ -1,6 +1,5 @@
 ---
 title: Installing Project Monitors
-weight: 5
 ---
 
 Install **Project Monitors** in each project where you want to enable project monitoring.

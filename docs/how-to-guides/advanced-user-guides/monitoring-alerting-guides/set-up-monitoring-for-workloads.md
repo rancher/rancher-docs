@@ -1,6 +1,5 @@
 ---
 title: Setting up Monitoring for a Workload
-weight: 4
 ---
 
 

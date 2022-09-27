@@ -1,6 +1,5 @@
 ---
 title: Configuring Microsoft Active Directory Federation Service (SAML)
-weight: 1205
 ---
 _Available as of v2.0.7_
 

@@ -1,7 +1,5 @@
 ---
 title: 创建华为 CCE 集群
-shortTitle: 华为云 Kubernetes 服务
-weight: 2130
 ---
 
 你可以使用 Rancher 创建托管在华为云容器引擎 (CCE) 中的集群。Rancher 已经为 CCE 实现并打包了针对 CCE 的[集群驱动](../../../advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-cluster-drivers.md)，但是默认情况下，这个集群驱动的状态是 `inactive`。为了启动 CCE 集群，你需要[启用 CCE 集群驱动](../../../advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-cluster-drivers.md#激活/停用集群驱动)。启用集群驱动后，你可以开始配置 CCE 集群。

@@ -1,12 +1,5 @@
 ---
 title: Rancher is No Longer Needed
-weight: 8010
-aliases:
-  - /rancher/v2.5/en/installation/removing-rancher/cleaning-cluster-nodes/
-  - /rancher/v2.5/en/installation/removing-rancher/
-  - /rancher/v2.5/en/admin-settings/removing-rancher/
-  - /rancher/v2.5/en/admin-settings/removing-rancher/rancher-cluster-nodes/
-  - /rancher/v2.x/en/faq/removing-rancher/
 ---
 
 This page is intended to answer questions about what happens if you don't want Rancher anymore, if you don't want a cluster to be managed by Rancher anymore, or if the Rancher server is deleted.
@@ -22,7 +15,7 @@ The capability to access a downstream cluster without Rancher depends on the typ
 
 - **Registered clusters:** The cluster will be unaffected and you can access the cluster using the same methods that you did before the cluster was registered into Rancher.
 - **Hosted Kubernetes clusters:** If you created the cluster in a cloud-hosted Kubernetes provider such as EKS, GKE, or AKS, you can continue to manage the cluster using your provider's cloud credentials.
-- **RKE clusters:** Please note that you will no longer be able to manage the individual Kubernetes components or perform any upgrades on them after the deletion of the Rancher server. However, you can still access the cluster to manage your workloads. To access an [RKE cluster,](../pages-for-subheaders/launch-kubernetes-with-rancher.md) the cluster must have the [authorized cluster endpoint](../pages-for-subheaders/rancher-manager-architecture.md#4-authorized-cluster-endpoint) enabled, and you must have already downloaded the cluster's kubeconfig file from the Rancher UI. (The authorized cluster endpoint is enabled by default for RKE clusters.) With this endpoint, you can access your cluster with kubectl directly instead of communicating through the Rancher server's [authentication proxy.](../pages-for-subheaders/rancher-manager-architecture.md#1-the-authentication-proxy) For instructions on how to configure kubectl to use the authorized cluster endpoint, refer to the section about directly accessing clusters with [kubectl and the kubeconfig file.](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster) These clusters will use a snapshot of the authentication as it was configured when Rancher was removed. 
+- **RKE clusters:** Please note that you will no longer be able to manage the individual Kubernetes components or perform any upgrades on them after the deletion of the Rancher server. However, you can still access the cluster to manage your workloads. To access an [RKE cluster,](../pages-for-subheaders/launch-kubernetes-with-rancher.md) the cluster must have the [authorized cluster endpoint](../pages-for-subheaders/rancher-manager-architecture.md#4-authorized-cluster-endpoint) enabled, and you must have already downloaded the cluster's kubeconfig file from the Rancher UI. (The authorized cluster endpoint is enabled by default for RKE clusters.) With this endpoint, you can access your cluster with kubectl directly instead of communicating through the Rancher server's [authentication proxy.](../pages-for-subheaders/rancher-manager-architecture.md#1-the-authentication-proxy) For instructions on how to configure kubectl to use the authorized cluster endpoint, refer to the section about directly accessing clusters with [kubectl and the kubeconfig file.](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster) These clusters will use a snapshot of the authentication as it was configured when Rancher was removed.
 
 ### What if I don't want Rancher anymore?
 

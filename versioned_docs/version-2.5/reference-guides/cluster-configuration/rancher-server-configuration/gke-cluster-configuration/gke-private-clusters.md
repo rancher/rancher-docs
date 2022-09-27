@@ -1,8 +1,5 @@
 ---
 title: Private Clusters
-weight: 2
-aliases:
-  - /rancher/v2.5/en/cluster-provisioning/hosted-kubernetes-clusters/gke/private-clusters
 ---
 
 _Available as of v2.5.8_

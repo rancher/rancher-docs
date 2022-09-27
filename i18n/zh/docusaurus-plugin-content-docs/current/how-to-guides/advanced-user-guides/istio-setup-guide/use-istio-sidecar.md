@@ -1,6 +1,5 @@
 ---
 title: 3. 使用 Istio Sidecar 添加部署和服务
-weight: 4
 ---
 
 :::note 先决条件：

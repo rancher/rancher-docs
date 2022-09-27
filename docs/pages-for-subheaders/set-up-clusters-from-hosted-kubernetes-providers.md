@@ -1,6 +1,5 @@
 ---
 title: Setting up Clusters from Hosted Kubernetes Providers
-weight: 3
 ---
 
 In this scenario, Rancher does not provision Kubernetes because it is installed by providers such as Google Kubernetes Engine (GKE), Amazon Elastic Container Service for Kubernetes, or Azure Kubernetes Service.
@@ -13,8 +12,8 @@ Rancher supports the following Kubernetes providers:
 
 - [Google GKE (Google Kubernetes Engine)](https://cloud.google.com/kubernetes-engine/)
 - [Amazon EKS (Amazon Elastic Container Service for Kubernetes)](https://aws.amazon.com/eks/)
-- [Microsoft AKS (Azure Kubernetes Service)](https://azure.microsoft.com/en-us/services/kubernetes-service/) 
-- [Alibaba ACK (Alibaba Cloud Container Service for Kubernetes)](https://www.alibabacloud.com/product/kubernetes) 
+- [Microsoft AKS (Azure Kubernetes Service)](https://azure.microsoft.com/en-us/services/kubernetes-service/)
+- [Alibaba ACK (Alibaba Cloud Container Service for Kubernetes)](https://www.alibabacloud.com/product/kubernetes)
 - [Tencent TKE (Tencent Kubernetes Engine)](https://intl.cloud.tencent.com/product/tke)
 - [Huawei CCE (Huawei Cloud Container Engine)](https://www.huaweicloud.com/en-us/product/cce.html)
 

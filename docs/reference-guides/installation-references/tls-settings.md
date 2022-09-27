@@ -1,6 +1,5 @@
 ---
 title: TLS Settings
-weight: 3
 ---
 
 Changing the default TLS settings depends on the chosen installation method.

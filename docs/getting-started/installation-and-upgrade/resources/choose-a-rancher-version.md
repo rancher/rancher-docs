@@ -1,6 +1,5 @@
 ---
 title: Choosing a Rancher Version
-weight: 1
 ---
 
 import Tabs from '@theme/Tabs';

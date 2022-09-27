@@ -1,6 +1,5 @@
 ---
 title: Prometheus 配置
-weight: 1
 ---
 
 通常情况下，你不需要直接编辑 Prometheus 自定义资源，因为 Monitoring 应用会根据 ServiceMonitor 和 PodMonitor 的更改自动更新资源。

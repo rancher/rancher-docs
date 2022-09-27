@@ -1,8 +1,5 @@
 ---
 title: DNS
-weight: 103
-aliases:
-  - /rancher/v2.x/en/troubleshooting/dns/
 ---
 
 The commands/steps listed on this page can be used to check name resolution issues in your cluster.

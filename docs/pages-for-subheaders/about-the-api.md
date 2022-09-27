@@ -1,6 +1,5 @@
 ---
 title: API
-weight: 24
 ---
 
 import Tabs from '@theme/Tabs';

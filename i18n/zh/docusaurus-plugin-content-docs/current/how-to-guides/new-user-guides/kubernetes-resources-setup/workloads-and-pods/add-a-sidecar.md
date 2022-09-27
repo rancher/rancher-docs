@@ -1,6 +1,5 @@
 ---
 title: 添加 Sidecar
-weight: 3029
 ---
 _sidecar_ 是一个容器，用于扩展或增强 pod 中的主容器。主容器和 Sidecar 共享一个 pod，因此共享相同的网络空间和存储。你可以使用**添加 Sidecar** 选项将 Sidecar 添加到现有工作负载。
 

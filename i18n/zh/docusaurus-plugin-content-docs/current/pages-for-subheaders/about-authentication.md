@@ -1,6 +1,5 @@
 ---
 title: 身份验证
-weight: 10
 ---
 
 Rancher 向 Kubernetes 添加的关键功能之一，就是集中式用户身份验证。此功能允许你的用户使用一组凭证对你的所有 Kubernetes 集群进行身份验证。

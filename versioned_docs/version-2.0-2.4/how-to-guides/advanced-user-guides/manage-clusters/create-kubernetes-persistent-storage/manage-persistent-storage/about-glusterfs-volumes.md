@@ -1,6 +1,5 @@
 ---
 title: GlusterFS Volumes
-weight: 5000
 ---
 
 > This section only applies to [RKE clusters.](../../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)

@@ -1,6 +1,5 @@
 ---
 title: Pipelines
-weight: 10
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,6 +1,5 @@
 ---
 title: Provisioning Kubernetes Clusters in vSphere
-weight: 1
 ---
 
 

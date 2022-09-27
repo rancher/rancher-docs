@@ -1,6 +1,5 @@
 ---
 title: 使用 Rancher UI 管理 HPA
-weight: 3028
 ---
 
 Rancher UI 支持创建、管理和删除 HPA。你可以将 CPU 或内存使用情况配置为用于 HPA 扩缩的指标。

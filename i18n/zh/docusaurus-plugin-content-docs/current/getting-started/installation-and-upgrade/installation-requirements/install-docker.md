@@ -1,6 +1,5 @@
 ---
 title: 安装 Docker
-weight: 1
 ---
 
 在使用 Helm 或 Docker 在节点上安装 Rancher Server 前，你需要先安装 Docker。

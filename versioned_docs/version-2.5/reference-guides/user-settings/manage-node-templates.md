@@ -1,8 +1,5 @@
 ---
 title: Managing Node Templates
-weight: 7010
-aliases:
-  - /rancher/v2.x/en/user-settings/node-templates/
 ---
 
 When you provision a cluster [hosted by an infrastructure provider](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md), [node templates](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#node-templates) are used to provision the cluster nodes. These templates use Docker Machine configuration options to define an operating system image and settings/parameters for the node. You can create node templates in two contexts:
@@ -26,7 +23,7 @@ When you create a node template, it is bound to your user profile. Node template
 1. Choose the node template that you want to edit and click the **&#8942; > Edit**.
 
     :::note
-    
+
     As of v2.2.0, the default `active` [node drivers](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md) and any node driver, that has fields marked as `password`, are required to use [cloud credentials](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#cloud-credentials). If you have upgraded to v2.2.0, existing node templates will continue to work with the previous account access  information, but when you edit the node template, you will be required to create a cloud credential and the node template will start using it.
     :::
 

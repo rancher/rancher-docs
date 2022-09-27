@@ -1,11 +1,10 @@
 ---
 title: Examples
-weight: 400
 ---
 
 ### ServiceMonitor
 
-An example ServiceMonitor custom resource can be found [here.](https://github.com/prometheus-operator/prometheus-operator/blob/master/example/prometheus-operator-crd/monitoring.coreos.com_servicemonitors.yaml) 
+An example ServiceMonitor custom resource can be found [here.](https://github.com/prometheus-operator/prometheus-operator/blob/master/example/prometheus-operator-crd/monitoring.coreos.com_servicemonitors.yaml)
 
 ### PodMonitor
 

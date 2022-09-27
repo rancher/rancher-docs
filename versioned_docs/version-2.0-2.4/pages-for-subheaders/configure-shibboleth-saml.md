@@ -1,6 +1,5 @@
 ---
 title: Configuring Shibboleth (SAML)
-weight: 1210
 ---
 
 _Available as of v2.4.0_

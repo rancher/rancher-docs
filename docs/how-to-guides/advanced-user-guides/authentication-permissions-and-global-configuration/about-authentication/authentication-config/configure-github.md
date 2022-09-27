@@ -1,6 +1,5 @@
 ---
 title: Configure GitHub
-weight: 1116
 ---
 
 In environments using GitHub, you can configure Rancher to allow sign on using GitHub credentials.

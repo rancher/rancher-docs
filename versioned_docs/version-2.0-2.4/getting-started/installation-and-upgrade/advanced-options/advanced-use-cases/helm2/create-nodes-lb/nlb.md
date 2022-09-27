@@ -1,10 +1,7 @@
 ---
 title: Amazon NLB
-weight: 277
-aliases:
-  - /rancher/v2.0-v2.4/en/installation/options/helm2/create-nodes-lb/nlb
-  - /rancher/v2.x/en/installation/resources/advanced/helm2/create-nodes-lb/nlb/
 ---
+
 ## Objectives
 
 Configuring an Amazon NLB is a multistage process. We've broken it down into multiple tasks so that it's easy to follow.

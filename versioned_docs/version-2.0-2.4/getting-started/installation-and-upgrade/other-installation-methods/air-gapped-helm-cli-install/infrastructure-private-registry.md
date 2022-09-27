@@ -1,8 +1,5 @@
 ---
 title: '1. Set up Infrastructure and Private Registry'
-weight: 100
-aliases:
-  - /rancher/v2.0-v2.4/en/installation/air-gap-single-node/provision-host
 ---
 
 import Tabs from '@theme/Tabs';

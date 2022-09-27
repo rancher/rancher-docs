@@ -1,6 +1,5 @@
 ---
 title: 使用 Rancher 启动 Kubernetes
-weight: 4
 ---
 
 Rancher 可以使用任意节点启动 Kubernetes 集群。在 Rancher 中将 Kubernetes 部署到这些节点上时，你可以选择 [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/) (RKE) 或 [RKE2](https://docs.rke2.io) 发行版。Rancher 可以在任何计算机上启动 Kubernetes，包括：

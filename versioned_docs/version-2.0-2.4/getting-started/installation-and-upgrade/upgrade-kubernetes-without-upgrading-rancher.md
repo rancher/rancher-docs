@@ -1,6 +1,5 @@
 ---
 title: Upgrading Kubernetes without Upgrading Rancher
-weight: 1120
 ---
 
 import Tabs from '@theme/Tabs';

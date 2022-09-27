@@ -1,6 +1,5 @@
 ---
 title: Supportconfig bundle
-weight: 100
 ---
 
 After installing the CSP adapter, you will have the ability to generate a supportconfig bundle. This bundle is a tar file which can be used to quickly provide information to support.

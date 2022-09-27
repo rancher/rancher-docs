@@ -1,6 +1,5 @@
 ---
 title: Kubernetes 安全最佳实践
-weight: 5
 ---
 
 ### 限制云元数据 API 访问

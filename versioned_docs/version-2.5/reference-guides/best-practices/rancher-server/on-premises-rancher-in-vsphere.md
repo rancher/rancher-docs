@@ -1,10 +1,5 @@
 ---
 title: Installing Rancher in a vSphere Environment
-shortTitle: On-Premises Rancher in vSphere
-weight: 3
-aliases:
-  - /rancher/v2.5/en/best-practices/v2.5/rancher-server/rancher-in-vsphere
-  - /rancher/v2.x/en/best-practices/v2.5/rancher-server/rancher-in-vsphere/
 ---
 
 This guide outlines a reference architecture for installing Rancher on an RKE Kubernetes cluster in a vSphere environment, in addition to standard vSphere best practices as documented by VMware.
@@ -30,7 +25,7 @@ In the event of a Disaster Recovery activity, availability of the Load balancer 
 
 Configure the Load balancer to automatically mark nodes as unavailable if a health check is failed. For example, NGINX can facilitate this with:
 
-`max_fails=3 fail_timeout=5s` 
+`max_fails=3 fail_timeout=5s`
 
 ### Leverage an External Load Balancer
 
@@ -62,7 +57,7 @@ Doing so will ensure node VM's are spread across multiple datastores - preventin
 
 It’s important to follow K8s and etcd best practices when deploying your nodes, including disabling swap, double-checking you have full network connectivity between all machines in the cluster, using unique hostnames, MAC addresses, and product_uuids for every node.
 
-## 3. Network Considerations 
+## 3. Network Considerations
 
 ### Leverage Low Latency, High Bandwidth Connectivity Between ETCD Nodes
 
@@ -76,7 +71,7 @@ Each node used should have a static IP configured. In the case of DHCP, each nod
 
 ### Leverage SSD Drives for ETCD Nodes
 
-ETCD is very sensitive to write latency. Therefore, leverage SSD disks where possible. 
+ETCD is very sensitive to write latency. Therefore, leverage SSD disks where possible.
 
 ## 5. Backups and Disaster Recovery
 

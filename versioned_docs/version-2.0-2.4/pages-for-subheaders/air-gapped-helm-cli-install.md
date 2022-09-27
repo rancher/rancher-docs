@@ -1,10 +1,5 @@
 ---
 title: Air Gapped Helm CLI Install
-weight: 1
-aliases:
-  - /rancher/v2.0-v2.4/en/installation/air-gap-installation/
-  - /rancher/v2.0-v2.4/en/installation/air-gap-high-availability/
-  - /rancher/v2.0-v2.4/en/installation/air-gap-single-node/
 ---
 
 This section is about using the Helm CLI to install the Rancher server in an air gapped environment. An air gapped environment could be where Rancher server will be installed offline, behind a firewall, or behind a proxy.

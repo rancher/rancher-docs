@@ -1,14 +1,7 @@
 ---
 title: Istio
-weight: 15
-aliases:
-  - /rancher/v2.0-v2.4/en/dashboard/istio
-  - /rancher/v2.0-v2.4/en/project-admin/istio/configuring-resource-allocations/
-  - /rancher/v2.0-v2.4/en/cluster-admin/tools/istio/
-  - /rancher/v2.0-v2.4/en/project-admin/istio
-  - /rancher/v2.0-v2.4/en/istio/legacy/cluster-istio
-  - /rancher/v2.x/en/istio/v2.3.x-v2.4.x/
 ---
+
 _Available as of v2.3.0_
 
 [Istio](https://istio.io/) is an open-source tool that makes it easier for DevOps teams to observe, control, troubleshoot, and secure the traffic within a complex network of microservices.

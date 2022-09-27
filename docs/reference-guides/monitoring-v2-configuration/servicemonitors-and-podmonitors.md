@@ -1,7 +1,5 @@
 ---
 title: ServiceMonitor and PodMonitor Configuration
-shortTitle: ServiceMonitors and PodMonitors
-weight: 7
 ---
 
 ServiceMonitors and PodMonitors are both pseudo-CRDs that map the scrape configuration of the Prometheus custom resource.
@@ -18,7 +16,7 @@ This section assumes familiarity with how monitoring components work together. F
 
 ### ServiceMonitors
 
-This pseudo-CRD maps to a section of the Prometheus custom resource configuration. It declaratively specifies how groups of Kubernetes services should be monitored. 
+This pseudo-CRD maps to a section of the Prometheus custom resource configuration. It declaratively specifies how groups of Kubernetes services should be monitored.
 
 When a ServiceMonitor is created, the Prometheus Operator updates the Prometheus scrape configuration to include the ServiceMonitor configuration. Then Prometheus begins scraping metrics from the endpoint defined in the ServiceMonitor.
 
@@ -28,7 +26,7 @@ For more information about how ServiceMonitors work, refer to the [Prometheus Op
 
 ### PodMonitors
 
-This pseudo-CRD maps to a section of the Prometheus custom resource configuration. It declaratively specifies how group of pods should be monitored. 
+This pseudo-CRD maps to a section of the Prometheus custom resource configuration. It declaratively specifies how group of pods should be monitored.
 
 When a PodMonitor is created, the Prometheus Operator updates the Prometheus scrape configuration to include the PodMonitor configuration. Then Prometheus begins scraping metrics from the endpoint defined in the PodMonitor.
 

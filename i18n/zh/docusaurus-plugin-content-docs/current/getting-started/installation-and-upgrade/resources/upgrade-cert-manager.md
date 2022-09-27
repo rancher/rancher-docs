@@ -1,6 +1,5 @@
 ---
 title: 升级 Cert-Manager
-weight: 4
 ---
 
 Rancher 使用 cert-manager 为 Rancher 高可用部署自动生成和续期 TLS 证书。从 2019 秋季开始，cert-manager 发生了以下的三个重要变更。如果你在此时间段前创建了 Rancher 高可用部署，请进行相关操作。

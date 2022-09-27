@@ -1,7 +1,6 @@
 ---
 title: The Horizontal Pod Autoscaler
 description: Learn about the horizontal pod autoscaler (HPA). How to manage HPAs and how to test them with a service deployment
-weight: 3026
 ---
 
 The [Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) (HPA) is a Kubernetes feature that allows you to configure your cluster to automatically scale the services it's running up or down.

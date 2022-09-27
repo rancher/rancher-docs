@@ -1,7 +1,6 @@
 ---
 title: Rancher CLI
 description: Rancher CLI 是一个命令行工具，用于在工作站中与 Rancher 进行交互。
-weight: 21
 ---
 
 Rancher CLI（命令行界面）是一个命令行工具，可用于与 Rancher 进行交互。使用此工具，你可以使用命令行而不用通过 GUI 来操作 Rancher。

@@ -1,8 +1,5 @@
 ---
 title: Custom Roles
-weight: 1128
-aliases:
-  - /rancher/v2.0-v2.4/en/tasks/global-configuration/roles/
 ---
 
 import Tabs from '@theme/Tabs';

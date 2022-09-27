@@ -1,9 +1,5 @@
 ---
 title: Setting up an NGINX Load Balancer
-weight: 4
-aliases:
-  - /rancher/v2.5/en/installation/options/nginx
-  - /rancher/v2.x/en/installation/resources/k8s-tutorials/infrastructure-tutorials/nginx/
 ---
 
 NGINX will be configured as Layer 4 load balancer (TCP) that forwards connections to one of your Rancher nodes.
@@ -31,7 +27,7 @@ After installing NGINX, you need to update the NGINX configuration file, `nginx.
     > **Note:** See [NGINX Documentation: TCP and UDP Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/tcp-udp-load-balancer/) for all configuration options.
 
     <figcaption>Example NGINX config</figcaption>
-    
+
     ```
     worker_processes 4;
     worker_rlimit_nofile 40000;

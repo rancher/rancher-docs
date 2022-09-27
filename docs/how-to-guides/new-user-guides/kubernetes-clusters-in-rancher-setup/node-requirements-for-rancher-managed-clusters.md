@@ -1,6 +1,5 @@
 ---
 title: Node Requirements for Rancher Managed Clusters
-weight: 1
 ---
 
 import Tabs from '@theme/Tabs';

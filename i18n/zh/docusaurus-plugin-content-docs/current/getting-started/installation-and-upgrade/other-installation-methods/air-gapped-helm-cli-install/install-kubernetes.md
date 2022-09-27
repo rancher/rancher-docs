@@ -1,6 +1,5 @@
 ---
 title: '3. 安装 Kubernetes（Docker 安装请跳过）'
-weight: 300
 ---
 
 import Tabs from '@theme/Tabs';

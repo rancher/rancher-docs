@@ -1,6 +1,5 @@
 ---
 title: OpenLDAP Configuration Reference
-weight: 2
 ---
 
 This section is intended to be used as a reference when setting up an OpenLDAP authentication provider in Rancher.

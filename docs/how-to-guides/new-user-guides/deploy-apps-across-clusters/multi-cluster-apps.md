@@ -1,6 +1,5 @@
 ---
 title: Multi-cluster Apps
-weight: 2
 ---
 
 > As of Rancher v2.5, multi-cluster apps are deprecated. We now recommend using [Fleet](fleet.md) for deploying apps across clusters.
@@ -112,7 +111,7 @@ By default, multi-cluster applications can only be managed by the user who creat
     - **Read-only**: This access type cannot modify any configuration option for the multi-cluster application. Users can only view these applications.
 
     :::caution
-    
+
     Please ensure only trusted users are given _Owner_ or _Member_ access as they will automatically be able to manage applications created for this multi-cluster application in target projects they might not have direct access to.
 
     :::
@@ -172,7 +171,7 @@ The `legacy` feature flag needs to be enabled.
 2. Choose the multi-cluster application you want to delete and click the **⋮ > Delete**. When deleting the multi-cluster application, all applications and namespaces are deleted in all of the target projects.
 
    :::note
-   
+
    The applications in the target projects, that are created for a multi-cluster application, cannot be deleted individually. The applications can only be deleted when the multi-cluster application is deleted.
 
-   ::: 
+   :::

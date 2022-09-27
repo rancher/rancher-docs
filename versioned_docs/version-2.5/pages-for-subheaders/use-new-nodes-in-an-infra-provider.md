@@ -1,9 +1,5 @@
 ---
 title: Launching Kubernetes on New Nodes in an Infrastructure Provider
-weight: 2205
-aliases:
-  - /rancher/v2.5/en/concepts/global-configuration/node-templates/
-  - /rancher/v2.x/en/cluster-provisioning/rke-clusters/node-pools/
 ---
 
 Using Rancher, you can create pools of nodes based on a [node template](use-new-nodes-in-an-infra-provider.md#node-templates). This node template defines the parameters you want to use to launch nodes in your infrastructure providers or cloud providers.
@@ -44,13 +40,13 @@ To access all node templates, an administrator will need to do the following:
 
 # Node Pools
 
-Using Rancher, you can create pools of nodes based on a [node template](#node-templates). 
+Using Rancher, you can create pools of nodes based on a [node template](#node-templates).
 
 A node template defines the configuration of a node, like what operating system to use, number of CPUs and amount of memory.
 
 The benefit of using a node pool is that if a node is destroyed or deleted, you can increase the number of live nodes to compensate for the node that was lost. The node pool helps you ensure that the count of the node pool is as expected.
 
-Each node pool must have one or more nodes roles assigned. 
+Each node pool must have one or more nodes roles assigned.
 
 Each node role (i.e. etcd, control plane, and worker) should be assigned to a distinct node pool. Although it is possible to assign multiple node roles to a node pool, this should not be done for production clusters.
 

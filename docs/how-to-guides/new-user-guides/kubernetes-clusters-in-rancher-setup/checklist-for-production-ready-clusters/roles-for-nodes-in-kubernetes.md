@@ -1,6 +1,5 @@
 ---
 title: Roles for Nodes in Kubernetes
-weight: 1
 ---
 
 This section describes the roles for etcd nodes, controlplane nodes, and worker nodes in Kubernetes, and how the roles work together in a cluster.

@@ -1,8 +1,6 @@
 ---
 title: Launching Kubernetes on Existing Custom Nodes
-description: To create a cluster with custom nodes, you’ll need to access servers in your cluster and provision them according to Rancher requirements 
-metaDescription: "To create a cluster with custom nodes, you’ll need to access servers in your cluster and provision them according to Rancher requirements"
-weight: 2225
+description: To create a cluster with custom nodes, you’ll need to access servers in your cluster and provision them according to Rancher requirements
 ---
 
 When you create a custom cluster, Rancher uses RKE (the Rancher Kubernetes Engine) to create a Kubernetes cluster in on-prem bare-metal servers, on-prem virtual machines, or in any node hosted by an infrastructure provider.
@@ -43,10 +41,10 @@ If you're using Amazon EC2 as your host and want to use the [dual-stack](https:/
 1. Use **Cluster Configuration** section to choose the version of Kubernetes, what network provider will be used and if you want to enable project network isolation. To see more cluster options, click on **Show advanced options**.
 
     :::note Using Windows nodes as Kubernetes workers?
-    
+
     - See [Enable the Windows Support Option](use-windows-clusters.md).
     - The only Network Provider available for clusters with Windows support is Flannel.
-    
+
     :::
 
     :::note Dual-stack on Amazon EC2:
@@ -75,20 +73,20 @@ If you're using Amazon EC2 as your host and want to use the [dual-stack](https:/
 10. Log in to your Linux host using your preferred shell, such as PuTTy or a remote Terminal connection. Run the command copied to your clipboard.
 
 :::note
-    
+
 Repeat steps 7-10 if you want to dedicate specific hosts to specific node roles. Repeat the steps as many times as needed.
 
-:::      
+:::
 
 11. When you finish running the command(s) on your Linux host(s), click **Done**.
 
-**Result:** 
+**Result:**
 
 Your cluster is created and assigned a state of **Provisioning**. Rancher is standing up your cluster.
 
 You can access your cluster after its state is updated to **Active**.
 
-**Active** clusters are assigned two Projects: 
+**Active** clusters are assigned two Projects:
 
 - `Default`, containing the `default` namespace
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces
@@ -113,7 +111,7 @@ The following resources need to be tagged with a `ClusterID`:
 - **Security Group**: The security group used for your cluster.
 
 :::note
-    
+
 Do not tag multiple security groups. Tagging multiple groups generates an error when creating Elastic Load Balancer.
 
 :::

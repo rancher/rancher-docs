@@ -1,6 +1,5 @@
 ---
 title: RKE1 to RKE2 Windows Migration Guidance
-weight: 3
 ---
 
 **Caution:** The contents of this document are not covered under SLA by Rancher Support. Please proceed with caution.

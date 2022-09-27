@@ -1,9 +1,5 @@
 ---
 title: Launching Catalog Apps
-weight: 700
-aliases:
-  - /rancher/v2.0-v2.4/en/catalog/launching-apps
-  - /rancher/v2.0-v2.4/en/helm-charts/legacy-catalogs/launching-apps
 ---
 
 

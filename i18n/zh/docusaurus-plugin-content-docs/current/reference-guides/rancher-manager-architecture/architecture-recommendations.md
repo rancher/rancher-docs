@@ -1,6 +1,5 @@
 ---
 title: 架构推荐
-weight: 3
 ---
 
 如果你准备在单个节点上安装 Rancher，我们推荐你[分开部署 Rancher 与下游集群](#分开部署-rancher-与下游集群)。

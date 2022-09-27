@@ -1,10 +1,5 @@
 ---
 title: Registering Existing Clusters
-weight: 6
-aliases:
-  - /rancher/v2.5/en/cluster-provisioning/imported-clusters
-  - /rancher/v2.x/en/cluster-provisioning/imported-clusters/
-  - /rancher/v2.x/en/cluster-provisioning/registered-clusters/
 ---
 
 import Tabs from '@theme/Tabs';

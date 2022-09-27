@@ -1,6 +1,5 @@
 ---
 title: Harvester 集成
-weight: 10
 ---
 
 Harvester 是 Rancher 2.6.1 新增的功能，[Harvester](https://docs.harvesterhci.io/) 是基于 Kubernetes 构建的开源超融合基础架构 (HCI) 软件。Harvester 安装在裸金属服务器上，提供集成的虚拟化和分布式存储功能。虽然 Harvester 使用 Kubernetes 运行，但它不需要用户了解 Kubernetes 概念，因此是一个更加用户友好的应用。

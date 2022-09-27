@@ -1,7 +1,5 @@
 ---
 title: rancher-logging Helm Chart Options
-shortTitle: Helm Chart Options
-weight: 4
 ---
 
 
@@ -73,7 +71,7 @@ If you're already using a cloud provider's own logging solution such as AWS Clou
 
 ### Systemd Configuration
 
-In Rancher logging, `SystemdLogPath` must be configured for K3s and RKE2 Kubernetes distributions. 
+In Rancher logging, `SystemdLogPath` must be configured for K3s and RKE2 Kubernetes distributions.
 
 K3s and RKE2 Kubernetes distributions log to journald, which is the subsystem of systemd that is used for logging. In order to collect these logs, the `systemdLogPath` needs to be defined. While the `run/log/journal` directory is used by default, some Linux distributions do not default to this path. For example, Ubuntu defaults to `var/log/journal`. To determine your `systemdLogPath` configuration, see steps below.
 
@@ -81,10 +79,10 @@ K3s and RKE2 Kubernetes distributions log to journald, which is the subsystem of
 
 * Run  `cat /etc/systemd/journald.conf | grep -E ^\#?Storage | cut -d"=" -f2` on one of your nodes.
 * If `persistent` is returned, your `systemdLogPath` should be `/var/log/journal`.
-* If `volatile` is returned, your `systemdLogPath` should be `/run/log/journal`. 
-* If `auto` is returned, check if `/var/log/journal` exists. 
-  * If `/var/log/journal` exists, then use `/var/log/journal`. 
-  * If `/var/log/journal` does not exist, then use `/run/log/journal`. 
+* If `volatile` is returned, your `systemdLogPath` should be `/run/log/journal`.
+* If `auto` is returned, check if `/var/log/journal` exists.
+  * If `/var/log/journal` exists, then use `/var/log/journal`.
+  * If `/var/log/journal` does not exist, then use `/run/log/journal`.
 
 :::note Notes:
 

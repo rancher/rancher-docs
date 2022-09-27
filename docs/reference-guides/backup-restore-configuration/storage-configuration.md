@@ -1,7 +1,5 @@
 ---
 title: Backup Storage Location Configuration
-shortTitle: Storage
-weight: 3
 ---
 
 Configure a storage location where all backups are saved by default. You will have the option to override this with each backup, but will be limited to using an S3-compatible object store.
@@ -35,7 +33,7 @@ For information about creating storage classes refer to [this section.](../../ho
 
 :::note Important:
 
-It is highly recommended to use a StorageClass with a reclaim policy of "Retain". Otherwise if the PVC created by the `rancher-backup` chart gets deleted (either during app upgrade, or accidentally), the PV will get deleted too, which means all backups saved in it will get deleted.  
+It is highly recommended to use a StorageClass with a reclaim policy of "Retain". Otherwise if the PVC created by the `rancher-backup` chart gets deleted (either during app upgrade, or accidentally), the PV will get deleted too, which means all backups saved in it will get deleted.
 If no such StorageClass is available, after the PV is provisioned, make sure to edit its reclaim policy and set it to "Retain" before storing backups in it.
 
 :::
@@ -46,7 +44,7 @@ Select an existing Persistent Volume (PV) that will be used to store your backup
 
 :::note Important:
 
-It is highly recommended to use a Persistent Volume with a reclaim policy of "Retain". Otherwise if the PVC created by the `rancher-backup` chart gets deleted (either during app upgrade, or accidentally), the PV will get deleted too, which means all backups saved in it will get deleted.  
+It is highly recommended to use a Persistent Volume with a reclaim policy of "Retain". Otherwise if the PVC created by the `rancher-backup` chart gets deleted (either during app upgrade, or accidentally), the PV will get deleted too, which means all backups saved in it will get deleted.
 
 :::
 

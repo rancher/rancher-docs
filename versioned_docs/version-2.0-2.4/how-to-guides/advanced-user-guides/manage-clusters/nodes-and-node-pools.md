@@ -1,6 +1,5 @@
 ---
 title: Nodes and Node Pools
-weight: 2030
 ---
 
 import Tabs from '@theme/Tabs';

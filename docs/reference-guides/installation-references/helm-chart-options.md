@@ -1,8 +1,5 @@
 ---
 title: Rancher Helm Chart Options
-weight: 1
-aliases:
-  - /rancher/v2.6/en/installation/resources/chart-options
 ---
 
 This page is a configuration reference for the Rancher Helm chart.
@@ -111,7 +108,7 @@ By default Rancher server will detect and import the `local` cluster it's runnin
 
 :::caution
 
-If you turn addLocal off, most Rancher v2.5 features won't work, including the EKS provisioner. 
+If you turn addLocal off, most Rancher v2.5 features won't work, including the EKS provisioner.
 
 :::
 

@@ -1,7 +1,6 @@
 ---
 title: 使用 Rancher 的项目和 Kubernetes 命名空间
 description: Rancher Projects 减轻了集群的管理负担并支持多租户。学习创建项目并将项目划分为 Kubernetes 命名空间
-weight: 2032
 ---
 
 命名空间是 Kubernetes 的概念，它允许你在集群中使用虚拟集群。这对于将集群划分为单独的“虚拟集群”很有用，每个“虚拟集群”都有自己的访问控制和资源配额。

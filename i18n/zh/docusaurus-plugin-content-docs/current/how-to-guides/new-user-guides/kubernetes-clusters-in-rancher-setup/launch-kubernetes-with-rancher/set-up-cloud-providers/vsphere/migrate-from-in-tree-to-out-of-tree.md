@@ -1,6 +1,5 @@
 ---
 title: 将 vSphere 树内卷迁移到 CSI
-weight: 5
 ---
 Kubernetes 正在逐渐不在树内维护云提供商。vSphere 有一个树外云提供商，可通过安装 vSphere 云提供商和云存储插件来使用。
 

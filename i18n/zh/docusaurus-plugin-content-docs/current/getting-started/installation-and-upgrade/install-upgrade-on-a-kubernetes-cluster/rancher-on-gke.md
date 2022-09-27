@@ -1,7 +1,5 @@
 ---
 title: 在 GKE 集群上安装 Rancher
-shortTitle: GKE
-weight: 3
 ---
 
 import Tabs from '@theme/Tabs';

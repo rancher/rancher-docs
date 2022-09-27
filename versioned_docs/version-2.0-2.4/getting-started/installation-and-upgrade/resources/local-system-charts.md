@@ -1,10 +1,5 @@
 ---
 title: Setting up Local System Charts for Air Gapped Installations
-weight: 120
-aliases:
-  - /rancher/v2.0-v2.4/en/installation/air-gap-single-node/config-rancher-system-charts/_index.md
-  - /rancher/v2.0-v2.4/en/installation/air-gap-high-availability/config-rancher-system-charts/_index.md
-  - /rancher/v2.0-v2.4/en/installation/options/local-system-charts
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,6 +1,5 @@
 ---
 title: Cluster Autoscaler
-weight: 1
 ---
 
 在本文中，你将学习如何使用 AWS EC2 Auto Scaling 组在 Rancher 自定义集群上安装和使用 [Kubernetes cluster-autoscaler](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/)。

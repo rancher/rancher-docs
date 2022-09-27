@@ -1,6 +1,5 @@
 ---
 title: Resource Quota Type Reference
-weight: 4
 ---
 
 When you create a resource quota, you are configuring the pool of resources available to the project. You can set the following resource limits for the following resource types.

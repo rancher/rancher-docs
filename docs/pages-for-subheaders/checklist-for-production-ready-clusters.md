@@ -1,6 +1,5 @@
 ---
 title: Checklist for Production-Ready Clusters
-weight: 2
 ---
 
 In this section, we recommend best practices for creating the production-ready Kubernetes clusters that will run your apps and services.
@@ -32,7 +31,7 @@ For a full list of all the best practices that we recommend, refer to the [best 
 
 For more information on what each role is used for, refer to the [section on roles for nodes in Kubernetes.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters/roles-for-nodes-in-kubernetes.md)
 
-For more information about the 
+For more information about the
 number of nodes for each Kubernetes role, refer to the section on [recommended architecture.](../reference-guides/rancher-manager-architecture/architecture-recommendations.md)
 
 ### Logging and Monitoring

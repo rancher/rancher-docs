@@ -1,7 +1,5 @@
 ---
 title: Rancher 管理集群的最佳实践
-shortTitle: Rancher 管理的集群
-weight: 2
 ---
 
 ### Logging

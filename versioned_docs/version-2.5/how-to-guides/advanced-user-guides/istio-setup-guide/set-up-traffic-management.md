@@ -1,10 +1,5 @@
 ---
 title: 5. Set up Istio's Components for Traffic Management
-weight: 6
-aliases:
-  - /rancher/v2.5/en/istio/setup/set-up-traffic-management
-  - /rancher/v2.5/en/istio/v2.5/setup/set-up-traffic-management
-  - /rancher/v2.x/en/istio/v2.5/setup/set-up-traffic-management/
 ---
 
 A central advantage of traffic management in Istio is that it allows dynamic request routing. Some common applications for dynamic request routing include canary deployments and blue/green deployments. The two key resources in Istio traffic management are *virtual services* and *destination rules*.
@@ -20,7 +15,7 @@ After this virtual service is deployed, we will generate traffic and see from th
 
 To deploy the virtual service and destination rules for the `reviews` service,
 
-1. From the **Cluster Explorer**, select **Istio** from the nav dropdown. 
+1. From the **Cluster Explorer**, select **Istio** from the nav dropdown.
 1. Click **DestinationRule** in the side nav bar.
 1. Click **Create from Yaml**.
 1. Copy and paste the DestinationRule yaml provided below.

@@ -1,6 +1,5 @@
 ---
 title: Troubleshooting the Rancher Server Kubernetes Cluster
-weight: 276
 ---
 
 This section describes how to troubleshoot an installation of Rancher on a Kubernetes cluster.

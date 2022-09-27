@@ -1,6 +1,5 @@
 ---
 title: 定制品牌
-weight: 90
 ---
 
 import Tabs from '@theme/Tabs';

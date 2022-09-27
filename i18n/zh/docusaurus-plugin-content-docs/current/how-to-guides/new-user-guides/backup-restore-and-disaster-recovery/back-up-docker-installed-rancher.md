@@ -1,7 +1,5 @@
 ---
 title: 备份 Docker 安装的 Rancher
-shortTitle: 备份
-weight: 3
 ---
 
 成功使用 Docker 安装 Rancher 后，我们建议你定期创建备份。最近创建的备份能让你在意外灾难发生后快速进行恢复。

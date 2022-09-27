@@ -1,8 +1,5 @@
 ---
 title: Migration Tools CLI Reference
-weight: 100
-aliases:
-  - /rancher/v2.x/en/v1.6-migration/run-migration-tool/migration-tools-ref/
 ---
 
 The migration-tools CLI includes multiple commands and options to assist your migration from Rancher v1.6 to Rancher v2.x.
@@ -84,4 +81,4 @@ migration-tools parse --docker-file <DOCKER_COMPOSE_ABSOLUTE_PATH> --rancher-fil
 
 >**Note:** If you omit the `--docker-file` and `--rancher-file` options from your command, the migration-tools CLI checks its home directory for these Compose files.
 
-**Result:** The migration-tools CLI parses your Compose files and outputs Kubernetes manifest specs as well as an `output.txt` file. For each service in the stack, a Kubernetes manifest is created and named the same as your service. The `output.txt` file lists all constructs for each service in `docker-compose.yml` that requires special handling to be successfully migrated to Rancher v2.x. Each construct links to the relevant blog articles on how to implement it in Rancher v2.x. 
+**Result:** The migration-tools CLI parses your Compose files and outputs Kubernetes manifest specs as well as an `output.txt` file. For each service in the stack, a Kubernetes manifest is created and named the same as your service. The `output.txt` file lists all constructs for each service in `docker-compose.yml` that requires special handling to be successfully migrated to Rancher v2.x. Each construct links to the relevant blog articles on how to implement it in Rancher v2.x.

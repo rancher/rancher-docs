@@ -1,6 +1,5 @@
 ---
 title: 在具有 Pod 安全策略的情况下启用 Istio
-weight: 1
 ---
 
 如果你启用了限制性 Pod 安全策略（Pod Security Policy），由于 Istio 需要某些权限才能自行安装和管理 pod 基础设施，因此 Istio 可能无法正常运行。在本文中，我们将配置一个为 Istio 启用了 PSP 的集群，并设置 Istio CNI 插件。

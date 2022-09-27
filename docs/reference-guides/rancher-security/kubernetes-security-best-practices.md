@@ -1,6 +1,5 @@
 ---
 title: Kubernetes Security Best Practices
-weight: 5
 ---
 
 ### Restricting cloud metadata API access

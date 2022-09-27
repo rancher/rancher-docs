@@ -1,6 +1,5 @@
 ---
 title: 配置 OpenLDAP
-weight: 1113
 ---
 
 如果你的组织使用 LDAP 进行用户身份验证，则可以配置 Rancher 与 OpenLDAP 服务器通信，从而对用户进行身份验证。这使 Rancher 管理员可以对外部用户系统中的用户和组进行集群和项目的访问控制，同时允许最终用户在登录 Rancher UI 时使用 LDAP 凭证进行身份验证。

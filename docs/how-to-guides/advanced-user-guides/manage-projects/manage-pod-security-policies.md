@@ -1,11 +1,10 @@
 ---
 title: Pod Security Policies
-weight: 5600
 ---
 
 :::note
 
-These cluster options are only available for [clusters in which Rancher has launched Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md).  
+These cluster options are only available for [clusters in which Rancher has launched Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md).
 
 :::
 
@@ -14,7 +13,7 @@ You can always assign a pod security policy (PSP) to an existing project if you 
 ### Prerequisites
 
 - Create a Pod Security Policy within Rancher. Before you can assign a default PSP to an existing project, you must have a PSP available for assignment. For instruction, see [Creating Pod Security Policies](../authentication-permissions-and-global-configuration/create-pod-security-policies.md).
-- Assign a default Pod Security Policy to the project's cluster. You can't assign a PSP to a project until one is already applied to the cluster. For more information, see [the documentation about adding a pod security policy to a cluster](../manage-clusters/add-a-pod-security-policy.md). 
+- Assign a default Pod Security Policy to the project's cluster. You can't assign a PSP to a project until one is already applied to the cluster. For more information, see [the documentation about adding a pod security policy to a cluster](../manage-clusters/add-a-pod-security-policy.md).
 
 ### Applying a Pod Security Policy
 

@@ -1,6 +1,5 @@
 ---
 title: Helm CLI 快速入门
-weight: 300
 ---
 
 import Tabs from '@theme/Tabs';

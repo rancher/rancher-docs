@@ -1,11 +1,10 @@
 ---
 title: 3. Add Deployments and Services with the Istio Sidecar
-weight: 4
 ---
 
 :::note Prerequisite:
 
-To enable Istio for a workload, the cluster and namespace must have the Istio app installed.  
+To enable Istio for a workload, the cluster and namespace must have the Istio app installed.
 
 :::
 
@@ -30,7 +29,7 @@ There are a few ways to add new **Deployments** in your namespace:
 1. Click **Create**.
 1. Click **Deployment**.
 1. Fill out the form, or **Edit as Yaml**.
-1. Click **Create**. 
+1. Click **Create**.
 
 To add a **Service** to your namespace:
 
@@ -40,12 +39,12 @@ To add a **Service** to your namespace:
 1. Click **Create**.
 1. Select the type of service that you want.
 1. Fill out the form, or **Edit as Yaml**.
-1. Click **Create** 
+1. Click **Create**
 
 You can also create deployments and services using the kubectl **shell**
 
 1. Run `kubectl create -f <name of service/deployment file>.yaml` if your file is stored locally in the cluster
-1. Or run `cat<< EOF | kubectl apply -f -`, paste the file contents into the terminal, then run `EOF` to complete the command. 
+1. Or run `cat<< EOF | kubectl apply -f -`, paste the file contents into the terminal, then run `EOF` to complete the command.
 
 ### Example Deployments and Services
 

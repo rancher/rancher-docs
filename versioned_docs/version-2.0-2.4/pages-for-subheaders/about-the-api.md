@@ -1,6 +1,5 @@
 ---
 title: API
-weight: 24
 ---
 
 ## How to use the API

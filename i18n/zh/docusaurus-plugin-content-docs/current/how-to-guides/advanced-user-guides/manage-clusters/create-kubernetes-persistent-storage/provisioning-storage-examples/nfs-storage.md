@@ -1,6 +1,5 @@
 ---
 title: NFS 存储
-weight: 3054
 ---
 
 在将 NFS 存储卷插件用于 Rancher deployment 之前，你需要配置 NFS 服务器。

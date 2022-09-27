@@ -1,6 +1,5 @@
 ---
 title: 迁移到 Rancher 2.5+ Monitoring
-weight: 9
 ---
 
 如果你在 Rancher 2.5 之前启用了 Monitoring、Alerting 或 Notifiers，则无法自动升级到新的监控/告警解决方案。在 Cluster Explorer 中部署新的监控解决方案之前，你需要禁用并删除整个集群所有项目中的所有自定义告警、通知器和监控安装。

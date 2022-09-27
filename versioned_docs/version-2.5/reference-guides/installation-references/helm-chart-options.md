@@ -1,12 +1,5 @@
 ---
 title: Rancher Helm Chart Options
-weight: 1
-aliases:
-  - /rancher/v2.5/en/installation/options/
-  - /rancher/v2.5/en/installation/options/chart-options/
-  - /rancher/v2.5/en/installation/options/helm2/helm-rancher/chart-options/
-  - /rancher/v2.5/en/installation/resources/chart-options
-  - /rancher/v2.x/en/installation/install-rancher-on-k8s/chart-options/
 ---
 
 This page is a configuration reference for the Rancher Helm chart.

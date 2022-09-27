@@ -1,9 +1,8 @@
 ---
 title: 4. Set up the Istio Gateway
-weight: 5
 ---
 
-The gateway to each cluster can have its own port or load balancer, which is unrelated to a service mesh. By default, each Rancher-provisioned cluster has one NGINX ingress controller allowing traffic into the cluster. 
+The gateway to each cluster can have its own port or load balancer, which is unrelated to a service mesh. By default, each Rancher-provisioned cluster has one NGINX ingress controller allowing traffic into the cluster.
 
 You can use the Nginx Ingress controller with or without Istio installed. If this is the only gateway to your cluster, Istio will be able to route traffic from service to service, but Istio will not be able to receive traffic from outside the cluster.
 
@@ -13,13 +12,13 @@ You will also need to set up a Kubernetes gateway for your services. This Kubern
 
 You can route traffic into the service mesh with a load balancer or use Istio's NodePort gateway. This section describes how to set up the NodePort gateway.
 
-For more information on the Istio gateway, refer to the [Istio documentation.](https://istio.io/docs/reference/config/networking/v1alpha3/gateway/) 
+For more information on the Istio gateway, refer to the [Istio documentation.](https://istio.io/docs/reference/config/networking/v1alpha3/gateway/)
 
 ![In an Istio-enabled cluster, you can have two Ingresses: the default Nginx Ingress, and the default Istio controller.](/img/istio-ingress.svg)
 
 # Enable an Istio Gateway
 
-The ingress gateway is a Kubernetes service that will be deployed in your cluster. The Istio Gateway allows for more extensive customization and flexibility.  
+The ingress gateway is a Kubernetes service that will be deployed in your cluster. The Istio Gateway allows for more extensive customization and flexibility.
 
 1.  Click **☰ > Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
@@ -120,7 +119,7 @@ To get the ingress gateway URL and port,
 1.  Click **☰ > Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
 1. In the left navigation bar, click **Workload**.
-1. Scroll down to the `istio-system` namespace. 
+1. Scroll down to the `istio-system` namespace.
 1. Within `istio-system`, there is a workload named `istio-ingressgateway`. Under the name of this workload, you should see links, such as `80/tcp`.
 1. Click one of those links. This should show you the URL of the ingress gateway in your web browser. Append `/productpage` to the URL.
 
@@ -141,7 +140,7 @@ In the gateway resource, the selector refers to Istio's default ingress controll
 1.  Click **☰ > Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
 1. In the left navigation bar, click **Workload**.
-1. Scroll down to the `istio-system` namespace. 
+1. Scroll down to the `istio-system` namespace.
 1. Within `istio-system`, there is a workload named `istio-ingressgateway`. Click the name of this workload and go to the **Labels and Annotations** section. You should see that it has the key `istio` and the value `ingressgateway`. This confirms that the selector in the Gateway resource matches Istio's default ingress controller.
 
 ### [Next: Set up Istio's Components for Traffic Management](set-up-traffic-management.md)

@@ -1,6 +1,5 @@
 ---
 title: Setting up the Google Compute Engine Cloud Provider
-weight: 3
 ---
 
 In this section, you'll learn how to enable the Google Compute Engine (GCE) cloud provider for custom clusters in Rancher. A custom cluster is one in which Rancher installs Kubernetes on existing nodes.
@@ -22,7 +21,7 @@ If you are using Calico,
     rancher_kubernetes_engine_config:
       cloud_provider:
         name: gce
-        customCloudProvider: |- 
+        customCloudProvider: |-
           [Global]
           project-id=<your project ID, optional>
           network-name=<your network, optional if using default network>
@@ -30,7 +29,7 @@ If you are using Calico,
           node-instance-prefix=<your instance group name/your instance name specific prefix, required>
           node-tags=<your network tags, must patch one or some tags, required>
       network:
-        options: 
+        options:
           calico_cloud_provider: "gce"
         plugin: "calico"
     ```
@@ -42,17 +41,17 @@ If you are using Canal or Flannel,
 
     ```yaml
     rancher_kubernetes_engine_config:
-      cloud_provider: 
+      cloud_provider:
         name: gce
-        customCloudProvider: |- 
+        customCloudProvider: |-
           [Global]
           project-id=<your project ID, optional>
           network-name=<your network, optional if using default network>
           subnetwork-name=<your subnetwork of the above network, optional if using default network>
           node-instance-prefix=<your instance group name/your instance name specific prefix, required>
           node-tags=<your network tags, must patch one or some tags, required>
-      services: 
-        kube_controller: 
+      services:
+        kube_controller:
           extra_args:
             configure-cloud-routes: true # we need to allow the cloud provider configure the routes for the hosts
     ```

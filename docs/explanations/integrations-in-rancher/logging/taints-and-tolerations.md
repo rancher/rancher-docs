@@ -1,13 +1,12 @@
 ---
 title: Working with Taints and Tolerations
-weight: 6
 ---
 
 "Tainting" a Kubernetes node causes pods to repel running on that node.
 
 Unless the pods have a `toleration` for that node's taint, they will run on other nodes in the cluster.
 
-[Taints and tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) can work in conjunction with the `nodeSelector` [field](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector) within the `PodSpec`, which enables the *opposite* effect of a taint. 
+[Taints and tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) can work in conjunction with the `nodeSelector` [field](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector) within the `PodSpec`, which enables the *opposite* effect of a taint.
 
 Using `nodeSelector` gives pods an affinity towards certain nodes.
 

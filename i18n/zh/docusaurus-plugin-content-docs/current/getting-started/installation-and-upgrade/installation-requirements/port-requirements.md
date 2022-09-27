@@ -1,7 +1,6 @@
 ---
 title: 端口要求
 description: 了解 Rancher 正常运行所需的端口要求，包括 Rancher 节点和下游 Kubernetes 集群节点
-weight: 300
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,7 +1,6 @@
 ---
 title: Rancher DigitalOcean 快速入门指南
 description: 阅读此分步 Rancher DigitalOcean 指南，以快速部署带有单节点下游 Kubernetes 集群的 Rancher Server。
-weight: 120
 ---
 你可以参考以下步骤，在 DigitalOcean 的单节点 K3s Kubernetes 集群中快速部署 Rancher Server，并附加一个单节点下游 Kubernetes 集群。
 

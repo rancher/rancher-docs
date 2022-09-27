@@ -1,7 +1,5 @@
 ---
 title: 创建 Azure 集群
-shortTitle: Azure
-weight: 2220
 ---
 
 import Tabs from '@theme/Tabs';

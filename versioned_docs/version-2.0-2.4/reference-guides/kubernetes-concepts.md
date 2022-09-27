@@ -1,6 +1,5 @@
 ---
 title: Kubernetes Concepts
-weight: 4
 ---
 
 This page explains concepts related to Kubernetes that are important for understanding how Rancher works. The descriptions below provide a simplified interview of Kubernetes components. For more details, refer to the [official documentation on Kubernetes components.](https://kubernetes.io/docs/concepts/overview/components/)
@@ -34,7 +33,7 @@ Rancher uses etcd as a data store in both single node and high-availability inst
 
 The state of a Kubernetes cluster is maintained in [etcd.](https://kubernetes.io/docs/concepts/overview/components/#etcd)  The etcd nodes run the etcd database.
 
-The etcd database component is a distributed key-value store used as Kubernetes storage for all cluster data, such as cluster coordination and state management. It is recommended to run etcd on multiple nodes so that there's always a backup available for failover. 
+The etcd database component is a distributed key-value store used as Kubernetes storage for all cluster data, such as cluster coordination and state management. It is recommended to run etcd on multiple nodes so that there's always a backup available for failover.
 
 Although you can run etcd on just one node, etcd requires a majority of nodes, a quorum, to agree on updates to the cluster state. The cluster should always contain enough healthy etcd nodes to form a quorum. For a cluster with n members, a quorum is (n/2)+1. For any odd-sized cluster, adding one node will always increase the number of nodes necessary for a quorum.
 
@@ -45,7 +44,7 @@ Three etcd nodes is generally sufficient for smaller clusters and five etcd node
 Controlplane nodes run the Kubernetes API server, scheduler, and controller manager. These nodes take care of routine tasks to ensure that your cluster maintains your configuration. Because all cluster data is stored on your etcd nodes, control plane nodes are stateless. You can run control plane on a single node, although three or more nodes are recommended for redundancy. Additionally, a single node can share the control plane and etcd roles.
 
 ### Worker Nodes
-    
+
 Each [worker node](https://kubernetes.io/docs/concepts/architecture/nodes/) runs the following:
 
 - **Kubelets:** An agent that monitors the state of the node, ensuring your containers are healthy.

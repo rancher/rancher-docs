@@ -1,15 +1,7 @@
 ---
 slug: /
-weight: 1
 title: "Rancher 2.6"
-shortTitle: "Rancher 2.6（最新）"
 description: "Rancher 在 Kubernetes 之上添加了新的功能，让你一站式管理上百个集群，统一 RBAC，开启监控和告警。了解更多。"
-metaTitle: "Rancher 2.6 文档：了解新功能"
-metaDescription: "Rancher 2 在 Kubernetes 之上添加了新的功能，让你一站式管理上百个集群，统一 RBAC，开启监控和告警。了解更多。"
-insertOneSix: false
-ctaBanner: 0
-aliases:
-  - /rancher/v2.x/en/
 ---
 Rancher 是一个 Kubernetes 管理工具，让你能在任何地方和任何提供商上部署和运行集群。
 

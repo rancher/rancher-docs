@@ -1,13 +1,5 @@
 ---
 title: Self-Assessment and Hardening Guides for Rancher v2.6
-shortTitle: Rancher v2.6 Hardening Guides
-weight: 1
-aliases:
-  - /rancher/v2.6/en/security/rancher-2.5/
-  - /rancher/v2.6/en/security/rancher-2.5/1.5-hardening-2.5/
-  - /rancher/v2.6/en/security/rancher-2.5/1.5-benchmark-2.5/
-  - /rancher/v2.6/en/security/rancher-2.5/1.6-hardening-2.5/
-  - /rancher/v2.6/en/security/rancher-2.5/1.6-benchmark-2.5/
 ---
 
 Rancher provides specific security hardening guides for each supported Rancher's Kubernetes distributions.

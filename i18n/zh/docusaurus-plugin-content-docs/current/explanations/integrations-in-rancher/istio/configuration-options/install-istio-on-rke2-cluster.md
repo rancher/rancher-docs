@@ -1,6 +1,5 @@
 ---
 title: 在 RKE2 集群上安装 Istio 的其他步骤
-weight: 3
 ---
 
 通过**应用 & 应用市场**页面安装或升级 Istio Helm Chart 时：

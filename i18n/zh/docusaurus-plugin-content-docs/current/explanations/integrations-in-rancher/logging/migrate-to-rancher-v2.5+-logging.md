@@ -1,6 +1,5 @@
 ---
 title: 迁移到 Rancher 2.5 Logging
-weight: 2
 ---
 Rancher 2.5 彻底修改了 Logging 功能。我们现在使用了 Banzai Cloud 的 [logging operator](https://github.com/banzaicloud/logging-operator)，Rancher 配置了此工具以供部署 Logging 使用。
 

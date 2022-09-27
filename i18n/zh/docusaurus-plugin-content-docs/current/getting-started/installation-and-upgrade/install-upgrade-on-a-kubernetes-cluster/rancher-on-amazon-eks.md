@@ -1,7 +1,5 @@
 ---
 title: 在 Amazon EKS 上安装 Rancher
-shortTitle: Amazon EKS
-weight: 3
 ---
 
 本文介绍了在 EKS 上安装 Rancher 的两种方法。

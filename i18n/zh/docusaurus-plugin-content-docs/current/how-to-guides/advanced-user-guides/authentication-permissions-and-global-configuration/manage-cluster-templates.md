@@ -1,6 +1,5 @@
 ---
 title: 集群模板
-weight: 100
 ---
 
 集群模板包含 Kubernetes 配置和节点池配​​置，允许单个模板包含 Rancher 在云提供商中配置新节点并在这些节点上安装 Kubernetes 所需的所有信息。

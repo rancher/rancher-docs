@@ -1,6 +1,5 @@
 ---
 title: '1. 设置基础设施和私有镜像仓库'
-weight: 100
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,6 +1,5 @@
 ---
 title: Rancher Agent
-weight: 2400
 ---
 
 Rancher 管理的集群上部署了两种不同的 Agent 资源：

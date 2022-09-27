@@ -1,7 +1,5 @@
 ---
 title: K3s 集群配置参考
-shortTitle: K3s 集群配置
-weight: 6
 ---
 
 本文介绍 Rancher 中可用于新的或现有的 K3s Kubernetes 集群的配置选项。

@@ -1,6 +1,5 @@
 ---
 title: Advanced Options for Docker Installs
-weight: 5
 ---
 
 When installing Rancher, there are several [advanced options](../../pages-for-subheaders/resources.md) that can be enabled:

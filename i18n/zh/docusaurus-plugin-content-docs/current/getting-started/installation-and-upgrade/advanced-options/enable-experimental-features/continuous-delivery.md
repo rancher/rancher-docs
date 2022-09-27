@@ -1,6 +1,5 @@
 ---
 title: 持续交付
-weight: 3
 ---
 
 从 Rancher 2.5 开始，[Fleet](../../../../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md) 已经预装在 Rancher 中，且从 Rancher 2.6 开始，Fleet 不能再完全禁用。但是，你可以使用 `continuous-delivery` 功能开关来禁用 GitOps 持续交付的 Fleet 功能。

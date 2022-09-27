@@ -1,6 +1,5 @@
 ---
 title: Cluster Drivers
-weight: 1
 ---
 
 _Available as of v2.2.0_

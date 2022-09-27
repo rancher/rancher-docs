@@ -1,8 +1,6 @@
 ---
 title: Creating an Amazon EC2 Cluster
-shortTitle: Amazon EC2
 description: Learn the prerequisites and steps required in order for you to create an Amazon EC2 cluster using Rancher
-weight: 2210
 ---
 
 import Tabs from '@theme/Tabs';

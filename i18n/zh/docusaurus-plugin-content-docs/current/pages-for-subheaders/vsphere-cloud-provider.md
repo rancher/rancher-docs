@@ -1,6 +1,5 @@
 ---
 title: 设置 vSphere 云提供商
-weight: 4
 ---
 
 在本节中，你将了解如何在 vSphere 中为 Rancher 管理的 RKE Kubernetes 集群设置 vSphere 云提供商。

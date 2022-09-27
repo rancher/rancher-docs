@@ -1,6 +1,5 @@
 ---
 title: GlusterFS 卷
-weight: 5000
 ---
 
 :::note

@@ -1,6 +1,5 @@
 ---
 title: Example YAML File
-weight: 501
 ---
 
 Pipelines can be configured either through the UI or using a yaml file in the repository, i.e. `.rancher-pipeline.yml` or `.rancher-pipeline.yaml`.
@@ -65,7 +64,7 @@ notification:
     notifier: "c-wdcsr:n-c9pg7"
   - recipient: "test@example.com"
     notifier: "c-wdcsr:n-lkrhd"
-  # Select which statuses you want the notification to be sent  
+  # Select which statuses you want the notification to be sent
   condition: ["Failed", "Success", "Changed"]
   # Ability to override the default message (Optional)
   message: "my-message"

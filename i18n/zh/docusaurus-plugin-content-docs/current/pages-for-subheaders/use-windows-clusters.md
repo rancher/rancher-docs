@@ -1,6 +1,5 @@
 ---
 title: 在 Windows 集群上启动 Kubernetes
-weight: 2240
 ---
 
 使用 Rancher 配置[自定义集群](use-existing-nodes.md)时，Rancher 通过 RKE（Rancher Kubernetes Engine）在现有节点上安装 Kubernetes。

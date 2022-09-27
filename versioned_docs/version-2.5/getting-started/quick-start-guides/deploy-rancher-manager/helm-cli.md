@@ -1,9 +1,7 @@
 ---
 title: Manual Quick Start
-weight: 300
-aliases:
-  - /rancher/v2.x/en/quick-start-guide/deployment/quickstart-manual-setup/
 ---
+
 Howdy Partner! This tutorial walks you through:
 
 - Installation of Rancher 2.x

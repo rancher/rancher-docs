@@ -1,7 +1,5 @@
 ---
 title: Creating a Huawei CCE Cluster
-shortTitle: Huawei Cloud Kubernetes Service
-weight: 2130
 ---
 
 _Available as of v2.2.0_
@@ -31,13 +29,13 @@ Huawei CCE service doesn't support the ability to create clusters with public ac
 1. Fill the following node configuration of the cluster. For help filling out the form, refer to [Node Configuration.](#node-configuration)
 1. Click **Create** to create the CCE cluster.
 
-**Result:** 
+**Result:**
 
 Your cluster is created and assigned a state of **Provisioning.** Rancher is standing up your cluster.
 
 You can access your cluster after its state is updated to **Active.**
 
-**Active** clusters are assigned two Projects: 
+**Active** clusters are assigned two Projects:
 
 - `Default`, containing the `default` namespace
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces

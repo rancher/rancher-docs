@@ -1,13 +1,5 @@
 ---
 title: Project Logging
-shortTitle: Project Logging
-weight: 2527
-aliases:
-  - /rancher/v2.0-v2.4/en/project-admin/tools/logging
-  - /rancher/v2.0-v2.4/en/logging/legacy/project-logging
-  - /rancher/v2.0-v2.4/en/logging/v2.0.x-v2.4.x/project-logging
-  - /rancher/v2.x/en/logging/v2.0.x-v2.4.x/project-logging/
-  - /rancher/v2.x/en/monitoring-alerting/v2.0.x-v2.4.x/cluster-monitoring/project-monitoring/
 ---
 
 Rancher can integrate with a variety of popular logging services and tools that exist outside of your Kubernetes clusters.

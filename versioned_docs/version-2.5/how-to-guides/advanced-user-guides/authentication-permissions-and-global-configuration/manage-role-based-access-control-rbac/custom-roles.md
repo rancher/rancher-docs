@@ -1,9 +1,5 @@
 ---
 title: Custom Roles
-weight: 1128
-aliases:
-  - /rancher/v2.5/en/tasks/global-configuration/roles/
-  - /rancher/v2.x/en/admin-settings/rbac/default-custom-roles/
 ---
 
 Within Rancher, _roles_ determine what actions a user can make within a cluster or project.
@@ -44,7 +40,7 @@ The steps to add custom roles differ depending on the version of Rancher.
 1.  Use the **Grant Resources** options to assign individual [Kubernetes API endpoints](https://kubernetes.io/docs/reference/) to the role.
 
     > When viewing the resources associated with default roles created by Rancher, if there are multiple Kubernetes API resources on one line item, the resource will have `(Custom)` appended to it. These are not custom resources but just an indication that there are multiple Kubernetes API resources as one resource.
-    
+
     > The Resource text field provides a method to search for pre-defined Kubernetes API resources, or enter a custom resource name for the grant. The pre-defined or `(Custom)` resource must be selected from the dropdown, after entering a resource name into this field.
 
     You can also choose the individual cURL methods (`Create`, `Delete`, `Get`, etc.) available for use with each endpoint you assign.
@@ -84,7 +80,7 @@ Custom global roles don't have to be based on existing roles. To create a custom
 1. In the **Grant Resources** section, select the Kubernetes resource operations that will be enabled for users with the custom role.
 
     > The Resource text field provides a method to search for pre-defined Kubernetes API resources, or enter a custom resource name for the grant. The pre-defined or `(Custom)` resource must be selected from the dropdown, after entering a resource name into this field.
-    
+
 1. Click **Save.**
 
 ## Deleting a Custom Global Role

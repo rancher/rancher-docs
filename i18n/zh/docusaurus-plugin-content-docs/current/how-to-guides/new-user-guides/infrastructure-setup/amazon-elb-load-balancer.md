@@ -1,6 +1,5 @@
 ---
 title: 设置 Amazon NLB 网络负载均衡器
-weight: 5
 ---
 
 本文介绍了如何在 Amazon EC2 服务中设置 Amazon NLB 网络负载均衡器，用于将流量转发到 EC2 上的多个实例中。

@@ -1,8 +1,5 @@
 ---
 title: 2. Migrate Your Services
-weight: 100
-aliases:
-  - /rancher/v2.x/en/v1.6-migration/run-migration-tool/
 ---
 
 import Tabs from '@theme/Tabs';

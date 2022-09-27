@@ -1,11 +1,5 @@
 ---
 title: '2. Collect and Publish Images to your Private Registry'
-weight: 200
-aliases:
-  - /rancher/v2.0-v2.4/en/installation/air-gap-high-availability/prepare-private-registry/
-  - /rancher/v2.0-v2.4/en/installation/air-gap-single-node/prepare-private-registry/
-  - /rancher/v2.0-v2.4/en/installation/air-gap-single-node/config-rancher-for-private-reg/
-  - /rancher/v2.0-v2.4/en/installation/air-gap-high-availability/config-rancher-for-private-reg/
 ---
 
 import Tabs from '@theme/Tabs';

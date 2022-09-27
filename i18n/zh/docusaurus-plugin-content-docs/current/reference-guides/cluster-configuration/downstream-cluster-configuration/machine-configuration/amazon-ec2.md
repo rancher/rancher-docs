@@ -1,6 +1,5 @@
 ---
 title: EC2 主机配置参考
-weight: 2
 ---
 
 有关 EC2 和节点的更多详细信息，请参阅 [EC2 管理控制台](https://aws.amazon.com/ec2)的官方文档。

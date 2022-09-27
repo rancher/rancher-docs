@@ -1,6 +1,5 @@
 ---
 title: NeuVector 集成
-weight: 22
 ---
 
 import Tabs from '@theme/Tabs';

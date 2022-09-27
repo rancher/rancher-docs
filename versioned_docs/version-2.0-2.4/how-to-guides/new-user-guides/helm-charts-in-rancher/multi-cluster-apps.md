@@ -1,9 +1,5 @@
 ---
 title: Multi-Cluster Apps
-weight: 600
-aliases:
-  - /rancher/v2.0-v2.4/en/catalog/multi-cluster-apps
-  - /rancher/v2.0-v2.4/en/helm-charts/legacy-catalogs/multi-cluster-apps
 ---
 _Available as of v2.2.0_
 

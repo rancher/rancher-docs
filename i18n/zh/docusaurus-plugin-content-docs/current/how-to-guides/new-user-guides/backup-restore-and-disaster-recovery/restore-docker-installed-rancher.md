@@ -1,7 +1,5 @@
 ---
 title: 恢复备份 - Docker 安装
-shortTitle: 还原
-weight: 3
 ---
 
 如果遇到灾难情况，你可以将 Rancher Server 恢复到最新的备份。

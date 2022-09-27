@@ -1,6 +1,5 @@
 ---
 title: 跳过和不适用的测试
-weight: 3
 ---
 
 本文列出了在 RKE 的 permissive 测试配置文件中跳过的测试。

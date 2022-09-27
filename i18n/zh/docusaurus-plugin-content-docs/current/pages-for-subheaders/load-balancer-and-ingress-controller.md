@@ -1,7 +1,6 @@
 ---
 title: 在 Rancher 中设置负载均衡器和 Ingress Controller
 description: 了解如何设置负载均衡器和 Ingress Controller 以在 Rancher 中重定向服务请求，并了解负载均衡器的限制
-weight: 3040
 ---
 
 在 Rancher 中，你可以通过设置负载均衡器和 Ingress Controller 来重定向服务请求。

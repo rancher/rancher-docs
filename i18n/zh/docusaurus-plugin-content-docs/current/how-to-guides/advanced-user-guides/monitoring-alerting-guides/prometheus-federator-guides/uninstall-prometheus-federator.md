@@ -1,6 +1,5 @@
 ---
 title: 卸载 Prometheus Federator
-weight: 2
 ---
 
 1. 点击 **☰ > 集群管理**。

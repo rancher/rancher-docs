@@ -1,6 +1,5 @@
 ---
 title: Configure Azure AD
-weight: 1115
 ---
 
 import Tabs from '@theme/Tabs';

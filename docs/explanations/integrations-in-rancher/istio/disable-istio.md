@@ -1,6 +1,5 @@
 ---
 title: Disabling Istio
-weight: 4
 ---
 
 This section describes how to uninstall Istio in a cluster or disable a namespace, or workload.
@@ -15,7 +14,7 @@ To uninstall Istio,
 1. In the `istio-system` namespace, go to `rancher-istio` and click **⋮ > Delete**.
 1. After `rancher-istio` is deleted, you can then select all the remaining apps in the `istio-system` namespace and click **Delete**.
 
-**Result:** The `rancher-istio` app in the cluster gets removed. The Istio sidecar cannot be deployed on any workloads in the cluster. 
+**Result:** The `rancher-istio` app in the cluster gets removed. The Istio sidecar cannot be deployed on any workloads in the cluster.
 
 :::note
 

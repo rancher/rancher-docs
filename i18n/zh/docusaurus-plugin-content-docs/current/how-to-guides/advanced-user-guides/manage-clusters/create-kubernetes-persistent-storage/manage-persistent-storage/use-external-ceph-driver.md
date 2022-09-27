@@ -1,6 +1,5 @@
 ---
 title: 使用外部 Ceph 驱动
-weight: 10
 ---
 
 本文介绍如何在 RKE2 集群中使用外部 Ceph 驱动。如果你使用的是 RKE，则需要执行其他步骤。详情请参阅[本节](#在-rke-中使用-ceph-驱动)。
@@ -314,7 +313,7 @@ spec:
     requests:
       storage: 2Gi
   storageClassName: ceph-rbd-sc
----    
+---
 apiVersion: v1
 kind: Pod
 metadata:

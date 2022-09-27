@@ -1,6 +1,5 @@
 ---
 title: 选择器和抓取配置
-weight: 2
 ---
 
 Monitoring 应用设置了 `prometheus.prometheusSpec.ignoreNamespaceSelectors=false`，即在默认情况下跨所有命名空间进行监控。

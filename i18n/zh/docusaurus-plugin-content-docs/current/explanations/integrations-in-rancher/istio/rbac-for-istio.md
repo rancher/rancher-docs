@@ -1,6 +1,5 @@
 ---
 title: RBAC
-weight: 3
 ---
 
 本文介绍访问 Istio 功能所需的权限。

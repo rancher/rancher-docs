@@ -1,6 +1,5 @@
 ---
 title: Dynamically Provisioning New Storage in Rancher
-weight: 2
 ---
 
 This section describes how to provision new persistent storage for workloads in Rancher.

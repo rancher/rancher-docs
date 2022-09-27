@@ -1,6 +1,5 @@
 ---
 title: Backups and Disaster Recovery
-weight: 5
 ---
 
 This section is devoted to protecting your data in a disaster scenario.

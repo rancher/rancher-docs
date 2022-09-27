@@ -1,7 +1,6 @@
 ---
 title: "Kubernetes 工作负载和 Pod"
 description: "了解在 Kubernetes 中构建复杂容器化应用程序的两种结构：Kubernetes 工作负载和 Pod"
-weight: 3025
 ---
 
 你可以使用两种基本结构（pod 和工作负载）在 Kubernetes 中构建复杂的容器化应用程序。构建应用程序后，你可以使用第三种结构（service）在集群中或互联网上公开应用程序。

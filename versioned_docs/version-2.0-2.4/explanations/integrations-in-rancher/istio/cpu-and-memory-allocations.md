@@ -1,14 +1,7 @@
 ---
 title: CPU and Memory Allocations
-weight: 1
-aliases:
-  - /rancher/v2.0-v2.4/en/project-admin/istio/configuring-resource-allocations/
-  - /rancher/v2.0-v2.4/en/project-admin/istio/config/
-  - /rancher/v2.0-v2.4/en/cluster-admin/tools/istio/resources
-  - /rancher/v2.0-v2.4/en/istio/legacy/resources
-  - /rancher/v2.0-v2.4/en/istio/v2.3.x-v2.4.x/resources
-  - /rancher/v2.x/en/istio/v2.3.x-v2.4.x/resources/
 ---
+
 _Available as of v2.3.0_
 
 This section describes the minimum recommended computing resources for the Istio components in a cluster.
@@ -26,13 +19,13 @@ In Kubernetes, the resource request indicates that the workload will not deploye
 Workload | Container | CPU - Request | Mem - Request | CPU - Limit | Mem - Limit | Configurable
 ---------|-----------|---------------|---------------|-------------|-------------|-------------
 istio-pilot |discovery| 500m | 2048Mi | 1000m | 4096Mi | Y
- istio-telemetry |mixer| 1000m         | 1024Mi        | 4800m       | 4096Mi      | Y            
- istio-policy | mixer      | 1000m         | 1024Mi        | 4800m       | 4096Mi      | Y            
- istio-tracing   | jaeger     | 100m          | 100Mi         | 500m        | 1024Mi      | Y            
- prometheus      | prometheus | 750m          | 750Mi         | 1000m       | 1024Mi      | Y            
- grafana         | grafana    | 100m          | 100Mi         | 200m        | 512Mi       | Y            
- Others          | -        | 500m          | 500Mi         | -         | -         | N            
- **Total**           | **-**        | **3950m**         | **5546Mi**        | **>12300m**         | **>14848Mi**         | **-**   
+ istio-telemetry |mixer| 1000m         | 1024Mi        | 4800m       | 4096Mi      | Y
+ istio-policy | mixer      | 1000m         | 1024Mi        | 4800m       | 4096Mi      | Y
+ istio-tracing   | jaeger     | 100m          | 100Mi         | 500m        | 1024Mi      | Y
+ prometheus      | prometheus | 750m          | 750Mi         | 1000m       | 1024Mi      | Y
+ grafana         | grafana    | 100m          | 100Mi         | 200m        | 512Mi       | Y
+ Others          | -        | 500m          | 500Mi         | -         | -         | N
+ **Total**           | **-**        | **3950m**         | **5546Mi**        | **>12300m**         | **>14848Mi**         | **-**
 
 
 ## Configuring Resource Allocations
@@ -43,7 +36,7 @@ To make it easier to schedule the workloads to a node, a cluster administrator c
 
 You can find more information about Istio configuration in the [official Istio documentation](https://istio.io/docs/concepts/what-is-istio).
 
-To configure the resources allocated to an Istio component, 
+To configure the resources allocated to an Istio component,
 
 1. In Rancher, go to the cluster where you have Istio installed.
 1. Click **Tools > Istio.** This opens the Istio configuration page.

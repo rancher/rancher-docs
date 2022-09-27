@@ -1,6 +1,5 @@
 ---
 title: Restoring Rancher
-weight: 2
 ---
 
 This page outlines how to perform a restore with Rancher.

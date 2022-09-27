@@ -1,7 +1,6 @@
 ---
 title: 从节点中移除 Kubernetes 组件
 description: 了解从 Rancher 启动的 Kubernetes 集群中删除节点时的集群清理过程。了解删除了的内容，以及如何手动进行操作
-weight: 2055
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,7 +1,6 @@
 ---
-title: Ingress Configuration 
-description: Ingress configuration 
-weight: 9999
+title: Ingress Configuration
+description: Ingress configuration
 ---
 
 ### NGINX Ingress controller changes in Kubernetes v1.21

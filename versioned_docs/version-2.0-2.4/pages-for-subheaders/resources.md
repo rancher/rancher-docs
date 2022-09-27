@@ -1,8 +1,5 @@
 ---
 title: Resources
-weight: 5
-aliases:
-- /rancher/v2.0-v2.4/en/installation/options
 ---
 
 ### Docker Installations

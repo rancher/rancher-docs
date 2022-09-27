@@ -1,6 +1,5 @@
 ---
 title: 添加 Pod 安全策略
-weight: 80
 ---
 
 :::note 先决条件：

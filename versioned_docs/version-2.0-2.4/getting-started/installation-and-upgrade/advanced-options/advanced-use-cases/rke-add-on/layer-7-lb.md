@@ -1,11 +1,5 @@
 ---
 title: Kubernetes Install with External Load Balancer (HTTPS/Layer 7)
-weight: 276
-aliases:
-  - /rancher/v2.0-v2.4/en/installation/ha/rke-add-on/layer-7-lb
-  - /rancher/v2.0-v2.4/en/installation/options/rke-add-on/layer-7-lb/
-  - /rancher/v2.0-v2.4/en/installation/options/rke-add-on/layer-7-lb
-  - /rancher/v2.x/en/installation/resources/advanced/rke-add-on/layer-7-lb/
 ---
 import SslFaqHa from '@site/src/components/SslFaqHa'
 

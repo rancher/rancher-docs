@@ -1,6 +1,5 @@
 ---
 title: Azure 主机配置
-weight: 2
 ---
 
 有关 Azure 的更多信息，请参阅官方 [Azure 文档](https://docs.microsoft.com/en-us/azure/?product=featured)。

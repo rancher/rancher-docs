@@ -1,8 +1,5 @@
 ---
 title: Security
-weight: 8007
-aliases:
-  - /rancher/v2.x/en/faq/security/
 ---
 
 **Is there a Hardening Guide?**

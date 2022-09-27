@@ -1,11 +1,6 @@
 ---
 title: Setting up Kubernetes Clusters in Rancher
 description: Provisioning Kubernetes Clusters
-weight: 7
-aliases:
-  - /rancher/v2.0-v2.4/en/concepts/clusters/
-  - /rancher/v2.0-v2.4/en/concepts/clusters/cluster-providers/
-  - /rancher/v2.0-v2.4/en/tasks/clusters/
 ---
 
 Rancher simplifies the creation of clusters by allowing you to create them through the Rancher UI rather than more complex alternatives. Rancher provides multiple options for launching a cluster. Use the option that best fits your use case.

@@ -1,6 +1,5 @@
 ---
 title: 为工作负载设置 Monitoring
-weight: 4
 ---
 
 

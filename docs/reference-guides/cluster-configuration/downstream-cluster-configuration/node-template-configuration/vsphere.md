@@ -1,6 +1,5 @@
 ---
 title: VSphere Node Template Configuration
-weight: 2
 ---
 
 
@@ -20,7 +19,7 @@ Your cloud credential has these fields:
 
 ## Scheduling
 
-Choose what hypervisor the virtual machine will be scheduled to. 
+Choose what hypervisor the virtual machine will be scheduled to.
 
 The fields in the **Scheduling** section should auto-populate with the data center and other scheduling options that are available to you in vSphere.
 

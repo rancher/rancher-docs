@@ -1,6 +1,5 @@
 ---
 title: CPU and Memory Allocations
-weight: 1
 ---
 
 This section describes the minimum recommended computing resources for the Istio components in a cluster.

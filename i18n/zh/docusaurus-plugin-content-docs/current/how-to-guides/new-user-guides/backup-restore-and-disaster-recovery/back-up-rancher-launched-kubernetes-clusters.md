@@ -1,6 +1,5 @@
 ---
 title: 备份集群
-weight: 2045
 ---
 
 在 Rancher UI 中，你可以轻松备份和恢复 [Rancher 启动的 Kubernetes 集群](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)的 etcd。

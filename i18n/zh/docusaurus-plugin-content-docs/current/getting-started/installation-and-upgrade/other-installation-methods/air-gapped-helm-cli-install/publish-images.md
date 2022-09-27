@@ -1,6 +1,5 @@
 ---
 title: '2. 收集镜像并发布到私有仓库'
-weight: 200
 ---
 
 import Tabs from '@theme/Tabs';

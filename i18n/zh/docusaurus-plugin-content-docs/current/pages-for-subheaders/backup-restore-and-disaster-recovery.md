@@ -1,6 +1,5 @@
 ---
 title: 备份和灾难恢复
-weight: 5
 ---
 
 在本节中，你将学习如何创建 Rancher 的备份，如何从备份中恢复 Rancher，以及如何将 Rancher 迁移到新的 Kubernetes 集群。

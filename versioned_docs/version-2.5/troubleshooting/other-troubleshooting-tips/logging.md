@@ -1,8 +1,5 @@
 ---
 title: Logging
-weight: 110
-aliases:
-  - /rancher/v2.x/en/troubleshooting/logging/
 ---
 
 The following log levels are used in Rancher:

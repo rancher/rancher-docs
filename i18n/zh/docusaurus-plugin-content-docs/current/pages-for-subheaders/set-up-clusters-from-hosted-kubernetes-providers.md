@@ -1,6 +1,5 @@
 ---
 title: 通过托管 Kubernetes 提供商设置集群
-weight: 3
 ---
 
 在这种情况下，Rancher 不会配置 Kubernetes，因为它是由 Google Kubernetes Engine (GKE)、Amazon Elastic Container Service for Kubernetes 或 Azure Kubernetes Service 等提供商安装的。

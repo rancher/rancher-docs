@@ -1,6 +1,5 @@
 ---
 title: Helm 版本要求
-weight: 3
 ---
 
 本文介绍 Helm 的要求。Helm 是用于把 Rancher 安装在高可用 Kubernetes 集群上的工具。

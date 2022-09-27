@@ -1,6 +1,5 @@
 ---
 title: 私有集群
-weight: 2
 ---
 
 在 GKE 中，[私有集群](https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept)是一种集群，其节点仅通过分配内部 IP 地址与入站和出站流量相隔离。GKE 中的私有集群可以选择将 controlplane 端点作为公开访问的地址或作为私有地址。这与其他 Kubernetes 提供商不同，后者可能将具有私有 controlplane 端点的集群称为“私有集群”，但仍允许进出节点的流量。基于你的组织的网络和安全要求，你可能想创建一个有私有节点的集群，其中有或没有公共 controlplane 端点。从 Rancher 配置的 GKE 集群可以通过在**集群选项**中选择**私有集群**（在**显示高级选项**下）来使用隔离的节点。通过选择**启用私有端点**，可以选择将 controlplane 端点设为私有。

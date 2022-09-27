@@ -1,6 +1,5 @@
 ---
 title: Additional Steps for Installing Istio on an RKE2 Cluster
-weight: 3
 ---
 
 When installing or upgrading the Istio Helm chart through **Apps & Marketplace,**

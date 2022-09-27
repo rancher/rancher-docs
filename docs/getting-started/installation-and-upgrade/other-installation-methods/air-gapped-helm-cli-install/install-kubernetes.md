@@ -1,6 +1,5 @@
 ---
 title: '3. Install Kubernetes (Skip for Docker Installs)'
-weight: 300
 ---
 
 import Tabs from '@theme/Tabs';

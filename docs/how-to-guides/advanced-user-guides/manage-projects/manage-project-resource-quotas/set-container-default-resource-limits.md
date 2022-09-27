@@ -1,6 +1,5 @@
 ---
 title: Setting Container Default Resource Limits
-weight: 3
 ---
 
 When setting resource quotas, if you set anything related to CPU or Memory (i.e. limits or reservations) on a project / namespace, all containers will require a respective CPU or Memory field set during creation. See the [Kubernetes documentation](https://kubernetes.io/docs/concepts/policy/resource-quotas/#requests-vs-limits) for more details on why this is required.
@@ -24,7 +23,7 @@ Edit the container default resource limit when:
 
 When the default container resource limit is set at a project level, the parameter will be propagated to any namespace created in the project after the limit has been set. For any existing namespace in a project, this limit will not be automatically propagated. You will need to manually set the default container resource limit for any existing namespaces in the project in order for it to be used when creating any containers.
 
-You can set a default container resource limit on a project and launch any catalog applications.  
+You can set a default container resource limit on a project and launch any catalog applications.
 
 Once a container default resource limit is configured on a namespace, the default will be pre-populated for any containers created in that namespace. These limits/reservations can always be overridden during workload creation.
 

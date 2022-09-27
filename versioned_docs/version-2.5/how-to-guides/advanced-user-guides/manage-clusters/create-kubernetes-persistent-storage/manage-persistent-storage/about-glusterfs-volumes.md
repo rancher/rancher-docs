@@ -1,8 +1,5 @@
 ---
 title: GlusterFS Volumes
-weight: 5000
-aliases:
-  - /rancher/v2.x/en/cluster-admin/volumes-and-storage/glusterfs-volumes/
 ---
 
 > This section only applies to [RKE clusters.](../../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)

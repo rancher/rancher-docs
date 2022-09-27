@@ -1,6 +1,5 @@
 ---
 title: Template Enforcement
-weight: 32
 ---
 
 This section describes how template administrators can enforce templates in Rancher, restricting the ability of users to create clusters without a template.
@@ -26,11 +25,11 @@ To require new clusters to use an RKE template, administrators can turn on RKE t
 1. Set the value to **True** and click **Save**.
 
     :::note Important:
-    
+
     When the admin sets the `cluster-template-enforcement` to <b>True</b>, they also need to share the `clusterTemplates` with users so that users can select one of these templates to create the cluster.
 
     :::
-    
+
 **Result:** All clusters provisioned by Rancher must use a template, unless the creator is an administrator.
 
 ## Disabling RKE Template Enforcement

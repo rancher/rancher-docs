@@ -1,6 +1,5 @@
 ---
 title: 配置驱动
-weight: 70
 ---
 
 使用 Rancher 中的驱动，你可以管理可以使用哪些供应商来部署[托管的 Kubernetes 集群](set-up-clusters-from-hosted-kubernetes-providers.md)或[云服务器节点](use-new-nodes-in-an-infra-provider.md)，以允许 Rancher 部署和管理 Kubernetes。

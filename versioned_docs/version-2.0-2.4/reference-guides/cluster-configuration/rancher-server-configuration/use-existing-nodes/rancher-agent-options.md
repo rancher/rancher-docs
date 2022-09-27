@@ -1,9 +1,5 @@
 ---
 title: Rancher Agent Options
-weight: 2500
-aliases:
-  - /rancher/v2.0-v2.4/en/admin-settings/agent-options/
-  - /rancher/v2.0-v2.4/en/cluster-provisioning/custom-clusters/agent-options
 ---
 
 Rancher deploys an agent on each node to communicate with the node. This pages describes the options that can be passed to the agent. To use these options, you will need to [create a cluster with custom nodes](../../../../pages-for-subheaders/use-existing-nodes.md) and add the options to the generated `docker run` command when adding a node.

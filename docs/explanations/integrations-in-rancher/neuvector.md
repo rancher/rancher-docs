@@ -1,6 +1,5 @@
 ---
 title: NeuVector Integration
-weight: 22
 ---
 
 import Tabs from '@theme/Tabs';

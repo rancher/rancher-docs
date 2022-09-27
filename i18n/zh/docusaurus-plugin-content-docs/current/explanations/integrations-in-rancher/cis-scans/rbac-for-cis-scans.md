@@ -1,7 +1,5 @@
 ---
 title: RBAC
-shortTitle: RBAC
-weight: 3
 ---
 
 本文介绍使用 rancher-cis-benchmark 应用所需的权限。

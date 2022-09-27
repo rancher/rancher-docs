@@ -1,6 +1,5 @@
 ---
 title: GlusterFS Volumes
-weight: 5000
 ---
 
 :::note

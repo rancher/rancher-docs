@@ -1,6 +1,5 @@
 ---
 title: Best Practices for Rancher Managed vSphere Clusters
-shortTitle: Rancher Managed Clusters in vSphere
 ---
 
 This guide outlines a reference architecture for provisioning downstream Rancher clusters in a vSphere environment, in addition to standard vSphere best practices as documented by VMware.
@@ -32,7 +31,7 @@ Doing so will ensure node VM's are spread across multiple datastores - preventin
 
 It’s important to follow K8s and etcd best practices when deploying your nodes, including disabling swap, double-checking you have full network connectivity between all machines in the cluster, using unique hostnames, MAC addresses, and product_uuids for every node.
 
-# 2. Network Considerations 
+# 2. Network Considerations
 
 ### Leverage Low Latency, High Bandwidth Connectivity Between ETCD Nodes
 
@@ -46,7 +45,7 @@ Each node used should have a static IP configured. In the case of DHCP, each nod
 
 ### Leverage SSD Drives for ETCD Nodes
 
-ETCD is very sensitive to write latency. Therefore, leverage SSD disks where possible. 
+ETCD is very sensitive to write latency. Therefore, leverage SSD disks where possible.
 
 # 4. Backups and Disaster Recovery
 

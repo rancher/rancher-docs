@@ -1,6 +1,5 @@
 ---
 title: 启用 Prometheus Federator
-weight: 1
 ---
 
 

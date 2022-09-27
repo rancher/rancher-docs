@@ -1,6 +1,5 @@
 ---
 title: Outputs 和 ClusterOutputs
-weight: 2
 ---
 
 有关配置 `Output` 和 `ClusterOutput` 的完整详细信息，请参阅 [Banzai Cloud Logging Operator 文档](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/output/)。

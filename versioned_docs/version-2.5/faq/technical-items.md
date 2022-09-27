@@ -1,8 +1,5 @@
 ---
 title: Technical
-weight: 8006
-aliases:
-  - /rancher/v2.x/en/faq/technical/
 ---
 
 ### How can I reset the administrator password?

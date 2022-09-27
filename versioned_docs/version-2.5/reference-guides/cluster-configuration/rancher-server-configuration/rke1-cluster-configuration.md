@@ -1,6 +1,5 @@
 ---
 title: RKE Cluster Configuration
-weight: 1
 ---
 
 In [clusters launched by RKE](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md), you can edit any of the remaining options that follow.

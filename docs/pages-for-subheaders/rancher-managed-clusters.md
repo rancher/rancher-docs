@@ -1,7 +1,5 @@
 ---
 title: Best Practices for Rancher Managed Clusters
-shortTitle: Rancher Managed Clusters
-weight: 2
 ---
 
 ### Logging

@@ -1,6 +1,5 @@
 ---
 title: Backing up Rancher
-weight: 1
 ---
 
 In this section, you'll learn how to back up Rancher running on any Kubernetes cluster. To backup Rancher installed with Docker, refer the instructions for [single node backups](back-up-docker-installed-rancher.md)

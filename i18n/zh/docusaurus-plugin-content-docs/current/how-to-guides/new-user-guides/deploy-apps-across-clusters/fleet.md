@@ -1,6 +1,5 @@
 ---
 title: Fleet - 大规模的 GitOps
-weight: 1
 ---
 
 Fleet 是大规模的 GitOps。你可以使用 Fleet 管理多达一百万个集群。Fleet 非常轻量，可以很好地用于[单个集群](https://fleet.rancher.io/single-cluster-install/)，但是在你达到[大规模](https://fleet.rancher.io/multi-cluster-install/)时，它能发挥更强的实力。此处的大规模指的是大量集群、大量部署、或组织中存在大量团队的情况。

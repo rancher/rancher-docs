@@ -1,6 +1,5 @@
 ---
 title: Managing Node Templates
-weight: 7010
 ---
 
 When you provision a cluster [hosted by an infrastructure provider](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md), [node templates](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#node-templates) are used to provision the cluster nodes. These templates use Docker Machine configuration options to define an operating system image and settings/parameters for the node. You can create node templates in two contexts:
@@ -26,11 +25,11 @@ When you create a node template, it is bound to your user profile. Node template
 1. Choose the node template that you want to edit and click the **⋮ > Edit**.
 
     :::note
-    
+
     The default `active` [node drivers](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md) and any node driver, that has fields marked as `password`, are required to use [cloud credentials](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#cloud-credentials).
 
     :::
-    
+
 1. Edit the required information and click **Save**.
 
 **Result:** The node template is updated. All node pools using this node template will automatically use the updated information when new nodes are added.

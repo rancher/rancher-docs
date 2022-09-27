@@ -1,6 +1,5 @@
 ---
 title: Overriding the Default Limit for a Namespace
-weight: 2
 ---
 
 Although the **Namespace Default Limit** propagates from the project to each namespace when created, in some cases, you may need to increase (or decrease) the quotas for a specific namespace. In this situation, you can override the default limits by editing the namespace.
@@ -26,10 +25,10 @@ If there is a resource quota configured for a project, you can override the name
     For more information about each **Resource Type**, see [the type reference](resource-quota-types.md).
 
     :::note
-    
+
     - If a resource quota is not configured for the project, these options will not be available.
     - If you enter limits that exceed the configured project limits, Rancher will not let you save your edits.
 
     :::
-    
+
 **Result:** Your override is applied to the namespace's resource quota.

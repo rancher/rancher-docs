@@ -1,6 +1,5 @@
 ---
 title: Built-in Dashboards
-weight: 3
 ---
 
 

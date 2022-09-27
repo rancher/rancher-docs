@@ -1,6 +1,5 @@
 ---
 title: Networking Requirements for Host Gateway (L2bridge)
-weight: 1000
 ---
 
 This section describes how to configure custom Windows clusters that are using *Host Gateway (L2bridge)* mode.

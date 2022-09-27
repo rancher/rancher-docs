@@ -1,10 +1,5 @@
 ---
 title: Tips for Running Rancher
-weight: 100
-aliases:
-  - /rancher/v2.5/en/best-practices/deployment-types
-  - /rancher/v2.5/en/best-practices/v2.5/rancher-server/deployment-types
-  - /rancher/v2.x/en/best-practices/v2.5/rancher-server/deployment-types/
 ---
 
 This guide is geared toward use cases where Rancher is used to manage downstream Kubernetes clusters. The high-availability setup is intended to prevent losing access to downstream clusters if the Rancher server is not available.
@@ -22,7 +17,7 @@ Don't run other workloads or microservices in the Kubernetes cluster that Ranche
 It's important to follow K8s and etcd best practices when deploying your nodes, including disabling swap, double checking you have full network connectivity between all machines in the cluster, using unique hostnames, MAC addresses, and product_uuids for every node, checking that all correct ports are opened, and deploying with ssd backed etcd. More details can be found in the [kubernetes docs](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#before-you-begin) and [etcd's performance op guide](https://etcd.io/docs/v3.4/op-guide/performance/).
 
 ### When using RKE: Back up the Statefile
-RKE keeps record of the cluster state in a file called `cluster.rkestate`. This file is important for the recovery of a cluster and/or the continued maintenance of the cluster through RKE. Because this file contains certificate material, we strongly recommend encrypting this file before backing up. After each run of `rke up` you should backup the state file. 
+RKE keeps record of the cluster state in a file called `cluster.rkestate`. This file is important for the recovery of a cluster and/or the continued maintenance of the cluster through RKE. Because this file contains certificate material, we strongly recommend encrypting this file before backing up. After each run of `rke up` you should backup the state file.
 
 ### Run All Nodes in the Cluster in the Same Datacenter
 For best performance, run all three of your nodes in the same geographic datacenter. If you are running nodes in the cloud, such as AWS, run each node in a separate Availability Zone. For example, launch node 1 in us-west-2a, node 2 in us-west-2b, and node 3 in us-west-2c.
@@ -35,6 +30,6 @@ The Rancher server's Kubernetes cluster should run within the [system and hardwa
 
 However, metrics-driven capacity planning analysis should be the ultimate guidance for scaling Rancher, because the published requirements take into account a variety of workload types.
 
-Using Rancher, you can monitor the state and processes of your cluster nodes, Kubernetes components, and software deployments through integration with Prometheus, a leading open-source monitoring solution, and Grafana, which lets you visualize the metrics from Prometheus. 
+Using Rancher, you can monitor the state and processes of your cluster nodes, Kubernetes components, and software deployments through integration with Prometheus, a leading open-source monitoring solution, and Grafana, which lets you visualize the metrics from Prometheus.
 
 After you [enable monitoring](../../../pages-for-subheaders/monitoring-and-alerting.md) in the cluster, you can set up [a notification channel](../../../pages-for-subheaders/monitoring-and-alerting.md) and alerts to let you know if your cluster is approaching its capacity. You can also use the Prometheus and Grafana monitoring framework to establish a baseline for key metrics as you scale.

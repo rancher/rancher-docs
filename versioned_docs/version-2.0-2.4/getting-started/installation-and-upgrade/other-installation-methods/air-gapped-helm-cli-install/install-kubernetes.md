@@ -1,8 +1,5 @@
 ---
 title: '3. Install Kubernetes (Skip for Docker Installs)'
-weight: 300
-aliases:
-  - /rancher/v2.0-v2.4/en/installation/air-gap-high-availability/install-kube
 ---
 
 import Tabs from '@theme/Tabs';

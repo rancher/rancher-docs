@@ -1,7 +1,5 @@
 ---
 title: How to Configure Out-of-tree vSphere Cloud Provider
-shortTitle: Out-of-tree Cloud Provider
-weight: 10
 ---
 
 Kubernetes is moving away from maintaining cloud providers in-tree. vSphere has an out-of-tree cloud provider that can be used by installing the vSphere cloud provider and cloud storage plugins.
@@ -13,7 +11,7 @@ This page covers how to install the Cloud Provider Interface (CPI) and Cloud Sto
 The vSphere versions supported:
 
 * 6.7u3
-* 7.0u1 or higher. 
+* 7.0u1 or higher.
 
 The Kubernetes version must be 1.19 or higher.
 
@@ -33,7 +31,7 @@ The Cloud Provider Interface (CPI) should be installed first before installing t
 1. Finish creating your cluster.
 
 ### 2. Install the CPI plugin
- 
+
 1. Click **☰ > Cluster Management**.
 1. Go to the cluster where the vSphere CPI plugin will be installed and click **Explore**.
 1. Click **Apps & Marketplace > Charts**.
@@ -53,7 +51,7 @@ The Cloud Provider Interface (CPI) should be installed first before installing t
 1. Click **vSphere CSI**.
 1. Click **Install**.
 1. Fill out the required vCenter details. On the **Features** tab, set **Enable CSI Migration** to **false**.
-3. On the **Storage** tab, fill out the details for the StorageClass. This chart creates a StorageClass with the `csi.vsphere.vmware.com` as the provisioner. 
+3. On the **Storage** tab, fill out the details for the StorageClass. This chart creates a StorageClass with the `csi.vsphere.vmware.com` as the provisioner.
 1. Click **Install**.
 
 

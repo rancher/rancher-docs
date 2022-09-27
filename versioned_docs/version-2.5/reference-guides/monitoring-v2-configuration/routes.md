@@ -1,7 +1,5 @@
 ---
 title: Route Configuration
-shortTitle: Routes
-weight: 5
 ---
 
 import Tabs from '@theme/Tabs';

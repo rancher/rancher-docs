@@ -1,11 +1,5 @@
 ---
 title: TLS Settings
-weight: 3
-aliases:
-  - /rancher/v2.5/en/installation/options/tls-settings/ 
-  - /rancher/v2.5/en/admin-settings/tls-settings
-  - /rancher/v2.5/en/installation/resources/encryption/tls-settings
-  - /rancher/v2.x/en/installation/resources/tls-settings/
 ---
 
 Changing the default TLS settings depends on the chosen installation method.

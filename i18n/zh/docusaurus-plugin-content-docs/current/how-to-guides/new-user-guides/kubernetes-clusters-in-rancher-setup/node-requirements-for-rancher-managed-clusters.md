@@ -1,6 +1,5 @@
 ---
 title: Rancher 管理集群的节点要求
-weight: 1
 ---
 
 import Tabs from '@theme/Tabs';

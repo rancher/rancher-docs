@@ -1,6 +1,5 @@
 ---
 title: 配置 PrometheusRule
-weight: 3
 ---
 
 PrometheusRule 定义了一组 Prometheus 告警和/或记录规则。

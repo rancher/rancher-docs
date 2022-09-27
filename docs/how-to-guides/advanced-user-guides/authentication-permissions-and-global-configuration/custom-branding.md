@@ -1,6 +1,5 @@
 ---
 title: Custom Branding
-weight: 90
 ---
 
 import Tabs from '@theme/Tabs';

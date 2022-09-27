@@ -1,6 +1,5 @@
 ---
 title: 卸载 Monitoring
-weight: 2
 ---
 
 1. 点击 **☰ > 集群管理**。

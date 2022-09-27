@@ -1,6 +1,5 @@
 ---
 title: "在 ARM64 上运行 Rancher（实验性）"
-weight: 3
 ---
 
 :::caution

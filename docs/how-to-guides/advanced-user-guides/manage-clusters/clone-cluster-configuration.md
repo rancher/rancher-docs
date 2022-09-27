@@ -1,6 +1,5 @@
 ---
 title: Cloning Clusters
-weight: 2035
 ---
 
 If you have a cluster in Rancher that you want to use as a template for creating similar clusters, you can use Rancher CLI to clone the cluster's configuration, edit it, and then use it to quickly launch the cloned cluster.

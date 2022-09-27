@@ -1,6 +1,5 @@
 ---
 title: 使用 kubectl 管理 HPA
-weight: 3029
 ---
 
 本文介绍如何使用 `kubectl` 管理 HPA。本文对以下操作进行了说明：

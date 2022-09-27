@@ -1,6 +1,5 @@
 ---
 title: Docker 安装命令
-weight: 1
 ---
 
 Docker 安装适用于想要测试 Rancher 的用户。

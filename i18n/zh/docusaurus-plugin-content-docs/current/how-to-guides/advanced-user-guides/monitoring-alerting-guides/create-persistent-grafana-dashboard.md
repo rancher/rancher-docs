@@ -1,6 +1,5 @@
 ---
 title: 持久化 Grafana 仪表板
-weight: 6
 ---
 
 import Tabs from '@theme/Tabs';

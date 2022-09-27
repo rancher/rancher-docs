@@ -1,8 +1,5 @@
 ---
 title: Configuring PrometheusRules
-weight: 3
-aliases:
-  - /rancher/v2.x/en/monitoring-alerting/v2.5/configuration/prometheusrules/
 ---
 
 import Tabs from '@theme/Tabs';

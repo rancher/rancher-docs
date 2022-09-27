@@ -1,6 +1,5 @@
 ---
 title: Persistent Grafana Dashboards
-weight: 6
 ---
 
 import Tabs from '@theme/Tabs';

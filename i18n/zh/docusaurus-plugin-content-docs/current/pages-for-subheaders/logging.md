@@ -1,9 +1,6 @@
 ---
 title: Rancher Logging 集成
-shortTitle: Logging
 description: Rancher 集成了主流的日志服务。了解集成日志服务的要求和优势，并在你的集群上启用 Logging。
-metaDescription: "Rancher 集成了主流的日志服务。了解集成日志服务的要求和优势，并在你的集群上启用 Logging。"
-weight: 15
 ---
 
 现在，Rancher 的日志管理由 [Banzai Cloud Logging operator](https://banzaicloud.com/docs/one-eye/logging-operator/) 提供支持，它取代了以前的内部解决方案。

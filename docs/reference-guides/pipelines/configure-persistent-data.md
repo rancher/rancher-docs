@@ -1,6 +1,5 @@
 ---
 title: Configuring Persistent Data for Pipeline Components
-weight: 600
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,7 +1,5 @@
 ---
 title: Rancher Server 的最佳实践
-shortTitle: Rancher Server
-weight: 1
 ---
 
 本指南介绍了让 Rancher 管理下游 Kubernetes 集群的 Rancher Server 运行建议。

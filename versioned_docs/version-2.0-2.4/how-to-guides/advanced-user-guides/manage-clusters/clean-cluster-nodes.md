@@ -1,7 +1,6 @@
 ---
 title: Removing Kubernetes Components from Nodes
 description: Learn about cluster cleanup when removing nodes from your Rancher-launched Kubernetes cluster. What is removed, how to do it manually
-weight: 2055
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,6 +1,5 @@
 ---
 title: Enable Monitoring
-weight: 1
 ---
 
 import Tabs from '@theme/Tabs';

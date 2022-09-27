@@ -1,8 +1,5 @@
 ---
 title: Migrating from v1.6 to v2.x
-weight: 28
-aliases:
-  - /rancher/v2.x/en/v1.6-migration/
 ---
 import YouTube from '@site/src/components/YouTube'
 

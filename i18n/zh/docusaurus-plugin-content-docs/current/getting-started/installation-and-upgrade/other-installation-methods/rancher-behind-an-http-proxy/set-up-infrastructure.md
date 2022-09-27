@@ -1,6 +1,5 @@
 ---
 title: '1. 配置基础设施'
-weight: 100
 ---
 
 在本节中，你将为 Rancher Management Server 配置底层基础设施，并使其通过 HTTP 代理访问互联网。
