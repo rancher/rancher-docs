@@ -33,7 +33,7 @@ Monitoring 应用允许你：
 
 默认情况下，监控应用将 Grafana 仪表板（由 [kube-prometheus](https://github.com/prometheus-operator/kube-prometheus) 项目策划）部署到集群上。
 
-它害部署一个 Alertmanager UI 和一个 Prometheus UI。有关这些工具的更多信息，请参见[内置仪表板](../explanations/integrations-in-rancher/monitoring-and-alerting/built-in-dashboards.md)。
+它还部署一个 Alertmanager UI 和一个 Prometheus UI。有关这些工具的更多信息，请参见[内置仪表板](../explanations/integrations-in-rancher/monitoring-and-alerting/built-in-dashboards.md)。
 ### 默认指标 Exporter
 
 默认情况下，Rancher Monitoring 会部署 Exporter（例如 [node-exporter](https://github.com/prometheus/node_exporter) 和 [kube-state-metrics](https://github.com/kubernetes/kube-state-metrics)）。
