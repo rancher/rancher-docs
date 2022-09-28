@@ -24,11 +24,6 @@ module.exports = {
     },
   },
   themeConfig: {
-    docs: {
-      sidebar: {
-        autoCollapseCategories: true,
-      },
-    },
     algolia: {
       // The application ID provided by Algolia
       appId: '30NEY6C9UY',
@@ -83,7 +78,7 @@ module.exports = {
           href: 'https://github.com/rancher/rancher-docs',
           label: 'GitHub',
           position: 'right',
-          className: 'navbar__github',
+          className: 'navbar__github btn btn-secondary icon-github',
         },
         {
           type: 'docsVersionDropdown',
