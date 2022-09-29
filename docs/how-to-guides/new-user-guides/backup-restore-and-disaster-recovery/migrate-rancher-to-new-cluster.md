@@ -37,7 +37,8 @@ Install the [rancher-backup chart](https://github.com/rancher/backup-restore-ope
      helm search repo --versions rancher-charts/rancher-backup
      CHART_VERSION=<2.x.x>
      ```
-  2. Install the charts:
+
+  1. Install the charts:
      ```bash
      helm install rancher-backup-crd rancher-charts/rancher-backup-crd -n cattle-resources-system --create-namespace --version $CHART_VERSION
      helm install rancher-backup rancher-charts/rancher-backup -n cattle-resources-system --version $CHART_VERSION
