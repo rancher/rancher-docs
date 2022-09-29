@@ -101,6 +101,7 @@ Kubernetes v1.22, available as an experimental feature of v2.6.3, does not suppo
      name: restore-migration
    spec:
      backupFilename: backup-b0450532-cee1-4aa1-a881-f5f48a007b1c-2020-09-15T07-27-09Z.tar.gz
+     // highlight-next-line
      prune: false
      encryptionConfigSecretName: encryptionconfig
      storageLocation:
