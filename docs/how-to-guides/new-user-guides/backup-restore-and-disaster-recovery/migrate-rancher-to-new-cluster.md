@@ -26,6 +26,7 @@ Rancher can be installed on any Kubernetes cluster, including hosted Kubernetes 
 Install the [rancher-backup chart](https://github.com/rancher/backup-restore-operator/tags), using a version in the 2.x.x major version range:
 
   1. Add the helm repository:
+
      ```bash
      helm repo add rancher-charts https://charts.rancher.io
      helm repo update
