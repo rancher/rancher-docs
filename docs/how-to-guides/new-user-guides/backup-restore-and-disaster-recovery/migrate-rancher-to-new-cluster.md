@@ -136,6 +136,7 @@ Kubernetes v1.22, available as an experimental feature of v2.6.3, does not suppo
       ```bash
       kubectl get restore
       ```
+
    1. Watch the restoration logs:
       ```bash
       kubectl logs -n cattle-resources-system --tail 100 -f -l app.kubernetes.io/instance=rancher-backup
