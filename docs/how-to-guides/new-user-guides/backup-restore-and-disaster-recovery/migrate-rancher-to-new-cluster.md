@@ -124,6 +124,7 @@ Kubernetes v1.22, available as an experimental feature of v2.6.3, does not suppo
         --from-file=./encryption-provider-config.yaml \
         -n cattle-resources-system
       ```
+
 1. Apply the manifest, and monitor the Restore status:
    1. Apply the `Restore` object resource:
       ```bash
