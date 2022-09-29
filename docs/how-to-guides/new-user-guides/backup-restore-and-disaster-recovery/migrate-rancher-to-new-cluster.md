@@ -85,7 +85,7 @@ Kubernetes v1.22, available as an experimental feature of v2.6.3, does not suppo
 
    :::note
 
-   Add your access key and secret key as values for `accessKey` and `secretKey` in the command below.
+   Add your access key and secret key as values for `accessKey` and `secretKey` in the command above.
 
    :::
 
