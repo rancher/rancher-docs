@@ -131,6 +131,7 @@ Kubernetes v1.22, available as an experimental feature of v2.6.3, does not suppo
       ```bash
       kubectl apply -f restore-migration.yaml
       ```
+
    1. Watch the Restore status:
       ```bash
       kubectl get restore
