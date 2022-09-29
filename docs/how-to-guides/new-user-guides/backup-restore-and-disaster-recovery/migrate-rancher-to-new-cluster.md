@@ -73,7 +73,7 @@ Kubernetes v1.22, available as an experimental feature of v2.6.3, does not suppo
 
 :::
 
-1. When using S3 object storage that as the backup source for restore that requires credentials, create a `Secret` object in this cluster to add the S3 credentials. The secret data must have two keys - `accessKey`, and `secretKey`, that contain the S3 credentials.
+1. When using S3 object storage as the backup source for a restore that requires credentials, create a `Secret` object in this cluster to add the S3 credentials. The secret data must have two keys - `accessKey`, and `secretKey`, that contain the S3 credentials.
 
    The secret can be created in any namespace, this example uses the default namespace.
 
