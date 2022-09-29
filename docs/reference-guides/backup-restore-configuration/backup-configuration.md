@@ -127,7 +127,8 @@ data:
 
 :::note
 
-To avoid encoding issues, the credentialSecret can be created with the below command, updating the values for `accessKey` and `secretKey`.
+To avoid encoding issues, the `credentialSecret` can be created with the below command, updating the values for `accessKey` and `secretKey`.
+
 ```bash
 kubectl create secret generic s3-creds \
   --from-literal=accessKey=<access key> \
