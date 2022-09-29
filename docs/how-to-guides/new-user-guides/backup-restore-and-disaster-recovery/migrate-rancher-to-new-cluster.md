@@ -114,7 +114,7 @@ Kubernetes v1.22, available as an experimental feature of v2.6.3, does not suppo
          endpoint: s3.us-west-2.amazonaws.com
    ```
 
-   :::note Important:
+   :::note Important
 
    The field `encryptionConfigSecretName` must be set only if your backup was created with encryption enabled. Provide the name of the `Secret` object containing the encryption config file. If you only have the encryption config file, but don't have a secret created with it in this cluster, use the following steps to create the secret:
 
