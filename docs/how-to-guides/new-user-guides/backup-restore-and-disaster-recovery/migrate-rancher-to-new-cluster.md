@@ -31,6 +31,7 @@ Install the [rancher-backup chart](https://github.com/rancher/backup-restore-ope
      helm repo add rancher-charts https://charts.rancher.io
      helm repo update
      ```
+
   1. Select and set `CHART_VERSION` variable with a 2.x.x rancher-backup release version:
      ```bash
      helm search repo --versions rancher-charts/rancher-backup
