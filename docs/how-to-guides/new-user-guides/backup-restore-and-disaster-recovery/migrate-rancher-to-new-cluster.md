@@ -103,6 +103,7 @@ Kubernetes v1.22, available as an experimental feature of v2.6.3, does not suppo
      backupFilename: backup-b0450532-cee1-4aa1-a881-f5f48a007b1c-2020-09-15T07-27-09Z.tar.gz
      // highlight-next-line
      prune: false
+     // highlight-next-line
      encryptionConfigSecretName: encryptionconfig
      storageLocation:
        s3:
@@ -116,16 +117,20 @@ Kubernetes v1.22, available as an experimental feature of v2.6.3, does not suppo
 
    :::note Important
 
-   The field `encryptionConfigSecretName` must be set only if your backup was created with encryption enabled. Provide the name of the `Secret` object containing the encryption config file. If you only have the encryption config file, but don't have a secret created with it in this cluster, use the following steps to create the secret:
+   The field `encryptionConfigSecretName` should be used only if your backup was created with encryption enabled.
 
-   :::
+   If this applies, provide the name of the `Secret` object containing the encryption config file. If you only have the encryption config file, but don't have the secret created in this cluster, use the following steps to create the secret:
 
-   1. The [encryption configuration file](reference-guides/backup-restore-configuration/backup-configuration.md#encryption) must be named `encryption-provider-config.yaml`, and the `--from-file` flag must be used to create this secret. So save your `EncryptionConfiguration` in a file called `encryption-provider-config.yaml` and run this command:
+   1. Create an [encryption configuration file](reference-guides/backup-restore-configuration/backup-configuration.md#encryption)
+   1. The command below uses a file named `encryption-provider-config.yaml`, with the `--from-file` flag. Run the below once the `EncryptionConfiguration` is saved in a file called `encryption-provider-config.yaml`:
+
       ```bash
       kubectl create secret generic encryptionconfig \
         --from-file=./encryption-provider-config.yaml \
         -n cattle-resources-system
       ```
+
+   :::
 
 1. Apply the manifest, and monitor the Restore status:
    1. Apply the `Restore` object resource:
@@ -144,7 +149,7 @@ Kubernetes v1.22, available as an experimental feature of v2.6.3, does not suppo
       kubectl logs -n cattle-resources-system --tail 100 -f -l app.kubernetes.io/instance=rancher-backup
       ```
 
-   1. Once the Restore resource has the status `Completed`, you can continue the Rancher installation.
+   1. Once the Restore resource has the status `Completed`, you can continue the cert-manager and Rancher installation.
 
 ### 3. Install cert-manager
 
@@ -169,7 +174,7 @@ If the original Rancher environment is running, you can collect the current valu
 helm get values rancher -n cattle-system -o yaml > rancher-values.yaml
 ```
 
-These values can be reused using the `rancher-values.yaml` file:
+These values can be reused using the `rancher-values.yaml` file. Be sure to switch the kubeconfig to the new Rancher environment.
 
 ```bash
 helm install rancher rancher-latest/rancher -n cattle-system -f rancher-values.yaml --version x.y.z
