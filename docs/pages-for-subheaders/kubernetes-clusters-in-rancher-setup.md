@@ -37,7 +37,7 @@ These nodes can be dynamically provisioned through Rancher's UI, which calls [Do
 
 If you already have a node that you want to add to an RKE cluster, you can add it to the cluster by running a Rancher agent container on it.
 
-For more information, refer to the section on [RKE clusters.](launch-kubernetes-with-rancher.md)
+For more information, refer to the section on [RKE clusters.](../pages-for-subheaders/launch-kubernetes-with-rancher.md)
 
 ### Launching Kubernetes and Provisioning Nodes in an Infrastructure Provider
 

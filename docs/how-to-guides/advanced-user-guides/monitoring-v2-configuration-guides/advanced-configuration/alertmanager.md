@@ -8,7 +8,7 @@ When Receivers and Routes are updated, the monitoring application will automatic
 
 :::note
 
-This section assumes familiarity with how monitoring components work together. For more information about Alertmanager, see [this section.](../../../../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#3-how-alertmanager-works)
+This section assumes familiarity with how monitoring components work together. For more information about Alertmanager, see [this section.](../../../../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#3-how-alertmanager-works)
 
 :::
 

@@ -22,7 +22,7 @@ From a system that has access to the internet, fetch the latest Helm chart and c
 
 1. If you haven't already, install `helm` locally on a workstation that has internet access. Note: Refer to the [Helm version requirements](../../resources/helm-version-requirements.md) to choose a version of Helm to install Rancher.
 
-2. Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher](../../../../reference-guides/installation-references/helm-chart-options.md#helm-chart-repositories).
+2. Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher](../../installation-references/helm-chart-options.md#helm-chart-repositories).
     - Latest: Recommended for trying out the newest features
         ```
         helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
@@ -55,7 +55,7 @@ When Rancher is installed on an air gapped Kubernetes cluster, there are two rec
 
 :::note
 
-If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](../../../../reference-guides/installation-references/helm-chart-options.md#external-tls-termination).
+If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](../../installation-references/helm-chart-options.md#external-tls-termination).
 
 :::
 
@@ -258,6 +258,6 @@ If you don't intend to send telemetry data, opt out [telemetry](../../../../faq/
 
 These resources could be helpful when installing Rancher:
 
-- [Rancher Helm chart options](../../../../reference-guides/installation-references/helm-chart-options.md)
+- [Rancher Helm chart options](../../installation-references/helm-chart-options.md)
 - [Adding TLS secrets](../../resources/add-tls-secrets.md)
 - [Troubleshooting Rancher Kubernetes Installations](../../install-upgrade-on-a-kubernetes-cluster/troubleshooting.md)

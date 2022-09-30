@@ -14,7 +14,7 @@ In this section,
 - **K3s (Lightweight Kubernetes)** is also a fully compliant Kubernetes distribution. It is newer than RKE, easier to use, and more lightweight, with a binary size of less than 100 MB.
 - **RKE2** is a fully conformant Kubernetes distribution that focuses on security and compliance within the U.S. Federal Government sector.
 
-Note the `restrictedAdmin` Helm chart option available for **the Rancher Server**. When this option is set to true, the initial Rancher user has restricted access to the local Kubernetes cluster to prevent privilege escalation. For more information, see the section about the [restricted-admin role.](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#restricted-admin)
+Note the `restrictedAdmin` Helm chart option available for **the Rancher Server**. When this option is set to true, the initial Rancher user has restricted access to the local Kubernetes cluster to prevent privilege escalation. For more information, see the section about the [restricted-admin role.](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#restricted-admin)
 
 # Overview of Installation Options
 
@@ -73,11 +73,11 @@ For more architecture recommendations, refer to [this page.](../reference-guides
 
 ### More Options for Installations on a Kubernetes Cluster
 
-Refer to the [Helm chart options](../reference-guides/installation-references/helm-chart-options.md) for details on installing Rancher on a Kubernetes cluster with other configurations, including:
+Refer to the [Helm chart options](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md) for details on installing Rancher on a Kubernetes cluster with other configurations, including:
 
-- With [API auditing to record all transactions](../reference-guides/installation-references/helm-chart-options.md#api-audit-log)
-- With [TLS termination on a load balancer](../reference-guides/installation-references/helm-chart-options.md#external-tls-termination)
-- With a [custom Ingress](../reference-guides/installation-references/helm-chart-options.md#customizing-your-ingress)
+- With [API auditing to record all transactions](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#api-audit-log)
+- With [TLS termination on a load balancer](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#external-tls-termination)
+- With a [custom Ingress](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#customizing-your-ingress)
 
 In the Rancher installation instructions, we recommend using K3s or RKE to set up a Kubernetes cluster before installing Rancher on the cluster. Both K3s and RKE have many configuration options for customizing the Kubernetes cluster to suit your specific environment. For the full list of their capabilities, refer to their documentation:
 
@@ -89,5 +89,5 @@ In the Rancher installation instructions, we recommend using K3s or RKE to set u
 Refer to the [docs about options for Docker installs](rancher-on-a-single-node-with-docker.md) for details about other configurations including:
 
 - With [API auditing to record all transactions](../reference-guides/single-node-rancher-in-docker/advanced-options.md#api-audit-log)
-- With an [external load balancer](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/configure-layer-7-nginx-load-balancer.md)
+- With an [external load balancer](../how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer.md)
 - With a [persistent data store](../reference-guides/single-node-rancher-in-docker/advanced-options.md#persistent-data)

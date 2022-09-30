@@ -10,7 +10,7 @@ The Istio overview page provides a link to the Kiali dashboard. From the Kiali d
 
 :::note Prerequisites:
 
-To enable traffic to show up in the graph, ensure you have prometheus installed in the cluster. Rancher-istio installs Kiali configured by default to work with the rancher-monitoring chart. You can use rancher-monitoring or install your own monitoring solution. Optional: you can change configuration on how data scraping occurs by setting the [Selectors & Scrape Configs](../../../explanations/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md) options.
+To enable traffic to show up in the graph, ensure you have prometheus installed in the cluster. Rancher-istio installs Kiali configured by default to work with the rancher-monitoring chart. You can use rancher-monitoring or install your own monitoring solution. Optional: you can change configuration on how data scraping occurs by setting the [Selectors & Scrape Configs](../../../integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md) options.
 
 :::
 

@@ -12,11 +12,11 @@ Rancher offers an integration with the AWS Marketplace which allows users to pur
 - Rancher must be deployed with additional metrics enabled.
 - Rancher must be installed on an EKS cluster.
 - You must purchase at least one entitlement to Rancher support through AWS Marketplace.
-- You may need additional setup to support proxy/airgap use cases. See the [prerequisites](../explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements.md) for more information.
+- You may need additional setup to support proxy/airgap use cases. See the [prerequisites](../integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements.md) for more information.
 
 # How to Use
-1. Complete the [prerequisite steps](../explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements.md).
-2. [Install the CSP Adapter](../explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter.md).
+1. Complete the [prerequisite steps](../integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements.md).
+2. [Install the CSP Adapter](../integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter.md).
 
 # FAQ
 

@@ -214,7 +214,7 @@ The required ports are automatically opened by Rancher during creation of cluste
 <details>
   <summary>Click to expand</summary>
 
-The following table depicts the port requirements for [Rancher Launched Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) with [Custom Nodes](../../../pages-for-subheaders/use-existing-nodes.md).
+The following table depicts the port requirements for [Rancher Launched Kubernetes](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher.md) with [Custom Nodes](../../../pages-for-subheaders/use-existing-nodes.md).
 
 <PortsCustomNodes/>
 
@@ -275,7 +275,7 @@ In these cases, you have to explicitly allow this traffic in your host firewall,
 
 ### Rancher AWS EC2 Security Group
 
-When using the [AWS EC2 node driver](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md) to provision cluster nodes in Rancher, you can choose to let Rancher create a security group called `rancher-nodes`. The following rules are automatically added to this security group.
+When using the [AWS EC2 node driver](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.mdcreate-an-amazon-ec2-cluster.md) to provision cluster nodes in Rancher, you can choose to let Rancher create a security group called `rancher-nodes`. The following rules are automatically added to this security group.
 
 |       Type      | Protocol |  Port Range | Source/Destination     | Rule Type |
 |-----------------|:--------:|:-----------:|------------------------|:---------:|

@@ -19,9 +19,9 @@ See [Amazon Documentation: Adding Permissions to a User (Console)](https://docs.
 
 See our three example JSON policies:
 
-- [Example IAM Policy](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy)
-- [Example IAM Policy with PassRole](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy-with-passrole) (needed if you want to use [Kubernetes Cloud Provider](../../../../pages-for-subheaders/set-up-cloud-providers.md) or want to pass an IAM Profile to an instance)
-- [Example IAM Policy to allow encrypted EBS volumes](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy-to-allow-encrypted-ebs-volumes) policy to an user.
+- [Example IAM Policy](../../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy)
+- [Example IAM Policy with PassRole](../../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy-with-passrole) (needed if you want to use [Kubernetes Cloud Provider](../../../../pages-for-subheaders/set-up-cloud-providers.md) or want to pass an IAM Profile to an instance)
+- [Example IAM Policy to allow encrypted EBS volumes](../../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy-to-allow-encrypted-ebs-volumes) policy to an user.
 
 ### Authenticate & Configure Nodes
 

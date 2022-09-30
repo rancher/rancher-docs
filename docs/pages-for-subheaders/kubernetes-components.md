@@ -2,7 +2,7 @@
 title: Kubernetes Components
 ---
 
-The commands and steps listed in this section apply to the core Kubernetes components on [Rancher Launched Kubernetes](launch-kubernetes-with-rancher.md) clusters.
+The commands and steps listed in this section apply to the core Kubernetes components on [Rancher Launched Kubernetes](../pages-for-subheaders/launch-kubernetes-with-rancher.md) clusters.
 
 This section includes troubleshooting tips in the following categories:
 

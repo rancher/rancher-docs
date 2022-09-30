@@ -9,7 +9,7 @@ In this installation scenario, you'll install Docker on a single Linux host, and
 
 :::note Want to use an external load balancer?
 
-See [Docker Install with an External Load Balancer](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/configure-layer-7-nginx-load-balancer.md) instead.
+See [Docker Install with an External Load Balancer](../how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer.md) instead.
 
 :::
 

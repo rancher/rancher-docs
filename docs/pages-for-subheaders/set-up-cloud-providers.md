@@ -19,19 +19,19 @@ The following cloud providers can be enabled:
 
 ### Setting up the Amazon Cloud Provider
 
-For details on enabling the Amazon cloud provider, refer to [this page.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/amazon.md)
+For details on enabling the Amazon cloud provider, refer to [this page.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon.md)
 
 ### Setting up the Azure Cloud Provider
 
-For details on enabling the Azure cloud provider, refer to [this page.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/azure.md)
+For details on enabling the Azure cloud provider, refer to [this page.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/azure.md)
 
 ### Setting up the GCE Cloud Provider
 
-For details on enabling the Google Compute Engine cloud provider, refer to [this page.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/google-compute-engine.md)
+For details on enabling the Google Compute Engine cloud provider, refer to [this page.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/google-compute-engine.md)
 
 ### Setting up the vSphere Cloud Provider
 
-For details on enabling the vSphere cloud provider, refer to [this page.](vsphere-cloud-provider.md)
+For details on enabling the vSphere cloud provider, refer to [in-tree vSphere config](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere.md) and [out-of-tree vSphere config](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere.md).
 
 ### Setting up a Custom Cloud Provider
 

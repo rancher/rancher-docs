@@ -15,7 +15,7 @@ The following instructions will guide you through upgrading a Rancher server tha
 
 ## Prerequisites
 
-- **Review the [known upgrade issues](../../install-upgrade-on-a-kubernetes-cluster/upgrades.md#known-upgrade-issues)** section in the Rancher documentation for the most noteworthy issues to consider when upgrading Rancher. A more complete list of known issues for each Rancher version can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums](https://forums.rancher.com/c/announcements/12). Note that upgrades to or from any chart in the [rancher-alpha repository](../../../../reference-guides/installation-references/helm-chart-options.md#helm-chart-repositories/) aren’t supported.
+- **Review the [known upgrade issues](../../install-upgrade-on-a-kubernetes-cluster/upgrades.md#known-upgrade-issues)** section in the Rancher documentation for the most noteworthy issues to consider when upgrading Rancher. A more complete list of known issues for each Rancher version can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums](https://forums.rancher.com/c/announcements/12). Note that upgrades to or from any chart in the [rancher-alpha repository](../../../../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#helm-chart-repositories/) aren’t supported.
 - **For [air gap installs only,](../../../../pages-for-subheaders/air-gapped-helm-cli-install.md) collect and populate images for the new Rancher server version**. Follow the guide to [populate your private registry](../air-gapped-helm-cli-install/publish-images.md) with the images for the Rancher version that you want to upgrade to.
 
 ## Placeholder Review
@@ -99,7 +99,7 @@ Pull the image of the Rancher version that you want to upgrade to.
 
 Placeholder | Description
 ------------|-------------
-`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../../../reference-guides/installation-references/helm-chart-options.md) that you want to upgrade to.
+`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../installation-references/helm-chart-options.md) that you want to upgrade to.
 
 ```
 docker pull rancher/rancher:<RANCHER_VERSION_TAG>
@@ -140,7 +140,7 @@ If you have selected to use the Rancher generated self-signed certificate, you a
 
 Placeholder | Description
 ------------|-------------
-`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../../../reference-guides/installation-references/helm-chart-options.md) that you want to upgrade to.
+`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../installation-references/helm-chart-options.md) that you want to upgrade to.
 
 ```
 docker run -d --volumes-from rancher-data \
@@ -173,7 +173,7 @@ Placeholder | Description
 `<FULL_CHAIN.pem>` | The path to your full certificate chain.
 `<PRIVATE_KEY.pem>` | The path to the private key for your certificate.
 `<CA_CERTS.pem>` | The path to the certificate authority's certificate.
-`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../../../reference-guides/installation-references/helm-chart-options.md) that you want to upgrade to.
+`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../installation-references/helm-chart-options.md) that you want to upgrade to.
 
 ```
 docker run -d --volumes-from rancher-data \
@@ -208,7 +208,7 @@ Placeholder | Description
 `<CERT_DIRECTORY>` | The path to the directory containing your certificate files.
 `<FULL_CHAIN.pem>` | The path to your full certificate chain.
 `<PRIVATE_KEY.pem>` | The path to the private key for your certificate.
-`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../../../reference-guides/installation-references/helm-chart-options.md) that you want to upgrade to.
+`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../installation-references/helm-chart-options.md) that you want to upgrade to.
 
 ```
 docker run -d --volumes-from rancher-data \
@@ -246,7 +246,7 @@ If you have selected to use [Let's Encrypt](https://letsencrypt.org/) certificat
 
 Placeholder | Description
 ------------|-------------
-`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../../../reference-guides/installation-references/helm-chart-options.md) that you want to upgrade to.
+`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../installation-references/helm-chart-options.md) that you want to upgrade to.
 `<YOUR.DNS.NAME>` | The domain address that you had originally started with
 
 ```
@@ -279,7 +279,7 @@ If you have selected to use the Rancher generated self-signed certificate, you a
 Placeholder | Description
 ------------|-------------
 `<REGISTRY.YOURDOMAIN.COM:PORT>` |  Your private registry URL and port.
-`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../../../reference-guides/installation-references/helm-chart-options.md) that you want to to upgrade to.
+`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../installation-references/helm-chart-options.md) that you want to to upgrade to.
 
 ```
   docker run -d --volumes-from rancher-data \
@@ -314,7 +314,7 @@ Placeholder | Description
 `<PRIVATE_KEY.pem>` | The path to the private key for your certificate.
 `<CA_CERTS.pem>` | The path to the certificate authority's certificate.
 `<REGISTRY.YOURDOMAIN.COM:PORT>` | Your private registry URL and port.
-`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../../../reference-guides/installation-references/helm-chart-options.md) that you want to upgrade to.
+`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../installation-references/helm-chart-options.md) that you want to upgrade to.
 
 ```
 docker run -d --restart=unless-stopped \
@@ -349,7 +349,7 @@ Placeholder | Description
 `<FULL_CHAIN.pem>` | The path to your full certificate chain.
 `<PRIVATE_KEY.pem>` | The path to the private key for your certificate.
 `<REGISTRY.YOURDOMAIN.COM:PORT>` | Your private registry URL and port.
-`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../../../reference-guides/installation-references/helm-chart-options.md) that you want to upgrade to.
+`<RANCHER_VERSION_TAG>` | The release tag of the [Rancher version](../../installation-references/helm-chart-options.md) that you want to upgrade to.
 
 :::note
 

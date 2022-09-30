@@ -10,7 +10,7 @@ If you use Istio for traffic management, you will need to allow external traffic
 
 This guide assumes you have already [installed Rancher,](installation-and-upgrade.md) and you have already [provisioned a separate Kubernetes cluster](kubernetes-clusters-in-rancher-setup.md) on which you will install Istio.
 
-The nodes in your cluster must meet the [CPU and memory requirements.](../explanations/integrations-in-rancher/istio/cpu-and-memory-allocations.md)
+The nodes in your cluster must meet the [CPU and memory requirements.](../integrations-in-rancher/istio/cpu-and-memory-allocations.md)
 
 The workloads and services that you want to be controlled by Istio must meet [Istio's requirements.](https://istio.io/docs/setup/additional-setup/requirements/)
 

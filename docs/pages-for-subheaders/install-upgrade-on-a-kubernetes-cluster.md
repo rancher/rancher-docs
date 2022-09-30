@@ -75,7 +75,7 @@ To set up Rancher,
 
 ### 1. Add the Helm Chart Repository
 
-Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher](../reference-guides/installation-references/helm-chart-options.md#helm-chart-repositories).
+Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#helm-chart-repositories).
 
 - Latest: Recommended for trying out the newest features
     ```
@@ -105,7 +105,7 @@ The Rancher management server is designed to be secure by default and requires S
 
 :::note
 
-If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](../reference-guides/installation-references/helm-chart-options.md#external-tls-termination).
+If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#external-tls-termination).
 
 :::
 
@@ -130,7 +130,7 @@ New in v2.6.4, cert-manager versions 1.6.2 and 1.7.1 are compatible. We recommen
 
 :::
 
-> You should skip this step if you are bringing your own certificate files (option `ingress.tls.source=secret`), or if you use [TLS termination on an external load balancer](../reference-guides/installation-references/helm-chart-options.md#external-tls-termination).
+> You should skip this step if you are bringing your own certificate files (option `ingress.tls.source=secret`), or if you use [TLS termination on an external load balancer](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#external-tls-termination).
 
 This step is only required to use certificates issued by Rancher's generated CA (`ingress.tls.source=rancher`) or to request Let's Encrypt issued certificates (`ingress.tls.source=letsEncrypt`).
 
@@ -311,11 +311,11 @@ Now that Rancher is deployed, see [Adding TLS Secrets](../getting-started/instal
 
 The Rancher chart configuration has many options for customizing the installation to suit your specific environment. Here are some common advanced scenarios.
 
-- [HTTP Proxy](../reference-guides/installation-references/helm-chart-options.md#http-proxy)
-- [Private container image Registry](../reference-guides/installation-references/helm-chart-options.md#private-registry-and-air-gap-installs)
-- [TLS Termination on an External Load Balancer](../reference-guides/installation-references/helm-chart-options.md#external-tls-termination)
+- [HTTP Proxy](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#http-proxy)
+- [Private container image Registry](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#private-registry-and-air-gap-installs)
+- [TLS Termination on an External Load Balancer](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#external-tls-termination)
 
-See the [Chart Options](../reference-guides/installation-references/helm-chart-options.md) for the full list of options.
+See the [Chart Options](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md) for the full list of options.
 
 
 ### 6. Verify that the Rancher Server is Successfully Deployed
