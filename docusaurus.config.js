@@ -69,13 +69,6 @@ module.exports = {
       },
       items: [
         {
-          type: 'doc',
-          docId: 'rancher-manager',
-          position: 'right',
-          label: 'Docs',
-          className: 'navbar__docs',
-        },
-        {
             type: "localeDropdown",
             position: "right",
         },
