@@ -49,7 +49,7 @@ For information on enabling experimental features, refer to [this page.](../../p
 | `rancherImageTag`              | same as chart version                                 | `string` - rancher/rancher image tag                                                                                                              |
 | `replicas`                     | 3                                                     | `int` - Number of replicas of Rancher pods                                                                                                        |
 | `resources`                    | {}                                                    | `map` - rancher pod resource requests & limits                                                                                                    |
-| `systemDefaultRegistry`        | ""                                                    | `string` - private registry to be used for all system Docker images, e.g., http://registry.example.com/                   |
+| `systemDefaultRegistry`        | ""                                                    | `string` - private registry to be used for all system Docker images, e.g., registry.example.com                       |
 | `tls`                          | "ingress"                                             | `string` - See [External TLS Termination](#external-tls-termination) for details. - "ingress, external"                                           |
 | `useBundledSystemChart`        | `false`                                               | `bool` - select to use the system-charts packaged with Rancher server. This option is used for air gapped installations.  |
 

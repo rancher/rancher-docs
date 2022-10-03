@@ -51,7 +51,7 @@ title: Rancher Helm Chart 选项
 | `replicas` | 3 | `int` - Rancher Server 副本数。如果设为 -1，会根据集群中的可用节点数自动选择 1，2或3。 |
 | `resources` | {} | `map` - Rancher Pod 资源请求和限制 |
 | `restrictedAdmin` | `false` | `bool` - 如果值为 true，初始的 Rancher 用户访问本地 Kubernetes 集群会受到限制，以避免权限升级。详情请参见 [restricted-admin 角色](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#受限管理员)。 |
-| `systemDefaultRegistry` | "" | `string` - 用于所有系统容器镜像的私有仓库，例如 http://registry.example.com/ |
+| `systemDefaultRegistry` | "" | `string` - 用于所有系统容器镜像的私有仓库，例如 registry.example.com |
 | `tls` | "ingress" | `string` - 详情请参见[外部 TLS 终止](#外部-tls-终止)。- "ingress, external" |
 | `useBundledSystemChart` | `false` | `bool` - 选择 Rancher Server 打包的 system-charts。此参数用于离线环境安装。 |
 
