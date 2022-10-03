@@ -21,26 +21,27 @@ Select the first option to perform a one-time backup, or select the second optio
 
 ## Encryption
 
-The rancher-backup gathers resources by making calls to the kube-apiserver. Objects returned by apiserver are decrypted, so even if [encryption At rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/) is enabled, even the encrypted objects gathered by the backup will be in plaintext.
+The rancher-backup gathers resources by making calls to the kube-apiserver. Objects returned by apiserver are decrypted, so even if [encryption at rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/) is enabled, even the encrypted objects gathered by the backup will be in plaintext.
 
-To avoid storing them in plaintext, you can use the same encryptionConfig file that was used for at-rest encryption, to encrypt certain resources in your backup.
+To avoid storing them in plaintext, you can use the same `EncryptionConfiguration` file that was used for at rest encryption, to encrypt certain resources in your backup.
 
 :::note Important:
 
-You must save the encryptionConfig file, because it won’t be saved by the rancher-backup operator.
-The same encryptionFile needs to be used when performing a restore.
+When encrypting objects in the backup you must save the `EncryptionConfiguration` file for future use, because it won’t be saved by the rancher-backup operator.
+
+For example, when [migrating Rancher to a new cluster](new-user-guides/backup-restore-and-disaster-recovery) the file is used to re-create the secret in the new cluster.
 
 :::
 
-The operator consumes this encryptionConfig as a Kubernetes Secret, and the Secret must be in the operator’s namespace. Rancher installs the `rancher-backup` operator in the `cattle-resources-system` namespace, so create this encryptionConfig secret in that namespace.
+The operator consumes the `EncryptionConfiguration` as a Kubernetes Secret in the `cattle-resources-system` namespace under the key named  `encryption-provider-config.yaml` in the secret data.
 
 For the `EncryptionConfiguration`, you can use the [sample file provided in the Kubernetes documentation.](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/#understanding-the-encryption-at-rest-configuration)
 
-To create the Secret, the encryption configuration file must be named `encryption-provider-config.yaml`, and the `--from-file` flag must be used to create this secret.
+To ensure the correct key is used in the secret, the encryption configuration file must be named `encryption-provider-config.yaml`. The below command uses the `--from-file` flag to create the secret with the correct key name.
 
 Save the `EncryptionConfiguration` in a file called `encryption-provider-config.yaml` and run this command:
 
-```
+```bash
 kubectl create secret generic encryptionconfig \
   --from-file=./encryption-provider-config.yaml \
   -n cattle-resources-system
@@ -48,7 +49,7 @@ kubectl create secret generic encryptionconfig \
 
 This will ensure that the secret contains a key named `encryption-provider-config.yaml`, and the operator will use this key to get the encryption configuration.
 
-The `Encryption Config Secret` dropdown will filter out and list only those Secrets that have this exact key
+The `Encryption Config Secret` dropdown will filter out and list only those Secrets that have this exact key.
 
 ![](/img/backup_restore/backup/encryption.png)
 
@@ -119,9 +120,21 @@ metadata:
   name: creds
 type: Opaque
 data:
-  accessKey: <Enter your base64-encoded access key>
-  secretKey: <Enter your base64-encoded secret key>
+  accessKey: <base64-encoded access key>
+  secretKey: <base64-encoded secret key>
 ```
+
+:::note
+
+To avoid encoding issues, the `credentialSecret` can be created with the below command, updating the values for `accessKey` and `secretKey`.
+
+```bash
+kubectl create secret generic s3-creds \
+  --from-literal=accessKey=<access key> \
+  --from-literal=secretKey=<secret key>
+```
+
+:::
 
 ### IAM Permissions for EC2 Nodes to Access S3
 
