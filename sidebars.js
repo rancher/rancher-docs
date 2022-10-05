@@ -1167,6 +1167,19 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Rancher v2.7 Hardening Guides',
+              link: {
+                type: 'doc',
+                id: "pages-for-subheaders/rancher-v2.7-hardening-guides",
+              },
+              items: [
+                "reference-guides/rancher-security/rancher-v2.7-hardening-guides/k3s-hardening-guide-with-cis-benchmark",
+                "reference-guides/rancher-security/rancher-v2.7-hardening-guides/k3s-self-assessment-guide-with-cis-v1.20-benchmark",
+                "reference-guides/rancher-security/rancher-v2.7-hardening-guides/k3s-self-assessment-guide-with-cis-v1.23-benchmark",
+              ],
+            },
+            {
+              type: 'category',
               label: 'SELinux RPM',
               link: {
                 type: 'doc',

@@ -1,5 +1,5 @@
 ---
-title: Self-Assessment and Hardening Guides for Rancher v2.6
+title: Self-Assessment and Hardening Guides for Rancher v2.7
 ---
 
 Rancher provides specific security hardening guides for each supported Rancher's Kubernetes distributions.
@@ -17,7 +17,7 @@ To harden a Kubernetes cluster outside of Rancher's distributions, refer to your
 
 ## Hardening Guides and Benchmark Versions
 
-These guides have been tested along with the Rancher v2.6 release. Each self-assessment guide is accompanied with a hardening guide and tested on a specific Kubernetes version and CIS benchmark version. If a CIS benchmark has not been validated for your Kubernetes version, you can choose to use the existing guides until a newer version is added.
+These guides have been tested along with the Rancher v2.7 release. Each self-assessment guide is accompanied with a hardening guide and tested on a specific Kubernetes version and CIS benchmark version. If a CIS benchmark has not been validated for your Kubernetes version, you can choose to use the existing guides until a newer version is added.
 
 ### RKE Guides
 
@@ -42,6 +42,7 @@ These guides have been tested along with the Rancher v2.6 release. Each self-ass
 
 | Type | Kubernetes Version | CIS Benchmark Version | Self Assessment Guide | Hardening Guides |
 | ---- | ------------------ | --------------------- | --------------------- | ---------------- |
+| Rancher provisioned K3s cluster | Kubernetes v1.21 up to v1.24 | CIS v1.20 and v1.23 | [CIS v1.20](../reference-guides/rancher-security/rancher-v2.7-hardening-guides/k3s-self-assessment-guide-with-cis-v1.20-benchmark.md) and [CIS v1.23](../reference-guides/rancher-security/rancher-v2.7-hardening-guides/k3s-self-assessment-guide-with-cis-v1.23-benchmark.md) | [Link](../reference-guides/rancher-security/rancher-v2.7-hardening-guides/k3s-hardening-guide-with-cis-benchmark.md) |
 | Standalone K3s | Kubernetes v1.21 and v1.22 | CIS v1.6 | [Link](https://docs.k3s.io/security/self-assessment) | [Link](https://docs.k3s.io/security/hardening-guide) |
 
 ## Rancher with SELinux
