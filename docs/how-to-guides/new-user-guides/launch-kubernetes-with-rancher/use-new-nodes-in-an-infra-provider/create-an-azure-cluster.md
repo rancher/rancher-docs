@@ -74,7 +74,7 @@ Creating a [node template](../../../../pages-for-subheaders/use-new-nodes-in-an-
 1. Click **RKE1 Configuration > Node Templates**.
 1. Click **Add Template**.
 1. Click **Azure**.
-1. Fill out a node template for Azure. For help filling out the form, refer to [Azure Node Template Configuration.](../../../../../reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/azure.md)
+1. Fill out a node template for Azure. For help filling out the form, refer to [Azure Node Template Configuration.](../../../../reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/azure.md)
 
 ### 3. Create a cluster with node pools using the node template
 
@@ -85,7 +85,7 @@ Use Rancher to create a Kubernetes cluster in Azure.
 1. Click **Azure**.
 1. Enter a **Cluster Name**.
 1. Add one or more node pools to your cluster. Each node pool uses a node template to provision new nodes. For more information about node pools, including best practices, see [this section.](../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)
-1. In the **Cluster Configuration** to choose the version of Kubernetes that will be installed, what network provider will be used and if you want to enable project network isolation. To see more cluster options, click on **Show advanced options**. For help configuring the cluster, refer to the [RKE cluster configuration reference.](../../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)
+1. In the **Cluster Configuration** to choose the version of Kubernetes that will be installed, what network provider will be used and if you want to enable project network isolation. To see more cluster options, click on **Show advanced options**. For help configuring the cluster, refer to the [RKE cluster configuration reference.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)
 1. Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.
 1. Click **Create**.
 

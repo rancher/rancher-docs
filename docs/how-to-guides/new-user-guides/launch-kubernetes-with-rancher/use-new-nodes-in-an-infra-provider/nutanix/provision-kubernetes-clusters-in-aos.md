@@ -57,7 +57,7 @@ Creating a [node template](../../../../../pages-for-subheaders/use-new-nodes-in-
 1. Click **Create**.
 1. Click **Add Template**.
 1. Click **Nutanix**.
-1. Fill out a node template for Nutanix AOS. For help filling out the form, refer to the Nutanix AOS node template [configuration reference.](../../../../../../reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/nutanix.md).
+1. Fill out a node template for Nutanix AOS. For help filling out the form, refer to the Nutanix AOS node template [configuration reference.](../../../../../reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/nutanix.md).
 1. Click **Create**.
 
 ### 2. Create a cluster with node pools using the node template
@@ -69,7 +69,7 @@ Use Rancher to create a Kubernetes cluster in Nutanix AOS.
 1. Click **Nutanix**.
 1. Enter a **Cluster Name**, then click **Continue**.
 1. Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users who can access the cluster. Use the **Role** drop-down to set permissions for each user.
-1. Use **Cluster Options** to choose the version of Kubernetes that will be installed, what network provider will be used, and whether you want to enable project network isolation. To see more cluster options, click on **Show advanced options**. For help configuring the cluster, refer to the [RKE cluster configuration reference.](../../../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)
+1. Use **Cluster Options** to choose the version of Kubernetes that will be installed, what network provider will be used, and whether you want to enable project network isolation. To see more cluster options, click on **Show advanced options**. For help configuring the cluster, refer to the [RKE cluster configuration reference.](../../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)
 1. Add one or more node pools to your cluster. Each node pool uses a node template to provision new nodes. For more information about node pools, including best practices for assigning Kubernetes roles to the nodes, see [this section.](../../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#node-pools)
 1. Review your options to confirm they're correct. Then click **Create**.
 

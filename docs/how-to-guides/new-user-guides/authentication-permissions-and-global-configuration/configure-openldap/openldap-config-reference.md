@@ -6,7 +6,7 @@ This section is intended to be used as a reference when setting up an OpenLDAP a
 
 For further details on configuring OpenLDAP, refer to the [official documentation.](https://www.openldap.org/doc/)
 
-> Before you proceed with the configuration, please familiarize yourself with the concepts of [External Authentication Configuration and Principal Users](../../../../pages-for-subheaders/about-authentication.md#external-authentication-configuration-and-principal-users).
+> Before you proceed with the configuration, please familiarize yourself with the concepts of [External Authentication Configuration and Principal Users](../../../../pages-for-subheaders/authentication-config.md#external-authentication-configuration-and-principal-users).
 
 
 ## Background: OpenLDAP Authentication Flow
@@ -24,7 +24,7 @@ You will need to enter the address, port, and protocol to connect to your OpenLD
 >
 > If the certificate used by the OpenLDAP server is self-signed or not from a recognized certificate authority, make sure have at hand the CA certificate (concatenated with any intermediate certificates) in PEM format. You will have to paste in this certificate during the configuration so that Rancher is able to validate the certificate chain.
 
-If you are in doubt about the correct values to enter in the user/group Search Base configuration fields, consult your LDAP administrator or refer to the section [Identify Search Base and Schema using ldapsearch](../../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-active-directory.md#annex-identify-search-base-and-schema-using-ldapsearch) in the Active Directory authentication documentation.
+If you are in doubt about the correct values to enter in the user/group Search Base configuration fields, consult your LDAP administrator or refer to the section [Identify Search Base and Schema using ldapsearch](../../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-active-directory.md#annex-identify-search-base-and-schema-using-ldapsearch) in the Active Directory authentication documentation.
 
 <figcaption>OpenLDAP Server Parameters</figcaption>
 
@@ -45,7 +45,7 @@ If your OpenLDAP directory deviates from the standard OpenLDAP schema, you must 
 
 Note that the attribute mappings configured in this section are used by Rancher to construct search filters and resolve group membership. It is therefore always recommended to verify that the configuration here matches the schema used in your OpenLDAP.
 
-If you are unfamiliar with the user/group schema used in the OpenLDAP server, consult your LDAP administrator or refer to the section [Identify Search Base and Schema using ldapsearch](../../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-active-directory.md#annex-identify-search-base-and-schema-using-ldapsearch) in the Active Directory authentication documentation.
+If you are unfamiliar with the user/group schema used in the OpenLDAP server, consult your LDAP administrator or refer to the section [Identify Search Base and Schema using ldapsearch](../../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-active-directory.md#annex-identify-search-base-and-schema-using-ldapsearch) in the Active Directory authentication documentation.
 
 ### User Schema Configuration
 

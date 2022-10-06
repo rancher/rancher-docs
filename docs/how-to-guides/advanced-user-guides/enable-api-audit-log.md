@@ -12,7 +12,7 @@ The Audit Log is enabled and configured by passing environment variables to the 
 
 - [Docker Install](../../reference-guides/single-node-rancher-in-docker/advanced-options.md#api-audit-log)
 
-- [Kubernetes Install](../../reference-guides/installation-references/helm-chart-options.md#api-audit-log)
+- [Kubernetes Install](../../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#api-audit-log)
 
 ## API Audit Log Options
 
