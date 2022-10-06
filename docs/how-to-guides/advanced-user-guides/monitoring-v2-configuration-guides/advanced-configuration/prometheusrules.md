@@ -76,5 +76,5 @@ For examples, refer to the Prometheus documentation on [recording rules](https:/
 | Field | Description |
 |-------|----------------|
 | Time Series Name |   The name of the time series to output to. Must be a valid metric name.  |
-| PromQL Expression |  The PromQL expression to evaluate. Prometheus will evaluate the current value of this PromQL expression on every evaluation cycle and the result will be recorded as a new set of time series with the metric name as given by 'record'.  For more information about expressions, refer to the [Prometheus documentation](https://prometheus.io/docs/prometheus/latest/querying/basics/) or our [example PromQL expressions.](../../../../explanations/integrations-in-rancher/monitoring-and-alerting/promql-expressions.md)  |
+| PromQL Expression |  The PromQL expression to evaluate. Prometheus will evaluate the current value of this PromQL expression on every evaluation cycle and the result will be recorded as a new set of time series with the metric name as given by 'record'.  For more information about expressions, refer to the [Prometheus documentation](https://prometheus.io/docs/prometheus/latest/querying/basics/) or our [example PromQL expressions.](../../../../integrations-in-rancher/monitoring-and-alerting/promql-expressions.md)  |
 | Labels |   Labels to add or overwrite before storing the result.     |

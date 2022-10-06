@@ -63,14 +63,14 @@ Creating a [node template](../../../../pages-for-subheaders/use-new-nodes-in-an-
 
 ### 3. Create a cluster with node pools using the node template
 
-Add one or more node pools to your cluster. For more information about node pools, see [this section.](../../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)
+Add one or more node pools to your cluster. For more information about node pools, see [this section.](../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)
 
 1. Click **☰ > Cluster Management**.
 1. On the **Clusters** page, click **Create**.
 1. Click **Amazon EC2**.
 1. Create a node pool for each Kubernetes role. For each node pool, choose a node template that you created. For more information about node pools, including best practices for assigning Kubernetes roles to them, see [this section.](../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)
 1. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.
-1. Use **Cluster Options** to choose the version of Kubernetes that will be installed, what network provider will be used and if you want to enable project network isolation. Refer to [Selecting Cloud Providers](../../../../../pages-for-subheaders/set-up-cloud-providers.md) to configure the Kubernetes Cloud Provider. For help configuring the cluster, refer to the [RKE cluster configuration reference.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)
+1. Use **Cluster Options** to choose the version of Kubernetes that will be installed, what network provider will be used and if you want to enable project network isolation. Refer to [Selecting Cloud Providers](../../../../pages-for-subheaders/set-up-cloud-providers.md) to configure the Kubernetes Cloud Provider. For help configuring the cluster, refer to the [RKE cluster configuration reference.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)
 
     :::note
 
