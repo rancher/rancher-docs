@@ -57,7 +57,7 @@ Creating a [node template](../../../../../pages-for-subheaders/use-new-nodes-in-
 1. Click **Create**.
 1. Click **Add Template**.
 1. Click **Nutanix**.
-1. Fill out a node template for Nutanix AOS. For help filling out the form, refer to the Nutanix AOS node template [configuration reference.](../../../../../reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/nutanix.md).
+1. Fill out a node template for Nutanix AOS. For help filling out the form, refer to the Nutanix AOS node template [configuration reference.](../../../../..//reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/nutanix.md).
 1. Click **Create**.
 
 ### 2. Create a cluster with node pools using the node template

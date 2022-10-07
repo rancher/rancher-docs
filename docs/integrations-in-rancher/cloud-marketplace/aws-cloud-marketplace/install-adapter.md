@@ -41,7 +41,7 @@ kubectl create ns cattle-csp-adapter-system
 
 ### 3. Create Certificate Secrets
 
-The adapter requires access to the root CA that Rancher is using to communicate with the Rancher server. You can read more about which certificate options Rancher supports in the [chart options page](../../../reference-guides/installation-references/helm-chart-options.md).
+The adapter requires access to the root CA that Rancher is using to communicate with the Rancher server. You can read more about which certificate options Rancher supports in the [chart options page](../../../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md).
 
 If your Rancher install uses a certificate signed by a recognized Certificate Authority such as Let's Encrypt, then you can safely skip to [Step 4](#4-install-the-chart).
 
