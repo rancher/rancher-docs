@@ -43,15 +43,23 @@ will assign a resource quota that has a **zero** amount for any resource that re
 
 To create a namespace in an existing project via `kubectl`, use the `field.cattle.io/projectId` annotation. To override the default
 requested quota limit, use the `field.cattle.io/resourceQuota` annotation.
+
+Note that Rancher will only override limits for resources that are defined on the project quota.
+
 ```
 apiVersion: v1
 kind: Namespace
 metadata:
   annotations:
     field.cattle.io/projectId: [your-cluster-ID]:[your-project-ID]
-    field.cattle.io/resourceQuota: '{"limit":{"limitsCpu":"100m", "limitsMemory":"100Mi", "configMaps": "50"}}'
+    field.cattle.io/resourceQuota: '{"limit":{"limitsCpu":"100m", "configMaps": "50"}}'
   name: my-ns
 ```
+In this example, if the project's quota does not include configMaps in its list of resources, then Rancher will ignore `configMaps` in this override.
+
+Users are advised to create dedicated `ResourceQuota` objects in namespaces to configure additional custom limits for resources not defined on the project.
+Resource quotas are native Kubernetes objects, and Rancher will ignore user-defined quotas in namespaces belonging to a project with a quota,
+thus giving users more control.
 
 The following table explains the key differences between the two quota types.
 
