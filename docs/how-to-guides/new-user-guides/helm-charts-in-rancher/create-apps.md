@@ -111,7 +111,7 @@ This reference contains variables that you can use in `questions.yml` nested und
 | 	description       | string  | false      |  Specify the description of the variable.|
 | 	type              | string  | false      |  Default to `string` if not specified (current supported types are string, multiline, boolean, int, enum, password, storageclass, hostname, pvc, and secret).|
 | 	required          | bool    | false      |  Define if the variable is required or not (true \| false)|
-| 	default           | string  | false      |  Specify the default value. |
+| 	default           | string  | false      |  Specify the default value. Only used if there is no corresponding value in the `values.yml` file. |
 | 	group             | string  | false      |  Group questions by input value. |
 | 	min_length        | int     | false      | Min character length.|
 | 	max_length        | int     | false      | Max character length.|
