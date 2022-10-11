@@ -35,7 +35,7 @@ Cluster administrators can edit the membership for a cluster, controlling which 
 
 		:::note Using AD but can't find your users?
 
-		There may be an issue with your search attribute configuration. See [Configuring Active Directory Authentication: Step 5](../../../new-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-active-directory.md).
+		There may be an issue with your search attribute configuration. See [Configuring Active Directory Authentication: Step 5](../../../new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-active-directory.md).
 
 		:::
 

@@ -75,7 +75,7 @@ kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{
 
 ### API Audit Log
 
-Enabling the [API Audit Log](../../how-to-guides/advanced-user-guides/enable-api-audit-log.md)
+Enabling the [API Audit Log](../../../how-to-guides/advanced-user-guides/enable-api-audit-log.md).
 
 You can collect this log as you would any container log. Enable [logging](../../../pages-for-subheaders/logging.md) for the `System` Project on the Rancher server cluster.
 

@@ -140,7 +140,7 @@ On AWS EC2, we should create a few objects to configure our system. We've define
       ```
 
     * IAM role: `K8sMasterRole: [K8sMasterProfile,K8sAutoscalerProfile]`
-    * Security group: `K8sMasterSg` More info at[RKE ports (custom nodes tab)](../../../../getting-started/installation-and-upgrade/installation-requirements/port-requirements.md#downstream-kubernetes-cluster-nodes)
+    * Security group: `K8sMasterSg` More info at [RKE ports (custom nodes tab)](../../../../getting-started/installation-and-upgrade/installation-requirements/port-requirements.md#downstream-kubernetes-cluster-nodes)
     * Tags:
       `kubernetes.io/cluster/<clusterID>: owned`
     * User data: `K8sMasterUserData` Ubuntu 18.04(ami-0e11cbb34015ff725), installs docker and add etcd+controlplane node to the k8s cluster

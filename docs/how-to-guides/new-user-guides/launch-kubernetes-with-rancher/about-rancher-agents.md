@@ -7,7 +7,7 @@ There are two different agent resources deployed on Rancher managed clusters:
 - [cattle-cluster-agent](#cattle-cluster-agent)
 - [cattle-node-agent](#cattle-node-agent)
 
-For a conceptual overview of how the Rancher server provisions clusters and communicates with them, refer to the [architecture](../../../pages-for-subheaders/rancher-manager-architecture.md)
+For a conceptual overview of how the Rancher server provisions clusters and communicates with them, refer to the [architecture](../../../pages-for-subheaders/rancher-manager-architecture.md).
 
 ### cattle-cluster-agent
 
