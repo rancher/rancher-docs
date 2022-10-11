@@ -50,17 +50,17 @@ If the group of etcd nodes loses quorum, the Kubernetes cluster will report a fa
 
 2. On the single remaining etcd node, run the following command:
 
-    ```
-    $ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike etcd
+    ```bash
+    docker run --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike etcd
     ```
 
     This command outputs the running command for etcd, save this command to use later.
 
-3. Stop the etcd container that you launched in the previous step and rename it to `etcd-old`.
+3. Stop the running `etcd` container and rename it to `etcd-old`.
 
-    ```
-    $ docker stop etcd
-    $ docker rename etcd etcd-old
+    ```bash
+    docker stop etcd
+    docker rename etcd etcd-old
     ```
 
 4. Take the saved command from Step 2 and revise it:
