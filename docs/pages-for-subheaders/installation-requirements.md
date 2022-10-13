@@ -63,7 +63,7 @@ For more information see [Installing Docker,](../getting-started/installation-an
 
 ### K3s Specific Requirements
 
-For the container runtime, K3s bundles its own containerd by default. Alternatively, you can configure K3s to use an already installed Docker runtime. For more information on using K3s with Docker see to the [K3s documentation.](https://docs.k3s.io/advanced#using-docker-as-the-container-runtime)
+For the container runtime, K3s bundles its own containerd by default. Alternatively, you can configure K3s to use an already installed Docker runtime. For more information on using K3s with Docker see the [K3s documentation.](https://docs.k3s.io/advanced#using-docker-as-the-container-runtime)
 
 Rancher needs to be installed on a supported Kubernetes version. To find out which versions of Kubernetes are supported for your Rancher version, refer to the [support maintenance terms.](https://rancher.com/support-maintenance-terms/) To specify the K3s version, use the INSTALL_K3S_VERSION environment variable when running the K3s installation script.
 
