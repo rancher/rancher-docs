@@ -31,7 +31,7 @@ You can check the default firewall rules with this command:
 sudo iptables --list
 ```
 
-This section describes how to use `firewalld` to apply the [firewall port rules](../../pages-for-subheaders/installation-requirements#port-requirements.md) for nodes in a high-availability Rancher server cluster.
+This section describes how to use `firewalld` to apply the [firewall port rules](../../pages-for-subheaders/installation-requirements.md#port-requirements) for nodes in a high-availability Rancher server cluster.
 
 ## Prerequisite
 
