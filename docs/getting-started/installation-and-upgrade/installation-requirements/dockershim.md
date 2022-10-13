@@ -6,6 +6,8 @@ The Dockershim is the CRI compliant layer between the Kubelet and the Docker dae
 
 RKE clusters now support the external Dockershim to continue leveraging Docker as the CRI runtime. We now implement the upstream open source community external Dockershim announced by [Mirantis and Docker](https://www.mirantis.com/blog/mirantis-to-take-over-support-of-kubernetes-dockershim-2/) to ensure RKE clusters can continue to leverage Docker.
 
+RKE2 and K3s clusters use an embedded containerd as a container runtime and are not affected.
+
 To enable the external Dockershim in versions of RKE before 1.24, configure the following option.
 
 ```
