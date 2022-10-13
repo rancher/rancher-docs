@@ -29,7 +29,7 @@ To avoid storing them in plaintext, you can use the same `EncryptionConfiguratio
 
 When encrypting objects in the backup you must save the `EncryptionConfiguration` file for future use, because it won’t be saved by the rancher-backup operator.
 
-For example, when [migrating Rancher to a new cluster](new-user-guides/backup-restore-and-disaster-recovery) the file is used to re-create the secret in the new cluster.
+For example, when [migrating Rancher to a new cluster](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md) the file is used to re-create the secret in the new cluster.
 
 :::
 
