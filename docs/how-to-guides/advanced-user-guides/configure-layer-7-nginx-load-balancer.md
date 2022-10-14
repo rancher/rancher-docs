@@ -173,7 +173,7 @@ http {
 ## FAQ and Troubleshooting
 
 For help troubleshooting certificates, see [this section.](../../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/certificate-troubleshooting.md)
-[](../)
+
 ## Advanced Options
 
 ### API Auditing
