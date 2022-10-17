@@ -12,7 +12,7 @@ Account access information is stored as a cloud credential. Cloud credentials ar
 
 :::note
 
-If using a VNet in a different Resource Group than the VMs, the VNet name should be prefixed with with the Resource Group name, example: `<resource group>:<vnet>` 
+If using a VNet in a different Resource Group than the VMs, the VNet name should be prefixed with the Resource Group name. For example, `<resource group>:<vnet>`.
 
 :::
 
