@@ -68,6 +68,7 @@ title: 1. 在 Microsoft AD FS 中配置 Rancher
    | Token-Groups - Qualified by Long Domain Name | Group |
    | SAM-Account-Name | 名称 |
    <br/>
+
    ![](/img/adfs/adfs-add-tcr-2.png)
 
 1. 从 AD 服务器的以下位置下载 `federationmetadata.xml`：

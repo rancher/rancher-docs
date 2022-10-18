@@ -69,6 +69,7 @@ Before configuring Rancher to support AD FS users, you must add Rancher as a [re
     | Token-Groups - Qualified by Long Domain Name | Group               |
     | SAM-Account-Name                             | Name                |
     <br/>
+
     ![](/img/adfs/adfs-add-tcr-2.png)
 
 1. Download the `federationmetadata.xml` from your AD server at:
