@@ -125,4 +125,18 @@ module.exports = {
       },
     ],
   ],
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        fromExtensions: ['html', 'htm'],
+        redirects: [
+          // {
+          //   to: '/test',
+          //   from: '/testold',
+          // },
+        ],
+      },
+    ],
+  ],
 };
