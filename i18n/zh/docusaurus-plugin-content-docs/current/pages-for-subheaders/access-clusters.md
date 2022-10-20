@@ -4,11 +4,11 @@ title: 集群访问
 
 本节介绍可以用来访问 Rancher 管理的集群的工具。
 
-有关如何授予用户访问集群的权限的信息，请参阅[将用户添加到集群](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/add-users-to-clusters.md)。
+有关如何授予用户访问集群的权限的信息，请参阅[将用户添加到集群](../how-to-guides/new-user-guides/manage-clusters/access-clusters/add-users-to-clusters.md)。
 
 有关 RBAC 的更多信息，请参阅[本节](manage-role-based-access-control-rbac.md)。
 
-有关如何设置身份验证系统的信息，请参阅[本节](about-authentication.md)。
+有关如何设置身份验证系统的信息，请参阅[本节](authentication-config.md)。
 
 
 ### Rancher UI
@@ -19,8 +19,8 @@ Rancher 提供了一个直观的用户界面来让你与集群进行交互。UI 
 
 你可以使用 Kubernetes 命令行工具 [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) 来管理你的集群。使用 kubectl 有两种选择：
 
-- **Rancher kubectl shell**：通过启动 Rancher UI 中可用的 kubectl shell 与集群交互。此选项不需要你进行任何配置操作。有关详细信息，请参阅[使用 kubectl Shell 访问集群](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)。
-- **终端远程连接**：你也可以通过在本地桌面上安装 [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)，然后将集群的 kubeconfig 文件复制到本地 `~/.kube/config` 目录来与集群交互。有关更多信息，请参阅[使用 kubectl 和 kubeconfig 文件访问集群](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)。
+- **Rancher kubectl shell**：通过启动 Rancher UI 中可用的 kubectl shell 与集群交互。此选项不需要你进行任何配置操作。有关详细信息，请参阅[使用 kubectl Shell 访问集群](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)。
+- **终端远程连接**：你也可以通过在本地桌面上安装 [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)，然后将集群的 kubeconfig 文件复制到本地 `~/.kube/config` 目录来与集群交互。有关更多信息，请参阅[使用 kubectl 和 kubeconfig 文件访问集群](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)。
 
 ### Rancher CLI
 

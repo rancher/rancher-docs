@@ -21,4 +21,4 @@ Cluster Autoscaler 为不同的云提供商提供支持。有关详细信息，�
 
 ### 在 Amazon 上设置 Cluster Autoscaler
 
-有关在 Amazon 上运行 Cluster Autoscaler 的详细信息，请参阅[此页面](../how-to-guides/advanced-user-guides/manage-clusters/install-cluster-autoscaler/use-aws-ec2-auto-scaling-groups.md)。
+有关在 Amazon 上运行 Cluster Autoscaler 的详细信息，请参阅[此页面](../how-to-guides/new-user-guides/manage-clusters/install-cluster-autoscaler/use-aws-ec2-auto-scaling-groups.md)。

@@ -33,13 +33,13 @@ description: 如果 Rancher 配置在 Docker 或 Kubernetes 中运行时，了�
 
 如需获取在生产环境中运行 Rancher Server 的最佳实践列表，请参见[最佳实践](../reference-guides/best-practices/rancher-server/tips-for-running-rancher.md)。
 
-Rancher UI 在 Firefox 或 Chrome 中效果更佳。
+Rancher UI 在基于 Firefox 或 Chromium 的浏览器（Chrome、Edge、Opera、Brave 等）中效果最佳。
 
 # 操作系统和容器运行时要求
 
 Rancher 兼容当前所有的主流 Linux 发行版。
 
-运行 RKE Kubernetes 集群的节点需要安装 Docker。Kubernetes 安装不需要 Docker。
+运行 RKE Kubernetes 集群的节点需要安装 Docker。RKE2 或 K3s 集群不需要它。
 
 Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的 Rancher 版本支持哪些 Kubernetes 版本，请参见[支持维护条款](https://rancher.com/support-maintenance-terms/)。
 
@@ -49,25 +49,21 @@ Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的
 
 请安装 `ntp`（Network Time Protocol），以防止在客户端和服务器之间由于时间不同步造成的证书验证错误。
 
-某些 Linux 发行版的默认防火墙规则可能会阻止与 Helm 的通信。我们建议禁用 firewalld。如果使用的是 Kubernetes 1.19，1.20 或 1.21，则必须关闭 firewalld。
+某些 Linux 发行版的默认防火墙规则可能会阻止 Kubernetes 集群内的通信。从 Kubernetes v1.19 开始，你必须关闭 firewalld，因为它与 Kubernetes 网络插件冲突。
 
 如果你不太想这样做的话，你可以查看[相关问题](https://github.com/rancher/rancher/issues/28840)中的建议。某些用户已能成功[使用 ACCEPT 策略 为 Pod CIDR 创建一个独立的 firewalld 区域](https://github.com/rancher/rancher/issues/28840#issuecomment-787404822)。
 
-如果你需要在 ARM64 上使用 Rancher，请参见[在 ARM64（实验功能）上运行 Rancher](../getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/rancher-on-arm64.md)。
+如果你需要在 ARM64 上使用 Rancher，请参见[在 ARM64（实验功能）上运行 Rancher](../how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64.md)。
 
 ### RKE 要求
 
 容器运行时方面，RKE 可以兼容当前的所有 Docker 版本。
 
-请注意，必须应用以下 sysctl 设置：
-
-```
-net.bridge.bridge-nf-call-iptables=1
-```
+有关详细信息，请参阅[安装 Docker](../getting-started/installation-and-upgrade/installation-requirements/install-docker.md)。
 
 ### K3s 要求
 
-容器运行时方面，K3s 可以兼容当前的所有 Docker 版本。
+对于容器运行时，K3s 默认附带了自己的 containerd。你也可以将 K3s 配置为使用已安装的 Docker 运行时。有关在 Docker 中使用 K3s 的更多信息，请参阅 [K3s 文档](https://docs.k3s.io/advanced#using-docker-as-the-container-runtime)。
 
 Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的 Rancher 版本支持哪些 Kubernetes 版本，请参见[支持维护条款](https://rancher.com/support-maintenance-terms/)。如需指定 K3s 版本，请在运行 K3s 安装脚本时，使用 `INSTALL_K3S_VERSION` 环境变量。
 
@@ -75,17 +71,11 @@ Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的
 
 如果你使用 Alpine Linux 的 K3s 集群上安装 Rancher，请按照[这些步骤](https://rancher.com/docs/k3s/latest/en/advanced/#additional-preparation-for-alpine-linux-setup) 进行其他设置。
 
-
-
 ### RKE2 要求
 
+对于容器运行时，RKE2 附带了自己的 containerd。RKE2 安装不需要 Docker。
+
 如需了解 RKE2 通过了哪些操作系统版本的测试，请参见[支持和维护条款](https://rancher.com/support-maintenance-terms/)。
-
-RKE2 安装不需要 Docker。
-
-### 安装 Docker
-
-Docker 是 Helm Chart 安装所必须的。你可以参见 [Docker 官方文档](https://docs.docker.com/)中的步骤进行安装。Rancher 也提供使用单条命令安装 Docker 的[脚本](../getting-started/installation-and-upgrade/installation-requirements/install-docker.md)。
 
 # 硬件要求
 
@@ -150,9 +140,9 @@ Docker 是 Helm Chart 安装所必须的。你可以参见 [Docker 官方文档]
 
 Ingress 需要部署为 DaemonSet 以确保负载均衡器能成功把流量转发到各个节点。
 
-如果是 RKE 和 K3s 安装，你不需要手动安装 Ingress，因为它是默认安装的。
+如果是 RKE，RKE2 和 K3s 安装，你不需要手动安装 Ingress，因为它是默认安装的。
 
-如果是托管 Kubernetes 集群（EKS、GKE、AKS）和 RKE2 Kubernetes 安装，你需要设置 Ingress。
+对于托管的 Kubernetes 集群（EKS、GKE、AKS），你需要设置 Ingress。
 
 - **Amazon EKS**：[在 Amazon EKS 上安装 Rancher 以及如何安装 Ingress 以访问 Rancher Server](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks.md)。
 - **AKS**：[使用 Azure Kubernetes 服务安装 Rancher 以及如何安装 Ingress 以访问 Rancher Server](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks.md)。

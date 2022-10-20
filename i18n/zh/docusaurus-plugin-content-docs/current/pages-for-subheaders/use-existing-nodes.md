@@ -26,7 +26,7 @@ description: 要创建具有自定义节点的集群，你需要访问集群中�
 - 本地虚拟机
 - 裸机服务器
 
-如果要重复使用之前的自定义集群中的节点，请在复用之前[清理节点](../how-to-guides/advanced-user-guides/manage-clusters/clean-cluster-nodes.md)。如果你重复使用尚未清理的节点，则集群配置可能会失败。
+如果要重复使用之前的自定义集群中的节点，请在复用之前[清理节点](../how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes.md)。如果你重复使用尚未清理的节点，则集群配置可能会失败。
 
 根据[安装要求](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md)和[生产就绪集群的检查清单](checklist-for-production-ready-clusters.md)配置主机。
 
@@ -66,7 +66,7 @@ description: 要创建具有自定义节点的集群，你需要访问集群中�
 
 :::
 
-8. **可选**：点击[显示高级选项](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/about-rancher-agents.md)来指定注册节点时使用的 IP 地址，覆盖节点的主机名，或将[标签](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)或[污点](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)添加到节点。
+8. **可选**：点击[显示高级选项](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents.md)来指定注册节点时使用的 IP 地址，覆盖节点的主机名，或将[标签](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)或[污点](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)添加到节点。
 
 9. 将屏幕上显示的命令复制到剪贴板。
 
@@ -134,5 +134,5 @@ Key=kubernetes.io/cluster/CLUSTERID, Value=shared
 
 创建集群后，你可以通过 Rancher UI 访问集群。最佳实践建议你设置以下访问集群的备用方式：
 
-- **通过 kubectl CLI 访问你的集群**：按照[这些步骤](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#在工作站使用-kubectl-访问集群)在你的工作站上使用 kubectl 访问集群。在这种情况下，你将通过 Rancher Server 的身份验证代理进行身份验证，然后 Rancher 会让你连接到下游集群。此方法允许你在没有 Rancher UI 的情况下管理集群。
-- **通过 kubectl CLI 使用授权的集群端点访问你的集群**：按照[这些步骤](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#直接使用下游集群进行身份验证)直接使用 kubectl 访问集群，而无需通过 Rancher 进行身份验证。我们建议设置此替代方法来访问集群，以便在无法连接到 Rancher 时访问集群。
+- **通过 kubectl CLI 访问你的集群**：按照[这些步骤](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#在工作站使用-kubectl-访问集群)在你的工作站上使用 kubectl 访问集群。在这种情况下，你将通过 Rancher Server 的身份验证代理进行身份验证，然后 Rancher 会让你连接到下游集群。此方法允许你在没有 Rancher UI 的情况下管理集群。
+- **通过 kubectl CLI 使用授权的集群端点访问你的集群**：按照[这些步骤](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#直接使用下游集群进行身份验证)直接使用 kubectl 访问集群，而无需通过 Rancher 进行身份验证。我们建议设置此替代方法来访问集群，以便在无法连接到 Rancher 时访问集群。

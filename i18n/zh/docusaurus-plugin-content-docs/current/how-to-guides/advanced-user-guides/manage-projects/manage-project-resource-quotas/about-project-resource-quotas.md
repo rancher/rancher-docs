@@ -41,15 +41,22 @@ Rancher 中的资源配额包含与 [Kubernetes 原生版本](https://kubernetes
 但是，在 Rancher 的 UI **_外_** 创建的命名空间的处理方法则不一样。对于通过 `kubectl` 创建的命名空间，如果请求的资源量多余项目内的余量，Rancher 会分配一个数值为 **0** 的资源配额。
 
 要使用 `kubectl` 在现有项目中创建命名空间，请使用 `field.cattle.io/projectId` 注释。要覆盖默认的请求配额限制，请使用 `field.cattle.io/resourceQuota` 注释。
+
+请注意，Rancher 只会覆盖项目配额上定义的资源限制。
+
 ```
 apiVersion: v1
 kind: Namespace
 metadata:
   annotations:
     field.cattle.io/projectId: [your-cluster-ID]:[your-project-ID]
-    field.cattle.io/resourceQuota: '{"limit":{"limitsCpu":"100m", "limitsMemory":"100Mi", "configMaps": "50"}}'
+    field.cattle.io/resourceQuota: '{"limit":{"limitsCpu":"100m", "configMaps": "50"}}'
   name: my-ns
 ```
+在此示例中，如果项目配额在其资源列表中不包含 configMaps，那么 Rancher 将忽略此覆盖中的 `configMaps`。
+
+对于项目中未定义的资源，建议你在命名空间中创建专用的 `ResourceQuota` 对象来配置其它自定义限制。
+资源配额是原生 Kubernetes 对象，如果命名空间属于具有配额的项目，Rancher 将忽略用户定义的配额，从而给予用户更多的控制权。
 
 下表对比了 Rancher 和 Kubernetes 资源配额的主要区别：
 

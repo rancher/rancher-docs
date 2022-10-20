@@ -85,7 +85,7 @@ UI 由静态文件组成，并根据 API 的响应工作。换言之，UI 中可
 
 节点需要配置静态 IP（或使用 DHCP 保留的 IP）。如果节点的 IP 已更改，你必须在集群中删除并重新添加它。删除后，Rancher 会将集群更新为正确的状态。如果集群不再处于 `Provisioning` 状态，则已从集群删除该节点。
 
-节点的 IP 地址发生变化时，Rancher 会失去与节点的连接，因此无法正常清理节点。请参阅[清理集群节点](../how-to-guides/advanced-user-guides/manage-clusters/clean-cluster-nodes.md)来清理节点。
+节点的 IP 地址发生变化时，Rancher 会失去与节点的连接，因此无法正常清理节点。请参阅[清理集群节点](../how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes.md)来清理节点。
 
 在集群中移除并清理节点时，你可以将节点重新添加到集群中。
 

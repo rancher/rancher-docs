@@ -23,24 +23,25 @@ title: 备份配置
 
 rancher-backup 通过调用 kube-apiserver 来收集资源。apiserver 返回的对象会被解密，所以即使启用了[静态加密](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)，备份收集的加密对象也会是明文。
 
-为避免以明文形式存储资源，你可以使用静态加密使用的同一个 encryptionConfig 文件，对备份中的特定资源进行加密。
+为避免以明文形式存储资源，你可以使用与静态加密相同的 `EncryptionConfiguration` 文件来加密备份中的特定资源。
 
 :::note 重要提示：
 
-`rancher-backup` operator 不会保存 encryptionConfig 文件，因此请自行保存该文件。
-执行还原时需要使用同一个 encryptionFile。
+rancher-backup Operator 不会保存 `EncryptionConfiguration`，因此在备份中加密对象时，你必须自行保存该文件。
+
+例如，[将 Rancher 迁移到新集群](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md)时，该文件可用于在新集群​​中重新创建 secret。
 
 :::
 
-Operator 将这个 encryptionConfig 用作 Kubernetes 密文，该密文必须在 operator 的命名空间中。Rancher 将 `rancher-backup` operator 安装到 `cattle-resources-system` 命名空间中。因此，请在该命名空间中创建这个 encryptionConfig 密文。
+Operator 将 `EncryptionConfiguration` 用作 `cattle-resources-system` 命名空间中的 Kubernetes Secret，在 Secret 数据中，它位于名为 `encryption-provider-config.yaml` 的 key 下面。
 
 对于 `EncryptionConfiguration`，你可以使用 [Kubernetes 文档中提供的示例](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/#understanding-the-encryption-at-rest-configuration)。
 
-要创建密文，加密配置文件必须命名为 `encryption-provider-config.yaml`，而且必须使用 `--from-file` 标志来创建这个密文。
+为确保在 secret 中使用正确的密钥，加密配置文件必须命名为 `encryption-provider-config.yaml`。下面的命令使用 `--from-file` 标志来创建具有正确密钥名称的 Secret。
 
 将 `EncryptionConfiguration` 保存到名为 `encryption-provider-config.yaml` 的文件中，并运行以下命令：
 
-```
+```bash
 kubectl create secret generic encryptionconfig \
   --from-file=./encryption-provider-config.yaml \
   -n cattle-resources-system
@@ -119,9 +120,21 @@ metadata:
   name: creds
 type: Opaque
 data:
-  accessKey: <Enter your base64-encoded access key>
-  secretKey: <Enter your base64-encoded secret key>
+  accessKey: <base64-encoded access key>
+  secretKey: <base64-encoded secret key>
 ```
+
+:::note
+
+为避免编码问题，你可以使用以下命令创建 `credentialSecret`，更新 `accessKey` 和 `secretKey` 的值。
+
+```bash
+kubectl create secret generic s3-creds \
+  --from-literal=accessKey=<access key> \
+  --from-literal=secretKey=<secret key>
+```
+
+:::
 
 ### EC2 节点访问 S3 的 IAM 权限
 

@@ -29,7 +29,7 @@ Monitoring V2 只能在集群级别进行配置。不再支持项目级别的监
 
 默认情况下，项目所有者和成员不再可以访问 Grafana 或 Prometheus。如果只读用户有权访问 Grafana，他们将能够查看任何命名空间的数据。对于 Kiali，任何用户都可以在任何命名空间中编辑不属于该用户的东西。
 
-有关 `rancher-monitoring` 中 RBAC 的更多信息，请参阅[此页面](../../../explanations/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md)。
+有关 `rancher-monitoring` 中 RBAC 的更多信息，请参阅[此页面](../../../integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md)。
 
 ## 从 Monitoring V1 迁移到 Monitoring V2
 

@@ -22,7 +22,7 @@ title: 4. 安装 Rancher
 
 1. 如果你还没有安装 `helm`，请在可访问互联网的工作站上进行本地安装。注意：参考 [Helm 版本要求](../../resources/helm-version-requirements.md)选择 Helm 版本来安装 Rancher。
 
-2. 执行 `helm repo add` 命令，以添加包含安装 Rancher 的 Chart 的 Helm Chart 仓库。有关如何选择仓库，以及哪个仓库最适合你的用例，请参见[选择 Rancher 版本](../../../../reference-guides/installation-references/helm-chart-options.md#helm-chart-仓库)。
+2. 执行 `helm repo add` 命令，以添加包含安装 Rancher 的 Chart 的 Helm Chart 仓库。有关如何选择仓库，以及哪个仓库最适合你的用例，请参见[选择 Rancher 版本](../../installation-references/helm-chart-options.md#helm-chart-仓库)。
    - Latest：建议用于试用最新功能
       ```
       helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
@@ -55,7 +55,7 @@ Rancher Server 默认设计为安全的，并且需要 SSL/TLS 配置。
 
 :::note
 
-如果你想在外部终止 SSL/TLS，请参见[外部负载均衡器的 TLS 终止](../../../../reference-guides/installation-references/helm-chart-options.md#外部-tls-终止)。
+如果你想在外部终止 SSL/TLS，请参见[外部负载均衡器的 TLS 终止](../../installation-references/helm-chart-options.md#外部-tls-终止)。
 
 :::
 
@@ -258,6 +258,6 @@ kubectl -n cattle-system apply -R -f ./rancher
 
 以下资源可能对安装 Rancher 有帮助：
 
-- [Rancher Helm Chart 选项](../../../../reference-guides/installation-references/helm-chart-options.md)
+- [Rancher Helm Chart 选项](../../installation-references/helm-chart-options.md)
 - [添加 TLS 密文](../../resources/add-tls-secrets.md)
 - [Rancher Kubernetes 安装的故障排除](../../install-upgrade-on-a-kubernetes-cluster/troubleshooting.md)

@@ -8,7 +8,7 @@ title: 配置 Shibboleth (SAML)
 
 如果你将 OpenLDAP 配置为 Shibboleth 的后端，SAML 断言会返回到 Rancher，其中包括用于引用组的用户属性。然后，通过身份验证的用户将能够访问其所在的组有权访问的 Rancher 资源。
 
-> 本节假定你已了解 Rancher，Shibboleth 和 OpenLDAP 是如何协同工作的。有关工作原理的详细说明，请参见[本页](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/configure-shibboleth-saml/about-group-permissions.md)。
+> 本节假定你已了解 Rancher，Shibboleth 和 OpenLDAP 是如何协同工作的。有关工作原理的详细说明，请参见[本页](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-shibboleth-saml/about-group-permissions.md)。
 
 
 # 在 Rancher 中设置 Shibboleth
@@ -87,9 +87,9 @@ SAML 协议不支持用户或用户组的搜索或查找。因此，如果你没
 
 ### 在 Rancher 中配置 OpenLDAP
 
-配置 OpenLDAP 服务器，组和用户的设置。有关填写每个字段的帮助，请参见[配置参考](../reference-guides/configure-openldap/openldap-config-reference.md)。请注意，嵌套组成员资格不适用于 Shibboleth。
+配置 OpenLDAP 服务器，组和用户的设置。有关填写每个字段的帮助，请参见[配置参考](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-openldap/openldap-config-reference.md)。请注意，嵌套组成员资格不适用于 Shibboleth。
 
-> 在开始之前，请熟悉[外部身份验证配置和主体用户](about-authentication.md#外部身份验证配置和用户主体)的概念。
+> 在开始之前，请熟悉[外部身份验证配置和主体用户](authentication-config.md#外部身份验证配置和用户主体)的概念。
 
 1. 使用初始的本地 `admin` 账号登录到 Rancher UI。
 1. 在左上角，单击 **☰ > 用户 & 认证**。

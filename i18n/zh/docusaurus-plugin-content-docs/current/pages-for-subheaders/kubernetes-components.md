@@ -2,7 +2,7 @@
 title: Kubernetes 组件
 ---
 
-本文列出的命令和步骤适用于 [Rancher 启动的 Kubernetes](launch-kubernetes-with-rancher.md) 集群上的核心 Kubernetes 组件。
+本文列出的命令和步骤适用于 [Rancher 启动的 Kubernetes](../pages-for-subheaders/launch-kubernetes-with-rancher.md) 集群上的核心 Kubernetes 组件。
 
 本文包括以下类别的故障排除提示：
 

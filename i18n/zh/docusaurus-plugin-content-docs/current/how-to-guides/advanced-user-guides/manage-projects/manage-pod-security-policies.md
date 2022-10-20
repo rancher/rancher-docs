@@ -12,8 +12,8 @@ title: Pod 安全策略
 
 ### 先决条件
 
-- 在 Rancher 中创建 Pod 安全策略。在将默认 PSP 分配给现有项目之前，你必须有一个可分配的 PSP。有关说明，请参阅[创建 Pod 安全策略](../authentication-permissions-and-global-configuration/create-pod-security-policies.md)。
-- 将默认 Pod 安全策略分配给项目所属的集群。如果 PSP 还没有应用到集群，你无法将 PSP 分配给项目。有关详细信息，请参阅[将 pod 安全策略添加到集群](../manage-clusters/add-a-pod-security-policy.md)。
+- 在 Rancher 中创建 Pod 安全策略。在将默认 PSP 分配给现有项目之前，你必须有一个可分配的 PSP。有关说明，请参阅[创建 Pod 安全策略](../../new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)。
+- 将默认 Pod 安全策略分配给项目所属的集群。如果 PSP 还没有应用到集群，你无法将 PSP 分配给项目。有关详细信息，请参阅[将 pod 安全策略添加到集群](../../new-user-guides/manage-clusters/add-a-pod-security-policy.md)。
 
 ### 应用 Pod 安全策略
 

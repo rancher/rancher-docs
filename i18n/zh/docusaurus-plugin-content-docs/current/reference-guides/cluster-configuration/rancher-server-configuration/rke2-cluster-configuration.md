@@ -126,7 +126,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 #### 默认 Pod 安全策略
 
-为集群选择默认的 [pod 安全策略](../../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)。请参阅 [RKE2 文档](https://docs.rke2.io/security/policies/)来了解每个可用策略的规范。
+为集群选择默认的 [pod 安全策略](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)。请参阅 [RKE2 文档](https://docs.rke2.io/security/policies/)来了解每个可用策略的规范。
 
 #### Worker CIS 配置文件
 

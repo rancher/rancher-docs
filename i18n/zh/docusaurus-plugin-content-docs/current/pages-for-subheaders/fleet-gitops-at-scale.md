@@ -9,7 +9,7 @@ Fleet 是一个独立于 Rancher 的项目，你可以使用 Helm 将它安装�
 
 ## 架构
 
-有关 Fleet 工作原理的信息，请参阅[此处](../explanations/integrations-in-rancher/fleet-gitops-at-scale/architecture.md)。
+有关 Fleet 工作原理的信息，请参阅[此处](../integrations-in-rancher/fleet-gitops-at-scale/architecture.md)。
 
 ## 在 Rancher UI 中访问 Fleet
 
@@ -37,7 +37,7 @@ Fleet 预装在 Rancher 中，可以通过 Rancher UI 中的**持续交付**选�
 
 ## Windows 支持
 
-有关对具有 Windows 节点的集群的支持，请参阅[此页面](../explanations/integrations-in-rancher/fleet-gitops-at-scale/windows-support.md)。
+有关对具有 Windows 节点的集群的支持，请参阅[此页面](../integrations-in-rancher/fleet-gitops-at-scale/windows-support.md)。
 
 ## GitHub 仓库
 
@@ -45,7 +45,7 @@ Fleet 预装在 Rancher 中，可以通过 Rancher UI 中的**持续交付**选�
 
 ## 在代理后使用 Fleet
 
-有关在代理后使用 Fleet 的详细信息，请参阅[此页面](../explanations/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy.md)。
+有关在代理后使用 Fleet 的详细信息，请参阅[此页面](../integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy.md)。
 
 ## Helm Chart 依赖
 

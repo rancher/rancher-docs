@@ -44,7 +44,7 @@ EKS 集群必须至少有一个托管节点组才能导入 Rancher 或通过 Ran
 1. 选择集群类型。
 1. 使用**成员角色**为集群配置用户授权。点击**添加成员**添加可以访问集群的用户。使用**角色**下拉菜单为每个用户设置权限。
 1. 如果你在 Rancher 中导入一个通用 Kubernetes 集群，请执行以下步骤：<br/>
-   a. 点击**集群选项**下的 **Agent 环境变量**，为 [rancher cluster agent](launch-kubernetes-with-rancher/about-rancher-agents.md) 设置环境变量。你可以使用键值对设置环境变量。如果 Rancher Agent 需要使用代理与 Rancher Server 通信，则可以使用 Agent 环境变量设置 `HTTP_PROXY`，`HTTPS_PROXY` 和 `NO_PROXY` 环境变量。<br/>
+   a. 点击**集群选项**下的 **Agent 环境变量**，为 [rancher cluster agent](../launch-kubernetes-with-rancher/about-rancher-agents.md) 设置环境变量。你可以使用键值对设置环境变量。如果 Rancher Agent 需要使用代理与 Rancher Server 通信，则可以使用 Agent 环境变量设置 `HTTP_PROXY`，`HTTPS_PROXY` 和 `NO_PROXY` 环境变量。<br/>
    b. 启用项目网络隔离，确保集群支持 Kubernetes `NetworkPolicy` 资源。用户可以通过**项目网络隔离**选项下的**高级选项**下拉菜单进行操作。
 1. 单击**创建**。
 1. 此处会显示 `cluster-admin` 权限的先决条件（参见上文的**先决条件**），其中包括满足先决条件的示例命令。
@@ -125,7 +125,7 @@ Rancher 管理注册集群的范围取决于集群的类型。
 
 注册集群后，集群所有者可以：
 
-- 通过 RBAC [管理集群访问](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)
+- 通过 RBAC [管理集群访问](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)
 - 启用[Monitoring、告警和 Notifiers](../../../pages-for-subheaders/monitoring-and-alerting.md)
 - 启用 [Logging](../../../pages-for-subheaders/logging.md)
 - 启用 [Istio](../../../pages-for-subheaders/istio.md)
@@ -195,7 +195,7 @@ kubectl get plans -A -o yaml
 
 _从 v2.6.3 起可用_
 
-授权集群端点 (ACE) 已支持注册的 RKE2 和 K3s 集群。此支持还包括你在下游集群上启用 ACE 的手动步骤。有关授权集群端点的更多信息，请单击[这里](../../advanced-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint.md)。
+授权集群端点 (ACE) 已支持注册的 RKE2 和 K3s 集群。此支持还包括你在下游集群上启用 ACE 的手动步骤。有关授权集群端点的更多信息，请单击[这里](../manage-clusters/access-clusters/authorized-cluster-endpoint.md)。
 
 :::note 注意事项：
 
@@ -203,7 +203,7 @@ _从 v2.6.3 起可用_
 
 - 以下步骤适用于在 v2.6.x 中注册的 RKE2 和 K3s 集群，以及从先前的 Rancher 版本注册（或导入）并升级到 v2.6.x 的集群。
 
-- 这些步骤将改变下游 RKE2 和 K3s 集群的配置并部署 `kube-api-authn-webhook`。如果 ACE 的未来实现需要更新 `kube-api-authn-webhook`，那么这也必须手动完成。有关此 webhook 的更多信息，请单击[此处](../../advanced-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint.md#关于-kube-api-auth-身份验证-webhook)。
+- 这些步骤将改变下游 RKE2 和 K3s 集群的配置并部署 `kube-api-authn-webhook`。如果 ACE 的未来实现需要更新 `kube-api-authn-webhook`，那么这也必须手动完成。有关此 webhook 的更多信息，请单击[此处](../manage-clusters/access-clusters/authorized-cluster-endpoint.md#关于-kube-api-auth-身份验证-webhook)。
 
 :::
 

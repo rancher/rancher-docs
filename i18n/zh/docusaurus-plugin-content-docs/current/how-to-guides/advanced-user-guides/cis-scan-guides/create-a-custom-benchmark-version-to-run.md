@@ -6,4 +6,4 @@ title: 为集群扫描创建自定义 Benchmark 版本
 
 现在，你可以使用 `rancher-cis-benchmark` 应用来创建自定义 Benchmark 版本，从而运行集群扫描。
 
-有关详细信息，请参阅[此页面](../../../explanations/integrations-in-rancher/cis-scans/custom-benchmark.md)。
+有关详细信息，请参阅[此页面](../../../integrations-in-rancher/cis-scans/custom-benchmark.md)。

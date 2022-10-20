@@ -2,7 +2,7 @@
 title: 身份验证、权限和全局配置
 ---
 
-安装完成后，[系统管理员](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)需要配置 Rancher 来配置身份验证，安全，默认设定，安全策略，驱动和全局 DNS 条目。
+安装完成后，[系统管理员](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)需要配置 Rancher 来配置身份验证，安全，默认设定，安全策略，驱动和全局 DNS 条目。
 
 ## 首次登录
 
@@ -18,7 +18,7 @@ Rancher Server 的 URL 在设置后不可再更新。因此，你需要谨慎设
 
 Rancher 向 Kubernetes 添加的关键功能之一，就是集中式用户身份验证。此功能允许将本地用户连接到外部身份验证系统，使用该系统的用户和组进行身份验证。
 
-有关身份验证如何工作及如何设置外部身份认证系统，请参见[身份验证](about-authentication.md)。
+有关身份验证如何工作及如何设置外部身份认证系统，请参见[身份验证](authentication-config.md)。
 
 ## 授权
 
@@ -30,7 +30,7 @@ Rancher 通过 _用户_ 进行授权管理。用户的 _授权_ 或系统访问�
 
 _Pod 安全策略（PSP）_ 是用来控制安全敏感相关 Pod 规范（例如 root 特权）的对象。如果某个 Pod 不满足 PSP 指定的条件，Kubernetes 将不允许它启动，并在 Rancher 中显示错误消息。
 
-有关如何创建和使用 PSP，请参见 [Pod 安全策略](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)。
+有关如何创建和使用 PSP，请参见 [Pod 安全策略](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)。
 
 ## 配置驱动
 

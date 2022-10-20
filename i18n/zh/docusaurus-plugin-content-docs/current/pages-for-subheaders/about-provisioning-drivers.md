@@ -37,11 +37,11 @@ Rancher 中有两种类型的驱动：
 
 Rancher 支持几家主要的云提供商，但默认情况下，这些主机驱动处于 active 状态并可供部署：
 
-* [Amazon EC2](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md)
-* [Azure](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster.md)
-* [Digital Ocean](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-a-digitalocean-cluster.md)
+* [Amazon EC2](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md)
+* [Azure](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster.md)
+* [Digital Ocean](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-a-digitalocean-cluster.md)
 * [vSphere](vsphere.md)
 
 还有其他几个默认禁用的主机驱动，但打包在 Rancher 中：
 
-* [Harvester](../explanations/integrations-in-rancher/harvester.md#harvester-主机驱动) - 在 Rancher 2.6.1 中可用
+* [Harvester](../integrations-in-rancher/harvester.md#harvester-主机驱动) - 在 Rancher 2.6.1 中可用

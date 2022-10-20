@@ -19,7 +19,7 @@ title: 资源
 安装 Rancher 时，有如下几个可开启的高级选项：每个安装指南中都提供了对应的选项。了解选项详情：
 
 - [自定义 CA 证书](../getting-started/installation-and-upgrade/resources/custom-ca-root-certificates.md)
-- [API 审计日志](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/enable-api-audit-log.md)
-- [TLS 设置](../reference-guides/installation-references/tls-settings.md)
-- [etcd 配置](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/tune-etcd-for-large-installs.md)
+- [API 审计日志](../how-to-guides/advanced-user-guides/enable-api-audit-log.md)
+- [TLS 设置](../getting-started/installation-and-upgrade/installation-references/tls-settings.md)
+- [etcd 配置](../how-to-guides/advanced-user-guides/tune-etcd-for-large-installs.md)
 - [离线安装 Local System Chart](../getting-started/installation-and-upgrade/resources/local-system-charts.md)

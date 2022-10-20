@@ -19,9 +19,9 @@ title: EC2 节点模板配置
 
 参阅下面的三个示例 JSON 策略：
 
-- [IAM 策略示例](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#iam-策略示例)
-- [带有 PassRole 的 IAM 策略示例](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#带有-passrole-的-iam-策略示例)（如果要使用 [Kubernetes 云提供商](../../../../pages-for-subheaders/set-up-cloud-providers.md)，或将 IAM 配置文件传递给实例，则需要）
-- [允许用户加密 EBS 卷的 IAM 策略示例](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#允许加密-ebs-卷的-iam-策略示例)
+- [IAM 策略示例](../../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#iam-策略示例)
+- [带有 PassRole 的 IAM 策略示例](../../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#带有-passrole-的-iam-策略示例)（如果要使用 [Kubernetes 云提供商](../../../../pages-for-subheaders/set-up-cloud-providers.md)，或将 IAM 配置文件传递给实例，则需要）
+- [允许用户加密 EBS 卷的 IAM 策略示例](../../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#允许加密-ebs-卷的-iam-策略示例)
 
 ### 验证和配置节点
 

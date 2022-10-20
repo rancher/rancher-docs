@@ -7,10 +7,6 @@
     "message": "开始使用",
     "description": "The label for category Getting Started in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Introduction": {
-    "message": "介绍",
-    "description": "The label for category Introduction in sidebar tutorialSidebar"
-  },
   "sidebar.tutorialSidebar.category.Quick Start Guides": {
     "message": "快速入门指南",
     "description": "The label for category Quick Start Guides in sidebar tutorialSidebar"
@@ -55,17 +51,9 @@
     "message": "资源",
     "description": "The label for category Resources in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Advanced Options": {
-    "message": "高级选项",
-    "description": "The label for category Advanced Options in sidebar tutorialSidebar"
-  },
   "sidebar.tutorialSidebar.category.Enable Experimental Features": {
     "message": "启用实验功能",
     "description": "The label for category Enable Experimental Features in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Advanced Use Cases": {
-    "message": "高级用例",
-    "description": "The label for category Advanced Use Cases in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.How-to Guides": {
     "message": "操作指南",
@@ -119,10 +107,6 @@
     "message": "设置云提供商",
     "description": "The label for category Set Up Cloud Providers in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Other Cloud Providers": {
-    "message": "其他云提供商",
-    "description": "The label for category Other Cloud Providers in sidebar tutorialSidebar"
-  },
   "sidebar.tutorialSidebar.category.Kubernetes Resources Setup": {
     "message": "Kubernetes 资源设置",
     "description": "The label for category Kubernetes Resources Setup in sidebar tutorialSidebar"
@@ -158,10 +142,6 @@
   "sidebar.tutorialSidebar.category.Authentication, Permissions, and Global Configuration": {
     "message": "身份验证、权限和全局配置",
     "description": "The label for category Authentication, Permissions, and Global Configuration in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.About Authentication": {
-    "message": "身份验证",
-    "description": "The label for category About Authentication in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Authentication Config": {
     "message": "身份验证配置",
@@ -202,10 +182,6 @@
   "sidebar.tutorialSidebar.category.Create Kubernetes Persistent Storage": {
     "message": "创建 Kubernetes 持久存储",
     "description": "The label for category Create Kubernetes Persistent Storage in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Manage Persistent Storage": {
-    "message": "管理持久存储",
-    "description": "The label for category Manage Persistent Storage in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Provisioning Storage Examples": {
     "message": "配置存储示例",
@@ -346,10 +322,6 @@
   "sidebar.tutorialSidebar.category.SELinux RPM": {
     "message": "SELinux RPM",
     "description": "The label for category SELinux RPM in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Explanations": {
-    "message": "说明",
-    "description": "The label for category Explanations in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Integrations in Rancher": {
     "message": "Rancher 中的集成",

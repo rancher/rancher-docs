@@ -97,11 +97,11 @@ EKS 和 GKE 集群扫描的配置文件基于这些集群类型特定的 CIS Ben
 
 ## RBAC
 
-有关权限的详细信息，请参阅[此页面](../explanations/integrations-in-rancher/cis-scans/rbac-for-cis-scans.md)。
+有关权限的详细信息，请参阅[此页面](../integrations-in-rancher/cis-scans/rbac-for-cis-scans.md)。
 
 ## 配置
 
-有关为扫描、配置文件和 Benchmark 版本配置自定义资源的更多信息，请参阅[此页面](../explanations/integrations-in-rancher/cis-scans/configuration-reference.md)。
+有关为扫描、配置文件和 Benchmark 版本配置自定义资源的更多信息，请参阅[此页面](../integrations-in-rancher/cis-scans/configuration-reference.md)。
 
 ## 操作指南
 

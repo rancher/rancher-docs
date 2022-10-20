@@ -14,7 +14,7 @@ RKE 模板有助于标准化这些配置。无论是使用 Rancher UI、Rancher 
 
 如果集群是使用 RKE 模板创建的，则不能让集群使用另一个 RKE 模板。你只能将集群更新为同一模板的新版本。
 
-你可以[将现有集群的配置保存为 RKE 模板](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#将现有集群转换为使用-rke-模板)。这样，只有模板更新后才能更改集群的设置。新模板还可用于启动新集群。
+你可以[将现有集群的配置保存为 RKE 模板](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#将现有集群转换为使用-rke-模板)。这样，只有模板更新后才能更改集群的设置。新模板还可用于启动新集群。
 
 RKE 模板的核心功能允许 DevOps 和安全团队：
 
@@ -45,24 +45,24 @@ RKE 模板的[附加组件](#附加组件)的功能特别强大，因为它允�
 
 Rancher 配置的集群支持 RKE 模板。模板可用于配置自定义集群或由基础设施提供商启动的集群。
 
-RKE 模板用于定义 Kubernetes 和 Rancher 设置。节点模板负责配置节点。有关如何将 RKE 模板与硬件结合使用的参考，请参阅 [RKE 模板和硬件](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/infrastructure.md)。
+RKE 模板用于定义 Kubernetes 和 Rancher 设置。节点模板负责配置节点。有关如何将 RKE 模板与硬件结合使用的参考，请参阅 [RKE 模板和硬件](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/infrastructure.md)。
 
 可以从头开始创建 RKE 模板来预先定义集群配置。它们可以用于启动新集群，也可以从现有的 RKE 集群导出模板。
 
-现有集群的设置可以[保存为 RKE 模板](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#将现有集群转换为使用-rke-模板)。这会创建一个新模板并将集群设置绑定到该模板。这样，集群只有在[模板更新](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md#更新模板)的情况下才能[使用新版本的模板](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md#升级集群以使用新的模板修订版)进行升级。新模板也可以用来创建新集群。
+现有集群的设置可以[保存为 RKE 模板](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#将现有集群转换为使用-rke-模板)。这会创建一个新模板并将集群设置绑定到该模板。这样，集群只有在[模板更新](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md#更新模板)的情况下才能[使用新版本的模板](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md#升级集群以使用新的模板修订版)进行升级。新模板也可以用来创建新集群。
 
 
 ## 示例场景
 如果一个组织同时拥有普通和高级 Rancher 用户，管理员可能希望为高级用户提供更多用于集群创建的选项，并限制普通用户的选项。
 
-这些[示例场景](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md)描述组织如何使用模板来标准化集群创建。
+这些[示例场景](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md)描述组织如何使用模板来标准化集群创建。
 
 示例场景包括：
 
-- **强制执行模板**：如果希望所有 Rancher 配置的新集群都具有某些设置，管理员可能想要[为每个用户强制执行一项或多项模板设置](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#强制执行模板设置)。
-- **与不同的用户共享不同的模板**：管理员可以为[普通用户和高级用户提供不同的模板](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#普通用户和高级用户模板)。这样，普通用户会有更多限制选项，而高级用户在创建集群时可以使用更多选项。
-- **更新模板设置**：如果组织的安全和 DevOps 团队决定将最佳实践嵌入到新集群所需的设置中，这些最佳实践可能会随着时间而改变。如果最佳实践发生变化，[可以将模板更新为新版本](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#更新模板和集群)，这样，使用模板创建的集群可以[升级到模板的新版本](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md#升级集群以使用新的模板修订版)。
-- **共享模板的所有权**：当模板所有者不再想要维护模板或想要共享模板的所有权时，此方案描述了如何[共享模板所有权](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#允许其他用户控制和共享模板)。
+- **强制执行模板**：如果希望所有 Rancher 配置的新集群都具有某些设置，管理员可能想要[为每个用户强制执行一项或多项模板设置](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#强制执行模板设置)。
+- **与不同的用户共享不同的模板**：管理员可以为[普通用户和高级用户提供不同的模板](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#普通用户和高级用户模板)。这样，普通用户会有更多限制选项，而高级用户在创建集群时可以使用更多选项。
+- **更新模板设置**：如果组织的安全和 DevOps 团队决定将最佳实践嵌入到新集群所需的设置中，这些最佳实践可能会随着时间而改变。如果最佳实践发生变化，[可以将模板更新为新版本](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#更新模板和集群)，这样，使用模板创建的集群可以[升级到模板的新版本](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md#升级集群以使用新的模板修订版)。
+- **共享模板的所有权**：当模板所有者不再想要维护模板或想要共享模板的所有权时，此方案描述了如何[共享模板所有权](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#允许其他用户控制和共享模板)。
 
 ## 模板管理
 
@@ -78,30 +78,30 @@ RKE 模板更新通过修订系统处理。如果要更改或更新模板，请�
 
 本节中的文件解释了 RKE 模板管理的细节：
 
-- [获取创建模板的权限](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/creator-permissions.md)
-- [创建和修改模板](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md)
-- [强制执行模板设置](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/enforce-templates.md#强制新集群使用-rke-模板)
-- [覆盖模板设置](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/override-template-settings.md)
-- [与集群创建者共享模板](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates.md#与特定用户或组共享模板)
-- [共享模板的所有权](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates.md#共享模板所有权)
+- [获取创建模板的权限](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/creator-permissions.md)
+- [创建和修改模板](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md)
+- [强制执行模板设置](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/enforce-templates.md#强制新集群使用-rke-模板)
+- [覆盖模板设置](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/override-template-settings.md)
+- [与集群创建者共享模板](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates.md#与特定用户或组共享模板)
+- [共享模板的所有权](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates.md#共享模板所有权)
 
 你可以参见此[模板的示例 YAML 文件](../reference-guides/rke1-template-example-yaml.md)作为参考。
 
 ## 应用模板
 
-你可以使用你自己创建的模板来[创建集群](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#使用-rke-模板创建集群)，也可以使用[与你共享的模板](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates.md)来创建集群。
+你可以使用你自己创建的模板来[创建集群](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#使用-rke-模板创建集群)，也可以使用[与你共享的模板](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates.md)来创建集群。
 
-如果 RKE 模板所有者创建了模板的新版本，你可以[将你的集群升级到该版本](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#更新使用-rke-模板创建的集群)。
+如果 RKE 模板所有者创建了模板的新版本，你可以[将你的集群升级到该版本](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#更新使用-rke-模板创建的集群)。
 
 可以从头开始创建 RKE 模板来预先定义集群配置。它们可以用于启动新集群，也可以从现有的 RKE 集群导出模板。
 
-你可以[将现有集群的配置保存为 RKE 模板](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#将现有集群转换为使用-rke-模板)。这样，只有模板更新后才能更改集群的设置。
+你可以[将现有集群的配置保存为 RKE 模板](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#将现有集群转换为使用-rke-模板)。这样，只有模板更新后才能更改集群的设置。
 
 ## 标准化硬件
 
-RKE 模板的目的是标准化 Kubernetes 和 Rancher 设置。如果你还想标准化你的基础设施，一个选择是将 RKE 模板与[其他工具](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/infrastructure.md)一起使用。
+RKE 模板的目的是标准化 Kubernetes 和 Rancher 设置。如果你还想标准化你的基础设施，一个选择是将 RKE 模板与[其他工具](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/infrastructure.md)一起使用。
 
-另一种选择是使用包含节点池配置选项，但不强制执行配置的[集群模板](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates.md)。
+另一种选择是使用包含节点池配置选项，但不强制执行配置的[集群模板](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates.md)。
 
 ## YAML 定制
 

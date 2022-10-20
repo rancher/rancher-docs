@@ -1,6 +1,7 @@
 ---
 title: 为 Rancher 设置高可用的 RKE2 Kubernetes 集群
 ---
+
 _已在 2.5.6 版本测试_
 
 本文介绍了如何根据 [Rancher Server 环境的最佳实践](../../../reference-guides/rancher-manager-architecture/architecture-recommendations.md#kubernetes-安装环境)安装 Kubernetes 集群。

@@ -30,7 +30,7 @@ Rancher 还可以创建节点池。在托管在云厂商的节点池上安装 Ku
 
 在这种情况下，你希望将 Kubernetes 安装到裸机服务器、本地虚拟机或云厂商中已存在的虚拟机上。使用此选项，你将在主机上运行 Rancher Agent Docker 容器。
 
-如果要重复使用之前的自定义集群中的节点，请在复用之前[清理节点](../how-to-guides/advanced-user-guides/manage-clusters/clean-cluster-nodes.md)。如果你重复使用尚未清理的节点，则集群配置可能会失败。
+如果要重复使用之前的自定义集群中的节点，请在复用之前[清理节点](../how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes.md)。如果你重复使用尚未清理的节点，则集群配置可能会失败。
 
 有关详细信息，请参阅[自定义节点](use-existing-nodes.md)。
 

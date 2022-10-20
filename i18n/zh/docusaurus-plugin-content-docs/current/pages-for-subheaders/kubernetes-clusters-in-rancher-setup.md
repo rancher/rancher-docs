@@ -37,7 +37,7 @@ import ClusterCapabilitiesTable from '../shared-files/_cluster-capabilities-tabl
 
 如果你已经有一个想要添加到 RKE 集群的节点，你可以通过在节点上运行 Rancher Agent 容器将节点添加到集群中。
 
-有关详细信息，请参阅 [RKE 集群](launch-kubernetes-with-rancher.md)。
+有关详细信息，请参阅 [RKE 集群](../pages-for-subheaders/launch-kubernetes-with-rancher.md)。
 
 ### 在基础设施提供商中启动 Kubernetes 并配置节点
 

@@ -10,7 +10,7 @@ title: 设置指南
 
 本指南假设你已经[安装 Rancher](installation-and-upgrade.md)，且已经[配置了一个单独的 Kubernetes 集群](kubernetes-clusters-in-rancher-setup.md)并要在该集群上安装 Istio。
 
-集群中的节点必须满足 [CPU 和内存要求](../explanations/integrations-in-rancher/istio/cpu-and-memory-allocations.md)。
+集群中的节点必须满足 [CPU 和内存要求](../integrations-in-rancher/istio/cpu-and-memory-allocations.md)。
 
 Istio 控制的工作负载和服务必须满足 [Istio 要求](https://istio.io/docs/setup/additional-setup/requirements/)。
 
