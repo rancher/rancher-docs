@@ -101,3 +101,11 @@ Configuration of external authentication affects how principal users are managed
     ![Sign In External Principal](/img/users-page.png)
 
 6. The external principal and the local principal share the same access rights.
+
+:::note Reconfiguring a previously set up auth provider
+
+If you need to reconfigure or disable then re-enable a provider that had been previously set up, ensure that the user who attempts to do so
+is logged in to Rancher as an external user, not the local admin.
+
+:::
+
