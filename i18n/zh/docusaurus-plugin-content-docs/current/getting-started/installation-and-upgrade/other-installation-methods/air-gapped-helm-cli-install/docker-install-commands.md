@@ -36,7 +36,7 @@ Docker 安装适用于想要测试 Rancher 的用户。
 | 占位符 | 描述 |
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | `<REGISTRY.YOURDOMAIN.COM:PORT>` | 私有镜像仓库的 URL 和端口。 |
-| `<RANCHER_VERSION_TAG>` | 你想要安装的 [Rancher 版本](../../../../reference-guides/installation-references/helm-chart-options.md)的版本标签。 |
+| `<RANCHER_VERSION_TAG>` | 你想要安装的 [Rancher 版本](../../installation-references/helm-chart-options.md)的版本标签。 |
 
 特权访问是[必须](#rancher-特权访问)的。
 
@@ -76,7 +76,7 @@ docker run -d --restart=unless-stopped \
 | `<PRIVATE_KEY.pem>` | 证书私钥的路径。 |
 | `<CA_CERTS.pem>` | CA 证书的路径。 |
 | `<REGISTRY.YOURDOMAIN.COM:PORT>` | 私有镜像仓库的 URL 和端口。 |
-| `<RANCHER_VERSION_TAG>` | 你想要安装的 [Rancher 版本](../../../../reference-guides/installation-references/helm-chart-options.md)的版本标签。 |
+| `<RANCHER_VERSION_TAG>` | 你想要安装的 [Rancher 版本](../../installation-references/helm-chart-options.md)的版本标签。 |
 
 特权访问是[必须](#rancher-特权访问)的。
 
@@ -115,7 +115,7 @@ docker run -d --restart=unless-stopped \
 | `<FULL_CHAIN.pem>` | 完整证书链的路径。 |
 | `<PRIVATE_KEY.pem>` | 证书私钥的路径。 |
 | `<REGISTRY.YOURDOMAIN.COM:PORT>` | 私有镜像仓库的 URL 和端口。 |
-| `<RANCHER_VERSION_TAG>` | 你想要安装的 [Rancher 版本](../../../../reference-guides/installation-references/helm-chart-options.md)的版本标签。 |
+| `<RANCHER_VERSION_TAG>` | 你想要安装的 [Rancher 版本](../../installation-references/helm-chart-options.md)的版本标签。 |
 
 :::note
 

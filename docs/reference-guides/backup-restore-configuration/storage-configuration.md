@@ -29,7 +29,7 @@ You can choose to not have any operator-level storage location configured. If yo
 
 Installing the `rancher-backup` chart by selecting the StorageClass option will create a Persistent Volume Claim (PVC), and Kubernetes will in turn dynamically provision a Persistent Volume (PV) where all the backups will be saved by default.
 
-For information about creating storage classes refer to [this section.](../../how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/dynamically-provision-new-storage.md)
+For information about creating storage classes refer to [this section.](../../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/dynamically-provision-new-storage.md)
 
 :::note Important:
 
@@ -40,7 +40,7 @@ If no such StorageClass is available, after the PV is provisioned, make sure to 
 
 ### Existing Persistent Volume
 
-Select an existing Persistent Volume (PV) that will be used to store your backups. For information about creating PersistentVolumes in Rancher, refer to [this section.](../../how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/set-up-existing-storage.md#2-add-a-persistent-volume-that-refers-to-the-persistent-storage)
+Select an existing Persistent Volume (PV) that will be used to store your backups. For information about creating PersistentVolumes in Rancher, refer to [this section.](../../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/set-up-existing-storage.md#2-add-a-persistent-volume-that-refers-to-the-persistent-storage)
 
 :::note Important:
 

@@ -25,7 +25,7 @@ Monitoring 应用允许你：
 
 # Monitoring 的工作原理
 
-有关 monitoring 组件如何协同工作的说明，请参阅[此页面](../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)。
+有关 monitoring 组件如何协同工作的说明，请参阅[此页面](../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)。
 
 # 默认组件和部署
 
@@ -33,7 +33,7 @@ Monitoring 应用允许你：
 
 默认情况下，监控应用将 Grafana 仪表板（由 [kube-prometheus](https://github.com/prometheus-operator/kube-prometheus) 项目策划）部署到集群上。
 
-它还部署一个 Alertmanager UI 和一个 Prometheus UI。有关这些工具的更多信息，请参见[内置仪表板](../explanations/integrations-in-rancher/monitoring-and-alerting/built-in-dashboards.md)。
+它害部署一个 Alertmanager UI 和一个 Prometheus UI。有关这些工具的更多信息，请参见[内置仪表板](../integrations-in-rancher/monitoring-and-alerting/built-in-dashboards.md)。
 ### 默认指标 Exporter
 
 默认情况下，Rancher Monitoring 会部署 Exporter（例如 [node-exporter](https://github.com/prometheus/node_exporter) 和 [kube-state-metrics](https://github.com/kubernetes/kube-state-metrics)）。
@@ -42,15 +42,15 @@ Monitoring 应用允许你：
 
 ### 默认告警
 
-Monitoring 应用会默认部署一些告警。要查看默认告警，请转到 [Alertmanager UI](../explanations/integrations-in-rancher/monitoring-and-alerting/built-in-dashboards.md#alertmanager-ui) 并单击**展开所有组**。
+Monitoring 应用会默认部署一些告警。要查看默认告警，请转到 [Alertmanager UI](../integrations-in-rancher/monitoring-and-alerting/built-in-dashboards.md#alertmanager-ui) 并单击**展开所有组**。
 
 ### Rancher UI 中公开的组件
 
-有关 Rancher UI 中公开的监控组件列表，以及编辑它们的常见用例，请参阅[本节](../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#rancher-ui-中公开的组件)。
+有关 Rancher UI 中公开的监控组件列表，以及编辑它们的常见用例，请参阅[本节](../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#rancher-ui-中公开的组件)。
 
 # RBAC
 
-有关配置 monitoring 访问权限的信息，请参阅[此页面](../explanations/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md)。
+有关配置 monitoring 访问权限的信息，请参阅[此页面](../integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md)。
 
 # 指南
 
@@ -66,7 +66,7 @@ Monitoring 应用会默认部署一些告警。要查看默认告警，请转到
 
 ### 在 Rancher 中配置 Monitoring 资源
 
-> 此处的配置参考假设你已经熟悉 monitoring 组件的协同工作方式。如需更多信息，请参阅 [monitoring 的工作原理](../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)。
+> 此处的配置参考假设你已经熟悉 monitoring 组件的协同工作方式。如需更多信息，请参阅 [monitoring 的工作原理](../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)。
 
 - [ServiceMonitor 和 PodMonitor](../reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors.md)
 - [接收器](../reference-guides/monitoring-v2-configuration/receivers.md)
@@ -85,7 +85,7 @@ Monitoring 应用会默认部署一些告警。要查看默认告警，请转到
 
 为了能够为 Windows 完全部署 Monitoring V2，你的所有 Windows 主机都必须至少具有 v0.1.0 的 [wins](https://github.com/rancher/wins) 版本。
 
-有关如何在现有 Windows 主机上升级 wins 版本的更多详细信息，请参阅 [Windows 集群对 Monitoring V2 的支持](../explanations/integrations-in-rancher/monitoring-and-alerting/windows-support.md)。
+有关如何在现有 Windows 主机上升级 wins 版本的更多详细信息，请参阅 [Windows 集群对 Monitoring V2 的支持](../integrations-in-rancher/monitoring-and-alerting/windows-support.md)。
 
 
 

@@ -26,7 +26,7 @@ API 有自己的用户界面，你可以从 Web 浏览器访问它。这是查�
 
 ## 身份验证
 
-API 请求必须包含身份验证信息。身份验证是通过 [API 密钥](../reference-guides/user-settings/api-keys.md)使用 HTTP 基本身份验证完成的。API 密钥可以创建新集群并通过 `/v3/clusters/` 访问多个集群。[集群和项目角色](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)会应用于这些键，并限制账号可以查看的集群和项目以及可以执行的操作。
+API 请求必须包含身份验证信息。身份验证是通过 [API 密钥](../reference-guides/user-settings/api-keys.md)使用 HTTP 基本身份验证完成的。API 密钥可以创建新集群并通过 `/v3/clusters/` 访问多个集群。[集群和项目角色](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)会应用于这些键，并限制账号可以查看的集群和项目以及可以执行的操作。
 
 默认情况下，某些集群级别的 API 令牌是使用无限期 TTL（`ttl=0`）生成的。换言之，除非你让令牌失效，否则 `ttl=0` 的 API 令牌永远不会过期。有关如何使 API 令牌失效的详细信息，请参阅 [API 令牌](../reference-guides/about-the-api/api-tokens.md)。
 

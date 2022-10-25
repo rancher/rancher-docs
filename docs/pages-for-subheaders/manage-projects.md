@@ -15,19 +15,19 @@ Rancher projects resolve this issue by allowing you to apply resources and acces
 
 You can use projects to perform actions like:
 
-- [Assign users access to a group of namespaces](../how-to-guides/advanced-user-guides/manage-projects/add-users-to-projects.md)
-- Assign users [specific roles in a project](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-roles). A role can be owner, member, read-only, or [custom](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/custom-roles.md)
+- [Assign users access to a group of namespaces](../how-to-guides/new-user-guides/add-users-to-projects.md)
+- Assign users [specific roles in a project](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-roles). A role can be owner, member, read-only, or [custom](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/custom-roles.md)
 - [Set resource quotas](manage-project-resource-quotas.md)
-- [Manage namespaces](../how-to-guides/advanced-user-guides/manage-projects/manage-namespaces.md)
+- [Manage namespaces](../how-to-guides/new-user-guides/manage-namespaces.md)
 - [Configure tools](../reference-guides/rancher-project-tools.md)
 - [Set up pipelines for continuous integration and deployment](../how-to-guides/advanced-user-guides/manage-projects/ci-cd-pipelines.md)
 - [Configure pod security policies](../how-to-guides/advanced-user-guides/manage-projects/manage-pod-security-policies.md)
 
 ### Authorization
 
-Non-administrative users are only authorized for project access after an [administrator](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md), [cluster owner or member](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles), or [project owner](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-roles) adds them to the project's **Members** tab.
+Non-administrative users are only authorized for project access after an [administrator](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md), [cluster owner or member](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles), or [project owner](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-roles) adds them to the project's **Members** tab.
 
-Whoever creates the project automatically becomes a [project owner](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-roles).
+Whoever creates the project automatically becomes a [project owner](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-roles).
 
 ## Switching between Projects
 

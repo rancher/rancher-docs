@@ -4,13 +4,13 @@ title: 覆盖命名空间的默认限制
 
 **命名空间默认限制**会在创建时从项目沿用到每个命名空间。但在某些情况下，你可能需要增加或减少特定命名空间的配额。在这种情况下，你可以通过编辑命名空间来覆盖默认限制。
 
-在下图中，Rancher 管理员的项目有一个已生效的资源配额。但是，管理员想要覆盖 `Namespace 3` 的命名空间限制，以便让该命名空间使用更多资源。因此，管理员[提高了 `Namespace 3` 的命名空间限制](../../manage-clusters/projects-and-namespaces.md)，以便命名空间可以访问更多资源。
+在下图中，Rancher 管理员的项目有一个已生效的资源配额。但是，管理员想要覆盖 `Namespace 3` 的命名空间限制，以便让该命名空间使用更多资源。因此，管理员[提高了 `Namespace 3` 的命名空间限制](../../../new-user-guides/manage-clusters/projects-and-namespaces.md)，以便命名空间可以访问更多资源。
 
 <sup>命名空间默认限制覆盖</sup>
 
 ![命名空间默认限制覆盖](/img/rancher-resource-quota-override.svg)
 
-有关详细信息，请参阅[如何编辑命名空间资源配额](../../manage-clusters/projects-and-namespaces.md)。
+有关详细信息，请参阅[如何编辑命名空间资源配额](../../../new-user-guides/manage-clusters/projects-and-namespaces.md)。
 
 ### 编辑命名空间资源配额
 

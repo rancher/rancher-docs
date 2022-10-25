@@ -51,7 +51,7 @@ Note that this is not a production-qualified deployment of Jaeger. This deployme
 
 ## Prerequisites
 
-Before enabling Istio, we recommend that you confirm that your Rancher worker nodes have enough [CPU and memory](../explanations/integrations-in-rancher/istio/cpu-and-memory-allocations.md) to run all of the components of Istio.
+Before enabling Istio, we recommend that you confirm that your Rancher worker nodes have enough [CPU and memory](../integrations-in-rancher/istio/cpu-and-memory-allocations.md) to run all of the components of Istio.
 
 If you are installing Istio on RKE2 cluster, some additional steps are required. For details, see [this section.](#additional-steps-for-installing-istio-on-an-rke2-cluster)
 
@@ -63,7 +63,7 @@ Refer to the [setup guide](istio-setup-guide.md) for instructions on how to set 
 
 ## Remove Istio
 
-To remove Istio components from a cluster, namespace, or workload, refer to the section on [uninstalling Istio.](../explanations/integrations-in-rancher/istio/disable-istio.md)
+To remove Istio components from a cluster, namespace, or workload, refer to the section on [uninstalling Istio.](../integrations-in-rancher/istio/disable-istio.md)
 
 ## Migrate From Previous Istio Version
 
@@ -75,7 +75,7 @@ Another option is to manually uninstall istio resources one at a time, but leave
 
 ## Accessing Visualizations
 
-> By default, only cluster-admins have access to Kiali. For instructions on how to allow admin, edit or views roles to access them, see [this section.](../explanations/integrations-in-rancher/istio/rbac-for-istio.md)
+> By default, only cluster-admins have access to Kiali. For instructions on how to allow admin, edit or views roles to access them, see [this section.](../integrations-in-rancher/istio/rbac-for-istio.md)
 
 After Istio is set up in a cluster, Grafana, Prometheus, and Kiali are available in the Rancher UI.
 
@@ -93,7 +93,7 @@ To access the Kiali visualization,
 1. In the left navigation bar, click **Istio**.
 1. Click **Kiali**. From here you can access the **Traffic Graph** tab or the **Traffic Metrics** tab to see network visualizations and metrics.
 
-By default, all namespace will picked up by prometheus and make data available for Kiali graphs. Refer to [selector/scrape config setup](../explanations/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md) if you would like to use a different configuration for prometheus data scraping.
+By default, all namespace will picked up by prometheus and make data available for Kiali graphs. Refer to [selector/scrape config setup](../integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md) if you would like to use a different configuration for prometheus data scraping. 
 
 Your access to the visualizations depend on your role. Grafana and Prometheus are only available for `cluster-admin` roles. The Kiali UI is available only to `cluster-admin` by default, but `cluster-admin` can allow other roles to access them by editing the Istio values.yaml.
 
@@ -121,4 +121,4 @@ By default the Egress gateway is disabled, but can be enabled on install or upgr
 
 ## Additional Steps for Installing Istio on an RKE2 Cluster
 
-To install Istio on an RKE2 cluster, follow the steps in [this section.](../explanations/integrations-in-rancher/istio/configuration-options/install-istio-on-rke2-cluster.md)
+To install Istio on an RKE2 cluster, follow the steps in [this section.](../integrations-in-rancher/istio/configuration-options/install-istio-on-rke2-cluster.md)

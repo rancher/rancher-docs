@@ -126,7 +126,7 @@ If the cloud provider you want to use is not listed as an option, you will need 
 
 #### Default Pod Security Policy
 
-Choose the default [pod security policy](../../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) for the cluster. Please refer to the [RKE2 documentation](https://docs.rke2.io/security/policies/) on the specifications of each available policy.
+Choose the default [pod security policy](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) for the cluster. Please refer to the [RKE2 documentation](https://docs.rke2.io/security/policies/) on the specifications of each available policy.
 
 #### Worker CIS Profile
 

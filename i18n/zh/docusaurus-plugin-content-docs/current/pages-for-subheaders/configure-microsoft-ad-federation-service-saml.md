@@ -20,8 +20,8 @@ title: 配置 Microsoft AD FS (SAML)
 
 要让 Rancher Server 使用 Microsoft AD FS，你需要在 Active Directory 服务器上配置 AD FS，并将 Rancher 配置为使用 AD FS 服务器。如果需要获取在 Rancher 中设置 Microsoft AD FS 身份验证的指南，请参见：
 
-- [1. 在 Microsoft AD FS 中配置 Rancher](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/configure-microsoft-ad-federation-service-saml/configure-ms-adfs-for-rancher.md)
-- [2. 在 Rancher 中配置 Microsoft AD FS](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/configure-microsoft-ad-federation-service-saml/configure-rancher-for-ms-adfs.md)
+- [1. 在 Microsoft AD FS 中配置 Rancher](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-microsoft-ad-federation-service-saml/configure-ms-adfs-for-rancher.md)
+- [2. 在 Rancher 中配置 Microsoft AD FS](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-microsoft-ad-federation-service-saml/configure-rancher-for-ms-adfs.md)
 
 :::note SAML 身份提供商注意事项
 
@@ -35,4 +35,4 @@ title: 配置 Microsoft AD FS (SAML)
 
 ### 后续操作
 
-[在 Microsoft AD FS 中配置 Rancher](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/configure-microsoft-ad-federation-service-saml/configure-ms-adfs-for-rancher.md)
+[在 Microsoft AD FS 中配置 Rancher](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-microsoft-ad-federation-service-saml/configure-ms-adfs-for-rancher.md)

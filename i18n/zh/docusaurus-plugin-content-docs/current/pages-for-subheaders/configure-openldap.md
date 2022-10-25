@@ -14,9 +14,9 @@ title: 配置 OpenLDAP
 
 ## 在 Rancher 中配置 OpenLDAP
 
-配置 OpenLDAP 服务器，组和用户的设置。有关填写每个字段的帮助，请参见[配置参考](../reference-guides/configure-openldap/openldap-config-reference.md)。
+配置 OpenLDAP 服务器，组和用户的设置。有关填写每个字段的帮助，请参见[配置参考](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-openldap/openldap-config-reference.md)。
 
-> 在开始之前，请熟悉[外部身份验证配置和主体用户](about-authentication.md#外部身份验证配置和用户主体)的概念。
+> 在开始之前，请熟悉[外部身份验证配置和主体用户](authentication-config.md#外部身份验证配置和用户主体)的概念。
 
 1. 在左上角，单击 **☰ > 用户 & 认证**。
 1. 在左侧导航栏，单击**认证**。

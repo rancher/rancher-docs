@@ -86,7 +86,7 @@ RKE 提供大量配置选项，用于针对你的环境进行自定义安装。
 
 如需了解选项和功能的完整列表，请参见 [RKE 官方文档](https://rancher.com/docs/rke/latest/en/config-options/)。
 
-要为大规模 Rancher 安装优化 etcd 集群，请参见 [etcd 设置指南](../../../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/tune-etcd-for-large-installs.md)。
+要为大规模 Rancher 安装优化 etcd 集群，请参见 [etcd 设置指南](../../advanced-user-guides/tune-etcd-for-large-installs.md)。
 
 有关 Dockershim 支持的详情，请参见[此页面](../../../getting-started/installation-and-upgrade/installation-requirements/dockershim.md)。
 

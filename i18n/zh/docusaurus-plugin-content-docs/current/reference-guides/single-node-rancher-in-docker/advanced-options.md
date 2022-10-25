@@ -33,7 +33,7 @@ API 审计日志记录了通过 Rancher Server 进行的所有用户和系统事
 
 默认情况下，API 审计日志会写入到 Rancher 容器内的 `/var/log/auditlog`。你可将此目录共享为卷，并设置 `AUDIT_LEVEL` 以启用日志。
 
-有关更多信息和选项，请参见 [API 审计日志](../../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/enable-api-audit-log.md)。
+有关更多信息和选项，请参见 [API 审计日志](../../how-to-guides/advanced-user-guides/enable-api-audit-log.md)。
 
 特权访问是[必须](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 
@@ -60,7 +60,7 @@ docker run -d --restart=unless-stopped \
 
 特权访问是[必须](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 
-参见 [TLS 设置](../installation-references/tls-settings.md)了解更多信息和选项。
+参见 [TLS 设置](../../getting-started/installation-and-upgrade/installation-references/tls-settings.md)了解更多信息和选项。
 
 ### 离线环境
 

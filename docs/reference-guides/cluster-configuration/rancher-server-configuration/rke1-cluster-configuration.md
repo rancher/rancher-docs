@@ -100,7 +100,7 @@ If the cloud provider you want to use is not listed as an option, you will need 
 
 The cluster-level private registry configuration is only used for provisioning clusters.
 
-There are two main ways to set up private registries in Rancher: by setting up the [global default registry](../../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry.md) through the **Settings** tab in the global view, and by setting up a private registry in the advanced options in the cluster-level settings. The global default registry is intended to be used for air-gapped setups, for registries that do not require credentials. The cluster-level private registry is intended to be used in all setups in which the private registry requires credentials.
+There are two main ways to set up private registries in Rancher: by setting up the [global default registry](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry.md) through the **Settings** tab in the global view, and by setting up a private registry in the advanced options in the cluster-level settings. The global default registry is intended to be used for air-gapped setups, for registries that do not require credentials. The cluster-level private registry is intended to be used in all setups in which the private registry requires credentials.
 
 If your private registry requires credentials, you need to pass the credentials to Rancher by editing the cluster options for each cluster that needs to pull images from the registry.
 
@@ -145,7 +145,7 @@ Each cloud provider capable of launching a cluster using RKE can collect metrics
 
 ### Pod Security Policy Support
 
-Enables [pod security policies](../../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) for the cluster. After enabling this option, choose a policy using the **Default Pod Security Policy** drop-down.
+Enables [pod security policies](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) for the cluster. After enabling this option, choose a policy using the **Default Pod Security Policy** drop-down.
 
 You must have an existing Pod Security Policy configured before you can use this option.
 
@@ -175,7 +175,7 @@ Option to enable or disable [recurring etcd snapshots](https://rancher.com/docs/
 
 ### Agent Environment Variables
 
-Option to set environment variables for [rancher agents](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/about-rancher-agents.md). The environment variables can be set using key value pairs. If rancher agent requires use of proxy to communicate with Rancher server, `HTTP_PROXY`, `HTTPS_PROXY` and `NO_PROXY` environment variables can be set using agent environment variables.
+Option to set environment variables for [rancher agents](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents.md). The environment variables can be set using key value pairs. If rancher agent requires use of proxy to communicate with Rancher server, `HTTP_PROXY`, `HTTPS_PROXY` and `NO_PROXY` environment variables can be set using agent environment variables.
 
 ### Updating ingress-nginx
 

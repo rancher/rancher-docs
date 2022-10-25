@@ -295,6 +295,12 @@ kubectl --kubeconfig ~/.kube/config/rke2.yaml get pods --all-namespaces
 
 参照 [RKE 官方文档](https://rancher.com/docs/rke/latest/en/installation/)的说明安装 RKE。
 
+:::note
+
+你可以在 [Rancher 支持矩阵](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/)中找到基于 Rancher 版本的 RKE 认证版本。
+
+:::
+
 ### 2. 创建 RKE 配置文件
 
 在可访问你 Linux 主机节点上的 22/TCP 端口和 6443/TCP 端口的系统上，使用以下示例创建一个名为 `rancher-cluster.yml` 的新文件。

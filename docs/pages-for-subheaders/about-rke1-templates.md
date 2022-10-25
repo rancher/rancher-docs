@@ -14,7 +14,7 @@ Admins control which cluster options can be changed by end users. RKE templates 
 
 If a cluster was created with an RKE template, you can't change it to a different RKE template. You can only update the cluster to a new revision of the same template.
 
-You can [save the configuration of an existing cluster as an RKE template.](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#converting-an-existing-cluster-to-use-an-rke-template) Then the cluster's settings can only be changed if the template is updated. The new template can also be used to launch new clusters.
+You can [save the configuration of an existing cluster as an RKE template.](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#converting-an-existing-cluster-to-use-an-rke-template) Then the cluster's settings can only be changed if the template is updated. The new template can also be used to launch new clusters.
 
 The core features of RKE templates allow DevOps and security teams to:
 
@@ -45,24 +45,24 @@ The [add-on section](#add-ons) of an RKE template is especially powerful because
 
 RKE templates are supported for Rancher-provisioned clusters. The templates can be used to provision custom clusters or clusters that are launched by an infrastructure provider.
 
-RKE templates are for defining Kubernetes and Rancher settings. Node templates are responsible for configuring nodes. For tips on how to use RKE templates in conjunction with hardware, refer to [RKE Templates and Hardware](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/infrastructure.md).
+RKE templates are for defining Kubernetes and Rancher settings. Node templates are responsible for configuring nodes. For tips on how to use RKE templates in conjunction with hardware, refer to [RKE Templates and Hardware](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/infrastructure.md).
 
 RKE templates can be created from scratch to pre-define cluster configuration. They can be applied to launch new clusters, or templates can also be exported from existing running clusters.
 
-The settings of an existing cluster can be [saved as an RKE template.](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#converting-an-existing-cluster-to-use-an-rke-template) This creates a new template and binds the cluster settings to the template, so that the cluster can only be upgraded if the [template is updated](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md#updating-a-template), and the cluster is upgraded to [use a newer version of the template.](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md#upgrading-a-cluster-to-use-a-new-template-revision) The new template can also be used to create new clusters.
+The settings of an existing cluster can be [saved as an RKE template.](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#converting-an-existing-cluster-to-use-an-rke-template) This creates a new template and binds the cluster settings to the template, so that the cluster can only be upgraded if the [template is updated](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md#updating-a-template), and the cluster is upgraded to [use a newer version of the template.](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md#upgrading-a-cluster-to-use-a-new-template-revision) The new template can also be used to create new clusters.
 
 
 ## Example Scenarios
 When an organization has both basic and advanced Rancher users, administrators might want to give the advanced users more options for cluster creation, while restricting the options for basic users.
 
-These [example scenarios](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md) describe how an organization could use templates to standardize cluster creation.
+These [example scenarios](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md) describe how an organization could use templates to standardize cluster creation.
 
 Some of the example scenarios include the following:
 
-- **Enforcing templates:** Administrators might want to [enforce one or more template settings for everyone](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#enforcing-a-template-setting-for-everyone) if they want all new Rancher-provisioned clusters to have those settings.
-- **Sharing different templates with different users:** Administrators might give [different templates to basic and advanced users,](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#templates-for-basic-and-advanced-users) so that basic users can have more restricted options and advanced users can use more discretion when creating clusters.
-- **Updating template settings:** If an organization's security and DevOps teams decide to embed best practices into the required settings for new clusters, those best practices could change over time. If the best practices change, [a template can be updated to a new revision](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#updating-templates-and-clusters-created-with-them) and clusters created from the template can [upgrade to the new version](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md#upgrading-a-cluster-to-use-a-new-template-revision) of the template.
-- **Sharing ownership of a template:** When a template owner no longer wants to maintain a template, or wants to share ownership of the template, this scenario describes how [template ownership can be shared.](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#allowing-other-users-to-control-and-share-a-template)
+- **Enforcing templates:** Administrators might want to [enforce one or more template settings for everyone](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#enforcing-a-template-setting-for-everyone) if they want all new Rancher-provisioned clusters to have those settings.
+- **Sharing different templates with different users:** Administrators might give [different templates to basic and advanced users,](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#templates-for-basic-and-advanced-users) so that basic users can have more restricted options and advanced users can use more discretion when creating clusters.
+- **Updating template settings:** If an organization's security and DevOps teams decide to embed best practices into the required settings for new clusters, those best practices could change over time. If the best practices change, [a template can be updated to a new revision](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#updating-templates-and-clusters-created-with-them) and clusters created from the template can [upgrade to the new version](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md#upgrading-a-cluster-to-use-a-new-template-revision) of the template.
+- **Sharing ownership of a template:** When a template owner no longer wants to maintain a template, or wants to share ownership of the template, this scenario describes how [template ownership can be shared.](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases.md#allowing-other-users-to-control-and-share-a-template)
 
 ## Template Management
 
@@ -78,30 +78,30 @@ For the settings that cannot be overridden, the end user will not be able to dir
 
 The documents in this section explain the details of RKE template management:
 
-- [Getting permission to create templates](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/creator-permissions.md)
-- [Creating and revising templates](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md)
-- [Enforcing template settings](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/enforce-templates.md#requiring-new-clusters-to-use-an-rke-template)
-- [Overriding template settings](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/override-template-settings.md)
-- [Sharing templates with cluster creators](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates.md#sharing-templates-with-specific-users-or-groups)
-- [Sharing ownership of a template](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates.md#sharing-ownership-of-templates)
+- [Getting permission to create templates](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/creator-permissions.md)
+- [Creating and revising templates](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates.md)
+- [Enforcing template settings](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/enforce-templates.md#requiring-new-clusters-to-use-an-rke-template) 
+- [Overriding template settings](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/override-template-settings.md)
+- [Sharing templates with cluster creators](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates.md#sharing-templates-with-specific-users-or-groups)
+- [Sharing ownership of a template](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates.md#sharing-ownership-of-templates)
 
 An [example YAML configuration file for a template](../reference-guides/rke1-template-example-yaml.md) is provided for reference.
 
 ## Applying Templates
 
-You can [create a cluster from a template](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#creating-a-cluster-from-an-rke-template) that you created, or from a template that has been [shared with you.](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates.md)
+You can [create a cluster from a template](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#creating-a-cluster-from-an-rke-template) that you created, or from a template that has been [shared with you.](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates.md)
 
-If the RKE template owner creates a new revision of the template, you can [upgrade your cluster to that revision.](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#updating-a-cluster-created-with-an-rke-template)
+If the RKE template owner creates a new revision of the template, you can [upgrade your cluster to that revision.](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#updating-a-cluster-created-with-an-rke-template)
 
 RKE templates can be created from scratch to pre-define cluster configuration. They can be applied to launch new clusters, or templates can also be exported from existing running clusters.
 
-You can [save the configuration of an existing cluster as an RKE template.](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#converting-an-existing-cluster-to-use-an-rke-template) Then the cluster's settings can only be changed if the template is updated.
+You can [save the configuration of an existing cluster as an RKE template.](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates.md#converting-an-existing-cluster-to-use-an-rke-template) Then the cluster's settings can only be changed if the template is updated.
 
 ## Standardizing Hardware
 
-RKE templates are designed to standardize Kubernetes and Rancher settings. If you want to standardize your infrastructure as well, one option is to use RKE templates [in conjunction with other tools](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/infrastructure.md).
+RKE templates are designed to standardize Kubernetes and Rancher settings. If you want to standardize your infrastructure as well, one option is to use RKE templates [in conjunction with other tools](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/infrastructure.md).
 
-Another option is to use [cluster templates,](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates.md) which include node pool configuration options, but don't provide configuration enforcement.
+Another option is to use [cluster templates,](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates.md) which include node pool configuration options, but don't provide configuration enforcement.
 
 ## YAML Customization
 

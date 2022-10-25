@@ -33,7 +33,7 @@ The API Audit Log records all the user and system transactions made through Ranc
 
 The API Audit Log writes to `/var/log/auditlog` inside the rancher container by default. Share that directory as a volume and set your `AUDIT_LEVEL` to enable the log.
 
-See [API Audit Log](../../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/enable-api-audit-log.md) for more information and options.
+See [API Audit Log](../../how-to-guides/advanced-user-guides/enable-api-audit-log.md) for more information and options.
 
 Privileged access is [required.](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
 
@@ -60,7 +60,7 @@ docker run -d --restart=unless-stopped \
 
 Privileged access is [required.](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
 
-See [TLS settings](../installation-references/tls-settings.md) for more information and options.
+See [TLS settings](../../getting-started/installation-and-upgrade/installation-references/tls-settings.md) for more information and options.
 
 ### Air Gap
 

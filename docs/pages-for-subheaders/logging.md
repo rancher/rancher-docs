@@ -5,7 +5,7 @@ description: Rancher integrates with popular logging services. Learn the require
 
 The [Banzai Cloud Logging operator](https://banzaicloud.com/docs/one-eye/logging-operator/) now powers Rancher's logging solution in place of the former, in-house solution.
 
-For an overview of the changes in v2.5, see [this section.](../explanations/integrations-in-rancher/logging/logging-architecture.md#changes-in-rancher-v2-5) For information about migrating from Logging V1, see [this page.](../explanations/integrations-in-rancher/logging/migrate-to-rancher-v2.5+-logging.md)
+For an overview of the changes in v2.5, see [this section.](../integrations-in-rancher/logging/logging-architecture.md#changes-in-rancher-v2-5) For information about migrating from Logging V1, see [this page.](../integrations-in-rancher/logging/migrate-to-rancher-v2.5+-logging.md)
 
 
 ## Enabling Logging
@@ -30,13 +30,13 @@ You can enable the logging for a Rancher managed cluster by going to the Apps pa
 
 ## Architecture
 
-For more information about how the logging application works, see [this section.](../explanations/integrations-in-rancher/logging/logging-architecture.md)
+For more information about how the logging application works, see [this section.](../integrations-in-rancher/logging/logging-architecture.md)
 
 
 
 ## Role-based Access Control
 
-Rancher logging has two roles, `logging-admin` and `logging-view`. For more information on how and when to use these roles, see [this page.](../explanations/integrations-in-rancher/logging/rbac-for-logging.md)
+Rancher logging has two roles, `logging-admin` and `logging-view`. For more information on how and when to use these roles, see [this page.](../integrations-in-rancher/logging/rbac-for-logging.md)
 
 ## Configuring Logging Custom Resources
 
@@ -48,39 +48,39 @@ To manage `Flows,` `ClusterFlows`, `Outputs`, and `ClusterOutputs`,
 
 ### Flows and ClusterFlows
 
-For help with configuring `Flows` and `ClusterFlows`, see [this page.](../explanations/integrations-in-rancher/logging/custom-resource-configuration/flows-and-clusterflows.md)
+For help with configuring `Flows` and `ClusterFlows`, see [this page.](../integrations-in-rancher/logging/custom-resource-configuration/flows-and-clusterflows.md)
 
 ### Outputs and ClusterOutputs
 
-For help with configuring `Outputs` and `ClusterOutputs`, see [this page.](../explanations/integrations-in-rancher/logging/custom-resource-configuration/outputs-and-clusteroutputs.md)
+For help with configuring `Outputs` and `ClusterOutputs`, see [this page.](../integrations-in-rancher/logging/custom-resource-configuration/outputs-and-clusteroutputs.md)
 
 ## Configuring the Logging Helm Chart
 
-For a list of options that can be configured when the logging application is installed or upgraded, see [this page.](../explanations/integrations-in-rancher/logging/logging-helm-chart-options.md)
+For a list of options that can be configured when the logging application is installed or upgraded, see [this page.](../integrations-in-rancher/logging/logging-helm-chart-options.md)
 
 ### Windows Support
 
 Logging support for Windows clusters is available and logs can be collected from Windows nodes.
 
-For details on how to enable or disable Windows node logging, see [this section.](../explanations/integrations-in-rancher/logging/logging-helm-chart-options.md#enable-disable-windows-node-logging)
+For details on how to enable or disable Windows node logging, see [this section.](../integrations-in-rancher/logging/logging-helm-chart-options.md#enable-disable-windows-node-logging)
 
 ### Working with a Custom Docker Root Directory
 
-For details on using a custom Docker root directory, see [this section.](../explanations/integrations-in-rancher/logging/logging-helm-chart-options.md#working-with-a-custom-docker-root-directory)
+For details on using a custom Docker root directory, see [this section.](../integrations-in-rancher/logging/logging-helm-chart-options.md#working-with-a-custom-docker-root-directory)
 
 
 ### Working with Taints and Tolerations
 
-For information on how to use taints and tolerations with the logging application, see [this page.](../explanations/integrations-in-rancher/logging/taints-and-tolerations.md)
+For information on how to use taints and tolerations with the logging application, see [this page.](../integrations-in-rancher/logging/taints-and-tolerations.md)
 
 
 ### Logging V2 with SELinux
 
-For information on enabling the logging application for SELinux-enabled nodes, see [this section.](../explanations/integrations-in-rancher/logging/logging-helm-chart-options.md#enabling-the-logging-application-to-work-with-selinux)
+For information on enabling the logging application for SELinux-enabled nodes, see [this section.](../integrations-in-rancher/logging/logging-helm-chart-options.md#enabling-the-logging-application-to-work-with-selinux)
 
 ### Additional Logging Sources
 
-By default, Rancher collects logs for control plane components and node components for all cluster types. In some cases additional logs can be collected. For details, see [this section.](../explanations/integrations-in-rancher/logging/logging-helm-chart-options.md#additional-logging-sources)
+By default, Rancher collects logs for control plane components and node components for all cluster types. In some cases additional logs can be collected. For details, see [this section.](../integrations-in-rancher/logging/logging-helm-chart-options.md#additional-logging-sources)
 
 
 ## Troubleshooting

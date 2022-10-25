@@ -29,18 +29,18 @@ title: 备份存储位置配置
 
 如果你通过选择 StorageClass 选项来安装 `rancher-backup` Chart，将会创建一个持久卷说明（Persistent Volume Claim，PVC），而且 Kubernetes 会动态配置一个持久卷（Persistent Volume，PV），所有备份都会默认保存到该持久卷中。
 
-关于创建存储类的信息，请参见[本章节](../../how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/dynamically-provision-new-storage.md)。
+关于创建存储类的信息，请参见[本章节](../../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/dynamically-provision-new-storage.md)。
 
 :::note 重要提示：
 
 强烈建议使用回收策略为 "Retain" 的 StorageClass。否则，如果 `rancher-backup` Chart 创建的 PVC 在应用升级期间或意外被删除后，PV 也会被删除，也就是说所有保存在其中的备份都会被删除。
-如果没有这样的 StorageClass，则在设置 PV 之后，一定要将它的回收策略设置为 "Retain"，然后再将备份存储在其中。
+如果没有这样的 StorageClass 可用，在配置 PV 后，请确保先将其回收策略设置为 "Retain"，然后再存储备份。
 
 :::
 
 ### 使用现有的持久卷
 
-选择一个用于存储备份的现有持久卷。有关在 Rancher 中创建 PersistentVolumes 的更多信息，请参见[本节](../../how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/set-up-existing-storage.md#2-添加一个引用持久存储的-persistentvolume)。
+选择一个用于存储备份的现有持久卷。有关在 Rancher 中创建 PersistentVolumes 的更多信息，请参见[本节](../../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/set-up-existing-storage.md#2-添加一个引用持久存储的-persistentvolume)。
 
 :::note 重要提示：
 

@@ -22,8 +22,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
 如需查看每个 Rancher 版本的已知问题，请参见 [GitHub](https://github.com/rancher/rancher/releases) 中的发行说明，或查看 [Rancher 论坛](https://forums.rancher.com/c/announcements/12)。
 
-不支持 _升级_ 或 _升级到_ [rancher-alpha 仓库](../../../reference-guides/installation-references/helm-chart-options.md#helm-chart-仓库)中的任何 Chart。
-
+不支持 _升级_ 或 _升级到_ [rancher-alpha 仓库](../../../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#helm-chart-仓库)中的任何 Chart。
 ### Helm 版本
 
 本安装指南假定你使用的是 Helm 3。
@@ -36,7 +35,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
 ### 升级 Rancher Server 并使用隐藏的本地集群
 
-如果你从使用 Helm Chart 选项 `--add-local=false` 启动的 Rancher Server 升级到 Rancher 2.5，你需要在升级时取消该标志。否则，Rancher Server 将无法启动。`restricted-admin` 角色可以继续用来限制对本地集群的访问。详情请参见[本章节](../../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#在-rancher-中使用隐藏的-local-集群进行升级)。
+如果你从使用 Helm Chart 选项 `--add-local=false` 启动的 Rancher Server 升级到 Rancher 2.5，你需要在升级时取消该标志。否则，Rancher Server 将无法启动。`restricted-admin` 角色可以继续用来限制对本地集群的访问。详情请参见[本章节](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#在-rancher-中使用隐藏的-local-集群进行升级)。
 
 ### 使用 cert-manager 0.8.0 之前的版本升级
 
@@ -63,7 +62,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
 1. 获取你用来安装 Rancher 的仓库名称。
 
-   关于仓库及其区别，请参见 [Helm Chart Repositories](../../../reference-guides/installation-references/helm-chart-options.md#helm-chart-仓库)。
+   关于仓库及其区别，请参见 [Helm Chart Repositories](../installation-references/helm-chart-options.md#helm-chart-仓库)。
 
    - Latest：建议用于试用最新功能
       ```
@@ -103,7 +102,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
    你可以通过 `--version=` 标记，来指定要升级的目标 Chart 版本。例如：
 
    ```plain
-   helm fetch rancher-<CHART_REPO>/rancher --version=v2.4.11
+   helm fetch rancher-<CHART_REPO>/rancher --version=2.6.8
    ```
 
 ### 3. 升级 Rancher
@@ -160,7 +159,7 @@ helm get values rancher -n cattle-system -o yaml > values.yaml
 helm upgrade rancher rancher-<CHART_REPO>/rancher \
   --namespace cattle-system \
   -f values.yaml \
-  --version=2.4.5
+  --version=2.6.8
 ```
 
 ### 4. 验证升级

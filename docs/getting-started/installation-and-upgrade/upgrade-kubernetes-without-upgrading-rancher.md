@@ -34,7 +34,7 @@ Administrators might configure the RKE metadata settings to do the following:
 
 ### Refresh Kubernetes Metadata
 
-The option to refresh the Kubernetes metadata is available for administrators by default, or for any user who has the **Manage Cluster Drivers** [global role.](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)
+The option to refresh the Kubernetes metadata is available for administrators by default, or for any user who has the **Manage Cluster Drivers** [global role.](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)
 
 To force Rancher to refresh the Kubernetes metadata, a manual refresh action is available:
 

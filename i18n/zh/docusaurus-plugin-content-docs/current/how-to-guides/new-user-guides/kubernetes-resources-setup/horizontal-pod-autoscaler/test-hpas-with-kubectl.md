@@ -173,7 +173,7 @@ title: 使用 kubectl 测试 HPA
          ```
          # kubectl describe hpa
          ```
-         You should receive the output that follows.
+         你应该会看到类似以下的输出：
          ```
          Name:                                                  hello-world
          Namespace:                                             default

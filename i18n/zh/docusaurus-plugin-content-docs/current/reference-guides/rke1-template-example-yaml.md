@@ -38,7 +38,7 @@ rancher_kubernetes_engine_config: # Your RKE template config goes here.
     strategy: x509
   ignore_docker_version: true
 #
-# # 目前仅支持 Nginx Ingress 提供商。
+# # 目前仅支持 Nginx ingress provider
 # # 要禁用 Ingress controller，设置 `provider: none`
 # # 要在指定节点上禁用 Ingress，使用 node_selector，例如：
 #    provider: nginx

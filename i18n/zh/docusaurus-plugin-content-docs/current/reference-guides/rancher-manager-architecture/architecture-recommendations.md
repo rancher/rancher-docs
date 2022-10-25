@@ -101,6 +101,6 @@ RKE 每个角色至少需要一个节点，但并不强制每个节点只能有�
 
 如果你使用[授权集群端点（ACE）](../../pages-for-subheaders/rancher-manager-architecture.md#4-授权集群端点)，我们建议你创建一个指向负载均衡器的 FQDN，这个负载均衡器把流量转到所有角色为 `controlplane` 的节点。
 
-如果你在负载均衡器上使用了私有 CA 签发的证书，你需要提供 CA 证书，这个证书会包含在生成的 kubeconfig 文件中，以校验证书链。详情请参见 [kubeconfig 文件](../../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)和 [API 密钥](../user-settings/api-keys.md#创建-api-密钥)的相关文档。
+如果你在负载均衡器上使用了私有 CA 签发的证书，你需要提供 CA 证书，这个证书会包含在生成的 kubeconfig 文件中，以校验证书链。详情请参见 [kubeconfig 文件](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)和 [API 密钥](../user-settings/api-keys.md#创建-api-密钥)的相关文档。
 
 在 Rancher 2.6.3 中，注册的 RKE2 和 K3s 集群可以使用 ACE 支持。点击[这里](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md#对-rke2-和-k3s-集群的授权集群端点支持)了解在下游集群中开启 ACE 的步骤。

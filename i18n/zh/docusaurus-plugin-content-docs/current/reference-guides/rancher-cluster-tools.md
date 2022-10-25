@@ -39,7 +39,7 @@ Rancher v2.5 改进了与 Istio 的集成。
 如需更多信息，请参阅 [Istio 文档](../pages-for-subheaders/istio.md)。
 ## OPA Gatekeeper
 
-[OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper) 是一个开源项目，它对 OPA 和 Kubernetes 进行了集成，以通过许可控制器 Webhook 提供策略控制。有关如何在 Rancher 中启用 Gatekeeper 的详细信息，请参阅 [OPA Gatekeeper](../explanations/integrations-in-rancher/opa-gatekeeper.md)。
+[OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper) 是一个开源项目，它对 OPA 和 Kubernetes 进行了集成，以通过许可控制器 Webhook 提供策略控制。有关如何在 Rancher 中启用 Gatekeeper 的详细信息，请参阅 [OPA Gatekeeper](../integrations-in-rancher/opa-gatekeeper.md)。
 
 ## CIS 扫描
 

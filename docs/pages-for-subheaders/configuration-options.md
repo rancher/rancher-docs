@@ -24,16 +24,16 @@ The Monitoring app sets `prometheus.prometheusSpec.ignoreNamespaceSelectors=fals
 
 If you would like to limit Prometheus to specific namespaces, set `prometheus.prometheusSpec.ignoreNamespaceSelectors=true`. Once you do this, you will need to add additional configuration to continue to monitor your resources.
 
-For details, refer to [this section.](../explanations/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md)
+For details, refer to [this section.](../integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md)
 
 ### Enable Istio with Pod Security Policies
 
-Refer to [this section.](../explanations/integrations-in-rancher/istio/configuration-options/pod-security-policies.md)
+Refer to [this section.](../integrations-in-rancher/istio/configuration-options/pod-security-policies.md)
 
 ### Additional Steps for Installing Istio on an RKE2 Cluster
 
-Refer to [this section.](../explanations/integrations-in-rancher/istio/configuration-options/install-istio-on-rke2-cluster.md)
+Refer to [this section.](../integrations-in-rancher/istio/configuration-options/install-istio-on-rke2-cluster.md)
 
 ### Additional Steps for Project Network Isolation
 
-Refer to [this section.](../explanations/integrations-in-rancher/istio/configuration-options/project-network-isolation.md)
+Refer to [this section.](../integrations-in-rancher/istio/configuration-options/project-network-isolation.md)

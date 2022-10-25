@@ -95,6 +95,6 @@ kubectl rollout status deployment -n cattle-system rancher
 
 以下资源可能对安装 Rancher 有帮助：
 
-- [Rancher Helm Chart 选项](../../../../reference-guides/installation-references/helm-chart-options.md)
+- [Rancher Helm Chart 选项](../../installation-references/helm-chart-options.md)
 - [添加 TLS 密文](../../resources/add-tls-secrets.md)
 - [Rancher Kubernetes 安装的故障排除](../../install-upgrade-on-a-kubernetes-cluster/troubleshooting.md)

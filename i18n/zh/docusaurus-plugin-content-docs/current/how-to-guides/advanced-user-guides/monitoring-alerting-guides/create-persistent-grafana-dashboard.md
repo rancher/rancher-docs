@@ -19,7 +19,7 @@ import TabItem from '@theme/TabItem';
 
 - 已安装 Monitoring 应用。
 - 要创建持久化仪表板，你必须在包含 Grafana 仪表板的项目或命名空间中至少具有**管理 ConfigMap** 的 Rancher RBAC 权限。这与 Monitoring Chart 公开的 `monitoring-dashboard-edit` 或 `monitoring-dashboard-admin` Kubernetes 原生 RBAC 角色对应。
-- 要查看指向外部监控 UI（包括 Grafana 仪表板）的链接，你至少需要一个 [project-member 角色](../../../explanations/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md#具有-rancher-权限的用户)。
+- 要查看指向外部监控 UI（包括 Grafana 仪表板）的链接，你至少需要一个 [project-member 角色](../../../integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md#具有-rancher-权限的用户)。
 
 :::
 

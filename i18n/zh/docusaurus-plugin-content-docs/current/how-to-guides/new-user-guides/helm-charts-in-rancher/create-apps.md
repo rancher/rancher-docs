@@ -60,7 +60,6 @@ Rancher Chart 添加了简化的 Chart 描述和配置表单，使应用部署�
 
    包含表单问题的文件。这些表单问题简化了 Chart 的部署。没有它，你必须使用更复杂的 YAML 配置来配置部署。下图显示了 Rancher Chart（包含 `questions.yml`）和原生 Helm Chart（不包含）之间的区别。
 
-
 <figcaption>带有 <code>questions.yml</code> 的 Rancher Chart（上）与 Helm Chart（下）</figcaption>
 
    ![questions.yml](/img/rancher-app-2.6.png)
@@ -111,7 +110,7 @@ rancher_max_version: 2.3.99
 | description | string | false | 指定变量的描述。 |
 | type | string | false | 如果未指定，则默认为 `string`（支持的类型为 string、multiline、boolean、int、enum、password、storageclass、hostname、pvc 和 secret）。 |
 | required | bool | false | 定义变量是否是必须的（true \| false）。 |
-| default | string | false | 指定默认值。 |
+| default | string | false | 指定默认值。仅在 `values.yml` 文件中没有对应值时使用。 |
 | group | string | false | 按输入值对问题进行分组。 |
 | min_length | int | false | 最小字符长度。 |
 | max_length | int | false | 最大字符长度。 |

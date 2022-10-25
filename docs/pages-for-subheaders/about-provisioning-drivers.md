@@ -37,11 +37,11 @@ If there are specific node drivers that you don't want to show to your users, yo
 
 Rancher supports several major cloud providers, but by default, these node drivers are active and available for deployment:
 
-*   [Amazon EC2](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md)
-*   [Azure](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster.md)
-*   [Digital Ocean](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-a-digitalocean-cluster.md)
+*   [Amazon EC2](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md)
+*   [Azure](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster.md)
+*   [Digital Ocean](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-a-digitalocean-cluster.md)
 *   [vSphere](vsphere.md)
 
 There are several other node drivers that are disabled by default, but are packaged in Rancher:
 
-*   [Harvester](../explanations/integrations-in-rancher/harvester.md#harvester-node-driver/), available in Rancher v2.6.1
+*   [Harvester](../integrations-in-rancher/harvester.md#harvester-node-driver/), available in Rancher v2.6.1

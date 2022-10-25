@@ -2,7 +2,7 @@
 title: RBAC
 ---
 
-Rancher 通过 _用户_ 进行授权管理。如[身份验证](about-authentication.md)中所述，用户可以是本地用户，也可以是外部用户。
+Rancher 通过 _用户_ 进行授权管理。如[身份验证](authentication-config.md)中所述，用户可以是本地用户，也可以是外部用户。
 
 配置外部身份验证后，**用户**页面上显示的用户会发生变化。
 
@@ -14,11 +14,11 @@ Rancher 通过 _用户_ 进行授权管理。如[身份验证](about-authenticat
 
 一旦用户登录到 Rancher，他们的 _授权_，也就是他们在系统中的访问权限，将由 _全局权限_ 和 _集群和项目角色_ 决定。
 
-- [全局权限](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)：
+- [全局权限](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)：
 
    定义用户在任何特定集群之外的授权。
 
-- [集群和项目角色](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)：
+- [集群和项目角色](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)：
 
    定义用户在分配了角色的特定集群或项目中的授权。
 

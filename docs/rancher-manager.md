@@ -1,6 +1,7 @@
 ---
 slug: /
-title: "Rancher 2.6"
+title: "What is Rancher?"
+sidebar_label: What is Rancher?
 description: "Rancher adds significant value on top of Kubernetes: managing hundreds of clusters from one interface, centralizing RBAC, enabling monitoring and alerting. Read more."
 ---
 Rancher is a Kubernetes management tool to deploy and run clusters anywhere and on any provider.

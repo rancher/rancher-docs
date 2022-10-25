@@ -79,7 +79,7 @@ Rancher 仅支持使用 Flannel 作为网络提供商的 Windows。
 
 有两个网络选项：[**Host Gateway (L2bridge)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#host-gw) 和 [**VXLAN (Overlay)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#vxlan)。默认选项是 **VXLAN (Overlay)** 模式。
 
-对于 **Host Gateway (L2bridge)** 网络，最好为所有节点使用相同的第 2 层网络。否则，你需要为它们配置路由规则。有关详细信息，请参阅[配置云托管 VM 路由的文档](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/network-requirements-for-host-gateway.md#云托管虚拟机的路由配置)。如果你使用的是 Amazon EC2、Google GCE 或 Azure 虚拟机，你需要[禁用私有 IP 地址检查](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/network-requirements-for-host-gateway.md#禁用私有-ip-地址检查)。
+对于 **Host Gateway (L2bridge)** 网络，最好为所有节点使用相同的第 2 层网络。否则，你需要为它们配置路由规则。有关详细信息，请参阅[配置云托管 VM 路由的文档](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/network-requirements-for-host-gateway.md#云托管虚拟机的路由配置)。如果你使用的是 Amazon EC2、Google GCE 或 Azure 虚拟机，你需要[禁用私有 IP 地址检查](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/network-requirements-for-host-gateway.md#禁用私有-ip-地址检查)。
 
 对于 **VXLAN (Overlay)** 网络，你必须安装 [KB4489899](https://support.microsoft.com/en-us/help/4489899) 修补程序。大多数云托管的 VM 已经具有此修补程序。
 
@@ -139,11 +139,11 @@ Windows 要求容器的版本必须与部署容器的 Windows Server 的版本�
 
 ### 云提供商要求
 
-如果你在集群中设置了 Kubernetes 云提供商，则需要进行一些额外的操作。如果你想使用云提供商的功能，例如为集群自动配置存储、负载均衡器或其他基础设施，你可能需要设置云提供商。有关如何配置满足条件的云提供商集群节点，请参阅[此页面](set-up-cloud-providers.md)。
+如果你在集群中设置了 Kubernetes 云提供商，则需要进行一些额外的操作。如果你想使用云提供商的功能，例如为集群自动配置存储、负载均衡器或其他基础设施，你可能需要设置云提供商。有关如何配置满足条件的云提供商集群节点，请参阅[此页面](../pages-for-subheaders/set-up-cloud-providers.md)。
 
 如果你的云提供商是 GCE（Google Compute Engine），则必须执行以下操作：
 
-- 按照[步骤](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/google-compute-engine.md) 在`cluster.yml` 中启用 GCE 云提供商。
+- 按照[步骤](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/google-compute-engine.md) 在`cluster.yml` 中启用 GCE 云提供商。
 - 在 Rancher 中配置集群时，在 Rancher UI 中选择**自定义云提供商**作为云提供商。
 
 ## 教程：如何创建支持 Windows 的集群
@@ -177,7 +177,7 @@ Windows 要求容器的版本必须与部署容器的 Windows Server 的版本�
 | 节点 2 | Linux（推荐 Ubuntu Server 18.04） |
 | 节点 3 | Windows（Windows Server 核心版本 1809 或更高版本） |
 
-如果你的节点托管在**云提供商**上，并且你需要自动化支持（例如负载均衡器或持久存储设备），你的节点还需要满足额外的配置要求。详情请参见[选择云提供商](set-up-cloud-providers.md)。
+如果你的节点托管在**云提供商**上，并且你需要自动化支持（例如负载均衡器或持久存储设备），你的节点还需要满足额外的配置要求。详情请参见[选择云提供商](../pages-for-subheaders/set-up-cloud-providers.md)。
 
 ### 2. 在现有节点上创建集群
 
@@ -195,7 +195,7 @@ Windows 要求容器的版本必须与部署容器的 Windows Server 的版本�
 
 :::note 重要提示：
 
-对于 <b>Host Gateway (L2bridge)</b> 网络，最好为所有节点使用相同的第 2 层网络。否则，你需要为它们配置路由规则。有关详细信息，请参阅[配置云托管 VM 路由的文档](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/network-requirements-for-host-gateway.md#云托管虚拟机的路由配置)。如果你使用的是 Amazon EC2、Google GCE 或 Azure 虚拟机，你需要[禁用私有 IP 地址检查](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/network-requirements-for-host-gateway.md#禁用私有-ip-地址检查)。
+对于 <b>Host Gateway (L2bridge)</b> 网络，最好为所有节点使用相同的第 2 层网络。否则，你需要为它们配置路由规则。有关详细信息，请参阅[配置云托管 VM 路由的文档](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/network-requirements-for-host-gateway.md#云托管虚拟机的路由配置)。如果你使用的是 Amazon EC2、Google GCE 或 Azure 虚拟机，你需要[禁用私有 IP 地址检查](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/network-requirements-for-host-gateway.md#禁用私有-ip-地址检查)。
 
 :::
 
@@ -278,9 +278,9 @@ Linux Worker 节点上的污点
 
 创建集群后，你可以通过 Rancher UI 访问集群。最佳实践建议你设置以下访问集群的备用方式：
 
-- **通过 kubectl CLI 访问你的集群**：按照[这些步骤](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#在工作站使用-kubectl-访问集群)在你的工作站上使用 kubectl 访问集群。在这种情况下，你将通过 Rancher Server 的身份验证代理进行身份验证，然后 Rancher 会让你连接到下游集群。此方法允许你在没有 Rancher UI 的情况下管理集群。
-- **通过 kubectl CLI 使用授权的集群端点访问你的集群**：按照[这些步骤](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#直接使用下游集群进行身份验证)直接使用 kubectl 访问集群，而无需通过 Rancher Server 进行身份验证。我们建议设置此替代方法来访问集群，以便在无法连接到 Rancher 时访问集群。
+- **通过 kubectl CLI 访问你的集群**：按照[这些步骤](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#在工作站使用-kubectl-访问集群)在你的工作站上使用 kubectl 访问集群。在这种情况下，你将通过 Rancher Server 的身份验证代理进行身份验证，然后 Rancher 会让你连接到下游集群。此方法允许你在没有 Rancher UI 的情况下管理集群。
+- **通过 kubectl CLI 使用授权的集群端点访问你的集群**：按照[这些步骤](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#直接使用下游集群进行身份验证)直接使用 kubectl 访问集群，而无需通过 Rancher Server 进行身份验证。我们建议设置此替代方法来访问集群，以便在无法连接到 Rancher 时访问集群。
 
 ## Azure 中存储类的配置
 
-如果你的节点使用 Azure VM，则可以使用 [Azure 文件](https://docs.microsoft.com/en-us/azure/aks/azure-files-dynamic-pv)作为集群的存储类（StorageClass）。详情请参见[此部分](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/azure-storageclass-configuration.md)。
+如果你的节点使用 Azure VM，则可以使用 [Azure 文件](https://docs.microsoft.com/en-us/azure/aks/azure-files-dynamic-pv)作为集群的存储类（StorageClass）。详情请参见[此部分](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/azure-storageclass-configuration.md)。

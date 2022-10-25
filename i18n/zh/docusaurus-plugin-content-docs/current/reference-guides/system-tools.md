@@ -7,6 +7,7 @@ title: 系统工具
 系统工具（System Tools）自 2022 年 6 月起已弃用。
 
 :::
+
 # 日志
 
 请使用 [logs-collector](https://github.com/rancherlabs/support-tools/tree/master/collection/rancher/v2.x/logs-collector) 来收集你的集群日志。

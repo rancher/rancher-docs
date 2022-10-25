@@ -9,7 +9,7 @@ Rancher 可以通过运行单个 Docker 容器进行安装。
 
 :::note 想要使用外部负载均衡器？
 
-请参阅[使用外部负载均衡器的 Docker 安装](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/configure-layer-7-nginx-load-balancer.md)。
+请参阅[使用外部负载均衡器的 Docker 安装](../how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer.md)。
 
 :::
 

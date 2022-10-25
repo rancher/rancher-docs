@@ -14,7 +14,7 @@ description: 了解如何在开发和生产环境中安装 Rancher。了解单�
 - **K3s（轻量级 Kubernetes）**：也是经过认证的 Kubernetes 发行版。它比 RKE 更新，更易用且更轻量，其所有组件都在一个小于 100 MB 的二进制文件中。
 - **RKE2**：一个完全合规的 Kubernetes 发行版，专注于安全和合规性。
 
-`restrictedAdmin` Helm Chart 选项在 **Rancher Server** 可用。如果该选项设置为 true，初始的 Rancher 用户访问本地 Kubernetes 集群会受到限制，以避免权限升级。详情请参见 [restricted-admin 角色](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#受限管理员)。
+`restrictedAdmin` Helm Chart 选项在 **Rancher Server** 可用。如果该选项设置为 true，初始的 Rancher 用户访问本地 Kubernetes 集群会受到限制，以避免权限升级。详情请参见 [restricted-admin 角色](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#受限管理员)。
 
 # 安装方式概述
 
@@ -73,11 +73,11 @@ Rancher backup operator 可将 Rancher 从单个 Docker 容器迁移到高可用
 
 ### 在 Kubernetes 上安装 Rancher 的更多选项
 
-参见 [Helm Chart 选项](../reference-guides/installation-references/helm-chart-options.md)以了解在 Kubernetes 集群上安装 Rancher 的其他配置，包括：
+参见 [Helm Chart 选项](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md)以了解在 Kubernetes 集群上安装 Rancher 的其他配置，包括：
 
-- [开启 API 审计日志来记录所有事务](../reference-guides/installation-references/helm-chart-options.md#api-审计日志)
-- [负载均衡器上的 TLS 终止](../reference-guides/installation-references/helm-chart-options.md#外部-tls-终止)
-- [自定义 Ingress](../reference-guides/installation-references/helm-chart-options.md#自定义-ingress)
+- [开启 API 审计日志来记录所有事务](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#api-审计日志)
+- [负载均衡器上的 TLS 终止](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#外部-tls-终止)
+- [自定义 Ingress](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#自定义-ingress)
 
 在 Rancher 的安装指南中，我们推荐使用 K3s 或 RKE 来配置 Kubernetes 集群，然后再在这个集群中安装 Rancher。K3s 和 RKE 均提供许多配置选项，用于为你的具体环境自定义 Kubernetes 集群。有关选项和功能的完整列表，请参见：
 
@@ -89,5 +89,5 @@ Rancher backup operator 可将 Rancher 从单个 Docker 容器迁移到高可用
 参见 [Docker 安装选项](rancher-on-a-single-node-with-docker.md)了解其他配置，包括：
 
 - [开启 API 审计日志来记录所有事务](../reference-guides/single-node-rancher-in-docker/advanced-options.md#api-审计日志)
-- [外部负载均衡器](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/configure-layer-7-nginx-load-balancer.md)
+- [外部负载均衡器](../how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer.md)
 - [持久化数据存储](../reference-guides/single-node-rancher-in-docker/advanced-options.md#持久化数据)

@@ -1,6 +1,7 @@
 ---
 title: 设置 Cloud Provider
 ---
+
 _cloud provider_ 是 Kubernetes 中的一个模块，它提供了一个用于管理节点、负载均衡器和网络路由的接口。
 
 在 Rancher 中设置 cloud provider 时，如果你使用的云提供商支持自动化，Rancher Server 可以在启动 Kubernetes 定义时自动配置新节点、负载均衡器或持久存储设备。
@@ -18,19 +19,19 @@ _cloud provider_ 是 Kubernetes 中的一个模块，它提供了一个用于管
 
 ### 设置 Amazon 云提供商
 
-有关启用 Amazon 云提供商的详细信息，请参阅[此页面](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/amazon.md)。
+有关启用 Amazon 云提供商的详细信息，请参阅[此页面](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon.md)。
 
 ### 设置 Azure 云提供商
 
-有关启用 Azure 云提供商的详细信息，请参阅[此页面](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/azure.md)。
+有关启用 Azure 云提供商的详细信息，请参阅[此页面](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/azure.md)。
 
 ### 设置 GCE 云提供商
 
-有关启用 Google Compute Engine 云提供商的详细信息，请参阅[此页面](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/google-compute-engine.md)。
+有关启用 Google Compute Engine 云提供商的详细信息，请参阅[此页面](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/google-compute-engine.md)。
 
 ### 设置 vSphere 云提供商
 
-有关启用 vSphere 云提供商的详细信息，请参阅[此页面](vsphere-cloud-provider.md)。
+有关启用 vSphere 云提供商的详细信息，请参阅[树内 vSphere 配置](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere.md)和[树外 vSphere 配置](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere.md)。
 
 ### 设置自定义云提供商
 

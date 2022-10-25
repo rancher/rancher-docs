@@ -20,7 +20,7 @@ title: 管理云凭证
 1. 点击 **☰ > 集群管理**。
 1. 单击**云凭证**。
 1. 单击**创建**。
-1. 单击云凭证类型。下拉列表中的选项取决于 Rancher 中的 `active` [主机驱动](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md)。
+1. 单击云凭证类型。下拉列表中的选项取决于 Rancher 中的 `active` [主机驱动](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md)。
 1. 输入云凭证的名称。
 1. 根据所选的云凭证类型输入所需的值，从而向基础设施提供商进行身份验证。
 1. 单击**创建**。

@@ -5,7 +5,7 @@ title: User ID Tracking in Audit Logs
 The following audit logs are used in Rancher to track events occuring on the local and downstream clusters:
 
 * [Kubernetes Audit Logs](https://rancher.com/docs/rke/latest/en/config-options/audit-log/)
-* [Rancher API Audit Logs](../../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/enable-api-audit-log.md)
+* [Rancher API Audit Logs](../../how-to-guides/advanced-user-guides/enable-api-audit-log)
 
 Audit logs in Rancher v2.6 have been enhanced to include the external Identity Provider name (common name of the user in the external Auth provider) in both the Rancher and downstream Kubernetes audit logs.
 

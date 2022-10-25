@@ -1,7 +1,6 @@
 ---
 title: Rancher 部署快速入门指南
 ---
-
 :::caution
 
 本章节中提供的指南，旨在帮助你快速启动一个用于 Rancher 的沙盒，以评估 Rancher 是否能满足你的使用需求。快速入门指南不适用于生产环境。如果你需要获取生产环境的操作指导，请参见[安装](installation-and-upgrade.md)。

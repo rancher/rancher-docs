@@ -58,8 +58,7 @@ Before you create your own custom catalog, you should have a basic understanding
 
 - `questions.yml`
 
-    A file that contains questions for a form. These form questions simplify deployment of a chart. Without it, you must configure the deployment using a values YAML config, which is more difficult. The following image displays the difference between a Rancher chart (which includes `questions.yml`) and a native Helm chart (which does not).
-
+    A file that contains questions for a form. These form questions simplify deployment of a chart. Without it, you must configure the deployment using a values YAML config, which is more difficult. The following images display the difference between a Rancher chart (which includes `questions.yml`) and a native Helm chart (which does not).
 
     <figcaption>Rancher Chart with <code>questions.yml</code> (top) vs. Helm Chart without (bottom)</figcaption>
 

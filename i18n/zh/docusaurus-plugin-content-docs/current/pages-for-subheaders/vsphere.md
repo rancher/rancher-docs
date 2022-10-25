@@ -28,7 +28,7 @@ vSphere 集群可能由多组具有不同属性（例如内存或 vCPU 数量）
 
 vSphere 的节点模板已更新。当你使用 vSphere 凭证创建节点模板时，该模板会自动填充你在 vSphere 控制台中可以访问的相同的虚拟机配置选项。
 
-要填充的字段设置需要满足[先决条件](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere.md#先决条件)。
+要填充的字段设置需要满足[先决条件](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere.md#先决条件)。
 
 ### 更多支持的操作系统
 
@@ -42,14 +42,14 @@ vSphere 的节点模板已更新。当你使用 vSphere 凭证创建节点模板
 
 ## 创建 vSphere 集群
 
-在[本节](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere.md)中，你将学习如何使用 Rancher 在 vSphere 中安装 [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes 集群。
+在[本节](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere.md)中，你将学习如何使用 Rancher 在 vSphere 中安装 [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes 集群。
 
 ## 配置存储
 
-有关如何使用 Rancher 在 vSphere 中配置存储的示例，请参阅[本节](../how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/provisioning-storage-examples/vsphere-storage.md)。要在 vSphere 中动态配置存储，你必须[启用](vsphere-cloud-provider.md) vSphere 云提供商。
+有关如何使用 Rancher 在 vSphere 中配置存储的示例，请参阅[本节](../how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/vsphere-storage.md)。要在 vSphere 中动态配置存储，你必须启用 vSphere 云提供商。请参阅[树内 vSphere 配置](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere.md)和[树外 vSphere 配置](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere.md)。
 
 ## 启用 vSphere 云提供商
 
 在 Rancher 中设置云提供商时，Rancher Server 可以自动为集群配置新的基础设施，包括新节点或持久存储设备。
 
-有关详细信息，请参阅[启用 vSphere 云提供商](vsphere-cloud-provider.md)。
+有关启用 vSphere 云提供商的详细信息，请参阅[树内 vSphere 配置](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere.md)和[树外 vSphere 配置](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere.md)。

@@ -20,7 +20,7 @@ All cloud credentials are bound to the user profile of who created it. They **ca
 1. Click **☰ > Cluster Management**.
 1. Click **Cloud Credentials**.
 1. Click **Create**.
-1. Click a cloud credential type. The values of this dropdown is based on the `active` [node drivers](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md) in Rancher.
+1. Click a cloud credential type. The values of this dropdown is based on the `active` [node drivers](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md) in Rancher.
 1. Enter a name for the cloud credential.
 1. Based on the selected cloud credential type, enter the required values to authenticate with the infrastructure provider.
 1. Click **Create**.

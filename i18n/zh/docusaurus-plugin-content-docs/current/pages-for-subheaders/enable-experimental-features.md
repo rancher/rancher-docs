@@ -1,7 +1,7 @@
 ---
 title: 启用实验功能
 ---
-Rancher 包含一些默认关闭的实验功能。在某些情况下，例如当你认为使用[不支持的存储类型](../getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/unsupported-storage-drivers.md)的好处大于使用未经测试的功能的风险时，你可能想要启用实验功能。为了让你能够试用这些默认关闭的功能，我们引入了功能开关（feature flag）。
+Rancher 包含一些默认关闭的实验功能。在某些情况下，例如当你认为使用[不支持的存储类型](../how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md)的好处大于使用未经测试的功能的风险时，你可能想要启用实验功能。为了让你能够试用这些默认关闭的功能，我们引入了功能开关（feature flag）。
 
 实验功能可以通过以下三种方式启用：
 
@@ -18,7 +18,7 @@ Rancher 包含一些默认关闭的实验功能。在某些情况下，例如当
 
 设置值是通过 API 设置的，而默认值是通过命令行设置。因此，如果你使用 API 或 UI 启用或禁用某个功能，命令行中设置的值将被覆盖。
 
-如果你安装 Rancher 后使用 Rancher API 将功能开关设置为 true，然后在使用命令升级 Rancher 时将功能开关设置为 false，在这种情况下，虽然默认值会是 false，但是该功能依然会被启用，因为它是通过 API 设置的。如果你随后使用 Rancher API 删除设置值（true）并将它设置为 NULL，则默认值（false）将生效。有关详细信息，请参阅[功能开关页面](../reference-guides/installation-references/feature-flags.md)。
+如果你安装 Rancher 后使用 Rancher API 将功能开关设置为 true，然后在使用命令升级 Rancher 时将功能开关设置为 false，在这种情况下，虽然默认值会是 false，但是该功能依然会被启用，因为它是通过 API 设置的。如果你随后使用 Rancher API 删除设置值（true）并将它设置为 NULL，则默认值（false）将生效。有关详细信息，请参阅[功能开关页面](../getting-started/installation-and-upgrade/installation-references/feature-flags.md)。
 
 # 启动 Rancher 时启用功能
 

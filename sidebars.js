@@ -19,34 +19,19 @@ const sidebars = {
   // But you can create a sidebar manually
   tutorialSidebar: [
 
-      'rancher-manager',
+    'rancher-manager',
     {
       type: 'category',
       label: 'Getting Started',
-      link: {
-        type: 'doc',
-        id: "getting-started",
-      },
-      items: [
-        {
-          type: 'category',
-          label: 'Introduction',
-          link: {
-            type: 'doc',
-            id: "pages-for-subheaders/introduction",
-          },
-          items: [
-            "getting-started/introduction/overview",
-            "getting-started/introduction/what-are-divio-docs",
-                 ],
-        },
+      items: [ 
+          "getting-started/overview",
         {
           type: 'category',
           label: 'Quick Start Guides',
           link: {
             type: 'doc',
-            id: "pages-for-subheaders/quick-start-guides",
-          },
+            id: "pages-for-subheaders/quick-start-guides",        
+                },
           items: [
             {
               type: 'category',
@@ -54,7 +39,7 @@ const sidebars = {
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/deploy-rancher-manager",
-             },
+                    },
               items: [
                     "getting-started/quick-start-guides/deploy-rancher-manager/aws",
                     "getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace",
@@ -65,7 +50,7 @@ const sidebars = {
                     "getting-started/quick-start-guides/deploy-rancher-manager/vagrant",
                     "getting-started/quick-start-guides/deploy-rancher-manager/equinix-metal",
                     "getting-started/quick-start-guides/deploy-rancher-manager/helm-cli",
-              ]
+                     ]
             },
             {
               type: 'category',
@@ -77,9 +62,9 @@ const sidebars = {
               items: [
                     "getting-started/quick-start-guides/deploy-workloads/workload-ingress",
                     "getting-started/quick-start-guides/deploy-workloads/nodeports",
-                     ],
-                  }
-              ]
+                     ]
+                    }
+                  ]
         },
         {
           type: 'category',
@@ -101,6 +86,19 @@ const sidebars = {
                     "getting-started/installation-and-upgrade/installation-requirements/dockershim",
                     "getting-started/installation-and-upgrade/installation-requirements/port-requirements",
                      ]
+            },
+            {
+              type: 'category',
+              label: 'Installation References',
+              link: {
+                type: 'doc',
+                id: "pages-for-subheaders/installation-references",
+              },
+              items: [
+              "getting-started/installation-and-upgrade/installation-references/helm-chart-options",
+              "getting-started/installation-and-upgrade/installation-references/tls-settings",
+              "getting-started/installation-and-upgrade/installation-references/feature-flags"
+                    ]
             },
             {
               type: 'category',
@@ -191,51 +189,13 @@ const sidebars = {
                     "getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes",
 
                     "getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher",
-            {
-              type: 'category',
-              label: 'Advanced Options',
-              link: {
-                type: 'doc',
-                id: "pages-for-subheaders/advanced-options",
-              },
-              items: [
-                {
-                    type: 'category',
-                    label: 'Enable Experimental Features',
-                    link: {
-                      type: 'doc',
-                      id: "pages-for-subheaders/enable-experimental-features",
-                    },
-                    items: [
-                          "getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/rancher-on-arm64",
-                          "getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/unsupported-storage-drivers",
-                          "getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/istio-traffic-management-features",
-                          "getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/continuous-delivery",
-                           ]
-                },
-                {
-                    type: 'category',
-                    label: 'Advanced Use Cases',
-                    items: [
-                          "getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/open-ports-with-firewalld",
-                          "getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/tune-etcd-for-large-installs",
-                          "getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/enable-api-audit-log",
-                          "getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/configure-layer-7-nginx-load-balancer",
-                           ]
-                }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
+          ]
+        }
+      ]
+    },
     {
       type: 'category',
       label: 'How-to Guides',
-      link: {
-        type: 'doc',
-        id: "how-to-guides",
-      },
       items: [
         {
           type: 'category',
@@ -244,493 +204,467 @@ const sidebars = {
             type: 'doc',
             id: "pages-for-subheaders/new-user-guides",
                 },
-          items: [
-             {
-                type: 'category',
-                label: 'Kubernetes Cluster Setup',
-                link: {
-                  type: 'doc',
-                  id: "pages-for-subheaders/kubernetes-cluster-setup",
-                          },
+            items: [
+                  {
+              type: 'category',
+              label: 'Authentication, Permissions, and Global Configuration',
+              link: {
+                type: 'doc',
+                id: "pages-for-subheaders/authentication-permissions-and-global-configuration",
+                    },
                 items: [
-                    "how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs",
-                    "how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher",
-                    "how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher",
-                    "how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher",
-                       ],
-              },
-              {
-                type: 'category',
-                label: 'Infrastructure Setup',
-                link: {
-                  type: 'doc',
-                  id: "pages-for-subheaders/infrastructure-setup",
-                      },
-                  items: [
-                     "how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster",
-                     "how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster",
-                     "how-to-guides/new-user-guides/infrastructure-setup/ha-rke2-kubernetes-cluster",
-                     "how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2",
-                     "how-to-guides/new-user-guides/infrastructure-setup/mysql-database-in-amazon-rds",
-                     "how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer",
-                     "how-to-guides/new-user-guides/infrastructure-setup/amazon-elb-load-balancer",
-                         ],
-              },
-              {
-                type: 'category',
-                label: 'Kubernetes Clusters in Rancher Setup',
-                link: {
-                  type: 'doc',
-                  id: "pages-for-subheaders/kubernetes-clusters-in-rancher-setup",
-                },
-                items: [
-                        "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters",
-                  {
+                    {
                     type: 'category',
-                    label: 'Checklist for Production-Ready Clusters',
+                    label: 'Authentication Config',
                     link: {
                       type: 'doc',
-                      id: "pages-for-subheaders/checklist-for-production-ready-clusters",
-                        },
-                      items: [
-                        "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters/recommended-cluster-architecture",
-                        "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters/roles-for-nodes-in-kubernetes",
-                              ],
-                  },
-                  {
-                    type: 'category',
-                    label: 'Set Up Clusters from Hosted Kubernetes Providers',
-                    link: {
-                      type: 'doc',
-                      id: "pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers",
-                        },
-                      items: [
-                          "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/gke",
-                          "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/aks",
-                          "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/alibaba",
-                          "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/tencent",
-                          "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/huawei",
-                            ]
-                  },
-                  {
-                    type: 'category',
-                    label: 'Launch Kubernetes with Rancher',
-                    link: {
-                      type: 'doc',
-                      id: "pages-for-subheaders/launch-kubernetes-with-rancher",
-                          },
+                      id: "pages-for-subheaders/authentication-config",
+                    },
                     items: [
-                         {
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/manage-users-and-groups",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/create-local-users",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-google-oauth",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-active-directory",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-freeipa",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-azure-ad",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-github",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-keycloak-oidc",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-keycloak-saml",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-pingidentity",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-okta-saml",
+                                  ]    
+                        },
+                        {
                           type: 'category',
-                          label: 'Use New Nodes in an Infra Provider',
+                          label: 'Configure OpenLDAP',
                           link: {
                             type: 'doc',
-                            id: "pages-for-subheaders/use-new-nodes-in-an-infra-provider",
-                                },
+                            id: "pages-for-subheaders/configure-openldap",
+                          },
+                          items: [
+                            "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-openldap/openldap-config-reference",
+                                    ]
+                        },
+                        {
+                        type: 'category',
+                        label: 'Configure Microsoft AD Federation Service (SAML)',
+                        link: {
+                          type: 'doc',
+                          id: "pages-for-subheaders/configure-microsoft-ad-federation-service-saml",
+                              },
+                        items: [
+                            "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-microsoft-ad-federation-service-saml/configure-ms-adfs-for-rancher",
+                            "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-microsoft-ad-federation-service-saml/configure-rancher-for-ms-adfs",
+                              ]
+                        },
+                        {
+                        type: 'category',
+                        label: 'Configure Shibboleth (SAML)',
+                        link: {
+                          type: 'doc',
+                          id: "pages-for-subheaders/configure-shibboleth-saml",
+                              },
+                        items: [
+                                "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-shibboleth-saml/about-group-permissions",
+                               ]
+                        },
+                        {
+                        type: 'category',
+                        label: 'Manage Role-Based Access Control (RBAC)',
+                        link: {
+                          type: 'doc',
+                          id: "pages-for-subheaders/manage-role-based-access-control-rbac",
+                        },
+                        items: [
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/custom-roles",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/locked-roles",
+                                ]
+                        },
+                        {
+                        type: 'category',
+                        label: 'About Provisioning Drivers',
+                        link: {
+                          type: 'doc',
+                          id: "pages-for-subheaders/about-provisioning-drivers",
+                        },
+                        items: [
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-cluster-drivers",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers",
+                                ]
+                        },
+                        {
+                        type: 'category',
+                        label: 'About RKE1 Templates',
+                        link: {
+                          type: 'doc',
+                          id: "pages-for-subheaders/about-rke1-templates",
+                        },
+                        items: [
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/creator-permissions",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/enforce-templates",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/override-template-settings",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/infrastructure",
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases",
+                                ]
+                        },
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates",
+
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies",
+
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry",
+
+                          "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding",
+                      ]
+                    },
+                        {
+                          type: 'category',
+                          label: 'Manage Clusters',
+                          link: {
+                            type: 'doc',
+                            id: "pages-for-subheaders/manage-clusters",
+                          },
+                          items: [
+                              {
+                              type: 'category',
+                              label: 'Access Clusters',
+                              link: {
+                                type: 'doc',
+                                id: "pages-for-subheaders/access-clusters",
+                              },
+                              items: [
+                                    "how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig",
+                                    "how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint",
+                                    "how-to-guides/new-user-guides/manage-clusters/access-clusters/add-users-to-clusters",
+                                      ]
+                            },
+                            {
+                              type: 'category',
+                              label: 'Install Cluster Autoscaler',
+                              link: {
+                                type: 'doc',
+                                id: "pages-for-subheaders/install-cluster-autoscaler",
+                              },
+                              items: [
+                                    "how-to-guides/new-user-guides/manage-clusters/install-cluster-autoscaler/use-aws-ec2-auto-scaling-groups",
+                                      ]
+                              },
+                              {
+                              type: 'category',
+                              label: 'Create Kubernetes Persistent Storage',
+                              link: {
+                                type: 'doc',
+                                id: "pages-for-subheaders/create-kubernetes-persistent-storage",
+                              },
+                              items: [
+                                    "how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/about-persistent-storage",
+                                    "how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/set-up-existing-storage",
+                                    "how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/dynamically-provision-new-storage",
+                                    "how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/use-external-ceph-driver",
+                                    "how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/about-glusterfs-volumes",
+                                    "how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/install-iscsi-volumes",
+                                    ]
+                              },
+                              {
+                              type: 'category',
+                              label: 'Provisioning Storage Examples',
+                              link: {
+                                type: 'doc',
+                                id: "pages-for-subheaders/provisioning-storage-examples",
+                              },
+                              items: [
+                                    "how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/persistent-storage-in-amazon-ebs",
+                                    "how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/nfs-storage",
+                                    "how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/vsphere-storage",
+                                      ]
+                              },
+                              "how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces",
+
+                              "how-to-guides/new-user-guides/manage-clusters/clone-cluster-configuration",
+
+                              "how-to-guides/new-user-guides/manage-clusters/rotate-certificates",
+
+                              "how-to-guides/new-user-guides/manage-clusters/rotate-encryption-key",
+
+                              "how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
+
+                              "how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes",
+
+                              "how-to-guides/new-user-guides/manage-clusters/add-a-pod-security-policy",
+
+                              "how-to-guides/new-user-guides/manage-clusters/assign-pod-security-policies",
+                            ]
+                            },
+                            {
+                              type: 'category',
+                              label: 'Kubernetes Cluster Setup',
+                              link: {
+                                type: 'doc',
+                                id: "pages-for-subheaders/kubernetes-cluster-setup",
+                                        },
+                              items: [
+                                  "how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs",
+                                  "how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher",
+                                  "how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher",
+                                  "how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher",
+                                      ],
+                            },
+                            {
+                              type: 'category',
+                              label: 'Infrastructure Setup',
+                              link: {
+                                type: 'doc',
+                                id: "pages-for-subheaders/infrastructure-setup",
+                                    },
+                              items: [
+                                "how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster",
+                                "how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster",
+                                "how-to-guides/new-user-guides/infrastructure-setup/ha-rke2-kubernetes-cluster",
+                                "how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2",
+                                "how-to-guides/new-user-guides/infrastructure-setup/mysql-database-in-amazon-rds",
+                                "how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer",
+                                "how-to-guides/new-user-guides/infrastructure-setup/amazon-elb-load-balancer",
+                                    ],
+                           },
+                           {
+                            type: 'category',
+                            label: 'Kubernetes Clusters in Rancher Setup',
+                            link: {
+                              type: 'doc',
+                              id: "pages-for-subheaders/kubernetes-clusters-in-rancher-setup",
+                            },
                             items: [
-                                    "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster",
-
-                                    "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-a-digitalocean-cluster",
-
-                                    "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster",
-                                   {
-                                    type: 'category',
-                                    label: 'vSphere',
-                                    link: {
-                                      type: 'doc',
-                                      id: "pages-for-subheaders/vsphere",
-                                          },
+                                    "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters",
+                                {
+                                  type: 'category',
+                                  label: 'Checklist for Production-Ready Clusters',
+                                  link: {
+                                    type: 'doc',
+                                    id: "pages-for-subheaders/checklist-for-production-ready-clusters",
+                                      },
                                     items: [
-                                      "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere",
-                                      "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-credentials",
-                                      "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-a-vm-template",
-                                            ]
+                                      "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters/recommended-cluster-architecture",
+                                      "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters/roles-for-nodes-in-kubernetes",
+                                            ],
                                 },
                                 {
-                                    type: 'category',
-                                    label: 'Nutanix',
-                                    link: {
-                                      type: 'doc',
-                                      id: "pages-for-subheaders/nutanix",
-                                          },
+                                  type: 'category',
+                                  label: 'Set Up Clusters from Hosted Kubernetes Providers',
+                                  link: {
+                                    type: 'doc',
+                                    id: "pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers",
+                                      },
                                     items: [
-                                      "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/provision-kubernetes-clusters-in-aos",
+                                        "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/gke",
+                                        "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/aks",
+                                        "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/alibaba",
+                                        "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/tencent",
+                                        "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/huawei",
                                           ]
-                                        }
-                                      ]
-                      },
-                      {
-                          type: 'category',
-                          label: 'Use Windows Clusters',
-                          link: {
-                            type: 'doc',
-                            id: "pages-for-subheaders/use-windows-clusters",
-                              },
-                              items: [
-                                "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/azure-storageclass-configuration",
-                                "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/windows-linux-cluster-feature-parity",
-                                "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/network-requirements-for-host-gateway",
-                                "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/workload-migration-guidance"
-                                    ]
-                      },
-                      {
-                          type: 'category',
-                          label: 'Set Up Cloud Providers',
-                          link: {
-                            type: 'doc',
-                            id: "pages-for-subheaders/set-up-cloud-providers",
-                              },
-                              items: [
-                                  {
-                                    type: 'category',
-                                    label: 'Other Cloud Providers',
-                                    link: {
-                                      type: 'doc',
-                                      id: "pages-for-subheaders/other-cloud-providers",
-                                    },
-                                    items: [
-                                      "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/amazon",
-                                      "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/azure",
-                                      "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/google-compute-engine",
-                                          ]
+                                        },
+                            {
+                              type: 'category',
+                              label: 'Use Windows Clusters',
+                              link: {
+                                type: 'doc',
+                                id: "pages-for-subheaders/use-windows-clusters",
                                   },
-                                  {
-                                    type: 'category',
-                                    label: 'vSphere',
-                                    link: {
-                                      type: 'doc',
-                                      id: "pages-for-subheaders/vsphere-cloud-provider"
-                                    },
-                                    items: [
-                                      "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/vsphere/configure-in-tree-vsphere",
-                                      "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/vsphere/configure-out-of-tree-vsphere",
-                                      "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/vsphere/migrate-from-in-tree-to-out-of-tree",
-                                          ]
-                                  }
-                                     ]
-                      },
-                          "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/rke1-vs-rke2-differences",
+                              items: [
+                                "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/azure-storageclass-configuration",
+                                "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/windows-linux-cluster-feature-parity",
+                                "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/network-requirements-for-host-gateway",
+                                "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/workload-migration-guidance"
+                                    ]
+                              },
+                              {
+                              type: 'category',
+                              label: 'Set Up Cloud Providers',
+                              link: {
+                                type: 'doc',
+                                id: "pages-for-subheaders/set-up-cloud-providers",
+                                  },
+                              items: [
+                              "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon",
+                              "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/azure",
+                              "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/google-compute-engine",
+                              "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere",
+                              "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere",
+                              "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/migrate-from-in-tree-to-out-of-tree",
+                                    ]
+                              },
+                              "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters",
+                              ]
+                        },
+                        {
+                          type: 'category',
+                          label: 'Launch Kubernetes with Rancher',
+                          link: {
+                            type: 'doc',
+                            id: "pages-for-subheaders/launch-kubernetes-with-rancher",
+                              },
+                            items: [
+                              {   
+                                type: 'category',
+                                label: 'Use New Nodes in an Infra Provider',
+                                link: {
+                                  type: 'doc',
+                                  id: "pages-for-subheaders/use-new-nodes-in-an-infra-provider",
+                                      },
+                                  items: [
+                                      "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster",
 
-                          "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/about-rancher-agents",
-                     ]
-                  },
-                  "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters",
-                ]
-              },
-              {
-                type: 'category',
-                label: 'Kubernetes Resources Setup',
-                link: {
-                  type: 'doc',
-                  id: "pages-for-subheaders/kubernetes-resources-setup",
-                },
-                items: [
-                  {
-                    type: 'category',
-                    label: 'Workloads and Pods',
-                    link: {
-                      type: 'doc',
-                      id: "pages-for-subheaders/workloads-and-pods",
-                    },
-                    items: [
-                          "how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/deploy-workloads",
-                          "how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/roll-back-workloads",
-                          "how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/upgrade-workloads",
-                          "how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/add-a-sidecar",
-                          ]
-                  },
-                  {
-                    type: 'category',
-                    label: 'Horizontal Pod Autoscaler',
-                    link: {
-                      type: 'doc',
-                      id: "pages-for-subheaders/horizontal-pod-autoscaler",
-                    },
-                    items: [
-                          "how-to-guides/new-user-guides/kubernetes-resources-setup/horizontal-pod-autoscaler/about-hpas",
-                          "how-to-guides/new-user-guides/kubernetes-resources-setup/horizontal-pod-autoscaler/manage-hpas-with-ui",
-                          "how-to-guides/new-user-guides/kubernetes-resources-setup/horizontal-pod-autoscaler/manage-hpas-with-kubectl",
-                          "how-to-guides/new-user-guides/kubernetes-resources-setup/horizontal-pod-autoscaler/test-hpas-with-kubectl",
-                          ]
+                                      "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-a-digitalocean-cluster",
+
+                                      "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster",
+                                      {
+                                      type: 'category',
+                                      label: 'vSphere',
+                                      link: {
+                                        type: 'doc',
+                                        id: "pages-for-subheaders/vsphere",
+                                            },
+                                      items: [
+                                        "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere",
+                                        "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-credentials",
+                                        "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-a-vm-template",
+                                              ]
+                                      },
+                                      {
+                                      type: 'category',
+                                      label: 'Nutanix',
+                                      link: {
+                                        type: 'doc',
+                                        id: "pages-for-subheaders/nutanix",
+                                            },
+                                      items: [
+                                        "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/provision-kubernetes-clusters-in-aos",
+                                            ]
+                              }
+                            ]
                           },
-                  {
-                    type: 'category',
-                    label: 'Load Balancer and Ingress Controller',
-                    link: {
-                      type: 'doc',
-                      id: "pages-for-subheaders/load-balancer-and-ingress-controller",
-                    },
-                    items: [
-                          "how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing",
-                          "how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/add-ingresses",
-                          "how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/ingress-configuration",
+                              "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences",
+
+                              "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents",
+                        ]
+                      },
+                        {
+                          type: 'category',
+                          label: 'Kubernetes Resources Setup',
+                          link: {
+                            type: 'doc',
+                            id: "pages-for-subheaders/kubernetes-resources-setup",
+                          },
+                          items: [
+                            {
+                          type: 'category',
+                          label: 'Workloads and Pods',
+                          link: {
+                            type: 'doc',
+                            id: "pages-for-subheaders/workloads-and-pods",
+                          },
+                          items: [
+                                "how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/deploy-workloads",
+                                "how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/roll-back-workloads",
+                                "how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/upgrade-workloads",
+                                "how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/add-a-sidecar",
+                                ]
+                          },
+                          {
+                            type: 'category',
+                            label: 'Horizontal Pod Autoscaler',
+                            link: {
+                              type: 'doc',
+                              id: "pages-for-subheaders/horizontal-pod-autoscaler",
+                            },
+                            items: [
+                                  "how-to-guides/new-user-guides/kubernetes-resources-setup/horizontal-pod-autoscaler/about-hpas",
+                                  "how-to-guides/new-user-guides/kubernetes-resources-setup/horizontal-pod-autoscaler/manage-hpas-with-ui",
+                                  "how-to-guides/new-user-guides/kubernetes-resources-setup/horizontal-pod-autoscaler/manage-hpas-with-kubectl",
+                                  "how-to-guides/new-user-guides/kubernetes-resources-setup/horizontal-pod-autoscaler/test-hpas-with-kubectl",
+                                  ]
+                          },
+                          {
+                            type: 'category',
+                            label: 'Load Balancer and Ingress Controller',
+                            link: {
+                              type: 'doc',
+                              id: "pages-for-subheaders/load-balancer-and-ingress-controller",
+                            },
+                            items: [
+                                  "how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing",
+                                  "how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/add-ingresses",
+                                  "how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/ingress-configuration",
+                                  ]
+                          },
+                                  "how-to-guides/new-user-guides/kubernetes-resources-setup/create-services",
+
+                                  "how-to-guides/new-user-guides/kubernetes-resources-setup/encrypt-http-communication",
+
+                                  "how-to-guides/new-user-guides/kubernetes-resources-setup/configmaps",
+
+                                  "how-to-guides/new-user-guides/kubernetes-resources-setup/secrets",
+
+                                  "how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries",
+                                  ]
+                           },
+                           {
+                            type: 'category',
+                            label: 'Helm Charts in Rancher',
+                            link: {
+                              type: 'doc',
+                              id: "pages-for-subheaders/helm-charts-in-rancher",
+                            },
+                            items: [
+                                  "how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps",
+                                      ]
+                            },
+                            {
+                              type: 'category',
+                              label: 'Deploy Apps Across Clusters',
+                              link: {
+                                type: 'doc',
+                                id: "pages-for-subheaders/deploy-apps-across-clusters",
+                              },
+                              items: [
+                                    "how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet",
+                                    "how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps",
+                                        ]
+                            },
+                            {
+                              type: 'category',
+                              label: 'Backup, Restore, and Disaster Recovery',
+                              link: {
+                                type: 'doc',
+                                id: "pages-for-subheaders/backup-restore-and-disaster-recovery",
+                              },
+                              items: [
+                                "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher",
+                                "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher",
+                                "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster",
+                                "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-docker-installed-rancher",
+                                "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-docker-installed-rancher",
+                                "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters",
+                                "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup",
+                                     ]
+                            },
+                              "how-to-guides/new-user-guides/add-users-to-projects",
+
+                              "how-to-guides/new-user-guides/manage-namespaces",      
                           ]
-                  },
-                     "how-to-guides/new-user-guides/kubernetes-resources-setup/create-services",
-
-                     "how-to-guides/new-user-guides/kubernetes-resources-setup/encrypt-http-communication",
-
-                     "how-to-guides/new-user-guides/kubernetes-resources-setup/configmaps",
-
-                     "how-to-guides/new-user-guides/kubernetes-resources-setup/secrets",
-
-                     "how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries",
-                     ],
-              },
-              {
-                type: 'category',
-                label: 'Helm Charts in Rancher',
-                link: {
-                  type: 'doc',
-                  id: "pages-for-subheaders/helm-charts-in-rancher",
-                },
-                items: [
-                      "how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps",
-                          ]
-              },
-              {
-                type: 'category',
-                label: 'Deploy Apps Across Clusters',
-                link: {
-                  type: 'doc',
-                  id: "pages-for-subheaders/deploy-apps-across-clusters",
-                },
-                items: [
-                      "how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet",
-                      "how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps",
-                          ]
-              },
-              {
-                type: 'category',
-                label: 'Backup, Restore, and Disaster Recovery',
-                link: {
-                  type: 'doc',
-                  id: "pages-for-subheaders/backup-restore-and-disaster-recovery",
-                },
-                items: [
-                  "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher",
-                  "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher",
-                  "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster",
-                  "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-docker-installed-rancher",
-                  "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-docker-installed-rancher",
-                  "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters",
-                  "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup",
-                ]
-              }
-            ]
-        },
-        {
+                        },
+          {
             type: 'category',
             label: 'Advanced User Guides',
             link: {
               type: 'doc',
               id: "pages-for-subheaders/advanced-user-guides",
                   },
-            items: [
-              {
-                type: 'category',
-                label: 'Authentication, Permissions, and Global Configuration',
-                link: {
-                  type: 'doc',
-                  id: "pages-for-subheaders/authentication-permissions-and-global-configuration",
-                      },
-                items: [
-                      {
-                      type: 'category',
-                      label: 'About Authentication',
-                      link: {
-                        type: 'doc',
-                        id: "pages-for-subheaders/about-authentication",
-                              },
-                        items: [
-                            {
-                            type: 'category',
-                            label: 'Authentication Config',
-                            link: {
-                              type: 'doc',
-                              id: "pages-for-subheaders/authentication-config",
-                            },
-                            items: [
-                                 "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/manage-users-and-groups",
-                                 "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/create-local-users",
-                                 "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-google-oauth",
-                                 "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-active-directory",
-                                 "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-freeipa",
-                                 "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-azure-ad",
-                                 "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-github",
-                                 "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-keycloak-oidc",
-                                 "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-keycloak-saml",
-                                 "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-pingidentity",
-                                 "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-okta-saml",
-                                   ]
-                            },
-                            {
-                            type: 'category',
-                            label: 'Configure Microsoft AD Federation Service (SAML)',
-                            link: {
-                              type: 'doc',
-                              id: "pages-for-subheaders/configure-microsoft-ad-federation-service-saml",
-                                  },
-                            items: [
-                                "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/configure-microsoft-ad-federation-service-saml/configure-ms-adfs-for-rancher",
-                                "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/configure-microsoft-ad-federation-service-saml/configure-rancher-for-ms-adfs",
-                                   ]
-                            },
-                            {
-                            type: 'category',
-                            label: 'Configure Shibboleth (SAML)',
-                            link: {
-                              type: 'doc',
-                              id: "pages-for-subheaders/configure-shibboleth-saml",
-                                  },
-                            items: [
-                                "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/configure-shibboleth-saml/about-group-permissions",
-                                    ]
-                            }
-                          ]
-
-                      },
-                      {
-                      type: 'category',
-                      label: 'Manage Role-Based Access Control (RBAC)',
-                      link: {
-                        type: 'doc',
-                        id: "pages-for-subheaders/manage-role-based-access-control-rbac",
-                      },
-                      items: [
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions",
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles",
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/custom-roles",
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/locked-roles",
-                             ]
-                      },
-                      {
-                      type: 'category',
-                      label: 'About Provisioning Drivers',
-                      link: {
-                        type: 'doc',
-                        id: "pages-for-subheaders/about-provisioning-drivers",
-                      },
-                      items: [
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-cluster-drivers",
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers",
-                             ]
-                      },
-                      {
-                      type: 'category',
-                      label: 'About RKE1 Templates',
-                      link: {
-                        type: 'doc',
-                        id: "pages-for-subheaders/about-rke1-templates",
-                      },
-                      items: [
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/creator-permissions",
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates",
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates",
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/enforce-templates",
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/override-template-settings",
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates",
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/infrastructure",
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases",
-                              ]
-                      },
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates",
-
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies",
-
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry",
-
-                        "how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/custom-branding",
-                  ]
-              },
-              {
-                type: 'category',
-                label: 'Manage Clusters',
-                link: {
-                  type: 'doc',
-                  id: "pages-for-subheaders/manage-clusters",
-                },
-                items: [
-                   {
-                    type: 'category',
-                    label: 'Access Clusters',
-                    link: {
-                      type: 'doc',
-                      id: "pages-for-subheaders/access-clusters",
-                    },
-                    items: [
-                          "how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig",
-                          "how-to-guides/advanced-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint",
-                          "how-to-guides/advanced-user-guides/manage-clusters/access-clusters/add-users-to-clusters",
-                            ]
-                   },
-                   {
-                    type: 'category',
-                    label: 'Install Cluster Autoscaler',
-                    link: {
-                      type: 'doc',
-                      id: "pages-for-subheaders/install-cluster-autoscaler",
-                    },
-                    items: [
-                          "how-to-guides/advanced-user-guides/manage-clusters/install-cluster-autoscaler/use-aws-ec2-auto-scaling-groups",
-                            ]
-                    },
-                    {
-                    type: 'category',
-                    label: 'Create Kubernetes Persistent Storage',
-                    link: {
-                      type: 'doc',
-                      id: "pages-for-subheaders/create-kubernetes-persistent-storage",
-                    },
-                    items: [
-                          {
-                          type: 'category',
-                          label: 'Manage Persistent Storage',
-                          link: {
-                            type: 'doc',
-                            id: "pages-for-subheaders/manage-persistent-storage",
-                          },
-                          items: [
-                          "how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/about-persistent-storage",
-                          "how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/set-up-existing-storage",
-                          "how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/dynamically-provision-new-storage",
-                          "how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/use-external-ceph-driver",
-                          "how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/about-glusterfs-volumes",
-                          "how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/install-iscsi-volumes",
-                                  ]
-                          },
-                          {
-                          type: 'category',
-                          label: 'Provisioning Storage Examples',
-                          link: {
-                            type: 'doc',
-                            id: "pages-for-subheaders/provisioning-storage-examples",
-                          },
-                          items: [
-                                "how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/provisioning-storage-examples/persistent-storage-in-amazon-ebs",
-                                "how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/provisioning-storage-examples/nfs-storage",
-                                "how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/provisioning-storage-examples/vsphere-storage",
-                           ]
-                          }
-                        ]
-                    },
-                    "how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces",
-
-                    "how-to-guides/advanced-user-guides/manage-clusters/clone-cluster-configuration",
-
-                    "how-to-guides/advanced-user-guides/manage-clusters/rotate-certificates",
-                    "how-to-guides/advanced-user-guides/manage-clusters/rotate-encryption-key",
-
-                    "how-to-guides/advanced-user-guides/manage-clusters/nodes-and-node-pools",
-
-                    "how-to-guides/advanced-user-guides/manage-clusters/clean-cluster-nodes",
-
-                    "how-to-guides/advanced-user-guides/manage-clusters/add-a-pod-security-policy",
-
-                    "how-to-guides/advanced-user-guides/manage-clusters/assign-pod-security-policies",
-                ]
-              },
-              {
+              items: [
+                  {
                 type: 'category',
                 label: 'Manage Projects',
                 link: {
@@ -738,8 +672,6 @@ const sidebars = {
                   id: "pages-for-subheaders/manage-projects",
                 },
                 items: [
-                    "how-to-guides/advanced-user-guides/manage-projects/add-users-to-projects",
-                    "how-to-guides/advanced-user-guides/manage-projects/manage-namespaces",
                     "how-to-guides/advanced-user-guides/manage-projects/ci-cd-pipelines",
                     "how-to-guides/advanced-user-guides/manage-projects/manage-pod-security-policies",
                       {
@@ -754,9 +686,9 @@ const sidebars = {
                             "how-to-guides/advanced-user-guides/manage-projects/manage-project-resource-quotas/override-default-limit-in-namespaces",
                             "how-to-guides/advanced-user-guides/manage-projects/manage-project-resource-quotas/set-container-default-resource-limits",
                             "how-to-guides/advanced-user-guides/manage-projects/manage-project-resource-quotas/resource-quota-types",
-                        ]
-                      }
-                    ]
+                               ]
+                              }
+                            ]
               },
               {
                 type: 'category',
@@ -787,8 +719,8 @@ const sidebars = {
                             "how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads",
                             "how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/project-monitors"
                              ]
-                            }
-                          ]
+                    }
+                  ]
               },
               {
               type: 'category',
@@ -835,7 +767,7 @@ const sidebars = {
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/cis-scan-guides",
-              },
+                    },
               items: [
                   "how-to-guides/advanced-user-guides/cis-scan-guides/install-rancher-cis-benchmark",
                   "how-to-guides/advanced-user-guides/cis-scan-guides/uninstall-rancher-cis-benchmark",
@@ -847,18 +779,32 @@ const sidebars = {
                   "how-to-guides/advanced-user-guides/cis-scan-guides/configure-alerts-for-periodic-scan-on-a-schedule",
                   "how-to-guides/advanced-user-guides/cis-scan-guides/create-a-custom-benchmark-version-to-run",
                   ]
-                }
-              ]
-            }
-          ]
-    },
+              },
+              {
+                type: 'category',
+                label: 'Enable Experimental Features',
+                link: {
+                  type: 'doc',
+                  id: "pages-for-subheaders/enable-experimental-features",
+                      },
+                      items: [
+                            "how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64",
+                            "how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers",
+                            "how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features",
+                            "how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery",
+                             ]
+              },
+                "how-to-guides/advanced-user-guides/open-ports-with-firewalld",
+                "how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
+                "how-to-guides/advanced-user-guides/enable-api-audit-log",
+                "how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
+            ]
+          }
+       ]
+      },
     {
       type: 'category',
       label: 'Reference Guides',
-      link: {
-        type: 'doc',
-        id: "reference-guides",
-      },
       items: [
         {
           type: 'category',
@@ -1010,19 +956,6 @@ const sidebars = {
           },
           {
             type: 'category',
-            label: 'Installation References',
-            link: {
-              type: 'doc',
-              id: "pages-for-subheaders/installation-references",
-            },
-            items: [
-            "reference-guides/installation-references/helm-chart-options",
-            "reference-guides/installation-references/tls-settings",
-            "reference-guides/installation-references/feature-flags"
-                  ]
-          },
-          {
-            type: 'category',
             label: 'Amazon EKS Permissions',
             link: {
               type: 'doc',
@@ -1045,17 +978,6 @@ const sidebars = {
                   "reference-guides/backup-restore-configuration/storage-configuration",
                   "reference-guides/backup-restore-configuration/examples",
                   ],
-          },
-          {
-            type: 'category',
-            label: 'Configure OpenLDAP',
-            link: {
-              type: 'doc',
-              id: "pages-for-subheaders/configure-openldap",
-            },
-            items: [
-                  "reference-guides/configure-openldap/openldap-config-reference",
-                      ]
           },
               "reference-guides/kubernetes-concepts",
           {
@@ -1186,43 +1108,31 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Explanations',
-      link: {
-        type: 'doc',
-        id: "explanations",
-      },
+      label: 'Integrations in Rancher',
       items: [
-      {
-        type: 'category',
-        label: 'Integrations in Rancher',
-        link: {
-          type: 'doc',
-          id: "pages-for-subheaders/integrations-in-rancher",
-              },
-          items: [
-            {
-              type: 'category',
-              label: 'Cloud Marketplace Integration',
-              link: {
-                type: 'doc',
-                id: "pages-for-subheaders/cloud-marketplace"
-              },
-              items: [
+        {
+           type: 'category',
+           label: 'Cloud Marketplace Integration',
+           link: {
+             type: 'doc',
+             id: "pages-for-subheaders/cloud-marketplace"
+                 },
+             items: [
                 {
-                  type: 'category',
-                  label: 'AWS Marketplace Integration',
-                  link: {
-                    type: 'doc',
-                    id: "pages-for-subheaders/aws-cloud-marketplace"
-                  },
+                type: 'category',
+                label: 'AWS Marketplace Integration',
+                link: {
+                  type: 'doc',
+                  id: "pages-for-subheaders/aws-cloud-marketplace"
+                     },
                   items: [
-                    'explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements',
-                    'explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter',
-                    'explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/uninstall-adapter',
-                    'explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues'
+                    'integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements',
+                    'integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter',
+                    'integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/uninstall-adapter',
+                    'integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues'
                   ]
                 },
-                'explanations/integrations-in-rancher/cloud-marketplace/supportconfig'
+                'integrations-in-rancher/cloud-marketplace/supportconfig'
               ]
             },
             {
@@ -1233,10 +1143,10 @@ const sidebars = {
               id: "pages-for-subheaders/cis-scans",
                   },
             items: [
-                "explanations/integrations-in-rancher/cis-scans/configuration-reference",
-                "explanations/integrations-in-rancher/cis-scans/rbac-for-cis-scans",
-                "explanations/integrations-in-rancher/cis-scans/skipped-and-not-applicable-tests",
-                "explanations/integrations-in-rancher/cis-scans/custom-benchmark",
+                "integrations-in-rancher/cis-scans/configuration-reference",
+                "integrations-in-rancher/cis-scans/rbac-for-cis-scans",
+                "integrations-in-rancher/cis-scans/skipped-and-not-applicable-tests",
+                "integrations-in-rancher/cis-scans/custom-benchmark",
                    ],
             },
             {
@@ -1247,12 +1157,12 @@ const sidebars = {
               id: "pages-for-subheaders/fleet-gitops-at-scale",
                   },
             items: [
-              "explanations/integrations-in-rancher/fleet-gitops-at-scale/architecture",
-              "explanations/integrations-in-rancher/fleet-gitops-at-scale/windows-support",
-              "explanations/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy",
+              "integrations-in-rancher/fleet-gitops-at-scale/architecture",
+              "integrations-in-rancher/fleet-gitops-at-scale/windows-support",
+              "integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy",
                   ]
             },
-              "explanations/integrations-in-rancher/harvester",
+              "integrations-in-rancher/harvester",
             {
             type: 'category',
             label: 'Istio',
@@ -1261,9 +1171,9 @@ const sidebars = {
               id: "pages-for-subheaders/istio",
                   },
               items: [
-                  "explanations/integrations-in-rancher/istio/cpu-and-memory-allocations",
-                  "explanations/integrations-in-rancher/istio/rbac-for-istio",
-                  "explanations/integrations-in-rancher/istio/disable-istio",
+                  "integrations-in-rancher/istio/cpu-and-memory-allocations",
+                  "integrations-in-rancher/istio/rbac-for-istio",
+                  "integrations-in-rancher/istio/disable-istio",
                    {
                     type: 'category',
                     label: 'Configuration Options',
@@ -1272,15 +1182,15 @@ const sidebars = {
                       id: "pages-for-subheaders/configuration-options",
                           },
                     items: [
-                          "explanations/integrations-in-rancher/istio/configuration-options/pod-security-policies",
-                          "explanations/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations",
-                          "explanations/integrations-in-rancher/istio/configuration-options/install-istio-on-rke2-cluster",
-                          "explanations/integrations-in-rancher/istio/configuration-options/project-network-isolation",
+                          "integrations-in-rancher/istio/configuration-options/pod-security-policies",
+                          "integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations",
+                          "integrations-in-rancher/istio/configuration-options/install-istio-on-rke2-cluster",
+                          "integrations-in-rancher/istio/configuration-options/project-network-isolation",
                            ]
                    }
                   ]
             },
-              "explanations/integrations-in-rancher/longhorn",
+              "integrations-in-rancher/longhorn",
             {
             type: 'category',
             label: 'Logging',
@@ -1289,11 +1199,11 @@ const sidebars = {
               id: "pages-for-subheaders/logging",
                   },
                 items: [
-                  "explanations/integrations-in-rancher/logging/logging-architecture",
-                  "explanations/integrations-in-rancher/logging/migrate-to-rancher-v2.5+-logging",
-                  "explanations/integrations-in-rancher/logging/rbac-for-logging",
-                  "explanations/integrations-in-rancher/logging/logging-helm-chart-options",
-                  "explanations/integrations-in-rancher/logging/taints-and-tolerations",
+                  "integrations-in-rancher/logging/logging-architecture",
+                  "integrations-in-rancher/logging/migrate-to-rancher-v2.5+-logging",
+                  "integrations-in-rancher/logging/rbac-for-logging",
+                  "integrations-in-rancher/logging/logging-helm-chart-options",
+                  "integrations-in-rancher/logging/taints-and-tolerations",
                     {
                       type: 'category',
                       label: 'Custom Resource Configuration',
@@ -1302,8 +1212,8 @@ const sidebars = {
                         id: "pages-for-subheaders/custom-resource-configuration",
                             },
                       items: [
-                            "explanations/integrations-in-rancher/logging/custom-resource-configuration/flows-and-clusterflows",
-                            "explanations/integrations-in-rancher/logging/custom-resource-configuration/outputs-and-clusteroutputs"
+                            "integrations-in-rancher/logging/custom-resource-configuration/flows-and-clusterflows",
+                            "integrations-in-rancher/logging/custom-resource-configuration/outputs-and-clusteroutputs"
                       ]
                     }
                   ]
@@ -1316,28 +1226,23 @@ const sidebars = {
               id: "pages-for-subheaders/monitoring-and-alerting",
                   },
             items: [
-              "explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works",
-              "explanations/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring",
-              "explanations/integrations-in-rancher/monitoring-and-alerting/built-in-dashboards",
-              "explanations/integrations-in-rancher/monitoring-and-alerting/windows-support",
-              "explanations/integrations-in-rancher/monitoring-and-alerting/promql-expressions",
+              "integrations-in-rancher/monitoring-and-alerting/how-monitoring-works",
+              "integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring",
+              "integrations-in-rancher/monitoring-and-alerting/built-in-dashboards",
+              "integrations-in-rancher/monitoring-and-alerting/windows-support",
+              "integrations-in-rancher/monitoring-and-alerting/promql-expressions",
                   ]
             },
-              "explanations/integrations-in-rancher/neuvector",
+              "integrations-in-rancher/neuvector",
 
-              "explanations/integrations-in-rancher/opa-gatekeeper",
+              "integrations-in-rancher/opa-gatekeeper",
                   ]
-                }
-              ]
     },
     {
       type: 'category',
       label: 'FAQ',
-      link: {
-        type: 'doc',
-        id: "faq",
-      },
       items: [
+        "faq/general-faq",
         "faq/deprecated-features-in-v2.5",
         "faq/install-and-configure-kubectl",
         "faq/dockershim",
@@ -1351,11 +1256,8 @@ const sidebars = {
     {
       type: 'category',
       label: 'Troubleshooting',
-      link: {
-        type: 'doc',
-        id: "troubleshooting",
-      },
       items: [
+            "troubleshooting/general-troubleshooting",
         {
           type: 'category',
           label: 'Kubernetes Components',
@@ -1373,10 +1275,6 @@ const sidebars = {
         {
           type: 'category',
           label: 'Other Troubleshooting Tips',
-          link: {
-            type: 'doc',
-            id: "pages-for-subheaders/other-troubleshooting-tips",
-          },
           items: [
             "troubleshooting/other-troubleshooting-tips/kubernetes-resources",
             "troubleshooting/other-troubleshooting-tips/networking",
@@ -1386,11 +1284,11 @@ const sidebars = {
             "troubleshooting/other-troubleshooting-tips/logging",
             "troubleshooting/other-troubleshooting-tips/user-id-tracking-in-audit-logs",
             "troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation",
-                 ],
+                 ]
                 }
               ]
-    },
+            },
         "contribute-to-rancher",
-  ],
+  ]
 }
 module.exports = sidebars;

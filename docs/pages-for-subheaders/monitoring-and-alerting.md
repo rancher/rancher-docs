@@ -25,7 +25,7 @@ The monitoring application allows you to:
 
 # How Monitoring Works
 
-For an explanation of how the monitoring components work together, see [this page.](../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)
+For an explanation of how the monitoring components work together, see [this page.](../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)
 
 # Default Components and Deployments
 
@@ -33,7 +33,7 @@ For an explanation of how the monitoring components work together, see [this pag
 
 By default, the monitoring application deploys Grafana dashboards (curated by the [kube-prometheus](https://github.com/prometheus-operator/kube-prometheus) project) onto a cluster.
 
-It also deploys an Alertmanager UI and a Prometheus UI. For more information about these tools, see [Built-in Dashboards.](../explanations/integrations-in-rancher/monitoring-and-alerting/built-in-dashboards.md)
+It also deploys an Alertmanager UI and a Prometheus UI. For more information about these tools, see [Built-in Dashboards.](../integrations-in-rancher/monitoring-and-alerting/built-in-dashboards.md)
 ### Default Metrics Exporters
 
 By default, Rancher Monitoring deploys exporters (such as [node-exporter](https://github.com/prometheus/node_exporter) and [kube-state-metrics](https://github.com/kubernetes/kube-state-metrics)).
@@ -42,15 +42,15 @@ These default exporters automatically scrape metrics for CPU and memory from all
 
 ### Default Alerts
 
-The monitoring application deploys some alerts by default. To see the default alerts, go to the [Alertmanager UI](../explanations/integrations-in-rancher/monitoring-and-alerting/built-in-dashboards.md#alertmanager-ui) and click **Expand all groups.**
+The monitoring application deploys some alerts by default. To see the default alerts, go to the [Alertmanager UI](../integrations-in-rancher/monitoring-and-alerting/built-in-dashboards.md#alertmanager-ui) and click **Expand all groups.**
 
 ### Components Exposed in the Rancher UI
 
-For a list of monitoring components exposed in the Rancher UI, along with common use cases for editing them, see [this section.](../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#components-exposed-in-the-rancher-ui)
+For a list of monitoring components exposed in the Rancher UI, along with common use cases for editing them, see [this section.](../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#components-exposed-in-the-rancher-ui)
 
 # Role-based Access Control
 
-For information on configuring access to monitoring, see [this page.](../explanations/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md)
+For information on configuring access to monitoring, see [this page.](../integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md)
 
 # Guides
 
@@ -66,7 +66,7 @@ For information on configuring access to monitoring, see [this page.](../explana
 
 ### Configuring Monitoring Resources in Rancher
 
-> The configuration reference assumes familiarity with how monitoring components work together. For more information, see [How Monitoring Works.](../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)
+> The configuration reference assumes familiarity with how monitoring components work together. For more information, see [How Monitoring Works.](../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)
 
 - [ServiceMonitor and PodMonitor](../reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors.md)
 - [Receiver](../reference-guides/monitoring-v2-configuration/receivers.md)
@@ -85,7 +85,7 @@ When deployed onto an RKE1 Windows cluster, Monitoring V2 will now automatically
 
 To be able to fully deploy Monitoring V2 for Windows, all of your Windows hosts must have a minimum [wins](https://github.com/rancher/wins) version of v0.1.0.
 
-For more details on how to upgrade wins on existing Windows hosts, refer to the section on [Windows cluster support for Monitoring V2.](../explanations/integrations-in-rancher/monitoring-and-alerting/windows-support.md)
+For more details on how to upgrade wins on existing Windows hosts, refer to the section on [Windows cluster support for Monitoring V2.](../integrations-in-rancher/monitoring-and-alerting/windows-support.md)
 
 
 
