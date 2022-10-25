@@ -41,7 +41,7 @@ If the scrape configuration you want cannot be specified via a ServiceMonitor or
 
 A [scrape_config section](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scrape_config) specifies a set of targets and parameters describing how to scrape them. In the general case, one scrape configuration specifies a single job.
 
-An example of where this might be used is with Istio. For more information, see [this section.](../../explanations/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md)
+An example of where this might be used is with Istio. For more information, see [this section.](../../integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md)
 
 
 ## Configuring Applications Packaged within Monitoring v2

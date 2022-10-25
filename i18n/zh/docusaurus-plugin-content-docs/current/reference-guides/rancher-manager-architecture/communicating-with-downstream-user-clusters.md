@@ -26,7 +26,7 @@ Pod。Bob 通过 Rancher 的认证代理进行身份验证。
 
 Rancher 使用 [ServiceAccount](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) 与 Kubernetes 集群通信，该 ServiceAccount 为在 Pod 中运行的进程提供身份。
 
-默认情况下，Rancher 生成一个 [kubeconfig 文件](../../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)，文件包含凭证信息，用于为 Rancher Server 连接下游集群的 Kubernetes API Server 的代理。kubeconfig 文件 (`kube_config_rancher-cluster.yml`) 包含对集群的完全访问权限。
+默认情况下，Rancher 生成一个 [kubeconfig 文件](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)，文件包含凭证信息，用于为 Rancher Server 连接下游集群的 Kubernetes API Server 的代理。kubeconfig 文件 (`kube_config_rancher-cluster.yml`) 包含对集群的完全访问权限。
 
 ### 2. Cluster Controller 和 Cluster Agent
 
@@ -73,7 +73,7 @@ Cluster Agent，也叫做 `cattle-cluster-agent`，是运行在下游集群中�
 
 为下游集群启用授权集群端点后，Rancher 会在 kubeconfig 文件中额外生成一段 Kubernetes 上下文，用于直连到集群。该文件具有 `kubectl` 和 `helm`的凭证。
 
-如果 Rancher 出现问题，你需要使用此 kubeconfig 文件中定义的上下文来访问集群。因此，我们建议你导出 kubeconfig 文件，以便在 Rancher 出现问题时，仍能使用文件中的凭证访问集群。详情请参见使用 [kubectl 和 kubeconfig 文件](../../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)访问集群的章节。
+如果 Rancher 出现问题，你需要使用此 kubeconfig 文件中定义的上下文来访问集群。因此，我们建议你导出 kubeconfig 文件，以便在 Rancher 出现问题时，仍能使用文件中的凭证访问集群。详情请参见使用 [kubectl 和 kubeconfig 文件](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)访问集群的章节。
 
 # 重要文件
 
@@ -85,7 +85,7 @@ Cluster Agent，也叫做 `cattle-cluster-agent`，是运行在下游集群中�
 
 > **注意**：后两个文件名中的 `rancher-cluster` 部分取决于你命名 RKE 集群配置文件的方式。
 
-有关在没有 Rancher 认证代理和其他配置选项的情况下连接到集群的更多信息，请参见 [kubeconfig 文件](../../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)。
+有关在没有 Rancher 认证代理和其他配置选项的情况下连接到集群的更多信息，请参见 [kubeconfig 文件](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)。
 
 # 配置 Kubernetes 集群的工具
 

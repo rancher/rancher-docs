@@ -18,7 +18,7 @@ This section assumes a basic familiarity with Docker and Kubernetes. For a brief
 
 ## Managing Clusters in Rancher
 
-After clusters have been [provisioned into Rancher](kubernetes-clusters-in-rancher-setup.md), [cluster owners](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles) will need to manage these clusters. There are many different options of how to manage your cluster.
+After clusters have been [provisioned into Rancher](kubernetes-clusters-in-rancher-setup.md), [cluster owners](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles) will need to manage these clusters. There are many different options of how to manage your cluster.
 
 import ClusterCapabilitiesTable from '../shared-files/_cluster-capabilities-table.md';
 

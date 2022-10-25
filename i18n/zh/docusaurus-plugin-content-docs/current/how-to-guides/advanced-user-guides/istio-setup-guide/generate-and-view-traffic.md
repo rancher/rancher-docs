@@ -10,7 +10,7 @@ Istio 概览页面提供了 Kiali 仪表板的链接。在 Kiali 仪表板中，
 
 :::note 先决条件：
 
-要显示流量图，请确保你在集群中安装了 Prometheus。Rancher-istio 安装了默认配置的 Kiali 来与 rancher-monitoring Chart 一起工作。你可以使用 rancher-monitoring 或安装自己的监控解决方案。你也可以通过设置[选择器 & 抓取配置](../../../explanations/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md)选项来更改数据抓取的配置（可选）。
+要显示流量图，请确保你在集群中安装了 Prometheus。Rancher-istio 安装了默认配置的 Kiali 来与 rancher-monitoring Chart 一起工作。你可以使用 rancher-monitoring 或安装自己的监控解决方案。你也可以通过设置[选择器 & 抓取配置](../../../integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md)选项来更改数据抓取的配置（可选）。
 
 :::
 

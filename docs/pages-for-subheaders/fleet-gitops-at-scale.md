@@ -9,7 +9,7 @@ Fleet is a separate project from Rancher, and can be installed on any Kubernetes
 
 ## Architecture
 
-For information about how Fleet works, see [this page](../explanations/integrations-in-rancher/fleet-gitops-at-scale/architecture.md).
+For information about how Fleet works, see [this page](../integrations-in-rancher/fleet-gitops-at-scale/architecture.md).
 
 ## Accessing Fleet in the Rancher UI
 
@@ -37,7 +37,7 @@ Follow the steps below to access Continuous Delivery in the Rancher UI:
 
 ## Windows Support
 
-For details on support for clusters with Windows nodes, see [this page](../explanations/integrations-in-rancher/fleet-gitops-at-scale/windows-support.md).
+For details on support for clusters with Windows nodes, see [this page](../integrations-in-rancher/fleet-gitops-at-scale/windows-support.md).
 
 ## GitHub Repository
 
@@ -45,7 +45,7 @@ The Fleet Helm charts are available [here](https://github.com/rancher/fleet/rele
 
 ## Using Fleet Behind a Proxy
 
-For details on using Fleet behind a proxy, see [this page](../explanations/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy.md).
+For details on using Fleet behind a proxy, see [this page](../integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy.md).
 
 ## Helm Chart Dependencies
 

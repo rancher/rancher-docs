@@ -34,7 +34,7 @@ Rancher 的 Kubernetes 元数据包含 Rancher 用于配置 [RKE 集群](../../p
 
 ### 刷新 Kubernetes 元数据
 
-默认情况下，管理员或具有**管理集群驱动**[全局角色](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)的用户，可以刷新 Kubernetes 元数据。
+默认情况下，管理员或具有**管理集群驱动**[全局角色](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)的用户，可以刷新 Kubernetes 元数据。
 
 要强制 Rancher 刷新 Kubernetes 元数据，可以执行手动刷新操作：
 

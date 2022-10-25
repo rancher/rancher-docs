@@ -28,7 +28,7 @@ title: 使用 CIS 1.6 Benchmark 的 RKE 强化指南
 #### 已知问题
 
 - 如果注册自定义节点时仅提供公共 IP，CIS 1.6 强化设置中用于 Pod 的 Rancher **exec shell** 和 **view logs** 将**不起作用**。此功能要求在注册自定义节点时提供私有 IP。
-- 如果把 `default_pod_security_policy_template_id:` 设置为 `restricted` 或 `restricted-noroot`，根据 Rancher 提供的 [Pod 安全策略 (PSP)](../../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)，Rancher 会在默认 ServiceAccount 上创建 **RoleBindings** 和 **ClusterRoleBindings**。CIS 1.6 检查 5.1.5 时会要求默认 ServiceAccount 除了默认值之外没有绑定到其他角色或集群角色。此外，你还需要配置默认 ServiceAccount，使其不提供 ServiceAccount 令牌并且没有显式分配任何权限。
+- 如果把 `default_pod_security_policy_template_id:` 设置为 `restricted` 或 `restricted-noroot`，根据 Rancher 提供的 [Pod 安全策略 (PSP)](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)，Rancher 会在默认 ServiceAccount 上创建 **RoleBindings** 和 **ClusterRoleBindings**。CIS 1.6 检查 5.1.5 时会要求默认 ServiceAccount 除了默认值之外没有绑定到其他角色或集群角色。此外，你还需要配置默认 ServiceAccount，使其不提供 ServiceAccount 令牌并且没有显式分配任何权限。
 
 ### 配置内核运行时参数
 

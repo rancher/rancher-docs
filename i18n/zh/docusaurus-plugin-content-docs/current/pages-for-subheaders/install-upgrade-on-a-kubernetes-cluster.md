@@ -75,7 +75,7 @@ Rancher 是使用 Kubernetes 的 [Helm](https://helm.sh/) 包管理器安装的�
 
 ### 1. 添加 Helm Chart 仓库
 
-执行 `helm repo add` 命令，以添加包含安装 Rancher 的 Chart 的 Helm Chart 仓库。有关如何选择仓库，以及哪个仓库最适合你的用例，请参见[选择 Rancher 版本](../reference-guides/installation-references/helm-chart-options.md#helm-chart-仓库)。
+执行 `helm repo add` 命令，以添加包含安装 Rancher 的 Chart 的 Helm Chart 仓库。有关如何选择仓库，以及哪个仓库最适合你的用例，请参见[选择 Rancher 版本](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#helm-chart-仓库)。
 
 - Latest：建议用于试用最新功能
    ```
@@ -105,7 +105,7 @@ Rancher Management Server 默认需要 SSL/TLS 配置来保证访问的安全性
 
 :::note
 
-如果你想在外部终止 SSL/TLS，请参见[外部负载均衡器的 TLS 终止](../reference-guides/installation-references/helm-chart-options.md#外部-tls-终止)。
+如果你想在外部终止 SSL/TLS，请参见[外部负载均衡器的 TLS 终止](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#外部-tls-终止)。
 
 :::
 
@@ -130,7 +130,7 @@ v2.6.4 兼容 cert-manager 版本 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为
 
 :::
 
-> 如果你使用自己的证书文件（`ingress.tls.source=secret`）或使用[外部负载均衡器的 TLS 终止](../reference-guides/installation-references/helm-chart-options.md#外部-tls-终止)，你可以跳过此步骤。
+> 如果你使用自己的证书文件（`ingress.tls.source=secret`）或使用[外部负载均衡器的 TLS 终止](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#外部-tls-终止)，你可以跳过此步骤。
 
 仅在使用 Rancher 生成的证书（`ingress.tls.source=rancher`）或 Let's Encrypt 颁发的证书（`ingress.tls.source=letsEncrypt`）时，才需要安装 cert-manager。
 
@@ -311,11 +311,11 @@ helm install rancher rancher-<CHART_REPO>/rancher \
 
 Rancher Chart 有许多选项，用于为你的具体环境自定义安装。以下是一些常见的高级方案：
 
-- [HTTP 代理](../reference-guides/installation-references/helm-chart-options.md#http-代理)
-- [私有容器镜像仓库](../reference-guides/installation-references/helm-chart-options.md#私有仓库和离线安装)
-- [外部负载均衡器上的 TLS 终止](../reference-guides/installation-references/helm-chart-options.md#外部-tls-终止)
+- [HTTP 代理](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#http-代理)
+- [私有容器镜像仓库](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#私有仓库和离线安装)
+- [外部负载均衡器上的 TLS 终止](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#外部-tls-终止)
 
-如需获取完整的选项列表，请参见 [Chart 选项](../reference-guides/installation-references/helm-chart-options.md)。
+如需获取完整的选项列表，请参见 [Chart 选项](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md)。
 
 
 ### 6. 验证 Rancher Server 是否部署成功

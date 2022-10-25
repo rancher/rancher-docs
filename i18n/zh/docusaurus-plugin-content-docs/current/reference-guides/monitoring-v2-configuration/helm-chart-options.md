@@ -41,7 +41,7 @@ title: Helm Chart 选项
 
 [scrape_config](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scrape_config) 指定一组目标以及抓取这些目标的参数。在一般情况下，一个抓取配置指定一个 job。
 
-Istio 就是一个可能用到这个配置的例子。有关详细信息，请参阅[本节](../../explanations/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md)。
+Istio 就是一个可能用到这个配置的例子。有关详细信息，请参阅[本节](../../integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md)。
 
 
 ## 配置打包在 Monitoring V2 中的应用

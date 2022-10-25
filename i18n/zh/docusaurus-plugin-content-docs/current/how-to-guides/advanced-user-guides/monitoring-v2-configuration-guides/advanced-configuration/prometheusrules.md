@@ -6,7 +6,7 @@ PrometheusRule 定义了一组 Prometheus 告警和/或记录规则。
 
 :::note
 
-本节参考假设你已经熟悉 Monitoring 组件的协同工作方式。有关详细信息，请参阅[本节](../../../../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)。
+本节参考假设你已经熟悉 Monitoring 组件的协同工作方式。有关详细信息，请参阅[本节](../../../../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)。
 
 :::
 
@@ -63,7 +63,7 @@ Prometheus 规则文件保存在 PrometheusRule 自定义资源中。PrometheusR
 |-------|----------------|
 | 告警名称 | 告警的名称。必须是有效的标签值。 |
 | 告警触发等待时间 | 时长，以秒为单位。当告警触发时间到达该指定时长时，则视为触发。当告警未触发足够长的时间，则视为待处理。 |
-| PromQL 表达式 | 要评估的 PromQL 表达式。Prometheus 将在每个评估周期评估此 PromQL 表达式的当前值，并且所有生成的时间序列都将成为待处理/触发告警。有关详细信息，请参阅 [Prometheus 文档](https://prometheus.io/docs/prometheus/latest/querying/basics/)或我们的 [PromQL 表达式示例](../../../../explanations/integrations-in-rancher/monitoring-and-alerting/promql-expressions.md)。 |
+| PromQL 表达式 | 要评估的 PromQL 表达式。Prometheus 将在每个评估周期评估此 PromQL 表达式的当前值，并且所有生成的时间序列都将成为待处理/触发告警。有关详细信息，请参阅 [Prometheus 文档](https://prometheus.io/docs/prometheus/latest/querying/basics/)或我们的 [PromQL 表达式示例](../../../../integrations-in-rancher/monitoring-and-alerting/promql-expressions.md)。 |
 | Labels | 为每个告警添加或覆盖的标签。 |
 | 严重程度 | 启用后，标签​​会附加到告警或记录中，这些标签通过严重程度来标识告警/记录。 |
 | 严重程度 Label 值 | Critical，warning 或 none |
@@ -76,5 +76,5 @@ Prometheus 规则文件保存在 PrometheusRule 自定义资源中。PrometheusR
 | 字段 | 描述 |
 |-------|----------------|
 | 时间序列名称 | 要输出的时间序列的名称。必须是有效的指标名称。 |
-| PromQL 表达式 | 要评估的 PromQL 表达式。Prometheus 将在每个评估周期评估此 PromQL 表达式的当前值，并且将结果记录为一组新的时间序列，其指标名称由“记录”指定。有关表达式的更多信息，请参阅 [Prometheus 文档](https://prometheus.io/docs/prometheus/latest/querying/basics/)或我们的 [PromQL 表达式示例](../../../../explanations/integrations-in-rancher/monitoring-and-alerting/promql-expressions.md)。 |
+| PromQL 表达式 | 要评估的 PromQL 表达式。Prometheus 将在每个评估周期评估此 PromQL 表达式的当前值，并且将结果记录为一组新的时间序列，其指标名称由“记录”指定。有关表达式的更多信息，请参阅 [Prometheus 文档](https://prometheus.io/docs/prometheus/latest/querying/basics/)或我们的 [PromQL 表达式示例](../../../../integrations-in-rancher/monitoring-and-alerting/promql-expressions.md)。 |
 | Labels | 在存储结果之前要添加或覆盖的标签。 |

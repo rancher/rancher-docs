@@ -8,7 +8,7 @@ In this configuration, when Rancher users log in, they will be redirected to the
 
 If you also configure OpenLDAP as the back end to Shibboleth, it will return a SAML assertion to Rancher with user attributes that include groups. Then the authenticated user will be able to access resources in Rancher that their groups have permissions for.
 
-> The instructions in this section assume that you understand how Rancher, Shibboleth, and OpenLDAP work together. For a more detailed explanation of how it works, refer to [this page.](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/configure-shibboleth-saml/about-group-permissions.md)
+> The instructions in this section assume that you understand how Rancher, Shibboleth, and OpenLDAP work together. For a more detailed explanation of how it works, refer to [this page.](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-shibboleth-saml/about-group-permissions.md)
 
 
 # Setting up Shibboleth in Rancher
@@ -87,9 +87,9 @@ Rancher must be configured with a LDAP bind account (aka service account) to sea
 
 ### Configure OpenLDAP in Rancher
 
-Configure the settings for the OpenLDAP server, groups and users. For help filling out each field, refer to the [configuration reference.](../reference-guides/configure-openldap/openldap-config-reference.md) Note that nested group membership is not available for Shibboleth.
+Configure the settings for the OpenLDAP server, groups and users. For help filling out each field, refer to the [configuration reference.](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-openldap/openldap-config-reference.md) Note that nested group membership is not available for Shibboleth.
 
-> Before you proceed with the configuration, please familiarise yourself with the concepts of [External Authentication Configuration and Principal Users](about-authentication.md#external-authentication-configuration-and-principal-users).
+> Before you proceed with the configuration, please familiarise yourself with the concepts of [External Authentication Configuration and Principal Users](authentication-config.md#external-authentication-configuration-and-principal-users).
 
 1. Log into the Rancher UI using the initial local `admin` account.
 1.	In the top left corner, click **☰ > Users & Authentication**.

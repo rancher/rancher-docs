@@ -6,6 +6,8 @@ Dockershim 是 Kubelet 和 Docker Daemon 之间的 CRI 兼容层。Kubernetes 1.
 
 RKE 集群现在支持外部 Dockershim，来让用户继续使用 Docker 作为 CRI 运行时。现在，我们通过使用 [Mirantis 和 Docker ](https://www.mirantis.com/blog/mirantis-to-take-over-support-of-kubernetes-dockershim-2/) 来确保 RKE 集群可以继续使用 Docker，从而实现上游开源社区的外部 Dockershim。
 
+RKE2 和 K3s 集群使用嵌入的 containerd 作为容器运行时，因此不受影响。
+
 要在 1.24 之前的 RKE 版本中启用外部 Dockershim，请配置以下选项：
 
 ```

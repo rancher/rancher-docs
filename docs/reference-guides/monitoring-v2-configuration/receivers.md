@@ -9,7 +9,7 @@ The [Alertmanager Config](https://prometheus.io/docs/alerting/latest/configurati
 
 :::note
 
-This section assumes familiarity with how monitoring components work together. For more information about Alertmanager, see [this section.](../../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#3-how-alertmanager-works)
+This section assumes familiarity with how monitoring components work together. For more information about Alertmanager, see [this section.](../../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#3-how-alertmanager-works)
 
 :::
 

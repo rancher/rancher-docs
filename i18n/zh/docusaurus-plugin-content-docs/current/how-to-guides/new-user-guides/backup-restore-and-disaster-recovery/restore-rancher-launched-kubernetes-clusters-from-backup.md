@@ -50,17 +50,17 @@ Rancher UI 中提供了集群所有可用快照的列表：
 
 2. 在剩余的单个 etcd 节点上，运行以下命令：
 
-   ```
-   $ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike etcd
+   ```bash
+   docker run --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike etcd
    ```
 
    此命令会输出 etcd 要运行的命令，请保存此命令以备后用。
 
-3. 停止你在上一步中启动的 etcd 容器，并将其重命名为 `etcd-old`：
+3. 停止正在运行的 `etcd` 容器并将其重命名为 `etcd-old`。
 
-   ```
-   $ docker stop etcd
-   $ docker rename etcd etcd-old
+   ```bash
+   docker stop etcd
+   docker rename etcd etcd-old
    ```
 
 4. 修改步骤 2 中获取保存的命令：
@@ -70,7 +70,7 @@ Rancher UI 中提供了集群所有可用快照的列表：
 
 5. 运行修改后的命令。
 
-6. 在单个节点启动并运行后，Rancher 建议向你的集群添加额外的 etcd 节点。如果你有一个[自定义集群](../../../pages-for-subheaders/use-existing-nodes.md)，并且想要复用旧节点，则需要先[清理节点](../../advanced-user-guides/manage-clusters/clean-cluster-nodes.md)，然后再尝试将它们重新添加到集群中。
+6. 在单个节点启动并运行后，Rancher 建议向你的集群添加额外的 etcd 节点。如果你有一个[自定义集群](../../../pages-for-subheaders/use-existing-nodes.md)，并且想要复用旧节点，则需要先[清理节点](../manage-clusters/clean-cluster-nodes.md)，然后再尝试将它们重新添加到集群中。
 
 # 为使用 Rancher v2.2.0 之前的版本创建的集群启用快照功能
 

@@ -97,11 +97,11 @@ Any skipped tests that are defined as being skipped by one of the default profil
 
 ## Roles-based Access Control
 
-For information about permissions, refer to [this page](../explanations/integrations-in-rancher/cis-scans/rbac-for-cis-scans.md)
+For information about permissions, refer to [this page](../integrations-in-rancher/cis-scans/rbac-for-cis-scans.md)
 
 ## Configuration
 
-For more information about configuring the custom resources for the scans, profiles, and benchmark versions, refer to [this page](../explanations/integrations-in-rancher/cis-scans/configuration-reference.md)
+For more information about configuring the custom resources for the scans, profiles, and benchmark versions, refer to [this page](../integrations-in-rancher/cis-scans/configuration-reference.md)
 
 ## How-to Guides
 

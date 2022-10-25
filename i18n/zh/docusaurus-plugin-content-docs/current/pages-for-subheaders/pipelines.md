@@ -76,7 +76,7 @@ Rancher 的流水线提供简单的 CI/CD 体验，但不提供完整的功能�
 
 如果你可以访问项目，则可以启用仓库来开始构建流水线。
 
-只有[管理员](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)、[集群所有者或成员](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#集群角色)或[项目所有者](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色)可以配置版本控制提供商和管理全局流水线的执行设置。
+只有[管理员](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)、[集群所有者或成员](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#集群角色)或[项目所有者](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色)可以配置版本控制提供商和管理全局流水线的执行设置。
 
 项目成员只能配置仓库和流水线。
 

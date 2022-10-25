@@ -277,7 +277,7 @@ import CommonPortsTable from '../../../shared-files/_common-ports-table.md';
 
 ### Rancher AWS EC2 安全组
 
-当你使用 [AWS EC2 Node Driver](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md) 在 Rancher 中配置集群节点时，你可以让 Rancher 创建一个名为 `rancher-nodes` 的安全组。以下规则会自动添加到该安全组中。
+当你使用 [AWS EC2 Node Driver](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md) 在 Rancher 中配置集群节点时，你可以让 Rancher 创建一个名为 `rancher-nodes` 的安全组。以下规则会自动添加到该安全组中。
 
 | 类型 | 协议 | 端口范围 | 源/目标 | 规则类型 |
 |-----------------|:--------:|:-----------:|------------------------|:---------:|

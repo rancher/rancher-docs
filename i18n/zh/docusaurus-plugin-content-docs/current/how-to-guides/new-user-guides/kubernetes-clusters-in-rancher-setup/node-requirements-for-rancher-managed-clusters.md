@@ -21,7 +21,7 @@ Rancher 兼容当前所有的主流 Linux 发行版和任何通用的 Docker 版
 
 所有支持的操作系统都使用 64-bit x86 架构。
 
-如果你想使用 ARM64，请参阅[在 ARM64 上运行（实验功能）。](../../../getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/rancher-on-arm64.md)
+如果你想使用 ARM64，请参阅[在 ARM64 上运行（实验功能）。](../../advanced-user-guides/enable-experimental-features/rancher-on-arm64.md)
 
 有关如何安装 Docker 的信息，请参阅 [Docker 官方文档](https://docs.docker.com/)。
 

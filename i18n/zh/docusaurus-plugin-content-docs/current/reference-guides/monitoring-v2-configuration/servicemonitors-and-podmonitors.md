@@ -10,7 +10,7 @@ ServiceMonitor 比 PodMonitor 更常用，推荐用于大多数用例。
 
 :::note
 
-本节参考假设你已经熟悉 Monitoring 组件的协同工作方式。有关 Alertmanager 的详细信息，请参阅[本节](../../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)。
+本节参考假设你已经熟悉 Monitoring 组件的协同工作方式。有关 Alertmanager 的详细信息，请参阅[本节](../../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)。
 
 :::
 

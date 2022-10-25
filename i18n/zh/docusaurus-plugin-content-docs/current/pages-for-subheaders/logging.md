@@ -5,7 +5,7 @@ description: Rancher 集成了主流的日志服务。了解集成日志服务�
 
 现在，Rancher 的日志管理由 [Banzai Cloud Logging operator](https://banzaicloud.com/docs/one-eye/logging-operator/) 提供支持，它取代了以前的内部解决方案。
 
-有关 Rancher 2.5 更改的概述，请参阅[本节](../explanations/integrations-in-rancher/logging/logging-architecture.md#rancher-2-5-变更)。有关迁移 Logging V1 的更多信息，请参阅[本页](../explanations/integrations-in-rancher/logging/migrate-to-rancher-v2.5+-logging.md)。
+有关 Rancher 2.5 更改的概述，请参阅[本节](../integrations-in-rancher/logging/logging-architecture.md#rancher-2-5-变更)。有关迁移 Logging V1 的更多信息，请参阅[本页](../integrations-in-rancher/logging/migrate-to-rancher-v2.5+-logging.md)。
 
 
 ## 启用 Logging
@@ -30,13 +30,13 @@ description: Rancher 集成了主流的日志服务。了解集成日志服务�
 
 ## 架构
 
-有关 Logging 应用程序工作原理的更多信息，请参阅[本节](../explanations/integrations-in-rancher/logging/logging-architecture.md)。
+有关 Logging 应用程序工作原理的更多信息，请参阅[本节](../integrations-in-rancher/logging/logging-architecture.md)。
 
 
 
 ## RBAC
 
-Rancher Logging 有两个角色，分别是 `logging-admin` 和 `logging-view`。有关如何以及何时使用这些角色的更多信息，请参阅[此页面](../explanations/integrations-in-rancher/logging/rbac-for-logging.md)。
+Rancher Logging 有两个角色，分别是 `logging-admin` 和 `logging-view`。有关如何以及何时使用这些角色的更多信息，请参阅[此页面](../integrations-in-rancher/logging/rbac-for-logging.md)。
 
 ## 配置 Logging 自定义资源
 
@@ -48,39 +48,39 @@ Rancher Logging 有两个角色，分别是 `logging-admin` 和 `logging-view`�
 
 ### Flows 和 ClusterFlows
 
-有关配置 `Flows` 和 `ClusterFlows` 的帮助，请参阅[此页面](../explanations/integrations-in-rancher/logging/custom-resource-configuration/flows-and-clusterflows.md)。
+有关配置 `Flows` 和 `ClusterFlows` 的帮助，请参阅[此页面](../integrations-in-rancher/logging/custom-resource-configuration/flows-and-clusterflows.md)。
 
 ### Outputs 和 ClusterOutputs
 
-有关配置 `Outputs` 和 `ClusterOutputs` 的帮助，请参阅[此页面](../explanations/integrations-in-rancher/logging/custom-resource-configuration/outputs-and-clusteroutputs.md)。
+有关配置 `Outputs` 和 `ClusterOutputs` 的帮助，请参阅[此页面](../integrations-in-rancher/logging/custom-resource-configuration/outputs-and-clusteroutputs.md)。
 
 ## 配置 Logging Helm Chart
 
-有关在安装或升级 Logging 应用程序时可配置的选项，请参阅[此页面](../explanations/integrations-in-rancher/logging/logging-helm-chart-options.md)。
+有关在安装或升级 Logging 应用程序时可配置的选项，请参阅[此页面](../integrations-in-rancher/logging/logging-helm-chart-options.md)。
 
 ### Windows 支持
 
 Windows 集群支持 Logging，你可以收集 Windows 节点的日志。
 
-有关如何在 Windows 节点上启用或禁用 Logging 的详细信息，请参阅[本节](../explanations/integrations-in-rancher/logging/logging-helm-chart-options.md#启用/禁用-windows-节点-logging)。
+有关如何在 Windows 节点上启用或禁用 Logging 的详细信息，请参阅[本节](../integrations-in-rancher/logging/logging-helm-chart-options.md#启用/禁用-windows-节点-logging)。
 
 ### 使用自定义 Docker 根目录
 
-有关使用自定义 Docker 根目录的详细信息，请参阅[本节](../explanations/integrations-in-rancher/logging/logging-helm-chart-options.md#使用自定义-docker-根目录)。
+有关使用自定义 Docker 根目录的详细信息，请参阅[本节](../integrations-in-rancher/logging/logging-helm-chart-options.md#使用自定义-docker-根目录)。
 
 
 ### 处理污点和容忍度
 
-有关如何在 Logging 应用程序中使用污点和容忍度的信息，请参阅[此页面](../explanations/integrations-in-rancher/logging/taints-and-tolerations.md)。
+有关如何在 Logging 应用程序中使用污点和容忍度的信息，请参阅[此页面](../integrations-in-rancher/logging/taints-and-tolerations.md)。
 
 
 ### 在 SELinux 上使用 Logging V2
 
-有关在启用了 SELinux 的节点上使用 Logging 应用程序的信息，请参阅[本节](../explanations/integrations-in-rancher/logging/logging-helm-chart-options.md#启用-logging-应用程序以使用-selinux)。
+有关在启用了 SELinux 的节点上使用 Logging 应用程序的信息，请参阅[本节](../integrations-in-rancher/logging/logging-helm-chart-options.md#启用-logging-应用程序以使用-selinux)。
 
 ### 其他日志来源
 
-默认情况下，Rancher 会收集所有类型集群的 controlplane 组件和节点组件的日志。在某些情况下，也会收集其他日志。有关详细信息，请参阅[本节](../explanations/integrations-in-rancher/logging/logging-helm-chart-options.md#其他日志来源)。
+默认情况下，Rancher 会收集所有类型集群的 controlplane 组件和节点组件的日志。在某些情况下，也会收集其他日志。有关详细信息，请参阅[本节](../integrations-in-rancher/logging/logging-helm-chart-options.md#其他日志来源)。
 
 
 ## 故障排除

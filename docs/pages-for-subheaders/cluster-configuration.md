@@ -4,7 +4,7 @@ title: Cluster Configuration
 
 After you provision a Kubernetes cluster using Rancher, you can still edit options and settings for the cluster.
 
-For information on editing cluster membership, go to [this page.](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/add-users-to-clusters.md)
+For information on editing cluster membership, go to [this page.](../how-to-guides/new-user-guides/manage-clusters/access-clusters/add-users-to-clusters.md)
 
 ### Cluster Configuration References
 

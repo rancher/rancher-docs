@@ -2,7 +2,7 @@
 title: Authentication, Permissions and Global Configuration
 ---
 
-After installation, the [system administrator](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md) should configure Rancher to configure authentication, authorization, security, default settings, security policies, drivers and global DNS entries.
+After installation, the [system administrator](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md) should configure Rancher to configure authentication, authorization, security, default settings, security policies, drivers and global DNS entries.
 
 ## First Log In
 
@@ -18,7 +18,7 @@ After you set the Rancher Server URL, we do not support updating it. Set the URL
 
 One of the key features that Rancher adds to Kubernetes is centralized user authentication. This feature allows to set up local users and/or connect to an external authentication provider. By connecting to an external authentication provider, you can leverage that provider's user and groups.
 
-For more information how authentication works and how to configure each provider, see [Authentication](about-authentication.md).
+For more information how authentication works and how to configure each provider, see [Authentication](authentication-config.md).
 
 ## Authorization
 
@@ -30,7 +30,7 @@ For more information how authorization works and how to customize roles, see [Ro
 
 _Pod Security Policies_ (or PSPs) are objects that control security-sensitive aspects of pod specification, e.g. root privileges. If a pod does not meet the conditions specified in the PSP, Kubernetes will not allow it to start, and Rancher will display an error message.
 
-For more information how to create and use PSPs, see [Pod Security Policies](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md).
+For more information how to create and use PSPs, see [Pod Security Policies](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md).
 
 ## Provisioning Drivers
 

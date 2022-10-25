@@ -51,7 +51,7 @@ Jaeger 是用于跟踪分布式系统的工具。我们的 Istio 安装程序包
 
 ## 先决条件
 
-在启用 Istio 之前，建议你先确认你的 Rancher worker 节点是否有足够的 [CPU 和内存](../explanations/integrations-in-rancher/istio/cpu-and-memory-allocations.md)来运行 Istio 的所有组件。
+在启用 Istio 之前，建议你先确认你的 Rancher worker 节点是否有足够的 [CPU 和内存](../integrations-in-rancher/istio/cpu-and-memory-allocations.md)来运行 Istio 的所有组件。
 
 如果要在 RKE2 集群上安装 Istio，则需要执行一些额外的步骤。有关详细信息，请参阅[本节](#在-rke2-集群上安装-istio-的其他步骤)。
 
@@ -63,7 +63,7 @@ Jaeger 是用于跟踪分布式系统的工具。我们的 Istio 安装程序包
 
 ## 卸载 Istio
 
-要从集群、命名空间或工作负载中删除 Istio 组件，请参阅[卸载 Istio](../explanations/integrations-in-rancher/istio/disable-istio.md)。
+要从集群、命名空间或工作负载中删除 Istio 组件，请参阅[卸载 Istio](../integrations-in-rancher/istio/disable-istio.md)。
 
 ## 迁移旧 Istio 版本
 
@@ -75,7 +75,7 @@ Jaeger 是用于跟踪分布式系统的工具。我们的 Istio 安装程序包
 
 ## 访问可视化
 
-> 默认情况下，只有 cluster-admin 可以访问 Kiali。有关如何允许具有管理员、编辑或查看权限的角色访问它们的说明，请参阅[本节](../explanations/integrations-in-rancher/istio/rbac-for-istio.md)。
+> 默认情况下，只有 cluster-admin 可以访问 Kiali。有关如何允许具有管理员、编辑或查看权限的角色访问它们的说明，请参阅[本节](../integrations-in-rancher/istio/rbac-for-istio.md)。
 
 在集群中设置 Istio 后，你可以在 Rancher UI 中使用 Grafana、Prometheus 和 Kiali。
 
@@ -93,7 +93,7 @@ Jaeger 是用于跟踪分布式系统的工具。我们的 Istio 安装程序包
 1. 在左侧导航栏中，单击 **Istio**。
 1. 单击 **Kiali**。从这里，你可以访问**流量图**或**流量指标**选项卡，从而可视化网络指标。
 
-默认情况下，prometheus 会拾取所有命名空间，并将数据用于 Kiali 图。如果你想使用不同的配置进行 prometheus 数据抓取，请参阅[选择器/抓取配置](../explanations/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md)。
+默认情况下，prometheus 会拾取所有命名空间，并将数据用于 Kiali 图。如果你想使用不同的配置进行 prometheus 数据抓取，请参阅[选择器/抓取配置](../integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md)。
 
 你的角色决定了你对可视化的访问。只有 `cluster-admin` 角色可以使用 Grafana 和 Prometheus。默认情况下，只有 `cluster-admin` 可以使用 Kiali UI，但是 `cluster-admin` 可以通过编辑 Istio values.yaml 来允许其他角色进行访问。
 
@@ -121,4 +121,4 @@ Istio 安装了一个服务网格，它使用 [Envoy](https://www.envoyproxy.io/
 
 ## 在 RKE2 集群上安装 Istio 的其他步骤
 
-要在 RKE2 集群上安装 Istio，请按照[步骤](../explanations/integrations-in-rancher/istio/configuration-options/install-istio-on-rke2-cluster.md)进行操作。
+要在 RKE2 集群上安装 Istio，请按照[步骤](../integrations-in-rancher/istio/configuration-options/install-istio-on-rke2-cluster.md)进行操作。

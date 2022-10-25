@@ -16,8 +16,8 @@ title: 多集群应用
 
 要在 Rancher 中创建多集群应用，你至少需要具有以下权限之一：
 
-- 目标集群中的[项目成员角色](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色)，能够创建、读取、更新和删除工作负载
-- 目标项目所在集群的[集群所有者角色](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#集群角色)
+- 目标集群中的[项目成员角色](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色)，能够创建、读取、更新和删除工作负载
+- 目标项目所在集群的[集群所有者角色](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#集群角色)
 
 ### 启用旧版功能
 
@@ -66,9 +66,9 @@ Rancher 将多集群应用的配置选项分为以下几个部分。
 
 Rancher 允许你选择**项目**或**集群**的角色选项。Rancher 将允许你根据用户的权限使用其中一个角色进行创建。
 
-- **项目** - 相当于[项目成员](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色)。如果你选择此角色，Rancher 将检查用户是否在所有目标项目中至少具有[项目成员](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色)的角色。虽然用户可能没有被明确授予 _项目成员_ 角色，但如果用户是[管理员](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)、[集群所有者](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#集群角色)或[项目所有者](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色)，则认为该用户具有所需的权限级别。
+- **项目** - 相当于[项目成员](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色)。如果你选择此角色，Rancher 将检查用户是否在所有目标项目中至少具有[项目成员](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色)的角色。虽然用户可能没有被明确授予 _项目成员_ 角色，但如果用户是[管理员](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)、[集群所有者](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#集群角色)或[项目所有者](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色)，则认为该用户具有所需的权限级别。
 
-- **集群** - 相当于[集群所有者](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#集群角色)。如果你选择此角色，Rancher 将检查用户是否在所有目标项目中至少具有[集群所有者](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色)的角色。虽然用户可能没有被明确授予 _集群所有者_ 角色，但如果用户是[管理员](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)，则认为该用户具有所需的权限级别。
+- **集群** - 相当于[集群所有者](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#集群角色)。如果你选择此角色，Rancher 将检查用户是否在所有目标项目中至少具有[集群所有者](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色)的角色。虽然用户可能没有被明确授予 _集群所有者_ 角色，但如果用户是[管理员](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)，则认为该用户具有所需的权限级别。
 
 在启动应用时，Rancher 会在启动应用之前确认你在目标项目中是否拥有这些权限。
 

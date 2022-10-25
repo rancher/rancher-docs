@@ -26,7 +26,7 @@ title: 管理节点模板
 
    :::note
 
-   默认的 `active` [主机驱动](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md)和任何标记了 `password` 字段的主机驱动都需要使用[云凭证](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#云凭证)。
+   默认的 `active` [主机驱动](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md)和任何标记了 `password` 字段的主机驱动都需要使用[云凭证](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#云凭证)。
 
    :::
 

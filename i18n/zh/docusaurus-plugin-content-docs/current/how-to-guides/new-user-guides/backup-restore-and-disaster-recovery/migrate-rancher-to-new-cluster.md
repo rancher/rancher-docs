@@ -22,18 +22,38 @@ Rancher 可以安装到任意 Kubernetes 集群上，包括托管的 Kubernetes 
 - [K3s Kubernetes 安装文档](https://rancher.com/docs/k3s/latest/en/installation/)
 
 ### 1. 安装 rancher-backup Helm Chart
-安装 rancher-backup Chart 的 2.x.x 版本。下面命令假设你的环境可以访问 DockerHub：
-```
-helm repo add rancher-charts https://charts.rancher.io
-helm repo update
-helm install rancher-backup-crd rancher-charts/rancher-backup-crd -n cattle-resources-system --create-namespace --version $CHART_VERSION
-helm install rancher-backup rancher-charts/rancher-backup -n cattle-resources-system --version $CHART_VERSION
-```
+安装 [rancher-backup chart](https://github.com/rancher/backup-restore-operator/tags)，请使用 2.x.x 主要版本内的版本：
 
-如果是**离线环境**，在安装 `rancher-backup-crd` Helm Chart 时，使用以下选项从私有镜像仓库拉取 `backup-restore-operator` 镜像：
-```
---set image.repository $REGISTRY/rancher/backup-restore-operator
-```
+1. 添加 helm 仓库：
+
+   ```bash
+   helm repo add rancher-charts https://charts.rancher.io
+   helm repo update
+   ```
+
+1. 使用 2.x.x rancher-backup 版本设置 `CHART_VERSION` 变量：
+   ```bash
+   helm search repo --versions rancher-charts/rancher-backup
+   CHART_VERSION=<2.x.x>
+   ```
+
+1. 安装 Chart：
+   ```bash
+   helm install rancher-backup-crd rancher-charts/rancher-backup-crd -n cattle-resources-system --create-namespace --version $CHART_VERSION
+   helm install rancher-backup rancher-charts/rancher-backup -n cattle-resources-system --version $CHART_VERSION
+   ```
+
+   :::note
+
+   以上假设你的环境具有到 Docker Hub 的出站连接。
+
+   对于**离线环境**，在安装 rancher-backup Helm Chart 时，使用下面的 Helm 值从你的私有镜像仓库中拉取 `backup-restore-operator` 镜像。
+
+   ```bash
+   --set image.repository $REGISTRY/rancher/backup-restore-operator
+   ```
+
+   :::
 
 ### 2. 使用 Restore 自定义资源来还原备份
 
@@ -44,86 +64,91 @@ Kubernetes v1.22 是 Rancher 2.6.3 的实验功能，不支持使用 apiVersion 
 1. 使用 apiVersion v1 来更新默认 `resourceSet`，从而收集 CRD。
 1. 使用 `apiextensions.k8s.io/v1` 作为替代，来更新默认 `resourceSet` 和客户端，从而在内部使用新的 API。
 
-- 请注意，在为 v1.22 版本制作或恢复备份时，Rancher 版本和本地集群的 Kubernetes 版本应该是一样的。由于集群中支持的 apiVersion 和备份文件中的 apiVersion 可能不同，因此在还原备份时请考虑 Kubernetes 的版本。
+   :::note
+
+   在为 v1.22 版本制作或恢复备份时，Rancher 版本和本地集群的 Kubernetes 版本应该是一样的。由于集群中支持的 apiVersion 和备份文件中的 apiVersion 可能不同，因此在还原备份时请考虑 Kubernetes 的版本。
+
+   :::
 
 :::
 
-如果你使用 S3 作为备份源，并且需要使用你的 S3 凭证进行还原，请使用 S3 凭证在集群中创建一个密文（Secret）。密文数据必须有两个 key，分别是包含 S3 凭证的 `accessKey` 和 `secretKey`。
+1. 在使用 S3 对象存储作为需要使用凭证的还原的备份源时，请在此集群中创建一个 `Secret` 对象以添加 S3 凭证。Secret 数据必须有两个密钥，分别是包含 S3 凭证的 `accessKey` 和 `secretKey`。
 
-:::caution
+   你可以在任何命名空间中创建 Secret，本示例使用 default 命名空间。
 
-在直接创建对象时，下方示例中的 `accessKey` 和 `secretKey` 必须先进行 base64 编码。否则，在你尝试备份或恢复时，粘贴的值会导致错误。
+   ```bash
+   kubectl create secret generic s3-creds \
+     --from-literal=accessKey=<access key> \
+     --from-literal=secretKey=<secret key>
+   ```
 
-:::
+   :::note
 
-```yaml
-apiVersion: v1
-kind: Secret
-metadata:
-  name: s3-creds
-type: Opaque
-data:
-  accessKey: <Enter your base64-encoded access key>
-  secretKey: <Enter your base64-encoded secret key>
-```
+   在上面的命令中添加你的 Access Key 和 Secret Key 作为 `accessKey` 和 `secretKey` 的值。
 
-你可以在任何命名空间中创建这个密文。在上述例子中，密文创建在默认命名空间中。
+   :::
 
-在 Restore 自定义资源中，`prune` 必须设为 `false`。
+1. 创建一个 `Restore` 对象：
 
-参考以下示例创建 Restore 自定义资源：
+   在迁移期间，`prune` 必须设置为 `false`。请参见下面的示例：
 
-```yaml
-# migrationResource.yaml
-apiVersion: resources.cattle.io/v1
-kind: Restore
-metadata:
-  name: restore-migration
-spec:
-  backupFilename: backup-b0450532-cee1-4aa1-a881-f5f48a007b1c-2020-09-15T07-27-09Z.tar.gz
-  prune: false
-  encryptionConfigSecretName: encryptionconfig
-  storageLocation:
-    s3:
-      credentialSecretName: s3-creds
-      credentialSecretNamespace: default
-      bucketName: backup-test
-      folder: ecm1
-      region: us-west-2
-      endpoint: s3.us-west-2.amazonaws.com
-```
+   ```yaml
+   # restore-migration.yaml
+   apiVersion: resources.cattle.io/v1
+   kind: Restore
+   metadata:
+     name: restore-migration
+   spec:
+     backupFilename: backup-b0450532-cee1-4aa1-a881-f5f48a007b1c-2020-09-15T07-27-09Z.tar.gz
+     // highlight-next-line
+     prune: false
+     // highlight-next-line
+     encryptionConfigSecretName: encryptionconfig
+     storageLocation:
+       s3:
+         credentialSecretName: s3-creds
+         credentialSecretNamespace: default
+         bucketName: backup-test
+         folder: ecm1
+         region: us-west-2
+         endpoint: s3.us-west-2.amazonaws.com
+   ```
 
-:::note 重要提示：
+   :::note 重要提示：
 
-只有在创建备份时启用了加密功能时，才必须设置 `encryptionConfigSecretName` 字段。提供包含加密配置文件的密文名称。如果你只有加密配置文件，但没有在此集群中用它来创建密文，请按照以下步骤创建密文。
+   只有在创建备份时启用了加密功能时，才需要设置 `encryptionConfigSecretName` 字段。
 
-:::
+   如果适用，请提供包含加密配置文件的 `Secret` 对象的名称。如果你只有加密配置文件，但没有在此集群中创建 Secret，请按照以下步骤创建 Secret。
 
-1. 加密配置文件必须命名为 `encryption-provider-config.yaml`，而且必须使用 `--from-file` 标志来创建这个密文。因此，将你的 `EncryptionConfiguration` 保存到名为 `encryption-provider-config.yaml` 的文件中，并运行以下命令：
-```
-kubectl create secret generic encryptionconfig \
-  --from-file=./encryption-provider-config.yaml \
-  -n cattle-resources-system
-```
+   1. 创建[加密配置文件](reference-guides/backup-restore-configuration/backup-configuration.md#encryption)
+   1. 下面的命令使用一个名为 `encryption-provider-config.yaml` 的文件，使用了 `--from-file` 标志。将 `EncryptionConfiguration` 保存到名为 `encryption-provider-config.yaml` 的文件中之后，运行以下命令：
 
-1. 应用清单，并观察 Restore 资源的状态：
+      ```bash
+      kubectl create secret generic encryptionconfig \
+        --from-file=./encryption-provider-config.yaml \
+        -n cattle-resources-system
+      ```
 
-   应用资源：
-```
-kubectl apply -f migrationResource.yaml
-```
+   :::
 
-    观察 Restore 的状态：
-```
-kubectl get restore
-```
+1. 应用清单，并监控 Restore 的状态：
+   1. 应用 `Restore` 对象资源：
 
-    查看恢复日志：
-```
-kubectl logs -n cattle-resources-system --tail 100 -f rancher-backup-xxx-xxx
-```
+      ```bash
+      kubectl apply -f restore-migration.yaml
+      ```
 
-Restore 资源的状态变成 `Completed` 后，你可以继续安装 Rancher。
+   1. 观察 Restore 的状态：
+      ```bash
+      kubectl get restore
+      ```
+
+   1. 查看恢复日志：
+      ```bash
+      kubectl logs -n cattle-resources-system --tail 100 -f -l app.kubernetes.io/instance=rancher-backup
+      ```
+
+   1. Restore 资源的状态变成 `Completed` 后，你可以继续安装 cert-manager 和 Rancher。
 
 ### 3. 安装 cert-manager
 
@@ -133,8 +158,25 @@ Restore 资源的状态变成 `Completed` 后，你可以继续安装 Rancher。
 
 使用与第一个集群上使用的相同版本的 Helm 来安装 Rancher：
 
-```
+```bash
 helm install rancher rancher-latest/rancher \
   --namespace cattle-system \
   --set hostname=<same hostname as the server URL from the first Rancher server> \
+  --version x.y.z
 ```
+
+:::note
+
+如果原始的 Rancher 环境正在运行，你可以使用 kubeconfig 为原始环境收集当前值：
+
+```bash
+helm get values rancher -n cattle-system -o yaml > rancher-values.yaml
+```
+
+你可以使用 `rancher-values.yaml` 文件来复用这些值。确保将 kubeconfig 切换到新的 Rancher 环境。
+
+```bash
+helm install rancher rancher-latest/rancher -n cattle-system -f rancher-values.yaml --version x.y.z
+```
+
+:::

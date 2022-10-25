@@ -26,7 +26,7 @@ Begin creation of a custom cluster by provisioning a Linux host. Your host can b
 - An on-prem VM
 - A bare-metal server
 
-If you want to reuse a node from a previous custom cluster, [clean the node](../how-to-guides/advanced-user-guides/manage-clusters/clean-cluster-nodes.md) before using it in a cluster again. If you reuse a node that hasn't been cleaned, cluster provisioning may fail.
+If you want to reuse a node from a previous custom cluster, [clean the node](../how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes.md) before using it in a cluster again. If you reuse a node that hasn't been cleaned, cluster provisioning may fail.
 
 Provision the host according to the [installation requirements](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md) and the [checklist for production-ready clusters.](checklist-for-production-ready-clusters.md)
 
@@ -66,7 +66,7 @@ If you're using Amazon EC2 as your host and want to use the [dual-stack](https:/
 
 :::
 
-8. **Optional**: Click **[Show advanced options](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/about-rancher-agents.md)** to specify IP address(es) to use when registering the node, override the hostname of the node, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
+8. **Optional**: Click **[Show advanced options](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents.md)** to specify IP address(es) to use when registering the node, override the hostname of the node, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
 
 9. Copy the command displayed on screen to your clipboard.
 
@@ -134,5 +134,5 @@ Key=kubernetes.io/cluster/CLUSTERID, Value=shared
 
 After creating your cluster, you can access it through the Rancher UI. As a best practice, we recommend setting up these alternate ways of accessing your cluster:
 
-- **Access your cluster with the kubectl CLI:** Follow [these steps](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#accessing-clusters-with-kubectl-on-your-workstation) to access clusters with kubectl on your workstation. In this case, you will be authenticated through the Rancher server’s authentication proxy, then Rancher will connect you to the downstream cluster. This method lets you manage the cluster without the Rancher UI.
-- **Access your cluster with the kubectl CLI, using the authorized cluster endpoint:** Follow [these steps](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster) to access your cluster with kubectl directly, without authenticating through Rancher. We recommend setting up this alternative method to access your cluster so that in case you can’t connect to Rancher, you can still access the cluster.
+- **Access your cluster with the kubectl CLI:** Follow [these steps](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#accessing-clusters-with-kubectl-on-your-workstation) to access clusters with kubectl on your workstation. In this case, you will be authenticated through the Rancher server’s authentication proxy, then Rancher will connect you to the downstream cluster. This method lets you manage the cluster without the Rancher UI.
+- **Access your cluster with the kubectl CLI, using the authorized cluster endpoint:** Follow [these steps](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster) to access your cluster with kubectl directly, without authenticating through Rancher. We recommend setting up this alternative method to access your cluster so that in case you can’t connect to Rancher, you can still access the cluster.

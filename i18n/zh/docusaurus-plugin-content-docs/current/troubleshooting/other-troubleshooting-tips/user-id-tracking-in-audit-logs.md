@@ -5,7 +5,7 @@ title: 审计日志中的用户 ID 跟踪
 Rancher 使用以下审计日志来跟踪本地和下游集群中发生的事件：
 
 * [Kubernetes 审计日志](https://rancher.com/docs/rke/latest/en/config-options/audit-log/)
-* [Rancher API 审核日志](../../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/enable-api-audit-log.md)
+* [Rancher API 审核日志](../../how-to-guides/advanced-user-guides/enable-api-audit-log)
 
 Rancher 2.6 增强了审计日志，在 Rancher 和下游 Kubernetes 审计日志中都包含了外部身份提供程序名称（即外部身份提供程序中用户的通用名称）。
 

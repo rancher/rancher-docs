@@ -79,7 +79,7 @@ Rancher only supports Windows using Flannel as the network provider.
 
 There are two network options: [**Host Gateway (L2bridge)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#host-gw) and [**VXLAN (Overlay)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#vxlan). The default option is **VXLAN (Overlay)** mode.
 
-For **Host Gateway (L2bridge)** networking, it's best to use the same Layer 2 network for all nodes. Otherwise, you need to configure the route rules for them. For details, refer to the [documentation on configuring cloud-hosted VM routes.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/network-requirements-for-host-gateway.md#cloud-hosted-vm-routes-configuration) You will also need to [disable private IP address checks](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/network-requirements-for-host-gateway.md#disabling-private-ip-address-checks) if you are using Amazon EC2, Google GCE, or Azure VM.
+For **Host Gateway (L2bridge)** networking, it's best to use the same Layer 2 network for all nodes. Otherwise, you need to configure the route rules for them. For details, refer to the [documentation on configuring cloud-hosted VM routes.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/network-requirements-for-host-gateway.md#cloud-hosted-vm-routes-configuration) You will also need to [disable private IP address checks](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/network-requirements-for-host-gateway.md#disabling-private-ip-address-checks) if you are using Amazon EC2, Google GCE, or Azure VM.
 
 For **VXLAN (Overlay)** networking, the [KB4489899](https://support.microsoft.com/en-us/help/4489899) hotfix must be installed. Most cloud-hosted VMs already have this hotfix.
 
@@ -139,11 +139,11 @@ Windows requires that containers must be built on the same Windows Server versio
 
 ### Cloud Provider Specific Requirements
 
-If you set a Kubernetes cloud provider in your cluster, some additional steps are required. You might want to set a cloud provider if you want to want to leverage a cloud provider's capabilities, for example, to automatically provision storage, load balancers, or other infrastructure for your cluster. Refer to [this page](set-up-cloud-providers.md) for details on how to configure a cloud provider cluster of nodes that meet the prerequisites.
+If you set a Kubernetes cloud provider in your cluster, some additional steps are required. You might want to set a cloud provider if you want to want to leverage a cloud provider's capabilities, for example, to automatically provision storage, load balancers, or other infrastructure for your cluster. Refer to [this page](../pages-for-subheaders/set-up-cloud-providers.md) for details on how to configure a cloud provider cluster of nodes that meet the prerequisites.
 
 If you are using the GCE (Google Compute Engine) cloud provider, you must do the following:
 
-- Enable the GCE cloud provider in the `cluster.yml` by following [these steps.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/google-compute-engine.md)
+- Enable the GCE cloud provider in the `cluster.yml` by following [these steps.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/google-compute-engine.md)
 - When provisioning the cluster in Rancher, choose **Custom cloud provider** as the cloud provider in the Rancher UI.
 
 ## Tutorial: How to Create a Cluster with Windows Support
@@ -177,7 +177,7 @@ You will provision three nodes:
 | Node 2 | Linux (Ubuntu Server 18.04 recommended)                      |
 | Node 3 | Windows (Windows Server core version 1809 or above required) |
 
-If your nodes are hosted by a **Cloud Provider** and you want automation support such as loadbalancers or persistent storage devices, your nodes have additional configuration requirements. For details, see [Selecting Cloud Providers.](set-up-cloud-providers.md)
+If your nodes are hosted by a **Cloud Provider** and you want automation support such as loadbalancers or persistent storage devices, your nodes have additional configuration requirements. For details, see [Selecting Cloud Providers.](../pages-for-subheaders/set-up-cloud-providers.md)
 
 ### 2. Create the Cluster on Existing Nodes
 
@@ -195,7 +195,7 @@ The instructions for creating a Windows cluster on existing nodes are very simil
 
 :::note Important:
 
-For <b>Host Gateway (L2bridge)</b> networking, it's best to use the same Layer 2 network for all nodes. Otherwise, you need to configure the route rules for them. For details, refer to the [documentation on configuring cloud-hosted VM routes.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/network-requirements-for-host-gateway.md#cloud-hosted-vm-routes-configuration) You will also need to [disable private IP address checks](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/network-requirements-for-host-gateway.md#disabling-private-ip-address-checks) if you are using Amazon EC2, Google GCE, or Azure VM.
+For <b>Host Gateway (L2bridge)</b> networking, it's best to use the same Layer 2 network for all nodes. Otherwise, you need to configure the route rules for them. For details, refer to the [documentation on configuring cloud-hosted VM routes.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/network-requirements-for-host-gateway.md#cloud-hosted-vm-routes-configuration) You will also need to [disable private IP address checks](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/network-requirements-for-host-gateway.md#disabling-private-ip-address-checks) if you are using Amazon EC2, Google GCE, or Azure VM.
 
 :::
 
@@ -278,9 +278,9 @@ You can add Windows hosts to the cluster by editing the cluster and choosing the
 
 After creating your cluster, you can access it through the Rancher UI. As a best practice, we recommend setting up these alternate ways of accessing your cluster:
 
-- **Access your cluster with the kubectl CLI:** Follow [these steps](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#accessing-clusters-with-kubectl-on-your-workstation) to access clusters with kubectl on your workstation. In this case, you will be authenticated through the Rancher server’s authentication proxy, then Rancher will connect you to the downstream cluster. This method lets you manage the cluster without the Rancher UI.
-- **Access your cluster with the kubectl CLI, using the authorized cluster endpoint:** Follow [these steps](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster) to access your cluster with kubectl directly, without authenticating through the Rancher server. We recommend setting up this alternative method to access your cluster so that in case you can’t connect to Rancher, you can still access the cluster.
+- **Access your cluster with the kubectl CLI:** Follow [these steps](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#accessing-clusters-with-kubectl-on-your-workstation) to access clusters with kubectl on your workstation. In this case, you will be authenticated through the Rancher server’s authentication proxy, then Rancher will connect you to the downstream cluster. This method lets you manage the cluster without the Rancher UI.
+- **Access your cluster with the kubectl CLI, using the authorized cluster endpoint:** Follow [these steps](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster) to access your cluster with kubectl directly, without authenticating through the Rancher server. We recommend setting up this alternative method to access your cluster so that in case you can’t connect to Rancher, you can still access the cluster.
 
 ## Configuration for Storage Classes in Azure
 
-If you are using Azure VMs for your nodes, you can use [Azure files](https://docs.microsoft.com/en-us/azure/aks/azure-files-dynamic-pv) as a StorageClass for the cluster. For details, refer to [this section.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/azure-storageclass-configuration.md)
+If you are using Azure VMs for your nodes, you can use [Azure files](https://docs.microsoft.com/en-us/azure/aks/azure-files-dynamic-pv) as a StorageClass for the cluster. For details, refer to [this section.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/azure-storageclass-configuration.md)

@@ -26,7 +26,7 @@ title: 安全
 
 _2.6.5 的新功能_
 
-NeuVector 是一个开源的、以容器为中心的安全应用程序，现已集成到 Rancher 中。NeuVector 提供生产安全、DevOps 漏洞保护和容器防火墙等功能。请参阅 [Rancher 文档](../explanations/integrations-in-rancher/neuvector.md)和 [NeuVector 文档](https://open-docs.neuvector.com/)了解更多信息。
+NeuVector 是一个开源的、以容器为中心的安全应用程序，现已集成到 Rancher 中。NeuVector 提供生产安全、DevOps 漏洞保护和容器防火墙等功能。请参阅 [Rancher 文档](../integrations-in-rancher/neuvector.md)和 [NeuVector 文档](https://open-docs.neuvector.com/)了解更多信息。
 
 ### 在 Kubernetes 集群上运行 CIS 安全扫描
 

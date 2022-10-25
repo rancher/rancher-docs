@@ -6,7 +6,7 @@ title: 架构
 
 有关安装 Rancher 的不同方式的信息，请参见[安装选项概述](installation-and-upgrade.md#安装方式概述)。
 
-有关 Rancher API Server 的主要功能，请参见[概述](../getting-started/introduction/overview.md#rancher-api-server-的功能)。
+有关 Rancher API Server 的主要功能，请参见[概述](../getting-started/overview.md#rancher-api-server-的功能)。
 
 有关如何为 Rancher Server 设置底层基础架构，请参见[架构推荐](../reference-guides/rancher-manager-architecture/architecture-recommendations.md)。
 

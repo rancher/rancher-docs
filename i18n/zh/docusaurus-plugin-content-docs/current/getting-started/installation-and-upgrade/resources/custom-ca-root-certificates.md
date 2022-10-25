@@ -20,5 +20,5 @@ Rancher 可以访问的服务示例：
 
 - [Docker 安装的自定义 CA 证书选项](../../../reference-guides/single-node-rancher-in-docker/advanced-options.md#自定义-ca-证书)
 
-- [Kubernetes 安装的其他受信 CA 选项](../../../reference-guides/installation-references/helm-chart-options.md#额外的授信-ca)
+- [Kubernetes 安装的其他受信 CA 选项](../installation-references/helm-chart-options.md#额外的授信-ca)
 

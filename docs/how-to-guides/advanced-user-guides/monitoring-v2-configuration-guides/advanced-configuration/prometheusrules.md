@@ -6,7 +6,7 @@ A PrometheusRule defines a group of Prometheus alerting and/or recording rules.
 
 :::note
 
-This section assumes familiarity with how monitoring components work together. For more information, see [this section.](../../../../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)
+This section assumes familiarity with how monitoring components work together. For more information, see [this section.](../../../../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)
 
 :::
 
@@ -63,7 +63,7 @@ For examples, refer to the Prometheus documentation on [recording rules](https:/
 |-------|----------------|
 | Alert Name |  The name of the alert. Must be a valid label value.   |
 | Wait To Fire For |   Duration in seconds. Alerts are considered firing once they have been returned for this long. Alerts which have not yet fired for long enough are considered pending. |
-| PromQL Expression |   The PromQL expression to evaluate. Prometheus will evaluate the current value of this PromQL expression on every evaluation cycle and all resultant time series will become pending/firing alerts. For more information, refer to the [Prometheus documentation](https://prometheus.io/docs/prometheus/latest/querying/basics/) or our [example PromQL expressions.](../../../../explanations/integrations-in-rancher/monitoring-and-alerting/promql-expressions.md) |
+| PromQL Expression |   The PromQL expression to evaluate. Prometheus will evaluate the current value of this PromQL expression on every evaluation cycle and all resultant time series will become pending/firing alerts. For more information, refer to the [Prometheus documentation](https://prometheus.io/docs/prometheus/latest/querying/basics/) or our [example PromQL expressions.](../../../../integrations-in-rancher/monitoring-and-alerting/promql-expressions.md) |
 | Labels |  Labels to add or overwrite for each alert.      |
 | Severity |   When enabled, labels are attached to the alert or record that identify it by the severity level.  |
 | Severity Label Value | Critical, warning, or none |
@@ -76,5 +76,5 @@ For examples, refer to the Prometheus documentation on [recording rules](https:/
 | Field | Description |
 |-------|----------------|
 | Time Series Name |   The name of the time series to output to. Must be a valid metric name.  |
-| PromQL Expression |  The PromQL expression to evaluate. Prometheus will evaluate the current value of this PromQL expression on every evaluation cycle and the result will be recorded as a new set of time series with the metric name as given by 'record'.  For more information about expressions, refer to the [Prometheus documentation](https://prometheus.io/docs/prometheus/latest/querying/basics/) or our [example PromQL expressions.](../../../../explanations/integrations-in-rancher/monitoring-and-alerting/promql-expressions.md)  |
+| PromQL Expression |  The PromQL expression to evaluate. Prometheus will evaluate the current value of this PromQL expression on every evaluation cycle and the result will be recorded as a new set of time series with the metric name as given by 'record'.  For more information about expressions, refer to the [Prometheus documentation](https://prometheus.io/docs/prometheus/latest/querying/basics/) or our [example PromQL expressions.](../../../../integrations-in-rancher/monitoring-and-alerting/promql-expressions.md)  |
 | Labels |   Labels to add or overwrite before storing the result.     |

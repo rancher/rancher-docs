@@ -64,11 +64,11 @@ Kubernetes v1.22, available as an experimental feature of v2.6.3, does not suppo
 1. Update the default `resourceSet` to collect the CRDs with the apiVersion v1.
 1. Update the default `resourceSet` and the client to use the new APIs internally, with `apiextensions.k8s.io/v1` as the replacement.
 
-  :::note
+    :::note
 
-  When making or restoring backups for v1.22, the Rancher version and the local cluster's Kubernetes version should be the same. The Kubernetes version should be considered when restoring a backup since the supported apiVersion in the cluster and in the backup file could be different.
+    When making or restoring backups for v1.22, the Rancher version and the local cluster's Kubernetes version should be the same. The Kubernetes version should be considered when restoring a backup since the supported apiVersion in the cluster and in the backup file could be different.
 
-  :::
+    :::
 
 :::
 

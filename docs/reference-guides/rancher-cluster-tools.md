@@ -39,7 +39,7 @@ Rancher's integration with Istio was improved in Rancher v2.5.
 For more information, refer to the Istio documentation [here.](../pages-for-subheaders/istio.md)
 ## OPA Gatekeeper
 
-[OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper) is an open-source project that provides integration between OPA and Kubernetes to provide policy control via admission controller webhooks. For details on how to enable Gatekeeper in Rancher, refer to the [OPA Gatekeeper section.](../explanations/integrations-in-rancher/opa-gatekeeper.md)
+[OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper) is an open-source project that provides integration between OPA and Kubernetes to provide policy control via admission controller webhooks. For details on how to enable Gatekeeper in Rancher, refer to the [OPA Gatekeeper section.](../integrations-in-rancher/opa-gatekeeper.md)
 
 ## CIS Scans
 

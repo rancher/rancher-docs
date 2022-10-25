@@ -10,6 +10,12 @@ title: Azure 节点模板配置
 - **Network** 配置集群中使用的网络。
 - **Instance** 自定义你的 VM 配置。
 
+:::note
+
+如果在与 VM 不同的资源组中使用 VNet，则 VNet 名称需要以资源组名称作为前缀。例如，`<resource group>:<vnet>`。
+
+:::
+
 [Docker daemon](https://docs.docker.com/engine/docker-overview/#the-docker-daemon) 配置选项包括：
 
 - **标签**：有关标签的信息，请参阅 [Docker 对象标签文档](https://docs.docker.com/config/labels-custom-metadata/)。

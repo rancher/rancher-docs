@@ -21,4 +21,4 @@ Cluster Autoscaler provides support to distinct cloud providers. For more inform
 
 ### Setting up Cluster Autoscaler on Amazon Cloud Provider
 
-For details on running the cluster autoscaler  on Amazon cloud provider, refer to [this page.](../how-to-guides/advanced-user-guides/manage-clusters/install-cluster-autoscaler/use-aws-ec2-auto-scaling-groups.md)
+For details on running the cluster autoscaler  on Amazon cloud provider, refer to [this page.](../how-to-guides/new-user-guides/manage-clusters/install-cluster-autoscaler/use-aws-ec2-auto-scaling-groups.md)

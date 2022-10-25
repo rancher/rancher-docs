@@ -13,7 +13,7 @@ For more information about configuring routes, refer to the [official Alertmanag
 
 :::note
 
-This section assumes familiarity with how monitoring components work together. For more information, see [this section.](../../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)
+This section assumes familiarity with how monitoring components work together. For more information, see [this section.](../../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)
 
 :::
 

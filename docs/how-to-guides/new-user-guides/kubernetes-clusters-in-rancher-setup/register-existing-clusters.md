@@ -44,7 +44,7 @@ EKS clusters must have at least one managed node group to be imported into Ranch
 1. Choose the type of cluster.
 1. Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.
 1. If you are importing a generic Kubernetes cluster in Rancher, perform the following steps for setup:<br/>
-  a. Click **Agent Environment Variables** under **Cluster Options** to set environment variables for [rancher cluster agent](launch-kubernetes-with-rancher/about-rancher-agents.md). The environment variables can be set using key value pairs. If rancher agent requires use of proxy to communicate with Rancher server, `HTTP_PROXY`, `HTTPS_PROXY` and `NO_PROXY` environment variables can be set using agent environment variables.<br/>
+  a. Click **Agent Environment Variables** under **Cluster Options** to set environment variables for [rancher cluster agent](../launch-kubernetes-with-rancher/about-rancher-agents.md). The environment variables can be set using key value pairs. If rancher agent requires use of proxy to communicate with Rancher server, `HTTP_PROXY`, `HTTPS_PROXY` and `NO_PROXY` environment variables can be set using agent environment variables.<br/>
   b. Enable Project Network Isolation to ensure the cluster supports Kubernetes `NetworkPolicy` resources. Users can select the **Project Network Isolation** option under the **Advanced Options** dropdown to do so.
 1. Click **Create**.
 1. The prerequisite for `cluster-admin` privileges is shown (see **Prerequisites** above), including an example command to fulfil the prerequisite.
@@ -125,7 +125,7 @@ The control that Rancher has to manage a registered cluster depends on the type 
 
 After registering a cluster, the cluster owner can:
 
-- [Manage cluster access](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md) through role-based access control
+- [Manage cluster access](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md) through role-based access control
 - Enable [monitoring, alerts and notifiers](../../../pages-for-subheaders/monitoring-and-alerting.md)
 - Enable [logging](../../../pages-for-subheaders/logging.md)
 - Enable [Istio](../../../pages-for-subheaders/istio.md)
@@ -195,7 +195,7 @@ To prevent issues when upgrading, the [Kubernetes upgrade best practices](https:
 
 _Available as of v2.6.3_
 
-Authorized Cluster Endpoint (ACE) support has been added for registered RKE2 and K3s clusters. This support includes manual steps you will perform on the downstream cluster to enable the ACE. For additional information on the authorized cluster endpoint, click [here](../../advanced-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint.md).
+Authorized Cluster Endpoint (ACE) support has been added for registered RKE2 and K3s clusters. This support includes manual steps you will perform on the downstream cluster to enable the ACE. For additional information on the authorized cluster endpoint, click [here](../manage-clusters/access-clusters/authorized-cluster-endpoint.md).
 
 :::note Notes:
 
@@ -203,7 +203,7 @@ Authorized Cluster Endpoint (ACE) support has been added for registered RKE2 and
 
 - The following steps will work on both RKE2 and K3s clusters registered in v2.6.x as well as those registered (or imported) from a previous version of Rancher with an upgrade to v2.6.x.
 
-- These steps will alter the configuration of the downstream RKE2 and K3s clusters and deploy the `kube-api-authn-webhook`. If a future implementation of the ACE requires an update to the `kube-api-authn-webhook`, then this would also have to be done manually. For more information on this webhook, click [here](../../advanced-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint.md#about-the-kube-api-auth-authentication-webhook).
+- These steps will alter the configuration of the downstream RKE2 and K3s clusters and deploy the `kube-api-authn-webhook`. If a future implementation of the ACE requires an update to the `kube-api-authn-webhook`, then this would also have to be done manually. For more information on this webhook, click [here](../manage-clusters/access-clusters/authorized-cluster-endpoint.md#about-the-kube-api-auth-authentication-webhook).
 
 :::
 

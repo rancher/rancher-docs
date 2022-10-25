@@ -6,6 +6,6 @@ Rancher 通过各种卷插件来支持持久存储。但是，在使用这些插
 
 为了你的方便，Rancher 提供了配置主流存储的参考文档：
 
-- [NFS](../how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/provisioning-storage-examples/nfs-storage.md)
-- [vSphere](../how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/provisioning-storage-examples/vsphere-storage.md)
-- [EBS](../how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/provisioning-storage-examples/persistent-storage-in-amazon-ebs.md)
+- [NFS](../how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/nfs-storage.md)
+- [vSphere](../how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/vsphere-storage.md)
+- [EBS](../how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/persistent-storage-in-amazon-ebs.md)

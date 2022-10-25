@@ -4,11 +4,11 @@ title: Cluster Access
 
 This section is about what tools can be used to access clusters managed by Rancher.
 
-For information on how to give users permission to access a cluster, see the section on [adding users to clusters.](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/add-users-to-clusters.md)
+For information on how to give users permission to access a cluster, see the section on [adding users to clusters.](../how-to-guides/new-user-guides/manage-clusters/access-clusters/add-users-to-clusters.md)
 
 For more information on roles-based access control, see [this section.](manage-role-based-access-control-rbac.md)
 
-For information on how to set up an authentication system, see [this section.](about-authentication.md)
+For information on how to set up an authentication system, see [this section.](authentication-config.md)
 
 
 ### Rancher UI
@@ -19,8 +19,8 @@ Rancher provides an intuitive user interface for interacting with your clusters.
 
 You can use the Kubernetes command-line tool, [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/), to manage   your clusters. You have two options for using kubectl:
 
-- **Rancher kubectl shell:** Interact with your clusters by launching a kubectl shell available in the Rancher UI. This option requires no configuration actions on your part. For more information, see [Accessing Clusters with kubectl Shell](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md).
-- **Terminal remote connection:** You can also interact with your clusters by installing [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on your local desktop and then copying the cluster's kubeconfig file to your local `~/.kube/config` directory. For more information, see [Accessing Clusters with kubectl and a kubeconfig File](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md).
+- **Rancher kubectl shell:** Interact with your clusters by launching a kubectl shell available in the Rancher UI. This option requires no configuration actions on your part. For more information, see [Accessing Clusters with kubectl Shell](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md).
+- **Terminal remote connection:** You can also interact with your clusters by installing [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on your local desktop and then copying the cluster's kubeconfig file to your local `~/.kube/config` directory. For more information, see [Accessing Clusters with kubectl and a kubeconfig File](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md).
 
 ### Rancher CLI
 

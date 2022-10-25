@@ -20,8 +20,8 @@ You must have a [Microsoft AD FS Server](https://docs.microsoft.com/en-us/window
 
 Setting up Microsoft AD FS with Rancher Server requires configuring AD FS on your Active Directory server, and configuring Rancher to utilize your AD FS server. The following pages serve as guides for setting up Microsoft AD FS authentication on your Rancher installation.
 
-- [1. Configuring Microsoft AD FS for Rancher](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/configure-microsoft-ad-federation-service-saml/configure-ms-adfs-for-rancher.md)
-- [2. Configuring Rancher for Microsoft AD FS](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/configure-microsoft-ad-federation-service-saml/configure-rancher-for-ms-adfs.md)
+- [1. Configuring Microsoft AD FS for Rancher](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-microsoft-ad-federation-service-saml/configure-ms-adfs-for-rancher.md)
+- [2. Configuring Rancher for Microsoft AD FS](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-microsoft-ad-federation-service-saml/configure-rancher-for-ms-adfs.md)
 
 :::note SAML Provider Caveats:
 
@@ -33,4 +33,4 @@ Setting up Microsoft AD FS with Rancher Server requires configuring AD FS on you
 :::
 
 
-### [Next: Configuring Microsoft AD FS for Rancher](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication/configure-microsoft-ad-federation-service-saml/configure-ms-adfs-for-rancher.md)
+### [Next: Configuring Microsoft AD FS for Rancher](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-microsoft-ad-federation-service-saml/configure-ms-adfs-for-rancher.md)

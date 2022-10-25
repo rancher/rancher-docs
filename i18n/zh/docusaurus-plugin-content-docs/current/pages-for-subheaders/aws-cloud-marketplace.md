@@ -12,11 +12,11 @@ Rancher 提供了与 AWS Marketplace 的集成，允许用户向 SUSE 购买支�
 - Rancher 必须在启用其他指标的情况下进行部署。
 - Rancher 必须安装在 EKS 集群上。
 - 必须通过 AWS Marketplace 购买至少一项 Rancher 支持的 Entitlement。
-- 你可能需要额外的设置来支持代理/离线用例。有关详细信息，请参阅[先决条件](../explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements.md)。
+- 你可能需要额外的设置来支持代理/离线用例。有关详细信息，请参阅[先决条件](../integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements.md)。
 
 # 如何使用
-1. 完成[先决条件步骤](../explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements.md)。
-2. [安装 CSP Adapter](../explanations/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter.md)。
+1. 完成[先决条件步骤](../integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements.md)。
+2. [安装 CSP Adapter](../integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter.md)。
 
 # 常见问题
 

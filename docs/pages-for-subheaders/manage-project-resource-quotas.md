@@ -6,7 +6,7 @@ In situations where several teams share a cluster, one team may overconsume the 
 
 This page is a how-to guide for creating resource quotas in existing projects.
 
-Resource quotas can also be set when a new project is created. For details, refer to the section on [creating new projects.](../how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces.md#creating-projects)
+Resource quotas can also be set when a new project is created. For details, refer to the section on [creating new projects.](../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md#creating-projects)
 
 Resource quotas in Rancher include the same functionality as the [native version of Kubernetes](https://kubernetes.io/docs/concepts/policy/resource-quotas/). In Rancher, resource quotas have been extended so that you can apply them to projects. For details on how resource quotas work with projects in Rancher, refer to [this page.](../how-to-guides/advanced-user-guides/manage-projects/manage-project-resource-quotas/about-project-resource-quotas.md)
 

@@ -40,8 +40,8 @@ Deploy a workload to run an application in one or more containers.
     To mount an Amazon EBS volume:
 
     - In [Amazon AWS](https://aws.amazon.com/), the nodes must be in the same Availability Zone and possess IAM permissions to attach/unattach volumes.
-
-    - The cluster must be using the [AWS cloud provider](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#aws) option. For more information on enabling this option see [Creating an Amazon EC2 Cluster](../../kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md) or [Creating a Custom Cluster](../../../../pages-for-subheaders/use-existing-nodes.md).
+    
+    - The cluster must be using the [AWS cloud provider](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#aws) option. For more information on enabling this option see [Creating an Amazon EC2 Cluster](../../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md) or [Creating a Custom Cluster](../../../../pages-for-subheaders/use-existing-nodes.md).
 
     :::
 

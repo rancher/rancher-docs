@@ -30,7 +30,7 @@ For more information, refer to the section on [launching Kubernetes on new nodes
 
 In this scenario, you want to install Kubernetes on bare-metal servers, on-prem virtual machines, or virtual machines that already exist in a cloud provider. With this option, you will run a Rancher agent Docker container on the machine.
 
-If you want to reuse a node from a previous custom cluster, [clean the node](../how-to-guides/advanced-user-guides/manage-clusters/clean-cluster-nodes.md) before using it in a cluster again. If you reuse a node that hasn't been cleaned, cluster provisioning may fail.
+If you want to reuse a node from a previous custom cluster, [clean the node](../how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes.md) before using it in a cluster again. If you reuse a node that hasn't been cleaned, cluster provisioning may fail.
 
 For more information, refer to the section on [custom nodes.](use-existing-nodes.md)
 

@@ -275,7 +275,7 @@ In these cases, you have to explicitly allow this traffic in your host firewall,
 
 ### Rancher AWS EC2 Security Group
 
-When using the [AWS EC2 node driver](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md) to provision cluster nodes in Rancher, you can choose to let Rancher create a security group called `rancher-nodes`. The following rules are automatically added to this security group.
+When using the [AWS EC2 node driver](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md) to provision cluster nodes in Rancher, you can choose to let Rancher create a security group called `rancher-nodes`. The following rules are automatically added to this security group.
 
 |       Type      | Protocol |  Port Range | Source/Destination     | Rule Type |
 |-----------------|:--------:|:-----------:|------------------------|:---------:|

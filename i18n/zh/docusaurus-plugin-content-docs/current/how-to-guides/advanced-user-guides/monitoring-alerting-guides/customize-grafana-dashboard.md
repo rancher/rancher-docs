@@ -8,7 +8,7 @@ title: 自定义 Grafana 仪表板
 
 在自定义 Grafana 仪表板之前，你必须先安装 `rancher-monitoring` 应用。
 
-要查看指向外部监控 UI（包括 Grafana 仪表板）的链接，你至少需要一个 [project-member 角色](../../../explanations/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md#具有-rancher-权限的用户)。
+要查看指向外部监控 UI（包括 Grafana 仪表板）的链接，你至少需要一个 [project-member 角色](../../../integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md#具有-rancher-权限的用户)。
 
 ### 登录 Grafana
 

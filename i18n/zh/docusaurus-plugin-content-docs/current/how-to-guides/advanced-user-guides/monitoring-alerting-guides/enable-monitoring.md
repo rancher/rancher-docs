@@ -2,7 +2,7 @@
 title: 启用 Monitoring
 ---
 
-[管理员](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)或[集群所有者](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#集群角色)可以通过配置 Rancher 来部署 Prometheus，从而监控 Kubernetes 集群。
+[管理员](../../new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)或[集群所有者](../../new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#集群角色)可以通过配置 Rancher 来部署 Prometheus，从而监控 Kubernetes 集群。
 
 本文介绍如何使用新的 monitoring 应用在集群内启用监控和告警。
 

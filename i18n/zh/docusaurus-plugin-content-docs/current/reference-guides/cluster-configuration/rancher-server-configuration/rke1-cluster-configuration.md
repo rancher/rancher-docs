@@ -100,7 +100,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 集群级别的私有镜像仓库配置仅能用于配置集群。
 
-在 Rancher 中设置私有镜像仓库的主要方法有两种：通过[全局默认镜像仓库](../../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry.md)中的**设置**选项卡设置全局默认镜像仓库，以及在集群级别设置的高级选项中设置私有镜像仓库。全局默认镜像仓库可以用于离线设置，不需要凭证的镜像仓库。而集群级私有镜像仓库用于所有需要凭证的私有镜像仓库。
+在 Rancher 中设置私有镜像仓库的主要方法有两种：通过[全局默认镜像仓库](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry.md)中的**设置**选项卡设置全局默认镜像仓库，以及在集群级别设置的高级选项中设置私有镜像仓库。全局默认镜像仓库可以用于离线设置，不需要凭证的镜像仓库。而集群级私有镜像仓库用于所有需要凭证的私有镜像仓库。
 
 如果你的私有镜像仓库需要凭证，为了将凭证传递给 Rancher，你需要编辑每个需要从仓库中拉取镜像的集群的集群选项。
 
@@ -145,7 +145,7 @@ Rancher v2.6 引入了[为 RKE 集群配置 ECR 镜像仓库](https://rancher.co
 
 ### Pod 安全策略支持
 
-为集群启用 [pod 安全策略](../../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)。启用此选项后，使用**默认 Pod 安全策略**下拉菜单选择一个策略。
+为集群启用 [pod 安全策略](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)。启用此选项后，使用**默认 Pod 安全策略**下拉菜单选择一个策略。
 
 你必须有已配置的 Pod 安全策略才能使用此选项。
 
@@ -175,7 +175,7 @@ Rancher v2.6 引入了[为 RKE 集群配置 ECR 镜像仓库](https://rancher.co
 
 ### Agent 环境变量
 
-为 [rancher agent](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/about-rancher-agents.md) 设置环境变量的选项。你可以使用键值对设置环境变量。如果 Rancher Agent 需要使用代理与 Rancher Server 通信，则可以使用 Agent 环境变量设置 `HTTP_PROXY`，`HTTPS_PROXY` 和 `NO_PROXY` 环境变量。
+为 [rancher agent](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents.md) 设置环境变量的选项。你可以使用键值对设置环境变量。如果 Rancher Agent 需要使用代理与 Rancher Server 通信，则可以使用 Agent 环境变量设置 `HTTP_PROXY`，`HTTPS_PROXY` 和 `NO_PROXY` 环境变量。
 
 ### 更新 ingress-nginx
 
