@@ -672,8 +672,6 @@ const sidebars = {
                   id: "pages-for-subheaders/manage-projects",
                 },
                 items: [
-                    "how-to-guides/advanced-user-guides/manage-projects/add-users-to-projects",
-                    "how-to-guides/advanced-user-guides/manage-projects/manage-namespaces",
                     "how-to-guides/advanced-user-guides/manage-projects/manage-pod-security-policies",
                       {
                         type: 'category',
