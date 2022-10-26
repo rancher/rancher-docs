@@ -47,12 +47,6 @@ After you expose your cluster to external requests using a load balancer and/or 
 
 For more information, see [Service Discovery](../how-to-guides/new-user-guides/kubernetes-resources-setup/create-services.md).
 
-## Pipelines
-
-After your project has been [configured to a version control provider](../how-to-guides/advanced-user-guides/manage-projects/ci-cd-pipelines.md#1-configure-version-control-providers), you can add the repositories and start configuring a pipeline for each repository.
-
-For more information, see [Pipelines](pipelines.md).
-
 ## Applications
 
 Besides launching individual components of an application, you can use the Rancher catalog to start launching applications, which are Helm charts.

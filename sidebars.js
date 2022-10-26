@@ -23,14 +23,14 @@ const sidebars = {
     {
       type: 'category',
       label: 'Getting Started',
-      items: [ 
+      items: [
           "getting-started/overview",
         {
           type: 'category',
           label: 'Quick Start Guides',
           link: {
             type: 'doc',
-            id: "pages-for-subheaders/quick-start-guides",        
+            id: "pages-for-subheaders/quick-start-guides",
                 },
           items: [
             {
@@ -232,7 +232,7 @@ const sidebars = {
                           "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-keycloak-saml",
                           "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-pingidentity",
                           "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-okta-saml",
-                                  ]    
+                                  ]
                         },
                         {
                           type: 'category',
@@ -507,7 +507,7 @@ const sidebars = {
                             id: "pages-for-subheaders/launch-kubernetes-with-rancher",
                               },
                             items: [
-                              {   
+                              {
                                 type: 'category',
                                 label: 'Use New Nodes in an Infra Provider',
                                 link: {
@@ -653,7 +653,7 @@ const sidebars = {
                             },
                               "how-to-guides/new-user-guides/add-users-to-projects",
 
-                              "how-to-guides/new-user-guides/manage-namespaces",      
+                              "how-to-guides/new-user-guides/manage-namespaces",
                           ]
                         },
           {
@@ -672,7 +672,8 @@ const sidebars = {
                   id: "pages-for-subheaders/manage-projects",
                 },
                 items: [
-                    "how-to-guides/advanced-user-guides/manage-projects/ci-cd-pipelines",
+                    "how-to-guides/advanced-user-guides/manage-projects/add-users-to-projects",
+                    "how-to-guides/advanced-user-guides/manage-projects/manage-namespaces",
                     "how-to-guides/advanced-user-guides/manage-projects/manage-pod-security-policies",
                       {
                         type: 'category',
@@ -1050,21 +1051,6 @@ const sidebars = {
               "reference-guides/system-tools",
 
               "reference-guides/rke1-template-example-yaml",
-          {
-            type: 'category',
-            label: 'Pipelines',
-            link: {
-              type: 'doc',
-              id: "pages-for-subheaders/pipelines",
-                },
-            items: [
-              "reference-guides/pipelines/concepts",
-              "reference-guides/pipelines/pipeline-configuration",
-              "reference-guides/pipelines/configure-persistent-data",
-              "reference-guides/pipelines/example-repositories",
-              "reference-guides/pipelines/example-yaml",
-                  ],
-          },
           {
             type: 'category',
             label: 'Rancher Security',
