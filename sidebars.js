@@ -18,19 +18,18 @@ const sidebars = {
 
   // But you can create a sidebar manually
   tutorialSidebar: [
-
     'rancher-manager',
     {
       type: 'category',
       label: 'Getting Started',
-      items: [ 
+      items: [
           "getting-started/overview",
         {
           type: 'category',
           label: 'Quick Start Guides',
           link: {
             type: 'doc',
-            id: "pages-for-subheaders/quick-start-guides",        
+            id: "pages-for-subheaders/quick-start-guides",
                 },
           items: [
             {
@@ -187,7 +186,6 @@ const sidebars = {
                      ]
             },
                     "getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes",
-
                     "getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher",
           ]
         }
@@ -232,7 +230,7 @@ const sidebars = {
                           "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-keycloak-saml",
                           "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-pingidentity",
                           "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-okta-saml",
-                                  ]    
+                                  ]
                         },
                         {
                           type: 'category',
@@ -313,11 +311,8 @@ const sidebars = {
                                 ]
                         },
                           "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates",
-
                           "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies",
-
                           "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry",
-
                           "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding",
                       ]
                     },
@@ -383,19 +378,12 @@ const sidebars = {
                                       ]
                               },
                               "how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces",
-
                               "how-to-guides/new-user-guides/manage-clusters/clone-cluster-configuration",
-
                               "how-to-guides/new-user-guides/manage-clusters/rotate-certificates",
-
                               "how-to-guides/new-user-guides/manage-clusters/rotate-encryption-key",
-
                               "how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
-
                               "how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes",
-
                               "how-to-guides/new-user-guides/manage-clusters/add-a-pod-security-policy",
-
                               "how-to-guides/new-user-guides/manage-clusters/assign-pod-security-policies",
                             ]
                             },
@@ -507,7 +495,7 @@ const sidebars = {
                             id: "pages-for-subheaders/launch-kubernetes-with-rancher",
                               },
                             items: [
-                              {   
+                              {
                                 type: 'category',
                                 label: 'Use New Nodes in an Infra Provider',
                                 link: {
@@ -516,9 +504,7 @@ const sidebars = {
                                       },
                                   items: [
                                       "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster",
-
                                       "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-a-digitalocean-cluster",
-
                                       "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster",
                                       {
                                       type: 'category',
@@ -547,7 +533,6 @@ const sidebars = {
                             ]
                           },
                               "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences",
-
                               "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents",
                         ]
                       },
@@ -601,13 +586,9 @@ const sidebars = {
                                   ]
                           },
                                   "how-to-guides/new-user-guides/kubernetes-resources-setup/create-services",
-
                                   "how-to-guides/new-user-guides/kubernetes-resources-setup/encrypt-http-communication",
-
                                   "how-to-guides/new-user-guides/kubernetes-resources-setup/configmaps",
-
                                   "how-to-guides/new-user-guides/kubernetes-resources-setup/secrets",
-
                                   "how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries",
                                   ]
                            },
@@ -652,8 +633,7 @@ const sidebars = {
                                      ]
                             },
                               "how-to-guides/new-user-guides/add-users-to-projects",
-
-                              "how-to-guides/new-user-guides/manage-namespaces",      
+                              "how-to-guides/new-user-guides/manage-namespaces",
                           ]
                         },
           {
@@ -1044,11 +1024,8 @@ const sidebars = {
                   ]
           },
               "reference-guides/rancher-cluster-tools",
-
               "reference-guides/rancher-project-tools",
-
               "reference-guides/system-tools",
-
               "reference-guides/rke1-template-example-yaml",
           {
             type: 'category',
@@ -1100,7 +1077,6 @@ const sidebars = {
                      ],
             },
                 "reference-guides/rancher-security/kubernetes-security-best-practices",
-
                 "reference-guides/rancher-security/security-advisories-and-cves",
                   ],
                 }
@@ -1234,7 +1210,6 @@ const sidebars = {
                   ]
             },
               "integrations-in-rancher/neuvector",
-
               "integrations-in-rancher/opa-gatekeeper",
                   ]
     },
