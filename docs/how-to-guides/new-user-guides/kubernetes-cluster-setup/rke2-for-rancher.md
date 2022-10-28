@@ -6,14 +6,15 @@ _Tested on v2.5.6_
 
 This section describes how to install a Kubernetes cluster according to the [best practices for the Rancher server environment.](../../../reference-guides/rancher-manager-architecture/architecture-recommendations.md#environment-for-kubernetes-installations)
 
-# Prerequisites
+## Prerequisites
 
 These instructions assume you have set up three nodes, a load balancer, and a DNS record, as described in [this section.](../infrastructure-setup/ha-rke2-kubernetes-cluster.md)
 
 Note that in order for RKE2 to work correctly with the load balancer, you need to set up two listeners: one for the supervisor on port 9345, and one for the Kubernetes API on port 6443.
 
 Rancher needs to be installed on a supported Kubernetes version. To find out which versions of Kubernetes are supported for your Rancher version, refer to the [support maintenance terms.](https://rancher.com/support-maintenance-terms/) To specify the RKE2 version, use the INSTALL_RKE2_VERSION environment variable when running the RKE2 installation script.
-# Installing Kubernetes
+
+## Installing Kubernetes
 
 ### 1. Install Kubernetes and Set up the RKE2 Server
 

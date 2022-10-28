@@ -35,7 +35,7 @@ For a list of best practices that we recommend for running the Rancher server in
 
 The Rancher UI works best in Firefox or Chromium based browsers (Chrome, Edge, Opera, Brave, ...).
 
-# Operating Systems and Container Runtime Requirements
+## Operating Systems and Container Runtime Requirements
 
 Rancher should work with any modern Linux distribution.
 
@@ -77,11 +77,11 @@ For the container runtime, RKE2 bundles its own containerd. Docker is not requir
 
 For details on which OS versions were tested with RKE2, refer to the [support maintenance terms.](https://rancher.com/support-maintenance-terms/)
 
-# Hardware Requirements
+## Hardware Requirements
 
 The following sections describe the CPU, memory, and disk requirements for the nodes where the Rancher server is installed.
 
-# CPU and Memory
+## CPU and Memory
 
 Hardware requirements scale based on the size of your Rancher deployment. Provision each individual node according to the requirements. The requirements are different depending on if you are installing Rancher in a single container with Docker, or if you are installing Rancher on a Kubernetes cluster.
 
@@ -134,7 +134,7 @@ These CPU and memory requirements apply to a host with a [single-node](rancher-o
 | Small           | Up to 5  | Up to 50  | 1     | 4 GB |
 | Medium          | Up to 15 | Up to 200 | 2     | 8 GB |
 
-# Ingress
+## Ingress
 
 Each node in the Kubernetes cluster that Rancher is installed on should run an Ingress.
 
@@ -148,11 +148,11 @@ For hosted Kubernetes clusters (EKS, GKE, AKS), you will need to set up the ingr
 - **AKS:** For details on how to install Rancher with Azure Kubernetes Service, including how to install an ingress so that the Rancher server can be accessed, refer to [this page.](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks.md)
 - **GKE:** For details on how to install Rancher with Google Kubernetes Engine, including how to install an ingress so that the Rancher server can be accessed, refer to [this page.](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-gke.md)
 
-# Disks
+## Disks
 
 Rancher performance depends on etcd in the cluster performance. To ensure optimal speed, we recommend always using SSD disks to back your Rancher management Kubernetes cluster. On cloud providers, you will also want to use the minimum size that allows the maximum IOPS. In larger clusters, consider using dedicated storage devices for etcd data and wal directories.
 
-# Networking Requirements
+## Networking Requirements
 
 This section describes the networking requirements for the node(s) where the Rancher server is installed.
 
@@ -170,6 +170,6 @@ Each node used should have a static IP configured, regardless of whether you are
 
 To operate properly, Rancher requires a number of ports to be open on Rancher nodes and on downstream Kubernetes cluster nodes. [Port Requirements](../getting-started/installation-and-upgrade/installation-requirements/port-requirements.md) lists all the necessary ports for Rancher and Downstream Clusters for the different cluster types.
 
-# Dockershim Support
+## Dockershim Support
 
 For more information on Dockershim support, refer to [this page](../getting-started/installation-and-upgrade/installation-requirements/dockershim.md).

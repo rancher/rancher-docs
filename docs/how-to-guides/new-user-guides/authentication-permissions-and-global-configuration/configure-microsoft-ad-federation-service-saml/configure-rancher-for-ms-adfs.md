@@ -28,7 +28,7 @@ After you complete [Configuring Microsoft AD FS for Rancher](configure-ms-adfs-f
 
 **Result:** Rancher is configured to work with MS FS. Your users can now sign into Rancher using their MS FS logins.
 
-# Configuration
+## Configuration
 
 | Field | Description                |
 |---------------------------|-----------------|

@@ -5,7 +5,7 @@ description: Learn how to install Rancher in development and production environm
 
 This section provides an overview of the architecture options of installing Rancher, describing advantages of each option.
 
-# Terminology
+## Terminology
 
 In this section,
 
@@ -16,7 +16,7 @@ In this section,
 
 Note the `restrictedAdmin` Helm chart option available for **the Rancher Server**. When this option is set to true, the initial Rancher user has restricted access to the local Kubernetes cluster to prevent privilege escalation. For more information, see the section about the [restricted-admin role.](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#restricted-admin)
 
-# Overview of Installation Options
+## Overview of Installation Options
 
 Rancher can be installed on these main architectures:
 
@@ -62,10 +62,11 @@ When the nodes in your Kubernetes cluster are running and fulfill the [node requ
 
 For a longer discussion of Rancher architecture, refer to the [architecture overview,](rancher-manager-architecture.md) [recommendations for production-grade architecture,](../reference-guides/rancher-manager-architecture/architecture-recommendations.md) or our [best practices guide.](../reference-guides/best-practices/rancher-server/tips-for-running-rancher.md)
 
-# Prerequisites
+## Prerequisites
+
 Before installing Rancher, make sure that your nodes fulfill all of the [installation requirements.](installation-requirements.md)
 
-# Architecture Tip
+## Architecture Tip
 
 For the best performance and greater security, we recommend a separate, dedicated Kubernetes cluster for the Rancher management server. Running user workloads on this cluster is not advised. After deploying Rancher, you can [create or import clusters](kubernetes-clusters-in-rancher-setup.md) for running your workloads.
 

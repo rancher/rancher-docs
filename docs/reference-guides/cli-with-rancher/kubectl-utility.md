@@ -2,7 +2,7 @@
 title: kubectl Utility
 ---
 
-# kubectl
+## kubectl
 
 Interact with Rancher using kubectl.
 

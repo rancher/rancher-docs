@@ -11,7 +11,7 @@ If you also configure OpenLDAP as the back end to Shibboleth, it will return a S
 > The instructions in this section assume that you understand how Rancher, Shibboleth, and OpenLDAP work together. For a more detailed explanation of how it works, refer to [this page.](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-shibboleth-saml/about-group-permissions.md)
 
 
-# Setting up Shibboleth in Rancher
+## Setting up Shibboleth in Rancher
 
 ### Shibboleth Prerequisites
 >
@@ -73,7 +73,7 @@ If you configure Shibboleth without OpenLDAP, the following caveats apply due to
 
 To enable searching for groups when assigning permissions in Rancher, you will need to configure a back end for the SAML provider that supports groups, such as OpenLDAP.
 
-# Setting up OpenLDAP in Rancher
+## Setting up OpenLDAP in Rancher
 
 If you also configure OpenLDAP as the back end to Shibboleth, it will return a SAML assertion to Rancher with user attributes that include groups. Then authenticated users will be able to access resources in Rancher that their groups have permissions for.
 
@@ -92,10 +92,10 @@ Configure the settings for the OpenLDAP server, groups and users. For help filli
 > Before you proceed with the configuration, please familiarise yourself with the concepts of [External Authentication Configuration and Principal Users](authentication-config.md#external-authentication-configuration-and-principal-users).
 
 1. Log into the Rancher UI using the initial local `admin` account.
-1.	In the top left corner, click **☰ > Users & Authentication**.
+1. In the top left corner, click **☰ > Users & Authentication**.
 1. In the left navigation menu, click **Auth Provider**.
 1. Click **OpenLDAP**. The **Configure an OpenLDAP server** form will be displayed.
 
-# Troubleshooting
+## Troubleshooting
 
 If you are experiencing issues while testing the connection to the OpenLDAP server, first double-check the credentials entered for the service account as well as the search base configuration. You may also inspect the Rancher logs to help pinpointing the problem cause. Debug logs may contain more detailed information about the error. Please refer to [How can I enable debug logging](../faq/technical-items.md#how-can-i-enable-debug-logging) in this documentation.

@@ -23,7 +23,7 @@ If you want to replace the certificate, you can delete the `tls-rancher-ingress`
 
 :::
 
-# Using a Private CA Signed Certificate
+## Using a Private CA Signed Certificate
 
 If you are using a private CA, Rancher requires a copy of the CA certificate which is used by the Rancher Agent to validate the connection to the server.
 
@@ -40,6 +40,6 @@ The configured `tls-ca` secret is retrieved when Rancher starts. On a running Ra
 
 :::
 
-# Updating a Private CA Certificate
+## Updating a Private CA Certificate
 
 Follow the steps on [this page](update-rancher-certificate.md) to update the SSL certificate of the ingress in a Rancher [high availability Kubernetes installation](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md) or to switch from the default self-signed certificate to a custom certificate.

@@ -34,7 +34,7 @@ If you want to reuse a node from a previous custom cluster, [clean the node](../
 
 For more information, refer to the section on [custom nodes.](use-existing-nodes.md)
 
-# Programmatically Creating RKE Clusters
+### Programmatically Creating RKE Clusters
 
 The most common way to programmatically deploy RKE clusters through Rancher is by using the Rancher2 Terraform provider. The documentation for creating clusters with Terraform is [here.](https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster)
 
@@ -75,6 +75,6 @@ RKE2 provisioning also allows you to install custom clusters on pre-provisioned 
 
 If you want to reuse a node from a previous custom cluster, clean the node before using it in a cluster again. If you reuse a node that hasn't been cleaned, cluster provisioning may fail.
 
-# Programmatically Creating RKE2 Clusters
+### Programmatically Creating RKE2 Clusters
 
 The most common way to programmatically deploy RKE2 clusters through Rancher is by using the Rancher2 Terraform provider. The documentation for creating clusters with Terraform is [here.](https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster_v2)

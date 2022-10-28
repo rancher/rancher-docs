@@ -9,14 +9,13 @@ To use this option you'll need access to servers you intend to use in your Kuber
 
 This section describes how to set up a custom cluster.
 
-# Creating a Cluster with Custom Nodes
+## Creating a Cluster with Custom Nodes
 
 :::note Want to use Windows hosts as Kubernetes workers?
 
 See [Configuring Custom Clusters for Windows](use-windows-clusters.md) before you start.
 
 :::
-
 
 ### 1. Provision a Linux Host
 
@@ -130,7 +129,7 @@ If you share resources between clusters, you can change the tag to:
 Key=kubernetes.io/cluster/CLUSTERID, Value=shared
 ```
 
-# Optional Next Steps
+## Optional Next Steps
 
 After creating your cluster, you can access it through the Rancher UI. As a best practice, we recommend setting up these alternate ways of accessing your cluster:
 

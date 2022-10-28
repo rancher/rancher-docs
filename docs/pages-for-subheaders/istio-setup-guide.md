@@ -6,7 +6,7 @@ This section describes how to enable Istio and start using it in your projects.
 
 If you use Istio for traffic management, you will need to allow external traffic to the cluster. In that case, you will need to follow all of the steps below.
 
-# Prerequisites
+## Prerequisites
 
 This guide assumes you have already [installed Rancher,](installation-and-upgrade.md) and you have already [provisioned a separate Kubernetes cluster](kubernetes-clusters-in-rancher-setup.md) on which you will install Istio.
 
@@ -14,8 +14,7 @@ The nodes in your cluster must meet the [CPU and memory requirements.](../integr
 
 The workloads and services that you want to be controlled by Istio must meet [Istio's requirements.](https://istio.io/docs/setup/additional-setup/requirements/)
 
-
-# Install
+## Install
 
 :::tip Quick Setup Tip:
 

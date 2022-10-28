@@ -71,11 +71,11 @@ Like the authorized cluster endpoint, the `kube-api-auth` authentication service
 
 > **Example scenario:** Let's say that the Rancher server is located in the United States, and User Cluster 1 is located in Australia. A user, Alice, also lives in Australia. Alice can manipulate resources in User Cluster 1 by using the Rancher UI, but her requests will have to be sent from Australia to the Rancher server in the United States, then be proxied back to Australia, where the downstream user cluster is. The geographical distance may cause significant latency, which Alice can reduce by using the authorized cluster endpoint.
 
-With this endpoint enabled for the downstream cluster, Rancher generates an extra Kubernetes context in the kubeconfig file in order to connect directly to the cluster. This file has the credentials for `kubectl` and `helm`. 
+With this endpoint enabled for the downstream cluster, Rancher generates an extra Kubernetes context in the kubeconfig file in order to connect directly to the cluster. This file has the credentials for `kubectl` and `helm`.
 
 You will need to use a context defined in this kubeconfig file to access the cluster if Rancher goes down. Therefore, we recommend exporting the kubeconfig file so that if Rancher goes down, you can still use the credentials in the file to access your cluster. For more information, refer to the section on accessing your cluster with [kubectl and the kubeconfig file.](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)
 
-# Important Files
+## Important Files
 
 The files mentioned below are needed to maintain, troubleshoot and upgrade your cluster:
 
@@ -87,7 +87,7 @@ The files mentioned below are needed to maintain, troubleshoot and upgrade your 
 
 For more information on connecting to a cluster without the Rancher authentication proxy and other configuration options, refer to the [kubeconfig file](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md) documentation.
 
-# Tools for Provisioning Kubernetes Clusters
+## Tools for Provisioning Kubernetes Clusters
 
 The tools that Rancher uses to provision downstream user clusters depends on the type of cluster that is being provisioned.
 
@@ -113,7 +113,7 @@ Rancher provisions this type of cluster using [kontainer-engine.](https://github
 
 In this type of cluster, Rancher connects to a Kubernetes cluster that has already been set up. Therefore, Rancher does not provision Kubernetes, but only sets up the Rancher agents to communicate with the cluster.
 
-# Rancher Server Components and Source Code
+## Rancher Server Components and Source Code
 
 This diagram shows each component that the Rancher server is composed of:
 

@@ -70,8 +70,8 @@ If the group of etcd nodes loses quorum, the Kubernetes cluster will report a fa
 
 5. Run the revised command.
 
-6. After the single nodes is up and running, Rancher recommends adding additional etcd nodes to your cluster. If you have a [custom cluster](../../../pages-for-subheaders/use-existing-nodes.md) and you want to reuse an old node, you are required to [clean up the nodes](../manage-clusters/clean-cluster-nodes.md) before attempting to add them back into a cluster.  
+6. After the single nodes is up and running, Rancher recommends adding additional etcd nodes to your cluster. If you have a [custom cluster](../../../pages-for-subheaders/use-existing-nodes.md) and you want to reuse an old node, you are required to [clean up the nodes](../manage-clusters/clean-cluster-nodes.md) before attempting to add them back into a cluster.
 
-# Enabling Snapshot Features for Clusters Created Before Rancher v2.2.0
+## Enabling Snapshot Features for Clusters Created Before Rancher v2.2.0
 
 If you have any Rancher launched Kubernetes clusters that were created before v2.2.0, after upgrading Rancher, you must [edit the cluster](../../../pages-for-subheaders/cluster-configuration.md) and _save_ it, in order to enable the updated snapshot features. Even if you were already creating snapshots before v2.2.0, you must do this step as the older snapshots will not be available to use to [back up and restore etcd through the UI](restore-rancher-launched-kubernetes-clusters-from-backup.md).

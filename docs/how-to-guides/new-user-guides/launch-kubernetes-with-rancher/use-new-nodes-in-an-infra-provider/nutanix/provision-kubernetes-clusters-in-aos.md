@@ -17,7 +17,7 @@ For details on configuring RKE Kubernetes clusters in Rancher, refer to the [clu
 - [Preparation in Nutanix AOS](#preparation-in-nutanix-aos)
 - [Creating a Nutanix AOS Cluster](#creating-a-nutanix-aos-cluster)
 
-# Preparation in Nutanix AOS
+## Preparation in Nutanix AOS
 
 The following sections describe the requirements for setting up Nutanix AOS so that Rancher can provision VMs and clusters.
 
@@ -26,6 +26,7 @@ The following sections describe the requirements for setting up Nutanix AOS so t
 The node templates are documented and tested with Nutanix AOS version 5.20.2 and 6.0.1.
 
 :::
+
 ### Create Credentials in Nutanix AOS
 
 Before proceeding to create a cluster, you must ensure that you have a [Nutanix Prism Central user account](https://portal.nutanix.com/page/documents/details?targetId=Nutanix-Security-Guide-v6_0:wc-user-create-wc-t.html) with admin permissions. When you set up a node template, the template will need to use these credentials.
@@ -43,7 +44,7 @@ See [Node Networking Requirements](../../../kubernetes-clusters-in-rancher-setup
 
 Setting up [VM-VM Anti-Affinity Policies](https://portal.nutanix.com/page/documents/details?targetId=AHV-Admin-Guide-v6_1:ahv-vm-anti-affinity-t.html) is recommended. These rules allow VMs assigned the etcd and control-plane roles to operate on separate AHV hosts when they are assigned to different node pools. This practice ensures that the failure of a single physical machine does not affect the availability of those planes.
 
-# Creating a Nutanix AOS Cluster
+## Creating a Nutanix AOS Cluster
 
 1. [Create a node template ](#1-create-a-node-template)
 2. [Create a cluster with node pools using the node template](#2-create-a-cluster-with-node-pools-using-the-node-template)
@@ -82,8 +83,7 @@ You can access your cluster after its state is updated to **Active**.
 - `Default`, containing the `default` namespace
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces
 
-
-# Optional Next Steps
+## Optional Next Steps
 
 After creating your cluster, you can access it through the Rancher UI. As a best practice, we recommend setting up these alternate ways of accessing your cluster:
 
