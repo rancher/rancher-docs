@@ -35,7 +35,7 @@ For a list of best practices that we recommend for running the Rancher server in
 
 The Rancher UI works best in Firefox or Chrome.
 
-# Operating Systems and Container Runtime Requirements
+## Operating Systems and Container Runtime Requirements
 
 Rancher should work with any modern Linux distribution.
 
@@ -101,11 +101,11 @@ Docker is required for Helm chart installs, and it can be installed by following
 
 Docker is not required for RancherD installs.
 
-# Hardware Requirements
+## Hardware Requirements
 
 The following sections describe the CPU, memory, and disk requirements for the nodes where the Rancher server is installed.
 
-# CPU and Memory
+## CPU and Memory
 
 Hardware requirements scale based on the size of your Rancher deployment. Provision each individual node according to the requirements. The requirements are different depending on if you are installing Rancher in a single container with Docker, or if you are installing Rancher on a Kubernetes cluster.
 
@@ -168,7 +168,7 @@ These CPU and memory requirements apply to a host with a [single-node](rancher-o
 | Small           | Up to 5  | Up to 50  | 1     | 4 GB |
 | Medium          | Up to 15 | Up to 200 | 2     | 8 GB |
 
-# Ingress
+## Ingress
 
 Each node in the Kubernetes cluster that Rancher is installed on should run an Ingress.
 
@@ -185,11 +185,11 @@ Currently, RKE2 deploys nginx-ingress as a deployment by default, so you will ne
 ### Ingress for EKS
 For an example of how to deploy an nginx-ingress-controller with a LoadBalancer service, refer to [this section.](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks.md#5-install-an-ingress)
 
-# Disks
+## Disks
 
 Rancher performance depends on etcd in the cluster performance. To ensure optimal speed, we recommend always using SSD disks to back your Rancher management Kubernetes cluster. On cloud providers, you will also want to use the minimum size that allows the maximum IOPS. In larger clusters, consider using dedicated storage devices for etcd data and wal directories.
 
-# Networking Requirements
+## Networking Requirements
 
 This section describes the networking requirements for the node(s) where the Rancher server is installed.
 
@@ -201,7 +201,7 @@ Each node used should have a static IP configured, regardless of whether you are
 
 To operate properly, Rancher requires a number of ports to be open on Rancher nodes and on downstream Kubernetes cluster nodes. [Port Requirements](../getting-started/installation-and-upgrade/installation-requirements/port-requirements.md) lists all the necessary ports for Rancher and Downstream Clusters for the different cluster types.
 
-# RancherD on SELinux Enforcing CentOS 8 or RHEL 8 Nodes
+## RancherD on SELinux Enforcing CentOS 8 or RHEL 8 Nodes
 
 Before installing Rancher on SELinux Enforcing CentOS 8 nodes or RHEL 8 nodes, you must install `container-selinux` and `iptables`:
 

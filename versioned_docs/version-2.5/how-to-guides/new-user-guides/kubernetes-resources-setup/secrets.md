@@ -10,7 +10,7 @@ When configuring a workload, you'll be able to choose which secrets to include. 
 
 Mounted secrets will be updated automatically unless they are mounted as subpath volumes. For details on how updated secrets are propagated, refer to the [Kubernetes documentation.](https://kubernetes.io/docs/concepts/configuration/secret/#mounted-secrets-are-updated-automatically)
 
-# Creating Secrets
+## Creating Secrets
 
 When creating a secret, you can make it available for any deployment within a project, or you can limit it to a single namespace.
 
@@ -36,7 +36,7 @@ When creating a secret, you can make it available for any deployment within a pr
 
 Mounted secrets will be updated automatically unless they are mounted as subpath volumes. For details on how updated secrets are propagated, refer to the [Kubernetes documentation.](https://kubernetes.io/docs/concepts/configuration/secret/#mounted-secrets-are-updated-automatically)
 
-# What's Next?
+## What's Next?
 
 Now that you have a secret added to the project or namespace, you can add it to a workload that you deploy.
 

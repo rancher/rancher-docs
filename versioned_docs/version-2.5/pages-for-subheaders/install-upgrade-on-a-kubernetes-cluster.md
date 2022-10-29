@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 In this section, you'll learn how to deploy Rancher on a Kubernetes cluster using the Helm CLI.
 
-# Prerequisites
+## Prerequisites
 
 - [Kubernetes Cluster](#kubernetes-cluster)
 - [CLI Tools](#cli-tools)
@@ -42,7 +42,7 @@ To deploy Rancher v2.5 on a hosted Kubernetes cluster such as EKS, GKE, or AKS, 
 
 For an example of how to deploy an ingress on EKS, refer to [this section.](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks.md#5-install-an-ingress)
 
-# Install the Rancher Helm Chart
+## Install the Rancher Helm Chart
 
 Rancher is installed using the Helm package manager for Kubernetes. Helm charts provide templating syntax for Kubernetes YAML manifest documents.
 

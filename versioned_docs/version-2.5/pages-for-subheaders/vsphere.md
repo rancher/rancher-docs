@@ -15,7 +15,7 @@ A vSphere cluster may consist of multiple groups of VMs with distinct properties
 - [Provisioning Storage](#provisioning-storage)
 - [Enabling the vSphere Cloud Provider](#enabling-the-vsphere-cloud-provider)
 
-# vSphere Enhancements in Rancher v2.3
+## vSphere Enhancements in Rancher v2.3
 
 The vSphere node templates have been updated, allowing you to bring cloud operations on-premises with the following enhancements:
 

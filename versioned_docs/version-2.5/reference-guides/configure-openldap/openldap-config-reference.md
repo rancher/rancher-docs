@@ -21,7 +21,7 @@ For further details on configuring OpenLDAP, refer to the [official documentatio
 3. Once the user has been found, he is authenticated with another LDAP bind request using the user's DN and provided password.
 4. Once authentication succeeded, Rancher then resolves the group memberships both from the membership attribute in the user's object and by performing a group search based on the configured user mapping attribute.
 
-# OpenLDAP Server Configuration
+## OpenLDAP Server Configuration
 
 You will need to enter the address, port, and protocol to connect to your OpenLDAP server. `389` is the standard port for insecure traffic, `636` for TLS traffic.
 
@@ -44,7 +44,7 @@ If you are in doubt about the correct values to enter in the user/group Search B
 | User Search Base | Enter the Distinguished Name of the node in your directory tree from which to start searching for user objects. All users must be descendents of this base DN. For example: "ou=people,dc=acme,dc=com".|
 | Group Search Base | If your groups live under a different node than the one configured under `User Search Base` you will need to provide the Distinguished Name here. Otherwise leave this field empty. For example: "ou=groups,dc=acme,dc=com".|
 
-# User/Group Schema Configuration
+## User/Group Schema Configuration
 
 If your OpenLDAP directory deviates from the standard OpenLDAP schema, you must complete the **Customize Schema** section to match it.
 

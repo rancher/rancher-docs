@@ -17,7 +17,7 @@ RancherD is a single binary that first launches an RKE2 Kubernetes cluster, then
 - [Uninstall](#uninstall)
 - [RKE2 Documentation](#rke2-documentation)
 
-# About RancherD Installs
+## About RancherD Installs
 
 When RancherD is launched on a host, it first installs an RKE2 Kubernetes cluster, then deploys Rancher on the cluster as a Kubernetes daemonset.
 
@@ -29,7 +29,7 @@ In Part I of these instructions, you'll learn how to launch RancherD on a single
 
 Part II explains how to convert the single-node Rancher installation into a high-availability installation. If the Rancher server will manage downstream Kubernetes clusters, it is important to follow these steps. A discussion of recommended architecture for highly available Rancher deployments can be found in our [Best Practices Guide.](./rancher-server.md)
 
-# Prerequisites
+## Prerequisites
 
 ### Node Requirements
 
@@ -38,6 +38,7 @@ RancherD must be launched on a Linux OS. At this time, only OSes that leverage s
 The Linux node needs to fulfill the [installation requirements](installation-requirements.md) for hardware and networking. Docker is not required for RancherD installs.
 
 To install RancherD on SELinux Enforcing CentOS 8 nodes or RHEL 8 nodes, some [additional steps](installation-requirements.md#rancherd-on-selinux-enforcing-centos-8-or-rhel-8-nodes) are required.
+
 ### Root Access
 
 Before running the installation commands, you will need to log in as root:
@@ -71,7 +72,7 @@ The following should be taken into consideration when configuring the load balan
 - The Kubernetes API is served on port 6443, as normal.
 - In RancherD installs, the Rancher UI is served on port 8443 by default. (This is different from Helm chart installs, where port 443 is used by default.)
 
-# Part I: Installing Rancher
+## Part I: Installing Rancher
 
 ### 1. Set up Configurations
 
@@ -170,7 +171,7 @@ This will give you the URL, username and password needed to log into Rancher. Fo
 
 If Rancher will only manage the local Kubernetes cluster, the installation is complete.
 
-# Part II: High Availability
+## Part II: High Availability
 
 If you plan to use the Rancher server to manage downstream Kubernetes clusters, Rancher needs to be highly available. In these steps, you will add more nodes to achieve a high-availability cluster. Since Rancher is running as a daemonset, it will automatically launch on the nodes you add.
 
@@ -216,15 +217,15 @@ Repeat steps one and two for another Linux node, bringing the number of nodes in
 
 **Result:** Rancher is highly available and the installation is complete.
 
-# Upgrades
+## Upgrades
 
 For information on upgrades and rollbacks, refer to [this page.](../getting-started/installation-and-upgrade/other-installation-methods/install-rancher-on-linux/upgrade-rancherd.md)
 
-# Configuration
+## Configuration
 
 For information on how to configure certificates, node taints, Rancher Helm chart options, or RancherD CLI options, refer to the [configuration reference.](../reference-guides/cluster-configuration/rancher-server-configuration/rancherd-configuration-reference.md)
 
-# Uninstall
+## Uninstall
 
 To uninstall RancherD from your system, run the command below. This will shut down the process, remove the RancherD binary, and clean up files used by RancherD.
 
@@ -232,6 +233,6 @@ To uninstall RancherD from your system, run the command below. This will shut do
 rancherd-uninstall.sh
 ```
 
-# RKE2 Documentation
+## RKE2 Documentation
 
 For more information on RKE2, the Kubernetes distribution used to provision the underlying cluster, refer to the documentation [here.](https://docs.rke2.io/)
