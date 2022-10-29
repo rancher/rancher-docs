@@ -12,14 +12,14 @@ Throughout the installation instructions, there will be _tabs_ for each installa
 
 > **Important:** If you install Rancher following the Docker installation guide, there is no upgrade path to transition your Docker Installation to a Kubernetes Installation.
 
-# Installation Outline
+## Installation Outline
 
 1. [Set up infrastructure and private registry](../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/infrastructure-private-registry.md)
 2. [Collect and publish images to your private registry](../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images.md)
 3. [Set up a Kubernetes cluster (Skip this step for Docker installations)](../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-kubernetes.md)
 4. [Install Rancher](../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha.md)
 
-# Upgrades
+## Upgrades
 
 To upgrade Rancher with Helm CLI in an air gap environment, follow [this procedure.](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades.md)
 

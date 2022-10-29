@@ -9,13 +9,13 @@ The [System Charts](https://github.com/rancher/system-charts) repository contain
 
 In an air gapped installation of Rancher, you will need to configure Rancher to use a local copy of the system charts. This section describes how to use local system charts using a CLI flag in Rancher v2.3.0, and using a Git mirror for Rancher versions before v2.3.0.
 
-# Using Local System Charts in Rancher v2.3.0
+## Using Local System Charts in Rancher v2.3.0
 
 In Rancher v2.3.0, a local copy of `system-charts` has been packaged into the `rancher/rancher` container. To be able to use these features in an air gap install, you will need to run the Rancher install command with an extra environment variable, `CATTLE_SYSTEM_CATALOG=bundled`, which tells Rancher to use the local copy of the charts instead of attempting to fetch them from GitHub.
 
 Example commands for a Rancher installation with a bundled `system-charts` are included in the [air gap Docker installation](../advanced-options/advanced-use-cases/air-gap-helm2/install-rancher.md) instructions and the [air gap Kubernetes installation](../other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha.md) instructions.
 
-# Setting Up System Charts for Rancher Before v2.3.0
+## Setting Up System Charts for Rancher Before v2.3.0
 
 ### A. Prepare System Charts
 

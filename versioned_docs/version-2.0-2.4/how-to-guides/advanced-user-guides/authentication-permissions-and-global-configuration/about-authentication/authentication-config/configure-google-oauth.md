@@ -10,7 +10,7 @@ Only admins of the G Suite domain have access to the Admin SDK. Therefore, only 
 
 Within Rancher, only administrators or users with the **Manage Authentication** [global role](../../manage-role-based-access-control-rbac/global-permissions.md) can configure authentication.
 
-# Prerequisites
+## Prerequisites
 - You must have a [G Suite admin account](https://admin.google.com) configured.
 - G Suite requires a [top private domain FQDN](https://github.com/google/guava/wiki/InternetDomainNameExplained#public-suffixes-and-private-domains) as an authorized domain. One way to get an FQDN is by creating an A-record in Route53 for your Rancher server. You do not need to update your Rancher Server URL setting with that record, because there could be clusters using that URL.
 - You must have the Admin SDK API enabled for your G Suite domain. You can enable it using the steps on [this page.](https://support.google.com/a/answer/60757?hl=en)
@@ -18,7 +18,8 @@ Within Rancher, only administrators or users with the **Manage Authentication** 
 After the Admin SDK API is enabled, your G Suite domain's API screen should look like this:
 ![Enable Admin APIs](/img/Google-Enable-APIs-Screen.png)
 
-# Setting up G Suite for OAuth with Rancher
+## Setting up G Suite for OAuth with Rancher
+
 Before you can set up Google OAuth in Rancher, you need to log in to your G Suite account and do the following:
 
 1. [Add Rancher as an authorized domain in G Suite](#1-adding-rancher-as-an-authorized-domain)
@@ -91,7 +92,8 @@ Using the Unique ID of the service account key, register it as an Oauth Client u
 
 **Result:** The service account is registered as an OAuth client in your G Suite account.
 
-# Configuring Google OAuth in Rancher
+## Configuring Google OAuth in Rancher
+
 1. Sign into Rancher using a local user assigned the [administrator](../../manage-role-based-access-control-rbac/global-permissions.md) role. This user is also called the local principal.
 1.	From the **Global** view, click **Security > Authentication** from the main menu.
 1. Click **Google.** The instructions in the UI cover the steps to set up authentication with Google OAuth.

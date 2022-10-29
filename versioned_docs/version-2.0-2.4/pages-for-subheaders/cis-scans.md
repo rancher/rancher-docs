@@ -7,7 +7,7 @@ _Available as of v2.4.0_
 - [Prerequisites](#prerequisites)
 - [How-to Guides](#how-to-guides)
 
-# Prerequisites
+## Prerequisites
 
 To run security scans on a cluster and access the generated reports, you must be an [Administrator](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md) or [Cluster Owner.](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)
 
@@ -17,6 +17,6 @@ The security scan cannot run in a cluster that has Windows nodes.
 
 You will only be able to see the CIS scan reports for clusters that you have access to.
 
-# How-to Guides
+## How-to Guides
 
 Please refer [here](../pages-for-subheaders/cis-scan-guides.md) for how-to guides on CIS scans.

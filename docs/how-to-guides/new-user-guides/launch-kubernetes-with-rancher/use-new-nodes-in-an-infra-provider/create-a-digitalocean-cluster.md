@@ -93,7 +93,8 @@ You can access your cluster after its state is updated to **Active**.
 
 - `Default`, containing the `default` namespace
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces
-# Optional Next Steps
+
+## Optional Next Steps
 
 After creating your cluster, you can access it through the Rancher UI. As a best practice, we recommend setting up these alternate ways of accessing your cluster:
 

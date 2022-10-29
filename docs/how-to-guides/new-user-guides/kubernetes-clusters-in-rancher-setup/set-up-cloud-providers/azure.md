@@ -15,7 +15,7 @@ The following account types are not supported for Azure Subscriptions:
 - Single tenant accounts (i.e. accounts with no subscriptions).
 - Multi-subscription accounts.
 
-# Prerequisites for RKE and RKE2
+## Prerequisites for RKE and RKE2
 
 To set up the Azure cloud provider for both RKE and RKE2, the following credentials need to be configured:
 
@@ -70,7 +70,7 @@ You should already assign custom hosts to this Network Security Group during pro
 
 Only hosts expected to be load balancer back ends need to be in this group.
 
-# RKE2 Cluster Set-up in Rancher
+## RKE2 Cluster Set-up in Rancher
 
 1. Choose "Azure" from the Cloud Provider drop-down in the Cluster Configuration section.
 

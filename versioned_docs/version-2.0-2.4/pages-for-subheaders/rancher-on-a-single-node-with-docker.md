@@ -14,15 +14,15 @@ A Docker installation of Rancher is recommended only for development and testing
 
 For Rancher v2.0-v2.4, there is no migration path from a Docker installation to a high-availability installation. Therefore, you may want to use a Kubernetes installation from the start.
 
-# Requirements for OS, Docker, Hardware, and Networking
+## Requirements for OS, Docker, Hardware, and Networking
 
 Make sure that your node fulfills the general [installation requirements.](installation-requirements.md)
 
-# 1. Provision Linux Host
+## 1. Provision Linux Host
 
 Provision a single Linux host according to our [Requirements](installation-requirements.md) to launch your Rancher server.
 
-# 2. Choose an SSL Option and Install Rancher
+## 2. Choose an SSL Option and Install Rancher
 
 For security purposes, SSL (Secure Sockets Layer) is required when using Rancher. SSL secures all Rancher network communication, like when you login or interact with a cluster.
 

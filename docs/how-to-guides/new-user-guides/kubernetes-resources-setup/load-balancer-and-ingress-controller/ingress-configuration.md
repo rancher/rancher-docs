@@ -7,7 +7,7 @@ description: Ingress configuration
 
 For Kubernetes v1.21 and up, the NGINX Ingress controller no longer runs in hostNetwork but uses hostPorts for port 80 and port 443. This was done so the admission webhook can be configured to be accessed using ClusterIP so it can only be reached inside the cluster.
 
-# Ingress Rule Configuration
+## Ingress Rule Configuration
 
 - [Specify a hostname to use](#specify-a-hostname-to-use)
 - [Use as the default backend](#use-as-the-default-backend)

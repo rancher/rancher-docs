@@ -42,7 +42,7 @@ Totals: | 1710m | 3304Mi | >8800m | >6048Mi | -
 </TabItem>
 </Tabs>
 
-# Configuring Resource Allocations
+## Configuring Resource Allocations
 
 You can individually configure the resource allocation for each type of Istio component. This section includes the default resource allocations for each component.
 

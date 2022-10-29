@@ -24,7 +24,7 @@ Because the API sets the actual value and the command line sets the default valu
 
 For example, if you install Rancher, then set a feature flag to true with the Rancher API, then upgrade Rancher with a command that sets the feature flag to false, the default value will still be false, but the feature will still be enabled because it was set with the Rancher API. If you then deleted the set value (true) with the Rancher API, setting it to NULL, the default value (false) would take effect. See the [feature flags page](../reference-guides/installation-references/feature-flags.md) for more information.
 
-# Enabling Features when Starting Rancher
+## Enabling Features when Starting Rancher
 
 When you install Rancher, enable the feature you want with a feature flag. The command is different depending on whether you are installing Rancher on a single node or if you are doing a Kubernetes Installation of Rancher.
 
@@ -97,7 +97,7 @@ docker run -d -p 80:80 -p 443:443 \
 </TabItem>
 </Tabs>
 
-# Enabling Features with the Rancher UI
+## Enabling Features with the Rancher UI
 
 1. Go to the **Global** view and click **Settings.**
 1. Click the **Feature Flags** tab. You will see a list of experimental features.
@@ -113,7 +113,7 @@ docker run -d -p 80:80 -p 443:443 \
 
 **Result:** The feature is disabled.
 
-# Enabling Features with the Rancher API
+## Enabling Features with the Rancher API
 
 1. Go to `<RANCHER-SERVER-URL>/v3/features`.
 1. In the `data` section, you will see an array containing all of the features that can be turned on with feature flags. The name of the feature is in the `id` field. Click the name of the feature you want to enable.

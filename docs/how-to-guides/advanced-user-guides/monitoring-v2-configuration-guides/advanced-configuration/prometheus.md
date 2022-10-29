@@ -10,7 +10,7 @@ This section assumes familiarity with how monitoring components work together. F
 
 :::
 
-# About the Prometheus Custom Resource
+## About the Prometheus Custom Resource
 
 The Prometheus CR defines a desired Prometheus deployment. The Prometheus Operator observes the Prometheus CR. When the CR changes, the Prometheus Operator creates `prometheus-rancher-monitoring-prometheus`, a Prometheus deployment based on the CR configuration.
 

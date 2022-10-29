@@ -19,7 +19,7 @@ If you are upgrading cert-manager to the latest version from a version older tha
 
 :::
 
-# Upgrade Cert-Manager
+## Upgrade Cert-Manager
 
 The namespace used in these instructions depends on the namespace cert-manager is currently installed in. If it is in kube-system use that in the instructions below. You can verify by running `kubectl get pods --all-namespaces` and checking which namespace the cert-manager-\* pods are listed in. Do not change the namespace cert-manager is running in or this can cause issues.
 

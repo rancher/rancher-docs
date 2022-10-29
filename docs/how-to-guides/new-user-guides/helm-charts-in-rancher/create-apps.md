@@ -12,7 +12,7 @@ For a complete walkthrough of developing charts, see the [Chart Template Develop
 
 
 
-# Chart Types
+## Chart Types
 
 Rancher supports two different types of charts: Helm charts and Rancher charts.
 
@@ -26,7 +26,7 @@ Rancher charts are native helm charts with two files that enhance user experienc
 
 Rancher charts add simplified chart descriptions and configuration forms to make the application deployment easy. Rancher users do not need to read through the entire list of Helm variables to understand how to launch an application.
 
-# Chart Directory Structure
+## Chart Directory Structure
 
 You can provide Helm Charts in a standard, HTTP based Helm Repository. For more information see the [Chart Repository Guide](https://helm.sh/docs/topics/chart_repository) in the official Helm documentation.
 
@@ -48,7 +48,7 @@ The following table demonstrates the directory structure for a Git repository. T
  │   │   │   ├── templates/        # Directory containing templates that, when combined with values.yml, generates Kubernetes YAML.
 ```
 
-# Additional Files for Rancher Charts
+## Additional Files for Rancher Charts
 
 Before you create your own custom catalog, you should have a basic understanding about how a Rancher chart differs from a native Helm chart. Rancher charts differ slightly from Helm charts in their directory structures. Rancher charts include two files that Helm charts do not.
 

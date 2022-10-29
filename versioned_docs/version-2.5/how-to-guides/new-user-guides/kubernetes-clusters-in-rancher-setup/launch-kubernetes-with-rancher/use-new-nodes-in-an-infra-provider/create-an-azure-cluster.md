@@ -22,7 +22,7 @@ For more information on configuring Azure node templates, refer to the [Azure no
 - [Preparation in Azure](#preparation-in-azure)
 - [Creating an Azure Cluster](#creating-an-azure-cluster)
 
-# Preparation in Azure
+## Preparation in Azure
 
 Before creating a node template in Rancher using a cloud infrastructure such as Azure, we must configure Rancher to allow the manipulation of resources in an Azure subscription.
 
@@ -39,7 +39,7 @@ az ad sp create-for-rbac \
 
 The creation of this service principal returns three pieces of identification information, *The application ID, also called the client ID*, *The client secret*, and *The tenant ID*. This information will be used when you create a node template for Azure.
 
-# Creating an Azure Cluster
+## Creating an Azure Cluster
 
 
 1. [Create your cloud credentials](#1-create-your-cloud-credentials)

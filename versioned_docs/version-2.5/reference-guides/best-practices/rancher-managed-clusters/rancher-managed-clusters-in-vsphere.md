@@ -13,7 +13,7 @@ This guide outlines a reference architecture for provisioning downstream Rancher
 
 ![Solution Overview](/img/solution_overview.drawio.svg)
 
-# 1. VM Considerations
+## 1. VM Considerations
 
 ### Leverage VM Templates to Construct the Environment
 
@@ -31,7 +31,7 @@ Doing so will ensure node VM's are spread across multiple datastores - preventin
 
 It’s important to follow K8s and etcd best practices when deploying your nodes, including disabling swap, double-checking you have full network connectivity between all machines in the cluster, using unique hostnames, MAC addresses, and product_uuids for every node.
 
-# 2. Network Considerations
+## 2. Network Considerations
 
 ### Leverage Low Latency, High Bandwidth Connectivity Between ETCD Nodes
 
@@ -41,13 +41,13 @@ Deploy etcd members within a single data center where possible to avoid latency 
 
 Each node used should have a static IP configured. In the case of DHCP, each node should have a DHCP reservation to make sure the node gets the same IP allocated.
 
-# 3. Storage Considerations
+## 3. Storage Considerations
 
 ### Leverage SSD Drives for ETCD Nodes
 
 ETCD is very sensitive to write latency. Therefore, leverage SSD disks where possible.
 
-# 4. Backups and Disaster Recovery
+## 4. Backups and Disaster Recovery
 
 ### Perform Regular Downstream Cluster Backups
 

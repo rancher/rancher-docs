@@ -8,7 +8,7 @@ This page describes how to enable monitoring and alerting within a cluster using
 
 You can enable monitoring with or without SSL.
 
-# Requirements
+## Requirements
 
 - Make sure that you are allowing traffic on port 9796 for each of your nodes because Prometheus will scrape metrics from here.
 - Make sure your cluster fulfills the resource requirements. The cluster should have at least 1950Mi memory available, 2700m CPU, and 50Gi storage. A breakdown of the resource limits and requests is [here.](../../../reference-guides/monitoring-v2-configuration/helm-chart-options.md#configuring-resource-limits-and-requests)
@@ -27,13 +27,13 @@ If you want to set up Alertmanager, Grafana or Ingress, it has to be done with t
 
 :::
 
-# Setting Resource Limits and Requests
+#Setting Resource Limits and Requests
 
 The resource requests and limits can be configured when installing `rancher-monitoring`.  To configure Prometheus resources from the Rancher UI, click **Apps & Marketplace > Monitoring** in the upper left corner.
 
 For more information about the default limits, see [this page.](../../../reference-guides/monitoring-v2-configuration/helm-chart-options.md#configuring-resource-limits-and-requests)
 
-# Install the Monitoring Application
+## Install the Monitoring Application
 
 ### Enable Monitoring for use without SSL
 

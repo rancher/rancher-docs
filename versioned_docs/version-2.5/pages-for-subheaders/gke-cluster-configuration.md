@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="Rancher v2.5.8+">
 
-# Changes in v2.5.8
+## Changes in v2.5.8
 
 - We now support private GKE clusters. Note: This advanced setup can require more steps during the cluster provisioning process. For details, see [this section.](../reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters.md)
 - [Shared VPCs](https://cloud.google.com/vpc/docs/shared-vpc) are now supported.
@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
     - Node pools can be added while configuring the GKE cluster
 - When provisioning a GKE cluster, you can now use reusable cloud credentials instead of using a service account token directly to create the cluster.
 
-# Cluster Location
+## Cluster Location
 
 | Value | Description |
 |--------|--------------|
@@ -31,7 +31,7 @@ import TabItem from '@theme/TabItem';
 | Additional Zones | For zonal clusters, you can select additional zones to create a [multi-zone cluster.](https://cloud.google.com/kubernetes-engine/docs/concepts/types-of-clusters#multi-zonal_clusters) |
 | Region | For [regional clusters,](https://cloud.google.com/kubernetes-engine/docs/concepts/types-of-clusters#regional_clusters) you can select a region. For more information about available regions and zones, refer to [this section](https://cloud.google.com/compute/docs/regions-zones#available). The first part of each zone name is the name of the region. |
 
-# Cluster Options
+## Cluster Options
 
 ### Kubernetes Version
 
@@ -133,7 +133,7 @@ _Mutable: yes_
 
 Enable control plane authorized networks to block untrusted non-GCP source IPs from accessing the Kubernetes master through HTTPS. If selected, additional authorized networks may be added. If the cluster is created with a public endpoint, this option is useful for locking down access to the public endpoint to only certain networks, such as the network where your Rancher service is running. If the cluster only has a private endpoint, this setting is required.
 
-# Additional Options
+## Additional Options
 
 ### Cluster Addons
 
@@ -182,7 +182,7 @@ _Mutable: yes_
 
 Set the start time for a 4 hour maintenance window. The time is specified in the UTC time zone using the HH:MM format. For more information, refer to [this page.](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
 
-# Node Pools
+## Node Pools
 
 In this section, enter details describing the configuration of each node in the node pool.
 
@@ -240,7 +240,7 @@ You can apply labels to the node pool, which applies the labels to all nodes in 
 
 Invalid labels can prevent upgrades or can prevent Rancher from starting. For details on label syntax requirements, see the [Kubernetes documentation.](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set)
 
-# Group Details
+## Group Details
 
 In this section, enter details describing the node pool.
 
@@ -306,13 +306,13 @@ The shorter the refresh window, the less likely any race conditions will occur, 
 </TabItem>
 <TabItem value="Rancher before v2.5.8">
 
-# Labels & Annotations
+## Labels & Annotations
 
 Add Kubernetes [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) to the cluster.
 
 Invalid labels can prevent upgrades or can prevent Rancher from starting. For details on label syntax requirements, see the [Kubernetes documentation.](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set)
 
-# Kubernetes Options
+## Kubernetes Options
 
 ### Location Type
 Zonal or Regional. With GKE, you can create a cluster tailored to the availability requirements of your workload and your budget. By default, a cluster's nodes run in a single compute zone. When multiple zones are selected, the cluster's nodes will span multiple compute zones, while the controlplane is located in a single zone. Regional clusters increase the availability of the controlplane as well. For help choosing the type of cluster availability, refer to [these docs.](https://cloud.google.com/kubernetes-engine/docs/best-practices/scalability#choosing_a_regional_or_zonal_control_plane)

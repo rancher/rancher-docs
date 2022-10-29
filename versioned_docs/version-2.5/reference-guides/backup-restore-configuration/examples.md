@@ -238,7 +238,7 @@ spec:
   encryptionConfigSecretName: test-encryptionconfig
 ```
 
-# Example Credential Secret for Storing Backups in S3
+## Example Credential Secret for Storing Backups in S3
 
 ```yaml
 apiVersion: v1
@@ -251,7 +251,7 @@ data:
   secretKey: <Enter your base64-encoded secret key>
 ```
 
-# Example EncryptionConfiguration
+## Example EncryptionConfiguration
 
 ```yaml
 apiVersion: apiserver.config.k8s.io/v1

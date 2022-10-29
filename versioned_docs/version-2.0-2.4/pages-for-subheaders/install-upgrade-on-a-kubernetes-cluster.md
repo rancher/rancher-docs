@@ -6,7 +6,7 @@ description: Learn how to install Rancher in development and production environm
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Prerequisite
+## Prerequisite
 
 Set up the Rancher server's local Kubernetes cluster.
 
@@ -19,7 +19,7 @@ For the tutorial to install an RKE Kubernetes cluster, refer to [this page.](../
 
 For the tutorial to install a K3s Kubernetes cluster, refer to [this page.](../how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher.md) For help setting up the infrastructure for a high-availability K3s cluster, refer to [this page.](../how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster.md)
 
-# Install the Rancher Helm Chart
+## Install the Rancher Helm Chart
 
 Rancher is installed using the Helm package manager for Kubernetes. Helm charts provide templating syntax for Kubernetes YAML manifest documents.
 

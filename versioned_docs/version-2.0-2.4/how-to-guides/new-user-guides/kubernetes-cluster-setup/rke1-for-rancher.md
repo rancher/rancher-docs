@@ -20,7 +20,7 @@ For systems without direct internet access, refer to [Air Gap: Kubernetes instal
 >
 > In both single-node setups, Rancher can be installed with Helm on the Kubernetes cluster in the same way that it would be installed on any other cluster.
 
-# Installing Kubernetes
+## Installing Kubernetes
 
 ### Required CLI Tools
 

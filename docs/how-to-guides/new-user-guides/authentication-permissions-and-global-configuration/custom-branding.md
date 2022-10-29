@@ -160,7 +160,7 @@ Can be any link, even to links outside of the cluster.
 
 It is required to provide either the `toService` directive or the `toURL` directive.
 
-# Link Examples
+## Link Examples
 
 ### Example of Link with `toUrl`
 

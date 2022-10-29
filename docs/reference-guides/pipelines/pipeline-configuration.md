@@ -61,7 +61,8 @@ stages:
         pushRemote: true
         registry: reg.example.com
 ```
-# Step Type: Run Script
+
+## Step Type: Run Script
 
 The **Run Script** step executes arbitrary commands in the workspace inside a specified container. You can use it to build, test and do more, given whatever utilities the base image provides. For your convenience, you can use variables to refer to metadata of a pipeline execution. Please refer to the [pipeline variable substitution reference](#pipeline-variable-substitution-reference) for the list of available variables.
 
@@ -623,7 +624,7 @@ If you want to use a version control provider with a certificate from a custom/i
 
 **Result:** Pipelines can be used and new pods will be able to work with the self-signed-certificate.
 
-# Persistent Data for Pipeline Components
+## Persistent Data for Pipeline Components
 
 The internal Docker registry and the Minio workloads use ephemeral volumes by default. This default storage works out-of-the-box and makes testing easy, but you lose the build images and build logs if the node running the Docker Registry or Minio fails. In most cases this is fine. If you want build images and logs to survive node failures, you can configure the Docker Registry and Minio to use persistent volumes.
 

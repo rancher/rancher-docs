@@ -19,7 +19,7 @@ Your cloud credential has these fields:
 | Port | Optional: configure configure the port of the vCenter or ESXi server. |
 | Username and password | Enter your vSphere login username and password. |
 
-# Scheduling
+## Scheduling
 
 Choose what hypervisor the virtual machine will be scheduled to.
 
