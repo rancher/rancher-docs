@@ -18,7 +18,7 @@ Rancher supports the following services:
 
 Only [administrators](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md), [cluster owners or members](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles), or [project owners](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-roles) can configure Rancher to send Kubernetes logs to a logging service.
 
-# Requirements
+## Requirements
 
 The Docker daemon on each node in the cluster should be [configured](https://docs.docker.com/config/containers/logging/configure/) with the (default) log-driver: `json-file`. You can check the log-driver by running the following command:
 
@@ -27,7 +27,7 @@ $ docker info | grep 'Logging Driver'
 Logging Driver: json-file
 ```
 
-# Advantages
+## Advantages
 
 Setting up a logging service to collect logs from your cluster/project has several advantages:
 
@@ -36,7 +36,7 @@ Setting up a logging service to collect logs from your cluster/project has sever
 - Helps you when troubleshooting or debugging.
 - Saves your logs to a safe location outside of your cluster, so that you can still access them even if your cluster encounters issues.
 
-# Logging Scope
+## Logging Scope
 
 You can configure logging at either cluster level or project level.
 
@@ -50,7 +50,7 @@ Logs that are sent to your logging service are from the following locations:
 
   - Kubernetes system components logs stored at `/var/lib/rancher/rke/logs/`.
 
-# Enabling Project Logging
+## Enabling Project Logging
 
 1. From the **Global** view, navigate to the project that you want to configure project logging.
 
@@ -102,6 +102,6 @@ Logs that are sent to your logging service are from the following locations:
 
 **Result:** Rancher is now configured to send logs to the selected service. Log into the logging service so that you can start viewing the logs.
 
-# Related Links
+## Related Links
 
 [Logging Architecture](https://kubernetes.io/docs/concepts/cluster-administration/logging/)

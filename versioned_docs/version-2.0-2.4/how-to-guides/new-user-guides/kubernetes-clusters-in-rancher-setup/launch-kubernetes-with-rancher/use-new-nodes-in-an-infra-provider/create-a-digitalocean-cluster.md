@@ -18,7 +18,7 @@ Then you will create a DigitalOcean cluster in Rancher, and when configuring the
 2. [Create a node template with your cloud credentials](#2-create-a-node-template-with-your-cloud-credentials)
 3. [Create a cluster with node pools using the node template](#3-create-a-cluster-with-node-pools-using-the-node-template)
 
-### 1. Create your cloud credentials
+## 1. Create your cloud credentials
 
 1. In the Rancher UI, click the user profile button in the upper right corner, and click **Cloud Credentials.**
 1. Click **Add Cloud Credential.**
@@ -29,7 +29,7 @@ Then you will create a DigitalOcean cluster in Rancher, and when configuring the
 
 **Result:** You have created the cloud credentials that will be used to provision nodes in your cluster. You can reuse these credentials for other node templates, or in other clusters.
 
-### 2. Create a node template with your cloud credentials
+## 2. Create a node template with your cloud credentials
 
 Creating a [node template](../../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#node-templates) for DigitalOcean will allow Rancher to provision new nodes in DigitalOcean. Node templates can be reused for other clusters.
 
@@ -37,7 +37,7 @@ Creating a [node template](../../../../../pages-for-subheaders/use-new-nodes-in-
 1. Click **Add Template.**
 1. Fill out a node template for DigitalOcean. For help filling out the form, refer to [DigitalOcean Node Template Configuration.](../../../../../reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/digitalocean.md)
 
-### 3. Create a cluster with node pools using the node template
+## 3. Create a cluster with node pools using the node template
 
 1. From the **Clusters** page, click **Add Cluster**.
 1. Choose **DigitalOcean**.
@@ -83,7 +83,7 @@ You can access your cluster after its state is updated to **Active.**
 </TabItem>
 </Tabs>
 
-# Optional Next Steps
+## Optional Next Steps
 
 After creating your cluster, you can access it through the Rancher UI. As a best practice, we recommend setting up these alternate ways of accessing your cluster:
 

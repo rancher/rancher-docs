@@ -25,7 +25,7 @@ For a list of best practices that we recommend for running the Rancher server in
 
 The Rancher UI works best in Firefox or Chrome.
 
-# Operating Systems and Container Runtime Requirements
+## Operating Systems and Container Runtime Requirements
 
 Rancher should work with any modern Linux distribution.
 
@@ -53,11 +53,11 @@ If you are installing Rancher on a K3s cluster with **Raspbian Buster**, follow 
 
 If you are installing Rancher on a K3s cluster with Alpine Linux, follow [these steps](https://rancher.com/docs/k3s/latest/en/advanced/#additional-preparation-for-alpine-linux-setup) for additional setup.
 
-
 ### Installing Docker
 
 Docker is required for Helm chart installs, and it can be installed by following the steps in the official [Docker documentation.](https://docs.docker.com/) Rancher also provides [scripts](../getting-started/installation-and-upgrade/installation-requirements/install-docker.md) to install Docker with one command.
-# Hardware Requirements
+
+## Hardware Requirements
 
 This section describes the CPU, memory, and disk requirements for the nodes where the Rancher server is installed.
 
@@ -133,7 +133,7 @@ These requirements apply to installing Rancher on an RKE Kubernetes cluster befo
 
 Rancher performance depends on etcd in the cluster performance. To ensure optimal speed, we recommend always using SSD disks to back your Rancher management Kubernetes cluster. On cloud providers, you will also want to use the minimum size that allows the maximum IOPS. In larger clusters, consider using dedicated storage devices for etcd data and wal directories.
 
-# Networking Requirements
+## Networking Requirements
 
 This section describes the networking requirements for the node(s) where the Rancher server is installed.
 

@@ -7,7 +7,7 @@ _Available as of v2.2.0_
 
 Using Rancher, you can monitor the state and processes of your cluster nodes, Kubernetes components, and software deployments through integration with [Prometheus](https://prometheus.io/), a leading open-source monitoring solution.
 
-# About Prometheus
+## About Prometheus
 
 Prometheus provides a _time series_ of your data, which is, according to [Prometheus documentation](https://prometheus.io/docs/concepts/data_model/):
 
@@ -21,7 +21,7 @@ By viewing data that Prometheus scrapes from your cluster control plane, nodes, 
 
 Multi-tenancy support in terms of cluster-only and project-only Prometheus instances are also supported.
 
-# Monitoring Scope
+## Monitoring Scope
 
 Using Prometheus, you can monitor Rancher at both the cluster level and [project level](../explanations/integrations-in-rancher/cluster-monitoring/project-monitoring.md). For each cluster and project that is enabled for monitoring, Rancher deploys a Prometheus server.
 
@@ -33,7 +33,7 @@ Using Prometheus, you can monitor Rancher at both the cluster level and [project
 
 - [Project monitoring](../explanations/integrations-in-rancher/cluster-monitoring/project-monitoring.md) allows you to view the state of pods running in a given project. Prometheus collects metrics from the project's deployed HTTP and TCP/UDP workloads.
 
-# Enabling Cluster Monitoring
+## Enabling Cluster Monitoring
 
 As an [administrator](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md) or [cluster owner](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles), you can configure Rancher to deploy Prometheus to monitor your Kubernetes cluster.
 
@@ -62,7 +62,7 @@ As an [administrator](../how-to-guides/advanced-user-guides/authentication-permi
 
 > The default username and password for the Grafana instance will be `admin/admin`. However, Grafana dashboards are served via the Rancher authentication proxy, so only users who are currently authenticated into the Rancher server have access to the Grafana dashboard.
 
-# Resource Consumption
+## Resource Consumption
 
 When enabling cluster monitoring, you need to ensure your worker nodes and Prometheus pod have enough resources. The tables below provides a guide of how much resource consumption will be used. In larger deployments, it is strongly advised that the monitoring infrastructure be placed on dedicated nodes in the cluster.
 
