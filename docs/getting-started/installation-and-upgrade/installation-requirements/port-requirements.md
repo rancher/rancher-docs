@@ -194,7 +194,7 @@ If security isn't a large concern and you're okay with opening a few additional 
 
 :::info
 
-**For more information on port requirements for the Harvester cluster, refer [here](../../../integrations-in-rancher/harvester.md).**
+**For more information on port requirements for the Harvester cluster, refer [here](../../../integrations-in-rancher/harvester.md#port-requirements).**
 
 :::
 
