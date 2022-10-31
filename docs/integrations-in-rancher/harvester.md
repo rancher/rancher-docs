@@ -32,6 +32,17 @@ Harvester allows `.ISO` images to be uploaded and displayed through the Harveste
 
 Click [here](../pages-for-subheaders/about-provisioning-drivers.md#node-drivers) for more information on node drivers in Rancher.
 
+### Port Requirements
+
+The port requirements for the Harvester cluster follow the same guidelines as RKE2 [here](https://docs.rke2.io/install/requirements/#networking).
+
+In addition, other networking considerations are as follows:
+
+- Be sure to enable VLAN trunk ports of the physical switch for VM VLAN networks.
+- Follow the networking best practices as stated [here](https://docs.harvesterhci.io/v1.0/networking/best-practice/overview/).
+
+For other port requirements for other guest clusters, such as K3s and RKE1, please see [these docs](https://docs.harvesterhci.io/v1.0/install/requirements/#guest-clusters).
+
 ### Limitations
 
 ---
