@@ -2,27 +2,38 @@
 title: Rancher Extensions
 ---
 
-New in Rancher v2.7.0, Rancher introduces **extensions**. Extensions allow admins to make changes and create enhancements to their UI functionality independent of Rancher Manager releases.
+New in Rancher v2.7.0, Rancher introduces **extensions**. Extensions allow users, developers, partners, and customers to extend and enhance the Rancher Manager UI. In addition, users can make changes and create enhancements to their UI functionality independent of Rancher Manager releases. Extensions will enable users to build on top of Rancher to better tailor it to their respective environments.
 
-### Installing Extensions with Rancher
+Extensions are Helm charts that can only be installed once into a cluster; therefore, these charts have been simplified and separated from the general Helm charts listed under **Apps & Marketplace**.
 
-The  Helm Chart is used to manage access to the NeuVector UI in Rancher where users can navigate directly to deploy and manage their NeuVector clusters.
+Examples of built-in Rancher Manager extensions are Fleet, Explorer, and Harvester. Examples of other extensions that use the Extensions API that can be manually added are Kubewarden and Elemental.
 
-**To navigate to and install the Extensions chart:**
+### Installing Extensions
+
+:::note
+
+> You must log in as an admin in order to view and install extensions.
+
+:::
 
 1. Click **☰ > Extensions** under **Configuration**.
 
-    ![Extensions](/img/extensions-left-nav-bar.png)
+1. If not already installed in **Apps & Marketplace**, you must enable the extension operator by clicking the **Enable** button.
 
-1. If not already installed in **Apps & Marketplace**, you must enable the extension operator by clicking on **Enable** here:
-
-    ![Enable extensions](/img/enable-extensions.png)
-
-   Click **OK** to add the Rancher extension repository if your installation is not air-gapped. Otherwise, click **Cancel**.
+    - Click **OK** to add the Rancher extension repository if your installation is not air-gapped. Otherwise, uncheck the box to do so and click **OK**.
 
     ![Rancher extension repository](/img/add-rancher-extension-repo.png)
 
-1. On the Extensions page, click on the **Available** tab to select which extensions you want to install. Click **Install** on the desired extension, such as Kubewarden as an example:
+1. On the Extensions page, click on the **Available** tab to select which extensions you want to install. 
 
-    ![Install extension](/img/install-extension.png)
+    - Click **Install** on the desired extension and version as in the example below. Note that you can easily update your extension as the button to **Update** will appear on the extension if one is available.
 
+    ![Install Kubewarden](/img/install-kubewarden.png)
+
+    - If no extensions are showing as available, you may always manually add repos: On the upper right of screen, click on **⋮ > Manage Repositories > Create**, add the desired repo, then click **Create** again to complete:
+
+    ![Manage repositories](/img/manage-repos.png)
+
+### Uninstalling Extensions 
+
+Under the **Installed** tab, click the **Uninstall** button on the extension you wish to remove.
