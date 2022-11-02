@@ -24,15 +24,23 @@ Examples of built-in Rancher Manager extensions are Fleet, Explorer, and Harvest
 
     ![Rancher extension repository](/img/add-rancher-extension-repo.png)
 
-1. On the Extensions page, click on the **Available** tab to select which extensions you want to install. 
+1. On the Extensions page, click on the **Available** tab to select which extensions you want to install.
 
-    - Click **Install** on the desired extension and version as in the example below. Note that you can easily update your extension as the button to **Update** will appear on the extension if one is available.
+:::info
 
-    ![Install Kubewarden](/img/install-kubewarden.png)
+In v2.7.0, the built-in extensions will not be displayed under the **Available** tab. Therefore, you will need to manually add the desired repos to install extensions. We will update the community once these extensions have been pulled out to be available for selection.
 
-    - If no extensions are showing as available, you may always manually add repos: On the upper right of screen, click on **⋮ > Manage Repositories > Create**, add the desired repo, then click **Create** again to complete:
+:::
+
+- If no extensions are showing as available, you may manually add repos: On the upper right of screen, click on **⋮ > Manage Repositories > Create**, add the desired repo, then click **Create** again to complete:
 
     ![Manage repositories](/img/manage-repos.png)
+
+- Refresh your screen to ensure the extension is now visible.
+
+- Click **Install** on the desired extension and version as in the example below. Note that you can easily update your extension as the button to **Update** will appear on the extension if one is available.
+
+    ![Install Kubewarden](/img/install-kubewarden.png)
 
 ### Uninstalling Extensions 
 
