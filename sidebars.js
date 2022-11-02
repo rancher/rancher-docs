@@ -1220,6 +1220,8 @@ const sidebars = {
               "integrations-in-rancher/neuvector",
 
               "integrations-in-rancher/opa-gatekeeper",
+
+              "integrations-in-rancher/rancher-extensions",
                   ]
     },
     {
