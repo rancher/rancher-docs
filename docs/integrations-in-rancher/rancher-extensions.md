@@ -2,7 +2,7 @@
 title: Rancher Extensions
 ---
 
-New in Rancher v2.7.0, Rancher introduces **extensions**. Extensions allow users, developers, partners, and customers to extend and enhance the Rancher Manager UI. In addition, users can make changes and create enhancements to their UI functionality independent of Rancher Manager releases. Extensions will enable users to build on top of Rancher to better tailor it to their respective environments.
+New in Rancher v2.7.0, Rancher introduces **extensions**. Extensions allow users, developers, partners, and customers to extend and enhance the Rancher Manager UI. In addition, users can make changes and create enhancements to their UI functionality independent of Rancher Manager releases. Extensions will enable users to build on top of Rancher to better tailor it to their respective environments. Note that users will also have the ability to update to new versions as well as roll back to a previous version.
 
 Extensions are Helm charts that can only be installed once into a cluster; therefore, these charts have been simplified and separated from the general Helm charts listed under **Apps & Marketplace**.
 
@@ -10,7 +10,7 @@ Examples of built-in Rancher Manager extensions are Fleet, Explorer, and Harvest
 
 ## Prerequisites
 
-You must log in as an admin in order to view and install extensions.
+> You must log in as an admin in order to view and interact with the extensions management page.
 
 ## Installing Extensions
 
@@ -41,12 +41,40 @@ In v2.7.0, the built-in extensions will not be displayed under the **Available**
 
     ![Manage repositories](/img/manage-repos.png)
 
-5. Refresh your **Extensions** screen to ensure the extension is now visible.
-
-6. Click **Install** on the desired extension and version as in the example below. Note that you can easily update your extension as the button to **Update** will appear on the extension if one is available.
+5. Under the **Available** tab, click **Install** on the desired extension and version as in the example below. Note that you can easily update your extension as the button to **Update** will appear on the extension if one is available.
 
     ![Install Kubewarden](/img/install-kubewarden.png)
 
-## Uninstalling Extensions 
+6. Click the **Reload** page button that will appear after your extension successfully installs. Note that a logged-in user who has just installed an extension will not see a change to the UI **unless** they reload the page.
 
-Under the **Installed** tab, click the **Uninstall** button on the extension you wish to remove.
+    ![Reload button](/img/reload-button.png)
+
+## Uninstalling Extensions
+
+There are two ways in which you can uninstall or disable your extensions:
+
+1. Under the **Installed** tab, click the **Uninstall** button on the extension you wish to remove.
+
+    ![Uninstall extensions](/img/uninstall-extension.png)
+
+1. On the extensions management page, click **⋮ > Disable Extension Support**. This will disable all installed extensions.
+
+    ![Disable extensions](/img/disable-extension-support.png)
+
+:::caution
+
+You must reload the page after disabling extensions or display issues may occur.
+
+:::
+
+## Rolling Back Extensions
+
+Under the **Installed** tab, click the **Rollback** button on the extension you wish to roll back.
+
+![Roll back extensions](/img/roll-back-extension.png)
+
+:::caution
+
+You must reload the page after rolling back extensions or display issues may occur.
+
+:::
