@@ -192,11 +192,10 @@ If security isn't a large concern and you're okay with opening a few additional 
 
 :::
 
-:::info
+### Ports for Harvester Clusters
 
-**For more information on port requirements for the Harvester cluster, refer [here](../../../integrations-in-rancher/harvester.md#port-requirements).**
+Refer to the [Harvester documentation](../../../integrations-in-rancher/harvester.md#port-requirements) for more information on Harvester port requirements.
 
-:::
 
 ### Ports for Rancher Launched Kubernetes Clusters using Node Pools
 
