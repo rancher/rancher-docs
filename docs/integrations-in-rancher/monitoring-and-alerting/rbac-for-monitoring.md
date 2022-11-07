@@ -65,6 +65,43 @@ Admins should use these roles to provide more fine-grained access to users:
 | monitoring-dashboard-edit | Allow admins to assign roles to users to be able to edit / view ConfigMaps within the cattle-dashboards namespace. ConfigMaps in this namespace will correspond to Grafana Dashboards that are persisted onto the cluster. |
 | monitoring-dashboard-view | Allow admins to assign roles to users to be able to view ConfigMaps within the cattle-dashboards namespace. ConfigMaps in this namespace will correspond to Grafana Dashboards that are persisted onto the cluster. |
 
+
+### Assigning Monitoring Roles through Custom Roles
+
+Admins may assign custom roles in the Rancher UI for admin, editing, and viewing monitoring. These "roles" are created by default when the monitoring app is installed. Additionally, these roles are also deployed to the corresponding Kubernetes roles: admin, edit, and view `ClusterRoles`.
+
+:::note Important
+
+The UI will not offer `monitoring-admin`, `monitoring-edit`, and `monitoring-view` options when users are being added to a cluster. These monitoring roles can only be assigned by manually creating a custom role that inherits from Project Owner and Project Monitoring View roles. 
+
+:::
+
+  1. Create the custom role:
+
+    1.1 Click **☰ > Users & Authentication > Roles**.
+
+    1.2 Select the appropriate tab, e.g., **Cluster** role. Then click **Create Cluster Role**.
+
+    1.3 In the **Name** field, create a custom role such as `View Monitoring`, `Edit Monitoring`, or `Admin Monitoring`.
+
+    1.4 Click **Inherit From > Add Resource**, then select the Kubernetes role, as applicable, from the dropdown.
+
+    1.5 Click **Create**.
+
+
+  2. Assign the custom role to a new user:
+
+    2.1 Click **☰ > Cluster Management > Cluster Explore > Cluster > Cluster Members > Add**.
+
+    2.2 Search for your new user name from **Select Member** options displayed.
+
+    2.3 Assign the new custom role from **Cluster Permissions** to the new user.
+
+    2.4 Click **Create**.
+
+
+**Result:** The new user should now be able to see the monitoring tools.
+
 ### Additional Monitoring ClusterRoles
 
 Monitoring also creates additional `ClusterRoles` that are not assigned to users by default but are created within the cluster.  They are not aggregated by default but can be bound to a namespace by deploying a `RoleBinding` or `ClusterRoleBinding` that references it. To define a `RoleBinding` with `kubectl` instead of through Rancher, click [here](#assigning-roles-and-clusterroles-with-kubectl).
