@@ -105,8 +105,12 @@ module.exports = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: 'v2.6'
+              label: 'v2.7'
             },
+            // 2.6: {
+            //   label: 'v2.6',
+            //   path: 'v2.6'
+            // },
             2.5: {
               label: 'v2.5',
               path: 'v2.5'
