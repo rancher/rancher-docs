@@ -109,7 +109,8 @@ module.exports = {
             },
             2.6: {
               label: 'v2.6',
-              path: 'v2.6'
+              path: 'v2.6',
+              banner: 'none'
             },
             2.5: {
               label: 'v2.5',
