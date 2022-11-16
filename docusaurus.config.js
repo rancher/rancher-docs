@@ -581,10 +581,6 @@ module.exports = {
             from: '/explanations/integrations-in-rancher/logging/logging-architecture'
           },
           {
-            to: '/integrations-in-rancher/logging/migrate-to-rancher-v2.5+-logging',
-            from: '/explanations/integrations-in-rancher/logging/migrate-to-rancher-v2.5+-logging'
-          },
-          {
             to: '/integrations-in-rancher/logging/rbac-for-logging',
             from: '/explanations/integrations-in-rancher/logging/rbac-for-logging'
           },
