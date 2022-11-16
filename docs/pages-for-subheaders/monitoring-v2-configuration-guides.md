@@ -10,9 +10,9 @@ For information on configuring custom scrape targets and rules for Prometheus, p
 
 The resource requests and limits for the monitoring application can be configured when installing `rancher-monitoring`. For more information about the default limits, see [this page.](../reference-guides/monitoring-v2-configuration/helm-chart-options.md#configuring-resource-limits-and-requests)
 
-:::note
+:::tip
 
-On an idle cluster, Monitoring V2 has significantly higher CPU usage (up to 70%) as compared to Monitoring V1. To improve performance and achieve similar results as in Monitoring V1, turn off the Prometheus adapter.
+On an idle cluster, Monitoring may have high CPU usage. To improve performance, turn off the Prometheus adapter.
 
 :::
 

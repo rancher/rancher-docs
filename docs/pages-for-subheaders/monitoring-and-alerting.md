@@ -60,7 +60,6 @@ For information on configuring access to monitoring, see [this page.](../integra
 - [Customizing Grafana dashboards](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/customize-grafana-dashboard.md)
 - [Persistent Grafana dashboards](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/create-persistent-grafana-dashboard.md)
 - [Debugging high memory usage](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/debug-high-memory-usage.md)
-- [Migrating from Monitoring V1 to V2](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/migrate-to-rancher-v2.5+-monitoring.md)
 
 # Configuration
 
