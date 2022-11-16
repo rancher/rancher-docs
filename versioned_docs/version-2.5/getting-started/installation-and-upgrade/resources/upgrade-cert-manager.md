@@ -24,7 +24,7 @@ To address these changes, this guide will do two things:
 
 > For reinstalling Rancher with Helm, please check [Option B: Reinstalling Rancher Chart](../install-upgrade-on-a-kubernetes-cluster/upgrades.md) under the upgrade Rancher section.
 
-# Upgrade Cert-Manager
+## Upgrade Cert-Manager
 
 The namespace used in these instructions depends on the namespace cert-manager is currently installed in. If it is in kube-system use that in the instructions below. You can verify by running `kubectl get pods --all-namespaces` and checking which namespace the cert-manager-\* pods are listed in. Do not change the namespace cert-manager is running in or this can cause issues.
 
@@ -239,4 +239,3 @@ We have also removed support for the old configuration format that was deprecate
 Details about the change and migration instructions can be found in the [cert-manager v0.10 to v0.11 upgrade instructions](https://cert-manager.io/docs/installation/upgrading/upgrading-0.10-0.11/).
 
 More info about [cert-manager upgrade information](https://cert-manager.io/docs/installation/upgrading/).
-

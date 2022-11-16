@@ -15,7 +15,7 @@ Cluster Autoscaler is designed to run on Kubernetes master nodes. It can run in 
 
 It's possible to run a customized deployment of Cluster Autoscaler on worker nodes, but extra care needs to be taken to ensure that Cluster Autoscaler remains up and running.
 
-# Cloud Providers
+## Cloud Providers
 
 Cluster Autoscaler provides support to distinct cloud providers. For more information, go to [cluster-autoscaler supported cloud providers.](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler#deployment)
 

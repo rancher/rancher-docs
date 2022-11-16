@@ -26,7 +26,7 @@ Harvester 已 GA。有关所有更新，请参阅 [Harvester 发行说明](https
 
 ### Harvester 主机驱动
 
-在 Rancher 的 RKE 和 RKE2 选项中，[Harvester 主机驱动](https://docs.harvesterhci.io/v0.3/rancher/node-driver/)被标记为`技术预览`。在**创建**页面和启用驱动后的页面都是一样的情况。无论 Harvester 功能开关是否启用，主机驱动都是可用的。请注意，默认情况下主机驱动是关闭的。用户只能通过**集群管理**页面在 Harvester 上创建 RKE 或 RKE2 集群。
+从 Rancher v2.6.3 开始，[Harvester 主机驱动](https://docs.harvesterhci.io/v0.3/rancher/node-driver/) 已在 Rancher 的 RKE 和 RKE2 选项中 GA。无论 Harvester 功能开关是否启用，主机驱动都是可用的。请注意，默认情况下主机驱动是关闭的。用户只能通过**集群管理**页面在 Harvester 上创建 RKE 或 RKE2 集群。
 
 Harvester 允许通过 Harvester UI 上传和显示 `.ISO` 镜像，但 Rancher UI 不支持。这是因为 `.ISO` 镜像通常需要额外的设置，这会干扰干净的部署（即无需用户干预），并且它们通常不用于云环境。
 

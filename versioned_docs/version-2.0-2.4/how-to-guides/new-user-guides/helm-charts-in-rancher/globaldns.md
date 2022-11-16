@@ -21,7 +21,7 @@ Rancher's Global DNS feature provides a way to program an external DNS provider 
   - [AliDNS](#alidns)
 - [Adding Annotations to Ingresses to program the External DNS](#adding-annotations-to-ingresses-to-program-the-external-dns)
 
-# Global DNS Providers
+## Global DNS Providers
 
 Before adding in Global DNS entries, you will need to configure access to an external provider.
 
@@ -33,29 +33,29 @@ The following table lists the first version of Rancher each provider debuted.
 | [CloudFlare](https://www.cloudflare.com/dns/) | v2.2.0 |
 | [AliDNS](https://www.alibabacloud.com/product/dns) | v2.2.0 |
 
-# Global DNS Entries
+## Global DNS Entries
 
 For each application that you want to route traffic to, you will need to create a Global DNS Entry. This entry will use a fully qualified domain name (a.k.a FQDN) from a global DNS provider to target applications. The applications can either resolve to a single [multi-cluster application](../deploy-apps-across-clusters.md) or to specific projects. You must [add specific annotation labels](#adding-annotations-to-ingresses-to-program-the-external-dns) to the ingresses in order for traffic to be routed correctly to the applications. Without this annotation, the programming for the DNS entry will not work.
 
-# Permissions for Global DNS Providers and Entries
+## Permissions for Global DNS Providers and Entries
 
 By default, only [global administrators](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md) and the creator of the Global DNS provider or Global DNS entry have access to use, edit and delete them. When creating the provider or entry, the creator can add additional users in order for those users to access and manage them. By default, these members will get `Owner` role to manage them.
 
-# Setting up Global DNS for Applications
+## Setting up Global DNS for Applications
 
 1. From the **Global View**, select **Tools > Global DNS Providers**.
 1. To add a provider, choose from the available provider options and configure the Global DNS Provider with necessary credentials and an optional domain. For help, see [DNS Provider Configuration.](#dns-provider-configuration)
 1. (Optional) Add additional users so they could  use the provider when creating Global DNS entries as well as manage the Global DNS provider.
 1. (Optional) Pass any custom values in the Additional Options section.
 
-# Adding a Global DNS Entry
+## Adding a Global DNS Entry
 
 1. From the **Global View**, select **Tools > Global DNS Entries**.
 1. Click on **Add DNS Entry**.
 1. Fill out the form. For help, refer to [Global DNS Entry Configuration.](#global-dns-entry-configuration)
 1. Click **Create.**
 
-# Editing a Global DNS Provider
+## Editing a Global DNS Provider
 
 The [global administrators](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md), creator of the Global DNS provider and any users added as `members` to a Global DNS provider, have _owner_ access to that provider. Any members can edit the following fields:
 
@@ -68,7 +68,7 @@ The [global administrators](../../advanced-user-guides/authentication-permission
 
 1. For the Global DNS provider that you want to edit, click the **&#8942; > Edit**.
 
-# Editing a Global DNS Entry
+## Editing a Global DNS Entry
 
 The [global administrators](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md), creator of the Global DNS entry and any users added as `members` to a Global DNS entry, have _owner_ access to that DNS entry. Any members can edit the following fields:
 
@@ -86,8 +86,7 @@ Permission checks are relaxed for removing target projects in order to support s
 
 1. For the Global DNS entry that you want to edit, click the **&#8942; > Edit**.
 
-
-# Global DNS Entry Configuration
+## Global DNS Entry Configuration
 
 | Field | Description |
 |----------|--------------------|
@@ -98,7 +97,7 @@ Permission checks are relaxed for removing target projects in order to support s
 | DNS TTL | Configure the DNS time to live value in seconds. By default, it will be 300 seconds. |
 | Member Access | Search for any users that you want to have the ability to manage this Global DNS entry. |
 
-# DNS Provider Configuration
+## DNS Provider Configuration
 
 ### Route53
 
@@ -113,7 +112,6 @@ Permission checks are relaxed for removing target projects in order to support s
 | Access Key |    Enter the AWS **Access Key**.  |
 | Secret Key |  Enter the AWS **Secret Key**.   |
 | Member Access |  Under **Member Access**, search for any users that you want to have the ability to use this provider. By adding this user, they will also be able to manage the Global DNS Provider entry.     |
-
 
 ### CloudFlare
 
@@ -141,7 +139,7 @@ Permission checks are relaxed for removing target projects in order to support s
 | Secret Key | Enter the **Secret Key**. |
 | Member Access | Search for any users that you want to have the ability to use this provider. By adding this user, they will also be able to manage the Global DNS Provider entry. |
 
-# Adding Annotations to Ingresses to program the External DNS
+## Adding Annotations to Ingresses to program the External DNS
 
 In order for Global DNS entries to be programmed, you will need to add a specific annotation on an ingress in your application or target project.
 

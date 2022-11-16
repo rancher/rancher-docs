@@ -11,11 +11,11 @@ This section is about how to deploy Rancher for your air gapped environment in a
 
 When the Rancher server is deployed in the Docker container, a local Kubernetes cluster is installed within the container for Rancher to use. Because many features of Rancher run as deployments, and privileged mode is required to run containers within containers, you will need to install Rancher with the `--privileged` option.
 
-# Docker Instructions
+## Docker Instructions
 
 If you want to continue the air gapped installation using Docker commands, skip the rest of this page and follow the instructions on [this page.](docker-install-commands.md)
 
-# Kubernetes Instructions
+## Kubernetes Instructions
 
 Rancher recommends installing Rancher on a Kubernetes cluster. A highly available Kubernetes install is comprised of three nodes running the Rancher server components on a Kubernetes cluster. The persistence layer (etcd) is also replicated on these three nodes, providing redundancy and data duplication in case one of the nodes fails.
 
@@ -26,7 +26,7 @@ This section describes installing Rancher:
 - [3. Render the Rancher Helm Template](#3-render-the-rancher-helm-template)
 - [4. Install Rancher](#4-install-rancher)
 
-# 1. Add the Helm Chart Repository
+## 1. Add the Helm Chart Repository
 
 From a system that has access to the internet, fetch the latest Helm chart and copy the resulting manifests to a system that has access to the Rancher server cluster.
 
@@ -57,7 +57,7 @@ From a system that has access to the internet, fetch the latest Helm chart and c
     helm fetch rancher-stable/rancher --version=v2.4.8
     ```
 
-# 2. Choose your SSL Configuration
+## 2. Choose your SSL Configuration
 
 Rancher Server is designed to be secure by default and requires SSL/TLS configuration.
 
@@ -70,7 +70,7 @@ When Rancher is installed on an air gapped Kubernetes cluster, there are two rec
 | Rancher Generated Self-Signed Certificates | `ingress.tls.source=rancher` | Use certificates issued by Rancher's generated CA (self signed)<br/> This is the **default** and does not need to be added when rendering the Helm template. | yes                   |
 | Certificates from Files                    | `ingress.tls.source=secret`  | Use your own certificate files by creating Kubernetes Secret(s). <br/> This option must be passed when rendering the Rancher Helm template.                  | no                    |
 
-# Helm Chart Options for Air Gap Installations
+## Helm Chart Options for Air Gap Installations
 
 When setting up the Rancher Helm template, there are several options in the Helm chart that are designed specifically for air gap installations.
 
@@ -80,11 +80,11 @@ When setting up the Rancher Helm template, there are several options in the Helm
 | `systemDefaultRegistry` | `<REGISTRY.YOURDOMAIN.COM:PORT>` | Configure Rancher server to always pull from your private registry when provisioning clusters.  |
 | `useBundledSystemChart` | `true`                           | Configure Rancher server to use the packaged copy of Helm system charts. The [system charts](https://github.com/rancher/system-charts) repository contains all the catalog items required for features such as monitoring, logging, alerting and global DNS. These [Helm charts](https://github.com/rancher/system-charts) are located in GitHub, but since you are in an air gapped environment, using the charts that are bundled within Rancher is much easier than setting up a Git mirror. |
 
-# 3. Render the Rancher Helm Template
+## 3. Render the Rancher Helm Template
 
 Based on the choice your made in [2. Choose your SSL Configuration](#2-choose-your-ssl-configuration), complete one of the procedures below.
 
-# Option A: Default Self-Signed Certificate
+## Option A: Default Self-Signed Certificate
 
 
 By default, Rancher generates a CA and uses cert-manager to issue the certificate for access to the Rancher server interface.
@@ -177,7 +177,7 @@ helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
 
 
 
-# Option B: Certificates From Files using Kubernetes Secrets
+## Option B: Certificates From Files using Kubernetes Secrets
 
 
 ### 1. Create secrets
@@ -262,7 +262,7 @@ Then refer to [Adding TLS Secrets](../../resources/add-tls-secrets.md/) to publi
 
 
 
-# 4. Install Rancher
+## 4. Install Rancher
 
 Copy the rendered manifest directories to a system that has access to the Rancher server cluster to complete installation.
 
@@ -307,7 +307,7 @@ The installation is complete.
 
 > **Note:** If you don't intend to send telemetry data, opt out [telemetry](../../../../faq/telemetry.md) during the initial login. Leaving this active in an air-gapped environment can cause issues if the sockets cannot be opened successfully.
 
-# Additional Resources
+## Additional Resources
 
 These resources could be helpful when installing Rancher:
 

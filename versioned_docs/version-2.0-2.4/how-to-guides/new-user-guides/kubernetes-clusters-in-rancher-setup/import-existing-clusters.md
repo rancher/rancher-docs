@@ -22,7 +22,7 @@ Rancher v2.4 added the capability to import a K3s cluster into Rancher, as well 
   - [Debug Logging and Troubleshooting for Imported K3s clusters](#debug-logging-and-troubleshooting-for-imported-k3s-clusters)
 - [Annotating imported clusters](#annotating-imported-clusters)
 
-# Features
+## Features
 
 After importing a cluster, the cluster owner can:
 
@@ -35,7 +35,7 @@ After importing a cluster, the cluster owner can:
 
 After importing a K3s cluster, the cluster owner can also [upgrade Kubernetes from the Rancher UI.](../../../getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes.md)
 
-# Prerequisites
+## Prerequisites
 
 If your existing Kubernetes cluster already has a `cluster-admin` role defined, you must have this `cluster-admin` privilege to import the cluster into Rancher.
 
@@ -53,7 +53,7 @@ By default, GKE users are not given this privilege, so you will need to run the 
 
 > If you are importing a K3s cluster, make sure the `cluster.yml` is readable. It is protected by default. For details, refer to [Configuring a K3s cluster to enable importation to Rancher.](#configuring-a-k3s-cluster-to-enable-importation-to-rancher)
 
-# Importing a Cluster
+## Importing a Cluster
 
 1. From the **Clusters** page, click **Add Cluster**.
 2. Choose **Import**.
@@ -74,7 +74,7 @@ By default, GKE users are not given this privilege, so you will need to run the 
 > **Note:**
 > You can not re-import a cluster that is currently active in a Rancher setup.
 
-# Imported K3s Clusters
+## Imported K3s Clusters
 
 You can now import a K3s Kubernetes cluster into Rancher. [K3s](https://rancher.com/docs/k3s/latest/en/) is a lightweight, fully compliant Kubernetes distribution. You can also upgrade Kubernetes by editing the K3s cluster in the Rancher UI.
 
@@ -139,7 +139,7 @@ If the cluster becomes stuck in upgrading, restart the `system-upgrade-controlle
 
 To prevent issues when upgrading, the [Kubernetes upgrade best practices](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/) should be followed.
 
-# Annotating Imported Clusters
+## Annotating Imported Clusters
 
 For all types of imported Kubernetes clusters except for K3s Kubernetes clusters, Rancher doesn't have any information about how the cluster is provisioned or configured.
 

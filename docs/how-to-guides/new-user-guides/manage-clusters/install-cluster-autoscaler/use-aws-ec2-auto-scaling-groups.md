@@ -513,7 +513,7 @@ Cluster-autoscaler deployment can also be set up using [manual configuration](ht
 
 :::
 
-# Testing
+## Testing
 
 At this point, we should have a cluster-scaler up and running in our Rancher custom cluster. Cluster-scale should manage `K8sWorkerAsg` ASG to scale up and down between 2 and 10 nodes, when one of the following conditions is true:
 

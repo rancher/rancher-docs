@@ -45,7 +45,7 @@ The restore operation will work on a cluster that is not in a healthy or active 
 
 **Result:** Kubernetes begins upgrading for the cluster.
 
-# Rolling Back
+## Rolling Back
 
 A cluster can be restored to a backup in which the previous Kubernetes version was used. For more information, refer to the following sections:
 

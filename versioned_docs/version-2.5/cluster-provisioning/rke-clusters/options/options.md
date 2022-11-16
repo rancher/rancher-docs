@@ -256,7 +256,7 @@ The table below indicates what DNS provider is deployed by default. See [RKE doc
 | v2.2.5 and higher | v1.13.x and lower | kube-dns |
 | v2.2.4 and lower | any | kube-dns |
 
-# Rancher specific parameters
+## Rancher specific parameters
 
 Besides the RKE config file options, there are also Rancher specific settings that can be configured in the Config File (YAML):
 

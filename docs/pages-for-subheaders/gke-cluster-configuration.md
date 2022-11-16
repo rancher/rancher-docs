@@ -133,7 +133,7 @@ _Mutable: yes_
 
 Enable control plane authorized networks to block untrusted non-GCP source IPs from accessing the Kubernetes master through HTTPS. If selected, additional authorized networks may be added. If the cluster is created with a public endpoint, this option is useful for locking down access to the public endpoint to only certain networks, such as the network where your Rancher service is running. If the cluster only has a private endpoint, this setting is required.
 
-# Additional Options
+## Additional Options
 
 ### Cluster Addons
 
@@ -182,7 +182,7 @@ _Mutable: yes_
 
 Set the start time for a 4 hour maintenance window. The time is specified in the UTC time zone using the HH:MM format. For more information, refer to [this page.](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
 
-# Node Pools
+## Node Pools
 
 In this section, enter details describing the configuration of each node in the node pool.
 
@@ -256,7 +256,7 @@ You can add network tags to the node pool to make firewall rules and routes betw
 
 For details on tag syntax and requirements, see the [Kubernetes documentation](https://cloud.google.com/vpc/docs/add-remove-network-tags).
 
-# Group Details
+## Group Details
 
 In this section, enter details describing the node pool.
 

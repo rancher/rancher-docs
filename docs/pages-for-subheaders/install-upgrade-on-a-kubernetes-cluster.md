@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 In this section, you'll learn how to deploy Rancher on a Kubernetes cluster using the Helm CLI.
 
 
-# Prerequisites
+## Prerequisites
 
 - [Kubernetes Cluster](#kubernetes-cluster)
 - [Ingress Controller](#ingress-controller)
@@ -47,7 +47,7 @@ The following CLI tools are required for setting up the Kubernetes cluster. Plea
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) - Kubernetes command-line tool.
 - [helm](https://docs.helm.sh/using_helm/#installing-helm) - Package management for Kubernetes. Refer to the [Helm version requirements](../getting-started/installation-and-upgrade/resources/helm-version-requirements.md) to choose a version of Helm to install Rancher. Refer to the [instructions provided by the Helm project](https://helm.sh/docs/intro/install/) for your specific platform.
 
-# Install the Rancher Helm Chart
+## Install the Rancher Helm Chart
 
 Rancher is installed using the [Helm](https://helm.sh/) package manager for Kubernetes. Helm charts provide templating syntax for Kubernetes YAML manifest documents. With Helm, we can create configurable deployments instead of just using static files.
 

@@ -14,7 +14,7 @@ For public downstream clusters, it is sufficient to [set the required environmen
 
 For private nodes or private clusters, the environment variables need to be set on the nodes themselves. Then the environment variables are configured from the Rancher UI, typically when provisioning a custom cluster or when registering the private cluster. For an example of how to set the environment variables on Ubuntu node in a K3s Kubernetes cluster, see [this section.](#setting-environment-variables-on-private-nodes)
 
-# Required Environment Variables
+## Required Environment Variables
 
 When adding Fleet agent environment variables for the proxy, replace <PROXY_IP> with your private proxy IP.
 

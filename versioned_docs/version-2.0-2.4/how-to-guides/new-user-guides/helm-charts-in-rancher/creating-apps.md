@@ -7,7 +7,7 @@ Rancher's catalog service requires any custom catalogs to be structured in a spe
 > For a complete walkthrough of developing charts, see the [Chart Template Developer's Guide](https://helm.sh/docs/chart_template_guide/) in the official Helm documentation.
 
 
-# Chart Types
+## Chart Types
 
 Rancher supports two different types of charts: Helm charts and Rancher charts.
 
@@ -27,7 +27,7 @@ Advantages of Rancher charts include:
 - **Streamlined application launch:** Rancher charts add simplified chart descriptions and configuration forms to make catalog application deployment easy. Rancher users need not read through the entire list of Helm variables to understand how to launch an application.
 - **Application resource management:** Rancher tracks all the resources created by a specific application. Users can easily navigate to and troubleshoot on a page listing all the workload objects used to power an application.
 
-# Chart Directory Structure
+## Chart Directory Structure
 
 The following table demonstrates the directory structure for a Rancher Chart. The `charts` directory is the top level directory under the repository base. Adding the repository to Rancher will expose all charts contained within it. This information is helpful when customizing charts for a custom catalog. The `questions.yaml`, `README.md`, and `requirements.yml` files are specific to Rancher charts, but are optional for chart customization.
 
@@ -45,7 +45,7 @@ The following table demonstrates the directory structure for a Rancher Chart. Th
  │   │   │   ├── templates/        # Directory containing templates that, when combined with values.yml, generates Kubernetes YAML.
 ```
 
-# Additional Files for Rancher Charts
+## Additional Files for Rancher Charts
 
 Before you create your own custom catalog, you should have a basic understanding about how a Rancher chart differs from a native Helm chart. Rancher charts differ slightly from Helm charts in their directory structures. Rancher charts include two files that Helm charts do not.
 
@@ -110,6 +110,6 @@ This reference contains variables that you can use in `questions.yml` nested und
 
 >**Note:** `subquestions[]` cannot contain `subquestions` or `show_subquestions_if` keys, but all other keys in the above table are supported.
 
-# Tutorial: Example Custom Chart Creation
+## Tutorial: Example Custom Chart Creation
 
 For a tutorial on adding a custom Helm chart to a custom catalog, refer to [this page.](./tutorial.md)

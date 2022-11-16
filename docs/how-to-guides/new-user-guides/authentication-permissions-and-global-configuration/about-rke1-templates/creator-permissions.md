@@ -6,7 +6,7 @@ Administrators have the permission to create RKE templates, and only administrat
 
 For more information on administrator permissions, refer to the [documentation on global permissions](../manage-role-based-access-control-rbac/global-permissions.md).
 
-# Giving Users Permission to Create Templates
+## Giving Users Permission to Create Templates
 
 Templates can only be created by users who have the global permission **Create RKE Templates**.
 

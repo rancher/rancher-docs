@@ -2,11 +2,11 @@
 title: AWS Marketplace Integration
 ---
 
-# Overview
+## Overview
 
 Rancher offers an integration with the AWS Marketplace which allows users to purchase a support contract with SUSE. This integration allows you easily adjust your support needs as you start to support more clusters.
 
-# Limitations
+## Limitations
 
 - You must be running Rancher v2.6.7 or higher
 - Rancher must be deployed with additional metrics enabled.
@@ -14,11 +14,12 @@ Rancher offers an integration with the AWS Marketplace which allows users to pur
 - You must purchase at least one entitlement to Rancher support through AWS Marketplace.
 - You may need additional setup to support proxy/airgap use cases. See the [prerequisites](../integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements.md) for more information.
 
-# How to Use
+## How to Use
+
 1. Complete the [prerequisite steps](../integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements.md).
 2. [Install the CSP Adapter](../integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter.md).
 
-# FAQ
+## FAQ
 
 **Can I purchase support for more nodes later on?**
 

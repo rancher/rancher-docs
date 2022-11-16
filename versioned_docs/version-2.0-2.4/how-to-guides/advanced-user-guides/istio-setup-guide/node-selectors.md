@@ -8,7 +8,7 @@ This section describes how use node selectors to configure Istio components to b
 
 In larger deployments, it is strongly advised that Istio's infrastructure be placed on dedicated nodes in the cluster by adding a node selector for each Istio component.
 
-# Adding a Label to the Istio Node
+## Adding a Label to the Istio Node
 
 First, add a label to the node where Istio components should be deployed. This label can have any key-value pair. For this example, we will use the key `istio` and the value `enabled`.
 
@@ -21,7 +21,7 @@ First, add a label to the node where Istio components should be deployed. This l
 
 **Result:** A worker node has the label that will allow you to designate it for Istio components.
 
-# Configuring Istio Components to Use the Labeled Node
+## Configuring Istio Components to Use the Labeled Node
 
 Configure each Istio component to be deployed to the node with the Istio label. Each Istio component can be configured individually, but in this tutorial, we will configure all of the components to be scheduled on the same node for the sake of simplicity.
 

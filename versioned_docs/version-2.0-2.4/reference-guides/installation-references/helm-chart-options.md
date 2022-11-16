@@ -150,7 +150,7 @@ For details on installing Rancher with a private registry, see:
 
 - [Air Gap: Kubernetes Install](../../pages-for-subheaders/air-gap-helm2.md)
 
-# External TLS Termination
+## External TLS Termination
 
 We recommend configuring your load balancer as a Layer 4 balancer, forwarding plain 80/tcp and 443/tcp to the Rancher Management cluster nodes. The Ingress Controller on the cluster will redirect http traffic on port 80 to https on port 443.
 

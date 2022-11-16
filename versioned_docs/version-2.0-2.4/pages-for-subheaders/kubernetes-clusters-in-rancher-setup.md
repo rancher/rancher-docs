@@ -15,7 +15,7 @@ import ClusterCapabilitiesTable from '../shared-files/_cluster-capabilities-tabl
 
 <ClusterCapabilitiesTable />
 
-# Setting up Clusters in a Hosted Kubernetes Provider
+## Setting up Clusters in a Hosted Kubernetes Provider
 
 In this scenario, Rancher does not provision Kubernetes because it is installed by providers such as Google Kubernetes Engine (GKE), Amazon Elastic Container Service for Kubernetes, or Azure Kubernetes Service.
 
@@ -23,7 +23,7 @@ If you use a Kubernetes provider such as Google GKE, Rancher integrates with its
 
 For more information, refer to the section on [hosted Kubernetes clusters.](set-up-clusters-from-hosted-kubernetes-providers.md)
 
-# Launching Kubernetes with Rancher
+## Launching Kubernetes with Rancher
 
 Rancher uses the [Rancher Kubernetes Engine (RKE)](https://rancher.com/docs/rke/latest/en/) as a library when provisioning Kubernetes on your own nodes. RKE is Rancher’s own lightweight Kubernetes installer.
 
@@ -55,7 +55,7 @@ You can bring any nodes you want to Rancher and use them to create a cluster.
 
 These nodes include on-prem bare metal servers, cloud-hosted virtual machines, or on-prem virtual machines.
 
-# Importing Existing Clusters
+## Importing Existing Clusters
 
 _Available from Rancher v2.0.x-v2.4.x_
 
