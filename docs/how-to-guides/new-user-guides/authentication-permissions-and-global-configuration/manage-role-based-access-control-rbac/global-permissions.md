@@ -38,7 +38,6 @@ The following table lists the permissions and actions that a `restricted-admin` 
 | Local Cluster functions | Manage Local Cluster (List, Edit, Import Host) | Yes | No | No | |
 | | Create Projects/namespaces | Yes | No | No | |
 | | Add cluster/project members | Yes | No | No | |
-| | Deploy MulticlusterApp in local cluster | Yes | No | No | |
 | | Global DNS | Yes | No | No | |
 | | Access to management cluster for CRDs and CRs | Yes | No | Yes | |
 | | Save as RKE Template | Yes | No | No | |
@@ -60,8 +59,6 @@ The following table lists the permissions and actions that a `restricted-admin` 
 | | GlobalDNS Entries | Yes | Yes (Self) | Yes | |
 | Settings | | | | | |
 | | Manage Settings | Yes | No (Can list) | No (Can list) | |
-| Apps | | | | | |
-| | Launch Multicluster Apps | Yes | Yes | Yes | Not in local cluster |
 | User | | | | | |
 | | Manage API Keys | Yes (Manage all) | Yes (Manage self) | Yes (Manage self) | |
 | | Manage Node Templates | Yes | Yes (Manage self) | Yes (Manage self) | Can only manage their own node templates and not those created by other users |

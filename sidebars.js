@@ -703,7 +703,6 @@ const sidebars = {
                     "how-to-guides/advanced-user-guides/monitoring-alerting-guides/customize-grafana-dashboard",
                     "how-to-guides/advanced-user-guides/monitoring-alerting-guides/create-persistent-grafana-dashboard",
                     "how-to-guides/advanced-user-guides/monitoring-alerting-guides/debug-high-memory-usage",
-                    "how-to-guides/advanced-user-guides/monitoring-alerting-guides/migrate-to-rancher-v2.5+-monitoring",
                     {
                       type: 'category',
                       label: 'Prometheus Federator Guides',
@@ -1184,7 +1183,6 @@ const sidebars = {
                   },
                 items: [
                   "integrations-in-rancher/logging/logging-architecture",
-                  "integrations-in-rancher/logging/migrate-to-rancher-v2.5+-logging",
                   "integrations-in-rancher/logging/rbac-for-logging",
                   "integrations-in-rancher/logging/logging-helm-chart-options",
                   "integrations-in-rancher/logging/taints-and-tolerations",

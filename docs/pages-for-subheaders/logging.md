@@ -5,8 +5,7 @@ description: Rancher integrates with popular logging services. Learn the require
 
 The [Banzai Cloud Logging operator](https://banzaicloud.com/docs/one-eye/logging-operator/) now powers Rancher's logging solution in place of the former, in-house solution.
 
-For an overview of the changes in v2.5, see [this section.](../integrations-in-rancher/logging/logging-architecture.md#changes-in-rancher-v2-5) For information about migrating from Logging V1, see [this page.](../integrations-in-rancher/logging/migrate-to-rancher-v2.5+-logging.md)
-
+For an overview of the changes in v2.5, see [this section.](../integrations-in-rancher/logging/logging-architecture.md#changes-in-rancher-v2-5)
 
 ## Enabling Logging
 
