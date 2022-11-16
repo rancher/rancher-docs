@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 This section is about how to prepare your node(s) to install Rancher for your air gapped environment. An air gapped environment could be where Rancher server will be installed offline, behind a firewall, or behind a proxy. There are _tabs_ for either a high availability (recommended) or a Docker installation.
 
-# Prerequisites
+## Prerequisites
 
 <Tabs>
 <TabItem value="Kubernetes Install (Recommended)">
@@ -47,7 +47,7 @@ If you need help with creating a private registry, please refer to the [Docker d
 </TabItem>
 </Tabs>
 
-# Set up Infrastructure
+## Set up Infrastructure
 
 <Tabs>
 <TabItem value="Kubernetes Install (Recommended)">

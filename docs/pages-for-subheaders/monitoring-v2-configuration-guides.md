@@ -6,7 +6,7 @@ This page captures some of the most important options for configuring Monitoring
 
 For information on configuring custom scrape targets and rules for Prometheus, please refer to the upstream documentation for the [Prometheus Operator.](https://github.com/prometheus-operator/prometheus-operator) Some of the most important custom resources are explained in the Prometheus Operator [design documentation.](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/design.md) The Prometheus Operator documentation can help also you set up RBAC, Thanos, or custom configuration.
 
-# Setting Resource Limits and Requests
+## Setting Resource Limits and Requests
 
 The resource requests and limits for the monitoring application can be configured when installing `rancher-monitoring`. For more information about the default limits, see [this page.](../reference-guides/monitoring-v2-configuration/helm-chart-options.md#configuring-resource-limits-and-requests)
 
@@ -16,7 +16,7 @@ On an idle cluster, Monitoring may have high CPU usage. To improve performance, 
 
 :::
 
-# Prometheus Configuration
+## Prometheus Configuration
 
 It is usually not necessary to directly edit the Prometheus custom resource.
 
@@ -31,7 +31,7 @@ For details, see [this page.](../reference-guides/monitoring-v2-configuration/se
 
 For more information about directly editing the Prometheus custom resource, which may be helpful in advanced use cases, see [this page.](../how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/prometheus.md)
 
-# Alertmanager Configuration
+## Alertmanager Configuration
 
 The Alertmanager custom resource usually doesn't need to be edited directly. For most common use cases, you can manage alerts by updating Routes and Receivers.
 

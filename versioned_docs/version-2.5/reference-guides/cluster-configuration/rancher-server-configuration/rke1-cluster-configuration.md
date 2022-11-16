@@ -8,7 +8,7 @@ In [clusters launched by RKE](../../../pages-for-subheaders/launch-kubernetes-wi
 - [Editing Clusters with YAML](#editing-clusters-with-yaml)
 - [Updating ingress-nginx](#updating-ingress-nginx)
 
-# Configuration Options in the Rancher UI
+## Configuration Options in the Rancher UI
 
 To edit your cluster, open the **Global** view, make sure the **Clusters** tab is selected, and then select **&#8942; > Edit** for the cluster that you want to edit.
 
@@ -58,7 +58,7 @@ If you enable **Pod Security Policy Support**, use this drop-down to choose the 
 
 If you're using a cloud provider to host cluster nodes launched by RKE, enable [this option](../../../pages-for-subheaders/set-up-cloud-providers.md) so that you can use the cloud provider's native features. If you want to store persistent data for your cloud-hosted cluster, this option is required.
 
-# Editing Clusters with YAML
+## Editing Clusters with YAML
 
 Instead of using the Rancher UI to choose Kubernetes options for the cluster, advanced users can create an RKE config file. Using a config file allows you to set any of the options available in an RKE installation, except for system_images configuration, by specifying them in YAML.
 
@@ -71,7 +71,7 @@ For an example of RKE config file syntax, see the [RKE documentation](https://ra
 
 For the complete reference of configurable options for RKE Kubernetes clusters in YAML, see the [RKE documentation.](https://rancher.com/docs/rke/latest/en/config-options/)
 
-# Updating ingress-nginx
+## Updating ingress-nginx
 
 Clusters that were created before Kubernetes 1.16 will have an `ingress-nginx` `updateStrategy` of `OnDelete`. Clusters that were created with Kubernetes 1.16 or newer will have `RollingUpdate`.
 

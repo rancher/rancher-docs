@@ -28,7 +28,7 @@ The Docker installation is for Rancher users that are wanting to test out Ranche
 
 Instead of running the Docker installation, you have the option to follow the Kubernetes Install guide, but only use one node to install Rancher. Afterwards, you can scale up the etcd nodes in your Kubernetes cluster to make it a Kubernetes Installation.
 
-# Installation Outline
+## Installation Outline
 
 - [1. Prepare your Node(s)](../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/infrastructure-private-registry.md)
 - [2. Collect and Publish Images to your Private Registry](../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images.md)

@@ -4,7 +4,7 @@ title: 7. Generate and View Traffic
 
 This section describes how to view the traffic that is being managed by Istio.
 
-# The Kiali Traffic Graph
+## The Kiali Traffic Graph
 
 Rancher integrates a Kiali graph into the Rancher UI. The Kiali graph provides a powerful way to visualize the topology of your Istio service mesh. It shows you which services communicate with each other.
 
@@ -17,7 +17,7 @@ If you refresh the URL to the BookInfo app several times, you should be able to 
 
 For additional tools and visualizations, you can go to each UI for Kiali, Jaeger, Grafana, and Prometheus by clicking their icons in the top right corner of the page.
 
-# Viewing Traffic Metrics
+## Viewing Traffic Metrics
 
 Istio’s monitoring features provide visibility into the performance of all your services.
 

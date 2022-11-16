@@ -5,7 +5,7 @@ title: Cluster Alerts
 To keep your clusters and applications healthy and driving your organizational productivity forward, you need to stay informed of events occurring in your clusters and projects, both planned and unplanned. When an event occurs, your alert is triggered, and you are sent a notification. You can then, if necessary, follow up with corrective actions.
 
 
-# About Alerts
+## About Alerts
 
 Notifiers and alerts are built on top of the [Prometheus Alertmanager](https://prometheus.io/docs/alerting/alertmanager/). Leveraging these tools, Rancher can notify [cluster owners](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles) and [project owners](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-roles) of events they need to address.
 
@@ -55,7 +55,7 @@ After you set up cluster alerts, you can manage each alert object. To manage ale
 - Mute firing alerts
 - Unmute muted alerts
 
-# Adding Cluster Alerts
+## Adding Cluster Alerts
 
 As a [cluster owner](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles), you can configure Rancher to send you alerts for cluster events.
 
@@ -74,16 +74,16 @@ As a [cluster owner](../how-to-guides/advanced-user-guides/authentication-permis
 **Result:** Your alert is configured. A notification is sent when the alert is triggered.
 
 
-# Cluster Alert Configuration
+## Cluster Alert Configuration
 
-  - [System Service Alerts](#system-service-alerts)
-  - [Resource Event Alerts](#resource-event-alerts)
-  - [Node Alerts](#node-alerts)
-  - [Node Selector Alerts](#node-selector-alerts)
-  - [CIS Scan Alerts](#cis-scan-alerts)
-  - [Metric Expression Alerts](#metric-expression-alerts)
+- [System Service Alerts](#system-service-alerts)
+- [Resource Event Alerts](#resource-event-alerts)
+- [Node Alerts](#node-alerts)
+- [Node Selector Alerts](#node-selector-alerts)
+- [CIS Scan Alerts](#cis-scan-alerts)
+- [Metric Expression Alerts](#metric-expression-alerts)
 
-# System Service Alerts
+## System Service Alerts
 
 This alert type monitor for events that affect one of the Kubernetes master components, regardless of the node it occurs on.
 
@@ -119,7 +119,7 @@ By default, the below options will apply to all alert rules within the group. Yo
 - **Group Interval Time**: How long to wait before sending an alert that has been added to a group which contains already fired alerts, default to 30 seconds.
 - **Repeat Wait Time**: How long to wait before re-sending a given alert that has already been sent, default to 1 hour.
 
-# Resource Event Alerts
+## Resource Event Alerts
 
 This alert type monitors for specific events that are thrown from a resource type.
 
@@ -161,7 +161,7 @@ By default, the below options will apply to all alert rules within the group. Yo
 - **Group Interval Time**: How long to wait before sending an alert that has been added to a group which contains already fired alerts, default to 30 seconds.
 - **Repeat Wait Time**: How long to wait before re-sending a given alert that has already been sent, default to 1 hour.
 
-# Node Alerts
+## Node Alerts
 
 This alert type monitors for events that occur on a specific node.
 
@@ -197,7 +197,7 @@ By default, the below options will apply to all alert rules within the group. Yo
 - **Group Interval Time**: How long to wait before sending an alert that has been added to a group which contains already fired alerts, default to 30 seconds.
 - **Repeat Wait Time**: How long to wait before re-sending a given alert that has already been sent, default to 1 hour.
 
-# Node Selector Alerts
+## Node Selector Alerts
 
 This alert type monitors for events that occur on any node on marked with a label. For more information, see the Kubernetes documentation for [Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/).
 
@@ -233,7 +233,7 @@ By default, the below options will apply to all alert rules within the group. Yo
 - **Group Interval Time**: How long to wait before sending an alert that has been added to a group which contains already fired alerts, default to 30 seconds.
 - **Repeat Wait Time**: How long to wait before re-sending a given alert that has already been sent, default to 1 hour.
 
-# CIS Scan Alerts
+## CIS Scan Alerts
 _Available as of v2.4.0_
 
 This alert type is triggered based on the results of a CIS scan.
@@ -269,7 +269,7 @@ By default, the below options will apply to all alert rules within the group. Yo
 - **Group Interval Time**: How long to wait before sending an alert that has been added to a group which contains already fired alerts, default to 30 seconds.
 - **Repeat Wait Time**: How long to wait before re-sending a given alert that has already been sent, default to 1 hour.
 
-# Metric Expression Alerts
+## Metric Expression Alerts
 
 This alert type monitors for the overload from Prometheus expression querying, it would be available after you enable monitoring.
 

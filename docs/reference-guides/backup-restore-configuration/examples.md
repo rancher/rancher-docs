@@ -242,7 +242,7 @@ spec:
   encryptionConfigSecretName: test-encryptionconfig
 ```
 
-# Example Credential Secret for Storing Backups in S3
+## Example Credential Secret for Storing Backups in S3
 
 ```yaml
 apiVersion: v1
@@ -255,7 +255,7 @@ data:
   secretKey: <Enter your base64-encoded secret key>
 ```
 
-# Example EncryptionConfiguration
+## Example EncryptionConfiguration
 
 The snippet below demonstrates two different types of secrets and their relevance with respect to Backup and Restore of custom resources.
 

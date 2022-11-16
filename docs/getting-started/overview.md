@@ -4,11 +4,11 @@ title: Overview
 
 Rancher is a container management platform built for organizations that deploy containers in production. Rancher makes it easy to run Kubernetes everywhere, meet IT requirements, and empower DevOps teams.
 
-# Run Kubernetes Everywhere
+## Run Kubernetes Everywhere
 
 Kubernetes has become the container orchestration standard. Most cloud and virtualization vendors now offer it as standard infrastructure. Rancher users have the choice of creating Kubernetes clusters with Rancher Kubernetes Engine (RKE) or cloud Kubernetes services, such as GKE, AKS, and EKS. Rancher users can also import and manage their existing Kubernetes clusters created using any Kubernetes distribution or installer.
 
-# Meet IT Requirements
+## Meet IT Requirements
 
 Rancher supports centralized authentication, access control, and monitoring for all Kubernetes clusters under its control. For example, you can:
 
@@ -16,7 +16,7 @@ Rancher supports centralized authentication, access control, and monitoring for 
 - Setup and enforce access control and security policies across all users, groups, projects, clusters, and clouds.
 - View the health and capacity of your Kubernetes clusters from a single-pane-of-glass.
 
-# Empower DevOps Teams
+## Empower DevOps Teams
 
 Rancher provides an intuitive user interface for DevOps engineers to manage their application workload. The user does not need to have in-depth knowledge of Kubernetes concepts to start using Rancher. Rancher catalog contains a set of useful DevOps tools. Rancher is certified with a wide selection of cloud native ecosystem products, including, for example, security tools, monitoring systems, container registries, and storage and networking drivers.
 
@@ -24,7 +24,7 @@ The following figure illustrates the role Rancher plays in IT and DevOps organiz
 
 ![Platform](/img/platform.png)
 
-# Features of the Rancher API Server
+## Features of the Rancher API Server
 
 The Rancher API server is built on top of an embedded Kubernetes API server and an etcd database. It implements the following functionalities:
 
@@ -52,7 +52,7 @@ The Rancher API server is built on top of an embedded Kubernetes API server and 
 - **Monitoring:** Using Rancher, you can monitor the state and processes of your cluster nodes, Kubernetes components, and software deployments through integration with Prometheus, a leading open-source monitoring solution.
 - **Alerting:** To keep your clusters and applications healthy and driving your organizational productivity forward, you need to stay informed of events occurring in your clusters and projects, both planned and unplanned.
 
-# Editing Downstream Clusters with Rancher
+## Editing Downstream Clusters with Rancher
 
 The options and settings available for an existing cluster change based on the method that you used to provision it. For example, only clusters [provisioned by RKE](../pages-for-subheaders/launch-kubernetes-with-rancher.md) have **Cluster Options** available for editing.
 

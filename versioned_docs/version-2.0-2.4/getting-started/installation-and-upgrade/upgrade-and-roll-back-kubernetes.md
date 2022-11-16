@@ -10,7 +10,7 @@ Following an upgrade to the latest version of Rancher, downstream Kubernetes clu
 Rancher calls RKE (Rancher Kubernetes Engine) as a library when provisioning and editing RKE clusters. For more information on configuring the upgrade strategy for RKE clusters, refer to the [RKE documentation](https://rancher.com/docs/rke/latest/en/).
 
 
-# New Features
+## New Features
 
 As of Rancher v2.3.0, the Kubernetes metadata feature was added, which allows Rancher to ship Kubernetes patch versions without upgrading Rancher. For details, refer to the [section on Kubernetes metadata.](upgrade-kubernetes-without-upgrading-rancher.md)
 
@@ -19,18 +19,17 @@ As of Rancher v2.4.0,
 - The ability to import K3s Kubernetes clusters into Rancher was added, along with the ability to upgrade Kubernetes when editing those clusters. For details, refer to the [section on imported clusters.](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/import-existing-clusters.md)
 - New advanced options are exposed in the Rancher UI for configuring the upgrade strategy of an RKE cluster: **Maximum Worker Nodes Unavailable** and **Drain nodes.** These options leverage the new cluster upgrade process of RKE v1.1.0, in which worker nodes are upgraded in batches, so that applications can remain available during cluster upgrades, under [certain conditions.](#maintaining-availability-for-applications-during-upgrades)
 
-# Tested Kubernetes Versions
+## Tested Kubernetes Versions
 
 Before a new version of Rancher is released, it's tested with the latest minor versions of Kubernetes to ensure compatibility. For details on which versions of Kubernetes were tested on each Rancher version, refer to the [support maintenance terms.](https://rancher.com/support-maintenance-terms/all-supported-versions/rancher-v2.4.17/)
 
-# How Upgrades Work
+## How Upgrades Work
 
 RKE v1.1.0 changed the way that clusters are upgraded.
 
 In this section of the [RKE documentation,](https://rancher.com/docs/rke/latest/en/upgrades/how-upgrades-work) you'll learn what happens when you edit or upgrade your RKE Kubernetes cluster.
 
-
-# Recommended Best Practice for Upgrades
+## Recommended Best Practice for Upgrades
 
 <Tabs>
 <TabItem value="Rancher v2.4+">
@@ -57,7 +56,7 @@ The cluster cannot be downgraded to a previous Kubernetes version.
 </TabItem>
 </Tabs>
 
-# Upgrading the Kubernetes Version
+## Upgrading the Kubernetes Version
 
 > **Prerequisites:**
 >
@@ -74,7 +73,7 @@ The cluster cannot be downgraded to a previous Kubernetes version.
 
 **Result:** Kubernetes begins upgrading for the cluster.
 
-# Rolling Back
+## Rolling Back
 
 _Available as of v2.4_
 
@@ -83,7 +82,7 @@ A cluster can be restored to a backup in which the previous Kubernetes version w
 - [Backing up a cluster](../../how-to-guides/advanced-user-guides/manage-clusters/backing-up-etcd.md#how-snapshots-work)
 - [Restoring a cluster from backup](../../how-to-guides/advanced-user-guides/manage-clusters/restoring-etcd.md#restoring-a-cluster-from-a-snapshot)
 
-# Configuring the Upgrade Strategy
+## Configuring the Upgrade Strategy
 
 As of RKE v1.1.0, additional upgrade options became available to give you more granular control over the upgrade process. These options can be used to maintain availability of your applications during a cluster upgrade if certain [conditions and requirements](https://rancher.com/docs/rke/latest/en/upgrades/maintaining-availability) are met.
 
@@ -134,7 +133,7 @@ More advanced upgrade strategy configuration options are available by editing th
 
 For details, refer to [Configuring the Upgrade Strategy](https://rancher.com/docs/rke/latest/en/upgrades/configuring-strategy) in the RKE documentation. The section also includes an example `cluster.yml` for configuring the upgrade strategy.
 
-# Troubleshooting
+## Troubleshooting
 
 If a node doesn't come up after an upgrade, the `rke up` command errors out.
 

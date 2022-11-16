@@ -45,7 +45,7 @@ Use the label selector field `ruleSelector` in the Prometheus object to define t
 
 For examples, refer to the Prometheus documentation on [recording rules](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/) and [alerting rules.](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)
 
-# Configuration
+## Configuration
 
 ### Rule Group
 

@@ -33,7 +33,7 @@ sudo iptables --list
 
 This section describes how to use `firewalld` to apply the [firewall port rules](../../installation-requirements/port-requirements.md) for nodes in a high-availability Rancher server cluster.
 
-# Prerequisite
+## Prerequisite
 
 Install v7.x or later ofv`firewalld`:
 
@@ -43,7 +43,7 @@ systemctl start firewalld
 systemctl enable firewalld
 ```
 
-# Applying Firewall Port Rules
+## Applying Firewall Port Rules
 
 In the Rancher high-availability installation instructions, the Rancher server is set up on three nodes that have all three Kubernetes roles: etcd, controlplane, and worker. If your Rancher server nodes have all three roles, run the following commands on each node:
 

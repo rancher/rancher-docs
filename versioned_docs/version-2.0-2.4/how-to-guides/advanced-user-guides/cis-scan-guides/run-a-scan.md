@@ -2,7 +2,7 @@
 title: Run a Scan
 ---
 
-# Run a Scan
+## Run a Scan
 
 1. From the cluster view in Rancher, click **Tools > CIS Scans.**
 1. Click **Run Scan.**

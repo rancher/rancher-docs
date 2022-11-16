@@ -10,19 +10,11 @@ After you complete [Configuring Microsoft AD FS for Rancher](configure-ms-adfs-f
 >- The Relying Party Trust identifier URL is: `https://<RANCHER_SERVER>/v1-saml/adfs/saml/metadata`
 >- You must export the `federationmetadata.xml` file from your AD FS server. This can be found at: `https://<AD_SERVER>/federationmetadata/2007-06/federationmetadata.xml`
 
+1. From the **Global** view, select **Security > Authentication** from the main menu.
 
-1.	From the **Global** view, select **Security > Authentication** from the main menu.
+1. Select **Microsoft Active Directory Federation Services**.
 
-1.	Select **Microsoft Active Directory Federation Services**.
-
-1.	Complete the **Configure AD FS Account** form. Microsoft AD FS lets you specify an existing Active Directory (AD) server. The [configuration section below](#configuration) describe how you can map AD attributes to fields within Rancher.
-
-
-
-
-
-
-
+1. Complete the **Configure AD FS Account** form. Microsoft AD FS lets you specify an existing Active Directory (AD) server. The [configuration section below](#configuration) describe how you can map AD attributes to fields within Rancher.
 
 1. After you complete the **Configure AD FS Account** form, click **Authenticate with AD FS**, which is at the bottom of the page.
 
@@ -32,7 +24,7 @@ After you complete [Configuring Microsoft AD FS for Rancher](configure-ms-adfs-f
 
 **Result:** Rancher is configured to work with MS FS. Your users can now sign into Rancher using their MS FS logins.
 
-# Configuration
+## Configuration
 
 | Field | Description                |
 |---------------------------|-----------------|

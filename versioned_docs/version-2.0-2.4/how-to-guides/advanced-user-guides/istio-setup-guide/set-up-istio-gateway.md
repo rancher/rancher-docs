@@ -16,7 +16,7 @@ For more information on the Istio gateway, refer to the [Istio documentation.](h
 
 ![In an Istio-enabled cluster, you can have two ingresses: the default Nginx ingress, and the default Istio controller.](/img/istio-ingress.svg)
 
-# Enable the Istio Gateway
+## Enable the Istio Gateway
 
 The ingress gateway is a Kubernetes service that will be deployed in your cluster. There is only one Istio gateway per cluster.
 
@@ -29,7 +29,7 @@ The ingress gateway is a Kubernetes service that will be deployed in your cluste
 
 **Result:** The gateway is deployed, which allows Istio to receive traffic from outside the cluster.
 
-# Add a Kubernetes Gateway that Points to the Istio Gateway
+## Add a Kubernetes Gateway that Points to the Istio Gateway
 
 To allow traffic to reach Ingress, you will also need to provide a Kubernetes gateway resource in your YAML that points to Istio's implementation of the ingress gateway to the cluster.
 
@@ -111,7 +111,7 @@ To get the ingress gateway URL and port,
 
 For help inspecting the Istio controller URL and ports, try the commands the [Istio documentation.](https://istio.io/docs/tasks/traffic-management/ingress/ingress-control/#determining-the-ingress-ip-and-ports)
 
-# Troubleshooting
+## Troubleshooting
 
 The [official Istio documentation](https://istio.io/docs/tasks/traffic-management/ingress/ingress-control/#troubleshooting) suggests `kubectl` commands to inspect the correct ingress host and ingress port for external requests.
 

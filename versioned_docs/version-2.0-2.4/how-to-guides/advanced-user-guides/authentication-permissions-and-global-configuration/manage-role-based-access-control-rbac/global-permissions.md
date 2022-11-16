@@ -14,8 +14,7 @@ Global Permissions define user authorization outside the scope of any particular
 
 You cannot update or delete the built-in Global Permissions.
 
-
-# Global Permission Assignment
+## Global Permission Assignment
 
 Global permissions for local users are assigned differently than users who log in to Rancher using external authentication.
 
@@ -35,7 +34,7 @@ Permissions can be assigned to an individual user with [these steps.](#configuri
 
 As of Rancher v2.4.0, you can [assign a role to everyone in the group at the same time](#configuring-global-permissions-for-groups) if the external authentication provider supports groups.
 
-# Custom Global Permissions
+## Custom Global Permissions
 
 Using custom permissions is convenient for providing users with narrow or specialized access to Rancher.
 

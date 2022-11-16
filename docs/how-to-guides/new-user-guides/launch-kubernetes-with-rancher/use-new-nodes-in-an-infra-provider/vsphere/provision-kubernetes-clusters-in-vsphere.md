@@ -16,7 +16,7 @@ For details on configuring RKE Kubernetes clusters in Rancher, refer to the [clu
 - [Preparation in vSphere](#preparation-in-vsphere)
 - [Creating a vSphere Cluster](#creating-a-vsphere-cluster)
 
-# Preparation in vSphere
+## Preparation in vSphere
 
 This section describes the requirements for setting up vSphere so that Rancher can provision VMs and clusters.
 

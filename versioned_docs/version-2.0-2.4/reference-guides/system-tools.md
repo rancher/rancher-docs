@@ -15,7 +15,7 @@ The following commands are available:
 | [stats](#stats) | Stream system metrics from nodes.
 | [remove](#remove) | Remove Kubernetes resources created by Rancher.
 
-# Download System Tools
+## Download System Tools
 
 You can download the latest version of System Tools from the [GitHub releases page](https://github.com/rancher/system-tools/releases/latest). Download the version of `system-tools` for the OS that you are using to interact with the cluster.
 
@@ -38,7 +38,7 @@ After you download the tools, complete the following actions:
     chmod +x system-tools
     ```
 
-# Logs
+## Logs
 
 The logs subcommand will collect log files of core Kubernetes cluster components from nodes in [Rancher-launched Kubernetes clusters](../pages-for-subheaders/launch-kubernetes-with-rancher.md) or nodes on an [RKE Kubernetes cluster that Rancher is installed on.](../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md). See [Troubleshooting](../troubleshooting.md) for a list of core Kubernetes cluster components.
 
@@ -58,7 +58,7 @@ The following are the options for the logs command:
 | `--output <FILENAME>, -o cluster-logs.tar`             | Name of the created tarball containing the logs. If no output filename is defined, the options defaults to `cluster-logs.tar`.
 | `--node <NODENAME>, -n node1`                         | Specify the nodes to collect the logs from. If no node is specified, logs from all nodes in the cluster will be collected.
 
-# Stats
+## Stats
 
 The stats subcommand will display system metrics from nodes in [Rancher-launched Kubernetes clusters](../pages-for-subheaders/launch-kubernetes-with-rancher.md) or nodes in an [RKE Kubernetes cluster that Rancher is installed on.](../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md).
 
@@ -78,7 +78,7 @@ The following are the options for the stats command:
 | `--node <NODENAME>, -n node1`                          | Specify the nodes to display the system metrics from. If no node is specified, logs from all nodes in the cluster will be displayed.
 | `--stats-command value, -s value`                      | The command to run to display the system metrics. If no command is defined, the options defaults to `/usr/bin/sar -u -r -F 1 1`.
 
-# Remove
+## Remove
 
 >**Warning:** This command will remove data from your etcd nodes. Make sure you have created a [backup of etcd](../pages-for-subheaders/backup-restore-and-disaster-recovery.md) before executing the command.
 

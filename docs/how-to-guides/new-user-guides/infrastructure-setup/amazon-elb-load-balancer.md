@@ -149,7 +149,7 @@ Look over the load balancer details and click **Create** when you're satisfied.
 
 After AWS creates the NLB, click **Close**.
 
-# 4. Add listener to NLB for TCP port 80
+## 4. Add listener to NLB for TCP port 80
 
 1. Select your newly created NLB and select the **Listeners** tab.
 
@@ -163,7 +163,7 @@ After AWS creates the NLB, click **Close**.
 
 6. Click **Save** in the top right of the screen.
 
-# Health Check Paths for NGINX Ingress and Traefik Ingresses
+## Health Check Paths for NGINX Ingress and Traefik Ingresses
 
 K3s and RKE Kubernetes clusters handle health checks differently because they use different Ingresses by default.
 

@@ -6,7 +6,6 @@ The commands/steps listed on this page can be used to check the most important K
 
 Make sure you configured the correct kubeconfig (for example, `export KUBECONFIG=$PWD/kube_config_cluster.yml` for Rancher HA) or are using the embedded kubectl via the UI.
 
-
 ## Nodes
 
 ### Get nodes
@@ -128,7 +127,7 @@ Retrieve generated configuration in each pod:
 kubectl -n ingress-nginx get pods -l app=ingress-nginx --no-headers -o custom-columns=.NAME:.metadata.name | while read pod; do kubectl -n ingress-nginx exec $pod -- cat /etc/nginx/nginx.conf; done
 ```
 
-# Rancher agents
+## Rancher agents
 
 Communication to the cluster (Kubernetes API via `cattle-cluster-agent`) and communication to the nodes (cluster provisioning via `cattle-node-agent`) is done through Rancher agents.
 

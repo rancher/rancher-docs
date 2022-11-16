@@ -127,7 +127,7 @@ The `rancher-images.txt` is expected to be on the workstation in the same direct
 
 For Rancher servers that will provision Linux and Windows clusters, there are distinctive steps to populate your private registry for the Windows images and the Linux images. Since a Windows cluster is a mix of Linux and Windows nodes, the Linux images pushed into the private registry are manifests.
 
-# Windows Steps
+## Windows Steps
 
 The Windows images need to be collected and pushed from a Windows server workstation.
 
@@ -206,7 +206,7 @@ The `rancher-windows-images.txt` is expected to be on the workstation in the sam
    ./rancher-load-images.ps1 --registry <REGISTRY.YOURDOMAIN.COM:PORT>
    ```
 
-# Linux Steps
+## Linux Steps
 
 The Linux images need to be collected and pushed from a Linux host, but _must be done after_ populating the Windows images into the private registry. These step are different from the Linux only steps as the Linux images that are pushed will actually manifests that support Windows and Linux images.
 

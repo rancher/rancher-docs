@@ -19,8 +19,7 @@ Rancher supports integration with the following services:
 - Syslog
 - Fluentd
 
-
-# How Logging Integrations Work
+## How Logging Integrations Work
 
 Rancher can integrate with popular external services used for event streams, telemetry, or search. These services can log errors and warnings in your Kubernetes infrastructure to a stream.
 
@@ -32,7 +31,7 @@ Additionally, you'll have the opportunity to enter key-value pairs to filter the
 
 >**Note:** You can only configure one logging service per cluster or per project.
 
-# Requirements
+## Requirements
 
 The Docker daemon on each node in the cluster should be [configured](https://docs.docker.com/config/containers/logging/configure/) with the (default) log-driver: `json-file`. You can check the log-driver by running the following command:
 
@@ -41,7 +40,7 @@ $ docker info | grep 'Logging Driver'
 Logging Driver: json-file
 ```
 
-# Logging Scope
+## Logging Scope
 
 You can configure logging at either cluster level or project level.
 
@@ -53,7 +52,7 @@ Logs that are sent to your logging service are from the following locations:
   - Pod logs stored at `/var/log/containers`.
   - Kubernetes system components logs stored at `/var/lib/rancher/rke/log/`.
 
-# Enabling Cluster Logging
+## Enabling Cluster Logging
 
 As an [administrator](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md) or [cluster owner](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles), you can configure Rancher to send Kubernetes logs to a logging service.
 

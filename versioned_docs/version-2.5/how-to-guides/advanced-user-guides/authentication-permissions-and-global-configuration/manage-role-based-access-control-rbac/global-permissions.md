@@ -17,7 +17,7 @@ Global Permissions define user authorization outside the scope of any particular
 
 You cannot update or delete the built-in Global Permissions.
 
-# Restricted Admin
+## Restricted Admin
 
 A new `restricted-admin` role was created in Rancher v2.5 in order to prevent privilege escalation from the local Rancher server Kubernetes cluster. This role has full administrator access to all downstream clusters managed by Rancher, but it does not have permission to alter the local Kubernetes cluster.
 
@@ -30,6 +30,7 @@ To bootstrap Rancher with the `restricted-admin` as the initial user, the Ranche
 ```
 CATTLE_RESTRICTED_DEFAULT_ADMIN=true
 ```
+
 ### List of `restricted-admin` Permissions
 
 The permissions for the `restricted-admin` role differ based on the Rancher version.
@@ -75,7 +76,7 @@ This can be done through **Security > Users** and moving any Administrator role 
 
 Signed-in users can change themselves over to the `restricted-admin` if they wish, but they should only do that as the last step, otherwise they won't have the permissions to do so.
 
-# Global Permission Assignment
+## Global Permission Assignment
 
 Global permissions for local users are assigned differently than users who log in to Rancher using external authentication.
 
@@ -95,7 +96,7 @@ Permissions can be assigned to an individual user with [these steps.](#configuri
 
 You can [assign a role to everyone in the group at the same time](#configuring-global-permissions-for-groups) if the external authentication provider supports groups.
 
-# Custom Global Permissions
+## Custom Global Permissions
 
 Using custom permissions is convenient for providing users with narrow or specialized access to Rancher.
 

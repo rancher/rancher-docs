@@ -218,7 +218,7 @@ The following table maps the custom config values you copied in the Azure portal
 
 ### Migrating from Azure AD Graph API to Microsoft Graph API
 
-Since [Azure AD Graph API](https://docs.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview) was deprecated in June 2022 and will be retired at the end of 2022, users should update their Azure AD App to use the new [Microsoft Graph API](https://docs.microsoft.com/en-us/graph/use-the-api) in Rancher.
+Since [Azure AD Graph API](https://docs.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview) was deprecated in June 2022 and will be retired on June 30, 2023, users should update their Azure AD App to use the new [Microsoft Graph API](https://docs.microsoft.com/en-us/graph/use-the-api) in Rancher.
 
 #### Updating Endpoints in the Rancher UI
 

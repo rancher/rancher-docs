@@ -15,7 +15,7 @@
 | [Cleaning Kubernetes components when clusters are no longer reachable from Rancher](../how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes.md) | ✓ | | | |
 | [Configuring Pod Security Policies](../how-to-guides/new-user-guides/manage-clusters/add-a-pod-security-policy.md) | ✓ | ✓ |  ||
 
-1. Registered GKE and EKS clusters have the same options available as GKE and EKS clusters created from the Rancher UI. The  difference is that when a registered cluster is deleted from the Rancher UI, it is not destroyed.
+1. Registered EKS, GKE and AKS clusters have the same options available as EKS, GKE and AKS clusters created from the Rancher UI. The  difference is that when a registered cluster is deleted from the Rancher UI, it is not destroyed.
 
 2. Cluster configuration options can't be edited for registered clusters, except for [K3s and RKE2 clusters.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md)
 

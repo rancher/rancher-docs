@@ -15,7 +15,7 @@ To upgrade the components in your Kubernetes cluster, or the definition of the [
 - [Known Upgrade Issues](#known-upgrade-issues)
 - [RKE Add-on Installs](#rke-add-on-installs)
 
-# Prerequisites
+## Prerequisites
 
 ### Access to kubeconfig
 
@@ -49,7 +49,7 @@ If you are upgrading to Rancher v2.5 from a Rancher server that was started with
 
 [Let's Encrypt will be blocking cert-manager instances older than 0.8.0 starting November 1st 2019.](https://community.letsencrypt.org/t/blocking-old-cert-manager-versions/98753) Upgrade cert-manager to the latest version by following [these instructions.](../resources/upgrade-cert-manager.md)
 
-# Upgrade Outline
+## Upgrade Outline
 
 Follow the steps to upgrade Rancher server:
 
@@ -58,13 +58,13 @@ Follow the steps to upgrade Rancher server:
 - [3. Upgrade Rancher](#3-upgrade-rancher)
 - [4. Verify the Upgrade](#4-verify-the-upgrade)
 
-# 1. Back up Your Kubernetes Cluster that is Running Rancher Server
+## 1. Back up Your Kubernetes Cluster that is Running Rancher Server
 
 Use the [backup application](../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher.md) to back up Rancher.
 
 You'll use the backup as a restoration point if something goes wrong during upgrade.
 
-# 2. Update the Helm chart repository
+## 2. Update the Helm chart repository
 
 1. Update your local helm repo cache.
 
@@ -114,7 +114,7 @@ You'll use the backup as a restoration point if something goes wrong during upgr
     helm fetch rancher-<CHART_REPO>/rancher --version=2.5.16
     ```
 
-# 3. Upgrade Rancher
+## 3. Upgrade Rancher
 
 This section describes how to upgrade normal (Internet-connected) or air gap installations of Rancher with Helm.
 
@@ -180,7 +180,7 @@ If you are currently running the cert-manager whose version is older than v0.11,
     --set hostname=rancher.my.org
     ```
 
-# 4. Verify the Upgrade
+## 4. Verify the Upgrade
 
 Log into Rancher to confirm that the upgrade succeeded.
 
@@ -188,6 +188,6 @@ Log into Rancher to confirm that the upgrade succeeded.
 >
 > See [Restoring Cluster Networking](../../../../version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md).
 
-# Known Upgrade Issues
+## Known Upgrade Issues
 
 A list of known issues for each Rancher version can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums.](https://forums.rancher.com/c/announcements/12)

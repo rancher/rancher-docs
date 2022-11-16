@@ -72,7 +72,7 @@ Use `kubectl` to apply the rendered manifests.
 kubectl -n cattle-system apply -R -f ./rancher
 ```
 
-# Verify the Upgrade
+## Verify the Upgrade
 
 Log into Rancher to confirm that the upgrade succeeded.
 
@@ -84,6 +84,6 @@ See [Restoring Cluster Networking](../../../../versioned_docs/version-2.0-2.4/ge
 
 :::
 
-# Known Upgrade Issues
+## Known Upgrade Issues
 
 A list of known issues for each Rancher version can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums.](https://forums.rancher.com/c/announcements/12)

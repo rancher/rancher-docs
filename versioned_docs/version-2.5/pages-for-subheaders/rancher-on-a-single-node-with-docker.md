@@ -18,15 +18,15 @@ The Rancher backup operator can be used to migrate Rancher from the single Docke
 
 When the Rancher server is deployed in the Docker container, a local Kubernetes cluster is installed within the container for Rancher to use. Because many features of Rancher run as deployments, and privileged mode is required to run containers within containers, you will need to install Rancher with the `--privileged` option.
 
-# Requirements for OS, Docker, Hardware, and Networking
+## Requirements for OS, Docker, Hardware, and Networking
 
 Make sure that your node fulfills the general [installation requirements.](installation-requirements.md)
 
-# 1. Provision Linux Host
+## 1. Provision Linux Host
 
 Provision a single Linux host according to our [Requirements](installation-requirements.md) to launch your Rancher server.
 
-# 2. Choose an SSL Option and Install Rancher
+## 2. Choose an SSL Option and Install Rancher
 
 For security purposes, SSL (Secure Sockets Layer) is required when using Rancher. SSL secures all Rancher network communication, like when you login or interact with a cluster.
 
