@@ -20,7 +20,6 @@ You can use projects to perform actions like:
 - [Set resource quotas](manage-project-resource-quotas.md)
 - [Manage namespaces](../how-to-guides/new-user-guides/manage-namespaces.md)
 - [Configure tools](../reference-guides/rancher-project-tools.md)
-- [Set up pipelines for continuous integration and deployment](../how-to-guides/advanced-user-guides/manage-projects/ci-cd-pipelines.md)
 - [Configure pod security policies](../how-to-guides/advanced-user-guides/manage-projects/manage-pod-security-policies.md)
 
 ### Authorization

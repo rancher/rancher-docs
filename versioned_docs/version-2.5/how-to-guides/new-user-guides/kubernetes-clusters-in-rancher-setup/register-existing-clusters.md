@@ -164,7 +164,6 @@ After registering a cluster, the cluster owner can:
 - Enable [monitoring, alerts and notifiers](../../../pages-for-subheaders/monitoring-and-alerting.md)
 - Enable [logging](../../../pages-for-subheaders/logging.md)
 - Enable [Istio](../../../pages-for-subheaders/istio.md)
-- Use [pipelines](../../advanced-user-guides/manage-projects/ci-cd-pipelines.md)
 - Manage projects and workloads
 
 <a id="2-5-8-additional-features-for-registered-k3s-clusters"></a>
@@ -204,7 +203,6 @@ After registering a cluster, the cluster owner can:
 - Enable [monitoring, alerts and notifiers](../../../pages-for-subheaders/monitoring-and-alerting.md)
 - Enable [logging](../../../pages-for-subheaders/logging.md)
 - Enable [Istio](../../../pages-for-subheaders/istio.md)
-- Use [pipelines](../../advanced-user-guides/manage-projects/ci-cd-pipelines.md)
 - Manage projects and workloads
 
 <a id="before-2-5-8-additional-features-for-registered-k3s-clusters"></a>

@@ -18,6 +18,7 @@ const sidebars = {
 
   // But you can create a sidebar manually
   tutorialSidebar: [
+
     'rancher-manager',
     {
       type: 'category',
@@ -186,6 +187,7 @@ const sidebars = {
               ]
             },
             "getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes",
+
             "getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher",
           ]
         }
@@ -311,8 +313,11 @@ const sidebars = {
                   ]
                 },
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates",
+
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies",
+
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry",
+
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding",
               ]
             },
@@ -378,12 +383,19 @@ const sidebars = {
                   ]
                 },
                 "how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces",
+
                 "how-to-guides/new-user-guides/manage-clusters/clone-cluster-configuration",
+
                 "how-to-guides/new-user-guides/manage-clusters/rotate-certificates",
+
                 "how-to-guides/new-user-guides/manage-clusters/rotate-encryption-key",
+
                 "how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
+
                 "how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes",
+
                 "how-to-guides/new-user-guides/manage-clusters/add-a-pod-security-policy",
+
                 "how-to-guides/new-user-guides/manage-clusters/assign-pod-security-policies",
               ]
             },
@@ -504,7 +516,9 @@ const sidebars = {
                   },
                   items: [
                     "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster",
+
                     "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-a-digitalocean-cluster",
+
                     "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster",
                     {
                       type: 'category',
@@ -533,6 +547,7 @@ const sidebars = {
                   ]
                 },
                 "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences",
+
                 "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents",
               ]
             },
@@ -586,9 +601,13 @@ const sidebars = {
                   ]
                 },
                 "how-to-guides/new-user-guides/kubernetes-resources-setup/create-services",
+
                 "how-to-guides/new-user-guides/kubernetes-resources-setup/encrypt-http-communication",
+
                 "how-to-guides/new-user-guides/kubernetes-resources-setup/configmaps",
+
                 "how-to-guides/new-user-guides/kubernetes-resources-setup/secrets",
+
                 "how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries",
               ]
             },
@@ -633,6 +652,7 @@ const sidebars = {
               ]
             },
             "how-to-guides/new-user-guides/add-users-to-projects",
+
             "how-to-guides/new-user-guides/manage-namespaces",
           ]
         },
@@ -652,7 +672,6 @@ const sidebars = {
                 id: "pages-for-subheaders/manage-projects",
               },
               items: [
-                "how-to-guides/advanced-user-guides/manage-projects/ci-cd-pipelines",
                 "how-to-guides/advanced-user-guides/manage-projects/manage-pod-security-policies",
                 {
                   type: 'category',
@@ -684,7 +703,6 @@ const sidebars = {
                 "how-to-guides/advanced-user-guides/monitoring-alerting-guides/customize-grafana-dashboard",
                 "how-to-guides/advanced-user-guides/monitoring-alerting-guides/create-persistent-grafana-dashboard",
                 "how-to-guides/advanced-user-guides/monitoring-alerting-guides/debug-high-memory-usage",
-                "how-to-guides/advanced-user-guides/monitoring-alerting-guides/migrate-to-rancher-v2.5+-monitoring",
                 {
                   type: 'category',
                   label: 'Prometheus Federator Guides',
@@ -1024,24 +1042,12 @@ const sidebars = {
           ]
         },
         "reference-guides/rancher-cluster-tools",
+
         "reference-guides/rancher-project-tools",
+
         "reference-guides/system-tools",
+
         "reference-guides/rke1-template-example-yaml",
-        {
-          type: 'category',
-          label: 'Pipelines',
-          link: {
-            type: 'doc',
-            id: "pages-for-subheaders/pipelines",
-          },
-          items: [
-            "reference-guides/pipelines/concepts",
-            "reference-guides/pipelines/pipeline-configuration",
-            "reference-guides/pipelines/configure-persistent-data",
-            "reference-guides/pipelines/example-repositories",
-            "reference-guides/pipelines/example-yaml",
-          ],
-        },
         {
           type: 'category',
           label: 'Rancher Security',
@@ -1077,6 +1083,7 @@ const sidebars = {
               ],
             },
             "reference-guides/rancher-security/kubernetes-security-best-practices",
+
             "reference-guides/rancher-security/security-advisories-and-cves",
           ],
         }
@@ -1176,7 +1183,6 @@ const sidebars = {
           },
           items: [
             "integrations-in-rancher/logging/logging-architecture",
-            "integrations-in-rancher/logging/migrate-to-rancher-v2.5+-logging",
             "integrations-in-rancher/logging/rbac-for-logging",
             "integrations-in-rancher/logging/logging-helm-chart-options",
             "integrations-in-rancher/logging/taints-and-tolerations",
@@ -1210,7 +1216,10 @@ const sidebars = {
           ]
         },
         "integrations-in-rancher/neuvector",
+
         "integrations-in-rancher/opa-gatekeeper",
+
+        "integrations-in-rancher/rancher-extensions",
       ]
     },
     {
