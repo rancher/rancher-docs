@@ -58,7 +58,7 @@ This procedure creates a backup that you can restore if Rancher encounters a dis
 
 1. Enter the `ls` command to confirm that the backup tarball was created. It will have a name similar to `rancher-data-backup-<RANCHER_VERSION>-<DATE>.tar.gz`.
 
-1. Move your backup tarball to a safe location external to your Rancher Server. Optionally delete the `rancher-data-<DATE>` container from your Rancher Server.
+1. Move your backup tarball to a safe location external to your Rancher Server. Optionally, delete the `rancher-data-<DATE>` container from your Rancher Server.
 
 1. Restart Rancher Server. Replace `<RANCHER_CONTAINER_NAME>` with the name of your Rancher container:
 
