@@ -1,7 +1,7 @@
 {
     "version.label": {
-      "message": "v2.7",
-      "description": "The label for version current"
+      "message": "v2.6",
+      "description": "The label for version 2.6"
     },
     "sidebar.tutorialSidebar.category.Getting Started": {
       "message": "开始使用",
@@ -306,6 +306,10 @@
     "sidebar.tutorialSidebar.category.About the API": {
       "message": "关于 API",
       "description": "The label for category About the API in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Pipelines": {
+      "message": "流水线",
+      "description": "The label for category Pipelines in sidebar tutorialSidebar"
     },
     "sidebar.tutorialSidebar.category.Rancher Security": {
       "message": "Rancher 安全",
