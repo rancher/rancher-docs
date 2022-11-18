@@ -9,7 +9,7 @@ After completing your Docker installation of Rancher, we recommend creating back
 During the creation of your backup, you'll enter a series of commands, replacing placeholders with data from your environment. These placeholders are denoted with angled brackets and all capital letters (`<EXAMPLE>`). Here's an example of a command with a placeholder:
 
 ```
-docker run  --volumes-from rancher-data-<DATE> -v $PWD:/backup busybox tar pzcvf /backup/rancher-data-backup-<RANCHER_VERSION>-<DATE>.tar.gz /var/lib/rancher
+docker run --name busybox-backup-<DATE> --volumes-from rancher-data-<DATE> -v $PWD:/backup busybox tar pzcvf /backup/rancher-data-backup-<RANCHER_VERSION>-<DATE>.tar.gz /var/lib/rancher
 ```
 
 In this command, `<DATE>` is a placeholder for the date that the data container and backup were created. `9-27-18` for example.
@@ -51,14 +51,19 @@ This procedure creates a backup that you can restore if Rancher encounters a dis
 1. <a id="tarball"></a>From the data container that you just created (<code>rancher-data-&lt;DATE&gt;</code>), create a backup tarball (<code>rancher-data-backup-&lt;RANCHER_VERSION&gt;-&lt;DATE&gt;.tar.gz</code>). Use the following command, replacing each placeholder:
 
     ```
-    docker run  --volumes-from rancher-data-<DATE> -v $PWD:/backup:z busybox tar pzcvf /backup/rancher-data-backup-<RANCHER_VERSION>-<DATE>.tar.gz /var/lib/rancher
+    docker run --name busybox-backup-<DATE> --volumes-from rancher-data-<DATE> -v $PWD:/backup:z busybox tar pzcvf /backup/rancher-data-backup-<RANCHER_VERSION>-<DATE>.tar.gz /var/lib/rancher
     ```
 
     **Step Result:** A stream of commands runs on the screen.
 
 1. Enter the `ls` command to confirm that the backup tarball was created. It will have a name similar to `rancher-data-backup-<RANCHER_VERSION>-<DATE>.tar.gz`.
 
-1. Move your backup tarball to a safe location external to your Rancher Server. Then delete the `rancher-data-<DATE>` container from your Rancher Server.
+1. Move your backup tarball to a safe location external to your Rancher Server. Then delete the `rancher-data-<DATE>` and `busybox-backup-<DATE>` containers from your Rancher Server.
+
+    ```
+    docker rm rancher-data-<DATE>
+    docker rm busybox-backup-<DATE>
+    ```
 
 1. Restart Rancher Server. Replace `<RANCHER_CONTAINER_NAME>` with the name of your Rancher container:
 
