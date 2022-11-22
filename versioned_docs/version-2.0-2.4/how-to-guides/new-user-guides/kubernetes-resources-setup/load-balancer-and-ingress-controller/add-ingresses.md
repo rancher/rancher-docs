@@ -15,7 +15,7 @@ Ingress can be added for workloads to provide load balancing, SSL termination an
 **Result:** Your ingress is added to the project. The ingress begins enforcing your ingress rules.
 
 
-# Ingress Rule Configuration
+## Ingress Rule Configuration
 
 - [Automatically generate a sslip.io hostname](#automatically-generate-a-sslip-io-hostname)
 - [Specify a hostname to use](#specify-a-hostname-to-use)

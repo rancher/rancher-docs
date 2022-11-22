@@ -40,9 +40,9 @@ These guides have been tested along with the Rancher v2.6 release. Each self-ass
 
 ### K3s Guides
 
-| Kubernetes Version | CIS Benchmark Version | Self Assessment Guide | Hardening Guides |
-| ------------------ | --------------------- | --------------------- | ---------------- |
-| Kubernetes v1.21 and v1.22 | CIS v1.6 | [Link](https://rancher.com/docs/k3s/latest/en/security/self_assessment/) | [Link](https://rancher.com/docs/k3s/latest/en/security/hardening_guide/) |
+| Type | Kubernetes Version | CIS Benchmark Version | Self Assessment Guide | Hardening Guides |
+| ---- | ------------------ | --------------------- | --------------------- | ---------------- |
+| Standalone K3s | Kubernetes v1.21 and v1.22 | CIS v1.6 | [Link](https://docs.k3s.io/security/self-assessment) | [Link](https://docs.k3s.io/security/hardening-guide) |
 
 ## Rancher with SELinux
 

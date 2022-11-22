@@ -9,7 +9,7 @@ A PrometheusRule defines a group of Prometheus alerting and/or recording rules.
 
 > This section assumes familiarity with how monitoring components work together. For more information, see [this section.](../../../../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)
 
-### Creating PrometheusRules in the Rancher UI
+## Creating PrometheusRules in the Rancher UI
 
 _Available as of v2.5.4_
 
@@ -25,7 +25,7 @@ To create rule groups in the Rancher UI,
 
 **Result:** Alerts can be configured to send notifications to the receiver(s).
 
-### About the PrometheusRule Custom Resource
+## About the PrometheusRule Custom Resource
 
 When you define a Rule (which is declared within a RuleGroup in a PrometheusRule resource), the [spec of the Rule itself](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#rule) contains labels that are used by Alertmanager to figure out which Route should receive this Alert. For example, an Alert with the label `team: front-end` will be sent to all Routes that match on that label.
 
@@ -42,7 +42,7 @@ Use the label selector field `ruleSelector` in the Prometheus object to define t
 
 For examples, refer to the Prometheus documentation on [recording rules](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/) and [alerting rules.](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)
 
-# Configuration
+## Configuration
 
 <Tabs>
 <TabItem value="Rancher v2.5.4">

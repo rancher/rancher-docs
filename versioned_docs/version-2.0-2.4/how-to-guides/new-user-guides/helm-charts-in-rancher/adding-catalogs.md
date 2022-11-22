@@ -13,7 +13,7 @@ Custom catalogs can be added into Rancher at a global scope, cluster scope, or p
 - [Adding project level catalogs](#adding-project-level-catalogs)
 - [Custom catalog configuration reference](#custom-catalog-configuration-reference)
 
-# Adding Catalog Repositories
+## Adding Catalog Repositories
 
 Adding a catalog is as simple as adding a catalog name, a URL and a branch name.
 
@@ -43,7 +43,7 @@ For more information on private Git/Helm catalogs, refer to the [custom catalog 
 
  **Result:** Your catalog is added to Rancher.
 
-# Adding Global Catalogs
+## Adding Global Catalogs
 
 >**Prerequisites:** In order to manage the [built-in catalogs](./built-in.md) or manage global catalogs, you need _one_ of the following permissions:
 >
@@ -57,7 +57,7 @@ For more information on private Git/Helm catalogs, refer to the [custom catalog 
 
  **Result**: Your custom global catalog is added to Rancher. Once it is in `Active` state, it has completed synchronization and you will be able to start deploying [multi-cluster apps](../deploy-apps-across-clusters.md) or [applications in any project](./launching-apps.md) from this catalog.
 
-# Adding Cluster Level Catalogs
+## Adding Cluster Level Catalogs
 
 _Available as of v2.2.0_
 
@@ -75,7 +75,7 @@ _Available as of v2.2.0_
 
 **Result**: Your custom cluster catalog is added to Rancher. Once it is in `Active` state, it has completed synchronization and you will be able to start deploying  [applications in any project in that cluster](../../../pages-for-subheaders/helm-charts-in-rancher.md) from this catalog.
 
-# Adding Project Level Catalogs
+## Adding Project Level Catalogs
 
 _Available as of v2.2.0_
 
@@ -94,6 +94,6 @@ _Available as of v2.2.0_
 
 **Result**: Your custom project catalog is added to Rancher. Once it is in `Active` state, it has completed synchronization and you will be able to start deploying  [applications in that project](../../../pages-for-subheaders/helm-charts-in-rancher.md) from this catalog.
 
-# Custom Catalog Configuration Reference
+## Custom Catalog Configuration Reference
 
 Refer to [this page](./catalog-config.md) more information on configuring custom catalogs.

@@ -4,7 +4,7 @@ title: Questions about Upgrading to Rancher v2.x
 
 This page contains frequently asked questions about the changes between Rancher v1.x and v2.x, and how to upgrade from Rancher v1.x to v2.x.
 
-# Kubernetes
+## Kubernetes
 
 **What does it mean when you say Rancher v2.x is built on Kubernetes?**
 
@@ -34,7 +34,7 @@ No.  Unfortunately, the differences were enough such that we cannot support Ranc
 
 Absolutely.
 
-# Cattle
+## Cattle
 
 **How does Rancher v2.x affect Cattle?**
 
@@ -46,7 +46,7 @@ Cattle will not supported in v2.x as Rancher has been re-architected to be based
 
 Yes. In the upcoming Rancher v2.1 release we will provide a tool to help translate existing Cattle workloads in Compose format to Kubernetes YAML format.  You will then be able to deploy those workloads on the v2.x platform.
 
-# Feature Changes
+## Feature Changes
 
 **Can we still add our own infrastructure services, which had a separate view/filter in 1.6.x?**
 
@@ -70,7 +70,7 @@ Yes. You can do so by leveraging Kubernetes' network policies.
 
 Yes. Definitely.
 
-# Environments & Clusters
+## Environments & Clusters
 
 **Can I still create templates for environments and clusters?**
 
@@ -84,7 +84,7 @@ Kubernetes RKE Templates is on our roadmap for 2.x. Please refer to our Release 
 
 Yes. We still provide you with the same way of executing our Rancher agents directly on hosts.
 
-# Upgrading/Migrating
+## Upgrading/Migrating
 
 **How would the migration from v1.x to v2.x work?**
 
@@ -96,7 +96,7 @@ Due to the technical difficulty in transforming a Docker container into a pod ru
 
 At this time, we are still exploring this scenario and taking feedback. We anticipate that you will need to launch a new Rancher instance and then relaunch on v2.x. Once you've moved to v2.x, upgrades will be in place, as they are in v1.6.
 
-# Support
+## Support
 
 **Are you planning some long-term support releases for Rancher v1.6?**
 

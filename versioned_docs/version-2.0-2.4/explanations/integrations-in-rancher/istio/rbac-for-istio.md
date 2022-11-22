@@ -4,7 +4,7 @@ title: Role-based Access Control
 
 This section describes the permissions required to access Istio features and how to configure access to the Kiali and Jaeger visualizations.
 
-# Cluster-level Access
+## Cluster-level Access
 
 By default, only cluster administrators can:
 
@@ -12,7 +12,7 @@ By default, only cluster administrators can:
 - Configure resource allocations for Istio
 - View each UI for Prometheus, Grafana, Kiali, and Jaeger
 
-# Project-level Access
+## Project-level Access
 
 After Istio is enabled in a cluster, project owners and members have permission to:
 
@@ -22,7 +22,7 @@ After Istio is enabled in a cluster, project owners and members have permission 
 - View the Kiali and Jaeger visualizations if cluster administrators give access to project members
 - Configure Istio's resources (such as the gateway, destination rules, or virtual services) with `kubectl` (This does not apply to read-only project members)
 
-# Access to Visualizations
+## Access to Visualizations
 
 By default,  the Kiali and Jaeger visualizations are restricted to the cluster owner because the information in them could be sensitive.
 
@@ -40,7 +40,7 @@ To configure who has permission to access the Kiali and Jaeger UI,
 
 **Result:** The access levels for Kiali and Jaeger have been updated.
 
-# Summary of Default Permissions for Istio Users
+## Summary of Default Permissions for Istio Users
 
 | Permission                         | Cluster Administrators | Project Owners | Project Members | Read-only Project Members |
 |------------------------------------------|----------------|----------------|-----------------|---------------------------|

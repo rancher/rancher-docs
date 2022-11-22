@@ -16,7 +16,7 @@ For more information on the Istio gateway, refer to the [Istio documentation.](h
 
 ![In an Istio-enabled cluster, you can have two Ingresses: the default Nginx Ingress, and the default Istio controller.](/img/istio-ingress.svg)
 
-# Enable an Istio Gateway
+## Enable an Istio Gateway
 
 The ingress gateway is a Kubernetes service that will be deployed in your cluster. The Istio Gateway allows for more extensive customization and flexibility.
 
@@ -28,7 +28,7 @@ The ingress gateway is a Kubernetes service that will be deployed in your cluste
 
 **Result:** The gateway is deployed, and will now route traffic with applied rules
 
-# Example Istio Gateway
+## Example Istio Gateway
 
 We add the BookInfo app deployments in services when going through the Workloads example. Next we add an Istio Gateway so that the app is accessible from outside your cluster.
 
@@ -122,7 +122,7 @@ To get the ingress gateway URL and port,
 
 For help inspecting the Istio controller URL and ports, try the commands the [Istio documentation.](https://istio.io/docs/tasks/traffic-management/ingress/ingress-control/#determining-the-ingress-ip-and-ports)
 
-# Troubleshooting
+## Troubleshooting
 
 The [official Istio documentation](https://istio.io/docs/tasks/traffic-management/ingress/ingress-control/#troubleshooting) suggests `kubectl` commands to inspect the correct ingress host and ingress port for external requests.
 

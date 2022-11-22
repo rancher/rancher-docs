@@ -145,7 +145,7 @@ kubectl -n cattle-system create secret generic tls-ca-additional --from-file=ca-
 
 For details on installing Rancher with a private registry, see [Air Gapped Helm CLI Install](../../pages-for-subheaders/air-gapped-helm-cli-install.md).
 
-# External TLS Termination
+## External TLS Termination
 
 We recommend configuring your load balancer as a Layer 4 balancer, forwarding plain 80/tcp and 443/tcp to the Rancher Management cluster nodes. The Ingress Controller on the cluster will redirect http traffic on port 80 to https on port 443.
 

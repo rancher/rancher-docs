@@ -32,12 +32,12 @@ Upstream bug: https://github.com/kubernetes-sigs/vsphere-csi-driver/issues/628
 
 Rancher issue tracking this bug: https://github.com/rancher/rancher/issues/31105
 
-# Prerequisites
+## Prerequisites
 
 - vSphere CSI Migration requires vSphere 7.0u1. In order to be able to manage existing in-tree vSphere volumes, upgrade vSphere to 7.0u1.
 - The Kubernetes version must be 1.19 or higher.
 
-# Migration
+## Migration
 
 ### 1. Install the CPI plugin
 

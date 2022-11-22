@@ -10,7 +10,7 @@ This tutorial is about one possible way to set up your load balancer, not the on
 
 Rancher only supports using the Amazon NLB when terminating traffic in `tcp` mode for port 443 rather than `tls` mode. This is due to the fact that the NLB does not inject the correct headers into requests when terminated at the NLB. This means that if you want to use certificates managed by the Amazon Certificate Manager (ACM), you should use an ALB.
 
-# Setting up the Load Balancer
+## Setting up the Load Balancer
 
 Configuring an Amazon NLB is a multistage process:
 
@@ -19,11 +19,11 @@ Configuring an Amazon NLB is a multistage process:
 3. [Create Your NLB](#3-create-your-nlb)
 4. [Add listener to NLB for TCP port 80](#4-add-listener-to-nlb-for-tcp-port-80)
 
-# Requirements
+## Requirements
 
 These instructions assume you have already created Linux instances in EC2. The load balancer will direct traffic to these nodes.
 
-# 1. Create Target Groups
+## 1. Create Target Groups
 
 Begin by creating two target groups for the **TCP** protocol, one with TCP port 443 and one regarding TCP port 80 (providing redirect to TCP port 443). You'll add your Linux nodes to these groups.
 
@@ -86,7 +86,7 @@ Health check settings:
 | Timeout             | `6 seconds`    |
 | Interval            | `10 seconds`   |
 
-# 2. Register Targets
+## 2. Register Targets
 
 Next, add your Linux nodes to both target groups.
 
@@ -110,7 +110,7 @@ When the instances are added, click **Save** on the bottom right of the screen.
 
 Repeat those steps, replacing **rancher-tcp-443** with **rancher-tcp-80**. The same instances need to be added as targets to this target group.
 
-# 3. Create Your NLB
+## 3. Create Your NLB
 
 Use Amazon's Wizard to create a Network Load Balancer. As part of this process, you'll add the target groups you created in [1. Create Target Groups](#1-create-target-groups).
 
@@ -152,7 +152,7 @@ Look over the load balancer details and click **Create** when you're satisfied.
 
 After AWS creates the NLB, click **Close**.
 
-# 4. Add listener to NLB for TCP port 80
+## 4. Add listener to NLB for TCP port 80
 
 1. Select your newly created NLB and select the **Listeners** tab.
 
@@ -166,7 +166,7 @@ After AWS creates the NLB, click **Close**.
 
 6. Click **Save** in the top right of the screen.
 
-# Health Check Paths for NGINX Ingress and Traefik Ingresses
+## Health Check Paths for NGINX Ingress and Traefik Ingresses
 
 K3s and RKE Kubernetes clusters handle health checks differently because they use different Ingresses by default.
 

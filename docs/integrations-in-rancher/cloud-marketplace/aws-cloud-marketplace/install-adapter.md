@@ -17,9 +17,9 @@ In order to deploy and run the adapter successfully, you need to ensure its vers
 :::
 
 | Rancher Version | Adapter Version |
-| --------------- | :-------------: |
-| v2.6.7          |     v1.0.1      |
-| v2.6.8          |     v1.0.1      |
+|-----------------|:---------------:|
+| v2.7.0          |     v2.0.0      |
+
 
 ### 1. Gain Access to the Local Cluster
 
@@ -71,31 +71,29 @@ helm repo add rancher-charts https://charts.rancher.io
 
 Next, install the CSP adapter. You must specify several values, including the account number, and the name of the role created in the prerequisites.
 
-For the below instructions, replace `$MY_ACC_NUM` with your AWS account number and `$MY_ROLE_NAME` with the name of the role created in the prerequisites.
+Ensure that you use the version of the CSP adapter that matches the version of Rancher that you are running, as defined [above](#rancher-vs-adapter-compatibility-matrix).
+
+For the below instructions, replace `$MY_ACC_NUM` with your AWS account number and `$MY_ROLE_NAME` with the name of the role created in the prerequisites. In addition, replace `$CSP_ADAPTER_VERSION` with the version that matches your Rancher version in the [version matrix](#rancher-vs-adapter-compatibility-matrix).
 
 > **Note:** If you use shell variables, do not specify quotation marks. For example, MY_ACC_NUM=123456789012 will work, but MY_ACC_NUM="123456789012" will fail.
 
 > **Note:** Accounts using the AWS Marketplace listing for the EU and the UK will need to specify an additional `--set image.repository=rancher/rancher-csp-adapter-eu` option. To see if your account needs this option when installing the adapter, refer to the usage instructions of the marketplace listing.
 
-> **Note:** It is important that you follow the instructions below exactly. In particular, the command to install version 1.0.1 of the adapter (by using --set image.tag=v1.0.1) is key to ensure that node counts are accurate.
-
 <Tabs>
 <TabItem value="Let's Encrypt/ Public Certificate Authority">
 
   ```bash
-  helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter --namespace cattle-csp-adapter-system --set aws.enabled=true --set aws.roleName=$MY_ROLE_NAME --set-string aws.accountNumber=$MY_ACC_NUM --set image.tag=v1.0.1
+  helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter --namespace cattle-csp-adapter-system --set aws.enabled=true --set aws.roleName=$MY_ROLE_NAME --set-string aws.accountNumber=$MY_ACC_NUM --version $CSP_ADAPTER_VERSION
   ```
 
 
   Alternatively, you can use a `values.yaml` and specify options like below:
 
   ```yaml
-  image:
-  tag: v1.0.1
   aws:
-  enabled: true
-  accountNumber: "$MY_ACC_NUM"
-  roleName: $MY_ROLE_NAME
+    enabled: true
+    accountNumber: "$MY_ACC_NUM"
+    roleName: $MY_ROLE_NAME
   ```
 
   > **Note:** The account number needs to be specified in a string format, like the above, or the installation will fail.
@@ -103,25 +101,23 @@ For the below instructions, replace `$MY_ACC_NUM` with your AWS account number a
   You can then install the adapter with the following command:
 
   ```bash
-  helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter -f values.yaml
+  helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter -f values.yaml --version $CSP_ADAPTER_VERSION
   ```
 
   </TabItem>
   <TabItem value="Private CA Authority / Rancher-generated Certificates">
 
   ```bash
-  helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter --namespace cattle-csp-adapter-system --set aws.enabled=true --set aws.roleName=$MY_ROLE_NAME --set-string aws.accountNumber=$MY_ACC_NUM --set additionalTrustedCAs=true --set image.tag=v1.0.1
+  helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter --namespace cattle-csp-adapter-system --set aws.enabled=true --set aws.roleName=$MY_ROLE_NAME --set-string aws.accountNumber=$MY_ACC_NUM --set additionalTrustedCAs=true --version $CSP_ADAPTER_VERSION
   ```
 
   Alternatively, you can use a `values.yaml` and specify options the below:
 
   ```yaml
-  image:
-  tag: v1.0.1
   aws:
-  enabled: true
-  accountNumber: "$MY_ACC_NUM"
-  roleName: $MY_ROLE_NAME
+    enabled: true
+    accountNumber: "$MY_ACC_NUM"
+    roleName: $MY_ROLE_NAME
   additionalTrustedCAs: true
   ```
 
@@ -130,7 +126,7 @@ For the below instructions, replace `$MY_ACC_NUM` with your AWS account number a
   You can then install the adapter with the following command:
 
   ```bash
-  helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter -f values.yaml
+  helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter -f values.yaml --version $CSP_ADAPTER_VERSION
   ```
 
   </TabItem>

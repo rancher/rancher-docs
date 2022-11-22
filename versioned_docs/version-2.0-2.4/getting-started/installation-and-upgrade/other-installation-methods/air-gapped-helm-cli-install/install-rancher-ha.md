@@ -20,7 +20,7 @@ This section describes installing Rancher in five parts:
 - [4. Install Rancher](#4-install-rancher)
 - [5. For Rancher versions before v2.3.0, Configure System Charts](#5-for-rancher-versions-before-v2-3-0-configure-system-charts)
 
-# 1. Add the Helm Chart Repository
+## 1. Add the Helm Chart Repository
 
 From a system that has access to the internet, fetch the latest Helm chart and copy the resulting manifests to a system that has access to the Rancher server cluster.
 
@@ -51,7 +51,7 @@ From a system that has access to the internet, fetch the latest Helm chart and c
     helm fetch rancher-stable/rancher --version=v2.4.8
     ```
 
-# 2. Choose your SSL Configuration
+## 2. Choose your SSL Configuration
 
 Rancher Server is designed to be secure by default and requires SSL/TLS configuration.
 
@@ -64,7 +64,7 @@ When Rancher is installed on an air gapped Kubernetes cluster, there are two rec
 | Rancher Generated Self-Signed Certificates | `ingress.tls.source=rancher` | Use certificates issued by Rancher's generated CA (self signed)<br/> This is the **default** and does not need to be added when rendering the Helm template. | yes                   |
 | Certificates from Files                    | `ingress.tls.source=secret`  | Use your own certificate files by creating Kubernetes Secret(s). <br/> This option must be passed when rendering the Rancher Helm template.                  | no                    |
 
-# 3. Render the Rancher Helm Template
+## 3. Render the Rancher Helm Template
 
 When setting up the Rancher Helm template, there are several options in the Helm chart that are designed specifically for air gap installations.
 
@@ -180,7 +180,7 @@ Then refer to [Adding TLS Secrets](../../resources/add-tls-secrets.md) to publis
 
 </details>
 
-# 4. Install Rancher
+## 4. Install Rancher
 
 Copy the rendered manifest directories to a system that has access to the Rancher server cluster to complete installation.
 
@@ -225,11 +225,11 @@ kubectl -n cattle-system apply -R -f ./rancher
 
 > **Note:** If you don't intend to send telemetry data, opt out [telemetry](../../../../faq/telemetry.md) during the initial login. Leaving this active in an air-gapped environment can cause issues if the sockets cannot be opened successfully.
 
-# 5. For Rancher versions before v2.3.0, Configure System Charts
+## 5. For Rancher versions before v2.3.0, Configure System Charts
 
 If you are installing Rancher versions before v2.3.0, you will not be able to use the packaged system charts. Since the Rancher system charts are hosted in Github, an air gapped installation will not be able to access these charts. Therefore, you must [configure the Rancher system charts](../../resources/local-system-charts.md).
 
-# Additional Resources
+## Additional Resources
 
 These resources could be helpful when installing Rancher:
 

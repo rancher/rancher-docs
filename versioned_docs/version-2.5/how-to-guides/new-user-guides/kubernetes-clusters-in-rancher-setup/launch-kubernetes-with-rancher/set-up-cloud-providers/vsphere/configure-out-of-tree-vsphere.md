@@ -8,7 +8,7 @@ Kubernetes is moving away from maintaining cloud providers in-tree. vSphere has 
 
 This page covers how to install the Cloud Provider Interface (CPI) and Cloud Storage Interface (CSI) plugins after bringing up a cluster.
 
-# Prerequisites
+## Prerequisites
 
 The vSphere versions supported:
 
@@ -19,7 +19,7 @@ The Kubernetes version must be 1.19 or higher.
 
 Using the vSphere out-of-tree cloud provider requires Linux nodes and is not supported on Windows.
 
-# Installation
+## Installation
 
 The Cloud Provider Interface (CPI) should be installed first before installing the Cloud Storage Interface (CSI).
 
@@ -47,7 +47,7 @@ The Cloud Provider Interface (CPI) should be installed first before installing t
 3. This chart creates a StorageClass with the `csi.vsphere.vmware.com` as the provisioner. Fill out the details for the StorageClass and launch the chart.
 
 
-# Using the CSI driver for provisioning volumes
+## Using the CSI driver for provisioning volumes
 
 The CSI chart by default creates a storageClass.
 

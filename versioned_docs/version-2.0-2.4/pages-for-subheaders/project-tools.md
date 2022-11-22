@@ -4,17 +4,17 @@ title: Tools for Logging, Monitoring, and More
 
 Rancher contains a variety of tools that aren't included in Kubernetes to assist in your DevOps operations. Rancher can integrate with external services to help your clusters run more efficiently.
 
-# Notifiers
+## Notifiers
 
 [Notifiers](../explanations/integrations-in-rancher/notifiers.md) are services that inform you of alert events. You can configure notifiers to send alert notifications to staff best suited to take corrective action. Notifications can be sent with Slack, email, PagerDuty, WeChat, and webhooks.
 
-# Alerts
+## Alerts
 
 [Alerts](./cluster-alerts.md) are rules that trigger notifications. Before you can receive alerts, you must configure one or more notifier in Rancher. The scope for alerts can be set at either the cluster or project level.
 
 For details on project-level alerts, see [this page.](../reference-guides/rancher-project-tools/project-alerts.md)
 
-# Logging
+## Logging
 
 Logging is helpful because it allows you to:
 
@@ -30,7 +30,7 @@ For details on setting up logging at the cluster level, refer to the [logging se
 
 For details on project-level logging, see [this section.](../reference-guides/rancher-project-tools/project-logging.md)
 
-# Monitoring
+## Monitoring
 
 _Available as of v2.2.0_
 

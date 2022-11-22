@@ -16,7 +16,7 @@ In the RancherD installation instructions, we recommend running three server nod
 - [RancherD Server CLI Options](#rancherd-server-cli-options)
 - [RancherD Agent CLI Options](#rancherd-agent-cli-options)
 
-# Certificates for the Rancher Server
+## Certificates for the Rancher Server
 
 Rancherd does not use cert-manager to provision certs. Instead RancherD allows you to bring your own self-signed or trusted certs by storing the .pem files in `/etc/rancher/ssl/`. When doing this you should also set the `publicCA` parameter to `true` in your HelmChartConfig. For more information on the HelmChartConfig, refer to the section about [customizing the RancherD Helm chart.](#customizing-the-rancherd-helm-chart)
 
@@ -28,7 +28,7 @@ CA Certificate(self-signed): `/etc/rancher/ssl/cacerts.pem`
 
 Additional CA Certificate: `/etc/ssl/certs/ca-additional.pem`
 
-# Node Taints
+## Node Taints
 
 By default, server nodes will be schedulable and thus your workloads can get launched on them. If you wish to have a dedicated control plane where no user workloads will run, you can use taints. The node-taint parameter will allow you to configure nodes with taints. Here is an example of adding a node taint to the `config.yaml`:
 
@@ -36,7 +36,8 @@ By default, server nodes will be schedulable and thus your workloads can get lau
 node-taint:
   - "CriticalAddonsOnly=true:NoExecute"
 ```
-# Customizing the RancherD Helm Chart
+
+## Customizing the RancherD Helm Chart
 
 Rancher is launched as a [Helm](https://helm.sh/) chart using the cluster’s [Helm integration.](https://docs.rke2.io/helm/) This means that you can easily customize the application through a manifest file describing your custom parameters.
 
@@ -83,7 +84,7 @@ Put this manifest on your host in `/var/lib/rancher/rke2/server/manifests` befor
 | `useBundledSystemChart`        | false                                                 | ***bool*** - select to use the system-charts packaged with Rancher server. This option is used for air gapped installations.                     |
 | `publicCA`                     | false                                                 | ***bool*** - Set to true if your cert is signed by a public CA                                                                                                                                               |
 
-# RancherD Server CLI Options
+## RancherD Server CLI Options
 
 The command to run the Rancher management server is:
 
@@ -227,9 +228,7 @@ It can be run with the following options:
 |  `--cluster-reset`  | Forget all peers and become sole member of a new cluster |
 | `--secrets-encryption`  | Enable Secret encryption at rest |
 
-
-
-# RancherD Agent CLI Options
+## RancherD Agent CLI Options
 
 The following command is used to run the RancherD agent:
 

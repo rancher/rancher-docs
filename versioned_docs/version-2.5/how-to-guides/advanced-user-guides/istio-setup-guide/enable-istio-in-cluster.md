@@ -19,6 +19,6 @@ title: 1. Enable Istio in the Cluster
 
 **Result:** Istio is installed at the cluster level.
 
-# Additional Config Options
+## Additional Config Options
 
 For more information on configuring Istio, refer to the [configuration reference.](../../../pages-for-subheaders/configuration-options.md)

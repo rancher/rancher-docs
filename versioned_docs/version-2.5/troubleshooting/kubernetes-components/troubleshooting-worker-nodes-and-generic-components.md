@@ -4,7 +4,7 @@ title: Troubleshooting Worker Nodes and Generic Components
 
 This section applies to every node as it includes components that run on nodes with any role.
 
-# Check if the Containers are Running
+## Check if the Containers are Running
 
 There are two specific containers launched on nodes with the `worker` role:
 
@@ -24,7 +24,7 @@ CONTAINER ID        IMAGE                                COMMAND                
 a30717ecfb55        rancher/hyperkube:v1.11.5-rancher1   "/opt/rke-tools/en..."   3 hours ago         Up 3 hours                              kubelet
 ```
 
-# Container Logging
+## Container Logging
 
 The logging of the containers can contain information on what the problem could be.
 

@@ -14,7 +14,7 @@ If your application is using ingresses, you can program the ingress hostname to 
 - [Launching a catalog app](#launching-a-catalog-app)
 - [Configuration options](#configuration-options)
 
-# Prerequisites
+## Prerequisites
 
 When Rancher deploys a catalog app, it launches an ephemeral instance of a Helm service account that has the permissions of the user deploying the catalog app. Therefore, a user cannot gain more access to the cluster through Helm or a catalog application than they otherwise would have.
 
@@ -25,7 +25,7 @@ To launch an app from a catalog in Rancher, you must have at least one of the fo
 
 Before launching an app, you'll need to either [enable a built-in global catalog](./built-in.md) or [add your own custom catalog.](./adding-catalogs.md)
 
-# Launching a Catalog App
+## Launching a Catalog App
 
 1. From the **Global** view, open the project that you want to deploy an app to.
 
@@ -50,7 +50,7 @@ Before launching an app, you'll need to either [enable a built-in global catalog
 
 **Result**: Your application is deployed to your chosen namespace. You can view the application status from the project's **Workloads** view or **Apps** view. In versions before v2.2.0, this is the **Catalog Apps** view.
 
-# Configuration Options
+## Configuration Options
 
 For each Helm chart, there are a list of desired answers that must be entered in order to successfully deploy the chart. When entering answers, you must format them using the syntax rules found in [Using Helm: The format and limitations of –set](https://helm.sh/docs/intro/using_helm/#the-format-and-limitations-of---set), as Rancher passes them as `--set` flags to Helm.
 

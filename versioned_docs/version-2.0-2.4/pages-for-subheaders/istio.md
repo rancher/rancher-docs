@@ -31,19 +31,19 @@ Rancher's Istio integration comes with comprehensive visualization aids:
 
 Istio needs to be set up by a Rancher administrator or cluster administrator before it can be used in a project.
 
-# Prerequisites
+## Prerequisites
 
 Before enabling Istio, we recommend that you confirm that your Rancher worker nodes have enough [CPU and memory](../explanations/integrations-in-rancher/istio/cpu-and-memory-allocations.md) to run all of the components of Istio.
 
-# Setup Guide
+## Setup Guide
 
 Refer to the [setup guide](istio-setup-guide.md) for instructions on how to set up Istio and use it in a project.
 
-# Disabling Istio
+## Disabling Istio
 
 To remove Istio components from a cluster, namespace, or workload, refer to the section on [disabling Istio.](../explanations/integrations-in-rancher/istio/disable-istio.md)
 
-# Accessing Visualizations
+## Accessing Visualizations
 
 > By default, only cluster owners have access to Jaeger and Kiali. For instructions on how to allow project members to access them, see [this section.](../explanations/integrations-in-rancher/istio/rbac-for-istio.md)
 
@@ -55,19 +55,19 @@ To see the visualizations, go to the cluster where Istio is set up and click **T
 
 You can also get to the visualization tools from the project view.
 
-# Viewing the Kiali Traffic Graph
+## Viewing the Kiali Traffic Graph
 
 1. From the project view in Rancher, click **Resources > Istio.**
 1. If you are a cluster owner, you can go to the **Traffic Graph** tab. This tab has the Kiali network visualization integrated into the UI.
 
-# Viewing Traffic Metrics
+## Viewing Traffic Metrics
 
 Istio’s monitoring features provide visibility into the performance of all your services.
 
 1. From the project view in Rancher, click **Resources > Istio.**
 1. Go to the **Traffic Metrics** tab. After traffic is generated in your cluster, you should be able to see metrics for **Success Rate, Request Volume, 4xx Response Count, Project 5xx Response Count** and **Request Duration.** Cluster owners can see all of the metrics, while project members can see a subset of the metrics.
 
-# Architecture
+## Architecture
 
 Istio installs a service mesh that uses [Envoy](https://www.envoyproxy.io/learn/service-mesh) sidecar proxies to intercept traffic to each workload. These sidecars intercept and manage service-to-service communication, allowing fine-grained observation and control over traffic within the cluster.
 

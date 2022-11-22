@@ -6,7 +6,7 @@ In a lot of enterprise environments, servers or VMs running on premise do not ha
 
 Alternatively, it is also possible to set up Rancher completely air-gapped without any Internet access. This process is described in detail in the [Rancher docs](air-gapped-helm-cli-install.md).
 
-# Installation Outline
+## Installation Outline
 
 1. [Set up infrastructure](../getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/set-up-infrastructure.md)
 2. [Set up a Kubernetes cluster](../getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-kubernetes.md)

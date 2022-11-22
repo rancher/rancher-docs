@@ -22,13 +22,9 @@ Fleet | Supported | Supported
 EKS Operator | Supported | Not Supported
 AKS Operator | Not Supported | Not Supported
 GKE Operator | Not Supported | Not Supported
-Alerting v1 | Supported | Supported
-Monitoring v1 | Supported | Supported
-Logging v1 | Supported | Supported
 Monitoring/Alerting v2 | Supported | Supported
 Logging v2 | Supported | Supported
 Istio | Supported | Not Supported
-Catalog v1 | Supported | Not Supported
 Catalog v2 | Supported | Not Supported
 OPA | Supported | Not Supported
 Longhorn | Supported | Not Supported
