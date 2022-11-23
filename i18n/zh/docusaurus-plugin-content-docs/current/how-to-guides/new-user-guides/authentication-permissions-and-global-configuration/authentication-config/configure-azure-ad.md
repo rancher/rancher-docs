@@ -218,7 +218,7 @@ Microsoft Graph API 现在是设置 Azure AD 的流程。下文将帮助[新用�
 
 ### 从 Azure AD Graph API 迁移到 Microsoft Graph API
 
-由于 [Azure AD Graph API](https://docs.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview) 已于 2022 年 6 月弃用并将于 2022 年底停用，因此用户应更新其 Azure AD 应用程序以在 Rancher 中使用新的 [Microsoft Graph API](https://docs.microsoft.com/en-us/graph/use-the-api)。
+由于 [Azure AD Graph API](https://docs.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview) 已于 2022 年 6 月弃用并将于 2023 年 6 月 30 日停用，因此用户应更新其 Azure AD 应用程序以在 Rancher 中使用新的 [Microsoft Graph API](https://docs.microsoft.com/en-us/graph/use-the-api)。
 
 #### 在 Rancher UI 中更新端点
 

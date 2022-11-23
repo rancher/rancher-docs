@@ -65,6 +65,43 @@ Monitoring 还会创建其他 `Role`，这些角色默认情况下不会分配�
 | monitoring-dashboard-edit | 允许管理员为用户分配角色，以便查看/编辑 cattle-dashboards 命名空间中的 ConfigMap。此命名空间中的 ConfigMap 将对应于持久化到集群上的 Grafana 仪表板。 |
 | monitoring-dashboard-view | 允许管理员为用户分配角色，以便查看 cattle-dashboards 命名空间中的 ConfigMap。此命名空间中的 ConfigMap 将对应于持久化到集群上的 Grafana 仪表板。 |
 
+
+### 通过自定义角色分配监控角色
+
+管理员可以在 Rancher UI 中分配自定义角色以管理、编辑和查看监控。这些“角色”是在安装 Monitoring 应用程序时默认创建的。此外，这些角色也会被部署到相应的 Kubernetes 角色：admin、edit 和 view `ClusterRoles`。
+
+:::note 重要提示：
+
+将用户添加到集群时，UI 不会提供 `monitoring-admin`、`monitoring-edit` 和 `monitoring-view` 选项。这些监控角色只能通过手动创建自定义角色来分配，该自定义角色继承 Project Owner 和 Project Monitoring View 角色。
+
+:::
+
+1. 创建自定义角色：
+
+    1.1 单击 **☰ > Users & Authentication > Roles**。
+
+    1.2 选择适当的选项卡，例如 **Cluster** 角色。然后单击 **Create Cluster Role**。
+
+    1.3 在 **Name** 字段中，创建自定义角色，例如 `View Monitoring`、`Edit Monitoring` 或 `Admin Monitoring`。
+
+    1.4 单击 **Inherit From > Add Resource**，然后从下拉列表中选择所需的 Kubernetes 角色。
+
+    1.5 单击 **Create**。
+
+
+2. 将自定义角色分配给新用户：
+
+    2.1 单击 **☰ > Cluster Management > Cluster Explore > Cluster > Cluster Members > Add**。
+
+    2.2 从显示的 **Select Member** 中搜索你的新用户名。
+
+    2.3 将 **Cluster Permissions** 中的新自定义角色分配给新用户。
+
+    2.4 单击 **Create**。
+
+
+**结果**：新用户现在应该能够看到 monitoring工具。
+
 ### 其他监控集群角色
 
 Monitoring 还会创建其他 `ClusterRole`，这些角色默认情况下不会分配给用户，而是在集群中创建。默认情况下，这些角色不会聚合，但你可以部署引用角色的 `RoleBinding` 或 `ClusterRoleBinding` 来将角色绑定到命名空间。要使用 `kubectl` 而不是通过 Rancher 来定义 `RoleBinding`，请单击[此处](#使用-kubectl-分配-role-和-clusterrole)。

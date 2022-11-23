@@ -9,7 +9,7 @@ title: 备份 Docker 安装的 Rancher
 在创建备份的过程中，你将输入一系列命令。请使用环境中的数据替换占位符。占位符用尖括号和大写字母（如 `<EXAMPLE>`）表示。以下是带有占位符的命令示例：
 
 ```
-docker run  --volumes-from rancher-data-<DATE> -v $PWD:/backup busybox tar pzcvf /backup/rancher-data-backup-<RANCHER_VERSION>-<DATE>.tar.gz /var/lib/rancher
+docker run --name busybox-backup-<DATE> --volumes-from rancher-data-<DATE> -v $PWD:/backup busybox tar pzcvf /backup/rancher-data-backup-<RANCHER_VERSION>-<DATE>.tar.gz /var/lib/rancher
 ```
 
 在该命令中，`<DATE>` 是数据容器和备份创建日期的占位符（例如，`9-27-18`）。
@@ -51,14 +51,19 @@ docker run  --volumes-from rancher-data-<DATE> -v $PWD:/backup busybox tar pzcvf
 1. <a id="tarball"></a>从你刚刚创建的数据容器（<code>rancher-data-&lt;DATE&gt;</code>）中，创建一个备份 tar 包（<code>rancher-data-backup-&lt;RANCHER_VERSION&gt;-&lt;DATE&gt;.tar.gz</code>）。替换占位符来运行以下命令：
 
    ```
-   docker run  --volumes-from rancher-data-<DATE> -v $PWD:/backup:z busybox tar pzcvf /backup/rancher-data-backup-<RANCHER_VERSION>-<DATE>.tar.gz /var/lib/rancher
+   docker run --name busybox-backup-<DATE> --volumes-from rancher-data-<DATE> -v $PWD:/backup:z busybox tar pzcvf /backup/rancher-data-backup-<RANCHER_VERSION>-<DATE>.tar.gz /var/lib/rancher
    ```
 
    **步骤结果**：屏幕上将运行命令流。
 
 1. 输入 `ls` 命令，确认备份压缩包已创建成功。压缩包的名称格式类似 `rancher-data-backup-<RANCHER_VERSION>-<DATE>.tar.gz`。
 
-1. 将备份压缩包移动到 Rancher Server 外的安全位置。然后从 Rancher Server 中删除 `rancher-data-<DATE>` 容器。
+1. 将备份压缩包移动到 Rancher Server 外的安全位置。然后从 Rancher Server 中删除 `rancher-data-<DATE>` 和 `busybox-backup-<DATE>` 容器。
+
+   ```
+   docker rm rancher-data-<DATE>
+   docker rm busybox-backup-<DATE>
+   ```
 
 1. 重启 Rancher Server。将 `<RANCHER_CONTAINER_NAME>` 替换为 Rancher 容器的名称：
 
