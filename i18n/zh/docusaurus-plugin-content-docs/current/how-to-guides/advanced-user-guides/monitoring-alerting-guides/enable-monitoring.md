@@ -8,7 +8,7 @@ title: 启用 Monitoring
 
 不论是否使用 SSL，你都可以启用 monitoring。
 
-# 要求
+## 要求
 
 - 确保在每个节点上允许端口 9796 上的流量，因为 Prometheus 将从这里抓取指标。
 - 确保你的集群满足资源要求。集群应至少有 1950Mi 可用内存、2700m CPU 和 50Gi 存储。要查看资源限制和请求的明细，请查看[此处](../../../reference-guides/monitoring-v2-configuration/helm-chart-options.md#配置资源限制和请求)。
@@ -33,7 +33,7 @@ rkeEtcd:
 
 有关默认限制的更多信息，请参阅[此页面](../../../reference-guides/monitoring-v2-configuration/helm-chart-options.md#配置资源限制和请求)。
 
-# 安装 Monitoring 应用
+## 安装 Monitoring 应用
 
 ### 在不使用 SSL 的情况下启用 Monitoring
 

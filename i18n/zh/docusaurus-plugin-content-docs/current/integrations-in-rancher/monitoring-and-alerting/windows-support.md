@@ -6,13 +6,6 @@ _从 v2.5.8 起可用_
 
 从 Monitoring V2 14.5.100（Rancher 2.5.8 的默认版本）开始，Monitoring V2 可以部署在 Windows 集群上，并将使用 [prometheus-community/windows_exporter](https://github.com/prometheus-community/windows_exporter)（旧名是 `wmi_exporter`）来抓取 Windows 节点的指标。
 
-
-## 与 Monitoring V1 的对比
-
-由于命名已根据上游从 `wmi_exporter` 更改为 `windows_exporter`，因此 `windows_exporter` 收集的指标会标记为 `windows_` 而不是 `wmi_`。
-
-此外，由于主机指标将直接发布到暴露在 windows-exporter Pod 上的端口上，因此 Monitoring V2 for Windows 将不再要求用户在 Windows 主机上保持打开端口 9796。此功能由 `wins` v0.1.0 最近的更改提供，以支持在 Pod 上发布暴露在 hostNetwork 上的端口，这些 Pod 使用 wins 来运行一个有特权的 Windows 二进制文件作为主机进程。
-
 ## 集群要求
 
 Monitoring V2 for Windows 只能从最低是 `wins` v0.1.0 的 Windows 主机中抓取指标。要完全部署 Monitoring V2 for Windows，你的所有主机都必须满足此要求。
@@ -24,8 +17,6 @@ Monitoring V2 for Windows 只能从最低是 `wins` v0.1.0 的 Windows 主机中
 如果集群是在 Rancher 2.5.8 之前配置的（即使当前 Rancher 版本是 2.5.8），你将无法成功部署 Monitoring V2 for Windows，除非你将每台主机的 wins 版本升级到 v0.1.0 或以上版本。
 
 为了方便此次升级，Rancher 2.5.8 发布了一个全新的 Helm Chart，名为 `rancher-wins-upgrader`。
-
-> **先决条件**：确保已卸载 Monitoring V1 for Windows。
 
 1. 使用以下覆盖部署 `rancher-wins-upgrader`：
    ```yaml

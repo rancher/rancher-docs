@@ -129,7 +129,6 @@ Rancher 管理注册集群的范围取决于集群的类型。
 - 启用[Monitoring、告警和 Notifiers](../../../pages-for-subheaders/monitoring-and-alerting.md)
 - 启用 [Logging](../../../pages-for-subheaders/logging.md)
 - 启用 [Istio](../../../pages-for-subheaders/istio.md)
-- 使用[流水线](../../advanced-user-guides/manage-projects/ci-cd-pipelines.md)
 - 管理项目和工作负载
 
 ### 已注册 K3s 集群的附加功能

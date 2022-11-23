@@ -12,8 +12,10 @@ Rancher 使用了以下日志级别：
 
 ### 如何配置日志级别
 
-* Kubernetes 安装
+#### Kubernetes 安装
+
 * 配置 debug 日志级别
+
 ```
 $ KUBECONFIG=./kube_config_cluster.yml
 $ kubectl -n cattle-system get pods -l app=rancher --no-headers -o custom-columns=name:.metadata.name | while read rancherpod; do kubectl -n cattle-system exec $rancherpod -c rancher -- loglevel --set debug; done
@@ -24,6 +26,7 @@ $ kubectl -n cattle-system logs -l app=rancher -c rancher
 ```
 
 * 配置 info 日志级别
+
 ```
 $ KUBECONFIG=./kube_config_cluster.yml
 $ kubectl -n cattle-system get pods -l app=rancher --no-headers -o custom-columns=name:.metadata.name | while read rancherpod; do kubectl -n cattle-system exec $rancherpod -c rancher -- loglevel --set info; done
@@ -32,8 +35,10 @@ OK
 OK
 ```
 
-* Docker 安装
+#### Docker 安装
+
 * 配置 debug 日志级别
+
 ```
 $ docker exec -ti <container_id> loglevel --set debug
 OK
@@ -41,6 +46,7 @@ $ docker logs -f <container_id>
 ```
 
 * 配置 info 日志级别
+
 ```
 $ docker exec -ti <container_id> loglevel --set info
 OK

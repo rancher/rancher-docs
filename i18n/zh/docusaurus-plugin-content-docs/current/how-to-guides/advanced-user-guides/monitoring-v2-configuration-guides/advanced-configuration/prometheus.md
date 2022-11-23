@@ -10,7 +10,7 @@ title: Prometheus 配置
 
 :::
 
-# 关于 Prometheus 自定义资源
+## 关于 Prometheus 自定义资源
 
 Prometheus CR 定义了所需的 Prometheus deployment。Prometheus Operator 会观察 Prometheus CR。当 CR 发生变化时，Prometheus Operator 会创建 `prometheus-rancher-monitoring-prometheus`，即根据 CR 配置的 Prometheus deployment。
 

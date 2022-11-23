@@ -160,7 +160,7 @@ NavLink 自定义资源的 Kubernetes 标签。
 
 需要提供 `toService` 或 `toURL` 指令中的一个。
 
-# 链接示例
+## 链接示例
 
 ### `toUrl` 的链接示例
 

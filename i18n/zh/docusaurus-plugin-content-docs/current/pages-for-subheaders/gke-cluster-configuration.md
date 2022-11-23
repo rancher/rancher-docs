@@ -133,7 +133,7 @@ _可变：是_
 
 启用 controlplane 授权网络，以阻止不受信任的非 GCP 源 IP 通过 HTTPS 访问 Kubernetes master。如果选择，则可以添加额外的授权网络。如果集群是使用公共端点创建的，则此选项可用于将公共端点的访问锁定到特定网络（例如运行 Rancher 服务的网络）。如果集群只有一个私有端点，则需要此设置。
 
-# 其他选项
+## 其他选项
 
 ### 集群插件
 
@@ -182,7 +182,7 @@ _可变：是_
 
 设置时长 4 小时的维护窗口的开始时间。使用 HH:MM 格式在 UTC 时区中指定时间。有关详细信息，请参阅[此页面](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)。
 
-# 节点池
+## 节点池
 
 在此部分中，输入描述节点池中每个节点的配置的详细信息。
 
@@ -256,7 +256,7 @@ _可变：否_
 
 有关标签语法和要求的详细信息，请参阅 [Kubernetes 文档](https://cloud.google.com/vpc/docs/add-remove-network-tags)。
 
-# 组详细信息
+## 组详细信息
 
 在此部分中，输入描述节点池的详细信息。
 

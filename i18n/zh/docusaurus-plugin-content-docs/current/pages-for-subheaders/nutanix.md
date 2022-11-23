@@ -12,6 +12,6 @@ Nutanix 集群可能由多组具有不同属性（例如内存或 vCPU 数量）
 - [创建 Nutanix 集群](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/provision-kubernetes-clusters-in-aos.md#创建-nutanix-aos-集群)
 - [配置存储](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/provision-kubernetes-clusters-in-aos)
 
-# 创建 Nutanix 集群
+## 创建 Nutanix 集群
 
 在[本节](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/provision-kubernetes-clusters-in-aos.md)中，你将学习如何使用 Rancher 在 Nutanix AOS 中安装 [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes 集群。

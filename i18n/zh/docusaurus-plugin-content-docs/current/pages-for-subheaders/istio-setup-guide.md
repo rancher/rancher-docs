@@ -6,7 +6,7 @@ title: 设置指南
 
 如果你使用 Istio 进行流量管理，则需要允许外部流量进入集群。在这种情况下，你将需要执行以下所有步骤。
 
-# 先决条件
+## 先决条件
 
 本指南假设你已经[安装 Rancher](installation-and-upgrade.md)，且已经[配置了一个单独的 Kubernetes 集群](kubernetes-clusters-in-rancher-setup.md)并要在该集群上安装 Istio。
 
@@ -14,8 +14,7 @@ title: 设置指南
 
 Istio 控制的工作负载和服务必须满足 [Istio 要求](https://istio.io/docs/setup/additional-setup/requirements/)。
 
-
-# 安装
+## 安装
 
 :::tip 快速设置提示：
 

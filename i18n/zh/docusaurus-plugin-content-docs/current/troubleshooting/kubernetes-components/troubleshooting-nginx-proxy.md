@@ -4,7 +4,7 @@ title: nginx-proxy 故障排除
 
 每个没有 `controlplane` 角色的节点上都部署了 `nginx-proxy` 容器。`nginx-proxy` 基于具有 `controlplane` 角色的可用节点来动态生成 NGINX 配置，从而提供对这些 `controlplane` 角色节点的访问。
 
-# 检查容器是否正在运行
+## 检查容器是否正在运行
 
 该容器称为 `nginx-proxy`，它的状态应该是 `Up`。`Up` 后面显示的时间指的是容器运行的时间。
 
@@ -20,7 +20,7 @@ CONTAINER ID        IMAGE                       COMMAND                  CREATED
 c3e933687c0e        rancher/rke-tools:v0.1.15   "nginx-proxy CP_HO..."   3 hours ago         Up 3 hours                              nginx-proxy
 ```
 
-# 检查生成的 NGINX 配置
+## 检查生成的 NGINX 配置
 
 生成的配置包括了具有 `controlplane` 角色的节点的 IP 地址。你可以使用以下命令来检查配置：
 
@@ -59,7 +59,7 @@ stream {
 }
 ```
 
-# nginx-proxy 容器日志记录
+## nginx-proxy 容器日志记录
 
 容器的日志记录可能包含问题的信息。
 

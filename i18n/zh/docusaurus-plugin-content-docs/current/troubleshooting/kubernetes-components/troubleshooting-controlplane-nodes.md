@@ -4,7 +4,7 @@ title: Controlplane 节点故障排除
 
 本文适用于具有 `controlplane` 角色的节点。
 
-# 检查 controlplane 容器是否正在运行
+## 检查 controlplane 容器是否正在运行
 
 具有 `controlplane` 角色的节点上启动了三个容器：
 
@@ -26,7 +26,7 @@ f3d287ca4549        rancher/hyperkube:v1.11.5-rancher1   "/opt/rke-tools/en..." 
 bdf3898b8063        rancher/hyperkube:v1.11.5-rancher1   "/opt/rke-tools/en..."   3 hours ago         Up 3 hours                              kube-controller-manager
 ```
 
-# controlplane 容器日志记录
+## controlplane 容器日志记录
 
 :::note
 
@@ -42,7 +42,7 @@ docker logs kube-controller-manager
 docker logs kube-scheduler
 ```
 
-# RKE2 Server 日志
+## RKE2 Server 日志
 
 如果 Rancher 配置的 RKE2 集群无法与 Rancher 通信，你可以在下游集群中的 Server 节点上运行此命令，从而获取 RKE2 Server 日志：
 

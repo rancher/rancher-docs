@@ -19,7 +19,7 @@ Rancher 使用 cert-manager 为 Rancher 高可用部署自动生成和续期 TLS
 
 :::
 
-# 升级 Cert-Manager
+## 升级 Cert-Manager
 
 以下说明中使用的命名空间是由当前安装了 cert-manager 的命名空间决定的。如果它在 kube-system 中，在以下说明步骤中使用。你可以运行 `kubectl get pods --all-namespaces` 来验证，并检查 cert-manager-\* pods 列在哪个命名空间中。不要更改运行 cert-manager 的命名空间，否则可能会出现错误。
 

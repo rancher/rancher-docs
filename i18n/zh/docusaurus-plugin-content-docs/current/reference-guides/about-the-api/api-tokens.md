@@ -24,7 +24,6 @@ title: API 令牌
 | `agent-*` | Agent deployment 令牌 |
 | `compose-token-*` | compose 令牌 |
 | `helm-token-*` | Helm Chart deployment 令牌 |
-| `*-pipeline*` | 项目流水线令牌 |
 | `telemetry-*` | 遥测令牌 |
 | `drain-node-*` | 用于清空的令牌（由于没有原生 Kubernetes API，我们使用 `kubectl` 来清空） |
 

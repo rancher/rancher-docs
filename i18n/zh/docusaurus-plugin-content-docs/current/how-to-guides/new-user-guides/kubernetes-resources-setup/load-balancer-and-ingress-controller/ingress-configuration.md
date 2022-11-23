@@ -7,7 +7,7 @@ description: Ingress 配置
 
 在 Kubernetes 1.21 及更高版本中，NGINX Ingress Controller 不再运行在 hostNetwork 中，而是将 hostPorts 用于端口 80 和端口 443。这样可以将 admission webhook 配置为使用 ClusterIP 访问，从而只在集群内部访问它。
 
-# Ingress 规则配置
+## Ingress 规则配置
 
 - [指定要使用的主机名](#指定要使用的主机名)
 - [用作默认后端](#用作默认后端)
