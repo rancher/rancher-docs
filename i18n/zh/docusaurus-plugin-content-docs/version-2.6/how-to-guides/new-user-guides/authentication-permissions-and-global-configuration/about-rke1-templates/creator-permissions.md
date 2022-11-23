@@ -6,7 +6,7 @@ title: 模板创建者权限
 
 有关管理员权限的更多信息，请参阅[全局权限文档](../manage-role-based-access-control-rbac/global-permissions.md)。
 
-# 授予用户创建模板的权限
+## 授予用户创建模板的权限
 
 只有具有**创建 RKE 模板**全局权限的用户才能创建模板。
 

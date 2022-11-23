@@ -6,7 +6,7 @@ title: 使用 HTTP 代理安装 Rancher
 
 另外，用户也可以在没有任何互联网访问的情况下离线设置 Rancher。详情请参见 [Rancher 官方文档](air-gapped-helm-cli-install.md)。
 
-# 安装概要
+## 安装概要
 
 1. [配置基础设施](../getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/set-up-infrastructure.md)
 2. [配置 Kubernetes 集群](../getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-kubernetes.md)

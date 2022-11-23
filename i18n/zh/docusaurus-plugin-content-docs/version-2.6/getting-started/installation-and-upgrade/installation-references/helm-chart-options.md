@@ -165,7 +165,7 @@ kubectl -n cattle-system create secret generic tls-ca-additional --from-file=ca-
 
 有关使用私有仓库安装 Rancher 的详情，请参见[离线安装](../../../pages-for-subheaders/air-gapped-helm-cli-install.md)。
 
-# 外部 TLS 终止
+## 外部 TLS 终止
 
 我们建议将负载均衡器配置为 4 层均衡，将普通 80/tcp 和 443/tcp 转发到 Rancher Management 集群节点。集群上的 Ingress Controller 会将端口 80 上的 HTTP 流量重定向到端口 443 上的 HTTPS。
 

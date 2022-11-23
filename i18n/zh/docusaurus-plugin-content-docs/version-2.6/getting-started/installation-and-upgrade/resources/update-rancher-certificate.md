@@ -2,7 +2,7 @@
 title: 更新 Rancher 证书
 ---
 
-# 更新私有 CA 证书
+## 更新私有 CA 证书
 
 本文介绍如何更新 Rancher [高可用 Kubernetes 安装](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md) 中 Ingress 的 SSL 证书，以及如何从默认的自签名证书切换到自定义证书。
 
@@ -16,7 +16,7 @@ title: 更新 Rancher 证书
 
 各个步骤的详细说明如下。
 
-## 1. 创建/更新证书密文资源
+### 1. 创建/更新证书密文资源
 
 首先，将服务器证书和所有中间证书合并到名为 `tls.crt` 的文件，并在名为 `tls.key` 的文件中提供相应的证书密钥。
 
@@ -37,7 +37,7 @@ $ kubectl -n cattle-system create secret tls tls-rancher-ingress \
   --dry-run --save-config -o yaml | kubectl apply -f -
 ```
 
-## 2. 创建/更新证书 CA 密文资源
+### 2. 创建/更新证书 CA 密文资源
 
 如果新证书由私有 CA 签发的，你需要将相应的根 CA 证书复制到名为 `cacerts.pem` 的文件中，并创建或更新 `cattle-system` 命名空间中的 `tls-ca` 密文。如果证书由中间 CA 签名，则 `cacerts.pem` 必须按顺序同时包含中间 CA 证书和根 CA 证书。
 
@@ -56,7 +56,7 @@ $ kubectl -n cattle-system create secret generic tls-ca \
   --dry-run --save-config -o yaml | kubectl apply -f -
 ```
 
-## 3. 重新配置 Rancher 部署
+### 3. 重新配置 Rancher 部署
 
 :::note
 
@@ -95,18 +95,18 @@ helm upgrade rancher rancher-stable/rancher \
 
 升级完成后，访问 `https://<Rancher_SERVER>/v3/settings/cacerts`，验证该值是否与先前写入 `tls-ca` 密文中的 CA 证书匹配。
 
-## 4. 重新配置 Rancher Agent 以信任私有 CA
+### 4. 重新配置 Rancher Agent 以信任私有 CA
 
 本节介绍了重新配置 Rancher Agent 以信任私有 CA 的三种方法。如果你的实际情况符合以下任意一个条件，请执行此步骤：
 
 - Rancher 初始配置中使用了 Rancher 自签名证书 (`ingress.tls.source=rancher`) 或 Let's Encrypt 证书 (`ingress.tls.source=letsEncrypt`)。
 - 新自定义证书的根 CA 证书已更改。
 
-### 为什么要执行这一步骤？
+#### 为什么要执行这一步骤？
 
 如果 Rancher 配置了私有 CA 签名的证书时，CA 证书链会下载到 Rancher Agent 容器中。代理会对下载证书的校验和及 `CATTLE_CA_CHECKSUM` 环境变量进行比较。如果私有 CA 证书在 Rancher Server 端更改了，环境变量 `CATTLE_CA_CHECKSUM` 必须相应进行更新。
 
-### 可使用的方法
+#### 可使用的方法
 
 - 方法 1（最简单的方法）：
 在轮换证书后将所有集群连接到 Rancher。适用于更新 Rancher 部署（步骤 3）后立即执行的情况。
@@ -115,7 +115,7 @@ helm upgrade rancher rancher-stable/rancher \
 
 - 方法 3：方法 1 和方法 2 不可用的情况下可使用。
 
-### 方法 1：Kubectl 命令
+#### 方法 1：Kubectl 命令
 
 对于**集群管理**中的每个集群（除去 `local` Rancher 管理集群），使用 Rancher 管理集群（RKE 或 K3S）的 `Kubeconfig` 文件运行以下命令：
 
@@ -126,7 +126,7 @@ kubectl patch clusters.management.cattle.io <REPLACE_WITH_CLUSTERID> -p '{"statu
 这个命令能使所有 Agent Kubernetes 资源使用新证书的校验和重新配置。
 
 
-### 方法 2：手动更新校验和
+#### 方法 2：手动更新校验和
 
 通过将 `CATTLE_CA_CHECKSUM` 环境变量更新为匹配新 CA 证书校验和的值，来手动为 Agent Kubernetes 资源打上补丁。通过以下操作生成新的校验和：
 
@@ -142,7 +142,7 @@ $ kubectl edit -n cattle-system ds/cattle-node-agent
 $ kubectl edit -n cattle-system deployment/cattle-cluster-agent
 ```
 
-### 方法 3：重新创建 Rancher Agent
+#### 方法 3：重新创建 Rancher Agent
 
 你可以在每个下游集群的 controlplane 节点上运行一组命令，来重新创建 Rancher Agent。
 
@@ -151,15 +151,15 @@ $ kubectl edit -n cattle-system deployment/cattle-cluster-agent
 然后，SSH 连接到下游集群的 controlplane 节点，创建 Kubeconfig 并应用定义（参见[此处](
 https://gist.github.com/superseb/b14ed3b5535f621ad3d2aa6a4cd6443b)）。
 
-## 5. 选择 Fleet 集群的强制更新，来将 fleet-agent 连接到 Rancher
+### 5. 选择 Fleet 集群的强制更新，来将 fleet-agent 连接到 Rancher
 
 在 Rancher UI 的[持续交付](../../../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md#在-rancher-ui-中访问-fleet)中，为集群选择“强制更新”，来允许下游集群中的 fleet-agent 成功连接到 Rancher。
 
-### 为什么要执行这一步骤？
+#### 为什么要执行这一步骤？
 
 Rancher 管理的集群中的 Fleet agent 存储 kubeconfig，该配置用于连接到 Fleet 系统命名空间的 fleet-agent 密文中的 Rancher 代理 kube-api。kubeconfig 包括一个包含 Rancher CA 的证书授权数据块。更改 Rancher CA 时，需要更新此块来使 fleet-agent 成功连接到 Rancher。
 
-# 将私有 CA 证书更改为通用证书
+## 将私有 CA 证书更改为通用证书
 
 :::note
 
@@ -167,7 +167,7 @@ Rancher 管理的集群中的 Fleet agent 存储 kubeconfig，该配置用于连
 
 :::
 
-## 1. 创建/更新证书密文资源
+### 1. 创建/更新证书密文资源
 
 首先，将服务器证书和所有中间证书合并到名为 `tls.crt` 的文件，并在名为 `tls.key` 的文件中提供相应的证书密钥。
 
@@ -188,7 +188,7 @@ $ kubectl -n cattle-system create secret tls tls-rancher-ingress \
   --dry-run --save-config -o yaml | kubectl apply -f -
 ```
 
-## 2. 删除 CA 证书密文资源
+### 2. 删除 CA 证书密文资源
 
 你需要删除 `cattle-system` 命名空间中的 `tls-ca secret`（不再需要它）。如果需要，你还可以选择保存 `tls-ca secret` 的副本。
 
@@ -204,7 +204,7 @@ kubectl -n cattle-system get secret tls-ca -o yaml > tls-ca.yaml
 kubectl -n cattle-system delete secret tls-ca
 ```
 
-## 3. 重新配置 Rancher 部署
+### 3. 重新配置 Rancher 部署
 
 :::note 重要提示：
 
@@ -250,14 +250,14 @@ helm upgrade rancher rancher-stable/rancher \
 set privateCA=false
 ```
 
-## 4. 为非私有/通用证书重新配置 Rancher Agent
+### 4. 为非私有/通用证书重新配置 Rancher Agent
 
 下游集群 Agent 上的 `CATTLE_CA_CHECKSUM` 环境变量应该被删除或设置为“”（一个空字符串）。
 
-## 5. 选择 Fleet 集群的强制更新，来将 fleet-agent 连接到 Rancher
+### 5. 选择 Fleet 集群的强制更新，来将 fleet-agent 连接到 Rancher
 
 在 Rancher UI 的[持续交付](../../../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md#在-rancher-ui-中访问-fleet)中，为集群选择“强制更新”，来允许下游集群中的 fleet-agent 成功连接到 Rancher。
 
-### 为什么要执行这一步骤？
+#### 为什么要执行这一步骤？
 
 Rancher 管理的集群中的 Fleet agent 存储 kubeconfig，该配置用于连接到 Fleet 系统命名空间的 fleet-agent 密文中的 Rancher 代理 kube-api。kubeconfig 包括一个包含 Rancher CA 的证书授权数据块。更改 Rancher CA 时，需要更新此块来使 fleet-agent 成功连接到 Rancher。

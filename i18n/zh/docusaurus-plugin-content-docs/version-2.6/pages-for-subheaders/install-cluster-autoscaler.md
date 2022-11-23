@@ -15,7 +15,7 @@ Cluster Autoscaler 运行在 Kubernetes master 节点上。它可以在 `kube-sy
 
 你可以在 worker 节点上运行 Cluster Autoscaler 的自定义 deployment，但需要小心以保证 Cluster Autoscaler 能正常运行。
 
-# 云提供商
+## 云提供商
 
 Cluster Autoscaler 为不同的云提供商提供支持。有关详细信息，请参见 [Cluster Autoscaler 支持的云提供商](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler#deployment)。
 

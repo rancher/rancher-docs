@@ -16,7 +16,7 @@ title: 在 vSphere 中配置 Kubernetes 集群
 - [vSphere 中的准备工作](#vsphere-中的准备工作)
 - [创建 vSphere 集群](#创建-vsphere-集群)
 
-# vSphere 中的准备工作
+## vSphere 中的准备工作
 
 本节介绍设置 vSphere 的要求，以便 Rancher 可以配置虚拟机和集群。
 

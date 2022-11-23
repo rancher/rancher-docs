@@ -9,14 +9,13 @@ description: 要创建具有自定义节点的集群，你需要访问集群中�
 
 本节介绍如何设置自定义集群。
 
-# 使用自定义节点创建集群
+## 使用自定义节点创建集群
 
 :::note 使用 Windows 主机作为 Kubernetes Worker 节点？
 
 在开始之前，请参阅[配置 Windows 自定义集群](use-windows-clusters.md)。
 
 :::
-
 
 ### 1. 配置 Linux 主机
 
@@ -130,7 +129,7 @@ Key=kubernetes.io/cluster/<CLUSTERID>, Value=owned
 Key=kubernetes.io/cluster/CLUSTERID, Value=shared
 ```
 
-# 可选的后续步骤
+## 可选的后续步骤
 
 创建集群后，你可以通过 Rancher UI 访问集群。最佳实践建议你设置以下访问集群的备用方式：
 

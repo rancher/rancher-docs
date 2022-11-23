@@ -29,12 +29,12 @@ resourcepool-path: "<cluster-name>/Resources/<resource-pool-name>"
 
 跟踪此 bug 的 Rancher issue：https://github.com/rancher/rancher/issues/31105
 
-# 先决条件
+## 先决条件
 
 - vSphere CSI 迁移需要 vSphere 7.0u1。为了管理现有的树内 vSphere 卷，请将 vSphere 升级到 7.0u1。
 - Kubernetes 版本必须为 1.19 或更高版本。
 
-# 迁移
+## 迁移
 
 ### 1. 安装 CPI 插件
 

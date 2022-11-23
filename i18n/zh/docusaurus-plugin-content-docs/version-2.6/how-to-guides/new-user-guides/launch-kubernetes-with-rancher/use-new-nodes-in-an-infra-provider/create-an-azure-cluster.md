@@ -29,7 +29,7 @@ import TabItem from '@theme/TabItem';
 - [Azure 中的准备工作](#azure-中的准备工作)
 - [创建 Azure 集群](#创建-azure-集群)
 
-# Azure 中的准备工作
+## Azure 中的准备工作
 
 在使用 Azure 等云厂商在 Rancher 中创建节点模板之前，必须先配置 Rancher 以允许操作 Azure 订阅中的资源。
 
@@ -46,7 +46,7 @@ az ad sp create-for-rbac \
 
 创建服务主体后会返回三个标识信息，分别是*应用 ID（也称为客户端 ID）*，以及*客户端密码*。为 Azure 创建节点模板时将使用这些信息。
 
-# 创建 Azure 集群
+## 创建 Azure 集群
 
 <Tabs>
 <TabItem value="RKE">

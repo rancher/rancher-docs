@@ -8,11 +8,11 @@ title: 系统工具
 
 :::
 
-# 日志
+## 日志
 
 请使用 [logs-collector](https://github.com/rancherlabs/support-tools/tree/master/collection/rancher/v2.x/logs-collector) 来收集你的集群日志。
 
-# Stats
+## Stats
 
 如果要复制 stats 命令，你可以在集群节点上运行以下命令：
 
@@ -26,6 +26,6 @@ title: 系统工具
 /usr/bin/sar -u -r -F 1 1
 ```
 
-# Remove
+## Remove
 
 请使用 [Rancher Cleanup](https://github.com/rancher/rancher-cleanup) 工具。

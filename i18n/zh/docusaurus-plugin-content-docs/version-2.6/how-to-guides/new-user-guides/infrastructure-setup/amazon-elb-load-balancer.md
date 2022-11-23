@@ -149,7 +149,7 @@ Rancher 仅支持使用 Amazon NLB 以 `TCP` 模式终止 443 端口的流量，
 
 AWS 完成 NLB 创建后，单击**关闭**。
 
-# 4. 为 TCP 端口 80 向 NLB 添加监听器
+## 4. 为 TCP 端口 80 向 NLB 添加监听器
 
 1. 选择新创建的 NLB 并选择**监听器**选项卡。
 
@@ -163,7 +163,7 @@ AWS 完成 NLB 创建后，单击**关闭**。
 
 6. 单击右上角的**保存**。
 
-# NGINX Ingress 和 Traefik Ingress 的健康检查路径
+## NGINX Ingress 和 Traefik Ingress 的健康检查路径
 
 K3s 和 RKE Kubernetes 集群使用的默认 Ingress 不同，因此对应的健康检查方式也不同。
 

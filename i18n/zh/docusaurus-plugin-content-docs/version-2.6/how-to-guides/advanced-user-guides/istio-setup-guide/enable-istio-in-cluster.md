@@ -24,6 +24,6 @@ title: 1. 在集群中启用 Istio
 
 **结果**：已在集群级别安装 Istio。
 
-# 其他配置选项
+## 其他配置选项
 
 有关配置 Istio 的更多信息，请参阅[配置参考](../../../pages-for-subheaders/configuration-options.md)。

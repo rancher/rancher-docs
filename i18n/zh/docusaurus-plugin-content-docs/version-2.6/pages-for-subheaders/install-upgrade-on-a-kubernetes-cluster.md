@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 在本节中，你将学习如何使用 Helm CLI 在 Kubernetes 集群上部署 Rancher。
 
 
-# 先决条件
+## 先决条件
 
 - [Kubernetes 集群](#kubernetes-集群)
 - [Ingress Controller](#ingress-controller)
@@ -47,7 +47,7 @@ Rancher UI 和 API 通过 Ingress 公开。换言之，安装 Rancher 的 Kubern
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) - Kubernetes 命令行工具。
 - [Helm](https://docs.helm.sh/using_helm/#installing-helm) - Kubernetes 的包管理器。请参见 [Helm 版本要求](../getting-started/installation-and-upgrade/resources/helm-version-requirements.md)选择 Helm 版本来安装 Rancher。请为你的具体平台参见 [Helm 项目提供的说明](https://helm.sh/docs/intro/install/)。
 
-# 安装 Rancher Helm Chart
+## 安装 Rancher Helm Chart
 
 Rancher 是使用 Kubernetes 的 [Helm](https://helm.sh/) 包管理器安装的。Helm Chart 为 Kubernetes YAML 清单文件提供了模板语法。通过 Helm，用户可以创建可配置的 deployment，而不仅仅只能使用静态文件。
 

@@ -74,7 +74,7 @@ Rancher Server 默认设计为安全的，并且需要 SSL/TLS 配置。
 | `systemDefaultRegistry` | `<REGISTRY.YOURDOMAIN.COM:PORT>` | 将 Rancher Server 配置成在配置集群时，始终从私有镜像仓库中拉取镜像。 |
 | `useBundledSystemChart` | `true` | 配置 Rancher Server 使用打包的 Helm System Chart 副本。[system charts](https://github.com/rancher/system-charts) 仓库包含所有 Monitoring，Logging，告警和全局 DNS 等功能所需的应用商店项目。这些 [Helm Chart](https://github.com/rancher/system-charts) 位于 GitHub 中。但是由于你处在离线环境，因此使用 Rancher 内置的 Chart 会比设置 Git mirror 容易得多。 |
 
-### 3. 渲染 Rancher Helm 模板
+### 3. 获取 Cert-Manager Chart
 
 根据你在[2：选择 SSL 配置](#2-选择-ssl-配置)中的选择，完成以下步骤之一：
 
@@ -112,30 +112,62 @@ v2.6.4 兼容 cert-manager 版本 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为
 helm fetch jetstack/cert-manager --version v1.7.1
 ```
 
-##### 3. 渲染 cert-manager 模板
 
-使用你想用来安装 Chart 的选项来渲染 cert-manager 模板。记住要设置 `image.repository` 选项，以从你的私有镜像仓库拉取镜像。此操作会创建一个包含 Kubernetes manifest 文件的 `cert-manager` 目录。
-
-```plain
-helm template cert-manager ./cert-manager-v1.7.1.tgz --output-dir . \
-    --namespace cert-manager \
-    --set image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-controller \
-    --set webhook.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-webhook \
-    --set cainjector.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-cainjector \
-    --set startupapicheck.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-ctl
-```
-
-##### 4. 下载 cert-manager CRD
+##### 3. 检索 Cert-Manager CRD
 
 为 cert-manager 下载所需的 CRD 文件：
 ```plain
 curl -L -o cert-manager/cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/releases/download/v1.7.1/cert-manager.crds.yaml
 ```
 
-##### 5. 渲染 Rancher 模板
+### 4. 安装 Rancher
 
-渲染 Rancher 模板来声明你的选项。参考下表来替换每个占位符。Rancher 需要配置为使用私有镜像仓库，以便配置所有 Rancher 启动的 Kubernetes 集群或 Rancher 工具。
+将获取的 Chart 复制到有权访问 Rancher Server 集群的系统以完成安装。
 
+##### 1. 安装 Cert-Manager
+
+使用要用于安装 Chart 的选项来安装 cert-manager。记住要设置 `image.repository` 选项，以从你的私有镜像仓库拉取镜像。此操作会创建一个包含 Kubernetes manifest 文件的 `cert-manager` 目录。
+
+<details id="install-cert-manager">
+  <summary>单击展开</summary>
+
+如果你使用自签名证书，安装 cert-manager：
+
+1. 为 cert-manager 创建命名空间：
+
+   ```plain
+   kubectl create namespace cert-manager
+   ```
+
+2. 创建 cert-manager CustomResourceDefinition (CRD)。
+
+   ```plain
+   kubectl apply -f cert-manager/cert-manager-crd.yaml
+   ```
+
+3. 安装 cert-manager。
+
+   ```plain
+   helm install cert-manager ./cert-manager-v1.7.1.tgz \
+       --namespace cert-manager \
+       --set image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-controller \
+       --set webhook.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-webhook \
+       --set cainjector.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-cainjector \
+       --set startupapicheck.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-ctl
+   ```
+
+</details>
+
+##### 2. 安装 Rancher
+首先，参见[添加 TLS 密文](../../resources/add-tls-secrets.md)发布证书文件，以便 Rancher 和 Ingress Controller 可以使用它们。
+
+然后，使用 kubectl 为 Rancher 创建命名空间：
+
+```plain
+kubectl create namespace cattle-system
+```
+
+然后安装 Rancher，并声明你选择的选项。参考下表来替换每个占位符。Rancher 需要配置为使用私有镜像仓库，以便配置所有 Rancher 启动的 Kubernetes 集群或 Rancher 工具。
 
 | 占位符 | 描述 |
 ------------|-------------
@@ -145,8 +177,7 @@ curl -L -o cert-manager/cert-manager-crd.yaml https://github.com/cert-manager/ce
 | `<CERTMANAGER_VERSION>` | 在 K8s 集群上运行的 cert-manager 版本。 |
 
 ```plain
-helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
-    --no-hooks \ # 避免生成 Helm 钩子文件
+   helm install rancher ./rancher-<VERSION>.tgz \
     --namespace cattle-system \
     --set hostname=<RANCHER.YOURDOMAIN.COM> \
     --set certmanager.version=<CERTMANAGER_VERSION> \
@@ -159,14 +190,13 @@ helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
 
 #### 选项 B：使用 Kubernetes 密文从文件中获取证书
 
-
 ##### 1. 创建密文
 
 使用你自己的证书来创建 Kubernetes 密文，以供 Rancher 使用。证书的 common name 需要与以下命令中的 `hostname` 选项匹配，否则 Ingress Controller 将无法为 Rancher 配置站点。
 
-##### 2. 渲染 Rancher 模板
+##### 2. 安装 Rancher
 
-渲染 Rancher 模板来声明你的选项。参考下表来替换每个占位符。Rancher 需要配置为使用私有镜像仓库，以便配置所有 Rancher 启动的 Kubernetes 集群或 Rancher 工具。
+安装 Rancher，并声明你选择的选项。参考下表来替换每个占位符。Rancher 需要配置为使用私有镜像仓库，以便配置所有 Rancher 启动的 Kubernetes 集群或 Rancher 工具。
 
 | 占位符 | 描述 |
 | -------------------------------- | ----------------------------------------------- |
@@ -175,8 +205,7 @@ helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
 | `<REGISTRY.YOURDOMAIN.COM:PORT>` | 你的私有镜像仓库的 DNS 名称。 |
 
 ```plain
-   helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
-    --no-hooks \ # 避免生成 Helm 钩子文件
+   helm install rancher ./rancher-<VERSION>.tgz --output-dir . \
     --namespace cattle-system \
     --set hostname=<RANCHER.YOURDOMAIN.COM> \
     --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
@@ -188,8 +217,7 @@ helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
 如果你使用的是私有 CA 签名的证书，请在 `--set ingress.tls.source=secret` 后加上 `--set privateCA=true`：
 
 ```plain
-   helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
-    --no-hooks \ # 避免生成 Helm 钩子文件
+   helm install rancher ./rancher-<VERSION>.tgz --output-dir . \
     --namespace cattle-system \
     --set hostname=<RANCHER.YOURDOMAIN.COM> \
     --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
@@ -199,55 +227,8 @@ helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
     --set useBundledSystemChart=true # 使用打包的 Rancher System Chart
 ```
 
-**可选**：如需安装特定的 Rancher 版本，设置`rancherImageTag` 的值，例如：`--set rancherImageTag=v2.3.6`
 
-然后，参见[添加 TLS 密文](../../resources/add-tls-secrets.md)发布证书文件，以便 Rancher 和 Ingress Controller 可以使用它们。
-
-### 4. 安装 Rancher
-
-将渲染的 manifest 目录复制到可以访问 Rancher Server 集群的系统中，以完成安装。
-
-使用 `kubectl` 来创建命名空间和应用渲染的 manifest。
-
-如果你使用自签名证书（在[选项B. 选择 SSL 配置](#b-选择-ssl-配置)中），安装 cert-manager。
-
-#### 自签名证书安装 - 安装 Cert-manager
-
-<details id="install-cert-manager">
-  <summary>单击展开</summary>
-
-如果你使用自签名证书，安装 cert-manager：
-
-1. 为 cert-manager 创建命名空间：
-   ```plain
-   kubectl create namespace cert-manager
-   ```
-2. 创建 cert-manager CustomResourceDefinition (CRD)。
-   ```plain
-   kubectl apply -f cert-manager/cert-manager-crd.yaml
-   ```
-
-   :::note
-
-   如果你运行的 Kubernetes 版本是 1.15 或更低版本，你需要在以上的 `kubectl apply` 命令中添加 `--validate=false`，否则你将看到 cert-manager CRD 资源中的 `x-kubernetes-preserve-unknown-fields` 字段校验错误提示。这是 kubectl 执行资源校验方式产生的良性错误。
-
-   :::
-
-3. 启动 cert-manager.
-   ```plain
-   kubectl apply -R -f ./cert-manager
-   ```
-
-</details>
-
-#### 使用 kubectl 安装 Rancher
-
-```plain
-kubectl create namespace cattle-system
-kubectl -n cattle-system apply -R -f ./rancher
-```
 安装已完成。
-
 :::caution
 
 如果你不想发送遥测数据，在首次登录时退出[遥测](../../../../faq/telemetry.md)。如果在离线安装的环境中让这个功能处于 active 状态，socket 可能无法打开。

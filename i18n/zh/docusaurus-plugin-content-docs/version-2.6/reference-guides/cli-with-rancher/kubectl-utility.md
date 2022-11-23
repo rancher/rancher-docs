@@ -2,7 +2,7 @@
 title: kubectl 实用程序
 ---
 
-# kubectl
+## kubectl
 
 kubectl 用于与 Rancher 进行交互。
 
