@@ -120,7 +120,7 @@ After registering a cluster, the cluster owner can:
 [K3s](https://rancher.com/docs/k3s/latest/en/) is a lightweight, fully compliant Kubernetes distribution for edge installations.
 [RKE2](https://docs.rke2.io) is Rancher's next-generation Kubernetes distribution for datacenter and cloud installations.
 
-When a RKE2 or K3s cluster is registered in Rancher, Rancher will recognize it. The Rancher UI will expose the features for [all registered clusters,](#features-for-all-registered-clusters) in addition to the following features for editing and upgrading the cluster:
+When an RKE2 or K3s cluster is registered in Rancher, Rancher will recognize it. The Rancher UI will expose the features for [all registered clusters,](#features-for-all-registered-clusters) in addition to the following features for editing and upgrading the cluster:
 
 - The ability to [upgrade the Kubernetes version](../../../getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes.md)
 - The ability to configure the maximum number of nodes that will be upgraded concurrently
