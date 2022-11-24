@@ -31,26 +31,24 @@ before running the `kubectl` command to register the cluster.
 
 By default, GKE users are not given this privilege, so you will need to run the command before registering GKE clusters. To learn more about role-based access control for GKE, please click [here](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control).
 
-If you are registering a K3s cluster, make sure the `cluster.yml` is readable. It is protected by default. For details, refer to [Configuring a K3s cluster to enable importation to Rancher.](#configuring-a-k3s-cluster-to-enable-registration-in-rancher)
+### EKS, AKS and GKE Clusters
 
-### EKS Clusters
-
-EKS clusters must have at least one managed node group to be imported into Rancher or provisioned from Rancher successfully.
+EKS, AKS and GKE clusters must have at least one managed node group to be imported into Rancher or provisioned from Rancher successfully.
 
 ## Registering a Cluster
 
 1. Click **☰ > Cluster Management**.
-1. On the **Clusters** page, **Import Existing**.
-1. Choose the type of cluster.
-1. Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.
-1. If you are importing a generic Kubernetes cluster in Rancher, perform the following steps for setup:<br/>
+2. On the **Clusters** page, **Import Existing**.
+3. Choose the type of cluster.
+4. Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.
+5. If you are importing a generic Kubernetes cluster in Rancher, perform the following steps for setup:<br/>
   a. Click **Agent Environment Variables** under **Cluster Options** to set environment variables for [rancher cluster agent](../launch-kubernetes-with-rancher/about-rancher-agents.md). The environment variables can be set using key value pairs. If rancher agent requires use of proxy to communicate with Rancher server, `HTTP_PROXY`, `HTTPS_PROXY` and `NO_PROXY` environment variables can be set using agent environment variables.<br/>
   b. Enable Project Network Isolation to ensure the cluster supports Kubernetes `NetworkPolicy` resources. Users can select the **Project Network Isolation** option under the **Advanced Options** dropdown to do so.
-1. Click **Create**.
-1. The prerequisite for `cluster-admin` privileges is shown (see **Prerequisites** above), including an example command to fulfil the prerequisite.
-1. Copy the `kubectl` command to your clipboard and run it on a node where kubeconfig is configured to point to the cluster you want to import. If you are unsure it is configured correctly, run `kubectl get nodes` to verify before running the command shown in Rancher.
-1. If you are using self-signed certificates, you will receive the message `certificate signed by unknown authority`. To work around this validation, copy the command starting with `curl` displayed in Rancher to your clipboard. Then run the command on a node where kubeconfig is configured to point to the cluster you want to import.
-1. When you finish running the command(s) on your node, click **Done**.
+6. Click **Create**.
+7. The prerequisite for `cluster-admin` privileges is shown (see **Prerequisites** above), including an example command to fulfil the prerequisite.
+8. Copy the `kubectl` command to your clipboard and run it on a node where kubeconfig is configured to point to the cluster you want to import. If you are unsure it is configured correctly, run `kubectl get nodes` to verify before running the command shown in Rancher.
+9. If you are using self-signed certificates, you will receive the message `certificate signed by unknown authority`. To work around this validation, copy the command starting with `curl` displayed in Rancher to your clipboard. Then run the command on a node where kubeconfig is configured to point to the cluster you want to import.
+10. When you finish running the command(s) on your node, click **Done**.
 
 **Result:**
 
@@ -65,29 +63,13 @@ You can not re-register a cluster that is currently active in a Rancher setup.
 
 :::
 
-### Configuring a K3s Cluster to Enable Registration in Rancher
+### Configuring an Imported EKS, AKS or GKE Cluster with Terraform
 
-The K3s server needs to be configured to allow writing to the kubeconfig file.
-
-This can be accomplished by passing `--write-kubeconfig-mode 644` as a flag during installation:
-
-```
-$ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
-```
-
-The option can also be specified using the environment variable `K3S_KUBECONFIG_MODE`:
-
-```
-$ curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" sh -s -
-```
-
-### Configuring an Imported EKS Cluster with Terraform
-
-You should define **only** the minimum fields that Rancher requires when importing an EKS cluster with Terraform. This is important as Rancher will overwrite what was in the EKS cluster with any config that the user has provided.
+You should define **only** the minimum fields that Rancher requires when importing an EKS, AKS or GKE cluster with Terraform. This is important as Rancher will overwrite what was in the cluster configuration with any config that the user has provided.
 
 :::caution
 
-Even a small difference between the current EKS cluster and a user-provided config could have unexpected results.
+Even a small difference between the current cluster and a user-provided config could have unexpected results.
 
 :::
 
@@ -113,13 +95,15 @@ resource "rancher2_cluster" "my-eks-to-import" {
 }
 ```
 
+You can find additional examples for other cloud providers in the [Rancher2 Terraform Provider documentation](https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster).
+
 ## Management Capabilities for Registered Clusters
 
 The control that Rancher has to manage a registered cluster depends on the type of cluster.
 
-- [Features for All Registered Clusters](#2-5-8-features-for-all-registered-clusters)
-- [Additional Features for Registered K3s Clusters](#2-5-8-additional-features-for-registered-k3s-clusters)
-- [Additional Features for Registered EKS and GKE Clusters](#additional-features-for-registered-eks-and-gke-clusters)
+- [Features for All Registered Clusters](#features-for-all-registered-clusters)
+- [Additional Features for Registered RKE2 and K3s Clusters](#additional-features-for-registered-rke2-and-k3s-clusters)
+- [Additional Features for Registered EKS, AKS and GKE Clusters](#additional-features-for-registered-eks-aks-and-gke-clusters)
 
 ### Features for All Registered Clusters
 
@@ -131,27 +115,28 @@ After registering a cluster, the cluster owner can:
 - Enable [Istio](../../../pages-for-subheaders/istio.md)
 - Manage projects and workloads
 
-### Additional Features for Registered K3s Clusters
+### Additional Features for Registered RKE2 and K3s Clusters
 
-[K3s](https://rancher.com/docs/k3s/latest/en/) is a lightweight, fully compliant Kubernetes distribution.
+[K3s](https://rancher.com/docs/k3s/latest/en/) is a lightweight, fully compliant Kubernetes distribution for edge installations.
+[RKE2](https://docs.rke2.io) is Rancher's next-generation Kubernetes distribution for datacenter and cloud installations.
 
-When a K3s cluster is registered in Rancher, Rancher will recognize it as K3s. The Rancher UI will expose the features for [all registered clusters,](#features-for-all-registered-clusters) in addition to the following features for editing and upgrading the cluster:
+When an RKE2 or K3s cluster is registered in Rancher, Rancher will recognize it. The Rancher UI will expose the features for [all registered clusters,](#features-for-all-registered-clusters) in addition to the following features for editing and upgrading the cluster:
 
-- The ability to [upgrade the K3s version](../../../getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes.md)
+- The ability to [upgrade the Kubernetes version](../../../getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes.md)
 - The ability to configure the maximum number of nodes that will be upgraded concurrently
-- The ability to see a read-only version of the K3s cluster's configuration arguments and environment variables used to launch each node in the cluster
+- The ability to see a read-only version of the cluster's configuration arguments and environment variables used to launch each node in the cluster
 
-### Additional Features for Registered EKS and GKE Clusters
+### Additional Features for Registered EKS, AKS and GKE Clusters
 
-Registering an Amazon EKS cluster or GKE cluster allows Rancher to treat it as though it were created in Rancher.
+Registering an Amazon EKS, Azure AKS or GKE cluster allows Rancher to treat it as though it were created in Rancher.
 
-Amazon EKS clusters and GKE clusters can now be registered in Rancher. For the most part, these registered clusters are treated the same way as clusters created in the Rancher UI, except for deletion.
+Amazon EKS, Azure AKS and GKE clusters can now be registered in Rancher. For the most part, these registered clusters are treated the same way as clusters created in the Rancher UI, except for deletion.
 
-When you delete an EKS cluster or GKE cluster that was created in Rancher, the cluster is destroyed. When you delete a cluster that was registered in Rancher, it is disconnected from the Rancher server, but it still exists and you can still access it in the same way you did before it was registered in Rancher.
+When you delete an EKS, AKS or GKE cluster that was created in Rancher, the cluster is destroyed. When you delete a cluster that was registered in Rancher, it is disconnected from the Rancher server, but it still exists, and you can still access it in the same way you did before it was registered in Rancher.
 
 The capabilities for registered clusters are listed in the table on [this page.](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)
 
-## Configuring K3s Cluster Upgrades
+## Configuring RKE2 and K3s Cluster Upgrades
 
 :::tip
 
@@ -164,13 +149,13 @@ The **concurrency** is the maximum number of nodes that are permitted to be unav
 - **Controlplane concurrency:** The maximum number of server nodes to upgrade at a single time; also the maximum unavailable server nodes
 - **Worker concurrency:** The maximum number worker nodes to upgrade at the same time; also the maximum unavailable worker nodes
 
-In the K3s documentation, controlplane nodes are called server nodes. These nodes run the Kubernetes master, which maintains the desired state of the cluster. In K3s, these controlplane nodes have the capability to have workloads scheduled to them by default.
+In the RKE2 and K3s documentation, controlplane nodes are called server nodes. These nodes run the Kubernetes master, which maintains the desired state of the cluster. By default, these controlplane nodes have the capability to have workloads scheduled to them by default.
 
-Also in the K3s documentation, nodes with the worker role are called agent nodes. Any workloads or pods that are deployed in the cluster can be scheduled to these nodes by default.
+Also in the RKE2 and K3s documentation, nodes with the worker role are called agent nodes. Any workloads or pods that are deployed in the cluster can be scheduled to these nodes by default.
 
-## Debug Logging and Troubleshooting for Registered K3s Clusters
+## Debug Logging and Troubleshooting for Registered RKE2 and K3s Clusters
 
-Nodes are upgraded by the system upgrade controller running in the downstream cluster. Based on the cluster configuration, Rancher deploys two [plans](https://github.com/rancher/system-upgrade-controller#example-upgrade-plan) to upgrade K3s nodes: one for controlplane nodes and one for workers. The system upgrade controller follows the plans and upgrades the nodes.
+Nodes are upgraded by the system upgrade controller running in the downstream cluster. Based on the cluster configuration, Rancher deploys two [plans](https://github.com/rancher/system-upgrade-controller#example-upgrade-plan) to upgrade nodes: one for controlplane nodes and one for workers. The system upgrade controller follows the plans and upgrades the nodes.
 
 To enable debug logging on the system upgrade controller deployment, edit the [configmap](https://github.com/rancher/system-upgrade-controller/blob/50a4c8975543d75f1d76a8290001d87dc298bdb4/manifests/system-upgrade-controller.yaml#L32) to set the debug environment variable to true. Then restart the `system-upgrade-controller` pod.
 
@@ -229,18 +214,18 @@ Authorized Cluster Endpoint (ACE) support has been added for registered RKE2 and
         cluster: Default
     ```
 
-1. Add the following to the config file (or create one if it doesn’t exist); note that the default location is `/etc/rancher/{rke2,k3s}/config.yaml`:
+2. Add the following to the config file (or create one if it doesn’t exist); note that the default location is `/etc/rancher/{rke2,k3s}/config.yaml`:
     ```yaml
     kube-apiserver-arg:
         - authentication-token-webhook-config-file=/var/lib/rancher/{rke2,k3s}/kube-api-authn-webhook.yaml
     ```
 
-1. Run the following commands:
+3. Run the following commands:
 
         sudo systemctl stop {rke2,k3s}-server
         sudo systemctl start {rke2,k3s}-server
 
-1. Finally, you **must** go back to the Rancher UI and edit the imported cluster there to complete the ACE enablement. Click on **⋮ > Edit Config**, then click the **Networking** tab under Cluster Configuration. Finally, click the **Enabled** button for **Authorized Endpoint**. Once the ACE is enabled, you then have the option of entering a fully qualified domain name (FQDN) and certificate information.
+4. Finally, you **must** go back to the Rancher UI and edit the imported cluster there to complete the ACE enablement. Click on **⋮ > Edit Config**, then click the **Networking** tab under Cluster Configuration. Finally, click the **Enabled** button for **Authorized Endpoint**. Once the ACE is enabled, you then have the option of entering a fully qualified domain name (FQDN) and certificate information.
 
 :::note
 
@@ -250,7 +235,7 @@ The <b>FQDN</b> field is optional, and if one is entered, it should point to the
 
 ## Annotating Registered Clusters
 
-For all types of registered Kubernetes clusters except for K3s Kubernetes clusters, Rancher doesn't have any information about how the cluster is provisioned or configured.
+For all types of registered Kubernetes clusters except for RKE2 and K3s Kubernetes clusters, Rancher doesn't have any information about how the cluster is provisioned or configured.
 
 Therefore, when Rancher registers a cluster, it assumes that several capabilities are disabled by default. Rancher assumes this in order to avoid exposing UI options to the user even when the capabilities are not enabled in the registered cluster.
 
@@ -264,7 +249,7 @@ This example annotation indicates that a pod security policy is enabled:
 "capabilities.cattle.io/pspEnabled": "true"
 ```
 
-The following annotation indicates Ingress capabilities. Note that that the values of non-primitive objects need to be JSON encoded, with quotations escaped.
+The following annotation indicates Ingress capabilities. Note that the values of non-primitive objects need to be JSON encoded, with quotations escaped.
 
 ```json
 "capabilities.cattle.io/ingressCapabilities": "[
@@ -289,10 +274,10 @@ All the capabilities and their type definitions can be viewed in the Rancher API
 To annotate a registered cluster,
 
 1. Click **☰ > Cluster Management**.
-1. On the **Clusters** page, go to the custom cluster you want to annotate and click **⋮ > Edit Config**.
-1. Expand the **Labels & Annotations** section.
-1. Click **Add Annotation**.
-1. Add an annotation to the cluster with the format `capabilities/<capability>: <value>` where `value` is the cluster capability that will be overridden by the annotation. In this scenario, Rancher is not aware of any capabilities of the cluster until you add the annotation.
-1. Click **Save**.
+2. On the **Clusters** page, go to the custom cluster you want to annotate and click **⋮ > Edit Config**.
+3. Expand the **Labels & Annotations** section.
+4. Click **Add Annotation**.
+5. Add an annotation to the cluster with the format `capabilities/<capability>: <value>` where `value` is the cluster capability that will be overridden by the annotation. In this scenario, Rancher is not aware of any capabilities of the cluster until you add the annotation.
+6. Click **Save**.
 
 **Result:** The annotation does not give the capabilities to the cluster, but it does indicate to Rancher that the cluster has those capabilities.
