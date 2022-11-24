@@ -118,7 +118,7 @@ kubectl annotate clusters.management.cattle.io <CLUSTER_ID> io.cattle.agent.forc
 ```
 
 :::note
-Locate the cluster ID (c-xxxxx) for the downstream cluster, this can be seen in the browser URL bar when viewing the cluster in the Rancher UI, under Cluster Management
+Locate the cluster ID (c-xxxxx) for the downstream cluster, this can be seen in the browser URL bar when viewing the cluster in the Rancher UI, under Cluster Management.
 :::
 
 This command will cause the agent manifest to be reapplied with the checksum of the new certificate.
@@ -152,8 +152,8 @@ Repeat the below steps for each downstream cluster:
   2. Run the kubectl command from the previous step using a kubeconfig for the downstream cluster with one of the following methods:
       1. If the [ACE](https://docs.ranchermanager.rancher.io/how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint) is enabled for the cluster, [the context can be adjusted](https://docs.ranchermanager.rancher.io/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig#authenticating-directly-with-a-downstream-cluster) to connect directly to the downstream cluster
       1. Alternatively, SSH into the control plane node:
-          1. RKE: Use the [steps in the document here](https://github.com/rancherlabs/support-tools/tree/master/how-to-retrieve-kubeconfig-from-custom-cluster) to generate a kubeconfig
-          1. RKE2/K3s: Use the kubeconfig populated during installation
+          - RKE: Use the [steps in the document here](https://github.com/rancherlabs/support-tools/tree/master/how-to-retrieve-kubeconfig-from-custom-cluster) to generate a kubeconfig
+          - RKE2/K3s: Use the kubeconfig populated during installation
 
 ### 5. Force Update Fleet clusters to reconnect the fleet-agent to Rancher
 
@@ -171,7 +171,7 @@ Follow these steps to perform the opposite procedure as shown above, to change f
 
 First, concatenate the server certificate followed by any intermediate certificate(s) to a file named `tls.crt` and provide the corresponding certificate key in a file named `tls.key`.
 
-Use the following command to create the `tls-rancher-ingress` secret object in thr Rancher (local) management cluster:
+Use the following command to create the `tls-rancher-ingress` secret object in the Rancher (local) management cluster:
 
 ```bash
 kubectl -n cattle-system create secret tls tls-rancher-ingress \
