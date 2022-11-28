@@ -21,7 +21,7 @@ import TabItem from '@theme/TabItem';
    - [允许加密 EBS 卷的 IAM 策略示例](#允许加密-ebs-卷的-iam-策略示例)
 - 为用户添加 **IAM 策略权限**。请参阅 [Amazon 文档：为用户添加权限（控制台）](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_change-permissions.html#users_change_permissions-add-console)，来将权限添加给用户。
 
-# 创建 EC2 集群
+## 创建 EC2 集群
 
 创建集群的步骤因 Rancher 版本而异。
 
@@ -133,7 +133,7 @@ import TabItem from '@theme/TabItem';
 - **通过 kubectl CLI 访问你的集群**：按照[这些步骤](../../../new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#在工作站使用-kubectl-访问集群)在你的工作站上使用 kubectl 访问集群。在这种情况下，你将通过 Rancher Server 的身份验证代理进行身份验证，然后 Rancher 会让你连接到下游集群。此方法允许你在没有 Rancher UI 的情况下管理集群。
 - **通过 kubectl CLI 使用授权的集群端点访问你的集群**：按照[这些步骤](../../../new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#直接使用下游集群进行身份验证)直接使用 kubectl 访问集群，而无需通过 Rancher 进行身份验证。我们建议设置此替代方法来访问集群，以便在无法连接到 Rancher 时访问集群。
 
-# IAM 策略
+## IAM 策略
 
 ### IAM 策略示例
 

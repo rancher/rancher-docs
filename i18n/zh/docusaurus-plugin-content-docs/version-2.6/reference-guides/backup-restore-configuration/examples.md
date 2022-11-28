@@ -242,7 +242,7 @@ spec:
   encryptionConfigSecretName: test-encryptionconfig
 ```
 
-# 在 S3 中存储备份的凭证密文示例
+## 在 S3 中存储备份的凭证密文示例
 
 ```yaml
 apiVersion: v1
@@ -255,7 +255,7 @@ data:
   secretKey: <Enter your base64-encoded secret key>
 ```
 
-# EncryptionConfiguration 示例
+## EncryptionConfiguration 示例
 
 以下代码片段演示了两种不同类型的密文及其与自定义资源的备份和还原的相关性。
 

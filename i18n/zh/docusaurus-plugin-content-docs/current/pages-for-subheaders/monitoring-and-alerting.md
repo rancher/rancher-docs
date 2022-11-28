@@ -23,11 +23,11 @@ Monitoring 应用允许你：
 - 根据 Prometheus 收集的指标，将预先计算的、经常需要的，或计算成本高的表达式定义为新的时间序列
 - 通过 Prometheus Adapter，将从 Prometheus 收集的指标公开给 Kubernetes Custom Metrics API，以便在 HPA 中使用
 
-# Monitoring 的工作原理
+## Monitoring 的工作原理
 
 有关 monitoring 组件如何协同工作的说明，请参阅[此页面](../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)。
 
-# 默认组件和部署
+## 默认组件和部署
 
 ### 内置仪表板
 
@@ -48,11 +48,11 @@ Monitoring 应用会默认部署一些告警。要查看默认告警，请转到
 
 有关 Rancher UI 中公开的监控组件列表，以及编辑它们的常见用例，请参阅[本节](../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#rancher-ui-中公开的组件)。
 
-# RBAC
+## RBAC
 
 有关配置 monitoring 访问权限的信息，请参阅[此页面](../integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md)。
 
-# 指南
+## 指南
 
 - [启用 monitoring](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/enable-monitoring.md)
 - [卸载 monitoring](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/uninstall-monitoring.md)
@@ -60,9 +60,8 @@ Monitoring 应用会默认部署一些告警。要查看默认告警，请转到
 - [自定义 Grafana 仪表板](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/customize-grafana-dashboard.md)
 - [持久化 Grafana 仪表板](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/create-persistent-grafana-dashboard.md)
 - [调试高内存使用率](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/debug-high-memory-usage.md)
-- [从 Monitoring V1 迁移到 V2](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/migrate-to-rancher-v2.5+-monitoring.md)
 
-# 配置
+## 配置
 
 ### 在 Rancher 中配置 Monitoring 资源
 
@@ -79,7 +78,7 @@ Monitoring 应用会默认部署一些告警。要查看默认告警，请转到
 
 有关 `rancher-monitoring` Chart 选项的更多信息，包括设置资源限制和请求的选项，请参阅[此页面](../reference-guides/monitoring-v2-configuration/helm-chart-options.md)。
 
-# Windows 集群支持
+## Windows 集群支持
 
 如果 Monitoring 部署到 RKE1 Windows 集群，Monitoring V2 将自动部署 [windows-exporter](https://github.com/prometheus-community/windows_exporter) DaemonSet 并设置 ServiceMonitor，以从每个部署的 Pod 中收集指标。这将使用 `windows_` 指标填充 Prometheus，这些指标与 [node_exporter](https://github.com/prometheus/node_exporter) 为 Linux 主机导出的 `node_` 指标类似。
 
@@ -88,8 +87,7 @@ Monitoring 应用会默认部署一些告警。要查看默认告警，请转到
 有关如何在现有 Windows 主机上升级 wins 版本的更多详细信息，请参阅 [Windows 集群对 Monitoring V2 的支持](../integrations-in-rancher/monitoring-and-alerting/windows-support.md)。
 
 
-
-# 已知问题
+## 已知问题
 
 有一个[已知问题](https://github.com/rancher/rancher/issues/28787#issuecomment-693611821)，即 K3s 集群需要更多的默认内存。如果你在 K3s 集群上启用 monitoring，我们建议将 `prometheus.prometheusSpec.resources.memory.limit` 设置为 2500 Mi，并将 `prometheus.prometheusSpec.resources.memory.request` 设置为 1750 Mi。
 

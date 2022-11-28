@@ -16,7 +16,7 @@ title: 4. 设置 Istio Gateway
 
 ![启用 Istio 的集群可以有两个 ingress，分别是默认的 Nginx ingress 和默认的 Istio controller](/img/istio-ingress.svg)
 
-# 启用 Istio Gateway
+## 启用 Istio Gateway
 
 Ingress Gateway 是一个 Kubernetes 服务，将部署在你的集群中。Istio Gateway 支持更多自定义设置，更加灵活。
 
@@ -29,7 +29,7 @@ Ingress Gateway 是一个 Kubernetes 服务，将部署在你的集群中。Isti
 
 **结果**：已部署网关，将使用应用的规则来路由流量。
 
-# Istio Gateway 示例
+## Istio Gateway 示例
 
 在演示工作负载示例时，我们在服务中添加 BookInfo 应用部署。接下来，我们添加一个 Istio Gateway，以便从集群外部访问该应用。
 
@@ -127,7 +127,7 @@ bookinfo-gateway   64m
 
 如需检查 Istio 控制器 URL 和端口的帮助，请尝试运行 [Istio 文档](https://istio.io/docs/tasks/traffic-management/ingress/ingress-control/#determining-the-ingress-ip-and-ports)中的命令。
 
-# 故障排除
+## 故障排除
 
 [官方 Istio 文档](https://istio.io/docs/tasks/traffic-management/ingress/ingress-control/#troubleshooting)建议使用 `kubectl` 命令来检查外部请求的正确 ingress 主机和 ingress 端口。
 

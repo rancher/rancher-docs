@@ -35,7 +35,7 @@ description: 如果 Rancher 配置在 Docker 或 Kubernetes 中运行时，了�
 
 Rancher UI 在基于 Firefox 或 Chromium 的浏览器（Chrome、Edge、Opera、Brave 等）中效果最佳。
 
-# 操作系统和容器运行时要求
+## 操作系统和容器运行时要求
 
 Rancher 兼容当前所有的主流 Linux 发行版。
 
@@ -77,11 +77,11 @@ Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的
 
 如需了解 RKE2 通过了哪些操作系统版本的测试，请参见[支持和维护条款](https://rancher.com/support-maintenance-terms/)。
 
-# 硬件要求
+## 硬件要求
 
 本节描述安装 Rancher Server 的节点的 CPU、内存和磁盘要求。
 
-# CPU 和内存
+## CPU 和内存
 
 硬件要求根据你的 Rancher 部署规模而定。请根据要求配置每个节点。通过单节点容器安装 Rancher，和在 Kubernetes 集群上安装 Rancher 的要求有所不同。
 
@@ -134,7 +134,7 @@ Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的
 | 小 | 最多 5 个 | 最多 50 个 | 1 | 4 GB |
 | 中 | 最多 15 个 | 最多 200 个 | 2 | 8 GB |
 
-# Ingress
+## Ingress
 
 安装 Rancher 的 Kubernetes 集群中的每个节点都应该运行一个 Ingress。
 
@@ -148,11 +148,11 @@ Ingress 需要部署为 DaemonSet 以确保负载均衡器能成功把流量转�
 - **AKS**：[使用 Azure Kubernetes 服务安装 Rancher 以及如何安装 Ingress 以访问 Rancher Server](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks.md)。
 - **GKE**：[使用 GKE 安装 Rancher 以及如何安装 Ingress 以访问 Rancher Server](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-gke.md)。
 
-# 磁盘
+## 磁盘
 
 etcd 在集群中的性能决定了 Rancher 的性能。因此，为了获得最佳速度，我们建议使用 SSD 磁盘来支持 Rancher 管理的 Kubernetes 集群。在云提供商上，你还需使用能获得最大 IOPS 的最小大小。在较大的集群中，请考虑使用专用存储设备存储 etcd 数据和 wal 目录。
 
-# 网络要求
+## 网络要求
 
 本节描述了安装 Rancher Server 的节点的网络要求。
 
@@ -170,6 +170,6 @@ etcd 在集群中的性能决定了 Rancher 的性能。因此，为了获得最
 
 为了确保能正常运行，Rancher 需要在 Rancher 节点和下游 Kubernetes 集群节点上开放一些端口。不同集群类型的 Rancher 和下游集群的所有必要端口，请参见[端口要求](../getting-started/installation-and-upgrade/installation-requirements/port-requirements.md)。
 
-# Dockershim 支持
+## Dockershim 支持
 
 有关 Dockershim 支持的详情，请参见[此页面](../getting-started/installation-and-upgrade/installation-requirements/dockershim.md)。

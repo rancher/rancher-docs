@@ -16,14 +16,14 @@ Rancher 安装在 RKE Kubernetes 集群、K3s Kubernetes 集群，或单个 Dock
 
 :::
 
-# 安装概要
+## 安装概要
 
 1. [设置基础设施和私有镜像仓库](../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/infrastructure-private-registry.md)
 2. [收集镜像到私有镜像仓库](../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images.md)
 3. [设置 Kubernetes 集群（如果你使用 Docker 安装，请跳过此步骤）](../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-kubernetes.md)
 4. [安装 Rancher](../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha.md)
 
-# 升级
+## 升级
 
 如需在离线环境中使用 Helm CLI 升级 Rancher，请按照[升级步骤](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades.md)进行操作。
 

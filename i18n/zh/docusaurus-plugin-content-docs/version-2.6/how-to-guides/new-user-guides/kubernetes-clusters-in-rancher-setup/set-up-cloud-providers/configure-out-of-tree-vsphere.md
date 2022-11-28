@@ -6,7 +6,7 @@ Kubernetes 正在逐渐不在树内维护云提供商。vSphere 有一个树外�
 
 本页介绍如何在启动集群后安装 Cloud Provider Interface (CPI) 和 Cloud Storage Interface (CSI) 插件。
 
-# 先决条件
+## 先决条件
 
 支持的 vSphere 版本：
 
@@ -17,7 +17,7 @@ Kubernetes 版本必须为 1.19 或更高版本。
 
 树外 vSphere 云提供商要求使用 Linux 节点，不支持 Windows 节点。
 
-# 安装
+## 安装
 
 在安装云存储接口 (CSI) 之前，应先安装云提供商接口 (CPI)。
 
@@ -55,7 +55,7 @@ Kubernetes 版本必须为 1.19 或更高版本。
 1. 单击**安装**。
 
 
-# 使用 CSI 驱动来置备卷
+## 使用 CSI 驱动来置备卷
 
 CSI chart 默认创建一个 storageClass。
 

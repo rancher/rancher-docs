@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 - [创建持久化 Grafana 仪表板](#创建持久化-grafana-仪表板)
 - [已知问题](#已知问题)
 
-# 创建持久化 Grafana 仪表板
+## 创建持久化 Grafana 仪表板
 
 <Tabs>
 <TabItem value="Rancher v2.5.8+">
@@ -144,7 +144,7 @@ helm.sh/resource-policy: "keep"
 </TabItem>
 </Tabs>
 
-# 已知问题
+## 已知问题
 
 如果你的 Monitoring V2 版本是 v9.4.203 或更低版本，卸载 Monitoring chart 将同时删除 `cattle-dashboards` 命名空间，所有持久化的仪表板将被删除（除非命名空间带有注释 `helm.sh/resource-policy: "keep"`）。
 

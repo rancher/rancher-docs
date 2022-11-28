@@ -17,7 +17,7 @@ title: 在 Nutanix AOS 中配置 Kubernetes 集群
 - [Nutanix AOS 中的准备工作](#nutanix-aos-中的准备工作)
 - [创建 Nutanix AOS 集群](#创建-nutanix-aos-集群)
 
-# Nutanix AOS 中的准备工作
+## Nutanix AOS 中的准备工作
 
 下文介绍了设置 Nutanix AOS 的要求，以便 Rancher 可以配置虚拟机和集群。
 
@@ -26,6 +26,7 @@ title: 在 Nutanix AOS 中配置 Kubernetes 集群
 节点模板已使用 Nutanix AOS 5.20.2 和 6.0.1 版本进行记录和测试。
 
 :::
+
 ### 在 Nutanix AOS 中创建凭证
 
 在继续创建集群之前，请确保你拥有具有管理员权限的 [Nutanix Prism Central 用户账号](https://portal.nutanix.com/page/documents/details?targetId=Nutanix-Security-Guide-v6_0:wc-user-create-wc-t.html)。设置节点模板时，模板将需要使用这些凭证。
@@ -43,7 +44,7 @@ title: 在 Nutanix AOS 中配置 Kubernetes 集群
 
 建议设置 [VM-VM 反亲和性策略](https://portal.nutanix.com/page/documents/details?targetId=AHV-Admin-Guide-v6_1:ahv-vm-anti-affinity-t.html)。这些规则允许分配了 etcd 和 controlplane 角色的虚拟机在分配给不同节点池时，在单独的 AHV 主机上运行。这种做法可确保单个物理机的故障不会影响这些平面的可用性。
 
-# 创建 Nutanix AOS 集群
+## 创建 Nutanix AOS 集群
 
 1. [创建节点模板](#1-创建节点模板)
 2. [使用节点模板创建具有节点池的集群](#2-使用节点模板创建具有节点池的集群)
@@ -82,8 +83,7 @@ title: 在 Nutanix AOS 中配置 Kubernetes 集群
 - `Default`：包含 `default` 命名空间
 - `System`：包含 `cattle-system`，`ingress-nginx`，`kube-public` 和 `kube-system` 命名空间。
 
-
-# 可选的后续步骤
+## 可选的后续步骤
 
 创建集群后，你可以通过 Rancher UI 访问集群。最佳实践建议你设置以下访问集群的备用方式：
 

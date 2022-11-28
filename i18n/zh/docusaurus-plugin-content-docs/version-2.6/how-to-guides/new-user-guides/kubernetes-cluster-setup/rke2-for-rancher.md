@@ -6,14 +6,15 @@ _已在 2.5.6 版本测试_
 
 本文介绍了如何根据 [Rancher Server 环境的最佳实践](../../../reference-guides/rancher-manager-architecture/architecture-recommendations.md#kubernetes-安装环境)安装 Kubernetes 集群。
 
-# 先决条件
+## 先决条件
 
 以下说明假设你已参见[此章节](../infrastructure-setup/ha-rke2-kubernetes-cluster.md)配置好三个节点，一个负载均衡器和一个 DNS 记录。
 
 为了让 RKE2 与负载均衡器正常工作，你需要设置两个监听器，一个用于 9345 端口，另一个用于 6443 端口的 Kubernetes API。
 
 Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的 Rancher 版本支持哪些 Kubernetes 版本，请参见[支持维护条款](https://rancher.com/support-maintenance-terms/)。如需指定 RKE2 版本，请在运行 RKE2 安装脚本时，使用 `INSTALL_RKE2_VERSION` 环境变量。
-# 安装 Kubernetes
+
+## 安装 Kubernetes
 
 ### 1. 安装 Kubernetes 并设置 RKE2 Server
 

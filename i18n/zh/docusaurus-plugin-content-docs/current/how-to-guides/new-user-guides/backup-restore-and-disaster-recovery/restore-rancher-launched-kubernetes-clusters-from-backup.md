@@ -72,6 +72,6 @@ Rancher UI 中提供了集群所有可用快照的列表：
 
 6. 在单个节点启动并运行后，Rancher 建议向你的集群添加额外的 etcd 节点。如果你有一个[自定义集群](../../../pages-for-subheaders/use-existing-nodes.md)，并且想要复用旧节点，则需要先[清理节点](../manage-clusters/clean-cluster-nodes.md)，然后再尝试将它们重新添加到集群中。
 
-# 为使用 Rancher v2.2.0 之前的版本创建的集群启用快照功能
+## 为使用 Rancher v2.2.0 之前的版本创建的集群启用快照功能
 
 如果你有使用 v2.2.0 之前版本创建的 Rancher 启动的 Kubernetes 集群，升级 Rancher 后，你必须[编辑集群](../../../pages-for-subheaders/cluster-configuration.md)并 _保存_ 它，以启用更新的快照功能。即使你已经在 v2.2.0 之前创建了快照，你也必须执行此步骤，因为旧的快照将无法用于[通过 UI 备份和恢复 etcd](restore-rancher-launched-kubernetes-clusters-from-backup.md)。

@@ -23,7 +23,7 @@ Rancher 可以运行在任何 Kubernetes 集群上，包括托管的 Kubernetes�
 
 :::
 
-# 安装 Kubernetes
+## 安装 Kubernetes
 
 ### 所需的 CLI 工具
 

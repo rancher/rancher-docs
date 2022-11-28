@@ -127,7 +127,7 @@ chmod +x rancher-load-images.sh
 
 如果你的 Rancher Server 将用于配置 Linux 和 Windows 集群，你需要执行不同的步骤，来将 Windows 镜像和 Linux 镜像推送到你的私有镜像仓库。由于 Windows 集群同时包含 Linux 和 Windows 节点，因此推送到私有镜像仓库的 Linux 镜像是 Manifest。
 
-# Windows 步骤
+## Windows 步骤
 
 从 Windows Server 工作站中收集和推送 Windows 镜像。
 
@@ -206,7 +206,7 @@ chmod +x rancher-load-images.sh
    ./rancher-load-images.ps1 --registry <REGISTRY.YOURDOMAIN.COM:PORT>
    ```
 
-# Linux 步骤
+## Linux 步骤
 
 Linux 镜像需要在 Linux 主机上收集和推送，但是你必须先将 Windows 镜像推送到私有镜像仓库，然后再推送 Linux 镜像。由于被推送的 Linux 镜像实际上是支持 Windows 和 Linux 镜像的 manifest，因此涉及的步骤不同于只包含 Linux 节点的集群。
 

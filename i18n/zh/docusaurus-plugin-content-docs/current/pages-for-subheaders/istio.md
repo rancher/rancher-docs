@@ -65,14 +65,6 @@ Jaeger 是用于跟踪分布式系统的工具。我们的 Istio 安装程序包
 
 要从集群、命名空间或工作负载中删除 Istio 组件，请参阅[卸载 Istio](../integrations-in-rancher/istio/disable-istio.md)。
 
-## 迁移旧 Istio 版本
-
-如果你的 Istio 版本低于 1.7.x，则没有升级路径。要在**应用 & 应用市场**页面安装 Istio，你需要在旧版 Rancher UI 的全局视图中禁用现有的 Istio。
-
-如果你有大量其他的 Istio CRD，你可能需要手动迁移两个 Istio 版本都支持的 CRD。为此，你可以运行 `kubectl get <resource> -n istio-system -o yaml`，保存输出的 yaml，并在新版本中重新应用。
-
-另一种选择是一次手动卸载一个 Istio 资源，但保留两个 Istio 版本都支持且最新版本不会安装的资源。此方法有可能导致安装新版本时出现问题。你可以根据你的实际情况选择是否采用该方法。
-
 ## 访问可视化
 
 > 默认情况下，只有 cluster-admin 可以访问 Kiali。有关如何允许具有管理员、编辑或查看权限的角色访问它们的说明，请参阅[本节](../integrations-in-rancher/istio/rbac-for-istio.md)。

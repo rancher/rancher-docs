@@ -14,7 +14,7 @@ title: 密文
 
 除非作为子路径卷挂载，否则挂载的密文会自动更新。有关如何传播更新的密文，请参阅 [Kubernetes 文档](https://kubernetes.io/docs/concepts/configuration/secret/#mounted-secrets-are-updated-automatically)。
 
-# 在命名空间中创建密文
+## 在命名空间中创建密文
 
 1. 在左上角，单击 **☰ > 集群管理**。
 1. 转到要添加密文的集群，然后单击 **Explore**。
@@ -47,7 +47,7 @@ title: 密文
 除非作为子路径卷挂载，否则挂载的密文会自动更新。有关如何传播更新的密文，请参阅 [Kubernetes 文档](https://kubernetes.io/docs/concepts/configuration/secret/#mounted-secrets-are-updated-automatically)。
 
 
-# 在项目中创建密文
+## 在项目中创建密文
 
 在 Rancher 2.6 之前，密文必须创建在项目级别。现在不再需要项目级别，你可以采用命名空间级别。因此，Rancher UI 进行了更新以反映这一新功能。但是，你仍然可以按照需要创建项目级别的密文。请注意，你必须先启用`旧版`功能开关并查看单个项目。执行以下步骤设置你的项目级别密文：
 
@@ -69,7 +69,7 @@ local 集群上的项目级别密文仅在选择单个项目时可见。
 
 :::
 
-# 后续操作
+## 后续操作
 
 现在你已将密文添加到命名空间，你可以将其添加到你部署的工作负载中。
 

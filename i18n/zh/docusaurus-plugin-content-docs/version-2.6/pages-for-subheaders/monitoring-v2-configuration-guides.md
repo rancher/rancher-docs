@@ -6,7 +6,7 @@ title: 配置
 
 有关为 Prometheus 配置自定义抓取目标和规则的信息，请参阅 [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator) 的上游文档。Prometheus Operator [设计文档](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/design.md)中解释了一些最重要的自定义资源。Prometheus Operator 文档还可以帮助你设置 RBAC、Thanos 或进行自定义配置。
 
-# 设置资源限制和请求
+## 设置资源限制和请求
 
 安装 `rancher-monitoring` 时可以配置 Monitoring 应用的资源请求和限制。有关默认限制的更多信息，请参阅[此页面](../reference-guides/monitoring-v2-configuration/helm-chart-options.md#配置资源限制和请求)。
 
@@ -16,7 +16,7 @@ title: 配置
 
 :::
 
-# Prometheus 配置
+## Prometheus 配置
 
 通常不需要直接编辑 Prometheus 自定义资源。
 
@@ -31,7 +31,7 @@ title: 配置
 
 有关直接编辑 Prometheus 自定义资源（对高级用例可能有帮助）的更多信息，请参阅[此页面](../how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/prometheus.md)。
 
-# Alertmanager 配置
+## Alertmanager 配置
 
 Alertmanager 自定义资源通常不需要直接编辑。在常见用例中，你可以通过更新路由和接收器来管理告警。
 

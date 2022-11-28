@@ -75,7 +75,7 @@ Cluster Agent，也叫做 `cattle-cluster-agent`，是运行在下游集群中�
 
 如果 Rancher 出现问题，你需要使用此 kubeconfig 文件中定义的上下文来访问集群。因此，我们建议你导出 kubeconfig 文件，以便在 Rancher 出现问题时，仍能使用文件中的凭证访问集群。详情请参见使用 [kubectl 和 kubeconfig 文件](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)访问集群的章节。
 
-# 重要文件
+## 重要文件
 
 维护、排除问题和升级集群需要用到以下文件，请妥善保管这些文件：
 
@@ -87,7 +87,7 @@ Cluster Agent，也叫做 `cattle-cluster-agent`，是运行在下游集群中�
 
 有关在没有 Rancher 认证代理和其他配置选项的情况下连接到集群的更多信息，请参见 [kubeconfig 文件](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)。
 
-# 配置 Kubernetes 集群的工具
+## 配置 Kubernetes 集群的工具
 
 Rancher 使用什么工具配置下游集群，取决于集群的类型。
 
@@ -113,7 +113,7 @@ Rancher 使用 [kontainer-engine](https://github.com/rancher/kontainer-engine) �
 
 这种情况下，Rancher 需要连接到一个设置好的 Kubernetes 集群。因此，Rancher 不提供 Kubernetes，只设置 Rancher Agent 实现与集群通信。
 
-# Rancher Server 组件和源码
+## Rancher Server 组件和源码
 
 下图展示了 Rancher Server 的组件：
 

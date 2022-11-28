@@ -11,7 +11,7 @@ title: 配置 Shibboleth (SAML)
 > 本节假定你已了解 Rancher，Shibboleth 和 OpenLDAP 是如何协同工作的。有关工作原理的详细说明，请参见[本页](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-shibboleth-saml/about-group-permissions.md)。
 
 
-# 在 Rancher 中设置 Shibboleth
+## 在 Rancher 中设置 Shibboleth
 
 ### Shibboleth 先决条件
 >
@@ -73,7 +73,7 @@ SAML 协议不支持用户或用户组的搜索或查找。因此，如果你没
 
 要在 Rancher 中分配权限时启用搜索组，你需要为支持组的 SAML 身份验证提供商配置后端（例如 OpenLDAP）。
 
-# 在 Rancher 中设置 OpenLDAP
+## 在 Rancher 中设置 OpenLDAP
 
 如果你将 OpenLDAP 配置为 Shibboleth 的后端，SAML 断言会返回到 Rancher，其中包括用于引用组的用户属性。然后，通过身份验证的用户将能够访问其所在的组有权访问的 Rancher 资源。
 
@@ -96,6 +96,6 @@ SAML 协议不支持用户或用户组的搜索或查找。因此，如果你没
 1. 在左侧导航栏，单击**认证**。
 1. 单击 **OpenLDAP**。将显示**配置 OpenLDAP 服务器**表单。
 
-# 故障排除
+## 故障排除
 
 如果在测试与 OpenLDAP 服务器的连接时遇到问题，请首先仔细检查为 ServiceAccount 输入的凭证以及搜索库配置。你还可以检查 Rancher 日志来查明问题的原因。调试日志可能包含有关错误的更详细信息。详情请参见[如何启用调试日志](../faq/technical-items.md#如何启用调试日志记录？)。

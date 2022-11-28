@@ -17,9 +17,12 @@ import TabItem from '@theme/TabItem';
 :::
 
 | Rancher 版本 | Adapter 版本 |
-| --------------- | :-------------: |
-| v2.6.7 | v1.0.1 |
-| v2.6.8 | v1.0.1 |
+|-----------------|:---------------:|
+| v2.6.7* | v1.0.1 |
+| v2.6.8* | v1.0.1 |
+| v2.6.9 | v1.0.1 |
+
+> **注意**：虽然技术上来说，Adapter 可以安装在 Rancher v2.6.7 和 v2.6.8 上，但建议使用 2.6.9 或更高版本以避免出现错误。
 
 ### 1. 获取对 Local 集群的访问权限
 
@@ -71,31 +74,29 @@ helm repo add rancher-charts https://charts.rancher.io
 
 接下来，安装 CSP Adapter。你必须指定多个值，其中包括账号号码以及在先决条件中创建的角色的名称。
 
-在下方的操作中，将 `$MY_ACC_NUM` 替换为你的 AWS 账号，将 `$MY_ROLE_NAME` 替换为先决条件中创建的角色的名称。
+确保你的 CSP Adapter 版本与你正在运行的 Rancher 版本匹配，如[上文](#rancher-与-adapter-的兼容性矩阵)所述。
+
+在下方的操作中，将 `$MY_ACC_NUM` 替换为你的 AWS 账号，将 `$MY_ROLE_NAME` 替换为先决条件中创建的角色的名称。此外，将 `$CSP_ADAPTER_VERSION` 替换为与[版本矩阵](#rancher-与-adapter-的兼容性矩阵)中的 Rancher 版本匹配的版本。
 
 > **注意**：如果你使用 shell 变量，请不要使用引号。例如，MY_ACC_NUM=123456789012 可用，但 MY_ACC_NUM="123456789012" 将失败。
 
 > **注意**：使用欧盟和英国的 AWS Marketplace 列表的账号需要额外指定 `--set image.repository=rancher/rancher-csp-adapter-eu` 选项。要查看你的账号在安装 Adapter 时是否需要此选项，请参阅 Marketplace 列表的使用说明。
 
-> **注意**：请务必严格按照以下说明进行操作。尤其需要注意安装 1.0.1 版本 Adapter 的命令（使用 `--set image.tag=v1.0.1`），这是确保节点数量准确的关键。
-
 <Tabs>
 <TabItem value="Let's Encrypt/可信的 CA">
 
 ```bash
-helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter --namespace cattle-csp-adapter-system --set aws.enabled=true --set aws.roleName=$MY_ROLE_NAME --set-string aws.accountNumber=$MY_ACC_NUM --set image.tag=v1.0.1
+helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter --namespace cattle-csp-adapter-system --set aws.enabled=true --set aws.roleName=$MY_ROLE_NAME --set-string aws.accountNumber=$MY_ACC_NUM --version $CSP_ADAPTER_VERSION
 ```
 
 
 你也可以使用 `values.yaml` 并指定以下选项：
 
 ```yaml
-image:
-tag: v1.0.1
 aws:
-enabled: true
-accountNumber: "$MY_ACC_NUM"
-roleName: $MY_ROLE_NAME
+  enabled: true
+  accountNumber: "$MY_ACC_NUM"
+  roleName: $MY_ROLE_NAME
 ```
 
 > **注意**：账号需要像上面那样以字符串格式指定，否则安装会失败。
@@ -103,25 +104,23 @@ roleName: $MY_ROLE_NAME
 然后，使用以下命令安装 Adapter：
 
 ```bash
-helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter -f values.yaml
+helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter -f values.yaml --version $CSP_ADAPTER_VERSION
 ```
 
 </TabItem>
   <TabItem value="私有 CA/Rancher 生成的证书">
 
 ```bash
-helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter --namespace cattle-csp-adapter-system --set aws.enabled=true --set aws.roleName=$MY_ROLE_NAME --set-string aws.accountNumber=$MY_ACC_NUM --set additionalTrustedCAs=true --set image.tag=v1.0.1
+helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter --namespace cattle-csp-adapter-system --set aws.enabled=true --set aws.roleName=$MY_ROLE_NAME --set-string aws.accountNumber=$MY_ACC_NUM --set additionalTrustedCAs=true --version $CSP_ADAPTER_VERSION
 ```
 
 你也可以使用 `values.yaml` 并指定以下选项：
 
 ```yaml
-image:
-tag: v1.0.1
 aws:
-enabled: true
-accountNumber: "$MY_ACC_NUM"
-roleName: $MY_ROLE_NAME
+  enabled: true
+  accountNumber: "$MY_ACC_NUM"
+  roleName: $MY_ROLE_NAME
 additionalTrustedCAs: true
 ```
 
@@ -130,7 +129,7 @@ additionalTrustedCAs: true
 然后，使用以下命令安装 Adapter：
 
 ```bash
-helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter -f values.yaml
+helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter -f values.yaml --version $CSP_ADAPTER_VERSION
 ```
 
 </TabItem>

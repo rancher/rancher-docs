@@ -34,7 +34,10 @@ title: Rancher Helm Chart 选项
 | `auditLog.maxAge` | 1 | `int` - 旧审计日志文件最多可保留的天数（仅当`auditLog.destination` 的值是 `hostPath` 时生效） |
 | `auditLog.maxBackup` | 1 | `int` - 审计文件最大可保留的个数（仅当 `auditLog.destination` 的值是 `hostPath` 时生效） |
 | `auditLog.maxSize` | 100 | `int` - 在审计日志被轮换前的最大容量，单位是 MB（仅当 `auditLog.destination` 的值是 `hostPath` 时生效） |
-| `busyboxImage` | "busybox" | `string` - 用来收集审计日志的 busybox 镜像位置 |
+| `auditLog.image.repository` | "registry.suse.com/bci/bci-micro" | `string` - 用于收集审计日志的镜像的位置。 |
+| `auditLog.image.tag` | "15.4.14.3" | `string` - 用于收集审计日志的镜像的标签。 |
+| `auditLog.image.pullPolicy` | "IfNotPresent" | `string` - 覆盖 auditLog 镜像的 imagePullPolicy - “Always”、“Never”、“IfNotPresent”。 |
+| `busyboxImage` | "" | `string` - 用于收集审计日志的 busybox 镜像位置。_注意：此选项已弃用，请使用 `auditLog.image.repository` 来控制审计 sidecar 镜像_。 |
 | `certmanager.version` | "" | `string` - 设置 cert-manager compatibility |
 | `debug` | false | `bool` - 在 Rancher Server 设置 debug 参数 |
 | `extraEnv` | [] | `list` - 为 Rancher 额外设置环境变量 |
@@ -165,7 +168,7 @@ kubectl -n cattle-system create secret generic tls-ca-additional --from-file=ca-
 
 有关使用私有仓库安装 Rancher 的详情，请参见[离线安装](../../../pages-for-subheaders/air-gapped-helm-cli-install.md)。
 
-# 外部 TLS 终止
+## 外部 TLS 终止
 
 我们建议将负载均衡器配置为 4 层均衡，将普通 80/tcp 和 443/tcp 转发到 Rancher Management 集群节点。集群上的 Ingress Controller 会将端口 80 上的 HTTP 流量重定向到端口 443 上的 HTTPS。
 

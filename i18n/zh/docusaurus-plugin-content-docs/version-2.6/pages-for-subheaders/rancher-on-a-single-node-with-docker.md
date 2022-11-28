@@ -17,19 +17,19 @@ Rancher 的 Docker 安装仅推荐用于开发和测试环境中。Rancher 版�
 
 Rancher backup operator 可将 Rancher 从单个 Docker 容器迁移到高可用 Kubernetes 集群上。详情请参见[把 Rancher 迁移到新集群](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md)。
 
-### Rancher 特权访问
+## Rancher 特权访问
 
 当 Rancher Server 部署在 Docker 容器中时，容器内会安装一个本地 Kubernetes 集群供 Rancher 使用。为 Rancher 的很多功能都是以 deployment 的方式运行的，而在容器内运行容器是需要特权模式的，因此你需要在安装 Rancher 时添加 `--privileged` 选项。
 
-# 操作系统，Docker，硬件和网络要求
+## 操作系统，Docker，硬件和网络要求
 
 请确保你的节点满足常规的[安装要求](installation-requirements.md)。
 
-# 1. 配置 Linux 主机
+## 1. 配置 Linux 主机
 
 按照[要求](installation-requirements.md)配置一个 Linux 主机，用于运行 Rancher Server。
 
-# 2. 选择一个 SSL 选项并安装 Rancher
+## 2. 选择一个 SSL 选项并安装 Rancher
 
 出于安全考虑，使用 Rancher 时请使用 SSL（Secure Sockets Layer）。SSL 保护所有 Rancher 网络通信（如登录和与集群交互）的安全。
 

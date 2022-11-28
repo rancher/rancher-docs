@@ -93,7 +93,8 @@ import TabItem from '@theme/TabItem';
 
 - `Default`：包含 `default` 命名空间
 - `System`：包含 `cattle-system`，`ingress-nginx`，`kube-public` 和 `kube-system` 命名空间。
-# 可选的后续步骤
+
+## 可选的后续步骤
 
 创建集群后，你可以通过 Rancher UI 访问集群。最佳实践建议你设置以下访问集群的备用方式：
 

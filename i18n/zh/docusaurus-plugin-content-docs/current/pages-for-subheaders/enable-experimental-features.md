@@ -20,7 +20,7 @@ Rancher 包含一些默认关闭的实验功能。在某些情况下，例如当
 
 如果你安装 Rancher 后使用 Rancher API 将功能开关设置为 true，然后在使用命令升级 Rancher 时将功能开关设置为 false，在这种情况下，虽然默认值会是 false，但是该功能依然会被启用，因为它是通过 API 设置的。如果你随后使用 Rancher API 删除设置值（true）并将它设置为 NULL，则默认值（false）将生效。有关详细信息，请参阅[功能开关页面](../getting-started/installation-and-upgrade/installation-references/feature-flags.md)。
 
-# 启动 Rancher 时启用功能
+## 启动 Rancher 时启用功能
 
 安装 Rancher 时，使用功能开关启用你所需的功能。通过单节点容器安装 Rancher，和在 Kubernetes 集群上安装 Rancher 对应的命令有所不同。
 
@@ -81,7 +81,7 @@ docker run -d -p 80:80 -p 443:443 \
 ```
 
 
-# 使用 Rancher UI 启用功能
+## 使用 Rancher UI 启用功能
 
 1. 在左上角，单击 **☰ > 全局设置**。
 1. 单击**功能开关**。
@@ -97,7 +97,7 @@ docker run -d -p 80:80 -p 443:443 \
 
 **结果**：该功能已禁用。
 
-# 使用 Rancher API 启用功能
+## 使用 Rancher API 启用功能
 
 1. 前往 `<RANCHER-SERVER-URL>/v3/features`。
 1. 在 `data` 中，你会看到一个数组，该数组包含所有能通过功能开关启用的功能。功能的名称在 `id` 字段中。单击要启用的功能的名称。

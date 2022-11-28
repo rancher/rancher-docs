@@ -34,7 +34,7 @@ Rancher 还可以创建节点池。在托管在云厂商的节点池上安装 Ku
 
 有关详细信息，请参阅[自定义节点](use-existing-nodes.md)。
 
-# 以编程方式创建 RKE 集群
+### 以编程方式创建 RKE 集群
 
 通过 Rancher 以编程方式部署 RKE 集群的最常见方法是使用 Rancher 2 Terraform Provider。详情请参见[使用 Terraform 创建集群](https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster)。
 
@@ -75,6 +75,6 @@ RKE2 还支持在预配置的虚拟机或裸机节点上安装自定义集群。
 
 如果要重复使用之前的自定义集群中的节点，请在复用之前清理节点。如果你重复使用尚未清理的节点，则集群配置可能会失败。
 
-# 以编程方式创建 RKE2 集群
+### 以编程方式创建 RKE2 集群
 
 通过 Rancher 以编程方式部署 RKE2 集群的最常见方法是使用 Rancher 2 Terraform Provider。详情请参见[使用 Terraform 创建集群](https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster_v2)。

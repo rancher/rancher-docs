@@ -22,13 +22,9 @@ Windows 集群与 Linux 集群的功能支持不相同。
 | EKS Operator | 支持 | 不支持 |
 | AKS Operator | 不支持 | 不支持 |
 | GKE Operator | 不支持 | 不支持 |
-| Alerting v1 | 支持 | 支持 |
-| Monitoring v1 | 支持 | 支持 |
-| Logging v1 | 支持 | 支持 |
 | Monitoring/Alerting v2 | 支持 | 支持 |
 | Logging v2 | 支持 | 支持 |
 | Istio | 支持 | 不支持 |
-| Catalog v1 | 支持 | 不支持 |
 | Catalog v2 | 支持 | 不支持 |
 | OPA | 支持 | 不支持 |
 | Longhorn | 支持 | 不支持 |

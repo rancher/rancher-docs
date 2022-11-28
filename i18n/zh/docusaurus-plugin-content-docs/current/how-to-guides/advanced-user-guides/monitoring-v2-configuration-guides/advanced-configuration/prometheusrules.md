@@ -45,7 +45,7 @@ Prometheus 规则文件保存在 PrometheusRule 自定义资源中。PrometheusR
 
 如需查看示例，请参阅 Prometheus 文档中的[记录规则](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/)和[告警规则](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)。
 
-# 配置
+## 配置
 
 ### 规则组
 

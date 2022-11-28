@@ -15,7 +15,7 @@
 | [在 Rancher 无法访问集群时清理 Kubernetes 组件](../how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes.md) | ✓ | | | |
 | [配置 Pod 安全策略](../how-to-guides/new-user-guides/manage-clusters/add-a-pod-security-policy.md) | ✓ | ✓ |   |
 
-1. 注册的 GKE 和 EKS 集群与从 Rancher UI 创建的 GKE 和 EKS 集群的可用选项一致。不同之处是，从 Rancher UI 中删除已注册的集群后，集群不会被销毁。
+1. 注册的 EKS、GKE 和 AKS 集群与从 Rancher UI 创建的 EKS、GKE 和 AKS 集群的可用选项一致。不同之处是，从 Rancher UI 中删除已注册的集群后，集群不会被销毁。
 
 2. 无法编辑已注册的集群的集群配置选项（[K3s 和 RKE2 集群](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md)除外）。
 

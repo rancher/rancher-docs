@@ -8,7 +8,7 @@ title: 配置 Google OAuth
 
 在 Rancher 中，只有具有 **Manage Authentication** [全局角色](../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)的管理员或用户才能配置身份验证。
 
-# 先决条件
+## 先决条件
 
 - 你必须配置了 [G Suite 管理员账号](https://admin.google.com)。
 - G Suite 需要一个[顶级私有域 FQDN](https://github.com/google/guava/wiki/InternetDomainNameExplained#public-suffixes-and-private-domains) 作为授权域。获取 FQDN 的一种方法是在 Route53 中为 Rancher Server 创建 A 记录。你不需要使用该记录更新 Rancher Server 的 URL 设置，因为可能有集群使用该 URL。
@@ -17,7 +17,7 @@ title: 配置 Google OAuth
 启用 Admin SDK API 后，你的 G Suite 域的 API 页面应如下图所示：
 ![Enable Admin APIs](/img/Google-Enable-APIs-Screen.png)
 
-# 在 Rancher 中为 OAuth 设置 G Suite
+## 在 Rancher 中为 OAuth 设置 G Suite
 
 在 Rancher 中设置 Google OAuth 之前，你需要登录到你的 G Suite 账号并完成以下设置：
 
@@ -93,7 +93,7 @@ title: 配置 Google OAuth
 
 **结果**：ServiceAccount 在你的 G Suite 账号中已注册为 OAuth 客户端。
 
-# 在 Rancher 中配置 Google OAuth
+## 在 Rancher 中配置 Google OAuth
 
 1. 使用分配了 [administrator](../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md) 角色的本地用户登录到 Rancher。这个用户也称为本地主体。
 1. 在左上角，单击 **☰ > 用户 & 认证**。

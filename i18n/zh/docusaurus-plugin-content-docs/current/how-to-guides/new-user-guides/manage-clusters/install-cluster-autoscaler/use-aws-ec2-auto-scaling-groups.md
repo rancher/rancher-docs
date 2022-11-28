@@ -513,7 +513,7 @@ kubectl -n kube-system apply -f cluster-autoscaler-deployment.yaml
 
 :::
 
-# 测试
+## 测试
 
 此时，cluster-autoscaler 应该已经在 Rancher 自定义集群中启动并运行。当满足以下条件之一时，cluster-autoscaler 需要管理 `K8sWorkerAsg` ASG，以在 2 到 10 个节点之间进行扩缩容：
 
