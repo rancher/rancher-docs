@@ -48,7 +48,7 @@ $ kubectl -n cattle-system create secret generic tls-ca \
   --from-file=cacerts.pem
 ```
 
-要更新现有的 `tls-ca` 密文：
+要更新现有的 `tls-ca` Secret：
 
 ```
 $ kubectl -n cattle-system create secret generic tls-ca \
@@ -104,7 +104,7 @@ helm upgrade rancher rancher-stable/rancher \
 
 #### 为什么要执行这一步骤？
 
-如果 Rancher 配置了私有 CA 签名的证书时，CA 证书链会下载到 Rancher Agent 容器中。代理会对下载证书的校验和及 `CATTLE_CA_CHECKSUM` 环境变量进行比较。如果私有 CA 证书在 Rancher Server 端更改了，环境变量 `CATTLE_CA_CHECKSUM` 必须相应进行更新。
+如果 Rancher 配置了私有 CA 签名的证书时，CA 证书链会下载到 Rancher Agent 容器中。Agent 会对下载证书的校验和及 `CATTLE_CA_CHECKSUM` 环境变量进行比较。如果私有 CA 证书在 Rancher Server 端更改了，环境变量 `CATTLE_CA_CHECKSUM` 必须相应进行更新。
 
 #### 可使用的方法
 
@@ -135,7 +135,7 @@ $ curl -k -s -fL <RANCHER_SERVER>/v3/settings/cacerts | jq -r .value > cacert.tm
 $ sha256sum cacert.tmp | awk '{print $1}'
 ```
 
-为每个下游集群使用 Kubeconfig 更新两个 Agent 部署的环境变量：
+为每个下游集群使用 Kubeconfig 更新两个 Agent 部署的环境变量。
 
 ```
 $ kubectl edit -n cattle-system ds/cattle-node-agent

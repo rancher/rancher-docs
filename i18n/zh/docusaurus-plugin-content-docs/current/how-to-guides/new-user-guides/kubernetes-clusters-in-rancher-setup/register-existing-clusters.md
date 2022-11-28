@@ -31,26 +31,24 @@ kubectl create clusterrolebinding cluster-admin-binding \
 
 默认情况下，GKE 用户没有此权限，因此你需要在注册 GKE 集群之前运行该命令。要详细了解 GKE RBAC，请单击[此处](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control)。
 
-如果你正在注册 K3s 集群，请确保 `cluster.yml` 是可读的。默认情况下它受到保护。详情请参考[配置 K3s 集群以导入到 Rancher](#配置-k3s-集群以在-rancher-中启用注册)。
+### EKS、AKS 和 GKE 集群
 
-### EKS 集群
-
-EKS 集群必须至少有一个托管节点组才能导入 Rancher 或通过 Rancher 进行配置。
+EKS、AKS 和 GKE 集群必须至少有一个托管节点组才能导入 Rancher 或通过 Rancher 进行配置。
 
 ## 注册集群
 
 1. 点击 **☰ > 集群管理**。
-1. 在**集群**页面上，单击**导入集群**。
-1. 选择集群类型。
-1. 使用**成员角色**为集群配置用户授权。点击**添加成员**添加可以访问集群的用户。使用**角色**下拉菜单为每个用户设置权限。
-1. 如果你在 Rancher 中导入一个通用 Kubernetes 集群，请执行以下步骤：<br/>
+2. 在**集群**页面上，单击**导入集群**。
+3. 选择集群类型。
+4. 使用**成员角色**为集群配置用户授权。点击**添加成员**添加可以访问集群的用户。使用**角色**下拉菜单为每个用户设置权限。
+5. 如果你在 Rancher 中导入一个通用 Kubernetes 集群，请执行以下步骤：<br/>
    a. 点击**集群选项**下的 **Agent 环境变量**，为 [rancher cluster agent](../launch-kubernetes-with-rancher/about-rancher-agents.md) 设置环境变量。你可以使用键值对设置环境变量。如果 Rancher Agent 需要使用代理与 Rancher Server 通信，则可以使用 Agent 环境变量设置 `HTTP_PROXY`，`HTTPS_PROXY` 和 `NO_PROXY` 环境变量。<br/>
    b. 启用项目网络隔离，确保集群支持 Kubernetes `NetworkPolicy` 资源。用户可以通过**项目网络隔离**选项下的**高级选项**下拉菜单进行操作。
-1. 单击**创建**。
-1. 此处会显示 `cluster-admin` 权限的先决条件（参见上文的**先决条件**），其中包括满足先决条件的示例命令。
-1. 将 `kubectl` 命令复制到剪贴板，并在配置了 kubeconfig 的节点上运行该命令，从而指向要导入的集群。如果你不确定配置是否正确，请在运行 Rancher 显示的命令之前运行 `kubectl get nodes` 进行验证。
-1. 如果你使用自签名证书，你将收到 `certificate signed by unknown authority` 的消息。要解决此验证问题，请将 Rancher 中显示的以 `curl` 开头的命令复制到剪贴板。然后在配置了 kubeconfig 的节点上运行该命令，从而指向要导入的集群。
-1. 在节点上运行完命令后，单击**完成**。
+6. 单击**创建**。
+7. 此处会显示 `cluster-admin` 权限的先决条件（参见上文的**先决条件**），其中包括满足先决条件的示例命令。
+8. 将 `kubectl` 命令复制到剪贴板，并在配置了 kubeconfig 的节点上运行该命令，从而指向要导入的集群。如果你不确定配置是否正确，请在运行 Rancher 显示的命令之前运行 `kubectl get nodes` 进行验证。
+9. 如果你使用自签名证书，你将收到 `certificate signed by unknown authority` 的消息。要解决此验证问题，请将 Rancher 中显示的以 `curl` 开头的命令复制到剪贴板。然后在配置了 kubeconfig 的节点上运行该命令，从而指向要导入的集群。
+10. 在节点上运行完命令后，单击**完成**。
 
 **结果**：
 
@@ -65,29 +63,13 @@ EKS 集群必须至少有一个托管节点组才能导入 Rancher 或通过 Ran
 
 :::
 
-### 配置 K3s 集群以在 Rancher 中启用注册
+### 使用 Terraform 配置导入的 EKS、AKS 或 GKE 集群
 
-K3s server 需要配置为允许写入 kubeconfig 文件。
-
-这可以通过在安装期间传递 `--write-kubeconfig-mode 644` 作为标志来完成：
-
-```
-$ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
-```
-
-你也可以使用 `K3S_KUBECONFIG_MODE` 环境变量来指定该选项：
-
-```
-$ curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" sh -s -
-```
-
-### 使用 Terraform 配置导入的 EKS 集群
-
-你**仅**需要定义 Rancher 使用 Terraform 导入 EKS 集群所需的最少字段。请谨记这点，因为 Rancher 会使用用户提供的任何配置覆盖 EKS 集群中的配置。
+你**仅**需要定义 Rancher 使用 Terraform 导入 EKS、AKS 或 GKE 集群所需的最少字段。请谨记这点，因为 Rancher 会使用用户提供的任何配置覆盖集群的配置。
 
 :::caution
 
-即使当前 EKS 集群的配置与用户提供的配置之间只存在微小差异，但是微小的差异也有可能产生很大的影响。
+即使当前集群的配置与用户提供的配置之间只存在微小差异，但是微小的差异也有可能产生很大的影响。
 
 :::
 
@@ -113,13 +95,15 @@ resource "rancher2_cluster" "my-eks-to-import" {
 }
 ```
 
+你可以在 [Rancher2 Terraform Provider 文档](https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster)中找到其他云提供商的更多示例。
+
 ## 对注册集群的管理能力
 
 Rancher 管理注册集群的范围取决于集群的类型。
 
-- [所有已注册集群的功能](#2-5-8-所有已注册集群的功能)
-- [已注册 K3s 集群的附加功能](#2-5-8-已注册-k3s-集群的附加功能)
-- [已注册的 EKS 和 GKE 集群的附加功能](#已注册的-eks-和-gke-集群的附加功能)
+- [所有已注册集群的功能](#所有已注册集群的功能)
+- [已注册 RKE2 和 K3s 集群的附加功能](#已注册-rke2-和-k3s-集群的附加功能)
+- [已注册 EKS, AKS 和 GKE 集群的附加功能](#已注册-eks-aks-和-gke-集群的附加功能)
 
 ### 所有已注册集群的功能
 
@@ -131,27 +115,28 @@ Rancher 管理注册集群的范围取决于集群的类型。
 - 启用 [Istio](../../../pages-for-subheaders/istio.md)
 - 管理项目和工作负载
 
-### 已注册 K3s 集群的附加功能
+### 已注册 RKE2 和 K3s 集群的附加功能
 
-[K3s](https://rancher.com/docs/k3s/latest/en/) 是一个轻量且完全兼容的 Kubernetes 发行版。
+[K3s](https://rancher.com/docs/k3s/latest/en/) 是用于边缘安装的轻量级、完全兼容的 Kubernetes 发行版。
+[RKE2](https://docs.rke2.io) 是 Rancher 用于数据中心和云安装的下一代 Kubernetes 发行版。
 
-K3s 集群注册到 Rancher 后，Rancher 会将它识别为 K3s。Rancher UI 将开放[所有已注册集群](#所有已注册集群的功能)的功能，以及以下用于编辑和升级集群的功能：
+RKE2 或 K3s 集群注册到 Rancher 后，Rancher 会识别它。Rancher UI 将开放[所有已注册集群](#所有已注册集群的功能)的功能，以及以下用于编辑和升级集群的功能：
 
-- [升级 K3s 版本](../../../getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes.md)
+- [升级 Kubernetes 版本](../../../getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes.md)的能力
 - 配置能同时升级的最大节点数
-- 查看 K3s 集群的配置参数和用于启动集群中每个节点的环境变量的只读版本
+- 查看集群的配置参数和用于启动集群中每个节点的环境变量的只读版本
 
-### 已注册的 EKS 和 GKE 集群的附加功能
+### 已注册 EKS, AKS 和 GKE 集群的附加功能
 
-如果你注册了 Amazon EKS 或 GKE 集群，Rancher 将视其为在 Rancher 中创建的集群。
+如果你注册了 Amazon EKS、Azure AKS 或 GKE 集群，Rancher 将视其为在 Rancher 中创建的集群。
 
-你现在可以将 Amazon EKS 和 GKE 集群注册到 Rancher。在大多数情况下，注册的集群和在 Rancher UI 中创建的集群的处理方式相同（除了删除）。
+你现在可以将 Amazon EKS、Azure AKS 和 GKE 集群注册到 Rancher。在大多数情况下，注册的集群和在 Rancher UI 中创建的集群的处理方式相同（除了删除）。
 
-删除在 Rancher 中创建的 EKS 或 GKE 集群后，该集群将被销毁。删除在 Rancher 中注册集群时，它与 Rancher Server 会断开连接，但它仍然存在。你仍然可以像在 Rancher 中注册之前一样访问它。
+删除在 Rancher 中创建的 EKS、AKS 或 GKE 集群后，该集群将被销毁。删除在 Rancher 中注册集群时，它与 Rancher Server 会断开连接，但它仍然存在。你仍然可以像在 Rancher 中注册之前一样访问它。
 
 [此页面](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)上的表格中列出了已注册集群的功能。
 
-## 配置 K3s 集群升级
+## 配置 RKE2 和 K3s 集群升级
 
 :::tip
 
@@ -164,13 +149,13 @@ Kubernetes 的最佳实践是在升级之前备份集群。使用外部数据库
 - **controlplane 并发**：可以同时升级的最大服务器节点数；也是最大不可用服务器节点数
 - **Worker 并发**：可以同时升级的最大 worker 节点数；也是最大不可用 worker 节点数
 
-在 K3s 文档中，controlplane 节点也称为 server 节点。Kubernetes master 节点运行在这些节点上，用于维护集群的状态。在 K3s 中，controlplane 节点默认能够让工作负载调度到节点上。
+在 RKE2 和 K3s 文档中，control plane 节点也称为 Server 节点。Kubernetes master 节点运行在这些节点上，用于维护集群的状态。默认情况下，control plane 节点默认能够让工作负载调度到节点上。
 
-类似的，在 K3s 文档中，具有 worker 角色的节点称为 Agent 节点。默认情况下，部署在集群中的任何工作负载或 Pod 都能调度到这些节点上。
+类似的，在 RKE2 和 K3s 文档中，具有 worker 角色的节点称为 Agent 节点。默认情况下，部署在集群中的任何工作负载或 Pod 都能调度到这些节点上。
 
-## 已注册 K3s 集群的 Logging 调试和故障排除
+## 已注册 RKE2 和 K3s 集群的 Logging 调试和故障排除
 
-节点由运行在下游集群中的 `system-upgrade-controller` 升级。基于集群配置，Rancher 部署了两个[计划](https://github.com/rancher/system-upgrade-controller#example-upgrade-plan)来升级 K3s 节点，分别用于升级 controlplane 节点和 worker 节点。`system-upgrade-controller` 会按照计划对节点进行升级。
+节点由运行在下游集群中的 `system-upgrade-controller` 升级。基于集群配置，Rancher 部署了两个[计划](https://github.com/rancher/system-upgrade-controller#example-upgrade-plan)来升级节点，分别用于升级 control plane 节点和 worker 节点。`system-upgrade-controller` 会按照计划对节点进行升级。
 
 要在 `system-upgrade-controller` deployment 上启用调试日志记录，请编辑 [configmap](https://github.com/rancher/system-upgrade-controller/blob/50a4c8975543d75f1d76a8290001d87dc298bdb4/manifests/system-upgrade-controller.yaml#L32) 以将调试环境变量设置为 true。然后重启 `system-upgrade-controller` pod。
 
@@ -229,18 +214,18 @@ _从 v2.6.3 起可用_
        cluster: Default
    ```
 
-1. 将以下内容添加到配置文件中（如果文件不存在，则创建一个）。请注意，默认位置是 `/etc/rancher/{rke2,k3s}/config.yaml`：
+2. 将以下内容添加到配置文件中（如果文件不存在，则创建一个）。请注意，默认位置是 `/etc/rancher/{rke2,k3s}/config.yaml`：
    ```yaml
    kube-apiserver-arg:
        - authentication-token-webhook-config-file=/var/lib/rancher/{rke2,k3s}/kube-api-authn-webhook.yaml
    ```
 
-1. 运行以下命令：
+3. 运行以下命令：
 
         sudo systemctl stop {rke2,k3s}-server
         sudo systemctl start {rke2,k3s}-server
 
-1. 最后，你**必须**返回 Rancher UI 并在那里编辑导入的集群，从而完成 ACE 启用。单击 **⋮ > 编辑配置**，然后单击**集群配置**下的**网络**选项卡。最后，单击**授权端点**的**启用**按钮。启用 ACE 后，你可以输入完全限定的域名 (FQDN) 和证书信息。
+4. 最后，你**必须**返回 Rancher UI 并在那里编辑导入的集群，从而完成 ACE 启用。单击 **⋮ > 编辑配置**，然后单击**集群配置**下的**网络**选项卡。最后，单击**授权端点**的**启用**按钮。启用 ACE 后，你可以输入完全限定的域名 (FQDN) 和证书信息。
 
 :::note
 
@@ -250,7 +235,7 @@ _从 v2.6.3 起可用_
 
 ## 注释已注册的集群
 
-Rancher 没有注册的 Kubernetes 集群（除了 K3s Kubernetes 集群之外）如何预置或配置集群的任何信息。
+Rancher 没有注册的 Kubernetes 集群（除了 RKE2 和 K3s Kubernetes 集群之外）如何预置或配置集群的任何信息。
 
 因此，当 Rancher 注册集群时，它假设某些功能是默认禁用的。Rancher 这样做是为了避免向用户暴露 UI 选项（即使注册的集群没有启用这些功能）。
 
@@ -289,10 +274,10 @@ Rancher 没有注册的 Kubernetes 集群（除了 K3s Kubernetes 集群之外�
 要注释已注册的集群：
 
 1. 点击 **☰ > 集群管理**。
-1. 在**集群**页面上，转到要注释的自定义集群，然后单击 **⋮ > 编辑配置**。
-1. 展开**标签 & 注释**。
-1. 单击**添加注释**。
-1. 使用 `capabilities/<capability>: <value>` 格式向集群添加注释，其中 `value` 是要使用注释覆盖的集群功能。在这种情况下，Rancher 在你添加注释之前都不知道集群的任何功能。
-1. 单击**保存**。
+2. 在**集群**页面上，转到要注释的自定义集群，然后单击 **⋮ > 编辑配置**。
+3. 展开**标签 & 注释**。
+4. 单击**添加注释**。
+5. 使用 `capabilities/<capability>: <value>` 格式向集群添加注释，其中 `value` 是要使用注释覆盖的集群功能。在这种情况下，Rancher 在你添加注释之前都不知道集群的任何功能。
+6. 单击**保存**。
 
 **结果**：注释并不是给集群提供功能，而是告知 Rancher 集群具有这些功能。
