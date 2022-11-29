@@ -136,7 +136,19 @@ module.exports = {
       {
         fromExtensions: ['html', 'htm'],
         redirects: [
+          { // Redirects for AWS Marketplace (start)
+            to: '/integrations-in-rancher/cloud-marketplace/supportconfig',
+            from: '/v2.7/integrations-in-rancher/cloud-marketplace/supportconfig'
+          },
           {
+            to: '/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements',
+            from: '/v2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements'
+          },
+          {
+            to: '/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter',
+            from: '/v2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter'
+          }, // Redirects for AWS Marketplace (end)
+          { // Redirects for restructure from PR #234 (start)
             to: '/faq/general-faq',
             from: '/faq'
           },
@@ -627,7 +639,7 @@ module.exports = {
           {
             to: '/integrations-in-rancher/opa-gatekeeper',
             from: '/explanations/integrations-in-rancher/opa-gatekeeper'
-          },
+          }, // Redirects for restructure from PR #234 (end)
         ],
       },
     ],
