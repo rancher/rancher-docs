@@ -1,5 +1,5 @@
 ---
-title: Rancher 2.6 的自我评估和强化指南
+title: Rancher v2.7 的自我评估和强化指南
 ---
 
 Rancher 为每个受支持的 Rancher Kubernetes 发行版提供了对应的安全强化指南。
@@ -17,7 +17,7 @@ Rancher 使用以下 Kubernetes 发行版：
 
 ## 强化指南和 Benchmark 版本
 
-这些指南已与 Rancher 2.6 版本一起测试。每个自我评估指南都附有强化指南，并在特定的 Kubernetes 版本和 CIS Benchmark 版本上进行了测试。如果 CIS Benchmark 测试尚未针对你的 Kubernetes 版本进行验证，你可以先使用现有指南。
+这些指南已与 Rancher 2.7 版本一起测试。每个自我评估指南都附有强化指南，并在特定的 Kubernetes 版本和 CIS Benchmark 版本上进行了测试。如果 CIS Benchmark 测试尚未针对你的 Kubernetes 版本进行验证，你可以先使用现有指南。
 
 ### RKE 指南
 
@@ -42,6 +42,7 @@ Rancher 使用以下 Kubernetes 发行版：
 
 | 类型 | Kubernetes 版本 | CIS Benchmark 版本 | 自我评估指南 | 强化指南 |
 | ---- | ------------------ | --------------------- | --------------------- | ---------------- |
+| Rancher 配置的 K3s 集群 | Kubernetes v1.21 到 v1.24 | CIS v1.20 和 v1.23 | [CIS v1.20](../reference-guides/rancher-security/rancher-v2.7-hardening-guides/k3s-self-assessment-guide-with-cis-v1.20-benchmark.md) 和 [CIS v1.23](../reference-guides/rancher-security/rancher-v2.7-hardening-guides/k3s-self-assessment-guide-with-cis-v1.23-benchmark.md) | [链接](../reference-guides/rancher-security/rancher-v2.7-hardening-guides/k3s-hardening-guide-with-cis-benchmark.md) |
 | 独立 K3s | Kubernetes v1.21 和 v1.22 | CIS v1.6 | [链接](https://docs.k3s.io/security/self-assessment) | [链接](https://docs.k3s.io/security/hardening-guide) |
 
 ## 使用 SELinux 的 Rancher

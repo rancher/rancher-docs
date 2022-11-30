@@ -31,7 +31,7 @@ _kubeconfig 文件_ 是与 kubectl 命令行工具（或其他客户端）结合
 
 ### 关于 kube-api-auth 身份验证 Webhook
 
-`kube-api-auth` 微服务是为[授权集群端点](../../../../pages-for-subheaders/rancher-manager-architecture.md#4-授权集群端点)提供用户认证功能而部署的，该功能仅适用于[RKE 集群](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)。当你使用 `kubectl` 访问下游集群时，集群的 Kubernetes API server 会使用 `kube-api-auth` 服务作为 webhook 对你进行身份验证。
+`kube-api-auth` 微服务是为[授权集群端点](../../../../pages-for-subheaders/rancher-manager-architecture.md#4-授权集群端点)提供用户认证功能而部署的。当你使用 `kubectl` 访问下游集群时，集群的 Kubernetes API server 会使用 `kube-api-auth` 服务作为 webhook 对你进行身份验证。
 
 在集群配置期间会部署 `/etc/kubernetes/kube-api-authn-webhook.yaml` 文件，并使用 `--authentication-token-webhook-config-file=/etc/kubernetes/kube-api-authn-webhook.yaml` 配置 `kube-apiserver`。这会将 `kube-apiserver` 配置为通过查询 `http://127.0.0.1:6440/v1/authenticate` 来确定持有者 token 的身份验证。
 
