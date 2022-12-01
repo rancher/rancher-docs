@@ -136,6 +136,26 @@ module.exports = {
       {
         fromExtensions: ['html', 'htm'],
         redirects: [
+          { // Redirects for links in UI (start)
+            to: '/faq/telemetry/',
+            from: '/v2.7/faq/telemetry/'
+          },
+          {
+            to: '/pages-for-subheaders/monitoring-v2-configuration',
+            from: '/v2.7/pages-for-subheaders/monitoring-v2-configuration'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences',
+            from: '/v2.7/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences'
+          },
+          {
+            to: '/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/alertmanager',
+            from: '/v2.7/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/alertmanager'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-google-oauth',
+            from: '/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-google-oauth'
+          }, // Redirects for links in UI (end)
           { // Redirects for AWS Marketplace (start)
             to: '/integrations-in-rancher/cloud-marketplace/supportconfig',
             from: '/v2.7/integrations-in-rancher/cloud-marketplace/supportconfig'
