@@ -79,6 +79,11 @@ module.exports = {
           className: 'navbar__github',
         },
         {
+          href: 'https://rancher.com',
+          label: 'Rancher Home',
+          position: 'right',
+        },
+        {
           type: 'docsVersionDropdown',
           position: 'left',
           dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
