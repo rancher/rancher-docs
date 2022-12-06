@@ -78,7 +78,7 @@ The below steps update the Helm values for the Rancher chart, so the Rancher pod
    privateCA: true
    ```
    :::note Important:
-   As the certificate is signed by a private CA, it is important to ensure [`privateCA: true`](https://docs.ranchermanager.rancher.io/getting-started/installation-and-upgrade/installation-references/helm-chart-options#common-options) is set in the `values.yaml` file.
+   As the certificate is signed by a private CA, it is important to ensure [`privateCA: true`](../installation-references/helm-chart-options.md#common-options) is set in the `values.yaml` file.
    :::
    1. Upgrade the Helm application instance using the `values.yaml` file and the current chart version. The version must match to prevent an upgrade of Rancher.
    ```bash
@@ -105,7 +105,7 @@ When Rancher is configured with a certificate signed by a private CA, the CA cer
 
 Method 1 is the easiest, but requires all clusters to be connected to Rancher after the certificates have been rotated. This is usually the case if the process is performed right after updating the Rancher deployment (Step 3).
 
-If the clusters have lost connection to Rancher but [Authorized Cluster Endpoint](https://docs.ranchermanager.rancher.io/how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint) (ACE) is enabled on all clusters, then go with method 2.
+If the clusters have lost connection to Rancher but [Authorized Cluster Endpoint](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint) (ACE) is enabled on all clusters, then go with method 2.
 
 Method 3 can be used as a fallback if method 1 and 2 are not possible.
 
@@ -131,7 +131,7 @@ Manually patch the agent Kubernetes objects by updating the `CATTLE_CA_CHECKSUM`
 curl -k -s -fL <RANCHER_SERVER_URL>/v3/settings/cacerts | jq -r .value | sha256sum cacert.tmp | awk '{print $1}'
 ```
 
-Using a Kubeconfig for each downstream cluster update the environment variable for the two agent deployments. If the [ACE](https://docs.ranchermanager.rancher.io/how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint) is enabled for the cluster, [the kubectl context can be adjusted](https://docs.ranchermanager.rancher.io/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig#authenticating-directly-with-a-downstream-cluster) to connect directly to the downstream cluster.
+Using a Kubeconfig for each downstream cluster update the environment variable for the two agent deployments. If the [ACE](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint) is enabled for the cluster, [the kubectl context can be adjusted](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig#authenticating-directly-with-a-downstream-cluster) to connect directly to the downstream cluster.
 
 ```bash
 kubectl edit -n cattle-system ds/cattle-node-agent
@@ -150,7 +150,7 @@ Repeat the below steps for each downstream cluster:
       1. Copy the command from the `insecureCommand` field, this command is used because a private CA is un use
 
   2. Run the kubectl command from the previous step using a kubeconfig for the downstream cluster with one of the following methods:
-      1. If the [ACE](https://docs.ranchermanager.rancher.io/how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint) is enabled for the cluster, [the context can be adjusted](https://docs.ranchermanager.rancher.io/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig#authenticating-directly-with-a-downstream-cluster) to connect directly to the downstream cluster
+      1. If the [ACE](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint) is enabled for the cluster, [the context can be adjusted](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig#authenticating-directly-with-a-downstream-cluster) to connect directly to the downstream cluster
       1. Alternatively, SSH into the control plane node:
           - RKE: Use the [steps in the document here](https://github.com/rancherlabs/support-tools/tree/master/how-to-retrieve-kubeconfig-from-custom-cluster) to generate a kubeconfig
           - RKE2/K3s: Use the kubeconfig populated during installation
@@ -220,7 +220,7 @@ The below steps update the Helm values for the Rancher chart, so the Rancher pod
    ```
   1. Update the current Helm values in the `values.yaml` file:
       1. As a private CA is no longer being used, remove the `privateCA: true` field, or set this to `false`
-      1. Adjust the `ingress.tls.source` field as necessary. Please [refer to the chart options](https://docs.ranchermanager.rancher.io/getting-started/installation-and-upgrade/installation-references/helm-chart-options#common-options) for more details. Here are some examples:
+      1. Adjust the `ingress.tls.source` field as necessary. Please [refer to the chart options](../installation-references/helm-chart-options#common-options) for more details. Here are some examples:
           1. If using a public CA continue with a value of: `secret`
           1. If using Let's Encrypt update the value to: `letsEncrypt`
   1. Update the Helm values for the Rancher chart using the `values.yaml` file, and the current chart version to prevent an upgrade:
