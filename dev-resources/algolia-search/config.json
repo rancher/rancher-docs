@@ -1,7 +1,7 @@
 {
     "index_name": "docs_ranchermanager_rancher_io",
-    "sitemap_urls": ["http://docs.ranchermanager.rancher.io/sitemap.xml"],
-    "start_urls": ["http://docs.ranchermanager.rancher.io/"],
+    "sitemap_urls": ["http://ranchermanager.docs.rancher.com/sitemap.xml"],
+    "start_urls": ["http://ranchermanager.docs.rancher.com/"],
     "selectors": {
       "lvl0": "",
       "lvl1": "article h1",
