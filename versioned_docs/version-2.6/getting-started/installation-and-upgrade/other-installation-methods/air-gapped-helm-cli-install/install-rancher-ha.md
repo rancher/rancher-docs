@@ -205,7 +205,7 @@ Install Rancher, declaring your chosen options. Use the reference table below to
 | `<REGISTRY.YOURDOMAIN.COM:PORT>` | The DNS name for your private registry.         |
 
 ```plain
-   helm install rancher ./rancher-<VERSION>.tgz --output-dir . \
+   helm install rancher ./rancher-<VERSION>.tgz \
     --namespace cattle-system \
     --set hostname=<RANCHER.YOURDOMAIN.COM> \
     --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
@@ -217,7 +217,7 @@ Install Rancher, declaring your chosen options. Use the reference table below to
 If you are using a Private CA signed cert, add `--set privateCA=true` following `--set ingress.tls.source=secret`:
 
 ```plain
-   helm install rancher ./rancher-<VERSION>.tgz --output-dir . \
+   helm install rancher ./rancher-<VERSION>.tgz \
     --namespace cattle-system \
     --set hostname=<RANCHER.YOURDOMAIN.COM> \
     --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
