@@ -2,9 +2,6 @@
 title: 集群和项目角色
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 集群和项目角色定义集群或项目内的用户授权。
 
 要管理这些角色：

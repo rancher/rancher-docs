@@ -2,7 +2,6 @@
 title: Setting up a High-availability RKE Kubernetes Cluster
 ---
 
-
 This section describes how to install a Kubernetes cluster. This cluster should be dedicated to run only the Rancher server.
 
 :::note

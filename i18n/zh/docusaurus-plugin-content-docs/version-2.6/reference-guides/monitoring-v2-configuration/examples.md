@@ -2,7 +2,6 @@
 title: 示例
 ---
 
-
 ### ServiceMonitor
 
 你可以在[此处](https://github.com/prometheus-operator/prometheus-operator/blob/master/example/prometheus-operator-crd/monitoring.coreos.com_servicemonitors.yaml)找到 ServiceMonitor 自定义资源的示例。

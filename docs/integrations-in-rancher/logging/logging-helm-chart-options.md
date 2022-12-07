@@ -2,7 +2,6 @@
 title: rancher-logging Helm Chart Options
 ---
 
-
 ### Enable/Disable Windows Node Logging
 
 You can enable or disable Windows node logging by setting `global.cattle.windows.enabled` to either `true` or `false` in the `values.yaml`.

@@ -2,9 +2,6 @@
 title: Cluster and Project Roles
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 Cluster and project roles define user authorization inside a cluster or project.
 
 To manage these roles,

@@ -2,7 +2,6 @@
 title: 管理 GKE 集群
 ---
 
-
 ## 先决条件
 
 你需要在 Google Kubernetes Engine 中进行一些设置。

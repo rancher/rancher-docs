@@ -2,7 +2,6 @@
 title: Helm Chart 选项
 ---
 
-
 ## 配置资源限制和请求
 
 安装 `rancher-monitoring` 时可以配置资源请求和限制。

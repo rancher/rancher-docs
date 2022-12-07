@@ -2,9 +2,6 @@
 title: Upgrading to v2.0.7+ — Namespace Migration
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 >This section applies only to Rancher upgrades from v2.0.6 or earlier to v2.0.7 or later. Upgrades from v2.0.7 to later version are unaffected.
 
 In Rancher v2.0.6 and prior, system namespaces crucial for Rancher and Kubernetes operations were not assigned to any Rancher project by default. Instead, these namespaces existed independently from all Rancher projects, but you could move these namespaces into any project without affecting cluster operations.

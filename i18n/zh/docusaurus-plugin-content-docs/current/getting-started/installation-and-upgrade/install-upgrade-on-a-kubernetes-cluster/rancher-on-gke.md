@@ -2,9 +2,6 @@
 title: 在 GKE 集群上安装 Rancher
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 在本节中，你将学习如何使用 GKE 安装 Rancher。
 
 如果你已经有一个 GKE Kubernetes 集群，请直接跳转到[安装 Ingress](#7-安装-ingress)这个步骤。然后按照[此处](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#安装-rancher-helm-chart)的步骤安装 Rancher Helm Chart。

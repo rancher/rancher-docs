@@ -3,9 +3,6 @@ title: Launching Catalog Apps
 ---
 
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 Within a project, when you want to deploy applications from catalogs, the applications available in your project will be based on the [scope of the catalogs](../../../pages-for-subheaders/helm-charts-in-rancher.md#catalog-scopes).
 
 If your application is using ingresses, you can program the ingress hostname to an external DNS by setting up a [Global DNS entry](globaldns.md).

@@ -2,9 +2,6 @@
 title: 创建 DigitalOcean 集群
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 在本节中，你将学习如何使用 Rancher 在 DigitalOcean 中安装 [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes 集群。
 
 首先，在 Rancher 中设置你的 DigitalOcean 云凭证。然后，使用云凭证创建一个节点模板，Rancher 将使用该模板在 DigitalOcean 中配置新节点。

@@ -2,9 +2,6 @@
 title: Configuring PrometheusRules
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 A PrometheusRule defines a group of Prometheus alerting and/or recording rules.
 
 > This section assumes familiarity with how monitoring components work together. For more information, see [this section.](../../../../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)

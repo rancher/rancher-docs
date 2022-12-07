@@ -2,9 +2,6 @@
 title: Outputs and ClusterOutputs
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 For the full details on configuring `Outputs` and `ClusterOutputs`, see the [Banzai Cloud Logging operator documentation.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/output/)
 
 

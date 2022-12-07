@@ -2,9 +2,6 @@
 title: Nodes and Node Pools
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 After you launch a Kubernetes cluster in Rancher, you can manage individual nodes from the cluster's **Node** tab. Depending on the [option used](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md) to provision the cluster, there are different node options available.
 
 > If you want to manage the _cluster_ and not individual nodes, see [Editing Clusters](../../../pages-for-subheaders/cluster-configuration.md#editing-clusters-with-yaml).

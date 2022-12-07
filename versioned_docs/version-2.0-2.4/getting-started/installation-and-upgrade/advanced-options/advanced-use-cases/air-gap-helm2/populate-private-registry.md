@@ -2,9 +2,6 @@
 title: '2. Collect and Publish Images to your Private Registry'
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 > **Prerequisites:** You must have a [private registry](https://docs.docker.com/registry/deploying/) available to use.
 >
 > **Note:** Populating the private registry with images is the same process for HA and Docker installations, the differences in this section is based on whether or not you are planning to provision a Windows cluster or not.

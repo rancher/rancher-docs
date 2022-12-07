@@ -2,9 +2,6 @@
 title: 路由配置
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 路由（Route）配置是 Alertmanager 自定义资源的一部分，用于控制 Prometheus 触发的告警在到达接收器之前的分组和过滤方式。
 
 当路由更改时，Prometheus Operator 会重新生成 Alertmanager 自定义资源以反映更改。

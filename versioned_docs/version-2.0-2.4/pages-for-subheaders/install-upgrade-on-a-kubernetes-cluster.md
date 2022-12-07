@@ -3,9 +3,6 @@ title: Install Rancher on a Kubernetes Cluster
 description: Learn how to install Rancher in development and production environments. Read about single node and high availability installation
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 ## Prerequisite
 
 Set up the Rancher server's local Kubernetes cluster.

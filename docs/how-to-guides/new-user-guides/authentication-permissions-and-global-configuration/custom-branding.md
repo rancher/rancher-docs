@@ -2,9 +2,6 @@
 title: Custom Branding
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 Rancher v2.6 introduced the ability to customize Rancher’s branding and navigation links.
 
 ## Changing Brand Settings

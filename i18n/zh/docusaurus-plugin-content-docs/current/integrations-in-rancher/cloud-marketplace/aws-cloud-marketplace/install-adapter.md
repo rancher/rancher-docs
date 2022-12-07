@@ -2,9 +2,6 @@
 title: 安装 Adapter
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 > **重要提示**：如果你尝试重新安装 Adapter，你可能会在长达一小时的时间内收到不合规的错误消息。
 
 ### Rancher 与 Adapter 的兼容性矩阵

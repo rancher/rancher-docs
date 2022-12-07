@@ -2,9 +2,6 @@
 title: 为流水线组件配置持久数据
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 默认情况下，流水线内部的 Docker 镜像仓库和 Minio 工作负载都使用临时卷。这是开箱即用的默认存储方式，能让测试变得更加便利。但如果运行 Docker 镜像仓库或 Minio 的节点出现故障，你将丢失构建镜像和构建日志。在大多数情况下，这不是太大的问题。如果你希望构建镜像和日志能够在节点故障中幸免于难，你可以让 Docker 镜像仓库和 Minio 使用持久卷。
 
 本节假设你了解持久存储在 Kubernetes 中的工作原理。如需更多信息，请参阅[存储的工作原理](../../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/about-persistent-storage.md)。

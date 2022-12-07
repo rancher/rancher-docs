@@ -2,9 +2,6 @@
 title: Persistent Grafana Dashboards
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 To allow the Grafana dashboard to persist after the Grafana instance restarts, add the dashboard configuration JSON into a ConfigMap. ConfigMaps also allow the dashboards to be deployed with a GitOps or CD based approach. This allows the dashboard to be put under version control.
 
 - [Creating a Persistent Grafana Dashboard](#creating-a-persistent-grafana-dashboard)

@@ -2,9 +2,6 @@
 title: Flows and ClusterFlows
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 For the full details on configuring `Flows` and `ClusterFlows`, see the [Banzai Cloud Logging operator documentation.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/output/)
 
 - [Configuration](#configuration)

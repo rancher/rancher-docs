@@ -2,7 +2,6 @@
 title: How Monitoring Works
 ---
 
-
 ## 1. Architecture Overview
 
 _**The following sections describe how data flows through the Monitoring V2 application:**_

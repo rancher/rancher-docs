@@ -2,9 +2,6 @@
 title: 4. Install Rancher
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 This section is about how to deploy Rancher for your air gapped environment in a high-availability Kubernetes installation. An air gapped environment could be where Rancher server will be installed offline, behind a firewall, or behind a proxy.
 
 ### Privileged Access for Rancher v2.5+

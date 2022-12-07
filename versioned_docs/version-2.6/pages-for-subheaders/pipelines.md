@@ -2,9 +2,6 @@
 title: Pipelines
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 :::note Notes
 
 - As of Rancher v2.5, Git-based deployment pipelines are now deprecated. We recommend handling pipelines with Rancher Continuous Delivery powered by [Fleet](../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md). To get to Fleet in Rancher, click <b>☰ > Continuous Delivery</b>.

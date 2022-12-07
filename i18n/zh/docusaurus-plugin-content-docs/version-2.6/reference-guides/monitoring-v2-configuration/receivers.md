@@ -2,9 +2,6 @@
 title: 接收器配置
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 [Alertmanager Config](https://prometheus.io/docs/alerting/latest/configuration/#configuration-file) Secret 包含 Alertmanager 实例的配置，该实例根据 Prometheus 发出的告警发送通知。
 
 :::note

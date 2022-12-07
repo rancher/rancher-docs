@@ -2,9 +2,6 @@
 title: Rancher 管理集群的节点要求
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 本页描述了 Rancher 管理的 Kubernetes 集群的要求，你的应用和服务将安装在这些集群中。这些下游集群应该与运行 Rancher 的三节点集群分开。
 
 :::note

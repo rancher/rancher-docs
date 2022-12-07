@@ -2,9 +2,6 @@
 title: '3. Install Kubernetes (Skip for Docker Installs)'
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 > Skip this section if you are installing Rancher on a single node with Docker.
 
 This section describes how to install a Kubernetes cluster according to our [best practices for the Rancher server environment.](../../../../reference-guides/rancher-manager-architecture/architecture-recommendations.md#environment-for-kubernetes-installations) This cluster should be dedicated to run only the Rancher server.

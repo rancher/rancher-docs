@@ -2,9 +2,6 @@
 title: Installing the Adapter
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 > **Important:** If you are attempting to re-install the adapter, you may experience errant out-of-compliance messages for up to an hour.
 
 ### Rancher vs. Adapter Compatibility Matrix

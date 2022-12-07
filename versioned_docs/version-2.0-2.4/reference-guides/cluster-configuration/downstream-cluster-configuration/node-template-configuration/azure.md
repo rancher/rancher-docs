@@ -2,9 +2,6 @@
 title: Azure Node Template Configuration
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 For more information about Azure, refer to the official [Azure documentation.](https://docs.microsoft.com/en-us/azure/?product=featured)
 
 <Tabs>

@@ -2,9 +2,6 @@
 title: '3. 安装 Kubernetes（Docker 安装请跳过）'
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 :::note
 
 如果你使用 Docker 在单个节点上安装 Rancher，请跳过本节。

@@ -2,9 +2,6 @@
 title: Helm CLI 快速入门
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 本文提供了快速安装 Rancher 的方法。
 
 这些说明假设你有一个 Linux 虚拟机，并能从本地工作站与之通信。Rancher 将安装在 Linux 主机上。你将需要检索该主机的 IP 地址，以便从本地工作站访问 Rancher。Rancher 旨在远程管理 Kubernetes 集群，因此 Rancher 管理的任何 Kubernetes 集群也都需要能够访问该 IP 地址。

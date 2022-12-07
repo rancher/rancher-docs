@@ -2,9 +2,6 @@
 title: '1. Set up Infrastructure and Private Registry'
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 In this section, you will provision the underlying infrastructure for your Rancher management server in an air gapped environment. You will also set up the private Docker registry that must be available to your Rancher node(s).
 
 An air gapped environment is an environment where the Rancher server is installed offline or behind a firewall.

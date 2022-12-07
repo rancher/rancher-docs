@@ -2,7 +2,6 @@
 title: Helm Chart Options
 ---
 
-
 ## Configuring Resource Limits and Requests
 
 The resource requests and limits can be configured when installing `rancher-monitoring`.

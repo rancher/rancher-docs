@@ -2,9 +2,6 @@
 title: Creating an Azure Cluster
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 In this section, you'll learn how to install an [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes cluster in Azure through Rancher.
 
 First, you will set up your Azure cloud credentials in Rancher. Then you will use your cloud credentials to create a node template, which Rancher will use to provision new nodes in Azure.

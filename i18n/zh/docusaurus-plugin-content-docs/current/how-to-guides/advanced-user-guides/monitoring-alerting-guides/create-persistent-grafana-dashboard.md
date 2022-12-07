@@ -2,9 +2,6 @@
 title: 持久化 Grafana 仪表板
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 要在重启 Grafana 实例后保存 Grafana 仪表板，请将仪表板的配置 JSON 添加到 ConfigMap 中。ConfigMap 还支持使用基于 GitOps 或 CD 的方法来部署仪表板，从而让你对仪表板进行版本控制。
 
 - [创建持久化 Grafana 仪表板](#创建持久化-grafana-仪表板)

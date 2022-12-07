@@ -2,9 +2,6 @@
 title: Upgrading Rancher Installed with Docker
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 The following instructions will guide you through upgrading a Rancher server that was installed with Docker.
 
 :::caution

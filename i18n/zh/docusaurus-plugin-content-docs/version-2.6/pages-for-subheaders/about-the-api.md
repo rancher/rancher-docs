@@ -2,9 +2,6 @@
 title: API
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 ## 如何使用 API
 
 API 有自己的用户界面，你可以从 Web 浏览器访问它。这是查看资源、执行操作以及查看等效 cURL 或 HTTP 请求和响应的一种简单的方法。要访问它：

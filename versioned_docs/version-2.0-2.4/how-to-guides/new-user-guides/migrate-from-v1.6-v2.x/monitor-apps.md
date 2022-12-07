@@ -2,9 +2,6 @@
 title: "4. Configure Health Checks"
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 Rancher v1.6 provided TCP and HTTP health checks on your nodes and services using its own health check microservice. These health checks monitored your containers to confirm they're operating as intended. If a container failed a health check, Rancher would destroy the unhealthy container and then replicates a healthy one to replace it.
 
 For Rancher v2.x, we've replaced the health check microservice, leveraging instead Kubernetes' native health check support.

@@ -2,7 +2,6 @@
 title: Windows 支持
 ---
 
-
 在 Rancher 2.5.6 之前，`agent` 在具有 Windows 节点的下游集群上没有原生的 Windows 清单。这将导致集群的 `agent` pod 失败。
 
 如果你从旧版本的 Rancher 升级到 2.5.6+，你可以在*下游集群*中部署具有以下工作流的工作 `agent`：

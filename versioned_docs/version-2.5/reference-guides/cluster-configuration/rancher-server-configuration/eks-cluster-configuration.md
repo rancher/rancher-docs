@@ -2,9 +2,6 @@
 title: EKS Cluster Configuration Reference
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 <Tabs>
 <TabItem value="Rancher v2.5.6+">
 

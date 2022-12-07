@@ -2,9 +2,6 @@
 title: Registering Existing Clusters
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 The cluster registration feature replaced the feature to import clusters.
 
 The control that Rancher has to manage a registered cluster depends on the type of cluster. For details, see [Management Capabilities for Registered Clusters.](#management-capabilities-for-registered-clusters)
