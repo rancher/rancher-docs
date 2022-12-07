@@ -2,16 +2,29 @@
 title: Rancher Documentation Versions
 ---
 
+<!-- releaseTask -->
+
 ### Current versions
+
+Below are the documentation and release notes for the currently released version of Rancher 2.7.x:
+
+<table>
+  <tr>
+    <td><b>v2.7.0</b></td>
+    <td><a href="https://docs.ranchermanager.rancher.io/">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.7.0">Release Notes</a></td>
+    <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-7-0/">Support Matrix</a></td>
+  </tr>
+</table>
 
 Below are the documentation and release notes for the currently released version of Rancher 2.6.x:
 
 <table>
   <tr>
-    <td><b>v2.6.8</b></td>
-    <td><a href="https://docs.ranchermanager.rancher.io/">Documentation</a></td>
-    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.6.8">Release Notes</a></td>
-    <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-6-8/">Support Matrix</a></td>
+    <td><b>v2.6.9</b></td>
+    <td><a href="https://docs.ranchermanager.rancher.io/v2.6">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.6.9">Release Notes</a></td>
+    <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-6-9/">Support Matrix</a></td>
   </tr>
 </table>
 
@@ -34,50 +47,56 @@ Below are the documentation and release notes for previous versions of Rancher 2
 
 <table>
   <tr>
+    <td><b>v2.6.8</b></td>
+    <td><a href="https://docs.ranchermanager.rancher.io/v2.6">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.6.8">Release Notes</a></td>
+    <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-6-8/">Support Matrix</a></td>
+  </tr>
+  <tr>
     <td><b>v2.6.7</b></td>
-    <td><a href="https://docs.ranchermanager.rancher.io/">Documentation</a></td>
+    <td><a href="https://docs.ranchermanager.rancher.io/v2.6">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.6.7">Release Notes</a></td>
     <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-6-7/">Support Matrix</a></td>
   </tr>
   <tr>
     <td><b>v2.6.6</b></td>
-    <td><a href="https://docs.ranchermanager.rancher.io/">Documentation</a></td>
+    <td><a href="https://docs.ranchermanager.rancher.io/v2.6">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.6.6">Release Notes</a></td>
     <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-6-6/">Support Matrix</a></td>
   </tr>
   <tr>
     <td><b>v2.6.5</b></td>
-    <td><a href="https://docs.ranchermanager.rancher.io/">Documentation</a></td>
+    <td><a href="https://docs.ranchermanager.rancher.io/v2.6">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.6.5">Release Notes</a></td>
     <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-6-5/">Support Matrix</a></td>
   </tr>
     <tr>
     <td><b>v2.6.4</b></td>
-    <td><a href="https://docs.ranchermanager.rancher.io/">Documentation</a></td>
+    <td><a href="https://docs.ranchermanager.rancher.io/v2.6">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.6.4">Release Notes</a></td>
     <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-6-4/">Support Matrix</a></td>
   </tr>
     <tr>
     <td><b>v2.6.3</b></td>
-    <td><a href="https://docs.ranchermanager.rancher.io/">Documentation</a></td>
+    <td><a href="https://docs.ranchermanager.rancher.io/v2.6">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.6.3">Release Notes</a></td>
     <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-6-3/">Support Matrix</a></td>
   </tr>
     <tr>
     <td><b>v2.6.2</b></td>
-    <td><a href="https://docs.ranchermanager.rancher.io/">Documentation</a></td>
+    <td><a href="https://docs.ranchermanager.rancher.io/v2.6">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.6.2">Release Notes</a></td>
     <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-6-2/">Support Matrix</a></td>
   </tr>
     <tr>
     <td><b>v2.6.1</b></td>
-    <td><a href="https://docs.ranchermanager.rancher.io/">Documentation</a></td>
+    <td><a href="https://docs.ranchermanager.rancher.io/v2.6">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.6.1">Release Notes</a></td>
     <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-6-1/">Support Matrix</a></td>
   </tr>
     <tr>
     <td><b>v2.6.0</b></td>
-    <td><a href="https://docs.ranchermanager.rancher.io/">Documentation</a></td>
+    <td><a href="https://docs.ranchermanager.rancher.io/v2.6">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.6.0">Release Notes</a></td>
     <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-6-0/">Support Matrix</a></td>
   </tr>
