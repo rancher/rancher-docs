@@ -2,7 +2,6 @@
 title: Nutanix Node Template Configuration
 ---
 
-
 ## Account Access
 
 | Parameter                    | Required | Description | Default

@@ -2,9 +2,6 @@
 title: Choosing a Rancher Version
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 This section describes how to choose a Rancher version.
 
 For a high-availability installation of Rancher, which is recommended for production, the Rancher server is installed using a **Helm chart** on a Kubernetes cluster. Refer to the [Helm version requirements](helm-version-requirements.md) to choose a version of Helm to install Rancher.

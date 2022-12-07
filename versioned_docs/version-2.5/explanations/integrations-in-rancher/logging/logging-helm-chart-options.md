@@ -2,7 +2,6 @@
 title: rancher-logging Helm Chart Options
 ---
 
-
 ### Enable/Disable Windows Node Logging
 
 _Available as of v2.5.8_

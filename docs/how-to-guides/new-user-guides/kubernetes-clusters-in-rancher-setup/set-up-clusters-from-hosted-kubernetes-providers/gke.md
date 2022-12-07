@@ -2,7 +2,6 @@
 title: Managing GKE Clusters
 ---
 
-
 ## Prerequisites
 
 Some setup in Google Kubernetes Engine is required.

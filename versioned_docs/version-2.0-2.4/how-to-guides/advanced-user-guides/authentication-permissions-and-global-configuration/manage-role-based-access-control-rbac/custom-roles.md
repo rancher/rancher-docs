@@ -2,9 +2,6 @@
 title: Custom Roles
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 Within Rancher, _roles_ determine what actions a user can make within a cluster or project.
 
 Note that _roles_ are different from _permissions_, which determine what clusters and projects you can access.

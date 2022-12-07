@@ -2,9 +2,6 @@
 title: Global Permissions
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 _Permissions_ are individual access rights that you can assign when selecting a custom permission for a user.
 
 Global Permissions define user authorization outside the scope of any particular cluster. Out-of-the-box, there are three default global permissions: `Administrator`, `Standard User` and `User-base`.

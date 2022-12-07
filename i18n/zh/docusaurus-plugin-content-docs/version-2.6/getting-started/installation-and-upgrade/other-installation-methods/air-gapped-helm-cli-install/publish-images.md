@@ -2,9 +2,6 @@
 title: '2. 收集镜像并发布到私有仓库'
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 本文介绍如何配置私有镜像仓库，以便在安装 Rancher 时，Rancher 可以从此私有镜像仓库中拉取所需的镜像。
 
 默认情况下，所有用于[配置 Kubernetes 集群](../../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)或启动 Rancher 中的工具（如监控，流水线，告警等）的镜像都是从 Docker Hub 中拉取的。在 Rancher 的离线安装中，你需要一个私有仓库，该仓库位于你的 Rancher Server 中某个可访问的位置。然后，你可加载该存有所有镜像的镜像仓库。

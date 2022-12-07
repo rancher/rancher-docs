@@ -2,9 +2,6 @@
 title: Backing up Rancher Installed on an RKE Kubernetes Cluster
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 This section describes how to create backups of your high-availability Rancher install.
 
 In an RKE installation, the cluster data is replicated on each of three etcd nodes in the cluster, providing redundancy and data duplication in case one of the nodes fails.

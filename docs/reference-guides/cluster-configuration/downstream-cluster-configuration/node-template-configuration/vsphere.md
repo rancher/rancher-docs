@@ -2,7 +2,6 @@
 title: VSphere Node Template Configuration
 ---
 
-
 ## Account Access
 
 | Parameter                | Required | Description |

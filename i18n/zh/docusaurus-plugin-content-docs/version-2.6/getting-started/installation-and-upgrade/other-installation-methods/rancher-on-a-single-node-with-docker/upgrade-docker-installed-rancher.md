@@ -2,9 +2,6 @@
 title: 升级 Docker 安装的 Rancher
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 本文介绍如何升级通过 Docker 安装的 Rancher Server。
 
 :::caution

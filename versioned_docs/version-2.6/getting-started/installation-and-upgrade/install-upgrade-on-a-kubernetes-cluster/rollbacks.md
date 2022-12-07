@@ -2,7 +2,6 @@
 title: Rollbacks
 ---
 
-
 ## Rolling Back to Rancher v2.5.0+
 
 To roll back to Rancher v2.5.0+, use the **Rancher Backups** application and restore Rancher from backup.

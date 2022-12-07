@@ -2,7 +2,6 @@
 title: Release Notes
 ---
 
-
 ## Istio 1.5.8
 
 ### Important note on 1.5.x versions

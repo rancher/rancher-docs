@@ -2,9 +2,6 @@
 title: User Preferences
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 Each user can choose preferences to personalize their Rancher experience. To change preference settings, open the **User Settings** menu and then select **Preferences**.
 
 The preferences available will differ depending on whether the **User Settings** menu was accessed while on the Cluster Manager UI or the Cluster Explorer UI.

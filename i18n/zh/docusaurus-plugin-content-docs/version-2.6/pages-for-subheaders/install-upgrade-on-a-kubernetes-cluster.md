@@ -3,9 +3,6 @@ title: 在 Kubernetes 集群上安装/升级 Rancher
 description: 了解如何在开发和生产环境中安装 Rancher。了解单节点和高可用安装
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 在本节中，你将学习如何使用 Helm CLI 在 Kubernetes 集群上部署 Rancher。
 
 

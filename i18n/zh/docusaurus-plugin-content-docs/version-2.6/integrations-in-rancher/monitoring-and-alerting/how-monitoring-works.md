@@ -2,7 +2,6 @@
 title: Monitoring 的工作原理
 ---
 
-
 ## 1. 架构概述
 
 _**下文描述了数据如何流经 Monitoring V2 应用程序：**_

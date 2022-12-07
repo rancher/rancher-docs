@@ -2,9 +2,6 @@
 title: RKE Cluster Configuration Reference
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 When Rancher installs Kubernetes, it uses [RKE](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) as the Kubernetes distribution.
 
 This section covers the configuration options that are available in Rancher for a new or existing RKE Kubernetes cluster.

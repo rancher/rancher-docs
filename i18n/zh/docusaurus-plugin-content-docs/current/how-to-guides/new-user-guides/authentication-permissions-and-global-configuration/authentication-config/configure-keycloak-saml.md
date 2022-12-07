@@ -3,9 +3,6 @@ title: 配置 Keycloak (SAML)
 description: 创建 Keycloak SAML 客户端并配置 Rancher 以使用 Keycloak。你的用户将能够使用他们的 Keycloak 登录名登录 Rancher。
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 如果你的组织使用 Keycloak Identity Provider (IdP) 进行用户身份验证，你可以通过配置 Rancher 来允许用户使用 IdP 凭证登录。
 
 ## 先决条件

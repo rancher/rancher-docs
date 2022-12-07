@@ -2,9 +2,6 @@
 title: 流水线
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 :::note 注意事项
 
 - Rancher 2.5 开始已弃用基于 Git 的部署流水线。我们建议使用由 [Fleet](../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md) 提供支持的 Rancher Continuous Delivery (CD) 来处理流水线。如需在 Rancher 中访问 Fleet，请单击 <b>☰ > 持续交付</b>。

@@ -2,9 +2,6 @@
 title: Backing up a Cluster
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 _Available as of v2.2.0_
 
 In the Rancher UI, etcd backup and recovery for [Rancher launched Kubernetes clusters](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) can be easily performed.

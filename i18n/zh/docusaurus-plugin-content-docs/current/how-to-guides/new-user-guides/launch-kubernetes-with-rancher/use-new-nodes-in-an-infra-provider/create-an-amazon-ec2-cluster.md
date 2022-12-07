@@ -3,9 +3,6 @@ title: 创建 Amazon EC2 集群
 description: 了解使用 Rancher 创建 Amazon EC2 集群所需的先决条件和步骤
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 在本节中，你将学习如何使用 Rancher 在 Amazon EC2 中安装 [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes 集群。
 
 首先，在 Rancher 中设置你的 EC2 云凭证。然后，使用云凭证创建一个节点模板，Rancher 将使用该模板在 EC2 中配置新节点。

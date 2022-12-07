@@ -2,9 +2,6 @@
 title: '1. 设置基础设施和私有镜像仓库'
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 本文介绍如何在离线环境中，为 Rancher Management server 配置底层基础设施。你还将设置 Rancher 节点中必须可用的 Docker 私有仓库。
 
 离线环境是 Rancher Server 离线安装或安装在防火墙后面的环境。

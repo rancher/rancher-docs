@@ -2,9 +2,6 @@
 title: 证书轮换
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 :::caution
 
 轮换 Kubernetes 证书可能会导致集群在组件重启时暂时不可用。对于生产环境，建议在维护时段内执行此操作。

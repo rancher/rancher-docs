@@ -2,7 +2,6 @@
 title: 内置仪表板
 ---
 
-
 ## Grafana UI
 
 你可以使用 [Grafana](https://grafana.com/grafana/) 对存储在各个地方的指标进行查询、可视化、告警和了解。你能与你的团队创建、探索和共享仪表板，并培养数据驱动的文化。

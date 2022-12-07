@@ -2,9 +2,6 @@
 title: EC2 Node Template Configuration
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 For more details about EC2, nodes, refer to the official documentation for the [EC2 Management Console](https://aws.amazon.com/ec2).
 
 <Tabs>

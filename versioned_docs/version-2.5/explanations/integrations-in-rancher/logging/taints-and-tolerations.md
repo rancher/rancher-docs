@@ -2,9 +2,6 @@
 title: Working with Taints and Tolerations
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 "Tainting" a Kubernetes node causes pods to repel running on that node.
 
 Unless the pods have a `toleration` for that node's taint, they will run on other nodes in the cluster.

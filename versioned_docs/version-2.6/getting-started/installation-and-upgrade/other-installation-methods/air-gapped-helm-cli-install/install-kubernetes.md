@@ -2,9 +2,6 @@
 title: '3. Install Kubernetes (Skip for Docker Installs)'
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 :::note
 
 Skip this section if you are installing Rancher on a single node with Docker.

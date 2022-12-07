@@ -2,9 +2,6 @@
 title: CPU and Memory Allocations
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 This section describes the minimum recommended computing resources for the Istio components in a cluster.
 
 The CPU and memory allocations for each component are [configurable.](#configuring-resource-allocations)

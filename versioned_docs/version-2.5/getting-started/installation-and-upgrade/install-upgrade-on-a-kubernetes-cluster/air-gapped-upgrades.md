@@ -2,9 +2,6 @@
 title: Rendering the Helm Template in an Air Gapped Environment
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 > These instructions assume you have already followed the instructions for a Kubernetes upgrade on [this page,](upgrades.md) including the prerequisites, up until step 3. Upgrade Rancher.
 
 ## Rancher Helm Template Options

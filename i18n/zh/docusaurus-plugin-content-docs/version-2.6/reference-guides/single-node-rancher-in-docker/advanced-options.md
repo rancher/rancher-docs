@@ -2,7 +2,6 @@
 title: Docker 安装高级选项
 ---
 
-
 ### 自定义 CA 证书
 
 如需 Rancher 在验证服务时使用 CA 根证书，请在启动 Rancher 容器时共享包含 CA 根证书的目录。

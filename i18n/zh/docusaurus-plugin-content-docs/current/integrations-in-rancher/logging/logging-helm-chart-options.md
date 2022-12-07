@@ -2,7 +2,6 @@
 title: rancher-logging Helm Chart 选项
 ---
 
-
 ### 启用/禁用 Windows 节点 Logging
 
 要启用或禁用 Windows 节点 Logging，你可以在 `values.yaml` 中将 `global.cattle.windows.enabled` 设置为 `true` 或 `false`。

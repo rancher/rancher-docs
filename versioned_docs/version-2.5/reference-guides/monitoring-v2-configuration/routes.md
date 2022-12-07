@@ -2,9 +2,6 @@
 title: Route Configuration
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 The route configuration is the section of the Alertmanager custom resource that controls how the alerts fired by Prometheus are grouped and filtered before they reach the receiver.
 
 When a Route is changed, the Prometheus Operator regenerates the Alertmanager custom resource to reflect the changes.

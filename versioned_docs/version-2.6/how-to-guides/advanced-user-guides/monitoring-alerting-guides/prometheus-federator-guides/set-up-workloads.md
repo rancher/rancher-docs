@@ -2,7 +2,6 @@
 title: Setting up Prometheus Federator for a Workload
 ---
 
-
 ### Display CPU and Memory Metrics for a Workload
 
 Displaying CPU and memory metrics with Prometheus Federator is done the same way as with rancher-monitoring. For instructions, refer [here](../set-up-monitoring-for-workloads.md#display-cpu-and-memory-metrics-for-a-workload).

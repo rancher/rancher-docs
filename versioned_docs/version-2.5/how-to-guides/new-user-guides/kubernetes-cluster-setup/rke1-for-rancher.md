@@ -2,7 +2,6 @@
 title: Setting up a High-availability RKE Kubernetes Cluster
 ---
 
-
 This section describes how to install a Kubernetes cluster. This cluster should be dedicated to run only the Rancher server.
 
 > As of Rancher v2.5, Rancher can run on any Kubernetes cluster, included hosted Kubernetes solutions such as Amazon EKS. The below instructions represent only one possible way to install Kubernetes.

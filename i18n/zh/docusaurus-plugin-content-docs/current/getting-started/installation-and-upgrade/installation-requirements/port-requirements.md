@@ -3,8 +3,6 @@ title: 端口要求
 description: 了解 Rancher 正常运行所需的端口要求，包括 Rancher 节点和下游 Kubernetes 集群节点
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import PortsIaasNodes from '@site/src/components/PortsIaasNodes'
 import PortsCustomNodes from '@site/src/components/PortsCustomNodes'
 import PortsImportedHosted from '@site/src/components/PortsImportedHosted'

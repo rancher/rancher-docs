@@ -2,9 +2,6 @@
 title: Installing Rancher on a Google Kubernetes Engine Cluster
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 In this section, you'll learn how to install Rancher using Google Kubernetes Engine.
 
 If you already have a GKE Kubernetes cluster, skip to the step about [installing an ingress.](#7-install-an-ingress) Then install the Rancher Helm chart following the instructions on [this page.](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#install-the-rancher-helm-chart)

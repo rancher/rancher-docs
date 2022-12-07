@@ -3,8 +3,6 @@ title: Port Requirements
 description: Read about port requirements needed in order for Rancher to operate properly, both for Rancher nodes and downstream Kubernetes cluster nodes
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import PortsIaasNodes from '@site/src/components/PortsIaasNodes'
 import PortsCustomNodes from '@site/src/components/PortsCustomNodes'
 import PortsImportedHosted from '@site/src/components/PortsImportedHosted'

@@ -2,9 +2,6 @@
 title: 选择 Rancher 版本
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 本节介绍如何选择 Rancher 版本。
 
 在我们推荐用于生产环境的 Rancher 高可用安装中，Rancher Server 是通过 Kubernetes 集群上的 **Helm Chart** 安装的。请参见 [Helm 版本要求](helm-version-requirements.md)选择 Helm 版本来安装 Rancher。

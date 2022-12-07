@@ -2,7 +2,6 @@
 title: 回滚
 ---
 
-
 ## 回滚到 Rancher 2.5.0+
 
 要回滚到 Rancher 2.5.0+，使用 **Rancher 备份**应用并通过备份来恢复 Rancher。

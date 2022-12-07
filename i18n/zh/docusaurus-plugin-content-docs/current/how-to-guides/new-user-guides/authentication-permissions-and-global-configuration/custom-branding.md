@@ -2,9 +2,6 @@
 title: 定制品牌
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 Rancher 2.6 开始支持自定义 Rancher 的品牌和导航链接。
 
 ## 更改品牌设置

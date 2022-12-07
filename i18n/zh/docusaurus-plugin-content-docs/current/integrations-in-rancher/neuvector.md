@@ -2,9 +2,6 @@
 title: NeuVector 集成
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 ### Rancher 中的 NeuVector 集成
 
 [NeuVector 5.x](https://open-docs.neuvector.com/) 是一个开源的，以容器为中心的安全应用程序，Rancher 2.6.5 现已集成 NeuVector。NeuVector 在运行时为关键应用程序和数据提供实时的合规、可见和保护功能。NeuVector 提供具有 CIS Benchmark 和漏洞扫描的防火墙、容器进程/文件系统监控和安全审计。有关 Rancher 安全性的更多信息，请参阅[安全文档](../pages-for-subheaders/rancher-security.md)。

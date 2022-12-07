@@ -2,9 +2,6 @@
 title: Node Requirements for Rancher Managed Clusters
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 This page describes the requirements for the Rancher managed Kubernetes clusters where your apps and services will be installed. These downstream clusters should be separate from the three-node cluster running Rancher.
 
 :::note

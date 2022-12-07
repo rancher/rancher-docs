@@ -3,9 +3,6 @@ title: 从节点中移除 Kubernetes 组件
 description: 了解从 Rancher 启动的 Kubernetes 集群中删除节点时的集群清理过程。了解删除了的内容，以及如何手动进行操作
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 本文介绍如何断开 Rancher 创建的 Kubernetes 集群中的一个节点，并删除该节点中的所有 Kubernetes 组件。此过程允许你将节点用于其他用途。
 
 在通过 Rancher 在基础设施提供商的新节点上安装 Kubernetes 时，会创建资源（容器/虚拟网络接口）和配置项（证书/配置文件）。
