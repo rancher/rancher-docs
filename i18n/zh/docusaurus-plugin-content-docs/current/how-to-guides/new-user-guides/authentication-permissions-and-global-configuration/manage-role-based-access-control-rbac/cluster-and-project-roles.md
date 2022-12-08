@@ -88,7 +88,7 @@ Rancher 支持将 _自定义集群角色_ 分配给普通用户，而不是典�
 要将角色分配给新的集群成员：
 
 <Tabs>
-<TabItem value="Rancher v2.6.4 之前的版本">
+<TabItem value="Rancher 版本低于 v2.6.4">
 
 1. 点击 **☰ > 集群管理**。
 1. 转到要将角色分配给成员的集群，然后单击 **Explore**。

@@ -38,7 +38,7 @@ Rancher 2.6 开始支持自定义 Rancher 的品牌和导航链接。
 ### 固定横幅
 
 <Tabs>
-<TabItem value="Rancher v2.6.4 之前的版本">
+<TabItem value="Rancher 版本低于 v2.6.4">
 
 在页眉、页脚或两者中显示自定义固定横幅。
 
