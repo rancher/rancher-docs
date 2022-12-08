@@ -205,7 +205,7 @@ kubectl create namespace cattle-system
 | `<REGISTRY.YOURDOMAIN.COM:PORT>` | 你的私有镜像仓库的 DNS 名称。 |
 
 ```plain
-   helm install rancher ./rancher-<VERSION>.tgz --output-dir . \
+   helm install rancher ./rancher-<VERSION>.tgz \
     --namespace cattle-system \
     --set hostname=<RANCHER.YOURDOMAIN.COM> \
     --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
@@ -217,7 +217,7 @@ kubectl create namespace cattle-system
 如果你使用的是私有 CA 签名的证书，请在 `--set ingress.tls.source=secret` 后加上 `--set privateCA=true`：
 
 ```plain
-   helm install rancher ./rancher-<VERSION>.tgz --output-dir . \
+   helm install rancher ./rancher-<VERSION>.tgz \
     --namespace cattle-system \
     --set hostname=<RANCHER.YOURDOMAIN.COM> \
     --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \

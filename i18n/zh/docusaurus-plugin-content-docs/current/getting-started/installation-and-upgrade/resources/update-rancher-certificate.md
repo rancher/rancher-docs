@@ -78,7 +78,7 @@ ingress:
 privateCA: true
 ```
 :::note 重要：
-由于证书由私有 CA 签发，因此确保在 `values.yaml` 文件中设置了 [`privateCA: true`](../installation-references/helm-chart-options#common-options) 是非常重要的。
+由于证书由私有 CA 签发，因此确保在 `values.yaml` 文件中设置了 [`privateCA: true`](../installation-references/helm-chart-options.md#常用选项) 是非常重要的。
 :::
 1. 使用 `values.yaml` 文件和当前 Chart 版本升级 Helm 应用程序实例。版本必须匹配以防止 Rancher 升级。
 ```bash
@@ -131,7 +131,7 @@ kubectl annotate clusters.management.cattle.io <CLUSTER_ID> io.cattle.agent.forc
 curl -k -s -fL <RANCHER_SERVER_URL>/v3/settings/cacerts | jq -r .value | sha256sum cacert.tmp | awk '{print $1}'
 ```
 
-为每个下游集群使用 Kubeconfig 更新两个 Agent 部署的环境变量。如果集群启用了 [ACE](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint)，你可以[调整 kubectl 上下文](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig#authenticating-directly-with-a-downstream-cluster)，从而直接连接到下游集群。
+为每个下游集群使用 Kubeconfig 更新两个 Agent 部署的环境变量。如果集群启用了 [ACE](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint)，你可以[调整 kubectl 上下文](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig#直接使用下游集群进行身份验证)，从而直接连接到下游集群。
 
 ```bash
 kubectl edit -n cattle-system ds/cattle-node-agent
@@ -150,7 +150,7 @@ kubectl edit -n cattle-system deployment/cattle-cluster-agent
    1. 复制 `insecureCommand` 字段中的命令，使用此命令是因为未使用私有 CA。
 
 2. 使用以下其中一种方法，使用 kubeconfig 为下游集群运行上一步中的 kubectl 命令：
-   1. 如果集群启用了 [ACE](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint)，你可以[调整上下文](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig#authenticating-directly-with-a-downstream-cluster)，从而直接连接到下游集群。
+   1. 如果集群启用了 [ACE](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint)，你可以[调整上下文](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig#直接使用下游集群进行身份验证)，从而直接连接到下游集群。
    1. 或者，SSH 到 control plane 节点：
       - RKE：使用[此处文档中的步骤](https://github.com/rancherlabs/support-tools/tree/master/how-to-retrieve-kubeconfig-from-custom-cluster)生成 kubeconfig
       - RKE2/K3s：使用安装时填充的 kubeconfig
@@ -220,7 +220,7 @@ helm ls -n cattle-system
 ```
 1. 更新 `values.yaml` 文件中的当前 Helm 值：
    1. 由于不再使用私有 CA，删除 `privateCA: true` 字段，或将其设置为 `false`。
-   1. 根据需要调整 `ingress.tls.source` 字段。有关更多信息，请参阅 [Chart 选项](../installation-references/helm-chart-options#common-options)。以下是一些示例：
+   1. 根据需要调整 `ingress.tls.source` 字段。有关更多信息，请参阅 [Chart 选项](../installation-references/helm-chart-options#常用选项)。以下是一些示例：
       1. 如果使用公共 CA，继续使用 `secret`
       1. 如果使用 Let's Encrypt，将值更新为 `letsEncrypt`
 1. 使用 `values.yaml` 文件更新 Rancher Chart 的 Helm 值，并使用当前 Chart 版本防止升级：

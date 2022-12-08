@@ -89,7 +89,7 @@ grafana.sidecar.dashboards.searchNamespace=ALL
 请注意，Monitoring Chart 用于添加 Grafana 仪表板的 RBAC 角色仅能让用户将仪表板添加到定义在 `grafana.dashboards.namespace` 中的命名空间，默认为 `cattle-dashboards`。
 
 </TabItem>
-<TabItem value="Rancher v2.5.8 之前的版本">
+<TabItem value="Rancher 版本低于 v2.5.8">
 
 :::note 先决条件：
 

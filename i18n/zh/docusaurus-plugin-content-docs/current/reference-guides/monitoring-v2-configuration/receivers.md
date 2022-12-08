@@ -33,7 +33,7 @@ title: 接收器配置
 1. 单击**创建**。
 
 </TabItem>
-<TabItem value="Rancher v2.6.5 之前的版本">
+<TabItem value="Rancher 版本低于 v2.6.5">
 
 1. 转到要创建接收器的集群。单击**监控**，然后单击**接收器**。
 2. 输入接收器的名称。

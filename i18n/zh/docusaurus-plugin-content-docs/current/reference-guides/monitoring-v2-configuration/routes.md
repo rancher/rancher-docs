@@ -57,7 +57,7 @@ Alerting Drivers 为 Alertmanager 将告警代理到非原生接收器，例如 
 | 重复间隔 | 4h | 等待多长时间后，才重新发送已发送的告警。 |
 
 </TabItem>
-<TabItem value="Rancher v2.6.5 之前的版本">
+<TabItem value="Rancher 版本低于 v2.6.5">
 
 | 字段 | 默认 | 描述 |
 |-------|--------------|---------|

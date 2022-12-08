@@ -32,6 +32,17 @@ Harvester 允许通过 Harvester UI 上传和显示 `.ISO` 镜像，但 Rancher 
 
 如需了解 Rancher 中主机驱动的更多详细信息，请单击[此处](../pages-for-subheaders/about-provisioning-drivers.md#主机驱动)。
 
+### 端口要求
+
+可以在[此处](https://docs.harvesterhci.io/v1.1/install/requirements#networking)找到 Harvester 集群的端口要求。
+
+此外，其他网络注意事项如下：
+
+- 请务必为 VM VLAN 网络启用物理交换机的 VLAN 中继端口。
+- 按照[此处](https://docs.harvesterhci.io/v1.1/networking/clusternetwork)的网络设置指南进行操作。
+
+对于其他集群（例如 K3s 和 RKE1）的其他端口要求，请参阅[这些文档](https://docs.harvesterhci.io/v1.1/install/requirements/#guest-clusters)。
+
 ### 限制
 
 ---
