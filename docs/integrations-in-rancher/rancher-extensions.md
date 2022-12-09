@@ -78,3 +78,7 @@ Under the **Installed** tab, click the **Rollback** button on the extension you 
 You must reload the page after rolling back extensions or display issues may occur.
 
 :::
+
+## Developing Extensions
+
+To learn how to develop your own extensions, refer to the [UI DevKit Documentation](https://rancher.github.io/dashboard/plugins/plugins-getting-started).
