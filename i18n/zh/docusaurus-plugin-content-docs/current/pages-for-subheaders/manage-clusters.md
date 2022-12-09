@@ -35,4 +35,4 @@ Rancher 包含 Kubernetes 中未包含的各种工具来协助你进行 DevOps �
 - Istio 服务网格
 - OPA Gatekeeper
 
-你可以通过**应用 & 应用市场**来安装工具。
+你可以通过 **Apps** 来安装工具。

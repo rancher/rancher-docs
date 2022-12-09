@@ -29,7 +29,7 @@ rkeEtcd:
 
 # 设置资源限制和请求
 
-安装 `rancher-monitoring` 时可以配置资源请求和限制。要从 Rancher UI 配置 Prometheus 资源，请单击左上角的**应用 & 应用市场 > 监控**。
+安装 `rancher-monitoring` 时可以配置资源请求和限制。要从 Rancher UI 配置 Prometheus 资源，请单击左上角的 **Apps & Marketplace > Monitoring**（Rancher v2.6.5 之前的版本）或 **Apps > Monitoring**（Rancher v2.6.5+）。
 
 有关默认限制的更多信息，请参阅[此页面](../../../reference-guides/monitoring-v2-configuration/helm-chart-options.md#配置资源限制和请求)。
 
@@ -47,6 +47,24 @@ rkeEtcd:
 
 ### 在使用 SSL 的情况下启用 Monitoring
 
+<Tabs>
+<TabItem value="Rancher v2.6.5+">
+
+1. 按照[此页面](../../new-user-guides/kubernetes-resources-setup/secrets.md)上的步骤创建密文，以便将 SSL 用于告警。
+- 密文应该创建到 `cattle-monitoring-system` 命名空间中。如果它不存在，请先创建它。
+- 将 `ca`、`cert` 和 `key` 文件添加到密文中。
+1. 在左上角，单击 **☰ > 集群管理**。
+1. 在**集群**页面上，转到要启用 Monitoring 以与 SSL 一起使用的集群，然后单击 **Explore**。
+1. 单击 **Apps > Charts**。
+1. 单击 **Monitoring**。
+1. 根据你是否已安装 Monitoring，单击**安装**或**更新**。
+1. 选中**在安装前自定义 Helm 选项**，然后单击**下一步**。
+1. 单击 **Alerting**。
+1. 在**补充密文**字段中，添加之前创建的密文。
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
+
 1. 按照[此页面](../../new-user-guides/kubernetes-resources-setup/secrets.md)上的步骤创建密文，以便将 SSL 用于告警。
 - 密文应该创建到 `cattle-monitoring-system` 命名空间中。如果它不存在，请先创建它。
 - 将 `ca`、`cert` 和 `key` 文件添加到密文中。
@@ -58,6 +76,9 @@ rkeEtcd:
 1. 选中**在安装前自定义 Helm 选项**，然后单击**下一步**。
 1. 单击 **Alerting**。
 1. 在**补充密文**字段中，添加之前创建的密文。
+
+</TabItem>
+</Tabs>
 
 **结果**：Monitoring 应用已部署到 `cattle-monitoring-system` 命名空间中。
 

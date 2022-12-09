@@ -67,7 +67,7 @@ Jaeger 是用于跟踪分布式系统的工具。我们的 Istio 安装程序包
 
 ## 迁移旧 Istio 版本
 
-如果你的 Istio 版本低于 1.7.x，则没有升级路径。要在**应用 & 应用市场**页面安装 Istio，你需要在旧版 Rancher UI 的全局视图中禁用现有的 Istio。
+如果你的 Istio 版本低于 1.7.x，则没有升级路径。要在 **Apps & Marketplace**（Rancher v2.6.5 之前的版本）或 **App** (Rancher v2.6.5+）页面安装 Istio，你需要在旧版 Rancher UI 的全局视图中禁用现有的 Istio。
 
 如果你有大量其他的 Istio CRD，你可能需要手动迁移两个 Istio 版本都支持的 CRD。为此，你可以运行 `kubectl get <resource> -n istio-system -o yaml`，保存输出的 yaml，并在新版本中重新应用。
 

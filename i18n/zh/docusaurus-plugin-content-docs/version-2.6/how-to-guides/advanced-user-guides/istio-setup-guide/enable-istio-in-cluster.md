@@ -11,6 +11,23 @@ title: 1. 在集群中启用 Istio
 
 :::
 
+<Tabs>
+<TabItem value="Rancher v2.6.5+">
+
+1. 点击 **☰ > 集群管理**。
+1. 转到要启用 Istio 的位置，然后单击 **Explore**。
+1. 单击 **Apps**。
+1. 单击 **Chart**。
+1. 单击 **Istio**。
+1. 如果你还没有安装 Monitoring 应用，系统会提示你安装 rancher-monitoring。你也可以选择在 Rancher-monitoring 安装上设置选择器或抓取配置选项。
+1. 可选：为 Istio 组件配置成员访问和[资源限制](../../../integrations-in-rancher/istio/cpu-and-memory-allocations.md)。确保你的 Worker 节点上有足够的资源来启用 Istio。
+1. 可选：如果需要，对 values.yaml 进行额外的配置更改。
+1. 可选：通过[覆盖文件](../../../pages-for-subheaders/configuration-options.md#覆盖文件)来添加其他资源或配置。
+1. 单击**安装**。
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
+
 1. 点击 **☰ > 集群管理**。
 1. 转到要启用 Istio 的位置，然后单击 **Explore**。
 1. 单击**应用 & 应用市场**。
@@ -21,6 +38,9 @@ title: 1. 在集群中启用 Istio
 1. 可选：如果需要，对 values.yaml 进行额外的配置更改。
 1. 可选：通过[覆盖文件](../../../pages-for-subheaders/configuration-options.md#覆盖文件)来添加其他资源或配置。
 1. 单击**安装**。
+
+</TabItem>
+</Tabs>
 
 **结果**：已在集群级别安装 Istio。
 

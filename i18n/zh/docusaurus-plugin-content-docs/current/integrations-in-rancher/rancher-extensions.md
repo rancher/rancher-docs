@@ -4,7 +4,7 @@ title: Rancher 扩展
 
 Rancher v2.7.0 引入了**扩展（Extension）**的新功能。扩展允许用户、开发人员、合作伙伴和客户扩展和增强 Rancher Manager UI。此外，用户可以独立于 Rancher Manager 版本对其 UI 功能进行更改和增强。有了扩展，用户能够在 Rancher 之上进行构建，从而更好地根据环境进行定制。用户还可以更新到新版本以及回滚到以前的版本。
 
-扩展是只能在集群中安装一次的 Helm Chart。因此，这些 Chart 已经过简化，并与 **Apps & Marketplace** 下列出的常规 Helm Chart 分开。
+扩展是只能在集群中安装一次的 Helm Chart。因此，这些 Chart 已经过简化，并与 **Apps** 下列出的常规 Helm Chart 分开。
 
 内置的 Rancher Manager 扩展示例包括 Fleet、Explorer 和 Harvester。使用可手动添加的 Extensions API 的其他扩展示例包括 Kubewarden 和 Elemental。
 
@@ -16,7 +16,7 @@ Rancher v2.7.0 引入了**扩展（Extension）**的新功能。扩展允许用�
 
 1. 点击 **Configuration** 下的 **☰ > Extensions**。
 
-2. 如果它尚未安装到 **Apps & Marketplace** 中，则你必须通过单击 **Enable** 按钮启用扩展 operator。
+2. 如果它尚未安装到 **Apps** 中，则你必须通过单击 **Enable** 按钮启用扩展 operator。
 
    - 如果不是离线安装环境，请单击 **OK** 添加 Rancher 扩展仓库。否则，取消选中复选框并单击 **OK**。
 
@@ -78,3 +78,7 @@ Rancher v2.7.0 引入了**扩展（Extension）**的新功能。扩展允许用�
 回滚扩展后必须重新加载页面，否则可能会出现显示问题。
 
 :::
+
+## 开发扩展
+
+要了解如何开发扩展，请参阅 [UI DevKit 文档](https://rancher.github.io/dashboard/plugins/plugins-getting-started)。

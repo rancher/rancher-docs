@@ -26,9 +26,7 @@ Rancher 身份验证代理支持与以下外部身份验证服务集成：
 | [Google OAuth](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-google-oauth.md) |
 | [Shibboleth](configure-shibboleth-saml.md) |
 
-<br/>
-
-同时，Rancher 也提供了[本地验证](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/create-local-users.md)。
+同时，Rancher 也提供了[本地身份验证](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/create-local-users.md)。
 
 大多数情况下，应该使用外部身份验证服务，而不是本地身份验证，因为外部身份验证允许对用户进行集中管理。但是你可能需要一些本地身份验证用户，以便在特定的情况下（例如在外部身份验证系统不可用或正在进行维护时）管理 Rancher。
 

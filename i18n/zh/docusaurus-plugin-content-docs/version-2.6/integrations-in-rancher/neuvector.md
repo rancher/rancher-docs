@@ -14,10 +14,24 @@ Harvester Helm Chart 用于管理 Rancher 中 NeuVector UI 的访问，用户可
 
 **通过"应用 & 应用市场"导航并安装 NeuVector Chart**：
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. 点击 **☰ > 集群管理**。
+1. 在 Clusters 页面上，转到要部署 NeuVector 的集群，然后单击 **Explore**。
+1. 转到 **Apps > Charts**，然后从 Chart 仓库中安装 **NeuVector**。
+1. 不同的集群类型需要不同的容器运行时。配置 Helm Chart 值时，转到**容器运行时**，然后根据集群类型选择运行时。最后，再次单击**安装**。
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
+
 1. 点击 **☰ > 集群管理**。
 1. 在 Clusters 页面上，转到要部署 NeuVector 的集群，然后单击 **Explore**。
 1. 转到 **应用 & 应用市场 > Charts**，然后从 Chart 仓库中安装 **NeuVector**。
 1. 不同的集群类型需要不同的容器运行时。配置 Helm Chart 值时，转到**容器运行时**，然后根据集群类型选择运行时。最后，再次单击**安装**。
+
+</TabItem>
+</Tabs>
 
 以下是一些例子：
 
@@ -49,9 +63,22 @@ Harvester Helm Chart 用于管理 Rancher 中 NeuVector UI 的访问，用户可
 
 **通过"应用 & 应用市场"卸载**：
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. 点击 **☰ > 集群管理**。
+1. 在 **Apps** 下，点击 **Installed Apps**。
+1. 在 `cattle-neuvector-system` 下，选择 NeuVector 应用程序（如果需要，还可以选择相关的 CRD），然后单击**删除**。
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
+
 1. 点击 **☰ > 集群管理**。
 1. 在**应用 & 应用市场**下，点击**已安装的应用**。
 1. 在 `cattle-neuvector-system` 下，选择 NeuVector 应用程序（如果需要，还可以选择相关的 CRD），然后单击**删除**。
+
+</TabItem>
+</Tabs>
 
 **通过集群工具卸载**：
 
@@ -114,7 +141,7 @@ NeuVector 安全解决方案包含四种类型的安全容器，分别是 Contro
 
 1. 点击 **☰ > 集群管理**。
 1. 选择你创建的集群，并点击 **Explore**。
-1. 在左侧导航栏中，点击**应用 & 应用市场**。
+1. 在左侧导航栏中，点击 **Apps**。
 1. 安装（或升级到）NeuVector 版本 `100.0.1+up2.2.2`。
 
 - 在 **编辑选项** > **其它配置**下，选中复选框来启用 **Pod 安全策略**（无需其他配置）：
@@ -122,7 +149,6 @@ NeuVector 安全解决方案包含四种类型的安全容器，分别是 Contro
    ![为 RKE1 强化集群启用 PSP](/img/psp-nv-rke.png)
 
 1. 点击右下角的**安装**。
-
 
 </TabItem>
 <TabItem value="RKE2">

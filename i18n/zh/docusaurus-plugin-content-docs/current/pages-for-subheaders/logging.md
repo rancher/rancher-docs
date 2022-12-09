@@ -11,7 +11,7 @@ description: Rancher 集成了主流的日志服务。了解集成日志服务�
 
 你可以转到**应用**页面并安装 Logging 应用程序，从而为 Rancher 管理的集群启用 Logging：
 
-1. 转到要安装 Logging 的集群，然后单击**应用 & 应用市场**。
+1. 转到要安装 Logging 的集群，然后单击 **Apps**。
 1. 点击 **Logging** 应用。
 1. 滚动到 Helm Chart README 的底部，然后单击**安装**。
 
@@ -19,7 +19,7 @@ description: Rancher 集成了主流的日志服务。了解集成日志服务�
 
 ## 卸载 Logging
 
-1. 转到要安装 Logging 的集群，然后单击**应用 & 应用市场**。
+1. 转到要安装 Logging 的集群，然后单击 **Apps**。
 1. 点击**已安装的应用**。
 1. 转到 `cattle-logging-system` 命名空间并选中 `rancher-logging` 和 `rancher-logging-crd` 框。
 1. 单击**删除**。

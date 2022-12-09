@@ -2,13 +2,13 @@
 title: Rancher 中的 Helm Chart
 ---
 
-在本节中，你将学习如何在 Rancher 中管理 Helm Chart 仓库和应用。你可以在**应用 & 应用市场**中管理 Helm Chart 仓库。它使用类似目录的系统从仓库中导入 Chart 包，然后使用这些 Chart 来部署自定义 Helm 应用或 Rancher 工具（例如监控和 Istio）。Rancher 工具以预加载仓库的方式提供，并能部署为独立的 Helm Chart 。其他仓库只会添加到当前集群。
+在本节中，你将学习如何在 Rancher 中管理 Helm Chart 仓库和应用。你可以在 **Apps** 中管理 Helm Chart 仓库。它使用类似目录的系统从仓库中导入 Chart 包，然后使用这些 Chart 来部署自定义 Helm 应用或 Rancher 工具（例如监控和 Istio）。Rancher 工具以预加载仓库的方式提供，并能部署为独立的 Helm Chart 。其他仓库只会添加到当前集群。
 
 ### Rancher 2.6 变更
 
 Rancher 2.6.0 实现了功能 Chart 的新版本控制方案。变更主要是 Chart 的主要版本和上游 Chart 的 +up 注释（如果适用）。
 
-**主要版本**：Chart 的主要版本与 Rancher 次要版本相关联。当你升级到新的 Rancher 次要版本时，你应该确保你的所有**应用 & 应用市场** Chart 也升级到 Chart 的正确发行版本。
+**主要版本**：Chart 的主要版本与 Rancher 次要版本相关联。当你升级到新的 Rancher 次要版本时，你应该确保你的所有 **Apps** Chart 也升级到 Chart 的正确发行版本。
 
 :::note
 
@@ -48,7 +48,7 @@ Rancher 2.6.0 实现了功能 Chart 的新版本控制方案。变更主要是 C
 
 ### Charts
 
-从左上角的菜单中选择 _应用 & 应用市场_，然后你会转到 Chart 页面。
+从左上角的菜单中选择 _Apps_，然后你会转到 Chart 页面。
 
 Chart 页面包含所有 Rancher、Partner 和自定义 Chart 。
 
@@ -60,7 +60,7 @@ Chart 页面包含所有 Rancher、Partner 和自定义 Chart 。
 
 :::note
 
-由 Cluster Manager （旧版 Rancher UI 中的全局视图）管理的应用应继续仅由 Cluster Manager 管理，而在新 UI 中使用<b>应用 & 应用市场</b>管理的应用则仅能由<b>应用 & 应用市场</b>管理。
+由 Cluster Manager （旧版 Rancher UI 中的全局视图）管理的应用应继续仅由 Cluster Manager 管理，而在新 UI 中使用 <b>Apps</b> 管理的应用则仅能由 <b>Apps</b> 管理。
 
 :::
 
@@ -126,7 +126,7 @@ spec:
 
 安装 Chart 后，你可以在 _已安装的应用_ 选项卡中找到该 Chart。在本节中，你可以升级或删除安装，并查看更多详细信息。选择升级时，呈现的形式和数值与安装相同。
 
-大多数 Rancher 工具在 _应用 & 应用市场_ 下方的工具栏中都有额外的页面，以帮助你管理和使用这些功能。这些页面包括指向仪表板的链接、可轻松添加自定义资源的表单以及其他信息。
+大多数 Rancher 工具在 _Apps_ 下方的工具栏中都有额外的页面，以帮助你管理和使用这些功能。这些页面包括指向仪表板的链接、可轻松添加自定义资源的表单以及其他信息。
 
 :::caution
 
@@ -140,7 +140,7 @@ spec:
 
 #### Rancher 2.6.3 变更
 
-**应用 & 应用市场 > 已安装的应用**页面中，旧版应用的升级按钮已被移除。
+**Apps > Installed Apps** 页面中，旧版应用的升级按钮已被移除。
 
 如果你安装了旧版应用并想要升级它：
 

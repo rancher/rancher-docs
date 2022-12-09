@@ -38,7 +38,7 @@ Kubernetes 中的资源请求指的是，除非该节点至少具有指定数量
 
 1. 点击 **☰ > 集群管理**。
 1. 选择你创建的集群，并点击 **Explore**。
-1. 在左侧导航栏中，点击**应用 & 应用市场**。
+1. 在左侧导航栏中，点击 **Apps**。
 1. 点击**已安装的应用**。
 1. 转到 `istio-system` 命名空间。在某个 Istio 工作负载中（例如 `rancher-istio`），点击**⋮ > 编辑/升级**。
 1. 点击**升级**，然后通过更改 values.yaml 或添加[覆盖文件](../../pages-for-subheaders/configuration-options.md#覆盖文件)来编辑基本组件。有关编辑覆盖文件的更多信息，请参阅[本节](cpu-and-memory-allocations.md#编辑覆盖文件)。

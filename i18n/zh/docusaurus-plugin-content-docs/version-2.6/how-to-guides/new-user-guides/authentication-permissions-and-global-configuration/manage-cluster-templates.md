@@ -24,7 +24,7 @@ RKE2 集群模板的示例仓库在[这里](https://github.com/rancher/cluster-t
 
 ## 向 Rancher 添加集群模板
 
-在本节中，你将学习如何将集群模板添加到`本地`集群的 Chart 仓库列表中。这样，当用户安装新的 Kubernetes 集群时，Rancher 将提供集群模板的选项。
+在本节中，你将学习如何将集群模板添加到 `local` 集群的 Chart 仓库列表中。这样，当用户安装新的 Kubernetes 集群时，Rancher 将提供集群模板的选项。
 
 :::note 先决条件：
 
@@ -33,20 +33,44 @@ RKE2 集群模板的示例仓库在[这里](https://github.com/rancher/cluster-t
 
 :::
 
+<Tabs>
+<TabItem value="Rancher v2.6.5+">
+
 1. 转到集群模板示例仓库。你可以在[此 GitHub 仓库](https://github.com/rancher/cluster-template-examples)中找到 Rancher 的示例。从 Rancher 2.6.0 开始，我们提供了一个 RKE2 集群模板，未来可能会添加更多模板。
 1. 复刻仓库。
 1. 可选：通过编辑 `values.yaml` 文件来编辑集群选项。有关编辑文件的帮助，请参阅集群模板的 Helm Chart 自述文件。
 1. 将 Chart 仓库添加到 Rancher。点击 **☰ > 集群管理**。
-1. 转到`本地`集群并单击 **Explore**。
+1. 转到 `local` 集群并单击 **Explore**。
+1. 在左侧导航栏中，单击 **Apps > Chart Repositories**。
+1. 点击**创建**。
+1. 输入集群模板仓库的名称。
+1. 点击**包含 Helm Chart 定义的 Git 仓库**。
+1. 在 **Git 仓库 URL**字段，输入仓库的 URL，例如，`https://github.com/rancher/cluster-template-examples.git`。
+1. 在 **Git 分支**字段，输入要用作模板源的分支。Rancher 的示例仓库使用了 `main` 分支。
+1. 点击**创建**。
+
+**结果**：集群模板可从 Rancher `local` 集群中的 **Apps** 获得。现在，你可以使用模板来部署集群。
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
+
+1. 转到集群模板示例仓库。你可以在[此 GitHub 仓库](https://github.com/rancher/cluster-template-examples)中找到 Rancher 的示例。从 Rancher 2.6.0 开始，我们提供了一个 RKE2 集群模板，未来可能会添加更多模板。
+1. 复刻仓库。
+1. 可选：通过编辑 `values.yaml` 文件来编辑集群选项。有关编辑文件的帮助，请参阅集群模板的 Helm Chart 自述文件。
+1. 将 Chart 仓库添加到 Rancher。点击 **☰ > 集群管理**。
+1. 转到 `local` 集群并单击 **Explore**。
 1. 在左侧导航栏中，单击**应用 & 应用市场 > Chart 仓库。**
 1. 点击**创建**。
 1. 输入集群模板仓库的名称。
 1. 点击**包含 Helm Chart 定义的 Git 仓库**。
 1. 在 **Git 仓库 URL**字段，输入仓库的 URL，例如，`https://github.com/rancher/cluster-template-examples.git`。
-1. 在**Git 分支**字段，输入要用作模板源的分支。Rancher 的示例仓库使用了 `main` 分支。
+1. 在 **Git 分支**字段，输入要用作模板源的分支。Rancher 的示例仓库使用了 `main` 分支。
 1. 点击**创建**。
 
 **结果**：集群模板可从 Rancher 的`本地`集群中的**应用 & 应用市场**获得。现在，你可以使用模板来部署集群。
+
+</TabItem>
+</Tabs>
 
 :::note 受限管理员访问：
 
@@ -73,7 +97,7 @@ RKE2 集群模板的示例仓库在[这里](https://github.com/rancher/cluster-t
 
 ## 更新使用集群模板创建的集群
 
-如果集群所用的模板有了新版本，你可以使用**应用 & 应用市场 > 已安装的应用**页面中的模板更新集群。
+如果集群所用的模板有了新版本，你可以使用 **Apps & Marketplace > Installed Apps**（Rancher v2.6.5 之前的版本）或 **Apps > Installed Apps**（Rancher v2.6.5+）页面中的模板更新集群。
 
 ## 使用 Fleet 从模板部署集群
 
@@ -96,14 +120,28 @@ RKE2 集群模板的示例仓库在[这里](https://github.com/rancher/cluster-t
 
 ## 卸载集群模板
 
+<Tabs>
+<TabItem value="Rancher v2.6.5+">
+
 1. 点击 **☰ > 集群管理**。
-1. 前往`本地`集群并单击**应用 & 应用市场 > Chart 仓库**。
+1. 前往 `local` 集群并单击 **Apps > Chart Repositories**。
 1. 转到集群模板的 Chart 仓库，然后单击 **⋮ > 删除。**
 1. 确认删除。
 
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
+
+1. 点击 **☰ > 集群管理**。
+1. 前往 `local` 集群并单击**应用 & 应用市场 > Chart 仓库**。
+1. 转到集群模板的 Chart 仓库，然后单击 **⋮ > 删除。**
+1. 确认删除。
+
+</TabItem>
+</Tabs>
+
 **结果**：集群模板已卸载。此操作不会影响使用集群模板创建的现有集群。
 
-能够访问`本地`集群的管理员还可以前往**应用 & 应用市场 > 已安装的应用**页面，通过集群模板来移除已部署的集群。
+能够访问 `local` 集群的管理员还可以前往 **Apps & Marketplace > Installed Apps**（Rancher v2.6.5 之前的版本）或 **Apps > Installed Apps**（Rancher v2.6.5+）页面，通过集群模板来移除已部署的集群。
 
 ## 配置选项
 

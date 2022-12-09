@@ -10,7 +10,7 @@ title: 禁用 Istio
 
 1. 点击 **☰ > 集群管理**。
 1. 选择你创建的集群，并点击 **Explore**。
-1. 在左侧导航栏中，单击**应用 & 应用市场 > 已安装的应用**。
+1. 在左侧导航栏中，单击 **Apps > Installed Apps**。
 1. 在 `istio-system` 命名空间中，转到 `rancher-istio` 并单击 **⋮ > 删除**。
 1. 删除 `rancher-istio` 后，选择 `istio-system` 命名空间中所有剩余的应用，然后单击**删除**。
 

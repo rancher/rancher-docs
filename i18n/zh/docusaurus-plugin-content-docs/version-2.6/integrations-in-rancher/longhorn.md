@@ -23,6 +23,20 @@ Longhorn 是免费的开源软件。Longhorn 最初由 Rancher Labs 开发，现
 
 ### 使用 Rancher 安装 Longhorn
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. 满足所有[安装要求](https://longhorn.io/docs/latest/deploy/install/#installation-requirements)。
+1. 转到要安装 Longhorn 的集群。
+1. 单击 **Apps**。
+1. 单击 **Chart**。
+1. 点击 **Longhorn**。
+1. 可选：要自定义初始设置，请单击 **Longhorn 默认设置**并编辑配置。如需自定义设置的帮助，请参阅 [Longhorn 文档](https://longhorn.io/docs/latest/references/settings/)。
+1. 单击**安装**。
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
+
 1. 满足所有[安装要求](https://longhorn.io/docs/latest/deploy/install/#installation-requirements)。
 1. 转到要安装 Longhorn 的集群。
 1. 单击**应用 & 应用市场**。
@@ -30,6 +44,9 @@ Longhorn 是免费的开源软件。Longhorn 最初由 Rancher Labs 开发，现
 1. 点击 **Longhorn**。
 1. 可选：要自定义初始设置，请单击 **Longhorn 默认设置**并编辑配置。如需自定义设置的帮助，请参阅 [Longhorn 文档](https://longhorn.io/docs/latest/references/settings/)。
 1. 单击**安装**。
+
+</TabItem>
+</Tabs>
 
 **结果**：Longhorn 已部署到 Kubernetes 集群中。
 
@@ -42,10 +59,24 @@ Longhorn 是免费的开源软件。Longhorn 最初由 Rancher Labs 开发，现
 
 ### 从 Rancher UI 卸载 Longhorn
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. 转到安装了 Longhorn 的集群，然后单击 **Apps**。
+1. 点击**已安装的应用**。
+1. 转到 `longhorn-system` 命名空间并选中 `longhorn` 和 `longhorn-crd` 应用程序旁边的框。
+1. 单击**删除**并确认**删除**。
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
+
 1. 转到安装了 Longhorn 的集群，然后单击**应用 & 应用市场**。
 1. 点击**已安装的应用**。
 1. 转到 `longhorn-system` 命名空间并选中 `longhorn` 和 `longhorn-crd` 应用程序旁边的框。
 1. 单击**删除**并确认**删除**。
+
+</TabItem>
+</Tabs>
 
 **结果**：Longhorn 已被卸载。
 

@@ -4,7 +4,7 @@ title: 备份和灾难恢复
 
 在本节中，你将学习如何创建 Rancher 的备份，如何从备份中恢复 Rancher，以及如何将 Rancher 迁移到新的 Kubernetes 集群。
 
-`rancher-backup` operator 可以用来备份和恢复任何 Kubernetes 集群上的 Rancher。这个应用是一个 Helm Chart，可以通过 Rancher 的**应用 & 应用市场**页面或使用 Helm CLI 部署。你可以访问[本页面](https://github.com/rancher/charts/tree/release-v2.6/charts/rancher-backup)获取 `rancher-backup` Helm Chart。
+`rancher-backup` operator 可以用来备份和恢复任何 Kubernetes 集群上的 Rancher。这个应用是一个 Helm Chart，可以通过 Rancher 的 **Apps & Marketplace**（Rancher v2.6.5 之前的版本）或 **Apps**（Rancher v2.6.5+）页面或使用 Helm CLI 部署。你可以访问[本页面](https://github.com/rancher/charts/tree/release-v2.6/charts/rancher-backup)获取 `rancher-backup` Helm Chart。
 
 `backup-restore` operator 需要安装在 local 集群上，并且只对 Rancher 应用进行备份。备份和恢复操作仅在本地 Kubernetes 集群中执行。
 
@@ -49,6 +49,20 @@ ResourceSet 定义了需要备份哪些 Kubernetes 资源。由于备份 Rancher
 
 ### 使用 Rancher UI 安装 rancher-backup
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. 在左上角，单击 **☰ > 集群管理**。
+1. 在**集群**页面上，转到 `local` 集群并单击 **Explore**。
+1. 在左侧导航栏中，单击 **Apps > Charts**。
+1. 点击 **Rancher 备份**。
+1. 单击**安装**。
+1. 可选：配置默认存储位置。如需获取帮助，请参见[配置](../reference-guides/backup-restore-configuration/storage-configuration.md)。
+1. 单击**安装**。
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
+
 1. 在左上角，单击 **☰ > 集群管理**。
 1. 在**集群**页面上，转到 `local` 集群并单击 **Explore**。
 1. 在左侧导航栏中，单击**应用 & 应用市场 > Chart**。
@@ -56,6 +70,9 @@ ResourceSet 定义了需要备份哪些 Kubernetes 资源。由于备份 Rancher
 1. 单击**安装**。
 1. 可选：配置默认存储位置。如需获取帮助，请参见[配置](../reference-guides/backup-restore-configuration/storage-configuration.md)。
 1. 单击**安装**。
+
+</TabItem>
+</Tabs>
 
 **结果**：`rancher-backup` operator 已安装。
 

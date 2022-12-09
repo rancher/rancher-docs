@@ -36,6 +36,21 @@ Kubernetes 中的资源请求指的是，除非该节点至少具有指定数量
 
 要配置分配给 Istio 组件的资源：
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. 点击 **☰ > 集群管理**。
+1. 选择你创建的集群，并点击 **Explore**。
+1. 在左侧导航栏中，点击 **Apps**。
+1. 点击**已安装的应用**。
+1. 转到 `istio-system` 命名空间。在某个 Istio 工作负载中（例如 `rancher-istio`），点击**⋮ > 编辑/升级**。
+1. 点击**升级**，然后通过更改 values.yaml 或添加[覆盖文件](../../pages-for-subheaders/configuration-options.md#覆盖文件)来编辑基本组件。有关编辑覆盖文件的更多信息，请参阅[本节](cpu-and-memory-allocations.md#编辑覆盖文件)。
+1. 更改 CPU 或内存分配、调度各个组件的节点，或节点容忍度。
+1. 点击**升级**。然后，更改就能启用。
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
+
 1. 点击 **☰ > 集群管理**。
 1. 选择你创建的集群，并点击 **Explore**。
 1. 在左侧导航栏中，点击**应用 & 应用市场**。
@@ -44,6 +59,9 @@ Kubernetes 中的资源请求指的是，除非该节点至少具有指定数量
 1. 点击**升级**，然后通过更改 values.yaml 或添加[覆盖文件](../../pages-for-subheaders/configuration-options.md#覆盖文件)来编辑基本组件。有关编辑覆盖文件的更多信息，请参阅[本节](cpu-and-memory-allocations.md#编辑覆盖文件)。
 1. 更改 CPU 或内存分配、调度各个组件的节点，或节点容忍度。
 1. 点击**升级**。然后，更改就能启用。
+
+</TabItem>
+</Tabs>
 
 **结果**：已更新 Istio 组件的资源分配。
 
