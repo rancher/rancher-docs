@@ -14,10 +14,24 @@ The Harvester Helm Chart is used to manage access to the NeuVector UI in Rancher
 
 **To navigate to and install the NeuVector chart through Apps & Marketplace:**
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. Click **☰ > Cluster Management**.
+1. On the Clusters page, go to the cluster where you want to deploy NeuVector, and click **Explore**.
+1. Go to **Apps > Charts**, and install **NeuVector** from the chart repo.
+1. Different cluster types require different container runtimes. When configuring Helm chart values, go to the **Container Runtime** section, and select your runtime in accordance with the cluster type. Finally, click **Install** again.
+
+</TabItem>
+<TabItem value="Rancher before v2.6.5">
+
 1. Click **☰ > Cluster Management**.
 1. On the Clusters page, go to the cluster where you want to deploy NeuVector, and click **Explore**.
 1. Go to **Apps & Marketplace > Charts**, and install **NeuVector** from the chart repo.
 1. Different cluster types require different container runtimes. When configuring Helm chart values, go to the **Container Runtime** section, and select your runtime in accordance with the cluster type. Finally, click **Install** again.
+
+</TabItem>
+</Tabs>
 
 Some examples are as follows:
 
@@ -49,9 +63,22 @@ Some examples are as follows:
 
 **To uninstall from Apps & Marketplace:**
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. Click **☰ > Cluster Management**.
+1. Under **Apps**, click **Installed Apps**.
+1. Under `cattle-neuvector-system`, select both the NeuVector app (and the associated CRD if desired), then click **Delete**.
+
+</TabItem>
+<TabItem value="Rancher before v2.6.5">
+
 1. Click **☰ > Cluster Management**.
 1. Under **Apps & Marketplace**, click **Installed Apps**.
 1. Under `cattle-neuvector-system`, select both the NeuVector app (and the associated CRD if desired), then click **Delete**.
+
+</TabItem>
+</Tabs>
 
 **To uninstall from Cluster Tools:**
 
@@ -114,7 +141,7 @@ Below are the minimum recommended computing resources for the NeuVector chart in
 
   1. Click **☰ > Cluster Management**.
   1. Go to the cluster that you created and click **Explore**.
-  1. In the left navigation bar, click **Apps & Marketplace**.
+  1. In the left navigation bar, click **Apps**.
   1. Install (or upgrade to) NeuVector version `100.0.1+up2.2.2`.
 
   - Under **Edit Options** > **Other Configuration**, enable **Pod Security Policy** by checking the box (no other config needed):
@@ -122,7 +149,6 @@ Below are the minimum recommended computing resources for the NeuVector chart in
       ![Enable PSP for RKE1 Hardened Cluster](/img/psp-nv-rke.png)
 
   1. Click **Install** at the bottom-right to complete.
-
 
 </TabItem>
 <TabItem value="RKE2">

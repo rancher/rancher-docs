@@ -29,7 +29,7 @@ If you want to set up Alertmanager, Grafana or Ingress, it has to be done with t
 
 #Setting Resource Limits and Requests
 
-The resource requests and limits can be configured when installing `rancher-monitoring`.  To configure Prometheus resources from the Rancher UI, click **Apps & Marketplace > Monitoring** in the upper left corner.
+The resource requests and limits can be configured when installing `rancher-monitoring`.  To configure Prometheus resources from the Rancher UI, click **Apps > Monitoring** in the upper left corner.
 
 For more information about the default limits, see [this page.](../../../reference-guides/monitoring-v2-configuration/helm-chart-options.md#configuring-resource-limits-and-requests)
 
@@ -52,7 +52,7 @@ For more information about the default limits, see [this page.](../../../referen
  - Add the `ca`, `cert`, and `key` files to the secret.
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to enable monitoring for use with SSL and click **Explore**.
-1. Click **Apps & Marketplace > Charts**.
+1. Click **Apps > Charts**.
 1. Click **Monitoring**.
 1. Click **Install** or **Update**, depending on whether you have already installed Monitoring.
 1. Check the box for **Customize Helm options before install** and click **Next**.

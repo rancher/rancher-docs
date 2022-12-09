@@ -35,15 +35,28 @@ Only administrators and cluster owners can enable OPA Gatekeeper.
 
 :::
 
-The OPA Gatekeeper Helm chart can be installed from **Apps & Marketplace**.
-
 ### Enabling OPA Gatekeeper
+
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the **Clusters** page, go to the cluster where you want to enable OPA Gatekeeper and click **Explore**.
+1. In the left navigation bar, click **Apps**.
+1. Click **Charts** and click **OPA Gatekeeper**.
+1. Click **Install**.
+
+</TabItem>
+<TabItem value="Rancher before v2.6.5">
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. In the **Clusters** page, go to the cluster where you want to enable OPA Gatekeeper and click **Explore**.
 1. In the left navigation bar, click **Apps & Marketplace**.
 1. Click **Charts** and click **OPA Gatekeeper**.
 1. Click **Install**.
+
+</TabItem>
+</Tabs>
 
 **Result:** OPA Gatekeeper is deployed in your Kubernetes cluster.
 

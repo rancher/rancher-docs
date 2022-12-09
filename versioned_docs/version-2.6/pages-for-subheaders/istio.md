@@ -67,7 +67,7 @@ To remove Istio components from a cluster, namespace, or workload, refer to the 
 
 ## Migrate From Previous Istio Version
 
-There is no upgrade path for Istio versions less than 1.7.x. To successfully install Istio through **Apps & Marketplace,** you will need to disable your existing Istio from the global view in the legacy Rancher UI.
+There is no upgrade path for Istio versions less than 1.7.x. To successfully install Istio through **Apps & Marketplace** (Rancher before v2.6.5) or **App** (Rancher v2.6.5+), you will need to disable your existing Istio from the global view in the legacy Rancher UI.
 
 If you have a significant amount of additional Istio CRDs you might consider manually migrating CRDs that are supported in both versions of Istio. You can do this by running `kubectl get <resource> -n istio-system -o yaml`, save the output yaml and re-apply in the new version.
 
@@ -93,7 +93,7 @@ To access the Kiali visualization,
 1. In the left navigation bar, click **Istio**.
 1. Click **Kiali**. From here you can access the **Traffic Graph** tab or the **Traffic Metrics** tab to see network visualizations and metrics.
 
-By default, all namespace will picked up by prometheus and make data available for Kiali graphs. Refer to [selector/scrape config setup](../integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md) if you would like to use a different configuration for prometheus data scraping. 
+By default, all namespace will picked up by prometheus and make data available for Kiali graphs. Refer to [selector/scrape config setup](../integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md) if you would like to use a different configuration for prometheus data scraping.
 
 Your access to the visualizations depend on your role. Grafana and Prometheus are only available for `cluster-admin` roles. The Kiali UI is available only to `cluster-admin` by default, but `cluster-admin` can allow other roles to access them by editing the Istio values.yaml.
 

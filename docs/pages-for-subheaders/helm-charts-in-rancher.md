@@ -2,13 +2,13 @@
 title: Helm Charts in Rancher
 ---
 
-In this section, you'll learn how to manage Helm chart repositories and applications in Rancher. Helm chart repositories are managed using **Apps & Marketplace**. It uses a catalog-like system to import bundles of charts from repositories and then uses those charts to either deploy custom Helm applications or Rancher's tools such as Monitoring or Istio. Rancher tools come as pre-loaded repositories which deploy as standalone Helm charts. Any additional repositories are only added to the current cluster.
+In this section, you'll learn how to manage Helm chart repositories and applications in Rancher. Helm chart repositories are managed using **Apps**. It uses a catalog-like system to import bundles of charts from repositories and then uses those charts to either deploy custom Helm applications or Rancher's tools such as Monitoring or Istio. Rancher tools come as pre-loaded repositories which deploy as standalone Helm charts. Any additional repositories are only added to the current cluster.
 
 ### Changes in Rancher v2.6
 
 Starting in Rancher v2.6.0, a new versioning scheme for Rancher feature charts was implemented. The changes are centered around the major version of the charts and the +up annotation for upstream charts, where applicable.
 
-**Major Version:** The major version of the charts is tied to Rancher minor versions. When you upgrade to a new Rancher minor version, you should ensure that all of your **Apps & Marketplace** charts are also upgraded to the correct release line for the chart.
+**Major Version:** The major version of the charts is tied to Rancher minor versions. When you upgrade to a new Rancher minor version, you should ensure that all of your **Apps** charts are also upgraded to the correct release line for the chart.
 
 :::note
 
@@ -47,7 +47,7 @@ Any major versions that are less than the ones mentioned in the table below are 
 
 ### Charts
 
-From the top-left menu select _"Apps & Marketplace"_ and you will be taken to the Charts page.
+From the top-left menu select _"Apps"_ and you will be taken to the Charts page.
 
 The charts page contains all Rancher, Partner, and Custom Charts.
 
@@ -59,7 +59,7 @@ All three types are deployed and managed in the same way.
 
 :::note
 
-Apps managed by the Cluster Manager (the global view in the legacy Rancher UI) should continue to be managed only by the Cluster Manager, and apps managed with <b>Apps & Marketplace</b> in the new UI must be managed only by <b>Apps & Marketplace</b>.
+Apps managed by the Cluster Manager (the global view in the legacy Rancher UI) should continue to be managed only by the Cluster Manager, and apps managed with <b>Apps</b> in the new UI must be managed only by <b>Apps</b>.
 
 :::
 
@@ -123,7 +123,7 @@ To view all recent changes, go to the _"Recent Operations"_ tab. From there you 
 
 After installing a chart, you can find it in the _"Installed Apps"_ tab. In this section you can upgrade or delete the installation, and see further details. When choosing to upgrade, the form and values presented will be the same as installation.
 
-Most Rancher tools have additional pages located in the toolbar below the _"Apps & Marketplace"_ section to help manage and use the features. These pages include links to dashboards, forms to easily add Custom Resources, and additional information.
+Most Rancher tools have additional pages located in the toolbar below the _"Apps"_ section to help manage and use the features. These pages include links to dashboards, forms to easily add Custom Resources, and additional information.
 
 :::caution
 
@@ -137,7 +137,7 @@ If you are upgrading your chart using _"Customize Helm options before upgrade"_ 
 
 #### Changes in Rancher v2.6.3
 
-The upgrade button has been removed for legacy apps from the **Apps & Marketplace > Installed Apps** page.
+The upgrade button has been removed for legacy apps from the **Apps > Installed Apps** page.
 
 If you have a legacy app installed and want to upgrade it:
 

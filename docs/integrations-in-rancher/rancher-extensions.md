@@ -4,7 +4,7 @@ title: Rancher Extensions
 
 New in Rancher v2.7.0, Rancher introduces **extensions**. Extensions allow users, developers, partners, and customers to extend and enhance the Rancher Manager UI. In addition, users can make changes and create enhancements to their UI functionality independent of Rancher Manager releases. Extensions will enable users to build on top of Rancher to better tailor it to their respective environments. Note that users will also have the ability to update to new versions as well as roll back to a previous version.
 
-Extensions are Helm charts that can only be installed once into a cluster; therefore, these charts have been simplified and separated from the general Helm charts listed under **Apps & Marketplace**.
+Extensions are Helm charts that can only be installed once into a cluster; therefore, these charts have been simplified and separated from the general Helm charts listed under **Apps**.
 
 Examples of built-in Rancher Manager extensions are Fleet, Explorer, and Harvester. Examples of other extensions that use the Extensions API that can be manually added are Kubewarden and Elemental.
 
@@ -16,7 +16,7 @@ Examples of built-in Rancher Manager extensions are Fleet, Explorer, and Harvest
 
 1. Click **☰ > Extensions** under **Configuration**.
 
-2. If not already installed in **Apps & Marketplace**, you must enable the extension operator by clicking the **Enable** button.
+2. If not already installed in **Apps**, you must enable the extension operator by clicking the **Enable** button.
 
     - Click **OK** to add the Rancher extension repository if your installation is not air-gapped. Otherwise, uncheck the box to do so and click **OK**.
 
@@ -31,8 +31,8 @@ In v2.7.0, the built-in extensions will not be displayed under the **Available**
 :::
 <br/>
 
-4. If no extensions are showing as available, you may manually add repos as follows: 
-    
+4. If no extensions are showing as available, you may manually add repos as follows:
+
     4.1. On the upper right of screen, click on **⋮ > Manage Repositories > Create**.
 
     4.2. Add the desired repo name, making sure to also specify the Git Repo URL and the Git Branch.
