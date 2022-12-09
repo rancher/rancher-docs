@@ -6,17 +6,17 @@ title: NeuVector Integration
 
 New in Rancher v2.6.5, [NeuVector 5.x](https://open-docs.neuvector.com/) is an open-source container-centric security platform that is now integrated into Rancher. NeuVector offers real-time compliance, visibility, and protection for critical applications and data during runtime. NeuVector provides a firewall, container process/file system monitoring, security auditing with CIS benchmarks, and vulnerability scanning. For more information on Rancher security, please see the [security documentation](../pages-for-subheaders/rancher-security.md).
 
-NeuVector can be enabled through a Helm chart that may be installed either through **Apps & Marketplace** or through the **Cluster Tools** button in the Rancher UI. Once the Helm chart is installed, users can easily [deploy and manage NeuVector clusters within Rancher](https://open-docs.neuvector.com/deploying/rancher#deploy-and-manage-neuvector-through-rancher-apps-marketplace).
+NeuVector can be enabled through a Helm chart that may be installed either through **Apps** or through the **Cluster Tools** button in the Rancher UI. Once the Helm chart is installed, users can easily [deploy and manage NeuVector clusters within Rancher](https://open-docs.neuvector.com/deploying/rancher#deploy-and-manage-neuvector-through-rancher-apps-marketplace).
 
 ### Installing NeuVector with Rancher
 
 The Harvester Helm Chart is used to manage access to the NeuVector UI in Rancher where users can navigate directly to deploy and manage their NeuVector clusters.
 
-**To navigate to and install the NeuVector chart through Apps & Marketplace:**
+**To navigate to and install the NeuVector chart through Apps:**
 
 1. Click **☰ > Cluster Management**.
 1. On the Clusters page, go to the cluster where you want to deploy NeuVector, and click **Explore**.
-1. Go to **Apps & Marketplace > Charts**, and install **NeuVector** from the chart repo.
+1. Go to **Apps > Charts**, and install **NeuVector** from the chart repo.
 1. Different cluster types require different container runtimes. When configuring Helm chart values, go to the **Container Runtime** section, and select your runtime in accordance with the cluster type. Finally, click **Install** again.
 
 Some examples are as follows:
@@ -47,10 +47,10 @@ Some examples are as follows:
 
 ### Uninstalling NeuVector from the Rancher UI
 
-**To uninstall from Apps & Marketplace:**
+**To uninstall from Apps:**
 
 1. Click **☰ > Cluster Management**.
-1. Under **Apps & Marketplace**, click **Installed Apps**.
+1. Under **Apps**, click **Installed Apps**.
 1. Under `cattle-neuvector-system`, select both the NeuVector app (and the associated CRD if desired), then click **Delete**.
 
 **To uninstall from Cluster Tools:**
@@ -114,7 +114,7 @@ Below are the minimum recommended computing resources for the NeuVector chart in
 
   1. Click **☰ > Cluster Management**.
   1. Go to the cluster that you created and click **Explore**.
-  1. In the left navigation bar, click **Apps & Marketplace**.
+  1. In the left navigation bar, click **Apps**.
   1. Install (or upgrade to) NeuVector version `100.0.1+up2.2.2`.
 
   - Under **Edit Options** > **Other Configuration**, enable **Pod Security Policy** by checking the box (no other config needed):
@@ -149,7 +149,7 @@ Below are the minimum recommended computing resources for the NeuVector chart in
 
   1. Click **☰ > Cluster Management**.
   1. Go to the cluster that you created and click **Explore**.
-  1. In the left navigation bar, click **Apps & Marketplace**.
+  1. In the left navigation bar, click **Apps**.
   1. Install (or upgrade to) NeuVector version `100.0.1+up2.2.2`.
 
   - Under **Edit Options** > **Other Configuration**, enable **Pod Security Policy** by checking the box. Note that you must also enter a value greater than `zero` for `Manager runAsUser ID`, `Scanner runAsUser ID`, and `Updater runAsUser ID`:

@@ -4,7 +4,7 @@ title: Backups and Disaster Recovery
 
 In this section, you'll learn how to create backups of Rancher, how to restore Rancher from backup, and how to migrate Rancher to a new Kubernetes cluster.
 
-The `rancher-backup` operator is used to backup and restore Rancher on any Kubernetes cluster. This application is a Helm chart, and it can be deployed through the Rancher **Apps & Marketplace** page, or by using the Helm CLI. The `rancher-backup` Helm chart is [here.](https://github.com/rancher/charts/tree/release-v2.6/charts/rancher-backup)
+The `rancher-backup` operator is used to backup and restore Rancher on any Kubernetes cluster. This application is a Helm chart, and it can be deployed through the Rancher **Apps & Marketplace** (Rancher before v2.6.5) or **Apps** (Rancher v2.6.5+) page, or by using the Helm CLI. The `rancher-backup` Helm chart is [here.](https://github.com/rancher/charts/tree/release-v2.6/charts/rancher-backup)
 
 The backup-restore operator needs to be installed in the local cluster, and only backs up the Rancher app. The backup and restore operations are performed only in the local Kubernetes cluster.
 
@@ -49,6 +49,20 @@ There is a known issue in Fleet that occurs after performing a restoration using
 
 ### Installing rancher-backup with the Rancher UI
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. In the upper left corner, click **☰ > Cluster Management**.
+1. On the **Clusters** page, go to the `local` cluster and click **Explore**.
+1. In the left navigation bar, **Apps > Charts**.
+1. Click **Rancher Backups**.
+1. Click **Install**.
+1. Optional: Configure the default storage location. For help, refer to the [configuration section.](../reference-guides/backup-restore-configuration/storage-configuration.md)
+1. Click **Install**.
+
+</TabItem>
+<TabItem value="Rancher before v2.6.5">
+
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the `local` cluster and click **Explore**.
 1. In the left navigation bar, **Apps & Marketplace > Charts**.
@@ -56,6 +70,9 @@ There is a known issue in Fleet that occurs after performing a restoration using
 1. Click **Install**.
 1. Optional: Configure the default storage location. For help, refer to the [configuration section.](../reference-guides/backup-restore-configuration/storage-configuration.md)
 1. Click **Install**.
+
+</TabItem>
+</Tabs>
 
 **Result:** The `rancher-backup` operator is installed.
 

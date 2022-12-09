@@ -26,6 +26,20 @@ The backup storage location is an operator-level setting, so it needs to be conf
 
 Backups are created as .tar.gz files. These files can be pushed to S3 or Minio, or they can be stored in a persistent volume.
 
+<Tabs>
+<TabItem value="Rancher v2.6.5+">
+
+1. In the upper left corner, click **☰ > Cluster Management**.
+1. On the **Clusters** page, go to the `local` cluster and click **Explore**. The `local` cluster runs the Rancher server.
+1. Click **Apps > Charts**.
+1. Click **Rancher Backups**.
+1. Click **Install**.
+1. Configure the default storage location. For help, refer to the [storage configuration section.](../../../reference-guides/backup-restore-configuration/storage-configuration.md)
+1. Click **Install**.
+
+</TabItem>
+<TabItem value="Rancher before v2.6.5">
+
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the `local` cluster and click **Explore**. The `local` cluster runs the Rancher server.
 1. Click **Apps & Marketplace > Charts**.
@@ -33,6 +47,9 @@ Backups are created as .tar.gz files. These files can be pushed to S3 or Minio, 
 1. Click **Install**.
 1. Configure the default storage location. For help, refer to the [storage configuration section.](../../../reference-guides/backup-restore-configuration/storage-configuration.md)
 1. Click **Install**.
+
+</TabItem>
+</Tabs>
 
 :::note
 

@@ -56,12 +56,28 @@ chmod +x taints.sh
 
 Once all nodes are tainted by the running the script, launch the Helm vSphere CPI chart.
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. Click **☰ > Cluster Management**.
+1. Go to the cluster where the vSphere CPI chart will be installed and click **Explore**.
+1. Click **Apps > Charts**.
+1. Click **vSphere CPI**..
+1. Click **Install**.
+1. Fill out the required vCenter details and click **Install**.
+
+</TabItem>
+<TabItem value="Rancher before v2.6.5">
+
 1. Click **☰ > Cluster Management**.
 1. Go to the cluster where the vSphere CPI chart will be installed and click **Explore**.
 1. Click **Apps & Marketplace > Charts**.
 1. Click **vSphere CPI**..
 1. Click **Install**.
 1. Fill out the required vCenter details and click **Install**.
+
+</TabItem>
+</Tabs>
 
 vSphere CPI initializes all nodes with ProviderID, which is needed by the vSphere CSI driver.
 
@@ -73,6 +89,23 @@ kubectl describe nodes | grep "ProviderID"
 
 ### 2. Install the CSI driver
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. Click **☰ > Cluster Management**.
+1. Go to the cluster where the vSphere CSI chart will be installed and click **Explore**.
+1. Click **Apps > Charts**.
+1. Click **vSphere CSI**..
+1. Click **Install**.
+1. Fill out the required vCenter details and click **Install**.
+1. Check **Customize Helm options before install** and click **Next**.
+1. On the **Features** tab, check **Enable CSI Migration**.
+1. Optionally, go to the **Storage** tab and set up a datastore. This chart creates a StorageClass with the `csi.vsphere.vmware.com` as the provisioner. You can provide the URL of the datastore to be used for CSI volume provisioning while creating this StorageClass. The datastore URL can be found in the vSphere client by selecting the datastore and going to the Summary tab. Fill out the details for the StorageClass.
+1. Click **Install**.
+
+</TabItem>
+<TabItem value="Rancher before v2.6.5">
+
 1. Click **☰ > Cluster Management**.
 1. Go to the cluster where the vSphere CSI chart will be installed and click **Explore**.
 1. Click **Apps & Marketplace > Charts**.
@@ -83,6 +116,9 @@ kubectl describe nodes | grep "ProviderID"
 1. On the **Features** tab, check **Enable CSI Migration**.
 1. Optionally, go to the **Storage** tab and set up a datastore. This chart creates a StorageClass with the `csi.vsphere.vmware.com` as the provisioner. You can provide the URL of the datastore to be used for CSI volume provisioning while creating this StorageClass. The datastore URL can be found in the vSphere client by selecting the datastore and going to the Summary tab. Fill out the details for the StorageClass.
 1. Click **Install**.
+
+</TabItem>
+</Tabs>
 
 ### 3. Edit the cluster to enable CSI migration feature flags
 

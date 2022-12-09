@@ -58,7 +58,7 @@ Once all nodes are tainted by the running the script, launch the Helm vSphere CP
 
 1. Click **☰ > Cluster Management**.
 1. Go to the cluster where the vSphere CPI chart will be installed and click **Explore**.
-1. Click **Apps & Marketplace > Charts**.
+1. Click **Apps > Charts**.
 1. Click **vSphere CPI**..
 1. Click **Install**.
 1. Fill out the required vCenter details and click **Install**.
@@ -75,7 +75,7 @@ kubectl describe nodes | grep "ProviderID"
 
 1. Click **☰ > Cluster Management**.
 1. Go to the cluster where the vSphere CSI chart will be installed and click **Explore**.
-1. Click **Apps & Marketplace > Charts**.
+1. Click **Apps > Charts**.
 1. Click **vSphere CSI**..
 1. Click **Install**.
 1. Fill out the required vCenter details and click **Install**.

@@ -8,11 +8,26 @@ This section describes how to uninstall Istio in a cluster or disable a namespac
 
 To uninstall Istio,
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1.  Click **☰ > Cluster Management**.
+1. Go to the cluster that you created and click **Explore**.
+1. In the left navigation bar, click **Apps > Installed Apps**.
+1. In the `istio-system` namespace, go to `rancher-istio` and click **⋮ > Delete**.
+1. After `rancher-istio` is deleted, you can then select all the remaining apps in the `istio-system` namespace and click **Delete**.
+
+</TabItem>
+<TabItem value="Rancher before v2.6.5">
+
 1.  Click **☰ > Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
 1. In the left navigation bar, click **Apps & Marketplace > Installed Apps**.
 1. In the `istio-system` namespace, go to `rancher-istio` and click **⋮ > Delete**.
 1. After `rancher-istio` is deleted, you can then select all the remaining apps in the `istio-system` namespace and click **Delete**.
+
+</TabItem>
+</Tabs>
 
 **Result:** The `rancher-istio` app in the cluster gets removed. The Istio sidecar cannot be deployed on any workloads in the cluster.
 

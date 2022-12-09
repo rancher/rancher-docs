@@ -142,7 +142,7 @@ The YAML provided here will be directly appended to your receiver within the Ale
 
 The Teams receiver is not a native receiver and must be enabled before it can be used. You can enable the Teams receiver for a Rancher managed cluster by going to the Apps page and installing the rancher-alerting-drivers app with the Teams option selected.
 
-1. In the Rancher UI, go to the cluster where you want to install rancher-alerting-drivers and click **Apps & Marketplace**.
+1. In the Rancher UI, go to the cluster where you want to install rancher-alerting-drivers and click **Apps**.
 1. Click the **Alerting Drivers** app.
 1. Click the **Helm Deploy Options** tab.
 1. Select the **Teams** option and click **Install**.

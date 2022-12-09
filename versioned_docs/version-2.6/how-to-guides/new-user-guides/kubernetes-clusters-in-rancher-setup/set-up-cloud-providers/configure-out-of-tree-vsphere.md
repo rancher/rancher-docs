@@ -32,6 +32,23 @@ The Cloud Provider Interface (CPI) should be installed first before installing t
 
 ### 2. Install the CPI plugin
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. Click **☰ > Cluster Management**.
+1. Go to the cluster where the vSphere CPI plugin will be installed and click **Explore**.
+1. Click **Apps > Charts**.
+1. Click **vSphere CPI**.
+1. Fill out the required vCenter details.
+1. vSphere CPI initializes all nodes with ProviderID which is needed by the vSphere CSI driver. Check if all nodes are initialized with the ProviderID before installing CSI driver with the following command:
+
+    ```
+    kubectl describe nodes | grep "ProviderID"
+    ```
+
+</TabItem>
+<TabItem value="Rancher before v2.6.5">
+
 1. Click **☰ > Cluster Management**.
 1. Go to the cluster where the vSphere CPI plugin will be installed and click **Explore**.
 1. Click **Apps & Marketplace > Charts**.
@@ -43,7 +60,25 @@ The Cloud Provider Interface (CPI) should be installed first before installing t
     kubectl describe nodes | grep "ProviderID"
     ```
 
+</TabItem>
+</Tabs>
+
 ### 3. Installing the CSI plugin
+
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. Click **☰ > Cluster Management**.
+1. Go to the cluster where the vSphere CSI plugin will be installed and click **Explore**.
+1. Click **Apps > Charts**.
+1. Click **vSphere CSI**.
+1. Click **Install**.
+1. Fill out the required vCenter details. On the **Features** tab, set **Enable CSI Migration** to **false**.
+3. On the **Storage** tab, fill out the details for the StorageClass. This chart creates a StorageClass with the `csi.vsphere.vmware.com` as the provisioner.
+1. Click **Install**.
+
+</TabItem>
+<TabItem value="Rancher before v2.6.5">
 
 1. Click **☰ > Cluster Management**.
 1. Go to the cluster where the vSphere CSI plugin will be installed and click **Explore**.
@@ -54,6 +89,8 @@ The Cloud Provider Interface (CPI) should be installed first before installing t
 3. On the **Storage** tab, fill out the details for the StorageClass. This chart creates a StorageClass with the `csi.vsphere.vmware.com` as the provisioner.
 1. Click **Install**.
 
+</TabItem>
+</Tabs>
 
 ## Using the CSI driver for provisioning volumes
 

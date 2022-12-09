@@ -35,13 +35,13 @@ Only administrators and cluster owners can enable OPA Gatekeeper.
 
 :::
 
-The OPA Gatekeeper Helm chart can be installed from **Apps & Marketplace**.
+The OPA Gatekeeper Helm chart can be installed from **Apps**.
 
 ### Enabling OPA Gatekeeper
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. In the **Clusters** page, go to the cluster where you want to enable OPA Gatekeeper and click **Explore**.
-1. In the left navigation bar, click **Apps & Marketplace**.
+1. In the left navigation bar, click **Apps**.
 1. Click **Charts** and click **OPA Gatekeeper**.
 1. Click **Install**.
 

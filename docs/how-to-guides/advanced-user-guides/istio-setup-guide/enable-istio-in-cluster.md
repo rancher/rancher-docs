@@ -13,7 +13,7 @@ title: 1. Enable Istio in the Cluster
 
 1.  Click **☰ > Cluster Management**.
 1. Go to the where you want to enable Istio and click **Explore**.
-1. Click **Apps & Marketplace**.
+1. Click **Apps**.
 1. Click **Charts**.
 1. Click **Istio**.
 1. If you have not already installed your own monitoring app, you will be prompted to install the rancher-monitoring app. Optional: Set your Selector or Scrape config options on rancher-monitoring app install.

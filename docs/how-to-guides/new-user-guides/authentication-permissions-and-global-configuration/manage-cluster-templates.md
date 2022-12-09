@@ -38,7 +38,7 @@ In this section, you'll learn how to add the cluster template to the `local` clu
 1. Optional: Edit the cluster options by editing the `values.yaml` file. For help editing the file, see the cluster template's Helm chart README.
 1. Add the chart repository to Rancher. Click **☰ > Cluster Management**.
 1. Go to the `local` cluster and click **Explore.**
-1. In the left navigation bar, click **Apps & Marketplace > Chart Repositories.**
+1. In the left navigation bar, click **Apps > Chart Repositories.**
 1. Click **Create.**
 1. Enter a name for the cluster template repository.
 1. Click **Git Repository containing Helm chart definitions.**
@@ -46,7 +46,7 @@ In this section, you'll learn how to add the cluster template to the `local` clu
 1. In the **Git Branch** field, enter the branch to use as the source for the template. Rancher's example repository uses `main`.
 1. Click **Create.**
 
-**Result:** The cluster template available from the **Apps & Marketplace** in Rancher's `local` cluster. It can now be used to deploy clusters.
+**Result:** The cluster template available from the **Apps** in Rancher's `local` cluster. It can now be used to deploy clusters.
 
 :::note Restricted Admin access:
 
@@ -73,7 +73,7 @@ If you are a restricted admin and don’t have access to the `local` cluster, yo
 
 ## Updating a Cluster Created from a Cluster Template
 
-You can update any clusters using a template from the **Apps & Marketplace > Installed Apps** page, given there is a new version of a template being used by those clusters.
+You can update any clusters using a template from the **Apps > Installed Apps** page, given there is a new version of a template being used by those clusters.
 
 ## Deploying Clusters from a Template with Fleet
 
@@ -97,13 +97,13 @@ You can update any clusters using a template from the **Apps & Marketplace > Ins
 ## Uninstalling Cluster Templates
 
 1. Click **☰ > Cluster Management**.
-1. Go to the `local` cluster and click **Apps & Marketplace > Chart Repositories.**
+1. Go to the `local` cluster and click **Apps > Chart Repositories.**
 1. Go to the chart repository for your cluster template and click **⋮ > Delete.**
 1. Confirm the deletion.
 
 **Result:** The cluster template is uninstalled. This action does not affect clusters created with the cluster template.
 
-An admin with access to the `local` cluster can also remove a cluster deployed via cluster templates through the **Apps & Marketplace > Installed Apps** page.
+An admin with access to the `local` cluster can also remove a cluster deployed via cluster templates through the **Apps > Installed Apps** page.
 
 ## Configuration Options
 

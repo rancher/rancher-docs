@@ -2,7 +2,7 @@
 title: Additional Steps for Installing Istio on an RKE2 Cluster
 ---
 
-When installing or upgrading the Istio Helm chart through **Apps & Marketplace,**
+When installing or upgrading the Istio Helm chart through **Apps,**
 
 1. If you are installing the chart, click **Customize Helm options before install** and click **Next**.
 1. You will see options for configuring the Istio Helm chart. On the **Components** tab, check the box next to **Enabled CNI**.

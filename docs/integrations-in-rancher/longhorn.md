@@ -25,7 +25,7 @@ With Longhorn, you can:
 
 1. Fulfill all [Installation Requirements.](https://longhorn.io/docs/latest/deploy/install/#installation-requirements)
 1. Go to the cluster where you want to install Longhorn.
-1. Click **Apps & Marketplace**.
+1. Click **Apps**.
 1. Click **Charts**.
 1. Click **Longhorn**.
 1. Optional: To customize the initial settings, click **Longhorn Default Settings** and edit the configuration. For help customizing the settings, refer to the [Longhorn documentation.](https://longhorn.io/docs/latest/references/settings/)
@@ -42,7 +42,7 @@ With Longhorn, you can:
 
 ### Uninstalling Longhorn from the Rancher UI
 
-1. Go to the cluster where Longhorn is installed and click **Apps & Marketplace**.
+1. Go to the cluster where Longhorn is installed and click **Apps**.
 1. Click **Installed Apps**.
 1. Go to the `longhorn-system` namespace and check the boxes next to the `longhorn` and `longhorn-crd` apps.
 1. Click **Delete,** and confirm **Delete**.

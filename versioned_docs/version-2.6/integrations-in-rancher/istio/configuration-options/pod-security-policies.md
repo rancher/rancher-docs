@@ -33,7 +33,7 @@ Set the PSP to `unrestricted` in the project where is Istio is installed, or the
 
 ### 2. Enable the CNI
 
-When installing or upgrading Istio through **Apps & Marketplace,**
+When installing or upgrading Istio through **Apps & Marketplace** (Rancher before v2.6.5) or **Apps** (Rancher v2.6.5+)
 
 1. Click **Components**.
 2. Check the box next to **Enabled CNI**.

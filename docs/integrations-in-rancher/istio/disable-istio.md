@@ -10,7 +10,7 @@ To uninstall Istio,
 
 1.  Click **☰ > Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
-1. In the left navigation bar, click **Apps & Marketplace > Installed Apps**.
+1. In the left navigation bar, click **Apps > Installed Apps**.
 1. In the `istio-system` namespace, go to `rancher-istio` and click **⋮ > Delete**.
 1. After `rancher-istio` is deleted, you can then select all the remaining apps in the `istio-system` namespace and click **Delete**.
 
