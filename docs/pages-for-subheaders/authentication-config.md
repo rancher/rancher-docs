@@ -27,6 +27,7 @@ The Rancher authentication proxy integrates with the following external authenti
 | [Shibboleth](configure-shibboleth-saml.md)           |
 
 <br/>
+
 However, Rancher also provides [local authentication](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/create-local-users.md).
 
 In most cases, you should use an external authentication service over local authentication, as external authentication allows user management from a central location. However, you may want a few local authentication users for managing Rancher under rare circumstances, such as if your external authentication provider is unavailable or undergoing maintenance.
