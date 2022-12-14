@@ -137,6 +137,12 @@ module.exports = {
   ],
   plugins: [
     [
+      require.resolve('docusaurus-gtm-plugin'),
+      {
+        id: 'GTM-57KS2MW', // GTM Container ID
+      }
+    ],
+    [
       '@docusaurus/plugin-client-redirects',
       {
         fromExtensions: ['html', 'htm'],
@@ -668,5 +674,20 @@ module.exports = {
         ],
       },
     ],
+  ],
+  scripts: [
+    {
+      src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js',
+      type:'text/javascript',
+      charset: 'UTF-8',
+      'data-domain-script': '0f98beb0-fc4c-417d-a42e-564e2cae42d2',
+      async: true
+    },
+    {
+      src: '/scripts/optanonwrapper.js',
+      type:'text/javascript',
+      async: true
+    },
+    // "/scripts/optanonwrapper.js"
   ],
 };
