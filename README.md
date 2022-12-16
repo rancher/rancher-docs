@@ -6,7 +6,7 @@ The Rancher Docs website is built with [Docusaurus 2](https://docusaurus.io/), a
 
 The Rancher Docs repository already contains a yarn.lock file, which contains the dependencies you need to build the website.
 
-1. If you haven't already, install [Node]https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/getting-started/install).
+1. If you haven't already, install [Node](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/getting-started/install).
 1. Fork and clone the rancher-docs repository.
 1. Go into your local rancher-docs folder.
 1. Run `yarn` to install Docusaurus and associated dependencies.
