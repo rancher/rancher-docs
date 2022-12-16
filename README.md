@@ -4,14 +4,12 @@ The Rancher Docs website is built with [Docusaurus 2](https://docusaurus.io/), a
 
 ## Installation
 
-Docusaurus requires [Node](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/).
+The Rancher Docs repository already contains a yarn.lock file, which contains the dependencies you need to build the website.
 
-1. [Install](https://nodejs.org/en/download/) Node.
-1. [Install](https://yarnpkg.com/getting-started/install) Yarn.
-1. Go into your local rancher-docs repo folder.
-1. Run `yarn add docusaurus` to finish installation.
-
-> **NOTE:** Although the official Docusaurus 2 documentation states that you should run `npx create-docusaurus@latest my-website classic`, this isn't necessary. The repo already contains all the files Docusaurus needs to build the Rancher Docs website.
+1. If you haven't already, install [Node]https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/getting-started/install).
+1. Fork and clone the rancher-docs repository.
+1. Go into your local rancher-docs folder.
+1. Run `yarn` to install Docusaurus and associated dependencies.
 
 ## Local Development
 
@@ -34,22 +32,6 @@ yarn build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 
 License
 =======
