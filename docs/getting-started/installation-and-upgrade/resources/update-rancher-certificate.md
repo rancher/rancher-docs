@@ -58,6 +58,25 @@ kubectl -n cattle-system create secret generic tls-ca \
 
 ### 3. Reconfigure the Rancher deployment
 
+If the certificate source remains the same (for example, `secret`), please follow the steps in Step 3a.
+
+However, if the certificate source is changing (for example, `letsEncrypt` to `secret`), follow the steps in 3b.
+
+#### 3a. Redeploy the Rancher pods
+
+This step is required when the certificate source remains the same, but the CA certificate is being updated.
+
+In this scenario a redeploy of the Rancher pods is needed, this is because the `tls-ca` secret is read by the Rancher pods when starting.
+
+The command below can be used to redeploy the Rancher pods:
+```bash
+kubectl rollout restart deploy/rancher -n cattle-system
+```
+
+When the change is completed, navigate to `https://<RANCHER_SERVER_URL>/v3/settings/cacerts` to verify that the value matches the CA certificate written in the `tls-ca` secret earlier. The CA `cacerts` value may not update until all of the redeployed Rancher pods start.
+
+#### 3b. Update the Helm values for Rancher
+
 This step is required if the certificate source is changing. If Rancher was previously configured to use the default self-signed certificate (`ingress.tls.source=rancher`) or Let's Encrypt (`ingress.tls.source=letsEncrypt`), and is now using a certificate signed by a private CA (`ingress.tls.source=secret`).
 
 The below steps update the Helm values for the Rancher chart, so the Rancher pods and ingress are reconfigured to use the new private CA certificate created in Step 1 & 2.
@@ -103,7 +122,7 @@ When Rancher is configured with a certificate signed by a private CA, the CA cer
 
 #### Which method should I choose?
 
-Method 1 is the easiest, but requires all clusters to be connected to Rancher after the certificates have been rotated. This is usually the case if the process is performed right after updating the Rancher deployment (Step 3).
+Method 1 is the easiest, but requires all clusters to be connected to Rancher after the certificates have been rotated. This is usually the case if the process is performed right after updating or redeploying the Rancher deployment (Step 3).
 
 If the clusters have lost connection to Rancher but [Authorized Cluster Endpoint](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint) (ACE) is enabled on all clusters, then go with method 2.
 
