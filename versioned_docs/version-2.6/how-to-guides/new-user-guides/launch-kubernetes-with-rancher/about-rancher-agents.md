@@ -11,15 +11,15 @@ For a conceptual overview of how the Rancher server provisions clusters and comm
 
 ### cattle-cluster-agent
 
-The `cattle-cluster-agent` is used to connect to the Kubernetes API of [Rancher Launched Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) clusters. The `cattle-cluster-agent` is deployed using a Deployment resource.
+The `cattle-cluster-agent` is used to connect to the Kubernetes API of [Rancher Launched Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) clusters. The `cattle-cluster-agent` is deployed using a Deployment resource.  It will always prefer control plane nodes over workers.
 
 ### cattle-node-agent
 
-The `cattle-node-agent` is used to interact with nodes in a [Rancher Launched Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) cluster when performing cluster operations. Examples of cluster operations are upgrading Kubernetes version and creating/restoring etcd snapshots. The `cattle-node-agent` is deployed using a DaemonSet resource to make sure it runs on every node. The `cattle-node-agent` is used as fallback option to connect to the Kubernetes API of [Rancher Launched Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) clusters when `cattle-cluster-agent` is unavailable.
+The `cattle-node-agent` is used to interact with nodes in a [Rancher Launched Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) cluster when performing cluster operations. Examples of cluster operations are upgrading Kubernetes version and creating/restoring etcd snapshots. The `cattle-node-agent` is used as fallback option to connect to the Kubernetes API of [Rancher Launched Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) clusters when `cattle-cluster-agent` is unavailable. The `cattle-node-agent` is deployed using a DaemonSet resource to make sure it runs on every node.
 
 ### Scheduling rules
 
-The `cattle-cluster-agent` uses a fixed fixed set of tolerations (listed below, if no controlplane nodes are visible in the cluster) or dynamically added tolerations based on taints applied to the controlplane nodes. This structure allows for [Taint based Evictions](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/#taint-based-evictions) to work properly for `cattle-cluster-agent`. The default tolerations are described below. If controlplane nodes are present the cluster, the tolerations will be replaced with tolerations matching the taints on the controlplane nodes.
+The `cattle-cluster-agent` uses a fixed set of tolerations (listed below, if no controlplane nodes are visible in the cluster) or dynamically added tolerations based on taints applied to the controlplane nodes such that if controlplane nodes are present in the cluster, the cluster agent's tolerations will be replaced with tolerations matching the taints on the controlplane nodes. This structure allows for [Taint based Evictions](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/#taint-based-evictions) to work properly for `cattle-cluster-agent`. The default tolerations are described below:
 
 | Component              | nodeAffinity nodeSelectorTerms             | nodeSelector | Tolerations                                                                    |
 | ---------------------- | ------------------------------------------ | ------------ | ------------------------------------------------------------------------------ |
