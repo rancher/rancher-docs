@@ -51,3 +51,24 @@ $ docker logs -f <container_id>
 $ docker exec -ti <container_id> loglevel --set info
 OK
 ```
+
+## Rancher machine debug logs
+If you need to troubleshoot the creation of objects in your infrastructure provider of choice, `rancher-machine`
+debug logs might be helpful to you.
+
+It's possible to enable debug logs for `rancher-machine` by setting environment variables when launching Rancher.
+
+The `CATTLE_WHITELIST_ENVVARS` environment variable allows users to whitelist specific environment variables to be
+passed down to `rancher-machine` during provisioning.
+
+The `MACHINE_DEBUG` variable enables debug logs in `rancher-machine`.
+
+Thus, by setting `MACHINE_DEBUG=true` and adding `MACHINE_DEBUG` to the default list of variables in
+`CATTLE_WHITELIST_ENVVARS` (e.g. `CATTLE_WHITELIST_ENVVARS=HTTP_PROXY,HTTPS_PROXY,NO_PROXY,MACHINE_DEBUG`) it is
+possible to enable debug logs in `rancher-machine` when provisioning RKE1, RKE2 and k3s clusters.
+
+:::caution
+
+Just like the `trace` log level above, `rancher-machine` debug logs can contain sensitive information.
+
+:::
