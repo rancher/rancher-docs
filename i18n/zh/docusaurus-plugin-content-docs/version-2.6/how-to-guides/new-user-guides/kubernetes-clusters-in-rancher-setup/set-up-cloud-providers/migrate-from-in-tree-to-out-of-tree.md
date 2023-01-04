@@ -56,12 +56,28 @@ chmod +x taints.sh
 
 通过运行脚本为所有节点添加污点后，启动 Helm vSphere CPI Chart：
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. 点击 **☰ > 集群管理**。
+1. 转到将安装 vSphere CPI chart 的集群，然后单击 **Explore**。
+1. 单击 **Apps > Charts**。
+1. 单击 **vSphere CPI**。
+1. 单击**安装**。
+1. 填写所需的 vCenter 详细信息，然后单击**安装**。
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
+
 1. 点击 **☰ > 集群管理**。
 1. 转到将安装 vSphere CPI chart 的集群，然后单击 **Explore**。
 1. 单击**应用 & 应用市场 > Chart**。
 1. 单击 **vSphere CPI**。
 1. 单击**安装**。
 1. 填写所需的 vCenter 详细信息，然后单击**安装**。
+
+</TabItem>
+</Tabs>
 
 vSphere CPI 使用 vSphere CSI 驱动所需的 ProviderID 来初始化所有节点。
 
@@ -73,6 +89,23 @@ kubectl describe nodes | grep "ProviderID"
 
 ### 2. 安装 CSI 驱动
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. 点击 **☰ > 集群管理**。
+1. 转到将安装 vSphere CSI chart 的集群，然后单击 **Explore**。
+1. 单击 **Apps > Charts**。
+1. 单击 **vSphere CSI**。
+1. 单击**安装**。
+1. 填写所需的 vCenter 详细信息，然后单击**安装**。
+1. 选中**在安装前自定义 Helm 选项**，然后单击**下一步**。
+1. 在**功能**选项卡中，选中**启用 CSI 迁移**。
+1. 你也可以转到**存储**选项卡并设置 datastore。此 Chart 使用 `csi.vsphere.vmware.com` 作为置备程序来创建一个 StorageClass。在创建此 StorageClass 时，你也可以提供用于配置 CSI 卷的 datastore URL。通过选择 datastore 并转到**概述**选项卡，你可以在 vSphere 客户端中找到 datastore URL。填写 StorageClass 的详细信息。
+1. 单击**安装**。
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
+
 1. 点击 **☰ > 集群管理**。
 1. 转到将安装 vSphere CSI chart 的集群，然后单击 **Explore**。
 1. 单击**应用 & 应用市场 > Chart**。
@@ -83,6 +116,9 @@ kubectl describe nodes | grep "ProviderID"
 1. 在**功能**选项卡中，选中**启用 CSI 迁移**。
 1. 你也可以转到**存储**选项卡并设置 datastore。此 Chart 使用 `csi.vsphere.vmware.com` 作为置备程序来创建一个 StorageClass。在创建此 StorageClass 时，你也可以提供用于配置 CSI 卷的 datastore URL。通过选择 datastore 并转到**概述**选项卡，你可以在 vSphere 客户端中找到 datastore URL。填写 StorageClass 的详细信息。
 1. 单击**安装**。
+
+</TabItem>
+</Tabs>
 
 ### 3. 编辑集群以启用 CSI 迁移的功能开关
 

@@ -6,17 +6,17 @@ title: NeuVector 集成
 
 [NeuVector 5.x](https://open-docs.neuvector.com/) 是一个开源的，以容器为中心的安全应用程序，Rancher 2.6.5 现已集成 NeuVector。NeuVector 在运行时为关键应用程序和数据提供实时的合规、可见和保护功能。NeuVector 提供具有 CIS Benchmark 和漏洞扫描的防火墙、容器进程/文件系统监控和安全审计。有关 Rancher 安全性的更多信息，请参阅[安全文档](../pages-for-subheaders/rancher-security.md)。
 
-NeuVector 可以通过 Helm Chart 启用。你可以在**应用 & 应用市场**或 Rancher UI 中的**集群工具**中安装该 Chart。安装 Helm Chart 后，用户可以轻松地[在 Rancher 中部署和管理 NeuVector 集群](https://open-docs.neuvector.com/deploying/rancher#deploy-and-manage-neuvector-through-rancher-apps-marketplace)。
+NeuVector 可以通过 Helm Chart 启用。你可以在 **Apps** 或 Rancher UI 中的 **Cluster Tools** 中安装该 Chart。安装 Helm Chart 后，用户可以轻松地[在 Rancher 中部署和管理 NeuVector 集群](https://open-docs.neuvector.com/deploying/rancher#deploy-and-manage-neuvector-through-rancher-apps-marketplace)。
 
 ### 使用 Rancher 安装 NeuVector
 
 Harvester Helm Chart 用于管理 Rancher 中 NeuVector UI 的访问，用户可以在 Rancher 中直接跳转，然后部署和管理 NeuVector 集群。
 
-**通过"应用 & 应用市场"导航并安装 NeuVector Chart**：
+**通过 "Apps" 导航并安装 NeuVector Chart**：
 
 1. 点击 **☰ > 集群管理**。
 1. 在 Clusters 页面上，转到要部署 NeuVector 的集群，然后单击 **Explore**。
-1. 转到 **应用 & 应用市场 > Charts**，然后从 Chart 仓库中安装 **NeuVector**。
+1. 转到 **Apps > Charts**，然后从 Chart 仓库中安装 **NeuVector**。
 1. 不同的集群类型需要不同的容器运行时。配置 Helm Chart 值时，转到**容器运行时**，然后根据集群类型选择运行时。最后，再次单击**安装**。
 
 以下是一些例子：
@@ -47,10 +47,10 @@ Harvester Helm Chart 用于管理 Rancher 中 NeuVector UI 的访问，用户可
 
 ### 从 Rancher UI 卸载 NeuVector
 
-**通过"应用 & 应用市场"卸载**：
+**通过 "Apps" 卸载**：
 
 1. 点击 **☰ > 集群管理**。
-1. 在**应用 & 应用市场**下，点击**已安装的应用**。
+1. 在 **Apps** 下，点击 **Installed Apps**。
 1. 在 `cattle-neuvector-system` 下，选择 NeuVector 应用程序（如果需要，还可以选择相关的 CRD），然后单击**删除**。
 
 **通过集群工具卸载**：
@@ -114,7 +114,7 @@ NeuVector 安全解决方案包含四种类型的安全容器，分别是 Contro
 
 1. 点击 **☰ > 集群管理**。
 1. 选择你创建的集群，并点击 **Explore**。
-1. 在左侧导航栏中，点击**应用 & 应用市场**。
+1. 在左侧导航栏中，点击 **Apps**。
 1. 安装（或升级到）NeuVector 版本 `100.0.1+up2.2.2`。
 
 - 在 **编辑选项** > **其它配置**下，选中复选框来启用 **Pod 安全策略**（无需其他配置）：
@@ -149,7 +149,7 @@ kubectl patch cronjob neuvector-updater-pod -n cattle-neuvector-system --patch '
 
 1. 点击 **☰ > 集群管理**。
 1. 选择你创建的集群，并点击 **Explore**。
-1. 在左侧导航栏中，点击**应用 & 应用市场**。
+1. 在左侧导航栏中，点击 **Apps**。
 1. 安装（或升级到）NeuVector 版本 `100.0.1+up2.2.2`。
 
 - 在 **编辑选项** > **其它配置**下，选中复选框来启用 **Pod 安全策略**。请注意，对于 `Manager runAsUser ID`、`Scanner runAsUser ID` 和 `Updater runAsUser ID`，你还必须输入大于 `0` 的值:

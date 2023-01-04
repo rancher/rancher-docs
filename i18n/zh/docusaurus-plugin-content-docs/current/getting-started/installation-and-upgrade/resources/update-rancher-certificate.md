@@ -58,6 +58,25 @@ kubectl -n cattle-system create secret generic tls-ca \
 
 ### 3. 重新配置 Rancher 部署
 
+如果证书源保持不变（例如，`secret`），请按照步骤 3a 中的步骤操作。
+
+但是，如果证书源发生变化（例如，`letsEncrypt` 更改为 `secret`），请按照 3b 中的步骤操作。
+
+#### 3a. 重新部署 Rancher pod
+
+当证书源保持不变，但需要更新 CA 证书时，需要执行此步骤。
+
+在这种情况下，由于 `tls-ca` secret 在启动时由 Rancher pod 读取，因此你需要重新部署 Rancher pod。
+
+你可以运行以下命令重新部署 Rancher pod：
+```bash
+kubectl rollout restart deploy/rancher -n cattle-system
+```
+
+修改完成后，访问 `https://<RANCHER_SERVER_URL>/v3/settings/cacerts`，验证该值是否与先前写入 `tls-ca` Secret 中的 CA 证书匹配。在所有重新部署的 Rancher pod 启动之前，CA `cacerts` 值可能不会更新。
+
+#### 3b. 更新 Rancher 的 Helm 值
+
 如果证书源有更改，则需要执行此步骤。如果你的 Rancher 之前使用默认的自签名证书 (`ingress.tls.source=rancher`) 或 Let's Encrypt (`ingress.tls.source=letsEncrypt`) 证书，并且现在正在使用由私有 CA (`ingress.tls.source=secret`) 签名的证书。
 
 以下步骤更新了 Rancher Chart 的 Helm 值，因此 Rancher pod 和 ingress 会使用在步骤 1 和 2 中创建的新私有 CA 证书。
@@ -103,7 +122,7 @@ privateCA: true
 
 #### 可使用的方法
 
-- 方法 1（最简单的方法）：在轮换证书后将所有集群连接到 Rancher。适用于更新 Rancher 部署（步骤 3）后立即执行的情况。
+- 方法 1（最简单的方法）：在轮换证书后将所有集群连接到 Rancher。适用于更新或重新部署 Rancher 部署（步骤 3）后立即执行的情况。
 
 - 方法 2：适用于集群与 Rancher 失去连接，但所有集群都启用了 [Authorized Cluster Endpoint](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint) (ACE) 的情况。
 

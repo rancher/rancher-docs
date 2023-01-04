@@ -35,15 +35,28 @@ Rancher 2.5 改进了 OPA Gatekeeper 应用。无法从 Rancher 2.4 升级到 Ra
 
 :::
 
-你可以在**应用 & 应用市场**页面安装 OPA Gatekeeper Helm Chart。
-
 ### 启用 OPA Gatekeeper
+
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. 在左上角，单击 **☰ > 集群管理**。
+1. 在**集群**页面中，转到要启用 OPA Gatekeeper 的集群，然后单击 **Explore**。
+1. 在左侧导航栏中，点击 **Apps**。
+1. 点击 **Charts** 并点击 **OPA Gatekeeper**。
+1. 单击**安装**。
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
 
 1. 在左上角，单击 **☰ > 集群管理**。
 1. 在**集群**页面中，转到要启用 OPA Gatekeeper 的集群，然后单击 **Explore**。
 1. 在左侧导航栏中，点击**应用 & 应用市场**。
 1. 点击 **Charts** 并点击 **OPA Gatekeeper**。
 1. 单击**安装**。
+
+</TabItem>
+</Tabs>
 
 **结果**：已将 OPA Gatekeeper 部署到你的 Kubernetes 集群。
 

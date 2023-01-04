@@ -142,11 +142,26 @@ Opsgenie 响应者：
 
 Teams 接收器不是原生接收器，因此需要启用后才能使用。你可以通过转到应用页面，安装 rancher-alerting-drivers 应用，然后选择 Teams 选项，从而为 Rancher 管理的集群启用 Teams 接收器。
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. 在 Rancher UI 中，转到要安装 rancher-alerting-drivers 的集群，然后单击 **Apps**。
+1. 点击 **Alerting Drivers** 应用。
+1. 单击 **Helm 部署选项**选项卡。
+1. 选择 **Teams** 并单击**安装**。
+1. 记下使用的命名空间，后续步骤中将需要该命名空间。
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
+
 1. 在 Rancher UI 中，转到要安装 rancher-alerting-drivers 的集群，然后单击**应用 & 应用市场**。
 1. 点击 **Alerting Drivers** 应用。
 1. 单击 **Helm 部署选项**选项卡。
 1. 选择 **Teams** 并单击**安装**。
 1. 记下使用的命名空间，后续步骤中将需要该命名空间。
+
+</TabItem>
+</Tabs>
 
 ### 配置 Teams 接收器
 

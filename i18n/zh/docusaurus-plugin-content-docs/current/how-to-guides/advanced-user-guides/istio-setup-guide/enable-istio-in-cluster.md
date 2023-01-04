@@ -13,7 +13,7 @@ title: 1. 在集群中启用 Istio
 
 1. 点击 **☰ > 集群管理**。
 1. 转到要启用 Istio 的位置，然后单击 **Explore**。
-1. 单击**应用 & 应用市场**。
+1. 单击 **Apps**。
 1. 单击 **Chart**。
 1. 单击 **Istio**。
 1. 如果你还没有安装 Monitoring 应用，系统会提示你安装 rancher-monitoring。你也可以选择在 Rancher-monitoring 安装上设置选择器或抓取配置选项。

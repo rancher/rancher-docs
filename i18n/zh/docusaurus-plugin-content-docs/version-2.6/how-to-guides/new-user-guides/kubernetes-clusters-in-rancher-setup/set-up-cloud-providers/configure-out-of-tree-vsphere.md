@@ -32,6 +32,23 @@ Kubernetes 版本必须为 1.19 或更高版本。
 
 ### 2. 安装 CPI 插件
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. 点击 **☰ > 集群管理**。
+1. 转到将安装 vSphere CPI 插件的集群，然后单击 **Explore**。
+1. 单击 **Apps > Charts**。
+1. 单击 **vSphere CPI**。
+1. 填写所需的 vCenter 详细信息。
+1. vSphere CPI 使用 vSphere CSI 驱动所需的 ProviderID 来初始化所有节点。在使用以下命令安装 CSI 驱动之前，检查是否所有节点都使用 ProviderID 进行了初始化：
+
+   ```
+   kubectl describe nodes | grep "ProviderID"
+   ```
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
+
 1. 点击 **☰ > 集群管理**。
 1. 转到将安装 vSphere CPI 插件的集群，然后单击 **Explore**。
 1. 单击**应用 & 应用市场 > Chart**。
@@ -43,7 +60,25 @@ Kubernetes 版本必须为 1.19 或更高版本。
    kubectl describe nodes | grep "ProviderID"
    ```
 
+</TabItem>
+</Tabs>
+
 ### 3. 安装 CSI 插件
+
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. 点击 **☰ > 集群管理**。
+1. 转到将安装 vSphere CSI 插件的集群，然后单击 **Explore**。
+1. 单击 **Apps > Charts**。
+1. 单击 **vSphere CSI**。
+1. 单击**安装**。
+1. 填写所需的 vCenter 详细信息。在**功能**选项卡中，将**启用 CSI 迁移**设置为 **false**。
+3. 在**存储**选项卡中，填写 StorageClass 的详细信息。此 Chart 使用 `csi.vsphere.vmware.com` 作为置备程序来创建一个 StorageClass。
+1. 单击**安装**。
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
 
 1. 点击 **☰ > 集群管理**。
 1. 转到将安装 vSphere CSI 插件的集群，然后单击 **Explore**。
@@ -54,6 +89,8 @@ Kubernetes 版本必须为 1.19 或更高版本。
 3. 在**存储**选项卡中，填写 StorageClass 的详细信息。此 Chart 使用 `csi.vsphere.vmware.com` 作为置备程序来创建一个 StorageClass。
 1. 单击**安装**。
 
+</TabItem>
+</Tabs>
 
 ## 使用 CSI 驱动来置备卷
 

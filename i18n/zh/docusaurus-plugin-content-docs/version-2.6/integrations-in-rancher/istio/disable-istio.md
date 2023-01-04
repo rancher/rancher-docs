@@ -8,11 +8,26 @@ title: 禁用 Istio
 
 要卸载 Istio：
 
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.6.5+">
+
+1. 点击 **☰ > 集群管理**。
+1. 选择你创建的集群，并点击 **Explore**。
+1. 在左侧导航栏中，单击 **Apps > Installed Apps**。
+1. 在 `istio-system` 命名空间中，转到 `rancher-istio` 并单击 **⋮ > 删除**。
+1. 删除 `rancher-istio` 后，选择 `istio-system` 命名空间中所有剩余的应用，然后单击**删除**。
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
+
 1. 点击 **☰ > 集群管理**。
 1. 选择你创建的集群，并点击 **Explore**。
 1. 在左侧导航栏中，单击**应用 & 应用市场 > 已安装的应用**。
 1. 在 `istio-system` 命名空间中，转到 `rancher-istio` 并单击 **⋮ > 删除**。
 1. 删除 `rancher-istio` 后，选择 `istio-system` 命名空间中所有剩余的应用，然后单击**删除**。
+
+</TabItem>
+</Tabs>
 
 **结果**：已删除集群中的 `rancher-istio` 应用。Istio sidecar 不能部署在集群中的任何工作负载上。
 

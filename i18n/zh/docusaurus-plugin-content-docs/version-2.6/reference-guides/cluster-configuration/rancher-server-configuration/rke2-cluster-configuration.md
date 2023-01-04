@@ -166,7 +166,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 #### 自动快照
 
-启用或禁用定期 etcd 快照的选项。如果启用，用户可以配置快照的频率。有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/backup_restore/#creating-snapshots)。请注意，如果使用 RKE2，快照存储会在每个 etcd 节点上，这与 RKE1 不同（RKE1 每个集群只存储一个快照）。
+启用或禁用定期 etcd 快照的选项。如果启用，用户可以配置快照的频率。有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/backup_restore/#creating-snapshots)。请注意，如果使用 RKE2，快照会存储在每个 etcd 节点上，这与 RKE1 不同（RKE1 每个集群只存储一个快照）。
 
 #### 指标
 

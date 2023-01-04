@@ -2,7 +2,7 @@
 title: 在 RKE2 集群上安装 Istio 的其他步骤
 ---
 
-通过**应用 & 应用市场**页面安装或升级 Istio Helm Chart 时：
+通过 **Apps & Marketplace**（Rancher v2.6.5 之前的版本）或 **Apps**（Rancher v2.6.5+）安装或升级 Istio Helm Chart 时：
 
 1. 如果要安装 Chart，请单击**在安装前自定义 Helm 选项**，然后单击**下一步**。
 1. 你将看到配置 Istio Helm Chart 的选项。在**组件**选项卡上，选中**启用 CNI** 旁边的框。

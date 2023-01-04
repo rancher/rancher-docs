@@ -43,7 +43,7 @@ tls-san:
 之后，运行安装命令并启用和启动 RKE2：
 
 ```
-curl -sfL https://get.rke2.io | INSTALL_RKE2_CHANNEL=v1.20 sh -
+curl -sfL https://get.rke2.io | sh -
 systemctl enable rke2-server.service
 systemctl start rke2-server.service
 ```

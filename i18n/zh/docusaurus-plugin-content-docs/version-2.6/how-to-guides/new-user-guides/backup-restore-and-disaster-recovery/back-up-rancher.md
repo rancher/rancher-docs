@@ -26,6 +26,20 @@ Rancher 必须是 2.5.0 或更高版本。
 
 备份文件的格式是 `.tar.gz`。这些文件可以推送到 S3 或 Minio，也可以存储在一个持久卷中。
 
+<Tabs>
+<TabItem value="Rancher v2.6.5+">
+
+1. 在左上角，单击 **☰ > 集群管理**。
+1. 在**集群**页面上，转到 `local` 集群并单击 **Explore**。Rancher Server 运行在 `local` 集群中。
+1. 单击 **Apps > Charts**。
+1. 点击 **Rancher 备份**。
+1. 单击**安装**。
+1. 配置默认存储位置。如需获取帮助，请参见[存储配置](../../../reference-guides/backup-restore-configuration/storage-configuration.md)。
+1. 单击**安装**。
+
+</TabItem>
+<TabItem value="Rancher 版本低于 v2.6.5">
+
 1. 在左上角，单击 **☰ > 集群管理**。
 1. 在**集群**页面上，转到 `local` 集群并单击 **Explore**。Rancher Server 运行在 `local` 集群中。
 1. 单击**应用 & 应用市场 > Chart**。
@@ -33,6 +47,9 @@ Rancher 必须是 2.5.0 或更高版本。
 1. 单击**安装**。
 1. 配置默认存储位置。如需获取帮助，请参见[存储配置](../../../reference-guides/backup-restore-configuration/storage-configuration.md)。
 1. 单击**安装**。
+
+</TabItem>
+</Tabs>
 
 :::note
 
