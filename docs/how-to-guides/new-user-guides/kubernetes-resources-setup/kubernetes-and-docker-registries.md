@@ -17,7 +17,8 @@ Currently, deployments pull the private registry credentials automatically only 
 
 :::note Prerequisite:
 
-You must have a [private registry](https://docs.docker.com/registry/deploying/) available to use.
+// You must have a [private registry](https://docs.docker.com/registry/deploying/) available to use.
+// Need appropriate replacement link
 
 :::
 
@@ -48,7 +49,8 @@ You must have a [private registry](https://docs.docker.com/registry/deploying/) 
 
 :::note Prerequisites:
 
-You must have a [private registry](https://docs.docker.com/registry/deploying/) available to use.
+// You must have a [private registry](https://docs.docker.com/registry/deploying/) available to use.
+// Need appropriate replacement link
 
 :::
 
@@ -131,18 +133,22 @@ In this example, the secret named `testquay` is in the default namespace.
 
 You can use `kubectl` to create the secret with the private registry credentials. This command creates the secret named `testquay`:
 
-```
-kubectl create secret docker-registry testquay \
-    --docker-server=quay.io \
-    --docker-username=<Profile name> \
-    --docker-password=<password>
-```
+// ```
+// kubectl create secret docker-registry testquay \
+//     --docker-server=quay.io \
+//     --docker-username=<Profile name> \
+//     --docker-password=<password>
+// ```
+
+// Need generic instructions
 
 To see how the secret is stored in Kubernetes, you can use this command:
 
-```
-kubectl get secret testquay --output="jsonpath={.data.\.dockerconfigjson}" | base64 --decode
-```
+// ```
+// kubectl get secret testquay --output="jsonpath={.data.\.dockerconfigjson}" | base64 --decode
+// ```
+
+// Need generic instructions
 
 The result looks like this:
 

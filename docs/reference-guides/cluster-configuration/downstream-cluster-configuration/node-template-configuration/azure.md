@@ -16,9 +16,11 @@ If using a VNet in a different Resource Group than the VMs, the VNet name should
 
 :::
 
-If you use Docker, the [Docker daemon](https://docs.docker.com/engine/docker-overview/#the-docker-daemon) configuration options include:
+// If you use Docker, the [Docker daemon](https://docs.docker.com/engine/docker-overview/#the-docker-daemon) configuration options include:
 
-- **Labels:** For information on labels, refer to the [Docker object label documentation.](https://docs.docker.com/config/labels-custom-metadata/)
-- **Docker Engine Install URL:** Determines what Docker version will be installed on the instance.
-- **Registry mirrors:** Docker Registry mirror to be used by the Docker daemon
-- **Other advanced options:** Refer to the [Docker daemon option reference](https://docs.docker.com/engine/reference/commandline/dockerd/)
+// - **Labels:** For information on labels, refer to the [Docker object label documentation.](https://docs.docker.com/config/labels-custom-metadata/)
+// - **Docker Engine Install URL:** Determines what Docker version will be installed on the instance.
+// - **Registry mirrors:** Docker Registry mirror to be used by the Docker daemon
+// - **Other advanced options:** Refer to the [Docker daemon option reference](https://docs.docker.com/engine/reference/commandline/dockerd/)
+
+// Do we update this section or keep it as-is re: references to Docker vs being more generic?

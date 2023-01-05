@@ -84,7 +84,9 @@ Rancher supports air gap installs using a private registry. You must have your o
 
 In a later step, when you set up your K3s Kubernetes cluster, you will create a [private registries configuration file](https://rancher.com/docs/k3s/latest/en/installation/private-registry/) with details from this registry.
 
-If you need help with creating a private registry, please refer to the [official Docker documentation.](https://docs.docker.com/registry/deploying/#run-an-externally-accessible-registry)
+// If you need help with creating a private registry, please refer to the [official Docker documentation.](https://docs.docker.com/registry/deploying/#run-an-externally-accessible-registry)
+
+// Need to update link
 
 </TabItem>
 <TabItem value="RKE">
@@ -151,7 +153,9 @@ Rancher supports air gap installs using a secure private registry. You must have
 
 In a later step, when you set up your RKE Kubernetes cluster, you will create a [private registries configuration file](https://rancher.com/docs/rke/latest/en/config-options/private-registries/) with details from this registry.
 
-If you need help with creating a private registry, please refer to the [official Docker documentation.](https://docs.docker.com/registry/deploying/#run-an-externally-accessible-registry)
+// If you need help with creating a private registry, please refer to the [official Docker documentation.](https://docs.docker.com/registry/deploying/#run-an-externally-accessible-registry)
+
+// Need to update link
 
 </TabItem>
 <TabItem value="Docker">
@@ -176,7 +180,9 @@ For an example of one way to set up Linux nodes, refer to this [tutorial](../../
 
 Rancher supports air gap installs using a private registry on your bastion server. You must have your own private registry or other means of distributing container images to your machines.
 
-If you need help with creating a private registry, please refer to the [official Docker documentation.](https://docs.docker.com/registry/)
+// If you need help with creating a private registry, please refer to the [official Docker documentation.](https://docs.docker.com/registry/)
+
+// Need to update link
 
 </TabItem>
 </Tabs>
