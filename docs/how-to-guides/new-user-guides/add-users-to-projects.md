@@ -22,9 +22,8 @@ Following project creation, you can add users as project members so that they ca
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to add members to a project and click **Explore**.
-1. Click **Cluster > Projects/Namespaces**.
-1. Go to the project where you want to add members and click **⋮ > Edit Config**.
-1. In the **Members** tab, click **Add**.
+1. In the sidebar, click **Cluster Members**.
+1. On the **Cluster Members** page, click **Add**.
 1. Search for the user or group that you want to add to the project.
 
     If external authentication is configured:
