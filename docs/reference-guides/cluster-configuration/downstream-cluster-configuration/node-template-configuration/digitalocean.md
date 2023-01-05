@@ -10,7 +10,7 @@ The **Droplet Options** provision your cluster's geographical region and specifi
 
 ### Docker Daemon
 
-The [Docker daemon](https://docs.docker.com/engine/docker-overview/#the-docker-daemon) configuration options include:
+If you use Docker, the [Docker daemon](https://docs.docker.com/engine/docker-overview/#the-docker-daemon) configuration options include:
 
 - **Labels:** For information on labels, refer to the [Docker object label documentation.](https://docs.docker.com/config/labels-custom-metadata/)
 - **Docker Engine Install URL:** Determines what Docker version will be installed on the instance.

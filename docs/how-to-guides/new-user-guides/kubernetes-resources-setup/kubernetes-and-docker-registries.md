@@ -1,15 +1,15 @@
 ---
-title: Kubernetes Registry and Docker Registry
-description: Learn about the Docker registry and Kubernetes registry, their use cases and how to use a private registry with the Rancher UI
+title: Kubernetes Registry and Container Registry
+description: Learn about the Container registry and Kubernetes registry, their use cases and how to use a private registry with the Rancher UI
 ---
-Registries are Kubernetes secrets containing credentials used to authenticate with [private Docker registries](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).
+Registries are Kubernetes secrets containing credentials used to authenticate with [private container registries](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).
 
-The word "registry" can mean two things, depending on whether it is used to refer to a Docker or Kubernetes registry:
+The word "registry" can mean two things, depending on whether it is used to refer to a container or Kubernetes registry:
 
-- A **Docker registry** contains Docker images that you can pull in order to use them in your deployment. The registry is a stateless, scalable server side application that stores and lets you distribute Docker images.
-- The **Kubernetes registry** is an image pull secret that your deployment uses to authenticate with a Docker registry.
+- A **Container registry** (formerly "Docker registry") contains container images that you can pull and deploy. The registry is a stateless, scalable server side application that stores and lets you distribute container images.
+- The **Kubernetes registry** is an image pull secret that your deployment uses to authenticate with a container registry.
 
-Deployments use the Kubernetes registry secret to authenticate with a private Docker registry and then pull a Docker image hosted on it.
+Deployments use the Kubernetes registry secret to authenticate with a private container registry and then pull a container image hosted on it.
 
 Currently, deployments pull the private registry credentials automatically only if the workload is created in the Rancher UI and not when it is created via kubectl.
 
@@ -104,7 +104,7 @@ To deploy a workload with an image from your private registry,
 1. In the **Container Image** field, enter the URL of the path to the image in your private registry. For example, if your private registry is on Quay.io, you could use `quay.io/<Quay profile name>/<Image name>`.
 1. Click **Create**.
 
-**Result:** Your deployment should launch, authenticate using the private registry credentials you added in the Rancher UI, and pull the Docker image that you specified.
+**Result:** Your deployment should launch, authenticate using the private registry credentials you added in the Rancher UI, and pull the container image that you specified.
 
 ### Using the Private Registry with kubectl
 

@@ -78,7 +78,7 @@ If you have an air gap setup, you might not be able to get the automatic periodi
 
 To sync Rancher with a local mirror of the RKE metadata, an administrator would configure the `rke-metadata-config` settings to point to the mirror. For details, refer to [Configuring the Metadata Synchronization.](#configuring-the-metadata-synchronization)
 
-After new Kubernetes versions are loaded into the Rancher setup, additional steps would be required in order to use them for launching clusters. Rancher needs access to updated system images. While the metadata settings can only be changed by administrators, any user can download the Rancher system images and prepare a private Docker registry for them.
+After new Kubernetes versions are loaded into the Rancher setup, additional steps would be required in order to use them for launching clusters. Rancher needs access to updated system images. While the metadata settings can only be changed by administrators, any user can download the Rancher system images and prepare a private container registry for them.
 
 1. To download the system images for the private registry, click the Rancher server version at the bottom left corner of the Rancher UI.
 1. Download the OS specific image lists for Linux or Windows.
