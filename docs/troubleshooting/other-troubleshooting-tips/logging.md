@@ -2,6 +2,8 @@
 title: Logging
 ---
 
+## Log levels
+
 The following log levels are used in Rancher:
 
 | Name    | Description |
