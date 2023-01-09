@@ -16,7 +16,7 @@ title: Some Title
 ---
 ```
 
-The title metadata is rendered as the published page's headline. The renderer wraps the content of the `title` in H1 level HTML header tagss, which are equivalent to `#` in Markdown syntax. This means that all subsequent headers on the page should be second level (`##`) or more.
+The title metadata is rendered as the published page's headline. The renderer wraps the content of the `title` in H1 level HTML header tags, which are equivalent to `#` in Markdown syntax. This means that all subsequent headers on the page should be second level (`##`) or more.
 
 ## Organization
 
