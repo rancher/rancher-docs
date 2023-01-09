@@ -16,11 +16,11 @@ title: Some Title
 ---
 ```
 
-The title metadata is rendered as the published page's headline. The renderer wraps the content of the `title` in H1 level HTML header tags, which are equivalent to `#` in Markdown syntax. This means that all subsequent headers on the page should be second level (`##`) or more.
+The title metadata is rendered as the page's headline. The renderer wraps the `title` value in H1 tags, which are equivalent to `#` in Markdown syntax. This means that all subsequent headers on the page should be second level (`##`) or more.
 
 ## Organization
 
-Folders and directories in the repo correspond to submenus in the site sidebar. We try to keep our submenus to a maximum of three levels deep, or four if absolutely necessary.
+Directories in the repo correspond to submenus in the site sidebar. We try to keep our submenus to a maximum of three levels deep, or four if absolutely necessary.
 
 The sidebar on the live site is rendered based on the contents of the file `sidebar.json`, which is located in the top level of the repository. If you add, move, or delete a page, `sidebar.json` must be updated.
 
@@ -36,15 +36,7 @@ First, install Docusaurus 2:
 1. Go into your local rancher-docs folder.
 1. The Rancher Docs repository already contains a yarn.lock file, which contains the dependencies you need to build the website. Run `yarn` to install Docusaurus and associated dependencies.
 
-### Launch With Docker
-
-Use [Docker](https://www.docker.com/) to launch the website without needing to install and configure Yarn:
-
-```
-docker run --rm -it -v $PWD:$PWD -w $PWD -p 3000:3000 node yarn start -h 0.0.0.0
-```
-
-### Start
+### Start Site
 
 ```
 yarn start
@@ -54,13 +46,21 @@ This command starts a local development server for Docusuarus 2, and opens up a 
 
 Note: The `yarn start` command won't include some important static site features. For example, the site will lack versioning for different languages. If you need these features, use `yarn build`.
 
-### Build
+### Build Site
 
 ```
 yarn build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### Launch With Docker
+
+Use [Docker](https://www.docker.com/) to launch the website without needing to install and configure Yarn:
+
+```
+docker run --rm -it -v $PWD:$PWD -w $PWD -p 3000:3000 node yarn start -h 0.0.0.0
+```
 
 License
 =======
