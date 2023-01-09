@@ -17,8 +17,13 @@ Currently, deployments pull the private registry credentials automatically only 
 
 :::note Prerequisite:
 
-// You must have a [private registry](https://docs.docker.com/registry/deploying/) available to use.
-// Need appropriate replacement link
+You must have an available private registry already deployed.
+
+If you need to create a private registry, refer to the documentation pages for your respective runtime:
+
+* [Containerd](https://github.com/containerd/containerd/blob/main/docs/cri/config.md#registry-configuration).
+  * [Nerdctl commands and managed registry services](https://github.com/containerd/nerdctl/blob/main/docs/registry.md). 
+* [Docker](https://docs.docker.com/registry/deploying/).
 
 :::
 
@@ -49,8 +54,13 @@ Currently, deployments pull the private registry credentials automatically only 
 
 :::note Prerequisites:
 
-// You must have a [private registry](https://docs.docker.com/registry/deploying/) available to use.
-// Need appropriate replacement link
+You must have an available private registry already deployed.
+
+If you need to create a private registry, refer to the documentation pages for your respective runtime:
+
+* [Containerd](https://github.com/containerd/containerd/blob/main/docs/cri/config.md#registry-configuration).
+  * [Nerdctl commands and managed registry services](https://github.com/containerd/nerdctl/blob/main/docs/registry.md). 
+* [Docker](https://docs.docker.com/registry/deploying/).
 
 :::
 
