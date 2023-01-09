@@ -2,28 +2,57 @@
 
 The Rancher Docs website is built with [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-## Installation
+## Edit The Docs
 
-The Rancher Docs repository already contains a yarn.lock file, which contains the dependencies you need to build the website.
+To get started, fork and clone the rancher-docs repository.
 
-1. If you haven't already, install [Node](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/getting-started/install).
-1. Fork and clone the rancher-docs repository.
-1. Go into your local rancher-docs folder.
-1. Run `yarn` to install Docusaurus and associated dependencies.
+Our repository doesn't allow you to make changes directly to the `main` branch. Create a working branch and make pull requests from your fork to [rancher/rancher-docs](https://github.com/rancher/rancher-docs). 
+
+### Style & Formating
+
+The docs are written in [Markdown](https://www.markdownguide.org/cheat-sheet/). We refer to the Microsoft [style guide](https://learn.microsoft.com/en-us/style-guide/welcome/) and generally use standard American English. Many pages are also available in Standard Chinese. We plan to add more language support.
+
+Every docs page contain metadata in the first few lines:
+
+```
+---
+title: Some Title
+---
+```
+
+The title metadata is rendered as the published page's headline. The renderer wraps the content of the `title` in H1 level HTML header tagss, which are equivalent to `#` in Markdown syntax. This means that all subsequent headers on the page should be second level (`##`) or more.
+
+### Organization
+
+Folders and directories in the repo correspond to submenus in the site sidebar. We try to keep our submenus to a maximum of three levels deep, or four if absolutely necessary.
+
+The sidebar on the live site is rendered based on the contents of the file `sidebar.json`, which is located in the top level of the repository. If you move or delete a page, `sidebar.json` must be updated.
 
 ## Local Development
+
+You can locally run the docs website to preview how pages will look live.
+
+Use [Docker](https://www.docker.com/) to launch the website without needing to install and configure Yarn:
+
+```
+docker run --rm -it -v $PWD:$PWD -w $PWD -p 3000:3000 node yarn start -h 0.0.0.0
+```
+
+Otherwise, perform the following steps:
+
+1. If you haven't already, install [Node](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/getting-started/install).
+1. Go into your local rancher-docs folder.
+1. The Rancher Docs repository already contains a yarn.lock file, which contains the dependencies you need to build the website. Run `yarn` to install Docusaurus and associated dependencies.
+
+Once everything is installed, run the following:
 
 ```
 yarn start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+This command starts a local development server for Docusuarus 2, and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-You can also use Docker to launch the website without needing to install and configure Yarn:
-
-```
-docker run --rm -it -v $PWD:$PWD -w $PWD -p 3000:3000 node yarn start -h 0.0.0.0
-```
+Note: The `yarn start` command won't include some important static site features. For example, the site will lack versioning for different languages. If you need to check different langusge versions, use `yarn build`.
 
 ## Build
 
