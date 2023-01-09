@@ -22,7 +22,7 @@ The `title` is rendered as the page's headline. The renderer wraps the `title` v
 
 Directories in the repo correspond to submenus in the site sidebar. We try to keep our submenus to a maximum of three levels deep, or four if absolutely necessary.
 
-The sidebar on the live site is rendered based on the contents of the file `sidebar.json`, which is located in the top level of the repository. If you add, move, or delete a page, `sidebar.json` must be updated.
+The sidebar on the live site is rendered based on the contents of the file, `sidebars.json`, which is located in the top level of the repository. If you add, move, or delete a page, `sidebars.json` must be updated.
 
 ## Docs Website
 
