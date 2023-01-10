@@ -16,13 +16,7 @@ title: Some Title
 ---
 ```
 
-The `title` is rendered as the page's headline. The renderer wraps the `title` value in H1 tags, which are equivalent to `#` in Markdown syntax. This means that all subsequent headers on the page should be second level (`##`) or more.
-
-## Organization
-
-Directories in the repo correspond to submenus in the site sidebar. We try to keep our submenus to a maximum of three levels deep, or four if absolutely necessary.
-
-The sidebar on the live site is rendered based on the contents of the file, `sidebars.json`, which is located in the top level of the repository. If you add, move, or delete a page, `sidebars.json` must be updated.
+The `title` is rendered as the page's headline. The site renderer wraps the `title` value in `H1` tags, which are equivalent to `#` in Markdown syntax. This means that all subsequent headers on the page should be second level (`##`) or more.
 
 ## Docs Website
 
