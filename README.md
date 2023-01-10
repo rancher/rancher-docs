@@ -6,7 +6,7 @@ Our repository doesn't allow you to make changes directly to the `main` branch. 
 
 ## Style & Formatting
 
-The docs are written in [Markdown](https://www.markdownguide.org/cheat-sheet/). We refer to the Microsoft [style guide](https://learn.microsoft.com/en-us/style-guide/welcome/) and generally use standard American English. Many pages are also available in Standard Chinese. We plan to add more language support.
+The docs are written in [Markdown](https://www.markdownguide.org/getting-started/). We refer to the Microsoft [style guide](https://learn.microsoft.com/en-us/style-guide/welcome/) and generally use standard American English. Many pages are also available in Simplified Chinese.
 
 Every docs page contain metadata in the first few lines:
 
@@ -44,7 +44,7 @@ yarn start
 
 This command starts a local development server for Docusuarus 2, and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-Note: The `yarn start` command won't include some important static site features. For example, the site will lack versioning for different languages. If you need these features, use `yarn build`.
+**Note:** The `yarn start` command won't include some important static site features. For example, switching between languages from the site's dropdown menu is not available. If you need these features, use `yarn build`.
 
 ### Build Site
 
