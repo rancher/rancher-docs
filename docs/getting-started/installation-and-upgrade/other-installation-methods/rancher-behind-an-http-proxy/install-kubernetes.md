@@ -2,11 +2,11 @@
 title: '2. Install Kubernetes'
 ---
 
-Once the infrastructure is ready, you can continue with setting up an RKE cluster to install Rancher in.
+Once the infrastructure is ready, you can continue with setting up a Kubernetes cluster to install Rancher in.
 
-First, you have to install Docker and setup the HTTP proxy on all three Linux nodes. For this perform the following steps on all three nodes.
+The steps to set up RKE, RKE2, or K3s are shown below.
 
-For convenience, export the IP address and port of your proxy into an environment variable and set up the HTTP_PROXY variables for your current shell:
+For convenience, export the IP address and port of your proxy into an environment variable and set up the HTTP_PROXY variables for your current shell on every node:
 
 ```
 export proxy_host="10.0.0.5:8888"
@@ -14,6 +14,84 @@ export HTTP_PROXY=http://${proxy_host}
 export HTTPS_PROXY=http://${proxy_host}
 export NO_PROXY=127.0.0.0/8,10.0.0.0/8,cattle-system.svc,172.16.0.0/12,192.168.0.0/16
 ```
+
+<Tabs>
+<TabItem value="K3s">
+
+First configure the HTTP proxy settings on the K3s systemd service, so that K3s's Containerd can pull images through the proxy:
+
+```
+cat <<'EOF' | sudo tee /etc/default/k3s > /dev/null
+HTTP_PROXY=http://${proxy_host}
+HTTPS_PROXY=http://${proxy_host}"
+NO_PROXY=127.0.0.0/8,10.0.0.0/8,cattle-system.svc,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local
+EOF
+```
+
+Then run the K3s installation script to create a new K3s cluster. Ensure that the K3s version you are installing is [supported by Rancher](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/).
+
+On the first node, create a new cluster:
+```
+curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.23 K3S_TOKEN=your_secret sh -s - server --cluster-init
+```
+
+And then join the other nodes:
+```
+curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.23 K3S_TOKEN=your_secret sh -s - server --server https://<ip or hostname of server1>:6443
+```
+
+For more information on installing K3s see the [K3s installation docs](https://docs.k3s.io/installation).
+
+To have a look at your cluster run:
+
+```
+kubectl cluster-info
+kubectl get pods --all-namespaces
+```
+
+</TabItem>
+<TabItem value="RKE2">
+
+On every node, run the RKE2 installation script. Ensure that the RKE2 version you are installing is [supported by Rancher](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/).
+
+```
+curl -sfL https://get.rke2.io | INSTALL_RKE2_CHANNEL=v1.23 sh -
+```
+
+Then you have to configure the HTTP proxy settings on the RKE2 systemd service, so that RKE2's Containerd can pull images through the proxy:
+
+```
+cat <<'EOF' | sudo tee /etc/default/rke2-server > /dev/null
+HTTP_PROXY=http://${proxy_host}
+HTTPS_PROXY=http://${proxy_host}"
+NO_PROXY=127.0.0.0/8,10.0.0.0/8,cattle-system.svc,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local
+EOF
+```
+
+Next create the RKE2 configuration file on every node following the [RKE2 High Availability documentation](https://docs.rke2.io/install/ha).
+
+After that start and enable the `rke2-server` service:
+
+```
+systemctl enable rke2-server.service
+systemctl start rke2-server.service
+```
+
+For more information on installing RKE2 see the [RKE2 installation docs](https://docs.rke2.io/install/).
+
+To have a look at your cluster run:
+
+```
+export KUBECONFIG=/etc/rancher/rke2/rke2.yaml
+alias kubectl=/var/lib/rancher/rke2/bin/kubectl
+kubectl cluster-info
+kubectl get pods --all-namespaces
+```
+
+</TabItem>
+<TabItem value="RKE">
+
+First, you have to install Docker and setup the HTTP proxy on all three Linux nodes. For this perform the following steps on all three nodes.
 
 Next configure apt to use this proxy when installing packages. If you are not using Ubuntu, you have to adapt this step accordingly:
 
@@ -92,14 +170,6 @@ chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 ```
 
-* [helm](https://helm.sh/docs/intro/install/)
-
-```
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-chmod +x get_helm.sh
-sudo ./get_helm.sh
-```
-
 Next, create a YAML file that describes the RKE cluster. Ensure that the IP addresses of the nodes and the SSH username are correct. For more information on the cluster YAML, have a look at the [RKE documentation](https://rancher.com/docs/rke/latest/en/example-yamls/).
 
 ```yml
@@ -165,6 +235,9 @@ Save a copy of the following files in a secure location:
 The "rancher-cluster" parts of the two latter file names are dependent on how you name the RKE cluster configuration file.
 
 :::
+
+</TabItem>
+</Tabs>
 
 ### Issues or errors?
 

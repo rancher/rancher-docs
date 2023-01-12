@@ -4,11 +4,15 @@ title: 3. Install Rancher
 
 Now that you have a running RKE cluster, you can install Rancher in it. For security reasons all traffic to Rancher must be encrypted with TLS. For this tutorial you are going to automatically issue a self-signed certificate through [cert-manager](https://cert-manager.io/). In a real-world use-case you will likely use Let's Encrypt or provide your own certificate.
 
-:::note
+### Install the Helm CLI
 
-These installation instructions assume you are using Helm 3.
+Install the [Helm](https://helm.sh/docs/intro/install/) CLI on a host where you have a kubeconfig to access your Kubernetes cluster:
 
-:::
+```
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod +x get_helm.sh
+sudo ./get_helm.sh
+```
 
 ### Install cert-manager
 
