@@ -58,7 +58,7 @@ On every node, run the RKE2 installation script. Ensure that the RKE2 version yo
 curl -sfL https://get.rke2.io | INSTALL_RKE2_CHANNEL=v1.23 sh -
 ```
 
-Then you have to configure the HTTP proxy settings on the RKE2 systemd service, so that RKE2's Containerd can pull images through the proxy:
+Then you have to configure the HTTP proxy settings on the RKE2 systemd service, so that RKE2's containerd can pull images through the proxy:
 
 ```
 cat <<'EOF' | sudo tee /etc/default/rke2-server > /dev/null
