@@ -115,7 +115,7 @@ Ensure that you set the permissions of type Application and NOT Delegated. Other
     - `Group.Read.All`
     - `User.Read.All`
 
-    ![Select API Permissions](/img/api-permissions.png)
+    ![Select API Permissions](/img/api-permissions-2-6.png)
 
 1. Return to **API permissions** in the left nav bar. From there, click **Grant admin consent**. Then click **Yes**.
 
