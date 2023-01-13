@@ -1,15 +1,15 @@
 ---
-title: Kubernetes Registry and Container Registry
-description: Learn about the Container registry and Kubernetes registry, their use cases and how to use a private registry with the Rancher UI
+title: Kubernetes Registry and Container Image Registry
+description: Learn about the container image registry and Kubernetes registry, their use cases, and how to use a private registry with the Rancher UI
 ---
 Registries are Kubernetes secrets containing credentials used to authenticate with [private container registries](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).
 
 The word "registry" can mean two things, depending on whether it is used to refer to a container or Kubernetes registry:
 
-- A **Container registry** (formerly "Docker registry") contains container images that you can pull and deploy. The registry is a stateless, scalable server side application that stores and lets you distribute container images.
-- The **Kubernetes registry** is an image pull secret that your deployment uses to authenticate with a container registry.
+- A **Container image registry** (formerly "Docker registry") contains container images that you can pull and deploy. The registry is a stateless, scalable server side application that stores and lets you distribute container images.
+- The **Kubernetes registry** is an image pull secret that your deployment uses to authenticate with an image registry.
 
-Deployments use the Kubernetes registry secret to authenticate with a private container registry and then pull a container image hosted on it.
+Deployments use the Kubernetes registry secret to authenticate with a private image registry and then pull a container image hosted on it.
 
 Currently, deployments pull the private registry credentials automatically only if the workload is created in the Rancher UI and not when it is created via kubectl.
 
@@ -143,22 +143,22 @@ In this example, the secret named `testquay` is in the default namespace.
 
 You can use `kubectl` to create the secret with the private registry credentials. This command creates the secret named `testquay`:
 
-// ```
-// kubectl create secret docker-registry testquay \
-//     --docker-server=quay.io \
-//     --docker-username=<Profile name> \
-//     --docker-password=<password>
-// ```
+```
+kubectl create secret docker-registry testquay \
+    --docker-server=quay.io \
+    --docker-username=<Profile name> \
+    --docker-password=<password>
+```
 
-// Need generic instructions
+Need generic instructions
 
 To see how the secret is stored in Kubernetes, you can use this command:
 
-// ```
-// kubectl get secret testquay --output="jsonpath={.data.\.dockerconfigjson}" | base64 --decode
-// ```
+```
+kubectl get secret testquay --output="jsonpath={.data.\.dockerconfigjson}" | base64 --decode
+```
 
-// Need generic instructions
+Need generic instructions
 
 The result looks like this:
 

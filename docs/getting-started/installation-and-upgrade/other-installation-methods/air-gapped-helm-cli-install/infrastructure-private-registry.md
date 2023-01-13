@@ -2,7 +2,7 @@
 title: '1. Set up Infrastructure and Private Registry'
 ---
 
-In this section, you will provision the underlying infrastructure for your Rancher management server in an air gapped environment. You will also set up the private container registry that must be available to your Rancher node(s).
+In this section, you will provision the underlying infrastructure for your Rancher management server in an air gapped environment. You will also set up the private container image registry that must be available to your Rancher node(s).
 
 An air gapped environment is an environment where the Rancher server is installed offline or behind a firewall.
 
@@ -19,7 +19,7 @@ We recommend setting up the following infrastructure for a high-availability ins
 - **An external database** to store the cluster data. PostgreSQL, MySQL, and etcd are supported.
 - **A load balancer** to direct traffic to the two nodes.
 - **A DNS record** to map a URL to the load balancer. This will become the Rancher server URL, and downstream Kubernetes clusters will need to reach it.
-- **A private container registry** to distribute container images to your machines.
+- **A private image registry** to distribute container images to your machines.
 
 ### 1. Set up Linux Nodes
 
@@ -78,7 +78,7 @@ You will need to specify this hostname in a later step when you install Rancher,
 
 For a how-to guide for setting up a DNS record to route domain traffic to an Amazon ELB load balancer, refer to the [official AWS documentation.](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer)
 
-### 5. Set up a Private Container Registry
+### 5. Set up a Private Image Registry
 
 Rancher supports air gap installs using a private registry. You must have your own private registry or other means of distributing container images to your machines.
 
@@ -98,7 +98,7 @@ To install the Rancher management server on a high-availability RKE cluster, we 
 - **Three Linux nodes,** typically virtual machines, in an infrastructure provider such as Amazon's EC2, Google Compute Engine, or vSphere.
 - **A load balancer** to direct front-end traffic to the three nodes.
 - **A DNS record** to map a URL to the load balancer. This will become the Rancher server URL, and downstream Kubernetes clusters will need to reach it.
-- **A private container registry** to distribute container images to your machines.
+- **A private image registry** to distribute container images to your machines.
 
 These nodes must be in the same region/data center. You may place these servers in separate availability zones.
 
@@ -149,7 +149,7 @@ You will need to specify this hostname in a later step when you install Rancher,
 
 For a how-to guide for setting up a DNS record to route domain traffic to an Amazon ELB load balancer, refer to the [official AWS documentation.](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer)
 
-### 4. Set up a Private Container Registry
+### 4. Set up a Private Image Registry
 
 Rancher supports air gap installs using a secure private registry. You must have your own private registry or other means of distributing container images to your machines.
 
