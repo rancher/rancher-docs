@@ -150,15 +150,11 @@ kubectl create secret docker-registry testquay \
     --docker-password=<password>
 ```
 
-Need generic instructions
-
 To see how the secret is stored in Kubernetes, you can use this command:
 
 ```
 kubectl get secret testquay --output="jsonpath={.data.\.dockerconfigjson}" | base64 --decode
 ```
-
-Need generic instructions
 
 The result looks like this:
 
