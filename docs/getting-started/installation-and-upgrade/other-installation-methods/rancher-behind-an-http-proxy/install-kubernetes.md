@@ -32,12 +32,12 @@ Then run the K3s installation script to create a new K3s cluster. Ensure that th
 
 On the first node, create a new cluster:
 ```
-curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.23 K3S_TOKEN=your_secret sh -s - server --cluster-init
+curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.xx K3S_TOKEN=your_secret sh -s - server --cluster-init
 ```
 
 And then join the other nodes:
 ```
-curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.23 K3S_TOKEN=your_secret sh -s - server --server https://<ip or hostname of server1>:6443
+curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.xx K3S_TOKEN=your_secret sh -s - server --server https://<ip or hostname of server1>:6443
 ```
 
 For more information on installing K3s see the [K3s installation docs](https://docs.k3s.io/installation).
@@ -55,7 +55,7 @@ kubectl get pods --all-namespaces
 On every node, run the RKE2 installation script. Ensure that the RKE2 version you are installing is [supported by Rancher](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/).
 
 ```
-curl -sfL https://get.rke2.io | INSTALL_RKE2_CHANNEL=v1.23 sh -
+curl -sfL https://get.rke2.io | INSTALL_RKE2_CHANNEL=v1.xx sh -
 ```
 
 Then you have to configure the HTTP proxy settings on the RKE2 systemd service, so that RKE2's containerd can pull images through the proxy:
