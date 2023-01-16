@@ -1,5 +1,5 @@
 ---
-title: Managing GKE Clusters
+title: Creating a GKE Clusters
 ---
 
 ## Prerequisites
