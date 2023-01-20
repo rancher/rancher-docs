@@ -5,7 +5,9 @@ description: Ingress configuration
 
 ### NGINX Ingress controller changes in Kubernetes v1.21
 
-For Kubernetes v1.21 and up, the NGINX Ingress controller no longer runs in hostNetwork but uses hostPorts for port 80 and port 443. This was done so the admission webhook can be configured to be accessed using ClusterIP so it can only be reached inside the cluster.
+For Kubernetes v1.21 and up, the NGINX Ingress controller no longer runs in hostNetwork. It instead uses hostPorts for port 80 and port 443. This was done so that you can configure the admission webhook to be accessible only through the ClusterIP. This makes the webhook inaccessible from outside the cluster.
+
+Because of this change, the controller no longer has `hostNetwork` set to `true` by default. However, you must set `hostNetwork` to `true` on the controller for TCP- and UDP-based Services to work.
 
 ## Ingress Rule Configuration
 
@@ -16,21 +18,22 @@ For Kubernetes v1.21 and up, the NGINX Ingress controller no longer runs in host
 
 ### Specify a hostname to use
 
-If you use this option, ingress routes requests for a hostname to the service or workload that you specify.
+If you use this option, Ingress routes requests for a hostname to the service or workload that you specify.
 
-1. Enter the **Request Host** that your ingress will handle request forwarding for. For example, `www.mysite.com`.
+1. Enter the **Request Host** that your Ingress controller will handle request forwarding for. For example, `www.mysite.com`.
 1. Add a **Target Service**.
-1. **Optional:** If you want specify a workload or service when a request is sent to a particular hostname path, add a **Path** for the target. For example, if you want requests for `www.mysite.com/contact-us` to be sent to a different service than `www.mysite.com`, enter `/contact-us` in the **Path** field. Typically, the first rule that you create does not include a path.
+1. **Optional:** If you want to specify a workload or service when a request is sent to a particular hostname path, add a **Path** for the target. For example, if you want requests for `www.mysite.com/contact-us` to be sent to a different service than `www.mysite.com`, enter `/contact-us` in the **Path**. The first rule that you create does not typically include a path.
 1. Enter the **Port** number that each target operates on.
+
 ### Certificates
 
 :::note
 
-You must have an SSL certificate that the ingress can use to encrypt/decrypt communications. For more information see [Adding SSL Certificates](../encrypt-http-communication.md).
+You must have an SSL certificate that Ingress can use to encrypt and decrypt communications. For more information, see [Adding SSL Certificates](../encrypt-http-communication.md).
 
 :::
 
-1. When creating an ingress, click the **Certificates** tab.
+1. To create an Ingress controller, click the **Certificates** tab.
 1. Click **Add Certificate**.
 1. Select a **Certificate - Secret Name** from the drop-down list.
 1. Enter the host using encrypted communication.
