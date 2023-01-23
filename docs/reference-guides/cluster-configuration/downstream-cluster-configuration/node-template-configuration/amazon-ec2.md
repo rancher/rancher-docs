@@ -46,4 +46,4 @@ If you need to pass an **IAM Instance Profile Name** (not ARN), for example, whe
 
 ### Engine Options
 
-In the **Engine Options** section of the node template, you can configure the Docker daemon. You may want to specify the docker version or a Docker registry mirror.
+In the **Engine Options** section of the node template, you can configure the container daemon. You may want to specify the container version or a container image registry mirror.

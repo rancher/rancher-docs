@@ -2,7 +2,7 @@
 title: '1. Set up Infrastructure and Private Registry'
 ---
 
-In this section, you will provision the underlying infrastructure for your Rancher management server in an air gapped environment. You will also set up the private Docker registry that must be available to your Rancher node(s).
+In this section, you will provision the underlying infrastructure for your Rancher management server in an air gapped environment. You will also set up the private container image registry that must be available to your Rancher node(s).
 
 An air gapped environment is an environment where the Rancher server is installed offline or behind a firewall.
 
@@ -19,7 +19,7 @@ We recommend setting up the following infrastructure for a high-availability ins
 - **An external database** to store the cluster data. PostgreSQL, MySQL, and etcd are supported.
 - **A load balancer** to direct traffic to the two nodes.
 - **A DNS record** to map a URL to the load balancer. This will become the Rancher server URL, and downstream Kubernetes clusters will need to reach it.
-- **A private Docker registry** to distribute Docker images to your machines.
+- **A private image registry** to distribute container images to your machines.
 
 ### 1. Set up Linux Nodes
 
@@ -78,13 +78,17 @@ You will need to specify this hostname in a later step when you install Rancher,
 
 For a how-to guide for setting up a DNS record to route domain traffic to an Amazon ELB load balancer, refer to the [official AWS documentation.](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer)
 
-### 5. Set up a Private Docker Registry
+### 5. Set up a Private Image Registry
 
-Rancher supports air gap installs using a private registry. You must have your own private registry or other means of distributing Docker images to your machines.
+Rancher supports air gap installs using a private registry. You must have your own private registry or other means of distributing container images to your machines.
 
 In a later step, when you set up your K3s Kubernetes cluster, you will create a [private registries configuration file](https://rancher.com/docs/k3s/latest/en/installation/private-registry/) with details from this registry.
 
-If you need help with creating a private registry, please refer to the [official Docker documentation.](https://docs.docker.com/registry/deploying/#run-an-externally-accessible-registry)
+If you need to create a private registry, refer to the documentation pages for your respective runtime:
+
+* [Containerd](https://github.com/containerd/containerd/blob/main/docs/cri/config.md#registry-configuration).
+  * [Nerdctl commands and managed registry services](https://github.com/containerd/nerdctl/blob/main/docs/registry.md). 
+* [Docker](https://docs.docker.com/registry/deploying/).
 
 </TabItem>
 <TabItem value="RKE">
@@ -94,7 +98,7 @@ To install the Rancher management server on a high-availability RKE cluster, we 
 - **Three Linux nodes,** typically virtual machines, in an infrastructure provider such as Amazon's EC2, Google Compute Engine, or vSphere.
 - **A load balancer** to direct front-end traffic to the three nodes.
 - **A DNS record** to map a URL to the load balancer. This will become the Rancher server URL, and downstream Kubernetes clusters will need to reach it.
-- **A private Docker registry** to distribute Docker images to your machines.
+- **A private image registry** to distribute container images to your machines.
 
 These nodes must be in the same region/data center. You may place these servers in separate availability zones.
 
@@ -145,13 +149,17 @@ You will need to specify this hostname in a later step when you install Rancher,
 
 For a how-to guide for setting up a DNS record to route domain traffic to an Amazon ELB load balancer, refer to the [official AWS documentation.](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer)
 
-### 4. Set up a Private Docker Registry
+### 4. Set up a Private Image Registry
 
-Rancher supports air gap installs using a secure Docker private registry. You must have your own private registry or other means of distributing Docker images to your machines.
+Rancher supports air gap installs using a secure private registry. You must have your own private registry or other means of distributing container images to your machines.
 
 In a later step, when you set up your RKE Kubernetes cluster, you will create a [private registries configuration file](https://rancher.com/docs/rke/latest/en/config-options/private-registries/) with details from this registry.
 
-If you need help with creating a private registry, please refer to the [official Docker documentation.](https://docs.docker.com/registry/deploying/#run-an-externally-accessible-registry)
+If you need to create a private registry, refer to the documentation pages for your respective runtime:
+
+* [Containerd](https://github.com/containerd/containerd/blob/main/docs/cri/config.md#registry-configuration).
+  * [Nerdctl commands and managed registry services](https://github.com/containerd/nerdctl/blob/main/docs/registry.md). 
+* [Docker](https://docs.docker.com/registry/deploying/).
 
 </TabItem>
 <TabItem value="Docker">
@@ -168,15 +176,15 @@ If you need help with creating a private registry, please refer to the [official
 
 This host will be disconnected from the Internet, but needs to be able to connect to your private registry.
 
-Make sure that your node fulfills the general installation requirements for [OS, Docker, hardware, and networking.](../../../../pages-for-subheaders/installation-requirements.md)
+Make sure that your node fulfills the general installation requirements for [OS, containers, hardware, and networking.](../../../../pages-for-subheaders/installation-requirements.md)
 
 For an example of one way to set up Linux nodes, refer to this [tutorial](../../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md) for setting up nodes as instances in Amazon EC2.
 
 ### 2. Set up a Private Docker Registry
 
-Rancher supports air gap installs using a Docker private registry on your bastion server. You must have your own private registry or other means of distributing Docker images to your machines.
+Rancher supports air gap installs using a private registry on your bastion server. You must have your own private registry or other means of distributing container images to your machines.
 
-If you need help with creating a private registry, please refer to the [official Docker documentation.](https://docs.docker.com/registry/)
+If you need help with creating a private registry, please refer to the [official Docker documentation.](https://docs.docker.com/registry/).
 
 </TabItem>
 </Tabs>
