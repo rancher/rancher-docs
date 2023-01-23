@@ -20,7 +20,7 @@ The following steps will quickly deploy a Rancher Server on AWS with a single no
 
 1. Clone [Rancher Quickstart](https://github.com/rancher/quickstart) to a folder using `git clone https://github.com/rancher/quickstart`.
 
-1. Go into the AWS folder containing the terraform files by executing `cd quickstart/aws`.
+1. Go into the AWS folder containing the Terraform files by executing `cd quickstart/aws`.
 
 1. Rename the `terraform.tfvars.example` file to `terraform.tfvars`.
 

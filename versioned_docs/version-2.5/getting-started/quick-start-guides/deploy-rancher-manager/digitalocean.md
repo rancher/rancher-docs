@@ -20,7 +20,7 @@ The following steps will quickly deploy a Rancher server on DigitalOcean in a si
 
 1. Clone [Rancher Quickstart](https://github.com/rancher/quickstart) to a folder using `git clone https://github.com/rancher/quickstart`.
 
-2. Go into the DigitalOcean folder containing the terraform files by executing `cd quickstart/rancher/do`.
+2. Go into the DigitalOcean folder containing the Terraform files by executing `cd quickstart/rancher/do`.
 
 3. Rename the `terraform.tfvars.example` file to `terraform.tfvars`.
 

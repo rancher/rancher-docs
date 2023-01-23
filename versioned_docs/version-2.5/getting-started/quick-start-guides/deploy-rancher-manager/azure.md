@@ -23,7 +23,7 @@ The following steps will quickly deploy a Rancher server on Azure in a single-no
 
 1. Clone [Rancher Quickstart](https://github.com/rancher/quickstart) to a folder using `git clone https://github.com/rancher/quickstart`.
 
-2. Go into the Azure folder containing the terraform files by executing `cd quickstart/rancher/azure`.
+2. Go into the Azure folder containing the Terraform files by executing `cd quickstart/rancher/azure`.
 
 3. Rename the `terraform.tfvars.example` file to `terraform.tfvars`.
 
