@@ -5,9 +5,9 @@ description: Ingress configuration
 
 ### NGINX Ingress controller changes in Kubernetes v1.21
 
-For Kubernetes v1.21 and up, the NGINX Ingress controller no longer runs in hostNetwork. It instead uses hostPorts for port 80 and port 443. This was done so that you can configure the admission webhook to be accessible only through the ClusterIP. This makes the webhook inaccessible from outside the cluster.
+For Kubernetes v1.21 and up, the NGINX Ingress controller no longer runs in hostNetwork by default. It instead uses hostPorts for port 80 and port 443, so you can configure the admission webhook to be accessible only through the ClusterIP. This ensures that the webhook is only accessible from within the cluster.
 
-Because of this change, the controller no longer has `hostNetwork` set to `true` by default. However, you must set `hostNetwork` to `true` on the controller for TCP- and UDP-based Services to work.
+Because of this change to the controller, the default behavior no longer sets `hostNetwork` to `true`. However, you must set `hostNetwork` to `true` for TCP- and UDP-based Services to work.
 
 ## Ingress Rule Configuration
 
@@ -41,6 +41,6 @@ You must have an SSL certificate that Ingress can use to encrypt and decrypt com
 
 ### Labels and Annotations
 
-Add [Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) and/or [Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) to provide metadata for your ingress.
+Add [Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) and/or [Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) to provide metadata for your Ingress controller.
 
 For a list of annotations available for use, see the [Nginx Ingress Controller Documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/).
