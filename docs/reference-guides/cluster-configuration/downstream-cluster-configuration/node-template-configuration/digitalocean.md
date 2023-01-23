@@ -15,4 +15,4 @@ If you use Docker, the [Docker daemon](https://docs.docker.com/engine/docker-ove
 - **Labels:** For information on labels, refer to the [Docker object label documentation.](https://docs.docker.com/config/labels-custom-metadata/)
 - **Docker Engine Install URL:** Determines what Docker version will be installed on the instance.
 - **Registry mirrors:** Docker Registry mirror to be used by the Docker daemon
-- **Other advanced options:** Refer to the [Docker daemon option reference](https://docs.docker.com/engine/reference/commandline/dockerd/)
+- **Other advanced options:** Refer to the [Docker daemon option reference](https://docs.docker.com/engine/reference/commandline/dockerd/).
