@@ -125,7 +125,7 @@ To install Istio on an RKE2 cluster, follow the steps in [this section.](../inte
 
 In Rancher v2.6.x and up, Istio may be upgraded in an air-gapped environment.
 
-The Istio pod security policy is now enabled by default, and a new value, `installer.releaseMirror.enabled`, has been added to the rancher-istio chart to enable and disable the server that supports air-gapped upgrades. Note that `installer.releaseMirror.enabled` is set to `false` by default and must be changed as needed during install or upgrade. Follow the steps below:
+The Istio pod security policy is now enabled by default. A new value, `installer.releaseMirror.enabled`, has been added to the rancher-istio chart to enable and disable the server that supports air-gapped upgrades. Note that `installer.releaseMirror.enabled` is set to `false` by default. You can set this value as needed when you install or upgrade. Follow the steps below:
 
 1. Provision an air-gapped Rancher 2.6.x instance and an air-gapped custom cluster in the Rancher UI.
 2. Install Monitoring in the cluster: **Cluster Explorer -> Apps & Marketplace -> Charts -> Monitoring**.
