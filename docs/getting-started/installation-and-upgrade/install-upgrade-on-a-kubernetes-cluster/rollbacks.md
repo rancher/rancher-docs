@@ -13,7 +13,7 @@ Rancher will be down as the `cleanup` script runs as it deletes the resources cr
 
 :::
 
-The additional preparations:
+### Rolling back from v2.6.4+ to lower versions of v2.6.x
 
 1. Follow these [instructions](https://github.com/rancher/rancher-cleanup/blob/main/README.md) to run the scripts.
 1. Follow these [instructions](https://rancher.com/docs/rancher/v2.6/en/backups/migrating-rancher/) to install the rancher-backup Helm chart on the existing cluster and restore the previous state.
