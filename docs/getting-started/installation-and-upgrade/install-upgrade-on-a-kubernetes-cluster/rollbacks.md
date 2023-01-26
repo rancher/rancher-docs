@@ -9,7 +9,7 @@ To avoid this, the Rancher resource cleanup scripts should be run **before** the
 
 :::caution
 
-Rancher will be down as the `cleanup` script runs as it deletes the resources created by rancher.
+ There will be downtime while `cleanup.sh` runs, since the script deletes resources created by Rancher.
 
 :::
 
