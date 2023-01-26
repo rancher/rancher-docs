@@ -134,7 +134,7 @@ The Istio pod security policy is now enabled by default. A new value, `installer
 
 :::note
 
-On the fresh Istio install, [Jaeger](https://www.jaegertracing.io/[) and [Kiali](https://kiali.io/) may be enabled if desired. To ensure Jaeger and Kiali work, ensure that `installer.releaseMirror.enabled=true` is set in the values.yaml at install.
+You can enable [Jaeger](https://www.jaegertracing.io/[) and [Kiali](https://kiali.io/) on a fresh Istio install. To ensure that Jaeger and Kiali work, set `installer.releaseMirror.enabled` to `true` in `values.yaml` during installation.
 
 :::
 
