@@ -19,7 +19,9 @@ The `cattle-node-agent` is used to interact with nodes in a [Rancher Launched Ku
 
 ### Scheduling rules
 
-The `cattle-cluster-agent` uses a fixed fixed set of tolerations (listed below, if no controlplane nodes are visible in the cluster) or dynamically added tolerations based on taints applied to the controlplane nodes. This structure allows for [Taint based Evictions](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/#taint-based-evictions) to work properly for `cattle-cluster-agent`. The default tolerations are described below. If controlplane nodes are present the cluster, the tolerations will be replaced with tolerations matching the taints on the controlplane nodes.
+The `cattle-cluster-agent` uses either a fixed set of tolerations, or dynamically-added tolerations based on taints applied to the control plane nodes. This structure allows [Taint based Evictions](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/#taint-based-evictions) to work properly for `cattle-cluster-agent`. 
+
+If control plane nodes are present in the cluster, the default tolerations will be replaced with tolerations matching the taints on the control plane nodes. The default set of tolerations are described below. 
 
 | Component              | nodeAffinity nodeSelectorTerms             | nodeSelector | Tolerations                                                                    |
 | ---------------------- | ------------------------------------------ | ------------ | ------------------------------------------------------------------------------ |
