@@ -18,7 +18,7 @@ Rancher will be down as the `cleanup` script runs as it deletes the resources cr
 1. Follow these [instructions](https://github.com/rancher/rancher-cleanup/blob/main/README.md) to run the scripts.
 1. Follow these [instructions](https://rancher.com/docs/rancher/v2.6/en/backups/migrating-rancher/) to install the rancher-backup Helm chart on the existing cluster and restore the previous state.
     1. Omit Step 3.
-    1. When Step 4 is reached, install the required Rancher v2.6.x version on the local cluster you intend to roll back to.
+    1. When you reach Step 4, install the Rancher v2.6.x version on the local cluster you intend to roll back to.
 
 :::
 
