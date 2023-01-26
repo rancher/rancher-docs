@@ -129,7 +129,7 @@ The Istio pod security policy is now enabled by default. A new value, `installer
 
 1. Provision an air-gapped Rancher 2.6.x instance and an air-gapped custom cluster in the Rancher UI.
 2. Install Monitoring in the cluster: **Cluster Explorer -> Apps & Marketplace -> Charts -> Monitoring**.
-3. Pull all required images for Istio in the private registry setup that will be used in the air-gapped environment.
+3. Pull all required images for Istio into the private registry you will use in the air-gapped environment.
 4. Install Istio in the cluster: **Cluster Explorer -> Apps & Marketplace -> Charts -> Istio**.
 
 :::note
