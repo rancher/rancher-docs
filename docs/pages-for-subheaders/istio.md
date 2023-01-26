@@ -142,6 +142,6 @@ On the fresh Istio install, [Jaeger](https://www.jaegertracing.io/[) and [Kiali]
 
 :::caution
 
-If not done by this point, you must set the value `installer.releaseMirror.enabled=true` to allow for the upgrade.
+If you haven't already, set `installer.releaseMirror.enabled=true` to upgrade Istio.
 
 :::
