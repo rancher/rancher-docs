@@ -25,8 +25,6 @@ See the [rancher/rancher-cleanup repo](https://github.com/rancher/rancher-cleanu
     1. Omit Step 3.
     1. When you reach Step 4, install the Rancher v2.6.x version on the local cluster you intend to roll back to.
 
-:::
-
 ## Rolling Back to Rancher v2.5.0+
 
 To roll back to Rancher v2.5.0+, use the **Rancher Backups** application and restore Rancher from backup.
