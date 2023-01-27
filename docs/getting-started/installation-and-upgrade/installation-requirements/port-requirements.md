@@ -104,7 +104,7 @@ The following tables break down the port requirements for inbound and outbound t
 
 | Protocol | Port | Destination | Description |
 |-----|-----|----------------|---|
-| TCP | 443 | `35.160.43.145`,`35.167.242.46`,`52.33.59.17` | Rancher catalog (git.rancher.io) |
+| TCP | 443 | git.rancher.io | Rancher catalog |
 | TCP | 22 | Any node created using a node driver | SSH provisioning of node by node driver |
 | TCP | 2376 | Any node created using a node driver | Docker daemon TLS port used by node driver |
 | TCP | 6443 | Hosted/Imported Kubernetes API                           | Kubernetes API server                         |
@@ -133,16 +133,16 @@ The VXLAN port on nodes should not be exposed to the world as it opens up your c
 
 | Protocol | Port | Source | Description
 |-----|-----|----------------|---|
-| TCP | 9345 | RKE2 agent nodes | Kubernetes API
+| TCP | 9345 | RKE2 server and agent nodes | Node registration. Port should be open on all server nodes to all other nodes in the cluster.
 | TCP | 6443 | RKE2 agent nodes | Kubernetes API
 | UDP | 8472 | RKE2 server and agent nodes | Required only for Flannel VXLAN
 | TCP | 10250 | RKE2 server and agent nodes | kubelet
 | TCP | 2379 | RKE2 server nodes | etcd client port
 | TCP | 2380 | RKE2 server nodes | etcd peer port
-| TCP | 30000-32767 | RKE2 server and agent nodes | NodePort port range
+| TCP | 30000-32767 | RKE2 server and agent nodes | NodePort port range. Can use TCP or UDP.
 | TCP | 5473 | Calico-node pod connecting to typha pod | Required when deploying with Calico
-| HTTP | 8080 | Load balancer/proxy that does external SSL termination | Rancher UI/API when external SSL termination is used |
-| HTTPS | 8443 | <ul><li>hosted/registered Kubernetes</li><li>any source that needs to be able to use the Rancher UI or API</li></ul> | Rancher agent, Rancher UI/API, kubectl. Not needed if you have LB doing TLS termination. |
+| HTTP | 80 | Load balancer/proxy that does external SSL termination | Rancher UI/API when external SSL termination is used |
+| HTTPS | 443 | <ul><li>hosted/registered Kubernetes</li><li>any source that needs to be able to use the Rancher UI or API</li></ul> | Rancher agent, Rancher UI/API, kubectl. Not needed if you have a load balancer doing TLS termination. |
 
 Typically all outbound traffic is allowed.
 </details>
