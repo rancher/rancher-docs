@@ -12,24 +12,29 @@ This page outlines how to perform a restore with Rancher.
 
 :::
 
-### Additional Steps for Rollbacks with Rancher v2.6.4+
+## Additional Steps for Rollbacks with Rancher v2.6.4+
 
-In Rancher v2.6.4, the cluster-api module has been upgraded from v0.4.4 to v1.0.2 in which the apiVersion of CAPI CRDs are upgraded from `cluster.x-k8s.io/v1alpha4` to `cluster.x-k8s.io/v1beta1`. This has the effect of causing rollbacks from Rancher v2.6.4 to any previous version of Rancher v2.6.x to fail because the previous version the CRDs needed to roll back are no longer available in v1beta1.
+Rancher v2.6.4 upgrades the cluster-api module from v0.4.4 to v1.0.2. Version v1.0.2 of the cluster-api, in turn, upgrades the Cluster API's  Custom Resource Definitions (CRDs) from `cluster.x-k8s.io/v1alpha4` to `cluster.x-k8s.io/v1beta1`. The CRDs upgrade to v1beta1 causes rollbacks to fail when you attempt to move from Rancher v2.6.4 to any previous version of Rancher v2.6.x. This is because CRDs that use the older apiVersion (v1alpha4) are incompatible with v1beta1.
 
-To avoid this, the Rancher resource cleanup scripts should be run **before** the restore or rollback is attempted. Specifically, two scripts have been created to assist you: one to clean up the cluster (`cleanup.sh`), and one to check for any Rancher-related resources in the cluster (`verify.sh`). Details on the cleanup script can be found in the [rancher/rancher-cleanup repo](https://github.com/rancher/rancher-cleanup).
+To avoid rollback failure, the following Rancher scripts should be run **before** you attempt a restore operation or rollback: 
+
+* `verify.sh`:  Checks for any Rancher-related resources in the cluster. 
+*  `cleanup.sh`: Cleans up the cluster.
+
+See the [rancher/rancher-cleanup repo](https://github.com/rancher/rancher-cleanup) for more details and source code.
 
 :::caution
 
-Rancher will be down as the `cleanup` script runs as it deletes the resources created by rancher.
+ There will be downtime while `cleanup.sh` runs, since the script deletes resources created by Rancher.
 
 :::
 
-The additional preparations:
+### Rolling back from v2.6.4+ to lower versions of v2.6.x
 
 1. Follow these [instructions](https://github.com/rancher/rancher-cleanup/blob/main/README.md) to run the scripts.
 1. Follow these [instructions](https://rancher.com/docs/rancher/v2.6/en/backups/migrating-rancher/) to install the rancher-backup Helm chart on the existing cluster and restore the previous state.
     1. Omit Step 3.
-    1. When Step 4 is reached, install the required Rancher v2.6.x version on the local cluster you intend to roll back to.
+    1. When you reach Step 4, install the Rancher v2.6.x version on the local cluster you intend to roll back to.
 
 ### Create the Restore Custom Resource
 
