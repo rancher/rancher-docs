@@ -1,6 +1,31 @@
 ---
 title: Rollbacks
 ---
+## Additional Steps for Rollbacks with Rancher v2.6.4+
+
+Rancher v2.6.4 upgrades the cluster-api module from v0.4.4 to v1.0.2. Version v1.0.2 of the cluster-api, in turn, upgrades the Cluster API's  Custom Resource Definitions (CRDs) from `cluster.x-k8s.io/v1alpha4` to `cluster.x-k8s.io/v1beta1`. The CRDs upgrade to v1beta1 causes rollbacks to fail when you attempt to move from Rancher v2.6.4 to any previous version of Rancher v2.6.x. This is because CRDs that use the older apiVersion (v1alpha4) are incompatible with v1beta1.
+
+To avoid rollback failure, the following Rancher scripts should be run **before** you attempt a restore operation or rollback: 
+
+* `verify.sh`:  Checks for any Rancher-related resources in the cluster. 
+*  `cleanup.sh`: Cleans up the cluster.
+
+See the [rancher/rancher-cleanup repo](https://github.com/rancher/rancher-cleanup) for more details and source code.
+
+:::caution
+
+ There will be downtime while `cleanup.sh` runs, since the script deletes resources created by Rancher.
+
+:::
+
+### Rolling back from v2.6.4+ to lower versions of v2.6.x
+
+1. Follow these [instructions](https://github.com/rancher/rancher-cleanup/blob/main/README.md) to run the scripts.
+1. Follow these [instructions](https://rancher.com/docs/rancher/v2.6/en/backups/migrating-rancher/) to install the rancher-backup Helm chart on the existing cluster and restore the previous state.
+    1. Omit Step 3.
+    1. When you reach Step 4, install the Rancher v2.6.x version on the local cluster you intend to roll back to.
+
+:::
 
 ## Rolling Back to Rancher v2.5.0+
 
