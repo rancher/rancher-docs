@@ -25,9 +25,9 @@ If you want to replace the certificate, you can delete the `tls-rancher-ingress`
 
 ## Using a Private CA Signed Certificate
 
-If you are using a private CA, Rancher requires a copy of the CA certificate which is used by the Rancher Agent to validate the connection to the server.
+If you are using a private CA, Rancher requires a copy of the private CA's root certificate or certificate chain, which the Rancher Agent uses to validate the connection to the server.
 
-Copy the CA certificate into a file named `cacerts.pem` and use `kubectl` to create the `tls-ca` secret in the `cattle-system` namespace.
+Create a file named `cacerts.pem` that only contains the root CA certificate or certificate chain from your private CA, and use `kubectl` to create the `tls-ca` secret in the `cattle-system` namespace.
 
 ```
 kubectl -n cattle-system create secret generic tls-ca \
