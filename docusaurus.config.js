@@ -408,10 +408,6 @@ module.exports = {
             from: '/how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces'
           },
           {
-            to: '/how-to-guides/new-user-guides/manage-clusters/clone-cluster-configuration',
-            from: '/how-to-guides/advanced-user-guides/manage-clusters/clone-cluster-configuration'
-          },
-          {
             to: '/how-to-guides/new-user-guides/manage-clusters/rotate-certificates',
             from: '/how-to-guides/advanced-user-guides/manage-clusters/rotate-certificates'
           },
