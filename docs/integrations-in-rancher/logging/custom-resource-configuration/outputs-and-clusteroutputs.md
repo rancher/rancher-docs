@@ -4,7 +4,7 @@ title: Outputs and ClusterOutputs
 
 For the full details on configuring `Outputs` and `ClusterOutputs`, see the [Banzai Cloud Logging operator documentation.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/output/).
 
-For problems with the logging buffer configuration, see [Rancher Integration with Logging Services: Troubleshooting](../pages-for-subheaders/logging.md#Troubleshooting).
+For memory problems with the logging buffer, see [Rancher Integration with Logging Services: Troubleshooting](../pages-for-subheaders/logging.md#Troubleshooting).
 
 ## Outputs
 
