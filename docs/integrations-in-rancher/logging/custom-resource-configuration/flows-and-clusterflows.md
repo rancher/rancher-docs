@@ -4,6 +4,8 @@ title: Flows and ClusterFlows
 
 For the full details on configuring `Flows` and `ClusterFlows`, see the [Banzai Cloud Logging operator documentation.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/flow/).
 
+For problems with the logging buffer configuration, see [Rancher Integration with Logging Services: Troubleshooting](../pages-for-subheaders/logging.md#Troubleshooting).
+
 ## Flows
 
 A `Flow` defines which logs to collect and filter and which output to send the logs to.
