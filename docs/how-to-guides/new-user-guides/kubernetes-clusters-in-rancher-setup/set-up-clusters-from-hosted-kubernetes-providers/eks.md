@@ -88,11 +88,11 @@ This [tutorial](https://aws.amazon.com/blogs/opensource/managing-eks-clusters-ra
 
 ## Minimum EKS Permissions
 
-Documented here is a minimum set of permissions necessary to use all functionality of the EKS driver in Rancher. Additional permissions are required for Rancher to provision the `Service Role` and `VPC` resources. Optionally these resources can be created **before** the cluster creation and will be selectable when defining the cluster configuration.
+These are the minimum set of permissions necessary to access the full functionality of Rancher's EKS driver. You'll need additional permissions for Rancher to provision the `Service Role` and `VPC` resources. If you create these resources **before** you create the cluster, they'll be available when you configure the cluster.
 
 Resource | Description
 ---------|------------
-Service Role | The service role provides Kubernetes the permissions it requires to manage resources on your behalf. Rancher can create the service role with the following [Service Role Permissions](#service-role-permissions).
+Service Role | Provides permissions that allow Kubernetes to manage resources on your behalf. Rancher can create the service role with the following [Service Role Permissions](#service-role-permissions).
 VPC | Provides isolated network resources utilised by EKS and worker nodes. Rancher can create the VPC resources with the following [VPC Permissions](#vpc-permissions).
 
 
@@ -210,7 +210,7 @@ Resource targeting uses `*` as the ARN of many of the resources created cannot b
 
 ### Service Role Permissions
 
-Permissions required for Rancher to create service role on users behalf during the EKS cluster creation process.
+These are permissions that are needed during EKS cluster creation, so Rancher can create a service role on the users' behalf.
 
 ```json
 {
@@ -244,7 +244,7 @@ Permissions required for Rancher to create service role on users behalf during t
 }
 ```
 
-When an EKS cluster is created, Rancher will create a service role with the following trust policy:
+When you create an EKS cluster, Rancher creates a service role with the following trust policy:
 
 ```json
 {
@@ -262,7 +262,7 @@ When an EKS cluster is created, Rancher will create a service role with the foll
 }
 ```
 
-This role will also have two role policy attachments with the following policies ARNs:
+This role also has two role policy attachments with the following policies' ARNs:
 
 ```
 arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
@@ -271,7 +271,7 @@ arn:aws:iam::aws:policy/AmazonEKSServicePolicy
 
 ### VPC Permissions
 
-Permissions required for Rancher to create VPC and associated resources.
+These are permissions that are needed by Rancher to create a Virtual Private Cloud (VPC) and associated resources.
 
 ```json
 {
