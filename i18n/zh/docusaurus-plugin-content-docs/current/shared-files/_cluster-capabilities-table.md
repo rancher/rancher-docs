@@ -9,7 +9,6 @@
 | [使用应用目录](../pages-for-subheaders/helm-charts-in-rancher.md) | ✓ | ✓ | ✓ | ✓ |
 | 配置工具（[Alerts、Notifiers、Monitoring](../pages-for-subheaders/monitoring-and-alerting.md)、[Logging](../pages-for-subheaders/logging.md) 和 [Istio](../pages-for-subheaders/istio.md)） | ✓ | ✓ | ✓ | ✓ |
 | [运行安全扫描](../pages-for-subheaders/cis-scan-guides.md) | ✓ | ✓ | ✓ | ✓ |
-| [使用现有配置来创建其他集群](../how-to-guides/new-user-guides/manage-clusters/clone-cluster-configuration.md) | ✓ | ✓ | ✓ | |
 | [轮换证书](../how-to-guides/new-user-guides/manage-clusters/rotate-certificates.md) | ✓ | ✓ |  | |
 | [备份](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters.md)和[恢复](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md) Rancher 启动的集群 | ✓ | ✓ |  | ✓<sup>4</sup> |
 | [在 Rancher 无法访问集群时清理 Kubernetes 组件](../how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes.md) | ✓ | | | |

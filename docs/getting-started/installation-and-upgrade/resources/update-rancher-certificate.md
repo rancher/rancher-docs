@@ -147,7 +147,7 @@ This command will cause the agent manifest to be reapplied with the checksum of 
 Manually patch the agent Kubernetes objects by updating the `CATTLE_CA_CHECKSUM` environment variable to the value matching the checksum of the new CA certificate. Generate the new checksum value like so:
 
 ```bash
-curl -k -s -fL <RANCHER_SERVER_URL>/v3/settings/cacerts | jq -r .value | sha256sum cacert.tmp | awk '{print $1}'
+curl -k -s -fL <RANCHER_SERVER_URL>/v3/settings/cacerts | jq -r .value | sha256sum | awk '{print $1}'
 ```
 
 Using a Kubeconfig for each downstream cluster update the environment variable for the two agent deployments. If the [ACE](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint) is enabled for the cluster, [the kubectl context can be adjusted](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig#authenticating-directly-with-a-downstream-cluster) to connect directly to the downstream cluster.

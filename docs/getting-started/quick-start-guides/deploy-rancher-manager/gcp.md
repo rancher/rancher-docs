@@ -28,7 +28,7 @@ Deploying to Google GCP will incur charges.
 
 1. Clone [Rancher Quickstart](https://github.com/rancher/quickstart) to a folder using `git clone https://github.com/rancher/quickstart`.
 
-2. Go into the GCP folder containing the terraform files by executing `cd quickstart/rancher/gcp`.
+2. Go into the GCP folder containing the Terraform files by executing `cd quickstart/rancher/gcp`.
 
 3. Rename the `terraform.tfvars.example` file to `terraform.tfvars`.
 

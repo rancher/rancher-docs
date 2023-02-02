@@ -19,9 +19,10 @@ For Kubernetes v1.21 and up, the NGINX Ingress controller no longer runs in host
 If you use this option, ingress routes requests for a hostname to the service or workload that you specify.
 
 1. Enter the **Request Host** that your ingress will handle request forwarding for. For example, `www.mysite.com`.
-1. Add a **Target Service**.
-1. **Optional:** If you want specify a workload or service when a request is sent to a particular hostname path, add a **Path** for the target. For example, if you want requests for `www.mysite.com/contact-us` to be sent to a different service than `www.mysite.com`, enter `/contact-us` in the **Path** field. Typically, the first rule that you create does not include a path.
-1. Enter the **Port** number that each target operates on.
+1. Specify a path of type `Prefix` and a specify a path such as `/`.
+2. Add a **Target Service**.
+3. **Optional:** If you want specify a workload or service when a request is sent to a particular hostname path, add a **Path** for the target. For example, if you want requests for `www.mysite.com/contact-us` to be sent to a different service than `www.mysite.com`, enter `/contact-us` in the **Path** field. Typically, the first rule that you create does not include a path.
+4. Enter the **Port** number that each target operates on.
 ### Certificates
 
 :::note

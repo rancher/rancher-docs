@@ -386,8 +386,6 @@ const sidebars = {
                 },
                 "how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces",
 
-                "how-to-guides/new-user-guides/manage-clusters/clone-cluster-configuration",
-
                 "how-to-guides/new-user-guides/manage-clusters/rotate-certificates",
 
                 "how-to-guides/new-user-guides/manage-clusters/rotate-encryption-key",

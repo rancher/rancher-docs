@@ -8,7 +8,7 @@ RKE1 and RKE2 have several slight behavioral differences to note, and this page 
 
 ### Control Plane Components
 
-RKE1 uses Docker for deploying and managing control plane components, and it also uses Docker as the container runtime for Kubernetes. By contrast, RKE2 launches control plane components as static pods that are managed by the kubelet. RKE2's container runtime is containerd, which allows things such as container registry mirroring (RKE1 with Docker does not).
+RKE1 uses Docker for deploying and managing control plane components, and it also uses Docker as the container runtime for Kubernetes. By contrast, RKE2 launches control plane components as static pods that are managed by the kubelet. RKE2's container runtime is containerd, which allows things such as mirroring a container image registry. RKE1 with Docker does not allow mirroring.
 
 ### Cluster API
 

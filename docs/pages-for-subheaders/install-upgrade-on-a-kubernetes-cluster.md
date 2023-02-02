@@ -309,7 +309,7 @@ Now that Rancher is deployed, see [Adding TLS Secrets](../getting-started/instal
 The Rancher chart configuration has many options for customizing the installation to suit your specific environment. Here are some common advanced scenarios.
 
 - [HTTP Proxy](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#http-proxy)
-- [Private container image Registry](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#private-registry-and-air-gap-installs)
+- [Private Container Image Registry](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#private-registry-and-air-gap-installs)
 - [TLS Termination on an External Load Balancer](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#external-tls-termination)
 
 See the [Chart Options](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md) for the full list of options.
