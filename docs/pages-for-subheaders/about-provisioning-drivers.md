@@ -19,7 +19,7 @@ Cluster drivers are used to provision [hosted Kubernetes clusters](set-up-cluste
 
 By default, Rancher has activated several hosted Kubernetes cloud providers including:
 
-*  [Amazon EKS](amazon-eks-permissions.md)
+*  [Amazon EKS](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks.md)
 *  [Google GKE](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/gke.md)
 *  [Azure AKS](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/aks.md)
 
