@@ -4,7 +4,7 @@ title: Managing GKE Clusters
 
 ## Prerequisites
 
-Some setup in Google Kubernetes Engine is required.
+Some setup in Google Kubernetes Engine is required. To successfully create a GKE cluster with Rancher, your GKE must be in Standard mode. GKE has two modes of operation when creating a Kubernetes cluster, Autopilot and Standard mode. The cluster configuration for Autopilot mode has restrictions on editing the kube-system namespce. However, Rancher needs to create resources in the kube-system namespace during installation. As a result, you will not be able to create a GKE cluster in Autopilot mode. For more informatin about the difference between GKE Autopilot mode and Standard mode, visit [Compare GKE Autopilot and Standard.](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison)
 
 ### Service Account Token
 
