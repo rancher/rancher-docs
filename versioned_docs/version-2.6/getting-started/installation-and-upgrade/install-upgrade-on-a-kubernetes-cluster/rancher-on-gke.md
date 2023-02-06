@@ -2,7 +2,9 @@
 title: Installing Rancher on a Google Kubernetes Engine Cluster
 ---
 
-In this section, you'll learn how to install Rancher using Google Kubernetes Engine.
+In this section, you'll learn how to install Rancher using Google Kubernetes Engine. 
+
+To successfully install Rancher, your GKE must be in Autopilot mode. GKE has two modes of operation when creating a Kubernetes cluster, Autopilot and Standard mode. The cluster configuration for Autopilot mode has restrictions on editing the kube-system namespce. However, Rancher needs to create resources in the kube-system namespace during installation. As a result, you will not be able to install Rancher on a GKE cluster created in Autopilot mode.
 
 If you already have a GKE Kubernetes cluster, skip to the step about [installing an ingress.](#7-install-an-ingress) Then install the Rancher Helm chart following the instructions on [this page.](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#install-the-rancher-helm-chart)
 
