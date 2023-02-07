@@ -13,7 +13,10 @@ const PortsImportedHosted = () => (
     <tbody>
         <tr>
         <td rowspan="3">Rancher Nodes <sup>(1)</sup></td>
-        <td></td>
+        <td rowspan="3" style={{
+            "background-color": "#3497DA",
+            color: "#ffffff"
+          }}>80 TCP</td>
         <td style={{
             "background-color": "#3497DA",
             color: "#ffffff"
@@ -25,7 +28,6 @@ const PortsImportedHosted = () => (
           }}>git.rancher.io</td>
         </tr>
         <tr>
-        <td></td>
         <td style={{
             "background-color": "#3497DA",
             color: "#ffffff"
@@ -33,7 +35,6 @@ const PortsImportedHosted = () => (
         <td></td>
         </tr>
         <tr>
-        <td></td>
         <td style={{
             "background-color": "#3497DA",
             color: "#ffffff"
