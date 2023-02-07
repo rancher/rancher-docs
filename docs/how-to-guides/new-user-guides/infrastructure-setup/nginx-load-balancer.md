@@ -62,6 +62,9 @@ After installing NGINX, you need to update the NGINX configuration file, `nginx.
             server <IP_NODE_2>:443 max_fails=3 fail_timeout=5s;
             server <IP_NODE_3>:443 max_fails=3 fail_timeout=5s;
         }
+    }
+    
+    http{
         server {
             listen     443 ssl;
             proxy_pass rancher_servers_https;
@@ -75,7 +78,7 @@ After installing NGINX, you need to update the NGINX configuration file, `nginx.
 
             }
         }
-
+    
     }
     ```
 
