@@ -55,8 +55,6 @@ Before enabling Istio, we recommend that you confirm that your Rancher worker no
 
 If you are installing Istio on RKE2 cluster, some additional steps are required. For details, see [this section.](#additional-steps-for-installing-istio-on-an-rke2-cluster)
 
-Note that Istio v2 (upstream Istio v1.7+) cannot be upgraded in an air gapped environment.
-
 ## Setup Guide
 
 Refer to the [setup guide](istio-setup-guide.md) for instructions on how to set up Istio and use it in a project.
@@ -114,3 +112,28 @@ By default the Egress gateway is disabled, but can be enabled on install or upgr
 ## Additional Steps for Installing Istio on an RKE2 Cluster
 
 To install Istio on an RKE2 cluster, follow the steps in [this section.](../integrations-in-rancher/istio/configuration-options/install-istio-on-rke2-cluster.md)
+
+## Upgrading Istio in an Air-Gapped Environment
+
+In Rancher v2.6.x and up, Istio may be upgraded in an air-gapped environment.
+
+The Istio pod security policy is now enabled by default. A new value, `installer.releaseMirror.enabled`, has been added to the rancher-istio chart to enable and disable the server that supports air-gapped upgrades. Note that `installer.releaseMirror.enabled` is set to `false` by default. You can set this value as needed when you install or upgrade. Follow the steps below:
+
+1. Provision an air-gapped Rancher 2.6.x instance and an air-gapped custom cluster in the Rancher UI.
+2. Install Monitoring in the cluster: **Cluster Explorer -> Apps & Marketplace -> Charts -> Monitoring**.
+3. Pull all required images for Istio into the private registry you will use in the air-gapped environment.
+4. Install Istio in the cluster: **Cluster Explorer -> Apps & Marketplace -> Charts -> Istio**.
+
+:::note
+
+You can enable [Jaeger](https://www.jaegertracing.io/[) and [Kiali](https://kiali.io/) on a fresh Istio install. To ensure that Jaeger and Kiali work, set `installer.releaseMirror.enabled` to `true` in `values.yaml` during installation.
+
+:::
+
+5. Upgrade the Istio installation.
+
+:::caution
+
+If you haven't already, set `installer.releaseMirror.enabled=true` to upgrade Istio.
+
+:::
