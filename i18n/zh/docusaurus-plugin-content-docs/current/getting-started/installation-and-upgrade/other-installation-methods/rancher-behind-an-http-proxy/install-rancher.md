@@ -4,11 +4,15 @@ title: 3. 安装 Rancher
 
 在前文的操作后，你已经有了一个运行的 RKE 集群，现在可以在其中安装 Rancher 了。出于安全考虑，所有到 Rancher 的流量都必须使用 TLS 加密。在本教程中，你将使用 [cert-manager](https://cert-manager.io/)自动颁发自签名证书。在实际使用情况下，你可使用 Let's Encrypt 或自己的证书。
 
-:::note
+### 安装 Helm CLI
 
-这些安装指南假定你使用的是 Helm 3。
+在具有 kubeconfig 的主机上安装 [Helm](https://helm.sh/docs/intro/install/) CLI 以访问 Kubernetes 集群：
 
-:::
+```
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod +x get_helm.sh
+sudo ./get_helm.sh
+```
 
 ### 安装 cert-manager
 

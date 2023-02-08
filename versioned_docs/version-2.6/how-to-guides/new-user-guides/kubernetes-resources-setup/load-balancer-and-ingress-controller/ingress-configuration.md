@@ -9,7 +9,7 @@ For Kubernetes v1.21 and up, the NGINX Ingress controller no longer runs in host
 
 Because of this change to the controller, the default behavior no longer sets `hostNetwork` to `true`. However, you must set `hostNetwork` to `true` for TCP- and UDP-based Services to work.
 
-:::note
+:::
 
 
 - [Specify a hostname to use](#specify-a-hostname-to-use)

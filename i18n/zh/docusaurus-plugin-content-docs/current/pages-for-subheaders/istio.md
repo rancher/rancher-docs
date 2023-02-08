@@ -55,8 +55,6 @@ Jaeger 是用于跟踪分布式系统的工具。我们的 Istio 安装程序包
 
 如果要在 RKE2 集群上安装 Istio，则需要执行一些额外的步骤。有关详细信息，请参阅[本节](#在-rke2-集群上安装-istio-的其他步骤)。
 
-请注意，Istio v2（上游 Istio v1.7+）无法在离线环境中升级。
-
 ## 设置指南
 
 如需了解如何设置 Istio 并在项目中使用它，请参阅[设置指南](istio-setup-guide.md)。
@@ -114,3 +112,26 @@ Istio 安装了一个服务网格，它使用 [Envoy](https://www.envoyproxy.io/
 ## 在 RKE2 集群上安装 Istio 的其他步骤
 
 要在 RKE2 集群上安装 Istio，请按照[步骤](../integrations-in-rancher/istio/configuration-options/install-istio-on-rke2-cluster.md)进行操作。
+
+## 在离线环境中升级 Istio
+
+现在，Istio Pod 安全策略默认启用。新值 `installer.releaseMirror.enabled` 已添加到 rancher-istio Chart 中，以启用和禁用支持离线升级的 Server。请注意，`installer.releaseMirror.enabled` 默认设置为 `false`。你可以在安装或升级时根据需要设置该值。按照以下步骤执行：
+
+1. 在 Rancher UI 中配置离线 Rancher 实例和离线自定义集群。
+2. 在集群中安装 Monitoring：**Cluster Explorer > Apps & Marketplace > Charts > Monitoring**。
+3. 将 Istio 所需的所有镜像拉入在离线环境中使用的私有镜像仓库。
+4. 在集群中安装 Istio：**Cluster Explorer > Apps & Marketplace > Charts > Istio**。
+
+:::note
+
+你可以在新安装的 Istio 上启用 [Jaeger](https://www.jaegertracing.io/[) 和 [Kiali](https://kiali.io/)。为确保 Jaeger 和 Kiali 正常工作，请在安装期间将 `values.yaml` 中的 `installer.releaseMirror.enabled` 设置为 `true`。
+
+:::
+
+5. 升级 Istio。
+
+:::caution
+
+如果你还没有执行操作，请设置 `installer.releaseMirror.enabled=true` 以升级 Istio。
+
+:::

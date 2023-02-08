@@ -2,11 +2,11 @@
 title: '2. 安装 Kubernetes'
 ---
 
-基础设施配置好后，你可以设置一个 RKE 集群来安装 Rancher。
+基础设施配置好后，你可以设置一个 Kubernetes 集群来安装 Rancher。
 
-首先，你需要在所有三个 Linux 节点上安装 Docker 并设置 HTTP 代理。因此，你可以在这三个节点上执行以下步骤。
+设置 RKE、RKE2 或 K3s 的步骤如下所示。
 
-为方便起见，将代理的 IP 地址和端口导出到一个环境变量中，并为你当前的 shell 设置 HTTP_PROXY 变量：
+为方便起见，将代理的 IP 地址和端口导出到一个环境变量中，并在每个节点上为你当前的 shell 设置 HTTP_PROXY 变量：
 
 ```
 export proxy_host="10.0.0.5:8888"
@@ -14,6 +14,84 @@ export HTTP_PROXY=http://${proxy_host}
 export HTTPS_PROXY=http://${proxy_host}
 export NO_PROXY=127.0.0.0/8,10.0.0.0/8,cattle-system.svc,172.16.0.0/12,192.168.0.0/16
 ```
+
+<Tabs>
+<TabItem value="K3s">
+
+首先在 K3s systemd 服务上配置 HTTP 代理设置，让 K3s 的 containerd 可以通过代理拉取镜像：
+
+```
+cat <<'EOF' | sudo tee /etc/default/k3s > /dev/null
+HTTP_PROXY=http://${proxy_host}
+HTTPS_PROXY=http://${proxy_host}"
+NO_PROXY=127.0.0.0/8,10.0.0.0/8,cattle-system.svc,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local
+EOF
+```
+
+然后运行 K3s 安装脚本创建一个新的 K3s 集群。确保你安装的 K3s 版本受 [Rancher 支持](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/)。
+
+在第一个节点上，创建一个新集群：
+```
+curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.xx K3S_TOKEN=your_secret sh -s - server --cluster-init
+```
+
+然后加入其他节点：
+```
+curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.xx K3S_TOKEN=your_secret sh -s - server --server https://<ip or hostname of server1>:6443
+```
+
+有关安装 K3s 的更多信息，请参阅 [K3s 安装文档](https://docs.k3s.io/installation)。
+
+如需查看集群，请运行以下命令：
+
+```
+kubectl cluster-info
+kubectl get pods --all-namespaces
+```
+
+</TabItem>
+<TabItem value="RKE2">
+
+在每个节点上，运行 RKE2 安装脚本。确保你安装的 RKE2 版本受 [Rancher 支持](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/)。
+
+```
+curl -sfL https://get.rke2.io | INSTALL_RKE2_CHANNEL=v1.xx sh -
+```
+
+然后，你必须在 RKE2 systemd 服务上配置 HTTP 代理设置，让 RKE2 的 containerd 可以通过代理拉取镜像：
+
+```
+cat <<'EOF' | sudo tee /etc/default/rke2-server > /dev/null
+HTTP_PROXY=http://${proxy_host}
+HTTPS_PROXY=http://${proxy_host}"
+NO_PROXY=127.0.0.0/8,10.0.0.0/8,cattle-system.svc,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local
+EOF
+```
+
+接下来，按照 [RKE2 高可用性文档](https://docs.rke2.io/install/ha)在每个节点上创建 RKE2 配置文件。
+
+之后启动并启用 `rke2-server` 服务：
+
+```
+systemctl enable rke2-server.service
+systemctl start rke2-server.service
+```
+
+有关安装 RKE2 的更多信息，请参阅 [RKE2 安装文档](https://docs.rke2.io/install/)。
+
+如需查看集群，请运行以下命令：
+
+```
+export KUBECONFIG=/etc/rancher/rke2/rke2.yaml
+alias kubectl=/var/lib/rancher/rke2/bin/kubectl
+kubectl cluster-info
+kubectl get pods --all-namespaces
+```
+
+</TabItem>
+<TabItem value="RKE">
+
+首先，你需要在所有三个 Linux 节点上安装 Docker 并设置 HTTP 代理。因此，你可以在这三个节点上执行以下步骤。
 
 接下来配置 apt 以在安装包时使用这个代理。如果你使用的不是 Ubuntu，请相应调整步骤。
 
@@ -92,14 +170,6 @@ chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 ```
 
-* [helm](https://helm.sh/docs/intro/install/)
-
-```
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-chmod +x get_helm.sh
-sudo ./get_helm.sh
-```
-
 接下来，创建一个描述 RKE 集群的 YAML 文件。确保节点的 IP 地址和 SSH 用户名是正确的。有关集群 YAML 的详情，请参见 [RKE 官方文档](https://rancher.com/docs/rke/latest/en/example-yamls/)。
 
 ```yml
@@ -165,6 +235,9 @@ default backend - 404
 后两个文件名中的 `rancher-cluster` 部分取决于你命名 RKE 集群配置文件的方式。
 
 :::
+
+</TabItem>
+</Tabs>
 
 ### 故障排除
 
