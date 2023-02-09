@@ -32,7 +32,7 @@ To edit an RKE2 config file directly from the Rancher UI,
 
 :::tip
 
-Some advanced configuration options are not exposed in the Rancher UI forms, but they can be enabled by editing the RKE2 cluster configuration file in YAML. For the complete reference of configurable options for RKE2 Kubernetes clusters in YAML, see the [RKE2 documentation.](https://docs.rke2.io/install/install_options/install_options/)
+Some advanced configuration options are not exposed in the Rancher UI forms, but they can be enabled by editing the RKE2 cluster configuration file in YAML. For the complete reference of configurable options for RKE2 Kubernetes clusters in YAML, see the [RKE2 documentation.](https://docs.rke2.io/install/configuration)
 
 :::
 
@@ -126,7 +126,7 @@ If the cloud provider you want to use is not listed as an option, you will need 
 
 #### Default Pod Security Policy
 
-Choose the default [pod security policy](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) for the cluster. Please refer to the [RKE2 documentation](https://docs.rke2.io/security/policies/) on the specifications of each available policy.
+Choose the default [pod security policy](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) for the cluster. Please refer to the [RKE2 documentation](https://docs.rke2.io/security/pod_security_policies) on the specifications of each available policy.
 
 #### Worker CIS Profile
 
@@ -160,7 +160,7 @@ Additional Kubernetes manifests, managed as an [Add-on](https://kubernetes.io/do
 
 ### Agent Environment Vars
 
-Option to set environment variables for [Rancher agents](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/rancher-agents/). The environment variables can be set using key value pairs. Refer to the [RKE2 documentation](https://docs.rke2.io/install/install_options/linux_agent_config/) for more details.
+Option to set environment variables for [Rancher agents](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/rancher-agents/). The environment variables can be set using key value pairs. Refer to the [RKE2 documentation](https://docs.rke2.io/reference/linux_agent_config) for more details.
 
 ### etcd
 
