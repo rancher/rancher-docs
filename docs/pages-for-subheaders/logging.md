@@ -109,6 +109,6 @@ Now that we have the `<cluster-id>` namespace, we can delete the CRs that cause 
 *Warning:* ensure that logging, the version installed from the global view in the legacy Rancher UI, is not currently in use.
 
 ```bash
-kubectl delete clusterloggings.management.cattle.io -n <cluster-id>
-kubectl delete projectloggings.management.cattle.io -n <cluster-id>
+kubectl delete crd clusterloggings.management.cattle.io -n <cluster-id>
+kubectl delete crd projectloggings.management.cattle.io -n <cluster-id>
 ```
