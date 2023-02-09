@@ -15,6 +15,12 @@ To set up the Amazon cloud provider,
 1. [Create an IAM role and attach to the instances](#1-create-an-iam-role-and-attach-to-the-instances)
 2. [Configure the ClusterID](#2-configure-the-clusterid)
 
+:::note Important:
+
+Starting with Kubernetes 1.23, you have to deactivate the `CSIMigrationAWS` feature gate in order to use the in-tree AWS cloud provider. You can do this by setting `feature-gates=CSIMigrationAWS=false` as an additional argument for the cluster's Kubelet, Controller Manager, API Server and Scheduler in the advanced cluster configuration.
+
+:::
+
 ### 1. Create an IAM Role and attach to the instances
 
 All nodes added to the cluster must be able to interact with EC2 so that they can create and remove resources. You can enable this interaction by using an IAM role attached to the instance. See [Amazon documentation: Creating an IAM Role](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html#create-iam-role) how to create an IAM role. There are two example policies:
