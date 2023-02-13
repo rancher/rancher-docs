@@ -22,7 +22,7 @@ Rancher 支持以下 Kubernetes 提供商：
 使用 Rancher 创建由提供商托管的集群时，你需要输入身份验证信息。Rancher 会使用验证信息来访问云厂商的 API。有关如何获取此信息的详情，请参阅：
 
 - [创建 GKE 集群](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/gke.md)
-- [创建 EKS 集群](amazon-eks-permissions.md)
+- [创建 EKS 集群](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks.md)
 - [创建 AKS 集群](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/aks.md)
 - [创建 ACK 集群](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/alibaba.md)
 - [创建 TKE 集群](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/tencent.md)
