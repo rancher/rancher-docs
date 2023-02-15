@@ -20,7 +20,15 @@ Edit resource quotas when:
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to apply a resource quota and click **Explore**.
 1. Click **Cluster > Projects/Namespaces**.
-1. Find the project that you want to add a resource quota to. From that project, select **⋮ > Edit Config**.
+1. Make sure that the **Projects/Namespaces** page is in **Group by Project** view mode.
++
+![Screenshot highlighting the "Group by Project" icon, above the list of projects. It resembles a folder.](/img/edit-project-config-for-resource-quotas-group-by-project.png)
+
+1. Find the project that you want to add a resource quota to, and select the **⋮** that's on the same row as the project's name.
++
+![Screenshot highlighting triple dots icon at the end of the same row as the project name.](/img/edit-project-config-for-resource-quotas-dots.png)
+
+1. Select **Edit Config**.
 
 1. Expand **Resource Quotas** and click **Add Resource**. Alternatively, you can edit existing quotas.
 
