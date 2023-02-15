@@ -100,6 +100,12 @@ By default, Rancher collects logs for control plane components and node componen
 
 ## Troubleshooting
 
+### The Logging Buffer Overloads Pods
+
+Depending on your configuration, the default buffer size may be too large and cause pod failures. One way to reduce the load is to lower the logger's flush interval. This prevents logs from overfilling the buffer. You can also add more flush threads to handle moments when many logs are attempting to fill the buffer at once. 
+
+For a more complete description of how to configure the logging buffer to suit your organization's needs, see the official BanzaiCloud documentation on [buffers](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/plugins/outputs/buffer/) and on [Fluentd configuration](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/fluentd/).
+
 ### The `cattle-logging` Namespace Being Recreated
 
 If your cluster previously deployed logging from the Cluster Manager UI, you may encounter an issue where its `cattle-logging` namespace is continually being recreated.
