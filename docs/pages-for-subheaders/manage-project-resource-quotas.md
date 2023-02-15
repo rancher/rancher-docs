@@ -18,31 +18,29 @@ Edit resource quotas when:
 - You want to scale the resources available to a project up or down when a research quota is already in effect.
 
 1. In the upper left corner, click **☰ > Cluster Management**.
-2. On the **Clusters** page, go to the cluster where you want to apply a resource quota and click **Explore**.
-3. Click **Cluster > Projects/Namespaces**.
-4. Make sure that the **Projects/Namespaces** page is in **Group by Project** view mode.
+1. On the **Clusters** page, go to the cluster where you want to apply a resource quota and click **Explore**.
+1. Click **Cluster > Projects/Namespaces**.
+1. Make sure that the **Projects/Namespaces** page is in **Group by Project** view mode.
+    ![Screenshot highlighting the "Group by Project" icon, above the list of projects. It resembles a folder.](/img/edit-project-config-for-resource-quotas-group-by-project.png)
 
-![Screenshot highlighting the "Group by Project" icon, above the list of projects. It resembles a folder.](/img/edit-project-config-for-resource-quotas-group-by-project.png)
+1. Find the project that you want to add a resource quota to, and select the **⋮** that's on the same row as the project's name.
+    ![Screenshot highlighting triple dots icon at the end of the same row as the project name.](/img/edit-project-config-for-resource-quotas-dots.png)
 
-5. Find the project that you want to add a resource quota to, and select the **⋮** that's on the same row as the project's name.
+1. Select **Edit Config**.
 
-![Screenshot highlighting triple dots icon at the end of the same row as the project name.](/img/edit-project-config-for-resource-quotas-dots.png)
+1. Expand **Resource Quotas** and click **Add Resource**. Alternatively, you can edit existing quotas.
 
-6. Select **Edit Config**.
+1. Select a Resource Type. For more information on types, see the [quota type reference.](../how-to-guides/advanced-user-guides/manage-projects/manage-project-resource-quotas/resource-quota-types.md)
 
-6. Expand **Resource Quotas** and click **Add Resource**. Alternatively, you can edit existing quotas.
-
-7. Select a Resource Type. For more information on types, see the [quota type reference.](../how-to-guides/advanced-user-guides/manage-projects/manage-project-resource-quotas/resource-quota-types.md)
-
-8. Enter values for the **Project Limit** and the **Namespace Default Limit**.
+1. Enter values for the **Project Limit** and the **Namespace Default Limit**.
 
     | Field                   | Description                                                                                              |
     | ----------------------- | -------------------------------------------------------------------------------------------------------- |
     | Project Limit           | The overall resource limit for the project.                                                              |
     | Namespace Default Limit | The default resource limit available for each namespace. This limit is propagated to each namespace in the project. The combined limit of all project namespaces shouldn't exceed the project limit. |
 
-9. **Optional:** Add more quotas.
+1. **Optional:** Add more quotas.
 
-10. Click **Create**.
+1. Click **Create**.
 
 **Result:** The resource quota is applied to your project and namespaces. When you add more namespaces in the future, Rancher validates that the project can accommodate the namespace. If the project can't allocate the resources, you may still create namespaces, but they will be given a resource quota of 0. Subsequently, Rancher will not allow you to create any resources restricted by this quota.
