@@ -2,24 +2,37 @@
 title: Pod Security Standards
 ---
 
-
 [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) are a built-in replacement for Pod Security Policies which broadly define security restrictions. 
 
+## Upgrade to Pod Security Standards
+You should implement a working Pod Security Standard (PSS) policy before you upgrade.
+This will secure your cluster throughout the upgrade process. Once you have a PSS policy in place,
+clean up all configurations related to Pod Security Policies (PSPs) before you begin your upgrade.
+
+## Pod Security Admission Configuration Templates
+
+Rancher comes with two Pod Security Admission Configuration (PSAC) templates that you can assign to a cluster:
+* `rancher-privileged`:  This is the most permissive configuration and doesn't restrict the behavior of any pod.
+* `rancher-restricted`:  This policy follows current pod-hardening best practices.
 
 
+If you are an Rancher administrator or have restricted administrator privileges,
+you can customize restrictions and permissions by creating additional PSAC templates, 
+or by editing existing templates.
 
+:::caution
+If you edit an existing PSAC template while it is still in use, it *will* affect all clusters
+that have been assigned that template.
 
+:::
 
+If you want to allow users other than the Rancher administrator to manage PSAC templates,
+you can create a role/binding that grants the user all verbs
+on `management.cattle.io/podsecurityadmissionconfigurationtemplates`.
 
-
-###  TODO
-
-* PSAC templates
-	* How they work, what the flow is
-	* That updating a template will affect live clusters
-	* Who can edit. Including a template management role workaround with it's own warning/caveat.
-* How to upgrade
-	* Ensure that a replacement is in place before you upgrade and PSPs are off
+:::warning
+Any user that is bound to the above permission will be able to change the restriction levels on all managed clusters.
+:::
 
 
 ### Running Rancher on a local cluster that is PSA restricted by default
