@@ -12,6 +12,7 @@ The following table lists the permissions required for the vSphere user account:
 | Global                | Set custom attribute |
 | Network               | Assign |
 | Resource              | AssignVMToPool |
+| Cns Privileges        | Searchable |
 | Virtual Machine       | Config (All) <br/> GuestOperations (All) <br/> Interact (All) <br/> Inventory (All) <br/> Provisioning (All) |
 | vSphere Tagging       | Assign or Unassign vSphere Tag <br/> Assign or Unassign vSphere Tag on Object |
 
