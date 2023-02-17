@@ -2,7 +2,7 @@
 title: '1. 设置基础设施和私有镜像仓库'
 ---
 
-本文介绍如何在离线环境中，为 Rancher Management server 配置底层基础设施。你还将设置 Rancher 节点中必须可用的 Docker 私有仓库。
+本文介绍如何在离线环境中，为 Rancher Management server 配置底层基础设施。你还将设置 Rancher 节点中必须可用的私有容器镜像仓库。
 
 离线环境是 Rancher Server 离线安装或安装在防火墙后面的环境。
 
@@ -19,7 +19,7 @@ Rancher 可以安装在任何 Kubernetes 集群上。为了阅读方便，我们
 - **1 个外部数据库**：用于存储集群数据。支持 PostgreSQL, MySQL 和 etcd。
 - **1 个负载均衡器**：用于将流量转发到这两个节点中。
 - **1 个 DNS 记录**：用于将 URL 映射到负载均衡器。此 DNS 记录将成为 Rancher Server 的 URL，下游集群需要可以访问到这个地址。
-- **1 个私有 Docker 镜像仓库**：用于将 Docker 镜像分发到你的主机。
+- **私有镜像仓库**，用于将容器镜像分发到你的主机。
 
 ### 1. 配置 Linux 节点
 
@@ -78,13 +78,17 @@ K3s 与其他 Kubernetes 发行版不同，在于其支持使用 etcd 以外的�
 
 有关设置 DNS 记录以将域流量转发到 Amazon ELB 负载均衡器的指南，请参见 [AWS 官方文档](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer)。
 
-### 5. 配置私有 Docker 镜像仓库
+### 5. 配置私有镜像仓库
 
-Rancher 支持使用私有镜像仓库进行离线安装。你必须有自己的私有镜像仓库或使用其他方式将 Docker 镜像分发到主机。
+Rancher 支持使用私有镜像仓库进行离线安装。你必须有自己的私有镜像仓库或使用其他方式将容器镜像分发到主机。
 
 在后续设置 K3s Kubernetes 集群时，你需要创建一个[私有镜像仓库配置文件](https://rancher.com/docs/k3s/latest/en/installation/private-registry/)，其中包含此镜像仓库的信息。
 
-如需获得创建私有镜像仓库的帮助，请参见 [Docker 官方文档](https://docs.docker.com/registry/deploying/#run-an-externally-accessible-registry)。
+如果你需要创建私有镜像仓库，请参阅相应运行时的文档：
+
+* [Containerd](https://github.com/containerd/containerd/blob/main/docs/cri/config.md#registry-configuration).
+   * [Nerdctl 命令和镜像仓库托管服务](https://github.com/containerd/nerdctl/blob/main/docs/registry.md)
+* [Docker](https://docs.docker.com/registry/deploying/).
 
 </TabItem>
 <TabItem value="RKE">
@@ -94,7 +98,7 @@ Rancher 支持使用私有镜像仓库进行离线安装。你必须有自己的
 - **3 个 Linux 节点**：可以是你的云提供商（例如 Amazon EC2，GCE 或 vSphere）中的虚拟机。
 - **1 个负载均衡器**：用于将前端流量转发到这三个节点中。
 - **1 个 DNS 记录**：用于将 URL 映射到负载均衡器。此 DNS 记录将成为 Rancher Server 的 URL，下游集群需要可以访问到这个地址。
-- **1 个私有 Docker 镜像仓库**：用于将 Docker 镜像分发到你的主机。
+- **私有镜像仓库**，用于将容器镜像分发到你的主机。
 
 这些节点必须位于同一个区域或数据中心。但是你可以把这些服务器放在不同的可用区。
 
@@ -145,13 +149,17 @@ Rancher 支持使用私有镜像仓库进行离线安装。你必须有自己的
 
 有关设置 DNS 记录以将域流量转发到 Amazon ELB 负载均衡器的指南，请参见 [AWS 官方文档](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer)。
 
-### 4. 配置私有 Docker 镜像仓库
+### 4. 配置私有镜像仓库
 
-Rancher 支持使用安全的 Docker 私有镜像仓库进行离线安装。你必须有自己的私有镜像仓库或使用其他方式将 Docker 镜像分发到主机。
+Rancher 支持使用安全的私有镜像仓库进行离线安装。你必须有自己的私有镜像仓库或使用其他方式将容器镜像分发到主机。
 
 在后续设置 RKE Kubernetes 集群时，你需要创建一个[私有镜像仓库配置文件](https://rancher.com/docs/rke/latest/en/config-options/private-registries/)，其中包含此镜像仓库的信息。
 
-如需获得创建私有镜像仓库的帮助，请参见 [Docker 官方文档](https://docs.docker.com/registry/deploying/#run-an-externally-accessible-registry)。
+如果你需要创建私有镜像仓库，请参阅相应运行时的文档：
+
+* [Containerd](https://github.com/containerd/containerd/blob/main/docs/cri/config.md#registry-configuration).
+   * [Nerdctl 命令和镜像仓库托管服务](https://github.com/containerd/nerdctl/blob/main/docs/registry.md)
+* [Docker](https://docs.docker.com/registry/deploying/).
 
 </TabItem>
 <TabItem value="Docker">
@@ -168,13 +176,13 @@ Rancher 支持使用安全的 Docker 私有镜像仓库进行离线安装。你�
 
 此主机会断开互联网链接，但需要能与你的私有镜像仓库连接。
 
-请确保你的节点满足[操作系统，Docker，硬件和网络](../../../../pages-for-subheaders/installation-requirements.md)的常规要求。
+请确保你的节点满足[操作系统，容器，硬件和网络](../../../../pages-for-subheaders/installation-requirements.md)的常规安装要求。
 
 如需获取配置 Linux 节点的示例，请参见[在 Amazon EC2 中配置节点](../../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md)的教程。
 
 ### 2. 配置私有 Docker 镜像仓库
 
-Rancher 支持使用 Docker 私有镜像仓库在堡垒服务器中进行离线安装。你必须有自己的私有镜像仓库或使用其他方式将 Docker 镜像分发到主机。
+Rancher 支持使用私有镜像仓库在堡垒服务器中进行离线安装。你必须有自己的私有镜像仓库或使用其他方式将容器镜像分发到主机。
 
 如需获得创建私有镜像仓库的帮助，请参见 [Docker 官方文档](https://docs.docker.com/registry/)。
 

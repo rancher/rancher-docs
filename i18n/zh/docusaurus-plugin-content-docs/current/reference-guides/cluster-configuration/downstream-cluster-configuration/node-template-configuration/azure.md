@@ -16,7 +16,7 @@ title: Azure 节点模板配置
 
 :::
 
-[Docker daemon](https://docs.docker.com/engine/docker-overview/#the-docker-daemon) 配置选项包括：
+如果你使用 Docker，[Docker daemon](https://docs.docker.com/engine/docker-overview/#the-docker-daemon) 配置选项包括：
 
 - **标签**：有关标签的信息，请参阅 [Docker 对象标签文档](https://docs.docker.com/config/labels-custom-metadata/)。
 - **Docker 引擎安装 URL**：确定要在实例上安装的 Docker 版本。

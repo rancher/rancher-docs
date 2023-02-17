@@ -8,7 +8,7 @@ RKE1 和 RKE2 有一些细微的差异，本文将重点介绍这些差异。
 
 ### controlplane 组件
 
-RKE1 使用 Docker 来部署和管理 controlplane 组件，还使用 Docker 作为 Kubernetes 的容器运行时。相比之下，RKE2 将 controlplane 组件作为由 kubelet 管理的静态 pod 启动。RKE2 的容器运行时是 containerd，它允许容器镜像仓库 mirror 等内容（RKE1 和 Docker 不允许）。
+RKE1 使用 Docker 来部署和管理 controlplane 组件，还使用 Docker 作为 Kubernetes 的容器运行时。相比之下，RKE2 将 controlplane 组件作为由 kubelet 管理的静态 pod 启动。RKE2 的容器运行时是 Containerd，它允许 Mirror 容器镜像仓库等内容。使用 Docker 的 RKE1 不允许 Mirror。
 
 ### Cluster API
 
