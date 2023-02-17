@@ -19,7 +19,9 @@ Rancher 管理的集群上部署了两种不同的 Agent 资源：
 
 ### 调度规则
 
-`cattle-cluster-agent` 使用如下一组固定的容忍度（如果集群中没有可见的 controlplane 节点），或基于应用于 controlplane 节点的污点动态添加的容忍度。这种结构允许[基于污点进行驱逐](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/#taint-based-evictions)为 `cattle-cluster-agent` 正常工作。默认的容忍度如下。如果集群中存在 controlplane 节点，则容忍度将替换为与 controlplane 节点的污点匹配的容忍度。
+`cattle-cluster-agent` 使用一组固定的容忍度，或基于应用于 control plane 节点的污点动态添加的容忍度。这种结构允许[基于污点进行驱逐](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/#taint-based-evictions)为 `cattle-cluster-agent` 正常工作。
+
+如果集群中存在 control plane 节点，则默认容忍度将替换为与 control plane 节点的污点匹配的容忍度。默认的容忍度如下。
 
 | 组件 | nodeAffinity nodeSelectorTerms | nodeSelector | 容忍度 |
 | ---------------------- | ------------------------------------------ | ------------ | ------------------------------------------------------------------------------ |

@@ -30,7 +30,7 @@ description: 阅读此分步 Rancher Azure 指南，以快速部署带有单节�
 
 1. 使用命令行工具，执行 `git clone https://github.com/rancher/quickstart` 把 [Rancher Quickstart](https://github.com/rancher/quickstart) 克隆到本地。
 
-2. 执行 `cd quickstart/rancher/azure` 命令，进入包含 terraform 文件的 Azure 文件夹。
+2. 执行 `cd quickstart/rancher/azure` 命令，进入包含 Terraform 文件的 Azure 文件夹。
 
 3. 把 `terraform.tfvars.example` 文件重命名为 `terraform.tfvars`。
 

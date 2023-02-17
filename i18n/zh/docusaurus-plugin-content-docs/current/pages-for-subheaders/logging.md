@@ -84,6 +84,12 @@ Windows 集群支持 Logging，你可以收集 Windows 节点的日志。
 
 ## 故障排除
 
+### 日志缓冲区导致 Pod 过载
+
+根据你的配置，默认缓冲区大小可能太大并导致 Pod 故障。减少负载的一种方法是降低记录器的刷新间隔。这可以防止日志溢出缓冲区。你还可以添加更多刷新线程来处理大量日志试图同时填充缓冲区的情况。
+
+有关如何配置日志缓冲区来满足企业需求的更完整说明，请参阅 [缓冲区](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/plugins/outputs/buffer/)和 [Fluentd 配置](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/fluentd/)的官方 BanzaiCloud 文档。
+
 ### `cattle-logging` 命名空间正在重新创建
 
 如果你的集群之前在旧版 Rancher UI 的全局视图中部署了 Logging，`cattle-logging` 命名空间可能会不断被重新创建。
@@ -109,6 +115,6 @@ https://<your-url>/dashboard/c/<cluster-id>/
 *警告*：请当前未使用确保 Logging（从旧版 Rancher UI 全局视图中安装的版本）。
 
 ```bash
-kubectl delete clusterloggings.management.cattle.io -n <cluster-id>
-kubectl delete projectloggings.management.cattle.io -n <cluster-id>
+kubectl delete crd clusterloggings.management.cattle.io -n <cluster-id>
+kubectl delete crd projectloggings.management.cattle.io -n <cluster-id>
 ```

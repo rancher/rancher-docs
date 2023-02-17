@@ -25,9 +25,9 @@ kubectl -n cattle-system create secret tls tls-rancher-ingress \
 
 ## 使用私有 CA 签名证书
 
-如果你使用的是私有 CA，Rancher 需要你提供 CA 证书的副本，用来校验 Rancher Agent 与 Server 的连接。
+如果你使用的是私有 CA，Rancher 需要私有 CA 的根证书或证书链的副本，Rancher Agent 使用它来校验与 Server 的连接。
 
-将 CA 证书拷贝到名为 `cacerts.pem` 的文件中，然后使用 `kubectl` 在 `cattle-system` 命名空间中创建 `tls-ca` 密文。
+创建一个名为 `cacerts.pem` 的文件，该文件仅包含私有 CA 的根 CA 证书或证书链，并使用 `kubectl` 在 `cattle-system` 命名空间中创建 `tls-ca` Secret。
 
 ```
 kubectl -n cattle-system create secret generic tls-ca \

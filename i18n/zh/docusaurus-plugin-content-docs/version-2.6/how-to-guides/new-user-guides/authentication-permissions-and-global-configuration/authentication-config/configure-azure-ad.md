@@ -115,7 +115,7 @@ Microsoft Graph API 现在是设置 Azure AD 的流程。下文将帮助[新用�
    - `Group.Read.All`
    - `User.Read.All`
 
-   ![选择 API 权限](/img/api-permissions.png)
+   ![选择 API 权限](/img/api-permissions-2-6.png)
 
 1. 返回左侧导航栏中的 **API permissions**。在那里，单击 **Grant admin consent**。然后单击 **Yes**。
 

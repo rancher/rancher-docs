@@ -147,7 +147,7 @@ kubectl annotate clusters.management.cattle.io <CLUSTER_ID> io.cattle.agent.forc
 将 `CATTLE_CA_CHECKSUM` 环境变量更新为匹配新 CA 证书校验和的值，从而手动为 Agent Kubernetes 对象打上补丁。通过以下操作生成新的校验和：
 
 ```bash
-curl -k -s -fL <RANCHER_SERVER_URL>/v3/settings/cacerts | jq -r .value | sha256sum cacert.tmp | awk '{print $1}'
+curl -k -s -fL <RANCHER_SERVER_URL>/v3/settings/cacerts | jq -r .value | sha256sum | awk '{print $1}'
 ```
 
 为每个下游集群使用 Kubeconfig 更新两个 Agent 部署的环境变量。如果集群启用了 [ACE](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint)，你可以[调整 kubectl 上下文](../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig#直接使用下游集群进行身份验证)，从而直接连接到下游集群。

@@ -25,7 +25,8 @@ Rancher 可以安装在任何 Kubernetes 集群上。这个集群可以使用上
 - **RKE2:** ：[安装 RKE2 Kubernetes 集群的教程](../how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher.md)；[设置高可用 RKE2 集群的基础设施的教程](../how-to-guides/new-user-guides/infrastructure-setup/ha-rke2-kubernetes-cluster.md)。
 - **Amazon EKS**：[在 Amazon EKS 上安装 Rancher 以及如何安装 Ingress Controller 以访问 Rancher Server](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks.md)。
 - **AKS**：[使用 Azure Kubernetes 服务安装 Rancher 以及如何安装 Ingress Controller 以访问 Rancher Server](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks.md)。
-- **GKE**：[使用 GKE 安装 Rancher 以及如何安装 Ingress Controller 以访问 Rancher Server](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-gke.md)。
+- **GKE**：有关如何使用 GKE 安装 Rancher，包括如何安装 Ingress Controller 以便可以访问 Rancher Server，请参阅[此页面](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-gke.md)。GKE 创建 Kubernetes 集群时有两种运行模式，分别是 Autopilot 和 Standard 模式。Autopilot 模式的集群配置对编辑 kube-system 命名空间有限制。但是，Rancher 在安装时需要在 kube-system 命名空间中创建资源。因此，你将无法在以 Autopilot 模式创建的 GKE 集群上安装 Rancher。
+
 
 ### Ingress Controller
 
