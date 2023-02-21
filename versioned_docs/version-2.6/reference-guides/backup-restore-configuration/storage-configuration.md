@@ -20,7 +20,7 @@ You can choose to not have any operator-level storage location configured. If yo
 | Credential Secret | Choose the credentials for S3 from your secrets in Rancher. [Example](examples.md#example-credential-secret-for-storing-backups-in-s3). |
 | Bucket Name | Enter the name of the [S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) where the backups will be stored. Default: `rancherbackups`. |
 | Region | The [AWS region](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/) where the S3 bucket is located. |
-| Folder | The [folder in the S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/using-folders.html) where the backups will be stored. |
+| Folder | The [folder in the S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/using-folders.html) where the backups will be stored. If this field is left empty, the default behavior is to store the backup files in the root folder of the S3 bucket. |
 | Endpoint | The [S3 endpoint](https://docs.aws.amazon.com/general/latest/gr/s3.html) For example, `s3.us-west-2.amazonaws.com`. |
 | Endpoint CA | The CA cert used to for the S3 endpoint. Default: base64 encoded CA cert |
 | insecureTLSSkipVerify | Set to true if you are not using TLS. |
