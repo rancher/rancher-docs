@@ -1,7 +1,7 @@
 ---
 title: 迁移到 Rancher 2.5 Logging
 ---
-Rancher 2.5 彻底修改了 Logging 功能。我们现在使用了 Banzai Cloud 的 [logging operator](https://github.com/banzaicloud/logging-operator)，Rancher 配置了此工具以供部署 Logging 使用。
+Rancher 2.5 彻底修改了 Logging 功能。我们现在使用了 Banzai Cloud 的 [logging operator](https://github.com/kube-logging/logging-operator)，Rancher 配置了此工具以供部署 Logging 使用。
 
 在新的 Logging 功能的众多特性和变化中，其中一项是取消了项目级别的 Logging 配置。取而代之的是在命名空间级别配置 Logging。集群级日志仍然可用，但配置选项不同。
 
