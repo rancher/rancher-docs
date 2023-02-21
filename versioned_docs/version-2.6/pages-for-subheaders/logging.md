@@ -3,7 +3,7 @@ title: Rancher Integration with Logging Services
 description: Rancher integrates with popular logging services. Learn the requirements and benefits of integrating with logging services, and enable logging on your cluster.
 ---
 
-The [Banzai Cloud Logging operator](https://banzaicloud.com/docs/one-eye/logging-operator/) now powers Rancher's logging solution in place of the former, in-house solution.
+The [Banzai Cloud Logging operator](https://kube-logging.github.io/docs/) now powers Rancher's logging solution in place of the former, in-house solution.
 
 For an overview of the changes in v2.5, see [this section.](../integrations-in-rancher/logging/logging-architecture.md#changes-in-rancher-v2-5) For information about migrating from Logging V1, see [this page.](../integrations-in-rancher/logging/migrate-to-rancher-v2.5+-logging.md)
 
@@ -117,7 +117,7 @@ By default, Rancher collects logs for control plane components and node componen
 
 Depending on your configuration, the default buffer size may be too large and cause pod failures. One way to reduce the load is to lower the logger's flush interval. This prevents logs from overfilling the buffer. You can also add more flush threads to handle moments when many logs are attempting to fill the buffer at once. 
 
-For a more complete description of how to configure the logging buffer to suit your organization's needs, see the official BanzaiCloud documentation on [buffers](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/plugins/outputs/buffer/) and on [Fluentd configuration](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/fluentd/).
+For a more complete description of how to configure the logging buffer to suit your organization's needs, see the official BanzaiCloud documentation on [buffers](https://kube-logging.github.io/docs/configuration/plugins/outputs/buffer/) and on [Fluentd configuration](https://kube-logging.github.io/docs/configuration/fluentd/).
 
 ### The `cattle-logging` Namespace Being Recreated
 

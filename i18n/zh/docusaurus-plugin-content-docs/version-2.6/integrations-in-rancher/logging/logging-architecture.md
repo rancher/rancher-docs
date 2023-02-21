@@ -4,7 +4,7 @@ title: 架构
 
 本节介绍了 Rancher Logging 应用程序的架构。
 
-有关 Banzai Cloud Logging Operator 工作原理的更多详细信息，请参阅[官方文档](https://banzaicloud.com/docs/one-eye/logging-operator/#architecture)。
+有关 Banzai Cloud Logging Operator 工作原理的更多详细信息，请参阅[官方文档](https://kube-logging.github.io/docs/#architecture)。
 
 ### Banzai Cloud Logging Operator 工作原理
 
@@ -21,7 +21,7 @@ Fluent Bit 查询 Kubernetes API 并使用 pod 的元数据来丰富日志，然
 
 每个 `Flow` 都必须引用一个 `Output`，而每个 `ClusterFlow` 都必须引用一个 `ClusterOutput`。
 
-[Banzai 文档](https://banzaicloud.com/docs/one-eye/logging-operator/#architecture)中的下图显示了新的 Logging 架构：
+[Banzai 文档](https://kube-logging.github.io/docs/#architecture)中的下图显示了新的 Logging 架构：
 
 <figcaption>Banzai Cloud Logging Operator 如何与 Fluentd 和 Fluent Bit 一起使用</figcaption>
 

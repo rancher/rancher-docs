@@ -2,7 +2,7 @@
 title: Outputs 和 ClusterOutputs
 ---
 
-有关如何配置 `Flow` 和 `ClusterFlow` 的完整详细信息，请参阅 [Banzai Cloud Logging Operator 文档](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/flow/)。
+有关如何配置 `Flow` 和 `ClusterFlow` 的完整详细信息，请参阅 [Banzai Cloud Logging Operator 文档](https://kube-logging.github.io/docs/configuration/flow/)。
 
 有关如何解决 Logging 缓冲区的内存问题，请参阅 [Rancher 与 Logging 服务的集成：故障排除](../../../pages-for-subheaders/logging.md#日志缓冲区导致-pod-过载)。
 
@@ -16,7 +16,7 @@ title: Outputs 和 ClusterOutputs
 
 你可以通过在 Rancher UI 中填写表单来配置 `Output`。
 
-有关 `Output` 自定义资源的更多详细信息，请参阅 [OutputSpec](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/output_types/)。
+有关 `Output` 自定义资源的更多详细信息，请参阅 [OutputSpec](https://kube-logging.github.io/docs/configuration/crds/v1beta1/output_types/)。
 
 Rancher UI 提供了用于配置以下类型 `Output` 的表单：
 
@@ -40,7 +40,7 @@ Rancher UI 提供了用于配置以下类型 `Output` 的表单：
 
 Rancher UI 提供了用于配置 `Output` 类型、目标和访问凭证（如果适用）的表单。
 
-有关 Logging Operator 支持的日志插件配置示例，请参阅 [Logging Operator 文档](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/plugins/outputs/)。
+有关 Logging Operator 支持的日志插件配置示例，请参阅 [Logging Operator 文档](https://kube-logging.github.io/docs/configuration/plugins/outputs/)。
 
 ## ClusterOutputs
 
@@ -48,7 +48,7 @@ Rancher UI 提供了用于配置 `Output` 类型、目标和访问凭证（如�
 
 你可以通过在 Rancher UI 中填写表单来配置 `ClusterOutput`。
 
-有关 `ClusterOutput` 自定义资源的更多详细信息，请参阅 [ClusterOutput](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/clusteroutput_types/)。
+有关 `ClusterOutput` 自定义资源的更多详细信息，请参阅 [ClusterOutput](https://kube-logging.github.io/docs/configuration/crds/v1beta1/clusteroutput_types/)。
 
 ## YAML 示例
 

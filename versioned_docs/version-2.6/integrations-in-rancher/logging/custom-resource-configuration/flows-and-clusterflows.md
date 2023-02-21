@@ -2,7 +2,7 @@
 title: Flows and ClusterFlows
 ---
 
-See the [Banzai Cloud Logging operator documentation](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/flow/) for the full details on how to configure  `Flows` and `ClusterFlows`.
+See the [Banzai Cloud Logging operator documentation](https://kube-logging.github.io/docs/configuration/flow/) for the full details on how to configure  `Flows` and `ClusterFlows`.
 
 See [Rancher Integration with Logging Services: Troubleshooting](../../../pages-for-subheaders/logging.md#The-Logging-Buffer-Overloads-Pods) for how to resolve memory problems with the logging buffer.
 
@@ -14,7 +14,7 @@ The `Flow` is a namespaced resource, which means logs will only be collected fro
 
 `Flows` can be configured by filling out forms in the Rancher UI.
 
-For more details about the `Flow` custom resource, see [FlowSpec.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/flow_types/)
+For more details about the `Flow` custom resource, see [FlowSpec.](https://kube-logging.github.io/docs/configuration/crds/v1beta1/flow_types/)
 
 ### Matches
 
@@ -24,13 +24,13 @@ You can specify match statements to select or exclude logs according to Kubernet
 
 Matches can be configured by filling out the `Flow` or `ClusterFlow` forms in the Rancher UI.
 
-For detailed examples on using the match statement, see the [official documentation on log routing.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/log-routing/)
+For detailed examples on using the match statement, see the [official documentation on log routing.](https://kube-logging.github.io/docs/configuration/log-routing/)
 
 ### Filters
 
 You can define one or more filters within a `Flow`. Filters can perform various actions on the logs, for example, add additional data, transform the logs, or parse values from the records. The filters in the `Flow` are applied in the order in the definition.
 
-For a list of filters supported by the Banzai Cloud Logging operator, see [this page.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/plugins/filters/)
+For a list of filters supported by the Banzai Cloud Logging operator, see [this page.](https://kube-logging.github.io/docs/configuration/plugins/filters/)
 
 Filters need to be configured in YAML.
 
