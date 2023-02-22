@@ -50,7 +50,15 @@ This command generates static content into the `build` directory and can be serv
 
 ### Launch With Docker
 
-Use [Docker](https://www.docker.com/) to launch the website without needing to install and configure Yarn:
+You can Use [Docker](https://www.docker.com/) to launch the website without needing to configure Yarn.
+
+The first time you launch the site, use this command to install yarn and start the server:
+
+```
+docker run --rm -it -v $PWD:$PWD -w $PWD -p 3000:3000 node yarn install && yarn start -h 0.0.0.0
+```
+
+On subsequent runs, use this command:
 
 ```
 docker run --rm -it -v $PWD:$PWD -w $PWD -p 3000:3000 node yarn start -h 0.0.0.0
