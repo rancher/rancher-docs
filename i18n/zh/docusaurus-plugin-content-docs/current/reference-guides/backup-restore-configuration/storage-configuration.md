@@ -20,7 +20,7 @@ title: 备份存储位置配置
 | 凭证密文 | 从 Rancher 的密文中选择 S3 的凭证。[示例](examples.md#在-s3-中存储备份的凭证密文示例)。 |
 | 存储桶名称 | 存储备份的 [S3 存储桶](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)的名称。默认值：`rancherbackups`。 |
 | 区域 | S3 存储桶所在的 [AWS 区域](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)。 |
-| 文件夹 | 存储备份的 [S3 存储桶中的文件夹](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/using-folders.html)。 |
+| 文件夹 | 存储备份的 [S3 存储桶中的文件夹](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/using-folders.html)。如果此字段留空，则默认将备份文件存储在 S3 存储桶的根文件夹中。 |
 | 端点 | [S3 端点](https://docs.aws.amazon.com/general/latest/gr/s3.html)，例如 `s3.us-west-2.amazonaws.com`。 |
 | Endpoint CA | 用于 S3 端点的 CA 证书。默认值：base64 编码的 CA 证书。 |
 | insecureTLSSkipVerify | 如果你不使用 TLS，则设置为 `true`。 |
