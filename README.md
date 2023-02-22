@@ -58,7 +58,7 @@ The first time you launch the site this way, use this command to install Yarn an
 docker run --rm -it -v $PWD:$PWD -w $PWD -p 3000:3000 node yarn install && yarn start -h 0.0.0.0
 ```
 
-On subsequent runs, use this command:
+On subsequent launches, use this command:
 
 ```
 docker run --rm -it -v $PWD:$PWD -w $PWD -p 3000:3000 node yarn start -h 0.0.0.0
