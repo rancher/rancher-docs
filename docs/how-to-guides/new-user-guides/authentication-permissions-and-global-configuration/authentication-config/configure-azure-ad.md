@@ -160,11 +160,23 @@ You will need to also manually enter the Graph, Token, and Auth Endpoints.
 From the Rancher UI, enter information about your AD instance hosted in Azure to complete configuration.
 
 1. Log into Rancher.
+
 1.	In the top left corner, click **☰ > Users & Authentication**.
+
 1. In the left navigation menu, click **Auth Provider**.
+
 1. Click **AzureAD**.
+
 1. Complete the **Configure Azure AD Account** form using the information you copied while completing [Copy Azure Application Data](#4-copy-azure-application-data).
 
+    :::caution 
+    
+    The Azure AD user credentials entered in this step will be mapped to the Rancher local principal account and assigned administrator privileges. Make sure you are comfortable giving administrator privileges to this Azure AD account.
+    
+    :::
+
+    **For Standard or China Enpoints:**
+    
     The following table maps the values you copied in the Azure portal to the fields in Rancher:
 
     | Rancher Field      | Azure Value                           |
@@ -174,20 +186,19 @@ From the Rancher UI, enter information about your AD instance hosted in Azure to
     | Application Secret | Key Value                             |
     | Endpoint           | https://login.microsoftonline.com/    |
 
+    **For Custom Endpoints:**
 
-**For Custom Endpoints:**
+    The following table maps the custom config values you copied in the Azure portal to the fields in Rancher:
 
-The following table maps the custom config values you copied in the Azure portal to the fields in Rancher:
+    | Rancher Field      | Azure Value                           |
+    | ------------------ | ------------------------------------- |
+    | Graph Endpoint     | Microsoft Graph API Endpoint          |
+    | Token Endpoint     | OAuth 2.0 Token Endpoint              |
+    | Auth Endpoint      | OAuth 2.0 Authorization Endpoint      |
 
-| Rancher Field      | Azure Value                           |
-| ------------------ | ------------------------------------- |
-| Graph Endpoint     | Microsoft Graph API Endpoint          |
-| Token Endpoint     | OAuth 2.0 Token Endpoint              |
-| Auth Endpoint      | OAuth 2.0 Authorization Endpoint      |
+    **Important:** When entering the Graph Endpoint in a custom config, remove the tenant ID from the URL, like below:
 
-**Important:** When entering the Graph Endpoint in a custom config, remove the tenant ID from the URL, like below:
-
-<code>http<span>s://g</span>raph.microsoft.com<del>/abb5adde-bee8-4821-8b03-e63efdc7701c</del></code>
+    <code>http<span>s://g</span>raph.microsoft.com<del>/abb5adde-bee8-4821-8b03-e63efdc7701c</del></code>
 
 1. Click **Enable**.
 
