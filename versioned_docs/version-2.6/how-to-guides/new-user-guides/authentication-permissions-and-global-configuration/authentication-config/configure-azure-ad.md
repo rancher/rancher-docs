@@ -186,7 +186,7 @@ From the Rancher UI, enter information about your AD instance hosted in Azure to
 
     :::caution 
     
-    The Azure AD user credentials entered in this step will be mapped to the Rancher local principal account and assigned administrator privileges. Make sure you are comfortable giving administrator privileges to this Azure AD account.
+    The Azure AD account will be granted administrator privileges, since its details will be mapped to the Rancher local principal account. Make sure that this level of privilege is appropriate before you continue.
     
     :::
 
