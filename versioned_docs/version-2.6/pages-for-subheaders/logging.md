@@ -117,7 +117,7 @@ By default, Rancher collects logs for control plane components and node componen
 
 Depending on your configuration, the default buffer size may be too large and cause pod failures. One way to reduce the load is to lower the logger's flush interval. This prevents logs from overfilling the buffer. You can also add more flush threads to handle moments when many logs are attempting to fill the buffer at once. 
 
-For a more complete description of how to configure the logging buffer to suit your organization's needs, see the official Logging operator documentation on [buffers](https://kube-logging.github.io/docs/configuration/plugins/outputs/buffer/) and on [Fluentd configuration](https://kube-logging.github.io/docs/configuration/fluentd/).
+For a more complete description of how to configure the logging buffer to suit your organization's needs, see the official Logging operator documentation on [buffers](https://kube-logging.github.io/docs/configuration/plugins/outputs/buffer/) and on [Fluentd configuration](https://kube-logging.github.io/docs/logging-infrastructure/fluentd/).
 
 ### The `cattle-logging` Namespace Being Recreated
 
