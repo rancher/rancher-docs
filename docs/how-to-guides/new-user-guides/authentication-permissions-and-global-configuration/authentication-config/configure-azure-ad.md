@@ -188,7 +188,7 @@ From the Rancher UI, enter information about your AD instance hosted in Azure to
 
     **For Custom Endpoints:**
 
-    The following table maps the custom config values you copied in the Azure portal to the fields in Rancher:
+    The following table maps your custom config values to Rancher fields:
 
     | Rancher Field      | Azure Value                           |
     | ------------------ | ------------------------------------- |
