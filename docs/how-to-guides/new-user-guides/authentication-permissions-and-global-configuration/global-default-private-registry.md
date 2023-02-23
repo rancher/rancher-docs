@@ -33,7 +33,7 @@ If you're using a namespaced private registry with downstream RKE2 clusters, you
 
 1. Select **☰ > Cluster Management**.
 1. Find the RKE2 cluster in the list and click the three dots icon to open a submenu. Select **Edit Config**.
-<TO-DO>
+//TO-DO//
 
 
 ## Configure a Private Registry with Credentials when Creating a Cluster
