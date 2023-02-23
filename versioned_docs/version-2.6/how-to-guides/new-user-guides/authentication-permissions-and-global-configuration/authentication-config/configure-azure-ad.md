@@ -211,7 +211,7 @@ From the Rancher UI, enter information about your AD instance hosted in Azure to
     | Token Endpoint     | OAuth 2.0 Token Endpoint              |
     | Auth Endpoint      | OAuth 2.0 Authorization Endpoint      |
 
-    **Important:** When entering the Graph Endpoint in a custom config, remove the tenant ID from the URL, like below:
+    **Important:** When entering the Graph Endpoint in a custom config, remove the tenant ID from the URL:
 
     <code>http<span>s://g</span>raph.microsoft.com<del>/abb5adde-bee8-4821-8b03-e63efdc7701c</del></code>
 
