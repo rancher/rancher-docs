@@ -4,9 +4,9 @@ title: 架构
 
 本节介绍了 Rancher Logging 应用程序的架构。
 
-有关 Banzai Cloud Logging Operator 工作原理的更多详细信息，请参阅[官方文档](https://kube-logging.github.io/docs/#architecture)。
+有关 Logging Operator 工作原理的更多详细信息，请参阅[官方文档](https://kube-logging.github.io/docs/#architecture)。
 
-### Banzai Cloud Logging Operator 工作原理
+### Logging Operator 工作原理
 
 Logging Operator 自动部署和配置 Kubernetes 日志流水线。它会在每个节点上部署和配置一个 Fluent Bit DaemonSet，从而收集节点文件系统中的容器和应用程序日志。
 
@@ -23,6 +23,6 @@ Fluent Bit 查询 Kubernetes API 并使用 pod 的元数据来丰富日志，然
 
 [Banzai 文档](https://kube-logging.github.io/docs/#architecture)中的下图显示了新的 Logging 架构：
 
-<figcaption>Banzai Cloud Logging Operator 如何与 Fluentd 和 Fluent Bit 一起使用</figcaption>
+<figcaption>Logging Operator 如何与 Fluentd 和 Fluent Bit 一起使用</figcaption>
 
-![Banzai Cloud Logging Operator 如何与 Fluentd 一起使用](/img/banzai-cloud-logging-operator.png)
+![Logging Operator 如何与 Fluentd 一起使用](/img/banzai-cloud-logging-operator.png)
