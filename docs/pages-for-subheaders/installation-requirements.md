@@ -25,7 +25,7 @@ All supported operating systems are 64-bit x86. Rancher should work with any mod
 
 The [Rancher support matrix](https://www.suse.com/suse-rancher/support-matrix) lists which OS and Docker versions were tested for each Rancher version.
 
-Docker is required for nodes that will run RKE Kubernetes clusters. It is not required for RKE2 or K3s clusters.
+Docker is required for nodes that will run RKE clusters. It is not required for RKE2 or K3s clusters.
 
 The `ntp` (Network Time Protocol) package should be installed. This prevents errors with certificate validation that can occur when the time is not synchronized between the client and server.
 
