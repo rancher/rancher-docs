@@ -175,7 +175,7 @@ From the Rancher UI, enter information about your AD instance hosted in Azure to
     
     :::
 
-    **For Standard or China Enpoints:**
+    **For Standard or China Endpoints:**
     
     The following table maps the values you copied in the Azure portal to the fields in Rancher:
 
