@@ -11,9 +11,9 @@ If you install Rancher on a Kubernetes cluster, requirements are different from 
 
 :::
 
-See our page on [best practices](../reference-guides/best-practices/rancher-server/tips-for-running-rancher.md) for a list of recommendations for running a Rancher server in production.
-
 The Rancher UI works best in Firefox or Chromium based browsers (Chrome, Edge, Opera, Brave, etc).
+
+See our page on [best practices](../reference-guides/best-practices/rancher-server/tips-for-running-rancher.md) for a list of recommendations for running a Rancher server in production.
 
 ## Kubernetes Compatibility with Rancher
 
