@@ -16,7 +16,7 @@ You can use secrets in these definitions, but they must also be in the same name
 
 `Outputs` can be configured by filling out forms in the Rancher UI.
 
-For the details of `Output` custom resource, see [OutputSpec.](https://kube-logging.github.io/docs/configuration/crds/v1beta1/output_types/).
+For the details of `Output` custom resource, see [OutputSpec](https://kube-logging.github.io/docs/configuration/crds/v1beta1/output_types/).
 
 The Rancher UI provides forms for configuring the following `Output` types:
 
