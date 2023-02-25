@@ -40,7 +40,7 @@ The Rancher UI provides forms for configuring the following `Output` types:
 
 The Rancher UI provides forms for configuring the `Output` type, target, and access credentials if applicable.
 
-For example configuration for each logging plugin supported by the logging operator, see the [logging operator documentation.](https://kube-logging.github.io/docs/configuration/plugins/outputs/).
+For example configuration for each logging plugin supported by the logging operator, see the [logging operator documentation](https://kube-logging.github.io/docs/configuration/plugins/outputs/).
 
 ## ClusterOutputs
 
