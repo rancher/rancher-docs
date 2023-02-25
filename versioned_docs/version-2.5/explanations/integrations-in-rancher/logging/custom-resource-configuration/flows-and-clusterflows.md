@@ -54,7 +54,7 @@ For detailed examples on using the match statement, see the [official documentat
 
 You can define one or more filters within a `Flow`. Filters can perform various actions on the logs, for example, add additional data, transform the logs, or parse values from the records. The filters in the `Flow` are applied in the order in the definition.
 
-For a list of filters supported by the Logging operator, see [this page.](https://kube-logging.github.io/docs/configuration/plugins/filters/)
+For a list of filters supported by the Logging operator, see [the official documentation on Fluentd filters](https://kube-logging.github.io/docs/configuration/plugins/filters/).
 
 Filters need to be configured in YAML.
 
