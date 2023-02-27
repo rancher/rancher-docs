@@ -73,7 +73,7 @@ S3 存储位置包含以下配置字段：
 1. **凭证密文**（可选）：如果你需要使用 AWS 访问密钥（access key）和密文密钥（secret key）来访问 S3 存储桶，请使用带有密钥和指令 `accessKey` 和 `secretKey` 的凭证来创建密文。它可以是任意一个命名空间。你可以点击[此处](#credentialsecret-示例)查看示例密文。如果运行 operator 的节点在 EC2 中，并且设置了允许它们访问 S3 的 IAM 权限，则此指令是不必要的（如[本节](#ec2-节点访问-s3-的-iam-权限)所述）。凭证密文下拉菜单列出了所有命名空间的密文。
 1. **存储桶名称**：存储备份文件的 S3 存储桶的名称。
 1. **区域**（可选）：S3 存储桶所在的 AWS [区域](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)。配置 MinIO 时不需要该字段。
-1. **文件夹**（可选）：S3 存储桶中存储备份文件的文件夹名称。不支持嵌套文件夹（例如， `rancher/cluster1`）。
+1. **文件夹**（可选）：S3 存储桶中存储备份文件的文件夹名称。不支持嵌套文件夹（例如， `rancher/cluster1`）。如果此字段留空，则默认将备份文件存储在 S3 存储桶的根文件夹中。
 1. **端点**：用于访问存储桶区域中的 S3 的[端点](https://docs.aws.amazon.com/general/latest/gr/s3.html)。
 1. **端点 CA**（可选）：Base64 编码的 CA 证书。如需获取示例，请参见 [S3 兼容配置示例](#s3-存储配置示例)。
 1. **跳过 TLS 验证**（可选）：如果你不使用 TLS，则设置为 `true`。
@@ -84,7 +84,7 @@ S3 存储位置包含以下配置字段：
 | `credentialSecretName` | 如果你需要使用 AWS 访问密钥（access key）和密文密钥（secret key）来访问 S3 存储桶，请使用带有密钥和指令 `accessKey` 和 `secretKey` 的凭证来创建密文。它可以在任何命名空间中，只要你在 `credentialSecretNamespace` 中提供该命名空间。点击[这里](#credentialsecret-示例)查看示例密文。如果运行 operator 的节点在 EC2 中，并且设置了允许它们访问 S3 的 IAM 权限，则此指令是不必要的（如[本节](#ec2-节点访问-s3-的-iam-权限)所述）。 |  |
 | `credentialSecretNamespace` | 包含访问 S3 的凭证的密文的命名空间。如果运行 operator 的节点在 EC2 中，并且设置了允许它们访问 S3 的 IAM 权限，则此指令是不必要的（如[本节](#ec2-节点访问-s3-的-iam-权限)所述）。 |  |
 | `bucketName` | 存储备份文件的 S3 存储桶的名称。 | ✓ |
-| `folder` | S3 存储桶中存储备份文件的文件夹名称。不支持嵌套文件夹（例如， `rancher/cluster1`）。 | |
+| `folder` | S3 存储桶中存储备份文件的文件夹名称。不支持嵌套文件夹（例如， `rancher/cluster1`）。如果此字段留空，则默认将备份文件存储在 S3 存储桶的根文件夹中。 | |
 | `region` | S3 存储桶所在的 AWS [区域](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)。 | ✓ |
 | `endpoint` | 用于访问存储桶区域中的 S3 的[端点](https://docs.aws.amazon.com/general/latest/gr/s3.html)。 | ✓ |
 | `endpointCA` | Base64 编码的 CA 证书。如需获取示例，请参见 [S3 兼容配置示例](#s3-存储配置示例)。 |  |
