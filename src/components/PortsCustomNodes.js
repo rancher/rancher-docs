@@ -254,7 +254,7 @@ const PortsCustomNodes = () => (
           <td></td>
         </tr>
         <tr>
-          <td colspan="7">Notes:<br/><br/>1. Nodes running standalone server or Rancher HA deployment.<br/>2. Required to fetch Rancher chart library.<br/>3. Only without external load balancer in front of Rancher.<br/>4. Local traffic to the node itself (not across nodes).<br/>5. Only if Authorized Cluster Endpoints are activated.<br/>6. Only if using Overlay mode on Windows cluster.
+          <td colspan="7">Notes:<br/><br/>1. Nodes running standalone server or Rancher HA deployment.<br/>2. Required to fetch Rancher chart library.<br/>3. Only without external load balancer in front of Rancher.<br/>4. Local traffic to the node itself (not across nodes), if you've enabled optional features such as Rancher Monitoring.<br/>5. Only if Authorized Cluster Endpoints are activated.<br/>6. Only if using Overlay mode on Windows cluster.
           </td>
         </tr>
     </tbody>

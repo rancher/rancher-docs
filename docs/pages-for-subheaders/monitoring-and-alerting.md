@@ -14,18 +14,16 @@ By viewing data that Prometheus scrapes from your cluster control plane, nodes, 
 
 The `rancher-monitoring` operator, introduced in Rancher v2.5, is powered by [Prometheus](https://prometheus.io/), [Grafana](https://grafana.com/grafana/),  [Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/), the [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator), and the [Prometheus adapter.](https://github.com/DirectXMan12/k8s-prometheus-adapter)
 
-The monitoring application allows you to:
+The monitoring application:
 
-- Monitor the state and processes of your cluster nodes, Kubernetes components, and software deployments
-- Define alerts based on metrics collected via Prometheus
-- Create custom Grafana dashboards
-- Configure alert-based notifications via Email, Slack, PagerDuty, etc. using Prometheus Alertmanager
-- Defines precomputed, frequently needed or computationally expensive expressions as new time series based on metrics collected via Prometheus
-- Expose collected metrics from Prometheus to the Kubernetes Custom Metrics API via Prometheus Adapter for use in HPA
+- Monitors the state and processes of your cluster nodes, Kubernetes components, and software deployments.
+- Defines alerts based on metrics collected via Prometheus.
+- Creates custom Grafana dashboards.
+- Configures alert-based notifications via Email, Slack, PagerDuty, etc. using Prometheus Alertmanager.
+- Defines precomputed, frequently needed or computationally expensive expressions as new time series based on metrics collected via Prometheus.
+- Exposes collected metrics from Prometheus to the Kubernetes Custom Metrics API via Prometheus Adapter for use in HPA.
 
-## How Monitoring Works
-
-For an explanation of how the monitoring components work together, see [this page.](../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)
+See [How Monitoring Works](../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md) for an explanation of how the monitoring components work together.
 
 ## Default Components and Deployments
 
@@ -65,7 +63,7 @@ For information on configuring access to monitoring, see [this page.](../integra
 
 ### Configuring Monitoring Resources in Rancher
 
-> The configuration reference assumes familiarity with how monitoring components work together. For more information, see [How Monitoring Works.](../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)
+The configuration reference assumes familiarity with how monitoring components work together. For more information, see [How Monitoring Works.](../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)
 
 - [ServiceMonitor and PodMonitor](../reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors.md)
 - [Receiver](../reference-guides/monitoring-v2-configuration/receivers.md)
@@ -76,7 +74,7 @@ For information on configuring access to monitoring, see [this page.](../integra
 
 ### Configuring Helm Chart Options
 
-For more information on `rancher-monitoring` chart options, including options to set resource limits and requests, see [this page.](../reference-guides/monitoring-v2-configuration/helm-chart-options.md)
+For more information on `rancher-monitoring` chart options, including options to set resource limits and requests, see [Helm Chart Options](../reference-guides/monitoring-v2-configuration/helm-chart-options.md).
 
 ## Windows Cluster Support
 
@@ -84,11 +82,11 @@ When deployed onto an RKE1 Windows cluster, Monitoring V2 will now automatically
 
 To be able to fully deploy Monitoring V2 for Windows, all of your Windows hosts must have a minimum [wins](https://github.com/rancher/wins) version of v0.1.0.
 
-For more details on how to upgrade wins on existing Windows hosts, refer to the section on [Windows cluster support for Monitoring V2.](../integrations-in-rancher/monitoring-and-alerting/windows-support.md)
+For more details on how to upgrade wins on existing Windows hosts, see [Windows cluster support for Monitoring V2.](../integrations-in-rancher/monitoring-and-alerting/windows-support.md).
 
 
 ## Known Issues
 
-There is a [known issue](https://github.com/rancher/rancher/issues/28787#issuecomment-693611821) that K3s clusters require more default memory. If you are enabling monitoring on a K3s cluster, we recommend to setting `prometheus.prometheusSpec.resources.memory.limit` to 2500 Mi and `prometheus.prometheusSpec.resources.memory.request` to 1750 Mi.
+There is a [known issue](https://github.com/rancher/rancher/issues/28787#issuecomment-693611821) that K3s clusters require more than the alloted default memory. If you enable monitoring on a K3s cluster, set `prometheus.prometheusSpec.resources.memory.limit` to 2500 Mi and `prometheus.prometheusSpec.resources.memory.request` to 1750 Mi.
 
-For tips on debugging high memory usage, see [this page.](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/debug-high-memory-usage.md)
+See [Debugging High Memory Usage](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/debug-high-memory-usage.md) for advice and recommendations.
