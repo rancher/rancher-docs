@@ -13,8 +13,7 @@ The Center for Internet Security is a 501(c\)(3) non-profit organization, formed
 
 CIS Benchmarks are best practices for the secure configuration of a target system. CIS Benchmarks are developed through the generous volunteer efforts of subject matter experts, technology vendors, public and private community members, and the CIS Benchmark Development team.
 
-The official Benchmark documents are available through the CIS website. The sign-up form to access the documents is
-<a href="https://learn.cisecurity.org/benchmarks" target="_blank">here.</a>
+The official Benchmark documents are available through the CIS website. The sign-up form to access the documents is <a href="https://learn.cisecurity.org/benchmarks" target="_blank">here.</a>
 
 ## About the Generated Report
 
@@ -30,20 +29,20 @@ Some tests are designated as "Not Applicable." These tests will not be run on an
 
 The report contains the following information:
 
-| Column in Report | Description |
-|------------------|-------------|
-| `id`               | The ID number of the CIS Benchmark. |
-| `description`      | The description of the CIS Benchmark test. |
-| `remediation`      | What needs to be fixed in order to pass the test. |
-| `state`    | Indicates if the test passed, failed, was skipped, or was not applicable. |
-| `node_type`        | The node role, which affects which tests are run on the node. Master tests are run on controlplane nodes, etcd tests are run on etcd nodes, and node tests are run on the worker nodes. |
-| `audit` | This is the audit check that `kube-bench` runs for this test. |
-| `audit_config` | Any configuration applicable to the audit script. |
-| `test_info` | Test-related info as reported by `kube-bench`, if any. |
-| `commands` | Test-related commands as reported by `kube-bench`, if any. |
-| `config_commands` | Test-related configuration data as reported by `kube-bench`, if any. |
-| `actual_value` | The test's actual value, present if reported by `kube-bench`. |
-| `expected_result` | The test's expected result, present if reported by `kube-bench`. |
+| Column in Report  | Description                                                                                                                                                                             |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `id`              | The ID number of the CIS Benchmark.                                                                                                                                                     |
+| `description`     | The description of the CIS Benchmark test.                                                                                                                                              |
+| `remediation`     | What needs to be fixed in order to pass the test.                                                                                                                                       |
+| `state`           | Indicates if the test passed, failed, was skipped, or was not applicable.                                                                                                               |
+| `node_type`       | The node role, which affects which tests are run on the node. Master tests are run on controlplane nodes, etcd tests are run on etcd nodes, and node tests are run on the worker nodes. |
+| `audit`           | This is the audit check that `kube-bench` runs for this test.                                                                                                                           |
+| `audit_config`    | Any configuration applicable to the audit script.                                                                                                                                       |
+| `test_info`       | Test-related info as reported by `kube-bench`, if any.                                                                                                                                  |
+| `commands`        | Test-related commands as reported by `kube-bench`, if any.                                                                                                                              |
+| `config_commands` | Test-related configuration data as reported by `kube-bench`, if any.                                                                                                                    |
+| `actual_value`    | The test's actual value, present if reported by `kube-bench`.                                                                                                                           |
+| `expected_result` | The test's expected result, present if reported by `kube-bench`.                                                                                                                        |
 
 Refer to [the table in the cluster hardening guide](./rancher-security.md) for information on which versions of Kubernetes, the Benchmark, Rancher, and our cluster hardening guide correspond to each other. Also refer to the hardening guide for configuration files of CIS-compliant clusters and information on remediating failed tests.
 
@@ -51,16 +50,27 @@ Refer to [the table in the cluster hardening guide](./rancher-security.md) for i
 
 The following profiles are available:
 
-- Generic CIS 1.5
 - Generic CIS 1.6
-- RKE permissive 1.5
-- RKE hardened 1.5
+- Generic CIS 1.20
+- Generic CIS 1.23
 - RKE permissive 1.6
 - RKE hardened 1.6
-- RKE2 permissive 1.5
-- RKE2 hardened 1.5
+- RKE permissive 1.20
+- RKE hardened 1.20
+- RKE permissive 1.23
+- RKE hardened 1.23
 - RKE2 permissive 1.6
 - RKE2 hardened 1.6
+- RKE2 permissive 1.20
+- RKE2 hardened 1.20
+- RKE2 permissive 1.23
+- RKE2 hardened 1.23
+- K3s permissive 1.6
+- K3s hardened 1.6
+- K3s permissive 1.20
+- K3s hardened 1.20
+- K3s permissive 1.23
+- K3s hardened 1.23
 - AKS
 - EKS
 - GKE
