@@ -20,6 +20,7 @@ The `Outputs` and `ClusterOutputs` can now be configured by filling out forms in
 
 
 <a id="outputs-2-5-8"></a>
+
 ## Outputs
 
 The `Output` resource defines where your `Flows` can send the log messages. `Outputs` are the final stage for a logging `Flow`.
@@ -70,6 +71,7 @@ For the details of the `ClusterOutput` custom resource, see [ClusterOutput.](htt
 
 
 <a id="outputs-2-5-0"></a>
+
 ## Outputs
 
 The `Output` resource defines where your `Flows` can send the log messages. `Outputs` are the final stage for a logging `Flow`.
