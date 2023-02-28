@@ -2,21 +2,21 @@
 title: RKE2 Hardening Guide
 ---
 
-This document provides prescriptive guidance for hardening a production installation of a RKE2 cluster to be provisioned with Rancher. It outlines the configurations and controls required to address Kubernetes benchmark controls from the Center for Information Security (CIS).
+This document provides prescriptive guidance for how to harden an RKE2 cluster intended for production, before provisioning it with Rancher. It outlines the configurations and controls required for Center for Information Security (CIS) Kubernetes benchmark controls.
 
 :::note
-This hardening guide describes how to secure the nodes in your cluster, and it is recommended to follow this guide before installing Kubernetes.
+This hardening guide describes how to secure the nodes in your cluster. We recommended that you follow this guide before you install Kubernetes.
 :::
 
-This hardening guide is intended to be used for RKE2 clusters and associated with specific versions of the CIS Kubernetes Benchmark, Kubernetes, and Rancher:
+This hardening guide is intended to be used for RKE2 clusters and associated with the following versions of the CIS Kubernetes Benchmark, Kubernetes, and Rancher:
 
 | Rancher Version | CIS Benchmark Version | Kubernetes Version           |
 |-----------------|-----------------------|------------------------------|
 | Rancher v2.7    | Benchmark v1.23       | Kubernetes v1.22 up to v1.25 |
 
-For more details about evaluating a hardened RKE2 cluster against the official CIS benchmark, refer to the RKE2 self-assessment guides for specific CIS benchmark versions.
+For more details on how to evaluate a hardened RKE2 cluster against the official CIS benchmark, refer to the RKE2 self-assessment guides for specific CIS benchmark versions.
 
-RKE2 is designed to be "hardened by default" and pass the majority of the Kubernetes CIS controls without modification. There are a few notable exceptions to this that require manual intervention to fully pass the CIS Benchmark:
+RKE2 passes a number of the Kubernetes CIS controls without modification, as it applies several security mitigations by default. There are some notable exceptions to this that require manual intervention to fully comply with the CIS Benchmark:
 
 1. RKE2 will not modify the host operating system. Therefore, you, the operator, must make a few host-level modifications. 
 2. Certain CIS controls for Network Policies and Pod Security Standards (or Pod Security Policies (PSP) on RKE2 versions prior to v1.25) will restrict the functionality of the cluster. You must opt into having RKE2 configure these for you. To help ensure these requirements are met, RKE2 can be started with the profile flag set to `cis-1.5`, `cis-1.6`, or `cis-1.23`.

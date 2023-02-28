@@ -2,19 +2,19 @@
 title: RKE Hardening Guide
 ---
 
-This document provides prescriptive guidance for hardening a production installation of a RKE cluster to be used with Rancher. It outlines the configurations and controls required to address Kubernetes benchmark controls from the Center for Information Security (CIS).
+This document provides prescriptive guidance for how to harden an RKE cluster intended for production, before provisioning it with Rancher. It outlines the configurations and controls required for Center for Information Security (CIS) Kubernetes benchmark controls.
 
 :::note
-This hardening guide describes how to secure the nodes in your cluster, and it is recommended to follow this guide before installing Kubernetes.
+This hardening guide describes how to secure the nodes in your cluster. We recommended that you follow this guide before you install Kubernetes.
 :::
 
-This hardening guide is intended to be used for RKE clusters and associated with specific versions of the CIS Kubernetes Benchmark, Kubernetes, and Rancher:
+This hardening guide is intended to be used for RKE clusters and associated with the following versions of the CIS Kubernetes Benchmark, Kubernetes, and Rancher:
 
 | Rancher Version | CIS Benchmark Version | Kubernetes Version           |
 |-----------------|-----------------------|------------------------------|
 | Rancher v2.7    | Benchmark v1.23       | Kubernetes v1.23 up to v1.25 |
 
-For more details about evaluating a hardened cluster against the official CIS benchmark, refer to the RKE self-assessment Guides for specific CIS benchmark versions. 
+For more details on how to evaluate a hardened RKE cluster against the official CIS benchmark, refer to the RKE self-assessment guides for specific CIS benchmark versions.
 
 ## Host-level requirements
 

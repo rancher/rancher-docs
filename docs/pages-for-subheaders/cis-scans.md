@@ -13,7 +13,7 @@ The Center for Internet Security is a 501(c\)(3) non-profit organization, formed
 
 CIS Benchmarks are best practices for the secure configuration of a target system. CIS Benchmarks are developed through the generous volunteer efforts of subject matter experts, technology vendors, public and private community members, and the CIS Benchmark Development team.
 
-The official Benchmark documents are available through the CIS website. The sign-up form to access the documents is <a href="https://learn.cisecurity.org/benchmarks" target="_blank">here.</a>
+[Sign up](https://learn.cisecurity.org/benchmarks) at the CIS website to view the official Benchmark documents.
 
 ## About the Generated Report
 
@@ -115,4 +115,4 @@ For more information about configuring the custom resources for the scans, profi
 
 ## How-to Guides
 
-Please refer [here](../pages-for-subheaders/cis-scan-guides.md) for how-to guides on CIS scans.
+Please refer to the [CIS Scan Guides](../pages-for-subheaders/cis-scan-guides.md) to learn how to run CIS scans.

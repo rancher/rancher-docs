@@ -2,7 +2,7 @@
 title: Self-Assessment and Hardening Guides for Rancher
 ---
 
-Rancher provides specific security hardening guides for each supported Rancher's Kubernetes distributions.
+Rancher provides specific security hardening guides for each supported Rancher version's Kubernetes distributions.
 
 
 ## Rancher Kubernetes Distributions
@@ -11,13 +11,13 @@ Rancher uses the following Kubernetes distributions:
 
 - [**RKE**](https://rancher.com/docs/rke/latest/en/), Rancher Kubernetes Engine, is a CNCF-certified Kubernetes distribution that runs entirely within Docker containers.
 - [**RKE2**](https://docs.rke2.io/) is a fully conformant Kubernetes distribution that focuses on security and compliance within the U.S. Federal Government sector.
-- [**K3s**](https://docs.k3s.io/) is a fully conformant, lightweight Kubernetes distribution. It is easy to install, with half the memory of upstream Kubernetes, all in a binary of less than 100 MB.
+- [**K3s**](https://docs.k3s.io/) is a fully conformant, lightweight Kubernetes distribution. It is easy to install, with half the memory requirement of upstream Kubernetes, all in a binary of less than 100 MB.
 
-To harden a Kubernetes cluster outside of Rancher's distributions, refer to your Kubernetes provider docs.
+To harden a Kubernetes cluster that's running a distribution other than those listed, refer to your Kubernetes provider docs.
 
 ## Hardening Guides and Benchmark Versions
 
-These guides have been tested along with the Rancher release. Each self-assessment guide is accompanied by a hardening guide and tested on a specific Kubernetes version and CIS benchmark version. If a CIS benchmark has not been validated for your Kubernetes version, you can choose to use the existing guides until a newer version is added.
+Each self-assessment guide is accompanied by a hardening guide. These guides were tested alongside the listed Rancher releases. Each self-assessment guides was tested on a specific Kubernetes version and CIS benchmark version. If a CIS benchmark has not been validated for your Kubernetes version, you can use the existing guides until a guide for your version is added.
 
 ### RKE Guides
 
@@ -47,6 +47,6 @@ These guides have been tested along with the Rancher release. Each self-assessme
 
 ## Rancher with SELinux
 
-[Security-Enhanced Linux (SELinux)](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) is a security enhancement to Linux. After being historically used by government agencies, SELinux is now industry standard and is enabled by default on RHEL and CentOS.
+[Security-Enhanced Linux (SELinux)](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) is a kernel module that adds extra access controls and security tools to Linux. Historically used by government agencies, SELinux is now industry-standard. SELinux is enabled by default on RHEL and CentOS.
 
-To use Rancher with SELinux, we recommend installing the `rancher-selinux` RPM according to the instructions on [this page.](selinux-rpm.md#installing-the-rancher-selinux-rpm)
+To use Rancher with SELinux, we recommend [installing](selinux-rpm.md#installing-the-rancher-selinux-rpm) the `rancher-selinux` RPM.
