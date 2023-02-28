@@ -12,7 +12,7 @@ title: Logging 最佳实践
 
 现在，Rancher 的日志聚合更加灵活。通过新的 Logging 的功能，管理员和用户都可以部署符合细粒度收集标准的日志记录，同时提供更多的目标和配置选项。
 
-Rancher 的 Logging 使用的是 Banzai Cloud logging operator。我们让你可以管理这个 operator 及其资源，并将它的管理功能和 Rancher 集群管理联系起来。
+Rancher 的 Logging 使用的是 logging operator。我们让你可以管理这个 operator 及其资源，并将它的管理功能和 Rancher 集群管理联系起来。
 
 ## 集群级别日志
 

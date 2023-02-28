@@ -2,7 +2,7 @@
 title: Flows 和 ClusterFlows
 ---
 
-有关如何配置 `Flow` 和 `ClusterFlow` 的完整详细信息，请参阅 [Banzai Cloud Logging Operator 文档](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/flow/)。
+有关如何配置 `Flow` 和 `ClusterFlow` 的完整详细信息，请参阅 [Banzai Cloud Logging Operator 文档](https://kube-logging.github.io/docs/configuration/flow/)。
 
 有关如何解决 Logging 缓冲区的内存问题，请参阅 [Rancher 与 Logging 服务的集成：故障排除](../../../pages-for-subheaders/logging.md#日志缓冲区导致-pod-过载)。
 
@@ -14,7 +14,7 @@ title: Flows 和 ClusterFlows
 
 你可以通过在 Rancher UI 中填写表单来配置 `Flow`。
 
-有关 `Flow` 自定义资源的更多详细信息，请参阅 [FlowSpec](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/flow_types/)。
+有关 `Flow` 自定义资源的更多详细信息，请参阅 [FlowSpec](https://kube-logging.github.io/docs/configuration/crds/v1beta1/flow_types/)。
 
 ### Matches
 
@@ -24,13 +24,13 @@ title: Flows 和 ClusterFlows
 
 你可以通过填写 Rancher UI 中的 `Flow` 或 `ClusterFlow` 表单来配置匹配。
 
-使用 match 语句的详细示例，请参阅[日志路由的官方文档](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/log-routing/)。
+使用 match 语句的详细示例，请参阅[日志路由的官方文档](https://kube-logging.github.io/docs/configuration/log-routing/)。
 
 ### Filters
 
 你可以在 `Flow` 中定义一个或多个过滤器。过滤器可以对日志执行各种操作，例如，添加其他数据、转换日志或解析记录中的值。`Flow` 中的过滤器会按定义的顺序应用。
 
-有关 Banzai Cloud Logging Operator 支持的过滤器列表，请参阅[此页面](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/plugins/filters/)。
+有关 Logging Operator 支持的过滤器列表，请参阅[此页面](https://kube-logging.github.io/docs/configuration/plugins/filters/)。
 
 过滤器需要在 YAML 中配置。
 
