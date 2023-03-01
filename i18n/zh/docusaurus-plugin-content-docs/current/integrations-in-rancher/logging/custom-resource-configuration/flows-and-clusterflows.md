@@ -30,7 +30,7 @@ title: Flows 和 ClusterFlows
 
 你可以在 `Flow` 中定义一个或多个过滤器。过滤器可以对日志执行各种操作，例如，添加其他数据、转换日志或解析记录中的值。`Flow` 中的过滤器会按定义的顺序应用。
 
-有关 Logging Operator 支持的过滤器列表，请参阅[此页面](https://kube-logging.github.io/docs/configuration/plugins/filters/)。
+有关 Logging Operator 支持的过滤器列表，请参阅 [Fluentd 过滤器的官方文档](https://kube-logging.github.io/docs/configuration/plugins/filters/)。
 
 过滤器需要在 YAML 中配置。
 

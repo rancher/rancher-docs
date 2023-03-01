@@ -12,7 +12,7 @@ title: Logging 最佳实践
 
 现在，Rancher 的日志聚合更加灵活。通过新的 Logging 的功能，管理员和用户都可以部署符合细粒度收集标准的日志记录，同时提供更多的目标和配置选项。
 
-Rancher 的 Logging 使用的是 logging operator。我们让你可以管理这个 operator 及其资源，并将它的管理功能和 Rancher 集群管理联系起来。
+Rancher Logging 使用的是 [Logging Operator](https://github.com/kube-logging/logging-operator)。我们让你可以管理这个 operator 及其资源，并将它的管理功能和 Rancher 集群管理联系起来。
 
 ## 集群级别日志
 
@@ -44,7 +44,7 @@ Rancher 的 Logging 将读取 `/var/log/containers` 中的所有日志条目，�
 
 日志收集仅从 Kubernetes 中的 Pod 中检索 `stdout`/`stderr` 日志。但是，我们也可能想从应用生成的其他文件中收集日志。在这种情况下，你可以使用一个（或两个）日志流 Sidecar。
 
-设置日志流 Sidecar 的目的是获取写入磁盘的日志文件，并将其内容传输到 `stdout`。这样一来，Banzai Logging Operator 就可以接收这些日志，并把日志发送到目标输出位置。
+设置日志流 Sidecar 的目的是获取写入磁盘的日志文件，并将其内容传输到 `stdout`。这样一来，Logging Operator 就可以接收这些日志，并把日志发送到目标输出位置。
 
 要进行设置，编辑你的工作负载资源（例如 Deployment）并添加以下 Sidecar 定义：
 

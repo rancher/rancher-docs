@@ -5,7 +5,6 @@ title: 部署 Rancher Server
 你可使用以下指南之一，在你选择的提供商中部署和配置 Rancher 和 Kubernetes 集群。
 
 - [AWS](../getting-started/quick-start-guides/deploy-rancher-manager/aws.md)（使用 Terraform）
-- [AWS Marketplace](../getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace.md)（使用 Amazon EKS）
 - [Azure](../getting-started/quick-start-guides/deploy-rancher-manager/azure.md)（使用 Terraform）
 - [DigitalOcean](../getting-started/quick-start-guides/deploy-rancher-manager/digitalocean.md)（使用 Terraform）
 - [GCP](../getting-started/quick-start-guides/deploy-rancher-manager/gcp.md)（使用 Terraform）
