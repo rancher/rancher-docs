@@ -21,7 +21,7 @@ Fluent Bit 查询 Kubernetes API 并使用 pod 的元数据来丰富日志，然
 
 每个 `Flow` 都必须引用一个 `Output`，而每个 `ClusterFlow` 都必须引用一个 `ClusterOutput`。
 
-[Banzai 文档](https://kube-logging.github.io/docs/#architecture)中的下图显示了新的 Logging 架构：
+[Logging Operator 文档](https://kube-logging.github.io/docs/#architecture)中的下图显示了新的 Logging 架构：
 
 <figcaption>Logging Operator 如何与 Fluentd 和 Fluent Bit 一起使用</figcaption>
 

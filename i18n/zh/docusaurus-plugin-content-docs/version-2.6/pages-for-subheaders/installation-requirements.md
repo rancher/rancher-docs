@@ -11,41 +11,21 @@ description: 如果 Rancher 配置在 Docker 或 Kubernetes 中运行时，了�
 
 :::
 
-请确保安装 Rancher Server 的节点满足以下要求：
+Rancher UI 在基于 Firefox 或 Chromium 的浏览器（Chrome、Edge、Opera、Brave）中效果最佳。
 
-- [操作系统和容器运行时要求](#操作系统和容器运行时要求)
-   - [RKE 要求](#rke-要求)
-   - [K3s 要求](#k3s-要求)
-   - [RKE2 要求](#rke2-要求)
-   - [安装 Docker](#安装-docker)
-- [硬件要求](#硬件要求)
-- [CPU 和内存](#cpu-和内存)
-   - [RKE 和托管 Kubernetes](#rke-和托管-kubernetes)
-   - [K3s Kubernetes](#k3s-kubernetes)
-   - [RKE2 Kubernetes](#rke2-kubernetes)
-   - [Docker](#docker)
-- [Ingress](#ingress)
-- [磁盘](#磁盘)
-- [网络要求](#网络要求)
-   - [节点 IP 地址](#节点-ip-地址)
-   - [端口要求](#端口要求)
-- [Dockershim 支持](#dockershim-支持)
+查看我们的[最佳实践](../reference-guides/best-practices/rancher-server/tips-for-running-rancher.md)页面，获取在生产环境中运行 Rancher Server 的建议。
 
-如需获取在生产环境中运行 Rancher Server 的最佳实践列表，请参见[最佳实践](../reference-guides/best-practices/rancher-server/tips-for-running-rancher.md)。
+## Kubernetes 与 Rancher 的兼容性
 
-Rancher UI 在基于 Firefox 或 Chromium 的浏览器（Chrome、Edge、Opera、Brave 等）中效果最佳。
+Rancher 需要安装在支持的 Kubernetes 版本上。请查阅 [Rancher 支持矩阵](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-6-10/)，确保你的 Kubernetes 版本受支持。
 
 ## 操作系统和容器运行时要求
 
-Rancher 兼容当前所有的主流 Linux 发行版。
+所有支持的操作系统都使用 64-bit x86 架构。Rancher 兼容当前所有的主流 Linux 发行版。
 
-运行 RKE Kubernetes 集群的节点需要安装 Docker。RKE2 或 K3s 集群不需要它。
+[Rancher 支持矩阵](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-6-10/)列出了每个 Rancher 版本测试过的操作系统和 Docker 版本。
 
-Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的 Rancher 版本支持哪些 Kubernetes 版本，请参见[支持维护条款](https://rancher.com/support-maintenance-terms/)。
-
-如需了解各个 Rancher 版本通过了哪些操作系统和 Docker 版本测试，请参见[支持和维护条款](https://rancher.com/support-maintenance-terms/)。
-
-所有支持的操作系统都使用 64-bit x86 架构。
+运行 RKE 集群的节点需要安装 Docker。RKE2 或 K3s 集群不需要它。
 
 请安装 `ntp`（Network Time Protocol），以防止在客户端和服务器之间由于时间不同步造成的证书验证错误。
 
@@ -65,7 +45,7 @@ Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的
 
 对于容器运行时，K3s 默认附带了自己的 containerd。你也可以将 K3s 配置为使用已安装的 Docker 运行时。有关在 Docker 中使用 K3s 的更多信息，请参阅 [K3s 文档](https://docs.k3s.io/advanced#using-docker-as-the-container-runtime)。
 
-Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的 Rancher 版本支持哪些 Kubernetes 版本，请参见[支持维护条款](https://rancher.com/support-maintenance-terms/)。如需指定 K3s 版本，请在运行 K3s 安装脚本时，使用 `INSTALL_K3S_VERSION` 环境变量。
+Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的 Rancher 版本支持哪些 Kubernetes 版本，请参见 [Rancher 支持矩阵](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-6-10/)。如需指定 K3s 版本，在运行 K3s 安装脚本时，使用 `INSTALL_K3S_VERSION` 环境变量。
 
 如果你使用 **Raspbian Buster** 在 K3s 集群上安装 Rancher，请按照[这些步骤](https://rancher.com/docs/k3s/latest/en/advanced/#enabling-legacy-iptables-on-raspbian-buster)切换到旧版 iptables。
 
@@ -75,7 +55,7 @@ Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的
 
 对于容器运行时，RKE2 附带了自己的 containerd。RKE2 安装不需要 Docker。
 
-如需了解 RKE2 通过了哪些操作系统版本的测试，请参见[支持和维护条款](https://rancher.com/support-maintenance-terms/)。
+如需了解 RKE2 通过了哪些操作系统版本的测试，请参见 [Rancher 支持矩阵](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-6-10/)。
 
 ## 硬件要求
 
