@@ -40,6 +40,12 @@ This policy is a relaxed version of the `restricted-noroot` policy, with almost 
 
 This policy is equivalent to running Kubernetes with the PSP controller disabled. It has no restrictions on what pods can be deployed into a cluster or project.
 
+:::note important
+
+When disabling PSPs, default PSPs are **not** automatically deleted from your cluster. You must manually delete them if they're no longer needed.
+
+:::
+
 ## Creating PSPs
 
 Using Rancher, you can create a Pod Security Policy using our GUI rather than creating a YAML file.
