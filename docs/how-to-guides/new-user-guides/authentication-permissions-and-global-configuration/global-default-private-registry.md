@@ -29,12 +29,17 @@ The global default registry is intended to be used in air-gapped setups, for reg
 
 ### Namespaced Private Registry with RKE2 Downstream Clusters
 
-If you're using a namespaced private registry with downstream RKE2 clusters, you'll need to do some additional configuration to get the private registry to work.
+Most private registries should work, by default, with RKE2 downstream clusters.
+
+However, you'll need to do some additional steps if you're trying to set a namespaced private registry whose URL is formated like this: `website/subdomain:portnumber`.
 
 1. Select **☰ > Cluster Management**.
 1. Find the RKE2 cluster in the list and click the three dots icon to open a submenu. Select **Edit Config**.
-//TO-DO//
-
+1. From the **Cluster config** menu, select **Registries**.
+1. In the **Registries** pane, select the option, **Configure advanced containerd mirroring and registry authentication options**.
+1. In the text fields under **Mirrors**, enter the **Registry Hostname** and **Mirror Endpoints**.
+1. Click **Save**.
+1. Repeat as necessary for each downstream RKE2 cluster.
 
 ## Configure a Private Registry with Credentials when Creating a Cluster
 
