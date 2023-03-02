@@ -30,7 +30,7 @@ This guide makes the assumption that K3s is running as a Systemd unit. Your inst
 
 :::note
 
-his guide only covers `automated` (previously called `scored`) tests.
+This guide only covers `automated` (previously called `scored`) tests.
 
 :::
 

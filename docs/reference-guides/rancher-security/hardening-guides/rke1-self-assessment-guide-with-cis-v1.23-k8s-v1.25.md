@@ -25,7 +25,7 @@ Where control audits differ from the original CIS benchmark, the audit commands 
 
 :::note
 
-his guide only covers `automated` (previously called `scored`) tests.
+This guide only covers `automated` (previously called `scored`) tests.
 
 :::
 
