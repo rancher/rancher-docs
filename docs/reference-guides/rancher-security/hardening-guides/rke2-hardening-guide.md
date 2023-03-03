@@ -62,7 +62,7 @@ sudo useradd -r -c "etcd user" -s /sbin/nologin -M etcd -U
 
 This is a kubelet flag that will cause the kubelet to exit if the required kernel parameters are unset or are set to values that are different from the kubelet's defaults.
 
-Both `protect-kernel-defaults` and `profile` flags can be set in RKE2 template configuration file.
+Both `protect-kernel-defaults` and `profile` flags can be set in the RKE2 template configuration file.
 When the `profile` flag is set, RKE2 will set the flag to `true` if it is unset.
 
 ```yaml
@@ -97,23 +97,23 @@ spec:
           protect-kernel-defaults: true
 ```
 
-When both the `defaultPodSecurityAdmissionConfigurationTemplateName` and `profile` flag are set, Rancher and RKE2 does the following:
+When both the `defaultPodSecurityAdmissionConfigurationTemplateName` and `profile` flags are set, Rancher and RKE2 does the following:
 
 1. Checks that host-level requirements have been met. If they haven't, RKE2 will exit with a fatal error describing the unmet requirements.
 2. Applies network policies that allow the cluster to pass associated controls.
-3. Configures the Pod Security Admission Controller with the Pod Security Admission Configuration Template(PSACT) `rancher-restricted`, to enforce restricted mode in all namespaces, except the ones in the PSACT's exemption list.
+3. Configures the Pod Security Admission Controller with the Pod Security Admission Configuration Template (PSACT) `rancher-restricted`, to enforce restricted mode in all namespaces, except the ones in the PSACT's exemption list.
    These namespaces are exempted to allow system pods to run without restrictions, which is required for proper operation of the cluster.
 
 </TabItem>
 
 <TabItem value='v1.22 up to v1.24'>
 
-On v1.24 and older, the `PodSecurityPolicy` admission controller is always enabled.
+On Kubernetes v1.22 to v1.24, the `PodSecurityPolicy` admission controller is always enabled.
 
 Below is the minimum necessary configuration needed for hardening RKE2 to pass CIS v1.23 hardened profile `rke2-cis-1.23-profile-hardened` available in Rancher.
 
 :::note
-In the following example the profile is set to `cis-1.6` which is the value defined in the upstream RKE2, but the cluster is actually configured to pass CIS v1.23 hardened profile
+In the following example the profile is set to `cis-1.6` which is the value defined in the upstream RKE2, but the cluster is actually configured to pass the CIS v1.23 hardened profile
 :::
 
 ```yaml
@@ -127,7 +127,7 @@ spec:
 ```
 
 
-When both the `defaultPodSecurityPolicyTemplateName` and `profile` flag are set, Rancher and RKE2 does the following:
+When both the `defaultPodSecurityPolicyTemplateName` and `profile` flags are set, Rancher and RKE2 does the following:
 
 1. Checks that host-level requirements have been met. If they haven't, RKE2 will exit with a fatal error describing the unmet requirements.
 2. Applies network policies that allow the cluster to pass associated controls.
@@ -142,7 +142,7 @@ The Kubernetes control plane components and critical additions such as CNI, DNS,
 
 ### NetworkPolicies
 
-When ran with a valid "cis-1.XX" profile, RKE2 will put `NetworkPolicies` in place that passes the CIS Benchmark for Kubernetes' built-in namespaces. These namespaces are: `kube-system`, `kube-public`, `kube-node-lease`, and `default`.
+When ran with a valid `cis-1.XX` profile, RKE2 will put `NetworkPolicies` in place that passes the CIS Benchmark for Kubernetes' built-in namespaces. These namespaces are: `kube-system`, `kube-public`, `kube-node-lease`, and `default`.
 
 The `NetworkPolicy` used will only allow pods within the same namespace to talk to each other. The notable exception to this is that it allows DNS requests to be resolved.
 
@@ -216,7 +216,7 @@ The following are controls that RKE2 currently does not pass. Each gap will be e
 
 **Rationale**
 
-The benchmark scanner expects to see a PodSecurityPolicy resource named `global-restricted-psp` in the cluster, However the PodSecurityPolicy resource Rancher creates is named as `restricted-noroot-psp`
+The benchmark scanner expects to see a PodSecurityPolicy resource named `global-restricted-psp` in the cluster. However, the PodSecurityPolicy resource Rancher creates is named `restricted-noroot-psp`.
 
 **Remediation**
 
@@ -234,12 +234,12 @@ Create a PodSecurityPolicy resource named `global-restricted-psp` by cloning `re
 
 **Rationale**
 
-Those controls are defined to evaluate certain PodSecurityPolicy resources in the benchmark, but the PodSecurityPolicy API is removed starting at Kubernetes v1.25, therefore those controls fail in the scan.
+Those controls are defined to evaluate certain PodSecurityPolicy resources in the benchmark, but the PodSecurityPolicy API is removed starting in Kubernetes v1.25, therefore those controls fail in the scan.
 
 **Remediation**
 
-Pod Security Admission is configured by setting the Pod Security Admission Configuration Template(PSACT) `rancher-restricted` in the cluster to enforce the restriction on applicable namespaces.
-Due to the lack of utilizing PSA in the current version of the benchmark, the above controls will not be addressed until an updated version of benchmark is available.
+Pod Security Admission is configured by setting the Pod Security Admission Configuration Template (PSACT) `rancher-restricted` in the cluster to enforce the restriction on applicable namespaces.
+Due to the lack of utilizing PSA in the current version of the benchmark, the above controls will not be addressed until an updated version of the benchmark is available.
 
 </TabItem>
 </Tabs>

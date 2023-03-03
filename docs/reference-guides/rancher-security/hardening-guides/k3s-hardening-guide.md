@@ -76,7 +76,7 @@ spec:
   defaultPodSecurityAdmissionConfigurationTemplateName: rancher-restricted
 ```
 </TabItem>
-<TabItem value="v1.24 and Older" default>
+<TabItem value="v1.24 and Older">
 
 K3s v1.24 and older support [Pod Security Policies (PSPs)](https://v1-24.docs.kubernetes.io/docs/concepts/security/pod-security-policy/) for controlling pod security. 
 
@@ -89,7 +89,8 @@ spec:
       kube-apiserver-arg:
         - enable-admission-plugins=NodeRestriction,PodSecurityPolicy,ServiceAccount
 ```
-This  maintains the `NodeRestriction` plugin and enables the `PodSecurityPolicy`.
+
+This maintains the `NodeRestriction` plugin and enables the `PodSecurityPolicy`.
 
 Once you enable PSPs, you can apply a policy to satisfy the necessary controls described in section 5.2 of the CIS Benchmark.
 
@@ -134,7 +135,7 @@ spec:
   readOnlyRootFilesystem: false
 ```
 
-For the example PSP to be effective, we need to create a `ClusterRole` and a `ClusterRoleBinding`. We also need to include a "system unrestricted policy" for system-level pods that require additional privileges, and an additional policy that allows the necessary sysctls  for full functionality of servicelb.
+For the example PSP to be effective, we need to create a `ClusterRole` and a `ClusterRoleBinding`. We also need to include a "system unrestricted policy" for system-level pods that require additional privileges, and an additional policy that allows the necessary sysctls for full functionality of ServiceLB.
 
 If we combine the configuration above with the Network Policy described in the next section, we can place a single file in the `/var/lib/rancher/k3s/server/manifests` directory. Here is an example of a `policy.yaml` file:
 
@@ -365,7 +366,7 @@ spec:
 ```
 
 :::note
-The Kubernetes critical additions such as CNI, DNS, and Ingress are run as pods in the `kube-system` namespace. Therefore, this namespace has a less restrictive policy, so that these components can run properly.
+The critical Kubernetes additions such as CNI, DNS, and Ingress are run as pods in the `kube-system` namespace. Therefore, this namespace has a less restrictive policy, so that these components can run properly.
 :::
 
 </TabItem>
@@ -470,7 +471,7 @@ spec:
 ```
 </TabItem>
 
-<TabItem value="v1.20 and Older" default>
+<TabItem value="v1.20 and Older">
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -520,7 +521,7 @@ spec:
 </Tabs>
 
 :::note
-You must manage network policies as normal for any  additional namespaces you create.
+You must manage network policies as normal for any additional namespaces you create.
 :::
 
 ### API Server audit configuration
@@ -549,7 +550,7 @@ Further configurations are also needed to pass CIS checks. These aren't configur
 - Ensure that the `--audit-log-maxbackup` argument is set to 10 or as appropriate.
 - Ensure that the `--audit-log-maxsize` argument is set to 100 or as appropriate.
 
-Combined, to enable and configure audit logs, add the following lines to K3s cluster configuration file in Rancher:
+Combined, to enable and configure audit logs, add the following lines to the K3s cluster configuration file in Rancher:
 
 ```yaml
 spec:

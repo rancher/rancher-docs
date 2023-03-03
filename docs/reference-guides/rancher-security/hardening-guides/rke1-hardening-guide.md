@@ -40,7 +40,7 @@ The **uid** and **gid** for the **etcd** user will be used in the RKE **config.y
 #### Create `etcd` user and group
 
 To create the **etcd** user and group run the following console commands. 
-The commands below use `52034` for **uid** and **gid** are for example purposes. 
+The commands below use `52034` for **uid** and **gid** for example purposes. 
 Any valid unused **uid** or **gid** could also be used in lieu of `52034`.
 
 ```bash
@@ -141,8 +141,8 @@ Execute this script to apply the `default-allow-all.yaml` configuration with the
 
 ## Known Limitations
 
-- Rancher **exec shell** and **view logs** for pods are **not** functional in a hardened setup when only public IP is provided when registering custom nodes. This functionality requires a private IP to be provided when registering the custom nodes.
-- When setting the `default_pod_security_policy_template_id:` to `restricted` or `restricted-noroot`, based on the pod security policies (PSP) [provided](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) by Rancher, Rancher creates **RoleBindings** and **ClusterRoleBindings** on the default service accounts. The CIS v1.6/v1.20/v1.23 check 5.1.5 requires that the default service accounts have no roles or cluster roles bound to it apart from the defaults. In addition, the default service accounts should be configured such that it does not provide a service account token and does not have any explicit rights assignments.
+- Rancher **exec shell** and **view logs** for pods are **not** functional in a hardened setup when only a public IP is provided when registering custom nodes. This functionality requires a private IP to be provided when registering the custom nodes.
+- When setting `default_pod_security_policy_template_id:` to `restricted` or `restricted-noroot`, based on the pod security policies (PSP) [provided](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) by Rancher, Rancher creates **RoleBindings** and **ClusterRoleBindings** on the default service accounts. The CIS v1.6/v1.20/v1.23 check 5.1.5 requires that the default service accounts have no roles or cluster roles bound to it apart from the defaults. In addition, the default service accounts should be configured such that it does not provide a service account token and does not have any explicit rights assignments.
 
 ## Known Issues
 
@@ -159,12 +159,12 @@ The following are controls that RKE currently does not pass. Each gap will be ex
 
 **Rationale**
 
-Those controls are defined to evaluate certain PodSecurityPolicy resources in the benchmark, but the PodSecurityPolicy API is removed starting at Kubernetes v1.25, therefore those controls fail in the scan.
+Those controls are defined to evaluate certain PodSecurityPolicy resources in the benchmark, but the PodSecurityPolicy API is removed starting in Kubernetes v1.25, therefore those controls fail in the scan.
 
 **Remediation**
 
-Pod Security Admission is configured by setting the Pod Security Admission Configuration Template(PSACT) `rancher-restricted` in the cluster to enforce the restriction on applicable namespaces.
-Due to the lack of utilizing PSA in the current version of the benchmark, the above controls will not be addressed until an updated version of benchmark is available.
+Pod Security Admission is configured by setting the Pod Security Admission Configuration Template (PSACT) `rancher-restricted` in the cluster to enforce the restriction on applicable namespaces.
+Due to the lack of utilizing PSA in the current version of the benchmark, the above controls will not be addressed until an updated version of the benchmark is available.
 
 
 #### CIS v1.23 - Control  5.3.2 - Ensure that all Namespaces have Network Policies defined (Automated)
@@ -202,11 +202,11 @@ The reference `cluster.yml` is used by the RKE CLI that provides the configurati
 <TabItem value='v1.25 and Newer' default>
 
 :::note
-If you intended to import the RKE cluster into Rancher, please consult the documentation for how to configure the Pod Security Admission to add Rancher's namespaces to the exemption list. 
+If you intend to import an RKE cluster into Rancher, please consult the documentation for how to configure the Pod Security Admission to add Rancher's namespaces to the exemption list. 
 :::
 
 ```yaml
-# If you intended to deploy Kubernetes in an air-gapped environment,
+# If you intend to deploy Kubernetes in an air-gapped environment,
 # please consult the documentation on how to configure custom RKE images.
 nodes: []
 kubernetes_version: v1.25.6-rancher2-1
@@ -254,10 +254,6 @@ addons: |
 
 </TabItem>
 <TabItem value='v1.22 up to v1.24'>
-
-:::note
-For a Kubernetes v1.18 cluster, the configuration `spec.volumes: 'ephemeral'` should be removed from the `PodSecurityPolicy`, since it's not supported in this Kubernetes release.
-:::
 
 ```yaml
 # If you intend to deploy Kubernetes in an air-gapped environment,
