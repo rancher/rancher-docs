@@ -52,7 +52,7 @@ This command generates static content into the `build` directory and can be serv
 
 You can also use [Docker](https://www.docker.com/) to launch the website.
 
-The below command can be use to install the dependencies and run the site inside a container:
+The below command can be used to install the dependencies and run the site inside a container:
 
 ```
 docker run --rm -it -v $PWD:$PWD -w $PWD -p 3000:3000 node /bin/sh -c "yarn install && yarn start -h 0.0.0.0"
