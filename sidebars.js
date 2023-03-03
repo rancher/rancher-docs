@@ -1049,29 +1049,24 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Rancher v2.6 Hardening Guides',
+              label: 'Hardening Guides',
               link: {
                 type: 'doc',
-                id: "pages-for-subheaders/rancher-v2.6-hardening-guides",
+                id: "pages-for-subheaders/rancher-hardening-guides",
               },
               items: [
-                "reference-guides/rancher-security/rancher-v2.6-hardening-guides/rke1-hardening-guide-with-cis-v1.6-benchmark",
-                "reference-guides/rancher-security/rancher-v2.6-hardening-guides/rke1-self-assessment-guide-with-cis-v1.6-benchmark",
-                "reference-guides/rancher-security/rancher-v2.6-hardening-guides/rke2-hardening-guide-with-cis-v1.6-benchmark",
-                "reference-guides/rancher-security/rancher-v2.6-hardening-guides/rke2-self-assessment-guide-with-cis-v1.6-benchmark",
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Rancher v2.7 Hardening Guides',
-              link: {
-                type: 'doc',
-                id: "pages-for-subheaders/rancher-v2.7-hardening-guides",
-              },
-              items: [
-                "reference-guides/rancher-security/rancher-v2.7-hardening-guides/k3s-hardening-guide-with-cis-benchmark",
-                "reference-guides/rancher-security/rancher-v2.7-hardening-guides/k3s-self-assessment-guide-with-cis-v1.20-benchmark",
-                "reference-guides/rancher-security/rancher-v2.7-hardening-guides/k3s-self-assessment-guide-with-cis-v1.23-benchmark",
+                "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide",
+                "reference-guides/rancher-security/hardening-guides/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
+                "reference-guides/rancher-security/hardening-guides/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.24",
+                "reference-guides/rancher-security/hardening-guides/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.25",
+                "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide",
+                "reference-guides/rancher-security/hardening-guides/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
+                "reference-guides/rancher-security/hardening-guides/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.24",
+                "reference-guides/rancher-security/hardening-guides/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25",
+                "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide",
+                "reference-guides/rancher-security/hardening-guides/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
+                "reference-guides/rancher-security/hardening-guides/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.24",
+                "reference-guides/rancher-security/hardening-guides/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.25",
               ],
             },
             {
