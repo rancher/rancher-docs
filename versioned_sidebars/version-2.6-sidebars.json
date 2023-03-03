@@ -292,7 +292,6 @@
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases"
                   ]
                 },
-                "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates",
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies",
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry",
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding"
@@ -362,6 +361,7 @@
                 "how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces",
                 "how-to-guides/new-user-guides/manage-clusters/rotate-certificates",
                 "how-to-guides/new-user-guides/manage-clusters/rotate-encryption-key",
+                "how-to-guides/new-user-guides/manage-clusters/manage-cluster-templates",
                 "how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
                 "how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes",
                 "how-to-guides/new-user-guides/manage-clusters/add-a-pod-security-policy",

@@ -101,7 +101,7 @@ RKE 模板更新通过修订系统处理。如果要更改或更新模板，请�
 
 RKE 模板的目的是标准化 Kubernetes 和 Rancher 设置。如果你还想标准化你的基础设施，一个选择是将 RKE 模板与[其他工具](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/infrastructure.md)一起使用。
 
-另一种选择是使用包含节点池配置选项，但不强制执行配置的[集群模板](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates.md)。
+另一种选择是使用包含节点池配置选项，但不强制执行配置的[集群模板](../how-to-guides/new-user-guides/manage-clusters/manage-cluster-templates.md)。
 
 ## YAML 定制
 

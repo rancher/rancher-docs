@@ -133,7 +133,7 @@ Rancher v2.6 introduces provisioning for [RKE2](https://docs.rke2.io/) clusters 
 
 :::note
 
-For RKE2 cluster templates, please refer to [this page](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates.md#rke2-cluster-template) for additional information. 
+For RKE2 cluster templates, please refer to [this page](../how-to-guides/new-user-guides/manage-clusters/manage-cluster-templates.md#rke2-cluster-template) for additional information. 
 
 :::
 
