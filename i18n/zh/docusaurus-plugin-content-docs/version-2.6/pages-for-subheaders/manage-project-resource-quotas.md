@@ -20,7 +20,13 @@ Rancher 中的资源配额包含与 [Kubernetes 原生版本](https://kubernetes
 1. 在左上角，单击 **☰ > 集群管理**。
 1. 在**集群**页面，进入要应用资源配额的集群，然后单击 **Explore**。
 1. 单击**集群 > 项目/命名空间**。
-1. 找到要添加资源配额的项目。在该项目中选择 **⋮ > 编辑配置**。
+1. 确保 **Projects/Namespaces** 页面处于 **Group by Project** 视图模式。
+   ![Screenshot highlighting the "Group by Project" icon, above the list of projects. It resembles a folder.](/img/edit-project-config-for-resource-quotas-group-by-project.png)
+
+1. 找到要添加资源配额的项目，选择与项目名称同行的 **⋮**。
+   ![Screenshot highlighting triple dots icon at the end of the same row as the project name.](/img/edit-project-config-for-resource-quotas-dots.png)
+
+1. 选择**编辑配置**。
 
 1. 展开**资源限额**并单击**添加资源**。你也可以编辑现有配额。
 

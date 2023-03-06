@@ -2,9 +2,9 @@
 title: Flows and ClusterFlows
 ---
 
-See the [Banzai Cloud Logging operator documentation](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/flow/) for the full details on how to configure  `Flows` and `ClusterFlows`.
+See the [Logging operator documentation](https://kube-logging.github.io/docs/configuration/flow/) for the full details on how to configure  `Flows` and `ClusterFlows`.
 
-See [Rancher Integration with Logging Services: Troubleshooting](../../../pages-for-subheaders/logging.md#The-Logging-Buffer-Overloads-Pods) for how to resolve memory problems with the logging buffer.
+See [Rancher Integration with Logging Services: Troubleshooting](../../../../pages-for-subheaders/logging.md#The-Logging-Buffer-Overloads-Pods) for how to resolve memory problems with the logging buffer.
 
 - [Configuration](#configuration)
 - [YAML Example](#yaml-example)
@@ -33,7 +33,7 @@ A `Flow` defines which logs to collect and filter and which output to send the l
 
 The `Flow` is a namespaced resource, which means logs will only be collected from the namespace that the `Flow` is deployed in.
 
-For more details about the `Flow` custom resource, see [FlowSpec.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/flow_types/)
+For more details about the `Flow` custom resource, see [FlowSpec.](https://kube-logging.github.io/docs/configuration/crds/v1beta1/flow_types/)
 
 
 <a id="matches-2-5-8"></a>
@@ -46,7 +46,7 @@ You can specify match statements to select or exclude logs according to Kubernet
 
 Matches can be configured by filling out the `Flow` or `ClusterFlow` forms in the Rancher UI.
 
-For detailed examples on using the match statement, see the [official documentation on log routing.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/log-routing/)
+For detailed examples on using the match statement, see the [official documentation on log routing.](https://kube-logging.github.io/docs/configuration/log-routing/)
 
 <a id="filters-2-5-8"></a>
 
@@ -54,7 +54,7 @@ For detailed examples on using the match statement, see the [official documentat
 
 You can define one or more filters within a `Flow`. Filters can perform various actions on the logs, for example, add additional data, transform the logs, or parse values from the records. The filters in the `Flow` are applied in the order in the definition.
 
-For a list of filters supported by the Banzai Cloud Logging operator, see [this page.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/plugins/filters/)
+For a list of filters supported by the Logging operator, see [the official documentation on Fluentd filters](https://kube-logging.github.io/docs/configuration/plugins/filters/).
 
 Filters need to be configured in YAML.
 
@@ -93,7 +93,7 @@ A `Flow` defines which logs to collect and filter and which `Output` to send the
 
 `Flows` need to be defined in YAML.
 
-For more details about the `Flow` custom resource, see [FlowSpec.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/flow_types/)
+For more details about the `Flow` custom resource, see [FlowSpec.](https://kube-logging.github.io/docs/configuration/crds/v1beta1/flow_types/)
 
 
 <a id="matches-2-5-0"></a>
@@ -104,7 +104,7 @@ Match statements are used to select which containers to pull logs from.
 
 You can specify match statements to select or exclude logs according to Kubernetes labels, container and host names. Match statements are evaluated in the order they are defined and processed only until the first matching select or exclude rule applies.
 
-For detailed examples on using the match statement, see the [official documentation on log routing.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/log-routing/)
+For detailed examples on using the match statement, see the [official documentation on log routing.](https://kube-logging.github.io/docs/configuration/log-routing/)
 
 <a id="filters-2-5-0"></a>
 
@@ -112,7 +112,7 @@ For detailed examples on using the match statement, see the [official documentat
 
 You can define one or more filters within a `Flow`. Filters can perform various actions on the logs, for example, add additional data, transform the logs, or parse values from the records. The filters in the `Flow` are applied in the order in the definition.
 
-For a list of filters supported by the Banzai Cloud Logging operator, see [this page.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/plugins/filters/)
+For a list of filters supported by the Logging operator, see [this page.](https://kube-logging.github.io/docs/configuration/plugins/filters/)
 
 <a id="outputs-2-5-0"></a>
 

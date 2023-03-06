@@ -5,7 +5,6 @@ title: Deploying Rancher Server
 Use one of the following guides to deploy and provision Rancher and a Kubernetes cluster in the provider of your choice.
 
 - [AWS](../getting-started/quick-start-guides/deploy-rancher-manager/aws.md) (uses Terraform)
-- [AWS Marketplace](../getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace.md) (uses Amazon EKS)
 - [Azure](../getting-started/quick-start-guides/deploy-rancher-manager/azure.md) (uses Terraform)
 - [DigitalOcean](../getting-started/quick-start-guides/deploy-rancher-manager/digitalocean.md) (uses Terraform)
 - [GCP](../getting-started/quick-start-guides/deploy-rancher-manager/gcp.md) (uses Terraform)
