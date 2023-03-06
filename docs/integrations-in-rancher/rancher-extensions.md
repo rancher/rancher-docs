@@ -81,4 +81,4 @@ You must reload the page after rolling back extensions or display issues may occ
 
 ## Developing Extensions
 
-To learn how to develop your own extensions, refer to the [UI DevKit Documentation](https://rancher.github.io/dashboard/plugins/plugins-getting-started).
+To learn how to develop your own extensions, refer to the official [Getting Started](https://rancher.github.io/dashboard/extensions/extensions-getting-started) guide.
