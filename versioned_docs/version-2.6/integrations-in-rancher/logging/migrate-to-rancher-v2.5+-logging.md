@@ -1,7 +1,7 @@
 ---
 title: Migrating to Rancher v2.5 Logging
 ---
-Starting in v2.5, the logging feature available within Rancher has been completely overhauled. The [logging operator](https://github.com/banzaicloud/logging-operator) from Banzai Cloud has been adopted; Rancher configures this tooling for use when deploying logging.
+Starting in v2.5, the logging feature available within Rancher has been completely overhauled. The [Logging operator](https://github.com/kube-logging/logging-operator) has been adopted; Rancher configures this tooling for use when deploying logging.
 
 Among the many features and changes in the new logging functionality is the removal of project-specific logging configurations. Instead, one now configures logging at the namespace level. Cluster-level logging remains available, but configuration options differ.
 

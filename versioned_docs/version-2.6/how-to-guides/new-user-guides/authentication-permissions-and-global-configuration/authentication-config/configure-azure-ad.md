@@ -167,13 +167,25 @@ You'll also need to manually enter the Graph, Token, and Auth Endpoints.
 
 #### 5. Configure Azure AD in Rancher
 
-To complete configuration, enter information about your AD instance in the Rancher UI.
+From the Rancher UI, enter information about your AD instance hosted in Azure to complete configuration.
 
 1. Log into Rancher.
-1. In the upper left corner of the toolbar, click **☰ > Users & Authentication**.
-1. In the nav menu, click **Auth Provider**.
+
+1. In the top left corner, click **☰ > Users & Authentication**.
+
+1. In the left navigation menu, click **Auth Provider**.
+
 1. Click **AzureAD**.
+
 1. Complete the **Configure Azure AD Account** form using the information you copied while completing [Copy Azure Application Data](#4-copy-azure-application-data).
+
+    :::caution
+
+    The Azure AD account will be granted administrator privileges, since its details will be mapped to the Rancher local principal account. Make sure that this level of privilege is appropriate before you continue.
+
+    :::
+
+    **For Standard or China Endpoints:**
 
     The following table maps the values you copied in the Azure portal to the fields in Rancher:
 
@@ -184,20 +196,19 @@ To complete configuration, enter information about your AD instance in the Ranch
     | Application Secret | Key Value                             |
     | Endpoint           | https://login.microsoftonline.com/    |
 
+    **For Custom Endpoints:**
 
-**For Custom Endpoints:**
+    The following table maps the custom config values you copied in the Azure portal to the fields in Rancher:
 
-The following table maps the custom config values you copied in the Azure portal to the fields in Rancher:
+    | Rancher Field      | Azure Value                           |
+    | ------------------ | ------------------------------------- |
+    | Graph Endpoint     | Microsoft Graph API Endpoint          |
+    | Token Endpoint     | OAuth 2.0 Token Endpoint              |
+    | Auth Endpoint      | OAuth 2.0 Authorization Endpoint      |
 
-| Rancher Field      | Azure Value                           |
-| ------------------ | ------------------------------------- |
-| Graph Endpoint     | Microsoft Graph API Endpoint          |
-| Token Endpoint     | OAuth 2.0 Token Endpoint              |
-| Auth Endpoint      | OAuth 2.0 Authorization Endpoint      |
+    **Important:** When entering the Graph Endpoint in a custom config, remove the tenant ID from the URL:
 
-**Important:** When entering the Graph Endpoint in a custom config, remove the tenant ID from the URL, like below:
-
-<code>http<span>s://g</span>raph.microsoft.com<del>/abb5adde-bee8-4821-8b03-e63efdc7701c</del></code>
+    <code>http<span>s://g</span>raph.microsoft.com<del>/abb5adde-bee8-4821-8b03-e63efdc7701c</del></code>
 
 1. Click **Enable**.
 
@@ -206,8 +217,8 @@ The following table maps the custom config values you copied in the Azure portal
 
 ### Migrating from Azure AD Graph API to Microsoft Graph API
 
-Since the [Azure AD Graph API](https://docs.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview) is deprecated and slated to retire in June 2023, admins should update their Azure AD App to use the [Microsoft Graph API](https://docs.microsoft.com/en-us/graph/use-the-api) in Rancher. 
-This needs to be done well in advance of the endpoint being retired. 
+Since the [Azure AD Graph API](https://docs.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview) is deprecated and slated to retire in June 2023, admins should update their Azure AD App to use the [Microsoft Graph API](https://docs.microsoft.com/en-us/graph/use-the-api) in Rancher.
+This needs to be done well in advance of the endpoint being retired.
 If Rancher is still configured to use the Azure AD Graph API when it is retired, users may not be able to log into Rancher using Azure AD.
 
 #### Updating Endpoints in the Rancher UI

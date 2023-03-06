@@ -315,10 +315,6 @@
     "message": "About the API",
     "description": "The label for category About the API in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Pipelines": {
-    "message": "Pipelines",
-    "description": "The label for category Pipelines in sidebar tutorialSidebar"
-  },
   "sidebar.tutorialSidebar.category.Rancher Security": {
     "message": "Rancher Security",
     "description": "The label for category Rancher Security in sidebar tutorialSidebar"

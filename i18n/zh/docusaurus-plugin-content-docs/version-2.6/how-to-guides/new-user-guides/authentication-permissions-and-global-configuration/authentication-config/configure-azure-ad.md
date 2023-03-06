@@ -127,8 +127,6 @@ Microsoft Graph API 现在是设置 Azure AD 的流程。下文将帮助[新用�
 
 #### 4. 复制 Azure 应用数据
 
-这是在 Azure 中执行的的最后一步。你需要复制用于配置 Rancher 以进行 Azure AD 身份验证的数据，并将其粘贴到一个空文本文件中。
-
 1. 获取你的 Rancher **租户 ID**。
 
    1. 使用搜索打开 **App registrations**。
@@ -176,13 +174,23 @@ Microsoft Graph API 现在是设置 Azure AD 的流程。下文将帮助[新用�
 
 在 Rancher UI 中，输入托管在 Azure 中的 AD 实例的信息以完成配置。
 
-输入你复制到[文本文件](#tip)的值。
-
 1. 登录到 Rancher。
+
 1. 在左上角，单击 **☰ > 用户 & 认证**。
+
 1. 在左侧导航栏，单击**认证**。
+
 1. 单击 **AzureAD**。
+
 1. 使用你在[复制 Azure 应用数据](#4-复制-azure-应用数据)时复制的信息，填写**配置 Azure AD 账号**的表单。
+
+   :::caution
+
+   Azure AD 帐户将被授予管理员权限，因为其详细信息将映射到 Rancher 本地主体帐户。在继续之前确保此权限级别是适当的。
+
+   :::
+
+   **对于标准或中国端点：**
 
    下表介绍了你在 Azure 门户中复制的值与 Rancher 中字段的映射：
 
@@ -193,20 +201,19 @@ Microsoft Graph API 现在是设置 Azure AD 的流程。下文将帮助[新用�
    | 应用密文 | Key Value |
    | 端点 | https://login.microsoftonline.com/ |
 
+   **对于自定义端点**：
 
-**对于自定义端点**：
+   下表介绍了你在 Azure 门户中复制的自定义配置值与 Rancher 中字段的映射：
 
-下表介绍了你在 Azure 门户中复制的自定义配置值与 Rancher 中字段的映射：
+   | Rancher 字段 | Azure 值 |
+   | ------------------ | ------------------------------------- |
+   | Graph 端点 | Microsoft Graph API Endpoint |
+   | Token 端点 | OAuth 2.0 Token Endpoint |
+   | Auth 端点 | OAuth 2.0 Authorization Endpoint |
 
-| Rancher 字段 | Azure 值 |
-| ------------------ | ------------------------------------- |
-| Graph 端点 | Microsoft Graph API Endpoint |
-| Token 端点 | OAuth 2.0 Token Endpoint |
-| Auth 端点 | OAuth 2.0 Authorization Endpoint |
+   **重要提示**：在自定义配置中输入 Graph Endpoint 时，请从 URL 中删除 Tenant ID：
 
-**重要提示**：在自定义配置中输入 Graph Endpoint 时，请从 URL 中删除 Tenant ID，如下所示：
-
-<code>http<span>s://g</span>raph.microsoft.com/<del>abb5adde-bee8-4821-8b03-e63efdc7701c</del></code>
+   <code>http<span>s://g</span>raph.microsoft.com<del>/abb5adde-bee8-4821-8b03-e63efdc7701c</del></code>
 
 1. 点击**启用**。
 

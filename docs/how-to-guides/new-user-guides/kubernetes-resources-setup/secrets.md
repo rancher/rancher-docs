@@ -63,6 +63,8 @@ Before v2.6, secrets were required to be in a project scope. Projects are no lon
 
 **Result:** Your secret is added to the individual project you chose. You can view the secret in the Rancher UI by clicking either **Storage > Secrets** or **More Resources > Core > Secrets**.
 
+Since project-scoped secrets are set at the project level, any changes made at the namespace level will be overwritten.
+
 :::note
 
 Project-scoped secrets on the local cluster are only visible when a single project is selected.
