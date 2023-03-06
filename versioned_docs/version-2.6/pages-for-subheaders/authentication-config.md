@@ -130,8 +130,7 @@ Rancher won't perform cleanup until you set the annotation to `unlocked`.
 
 ### Running Resource Cleanup Manually
 
-Rancher might retain resources from a previously disabled auth provider configuration in the local cluster, even after you configure another auth provider.
-For example, if you used Provider A, then disabled it and started using Provider B, when you upgrade to a new version of Rancher, you can manually trigger cleanup on resources configured by Provider A.
+Rancher might retain resources from a previously disabled auth provider configuration in the local cluster, even after you configure another auth provider. For example, if you used Provider A, then disabled it and started using Provider B, when you upgrade to a new version of Rancher, you can manually trigger cleanup on resources configured by Provider A.
 
 To manually trigger cleanup for a disabled auth provider, add the `management.cattle.io/auth-provider-cleanup` annotation with the `unlocked` value
 to its auth config.
