@@ -212,7 +212,7 @@ how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces, clus
 how-to-guides/advanced-user-guides/manage-clusters/clone-cluster-configuration, cluster-admin/cloning-clusters
 how-to-guides/advanced-user-guides/manage-clusters/rotate-certificates, cluster-admin/certificate-rotation
 how-to-guides/advanced-user-guides/manage-clusters/rotate-encryption-key, cluster-admin/encryption-key-rotation
-how-to-guides/advanced-user-guides/manage-clusters/manage-cluster-templates, cluster-admin/cluster-templates
+how-to-guides/new-user-guides/manage-clusters/manage-cluster-templates, cluster-admin/cluster-templates
 how-to-guides/advanced-user-guides/manage-clusters/nodes-and-node-pools, cluster-admin/nodes
 how-to-guides/advanced-user-guides/manage-clusters/clean-cluster-nodes, cluster-admin/cleaning-cluster-nodes
 how-to-guides/advanced-user-guides/manage-clusters/add-a-pod-security-policy, cluster-admin/pod-security-policy

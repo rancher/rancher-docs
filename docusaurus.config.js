@@ -413,7 +413,7 @@ module.exports = {
           },
           {
             to: '/how-to-guides/new-user-guides/manage-clusters/manage-cluster-templates',
-            from: '/how-to-guides/advanced-user-guides/manage-clusters/manage-cluster-templates'
+            from: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates'
           },
           {
             to: '/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools',
