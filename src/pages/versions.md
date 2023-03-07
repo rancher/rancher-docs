@@ -28,18 +28,6 @@ Below are the documentation and release notes for the currently released version
   </tr>
 </table>
 
-Below are the documentation and release notes for the currently released version of Rancher 2.5.x:
-
-<table>
-  <tr>
-    <td><b>v2.5.17</b></td>
-    <td><a href="https://ranchermanager.docs.rancher.com/v2.5">Documentation</a></td>
-    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.5.17">Release Notes</a></td>
-  </tr>
-</table>
-
-<br/>
-
 ### Past versions
 
 Below are the documentation and release notes for previous versions of Rancher 2.7.x:
