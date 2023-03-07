@@ -132,17 +132,14 @@ module.exports = {
         theme: {
           customCss: [require.resolve("./src/css/custom.css")],
         },
+        googleTagManager: {
+          containerId: 'GTM-57KS2MW',
+        },
       },
     ],
   ],
   plugins: [
-    [
-      require.resolve('docusaurus-gtm-plugin'),
-      {
-        id: 'GTM-57KS2MW', // GTM Container ID
-      }
-    ],
-    [
+   [
       '@docusaurus/plugin-client-redirects',
       {
         fromExtensions: ['html', 'htm'],
