@@ -333,10 +333,6 @@ module.exports = {
             from: '/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases'
           },
           {
-            to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates',
-            from: '/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates'
-          },
-          {
             to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies',
             from: '/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies'
           },
@@ -411,6 +407,10 @@ module.exports = {
           {
             to: '/how-to-guides/new-user-guides/manage-clusters/rotate-encryption-key',
             from: '/how-to-guides/advanced-user-guides/manage-clusters/rotate-encryption-key'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/manage-clusters/manage-cluster-templates',
+            from: ['/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates', '/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates']
           },
           {
             to: '/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools',
