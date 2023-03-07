@@ -336,6 +336,10 @@ module.exports = {
             from: '/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases'
           },
           {
+            to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates',
+            from: '/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates'
+          },
+          {
             to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies',
             from: '/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies'
           },
