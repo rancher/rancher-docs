@@ -44,7 +44,7 @@ AWS 模块只创建一个 EC2 密钥对、一个 EC2 安全组和一个 EC2 实�
 
 1. 使用命令行工具，执行 `git clone https://github.com/rancher/quickstart` 把 [Rancher Quickstart](https://github.com/rancher/quickstart) 克隆到本地。
 
-2. 执行 `cd quickstart/rancher/aws` 命令，进入包含 terraform 文件的 AWS 文件夹。
+2. 执行 `cd quickstart/rancher/aws` 命令，进入包含 Terraform 文件的 AWS 文件夹。
 
 3. 把 `terraform.tfvars.example` 文件重命名为 `terraform.tfvars`。
 

@@ -118,6 +118,8 @@ Your active configuration is: [default]
 
 在选择 Kubernetes 版本时，请务必先查阅[支持矩阵](https://rancher.com/support-matrix/)，以找出已针对你的 Rancher 版本验证的最新 Kubernetes 版本。
 
+要使用 Rancher 成功创建 GKE 集群，GKE 必须处于 Standard 模式。GKE 在创建 Kubernetes 集群时有两种运行模式，分别是 Autopilot 和 Standard 模式。Autopilot 模式的集群配置对编辑 kube-system 命名空间有限制。但是，Rancher 在安装时需要在 kube-system 命名空间中创建资源。因此，你将无法在以 Autopilot 模式创建的 GKE 集群上安装 Rancher。如需详细了解 GKE Autopilot 模式和 Standard 模式之间的差异，请访问[比较 GKE Autopilot 和 Standard ](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison)。
+
 **注意**：如果 Kubernetes 的版本更新到 v1.22 或更高版本，则 ingress-nginx 的版本也需要[更新](https://kubernetes.github.io/ingress-nginx/#faq-migration-to-apiversion-networkingk8siov1)。
 
 ```

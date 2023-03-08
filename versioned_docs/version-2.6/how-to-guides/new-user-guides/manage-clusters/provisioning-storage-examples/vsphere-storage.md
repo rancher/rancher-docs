@@ -20,8 +20,8 @@ The following steps can also be performed using the `kubectl` command line tool.
 :::
 
 1. Click **☰ > Cluster Management**.
-1. Go to the cluster where you want to provide vSphere storage.
-1. In the left navigation bar, click **Storage > StorageClasses**.
+1. Choose the cluster you want to provide vSphere storage to and click **Exlpore**. 
+1. In the left navigation bar, select **Storage > StorageClasses**.
 1. Click **Create**.
 3. Enter a **Name** for the StorageClass.
 4. Under **Provisioner**, select **VMWare vSphere Volume**.

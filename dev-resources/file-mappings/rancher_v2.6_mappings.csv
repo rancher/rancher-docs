@@ -186,7 +186,6 @@ how-to-guides/advanced-user-guides/authentication-permissions-and-global-configu
 how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates, admin-settings/rke-templates/applying-templates
 how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/infrastructure, admin-settings/rke-templates/rke-templates-and-hardware
 how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases, admin-settings/rke-templates/example-scenarios
-how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates, admin-settings/cluster-templates
 how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies, admin-settings/pod-security-policies
 how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry, admin-settings/config-private-registry
 how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/custom-branding, admin-settings/branding
@@ -213,6 +212,7 @@ how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces, clus
 how-to-guides/advanced-user-guides/manage-clusters/clone-cluster-configuration, cluster-admin/cloning-clusters
 how-to-guides/advanced-user-guides/manage-clusters/rotate-certificates, cluster-admin/certificate-rotation
 how-to-guides/advanced-user-guides/manage-clusters/rotate-encryption-key, cluster-admin/encryption-key-rotation
+how-to-guides/new-user-guides/manage-clusters/manage-cluster-templates, cluster-admin/cluster-templates
 how-to-guides/advanced-user-guides/manage-clusters/nodes-and-node-pools, cluster-admin/nodes
 how-to-guides/advanced-user-guides/manage-clusters/clean-cluster-nodes, cluster-admin/cleaning-cluster-nodes
 how-to-guides/advanced-user-guides/manage-clusters/add-a-pod-security-policy, cluster-admin/pod-security-policy

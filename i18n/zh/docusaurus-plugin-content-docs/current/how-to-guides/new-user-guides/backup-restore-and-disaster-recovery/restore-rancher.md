@@ -12,24 +12,29 @@ title: 还原 Rancher
 
 :::
 
-### 使用 Rancher 2.6.4+ 进行回滚的其他步骤
+## 使用 Rancher 2.6.4+ 进行回滚的其他步骤
 
-在 Rancher v2.6.4 中，cluster-api 模块已从 v0.4.4 升级到 v1.0.2，其中 CAPI CRD 的 apiVersion 已从 `cluster.x-k8s.io/v1alpha4` 升级到 `cluster.x-k8s.io/v1beta1`。由于需要回滚的 CRD 在 v1beta1 中不再可用，因此从 Rancher v2.6.4 回滚到任何 Rancher v2.6.x 先前版本都会失败。
+Rancher v2.6.4 将 cluster-api 模块从 v0.4.4 升级到 v1.0.2。反过来，cluster-api 的 v1.0.2 版本将集群 API 的自定义资源定义 (CRD) 从 `cluster.x-k8s.io/v1alpha4` 升级到 `cluster.x-k8s.io/v1beta1`。当你尝试将 Rancher v2.6.4 回滚到以前版本的 Rancher v2.6.x 时，CRD 升级到 v1beta1 会导致回滚失败。这是因为使用旧 apiVersion (v1alpha4) 的 CRD 与 v1beta1 不兼容。
 
-为避免这种情况，请在还原或回滚**之前**先运行 Rancher 资源清理脚本。因此，我们创建了两个脚本来帮助你进行操作，一个用于清理集群（`cleanup.sh`)，一个用于检查集群中与 Rancher 相关的资源 (`verify.sh`）。有关清理脚本的详细信息，请参见 [rancher/rancher-cleanup repo](https://github.com/rancher/rancher-cleanup)。
+要避免回滚失败，你需要在尝试恢复操作或回滚**之前**运行以下 Rancher 脚本：
+
+* `verify.sh`：检查集群中是否有任何与 Rancher 相关的资源。
+* `cleanup.sh`：清理集群。
+
+有关详细信息和源代码，请参阅 [rancher/rancher-cleanup repo](https://github.com/rancher/rancher-cleanup)。
 
 :::caution
 
-Rancher 将在运行 `cleanup` 脚本时关闭，因为它会删除 Rancher 创建的资源。
+`cleanup.sh` 运行的时候会有停机时间，这是因为脚本会删除 Rancher 创建的资源。
 
 :::
 
-额外准备：
+### 从 v2.6.4+ 回滚到较低版本的 v2.6.x
 
 1. 按照[说明](https://github.com/rancher/rancher-cleanup/blob/main/README.md)运行脚本。
 1. 按照[说明](https://rancher.com/docs/rancher/v2.6/en/backups/migrating-rancher/)在现有集群上安装 rancher-backup Helm Chart 并恢复之前的状态。
    1. 省略步骤 3。
-   1. 执行到第 4 步时，在要回滚的本地集群上安装所需的 Rancher 2.6.x 版本。
+   1. 执行到步骤 4 时，在要回滚到的 local 集群上安装 Rancher 2.6.x 版本。
 
 ### 创建 Restore 自定义资源
 

@@ -19,7 +19,7 @@ Rancher 中有两种类型的驱动：
 
 默认情况下，Rancher 已激活多个托管 Kubernetes 云提供商，包括：
 
-* [Amazon EKS](amazon-eks-permissions.md)
+* [Amazon EKS](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks.md)
 * [Google GKE](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/gke.md)
 * [Azure AKS](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/aks.md)
 

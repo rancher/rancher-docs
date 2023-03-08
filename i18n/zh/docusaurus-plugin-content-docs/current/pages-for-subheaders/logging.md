@@ -3,7 +3,7 @@ title: Rancher Logging 集成
 description: Rancher 集成了主流的日志服务。了解集成日志服务的要求和优势，并在你的集群上启用 Logging。
 ---
 
-现在，Rancher 的日志管理由 [Banzai Cloud Logging operator](https://banzaicloud.com/docs/one-eye/logging-operator/) 提供支持，它取代了以前的内部解决方案。
+现在，Rancher 的日志管理由 [Logging operator](https://kube-logging.github.io/docs/) 提供支持，它取代了以前的内部解决方案。
 
 有关 Rancher 2.5 更改的概述，请参阅[本节](../integrations-in-rancher/logging/logging-architecture.md#rancher-2-5-变更)。
 
@@ -84,6 +84,12 @@ Windows 集群支持 Logging，你可以收集 Windows 节点的日志。
 
 ## 故障排除
 
+### 日志缓冲区导致 Pod 过载
+
+根据你的配置，默认缓冲区大小可能太大并导致 Pod 故障。减少负载的一种方法是降低记录器的刷新间隔。这可以防止日志溢出缓冲区。你还可以添加更多刷新线程来处理大量日志试图同时填充缓冲区的情况。
+
+有关如何配置日志缓冲区来满足企业需求的更完整说明，请参阅[缓冲区](https://kube-logging.github.io/docs/configuration/plugins/outputs/buffer/)和 [Fluentd 配置](https://kube-logging.github.io/docs/logging-infrastructure/fluentd/)的官方 Logging Operator 文档。
+
 ### `cattle-logging` 命名空间正在重新创建
 
 如果你的集群之前在旧版 Rancher UI 的全局视图中部署了 Logging，`cattle-logging` 命名空间可能会不断被重新创建。
@@ -109,6 +115,6 @@ https://<your-url>/dashboard/c/<cluster-id>/
 *警告*：请当前未使用确保 Logging（从旧版 Rancher UI 全局视图中安装的版本）。
 
 ```bash
-kubectl delete clusterloggings.management.cattle.io -n <cluster-id>
-kubectl delete projectloggings.management.cattle.io -n <cluster-id>
+kubectl delete crd clusterloggings.management.cattle.io -n <cluster-id>
+kubectl delete crd projectloggings.management.cattle.io -n <cluster-id>
 ```
