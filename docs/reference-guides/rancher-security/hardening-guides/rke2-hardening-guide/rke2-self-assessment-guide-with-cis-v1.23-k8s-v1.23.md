@@ -2,7 +2,7 @@
 title: RKE2 Self-Assessment Guide - CIS Benchmark v1.23 - K8s v1.23
 ---
 
-This document is a companion to the [RKE2 Hardening Guide](rke2-hardening-guide.md), which provides prescriptive guidance on how to harden RKE2 clusters that are running in production and managed by Rancher. This benchmark guide helps you evaluate the security of a hardened cluster against each control in the CIS Kubernetes Benchmark.
+This document is a companion to the [RKE2 Hardening Guide](../../../../pages-for-subheaders/rke2-hardening-guide.md), which provides prescriptive guidance on how to harden RKE2 clusters that are running in production and managed by Rancher. This benchmark guide helps you evaluate the security of a hardened cluster against each control in the CIS Kubernetes Benchmark.
 
 This guide corresponds to the following versions of Rancher, CIS Benchmarks, and Kubernetes:
 
@@ -2814,7 +2814,7 @@ for every namespace which contains user workloads.
 ### 5.2.2 Minimize the admission of privileged containers (Manual)
 
 
-**Result:** fail
+**Result:** pass
 
 **Remediation:**
 Add policies to each namespace in the cluster which has user workloads to restrict the
@@ -2835,7 +2835,7 @@ kubectl get psp global-restricted-psp -o json | jq -r '.spec.runAsUser.rule'
 **Returned Value**:
 
 ```console
-Error from server (NotFound): podsecuritypolicies.policy "global-restricted-psp" not found
+MustRunAsNonRoot
 ```
 
 ### 5.2.3 Minimize the admission of containers wishing to share the host process ID namespace (Automated)
@@ -2976,7 +2976,7 @@ kubectl get psp -o json | jq .items[] | jq -r 'select((.spec.allowPrivilegeEscal
 ### 5.2.8 Minimize the admission of containers with the NET_RAW capability (Automated)
 
 
-**Result:** fail
+**Result:** pass
 
 **Remediation:**
 Add policies to each namespace in the cluster which has user workloads to restrict the
@@ -2997,7 +2997,7 @@ kubectl get psp global-restricted-psp -o json | jq -r .spec.requiredDropCapabili
 **Returned Value**:
 
 ```console
-Error from server (NotFound): podsecuritypolicies.policy "global-restricted-psp" not found
+ALL
 ```
 
 ### 5.2.9 Minimize the admission of containers with added capabilities (Automated)
@@ -3078,7 +3078,7 @@ kubectl get pods --all-namespaces --selector='k8s-app in (calico-node, canal, ci
 ### 5.3.2 Ensure that all Namespaces have Network Policies defined (Automated)
 
 
-**Result:** warn
+**Result:** pass
 
 **Remediation:**
 Follow the documentation and create NetworkPolicy objects as you need them.
@@ -3123,7 +3123,7 @@ echo "true"
 **Returned Value**:
 
 ```console
-Error from server (Forbidden): networkpolicies.networking.k8s.io is forbidden: User "system:serviceaccount:cis-operator-system:cis-serviceaccount" cannot list resource "networkpolicies" in API group "networking.k8s.io" in the namespace "kube-system" false
+true
 ```
 
 ## 5.4 Secrets Management
