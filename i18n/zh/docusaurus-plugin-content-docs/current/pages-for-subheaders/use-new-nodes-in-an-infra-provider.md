@@ -133,7 +133,7 @@ Rancher 2.6 支持直接使用 Rancher UI 配置 [RKE2](https://docs.rke2.io/) �
 
 :::note
 
-对于 RKE2 集群模板，请参阅[此页面](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates.md#rke2-集群模板)了解更多信息。
+对于 RKE2 集群模板，请参阅[此页面](../how-to-guides/new-user-guides/manage-clusters/manage-cluster-templates.md#rke2-集群模板)了解更多信息。
 
 :::
 

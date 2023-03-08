@@ -9,7 +9,7 @@ title: RKE2 集群配置参考
 你可以通过以下两种方式之一来配置 Kubernetes 选项：
 
 - [Rancher UI](#rancher-ui-中的配置选项)：使用 Rancher UI 来选择设置 Kubernetes 集群时常用的自定义选项。
-- [集群配置文件](#集群配置文件)：高级用户可以创建一个 RKE2 配置文件，而不是使用 Rancher UI 来为集群选择 Kubernetes 选项。配置文件让你能设置更多可用于 RKE2 的其他[安装选项](https://docs.rke2.io/install/install_options/install_options)。
+- [集群配置文件](#集群配置文件)：高级用户可以创建一个 RKE2 配置文件，而不是使用 Rancher UI 来为集群选择 Kubernetes 选项。配置文件让你能设置更多可用于 RKE2 的其他[安装选项](https://docs.rke2.io/install/configuration)。
 
 ## 在 Rancher UI 中使用表单编辑集群
 
@@ -32,7 +32,7 @@ title: RKE2 集群配置参考
 
 :::tip
 
-一些高级配置选项没有在 Rancher UI 表单中开放，但你可以通过在 YAML 中编辑 RKE2 集群配置文件来启用这些选项。有关 YAML 中 RKE2 Kubernetes 集群的可配置选项的完整参考，请参阅 [RKE2 文档](https://docs.rke2.io/install/install_options/install_options/)。
+一些高级配置选项没有在 Rancher UI 表单中开放，但你可以通过在 YAML 中编辑 RKE2 集群配置文件来启用这些选项。有关 YAML 中 RKE2 Kubernetes 集群的可配置选项的完整参考，请参阅 [RKE2 文档](https://docs.rke2.io/install/configuration)。
 
 :::
 
@@ -126,7 +126,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 #### 默认 Pod 安全策略
 
-为集群选择默认的 [pod 安全策略](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)。请参阅 [RKE2 文档](https://docs.rke2.io/security/policies/)来了解每个可用策略的规范。
+为集群选择默认的 [pod 安全策略](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)。请参阅 [RKE2 文档](https://docs.rke2.io/security/pod_security_policies)来了解每个可用策略的规范。
 
 #### Worker CIS 配置文件
 
@@ -160,7 +160,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 ### Agent 环境变量
 
-为 [Rancher agent](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/rancher-agents/) 设置环境变量的选项。你可以使用键值对设置环境变量。有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/install/install_options/linux_agent_config/)。
+为 [Rancher agent](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/rancher-agents/) 设置环境变量的选项。你可以使用键值对设置环境变量。有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/reference/linux_agent_config)。
 
 ### etcd
 
@@ -248,7 +248,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 ## 集群配置文件参考
 
-高级用户可以创建一个配置文件，而不是使用 Rancher UI 来为集群选择 Kubernetes 选项。配置文件允许你为 RKE2 设置[可用的选项](https://docs.rke2.io/install/install_options/server_config/)，其中包括已经在 [Rancher UI 配置选项](#rancher-ui-中的配置选项)中列出的选项以及 Rancher 特定的参数。
+高级用户可以创建一个配置文件，而不是使用 Rancher UI 来为集群选择 Kubernetes 选项。配置文件允许你为 RKE2 设置[可用的选项](https://docs.rke2.io/install/configuration)，其中包括已经在 [Rancher UI 配置选项](#rancher-ui-中的配置选项)中列出的选项以及 Rancher 特定的参数。
 
 <details>
     <summary>

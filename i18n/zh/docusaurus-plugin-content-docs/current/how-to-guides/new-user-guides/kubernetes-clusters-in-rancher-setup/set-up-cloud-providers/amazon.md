@@ -15,6 +15,12 @@ weight: 1
 1. [创建一个 IAM 角色并附加到实例](#1-创建-iam-角色并附加到实例)
 2. [配置 ClusterID](#2-创建-clusterid)
 
+:::note 重要提示：
+
+从 Kubernetes 1.23 开始，你必须停用 `CSIMigrationAWS` 特性开关才能使用树内 AWS 云提供商。为此，你可以在高级集群配置中将 `feature-gates=CSIMigrationAWS=false` 设置为集群 Kubelet、Controller Manager、API Server 和 Scheduler 的附加参数。
+
+:::
+
 ### 1. 创建 IAM 角色并附加到实例
 
 添加到集群的所有节点都必须能够与 EC2 交互，以便它们可以创建和删除资源。你可以使用附加到实例的 IAM 角色来启用交互。请参阅 [Amazon 文档：创建 IAM 角色](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html#create-iam-role) 来创建 IAM 角色。有两个示例策略：

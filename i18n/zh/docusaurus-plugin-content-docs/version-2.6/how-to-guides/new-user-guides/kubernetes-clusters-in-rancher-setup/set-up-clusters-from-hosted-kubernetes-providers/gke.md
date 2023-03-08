@@ -1,5 +1,5 @@
 ---
-title: 管理 GKE 集群
+title: 创建 GKE 集群
 ---
 
 ## 先决条件
@@ -49,7 +49,7 @@ title: 管理 GKE 集群
 **结果**：你已创建 Rancher 用于配置新 GKE 集群的凭证。
 
 ### 2. 创建 GKE 集群
-使用 Rancher 配置你的 Kubernetes 集群。
+使用 Rancher 配置你的 Kubernetes 集群。要使用 Rancher 成功创建 GKE 集群，GKE 必须处于 Standard 模式。GKE 在创建 Kubernetes 集群时有两种运行模式，分别是 Autopilot 和 Standard 模式。Autopilot 模式的集群配置对编辑 kube-system 命名空间有限制。但是，Rancher 在安装时需要在 kube-system 命名空间中创建资源。因此，你将无法创建 Autopilot 模式的 GKE 集群。如需详细了解 GKE Autopilot 模式和 Standard 模式之间的差异，请访问[比较 GKE Autopilot 和 Standard ](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison)。
 
 1. 点击 **☰ > 集群管理**。
 1. 在**集群**页面上，单击**创建**。

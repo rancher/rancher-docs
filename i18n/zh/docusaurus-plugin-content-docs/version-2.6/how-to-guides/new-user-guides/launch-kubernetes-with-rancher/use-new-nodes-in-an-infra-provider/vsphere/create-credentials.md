@@ -8,6 +8,7 @@ title: 在 vSphere 控制台中创建凭证
 
 | 特权组 | 操作 |
 |:----------------------|:-----------------------------------------------------------------------|
+| Cns Privileges | Searchable |
 | Datastore | AllocateSpace <br/> Browse <br/> FileManagement (Low level file operations) <br/> UpdateVirtualMachineFiles <br/> UpdateVirtualMachineMetadata |
 | 全局 | Set custom attribute |
 | 网络 | Assign |

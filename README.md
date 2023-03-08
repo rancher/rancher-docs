@@ -36,7 +36,7 @@ First, install Docusaurus 2:
 yarn start
 ```
 
-This command starts a local development server for Docusuarus 2, and opens up a browser window. Most changes are reflected live without having to restart the server.
+This command starts a local development server for Docusaurus 2, and opens up a browser window. Most changes are reflected live without having to restart the server.
 
 **Note:** The `yarn start` command won't include some important static site features. For example, switching between languages from the site's dropdown menu is not available. If you need these features, use `yarn build`.
 
@@ -50,11 +50,15 @@ This command generates static content into the `build` directory and can be serv
 
 ### Launch With Docker
 
-Use [Docker](https://www.docker.com/) to launch the website without needing to install and configure Yarn:
+You can also use [Docker](https://www.docker.com/) to launch the website.
+
+The below command can be used to install the dependencies and run the site inside a container:
 
 ```
-docker run --rm -it -v $PWD:$PWD -w $PWD -p 3000:3000 node yarn start -h 0.0.0.0
+docker run --rm -it -v $PWD:$PWD -w $PWD -p 3000:3000 node /bin/sh -c "yarn install && yarn start -h 0.0.0.0"
 ```
+
+Subsequent executions will check for updated dependencies, if there are none, it will skip the updates and quickly start the server.
 
 License
 =======

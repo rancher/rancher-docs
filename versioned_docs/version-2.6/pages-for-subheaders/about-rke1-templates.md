@@ -101,7 +101,7 @@ You can [save the configuration of an existing cluster as an RKE template.](../h
 
 RKE templates are designed to standardize Kubernetes and Rancher settings. If you want to standardize your infrastructure as well, one option is to use RKE templates [in conjunction with other tools](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/infrastructure.md).
 
-Another option is to use [cluster templates,](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates.md) which include node pool configuration options, but don't provide configuration enforcement.
+Another option is to use [cluster templates,](../how-to-guides/new-user-guides/manage-clusters/manage-cluster-templates.md) which include node pool configuration options, but don't provide configuration enforcement.
 
 ## YAML Customization
 
