@@ -3,7 +3,7 @@ title: Pod Security Policies
 ---
 
 :::caution
-Pod Security Policy is only available in Kubernetes until v1.24. [Pod Security Standards](pod-security-standards.md) is the built-in alternative.
+Pod Security Policy is only available in Kubernetes until v1.24. [Pod Security Standards](pod-security-standards.md) are the built-in alternative.
 :::
 
 [Pod Security Policies (PSPs)](https://kubernetes.io/docs/concepts/security/pod-security-policy/) are objects that control security-sensitive aspects of the pod specification (such as root privileges).
