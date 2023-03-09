@@ -33,28 +33,42 @@ Any user that is bound to the above permission will be able to change the restri
 
 ### Rancher on PSA-restricted Clusters
 
-When you run Rancher on a Kubernetes cluster that enforces a restrictive security policy by default, such as the `rancher-restricted` policy, you will need to exempt the following namespaces, otherwise the policy might prevent Rancher system pods from properly running.
+When you run Rancher on a Kubernetes cluster that enforces a restrictive security policy by default, you will need to exempt the following namespaces, otherwise the policy might prevent Rancher system pods from properly running.
 
-
-- `ingress-nginx`
-- `kube-system`
-- `cattle-system`
-- `cattle-epinio-system`
-- `cattle-fleet-system`
-- `longhorn-system`
-- `cattle-neuvector-system`
-- `cattle-monitoring-system`
-- `rancher-alerting-drivers`
-- `cis-operator-system`
+- `calico-apiserver`
+- `calico-system`
+- `cattle-alerting`
 - `cattle-csp-adapter-system`
+- `cattle-epinio-system`
 - `cattle-externalip-system`
+- `cattle-fleet-local-system`
+- `cattle-fleet-system`
 - `cattle-gatekeeper-system`
-- `istio-system`
+- `cattle-global-data`
+- `cattle-global-nt`
+- `cattle-impersonation-system`
+- `cattle-istio`
 - `cattle-istio-system`
+- `cattle-logging`
 - `cattle-logging-system`
-- `cattle-windows-gmsa-system`
+- `cattle-monitoring-system`
+- `cattle-neuvector-system`
+- `cattle-prometheus`
 - `cattle-sriov-system`
+- `cattle-system`
 - `cattle-ui-plugin-system`
+- `cattle-windows-gmsa-system`
+- `cert-manager`
+- `cis-operator-system`
+- `ingress-nginx`
+- `istio-system`
+- `kube-node-lease`
+- `kube-public`
+- `kube-system`
+- `longhorn-system`
+- `rancher-alerting-drivers`
+- `rancher-operator-system`
+- `security-scan`
 - `tigera-operator`
 
-The listed namespaces are already exempt in the built-in Rancher `rancher-restricted` policy. Refer to this [sample Admission Configuration](psa-restricted-exemptions.yaml), which has all the exemptions you need to run Rancher.
+These namespaces are used by Rancher, some Rancher owned charts, and RKE2 and K3s distributions. A subset of the listed namespaces are already exempt in the built-in Rancher `rancher-restricted` policy for use in downstream clusters. For a complete template which has all the exemptions you need to run Rancher, please refer to this [sample Admission Configuration](psa-restricted-exemptions.yaml).
