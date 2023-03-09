@@ -108,3 +108,26 @@ If you need to reconfigure or disable then re-enable a provider that had been pr
 is logged in to Rancher as an external user, not the local admin.
 
 :::
+
+## Disabling An Auth Provider
+
+When you disable an auth provider, Rancher deletes all resources associated with it, such as:
+- Secrets.
+- Global role bindings.
+- Cluster role template bindings.
+- Project role template bindings.
+- External users associated with the provider, but who never logged in as local users to Rancher.
+
+As this operation may lead to a loss of many resources, you may want to add a safeguard on the provider. To ensure that this cleanup process doesn't run when the auth provider is disabled, add a special annotation to the corresponding auth config.
+
+For example, to add a safeguard to the Azure AD provider, annotate the `azuread` authconfig object:
+
+`kubectl annotate --overwrite authconfig azuread management.cattle.io/auth-provider-cleanup='user-locked'`
+
+Rancher won't perform cleanup until you set the annotation to `unlocked`.
+
+### Running Resource Cleanup Manually
+
+Rancher might retain resources from a previously disabled auth provider configuration in the local cluster, even after you configure another auth provider. For example, if you used Provider A, then disabled it and started using Provider B, when you upgrade to a new version of Rancher, you can manually trigger cleanup on resources configured by Provider A.
+
+To manually trigger cleanup for a disabled auth provider, add the `management.cattle.io/auth-provider-cleanup` annotation with the `unlocked` value to its auth config.
