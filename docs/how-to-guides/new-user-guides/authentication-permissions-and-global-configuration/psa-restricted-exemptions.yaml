@@ -47,6 +47,5 @@ plugins:
                      kube-system,
                      longhorn-system,
                      rancher-alerting-drivers,
-                     rancher-operator-system,
                      security-scan,
                      tigera-operator]
