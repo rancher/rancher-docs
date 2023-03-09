@@ -3,7 +3,7 @@ kind: AdmissionConfiguration
 plugins:
   - name: PodSecurity
     configuration:
-      apiVersion: pod-security.admission.config.k8s.io/v1beta1
+      apiVersion: pod-security.admission.config.k8s.io/v1
       kind: PodSecurityConfiguration
       defaults:
         enforce: "restricted"
@@ -15,24 +15,23 @@ plugins:
       exemptions:
         usernames: []
         runtimeClasses: []
-        namespaces: [kube-system,
-                     kube-public,
+        namespaces: [ingress-nginx,
+                     kube-system,
                      cattle-system,
-                     cattle-alerting,
-                     cattle-logging,
-                     cattle-prometheus,
-                     ingress-nginx,
-                     cattle-global-data,
-                     cattle-istio,
-                     kube-node-lease,
-                     cert-manager,
-                     cattle-global-nt,
-                     security-scan,
+                     cattle-epinio-system,
                      cattle-fleet-system,
-                     cattle-fleet-local-system,
-                     calico-system,
-                     tigera-operator,
-                     cattle-impersonation-system,
-                     rancher-operator-system,
+                     longhorn-system,
+                     cattle-neuvector-system,
+                     cattle-monitoring-system,
+                     rancher-alerting-drivers,
+                     cis-operator-system,
                      cattle-csp-adapter-system,
-                     calico-apiserver]
+                     cattle-externalip-system,
+                     cattle-gatekeeper-system,
+                     istio-system,
+                     cattle-istio-system,
+                     cattle-logging-system,
+                     cattle-windows-gmsa-system,
+                     cattle-sriov-system,
+                     cattle-ui-plugin-system,
+                     tigera-operator]
