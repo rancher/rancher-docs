@@ -1054,18 +1054,45 @@ const sidebars = {
                 id: "pages-for-subheaders/rancher-hardening-guides",
               },
               items: [
-                "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide",
-                "reference-guides/rancher-security/hardening-guides/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
-                "reference-guides/rancher-security/hardening-guides/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.24",
-                "reference-guides/rancher-security/hardening-guides/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.25",
-                "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide",
-                "reference-guides/rancher-security/hardening-guides/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
-                "reference-guides/rancher-security/hardening-guides/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.24",
-                "reference-guides/rancher-security/hardening-guides/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25",
-                "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide",
-                "reference-guides/rancher-security/hardening-guides/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
-                "reference-guides/rancher-security/hardening-guides/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.24",
-                "reference-guides/rancher-security/hardening-guides/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.25",
+                {
+                  type: 'category',
+                  label: 'RKE Hardening Guides',
+                  link: {
+                    type: 'doc',
+                    id: "pages-for-subheaders/rke1-hardening-guide",
+                  },
+                  items: [
+                    "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
+                    "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.24",
+                    "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.25",
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'RKE2 Hardening Guides',
+                  link: {
+                    type: 'doc',
+                    id: "pages-for-subheaders/rke2-hardening-guide",
+                  },
+                  items: [
+                    "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
+                    "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.24",
+                    "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25",
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'K3s Hardening Guides',
+                  link: {
+                    type: 'doc',
+                    id: "pages-for-subheaders/k3s-hardening-guide",
+                  },
+                  items: [
+                    "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
+                    "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.24",
+                    "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.25",
+                  ],
+                },
               ],
             },
             {
@@ -1081,7 +1108,6 @@ const sidebars = {
               ],
             },
             "reference-guides/rancher-security/kubernetes-security-best-practices",
-
             "reference-guides/rancher-security/security-advisories-and-cves",
           ],
         }
