@@ -67,7 +67,6 @@ When you run Rancher on a Kubernetes cluster that enforces a restrictive securit
 - `kube-system`
 - `longhorn-system`
 - `rancher-alerting-drivers`
-- `rancher-operator-system`
 - `security-scan`
 - `tigera-operator`
 
