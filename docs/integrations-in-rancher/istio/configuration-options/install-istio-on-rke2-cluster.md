@@ -1,5 +1,5 @@
 ---
-title: Additional Steps for Installing Istio on an RKE2 and K3s Clusters
+title: Additional Steps for Installing Istio on RKE2 and K3s Clusters
 ---
 
 When installing or upgrading the Istio Helm chart through **Apps,**
@@ -32,7 +32,7 @@ spec:
       cniConfDir: /etc/cni/net.d
 ```
 </TabItem>
-<TabItem value="k3s">
+<TabItem value="K3s">
 
 ```yaml
 apiVersion: install.istio.io/v1alpha1
