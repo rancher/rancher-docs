@@ -55,7 +55,7 @@ If you are installing Rancher on a K3s cluster with Alpine Linux, follow [these 
 
 For the container runtime, RKE2 bundles its own containerd. Docker is not required for RKE2 installs.
 
-For details on which OS versions were tested with RKE2, refer to the [Rancher support matrix](https://www.suse.com/suse-rancher/support-matrix).
+For details on which OS versions were tested with RKE2, refer to the [Rancher support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-7-1/).
 
 ## Hardware Requirements
 
