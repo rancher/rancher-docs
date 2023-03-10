@@ -18,7 +18,7 @@ For this workload, you'll be deploying the application Rancher Hello-World.
 1. Click **Create**.
 1. Click **Deployment**.
 1. Enter a **Name** for your workload.
-1. From the **Docker Image** field, enter `rancher/hello-world`. This field is case-sensitive.
+1. From the **Container Image** field, enter `rancher/hello-world`. This field is case-sensitive.
 1. Click **Add Port** and enter `80` in the **Private Container Port** field. Adding a port enables access to the application inside and outside of the cluster. For more information, see [Services](../../../pages-for-subheaders/workloads-and-pods.md#services).
 1. Click **Create**.
 
