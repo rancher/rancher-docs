@@ -19,7 +19,7 @@ The monitoring application:
 - Monitors the state and processes of your cluster nodes, Kubernetes components, and software deployments.
 - Defines alerts based on metrics collected via Prometheus.
 - Creates custom Grafana dashboards.
-- Configures alert-based notifications via Email, Slack, PagerDuty, etc. using Prometheus Alertmanager.
+- Configures alert-based notifications via email, Slack, PagerDuty, etc. using Prometheus Alertmanager.
 - Defines precomputed, frequently needed or computationally expensive expressions as new time series based on metrics collected via Prometheus.
 - Exposes collected metrics from Prometheus to the Kubernetes Custom Metrics API via Prometheus Adapter for use in HPA.
 
