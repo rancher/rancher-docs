@@ -2,7 +2,9 @@
 title: Pod Security Standards
 ---
 
-[Pod Security Standards (PSS)](https://kubernetes.io/docs/concepts/security/pod-security-standards/) define security restrictions for a broad set of workloads. They replace [Pod Security Policies](https://kubernetes.io/docs/concepts/security/pod-security-policy/) in Kubernetes v1.25 and above.
+[Pod Security Standards (PSS)](https://kubernetes.io/docs/concepts/security/pod-security-standards/) and [Pod Security admissions (PSA)](https://kubernetes.io/docs/concepts/security/pod-security-admission/) define security restrictions for a broad set of workloads. They replace [Pod Security Policies](https://kubernetes.io/docs/concepts/security/pod-security-policy/) in Kubernetes v1.25 and above.
+
+PSS define security levels for workloads. PSAs describe requirements for pod security contexts and related fields. PSAs reference PSS levels to define security restrictions.
 
 ## Upgrade to Pod Security Standards
 
