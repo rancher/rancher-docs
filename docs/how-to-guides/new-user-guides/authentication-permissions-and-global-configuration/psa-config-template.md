@@ -5,15 +5,29 @@ title: Pod Security Admissions (PSA) Configuration Templates
 [Pod Security admissions (PSA)](./pod-security-standards.md) configuration templates are a Rancher custom-defined resource (CRD), available in Rancher v2.7.2 and above. They provide pre-defined security configurations that you can apply to a cluster:
 
 - `rancher-privileged`: The most permissive configuration. It doesn't restrict the behavior of any pods. This allows for known privilege escalations. This policy has no exemptions.
-- `rancher-restricted`: A heavily restricted configuration that follows current best practices for hardening pods. There are namespace-level exemptions for Rancher components, as described below.
+- `rancher-restricted`: A heavily restricted configuration that follows current best practices for hardening pods. There are [namespace-level exemptions](./pod-security-standards.md#rancher-on-psa-restricted-clusters) for Rancher components.
 
-## Configure a Pod Security Admissions (PSA) Configuration Template
+## Assign a Pod Security Admissions (PSA) Configuration Template
+
+You can assign a PSA template at the same time that you create a downstream cluster. You can also add a template by configuring an existing cluster.
+
+// insert image here //
+
+## Add or Edit a Pod Security Admissions (PSA) Configuration Template
 
 If you are a Rancher administrator or have restricted administrator privileges, you can customize restrictions and permissions by creating additional templates, or by editing existing templates.
 
 :::caution
 If you edit an existing PSA template while it is still in use, it affects all clusters that have been assigned that template.
 :::
+
+1. Click the **☰**.
+1. Select **Cluster Management**
+1. Click **Advanced** to open the dropdown menu.
+1. Select **Pod Security Admissions**.
+1. Find the template you want to modify, and click the **⋮** to edit the template.
+
+// insert image here //
 
 ### Allow Non-Admin Users to Manage PSA Templates
 
