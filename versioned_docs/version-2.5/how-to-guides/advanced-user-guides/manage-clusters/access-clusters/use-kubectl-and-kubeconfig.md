@@ -48,6 +48,8 @@ We recommend that as a best practice, you should set up this method to access yo
 
 > **Prerequisites:** The following steps assume that you have created a Kubernetes cluster and followed the steps to [connect to your cluster with kubectl from your workstation.](#accessing-clusters-with-kubectl-from-your-workstation)
 
+> **Hint for RKE2 and K3s:** You will need to perfom manual changes on clusters deployed with RKE2 and K3s to have authorized cluster endpoints enabled. For a detailed explanation of the changes, refer to [this guide.](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md#authorized-cluster-endpoint-support-for-rke2-and-k3s-clusters)
+
 To find the name of the context(s) in your downloaded kubeconfig file, run:
 
 ```
