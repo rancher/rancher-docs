@@ -38,6 +38,8 @@ The kubeconfig file is important for accessing the Kubernetes cluster. Copy the 
 scp root@<IP_OF_LINUX_MACHINE>:/etc/rancher/k3s/k3s.yaml ~/.kube/config
 ```
 
+In some cases it may need to make sure that your shell has the environment variable `KUBECONFIG=~/.kube/config` defined, for instance, it can be exported in your profile or rc files.
+
 </TabItem>
 <TabItem value="Windows">
 
