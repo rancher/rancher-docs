@@ -35,6 +35,7 @@ For RKE2 and K3s:
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. Find the cluster you want to update in the **Clusters** table, and click the **⋮**.
+1. Select **Edit Config** .
 1. In the **Default Pod Security Admission** dropdown menu, select the template you want to assign.
 
 For RKE1:
@@ -80,6 +81,10 @@ If you assign the `rancher-restricted` template to a cluster, by default the res
 1. Find the template you want to modify, and click the **⋮**.
 1. Select **Edit Config**.
 1. Click the **Namespaces** checkbox under **Exemptions** to edit the **Namespaces** field. 
+
+:::note
+You need to update the target cluster to make the new template take effect in that cluster. An update can be triggered by editing and saving the cluster without changing values. 
+:::
 
 ### Exempting Required Rancher Namespaces
 
