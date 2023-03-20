@@ -648,7 +648,9 @@ const sidebars = {
                 "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-docker-installed-rancher",
                 "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-docker-installed-rancher",
                 "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters",
+                "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters-rke2-k3s",
                 "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup",
+                "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup-rke2-k3s",
               ]
             },
             "how-to-guides/new-user-guides/add-users-to-projects",
