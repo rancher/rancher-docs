@@ -37,7 +37,13 @@ After you perform these steps, you can upgrade the cluster's Kubernetes version 
 1. Under **Basics > Security**, in the **CIS Profile** dropdown menu, select `cis-1.23`. 
 1. In the **Default Pod Security Admission** dropdown menu, select `rancher-restricted`.
 1. Click **Save**.
-1. Upgrade the cluster's Kubernetes version through the Rancher UI.
+
+Now, upgrade the cluster's Kubernetes version through the Rancher UI:
+
+1. In the upper left corner, click **☰ > Cluster Management**.
+1. Find the cluster you want to update in the **Clusters** table, and click the **⋮**.
+1. Select **Edit Config**.
+1. In the **Kubernetes Version** dropdown menu, select the version that you would like to use.
 </TabItem>
 <TabItem value="K3s">
 1. In the upper left corner, click **☰ > Cluster Management**.
