@@ -13,41 +13,41 @@ You can assign a PSA template at the same time that you create a downstream clus
 
 ### Assign a Template During Cluster Creation 
 
-For RKE2 and K3s:
-
+<Tabs>
+<TabItem value="RKE2 and K3s">
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, click the **Create** button.
 1. Select a provider.
 1. On the **Cluster: Create** page, go to **Basics > Security**. 
 1. In the **Default Pod Security Admission** dropdown menu, select the template you want to assign.
 
-For RKE1:
-
-1. In the upper left corner, click **☰ > Cluster Management**.
-1. On the **Clusters** page, click the **Create** button.
-1. Select a provider.
-1. On the **Add Cluster** page, under **Cluster Options**, click **Advanced Options**.
-1. In the **Pod Security Admission Configuration Template** dropdown menu, select the template you want to assign. 
-
 ### Assign a Template to an Existing Cluster
-
-For RKE2 and K3s:
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. Find the cluster you want to update in the **Clusters** table, and click the **⋮**.
 1. Select **Edit Config** .
 1. In the **Default Pod Security Admission** dropdown menu, select the template you want to assign.
 
-For RKE1:
+### Hardening the Cluster
+
+If you select the **rancher-restricted** template but don't select a **CIS Profile**, you won't meet required CIS benchmarks. See the [RKE2 hardening guide](../../../pages-for-subheaders/rke2-hardening-guide.md) for more details.
+</TabItem>
+<TabItem value="RKE1">
+1. In the upper left corner, click **☰ > Cluster Management**.
+1. On the **Clusters** page, click the **Create** button.
+1. Select a provider.
+1. On the **Add Cluster** page, under **Cluster Options**, click **Advanced Options**.
+1. In the **Pod Security Admission Configuration Template** dropdown menu, select the template you want to assign.
+
+### Assign a Template to an Existing Cluster
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. Find the cluster you want to update in the **Clusters** table, and click the **⋮**.
 1. On the **Add Cluster** page, go to **Cluster Options > Advanced Options**.
-1. In the **Pod Security Admission Configuration Template**, select the template you want to assign. 
+1. In the **Pod Security Admission Configuration Template**, select the template you want to assign.
 
-### Hardening the Cluster
-
-If you select the **rancher-restricted** template but don't select a **CIS Profile**, you won't meet required CIS benchmarks. See the [hardening guide](../../../pages-for-subheaders/rancher-security.md#rancher-hardening-guide) for more details.
+</TabItem>
+</Tabs>
 
 ## Add or Edit a Pod Security Admissions (PSA) Configuration Template
 
