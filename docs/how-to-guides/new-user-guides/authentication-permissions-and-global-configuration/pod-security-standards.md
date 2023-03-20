@@ -2,7 +2,7 @@
 title: Pod Security Standards (PSS) & Pod Security Admissions (PSA)
 ---
 
-[Pod Security Standards (PSS)](https://kubernetes.io/docs/concepts/security/pod-security-standards/) and [Pod Security admissions (PSAs)](https://kubernetes.io/docs/concepts/security/pod-security-admission/) define security restrictions for a broad set of workloads. They replace [Pod Security Policies](https://kubernetes.io/docs/concepts/security/pod-security-policy/) in Kubernetes v1.25 and above.
+[Pod Security Standards (PSS)](https://kubernetes.io/docs/concepts/security/pod-security-standards/) and [Pod Security admissions (PSA)](https://kubernetes.io/docs/concepts/security/pod-security-admission/) define security restrictions for a broad set of workloads. They replace [Pod Security Policies](https://kubernetes.io/docs/concepts/security/pod-security-policy/) in Kubernetes v1.25 and above.
 
 PSS define security levels for workloads. PSAs describe requirements for pod security contexts and related fields. PSAs reference PSS levels to define security restrictions on pods.
 
@@ -20,41 +20,6 @@ Rancher offers PSA configuration templates. These are pre-defined security confi
 
 ### Rancher on PSA-restricted Clusters
 
-When you run Rancher on a Kubernetes cluster that enforces a restrictive security policy by default, you will need to exempt the following namespaces, otherwise the policy might prevent Rancher system pods from properly running.
+Rancher system namespaces are also affected by the restrictive security policies described by PSA templates. You need to exempt Rancher's system namespaces after you assign the template, or else the cluster won't operate correctly. See [Pod Security Admissions (PSA) Configuration Templates](./psa-config-template.md#exempting-required-rancher-namespaces) for more details.
 
-- `calico-apiserver`
-- `calico-system`
-- `cattle-alerting`
-- `cattle-csp-adapter-system`
-- `cattle-epinio-system`
-- `cattle-externalip-system`
-- `cattle-fleet-local-system`
-- `cattle-fleet-system`
-- `cattle-gatekeeper-system`
-- `cattle-global-data`
-- `cattle-global-nt`
-- `cattle-impersonation-system`
-- `cattle-istio`
-- `cattle-istio-system`
-- `cattle-logging`
-- `cattle-logging-system`
-- `cattle-monitoring-system`
-- `cattle-neuvector-system`
-- `cattle-prometheus`
-- `cattle-sriov-system`
-- `cattle-system`
-- `cattle-ui-plugin-system`
-- `cattle-windows-gmsa-system`
-- `cert-manager`
-- `cis-operator-system`
-- `ingress-nginx`
-- `istio-system`
-- `kube-node-lease`
-- `kube-public`
-- `kube-system`
-- `longhorn-system`
-- `rancher-alerting-drivers`
-- `security-scan`
-- `tigera-operator`
-
-Rancher, some Rancher owned charts, and RKE2 and K3s distributions all use these namespaces. A subset of the listed namespaces are already exempt in the built-in Rancher `rancher-restricted` policy, for use in downstream clusters. For a complete template which has all the exemptions you need to run Rancher, please refer to this [sample Admission Configuration](psa-restricted-exemptions.yaml).
+For a complete file which has all the exemptions you need to run Rancher, please refer to this [sample Admission Configuration](psa-restricted-exemptions.yaml).

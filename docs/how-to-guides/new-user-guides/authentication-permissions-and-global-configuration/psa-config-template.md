@@ -88,6 +88,41 @@ You need to update the target cluster to make the new template take effect in th
 
 ### Exempting Required Rancher Namespaces
 
-Rancher system namespaces are also affected by the restrictive security policies described by PSA templates. You need to exempt Rancher's system namespaces after you assign the template, or else the cluster won't operate correctly. See [Pod Security Standards (PSS) & Pod Security Admissions (PSA)](./pod-security-standards.md#rancher-on-psa-restricted-clusters) for more details.
+When you run Rancher on a Kubernetes cluster that enforces a restrictive security policy by default, you will need to [exempt the following namespaces](./psa-config-template.md#exempting-namespaces), otherwise the policy might prevent Rancher system pods from properly running.
 
-For a complete file which has all the exemptions you need to run Rancher, please refer to this [sample Admission Configuration](psa-restricted-exemptions.yaml).
+- `calico-apiserver`
+- `calico-system`
+- `cattle-alerting`
+- `cattle-csp-adapter-system`
+- `cattle-epinio-system`
+- `cattle-externalip-system`
+- `cattle-fleet-local-system`
+- `cattle-fleet-system`
+- `cattle-gatekeeper-system`
+- `cattle-global-data`
+- `cattle-global-nt`
+- `cattle-impersonation-system`
+- `cattle-istio`
+- `cattle-istio-system`
+- `cattle-logging`
+- `cattle-logging-system`
+- `cattle-monitoring-system`
+- `cattle-neuvector-system`
+- `cattle-prometheus`
+- `cattle-sriov-system`
+- `cattle-system`
+- `cattle-ui-plugin-system`
+- `cattle-windows-gmsa-system`
+- `cert-manager`
+- `cis-operator-system`
+- `ingress-nginx`
+- `istio-system`
+- `kube-node-lease`
+- `kube-public`
+- `kube-system`
+- `longhorn-system`
+- `rancher-alerting-drivers`
+- `security-scan`
+- `tigera-operator`
+
+Rancher, some Rancher owned charts, and RKE2 and K3s distributions all use these namespaces. A subset of the listed namespaces are already exempt in the built-in Rancher `rancher-restricted` policy, for use in downstream clusters. For a complete template which has all the exemptions you need to run Rancher, please refer to this [sample Admission Configuration](psa-restricted-exemptions.yaml).
