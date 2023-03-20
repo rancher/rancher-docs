@@ -315,7 +315,7 @@ const sidebars = {
                 },
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies",
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards",
-
+                "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates",
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry",
 
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding",

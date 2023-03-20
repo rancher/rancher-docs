@@ -73,14 +73,14 @@ By default, K3s does not include any pod security or network policies. However, 
 
 K3s v1.25 and newer support [Pod Security Admission (PSA)](https://kubernetes.io/docs/concepts/security/pod-security-admission/) for controlling pod security.
 
-You can specify the Pod Security Admission configuration by setting the `defaultPodSecurityAdmissionConfigurationTemplateName` field in the cluster configuration in Rancher:
+You can specify the PSA configuration by setting the `defaultPodSecurityAdmissionConfigurationTemplateName` field in the cluster configuration in Rancher:
 
 ```yaml
 spec:
   defaultPodSecurityAdmissionConfigurationTemplateName: rancher-restricted
 ```
 
-The `rancher-restricted` template is a Rancher provided PSS (Pod Security Standards) policy that enforces the highly-restrictive Kubernetes upstream [`Restricted`](https://kubernetes.io/docs/concepts/security/pod-security-standards/#restricted) profile with best practices for pod hardening.
+The `rancher-restricted` template is provided by Rancher to enforce the highly-restrictive Kubernetes upstream [`Restricted`](https://kubernetes.io/docs/concepts/security/pod-security-standards/#restricted) profile with best practices for pod hardening.
 
 </TabItem>
 <TabItem value="v1.24 and Older">
