@@ -20,7 +20,7 @@ Rancher needs to be installed on a supported Kubernetes version. To specify the 
 Install a K3s cluster by running this command on the Linux machine:
 
 ```
-curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.24.11+k3s1" sh -s - server --cluster-init
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=<VERSION> sh -s - server --cluster-init
 ```
 
 Using `--cluster-init` allows K3s to use embedded etcd as the datastore and has the ability to convert to an HA setup. Refer to [High Availability with Embedded DB](https://rancher.com/docs/k3s/latest/en/installation/ha-embedded/).
