@@ -22,7 +22,7 @@ Perform the following on each node in the cluster:
 
 Perform the following on each node in the cluster:
 
-Follow the official K3s instructions on [Upgrading Hardened Clusters from v1.24.x to v1.25.x](https://docs.k3s.io/known-issues#:~:text=Upgrading%20Hardened%20Clusters%20from%20v1.24.x%20to%20v1.25.x), but use a [custom](./rancher-psact.yaml) Rancher PSA configuration template, instead of the configuration provided on the official K3s site.
+Follow the official K3s instructions on [Upgrading Hardened Clusters from v1.24.x to v1.25.x](https://docs.k3s.io/known-issues#hardened-125), but use a [custom](./rancher-psact.yaml) Rancher PSA configuration template, instead of the configuration provided on the official K3s site.
 </TabItem>
 </Tabs>
 
