@@ -9,3 +9,5 @@ title: Install Rancher CIS Benchmark
 1. Click **Install**.
 
 **Result:** The CIS scan application is deployed on the Kubernetes cluster.
+
+**Note:** CIS Benchmark 4.0.0 and above have PSPs disabled by default. To install CIS Benchmark on a hardened cluster, set `golbal.psp.enabled` to `true` in the values before installing the chart.
