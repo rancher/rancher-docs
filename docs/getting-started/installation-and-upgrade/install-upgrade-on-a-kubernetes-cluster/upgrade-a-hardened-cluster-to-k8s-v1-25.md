@@ -6,17 +6,22 @@ Kubernetes v1.25 changes how clusters describe and implement security policies. 
 
 If you have custom or imported hardened clusters, you must make special preparations to ensure that the upgrade from an earlier version of Kubernetes to v1.25 or later goes smoothly.
 
-## Upgrading Imported Hardened Clusters to Kubernetes ≥v1.25
+## Upgrading Imported Hardened Clusters to Kubernetes v1.25 or Later
 
 <Tabs groupId="k8s-distro">
 <TabItem value="RKE2" default>
-1. Save [`rancher-psact.yaml`](./rancher-psact.yaml) in `/etc/rancher/rke2` on each node in the cluster.
+
+Perform the following on each node in the cluster: 
+1. Save [`rancher-psact.yaml`](./rancher-psact.yaml) in `/etc/rancher/rke2`.
 1. Edit the RKE2 configuration file:
-  1. Update the `profile` field to `cis-1.23`.
-  1. Specify the path for the configuration file that you just added: `pod-security-admission-config-file: /etc/rancher/rke2/rancher-psact.yaml`.
+   1. Update the `profile` field to `cis-1.23`.
+   1. Specify the path for the configuration file that you just added: `pod-security-admission-config-file: /etc/rancher/rke2/rancher-psact.yaml`.
   
 </TabItem>
 <TabItem value="K3s">
+
+Perform the following on each node in the cluster:
+
 Follow the official K3s instructions on [Upgrading Hardened Clusters from v1.24.x to v1.25.x](https://docs.k3s.io/known-issues#:~:text=Upgrading%20Hardened%20Clusters%20from%20v1.24.x%20to%20v1.25.x), but use a [custom](./rancher-psact.yaml) Rancher PSA configuration template, instead of the configuration provided on the official K3s site.
 </TabItem>
 </Tabs>
@@ -30,24 +35,20 @@ After you perform these steps, you can upgrade the cluster's Kubernetes version 
 
 ## Upgrading Custom Hardened Clusters to Kubernetes v1.25 or Later
 
-<Tabs groupId="operating-systems">
+<Tabs groupId="k8s-distro">
 <TabItem value="RKE2" default>
+
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. Find the cluster you want to update in the **Clusters** table, and click the **⋮**.
 1. Select **Edit Config**.
 1. Under **Basics > Security**, in the **CIS Profile** dropdown menu, select `cis-1.23`. 
 1. In the **Default Pod Security Admission** dropdown menu, select `rancher-restricted`.
+1. In the **Kubernetes Version** dropdown menu, select the version that you would like to use.
 1. Click **Save**.
 
-Now, upgrade the cluster's Kubernetes version through the Rancher UI:
-
-1. In the upper left corner, click **☰ > Cluster Management**.
-1. Find the cluster you want to update in the **Clusters** table, and click the **⋮**.
-1. Select **Edit Config**.
-1. In the **Kubernetes Version** dropdown menu, select the version that you would like to use.
-
-</TabItem>
+</TabItem
 <TabItem value="K3s">
+
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. Find the cluster you want to update in the **Clusters** table, and click the **⋮**.
 1. Select **Edit YAML**.
