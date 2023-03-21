@@ -33,7 +33,6 @@ You can assign a PSA template at the same time that you create a downstream clus
 ### Hardening the Cluster
 
 If you select the **rancher-restricted** template but don't select a **CIS Profile**, you won't meet required CIS benchmarks. See the [RKE2 hardening guide](../../../pages-for-subheaders/rke2-hardening-guide.md) for more details.
-
 </TabItem>
 <TabItem value="RKE1">
 
@@ -51,15 +50,14 @@ If you select the **rancher-restricted** template but don't select a **CIS Profi
 1. On the **Add Cluster** page, go to **Cluster Options > Advanced Options**.
 1. In the **Pod Security Admission Configuration Template**, select the template you want to assign.
 1. Click **Save**.
-
 </TabItem>
 </Tabs>
 
 ## Add or Edit a Pod Security Admissions (PSA) Configuration Template
 
-If you have administrator privileges, you can customize security restrictions and permissions by creating additional PSA templates, or by editing existing templates.
+If you are have administrator privileges, you can customize security restrictions and permissions by creating additional PSA templates, or by editing existing templates.
 
-:::caution
+:::note caution
 If you edit an existing PSA template while it is still in use, changes will be applied to all clusters that have been assigned to that template.
 :::
 
@@ -74,7 +72,7 @@ If you edit an existing PSA template while it is still in use, changes will be a
 
 If you want to allow other users to manage templates, you can bind that user to a role that grants all verbs (`"*"`) on `management.cattle.io/podsecurityadmissionconfigurationtemplates`.
 
-:::caution
+:::note warning
 Any user that is bound to the above permission will be able to change the restriction levels on _all_ managed clusters which use a given PSA template, including ones that they have no permissions on.
 :::
 
@@ -96,7 +94,7 @@ You need to update the target cluster to make the new template take effect in th
 
 ### Exempting Required Rancher Namespaces
 
-When you run Rancher on a Kubernetes cluster that enforces a restrictive security policy by default, you will need to [exempt the following namespaces](./psa-config-templates.md#exempting-namespaces), otherwise the policy might prevent Rancher system pods from properly running.
+When you run Rancher on a Kubernetes cluster that enforces a restrictive security policy by default, you will need to [exempt the following namespaces](./psa-config-template.md#exempting-namespaces), otherwise the policy might prevent Rancher system pods from properly running.
 
 - `calico-apiserver`
 - `calico-system`
