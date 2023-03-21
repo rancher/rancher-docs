@@ -1,5 +1,5 @@
 ---
-Sample PodSecurityConfiguration
+title: Sample PodSecurityConfiguration
 ---
 
 The following PodSecurityConfiguration contains the required Rancher namespace exemptions for a `rancher-restricted` cluster to run properly.
