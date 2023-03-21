@@ -94,7 +94,7 @@ You need to update the target cluster to make the new template take effect in th
 
 ### Exempting Required Rancher Namespaces
 
-When you run Rancher on a Kubernetes cluster that enforces a restrictive security policy by default, you will need to [exempt the following namespaces](./psa-config-template.md#exempting-namespaces), otherwise the policy might prevent Rancher system pods from properly running.
+When you run Rancher on a Kubernetes cluster that enforces a restrictive security policy by default, you will need to [exempt the following namespaces](./psa-config-templates.md#exempting-namespaces), otherwise the policy might prevent Rancher system pods from properly running.
 
 - `calico-apiserver`
 - `calico-system`
