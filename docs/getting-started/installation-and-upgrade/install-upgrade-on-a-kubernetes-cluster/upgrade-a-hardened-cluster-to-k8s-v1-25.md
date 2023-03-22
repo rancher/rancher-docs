@@ -47,7 +47,7 @@ After you perform these steps, you can upgrade the cluster's Kubernetes version 
 1. In the **Kubernetes Version** dropdown menu, select the version that you would like to use.
 1. Click **Save**.
 
-</TabItem
+</TabItem>
 <TabItem value="K3s">
 
 1. In the upper left corner, click **☰ > Cluster Management**.
