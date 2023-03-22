@@ -2,27 +2,27 @@
 title: Feature Flags
 ---
 
-Feature flags were introduced to allow you to try experimental features that are not enabled by default.
+With feature flags, you can try out experimental features that aren't enabled by default.
 
-To learn about feature values and how to enable features, refer [here](../../../pages-for-subheaders/enable-experimental-features.md).
+To learn more about feature values and how to enable them, see [Enabling Experimental Features](../../../pages-for-subheaders/enable-experimental-features.md).
 
 :::note
 
-There are some feature flags that may require a restart of the Rancher server container. These features that require a restart are marked in the table of these docs and in the UI.
+Some feature flags require a restart of the Rancher container. Features that require a restart are marked in the Rancher UI, and in the table at the end of this document.
 
 :::
 
-The following is a list of the feature flags available in Rancher:
+The following is a list of feature flags available in Rancher:
 
-- `harvester`: This feature flag is available starting in v2.6.1. It is used to manage access to the Virtualization Management page where users can navigate directly to Harvester clusters and access the Harvester UI. For more information, see [this page](../../../integrations-in-rancher/harvester.md#feature-flag/).
-- `rke2`: Used to enable the ability to provision RKE2 clusters. By default, this feature flag is enabled, which allows users to attempt to provision these type of clusters.
-- `fleet`: The previous `fleet` feature flag is now required to be enabled as the Fleet capabilities are leveraged within the new provisioning framework. If you had this feature flag disabled in earlier versions, upon upgrading to Rancher v2.6, the flag will automatically be enabled. See this [page](../../../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md) for more information.
-- `continuous-delivery`: In Rancher v2.5.x, Fleet came with a GitOps feature that could not be disabled separately from Fleet. In Rancher v2.6, the `continuous-delivery` feature flag was introduced to allow the GitOps feature of Fleet to be disabled. For more information, see [this page.](../../../how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery.md)
-- `legacy`: There are a set of features from previous versions that are slowly being phased out of Rancher for newer iterations of the feature. This is a mix of deprecated features as well as features that will eventually be moved to newer variations in Rancher. By default, this feature flag is disabled for new installations. If you are upgrading from a previous version, this feature flag would be enabled.
-- `token-hashing`: Used to enable new token-hashing feature. Once enabled, existing tokens will be hashed and all new tokens will be hashed automatically using the SHA256 algorithm. Once a token is hashed it cannot be undone. Once this feature flag is enabled, it cannot be disabled. See [hashing of tokens](../../../reference-guides/about-the-api/api-tokens.md) for more information.
-- `unsupported-storage-drivers`: This feature [allows unsupported storage drivers.](../../../how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md). In other words, it enables types for storage providers and provisioners that are not enabled by default.
-- `istio-virtual-service-ui`: This feature enables a [UI to create, read, update, and delete Istio virtual services and destination rules,](../../../how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features.md) which are traffic management features of Istio.
-- `multi-cluster-management`: Used for multi-cluster provisioning and management of Kubernetes clusters. This feature flag can only be set at install time and not changed afterwards.
+- `continuous-delivery`: In Rancher v2.5.x, Fleet came with a GitOps feature that couldn't be disabled separately from Fleet. In Rancher v2.6, the `continuous-delivery` feature flag was introduced to allow Fleet GitOps to be disabled. See [Continuous Delivery.](../../../how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery.md) for more information.
+- `fleet`: You must enable this flag in Rancher versions v2.6 and later, since Fleet features are required by the provisioning framework. If you had this flag disabled in earlier versions of Rancher, the flag will be automatically enabled when you upgrade to v2.6 or later. See [Fleet - GitOps at Scale](../../../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md) for more information.
+- `harvester` (Rancher v2.6.1 and later): Manages access to the Virtualization Management page, where users can navigate directly to Harvester clusters and access the Harvester UI. See [Fleet - GitOps at Scale](../../../integrations-in-rancher/harvester.md#feature-flag/) for more information.
+- `istio-virtual-service-ui`: This flag enables a [visual interface](../../../how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features.md) to create, read, update, and delete Istio virtual services and destination rules, which are Istio traffic management features.
+- `legacy`: There are a set of features from previous versions of Rancher that are slowly being phased out in favor of newer implementations. These are a mix of deprecated features as well as features that will eventually move to newer versions. This flag is disabled by default on new Rancher installations. If you're upgrading from a previous version of Rancher, this flag is enabled.
+- `multi-cluster-management`: Allows multi-cluster provisioning and management of Kubernetes clusters. This flag can only be set at install time.
+- `rke2`: Enables provisioning RKE2 clusters. This flag is enabled bt default.
+- `token-hashing`: Enables token-hashing. Once enabled, existing tokens will be hashed and all new tokens will be hashed automatically, using the SHA256 algorithm. Once a token is hashed it can't be undone. This flag can't be disabled after its enabled. See [API Tokens](../../../reference-guides/about-the-api/api-tokens.md#token-hashing) for more information.
+- `unsupported-storage-drivers`: Enables types for storage providers and provisioners that aren't enabled by default. See [Allow Unsupported Storage Drivers](../../../how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md) for more information.
 
 The below table shows the availability and default value for feature flags in Rancher:
 
