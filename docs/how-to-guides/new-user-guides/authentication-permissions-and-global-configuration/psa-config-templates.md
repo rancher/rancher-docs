@@ -1,5 +1,5 @@
 ---
-title: Pod Security Admissions (PSA) Configuration Templates 
+title: Pod Security Admission (PSA) Configuration Templates 
 ---
 
 [Pod Security admission (PSA)](./pod-security-standards.md) configuration templates are a Rancher custom-defined resource (CRD), available in Rancher v2.7.2 and above. The templates provide pre-defined security configurations that you can apply to a cluster:
