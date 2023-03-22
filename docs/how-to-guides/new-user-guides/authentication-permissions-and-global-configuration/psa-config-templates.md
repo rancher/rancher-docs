@@ -48,7 +48,8 @@ If you select the **rancher-restricted** template but don't select a **CIS Profi
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. Find the cluster you want to update in the **Clusters** table, and click the **⋮**.
-1. On the **Add Cluster** page, go to **Cluster Options > Advanced Options**.
+1. Select **Edit Config**.
+1. On the **Edit Cluster** page, go to **Cluster Options > Advanced Options**.
 1. In the **Pod Security Admission Configuration Template**, select the template you want to assign.
 1. Click **Save**.
 
