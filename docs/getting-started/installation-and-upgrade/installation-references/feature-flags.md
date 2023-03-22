@@ -2,7 +2,7 @@
 title: Feature Flags
 ---
 
-With feature flags, you can try out experimental features that aren't enabled by default.
+With feature flags, you can try out experimental features that aren't enabled by default, or enable legacy features that are being phased out.
 
 To learn more about feature values and how to enable them, see [Enabling Experimental Features](../../../pages-for-subheaders/enable-experimental-features.md).
 
@@ -23,7 +23,7 @@ The following is a list of feature flags available in Rancher:
 - `multi-cluster-management`: Allows multi-cluster provisioning and management of Kubernetes clusters. This flag can only be set at install time.
 - `proxy` (v2.7.1): Enables an experimental proxy for Kubernetes API requests. 
 - `rke1-custom-node-cleanup` (v2.7.1 and later): Enables cleanup of deleted RKE1 custom nodes. 
-- `rke2`: Enables provisioning RKE2 clusters. This flag is enabled bt default.
+- `rke2`: Enables provisioning RKE2 clusters. This flag is enabled by default.
 - `token-hashing`: Enables token-hashing. Once enabled, existing tokens will be hashed and all new tokens will be hashed automatically, using the SHA256 algorithm. Once a token is hashed it can't be undone. This flag can't be disabled after its enabled. See [API Tokens](../../../reference-guides/about-the-api/api-tokens.md#token-hashing) for more information.
 - `unsupported-storage-drivers`: Enables types for storage providers and provisioners that aren't enabled by default. See [Allow Unsupported Storage Drivers](../../../how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md) for more information.
 
