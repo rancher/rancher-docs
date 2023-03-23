@@ -11,7 +11,7 @@ You can enable monitoring with or without SSL.
 ## Requirements
 
 - Allow traffic on port 9796 for each of your nodes. Prometheus scrapes metrics from these ports.
-  - If you've upgraded from V1 to V2 monitoring, or have PushProx disabled, you may also have to expose port 10254 for each of your nodes.
+  - If you  have PushProx disabled, or upgraded from a previous Rancher version that had v1 monitoring already installed, you may also need to allow traffic on port 10254 for each of your nodes.
 - Make sure that your cluster fulfills the resource requirements. The cluster should have at least 1950Mi memory available, 2700m CPU, and 50Gi storage. See [Configuring Resource Limits and Requests](../../../reference-guides/monitoring-v2-configuration/helm-chart-options.md#configuring-resource-limits-and-requests) for a breakdown of the resource limits and requests.
 - When you install monitoring on an RKE cluster that uses RancherOS or Flatcar Linux nodes, change the etcd node certificate directory to `/opt/rke/etc/kubernetes/ssl`.
 - For clusters that have been provisioned with the RKE CLI and that have the address set to a hostname instead of an IP address, set `rkeEtcd.clients.useLocalhost` to `true` when you configure the Values during installation. For example:
