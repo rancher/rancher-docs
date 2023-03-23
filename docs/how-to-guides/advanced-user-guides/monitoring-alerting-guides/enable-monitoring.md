@@ -27,7 +27,7 @@ If you want to set up Alertmanager, Grafana or Ingress, it has to be done with t
 
 :::
 
-#Setting Resource Limits and Requests
+## Setting Resource Limits and Requests
 
 The resource requests and limits can be configured when installing `rancher-monitoring`.  To configure Prometheus resources from the Rancher UI, click **Apps > Monitoring** in the upper left corner.
 
