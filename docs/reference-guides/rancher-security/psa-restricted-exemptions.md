@@ -47,6 +47,7 @@ plugins:
                      cattle-windows-gmsa-system,
                      cert-manager,
                      cis-operator-system,
+                     fleet-default,
                      ingress-nginx,
                      istio-system,
                      kube-node-lease,

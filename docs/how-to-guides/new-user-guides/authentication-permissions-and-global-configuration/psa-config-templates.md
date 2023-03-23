@@ -124,6 +124,7 @@ When you run Rancher on a Kubernetes cluster that enforces a restrictive securit
 - `cattle-windows-gmsa-system`
 - `cert-manager`
 - `cis-operator-system`
+- `fleet-default`
 - `ingress-nginx`
 - `istio-system`
 - `kube-node-lease`
