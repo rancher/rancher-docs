@@ -10,10 +10,11 @@ You can enable monitoring with or without SSL.
 
 ## Requirements
 
-- Make sure that you are allowing traffic on port 9796 for each of your nodes because Prometheus will scrape metrics from here.
-- Make sure your cluster fulfills the resource requirements. The cluster should have at least 1950Mi memory available, 2700m CPU, and 50Gi storage. A breakdown of the resource limits and requests is [here.](../../../reference-guides/monitoring-v2-configuration/helm-chart-options.md#configuring-resource-limits-and-requests)
-- When installing monitoring on an RKE cluster using RancherOS or Flatcar Linux nodes, change the etcd node certificate directory to `/opt/rke/etc/kubernetes/ssl`.
-- For clusters provisioned with the RKE CLI and the address is set to a hostname instead of an IP address, set `rkeEtcd.clients.useLocalhost` to `true` during the Values configuration step of the installation. The YAML snippet will look like the following:
+- Allow traffic on port 9796 for each of your nodes. Prometheus scrapes metrics from these ports.
+  - You may also need to allow traffic on port 10254 for each of your nodes, if [PushProx](../../../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#pushprox) is disabled (`ingressNginx.enabled` set to `false`), or you've upgraded from a previous Rancher version that had v1 monitoring already installed.
+- Make sure that your cluster fulfills the resource requirements. The cluster should have at least 1950Mi memory available, 2700m CPU, and 50Gi storage. See [Configuring Resource Limits and Requests](../../../reference-guides/monitoring-v2-configuration/helm-chart-options.md#configuring-resource-limits-and-requests) for a breakdown of the resource limits and requests.
+- When you install monitoring on an RKE cluster that uses RancherOS or Flatcar Linux nodes, change the etcd node certificate directory to `/opt/rke/etc/kubernetes/ssl`.
+- For clusters that have been provisioned with the RKE CLI and that have the address set to a hostname instead of an IP address, set `rkeEtcd.clients.useLocalhost` to `true` when you configure the Values during installation. For example:
 
 ```yaml
 rkeEtcd:
@@ -27,7 +28,7 @@ If you want to set up Alertmanager, Grafana or Ingress, it has to be done with t
 
 :::
 
-#Setting Resource Limits and Requests
+## Setting Resource Limits and Requests
 
 The resource requests and limits can be configured when installing `rancher-monitoring`.  To configure Prometheus resources from the Rancher UI, click **Apps > Monitoring** in the upper left corner.
 
