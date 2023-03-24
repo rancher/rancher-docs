@@ -154,7 +154,7 @@ The reference `cluster.yml` is used by the RKE CLI that provides the configurati
 <TabItem value="v1.25 and Newer" default>
 
 :::note
-If you intend to import an RKE cluster into Rancher, please consult the [documentation](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards.md) for how to configure the Pod Security Standards to add Rancher's namespaces to the exemption list.
+If you intend to import an RKE cluster into Rancher, please consult the [documentation](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates.md) for how to configure the PSA to exempt Rancher system namespaces.
 :::
 
 ```yaml

@@ -87,7 +87,7 @@ RKE2 always runs with some amount of pod security.
 <Tabs groupId="rke2-version">
 <TabItem value="v1.25 and Newer" default>
 
-On v1.25 and newer, [Pod Security Admission (PSA)](https://kubernetes.io/docs/concepts/security/pod-security-admission/) are used for pod security.
+On v1.25 and newer, [Pod Security Admissions (PSAs)](https://kubernetes.io/docs/concepts/security/pod-security-admission/) are used for pod security.
 
 Below is the minimum necessary configuration needed for hardening RKE2 to pass CIS v1.23 hardened profile `rke2-cis-1.23-hardened` available in Rancher.
 
@@ -104,8 +104,12 @@ When both the `defaultPodSecurityAdmissionConfigurationTemplateName` and `profil
 
 1. Checks that host-level requirements have been met. If they haven't, RKE2 will exit with a fatal error describing the unmet requirements.
 2. Applies network policies that allow the cluster to pass associated controls.
-3. Configures the Pod Security Admission Controller with the Pod Security Admission Configuration Template (PSACT) `rancher-restricted`, to enforce restricted mode in all namespaces, except the ones in the PSACT's exemption list.
+3. Configures the Pod Security Admission Controller with the PSA configuration template `rancher-restricted`, to enforce restricted mode in all namespaces, except the ones in the template's exemption list.
    These namespaces are exempted to allow system pods to run without restrictions, which is required for proper operation of the cluster.
+
+:::note
+If you intend to import an RKE cluster into Rancher, please consult the [documentation](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates.md) for how to configure the PSA to exempt Rancher system namespaces.
+:::
 
 </TabItem>
 

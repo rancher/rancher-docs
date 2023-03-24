@@ -1,3 +1,10 @@
+---
+title: Sample PodSecurityConfiguration
+---
+
+The following PodSecurityConfiguration contains the required Rancher namespace exemptions for a `rancher-restricted` cluster to run properly.
+
+```yaml
 apiVersion: apiserver.config.k8s.io/v1
 kind: AdmissionConfiguration
 plugins:
@@ -40,6 +47,7 @@ plugins:
                      cattle-windows-gmsa-system,
                      cert-manager,
                      cis-operator-system,
+                     fleet-default,
                      ingress-nginx,
                      istio-system,
                      kube-node-lease,
@@ -49,3 +57,4 @@ plugins:
                      rancher-alerting-drivers,
                      security-scan,
                      tigera-operator]
+```
