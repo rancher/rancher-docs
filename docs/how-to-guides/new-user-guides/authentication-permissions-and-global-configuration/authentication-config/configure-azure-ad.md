@@ -113,7 +113,21 @@ Ensure that you set Application permissions, and *not* Delegated permissions. Ot
 
 :::note
 
-Rancher doesn't validate the permissions you grant to the app in Azure. We only support the use of the `Directory.Read.All` application permission.
+Rancher doesn't validate the permissions you grant to the app in Azure. You're free to try any permissions you want, as long as they allow Rancher to work with AD users and groups.
+
+Specifically, Rancher needs permissions that allow the following actions:
+- Get a user.
+- List all users.
+- List groups of which a given user is a member.
+- Get a group.
+- List all groups.
+
+Rancher performs these actions either to log in a user or to run a user/group search. Keep in mind that the permissions must be of type `Application`.
+
+Here are a few examples of permission combinations that satisfy Rancher's needs:
+- `Directory.Read.All`
+- `User.Read.All` and `GroupMember.Read.All`
+- `User.Read.All` and `Group.Read.All`
 
 :::
 
