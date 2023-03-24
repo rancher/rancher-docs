@@ -87,6 +87,6 @@ For more details on how to upgrade wins on existing Windows hosts, see [Windows 
 
 ## Known Issues
 
-There is a [known issue](https://github.com/rancher/rancher/issues/28787#issuecomment-693611821) that K3s clusters require more than the alloted default memory. If you enable monitoring on a K3s cluster, set `prometheus.prometheusSpec.resources.memory.limit` to 2500 Mi and `prometheus.prometheusSpec.resources.memory.request` to 1750 Mi.
+There is a [known issue](https://github.com/rancher/rancher/issues/28787#issuecomment-693611821) that K3s clusters require more than the allotted default memory. If you enable monitoring on a K3s cluster, set `prometheus.prometheusSpec.resources.memory.limit` to 2500 Mi and `prometheus.prometheusSpec.resources.memory.request` to 1750 Mi.
 
 See [Debugging High Memory Usage](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/debug-high-memory-usage.md) for advice and recommendations.
