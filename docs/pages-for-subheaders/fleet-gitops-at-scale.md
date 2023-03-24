@@ -2,7 +2,7 @@
 title: Fleet - GitOps at Scale
 ---
 
-Fleet is GitOps at scale. Fleet is designed to manage up to a million clusters. It’s also lightweight enough that it works great for a [single cluster](https://fleet.rancher.io/single-cluster-install/) too, but it really shines when you get to a [large scale](https://fleet.rancher.io/multi-cluster-install/). By large scale we mean either a lot of clusters, a lot of deployments, or a lot of teams in a single organization.
+Fleet is GitOps at scale. Fleet is designed to manage up to a million clusters. It’s also lightweight enough that it works great for a [single cluster](https://fleet.rancher.io/tut-deployment#single-cluster-examples) too, but it really shines when you get to a [large scale](https://fleet.rancher.io/tut-deployment#multi-cluster-examples). By large scale we mean either a lot of clusters, a lot of deployments, or a lot of teams in a single organization.
 
 Fleet is a separate project from Rancher, and can be installed on any Kubernetes cluster with Helm.
 
@@ -31,7 +31,7 @@ Follow the steps below to access Continuous Delivery in the Rancher UI:
 
 1. Click on **Gitrepos** on the left navigation bar to deploy the gitrepo into your clusters in the current workspace.
 
-1. Select your [git repository](https://fleet.rancher.io/gitrepo-add/) and [target clusters/cluster group](https://fleet.rancher.io/gitrepo-structure/). You can also create the cluster group in the UI by clicking on **Cluster Groups** from the left navigation bar.
+1. Select your [git repository](https://fleet.rancher.io/gitrepo-add/) and [target clusters/cluster group](https://fleet.rancher.io/gitrepo-targets/). You can also create the cluster group in the UI by clicking on **Cluster Groups** from the left navigation bar.
 
 1. Once the gitrepo is deployed, you can monitor the application through the Rancher UI.
 
@@ -41,7 +41,7 @@ For details on support for clusters with Windows nodes, see [this page](../integ
 
 ## GitHub Repository
 
-The Fleet Helm charts are available [here](https://github.com/rancher/fleet/releases/tag/v0.3.10).
+The Fleet Helm charts are available [here](https://github.com/rancher/fleet/releases).
 
 ## Using Fleet Behind a Proxy
 
