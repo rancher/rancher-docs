@@ -26,9 +26,7 @@ Rancher 身份验证代理支持与以下外部身份验证服务集成：
 | [Google OAuth](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-google-oauth.md) |
 | [Shibboleth](configure-shibboleth-saml.md) |
 
-<br/>
-
-同时，Rancher 也提供了[本地验证](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/create-local-users.md)。
+同时，Rancher 也提供了[本地身份验证](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/create-local-users.md)。
 
 大多数情况下，应该使用外部身份验证服务，而不是本地身份验证，因为外部身份验证允许对用户进行集中管理。但是你可能需要一些本地身份验证用户，以便在特定的情况下（例如在外部身份验证系统不可用或正在进行维护时）管理 Rancher。
 
@@ -109,3 +107,27 @@ Rancher 依赖用户和组来决定允许登录到 Rancher 的用户，以及他
 如果你需要重新配置或禁用以前设置的提供程序然后再重新启用它，请确保进行此操作的用户使用外部用户身份登录 Rancher，而不是本地管理员。
 
 :::
+
+## 禁用认证提供程序
+
+禁用身份认证提供程序时，Rancher 会删除与其关联的所有资源，例如：
+- 密文
+- 全局角色绑定
+- 集群角色模板绑定
+- 项目角色模板绑定
+- 与提供商关联的外部用户，这些用户从未以本地用户身份登录到 Rancher
+
+由于此操作可能会导致许多资源丢失，因此你可能希望在提供程序上添加保护措施。
+为确保在禁用身份认证提供程序时不会运行此清理，请向相应的身份认证配置添加特殊注释。
+
+例如，要为 Azure AD 提供程序添加安全措施，请注释 `azuread` authconfig 对象：
+
+`kubectl annotate --overwrite authconfig azuread management.cattle.io/auth-provider-cleanup='user-locked'`
+
+在你将注释设置为 `unlocked` 之前，Rancher 不会执行清理。
+
+### 手动运行资源清理
+
+即使在你配置了另一个身份认证提供程序，Rancher 也可能会保留 local 集群中已禁用的身份认证提供程序配置的资源。例如，如果你使用 Provider A，然后禁用了它并开始使用 Provider B，当你升级到新版本的 Rancher 时，你可以手动触发对 Provider A 配置的资源的清理。
+
+要为已禁用的身份认证提供程序手动触发清理，请将带有 `unlocked` 值的 `management.cattle.io/auth-provider-cleanup` 注释添加到 auth 配置中。

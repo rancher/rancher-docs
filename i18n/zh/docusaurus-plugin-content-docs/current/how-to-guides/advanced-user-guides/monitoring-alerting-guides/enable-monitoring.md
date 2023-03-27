@@ -10,10 +10,11 @@ title: 启用 Monitoring
 
 ## 要求
 
-- 确保在每个节点上允许端口 9796 上的流量，因为 Prometheus 将从这里抓取指标。
-- 确保你的集群满足资源要求。集群应至少有 1950Mi 可用内存、2700m CPU 和 50Gi 存储。要查看资源限制和请求的明细，请查看[此处](../../../reference-guides/monitoring-v2-configuration/helm-chart-options.md#配置资源限制和请求)。
-- 在使用 RancherOS 或 Flatcar Linux 节点的 RKE 集群上安装 monitoring 时，请将 etcd 节点证书目录更改为 `/opt/rke/etc/kubernetes/ssl`。
-- 如果集群是使用 RKE CLI 配置的，而且地址设置为主机名而不是 IP 地址，请在安装的 Values 配置步骤中将 `rkeEtcd.clients.useLocalhost` 设置为 `true`。YAML 片段如下所示：
+- 在每个节点上允许端口 9796 上的流量。Prometheus 将从这些端口抓取指标。
+   - 如果 [PushProx](../../../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#pushprox) 被禁用（`ingressNginx.enabled` 设置为 `false`），或者你已经升级了安装了 Monitoring V1 的 Rancher 版本，你可能还需要为每个节点允许端口 10254 上的流量。
+- 确保你的集群满足资源要求。集群应至少有 1950Mi 可用内存、2700m CPU 和 50Gi 存储。有关资源限制和请求的详细信息，请参阅[配置资源限制和请求](../../../reference-guides/monitoring-v2-configuration/helm-chart-options.md#配置资源限制和请求)。
+- 在使用 RancherOS 或 Flatcar Linux 节点的 RKE 集群上安装 Monitoring 时，请将 etcd 节点证书目录更改为 `/opt/rke/etc/kubernetes/ssl`。
+- 如果集群是使用 RKE CLI 配置的，而且地址设置为主机名而不是 IP 地址，请在安装的 Values 配置步骤中将 `rkeEtcd.clients.useLocalhost` 设置为 `true`。例如：
 
 ```yaml
 rkeEtcd:
@@ -27,7 +28,7 @@ rkeEtcd:
 
 :::
 
-# 设置资源限制和请求
+## 设置资源限制和请求
 
 安装 `rancher-monitoring` 时可以配置资源请求和限制。要从 Rancher UI 配置 Prometheus 资源，请单击左上角的 **Apps > Monitoring**。
 
