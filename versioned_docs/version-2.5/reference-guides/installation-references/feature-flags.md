@@ -2,7 +2,7 @@
 title: Feature Flags
 ---
 
-With feature flags, you can try out optional or experimental features, and enable legacy features that are being phased out.
+With feature flags, you can try out optional or experimental features.
 
 To learn more about feature values and how to enable them, see [Enabling Experimental Features](../../pages-for-subheaders/enable-experimental-features.md).
 
@@ -20,10 +20,10 @@ The following is a list of feature flags available in Rancher v2.5. If you've up
 
 The following table shows the availability and default value for some feature flags in Rancher. Features marked "GA" (generally available) are no longer experimental:
 
-| Feature Flag Name | Default Value | Status | Available As Of | Rancher Restart Required? |
-| ----------------------------- | ------------- | ------------ | --------------- |---|
-| `dashboard` | `true` | Experimental | v2.4.0 | X |
-| `dashboard` | `true` | GA and no longer a feature flag | v2.5.0 | X |
-| `fleet` | `true` | GA | v2.5.0 | |
-| `proxy` | `false` | Experimental | v2.4.0 | |
-| `proxy` | N/A | Discontinued | v2.5.0 | X  |
+| Feature Flag Name | Default Value | Status | Available As Of |
+| ----------------- | ------------- | ------ | --------------- |
+| `dashboard` | `true` | Experimental | v2.4.0 |
+| `dashboard` | `true` | GA and no longer a feature flag | v2.5.0 |
+| `fleet` | `true` | GA | v2.5.0 |
+| `proxy` | `false` | Experimental | v2.4.0 |
+| `proxy` | N/A | Discontinued | v2.5.0 |
