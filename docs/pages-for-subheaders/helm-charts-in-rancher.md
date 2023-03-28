@@ -44,6 +44,15 @@ Any major versions that are less than the ones mentioned in the table below are 
 
 - On upgrades, ensure that you are not downgrading the version of the chart that you are using. For example, if you are using a version of Monitoring > `16.6.0` in Rancher 2.5, you should not upgrade to `100.x.x+up16.6.0`. Instead, you should upgrade to the appropriate version in the next release.
 
+### Prerelease Versions
+
+A version is considered to be a prerelease if it adheres to [the specification](https://semver.org/#spec-item-9) defined by [Semantic Versioning 2.0.0](https://semver.org/). For example, a Helm chart with a version of `0.1.3-dev.12ab4f` is considered a prerelease. Prerelease versions are not displayed by default and must be configured to do so.
+
+To display prerelease versions, follow these steps:
+
+1. Click on your user avatar in the upper right corner.
+1. Click **Preferences**.
+1. Under **Helm Charts**, select **Include Prerelease Versions**.
 
 ### Charts
 
@@ -148,3 +157,5 @@ If you have a legacy app installed and want to upgrade it:
 ### Limitations
 
 [Dashboard apps or Rancher feature charts](helm-charts-in-rancher.md) **cannot** be installed using the Rancher CLI.
+
+a
