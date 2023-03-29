@@ -2,7 +2,7 @@
 title: User Preferences
 ---
 
-Each user can choose preferences to personalize their Rancher experience. To change preference settings:
+You can set preferences to personalize your Rancher experience. To change preference settings:
 
 1. Click on your user avatar in the upper right corner.
 1. Click **Preferences**.
@@ -22,13 +22,13 @@ Choose your background color for the Rancher UI. If you choose **Auto**, the bac
 
 Choose the page displayed after logging in. Options include:
 
-- The home page
-- The area you last visited
-- A specific cluster of your choosing
+- The home page.
+- The area you last visited.
+- A specific cluster of your choosing.
 
 ## Display Settings
 
-Choose the way certain information is displayed. The following can be configured:
+Choose how certain information is displayed:
 
 - Date format
 - Time format
