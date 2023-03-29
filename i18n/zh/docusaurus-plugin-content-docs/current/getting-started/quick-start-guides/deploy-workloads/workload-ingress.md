@@ -18,7 +18,7 @@ title: 部署带有 Ingress 的工作负载
 1. 单击**创建**。
 1. 点击 **Deployment**。
 1. 为工作负载设置**名称**。
-1. 在 **Docker 镜像**字段中，输入 `rancher/hello-world`。注意区分大小写。
+1. 在**容器镜像**字段中，输入 `rancher/hello-world`。注意区分大小写。
 1. 点击**添加端口**并在**私有容器端口**字段中输入`80`。通过添加端口，你可以访问集群内外的应用。详情请参见 [Service](../../../pages-for-subheaders/workloads-and-pods.md#services)。
 1. 单击**创建**。
 

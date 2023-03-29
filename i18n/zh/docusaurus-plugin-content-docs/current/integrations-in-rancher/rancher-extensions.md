@@ -81,4 +81,4 @@ Rancher v2.7.0 引入了**扩展（Extension）**的新功能。扩展允许用�
 
 ## 开发扩展
 
-要了解如何开发扩展，请参阅 [UI DevKit 文档](https://rancher.github.io/dashboard/plugins/plugins-getting-started)。
+要了解如何开发你自己的扩展，请参阅官方[入门指南](https://rancher.github.io/dashboard/extensions/extensions-getting-started)。

@@ -277,7 +277,7 @@ If you need to roll back your migration, please note the following:
 
 :::caution
 
-If you upgrade to Rancher v2.6.7+ with an existing Azure AD setup, and choose to disable the auth provider, you won't be able to restore the previous setup. You also won't be able to set up Azure AD anew using the old flow. You'll need to re-register with the new auth flow. Since Rancher now uses the Graph API, users need set up the [proper permissions in the Azure portal](#3-set-required-permissions-for-rancher).
+If you upgrade to Rancher v2.6.7+ with an existing Azure AD setup, and choose to disable the auth provider, you won't be able to restore the previous setup. You also won't be able to set up Azure AD using the old flow. You'll need to re-register with the new auth flow. Since Rancher now uses the Graph API, users need set up the [proper permissions in the Azure portal](#3-set-required-permissions-for-rancher).
 
 :::
 

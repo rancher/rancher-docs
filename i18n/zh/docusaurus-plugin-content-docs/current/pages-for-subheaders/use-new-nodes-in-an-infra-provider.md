@@ -72,7 +72,7 @@ title: 在云厂商的新节点上启动 Kubernetes
 
 #### 节点池污点
 
-如果你没有在节点模板上定义[污点](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)，则可以为每个节点池添加污点。相比在节点模板上添加污点，在节点池上添加污点的好处在于，你可以替换节点模板，而不必担心污点是否在节点模板中。
+如果你没有在节点模板上定义[污点](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)，则可以为每个节点池添加污点。将污点添加到节点池的好处是你可以更改节点模板，而不需要先确保污点存在于新模板中。
 
 每个污点都将自动添加到节点池中已创建的节点。因此，如果你在已有节点的节点池中添加污点，污点不会应用到已有的节点，但是添加到该节点池中的新节点都将获得该污点。
 
