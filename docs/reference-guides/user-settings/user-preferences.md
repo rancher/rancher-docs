@@ -49,6 +49,8 @@ Choose whether to ask for confirmation when scaling down node pools.
 - Hide All Type Descriptions
 - Enable Extension developer features
 
+![](/img/user-preferences-2-7.png)
+
 ## YAML Editor Key Mapping
 
 - Normal human (Sublime)
