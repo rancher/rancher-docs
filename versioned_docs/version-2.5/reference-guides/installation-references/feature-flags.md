@@ -12,7 +12,7 @@ Some feature flags require a restart of the Rancher container. Features that req
 
 :::
 
-The following is a list of feature flags available in Rancher v2.5. If you've upgraded from a previous Rancher version, you may see additional flags in the Rancher UI, such as `proxy` or `dashboard`:
+The following is a list of feature flags available in Rancher. If you've upgraded from a previous Rancher version, you may see additional flags in the Rancher UI, such as `proxy` or `dashboard`:
 
 - `fleet`: Rancher comes with Fleet preinstalled in v2.5+.
 - `istio-virtual-service-ui`: This feature enables a [UI to create, read, update, and delete Istio virtual services and destination rules,](../../getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/istio-traffic-management-features.md) which are traffic management features of Istio.
