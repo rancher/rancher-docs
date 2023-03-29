@@ -43,11 +43,11 @@ Choose whether to ask for confirmation when scaling down node pools.
 
 ## Advanced Features
 
-- Enable "View in API"
-- Show system Namespaces managed by Rancher (not intended for editing or deletion)
-- Enable Dark/Light Theme keyboard shortcut toggle (shift + T)
-- Hide All Type Descriptions
-- Enable Extension developer features
+- Enable "View in API".
+- Show system Namespaces managed by Rancher (not intended for editing or deletion).
+- Enable Dark/Light Theme keyboard shortcut toggle (shift+T).
+- Hide All Type Descriptions.
+- Enable Extension developer features.
 
 ![](/img/user-preferences-2-7.png)
 
