@@ -142,15 +142,13 @@ When a K3s cluster is registered in Rancher, Rancher will recognize it as K3s. T
 - The ability to configure the maximum number of nodes that will be upgraded concurrently
 - The ability to see a read-only version of the K3s cluster's configuration arguments and environment variables used to launch each node in the cluster
 
-### Additional Features for Registered EKS and GKE Clusters
+### Additional Features for Registered EKS, AKS, and GKE Clusters
 
-Registering an Amazon EKS cluster or GKE cluster allows Rancher to treat it as though it were created in Rancher.
+When you register an Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), or Google Kubernetes Engine (GKE) cluster, Rancher handles the cluster similarly to clusters created in Rancher. However, Rancher doesn't destroy registered clusters when you delete them through the Rancher UI.
 
-Amazon EKS clusters and GKE clusters can now be registered in Rancher. For the most part, these registered clusters are treated the same way as clusters created in the Rancher UI, except for deletion.
+When you create an EKS, AKS, or GKE cluster in Rancher, then delete it, Rancher destroys the cluster. When you delete a registered cluster through Rancher, the Rancher server _disconnects_ from the cluster. The cluster remains live, although it's no longer in Rancher. You can still access the deregistered cluster in the same way you did before you registered it.
 
-When you delete an EKS cluster or GKE cluster that was created in Rancher, the cluster is destroyed. When you delete a cluster that was registered in Rancher, it is disconnected from the Rancher server, but it still exists and you can still access it in the same way you did before it was registered in Rancher.
-
-The capabilities for registered clusters are listed in the table on [this page.](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)
+See [Cluster Management Capabilities by Cluster Type](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md) for more information about what features are available for managing registered clusters.
 
 ## Configuring K3s Cluster Upgrades
 
