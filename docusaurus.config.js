@@ -176,6 +176,31 @@ module.exports = {
             to: '/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter',
             from: '/v2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter'
           }, // Redirects for AWS Marketplace (end)
+          { // Redirects for 2.7.2 Hardening and Self-Assessment Guides (start)
+            to: '/pages-for-subheaders/rancher-hardening-guides',
+            from: [
+              '/pages-for-subheaders/rancher-v2.6-hardening-guides',
+              '/reference-guides/rancher-security/rancher-v2.6-hardening-guides/rke1-self-assessment-guide-with-cis-v1.6-benchmark',
+              '/reference-guides/rancher-security/rancher-v2.6-hardening-guides/rke2-self-assessment-guide-with-cis-v1.6-benchmark',
+              '/reference-guides/rancher-security/rancher-v2.7-hardening-guides/k3s-self-assessment-guide-with-cis-v1.20-benchmark',
+              '/reference-guides/rancher-security/rancher-v2.7-hardening-guides/k3s-self-assessment-guide-with-cis-v1.23-benchmark'
+            ]
+          },
+          {
+            to: '/pages-for-subheaders/rke1-hardening-guide',
+            from: '/reference-guides/rancher-security/rancher-v2.6-hardening-guides/rke1-hardening-guide-with-cis-v1.6-benchmark'
+          },
+          {
+            to: '/pages-for-subheaders/rke2-hardening-guide',
+            from: '/reference-guides/rancher-security/rancher-v2.6-hardening-guides/rke2-hardening-guide-with-cis-v1.6-benchmark'
+          },
+          {
+            to: '/pages-for-subheaders/k3s-hardening-guide',
+            from: [
+              '/pages-for-subheaders/rancher-v2.7-hardening-guides',
+              '/reference-guides/rancher-security/rancher-v2.7-hardening-guides/k3s-hardening-guide-with-cis-benchmark'
+            ]
+          }, // Redirects for 2.7.2 Hardening and Self-Assessment Guides (end)
           { // Redirects for restructure from PR #234 (start)
             to: '/faq/general-faq',
             from: '/faq'
