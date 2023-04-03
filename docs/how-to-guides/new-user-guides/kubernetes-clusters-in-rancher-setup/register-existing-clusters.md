@@ -17,7 +17,7 @@ For more information on RKE node roles, see the [best practices.](../../../pages
 
 ### Permissions
 
-To register a cluster in Rancher, you must define a `cluster-admin` role within that cluster. If you haven't defined the role already, run the following:
+To register a cluster in Rancher, you must have `cluster-admin` privileges within that cluster. If you don't, grant these privileges to your user by running:
 
 ```plain
 kubectl create clusterrolebinding cluster-admin-binding \
@@ -25,7 +25,7 @@ kubectl create clusterrolebinding cluster-admin-binding \
   --user [USER_ACCOUNT]
 ```
 
-Since, by default, Google Kubernetes Engine (GKE) doesn't define the `cluster-admin` role, you must run these commands on GKE clusters before you can register them. To learn more about role-based access control for GKE, please see [the official Google documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control).
+Since, by default, Google Kubernetes Engine (GKE) doesn't grant the `cluster-admin` role, you must run these commands on GKE clusters before you can register them. To learn more about role-based access control for GKE, please see [the official Google documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control).
 
 ### EKS, AKS and GKE Clusters
 
