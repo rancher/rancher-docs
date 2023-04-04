@@ -1,5 +1,5 @@
 ---
-title: Pod Security Admission (PSA) Configuration Templates 
+title: Pod Security Admission (PSA) Configuration Templates
 ---
 
 [Pod Security admission (PSA)](./pod-security-standards.md) configuration templates are a Rancher custom-defined resource (CRD), available in Rancher v2.7.2 and above. The templates provide pre-defined security configurations that you can apply to a cluster:
@@ -11,14 +11,14 @@ title: Pod Security Admission (PSA) Configuration Templates
 
 You can assign a PSA template at the same time that you create a downstream cluster. You can also add a template by configuring an existing cluster.
 
-### Assign a Template During Cluster Creation 
+### Assign a Template During Cluster Creation
 <Tabs>
 <TabItem value="RKE2 and K3s">
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, click the **Create** button.
 1. Select a provider.
-1. On the **Cluster: Create** page, go to **Basics > Security**. 
+1. On the **Cluster: Create** page, go to **Basics > Security**.
 1. In the **Default Pod Security Admission** dropdown menu, select the template you want to assign.
 1. Click **Create**.
 
@@ -81,18 +81,18 @@ Any user that is bound to the above permission will be able to change the restri
 
 ## Exempting Namespaces
 
-If you assign the `rancher-restricted` template to a cluster, by default the restrictions are applied across the entire cluster at the namespace level. To exempt certain namespaces from this highly restricted policy, do the following: 
+If you assign the `rancher-restricted` template to a cluster, by default the restrictions are applied across the entire cluster at the namespace level. To exempt certain namespaces from this highly restricted policy, do the following:
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. Click **Advanced** to open the dropdown menu.
 1. Select **Pod Security Admissions**.
 1. Find the template you want to modify, and click the **⋮**.
 1. Select **Edit Config**.
-1. Click the **Namespaces** checkbox under **Exemptions** to edit the **Namespaces** field. 
+1. Click the **Namespaces** checkbox under **Exemptions** to edit the **Namespaces** field.
 1. When you're done exempting namespaces, click **Save**.
 
 :::note
-You need to update the target cluster to make the new template take effect in that cluster. An update can be triggered by editing and saving the cluster without changing values. 
+You need to update the target cluster to make the new template take effect in that cluster. An update can be triggered by editing and saving the cluster without changing values.
 :::
 
 ### Exempting Required Rancher Namespaces
@@ -135,4 +135,4 @@ When you run Rancher on a Kubernetes cluster that enforces a restrictive securit
 - `security-scan`
 - `tigera-operator`
 
-Rancher, some Rancher owned charts, and RKE2 and K3s distributions all use these namespaces. A subset of the listed namespaces are already exempt in the built-in Rancher `rancher-restricted` policy, for use in downstream clusters. For a complete template which has all the exemptions you need to run Rancher, please refer to this [sample Admission Configuration](psa-restricted-exemptions.md).
+Rancher, some Rancher owned charts, and RKE2 and K3s distributions all use these namespaces. A subset of the listed namespaces are already exempt in the built-in Rancher `rancher-restricted` policy, for use in downstream clusters. For a complete template which has all the exemptions you need to run Rancher, please refer to this [sample Admission Configuration](../../../reference-guides/rancher-security/psa-restricted-exemptions.md).
