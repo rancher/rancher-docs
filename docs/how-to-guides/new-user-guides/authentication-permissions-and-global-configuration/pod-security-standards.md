@@ -3,34 +3,28 @@ title: Pod Security Standards (PSS) & Pod Security Admission (PSA)
 ---
 
 [Pod Security Standards (PSS)](https://kubernetes.io/docs/concepts/security/pod-security-standards/) and [Pod Security Admission (PSA)](https://kubernetes.io/docs/concepts/security/pod-security-admission/) define security restrictions for a broad set of workloads.
-They are available and turned on by default starting on Kubernetes v1.23, and replace [Pod Security Policies (PSP)](https://kubernetes.io/docs/concepts/security/pod-security-policy/) in Kubernetes v1.25 and above.
+They became available and were turned on by default in Kubernetes v1.23, and replace [Pod Security Policies (PSP)](https://kubernetes.io/docs/concepts/security/pod-security-policy/) in Kubernetes v1.25 and above.
 
 PSS define security levels for workloads. PSAs describe requirements for pod security contexts and related fields. PSAs reference PSS levels to define security restrictions.
 
 ## Upgrade to Pod Security Standards (PSS)
 
-Ensure you migrate all PodSecurityPolicies to another workload security mechanism.
-This includes mapping your current PSPs into Pod Security Standards for enforcement with the [Pod Security Admission controller](https://kubernetes.io/docs/concepts/security/pod-security-admission/).
-If Pod Security Admission is not enough for your use case, the use of a policy engine is recommended.
-Some examples of policy engines include [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper), [Kubewarden](https://www.kubewarden.io/), [Kyverno](https://kyverno.io/), and [NeuVector](https://neuvector.com/).
-Refer to the documentation of your policy engine of choice for more information on how to migrate from PodSecurityPolicy.
+Ensure that you migrate all PSPs to another workload security mechanism.
+This includes mapping your current PSPs to Pod Security Standards for enforcement with the [PSA controller](https://kubernetes.io/docs/concepts/security/pod-security-admission/). If the PSA controller won't meet all your organization's needs, we recommend that you use a policy engine, such as [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper), [Kubewarden](https://www.kubewarden.io/), [Kyverno](https://kyverno.io/), or [NeuVector](https://neuvector.com/). Refer to the documentation of your policy engine of choice for more information on how to migrate from PSPs.
 
 :::caution
 You must add your new policy enforcement mechanisms _before_ you remove the PodSecurityPolicy objects. If you don't, you may create an opportunity for privilege escalation attacks within the cluster.
 :::
 
-### Removing PodSecurityPolicies from Rancher-maintained Apps & Marketplace workloads {#remove-psp-rancher-workloads}
+### Removing PodSecurityPolicies from Rancher-Maintained Apps & Marketplace Workloads {#remove-psp-rancher-workloads}
 
-For workloads installed using Helm charts that Rancher maintains, a new version of the charts with the format v102.x.y is being released with Rancher v2.7.2.
-This version contains mechanisms to allow removal of PodSecurityPolicies installed with previous versions of the chart.
-Previous non-standard PodSecurityPolicy switches have been replaced with the standardized `global.cattle.psp.enabled` switch, which is turned off by default in the new version.
+Rancher v2.7.2 offers a new major version of Rancher-maintained Helm charts. v102.x.y allows you to remove PSPs that were installed with previous versions of the chart. This new version replaces non-standard PSPs switches with the standardized `global.cattle.psp.enabled` switch, which is turned off by default.
 
-Ensure you do the following actions _while still in Kubernetes v1.24_:
-1. Configure the Pod Security Admission controller to suit your needs. Rancher allows you to configure this via [Pod Security Admission Configuration Templates](#psa-config-templates).
-    Review the templates and choose one of them, or create your own and apply to the clusters you are migrating.
+You must perform the following steps _while still in Kubernetes v1.24_:
+1. Configure the PSA controller to suit your needs. You can use one of Rancher's built-in [PSA Configuration Templates](#psa-config-templates), or create a custom template and apply it to the clusters that you are migrating.
 
-2. Map the PodSecurityPolicies that are still in use in your cluster into Pod Security Standards:
-    * You can find out which PodSecurityPolicies are still in use in your cluster by running
+1. Map your active PSPs to Pod Security Standards:
+    1. See which PSPs are still active in your cluster:
       ```
       kubectl get pods \
         --all-namespaces \
@@ -38,33 +32,25 @@ Ensure you do the following actions _while still in Kubernetes v1.24_:
         | tr " " "\n" | sort -u
       ```
 
-    * Follow the Kubernetes guide on [Mapping PodSecurityPolicy to Pod Security Standards](https://kubernetes.io/docs/reference/access-authn-authz/psp-to-pod-security-standards/) to apply PSS to your workloads that were relying on PSPs.
+    1. Follow the Kubernetes guide on [Mapping PSPs to Pod Security Standards](https://kubernetes.io/docs/reference/access-authn-authz/psp-to-pod-security-standards/) to apply PSSs to your workloads that were relying on PSPs. See [Migrate from PodSecurityPolicy to the Built-In PodSecurity Admission controller](https://kubernetes.io/docs/tasks/configure-pod-container/migrate-from-psp/) for more details.
 
-      Learn more about migrating from PSPs to PSA and PSS on the [Migrate from PodSecurityPolicy to the Built-In PodSecurity Admission controller](https://kubernetes.io/docs/tasks/configure-pod-container/migrate-from-psp/) documentation.
-
-3. Remove PSPs from Rancher charts by upgrading them to the latest v102.x.y version _before_ your upgrade to Kubernetes v1.25.
-    Make sure the **Enable PodSecurityPolicies** option is **disabled**.
-    This will remove any PodSecurityPolicies that were installed with previous versions.
+1. To remove PSPs from Rancher charts, upgrade the charts to the latest v102.x.y version _before_ you upgrade to Kubernetes v1.25. Make sure that the **Enable PodSecurityPolicies** option is **disabled**. This will remove any PSPs that were installed with previous chart versions.
 
 :::info important
-If you intend to install the latest version, but do not plan on upgrading your clusters to Kubernetes v1.25 and moving away from PodSecurityPolicies, make sure that you select the option **Enable PodSecurityPolicies** for each chart you are upgrading to a v102.x.y version.
+If you want to upgrade your charts to v102.x.y, but don't plan on upgrading your clusters to Kubernetes v1.25 and moving away from PSPs, make sure that you select the option **Enable PodSecurityPolicies** for each chart that you are upgrading.
 :::
 
-### Cleaning up releases after a Kubernetes v1.25 upgrade
+### Cleaning Up Releases After a Kubernetes v1.25 Upgrade
 
-If you have charts that did not provide a built-in mechanism to remove previously installed PSPs, or ran into other issues removing PSPs from your charts, you may end up in a situation where chart upgrades or deletions fail with an error message similar to the following:
+If you experience problems while removing PSPs from your charts, or have charts that don't contain a built-in mechanism for removing PSPs, your chart upgrades or deletions might fail with an error message such as the following:
 ```console
 Error: UPGRADE FAILED: resource mapping not found for name: "<object-name>" namespace: "<object-namespace>" from "": no matches for kind "PodSecurityPolicy" in version "policy/v1beta1"
 ensure CRDs are installed first
 ```
 
-This happens as a result of Helm trying to query the cluster for objects that were stored in a previous release data blob.
-To avoid this error, it is required that you clean up these releases that refer to APIs that ceased to exist.
-The Helm project hosts a plugin called `helm-mapkubeapis` that allows you to correct these releases so that a new version can be installed, or a deletion can take place.
-To learn more about the `helm-mapkubeapis` plugin, how it works, and how it can be fine-tuned for your use case, refer to the
-[documentation in GitHub](https://github.com/helm/helm-mapkubeapis#readme).
+This happens when Helm tries to query the cluster for objects that were stored in a previous release's data blob. To clean up these releases and avoid this error, use the `helm-mapkubeapis` Helm  plugin. To learn more about `helm-mapkubeapis`, how it works, and how it can be fine-tuned for your use case, see the [official Helm documentation](https://github.com/helm/helm-mapkubeapis#readme).
 
-Note that the installation of Helm plugins happens locally in the machine you run the commands from. Therefore, make sure that both the installation and cleanup are ran from the same workstation.
+Note that Helm plugin installation is local to the machine that you run the commands from. Therefore, make sure that you run both the installation and cleanup from the same machine.
 
 #### Install `helm-mapkubeapis`
 
@@ -73,7 +59,7 @@ Note that the installation of Helm plugins happens locally in the machine you ru
     helm plugin install https://github.com/helm/helm-mapkubeapis
     ```
     
-    You will see an output similar to the following:
+    You will see output similar to the following:
     ```console
     Downloading and installing helm-mapkubeapis v0.4.1 ...
     https://github.com/helm/helm-mapkubeapis/releases/download/v0.4.1/helm-mapkubeapis_0.4.1_darwin_amd64.tar.gz
@@ -81,15 +67,15 @@ Note that the installation of Helm plugins happens locally in the machine you ru
     ```
    
     :::info important
-    Ensure the installed version of the `helm-mapkubeapis` plugin is at least v0.4.1, as older versions _do not_ support removal of resources.
+    Ensure that the `helm-mapkubeapis` plugin is at least v0.4.1, as older versions _do not_ support removal of resources.
     :::
 
-2. Check the plugin was correctly installed by running:
+1. Verify that the plugin was correctly installed:
     ```shell
     helm mapkubeapis --help
     ```
     
-    You will see an output similar to the following:
+    You will see output similar to the following:
     ```console
     Map release deprecated or removed Kubernetes APIs in-place
     
@@ -105,27 +91,25 @@ Note that the installation of Helm plugins happens locally in the machine you ru
     --namespace string      namespace scope of the release
     ```
 
-#### Clean up releases
+#### Clean Up Releases
 
-With the `helm-mapkubeapis` plugin installed, it is time to clean up the releases that became broken after the upgrade to Kubernetes v1.25.
+After you install the `helm-mapkubeapis` plugin, clean up the releases that became broken after the upgrade to Kubernetes v1.25.
 
-1. Open your preferred terminal and make sure it is connected to the cluster you wish to target by running `kubectl cluster-info`.
+1. Open your preferred terminal and make sure it's connected to the cluster you wish to target by running `kubectl cluster-info`.
 
-2. From your terminal, list all the releases you have installed in your cluster by running `helm list --all-namespaces`.
+1. List all the releases you have installed in your cluster by running `helm list --all-namespaces`.
 
-3. Perform a dry run for each release you would like to clean up by running `helm mapkubeapis --dry-run <release-name> --namespace <release-namespace>`.
-    The result of this command will inform you what resources are going to be replaced or removed.
+1. Perform a dry run for each release you would like to clean up by running `helm mapkubeapis --dry-run <release-name> --namespace <release-namespace>`. The result of this command will inform you what resources are going to be replaced or removed.
 
-4. Finally, after reviewing the changes that will be enacted, perform a full run with `helm mapkubeapis <release-name> --namespace <release-namespace>`.
+1. Finally, after reviewing the changes, perform a full run with `helm mapkubeapis <release-name> --namespace <release-namespace>`.
 
-#### Upgrade charts to a version that supports Kubernetes v1.25
+#### Upgrade Charts to a Version That Supports Kubernetes v1.25
 
-After any releases that had lingering PSPs have been cleaned up, you can proceed with the upgrade of your workloads to their latest, Kubernetes v1.25 compatible versions.
-For Rancher-maintained workloads, you can follow the steps outlined in the [Removing PodSecurityPolicies from Rancher-maintained Apps & Marketplace workloads](#remove-psp-rancher-workloads) section of this document.
+You can proceed with your upgrade once any releases that had lingering PSPs are cleaned up. For Rancher-maintained workloads, follow the steps outlined in the [Removing PodSecurityPolicies from Rancher-maintained Apps & Marketplace workloads](#remove-psp-rancher-workloads) section of this document.
 For workloads not maintained by Rancher, refer to the vendor documentation.
 
 :::caution
-Do not skip this step. Applications incompatible with Kubernetes v1.25 are not guaranteed to work after a cleanup.
+Do not skip this step. Applications incompatible with Kubernetes v1.25 aren't guaranteed to work after a cleanup.
 :::
 
 ## Pod Security Admission Configuration Templates {#psa-config-templates}
