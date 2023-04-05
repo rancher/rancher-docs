@@ -5,7 +5,7 @@ title: Deploying Applications across Clusters
 
 Rancher v2.5 introduced Fleet, a new way to deploy applications across clusters.
 
-Fleet is GitOps at scale. For more information, refer to the [Fleet section.](../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md)
+Continuous Delivery with Fleet is GitOps at scale. For more information, refer to the [Fleet section.](../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md)
 
 ### Multi-cluster Apps
 

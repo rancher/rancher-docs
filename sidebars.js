@@ -1160,7 +1160,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Fleet - GitOps at Scale',
+          label: 'Continuous Delivery with Fleet',
           link: {
             type: 'doc',
             id: "pages-for-subheaders/fleet-gitops-at-scale",
