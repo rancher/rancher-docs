@@ -106,7 +106,7 @@ By default, Rancher generates a CA and uses cert-manager to issue the certificat
 
 1. Download the required CRD file for cert-manager
    ```plain
-   curl -L -o cert-manager/cert-manager-crd.yaml https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml
+   curl -L -o cert-manager-crd.yaml https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml
    ```
 
 1. Render the Rancher template, declaring your chosen options. Use the reference table below to replace each placeholder. Rancher needs to be configured to use the private registry in order to provision any Rancher launched Kubernetes clusters or Rancher tools.
