@@ -104,12 +104,12 @@ Fetch the latest cert-manager chart available from the [Helm chart repository](h
 
 :::note
 
-New in v2.6.4, cert-manager versions 1.6.2 and 1.7.1 are compatible. We recommend v1.7.x because v 1.6.x will reach end-of-life on March 30, 2022.
+We recommend cert-manager v1.11.0 for rancher v2.7.
 
 :::
 
 ```plain
-helm fetch jetstack/cert-manager --version v1.7.1
+helm fetch jetstack/cert-manager --version v1.11.0
 ```
 
 
@@ -117,7 +117,7 @@ helm fetch jetstack/cert-manager --version v1.7.1
 
 Download the required CRD file for cert-manager:
    ```plain
-   curl -L -o cert-manager/cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/releases/download/v1.7.1/cert-manager.crds.yaml
+   curl -L -o cert-manager/cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
    ```
 
 ### 4. Install Rancher
@@ -148,7 +148,7 @@ If you are using self-signed certificates, install cert-manager:
 3. Install cert-manager.
 
     ```plain
-    helm install cert-manager ./cert-manager-v1.7.1.tgz \
+    helm install cert-manager ./cert-manager-v1.11.0.tgz \
         --namespace cert-manager \
         --set image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-controller \
         --set webhook.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-webhook \

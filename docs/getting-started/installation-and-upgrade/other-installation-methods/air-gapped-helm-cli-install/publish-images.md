@@ -59,7 +59,7 @@ In a Kubernetes Install, if you elect to use the Rancher default self-signed TLS
 
 :::note
 
-New in v2.6.4, cert-manager versions 1.6.2 and 1.7.1 are compatible. We recommend v1.7.x because v 1.6.x will reach end-of-life on March 30, 2022.
+We recommend cert-manager v1.11.0 for rancher v2.7.
 
 :::
 
@@ -74,7 +74,7 @@ New in v2.6.4, cert-manager versions 1.6.2 and 1.7.1 are compatible. We recommen
     ```plain
     helm repo add jetstack https://charts.jetstack.io
     helm repo update
-    helm fetch jetstack/cert-manager --version v1.7.1
+    helm fetch jetstack/cert-manager --version v1.11.0
     helm template ./cert-manager-<version>.tgz | awk '$1 ~ /image:/ {print $2}' | sed s/\"//g >> ./rancher-images.txt
     ```
 
@@ -253,7 +253,7 @@ The workstation must have Docker 18.02+ in order to support manifests, which are
    ```plain
    helm repo add jetstack https://charts.jetstack.io
    helm repo update
-   helm fetch jetstack/cert-manager --version v0.12.0
+   helm fetch jetstack/cert-manager --version v1.11.0
    helm template ./cert-manager-<version>.tgz | awk '$1 ~ /image:/ {print $2}' | sed s/\"//g >> ./rancher-images.txt
    ```
 
