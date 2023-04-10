@@ -9,8 +9,7 @@ PSS define security levels for workloads. PSAs describe requirements for pod sec
 
 ## Upgrade to Pod Security Standards (PSS)
 
-Ensure that you migrate all PSPs to another workload security mechanism.
-This includes mapping your current PSPs to Pod Security Standards for enforcement with the [PSA controller](https://kubernetes.io/docs/concepts/security/pod-security-admission/). If the PSA controller won't meet all your organization's needs, we recommend that you use a policy engine, such as [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper), [Kubewarden](https://www.kubewarden.io/), [Kyverno](https://kyverno.io/), or [NeuVector](https://neuvector.com/). Refer to the documentation of your policy engine of choice for more information on how to migrate from PSPs.
+Ensure that you migrate all PSPs to another workload security mechanism. This includes mapping your current PSPs to Pod Security Standards for enforcement with the [PSA controller](https://kubernetes.io/docs/concepts/security/pod-security-admission/). If the PSA controller won't meet all of your organization's needs, we recommend that you use a policy engine, such as [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper), [Kubewarden](https://www.kubewarden.io/), [Kyverno](https://kyverno.io/), or [NeuVector](https://neuvector.com/). Refer to the documentation of your policy engine of choice for more information on how to migrate from PSPs.
 
 :::caution
 You must add your new policy enforcement mechanisms _before_ you remove the PodSecurityPolicy objects. If you don't, you may create an opportunity for privilege escalation attacks within the cluster.
@@ -25,12 +24,12 @@ You must perform the following steps _while still in Kubernetes v1.24_:
 
 1. Map your active PSPs to Pod Security Standards:
     1. See which PSPs are still active in your cluster:
-      ```
-      kubectl get pods \
-        --all-namespaces \
-        --output jsonpath='{.items[*].metadata.annotations.kubernetes\.io\/psp}' \
-        | tr " " "\n" | sort -u
-      ```
+       ```shell
+       kubectl get pods \
+         --all-namespaces \
+         --output jsonpath='{.items[*].metadata.annotations.kubernetes\.io\/psp}' \
+         | tr " " "\n" | sort -u
+       ```
 
     1. Follow the Kubernetes guide on [Mapping PSPs to Pod Security Standards](https://kubernetes.io/docs/reference/access-authn-authz/psp-to-pod-security-standards/) to apply PSSs to your workloads that were relying on PSPs. See [Migrate from PodSecurityPolicy to the Built-In PodSecurity Admission controller](https://kubernetes.io/docs/tasks/configure-pod-container/migrate-from-psp/) for more details.
 
@@ -91,7 +90,7 @@ Note that Helm plugin installation is local to the machine that you run the comm
     --namespace string      namespace scope of the release
     ```
 
-#### Clean Up Releases
+#### Cleaning Up Broken Releases
 
 After you install the `helm-mapkubeapis` plugin, clean up the releases that became broken after the upgrade to Kubernetes v1.25.
 
@@ -103,7 +102,7 @@ After you install the `helm-mapkubeapis` plugin, clean up the releases that beca
 
 1. Finally, after reviewing the changes, perform a full run with `helm mapkubeapis <release-name> --namespace <release-namespace>`.
 
-#### Upgrade Charts to a Version That Supports Kubernetes v1.25
+#### Upgrading Charts to a Version That Supports Kubernetes v1.25
 
 You can proceed with your upgrade once any releases that had lingering PSPs are cleaned up. For Rancher-maintained workloads, follow the steps outlined in the [Removing PodSecurityPolicies from Rancher-maintained Apps & Marketplace workloads](#remove-psp-rancher-workloads) section of this document.
 For workloads not maintained by Rancher, refer to the vendor documentation.
