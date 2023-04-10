@@ -153,7 +153,7 @@ Rancher 使用 cert-manager 为 Rancher 高可用部署自动生成和续期 TLS
 1. 下载新旧版 cert-manager 所需的 CRD 文件：
 
    ```plain
-   curl -L -o cert-manager/cert-manager-crd.yaml https://raw.githubusercontent.com/cert-manager/cert-manager/release-0.12/deploy/manifests/00-crds.yaml
+   curl -L -o cert-manager-crd.yaml https://raw.githubusercontent.com/cert-manager/cert-manager/release-0.12/deploy/manifests/00-crds.yaml
    curl -L -o cert-manager/cert-manager-crd-old.yaml https://raw.githubusercontent.com/cert-manager/cert-manager/release-X.Y/deploy/manifests/00-crds.yaml
    ```
 
@@ -258,13 +258,6 @@ cert-manager-webhook-787858fcdb-nlzsq      1/1     Running   0          2m
 ```
 
 ## Cert-Manager API 变更和数据迁移
-
----
-_v2.6.4 的新功能_
-
-Rancher 现在支持 cert-manager 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为 v 1.6.x 将在 2022 年 3 月 30 日结束生命周期。详情请参见 [cert-manager 文档](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#4-安装-cert-manager)。有关将 cert-manager 从 1.5 升级到 1.6 的说明，请参见上游的 [cert-manager 文档](https://cert-manager.io/docs/installation/upgrading/upgrading-1.5-1.6/)。有关将 cert-manager 从 1.6 升级到 1.7 的说明，请参见上游的 [cert-manager 文档](https://cert-manager.io/docs/installation/upgrading/upgrading-1.6-1.7/)。
-
----
 
 Cert-manager 已经弃用 `certificate.spec.acme.solvers` 字段，而且会在未来的版本中放弃对该字段的支持。
 

@@ -93,7 +93,7 @@ In order to upgrade cert-manager, follow these instructions:
     helm install \
       cert-manager jetstack/cert-manager \
       --namespace cert-manager \
-      --version v0.12.0
+      --version v1.11.0
     ```
 
 1. [Restore back up resources](https://cert-manager.io/docs/tutorials/backup/#restoring-resources)
@@ -125,7 +125,7 @@ Before you can perform the upgrade, you must prepare your air gapped environment
 1. Fetch the latest cert-manager chart available from the [Helm chart repository](https://artifacthub.io/packages/helm/cert-manager/cert-manager).
 
     ```plain
-    helm fetch jetstack/cert-manager --version v0.12.0
+    helm fetch jetstack/cert-manager --version v1.11.0
     ```
 
 1. Render the cert manager template with the options you would like to use to install the chart. Remember to set the `image.repository` option to pull the image from your private registry. This will create a `cert-manager` directory with the Kubernetes manifest files.
@@ -153,7 +153,7 @@ Before you can perform the upgrade, you must prepare your air gapped environment
 1. Download the required CRD file for cert-manager (old and new)
 
     ```plain
-    curl -L -o cert-manager/cert-manager-crd.yaml https://raw.githubusercontent.com/cert-manager/cert-manager/release-0.12/deploy/manifests/00-crds.yaml
+    curl -L -o cert-manager-crd.yaml https://raw.githubusercontent.com/cert-manager/cert-manager/release-0.12/deploy/manifests/00-crds.yaml
     curl -L -o cert-manager/cert-manager-crd-old.yaml https://raw.githubusercontent.com/cert-manager/cert-manager/release-X.Y/deploy/manifests/00-crds.yaml
     ```
 
@@ -258,13 +258,6 @@ cert-manager-webhook-787858fcdb-nlzsq      1/1     Running   0          2m
 ```
 
 ## Cert-Manager API change and data migration
-
----
-_New in v2.6.4_
-
-Rancher now supports cert-manager versions 1.6.2 and 1.7.1. We recommend v1.7.x because v 1.6.x will reach end-of-life on March 30, 2022. To read more, see the [cert-manager docs](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#4-install-cert-manager). For instructions on upgrading cert-manager from version 1.5 to 1.6, see the upstream cert-manager documentation [here](https://cert-manager.io/docs/installation/upgrading/upgrading-1.5-1.6/). For instructions on upgrading cert-manager from version 1.6 to 1.7, see the upstream cert-manager documentation [here](https://cert-manager.io/docs/installation/upgrading/upgrading-1.6-1.7/).
-
----
 
 Cert-manager has deprecated the use of the `certificate.spec.acme.solvers` field and will drop support for it completely in an upcoming release.
 
