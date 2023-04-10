@@ -14,18 +14,16 @@ Prometheus 支持查看 Rancher 和 Kubernetes 对象的指标。通过使用时
 
 在 Rancher v2.5 中引入的 `rancher-monitoring` operator 由 [Prometheus](https://prometheus.io/)、[Grafana](https://grafana.com/grafana/)、[Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/)， [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator) 和 [Prometheus adapter](https://github.com/DirectXMan12/k8s-prometheus-adapter) 提供支持。
 
-Monitoring 应用允许你：
+Monitoring 应用：
 
-- 监控集群节点、Kubernetes 组件和软件部署的状态和进程
-- 根据 Prometheus 收集的指标定义告警
-- 创建自定义 Grafana 仪表板
-- 使用 Prometheus Alertmanager 通过电子邮件、Slack、PagerDuty 等配置告警通知
-- 根据 Prometheus 收集的指标，将预先计算的、经常需要的，或计算成本高的表达式定义为新的时间序列
-- 通过 Prometheus Adapter，将从 Prometheus 收集的指标公开给 Kubernetes Custom Metrics API，以便在 HPA 中使用
+- 监控集群节点、Kubernetes 组件和软件部署的状态和进程。
+- 根据 Prometheus 收集的指标定义告警。
+- 创建自定义 Grafana 仪表板。
+- 使用 Prometheus Alertmanager 通过电子邮件、Slack、PagerDuty 等配置告警通知。
+- 根据 Prometheus 收集的指标，将预先计算的、经常需要的，或计算成本高的表达式定义为新的时间序列。
+- 通过 Prometheus Adapter，将从 Prometheus 收集的指标公开给 Kubernetes Custom Metrics API，以便在 HPA 中使用。
 
-## Monitoring 的工作原理
-
-有关 monitoring 组件如何协同工作的说明，请参阅[此页面](../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)。
+有关监控组件如何协同工作的说明，请参阅 [Monitoring 工作原理](../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)。
 
 ## 默认组件和部署
 
@@ -65,7 +63,7 @@ Monitoring 应用会默认部署一些告警。要查看默认告警，请转到
 
 ### 在 Rancher 中配置 Monitoring 资源
 
-> 此处的配置参考假设你已经熟悉 monitoring 组件的协同工作方式。如需更多信息，请参阅 [monitoring 的工作原理](../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)。
+此处的配置参考假设你已经熟悉 monitoring 组件的协同工作方式。如需更多信息，请参阅 [monitoring 的工作原理](../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md)。
 
 - [ServiceMonitor 和 PodMonitor](../reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors.md)
 - [接收器](../reference-guides/monitoring-v2-configuration/receivers.md)
@@ -76,7 +74,7 @@ Monitoring 应用会默认部署一些告警。要查看默认告警，请转到
 
 ### 配置 Helm Chart 选项
 
-有关 `rancher-monitoring` Chart 选项的更多信息，包括设置资源限制和请求的选项，请参阅[此页面](../reference-guides/monitoring-v2-configuration/helm-chart-options.md)。
+有关 `rancher-monitoring` Chart 选项的更多信息，包括设置资源限制和请求的选项，请参阅 [Helm Chart 选项](../reference-guides/monitoring-v2-configuration/helm-chart-options.md)。
 
 ## Windows 集群支持
 
@@ -84,11 +82,11 @@ Monitoring 应用会默认部署一些告警。要查看默认告警，请转到
 
 为了能够为 Windows 完全部署 Monitoring V2，你的所有 Windows 主机都必须至少具有 v0.1.0 的 [wins](https://github.com/rancher/wins) 版本。
 
-有关如何在现有 Windows 主机上升级 wins 版本的更多详细信息，请参阅 [Windows 集群对 Monitoring V2 的支持](../integrations-in-rancher/monitoring-and-alerting/windows-support.md)。
+有关如何在现有 Windows 主机上升级 wins 版本的更多信息，请参阅 [Windows 集群对 Monitoring V2 的支持](../integrations-in-rancher/monitoring-and-alerting/windows-support.md)。
 
 
 ## 已知问题
 
-有一个[已知问题](https://github.com/rancher/rancher/issues/28787#issuecomment-693611821)，即 K3s 集群需要更多的默认内存。如果你在 K3s 集群上启用 monitoring，我们建议将 `prometheus.prometheusSpec.resources.memory.limit` 设置为 2500 Mi，并将 `prometheus.prometheusSpec.resources.memory.request` 设置为 1750 Mi。
+有一个[已知问题](https://github.com/rancher/rancher/issues/28787#issuecomment-693611821)，即 K3s 集群需要的内存超过分配的默认内存。如果你在 K3s 集群上启用 Monitoring，将 `prometheus.prometheusSpec.resources.memory.limit` 设置为 2500 Mi，并将 `prometheus.prometheusSpec.resources.memory.request` 设置为 1750 Mi。
 
-有关调试高内存用量的提示，请参阅[此页面](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/debug-high-memory-usage.md)。
+如需获取意见和建议，请参阅[调试高内存使用情况](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/debug-high-memory-usage.md)。

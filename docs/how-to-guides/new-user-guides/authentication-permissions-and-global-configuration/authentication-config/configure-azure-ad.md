@@ -276,6 +276,7 @@ If you upgrade to Rancher v2.7.0+ with an existing Azure AD setup, and choose to
 
 :::
 
+
 #### Global:
 
 Rancher Field    | Deprecated Endpoints

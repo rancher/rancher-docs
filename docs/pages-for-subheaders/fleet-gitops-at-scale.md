@@ -31,7 +31,7 @@ Follow the steps below to access Continuous Delivery in the Rancher UI:
 
 1. Click on **Gitrepos** on the left navigation bar to deploy the gitrepo into your clusters in the current workspace.
 
-1. Select your [git repository](https://fleet.rancher.io/gitrepo-add/) and [target clusters/cluster group](https://fleet.rancher.io/gitrepo-structure/). You can also create the cluster group in the UI by clicking on **Cluster Groups** from the left navigation bar.
+1. Select your [git repository](https://fleet.rancher.io/gitrepo-add/) and [target clusters/cluster group](https://fleet.rancher.io/gitrepo-targets/). You can also create the cluster group in the UI by clicking on **Cluster Groups** from the left navigation bar.
 
 1. Once the gitrepo is deployed, you can monitor the application through the Rancher UI.
 
@@ -41,7 +41,7 @@ For details on support for clusters with Windows nodes, see [this page](../integ
 
 ## GitHub Repository
 
-The Fleet Helm charts are available [here](https://github.com/rancher/fleet/releases/tag/v0.3.10).
+The Fleet Helm charts are available [here](https://github.com/rancher/fleet/releases).
 
 ## Using Fleet Behind a Proxy
 

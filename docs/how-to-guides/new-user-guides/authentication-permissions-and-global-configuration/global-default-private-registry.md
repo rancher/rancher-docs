@@ -2,36 +2,56 @@
 title: Configuring a Global Default Private Registry
 ---
 
-You might want to use a private container image registry to share your custom base images within your organization. With a private registry, you can keep a private, consistent, and centralized source of truth for the container images that are used in your clusters.
+:::note
+This page describes how to configure a global default private registry from the Rancher UI, after Rancher is already installed. 
 
-There are two main ways to set up private registries in Rancher: by setting up the global default registry through the **Settings** tab in the global view, and by setting up a private registry in the advanced options in the cluster-level settings. The global default registry is intended to be used for air-gapped setups, for registries that do not require credentials. The cluster-level private registry is intended to be used in all setups in which the private registry requires credentials.
+For instructions on how to set up a private registry during Rancher installation, refer to the [air-gapped installation guide](../../../pages-for-subheaders/air-gapped-helm-cli-install.md).
 
-This section is about configuring the global default private registry, and focuses on how to configure the registry from the Rancher UI after Rancher is installed.
+:::
 
-For instructions on setting up a private registry with command line options during the installation of Rancher, refer to the [air-gapped installation guide](../../../pages-for-subheaders/air-gapped-helm-cli-install.md).
+A private registry is a private, consistent, and centralized source of truth for the container images in your clusters. You can use a private container image registry to share custom base images within your organization.
 
-If your private registry requires credentials, it cannot be used as the default registry. There is no global way to set up a private registry with authorization for every Rancher-provisioned cluster. Therefore, if you want a Rancher-provisioned cluster to pull images from a private registry with credentials, you will have to [pass in the registry credentials through the advanced cluster options](#setting-a-private-registry-with-credentials-when-deploying-a-cluster) every time you create a new cluster.
+There are two main ways to set up a private registry in Rancher:
 
-## Setting a Private Registry with No Credentials as the Default Registry
+* Set up a global default registry through the **Settings** tab in the global view.
+* Set up a private registry in the advanced options under cluster-level settings. 
+
+The global default registry is intended to be used in air-gapped setups, for registries that don't require credentials. The cluster-level private registry is intended to be used in setups where the private registry requires credentials.
+
+## Set a Private Registry with No Credentials as the Default Registry
 
 1. Log into Rancher and configure the default administrator password.
-1. Click **☰ > Global Settings**.
-1. Go to the setting called `system-default-registry` and choose **⋮ > Edit Setting**.
-1. Change the value to your registry (e.g. `registry.yourdomain.com:port`). Do not prefix the registry with `http://` or `https://`.
+1. Select **☰ > Global Settings**.
+1. Go to `system-default-registry` and choose **⋮ > Edit Setting**.
+1. Enter your registry's hostname and port (e.g. `registry.yourdomain.com:port`). Do not prefix the text with `http://` or `https://`.
 
-**Result:** Rancher will use your private registry to pull system images.
+**Result:** Rancher pulls system images from your private registry.
 
-## Setting a Private Registry with Credentials when Deploying a Cluster
+### Namespaced Private Registry with RKE2 Downstream Clusters
 
-You can follow these steps to configure a private registry when you create a cluster:
+Most private registries should work, by default, with RKE2 downstream clusters.
 
-1. Click **☰ > Cluster Management**.
+However, you'll need to do some additional steps if you're trying to set a namespaced private registry whose URL is formated like this: `website/subdomain:portnumber`.
+
+1. Select **☰ > Cluster Management**.
+1. Find the RKE2 cluster in the list and click **⋮ >Edit Config**.
+1. From the **Cluster config** menu, select **Registries**.
+1. In the **Registries** pane, select the **Configure advanced containerd mirroring and registry authentication options** option.
+1. In the text fields under **Mirrors**, enter the **Registry Hostname** and **Mirror Endpoints**.
+1. Click **Save**.
+1. Repeat as necessary for each downstream RKE2 cluster.
+
+## Configure a Private Registry with Credentials when Creating a Cluster
+
+There is no global way to set up a private registry with authorization for every Rancher-provisioned cluster. Therefore, if you want a Rancher-provisioned cluster to pull images from a private registry that requires credentials, you'll have to pass the registry credentials through the advanced cluster options every time you create a new cluster. 
+
+Since the private registry cannot be configured after the cluster is created, you'll need to perform these steps during initial cluster setup.
+
+1. Select **☰ > Cluster Management**.
 1. On the **Clusters** page, click **Create**.
 1. Choose a cluster type.
-1. In the **Cluster Configuration** go to the **Registries** tab and click **Pull images for Rancher from a private registry**.
+1. In the **Cluster Configuration** go to the **Registries** tab and select **Pull images for Rancher from a private registry**.
 1. Enter the registry hostname and credentials.
 1. Click **Create**.
 
-**Result:** The new cluster will be able to pull images from the private registry.
-
-The private registry cannot be configured after the cluster is created.
+**Result:** The new cluster pulls images from the private registry.
