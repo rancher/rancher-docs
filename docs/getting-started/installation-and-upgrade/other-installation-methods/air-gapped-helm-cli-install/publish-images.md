@@ -240,7 +240,7 @@ The workstation must have Docker 18.02+ in order to support manifests, which are
    ```plain
    helm repo add jetstack https://charts.jetstack.io
    helm repo update
-   helm fetch jetstack/cert-manager --version v0.12.0
+   helm fetch jetstack/cert-manager --version v1.11.0
    helm template ./cert-manager-<version>.tgz | awk '$1 ~ /image:/ {print $2}' | sed s/\"//g >> ./rancher-images.txt
    ```
 
