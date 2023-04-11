@@ -150,6 +150,10 @@ Execute this script to apply the `default-allow-all.yaml` configuration with the
 
 The reference `cluster.yml` is used by the RKE CLI that provides the configuration needed to achieve a hardened installation of RKE. RKE [documentation](https://rancher.com/docs/rke/latest/en/installation/) provides additional details about the configuration items. This reference `cluster.yml` does not include the required `nodes` directive which will vary depending on your environment. Documentation for node configuration in RKE can be found [here](https://rancher.com/docs/rke/latest/en/config-options/nodes/).
 
+The example `cluster.yml` configuration file below contains an Admission Configuration policy in the `services.kube-api.admission_configuration` field. This is a [sample](../reference-guides/rancher-security/psa-restricted-exemptions.md) policy that contains the required namespace exemptions for an RKE cluster being imported into Rancher to run properly, similar to Rancher's pre-defined [`rancher-restricted`](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates.md) policy.
+
+If instead you prefer to use RKE's default `restricted` policy, then leave the `services.kube-api.admission_configuration` field empty and set `services.pod_security_configuration` to `restricted`. More information about configuring Pod Security Admission (PSA) in RKE is available in its documentation [page](https://rke.docs.rancher.com/config-options/services/pod-security-admission).
+
 <Tabs groupId="rke1-version">
 <TabItem value="v1.25 and Newer" default>
 
@@ -173,7 +177,66 @@ services:
       enabled: true
     event_rate_limit:
       enabled: true
-    pod_security_configuration: restricted
+    # Leave `pod_security_configuration` out if you are setting a
+    # custom policy in `admission_configuration`. Otherwise set
+    # it to `restricted` to use RKE's pre-defined restricted policy,
+    # and remove everything inside `admission_configuration` field.
+    #
+    # pod_security_configuration: restricted
+    #
+    admission_configuration:
+      apiVersion: apiserver.config.k8s.io/v1
+      kind: AdmissionConfiguration
+      plugins:
+        - name: PodSecurity
+          configuration:
+            apiVersion: pod-security.admission.config.k8s.io/v1
+            kind: PodSecurityConfiguration
+            defaults:
+              enforce: "restricted"
+              enforce-version: "latest"
+              audit: "restricted"
+              audit-version: "latest"
+              warn: "restricted"
+              warn-version: "latest"
+            exemptions:
+              usernames: []
+              runtimeClasses: []
+              namespaces: [ calico-apiserver,
+                            calico-system,
+                            cattle-alerting,
+                            cattle-csp-adapter-system,
+                            cattle-epinio-system,
+                            cattle-externalip-system,
+                            cattle-fleet-local-system,
+                            cattle-fleet-system,
+                            cattle-gatekeeper-system,
+                            cattle-global-data,
+                            cattle-global-nt,
+                            cattle-impersonation-system,
+                            cattle-istio,
+                            cattle-istio-system,
+                            cattle-logging,
+                            cattle-logging-system,
+                            cattle-monitoring-system,
+                            cattle-neuvector-system,
+                            cattle-prometheus,
+                            cattle-sriov-system,
+                            cattle-system,
+                            cattle-ui-plugin-system,
+                            cattle-windows-gmsa-system,
+                            cert-manager,
+                            cis-operator-system,
+                            fleet-default,
+                            ingress-nginx,
+                            istio-system,
+                            kube-node-lease,
+                            kube-public,
+                            kube-system,
+                            longhorn-system,
+                            rancher-alerting-drivers,
+                            security-scan,
+                            tigera-operator ]
   kube-controller:
     extra_args:
       feature-gates: RotateKubeletServerCertificate=true
