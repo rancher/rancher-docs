@@ -15,7 +15,7 @@ This hardening guide is intended to be used for RKE2 clusters and is associated 
 | Rancher v2.7    | Benchmark v1.23       | Kubernetes v1.23 up to v1.25 |
 
 :::note
-At the time of writing, the official Kubernetes v1.25 benchmark is still in draft status by CIS. At this time Rancher is using the CIS v1.23 benchmark when scanning Kubernetes v1.25 clusters. Due to that, the CIS checks 5.2.2, 5.2.3, 5.2.5, 5.2.6, 5.2.7 and 5.2.8 might fail.
+At the time of writing, the upstream CIS Kubernetes v1.25 benchmark is not yet available in Rancher. At this time Rancher is using the CIS v1.23 benchmark when scanning Kubernetes v1.25 clusters. Due to that, the CIS checks 5.2.2, 5.2.3, 5.2.5, 5.2.6, 5.2.7 and 5.2.8 might fail.
 :::
 
 For more details on how to evaluate a hardened RKE2 cluster against the official CIS benchmark, refer to the RKE2 self-assessment guides for specific Kubernetes and CIS benchmark versions.
