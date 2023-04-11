@@ -15,13 +15,13 @@ title: Helm CLI 快速入门
 
 ## 在 Linux 上安装 K3s
 
+Rancher 需要安装在支持的 Kubernetes 版本上。如需指定 K3s 版本，在运行 K3s 安装脚本时使用 `INSTALL_K3S_VERSION` 环境变量（例如 `INSTALL_K3S_VERSION="v1.24.10+k3s1"`）。请参阅[支持维护条款](https://rancher.com/support-maintenance-terms/)。
+
 在 Linux 主机上运行以下命令来安装 K3s 集群：
 
 ```
-curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="***" sh -s - server --cluster-init
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=<VERSION> sh -s - server --cluster-init
 ```
-
-Rancher 需要安装在支持的 Kubernetes 版本上。如需指定 K3s 版本，在运行 K3s 安装脚本时，使用 `INSTALL_K3S_VERSION` 环境变量。请参阅[支持维护条款](https://rancher.com/support-maintenance-terms/)。
 
 `--cluster-init` 允许 K3s 使用嵌入式 etcd 作为数据存储，并能够转换为 HA 设置。请参阅[嵌入式数据库的高可用性](https://rancher.com/docs/k3s/latest/en/installation/ha-embedded/)。
 
@@ -37,6 +37,8 @@ kubeconfig 文件对于访问 Kubernetes 集群非常重要。从 Linux 主机�
 ```
 scp root@<IP_OF_LINUX_MACHINE>:/etc/rancher/k3s/k3s.yaml ~/.kube/config
 ```
+
+在某些情况下，它可能需要确保你的 shell 定义了环境变量 `KUBECONFIG=~/.kube/config`，例如，它可以在你的配置文件或 rc 文件中导出。
 
 </TabItem>
 <TabItem value="Windows">
