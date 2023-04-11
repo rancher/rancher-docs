@@ -122,6 +122,12 @@ There are three recommended options for the source of the certificate used for T
 
 ### 4. Install cert-manager
 
+:::note
+
+New in v2.6.4, cert-manager versions 1.6.2 and 1.7.1 are compatible. We recommend v1.7.x because v 1.6.x will reach end-of-life on March 30, 2022.
+
+:::
+
 > You should skip this step if you are bringing your own certificate files (option `ingress.tls.source=secret`), or if you use [TLS termination on an external load balancer](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#external-tls-termination).
 
 This step is only required to use certificates issued by Rancher's generated CA (`ingress.tls.source=rancher`) or to request Let's Encrypt issued certificates (`ingress.tls.source=letsEncrypt`).

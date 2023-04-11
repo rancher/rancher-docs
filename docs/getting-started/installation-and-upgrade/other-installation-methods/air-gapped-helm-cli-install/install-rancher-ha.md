@@ -82,6 +82,12 @@ Based on the choice your made in [2. Choose your SSL Configuration](#2-choose-yo
 
 By default, Rancher generates a CA and uses cert-manager to issue the certificate for access to the Rancher server interface.
 
+:::note
+
+Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.11.0, please see our [upgrade cert-manager documentation](../../resources/upgrade-cert-manager.md).
+
+:::
+
 ##### 1. Add the cert-manager repo
 
 From a system connected to the internet, add the cert-manager repo to Helm:
@@ -94,6 +100,12 @@ helm repo update
 ##### 2. Fetch the cert-manager chart
 
 Fetch the latest cert-manager chart available from the [Helm chart repository](https://artifacthub.io/packages/helm/cert-manager/cert-manager).
+
+:::note
+
+New in v2.6.4, cert-manager versions 1.6.2 and 1.7.1 are compatible. We recommend v1.7.x because v 1.6.x will reach end-of-life on March 30, 2022.
+
+:::
 
 ```plain
 helm fetch jetstack/cert-manager --version v1.11.0

@@ -102,6 +102,12 @@ helm repo update
 
 从 [Helm Chart 仓库](https://artifacthub.io/packages/helm/cert-manager/cert-manager)中获取最新可用的 cert-manager Chart：
 
+:::note
+
+v2.6.4 兼容 cert-manager 版本 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为 v 1.6.x 将在 2022 年 3 月 30 日结束生命周期。
+
+:::
+
 ```plain
 helm fetch jetstack/cert-manager --version v1.11.0
 ```

@@ -26,6 +26,12 @@ kubectl create namespace cert-manager
 
 Install the CustomResourceDefinitions of cert-manager:
 
+:::note
+
+New in v2.6.4, cert-manager versions 1.6.2 and 1.7.1 are compatible. We recommend v1.7.x because v 1.6.x will reach end-of-life on March 30, 2022.
+
+:::
+
 ```
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
 ```

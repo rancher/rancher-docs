@@ -56,6 +56,12 @@ title: '2. 收集镜像并发布到私有仓库'
 
 在 Kubernetes 安装中，如果你使用的是 Rancher 默认的自签名 TLS 证书，则必须将 [`cert-manager`](https://artifacthub.io/packages/helm/cert-manager/cert-manager) 镜像添加到 `rancher-images.txt` 文件中。
 
+:::note
+
+v2.6.4 兼容 cert-manager 版本 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为 v 1.6.x 将在 2022 年 3 月 30 日结束生命周期。
+
+:::
+
 1. 获取最新的 `cert-manager` Helm Chart，并解析模板以获取镜像的详情信息：
 
    :::note
