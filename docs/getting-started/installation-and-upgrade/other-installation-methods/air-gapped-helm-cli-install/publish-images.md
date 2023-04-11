@@ -58,6 +58,12 @@ In a Kubernetes Install, if you elect to use the Rancher default self-signed TLS
 
 1.  Fetch the latest `cert-manager` Helm chart and parse the template for image details:
 
+    :::note
+
+    Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.12.0, please see our [upgrade documentation](../../resources/upgrade-cert-manager.md).
+
+    :::
+
     ```plain
     helm repo add jetstack https://charts.jetstack.io
     helm repo update
