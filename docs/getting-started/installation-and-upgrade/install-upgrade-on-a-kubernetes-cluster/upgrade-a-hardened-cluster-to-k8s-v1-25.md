@@ -4,7 +4,13 @@ title: Upgrade a Hardened Custom/Imported Cluster to Kubernetes v1.25
 
 Kubernetes v1.25 changes how clusters describe and implement security policies. From this version forward, [Pod Security Policies (PSPs)](https://kubernetes.io/docs/concepts/security/pod-security-policy/) are no longer available. Kubernetes v1.25 replaces them with new security objects: [Pod Security Standards (PSS)](https://kubernetes.io/docs/concepts/security/pod-security-standards/), and [Pod Security Admissions (PSAs)](https://kubernetes.io/docs/concepts/security/pod-security-admission/). 
 
-If you have custom or imported hardened clusters, you must make special preparations to ensure that the upgrade from an earlier version of Kubernetes to v1.25 or later goes smoothly.
+If you have custom or imported hardened clusters, you must take special preparations to ensure that the upgrade from an earlier version of Kubernetes to v1.25 or later goes smoothly.
+
+:::note
+
+After you upgrade to v1.25, add the necessary Rancher namespace exemptions. See [Pod Security Admission (PSA) Configuration Templates](./psa-config-templates.md#exempting-required-rancher-namespaces) for more details.
+
+:::
 
 ## Upgrading Imported Hardened Clusters to Kubernetes v1.25 or Later
 
