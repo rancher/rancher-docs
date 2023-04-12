@@ -56,7 +56,6 @@ Skip this step if you are using your own certificates, or if you are terminating
 
 In a Kubernetes Install, if you elect to use the Rancher default self-signed TLS certificates, you must add the [`cert-manager`](https://artifacthub.io/packages/helm/cert-manager/cert-manager) image to `rancher-images.txt` as well.
 
-
 :::note
 
 New in v2.6.4, cert-manager versions 1.6.2 and 1.7.1 are compatible. We recommend v1.7.x because v 1.6.x will reach end-of-life on March 30, 2022.
@@ -65,16 +64,10 @@ New in v2.6.4, cert-manager versions 1.6.2 and 1.7.1 are compatible. We recommen
 
 1.  Fetch the latest `cert-manager` Helm chart and parse the template for image details:
 
-    :::note
-
-    Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.12.0, please see our [upgrade documentation](../../resources/upgrade-cert-manager.md).
-
-    :::
-
     ```plain
     helm repo add jetstack https://charts.jetstack.io
     helm repo update
-    helm fetch jetstack/cert-manager --version v1.7.1
+    helm fetch jetstack/cert-manager --version v1.11.0
     helm template ./cert-manager-<version>.tgz | awk '$1 ~ /image:/ {print $2}' | sed s/\"//g >> ./rancher-images.txt
     ```
 

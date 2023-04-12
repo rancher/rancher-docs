@@ -109,7 +109,7 @@ v2.6.4 兼容 cert-manager 版本 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为
 :::
 
 ```plain
-helm fetch jetstack/cert-manager --version v1.7.1
+helm fetch jetstack/cert-manager --version v1.11.0
 ```
 
 
@@ -117,7 +117,7 @@ helm fetch jetstack/cert-manager --version v1.7.1
 
 为 cert-manager 下载所需的 CRD 文件：
 ```plain
-curl -L -o cert-manager/cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/releases/download/v1.7.1/cert-manager.crds.yaml
+curl -L -o cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
 ```
 
 ### 4. 安装 Rancher
@@ -148,7 +148,7 @@ curl -L -o cert-manager/cert-manager-crd.yaml https://github.com/cert-manager/ce
 3. 安装 cert-manager。
 
    ```plain
-   helm install cert-manager ./cert-manager-v1.7.1.tgz \
+   helm install cert-manager ./cert-manager-v1.11.0.tgz \
        --namespace cert-manager \
        --set image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-controller \
        --set webhook.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-webhook \

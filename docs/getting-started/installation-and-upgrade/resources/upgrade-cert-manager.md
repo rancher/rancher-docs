@@ -93,7 +93,7 @@ In order to upgrade cert-manager, follow these instructions:
     helm install \
       cert-manager jetstack/cert-manager \
       --namespace cert-manager \
-      --version v0.12.0
+      --version v1.11.0
     ```
 
 1. [Restore back up resources](https://cert-manager.io/docs/tutorials/backup/#restoring-resources)
@@ -125,7 +125,7 @@ Before you can perform the upgrade, you must prepare your air gapped environment
 1. Fetch the latest cert-manager chart available from the [Helm chart repository](https://artifacthub.io/packages/helm/cert-manager/cert-manager).
 
     ```plain
-    helm fetch jetstack/cert-manager --version v0.12.0
+    helm fetch jetstack/cert-manager --version v1.11.0
     ```
 
 1. Render the cert manager template with the options you would like to use to install the chart. Remember to set the `image.repository` option to pull the image from your private registry. This will create a `cert-manager` directory with the Kubernetes manifest files.
@@ -153,7 +153,7 @@ Before you can perform the upgrade, you must prepare your air gapped environment
 1. Download the required CRD file for cert-manager (old and new)
 
     ```plain
-    curl -L -o cert-manager/cert-manager-crd.yaml https://raw.githubusercontent.com/cert-manager/cert-manager/release-0.12/deploy/manifests/00-crds.yaml
+    curl -L -o cert-manager-crd.yaml https://raw.githubusercontent.com/cert-manager/cert-manager/release-0.12/deploy/manifests/00-crds.yaml
     curl -L -o cert-manager/cert-manager-crd-old.yaml https://raw.githubusercontent.com/cert-manager/cert-manager/release-X.Y/deploy/manifests/00-crds.yaml
     ```
 

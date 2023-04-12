@@ -153,7 +153,7 @@ Rancher 使用 cert-manager 为 Rancher 高可用部署自动生成和续期 TLS
 1. 下载新旧版 cert-manager 所需的 CRD 文件：
 
    ```plain
-   curl -L -o cert-manager/cert-manager-crd.yaml https://raw.githubusercontent.com/cert-manager/cert-manager/release-0.12/deploy/manifests/00-crds.yaml
+   curl -L -o cert-manager-crd.yaml https://raw.githubusercontent.com/cert-manager/cert-manager/release-0.12/deploy/manifests/00-crds.yaml
    curl -L -o cert-manager/cert-manager-crd-old.yaml https://raw.githubusercontent.com/cert-manager/cert-manager/release-X.Y/deploy/manifests/00-crds.yaml
    ```
 

@@ -2,9 +2,13 @@
 title: Pod Security Policies
 ---
 
-_Pod Security Policies_ (or PSPs) are objects that control security-sensitive aspects of pod specification (like root privileges).
+:::caution
+Pod Security Policy is only available in Kubernetes until v1.24. [Pod Security Standards](pod-security-standards.md) are the built-in alternative.
+:::
 
-If a pod does not meet the conditions specified in the PSP, Kubernetes will not allow it to start, and Rancher will display an error message of `Pod <NAME> is forbidden: unable to validate...`.
+[Pod Security Policies (PSPs)](https://kubernetes.io/docs/concepts/security/pod-security-policy/) are objects that control security-sensitive aspects of the pod specification (such as root privileges).
+
+If a pod doesn't meet the conditions specified in the PSP, Kubernetes won't allow it to start, and Rancher will display the following error message: `Pod <NAME> is forbidden: unable to validate...`.
 
 
 ## How PSPs Work
@@ -39,6 +43,12 @@ This policy is a relaxed version of the `restricted-noroot` policy, with almost 
 ### Unrestricted
 
 This policy is equivalent to running Kubernetes with the PSP controller disabled. It has no restrictions on what pods can be deployed into a cluster or project.
+
+:::note important
+
+When disabling PSPs, default PSPs are **not** automatically deleted from your cluster. You must manually delete them if they're no longer needed.
+
+:::
 
 ## Creating PSPs
 

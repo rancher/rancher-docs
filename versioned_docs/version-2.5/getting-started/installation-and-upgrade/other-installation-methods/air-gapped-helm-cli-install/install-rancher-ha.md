@@ -123,7 +123,7 @@ helm template cert-manager ./cert-manager-v1.5.1.tgz --output-dir . \
 
 Download the required CRD file for cert-manager:
    ```plain
-   curl -L -o cert-manager/cert-manager-crd.yaml https://github.com/jetstack/cert-manager/releases/download/v1.5.1/cert-manager.crds.yaml
+   curl -L -o cert-manager-crd.yaml https://github.com/jetstack/cert-manager/releases/download/v1.5.1/cert-manager.crds.yaml
    ```
 
 ### 5. Render the Rancher template
