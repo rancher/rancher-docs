@@ -79,7 +79,7 @@ aws configure
 
 运行以下命令创建一个 EKS 集群。使用适用于你的用例的 AWS 区域。在选择 Kubernetes 版本时，请务必先查阅[支持矩阵](https://rancher.com/support-matrix/)，以找出已针对你的 Rancher 版本验证的最新 Kubernetes 版本。
 
-**注意**：如果 Kubernetes 的版本更新到 v1.22 或更高版本，则 ingress-nginx 的版本也需要[更新](https://kubernetes.github.io/ingress-nginx/#faq-migration-to-apiversion-networkingk8siov1)。
+**注意**：如果 Kubernetes 的版本更新到 v1.22 或更高版本，则 ingress-nginx 的版本也需要[更新](https://kubernetes.github.io/ingress-nginx/user-guide/k8s-122-migration/)。
 
 ```
 eksctl create cluster \

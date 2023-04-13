@@ -50,7 +50,7 @@ az group create --name rancher-rg --location eastus
 
 :::note
 
-如果 Kubernetes 的版本更新到 v1.22 或更高版本，则 ingress-nginx 的版本也需要[更新](https://kubernetes.github.io/ingress-nginx/#faq-migration-to-apiversion-networkingk8siov1)。
+如果 Kubernetes 的版本更新到 v1.22 或更高版本，则 ingress-nginx 的版本也需要[更新](https://kubernetes.github.io/ingress-nginx/user-guide/k8s-122-migration/)。
 
 :::
 
