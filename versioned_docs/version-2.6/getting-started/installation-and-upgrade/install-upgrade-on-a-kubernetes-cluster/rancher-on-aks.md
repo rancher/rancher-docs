@@ -50,7 +50,7 @@ To create an AKS cluster, run the following command. Use a VM size that applies 
 
 :::note
 
-If the version of Kubernetes is updated to v1.22 or later, the version of ingress-nginx would also need to be [updated](https://kubernetes.github.io/ingress-nginx/user-guide/k8s-122-migration/).
+If you're updating from an older version of Kubernetes, to Kuberntes v1.22 or above, you also need to [update](https://kubernetes.github.io/ingress-nginx/user-guide/k8s-122-migration/) ingress-nginx.
 
 :::
 
