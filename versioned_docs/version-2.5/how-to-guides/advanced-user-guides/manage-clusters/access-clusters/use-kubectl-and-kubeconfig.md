@@ -46,7 +46,7 @@ This method is only available for RKE clusters that have the [authorized cluster
 
 We recommend that as a best practice, you should set up this method to access your RKE cluster, so that just in case you can’t connect to Rancher, you can still access the cluster.
 
-> **Prerequisites:** The following steps assume that you have created a Kubernetes cluster and followed the steps to [connect to your cluster with kubectl from your workstation.](#accessing-clusters-with-kubectl-from-your-workstation)
+> **Prerequisites:** The following steps assume that you have created a Kubernetes cluster and followed the steps to [connect to your cluster with kubectl from your workstation](#accessing-clusters-with-kubectl-from-your-workstation).
 
 To find the name of the context(s) in your downloaded kubeconfig file, run:
 
