@@ -25,7 +25,7 @@ You must perform the following steps _while still in Kubernetes v1.24_:
 1. Map your active PSPs to Pod Security Standards:
     1. See which PSPs are still active in your cluster:
        :::caution
-       This strategy may miss workloads that are not currently running, such as CronJobs, workloads that scale to zero, or workloads that have not rolled out yet.
+       This strategy may miss workloads that aren't currently running, such as CronJobs, workloads that scale to zero, or workloads that haven't rolled out yet.
        :::
        
        ```shell
