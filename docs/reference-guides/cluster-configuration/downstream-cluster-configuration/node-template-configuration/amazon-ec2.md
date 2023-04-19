@@ -48,6 +48,6 @@ If you need to pass an **IAM Instance Profile Name** (not ARN), for example, whe
 
 In the **Engine Options** section of the node template, you can configure the container daemon. You may want to specify the container version or a container image registry mirror.
 
-#### Red Hat Enerprise Linux (RHEL) & CentOS Provisioning
+#### Red Hat Enterprise Linux (RHEL) & CentOS Provisioning
 
 If you're provisioning Red Hat Enterprise Linux (RHEL) or CentOS nodes, leave the **Docker Install URL** field as the default value, or select **none**. This will bypass a check for Docker installation, as Docker is pre-installed on these node types. If you set **Docker Install URL** to a value other than the default or **none**, you might see an error message such as the following: `Error creating machine: RHEL ssh command error: command: sudo -E yum install -y curl err: exit status 1 output: Updating Subscription Management repositories.`
