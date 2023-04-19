@@ -39,7 +39,7 @@ Configure appropriate Firewall / ACL rules to only expose access to Rancher
 
 ### Size the VM's According to Rancher Documentation
 
-https://rancher.com/docs/rancher/v2.6/en/installation/requirements/
+See [Installation Requirements](https://ranchermanager.docs.rancher.com/pages-for-subheaders/installation-requirements).
 
 ### Leverage VM Templates to Construct the Environment
 
