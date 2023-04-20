@@ -3,6 +3,7 @@ title: EC2 Node Template Configuration
 ---
 
 For more details about EC2, nodes, refer to the official documentation for the [EC2 Management Console](https://aws.amazon.com/ec2).
+
 ### Region
 
 In the **Region** field, select the same region that you used when creating your cloud credentials.
@@ -50,4 +51,6 @@ In the **Engine Options** section of the node template, you can configure the co
 
 #### Red Hat Enterprise Linux (RHEL) & CentOS Provisioning
 
-If you're provisioning Red Hat Enterprise Linux (RHEL) or CentOS nodes, leave the **Docker Install URL** field as the default value, or select **none**. This will bypass a check for Docker installation, as Docker is pre-installed on these node types. If you set **Docker Install URL** to a value other than the default or **none**, you might see an error message such as the following: `Error creating machine: RHEL ssh command error: command: sudo -E yum install -y curl err: exit status 1 output: Updating Subscription Management repositories.`
+If you're provisioning Red Hat Enterprise Linux (RHEL) or CentOS nodes, leave the **Docker Install URL** field as the default value, or select **none**. This will bypass a check for Docker installation, as Docker is already installed on these node types. 
+
+If you set **Docker Install URL** to a value other than the default or **none**, you might see an error message such as the following: `Error creating machine: RHEL ssh command error: command: sudo -E yum install -y curl err: exit status 1 output: Updating Subscription Management repositories.`
