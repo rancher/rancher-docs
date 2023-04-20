@@ -56,7 +56,7 @@ The Rancher API server is built on top of an embedded Kubernetes API server and 
 
 The options and settings available for an existing cluster change based on the method that you used to provision it. For example, only clusters [provisioned by RKE](../pages-for-subheaders/launch-kubernetes-with-rancher.md) have **Cluster Options** available for editing.
 
-After a cluster is created with Rancher, a cluster administrator can manage cluster membership, enable pod security policies, and manage node pools, among [other options.](../pages-for-subheaders/cluster-configuration.md)
+After a cluster is created with Rancher, a cluster administrator can manage cluster membership or manage node pools, among [other options.](../pages-for-subheaders/cluster-configuration.md)
 
 The following table summarizes the options and settings available for each cluster type:
 
