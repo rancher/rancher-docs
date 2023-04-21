@@ -20,6 +20,14 @@ A high-availability Kubernetes installation is recommended for production.
 
 A Docker installation of Rancher is recommended only for development and testing purposes. The ability to migrate Rancher to a high-availability cluster depends on the Rancher version.
 
+The resources that Rancher deploys when we go as a single node Rancher deployment 
+
+![Rancher Components ](https://user-images.githubusercontent.com/37767537/233318973-880855fa-5271-468e-95eb-e1290d5c91c3.png)
+
+You can check this using the kubectl command in the namespaces where you have deployed Rancher. You can achieve the same using the CLI or going inside Rancher admin account and filtering the namespaces.
+
+![Rancher Components in UI](https://user-images.githubusercontent.com/37767537/233321574-38b49bb7-8f4b-44e2-aa99-5fa8d3a78cdc.png)
+
 The Rancher backup operator can be used to migrate Rancher from the single Docker container install to an installation on a high-availability Kubernetes cluster. For details, refer to the documentation on [migrating Rancher to a new cluster](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md).
 
 The Rancher server, regardless of the installation method, should always run on nodes that are separate from the downstream user clusters that it manages. If Rancher is installed on a high-availability Kubernetes cluster, it should run on a separate cluster from the cluster(s) it manages.
