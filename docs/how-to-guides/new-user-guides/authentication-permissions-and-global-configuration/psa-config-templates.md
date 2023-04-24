@@ -81,7 +81,7 @@ Any user that is bound to the above permission will be able to change the restri
 
 ## Required Rancher Namespaces
 
-When you run Rancher on a Kubernetes cluster that enforces a restrictive security policy by default, you'll need to [exempt the following namespaces](./psa-config-templates.md#exempting-namespaces), otherwise the policy might prevent Rancher system pods from  running properly.
+When you run Rancher on a Kubernetes cluster that enforces a restrictive security policy by default, you'll need to [exempt the following namespaces](#exempting-namespaces), otherwise the policy might prevent Rancher system pods from  running properly.
 
 - `calico-apiserver`
 - `calico-system`
