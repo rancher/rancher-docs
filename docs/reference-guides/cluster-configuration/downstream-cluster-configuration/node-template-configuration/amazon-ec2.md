@@ -44,3 +44,7 @@ If you provide your own security group for an EC2 instance, please note that Ran
 Configure the instances that will be created. Make sure you configure the correct **SSH User** for the configured AMI. It is possible that a selected region does not support the default instance type. In this scenario you must select an instance type that does exist, otherwise an error will occur stating the requested configuration is not supported.
 
 If you need to pass an **IAM Instance Profile Name** (not ARN), for example, when you want to use a [Kubernetes Cloud Provider](../../../../pages-for-subheaders/set-up-cloud-providers.md), you will need an additional permission in your policy. See [Example IAM policy with PassRole](#example-iam-policy-with-passrole) for an example policy.
+
+## Engine Options
+
+In the **Engine Options** section of the node template, you can configure the container daemon. You may want to specify the container version or a container image registry mirror.
