@@ -20,5 +20,12 @@ If you use Docker, the [Docker daemon](https://docs.docker.com/engine/docker-ove
 
 - **Labels:** For information on labels, refer to the [Docker object label documentation.](https://docs.docker.com/config/labels-custom-metadata/).
 - **Docker Engine Install URL:** Determines what Docker version will be installed on the instance.
+
+:::note
+If you're provisioning Red Hat Enterprise Linux (RHEL) or CentOS nodes, leave the **Docker Install URL** field as the default value, or select **none**. This will bypass a check for Docker installation, as Docker is already installed on these node types. 
+
+If you set **Docker Install URL** to a value other than the default or **none**, you might see an error message such as the following: `Error creating machine: RHEL ssh command error: command: sudo -E yum install -y curl err: exit status 1 output: Updating Subscription Management repositories.`
+:::
+
 - **Registry mirrors:** Docker Registry mirror to be used by the Docker daemon.
 - **Other advanced options:** Refer to the [Docker daemon option reference](https://docs.docker.com/engine/reference/commandline/dockerd/).
