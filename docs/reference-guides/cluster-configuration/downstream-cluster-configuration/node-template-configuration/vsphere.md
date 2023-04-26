@@ -83,3 +83,13 @@ Custom attributes are a legacy feature that will eventually be removed from vSph
 To make use of cloud-init initialization, create a cloud config file using valid YAML syntax and paste the file content in the the **Cloud Init** field. Refer to the [cloud-init documentation.](https://cloudinit.readthedocs.io/en/latest/topics/examples.html) for a commented set of examples of supported cloud config directives.
 
 Note that cloud-init is not supported when using the ISO creation method.
+
+## Engine Options
+
+In the **Engine Options** section of the node template, you can configure the container daemon. You may want to specify the container version or a container image registry mirror.
+
+:::note
+If you're provisioning Red Hat Enterprise Linux (RHEL) or CentOS nodes, leave the **Docker Install URL** field as the default value, or select **none**. This will bypass a check for Docker installation, as Docker is already installed on these node types. 
+
+If you set **Docker Install URL** to a value other than the default or **none**, you might see an error message such as the following: `Error creating machine: RHEL ssh command error: command: sudo -E yum install -y curl err: exit status 1 output: Updating Subscription Management repositories.`
+:::
