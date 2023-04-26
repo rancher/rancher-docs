@@ -10,11 +10,11 @@ Account access information is stored as a cloud credential. Cloud credentials ar
 - **Network** configures the networking used in your cluster.
 - **Instance** customizes your VM configuration.
 
-:::note
+  :::note
 
-If using a VNet in a different Resource Group than the VMs, the VNet name should be prefixed with the Resource Group name. For example, `<resource group>:<vnet>`.
+  If using a VNet in a different Resource Group than the VMs, the VNet name should be prefixed with the Resource Group name. For example, `<resource group>:<vnet>`.
 
-:::
+  :::
 
 The [Docker daemon](https://docs.docker.com/engine/docker-overview/#the-docker-daemon) configuration options include:
 
