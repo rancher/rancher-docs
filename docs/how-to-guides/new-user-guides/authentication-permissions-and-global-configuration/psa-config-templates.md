@@ -19,7 +19,7 @@ You can assign a PSA template at the same time that you create a downstream clus
 1. On the **Clusters** page, click the **Create** button.
 1. Select a provider.
 1. On the **Cluster: Create** page, go to **Basics > Security**.
-1. In the **Default Pod Security Admission** dropdown menu, select the template you want to assign.
+1. In the **Pod Security Admission Configuration Template** dropdown menu, select the template you want to assign.
 1. Click **Create**.
 
 ### Assign a Template to an Existing Cluster
@@ -27,7 +27,7 @@ You can assign a PSA template at the same time that you create a downstream clus
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. Find the cluster you want to update in the **Clusters** table, and click the **⋮**.
 1. Select **Edit Config** .
-1. In the **Default Pod Security Admission** dropdown menu, select the template you want to assign.
+1. In the **Pod Security Admission Configuration Template** dropdown menu, select the template you want to assign.
 1. Click **Save**.
 
 ### Hardening the Cluster
