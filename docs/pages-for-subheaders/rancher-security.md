@@ -70,7 +70,7 @@ Each version of Rancher's self-assessment guide corresponds to specific versions
 
 ### Third-party Penetration Test Reports
 
-Rancher periodically hires third parties to perform security audits and penetration tests of the Rancher 2.x software stack. The environments under test follow the Rancher provided hardening guides at the time of the testing. Results are posted when the third party has also verified fixes classified MEDIUM or above.
+Rancher periodically hires third parties to perform security audits and penetration tests of the Rancher 2.x software stack. The environments under test follow the Rancher provided hardening guides at the time of the testing. Previous penetration test reports are available below.
 
 Results:
 
