@@ -45,6 +45,6 @@ Configure the instances that will be created. Make sure you configure the correc
 
 If you need to pass an **IAM Instance Profile Name** (not ARN), for example, when you want to use a [Kubernetes Cloud Provider](../../../../pages-for-subheaders/set-up-cloud-providers.md), you will need an additional permission in your policy. See [Example IAM policy with PassRole](#example-iam-policy-with-passrole) for an example policy.
 
-## Engine Options
+### Engine Options
 
 In the **Engine Options** section of the node template, you can configure the container daemon. You may want to specify the container version or a container image registry mirror.
