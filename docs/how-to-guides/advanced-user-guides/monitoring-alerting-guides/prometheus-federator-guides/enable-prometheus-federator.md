@@ -75,7 +75,12 @@ There are no specific recommendations on how much memory the Cluster Prometheus 
 1. Click the **Prometheus Federator** chart.
 1. Click **Install**.
 1. On the **Metadata** page, click **Next**.
-1. In the **Project Release Namespace Project ID** field, the `System Project` is used as the default but can be overridden with another project with similarly [limited access](#ensure-the-cattle-monitoring-system-namespace-is-placed-into-the-system-project-or-a-similarly-locked-down-project-that-has-access-to-other-projects-in-the-cluster). Project IDs can be found with the following command run in the local upstream cluster: kubectl get projects -A -o custom-columns="NAMESPACE":.metadata.namespace,"ID":.metadata.name,"NAME":.spec.displayName
+1. In the **Project Release Namespace Project ID** field, the `System Project` is used as the default but can be overridden with another project with similarly [limited access](#ensure-the-cattle-monitoring-system-namespace-is-placed-into-the-system-project-or-a-similarly-locked-down-project-that-has-access-to-other-projects-in-the-cluster). Project IDs can be found with the following command run in the local upstream cluster:
+
+  ```plain
+  kubectl get projects -A -o custom-columns="NAMESPACE":.metadata.namespace,"ID":.metadata.name,"NAME":.spec.displayName
+  ```
+
 1. Click **Install**.
 
 **Result:** The Prometheus Federator app is deployed in the `cattle-monitoring-system` namespace.
