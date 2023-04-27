@@ -237,6 +237,18 @@ It is also possible to send alerts to multiple notification systems. One way is 
 
 You can also set up multiple receivers by using the `continue` option for a route, so that the alerts sent to a receiver continue being evaluated in the next level of the routing tree, which could contain another receiver.
 
+## Configuring AlertmanagerConfig After A Chart Upgrade
+
+If you use SMS or Microsoft Teams alerts, and upgrade the Monitoring chart from 100.1.3+up19.0.3 to 100.2.0+up40.1.2, you may no longer receive alerts. This is due to a change that helps prevent naming collisions.
+
+You must manually edit the configuration map to continue to receive alerts:
+
+1. Click on **☰** and select **local**.
+1. Select **More Resources** > **Core** > **ConfigMaps**.
+1. Find the row corresponding to the ConfigMap for **Sachet** (for SMS alerts) or **prom2teams** (for Microsoft Teams alerts). Click the **⋮** and select **Edit YAML**.
+1. Update the delimiters in the receiver's `name` field, replacing */* characters with *-*. For example, if the receiver's name is `Test-Alert`, update it to `Test/Alert`.
+1. Click **Save**.
+1. Redeploy the workloads associated with Alertmanager and Sachet or prom2teams, to ensure that they receive the updated configuration.
 
 ## Example Alertmanager Configs
 
