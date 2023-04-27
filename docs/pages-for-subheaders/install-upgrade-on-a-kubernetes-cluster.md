@@ -122,12 +122,6 @@ There are three recommended options for the source of the certificate used for T
 
 ### 4. Install cert-manager
 
-:::note
-
-New in v2.6.4, cert-manager versions 1.6.2 and 1.7.1 are compatible. We recommend v1.7.x because v 1.6.x will reach end-of-life on March 30, 2022.
-
-:::
-
 > You should skip this step if you are bringing your own certificate files (option `ingress.tls.source=secret`), or if you use [TLS termination on an external load balancer](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#external-tls-termination).
 
 This step is only required to use certificates issued by Rancher's generated CA (`ingress.tls.source=rancher`) or to request Let's Encrypt issued certificates (`ingress.tls.source=letsEncrypt`).
@@ -200,7 +194,13 @@ Because `rancher` is the default option for `ingress.tls.source`, we are not spe
 
 - Set the `hostname` to the DNS name you pointed at your load balancer.
 - Set the `bootstrapPassword` to something unique for the `admin` user.
-- To install a specific Rancher version, use the `--version` flag, example: `--version 2.3.6`
+- To install a specific Rancher version, use the `--version` flag, example: `--version 2.7.0`
+  
+:::note
+
+If installing on Kubernetes >= v1.25, you must add '--set global.cattle.psp.enabled=false' to your Helm install command
+
+:::  
 
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \
@@ -242,6 +242,12 @@ In the following command,
 - `letsEncrypt.email` is set to the email address used for communication about your certificate (for example, expiry notices)
 - Set `letsEncrypt.ingress.class` to whatever your ingress controller is, e.g., `traefik`, `nginx`, `haproxy`, etc.
 
+:::note
+
+If installing on Kubernetes >= v1.25, you must add '--set global.cattle.psp.enabled=false' to your Helm install command
+
+:::
+  
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \
   --namespace cattle-system \
@@ -283,6 +289,12 @@ If you want to check if your certificates are correct, see [How do I check Commo
 - Set the `hostname`.
 - Set the `bootstrapPassword` to something unique for the `admin` user.
 - Set `ingress.tls.source` to `secret`.
+
+:::note
+
+If installing on Kubernetes >= v1.25, you must add '--set global.cattle.psp.enabled=false' to your Helm install command
+
+:::
 
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \
