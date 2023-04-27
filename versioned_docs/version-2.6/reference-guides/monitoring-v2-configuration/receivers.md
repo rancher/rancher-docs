@@ -239,7 +239,7 @@ You can also set up multiple receivers by using the `continue` option for a rout
 
 ## Configuring AlertmanagerConfig After A Chart Upgrade
 
-If you have a cluster that uses SMS or Microsoft Teams alerts, and upgrade the Monitoring chart from 100.1.3+up19.0.3 to 100.2.0+up40.1.2, you may no longer receive alerts. This is due to a change to [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator/) that helps prevent naming collisions.
+If you have a cluster that uses SMS or Microsoft Teams alerts, and upgrade the Monitoring chart from 100.1.3+up19.0.3 to 100.2.0+up40.1.2, you may no longer receive alerts. This is due to a change to an upstream change to [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator/) that helps prevent naming collisions.
 
 You must manually edit the configuration map to continue to receive alerts:
 
