@@ -79,7 +79,7 @@ This command merges your cluster's credentials into the existing kubeconfig and 
 
 The cluster needs an Ingress so that Rancher can be accessed from outside the cluster. Installing an Ingress requires allocating a public IP address. Ensure you have sufficient quota, otherwise it will fail to assign the IP address. Limits for public IP addresses are applicable at a regional level per subscription.
 
-The following command installs an `nginx-ingress-controller` with a Kubernetes load balancer service.
+The following command installs an `nginx-ingress-controller` with a Kubernetes load balancer service. 
 
 ```
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
@@ -88,9 +88,11 @@ helm upgrade --install \
   ingress-nginx ingress-nginx/ingress-nginx \
   --namespace ingress-nginx \
   --set controller.service.type=LoadBalancer \
-  --version 4.0.18 \
+  --version 4.6.0 \
   --create-namespace
 ```
+
+Consult the [official ingress-nginx Helm chart changelog](https://github.com/kubernetes/ingress-nginx/blob/helm-chart-4.6.0/charts/ingress-nginx/CHANGELOG.md) to find the  Helm chart `--version` that supports your version of Kubernetes. For older versions of nginx or Kubernetes, see the [official nginx documentation]((https://docs.nginx.com/nginx-ingress-controller/technical-specifications/#supported-kubernetes-versions)) listing supported Kubernetes versions.
 
 ## 6. Get Load Balancer IP
 
