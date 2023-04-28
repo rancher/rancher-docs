@@ -39,5 +39,5 @@ _cloud provider_ 是 Kubernetes 中的一个模块，它提供了一个用于管
 
 对于自定义云提供商选项，你可以参考 [RKE 文档](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/)，了解如何为你的云提供商编辑 yaml 文件。特定云提供商的详细配置说明如下：
 
-* [vSphere](https://rancher.com/docs/rke/latest/en/config-options/cloud-providercluster-provisioning/rke-clusters/cloud-providers/vsphere/)
+* [vSphere](https://rke.docs.rancher.com/config-options/cloud-providers/vsphere)
 * [OpenStack](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/openstack/)

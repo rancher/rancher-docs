@@ -39,5 +39,5 @@ The `Custom` cloud provider is available if you want to configure any [Kubernete
 
 For the custom cloud provider option, you can refer to the [RKE docs](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/) on how to edit the yaml file for your specific cloud provider. There are specific cloud providers that have more detailed configuration :
 
-* [vSphere](https://rancher.com/docs/rke/latest/en/config-options/cloud-providercluster-provisioning/rke-clusters/cloud-providers/vsphere/)
+* [vSphere](https://rke.docs.rancher.com/config-options/cloud-providers/vsphere)
 * [OpenStack](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/openstack/)
