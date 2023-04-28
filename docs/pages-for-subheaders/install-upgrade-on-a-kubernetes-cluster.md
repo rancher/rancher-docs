@@ -238,11 +238,7 @@ In the following command,
 - `letsEncrypt.email` is set to the email address used for communication about your certificate (for example, expiry notices)
 - Set `letsEncrypt.ingress.class` to whatever your ingress controller is, e.g., `traefik`, `nginx`, `haproxy`, etc.
 
-:::note
-
-If installing on Kubernetes >= v1.25, you must add '--set global.cattle.psp.enabled=false' to your Helm install command
-
-:::
+- For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false'.
   
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \
