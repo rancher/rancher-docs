@@ -128,6 +128,8 @@ helm upgrade --install \
   --create-namespace
 ```
 
+Consult the [official ingress-nginx Helm chart changelog](https://github.com/kubernetes/ingress-nginx/blob/helm-chart-4.6.0/charts/ingress-nginx/CHANGELOG.md) to find the Helm chart `--version` that supports your version of Kubernetes. For older versions of ingress-nginx or Kubernetes, see the [official NGINX documentation](https://docs.nginx.com/nginx-ingress-controller/technical-specifications/#supported-kubernetes-versions) listing supported Kubernetes versions.
+
 ### 6. Get Load Balancer IP
 
 To get the address of the load balancer, run:
