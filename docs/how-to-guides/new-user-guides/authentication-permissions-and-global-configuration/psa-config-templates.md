@@ -19,7 +19,7 @@ You can assign a PSA template at the same time that you create a downstream clus
 1. On the **Clusters** page, click the **Create** button.
 1. Select a provider.
 1. On the **Cluster: Create** page, go to **Basics > Security**.
-1. In the **Default Pod Security Admission** dropdown menu, select the template you want to assign.
+1. In the **Pod Security Admission Configuration Template** dropdown menu, select the template you want to assign.
 1. Click **Create**.
 
 ### Assign a Template to an Existing Cluster
@@ -27,7 +27,7 @@ You can assign a PSA template at the same time that you create a downstream clus
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. Find the cluster you want to update in the **Clusters** table, and click the **⋮**.
 1. Select **Edit Config** .
-1. In the **Default Pod Security Admission** dropdown menu, select the template you want to assign.
+1. In the **Pod Security Admission Configuration Template** dropdown menu, select the template you want to assign.
 1. Click **Save**.
 
 ### Hardening the Cluster
@@ -81,7 +81,7 @@ Any user that is bound to the above permission will be able to change the restri
 
 ## Required Rancher Namespaces
 
-When you run Rancher on a Kubernetes cluster that enforces a restrictive security policy by default, you'll need to [exempt the following namespaces](./psa-config-templates.md#exempting-namespaces), otherwise the policy might prevent Rancher system pods from  running properly.
+When you run Rancher on a Kubernetes cluster that enforces a restrictive security policy by default, you'll need to [exempt the following namespaces](#exempting-namespaces), otherwise the policy might prevent Rancher system pods from  running properly.
 
 - `calico-apiserver`
 - `calico-system`
