@@ -72,7 +72,7 @@ Admins may assign custom roles in the Rancher UI for admin, editing, and viewing
 
 :::note Important
 
-The UI will not offer `monitoring-admin`, `monitoring-edit`, and `monitoring-view` options when users are being added to a cluster. These monitoring roles can only be assigned by manually creating a custom role that inherits from Project Owner and Project Monitoring View roles. 
+The UI will not offer `monitoring-admin`, `monitoring-edit`, and `monitoring-view` options when users are being added to a cluster. These monitoring roles can only be assigned by manually creating a custom role that inherits from Project Owner and Project Monitoring View roles.
 
 :::
 
@@ -104,18 +104,60 @@ The UI will not offer `monitoring-admin`, `monitoring-edit`, and `monitoring-vie
 
 ### Additional Monitoring ClusterRoles
 
-Monitoring also creates additional `ClusterRoles` that are not assigned to users by default but are created within the cluster.  They are not aggregated by default but can be bound to a namespace by deploying a `RoleBinding` or `ClusterRoleBinding` that references it. To define a `RoleBinding` with `kubectl` instead of through Rancher, click [here](#assigning-roles-and-clusterroles-with-kubectl).
+Monitoring also creates additional `ClusterRoles` that are not assigned to users by default but are created within the cluster. They are not aggregated by default but can be bound to a namespace by deploying a `RoleBinding` or `ClusterRoleBinding` that references it. To define a `RoleBinding` with `kubectl` instead of through Rancher, click [here](#assigning-roles-and-clusterroles-with-kubectl).
 
 | Role | Purpose  |
 | ------------------------------| ---------------------------|
-| monitoring-ui-view | <a id="monitoring-ui-view"></a>_Available as of Monitoring v2 14.5.100+_ Provides read-only access to external Monitoring UIs by giving a user permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Grafana, and Alertmanager UIs through the Rancher proxy. |
+| monitoring-ui-view | <a id="monitoring-ui-view"></a>_Available as of Monitoring v2 14.5.100+_ This ClusterRole gives access to metrics graphs in the Rancher UI for the specific cluster. It does so by providing read-only access to external Monitoring UIs by giving a user permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Grafana, and Alertmanager UIs through the Rancher proxy. |
 
 ### Assigning Roles and ClusterRoles with kubectl
 
-An alternative method to using Rancher to attach a `Role` or `ClusterRole` to a user or group is by defining bindings in YAML files that you create. You must first configure the `RoleBinding` with the YAML file, then you apply the config changes by running the `kubectl apply` command.
+An alternative method to using Rancher to attach a `Role` or `ClusterRole` is to a user or group is with `kubectl`.
 
+#### Using `kubectl create`
 
-* **Roles**: Below is an example of a YAML file to help you configure `RoleBindings` in Kubernetes. You will need to fill in the name below, and name is case-sensitive.
+One method is to use either `kubectl create clusterrolebinding` or `kubectl create rolebinding` to assign a `Role` or `ClusterRole`. This is shown in the following examples:
+
+- Assign to a specific user:
+<Tabs groupId="role-type">
+  <TabItem value="clusterrolebinding">
+
+  ```plain
+  kubectl create clusterrolebinding my-binding --clusterrole=monitoring-ui-view --user=u-l4npx
+  ```
+
+  </TabItem>
+  <TabItem value="rolebinding">
+
+  ```plain
+  kubectl create rolebinding my-binding --clusterrole=monitoring-ui-view --user=u-l4npx --namespace=my-namespace
+  ```
+
+  </TabItem>
+</Tabs>
+- Assign to all authenticated users:
+<Tabs groupId="role-type">
+  <TabItem value="clusterrolebinding">
+
+  ```plain
+  kubectl create clusterrolebinding my-binding --clusterrole=monitoring-ui-view --group=system:authenticated
+  ```
+
+  </TabItem>
+  <TabItem value="rolebinding">
+
+  ```plain
+  kubectl create rolebinding my-binding --clusterrole=monitoring-ui-view --group=system:authenticated --namespace=my-namespace
+  ```
+
+  </TabItem>
+</Tabs>
+
+#### Using YAML Files
+
+An alternative method to using Rancher to attach a `Role` or `ClusterRole` to a user or group is by defining bindings in YAML files that you create. You must first configure the `RoleBinding` or `ClusterRoleBinding` with a YAML file, then you apply the config changes by running the `kubectl apply` command.
+
+- **Roles**: Below is an example of a YAML file to help you configure `RoleBindings` in Kubernetes. You will need to fill in the name below, and name is case-sensitive.
 
 ```yaml
 # monitoring-config-view-role-binding.yaml
@@ -134,10 +176,10 @@ subjects:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-* **kubectl**: Below is an example of a `kubectl` command used to apply the binding you've created in the YAML file. As noted, you will need to fill in your YAML filename accordingly.
-
-  * **`kubectl apply -f monitoring-config-view-role-binding.yaml`
-
+- **kubectl**: Below is an example of a `kubectl` command used to apply the binding you've created in the YAML file. As noted, you will need to fill in your YAML filename accordingly.
+  ```
+  kubectl apply -f monitoring-config-view-role-binding.yaml
+  ```
 
 ## Users with Rancher Based Permissions
 
@@ -183,8 +225,6 @@ If cluster-admins would like to provide additional admin/edit access to users ou
 |----------------------------| ------| ------| ----------------------------|
 | <ul><li>`secrets`</li><li>`configmaps`</li></ul>| `cattle-monitoring-system` | Yes, Configs and Secrets in this namespace can impact the entire monitoring / alerting pipeline. | User will be able to create or edit Secrets / ConfigMaps such as the Alertmanager Config, Prometheus Adapter Config, TLS secrets, additional Grafana datasources, etc. This can have broad impact on all cluster monitoring / alerting. |
 | <ul><li>`secrets`</li><li>`configmaps`</li></ul>| `cattle-dashboards` | Yes, Configs and Secrets in this namespace can create dashboards that make queries on all metrics collected at a cluster-level. | User will be able to create Secrets / ConfigMaps that persist new Grafana Dashboards only. |
-
-
 
 ## Role-based Access Control for Grafana
 
