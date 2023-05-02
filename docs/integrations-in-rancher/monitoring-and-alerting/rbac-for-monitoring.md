@@ -99,7 +99,6 @@ The UI won't offer `monitoring-admin`, `monitoring-edit`, and `monitoring-view` 
 
     2.4 Click **Create**.
 
-
 **Result:** The new user should now be able to see the monitoring tools.
 
 ### Additional Monitoring ClusterRoles
@@ -111,7 +110,6 @@ Monitoring also creates additional `ClusterRoles` that aren't assigned to users 
 | monitoring-ui-view | <a id="monitoring-ui-view"></a>_Available as of Monitoring v2 14.5.100+_ This ClusterRole allows users to view metrics graphs for the specified cluster in the Rancher UI. This is done by granting read-only access to external Monitoring UIs. Users with this role have permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Grafana, and Alertmanager UIs through the Rancher proxy. |
 
 ### Assigning Roles and ClusterRoles with kubectl
-
 
 #### Using `kubectl create`
 
@@ -156,7 +154,7 @@ One method is to use either `kubectl create clusterrolebinding` or `kubectl crea
 
 Another method is to define bindings in YAML files that you create. You must first configure the `RoleBinding` or `ClusterRoleBinding` with a YAML file. Then, apply the configuration changes by running the `kubectl apply` command.
 
-- **Roles**: Below is an example YAML file to help you configure `RoleBindings` in Kubernetes. You'll need to fill in the name below. 
+- **Roles**: Below is an example YAML file to help you configure `RoleBindings` in Kubernetes. You'll need to fill in the name below.
 
 :::note
 

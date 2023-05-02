@@ -72,7 +72,7 @@ Admins may assign custom roles in the Rancher UI for admin, editing, and viewing
 
 :::note Important
 
-The UI will not offer `monitoring-admin`, `monitoring-edit`, and `monitoring-view` options when users are being added to a cluster. These monitoring roles can only be assigned by manually creating a custom role that inherits from Project Owner and Project Monitoring View roles. 
+The UI won't offer `monitoring-admin`, `monitoring-edit`, and `monitoring-view` options when users are being added to a cluster. These monitoring roles can only be assigned by manually creating a custom role that inherits from Project Owner and Project Monitoring View roles.
 
 :::
 
@@ -104,7 +104,7 @@ The UI will not offer `monitoring-admin`, `monitoring-edit`, and `monitoring-vie
 
 ### Additional Monitoring ClusterRoles
 
-Monitoring also creates additional `ClusterRoles` that are not assigned to users by default but are created within the cluster.  They are not aggregated by default but can be bound to a namespace by deploying a `RoleBinding` or `ClusterRoleBinding` that references it. To define a `RoleBinding` with `kubectl` instead of through Rancher, click [here](#assigning-roles-and-clusterroles-with-kubectl).
+Monitoring also creates additional `ClusterRoles` that aren't assigned to users by default but are created within the cluster. They aren't aggregated by default but can be bound to a namespace by deploying a `RoleBinding` or `ClusterRoleBinding` that references it. To define a `RoleBinding` with `kubectl` instead of through Rancher, click [here](#assigning-roles-and-clusterroles-with-kubectl).
 
 | Role | Purpose  |
 | ------------------------------| ---------------------------|
@@ -112,10 +112,56 @@ Monitoring also creates additional `ClusterRoles` that are not assigned to users
 
 ### Assigning Roles and ClusterRoles with kubectl
 
-An alternative method to using Rancher to attach a `Role` or `ClusterRole` to a user or group is by defining bindings in YAML files that you create. You must first configure the `RoleBinding` with the YAML file, then you apply the config changes by running the `kubectl apply` command.
+#### Using `kubectl create`
 
+One method is to use either `kubectl create clusterrolebinding` or `kubectl create rolebinding` to assign a `Role` or `ClusterRole`. This is shown in the following examples:
 
-* **Roles**: Below is an example of a YAML file to help you configure `RoleBindings` in Kubernetes. You will need to fill in the name below, and name is case-sensitive.
+- Assign to a specific user:
+<Tabs groupId="role-type">
+  <TabItem value="clusterrolebinding">
+
+  ```plain
+  kubectl create clusterrolebinding my-binding --clusterrole=monitoring-ui-view --user=u-l4npx
+  ```
+
+  </TabItem>
+  <TabItem value="rolebinding">
+
+  ```plain
+  kubectl create rolebinding my-binding --clusterrole=monitoring-ui-view --user=u-l4npx --namespace=my-namespace
+  ```
+
+  </TabItem>
+</Tabs>
+- Assign to all authenticated users:
+<Tabs groupId="role-type">
+  <TabItem value="clusterrolebinding">
+
+  ```plain
+  kubectl create clusterrolebinding my-binding --clusterrole=monitoring-ui-view --group=system:authenticated
+  ```
+
+  </TabItem>
+  <TabItem value="rolebinding">
+
+  ```plain
+  kubectl create rolebinding my-binding --clusterrole=monitoring-ui-view --group=system:authenticated --namespace=my-namespace
+  ```
+
+  </TabItem>
+</Tabs>
+
+#### Using YAML Files
+
+Another method is to define bindings in YAML files that you create. You must first configure the `RoleBinding` or `ClusterRoleBinding` with a YAML file. Then, apply the configuration changes by running the `kubectl apply` command.
+
+- **Roles**: Below is an example YAML file to help you configure `RoleBindings` in Kubernetes. You'll need to fill in the name below.
+
+:::note
+
+Names are case-sensitive.
+
+:::
 
 ```yaml
 # monitoring-config-view-role-binding.yaml
@@ -134,10 +180,10 @@ subjects:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-* **kubectl**: Below is an example of a `kubectl` command used to apply the binding you've created in the YAML file. As noted, you will need to fill in your YAML filename accordingly.
-
-  * **`kubectl apply -f monitoring-config-view-role-binding.yaml`
-
+- **kubectl**: Below is an example of a `kubectl` command used to apply the binding you've created in the YAML file. Remember to fill in your YAML filename accordingly.
+  ```plain
+  kubectl apply -f monitoring-config-view-role-binding.yaml
+  ```
 
 ## Users with Rancher Based Permissions
 
