@@ -155,9 +155,9 @@ One method is to use either `kubectl create clusterrolebinding` or `kubectl crea
 
 #### Using YAML Files
 
-An alternative method to using Rancher to attach a `Role` or `ClusterRole` to a user or group is by defining bindings in YAML files that you create. You must first configure the `RoleBinding` or `ClusterRoleBinding` with a YAML file, then you apply the config changes by running the `kubectl apply` command.
+Another method is to define bindings in YAML files that you create. You must first configure the `RoleBinding` or `ClusterRoleBinding` with a YAML file, then you apply the configuration changes by running the `kubectl apply` command.
 
-- **Roles**: Below is an example of a YAML file to help you configure `RoleBindings` in Kubernetes. You will need to fill in the name below, and name is case-sensitive.
+- **Roles**: Below is an example of a YAML file to help you configure `RoleBindings` in Kubernetes. You will need to fill in the name below, which is case-sensitive.
 
 ```yaml
 # monitoring-config-view-role-binding.yaml
@@ -177,7 +177,7 @@ subjects:
 ```
 
 - **kubectl**: Below is an example of a `kubectl` command used to apply the binding you've created in the YAML file. As noted, you will need to fill in your YAML filename accordingly.
-  ```
+  ```plain
   kubectl apply -f monitoring-config-view-role-binding.yaml
   ```
 
