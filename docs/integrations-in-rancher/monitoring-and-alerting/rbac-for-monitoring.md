@@ -72,7 +72,7 @@ Admins may assign custom roles in the Rancher UI for admin, editing, and viewing
 
 :::note Important
 
-The UI will not offer `monitoring-admin`, `monitoring-edit`, and `monitoring-view` options when users are being added to a cluster. These monitoring roles can only be assigned by manually creating a custom role that inherits from Project Owner and Project Monitoring View roles.
+The UI won't offer `monitoring-admin`, `monitoring-edit`, and `monitoring-view` options when users are being added to a cluster. These monitoring roles can only be assigned by manually creating a custom role that inherits from Project Owner and Project Monitoring View roles.
 
 :::
 
@@ -104,15 +104,14 @@ The UI will not offer `monitoring-admin`, `monitoring-edit`, and `monitoring-vie
 
 ### Additional Monitoring ClusterRoles
 
-Monitoring also creates additional `ClusterRoles` that are not assigned to users by default but are created within the cluster. They are not aggregated by default but can be bound to a namespace by deploying a `RoleBinding` or `ClusterRoleBinding` that references it. To define a `RoleBinding` with `kubectl` instead of through Rancher, click [here](#assigning-roles-and-clusterroles-with-kubectl).
+Monitoring also creates additional `ClusterRoles` that aren't assigned to users by default but are created within the cluster. They aren't aggregated by default but can be bound to a namespace by deploying a `RoleBinding` or `ClusterRoleBinding` that references it. To define a `RoleBinding` with `kubectl` instead of through Rancher, click [here](#assigning-roles-and-clusterroles-with-kubectl).
 
 | Role | Purpose  |
 | ------------------------------| ---------------------------|
-| monitoring-ui-view | <a id="monitoring-ui-view"></a>_Available as of Monitoring v2 14.5.100+_ This ClusterRole gives access to metrics graphs in the Rancher UI for the specific cluster. It does so by providing read-only access to external Monitoring UIs by giving a user permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Grafana, and Alertmanager UIs through the Rancher proxy. |
+| monitoring-ui-view | <a id="monitoring-ui-view"></a>_Available as of Monitoring v2 14.5.100+_ This ClusterRole allows users to view metrics graphs for the specified cluster in the Rancher UI. This is done by granting read-only access to external Monitoring UIs. Users with this role have permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Grafana, and Alertmanager UIs through the Rancher proxy. |
 
 ### Assigning Roles and ClusterRoles with kubectl
 
-An alternative method to using Rancher to attach a `Role` or `ClusterRole` is to a user or group is with `kubectl`.
 
 #### Using `kubectl create`
 
@@ -155,9 +154,15 @@ One method is to use either `kubectl create clusterrolebinding` or `kubectl crea
 
 #### Using YAML Files
 
-Another method is to define bindings in YAML files that you create. You must first configure the `RoleBinding` or `ClusterRoleBinding` with a YAML file, then you apply the configuration changes by running the `kubectl apply` command.
+Another method is to define bindings in YAML files that you create. You must first configure the `RoleBinding` or `ClusterRoleBinding` with a YAML file. Then, apply the configuration changes by running the `kubectl apply` command.
 
-- **Roles**: Below is an example of a YAML file to help you configure `RoleBindings` in Kubernetes. You will need to fill in the name below, which is case-sensitive.
+- **Roles**: Below is an example YAML file to help you configure `RoleBindings` in Kubernetes. You'll need to fill in the name below. 
+
+:::note
+
+Names are case-sensitive.
+
+:::
 
 ```yaml
 # monitoring-config-view-role-binding.yaml
@@ -176,7 +181,7 @@ subjects:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-- **kubectl**: Below is an example of a `kubectl` command used to apply the binding you've created in the YAML file. As noted, you will need to fill in your YAML filename accordingly.
+- **kubectl**: Below is an example of a `kubectl` command used to apply the binding you've created in the YAML file. Remember to fill in your YAML filename accordingly.
   ```plain
   kubectl apply -f monitoring-config-view-role-binding.yaml
   ```
