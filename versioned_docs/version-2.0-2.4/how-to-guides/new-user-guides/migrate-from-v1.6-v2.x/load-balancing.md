@@ -4,7 +4,7 @@ title: "7. Load Balancing"
 
 If your applications are public-facing and consume significant traffic, you should place a load balancer in front of your cluster so that users can always access their apps without service interruption. Typically, you can fulfill a high volume of service requests by [horizontally scaling](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) your deployment, which spins up additional application containers as traffic ramps up. However, this technique requires routing that distributes traffic across your nodes efficiently. In cases where you need to accommodate public traffic that scales up and down, you'll need a load balancer.
 
-As outlined in [its documentation]({{<baseurl>}}/rancher/v1.6/en/cattle/adding-load-balancers/), Rancher v1.6 provided rich support for load balancing using its own microservice powered by HAProxy, which supports HTTP, HTTPS, TCP hostname, and path-based routing. Most of these same features are available in v2.x. However, load balancers that you used with v1.6 cannot be migrated to v2.x. You'll have to manually recreate your v1.6 load balancer in v2.x.
+As outlined in [its documentation](https://rancher.com/docs/rancher/v1.6/en/cattle/adding-load-balancers/), Rancher v1.6 provided rich support for load balancing using its own microservice powered by HAProxy, which supports HTTP, HTTPS, TCP hostname, and path-based routing. Most of these same features are available in v2.x. However, load balancers that you used with v1.6 cannot be migrated to v2.x. You'll have to manually recreate your v1.6 load balancer in v2.x.
 
 If you encounter the `output.txt` text below after parsing your v1.6 Compose files to Kubernetes manifests, you'll have to resolve it by manually creating a load balancer in v2.x.
 
@@ -137,7 +137,7 @@ The key in the ConfigMap entry should be the TCP port that you want to expose fo
 
 ## Rancher v2.x Load Balancing Limitations
 
-Cattle provided feature-rich load balancer support that is [well documented]({{<baseurl>}}/rancher/v1.6/en/cattle/adding-load-balancers/#load-balancers). Some of these features do not have equivalents in Rancher v2.x. This is the list of such features:
+Cattle provided feature-rich load balancer support that is [well documented](https://rancher.com/docs/rancher/v1.6/en/cattle/adding-load-balancers/). Some of these features do not have equivalents in Rancher v2.x. This is the list of such features:
 
 - No support for SNI in current NGINX Ingress Controller.
 - TCP load balancing requires a load balancer appliance enabled by cloud provider within the cluster. There is no Ingress support for TCP on Kubernetes.
