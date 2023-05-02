@@ -23,7 +23,7 @@ The health check microservice features two types of health checks, which have a 
 
 - **TCP health checks**:
 
-    These health checks check if a TCP connection opens at the specified port for the monitored service. For full details, see the [Rancher v1.6 documentation]({{<baseurl>}}/rancher/v1.6/en/cattle/health-checks/).
+    These health checks check if a TCP connection opens at the specified port for the monitored service. For full details, see the [Rancher v1.6 documentation](https://rancher.com/docs/rancher/v1.6/en/cattle/health-checks/).
 
 - **HTTP health checks**:
 

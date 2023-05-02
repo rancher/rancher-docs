@@ -26,7 +26,7 @@ The [VPC](https://docs.aws.amazon.com/vpc/latest/userguide/configure-your-vpc.ht
 
 ### IAM Instance Profile Name
 
-The name of the [instance profile] used to pass an IAM role to an EC2 instance.
+The name of the [instance profile](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html) used to pass an IAM role to an EC2 instance.
 
 ## Advanced Options
 
