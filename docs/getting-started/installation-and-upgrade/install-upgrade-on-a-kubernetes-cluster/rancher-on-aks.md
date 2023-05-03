@@ -85,6 +85,7 @@ Then, list the helm charts available to you by running the following command:
 
 ```
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+helm repo update
 helm search repo ingress-nginx -l
 ```
 
@@ -93,8 +94,6 @@ Select a chart version that bundles an app compatible with your Kubernetes insta
 Now that you know which helm chart `version` you need, run the following command. It installs an `nginx-ingress-controller` with a Kubernetes load balancer service:
 
 ```
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-helm repo update
 helm search repo ingress-nginx -l
 helm upgrade --install \
   ingress-nginx ingress-nginx/ingress-nginx \
