@@ -45,7 +45,20 @@ az group create --name rancher-rg --location eastus
 
 To create an AKS cluster, run the following command. Use a VM size that applies to your use case. Refer to [this article](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes) for available sizes and options. 
 
-When choosing a Kubernetes version, be sure to first consult the [support matrix](https://rancher.com/support-matrix/) to find the highest version of Kubernetes that has been validated for your Rancher version. See the [official NGINX helm chart documentation](https://docs.nginx.com/nginx-ingress-controller/technical-specifications/#supported-kubernetes-versions) listing supported Kubernetes versions for ingress-nginx.
+When choosing a Kubernetes version, be sure to first consult the [support matrix](https://rancher.com/support-matrix/) to find the highest version of Kubernetes that has been validated for your Rancher version. 
+
+To choose the correct Ingress-NGINX helm chart, first find an app version that's compatible with your Kubernetes version in the [Kubernetes/ingress-nginx support table](https://github.com/kubernetes/ingress-nginx#supported-versions-table). 
+
+Then, list the helm charts available to you by running the following command:
+
+```
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+helm search repo ingress-nginx -l
+```
+
+Select a chart version that bundles an app compatible with your Kubernetes install. For example, if you have Kuberntes v1.23, you can select the v4.0.18 helm chart, since Ingress-NGINX v1.70 comes bundled with that chart, and v1.70 is compatible with Kubernetes v1.23. When in doubt, select the most recent compatible version.
+
+Now that you know which helm chart `version` you need, run the following command. It installs an `nginx-ingress-controller` with a Kubernetes load balancer service:
 
 ```
 az aks create \

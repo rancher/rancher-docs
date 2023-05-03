@@ -117,7 +117,18 @@ rancher-server-cluster		us-west-2	True
 
 The cluster needs an Ingress so that Rancher can be accessed from outside the cluster.
 
-The following command installs an `nginx-ingress-controller` with a LoadBalancer service. This will result in an ELB (Elastic Load Balancer) in front of NGINX:
+To make sure that you choose the correct Ingress-NGINX helm chart, first find an app version that's compatible with your Kubernetes version in the [Kubernetes/ingress-nginx support table](https://github.com/kubernetes/ingress-nginx#supported-versions-table). 
+
+Then, list the helm charts available to you by running the following command:
+
+```
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+helm search repo ingress-nginx -l
+```
+
+Select a chart version that bundles an app compatible with your Kubernetes install. For example, if you have Kuberntes v1.23, you can select the v4.0.18 helm chart, since Ingress-NGINX v1.70 comes bundled with that chart, and v1.70 is compatible with Kubernetes v1.23. When in doubt, select the most recent compatible version.
+
+Now that you know which helm chart `version` you need, run the following command. It installs an `nginx-ingress-controller` with a Kubernetes load balancer service:
 
 ```
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
