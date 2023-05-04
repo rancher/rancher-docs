@@ -115,7 +115,7 @@ rancher-server-cluster		us-west-2	True
 
 The cluster needs an Ingress so that Rancher can be accessed from outside the cluster.
 
-To make sure that you choose the correct Ingress-NGINX helm chart, first find an app version that's compatible with your Kubernetes version in the [Kubernetes/ingress-nginx support table](https://github.com/kubernetes/ingress-nginx#supported-versions-table). 
+To make sure that you choose the correct Ingress-NGINX Helm chart, first find an `Ingress-NGINX version` that's compatible with your Kubernetes version in the [Kubernetes/ingress-nginx support table](https://github.com/kubernetes/ingress-nginx#supported-versions-table). 
 
 Then, list the helm charts available to you by running the following command:
 
@@ -125,7 +125,7 @@ helm repo update
 helm search repo ingress-nginx -l
 ```
 
-Select a chart version that bundles an app compatible with your Kubernetes install. For example, if you have Kuberntes v1.23, you can select the v4.0.18 helm chart, since Ingress-NGINX v1.70 comes bundled with that chart, and v1.70 is compatible with Kubernetes v1.23. When in doubt, select the most recent compatible version.
+The `helm search` command's output contains an `APP VERSION` column. The versions under this column are equivalent to the `Ingress-NGINX version` you chose earlier. Using the app version, select a chart version that bundles an app compatible with your Kubernetes install. For example, if you have Kuberntes v1.20, you can select the v4.2.5 helm chart, since Ingress-NGINX v1.3.1 comes bundled with that chart, and v1.3.1 is compatible with Kubernetes v1.20. When in doubt, select the most recent compatible version.
 
 Now that you know which helm chart `version` you need, run the following command. It installs an `nginx-ingress-controller` with a Kubernetes load balancer service:
 
@@ -134,7 +134,7 @@ helm upgrade --install \
   ingress-nginx ingress-nginx/ingress-nginx \
   --namespace ingress-nginx \
   --set controller.service.type=LoadBalancer \
-  --version 3.12.0 \
+  --version 4.2.5 \
   --create-namespace
 ```
 
