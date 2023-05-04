@@ -117,7 +117,7 @@ The cluster needs an Ingress so that Rancher can be accessed from outside the cl
 
 To make sure that you choose the correct Ingress-NGINX Helm chart, first find an `Ingress-NGINX version` that's compatible with your Kubernetes version in the [Kubernetes/ingress-nginx support table](https://github.com/kubernetes/ingress-nginx#supported-versions-table). 
 
-Then, list the helm charts available to you by running the following command:
+Then, list the Helm charts available to you by running the following command:
 
 ```
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
@@ -125,9 +125,9 @@ helm repo update
 helm search repo ingress-nginx -l
 ```
 
-The `helm search` command's output contains an `APP VERSION` column. The versions under this column are equivalent to the `Ingress-NGINX version` you chose earlier. Using the app version, select a chart version that bundles an app compatible with your Kubernetes install. For example, if you have Kuberntes v1.20, you can select the v4.2.5 helm chart, since Ingress-NGINX v1.3.1 comes bundled with that chart, and v1.3.1 is compatible with Kubernetes v1.20. When in doubt, select the most recent compatible version.
+The `helm search` command's output contains an `APP VERSION` column. The versions under this column are equivalent to the `Ingress-NGINX version` you chose earlier. Using the app version, select a chart version that bundles an app compatible with your Kubernetes install. For example, if you have Kuberntes v1.20, you can select the v4.2.5 Helm chart, since Ingress-NGINX v1.3.1 comes bundled with that chart, and v1.3.1 is compatible with Kubernetes v1.20. When in doubt, select the most recent compatible version.
 
-Now that you know which helm chart `version` you need, run the following command. It installs an `nginx-ingress-controller` with a Kubernetes load balancer service:
+Now that you know which Helm chart `version` you need, run the following command. It installs an `nginx-ingress-controller` with a Kubernetes load balancer service:
 
 ```
 helm upgrade --install \

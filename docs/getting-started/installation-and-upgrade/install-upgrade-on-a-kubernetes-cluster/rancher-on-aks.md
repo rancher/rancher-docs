@@ -81,7 +81,7 @@ The cluster needs an Ingress so that Rancher can be accessed from outside the cl
 
 To make sure that you choose the correct Ingress-NGINX Helm chart, first find an `Ingress-NGINX version` that's compatible with your Kubernetes version in the [Kubernetes/ingress-nginx support table](https://github.com/kubernetes/ingress-nginx#supported-versions-table). 
 
-Then, list the helm charts available to you by running the following command:
+Then, list the Helm charts available to you by running the following command:
 
 ```
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
