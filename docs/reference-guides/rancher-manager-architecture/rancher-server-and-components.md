@@ -20,7 +20,7 @@ A high-availability Kubernetes installation is recommended for production.
 
 A Docker installation of Rancher is recommended only for development and testing purposes. The ability to migrate Rancher to a high-availability cluster depends on the Rancher version.
 
-To Check the resources that Rancher deploys when we go as a single node Rancher deployment, You can check this using the kubectl command below in the namespaces where you have deployed Rancher. You can achieve the same using the CLI or going inside Rancher admin account and filtering the namespaces.
+To see deployed resources, run the following command:
 
 ```bash
 kubectl get all -n <namespace>
