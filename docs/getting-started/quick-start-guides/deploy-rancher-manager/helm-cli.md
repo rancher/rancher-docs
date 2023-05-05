@@ -125,6 +125,8 @@ The final command to install Rancher is below. The command requires a domain nam
 
 To install a specific Rancher version, use the `--version` flag (e.g., `--version 2.6.6`). Otherwise, the latest Rancher is installed by default. Refer to [Choosing a Rancher Version](../../installation-and-upgrade/resources/choose-a-rancher-version.md).
 
+Note the password requires a minimum of 12 characters.
+
 ```
 helm install rancher rancher-latest/rancher \
   --namespace cattle-system \
