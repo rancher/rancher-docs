@@ -119,6 +119,11 @@ After registering a cluster, the cluster owner can:
 When an RKE2 or K3s cluster is registered in Rancher, Rancher will recognize it. The Rancher UI will expose the features for [all registered clusters,](#features-for-all-registered-clusters) in addition to the following features for editing and upgrading the cluster:
 
 - The ability to [upgrade the Kubernetes version](../../../getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes.md)
+  :::danger
+
+  After a cluster has been imported into Rancher, upgrades should be performed using Rancher. Upgrading an imported cluster outside of Rancher is **not** supported.
+
+  :::
 - The ability to configure the maximum number of nodes that will be upgraded concurrently
 - The ability to see a read-only version of the cluster's configuration arguments and environment variables used to launch each node in the cluster
 
