@@ -33,7 +33,7 @@ Deploying to DigitalOcean will incur charges.
 
 4. Edit `terraform.tfvars` and customize the following variables:
     - `do_token` - DigitalOcean access key
-    - `rancher_server_admin_password` - Admin password for created Rancher server
+    - `rancher_server_admin_password` - Admin password for created Rancher server (minimum 12 characters)
 
 5. **Optional:** Modify optional variables within `terraform.tfvars`.
 See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [DO Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/do) for more information. Suggestions include:
