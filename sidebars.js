@@ -42,6 +42,7 @@ const sidebars = {
               },
               items: [
                 "getting-started/quick-start-guides/deploy-rancher-manager/aws",
+                "getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace",
                 "getting-started/quick-start-guides/deploy-rancher-manager/azure",
                 "getting-started/quick-start-guides/deploy-rancher-manager/digitalocean",
                 "getting-started/quick-start-guides/deploy-rancher-manager/gcp",
