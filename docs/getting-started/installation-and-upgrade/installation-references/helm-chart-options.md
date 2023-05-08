@@ -92,12 +92,18 @@ Set the `auditLog.destination` to `hostPath` to forward logs to volume shared wi
 
 ### Setting Extra Environment Variables
 
-You can set extra environment variables for Rancher server using `extraEnv`. This list uses the same `name` and `value` keys as the container manifest definitions. Remember to quote the values.
+You can set extra environment variables for Rancher server using `extraEnv`. This list is passed to the Rancher deployment in its YAML format. It is embedded under `env` for the Rancher container. Refer to the Kubernetes documentation for setting container environment variables, `extraEnv` can use any of the keys referenced in [Define Environment Variables for a Container](https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/#define-an-environment-variable-for-a-container).
+
+Consider an example that uses the `name` and `value` keys:
 
 ```plain
 --set 'extraEnv[0].name=CATTLE_TLS_MIN_VERSION'
 --set 'extraEnv[0].value=1.0'
 ```
+
+If passing sensitive data as the value for an environment variable, such as proxy authentication credentials, it is strongly recommended that a secret reference is used. This will prevent sensitive data from being exposed in Helm or the Rancher deployment.
+
+Consider an example that uses the `name`, `valueFrom.secretKeyRef.name`, and `valueFrom.secretKeyRef.key` keys. See example in [HTTP Proxy](#http-proxy)
 
 ### TLS Settings
 
@@ -141,14 +147,43 @@ Example on setting a static proxy header with `ingress.configurationSnippet`. Th
 
 ### HTTP Proxy
 
-Rancher requires internet access for some functionality (helm charts). Use `proxy` to set your proxy server.
+Rancher requires internet access for some functionality (Helm charts). Use `proxy` to set your proxy server or use `extraEnv` to set the `HTTPS_PROXY` environment variable to point to your proxy server.
 
-Add your IP exceptions to the `noProxy` list. Make sure you add the Pod cluster IP range (default: `10.42.0.0/16`), Service cluster IP range (default: `10.43.0.0/16`), the internal cluster domains (default: `.svc,.cluster.local`) and any worker cluster `controlplane` nodes. Rancher supports CIDR notation ranges in this list.
+Add your IP exceptions to the `noProxy` chart value as a comma separated list. Make sure you add the following values: 
+- Pod cluster IP range (default: `10.42.0.0/16`).
+- Service cluster IP range (default: `10.43.0.0/16`).
+- Internal cluster domains (default: `.svc,.cluster.local`).
+- Any worker cluster `controlplane` nodes. 
+Rancher supports CIDR notation ranges in this list.
+
+When not including sensitive data, the `proxy` or `extraEnv` chart options can be used. When using `extraEnv` the `noProxy` Helm option is ignored. Therefore, the `NO_PROXY` environment variable must also be set with `extraEnv`.
+
+The following is an example of setting proxy using the `extraEnv` chart option:
 
 ```plain
---set proxy="http://<username>:<password>@<proxy_url>:<proxy_port>/"
---set noProxy="127.0.0.0/8\,10.0.0.0/8\,172.16.0.0/12\,192.168.0.0/16\,.svc\,.cluster.local"
+--set proxy="http://<proxy_url:proxy_port>/"
 ```
+
+Example of setting proxy using the `extraEnv` chart option:
+```plain
+--set extraEnv[1].name=HTTPS_PROXY
+--set extraEnv[1].value="http://<proxy_url>:<proxy_port>/"
+--set extraEnv[2].name=NO_PROXY
+--set extraEnv[2].value="127.0.0.0/8\,10.0.0.0/8\,172.16.0.0/12\,192.168.0.0/16\,.svc\,.cluster.local"
+```
+
+When including sensitive data, such as proxy authentication credentials, use the `extraEnv` option with `valueFrom.secretRef` to prevent sensitive data from being exposed in Helm or the Rancher deployment.
+
+The following is an example of using `extraEnv` to configure proxy. This example secret would contain the value `"http://<username>:<password>@<proxy_url>:<proxy_port>/"` in the secret's `"https-proxy-url"` key:
+```plain
+--set extraEnv[1].name=HTTPS_PROXY
+--set extraEnv[1].valueFrom.secretKeyRef.name=secret-name
+--set extraEnv[1].valueFrom.secretKeyRef.key=https-proxy-url
+--set extraEnv[2].name=NO_PROXY
+--set extraEnv[2].value="127.0.0.0/8\,10.0.0.0/8\,172.16.0.0/12\,192.168.0.0/16\,.svc\,.cluster.local"
+```
+
+To learn more about how to configure environment variables, refer to [Define Environment Variables for a Container](https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/#define-an-environment-variable-for-a-container).
 
 ### Additional Trusted CAs
 
