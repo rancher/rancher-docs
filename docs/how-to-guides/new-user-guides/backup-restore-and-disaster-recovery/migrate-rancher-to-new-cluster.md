@@ -48,7 +48,7 @@ Install the [rancher-backup chart](https://github.com/rancher/backup-restore-ope
      The above assumes an environment with outbound connectivity to Docker Hub
 
      For an **air-gapped environment**, use the Helm value below to pull the `backup-restore-operator` image from your private registry when installing the rancher-backup Helm chart.
-     
+
      ```bash
      --set image.repository $REGISTRY/rancher/backup-restore-operator
      ```
@@ -157,6 +157,8 @@ Follow the steps to [install cert-manager](../../../pages-for-subheaders/install
 ### 4. Bring up Rancher with Helm
 
 Use the same version of Helm to install Rancher, that was used on the first cluster.
+
+For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false`.
 
 ```bash
 helm install rancher rancher-latest/rancher \
