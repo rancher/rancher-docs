@@ -40,6 +40,8 @@ If your node has public and internal addresses, it is recommended to set the `in
 
 RKE will need to connect to each node over SSH, and it will look for a private key in the default location of `~/.ssh/id_rsa`. If your private key for a certain node is in a different location than the default, you will also need to configure the `ssh_key_path` option for that node.
 
+When choosing a Kubernetes version, be sure to first consult the [support matrix](https://rancher.com/support-matrix/) to find the highest version of Kubernetes that has been validated for your Rancher version.
+
 ```yaml
 nodes:
   - address: 165.227.114.63
@@ -67,6 +69,8 @@ ingress:
   provider: nginx
   options:
     use-forwarded-headers: "true"
+
+kubernetes_version: v1.25.6-rancher4-1
 ```
 
 <figcaption>Common RKE Nodes Options</figcaption>
