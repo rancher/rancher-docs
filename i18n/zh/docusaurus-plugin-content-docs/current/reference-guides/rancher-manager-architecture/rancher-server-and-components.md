@@ -20,6 +20,16 @@ title: Rancher Server 和 Components
 
 Rancher 的 Docker 安装仅推荐用于开发和测试环境中。Rancher 版本决定了能否将 Rancher 迁移到高可用集群。
 
-Rancher backup operator 可将 Rancher 从单个 Docker 容器迁移到高可用 Kubernetes 集群上。详情请参见[把 Rancher 迁移到新集群](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md)。
+要查看已部署的资源，运行以下命令：
+
+```bash
+kubectl get all -n <namespace>
+```
+如果你具有管理员权限，你还可以在 Rancher UI 中看到列出的资源：
+
+1. 单击 **☰** 并选择一个集群。
+1. 从侧面导航菜单中选择**更多资源**，从而按类型查看已部署的资源。
+1. 从侧面导航菜单中选择**集群** > **项目/命名空间**，然后选择一个命名空间，从而按命名空间查看已部署的资源。
+   Rancher backup operator 可将 Rancher 从单个 Docker 容器迁移到高可用 Kubernetes 集群上。有关详细信息，请参阅[将 Rancher 迁移到新集群](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md)。
 
 不管 Rancher Server 是如何安装的，它都应该运行在与其管理的下游集群不同节点上。如果 Rancher 安装在高可用的 Kubernetes 集群上，它需要运行在与其管理的集群不同的集群上。

@@ -75,7 +75,12 @@ matchLabels:
 1. 单击 **Prometheus Federator** Chart。
 1. 单击**安装**。
 1. 在**元数据**页面，点击**下一步**。
-1. 在**项目 Release 命名空间项目 ID** 字段中，`System 项目`是默认值，但你可以使用具有类似[有限访问权限](#确保-cattle-monitoring-system-命名空间位于-system-项目中（或者位于一个锁定并能访问集群中其他项目的项目中）)的另一个项目覆盖它。<!-- add info on retrieving project IDs >
+1. 在**项目 Release 命名空间项目 ID** 字段中，`System 项目`是默认值，但你可以使用具有类似[有限访问权限](#确保-cattle-monitoring-system-命名空间位于-system-项目中（或者位于一个锁定并能访问集群中其他项目的项目中）)的另一个项目覆盖它。你可以在 local 上游集群中运行以下命令来找到项目 ID：
+
+```plain
+kubectl get projects -A -o custom-columns="NAMESPACE":.metadata.namespace,"ID":.metadata.name,"NAME":.spec.displayName
+```
+
 1. 单击**安装**。
 
 **结果**：Prometheus Federator 应用程序已部署在 `cattle-monitoring-system` 命名空间中。

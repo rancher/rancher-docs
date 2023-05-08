@@ -99,7 +99,6 @@ Monitoring 还会创建其他 `Role`，这些角色默认情况下不会分配�
 
     2.4 单击 **Create**。
 
-
 **结果**：新用户现在应该能够看到 monitoring 工具。
 
 ### 其他监控集群角色
@@ -108,14 +107,60 @@ Monitoring 还会创建其他 `ClusterRole`，这些角色默认情况下不会�
 
 | 角色 | 用途 |
 | ------------------------------| ---------------------------|
-| monitoring-ui-view | <a id="monitoring-ui-view"></a>_从 Monitoring v2 14.5.100+ 开始可用_。通过授权用户列出 Prometheus、Alertmanager 和 Grafana 端点，并通过 Rancher 代理向 Prometheus、Grafana 和 Alertmanager UI 进行 GET 请求，来允许用户对外部 Monitoring UI 进行只读访问。 |
+| monitoring-ui-view | <a id="monitoring-ui-view"></a>_自 Monitoring v2 14.5.100+ 起可用_ 此 ClusterRole 允许用户在 Rancher UI 中查看指定集群的指标图。这是通过授予对外部监控 UI 的只读访问权限来实现的。具有此角色的用户有权限列出 Prometheus、Alertmanager 和 Grafana 端点，并通过 Rancher 代理向 Prometheus、Grafana 和 Alertmanager UI 发出 GET 请求。 |
 
 ### 使用 kubectl 分配 Role 和 ClusterRole
 
-使用 Rancher 将 `Role` 或 `ClusterRole` 附加到用户或组的另一种方法，是在你创建的 YAML 文件中定义绑定。你必须首先使用 YAML 文件配置 `RoleBinding`，然后运行 `kubectl apply` 命令来应用配置更改。
+#### 使用 `kubectl create`
 
+一种方法是使用 `kubectl create clusterrolebinding` 或 `kubectl create rolebinding` 来分配一个 `Role` 或 `ClusterRole`。如以下示例所示：
 
-* **Role**：以下 YAML 文件示例可帮助你在 Kubernetes 中配置 `RoleBinding`。你需要填写下方的 `name`（区分大小写）：
+- 分配给特定用户：
+<Tabs groupId="role-type">
+  <TabItem value="clusterrolebinding">
+
+  ```plain
+  kubectl create clusterrolebinding my-binding --clusterrole=monitoring-ui-view --user=u-l4npx
+  ```
+
+  </TabItem>
+  <TabItem value="rolebinding">
+
+  ```plain
+  kubectl create rolebinding my-binding --clusterrole=monitoring-ui-view --user=u-l4npx --namespace=my-namespace
+  ```
+
+  </TabItem>
+</Tabs>
+- 分配给所有经过身份认证的用户：
+<Tabs groupId="role-type">
+  <TabItem value="clusterrolebinding">
+
+  ```plain
+  kubectl create clusterrolebinding my-binding --clusterrole=monitoring-ui-view --group=system:authenticated
+  ```
+
+  </TabItem>
+  <TabItem value="rolebinding">
+
+  ```plain
+  kubectl create rolebinding my-binding --clusterrole=monitoring-ui-view --group=system:authenticated --namespace=my-namespace
+  ```
+
+  </TabItem>
+</Tabs>
+
+#### 使用 YAML 文件
+
+另一种方法是在你创建的 YAML 文件中定义绑定。你必须先使用 YAML 文件配置 `RoleBinding` 或 `ClusterRoleBinding`。然后，通过运行 `kubectl apply` 命令来应用配置更改。
+
+- **Role**：以下 YAML 文件示例可帮助你在 Kubernetes 中配置 `RoleBinding`。你需要在下面填写名称。
+
+:::note
+
+名称区分大小写。
+
+:::
 
 ```yaml
 # monitoring-config-view-role-binding.yaml
@@ -134,10 +179,10 @@ subjects:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-* **kubectl**：以下 `kubectl` 示例命令用于应用 YAML 文件中创建的绑定。如前所述，你需要相应地填写你的 YAML 文件名。
-
-   * `kubectl apply -f monitoring-config-view-role-binding.yaml`
-
+- **kubectl**：以下 `kubectl` 示例命令用于应用 YAML 文件中创建的绑定。请记住相应填写你的 YAML 文件名。
+   ```plain
+   kubectl apply -f monitoring-config-view-role-binding.yaml
+   ```
 
 ## 具有 Rancher 权限的用户
 
@@ -183,8 +228,6 @@ Rancher 部署的默认角色（即 cluster-owner、cluster-member、project-own
 |----------------------------| ------| ------| ----------------------------|
 | <ul><li>`secrets`</li><li>`configmaps`</li></ul> | `cattle-monitoring-system` | 是。此命名空间中的 Config 和 Secret 会影响整个监控/告警流水线。 | 用户将能够创建或编辑 Secret/ ConfigMap，例如 Alertmanager Config、Prometheus Adapter 配置、TLS 密文、其他 Grafana 数据源等。这会对所有集群监控/告警产生广泛影响。 |
 | <ul><li>`secrets`</li><li>`configmaps`</li></ul> | `cattle-dashboards` | 是。此命名空间中的 Config 和 Secret 可以创建仪表板，对在集群级别收集的所有指标进行查询。 | 用户将能够创建仅保留新 Grafana 仪表板的 Secret/ConfigMap。 |
-
-
 
 ## Grafana 的 RBAC
 

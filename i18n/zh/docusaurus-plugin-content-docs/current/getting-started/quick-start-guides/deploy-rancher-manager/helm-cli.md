@@ -92,6 +92,12 @@ notepad.exe $env:USERPROFILE\.kube\config
 
 从本地工作站运行以下命令。你需要先安装 [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl) 和 [helm](https://helm.sh/docs/intro/install/)：
 
+:::note
+
+要查看自定义 cert-manager 安装的选项（包括集群使用 PodSecurityPolicies 的情况），请参阅 [cert-manager 文档](https://artifacthub.io/packages/helm/cert-manager/cert-manager#configuration)。
+
+:::
+
 ```
 helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
 
@@ -118,6 +124,10 @@ helm install cert-manager jetstack/cert-manager `
 安装 Rancher 的最终命令如下。该命令需要一个将流量转发到 Linux 主机的域名。为了简化本教程，你可以使用假域名。`<IP_OF_LINUX_NODE>.sslip.io` 是一个假域名的例子。
 
 要安装特定的 Rancher 版本，请使用 `--version` 标志（例如，`--version 2.6.6`）。否则，默认安装最新的 Rancher。请参阅[选择 Rancher 版本](../../installation-and-upgrade/resources/choose-a-rancher-version.md)。
+
+对于 Kubernetes v1.25 或更高版本，将 `global.cattle.psp.enabled` 设置为 `false`。
+
+请注意，密码至少需要 12 个字符。
 
 ```
 helm install rancher rancher-latest/rancher \

@@ -119,6 +119,11 @@ Rancher 管理注册集群的范围取决于集群的类型。
 RKE2 或 K3s 集群注册到 Rancher 后，Rancher 会识别它。Rancher UI 将开放[所有已注册集群](#所有已注册集群的功能)的功能，以及以下用于编辑和升级集群的功能：
 
 - [升级 Kubernetes 版本](../../../getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes.md)的能力
+  :::danger
+
+  将集群导入 Rancher 后，你需要使用 Rancher 执行升级。**不**支持在 Rancher 之外升级导入的集群。
+
+  :::
 - 配置能同时升级的最大节点数
 - 查看集群的配置参数和用于启动集群中每个节点的环境变量的只读版本
 

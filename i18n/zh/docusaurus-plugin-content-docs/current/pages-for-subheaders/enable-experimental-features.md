@@ -34,6 +34,8 @@ Rancher 包含一些默认关闭的实验功能。在某些情况下，例如当
 
 使用 Helm Chart 安装 Rancher 时，使用 `--set` 选项。下面的示例通过传递功能开关名称（用逗号分隔）来启用两个功能：
 
+对于 Kubernetes v1.25 或更高版本，将 `global.cattle.psp.enabled` 设置为 `false`。
+
 ```
 helm install rancher rancher-latest/rancher \
   --namespace cattle-system \

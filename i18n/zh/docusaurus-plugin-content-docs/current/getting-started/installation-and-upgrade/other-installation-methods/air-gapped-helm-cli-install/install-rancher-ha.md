@@ -80,7 +80,6 @@ Rancher Server 默认设计为安全的，并且需要 SSL/TLS 配置。
 
 #### 选项 A：使用 Rancher 默认的自签名证书
 
-
 默认情况下，Rancher 会生成一个 CA 并使用 cert-manager 颁发证书以访问 Rancher Server 界面。
 
 :::note
@@ -112,7 +111,6 @@ v2.6.4 兼容 cert-manager 版本 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为
 helm fetch jetstack/cert-manager --version v1.11.0
 ```
 
-
 ##### 3. 检索 Cert-Manager CRD
 
 为 cert-manager 下载所需的 CRD 文件：
@@ -127,6 +125,12 @@ curl -L -o cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/re
 ##### 1. 安装 Cert-Manager
 
 使用要用于安装 Chart 的选项来安装 cert-manager。记住要设置 `image.repository` 选项，以从你的私有镜像仓库拉取镜像。此操作会创建一个包含 Kubernetes manifest 文件的 `cert-manager` 目录。
+
+:::note
+
+要查看自定义 cert-manager 安装的选项（包括集群使用 PodSecurityPolicies 的情况），请参阅 [cert-manager 文档](https://artifacthub.io/packages/helm/cert-manager/cert-manager#configuration)。
+
+:::
 
 <details id="install-cert-manager">
   <summary>单击展开</summary>
@@ -169,6 +173,8 @@ kubectl create namespace cattle-system
 
 然后安装 Rancher，并声明你选择的选项。参考下表来替换每个占位符。Rancher 需要配置为使用私有镜像仓库，以便配置所有 Rancher 启动的 Kubernetes 集群或 Rancher 工具。
 
+对于 Kubernetes v1.25 或更高版本，将 `global.cattle.psp.enabled` 设置为 `false`。
+
 | 占位符 | 描述 |
 ------------|-------------
 | `<VERSION>` | 输出压缩包的版本号。 |
@@ -197,6 +203,8 @@ kubectl create namespace cattle-system
 ##### 2. 安装 Rancher
 
 安装 Rancher，并声明你选择的选项。参考下表来替换每个占位符。Rancher 需要配置为使用私有镜像仓库，以便配置所有 Rancher 启动的 Kubernetes 集群或 Rancher 工具。
+
+对于 Kubernetes v1.25 或更高版本，将 `global.cattle.psp.enabled` 设置为 `false`。
 
 | 占位符 | 描述 |
 | -------------------------------- | ----------------------------------------------- |

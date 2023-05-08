@@ -34,7 +34,7 @@ description: 阅读此分步 Rancher GCP 指南，以快速部署带有单节点
 
 4. 编辑 `terraform.tfvars` 文件，并替换以下变量：
    - `gcp_account_json` - 替换为 GCP ServiceAccount 文件路径和文件名。
-   - `rancher_server_admin_password` - 替换为创建 Rancher Server 的 admin 账号的密码
+   - `rancher_server_admin_password` - 替换为创建 Rancher Server 的 admin 账号的密码（最少 12 字符）
 
 5. **可选**：修改 `terraform.tfvars` 中的可选参数。
    参见 [Quickstart Readme](https://github.com/rancher/quickstart) 以及 [GCP Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/gcp) 了解更多信息。

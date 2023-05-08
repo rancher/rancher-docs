@@ -40,6 +40,8 @@ Rancher 可以运行在任何 Kubernetes 集群上，包括托管的 Kubernetes�
 
 RKE 需要通过 SSH 连接到每个节点，它会在 `~/.ssh/id_rsa`的默认位置查找私钥。如果某个节点的私钥不在默认位置中，你还需要为该节点配置 `ssh_key_path` 选项。
 
+在选择 Kubernetes 版本时，请务必先查阅[支持矩阵](https://rancher.com/support-matrix/)，以找出已针对你的 Rancher 版本验证的最新 Kubernetes 版本。
+
 ```yaml
 nodes:
   - address: 165.227.114.63
@@ -67,6 +69,8 @@ ingress:
   provider: nginx
   options:
     use-forwarded-headers: "true"
+
+kubernetes_version: v1.25.6-rancher4-1
 ```
 
 <figcaption>通用 RKE 节点选项</figcaption>

@@ -335,10 +335,6 @@
     "message": "CIS 扫描",
     "description": "The label for category CIS Scans in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Fleet - GitOps at Scale": {
-    "message": "Fleet - 大规模的 GitOps",
-    "description": "The label for category Fleet - GitOps at Scale in sidebar tutorialSidebar"
-  },
   "sidebar.tutorialSidebar.category.Istio": {
     "message": "Istio",
     "description": "The label for category Istio in sidebar tutorialSidebar"
@@ -374,5 +370,9 @@
   "sidebar.tutorialSidebar.category.Other Troubleshooting Tips": {
     "message": "其他故障排除提示",
     "description": "The label for category Other Troubleshooting Tips in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Continuous Delivery with Fleet": {
+    "message": "使用 Feet 进行持续交付",
+    "description": "The label for category Continuous Delivery with Fleet in sidebar tutorialSidebar"
   }
 }

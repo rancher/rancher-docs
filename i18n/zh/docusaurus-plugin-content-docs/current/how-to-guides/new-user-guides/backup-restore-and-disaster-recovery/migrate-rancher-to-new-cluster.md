@@ -158,6 +158,8 @@ Kubernetes v1.22 是 Rancher 2.6.3 的实验功能，不支持使用 apiVersion 
 
 使用与第一个集群上使用的相同版本的 Helm 来安装 Rancher：
 
+对于 Kubernetes v1.25 或更高版本，将 `global.cattle.psp.enabled` 设置为 `false`。
+
 ```bash
 helm install rancher rancher-latest/rancher \
   --namespace cattle-system \

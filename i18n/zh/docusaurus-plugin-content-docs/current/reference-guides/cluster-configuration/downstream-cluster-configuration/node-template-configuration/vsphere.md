@@ -83,3 +83,13 @@ title: vSphere 节点模板配置
 要使用 cloud-init 初始化，请使用有效的 YAML 语法创建一个 cloud config 文件，并将文件内容粘贴到 **Cloud Init** 字段中。要获取支持的 cloud config 指令的注释示例集，请参阅 [cloud-init 文档](https://cloudinit.readthedocs.io/en/latest/topics/examples.html)。
 
 请注意，使用 ISO 创建方法时不支持 cloud-init。
+
+## 引擎选项
+
+在节点模板的**引擎选项**中，你可以配置容器 daemon。你可能需要指定容器版本或容器镜像仓库 Mirror。
+
+:::note
+如果要配置 Red Hat Enterprise Linux (RHEL) 或 CentOS 节点，请将 **Docker Install URL** 字段保留为默认值，或选择 **none**。由于 Docker 已经安装在这些节点上，因此将绕过 Docker 安装检查。
+
+如果没有将 **Docker Install URL** 设置为默认值或 **none**，你可能会看到错误消息：`Error creating machine: RHEL ssh command error: command: sudo -E yum install -y curl err: exit status 1 output: Updating Subscription Management repositories`。
+:::

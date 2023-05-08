@@ -112,10 +112,56 @@ Monitoring 还会创建其他 `ClusterRole`，这些角色默认情况下不会�
 
 ### 使用 kubectl 分配 Role 和 ClusterRole
 
-使用 Rancher 将 `Role` 或 `ClusterRole` 附加到用户或组的另一种方法，是在你创建的 YAML 文件中定义绑定。你必须首先使用 YAML 文件配置 `RoleBinding`，然后运行 `kubectl apply` 命令来应用配置更改。
+#### 使用 `kubectl create`
 
+一种方法是使用 `kubectl create clusterrolebinding` 或 `kubectl create rolebinding` 来分配一个 `Role` 或 `ClusterRole`。如以下示例所示：
 
-* **Role**：以下 YAML 文件示例可帮助你在 Kubernetes 中配置 `RoleBinding`。你需要填写下方的 `name`（区分大小写）：
+- 分配给特定用户：
+<Tabs groupId="role-type">
+  <TabItem value="clusterrolebinding">
+
+  ```plain
+  kubectl create clusterrolebinding my-binding --clusterrole=monitoring-ui-view --user=u-l4npx
+  ```
+
+  </TabItem>
+  <TabItem value="rolebinding">
+
+  ```plain
+  kubectl create rolebinding my-binding --clusterrole=monitoring-ui-view --user=u-l4npx --namespace=my-namespace
+  ```
+
+  </TabItem>
+</Tabs>
+- 分配给所有经过身份认证的用户：
+<Tabs groupId="role-type">
+  <TabItem value="clusterrolebinding">
+
+  ```plain
+  kubectl create clusterrolebinding my-binding --clusterrole=monitoring-ui-view --group=system:authenticated
+  ```
+
+  </TabItem>
+  <TabItem value="rolebinding">
+
+  ```plain
+  kubectl create rolebinding my-binding --clusterrole=monitoring-ui-view --group=system:authenticated --namespace=my-namespace
+  ```
+
+  </TabItem>
+</Tabs>
+
+#### 使用 YAML 文件
+
+另一种方法是在你创建的 YAML 文件中定义绑定。你必须先使用 YAML 文件配置 `RoleBinding` 或 `ClusterRoleBinding`。然后，通过运行 `kubectl apply` 命令来应用配置更改。
+
+- **Role**：以下 YAML 文件示例可帮助你在 Kubernetes 中配置 `RoleBinding`。你需要在下面填写名称。
+
+:::note
+
+名称区分大小写。
+
+:::
 
 ```yaml
 # monitoring-config-view-role-binding.yaml
@@ -134,10 +180,10 @@ subjects:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-* **kubectl**：以下 `kubectl` 示例命令用于应用 YAML 文件中创建的绑定。如前所述，你需要相应地填写你的 YAML 文件名。
-
-   * `kubectl apply -f monitoring-config-view-role-binding.yaml`
-
+- **kubectl**：以下 `kubectl` 示例命令用于应用 YAML 文件中创建的绑定。请记住相应填写你的 YAML 文件名。
+   ```plain
+   kubectl apply -f monitoring-config-view-role-binding.yaml
+   ```
 
 ## 具有 Rancher 权限的用户
 
