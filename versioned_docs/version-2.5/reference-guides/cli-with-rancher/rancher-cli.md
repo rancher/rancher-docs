@@ -9,10 +9,6 @@ The Rancher CLI (Command Line Interface) is a unified tool that you can use to i
 
 The binary can be downloaded directly from the UI. The link can be found in the right hand side of the footer in the UI. We have binaries for Windows, Mac, and Linux. You can also check the [releases page for our CLI](https://github.com/rancher/cli/releases) for direct downloads of the binary.
 
-1. In the upper left corner, click **☰**.
-1. At the bottom, click **v2.5.x**, where **v2.5.x** is a hyperlinked text indicating the installed Rancher version.
-1. Under the **CLI Downloads section**, there are links to download the binaries for Windows, Mac, and Linux. You can also check the [releases page for our CLI](https://github.com/rancher/cli/releases) for direct downloads of the binary.
-
 ### Requirements
 
 After you download the Rancher CLI, you need to make a few configurations. Rancher CLI requires:
