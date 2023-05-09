@@ -137,7 +137,9 @@ If you are upgrading cert-manager to the latest version from v1.5 or below, foll
 
 Upgrade Rancher to the latest version with all your settings.
 
-Take all the values from the previous step and append them to the command using `--set key=value`:
+Take all the values from the previous step and append them to the command using `--set key=value`.
+
+For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false`.
 
 ```
 helm upgrade rancher rancher-<CHART_REPO>/rancher \
@@ -153,14 +155,20 @@ The above is an example, there may be more values from the previous step that ne
 
 Alternatively, it's possible to export the current values to a file and reference that file during upgrade. For example, to only change the Rancher version:
 
-```
-helm get values rancher -n cattle-system -o yaml > values.yaml
+1. Export the current values to a file:
+  ```
+  helm get values rancher -n cattle-system -o yaml > values.yaml
+  ```
+1. Update only the Rancher version:
 
-helm upgrade rancher rancher-<CHART_REPO>/rancher \
-  --namespace cattle-system \
-  -f values.yaml \
-  --version=2.6.8
-```
+  For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false`.
+
+  ```
+  helm upgrade rancher rancher-<CHART_REPO>/rancher \
+    --namespace cattle-system \
+    -f values.yaml \
+    --version=2.6.8
+  ```
 
 ### 4. Verify the Upgrade
 
