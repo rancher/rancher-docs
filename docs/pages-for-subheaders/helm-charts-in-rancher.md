@@ -157,5 +157,3 @@ If you have a legacy app installed and want to upgrade it:
 ### Limitations
 
 [Dashboard apps or Rancher feature charts](helm-charts-in-rancher.md) **cannot** be installed using the Rancher CLI.
-
-a

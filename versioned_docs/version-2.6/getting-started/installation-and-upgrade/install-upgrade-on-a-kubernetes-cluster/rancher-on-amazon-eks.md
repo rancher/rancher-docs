@@ -127,7 +127,7 @@ helm repo update
 helm search repo ingress-nginx -l
 ```
 
-The `helm search` command's output contains an `APP VERSION` column. The versions under this column are equivalent to the `Ingress-NGINX version` you chose earlier. Using the app version, select a chart version that bundles an app compatible with your Kubernetes install. For example, if you have Kuberntes v1.23, you can select the v4.5.2 Helm chart, since Ingress-NGINX v1.6.4 comes bundled with that chart, and v1.6.4 is compatible with Kubernetes v1.23. When in doubt, select the most recent compatible version.
+The `helm search` command's output contains an `APP VERSION` column. The versions under this column are equivalent to the `Ingress-NGINX version` you chose earlier. Using the app version, select a chart version that bundles an app compatible with your Kubernetes install. For example, if you have Kubernetes v1.23, you can select the v4.5.2 Helm chart, since Ingress-NGINX v1.6.4 comes bundled with that chart, and v1.6.4 is compatible with Kubernetes v1.23. When in doubt, select the most recent compatible version.
 
 Now that you know which Helm chart `version` you need, run the following command. It installs an `nginx-ingress-controller` with a Kubernetes load balancer service:
 

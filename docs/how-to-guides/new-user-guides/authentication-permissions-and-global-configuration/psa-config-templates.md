@@ -79,7 +79,7 @@ If you want to allow other users to manage templates, you can bind that user to 
 Any user that is bound to the above permission will be able to change the restriction levels on _all_ managed clusters which use a given PSA template, including ones that they have no permissions on.
 :::
 
-## Required Rancher Namespaces
+## Exempting Required Rancher Namespaces
 
 When you run Rancher on a Kubernetes cluster that enforces a restrictive security policy by default, you'll need to [exempt the following namespaces](#exempting-namespaces), otherwise the policy might prevent Rancher system pods from  running properly.
 
