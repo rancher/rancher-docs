@@ -185,3 +185,13 @@ To add a resource quota,
 | ----------------------- | -------------------------------------------------------------------------------------------------------- |
 | Project Limit           | The overall resource limit for the project.                                                              |
 | Namespace Default Limit | The default resource limit available for each namespace. This limit is propagated to each namespace in the project when created. The combined limit of all project namespaces shouldn't exceed the project limit.  |
+
+## Deleting Projects
+
+1. In the upper left corner, click **☰ > Cluster Management**.
+1. On the **Clusters** page, go to the cluster the project is attached to, and click **Explore**.
+1. Click **Cluster > Projects/Namespaces**.
+1. Find the project you want to delete, and click **⋮**. 
+1. Select **Delete**.
+
+When you delete a project, any namespaces that were formerly associated with the project will remain on the cluster. You can find these namespaces in the Rancher UI, in the **Not in a Project** tab of the **Projects/Namespaces** page. You can reassign these namespaces to a project by [moving](../manage-namespaces.md#moving-namespaces-to-another-project) them.
