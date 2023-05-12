@@ -33,7 +33,7 @@ description: 阅读此分步 Rancher DigitalOcean 指南，以快速部署带有
 
 4. 编辑 `terraform.tfvars` 文件，并替换以下变量：
    - `do_token` - 替换为 DigitalOcean 访问密钥
-   - `rancher_server_admin_password` - 替换为创建 Rancher Server 的 admin 账号的密码
+   - `rancher_server_admin_password` - 替换为创建 Rancher Server 的 admin 账号的密码（最少 12 字符）
 
 5. **可选**：修改 `terraform.tfvars` 中的可选参数。
    参见 [Quickstart Readme](https://github.com/rancher/quickstart) 以及 [DO Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/do) 了解更多信息。建议包括：

@@ -39,7 +39,7 @@ description: 阅读此分步 Rancher Azure 指南，以快速部署带有单节�
    - `azure_client_id` - 替换为 Microsoft Azure 客户端 ID。
    - `azure_client_secret` - 替换为 Microsoft Azure 客户端密文。
    - `azure_tenant_id` - 替换为 Microsoft Azure 租户 ID。
-   - `rancher_server_admin_password` - 替换为创建 Rancher Server 的 admin 账号的密码
+   - `rancher_server_admin_password` - 替换为创建 Rancher Server 的 admin 账号的密码（最少 12 字符）
 
 5. **可选**：修改 `terraform.tfvars` 中的可选参数。
    参见 [Quickstart Readme](https://github.com/rancher/quickstart) 以及 [Azure Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/azure) 了解更多信息。建议包括：

@@ -38,6 +38,12 @@ kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/
 
 使用 Helm 安装 cert-manager。请注意，cert-manager 还需要你配置代理，以防它需要与 Let's Encrypt 或其他外部证书颁发商进行通信：
 
+:::note
+
+要查看自定义 cert-manager 安装的选项（包括集群使用 PodSecurityPolicies 的情况），请参阅 [cert-manager 文档](https://artifacthub.io/packages/helm/cert-manager/cert-manager#configuration)。
+
+:::
+
 ```
 helm upgrade --install cert-manager jetstack/cert-manager \
   --namespace cert-manager --version v1.11.0 \

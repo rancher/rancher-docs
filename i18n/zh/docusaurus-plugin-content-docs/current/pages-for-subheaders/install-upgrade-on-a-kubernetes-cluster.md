@@ -143,6 +143,12 @@ v2.6.4 兼容 cert-manager 版本 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为
 
 这些说明来自 [cert-manager 官方文档](https://cert-manager.io/docs/installation/kubernetes/#installing-with-helm)。
 
+:::note
+
+要查看自定义 cert-manager 安装的选项（包括集群使用 PodSecurityPolicies 的情况），请参阅 [cert-manager 文档](https://artifacthub.io/packages/helm/cert-manager/cert-manager#configuration)。
+
+:::
+
 ```
 # 如果你手动安装了CRD，而不是在 Helm 安装命令中添加了 `--set installCRDs=true` 选项，你应该在升级 Helm Chart 之前升级 CRD 资源。
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
@@ -194,7 +200,8 @@ cert-manager-webhook-787858fcdb-nlzsq      1/1     Running   0          2m
 
 - 将 `hostname` 设置为解析到你的负载均衡器的 DNS 名称。
 - 将 `bootstrapPassword` 设置为 `admin` 用户独有的值。
-- 如果你需要安装指定的 Rancher 版本，使用 `--version` 标志，例如 `--version 2.3.6`。
+- 如果你需要安装指定的 Rancher 版本，使用 `--version` 标志，例如 `--version 2.7.0`。
+- 对于 Kubernetes v1.25 或更高版本，将 `global.cattle.psp.enabled` 设置为 `false`。
 
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \
@@ -235,6 +242,7 @@ deployment "rancher" successfully rolled out
 - 将 `ingress.tls.source` 设置为 `letsEncrypt`。
 - 将 `letsEncrypt.email` 设置为可通讯的电子邮件地址，用于发送通知（例如证书到期的通知）。
 - 将 `letsEncrypt.ingress.class` 设为你的 Ingress Controller（例如 `traefik`，`nginx`，`haproxy`）
+- 对于 Kubernetes v1.25 或更高版本，将 `global.cattle.psp.enabled` 设置为 `false`。
 
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \
@@ -277,6 +285,7 @@ deployment "rancher" successfully rolled out
 - 设置 `hostname`。
 - 将 `bootstrapPassword` 设置为 `admin` 用户独有的值。
 - 将 `ingress.tls.source` 设置为 `secret`。
+- 对于 Kubernetes v1.25 或更高版本，将 `global.cattle.psp.enabled` 设置为 `false`。
 
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \

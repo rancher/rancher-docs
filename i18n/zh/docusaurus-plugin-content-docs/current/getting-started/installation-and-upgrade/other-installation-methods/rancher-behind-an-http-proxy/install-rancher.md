@@ -30,17 +30,17 @@ kubectl create namespace cert-manager
 
 安装 cert-manager 的 CustomResourceDefinitions：
 
-:::note
-
-v2.6.4 兼容 cert-manager 版本 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为 v 1.6.x 将在 2022 年 3 月 30 日结束生命周期。
-
-:::
-
 ```
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
 ```
 
 使用 Helm 安装 cert-manager。请注意，cert-manager 还需要你配置代理，以防它需要与 Let's Encrypt 或其他外部证书颁发商进行通信：
+
+:::note
+
+要查看自定义 cert-manager 安装的选项（包括集群使用 PodSecurityPolicies 的情况），请参阅 [cert-manager 文档](https://artifacthub.io/packages/helm/cert-manager/cert-manager#configuration)。
+
+:::
 
 ```
 helm upgrade --install cert-manager jetstack/cert-manager \

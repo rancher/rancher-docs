@@ -89,12 +89,18 @@ kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{
 
 ### 额外设置环境变量
 
-你可以使用 `extraEnv` 为 Rancher Server 额外设置环境变量。该列表使用与容器清单定义相同的 `name` 和 `value` 键。记住需要给值加上引号。
+你可以使用 `extraEnv` 为 Rancher Server 额外设置环境变量。该列表以 YAML 格式传递给 Rancher 部署，它嵌入在 Rancher 容器的 `env` 下。你可以参考 Kubernetes 文档设置容器环境变量。`extraEnv` 可以使用 [Define Environment Variables for a Container](https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/#define-an-environment-variable-for-a-container) 中引用的任何键。
+
+使用 `name` 和 `value` 键的示例：
 
 ```plain
 --set 'extraEnv[0].name=CATTLE_TLS_MIN_VERSION'
 --set 'extraEnv[0].value=1.0'
 ```
+
+如果将敏感数据（例如代理认证凭证）作为环境变量的值传递，则强烈建议使用 Secret 引用。这将防止敏感数据在 Helm 或 Rancher 部署中暴露。
+
+你可以参考使用 `name`、`valueFrom.secretKeyRef.name` 和 `valueFrom.secretKeyRef.key` 键的示例。详见 [HTTP 代理](#http-代理)中的示例。
 
 ### TLS 设置
 
@@ -122,7 +128,7 @@ kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{
 
 ### 自定义 Ingress
 
-要自定义或使用 Rancher Server 的其他 Ingress，你可以设置自己的 Ingress annotations。
+要自定义或使用 Rancher Server 的其他 Ingress，你可以设置自己的 Ingress 注释。
 
 设置自定义证书颁发者的示例：
 
@@ -130,7 +136,7 @@ kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{
 --set ingress.extraAnnotations.'cert-manager\.io/cluster-issuer'=issuer-name
 ```
 
-以下是使用 `ingress.configurationSnippet`设置静态代理头的实例。该值像模板一样进行解析，因此可以使用变量。
+以下是使用 `ingress.configurationSnippet`设置静态代理标头的示例。该值像模板一样进行解析，因此可以使用变量。
 
 ```plain
 --set ingress.configurationSnippet='more_set_input_headers X-Forwarded-Host {{ .Values.hostname }};'
@@ -138,14 +144,43 @@ kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{
 
 ### HTTP 代理
 
-Rancher 的一些功能（Helm Chart）需要使用互联网才能使用。使用 `proxy` 来设置你的代理服务器。
+Rancher 的一些功能（Helm Chart）需要使用互联网才能使用。你可以使用 `proxy` 设置代理服务器，或使用 `extraEnv` 设置 `HTTPS_PROXY` 环境变量来指向代理服务器。
 
-在 `noProxy` 列表中添加例外的 IP。确保你已添加了 Pod 集群 IP 范围（默认：`10.42.0.0/16`），服务集群 IP 范围（默认：`10.43.0.0/16`），内部集群域名（默认：`.svc,.cluster.local`）和所有 worker 集群 `controlplane` 节点。Rancher 支持在此列表中使用 CIDR 表示法范围。
+将要排除的 IP 使用逗号分隔列表添加到 `noProxy` Chart value 中。确保添加了以下值：
+- Pod 集群 IP 范围（默认值：`10.42.0.0/16`）。
+- Service Cluster IP 范围（默认值：`10.43.0.0/16`）。
+- 内部集群域（默认值：`.svc,.cluster.local`）。
+- 任何 Worker 集群 `controlplane` 节点。
+   Rancher 支持在此列表中使用 CIDR 表示法来表示范围。
+
+不包括敏感数据时，可以使用 `proxy` 或 `extraEnv` Chart 选项。使用 `extraEnv` 时将忽略 `noProxy` Helm 选项。因此，`NO_PROXY` 环境变量也必须设置为 `extraEnv`。
+
+以下是使用 `extraEnv` Chart 选项设置代理的示例：
 
 ```plain
---set proxy="http://<username>:<password>@<proxy_url>:<proxy_port>/"
---set noProxy="127.0.0.0/8\,10.0.0.0/8\,172.16.0.0/12\,192.168.0.0/16\,.svc\,.cluster.local"
+--set proxy="http://<proxy_url:proxy_port>/"
 ```
+
+使用 `extraEnv` Chart 选项设置代理的示例：
+```plain
+--set extraEnv[1].name=HTTPS_PROXY
+--set extraEnv[1].value="http://<proxy_url>:<proxy_port>/"
+--set extraEnv[2].name=NO_PROXY
+--set extraEnv[2].value="127.0.0.0/8\,10.0.0.0/8\,172.16.0.0/12\,192.168.0.0/16\,.svc\,.cluster.local"
+```
+
+包含敏感数据（例如代理认证凭证）时，请使用 `extraEnv` 选项和 `valueFrom.secretRef` 来防止敏感数据在 Helm 或 Rancher 部署中暴露。
+
+下面是使用 `extraEnv` 配置代理的示例。此示例 Secret 在 Secret 的 `"https-proxy-url"` 键中包含 `"http://<username>:<password>@<proxy_url>:<proxy_port>/"` 值：
+```plain
+--set extraEnv[1].name=HTTPS_PROXY
+--set extraEnv[1].valueFrom.secretKeyRef.name=secret-name
+--set extraEnv[1].valueFrom.secretKeyRef.key=https-proxy-url
+--set extraEnv[2].name=NO_PROXY
+--set extraEnv[2].value="127.0.0.0/8\,10.0.0.0/8\,172.16.0.0/12\,192.168.0.0/16\,.svc\,.cluster.local"
+```
+
+有关如何配置环境变量的更多信息，请参阅[为容器定义环境变量](https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/#define-an-environment-variable-for-a-container)。
 
 ### 额外的授信 CA
 

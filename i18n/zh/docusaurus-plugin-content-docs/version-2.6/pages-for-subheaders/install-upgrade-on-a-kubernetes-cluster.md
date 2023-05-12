@@ -142,6 +142,12 @@ v2.6.4 兼容 cert-manager 版本 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为
 
 这些说明来自 [cert-manager 官方文档](https://cert-manager.io/docs/installation/kubernetes/#installing-with-helm)。
 
+:::note
+
+要查看自定义 cert-manager 安装的选项（包括集群使用 PodSecurityPolicies 的情况），请参阅 [cert-manager 文档](https://artifacthub.io/packages/helm/cert-manager/cert-manager#configuration)。
+
+:::
+
 ```
 # 如果你手动安装了CRD，而不是在 Helm 安装命令中添加了 `--set installCRDs=true` 选项，你应该在升级 Helm Chart 之前升级 CRD 资源。
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml

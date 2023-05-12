@@ -137,7 +137,9 @@ hostname: rancher.my.org
 
 保留你的所有设置把 Rancher 升级到最新版本。
 
-将上一步中的所有值用 `--set key=value`追加到命令中。
+将上一步中的所有值用 `--set key=value` 追加到命令中。
+
+对于 Kubernetes v1.25 或更高版本，将 `global.cattle.psp.enabled` 设置为 `false`。
 
 ```
 helm upgrade rancher rancher-<CHART_REPO>/rancher \
@@ -153,14 +155,20 @@ helm upgrade rancher rancher-<CHART_REPO>/rancher \
 
 另外，你也可以将当前的值导出到一个文件中，并在升级时引用该文件。例如，如果你只需要改变 Rancher 的版本：
 
-```
-helm get values rancher -n cattle-system -o yaml > values.yaml
+1. 将当前值导出到文件：
+  ```
+  helm get values rancher -n cattle-system -o yaml > values.yaml
+  ```
+1. 只更新 Rancher 版本：
 
-helm upgrade rancher rancher-<CHART_REPO>/rancher \
-  --namespace cattle-system \
-  -f values.yaml \
-  --version=2.6.8
-```
+  对于 Kubernetes v1.25 或更高版本，将 `global.cattle.psp.enabled` 设置为 `false`。
+
+  ```
+  helm upgrade rancher rancher-<CHART_REPO>/rancher \
+    --namespace cattle-system \
+    -f values.yaml \
+    --version=2.6.8
+  ```
 
 ### 4. 验证升级
 

@@ -13,8 +13,7 @@ CIS（Center for Internet Security）是一个 501(c\)(3) 非营利组织，成�
 
 CIS Benchmark 是目标系统安全配置的最佳实践。CIS Benchmark 是由安全专家、技术供应商、公开和私人社区成员，以及 CIS Benchmark 开发团队共同志愿开发的。
 
-你可以访问 CIS 网站获取官方的 Benchmark 文件。要通过注册来访问文件，请前往
-<a href="https://learn.cisecurity.org/benchmarks" target="_blank">这里</a>。
+在 CIS 网站上[注册](https://learn.cisecurity.org/benchmarks)以查看官方 Benchmark 文档。
 
 ## 关于生成的报告
 
@@ -31,7 +30,7 @@ Benchmark 提供两种类型的建议，分别是自动（Automated）和手动�
 该报告包含以下信息：
 
 | 报告中的列 | 描述 |
-|------------------|-------------|
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `id` | CIS Benchmark 的 ID 号。 |
 | `description` | CIS Benchmark 测试的描述。 |
 | `remediation` | 为了通过测试需要修复的内容。 |
@@ -51,16 +50,27 @@ Benchmark 提供两种类型的建议，分别是自动（Automated）和手动�
 
 以下是可用的配置文件：
 
-- Generic CIS 1.5
 - Generic CIS 1.6
-- RKE permissive 1.5
-- RKE hardened 1.5
+- Generic CIS 1.20
+- Generic CIS 1.23
 - RKE permissive 1.6
 - RKE hardened 1.6
-- RKE2 permissive 1.5
-- RKE2 hardened 1.5
+- RKE permissive 1.20
+- RKE hardened 1.20
+- RKE permissive 1.23
+- RKE hardened 1.23
 - RKE2 permissive 1.6
 - RKE2 hardened 1.6
+- RKE2 permissive 1.20
+- RKE2 hardened 1.20
+- RKE2 permissive 1.23
+- RKE2 hardened 1.23
+- K3s permissive 1.6
+- K3s hardened 1.6
+- K3s permissive 1.20
+- K3s hardened 1.20
+- K3s permissive 1.23
+- K3s hardened 1.23
 - AKS
 - EKS
 - GKE
@@ -105,4 +115,4 @@ EKS 和 GKE 集群扫描的配置文件基于这些集群类型特定的 CIS Ben
 
 ## 操作指南
 
-请参阅[此处](../pages-for-subheaders/cis-scan-guides.md)了解 CIS 扫描的操作指南。
+要了解如何运行 CIS 扫描，请参阅 [CIS 扫描指南](../pages-for-subheaders/cis-scan-guides.md)。

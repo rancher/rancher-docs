@@ -1,8 +1,8 @@
 ---
-title: Fleet - 大规模的 GitOps
+title: 使用 Feet 进行持续交付
 ---
 
-Fleet 是大规模的 GitOps。你可以使用 Fleet 管理多达一百万个集群。此外，它非常轻量，因此也非常适用于[单个集群](https://fleet.rancher.io/single-cluster-install/)。但是，它在[大规模](https://fleet.rancher.io/multi-cluster-install/)场景下的功能更加强大。大规模指的是大量集群、大量部署或大量团队。
+使用 Fleet 的持续交付是大规模的 GitOps。你可以使用 Fleet 管理多达一百万个集群。此外，它非常轻量，因此也非常适用于[单个集群](https://fleet.rancher.io/single-cluster-install/)。但是，它在[大规模](https://fleet.rancher.io/multi-cluster-install/)场景下的功能更加强大。大规模指的是大量集群、大量部署或大量团队。
 
 Fleet 是一个独立于 Rancher 的项目，你可以使用 Helm 将它安装在任何 Kubernetes 集群上。
 

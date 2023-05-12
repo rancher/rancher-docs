@@ -80,14 +80,7 @@ Rancher Server 默认设计为安全的，并且需要 SSL/TLS 配置。
 
 #### 选项 A：使用 Rancher 默认的自签名证书
 
-
 默认情况下，Rancher 会生成一个 CA 并使用 cert-manager 颁发证书以访问 Rancher Server 界面。
-
-:::note
-
-由于 cert-manager 的最新改动，你需要升级 cert-manager 版本。如果你需要升级 Rancher 并使用低于 0.11.0 的 cert-manager 版本，请参见 [cert-manager 升级文档](../../resources/upgrade-cert-manager.md)。
-
-:::
 
 ##### 1. 添加 cert-manager 仓库
 
@@ -101,12 +94,6 @@ helm repo update
 ##### 2. 获取 cert-manager Chart
 
 从 [Helm Chart 仓库](https://artifacthub.io/packages/helm/cert-manager/cert-manager)中获取最新可用的 cert-manager Chart：
-
-:::note
-
-v2.6.4 兼容 cert-manager 版本 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为 v 1.6.x 将在 2022 年 3 月 30 日结束生命周期。
-
-:::
 
 ```plain
 helm fetch jetstack/cert-manager --version v1.11.0
@@ -127,6 +114,12 @@ curl -L -o cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/re
 ##### 1. 安装 Cert-Manager
 
 使用要用于安装 Chart 的选项来安装 cert-manager。记住要设置 `image.repository` 选项，以从你的私有镜像仓库拉取镜像。此操作会创建一个包含 Kubernetes manifest 文件的 `cert-manager` 目录。
+
+:::note
+
+要查看自定义 cert-manager 安装的选项（包括集群使用 PodSecurityPolicies 的情况），请参阅 [cert-manager 文档](https://artifacthub.io/packages/helm/cert-manager/cert-manager#configuration)。
+
+:::
 
 <details id="install-cert-manager">
   <summary>单击展开</summary>

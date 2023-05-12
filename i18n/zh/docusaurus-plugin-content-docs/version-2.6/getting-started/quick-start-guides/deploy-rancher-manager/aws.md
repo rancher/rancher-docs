@@ -52,7 +52,7 @@ AWS 模块只创建一个 EC2 密钥对、一个 EC2 安全组和一个 EC2 实�
 
    - `aws_access_key` - 替换为 Amazon AWS 访问密钥
    - `aws_secret_key` - 替换为 Amazon AWS Secret 密钥
-   - `rancher_server_admin_password` - 替换为创建 Rancher Server 的 admin 账号的密码
+   - `rancher_server_admin_password` - 替换为创建 Rancher Server 的 admin 账号的密码（最少 12 字符）
 
 5. **可选**：修改 `terraform.tfvars` 中的可选参数。参见 [Quickstart Readme](https://github.com/rancher/quickstart) 以及 [AWS Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/aws) 了解更多信息。
    建议包括：

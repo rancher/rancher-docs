@@ -79,7 +79,7 @@ aws configure
 
 运行以下命令创建一个 EKS 集群。使用适用于你的用例的 AWS 区域。在选择 Kubernetes 版本时，请务必先查阅[支持矩阵](https://rancher.com/support-matrix/)，以找出已针对你的 Rancher 版本验证的最新 Kubernetes 版本。
 
-**注意**：如果 Kubernetes 的版本更新到 v1.22 或更高版本，则 ingress-nginx 的版本也需要[更新](https://kubernetes.github.io/ingress-nginx/user-guide/k8s-122-migration/)。
+**注意**：如果你要从旧的 Kubernetes 版本更新到 Kubernetes v1.22 或更高版本，你还需要[更新](https://kubernetes.github.io/ingress-nginx/user-guide/k8s-122-migration/) ingress-nginx。
 
 ```
 eksctl create cluster \
@@ -117,16 +117,26 @@ rancher-server-cluster		us-west-2	True
 
 集群需要一个 Ingress，以从集群外部访问 Rancher。
 
-以下命令安装了一个 `nginx-ingress-controller`和一个 LoadBalancer 服务。因此，NGINX 前面会有一个 ELB（Elastic Load Balancer）：
+为确保你选择了正确的 Ingress-NGINX Helm Chart，首先在 [Kubernetes/ingress-nginx 支持表](https://github.com/kubernetes/ingress-nginx#supported-versions-table)中找到与你的 Kubernetes 版本兼容的 `Ingress-NGINX 版本`。
+
+然后，运行以下命令列出可用的 Helm Chart：
 
 ```
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm repo update
+helm search repo ingress-nginx -l
+```
+
+`helm search` 命令的输出包含一个 `APP VERSION` 列。此列下的版本等同于你之前选择的 `Ingress-NGINX 版本`。使用应用程序版本，选择一个 Chart 版本，该版本打包了与你的 Kubernetes 兼容的应用程序。例如，如果使用的是 Kubernetes v1.23，则可以选择 v4.6.0 Helm Chart，因为 Ingress-NGINX v1.7.0 与该 Chart 打包在一起，而 v1.7.0 与 Kubernetes v1.23 兼容。如有疑问，请选择最新的兼容版本。
+
+了解你需要的 Helm chart `版本`后，运行以下命令。它安装一个带有 Kubernetes 负载均衡器服务的 `nginx-ingress-controller`：
+
+```
 helm upgrade --install \
   ingress-nginx ingress-nginx/ingress-nginx \
   --namespace ingress-nginx \
   --set controller.service.type=LoadBalancer \
-  --version 4.0.18 \
+  --version 4.6.0 \
   --create-namespace
 ```
 
