@@ -16,7 +16,7 @@
           "items": [
             {
               "type": "category",
-              "label": "Deploy Rancher Manager",
+              "label": "Deploy Rancher",
               "link": {
                 "type": "doc",
                 "id": "pages-for-subheaders/deploy-rancher-manager"
@@ -807,7 +807,7 @@
         },
         {
           "type": "category",
-          "label": "Rancher Manager Architecture",
+          "label": "Rancher Architecture",
           "link": {
             "type": "doc",
             "id": "pages-for-subheaders/rancher-manager-architecture"
