@@ -3,7 +3,7 @@ title: Rancher Helm Chart Options
 ---
 
 <head>
-    <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-references/helm-chart-options"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-references/helm-chart-options"/>
 </head>
 
 This page is a configuration reference for the Rancher Helm chart.
