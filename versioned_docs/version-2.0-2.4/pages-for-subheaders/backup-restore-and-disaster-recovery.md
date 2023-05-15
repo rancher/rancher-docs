@@ -1,5 +1,6 @@
 ---
 title: Backups and Disaster Recovery
+keywords: [rancher v2.0-v2.4 backup restore, rancher v2.0-v2.4 backup and restore, backup restore rancher v2.0-v2.4, backup and restore rancher v2.0-v2.4]
 ---
 
 This section is devoted to protecting your data in a disaster scenario.
