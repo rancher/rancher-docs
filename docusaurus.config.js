@@ -1,7 +1,7 @@
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Rancher Manager',
+  title: 'Rancher',
   tagline: '',
   url: 'http://ranchermanager.docs.rancher.com/',
   baseUrl: '/',

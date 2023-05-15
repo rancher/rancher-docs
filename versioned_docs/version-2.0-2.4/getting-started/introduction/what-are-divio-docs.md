@@ -2,17 +2,17 @@
 title: What Are Divio Docs?
 ---
 
-The [Divio documentation system](https://documentation.divio.com/) is a software documentation paradigm that is based on functionality and the premise that the best documentation is specific, concise, and purposeful. Divio traditionally consists of four main categories: tutorials, how-to guides, reference guides, and explanations. 
+The [Divio documentation system](https://documentation.divio.com/) is a software documentation paradigm that is based on functionality and the premise that the best documentation is specific, concise, and purposeful. Divio traditionally consists of four main categories: tutorials, how-to guides, reference guides, and explanations.
 
-In our docs, we have used this guideline to craft a unique set of docs which include [getting started](../../getting-started.md), [how-to guides](../../how-to-guides.md) (including [new](../../pages-for-subheaders/new-user-guides.md) and [advanced user guides](../../pages-for-subheaders/advanced-user-guides.md)), [reference guides](../../reference-guides.md), [explanations](../../explanations.md), an [FAQ section](../../faq.md), [troubleshooting tips](../../troubleshooting.md), and the ability to [contribute to Rancher](../../contribute-to-rancher.md). 
+In our docs, we have used this guideline to craft a unique set of docs which include [getting started](../../getting-started.md), [how-to guides](../../how-to-guides.md) (including [new](../../pages-for-subheaders/new-user-guides.md) and [advanced user guides](../../pages-for-subheaders/advanced-user-guides.md)), [reference guides](../../reference-guides.md), [explanations](../../explanations.md), an [FAQ section](../../faq.md), [troubleshooting tips](../../troubleshooting.md), and the ability to [contribute to Rancher](../../contribute-to-rancher.md).
 
 - [Getting Started](#getting-started)
 - [How-to Guides](#how-to-guides)
-    - [New User Guides](#new-user-guides)
+[New User Guides](#new-user-guides)
     - [Advanced User Guides](#advanced-user-guides)
 - [Reference Guides](#reference-guides)
 - [Explanations](#explanations)
-    - [Integrations in Rancher](#integrations-in-rancher)    
+    - [Integrations in Rancher](#integrations-in-rancher)
 - [Other Docs Categories](#other-docs-categories)
     - [FAQ](#faq)
     - [Troubleshooting](#troubleshooting)
@@ -31,9 +31,9 @@ Please see the [introduction](../../pages-for-subheaders/introduction.md), [quic
 
 ## How-to Guides
 
-How-to guides serve to describe practical steps for users to accomplish some task. In Rancher, we break down how-to guides further into [new user guides](#new-user-guides) and [advanced user guides](#advanced-user-guides).
+[new user guides](#new-user-guides)
 
-### New User Guides 
+### New User Guides
 
 New user guides, also known as tutorials, describe practical steps for users to follow in order to complete some concrete action. These docs are known as "learning-oriented" docs in which users learn by "doing".
 
@@ -55,11 +55,11 @@ A good example of an advanced user guide can be found [here](../../how-to-guides
 
 Reference guides are technical descriptions of processes or products that users can study. Reference guides are designed to be "information-oriented" and their primary function is to describe.
 
-These docs may also include some usage steps in the course of description; however, their purpose is not to explain concepts nor to outline steps to achieve tasks. 
+These docs may also include some usage steps in the course of description; however, their purpose is not to explain concepts nor to outline steps to achieve tasks.
 
 The users who utilize reference guides are knowledgeable with the Rancher product as well as how to use it. They will benefit from detailed descriptions of something to be used when needing to refer to specifics of usage.
 
-Good examples of Rancher reference guides would be the [Rancher Manager architecture](../../pages-for-subheaders/rancher-manager-architecture.md) and [cluster configuration guides](../../pages-for-subheaders/cluster-configuration.md).
+Good examples of Rancher reference guides would be the [Rancher architecture](../../pages-for-subheaders/rancher-manager-architecture.md) and [cluster configuration guides](../../pages-for-subheaders/cluster-configuration.md).
 
 ## Explanations
 
@@ -71,7 +71,7 @@ For our new docs, we are working to build up this section as most of our previou
 
 ### Integrations in Rancher
 
-Over time, Rancher has accrued several products and projects that have been integrated into the Rancher UI. To assist users in learning more about these integrations, this subsection has been added under **Explanations**. 
+Over time, Rancher has accrued several products and projects that have been integrated into the Rancher UI. To assist users in learning more about these integrations, this subsection has been added under **Explanations**.
 
 Examples of some of these integrations are [Istio](../../pages-for-subheaders/istio.md) and [CIS Scans](../../pages-for-subheaders/cis-scans.md).
 
@@ -91,9 +91,9 @@ We work to continually add to and enhance this section; check back frequently fo
 
 ### Contribute to Rancher
 
-The Rancher Manager documentation is always a work-in-progress; the docs work best when being constantly examined, updated, and improved upon. To do this more effectively, we call upon the community to assist us.
+The Rancher documentation is always a work-in-progress; the docs work best when being constantly examined, updated, and improved upon. To do this more effectively, we call upon the community to assist us.
 
-This [contributing to Rancher section](../../contribute-to-rancher.md) will instruct users on the repositories used for Rancher, how to build the repositories, and what information is needed when filing an issue or creating a pull request. 
+This [contributing to Rancher section](../../contribute-to-rancher.md) will instruct users on the repositories used for Rancher, how to build the repositories, and what information is needed when filing an issue or creating a pull request.
 
 We review all contributions frequently and will provide feedback to contributors promptly.
 
@@ -103,10 +103,10 @@ You may have noticed that within the confines of each category - new user guides
 
 ## New Structure Goals
 
-Our previous Rancher documentation focused on individual features and topics; the new Divio paradigm prioritizes function and cohesion. 
+Our previous Rancher documentation focused on individual features and topics; the new Divio paradigm prioritizes function and cohesion.
 
 Because the previous docs structure was not based on the Divio paradigm, not every doc as it is written currently will fall neatly into a user guide or a reference, for example. Some docs may include elements of several kind of documentation functions.
 
-As such, we have worked to move our existing documentation into the new paradigm based on each doc's function. Moving forward, we will be creating, rewriting, and reshaping our docs as needed to more closely align with the Divio structure, purpose, and its design concepts. 
+As such, we have worked to move our existing documentation into the new paradigm based on each doc's function. Moving forward, we will be creating, rewriting, and reshaping our docs as needed to more closely align with the Divio structure, purpose, and its design concepts.
 
 Ultimately, the finished product will much more cohesively and effectively assist our users by emphasizing functionality over individual topic or feature-based docs.

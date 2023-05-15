@@ -35,7 +35,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Deploy Rancher Manager',
+              label: 'Deploy Rancher',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/deploy-rancher-manager",
@@ -846,7 +846,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Rancher Manager Architecture',
+          label: 'Rancher Architecture',
           link: {
             type: 'doc',
             id: "pages-for-subheaders/rancher-manager-architecture",
