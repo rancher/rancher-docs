@@ -1,5 +1,6 @@
 ---
 title: Rancher Helm Chart Options
+keywords: [rancher v2.5 helm chart, rancher v2.5 helm options, rancher v2.5 helm chart options, helm chart rancher v2.5 helm options rancher v2.5 helm chart options rancher v2.5]
 ---
 
 <head>

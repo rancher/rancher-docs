@@ -1,5 +1,6 @@
 ---
 title: Rancher Helm Chart Options
+keywords: [rancher helm chart, rancher helm options, rancher helm chart options, helm chart rancher, helm options rancher, helm chart options rancher]
 ---
 
 <head>
@@ -153,11 +154,11 @@ Example on setting a static proxy header with `ingress.configurationSnippet`. Th
 
 Rancher requires internet access for some functionality (Helm charts). Use `proxy` to set your proxy server or use `extraEnv` to set the `HTTPS_PROXY` environment variable to point to your proxy server.
 
-Add your IP exceptions to the `noProxy` chart value as a comma separated list. Make sure you add the following values: 
+Add your IP exceptions to the `noProxy` chart value as a comma separated list. Make sure you add the following values:
 - Pod cluster IP range (default: `10.42.0.0/16`).
 - Service cluster IP range (default: `10.43.0.0/16`).
 - Internal cluster domains (default: `.svc,.cluster.local`).
-- Any worker cluster `controlplane` nodes. 
+- Any worker cluster `controlplane` nodes.
 Rancher supports CIDR notation ranges in this list.
 
 When not including sensitive data, the `proxy` or `extraEnv` chart options can be used. When using `extraEnv` the `noProxy` Helm option is ignored. Therefore, the `NO_PROXY` environment variable must also be set with `extraEnv`.

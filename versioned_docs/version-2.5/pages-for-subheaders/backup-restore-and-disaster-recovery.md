@@ -1,5 +1,6 @@
 ---
 title: Backups and Disaster Recovery
+keywords: [rancher v2.5 backup restore, rancher v2.5 backup and restore, backup restore rancher v2.5, backup and restore rancher v2.5]
 ---
 
 In this section, you'll learn how to create backups of Rancher, how to restore Rancher from backup, and how to migrate Rancher to a new Kubernetes cluster.
