@@ -28,16 +28,18 @@ NO_PROXY=127.0.0.0/8,10.0.0.0/8,cattle-system.svc,172.16.0.0/12,192.168.0.0/16,.
 EOF
 ```
 
-Then run the K3s installation script to create a new K3s cluster. Ensure that the K3s version you are installing is [supported by Rancher](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/).
+Rancher needs to be installed on a supported Kubernetes version. To find out which versions of Kubernetes are supported for your Rancher version, refer to the [Rancher Support Matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/).
+
+To specify the K3s (Kubernetes) version, use the INSTALL_K3S_VERSION (e.g., `INSTALL_K3S_VERSION="v1.24.10+k3s1"`) environment variable when running the K3s installation script.
 
 On the first node, create a new cluster:
 ```
-curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.xx K3S_TOKEN=your_secret sh -s - server --cluster-init
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=<VERSION> K3S_TOKEN=your_secret sh -s - server --cluster-init
 ```
 
 And then join the other nodes:
 ```
-curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.xx K3S_TOKEN=your_secret sh -s - server --server https://<ip or hostname of server1>:6443
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=<VERSION> K3S_TOKEN=your_secret sh -s - server --server https://<ip or hostname of server1>:6443
 ```
 
 For more information on installing K3s see the [K3s installation docs](https://docs.k3s.io/installation).

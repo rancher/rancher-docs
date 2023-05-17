@@ -12,10 +12,11 @@ Your Linux machine can be anywhere. It could be an Amazon EC2 instance, a Digita
 
 The full installation requirements are [here](../../../pages-for-subheaders/installation-requirements.md).
 
-
 ## Install K3s on Linux
 
-Rancher needs to be installed on a supported Kubernetes version. To specify the K3s version, use the INSTALL_K3S_VERSION (e.g., `INSTALL_K3S_VERSION="v1.24.10+k3s1"`) environment variable when running the K3s installation script. Refer to the [support maintenance terms](https://rancher.com/support-maintenance-terms/).
+Rancher needs to be installed on a supported Kubernetes version. To find out which versions of Kubernetes are supported for your Rancher version, refer to the [Rancher Support Matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/).
+
+To specify the K3s (Kubernetes) version, use the INSTALL_K3S_VERSION (e.g., `INSTALL_K3S_VERSION="v1.24.10+k3s1"`) environment variable when running the K3s installation script.
 
 Install a K3s cluster by running this command on the Linux machine:
 
