@@ -2,6 +2,10 @@
 title: Upgrading Rancher Installed on Kubernetes with Helm 2
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades"/>
+</head>
+
 > Helm 3 has been released.  If you are using Helm 2, we recommend [migrating to Helm 3](https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/) because it is simpler to use and more secure than Helm 2.
 >
 > The [current instructions for Upgrading Rancher Installed on Kubernetes](../../../../pages-for-subheaders/upgrades.md) use Helm 3.
