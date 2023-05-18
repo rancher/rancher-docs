@@ -83,11 +83,10 @@ INSTALL_K3S_SKIP_DOWNLOAD=true INSTALL_K3S_VERSION=<VERSION> ./install.sh
 Install K3s on each agent:
 
 ```
-INSTALL_K3S_SKIP_DOWNLOAD=true INSTALL_K3S_VERSION=<VERSION> K3S_URL=https://myserver:6443 K3S_TOKEN=mynodetoken ./install.sh
+INSTALL_K3S_SKIP_DOWNLOAD=true INSTALL_K3S_VERSION=<VERSION> K3S_URL=<SERVER>:6443 K3S_TOKEN=<TOKEN> ./install.sh
 ```
 
-Note, take care to ensure you replace `myserver` with the IP or valid DNS of the server and replace `mynodetoken` with the node-token from the server.
-The node-token is on the server at `/var/lib/rancher/k3s/server/node-token`
+Where `<SERVER>` is the IP or valid DNS of the server and `<TOKEN>` is the node-token from the server found at `/var/lib/rancher/k3s/server/node-token`.
 
 :::note
 
