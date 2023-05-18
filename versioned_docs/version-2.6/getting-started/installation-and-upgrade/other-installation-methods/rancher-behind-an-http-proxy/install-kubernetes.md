@@ -2,6 +2,10 @@
 title: '2. Install Kubernetes'
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-kubernetes"/>
+</head>
+
 Once the infrastructure is ready, you can continue with setting up an RKE cluster to install Rancher in.
 
 First, you have to install Docker and setup the HTTP proxy on all three Linux nodes. For this perform the following steps on all three nodes.
