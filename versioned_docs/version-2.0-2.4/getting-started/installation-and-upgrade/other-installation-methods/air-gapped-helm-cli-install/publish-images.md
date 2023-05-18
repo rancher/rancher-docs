@@ -3,7 +3,7 @@ title: '2. Collect and Publish Images to your Private Registry'
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images"/>
 </head>
 
 This section describes how to set up your private registry so that when you install Rancher, Rancher will pull all the required images from this registry.
