@@ -2,6 +2,10 @@
 title: Updating the Rancher Certificate
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/resources/update-rancher-certificate"/>
+</head>
+
 ## Updating a Private CA Certificate
 
 Follow these steps to update the SSL certificate of the ingress in a Rancher [high availability Kubernetes installation](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md) or to switch from the default self-signed certificate to a custom certificate.
