@@ -20,7 +20,10 @@ In both single-node setups, Rancher can be installed with Helm on the Kubernetes
 
 These instructions assume you have set up two nodes, a load balancer, a DNS record, and an external MySQL database as described in [this section.](../infrastructure-setup/ha-k3s-kubernetes-cluster.md)
 
-Rancher needs to be installed on a supported Kubernetes version. To find out which versions of Kubernetes are supported for your Rancher version, refer to the [support maintenance terms.](https://rancher.com/support-maintenance-terms/) To specify the K3s version, use the INSTALL_K3S_VERSION environment variable when running the K3s installation script.
+Rancher needs to be installed on a supported Kubernetes version. To find out which versions of Kubernetes are supported for your Rancher version, refer to the [Rancher Support Matrix](https://rancher.com/support-maintenance-terms/).
+
+To specify the K3s (Kubernetes) version, use the INSTALL_K3S_VERSION (e.g., `INSTALL_K3S_VERSION="v1.24.10+k3s1"`) environment variable when running the K3s installation script.
+
 ## Installing Kubernetes
 
 ### 1. Install Kubernetes and Set up the K3s Server
@@ -30,12 +33,7 @@ When running the command to start the K3s Kubernetes API server, you will pass i
 1. Connect to one of the Linux nodes that you have prepared to run the Rancher server.
 1. On the Linux node, run this command to start the K3s server and connect it to the external datastore:
   ```
-  curl -sfL https://get.k3s.io | sh -s - server \
-    --datastore-endpoint="mysql://username:password@tcp(hostname:3306)/database-name"
-  ```
-  To specify the K3s version, use the INSTALL_K3S_VERSION environment variable:
-  ```sh
-  curl -sfL https://get.k3s.io |  INSTALL_K3S_VERSION=vX.Y.Z sh -s - server \
+  curl -sfL https://get.k3s.io |  INSTALL_K3S_VERSION=<VERSION> sh -s - server \
     --datastore-endpoint="mysql://username:password@tcp(hostname:3306)/database-name"
     ```
 
