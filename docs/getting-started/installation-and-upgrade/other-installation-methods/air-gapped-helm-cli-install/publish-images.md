@@ -2,6 +2,10 @@
 title: '2. Collect and Publish Images to your Private Registry'
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha"/>
+</head>
+
 This section describes how to set up your private registry so that when you install Rancher, Rancher will pull all the required images from this registry.
 
 By default, all images used to [provision Kubernetes clusters](../../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md) or launch any tools in Rancher, e.g. monitoring, pipelines, alerts, are pulled from Docker Hub. In an air gapped installation of Rancher, you will need a private registry that is located somewhere accessible by your Rancher server. Then, you will load the registry with all the images.
