@@ -31,3 +31,32 @@ services:
       - "/etc/iscsi:/etc/iscsi"
       - "/sbin/iscsiadm:/sbin/iscsiadm"
 ```
+
+If you're using RHEL 7.9, you need to mount the file `/usr/lib64/libcrypto.so.10` as shown in the sample below.
+
+```
+services:
+  kubelet:
+    extra_binds:
+      - "/etc/iscsi:/etc/iscsi"
+      - "/sbin/iscsiadm:/sbin/iscsiadm"
+      - "/usr/lib64/libcrypto.so.10:/usr/lib/libcrypto.so.10"
+```
+
+If you're using RHEL 8.6, you need to mount the file `/usr/lib64/libcrypto.so.1.1` as shown in the sample below.
+
+```
+services:
+  kubelet:
+    extra_binds:
+      - "/etc/iscsi:/etc/iscsi"
+      - "/sbin/iscsiadm:/sbin/iscsiadm"
+      - "/usr/lib64/libcrypto.so.1.1:/usr/lib/libcrypto.so.1.1"
+```
+
+
+:::tip
+
+To verify iscsiadm is working properly, you can run the command `docker exec kubelet iscsiadm --version` on any node.
+
+:::
