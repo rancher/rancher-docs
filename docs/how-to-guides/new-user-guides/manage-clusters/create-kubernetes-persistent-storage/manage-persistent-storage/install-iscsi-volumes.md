@@ -55,7 +55,7 @@ services:
 ```
 
 
-:::tips
+:::tip
 
 To verify iscsiadm is working properly, you can run the command `docker exec kubelet iscsiadm --version` on any node.
 

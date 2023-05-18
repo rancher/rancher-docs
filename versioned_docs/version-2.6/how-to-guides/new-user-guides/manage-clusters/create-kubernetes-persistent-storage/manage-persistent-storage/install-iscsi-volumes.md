@@ -54,7 +54,7 @@ services:
       - "/usr/lib64/libcrypto.so.1.1:/usr/lib/libcrypto.so.1.1"
 ```
 
-:::tips
+:::tip
 
 To verify iscsiadm is working properly, you can run the command `docker exec kubelet iscsiadm --version` on any node.
 
