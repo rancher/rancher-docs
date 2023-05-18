@@ -2,6 +2,10 @@
 title: Installing Docker
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-requirements/install-dockers"/>
+</head>
+
 Docker is required to be installed on nodes where the Rancher server will be installed with Helm or Docker.
 
 There are a couple of options for installing Docker. One option is to refer to the [official Docker documentation](https://docs.docker.com/install/) about how to install Docker on Linux. The steps will vary based on the Linux distribution.
