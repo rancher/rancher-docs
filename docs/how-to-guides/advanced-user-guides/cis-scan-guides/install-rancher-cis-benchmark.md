@@ -12,6 +12,6 @@ title: Install Rancher CIS Benchmark
 
 :::note
 
-CIS Benchmark 4.0.0 and above have PSPs disabled by default. To install CIS Benchmark on a hardened cluster, set `golbal.psp.enabled` to `true` in the values before installing the chart.
+CIS Benchmark 4.0.0 and above have PSPs disabled by default. To install CIS Benchmark on a hardened cluster, set `global.psp.enabled` to `true` in the values before installing the chart.
 
 :::
