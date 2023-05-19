@@ -4,7 +4,7 @@ description: Read this step by step Rancher Outscale guide to quickly deploy a R
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-rancher-manager/hetzner-cloud"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-rancher-manager/outscale-qs"/>
 </head>
 
 The following steps will quickly deploy a Rancher server on Outscale in a single-node K3s Kubernetes cluster, with a single-node downstream Kubernetes cluster attached.
