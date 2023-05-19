@@ -15,13 +15,15 @@ The full installation requirements are [here](../../../pages-for-subheaders/inst
 
 ## Install K3s on Linux
 
+Rancher needs to be installed on a supported Kubernetes version. To find out which versions of Kubernetes are supported for your Rancher version, refer to the [Rancher Support Matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/).
+
+To specify the K3s (Kubernetes) version, use the INSTALL_K3S_VERSION (e.g., `INSTALL_K3S_VERSION="v1.24.10+k3s1"`) environment variable when running the K3s installation script.
+
 Install a K3s cluster by running this command on the Linux machine:
 
 ```
-curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="***" sh -s - server --cluster-init
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=<VERSION> sh -s - server --cluster-init
 ```
-
-Rancher needs to be installed on a supported Kubernetes version. To specify the K3s version, use the INSTALL_K3S_VERSION environment variable when running the K3s installation script. Refer to the [support maintenance terms](https://rancher.com/support-maintenance-terms/).
 
 Using `--cluster-init` allows K3s to use embedded etcd as the datastore and has the ability to convert to an HA setup. Refer to [High Availability with Embedded DB](https://rancher.com/docs/k3s/latest/en/installation/ha-embedded/).
 
