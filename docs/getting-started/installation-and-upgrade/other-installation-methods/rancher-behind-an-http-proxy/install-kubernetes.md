@@ -34,13 +34,15 @@ To specify the K3s (Kubernetes) version, use the INSTALL_K3S_VERSION (e.g., `INS
 
 On the first node, create a new cluster:
 ```
-curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=<VERSION> K3S_TOKEN=your_secret sh -s - server --cluster-init
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=<VERSION> K3S_TOKEN=<TOKEN> sh -s - server --cluster-init
 ```
 
 And then join the other nodes:
 ```
-curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=<VERSION> K3S_TOKEN=your_secret sh -s - server --server https://<ip or hostname of server1>:6443
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=<VERSION> K3S_TOKEN=<TOKEN> sh -s - server --server https://<SERVER>:6443
 ```
+
+Where `<SERVER>` is the IP or valid DNS of the server and `<TOKEN>` is the node-token from the server found at `/var/lib/rancher/k3s/server/node-token`.
 
 For more information on installing K3s see the [K3s installation docs](https://docs.k3s.io/installation).
 

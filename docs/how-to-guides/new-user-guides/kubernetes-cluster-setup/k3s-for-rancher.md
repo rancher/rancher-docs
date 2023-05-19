@@ -34,8 +34,10 @@ When running the command to start the K3s Kubernetes API server, you will pass i
 1. On the Linux node, run this command to start the K3s server and connect it to the external datastore:
   ```
   curl -sfL https://get.k3s.io |  INSTALL_K3S_VERSION=<VERSION> sh -s - server \
-    --datastore-endpoint="mysql://username:password@tcp(hostname:3306)/database-name"
+    --datastore-endpoint="<DATASTORE_ENDPOINT>"
     ```
+
+  Where `<DATASTORE_ENDPOINT>` is the connection URI for your datastore. For example, `mysql://username:password@tcp(hostname:3306)/database-name` if you're using MySQL. Valid datastores include  etcd, MySQL, PostgreSQL, or SQLite (default).
 
   :::note
 
