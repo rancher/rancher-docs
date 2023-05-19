@@ -37,5 +37,4 @@ The following resource limits can be configured:
 | CPU Reservation          | The minimum amount of CPU (in millicores) guaranteed to the container.                                                                                                       |
 | Memory Limit             | The maximum amount of memory (in bytes) allocated to the container.                                                                                                          |
 | Memory Reservation       | The minimum amount of memory (in bytes) guaranteed to the container.
-
-| NVIDIA GPU Limit/Reservation | 
+| NVIDIA GPU Limit/Reservation | The amount of GPUs allocated to the container. The limit and reservation are always the same for GPUs. |
