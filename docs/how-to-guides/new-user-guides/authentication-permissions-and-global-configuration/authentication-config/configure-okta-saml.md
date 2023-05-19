@@ -4,7 +4,7 @@ title: Configure Okta (SAML)
 
 If your organization uses Okta Identity Provider (IdP) for user authentication, you can configure Rancher to allow your users to log in using their IdP credentials.
 
-If you also configure OpenLDAP as the back end to Okta, it will return a SAML assertion to Rancher with user attributes that include groups. Then the authenticated user will be able to access resources in Rancher that their groups have permissions for.
+If you configure Okta with an OpenLAD backend, authenticated users can access Rancher resources through their group permissions.
 
 :::note
 
@@ -62,26 +62,26 @@ Setting | Value
 
 :::note SAML Provider Caveats:
 
-If you configure Okta without OpenLDAP, the following caveats apply due to the fact that SAML Protocol does not support search or lookup for users or groups.
+If you configure Okta without OpenLDAP, you won't be able to search for or directly lookup users or groups. This brings several caveats:
 
-- There is no validation on users or groups when assigning permissions to them in Rancher.
+- Users and groups aren't validated when you assign permissions to them in Rancher.
 - When adding users, the exact user IDs (i.e. `UID Field`) must be entered correctly. As you type the user ID, there will be no search for other  user IDs that may match.
 - When adding groups, you must select the group from the drop-down that is next to the text box. Rancher assumes that any input from the text box is a user.
 - The group drop-down shows only the groups that you are a member of. You will not be able to add groups that you are not a member of.
 
 :::
 
-To enable searching for groups when assigning permissions in Rancher, you will need to configure a back end for the SAML provider that supports groups, such as OpenLDAP.
+To enable group and user lookup when assigning permissions in Rancher, you will need to configure a back end for the SAML provider that supports groups, such as OpenLDAP.
 
 ## Setting up OpenLDAP in Rancher
 
-If you also configure OpenLDAP as the back end to Okta, it will return a SAML assertion to Rancher with user attributes that include groups. Then authenticated users will be able to access resources in Rancher that their groups have permissions for.
+You can set up OpenLDAP within Rancher, so that authenticated users can access Rancher resources through their group permissions. OpenLDAP returns a SAML assertion that lists user attributes, including which groups a user belongs to.
 
 ### OpenLDAP Prerequisites
 
-If you use an Okta Directory as your IdP, you can setup an LDAP Interface for Rancher to use. See the [Okta Documentation](https://help.okta.com/en-us/Content/Topics/Directory/LDAP-interface-main.htm). You can also configure an external OpenLDAP server.
+If you use Okta as your IdP, you can [set up an LDAP interface](https://help.okta.com/en-us/Content/Topics/Directory/LDAP-interface-main.htm) for Rancher to use. You can also configure an external OpenLDAP server.
 
-Rancher must be configured with a LDAP bind account (aka service account) to search and retrieve LDAP entries pertaining to users and groups that should have access. It is recommended to not use an administrator account or personal account for this purpose and instead create a dedicated account in OpenLDAP with read-only access to users and groups under the configured search base (see below).
+You must configure Rancher with a LDAP bind account (aka service account) so that you can search and retrieve LDAP entries for users and groups that should have access. Don't use an administrator account or personal account as an LDAP bind account. Create a dedicated account in OpenLDAP, with read-only access to users and groups under the configured searchbase.
 
 > **Using TLS?**
 >
@@ -89,14 +89,14 @@ Rancher must be configured with a LDAP bind account (aka service account) to sea
 
 ### Configure OpenLDAP in Rancher
 
-Configure the settings for the OpenLDAP server, groups and users. For help filling out each field, refer to the [configuration reference.](/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-openldap/openldap-config-reference.md) Note that nested group membership is not available.
+[Configure the settings](../configure-openldap/openldap-config-reference.md) for the OpenLDAP server, groups and users. Note that nested group membership isn't available.
 
-> Before you proceed with the configuration, please familiarise yourself with the concepts of [External Authentication Configuration and Principal Users](/pages-for-subheaders/authentication-config.md#external-authentication-configuration-and-principal-users).
+> Before you proceed with the configuration, please familiarise yourself with [external authentication configuration and principal users](../../../../pages-for-subheaders/authentication-config.md#external-authentication-configuration-and-principal-users).
 
-1. Log into the Rancher UI using the initial local `admin` account.
+1. Sign into Rancher using a local user assigned the [administrator](https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions) role (i.e., the _local principal_).
 1. In the top left corner, click **☰ > Users & Authentication**.
 1. In the left navigation menu, click **Auth Provider**.
 1. Click **Okta** or, if SAML is already configured, **Edit Config**
 1. Under **User and Group Search**, check **Configure an OpenLDAP server**
 
-If you are experiencing issues while testing the connection to the OpenLDAP server, first double-check the credentials entered for the service account as well as the search base configuration. You may also inspect the Rancher logs to help pinpointing the problem cause. Debug logs may contain more detailed information about the error. Please refer to [How can I enable debug logging](/faq/technical-items.md#how-can-i-enable-debug-logging) in this documentation.
+If you experience issues when you test the connection to the OpenLDAP server, ensure that you entered the credentials for the service account and configured the search base correctly. Inspecting the Rancher logs can help pinpoint the root cause. Debug logs may contain more detailed information about the error. Please refer to [How can I enable debug logging](../../../../faq/technical-items.md#how-can-i-enable-debug-logging) for more information.
