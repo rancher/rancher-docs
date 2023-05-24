@@ -175,7 +175,7 @@ tls-san:
   - loadbalancer-dns-domain.com
 ```
 
-有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/install/ha/)。
+有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/install/ha)。
 
 :::note
 
@@ -205,7 +205,7 @@ configs:
       ca_file: <镜像仓库所用的 CA 文件路径>
 ```
 
-有关 RKE2 的私有镜像仓库配置文件的详情，请参见 [RKE2 官方文档](https://docs.rke2.io/install/containerd_registry_configuration/)。
+有关 RKE2 的私有镜像仓库配置文件的详情，请参见 [RKE2 官方文档](https://docs.rke2.io/install/containerd_registry_configuration)。
 
 ### 3. 安装 RKE2
 
@@ -234,7 +234,7 @@ systemctl enable rke2-server.service
 systemctl start rke2-server.service
 ``
 
-有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/install/airgap/)。
+有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/install/airgap)。
 
 ### 4. 保存并开始使用 kubeconfig 文件
 
@@ -274,7 +274,7 @@ users:
 kubectl --kubeconfig ~/.kube/config/rke2.yaml get pods --all-namespaces
 ```
 
-有关 `kubeconfig` 文件的详情，请参见 [RKE2 官方文档](https://docs.rke2.io/cluster_access/)或 [ Kubernetes 官方文档](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)中关于使用 `kubeconfig` 文件管理集群访问的部分。
+有关 `kubeconfig` 文件的详情，请参见 [RKE2 官方文档](https://docs.rke2.io/cluster_access)或 [ Kubernetes 官方文档](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)中关于使用 `kubeconfig` 文件管理集群访问的部分。
 
 ### 升级注意事项
 

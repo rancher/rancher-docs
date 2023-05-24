@@ -104,11 +104,11 @@ Out of the box, Rancher is compatible with the following network providers:
 
 \* When using [project network isolation](#project-network-isolation) in the [Cilium CNI](../../../faq/container-network-interface-providers.md#cilium), it is possible to enable cross-node ingress routing. Click the [CNI provider docs](../../../faq/container-network-interface-providers.md#ingress-routing-across-nodes-in-cilium) to learn more.
 
-For more details on the different networking providers and how to configure them, please view our [RKE2 documentation](https://docs.rke2.io/install/network_options/).
+For more details on the different networking providers and how to configure them, please view our [RKE2 documentation](https://docs.rke2.io/install/network_options).
 
 ##### Dual-stack Networking
 
-[Dual-stack](https://docs.rke2.io/install/network_options/#dual-stack-configuration) networking is supported for all CNI providers. To configure RKE2 in dual-stack mode, set valid IPv4/IPv6 CIDRs for your [Cluster CIDR](#cluster-cidr) and/or [Service CIDR](#service-cidr).
+[Dual-stack](https://docs.rke2.io/install/network_options#dual-stack-configuration) networking is supported for all CNI providers. To configure RKE2 in dual-stack mode, set valid IPv4/IPv6 CIDRs for your [Cluster CIDR](#cluster-cidr) and/or [Service CIDR](#service-cidr).
 
 ###### Additional Configuration {#dual-stack-additional-config}
 
@@ -140,13 +140,13 @@ Project network isolation is available if you are using any RKE2 network plugin 
 
 #### CoreDNS
 
-By default, [CoreDNS](https://coredns.io/) is installed as the default DNS provider. If CoreDNS is not installed, an alternate DNS provider must be installed yourself. Refer to the [RKE2 documentation](https://docs.rke2.io/networking/#coredns) for additional CoreDNS configurations.
+By default, [CoreDNS](https://coredns.io/) is installed as the default DNS provider. If CoreDNS is not installed, an alternate DNS provider must be installed yourself. Refer to the [RKE2 documentation](https://docs.rke2.io/networking#coredns) for additional CoreDNS configurations.
 
 #### NGINX Ingress
 
-If you want to publish your applications in a high-availability configuration, and you're hosting your nodes with a cloud-provider that doesn't have a native load-balancing feature, enable this option to use NGINX Ingress within the cluster. Refer to the [RKE2 documentation](https://docs.rke2.io/networking/#nginx-ingress-controller) for additional configuration options.
+If you want to publish your applications in a high-availability configuration, and you're hosting your nodes with a cloud-provider that doesn't have a native load-balancing feature, enable this option to use NGINX Ingress within the cluster. Refer to the [RKE2 documentation](https://docs.rke2.io/networking#nginx-ingress-controller) for additional configuration options.
 
-Refer to the [RKE2 documentation](https://docs.rke2.io/networking/#nginx-ingress-controller) for additional configuration options.
+Refer to the [RKE2 documentation](https://docs.rke2.io/networking#nginx-ingress-controller) for additional configuration options.
 
 #### Metrics Server
 
@@ -156,7 +156,7 @@ Each cloud provider capable of launching a cluster using RKE2 can collect metric
 
 ### Add-On Config
 
-Additional Kubernetes manifests, managed as an [Add-on](https://kubernetes.io/docs/concepts/cluster-administration/addons/), to apply to the cluster on startup. Refer to the [RKE2 documentation](https://docs.rke2.io/helm/#automatically-deploying-manifests-and-helm-charts) for details.
+Additional Kubernetes manifests, managed as an [Add-on](https://kubernetes.io/docs/concepts/cluster-administration/addons/), to apply to the cluster on startup. Refer to the [RKE2 documentation](https://docs.rke2.io/helm#automatically-deploying-manifests-and-helm-charts) for details.
 
 ### Agent Environment Vars
 
@@ -166,7 +166,7 @@ Option to set environment variables for [Rancher agents](https://rancher.com/doc
 
 #### Automatic Snapshots
 
-Option to enable or disable recurring etcd snapshots. If enabled, users have the option to configure the frequency of snapshots. For details, refer to the [RKE2 documentation](https://docs.rke2.io/backup_restore/#creating-snapshots). Note that with RKE2, snapshots are stored on each etcd node. This varies from RKE1 which only stores one snapshot per cluster.
+Option to enable or disable recurring etcd snapshots. If enabled, users have the option to configure the frequency of snapshots. For details, refer to the [RKE2 documentation](https://docs.rke2.io/backup_restore#creating-snapshots). Note that with RKE2, snapshots are stored on each etcd node. This varies from RKE1 which only stores one snapshot per cluster.
 
 #### Metrics
 
@@ -180,7 +180,7 @@ IPv4 and/or IPv6 network CIDRs to use for pod IPs (default: 10.42.0.0/16).
 
 ##### Dual-stack Networking
 
-To configure [dual-stack](https://docs.rke2.io/install/network_options/#dual-stack-configuration) mode, enter a valid IPv4/IPv6 CIDR. For example `10.42.0.0/16,2001:cafe:42:0::/56`.
+To configure [dual-stack](https://docs.rke2.io/install/network_options#dual-stack-configuration) mode, enter a valid IPv4/IPv6 CIDR. For example `10.42.0.0/16,2001:cafe:42:0::/56`.
 
 [Additional configuration](#dual-stack-additional-config) is required when using `cilium` or `multus,cilium` as your [container network](#container-network) interface provider.
 
@@ -190,7 +190,7 @@ IPv4/IPv6 network CIDRs to use for service IPs (default: 10.43.0.0/16).
 
 ##### Dual-stack Networking
 
-To configure [dual-stack](https://docs.rke2.io/install/network_options/#dual-stack-configuration) mode, enter a valid IPv4/IPv6 CIDR. For example `10.42.0.0/16,2001:cafe:42:0::/56`.
+To configure [dual-stack](https://docs.rke2.io/install/network_options#dual-stack-configuration) mode, enter a valid IPv4/IPv6 CIDR. For example `10.42.0.0/16,2001:cafe:42:0::/56`.
 
 [Additional configuration](#dual-stack-additional-config) is required when using `cilium ` or `multus,cilium` as your [container network](#container-network) interface provider.
 
@@ -222,7 +222,7 @@ We recommend using a load balancer with the authorized cluster endpoint. For det
 
 ### Registries
 
-Select the image repository to pull Rancher images from. For more details and configuration options, see the [RKE2 documentation](https://docs.rke2.io/install/containerd_registry_configuration/).
+Select the image repository to pull Rancher images from. For more details and configuration options, see the [RKE2 documentation](https://docs.rke2.io/install/containerd_registry_configuration).
 
 ### Upgrade Strategy
 
@@ -316,7 +316,7 @@ chartValues:
 ```
 ### machineGlobalConfig
 
-The RKE2/K3s configurations are nested under the `machineGlobalConfig` directive. Any configuration change made here will apply to every node. The configuration options available in the [standalone version of RKE2](https://docs.rke2.io/install/install_options/server_config/) can be applied here.
+The RKE2/K3s configurations are nested under the `machineGlobalConfig` directive. Any configuration change made here will apply to every node. The configuration options available in the [standalone version of RKE2](https://docs.rke2.io/reference/server_config) can be applied here.
 
 Example:
 

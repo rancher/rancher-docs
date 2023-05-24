@@ -6,4 +6,4 @@ title: About rke2-selinux
 
 The `rke2-selinux` GitHub repository is [here.](https://github.com/rancher/rke2-selinux)
 
-For more information about installing RKE2 on SELinux-enabled hosts, see the [RKE2 documentation.](https://docs.rke2.io/install/methods/#rpm)
+For more information about installing RKE2 on SELinux-enabled hosts, see the [RKE2 documentation.](https://docs.rke2.io/install/methods#rpm)
