@@ -45,4 +45,4 @@ To rotate keys in the Rancher UI:
     ![Encryption Key Rotation](/img/rke2-encryption-key.png)
 
 
->**Note:** For more information on RKE2 secrets encryption config, please see the [RKE2 docs](https://docs.rke2.io/security/secrets_encryption/).
+>**Note:** For more information on RKE2 secrets encryption config, please see the [RKE2 docs](https://docs.rke2.io/security/secrets_encryption).

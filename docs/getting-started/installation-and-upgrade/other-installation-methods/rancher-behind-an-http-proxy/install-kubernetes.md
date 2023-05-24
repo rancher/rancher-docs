@@ -81,7 +81,7 @@ systemctl enable rke2-server.service
 systemctl start rke2-server.service
 ```
 
-For more information on installing RKE2 see the [RKE2 installation docs](https://docs.rke2.io/install/).
+For more information on installing RKE2 see the [RKE2 documentation](https://docs.rke2.io).
 
 To have a look at your cluster run:
 
