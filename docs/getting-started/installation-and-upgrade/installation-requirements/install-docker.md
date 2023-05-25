@@ -8,7 +8,7 @@ There are a couple of options for installing Docker. One option is to refer to t
 
 Another option is to use one of Rancher's Docker installation scripts, which are available for most recent versions of Docker.
 
-For example, this command could be used to install Docker 20.10 on Ubuntu:
+For example, this command could be used to install Docker 20.10 on the main Linux distributions like SUSE Linux Enterprise or Ubuntu:
 
 ```
 curl https://releases.rancher.com/install-docker/20.10.sh | sh
