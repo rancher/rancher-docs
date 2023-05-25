@@ -2,6 +2,10 @@
 title: Bootstrap Password
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/resources/bootstrap-password"/>
+</head>
+
 When Rancher starts for the first time, a password is randomly generated for the first admin user. When the admin first logs in to Rancher, the UI shows commands that can be used to retrieve the bootstrap password. The admin needs to run those commands and log in with the bootstrap password. Then Rancher gives the admin an opportunity to reset the password.
 
 The bootstrap password is randomly generated if it is not set during installation with a variable. For details on how to set the bootstrap password using a variable, see below.
