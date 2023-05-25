@@ -3,7 +3,7 @@ title: Feature Flags
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-references/feature-flags"/>
 </head>
 
 Feature flags were introduced to allow you to try experimental features that are not enabled by default.
