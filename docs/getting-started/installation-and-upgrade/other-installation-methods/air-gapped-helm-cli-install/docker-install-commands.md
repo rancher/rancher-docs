@@ -2,10 +2,6 @@
 title: Docker Install Commands
 ---
 
-<head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/docker-install-commands"/>
-</head>
-
 The Docker installation is for Rancher users who want to test out Rancher.
 
 Instead of running on a Kubernetes cluster, you install the Rancher server component on a single node using a `docker run` command. Since there is only one node and a single Docker container, if the node goes down, there is no copy of the etcd data available on other nodes and you will lose all the data of your Rancher server.
