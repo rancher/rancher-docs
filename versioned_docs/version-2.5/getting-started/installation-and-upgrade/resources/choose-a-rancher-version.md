@@ -2,6 +2,10 @@
 title: Choosing a Rancher Version
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/resources/choose-a-rancher-version"/>
+</head>
+
 This section describes how to choose a Rancher version.
 
 For a high-availability installation of Rancher, which is recommended for production, the Rancher server is installed using a **Helm chart** on a Kubernetes cluster. Refer to the [Helm version requirements](./helm-version-requirements.md) to choose a version of Helm to install Rancher.
