@@ -3,6 +3,10 @@ title: Rancher Azure Quick Start Guide
 description: Read this step by step Rancher Azure guide to quickly deploy a Rancher server with a single-node downstream Kubernetes cluster attached.
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-rancher-manager/azure"/>
+</head>
+
 The following steps will quickly deploy a Rancher server on Azure in a single-node K3s Kubernetes cluster, with a single-node downstream Kubernetes cluster attached.
 
 :::caution
