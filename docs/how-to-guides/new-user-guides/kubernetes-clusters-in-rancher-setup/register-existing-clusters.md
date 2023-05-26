@@ -29,7 +29,7 @@ Since, by default, Google Kubernetes Engine (GKE) doesn't grant the `cluster-adm
 
 ### EKS, AKS and GKE Clusters
 
-To successfully import them into or provision them from Rancher, Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE) clusters must have at least one managed node group.
+To successfully import them into or provision them from Rancher, Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE) clusters must have at least one managed node group. In addition, GKE Autopilot clusters aren't supported. See [Compare GKE Autopilot and Standard](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison) for more information about the difference between GKE Autopilot mode and Standard mode.
 
 ## Registering a Cluster
 
