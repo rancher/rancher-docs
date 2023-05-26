@@ -2,6 +2,10 @@
 title: Upgrades
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades"/>
+</head>
+
 The following instructions will guide you through upgrading a Rancher server that was installed on a Kubernetes cluster with Helm. These steps also apply to air gap installs with Helm.
 
 For the instructions to upgrade Rancher installed on Kubernetes with RancherD, refer to [this page.](../other-installation-methods/install-rancher-on-linux/upgrade-rancherd.md)
