@@ -89,7 +89,7 @@ Your access to the visualizations depend on your role. Grafana and Prometheus ar
 
 ## Architecture
 
-Istio installs a service mesh that uses [Envoy](https://www.envoyproxy.io/learn/service-mesh) sidecar proxies to intercept traffic to each workload. These sidecars intercept and manage service-to-service communication, allowing fine-grained observation and control over traffic within the cluster.
+Istio installs a service mesh that uses [Envoy](https://www.envoyproxy.io) sidecar proxies to intercept traffic to each workload. These sidecars intercept and manage service-to-service communication, allowing fine-grained observation and control over traffic within the cluster.
 
 Only workloads that have the Istio sidecar injected can be tracked and controlled by Istio.
 

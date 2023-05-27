@@ -20,7 +20,7 @@ Prometheus Federator is designed to be deployed alongside an existing Prometheus
 
 1. On deploying this chart, users can create ProjectHelmCharts CRs with `spec.helmApiVersion` set to `monitoring.cattle.io/v1alpha1` (also known as "Project Monitors" in the Rancher UI) in a **Project Registration Namespace (`cattle-project-<id>`)**.
 2. On seeing each ProjectHelmChartCR, the operator will automatically deploy a Project Prometheus stack on the Project Owner's behalf in the **Project Release Namespace (`cattle-project-<id>-monitoring`)** based on a HelmChart CR and a HelmRelease CR automatically created by the ProjectHelmChart controller in the **Operator / System Namespace**.
-3. RBAC will automatically be assigned in the Project Release Namespace to allow users to view the Prometheus, Alertmanager, and Grafana UIs of the Project Monitoring Stack deployed; this will be based on RBAC defined on the Project Registration Namespace against the [default Kubernetes user-facing roles](https://kubernetes.io/docs/reference/access-authn-authmonitoring-alerting/prometheus-federator/rbac#user-facing-roles). For more information, see the section on [configuring RBAC](../reference-guides/prometheus-federator/rbac.md).
+3. RBAC will automatically be assigned in the Project Release Namespace to allow users to view the Prometheus, Alertmanager, and Grafana UIs of the Project Monitoring Stack deployed; this will be based on RBAC defined on the Project Registration Namespace against the [default Kubernetes user-facing roles](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles). For more information, see the section on [configuring RBAC](../reference-guides/prometheus-federator/rbac.md).
 
 ### What is a Project?
 
