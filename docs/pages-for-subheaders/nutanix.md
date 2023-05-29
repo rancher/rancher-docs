@@ -10,7 +10,7 @@ Rancher can provision nodes in AOS (AHV) and install Kubernetes on them. When cr
 A Nutanix cluster may consist of multiple groups of VMs with distinct properties, such as the amount of memory or the number of vCPUs. This grouping allows for fine-grained control over the sizing of nodes for each Kubernetes role.
 
 - [Creating a Nutanix Cluster](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/provision-kubernetes-clusters-in-aos.md#creating-a-nutanix-aos-cluster)
-- [Provisioning Storage](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/provision-kubernetes-clusters-in-aos)
+- [Provisioning Storage](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/provision-kubernetes-clusters-in-aos.md)
 
 ## Creating a Nutanix Cluster
 
