@@ -10,7 +10,7 @@ Once the network issue is resolved, the `canal` pods should timeout and restart 
 
 ### nginx-ingress-controller Pods show RESTARTS
 
-The most common cause of this issue is the `canal` pods have failed to establish the overlay network. See [canal Pods show READY `2/3`](#canal-pods-show-ready-2-3) for troubleshooting.
+The most common cause of this issue is the `canal` pods have failed to establish the overlay network. See [canal Pods show READY `2/3`](#canal-pods-show-ready-23) for troubleshooting.
 
 ### Failed to set up SSH tunneling for host [xxx.xxx.xxx.xxx]: Can't retrieve Docker Info
 
