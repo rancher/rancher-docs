@@ -108,7 +108,7 @@ Authorized Cluster Endpoint can be used to directly access the Kubernetes API se
 
 For more detail on how an authorized cluster endpoint works and why it is used, refer to the [architecture section.](../../../pages-for-subheaders/rancher-manager-architecture.md#4-authorized-cluster-endpoint)
 
-We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.](../../rancher-manager-architecture/architecture-recommendations.md#architecture-for-an-authorized-cluster-endpoint)
+We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.](../../rancher-manager-architecture/architecture-recommendations.md#architecture-for-an-authorized-cluster-endpoint-ace)
 
 ### Registries
 

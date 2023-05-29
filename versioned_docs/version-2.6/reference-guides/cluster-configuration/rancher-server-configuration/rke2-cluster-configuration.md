@@ -9,7 +9,7 @@ This section covers the configuration options that are available in Rancher for 
 You can configure the Kubernetes options in one of the two following ways:
 
 - [Rancher UI](#configuration-options-in-the-rancher-ui): Use the Rancher UI to select options that are commonly customized when setting up a Kubernetes cluster.
-- [Cluster Config File](#cluster-config-file): Instead of using the Rancher UI to choose Kubernetes options for the cluster, advanced users can create an RKE2 config file. Using a config file allows you to set many additional [options](https://docs.rke2.io/install/configuration) available for an RKE2 installation.
+- [Cluster Config File](#cluster-config-file-reference): Instead of using the Rancher UI to choose Kubernetes options for the cluster, advanced users can create an RKE2 config file. Using a config file allows you to set many additional [options](https://docs.rke2.io/install/configuration) available for an RKE2 installation.
 
 ## Editing Clusters with a Form in the Rancher UI
 
@@ -120,7 +120,7 @@ You can configure a [Kubernetes cloud provider](../../../pages-for-subheaders/se
 
 :::note
 
-If the cloud provider you want to use is not listed as an option, you will need to use the [config file option](#cluster-config-file) to configure the cloud provider. Please reference [this documentation](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/) on how to configure the cloud provider.
+If the cloud provider you want to use is not listed as an option, you will need to use the [config file option](#cluster-config-file-reference) to configure the cloud provider. Please reference [this documentation](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/) on how to configure the cloud provider.
 
 :::
 
@@ -182,7 +182,7 @@ IPv4 and/or IPv6 network CIDRs to use for pod IPs (default: 10.42.0.0/16).
 
 To configure [dual-stack](https://docs.rke2.io/install/network_options/#dual-stack-configuration) mode, enter a valid IPv4/IPv6 CIDR. For example `10.42.0.0/16,2001:cafe:42:0::/56`.
 
-[Additional configuration](#dual-stack-additional-config) is required when using `cilium` or `multus,cilium` as your [container network](#container-network) interface provider.
+[Additional configuration](#dual-stack-additional-config) is required when using `cilium` or `multus,cilium` as your [container network](#container-network-provider) interface provider.
 
 #### Service CIDR
 
@@ -192,7 +192,7 @@ IPv4/IPv6 network CIDRs to use for service IPs (default: 10.43.0.0/16).
 
 To configure [dual-stack](https://docs.rke2.io/install/network_options/#dual-stack-configuration) mode, enter a valid IPv4/IPv6 CIDR. For example `10.42.0.0/16,2001:cafe:42:0::/56`.
 
-[Additional configuration](#dual-stack-additional-config) is required when using `cilium ` or `multus,cilium` as your [container network](#container-network) interface provider.
+[Additional configuration](#dual-stack-additional-config) is required when using `cilium ` or `multus,cilium` as your [container network](#container-network-provider) interface provider.
 
 #### Cluster DNS
 
@@ -218,7 +218,7 @@ This is enabled by default in Rancher-launched Kubernetes clusters, using the IP
 
 For more detail on how an authorized cluster endpoint works and why it is used, refer to the [architecture section.](../../../pages-for-subheaders/rancher-manager-architecture.md#4-authorized-cluster-endpoint)
 
-We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.](../../rancher-manager-architecture/architecture-recommendations.md#architecture-for-an-authorized-cluster-endpoint)
+We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.](../../rancher-manager-architecture/architecture-recommendations.md#architecture-for-an-authorized-cluster-endpoint-ace)
 
 ### Registries
 

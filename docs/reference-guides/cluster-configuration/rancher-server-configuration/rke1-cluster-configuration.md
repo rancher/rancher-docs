@@ -11,10 +11,10 @@ This section covers the configuration options that are available in Rancher for 
 
 You can configure the Kubernetes options one of two ways:
 
-- [Rancher UI](#rancher-ui-options): Use the Rancher UI to select options that are commonly customized when setting up a Kubernetes cluster.
-- [Cluster Config File](#cluster-config-file): Instead of using the Rancher UI to choose Kubernetes options for the cluster, advanced users can create an RKE config file. Using a config file allows you to set any of the options available in an RKE installation, except for system_images configuration, by specifying them in YAML.
+- [Rancher UI](#configuration-options-in-the-rancher-ui): Use the Rancher UI to select options that are commonly customized when setting up a Kubernetes cluster.
+- [Cluster Config File](#rke-cluster-config-file-reference): Instead of using the Rancher UI to choose Kubernetes options for the cluster, advanced users can create an RKE config file. Using a config file allows you to set any of the options available in an RKE installation, except for system_images configuration, by specifying them in YAML.
 
-The RKE cluster config options are nested under the `rancher_kubernetes_engine_config` directive. For more information, see the section about the [cluster config file.](#cluster-config-file)
+The RKE cluster config options are nested under the `rancher_kubernetes_engine_config` directive. For more information, see the section about the [cluster config file.](#rke-cluster-config-file-reference)
 
 In [clusters launched by RKE](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md), you can edit any of the remaining options that follow.
 
@@ -92,7 +92,7 @@ You can configure a [Kubernetes cloud provider](../../../pages-for-subheaders/se
 
 :::note
 
-If the cloud provider you want to use is not listed as an option, you will need to use the [config file option](#cluster-config-file) to configure the cloud provider. Please reference the [RKE cloud provider documentation](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/) on how to configure the cloud provider.
+If the cloud provider you want to use is not listed as an option, you will need to use the [config file option](#rke-cluster-config-file-reference) to configure the cloud provider. Please reference the [RKE cloud provider documentation](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/) on how to configure the cloud provider.
 
 :::
 
@@ -119,7 +119,7 @@ Authorized Cluster Endpoint can be used to directly access the Kubernetes API se
 
 :::note
 
-The authorized cluster endpoint only works on Rancher-launched Kubernetes clusters. In other words, it only works in clusters where Rancher [used RKE](../../../pages-for-subheaders/rancher-manager-architecture.md#tools-for-provisioning-kubernetes-clusters) to provision the cluster. It is not available for clusters in a hosted Kubernetes provider, such as Amazon's EKS.
+The authorized cluster endpoint only works on Rancher-launched Kubernetes clusters. In other words, it only works in clusters where Rancher [used RKE](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#tools-for-provisioning-kubernetes-clusters) to provision the cluster. It is not available for clusters in a hosted Kubernetes provider, such as Amazon's EKS.
 
 :::
 
@@ -127,7 +127,7 @@ This is enabled by default in Rancher-launched Kubernetes clusters, using the IP
 
 For more detail on how an authorized cluster endpoint works and why it is used, refer to the [architecture section.](../../../pages-for-subheaders/rancher-manager-architecture.md#4-authorized-cluster-endpoint)
 
-We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.](../../rancher-manager-architecture/architecture-recommendations.md#architecture-for-an-authorized-cluster-endpoint)
+We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.](../../rancher-manager-architecture/architecture-recommendations.md#architecture-for-an-authorized-cluster-endpoint-ace)
 
 ### Node Pools
 
