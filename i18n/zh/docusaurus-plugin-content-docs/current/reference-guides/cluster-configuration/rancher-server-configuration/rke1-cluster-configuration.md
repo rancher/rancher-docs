@@ -12,9 +12,9 @@ Rancher 安装 Kubernetes 时，它使用 [RKE](../../../pages-for-subheaders/la
 你可以通过以下两种方式之一来配置 Kubernetes 选项：
 
 - [Rancher UI](#rancher-ui-中的配置选项)：使用 Rancher UI 来选择设置 Kubernetes 集群时常用的自定义选项。
-- [集群配置文件](#集群配置文件)：高级用户可以创建一个 RKE 配置文件，而不是使用 Rancher UI 来为集群选择 Kubernetes 选项。配置文件可以让你使用 YAML 来指定 RKE 安装中可用的任何选项（除了 system_images 配置）。
+- [集群配置文件](#rke-集群配置文件参考)[](#)：高级用户可以创建一个 RKE 配置文件，而不是使用 Rancher UI 来为集群选择 Kubernetes 选项。配置文件可以让你使用 YAML 来指定 RKE 安装中可用的任何选项（除了 system_images 配置）。
 
-RKE 集群配置选项嵌套在 `rancher_kubernetes_engine_config` 参数下。有关详细信息，请参阅[集群配置文件](#集群配置文件)。
+RKE 集群配置选项嵌套在 `rancher_kubernetes_engine_config` 参数下。有关详细信息，请参阅[集群配置文件](#rke-集群配置文件参考)。
 
 在 [RKE 启动的集群](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)中，你可以编辑任何后续剩余的选项。
 
@@ -92,7 +92,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 :::note
 
-如果你要使用的云提供商未作为选项列出，你需要使用[配置文件选项](#集群配置文件)来配置云提供商。请参考 [RKE 云提供商文档](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/)来了解如何配置云提供商。
+如果你要使用的云提供商未作为选项列出，你需要使用[配置文件选项](#rke-集群配置文件参考)来配置云提供商。请参考 [RKE 云提供商文档](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/)来了解如何配置云提供商。
 
 :::
 
@@ -119,7 +119,7 @@ Rancher v2.6 引入了[为 RKE 集群配置 ECR 镜像仓库](https://rancher.co
 
 :::note
 
-授权集群端点仅适用于 Rancher 启动的 Kubernetes 集群，即只适用于 Rancher [使用 RKE](../../../pages-for-subheaders/rancher-manager-architecture.md#配置-kubernetes-集群的工具) 来配置的集群。它不适用于托管在 Kubernetes 提供商中的集群，例如 Amazon 的 EKS。
+授权集群端点仅适用于 Rancher 启动的 Kubernetes 集群，即只适用于 Rancher [使用 RKE](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md##配置-kubernetes-集群的工具) 来配置的集群。它不适用于托管在 Kubernetes 提供商中的集群，例如 Amazon 的 EKS。
 
 :::
 
@@ -182,8 +182,6 @@ Rancher v2.6 引入了[为 RKE 集群配置 ECR 镜像仓库](https://rancher.co
 使用 Kubernetes 1.16 之前版本创建的集群将具有 `OnDelete`的 `ingress-nginx` `updateStrategy`。使用 Kubernetes 1.16 或更高版本创建的集群将具有 `RollingUpdate`。
 
 如果 `ingress-nginx` 的 `updateStrategy` 是 `OnDelete`，则需要删除这些 pod 以获得 deployment 正确的版本。
-
-
 
 ## RKE 集群配置文件参考
 

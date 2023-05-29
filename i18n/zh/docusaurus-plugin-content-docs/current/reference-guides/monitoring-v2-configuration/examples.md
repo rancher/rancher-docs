@@ -20,4 +20,4 @@ PrometheusRule 包含你通常放置在 [Prometheus 规则文件](https://promet
 
 ### Alertmanager 配置
 
-有关示例配置，请参阅[本节](../../how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/alertmanager.md#alertmanager-配置示例)。
+有关示例配置，请参阅[本节](receivers.md#配置多个接收器)。
