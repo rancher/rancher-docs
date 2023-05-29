@@ -29,7 +29,7 @@ One of the biggest advantages of provisioning vSphere nodes with Rancher is that
 
 Node templates for vSphere have been updated so that when you create a node template with your vSphere credentials, the template is automatically populated with the same options for provisioning VMs that you have access to in the vSphere console.
 
-For the fields to be populated, your setup needs to fulfill the [prerequisites.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere.md)
+For the fields to be populated, your setup needs to fulfill the [prerequisites.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere.md#preparation-in-vsphere)
 
 ### More Supported Operating Systems
 
