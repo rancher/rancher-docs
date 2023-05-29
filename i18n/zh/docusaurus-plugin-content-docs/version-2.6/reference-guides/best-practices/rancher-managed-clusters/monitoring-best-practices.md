@@ -8,7 +8,7 @@ title: 监控最佳实践
 
 ## 监控内容
 
-Kubernetes 本身以及运行在其内部的应用构成了一个分布式系统，不同的组件之间能够进行交互。对于整个系统和每个单独的组件，你必须确保其性能、可用性、可靠性和可扩展性。详情请参见 Google 免费的 [Site Reliability Engineering Book](https://sre.google/sre-book/table-of-contents/)，尤其是关于 [Monitoring distributed systems](https://sre.google/sre-book/table-of-contents/chapters/monitoring-distributed-systems/) 的章节。
+Kubernetes 本身以及运行在其内部的应用构成了一个分布式系统，不同的组件之间能够进行交互。对于整个系统和每个单独的组件，你必须确保其性能、可用性、可靠性和可扩展性。详情请参见 Google 免费的 [Site Reliability Engineering Book](https://sre.google/sre-book/table-of-contents/)，尤其是关于 [Monitoring distributed systems](https://sre.google/sre-book/monitoring-distributed-systems/) 的章节。
 
 ## 配置 Prometheus 资源使用
 

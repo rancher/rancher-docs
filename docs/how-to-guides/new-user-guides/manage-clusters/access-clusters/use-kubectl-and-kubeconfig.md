@@ -7,8 +7,6 @@ This section describes how to manipulate your downstream Kubernetes cluster with
 
 For more information on using kubectl, see [Kubernetes Documentation: Overview of kubectl](https://kubernetes.io/docs/reference/kubectl/overview/).
 
-
-
 ### Accessing Clusters with kubectl Shell in the Rancher UI
 
 You can access and manage your clusters by logging into Rancher and opening the kubectl shell in the UI. No further configuration necessary.
