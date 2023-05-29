@@ -5,8 +5,6 @@ description: Rancher 集成了主流的日志服务。了解集成日志服务�
 
 现在，Rancher 的日志管理由 [Logging operator](https://kube-logging.github.io/docs/) 提供支持，它取代了以前的内部解决方案。
 
-有关 Rancher 2.5 更改的概述，请参阅[本节](../integrations-in-rancher/logging/logging-architecture.md#rancher-2-5-变更)。
-
 ## 启用 Logging
 
 你可以转到**应用**页面并安装 Logging 应用程序，从而为 Rancher 管理的集群启用 Logging：

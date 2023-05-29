@@ -6,7 +6,6 @@ After you provision a cluster in Rancher, you can begin using powerful Kubernete
 
 This page covers the following topics:
 
-- [Switching between clusters](#switching-between-clusters)
 - [Managing clusters in Rancher](#managing-clusters-in-rancher)
 - [Configuring tools](#configuring-tools)
 
