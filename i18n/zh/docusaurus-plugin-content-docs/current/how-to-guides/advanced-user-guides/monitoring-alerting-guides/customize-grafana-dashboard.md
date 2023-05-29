@@ -35,5 +35,5 @@ title: 自定义 Grafana 仪表板
 
 参考：
 
-- [编辑面板的 Grafana 文档](https://grafana.com/docs/grafana/latest/panels/panel-editor/)
-- [向仪表板添加面板的 Grafana 文档](https://grafana.com/docs/grafana/latest/panels/add-a-panel/)
+- [编辑面板的 Grafana 文档](https://grafana.com/docs/grafana/latest/panels-visualizations/configure-panel-options/#edit-a-panel)
+- [向仪表板添加面板的 Grafana 文档](https://grafana.com/docs/grafana/latest/panels-visualizations/panel-editor-overview)

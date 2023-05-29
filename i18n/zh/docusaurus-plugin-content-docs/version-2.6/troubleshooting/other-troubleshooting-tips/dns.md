@@ -199,7 +199,7 @@ services:
 
 :::
 
-请参阅[使用 YAML 编辑集群](../../pages-for-subheaders/cluster-configuration.md#使用-yaml-编辑集群)了解如何应用此修改。集群配置完成后，你必须删除 kube-dns pod 以激活 pod 中的新设置：
+请参阅[使用 YAML 编辑集群](../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#使用-yaml-编辑集群)了解如何应用此修改。集群配置完成后，你必须删除 kube-dns pod 以激活 pod 中的新设置：
 
 ```
 kubectl delete pods -n kube-system -l k8s-app=kube-dns
