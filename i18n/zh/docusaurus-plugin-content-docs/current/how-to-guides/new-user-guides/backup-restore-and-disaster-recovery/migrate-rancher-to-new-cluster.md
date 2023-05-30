@@ -120,7 +120,7 @@ Kubernetes v1.22 是 Rancher 2.6.3 的实验功能，不支持使用 apiVersion 
 
    如果适用，请提供包含加密配置文件的 `Secret` 对象的名称。如果你只有加密配置文件，但没有在此集群中创建 Secret，请按照以下步骤创建 Secret。
 
-   1. 创建[加密配置文件](reference-guides/backup-restore-configuration/backup-configuration.md#encryption)
+   1. 创建[加密配置文件](../../../reference-guides/backup-restore-configuration/backup-configuration.md#加密)
    1. 下面的命令使用一个名为 `encryption-provider-config.yaml` 的文件，使用了 `--from-file` 标志。将 `EncryptionConfiguration` 保存到名为 `encryption-provider-config.yaml` 的文件中之后，运行以下命令：
 
       ```bash
