@@ -149,7 +149,7 @@ Kubernetes 1.12 之前的版本中，在清空节点时不会强制执行[超时
 
 清空成功完成后，节点将处于 `drained` 状态。然后你可以关闭或删除节点。
 
-有关**封锁和清空**的更多信息，请参阅 [Kubernetes 文档](https://kubernetes.io/docs/tasks/administer-cluster/cluster-management/#maintenance-on-a-node)。
+有关**封锁和清空**的更多信息，请参阅 [Kubernetes 文档](https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/)。
 
 ## 标记 Rancher 忽略的节点
 

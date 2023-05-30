@@ -319,7 +319,7 @@ cloud-provider|-|Cloud provider type|
 
 #### Deployment
 
-Based on [cluster-autoscaler-run-on-master.yaml](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-run-on-master.yaml) example, we've created our own `cluster-autoscaler-deployment.yaml` to use preferred [auto-discovery setup](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler/cloudprovider/aws#auto-discovery-setup), updating tolerations, nodeSelector, image version and command config:
+Based on [cluster-autoscaler-run-on-control-plane.yaml](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-run-on-control-plane.yaml) example, we've created our own `cluster-autoscaler-deployment.yaml` to use preferred [auto-discovery setup](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler/cloudprovider/aws#auto-discovery-setup), updating tolerations, nodeSelector, image version and command config:
 
 
 ```yml
