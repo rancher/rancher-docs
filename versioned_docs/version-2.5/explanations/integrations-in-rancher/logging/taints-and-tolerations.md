@@ -12,7 +12,7 @@ Using `nodeSelector` gives pods an affinity towards certain nodes.
 
 Both provide choice for the what node(s) the pod will run on.
 
-- [Default Implementation in Rancher's Logging Stack](#default-implementation-in-rancher-s-logging-stack)
+- [Default Implementation in Rancher's Logging Stack](#default-implementation-in-ranchers-logging-stack)
 - [Adding NodeSelector Settings and Tolerations for Custom Taints](#adding-nodeselector-settings-and-tolerations-for-custom-taints)
 
 
