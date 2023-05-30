@@ -27,7 +27,7 @@ When `rancher-monitoring` is installed, the Prometheus Alertmanager UI is deploy
 
 :::note
 
-This section assumes familiarity with how monitoring components work together. For more information about Alertmanager, see [this section.](how-monitoring-works.md#how-alertmanager-works)
+This section assumes familiarity with how monitoring components work together. For more information about Alertmanager, see [this section.](how-monitoring-works.md#3-how-alertmanager-works)
 
 :::
 
