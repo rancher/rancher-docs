@@ -123,9 +123,7 @@ Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 
 ### Windows Nodes
 
-To clean up a Windows node, you can run a cleanup script located in `c:\etc\rancher`. The script deletes Kubernetes generated resources and the execution binary. It also drops the firewall rules and network settings.
-
-To run the script, you can use this command in the PowerShell:
+To clean up a Windows node, run the script in `c:\etc\rancher`. This script deletes Kubernetes-generated resources and the execution binary. It also drops the firewall rules and network settings:
 
 ```
 pushd c:\etc\rancher
@@ -133,13 +131,11 @@ pushd c:\etc\rancher
 popd
 ```
 
-**Result:** The node is reset and can be re-added to a Kubernetes cluster.
+After you run this script, the node is reset and can be re-added to a Kubernetes cluster.
 
 ### Docker Containers, Images, and Volumes
 
-Based on what role you assigned to the node, there are Kubernetes components in containers, containers belonging to overlay networking, DNS, ingress controller and Rancher agent. (and pods you created that have been scheduled to this node)
-
-**To clean all Docker containers, images and volumes:**
+To clean up all Docker containers, images, and volumes on the node, run:
 
 ```
 docker rm -f $(docker ps -qa)
@@ -149,15 +145,13 @@ docker volume rm $(docker volume ls -q)
 
 ### Mounts
 
-Kubernetes components and secrets leave behind mounts on the system that need to be unmounted.
+Kubernetes components and secrets leave behind the following mounts:
 
-| Mounts                                             |
-|----------------------------------------------------|
-| `/var/lib/kubelet/pods/XXX` (miscellaneous mounts) |
-| `/var/lib/kubelet`                                 |
-| `/var/lib/rancher`                                 |
+* `/var/lib/kubelet`
+* `/var/lib/rancher`
+* Miscellaneous mounts in `/var/lib/kubelet/pods/`
 
-**To unmount all mounts:**
+To unmount all mounts, run: 
 
 ```
 for mount in $(mount | grep tmpfs | grep '/var/lib/kubelet' | awk '{ print $3 }') /var/lib/kubelet /var/lib/rancher; do umount $mount; done
@@ -166,10 +160,10 @@ for mount in $(mount | grep tmpfs | grep '/var/lib/kubelet' | awk '{ print $3 }'
 </TabItem>
 <TabItem value="RKE2">
 
-There are two components that need to be removed on nodes of an RKE2 cluster that was provisioned through Rancher:
+You need to remove the following components from Rancher-provisioned RKE2 nodes:
 
-* The rancher-system-agent, which connects to Rancher and installs and manages RKE2
-* RKE2 itself
+* The rancher-system-agent, which connects to Rancher and installs and manages RKE2.
+* RKE2 itself.
 
 ### Removing rancher-system-agent
 
@@ -190,10 +184,10 @@ sudo rke2-uninstall.sh
 </TabItem>
 <TabItem value="K3s">
 
-There are two components that need to be removed on nodes of a K3s cluster that was provisioned through Rancher:
+You need to remove the following components from Rancher-provisioned K3s nodes:
 
-* The rancher-system-agent, which connects to Rancher and installs and manages K3s
-* K3s itself
+* The rancher-system-agent, which connects to Rancher and installs and manages K3s.
+* K3s itself.
 
 ### Removing rancher-system-agent
 
