@@ -32,7 +32,7 @@ The restore operation will work on a cluster that is not in a healthy or active 
 
 :::note Prerequisites:
 
-- The options below are available for [Rancher-launched Kubernetes clusters](../../pages-for-subheaders/launch-kubernetes-with-rancher.md) and [Registered K3s Kubernetes clusters](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md#additional-features-for-registered-k3s-clusters).
+- The options below are available for [Rancher-launched Kubernetes clusters](../../pages-for-subheaders/launch-kubernetes-with-rancher.md) and [Registered K3s Kubernetes clusters](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md#additional-features-for-registered-rke2-and-k3s-clusters).
 - The following options also apply to imported RKE2 clusters that you have registered. If you import a cluster from an external cloud platform but don't register it, you won't be able to upgrade the Kubernetes version from Rancher.
 - Before upgrading Kubernetes, [back up your cluster.](../../pages-for-subheaders/backup-restore-and-disaster-recovery.md)
 
