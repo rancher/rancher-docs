@@ -38,10 +38,6 @@ For migration of installs started with Helm 2, refer to the official [Helm 2 to 
 
 For [air-gapped installs only,](../../../pages-for-subheaders/air-gapped-helm-cli-install.md) collect and populate images for the new Rancher server version. Follow the guide to [populate your private registry](../other-installation-methods/air-gapped-helm-cli-install/publish-images.md) with the images for the Rancher version that you want to upgrade to.
 
-### For upgrades from a Rancher server with a hidden local cluster
-
-If you are upgrading to Rancher v2.5 from a Rancher server that was started with the Helm chart option `--add-local=false`, you will need to drop that flag when upgrading. Otherwise, the Rancher server will not start. The `restricted-admin` role can be used to continue restricting access to the local cluster. For more information, see [this section.](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#upgrading-from-rancher-with-a-hidden-local-cluster)
-
 ### For upgrades with cert-manager older than 0.8.0
 
 [Let's Encrypt will be blocking cert-manager instances older than 0.8.0 starting November 1st 2019.](https://community.letsencrypt.org/t/blocking-old-cert-manager-versions/98753) Upgrade cert-manager to the latest version by following [these instructions.](../resources/upgrade-cert-manager.md)
@@ -136,7 +132,7 @@ There will be more values that are listed with this command. This is just an exa
 :::
 
 
-If you are upgrading cert-manager to the latest version from v1.5 or below, follow the [cert-manager upgrade docs](../resources/upgrade-cert-manager.md#option-c-upgrade-cert-manager-from-versions-1-5-and-below) to learn how to upgrade cert-manager without needing to perform an uninstall or reinstall of Rancher. Otherwise, follow the [steps to upgrade Rancher](#steps-to-upgrade-rancher) below.
+If you are upgrading cert-manager to the latest version from v1.5 or below, follow the [cert-manager upgrade docs](../resources/upgrade-cert-manager.md#option-c-upgrade-cert-manager-from-versions-15-and-below) to learn how to upgrade cert-manager without needing to perform an uninstall or reinstall of Rancher. Otherwise, follow the [steps to upgrade Rancher](#steps-to-upgrade-rancher) below.
 
 #### Steps to Upgrade Rancher
 
