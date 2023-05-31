@@ -22,7 +22,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
 如需查看每个 Rancher 版本的已知问题，请参见 [GitHub](https://github.com/rancher/rancher/releases) 中的发行说明，或查看 [Rancher 论坛](https://forums.rancher.com/c/announcements/12)。
 
-不支持 _升级_ 或 _升级到_ [rancher-alpha 仓库](../../../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#helm-chart-仓库)中的任何 Chart。
+不支持 _升级_ 或 _升级到_ [rancher-alpha 仓库](../resources/choose-a-rancher-version.md#helm-chart-仓库)中的任何 Chart。
 ### Helm 版本
 
 本安装指南假定你使用的是 Helm 3。
@@ -62,7 +62,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
 1. 获取你用来安装 Rancher 的仓库名称。
 
-   关于仓库及其区别，请参见 [Helm Chart Repositories](../installation-references/helm-chart-options.md#helm-chart-仓库)。
+   关于仓库及其区别，请参见 [Helm Chart Repositories](../resources/choose-a-rancher-version.md#helm-chart-仓库)。
 
    - Latest：建议用于试用最新功能
       ```
