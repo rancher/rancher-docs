@@ -2,6 +2,10 @@
 title: Template Enforcement
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/enforce-templates"/>
+</head>
+
 This section describes how template administrators can enforce templates in Rancher, restricting the ability of users to create clusters without a template.
 
 By default, any standard user in Rancher can create clusters. But when RKE template enforcement is turned on,
