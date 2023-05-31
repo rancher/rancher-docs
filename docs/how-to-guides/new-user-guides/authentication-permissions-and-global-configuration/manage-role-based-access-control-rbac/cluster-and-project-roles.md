@@ -228,7 +228,7 @@ If you want to remove a default role, edit the permission and select **No** from
 
 ### Cluster Membership Revocation Behavior
 
-When you revoke the cluster membership for a standard user that's explicitly assigned membership to both the cluster _and_ a project within the cluster, that standard user [loses their cluster roles](#clus-roles) but [retains their project roles](#proj-roles). In other words, although you have revoked the user's permissions to access the cluster and its nodes, the standard user can still:
+When you revoke the cluster membership for a standard user that's explicitly assigned membership to both the cluster _and_ a project within the cluster, that standard user [loses their cluster roles](#cluster-roles) but [retains their project roles](#project-roles). In other words, although you have revoked the user's permissions to access the cluster and its nodes, the standard user can still:
 
 - Access the projects they hold membership in.
 - Exercise any [individual project roles](#project-role-reference) they are assigned.
