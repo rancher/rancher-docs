@@ -30,6 +30,7 @@
                 "getting-started/quick-start-guides/deploy-rancher-manager/hetzner-cloud",
                 "getting-started/quick-start-guides/deploy-rancher-manager/vagrant",
                 "getting-started/quick-start-guides/deploy-rancher-manager/equinix-metal",
+                "getting-started/quick-start-guides/deploy-rancher-manager/outscale-qs",
                 "getting-started/quick-start-guides/deploy-rancher-manager/helm-cli"
               ]
             },
