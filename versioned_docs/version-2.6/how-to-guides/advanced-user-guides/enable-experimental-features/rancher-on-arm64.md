@@ -37,7 +37,7 @@ version's release notes in the following two ways:
 - Importing clusters that contain ARM64 based nodes
   - Kubernetes cluster version must be 1.12 or higher
 
-Please see [Cluster Options](cluster-provisioning/rke-clusters/options/) how to configure the cluster options.
+Please see [Cluster Options](../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md) how to configure the cluster options.
 
 The following features are not tested:
 

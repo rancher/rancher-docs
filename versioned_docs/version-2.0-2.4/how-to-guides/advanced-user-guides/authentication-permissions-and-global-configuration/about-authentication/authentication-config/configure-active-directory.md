@@ -125,7 +125,7 @@ Once you have completed the configuration, proceed by testing the connection to 
 
 In order to successfully configure AD authentication it is crucial that you provide the correct configuration pertaining to the hierarchy and schema of your AD server.
 
-The [`ldapsearch`](http://manpages.ubuntu.com/manpages/artful/man1/ldapsearch.1.html) tool allows you to query your AD server to learn about the schema used for user and group objects.
+The [`ldapsearch`](https://manpages.ubuntu.com/manpages/focal/en/man1/ldapsearch.1.html) tool allows you to query your AD server to learn about the schema used for user and group objects.
 
 For the purpose of the example commands provided below we will assume:
 

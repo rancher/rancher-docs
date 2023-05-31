@@ -82,7 +82,7 @@ rkeEtcd:
 
 **结果**：Monitoring 应用已部署到 `cattle-monitoring-system` 命名空间中。
 
-[创建接收器](../monitoring-v2-configuration-guides/advanced-configuration/alertmanager.md#在-rancher-ui-中创建接收器)时，启用 SSL 的接收器（例如电子邮件或 webhook）将具有 **SSL**，其中包含 **CA 文件路径**、**证书文件路径**和**密钥文件路径**字段。使用 `ca`、`cert` 和 `key` 的路径填写这些字段。路径的格式为 `/etc/alertmanager/secrets/name-of-file-in-secret`。
+[创建接收器](../../../reference-guides/monitoring-v2-configuration/receivers.md#在-rancher-ui-中创建接收器)时，启用 SSL 的接收器（例如电子邮件或 webhook）将具有 **SSL**，其中包含 **CA 文件路径**、**证书文件路径**和**密钥文件路径**字段。使用 `ca`、`cert` 和 `key` 的路径填写这些字段。路径的格式为 `/etc/alertmanager/secrets/name-of-file-in-secret`。
 
 例如，如果你使用以下键值对创建了一个密文：
 
