@@ -125,7 +125,7 @@ Before you run the following commands, first remove the node through the Rancher
 
 To remove a node:
 
-1. Click the **☰** and select **Cluster Management**.
+1. Click **☰** and select **Cluster Management**.
 1. In the table of clusters, click the name of the cluster the node belongs to.
 1. In the **Machine Pool** tab, click the checkbox next to the node's state.
 1. Click **Delete**.
@@ -151,7 +151,11 @@ After you run this script, the node is reset and can be re-added to a Kubernetes
 
 ### Docker Containers, Images, and Volumes
 
+:::caution
+
 Be careful when cleaning up Docker containers. The following command will remove *all* Docker containers, images, and volumes on the node, including non-Rancher related containers:
+
+:::
 
 ```
 docker rm -f $(docker ps -qa)
