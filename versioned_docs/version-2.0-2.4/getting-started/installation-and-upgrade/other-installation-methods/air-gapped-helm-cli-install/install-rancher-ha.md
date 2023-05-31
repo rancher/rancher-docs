@@ -2,7 +2,8 @@
 title: 4. Install Rancher
 ---
 
-<head>
+
+<head> 
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha"/>
 </head>
 

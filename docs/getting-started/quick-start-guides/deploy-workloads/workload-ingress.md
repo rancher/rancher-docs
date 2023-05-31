@@ -2,6 +2,10 @@
 title: Workload with Ingress Quick Start
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-workloads/workload-ingress"/>
+</head>
+
 ### Prerequisite
 
 You have a running cluster with at least 1 node.

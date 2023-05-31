@@ -2,6 +2,10 @@
 title: '3. Install Kubernetes (Skip for Docker Installs)'
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-kubernetes"/>
+</head>
+
 > Skip this section if you are installing Rancher on a single node with Docker.
 
 This section describes how to install a Kubernetes cluster according to our [best practices for the Rancher server environment.](../../../../reference-guides/rancher-manager-architecture/architecture-recommendations.md#environment-for-kubernetes-installations) This cluster should be dedicated to run only the Rancher server.

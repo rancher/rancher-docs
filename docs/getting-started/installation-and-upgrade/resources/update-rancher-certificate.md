@@ -2,6 +2,10 @@
 title: Updating the Rancher Certificate
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/resources/update-rancher-certificate"/>
+</head>
+
 ## Updating a Private CA Certificate
 
 Follow these steps to rotate an SSL certificate and private CA used by Rancher [installed on a Kubernetes cluster](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md), or migrate to an SSL certificate signed by a private CA.

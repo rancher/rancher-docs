@@ -2,6 +2,10 @@
 title: Rancher Equinix Metal Quick Start
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-rancher-manager/equinix-metal"/>
+</head>
+
 ## This tutorial walks you through the following:
 
 - Provisioning an Equinix Metal Server
