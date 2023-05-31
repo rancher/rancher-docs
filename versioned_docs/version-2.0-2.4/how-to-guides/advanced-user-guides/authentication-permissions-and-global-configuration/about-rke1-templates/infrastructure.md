@@ -2,6 +2,10 @@
 title: RKE Templates and Infrastructure
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/infrastructure"/>
+</head>
+
 In Rancher, RKE templates are used to provision Kubernetes and define Rancher settings, while node templates are used to provision nodes.
 
 Therefore, even if RKE template enforcement is turned on, the end user still has flexibility when picking the underlying hardware when creating a Rancher cluster. The end users of an RKE template can still choose an infrastructure provider and the nodes they want to use.
