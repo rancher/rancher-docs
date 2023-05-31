@@ -33,10 +33,6 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
 [仅适用于离线安装](../../../pages-for-subheaders/air-gapped-helm-cli-install.md)：为新的 Rancher Server 版本收集和推送镜像。使用你需要针对 Rancher 版本升级的镜像，按照步骤[推送镜像到私有镜像仓库](../other-installation-methods/air-gapped-helm-cli-install/publish-images.md)。
 
-### 升级 Rancher Server 并使用隐藏的本地集群
-
-如果你从使用 Helm Chart 选项 `--add-local=false` 启动的 Rancher Server 升级到 Rancher 2.5，你需要在升级时取消该标志。否则，Rancher Server 将无法启动。`restricted-admin` 角色可以继续用来限制对本地集群的访问。详情请参见[本章节](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#在-rancher-中使用隐藏的-local-集群进行升级)。
-
 ### 使用 cert-manager 0.8.0 之前的版本升级
 
 [从 2019 年 11 月 1 日开始，Let's Encrypt 已屏蔽早于 0.8.0 的 cert-manager 实例](https://community.letsencrypt.org/t/blocking-old-cert-manager-versions/98753)。因此，请参见[说明](../resources/upgrade-cert-manager.md)把 cert-manager 升级到最新版本。
