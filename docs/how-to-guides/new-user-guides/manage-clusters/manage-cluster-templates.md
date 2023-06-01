@@ -84,7 +84,7 @@ You can update any clusters using a template from the **Apps > Installed Apps** 
 - In order to show in the form for creating new clusters, the cluster template's Helm chart must have the `catalog.cattle.io/type:cluster-template` annotation.
 - In order to use a template as part of continuous delivery/GitOps, the cluster template needs to be deployed in the `fleet-local` namespace of the `local` cluster.
 - All values must be set in the `values.yaml` of the template.
-- Fleet repositories must follow the guidelines on [this page.](https://fleet.rancher.io/gitrepo-content) For RKE2 cluster templates, that means a `fleet.yaml` file must be added to the repository.
+- Fleet repositories must follow these [guidelines](https://fleet.rancher.io/gitrepo-content). For RKE2 cluster templates, that means a `fleet.yaml` file must be added to the repository.
 
 :::
 

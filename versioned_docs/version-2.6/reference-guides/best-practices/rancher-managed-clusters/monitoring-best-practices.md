@@ -8,7 +8,7 @@ The [Rancher monitoring documentation](../../../pages-for-subheaders/monitoring-
 
 ## What to Monitor
 
-Kubernetes itself, as well as applications running inside of it, form a distributed system where different components interact with each other. For the whole system and each individual component, you have to ensure performance, availability, reliability and scalability. A good resource with more details and information is Google's free [Site Reliability Engineering Book](https://sre.google/sre-book/table-of-contents/), especially the chapter about [Monitoring distributed systems](https://sre.google/sre-book/table-of-contents/chapters/monitoring-distributed-systems/).
+Kubernetes itself, as well as applications running inside of it, form a distributed system where different components interact with each other. For the whole system and each individual component, you have to ensure performance, availability, reliability and scalability. A good resource with more details and information is Google's free [Site Reliability Engineering Book](https://sre.google/sre-book/table-of-contents/), especially the chapter about [Monitoring distributed systems](https://sre.google/sre-book/monitoring-distributed-systems/).
 
 ## Configuring Prometheus Resource Usage
 
