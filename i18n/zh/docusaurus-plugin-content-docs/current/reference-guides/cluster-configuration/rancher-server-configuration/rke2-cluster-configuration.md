@@ -9,7 +9,7 @@ title: RKE2 集群配置参考
 你可以通过以下两种方式之一来配置 Kubernetes 选项：
 
 - [Rancher UI](#rancher-ui-中的配置选项)：使用 Rancher UI 来选择设置 Kubernetes 集群时常用的自定义选项。
-- [集群配置文件](#集群配置文件)：高级用户可以创建一个 RKE2 配置文件，而不是使用 Rancher UI 来为集群选择 Kubernetes 选项。配置文件让你能设置更多可用于 RKE2 的其他[安装选项](https://docs.rke2.io/install/configuration)。
+- [集群配置文件](#集群配置文件参考)：高级用户可以创建一个 RKE2 配置文件，而不是使用 Rancher UI 来为集群选择 Kubernetes 选项。配置文件让你能设置更多可用于 RKE2 的其他[安装选项](https://docs.rke2.io/install/configuration)。
 
 ## 在 Rancher UI 中使用表单编辑集群
 
@@ -120,7 +120,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 :::note
 
-如果你要使用的云提供商未作为选项列出，你需要使用[配置文件选项](#集群配置文件)来配置云提供商。请参考[本文档](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/)来了解如何配置云提供商。
+如果你要使用的云提供商未作为选项列出，你需要使用[配置文件选项](#集群配置文件参考)来配置云提供商。请参考[本文档](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/)来了解如何配置云提供商。
 
 :::
 
@@ -182,7 +182,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 要配置[双栈](https://docs.rke2.io/install/network_options#dual-stack-configuration)模式，请输入有效的 IPv4/IPv6 CIDR。例如 `10.42.0.0/16,2001:cafe:42:0::/56`。
 
-使用 `cilium` 或 `multus,cilium` 作为[容器网络](#容器网络)接口提供商时，你需要进行[附加配置](#dual-stack-additional-config)。
+使用 `cilium` 或 `multus,cilium` 作为[容器网络](#容器网络提供商)接口提供商时，你需要进行[附加配置](#dual-stack-additional-config)。
 
 #### Service CIDR
 
@@ -192,7 +192,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 要配置[双栈](https://docs.rke2.io/install/network_options#dual-stack-configuration)模式，请输入有效的 IPv4/IPv6 CIDR。例如 `10.42.0.0/16,2001:cafe:42:0::/56`。
 
-使用 `cilium` 或 `multus,cilium` 作为[容器网络](#容器网络)接口提供商时，你需要进行[附加配置](#dual-stack-additional-config)。
+使用 `cilium` 或 `multus,cilium` 作为[容器网络](#容器网络提供商)接口提供商时，你需要进行[附加配置](#dual-stack-additional-config)。
 
 #### 集群 DNS
 

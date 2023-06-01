@@ -4,7 +4,7 @@ title: Rancher Agent Options
 
 Rancher deploys an agent on each node to communicate with the node. This pages describes the options that can be passed to the agent. To use these options, you will need to [create a cluster with custom nodes](../../../../pages-for-subheaders/use-existing-nodes.md) and add the options to the generated `docker run` command when adding a node.
 
-For an overview of how Rancher communicates with downstream clusters using node agents, refer to the [architecture section.](../../../../pages-for-subheaders/rancher-manager-architecture.md#3-node-agents)
+For an overview of how Rancher communicates with downstream clusters using node agents, refer to the [architecture section.](../../../rancher-manager-architecture/communicating-with-downstream-user-clusters.md#3-node-agents)
 
 ## General options
 
