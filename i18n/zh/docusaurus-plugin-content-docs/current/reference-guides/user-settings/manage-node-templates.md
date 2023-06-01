@@ -5,7 +5,7 @@ title: 管理节点模板
 如果要配置[由基础设施提供商托管](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)的集群，则可以使用[节点模板](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#节点模板)来配置集群节点。这些模板使用 Docker Machine 配置选项来定义节点的操作系统镜像以及设置/参数。你可以在两种情况下创建节点模板：
 
 - [配置节点池集群](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)。
-- 在任何时间使用[用户设置](#使用用户设置创建云凭证)。
+- 在任何时间使用[用户设置](../../pages-for-subheaders/user-settings.md)。
 
 创建节点模板时，它会绑定到你的用户配置文件。节点模板不能在用户之间共享。你可以从用户设置中删除不再使用的旧节点模板。
 
