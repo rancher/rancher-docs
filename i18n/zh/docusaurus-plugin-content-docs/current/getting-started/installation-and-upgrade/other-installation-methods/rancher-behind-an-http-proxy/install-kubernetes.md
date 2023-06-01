@@ -77,7 +77,7 @@ systemctl enable rke2-server.service
 systemctl start rke2-server.service
 ```
 
-有关安装 RKE2 的更多信息，请参阅 [RKE2 安装文档](https://docs.rke2.io/install/)。
+有关安装 RKE2 的更多信息，请参阅 [RKE2 安装文档](https://docs.rke2.io)。
 
 如需查看集群，请运行以下命令：
 
