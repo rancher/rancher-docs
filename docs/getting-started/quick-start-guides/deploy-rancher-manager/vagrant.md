@@ -1,6 +1,11 @@
 ---
 title: Vagrant Quick Start
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-rancher-manager/vagrant"/>
+</head>
+
 The following steps quickly deploy a Rancher Server with a single node cluster attached.
 
 :::caution

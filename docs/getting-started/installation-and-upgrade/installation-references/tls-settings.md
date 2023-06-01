@@ -2,6 +2,10 @@
 title: TLS Settings
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-references/tls-settings"/>
+</head>
+
 Changing the default TLS settings depends on the chosen installation method.
 
 ## Running Rancher in a highly available Kubernetes cluster

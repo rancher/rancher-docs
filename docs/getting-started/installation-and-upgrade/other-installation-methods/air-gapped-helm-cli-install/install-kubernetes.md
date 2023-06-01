@@ -2,6 +2,10 @@
 title: '3. Install Kubernetes (Skip for Docker Installs)'
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-kubernetes"/>
+</head>
+
 :::note
 
 Skip this section if you are installing Rancher on a single node with Docker.

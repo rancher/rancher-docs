@@ -2,6 +2,10 @@
 title: Troubleshooting the Rancher Server Kubernetes Cluster
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/troubleshooting"/>
+</head>
+
 This section describes how to troubleshoot an installation of Rancher on a Kubernetes cluster.
 
 ### Relevant Namespaces

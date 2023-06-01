@@ -2,6 +2,10 @@
 title: Feature Flags
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-references/feature-flags"/>
+</head>
+
 With feature flags, you can try out optional or experimental features, and enable legacy features that are being phased out.
 
 To learn more about feature values and how to enable them, see [Enabling Experimental Features](../../../pages-for-subheaders/enable-experimental-features.md).

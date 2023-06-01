@@ -2,6 +2,10 @@
 title: Installing Rancher on a Google Kubernetes Engine Cluster
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-gke"/>
+</head>
+
 In this section, you'll learn how to install Rancher using Google Kubernetes Engine.
 
 If you already have a GKE Kubernetes cluster, skip to the step about [installing an ingress.](#7-install-an-ingress) Then install the Rancher Helm chart following the instructions on [this page.](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#install-the-rancher-helm-chart)
