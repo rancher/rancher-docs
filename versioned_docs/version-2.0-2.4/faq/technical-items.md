@@ -83,7 +83,7 @@ The Layer-4 Load Balancer is created as `type: LoadBalancer`. In Kubernetes, thi
 
 ### How are the supported Docker versions determined?
 
-We follow the validated Docker versions for upstream Kubernetes releases. The validated versions can be found under [External Dependencies](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.10.md#external-dependencies) in the Kubernetes release CHANGELOG.md.
+We follow the validated Docker versions for upstream Kubernetes releases. The validated versions can be found under [External Dependencies](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.10.md#external-dependencies) in the Kubernetes release CHANGELOG.md.
 
 ### How can I access nodes created by Rancher?
 
