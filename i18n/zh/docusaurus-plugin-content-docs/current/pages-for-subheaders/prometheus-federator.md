@@ -20,7 +20,7 @@ Prometheus Federator 适合在已安装 Prometheus Operator CRD 的集群中与�
 
 1. 在部署此 Chart 时，用户可以创建 ProjectHelmCharts CR，并在**项目 Registration 命名空间 (`cattle-project-<id>`)** 中将 `spec.helmApiVersion` 设置为 `monitoring.cattle.io/v1alpha1`（在 Rancher UI 中也称为“项目监控”）。
 2. 在看到每个 ProjectHelmChartCR 时，Operator 会代表项目所有者在**项目 Release 命名空间 (`cattle-project-<id>-monitoring`)** 中自动部署一个 Project Prometheus 堆栈（基于 ProjectHelmChart 控制器在 **Operator / System Namespace** 中创建的 HelmChart CR 和 HelmRelease CR）。
-3. RBAC 将自动分配到项目 Release 命名空间中，从而允许用户查看 Prometheus、Alertmanager 以及已部署的 Project Monitoring Stack 的 Grafana UI（基于在项目 Registration 命名空间上针对[面向用户的默认 Kubernetes 角色](https://kubernetes.io/docs/reference/access-authn-authmonitoring-alerting/prometheus-federator/rbac#user-facing-roles)定义的 RBAC）。有关详细信息，请参阅[配置 RBAC](../reference-guides/prometheus-federator/rbac.md)。
+3. RBAC 将自动分配到项目 Release 命名空间中，从而允许用户查看 Prometheus、Alertmanager 以及已部署的 Project Monitoring Stack 的 Grafana UI（基于在项目 Registration 命名空间上针对[面向用户的默认 Kubernetes 角色](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles)定义的 RBAC）。有关详细信息，请参阅[配置 RBAC](../reference-guides/prometheus-federator/rbac.md)。
 
 ### 什么是项目？
 

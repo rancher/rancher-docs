@@ -89,7 +89,7 @@ Jaeger 是用于跟踪分布式系统的工具。我们的 Istio 安装程序包
 
 ## 架构
 
-Istio 安装了一个服务网格，它使用 [Envoy](https://www.envoyproxy.io/learn/service-mesh) Sidecar 代理来拦截到每个工作负载的流量。这些 sidecar 拦截并管理服务之间的通信，从而实现精细化观察并控制集群内的流量。
+Istio 安装了一个服务网格，它使用 [Envoy](https://www.envoyproxy.io) Sidecar 代理来拦截到每个工作负载的流量。这些 sidecar 拦截并管理服务之间的通信，从而实现精细化观察并控制集群内的流量。
 
 只有注入了 Istio sidecar 的工作负载可以通过 Istio 进行跟踪和控制。
 
@@ -124,7 +124,7 @@ Istio 安装了一个服务网格，它使用 [Envoy](https://www.envoyproxy.io/
 
 :::note
 
-你可以在新安装的 Istio 上启用 [Jaeger](https://www.jaegertracing.io/[) 和 [Kiali](https://kiali.io/)。为确保 Jaeger 和 Kiali 正常工作，请在安装期间将 `values.yaml` 中的 `installer.releaseMirror.enabled` 设置为 `true`。
+你可以在新安装的 Istio 上启用 [Jaeger](https://www.jaegertracing.io/) 和 [Kiali](https://kiali.io/)。为确保 Jaeger 和 Kiali 正常工作，请在安装期间将 `values.yaml` 中的 `installer.releaseMirror.enabled` 设置为 `true`。
 
 :::
 

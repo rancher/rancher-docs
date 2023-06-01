@@ -99,7 +99,7 @@ Your access to the visualizations depend on your role. Grafana and Prometheus ar
 
 ## Architecture
 
-Istio installs a service mesh that uses [Envoy](https://www.envoyproxy.io/learn/service-mesh) sidecar proxies to intercept traffic to each workload. These sidecars intercept and manage service-to-service communication, allowing fine-grained observation and control over traffic within the cluster.
+Istio installs a service mesh that uses [Envoy](https://www.envoyproxy.io) sidecar proxies to intercept traffic to each workload. These sidecars intercept and manage service-to-service communication, allowing fine-grained observation and control over traffic within the cluster.
 
 Only workloads that have the Istio sidecar injected can be tracked and controlled by Istio.
 
@@ -136,7 +136,7 @@ The Istio pod security policy is now enabled by default. A new value, `installer
 
 :::note
 
-You can enable [Jaeger](https://www.jaegertracing.io/[) and [Kiali](https://kiali.io/) on a fresh Istio install. To ensure that Jaeger and Kiali work, set `installer.releaseMirror.enabled` to `true` in `values.yaml` during installation.
+You can enable [Jaeger](https://www.jaegertracing.io/) and [Kiali](https://kiali.io/) on a fresh Istio install. To ensure that Jaeger and Kiali work, set `installer.releaseMirror.enabled` to `true` in `values.yaml` during installation.
 
 :::
 
