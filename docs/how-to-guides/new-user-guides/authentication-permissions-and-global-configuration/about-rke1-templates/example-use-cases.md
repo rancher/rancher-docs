@@ -2,6 +2,10 @@
 title: Example Scenarios
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases"/>
+</head>
+
 These example scenarios describe how an organization could use templates to standardize cluster creation.
 
 - **Enforcing templates:** Administrators might want to [enforce one or more template settings for everyone](#enforcing-a-template-setting-for-everyone) if they want all new Rancher-provisioned clusters to have those settings.

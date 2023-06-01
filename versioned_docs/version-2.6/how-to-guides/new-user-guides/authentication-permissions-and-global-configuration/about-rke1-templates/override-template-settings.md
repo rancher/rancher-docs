@@ -2,6 +2,10 @@
 title: Overriding Template Settings
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/override-template-settings"/>
+</head>
+
 When a user creates an RKE template, each setting in the template has a switch in the Rancher UI that indicates if users can override the setting. This switch marks those settings as **Allow User Override**.
 
 After a cluster is created with a template, end users can't update any of the settings defined in the template unless the template owner marked them as **Allow User Override**. However, if the template is [updated to a new revision](manage-rke1-templates.md) that changes the settings or allows end users to change them, the cluster can be upgraded to a new revision of the template and the changes in the new revision will be applied to the cluster.
