@@ -119,7 +119,7 @@ users:
 kubectl --kubeconfig ~/.kube/config/rke2.yaml get pods --all-namespaces
 ```
 
-有关 `kubeconfig` 文件的详情，请参见 [RKE2 官方文档](https://docs.rke2.io/cluster_access/)或 [ Kubernetes 官方文档](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)中关于使用 `kubeconfig` 文件管理集群访问的部分。
+有关 `kubeconfig` 文件的详情，请参见 [RKE2 官方文档](https://docs.rke2.io/cluster_access)或 [ Kubernetes 官方文档](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)中关于使用 `kubeconfig` 文件管理集群访问的部分。
 
 ### 4. 检查集群 Pod 的健康状况
 

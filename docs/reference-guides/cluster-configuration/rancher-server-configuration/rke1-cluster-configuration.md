@@ -125,7 +125,7 @@ The authorized cluster endpoint only works on Rancher-launched Kubernetes cluste
 
 This is enabled by default in Rancher-launched Kubernetes clusters, using the IP of the node with the `controlplane` role and the default Kubernetes self signed certificates.
 
-For more detail on how an authorized cluster endpoint works and why it is used, refer to the [architecture section.](../../../pages-for-subheaders/rancher-manager-architecture.md#4-authorized-cluster-endpoint)
+For more detail on how an authorized cluster endpoint works and why it is used, refer to the [architecture section.](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint)
 
 We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.](../../rancher-manager-architecture/architecture-recommendations.md#architecture-for-an-authorized-cluster-endpoint)
 
