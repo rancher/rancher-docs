@@ -46,7 +46,7 @@ Note that in Rancher v2.6.5, RKE2 provisioning became GA.
 
 ### Requirements
 
-If you use RKE2 to set up a cluster, your nodes must meet the [requirements](https://docs.rke2.io/install/requirements/) for nodes in downstream user clusters.
+If you use RKE2 to set up a cluster, your nodes must meet the [requirements](https://docs.rke2.io/install/requirements) for nodes in downstream user clusters.
 
 ### Launching Kubernetes on New Nodes in an Infrastructure Provider
 

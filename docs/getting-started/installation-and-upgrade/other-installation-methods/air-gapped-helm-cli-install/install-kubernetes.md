@@ -2,6 +2,10 @@
 title: '3. Install Kubernetes (Skip for Docker Installs)'
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-kubernetes"/>
+</head>
+
 :::note
 
 Skip this section if you are installing Rancher on a single node with Docker.
@@ -174,7 +178,7 @@ tls-san:
   - loadbalancer-dns-domain.com
 ```
 
-For more information, refer to the [RKE2 documentation](https://docs.rke2.io/install/ha/).
+For more information, refer to the [RKE2 documentation](https://docs.rke2.io/install/ha).
 
 :::note
 
@@ -204,7 +208,7 @@ configs:
       ca_file: <path to the ca file used in the registry>
 ```
 
-For more information on private registries configuration file for RKE2, refer to the [RKE2 documentation.](https://docs.rke2.io/install/containerd_registry_configuration/)
+For more information on private registries configuration file for RKE2, refer to the [RKE2 documentation.](https://docs.rke2.io/install/containerd_registry_configuration)
 
 ### 3. Install RKE2
 
@@ -233,7 +237,7 @@ systemctl enable rke2-server.service
 systemctl start rke2-server.service
 ``
 
-For more information, refer to the [RKE2 documentation](https://docs.rke2.io/install/airgap/).
+For more information, refer to the [RKE2 documentation](https://docs.rke2.io/install/airgap).
 
 ### 4. Save and Start Using the kubeconfig File
 
@@ -273,7 +277,7 @@ users:
 kubectl --kubeconfig ~/.kube/config/rke2.yaml get pods --all-namespaces
 ```
 
-For more information about the `kubeconfig` file, refer to the [RKE2 documentation](https://docs.rke2.io/cluster_access/) or the [official Kubernetes documentation](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) about organizing cluster access using `kubeconfig` files.
+For more information about the `kubeconfig` file, refer to the [RKE2 documentation](https://docs.rke2.io/cluster_access) or the [official Kubernetes documentation](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) about organizing cluster access using `kubeconfig` files.
 
 ### Note on Upgrading
 

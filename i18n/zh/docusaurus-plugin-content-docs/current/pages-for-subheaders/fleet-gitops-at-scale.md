@@ -2,7 +2,7 @@
 title: 使用 Feet 进行持续交付
 ---
 
-使用 Fleet 的持续交付是大规模的 GitOps。你可以使用 Fleet 管理多达一百万个集群。此外，它非常轻量，因此也非常适用于[单个集群](https://fleet.rancher.io/single-cluster-install/)。但是，它在[大规模](https://fleet.rancher.io/multi-cluster-install/)场景下的功能更加强大。大规模指的是大量集群、大量部署或大量团队。
+使用 Fleet 的持续交付是大规模的 GitOps。你可以使用 Fleet 管理多达一百万个集群。此外，它非常轻量，因此也非常适用于[单个集群](https://fleet.rancher.io/installation#default-install)。但是，它在[大规模](https://fleet.rancher.io/installation#configuration-for-multi-cluster)场景下的功能更加强大。大规模指的是大量集群、大量部署或大量团队。
 
 Fleet 是一个独立于 Rancher 的项目，你可以使用 Helm 将它安装在任何 Kubernetes 集群上。
 
@@ -13,7 +13,7 @@ Fleet 是一个独立于 Rancher 的项目，你可以使用 Helm 将它安装�
 
 ## 在 Rancher UI 中访问 Fleet
 
-Fleet 预装在 Rancher 中，可以通过 Rancher UI 中的**持续交付**选项进行管理。有关持续交付和 Fleet 故障排除技巧的更多信息，请参阅[此处](https://fleet.rancher.io/troubleshooting/)。
+Fleet 预装在 Rancher 中，可以通过 Rancher UI 中的**持续交付**选项进行管理。有关持续交付和 Fleet 故障排除技巧的更多信息，请参阅[此处](https://fleet.rancher.io/troubleshooting)。
 
 用户可以通过遵循 **gitops** 的实践，利用持续交付将应用部署到 git 仓库中的 Kubernetes 集群，而无需任何手动操作。
 
@@ -31,7 +31,7 @@ Fleet 预装在 Rancher 中，可以通过 Rancher UI 中的**持续交付**选�
 
 1. 单击左侧导航栏上的 **Git 仓库**将 git 仓库部署到当前工作空间中的集群中。
 
-1. 选择你的 [git 仓库](https://fleet.rancher.io/gitrepo-add/)和[目标集群/集群组](https://fleet.rancher.io/gitrepo-targets/)。你还可以单击左侧导航栏中的**集群组**在 UI 中创建集群组。
+1. 选择你的 [git 仓库](https://fleet.rancher.io/gitrepo-add)和[目标集群/集群组](https://fleet.rancher.io/gitrepo-targets)。你还可以单击左侧导航栏中的**集群组**在 UI 中创建集群组。
 
 1. 部署 git 仓库后，你可以通过 Rancher UI 监控应用。
 

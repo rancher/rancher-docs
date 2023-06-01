@@ -2,6 +2,10 @@
 title: Rollbacks
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks"/>
+</head>
+
 ## Rolling Back to Rancher v2.5.0+
 
 To roll back to Rancher v2.5.0+, use the **Rancher Backups** application and restore Rancher from backup.

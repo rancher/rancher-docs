@@ -3,6 +3,10 @@ title: Port Requirements
 description: Read about port requirements needed in order for Rancher to operate properly, both for Rancher nodes and downstream Kubernetes cluster nodes
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-requirements/port-requirements"/>
+</head>
+
 import PortsIaasNodes from '@site/src/components/PortsIaasNodes'
 import PortsCustomNodes from '@site/src/components/PortsCustomNodes'
 import PortsImportedHosted from '@site/src/components/PortsImportedHosted'

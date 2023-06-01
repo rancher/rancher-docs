@@ -2,6 +2,10 @@
 title: '2. Install Kubernetes'
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-kubernetes"/>
+</head>
+
 Once the infrastructure is ready, you can continue with setting up a Kubernetes cluster to install Rancher in.
 
 The steps to set up RKE, RKE2, or K3s are shown below.
@@ -81,7 +85,7 @@ systemctl enable rke2-server.service
 systemctl start rke2-server.service
 ```
 
-For more information on installing RKE2 see the [RKE2 installation docs](https://docs.rke2.io/install/).
+For more information on installing RKE2 see the [RKE2 documentation](https://docs.rke2.io).
 
 To have a look at your cluster run:
 

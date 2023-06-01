@@ -60,7 +60,7 @@ ClusterIP 是一个虚拟 IP，不会响应 ping。要测试 ClusterIP 是否配
 
 ### 支持的 Docker 版本是如何确定的？
 
-我们遵循上游 Kubernetes 版本验证过的 Docker 版本。如果需要获取验证过的版本，请查看 Kubernetes 版本 CHANGELOG.md 中的 [External Dependencies](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.10.md#external-dependencies)。
+我们遵循上游 Kubernetes 版本验证过的 Docker 版本。如果需要获取验证过的版本，请查看 Kubernetes 版本 CHANGELOG.md 中的 [External Dependencies](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.10.md#external-dependencies)。
 
 ### 如何访问 Rancher 创建的节点？
 
