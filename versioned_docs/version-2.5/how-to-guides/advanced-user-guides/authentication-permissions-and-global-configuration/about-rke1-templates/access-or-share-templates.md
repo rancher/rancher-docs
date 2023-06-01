@@ -2,6 +2,10 @@
 title: Access and Sharing
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/access-or-share-templates"/>
+</head>
+
 If you are an RKE template owner, you can share it with users or groups of users, who can then use the template to create clusters.
 
 Since RKE templates are specifically shared with users and groups, owners can share different RKE templates with different sets of users.

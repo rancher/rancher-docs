@@ -2,6 +2,10 @@
 title: Applying Templates
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/apply-templates"/>
+</head>
+
 You can create a cluster from an RKE template that you created, or from a template that has been [shared with you.](access-or-share-templates.md)
 
 RKE templates can be applied to new clusters.
