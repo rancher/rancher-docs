@@ -52,7 +52,7 @@ Refer to the [instructions provided by the Helm project](https://helm.sh/docs/in
 
 ### 2. Add the Helm Chart Repository
 
-Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher](../getting-started/installation-and-upgrade/resources/choose-a-rancher-version.md).
+Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Rancher Version](../getting-started/installation-and-upgrade/resources/choose-a-rancher-version.md).
 
 - Latest: Recommended for trying out the newest features
     ```
