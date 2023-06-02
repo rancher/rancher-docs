@@ -41,7 +41,7 @@ Logging v2 was tested with SELinux on RHEL/CentOS 7 and 8.
 
 [Security-Enhanced Linux (SELinux)](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) is a security enhancement to Linux. After being historically used by government agencies, SELinux is now industry standard and is enabled by default on CentOS 7 and 8.
 
-To use Logging v2 with SELinux, we recommend installing the `rancher-selinux` RPM according to the instructions on [this page.](../../pages-for-subheaders/selinux-rpm.md)
+To use Logging v2 with SELinux, we recommend installing the `rancher-selinux` RPM according to these [instructions.](../../pages-for-subheaders/selinux-rpm.md)
 
 Then, when installing the logging application, configure the chart to be SELinux aware by changing `global.seLinux.enabled` to `true` in the `values.yaml`.
 
