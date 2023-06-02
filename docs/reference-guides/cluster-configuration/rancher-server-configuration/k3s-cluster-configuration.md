@@ -98,6 +98,14 @@ Select the domain for the cluster. The default is `cluster.local`.
 
 Option to change the range of ports that can be used for [NodePort services](https://kubernetes.io/docs/concepts/services-networking/service/#nodeport). The default is `30000-32767`.
 
+#### Truncate Hostnames
+
+Option to truncate hostnames, for NetBIOS compatibility. Although Kubernetes allows hostnames up to 63 characters in length, Windows systems have a hard limit of 15 characters. 
+
+You can only set this field during the initial creation of the cluster. You can't enable or disable the limit after cluster creation.
+
+The default hostname limit for this field is 15 characters. Once enabled, you can optionally change the hostname limit to a value less than 15 characters.
+
 #### TLS Alternate Names
 
 Add additional hostnames or IPv4/IPv6 addresses as Subject Alternative Names on the server TLS cert.
