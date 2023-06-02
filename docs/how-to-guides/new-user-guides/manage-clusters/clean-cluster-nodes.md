@@ -127,7 +127,7 @@ To remove a node:
 
 1. Click **☰** and select **Cluster Management**.
 1. In the table of clusters, click the name of the cluster the node belongs to.
-1. In the **Machine Pool** tab, click the checkbox next to the node's state.
+1. In the first tab, click the checkbox next to the node's state.
 1. Click **Delete**.
 
 If you remove the entire cluster instead of an individual node, or skip rermoving the node through the Rancher UI, follow these steps:
