@@ -20,7 +20,7 @@ The Rancher version must be v2.5.0 and up.
 
 Refer [here](migrate-rancher-to-new-cluster.md#2-restore-from-backup-using-a-restore-custom-resource) for help on restoring an existing backup file into a v1.22 cluster in Rancher v2.6.3.
 
-### 1. Install the Rancher Backups operator
+### 1. Install the Rancher Backup operator
 
 The backup storage location is an operator-level setting, so it needs to be configured when the Rancher Backups application is installed or upgraded.
 
