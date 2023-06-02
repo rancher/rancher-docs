@@ -14,7 +14,7 @@ To set up storage, follow these steps:
 
 1. [Set up persistent storage.](#1-set-up-persistent-storage)
 2. [Add a PersistentVolume that refers to the persistent storage.](#2-add-a-persistentvolume-that-refers-to-the-persistent-storage)
-3. [Use the PersistentVolume for Pods Deployed with a StatefulSet.](#3-use-the-storage-class-for-pods-deployed-with-a-statefulset)
+3. [Use the Storage Class for Pods Deployed with a StatefulSet.](#3-use-the-storage-class-for-pods-deployed-with-a-statefulset)
 
 ### Prerequisites
 
