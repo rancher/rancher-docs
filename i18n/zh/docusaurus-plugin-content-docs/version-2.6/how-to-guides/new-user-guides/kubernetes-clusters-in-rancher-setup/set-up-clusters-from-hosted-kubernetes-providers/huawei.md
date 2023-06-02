@@ -12,7 +12,7 @@ title: 创建华为 CCE 集群
 
 :::
 
-1. 在华为 CCE 门户中找到你的项目 ID。请参阅 CCE 文档以了解如何[管理你的项目](https://support.huaweicloud.com/en-us/usermanual-iam/en-us_topic_0066738518.html)。
+1. 在华为 CCE 门户中找到你的项目 ID。请参阅 CCE 文档以了解如何[管理你的项目](https://doc.hcs.huawei.com/api/cce/cce_02_0341.html#cce_02_0341__section17571944123214)。
 
 2. 创建一个[访问密钥 ID 和密文访问密钥](https://support.huaweicloud.com/en-us/usermanual-iam/en-us_topic_0079477318.html)。
 
