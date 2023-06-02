@@ -4,7 +4,7 @@ title: vSphere 存储
 
 要为有状态的工作负载提供 vSphere 存储，我们建议创建一个 vSphereVolume StorageClass。当工作负载通过 PersistentVolumeClaim 请求卷时，这种做法会动态调配 vSphere 存储。
 
-为了在 vSphere 中动态调配存储，必须启用 vSphere 提供商。有关更多信息，请参阅[树外 vSphere](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere) 和[树内 vSphere](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere)。
+为了在 vSphere 中动态调配存储，必须启用 vSphere 提供商。有关更多信息，请参阅[树外 vSphere](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere.md) 和[树内 vSphere](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere.md)。
 
 
 ### 先决条件
@@ -28,7 +28,7 @@ title: vSphere 存储
 
    ![](/img/vsphere-storage-class.png)
 
-5. 可选地，你可以在**参数**下指定存储类的其他属性。有关详细信息，请参阅 [vSphere 存储文档](https://vmware.github.io/vsphere-storage-for-kubernetes/documentation/storageclass.html)。
+5. 可选地，你可以在**参数**下指定存储类的其他属性。有关详细信息，请参阅 [vSphere 存储文档](https://github.com/vmware-archive/vsphere-storage-for-kubernetes/blob/master/documentation/storageclass.md)。
 5. 单击**创建**。
 
 ### 创建使用 vSphere 卷的工作负载
@@ -68,5 +68,5 @@ title: vSphere 存储
 
 ### 相关链接
 
-- [用于 Kubernetes 的 vSphere 存储](https://vmware.github.io/vsphere-storage-for-kubernetes/documentation/)
+- [用于 Kubernetes 的 vSphere 存储](https://github.com/vmware-archive/vsphere-storage-for-kubernetes/tree/master/documentation)
 - [Kubernetes 持久卷](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
