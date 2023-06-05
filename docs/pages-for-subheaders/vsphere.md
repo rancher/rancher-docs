@@ -28,7 +28,7 @@ It is not recommended to enable node auto-replace on a node pool of master nodes
 
 Node templates for vSphere have been updated so that when you create a node template with your vSphere credentials, the template is automatically populated with the same options for provisioning VMs that you have access to in the vSphere console.
 
-For the fields to be populated, your setup needs to fulfill the [prerequisites.](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere.md#prerequisites)
+For the fields to be populated, your setup needs to fulfill the [prerequisites.](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere.md#preparation-in-vsphere)
 
 ### More Supported Operating Systems
 

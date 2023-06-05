@@ -110,9 +110,9 @@ The `worker` nodes, which is where your workloads will be deployed on, will typi
 
 Clusters won't begin provisioning until all three node roles (worker, etcd and controlplane) are present.
 
-We recommend the minimum three-node architecture listed in the table below, but you can always add additional Linux and Windows workers to scale up your cluster for redundancy:
+#### Recommended Architecture
 
-<a id="guide-architecture"></a>
+We recommend the minimum three-node architecture listed in the table below, but you can always add additional Linux and Windows workers to scale up your cluster for redundancy:
 
 | Node   | Operating System                                    | Kubernetes Cluster Role(s)                                                                                                                                                                                                                         | Purpose                                                                             |
 | ------ | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
@@ -135,7 +135,7 @@ If you are using the GCE (Google Compute Engine) cloud provider, you must do the
 
 ## Tutorial: How to Create a Cluster with Windows Support
 
-This tutorial describes how to create a Rancher-provisioned cluster with the three nodes in the [recommended architecture.](#guide-architecture)
+This tutorial describes how to create a Rancher-provisioned cluster with the three nodes in the [recommended architecture.](#recommended-architecture)
 
 When you provision a cluster with Rancher on existing nodes, you will add nodes to the cluster by installing the [Rancher agent](../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) on each one. When you create or edit your cluster from the Rancher UI, you will see a **Customize Node Run Command** that you can run on each server to add it to your cluster.
 
@@ -255,7 +255,7 @@ You can add Windows hosts to the cluster by editing the cluster and choosing the
 
 After creating your cluster, you can access it through the Rancher UI. As a best practice, we recommend setting up these alternate ways of accessing your cluster:
 
-- **Access your cluster with the kubectl CLI:** Follow [these steps](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#accessing-clusters-with-kubectl-on-your-workstation) to access clusters with kubectl on your workstation. In this case, you will be authenticated through the Rancher server’s authentication proxy, then Rancher will connect you to the downstream cluster. This method lets you manage the cluster without the Rancher UI.
+- **Access your cluster with the kubectl CLI:** Follow [these steps](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#accessing-clusters-with-kubectl-from-your-workstation) to access clusters with kubectl on your workstation. In this case, you will be authenticated through the Rancher server’s authentication proxy, then Rancher will connect you to the downstream cluster. This method lets you manage the cluster without the Rancher UI.
 - **Access your cluster with the kubectl CLI, using the authorized cluster endpoint:** Follow [these steps](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster) to access your cluster with kubectl directly, without authenticating through the Rancher server. We recommend setting up this alternative method to access your cluster so that in case you can’t connect to Rancher, you can still access the cluster.
 
 ## Configuration for Storage Classes in Azure
