@@ -100,11 +100,11 @@ Option to change the range of ports that can be used for [NodePort services](htt
 
 #### Truncate Hostnames
 
-Option to truncate hostnames, for NetBIOS compatibility. Although Kubernetes allows hostnames up to 63 characters in length, Windows systems have a hard limit of 15 characters. 
+Option to truncate hostnames to 15 characters or less. You can only set this field during the initial creation of the cluster. You can't enable or disable the 15 character limit after cluster creation.
 
-You can only set this field during the initial creation of the cluster. You can't enable or disable the limit after cluster creation.
+Only machine-provisioned clusters are affected. Since custom clusters set hostnames during their own node creation process, which occurs outside of Rancher, this field doesn't restrict custom cluster hostname length.
 
-The default hostname limit for this field is 15 characters. Once enabled, you can optionally change the hostname limit to a value less than 15 characters.
+This field improves compatibility with Windows-based systems. Although Kubernetes allows hostnames up to 63 characters in length, systems that use NetBIOS restrict hostnames to 15 characters or less.
 
 #### TLS Alternate Names
 
