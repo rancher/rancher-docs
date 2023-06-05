@@ -16,6 +16,24 @@ jobs:
           node-version: 18
           cache: yarn
 
+      - name: Get changed files in /docs directory
+        id: changed-files-specific
+        uses: tj-actions/changed-files@v36
+        with:
+          files: docs
+      - name: Copy changes (if any) to /versioned_docs/
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: steps.changed-files-specific.outputs.any_changed == 'true'
+        run: |
+          cp -r ./docs/* ./versioned_docs/version-2.7/
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          git config --global --add --bool push.autoSetupRemote true
+          gh pr checkout ${{ github.event.pull_request.number }}
+          git add ./versioned_docs/version-2.7/
+          git commit -m "Apply change(s) to versioned_docs/version-2.7"
+          git push
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Check links
