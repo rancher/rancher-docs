@@ -38,7 +38,7 @@ Log into your Linux host, and then run the installation command below. When ente
 | `<REGISTRY.YOURDOMAIN.COM:PORT>` | Your private registry URL and port.                                                                                           |
 | `<RANCHER_VERSION_TAG>`          | The release tag of the [Rancher version](../../installation-references/helm-chart-options.md) that you want to install. |
 
-Privileged access is [required.](#privileged-access-for-rancher)
+Privileged access is [required.](./install-rancher-ha.md#privileged-access-for-rancher)
 
 ```
 docker run -d --restart=unless-stopped \
@@ -78,7 +78,7 @@ After creating your certificate, log into your Linux host, and then run the inst
 | `<REGISTRY.YOURDOMAIN.COM:PORT>` | Your private registry URL and port.                                                                                           |
 | `<RANCHER_VERSION_TAG>`          | The release tag of the [Rancher version](../../installation-references/helm-chart-options.md) that you want to install. |
 
-Privileged access is [required.](#privileged-access-for-rancher)
+Privileged access is [required.](./install-rancher-ha.md#privileged-access-for-rancher)
 
 ```
 docker run -d --restart=unless-stopped \
@@ -123,7 +123,7 @@ Use the `--no-cacerts` as argument to the container to disable the default CA ce
 
 :::
 
-Privileged access is [required.](#privileged-access-for-rancher)
+Privileged access is [required.](./install-rancher-ha.md#privileged-access-for-rancher)
 
 ```
 docker run -d --restart=unless-stopped \
