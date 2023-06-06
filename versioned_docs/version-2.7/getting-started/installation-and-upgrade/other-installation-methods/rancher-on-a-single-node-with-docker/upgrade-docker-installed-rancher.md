@@ -16,7 +16,7 @@ The following instructions will guide you through upgrading a Rancher server tha
 
 ## Prerequisites
 
-- **Review the [known upgrade issues](../../install-upgrade-on-a-kubernetes-cluster/upgrades.md#known-upgrade-issues)** section in the Rancher documentation for the most noteworthy issues to consider when upgrading Rancher. A more complete list of known issues for each Rancher version can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums](https://forums.rancher.com/c/announcements/12). Note that upgrades to or from any chart in the [rancher-alpha repository](../../../../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#helm-chart-repositories/) aren’t supported.
+- **Review the [known upgrade issues](../../install-upgrade-on-a-kubernetes-cluster/upgrades.md#known-upgrade-issues)** section in the Rancher documentation for the most noteworthy issues to consider when upgrading Rancher. A more complete list of known issues for each Rancher version can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums](https://forums.rancher.com/c/announcements/12). Note that upgrades to or from any chart in the [rancher-alpha repository](../../resources/choose-a-rancher-version.md#helm-chart-repositories) aren’t supported.
 - **For [air gap installs only,](../../../../pages-for-subheaders/air-gapped-helm-cli-install.md) collect and populate images for the new Rancher server version**. Follow the guide to [populate your private registry](../air-gapped-helm-cli-install/publish-images.md) with the images for the Rancher version that you want to upgrade to.
 
 ## Placeholder Review
@@ -384,7 +384,7 @@ Log into Rancher. Confirm that the upgrade succeeded by checking the version dis
 
 :::note Having network issues in your user clusters following upgrade?
 
-See [Restoring Cluster Networking](/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md).
+See [Restoring Cluster Networking](../../../../../versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md).
 
 :::
 

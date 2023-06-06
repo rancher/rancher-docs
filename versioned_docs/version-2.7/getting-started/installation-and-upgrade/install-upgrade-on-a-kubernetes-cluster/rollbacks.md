@@ -10,9 +10,9 @@ title: Rollbacks
 
 Rancher v2.6.4 upgrades the cluster-api module from v0.4.4 to v1.0.2. Version v1.0.2 of the cluster-api, in turn, upgrades the Cluster API's  Custom Resource Definitions (CRDs) from `cluster.x-k8s.io/v1alpha4` to `cluster.x-k8s.io/v1beta1`. The CRDs upgrade to v1beta1 causes rollbacks to fail when you attempt to move from Rancher v2.6.4 to any previous version of Rancher v2.6.x. This is because CRDs that use the older apiVersion (v1alpha4) are incompatible with v1beta1.
 
-To avoid rollback failure, the following Rancher scripts should be run **before** you attempt a restore operation or rollback:
+To avoid rollback failure, the following Rancher scripts should be run **before** you attempt a restore operation or rollback: 
 
-* `verify.sh`:  Checks for any Rancher-related resources in the cluster.
+* `verify.sh`:  Checks for any Rancher-related resources in the cluster. 
 *  `cleanup.sh`: Cleans up the cluster.
 
 See the [rancher/rancher-cleanup repo](https://github.com/rancher/rancher-cleanup) for more details and source code.
@@ -127,7 +127,7 @@ helm rollback rancher 3 -n cattle-system
 
 ## Rolling Back to Rancher v2.2-v2.4+
 
-To roll back to Rancher before v2.5, follow the procedure detailed here: [Restoring Backups — Kubernetes installs](/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md) Restoring a snapshot of the Rancher server cluster will revert Rancher to the version and state at the time of the snapshot.
+To roll back to Rancher before v2.5, follow the procedure detailed here: [Restoring Backups — Kubernetes installs](../../../../versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md) Restoring a snapshot of the Rancher server cluster will revert Rancher to the version and state at the time of the snapshot.
 
 For information on how to roll back Rancher installed with Docker, refer to [this page.](../other-installation-methods/rancher-on-a-single-node-with-docker/roll-back-docker-installed-rancher.md)
 
@@ -139,4 +139,4 @@ Managed clusters are authoritative for their state. This means restoring the Ran
 
 ## Rolling Back to Rancher v2.0-v2.1
 
-Rolling back to Rancher v2.0-v2.1 is no longer supported. The instructions for rolling back to these versions are preserved [here](/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup/roll-back-to-v2.0-v2.1.md) and are intended to be used only in cases where upgrading to Rancher v2.2+ is not feasible.
+Rolling back to Rancher v2.0-v2.1 is no longer supported. The instructions for rolling back to these versions are preserved [here](../../../../versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup/roll-back-to-v2.0-v2.1.md) and are intended to be used only in cases where upgrading to Rancher v2.2+ is not feasible.

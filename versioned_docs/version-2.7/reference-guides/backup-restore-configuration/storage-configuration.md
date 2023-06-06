@@ -40,7 +40,7 @@ If no such StorageClass is available, after the PV is provisioned, make sure to 
 
 ### Existing Persistent Volume
 
-Select an existing Persistent Volume (PV) that will be used to store your backups. For information about creating PersistentVolumes in Rancher, refer to [this section.](../../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/set-up-existing-storage.md#2-add-a-persistent-volume-that-refers-to-the-persistent-storage)
+Select an existing Persistent Volume (PV) that will be used to store your backups. For information about creating PersistentVolumes in Rancher, refer to [this section.](../../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/set-up-existing-storage.md#2-add-a-persistentvolume-that-refers-to-the-persistent-storage)
 
 :::note Important:
 

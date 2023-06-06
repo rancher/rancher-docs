@@ -8,7 +8,7 @@ In this section, you'll learn how to customize the Grafana dashboard to show met
 
 Before you can customize a Grafana dashboard, the `rancher-monitoring` application must be installed.
 
-To see the links to the external monitoring UIs, including Grafana dashboards, you will need at least a [project-member role.](../../../integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md#users-with-rancher-cluster-manager-based-permissions)
+To see the links to the external monitoring UIs, including Grafana dashboards, you will need at least a [project-member role.](../../../integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md#users-with-rancher-based-permissions)
 
 ### Signing in to Grafana
 

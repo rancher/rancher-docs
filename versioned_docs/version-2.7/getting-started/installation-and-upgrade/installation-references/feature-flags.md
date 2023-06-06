@@ -16,7 +16,7 @@ Some feature flags require a restart of the Rancher container. Features that req
 
 :::
 
-The following is a list of feature flags available in Rancher. If you've upgraded from a previous Rancher version, you may see additional flags in the Rancher UI, such as `proxy` or `dashboard` (both [discontinued](/versioned_docs/version-2.5/reference-guides/installation-references/feature-flags.md)):
+The following is a list of feature flags available in Rancher. If you've upgraded from a previous Rancher version, you may see additional flags in the Rancher UI, such as `proxy` or `dashboard` (both [discontinued](../../../../versioned_docs/version-2.5/reference-guides/installation-references/feature-flags.md)):
 
 - `continuous-delivery`: Allows Fleet GitOps to be disabled separately from Fleet. See [Continuous Delivery.](../../../how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery.md) for more information.
 - `fleet`: The Rancher provisioning framework in v2.6 and later requires Fleet. The flag will be automatically enabled when you upgrade, even if you disabled this flag in an earlier version of Rancher. See [Fleet - GitOps at Scale](../../../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md) for more information.
@@ -31,7 +31,7 @@ The following is a list of feature flags available in Rancher. If you've upgrade
 
 The following table shows the availability and default values for some feature flags in Rancher. Features marked "GA" are generally available:
 
-| Feature Flag Name             | Default Value | Status       | Available As Of |
+| Feature Flag Name             | Default Value | Status       | Available As Of | 
 | ----------------------------- | ------------- | ------------ | --------------- |
 | `continuous-delivery` | `true` | GA | v2.6.0 |
 | `fleet`  | `true` | Can no longer be disabled | v2.6.0 |
