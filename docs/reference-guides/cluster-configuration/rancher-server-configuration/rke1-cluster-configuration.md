@@ -183,6 +183,16 @@ Clusters that were created before Kubernetes 1.16 will have an `ingress-nginx` `
 
 If the `updateStrategy` of `ingress-nginx` is `OnDelete`, you will need to delete these pods to get the correct version for your deployment.
 
+### Cluster Agent Configuration and Fleet Agent Configuration
+
+You can customize the scheduling fields and resource limits for the cluster agent, and for the cluster's Fleet agent. You can use this feature to customize cluster tolerations, affinity rules, and resource requirments. Your customizations will override pre-existing rules and default settings.
+
+:::note
+It's possible to override rules that are required for the functioning of the cluster. For example, 
+the `affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution` rule for `cattle-cluster-agent` prevents agent pods from running on Windows nodes. We strongly recommend against removing `affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution` or other affinity rules that you're unsure about.
+:::
+
+If Rancher is downgraded to a version that doesn't have your custom fields, the values in these fields will be lost and the agents will redeploy without your customizations. The Fleet agent will fallback to using its built-in default values when it redeploys. If the Fleet version doesn't change during the downgrade, the redeployment won't be immediate.
 
 
 ## RKE Cluster Config File Reference
