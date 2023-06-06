@@ -21,4 +21,4 @@ jobs:
       - name: Check links
         run: yarn run remark --quiet --use remark-validate-links --use remark-lint-no-dead-urls ./docs
       - name: Test build website
-        run: yarn build
+        run: yarn build --no-minify
