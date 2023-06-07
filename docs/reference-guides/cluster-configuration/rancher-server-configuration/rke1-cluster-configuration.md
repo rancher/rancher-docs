@@ -185,14 +185,17 @@ If the `updateStrategy` of `ingress-nginx` is `OnDelete`, you will need to delet
 
 ### Cluster Agent Configuration and Fleet Agent Configuration
 
-You can customize the scheduling fields and resource limits for the cluster agent, and for the cluster's Fleet agent. You can use this feature to customize cluster tolerations, affinity rules, and resource requirments. Your customizations will override pre-existing rules and default settings.
+You can configure the cluster agent and the cluster's Fleet agent with custom scheduling fields. You can use these  fields to set custom tolerations, affinity rules, and resource requirments or limits for the cluster. Your customizations override any pre-existing rules and default settings.
 
 :::note
-It's possible to override rules that are required for the functioning of the cluster. For example, 
-the `affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution` rule for `cattle-cluster-agent` prevents agent pods from running on Windows nodes. We strongly recommend against removing `affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution` or other affinity rules that you're unsure about.
+With this option, it's possible to override or remove rules that are required for the functioning of the cluster. We strongly recommend against removing or overriding the following affinity rules, as this may cause unwanted side effects:
+
+- `affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution` for `cattle-cluster-agent`
+- `cluster-agent-default-affinity` for `cattle-cluster-agent`
+- `fleet-agent-default-affinity` for `fleet-agent`
 :::
 
-If Rancher is downgraded to a version that doesn't have your custom fields, the values in these fields will be lost and the agents will redeploy without your customizations. The Fleet agent will fallback to using its built-in default values when it redeploys. If the Fleet version doesn't change during the downgrade, the redeployment won't be immediate.
+If you downgrade Rancher to a version that doesn't have your custom fields, your changes will be lost and the agents will redeploy without your customizations. The Fleet agent will fallback to using its built-in default values when it redeploys. If the Fleet version doesn't change during the downgrade, the redeployment won't be immediate.
 
 
 ## RKE Cluster Config File Reference
