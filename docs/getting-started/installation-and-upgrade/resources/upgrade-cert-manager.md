@@ -19,7 +19,7 @@ To address these changes, this guide will do two things:
 
 :::note Important:
 
-If you are upgrading cert-manager to the latest version from a version older than 1.5, follow the steps in [Option C](#option-c-upgrade-to-new-cert-manager-from-versions-15-and-below) below to do so. Note that you do not need to reinstall Rancher to perform this upgrade.
+If you are upgrading cert-manager to the latest version from a version older than 1.5, follow the steps in [Option C](#option-c-upgrade-cert-manager-from-versions-15-and-below) below to do so. Note that you do not need to reinstall Rancher to perform this upgrade.
 
 :::
 

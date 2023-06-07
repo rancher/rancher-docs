@@ -49,7 +49,7 @@ title: vSphere 节点模板配置
 
 在**创建方法**字段中，配置用于在 vSphere 中配置 VM 的方法。可用的选项包括创建从 RancherOS ISO 启动的 VM，或通过从现有虚拟机或 [VM 模板](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-F7BF0E6B-7C4F-4E46-8BBF-76229AEA7220.html)克隆来创建 VM。
 
-现有 VM 或模板可以使用任何现代 Linux 操作系统，该操作系统配置为使用 [NoCloud 数据源](https://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html)来支持 [cloud-init](https://cloudinit.readthedocs.io/en/latest/)。
+现有 VM 或模板可以使用任何现代 Linux 操作系统，该操作系统配置为使用 [NoCloud 数据源](https://canonical-cloud-init.readthedocs-hosted.com/en/latest/reference/datasources/nocloud.html)来支持 [cloud-init](https://cloudinit.readthedocs.io/en/latest/)。
 
 选择创建 VM 的方式：
 

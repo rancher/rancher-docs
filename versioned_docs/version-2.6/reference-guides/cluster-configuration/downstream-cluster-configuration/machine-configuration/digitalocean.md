@@ -6,7 +6,7 @@ For more details about DigitalOcean, Droplets, refer to the [official documentat
 
 ### Region
 
-Configure the [region](https://docs.digitalocean.com/products/app-platform/concepts/region/) where Droplets are created.
+Configure the [region](https://docs.digitalocean.com/glossary/region/) where Droplets are created.
 
 ### Size
 

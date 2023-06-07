@@ -115,4 +115,4 @@ After cloud credentials are created, the user can start [managing the cloud cred
 
 ## Node Drivers
 
-If you don't find the node driver that you want to use, you can see if it is available in Rancher's built-in [node drivers and activate it](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#activating-deactivating-node-drivers), or you can [add your own custom node driver](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#adding-custom-node-drivers).
+If you don't find the node driver that you want to use, you can see if it is available in Rancher's built-in [node drivers and activate it](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#activatingdeactivating-node-drivers), or you can [add your own custom node driver](../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#adding-custom-node-drivers).

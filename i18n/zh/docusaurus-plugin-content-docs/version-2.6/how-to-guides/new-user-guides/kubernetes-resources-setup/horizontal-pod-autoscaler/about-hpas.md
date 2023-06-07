@@ -36,4 +36,4 @@ HPA 实现为一个控制循环，其周期由以下 `kube-controller-manager` �
 
 HPA 是 Kubernetes `autoscaling` API 组中的 API 资源。当前的稳定版本是 `autoscaling/v1`，它只支持对 CPU 自动扩缩。要获得内存和自定义指标的扩缩支持，请改用 beta 版本 `autoscaling/v2beta1`。
 
-有关 HPA API 对象的更多信息，请参阅 [HPA GitHub 自述文件](https://git.k8s.io/community/contributors/design-proposals/autoscaling/horizontal-pod-autoscaler.md#horizontalpodautoscaler-object)。
+有关 HPA API 对象的更多信息，请参阅 [HPA GitHub 自述文件](https://github.com/kubernetes/design-proposals-archive/blob/main/autoscaling/horizontal-pod-autoscaler.md#horizontalpodautoscaler-object)。

@@ -31,4 +31,4 @@ To skip tests, you will create a custom CIS scan profile. A profile contains the
 
 **Result:** A new CIS scan profile is created.
 
-When you [run a scan](#running-a-scan) that uses this profile, the defined tests will be skipped during the scan. The skipped tests will be marked in the generated report as `Skip`.
+When you [run a scan](./run-a-scan.md) that uses this profile, the defined tests will be skipped during the scan. The skipped tests will be marked in the generated report as `Skip`.

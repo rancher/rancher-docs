@@ -121,11 +121,25 @@ Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 <Tabs>
 <TabItem value="RKE1">
 
+Before you run the following commands, first remove the node through the Rancher UI.
+
+To remove a node:
+
+1. Click **☰** and select **Cluster Management**.
+1. In the table of clusters, click the name of the cluster the node belongs to.
+1. In the first tab, click the checkbox next to the node's state.
+1. Click **Delete**.
+
+If you remove the entire cluster instead of an individual node, or skip rermoving the node through the Rancher UI, follow these steps:
+
+1. [Remove](#docker-containers-images-and-volumes) the Docker containers from the node and [unmount](#mounts) any volumes.
+1. Reboot the node.
+1. [Remove](#directories-and-files) any remaining files.
+1. Confirm that network interfaces and IP tables were properly cleaned after the reboot. If not, reboot one more time.
+
 ### Windows Nodes
 
-To clean up a Windows node, you can run a cleanup script located in `c:\etc\rancher`. The script deletes Kubernetes generated resources and the execution binary. It also drops the firewall rules and network settings.
-
-To run the script, you can use this command in the PowerShell:
+To clean up a Windows node, run the script in `c:\etc\rancher`. This script deletes Kubernetes-generated resources and the execution binary. It also drops the firewall rules and network settings:
 
 ```
 pushd c:\etc\rancher
@@ -133,13 +147,15 @@ pushd c:\etc\rancher
 popd
 ```
 
-**Result:** The node is reset and can be re-added to a Kubernetes cluster.
+After you run this script, the node is reset and can be re-added to a Kubernetes cluster.
 
 ### Docker Containers, Images, and Volumes
 
-Based on what role you assigned to the node, there are Kubernetes components in containers, containers belonging to overlay networking, DNS, ingress controller and Rancher agent. (and pods you created that have been scheduled to this node)
+:::caution
 
-**To clean all Docker containers, images and volumes:**
+Be careful when cleaning up Docker containers. The following command will remove *all* Docker containers, images, and volumes on the node, including non-Rancher related containers:
+
+:::
 
 ```
 docker rm -f $(docker ps -qa)
@@ -149,15 +165,13 @@ docker volume rm $(docker volume ls -q)
 
 ### Mounts
 
-Kubernetes components and secrets leave behind mounts on the system that need to be unmounted.
+Kubernetes components and secrets leave behind the following mounts:
 
-| Mounts                                             |
-|----------------------------------------------------|
-| `/var/lib/kubelet/pods/XXX` (miscellaneous mounts) |
-| `/var/lib/kubelet`                                 |
-| `/var/lib/rancher`                                 |
+* `/var/lib/kubelet`
+* `/var/lib/rancher`
+* Miscellaneous mounts in `/var/lib/kubelet/pods/`
 
-**To unmount all mounts:**
+To unmount all mounts, run: 
 
 ```
 for mount in $(mount | grep tmpfs | grep '/var/lib/kubelet' | awk '{ print $3 }') /var/lib/kubelet /var/lib/rancher; do umount $mount; done
@@ -166,10 +180,10 @@ for mount in $(mount | grep tmpfs | grep '/var/lib/kubelet' | awk '{ print $3 }'
 </TabItem>
 <TabItem value="RKE2">
 
-There are two components that need to be removed on nodes of an RKE2 cluster that was provisioned through Rancher:
+You need to remove the following components from Rancher-provisioned RKE2 nodes:
 
-* The rancher-system-agent, which connects to Rancher and installs and manages RKE2
-* RKE2 itself
+* The rancher-system-agent, which connects to Rancher and installs and manages RKE2.
+* RKE2 itself.
 
 ### Removing rancher-system-agent
 
@@ -190,10 +204,10 @@ sudo rke2-uninstall.sh
 </TabItem>
 <TabItem value="K3s">
 
-There are two components that need to be removed on nodes of a K3s cluster that was provisioned through Rancher:
+You need to remove the following components from Rancher-provisioned K3s nodes:
 
-* The rancher-system-agent, which connects to Rancher and installs and manages K3s
-* K3s itself
+* The rancher-system-agent, which connects to Rancher and installs and manages K3s.
+* K3s itself.
 
 ### Removing rancher-system-agent
 

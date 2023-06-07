@@ -6,7 +6,7 @@ title: DigitalOcean 主机配置
 
 ### 区域
 
-配置创建 Droplet 的[区域](https://docs.digitalocean.com/products/app-platform/concepts/region/)。
+配置创建 Droplet 的[区域](https://docs.digitalocean.com/glossary/region/)。
 
 ### 大小
 

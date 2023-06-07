@@ -125,7 +125,7 @@ After cloud credentials are created, the user can start [managing the cloud cred
 
 ### Node Drivers
 
-If you don't find the node driver that you want to use, you can see if it is available in Rancher's built-in [node drivers and activate it](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#activating-deactivating-node-drivers), or you can [add your own custom node driver](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#adding-custom-node-drivers).
+If you don't find the node driver that you want to use, you can see if it is available in Rancher's built-in [node drivers and activate it](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#activatingdeactivating-node-drivers), or you can [add your own custom node driver](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#adding-custom-node-drivers).
 
 ## RKE2 Clusters
 
@@ -133,7 +133,7 @@ Rancher v2.6 introduces provisioning for [RKE2](https://docs.rke2.io/) clusters 
 
 :::note
 
-For RKE2 cluster templates, please refer to [this page](../how-to-guides/new-user-guides/manage-clusters/manage-cluster-templates.md#rke2-cluster-template) for additional information. 
+For RKE2 cluster templates, please refer to [this page](../how-to-guides/new-user-guides/manage-clusters/manage-cluster-templates.md#rke2-cluster-template) for additional information.
 
 :::
 
