@@ -127,7 +127,12 @@ module.exports = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: 'v2.7'
+              label: 'Latest'
+            },
+            2.7: {
+              label: 'v2.7',
+              path: 'v2.7',
+              banner: 'none'
             },
             2.6: {
               label: 'v2.6',
@@ -161,38 +166,6 @@ module.exports = {
       {
         fromExtensions: ['html', 'htm'],
         redirects: [
-          { // Redirects for links in UI (start)
-            to: '/faq/telemetry/',
-            from: '/v2.7/faq/telemetry/'
-          },
-          {
-            to: '/pages-for-subheaders/monitoring-v2-configuration',
-            from: '/v2.7/pages-for-subheaders/monitoring-v2-configuration'
-          },
-          {
-            to: '/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences',
-            from: '/v2.7/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences'
-          },
-          {
-            to: '/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/alertmanager',
-            from: '/v2.7/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/alertmanager'
-          },
-          {
-            to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-google-oauth',
-            from: '/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-google-oauth'
-          }, // Redirects for links in UI (end)
-          { // Redirects for AWS Marketplace (start)
-            to: '/integrations-in-rancher/cloud-marketplace/supportconfig',
-            from: '/v2.7/integrations-in-rancher/cloud-marketplace/supportconfig'
-          },
-          {
-            to: '/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements',
-            from: '/v2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements'
-          },
-          {
-            to: '/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter',
-            from: '/v2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter'
-          }, // Redirects for AWS Marketplace (end)
           { // Redirects for restructure from PR #234 (start)
             to: '/faq/general-faq',
             from: '/faq'
