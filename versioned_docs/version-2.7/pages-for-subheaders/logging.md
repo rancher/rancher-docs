@@ -5,8 +5,6 @@ description: Rancher integrates with popular logging services. Learn the require
 
 The [Logging operator](https://kube-logging.github.io/docs/) now powers Rancher's logging solution in place of the former, in-house solution.
 
-For an overview of the changes in v2.5, see [this section.](../integrations-in-rancher/logging/logging-architecture.md#changes-in-rancher-v2-5)
-
 ## Enabling Logging
 
 You can enable the logging for a Rancher managed cluster by going to the Apps page and installing the logging app.
@@ -59,9 +57,8 @@ For a list of options that can be configured when the logging application is ins
 
 ### Windows Support
 
-Logging support for Windows clusters is available and logs can be collected from Windows nodes.
+You can [enable logging](../integrations-in-rancher/logging/logging-helm-chart-options.md#enabledisable-windows-node-logging) from Windows nodes.
 
-For details on how to enable or disable Windows node logging, see [this section.](../integrations-in-rancher/logging/logging-helm-chart-options.md#enable-disable-windows-node-logging)
 
 ### Working with a Custom Docker Root Directory
 
@@ -86,7 +83,7 @@ By default, Rancher collects logs for control plane components and node componen
 
 ### The Logging Buffer Overloads Pods
 
-Depending on your configuration, the default buffer size may be too large and cause pod failures. One way to reduce the load is to lower the logger's flush interval. This prevents logs from overfilling the buffer. You can also add more flush threads to handle moments when many logs are attempting to fill the buffer at once. 
+Depending on your configuration, the default buffer size may be too large and cause pod failures. One way to reduce the load is to lower the logger's flush interval. This prevents logs from overfilling the buffer. You can also add more flush threads to handle moments when many logs are attempting to fill the buffer at once.
 
 For a more complete description of how to configure the logging buffer to suit your organization's needs, see the official Logging operator documentation on [buffers](https://kube-logging.github.io/docs/configuration/plugins/outputs/buffer/) and on [Fluentd configuration](https://kube-logging.github.io/docs/logging-infrastructure/fluentd/).
 
