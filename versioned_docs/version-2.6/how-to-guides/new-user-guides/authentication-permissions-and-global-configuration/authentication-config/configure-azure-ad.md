@@ -2,6 +2,10 @@
 title: Configure Azure AD
 ---
 
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-azure-ad">
+</head>
+
  <Tabs>
    <TabItem value="Rancher v2.6.7+">
 
