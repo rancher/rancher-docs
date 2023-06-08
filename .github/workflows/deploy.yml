@@ -21,6 +21,8 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build website
+        env:
+          NODE_OPTIONS: "--max_old_space_size=6144"
         run: yarn build --no-minify
 
       # Popular action to deploy to GitHub Pages:
