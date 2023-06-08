@@ -57,9 +57,8 @@ For a list of options that can be configured when the logging application is ins
 
 ### Windows Support
 
-Logging support for Windows clusters is available and logs can be collected from Windows nodes.
+You can [enable logging](../integrations-in-rancher/logging/logging-helm-chart-options.md#enabledisable-windows-node-logging) from Windows nodes.
 
-For details on how to enable or disable Windows node logging, see [this section.](../integrations-in-rancher/logging/logging-helm-chart-options.md#enabledisable-windows-node-logging)
 
 ### Working with a Custom Docker Root Directory
 
