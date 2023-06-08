@@ -2,6 +2,10 @@
 title: Configure GitHub
 ---
 
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-github">
+</head>
+
 In environments using GitHub, you can configure Rancher to allow sign on using GitHub credentials.
 
 :::note Prerequisites:
