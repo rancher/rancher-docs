@@ -1,6 +1,10 @@
 ---
-title: Configuring Okta (SAML)
+title: Configure Okta (SAML)
 ---
+
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-okta-saml">
+</head>
 
 _Available as of v2.2.0_
 
