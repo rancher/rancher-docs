@@ -2,9 +2,11 @@
 title: Custom Branding
 ---
 
-Rancher v2.6 introduced the ability to customize Rancher’s branding and navigation links.
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding">
+</head>
 
-## Changing Brand Settings
+Rancher v2.6 introduced the ability to customize Rancher’s branding and navigation links.
 
 :::note Prerequisite:
 
@@ -12,16 +14,16 @@ You will need to have at least cluster member permissions.
 
 :::
 
+## Brand Configuration
+
 To configure the brand settings,
 
 1. Click **☰ > Global settings**.
 2. Click **Branding**.
 
-## Brand Configuration
-
 ### Private Label Company Name
 
-This option replaces “Rancher” with the value you provide in most places. Files that need to have Rancher in the name, such as “rancher-compose.yml”, will not be changed.
+This option replaces "Rancher" with the value you provide in most places. Files that need to have Rancher in the name, such as `rancher-compose.yml`, won't be changed.
 
 ### Support Links
 
