@@ -325,8 +325,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/pages-for-subheaders/rancher-on-a-single-node-with-docker.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "lastUpdatedAt": 1686259629,
+    "formattedLastUpdatedAt": "Jun 8, 2023",
     "frontMatter": {
         "title": "Installing Rancher on a Single Node Using Docker",
         "description": "For development and testing environments only, use a Docker install. Install Docker on a single Linux host, and deploy Rancher with a single Docker container."
@@ -486,7 +486,7 @@ function MDXContent(_param) {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "#option-d-let-s-encrypt-certificate"
+        "href": "#option-d-lets-encrypt-certificate"
     }, `Option D: Let's Encrypt Certificate`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {

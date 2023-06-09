@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/pages-for-subheaders/node-template-configuration.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "lastUpdatedAt": 1686259629,
+    "formattedLastUpdatedAt": "Jun 8, 2023",
     "frontMatter": {
         "title": "Node Template Configuration"
     },
@@ -354,19 +354,19 @@ function MDXContent(_param) {
         mdxType: "MDXLayout"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To learn about node template config, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/amazon-ec2"
+        "href": "/v2.7/reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/amazon-ec2"
     }, `EC2 Node Template Configuration`), `, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/digitalocean"
+        "href": "/v2.7/reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/digitalocean"
     }, `DigitalOcean Node Template Configuration`), `, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/azure"
+        "href": "/v2.7/reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/azure"
     }, `Azure Node Template Configuration`), `, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere"
+        "href": "/v2.7/reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere"
     }, `vSphere Node Template Configuration`), `, and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/nutanix"
+        "href": "/v2.7/reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/nutanix"
     }, `Nutanix Node Template Configuration`), `.`));
 }
 MDXContent.isMDXComponent = true;
