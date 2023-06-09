@@ -2,8 +2,12 @@
 title: Pod Security Policies
 ---
 
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies">
+</head>
+
 :::caution
-Pod Security Policy is only available in Kubernetes until v1.24. [Pod Security Standards](pod-security-standards.md) are the built-in alternative.
+Pod Security Policies are only available in Kubernetes until v1.24. [Pod Security Standards](pod-security-standards.md) are the built-in alternative.
 :::
 
 [Pod Security Policies (PSPs)](https://kubernetes.io/docs/concepts/security/pod-security-policy/) are objects that control security-sensitive aspects of the pod specification (such as root privileges).
