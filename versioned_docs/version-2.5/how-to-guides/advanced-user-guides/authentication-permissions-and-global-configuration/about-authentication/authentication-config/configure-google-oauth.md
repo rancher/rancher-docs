@@ -3,7 +3,7 @@ title: Configuring Google OAuth
 ---
 
 <head> 
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-google-oauth">
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-google-oauth"/>
 </head>
 
 If your organization uses G Suite for user authentication, you can configure Rancher to allow your users to log in using their G Suite credentials.
