@@ -3,7 +3,7 @@ title: OpenLDAP Configuration Reference
 ---
 
 <head> 
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-openldap/openldap-config-reference">
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-openldap/openldap-config-reference"/>
 </head>
 
 For further details on configuring OpenLDAP authentication, refer to the [official documentation.](https://www.openldap.org/doc/)
