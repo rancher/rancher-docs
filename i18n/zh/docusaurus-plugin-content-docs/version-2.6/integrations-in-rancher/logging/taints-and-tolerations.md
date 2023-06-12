@@ -12,7 +12,7 @@ title: 处理污点和容忍度
 
 两者都能让 pod 选择在哪个节点上运行。
 
-- [Rancher Logging 堆栈中的默认实现](#rancher-日志堆栈中的默认实现)
+- [Rancher 日志堆栈中的默认实现](#rancher-日志堆栈中的默认实现)
 - [为自定义污点添加 NodeSelector 设置和容忍度](#为自定义污点添加-nodeselector-设置和容忍度)
 
 

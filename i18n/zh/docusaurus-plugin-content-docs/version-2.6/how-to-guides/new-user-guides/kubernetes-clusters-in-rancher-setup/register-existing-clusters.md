@@ -35,6 +35,10 @@ kubectl create clusterrolebinding cluster-admin-binding \
 
 EKS 集群必须至少有一个托管节点组才能导入 Rancher 或通过 Rancher 进行配置。
 
+### GKE 集群
+
+GKE 集群必须在 Standard 模式下运行。不支持 GKE Autopilot 集群。有关 GKE 模式之间差异，请参阅[比较 GKE Autopilot 和 Standard](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison)。
+
 ## 注册集群
 
 1. 点击 **☰ > 集群管理**。

@@ -87,7 +87,7 @@ Rancher Logging 有两个角色，分别是 `logging-admin` 和 `logging-view`�
 
 Windows 集群支持 Logging，你可以收集 Windows 节点的日志。
 
-有关如何在 Windows 节点上启用或禁用 Logging 的详细信息，请参阅[本节](../integrations-in-rancher/logging/logging-helm-chart-options.md#启用/禁用-windows-节点-logging)。
+有关如何在 Windows 节点上启用或禁用 Logging 的详细信息，请参阅[本节](../integrations-in-rancher/logging/logging-helm-chart-options.md#启用禁用-windows-节点-logging)。
 
 ### 使用自定义 Docker 根目录
 

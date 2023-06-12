@@ -321,7 +321,7 @@ title: 通过 AWS EC2 Auto Scaling 组使用 Cluster Autoscaler
 
 #### 部署
 
-基于 [cluster-autoscaler-run-on-master.yaml](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-run-on-master.yaml) 示例，我们已经创建了自己的 `cluster-autoscaler-deployment.yaml` 以使用首选的 [auto-discovery 设置](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler/cloudprovider/aws#auto-discovery-setup)，更新容忍度、nodeSelector、镜像版本和命令配置：
+基于 [cluster-autoscaler-run-on-control-plane.yaml](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-run-on-control-plane.yaml) 示例，我们已经创建了自己的 `cluster-autoscaler-deployment.yaml` 以使用首选的 [auto-discovery 设置](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler/cloudprovider/aws#auto-discovery-setup)，更新容忍度、nodeSelector、镜像版本和命令配置：
 
 
 ```yml

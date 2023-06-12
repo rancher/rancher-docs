@@ -29,7 +29,7 @@ kubectl create clusterrolebinding cluster-admin-binding \
 
 ### EKS、AKS 和 GKE 集群
 
-要成功将这些集群导入 Rancher 或从 Rancher 中配置它们，Elastic Kubernetes Service (EKS)、Azure Kubernetes Service (AKS) 和 Google Kubernetes Engine (GKE) 集群必须至少有一个托管节点组。
+要成功将这些集群导入 Rancher 或从 Rancher 中配置它们，Elastic Kubernetes Service (EKS)、Azure Kubernetes Service (AKS) 和 Google Kubernetes Engine (GKE) 集群必须至少有一个托管节点组。此外，不支持 GKE Autopilot 集群。有关 GKE 模式之间差异，请参阅[比较 GKE Autopilot 和 Standard](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison)。
 
 ## 注册集群
 

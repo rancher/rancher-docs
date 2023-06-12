@@ -311,7 +311,7 @@ SUSE Linux 可能有一个防火墙，默认情况下会阻止所有端口。要
    sudo yast2
    ```
 
-1. 导航到**安全和用户** > **防火墙** > **区域：公共** > **端口**。要在界面内导航，请参照[指示](https://doc.opensuse.org/documentation/leap/reference/html/book-reference/cha-yast-text.html#sec-yast-cli-navigate)。
+1. 导航到**安全和用户** > **防火墙** > **区域：公共** > **端口**。要在界面内导航，请参照[说明](https://doc.opensuse.org/documentation/leap/reference/html/book-reference/cha-yast-text.html#sec-yast-cli-navigate)。
 1. 要打开所需的端口，把它们输入到 **TCP 端口** 和 **UDP 端口** 字段。在这个例子中，端口 9796 和 10250 也被打开，用于监控。由此产生的字段应类似于以下内容：
    ```yaml
    TCP Ports

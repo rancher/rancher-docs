@@ -125,7 +125,7 @@ Rancher 可以自动替换节点池中无法访问的节点。如果节点在指
 
 ### 主机驱动
 
-如果你找不到想要的主机驱动，你可以在 Rancher 的[内置主机驱动](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#激活/停用主机驱动)中查看并激活它，也可以[添加自定义主机驱动](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#添加自定义主机驱动)。
+如果你找不到想要的主机驱动，你可以在 Rancher 的[内置主机驱动](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#激活停用主机驱动)中查看并激活它，也可以[添加自定义主机驱动](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#添加自定义主机驱动)。
 
 ## RKE2 集群
 

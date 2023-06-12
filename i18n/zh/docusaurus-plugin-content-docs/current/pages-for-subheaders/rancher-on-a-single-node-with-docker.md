@@ -47,7 +47,7 @@ Rancher backup operator 可将 Rancher 从单个 Docker 容器迁移到高可用
 - [选项 A：使用 Rancher 生成的默认自签名证书](#选项-a：使用-rancher-生成的默认自签名证书)
 - [选项 B：使用你自己的证书 - 自签名](#选项-b：使用你自己的证书---自签名)
 - [选项 C：使用你自己的证书 - 可信 CA 签名的证书](#选项-c：使用你自己的证书---可信-ca-签名的证书)
-- [选项 D：Let's Encrypt 证书](#选项-d：let's-encrypt-证书)
+- [选项 D：Let's Encrypt 证书](#选项-dlets-encrypt-证书)
 - [选项 E：Localhost 隧道，不使用证书](#选项-e：localhost-隧道，不使用证书)
 
 ### 选项 A：使用 Rancher 生成的默认自签名证书

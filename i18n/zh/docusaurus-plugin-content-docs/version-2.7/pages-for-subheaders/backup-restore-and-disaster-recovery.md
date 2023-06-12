@@ -1,5 +1,6 @@
 ---
 title: 备份和灾难恢复
+keywords: [rancher 备份还原, rancher 备份与恢复, 备份恢复 rancher, rancher 备份与恢复 rancher]
 ---
 
 在本节中，你将学习如何创建 Rancher 的备份，如何从备份中恢复 Rancher，以及如何将 Rancher 迁移到新的 Kubernetes 集群。
@@ -92,4 +93,4 @@ ResourceSet 定义了需要备份哪些 Kubernetes 资源。由于备份 Rancher
 
 ### rancher-backup Helm Chart 的示例 values.yaml
 
-当使用 Helm CLI 安装时，可以使用示例 [values.yaml 文件](../reference-guides/backup-restore-configuration/storage-configuration.md#rancher-backup-helm-chart-的示例-values-yaml) 来配置 `rancher-backup` operator。
+当使用 Helm CLI 安装时，可以使用示例 [values.yaml 文件](../reference-guides/backup-restore-configuration/storage-configuration.md#rancher-backup-helm-chart-的示例-valuesyaml) 来配置 `rancher-backup` operator。

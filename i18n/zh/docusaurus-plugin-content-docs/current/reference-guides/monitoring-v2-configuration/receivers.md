@@ -294,7 +294,6 @@ spec:
 
 有关为 `rancher-cis-benchmark` 启用告警的更多信息，请参阅[本节](../../how-to-guides/advanced-user-guides/cis-scan-guides/enable-alerting-for-rancher-cis-benchmark.md)。
 
-
 ## Notifiers 的可信 CA
 
 如果你需要将受信任的 CA 添加到 Notifiers，请按照[本节](helm-chart-options.md#notifiers-的可信-ca)中的步骤操作。
