@@ -153,8 +153,9 @@ helm upgrade --install \
   ingress-nginx ingress-nginx/ingress-nginx \
   --namespace ingress-nginx \
   --set controller.service.type=LoadBalancer \
+  --set service.type: NodePort \
   --version 4.0.18 \
-  --create-namespace
+  --create-namespace 
 ```
 
 ## 8. Get the Load Balancer IP
