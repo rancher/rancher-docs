@@ -153,7 +153,6 @@ helm upgrade --install \
   ingress-nginx ingress-nginx/ingress-nginx \
   --namespace ingress-nginx \
   --set controller.service.type=LoadBalancer \
-  --set service.type: NodePort \
   --version 4.0.18 \
   --create-namespace 
 ```
@@ -189,12 +188,16 @@ Next, install the Rancher Helm chart by following the instructions on [this page
 
 Use the DNS name from the previous step as the Rancher server URL when you install Rancher. It can be passed in as a Helm option. For example, if the DNS name is `rancher.my.org`, you could run the Helm installation command with the option `--set hostname=rancher.my.org`.
 
-**_New in v2.6.7_**
-
-When installing Rancher on top of this setup, you will also need to pass the value below into the Rancher Helm install command in order to set the name of the ingress controller to be used with Rancher's ingress resource:
+When installing Rancher on top of this setup, you will also need to set the name of the ingress controller to be used with Rancher's ingress resource:
 
 ```
 --set ingress.ingressClassName=nginx
 ```
 
 Refer [here for the Helm install command](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#5-install-rancher-with-helm-and-your-chosen-certificate-option) for your chosen certificate option.
+
+In Rancher v2.7.5, if you intend to use the default GKE ingress on your cluster, you need to set the following flag:
+
+```
+--set service.type=NodePort
+```
