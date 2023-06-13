@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1685111429,
-    "formattedLastUpdatedAt": "May 26, 2023",
+    "lastUpdatedAt": 1686673363,
+    "formattedLastUpdatedAt": "Jun 13, 2023",
     "frontMatter": {
         "title": "Installing Rancher on Azure Kubernetes Service"
     },
@@ -533,6 +533,8 @@ helm search repo ingress-nginx -l
   ingress-nginx ingress-nginx/ingress-nginx \\
   --namespace ingress-nginx \\
   --set controller.service.type=LoadBalancer \\
+  --set controller.service.annotations."service\\.beta\\.kubernetes\\.io/azure-load-balancer-health-probe-request-path"=/healthz \\
+  --set controller.service.externalTrafficPolicy=Local \\
   --version 4.5.2 \\
   --create-namespace
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
