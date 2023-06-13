@@ -108,7 +108,7 @@ title: K3s 集群配置参考
 
 有关授权集群端点的工作原理以及使用的原因，请参阅[架构介绍](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-授权集群端点)。
 
-我们建议使用具有授权集群端点的负载均衡器。有关详细信息，请参阅[推荐的架构](../../rancher-manager-architecture/architecture-recommendations.md#授权集群端点架构-ace)。
+我们建议使用具有授权集群端点的负载均衡器。有关详细信息，请参阅[推荐的架构](../../rancher-manager-architecture/architecture-recommendations.md#授权集群端点架构)。
 
 ### 镜像仓库
 

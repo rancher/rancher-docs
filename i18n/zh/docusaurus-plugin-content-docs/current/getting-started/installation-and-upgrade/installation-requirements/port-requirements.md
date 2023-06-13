@@ -194,7 +194,7 @@ RKE2 server 需要开放端口 6443 和 9345 才能供集群中的其他节点�
 
 ### Harvester 集群的端口
 
-有关 Harvester 端口要求的更多信息，请参阅[此处](../../../integrations-in-rancher/harvester.md#port-requirements)。
+有关 Harvester 端口要求的更多信息，请参阅[此处](../../../integrations-in-rancher/harvester.md#端口要求)。
 
 
 ### Rancher 使用节点池启动 Kubernetes 集群的端口

@@ -15,7 +15,7 @@ title: 卸载 Rancher
 
 - **注册集群**：集群不受影响，你可以注册集群前的方法访问该集群。
 - **托管的 Kubernetes 集群**：如果你在 Kubernetes 云提供商（例如 EKS、GKE 或 AKS）中创建集群，你可以继续使用提供商的云凭证来管理集群。
-- **RKE 集群**：要访问 [RKE 集群](../pages-for-subheaders/launch-kubernetes-with-rancher.md)，集群必须启用了[授权集群端点（authorized cluster endpoint，ACE）](../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-认证授权端点)，而且你必须从 Rancher UI 下载了集群的 kubeconfig 文件。RKE 集群默认启用授权集群端点。通过使用此端点，你可以直接使用 kubectl 访问你的集群，而不用通过 Rancher Server 的[认证代理](../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md##1-认证代理)进行通信。有关配置 kubectl 以使用授权集群端点的说明，请参阅[使用 kubectl 和 kubeconfig 文件直接访问集群](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#直接使用下游集群进行身份验证)。这些集群将使用删除 Rancher 时配置的身份验证快照。
+- **RKE 集群**：要访问 [RKE 集群](../pages-for-subheaders/launch-kubernetes-with-rancher.md)，集群必须启用了[授权集群端点（authorized cluster endpoint，ACE）](../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-授权集群端点)，而且你必须从 Rancher UI 下载了集群的 kubeconfig 文件。RKE 集群默认启用授权集群端点。通过使用此端点，你可以直接使用 kubectl 访问你的集群，而不用通过 Rancher Server 的[认证代理](../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#1-认证代理)进行通信。有关配置 kubectl 以使用授权集群端点的说明，请参阅[使用 kubectl 和 kubeconfig 文件直接访问集群](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#直接使用下游集群进行身份验证)。这些集群将使用删除 Rancher 时配置的身份验证快照。
 
 ### 如果我不想再使用 Rancher 了该怎么做？
 
@@ -38,7 +38,7 @@ title: 卸载 Rancher
 
 如果你在 Docker 中安装 Rancher，则可以通过删除运行 Rancher 的单个 Docker 容器来卸载 Rancher。
 
-移除 Rancher 不会影响导入的集群。有关其他集群类型，请参考[移除 Rancher 后访问下游集群](#如果删除了-rancher-server，该如何访问下游集群)。
+移除 Rancher 不会影响导入的集群。有关其他集群类型，请参考[移除 Rancher 后访问下游集群](#如果删除了-rancher-server该如何访问下游集群)。
 
 ### 如果我不想 Rancher 管理我的注册集群该怎么办？
 
@@ -58,4 +58,4 @@ title: 卸载 Rancher
 
 [此 issue](https://github.com/rancher/rancher/issues/25234) 跟踪了在没有 Rancher 的情况下管理这些集群的功能。
 
-有关如何在删除 Rancher Server 后访问集群的更多信息，请参阅[本节](#如果删除了-rancher-server，该如何访问下游集群)。
+有关如何在删除 Rancher Server 后访问集群的更多信息，请参阅[本节](#如果删除了-rancher-server该如何访问下游集群)。

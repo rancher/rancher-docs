@@ -34,7 +34,7 @@ ResourceSet 定义了需要备份哪些 Kubernetes 资源。由于备份 Rancher
 
 :::note
 
-请参见[此处](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md#使用-restore-自定义资源来还原备份)获取在 Rancher 2.6.3 中将现有备份文件恢复到 v1.22 集群的帮助。
+请参见[此处](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md#2-使用-restore-自定义资源来还原备份)获取在 Rancher 2.6.3 中将现有备份文件恢复到 v1.22 集群的帮助。
 
 :::
 

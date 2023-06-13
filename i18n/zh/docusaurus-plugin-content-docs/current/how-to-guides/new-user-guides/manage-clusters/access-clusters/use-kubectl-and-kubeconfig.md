@@ -71,7 +71,7 @@ CURRENT   NAME                        CLUSTER                     AUTHINFO     N
 
 使用第二个上下文 `my-cluster-controlplane-1`，你将使用授权集群端点进行身份验证，直接与下游 RKE 集群通信。
 
-我们建议使用具有授权集群端点的负载均衡器。有关详细信息，请参阅[推荐的架构](../../../../reference-guides/rancher-manager-architecture/architecture-recommendations.md#授权集群端点架构-ace)。
+我们建议使用具有授权集群端点的负载均衡器。有关详细信息，请参阅[推荐的架构](../../../../reference-guides/rancher-manager-architecture/architecture-recommendations.md#授权集群端点架构)。
 
 现在你已经有了直接使用集群进行身份验证所需的上下文名称，你可以在运行 kubectl 命令时将上下文名称作为选项传入。根据你的集群是否定义了 FQDN，这些命令会有所不同。以下几节提供了示例。
 

@@ -6,7 +6,7 @@ title: 接收器配置
 
 :::note
 
-本节参考假设你已经熟悉 Monitoring 组件的协同工作方式。有关 Alertmanager 的详细信息，请参阅[本节](../../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#3-alertmanager-工作原理)。
+本节参考假设你已经熟悉 Monitoring 组件的协同工作方式。有关 Alertmanager 的详细信息，请参阅[本节](../../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#3-alertmanager-的工作原理)。
 
 :::
 

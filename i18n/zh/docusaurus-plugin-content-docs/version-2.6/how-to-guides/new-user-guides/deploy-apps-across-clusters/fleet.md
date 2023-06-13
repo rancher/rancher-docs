@@ -55,7 +55,7 @@ git 仓库中的 Helm Chart 必须在 Chart 子目录中包含其依赖项。你
 ## 故障排除
 
 ---
-* **已知问题**：Fleet git 仓库的 clientSecretName 和 helmSecretName 密文不包含在 [backup-restore-operator](../backup-restore-and-disaster-recovery/back-up-rancher.md#1-安装rancher-backup-operator) 创建的备份或恢复中。如果我们有了永久的解决方案，我们将通知社区。
+* **已知问题**：Fleet git 仓库的 clientSecretName 和 helmSecretName 密文不包含在 [backup-restore-operator](../backup-restore-and-disaster-recovery/back-up-rancher.md#1-安装-rancher-backup-operator) 创建的备份或恢复中。如果我们有了永久的解决方案，我们将通知社区。
 
 * **临时解决方法：** <br/>
    默认情况下，用户定义的密文不会在 Fleet 中备份。如果执行灾难恢复或将 Rancher 迁移到新集群，则需要重新创建密文。要修改 resourceSet 以包含需要备份的其他资源，请参阅[此文档](https://github.com/rancher/backup-restore-operator#user-flow)。
