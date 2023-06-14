@@ -196,8 +196,10 @@ When installing Rancher on top of this setup, you will also need to set the name
 
 Refer [here for the Helm install command](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#5-install-rancher-with-helm-and-your-chosen-certificate-option) for your chosen certificate option.
 
-In Rancher v2.7.5, if you intend to use the default GKE ingress on your cluster, you need to set the following flag:
+In Rancher v2.7.5, if you intend to use the default GKE ingress on your cluster without enabling VPC-native cluster mode, you need to set the following flag:
 
 ```
 --set service.type=NodePort
 ```
+
+This is necessary because of compatibility issues between this setup and ClusterIP, the default type for `cattle-system/rancher`. 
