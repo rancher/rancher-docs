@@ -1,5 +1,6 @@
 ---
 title: Rancher Helm Chart 选项
+keywords: [rancher v2.0-v2.4 Helm Chart, rancher v2.0-v2.4 helm 选项, rancher v2.0-v2.4 helm chart 选项, helm chart rancher v2.0-v2.4 helm 选项 rancher v2.0-v2.4 helm chart 选项 rancher v2.0-v2.4]
 ---
 
 本文提供了 Rancher Helm Chart 的配置参考。

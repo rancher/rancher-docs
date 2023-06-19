@@ -7,7 +7,7 @@ title: 先决条件
 首先，完成许可证管理器设置的[第一步](https://docs.aws.amazon.com/license-manager/latest/userguide/getting-started.html)。
 然后，转到 AWS Marketplace。找到 “Rancher Premium Support Billing Container Starter Pack”。最后，购买至少一项 Entitlement。
 
-如果你已使用 “Rancher Setup” AWS Marketplace 产品安装了 Rancher，请跳至[步骤 4](#4-创建-oidc-提供商)。
+如果你已使用 “Rancher Setup” AWS Marketplace 产品安装了 Rancher，请跳至[步骤 4](#4-创建-oidc-提供程序)。
 
 > **注意**：每项 Entitlement 都对一定数量的节点授予访问支持的权限。你可以后续根据需要购买更多许可证。
 

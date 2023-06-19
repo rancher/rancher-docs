@@ -20,7 +20,7 @@ Rancher 必须是 2.5.0 或更高版本。
 
 请参见[此处](migrate-rancher-to-new-cluster.md#2-使用-restore-自定义资源来还原备份)获取在 Rancher 2.6.3 中将现有备份文件恢复到 v1.22 集群的帮助。
 
-### 1. 安装 `rancher backup` operator
+### 1. 安装 Rancher Backup Operator
 
 备份存储位置是 operator 级别的设置，所以需要在安装或升级 `rancher backup` 应用时进行配置。
 

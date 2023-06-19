@@ -146,7 +146,7 @@ Error: validation failed: unable to recognize "": no matches for kind "Issuer" i
 
 ### nginx-ingress-controller Pod 显示 RESTARTS
 
-此问题的最常见原因是 `canal` pod 未能建立覆盖网络。参见 [canal Pod 显示 READY `2/3`](#canal-pod-显示-ready-2/3) 进行排查。
+此问题的最常见原因是 `canal` pod 未能建立覆盖网络。参见 [canal Pod 显示 READY `2/3`](#canal-pod-显示-ready-23) 进行排查。
 
 
 ### Failed to dial to /var/run/docker.sock: ssh: rejected: administratively prohibited (open failed)

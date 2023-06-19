@@ -23,7 +23,7 @@ CIS Benchmark 应用支持两种类型的告警：
 
 要为定时运行的扫描配置告警：
 
-1. 请在 `rancher-cis-benchmark` 应用上启用告警。详情请参见[为 rancher-cis-benchmark 启用告警](#为-rancher-cis-benchmark-启用告警)。
+1. 请在 `rancher-cis-benchmark` 应用程序上启用告警。详情请参见[本页](../../../how-to-guides/advanced-user-guides/cis-scan-guides/enable-alerting-for-rancher-cis-benchmark.md)。
 1. 在左上角，单击 **☰ > 集群管理**。
 1. 在**集群**页面上，转到要运行 CIS 扫描的集群，然后单击 **Explore**。
 1. 点击 **CIS Benchmark > 扫描**。

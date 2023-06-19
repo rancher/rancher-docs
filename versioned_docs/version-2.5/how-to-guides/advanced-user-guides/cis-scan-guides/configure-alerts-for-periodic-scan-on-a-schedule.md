@@ -23,7 +23,7 @@ While configuring the routes for `rancher-cis-benchmark` alerts, you can specify
 
 To configure alerts for a scan that runs on a schedule,
 
-1. Please enable alerts on the `rancher-cis-benchmark` application (#enabling-alerting-for-rancher-cis-benchmark)
+1. Please enable alerts on the `rancher-cis-benchmark` application. For more information, see [this page](../../../how-to-guides/advanced-user-guides/cis-scan-guides/enable-alerting-for-rancher-cis-benchmark.md).
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to run a CIS scan and click **Explore**.
 1. Click **CIS Benchmark > Scan**.

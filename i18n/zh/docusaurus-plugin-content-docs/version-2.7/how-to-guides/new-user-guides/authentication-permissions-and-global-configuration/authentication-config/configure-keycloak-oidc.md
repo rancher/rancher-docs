@@ -125,7 +125,7 @@ description: 创建 Keycloak OpenID Connect (OIDC) 客户端并配置 Rancher �
 
 ## 附录：故障排除
 
-如果你在测试与 Keycloak 服务器的连接时遇到问题，请先检查 OIDC 客户端的配置选项。你还可以检查 Rancher 日志来查明问题的原因。调试日志可能包含有关错误的更详细信息。详情请参见[如何启用调试日志](../../../../faq/technical-items.md#如何启用调试日志记录？)。
+如果你在测试与 Keycloak 服务器的连接时遇到问题，请先检查 OIDC 客户端的配置选项。你还可以检查 Rancher 日志来查明问题的原因。调试日志可能包含有关错误的更详细信息。详情请参见[如何启用调试日志](../../../../faq/technical-items.md#如何启用调试日志记录)。
 
 所有与 Keycloak 相关的日志条目都将添加 `[generic oidc]` 或 `[keycloak oidc]`。
 

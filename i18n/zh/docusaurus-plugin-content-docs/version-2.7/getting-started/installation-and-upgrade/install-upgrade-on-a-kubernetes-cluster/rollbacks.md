@@ -1,6 +1,7 @@
 ---
 title: 回滚
 ---
+
 ## 使用 Rancher 2.6.4+ 进行回滚的其他步骤
 
 Rancher v2.6.4 将 cluster-api 模块从 v0.4.4 升级到 v1.0.2。反过来，cluster-api 的 v1.0.2 版本将集群 API 的自定义资源定义 (CRD) 从 `cluster.x-k8s.io/v1alpha4` 升级到 `cluster.x-k8s.io/v1beta1`。当你尝试将 Rancher v2.6.4 回滚到以前版本的 Rancher v2.6.x 时，CRD 升级到 v1beta1 会导致回滚失败。这是因为使用旧 apiVersion (v1alpha4) 的 CRD 与 v1beta1 不兼容。

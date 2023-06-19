@@ -192,4 +192,4 @@ ingress-nginx-controller   LoadBalancer   10.3.244.156   35.233.206.34   80:3187
 --set ingress.ingressClassName=nginx
 ```
 
-请参阅[Helm 安装命令](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#5-根据你选择的证书选项，通过-helm-安装-rancher)了解你的证书选项。
+请参阅[Helm 安装命令](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#5-根据你选择的证书选项通过-helm-安装-rancher)了解你的证书选项。

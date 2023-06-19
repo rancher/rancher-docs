@@ -1,7 +1,7 @@
 {
   "version.label": {
-    "message": "Latest",
-    "description": "The label for version current"
+    "message": "v2.7",
+    "description": "The label for version 2.7"
   },
   "sidebar.tutorialSidebar.category.Getting Started": {
     "message": "开始使用",
@@ -307,6 +307,22 @@
     "message": "Rancher 安全",
     "description": "The label for category Rancher Security in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.category.Hardening Guides": {
+    "message": "加固指南",
+    "description": "The label for category Hardening Guides in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.RKE Hardening Guides": {
+    "message": "RKE 加固指南",
+    "description": "The label for category RKE Hardening Guides in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.RKE2 Hardening Guides": {
+    "message": "RKE2 加固指南",
+    "description": "The label for category RKE2 Hardening Guides in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.K3s Hardening Guides": {
+    "message": "K3s 加固指南",
+    "description": "The label for category K3s Hardening Guides in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.SELinux RPM": {
     "message": "SELinux RPM",
     "description": "The label for category SELinux RPM in sidebar tutorialSidebar"
@@ -326,6 +342,10 @@
   "sidebar.tutorialSidebar.category.CIS Scans": {
     "message": "CIS 扫描",
     "description": "The label for category CIS Scans in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Continuous Delivery with Fleet": {
+    "message": "使用 Fleet 进行持续交付",
+    "description": "The label for category Continuous Delivery with Fleet in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Istio": {
     "message": "Istio",
@@ -362,25 +382,5 @@
   "sidebar.tutorialSidebar.category.Other Troubleshooting Tips": {
     "message": "其他故障排除提示",
     "description": "The label for category Other Troubleshooting Tips in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Hardening Guides": {
-    "message": "加固指南",
-    "description": "The label for category Hardening Guides in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.RKE Hardening Guides": {
-    "message": "RKE 加固指南",
-    "description": "The label for category RKE Hardening Guides in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.RKE2 Hardening Guides": {
-    "message": "RKE2 加固指南",
-    "description": "The label for category RKE2 Hardening Guides in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.K3s Hardening Guides": {
-    "message": "K3s 加固指南",
-    "description": "The label for category K3s Hardening Guides in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Continuous Delivery with Fleet": {
-    "message": "使用 Fleet 进行持续交付",
-    "description": "The label for category Continuous Delivery with Fleet in sidebar tutorialSidebar"
   }
 }

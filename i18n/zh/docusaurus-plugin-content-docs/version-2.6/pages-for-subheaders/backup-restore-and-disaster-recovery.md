@@ -1,5 +1,6 @@
 ---
 title: 备份和灾难恢复
+keywords: [rancher v2.6 备份还原, rancher v2.6 备份与恢复, 备份恢复 rancher v2.6, 备份和恢复 rancher v2.6]
 ---
 
 在本节中，你将学习如何创建 Rancher 的备份，如何从备份中恢复 Rancher，以及如何将 Rancher 迁移到新的 Kubernetes 集群。
@@ -33,7 +34,7 @@ ResourceSet 定义了需要备份哪些 Kubernetes 资源。由于备份 Rancher
 
 :::note
 
-请参见[此处](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md#使用-restore-自定义资源来还原备份)获取在 Rancher 2.6.3 中将现有备份文件恢复到 v1.22 集群的帮助。
+请参见[此处](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md#2-使用-restore-自定义资源来还原备份)获取在 Rancher 2.6.3 中将现有备份文件恢复到 v1.22 集群的帮助。
 
 :::
 
@@ -109,4 +110,4 @@ ResourceSet 定义了需要备份哪些 Kubernetes 资源。由于备份 Rancher
 
 ### rancher-backup Helm Chart 的示例 values.yaml
 
-当使用 Helm CLI 安装时，可以使用示例 [values.yaml 文件](../reference-guides/backup-restore-configuration/storage-configuration.md#rancher-backup-helm-chart-的示例-values-yaml) 来配置 `rancher-backup` operator。
+当使用 Helm CLI 安装时，可以使用示例 [values.yaml 文件](../reference-guides/backup-restore-configuration/storage-configuration.md#rancher-backup-helm-chart-的示例-valuesyaml) 来配置 `rancher-backup` operator。
