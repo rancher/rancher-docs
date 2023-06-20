@@ -4,7 +4,7 @@ description: Create a Keycloak SAML client and configure Rancher to work with Ke
 ---
 
 <head> 
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-keycloak-saml/">
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-keycloak-saml"/>
 </head>
 
 _Available as of v2.1.0_

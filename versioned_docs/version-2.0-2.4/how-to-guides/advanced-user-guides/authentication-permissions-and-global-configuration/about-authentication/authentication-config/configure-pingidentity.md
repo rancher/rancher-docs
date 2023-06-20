@@ -3,7 +3,7 @@ title: Configure PingIdentity (SAML)
 ---
 
 <head> 
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-pingidentity/">
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-pingidentity"/>
 </head>
 
 _Available as of v2.0.7_
