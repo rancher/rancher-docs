@@ -124,6 +124,7 @@ Resource targeting uses `*` as the ARN of many of the resources created cannot b
                 "ec2:DescribeAvailabilityZones",
                 "ec2:DescribeAccountAttributes",
                 "ec2:DeleteTags",
+                "ec2:DeleteLaunchTemplate",
                 "ec2:DeleteSecurityGroup",
                 "ec2:DeleteKeyPair",
                 "ec2:CreateTags",
