@@ -185,7 +185,7 @@ If the `updateStrategy` of `ingress-nginx` is `OnDelete`, you will need to delet
 
 ### Cluster Agent Configuration and Fleet Agent Configuration
 
-You can configure the cluster agent and the cluster's Fleet agent with custom scheduling fields. You can use these  fields to set custom tolerations, affinity rules, and resource requirments or limits for the cluster. Your customizations override any pre-existing rules and default settings.
+You can configure the scheduling fields and resource limits for the Cluster Agent and the cluster's Fleet Agent. You can use these fields to customize tolerations, affinity rules, and resource requirements. Additional tolerations are appended to a list of default tolerations and control plane node taints. If you define custom affinity rules, they override the global default affinity setting. Defining resource requirements sets requests or limits where there previously were none.
 
 :::note
 With this option, it's possible to override or remove rules that are required for the functioning of the cluster. We strongly recommend against removing or overriding the following affinity rules, as this may cause unwanted side effects:
