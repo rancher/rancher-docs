@@ -1,6 +1,10 @@
 ---
-title: Configuring PingIdentity (SAML)
+title: Configure PingIdentity (SAML)
 ---
+
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-pingidentity"/>
+</head>
 
 If your organization uses Ping Identity Provider (IdP) for user authentication, you can configure Rancher to allow your users to log in using their IdP credentials.
 
