@@ -195,7 +195,7 @@ With this option, it's possible to override or remove rules that are required fo
 - `fleet-agent-default-affinity` for `fleet-agent`
 :::
 
-If you downgrade Rancher to a version that doesn't have your custom fields, your changes will be lost and the agents will redeploy without your customizations. The Fleet agent will fallback to using its built-in default values when it redeploys. If the Fleet version doesn't change during the downgrade, the redeployment won't be immediate.
+If you downgrade Rancher to v2.7.4 or below, your changes will be lost and the agents will re-deploy without your customizations. The Fleet agent will fallback to using its built-in default values when it re-deploys. If the Fleet version doesn't change during the downgrade, the re-deploy won't be immediate.
 
 
 ## RKE Cluster Config File Reference
