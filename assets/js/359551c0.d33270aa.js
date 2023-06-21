@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[73542],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[43762],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 93322:
+/***/ 66106:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,37 +313,37 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding",
-    "id": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding",
+    "id": "version-2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding",
     "title": "Custom Branding",
-    "description": "Rancher v2.6 introduced the ability to customize Rancher’s branding and navigation links.",
-    "source": "@site/docs/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding.md",
+    "description": "Prerequisite",
+    "source": "@site/versioned_docs/version-2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding.md",
     "sourceDirName": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration",
     "slug": "/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding",
-    "permalink": "/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding",
+    "permalink": "/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1670452794,
-    "formattedLastUpdatedAt": "Dec 7, 2022",
+    "version": "2.7",
+    "lastUpdatedAt": 1687353968,
+    "formattedLastUpdatedAt": "Jun 21, 2023",
     "frontMatter": {
         "title": "Custom Branding"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Configuring a Global Default Private Registry",
-        "permalink": "/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry"
+        "permalink": "/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry"
     },
     "next": {
         "title": "Cluster Administration",
-        "permalink": "/pages-for-subheaders/manage-clusters"
+        "permalink": "/v2.7/pages-for-subheaders/manage-clusters"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Changing Brand Settings',
-        id: 'changing-brand-settings',
+        value: 'Prerequisite',
+        id: 'prerequisite',
         level: 2
     },
     {
@@ -469,14 +469,14 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher v2.6 introduced the ability to customize Rancher’s branding and navigation links.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "changing-brand-settings"
-    }, `Changing Brand Settings`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "title": "Prerequisite:",
-        "type": "note"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, `You will need to have at least cluster member permissions.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To configure the brand settings,`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "prerequisite"
+    }, `Prerequisite`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You will need to have at least cluster member permissions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "brand-configuration"
+    }, `Brand Configuration`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To configure the brand settings,`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
@@ -484,11 +484,11 @@ function MDXContent(_param) {
         parentName: "ol"
     }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `Branding`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "brand-configuration"
-    }, `Brand Configuration`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `Branding`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "private-label-company-name"
-    }, `Private Label Company Name`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This option replaces “Rancher” with the value you provide in most places. Files that need to have Rancher in the name, such as “rancher-compose.yml”, will not be changed.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `Private Label Company Name`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This option replaces "Rancher" with the value you provide in most places. Files that need to have Rancher in the name, such as `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `rancher-compose.yml`), `, won't be changed.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "support-links"
     }, `Support Links`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Use a url address to send new "File an Issue" reports instead of sending users to the Github issues page. Optionally show Rancher community support links.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "logo"
