@@ -8,11 +8,9 @@ title: Custom Branding
 
 Rancher v2.6 introduced the ability to customize Rancher’s branding and navigation links.
 
-:::note Prerequisite:
+## Prerequisite:
 
 You will need to have at least cluster member permissions.
-
-:::
 
 ## Brand Configuration
 

@@ -6,11 +6,9 @@ title: Custom Branding
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding"/>
 </head>
 
-:::note Prerequisite:
+## Prerequisite
 
 You will need to have at least cluster member permissions.
-
-:::
 
 ## Brand Configuration
 
