@@ -41349,7 +41349,7 @@ if (true) {
           "className": "navbar__github"
         },
         {
-          "href": "https://rancher.com",
+          "href": "https://www.rancher.com",
           "label": "Rancher Home",
           "position": "right"
         },
