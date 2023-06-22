@@ -4,8 +4,6 @@ title: Configure Okta (SAML)
 
 If your organization uses Okta Identity Provider (IdP) for user authentication, you can configure Rancher to allow your users to log in using their IdP credentials.
 
-If you configure Okta with an OpenLAD backend, authenticated users can access Rancher resources through their group permissions.
-
 :::note
 
 Okta integration only supports Service Provider initiated logins.
@@ -22,10 +20,12 @@ Setting | Value
 
 ## Configuring Okta in Rancher
 
-1.	In the top left corner, click **☰ > Users & Authentication**.
+You can integrate Okta with Rancher, so that authenticated users can access Rancher resources through their group permissions. Okta returns a SAML assertion that authenticates a user, including which groups a user belongs to.
+
+1. In the top left corner, click **☰ > Users & Authentication**.
 1. In the left navigation menu, click **Auth Provider**.
 1. Click **Okta**.
-1.	Complete the **Configure Okta Account** form. The examples below describe how you can map Okta attributes from attribute statements to fields within Rancher.
+1. Complete the **Configure Okta Account** form. The examples below describe how you can map Okta attributes from attribute statements to fields within Rancher.
 
     | Field                     | Description                                                                   |
     | ------------------------- | ----------------------------------------------------------------------------- |
@@ -71,11 +71,9 @@ If you configure Okta without OpenLDAP, you won't be able to search for or direc
 
 :::
 
-To enable group and user lookup when assigning permissions in Rancher, you will need to configure a back end for the SAML provider that supports groups, such as OpenLDAP.
+## Okta with OpenLDAP search
 
-## Setting up OpenLDAP in Rancher
-
-You can set up OpenLDAP within Rancher, so that authenticated users can access Rancher resources through their group permissions. OpenLDAP returns a SAML assertion that lists user attributes, including which groups a user belongs to.
+You can add an OpenLDAP backend to assist with user and group search. Rancher will display additional users and groups from the OpenLDAP service. This allows assigning permissions to groups that the logged-in user is not already a member of.
 
 ### OpenLDAP Prerequisites
 
@@ -85,7 +83,7 @@ You must configure Rancher with a LDAP bind account (aka service account) so tha
 
 > **Using TLS?**
 >
-> If the certificate used by the OpenLDAP server is self-signed or not from a recognized certificate authority, make sure have at hand the CA certificate (concatenated with any intermediate certificates) in PEM format. You will have to paste in this certificate during the configuration so that Rancher is able to validate the certificate chain.
+> If the certificate used by the OpenLDAP server is self-signed or not from a recognized certificate authority, Rancher needs the CA certificate (concatenated with any intermediate certificates) in PEM format. You will have to provide this certificate during the configuration so that Rancher is able to validate the certificate chain.
 
 ### Configure OpenLDAP in Rancher
 
