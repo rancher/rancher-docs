@@ -23,15 +23,6 @@ A restore is performed by creating a Restore custom resource.
 > * Follow the instructions from this page for restoring rancher on the same cluster where it was backed up from. In order to migrate rancher to a new cluster, follow the steps to [migrate rancher.](../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md)
 > * While restoring Rancher on the same setup, the Rancher deployment is manually scaled down before the restore starts, then the operator will scale it back up once the restore completes. As a result, Rancher and its UI will be unavailable until the restore is complete. While the UI is unavailable, use the original cluster kubeconfig with the restore YAML file: `kubectl create -f restore.yaml`.
 
-### Scale the Rancher Deployment to 0
-
-1. From the **Global** view, hover over the **local** cluster.
-1. Under **Projects in local**, click on **System**.
-1. From the **cattle-system** namespace section, find the `rancher` deployment.
-1. Select **&#8942; > Edit**.
-1. Change **Scalable deployment of _ pods** to `0`.
-1. Scroll to the bottom and click **Save**.
-
 ### Create the Restore Custom Resource
 
 1. In the **Cluster Explorer,** go to the dropdown menu in the upper left corner and click **Rancher Backups.**
