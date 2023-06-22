@@ -157,7 +157,7 @@ openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout myservice.ke
 
 ## 附录：故障排除
 
-如果你在测试与 Keycloak 服务器的连接时遇到问题，请先检查 SAML 客户端的配置选项。你还可以检查 Rancher 日志来查明问题的原因。调试日志可能包含有关错误的更详细信息。详情请参见[如何启用调试日志](../../../../faq/technical-items.md#如何启用调试日志记录？)。
+如果你在测试与 Keycloak 服务器的连接时遇到问题，请先检查 SAML 客户端的配置选项。你还可以检查 Rancher 日志来查明问题的原因。调试日志可能包含有关错误的更详细信息。详情请参见[如何启用调试日志](../../../../faq/technical-items.md#如何启用调试日志记录)。
 
 ### 不能重定向到 Keycloak
 

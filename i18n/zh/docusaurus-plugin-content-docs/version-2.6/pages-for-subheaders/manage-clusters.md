@@ -4,12 +4,6 @@ title: 集群管理
 
 在 Rancher 中配置集群后，你可以开始使用强大的 Kubernetes 功能在开发、测试或生产环境中部署和扩展容器化应用。
 
-本文涵盖以下主题：
-
-- [在集群之间切换](#在集群之间切换)
-- [在 Rancher 中管理集群](#在-rancher-中管理集群)
-- [配置工具](#配置工具)
-
 :::note
 
 本节默认你已对 Docker 和 Kubernetes 有一定的了解。如果你需要了解 Kubernetes 组件如何协作，请参见 [Kubernetes 概念](../reference-guides/kubernetes-concepts.md)。

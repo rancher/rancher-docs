@@ -2,7 +2,11 @@
 title: 2. Configuring Rancher for Microsoft AD FS
 ---
 
-After you complete [Configuring Microsoft AD FS for Rancher](configure-ms-adfs-for-rancher.md), enter your AD FS information into Rancher to allow AD FS users to authenticate with Rancher.
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-microsoft-ad-federation-service-saml/configure-rancher-for-ms-adfs"/>
+</head>
+
+After you complete [Configuring Microsoft AD FS for Rancher](configure-ms-adfs-for-rancher.md), enter your Active Directory Federation Service (AD FS) information into Rancher so that AD FS users can authenticate with Rancher.
 
 :::note Important Notes For Configuring Your ADFS Server:
 
