@@ -1,21 +1,21 @@
 {
-    "index_name": "docs_ranchermanager_rancher_io",
-    "sitemap_urls": ["http://ranchermanager.docs.rancher.com/sitemap.xml"],
-    "start_urls": ["http://ranchermanager.docs.rancher.com/"],
-    "selectors": {
-      "lvl0": "",
-      "lvl1": "article h1",
-      "lvl2": "article h2",
-      "lvl3": "article h3",
-      "lvl4": "article h4",
-      "lvl5": "article h5"
-    },
-    "custom_settings": {
-      "attributesForFaceting": [
-        "language",
-        "version",
-        "type",
-        "docusaurus_tag"
-      ]
-    }
+  "index_name": "docs_ranchermanager_rancher_io",
+  "sitemap_urls": ["http://ranchermanager.docs.rancher.com/sitemap.xml"],
+  "start_urls": ["http://ranchermanager.docs.rancher.com/"],
+  "selectors": {
+    "lvl0": "",
+    "lvl1": "article h1",
+    "lvl2": "article h2",
+    "lvl3": "article h3",
+    "lvl4": "article h4",
+    "lvl5": "article h5"
+  },
+  "custom_settings": {
+    "attributesForFaceting": [
+      "language",
+      "version",
+      "type",
+      "docusaurus_tag"
+    ]
   }
+}
