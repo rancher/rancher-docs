@@ -83,7 +83,7 @@ You must configure Rancher with a LDAP bind account (aka service account) so tha
 
 > **Using TLS?**
 >
-> If the certificate used by the OpenLDAP server is self-signed or not from a recognized certificate authority, Rancher needs the CA certificate (concatenated with any intermediate certificates) in PEM format. You will have to provide this certificate during the configuration so that Rancher is able to validate the certificate chain.
+> If the certificate used by the OpenLDAP server is self-signed or from an unrecognized certificate authority, Rancher needs the CA certificate (concatenated with any intermediate certificates) in PEM format. Provide this certificate during the configuration so that Rancher can validate the certificate chain.
 
 ### Configure OpenLDAP in Rancher
 
