@@ -79,7 +79,7 @@ You can add an OpenLDAP backend to assist with user and group search. Rancher wi
 
 If you use Okta as your IdP, you can [set up an LDAP interface](https://help.okta.com/en-us/Content/Topics/Directory/LDAP-interface-main.htm) for Rancher to use. You can also configure an external OpenLDAP server.
 
-You must configure Rancher with a LDAP bind account (aka service account) so that you can search and retrieve LDAP entries for users and groups that should have access. Don't use an administrator account or personal account as an LDAP bind account. Create a dedicated account in OpenLDAP, with read-only access to users and groups under the configured searchbase.
+You must configure Rancher with a LDAP bind account (aka service account) so that you can search and retrieve LDAP entries for users and groups that should have access. Don't use an administrator account or personal account as an LDAP bind account. [Create](https://help.okta.com/en-us/Content/Topics/users-groups-profiles/usgp-add-users.htm) a dedicated account in OpenLDAP, with read-only access to users and groups under the configured searchbase.
 
 > **Using TLS?**
 >
