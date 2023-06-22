@@ -5,9 +5,6 @@ description: Rancher 集成了主流的日志服务。了解集成日志服务�
 
 现在，Rancher 的日志管理由 [Logging operator](https://kube-logging.github.io/docs/) 提供支持，它取代了以前的内部解决方案。
 
-有关 Rancher 2.5 更改的概述，请参阅[本节](../integrations-in-rancher/logging/logging-architecture.md#rancher-2-5-变更)。有关迁移 Logging V1 的更多信息，请参阅[本页](../integrations-in-rancher/logging/migrate-to-rancher-v2.5+-logging.md)。
-
-
 ## 启用 Logging
 
 你可以转到**应用**页面并安装 Logging 应用程序，从而为 Rancher 管理的集群启用 Logging：
@@ -90,7 +87,7 @@ Rancher Logging 有两个角色，分别是 `logging-admin` 和 `logging-view`�
 
 Windows 集群支持 Logging，你可以收集 Windows 节点的日志。
 
-有关如何在 Windows 节点上启用或禁用 Logging 的详细信息，请参阅[本节](../integrations-in-rancher/logging/logging-helm-chart-options.md#启用/禁用-windows-节点-logging)。
+有关如何在 Windows 节点上启用或禁用 Logging 的详细信息，请参阅[本节](../integrations-in-rancher/logging/logging-helm-chart-options.md#启用禁用-windows-节点-logging)。
 
 ### 使用自定义 Docker 根目录
 

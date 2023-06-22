@@ -49,7 +49,7 @@ Ingress 是一组充当负载均衡器的规则。Ingress 与一个或多个 Ing
 
 ## 流水线
 
-在你的项目中[配置版本控制提供程序](../how-to-guides/advanced-user-guides/manage-projects/ci-cd-pipelines.md#1-配置版本控制提供商)后，你可以添加仓库并开始为每个仓库配置流水线。
+在你的项目中[配置版本控制提供程序](../pages-for-subheaders/pipelines.md#1-配置版本控制提供商)后，你可以添加仓库并开始为每个仓库配置流水线。
 
 有关详细信息，请参阅[流水线](pipelines.md)。
 

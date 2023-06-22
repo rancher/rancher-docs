@@ -160,7 +160,7 @@ Rancher 执行这些操作来登录用户或搜索用户/组。请记住，权�
 
    1. 复制 **Application (Client) ID** 并将其作为 **Application ID** 粘贴到 Rancher 中。
 
-1. 你的端点选项通常是 [Standard](#global) 或 [China](#china)。对于这两个选项，你只需要输入 **Tenant ID**、**Application ID** 和 **Application Secret**。
+1. 你的端点选项通常是 [Standard](#global) 或 [China](#中国)。对于这两个选项，你只需要输入 **Tenant ID**、**Application ID** 和 **Application Secret**。
 
 ![标准端点选项](/img/tenant-application-id-secret.png)
 

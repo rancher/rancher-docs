@@ -22,7 +22,7 @@ title: 4. 安装 Rancher
 
 1. 如果你还没有安装 `helm`，请在可访问互联网的工作站上进行本地安装。注意：参考 [Helm 版本要求](../../resources/helm-version-requirements.md)选择 Helm 版本来安装 Rancher。
 
-2. 执行 `helm repo add` 命令，以添加包含安装 Rancher 的 Chart 的 Helm Chart 仓库。有关如何选择仓库，以及哪个仓库最适合你的用例，请参见[选择 Rancher 版本](../../installation-references/helm-chart-options.md#helm-chart-仓库)。
+2. 执行 `helm repo add` 命令，以添加包含安装 Rancher 的 Chart 的 Helm Chart 仓库。有关如何选择仓库，以及哪个仓库最适合你的用例，请参见[选择 Rancher 版本](../../resources/choose-a-rancher-version.md)。
    - Latest：建议用于试用最新功能
       ```
       helm repo add rancher-latest https://releases.rancher.com/server-charts/latest

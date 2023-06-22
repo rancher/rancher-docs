@@ -2,6 +2,10 @@
 title: Locked Roles
 ---
 
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/locked-roles"/>
+</head>
+
 You can set roles to a status of `locked`. Locking roles prevent them from being assigned users in the future.
 
 Locked roles:

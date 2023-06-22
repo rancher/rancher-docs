@@ -6,15 +6,17 @@ This section describes how to create a vSphere username and password. You will n
 
 The following table lists the permissions required for the vSphere user account:
 
-| Privilege Group       | Operations  |
-|:----------------------|:-----------------------------------------------------------------------|
-| Cns Privileges        | Searchable |
-| Datastore             | AllocateSpace <br/> Browse <br/> FileManagement (Low level file operations) <br/> UpdateVirtualMachineFiles <br/> UpdateVirtualMachineMetadata |
-| Global                | Set custom attribute |
-| Network               | Assign |
-| Resource              | AssignVMToPool |
-| Virtual Machine       | Config (All) <br/> GuestOperations (All) <br/> Interact (All) <br/> Inventory (All) <br/> Provisioning (All) |
-| vSphere Tagging       | Assign or Unassign vSphere Tag <br/> Assign or Unassign vSphere Tag on Object |
+| Privilege Group          | Operations  |
+|:-------------------------|:-----------------------------------------------------------------------|
+| Cns Privileges           | Searchable |
+| Content library          | Read Storage <br/> (Required only if deploying Template from Content Library) |
+| Cryptographic operations | Direct Access |
+| Datastore                | AllocateSpace <br/> Browse <br/> FileManagement (Low level file operations) <br/> UpdateVirtualMachineFiles <br/> UpdateVirtualMachineMetadata |
+| Global                   | Set custom attribute |
+| Network                  | Assign |
+| Resource                 | AssignVMToPool |
+| Virtual Machine          | Config (All) <br/> GuestOperations (All) <br/> Interact (All) <br/> Inventory (All) <br/> Provisioning (All) |
+| vSphere Tagging          | Assign or Unassign vSphere Tag <br/> Assign or Unassign vSphere Tag on Object |
 
 The following steps create a role with the required privileges and then assign it to a new user in the vSphere console:
 

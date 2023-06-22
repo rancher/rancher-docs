@@ -1,6 +1,7 @@
 ---
 title: 升级
 ---
+
 本文介绍如何升级使用 Helm 安装在 Kubernetes 集群上的 Rancher Server。这些步骤也适用于使用 Helm 进行的离线安装。
 
 有关使用 Docker 安装的 Rancher 的升级说明，请参见[本页。](../other-installation-methods/rancher-on-a-single-node-with-docker/upgrade-docker-installed-rancher.md)
@@ -84,7 +85,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
    :::note
 
-   如果你想切换到不同的 Helm Chart 仓库，请按照[切换仓库步骤](../resources/choose-a-rancher-version.md#切换到另一个-helm-chart-仓库)进行操作。如果你要切换仓库，请先再次列出仓库，再继续执行步骤 3，以确保添加了正确的仓库。
+   如果你想切换到不同的 Helm Chart 仓库，请按照[切换仓库步骤](../resources/choose-a-rancher-version.md#切换到不同-helm-chart-仓库)进行操作。如果你要切换仓库，请先再次列出仓库，再继续执行步骤 3，以确保添加了正确的仓库。
 
    :::
 
@@ -127,7 +128,7 @@ hostname: rancher.my.org
 :::
 
 
-如果要将 cert-manager 从 v1.5 或更早的版本升级到最新版本，请参阅 [cert-manager upgrade docs](../resources/upgrade-cert-manager.md#选项-c：升级-1.5-及以下版本的-cert-manager) 了解如何在不卸载或重新安装 Rancher 的情况下升级 cert-manager。否则，请按照以下[ Rancher 升级步骤](#rancher-升级步骤)进行操作。
+如果要将 cert-manager 从 v1.5 或更早的版本升级到最新版本，请参阅 [cert-manager upgrade docs](../resources/upgrade-cert-manager.md#选项-c升级-15-及以下版本的-cert-manager) 了解如何在不卸载或重新安装 Rancher 的情况下升级 cert-manager。否则，请按照以下[ Rancher 升级步骤](#rancher-升级步骤)进行操作。
 
 #### Rancher 升级步骤
 

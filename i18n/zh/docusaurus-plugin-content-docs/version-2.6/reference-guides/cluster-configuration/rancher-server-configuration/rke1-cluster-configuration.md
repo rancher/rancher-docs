@@ -119,13 +119,13 @@ Rancher v2.6 引入了[为 RKE 集群配置 ECR 镜像仓库](https://rancher.co
 
 :::note
 
-授权集群端点仅适用于 Rancher 启动的 Kubernetes 集群，即只适用于 Rancher [使用 RKE](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md##配置-kubernetes-集群的工具) 来配置的集群。它不适用于托管在 Kubernetes 提供商中的集群，例如 Amazon 的 EKS。
+授权集群端点仅适用于 Rancher 启动的 Kubernetes 集群，即只适用于 Rancher [使用 RKE](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#配置-kubernetes-集群的工具) 来配置的集群。它不适用于托管在 Kubernetes 提供商中的集群，例如 Amazon 的 EKS。
 
 :::
 
 在 Rancher 启动的 Kubernetes 集群中，它默认启用，使用具有 `controlplane` 角色的节点的 IP 和默认的 Kubernetes 自签名证书。
 
-有关授权集群端点的工作原理以及使用的原因，请参阅[架构介绍](../../../pages-for-subheaders/rancher-manager-architecture.md#4-授权集群端点)。
+有关授权集群端点的工作原理以及使用的原因，请参阅[架构介绍](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-授权集群端点)。
 
 我们建议使用具有授权集群端点的负载均衡器。有关详细信息，请参阅[推荐的架构](../../rancher-manager-architecture/architecture-recommendations.md#授权集群端点架构)。
 
