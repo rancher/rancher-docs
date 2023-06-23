@@ -1040,6 +1040,7 @@ const sidebars = {
         "reference-guides/system-tools",
 
         "reference-guides/rke1-template-example-yaml",
+        "reference-guides/rancher-webhook",
         {
           type: 'category',
           label: 'Rancher Security',
