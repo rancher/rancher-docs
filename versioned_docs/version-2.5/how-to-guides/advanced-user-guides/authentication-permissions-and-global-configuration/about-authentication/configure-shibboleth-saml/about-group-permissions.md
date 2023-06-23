@@ -3,7 +3,7 @@ title: Group Permissions with Shibboleth and OpenLDAP
 ---
 
 <head> 
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/configure-shibboleth-saml"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-shibboleth-saml/about-group-permissions"/>
 </head>
 
 Because Shibboleth is a SAML provider, it doesn't support searching for groups. While a Shibboleth integration can validate user credentials, it can't be used to assign permissions to groups in Rancher without additional configuration.

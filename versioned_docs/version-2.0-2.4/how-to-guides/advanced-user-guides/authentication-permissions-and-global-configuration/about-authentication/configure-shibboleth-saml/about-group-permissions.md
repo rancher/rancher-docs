@@ -3,7 +3,7 @@ title: Group Permissions with Shibboleth and OpenLDAP
 ---
 
 <head> 
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/configure-shibboleth-saml"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-shibboleth-saml/about-group-permissions"/>
 </head>
 
 _Available as of Rancher v2.4_
