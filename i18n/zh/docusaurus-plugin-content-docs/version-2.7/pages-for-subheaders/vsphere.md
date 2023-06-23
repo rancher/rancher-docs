@@ -28,7 +28,7 @@ vSphere 集群可能由多组具有不同属性（例如内存或 vCPU 数量）
 
 vSphere 的节点模板已更新。当你使用 vSphere 凭证创建节点模板时，该模板会自动填充你在 vSphere 控制台中可以访问的相同的虚拟机配置选项。
 
-要填充的字段设置需要满足[先决条件](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere.md#先决条件)。
+要填充的字段设置需要满足[先决条件](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere.md#vsphere-中的准备工作)。
 
 ### 更多支持的操作系统
 

@@ -8,7 +8,7 @@ Docker 有几个安装方法。一种方法是参见 [Docker 官方文档](https
 
 另一种方式是使用 Rancher 的 Docker 安装脚本，该脚本可用于较新的 Docker 版本。
 
-例如，你可执行以下命令，在 Ubuntu 上安装 Docker 20.10：
+例如，此命令可用于在 SUSE Linux Enterprise 或 Ubuntu 等主要 Linux 发行版上安装 Docker 20.10：
 
 ```
 curl https://releases.rancher.com/install-docker/20.10.sh | sh

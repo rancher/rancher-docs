@@ -125,7 +125,7 @@ Rancher v2.6 引入了[为 RKE 集群配置 ECR 镜像仓库](https://rancher.co
 
 在 Rancher 启动的 Kubernetes 集群中，它默认启用，使用具有 `controlplane` 角色的节点的 IP 和默认的 Kubernetes 自签名证书。
 
-有关授权集群端点的工作原理以及使用的原因，请参阅[架构介绍](../../../pages-for-subheaders/rancher-manager-architecture.md#4-授权集群端点)。
+有关授权集群端点的工作原理以及使用的原因，请参阅[架构介绍](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-授权集群端点)。
 
 我们建议使用具有授权集群端点的负载均衡器。有关详细信息，请参阅[推荐的架构](../../rancher-manager-architecture/architecture-recommendations.md#授权集群端点架构)。
 
@@ -182,6 +182,8 @@ Rancher v2.6 引入了[为 RKE 集群配置 ECR 镜像仓库](https://rancher.co
 使用 Kubernetes 1.16 之前版本创建的集群将具有 `OnDelete`的 `ingress-nginx` `updateStrategy`。使用 Kubernetes 1.16 或更高版本创建的集群将具有 `RollingUpdate`。
 
 如果 `ingress-nginx` 的 `updateStrategy` 是 `OnDelete`，则需要删除这些 pod 以获得 deployment 正确的版本。
+
+
 
 ## RKE 集群配置文件参考
 

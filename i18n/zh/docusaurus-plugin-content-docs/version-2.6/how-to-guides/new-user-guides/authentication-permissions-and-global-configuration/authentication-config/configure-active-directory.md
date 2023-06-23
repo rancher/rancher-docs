@@ -48,7 +48,7 @@ Rancher 使用 LDAP 与 Active Directory 服务器通信。因此，Active Direc
 
 :::note
 
-如果你不确定要在用户/组`搜索库`字段中输入什么值，请参见[使用 ldapsearch 确定搜索库和 Schema](#附录：使用-ldapsearch-确定搜索库和-schema)。
+如果你不确定要在用户/组`搜索库`字段中输入什么值，请参见[使用 ldapsearch 确定搜索库和 Schema](#附录使用-ldapsearch-确定搜索库和-schema)。
 
 :::
 
@@ -76,7 +76,7 @@ Rancher 使用 LDAP 查询来搜索和检索关于 Active Directory 中的用户
 
 :::note
 
-如果你不熟悉 Active Directory 域中使用的 Schema，请参见[使用 ldapsearch 确定搜索库和 Schema](#附录：使用-ldapsearch-确定搜索库和-schema) 来确定正确的配置值。
+如果你不熟悉 Active Directory 域中使用的 Schema，请参见[使用 ldapsearch 确定搜索库和 Schema](#附录使用-ldapsearch-确定搜索库和-schema) 来确定正确的配置值。
 
 :::
 
@@ -216,4 +216,4 @@ $ ldapsearch -x -D "acme\jdoe" -w "secret" -p 389 \
 
 ## 附录：故障排除
 
-如果在测试与 Active Directory 服务器的连接时遇到问题，请首先仔细检查为 ServiceAccount 输入的凭证以及搜索库配置。你还可以检查 Rancher 日志来查明问题的原因。调试日志可能包含有关错误的更详细信息。详情请参见[如何启用调试日志](../../../../faq/technical-items.md#如何启用调试日志记录？)。
+如果在测试与 Active Directory 服务器的连接时遇到问题，请首先仔细检查为 ServiceAccount 输入的凭证以及搜索库配置。你还可以检查 Rancher 日志来查明问题的原因。调试日志可能包含有关错误的更详细信息。详情请参见[如何启用调试日志](../../../../faq/technical-items.md#如何启用调试日志记录)。

@@ -29,7 +29,7 @@ kubectl create clusterrolebinding cluster-admin-binding \
 
 ### EKS、AKS 和 GKE 集群
 
-要成功将这些集群导入 Rancher 或从 Rancher 中配置它们，Elastic Kubernetes Service (EKS)、Azure Kubernetes Service (AKS) 和 Google Kubernetes Engine (GKE) 集群必须至少有一个托管节点组。
+要成功将这些集群导入 Rancher 或从 Rancher 中配置它们，Elastic Kubernetes Service (EKS)、Azure Kubernetes Service (AKS) 和 Google Kubernetes Engine (GKE) 集群必须至少有一个托管节点组。此外，不支持 GKE Autopilot 集群。有关 GKE 模式之间差异，请参阅[比较 GKE Autopilot 和 Standard](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison)。
 
 ## 注册集群
 
@@ -99,7 +99,7 @@ Rancher 管理注册集群的范围取决于集群的类型。
 
 - [所有已注册集群的功能](#所有已注册集群的功能)
 - [已注册 RKE2 和 K3s 集群的附加功能](#已注册-rke2-和-k3s-集群的附加功能)
-- [已注册 EKS, AKS 和 GKE 集群的附加功能](#已注册-eks-aks-和-gke-集群的附加功能)
+- [已注册 EKS, AKS 和 GKE 集群的附加功能](#已注册-eksaks-和-gke-集群的附加功能)
 
 ### 所有已注册集群的功能
 
@@ -127,7 +127,7 @@ RKE2 或 K3s 集群注册到 Rancher 后，Rancher 会识别它。Rancher UI 将
 - 配置能同时升级的最大节点数
 - 查看集群的配置参数和用于启动集群中每个节点的环境变量的只读版本
 
-### 已注册 EKS, AKS 和 GKE 集群的附加功能
+### 已注册 EKS，AKS 和 GKE 集群的附加功能
 
 Rancher 处理注册的 EKS、AKS 或 GKE 集群的方式与处理在 Rancher 中创建的集群的方式类似。但是，如果你通过 Rancher UI 删除已注册的集群，Rancher 不会销毁这些集群。
 

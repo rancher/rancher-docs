@@ -112,7 +112,7 @@ az ad sp create-for-rbac \
 1. 单击 **Azure**。
 1. 选择一个**云凭证**。如果存在多个则需要选择。否则，它是预选的。
 1. 输入**集群名称**。
-1. 为每个 Kubernetes 角色创建一个主机池。请参阅[最佳实践](../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#rke2-中的节点角色)了解角色分配和计数的建议。
+1. 为每个 Kubernetes 角色创建一个主机池。请参阅[最佳实践](../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#节点角色)了解角色分配和计数的建议。
    1. 为每个主机池定义主机配置。有关配置选项的信息，请参阅 [Azure 主机配置参考](../../../../reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/azure.md)。
 1. 使用**集群配置**，选择要安装的 Kubernetes 版本、要使用的网络提供商，以及是否启用项目网络隔离。有关配置集群的帮助，请参阅 [RKE2 集群配置参考](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md)。
 1. 使用**成员角色**为集群配置用户授权。点击**添加成员**添加可以访问集群的用户。使用**角色**下拉菜单为每个用户设置权限。

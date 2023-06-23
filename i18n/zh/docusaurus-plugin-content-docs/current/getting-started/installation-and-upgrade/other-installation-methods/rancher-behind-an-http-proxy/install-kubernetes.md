@@ -28,17 +28,21 @@ NO_PROXY=127.0.0.0/8,10.0.0.0/8,cattle-system.svc,172.16.0.0/12,192.168.0.0/16,.
 EOF
 ```
 
-然后运行 K3s 安装脚本创建一个新的 K3s 集群。确保你安装的 K3s 版本受 [Rancher 支持](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/)。
+Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的 Rancher 版本支持哪些 Kubernetes 版本，请参见 [Rancher 支持矩阵](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/)。
+
+如需指定 K3s（Kubernetes）版本，在运行 K3s 安装脚本时使用 `INSTALL_K3S_VERSION` 环境变量（例如 `INSTALL_K3S_VERSION="v1.24.10+k3s1"`）。
 
 在第一个节点上，创建一个新集群：
 ```
-curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.xx K3S_TOKEN=your_secret sh -s - server --cluster-init
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=<VERSION> K3S_TOKEN=<TOKEN> sh -s - server --cluster-init
 ```
 
 然后加入其他节点：
 ```
-curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.xx K3S_TOKEN=your_secret sh -s - server --server https://<ip or hostname of server1>:6443
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=<VERSION> K3S_TOKEN=<TOKEN> sh -s - server --server https://<SERVER>:6443
 ```
+
+其中 `<SERVER>` 是 Server 的 IP 或有效 DNS，`<TOKEN>` 是可以在 `/var/lib/rancher/k3s/server/node-token` 中找到的 Server node-token。
 
 有关安装 K3s 的更多信息，请参阅 [K3s 安装文档](https://docs.k3s.io/installation)。
 
@@ -77,7 +81,7 @@ systemctl enable rke2-server.service
 systemctl start rke2-server.service
 ```
 
-有关安装 RKE2 的更多信息，请参阅 [RKE2 安装文档](https://docs.rke2.io)。
+有关安装 RKE2 的更多信息，请参阅 [RKE2 文档](https://docs.rke2.io)。
 
 如需查看集群，请运行以下命令：
 

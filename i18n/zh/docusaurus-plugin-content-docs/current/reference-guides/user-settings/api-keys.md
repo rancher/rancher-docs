@@ -33,7 +33,7 @@ API 密钥由四个组件组成：
 
    有效期将受 `v3/settings/auth-token-max-ttl-minutes` 约束。如果超过 max-ttl，则会以 max-ttl 为有效期创建 API 密钥。
 
-   范围将限制 API 密钥，使其仅适用于指定集群的 Kubernetes API。如果集群配置了授权集群端点，你将能够直接针对集群的 API 使用设定了范围的令牌，而无需通过 Rancher Server 进行代理。有关详细信息，请参阅[授权集群端点](../../pages-for-subheaders/rancher-manager-architecture.md#4-授权集群端点)。
+   范围将限制 API 密钥，使其仅适用于指定集群的 Kubernetes API。如果集群配置了授权集群端点，你将能够直接针对集群的 API 使用设定了范围的令牌，而无需通过 Rancher Server 进行代理。有关详细信息，请参阅[授权集群端点](../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-授权集群端点)。
 
 4. 单击**创建**。
 

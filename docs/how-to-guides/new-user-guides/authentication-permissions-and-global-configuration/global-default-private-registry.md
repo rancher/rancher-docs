@@ -2,6 +2,10 @@
 title: Configuring a Global Default Private Registry
 ---
 
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry"/>
+</head>
+
 :::note
 This page describes how to configure a global default private registry from the Rancher UI, after Rancher is already installed. 
 

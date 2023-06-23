@@ -4,7 +4,7 @@ title: 在 Nutanix AOS 中配置 Kubernetes 集群
 
 要使用 Rancher 在 Nutanix AOS (AHV) 中安装 [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes 集群：
 
-1. 找到 Rancher 的内置 Nutanix [主机驱动并激活它](../../../authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#激活/停用主机驱动)。
+1. 找到 Rancher 的内置 Nutanix [主机驱动并激活它](../../../authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#激活停用主机驱动)。
 
 1. 创建一个节点模板，Rancher 将使用该模板在 Nutanix AOS 中配置节点。
 

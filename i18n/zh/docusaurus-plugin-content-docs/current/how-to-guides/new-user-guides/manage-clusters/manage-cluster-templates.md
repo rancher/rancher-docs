@@ -84,7 +84,7 @@ RKE2 集群模板的示例仓库在[这里](https://github.com/rancher/cluster-t
 - 为了以创建新集群的形式显示，集群模板的 Helm Chart 必须具有 `catalog.cattle.io/type:cluster-template` 注释。
 - 为了将模板用作持续交付/GitOps 的一部分，集群模板需要部署在`本地`集群的 `fleet-local` 命名空间中。
 - 所有值都必须在模板的 `values.yaml` 中设置。
-- Fleet 仓库必须遵循此处的[准则](https://fleet.rancher.io/gitrepo-content)。对于 RKE2 集群模板，则必须把 `fleet.yaml` 文件添加到仓库。
+- Fleet 仓库必须遵循此处的[指南](https://fleet.rancher.io/gitrepo-content)。对于 RKE2 集群模板，则必须把 `fleet.yaml` 文件添加到仓库。
 
 :::
 

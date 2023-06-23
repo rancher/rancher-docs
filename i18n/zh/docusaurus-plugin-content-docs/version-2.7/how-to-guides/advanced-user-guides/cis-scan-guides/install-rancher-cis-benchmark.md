@@ -12,6 +12,6 @@ title: 安装 Rancher CIS Benchmark
 
 :::note
 
-CIS Benchmark 4.0.0 及更高版本默认禁用 PSP。要在加固集群上安装 CIS Benchmark，在安装 Chart 之前将 values 中的 `golbal.psp.enabled` 设置为 `true`。
+CIS Benchmark 4.0.0 及更高版本默认禁用 PSP。要在加固集群上安装 CIS Benchmark，在安装 Chart 之前将 values 中的 `global.psp.enabled` 设置为 `true`。
 
 :::

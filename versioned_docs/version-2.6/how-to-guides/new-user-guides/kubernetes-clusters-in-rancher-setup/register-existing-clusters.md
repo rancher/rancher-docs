@@ -119,9 +119,9 @@ resource "rancher2_cluster" "my-eks-to-import" {
 
 The control that Rancher has to manage a registered cluster depends on the type of cluster.
 
-- [Features for All Registered Clusters](#2-5-8-features-for-all-registered-clusters)
-- [Additional Features for Registered K3s Clusters](#2-5-8-additional-features-for-registered-k3s-clusters)
-- [Additional Features for Registered EKS and GKE Clusters](#additional-features-for-registered-eks-and-gke-clusters)
+- [Features for All Registered Clusters](#features-for-all-registered-clusters)
+- [Additional Features for Registered K3s Clusters](#additional-features-for-registered-k3s-clusters)
+- [Additional Features for Registered EKS, AKS, and GKE Clusters](#additional-features-for-registered-eks-aks-and-gke-clusters)
 
 ### Features for All Registered Clusters
 

@@ -6,7 +6,7 @@ title: 接收器配置
 
 :::note
 
-本节参考假设你已经熟悉 Monitoring 组件的协同工作方式。有关 Alertmanager 的详细信息，请参阅[本节](../../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#3-alertmanager-工作原理)。
+本节参考假设你已经熟悉 Monitoring 组件的协同工作方式。有关 Alertmanager 的详细信息，请参阅[本节](../../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#3-alertmanager-的工作原理)。
 
 :::
 
@@ -293,7 +293,6 @@ spec:
 ```
 
 有关为 `rancher-cis-benchmark` 启用告警的更多信息，请参阅[本节](../../how-to-guides/advanced-user-guides/cis-scan-guides/enable-alerting-for-rancher-cis-benchmark.md)。
-
 
 ## Notifiers 的可信 CA
 

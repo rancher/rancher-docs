@@ -12,10 +12,11 @@ title: Helm CLI 快速入门
 
 完整的安装要求在[这里](../../../pages-for-subheaders/installation-requirements.md)。
 
-
 ## 在 Linux 上安装 K3s
 
-Rancher 需要安装在支持的 Kubernetes 版本上。如需指定 K3s 版本，在运行 K3s 安装脚本时使用 `INSTALL_K3S_VERSION` 环境变量（例如 `INSTALL_K3S_VERSION="v1.24.10+k3s1"`）。请参阅[支持维护条款](https://rancher.com/support-maintenance-terms/)。
+Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的 Rancher 版本支持哪些 Kubernetes 版本，请参见 [Rancher 支持矩阵](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/)。
+
+如需指定 K3s（Kubernetes）版本，在运行 K3s 安装脚本时使用 `INSTALL_K3S_VERSION` 环境变量（例如 `INSTALL_K3S_VERSION="v1.24.10+k3s1"`）。
 
 在 Linux 主机上运行以下命令来安装 K3s 集群：
 

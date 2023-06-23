@@ -13,7 +13,6 @@ Because of this change to the controller, the default behavior no longer sets `h
 
 
 - [Specify a hostname to use](#specify-a-hostname-to-use)
-- [Use as the default backend](#use-as-the-default-backend)
 - [Certificates](#certificates)
 - [Labels and Annotations](#labels-and-annotations)
 
