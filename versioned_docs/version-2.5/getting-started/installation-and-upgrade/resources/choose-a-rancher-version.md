@@ -2,6 +2,10 @@
 title: Choosing a Rancher Version
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/resources/choose-a-rancher-version"/>
+</head>
+
 This section describes how to choose a Rancher version.
 
 For a high-availability installation of Rancher, which is recommended for production, the Rancher server is installed using a **Helm chart** on a Kubernetes cluster. Refer to the [Helm version requirements](./helm-version-requirements.md) to choose a version of Helm to install Rancher.
@@ -61,7 +65,7 @@ After installing Rancher, if you want to change which Helm chart repository to i
     ```
 - Alpha: Experimental preview of upcoming releases.
     ```
-    helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+    helm repo add rancher-alpha https://releases.rancher.com/server-charts/alpha
     ```
     Note: Upgrades are not supported to, from, or between Alphas.
 

@@ -2,6 +2,10 @@
 title: Upgrading Rancher Installed with Docker
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/upgrade-docker-installed-rancher"/>
+</head>
+
 The following instructions will guide you through upgrading a Rancher server that was installed with Docker.
 
 ## Prerequisites

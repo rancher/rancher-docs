@@ -163,7 +163,7 @@ If the drain continues without error, the node enters a `draining` state. You'll
 
 Once drain successfully completes, the node will be in a state of `drained`. You can then power off or delete the node.
 
->**Want to know more about cordon and drain?** See the [Kubernetes documentation](https://kubernetes.io/docs/tasks/administer-cluster/cluster-management/#maintenance-on-a-node).
+>**Want to know more about cordon and drain?** See the [Kubernetes documentation](https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/).
 
 ## Labeling a Node to be Ignored by Rancher
 

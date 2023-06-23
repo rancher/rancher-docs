@@ -1,6 +1,11 @@
 ---
 title: Upgrades
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades"/>
+</head>
+
 The following instructions will guide you through upgrading a Rancher server that was installed on a Kubernetes cluster with Helm. These steps also apply to air-gapped installs with Helm.
 
 For the instructions to upgrade Rancher installed with Docker, refer to [this page.](../other-installation-methods/rancher-on-a-single-node-with-docker/upgrade-docker-installed-rancher.md)
@@ -22,7 +27,7 @@ The kubeconfig can also be manually targeted for the intended cluster with the `
 
 Review the list of known issues for each Rancher version, which can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums.](https://forums.rancher.com/c/announcements/12)
 
-Note that upgrades _to_ or _from_ any chart in the [rancher-alpha repository](../../../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#helm-chart-repositories/) aren't supported.
+Note that upgrades _to_ or _from_ any chart in the [rancher-alpha repository](../resources/choose-a-rancher-version.md#helm-chart-repositories) aren't supported.
 ### Helm Version
 
 The upgrade instructions assume you are using Helm 3.
@@ -32,10 +37,6 @@ For migration of installs started with Helm 2, refer to the official [Helm 2 to 
 ### For air-gapped installs: Populate private registry
 
 For [air-gapped installs only,](../../../pages-for-subheaders/air-gapped-helm-cli-install.md) collect and populate images for the new Rancher server version. Follow the guide to [populate your private registry](../other-installation-methods/air-gapped-helm-cli-install/publish-images.md) with the images for the Rancher version that you want to upgrade to.
-
-### For upgrades from a Rancher server with a hidden local cluster
-
-If you are upgrading to Rancher v2.5 from a Rancher server that was started with the Helm chart option `--add-local=false`, you will need to drop that flag when upgrading. Otherwise, the Rancher server will not start. The `restricted-admin` role can be used to continue restricting access to the local cluster. For more information, see [this section.](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#upgrading-from-rancher-with-a-hidden-local-cluster)
 
 ### For upgrades with cert-manager older than 0.8.0
 
@@ -62,7 +63,7 @@ You'll use the backup as a restore point if something goes wrong during upgrade.
 
 1. Get the repository name that you used to install Rancher.
 
-    For information about the repos and their differences, see [Helm Chart Repositories](../installation-references/helm-chart-options.md#helm-chart-repositories).
+    For information about the repos and their differences, see [Helm Chart Repositories](../resources/choose-a-rancher-version.md#helm-chart-repositories).
 
     - Latest: Recommended for trying out the newest features
         ```
@@ -131,7 +132,7 @@ There will be more values that are listed with this command. This is just an exa
 :::
 
 
-If you are upgrading cert-manager to the latest version from v1.5 or below, follow the [cert-manager upgrade docs](../resources/upgrade-cert-manager.md#option-c-upgrade-cert-manager-from-versions-1-5-and-below) to learn how to upgrade cert-manager without needing to perform an uninstall or reinstall of Rancher. Otherwise, follow the [steps to upgrade Rancher](#steps-to-upgrade-rancher) below.
+If you are upgrading cert-manager to the latest version from v1.5 or below, follow the [cert-manager upgrade docs](../resources/upgrade-cert-manager.md#option-c-upgrade-cert-manager-from-versions-15-and-below) to learn how to upgrade cert-manager without needing to perform an uninstall or reinstall of Rancher. Otherwise, follow the [steps to upgrade Rancher](#steps-to-upgrade-rancher) below.
 
 #### Steps to Upgrade Rancher
 

@@ -20,7 +20,7 @@ The following are some specific example configuration changes that may cause the
 
 - When editing the cluster and enabling `drain before delete`, the existing control plane nodes and worker are deleted and new nodes are created.
 
-- When nodes are being provisioned and a scale down operation is performed, rather than scaling down the desired number of nodes, it is possible that the currently provisioning nodes get deleted and new nodes are provisioned to reach the desired node count. Please note that this is a bug in Cluster API, and it will be fixed in an upcoming release. Once fixed, Rancher will update the documentation.
+- For Rancher v2.6.6 and earlier, when nodes are being provisioned and a scale down operation is performed, rather than scaling down the desired number of nodes, it is possible that the currently provisioning nodes get deleted and new nodes are provisioned to reach the desired node count. Please note that this is a bug in the Cluster API that is fixed in newer Rancher versions.
 
 Users who are used to RKE1 provisioning should take note of this new RKE2 behavior which may be unexpected.
 

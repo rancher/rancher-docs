@@ -48,4 +48,4 @@ Rancher 使用以下 Kubernetes 发行版：
 
 [安全增强型 Linux (SELinux)](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) 是对 Linux 的安全增强。被政府机构使用之后，SELinux 已成为行业标准，并在 RHEL 和 CentOS 上默认启用。
 
-要配合使用 Rancher 与 SELinux，我们建议你根据[此页面](selinux-rpm.md#安装-rancher-selinux-rpm)的安装说明安装 `rancher-selinux` RPM。
+要配合使用 Rancher 与 SELinux，我们建议你根据[此页面](../reference-guides/rancher-security/selinux-rpm/about-rancher-selinux.md#安装-rancher-selinux-rpm)的安装说明安装 `rancher-selinux` RPM。

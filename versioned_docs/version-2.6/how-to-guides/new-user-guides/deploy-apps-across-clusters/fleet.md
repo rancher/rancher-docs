@@ -2,7 +2,7 @@
 title: Continuous Delivery with Fleet
 ---
 
-Continuous Delivery with Fleet is GitOps at scale. Fleet is designed to manage up to a million clusters. It's also lightweight enough that it works great for a [single cluster](https://fleet.rancher.io/single-cluster-install/) too, but it really shines when you get to a [large scale.](https://fleet.rancher.io/multi-cluster-install/) By large scale we mean either a lot of clusters, a lot of deployments, or a lot of teams in a single organization.
+Continuous Delivery with Fleet is GitOps at scale. Fleet is designed to manage up to a million clusters. It's also lightweight enough that it works great for a [single cluster](https://fleet.rancher.io/installation#default-install) too, but it really shines when you get to a [large scale.](https://fleet.rancher.io/installation#configuration-for-multi-cluster) By large scale we mean either a lot of clusters, a lot of deployments, or a lot of teams in a single organization.
 
 Fleet is a separate project from Rancher, and can be installed on any Kubernetes cluster with Helm.
 
@@ -13,7 +13,7 @@ For information about how Fleet works, see [this page.](../../../integrations-in
 
 ## Accessing Fleet in the Rancher UI
 
-Fleet comes preinstalled in Rancher and is managed by the **Continous Delivery** option in the Rancher UI. For additional information on Continuous Delivery and other Fleet troubleshooting tips, refer [here](https://fleet.rancher.io/troubleshooting/).
+Fleet comes preinstalled in Rancher and is managed by the **Continous Delivery** option in the Rancher UI. For additional information on Continuous Delivery and other Fleet troubleshooting tips, refer [here](https://fleet.rancher.io/troubleshooting).
 
 Users can leverage continuous delivery to deploy their applications to the Kubernetes clusters in the git repository without any manual operation by following **gitops** practice.
 
@@ -28,7 +28,7 @@ Follow the steps below to access Continuous Delivery in the Rancher UI:
 
 1. Click on **Gitrepos** on the left navigation bar to deploy the gitrepo into your clusters in the current workspace.
 
-1. Select your [git repository](https://fleet.rancher.io/gitrepo-add/) and [target clusters/cluster group](https://fleet.rancher.io/gitrepo-targets). You can also create the cluster group in the UI by clicking on **Cluster Groups** from the left navigation bar.
+1. Select your [git repository](https://fleet.rancher.io/gitrepo-add) and [target clusters/cluster group](https://fleet.rancher.io/gitrepo-targets). You can also create the cluster group in the UI by clicking on **Cluster Groups** from the left navigation bar.
 
 1. Once the gitrepo is deployed, you can monitor the application through the Rancher UI.
 
@@ -55,7 +55,7 @@ The Helm chart in the git repository must include its dependencies in the charts
 ## Troubleshooting
 
 ---
-* **Known Issue:** clientSecretName and helmSecretName secrets for Fleet gitrepos are not included in the backup nor restore created by the [backup-restore-operator](../backup-restore-and-disaster-recovery/back-up-rancher.md#1-install-the-rancher-backups-operator). We will update the community once a permanent solution is in place.
+* **Known Issue:** clientSecretName and helmSecretName secrets for Fleet gitrepos are not included in the backup nor restore created by the [backup-restore-operator](../backup-restore-and-disaster-recovery/back-up-rancher.md#1-install-the-rancher-backup-operator). We will update the community once a permanent solution is in place.
 
 * **Temporary Workaround:** <br/>
 By default, user-defined secrets are not backed up in Fleet. It is necessary to recreate secrets if performing a disaster recovery restore or migration of Rancher into a fresh cluster. To modify resourceSet to include extra resources you want to backup, refer to docs [here](https://github.com/rancher/backup-restore-operator#user-flow).

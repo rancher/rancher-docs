@@ -35,7 +35,7 @@ title: Nutanix 节点模板配置
 | 网络 | ✓ | 要附加到虚拟机的网络的名称 |
 | 虚拟机类别 |          | 要应用于虚拟机的类别名称 |
 
-虚拟机支持通过 [Config Drive v2 datasource](https://cloudinit.readthedocs.io/en/latest/topics/datasources/configdrive.html) 来支持 [cloud-init](https://cloudinit.readthedocs.io/en/latest/) 的任何现代 Linux 操作系统。
+虚拟机支持通过 [Config Drive v2 datasource](https://cloudinit.readthedocs.io/en/latest/reference/datasources/configdrive.html) 来支持 [cloud-init](https://cloudinit.readthedocs.io/en/latest/) 的任何现代 Linux 操作系统。
 
 ## 网络
 

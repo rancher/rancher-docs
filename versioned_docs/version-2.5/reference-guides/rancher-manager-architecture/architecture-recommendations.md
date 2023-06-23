@@ -99,6 +99,6 @@ For more best practices for downstream clusters, refer to the [production checkl
 
 ## Architecture for an Authorized Cluster Endpoint
 
-If you are using an [authorized cluster endpoint,](../../pages-for-subheaders/rancher-manager-architecture.md#4-authorized-cluster-endpoint) we recommend creating an FQDN pointing to a load balancer which balances traffic across your nodes with the `controlplane` role.
+If you are using an [authorized cluster endpoint,](../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint) we recommend creating an FQDN pointing to a load balancer which balances traffic across your nodes with the `controlplane` role.
 
 If you are using private CA signed certificates on the load balancer, you have to supply the CA certificate, which will be included in the generated kubeconfig file to validate the certificate chain. See the documentation on [kubeconfig files](../../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md) and [API keys](../user-settings/api-keys.md#creating-an-api-key) for more information.

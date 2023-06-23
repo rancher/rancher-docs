@@ -35,6 +35,10 @@ If you are registering a K3s cluster, make sure the `cluster.yml` is readable. I
 
 EKS clusters must have at least one managed node group to be imported into Rancher or provisioned from Rancher successfully.
 
+### GKE Clusters
+
+GKE clusters must be running in Standard mode. GKE Autopilot clusters aren't supported. See [Compare GKE Autopilot and Standard](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison) for more information about the difference between GKE modes.
+
 ## Registering a Cluster
 
 1. Click **☰ > Cluster Management**.
@@ -115,9 +119,9 @@ resource "rancher2_cluster" "my-eks-to-import" {
 
 The control that Rancher has to manage a registered cluster depends on the type of cluster.
 
-- [Features for All Registered Clusters](#2-5-8-features-for-all-registered-clusters)
-- [Additional Features for Registered K3s Clusters](#2-5-8-additional-features-for-registered-k3s-clusters)
-- [Additional Features for Registered EKS and GKE Clusters](#additional-features-for-registered-eks-and-gke-clusters)
+- [Features for All Registered Clusters](#features-for-all-registered-clusters)
+- [Additional Features for Registered K3s Clusters](#additional-features-for-registered-k3s-clusters)
+- [Additional Features for Registered EKS, AKS, and GKE Clusters](#additional-features-for-registered-eks-aks-and-gke-clusters)
 
 ### Features for All Registered Clusters
 

@@ -2,6 +2,10 @@
 title: Upgrades
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades"/>
+</head>
+
 The following instructions will guide you through upgrading a Rancher server that was installed on a Kubernetes cluster with Helm. These steps also apply to air gap installs with Helm.
 
 For the instructions to upgrade Rancher installed on Kubernetes with RancherD, refer to [this page.](../other-installation-methods/install-rancher-on-linux/upgrade-rancherd.md)
@@ -29,7 +33,7 @@ The kubeconfig can also be manually targeted for the intended cluster with the `
 
 Review the list of known issues for each Rancher version, which can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums.](https://forums.rancher.com/c/announcements/12)
 
-Note that upgrades _to_ or _from_ any chart in the [rancher-alpha repository](../../../reference-guides/installation-references/helm-chart-options.md#helm-chart-repositories/) aren't supported.
+Note that upgrades _to_ or _from_ any chart in the [rancher-alpha repository](../resources/choose-a-rancher-version.md#helm-chart-repositories) aren't supported.
 
 ### Helm Version
 
@@ -74,7 +78,7 @@ You'll use the backup as a restoration point if something goes wrong during upgr
 
 1. Get the repository name that you used to install Rancher.
 
-    For information about the repos and their differences, see [Helm Chart Repositories](../../../reference-guides/installation-references/helm-chart-options.md#helm-chart-repositories).
+    For information about the repos and their differences, see [Helm Chart Repositories](../resources/choose-a-rancher-version.md#helm-chart-repositories).
 
     - Latest: Recommended for trying out the newest features
         ```

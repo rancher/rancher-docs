@@ -48,7 +48,7 @@ Install the [rancher-backup chart](https://github.com/rancher/backup-restore-ope
      The above assumes an environment with outbound connectivity to Docker Hub
 
      For an **air-gapped environment**, use the Helm value below to pull the `backup-restore-operator` image from your private registry when installing the rancher-backup Helm chart.
-     
+
      ```bash
      --set image.repository $REGISTRY/rancher/backup-restore-operator
      ```
@@ -120,7 +120,7 @@ Kubernetes v1.22, available as an experimental feature of v2.6.3, does not suppo
 
    If this applies, provide the name of the `Secret` object containing the encryption config file. If you only have the encryption config file, but don't have the secret created in this cluster, use the following steps to create the secret:
 
-   1. Create an [encryption configuration file](reference-guides/backup-restore-configuration/backup-configuration.md#encryption)
+   1. Create an [encryption configuration file](../../../reference-guides/backup-restore-configuration/backup-configuration.md#encryption)
    1. The command below uses a file named `encryption-provider-config.yaml`, with the `--from-file` flag. Run the below once the `EncryptionConfiguration` is saved in a file called `encryption-provider-config.yaml`:
 
       ```bash

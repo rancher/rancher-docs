@@ -24,7 +24,7 @@ In order to provision vSphere volumes in a cluster created with the [Rancher Kub
 
     ![](/img/vsphere-storage-class.png)
 
-5. Optionally, specify additional properties for this storage class under **Parameters**. Refer to the [vSphere storage documentation](https://vmware.github.io/vsphere-storage-for-kubernetes/documentation/storageclass.html) for details.
+5. Optionally, specify additional properties for this storage class under **Parameters**. Refer to the [vSphere storage documentation](https://github.com/vmware-archive/vsphere-storage-for-kubernetes/blob/master/documentation/storageclass.md) for details.
 5. Click **Save**.
 
 ### Creating a Workload with a vSphere Volume
@@ -66,5 +66,5 @@ Even using a deployment resource with just a single replica may result in a dead
 
 ### Related Links
 
-- [vSphere Storage for Kubernetes](https://vmware.github.io/vsphere-storage-for-kubernetes/documentation/)
+- [vSphere Storage for Kubernetes](https://github.com/vmware-archive/vsphere-storage-for-kubernetes/tree/master/documentation)
 - [Kubernetes Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)

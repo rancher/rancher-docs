@@ -68,7 +68,7 @@ You can use projects to perform actions such as:
 
 When you create a cluster, two projects are automatically created within it:
 
-- [Default Project](#the-cluster-s-default-project)
+- [Default Project](#the-clusters-default-project)
 - [System Project](#the-system-project)
 
 ### The Cluster's Default Project

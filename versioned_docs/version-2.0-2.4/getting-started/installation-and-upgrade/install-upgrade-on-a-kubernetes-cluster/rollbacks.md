@@ -2,6 +2,10 @@
 title: Rollbacks
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks"/>
+</head>
+
 ### Rolling Back to Rancher v2.2-v2.4
 
 For Rancher installed on Kubernetes, follow the procedure detailed here: [Restoring Backups for Kubernetes installs.](../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md) Restoring a snapshot of the Rancher Server cluster will revert Rancher to the version and state at the time of the snapshot.

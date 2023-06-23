@@ -4,7 +4,7 @@ title: Provisioning Kubernetes Clusters in Nutanix AOS
 
 To use Rancher to install an [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes cluster in Nutanix AOS (AHV):
 
-1. Locate Rancher's built-in Nutanix [node driver and activate it](../../../authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#activating-deactivating-node-drivers).
+1. Locate Rancher's built-in Nutanix [node driver and activate it](../../../authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#activatingdeactivating-node-drivers).
 
 1. Create a node template, which Rancher will use to provision nodes in Nutanix AOS.
 
@@ -87,6 +87,6 @@ You can access your cluster after its state is updated to **Active**.
 
 After creating your cluster, you can access it through the Rancher UI. As a best practice, we recommend setting up these alternate ways of accessing your cluster:
 
-- **Access your cluster with the kubectl CLI:** Follow [these steps](../../../../new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#accessing-clusters-with-kubectl-on-your-workstation) to access clusters with kubectl on your workstation. In this case, you will be authenticated through the Rancher server’s authentication proxy, then Rancher will connect you to the downstream cluster. This method lets you manage the cluster without the Rancher UI.
+- **Access your cluster with the kubectl CLI:** Follow [these steps](../../../../new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#accessing-clusters-with-kubectl-from-your-workstation) to access clusters with kubectl on your workstation. In this case, you will be authenticated through the Rancher server’s authentication proxy, then Rancher will connect you to the downstream cluster. This method lets you manage the cluster without the Rancher UI.
 
 - **Access your cluster with the kubectl CLI, using the authorized cluster endpoint:** Follow [these steps](../../../../new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster) to access your cluster with kubectl directly, without authenticating through Rancher. We recommend setting up this alternative method to access your cluster so that in case you can’t connect to Rancher, you can still access the cluster.

@@ -12,7 +12,7 @@ _kubeconfig 文件_ 是与 kubectl 命令行工具（或其他客户端）结合
 
 下载 kubeconfig 文件后，你将能够使用 kubeconfig 文件及其 Kubernetes [上下文](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-context-and-configuration)访问下游集群。
 
-如果管理员[关闭了 kubeconfig 令牌生成](../../../../reference-guides/about-the-api/api-tokens.md#在生成的-kubeconfigs-中禁用令牌)，则 kubeconfig 文件要求 [Rancher CLI](./authorized-cluster-endpoint.md) 存在于你的 PATH 中。
+如果管理员[关闭了 kubeconfig 令牌生成](../../../../reference-guides/about-the-api/api-tokens.md#在生成的-kubeconfig-中禁用令牌)，则 kubeconfig 文件要求 [Rancher CLI](./authorized-cluster-endpoint.md) 存在于你的 PATH 中。
 
 ### RKE 集群的两种身份验证方法
 
@@ -27,11 +27,11 @@ _kubeconfig 文件_ 是与 kubectl 命令行工具（或其他客户端）结合
 
 要使用授权集群端点，你需要配置 kubectl，从而使用 Rancher 在创建 RKE 集群时生成的 kubeconfig 文件中的额外 kubectl 上下文。该文件可以从 Rancher UI 的**集群**视图中下载，配置 kubectl 的说明在[此页面](use-kubectl-and-kubeconfig.md#直接使用下游集群进行身份验证)。
 
-[架构介绍](../../../../pages-for-subheaders/rancher-manager-architecture.md#与下游集群通信)也详细解释了这些与下游 Kubernetes 集群通信的方法，并介绍了 Rancher 的工作原理以及 Rancher 如何与下游集群通信的详细信息。
+[架构介绍](../../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md)也详细解释了这些与下游 Kubernetes 集群通信的方法，并介绍了 Rancher 的工作原理以及 Rancher 如何与下游集群通信的详细信息。
 
 ### 关于 kube-api-auth 身份验证 Webhook
 
-`kube-api-auth` 微服务是为[授权集群端点](../../../../pages-for-subheaders/rancher-manager-architecture.md#4-授权集群端点)提供用户认证功能而部署的，该功能仅适用于[RKE 集群](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)。当你使用 `kubectl` 访问下游集群时，集群的 Kubernetes API server 会使用 `kube-api-auth` 服务作为 webhook 对你进行身份验证。
+`kube-api-auth` 微服务是为[授权集群端点](../../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-授权集群端点)提供用户认证功能而部署的，该功能仅适用于[RKE 集群](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)。当你使用 `kubectl` 访问下游集群时，集群的 Kubernetes API server 会使用 `kube-api-auth` 服务作为 webhook 对你进行身份验证。
 
 在集群配置期间会部署 `/etc/kubernetes/kube-api-authn-webhook.yaml` 文件，并使用 `--authentication-token-webhook-config-file=/etc/kubernetes/kube-api-authn-webhook.yaml` 配置 `kube-apiserver`。这会将 `kube-apiserver` 配置为通过查询 `http://127.0.0.1:6440/v1/authenticate` 来确定持有者 token 的身份验证。
 
