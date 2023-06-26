@@ -2,6 +2,10 @@
 title: RKE2 Cluster Configuration Reference
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"/>
+</head>
+
 This section covers the configuration options that are available in Rancher for a new or existing RKE2 Kubernetes cluster.
 
 ## Overview
@@ -205,6 +209,14 @@ Select the domain for the cluster. The default is `cluster.local`.
 #### NodePort Service Port Range
 
 Option to change the range of ports that can be used for [NodePort services](https://kubernetes.io/docs/concepts/services-networking/service/#nodeport). The default is `30000-32767`.
+
+#### Truncate Hostnames
+
+Option to truncate hostnames to 15 characters or less. You can only set this field during the initial creation of the cluster. You can't enable or disable the 15 character limit after cluster creation.
+
+This setting only affects machine-provisioned clusters. Since custom clusters set hostnames during their own node creation process, which occurs outside of Rancher, this field doesn't restrict custom cluster hostname length.
+
+Truncating hostnames in a cluster improves compatibility with Windows-based systems. Although Kubernetes allows hostnames up to 63 characters in length, systems that use NetBIOS restrict hostnames to 15 characters or less.
 
 #### TLS Alternate Names
 
