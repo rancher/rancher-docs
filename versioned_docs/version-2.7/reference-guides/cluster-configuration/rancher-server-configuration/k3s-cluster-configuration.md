@@ -3,7 +3,7 @@ title: K3s Cluster Configuration Reference
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration"/>
 </head>
 
 This section covers the configuration options that are available in Rancher for a new or existing K3s Kubernetes cluster.
