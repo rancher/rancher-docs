@@ -66,13 +66,13 @@ Rancher 是使用 Kubernetes 的 [Helm](https://helm.sh/) 包管理器安装的�
 2. [为 Rancher 创建命名空间](#2-为-rancher-创建命名空间)
 3. [选择 SSL 配置](#3-选择-ssl-配置)
 4. [安装 cert-manager](#4-安装-cert-manager)（除非你自带证书，否则 TLS 将在负载均衡器上终止）
-5. [使用 Helm 和你选择的证书选项安装 Rancher](#5-根据你选择的证书选项，通过-helm-安装-rancher)
+5. [使用 Helm 和你选择的证书选项安装 Rancher](#5-根据你选择的证书选项通过-helm-安装-rancher)
 6. [验证 Rancher Server 是否部署成功](#6-验证-rancher-server-是否部署成功)
 7. [保存选项](#7-保存选项)
 
 ### 1. 添加 Helm Chart 仓库
 
-执行 `helm repo add` 命令，以添加包含安装 Rancher 的 Chart 的 Helm Chart 仓库。有关如何选择仓库，以及哪个仓库最适合你的用例，请参见[选择 Rancher 版本](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#helm-chart-仓库)。
+执行 `helm repo add` 命令，以添加包含安装 Rancher 的 Chart 的 Helm Chart 仓库。有关如何选择仓库，以及哪个仓库最适合你的用例，请参见[选择 Rancher 版本](../getting-started/installation-and-upgrade/resources/choose-a-rancher-version.md)。
 
 - Latest：建议用于试用最新功能
    ```

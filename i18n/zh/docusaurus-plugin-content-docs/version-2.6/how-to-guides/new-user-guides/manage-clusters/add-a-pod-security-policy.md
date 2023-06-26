@@ -24,7 +24,7 @@ title: 添加 Pod 安全策略
 
 4. 从**默认 Pod 安全策略**下拉列表中，选择要应用于集群的策略。
 
-   Rancher 支持了`受限`和`不受限`的[策略](../authentication-permissions-and-global-configuration/create-pod-security-policies.md#默认-psp)，你也可以[创建自定义策略](../authentication-permissions-and-global-configuration/create-pod-security-policies.md#默认-psp)。
+   Rancher 支持了`受限`和`不受限`的[策略](../authentication-permissions-and-global-configuration/create-pod-security-policies.md#默认-psp)，你也可以[创建自定义策略](../authentication-permissions-and-global-configuration/create-pod-security-policies.md#创建-psp)。
 
 5. 单击**保存**。
 
