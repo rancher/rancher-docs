@@ -2,6 +2,10 @@
 title: K3s Cluster Configuration Reference
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"/>
+</head>
+
 This section covers the configuration options that are available in Rancher for a new or existing K3s Kubernetes cluster.
 
 ## Overview
@@ -149,5 +153,3 @@ Option to set kubelet options for different nodes. For available options, refer 
 Instead of using the Rancher UI forms to choose Kubernetes options for the cluster, advanced users can create an K3s config file. Using a config file allows you to set any of the [options](https://rancher.com/docs/k3s/latest/en/installation/install-options/) available in an K3s installation.
 
 To edit an K3s config file directly from the Rancher UI, click **Edit as YAML**.
-
-
