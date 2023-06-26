@@ -2,6 +2,10 @@
 title: RKE Cluster Configuration Reference
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"/>
+</head>
+
 When Rancher installs Kubernetes, it uses [RKE](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) or [RKE2](https://docs.rke2.io/) as the Kubernetes distribution.
 
 This section covers the configuration options that are available in Rancher for a new or existing RKE Kubernetes cluster.
@@ -188,7 +192,7 @@ If the `updateStrategy` of `ingress-nginx` is `OnDelete`, you will need to delet
 You can configure the scheduling fields and resource limits for the Cluster Agent and the cluster's Fleet Agent. You can use these fields to customize tolerations, affinity rules, and resource requirements. Additional tolerations are appended to a list of default tolerations and control plane node taints. If you define custom affinity rules, they override the global default affinity setting. Defining resource requirements sets requests or limits where there previously were none.
 
 :::note
-With this option, it's possible to override or remove rules that are required for the functioning of the cluster. We strongly recommend against removing or overriding the following affinity rules, as this may cause unwanted side effects:
+With this option, it's possible to override or remove rules that are required for the functioning of the cluster. We strongly recommend against removing or overriding these and any other affinity rules, as this may cause unwanted side effects:
 
 - `affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution` for `cattle-cluster-agent`
 - `cluster-agent-default-affinity` for `cattle-cluster-agent`
