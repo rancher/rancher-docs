@@ -81,6 +81,13 @@ If you use Okta as your IdP, you can [set up an LDAP interface](https://help.okt
 
 You must configure Rancher with a LDAP bind account (aka service account) so that you can search and retrieve LDAP entries for users and groups that should have access. Don't use an administrator account or personal account as an LDAP bind account. [Create](https://help.okta.com/en-us/Content/Topics/users-groups-profiles/usgp-add-users.htm) a dedicated account in OpenLDAP, with read-only access to users and groups under the configured searchbase.
 
+:::warning Security Considerations
+
+The OpenLDAP service account is used for all searches. Rancher users will see users and groups that the OpenLDAP service account can view, regardless of their individual SAML permissions.
+
+:::
+
+
 > **Using TLS?**
 >
 > If the certificate used by the OpenLDAP server is self-signed or from an unrecognized certificate authority, Rancher needs the CA certificate (concatenated with any intermediate certificates) in PEM format. Provide this certificate during the configuration so that Rancher can validate the certificate chain.
