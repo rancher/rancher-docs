@@ -2,6 +2,10 @@
 title: Installing the Adapter
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter"/>
+</head>
+
 > **Important:** If you are attempting to re-install the adapter, you may experience errant out-of-compliance messages for up to an hour.
 
 ### Rancher vs. Adapter Compatibility Matrix
