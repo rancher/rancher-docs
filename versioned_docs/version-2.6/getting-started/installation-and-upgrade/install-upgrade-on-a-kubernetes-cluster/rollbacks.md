@@ -22,16 +22,6 @@ A restore is performed by creating a Restore custom resource.
 
 :::
 
-### Scale the Rancher Deployment to 0
-
-1. In the upper left corner, click **☰ > local**.
-1. From the menu on the left, click **Workload**.
-1. Under **Workload**, click on **Deployments**.
-1. At the top, click on the dropdown to adjust the filter. Select **cattle-system** as the filter.
-1. Find the row for the `rancher` deployment and click **⋮ > Edit Config**.
-1. Change **Replicas** to 0.
-1. Scroll to the bottom and click **Save**.
-
 ### Create the Restore Custom Resource
 
 1. Click **☰ > Cluster Management**.
