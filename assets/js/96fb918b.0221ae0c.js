@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[80180],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[50770],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 40276:
+/***/ 70157:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks",
-    "id": "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks",
+    "id": "version-2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks",
     "title": "Rollbacks",
     "description": "Additional Steps for Rollbacks with Rancher v2.6.4+",
-    "source": "@site/docs/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks.md",
+    "source": "@site/versioned_docs/version-2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks.md",
     "sourceDirName": "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster",
     "slug": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks",
-    "permalink": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks",
+    "permalink": "/v2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1686178389,
-    "formattedLastUpdatedAt": "Jun 7, 2023",
+    "version": "2.7",
+    "lastUpdatedAt": 1687972686,
+    "formattedLastUpdatedAt": "Jun 28, 2023",
     "frontMatter": {
         "title": "Rollbacks"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Install/Upgrade Rancher on a Kubernetes Cluster",
-        "permalink": "/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster"
+        "permalink": "/v2.7/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster"
     },
     "next": {
         "title": "Upgrades",
-        "permalink": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades"
+        "permalink": "/v2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades"
     }
 };
 const assets = {};
@@ -355,11 +355,6 @@ const toc = [
         value: 'Rolling Back to Rancher v2.5.0+',
         id: 'rolling-back-to-rancher-v250',
         level: 2
-    },
-    {
-        value: 'Scale the Rancher Deployment to 0',
-        id: 'scale-the-rancher-deployment-to-0',
-        level: 3
     },
     {
         value: 'Create the Restore Custom Resource',
@@ -454,7 +449,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, `Follow the instructions from this page for restoring Rancher on the same cluster where it was backed up from. In order to migrate Rancher to a new cluster, follow the steps to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster"
+        "href": "/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster"
     }, `migrate Rancher.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -462,40 +457,6 @@ function MDXContent(_param) {
     }, `While restoring Rancher on the same setup, the Rancher deployment is manually scaled down before the restore starts, then the operator will scale it back up once the restore completes. As a result, Rancher and its UI will be unavailable until the restore is complete. While the UI is unavailable, use the original cluster kubeconfig with the restore YAML file: `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `kubectl create -f restore.yaml`), `.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "scale-the-rancher-deployment-to-0"
-    }, `Scale the Rancher Deployment to 0`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `In the upper left corner, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `☰ > local`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `From the menu on the left, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Workload`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Under `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Workload`), `, click on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Deployments`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `At the top, click on the dropdown to adjust the filter. Select `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `cattle-system`), ` as the filter.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Find the row for the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `rancher`), ` deployment and click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `⋮ > Edit Config`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Change `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Replicas`), ` to 0.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Scroll to the bottom and click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Save`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "create-the-restore-custom-resource"
     }, `Create the Restore Custom Resource`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
@@ -524,7 +485,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `Apps`), `. Refer `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/pages-for-subheaders/helm-charts-in-rancher#charts"
+        "href": "/v2.7/pages-for-subheaders/helm-charts-in-rancher#charts"
     }, `here`), ` for more information.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -537,10 +498,10 @@ function MDXContent(_param) {
         parentName: "li"
     }, `Create the Restore with the form or with YAML. For help creating the Restore resource using the online form, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/reference-guides/backup-restore-configuration/restore-configuration"
+        "href": "/v2.7/reference-guides/backup-restore-configuration/restore-configuration"
     }, `configuration reference`), ` and to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/reference-guides/backup-restore-configuration/examples"
+        "href": "/v2.7/reference-guides/backup-restore-configuration/examples"
     }, `examples.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -571,10 +532,10 @@ spec:
         parentName: "li"
     }, `For help configuring the Restore, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/reference-guides/backup-restore-configuration/restore-configuration"
+        "href": "/v2.7/reference-guides/backup-restore-configuration/restore-configuration"
     }, `configuration reference`), ` and to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/reference-guides/backup-restore-configuration/examples"
+        "href": "/v2.7/reference-guides/backup-restore-configuration/examples"
     }, `examples.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -617,7 +578,7 @@ kubectl logs -n cattle-resources-system -f
         "href": "/v2.0-v2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup"
     }, `Restoring Backups — Kubernetes installs`), ` Restoring a snapshot of the Rancher server cluster will revert Rancher to the version and state at the time of the snapshot.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For information on how to roll back Rancher installed with Docker, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/roll-back-docker-installed-rancher"
+        "href": "/v2.7/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/roll-back-docker-installed-rancher"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
