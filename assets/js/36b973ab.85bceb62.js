@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[2113],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[50671],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 35749:
+/***/ 47286:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,39 +308,60 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'RKE1 示例 YAML'
+    title: 'Rancher Webhook'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "reference-guides/rke1-template-example-yaml",
-    "id": "version-2.7/reference-guides/rke1-template-example-yaml",
-    "title": "RKE1 示例 YAML",
-    "description": "以下是一个供参考的 RKE 模板配置文件示例。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.7/reference-guides/rke1-template-example-yaml.md",
+    "unversionedId": "reference-guides/rancher-webhook",
+    "id": "version-2.7/reference-guides/rancher-webhook",
+    "title": "Rancher Webhook",
+    "description": "Rancher-Webhook is an essential component of Rancher that works in conjunction with Kubernetes to enhance security and enable critical features for Rancher-managed clusters.",
+    "source": "@site/versioned_docs/version-2.7/reference-guides/rancher-webhook.md",
     "sourceDirName": "reference-guides",
-    "slug": "/reference-guides/rke1-template-example-yaml",
-    "permalink": "/zh/v2.7/reference-guides/rke1-template-example-yaml",
+    "slug": "/reference-guides/rancher-webhook",
+    "permalink": "/v2.7/reference-guides/rancher-webhook",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/rke1-template-example-yaml.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/rancher-webhook.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "2023年6月6日",
+    "lastUpdatedAt": 1687556157,
+    "formattedLastUpdatedAt": "Jun 23, 2023",
     "frontMatter": {
-        "title": "RKE1 示例 YAML"
+        "title": "Rancher Webhook"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "系统工具",
-        "permalink": "/zh/v2.7/reference-guides/system-tools"
+        "title": "RKE1 Example YAML",
+        "permalink": "/v2.7/reference-guides/rke1-template-example-yaml"
     },
     "next": {
-        "title": "安全",
-        "permalink": "/zh/v2.7/pages-for-subheaders/rancher-security"
+        "title": "Security",
+        "permalink": "/v2.7/pages-for-subheaders/rancher-security"
     }
 };
 const assets = {};
-const toc = [];
+const toc = [
+    {
+        value: 'Why do we need it?',
+        id: 'why-do-we-need-it',
+        level: 2
+    },
+    {
+        value: 'Common Issues',
+        id: 'common-issues',
+        level: 2
+    },
+    {
+        value: 'EKS Cluster with Calico CNI',
+        id: 'eks-cluster-with-calico-cni',
+        level: 3
+    },
+    {
+        value: 'Private GKE Cluster',
+        id: 'private-gke-cluster',
+        level: 3
+    }
+];
 const layoutProps = {
     toc
 };
@@ -352,113 +373,51 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `以下是一个供参考的 RKE 模板配置文件示例。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `RKE 模板中的 YAML 使用与创建 RKE 集群时相同的自定义项。但是，由于 YAML 位于 Rancher 配置的 RKE 集群的上下文中，因此 RKE 文档中的自定义项需要嵌套在 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/reference-guides/rancher-webhook"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher-Webhook is an essential component of Rancher that works in conjunction with Kubernetes to enhance security and enable critical features for Rancher-managed clusters. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `It integrates with Kubernetes' extensible admission controllers, as described in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/"
+    }, `Kubernetes documentation`), `, which allows Rancher-Webhook to inspect specific requests sent to the Kubernetes API server, and add custom, Rancher-specific validation and mutations to the requests that are specific to Rancher. Rancher-Webhook manages the resources to be validated using the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `rancher_kubernetes_engine`), ` 指令下。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    }, `rancher.cattle.io`), ` `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `ValidatingWebhookConfiguration`), ` and the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `rancher.cattle.io`), ` `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `MutatingWebhookConfiguration`), `, and will override any manual edits.
+Rancher deploys Rancher-Webhook as a separate deployment and service in both local and downstream clusters. Rancher manages Rancher-Webhook using Helm. It's important to note that Rancher may override modifications made by users to the Helm release.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "why-do-we-need-it"
+    }, `Why do we need it?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher-Webhook is crucial for Rancher to protect clusters against malicious attacks and enable various features.
+Rancher relies on the Rancher-Webhook as an integral part of its functionality. Without the webhook, Rancher would not be a complete product.
+It provides essential protection for Rancher-managed clusters, preventing security vulnerabilities and ensuring the consistency and stability of the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "common-issues"
+    }, `Common Issues`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "eks-cluster-with-calico-cni"
+    }, `EKS Cluster with Calico CNI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Users running an EKS cluster with Calico CNI may run into errors when the Kubernetes API server attempts to contact the Rancher-Webhook.
+One workaround for this issue `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://docs.tigera.io/calico/latest/getting-started/kubernetes/managed-public-cloud/eks#install-eks-with-calico-networking"
+    }, `documented by Calico`), ` involves setting `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `hostNetwork=true`), ` for the webhook deployment. Users can change this using the Helm commands below on the affected clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
-        "className": "language-yaml"
-    }, `#
-# Cluster Config
-#
-docker_root_dir: /var/lib/docker
-
-enable_cluster_alerting: false
-# This setting is not enforced. Clusters
-# created with this sample template
-# would have alerting turned off by default,
-# but end users could still turn alerting
-# on or off.
-
-enable_cluster_monitoring: true
-# This setting is not enforced. Clusters
-# created with this sample template
-# would have monitoring turned on
-# by default, but end users could still
-# turn monitoring on or off.
-
-enable_network_policy: false
-local_cluster_auth_endpoint:
-  enabled: true
-#
-# Rancher Config
-#
-rancher_kubernetes_engine_config: # Your RKE template config goes here.
-  addon_job_timeout: 30
-  authentication:
-    strategy: x509
-  ignore_docker_version: true
-#
-# # 目前仅支持 Nginx ingress provider
-# # 要禁用 Ingress controller，设置 \`provider: none\`
-# # 要在指定节点上禁用 Ingress，使用 node_selector，例如：
-#    provider: nginx
-#    node_selector:
-#      app: ingress
-#
-  ingress:
-    provider: nginx
-  kubernetes_version: v1.15.3-rancher3-1
-  monitoring:
-    provider: metrics-server
-#
-#   If you are using calico on AWS
-#
-#    network:
-#      plugin: calico
-#      calico_network_provider:
-#        cloud_provider: aws
-#
-# # To specify flannel interface
-#
-#    network:
-#      plugin: flannel
-#      flannel_network_provider:
-#      iface: eth1
-#
-# # To specify flannel interface for canal plugin
-#
-#    network:
-#      plugin: canal
-#      canal_network_provider:
-#        iface: eth1
-#
-  network:
-    options:
-      flannel_backend_type: vxlan
-    plugin: canal
-#
-#    services:
-#      kube-api:
-#        service_cluster_ip_range: 10.43.0.0/16
-#      kube-controller:
-#        cluster_cidr: 10.42.0.0/16
-#        service_cluster_ip_range: 10.43.0.0/16
-#      kubelet:
-#        cluster_domain: cluster.local
-#        cluster_dns_server: 10.43.0.10
-#
-  services:
-    etcd:
-      backup_config:
-        enabled: true
-        interval_hours: 12
-        retention: 6
-        safe_timestamp: false
-      creation: 12h
-      extra_args:
-        election-timeout: 5000
-        heartbeat-interval: 500
-      gid: 0
-      retention: 72h
-      snapshot: false
-      uid: 0
-    kube_api:
-      always_pull_images: false
-      pod_security_policy: false
-      service_node_port_range: 30000-32767
-  ssh_agent_auth: false
-windows_prefered_cluster: false
-`)));
+        "className": "language-bash"
+    }, `helm repo add rancher-charts https://charts.rancher.io 
+helm upgrade --reuse-values rancher-webhook rancher-chart/rancher-webhook  -n cattle-system --set global.hostNetwork=true
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Note:`), ` This temporary workaround may violate an environment's security policy. This workaround also requires that port 9443 is unused on the host network.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "private-gke-cluster"
+    }, `Private GKE Cluster`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When using a private GKE cluster, errors may occur that prevent the Kubernetes API server from communicating with the webhook. The following error message may appear:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `Internal error occurred: failed calling webhook "rancher.cattle.io.namespaces.create-non-kubesystem": failed to call webhook: Post "https://rancher-webhook.cattle-system.svc:443/v1/webhook/validation/namespaces?timeout=10s": context deadline exceeded
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This issue occurs because firewall rules restrict communication between the API server and the private cluster. To resolve this communication problem, users must add firewall rules to allow the GKE control plane to communicate with the Rancher-Webhook on port 9443. Please refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#add_firewall_rules"
+    }, `GKE documentation`), ` for detailed information and steps on updating the firewall rules.`));
 }
 MDXContent.isMDXComponent = true;
 

@@ -335,8 +335,8 @@ const metadata = {
         "permalink": "/zh/reference-guides/system-tools"
     },
     "next": {
-        "title": "安全",
-        "permalink": "/zh/pages-for-subheaders/rancher-security"
+        "title": "Rancher Webhook",
+        "permalink": "/zh/reference-guides/rancher-webhook"
     }
 };
 const assets = {};

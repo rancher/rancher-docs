@@ -331,8 +331,8 @@ const metadata = {
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "RKE1 Example YAML",
-        "permalink": "/v2.7/reference-guides/rke1-template-example-yaml"
+        "title": "Rancher Webhook",
+        "permalink": "/v2.7/reference-guides/rancher-webhook"
     },
     "next": {
         "title": "Self-Assessment and Hardening Guides for Rancher",

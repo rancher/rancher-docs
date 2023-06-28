@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[16791],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[2113],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 89243:
+/***/ 35749:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,35 +308,35 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'RKE1 Example YAML'
+    title: 'RKE1 示例 YAML'
 };
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/rke1-template-example-yaml",
     "id": "version-2.7/reference-guides/rke1-template-example-yaml",
-    "title": "RKE1 Example YAML",
-    "description": "Below is an example RKE template configuration file for reference.",
-    "source": "@site/versioned_docs/version-2.7/reference-guides/rke1-template-example-yaml.md",
+    "title": "RKE1 示例 YAML",
+    "description": "以下是一个供参考的 RKE 模板配置文件示例。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.7/reference-guides/rke1-template-example-yaml.md",
     "sourceDirName": "reference-guides",
     "slug": "/reference-guides/rke1-template-example-yaml",
-    "permalink": "/v2.7/reference-guides/rke1-template-example-yaml",
+    "permalink": "/zh/v2.7/reference-guides/rke1-template-example-yaml",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/rke1-template-example-yaml.md",
     "tags": [],
     "version": "2.7",
     "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "formattedLastUpdatedAt": "2023年6月6日",
     "frontMatter": {
-        "title": "RKE1 Example YAML"
+        "title": "RKE1 示例 YAML"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "System Tools",
-        "permalink": "/v2.7/reference-guides/system-tools"
+        "title": "系统工具",
+        "permalink": "/zh/v2.7/reference-guides/system-tools"
     },
     "next": {
-        "title": "Security",
-        "permalink": "/v2.7/pages-for-subheaders/rancher-security"
+        "title": "Rancher Webhook",
+        "permalink": "/zh/v2.7/reference-guides/rancher-webhook"
     }
 };
 const assets = {};
@@ -352,9 +352,9 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Below is an example RKE template configuration file for reference.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The YAML in the RKE template uses the same customization that is used when you create an RKE cluster. However, since the YAML is within the context of a Rancher provisioned RKE cluster, the customization from the RKE docs needs to be nested under the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `以下是一个供参考的 RKE 模板配置文件示例。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `RKE 模板中的 YAML 使用与创建 RKE 集群时相同的自定义项。但是，由于 YAML 位于 Rancher 配置的 RKE 集群的上下文中，因此 RKE 文档中的自定义项需要嵌套在 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `rancher_kubernetes_engine`), ` directive.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    }, `rancher_kubernetes_engine`), ` 指令下。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-yaml"
     }, `#
@@ -388,9 +388,9 @@ rancher_kubernetes_engine_config: # Your RKE template config goes here.
     strategy: x509
   ignore_docker_version: true
 #
-# # Currently only nginx ingress provider is supported.
-# # To disable ingress controller, set \`provider: none\`
-# # To enable ingress on specific nodes, use the node_selector, eg:
+# # 目前仅支持 Nginx ingress provider
+# # 要禁用 Ingress controller，设置 \`provider: none\`
+# # 要在指定节点上禁用 Ingress，使用 node_selector，例如：
 #    provider: nginx
 #    node_selector:
 #      app: ingress

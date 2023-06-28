@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[35885],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[97398],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 98676:
+/***/ 49441:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "pages-for-subheaders/rancher-security",
-    "id": "pages-for-subheaders/rancher-security",
+    "id": "version-2.7/pages-for-subheaders/rancher-security",
     "title": "安全",
     "description": "安全策略",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/current/pages-for-subheaders/rancher-security.md",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.7/pages-for-subheaders/rancher-security.md",
     "sourceDirName": "pages-for-subheaders",
     "slug": "/pages-for-subheaders/rancher-security",
-    "permalink": "/zh/pages-for-subheaders/rancher-security",
+    "permalink": "/zh/v2.7/pages-for-subheaders/rancher-security",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/pages-for-subheaders/rancher-security.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/pages-for-subheaders/rancher-security.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1683884717,
-    "formattedLastUpdatedAt": "2023年5月12日",
+    "version": "2.7",
+    "lastUpdatedAt": 1686092423,
+    "formattedLastUpdatedAt": "2023年6月6日",
     "frontMatter": {
         "title": "安全"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "RKE1 示例 YAML",
-        "permalink": "/zh/reference-guides/rke1-template-example-yaml"
+        "title": "Rancher Webhook",
+        "permalink": "/zh/v2.7/reference-guides/rancher-webhook"
     },
     "next": {
         "title": "Self-Assessment and Hardening Guides for Rancher",
-        "permalink": "/zh/pages-for-subheaders/rancher-hardening-guides"
+        "permalink": "/zh/v2.7/pages-for-subheaders/rancher-hardening-guides"
     }
 };
 const assets = {};
@@ -432,14 +432,14 @@ function MDXContent(_param) {
         href: "https://forums.rancher.com/c/announcements"
     }, "Rancher 公告论坛"), "以获取版本更新。")))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `安全是 Rancher 全部功能的基础。Rancher 集成了全部主流身份验证工具和服务，并提供了企业级的 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/pages-for-subheaders/manage-role-based-access-control-rbac"
+        "href": "/zh/v2.7/pages-for-subheaders/manage-role-based-access-control-rbac"
     }, `RBAC 功能`), `，让你的 Kubernetes 集群更加安全。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `本文介绍了安全相关的文档以及资源，让你的 Rancher 安装和下游 Kubernetes 集群更加安全。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "neuvector-与-rancher-的集成"
     }, `NeuVector 与 Rancher 的集成`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
         parentName: "p"
     }, `2.6.5 的新功能`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `NeuVector 是一个开源的、以容器为中心的安全应用程序，现已集成到 Rancher 中。NeuVector 提供生产安全、DevOps 漏洞保护和容器防火墙等功能。请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/integrations-in-rancher/neuvector"
+        "href": "/zh/v2.7/integrations-in-rancher/neuvector"
     }, `Rancher 文档`), `和 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://open-docs.neuvector.com/"
@@ -459,7 +459,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `failed`), ` 的测试数量。报告还包括失败测试的修正步骤。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `有关详细信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/pages-for-subheaders/cis-scan-guides"
+        "href": "/zh/v2.7/pages-for-subheaders/cis-scan-guides"
     }, `安全扫描`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "selinux-rpm"
     }, `SELinux RPM`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -471,7 +471,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `rke2-selinux`), ` 两个 RPM（Red Hat 软件包），让 Rancher 产品能够在 SELinux 主机上正常运行。有关详细信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/pages-for-subheaders/selinux-rpm"
+        "href": "/zh/v2.7/pages-for-subheaders/selinux-rpm"
     }, `此页面`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "rancher-强化指南"
     }, `Rancher 强化指南`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 强化指南基于 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -503,12 +503,12 @@ function MDXContent(_param) {
         "id": "rancher-安全公告和-cve"
     }, `Rancher 安全公告和 CVE`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 致力于向社区披露我们产品的安全问题。有关我们已解决问题的 CVE（Common Vulnerabilities and Exposures，通用漏洞披露）列表，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/reference-guides/rancher-security/security-advisories-and-cves"
+        "href": "/zh/v2.7/reference-guides/rancher-security/security-advisories-and-cves"
     }, `此页面`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "kubernetes-安全最佳实践"
     }, `Kubernetes 安全最佳实践`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `有关保护 Kubernetes 集群的建议，请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/reference-guides/rancher-security/kubernetes-security-best-practices"
+        "href": "/zh/v2.7/reference-guides/rancher-security/kubernetes-security-best-practices"
     }, `Kubernetes 安全最佳实践指南`), `。`));
 }
 MDXContent.isMDXComponent = true;
