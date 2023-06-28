@@ -2,6 +2,10 @@
 title: Cluster and Project Roles
 ---
 
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles"/>
+</head>
+
 Cluster and project roles define user authorization inside a cluster or project.
 
 To manage these roles,
