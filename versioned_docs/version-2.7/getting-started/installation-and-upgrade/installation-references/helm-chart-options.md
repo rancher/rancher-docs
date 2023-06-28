@@ -62,7 +62,7 @@ For information on enabling experimental features, refer to [this page.](../../.
 | `systemDefaultRegistry`        | ""                                                    | `string` - private registry to be used for all system container images, e.g., http://registry.example.com/                   |
 | `tls`                          | "ingress"                                             | `string` - See [External TLS Termination](#external-tls-termination) for details. - "ingress, external"                                           |
 | `useBundledSystemChart`        | `false`                                               | `bool` - select to use the system-charts packaged with Rancher server. This option is used for air gapped installations.  |
-| `global.cattle.psp.enabled`        | `true`                                               | `bool` - select 'false' to disable PSP for RKE/RKE2 (K8s) versions `v1.25` and higher.  |
+| `global.cattle.psp.enabled`        | `true`                                               | `bool` - select 'false' to disable PSPs for Kubernetes v1.25 and above when using Rancher v2.7.2-v2.7.4. For Rancher v2.7.5 and above, PSP compatibility is handled automatically and setting this value is not required.  |
 
 
 ### Bootstrap Password
