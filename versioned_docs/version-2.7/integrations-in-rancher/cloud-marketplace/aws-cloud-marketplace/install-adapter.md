@@ -2,6 +2,10 @@
 title: Installing the Adapter
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter"/>
+</head>
+
 > **Important:** If you are attempting to re-install the adapter, you may experience errant out-of-compliance messages for up to an hour.
 
 ### Rancher vs. Adapter Compatibility Matrix
@@ -16,6 +20,11 @@ In order to deploy and run the adapter successfully, you need to ensure its vers
 | Rancher Version | Adapter Version |
 |-----------------|:---------------:|
 | v2.7.0          |     v2.0.0      |
+| v2.7.1          |     v2.0.0      |
+| v2.7.2          |     v2.0.1      |
+| v2.7.3          |     v2.0.1      |
+| v2.7.4          |     v2.0.1      |
+| v2.7.5          |     v2.0.2      |
 
 
 ### 1. Gain Access to the Local Cluster
