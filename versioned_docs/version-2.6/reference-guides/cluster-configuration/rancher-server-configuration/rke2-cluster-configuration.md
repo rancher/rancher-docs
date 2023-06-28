@@ -2,6 +2,10 @@
 title: RKE2 Cluster Configuration Reference
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration"/>
+</head>
+
 This section covers the configuration options that are available in Rancher for a new or existing RKE2 Kubernetes cluster.
 
 ## Overview
