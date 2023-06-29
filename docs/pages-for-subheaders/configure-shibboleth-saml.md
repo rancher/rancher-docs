@@ -2,6 +2,10 @@
 title: Configuring Shibboleth (SAML)
 ---
 
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/configure-shibboleth-saml"/>
+</head>
+
 If your organization uses Shibboleth Identity Provider (IdP) for user authentication, you can configure Rancher to allow your users to log in to Rancher using their Shibboleth credentials.
 
 In this configuration, when Rancher users log in, they will be redirected to the Shibboleth IdP to enter their credentials. After authentication, they will be redirected back to the Rancher UI.
