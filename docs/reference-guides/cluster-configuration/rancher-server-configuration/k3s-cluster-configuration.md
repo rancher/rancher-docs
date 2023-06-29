@@ -2,6 +2,10 @@
 title: K3s Cluster Configuration Reference
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration"/>
+</head>
+
 This section covers the configuration options that are available in Rancher for a new or existing K3s Kubernetes cluster.
 
 ## Overview
@@ -98,6 +102,14 @@ Select the domain for the cluster. The default is `cluster.local`.
 
 Option to change the range of ports that can be used for [NodePort services](https://kubernetes.io/docs/concepts/services-networking/service/#nodeport). The default is `30000-32767`.
 
+#### Truncate Hostnames
+
+Option to truncate hostnames to 15 characters or less. You can only set this field during the initial creation of the cluster. You can't enable or disable the 15 character limit after cluster creation.
+
+This setting only affects machine-provisioned clusters. Since custom clusters set hostnames during their own node creation process, which occurs outside of Rancher, this field doesn't restrict custom cluster hostname length.
+
+Truncating hostnames in a cluster improves compatibility with Windows-based systems. Although Kubernetes allows hostnames up to 63 characters in length, systems that use NetBIOS restrict hostnames to 15 characters or less.
+
 #### TLS Alternate Names
 
 Add additional hostnames or IPv4/IPv6 addresses as Subject Alternative Names on the server TLS cert.
@@ -141,5 +153,3 @@ Option to set kubelet options for different nodes. For available options, refer 
 Instead of using the Rancher UI forms to choose Kubernetes options for the cluster, advanced users can create an K3s config file. Using a config file allows you to set any of the [options](https://rancher.com/docs/k3s/latest/en/installation/install-options/) available in an K3s installation.
 
 To edit an K3s config file directly from the Rancher UI, click **Edit as YAML**.
-
-

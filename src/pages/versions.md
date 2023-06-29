@@ -10,10 +10,10 @@ Below are the documentation and release notes for the currently released version
 
 <table>
   <tr>
-    <td><b>v2.7.4</b></td>
+    <td><b>v2.7.5</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.7">Documentation</a></td>
-    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.7.4">Release Notes</a></td>
-    <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-7-4/">Support Matrix</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.7.5">Release Notes</a></td>
+    <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-7-5/">Support Matrix</a></td>
   </tr>
 </table>
 
@@ -33,7 +33,13 @@ Below are the documentation and release notes for the currently released version
 Below are the documentation and release notes for previous versions of Rancher 2.7.x:
 
 <table>
-    <tr>
+  <tr>
+    <td><b>v2.7.4</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.7">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.7.4">Release Notes</a></td>
+    <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-7-4/">Support Matrix</a></td>
+  </tr>
+  <tr>
     <td><b>v2.7.3</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.7">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.7.3">Release Notes</a></td>
