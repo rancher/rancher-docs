@@ -158,7 +158,7 @@ Follow the steps to [install cert-manager](../../../pages-for-subheaders/install
 
 Use the same version of Helm to install Rancher, that was used on the first cluster.
 
-For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. When using Rancher v2.7.5 and above, Rancher attempts to detect if a cluster is running a Kubernetes version where PSPs are not supported, and will default it's usage of PSPs to false if it can determine that PSPs are not supported in the cluster. Users can still manually override this by explicitly providing `true` or `false` for this value. Rancher will still use PSPs by default in clusters which support PSPs (such as clusters running Kubernetes v1.24 or lower).
+For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2–v2.7.4. When using Rancher v2.7.5 and above, Rancher attempts to detect if a cluster is running a Kubernetes version where PSPs are not supported, and will default it's usage of PSPs to false if it can determine that PSPs are not supported in the cluster. Users can still manually override this by explicitly providing `true` or `false` for this value. Rancher will still use PSPs by default in clusters which support PSPs (such as clusters running Kubernetes v1.24 or lower).
 
 ```bash
 helm install rancher rancher-latest/rancher \

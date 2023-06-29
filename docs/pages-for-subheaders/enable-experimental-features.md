@@ -34,7 +34,7 @@ Values set from the Rancher API will override the value passed in through the co
 
 When installing Rancher with a Helm chart, use the `--set` option. In the below example, two features are enabled by passing the feature flag names in a comma separated list:
 
-For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. When using Rancher v2.7.5 and above, Rancher attempts to detect if a cluster is running a Kubernetes version where PSPs are not supported, and will default it's usage of PSPs to false if it can determine that PSPs are not supported in the cluster. Users can still manually override this by explicitly providing `true` or `false` for this value. Rancher will still use PSPs by default in clusters which support PSPs (such as clusters running Kubernetes v1.24 or lower).
+For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2–v2.7.4. When using Rancher v2.7.5 and above, Rancher attempts to detect if a cluster is running a Kubernetes version where PSPs are not supported, and will default it's usage of PSPs to false if it can determine that PSPs are not supported in the cluster. Users can still manually override this by explicitly providing `true` or `false` for this value. Rancher will still use PSPs by default in clusters which support PSPs (such as clusters running Kubernetes v1.24 or lower).
 
 ```
 helm install rancher rancher-latest/rancher \

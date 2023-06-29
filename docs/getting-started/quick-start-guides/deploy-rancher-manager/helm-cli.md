@@ -130,7 +130,7 @@ The final command to install Rancher is below. The command requires a domain nam
 
 To install a specific Rancher version, use the `--version` flag (e.g., `--version 2.6.6`). Otherwise, the latest Rancher is installed by default. Refer to [Choosing a Rancher Version](../../installation-and-upgrade/resources/choose-a-rancher-version.md).
 
-For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. When using Rancher v2.7.5 and above, Rancher attempts to detect if a cluster is running a Kubernetes version where PSPs are not supported, and will default it's usage of PSPs to false if it can determine that PSPs are not supported in the cluster. Users can still manually override this by explicitly providing `true` or `false` for this value. Rancher will still use PSPs by default in clusters which support PSPs (such as clusters running Kubernetes v1.24 or lower).
+For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2–v2.7.4. When using Rancher v2.7.5 and above, Rancher attempts to detect if a cluster is running a Kubernetes version where PSPs are not supported, and will default it's usage of PSPs to false if it can determine that PSPs are not supported in the cluster. Users can still manually override this by explicitly providing `true` or `false` for this value. Rancher will still use PSPs by default in clusters which support PSPs (such as clusters running Kubernetes v1.24 or lower).
 
 Note the password requires a minimum of 12 characters.
 
