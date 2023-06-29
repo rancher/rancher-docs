@@ -94,7 +94,8 @@ Configure the settings for the OpenLDAP server, groups and users. For help filli
 1. Log into the Rancher UI using the initial local `admin` account.
 1. In the top left corner, click **☰ > Users & Authentication**.
 1. In the left navigation menu, click **Auth Provider**.
-1. Click **OpenLDAP**. The **Configure an OpenLDAP server** form will be displayed.
+1. Click **Shibboleth** or, if SAML is already configured, **Edit Config**
+1. Under **User and Group Search**, check **Configure an OpenLDAP server**
 
 ## Troubleshooting
 
