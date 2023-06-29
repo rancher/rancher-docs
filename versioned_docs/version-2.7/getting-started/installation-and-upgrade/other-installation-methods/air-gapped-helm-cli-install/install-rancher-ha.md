@@ -177,7 +177,7 @@ kubectl create namespace cattle-system
 
 Next, install Rancher, declaring your chosen options. Use the reference table below to replace each placeholder. Rancher needs to be configured to use the private registry in order to provision any Rancher launched Kubernetes clusters or Rancher tools.
 
-For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2–v2.7.4. When using Rancher v2.7.5 and above, Rancher attempts to detect if a cluster is running a Kubernetes version where PSPs are not supported, and will default it's usage of PSPs to false if it can determine that PSPs are not supported in the cluster. Users can still manually override this by explicitly providing `true` or `false` for this value. Rancher will still use PSPs by default in clusters which support PSPs (such as clusters running Kubernetes v1.24 or lower).
+For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
 Placeholder | Description
 ------------|-------------
@@ -208,7 +208,7 @@ Create Kubernetes secrets from your own certificates for Rancher to use. The com
 
 Install Rancher, declaring your chosen options. Use the reference table below to replace each placeholder. Rancher needs to be configured to use the private registry in order to provision any Rancher launched Kubernetes clusters or Rancher tools.
 
-For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2–v2.7.4. When using Rancher v2.7.5 and above, Rancher attempts to detect if a cluster is running a Kubernetes version where PSPs are not supported, and will default it's usage of PSPs to false if it can determine that PSPs are not supported in the cluster. Users can still manually override this by explicitly providing `true` or `false` for this value. Rancher will still use PSPs by default in clusters which support PSPs (such as clusters running Kubernetes v1.24 or lower).
+For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
 | Placeholder                      | Description                                     |
 | -------------------------------- | ----------------------------------------------- |
