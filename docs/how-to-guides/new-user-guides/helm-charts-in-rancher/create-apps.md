@@ -2,6 +2,10 @@
 title: Creating Apps
 ---
 
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps"/>
+</head>
+
 Rancher's App Marketplace is based on Helm Repositories and Helm Charts. You can add HTTP based standard Helm Repositories as well as any Git Repository which contains charts.
 
 :::tip
