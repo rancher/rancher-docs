@@ -2,6 +2,10 @@
 title: Restoring Rancher
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher"/>
+</head>
+
 This page outlines how to perform a restore with Rancher.
 
 :::note Important:
