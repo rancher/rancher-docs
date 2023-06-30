@@ -2,7 +2,11 @@
 title: Restoring a Cluster from Backup
 ---
 
-etcd backup and recovery for [Rancher launched Kubernetes clusters](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) can be easily performed. Snapshots of the etcd database are taken and saved either locally onto the etcd nodes or to a S3 compatible target. The advantages of configuring S3 is that if all etcd nodes are lost, your snapshot is saved remotely and can be used to restore the cluster.
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup"/>
+</head>
+
+Etcd backup and recovery for [Rancher launched Kubernetes clusters](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) can be easily performed. Snapshots of the etcd database are taken and saved either locally onto the etcd nodes or to a S3 compatible target. The advantages of configuring S3 is that if all etcd nodes are lost, your snapshot is saved remotely and can be used to restore the cluster.
 
 Rancher recommends enabling the [ability to set up recurring snapshots of etcd](back-up-rancher-launched-kubernetes-clusters.md#configuring-recurring-snapshots), but [one-time snapshots](back-up-rancher-launched-kubernetes-clusters.md#one-time-snapshots) can easily be taken as well. Rancher allows restore from [saved snapshots](#restoring-a-cluster-from-a-snapshot) or if you don't have any snapshots, you can still [restore etcd](#recovering-etcd-without-a-snapshot).
 
