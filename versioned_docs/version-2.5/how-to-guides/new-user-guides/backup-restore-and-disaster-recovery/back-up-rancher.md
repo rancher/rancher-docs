@@ -2,6 +2,10 @@
 title: Backing up Rancher
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher"/>
+</head>
+
 In this section, you'll learn how to back up Rancher running on any Kubernetes cluster. To backup Rancher installed with Docker, refer to the instructions for [single node backups](./back-up-docker-installed-rancher.md).
 
 The backup-restore operator needs to be installed in the local cluster, and only backs up the Rancher app. The backup and restore operations are performed only in the local Kubernetes cluster.
