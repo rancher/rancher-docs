@@ -3,7 +3,7 @@
 module.exports = {
   title: 'Rancher',
   tagline: '',
-  url: 'http://ranchermanager.docs.rancher.com/',
+  url: 'https://ranchermanager.docs.rancher.com/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
