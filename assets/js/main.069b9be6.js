@@ -41159,7 +41159,7 @@ if (true) {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   "title": "Rancher",
   "tagline": "",
-  "url": "http://ranchermanager.docs.rancher.com",
+  "url": "https://ranchermanager.docs.rancher.com",
   "baseUrl": "/",
   "onBrokenLinks": "warn",
   "onBrokenMarkdownLinks": "warn",
