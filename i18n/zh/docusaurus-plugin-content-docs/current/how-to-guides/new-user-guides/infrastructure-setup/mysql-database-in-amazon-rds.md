@@ -1,7 +1,8 @@
 ---
 title: 在 Amazon RDS 中创建 MySQL 数据库
 ---
-本教程介绍如何在 Amazon RDS 中创建 MySQL 数据库。
+
+本教程介绍如何在 Amazon Relational Database Service (RDS) 中创建 MySQL 数据库。
 
 该数据库可用作高可用 K3s Kubernetes 集群的外部数据存储。
 

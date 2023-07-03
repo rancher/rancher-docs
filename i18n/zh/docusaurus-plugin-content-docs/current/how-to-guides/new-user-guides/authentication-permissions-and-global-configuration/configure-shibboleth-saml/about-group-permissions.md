@@ -2,8 +2,6 @@
 title: Shibboleth 和 OpenLDAP 的组权限
 ---
 
-本文为打算在 Rancher 中设置 Shibboleth 身份验证的用户提供背景信息和上下文。
-
 由于 Shibboleth 是 SAML 提供者，因此它不支持搜索用户组的功能。虽然 Shibboleth 集成可以验证用户凭证，但是如果没有其他配置，Shibboleth 不能在 Rancher 中给用户组分配权限。
 
 你可以通过配置 OpenLDAP 标识提供者来解决这个问题。如果让 Shibboleth 使用 OpenLDAP 后端，你将能够在 Rancher 中搜索组，并从 Rancher UI 将集群、项目或命名空间等资源分配给用户组。

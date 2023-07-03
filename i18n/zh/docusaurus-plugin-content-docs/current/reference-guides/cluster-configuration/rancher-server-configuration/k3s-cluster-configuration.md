@@ -98,6 +98,14 @@ title: K3s 集群配置参考
 
 更改可用于 [NodePort 服务](https://kubernetes.io/docs/concepts/services-networking/service/#nodeport)的端口范围的选项。默认值为 `30000-32767`。
 
+#### 截断主机名
+
+将主机名截断为 15 个或更少字符。该字段只能在集群初始创建时设置。创建集群后，你无法再启用或禁用 15 个字符的限制。
+
+此设置仅影响配置了机器的集群。由于自定义集群在创建节点时设置主机名（发生在 Rancher 之外），因此该字段不限制自定义集群的主机名长度。
+
+截断集群中的主机名可提高与基于 Windows 的系统的兼容性。虽然 Kubernetes 允许最长的主机名长度为 63 个字符，但使用 NetBIOS 的系统将主机名限制为 15 个字符之内。
+
 #### TLS 可选名称
 
 在服务器 TLS 证书上添加其他主机名或 IPv4/IPv6 地址作为 Subject Alternative Name。
@@ -141,5 +149,3 @@ title: K3s 集群配置参考
 高级用户可以创建一个 K3s 配置文件，而不是使用 Rancher UI 表单来为集群选择 Kubernetes 选项。配置文件允许你设置 K3s 安装中可用的任何[选项](https://rancher.com/docs/k3s/latest/en/installation/install-options/)。
 
 要直接从 Rancher UI 编辑 K3s 配置文件，单击**以 YAML 文件编辑**。
-
-

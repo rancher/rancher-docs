@@ -7,8 +7,10 @@ title: 在 vSphere 控制台中创建凭证
 下表列出了 vSphere 用户账号所需的权限：
 
 | 特权组 | 操作 |
-|:----------------------|:-----------------------------------------------------------------------|
+|:-------------------------|:-----------------------------------------------------------------------|
 | Cns Privileges | Searchable |
+| Content library | Read Storage <br/> (Required only if deploying Template from Content Library) |
+| Cryptographic operations | Direct Access |
 | Datastore | AllocateSpace <br/> Browse <br/> FileManagement (Low level file operations) <br/> UpdateVirtualMachineFiles <br/> UpdateVirtualMachineMetadata |
 | 全局 | Set custom attribute |
 | 网络 | Assign |

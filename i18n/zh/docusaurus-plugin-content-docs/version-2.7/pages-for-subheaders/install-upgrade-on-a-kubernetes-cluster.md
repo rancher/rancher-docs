@@ -122,12 +122,6 @@ Rancher Management Server 默认需要 SSL/TLS 配置来保证访问的安全性
 
 ### 4. 安装 cert-manager
 
-:::note
-
-v2.6.4 兼容 cert-manager 版本 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为 v 1.6.x 将在 2022 年 3 月 30 日结束生命周期。
-
-:::
-
 > 如果你使用自己的证书文件（`ingress.tls.source=secret`）或使用[外部负载均衡器的 TLS 终止](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#外部-tls-终止)，你可以跳过此步骤。
 
 仅在使用 Rancher 生成的证书（`ingress.tls.source=rancher`）或 Let's Encrypt 颁发的证书（`ingress.tls.source=letsEncrypt`）时，才需要安装 cert-manager。
@@ -201,7 +195,7 @@ cert-manager-webhook-787858fcdb-nlzsq      1/1     Running   0          2m
 - 将 `hostname` 设置为解析到你的负载均衡器的 DNS 名称。
 - 将 `bootstrapPassword` 设置为 `admin` 用户独有的值。
 - 如果你需要安装指定的 Rancher 版本，使用 `--version` 标志，例如 `--version 2.7.0`。
-- 对于 Kubernetes v1.25 或更高版本，将 `global.cattle.psp.enabled` 设置为 `false`。
+- 对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
 
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \
@@ -242,7 +236,7 @@ deployment "rancher" successfully rolled out
 - 将 `ingress.tls.source` 设置为 `letsEncrypt`。
 - 将 `letsEncrypt.email` 设置为可通讯的电子邮件地址，用于发送通知（例如证书到期的通知）。
 - 将 `letsEncrypt.ingress.class` 设为你的 Ingress Controller（例如 `traefik`，`nginx`，`haproxy`）
-- 对于 Kubernetes v1.25 或更高版本，将 `global.cattle.psp.enabled` 设置为 `false`。
+- 对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
 
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \
@@ -285,7 +279,7 @@ deployment "rancher" successfully rolled out
 - 设置 `hostname`。
 - 将 `bootstrapPassword` 设置为 `admin` 用户独有的值。
 - 将 `ingress.tls.source` 设置为 `secret`。
-- 对于 Kubernetes v1.25 或更高版本，将 `global.cattle.psp.enabled` 设置为 `false`。
+- 对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
 
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \
