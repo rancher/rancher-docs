@@ -105,12 +105,6 @@ helm repo update
 
 Fetch the latest cert-manager chart available from the [Helm chart repository](https://artifacthub.io/packages/helm/cert-manager/cert-manager).
 
-:::note
-
-New in v2.6.4, cert-manager versions 1.6.2 and 1.7.1 are compatible. We recommend v1.7.x because v 1.6.x will reach end-of-life on March 30, 2022.
-
-:::
-
 ```plain
 helm fetch jetstack/cert-manager --version v1.11.0
 ```
