@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[69601],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[19786],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 77011:
+/***/ 18903:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer",
-    "id": "version-2.5/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer",
+    "id": "version-2.6/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer",
     "title": "Setting up an NGINX Load Balancer",
     "description": "NGINX will be configured as Layer 4 load balancer (TCP) that forwards connections to one of your Rancher nodes.",
-    "source": "@site/versioned_docs/version-2.5/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer.md",
+    "source": "@site/versioned_docs/version-2.6/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer.md",
     "sourceDirName": "how-to-guides/new-user-guides/infrastructure-setup",
     "slug": "/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer",
-    "permalink": "/zh/v2.5/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer",
+    "permalink": "/v2.6/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer.md",
     "tags": [],
-    "version": "2.5",
-    "lastUpdatedAt": 1663953084,
-    "formattedLastUpdatedAt": "2022年9月23日",
+    "version": "2.6",
+    "lastUpdatedAt": 1688162721,
+    "formattedLastUpdatedAt": "Jun 30, 2023",
     "frontMatter": {
         "title": "Setting up an NGINX Load Balancer"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Setting up a MySQL Database in Amazon RDS",
-        "permalink": "/zh/v2.5/how-to-guides/new-user-guides/infrastructure-setup/mysql-database-in-amazon-rds"
+        "permalink": "/v2.6/how-to-guides/new-user-guides/infrastructure-setup/mysql-database-in-amazon-rds"
     },
     "next": {
         "title": "Setting up Amazon ELB Network Load Balancer",
-        "permalink": "/zh/v2.5/how-to-guides/new-user-guides/infrastructure-setup/amazon-elb-load-balancer"
+        "permalink": "/v2.6/how-to-guides/new-user-guides/infrastructure-setup/amazon-elb-load-balancer"
     }
 };
 const assets = {};
@@ -368,7 +368,14 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `NGINX will be configured as Layer 4 load balancer (TCP) that forwards connections to one of your Rancher nodes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In this configuration, the load balancer is positioned in front of your nodes. The load balancer can be any host capable of running NGINX.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `One caveat: do not use one of your Rancher nodes as the load balancer.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `NGINX will be configured as Layer 4 load balancer (TCP) that forwards connections to one of your Rancher nodes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In this configuration, the load balancer is positioned in front of your nodes. The load balancer can be any host capable of running NGINX.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `Do not use one of your Rancher nodes as the load balancer.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "blockquote"
     }, `These examples show the load balancer being configured to direct traffic to three Rancher server nodes. If Rancher is installed on an RKE Kubernetes cluster, three nodes are required. If Rancher is installed on a K3s Kubernetes cluster, only two nodes are required.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "install-nginx"
@@ -405,13 +412,12 @@ function MDXContent(_param) {
         parentName: "p"
     }, `<IP_NODE_2>`), `, and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `<IP_NODE_3>`), ` with the IPs of your nodes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", {
-        parentName: "li"
+    }, `<IP_NODE_3>`), ` with the IPs of your nodes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        parentName: "li",
+        "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "blockquote"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Note:`), ` See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "admonition"
+    }, `See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://docs.nginx.com/nginx/admin-guide/load-balancer/tcp-udp-load-balancer/"
     }, `NGINX Documentation: TCP and UDP Load Balancing`), ` for all configuration options.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("figcaption", null, "Example NGINX config"), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
@@ -443,11 +449,21 @@ stream {
         server <IP_NODE_2>:443 max_fails=3 fail_timeout=5s;
         server <IP_NODE_3>:443 max_fails=3 fail_timeout=5s;
     }
-    server {
-        listen     443;
-        proxy_pass rancher_servers_https;
-    }
+}
 
+http {
+    server {
+        listen 443 ssl;
+        proxy_pass rancher_servers_https;
+        ssl_certificate /path/to/tls.crt;
+        ssl_certificate_key /path/to/key.key;
+        location / {
+            proxy_pass https://rancher_servers_https;
+            proxy_set_header Host <rancher UI URL>;
+            proxy_ssl_server_name on;
+            proxy_ssl_name <rancher UI URL>
+        }
+    }
 }
 `)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", {
         "start": 3

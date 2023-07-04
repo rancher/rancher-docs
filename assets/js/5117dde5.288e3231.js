@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md",
     "sourceDirName": "how-to-guides/new-user-guides/infrastructure-setup",
     "slug": "/how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2",
-    "permalink": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2",
+    "permalink": "/v2.0-v2.4/how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md",
     "tags": [],
     "version": "2.0-2.4",
-    "lastUpdatedAt": 1663953084,
-    "formattedLastUpdatedAt": "2022年9月23日",
+    "lastUpdatedAt": 1688162730,
+    "formattedLastUpdatedAt": "Jun 30, 2023",
     "frontMatter": {
         "title": "Setting up Nodes in Amazon EC2"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Set up Infrastructure for a High Availability RKE Kubernetes Cluster",
-        "permalink": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster"
+        "permalink": "/v2.0-v2.4/how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster"
     },
     "next": {
         "title": "Setting up a MySQL Database in Amazon RDS",
-        "permalink": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/infrastructure-setup/mysql-database-in-amazon-rds"
+        "permalink": "/v2.0-v2.4/how-to-guides/new-user-guides/infrastructure-setup/mysql-database-in-amazon-rds"
     }
 };
 const assets = {};
@@ -373,9 +373,12 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In this tutorial, you will learn one way to set up Linux nodes for the Rancher management server. These nodes will fulfill the node requirements for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In this tutorial, you will learn one way to set up Linux nodes for the Rancher management server. These nodes will fulfill the node requirements for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.0-v2.4/pages-for-subheaders/installation-requirements"
+        "href": "/v2.0-v2.4/pages-for-subheaders/installation-requirements"
     }, `OS, Docker, hardware, and networking.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If the Rancher server will be installed on an RKE Kubernetes cluster, you should provision three instances.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If the Rancher server will be installed on a K3s Kubernetes cluster, you only need to provision two instances.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If the Rancher server is installed in a single Docker container, you only need one instance.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "1-optional-preparation"
     }, `1. Optional Preparation`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -384,14 +387,14 @@ function MDXContent(_param) {
         parentName: "li"
     }, `Create IAM role:`), ` To allow Rancher to manipulate AWS resources, such as provisioning new storage or new nodes, you will need to configure Amazon as a cloud provider. There are several things you'll need to do to set up the cloud provider on EC2, but part of this process is setting up an IAM role for the Rancher server nodes. For the full details on setting up the cloud provider, refer to this `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/zh/v2.0-v2.4/pages-for-subheaders/set-up-cloud-providers"
+        "href": "/v2.0-v2.4/pages-for-subheaders/set-up-cloud-providers"
     }, `page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
     }, `Create security group:`), ` We also recommend setting up a security group for the Rancher nodes that complies with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/zh/v2.0-v2.4/pages-for-subheaders/installation-requirements#port-requirements"
+        "href": "/v2.0-v2.4/pages-for-subheaders/installation-requirements#port-requirements"
     }, `port requirements for Rancher nodes.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "2-provision-instances"
     }, `2. Provision Instances`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -449,7 +452,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, `Step 6: Configure Security Group,`), ` select a security group that complies with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/zh/v2.0-v2.4/pages-for-subheaders/installation-requirements#port-requirements"
+        "href": "/v2.0-v2.4/pages-for-subheaders/installation-requirements#port-requirements"
     }, `port requirements`), ` for Rancher nodes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
