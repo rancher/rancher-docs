@@ -2,6 +2,10 @@
 title: Restoring Backups—Docker Installs
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-docker-installed-rancher"/>
+</head>
+
 If you encounter a disaster scenario, you can restore your Rancher Server to your most recent backup.
 
 ## Before You Start
