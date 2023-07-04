@@ -2,6 +2,10 @@
 title: Setting up an NGINX Load Balancer
 ---
 
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer"/>
+</head>
+
 NGINX will be configured as Layer 4 load balancer (TCP) that forwards connections to one of your Rancher nodes.
 
 In this configuration, the load balancer is positioned in front of your nodes. The load balancer can be any host capable of running NGINX.
