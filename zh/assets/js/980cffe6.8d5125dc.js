@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.5/how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster.md",
     "sourceDirName": "how-to-guides/new-user-guides/infrastructure-setup",
     "slug": "/how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster",
-    "permalink": "/v2.5/how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster",
+    "permalink": "/zh/v2.5/how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster.md",
     "tags": [],
     "version": "2.5",
-    "lastUpdatedAt": 1663953084,
-    "formattedLastUpdatedAt": "Sep 23, 2022",
+    "lastUpdatedAt": 1688162645,
+    "formattedLastUpdatedAt": "2023年6月30日",
     "frontMatter": {
         "title": "Set up Infrastructure for a High Availability RKE Kubernetes Cluster"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Set up Infrastructure for a High Availability K3s Kubernetes Cluster",
-        "permalink": "/v2.5/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster"
+        "permalink": "/zh/v2.5/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster"
     },
     "next": {
         "title": "Set up Infrastructure for a High Availability RKE2 Kubernetes Cluster",
-        "permalink": "/v2.5/how-to-guides/new-user-guides/infrastructure-setup/ha-rke2-kubernetes-cluster"
+        "permalink": "/zh/v2.5/how-to-guides/new-user-guides/infrastructure-setup/ha-rke2-kubernetes-cluster"
     }
 };
 const assets = {};
@@ -373,7 +373,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This tutorial is intended to help you create a high-availability RKE cluster that can be used to install a Rancher server.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This tutorial is intended to help you create a high-availability RKE cluster that can be used to install a Rancher server.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "blockquote"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
@@ -398,10 +401,10 @@ function MDXContent(_param) {
         "id": "1-set-up-linux-nodes"
     }, `1. Set up Linux Nodes`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Make sure that your nodes fulfill the general installation requirements for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.5/pages-for-subheaders/installation-requirements"
+        "href": "/zh/v2.5/pages-for-subheaders/installation-requirements"
     }, `OS, container runtime, hardware, and networking.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For an example of one way to set up Linux nodes, refer to this `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.5/how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2"
+        "href": "/zh/v2.5/how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2"
     }, `tutorial`), ` for setting up nodes as instances in Amazon EC2.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "2-set-up-the-load-balancer"
     }, `2. Set up the Load Balancer`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You will also need to set up a load balancer to direct traffic to the Rancher replica on any of the three nodes. That will prevent an outage of any single node from taking down communications to the Rancher management server.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When Kubernetes gets set up in a later step, the RKE tool will deploy an NGINX Ingress controller. This controller will listen on ports 80 and 443 of the worker nodes, answering traffic destined for specific hostnames.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When Rancher is installed (also in a later step), the Rancher system creates an Ingress resource. That Ingress tells the NGINX Ingress controller to listen for traffic destined for the Rancher hostname. The NGINX Ingress controller, when receiving traffic destined for the Rancher hostname, will forward that traffic to the running Rancher pods in the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For your implementation, consider if you want or need to use a Layer-4 or Layer-7 load balancer:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -416,13 +419,13 @@ function MDXContent(_param) {
         parentName: "li"
     }, `--set tls=external`), ` option when installing Rancher in a later step. For more information, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.5/reference-guides/installation-references/helm-chart-options#external-tls-termination"
+        "href": "/zh/v2.5/reference-guides/installation-references/helm-chart-options#external-tls-termination"
     }, `Rancher Helm chart options.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For an example showing how to set up an NGINX load balancer, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.5/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer"
+        "href": "/zh/v2.5/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For a how-to guide for setting up an Amazon ELB Network Load Balancer, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.5/how-to-guides/new-user-guides/infrastructure-setup/amazon-elb-load-balancer"
+        "href": "/zh/v2.5/how-to-guides/new-user-guides/infrastructure-setup/amazon-elb-load-balancer"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "blockquote"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {

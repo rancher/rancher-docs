@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[50948],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[40962],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 1799:
+/***/ 40781:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster",
-    "id": "how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster",
+    "id": "version-2.7/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster",
     "title": "Set up Infrastructure for a High Availability K3s Kubernetes Cluster",
     "description": "This tutorial is intended to help you provision the underlying infrastructure for a Rancher management server.",
-    "source": "@site/docs/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster.md",
+    "source": "@site/versioned_docs/version-2.7/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster.md",
     "sourceDirName": "how-to-guides/new-user-guides/infrastructure-setup",
     "slug": "/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster",
-    "permalink": "/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster",
+    "permalink": "/v2.7/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1666730461,
-    "formattedLastUpdatedAt": "Oct 25, 2022",
+    "version": "2.7",
+    "lastUpdatedAt": 1688162633,
+    "formattedLastUpdatedAt": "Jun 30, 2023",
     "frontMatter": {
         "title": "Set up Infrastructure for a High Availability K3s Kubernetes Cluster"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Don't have infrastructure for your Kubernetes cluster? Try one of these tutorials.",
-        "permalink": "/pages-for-subheaders/infrastructure-setup"
+        "permalink": "/v2.7/pages-for-subheaders/infrastructure-setup"
     },
     "next": {
         "title": "Set up Infrastructure for a High Availability RKE Kubernetes Cluster",
-        "permalink": "/how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster"
+        "permalink": "/v2.7/how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster"
     }
 };
 const assets = {};
@@ -373,9 +373,12 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This tutorial is intended to help you provision the underlying infrastructure for a Rancher management server.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The recommended infrastructure for the Rancher-only Kubernetes cluster differs depending on whether Rancher will be installed on a K3s Kubernetes cluster, an RKE Kubernetes cluster, or a single Docker container.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information about each installation option, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This tutorial is intended to help you provision the underlying infrastructure for a Rancher management server.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The recommended infrastructure for the Rancher-only Kubernetes cluster differs depending on whether Rancher will be installed on a K3s Kubernetes cluster, an RKE Kubernetes cluster, or a single Docker container.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information about each installation option, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/pages-for-subheaders/installation-and-upgrade"
+        "href": "/v2.7/pages-for-subheaders/installation-and-upgrade"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "title": "Important:",
         "type": "note"
@@ -401,10 +404,10 @@ function MDXContent(_param) {
         "id": "1-set-up-linux-nodes"
     }, `1. Set up Linux Nodes`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Make sure that your nodes fulfill the general installation requirements for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/pages-for-subheaders/installation-requirements"
+        "href": "/v2.7/pages-for-subheaders/installation-requirements"
     }, `OS, container runtime, hardware, and networking.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For an example of one way to set up Linux nodes, refer to this `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2"
+        "href": "/v2.7/how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2"
     }, `tutorial`), ` for setting up nodes as instances in Amazon EC2.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "2-set-up-external-datastore"
     }, `2. Set up External Datastore`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The ability to run Kubernetes using a datastore other than etcd sets K3s apart from other Kubernetes distributions. This feature provides flexibility to Kubernetes operators. The available options allow you to select a datastore that best fits your use case.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For a high-availability K3s installation, you will need to set a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -412,7 +415,7 @@ function MDXContent(_param) {
         "href": "https://www.mysql.com/"
     }, `MySQL`), ` external database. Rancher has been tested on K3s Kubernetes clusters using MySQL version 5.7 as the datastore.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you install Kubernetes using the K3s installation script, you will pass in details for K3s to connect to the database.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For an example of one way to set up the MySQL database, refer to this `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/infrastructure-setup/mysql-database-in-amazon-rds"
+        "href": "/v2.7/how-to-guides/new-user-guides/infrastructure-setup/mysql-database-in-amazon-rds"
     }, `tutorial`), ` for setting up MySQL on Amazon's RDS service.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For the complete list of options that are available for configuring a K3s cluster datastore, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://rancher.com/docs/k3s/latest/en/installation/datastore/"
@@ -430,13 +433,13 @@ function MDXContent(_param) {
         parentName: "li"
     }, `--set tls=external`), ` option when installing Rancher in a later step. For more information, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/getting-started/installation-and-upgrade/installation-references/helm-chart-options#external-tls-termination"
+        "href": "/v2.7/getting-started/installation-and-upgrade/installation-references/helm-chart-options#external-tls-termination"
     }, `Rancher Helm chart options.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For an example showing how to set up an NGINX load balancer, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer"
+        "href": "/v2.7/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For a how-to guide for setting up an Amazon ELB Network Load Balancer, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/infrastructure-setup/amazon-elb-load-balancer"
+        "href": "/v2.7/how-to-guides/new-user-guides/infrastructure-setup/amazon-elb-load-balancer"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "caution"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
