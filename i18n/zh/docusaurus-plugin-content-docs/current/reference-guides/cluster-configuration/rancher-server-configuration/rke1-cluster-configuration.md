@@ -183,6 +183,21 @@ Rancher v2.6 引入了[为 RKE 集群配置 ECR 镜像仓库](https://rancher.co
 
 如果 `ingress-nginx` 的 `updateStrategy` 是 `OnDelete`，则需要删除这些 pod 以获得 deployment 正确的版本。
 
+### Cluster Agent 配置和 Fleet Agent 配置
+
+你可以为 Cluster Agent 和集群的 Fleet Agent 配置调度字段和资源限制。你可以使用这些字段来自定义容忍度、亲和性规则和资源要求。其他容忍度会被尾附到默认容忍度和 Control Plane 节点污点的列表中。如果你定义了自定义亲和性规则，它们将覆盖全局默认亲和性设置。定义资源要求会在以前没有的地方设置请求或限制。
+
+:::note
+
+有了这个选项，你可以覆盖或删除运行集群所需的规则。我们强烈建议你不要删除或覆盖这些规则和其他亲和性规则，因为这可能会导致不必要的影响：
+
+- `affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution` 用于 `cattle-cluster-agent`
+- `cluster-agent-default-affinity` 用于 `cattle-cluster-agent`
+- `fleet-agent-default-affinity` 用于 `fleet-agent`
+
+:::
+
+如果将 Rancher 降级到 v2.7.4 或更低版本，你的更改将丢失，而且 Agent 将在没有你的自定义设置的情况下重新部署。重新部署时，Fleet Agent 将回退到使用内置默认值。如果降级期间 Fleet 版本没有更改，则不会立即重新部署。
 
 
 ## RKE 集群配置文件参考

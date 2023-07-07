@@ -184,12 +184,18 @@ ingress-nginx-controller   LoadBalancer   10.3.244.156   35.233.206.34   80:3187
 
 安装 Rancher 时，使用上一步获取的 DNS 名称作为 Rancher Server 的 URL。它可以作为 Helm 选项传递进来。例如，如果 DNS 名称是 `rancher.my.org`，你需要使用 `--set hostname=rancher.my.org` 选项来运行 Helm 安装命令。
 
-**_v2.6.7 新功能_**
-
-在此设置之上安装 Rancher 时，你还需要将以下值传递到 Rancher Helm 安装命令，以设置与 Rancher 的 Ingress 资源一起使用的 Ingress Controller 的名称：
+在此设置之上安装 Rancher 时，你还需要设置与 Rancher 的 Ingress 资源一起使用的 Ingress Controller 的名称：
 
 ```
 --set ingress.ingressClassName=nginx
 ```
 
 请参阅[Helm 安装命令](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#5-根据你选择的证书选项通过-helm-安装-rancher)了解你的证书选项。
+
+在 Rancher v2.7.5 中，如果你打算在集群上使用默认的 GKE Ingress 而不启用 VPC 原生的集群模式，则需要设置以下标志：
+
+```
+--set service.type=NodePort
+```
+
+此设置是必要的，这考虑了与 ClusterIP（`cattle-system/rancher` 的默认类型）之间的兼容性问题。

@@ -192,11 +192,13 @@ If the `updateStrategy` of `ingress-nginx` is `OnDelete`, you will need to delet
 You can configure the scheduling fields and resource limits for the Cluster Agent and the cluster's Fleet Agent. You can use these fields to customize tolerations, affinity rules, and resource requirements. Additional tolerations are appended to a list of default tolerations and control plane node taints. If you define custom affinity rules, they override the global default affinity setting. Defining resource requirements sets requests or limits where there previously were none.
 
 :::note
+
 With this option, it's possible to override or remove rules that are required for the functioning of the cluster. We strongly recommend against removing or overriding these and any other affinity rules, as this may cause unwanted side effects:
 
 - `affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution` for `cattle-cluster-agent`
 - `cluster-agent-default-affinity` for `cattle-cluster-agent`
 - `fleet-agent-default-affinity` for `fleet-agent`
+
 :::
 
 If you downgrade Rancher to v2.7.4 or below, your changes will be lost and the agents will re-deploy without your customizations. The Fleet agent will fallback to using its built-in default values when it re-deploys. If the Fleet version doesn't change during the downgrade, the re-deploy won't be immediate.

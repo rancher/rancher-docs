@@ -157,19 +157,19 @@ The above is an example, there may be more values from the previous step that ne
 Alternatively, it's possible to export the current values to a file and reference that file during upgrade. For example, to only change the Rancher version:
 
 1. Export the current values to a file:
-  ```
-  helm get values rancher -n cattle-system -o yaml > values.yaml
-  ```
+    ```
+    helm get values rancher -n cattle-system -o yaml > values.yaml
+    ```
 1. Update only the Rancher version:
 
   For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
-  ```
-  helm upgrade rancher rancher-<CHART_REPO>/rancher \
-    --namespace cattle-system \
-    -f values.yaml \
-    --version=2.6.8
-  ```
+    ```
+    helm upgrade rancher rancher-<CHART_REPO>/rancher \
+      --namespace cattle-system \
+      -f values.yaml \
+      --version=2.6.8
+    ```
 
 ### 4. Verify the Upgrade
 

@@ -20,6 +20,8 @@ Okta 集成仅支持服务提供商发起的登录。
 
 ## 在 Rancher 中配置 Okta
 
+你可以将 Okta 与 Rancher 集成，以便经过身份认证的用户通过组权限访问 Rancher 资源。Okta 会返回一个对用户进行身份认证的 SAML 断言，包括用户所属的组。
+
 1. 在左上角，单击 **☰ > 用户 & 认证**。
 1. 在左侧导航栏，单击**认证**。
 1. 单击 **Okta**。
@@ -60,9 +62,46 @@ Okta 集成仅支持服务提供商发起的登录。
 
 :::note SAML 身份提供商注意事项
 
-- SAML 协议不支持搜索或查找用户或组。因此，将用户或组添加到 Rancher 时不会对其进行验证。
+如果你在没有 OpenLDAP 的情况下配置 Okta，你将无法搜索或直接查找用户或组。相关的警告如下：
+
+- 在 Rancher 中为用户和组分配权限时将不会验证用户和组。
 - 添加用户时，必须正确输入确切的用户 ID（即 `UID` 字段）。键入用户 ID 时，将不会搜索可能匹配的其他用户 ID。
 - 添加组时，必须从文本框旁边的下拉列表中选择组。Rancher 假定来自文本框的任何输入都是用户。
 - 用户组下拉列表仅显示你所属的用户组。如果你不是某个组的成员，你将无法添加该组。
 
 :::
+
+## Okta 与 OpenLDAP 搜索
+
+你可以添加 OpenLDAP 后端来协助用户和组搜索。Rancher 将显示来自 OpenLDAP 服务的其他用户和组。这允许你将权限分配给用户不属于的组。
+
+### OpenLDAP 先决条件
+
+如果你使用 Okta 作为 IdP，你可以[设置 LDAP 接口](https://help.okta.com/en-us/Content/Topics/Directory/LDAP-interface-main.htm)以供 Rancher 使用。你还可以配置外部 OpenLDAP Server。
+
+你必须使用 LDAP 绑定帐户（也称为 ServiceAccount）来配置 Rancher，以便搜索和检索应具有访问权限的用户和组的 LDAP 条目。不要使用管理员帐户或个人帐户作为 LDAP 绑定帐户。在 OpenLDAP 中[创建](https://help.okta.com/en-us/Content/Topics/users-groups-profiles/usgp-add-users.htm)一个专用帐户，对搜索库下的用户和组具有只读访问权限。
+
+:::warning 安全注意事项
+
+OpenLDAP ServiceAccount 用于所有搜索。无论用户个人的 SAML 权限是什么，Rancher 用户都将看到 OpenLDAP ServiceAccount 可以查看的用户和组。
+
+:::
+
+
+> **使用 TLS？**
+>
+> 如果 OpenLDAP Server 使用的证书是自签名的或来自无法识别的证书颁发机构，则 Rancher 需要 PEM 格式的 CA 证书（包含所有中间证书）。你需要在配置期间提供此证书，以便 Rancher 能够验证证书链。
+
+### 在 Rancher 中配置 OpenLDAP
+
+[配置 OpenLDAP Server、组和用户的设置](../configure-openldap/openldap-config-reference.md)。请注意，不支持嵌套组成员。
+
+> 在继续配置之前，请熟悉[外部身份认证配置和主要用户](../../../../pages-for-subheaders/authentication-config.md#外部身份验证配置和用户主体)。
+
+1. 使用分配了 [administrator](https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions) 角色（即 _本地主体_）的本地用户登录到 Rancher。
+1. 在左上角，单击 **☰ > 用户 & 认证**。
+1. 在左侧导航栏，单击**认证**。
+1. 单击 **Okta**，如果已配置 SAML，则单击**编辑配置**。
+1. 在**用户和组搜索**下，选中**配置 OpenLDAP Server**。
+
+如果你在测试与 OpenLDAP Server 的连接时遇到问题，请确保你输入了ServiceAccount 的凭证并正确配置了搜索库。你可以检查 Rancher 日志来查明根本原因。调试日志可能包含有关错误的更详细信息。请参阅[如何启用调试日志](../../../../faq/technical-items.md#如何启用调试日志记录)了解更多信息。

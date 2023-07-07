@@ -1,5 +1,5 @@
 ---
-title: '为高可用 RKE2 Kubernetes 集群设置基础设施'
+title: 为高可用 RKE2 Kubernetes 集群设置基础设施
 ---
 
 本教程旨在帮助你为 Rancher Management Server 配置底层基础设施。

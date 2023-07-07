@@ -2,6 +2,7 @@
 title: 配置 Keycloak (OIDC)
 description: 创建 Keycloak OpenID Connect (OIDC) 客户端并配置 Rancher 以使用 Keycloak。你的用户将能够使用他们的 Keycloak 登录名登录 Rancher。
 ---
+
 如果你的组织使用 [Keycloak Identity Provider (IdP)](https://www.keycloak.org) 进行用户身份验证，你可以通过配置 Rancher 来允许用户使用 IdP 凭证登录。Rancher 支持使用 OpenID Connect (OIDC) 协议和 SAML 协议来集成 Keycloak。与 Rancher 一起使用时，这两种实现在功能上是等效的。本文描述了配置 Rancher 以通过 OIDC 协议与 Keycloak 一起使用的流程。
 
 如果你更喜欢将 Keycloak 与 SAML 协议一起使用，请参见[此页面](configure-keycloak-saml.md)。
