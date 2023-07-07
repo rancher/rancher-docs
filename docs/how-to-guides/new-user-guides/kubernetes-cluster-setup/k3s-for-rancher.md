@@ -47,7 +47,7 @@ When running the command to start the K3s Kubernetes API server, you will pass i
 
 1. Get main server node token:
   ```
-  cat /var/lib/rancher/k3s/server/node-token
+  cat /var/lib/rancher/k3s/server/token
   ```
 
 1. Run command on your second K3s server node:
