@@ -45,7 +45,17 @@ When running the command to start the K3s Kubernetes API server, you will pass i
 
   :::
 
-1. Repeat the same command on your second K3s server node.
+1. Get main server node token:
+  ```
+  cat /var/lib/rancher/k3s/server/token
+  ```
+
+1. Run command on your second K3s server node:
+  ```
+    curl -sfL https://get.k3s.io |  INSTALL_K3S_VERSION=<VERSION> sh -s - server \
+      --datastore-endpoint="<DATASTORE_ENDPOINT>" \
+      --token "<MAIN_SERVER_NODE_TOKEN>"
+  ```
 
 ### 2. Confirm that K3s is Running
 
