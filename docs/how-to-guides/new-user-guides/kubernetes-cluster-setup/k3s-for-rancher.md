@@ -32,30 +32,30 @@ When running the command to start the K3s Kubernetes API server, you will pass i
 
 1. Connect to one of the Linux nodes that you have prepared to run the Rancher server.
 1. On the Linux node, run this command to start the K3s server and connect it to the external datastore:
-  ```
-  curl -sfL https://get.k3s.io |  INSTALL_K3S_VERSION=<VERSION> sh -s - server \
-    --datastore-endpoint="<DATASTORE_ENDPOINT>"
-  ```
+    ```
+    curl -sfL https://get.k3s.io |  INSTALL_K3S_VERSION=<VERSION> sh -s - server \
+      --datastore-endpoint="<DATASTORE_ENDPOINT>"
+    ```
 
-  Where `<DATASTORE_ENDPOINT>` is the connection URI for your datastore. For example, `mysql://username:password@tcp(hostname:3306)/database-name` if you're using MySQL. Valid datastores include  etcd, MySQL, PostgreSQL, or SQLite (default).
+    Where `<DATASTORE_ENDPOINT>` is the connection URI for your datastore. For example, `mysql://username:password@tcp(hostname:3306)/database-name` if you're using MySQL. Valid datastores include  etcd, MySQL, PostgreSQL, or SQLite (default).
 
-  :::note
+    :::note
 
-  The datastore endpoint can also be passed in using the environment variable `$K3S_DATASTORE_ENDPOINT`.
+    The datastore endpoint can also be passed in using the environment variable `$K3S_DATASTORE_ENDPOINT`.
 
-  :::
+    :::
 
 1. Get main server node token:
-  ```
-  cat /var/lib/rancher/k3s/server/token
-  ```
+    ```
+    cat /var/lib/rancher/k3s/server/token
+    ```
 
 1. Run command on your second K3s server node:
-  ```
-    curl -sfL https://get.k3s.io |  INSTALL_K3S_VERSION=<VERSION> sh -s - server \
-      --datastore-endpoint="<DATASTORE_ENDPOINT>" \
-      --token "<MAIN_SERVER_NODE_TOKEN>"
-  ```
+    ```
+      curl -sfL https://get.k3s.io |  INSTALL_K3S_VERSION=<VERSION> sh -s - server \
+        --datastore-endpoint="<DATASTORE_ENDPOINT>" \
+        --token "<MAIN_SERVER_NODE_TOKEN>"
+    ```
 
 ### 2. Confirm that K3s is Running
 
