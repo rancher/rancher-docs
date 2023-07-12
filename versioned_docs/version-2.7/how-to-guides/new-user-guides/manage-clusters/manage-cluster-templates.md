@@ -20,7 +20,7 @@ Rancher doesn't manage version control for cluster templates. Version control is
 
 ## RKE2 Cluster Template
 
-The example repository for an RKE2 cluster template is [here](https://github.com/rancher/cluster-template-examples). As of Rancher v2.6.0, we provide an RKE2 cluster template and may add more in the future.
+The example repository for an RKE2 cluster template is [here](https://github.com/rancher/cluster-template-examples).
 
 ## Adding a Cluster Template to Rancher
 
@@ -33,7 +33,7 @@ In this section, you'll learn how to add the cluster template to the `local` clu
 
 :::
 
-1. Go to a cluster template example repository. Rancher's examples are in [this GitHub repository.](https://github.com/rancher/cluster-template-examples) As of Rancher v2.6.0, we provide an RKE2 cluster template and add to more in the future.
+1. Go to a cluster template example repository. Rancher's examples are in [this GitHub repository.](https://github.com/rancher/cluster-template-examples)
 1. Fork the repository.
 1. Optional: Edit the cluster options by editing the `values.yaml` file. For help editing the file, see the cluster template's Helm chart README.
 1. Add the chart repository to Rancher. Click **☰ > Cluster Management**.

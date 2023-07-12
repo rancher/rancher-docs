@@ -40,36 +40,12 @@ The route needs to refer to a [receiver](./receivers.md) that has already been c
 
 ### Grouping
 
-<Tabs>
-<TabItem value="Rancher v2.6.5+">
-
-:::note
-
-As of Rancher v2.6.5, `Group By` now accepts a list of strings instead of key-value pairs. See the [upstream documentation](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#route) for details.
-
-:::
-
 | Field |    Default | Description |
 |-------|--------------|---------|
-| Group By |  N/a | List of labels to group by. Labels must not be repeated (unique list). Special label "..." (aggregate by all possible labels), if provided, must be the only element in the list. |
+| Group By |  N/a | List of labels to group by. Labels must not be repeated (unique list). Special label "..." (aggregate by all possible labels), if provided, must be the only element in the list. Accepts a list of strings. See the [upstream documentation](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#route) for details. |
 | Group Wait | 30s | How long to wait to buffer alerts of the same group before sending initially. |
 | Group Interval | 5m | How long to wait before sending an alert that has been added to a group of alerts for which an initial notification has already been sent. |
 | Repeat Interval |  4h | How long to wait before re-sending a given alert that has already been sent. |
-
-</TabItem>
-<TabItem value="Rancher before v2.6.5">
-
-| Field |    Default | Description |
-|-------|--------------|---------|
-| Group By |  N/a | The labels by which incoming alerts are grouped together. For example, `[ group_by: '[' <labelname>, ... ']' ]` Multiple alerts coming in for labels such as `cluster=A` and `alertname=LatencyHigh` can be batched into a single group. To aggregate by all possible labels, use the special value `'...'` as the sole label name, for example: `group_by: ['...']`  Grouping by `...` effectively disables aggregation entirely, passing through all alerts as-is. This is unlikely to be what you want, unless you have a very low alert volume or your upstream notification system performs its own grouping. |
-| Group Wait | 30s | How long to wait to buffer alerts of the same group before sending initially. |
-| Group Interval | 5m | How long to wait before sending an alert that has been added to a group of alerts for which an initial notification has already been sent. |
-| Repeat Interval |  4h | How long to wait before re-sending a given alert that has already been sent. |
-
-</TabItem>
-</Tabs>
-
-
 
 ### Matching
 

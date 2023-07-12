@@ -9,7 +9,7 @@ A project is a group of namespaces, and it is a concept introduced by Rancher. P
 
 :::note
 
-As of Rancher v2.6, projects are de-emphasized on the UI because it is no longer required to create any Kubernetes resources within a project scope. However, resources such as [Secrets](../../new-user-guides/kubernetes-resources-setup/secrets.md#creating-secrets-in-projects) can still be created in a project scope if the legacy feature flag is enabled.
+Projects are de-emphasized on the UI because it is not required to create Kubernetes resources within a project scope. However, resources such as [Secrets](../../new-user-guides/kubernetes-resources-setup/secrets.md#creating-secrets-in-projects) can still be created in a project scope if the legacy feature flag is enabled.
 
 :::
 

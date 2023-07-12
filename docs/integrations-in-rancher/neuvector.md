@@ -4,7 +4,7 @@ title: NeuVector Integration
 
 ### NeuVector Integration in Rancher
 
-New in Rancher v2.6.5, [NeuVector 5.x](https://open-docs.neuvector.com/) is an open-source container-centric security platform that is now integrated into Rancher. NeuVector offers real-time compliance, visibility, and protection for critical applications and data during runtime. NeuVector provides a firewall, container process/file system monitoring, security auditing with CIS benchmarks, and vulnerability scanning. For more information on Rancher security, please see the [security documentation](../pages-for-subheaders/rancher-security.md).
+[NeuVector 5.x](https://open-docs.neuvector.com/) is an open-source container-centric security platform that is now integrated into Rancher. NeuVector offers real-time compliance, visibility, and protection for critical applications and data during runtime. NeuVector provides a firewall, container process/file system monitoring, security auditing with CIS benchmarks, and vulnerability scanning. For more information on Rancher security, please see the [security documentation](../pages-for-subheaders/rancher-security.md).
 
 NeuVector can be enabled through a Helm chart that may be installed either through **Apps** or through the **Cluster Tools** button in the Rancher UI. Once the Helm chart is installed, users can easily [deploy and manage NeuVector clusters within Rancher](https://open-docs.neuvector.com/deploying/rancher#deploy-and-manage-neuvector-through-rancher-apps-marketplace).
 
@@ -108,8 +108,6 @@ Below are the minimum recommended computing resources for the NeuVector chart in
 
   - All NeuVector components are deployable if PSP is set to true.
 
-  **_New in v2.6.7_**
-
   You will need to set additional configuration for your hardened cluster environment as follows:
 
   1. Click **☰ > Cluster Management**.
@@ -140,8 +138,6 @@ Below are the minimum recommended computing resources for the NeuVector chart in
   kubectl patch cronjob neuvector-updater-pod -n cattle-neuvector-system --patch '{"spec":{"jobTemplate":{"spec":{"template":{"spec":{"securityContext":{"runAsUser": 5400}}}}}}}'
   ```
   <br/>
-
-  **_New in v2.6.7_**
 
   You will need to set additional configuration for your hardened cluster environment.
 

@@ -27,7 +27,7 @@ The previously recommended [System Tools](../reference-guides/system-tools.md) h
 
 If you [installed Rancher on a Kubernetes cluster,](../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md) remove Rancher by using the [Rancher Cleanup](https://github.com/rancher/rancher-cleanup) tool.
 
-As of Rancher v2.5.8, uninstalling Rancher in high-availability (HA) mode will also remove all `helm-operation-*` pods and the following apps:
+Uninstalling Rancher in high-availability (HA) mode will also remove all `helm-operation-*` pods and the following apps:
 
 - fleet
 - fleet-agent
