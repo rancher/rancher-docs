@@ -116,6 +116,12 @@ For a breakdown of the port requirements for etcd nodes, controlplane nodes, and
 
 Details on which ports are used in each situation are found under [Downstream Cluster Port Requirements](../../../getting-started/installation-and-upgrade/installation-requirements/port-requirements.md#downstream-kubernetes-cluster-nodes).
 
+:::caution
+
+You should never register a node with the same hostname or IP address as an existing node. Doing so causes RKE to prevent the node from joining, and provisioning to hang. This can occur for both node driver and custom clusters. If a node must reuse a hostname or IP of an existing node, you must set the `hostname_override` [RKE option](https://rke.docs.rancher.com/config-options/nodes#overriding-the-hostname) before registering the node, so that it can join correctly.
+
+:::
+
 ## Optional: Security Considerations
 
 If you want to provision a Kubernetes cluster that is compliant with the CIS (Center for Internet Security) Kubernetes Benchmark, we recommend to following our hardening guide to configure your nodes before installing Kubernetes.
