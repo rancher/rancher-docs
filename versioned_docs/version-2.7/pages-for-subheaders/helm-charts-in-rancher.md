@@ -6,7 +6,7 @@ In this section, you'll learn how to manage Helm chart repositories and applicat
 
 ### Versioning Scheme
 
-The Rancher feature charts versioning scheme is centered around the major version of the charts and the +up annotation for upstream charts, where applicable.
+The Rancher feature charts versioning scheme is centered around the major version of the charts and the `+up` annotation for upstream charts, where applicable.
 
 **Major Version:** The major version of the charts is tied to Rancher minor versions. When you upgrade to a new Rancher minor version, you should ensure that all of your **Apps** charts are also upgraded to the correct release line for the chart.
 

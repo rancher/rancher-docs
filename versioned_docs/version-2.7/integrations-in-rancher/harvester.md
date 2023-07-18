@@ -20,7 +20,7 @@ To navigate to the Harvester cluster, click **☰ > Virtualization Management**.
 
 ### Harvester Node Driver
 
-The [Harvester node driver](https://docs.harvesterhci.io/v1.1/rancher/node/node-driver/) is GA for RKE and RKE2 options in Rancher. The node driver is available whether or not the Harvester feature flag is enabled. Note that the node driver is off by default. Users may create RKE or RKE2 clusters on Harvester only from the Cluster Management page.
+The [Harvester node driver](https://docs.harvesterhci.io/v1.1/rancher/node/node-driver/) is generally available for RKE and RKE2 options in Rancher. The node driver is available whether or not the Harvester feature flag is enabled. Note that the node driver is off by default. Users may create RKE or RKE2 clusters on Harvester only from the Cluster Management page.
 
 Harvester allows `.ISO` images to be uploaded and displayed through the Harvester UI, but this is not supported in the Rancher UI. This is because `.ISO` images usually require additional setup that interferes with a clean deployment (without requiring user intervention), and they are not typically used in cloud environments.
 
