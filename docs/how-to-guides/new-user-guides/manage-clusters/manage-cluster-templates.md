@@ -20,7 +20,7 @@ Rancher doesn't manage version control for cluster templates. Version control is
 
 ## RKE2 Cluster Template
 
-The example repository for an RKE2 cluster template is [here](https://github.com/rancher/cluster-template-examples).
+See the example repository for an [RKE2 cluster template](https://github.com/rancher/cluster-template-examples).
 
 ## Adding a Cluster Template to Rancher
 

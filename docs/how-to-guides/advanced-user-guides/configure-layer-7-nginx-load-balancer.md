@@ -208,7 +208,7 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-Note that privileged access is [required.](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
+This operation requires [privileged access](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher).
 
 This layer 7 NGINX configuration is tested on NGINX version 1.13 (mainline) and 1.14 (stable).
 
