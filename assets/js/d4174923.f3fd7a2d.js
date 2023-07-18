@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1688162721,
-    "formattedLastUpdatedAt": "Jun 30, 2023",
+    "lastUpdatedAt": 1689722556,
+    "formattedLastUpdatedAt": "Jul 18, 2023",
     "frontMatter": {
         "title": "Setting up an NGINX Load Balancer"
     },
@@ -443,15 +443,16 @@ stream {
         proxy_pass rancher_servers_http;
     }
 
+}
+
+http {
+
     upstream rancher_servers_https {
         least_conn;
         server <IP_NODE_1>:443 max_fails=3 fail_timeout=5s;
         server <IP_NODE_2>:443 max_fails=3 fail_timeout=5s;
         server <IP_NODE_3>:443 max_fails=3 fail_timeout=5s;
     }
-}
-
-http {
     server {
         listen 443 ssl;
         proxy_pass rancher_servers_https;
