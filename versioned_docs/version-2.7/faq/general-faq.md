@@ -22,13 +22,13 @@ Yes.
 
 **Does Rancher support Windows?**
 
-As of Rancher 2.3.0, we support Windows Server 1809 containers. For details on how to set up a cluster with Windows worker nodes, refer to the section on [configuring custom clusters for Windows.](../pages-for-subheaders/use-windows-clusters.md)
+Rancher supports Windows Server 1809 containers. For details on how to set up a cluster with Windows worker nodes, refer to the section on [configuring custom clusters for Windows.](../pages-for-subheaders/use-windows-clusters.md)
 
 <br/>
 
 **Does Rancher support Istio?**
 
-As of Rancher 2.3.0, we support [Istio.](../pages-for-subheaders/istio.md)
+Rancher supports [Istio.](../pages-for-subheaders/istio.md)
 
 Furthermore, Istio is implemented in our micro-PaaS "Rio", which works on Rancher 2.x along with any CNCF compliant Kubernetes cluster. You can read more about it [here](https://rio.io/)
 

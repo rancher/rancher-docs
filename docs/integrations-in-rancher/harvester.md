@@ -4,12 +4,6 @@ title: Harvester Integration
 
 Introduced in Rancher v2.6.1, [Harvester](https://docs.harvesterhci.io/) is an open-source hyper-converged infrastructure (HCI) software built on Kubernetes. Harvester installs on bare metal servers and provides integrated virtualization and distributed storage capabilities. Although Harvester operates using Kubernetes, it does not require users to know Kubernetes concepts, making it a more user-friendly application.
 
----
-**_New in v2.6.3_**
-
-Harvester is GA. Please refer to the [Harvester release notes](https://github.com/harvester/harvester/releases) for all updates.
-
----
 ### Feature Flag
 
 The Harvester feature flag is used to manage access to the Virtualization Management (VM) page in Rancher where users can navigate directly to Harvester clusters and access the Harvester UI. The Harvester feature flag is enabled by default. Click [here](../pages-for-subheaders/enable-experimental-features.md) for more information on feature flags in Rancher.
@@ -26,7 +20,7 @@ To navigate to the Harvester cluster, click **☰ > Virtualization Management**.
 
 ### Harvester Node Driver
 
-As of Rancher v2.6.3, the [Harvester node driver](https://docs.harvesterhci.io/v1.1/rancher/node/node-driver/) is GA for RKE and RKE2 options in Rancher. The node driver is available whether or not the Harvester feature flag is enabled. Note that the node driver is off by default. Users may create RKE or RKE2 clusters on Harvester only from the Cluster Management page.
+The [Harvester node driver](https://docs.harvesterhci.io/v1.1/rancher/node/node-driver/) is generally available for RKE and RKE2 options in Rancher. The node driver is available whether or not the Harvester feature flag is enabled. Note that the node driver is off by default. Users may create RKE or RKE2 clusters on Harvester only from the Cluster Management page.
 
 Harvester allows `.ISO` images to be uploaded and displayed through the Harvester UI, but this is not supported in the Rancher UI. This is because `.ISO` images usually require additional setup that interferes with a clean deployment (without requiring user intervention), and they are not typically used in cloud environments.
 

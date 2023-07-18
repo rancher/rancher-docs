@@ -4,17 +4,11 @@ title: Helm Charts in Rancher
 
 In this section, you'll learn how to manage Helm chart repositories and applications in Rancher. Helm chart repositories are managed using **Apps**. It uses a catalog-like system to import bundles of charts from repositories and then uses those charts to either deploy custom Helm applications or Rancher's tools such as Monitoring or Istio. Rancher tools come as pre-loaded repositories which deploy as standalone Helm charts. Any additional repositories are only added to the current cluster.
 
-### Changes in Rancher v2.6
+### Versioning Scheme
 
-Starting in Rancher v2.6.0, a new versioning scheme for Rancher feature charts was implemented. The changes are centered around the major version of the charts and the +up annotation for upstream charts, where applicable.
+The Rancher feature charts versioning scheme is centered around the major version of the charts and the `+up` annotation for upstream charts, where applicable.
 
 **Major Version:** The major version of the charts is tied to Rancher minor versions. When you upgrade to a new Rancher minor version, you should ensure that all of your **Apps** charts are also upgraded to the correct release line for the chart.
-
-:::note
-
-Any major versions that are less than the ones mentioned in the table below are meant for 2.5 and below only. For example, you are advised to not use <100.x.x versions of Monitoring in 2.6.x+.
-
-:::
 
 **Feature Charts:**
 
@@ -103,10 +97,9 @@ To add a private CA for Helm Chart repositories:
     [...]
     ```
 
-
 :::note Helm chart repositories with authentication
 
-As of Rancher v2.6.3, a new value `disableSameOriginCheck` has been added to the Repo.Spec. This allows users to bypass the same origin checks, sending the repository Authentication information as a Basic Auth Header with all API calls. This is not recommended but can be used as a temporary solution in cases of non-standard Helm chart repositories such as those that have redirects to a different origin URL.
+The Repo.Spec contains a `disableSameOriginCheck` that allows users to bypass the same origin checks, sending the repository Authentication information as a Basic Auth Header with all API calls. This is not recommended but can be used as a temporary solution in cases of non-standard Helm chart repositories such as those that have redirects to a different origin URL.
 
 To use this feature for an existing Helm chart repository, click <b>⋮ > Edit YAML</b>. On the `spec` portion of the YAML file, add `disableSameOriginCheck` and set it to `true`.
 
@@ -144,7 +137,7 @@ If you are upgrading your chart using _"Customize Helm options before upgrade"_ 
 
 :::
 
-#### Changes in Rancher v2.6.3
+#### Legacy Apps
 
 The upgrade button has been removed for legacy apps from the **Apps > Installed Apps** page.
 

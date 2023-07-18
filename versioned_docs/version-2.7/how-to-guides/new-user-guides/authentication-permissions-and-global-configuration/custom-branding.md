@@ -2,7 +2,7 @@
 title: Custom Branding
 ---
 
-<head> 
+<head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding"/>
 </head>
 
@@ -35,25 +35,12 @@ You can override the primary color used throughout the UI with a custom color of
 
 ### Fixed Banners
 
-<Tabs>
-<TabItem value="Rancher before v2.6.4">
-
 Display a custom fixed banner in the header, footer, or both.
-
-</TabItem>
-<TabItem value="Rancher v2.6.4+">
-
-Display a custom fixed banner in the header, footer, or both.
-
-As of Rancher v2.6.4, configuration of fixed banners has moved from the **Branding** tab to the **Banners** tab.
 
 To configure banner settings,
 
 1. Click **☰ > Global settings**.
 2. Click **Banners**.
-
-</TabItem>
-</Tabs>
 
 ## Custom Navigation Links
 
