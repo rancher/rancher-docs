@@ -7,7 +7,7 @@ description: Ingress configuration
 
 For Kubernetes v1.21 and up, the NGINX Ingress controller no longer runs in hostNetwork by default. It instead uses hostPorts for port 80 and port 443, so you can configure the admission webhook to be accessible only through the ClusterIP. This ensures that the webhook is only accessible from within the cluster.
 
-Because of this change to the controller, the default behavior no longer sets `hostNetwork` to `true`. However, you must [set `hostNetwork` to `true`](https://rke.docs.rancher.com/config-options/add-ons/ingress-controllers#configuring-network-options) for TCP- and UDP-based Services to work. To do so, [edit the cluster's YAML](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md#editing-clusters-with-yaml) and follow the [instructions](https://rke.docs.rancher.com/config-options/add-ons/ingress-controllers#configuring-network-options) described in the official RKE docs.
+Because of this change to the controller, the default behavior no longer sets `hostNetwork` to `true`. However, you must set `hostNetwork` to `true` for TCP- and UDP-based Services to work. To do so, [edit the cluster's YAML](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md#editing-clusters-with-yaml) and follow the [instructions](https://rke.docs.rancher.com/config-options/add-ons/ingress-controllers#configuring-network-options) described in the official RKE docs.
 
 :::
 
