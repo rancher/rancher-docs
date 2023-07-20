@@ -32,20 +32,30 @@ Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的
 
 1. 连接到你准备用于运行 Rancher Server 的其中一个 Linux 节点。
 1. 在 Linux 节点上，运行以下命令来启动 K3s Server，并将其连接到外部数据存储。
-```
-curl -sfL https://get.k3s.io |  INSTALL_K3S_VERSION=<VERSION> sh -s - server \
-  --datastore-endpoint="<DATASTORE_ENDPOINT>"
-```
+   ```
+   curl -sfL https://get.k3s.io |  INSTALL_K3S_VERSION=<VERSION> sh -s - server \
+     --datastore-endpoint="<DATASTORE_ENDPOINT>"
+   ```
 
-其中 `<DATASTORE_ENDPOINT>` 是数据存储的连接 URI。例如，如果你使用的是 MySQL，则为 `mysql://username:password@tcp(hostname:3306)/database-name`。有效的数据存储包括 etcd、MySQL、PostgreSQL 或 SQLite（默认）。
+   其中 `<DATASTORE_ENDPOINT>` 是数据存储的连接 URI。例如，如果你使用的是 MySQL，则为 `mysql://username:password@tcp(hostname:3306)/database-name`。有效的数据存储包括 etcd、MySQL、PostgreSQL 或 SQLite（默认）。
 
-:::note
+   :::note
 
-你也可以使用 `$K3S_DATASTORE_ENDPOINT` 环境变量来传递数据存储端点。
+   你也可以使用 `$K3S_DATASTORE_ENDPOINT` 环境变量来传递数据存储端点。
 
-:::
+   :::
 
-1. 在第二个 K3s Server 节点上运行同样的命令。
+1. 获取主 Server 节点令牌：
+   ```
+   cat /var/lib/rancher/k3s/server/token
+   ```
+
+1. 在第二个 K3s Server 节点上运行命令：
+   ```
+     curl -sfL https://get.k3s.io |  INSTALL_K3S_VERSION=<VERSION> sh -s - server \
+       --datastore-endpoint="<DATASTORE_ENDPOINT>" \
+       --token "<MAIN_SERVER_NODE_TOKEN>"
+   ```
 
 ### 2. 检查 K3s 是否正常运行
 
