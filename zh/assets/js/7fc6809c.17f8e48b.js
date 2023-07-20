@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[16746],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[23557],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 20262:
+/***/ 68927:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher",
-    "id": "version-2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher",
+    "id": "how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher",
     "title": "为 Rancher 设置高可用 K3s Kubernetes 集群",
     "description": "本文介绍了如何根据 Rancher Server 环境的最佳实践安装 Kubernetes 集群。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher.md",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/current/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher.md",
     "sourceDirName": "how-to-guides/new-user-guides/kubernetes-cluster-setup",
     "slug": "/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher",
-    "permalink": "/zh/v2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher",
+    "permalink": "/zh/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher.md",
     "tags": [],
-    "version": "2.6",
-    "lastUpdatedAt": 1686823964,
-    "formattedLastUpdatedAt": "2023年6月15日",
+    "version": "current",
+    "lastUpdatedAt": 1689587346,
+    "formattedLastUpdatedAt": "2023年7月17日",
     "frontMatter": {
         "title": "为 Rancher 设置高可用 K3s Kubernetes 集群"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "高可用安装",
-        "permalink": "/zh/v2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs"
+        "permalink": "/zh/how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs"
     },
     "next": {
         "title": "配置高可用的 RKE Kubernetes 集群",
-        "permalink": "/zh/v2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher"
+        "permalink": "/zh/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher"
     }
 };
 const assets = {};
@@ -385,7 +385,7 @@ function MDXContent(_param) {
         mdxType: "MDXLayout"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `本文介绍了如何根据 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.6/reference-guides/rancher-manager-architecture/architecture-recommendations#kubernetes-%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83"
+        "href": "/zh/reference-guides/rancher-manager-architecture/architecture-recommendations#kubernetes-%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83"
     }, `Rancher Server 环境的最佳实践`), `安装 Kubernetes 集群。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果你的系统无法直接访问互联网，请参见离线安装说明。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "title": "单节点安装提示：",
         "type": "tip"
@@ -399,7 +399,7 @@ function MDXContent(_param) {
         "id": "先决条件"
     }, `先决条件`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `以下说明假设你已参见`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.6/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster"
+        "href": "/zh/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster"
     }, `此章节`), `配置好两个节点，一个负载均衡器，一个 DNS 记录和一个外部 MySQL 数据库。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的 Rancher 版本支持哪些 Kubernetes 版本，请参见 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://rancher.com/support-maintenance-terms/"
@@ -413,25 +413,52 @@ function MDXContent(_param) {
         "id": "1-安装-kubernetes-并设置-k3s-server"
     }, `1. 安装 Kubernetes 并设置 K3s Server`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在运行启动 K3s Kubernetes API Server 的命令时，你会传入使用之前设置的外部数据存储的选项。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
-    }, `连接到你准备用于运行 Rancher Server 的其中一个 Linux 节点。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, `连接到你准备用于运行 Rancher Server 的其中一个 Linux 节点。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
-    }, `在 Linux 节点上，运行以下命令来启动 K3s Server，并将其连接到外部数据存储。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, `在 Linux 节点上，运行以下命令来启动 K3s Server，并将其连接到外部数据存储。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
     }, `curl -sfL https://get.k3s.io |  INSTALL_K3S_VERSION=<VERSION> sh -s - server \\
   --datastore-endpoint="<DATASTORE_ENDPOINT>"
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `其中 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, `其中 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `<DATASTORE_ENDPOINT>`), ` 是数据存储的连接 URI。例如，如果你使用的是 MySQL，则为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `mysql://username:password@tcp(hostname:3306)/database-name`), `。有效的数据存储包括 etcd、MySQL、PostgreSQL 或 SQLite（默认）。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        parentName: "li",
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
     }, `你也可以使用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `$K3S_DATASTORE_ENDPOINT`), ` 环境变量来传递数据存储端点。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `$K3S_DATASTORE_ENDPOINT`), ` 环境变量来传递数据存储端点。`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
-    }, `在第二个 K3s Server 节点上运行同样的命令。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, `获取主 Server 节点令牌：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `cat /var/lib/rancher/k3s/server/token
+`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, `在第二个 K3s Server 节点上运行命令：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `  curl -sfL https://get.k3s.io |  INSTALL_K3S_VERSION=<VERSION> sh -s - server \\
+    --datastore-endpoint="<DATASTORE_ENDPOINT>" \\
+    --token "<MAIN_SERVER_NODE_TOKEN>"
+`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "2-检查-k3s-是否正常运行"
     }, `2. 检查 K3s 是否正常运行`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在其中一个 K3s Server 节点上运行以下命令，来确认 K3s 是否已经设置成功：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
