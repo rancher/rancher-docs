@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/multi-cluster-apps.md",
     "sourceDirName": "how-to-guides/new-user-guides/helm-charts-in-rancher",
     "slug": "/how-to-guides/new-user-guides/helm-charts-in-rancher/multi-cluster-apps",
-    "permalink": "/v2.0-v2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/multi-cluster-apps",
+    "permalink": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/multi-cluster-apps",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/multi-cluster-apps.md",
     "tags": [],
     "version": "2.0-2.4",
-    "lastUpdatedAt": 1663953084,
-    "formattedLastUpdatedAt": "Sep 23, 2022",
+    "lastUpdatedAt": 1688155223,
+    "formattedLastUpdatedAt": "2023年6月30日",
     "frontMatter": {
         "title": "Multi-Cluster Apps"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Managing Catalog Apps",
-        "permalink": "/v2.0-v2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/managing-apps"
+        "permalink": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/managing-apps"
     },
     "next": {
         "title": "Launching Catalog Apps",
-        "permalink": "/v2.0-v2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/launching-apps"
+        "permalink": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/launching-apps"
     }
 };
 const assets = {};
@@ -352,11 +352,14 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
         parentName: "p"
     }, `Available as of v2.2.0`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The documentation about multi-cluster apps has moved `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.0-v2.4/how-to-guides/new-user-guides/deploy-apps-across-clusters"
+        "href": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/deploy-apps-across-clusters"
     }, `here.`)));
 }
 MDXContent.isMDXComponent = true;
