@@ -16,9 +16,9 @@ There are several paths to view and manage clusters through the Rancher UI.
 
 ### Cluster List
 
-A table listing available clusters is present on the Rancher **Home** page. Click on the name of a cluster from the table to view to that cluster's **Cluster Dashboard**.
+A table listing available clusters is present on the Rancher **Home** page. Click on the name of a cluster to view that cluster's **Cluster Dashboard**.
 
-You can view more information about a cluster and perform management tasks by selecting the **Manage** button near the table of clusters on the **Home** page. This will take you to the cluster management page. Select the **Explore** button at the end of each row to view that cluster's **Cluster Dashboard**, or select **⁝** at the end of the row to reveal a submenu featuring the following management options:
+You can also perform management tasks by selecting the **Manage** button above the table. This will take you to the cluster management page. Select the **Explore** button at the end of each row to view that cluster's **Cluster Dashboard**, or select **⁝** at the end of each row to reveal a submenu featuring the following management options:
 
 * [Kubectl Shell](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)
 * Download KubeConfig
