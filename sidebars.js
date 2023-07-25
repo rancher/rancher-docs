@@ -646,6 +646,7 @@ const sidebars = {
                 id: "pages-for-subheaders/backup-restore-and-disaster-recovery",
               },
               items: [
+                "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide",
                 "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher",
                 "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher",
                 "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster",
