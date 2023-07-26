@@ -48,6 +48,19 @@ Rancher Kubernetes Metadata contains Kubernetes version information which Ranche
 
 For more information on how metadata works and how to configure metadata config, see [Rancher Kubernetes Metadata](../getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher.md).
 
-## Enabling Experimental Features
+## Global Configuration Settings
 
-Rancher includes some features that are experimental and disabled by default. Feature flags were introduced to allow you to try these features. For more information, refer to the section about [feature flags.](enable-experimental-features.md)
+Options that control certain global-level Rancher settings are available from the top navigation menu. 
+
+Click **☰** in the top left corner of the Rancher portal, then select **Global Settings**, to view and configure the following menu items:
+
+- **Settings**: Various Rancher defaults, such as the minimum length for a user's password (`password-min-length`). You should be cautious when modifying these settings, as invalid values may break your Rancher installation.
+- **Feature Flags**: Rancher features that can be toggled on or off. Some of these flags are for [experimental features](#enabling-experimental-features).
+- **Banners**: UI elements you can add to fixed locations on the portal. For example, you can use these options to [set a custom banner](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding.md#fixed-banners) for users when they login to Rancher. 
+- **Branding**: Rancher portal design elements that you can [customize](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding.md). You can add a custom logo or favicon, and modify UI colors.
+- **Performance**: UI performance settings for the Rancher portal, such as incremental resource loading.
+- **Home Links**: Links displayed on the Rancher portal **Home** page. You can modify visibility for the default links or add your own links.
+
+### Enabling Experimental Features
+
+Rancher includes some features that are experimental and/or disabled by default. Feature flags allow you to enable these features. For more information, refer to the section about [feature flags.](enable-experimental-features.md)
