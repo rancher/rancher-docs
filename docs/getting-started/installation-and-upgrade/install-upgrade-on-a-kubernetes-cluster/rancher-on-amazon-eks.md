@@ -6,7 +6,7 @@ title: Installing Rancher on Amazon EKS
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks"/>
 </head>
 
-This page covers installing Rancher on an Amazon EKS cluster.  For installation via AWS Marketplace, please see [this page](../../quick-start-guides/deploy-rancher-manager/aws-marketplace.md).
+This page covers installing Rancher on an Amazon EKS cluster.  You can also [install Rancher through the AWS Marketplace](../../quick-start-guides/deploy-rancher-manager/aws-marketplace.md).
 
 If you already have an EKS Kubernetes cluster, skip to the step about [installing an ingress.](#5-install-an-ingress) Then install the Rancher Helm chart following the instructions on [this page.](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#install-the-rancher-helm-chart)
 
