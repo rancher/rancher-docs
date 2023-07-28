@@ -1,8 +1,8 @@
 ---
-title: Authentication, Permissions and Global Configuration
+title: Authentication, Permissions and Global Settings
 ---
 
-After installation, the [system administrator](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md) should configure Rancher to configure authentication, authorization, security, default settings, security policies, drivers and global DNS entries.
+After installation, the [system administrator](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md) should configure Rancher to configure authentication, authorization, security, and global settings for the Rancher portal.
 
 ## First Log In
 
@@ -48,7 +48,7 @@ Rancher Kubernetes Metadata contains Kubernetes version information which Ranche
 
 For more information on how metadata works and how to configure metadata config, see [Rancher Kubernetes Metadata](../getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher.md).
 
-## Global Configuration Settings
+## Global Settings
 
 Options that control certain global-level Rancher settings are available from the top navigation menu. 
 
@@ -64,3 +64,16 @@ Click **☰** in the top left corner of the Rancher portal, then select **Global
 ### Enabling Experimental Features
 
 Rancher includes some features that are experimental and/or disabled by default. Feature flags allow you to enable these features. For more information, refer to the section about [feature flags.](enable-experimental-features.md)
+
+### Global Configuration
+
+**Global Configuration** options aren't visible unless you activate the **legacy** [feature flag](enable-experimental-features.md). The **legacy** flag is disabled by default on fresh Rancher installs of v2.6 and later. If you upgrade from an earlier Rancher version, or activate the **legacy** feature flag on Rancher v2.6 and later, **Global Configuration** is available from the top navigation menu:
+
+1. Click **☰** in the top left corner of the portal.
+1. Select **Global Configuration** from the **Legacy Apps** section of the sidebar.
+
+The following features are available within the **Global Configuration** sidebar:
+
+- **Catalogs**: Global catalogs are deprecated as of Rancher v2.7. 
+- **Global DNS Entries**
+- **Global DNS Providers**
