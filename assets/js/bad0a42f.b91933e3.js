@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[58053],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[95399],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 24787:
+/***/ 32643:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "troubleshooting/kubernetes-components/troubleshooting-etcd-nodes",
-    "id": "troubleshooting/kubernetes-components/troubleshooting-etcd-nodes",
+    "id": "version-2.7/troubleshooting/kubernetes-components/troubleshooting-etcd-nodes",
     "title": "Troubleshooting etcd Nodes",
     "description": "This section contains commands and tips for troubleshooting nodes with the etcd role.",
-    "source": "@site/docs/troubleshooting/kubernetes-components/troubleshooting-etcd-nodes.md",
+    "source": "@site/versioned_docs/version-2.7/troubleshooting/kubernetes-components/troubleshooting-etcd-nodes.md",
     "sourceDirName": "troubleshooting/kubernetes-components",
     "slug": "/troubleshooting/kubernetes-components/troubleshooting-etcd-nodes",
-    "permalink": "/troubleshooting/kubernetes-components/troubleshooting-etcd-nodes",
+    "permalink": "/v2.7/troubleshooting/kubernetes-components/troubleshooting-etcd-nodes",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/troubleshooting/kubernetes-components/troubleshooting-etcd-nodes.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/troubleshooting/kubernetes-components/troubleshooting-etcd-nodes.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1663953084,
-    "formattedLastUpdatedAt": "Sep 23, 2022",
+    "version": "2.7",
+    "lastUpdatedAt": 1690576234,
+    "formattedLastUpdatedAt": "Jul 28, 2023",
     "frontMatter": {
         "title": "Troubleshooting etcd Nodes"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Kubernetes Components",
-        "permalink": "/pages-for-subheaders/kubernetes-components"
+        "permalink": "/v2.7/pages-for-subheaders/kubernetes-components"
     },
     "next": {
         "title": "Troubleshooting Controlplane Nodes",
-        "permalink": "/troubleshooting/kubernetes-components/troubleshooting-controlplane-nodes"
+        "permalink": "/v2.7/troubleshooting/kubernetes-components/troubleshooting-controlplane-nodes"
     }
 };
 const assets = {};
@@ -412,9 +412,19 @@ const toc = [
         level: 3
     },
     {
-        value: 'Log Level',
-        id: 'log-level',
+        value: 'Configure Log Level',
+        id: 'configure-log-level',
         level: 2
+    },
+    {
+        value: 'etcd v3.5 And Later',
+        id: 'etcd-v35-and-later',
+        level: 3
+    },
+    {
+        value: 'etcd v3.4 And Earlier',
+        id: 'etcd-v34-and-earlier',
+        level: 3
     },
     {
         value: 'etcd Content',
@@ -758,8 +768,22 @@ memberID:x alarm:NOSPACE
 docker exec etcd etcdctl alarm disarm
 docker exec etcd etcdctl alarm list
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "log-level"
-    }, `Log Level`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The log level of etcd can be changed dynamically via the API. You can configure debug logging using the commands below.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Command:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        "id": "configure-log-level"
+    }, `Configure Log Level`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `You can no longer dynamically change the log level in etcd v3.5 or later.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "etcd-v35-and-later"
+    }, `etcd v3.5 And Later`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To configure the log level for etcd, edit the cluster YAML:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `services:
+  etcd:
+    extra_args:
+      log-level: "debug"
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "etcd-v34-and-earlier"
+    }, `etcd v3.4 And Earlier`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In earlier etcd versions, you can use the API to dynamically change the log level.  Configure debug logging using the commands below:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
     }, `docker run --net=host -v $(docker inspect kubelet --format '{{ range .Mounts }}{{ if eq .Destination "/etc/kubernetes" }}{{ .Source }}{{ end }}{{ end }}')/ssl:/etc/kubernetes/ssl:ro appropriate/curl -s -XPUT -d '{"Level":"DEBUG"}' --cacert $(docker exec etcd printenv ETCDCTL_CACERT) --cert $(docker exec etcd printenv ETCDCTL_CERT) --key $(docker exec etcd printenv ETCDCTL_KEY) $(docker exec etcd printenv ETCDCTL_ENDPOINTS)/config/local/log
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Command when using etcd version lower than 3.3.x (Kubernetes 1.13.x and lower) and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
