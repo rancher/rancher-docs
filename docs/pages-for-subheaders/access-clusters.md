@@ -11,11 +11,39 @@ For more information on roles-based access control, see [this section.](manage-r
 For information on how to set up an authentication system, see [this section.](authentication-config.md)
 
 
-### Rancher UI
+There are several paths to view and manage clusters through the Rancher UI.
 
-Rancher provides an intuitive user interface for interacting with your clusters. All options available in the UI use the Rancher API. Therefore any action possible in the UI is also possible in the Rancher CLI or Rancher API.
+### Cluster List
 
-### kubectl
+A table listing available clusters is present on the Rancher **Home** page. Click on the name of a cluster to view that cluster's **Cluster Dashboard**.
+
+You can also perform management tasks by selecting the **Manage** button above the table. This will take you to the cluster management page. Select the **Explore** button at the end of each row to view that cluster's **Cluster Dashboard**, or select **⁝** at the end of each row to reveal a submenu featuring the following management options:
+
+* [Kubectl Shell](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)
+* Download KubeConfig
+* Copy KubeConfig to Clipboard
+* Edit Config
+* View YAML
+* Download YAML 
+
+:::note
+All options available in the UI use the Rancher API. Therefore any action possible in the UI is also possible in the Rancher CLI or Rancher API.
+:::
+
+### Top Navigation Bar
+
+The cluster dashboard is also accessible from the **☰** in the top navigation bar:
+
+1. Click **☰**.
+1. Select the name of a cluster from the **Explore Cluster** menu option.
+
+
+You can access the cluster management page from the **☰** menu as well:
+
+1. Click **☰**.
+1. Select **Cluster Management**.
+
+## kubectl
 
 You can use the Kubernetes command-line tool, [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/), to manage   your clusters. You have two options for using kubectl:
 
