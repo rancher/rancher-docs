@@ -1,6 +1,7 @@
 ---
 title: Vagrant 快速入门
 ---
+
 你可以参考以下步骤快速部署 Rancher Server，并附加一个单节点集群。
 
 :::caution
@@ -31,7 +32,7 @@ title: Vagrant 快速入门
 3. **可选**：编辑 `config.yaml` 文件：
 
    - 根据需要更改节点数和内存分配（`node.count`, `node.cpus`, `node.memory`）
-   - 更改 `admin` 的密码以登录 Rancher。(`admin_password`)
+   - 更改 `admin` 的密码以登录 Rancher。（`admin_password`，最少 12 个字符）
 
 4. 执行 `vagrant up --provider=virtualbox` 以初始化环境。
 

@@ -45,14 +45,14 @@ In the **Instance Options** section, configure the number of vCPUs, memory, and 
 | Creation method | * | The method for setting up an operating system on the node. The operating system can be installed from an ISO or from a VM template. Depending on the creation method, you will also have to specify a VM template, content library, existing VM, or ISO. For more information on creation methods, refer to [About VM Creation Methods.](#about-vm-creation-methods) |
 | Cloud Init               |          | URL of a `cloud-config.yml` file or URL to provision VMs with. This file allows further customization of the operating system, such as network configuration, DNS servers, or system daemons. The operating system must support `cloud-init`. |
 | Networks | | Name(s) of the network to attach the VM to. |
-| Configuration Parameters used for guestinfo |          | Additional configuration parameters for the VMs. These correspond to the [Advanced Settings](https://kb.vmware.com/s/article/1016098) in the vSphere console. Example use cases include providing RancherOS [guestinfo]({{<baseurl>}}/os/v1.x/en/installation/cloud/vmware-esxi/#vmware-guestinfo) parameters or enabling disk UUIDs for the VMs (`disk.EnableUUID=TRUE`). |
+| Configuration Parameters used for guestinfo |          | Additional configuration parameters for the VMs. These correspond to the [Advanced Settings](https://kb.vmware.com/s/article/1016098) in the vSphere console. Example use cases include providing RancherOS [guestinfo](https://rancher.com/docs/os/v1.x/en/installation/cloud/vmware-esxi/#vmware-guestinfo) parameters or enabling disk UUIDs for the VMs (`disk.EnableUUID=TRUE`). |
 
 
 ### About VM Creation Methods
 
 In the **Creation method** field, configure the method used to provision VMs in vSphere. Available options include creating VMs that boot from a RancherOS ISO or creating VMs by cloning from an existing virtual machine or [VM template](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-F7BF0E6B-7C4F-4E46-8BBF-76229AEA7220.html).
 
-The existing VM or template may use any modern Linux operating system that is configured with support for [cloud-init](https://cloudinit.readthedocs.io/en/latest/) using the [NoCloud datasource](https://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html).
+The existing VM or template may use any modern Linux operating system that is configured with support for [cloud-init](https://cloudinit.readthedocs.io/en/latest/) using the [NoCloud datasource](https://canonical-cloud-init.readthedocs-hosted.com/en/latest/reference/datasources/nocloud.html).
 
 Choose the way that the VM will be created:
 
@@ -82,3 +82,13 @@ In the custom attributes, Rancher will let you select all the custom attributes 
 To make use of cloud-init initialization, create a cloud config file using valid YAML syntax and paste the file content in the the **Cloud Init** field. Refer to the [cloud-init documentation.](https://cloudinit.readthedocs.io/en/latest/topics/examples.html) for a commented set of examples of supported cloud config directives.
 
 Note that cloud-init is not supported when using the ISO creation method.
+
+## Engine Options
+
+In the **Engine Options** section of the node template, you can configure the container daemon. You may want to specify the container version or a container image registry mirror.
+
+:::note
+If you're provisioning Red Hat Enterprise Linux (RHEL) or CentOS nodes, leave the **Docker Install URL** field as the default value, or select **none**. This will bypass a check for Docker installation, as Docker is already installed on these node types.
+
+If you set **Docker Install URL** to a value other than the default or **none**, you might see an error message such as the following: `Error creating machine: RHEL ssh command error: command: sudo -E yum install -y curl err: exit status 1 output: Updating Subscription Management repositories.`
+:::

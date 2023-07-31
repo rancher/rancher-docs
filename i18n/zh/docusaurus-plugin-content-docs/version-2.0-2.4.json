@@ -15,9 +15,9 @@
     "message": "Quick Start Guides",
     "description": "The label for category Quick Start Guides in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Deploy Rancher Manager": {
-    "message": "Deploy Rancher Manager",
-    "description": "The label for category Deploy Rancher Manager in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Deploy Rancher": {
+    "message": "Deploy Rancher",
+    "description": "The label for category Deploy Rancher in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Deploy Rancher Workloads": {
     "message": "Deploy Rancher Workloads",
@@ -283,9 +283,9 @@
     "message": "Best Practices",
     "description": "The label for category Best Practices in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Rancher Manager Architecture": {
-    "message": "Rancher Manager Architecture",
-    "description": "The label for category Rancher Manager Architecture in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Rancher Architecture": {
+    "message": "Rancher Architecture",
+    "description": "The label for category Rancher Architecture in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Cluster Configuration": {
     "message": "Cluster Configuration",

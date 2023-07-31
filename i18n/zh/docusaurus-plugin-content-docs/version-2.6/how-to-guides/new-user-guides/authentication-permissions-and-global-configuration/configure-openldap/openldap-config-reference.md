@@ -2,9 +2,7 @@
 title: OpenLDAP 配置参考
 ---
 
-本文提供在 Rancher 中设置 OpenLDAP 身份验证的参考。
-
-有关配置 OpenLDAP 的更多详细信息，请参见[官方文档](https://www.openldap.org/doc/)。
+有关配置 OpenLDAP 认证的更多详细信息，请参见[官方文档](https://www.openldap.org/doc/)。
 
 > 在开始之前，请熟悉[外部身份验证配置和主体用户](../../../../pages-for-subheaders/authentication-config.md#外部身份验证配置和用户主体)的概念。
 
@@ -24,7 +22,7 @@ title: OpenLDAP 配置参考
 >
 > 如果 OpenLDAP 服务器使用的证书是自签名的或不是来自认可的证书颁发机构，请确保手头有 PEM 格式的 CA 证书（包含所有中间证书）。你必须在配置期间粘贴此证书，以便 Rancher 能够验证证书链。
 
-如果你不确定要在用户/组`搜索库`字段中输入什么值，请咨询你的 LDAP 管理员，或参见 Active Directory 身份验证文档中的[使用 ldapsearch 确定搜索库和 Schema](../../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-active-directory.md#附录：使用-ldapsearch-确定搜索库和-schema) 章节。
+如果你不确定要在用户/组`搜索库`字段中输入什么值，请咨询你的 LDAP 管理员，或参见 Active Directory 身份验证文档中的[使用 ldapsearch 确定搜索库和 Schema](../../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-active-directory.md#附录使用-ldapsearch-确定搜索库和-schema) 章节。
 
 <figcaption>OpenLDAP 服务器参数</figcaption>
 
@@ -45,7 +43,7 @@ title: OpenLDAP 配置参考
 
 请注意，Rancher 使用本节中配置的属性映射来构造搜索筛选器和解析组成员。因此，我们建议你验证此处的配置是否与你在 OpenLDAP 中使用的 Schema 匹配。
 
-如果你不确定 OpenLDAP 服务器中使用的用户/组 Schema，请咨询你的 LDAP 管理员，或参见 Active Directory 身份验证文档中的[使用 ldapsearch 确定搜索库和 Schema](../../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-active-directory.md#附录：使用-ldapsearch-确定搜索库和-schema) 章节。
+如果你不确定 OpenLDAP 服务器中使用的用户/组 Schema，请咨询你的 LDAP 管理员，或参见 Active Directory 身份验证文档中的[使用 ldapsearch 确定搜索库和 Schema](../../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-active-directory.md#附录使用-ldapsearch-确定搜索库和-schema) 章节。
 
 ### 用户 Schema 配置
 

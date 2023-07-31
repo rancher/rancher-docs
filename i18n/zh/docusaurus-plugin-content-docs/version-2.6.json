@@ -11,9 +11,9 @@
     "message": "快速入门指南",
     "description": "The label for category Quick Start Guides in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Deploy Rancher Manager": {
-    "message": "部署 Rancher Manager",
-    "description": "The label for category Deploy Rancher Manager in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Deploy Rancher": {
+    "message": "部署 Rancher",
+    "description": "The label for category Deploy Rancher in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Deploy Rancher Workloads": {
     "message": "部署 Rancher 工作负载",
@@ -243,9 +243,9 @@
     "message": "Rancher 管理的集群",
     "description": "The label for category Rancher-Managed Clusters in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Rancher Manager Architecture": {
-    "message": "Rancher Manager 架构",
-    "description": "The label for category Rancher Manager Architecture in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Rancher Architecture": {
+    "message": "Rancher 架构",
+    "description": "The label for category Rancher Architecture in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Cluster Configuration": {
     "message": "集群配置",
@@ -335,10 +335,6 @@
     "message": "CIS 扫描",
     "description": "The label for category CIS Scans in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Fleet - GitOps at Scale": {
-    "message": "Fleet - 大规模的 GitOps",
-    "description": "The label for category Fleet - GitOps at Scale in sidebar tutorialSidebar"
-  },
   "sidebar.tutorialSidebar.category.Istio": {
     "message": "Istio",
     "description": "The label for category Istio in sidebar tutorialSidebar"
@@ -374,5 +370,9 @@
   "sidebar.tutorialSidebar.category.Other Troubleshooting Tips": {
     "message": "其他故障排除提示",
     "description": "The label for category Other Troubleshooting Tips in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Continuous Delivery with Fleet": {
+    "message": "使用 Feet 进行持续交付",
+    "description": "The label for category Continuous Delivery with Fleet in sidebar tutorialSidebar"
   }
 }

@@ -2,6 +2,10 @@
 title: Installing Rancher on Amazon EKS
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks"/>
+</head>
+
 This page covers two ways to install Rancher on EKS.
 
 The first is a guide for deploying the Rancher server on an EKS cluster using CloudFormation. This guide was created in collaboration with Amazon Web Services to show how to deploy Rancher following best practices.
@@ -79,7 +83,7 @@ Then enter the following values:
 
 To create an EKS cluster, run the following command. Use the AWS region that applies to your use case. When choosing a Kubernetes version, be sure to first consult the [support matrix](https://rancher.com/support-matrix/) to find the highest version of Kubernetes that has been validated for your Rancher version.
 
-**Note:** If the version of Kubernetes is updated to v1.22 or later, the version of ingress-nginx would also need to be [updated](https://kubernetes.github.io/ingress-nginx/#faq-migration-to-apiversion-networkingk8siov1).
+**Note:** If you're updating from an older version of Kubernetes, to Kubernetes v1.22 or above, you also need to [update](https://kubernetes.github.io/ingress-nginx/user-guide/k8s-122-migration/) ingress-nginx.
 
 ```
 eksctl create cluster \
@@ -117,16 +121,26 @@ rancher-server-cluster		us-west-2	True
 
 The cluster needs an Ingress so that Rancher can be accessed from outside the cluster.
 
-The following command installs an `nginx-ingress-controller` with a LoadBalancer service. This will result in an ELB (Elastic Load Balancer) in front of NGINX:
+To make sure that you choose the correct Ingress-NGINX Helm chart, first find an `Ingress-NGINX version` that's compatible with your Kubernetes version in the [Kubernetes/ingress-nginx support table](https://github.com/kubernetes/ingress-nginx#supported-versions-table). 
+
+Then, list the Helm charts available to you by running the following command:
 
 ```
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm repo update
+helm search repo ingress-nginx -l
+```
+
+The `helm search` command's output contains an `APP VERSION` column. The versions under this column are equivalent to the `Ingress-NGINX version` you chose earlier. Using the app version, select a chart version that bundles an app compatible with your Kubernetes install. For example, if you have Kubernetes v1.23, you can select the v4.5.2 Helm chart, since Ingress-NGINX v1.6.4 comes bundled with that chart, and v1.6.4 is compatible with Kubernetes v1.23. When in doubt, select the most recent compatible version.
+
+Now that you know which Helm chart `version` you need, run the following command. It installs an `nginx-ingress-controller` with a Kubernetes load balancer service:
+
+```
 helm upgrade --install \
   ingress-nginx ingress-nginx/ingress-nginx \
   --namespace ingress-nginx \
   --set controller.service.type=LoadBalancer \
-  --version 4.0.18 \
+  --version 4.5.2 \
   --create-namespace
 ```
 

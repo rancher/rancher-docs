@@ -191,7 +191,7 @@ For more information, see the Kubernetes documentation on [taints and toleration
 
 ### Scheduling Global Services
 
-Rancher v1.6 included the ability to deploy [global services]({{<baseurl>}}/rancher/v1.6/en/cattle/scheduling/#global-service), which are services that deploy duplicate containers to each host in the environment (i.e.,  nodes in your cluster using Rancher v2.x terms). If a service has the `io.rancher.scheduler.global: 'true'` label declared, then Rancher v1.6 schedules a service container on each host in the environment.
+Rancher v1.6 included the ability to deploy [global services](https://rancher.com/docs/rancher/v1.6/en/cattle/scheduling/#global-service), which are services that deploy duplicate containers to each host in the environment (i.e.,  nodes in your cluster using Rancher v2.x terms). If a service has the `io.rancher.scheduler.global: 'true'` label declared, then Rancher v1.6 schedules a service container on each host in the environment.
 
 <figcaption><code>output.txt</code> Global Service Label</figcaption>
 

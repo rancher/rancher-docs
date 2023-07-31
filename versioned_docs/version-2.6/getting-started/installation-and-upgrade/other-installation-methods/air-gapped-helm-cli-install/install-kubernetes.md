@@ -2,6 +2,10 @@
 title: '3. Install Kubernetes (Skip for Docker Installs)'
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-kubernetes"/>
+</head>
+
 :::note
 
 Skip this section if you are installing Rancher on a single node with Docker.
@@ -64,9 +68,9 @@ For more information on private registries configuration file for K3s, refer to 
 
 ### 3. Install K3s
 
-Rancher needs to be installed on a supported Kubernetes version. To find out which versions of Kubernetes are supported for your Rancher version, refer to the [support maintenance terms.](https://rancher.com/support-maintenance-terms/)
+Rancher needs to be installed on a supported Kubernetes version. To find out which versions of Kubernetes are supported for your Rancher version, refer to the [Rancher Support Matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/).
 
-To specify the K3s version, use the INSTALL_K3S_VERSION environment variable when running the K3s installation script.
+To specify the K3s (Kubernetes) version, use the INSTALL_K3S_VERSION (e.g., `INSTALL_K3S_VERSION="v1.24.10+k3s1"`) environment variable when running the K3s installation script.
 
 Obtain the K3s binary from the [releases](https://github.com/k3s-io/k3s/releases) page, matching the same version used to get the airgap images tar.
 Also obtain the K3s install script at https://get.k3s.io
@@ -77,17 +81,16 @@ Place the install script anywhere on each node, and name it `install.sh`.
 Install K3s on each server:
 
 ```
-INSTALL_K3S_SKIP_DOWNLOAD=true ./install.sh
+INSTALL_K3S_SKIP_DOWNLOAD=true INSTALL_K3S_VERSION=<VERSION> ./install.sh
 ```
 
 Install K3s on each agent:
 
 ```
-INSTALL_K3S_SKIP_DOWNLOAD=true K3S_URL=https://myserver:6443 K3S_TOKEN=mynodetoken ./install.sh
+INSTALL_K3S_SKIP_DOWNLOAD=true INSTALL_K3S_VERSION=<VERSION> K3S_URL=https://<SERVER>:6443 K3S_TOKEN=<TOKEN> ./install.sh
 ```
 
-Note, take care to ensure you replace `myserver` with the IP or valid DNS of the server and replace `mynodetoken` with the node-token from the server.
-The node-token is on the server at `/var/lib/rancher/k3s/server/node-token`
+Where `<SERVER>` is the IP or valid DNS of the server and `<TOKEN>` is the node-token from the server found at `/var/lib/rancher/k3s/server/node-token`.
 
 :::note
 
@@ -175,7 +178,7 @@ tls-san:
   - loadbalancer-dns-domain.com
 ```
 
-For more information, refer to the [RKE2 documentation](https://docs.rke2.io/install/ha/).
+For more information, refer to the [RKE2 documentation](https://docs.rke2.io/install/ha).
 
 :::note
 
@@ -205,7 +208,7 @@ configs:
       ca_file: <path to the ca file used in the registry>
 ```
 
-For more information on private registries configuration file for RKE2, refer to the [RKE2 documentation.](https://docs.rke2.io/install/containerd_registry_configuration/)
+For more information on private registries configuration file for RKE2, refer to the [RKE2 documentation.](https://docs.rke2.io/install/containerd_registry_configuration)
 
 ### 3. Install RKE2
 
@@ -234,7 +237,7 @@ systemctl enable rke2-server.service
 systemctl start rke2-server.service
 ``
 
-For more information, refer to the [RKE2 documentation](https://docs.rke2.io/install/airgap/).
+For more information, refer to the [RKE2 documentation](https://docs.rke2.io/install/airgap).
 
 ### 4. Save and Start Using the kubeconfig File
 
@@ -274,7 +277,7 @@ users:
 kubectl --kubeconfig ~/.kube/config/rke2.yaml get pods --all-namespaces
 ```
 
-For more information about the `kubeconfig` file, refer to the [RKE2 documentation](https://docs.rke2.io/cluster_access/) or the [official Kubernetes documentation](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) about organizing cluster access using `kubeconfig` files.
+For more information about the `kubeconfig` file, refer to the [RKE2 documentation](https://docs.rke2.io/cluster_access) or the [official Kubernetes documentation](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) about organizing cluster access using `kubeconfig` files.
 
 ### Note on Upgrading
 

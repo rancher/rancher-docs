@@ -40,6 +40,10 @@ If you are registering a K3s cluster, make sure the `cluster.yml` is readable. I
 
 EKS clusters must have at least one managed node group to be imported into Rancher or provisioned from Rancher successfully.
 
+### GKE Clusters
+
+GKE clusters must be running in Standard mode. GKE Autopilot clusters aren't supported. See [Compare GKE Autopilot and Standard](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison) for more information about the difference between GKE Autopilot mode and Standard mode.
+
 </TabItem>
 <TabItem value="Rancher before v2.5.9">
 
@@ -65,6 +69,9 @@ If you are registering a K3s cluster, make sure the `cluster.yml` is readable. I
 
 EKS clusters must have at least one managed node group to be imported into Rancher or provisioned from Rancher successfully.
 
+### GKE Clusters
+
+GKE clusters must be running in Standard mode. GKE Autopilot clusters aren't supported. See [Compare GKE Autopilot and Standard](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison) for more information about the difference between GKE modes.
 </TabItem>
 </Tabs>
 

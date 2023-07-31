@@ -34,7 +34,7 @@ Annotations should be used for information that does not affect who receives the
 <TabItem value="Rancher v2.5.4+">
 
 ### Receiver
-The route needs to refer to a [receiver](#receiver-configuration) that has already been configured.
+The route needs to refer to a [receiver](./receivers.md) that has already been configured.
 
 ### Grouping
 

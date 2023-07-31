@@ -22,7 +22,7 @@ title: 4. 安装 Rancher
 
 1. 如果你还没有安装 `helm`，请在可访问互联网的工作站上进行本地安装。注意：参考 [Helm 版本要求](../../resources/helm-version-requirements.md)选择 Helm 版本来安装 Rancher。
 
-2. 执行 `helm repo add` 命令，以添加包含安装 Rancher 的 Chart 的 Helm Chart 仓库。有关如何选择仓库，以及哪个仓库最适合你的用例，请参见[选择 Rancher 版本](../../installation-references/helm-chart-options.md#helm-chart-仓库)。
+2. 执行 `helm repo add` 命令，以添加包含安装 Rancher 的 Chart 的 Helm Chart 仓库。有关如何选择仓库，以及哪个仓库最适合你的用例，请参见[选择 Rancher 版本](../../resources/choose-a-rancher-version.md)。
    - Latest：建议用于试用最新功能
       ```
       helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
@@ -80,14 +80,7 @@ Rancher Server 默认设计为安全的，并且需要 SSL/TLS 配置。
 
 #### 选项 A：使用 Rancher 默认的自签名证书
 
-
 默认情况下，Rancher 会生成一个 CA 并使用 cert-manager 颁发证书以访问 Rancher Server 界面。
-
-:::note
-
-由于 cert-manager 的最新改动，你需要升级 cert-manager 版本。如果你需要升级 Rancher 并使用低于 0.11.0 的 cert-manager 版本，请参见 [cert-manager 升级文档](../../resources/upgrade-cert-manager.md)。
-
-:::
 
 ##### 1. 添加 cert-manager 仓库
 
@@ -102,14 +95,8 @@ helm repo update
 
 从 [Helm Chart 仓库](https://artifacthub.io/packages/helm/cert-manager/cert-manager)中获取最新可用的 cert-manager Chart：
 
-:::note
-
-v2.6.4 兼容 cert-manager 版本 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为 v 1.6.x 将在 2022 年 3 月 30 日结束生命周期。
-
-:::
-
 ```plain
-helm fetch jetstack/cert-manager --version v1.7.1
+helm fetch jetstack/cert-manager --version v1.11.0
 ```
 
 
@@ -117,7 +104,7 @@ helm fetch jetstack/cert-manager --version v1.7.1
 
 为 cert-manager 下载所需的 CRD 文件：
 ```plain
-curl -L -o cert-manager/cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/releases/download/v1.7.1/cert-manager.crds.yaml
+curl -L -o cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
 ```
 
 ### 4. 安装 Rancher
@@ -127,6 +114,12 @@ curl -L -o cert-manager/cert-manager-crd.yaml https://github.com/cert-manager/ce
 ##### 1. 安装 Cert-Manager
 
 使用要用于安装 Chart 的选项来安装 cert-manager。记住要设置 `image.repository` 选项，以从你的私有镜像仓库拉取镜像。此操作会创建一个包含 Kubernetes manifest 文件的 `cert-manager` 目录。
+
+:::note
+
+要查看自定义 cert-manager 安装的选项（包括集群使用 PodSecurityPolicies 的情况），请参阅 [cert-manager 文档](https://artifacthub.io/packages/helm/cert-manager/cert-manager#configuration)。
+
+:::
 
 <details id="install-cert-manager">
   <summary>单击展开</summary>
@@ -148,7 +141,7 @@ curl -L -o cert-manager/cert-manager-crd.yaml https://github.com/cert-manager/ce
 3. 安装 cert-manager。
 
    ```plain
-   helm install cert-manager ./cert-manager-v1.7.1.tgz \
+   helm install cert-manager ./cert-manager-v1.11.0.tgz \
        --namespace cert-manager \
        --set image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-controller \
        --set webhook.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-webhook \

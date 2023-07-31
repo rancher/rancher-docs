@@ -26,7 +26,7 @@ The steps to set up a persistent storage device will differ based on your infras
 
 If you have a pool of block storage, and you don't want to use a cloud provider, Longhorn could help you provide persistent storage to your Kubernetes cluster. For more information, see [this page.](../../../../../explanations/integrations-in-rancher/longhorn.md)
 
-### 2. Add a persistent volume that refers to the persistent storage
+### 2. Add a PersistentVolume that refers to the persistent storage
 
 These steps describe how to set up a persistent volume at the cluster level in Kubernetes.
 

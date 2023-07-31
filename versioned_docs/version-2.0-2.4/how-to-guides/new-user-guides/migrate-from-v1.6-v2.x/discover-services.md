@@ -15,7 +15,7 @@ This document will also show you how to link the workloads and services that you
 
 For Rancher v2.x, we've replaced the Rancher DNS microservice used in v1.6 with native [Kubernetes DNS support](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/), which provides equivalent service discovery for Kubernetes workloads and pods. Former Cattle users can replicate all the service discovery features from Rancher v1.6 in v2.x. There's no loss of functionality.
 
-Kubernetes schedules a DNS pod and service in the cluster, which is similar to the [Rancher v1.6 DNS microservice]({{<baseurl>}}/rancher/v1.6/en/cattle/internal-dns-service/#internal-dns-service-in-cattle-environments). Kubernetes then configures its kubelets to route all DNS lookups to this DNS service, which is skyDNS, a flavor of the default Kube-DNS implementation.
+Kubernetes schedules a DNS pod and service in the cluster, which is similar to the [Rancher v1.6 DNS microservice](https://rancher.com/docs/rancher/v1.6/en/cattle/internal-dns-service/). Kubernetes then configures its kubelets to route all DNS lookups to this DNS service, which is skyDNS, a flavor of the default Kube-DNS implementation.
 
 The following table displays each service discovery feature available in the two Rancher releases.
 

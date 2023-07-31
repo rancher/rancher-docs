@@ -1,5 +1,6 @@
 ---
 title: Backups and Disaster Recovery
+keywords: [rancher v2.6 backup restore, rancher v2.6 backup and restore, backup restore rancher v2.6, backup and restore rancher v2.6]
 ---
 
 In this section, you'll learn how to create backups of Rancher, how to restore Rancher from backup, and how to migrate Rancher to a new Kubernetes cluster.
@@ -109,4 +110,4 @@ For information on configuring these options, refer to [this page.](../reference
 
 ### Example values.yaml for the rancher-backup Helm Chart
 
-The example [values.yaml file](../reference-guides/backup-restore-configuration/storage-configuration.md#example-values-yaml-for-the-rancher-backup-helm-chart) can be used to configure the `rancher-backup` operator when the Helm CLI is used to install it.
+The example [values.yaml file](../reference-guides/backup-restore-configuration/storage-configuration.md#example-valuesyaml-for-the-rancher-backup-helm-chart) can be used to configure the `rancher-backup` operator when the Helm CLI is used to install it.

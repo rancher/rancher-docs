@@ -2,7 +2,7 @@
 title: 创建华为 CCE 集群
 ---
 
-你可以使用 Rancher 创建托管在华为云容器引擎 (CCE) 中的集群。Rancher 已经为 CCE 实现并打包了针对 CCE 的[集群驱动](../../authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-cluster-drivers.md)，但是默认情况下，这个集群驱动的状态是 `inactive`。为了启动 CCE 集群，你需要[启用 CCE 集群驱动](../../authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-cluster-drivers.md#激活/停用集群驱动)。启用集群驱动后，你可以开始配置 CCE 集群。
+你可以使用 Rancher 创建托管在华为云容器引擎 (CCE) 中的集群。Rancher 已经为 CCE 实现并打包了针对 CCE 的[集群驱动](../../authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-cluster-drivers.md)，但是默认情况下，这个集群驱动的状态是 `inactive`。为了启动 CCE 集群，你需要[启用 CCE 集群驱动](../../authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-cluster-drivers.md#激活停用集群驱动)。启用集群驱动后，你可以开始配置 CCE 集群。
 
 ## 华为先决条件
 
@@ -12,7 +12,7 @@ title: 创建华为 CCE 集群
 
 :::
 
-1. 在华为 CCE 门户中找到你的项目 ID。请参阅 CCE 文档以了解如何[管理你的项目](https://support.huaweicloud.com/en-us/usermanual-iam/en-us_topic_0066738518.html)。
+1. 在华为 CCE 门户中找到你的项目 ID。请参阅 CCE 文档以了解如何[管理你的项目](https://doc.hcs.huawei.com/api/cce/cce_02_0341.html#cce_02_0341__section17571944123214)。
 
 2. 创建一个[访问密钥 ID 和密文访问密钥](https://support.huaweicloud.com/en-us/usermanual-iam/en-us_topic_0079477318.html)。
 

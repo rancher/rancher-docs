@@ -20,7 +20,10 @@ In both single-node setups, Rancher can be installed with Helm on the Kubernetes
 
 These instructions assume you have set up two nodes, a load balancer, a DNS record, and an external MySQL database as described in [this section.](../infrastructure-setup/ha-k3s-kubernetes-cluster.md)
 
-Rancher needs to be installed on a supported Kubernetes version. To find out which versions of Kubernetes are supported for your Rancher version, refer to the [support maintenance terms.](https://rancher.com/support-maintenance-terms/) To specify the K3s version, use the INSTALL_K3S_VERSION environment variable when running the K3s installation script.
+Rancher needs to be installed on a supported Kubernetes version. To find out which versions of Kubernetes are supported for your Rancher version, refer to the [Rancher Support Matrix](https://rancher.com/support-maintenance-terms/).
+
+To specify the K3s (Kubernetes) version, use the INSTALL_K3S_VERSION (e.g., `INSTALL_K3S_VERSION="v1.24.10+k3s1"`) environment variable when running the K3s installation script.
+
 ## Installing Kubernetes
 
 ### 1. Install Kubernetes and Set up the K3s Server
@@ -29,23 +32,30 @@ When running the command to start the K3s Kubernetes API server, you will pass i
 
 1. Connect to one of the Linux nodes that you have prepared to run the Rancher server.
 1. On the Linux node, run this command to start the K3s server and connect it to the external datastore:
-  ```
-  curl -sfL https://get.k3s.io | sh -s - server \
-    --datastore-endpoint="mysql://username:password@tcp(hostname:3306)/database-name"
-  ```
-  To specify the K3s version, use the INSTALL_K3S_VERSION environment variable:
-  ```sh
-  curl -sfL https://get.k3s.io |  INSTALL_K3S_VERSION=vX.Y.Z sh -s - server \
-    --datastore-endpoint="mysql://username:password@tcp(hostname:3306)/database-name"
+    ```
+    curl -sfL https://get.k3s.io |  INSTALL_K3S_VERSION=<VERSION> sh -s - server \
+      --datastore-endpoint="<DATASTORE_ENDPOINT>"
     ```
 
-  :::note
+    Where `<DATASTORE_ENDPOINT>` is the connection URI for your datastore. For example, `mysql://username:password@tcp(hostname:3306)/database-name` if you're using MySQL. Valid datastores include  etcd, MySQL, PostgreSQL, or SQLite (default).
 
-  The datastore endpoint can also be passed in using the environment variable `$K3S_DATASTORE_ENDPOINT`.
+    :::note
 
-  :::
+    The datastore endpoint can also be passed in using the environment variable `$K3S_DATASTORE_ENDPOINT`.
 
-1. Repeat the same command on your second K3s server node.
+    :::
+
+1. Get main server node token:
+    ```
+    cat /var/lib/rancher/k3s/server/token
+    ```
+
+1. Run command on your second K3s server node:
+    ```
+      curl -sfL https://get.k3s.io |  INSTALL_K3S_VERSION=<VERSION> sh -s - server \
+        --datastore-endpoint="<DATASTORE_ENDPOINT>" \
+        --token "<MAIN_SERVER_NODE_TOKEN>"
+    ```
 
 ### 2. Confirm that K3s is Running
 

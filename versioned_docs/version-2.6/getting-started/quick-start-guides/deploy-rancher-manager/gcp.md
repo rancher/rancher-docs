@@ -2,6 +2,11 @@
 title: Rancher GCP Quick Start Guide
 description: Read this step by step Rancher GCP guide to quickly deploy a Rancher server with a single-node downstream Kubernetes cluster attached.
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-rancher-manager/gcp"/>
+</head>
+
 The following steps will quickly deploy a Rancher server on GCP in a single-node K3s Kubernetes cluster, with a single-node downstream Kubernetes cluster attached.
 
 :::caution
@@ -34,7 +39,7 @@ Deploying to Google GCP will incur charges.
 
 4. Edit `terraform.tfvars` and customize the following variables:
     - `gcp_account_json` - GCP service account file path and file name
-    - `rancher_server_admin_password` - Admin password for created Rancher server
+    - `rancher_server_admin_password` - Admin password for created Rancher server (minimum 12 characters)
 
 5. **Optional:** Modify optional variables within `terraform.tfvars`.
 See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [GCP Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/gcp) for more information.

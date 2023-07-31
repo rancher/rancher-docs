@@ -1,6 +1,7 @@
 ---
 title: 升级
 ---
+
 本文介绍如何升级使用 Helm 安装在 Kubernetes 集群上的 Rancher Server。这些步骤也适用于使用 Helm 进行的离线安装。
 
 有关使用 Docker 安装的 Rancher 的升级说明，请参见[本页。](../other-installation-methods/rancher-on-a-single-node-with-docker/upgrade-docker-installed-rancher.md)
@@ -22,7 +23,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
 如需查看每个 Rancher 版本的已知问题，请参见 [GitHub](https://github.com/rancher/rancher/releases) 中的发行说明，或查看 [Rancher 论坛](https://forums.rancher.com/c/announcements/12)。
 
-不支持 _升级_ 或 _升级到_ [rancher-alpha 仓库](../../../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#helm-chart-仓库)中的任何 Chart。
+不支持 _升级_ 或 _升级到_ [rancher-alpha 仓库](../resources/choose-a-rancher-version.md#helm-chart-仓库)中的任何 Chart。
 ### Helm 版本
 
 本安装指南假定你使用的是 Helm 3。
@@ -32,10 +33,6 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 ### 离线安装：推送镜像到私有镜像仓库
 
 [仅适用于离线安装](../../../pages-for-subheaders/air-gapped-helm-cli-install.md)：为新的 Rancher Server 版本收集和推送镜像。使用你需要针对 Rancher 版本升级的镜像，按照步骤[推送镜像到私有镜像仓库](../other-installation-methods/air-gapped-helm-cli-install/publish-images.md)。
-
-### 升级 Rancher Server 并使用隐藏的本地集群
-
-如果你从使用 Helm Chart 选项 `--add-local=false` 启动的 Rancher Server 升级到 Rancher 2.5，你需要在升级时取消该标志。否则，Rancher Server 将无法启动。`restricted-admin` 角色可以继续用来限制对本地集群的访问。详情请参见[本章节](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#在-rancher-中使用隐藏的-local-集群进行升级)。
 
 ### 使用 cert-manager 0.8.0 之前的版本升级
 
@@ -62,7 +59,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
 1. 获取你用来安装 Rancher 的仓库名称。
 
-   关于仓库及其区别，请参见 [Helm Chart Repositories](../installation-references/helm-chart-options.md#helm-chart-仓库)。
+   关于仓库及其区别，请参见 [Helm Chart Repositories](../resources/choose-a-rancher-version.md#helm-chart-仓库)。
 
    - Latest：建议用于试用最新功能
       ```
@@ -88,7 +85,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
    :::note
 
-   如果你想切换到不同的 Helm Chart 仓库，请按照[切换仓库步骤](../resources/choose-a-rancher-version.md#切换到另一个-helm-chart-仓库)进行操作。如果你要切换仓库，请先再次列出仓库，再继续执行步骤 3，以确保添加了正确的仓库。
+   如果你想切换到不同的 Helm Chart 仓库，请按照[切换仓库步骤](../resources/choose-a-rancher-version.md#切换到不同-helm-chart-仓库)进行操作。如果你要切换仓库，请先再次列出仓库，再继续执行步骤 3，以确保添加了正确的仓库。
 
    :::
 
@@ -131,13 +128,15 @@ hostname: rancher.my.org
 :::
 
 
-如果要将 cert-manager 从 v1.5 或更早的版本升级到最新版本，请参阅 [cert-manager upgrade docs](../resources/upgrade-cert-manager.md#选项-c：升级-1.5-及以下版本的-cert-manager) 了解如何在不卸载或重新安装 Rancher 的情况下升级 cert-manager。否则，请按照以下[ Rancher 升级步骤](#rancher-升级步骤)进行操作。
+如果要将 cert-manager 从 v1.5 或更早的版本升级到最新版本，请参阅 [cert-manager upgrade docs](../resources/upgrade-cert-manager.md#选项-c升级-15-及以下版本的-cert-manager) 了解如何在不卸载或重新安装 Rancher 的情况下升级 cert-manager。否则，请按照以下[ Rancher 升级步骤](#rancher-升级步骤)进行操作。
 
 #### Rancher 升级步骤
 
 保留你的所有设置把 Rancher 升级到最新版本。
 
-将上一步中的所有值用 `--set key=value`追加到命令中。
+将上一步中的所有值用 `--set key=value` 追加到命令中。
+
+对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
 
 ```
 helm upgrade rancher rancher-<CHART_REPO>/rancher \
@@ -153,14 +152,20 @@ helm upgrade rancher rancher-<CHART_REPO>/rancher \
 
 另外，你也可以将当前的值导出到一个文件中，并在升级时引用该文件。例如，如果你只需要改变 Rancher 的版本：
 
-```
-helm get values rancher -n cattle-system -o yaml > values.yaml
+1. 将当前值导出到文件：
+   ```
+   helm get values rancher -n cattle-system -o yaml > values.yaml
+   ```
+1. 只更新 Rancher 版本：
 
-helm upgrade rancher rancher-<CHART_REPO>/rancher \
-  --namespace cattle-system \
-  -f values.yaml \
-  --version=2.6.8
-```
+对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
+
+    ```
+    helm upgrade rancher rancher-<CHART_REPO>/rancher \
+      --namespace cattle-system \
+      -f values.yaml \
+      --version=2.6.8
+    ```
 
 ### 4. 验证升级
 

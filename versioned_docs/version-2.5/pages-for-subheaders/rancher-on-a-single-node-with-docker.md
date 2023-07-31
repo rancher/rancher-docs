@@ -42,7 +42,7 @@ Choose from the following options:
 - [Option A: Default Rancher-generated Self-signed Certificate](#option-a-default-rancher-generated-self-signed-certificate)
 - [Option B: Bring Your Own Certificate, Self-signed](#option-b-bring-your-own-certificate-self-signed)
 - [Option C: Bring Your Own Certificate, Signed by a Recognized CA](#option-c-bring-your-own-certificate-signed-by-a-recognized-ca)
-- [Option D: Let's Encrypt Certificate](#option-d-let-s-encrypt-certificate)
+- [Option D: Let's Encrypt Certificate](#option-d-lets-encrypt-certificate)
 
 ### Option A: Default Rancher-generated Self-signed Certificate
 

@@ -16,7 +16,7 @@
           "items": [
             {
               "type": "category",
-              "label": "Deploy Rancher Manager",
+              "label": "Deploy Rancher",
               "link": {
                 "type": "doc",
                 "id": "pages-for-subheaders/deploy-rancher-manager"
@@ -30,6 +30,7 @@
                 "getting-started/quick-start-guides/deploy-rancher-manager/hetzner-cloud",
                 "getting-started/quick-start-guides/deploy-rancher-manager/vagrant",
                 "getting-started/quick-start-guides/deploy-rancher-manager/equinix-metal",
+                "getting-started/quick-start-guides/deploy-rancher-manager/outscale-qs",
                 "getting-started/quick-start-guides/deploy-rancher-manager/helm-cli"
               ]
             },
@@ -807,7 +808,7 @@
         },
         {
           "type": "category",
-          "label": "Rancher Manager Architecture",
+          "label": "Rancher Architecture",
           "link": {
             "type": "doc",
             "id": "pages-for-subheaders/rancher-manager-architecture"
@@ -1098,7 +1099,7 @@
         },
         {
           "type": "category",
-          "label": "Fleet - GitOps at Scale",
+          "label": "Continuous Delivery with Fleet",
           "link": {
             "type": "doc",
             "id": "pages-for-subheaders/fleet-gitops-at-scale"

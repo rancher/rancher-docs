@@ -2,6 +2,11 @@
 title: Rancher AWS Quick Start Guide
 description: Read this step by step Rancher AWS guide to quickly deploy a Rancher server with a single-node downstream Kubernetes cluster attached.
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-rancher-manager/aws"/>
+</head>
+
 The following steps will quickly deploy a Rancher server on AWS in a single-node K3s Kubernetes cluster, with a single-node downstream Kubernetes cluster attached.
 
 :::caution
@@ -52,7 +57,7 @@ The AWS module just creates an EC2 KeyPair, an EC2 SecurityGroup and an EC2 inst
 
     - `aws_access_key` - Amazon AWS Access Key
     - `aws_secret_key` - Amazon AWS Secret Key
-    - `rancher_server_admin_password` - Admin password for created Rancher server
+    - `rancher_server_admin_password` - Admin password for created Rancher server (minimum 12 characters)
 
 5. **Optional:** Modify optional variables within `terraform.tfvars`. See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [AWS Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/aws) for more information.
 Suggestions include:

@@ -2,6 +2,10 @@
 title: Configure Azure AD
 ---
 
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-azure-ad"/>
+</head>
+
  <Tabs>
    <TabItem value="Rancher v2.6.7+">
 
@@ -122,7 +126,21 @@ In Rancher versions 2.6.7-2.6.10, you'll need to use `User.Read.All` and `Group.
 
 :::note
 
-Rancher doesn't validate the permissions you grant to the app in Azure. We only support the use of the `Directory.Read.All` application permission.
+Rancher doesn't validate the permissions you grant to the app in Azure. You're free to try any permissions you want, as long as they allow Rancher to work with AD users and groups.
+
+ Specifically, Rancher needs permissions that allow the following actions:
+ - Get a user.
+ - List all users.
+ - List groups of which a given user is a member.
+ - Get a group.
+ - List all groups.
+
+ Rancher performs these actions either to log in a user or to run a user/group search. Keep in mind that the permissions must be of type `Application`.
+
+ Here are a few examples of permission combinations that satisfy Rancher's needs:
+ - `Directory.Read.All`
+ - `User.Read.All` and `GroupMember.Read.All`
+ - `User.Read.All` and `Group.Read.All`
 
 :::
 
@@ -263,7 +281,7 @@ If you need to roll back your migration, please note the following:
 
 :::caution
 
-If you upgrade to Rancher v2.6.7+ with an existing Azure AD setup, and choose to disable the auth provider, you won't be able to restore the previous setup. You also won't be able to set up Azure AD anew using the old flow. You'll need to re-register with the new auth flow. Since Rancher now uses the Graph API, users need set up the [proper permissions in the Azure portal](#3-set-required-permissions-for-rancher).
+If you upgrade to Rancher v2.6.7+ with an existing Azure AD setup, and choose to disable the auth provider, you won't be able to restore the previous setup. You also won't be able to set up Azure AD using the old flow. You'll need to re-register with the new auth flow. Since Rancher now uses the Graph API, users need set up the [proper permissions in the Azure portal](#3-set-required-permissions-for-rancher).
 
 :::
 

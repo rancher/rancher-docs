@@ -1,7 +1,11 @@
 ---
-title: Configuring Keycloak (SAML)
+title: Configure Keycloak (SAML)
 description: Create a Keycloak SAML client and configure Rancher to work with Keycloak. By the end your users will be able to sign into Rancher using their Keycloak logins
 ---
+
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-keycloak-saml"/>
+</head>
 
 _Available as of v2.1.0_
 

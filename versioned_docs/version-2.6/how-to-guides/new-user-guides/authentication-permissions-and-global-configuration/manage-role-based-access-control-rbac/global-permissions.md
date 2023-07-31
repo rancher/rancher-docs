@@ -2,6 +2,10 @@
 title: Global Permissions
 ---
 
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions"/>
+</head>
+
 _Permissions_ are individual access rights that you can assign when selecting a custom permission for a user.
 
 Global Permissions define user authorization outside the scope of any particular cluster. Out-of-the-box, there are four default global permissions: `Administrator`, `Restricted Admin`,`Standard User` and `User-base`.
@@ -118,7 +122,7 @@ To see the default permissions for new users,
 
 You can [change the default permissions to meet your needs.](#configuring-default-global-permissions)
 
-Permissions can be assigned to an individual user with [these steps.](#configuring-global-permissions-for-existing-individual-users)
+Permissions can be [assigned](#configuring-global-permissions-for-individual-users) to an individual user.
 
 You can [assign a role to everyone in the group at the same time](#configuring-global-permissions-for-groups) if the external authentication provider supports groups.
 

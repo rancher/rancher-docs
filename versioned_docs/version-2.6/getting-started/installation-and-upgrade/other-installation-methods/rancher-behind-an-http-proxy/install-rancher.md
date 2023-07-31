@@ -2,6 +2,10 @@
 title: 3. Install Rancher
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-rancher"/>
+</head>
+
 Now that you have a running RKE cluster, you can install Rancher in it. For security reasons all traffic to Rancher must be encrypted with TLS. For this tutorial you are going to automatically issue a self-signed certificate through [cert-manager](https://cert-manager.io/). In a real-world use-case you will likely use Let's Encrypt or provide your own certificate.
 
 :::note
@@ -33,14 +37,20 @@ New in v2.6.4, cert-manager versions 1.6.2 and 1.7.1 are compatible. We recommen
 :::
 
 ```
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.7.1/cert-manager.crds.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
 ```
 
 And install it with Helm. Note that cert-manager also needs your proxy configured in case it needs to communicate with Let's Encrypt or other external certificate issuers:
 
+:::note
+
+To see options on how to customize the cert-manager install (including for cases where your cluster uses PodSecurityPolicies), see the [cert-manager docs](https://artifacthub.io/packages/helm/cert-manager/cert-manager#configuration).
+
+:::
+
 ```
 helm upgrade --install cert-manager jetstack/cert-manager \
-  --namespace cert-manager --version v1.7.1 \
+  --namespace cert-manager --version v1.11.0 \
   --set http_proxy=http://${proxy_host} \
   --set https_proxy=http://${proxy_host} \
   --set no_proxy=127.0.0.0/8\\,10.0.0.0/8\\,cattle-system.svc\\,172.16.0.0/12\\,192.168.0.0/16\\,.svc\\,.cluster.local

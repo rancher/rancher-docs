@@ -28,13 +28,13 @@ _Available as of v2.3.3_
 
 Node templates for vSphere have been updated so that when you create a node template with your vSphere credentials, the template is automatically populated with the same options for provisioning VMs that you have access to in the vSphere console.
 
-For the fields to be populated, your setup needs to fulfill the [prerequisites.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere.md#prerequisites)
+For the fields to be populated, your setup needs to fulfill the [prerequisites.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere.md#preparation-in-vsphere)
 
 ### More Supported Operating Systems
 
 In Rancher v2.3.3+, you can provision VMs with any operating system that supports `cloud-init`. Only YAML format is supported for the [cloud config.](https://cloudinit.readthedocs.io/en/latest/topics/examples.html)
 
-In Rancher before v2.3.3, the vSphere node driver included in Rancher only supported the provisioning of VMs with [RancherOS]({{<baseurl>}}/os/v1.x/en/) as the guest operating system.
+In Rancher before v2.3.3, the vSphere node driver included in Rancher only supported the provisioning of VMs with [RancherOS](https://rancher.com/docs/os/v1.x/en/) as the guest operating system.
 
 ### Video Walkthrough of v2.3.3 Node Template Features
 

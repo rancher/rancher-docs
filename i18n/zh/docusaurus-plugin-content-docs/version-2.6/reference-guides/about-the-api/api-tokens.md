@@ -41,7 +41,7 @@ title: API 令牌
 
 ### 在生成的 Kubeconfig 中禁用令牌
 
-1. 将 `kubeconfig-generate-token` 设置为 `false`。此设置让 Rancher 不再在用户单击下载 kubeconfig 文件时自动生成令牌。如果停用此设置，生成的 kubeconfig 将引用 [Rancher CLI](../cli-with-rancher/kubectl-utility.md#使用-kubectl-和-kubeconfig-令牌-进行-ttl-认证) 来检索集群的短期令牌。当这个 kubeconfig 在客户端（例如 `kubectl`）中使用时，你需要安装 Rancher CLI 来完成登录请求。
+1. 将 `kubeconfig-generate-token` 设置为 `false`。此设置让 Rancher 不再在用户单击下载 kubeconfig 文件时自动生成令牌。如果停用此设置，生成的 kubeconfig 将引用 [Rancher CLI](../cli-with-rancher/kubectl-utility.md#使用-kubectl-和-kubeconfig-令牌进行-ttl-认证) 来检索集群的短期令牌。当这个 kubeconfig 在客户端（例如 `kubectl`）中使用时，你需要安装 Rancher CLI 来完成登录请求。
 
 2. 将 `kubeconfig-token-ttl-minutes` 设置为所需的时长（单位：分钟）。`kubeconfig-token-ttl-minutes` 默认设置为 960（即 16 小时）。
 
@@ -84,4 +84,4 @@ title: API 令牌
 **2.6.6 版本更改：适用于所有 kubeconfig 令牌和 API 令牌。**
 
 #### kubeconfig-generate-token
-如果设置为 true，则通过 UI 请求的 kubeconfig 将包含一个有效的令牌。如果设置为 false，kubeconfig 将包含一个使用 Rancher CLI 提示用户登录的命令。然后，[CLI 将为用户检索和缓存令牌](../cli-with-rancher/kubectl-utility.md#使用-kubectl-和-kubeconfig-令牌-进行-ttl-认证)。
+如果设置为 true，则通过 UI 请求的 kubeconfig 将包含一个有效的令牌。如果设置为 false，kubeconfig 将包含一个使用 Rancher CLI 提示用户登录的命令。然后，[CLI 将为用户检索和缓存令牌](../cli-with-rancher/kubectl-utility.md#使用-kubectl-和-kubeconfig-令牌进行-ttl-认证)。

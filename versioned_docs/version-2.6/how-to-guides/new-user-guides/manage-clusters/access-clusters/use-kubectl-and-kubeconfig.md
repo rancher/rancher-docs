@@ -7,8 +7,6 @@ This section describes how to manipulate your downstream Kubernetes cluster with
 
 For more information on using kubectl, see [Kubernetes Documentation: Overview of kubectl](https://kubernetes.io/docs/reference/kubectl/overview/).
 
-
-
 ### Accessing Clusters with kubectl Shell in the Rancher UI
 
 You can access and manage your clusters by logging into Rancher and opening the kubectl shell in the UI. No further configuration necessary.
@@ -47,13 +45,15 @@ Rancher will discover and show resources created by `kubectl`. However, these re
 
 This section intended to help you set up an alternative method to access an [RKE cluster.](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)
 
-This method is only available for RKE clusters that have the [authorized cluster endpoint](../../../../pages-for-subheaders/rancher-manager-architecture.md#4-authorized-cluster-endpoint) enabled. When Rancher creates this RKE cluster, it generates a kubeconfig file that includes additional kubectl context(s) for accessing your cluster. This additional context allows you to use kubectl to authenticate with the downstream cluster without authenticating through Rancher. For a longer explanation of how the authorized cluster endpoint works, refer to [this page.](authorized-cluster-endpoint.md)
+This method is only available for RKE, RKE2, and K3s clusters that have the [authorized cluster endpoint](../../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint) enabled. When Rancher creates the cluster, it generates a kubeconfig file that includes additional kubectl context(s) for accessing your cluster. This additional context allows you to use kubectl to authenticate with the downstream cluster without authenticating through Rancher. For a longer explanation of how the authorized cluster endpoint works, refer to [this page](authorized-cluster-endpoint.md).
 
-We recommend that as a best practice, you should set up this method to access your RKE cluster, so that just in case you can’t connect to Rancher, you can still access the cluster.
+On RKE2 and K3s clusters, you need to [manually enable](../../kubernetes-clusters-in-rancher-setup/register-existing-clusters.md#authorized-cluster-endpoint-support-for-rke2-and-k3s-clusters) authorized cluster endpoints.
+
+We recommend that as a best practice, you should set up this method to access your RKE, RKE2, and K3s clusters, so that just in case you can’t connect to Rancher, you can still access the cluster.
 
 :::note Prerequisites:
 
-The following steps assume that you have created a Kubernetes cluster and followed the steps to [connect to your cluster with kubectl from your workstation.](#accessing-clusters-with-kubectl-from-your-workstation)
+The following steps assume that you have created a Kubernetes cluster and followed the steps to [connect to your cluster with kubectl from your workstation](#accessing-clusters-with-kubectl-from-your-workstation).
 
 :::
 
@@ -70,7 +70,7 @@ In this example, when you use `kubectl` with the first context, `my-cluster`, yo
 
 With the second context, `my-cluster-controlplane-1`, you would authenticate with the authorized cluster endpoint, communicating with an downstream RKE cluster directly.
 
-We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.](../../../../reference-guides/rancher-manager-architecture/architecture-recommendations.md#architecture-for-an-authorized-cluster-endpoint)
+We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.](../../../../reference-guides/rancher-manager-architecture/architecture-recommendations.md#architecture-for-an-authorized-cluster-endpoint-ace)
 
 Now that you have the name of the context needed to authenticate directly with the cluster, you can pass the name of the context in as an option when running kubectl commands. The commands will differ depending on whether your cluster has an FQDN defined. Examples are provided in the sections below.
 

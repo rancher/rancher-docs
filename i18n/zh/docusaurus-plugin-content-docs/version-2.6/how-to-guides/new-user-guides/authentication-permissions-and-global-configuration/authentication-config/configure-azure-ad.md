@@ -3,11 +3,13 @@ title: 配置 Azure AD
 ---
 
 <Tabs>
-  <TabItem value="Rancher v2.6.7">
+   <TabItem value="Rancher v2.6.7+">
 
 ## Microsoft Graph API
 
 Microsoft Graph API 现在是设置 Azure AD 的流程。下文将帮助[新用户](#新用户设置)使用新实例来配置 Azure AD，并帮助现有 Azure 应用所有者[迁移到新流程](#从-azure-ad-graph-api-迁移到-microsoft-graph-api)。
+
+Rancher 中的 Microsoft Graph API 流程正在不断发展。建议你使用最新的 2.6 补丁版本，该版本仍在积极开发中，并将持续获得新功能和改进。
 
 ### 新用户设置
 
@@ -26,7 +28,7 @@ Microsoft Graph API 现在是设置 Azure AD 的流程。下文将帮助[新用�
 
 :::tip
 
-在开始之前，我们建议你创建一个空文本文件。你可以将 Azure 相关的值复制到该文件，然后再粘贴到 Rancher 中。
+在开始之前，打开两个浏览器选项卡：一个用于 Rancher，另一个用于 Azure 门户。这样，你可以将门户的配置值复制并粘贴到 Rancher 中。
 
 :::
 
@@ -39,9 +41,7 @@ Microsoft Graph API 现在是设置 Azure AD 的流程。下文将帮助[新用�
 
 1. 使用搜索功能打开 **App registrations** 服务。
 
-   ![Open App Registrations](/img/search-app-registrations.png)
-
-1. 单击 **New registrations** 并完成 **Create** 表单。
+1. 点击 **New registration** 并填写表单。
 
    ![New App Registration](/img/new-app-registration.png)
 
@@ -80,20 +80,17 @@ Microsoft Graph API 现在是设置 Azure AD 的流程。下文将帮助[新用�
 
    ![Open Rancher Registration](/img/open-rancher-app-reg.png)
 
-1. 在左侧的导航窗格中，单击 **Certificates and Secrets**。
+1. 在导航窗格中，单击 **Certificates & secrets**。
 
 1. 单击 **New client secret**。
    ![创建新的客户端密文](/img/new-client-secret.png)
 1. 输入 **Description**（例如 `Rancher`）。
-1. 从 **Expires** 下的选项中选择密钥的持续时间。此下拉菜单设置的是密钥的到期日期。日期越短则越安全，但是在到期后你需要创建新密钥。
+1. 从 **Expires** 下的选项中选择持续时间。此下拉菜单设置的是密钥的到期日期。日期越短则越安全，但需要你更频繁地创建新密钥。
+   请注意，如果检测到应用程序 Secret 已过期，用户将无法登录 Rancher。为避免此问题，请在 Azure 中轮换 Secret 并在过期前在 Rancher 中更新它。
 1. 单击 **Add**（无需输入值，保存后会自动填充）。
    <a id="secret"></a>
 
-1. 将键值复制保存到[空文本文件](#tip)。
-
-   稍后你将在 Rancher UI 中输入此密钥作为你的 **Application Secret**。
-
-   你将无法在 Azure UI 中再次访问该键值。
+1. 稍后你将在 Rancher UI 中输入此密钥作为你的 **Application Secret**。由于你将无法在 Azure UI 中再次访问键值，因此请在其余设置过程中保持打开此窗口。
 
 #### 3. 设置 Rancher 所需的权限
 
@@ -101,63 +98,75 @@ Microsoft Graph API 现在是设置 Azure AD 的流程。下文将帮助[新用�
 
 :::caution
 
-请确保你设置了 Application 和 NOT Delegated 的权限类型。否则，你可能无法登录 Azure AD。禁用/重新启用 Azure AD 无法解决此问题，你需要等待一小时或手动删除缓存值。
+确保你设置了 Application 权限，而*不是* Delegated 权限。否则，你将无法登录 Azure AD。
 
 :::
 
-1. 从左侧的导航窗格中，选择 **API permissions**。
-
-   ![Open Required Permissions](/img/select-req-permissions.png)
+1. 在导航窗格中，选择 **API permissions**。
 
 1. 单击 **Add a permission**。
 
-1. 在 **Microsoft Graph** 中，选择以下 **Application Permissions**：
-   - `Group.Read.All`
-   - `User.Read.All`
+1. 从 Microsoft Graph API 中，选择以下 **Application Permissions**: `Directory.Read.All`。
 
-   ![选择 API 权限](/img/api-permissions-2-6.png)
+   ![选择 API 权限](/img/api-permissions.png)
 
-1. 返回左侧导航栏中的 **API permissions**。在那里，单击 **Grant admin consent**。然后单击 **Yes**。
+:::note
 
-   :::note
+在 Rancher 2.6.7-2.6.10 版本中，你需要使用 `User.Read.All` 和 `Group.Read.All` 来获取权限。在 v2.6.11 中已更改为允许范围较小的权限（例如 `Directory.Read.All`）。
 
-   你必须以 Azure 管理员身份登录才能保存你的权限设置。
+:::
 
-   :::
+1. 返回导航栏中的 **API permissions**。在那里，单击 **Grant admin consent**。然后单击 **Yes**。该应用程序的权限应如下所示：
+
+![Open Required Permissions](/img/select-req-permissions.png)
+
+:::note
+
+Rancher 不会验证你授予 Azure 应用程序的权限。你可以自由使用任何你所需的权限，只要这些权限允许 Rancher 使用 AD 用户和组。
+
+具体来说，Rancher 需要允许以下操作的权限：
+- 获取一个用户。
+- 列出所有用户。
+- 列出给定用户所属的组。
+- 获取一个组。
+- 列出所有组。
+
+Rancher 执行这些操作来登录用户或搜索用户/组。请记住，权限必须是 `Application` 类型。
+
+下面是几个满足 Rancher 需求的权限组合示例：
+- `Directory.Read.All`
+- `User.Read.All` 和 `GroupMember.Read.All`
+- `User.Read.All` 和 `Group.Read.All`
+
+:::
 
 #### 4. 复制 Azure 应用数据
+
+![Application ID](/img/app-configuration.png)
 
 1. 获取你的 Rancher **租户 ID**。
 
    1. 使用搜索打开 **App registrations**。
 
-   ![Open App Registrations](/img/search-app-registrations.png)
-
    1. 找到你为 Rancher 创建的项。
 
-   1. 复制 **Directory ID** 并粘贴到你的[文本文件](#tip)。
-
-   ![Tenant ID](/img/tenant-id.png)
-
-   - 你将把这个值作为 **Tenant ID** 粘贴到 Rancher。
+   1. 复制 **Directory ID** 并将其作为 **Tenant ID** 粘贴到 Rancher 中。
 
 1. 获取你的 Rancher **Application (Client) ID**。
 
-   2.1. 使用搜索打开 **App registrations**（如果还没有的话）。
+   1. 如果你还未在该位置，请使用搜索打开 **App registrations**。
 
-   2.2. 在 **Overview**中，找到你为 Rancher 创建的条目。
+   1. 在 **Overview**中，找到你为 Rancher 创建的条目。
 
-   2.3. 复制 **Application (Client) ID** 并将其粘贴到你的[文本文件](#tip)。
+   1. 复制 **Application (Client) ID** 并将其作为 **Application ID** 粘贴到 Rancher 中。
 
-   ![Application ID](/img/application-client-id.png)
-
-1. 你的端点选项通常是 [Standard](#global) 和 [China](#china)。使用这些选项，你只需要输入 **Tenant ID**、**Application ID** 和 **Application Secret**（Rancher 将负责其余的工作）。
+1. 你的端点选项通常是 [Standard](#global) 或 [China](#中国)。对于这两个选项，你只需要输入 **Tenant ID**、**Application ID** 和 **Application Secret**。
 
 ![标准端点选项](/img/tenant-application-id-secret.png)
 
 **对于自定义端点**：
 
-**警告**：Rancher 不支持也不完全测试自定义端点。
+**警告**：Rancher 未测试也未完全支持自定义端点。
 
 你还需要手动输入 Graph、Token 和 Auth Endpoints。
 
@@ -165,7 +174,7 @@ Microsoft Graph API 现在是设置 Azure AD 的流程。下文将帮助[新用�
 
 ![点击端点](/img/endpoints.png)
 
-- 将以下端点复制并粘贴到你的[文本文件](#tip)中（这些值将是你的 Rancher 端点值）：确保复制端点的 v1 版本。
+- 以下端点将是你的 Rancher 端点值。请使用这些端点的 v1 版本。
    - **Microsoft Graph API endpoint**（Graph 端点）
    - **OAuth 2.0 token endpoint (v1)**（Token 端点）
    - **OAuth 2.0 authorization endpoint (v1)** (Auth 端点)
@@ -222,14 +231,19 @@ Microsoft Graph API 现在是设置 Azure AD 的流程。下文将帮助[新用�
 
 ### 从 Azure AD Graph API 迁移到 Microsoft Graph API
 
-由于 [Azure AD Graph API](https://docs.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview) 已于 2022 年 6 月弃用并将于 2022 年底停用，因此用户应更新其 Azure AD 应用程序以在 Rancher 中使用新的 [Microsoft Graph API](https://docs.microsoft.com/en-us/graph/use-the-api)。
+由于 [Azure AD Graph API](https://docs.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview) 已弃用并计划于 2023 年 6 月停用，管理员应更新他们的 Azure AD 应用程序以在 Rancher 中使用 [Microsoft Graph API](https://docs.microsoft.com/en-us/graph/use-the-api)。
+你需要在端点弃用之前完成操作。
+如果在停用后 Rancher 仍配置为使用 Azure AD Graph API，用户可能无法使用 Azure AD 登录 Rancher。
 
 #### 在 Rancher UI 中更新端点
 
-> **重要提示**：管理员应该在他们提交下面第 4 步中的端点迁移之前创建一个[备份](../../../new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher.md)。
+:::caution
 
-1. 按照[此处](#3-设置-rancher-所需的权限)所述更新 Azure AD 应用注册的权限。
-   (**重要**)。
+管理员需要在迁移下述端点之前创建一个 [Rancher 备份](../../../new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher.md)。
+
+:::
+
+1. [更新](#3-设置-rancher-所需的权限) Azure AD 应用程序注册的权限。这个步骤非常关键。
 
 1. 登录到 Rancher。
 
@@ -261,17 +275,20 @@ Microsoft Graph API 现在是设置 Azure AD 的流程。下文将帮助[新用�
 
 1. 如果 Azure 应用程序所有者想要轮换应用程序密钥，他们也需要在 Rancher 中进行轮换（因为在 Azure 中更改应用程序密钥时，Rancher 不会自动更新应用程序密钥）。在 Rancher 中，它存储在名为 `azureadconfig-applicationsecret` 的 Kubernetes 密文中，该密文位于 `cattle-global-data` 命名空间中。
 
-1. **注意**：如果管理员使用现有 Azure AD 设置升级到 Rancher v2.6.7 并选择了禁用身份验证提供程序，他们将无法恢复以前的设置，也无法设置使用旧流程重新设置 Azure AD。然后，管理员需要使用新的身份验证流程重新注册。Rancher 现在使用了新的 Graph API，因此，用户需要在 Azure 门户中设置[适当的权限](#3-设置-rancher-所需的权限)。
+:::caution
+
+如果你使用现有的 Azure AD 设置升级到 Rancher v2.6.7+，并选择了禁用认证提供程序，你将无法恢复以前的设置。你也无法使用旧流程设置 Azure AD。你需要使用新的认证流程重新注册。由于 Rancher 现在使用 Graph API，因此用户需要[在 Azure 门户中设置适当的权限](#3-设置-rancher-所需的权限)。
+
+:::
 
 #### Global:
 
-Rancher 字段    | 已弃用端点
+| Rancher 字段 | 已弃用的端点 |
 ---------------- | -------------------------------------------------------------
-Auth 端点    | https://login.microsoftonline.com/{tenantID}/oauth2/authorize
-端点         | https://login.microsoftonline.com/
-Graph 端点   | https://graph.windows.net/
-Token 端点   | https://login.microsoftonline.com/{tenantID}/oauth2/token
----
+| Auth 端点 | https://login.microsoftonline.com/{tenantID}/oauth2/authorize |
+| 端点 | https://login.microsoftonline.com/ |
+| Graph 端点 | https://graph.windows.net/ |
+| Token 端点 | https://login.microsoftonline.com/{tenantID}/oauth2/token |
 
 | Rancher 字段 | 新端点 |
 ---------------- | ------------------------------------------------------------------
@@ -282,13 +299,12 @@ Token 端点   | https://login.microsoftonline.com/{tenantID}/oauth2/token
 
 #### 中国：
 
-Rancher 字段    | 已弃用端点
+| Rancher 字段 | 已弃用的端点 |
 ---------------- | ----------------------------------------------------------
-Auth 端点    | https://login.chinacloudapi.cn/{tenantID}/oauth2/authorize
-端点         | https://login.chinacloudapi.cn/
-Graph 端点   | https://graph.chinacloudapi.cn/
-Token 端点   | https://login.chinacloudapi.cn/{tenantID}/oauth2/token
----
+| Auth 端点 | https://login.chinacloudapi.cn/{tenantID}/oauth2/authorize |
+| 端点 | https://login.chinacloudapi.cn/ |
+| Graph 端点 | https://graph.chinacloudapi.cn/ |
+| Token 端点 | https://login.chinacloudapi.cn/{tenantID}/oauth2/token |
 
 | Rancher 字段 | 新端点 |
 ---------------- | -------------------------------------------------------------------------
@@ -301,19 +317,19 @@ Token 端点   | https://login.chinacloudapi.cn/{tenantID}/oauth2/token
 </TabItem>
 <TabItem value="Rancher v2.6.0 - v2.6.6">
 
-## Azure AD Graph API
+## 已弃用的 Azure AD Graph API
 
 > **重要提示**：
 >
-> - [Azure AD Graph API](https://docs.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview) 已于 2022 年 6 月弃用，并将于 2022 年底停用。我们将更新我们的文档，以便在停用时向社区提供建议。Rancher 现在使用 [Microsoft Graph API](https://docs.microsoft.com/en-us/graph/use-the-api) 来将 Azure AD 设置为外部身份验证提供程序。
+> - [Azure AD Graph API](https://docs.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview) 已被弃用，Microsoft 将在 2023 年 6 月 30 日后随时停用它且不会另行通知。我们将更新我们的文档，以便在停用时向社区提供建议。Rancher 现在使用 [Microsoft Graph API](https://docs.microsoft.com/en-us/graph/use-the-api) 来将 Azure AD 设置为外部身份验证提供程序。
 >
 >
-> - 对于想要迁移的新用户或现有用户，请参阅 <a href="#microsoft-graph-api/" target="_blank">Rancher v2.6.7</a> 选项卡。
+> - 如果你是新用户或希望进行迁移，请参阅新的流程说明： <a href="#microsoft-graph-api/" target="_blank">Rancher v2.6.7+</a>。
 >
 >
-> - 对于在 Azure AD Graph API 停用后不希望升级到 v2.6.7 的现有用户，他们需要：
->    - 使用内置的 Rancher 身份验证，或者
->    - 使用另一个第三方身份验证系统并在 Rancher 中进行设置。请参阅[身份验证文档](../../../../pages-for-subheaders/authentication-config.md)，了解如何配置其他开放式身份验证提供程序。
+> - 如果你不想在 Azure AD Graph API 停用后升级到 v2.6.7+，你需要：
+>    - 使用内置的 Rancher 身份认证，或者
+>    - 使用另一个第三方身份认证系统并在 Rancher 中进行设置。请参阅[身份验证文档](../../../../pages-for-subheaders/authentication-config.md)，了解如何配置其他开放式身份验证提供程序。
 
 </TabItem>
 </Tabs>

@@ -35,7 +35,7 @@ In the **Instance Options** section, configure the number of vCPUs, memory, and 
 | Network              | ✓        | Name(s) of the network(s) to attach to the VM                                               |
 | VM Categories        |          | Name(s) of any categories to be applied to the VM                                           |
 
-The VM may use any modern Linux operating system that is configured with support for [cloud-init](https://cloudinit.readthedocs.io/en/latest/) using the [Config Drive v2 datasource](https://cloudinit.readthedocs.io/en/latest/topics/datasources/configdrive.html).
+The VM may use any modern Linux operating system that is configured with support for [cloud-init](https://cloudinit.readthedocs.io/en/latest/) using the [Config Drive v2 datasource](https://cloudinit.readthedocs.io/en/latest/reference/datasources/configdrive.html).
 
 ## Networks
 
@@ -54,3 +54,13 @@ To make use of cloud-init initialization, paste a cloud config using valid YAML 
 Note that cloud-init based network configuration is not recommended and only supported via user data `runcmd` rather than by NoCloud or other network configuration datasources.
 
 Nutanix IP Address Management (IPAM) or another DHCP service is recommended.
+
+## Engine Options
+
+In the **Engine Options** section of the node template, you can configure the container daemon. You may want to specify the container version or a container image registry mirror.
+
+:::note
+If you're provisioning Red Hat Enterprise Linux (RHEL) or CentOS nodes, leave the **Docker Install URL** field as the default value, or select **none**. This will bypass a check for Docker installation, as Docker is already installed on these node types.
+
+If you set **Docker Install URL** to a value other than the default or **none**, you might see an error message such as the following: `Error creating machine: RHEL ssh command error: command: sudo -E yum install -y curl err: exit status 1 output: Updating Subscription Management repositories.`
+:::

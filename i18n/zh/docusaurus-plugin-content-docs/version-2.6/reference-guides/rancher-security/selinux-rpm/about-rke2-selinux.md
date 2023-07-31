@@ -6,4 +6,4 @@ title: 关于 rke2-selinux
 
 `rke2-selinux` 的 GitHub 仓库在[这里](https://github.com/rancher/rke2-selinux)。
 
-有关在启用 SELinux 的主机上安装 RKE2 的更多信息，请参阅 [RKE2 文档](https://docs.rke2.io/install/methods/#rpm)。
+有关在启用 SELinux 的主机上安装 RKE2 的更多信息，请参阅 [RKE2 文档](https://docs.rke2.io/install/methods#rpm)。

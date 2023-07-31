@@ -2,6 +2,11 @@
 title: 4. Install Rancher
 ---
 
+
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha"/>
+</head>
+
 This section is about how to deploy Rancher for your air gapped environment. An air gapped environment could be where Rancher server will be installed offline, behind a firewall, or behind a proxy. There are _tabs_ for either a high availability (recommended) or a Docker installation.
 
 <Tabs>
@@ -23,7 +28,7 @@ From a system that has access to the internet, fetch the latest Helm chart and c
 
 1. If you haven't already, install `helm` locally on a workstation that has internet access. Note: Refer to the [Helm version requirements](../../resources/helm-version-requirements.md) to choose a version of Helm to install Rancher.
 
-2. Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher](../../../../reference-guides/installation-references/helm-chart-options.md#helm-chart-repositories).
+2. Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Rancher Version](../../resources/choose-a-rancher-version.md).
     - Latest: Recommended for trying out the newest features
         ```
         helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
@@ -106,7 +111,7 @@ By default, Rancher generates a CA and uses cert-manager to issue the certificat
 
 1. Download the required CRD file for cert-manager
    ```plain
-   curl -L -o cert-manager/cert-manager-crd.yaml https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml
+   curl -L -o cert-manager-crd.yaml https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml
    ```
 
 1. Render the Rancher template, declaring your chosen options. Use the reference table below to replace each placeholder. Rancher needs to be configured to use the private registry in order to provision any Rancher launched Kubernetes clusters or Rancher tools.

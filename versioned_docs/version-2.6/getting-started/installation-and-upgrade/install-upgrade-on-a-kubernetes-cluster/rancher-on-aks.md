@@ -2,6 +2,10 @@
 title: Installing Rancher on Azure Kubernetes Service
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks"/>
+</head>
+
 This page covers how to install Rancher on Microsoft's Azure Kubernetes Service (AKS).
 
 The guide uses command line tools to provision an AKS cluster with an ingress. If you prefer to provision your cluster using the Azure portal, refer to the [official documentation](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal).
@@ -50,7 +54,7 @@ To create an AKS cluster, run the following command. Use a VM size that applies 
 
 :::note
 
-If the version of Kubernetes is updated to v1.22 or later, the version of ingress-nginx would also need to be [updated](https://kubernetes.github.io/ingress-nginx/#faq-migration-to-apiversion-networkingk8siov1).
+If you're updating from an older version of Kubernetes, to Kubernetes v1.22 or above, you also need to [update](https://kubernetes.github.io/ingress-nginx/user-guide/k8s-122-migration/) ingress-nginx.
 
 :::
 
@@ -79,16 +83,28 @@ This command merges your cluster's credentials into the existing kubeconfig and 
 
 The cluster needs an Ingress so that Rancher can be accessed from outside the cluster. Installing an Ingress requires allocating a public IP address. Ensure you have sufficient quota, otherwise it will fail to assign the IP address. Limits for public IP addresses are applicable at a regional level per subscription.
 
-The following command installs an `nginx-ingress-controller` with a Kubernetes load balancer service.
+To make sure that you choose the correct Ingress-NGINX Helm chart, first find an `Ingress-NGINX version` that's compatible with your Kubernetes version in the [Kubernetes/ingress-nginx support table](https://github.com/kubernetes/ingress-nginx#supported-versions-table). 
+
+Then, list the Helm charts available to you by running the following command:
 
 ```
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm repo update
+helm search repo ingress-nginx -l
+```
+
+The `helm search` command's output contains an `APP VERSION` column. The versions under this column are equivalent to the `Ingress-NGINX version` you chose earlier. Using the app version, select a chart version that bundles an app compatible with your Kubernetes install. For example, if you have Kubernetes v1.23, you can select the v4.5.2 Helm chart, since Ingress-NGINX v1.6.4 comes bundled with that chart, and v1.6.4 is compatible with Kubernetes v1.23. When in doubt, select the most recent compatible version.
+
+Now that you know which Helm chart `version` you need, run the following command. It installs an `nginx-ingress-controller` with a Kubernetes load balancer service:
+
+```
 helm upgrade --install \
   ingress-nginx ingress-nginx/ingress-nginx \
   --namespace ingress-nginx \
   --set controller.service.type=LoadBalancer \
-  --version 4.0.18 \
+  --set controller.service.annotations."service\.beta\.kubernetes\.io/azure-load-balancer-health-probe-request-path"=/healthz \
+  --set controller.service.externalTrafficPolicy=Local \
+  --version 4.5.2 \
   --create-namespace
 ```
 

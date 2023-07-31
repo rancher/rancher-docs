@@ -2,6 +2,11 @@
 title: Rancher DigitalOcean Quick Start Guide
 description: Read this step by step Rancher DigitalOcean guide to quickly deploy a Rancher server with a single-node downstream Kubernetes cluster attached.
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-rancher-manager/digitalocean"/>
+</head>
+
 The following steps will quickly deploy a Rancher server on DigitalOcean in a single-node K3s Kubernetes cluster, with a single-node downstream Kubernetes cluster attached.
 
 :::caution
@@ -33,7 +38,7 @@ Deploying to DigitalOcean will incur charges.
 
 4. Edit `terraform.tfvars` and customize the following variables:
     - `do_token` - DigitalOcean access key
-    - `rancher_server_admin_password` - Admin password for created Rancher server
+    - `rancher_server_admin_password` - Admin password for created Rancher server (minimum 12 characters)
 
 5. **Optional:** Modify optional variables within `terraform.tfvars`.
 See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [DO Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/do) for more information. Suggestions include:

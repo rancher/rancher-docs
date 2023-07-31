@@ -45,4 +45,4 @@ _**v2.6.7 新功能**_
    ![加密密钥轮换](/img/rke2-encryption-key.png)
 
 
-> **注意**：有关 RKE2 密文加密配置的更多信息，请参阅 [RKE2 文档](https://docs.rke2.io/security/secrets_encryption/)。
+> **注意**：有关 RKE2 密文加密配置的更多信息，请参阅 [RKE2 文档](https://docs.rke2.io/security/secrets_encryption)。

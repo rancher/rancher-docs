@@ -2,6 +2,10 @@
 title: Installing Rancher on a Google Kubernetes Engine Cluster
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-gke"/>
+</head>
+
 In this section, you'll learn how to install Rancher using Google Kubernetes Engine.
 
 If you already have a GKE Kubernetes cluster, skip to the step about [installing an ingress.](#7-install-an-ingress) Then install the Rancher Helm chart following the instructions on [this page.](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#install-the-rancher-helm-chart)
@@ -120,7 +124,7 @@ When choosing a Kubernetes version, be sure to first consult the [support matrix
 
 To successfully create a GKE cluster with Rancher, your GKE must be in Standard mode. GKE has two modes of operation when creating a Kubernetes cluster, Autopilot and Standard mode. The cluster configuration for Autopilot mode has restrictions on editing the kube-system namespace. However, Rancher needs to create resources in the kube-system namespace during installation. As a result, you will not be able to install Rancher on a GKE cluster created in Autopilot mode. For more information about the difference between GKE Autopilot mode and Standard mode, visit [Compare GKE Autopilot and Standard.](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison)
 
-**Note:** If the version of Kubernetes is updated to v1.22 or later, the version of ingress-nginx would also need to be [updated](https://kubernetes.github.io/ingress-nginx/#faq-migration-to-apiversion-networkingk8siov1).
+**Note:** If you're updating from an older version of Kubernetes, to Kubernetes v1.22 or above, you also need to [update](https://kubernetes.github.io/ingress-nginx/user-guide/k8s-122-migration/) ingress-nginx.
 
 ```
 gcloud container clusters create cluster-name --num-nodes=3 --cluster-version=<VERSION>
@@ -150,7 +154,7 @@ helm upgrade --install \
   --namespace ingress-nginx \
   --set controller.service.type=LoadBalancer \
   --version 4.0.18 \
-  --create-namespace
+  --create-namespace 
 ```
 
 ## 8. Get the Load Balancer IP
@@ -184,12 +188,18 @@ Next, install the Rancher Helm chart by following the instructions on [this page
 
 Use the DNS name from the previous step as the Rancher server URL when you install Rancher. It can be passed in as a Helm option. For example, if the DNS name is `rancher.my.org`, you could run the Helm installation command with the option `--set hostname=rancher.my.org`.
 
-**_New in v2.6.7_**
-
-When installing Rancher on top of this setup, you will also need to pass the value below into the Rancher Helm install command in order to set the name of the ingress controller to be used with Rancher's ingress resource:
+When installing Rancher on top of this setup, you will also need to set the name of the ingress controller to be used with Rancher's ingress resource:
 
 ```
 --set ingress.ingressClassName=nginx
 ```
 
 Refer [here for the Helm install command](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#5-install-rancher-with-helm-and-your-chosen-certificate-option) for your chosen certificate option.
+
+In Rancher v2.7.5, if you intend to use the default GKE ingress on your cluster without enabling VPC-native cluster mode, you need to set the following flag:
+
+```
+--set service.type=NodePort
+```
+
+This is necessary because of compatibility issues between this setup and ClusterIP, the default type for `cattle-system/rancher`. 

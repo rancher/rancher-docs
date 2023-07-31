@@ -120,7 +120,7 @@ Your active configuration is: [default]
 
 要使用 Rancher 成功创建 GKE 集群，GKE 必须处于 Standard 模式。GKE 在创建 Kubernetes 集群时有两种运行模式，分别是 Autopilot 和 Standard 模式。Autopilot 模式的集群配置对编辑 kube-system 命名空间有限制。但是，Rancher 在安装时需要在 kube-system 命名空间中创建资源。因此，你将无法在以 Autopilot 模式创建的 GKE 集群上安装 Rancher。如需详细了解 GKE Autopilot 模式和 Standard 模式之间的差异，请访问[比较 GKE Autopilot 和 Standard ](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison)。
 
-**注意**：如果 Kubernetes 的版本更新到 v1.22 或更高版本，则 ingress-nginx 的版本也需要[更新](https://kubernetes.github.io/ingress-nginx/#faq-migration-to-apiversion-networkingk8siov1)。
+**注意**：如果你要从旧的 Kubernetes 版本更新到 Kubernetes v1.22 或更高版本，你还需要[更新](https://kubernetes.github.io/ingress-nginx/user-guide/k8s-122-migration/) ingress-nginx。
 
 ```
 gcloud container clusters create cluster-name --num-nodes=3 --cluster-version=<VERSION>
@@ -184,12 +184,18 @@ ingress-nginx-controller   LoadBalancer   10.3.244.156   35.233.206.34   80:3187
 
 安装 Rancher 时，使用上一步获取的 DNS 名称作为 Rancher Server 的 URL。它可以作为 Helm 选项传递进来。例如，如果 DNS 名称是 `rancher.my.org`，你需要使用 `--set hostname=rancher.my.org` 选项来运行 Helm 安装命令。
 
-**_v2.6.7 新功能_**
-
-在此设置之上安装 Rancher 时，你还需要将以下值传递到 Rancher Helm 安装命令，以设置与 Rancher 的 Ingress 资源一起使用的 Ingress Controller 的名称：
+在此设置之上安装 Rancher 时，你还需要设置与 Rancher 的 Ingress 资源一起使用的 Ingress Controller 的名称：
 
 ```
 --set ingress.ingressClassName=nginx
 ```
 
-请参阅[Helm 安装命令](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#5-根据你选择的证书选项，通过-helm-安装-rancher)了解你的证书选项。
+请参阅[Helm 安装命令](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#5-根据你选择的证书选项通过-helm-安装-rancher)了解你的证书选项。
+
+在 Rancher v2.7.5 中，如果你打算在集群上使用默认的 GKE Ingress 而不启用 VPC 原生的集群模式，则需要设置以下标志：
+
+```
+--set service.type=NodePort
+```
+
+此设置是必要的，这考虑了与 ClusterIP（`cattle-system/rancher` 的默认类型）之间的兼容性问题。

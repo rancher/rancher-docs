@@ -2,6 +2,10 @@
 title: Minimum EKS Permissions
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks"/>
+</head>
+
 Documented here is a minimum set of permissions necessary to use all functionality of the EKS driver in Rancher. Additional permissions are required for Rancher to provision the `Service Role` and `VPC` resources. Optionally these resources can be created **before** the cluster creation and will be selectable when defining the cluster configuration.
 
 Resource | Description
@@ -37,6 +41,7 @@ Resource targeting uses `*` as the ARN of many of the resources created cannot b
                 "ec2:DescribeAvailabilityZones",
                 "ec2:DescribeAccountAttributes",
                 "ec2:DeleteTags",
+                "ec2:DeleteLaunchTemplate",
                 "ec2:DeleteSecurityGroup",
                 "ec2:DeleteKeyPair",
                 "ec2:CreateTags",

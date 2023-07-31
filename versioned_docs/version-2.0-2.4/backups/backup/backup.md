@@ -2,6 +2,10 @@
 title: Backup
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher"/>
+</head>
+
 This section contains information about how to create backups of your Rancher data and how to restore them in a disaster scenario.
 
   - Rancher server backups:

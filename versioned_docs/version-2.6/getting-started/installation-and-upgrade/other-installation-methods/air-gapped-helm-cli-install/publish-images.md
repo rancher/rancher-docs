@@ -2,6 +2,10 @@
 title: '2. Collect and Publish Images to your Private Registry'
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images"/>
+</head>
+
 This section describes how to set up your private registry so that when you install Rancher, Rancher will pull all the required images from this registry.
 
 By default, all images used to [provision Kubernetes clusters](../../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md) or launch any tools in Rancher, e.g. monitoring, pipelines, alerts, are pulled from Docker Hub. In an air gapped installation of Rancher, you will need a private registry that is located somewhere accessible by your Rancher server. Then, you will load the registry with all the images.
@@ -56,7 +60,6 @@ Skip this step if you are using your own certificates, or if you are terminating
 
 In a Kubernetes Install, if you elect to use the Rancher default self-signed TLS certificates, you must add the [`cert-manager`](https://artifacthub.io/packages/helm/cert-manager/cert-manager) image to `rancher-images.txt` as well.
 
-
 :::note
 
 New in v2.6.4, cert-manager versions 1.6.2 and 1.7.1 are compatible. We recommend v1.7.x because v 1.6.x will reach end-of-life on March 30, 2022.
@@ -65,16 +68,10 @@ New in v2.6.4, cert-manager versions 1.6.2 and 1.7.1 are compatible. We recommen
 
 1.  Fetch the latest `cert-manager` Helm chart and parse the template for image details:
 
-    :::note
-
-    Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.12.0, please see our [upgrade documentation](../../resources/upgrade-cert-manager.md).
-
-    :::
-
     ```plain
     helm repo add jetstack https://charts.jetstack.io
     helm repo update
-    helm fetch jetstack/cert-manager --version v1.7.1
+    helm fetch jetstack/cert-manager --version v1.11.0
     helm template ./cert-manager-<version>.tgz | awk '$1 ~ /image:/ {print $2}' | sed s/\"//g >> ./rancher-images.txt
     ```
 

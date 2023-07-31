@@ -2,6 +2,11 @@
 title: Rancher DigitalOcean Quick Start Guide
 description: Read this step by step Rancher DigitalOcean guide to quickly deploy a Rancher Server with a single node cluster attached.
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-rancher-manager/digitalocean"/>
+</head>
+
 The following steps will quickly deploy a Rancher Server on DigitalOcean with a single node cluster attached.
 
 >**Note:** The intent of these guides is to quickly launch a sandbox that you can use to evaluate Rancher. These guides are not intended for production environments. For comprehensive setup instructions, see [Installation](../../../pages-for-subheaders/installation-and-upgrade.md).

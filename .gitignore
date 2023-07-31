@@ -18,3 +18,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.idea/
+
+/dev-resources/algolia-search/.env
+/dev-resources/algolia-search/algolia-index.sh

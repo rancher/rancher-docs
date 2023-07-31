@@ -14,7 +14,7 @@ title: 设置现有存储
 
 1. [设置持久存储](#1-设置持久存储)。
 2. [添加一个引用持久存储的 PersistentVolume](#2-添加一个引用持久存储的-persistentvolume)。
-3. [为使用 StatefulSet 部署的 Pod 使用 PersistentVolume](#3-为使用-statefulset-部署的-pod-使用-persistentvolume)。
+3. [为使用 StatefulSet 部署的 Pod 使用存储类](#3-为使用-statefulset-部署的-pod-使用存储类)
 
 ### 先决条件
 

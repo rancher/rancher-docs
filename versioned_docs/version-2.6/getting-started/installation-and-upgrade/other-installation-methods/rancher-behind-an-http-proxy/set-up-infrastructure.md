@@ -2,6 +2,10 @@
 title: '1. Set up Infrastructure'
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/set-up-infrastructure"/>
+</head>
+
 In this section, you will provision the underlying infrastructure for your Rancher management server with internet access through a HTTP proxy.
 
 To install the Rancher management server on a high-availability RKE cluster, we recommend setting up the following infrastructure:

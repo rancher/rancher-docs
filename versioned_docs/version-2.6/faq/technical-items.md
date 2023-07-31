@@ -60,7 +60,7 @@ The Layer-4 Load Balancer is created as `type: LoadBalancer`. In Kubernetes, thi
 
 ### How are the supported Docker versions determined?
 
-We follow the validated Docker versions for upstream Kubernetes releases. The validated versions can be found under [External Dependencies](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.10.md#external-dependencies) in the Kubernetes release CHANGELOG.md.
+We follow the validated Docker versions for upstream Kubernetes releases. The validated versions can be found under [External Dependencies](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.10.md#external-dependencies) in the Kubernetes release CHANGELOG.md.
 
 ### How can I access nodes created by Rancher?
 
@@ -91,7 +91,7 @@ When the node is removed from the cluster, and the node is cleaned, you can read
 
 ### How can I add additional arguments/binds/environment variables to Kubernetes components in a Rancher Launched Kubernetes cluster?
 
-You can add additional arguments/binds/environment variables via the [Config File](../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#cluster-config-file) option in Cluster Options. For more information, see the [Extra Args, Extra Binds, and Extra Environment Variables](https://rancher.com/docs/rke/latest/en/config-options/services/services-extras/) in the RKE documentation or browse the [Example Cluster.ymls](https://rancher.com/docs/rke/latest/en/example-yamls/).
+You can add additional arguments/binds/environment variables via the [Config File](../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#rke-cluster-config-file-reference) option in Cluster Options. For more information, see the [Extra Args, Extra Binds, and Extra Environment Variables](https://rancher.com/docs/rke/latest/en/config-options/services/services-extras/) in the RKE documentation or browse the [Example Cluster.ymls](https://rancher.com/docs/rke/latest/en/example-yamls/).
 
 ### How do I check if my certificate chain is valid?
 

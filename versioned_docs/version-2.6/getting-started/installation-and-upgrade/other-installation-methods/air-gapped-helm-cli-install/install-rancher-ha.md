@@ -2,6 +2,10 @@
 title: 4. Install Rancher
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha"/>
+</head>
+
 This section is about how to deploy Rancher for your air gapped environment in a high-availability Kubernetes installation. An air gapped environment could be where Rancher server will be installed offline, behind a firewall, or behind a proxy.
 
 ### Privileged Access for Rancher
@@ -22,7 +26,7 @@ From a system that has access to the internet, fetch the latest Helm chart and c
 
 1. If you haven't already, install `helm` locally on a workstation that has internet access. Note: Refer to the [Helm version requirements](../../resources/helm-version-requirements.md) to choose a version of Helm to install Rancher.
 
-2. Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher](../../installation-references/helm-chart-options.md#helm-chart-repositories).
+2. Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Rancher Version](../../resources/choose-a-rancher-version.md).
     - Latest: Recommended for trying out the newest features
         ```
         helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
@@ -74,20 +78,13 @@ When setting up the Rancher Helm template, there are several options in the Helm
 | `systemDefaultRegistry` | `<REGISTRY.YOURDOMAIN.COM:PORT>` | Configure Rancher server to always pull from your private registry when provisioning clusters.  |
 | `useBundledSystemChart` | `true`                           | Configure Rancher server to use the packaged copy of Helm system charts. The [system charts](https://github.com/rancher/system-charts) repository contains all the catalog items required for features such as monitoring, logging, alerting and global DNS. These [Helm charts](https://github.com/rancher/system-charts) are located in GitHub, but since you are in an air gapped environment, using the charts that are bundled within Rancher is much easier than setting up a Git mirror. |
 
-### 3. Fetch the Cert-Manager chart 
+### 3. Fetch the Cert-Manager chart
 
 Based on the choice your made in [2. Choose your SSL Configuration](#2-choose-your-ssl-configuration), complete one of the procedures below.
 
 #### Option A: Default Self-Signed Certificate
 
-
 By default, Rancher generates a CA and uses cert-manager to issue the certificate for access to the Rancher server interface.
-
-:::note
-
-Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.11.0, please see our [upgrade cert-manager documentation](../../resources/upgrade-cert-manager.md).
-
-:::
 
 ##### 1. Add the cert-manager repo
 
@@ -102,14 +99,8 @@ helm repo update
 
 Fetch the latest cert-manager chart available from the [Helm chart repository](https://artifacthub.io/packages/helm/cert-manager/cert-manager).
 
-:::note
-
-New in v2.6.4, cert-manager versions 1.6.2 and 1.7.1 are compatible. We recommend v1.7.x because v 1.6.x will reach end-of-life on March 30, 2022.
-
-:::
-
 ```plain
-helm fetch jetstack/cert-manager --version v1.7.1
+helm fetch jetstack/cert-manager --version v1.11.0
 ```
 
 
@@ -117,7 +108,7 @@ helm fetch jetstack/cert-manager --version v1.7.1
 
 Download the required CRD file for cert-manager:
    ```plain
-   curl -L -o cert-manager/cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/releases/download/v1.7.1/cert-manager.crds.yaml
+   curl -L -o cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
    ```
 
 ### 4. Install Rancher
@@ -127,6 +118,12 @@ Copy the fetched charts to a system that has access to the Rancher server cluste
 ##### 1. Install Cert-Manager
 
 Install cert-manager with the options you would like to use to install the chart. Remember to set the `image.repository` option to pull the image from your private registry. This will create a `cert-manager` directory with the Kubernetes manifest files.
+
+:::note
+
+To see options on how to customize the cert-manager install (including for cases where your cluster uses PodSecurityPolicies), see the [cert-manager docs](https://artifacthub.io/packages/helm/cert-manager/cert-manager#configuration).
+
+:::
 
 <details id="install-cert-manager">
   <summary>Click to expand</summary>
@@ -139,7 +136,7 @@ If you are using self-signed certificates, install cert-manager:
     kubectl create namespace cert-manager
     ```
 
-2. Create the cert-manager CustomResourceDefinitions (CRDs). 
+2. Create the cert-manager CustomResourceDefinitions (CRDs).
 
     ```plain
     kubectl apply -f cert-manager/cert-manager-crd.yaml
@@ -148,7 +145,7 @@ If you are using self-signed certificates, install cert-manager:
 3. Install cert-manager.
 
     ```plain
-    helm install cert-manager ./cert-manager-v1.7.1.tgz \
+    helm install cert-manager ./cert-manager-v1.11.0.tgz \
         --namespace cert-manager \
         --set image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-controller \
         --set webhook.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-webhook \

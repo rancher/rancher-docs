@@ -2,6 +2,10 @@
 title: Rollbacks
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks"/>
+</head>
+
 ## Rolling Back to Rancher v2.5.0+
 
 To roll back to Rancher v2.5.0+, use the **Rancher Backups** application and restore Rancher from backup.
@@ -17,16 +21,6 @@ A restore is performed by creating a Restore custom resource.
 * While restoring Rancher on the same setup, the Rancher deployment is manually scaled down before the restore starts, then the operator will scale it back up once the restore completes. As a result, Rancher and its UI will be unavailable until the restore is complete. While the UI is unavailable, use the original cluster kubeconfig with the restore YAML file: `kubectl create -f restore.yaml`.
 
 :::
-
-### Scale the Rancher Deployment to 0
-
-1. In the upper left corner, click **☰ > local**.
-1. From the menu on the left, click **Workload**.
-1. Under **Workload**, click on **Deployments**.
-1. At the top, click on the dropdown to adjust the filter. Select **cattle-system** as the filter.
-1. Find the row for the `rancher` deployment and click **⋮ > Edit Config**.
-1. Change **Replicas** to 0.
-1. Scroll to the bottom and click **Save**.
 
 ### Create the Restore Custom Resource
 

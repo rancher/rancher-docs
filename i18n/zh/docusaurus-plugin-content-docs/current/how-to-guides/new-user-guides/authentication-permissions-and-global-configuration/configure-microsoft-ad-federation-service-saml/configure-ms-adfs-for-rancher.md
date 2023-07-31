@@ -2,7 +2,7 @@
 title: 1. 在 Microsoft AD FS 中配置 Rancher
 ---
 
-在配置 Rancher 以支持 AD FS 用户之前，你必须在 AD FS 中将 Rancher 添加为 [relying party trust](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/technical-reference/understanding-key-ad-fs-concepts)（信赖方信任）。
+在配置 Rancher 以支持 Active Directory Federation Service (AD FS) 之前，你必须在 AD FS 中将 Rancher 添加为 [relying party trust](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/technical-reference/understanding-key-ad-fs-concepts)（信赖方信任）。
 
 1. 以管理用户身份登录 AD 服务器。
 

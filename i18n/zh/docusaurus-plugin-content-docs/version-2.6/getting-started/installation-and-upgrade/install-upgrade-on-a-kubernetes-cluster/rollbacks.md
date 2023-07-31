@@ -18,16 +18,6 @@ title: 回滚
 
 :::
 
-### 将 Rancher Deployment 规模扩展到 0
-
-1. 在左上角，点击 **☰ > local**。
-1. 在左侧主菜单中，点击**工作负载**。
-1. 在**工作负载**下，点击 **Deployments**。
-1. 点击上方下拉菜单以调整筛选条件。选择 **cattle-system** 作为筛选条件。
-1. 找到 `rancher` deployment 的行，并点击**⋮ > 编辑配置**。
-1. 将**副本数量**改为 0。
-1. 滚动到底部并点击**保存**。
-
 ### 创建 Restore 自定义资源
 
 1. 点击 **☰ > 集群管理**。
@@ -99,7 +89,7 @@ helm rollback rancher 3 -n cattle-system
 
 ## 回滚到 Rancher 2.2-2.4
 
-要回滚到 2.5 之前的 Rancher 版本，参考此处的步骤[恢复备份 — Kubernetes 安装](../../../../version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md)。如果恢复 Rancher Server 的集群的某个快照，Rancher 的版本以及状态均会恢复回到快照时的版本和状态。
+要回滚到 2.5 之前的 Rancher 版本，参考此处的步骤[恢复备份 — Kubernetes 安装](/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md)。如果恢复 Rancher Server 的集群的某个快照，Rancher 的版本以及状态均会恢复回到快照时的版本和状态。
 
 有关回滚 Docker 安装的 Rancher，请参见[本页](../other-installation-methods/rancher-on-a-single-node-with-docker/roll-back-docker-installed-rancher.md)。
 
@@ -111,4 +101,4 @@ helm rollback rancher 3 -n cattle-system
 
 ## 回滚到 Rancher 2.0-2.1
 
-我们不再支持回滚到 Rancher 2.0-2.1。回滚到这些版本的说明保留在[此处](../../../../version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup/roll-back-to-v2.0-v2.1.md)，仅用于无法升级到 v2.2 的情况。
+我们不再支持回滚到 Rancher 2.0-2.1。回滚到这些版本的说明保留在[此处](/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup/roll-back-to-v2.0-v2.1.md)，仅用于无法升级到 v2.2 的情况。

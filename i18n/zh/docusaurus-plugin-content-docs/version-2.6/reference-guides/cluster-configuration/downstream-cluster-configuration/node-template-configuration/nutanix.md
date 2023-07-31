@@ -35,7 +35,7 @@ title: Nutanix 节点模板配置
 | 网络 | ✓ | 要附加到虚拟机的网络的名称 |
 | 虚拟机类别 |          | 要应用于虚拟机的类别名称 |
 
-虚拟机支持通过 [Config Drive v2 datasource](https://cloudinit.readthedocs.io/en/latest/topics/datasources/configdrive.html) 来支持 [cloud-init](https://cloudinit.readthedocs.io/en/latest/) 的任何现代 Linux 操作系统。
+虚拟机支持通过 [Config Drive v2 datasource](https://cloudinit.readthedocs.io/en/latest/reference/datasources/configdrive.html) 来支持 [cloud-init](https://cloudinit.readthedocs.io/en/latest/) 的任何现代 Linux 操作系统。
 
 ## 网络
 
@@ -54,3 +54,13 @@ title: Nutanix 节点模板配置
 不建议使用基于 cloud-init 的网络配置，仅支持使用用户数据 `runcmd`，不支持 NoCloud 或其他网络配置数据源。
 
 建议使用 Nutanix IP Address Management（IPAM) 或其他 DHCP 服务。
+
+## 引擎选项
+
+在节点模板的**引擎选项**中，你可以配置容器 daemon。你可能需要指定容器版本或容器镜像仓库 Mirror。
+
+:::note
+如果要配置 Red Hat Enterprise Linux (RHEL) 或 CentOS 节点，请将 **Docker Install URL** 字段保留为默认值，或选择 **none**。由于 Docker 已经安装在这些节点上，因此将绕过 Docker 安装检查。
+
+如果没有将 **Docker Install URL** 设置为默认值或 **none**，你可能会看到错误消息：`Error creating machine: RHEL ssh command error: command: sudo -E yum install -y curl err: exit status 1 output: Updating Subscription Management repositories`。
+:::

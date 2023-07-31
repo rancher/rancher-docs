@@ -55,14 +55,14 @@ You can also use [Docker](https://www.docker.com/) to launch the website.
 The below command can be used to install the dependencies and run the site inside a container:
 
 ```
-docker run --rm -it -v $PWD:$PWD -w $PWD -p 3000:3000 node /bin/sh -c "yarn install && yarn start -h 0.0.0.0"
+docker run --rm -it -v $PWD:$PWD -w $PWD -p 3000:3000 node:18 /bin/sh -c "yarn install && yarn start -h 0.0.0.0"
 ```
 
 Subsequent executions will check for updated dependencies, if there are none, it will skip the updates and quickly start the server.
 
 License
 =======
-Copyright (c) 2014-2022 [Rancher Labs, Inc.](https://rancher.com)
+Copyright (c) 2014-2023 [Rancher Labs, Inc.](https://rancher.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

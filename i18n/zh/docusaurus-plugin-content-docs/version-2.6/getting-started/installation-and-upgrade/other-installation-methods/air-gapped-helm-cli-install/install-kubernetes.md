@@ -64,9 +64,9 @@ configs:
 
 ### 3. 安装 K3s
 
-Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的 Rancher 版本支持哪些 Kubernetes 版本，请参见[支持维护条款](https://rancher.com/support-maintenance-terms/)。
+Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的 Rancher 版本支持哪些 Kubernetes 版本，请参见 [Rancher 支持矩阵](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/)。
 
-如需指定 K3s 版本，在运行 K3s 安装脚本时，使用 `INSTALL_K3S_VERSION` 环境变量。
+如需指定 K3s（Kubernetes）版本，在运行 K3s 安装脚本时使用 `INSTALL_K3S_VERSION` 环境变量（例如 `INSTALL_K3S_VERSION="v1.24.10+k3s1"`）。
 
 从 [Releases](https://github.com/k3s-io/k3s/releases) 页面获取 K3s 的二进制文件，该文件要匹配用于获取离线镜像的 tar 版本。
 访问 [K3s 安装脚本](https://get.k3s.io)以获取 K3s 的安装脚本。
@@ -77,17 +77,16 @@ Rancher 需要安装在支持的 Kubernetes 版本上。如需了解你使用的
 在每个 Server 上安装 K3s：
 
 ```
-INSTALL_K3S_SKIP_DOWNLOAD=true ./install.sh
+INSTALL_K3S_SKIP_DOWNLOAD=true INSTALL_K3S_VERSION=<VERSION> ./install.sh
 ```
 
 在每个 Agent 上安装 K3s：
 
 ```
-INSTALL_K3S_SKIP_DOWNLOAD=true K3S_URL=https://myserver:6443 K3S_TOKEN=mynodetoken ./install.sh
+INSTALL_K3S_SKIP_DOWNLOAD=true INSTALL_K3S_VERSION=<VERSION> K3S_URL=https://<SERVER>:6443 K3S_TOKEN=<TOKEN> ./install.sh
 ```
 
-请确保你将 `myserver` 替换为 Server 的 IP 或有效 DNS，并将 `mynodetoken` 替换为 Server 节点上的 node-token。
-node-token 位于 Server 节点上的 `/var/lib/rancher/k3s/server/node-token`。
+其中 `<SERVER>` 是 Server 的 IP 或有效 DNS，`<TOKEN>` 是可以在 `/var/lib/rancher/k3s/server/node-token` 中找到的 Server node-token。
 
 :::note
 
@@ -175,7 +174,7 @@ tls-san:
   - loadbalancer-dns-domain.com
 ```
 
-有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/install/ha/)。
+有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/install/ha)。
 
 :::note
 
@@ -205,7 +204,7 @@ configs:
       ca_file: <镜像仓库所用的 CA 文件路径>
 ```
 
-有关 RKE2 的私有镜像仓库配置文件的详情，请参见 [RKE2 官方文档](https://docs.rke2.io/install/containerd_registry_configuration/)。
+有关 RKE2 的私有镜像仓库配置文件的详情，请参见 [RKE2 官方文档](https://docs.rke2.io/install/containerd_registry_configuration)。
 
 ### 3. 安装 RKE2
 
@@ -234,7 +233,7 @@ systemctl enable rke2-server.service
 systemctl start rke2-server.service
 ``
 
-有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/install/airgap/)。
+有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/install/airgap)。
 
 ### 4. 保存并开始使用 kubeconfig 文件
 
@@ -274,7 +273,7 @@ users:
 kubectl --kubeconfig ~/.kube/config/rke2.yaml get pods --all-namespaces
 ```
 
-有关 `kubeconfig` 文件的详情，请参见 [RKE2 官方文档](https://docs.rke2.io/cluster_access/)或 [ Kubernetes 官方文档](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)中关于使用 `kubeconfig` 文件管理集群访问的部分。
+有关 `kubeconfig` 文件的详情，请参见 [RKE2 官方文档](https://docs.rke2.io/cluster_access)或 [ Kubernetes 官方文档](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)中关于使用 `kubeconfig` 文件管理集群访问的部分。
 
 ### 升级注意事项
 

@@ -2,6 +2,10 @@
 title: Helm CLI Quick Start
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-rancher-manager/helm-cli"/>
+</head>
+
 These instructions capture a quick way to set up a proof-of-concept Rancher installation.
 
 These instructions assume you have a Linux virtual machine that you will communicate with from your local workstation. Rancher will be installed on the Linux machine. You will need to retrieve the IP address of that machine so that you can access Rancher from your local workstation. Rancher is designed to manage Kubernetes clusters remotely, so any Kubernetes cluster that Rancher manages in the future will also need to be able to reach this IP address.
@@ -15,13 +19,15 @@ The full installation requirements are [here](../../../pages-for-subheaders/inst
 
 ## Install K3s on Linux
 
+Rancher needs to be installed on a supported Kubernetes version. To find out which versions of Kubernetes are supported for your Rancher version, refer to the [Rancher Support Matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/).
+
+To specify the K3s (Kubernetes) version, use the INSTALL_K3S_VERSION (e.g., `INSTALL_K3S_VERSION="v1.24.10+k3s1"`) environment variable when running the K3s installation script.
+
 Install a K3s cluster by running this command on the Linux machine:
 
 ```
-curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="***" sh -s - server --cluster-init
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=<VERSION> sh -s - server --cluster-init
 ```
-
-Rancher needs to be installed on a supported Kubernetes version. To specify the K3s version, use the INSTALL_K3S_VERSION environment variable when running the K3s installation script. Refer to the [support maintenance terms](https://rancher.com/support-maintenance-terms/).
 
 Using `--cluster-init` allows K3s to use embedded etcd as the datastore and has the ability to convert to an HA setup. Refer to [High Availability with Embedded DB](https://rancher.com/docs/k3s/latest/en/installation/ha-embedded/).
 
@@ -90,12 +96,18 @@ Once edited, either press `ctrl+s` or go to `File > Save` to save your work.
 
 Then from your local workstation, run the following commands. You will need to have [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl) and [helm.](https://helm.sh/docs/intro/install/) installed.
 
+:::note
+
+To see options on how to customize the cert-manager install (including for cases where your cluster uses PodSecurityPolicies), see the [cert-manager docs](https://artifacthub.io/packages/helm/cert-manager/cert-manager#configuration).
+
+:::
+
 ```
 helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
 
 kubectl create namespace cattle-system
 
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.7.1/cert-manager.crds.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
 
 helm repo add jetstack https://charts.jetstack.io
 
@@ -104,18 +116,20 @@ helm repo update
 helm install cert-manager jetstack/cert-manager \
   --namespace cert-manager \
   --create-namespace \
-  --version v1.7.1
+  --version v1.11.0
 
 # Windows Powershell
 helm install cert-manager jetstack/cert-manager `
   --namespace cert-manager `
   --create-namespace `
-  --version v1.7.1
+  --version v1.11.0
 ```
 
 The final command to install Rancher is below. The command requires a domain name that forwards traffic to the Linux machine. For the sake of simplicity in this tutorial, you can use a fake domain name to create your proof-of-concept. An example of a fake domain name would be `<IP_OF_LINUX_NODE>.sslip.io`.
 
 To install a specific Rancher version, use the `--version` flag (e.g., `--version 2.6.6`). Otherwise, the latest Rancher is installed by default. Refer to [Choosing a Rancher Version](../../installation-and-upgrade/resources/choose-a-rancher-version.md).
+
+Note the password requires a minimum of 12 characters.
 
 ```
 helm install rancher rancher-latest/rancher \

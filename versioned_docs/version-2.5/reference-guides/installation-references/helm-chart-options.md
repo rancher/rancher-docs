@@ -1,6 +1,11 @@
 ---
 title: Rancher Helm Chart Options
+keywords: [rancher v2.5 helm chart, rancher v2.5 helm options, rancher v2.5 helm chart options, helm chart rancher v2.5 helm options rancher v2.5 helm chart options rancher v2.5]
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-references/helm-chart-options"/>
+</head>
 
 This page is a configuration reference for the Rancher Helm chart.
 

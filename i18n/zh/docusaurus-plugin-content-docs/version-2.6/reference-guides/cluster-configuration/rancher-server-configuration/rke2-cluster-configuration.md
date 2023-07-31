@@ -9,7 +9,7 @@ title: RKE2 集群配置参考
 你可以通过以下两种方式之一来配置 Kubernetes 选项：
 
 - [Rancher UI](#rancher-ui-中的配置选项)：使用 Rancher UI 来选择设置 Kubernetes 集群时常用的自定义选项。
-- [集群配置文件](#集群配置文件)：高级用户可以创建一个 RKE2 配置文件，而不是使用 Rancher UI 来为集群选择 Kubernetes 选项。配置文件让你能设置更多可用于 RKE2 的其他[安装选项](https://docs.rke2.io/install/configuration)。
+- [集群配置文件](#集群配置文件参考)：高级用户可以创建一个 RKE2 配置文件，而不是使用 Rancher UI 来为集群选择 Kubernetes 选项。配置文件让你能设置更多可用于 RKE2 的其他[安装选项](https://docs.rke2.io/install/configuration)。
 
 ## 在 Rancher UI 中使用表单编辑集群
 
@@ -102,13 +102,13 @@ Rancher 与以下开箱即用的网络提供商兼容：
 - [Calico](https://docs.projectcalico.org/v3.11/introduction/)
 - [Multus](https://github.com/k8snetworkplumbingwg/multus-cni)
 
-\* 在 [Cilium CNI](../../../faq/container-network-interface-providers.md#cilium) 中使用[项目网络隔离](#项目网络隔离)时，你可以开启跨节点入口路由。详情请参见 [CNI 提供商文档](../../../faq/container-network-interface-providers.md#ingress-routing-across-nodes-in-cilium)。
+\* 在 [Cilium CNI](../../../faq/container-network-interface-providers.md#cilium) 中使用[项目网络隔离](#项目网络隔离)时，你可以开启跨节点入口路由。详情请参见 [CNI 提供商文档](../../../faq/container-network-interface-providers.md#cilium-中跨节点的-ingress-路由)。
 
-有关不同网络提供商以及如何配置它们的更多详细信息，请查阅 [RKE2 文档](https://docs.rke2.io/install/network_options/)。
+有关不同网络提供商以及如何配置它们的更多详细信息，请查阅 [RKE2 文档](https://docs.rke2.io/install/network_options)。
 
 ##### 双栈网络
 
-所有 CNI 网络插件都支持[双栈](https://docs.rke2.io/install/network_options/#dual-stack-configuration)网络。要在双栈模式下配置 RKE2，请为你的[集群 CIDR](#集群-cidr) 和/或 [Service CIDR](#service-cidr) 设置有效的 IPv4/IPv6 CIDR。
+所有 CNI 网络插件都支持[双栈](https://docs.rke2.io/install/network_options#dual-stack-configuration)网络。要在双栈模式下配置 RKE2，请为你的[集群 CIDR](#集群-cidr) 和/或 [Service CIDR](#service-cidr) 设置有效的 IPv4/IPv6 CIDR。
 
 ###### 额外配置 {#dual-stack-additional-config}
 
@@ -120,7 +120,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 :::note
 
-如果你要使用的云提供商未作为选项列出，你需要使用[配置文件选项](#集群配置文件)来配置云提供商。请参考[本文档](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/)来了解如何配置云提供商。
+如果你要使用的云提供商未作为选项列出，你需要使用[配置文件选项](#集群配置文件参考)来配置云提供商。请参考[本文档](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/)来了解如何配置云提供商。
 
 :::
 
@@ -140,13 +140,13 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 #### CoreDNS
 
-默认情况下，[CoreDNS](https://coredns.io/) 会安装为默认 DNS 提供程序。如果未安装 CoreDNS，则必须自己安装备用 DNS 提供程序。有关其他 CoreDNS 配置，请参阅 [RKE2 文档](https://docs.rke2.io/networking/#coredns)。
+默认情况下，[CoreDNS](https://coredns.io/) 会安装为默认 DNS 提供程序。如果未安装 CoreDNS，则必须自己安装备用 DNS 提供程序。有关其他 CoreDNS 配置，请参阅 [RKE2 文档](https://docs.rke2.io/networking#coredns)。
 
 #### NGINX Ingress
 
-如果你想使用高可用性配置来发布应用，并且你使用没有原生负载均衡功能的云提供商来托管主机，请启用此选项以在集群中使用 NGINX Ingress。有关其他配置选项，请参阅 [RKE2 文档](https://docs.rke2.io/networking/#nginx-ingress-controller)。
+如果你想使用高可用性配置来发布应用，并且你使用没有原生负载均衡功能的云提供商来托管主机，请启用此选项以在集群中使用 NGINX Ingress。有关其他配置选项，请参阅 [RKE2 文档](https://docs.rke2.io/networking#nginx-ingress-controller)。
 
-有关其他配置选项，请参阅 [RKE2 文档](https://docs.rke2.io/networking/#nginx-ingress-controller)。
+有关其他配置选项，请参阅 [RKE2 文档](https://docs.rke2.io/networking#nginx-ingress-controller)。
 
 #### Metrics Server
 
@@ -156,7 +156,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 ### 附加配置
 
-集群启动时将应用的其他 Kubernetes 清单，会作为[附加组件](https://kubernetes.io/docs/concepts/cluster-administration/addons/)来管理。有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/helm/#automatically-deploying-manifests-and-helm-charts)。
+集群启动时将应用的其他 Kubernetes 清单，会作为[附加组件](https://kubernetes.io/docs/concepts/cluster-administration/addons/)来管理。有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/helm#automatically-deploying-manifests-and-helm-charts)。
 
 ### Agent 环境变量
 
@@ -166,7 +166,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 #### 自动快照
 
-启用或禁用定期 etcd 快照的选项。如果启用，用户可以配置快照的频率。有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/backup_restore/#creating-snapshots)。请注意，如果使用 RKE2，快照会存储在每个 etcd 节点上，这与 RKE1 不同（RKE1 每个集群只存储一个快照）。
+启用或禁用定期 etcd 快照的选项。如果启用，用户可以配置快照的频率。有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/backup_restore#creating-snapshots)。请注意，如果使用 RKE2，快照会存储在每个 etcd 节点上，这与 RKE1 不同（RKE1 每个集群只存储一个快照）。
 
 #### 指标
 
@@ -180,9 +180,9 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 ##### 双栈网络
 
-要配置[双栈](https://docs.rke2.io/install/network_options/#dual-stack-configuration)模式，请输入有效的 IPv4/IPv6 CIDR。例如 `10.42.0.0/16,2001:cafe:42:0::/56`。
+要配置[双栈](https://docs.rke2.io/install/network_options#dual-stack-configuration)模式，请输入有效的 IPv4/IPv6 CIDR。例如 `10.42.0.0/16,2001:cafe:42:0::/56`。
 
-使用 `cilium` 或 `multus,cilium` 作为[容器网络](#容器网络)接口提供商时，你需要进行[附加配置](#dual-stack-additional-config)。
+使用 `cilium` 或 `multus,cilium` 作为[容器网络](#容器网络提供商)接口提供商时，你需要进行[附加配置](#dual-stack-additional-config)。
 
 #### Service CIDR
 
@@ -190,9 +190,9 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 ##### 双栈网络
 
-要配置[双栈](https://docs.rke2.io/install/network_options/#dual-stack-configuration)模式，请输入有效的 IPv4/IPv6 CIDR。例如 `10.42.0.0/16,2001:cafe:42:0::/56`。
+要配置[双栈](https://docs.rke2.io/install/network_options#dual-stack-configuration)模式，请输入有效的 IPv4/IPv6 CIDR。例如 `10.42.0.0/16,2001:cafe:42:0::/56`。
 
-使用 `cilium` 或 `multus,cilium` 作为[容器网络](#容器网络)接口提供商时，你需要进行[附加配置](#dual-stack-additional-config)。
+使用 `cilium` 或 `multus,cilium` 作为[容器网络](#容器网络提供商)接口提供商时，你需要进行[附加配置](#dual-stack-additional-config)。
 
 #### 集群 DNS
 
@@ -216,13 +216,13 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 在 Rancher 启动的 Kubernetes 集群中，它默认启用，使用具有 `controlplane` 角色的节点的 IP 和默认的 Kubernetes 自签名证书。
 
-有关授权集群端点的工作原理以及使用的原因，请参阅[架构介绍](../../../pages-for-subheaders/rancher-manager-architecture.md#4-授权集群端点)。
+有关授权集群端点的工作原理以及使用的原因，请参阅[架构介绍](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-授权集群端点)。
 
 我们建议使用具有授权集群端点的负载均衡器。有关详细信息，请参阅[推荐的架构](../../rancher-manager-architecture/architecture-recommendations.md#授权集群端点架构)。
 
 ### 镜像仓库
 
-选择要从中拉取 Rancher 镜像的镜像仓库。有关更多详细信息和配置选项，请参阅 [RKE2 文档](https://docs.rke2.io/install/containerd_registry_configuration/)。
+选择要从中拉取 Rancher 镜像的镜像仓库。有关更多详细信息和配置选项，请参阅 [RKE2 文档](https://docs.rke2.io/install/containerd_registry_configuration)。
 
 ### 升级策略
 
@@ -316,7 +316,7 @@ chartValues:
 ```
 ### machineGlobalConfig
 
-RKE2/K3s 配置嵌套在 `machineGlobalConfig` 参数下。在这里所做的任何配置更改都将应用到每个节点。你可以在此处应用[RKE2 的独立版本](https://docs.rke2.io/install/install_options/server_config/)中可用的配置选项。
+RKE2/K3s 配置嵌套在 `machineGlobalConfig` 参数下。在这里所做的任何配置更改都将应用到每个节点。你可以在此处应用[RKE2 的独立版本](https://docs.rke2.io/reference/server_config)中可用的配置选项。
 
 示例：
 
@@ -329,7 +329,7 @@ machineGlobalConfig:
 
 ### machineSelectorConfig
 
-此参数与 [`machineGlobalConfig`](#machineglobalconfig) 相同，只是可以在配置中指定 [label](#kubernetes-node-labels) 选择器。该配置仅应用于与标签选择器匹配的节点。
+此参数与 [`machineGlobalConfig`](#machineglobalconfig) 相同，只是可以在配置中指定 [label](#kubernetes-节点标签) 选择器。该配置仅应用于与标签选择器匹配的节点。
 
 允许多个 `config` 条目，可以为每个条目指定各自的 `machineLabelSelector`。用户可以指定 `matchExpressions`、`matchLabels`、指定二者或都不指定。如果你省略了 `machineLabelSelector`，则与将 config 放入 `machineGlobalConfig` 的效果相同。
 

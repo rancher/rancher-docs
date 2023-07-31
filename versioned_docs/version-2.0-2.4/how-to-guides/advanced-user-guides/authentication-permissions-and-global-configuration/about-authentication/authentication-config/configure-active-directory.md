@@ -1,6 +1,10 @@
 ---
-title: Configuring Active Directory (AD)
+title: Configure Active Directory (AD)
 ---
+
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-active-directory"/>
+</head>
 
 If your organization uses Microsoft Active Directory as central user repository, you can configure Rancher to communicate with an Active Directory server to authenticate users. This allows Rancher admins to control access to clusters and projects based on users and groups managed externally in the Active Directory, while allowing end-users to authenticate with their AD credentials when logging in to the Rancher UI.
 
@@ -125,7 +129,7 @@ Once you have completed the configuration, proceed by testing the connection to 
 
 In order to successfully configure AD authentication it is crucial that you provide the correct configuration pertaining to the hierarchy and schema of your AD server.
 
-The [`ldapsearch`](http://manpages.ubuntu.com/manpages/artful/man1/ldapsearch.1.html) tool allows you to query your AD server to learn about the schema used for user and group objects.
+The [`ldapsearch`](https://manpages.ubuntu.com/manpages/focal/en/man1/ldapsearch.1.html) tool allows you to query your AD server to learn about the schema used for user and group objects.
 
 For the purpose of the example commands provided below we will assume:
 

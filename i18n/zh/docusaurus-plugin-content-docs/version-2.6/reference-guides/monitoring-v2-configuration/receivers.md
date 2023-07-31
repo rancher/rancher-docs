@@ -6,7 +6,7 @@ title: 接收器配置
 
 :::note
 
-本节参考假设你已经熟悉 Monitoring 组件的协同工作方式。有关 Alertmanager 的详细信息，请参阅[本节](../../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#3-alertmanager-工作原理)。
+本节参考假设你已经熟悉 Monitoring 组件的协同工作方式。有关 Alertmanager 的详细信息，请参阅[本节](../../integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#3-alertmanager-的工作原理)。
 
 :::
 
@@ -237,6 +237,18 @@ url http://rancher-alerting-drivers-sachet.ns-1.svc:9876/alert
 
 你还可以通过使用路由的 `continue` 选项来设置多个接收器。这样，发送到接收器的告警会在路由树（可能包含另一个接收器）的下一级进行评估。
 
+## 在升级 Chart 后配置 AlertmanagerConfig
+
+如果你有一个使用 SMS 或 Microsoft Teams 告警的集群，并将 Monitoring Chart 从 100.1.3+up19.0.3 升级到 100.2.0+up40.1.2，你可能无法再收到告警。这是 [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator/) 的上游更改导致的，用于防止命名冲突。
+
+你必须手动编辑配置映射才能继续接收告警：
+
+1. 单击 **☰** 并选择相关的集群。
+1. 选择**更多资源** > **核心** > **ConfigMap**。
+1. 找到与 **Sachet**（针对 SMS 告警）或 **prom2teams**（针对 Microsoft Teams 告警）的 ConfigMap 对应的行。点击 **⋮** 并选择**编辑 YAML**。
+1. 根据 `<namespace>\<alertManagerConfig>\<receiverName>` 格式，更新接收器的 `name` 字段中的分隔符，即将 `-` 字符替换为 `/`。例如，如果接收器的名称是 `default-amc-test-prom2sms`，请将其更新为 `default/amc-test/prom2sms`。
+1. 单击**保存**。
+1. 重新部署与 Alertmanager 和 Sachet/prom2teams 关联的工作负载，确保它们收到更新的配置。
 
 ## Alertmanager 配置示例
 
@@ -307,7 +319,7 @@ spec:
 #    key: string
 ```
 
-有关为 `rancher-cis-benchmark` 启用告警的更多信息，请参阅[本节](../../pages-for-subheaders/cis-scan-guides.md#为-rancher-cis-benchmark-启用告警)。
+有关为 `rancher-cis-benchmark` 启用告警的更多信息，请参阅[本节](../../how-to-guides/advanced-user-guides/cis-scan-guides/enable-alerting-for-rancher-cis-benchmark.md)。
 
 
 ## Notifiers 的可信 CA

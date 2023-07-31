@@ -15,7 +15,7 @@ Rancher 使用 cert-manager 为 Rancher 高可用部署自动生成和续期 TLS
 
 :::note 重要提示：
 
-如果你要将 cert-manager 从早于 1.5 的版本升级到最新版本，请按照以下[选项 C](#选项-c：升级-1.5-及以下版本的-cert-manager) 中的步骤进行操作。请注意，你无需重新安装 Rancher 即可执行此升级。
+如果你要将 cert-manager 从早于 1.5 的版本升级到最新版本，请按照以下[选项 C](#选项-c升级-15-及以下版本的-cert-manager) 中的步骤进行操作。请注意，你无需重新安装 Rancher 即可执行此升级。
 
 :::
 
@@ -153,7 +153,7 @@ Rancher 使用 cert-manager 为 Rancher 高可用部署自动生成和续期 TLS
 1. 下载新旧版 cert-manager 所需的 CRD 文件：
 
    ```plain
-   curl -L -o cert-manager/cert-manager-crd.yaml https://raw.githubusercontent.com/cert-manager/cert-manager/release-0.12/deploy/manifests/00-crds.yaml
+   curl -L -o cert-manager-crd.yaml https://raw.githubusercontent.com/cert-manager/cert-manager/release-0.12/deploy/manifests/00-crds.yaml
    curl -L -o cert-manager/cert-manager-crd-old.yaml https://raw.githubusercontent.com/cert-manager/cert-manager/release-X.Y/deploy/manifests/00-crds.yaml
    ```
 

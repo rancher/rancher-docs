@@ -60,7 +60,7 @@ ClusterIP 是一个虚拟 IP，不会响应 ping。要测试 ClusterIP 是否配
 
 ### 支持的 Docker 版本是如何确定的？
 
-我们遵循上游 Kubernetes 版本验证过的 Docker 版本。如果需要获取验证过的版本，请查看 Kubernetes 版本 CHANGELOG.md 中的 [External Dependencies](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.10.md#external-dependencies)。
+我们遵循上游 Kubernetes 版本验证过的 Docker 版本。如果需要获取验证过的版本，请查看 Kubernetes 版本 CHANGELOG.md 中的 [External Dependencies](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.10.md#external-dependencies)。
 
 ### 如何访问 Rancher 创建的节点？
 
@@ -91,7 +91,7 @@ UI 由静态文件组成，并根据 API 的响应工作。换言之，UI 中可
 
 ### 如何将其他参数/绑定/环境变量添加到 Rancher 启动的 Kubernetes 集群的 Kubernetes 组件中？
 
-你可以使用集群选项中的[配置文件](../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#集群配置文件)选项来添加其他参数/​​绑定/环境变量。有关详细信息，请参阅 RKE 文档中的[其他参数、绑定和环境变量](https://rancher.com/docs/rke/latest/en/config-options/services/services-extras/)，或浏览 [Cluster.ymls 示例](https://rancher.com/docs/rke/latest/en/example-yamls/)。
+你可以使用集群选项中的[配置文件](../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#rke-集群配置文件参考)选项来添加其他参数/​​绑定/环境变量。有关详细信息，请参阅 RKE 文档中的[其他参数、绑定和环境变量](https://rancher.com/docs/rke/latest/en/config-options/services/services-extras/)，或浏览 [Cluster.ymls 示例](https://rancher.com/docs/rke/latest/en/example-yamls/)。
 
 ### 如何检查证书链是否有效？
 

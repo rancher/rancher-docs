@@ -42,14 +42,14 @@ title: vSphere 节点模板配置
 | 创建方法 | * | 在节点上设置操作系统的方法。可以使用 ISO 或 VM 模板安装操作系统。根据创建方法，你还必须指定 VM 模板、内容库、现有 VM 或 ISO。有关创建方法的详细信息，请参阅 [VM 创建方法](#vm-创建方法)。 |
 | Cloud Init |          | `cloud-config.yml` 文件的 URL 或用于配置 VM 的 URL。此文件允许进一步定制操作系统，例如网络配置、DNS 服务器或系统守护程序。操作系统必须支持 `cloud-init`。 |
 | 网络 | | 要挂载 VM 的网络的名称。 |
-| guestinfo 配置参数 |          | VM 的其他配置参数。这些参数对应 vSphere 控制台中的[高级设置](https://kb.vmware.com/s/article/1016098)。示例用例包括提供 RancherOS [guestinfo]({{<baseurl>}}/os/v1.x/en/installation/cloud/vmware-esxi/#vmware-guestinfo) 参数，或为 VM 启用磁盘 UUID (`disk.EnableUUID=TRUE`)。 |
+| guestinfo 配置参数 |          | VM 的其他配置参数。这些参数对应 vSphere 控制台中的[高级设置](https://kb.vmware.com/s/article/1016098)。示例用例包括提供 RancherOS [guestinfo](https://rancher.com/docs/os/v1.x/en/installation/cloud/vmware-esxi/#vmware-guestinfo) 参数，或为 VM 启用磁盘 UUID (`disk.EnableUUID=TRUE`)。 |
 
 
 ### VM 创建方法
 
 在**创建方法**字段中，配置用于在 vSphere 中配置 VM 的方法。可用的选项包括创建从 RancherOS ISO 启动的 VM，或通过从现有虚拟机或 [VM 模板](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-F7BF0E6B-7C4F-4E46-8BBF-76229AEA7220.html)克隆来创建 VM。
 
-现有 VM 或模板可以使用任何现代 Linux 操作系统，该操作系统配置为使用 [NoCloud 数据源](https://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html)来支持 [cloud-init](https://cloudinit.readthedocs.io/en/latest/)。
+现有 VM 或模板可以使用任何现代 Linux 操作系统，该操作系统配置为使用 [NoCloud 数据源](https://canonical-cloud-init.readthedocs-hosted.com/en/latest/reference/datasources/nocloud.html)来支持 [cloud-init](https://cloudinit.readthedocs.io/en/latest/)。
 
 选择创建 VM 的方式：
 
@@ -83,3 +83,13 @@ title: vSphere 节点模板配置
 要使用 cloud-init 初始化，请使用有效的 YAML 语法创建一个 cloud config 文件，并将文件内容粘贴到 **Cloud Init** 字段中。要获取支持的 cloud config 指令的注释示例集，请参阅 [cloud-init 文档](https://cloudinit.readthedocs.io/en/latest/topics/examples.html)。
 
 请注意，使用 ISO 创建方法时不支持 cloud-init。
+
+## 引擎选项
+
+在节点模板的**引擎选项**中，你可以配置容器 daemon。你可能需要指定容器版本或容器镜像仓库 Mirror。
+
+:::note
+如果要配置 Red Hat Enterprise Linux (RHEL) 或 CentOS 节点，请将 **Docker Install URL** 字段保留为默认值，或选择 **none**。由于 Docker 已经安装在这些节点上，因此将绕过 Docker 安装检查。
+
+如果没有将 **Docker Install URL** 设置为默认值或 **none**，你可能会看到错误消息：`Error creating machine: RHEL ssh command error: command: sudo -E yum install -y curl err: exit status 1 output: Updating Subscription Management repositories`。
+:::

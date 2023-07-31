@@ -66,13 +66,13 @@ Rancher 是使用 Kubernetes 的 [Helm](https://helm.sh/) 包管理器安装的�
 2. [为 Rancher 创建命名空间](#2-为-rancher-创建命名空间)
 3. [选择 SSL 配置](#3-选择-ssl-配置)
 4. [安装 cert-manager](#4-安装-cert-manager)（除非你自带证书，否则 TLS 将在负载均衡器上终止）
-5. [使用 Helm 和你选择的证书选项安装 Rancher](#5-根据你选择的证书选项，通过-helm-安装-rancher)
+5. [使用 Helm 和你选择的证书选项安装 Rancher](#5-根据你选择的证书选项通过-helm-安装-rancher)
 6. [验证 Rancher Server 是否部署成功](#6-验证-rancher-server-是否部署成功)
 7. [保存选项](#7-保存选项)
 
 ### 1. 添加 Helm Chart 仓库
 
-执行 `helm repo add` 命令，以添加包含安装 Rancher 的 Chart 的 Helm Chart 仓库。有关如何选择仓库，以及哪个仓库最适合你的用例，请参见[选择 Rancher 版本](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#helm-chart-仓库)。
+执行 `helm repo add` 命令，以添加包含安装 Rancher 的 Chart 的 Helm Chart 仓库。有关如何选择仓库，以及哪个仓库最适合你的用例，请参见[选择 Rancher 版本](../getting-started/installation-and-upgrade/resources/choose-a-rancher-version.md)。
 
 - Latest：建议用于试用最新功能
    ```
@@ -142,9 +142,15 @@ v2.6.4 兼容 cert-manager 版本 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为
 
 这些说明来自 [cert-manager 官方文档](https://cert-manager.io/docs/installation/kubernetes/#installing-with-helm)。
 
+:::note
+
+要查看自定义 cert-manager 安装的选项（包括集群使用 PodSecurityPolicies 的情况），请参阅 [cert-manager 文档](https://artifacthub.io/packages/helm/cert-manager/cert-manager#configuration)。
+
+:::
+
 ```
 # 如果你手动安装了CRD，而不是在 Helm 安装命令中添加了 `--set installCRDs=true` 选项，你应该在升级 Helm Chart 之前升级 CRD 资源。
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.7.1/cert-manager.crds.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
 
 # 添加 Jetstack Helm 仓库
 helm repo add jetstack https://charts.jetstack.io
@@ -156,7 +162,7 @@ helm repo update
 helm install cert-manager jetstack/cert-manager \
   --namespace cert-manager \
   --create-namespace \
-  --version v1.7.1
+  --version v1.11.0
 ```
 
 安装完 cert-manager 后，你可以通过检查 cert-manager 命名空间中正在运行的 Pod 来验证它是否已正确部署：

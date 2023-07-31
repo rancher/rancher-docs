@@ -1,6 +1,11 @@
 ---
 title: Vagrant Quick Start
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-rancher-manager/vagrant"/>
+</head>
+
 The following steps quickly deploy a Rancher Server with a single node cluster attached.
 
 :::caution
@@ -31,7 +36,7 @@ The intent of these guides is to quickly launch a sandbox that you can use to ev
 3. **Optional:** Edit `config.yaml` to:
 
     - Change the number of nodes and the memory allocations, if required. (`node.count`, `node.cpus`, `node.memory`)
-    - Change the password of the `admin` user for logging into Rancher. (`admin_password`)
+    - Change the password of the `admin` user for logging into Rancher. (`admin_password`, minimum 12 characters)
 
 4. To initiate the creation of the environment run, `vagrant up --provider=virtualbox`.
 

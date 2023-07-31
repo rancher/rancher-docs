@@ -1,6 +1,6 @@
 # File Mappings
 
-The content structure of the the Rancher Manager documentation has undergone substantial changes.
+The content structure of the the Rancher documentation has undergone substantial changes.
 
 In this folder, you can find files containing mappings for pages from our current documentation to our previous documentation<sup>1</sup>.
 
