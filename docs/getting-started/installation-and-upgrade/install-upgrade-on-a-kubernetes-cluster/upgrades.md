@@ -133,7 +133,7 @@ There will be more values that are listed with this command. This is just an exa
 
 :::tip 
 
-Your deployment name may vary; for example, with the AWS Marketplace offering of Rancher Setup, the deployment name is 'rancher-stable'. 
+Your deployment name may vary; for example, if you're deploying Rancher through the AWS Marketplace, the deployment name is 'rancher-stable'. 
 Thus: 
 ```
 helm get values rancher-stable -n cattle-system
@@ -167,7 +167,7 @@ The above is an example, there may be more values from the previous step that ne
 
 :::tip 
 
-If deployed from the AWS Marketplace offering of Rancher Setup, the deployment name is 'rancher-stable'. 
+If you deploy Rancher through the AWS Marketplace, the deployment name is 'rancher-stable'. 
 Thus: 
 ```
 helm upgrade rancher-stable rancher-<CHART_REPO>/rancher \
