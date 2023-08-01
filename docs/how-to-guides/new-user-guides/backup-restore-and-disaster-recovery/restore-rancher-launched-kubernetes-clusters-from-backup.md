@@ -59,6 +59,8 @@ Follow the procedure described in the [SUSE Knowledgebase](https://www.suse.com/
 </TabItem>
 <TabItem value="RKE2/K3s">
 
+If you have a complete cluster failure, you must remove all etcd nodes/machines from your cluster before you can add a "new" etcd node for restore.
+
 :::note
 
 Due to a [known issue](https://github.com/rancher/rancher/issues/41080), this procedure requires Rancher v2.7.5 or newer.
