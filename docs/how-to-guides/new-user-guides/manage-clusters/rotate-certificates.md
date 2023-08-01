@@ -62,6 +62,13 @@ Rancher launched Kubernetes clusters have the ability to rotate the auto-generat
 
 **Results:** The selected certificates will be rotated and the related services will be restarted to start using the new certificate.
 
+CA certificate rotation is available through the API.
+
+1. Go to the URL endpoint at `https://<RANCHER_FQDN>/v3/clusters/<cluster-ID>`
+1. Select caCertificates boolean
+1. Click on **Show Request**.
+1. Click on **Send Request**.
+
 ### Additional Notes
 
 <Tabs>
