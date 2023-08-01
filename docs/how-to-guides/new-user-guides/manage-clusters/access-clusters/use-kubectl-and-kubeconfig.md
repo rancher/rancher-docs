@@ -27,9 +27,10 @@ These instructions assume that you have already created a Kubernetes cluster, an
 
 :::
 
-1. Log into Rancher. Click **☰ > Cluster Management**.
-1. Go to the cluster that you want to access with kubectl and click **Explore**.
-1. In the top navigation bar, click **Download KubeConfig** button.
+1. Click **☰** in the top left corner of the Rancher portal.
+1. Select **Cluster Management**.
+1. Select the checkbox next to the name of the cluster whose kubeconfig file you want to download.
+1. Click the **Download KubeConfig** button above the table.
 1. Save the YAML file on your local computer. Move the file to `~/.kube/config`. Note: The default location that kubectl uses for the kubeconfig file is `~/.kube/config`, but you can use any directory and specify it using the `--kubeconfig` flag, as in this command:
   ```
   kubectl --kubeconfig /custom/path/kube.config get pods
