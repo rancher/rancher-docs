@@ -119,15 +119,15 @@ Rancher v2.6 introduced the ability to configure [ECR registries for RKE cluster
 
 ### Authorized Cluster Endpoint
 
-Authorized Cluster Endpoint can be used to directly access the Kubernetes API server, without requiring communication through Rancher.
+Authorized Cluster Endpoint (ACE) can be used to directly access the Kubernetes API server, without requiring communication through Rancher.
 
 :::note
 
-The authorized cluster endpoint only works on Kubernetes clusters launched by Rancher. In Kubernetes v2.6.3 and later, this means clusters where Rancher used RKE, RKE2, or K3S to provision the cluster. Prior to Rancher v2.6.3, it was only available for RKE, not RKE2 or K3s. It's also not available for clusters in a hosted Kubernetes provider, such as Amazon's EKS.
+ACE is only avilable on Kubernetes clusters launched by Rancher. In Kubernetes v2.6.3 and later, this means clusters where Rancher used RKE, RKE2, or K3s to provision the cluster. Prior to Rancher v2.6.3, it was only available for RKE. It's also not available for clusters in a hosted Kubernetes provider, such as Amazon's EKS.
 
 :::
 
-This is enabled by default in Rancher-launched Kubernetes clusters, using the IP of the node with the `controlplane` role and the default Kubernetes self signed certificates.
+ACE must be set up [manually](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters#authorized-cluster-endpoint-support-for-rke2-and-k3s-clusters.md) on RKE2 and K3s clusters in Rancher v2.6.3 and later. In RKE, ACE is enabled by default in Rancher-launched Kubernetes clusters, using the IP of the node with the `controlplane` role and the default Kubernetes self signed certificates.
 
 For more detail on how an authorized cluster endpoint works and why it is used, refer to the [architecture section.](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint)
 
