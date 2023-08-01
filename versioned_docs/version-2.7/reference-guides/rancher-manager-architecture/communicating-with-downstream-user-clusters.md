@@ -58,7 +58,7 @@ The `cattle-node-agent` is deployed using a [DaemonSet](https://kubernetes.io/do
 
 An authorized cluster endpoint (ACE) allows users to connect to the Kubernetes API server of a downstream cluster without having to route their requests through the Rancher authentication proxy.
 
-> ACE is only avilable on Kubernetes clusters launched by Rancher, where Rancher used RKE, RKE2, or K3s to provision the cluster. It's not available for clusters in a hosted Kubernetes provider, such as Amazon's EKS.
+> ACE is only available on Kubernetes clusters launched by Rancher, where Rancher used RKE, RKE2, or K3s to provision the cluster. It's not available for clusters in a hosted Kubernetes provider, such as Amazon's EKS.
 
 There are two main reasons why a user might need the authorized cluster endpoint:
 
