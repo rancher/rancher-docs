@@ -24,9 +24,9 @@ Rancher can be installed on these main architectures:
 
 We recommend using Helm, a Kubernetes package manager, to install Rancher on multiple nodes on a dedicated Kubernetes cluster. For RKE clusters, three nodes are required to achieve a high-availability cluster. For K3s clusters, only two nodes are required.
 
-### Automated Quickstart to Deploy Rancher on Amazon EKS
+### Rancher on EKS Install with the AWS Marketplace
 
-Rancher and Amazon Web Services collaborated on a quick start guide for deploying Rancher on an EKS Kubernetes cluster following AWS best practices. The deployment guide is [here.](https://aws-quickstart.github.io/quickstart-eks-rancher/)
+Rancher can be installed on to Amazon Elastic Kubernetes Service (EKS) [through the AWS Marketplace](../getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace.md). The EKS cluster deployed is production-ready and follows AWS best practices. 
 
 ### Single-node Kubernetes Install
 
