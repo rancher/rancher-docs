@@ -6,7 +6,13 @@ title: Creating Apps
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps"/>
 </head>
 
-Rancher's App Marketplace is based on Helm Repositories and Helm Charts. You can add HTTP based standard Helm Repositories as well as any Git Repository which contains charts.
+Rancher's App Marketplace contains additional Kubernetes apps that augement the functionality and infrastructure of your clusters. You can find the Apps Marketplace within the Rancher portal:
+
+1. Click **☰** in the top left corner of the Rancher portal.
+1. Select **Apps** from the left sidebar menu.
+1. Select **Charts** to view the Marketplace.  
+
+The Apps Marketplace is based on Helm Repositories and Helm Charts. You can add HTTP based standard Helm Repositories as well as any Git Repository which contains charts.
 
 :::tip
 
