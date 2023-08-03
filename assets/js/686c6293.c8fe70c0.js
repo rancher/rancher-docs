@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1688073989,
-    "formattedLastUpdatedAt": "Jun 29, 2023",
+    "lastUpdatedAt": 1691090900,
+    "formattedLastUpdatedAt": "Aug 3, 2023",
     "frontMatter": {
         "title": "Creating an EKS Cluster"
     },
@@ -635,7 +635,7 @@ function MDXContent(_param) {
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "EC2Permisssions",
+            "Sid": "EC2Permissions",
             "Effect": "Allow",
             "Action": [
                 "ec2:RunInstances",
@@ -670,7 +670,7 @@ function MDXContent(_param) {
             "Resource": "*"
         },
         {
-            "Sid": "CloudFormationPermisssions",
+            "Sid": "CloudFormationPermissions",
             "Effect": "Allow",
             "Action": [
                 "cloudformation:ListStacks",
@@ -704,13 +704,13 @@ function MDXContent(_param) {
             "Resource": "*"
         },
         {
-            "Sid": "KMSPermisssions",
+            "Sid": "KMSPermissions",
             "Effect": "Allow",
             "Action": "kms:ListKeys",
             "Resource": "*"
         },
         {
-            "Sid": "EKSPermisssions",
+            "Sid": "EKSPermissions",
             "Effect": "Allow",
             "Action": [
                 "eks:UpdateNodegroupVersion",
@@ -748,7 +748,7 @@ function MDXContent(_param) {
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "IAMPermisssions",
+      "Sid": "IAMPermissions",
       "Effect": "Allow",
       "Action": [
         "iam:AddRoleToInstanceProfile",

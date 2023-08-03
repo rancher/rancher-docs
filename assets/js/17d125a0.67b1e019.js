@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.0-2.4/reference-guides/installation-references/amazon-eks-permissions.md",
     "sourceDirName": "reference-guides/installation-references",
     "slug": "/reference-guides/installation-references/amazon-eks-permissions",
-    "permalink": "/zh/v2.0-v2.4/reference-guides/installation-references/amazon-eks-permissions",
+    "permalink": "/v2.0-v2.4/reference-guides/installation-references/amazon-eks-permissions",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.0-2.4/reference-guides/installation-references/amazon-eks-permissions.md",
     "tags": [],
     "version": "2.0-2.4",
-    "lastUpdatedAt": 1688073989,
-    "formattedLastUpdatedAt": "2023年6月29日",
+    "lastUpdatedAt": 1691090900,
+    "formattedLastUpdatedAt": "Aug 3, 2023",
     "frontMatter": {
         "title": "Creating an EKS Cluster"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Feature Flags",
-        "permalink": "/zh/v2.0-v2.4/reference-guides/installation-references/feature-flags"
+        "permalink": "/v2.0-v2.4/reference-guides/installation-references/feature-flags"
     },
     "next": {
         "title": "Configuring OpenLDAP",
-        "permalink": "/zh/v2.0-v2.4/pages-for-subheaders/configure-openldap"
+        "permalink": "/v2.0-v2.4/pages-for-subheaders/configure-openldap"
     }
 };
 const assets = {};
@@ -958,7 +958,7 @@ Deploying to Amazon AWS will incur charges. For more information, refer to the `
         "align": null
     }, `The service role provides Kubernetes the permissions it requires to manage resources on your behalf. Rancher can create the service role with the following `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/v2.0-v2.4/reference-guides/installation-references/amazon-eks-permissions#service-role-permissions"
+        "href": "/v2.0-v2.4/reference-guides/installation-references/amazon-eks-permissions#service-role-permissions"
     }, `Service Role Permissions`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -969,7 +969,7 @@ Deploying to Amazon AWS will incur charges. For more information, refer to the `
         "align": null
     }, `Provides isolated network resources utilised by EKS and worker nodes. Rancher can create the VPC resources with the following `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/v2.0-v2.4/reference-guides/installation-references/amazon-eks-permissions#vpc-permissions"
+        "href": "/v2.0-v2.4/reference-guides/installation-references/amazon-eks-permissions#vpc-permissions"
     }, `VPC Permissions`), `.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Resource targeting uses `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `*`), ` as the ARN of many of the resources created cannot be known before creating the EKS cluster in Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
@@ -979,7 +979,7 @@ Deploying to Amazon AWS will incur charges. For more information, refer to the `
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "EC2Permisssions",
+            "Sid": "EC2Permissions",
             "Effect": "Allow",
             "Action": [
                 "ec2:RunInstances",
@@ -1012,7 +1012,7 @@ Deploying to Amazon AWS will incur charges. For more information, refer to the `
             "Resource": "*"
         },
         {
-            "Sid": "CloudFormationPermisssions",
+            "Sid": "CloudFormationPermissions",
             "Effect": "Allow",
             "Action": [
                 "cloudformation:ListStacks",
@@ -1046,13 +1046,13 @@ Deploying to Amazon AWS will incur charges. For more information, refer to the `
             "Resource": "*"
         },
         {
-            "Sid": "KMSPermisssions",
+            "Sid": "KMSPermissions",
             "Effect": "Allow",
             "Action": "kms:ListKeys",
             "Resource": "*"
         },
         {
-            "Sid": "EKSPermisssions",
+            "Sid": "EKSPermissions",
             "Effect": "Allow",
             "Action": [
                 "eks:UpdateNodegroupVersion",
@@ -1110,7 +1110,7 @@ arn:aws:iam::aws:policy/AmazonEKSServicePolicy
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "IAMPermisssions",
+      "Sid": "IAMPermissions",
       "Effect": "Allow",
       "Action": [
         "iam:AddRoleToInstanceProfile",

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[39810],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[19388],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 70443:
+/***/ 32720:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks",
-    "id": "version-2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks",
+    "id": "version-2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks",
     "title": "创建 EKS 集群",
     "description": "Amazon EKS 为 Kubernetes 集群提供托管的 controlplane。Amazon EKS 跨多个可用区运行 Kubernetes controlplane 实例，以确保高可用性。Rancher 提供了一个直观的用户界面，用于管理和部署你运行在 Amazon EKS 中的 Kubernetes 集群。通过本指南，你将使用 Rancher 在你的 AWS 账户中快速轻松地启动 Amazon EKS Kubernetes 集群。有关 Amazon EKS 的更多信息，请参阅此文档。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks.md",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks.md",
     "sourceDirName": "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers",
     "slug": "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks",
-    "permalink": "/zh/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks",
+    "permalink": "/zh/v2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1688521962,
-    "formattedLastUpdatedAt": "2023年7月5日",
+    "version": "2.6",
+    "lastUpdatedAt": 1691090900,
+    "formattedLastUpdatedAt": "2023年8月3日",
     "frontMatter": {
         "title": "创建 EKS 集群"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "通过托管 Kubernetes 提供商设置集群",
-        "permalink": "/zh/v2.7/pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers"
+        "permalink": "/zh/v2.6/pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers"
     },
     "next": {
         "title": "创建 GKE 集群",
-        "permalink": "/zh/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/gke"
+        "permalink": "/zh/v2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/gke"
     }
 };
 const assets = {};
@@ -555,7 +555,7 @@ function MDXContent(_param) {
         "id": "eks-集群配置参考"
     }, `EKS 集群配置参考`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `有关 EKS 集群配置选项的完整列表，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.7/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration"
+        "href": "/zh/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration"
     }, `此页面`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "架构"
     }, `架构`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `下图展示了 Rancher 2.x 的上层架构。下图中，Rancher Server 管理两个 Kubernetes 集群，其中一个由 RKE 创建，另一个由 EKS 创建。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("figcaption", null, "通过 Rancher 的认证代理管理 Kubernetes 集群"), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
@@ -632,7 +632,7 @@ function MDXContent(_param) {
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "EC2Permisssions",
+            "Sid": "EC2Permissions",
             "Effect": "Allow",
             "Action": [
                 "ec2:RunInstances",
@@ -667,7 +667,7 @@ function MDXContent(_param) {
             "Resource": "*"
         },
         {
-            "Sid": "CloudFormationPermisssions",
+            "Sid": "CloudFormationPermissions",
             "Effect": "Allow",
             "Action": [
                 "cloudformation:ListStacks",
@@ -701,13 +701,13 @@ function MDXContent(_param) {
             "Resource": "*"
         },
         {
-            "Sid": "KMSPermisssions",
+            "Sid": "KMSPermissions",
             "Effect": "Allow",
             "Action": "kms:ListKeys",
             "Resource": "*"
         },
         {
-            "Sid": "EKSPermisssions",
+            "Sid": "EKSPermissions",
             "Effect": "Allow",
             "Action": [
                 "eks:UpdateNodegroupVersion",
@@ -745,7 +745,7 @@ function MDXContent(_param) {
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "IAMPermisssions",
+      "Sid": "IAMPermissions",
       "Effect": "Allow",
       "Action": [
         "iam:AddRoleToInstanceProfile",
@@ -831,10 +831,10 @@ arn:aws:iam::aws:policy/AmazonEKSServicePolicy
         "id": "同步"
     }, `同步`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `EKS 配置者可以在 Rancher 和提供商之间同步 EKS 集群的状态。有关其工作原理的技术说明，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.7/reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters"
+        "href": "/zh/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters"
     }, `同步`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `有关配置刷新间隔的信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.7/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration#%E9%85%8D%E7%BD%AE%E5%88%B7%E6%96%B0%E9%97%B4%E9%9A%94"
+        "href": "/zh/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration#%E9%85%8D%E7%BD%AE%E5%88%B7%E6%96%B0%E9%97%B4%E9%9A%94"
     }, `本节`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "故障排除"
     }, `故障排除`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果你的更改被覆盖，可能是集群数据与 EKS 同步的方式导致的。不要在使用其他源（例如 EKS 控制台）对集群进行更改后，又在五分钟之内在 Rancher 中进行更改。有关其工作原理，以及如何配置刷新间隔的信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
