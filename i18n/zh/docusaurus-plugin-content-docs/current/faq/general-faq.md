@@ -22,13 +22,13 @@ title: 一般常见问题解答
 
 **Rancher 是否支持 Windows？**
 
-从 Rancher 2.3.0 开始，我们支持 Windows Server 1809 容器。有关如何使用 Windows Worker 节点设置集群的详细信息，请参阅[为 Windows 配置自定义集群](../pages-for-subheaders/use-windows-clusters.md)。
+Rancher 支持 Windows Server 1809 容器。有关如何使用 Windows Worker 节点设置集群的详细信息，请参阅[为 Windows 配置自定义集群](../pages-for-subheaders/use-windows-clusters.md)。
 
 <br/>
 
 **Rancher 是否支持 Istio？**
 
-从 Rancher 2.3.0 开始，我们支持 [Istio.](../pages-for-subheaders/istio.md)
+Rancher 支持 [Istio](../pages-for-subheaders/istio.md)。
 
 此外，Istio 是在我们的微型 PaaS “Rio” 中实现的，它可以运行在 Rancher 2.x 以及任何符合 CNCF 的 Kubernetes 集群上。详情请参阅[这里](https://rio.io/)。
 

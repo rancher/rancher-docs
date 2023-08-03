@@ -56,15 +56,16 @@ title: 配置 NGINX 负载均衡器
            proxy_pass rancher_servers_http;
        }
 
+   }
+
+   http {
+
        upstream rancher_servers_https {
            least_conn;
            server <IP_NODE_1>:443 max_fails=3 fail_timeout=5s;
            server <IP_NODE_2>:443 max_fails=3 fail_timeout=5s;
            server <IP_NODE_3>:443 max_fails=3 fail_timeout=5s;
        }
-   }
-
-   http {
        server {
            listen 443 ssl;
            proxy_pass rancher_servers_https;

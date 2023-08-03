@@ -127,6 +127,17 @@ hostname: rancher.my.org
 
 :::
 
+:::tip
+
+Deployment 的名称可能会有所不同。例如，如果你通过 AWS Marketplace 部署 Rancher，则 Deployment 的名称为“rancher-stable”。
+因此：
+```
+helm get values rancher-stable -n cattle-system
+
+hostname: rancher.my.org
+```
+
+:::
 
 如果要将 cert-manager 从 v1.5 或更早的版本升级到最新版本，请参阅 [cert-manager upgrade docs](../resources/upgrade-cert-manager.md#选项-c升级-15-及以下版本的-cert-manager) 了解如何在不卸载或重新安装 Rancher 的情况下升级 cert-manager。否则，请按照以下[ Rancher 升级步骤](#rancher-升级步骤)进行操作。
 
@@ -150,6 +161,18 @@ helm upgrade rancher rancher-<CHART_REPO>/rancher \
 
 :::
 
+:::tip
+
+如果你通过 AWS Marketplace 部署 Rancher，则 Deployment 的名称为“rancher-stable”。
+因此：
+```
+helm upgrade rancher-stable rancher-<CHART_REPO>/rancher \
+  --namespace cattle-system \
+  --set hostname=rancher.my.org
+```
+
+:::
+
 另外，你也可以将当前的值导出到一个文件中，并在升级时引用该文件。例如，如果你只需要改变 Rancher 的版本：
 
 1. 将当前值导出到文件：
@@ -158,14 +181,14 @@ helm upgrade rancher rancher-<CHART_REPO>/rancher \
    ```
 1. 只更新 Rancher 版本：
 
-对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
+   对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
 
-    ```
-    helm upgrade rancher rancher-<CHART_REPO>/rancher \
-      --namespace cattle-system \
-      -f values.yaml \
-      --version=2.6.8
-    ```
+   ```
+   helm upgrade rancher rancher-<CHART_REPO>/rancher \
+     --namespace cattle-system \
+     -f values.yaml \
+     --version=2.6.8
+   ```
 
 ### 4. 验证升级
 

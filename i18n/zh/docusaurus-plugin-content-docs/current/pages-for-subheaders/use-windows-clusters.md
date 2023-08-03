@@ -17,13 +17,6 @@ Windows 集群的其他要求如下：
 
 有关支持 Windows 的 Kubernetes 功能摘要，请参阅[在 Windows 中使用 Kubernetes 支持的功能和限制](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#supported-functionality-and-limitations)的 Kubernetes 文档，或[在 Kubernetes 中调度 Windows 容器的指南](https://kubernetes.io/docs/setup/production-environment/windows/user-guide-windows-containers/)。
 
-
-## Rancher 2.6 变更
-
-Rancher 2.6 支持直接使用 Rancher UI 配置 [RKE2](https://docs.rke2.io/) 集群。RKE2，也称为 RKE Government，是一个完全符合标准的 Kubernetes 发行版，它专注于安全性和合规性。
-
-在 Rancher 2.6.5 中，RKE2 已经 GA。
-
 ### RKE2 Windows
 
 RKE2 配置功能还包括在 Windows 集群上安装 RKE2。RKE2 的 Windows 功能包括：
@@ -40,8 +33,6 @@ RKE2 配置功能还包括在 Windows 集群上安装 RKE2。RKE2 的 Windows �
 默认情况下，Rancher 允许 Windows 工作负载 pod 部署在 Windows 和 Linux Worker 节点上。在 RKE2 中创建混合集群时，你必须编辑 Chart 中的 `nodeSelector`，从而将 Pod 放置到兼容的 Windows 节点上。有关如何使用 `nodeSelector` 将 pod 分配给节点的更多信息，请参阅 [Kubernetes 文档](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector)。
 
 :::
-
-**_Rancher v2.6.7 新功能_**
 
 - Kubernetes v1.24.1 及更高版本支持 Windows RKE2 中的 HostProcess 容器。有关详细信息，请参阅[上游文档](https://kubernetes.io/docs/tasks/configure-pod-container/create-hostprocess-pod/)。
 

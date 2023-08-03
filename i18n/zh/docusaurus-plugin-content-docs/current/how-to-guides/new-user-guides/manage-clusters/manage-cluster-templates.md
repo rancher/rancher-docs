@@ -20,7 +20,7 @@ Rancher 不管理集群模板的版本控制。版本控制在包含模板的 He
 
 ## RKE2 集群模板
 
-RKE2 集群模板的示例仓库在[这里](https://github.com/rancher/cluster-template-examples)。从 Rancher 2.6.0 开始，我们提供了一个 RKE2 集群模板，未来可能会添加更多模板。
+请参阅 [RKE2 集群模板](https://github.com/rancher/cluster-template-examples)的示例仓库。
 
 ## 向 Rancher 添加集群模板
 
@@ -33,7 +33,7 @@ RKE2 集群模板的示例仓库在[这里](https://github.com/rancher/cluster-t
 
 :::
 
-1. 转到集群模板示例仓库。你可以在[此 GitHub 仓库](https://github.com/rancher/cluster-template-examples)中找到 Rancher 的示例。从 Rancher 2.6.0 开始，我们提供了一个 RKE2 集群模板，未来可能会添加更多模板。
+1. 转到集群模板示例仓库。Rancher 的示例位于[此 GitHub 仓库中](https://github.com/rancher/cluster-template-examples)。
 1. 复刻仓库。
 1. 可选：通过编辑 `values.yaml` 文件来编辑集群选项。有关编辑文件的帮助，请参阅集群模板的 Helm Chart 自述文件。
 1. 将 Chart 仓库添加到 Rancher。点击 **☰ > 集群管理**。

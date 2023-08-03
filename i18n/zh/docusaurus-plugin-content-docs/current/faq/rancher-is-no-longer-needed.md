@@ -27,7 +27,7 @@ title: 卸载 Rancher
 
 如果你[在 Kubernetes 集群上安装了 Rancher](../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md)，你可以使用 [Rancher Cleanup](https://github.com/rancher/rancher-cleanup) 工具删除 Rancher。
 
-从 Rancher 2.5.8 开始，在高可用性 (HA) 模式下卸载 Rancher 还将删除所有 `helm-operation-*` Pod 和以下应用程序：
+在高可用 (HA) 模式下卸载 Rancher 还将删除所有 `helm-operation-*` Pod 和以下应用程序：
 
 - fleet
 - fleet-agent

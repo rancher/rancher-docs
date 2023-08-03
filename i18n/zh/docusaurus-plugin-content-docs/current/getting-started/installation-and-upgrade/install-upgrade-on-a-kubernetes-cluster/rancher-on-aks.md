@@ -138,8 +138,6 @@ ingress-nginx-controller   LoadBalancer   10.0.116.18    40.31.180.83   80:31229
 
 安装 Rancher 时，使用上一步获取的 DNS 名称作为 Rancher Server 的 URL。它可以作为 Helm 选项传递进来。例如，如果 DNS 名称是 `rancher.my.org`，你需要使用 `--set hostname=rancher.my.org` 选项来运行 Helm 安装命令。
 
-**_v2.6.7 新功能_**
-
 在此设置之上安装 Rancher 时，你还需要将以下值传递到 Rancher Helm 安装命令，以设置与 Rancher 的 Ingress 资源一起使用的 Ingress Controller 的名称：
 
 ```
