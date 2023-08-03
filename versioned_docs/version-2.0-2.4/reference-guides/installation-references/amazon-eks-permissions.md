@@ -219,7 +219,7 @@ Resource targeting uses `*` as the ARN of many of the resources created cannot b
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "EC2Permisssions",
+            "Sid": "EC2Permissions",
             "Effect": "Allow",
             "Action": [
                 "ec2:RunInstances",
@@ -252,7 +252,7 @@ Resource targeting uses `*` as the ARN of many of the resources created cannot b
             "Resource": "*"
         },
         {
-            "Sid": "CloudFormationPermisssions",
+            "Sid": "CloudFormationPermissions",
             "Effect": "Allow",
             "Action": [
                 "cloudformation:ListStacks",
@@ -286,13 +286,13 @@ Resource targeting uses `*` as the ARN of many of the resources created cannot b
             "Resource": "*"
         },
         {
-            "Sid": "KMSPermisssions",
+            "Sid": "KMSPermissions",
             "Effect": "Allow",
             "Action": "kms:ListKeys",
             "Resource": "*"
         },
         {
-            "Sid": "EKSPermisssions",
+            "Sid": "EKSPermissions",
             "Effect": "Allow",
             "Action": [
                 "eks:UpdateNodegroupVersion",
@@ -357,7 +357,7 @@ Permissions required for Rancher to create service role on users behalf during t
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "IAMPermisssions",
+      "Sid": "IAMPermissions",
       "Effect": "Allow",
       "Action": [
         "iam:AddRoleToInstanceProfile",
