@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/getting-started/installation-and-upgrade/resources/update-rancher-certificate.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1685574646,
-    "formattedLastUpdatedAt": "May 31, 2023",
+    "lastUpdatedAt": 1691425855,
+    "formattedLastUpdatedAt": "Aug 7, 2023",
     "frontMatter": {
         "title": "Updating the Rancher Certificate"
     },
@@ -633,7 +633,7 @@ privateCA: true
         "id": "why-is-this-step-required"
     }, `Why is this step required?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When Rancher is configured with a certificate signed by a private CA, the CA certificate chain is trusted by Rancher agent containers. Agents compare the checksum of the downloaded certificate against the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `CATTLE_CA_CHECKSUM`), ` environment variable. This means that, when the private CA certificate used by Rancher has changed, the environvment variable `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `CATTLE_CA_CHECKSUM`), ` environment variable. This means that, when the private CA certificate used by Rancher has changed, the environment variable `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `CATTLE_CA_CHECKSUM`), ` must be updated accordingly.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "which-method-should-i-choose"
