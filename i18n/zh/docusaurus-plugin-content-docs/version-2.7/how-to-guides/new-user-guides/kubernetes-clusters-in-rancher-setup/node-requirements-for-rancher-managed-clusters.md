@@ -116,6 +116,12 @@ Windows 节点只能用于 Worker 节点。请参阅[配置 Windows 自定义集
 
 在[下游集群端口要求](../../../getting-started/installation-and-upgrade/installation-requirements/port-requirements.md#下游-kubernetes-集群节点)中，你可以找到在各种情况下使用的端口的详细信息。
 
+:::caution
+
+不要使用与现有节点相同的主机名或 IP 地址来注册节点。这样做会导致 RKE 阻止节点加入，并导致配置挂起。主机驱动和自定义集群都可能发生这种情况。如果节点必须重用现有节点的主机名或 IP，则必须在注册节点之前设置 `hostname_override` [RKE 选项](https://rke.docs.rancher.com/config-options/nodes#overriding-the-hostname)，以便节点能够正确加入。
+
+:::
+
 ## 可选：安全注意事项
 
 如果你要配置符合 CIS（互联网安全中心）Kubernetes 基准的 Kubernetes 集群，我们建议你在安装 Kubernetes 之前按照我们的强化指南来配置节点。

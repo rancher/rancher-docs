@@ -4,7 +4,7 @@ title: NeuVector 集成
 
 ### Rancher 中的 NeuVector 集成
 
-[NeuVector 5.x](https://open-docs.neuvector.com/) 是一个开源的，以容器为中心的安全应用程序，Rancher 2.6.5 现已集成 NeuVector。NeuVector 在运行时为关键应用程序和数据提供实时的合规、可见和保护功能。NeuVector 提供具有 CIS Benchmark 和漏洞扫描的防火墙、容器进程/文件系统监控和安全审计。有关 Rancher 安全性的更多信息，请参阅[安全文档](../pages-for-subheaders/rancher-security.md)。
+[NeuVector 5.x](https://open-docs.neuvector.com/) 是一个开源的，以容器为中心的安全应用程序，Rancher 已集成 NeuVector。NeuVector 在运行时为关键应用程序和数据提供实时的合规、可见和保护功能。NeuVector 提供具有 CIS Benchmark 和漏洞扫描的防火墙、容器进程/文件系统监控和安全审计。有关 Rancher 安全性的更多信息，请参阅[安全文档](../pages-for-subheaders/rancher-security.md)。
 
 NeuVector 可以通过 Helm Chart 启用。你可以在 **Apps** 或 Rancher UI 中的 **Cluster Tools** 中安装该 Chart。安装 Helm Chart 后，用户可以轻松地[在 Rancher 中部署和管理 NeuVector 集群](https://open-docs.neuvector.com/deploying/rancher#deploy-and-manage-neuvector-through-rancher-apps-marketplace)。
 
@@ -108,8 +108,6 @@ NeuVector 安全解决方案包含四种类型的安全容器，分别是 Contro
 
 - 如果 PSP 设置为 true，则所有 NeuVector 组件都是可部署的。
 
-**_v2.6.7 新功能_**
-
 你需要为强化集群环境进行额外的配置，如下所示：
 
 1. 点击 **☰ > 集群管理**。
@@ -140,8 +138,6 @@ kubectl patch deploy neuvector-scanner-pod -n cattle-neuvector-system --patch '{
 kubectl patch cronjob neuvector-updater-pod -n cattle-neuvector-system --patch '{"spec":{"jobTemplate":{"spec":{"template":{"spec":{"securityContext":{"runAsUser": 5400}}}}}}}'
 ```
 <br/>
-
-**_v2.6.7 新功能_**
 
 你需要为强化集群环境进行额外的配置。
 
