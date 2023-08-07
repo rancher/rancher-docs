@@ -2,40 +2,9 @@
 title: 在 Amazon EKS 上安装 Rancher
 ---
 
-本文介绍了在 EKS 上安装 Rancher 的两种方法。
-
-第一种方法是使用 CloudFormation 在 EKS 集群上部署 Rancher Server。该方法的指南是与 Amazon Web Services 合作创建的，旨在展示如何按照最佳实践部署 Rancher。
-
-第二种方法是使用命令行工具安装带有 Ingress 的 EKS 集群。如果你想在 EKS 上使用 Rancher 时使用较少的资源，请使用此方法。
+本文介绍了如何在 Amazon EKS 集群上安装 Rancher。你也可以[通过 AWS Marketplace 安装 Rancher](../../quick-start-guides/deploy-rancher-manager/aws-marketplace.md)。
 
 如果你已经有一个 EKS Kubernetes 集群，请直接跳转到[安装 Ingress](#5-安装-ingress)这个步骤。然后按照[此处](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#安装-rancher-helm-chart)的步骤安装 Rancher Helm Chart。
-
-
-## 使用 AWS 最佳实践的快速入门
-
-Rancher 和 Amazon Web Services 合作编写了一份快速入门指南，用于按照 AWS 的最佳实践，在 EKS 集群上部署 Rancher。详情请参见[部署指南](https://aws-quickstart.github.io/quickstart-eks-rancher/)。
-
-快速入门指南提供了在 EKS 上部署 Rancher 的三个选项：
-
-- **将 Rancher 部署到新的 VPC 和新的 Amazon EKS 集群中**：该选项构建了一个由 VPC、子网、NAT 网关、安全组、堡垒主机、Amazon EKS 集群和其他基础设施组件组成的全新 AWS 环境。然后将 Rancher 部署到这个新的 EKS 集群中。
-- **将 Rancher 部署到现有 VPC 和新的 Amazon EKS 集群中**：此选项在现有 AWS 基础架构中配置 Rancher。
-- **将 Rancher 部署到现有的 VPC 和现有的 Amazon EKS 集群中**。此选项在现有 AWS 基础架构中配置 Rancher。
-
-使用默认参数为新的 Virtual Private Cloud（VPC）和新的 Amazon EKS 集群按照此快速入门部署，会在 AWS Cloud 中构建以下 Rancher 环境：
-
-- 跨越三个可用区的高可用架构。\*
-- 根据 AWS 最佳实践，配置有公共和私有子网的 VPC，为你提供 AWS 上你自己的虚拟网络。\*
-- 在公共子网中：
-   - 管理网络地址转换（NAT）网关，以允许资源的出站互联网访问。\*
-   - 自动扩缩组中的 Linux 堡垒主机，允许对公共和私有子网中的 Amazon Elastic Compute Cloud (Amazon EC2) 实例进行入站安全 Shell (SSH) 访问。\*
-- 私有子网中：
-   - 自动扩缩组中的 Kubernetes 节点。\*
-   - 网络负载均衡器（未显示），用于访问 Rancher 控制台。
-- 使用 AWS Systems Manager 自动化进行 Rancher 部署。
-- 用于 EKS 集群的 Amazon EKS 服务，它提供了 Kubernetes controlplane。\*
-- 用于访问 Rancher 部署的 Amazon Route 53 DNS 记录。
-
-\* 将快速启动部署到现有 Amazon EKS 集群中的 CloudForm 模板会跳过标有星号（\*）的组件，并提示你查看现有 VPC 配置。
 
 ## 为 Rancher Server 创建 EKS 集群
 
