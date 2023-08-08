@@ -244,6 +244,8 @@ spec:
 
 ## Example Credential Secret for Storing Backups in S3
 
+The `accessKey` and `secretKey` must be base64 encoded values. If you acquired your `accessKey` or `secretKey` through the Rancher UI, enter the value exactly as it appears in the UI. If you acquired either key through a commandline tool such as kubectl, you'll need to manually encode the key in base64.
+
 ```yaml
 apiVersion: v1
 kind: Secret
