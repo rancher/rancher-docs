@@ -25,6 +25,3 @@ CIS Benchmark 4.0.0 and above have PSPs disabled by default. To install CIS Benc
 If you have a cluster running Kubernetes v1.25 or later, you can set the Rancher CIS benchmark by [assigning](../../new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates.md) the `rancher-restricted` [PSA](../../new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards.md) configuration template to the cluster and selecting a CIS profile.  
 </TabItem>
 </Tabs>
-
-[dgf](../open-ports-with-firewalld.md)
-
