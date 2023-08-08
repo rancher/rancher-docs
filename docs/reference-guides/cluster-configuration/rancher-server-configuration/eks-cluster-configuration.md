@@ -82,9 +82,11 @@ Amazon EKS managed node groups automate the provisioning and lifecycle managemen
 
 For more information about how node groups work and how they are configured, refer to the [EKS documentation.](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html)
 
-#### Bring your own launch template
+#### Existing Launch Templates
 
-A launch template ID and version can be provided in order to easily configure the EC2 instances in a node group. If a launch template is provided, then none of the settings below will be configurable in Rancher. Therefore, using a launch template would require that all the necessary and desired settings from the list below would need to be specified in the launch template. Also note that if a launch template ID and version is provided, then only the template version can be updated. Using a new template ID would require creating a new managed node group.
+You can provide your own launch template ID and version to configure the EC2 instances in a node group. If you provide the launch template, none of the template settings will be configurable from Rancher. You must set all of the required options listed below in your launch template. 
+
+Also, if you provide the launch template, you can only update the template version, not the template ID. To use a new template ID, create a new managed node group.
 
 | Option | Description | Required/Optional |
 | ------ | ----------- | ----------------- |
@@ -93,7 +95,7 @@ A launch template ID and version can be provided in order to easily configure th
 | Node Volume Size | The launch template must specify an EBS volume with the desired size | Required |
 | SSH Key | A key to be added to the instances to provide SSH access to the nodes | Optional |
 | User Data | Cloud init script in [MIME multi-part format](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html#launch-template-user-data) | Optional |
-| Instance Resource Tags | Tag each EC2 instance in the node group | Optional |
+| Instance Resource Tags | Tag each EC2 instance and its volumes in the node group | Optional |
 
 #### Rancher-managed launch templates
 
