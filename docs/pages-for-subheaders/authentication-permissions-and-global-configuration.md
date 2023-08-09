@@ -74,6 +74,8 @@ Rancher includes some features that are experimental and/or disabled by default.
 
 The following features are available within the **Global Configuration** sidebar:
 
-- **Catalogs**: Global catalogs are deprecated as of Rancher v2.7. 
+- **Catalogs**
 - **Global DNS Entries**
 - **Global DNS Providers**
+
+As these are legacy features, please see the Rancher v2.0—v2.4 docs on [catalogs](../../versioned_docs/v2.0-v2.4/pages-for-subheaders/helm-charts-in-rancher.md), [global DNS entries](../../versioned_docs/v2.0-v2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns.md#adding-a-global-dns-entry), and [global DNS providers](../../versioned_docs/v2.0-v2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns.md#editing-a-global-dns-provider) for more details.
