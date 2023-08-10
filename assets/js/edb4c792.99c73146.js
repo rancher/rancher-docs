@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[92289],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[99436],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 16763:
+/***/ 12090:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher",
-    "id": "version-2.5/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher",
+    "id": "version-2.7/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher",
     "title": "Setting up a High-availability RKE2 Kubernetes Cluster for Rancher",
-    "description": "Tested on v2.5.6",
-    "source": "@site/versioned_docs/version-2.5/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher.md",
+    "description": "This section describes how to install a Kubernetes cluster according to the best practices for the Rancher server environment.",
+    "source": "@site/versioned_docs/version-2.7/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher.md",
     "sourceDirName": "how-to-guides/new-user-guides/kubernetes-cluster-setup",
     "slug": "/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher",
-    "permalink": "/zh/v2.5/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher",
+    "permalink": "/v2.7/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher.md",
     "tags": [],
-    "version": "2.5",
-    "lastUpdatedAt": 1685572449,
-    "formattedLastUpdatedAt": "2023年5月31日",
+    "version": "2.7",
+    "lastUpdatedAt": 1691704614,
+    "formattedLastUpdatedAt": "Aug 10, 2023",
     "frontMatter": {
         "title": "Setting up a High-availability RKE2 Kubernetes Cluster for Rancher"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Setting up a High-availability RKE Kubernetes Cluster",
-        "permalink": "/zh/v2.5/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher"
+        "permalink": "/v2.7/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher"
     },
     "next": {
         "title": "Don't have infrastructure for your Kubernetes cluster? Try one of these tutorials.",
-        "permalink": "/zh/v2.5/pages-for-subheaders/infrastructure-setup"
+        "permalink": "/v2.7/pages-for-subheaders/infrastructure-setup"
     }
 };
 const assets = {};
@@ -370,11 +370,6 @@ const toc = [
         value: '4. Check the Health of Your Cluster Pods',
         id: '4-check-the-health-of-your-cluster-pods',
         level: 3
-    },
-    {
-        value: '5. Configure nginx to be a daemonset',
-        id: '5-configure-nginx-to-be-a-daemonset',
-        level: 3
     }
 ];
 const layoutProps = {
@@ -388,16 +383,17 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
-        parentName: "p"
-    }, `Tested on v2.5.6`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section describes how to install a Kubernetes cluster according to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section describes how to install a Kubernetes cluster according to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/reference-guides/rancher-manager-architecture/architecture-recommendations#environment-for-kubernetes-installations"
+        "href": "/v2.7/reference-guides/rancher-manager-architecture/architecture-recommendations#environment-for-kubernetes-installations"
     }, `best practices for the Rancher server environment.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "prerequisites"
     }, `Prerequisites`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These instructions assume you have set up three nodes, a load balancer, and a DNS record, as described in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/how-to-guides/new-user-guides/infrastructure-setup/ha-rke2-kubernetes-cluster"
+        "href": "/v2.7/how-to-guides/new-user-guides/infrastructure-setup/ha-rke2-kubernetes-cluster"
     }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Note that in order for RKE2 to work correctly with the load balancer, you need to set up two listeners: one for the supervisor on port 9345, and one for the Kubernetes API on port 6443.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher needs to be installed on a supported Kubernetes version. To find out which versions of Kubernetes are supported for your Rancher version, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://rancher.com/support-maintenance-terms/"
@@ -418,7 +414,7 @@ tls-san:
   - another-kubernetes-domain.com
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After that, you need to run the install command and enable and start rke2:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
-    }, `curl -sfL https://get.rke2.io | INSTALL_RKE2_CHANNEL=v1.20 sh -
+    }, `curl -sfL https://get.rke2.io | sh -
 systemctl enable rke2-server.service
 systemctl start rke2-server.service
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -481,7 +477,7 @@ You should see your server nodes in the Ready state.
         parentName: "ol"
     }, `In the kubeconfig file, the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
-    }, `server`), ` directive is defined as localhost. Configure the server as the DNS of your load balancer, referring to port 6443. (The Kubernetes API server will be reached at port 6443, while the Rancher server will be reached at ports 80 and 443.) Here is an example `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `server`), ` directive is defined as localhost. Configure the server as the DNS of your control-plane load balancer, on port 6443. (The RKE2 Kubernetes API Server uses port 6443, while the Rancher server will be served via the NGINX Ingress on ports 80 and 443.) Here is an example `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
     }, `rke2.yaml`), `:`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
@@ -532,56 +528,45 @@ users:
         parentName: "p"
     }, `kubectl`), ` to access the cluster from your local machine.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Check that all the required pods and containers are healthy are ready to continue:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
-    }, ` /var/lib/rancher/rke2/bin/kubectl         --kubeconfig /etc/rancher/rke2/rke2.yaml get pods -A
-NAMESPACE     NAME                                                 READY   STATUS      RESTARTS   AGE
-kube-system   etcd-ip-172-31-18-145                                1/1     Running     0          4m37s
-kube-system   etcd-ip-172-31-25-73                                 1/1     Running     0          20m
-kube-system   etcd-ip-172-31-31-210                                1/1     Running     0          9m12s
-kube-system   helm-install-rke2-canal-th9k9                        0/1     Completed   0          21m
-kube-system   helm-install-rke2-coredns-6njr6                      0/1     Completed   0          21m
-kube-system   helm-install-rke2-ingress-nginx-vztsd                0/1     Completed   0          21m
-kube-system   helm-install-rke2-kube-proxy-6std5                   0/1     Completed   0          21m
-kube-system   helm-install-rke2-metrics-server-9sl7m               0/1     Completed   0          21m
-kube-system   kube-apiserver-ip-172-31-18-145                      1/1     Running     0          4m22s
-kube-system   kube-apiserver-ip-172-31-25-73                       1/1     Running     0          20m
-kube-system   kube-apiserver-ip-172-31-31-210                      1/1     Running     0          9m8s
-kube-system   kube-controller-manager-ip-172-31-18-145             1/1     Running     0          4m8s
-kube-system   kube-controller-manager-ip-172-31-25-73              1/1     Running     0          21m
-kube-system   kube-controller-manager-ip-172-31-31-210             1/1     Running     0          8m55s
-kube-system   kube-proxy-57twm                                     1/1     Running     0          10m
-kube-system   kube-proxy-f7pc6                                     1/1     Running     0          5m24s
-kube-system   kube-proxy-rj4t5                                     1/1     Running     0          21m
-kube-system   kube-scheduler-ip-172-31-18-145                      1/1     Running     0          4m15s
-kube-system   kube-scheduler-ip-172-31-25-73                       1/1     Running     0          21m
-kube-system   kube-scheduler-ip-172-31-31-210                      1/1     Running     0          8m48s
-kube-system   rke2-canal-4x972                                     2/2     Running     0          10m
-kube-system   rke2-canal-flh8m                                     2/2     Running     0          5m24s
-kube-system   rke2-canal-zfhkr                                     2/2     Running     0          21m
-kube-system   rke2-coredns-rke2-coredns-6cd96645d6-cmstq           1/1     Running     0          21m
-kube-system   rke2-ingress-nginx-controller-54946dd48f-6mp76       1/1     Running     0          20m
-kube-system   rke2-ingress-nginx-default-backend-5795954f8-p92xx   1/1     Running     0          20m
-kube-system   rke2-metrics-server-5f9b5757dc-k5sgh                 1/1     Running     0          20m
+    }, `/var/lib/rancher/rke2/bin/kubectl --kubeconfig /etc/rancher/rke2/rke2.yaml get pods -A
+NAMESPACE     NAME                                                    READY   STATUS      RESTARTS   AGE
+kube-system   cloud-controller-manager-rke2-server-1                  1/1     Running     0          2m28s
+kube-system   cloud-controller-manager-rke2-server-2                  1/1     Running     0          61s
+kube-system   cloud-controller-manager-rke2-server-3                  1/1     Running     0          49s
+kube-system   etcd-rke2-server-1                                      1/1     Running     0          2m13s
+kube-system   etcd-rke2-server-2                                      1/1     Running     0          87s
+kube-system   etcd-rke2-server-3                                      1/1     Running     0          56s
+kube-system   helm-install-rke2-canal-hs6sx                           0/1     Completed   0          2m17s
+kube-system   helm-install-rke2-coredns-xmzm8                         0/1     Completed   0          2m17s
+kube-system   helm-install-rke2-ingress-nginx-flwnl                   0/1     Completed   0          2m17s
+kube-system   helm-install-rke2-metrics-server-7sggn                  0/1     Completed   0          2m17s
+kube-system   kube-apiserver-rke2-server-1                            1/1     Running     0          116s
+kube-system   kube-apiserver-rke2-server-2                            1/1     Running     0          66s
+kube-system   kube-apiserver-rke2-server-3                            1/1     Running     0          48s
+kube-system   kube-controller-manager-rke2-server-1                   1/1     Running     0          2m30s
+kube-system   kube-controller-manager-rke2-server-2                   1/1     Running     0          57s
+kube-system   kube-controller-manager-rke2-server-3                   1/1     Running     0          42s
+kube-system   kube-proxy-rke2-server-1                                1/1     Running     0          2m25s
+kube-system   kube-proxy-rke2-server-2                                1/1     Running     0          59s
+kube-system   kube-proxy-rke2-server-3                                1/1     Running     0          85s
+kube-system   kube-scheduler-rke2-server-1                            1/1     Running     0          2m30s
+kube-system   kube-scheduler-rke2-server-2                            1/1     Running     0          57s
+kube-system   kube-scheduler-rke2-server-3                            1/1     Running     0          42s
+kube-system   rke2-canal-b9lvm                                        2/2     Running     0          91s
+kube-system   rke2-canal-khwp2                                        2/2     Running     0          2m5s
+kube-system   rke2-canal-swfmq                                        2/2     Running     0          105s
+kube-system   rke2-coredns-rke2-coredns-547d5499cb-6tvwb              1/1     Running     0          92s
+kube-system   rke2-coredns-rke2-coredns-547d5499cb-rdttj              1/1     Running     0          2m8s
+kube-system   rke2-coredns-rke2-coredns-autoscaler-65c9bb465d-85sq5   1/1     Running     0          2m8s
+kube-system   rke2-ingress-nginx-controller-69qxc                     1/1     Running     0          52s
+kube-system   rke2-ingress-nginx-controller-7hprp                     1/1     Running     0          52s
+kube-system   rke2-ingress-nginx-controller-x658h                     1/1     Running     0          52s
+kube-system   rke2-metrics-server-6564db4569-vdfkn                    1/1     Running     0          66s
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
     }, `Result:`), ` You have confirmed that you can access the cluster with `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `kubectl`), ` and the RKE2 cluster is running successfully. Now the Rancher management server can be installed on the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "5-configure-nginx-to-be-a-daemonset"
-    }, `5. Configure nginx to be a daemonset`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Currently, RKE2 deploys nginx-ingress as a deployment, and that can impact the Rancher deployment so that you cannot use all servers to proxy requests to the Rancher pods.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To rectify that, place the following file in /var/lib/rancher/rke2/server/manifests on any of the server nodes:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-yaml"
-    }, `apiVersion: helm.cattle.io/v1
-kind: HelmChartConfig
-metadata:
-  name: rke2-ingress-nginx
-  namespace: kube-system
-spec:
-  valuesContent: |-
-    controller:
-      kind: DaemonSet
-      daemonset:
-        useHostPort: true
-`)));
+    }, `kubectl`), ` and the RKE2 cluster is running successfully. Now the Rancher management server can be installed on the cluster.`));
 }
 MDXContent.isMDXComponent = true;
 

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[92304],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[11810],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 67953:
+/***/ 9265:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs",
-    "id": "version-2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs",
+    "id": "version-2.5/how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs",
     "title": "About High-availability Installations",
     "description": "We recommend using Helm, a Kubernetes package manager, to install Rancher on a dedicated Kubernetes cluster. This is called a high-availability Kubernetes installation because increased availability is achieved by running Rancher on multiple nodes.",
-    "source": "@site/versioned_docs/version-2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs.md",
+    "source": "@site/versioned_docs/version-2.5/how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs.md",
     "sourceDirName": "how-to-guides/new-user-guides/kubernetes-cluster-setup",
     "slug": "/how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs",
-    "permalink": "/v2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs",
+    "permalink": "/zh/v2.5/how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs.md",
     "tags": [],
-    "version": "2.6",
-    "lastUpdatedAt": 1668452187,
-    "formattedLastUpdatedAt": "Nov 14, 2022",
+    "version": "2.5",
+    "lastUpdatedAt": 1691704614,
+    "formattedLastUpdatedAt": "2023年8月10日",
     "frontMatter": {
         "title": "About High-availability Installations"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Don't have a Kubernetes cluster? Try one of these tutorials.",
-        "permalink": "/v2.6/pages-for-subheaders/kubernetes-cluster-setup"
+        "permalink": "/zh/v2.5/pages-for-subheaders/kubernetes-cluster-setup"
     },
     "next": {
         "title": "Setting up a High-availability K3s Kubernetes Cluster for Rancher",
-        "permalink": "/v2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher"
+        "permalink": "/zh/v2.5/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher"
     }
 };
 const assets = {};
@@ -358,9 +358,12 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `We recommend using Helm, a Kubernetes package manager, to install Rancher on a dedicated Kubernetes cluster. This is called a high-availability Kubernetes installation because increased availability is achieved by running Rancher on multiple nodes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In a standard installation, Kubernetes is first installed on three nodes that are hosted in an infrastructure provider such as Amazon's EC2 or Google Compute Engine.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Then Helm is used to install Rancher on top of the Kubernetes cluster. Helm uses Rancher's Helm chart to install a replica of Rancher on each of the three nodes in the Kubernetes cluster. We recommend using a load balancer to direct traffic to each replica of Rancher in the cluster, in order to increase Rancher's availability.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Rancher server data is stored on etcd. This etcd database also runs on all three nodes, and requires an odd number of nodes so that it can always elect a leader with a majority of the etcd cluster. If the etcd database cannot elect a leader, etcd can fail, requiring the cluster to be restored from backup.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For information on how Rancher works, regardless of the installation method, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `We recommend using Helm, a Kubernetes package manager, to install Rancher on a dedicated Kubernetes cluster. This is called a high-availability Kubernetes installation because increased availability is achieved by running Rancher on multiple nodes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In a standard installation, Kubernetes is first installed on three nodes that are hosted in an infrastructure provider such as Amazon's EC2 or Google Compute Engine.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Then Helm is used to install Rancher on top of the Kubernetes cluster. Helm uses Rancher's Helm chart to install a replica of Rancher on each of the three nodes in the Kubernetes cluster. We recommend using a load balancer to direct traffic to each replica of Rancher in the cluster, in order to increase Rancher's availability.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Rancher server data is stored on etcd. This etcd database also runs on all three nodes, and requires an odd number of nodes so that it can always elect a leader with a majority of the etcd cluster. If the etcd database cannot elect a leader, etcd can fail, requiring the cluster to be restored from backup.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For information on how Rancher works, regardless of the installation method, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/pages-for-subheaders/rancher-manager-architecture"
+        "href": "/zh/v2.5/pages-for-subheaders/rancher-manager-architecture"
     }, `architecture section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "recommended-architecture"
     }, `Recommended Architecture`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {

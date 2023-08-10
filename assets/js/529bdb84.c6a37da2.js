@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[46644],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[21538],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 94640:
+/***/ 48236:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher",
-    "id": "version-2.5/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher",
+    "id": "version-2.0-2.4/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher",
     "title": "Setting up a High-availability K3s Kubernetes Cluster for Rancher",
     "description": "This section describes how to install a Kubernetes cluster according to the best practices for the Rancher server environment.",
-    "source": "@site/versioned_docs/version-2.5/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher.md",
+    "source": "@site/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher.md",
     "sourceDirName": "how-to-guides/new-user-guides/kubernetes-cluster-setup",
     "slug": "/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher",
-    "permalink": "/zh/v2.5/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher",
+    "permalink": "/v2.0-v2.4/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher.md",
     "tags": [],
-    "version": "2.5",
-    "lastUpdatedAt": 1686627390,
-    "formattedLastUpdatedAt": "2023年6月13日",
+    "version": "2.0-2.4",
+    "lastUpdatedAt": 1691704614,
+    "formattedLastUpdatedAt": "Aug 10, 2023",
     "frontMatter": {
         "title": "Setting up a High-availability K3s Kubernetes Cluster for Rancher"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "About High-availability Installations",
-        "permalink": "/zh/v2.5/how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs"
+        "permalink": "/v2.0-v2.4/how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs"
     },
     "next": {
         "title": "Setting up a High-availability RKE Kubernetes Cluster",
-        "permalink": "/zh/v2.5/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher"
+        "permalink": "/v2.0-v2.4/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher"
     }
 };
 const assets = {};
@@ -383,9 +383,12 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section describes how to install a Kubernetes cluster according to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section describes how to install a Kubernetes cluster according to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/reference-guides/rancher-manager-architecture/architecture-recommendations#environment-for-kubernetes-installations"
+        "href": "/v2.0-v2.4/reference-guides/rancher-manager-architecture/architecture-recommendations#environment-for-kubernetes-installations"
     }, `best practices for the Rancher server environment.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For systems without direct internet access, refer to the air gap installation instructions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "blockquote"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -399,7 +402,7 @@ In a single-node Kubernetes cluster, the Rancher server does not have high avail
         "id": "prerequisites"
     }, `Prerequisites`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These instructions assume you have set up two nodes, a load balancer, a DNS record, and an external MySQL database as described in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster"
+        "href": "/v2.0-v2.4/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster"
     }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher needs to be installed on a supported Kubernetes version. To find out which versions of Kubernetes are supported for your Rancher version, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://rancher.com/support-maintenance-terms/"

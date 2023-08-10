@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[34047],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[32417],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 71309:
+/***/ 22132:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher",
-    "id": "version-2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher",
+    "id": "version-2.7/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher",
     "title": "Setting up a High-availability RKE Kubernetes Cluster",
     "description": "This section describes how to install a Kubernetes cluster. This cluster should be dedicated to run only the Rancher server.",
-    "source": "@site/versioned_docs/version-2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher.md",
+    "source": "@site/versioned_docs/version-2.7/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher.md",
     "sourceDirName": "how-to-guides/new-user-guides/kubernetes-cluster-setup",
     "slug": "/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher",
-    "permalink": "/v2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher",
+    "permalink": "/v2.7/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher.md",
     "tags": [],
-    "version": "2.6",
-    "lastUpdatedAt": 1683581867,
-    "formattedLastUpdatedAt": "May 8, 2023",
+    "version": "2.7",
+    "lastUpdatedAt": 1691704614,
+    "formattedLastUpdatedAt": "Aug 10, 2023",
     "frontMatter": {
         "title": "Setting up a High-availability RKE Kubernetes Cluster"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Setting up a High-availability K3s Kubernetes Cluster for Rancher",
-        "permalink": "/v2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher"
+        "permalink": "/v2.7/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher"
     },
     "next": {
         "title": "Setting up a High-availability RKE2 Kubernetes Cluster for Rancher",
-        "permalink": "/v2.6/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher"
+        "permalink": "/v2.7/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher"
     }
 };
 const assets = {};
@@ -398,13 +398,16 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section describes how to install a Kubernetes cluster. This cluster should be dedicated to run only the Rancher server.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section describes how to install a Kubernetes cluster. This cluster should be dedicated to run only the Rancher server.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
     }, `Rancher can run on any Kubernetes cluster, included hosted Kubernetes solutions such as Amazon EKS. The below instructions represent only one possible way to install Kubernetes.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For systems without direct internet access, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/pages-for-subheaders/air-gapped-helm-cli-install"
+        "href": "/v2.7/pages-for-subheaders/air-gapped-helm-cli-install"
     }, `Air Gap: Kubernetes install.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "title": "Single-node Installation Tip:",
         "type": "tip"
@@ -481,7 +484,7 @@ ingress:
   options:
     use-forwarded-headers: "true"
 
-kubernetes_version: v1.24.13-rancher2-1
+kubernetes_version: v1.25.6-rancher4-1
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("figcaption", null, "Common RKE Nodes Options"), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
@@ -578,12 +581,12 @@ kubernetes_version: v1.24.13-rancher2-1
         parentName: "admonition"
     }, `For tuning your etcd cluster for larger Rancher installations, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs"
+        "href": "/v2.7/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs"
     }, `etcd settings guide`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
     }, `For more information regarding Dockershim support, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/getting-started/installation-and-upgrade/installation-requirements/dockershim"
+        "href": "/v2.7/getting-started/installation-and-upgrade/installation-requirements/dockershim"
     }, `this page`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "2-run-rke"
     }, `2. Run RKE`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
@@ -725,12 +728,12 @@ kube-system     rke-network-plugin-deploy-job-6pbgj       0/1       Completed   
         "id": "issues-or-errors"
     }, `Issues or errors?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/troubleshooting"
+        "href": "/v2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/troubleshooting"
     }, `Troubleshooting`), ` page.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "next-install-rancher"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "h3",
-        "href": "/v2.6/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster"
+        "href": "/v2.7/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster"
     }, `Next: Install Rancher`)));
 }
 MDXContent.isMDXComponent = true;
