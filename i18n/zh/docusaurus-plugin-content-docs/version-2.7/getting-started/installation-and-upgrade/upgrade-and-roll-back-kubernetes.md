@@ -92,7 +92,7 @@ RKE v1.1.0 改变了集群升级的方式。
 
 :::note
 
-从 Rancher v2.4.0 开始出现了一个[已知问题](https://github.com/rancher/rancher/issues/25478)，即使 etcd 和 controlplane 正在被清空， Rancher UI 不会将它们的状态显示为已清空。
+目前存在一个[已知问题](https://github.com/rancher/rancher/issues/25478)，即使 etcd 和 controlplane 正在被清空， Rancher UI 也不会将它们的状态显示为 drained。
 
 :::
 

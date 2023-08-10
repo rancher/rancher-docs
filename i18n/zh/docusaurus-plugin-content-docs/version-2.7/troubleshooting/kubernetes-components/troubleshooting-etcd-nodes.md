@@ -280,11 +280,29 @@ docker exec etcd etcdctl alarm disarm
 docker exec etcd etcdctl alarm list
 ```
 
-## 日志级别
+## 配置日志级别
 
-etcd 的日志级别可以通过 API 来动态更改。你可以使用以下命令来配置调试日志。
+:::note
 
-命令：
+你无法再动态更改 etcd v3.5 或更高版本中的日志级别。
+
+:::
+
+### etcd v3.5 及更高版本
+
+要配置 etcd 的日志级别，请编辑集群 YAML：
+
+```
+services:
+  etcd:
+    extra_args:
+      log-level: "debug"
+```
+
+### etcd v3.4 及更早版本
+
+在早期的 etcd 版本中，你可以使用 API 动态更改日志级别。使用以下命令来配置调试日志：
+
 ```
 docker run --net=host -v $(docker inspect kubelet --format '{{ range .Mounts }}{{ if eq .Destination "/etc/kubernetes" }}{{ .Source }}{{ end }}{{ end }}')/ssl:/etc/kubernetes/ssl:ro appropriate/curl -s -XPUT -d '{"Level":"DEBUG"}' --cacert $(docker exec etcd printenv ETCDCTL_CACERT) --cert $(docker exec etcd printenv ETCDCTL_CERT) --key $(docker exec etcd printenv ETCDCTL_KEY) $(docker exec etcd printenv ETCDCTL_ENDPOINTS)/config/local/log
 ```

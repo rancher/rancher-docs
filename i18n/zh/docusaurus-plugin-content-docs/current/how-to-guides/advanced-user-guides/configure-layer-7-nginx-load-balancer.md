@@ -208,7 +208,7 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-Rancher 2.5 开始需要[特权访问](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)。
+此操作需要 [privileged 访问](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)。
 
 这个 7 层 NGINX 配置已经在 NGINX 1.13（Mainline）和 1.14（Stable）版本上进行了测试。
 
