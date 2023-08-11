@@ -14,7 +14,7 @@ It follows the steps provided in the official [vSphere migration documentation](
 
 ### Cloud-config Format Limitation
 
-Existing volumes that were provisioned using the following cloud-config format will NOT get migrated due to an existing bug in vsphere CSI.
+Existing volumes that were provisioned using the following cloud-config format won't get migrated due to an existing bug in vSphere Cloud Storage Interface (CSI).
 
 If the cloud-config has this format for datastore and resource pool path, vsphere CSI driver cannot recognize it:
 
