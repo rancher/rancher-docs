@@ -95,7 +95,7 @@ Also, if you provide the launch template, you can only update the template versi
 | Node Volume Size | The launch template must specify an EBS volume with the desired size | Required |
 | SSH Key | A key to be added to the instances to provide SSH access to the nodes | Optional |
 | User Data | Cloud init script in [MIME multi-part format](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html#launch-template-user-data) | Optional |
-| Instance Resource Tags | Tag each EC2 instance and its volumes in the node group | Optional |
+| Instance Resource Tags | Tag each EC2 instance in the node group | Optional |
 
 #### Rancher-managed Launch Templates
 
