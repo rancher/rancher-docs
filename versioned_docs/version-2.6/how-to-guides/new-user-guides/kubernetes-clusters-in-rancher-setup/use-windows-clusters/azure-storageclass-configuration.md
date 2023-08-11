@@ -2,6 +2,10 @@
 title: Configuration for Storage Classes in Azure
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/azure-storageclass-configuration"/>
+</head>
+
 If you are using Azure VMs for your nodes, you can use [Azure files](https://docs.microsoft.com/en-us/azure/aks/azure-files-dynamic-pv) as a StorageClass for the cluster.
 
 In order to have the Azure platform create the required storage resources, follow these steps:

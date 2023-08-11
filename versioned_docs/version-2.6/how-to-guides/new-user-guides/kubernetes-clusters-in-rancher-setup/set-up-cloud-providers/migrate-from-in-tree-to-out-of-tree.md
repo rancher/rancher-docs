@@ -1,6 +1,11 @@
 ---
-title: Migrating vSphere In-tree Volumes to CSI
+title: Migrating vSphere In-tree Volumes to Out-of-tree
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/migrate-from-in-tree-to-out-of-tree"/>
+</head>
+
 Kubernetes is moving away from maintaining cloud providers in-tree. vSphere has an out-of-tree cloud provider that can be used by installing the vSphere cloud provider and cloud storage plugins.
 
 This page covers how to migrate from the in-tree vSphere cloud provider to out-of-tree, and manage the existing VMs post migration.
@@ -9,7 +14,7 @@ It follows the steps provided in the official [vSphere migration documentation](
 
 ### Cloud-config Format Limitation
 
-Existing volumes that were provisioned using the following cloud-config format will NOT get migrated due to an existing bug in vsphere CSI.
+Existing volumes that were provisioned using the following cloud-config format won't get migrated due to an existing bug in vSphere Cloud Storage Interface (CSI).
 
 If the cloud-config has this format for datastore and resource pool path, vsphere CSI driver cannot recognize it:
 

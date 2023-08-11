@@ -2,6 +2,10 @@
 title: Setting up the Amazon Cloud Provider
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon"/>
+</head>
+
 When using the `Amazon` cloud provider, you can leverage the following capabilities:
 
 - **Load Balancers:** Launches an AWS Elastic Load Balancer (ELB) when choosing `Layer-4 Load Balancer` in **Port Mapping** or when launching a `Service` with `type: LoadBalancer`.

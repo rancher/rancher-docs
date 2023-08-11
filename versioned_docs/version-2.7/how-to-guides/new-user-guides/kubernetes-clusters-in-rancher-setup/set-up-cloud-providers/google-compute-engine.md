@@ -2,6 +2,10 @@
 title: Setting up the Google Compute Engine Cloud Provider
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/google-compute-engine"/>
+</head>
+
 In this section, you'll learn how to enable the Google Compute Engine (GCE) cloud provider for custom clusters in Rancher. A custom cluster is one in which Rancher installs Kubernetes on existing nodes.
 
 The official Kubernetes documentation for the GCE cloud provider is [here.](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#gce)

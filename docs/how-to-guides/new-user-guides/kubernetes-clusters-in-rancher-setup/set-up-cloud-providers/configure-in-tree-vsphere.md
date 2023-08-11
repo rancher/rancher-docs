@@ -1,6 +1,10 @@
 ---
-title: How to Configure In-tree vSphere Cloud Provider
+title: How to Configure an In-tree vSphere Cloud Provider
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere"/>
+</head>
 
 To set up the in-tree vSphere cloud provider, follow these steps while creating the vSphere cluster in Rancher:
 
