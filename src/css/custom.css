@@ -37,14 +37,13 @@
 }
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary-lightest: #80bbe2;
-  --ifm-color-primary-lighter: #5eaadb;
-  --ifm-color-primary-light: #53a4d8;
-  --ifm-color-primary: #3d98d3;
-  --ifm-color-primary-dark: #2d8bc8;
-  --ifm-color-primary-darker: #2b83bc;
-  --ifm-color-primary-darkest: #236c9b;
-  --ifm-code-font-size: 95%;
+  --ifm-color-primary: #2453ff;
+  --ifm-color-primary-dark: #073cff;
+  --ifm-color-primary-darker: #0035f7;
+  --ifm-color-primary-darkest: #002ccc;
+  --ifm-color-primary-light: #416aff;
+  --ifm-color-primary-lighter: #5075ff;
+  --ifm-color-primary-lightest: #7b98ff;
 }
 @media (max-width: 768px) {
   #theme-main h1 {
@@ -160,4 +159,120 @@ a.btn.navbar__github::before {
   height: 100%;
   width: 100%;
   position: absolute;
+}
+
+.section-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.two-cols .section-content {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.has-sub-sections > h3 {
+  margin-bottom: 1.5rem;
+}
+
+.has-sub-sections > .section-content {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.has-sub-sections > .section-content > .homepage-section {
+  margin-bottom: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.homepage-section {
+  margin-bottom: 3rem;
+}
+
+.homepage-section h3 {
+  font-weight: 600;
+}
+
+.section-description {
+  color: var(--docs-color-text-100);
+  margin: 0rem 0 1.25rem 0;
+  margin-top: -0.5rem;
+}
+
+.google-link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+
+.has-sub-sections > .section-content .section-description {
+  font-size: 14px;
+}
+
+.homepage-card {
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0.75rem;
+  text-decoration: none;
+  color: var(--docs-color-text);
+
+  --ifm-link-hover-decoration: none;
+  --ifm-link-hover-color: inherit;
+  cursor: pointer;
+  @apply flex flex-row items-center;
+  @apply border-secondary-800 bg-secondary-900 hover:bg-secondary-800;
+  border-width: 1px;
+  transition-property: background-color, color;
+
+  border-radius: 8px;
+}
+
+.homepage-card.row {
+  flex-direction: row;
+}
+
+.icon svg {
+  width: auto;
+  height: 100%;
+}
+
+.homepage-card .icon {
+  width: 48px;
+  height: 48px;
+  @apply mx-1;
+  /* background-color: #262626;
+  border-radius: 8px; */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-content .title {
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+}
+
+.card-content .description {
+  font-size: 14px;
+  color: var(--docs-color-text-100);
+  line-height: 1.5;
+}
+
+.homepage-card details {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--docs-color-text-100) !important;
+  background: var(--docs-color-background-100) !important;
+  border: solid 2px var(--docs-color-code-background) !important;
+}
+
+details code {
+  background-color: var(--docs-color-background);
+}
+
+details p {
+  font-weight: 300;
 }
