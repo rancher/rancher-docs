@@ -2,6 +2,10 @@
 title: Windows and Linux Cluster Feature Parity
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/windows-linux-cluster-feature-parity"/>
+</head>
+
 Windows clusters do not share the same feature support as Linux clusters.
 
 The following chart describes the feature parity between Windows and Linux on Rancher as of Rancher v2.5.8:
