@@ -2,6 +2,10 @@
 title: Creating a GKE Cluster
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/gke"/>
+</head>
+
 ## Prerequisites
 
 Some setup in Google Kubernetes Engine is required.

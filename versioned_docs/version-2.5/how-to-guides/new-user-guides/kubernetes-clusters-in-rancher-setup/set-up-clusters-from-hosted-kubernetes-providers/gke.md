@@ -2,6 +2,10 @@
 title: Managing GKE Clusters
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/gke"/>
+</head>
+
 <Tabs>
 <TabItem value="Rancher v2.5.8+">
 

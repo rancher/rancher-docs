@@ -2,6 +2,10 @@
 title: Creating an AKS Cluster
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/aks"/>
+</head>
+
 You can use Rancher to create a cluster hosted in Microsoft Azure Kubernetes Service (AKS).
 
 
