@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[45184],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[27349],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 48424:
+/***/ 16133:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -314,19 +314,19 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/ingress-configuration",
-    "id": "version-2.7/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/ingress-configuration",
+    "id": "how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/ingress-configuration",
     "title": "Ingress Configuration",
     "description": "Ingress configuration",
-    "source": "@site/versioned_docs/version-2.7/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/ingress-configuration.md",
+    "source": "@site/docs/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/ingress-configuration.md",
     "sourceDirName": "how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller",
     "slug": "/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/ingress-configuration",
-    "permalink": "/v2.7/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/ingress-configuration",
+    "permalink": "/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/ingress-configuration",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/ingress-configuration.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/ingress-configuration.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1691696522,
+    "formattedLastUpdatedAt": "Aug 10, 2023",
     "frontMatter": {
         "title": "Ingress Configuration",
         "description": "Ingress configuration"
@@ -334,11 +334,11 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Adding Ingresses",
-        "permalink": "/v2.7/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/add-ingresses"
+        "permalink": "/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/add-ingresses"
     },
     "next": {
         "title": "Services",
-        "permalink": "/v2.7/how-to-guides/new-user-guides/kubernetes-resources-setup/create-services"
+        "permalink": "/how-to-guides/new-user-guides/kubernetes-resources-setup/create-services"
     }
 };
 const assets = {};
@@ -376,7 +376,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `For Kubernetes v1.21 and up, the NGINX Ingress controller no longer runs in hostNetwork by default. It instead uses hostPorts for port 80 and port 443, so you can configure the admission webhook to be accessible only through the ClusterIP. This ensures that the webhook is only accessible from within the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
-    }, `Because of this change to the controller, the default behavior no longer sets `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `Because of this change to the controller, the default RKE1 behavior no longer sets `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `hostNetwork`), ` to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
@@ -384,7 +384,13 @@ function MDXContent(_param) {
         parentName: "p"
     }, `hostNetwork`), ` to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `true`), ` for TCP- and UDP-based Services to work.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }, `true`), ` for TCP- and UDP-based Services to work. To do so, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration#editing-clusters-with-yaml"
+    }, `edit`), ` the cluster's YAML and follow the steps in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://rke.docs.rancher.com/config-options/add-ons/ingress-controllers#configuring-network-options"
+    }, `official RKE1 doccumention`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "specify-a-hostname-to-use"
     }, `Specify a hostname to use`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you use this option, Ingress routes requests for a hostname to the service or workload that you specify.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
@@ -422,7 +428,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `You must have an SSL certificate that Ingress can use to encrypt and decrypt communications. For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-resources-setup/encrypt-http-communication"
+        "href": "/how-to-guides/new-user-guides/kubernetes-resources-setup/encrypt-http-communication"
     }, `Adding SSL Certificates`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, `To create an Ingress controller, click the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {

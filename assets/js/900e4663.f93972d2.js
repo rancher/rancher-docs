@@ -325,8 +325,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/ingress-configuration.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1686824534,
-    "formattedLastUpdatedAt": "Jun 15, 2023",
+    "lastUpdatedAt": 1691696522,
+    "formattedLastUpdatedAt": "Aug 10, 2023",
     "frontMatter": {
         "title": "Ingress Configuration",
         "description": "Ingress configuration"
@@ -376,7 +376,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `For Kubernetes v1.21 and up, the NGINX Ingress controller no longer runs in hostNetwork by default. It instead uses hostPorts for port 80 and port 443, so you can configure the admission webhook to be accessible only through the ClusterIP. This ensures that the webhook is only accessible from within the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
-    }, `Because of this change to the controller, the default behavior no longer sets `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `Because of this change to the controller, the default RKE1 behavior no longer sets `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `hostNetwork`), ` to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
@@ -384,7 +384,13 @@ function MDXContent(_param) {
         parentName: "p"
     }, `hostNetwork`), ` to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `true`), ` for TCP- and UDP-based Services to work.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `true`), ` for TCP- and UDP-based Services to work. To do so, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration#editing-clusters-with-yaml"
+    }, `edit`), ` the cluster's YAML and follow the steps in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://rke.docs.rancher.com/config-options/add-ons/ingress-controllers#configuring-network-options"
+    }, `official RKE1 doccumention`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
