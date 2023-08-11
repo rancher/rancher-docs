@@ -1,5 +1,5 @@
 ---
-title: RKE2 Self-Assessment Guide - CIS Benchmark v1.23 - K8s v1.25
+title: RKE2 Self-Assessment Guide - CIS Benchmark v1.7 - K8s v1.25
 ---
 
 This document is a companion to the [RKE2 Hardening Guide](../../../../pages-for-subheaders/rke2-hardening-guide.md), which provides prescriptive guidance on how to harden RKE2 clusters that are running in production and managed by Rancher. This benchmark guide helps you evaluate the security of a hardened cluster against each control in the CIS Kubernetes Benchmark.
