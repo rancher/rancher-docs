@@ -2,6 +2,10 @@
 title: Roles for Nodes in Kubernetes
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters/roles-for-nodes-in-kubernetes"/>
+</head>
+
 This section describes the roles for etcd nodes, controlplane nodes, and worker nodes in Kubernetes, and how the roles work together in a cluster.
 
 This diagram is applicable to Kubernetes clusters [launched with Rancher using RKE.](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md).
