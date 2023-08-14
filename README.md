@@ -4,9 +4,9 @@ To get started, fork and clone the rancher-docs repository.
 
 Our repository doesn't allow you to make changes directly to the `main` branch. Create a working branch and make pull requests from your fork to [rancher/rancher-docs](https://github.com/rancher/rancher-docs).
 
-For most updates, you'll need to update a file in `/docs`, and the corresponding file in `/versioned_docs/version-2.7`. If a change affects older versions, you can find files documenting Rancher v2.0 and later in the `/versioned_docs` directory. 
+For most updates, you'll need to edit a file in `/docs`, and the corresponding file in `/versioned_docs/version-2.7`. If a change affects older versions, you can find files documenting Rancher v2.0 and later in the `/versioned_docs` directory. 
 
-If a file is moved or renamed, you'll also need to update the `sidebars.js` files for each version, and the list of redirects in `docusaurus.config.js`. 
+If a file is moved or renamed, you'll also need to edit the `sidebars.js` files for each version, and the list of redirects in `docusaurus.config.js`. 
 
 ## Style & Formatting
 
