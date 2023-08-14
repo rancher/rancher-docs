@@ -2,6 +2,10 @@
 title: Rolling Back Workloads
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/roll-back-workloads"/>
+</head>
+
 Sometimes there is a need to rollback to the previous version of the application, either for debugging purposes or because an upgrade did not go as planned.
 
 1. In the upper left corner, click **☰ > Cluster Management**.

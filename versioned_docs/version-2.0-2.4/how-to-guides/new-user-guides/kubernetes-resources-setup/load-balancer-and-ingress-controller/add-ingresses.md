@@ -3,6 +3,10 @@ title: Adding Ingresses to Your Project
 description: Ingresses can be added for workloads to provide load balancing, SSL termination and host/path-based routing. Learn how to add Rancher ingress to your project
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/add-ingresses"/>
+</head>
+
 Ingress can be added for workloads to provide load balancing, SSL termination and host/path based routing. When using ingresses in a project, you can program the ingress hostname to an external DNS by setting up a [Global DNS entry](../../helm-charts-in-rancher/globaldns.md).
 
 1. From the **Global** view, open the project that you want to add ingress to.
