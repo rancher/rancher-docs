@@ -8,11 +8,11 @@ This guide corresponds to the following versions of Rancher, CIS Benchmarks, and
 
 | Rancher Version | CIS Benchmark Version | Kubernetes Version |
 |-----------------|-----------------------|--------------------|
-| Rancher v2.7    | Benchmark v1.23       | Kubernetes v1.25   |
+| Rancher v2.7    | Benchmark v1.7       | Kubernetes v1.25   |
 
 This document is for Rancher operators, security teams, auditors and decision makers.
 
-For more information about each control, including detailed descriptions and remediations for failing tests, refer to the corresponding section of the CIS Kubernetes Benchmark v1.23. You can download the benchmark, after creating a free account, at [Center for Internet Security (CIS)](https://www.cisecurity.org/benchmark/kubernetes/).
+For more information about each control, including detailed descriptions and remediations for failing tests, refer to the corresponding section of the CIS Kubernetes Benchmark v1.7. You can download the benchmark, after creating a free account, at [Center for Internet Security (CIS)](https://www.cisecurity.org/benchmark/kubernetes/).
 
 ## Testing Methodology
 
