@@ -3,6 +3,10 @@ title: Deploying Workloads
 description: Read this step by step guide for deploying workloads. Deploy a workload to run an application in one or more containers.
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/deploy-workloads"/>
+</head>
+
 Deploy a workload to run an application in one or more containers.
 
 1. In the upper left corner, click **☰ > Cluster Management**.

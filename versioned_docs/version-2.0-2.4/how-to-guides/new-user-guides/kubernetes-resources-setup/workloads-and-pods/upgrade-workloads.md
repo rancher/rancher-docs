@@ -2,6 +2,10 @@
 title: Upgrading Workloads
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/upgrade-workloads"/>
+</head>
+
 When a new version of an application image is released on Docker Hub, you can upgrade any workloads running a previous version of the application to the new one.
 
 1. From the **Global** view, open the project running the workload you want to upgrade.
