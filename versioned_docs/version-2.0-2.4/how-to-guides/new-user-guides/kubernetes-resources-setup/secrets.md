@@ -2,6 +2,10 @@
 title: Secrets
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-resources-setup/secrets"/>
+</head>
+
 [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/#overview-of-secrets) store sensitive data like passwords, tokens, or keys. They may contain one or more key value pairs.
 
 > This page is about secrets in general. For details on setting up a private registry, refer to the section on [registries.](kubernetes-and-docker-registries.md)
