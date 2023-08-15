@@ -325,8 +325,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/pages-for-subheaders/installation-and-upgrade.md",
     "tags": [],
     "version": "2.5",
-    "lastUpdatedAt": 1690990478,
-    "formattedLastUpdatedAt": "Aug 2, 2023",
+    "lastUpdatedAt": 1692135266,
+    "formattedLastUpdatedAt": "Aug 15, 2023",
     "frontMatter": {
         "title": "Installing/Upgrading Rancher",
         "description": "Learn how to install Rancher in development and production environments. Read about single node and high availability installation"
@@ -366,11 +366,6 @@ const toc = [
     {
         value: 'High-availability Kubernetes Install with RancherD',
         id: 'high-availability-kubernetes-install-with-rancherd',
-        level: 3
-    },
-    {
-        value: 'Rancher on EKS Install with the AWS Marketplace',
-        id: 'rancher-on-eks-install-with-the-aws-marketplace',
         level: 3
     },
     {
@@ -460,11 +455,6 @@ function MDXContent(_param) {
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
     }, `Note:`), ` RancherD was an experimental feature available as part of Rancher v2.5.4 through v2.5.10 but is now deprecated and not available for recent releases.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `RancherD is a single binary that first launches an RKE2 Kubernetes cluster, then installs the Rancher server Helm chart on the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In both the RancherD install and the Helm CLI install, Rancher is installed as a Helm chart on a Kubernetes cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Configuration and upgrading are also simplified with RancherD. When you upgrade the RancherD binary, both the Kubernetes cluster and the Rancher Helm chart are upgraded.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "rancher-on-eks-install-with-the-aws-marketplace"
-    }, `Rancher on EKS Install with the AWS Marketplace`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher can be installed on to Amazon Elastic Kubernetes Service (EKS) `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "../getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace.md"
-    }, `through the AWS Marketplace`), `. The EKS cluster deployed is production-ready and follows AWS best practices. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "single-node-kubernetes-install"
     }, `Single-node Kubernetes Install`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher can be installed on a single-node Kubernetes cluster. In this case, the Rancher server doesn't have high availability, which is important for running Rancher in production.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `However, this option is useful if you want to save resources by using a single node in the short term, while preserving a high-availability migration path. In the future, you can add nodes to the cluster to get a high-availability Rancher server.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "docker-install"
