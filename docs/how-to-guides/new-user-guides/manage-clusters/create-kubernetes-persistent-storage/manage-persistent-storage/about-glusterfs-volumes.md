@@ -2,6 +2,10 @@
 title: GlusterFS Volumes
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/about-glusterfs-volumes"/>
+</head>
+
 :::note
 
 This section only applies to [RKE clusters.](../../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)
