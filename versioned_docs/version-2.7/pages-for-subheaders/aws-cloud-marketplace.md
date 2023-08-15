@@ -2,6 +2,10 @@
 title: AWS Marketplace Integration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/aws-cloud-marketplace"/>
+</head>
+
 ## Overview
 
 Rancher offers an integration with the AWS Marketplace which allows users to purchase a support contract with SUSE. This integration allows you easily adjust your support needs as you start to support more clusters.

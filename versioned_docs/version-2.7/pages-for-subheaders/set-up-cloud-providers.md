@@ -2,6 +2,10 @@
 title: Setting up Cloud Providers
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/set-up-cloud-providers"/>
+</head>
+
 A _cloud provider_ is a module in Kubernetes that provides an interface for managing nodes, load balancers, and networking routes.
 
 When a cloud provider is set up in Rancher, the Rancher server can automatically provision new nodes, load balancers or persistent storage devices when launching Kubernetes definitions, if the cloud provider you're using supports such automation.

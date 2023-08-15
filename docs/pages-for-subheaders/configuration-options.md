@@ -2,6 +2,10 @@
 title: Configuration Options
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/configuration-options"/>
+</head>
+
 ### Egress Support
 
 By default the Egress gateway is disabled, but can be enabled on install or upgrade through the values.yaml or via the [overlay file](#overlay-file).

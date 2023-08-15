@@ -2,6 +2,10 @@
 title: Creating a vSphere Cluster
 description: Use Rancher to create a vSphere cluster. It may consist of groups of VMs with distinct properties which allow for fine-grained control over the sizing of nodes.
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/vsphere"/>
+</head>
 import YouTube from '@site/src/components/YouTube'
 
 By using Rancher with vSphere, you can bring cloud operations on-premises.

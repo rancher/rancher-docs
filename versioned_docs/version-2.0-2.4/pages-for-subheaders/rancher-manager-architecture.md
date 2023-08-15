@@ -2,6 +2,10 @@
 title: Architecture
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/rancher-manager-architecture"/>
+</head>
+
 This section focuses on the [Rancher server and its components](../reference-guides/rancher-manager-architecture/rancher-server-and-components.md) and how [Rancher communicates with downstream Kubernetes clusters](../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md).
 
 For information on the different ways that Rancher can be installed, refer to the [overview of installation options.](installation-and-upgrade.md#overview-of-installation-options)

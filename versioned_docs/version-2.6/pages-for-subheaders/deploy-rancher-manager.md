@@ -2,6 +2,10 @@
 title: Deploying Rancher Server
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/deploy-rancher-manager"/>
+</head>
+
 Use one of the following guides to deploy and provision Rancher and a Kubernetes cluster in the provider of your choice.
 
 - [AWS](../getting-started/quick-start-guides/deploy-rancher-manager/aws.md) (uses Terraform)

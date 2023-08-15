@@ -2,6 +2,10 @@
 title: Setup Guide
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/istio-setup-guide"/>
+</head>
+
 This section describes how to enable Istio and start using it in your projects.
 
 This section assumes that you have Rancher installed, and you have a Rancher-provisioned Kubernetes cluster where you would like to set up Istio.
