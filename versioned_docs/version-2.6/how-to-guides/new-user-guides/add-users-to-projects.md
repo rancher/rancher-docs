@@ -2,6 +2,10 @@
 title: Adding Users to Projects
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/add-users-to-projects"/>
+</head>
+
 If you want to provide a user with access and permissions to _specific_ projects and resources within a cluster, assign the user a project membership.
 
 You can add members to a project as it is created, or add them to an existing project.
