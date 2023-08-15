@@ -2,6 +2,10 @@
 title: Adding Users to Clusters
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/access-clusters/add-users-to-clusters"/>
+</head>
+
 If you want to provide a user with access and permissions to _all_ projects, nodes, and resources within a cluster, assign the user a cluster membership.
 
 >**Tip:** Want to provide a user with access to a _specific_ project within a cluster? See [Adding Project Members](../../manage-projects/add-users-to-projects.md) instead.

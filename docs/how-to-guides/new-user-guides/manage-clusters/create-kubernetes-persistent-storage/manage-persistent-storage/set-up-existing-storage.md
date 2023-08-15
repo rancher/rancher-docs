@@ -2,6 +2,10 @@
 title: Setting up Existing Storage
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/set-up-existing-storage"/>
+</head>
+
 This section describes how to set up existing persistent storage for workloads in Rancher.
 
 :::note

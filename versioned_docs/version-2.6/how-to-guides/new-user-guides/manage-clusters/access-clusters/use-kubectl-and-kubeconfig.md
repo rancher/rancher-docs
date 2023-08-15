@@ -3,6 +3,10 @@ title: "Access a Cluster with Kubectl and kubeconfig"
 description: "Learn how you can access and manage your Kubernetes clusters using kubectl with kubectl Shell or with kubectl CLI and kubeconfig file. A kubeconfig file is used to configure access to Kubernetes. When you create a cluster with Rancher, it automatically creates a kubeconfig for your cluster."
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig"/>
+</head>
+
 This section describes how to manipulate your downstream Kubernetes cluster with kubectl from the Rancher UI or from your workstation.
 
 For more information on using kubectl, see [Kubernetes Documentation: Overview of kubectl](https://kubernetes.io/docs/reference/kubectl/overview/).

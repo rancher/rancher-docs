@@ -2,6 +2,10 @@
 title: Assigning Pod Security Policies
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/assign-pod-security-policies"/>
+</head>
+
 _Pod Security Policies_ are objects that control security-sensitive aspects of pod specification (like root privileges).
 
 ## Adding a Default Pod Security Policy

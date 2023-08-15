@@ -2,6 +2,10 @@
 title: Cluster Autoscaler with AWS EC2 Auto Scaling Groups
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/install-cluster-autoscaler/use-aws-ec2-auto-scaling-groups"/>
+</head>
+
 This guide will show you how to install and use [Kubernetes cluster-autoscaler](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/) on Rancher custom clusters using AWS EC2 Auto Scaling Groups.
 
 We are going to install a Rancher RKE custom cluster with a fixed number of nodes with the etcd and controlplane roles, and a variable nodes with the worker role, managed by `cluster-autoscaler`.

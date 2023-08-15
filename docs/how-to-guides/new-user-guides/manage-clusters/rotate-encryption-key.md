@@ -2,6 +2,10 @@
 title: Encryption Key Rotation
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/rotate-encryption-key"/>
+</head>
+
 ### RKE1 Encryption Key Rotation
 
 1. Enable encryption key rotation with either of the following two options:
