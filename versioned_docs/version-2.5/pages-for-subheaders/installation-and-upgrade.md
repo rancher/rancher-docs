@@ -41,10 +41,6 @@ In both the RancherD install and the Helm CLI install, Rancher is installed as a
 
 Configuration and upgrading are also simplified with RancherD. When you upgrade the RancherD binary, both the Kubernetes cluster and the Rancher Helm chart are upgraded.
 
-### Rancher on EKS Install with the AWS Marketplace
-
-Rancher can be installed on to Amazon Elastic Kubernetes Service (EKS) [through the AWS Marketplace](../getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace.md). The EKS cluster deployed is production-ready and follows AWS best practices. 
-
 ### Single-node Kubernetes Install
 
 Rancher can be installed on a single-node Kubernetes cluster. In this case, the Rancher server doesn't have high availability, which is important for running Rancher in production.
