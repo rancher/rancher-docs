@@ -2,6 +2,10 @@
 title: Creating an Azure Cluster
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster"/>
+</head>
+
 In this section, you'll learn how to install an [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes cluster in Azure through Rancher.
 
 First, you will set up your Azure cloud credentials in Rancher. Then you will use your cloud credentials to create a node template, which Rancher will use to provision new nodes in Azure.
