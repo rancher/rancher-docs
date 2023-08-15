@@ -2,6 +2,10 @@
 title: NFS Storage
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/nfs-storage"/>
+</head>
+
 Before you can use the NFS storage volume plug-in with Rancher deployments, you need to provision an NFS server.
 
 >**Note:**

@@ -2,6 +2,10 @@
 title: Adding a Pod Security Policy
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/add-a-pod-security-policy"/>
+</head>
+
 > **Prerequisite:** The options below are available only for clusters that are [launched using RKE.](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)
 
 When your cluster is running pods with security-sensitive configurations, assign it a [pod security policy](../authentication-permissions-and-global-configuration/create-pod-security-policies.md), which is a set of rules that monitors the conditions and settings in your pods. If a pod doesn't meet the rules specified in your policy, the policy stops it from running.

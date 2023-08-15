@@ -2,6 +2,10 @@
 title: vSphere Storage
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/vsphere-storage"/>
+</head>
+
 To provide stateful workloads with vSphere storage, we recommend creating a vSphereVolume StorageClass. This practice dynamically provisions vSphere storage when workloads request volumes through a [persistent volume claim](../../../../../pages-for-subheaders/create-kubernetes-persistent-storage.md).
 
 In order to dynamically provision storage in vSphere, the vSphere provider must be [enabled.](../../../../new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/vsphere.md)
