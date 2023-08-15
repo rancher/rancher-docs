@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[92403],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[60088],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 51253:
+/***/ 6267:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide",
-    "id": "version-2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide",
+    "id": "version-2.6/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide",
     "title": "Backup Restore Usage Guide",
     "description": "The Rancher Backups chart is our solution for disaster recovery and migration. This chart allows you to take backups of your Kubernetes resources and save them to a variety of persistent storage locations.",
-    "source": "@site/versioned_docs/version-2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide.md",
+    "source": "@site/versioned_docs/version-2.6/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide.md",
     "sourceDirName": "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery",
     "slug": "/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide",
-    "permalink": "/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide",
+    "permalink": "/v2.6/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1690315898,
-    "formattedLastUpdatedAt": "Jul 25, 2023",
+    "version": "2.6",
+    "lastUpdatedAt": 1692130131,
+    "formattedLastUpdatedAt": "Aug 15, 2023",
     "frontMatter": {
         "title": "Backup Restore Usage Guide"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Backups and Disaster Recovery",
-        "permalink": "/v2.7/pages-for-subheaders/backup-restore-and-disaster-recovery"
+        "permalink": "/v2.6/pages-for-subheaders/backup-restore-and-disaster-recovery"
     },
     "next": {
         "title": "Backing up Rancher",
-        "permalink": "/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher"
+        "permalink": "/v2.6/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher"
     }
 };
 const assets = {};
@@ -433,27 +433,30 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Rancher Backups chart is our solution for disaster recovery and migration. This chart allows you to take backups of your Kubernetes resources and save them to a variety of persistent storage locations.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This chart is a very simple tool which has its hands in many different areas of the Rancher ecosystem. As a result, edge cases have arisen which lead to undocumented functionality. The purpose of this document is to highlight the proper and defined usage for Rancher Backups, as well as discussing some of these edge cases we’ve run into.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Rancher Backups chart is our solution for disaster recovery and migration. This chart allows you to take backups of your Kubernetes resources and save them to a variety of persistent storage locations.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This chart is a very simple tool which has its hands in many different areas of the Rancher ecosystem. As a result, edge cases have arisen which lead to undocumented functionality. The purpose of this document is to highlight the proper and defined usage for Rancher Backups, as well as discussing some of these edge cases we’ve run into.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "functionality-overview"
     }, `Functionality Overview`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "backup"
     }, `Backup`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The operator collects all the resources captured by the resourceSet in the chart as in-memory unstructured objects. After the resources have been collected, a compressed tar file of the resources are saved as a collection of manifests in JSON and then uploaded to a user-defined object store. This backup can be put on a repeating schedule and can also be encrypted. This encryption option is important since some of the resources are sensitive and the values are stored in plaintext without encryption.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/backup-restore-configuration/backup-configuration"
+        "href": "/v2.6/reference-guides/backup-restore-configuration/backup-configuration"
     }, `Backup Configuration documentation`), ` for more information about the options, including encryption, to configure a backup.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
     }, `As noted in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher"
+        "href": "/v2.6/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher"
     }, `Backing up Rancher documentation`), `, you must manually save the encryption configuration file contents since the operator will `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
     }, `not`), ` back it up.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "restore"
     }, `Restore`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `There are two main restore scenarios, restoring to a cluster with Rancher running and restoring to a fresh cluster. You can only restore to a cluster with Rancher running if it's the same cluster the backup was taken from and the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/backup-restore-configuration/restore-configuration#prune-during-restore"
+        "href": "/v2.6/reference-guides/backup-restore-configuration/restore-configuration#prune-during-restore"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "a"
     }, `prune`), ` option`), ` is enabled during the restore. A restore has similar inputs as a backup. It requires a backup filename, the encryptionConfigSecret name, and the storage location.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Resources are restored in this order:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -464,7 +467,7 @@ function MDXContent(_param) {
         parentName: "ol"
     }, `Namespaced resources`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/backup-restore-configuration/restore-configuration"
+        "href": "/v2.6/reference-guides/backup-restore-configuration/restore-configuration"
     }, `Restore Configuration documentation`), ` for more information about the options to configure a restore.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "resource-sets"
     }, `Resource Sets`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The resourceSet determines which resources the backup-restore-operator collects in a backup. It's a set of ResourceSelectors, which define the selection requirements using key/value matching, regular expression matching, or the Kubernetes client labelSelector.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These are the different fields available for a resourceSelector:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {

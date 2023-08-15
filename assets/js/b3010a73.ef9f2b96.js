@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[82982],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[69173],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 54887:
+/***/ 52033:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/manage-namespaces",
-    "id": "how-to-guides/new-user-guides/manage-namespaces",
+    "id": "version-2.6/how-to-guides/new-user-guides/manage-namespaces",
     "title": "Namespaces",
     "description": "Within Rancher, you can further divide projects into different namespaces, which are virtual clusters within a project backed by a physical cluster. Should you require another level of organization beyond projects and the default namespace, you can use multiple namespaces to isolate applications and resources.",
-    "source": "@site/docs/how-to-guides/new-user-guides/manage-namespaces.md",
+    "source": "@site/versioned_docs/version-2.6/how-to-guides/new-user-guides/manage-namespaces.md",
     "sourceDirName": "how-to-guides/new-user-guides",
     "slug": "/how-to-guides/new-user-guides/manage-namespaces",
-    "permalink": "/how-to-guides/new-user-guides/manage-namespaces",
+    "permalink": "/v2.6/how-to-guides/new-user-guides/manage-namespaces",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/manage-namespaces.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/new-user-guides/manage-namespaces.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1666730461,
-    "formattedLastUpdatedAt": "Oct 25, 2022",
+    "version": "2.6",
+    "lastUpdatedAt": 1692130131,
+    "formattedLastUpdatedAt": "Aug 15, 2023",
     "frontMatter": {
         "title": "Namespaces"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Adding Users to Projects",
-        "permalink": "/how-to-guides/new-user-guides/add-users-to-projects"
+        "permalink": "/v2.6/how-to-guides/new-user-guides/add-users-to-projects"
     },
     "next": {
         "title": "Advanced User Guides",
-        "permalink": "/pages-for-subheaders/advanced-user-guides"
+        "permalink": "/v2.6/pages-for-subheaders/advanced-user-guides"
     }
 };
 const assets = {};
@@ -368,7 +368,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Within Rancher, you can further divide projects into different `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-namespaces"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Within Rancher, you can further divide projects into different `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/"
     }, `namespaces`), `, which are virtual clusters within a project backed by a physical cluster. Should you require another level of organization beyond projects and the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -377,42 +380,42 @@ function MDXContent(_param) {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/pages-for-subheaders/workloads-and-pods"
+        "href": "/v2.6/pages-for-subheaders/workloads-and-pods"
     }, `Workloads`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/pages-for-subheaders/load-balancer-and-ingress-controller"
+        "href": "/v2.6/pages-for-subheaders/load-balancer-and-ingress-controller"
     }, `Load Balancers/Ingress`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/how-to-guides/new-user-guides/kubernetes-resources-setup/create-services"
+        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/create-services"
     }, `Service Discovery Records`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/pages-for-subheaders/create-kubernetes-persistent-storage"
+        "href": "/v2.6/pages-for-subheaders/create-kubernetes-persistent-storage"
     }, `Persistent Volume Claims`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/how-to-guides/new-user-guides/kubernetes-resources-setup/encrypt-http-communication"
+        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/encrypt-http-communication"
     }, `Certificates`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/how-to-guides/new-user-guides/kubernetes-resources-setup/configmaps"
+        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/configmaps"
     }, `ConfigMaps`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries"
+        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries"
     }, `Registries`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/how-to-guides/new-user-guides/kubernetes-resources-setup/secrets"
+        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/secrets"
     }, `Secrets`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To manage permissions in a vanilla Kubernetes cluster, cluster admins configure role-based access policies for each namespace. With Rancher, user permissions are assigned on the project level instead, and permissions are automatically inherited by any namespace owned by the particular project.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -423,7 +426,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `kubectl`), ` doesn't require your new namespace to be scoped within a project that you have access to. If your permissions are restricted to the project level, it is better to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/manage-namespaces"
+        "href": "/v2.6/how-to-guides/new-user-guides/manage-namespaces"
     }, `create a namespace through Rancher`), ` to ensure that you will have permission to access the namespace.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "creating-namespaces"
     }, `Creating Namespaces`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Create a new namespace to isolate apps and resources in a project.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
@@ -432,13 +435,13 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `When working with project resources that you can assign to a namespace (i.e., `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/deploy-workloads"
+        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/deploy-workloads"
     }, `workloads`), `, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/kubernetes-resources-setup/encrypt-http-communication"
+        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/encrypt-http-communication"
     }, `certificates`), `, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/kubernetes-resources-setup/configmaps"
+        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/configmaps"
     }, `ConfigMaps`), `, etc.) you can create a namespace on the fly.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -475,7 +478,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `Optional:`), ` If your project has `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/pages-for-subheaders/manage-project-resource-quotas"
+        "href": "/v2.6/pages-for-subheaders/manage-project-resource-quotas"
     }, `Resource Quotas`), ` in effect, you can override the default resource `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
     }, `Limits`), ` (which places a cap on the resources that the namespace can consume).`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -536,7 +539,7 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `You cannot move a namespace into a project that already has a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/pages-for-subheaders/manage-project-resource-quotas"
+        "href": "/v2.6/pages-for-subheaders/manage-project-resource-quotas"
     }, `resource quota`), `configured.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `If you move a namespace from a project that has a quota set to a project with no quota set, the quota is removed from the namespace.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -553,7 +556,7 @@ function MDXContent(_param) {
         "id": "editing-namespace-resource-quotas"
     }, `Editing Namespace Resource Quotas`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can always override the namespace default limit to provide a specific namespace with access to more (or less) project resources.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information, see how to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/advanced-user-guides/manage-projects/manage-project-resource-quotas/override-default-limit-in-namespaces"
+        "href": "/v2.6/how-to-guides/advanced-user-guides/manage-projects/manage-project-resource-quotas/override-default-limit-in-namespaces"
     }, `edit namespace resource quotas`), `.`));
 }
 MDXContent.isMDXComponent = true;

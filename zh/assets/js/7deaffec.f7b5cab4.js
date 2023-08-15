@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[27301],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[80350],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 5263:
+/***/ 68695:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/advanced-user-guides/manage-projects/add-users-to-projects",
-    "id": "version-2.5/how-to-guides/advanced-user-guides/manage-projects/add-users-to-projects",
+    "id": "version-2.0-2.4/how-to-guides/advanced-user-guides/manage-projects/add-users-to-projects",
     "title": "Adding Users to Projects",
     "description": "If you want to provide a user with access and permissions to specific projects and resources within a cluster, assign the user a project membership.",
-    "source": "@site/versioned_docs/version-2.5/how-to-guides/advanced-user-guides/manage-projects/add-users-to-projects.md",
+    "source": "@site/versioned_docs/version-2.0-2.4/how-to-guides/advanced-user-guides/manage-projects/add-users-to-projects.md",
     "sourceDirName": "how-to-guides/advanced-user-guides/manage-projects",
     "slug": "/how-to-guides/advanced-user-guides/manage-projects/add-users-to-projects",
-    "permalink": "/zh/v2.5/how-to-guides/advanced-user-guides/manage-projects/add-users-to-projects",
+    "permalink": "/zh/v2.0-v2.4/how-to-guides/advanced-user-guides/manage-projects/add-users-to-projects",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/how-to-guides/advanced-user-guides/manage-projects/add-users-to-projects.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.0-2.4/how-to-guides/advanced-user-guides/manage-projects/add-users-to-projects.md",
     "tags": [],
-    "version": "2.5",
-    "lastUpdatedAt": 1663953084,
-    "formattedLastUpdatedAt": "2022年9月23日",
+    "version": "2.0-2.4",
+    "lastUpdatedAt": 1692130131,
+    "formattedLastUpdatedAt": "2023年8月15日",
     "frontMatter": {
         "title": "Adding Users to Projects"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Project Administration",
-        "permalink": "/zh/v2.5/pages-for-subheaders/manage-projects"
+        "permalink": "/zh/v2.0-v2.4/pages-for-subheaders/manage-projects"
     },
     "next": {
         "title": "Namespaces",
-        "permalink": "/zh/v2.5/how-to-guides/advanced-user-guides/manage-projects/manage-namespaces"
+        "permalink": "/zh/v2.0-v2.4/how-to-guides/advanced-user-guides/manage-projects/manage-namespaces"
     }
 };
 const assets = {};
@@ -363,7 +363,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you want to provide a user with access and permissions to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/add-users-to-projects"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you want to provide a user with access and permissions to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
         parentName: "p"
     }, `specific`), ` projects and resources within a cluster, assign the user a project membership.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can add members to a project as it is created, or add them to an existing project.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "blockquote"
@@ -373,12 +376,12 @@ function MDXContent(_param) {
         parentName: "p"
     }, `all`), ` projects within a cluster? See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/how-to-guides/advanced-user-guides/manage-clusters/access-clusters/add-users-to-clusters"
+        "href": "/zh/v2.0-v2.4/how-to-guides/advanced-user-guides/manage-clusters/access-clusters/add-users-to-clusters"
     }, `Adding Cluster Members`), ` instead.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "adding-members-to-a-new-project"
     }, `Adding Members to a New Project`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can add members to a project as you create it (recommended if possible). For details on creating a new project, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces"
+        "href": "/zh/v2.0-v2.4/how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces"
     }, `cluster administration section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "adding-members-to-an-existing-project"
     }, `Adding Members to an Existing Project`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Following project creation, you can add users as project members so that they can access its resources.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -427,7 +430,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles"
+        "href": "/zh/v2.0-v2.4/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles"
     }, `What are Project Roles?`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -483,12 +486,12 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `To add roles to the list, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/zh/v2.5/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/custom-roles"
+        "href": "/zh/v2.0-v2.4/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/custom-roles"
     }, `Add a Custom Role`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `To remove roles from the list, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/zh/v2.5/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/locked-roles"
+        "href": "/zh/v2.0-v2.4/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/locked-roles"
     }, `Lock/Unlock Roles`), `.`))))))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
     }, `Result:`), ` The chosen users are added to the project.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
