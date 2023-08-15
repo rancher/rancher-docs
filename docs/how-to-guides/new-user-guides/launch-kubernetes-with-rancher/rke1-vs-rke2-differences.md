@@ -2,6 +2,10 @@
 title: Behavior Differences Between RKE1 and RKE2
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences"/>
+</head>
+
 RKE2, also known as RKE Government, is a Kubernetes distribution that focuses on security and compliance for U.S. Federal Government entities. It is considered the next iteration of the Rancher Kubernetes Engine, now known as RKE1.
 
 RKE1 and RKE2 have several slight behavioral differences to note, and this page will highlight some of these at a high level.
