@@ -2,6 +2,10 @@
 title: Authentication
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/authentication-config"/>
+</head>
+
 One of the key features that Rancher adds to Kubernetes is centralized user authentication. This feature allows your users to use one set of credentials to authenticate with any of your Kubernetes clusters.
 
 This centralized user authentication is accomplished using the Rancher authentication proxy, which is installed along with the rest of Rancher. This proxy authenticates your users and forwards their requests to your Kubernetes clusters using a service account.
