@@ -2,6 +2,10 @@
 title: Setting up the Azure Cloud Provider
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/azure"/>
+</head>
+
 When using the `Azure` cloud provider, you can leverage the following capabilities:
 
 - **Load Balancers:** Launches an Azure Load Balancer within a specific Network Security Group.

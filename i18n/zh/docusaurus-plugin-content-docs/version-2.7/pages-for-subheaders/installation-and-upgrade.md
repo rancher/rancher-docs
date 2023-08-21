@@ -24,9 +24,9 @@ Rancher 可以安装在以下主要架构上：
 
 我们建议使用 Kubernetes 包管理器 Helm 在专用的 Kubernetes 集群上安装 Rancher。在 RKE 集群中，需要使用三个节点才能实现高可用集群。在 K3s 集群中，只需要两个节点即可。
 
-### 在 Amazon EKS 上部署 Rancher 的快速入门
+### 通过 AWS Marketplace 在 EKS 上安装 Rancher
 
-Rancher 和 Amazon Web Services 合作编写了一份快速入门指南，用于按照 AWS 的最佳实践，在 EKS Kubernetes 集群上部署 Rancher。详情请参见[部署指南](https://aws-quickstart.github.io/quickstart-eks-rancher/)。
+你可以[通过 AWS Marketplace](../getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace.md) 将 Rancher 安装到 Amazon Elastic Kubernetes Service (EKS) 上。部署的 EKS 集群已生产就绪，并遵循 AWS 最佳实践。
 
 ### 单节点 Kubernetes 安装
 

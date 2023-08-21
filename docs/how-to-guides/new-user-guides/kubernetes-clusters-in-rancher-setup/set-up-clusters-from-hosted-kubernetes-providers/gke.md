@@ -2,6 +2,10 @@
 title: Creating a GKE Cluster
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/gke"/>
+</head>
+
 ## Prerequisites
 
 Some setup in Google Kubernetes Engine is required.
@@ -82,7 +86,7 @@ Private GKE clusters are supported. Note: This advanced setup can require more s
 For details on configuring GKE clusters in Rancher, see [this page.](../../../../pages-for-subheaders/gke-cluster-configuration.md)
 ## Updating Kubernetes Version
 
-The Kubernetes version of a cluster can be upgraded to any version available in the region or zone fo the GKE cluster. Upgrading the master Kubernetes version does not automatically upgrade worker nodes. Nodes can be upgraded independently.
+The Kubernetes version of a cluster can be upgraded to any version available in the region or zone for the GKE cluster. Upgrading the master Kubernetes version does not automatically upgrade worker nodes. Nodes can be upgraded independently.
 
 :::note
 

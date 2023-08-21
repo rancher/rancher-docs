@@ -2,6 +2,10 @@
 title: Recommended Cluster Architecture
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters/recommended-cluster-architecture"/>
+</head>
+
 There are three roles that can be assigned to nodes: `etcd`, `controlplane` and `worker`.
 
 ## Separating Worker Nodes from Nodes with Other Roles

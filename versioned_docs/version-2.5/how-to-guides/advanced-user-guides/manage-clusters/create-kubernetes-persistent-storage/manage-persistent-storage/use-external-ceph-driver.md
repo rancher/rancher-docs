@@ -2,6 +2,10 @@
 title: Using an External Ceph Driver
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/use-external-ceph-driver"/>
+</head>
+
 These instructions are about using the external Ceph driver in an RKE2 cluster. If you are using RKE, additional steps are required. For details, refer to [this section.](#using-the-ceph-driver-with-rke)
 
 

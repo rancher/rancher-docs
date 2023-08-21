@@ -2,6 +2,10 @@
 title: RKE1 to RKE2 Windows Migration Guidance
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/workload-migration-guidance"/>
+</head>
+
 **Caution:** The contents of this document are not covered under SLA by Rancher Support. Please proceed with caution.
 
 This document covers how end users can migrate their Windows workloads from RKE1 to RKE2.

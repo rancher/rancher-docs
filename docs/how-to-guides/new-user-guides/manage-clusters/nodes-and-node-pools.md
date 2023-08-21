@@ -2,6 +2,10 @@
 title: Nodes and Node Pools
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools"/>
+</head>
+
 After you launch a Kubernetes cluster in Rancher, you can manage individual nodes from the cluster's **Node** tab. 
 
 1. Click **☰** in the top left corner of the Rancher portal.

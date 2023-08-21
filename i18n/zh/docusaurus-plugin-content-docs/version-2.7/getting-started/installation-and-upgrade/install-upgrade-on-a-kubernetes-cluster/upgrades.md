@@ -127,6 +127,15 @@ hostname: rancher.my.org
 
 :::
 
+:::tip
+Deployment 的名称可能会有所不同。例如，如果你通过 AWS Marketplace 部署 Rancher，则 Deployment 的名称为“rancher-stable”。
+因此：
+```
+helm get values rancher-stable -n cattle-system
+
+hostname: rancher.my.org
+```
+:::
 
 如果要将 cert-manager 从 v1.5 或更早的版本升级到最新版本，请参阅 [cert-manager upgrade docs](../resources/upgrade-cert-manager.md#选项-c升级-15-及以下版本的-cert-manager) 了解如何在不卸载或重新安装 Rancher 的情况下升级 cert-manager。否则，请按照以下[ Rancher 升级步骤](#rancher-升级步骤)进行操作。
 
@@ -148,6 +157,16 @@ helm upgrade rancher rancher-<CHART_REPO>/rancher \
 
 以上是一个例子，可能有更多上一步的值需要追加。
 
+:::
+
+:::tip
+如果你通过 AWS Marketplace 部署 Rancher，则 Deployment 的名称为“rancher-stable”。
+因此：
+```
+helm upgrade rancher-stable rancher-<CHART_REPO>/rancher \
+  --namespace cattle-system \
+  --set hostname=rancher.my.org
+```
 :::
 
 另外，你也可以将当前的值导出到一个文件中，并在升级时引用该文件。例如，如果你只需要改变 Rancher 的版本：

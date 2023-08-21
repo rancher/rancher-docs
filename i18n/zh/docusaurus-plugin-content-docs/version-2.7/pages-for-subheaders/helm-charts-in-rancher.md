@@ -4,17 +4,11 @@ title: Rancher 中的 Helm Chart
 
 在本节中，你将学习如何在 Rancher 中管理 Helm Chart 仓库和应用。你可以在 **Apps** 中管理 Helm Chart 仓库。它使用类似目录的系统从仓库中导入 Chart 包，然后使用这些 Chart 来部署自定义 Helm 应用或 Rancher 工具（例如监控和 Istio）。Rancher 工具以预加载仓库的方式提供，并能部署为独立的 Helm Chart 。其他仓库只会添加到当前集群。
 
-### Rancher 2.6 变更
+### 版本控制方案
 
-Rancher 2.6.0 实现了功能 Chart 的新版本控制方案。变更主要是 Chart 的主要版本和上游 Chart 的 +up 注释（如果适用）。
+Rancher 功能 Chart 版本控制方案以 Chart 的主要版本和上游 Chart 的 `+up` 注释（如果适用）为中心。
 
 **主要版本**：Chart 的主要版本与 Rancher 次要版本相关联。当你升级到新的 Rancher 次要版本时，你应该确保你的所有 **Apps** Chart 也升级到 Chart 的正确发行版本。
-
-:::note
-
-如果你的主要版本低于下表中提到的版本，则请使用 2.5 及以下版本。例如，建议你不要在 2.6.x+ 中使用 <100.x.x 版本的 Monitoring。
-
-:::
 
 **功能 Chart**：
 
@@ -104,12 +98,11 @@ Chart 页面包含所有 Rancher、Partner 和自定义 Chart 。
    [...]
    ```
 
-
 :::note
 
 带有身份验证的 Helm Chart 仓库
 
-从 Rancher 2.6.3 开始，Repo.Spec 中添加了一个新值 `disableSameOriginCheck`。它允许用户绕过相同源的检查，将仓库身份验证信息作为基本 Auth 标头与所有 API 调用一起发送。不建议采用这种做法，但这可以用作非标准 Helm Chart 仓库（例如重定向到不同源 URL 的仓库）的临时解决方案。
+Repo.Spec 包含一个 `disableSameOriginCheck`，能允许用户绕过相同源的检查，将仓库身份认证信息作为基本 Auth 标头与所有 API 调用一起发送。不建议采用这种做法，但这可以用作非标准 Helm Chart 仓库（例如重定向到不同源 URL 的仓库）的临时解决方案。
 
 要将此功能用于现有 Helm Chart 仓库，请单击 <b>⋮ > 编辑 YAML</b>。在 YAML 文件的 `spec` 部分，添加 `disableSameOriginCheck` 并将其设置为 `true`：
 
@@ -147,7 +140,7 @@ spec:
 
 :::
 
-#### Rancher 2.6.3 变更
+#### 旧版应用
 
 **Apps > Installed Apps** 页面中，旧版应用的升级按钮已被移除。
 

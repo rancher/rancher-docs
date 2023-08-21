@@ -131,6 +131,17 @@ There will be more values that are listed with this command. This is just an exa
 
 :::
 
+:::tip 
+
+Your deployment name may vary; for example, if you're deploying Rancher through the AWS Marketplace, the deployment name is 'rancher-stable'. 
+Thus: 
+```
+helm get values rancher-stable -n cattle-system
+
+hostname: rancher.my.org
+```
+
+::: 
 
 If you are upgrading cert-manager to the latest version from v1.5 or below, follow the [cert-manager upgrade docs](../resources/upgrade-cert-manager.md#option-c-upgrade-cert-manager-from-versions-15-and-below) to learn how to upgrade cert-manager without needing to perform an uninstall or reinstall of Rancher. Otherwise, follow the [steps to upgrade Rancher](#steps-to-upgrade-rancher) below.
 
@@ -154,6 +165,18 @@ The above is an example, there may be more values from the previous step that ne
 
 :::
 
+:::tip 
+
+If you deploy Rancher through the AWS Marketplace, the deployment name is 'rancher-stable'. 
+Thus: 
+```
+helm upgrade rancher-stable rancher-<CHART_REPO>/rancher \
+  --namespace cattle-system \
+  --set hostname=rancher.my.org
+```
+
+::: 
+
 Alternatively, it's possible to export the current values to a file and reference that file during upgrade. For example, to only change the Rancher version:
 
 1. Export the current values to a file:
@@ -162,7 +185,7 @@ Alternatively, it's possible to export the current values to a file and referenc
     ```
 1. Update only the Rancher version:
 
-  For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
+    For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
     ```
     helm upgrade rancher rancher-<CHART_REPO>/rancher \

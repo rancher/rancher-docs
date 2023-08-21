@@ -2,6 +2,10 @@
 title: Provisioning Kubernetes Clusters in Nutanix AOS
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/provision-kubernetes-clusters-in-aos"/>
+</head>
+
 To use Rancher to install an [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes cluster in Nutanix AOS (AHV):
 
 1. Locate Rancher's built-in Nutanix [node driver and activate it](../../../authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md#activatingdeactivating-node-drivers).

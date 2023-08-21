@@ -280,11 +280,29 @@ docker exec etcd etcdctl alarm disarm
 docker exec etcd etcdctl alarm list
 ```
 
-## Log Level
+## Configure Log Level
 
-The log level of etcd can be changed dynamically via the API. You can configure debug logging using the commands below.
+:::note
 
-Command:
+You can no longer dynamically change the log level in etcd v3.5 or later.
+
+:::
+
+### etcd v3.5 And Later
+
+To configure the log level for etcd, edit the cluster YAML:
+
+```
+services:
+  etcd:
+    extra_args:
+      log-level: "debug"
+```
+
+### etcd v3.4 And Earlier
+
+In earlier etcd versions, you can use the API to dynamically change the log level.  Configure debug logging using the commands below:
+
 ```
 docker run --net=host -v $(docker inspect kubelet --format '{{ range .Mounts }}{{ if eq .Destination "/etc/kubernetes" }}{{ .Source }}{{ end }}{{ end }}')/ssl:/etc/kubernetes/ssl:ro appropriate/curl -s -XPUT -d '{"Level":"DEBUG"}' --cacert $(docker exec etcd printenv ETCDCTL_CACERT) --cert $(docker exec etcd printenv ETCDCTL_CERT) --key $(docker exec etcd printenv ETCDCTL_KEY) $(docker exec etcd printenv ETCDCTL_ENDPOINTS)/config/local/log
 ```

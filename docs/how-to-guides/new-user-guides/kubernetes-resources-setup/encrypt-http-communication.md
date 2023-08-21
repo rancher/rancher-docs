@@ -3,6 +3,10 @@ title: Encrypting HTTP Communication
 description: Learn how to add an SSL (Secure Sockets Layer) certificate or TLS (Transport Layer Security) certificate
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-resources-setup/encrypt-http-communication"/>
+</head>
+
 When you create an ingress within Rancher/Kubernetes, you must provide it with a secret that includes a TLS private key and certificate, which are used to encrypt and decrypt communications that come through the ingress. You can make certificates available for ingress use by adding the certificate to the ingress deployment.
 
 :::note Prerequisite:

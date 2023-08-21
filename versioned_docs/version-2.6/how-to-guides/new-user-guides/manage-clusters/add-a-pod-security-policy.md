@@ -2,6 +2,10 @@
 title: Adding a Pod Security Policy
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/add-a-pod-security-policy"/>
+</head>
+
 :::note Prerequisite:
 
 The options below are available only for clusters that are [launched using RKE.](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)

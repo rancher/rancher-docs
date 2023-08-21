@@ -3,11 +3,16 @@ title: Ingress Configuration
 description: Ingress configuration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/ingress-configuration"/>
+</head>
+
 :::note
 
 For Kubernetes v1.21 and up, the NGINX Ingress controller no longer runs in hostNetwork by default. It instead uses hostPorts for port 80 and port 443, so you can configure the admission webhook to be accessible only through the ClusterIP. This ensures that the webhook is only accessible from within the cluster.
 
-Because of this change to the controller, the default behavior no longer sets `hostNetwork` to `true`. However, you must set `hostNetwork` to `true` for TCP- and UDP-based Services to work.
+Because of this change to the controller, the default RKE1 behavior no longer sets `hostNetwork` to `true`. However, you must set `hostNetwork` to `true` for TCP- and UDP-based Services to work. To do so, [edit](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#editing-clusters-with-yaml) the cluster's YAML and follow the steps in the [official RKE1 doccumention](https://rke.docs.rancher.com/config-options/add-ons/ingress-controllers#configuring-network-options).
+
 
 :::
 

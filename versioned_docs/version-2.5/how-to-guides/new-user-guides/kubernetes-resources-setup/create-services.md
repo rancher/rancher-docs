@@ -2,6 +2,10 @@
 title: Service Discovery
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-resources-setup/create-services"/>
+</head>
+
 For every workload created, a complementing Service Discovery entry is created. This Service Discovery entry enables DNS resolution for the workload's pods using the following naming convention:
 `<workload>.<namespace>.svc.cluster.local`.
 

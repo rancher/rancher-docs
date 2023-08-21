@@ -103,7 +103,7 @@ AWS 开源博客上的这篇[教程](https://aws.amazon.com/blogs/opensource/man
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "EC2Permisssions",
+            "Sid": "EC2Permissions",
             "Effect": "Allow",
             "Action": [
                 "ec2:RunInstances",
@@ -138,7 +138,7 @@ AWS 开源博客上的这篇[教程](https://aws.amazon.com/blogs/opensource/man
             "Resource": "*"
         },
         {
-            "Sid": "CloudFormationPermisssions",
+            "Sid": "CloudFormationPermissions",
             "Effect": "Allow",
             "Action": [
                 "cloudformation:ListStacks",
@@ -172,13 +172,13 @@ AWS 开源博客上的这篇[教程](https://aws.amazon.com/blogs/opensource/man
             "Resource": "*"
         },
         {
-            "Sid": "KMSPermisssions",
+            "Sid": "KMSPermissions",
             "Effect": "Allow",
             "Action": "kms:ListKeys",
             "Resource": "*"
         },
         {
-            "Sid": "EKSPermisssions",
+            "Sid": "EKSPermissions",
             "Effect": "Allow",
             "Action": [
                 "eks:UpdateNodegroupVersion",
@@ -218,7 +218,7 @@ AWS 开源博客上的这篇[教程](https://aws.amazon.com/blogs/opensource/man
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "IAMPermisssions",
+      "Sid": "IAMPermissions",
       "Effect": "Allow",
       "Action": [
         "iam:AddRoleToInstanceProfile",

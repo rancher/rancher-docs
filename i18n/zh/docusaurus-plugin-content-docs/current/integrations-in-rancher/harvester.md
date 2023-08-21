@@ -4,12 +4,6 @@ title: Harvester 集成
 
 Harvester 是 Rancher 2.6.1 新增的功能，[Harvester](https://docs.harvesterhci.io/) 是基于 Kubernetes 构建的开源超融合基础架构 (HCI) 软件。Harvester 安装在裸金属服务器上，提供集成的虚拟化和分布式存储功能。虽然 Harvester 使用 Kubernetes 运行，但它不需要用户了解 Kubernetes 概念，因此是一个更加用户友好的应用。
 
----
-**_v2.6.3 的新功能_**
-
-Harvester 已 GA。有关所有更新，请参阅 [Harvester 发行说明](https://github.com/harvester/harvester/releases)。
-
----
 ### 功能开关
 
 你可以使用 Harvester 的功能开关来管理 Harvester 在 Rancher 虚拟化管理页面的访问，用户可以在该页面直接导航到 Harvester 集群并访问 Harvester UI。Harvester 的功能开关是默认启用的。如需了解 Rancher 中功能开关的更多详细信息，请单击[此处](../pages-for-subheaders/enable-experimental-features.md)。
@@ -26,7 +20,7 @@ Harvester 已 GA。有关所有更新，请参阅 [Harvester 发行说明](https
 
 ### Harvester 主机驱动
 
-从 Rancher v2.6.3 开始，[Harvester 主机驱动](https://docs.harvesterhci.io/v1.1/rancher/node/node-driver/) 已在 Rancher 的 RKE 和 RKE2 选项中 GA。无论 Harvester 功能开关是否启用，主机驱动都是可用的。请注意，默认情况下主机驱动是关闭的。用户只能通过**集群管理**页面在 Harvester 上创建 RKE 或 RKE2 集群。
+[Harvester 主机驱动](https://docs.harvesterhci.io/v1.1/rancher/node/node-driver/) 通常可用于 Rancher 中的 RKE 和 RKE2 选项。无论 Harvester 功能开关是否启用，主机驱动都是可用的。请注意，默认情况下主机驱动是关闭的。用户只能通过**集群管理**页面在 Harvester 上创建 RKE 或 RKE2 集群。
 
 Harvester 允许通过 Harvester UI 上传和显示 `.ISO` 镜像，但 Rancher UI 不支持。这是因为 `.ISO` 镜像通常需要额外的设置，这会干扰干净的部署（即无需用户干预），并且它们通常不用于云环境。
 

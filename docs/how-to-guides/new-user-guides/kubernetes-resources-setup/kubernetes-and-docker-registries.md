@@ -2,6 +2,10 @@
 title: Kubernetes Registry and Container Image Registry
 description: Learn about the container image registry and Kubernetes registry, their use cases, and how to use a private registry with the Rancher UI
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries"/>
+</head>
 Registries are Kubernetes secrets containing credentials used to authenticate with [private container registries](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).
 
 The word "registry" can mean two things, depending on whether it is used to refer to a container or Kubernetes registry:

@@ -6,42 +6,9 @@ title: Installing Rancher on Amazon EKS
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks"/>
 </head>
 
-This page covers two ways to install Rancher on EKS.
-
-The first is a guide for deploying the Rancher server on an EKS cluster using CloudFormation. This guide was created in collaboration with Amazon Web Services to show how to deploy Rancher following best practices.
-
-The second is a guide for installing an EKS cluster with an ingress by using command line tools. This guide may be useful if you want to use fewer resources while trying out Rancher on EKS.
+This page covers installing Rancher on an Amazon EKS cluster.
 
 If you already have an EKS Kubernetes cluster, skip to the step about [installing an ingress.](#5-install-an-ingress) Then install the Rancher Helm chart following the instructions on [this page.](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#install-the-rancher-helm-chart)
-
-- [Automated Quickstart using AWS Best Practices](#automated-quickstart-using-aws-best-practices)
-- [Creating an EKS Cluster for the Rancher Server](#creating-an-eks-cluster-for-the-rancher-server)
-
-## Automated Quickstart using AWS Best Practices
-
-Rancher and Amazon Web Services collaborated on a quick start guide for deploying Rancher on an EKS cluster following AWS best practices. The deployment guide is [here.](https://aws-quickstart.github.io/quickstart-eks-rancher/)
-
-The quick start guide provides three options for deploying Rancher on EKS:
-
-- **Deploy Rancher into a new VPC and new Amazon EKS cluster.** This option builds a new AWS environment consisting of the VPC, subnets, NAT gateways, security groups, bastion hosts, Amazon EKS cluster, and other infrastructure components. It then deploys Rancher into this new EKS cluster.
-- **Deploy Rancher into an existing VPC and a new Amazon EKS cluster.** This option provisions Rancher in your existing AWS infrastructure.
-- **Deploy Rancher into an existing VPC and existing Amazon EKS cluster.** This option provisions Rancher in your existing AWS infrastructure.
-
-Deploying this Quick Start for a new virtual private cloud (VPC) and new Amazon EKS cluster using default parameters builds the following Rancher environment in the AWS Cloud:
-
-- A highly available architecture that spans three Availability Zones.*
-- A VPC configured with public and private subnets, according to AWS best practices, to provide you with your own virtual network on AWS.*
-- In the public subnets:
-  - Managed network address translation (NAT) gateways to allow outbound internet access for resources.*
-  - Linux bastion hosts in an Auto Scaling group to allow inbound Secure Shell (SSH) access to Amazon Elastic Compute Cloud (Amazon EC2) instances in public and private subnets.*
-- In the private subnets:
-  - Kubernetes nodes in an Auto Scaling group.*
-  - A Network Load Balancer (not shown) for accessing the Rancher console.
-- Rancher deployment using AWS Systems Manager automation.
-- Amazon EKS service for the EKS cluster, which provides the Kubernetes control plane.*
-- An Amazon Route 53 DNS record for accessing the Rancher deployment.
-
-\* The CloudFormation template that deploys the Quick Start into an existing Amazon EKS cluster skips the components marked by asterisks and prompts you for your existing VPC configuration.
 
 ## Creating an EKS Cluster for the Rancher Server
 
@@ -119,7 +86,7 @@ rancher-server-cluster		us-west-2	True
 
 The cluster needs an Ingress so that Rancher can be accessed from outside the cluster.
 
-To make sure that you choose the correct Ingress-NGINX Helm chart, first find an `Ingress-NGINX version` that's compatible with your Kubernetes version in the [Kubernetes/ingress-nginx support table](https://github.com/kubernetes/ingress-nginx#supported-versions-table). 
+To make sure that you choose the correct Ingress-NGINX Helm chart, first find an `Ingress-NGINX version` that's compatible with your Kubernetes version in the [Kubernetes/ingress-nginx support table](https://github.com/kubernetes/ingress-nginx#supported-versions-table).
 
 Then, list the Helm charts available to you by running the following command:
 

@@ -29,7 +29,7 @@ title: Rancher Equinix Metal 快速入门
 
 ### 1. 配置 Equinix Metal 主机
 
-开始部署 Equinix Metal 主机。你可以使用 Equinix Metal 控制台，API 或 CLI 来配置 Equinix Metal Server。如果你需要了解如何部署每种类型的 deployment，请参见 [Equinix Metal 部署](https://metal.equinix.com/developers/docs/deploy/on-demand/)。以下链接介绍 Equinix Metal Server 的类型以及价格。
+开始部署 Equinix Metal 主机。你可以使用 Equinix Metal 控制台，API 或 CLI 来配置 Equinix Metal Server。如果你需要了解每种 Deployment 类型的说明，请参见 [Equinix Metal 部署](https://metal.equinix.com/developers/docs/deploy/on-demand/)。以下链接介绍 Equinix Metal Server 的类型以及价格：
 - [Equinix Metal Server 类型](https://metal.equinix.com/developers/docs/servers/about/)
 - [Equinix Metal 价格](https://metal.equinix.com/developers/docs/servers/server-specs/)
 
@@ -77,25 +77,14 @@ title: Rancher Equinix Metal 快速入门
 
 1. 点击 **☰ > 集群管理**。
 1. 在**集群**页面，点击**创建**。
-2. 选择**自定义**。
-
-3. 输入**集群名称**。
-
-4. 跳过**成员角色**和**集群选项**。此部分我们稍后会详细介绍。
-
-5. 点击**下一步**。
-
-6. 在**节点角色**中，选择 _全部_ 角色，即 **etcd**，**Control** 和 **Worker**。
-
-7. **可选**：Rancher 会自动检测用于 Rancher 通信和集群通信的 IP 地址。你可以使用**节点地址**处的`公有地址`和`内网地址`进行覆盖。
-
-8. 跳过**标签**部分的内容。这部分内容暂时不重要。
-
-9. 将屏幕上显示的命令复制到剪贴板。
-
-10. 使用你惯用的 shell（例如 PuTTy 或远程终端）登录到你的 Linux 主机。粘贴剪贴板的命令并运行。
-
-11. 在 Linux 主机上运行完命令后，单击**完成**。
+1. 选择**自定义**。
+1. 输入**集群名称**。
+1. 点击**下一步**。
+1. 在**节点角色**中，选择 _全部_ 角色，即 **etcd**，**Control** 和 **Worker**。
+   - **可选**：Rancher 会自动检测用于 Rancher 通信和集群通信的 IP 地址。你可以使用**节点地址**处的`公有地址`和`内网地址`进行覆盖。
+1. 将注册命令复制到剪贴板。
+1. 使用你惯用的 shell（例如 PuTTy 或远程终端）登录到你的 Linux 主机。粘贴剪贴板的命令并运行。
+1. 在 Linux 主机上运行完命令后，单击**完成**。
 
 **结果**：
 
