@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/cis-scan-guides/install-rancher-cis-benchmark.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "lastUpdatedAt": 1692737733,
+    "formattedLastUpdatedAt": "Aug 22, 2023",
     "frontMatter": {
         "title": "Install Rancher CIS Benchmark"
     },
@@ -380,11 +380,17 @@ function MDXContent(_param) {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
-    }, `CIS Benchmark 4.0.0 and above have PSPs disabled by default. To install CIS Benchmark on a hardened cluster, set `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `If you are running Kubernetes v1.24 or earlier, and have a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies"
+    }, `Pod Security Policy`), ` (PSP) hardened cluster, CIS Benchmark 4.0.0 and later disable PSPs by default. To install CIS Benchmark on a PSP-hardened cluster, set `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `global.psp.enabled`), ` to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `true`), ` in the values before installing the chart.`)));
+    }, `true`), ` in the values before installing the chart. `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards"
+    }, `Pod Security Admission`), ` (PSA) hardened clusters aren't affected.`)));
 }
 MDXContent.isMDXComponent = true;
 
