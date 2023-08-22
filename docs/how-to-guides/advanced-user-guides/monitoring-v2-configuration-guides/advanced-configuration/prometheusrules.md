@@ -2,6 +2,10 @@
 title: Configuring PrometheusRules
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/prometheusrules"/>
+</head>
+
 A PrometheusRule defines a group of Prometheus alerting and/or recording rules.
 
 :::note
