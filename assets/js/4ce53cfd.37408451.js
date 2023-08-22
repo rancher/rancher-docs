@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/pages-for-subheaders/rancher-hardening-guides.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1678300966,
-    "formattedLastUpdatedAt": "Mar 8, 2023",
+    "lastUpdatedAt": 1692720790,
+    "formattedLastUpdatedAt": "Aug 22, 2023",
     "frontMatter": {
         "title": "Self-Assessment and Hardening Guides for Rancher"
     },
@@ -481,7 +481,7 @@ function MDXContent(_param) {
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "../reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.25.md"
+        "href": "/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25"
     }, `Link`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
@@ -573,7 +573,7 @@ function MDXContent(_param) {
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "../reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25.md"
+        "href": "/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25"
     }, `Link`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
@@ -688,7 +688,7 @@ function MDXContent(_param) {
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "../reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.25.md"
+        "href": "/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25"
     }, `Link`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null

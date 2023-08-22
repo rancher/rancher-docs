@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[27642],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[1743],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 33965:
+/***/ 26871:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "pages-for-subheaders/rancher-hardening-guides",
-    "id": "pages-for-subheaders/rancher-hardening-guides",
+    "id": "version-2.7/pages-for-subheaders/rancher-hardening-guides",
     "title": "Self-Assessment and Hardening Guides for Rancher",
     "description": "Rancher provides specific security hardening guides for each supported Rancher version's Kubernetes distributions.",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/current/pages-for-subheaders/rancher-hardening-guides.md",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.7/pages-for-subheaders/rancher-hardening-guides.md",
     "sourceDirName": "pages-for-subheaders",
     "slug": "/pages-for-subheaders/rancher-hardening-guides",
-    "permalink": "/zh/pages-for-subheaders/rancher-hardening-guides",
+    "permalink": "/zh/v2.7/pages-for-subheaders/rancher-hardening-guides",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/pages-for-subheaders/rancher-hardening-guides.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/pages-for-subheaders/rancher-hardening-guides.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1683884717,
-    "formattedLastUpdatedAt": "2023年5月12日",
+    "version": "2.7",
+    "lastUpdatedAt": 1692720790,
+    "formattedLastUpdatedAt": "2023年8月22日",
     "frontMatter": {
         "title": "Self-Assessment and Hardening Guides for Rancher"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "安全",
-        "permalink": "/zh/pages-for-subheaders/rancher-security"
+        "permalink": "/zh/v2.7/pages-for-subheaders/rancher-security"
     },
     "next": {
         "title": "RKE Hardening Guide",
-        "permalink": "/zh/pages-for-subheaders/rke1-hardening-guide"
+        "permalink": "/zh/v2.7/pages-for-subheaders/rke1-hardening-guide"
     }
 };
 const assets = {};
@@ -441,13 +441,13 @@ function MDXContent(_param) {
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.23"
+        "href": "/zh/v2.7/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.23"
     }, `Link`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/pages-for-subheaders/rke1-hardening-guide"
+        "href": "/zh/v2.7/pages-for-subheaders/rke1-hardening-guide"
     }, `Link`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -461,13 +461,13 @@ function MDXContent(_param) {
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
+        "href": "/zh/v2.7/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
     }, `Link`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/pages-for-subheaders/rke1-hardening-guide"
+        "href": "/zh/v2.7/pages-for-subheaders/rke1-hardening-guide"
     }, `Link`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -481,13 +481,13 @@ function MDXContent(_param) {
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "../reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.25.md"
+        "href": "../reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25.md"
     }, `Link`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/pages-for-subheaders/rke1-hardening-guide"
+        "href": "/zh/v2.7/pages-for-subheaders/rke1-hardening-guide"
     }, `Link`))))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "rke2-guides"
     }, `RKE2 Guides`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
@@ -527,13 +527,13 @@ function MDXContent(_param) {
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.23"
+        "href": "/zh/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.23"
     }, `Link`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/pages-for-subheaders/rke2-hardening-guide"
+        "href": "/zh/v2.7/pages-for-subheaders/rke2-hardening-guide"
     }, `Link`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -550,13 +550,13 @@ function MDXContent(_param) {
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
+        "href": "/zh/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
     }, `Link`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/pages-for-subheaders/rke2-hardening-guide"
+        "href": "/zh/v2.7/pages-for-subheaders/rke2-hardening-guide"
     }, `Link`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -573,13 +573,13 @@ function MDXContent(_param) {
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "../reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25.md"
+        "href": "../reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25.md"
     }, `Link`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/pages-for-subheaders/rke2-hardening-guide"
+        "href": "/zh/v2.7/pages-for-subheaders/rke2-hardening-guide"
     }, `Link`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -642,13 +642,13 @@ function MDXContent(_param) {
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.23"
+        "href": "/zh/v2.7/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.23"
     }, `Link`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/pages-for-subheaders/k3s-hardening-guide"
+        "href": "/zh/v2.7/pages-for-subheaders/k3s-hardening-guide"
     }, `Link`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -665,13 +665,13 @@ function MDXContent(_param) {
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
+        "href": "/zh/v2.7/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
     }, `Link`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/pages-for-subheaders/k3s-hardening-guide"
+        "href": "/zh/v2.7/pages-for-subheaders/k3s-hardening-guide"
     }, `Link`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -688,13 +688,13 @@ function MDXContent(_param) {
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "../reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.25.md"
+        "href": "../reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25.md"
     }, `Link`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/zh/pages-for-subheaders/k3s-hardening-guide"
+        "href": "/zh/v2.7/pages-for-subheaders/k3s-hardening-guide"
     }, `Link`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -725,7 +725,7 @@ function MDXContent(_param) {
         "href": "https://en.wikipedia.org/wiki/Security-Enhanced_Linux"
     }, `Security-Enhanced Linux (SELinux)`), ` is a kernel module that adds extra access controls and security tools to Linux. Historically used by government agencies, SELinux is now industry-standard. SELinux is enabled by default on RHEL and CentOS.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To use Rancher with SELinux, we recommend `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/reference-guides/rancher-security/selinux-rpm/about-rancher-selinux"
+        "href": "/zh/v2.7/reference-guides/rancher-security/selinux-rpm/about-rancher-selinux"
     }, `installing`), ` the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `rancher-selinux`), ` RPM.`));
