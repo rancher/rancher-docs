@@ -12,10 +12,11 @@ This hardening guide is intended to be used for K3s clusters and is associated w
 
 | Rancher Version | CIS Benchmark Version | Kubernetes Version           |
 |-----------------|-----------------------|------------------------------|
-| Rancher v2.7    | Benchmark v1.23       | Kubernetes v1.23 up to v1.25 |
+| Rancher v2.7    | Benchmark v1.7       | Kubernetes v1.24 up to v1.25 |
 
 :::note
-At the time of writing, the upstream CIS Kubernetes v1.25 benchmark is not yet available in Rancher. At this time Rancher is using the CIS v1.23 benchmark when scanning Kubernetes v1.25 clusters.
+- Since Benchmark v1.24, some check ids might fail due to file permission new requirements (600 instead of 644). Impacted check ids: `1.1.1`, `1.1.3`, `1.1.5`, `1.1.7`, `1.1.13`, `1.1.15`, `4.1.7`, `4.1.9`, `4.1.15`. 
+  - Since Benchmark v1.7 (latest), `--protect-kernel-defaults` (check id 4.2.6) parameter is not required anymore, and was replaced.
 :::
 
 For more details on how to evaluate a hardened K3s cluster against the official CIS benchmark, refer to the K3s self-assessment guides for specific Kubernetes and CIS benchmark versions.
@@ -30,20 +31,6 @@ K3s passes a number of the Kubernetes CIS controls without modification, as it a
 The first section (1.1) of the CIS Benchmark primarily focuses on  pod manifest permissions and ownership. Since everything in the distribution is packaged in a single binary, this section does not apply to the core components of K3s.
 
 ## Host-level Requirements
-
-### Ensure `protect-kernel-defaults` is set
-
-This is a kubelet flag that will cause the kubelet to exit if the required kernel parameters are unset or are set to values that are different from the kubelet's defaults.
-
-The `protect-kernel-defaults` flag can be set in the cluster configuration in Rancher.
-
-```yaml
-spec:
-  rkeConfig:
-    machineSelectorConfig:
-      - config:
-          protect-kernel-defaults: true
-```
 
 ### Set kernel parameters
 
@@ -685,7 +672,6 @@ spec:
       - config:
           kubelet-arg:
             - make-iptables-util-chains=true                          # CIS 4.2.7
-          protect-kernel-defaults: true                               # CIS 4.2.6
 ```
 
 </TabItem>
@@ -717,7 +703,6 @@ spec:
       - config:
           kubelet-arg:
             - make-iptables-util-chains=true                          # CIS 4.2.7
-          protect-kernel-defaults: true                               # CIS 4.2.6
 ```
 
 </TabItem>
