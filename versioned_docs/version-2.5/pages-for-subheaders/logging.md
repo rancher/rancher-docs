@@ -3,6 +3,10 @@ title: Rancher Integration with Logging Services
 description: Rancher integrates with popular logging services. Learn the requirements and benefits of integrating with logging services, and enable logging on your cluster.
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/logging"/>
+</head>
+
 The [Logging operator](https://kube-logging.github.io/docs/) now powers Rancher's logging solution in place of the former, in-house solution.
 
 For an overview of the changes in v2.5, see [this section.](../explanations/integrations-in-rancher/logging/logging-architecture.md#changes-in-rancher-v25) For information about migrating from Logging V1, see [this page.](../explanations/integrations-in-rancher/logging/migrate-to-rancher-v2.5+-logging.md)

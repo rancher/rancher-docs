@@ -2,6 +2,10 @@
 title: Cluster Alerts
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/monitoring-and-alerting"/>
+</head>
+
 To keep your clusters and applications healthy and driving your organizational productivity forward, you need to stay informed of events occurring in your clusters and projects, both planned and unplanned. When an event occurs, your alert is triggered, and you are sent a notification. You can then, if necessary, follow up with corrective actions.
 
 

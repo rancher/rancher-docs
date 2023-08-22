@@ -2,6 +2,10 @@
 title: Self-Assessment and Hardening Guides for Rancher
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/rancher-hardening-guides"/>
+</head>
+
 Rancher provides specific security hardening guides for each supported Rancher version's Kubernetes distributions.
 
 ## Rancher Kubernetes Distributions

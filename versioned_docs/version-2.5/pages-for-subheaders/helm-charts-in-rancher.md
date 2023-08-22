@@ -2,6 +2,10 @@
 title: Helm Charts in Rancher
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/helm-charts-in-rancher"/>
+</head>
+
 In this section, you'll learn how to manage Helm chart repositories and applications in Rancher.
 
 ### Changes in Rancher v2.5

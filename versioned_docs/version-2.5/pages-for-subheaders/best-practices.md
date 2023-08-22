@@ -2,6 +2,10 @@
 title: Best Practices Guide
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/best-practices"/>
+</head>
+
 The purpose of this section is to consolidate best practices for Rancher implementations. This also includes recommendations for related technologies, such as Kubernetes, Docker, containers, and more. The objective is to improve the outcome of a Rancher implementation using the operational experience of Rancher and its customers.
 
 If you have any questions about how these might apply to your use case, please contact your Customer Success Manager or Support.

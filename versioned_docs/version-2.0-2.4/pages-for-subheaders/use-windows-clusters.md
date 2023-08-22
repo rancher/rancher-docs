@@ -2,6 +2,10 @@
 title: Launching Kubernetes on Windows Clusters
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/use-windows-clusters"/>
+</head>
+
 _Available as of v2.3.0_
 
 When provisioning a [custom cluster](use-existing-nodes.md) using Rancher, Rancher uses RKE (the Rancher Kubernetes Engine) to install Kubernetes on your existing nodes.

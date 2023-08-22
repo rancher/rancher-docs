@@ -2,6 +2,10 @@
 title: Security
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/rancher-security"/>
+</head>
+
 <table width="100%">
 <tr style={{verticalAlign: 'top'}}>
 <td width="30%" style={{border: 'none'}}>

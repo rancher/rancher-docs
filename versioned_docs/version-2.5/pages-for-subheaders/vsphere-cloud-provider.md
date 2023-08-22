@@ -2,6 +2,10 @@
 title: Setting up the vSphere Cloud Provider
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/set-up-cloud-providers"/>
+</head>
+
 In this section, you'll learn how to set up a vSphere cloud provider for a Rancher managed RKE Kubernetes cluster in vSphere.
 
 ## In-tree Cloud Provider

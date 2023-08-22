@@ -3,6 +3,10 @@ title: "Kubernetes Workloads and Pods"
 description: "Learn about the two constructs with which you can build any complex containerized application in Kubernetes: Kubernetes workloads and pods"
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/workloads-and-pods"/>
+</head>
+
 You can build any complex containerized application in Kubernetes using two basic constructs: pods and workloads. Once you build an application, you can expose it for access either within the same cluster or on the Internet using a third construct: services.
 
 ### Pods

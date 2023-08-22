@@ -2,6 +2,10 @@
 title: Cluster Administration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/manage-clusters"/>
+</head>
+
 After you provision a cluster in Rancher, you can begin using powerful Kubernetes features to deploy and scale your containerized applications in development, testing, or production environments.
 
 :::note
