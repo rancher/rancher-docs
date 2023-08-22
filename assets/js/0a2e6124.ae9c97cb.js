@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[64455],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[37090],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 87203:
+/***/ 1991:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,45 +308,50 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Uninstall Prometheus Federator'
+    title: 'Setting up Prometheus Federator for a Workload'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/uninstall-prometheus-federator",
-    "id": "version-2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/uninstall-prometheus-federator",
-    "title": "Uninstall Prometheus Federator",
-    "description": "1. Click ☰ > Cluster Management.",
-    "source": "@site/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/uninstall-prometheus-federator.md",
+    "unversionedId": "how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads",
+    "id": "version-2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads",
+    "title": "Setting up Prometheus Federator for a Workload",
+    "description": "Display CPU and Memory Metrics for a Workload",
+    "source": "@site/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads.md",
     "sourceDirName": "how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides",
-    "slug": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/uninstall-prometheus-federator",
-    "permalink": "/v2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/uninstall-prometheus-federator",
+    "slug": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads",
+    "permalink": "/v2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/uninstall-prometheus-federator.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1670549188,
-    "formattedLastUpdatedAt": "Dec 9, 2022",
+    "lastUpdatedAt": 1692737709,
+    "formattedLastUpdatedAt": "Aug 22, 2023",
     "frontMatter": {
-        "title": "Uninstall Prometheus Federator"
+        "title": "Setting up Prometheus Federator for a Workload"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Enable Prometheus Federator",
-        "permalink": "/v2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/enable-prometheus-federator"
-    },
-    "next": {
         "title": "Customizing Grafana Dashboards",
         "permalink": "/v2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/customize-grafana-dashboards"
+    },
+    "next": {
+        "title": "Installing Project Monitors",
+        "permalink": "/v2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/project-monitors"
     }
 };
 const assets = {};
-const toc = [];
-const makeShortcode = (name)=>function MDXDefaultShortcode(props) {
-        console.warn("Component " + name + " was not imported, exported, or provided by MDXProvider as global scope");
-        return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("div", props);
-    };
-const Tabs = makeShortcode("Tabs");
-const TabItem = makeShortcode("TabItem");
+const toc = [
+    {
+        value: 'Display CPU and Memory Metrics for a Workload',
+        id: 'display-cpu-and-memory-metrics-for-a-workload',
+        level: 3
+    },
+    {
+        value: 'Setting up Metrics Beyond CPU and Memory',
+        id: 'setting-up-metrics-beyond-cpu-and-memory',
+        level: 3
+    }
+];
 const layoutProps = {
     toc
 };
@@ -358,83 +363,20 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(Tabs, {
-        mdxType: "Tabs"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(TabItem, {
-        value: "Rancher v2.6.5+",
-        mdxType: "TabItem"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `☰ > Cluster Management`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Go to the cluster that you created and click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Explore`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `In the left navigation bar, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Apps`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Installed Apps`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Go to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `cattle-monitoring-system`), ` namespace and check the boxes for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `rancher-monitoring-crd`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `rancher-monitoring`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Delete`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Confirm `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Delete`), `.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(TabItem, {
-        value: "Rancher before v2.6.5",
-        mdxType: "TabItem"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `☰ > Cluster Management`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Go to the cluster that you created and click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Explore`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `In the left navigation bar, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Apps & Marketplace`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Installed Apps`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Go to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `cattle-monitoring-system`), ` namespace and check the boxes for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `rancher-monitoring-crd`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `rancher-monitoring`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Delete`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Confirm `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Delete`), `.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Result:`), ` `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `prometheus-federator`), ` is uninstalled.`));
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "display-cpu-and-memory-metrics-for-a-workload"
+    }, `Display CPU and Memory Metrics for a Workload`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Displaying CPU and memory metrics with Prometheus Federator is done the same way as with rancher-monitoring. For instructions, refer `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/v2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/set-up-monitoring-for-workloads#display-cpu-and-memory-metrics-for-a-workload"
+    }, `here`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "setting-up-metrics-beyond-cpu-and-memory"
+    }, `Setting up Metrics Beyond CPU and Memory`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Setting up metrics beyond CPU and memory with Prometheus Federator is done the same way as with rancher-monitoring. For instructions, refer `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/v2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/set-up-monitoring-for-workloads#setting-up-metrics-beyond-cpu-and-memory"
+    }, `here`), `.`));
 }
 MDXContent.isMDXComponent = true;
 

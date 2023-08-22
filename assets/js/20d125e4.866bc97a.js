@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[95244],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[97807],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 21018:
+/***/ 65959:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads",
-    "id": "version-2.7/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads",
+    "id": "how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads",
     "title": "Setting up Prometheus Federator for a Workload",
     "description": "Display CPU and Memory Metrics for a Workload",
-    "source": "@site/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads.md",
+    "source": "@site/docs/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads.md",
     "sourceDirName": "how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides",
     "slug": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads",
-    "permalink": "/v2.7/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads",
+    "permalink": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1692737709,
+    "formattedLastUpdatedAt": "Aug 22, 2023",
     "frontMatter": {
         "title": "Setting up Prometheus Federator for a Workload"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Customizing Grafana Dashboards",
-        "permalink": "/v2.7/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/customize-grafana-dashboards"
+        "permalink": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/customize-grafana-dashboards"
     },
     "next": {
         "title": "Installing Project Monitors",
-        "permalink": "/v2.7/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/project-monitors"
+        "permalink": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/project-monitors"
     }
 };
 const assets = {};
@@ -363,16 +363,19 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "display-cpu-and-memory-metrics-for-a-workload"
     }, `Display CPU and Memory Metrics for a Workload`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Displaying CPU and memory metrics with Prometheus Federator is done the same way as with rancher-monitoring. For instructions, refer `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/advanced-user-guides/monitoring-alerting-guides/set-up-monitoring-for-workloads#display-cpu-and-memory-metrics-for-a-workload"
+        "href": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/set-up-monitoring-for-workloads#display-cpu-and-memory-metrics-for-a-workload"
     }, `here`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "setting-up-metrics-beyond-cpu-and-memory"
     }, `Setting up Metrics Beyond CPU and Memory`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Setting up metrics beyond CPU and memory with Prometheus Federator is done the same way as with rancher-monitoring. For instructions, refer `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/advanced-user-guides/monitoring-alerting-guides/set-up-monitoring-for-workloads#setting-up-metrics-beyond-cpu-and-memory"
+        "href": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/set-up-monitoring-for-workloads#setting-up-metrics-beyond-cpu-and-memory"
     }, `here`), `.`));
 }
 MDXContent.isMDXComponent = true;

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[57871],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[95244],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 85494:
+/***/ 21018:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,39 +308,50 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Customizing Grafana Dashboards'
+    title: 'Setting up Prometheus Federator for a Workload'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/customize-grafana-dashboards",
-    "id": "version-2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/customize-grafana-dashboards",
-    "title": "Customizing Grafana Dashboards",
-    "description": "Grafana dashboards are customized the same way whether it's for rancher-monitoring or for Prometheus Federator.",
-    "source": "@site/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/customize-grafana-dashboards.md",
+    "unversionedId": "how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads",
+    "id": "version-2.7/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads",
+    "title": "Setting up Prometheus Federator for a Workload",
+    "description": "Display CPU and Memory Metrics for a Workload",
+    "source": "@site/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads.md",
     "sourceDirName": "how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides",
-    "slug": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/customize-grafana-dashboards",
-    "permalink": "/v2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/customize-grafana-dashboards",
+    "slug": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads",
+    "permalink": "/v2.7/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/customize-grafana-dashboards.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads.md",
     "tags": [],
-    "version": "2.6",
-    "lastUpdatedAt": 1668452187,
-    "formattedLastUpdatedAt": "Nov 14, 2022",
+    "version": "2.7",
+    "lastUpdatedAt": 1692737709,
+    "formattedLastUpdatedAt": "Aug 22, 2023",
     "frontMatter": {
-        "title": "Customizing Grafana Dashboards"
+        "title": "Setting up Prometheus Federator for a Workload"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Uninstall Prometheus Federator",
-        "permalink": "/v2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/uninstall-prometheus-federator"
+        "title": "Customizing Grafana Dashboards",
+        "permalink": "/v2.7/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/customize-grafana-dashboards"
     },
     "next": {
-        "title": "Setting up Prometheus Federator for a Workload",
-        "permalink": "/v2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads"
+        "title": "Installing Project Monitors",
+        "permalink": "/v2.7/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/project-monitors"
     }
 };
 const assets = {};
-const toc = [];
+const toc = [
+    {
+        value: 'Display CPU and Memory Metrics for a Workload',
+        id: 'display-cpu-and-memory-metrics-for-a-workload',
+        level: 3
+    },
+    {
+        value: 'Setting up Metrics Beyond CPU and Memory',
+        id: 'setting-up-metrics-beyond-cpu-and-memory',
+        level: 3
+    }
+];
 const layoutProps = {
     toc
 };
@@ -352,10 +363,20 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Grafana dashboards are customized the same way whether it's for rancher-monitoring or for Prometheus Federator.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For instructions, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "display-cpu-and-memory-metrics-for-a-workload"
+    }, `Display CPU and Memory Metrics for a Workload`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Displaying CPU and memory metrics with Prometheus Federator is done the same way as with rancher-monitoring. For instructions, refer `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/advanced-user-guides/monitoring-alerting-guides/customize-grafana-dashboard"
-    }, `this page`), `.`));
+        "href": "/v2.7/how-to-guides/advanced-user-guides/monitoring-alerting-guides/set-up-monitoring-for-workloads#display-cpu-and-memory-metrics-for-a-workload"
+    }, `here`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "setting-up-metrics-beyond-cpu-and-memory"
+    }, `Setting up Metrics Beyond CPU and Memory`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Setting up metrics beyond CPU and memory with Prometheus Federator is done the same way as with rancher-monitoring. For instructions, refer `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/v2.7/how-to-guides/advanced-user-guides/monitoring-alerting-guides/set-up-monitoring-for-workloads#setting-up-metrics-beyond-cpu-and-memory"
+    }, `here`), `.`));
 }
 MDXContent.isMDXComponent = true;
 
