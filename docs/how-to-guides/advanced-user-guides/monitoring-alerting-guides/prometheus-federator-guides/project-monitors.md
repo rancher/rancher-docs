@@ -2,6 +2,10 @@
 title: Installing Project Monitors
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/project-monitors"/>
+</head>
+
 Install **Project Monitors** in each project where you want to enable project monitoring.
 
 1. Click **☰ > Cluster Management**.

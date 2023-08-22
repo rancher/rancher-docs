@@ -2,6 +2,10 @@
 title: Enable Prometheus Federator
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/enable-prometheus-federator"/>
+</head>
+
 ## Requirements
 
 By default, Prometheus Federator is configured and intended to be deployed alongside [rancher-monitoring](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/), which deploys Prometheus Operator alongside a Cluster Prometheus that each Project Monitoring Stack is configured to federate namespace-scoped metrics from by default.
