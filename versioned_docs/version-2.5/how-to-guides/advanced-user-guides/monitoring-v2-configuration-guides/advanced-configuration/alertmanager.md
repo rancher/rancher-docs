@@ -2,6 +2,10 @@
 title: Alertmanager Configuration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/alertmanager"/>
+</head>
+
 It is usually not necessary to directly edit the Alertmanager custom resource. For most use cases, you will only need to edit the Receivers and Routes to configure notifications.
 
 When Receivers and Routes are updated, the monitoring application will automatically update the Alertmanager custom resource to be consistent with those changes.
