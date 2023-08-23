@@ -325,8 +325,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1692045299,
-    "formattedLastUpdatedAt": "Aug 14, 2023",
+    "lastUpdatedAt": 1692817960,
+    "formattedLastUpdatedAt": "Aug 23, 2023",
     "frontMatter": {
         "title": "Layer 4 and Layer 7 Load Balancing",
         "description": "Kubernetes supports load balancing in two ways: Layer-4 Load Balancing and Layer-7 Load Balancing. Learn about the support for each way in different deployments"
@@ -388,7 +388,7 @@ function MDXContent(_param) {
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
         href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing"
-    })), "Kubernetes supports load balancing in two ways: Layer-4 Load Balancing and Layer-7 Load Balancing.", /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Kubernetes supports load balancing in two ways: Layer-4 Load Balancing and Layer-7 Load Balancing.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "layer-4-load-balancer"
     }, `Layer-4 Load Balancer`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Layer-4 load balancer (or the external load balancer) forwards traffic to Nodeports. Layer-4 load balancer allows you to forward both HTTP and TCP traffic.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Often, the Layer-4 load balancer is supported by the underlying cloud provider, so when you deploy RKE clusters on bare-metal servers and vSphere clusters, Layer-4 load balancer is not supported. However, a single `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",

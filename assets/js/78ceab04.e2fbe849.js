@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[7654],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[86290],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 1834:
+/***/ 34571:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -314,19 +314,19 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing",
-    "id": "version-2.0-2.4/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing",
+    "id": "version-2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing",
     "title": "Layer 4 and Layer 7 Load Balancing",
     "description": "Kubernetes supports load balancing in two ways: Layer-4 Load Balancing and Layer-7 Load Balancing. Learn about the support for each way in different deployments",
-    "source": "@site/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md",
+    "source": "@site/versioned_docs/version-2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md",
     "sourceDirName": "how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller",
     "slug": "/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing",
-    "permalink": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing",
+    "permalink": "/v2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md",
     "tags": [],
-    "version": "2.0-2.4",
-    "lastUpdatedAt": 1692045299,
-    "formattedLastUpdatedAt": "2023年8月14日",
+    "version": "2.6",
+    "lastUpdatedAt": 1692817960,
+    "formattedLastUpdatedAt": "Aug 23, 2023",
     "frontMatter": {
         "title": "Layer 4 and Layer 7 Load Balancing",
         "description": "Kubernetes supports load balancing in two ways: Layer-4 Load Balancing and Layer-7 Load Balancing. Learn about the support for each way in different deployments"
@@ -334,11 +334,11 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Set Up Load Balancer and Ingress Controller within Rancher",
-        "permalink": "/zh/v2.0-v2.4/pages-for-subheaders/load-balancer-and-ingress-controller"
+        "permalink": "/v2.6/pages-for-subheaders/load-balancer-and-ingress-controller"
     },
     "next": {
-        "title": "Adding Ingresses to Your Project",
-        "permalink": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/add-ingresses"
+        "title": "Adding Ingresses",
+        "permalink": "/v2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/add-ingresses"
     }
 };
 const assets = {};
@@ -388,16 +388,16 @@ function MDXContent(_param) {
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
         href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing"
-    })), "Kubernetes supports load balancing in two ways: Layer-4 Load Balancing and Layer-7 Load Balancing.", /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Kubernetes supports load balancing in two ways: Layer-4 Load Balancing and Layer-7 Load Balancing.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "layer-4-load-balancer"
     }, `Layer-4 Load Balancer`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Layer-4 load balancer (or the external load balancer) forwards traffic to Nodeports. Layer-4 load balancer allows you to forward both HTTP and TCP traffic.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Often, the Layer-4 load balancer is supported by the underlying cloud provider, so when you deploy RKE clusters on bare-metal servers and vSphere clusters, Layer-4 load balancer is not supported. However, a single `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://kubernetes.github.io/ingress-nginx/user-guide/exposing-tcp-udp-services/"
-    }, `globally managed config-map`), ` can be used to expose services on NGINX or third-party ingress.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "blockquote"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Note:`), ` It is possible to deploy a cluster with a non-cloud load balancer, such as `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `globally managed config-map`), ` can be used to expose services on NGINX or third-party ingress.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `It is possible to deploy a cluster with a non-cloud load balancer, such as `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://metallb.universe.tf/"
     }, `MetalLB.`), ` However, that use case is more advanced than the Layer-4 load balancer supported by a cloud provider, and it is not configurable in Rancher or RKE.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
@@ -559,9 +559,11 @@ function MDXContent(_param) {
         parentName: "ol"
     }, `Configure your own DNS to map (via A records) your domain name to the IP addresses exposes by the Layer-7 load balancer.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
-    }, `Ask Rancher to generate an sslip.io host name for your ingress rule. Rancher will take one of your exposed IPs, say a.b.c.d, and generate a host name `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `Ask Rancher to generate an xip.io host name for your ingress rule. Rancher will take one of your exposed IPs, say `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
-    }, `<ingressname>.<namespace>.a.b.c.d.sslip.io`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The benefit of using sslip.io is that you obtain a working entrypoint URL immediately after you create the ingress rule. Setting up your own domain name, on the other hand, requires you to configure DNS servers and wait for DNS to propagate.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }, `a.b.c.d`), `, and generate a host name `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "li"
+    }, `<ingressname>.<namespace>.a.b.c.d.xip.io`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The benefit of using xip.io is that you obtain a working entrypoint URL immediately after you create the ingress rule. Setting up your own domain name, on the other hand, requires you to configure DNS servers and wait for DNS to propagate.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "related-links"
     }, `Related Links`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"

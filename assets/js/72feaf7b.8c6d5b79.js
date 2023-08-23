@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[79213],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[57166],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,38 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 61084:
+/***/ 19383:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(67294);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(45697);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+// This code was authored by bravemaster619 https://dev.to/bravemaster619/simplest-way-to-embed-a-youtube-video-in-your-react-app-3bk2
+const YoutubeEmbed = ({ id  })=>/*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "video-responsive"
+    }, /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.createElement("iframe", {
+        width: "853",
+        height: "480",
+        src: `https://www.youtube.com/embed/${id}`,
+        frameBorder: "0",
+        allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+        allowFullScreen: true,
+        title: "Embedded youtube"
+    }));
+YoutubeEmbed.propTypes = {
+    embedId: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired)
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (YoutubeEmbed);
+
+
+/***/ }),
+
+/***/ 45008:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -226,6 +257,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(67294);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3905);
+/* harmony import */ var _site_src_components_YouTube__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(19383);
 /* @jsxRuntime classic */ /* @jsx mdx */ /* @jsxFrag React.Fragment */ function _define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
@@ -314,19 +346,19 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "pages-for-subheaders/vsphere",
-    "id": "version-2.7/pages-for-subheaders/vsphere",
+    "id": "pages-for-subheaders/vsphere",
     "title": "Creating a vSphere Cluster",
     "description": "Use Rancher to create a vSphere cluster. It may consist of groups of VMs with distinct properties which allow for fine-grained control over the sizing of nodes.",
-    "source": "@site/versioned_docs/version-2.7/pages-for-subheaders/vsphere.md",
+    "source": "@site/docs/pages-for-subheaders/vsphere.md",
     "sourceDirName": "pages-for-subheaders",
     "slug": "/pages-for-subheaders/vsphere",
-    "permalink": "/v2.7/pages-for-subheaders/vsphere",
+    "permalink": "/pages-for-subheaders/vsphere",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/pages-for-subheaders/vsphere.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/pages-for-subheaders/vsphere.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1692127491,
-    "formattedLastUpdatedAt": "Aug 15, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1692817960,
+    "formattedLastUpdatedAt": "Aug 23, 2023",
     "frontMatter": {
         "title": "Creating a vSphere Cluster",
         "description": "Use Rancher to create a vSphere cluster. It may consist of groups of VMs with distinct properties which allow for fine-grained control over the sizing of nodes."
@@ -334,14 +366,15 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Creating an Azure Cluster",
-        "permalink": "/v2.7/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster"
+        "permalink": "/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster"
     },
     "next": {
         "title": "Provisioning Kubernetes Clusters in vSphere",
-        "permalink": "/v2.7/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere"
+        "permalink": "/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere"
     }
 };
 const assets = {};
+
 const toc = [
     {
         value: 'vSphere Enhancements in Rancher v2.3',
@@ -384,11 +417,6 @@ const toc = [
         level: 2
     }
 ];
-const makeShortcode = (name)=>function MDXDefaultShortcode(props) {
-        console.warn("Component " + name + " was not imported, exported, or provided by MDXProvider as global scope");
-        return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("div", props);
-    };
-const YouTube = makeShortcode("YouTube");
 const layoutProps = {
     toc
 };
@@ -403,13 +431,13 @@ function MDXContent(_param) {
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
         href: "https://ranchermanager.docs.rancher.com/pages-for-subheaders/vsphere"
-    })), "import YouTube from '@site/src/components/YouTube'", /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `By using Rancher with vSphere, you can bring cloud operations on-premises.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher can provision nodes in vSphere and install Kubernetes on them. When creating a Kubernetes cluster in vSphere, Rancher first provisions the specified number of virtual machines by communicating with the vCenter API. Then it installs Kubernetes on top of them.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `A vSphere cluster may consist of multiple groups of VMs with distinct properties, such as the amount of memory or the number of vCPUs. This grouping allows for fine-grained control over the sizing of nodes for each Kubernetes role.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `By using Rancher with vSphere, you can bring cloud operations on-premises.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher can provision nodes in vSphere and install Kubernetes on them. When creating a Kubernetes cluster in vSphere, Rancher first provisions the specified number of virtual machines by communicating with the vCenter API. Then it installs Kubernetes on top of them.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `A vSphere cluster may consist of multiple groups of VMs with distinct properties, such as the amount of memory or the number of vCPUs. This grouping allows for fine-grained control over the sizing of nodes for each Kubernetes role.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "vsphere-enhancements-in-rancher-v23"
     }, `vSphere Enhancements in Rancher v2.3`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The vSphere node templates have been updated, allowing you to bring cloud operations on-premises with the following enhancements:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "self-healing-node-pools"
     }, `Self-healing Node Pools`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `One of the biggest advantages of provisioning vSphere nodes with Rancher is that it allows you to take advantage of Rancher's self-healing node pools, also called the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/use-new-nodes-in-an-infra-provider#about-node-auto-replace"
+        "href": "/pages-for-subheaders/use-new-nodes-in-an-infra-provider#about-node-auto-replace"
     }, `node auto-replace feature,`), ` in your on-premises clusters. Self-healing node pools are designed to help you replace worker nodes for stateless applications. When Rancher provisions nodes from a node template, Rancher can automatically replace unreachable nodes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "caution"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -418,7 +446,7 @@ function MDXContent(_param) {
         "id": "dynamically-populated-options-for-instances-and-scheduling"
     }, `Dynamically Populated Options for Instances and Scheduling`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Node templates for vSphere have been updated so that when you create a node template with your vSphere credentials, the template is automatically populated with the same options for provisioning VMs that you have access to in the vSphere console.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For the fields to be populated, your setup needs to fulfill the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere#preparation-in-vsphere"
+        "href": "/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere#preparation-in-vsphere"
     }, `prerequisites.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "more-supported-operating-systems"
     }, `More Supported Operating Systems`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can provision VMs with any operating system that supports `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -428,14 +456,14 @@ function MDXContent(_param) {
         "href": "https://cloudinit.readthedocs.io/en/latest/topics/examples.html"
     }, `cloud config.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "video-walkthrough-of-v233-node-template-features"
-    }, `Video Walkthrough of v2.3.3 Node Template Features`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In this YouTube video, we demonstrate how to set up a node template with the new features designed to help you bring cloud operations to on-premises clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(YouTube, {
+    }, `Video Walkthrough of v2.3.3 Node Template Features`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In this YouTube video, we demonstrate how to set up a node template with the new features designed to help you bring cloud operations to on-premises clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_site_src_components_YouTube__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
         id: "dPIwg6x1AlU",
         mdxType: "YouTube"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "creating-a-vsphere-cluster"
     }, `Creating a vSphere Cluster`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere"
+        "href": "/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere"
     }, `this section,`), ` you'll learn how to use Rancher to install an `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://rancher.com/docs/rke/latest/en/"
@@ -443,21 +471,21 @@ function MDXContent(_param) {
         "id": "provisioning-storage"
     }, `Provisioning Storage`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For an example of how to provision storage in vSphere using Rancher, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/vsphere-storage"
+        "href": "/how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/vsphere-storage"
     }, `this section.`), ` In order to dynamically provision storage in vSphere, the vSphere provider must be enabled. Refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere"
+        "href": "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere"
     }, `in-tree vSphere config`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere"
+        "href": "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere"
     }, `out-of-tree vSphere config`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "enabling-the-vsphere-cloud-provider"
     }, `Enabling the vSphere Cloud Provider`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When a cloud provider is set up in Rancher, the Rancher server can automatically provision new infrastructure for the cluster, including new nodes or persistent storage devices.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For details on enabling the vSphere cloud provider, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere"
+        "href": "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere"
     }, `in-tree vSphere config`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere"
+        "href": "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere"
     }, `out-of-tree vSphere config`), `.`));
 }
 MDXContent.isMDXComponent = true;

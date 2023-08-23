@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/pages-for-subheaders/enable-experimental-features.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1692127491,
-    "formattedLastUpdatedAt": "Aug 15, 2023",
+    "lastUpdatedAt": 1692817960,
+    "formattedLastUpdatedAt": "Aug 23, 2023",
     "frontMatter": {
         "title": "Enabling Experimental Features"
     },
@@ -396,7 +396,10 @@ function MDXContent(_param) {
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
         href: "https://ranchermanager.docs.rancher.com/pages-for-subheaders/enable-experimental-features"
-    })), "Rancher includes some features that are experimental and disabled by default. You might want to enable these features, for example, if you decide that the benefits of using an [unsupported storage type](/v2.6/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers) outweighs the risk of using an untested feature. Feature flags were introduced to allow you to try these features that are not enabled by default.", /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The features can be enabled in three ways:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher includes some features that are experimental and disabled by default. You might want to enable these features, for example, if you decide that the benefits of using an `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/v2.6/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers"
+    }, `unsupported storage type`), ` outweighs the risk of using an untested feature. Feature flags were introduced to allow you to try these features that are not enabled by default.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The features can be enabled in three ways:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",

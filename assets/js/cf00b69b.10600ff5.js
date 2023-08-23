@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[72627],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[77402],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 39800:
+/***/ 2423:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,37 +308,37 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Kubernetes Registry and Docker Registry',
-    description: 'Learn about the Docker registry and Kubernetes registry, their use cases and how to use a private registry with the Rancher UI'
+    title: 'Kubernetes Registry and Container Image Registry',
+    description: 'Learn about the container image registry and Kubernetes registry, their use cases, and how to use a private registry with the Rancher UI'
 };
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries",
-    "id": "version-2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries",
-    "title": "Kubernetes Registry and Docker Registry",
-    "description": "Learn about the Docker registry and Kubernetes registry, their use cases and how to use a private registry with the Rancher UI",
-    "source": "@site/versioned_docs/version-2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries.md",
+    "id": "version-2.7/how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries",
+    "title": "Kubernetes Registry and Container Image Registry",
+    "description": "Learn about the container image registry and Kubernetes registry, their use cases, and how to use a private registry with the Rancher UI",
+    "source": "@site/versioned_docs/version-2.7/how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries.md",
     "sourceDirName": "how-to-guides/new-user-guides/kubernetes-resources-setup",
     "slug": "/how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries",
-    "permalink": "/v2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries",
+    "permalink": "/v2.7/how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries.md",
     "tags": [],
-    "version": "2.6",
-    "lastUpdatedAt": 1692045299,
-    "formattedLastUpdatedAt": "Aug 14, 2023",
+    "version": "2.7",
+    "lastUpdatedAt": 1692817960,
+    "formattedLastUpdatedAt": "Aug 23, 2023",
     "frontMatter": {
-        "title": "Kubernetes Registry and Docker Registry",
-        "description": "Learn about the Docker registry and Kubernetes registry, their use cases and how to use a private registry with the Rancher UI"
+        "title": "Kubernetes Registry and Container Image Registry",
+        "description": "Learn about the container image registry and Kubernetes registry, their use cases, and how to use a private registry with the Rancher UI"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Secrets",
-        "permalink": "/v2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/secrets"
+        "permalink": "/v2.7/how-to-guides/new-user-guides/kubernetes-resources-setup/secrets"
     },
     "next": {
         "title": "Helm Charts in Rancher",
-        "permalink": "/v2.6/pages-for-subheaders/helm-charts-in-rancher"
+        "permalink": "/v2.7/pages-for-subheaders/helm-charts-in-rancher"
     }
 };
 const assets = {};
@@ -383,25 +383,46 @@ function MDXContent(_param) {
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
         href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries"
-    })), "Registries are Kubernetes secrets containing credentials used to authenticate with [private Docker registries](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).", /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The word "registry" can mean two things, depending on whether it is used to refer to a Docker or Kubernetes registry:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Registries are Kubernetes secrets containing credentials used to authenticate with `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/"
+    }, `private container registries`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The word "registry" can mean two things, depending on whether it is used to refer to a container or Kubernetes registry:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `A `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `Docker registry`), ` contains Docker images that you can pull in order to use them in your deployment. The registry is a stateless, scalable server side application that stores and lets you distribute Docker images.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Container image registry`), ` (formerly "Docker registry") contains container images that you can pull and deploy. The registry is a stateless, scalable server side application that stores and lets you distribute container images.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `Kubernetes registry`), ` is an image pull secret that your deployment uses to authenticate with a Docker registry.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Deployments use the Kubernetes registry secret to authenticate with a private Docker registry and then pull a Docker image hosted on it.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Currently, deployments pull the private registry credentials automatically only if the workload is created in the Rancher UI and not when it is created via kubectl.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }, `Kubernetes registry`), ` is an image pull secret that your deployment uses to authenticate with an image registry.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Deployments use the Kubernetes registry secret to authenticate with a private image registry and then pull a container image hosted on it.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Currently, deployments pull the private registry credentials automatically only if the workload is created in the Rancher UI and not when it is created via kubectl.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "creating-a-registry-in-namespaces"
     }, `Creating a Registry in Namespaces`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "title": "Prerequisite:",
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
-    }, `You must have a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
+    }, `You must have an available private registry already deployed.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `If you need to create a private registry, refer to the documentation pages for your respective runtime:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", {
+        parentName: "admonition"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://github.com/containerd/containerd/blob/main/docs/cri/config.md#registry-configuration"
+    }, `Containerd`), `.`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://github.com/containerd/nerdctl/blob/main/docs/registry.md"
+    }, `Nerdctl commands and managed registry services`), `. `))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
         "href": "https://docs.docker.com/registry/deploying/"
-    }, `private registry`), ` available to use.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Docker`), `.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
@@ -480,10 +501,28 @@ function MDXContent(_param) {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
-    }, `You must have a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
+    }, `You must have an available private registry already deployed.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `If you need to create a private registry, refer to the documentation pages for your respective runtime:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", {
+        parentName: "admonition"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://github.com/containerd/containerd/blob/main/docs/cri/config.md#registry-configuration"
+    }, `Containerd`), `.`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://github.com/containerd/nerdctl/blob/main/docs/registry.md"
+    }, `Nerdctl commands and managed registry services`), `. `))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
         "href": "https://docs.docker.com/registry/deploying/"
-    }, `private registry`), ` available to use.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Before v2.6, secrets were required to be in a project scope. Projects are no longer required, and you may use the namespace scope instead. As a result, the Rancher UI was updated to reflect this new functionality. However, you may still create a project-scoped registry if desired. Use the following steps to do so:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Docker`), `.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Before v2.6, secrets were required to be in a project scope. Projects are no longer required, and you may use the namespace scope instead. As a result, the Rancher UI was updated to reflect this new functionality. However, you may still create a project-scoped registry if desired. Use the following steps to do so:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
@@ -621,7 +660,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, `Create`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `Result:`), ` Your deployment should launch, authenticate using the private registry credentials you added in the Rancher UI, and pull the Docker image that you specified.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `Result:`), ` Your deployment should launch, authenticate using the private registry credentials you added in the Rancher UI, and pull the container image that you specified.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "using-the-private-registry-with-kubectl"
     }, `Using the Private Registry with kubectl`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you create the workload using `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
