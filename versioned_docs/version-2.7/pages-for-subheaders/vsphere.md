@@ -6,6 +6,7 @@ description: Use Rancher to create a vSphere cluster. It may consist of groups o
 <head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/vsphere"/>
 </head>
+
 import YouTube from '@site/src/components/YouTube'
 
 By using Rancher with vSphere, you can bring cloud operations on-premises.
