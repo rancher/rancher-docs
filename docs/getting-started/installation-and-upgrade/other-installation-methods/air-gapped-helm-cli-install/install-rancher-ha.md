@@ -245,6 +245,7 @@ If you don't intend to send telemetry data, opt out [telemetry](../../../../faq/
 
 These resources could be helpful when installing Rancher:
 
+- [Importing and installing extensions in an air-gapped environment](../../../../integrations-in-rancher/rancher-extensions.md#importing-and-installing-extensions-in-an-air-gapped-environment)
 - [Rancher Helm chart options](../../installation-references/helm-chart-options.md)
 - [Adding TLS secrets](../../resources/add-tls-secrets.md)
 - [Troubleshooting Rancher Kubernetes Installations](../../install-upgrade-on-a-kubernetes-cluster/troubleshooting.md)
