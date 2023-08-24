@@ -15,8 +15,8 @@ This hardening guide is intended to be used for K3s clusters and is associated w
 | Rancher v2.7    | Benchmark v1.7       | Kubernetes v1.24 up to v1.25 |
 
 :::note
-- Since Benchmark v1.24, some check ids might fail due to file permission new requirements (600 instead of 644). Impacted check ids: `1.1.1`, `1.1.3`, `1.1.5`, `1.1.7`, `1.1.13`, `1.1.15`, `4.1.7`, `4.1.9`, `4.1.15`. 
-  - Since Benchmark v1.7 (latest), `--protect-kernel-defaults` (check id 4.2.6) parameter is not required anymore, and was replaced.
+- In Benchmark v1.24 and later, some check ids might fail due to new file permission requirements (600 instead of 644). Impacted check ids: `1.1.15`, `1.1.17` and `4.1.15`. 
+  - In Benchmark v1.7, the `--protect-kernel-defaults` (`4.2.6`) parameter isn't required anymore, and was removed by CIS.
 :::
 
 For more details on how to evaluate a hardened K3s cluster against the official CIS benchmark, refer to the K3s self-assessment guides for specific Kubernetes and CIS benchmark versions.
