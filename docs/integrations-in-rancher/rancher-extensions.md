@@ -49,6 +49,30 @@ In v2.7.0, the built-in extensions will not be displayed under the **Available**
 
     ![Reload button](/img/reload-button.png)
 
+### Importing and Installing Extensions in an Air-Gapped Environment
+
+1. Find the address of the container image you want to import as an extension.
+
+1. [Create](../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) a registry secret within the `cattle-UI-plugin-system` namespace. Enter the domain of the image address in the **Registry Domain Name** field.
+
+1. Click **☰**, then select **Extensions**, under **Configuration**.
+
+1. On the top right, click **⋮ > Manage Extension Catalogs**.
+
+1. Select the **Import Extension Catalog** button.
+
+1. Enter the image address in the **Catalog Image Reference** field. 
+
+1. Select the secret you just created from the **Pull Secrets** drop-down menu.
+
+1. Click **Load**. The extension will now be **Pending**.
+
+1. Return to the **Extensions** page.
+
+1. Select the **Available** tab, and click the **Reload** button to make sure that the list of extensions is up to date.
+
+1. Find the extension you just added, and click the **Install** button.
+
 ## Uninstalling Extensions
 
 There are two ways in which you can uninstall or disable your extensions:
