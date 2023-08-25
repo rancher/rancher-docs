@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[71070],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[13170],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 69963:
+/***/ 21411:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,39 +308,50 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Continuous Delivery'
+    title: 'Opening Ports with firewalld'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery",
-    "id": "version-2.6/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery",
-    "title": "Continuous Delivery",
-    "description": "As of Rancher v2.5, Fleet comes preinstalled in Rancher, and as of Rancher v2.6, Fleet can no longer be fully disabled. However, the Fleet feature for GitOps continuous delivery may be disabled using the continuous-delivery feature flag.",
-    "source": "@site/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery.md",
-    "sourceDirName": "how-to-guides/advanced-user-guides/enable-experimental-features",
-    "slug": "/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery",
-    "permalink": "/v2.6/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery",
+    "unversionedId": "how-to-guides/advanced-user-guides/open-ports-with-firewalld",
+    "id": "version-2.6/how-to-guides/advanced-user-guides/open-ports-with-firewalld",
+    "title": "Opening Ports with firewalld",
+    "description": "We recommend disabling firewalld. For Kubernetes 1.19.x and higher, firewalld must be turned off.",
+    "source": "@site/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/open-ports-with-firewalld.md",
+    "sourceDirName": "how-to-guides/advanced-user-guides",
+    "slug": "/how-to-guides/advanced-user-guides/open-ports-with-firewalld",
+    "permalink": "/v2.6/how-to-guides/advanced-user-guides/open-ports-with-firewalld",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/open-ports-with-firewalld.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1668452187,
-    "formattedLastUpdatedAt": "Nov 14, 2022",
+    "lastUpdatedAt": 1692993467,
+    "formattedLastUpdatedAt": "Aug 25, 2023",
     "frontMatter": {
-        "title": "Continuous Delivery"
+        "title": "Opening Ports with firewalld"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "UI for Istio Virtual Services and Destination Rules",
-        "permalink": "/v2.6/how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features"
+        "title": "Continuous Delivery",
+        "permalink": "/v2.6/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery"
     },
     "next": {
-        "title": "Opening Ports with firewalld",
-        "permalink": "/v2.6/how-to-guides/advanced-user-guides/open-ports-with-firewalld"
+        "title": "Tuning etcd for Large Installations",
+        "permalink": "/v2.6/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs"
     }
 };
 const assets = {};
-const toc = [];
+const toc = [
+    {
+        value: 'Prerequisite',
+        id: 'prerequisite',
+        level: 2
+    },
+    {
+        value: 'Applying Firewall Port Rules',
+        id: 'applying-firewall-port-rules',
+        level: 2
+    }
+];
 const layoutProps = {
     toc
 };
@@ -352,51 +363,105 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `As of Rancher v2.5, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/open-ports-with-firewalld"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, `We recommend disabling firewalld. For Kubernetes 1.19.x and higher, firewalld must be turned off.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Some distributions of Linux `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
-    }, `Fleet`), ` comes preinstalled in Rancher, and as of Rancher v2.6, Fleet can no longer be fully disabled. However, the Fleet feature for GitOps continuous delivery may be disabled using the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        "href": "https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux#Rebuilds"
+    }, `derived from RHEL,`), ` including Oracle Linux, may have default firewall rules that block communication with Helm.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For example, one Oracle Linux image in AWS has REJECT rules that stop Helm from communicating with Tiller:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `Chain INPUT (policy ACCEPT)
+target     prot opt source               destination
+ACCEPT     all  --  anywhere             anywhere             state RELATED,ESTABLISHED
+ACCEPT     icmp --  anywhere             anywhere
+ACCEPT     all  --  anywhere             anywhere
+ACCEPT     tcp  --  anywhere             anywhere             state NEW tcp dpt:ssh
+REJECT     all  --  anywhere             anywhere             reject-with icmp-host-prohibited
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination
+REJECT     all  --  anywhere             anywhere             reject-with icmp-host-prohibited
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can check the default firewall rules with this command:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `sudo iptables --list
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section describes how to use `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `continuous-delivery`), ` feature flag.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To enable or disable this feature, refer to the instructions on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `firewalld`), ` to apply the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/pages-for-subheaders/enable-experimental-features"
-    }, `the main page about enabling experimental features.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
-        parentName: "table"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "thead"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
-        parentName: "tr",
-        "align": null
-    }, `Environment Variable Key`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
-        parentName: "tr",
-        "align": null
-    }, `Default Value`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
-        parentName: "tr",
-        "align": null
-    }, `Description`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tbody", {
-        parentName: "table"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "td"
-    }, `continuous-delivery`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "td"
-    }, `true`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `This flag disables the GitOps continuous delivery feature of Fleet.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If Fleet was disabled in Rancher v2.5.x, it will become enabled if Rancher is upgraded to v2.6.x. Only the continuous delivery part of Fleet can be disabled. When `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        "href": "/v2.6/pages-for-subheaders/installation-requirements#port-requirements"
+    }, `firewall port rules`), ` for nodes in a high-availability Rancher server cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "prerequisite"
+    }, `Prerequisite`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Install v7.x or later ofv`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `continuous-delivery`), ` is disabled, the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `firewalld`), `:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `yum install firewalld
+systemctl start firewalld
+systemctl enable firewalld
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "applying-firewall-port-rules"
+    }, `Applying Firewall Port Rules`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In the Rancher high-availability installation instructions, the Rancher server is set up on three nodes that have all three Kubernetes roles: etcd, controlplane, and worker. If your Rancher server nodes have all three roles, run the following commands on each node:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `firewall-cmd --permanent --add-port=22/tcp
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=443/tcp
+firewall-cmd --permanent --add-port=2376/tcp
+firewall-cmd --permanent --add-port=2379/tcp
+firewall-cmd --permanent --add-port=2380/tcp
+firewall-cmd --permanent --add-port=6443/tcp
+firewall-cmd --permanent --add-port=8472/udp
+firewall-cmd --permanent --add-port=9099/tcp
+firewall-cmd --permanent --add-port=10250/tcp
+firewall-cmd --permanent --add-port=10254/tcp
+firewall-cmd --permanent --add-port=30000-32767/tcp
+firewall-cmd --permanent --add-port=30000-32767/udp
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If your Rancher server nodes have separate roles, use the following commands based on the role of the node:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `# For etcd nodes, run the following commands:
+firewall-cmd --permanent --add-port=2376/tcp
+firewall-cmd --permanent --add-port=2379/tcp
+firewall-cmd --permanent --add-port=2380/tcp
+firewall-cmd --permanent --add-port=8472/udp
+firewall-cmd --permanent --add-port=9099/tcp
+firewall-cmd --permanent --add-port=10250/tcp
+
+# For control plane nodes, run the following commands:
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=443/tcp
+firewall-cmd --permanent --add-port=2376/tcp
+firewall-cmd --permanent --add-port=6443/tcp
+firewall-cmd --permanent --add-port=8472/udp
+firewall-cmd --permanent --add-port=9099/tcp
+firewall-cmd --permanent --add-port=10250/tcp
+firewall-cmd --permanent --add-port=10254/tcp
+firewall-cmd --permanent --add-port=30000-32767/tcp
+firewall-cmd --permanent --add-port=30000-32767/udp
+
+# For worker nodes, run the following commands:
+firewall-cmd --permanent --add-port=22/tcp
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=443/tcp
+firewall-cmd --permanent --add-port=2376/tcp
+firewall-cmd --permanent --add-port=8472/udp
+firewall-cmd --permanent --add-port=9099/tcp
+firewall-cmd --permanent --add-port=10250/tcp
+firewall-cmd --permanent --add-port=10254/tcp
+firewall-cmd --permanent --add-port=30000-32767/tcp
+firewall-cmd --permanent --add-port=30000-32767/udp
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `gitjob`), ` deployment is no longer deployed into the Rancher server's local cluster, and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `firewall-cmd`), ` commands have been run on a node, use the following command to enable the firewall rules:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `firewall-cmd --reload
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `continuous-delivery`), ` is not shown in the Rancher UI.`));
+    }, `Result:`), ` The firewall is updated so that Helm can communicate with the Rancher server nodes.`));
 }
 MDXContent.isMDXComponent = true;
 

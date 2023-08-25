@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[83967],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[40372],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 48826:
+/***/ 25301:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/advanced-user-guides/enable-api-audit-log",
-    "id": "version-2.6/how-to-guides/advanced-user-guides/enable-api-audit-log",
+    "id": "version-2.7/how-to-guides/advanced-user-guides/enable-api-audit-log",
     "title": "Enabling the API Audit Log to Record System Events",
     "description": "You can enable the API audit log to record the sequence of system events initiated by individual users. You can know what happened, when it happened, who initiated it, and what cluster it affected. When you enable this feature, all requests to the Rancher API and all responses from it are written to a log.",
-    "source": "@site/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/enable-api-audit-log.md",
+    "source": "@site/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/enable-api-audit-log.md",
     "sourceDirName": "how-to-guides/advanced-user-guides",
     "slug": "/how-to-guides/advanced-user-guides/enable-api-audit-log",
-    "permalink": "/v2.6/how-to-guides/advanced-user-guides/enable-api-audit-log",
+    "permalink": "/v2.7/how-to-guides/advanced-user-guides/enable-api-audit-log",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/enable-api-audit-log.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/enable-api-audit-log.md",
     "tags": [],
-    "version": "2.6",
-    "lastUpdatedAt": 1668452187,
-    "formattedLastUpdatedAt": "Nov 14, 2022",
+    "version": "2.7",
+    "lastUpdatedAt": 1692993467,
+    "formattedLastUpdatedAt": "Aug 25, 2023",
     "frontMatter": {
         "title": "Enabling the API Audit Log to Record System Events"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Tuning etcd for Large Installations",
-        "permalink": "/v2.6/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs"
+        "permalink": "/v2.7/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs"
     },
     "next": {
         "title": "Docker Install with TLS Termination at Layer-7 NGINX Load Balancer",
-        "permalink": "/v2.6/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer"
+        "permalink": "/v2.7/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer"
     }
 };
 const assets = {};
@@ -423,7 +423,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can enable the API audit log to record the sequence of system events initiated by individual users. You can know what happened, when it happened, who initiated it, and what cluster it affected. When you enable this feature, all requests to the Rancher API and all responses from it are written to a log.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can enable API Auditing during Rancher installation or upgrade.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-api-audit-log"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can enable the API audit log to record the sequence of system events initiated by individual users. You can know what happened, when it happened, who initiated it, and what cluster it affected. When you enable this feature, all requests to the Rancher API and all responses from it are written to a log.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can enable API Auditing during Rancher installation or upgrade.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "enabling-api-audit-log"
     }, `Enabling API Audit Log`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Audit Log is enabled and configured by passing environment variables to the Rancher server container. See the following to enable on your installation.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
@@ -431,14 +434,14 @@ function MDXContent(_param) {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/reference-guides/single-node-rancher-in-docker/advanced-options#api-audit-log"
+        "href": "/v2.7/reference-guides/single-node-rancher-in-docker/advanced-options#api-audit-log"
     }, `Docker Install`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/getting-started/installation-and-upgrade/installation-references/helm-chart-options#api-audit-log"
+        "href": "/v2.7/getting-started/installation-and-upgrade/installation-references/helm-chart-options#api-audit-log"
     }, `Kubernetes Install`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "api-audit-log-options"
     }, `API Audit Log Options`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The usage below defines rules about what the audit log should record and what data it should include:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
@@ -656,7 +659,7 @@ function MDXContent(_param) {
         "id": "shipping-the-audit-log"
     }, `Shipping the Audit Log`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can enable Rancher's built in log collection and shipping for the cluster to ship the audit and other services logs to a supported collection endpoint. See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/pages-for-subheaders/logging"
+        "href": "/v2.7/pages-for-subheaders/logging"
     }, `Rancher Tools - Logging`), ` for details.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "audit-log-samples"
     }, `Audit Log Samples`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After you enable auditing, each API request or response is logged by Rancher in the form of JSON. Each of the following code samples provide examples of how to identify each API transaction.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {

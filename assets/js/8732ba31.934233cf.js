@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[83595],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[41050],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 85772:
+/***/ 60163:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,47 +308,47 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Opening Ports with firewalld'
+    title: 'Tuning etcd for Large Installations'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "how-to-guides/advanced-user-guides/open-ports-with-firewalld",
-    "id": "version-2.7/how-to-guides/advanced-user-guides/open-ports-with-firewalld",
-    "title": "Opening Ports with firewalld",
-    "description": "We recommend disabling firewalld. For Kubernetes 1.19.x and higher, firewalld must be turned off.",
-    "source": "@site/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/open-ports-with-firewalld.md",
+    "unversionedId": "how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
+    "id": "version-2.6/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
+    "title": "Tuning etcd for Large Installations",
+    "description": "When running larger Rancher installations with 15 or more clusters it is recommended to increase the default keyspace for etcd from the default 2GB. The maximum setting is 8GB and the host should have enough RAM to keep the entire dataset in memory. When increasing this value you should also increase the size of the host. The keyspace size can also be adjusted in smaller installations if you anticipate a high rate of change of pods during the garbage collection interval.",
+    "source": "@site/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs.md",
     "sourceDirName": "how-to-guides/advanced-user-guides",
-    "slug": "/how-to-guides/advanced-user-guides/open-ports-with-firewalld",
-    "permalink": "/v2.7/how-to-guides/advanced-user-guides/open-ports-with-firewalld",
+    "slug": "/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
+    "permalink": "/v2.6/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/open-ports-with-firewalld.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "version": "2.6",
+    "lastUpdatedAt": 1692993467,
+    "formattedLastUpdatedAt": "Aug 25, 2023",
     "frontMatter": {
-        "title": "Opening Ports with firewalld"
+        "title": "Tuning etcd for Large Installations"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Continuous Delivery",
-        "permalink": "/v2.7/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery"
+        "title": "Opening Ports with firewalld",
+        "permalink": "/v2.6/how-to-guides/advanced-user-guides/open-ports-with-firewalld"
     },
     "next": {
-        "title": "Tuning etcd for Large Installations",
-        "permalink": "/v2.7/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs"
+        "title": "Enabling the API Audit Log to Record System Events",
+        "permalink": "/v2.6/how-to-guides/advanced-user-guides/enable-api-audit-log"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Prerequisite',
-        id: 'prerequisite',
-        level: 2
+        value: 'Example: This snippet of the RKE cluster.yml file increases the keyspace size to 5GB',
+        id: 'example-this-snippet-of-the-rke-clusteryml-file-increases-the-keyspace-size-to-5gb',
+        level: 3
     },
     {
-        value: 'Applying Firewall Port Rules',
-        id: 'applying-firewall-port-rules',
+        value: 'Scaling etcd disk performance',
+        id: 'scaling-etcd-disk-performance',
         level: 2
     }
 ];
@@ -363,102 +363,58 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "blockquote"
-    }, `We recommend disabling firewalld. For Kubernetes 1.19.x and higher, firewalld must be turned off.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Some distributions of Linux `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux#Rebuilds"
-    }, `derived from RHEL,`), ` including Oracle Linux, may have default firewall rules that block communication with Helm.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For example, one Oracle Linux image in AWS has REJECT rules that stop Helm from communicating with Tiller:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre"
-    }, `Chain INPUT (policy ACCEPT)
-target     prot opt source               destination
-ACCEPT     all  --  anywhere             anywhere             state RELATED,ESTABLISHED
-ACCEPT     icmp --  anywhere             anywhere
-ACCEPT     all  --  anywhere             anywhere
-ACCEPT     tcp  --  anywhere             anywhere             state NEW tcp dpt:ssh
-REJECT     all  --  anywhere             anywhere             reject-with icmp-host-prohibited
-
-Chain FORWARD (policy ACCEPT)
-target     prot opt source               destination
-REJECT     all  --  anywhere             anywhere             reject-with icmp-host-prohibited
-
-Chain OUTPUT (policy ACCEPT)
-target     prot opt source               destination
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can check the default firewall rules with this command:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre"
-    }, `sudo iptables --list
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section describes how to use `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When running larger Rancher installations with 15 or more clusters it is recommended to increase the default keyspace for etcd from the default 2GB. The maximum setting is 8GB and the host should have enough RAM to keep the entire dataset in memory. When increasing this value you should also increase the size of the host. The keyspace size can also be adjusted in smaller installations if you anticipate a high rate of change of pods during the garbage collection interval.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The etcd data set is automatically cleaned up on a five minute interval by Kubernetes. There are situations, e.g. deployment thrashing, where enough events could be written to etcd and deleted before garbage collection occurs and cleans things up causing the keyspace to fill up. If you see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `firewalld`), ` to apply the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `mvcc: database space exceeded`), ` errors, in the etcd logs or Kubernetes API server logs, you should consider increasing the keyspace size. This can be accomplished by setting the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/installation-requirements#port-requirements"
-    }, `firewall port rules`), ` for nodes in a high-availability Rancher server cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "prerequisite"
-    }, `Prerequisite`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Install v7.x or later ofv`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `firewalld`), `:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre"
-    }, `yum install firewalld
-systemctl start firewalld
-systemctl enable firewalld
+        "href": "https://etcd.io/docs/v3.4.0/op-guide/maintenance/#space-quota"
+    }, `quota-backend-bytes`), ` setting on the etcd servers.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "example-this-snippet-of-the-rke-clusteryml-file-increases-the-keyspace-size-to-5gb"
+    }, `Example: This snippet of the RKE cluster.yml file increases the keyspace size to 5GB`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-yaml"
+    }, `# RKE cluster.yml
+---
+services:
+  etcd:
+    extra_args:
+      quota-backend-bytes: 5368709120
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "applying-firewall-port-rules"
-    }, `Applying Firewall Port Rules`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In the Rancher high-availability installation instructions, the Rancher server is set up on three nodes that have all three Kubernetes roles: etcd, controlplane, and worker. If your Rancher server nodes have all three roles, run the following commands on each node:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre"
-    }, `firewall-cmd --permanent --add-port=22/tcp
-firewall-cmd --permanent --add-port=80/tcp
-firewall-cmd --permanent --add-port=443/tcp
-firewall-cmd --permanent --add-port=2376/tcp
-firewall-cmd --permanent --add-port=2379/tcp
-firewall-cmd --permanent --add-port=2380/tcp
-firewall-cmd --permanent --add-port=6443/tcp
-firewall-cmd --permanent --add-port=8472/udp
-firewall-cmd --permanent --add-port=9099/tcp
-firewall-cmd --permanent --add-port=10250/tcp
-firewall-cmd --permanent --add-port=10254/tcp
-firewall-cmd --permanent --add-port=30000-32767/tcp
-firewall-cmd --permanent --add-port=30000-32767/udp
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If your Rancher server nodes have separate roles, use the following commands based on the role of the node:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre"
-    }, `# For etcd nodes, run the following commands:
-firewall-cmd --permanent --add-port=2376/tcp
-firewall-cmd --permanent --add-port=2379/tcp
-firewall-cmd --permanent --add-port=2380/tcp
-firewall-cmd --permanent --add-port=8472/udp
-firewall-cmd --permanent --add-port=9099/tcp
-firewall-cmd --permanent --add-port=10250/tcp
-
-# For control plane nodes, run the following commands:
-firewall-cmd --permanent --add-port=80/tcp
-firewall-cmd --permanent --add-port=443/tcp
-firewall-cmd --permanent --add-port=2376/tcp
-firewall-cmd --permanent --add-port=6443/tcp
-firewall-cmd --permanent --add-port=8472/udp
-firewall-cmd --permanent --add-port=9099/tcp
-firewall-cmd --permanent --add-port=10250/tcp
-firewall-cmd --permanent --add-port=10254/tcp
-firewall-cmd --permanent --add-port=30000-32767/tcp
-firewall-cmd --permanent --add-port=30000-32767/udp
-
-# For worker nodes, run the following commands:
-firewall-cmd --permanent --add-port=22/tcp
-firewall-cmd --permanent --add-port=80/tcp
-firewall-cmd --permanent --add-port=443/tcp
-firewall-cmd --permanent --add-port=2376/tcp
-firewall-cmd --permanent --add-port=8472/udp
-firewall-cmd --permanent --add-port=9099/tcp
-firewall-cmd --permanent --add-port=10250/tcp
-firewall-cmd --permanent --add-port=10254/tcp
-firewall-cmd --permanent --add-port=30000-32767/tcp
-firewall-cmd --permanent --add-port=30000-32767/udp
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        "id": "scaling-etcd-disk-performance"
+    }, `Scaling etcd disk performance`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can follow the recommendations from `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://etcd.io/docs/v3.4.0/tuning/#disk"
+    }, `the etcd docs`), ` on how to tune the disk priority on the host.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Additionally, to reduce IO contention on the disks for etcd, you can use a dedicated device for the data and wal directory. Based on etcd best practices, mirroring RAID configurations are unnecessary because etcd replicates data between the nodes in the cluster. You can use striping RAID configurations to increase available IOPS.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To implement this solution in an RKE cluster, the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `firewall-cmd`), ` commands have been run on a node, use the following command to enable the firewall rules:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre"
-    }, `firewall-cmd --reload
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `/var/lib/etcd/data`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `Result:`), ` The firewall is updated so that Helm can communicate with the Rancher server nodes.`));
+    }, `/var/lib/etcd/wal`), ` directories will need to have disks mounted and formatted on the underlying host. In the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `extra_args`), ` directive of the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `etcd`), ` service, you must include the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `wal_dir`), ` directory. Without specifying the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `wal_dir`), `, etcd process will try to manipulate the underlying `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `wal`), ` mount with insufficient permissions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-yaml"
+    }, `# RKE cluster.yml
+---
+services:
+  etcd:
+    extra_args:
+      data-dir: '/var/lib/rancher/etcd/data/'
+      wal-dir: '/var/lib/rancher/etcd/wal/wal_dir'
+    extra_binds:
+      - '/var/lib/etcd/data:/var/lib/rancher/etcd/data'
+      - '/var/lib/etcd/wal:/var/lib/rancher/etcd/wal'
+`)));
 }
 MDXContent.isMDXComponent = true;
 

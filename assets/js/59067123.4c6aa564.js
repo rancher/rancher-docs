@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[91064],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[36386],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 48725:
+/***/ 35014:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers",
-    "id": "how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers",
+    "id": "version-2.6/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers",
     "title": "Allow Unsupported Storage Drivers",
     "description": "This feature allows you to use types for storage providers and provisioners that are not enabled by default.",
-    "source": "@site/docs/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md",
+    "source": "@site/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md",
     "sourceDirName": "how-to-guides/advanced-user-guides/enable-experimental-features",
     "slug": "/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers",
-    "permalink": "/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers",
+    "permalink": "/v2.6/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1666730461,
-    "formattedLastUpdatedAt": "Oct 25, 2022",
+    "version": "2.6",
+    "lastUpdatedAt": 1692993467,
+    "formattedLastUpdatedAt": "Aug 25, 2023",
     "frontMatter": {
         "title": "Allow Unsupported Storage Drivers"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Running on ARM64 (Experimental)",
-        "permalink": "/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64"
+        "permalink": "/v2.6/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64"
     },
     "next": {
         "title": "UI for Istio Virtual Services and Destination Rules",
-        "permalink": "/how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features"
+        "permalink": "/v2.6/how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features"
     }
 };
 const assets = {};
@@ -363,9 +363,12 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This feature allows you to use types for storage providers and provisioners that are not enabled by default.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To enable or disable this feature, refer to the instructions on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This feature allows you to use types for storage providers and provisioners that are not enabled by default.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To enable or disable this feature, refer to the instructions on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/pages-for-subheaders/enable-experimental-features"
+        "href": "/v2.6/pages-for-subheaders/enable-experimental-features"
     }, `the main page about enabling experimental features.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {

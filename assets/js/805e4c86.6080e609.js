@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[89444],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[40072],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 57451:
+/***/ 22366:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,50 +308,39 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Tuning etcd for Large Installations'
+    title: 'Running on ARM64 (Experimental)'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
-    "id": "version-2.7/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
-    "title": "Tuning etcd for Large Installations",
-    "description": "When running larger Rancher installations with 15 or more clusters it is recommended to increase the default keyspace for etcd from the default 2GB. The maximum setting is 8GB and the host should have enough RAM to keep the entire dataset in memory. When increasing this value you should also increase the size of the host. The keyspace size can also be adjusted in smaller installations if you anticipate a high rate of change of pods during the garbage collection interval.",
-    "source": "@site/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs.md",
-    "sourceDirName": "how-to-guides/advanced-user-guides",
-    "slug": "/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
-    "permalink": "/v2.7/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
+    "unversionedId": "how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64",
+    "id": "version-2.7/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64",
+    "title": "Running on ARM64 (Experimental)",
+    "description": "Running on an ARM64 platform is currently an experimental feature and is not yet officially supported in Rancher. Therefore, we do not recommend using ARM64 based nodes in a production environment.",
+    "source": "@site/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64.md",
+    "sourceDirName": "how-to-guides/advanced-user-guides/enable-experimental-features",
+    "slug": "/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64",
+    "permalink": "/v2.7/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "lastUpdatedAt": 1692993467,
+    "formattedLastUpdatedAt": "Aug 25, 2023",
     "frontMatter": {
-        "title": "Tuning etcd for Large Installations"
+        "title": "Running on ARM64 (Experimental)"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Opening Ports with firewalld",
-        "permalink": "/v2.7/how-to-guides/advanced-user-guides/open-ports-with-firewalld"
+        "title": "Enabling Experimental Features",
+        "permalink": "/v2.7/pages-for-subheaders/enable-experimental-features"
     },
     "next": {
-        "title": "Enabling the API Audit Log to Record System Events",
-        "permalink": "/v2.7/how-to-guides/advanced-user-guides/enable-api-audit-log"
+        "title": "Allow Unsupported Storage Drivers",
+        "permalink": "/v2.7/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers"
     }
 };
 const assets = {};
-const toc = [
-    {
-        value: 'Example: This snippet of the RKE cluster.yml file increases the keyspace size to 5GB',
-        id: 'example-this-snippet-of-the-rke-clusteryml-file-increases-the-keyspace-size-to-5gb',
-        level: 3
-    },
-    {
-        value: 'Scaling etcd disk performance',
-        id: 'scaling-etcd-disk-performance',
-        level: 2
-    }
-];
+const toc = [];
 const layoutProps = {
     toc
 };
@@ -363,55 +352,75 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When running larger Rancher installations with 15 or more clusters it is recommended to increase the default keyspace for etcd from the default 2GB. The maximum setting is 8GB and the host should have enough RAM to keep the entire dataset in memory. When increasing this value you should also increase the size of the host. The keyspace size can also be adjusted in smaller installations if you anticipate a high rate of change of pods during the garbage collection interval.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The etcd data set is automatically cleaned up on a five minute interval by Kubernetes. There are situations, e.g. deployment thrashing, where enough events could be written to etcd and deleted before garbage collection occurs and cleans things up causing the keyspace to fill up. If you see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `mvcc: database space exceeded`), ` errors, in the etcd logs or Kubernetes API server logs, you should consider increasing the keyspace size. This can be accomplished by setting the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "caution"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `Running on an ARM64 platform is currently an experimental feature and is not yet officially supported in Rancher. Therefore, we do not recommend using ARM64 based nodes in a production environment.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The following options are available when using an ARM64 platform:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, `Running Rancher on ARM64 based node(s)`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Only for Docker Install. Please note that the following installation command replaces the examples found in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/v2.7/pages-for-subheaders/rancher-on-a-single-node-with-docker"
+    }, `Docker Install link`), `:`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `# In the last line \`rancher/rancher:vX.Y.Z\`, be certain to replace "X.Y.Z" with a released version in which ARM64 builds exist. For  example, if your matching version is v2.5.8, you would fill in this line with \`rancher/rancher:v2.5.8\`.
+docker run -d --restart=unless-stopped \\
+  -p 80:80 -p 443:443 \\
+  --privileged \\
+  rancher/rancher:vX.Y.Z
+`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `To check if your specific released version is compatible with the ARM64 architecture, you may navigate to your
+version's release notes in the following two ways:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", {
+        parentName: "admonition"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Manually find your version using `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://github.com/rancher/rancher/releases"
+    }, `https://github.com/rancher/rancher/releases`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Go directly to your version using the tag and the specific version number. If you plan to use v2.5.8, for example, you may navigate to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.5.8"
+    }, `https://github.com/rancher/rancher/releases/tag/v2.5.8`), `.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Create custom cluster and adding ARM64 based node(s)`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Kubernetes cluster version must be 1.12 or higher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `CNI Network Provider must be `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/v2.7/faq/container-network-interface-providers#flannel"
+    }, `Flannel`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Importing clusters that contain ARM64 based nodes`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Kubernetes cluster version must be 1.12 or higher`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Please see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://etcd.io/docs/v3.4.0/op-guide/maintenance/#space-quota"
-    }, `quota-backend-bytes`), ` setting on the etcd servers.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "example-this-snippet-of-the-rke-clusteryml-file-increases-the-keyspace-size-to-5gb"
-    }, `Example: This snippet of the RKE cluster.yml file increases the keyspace size to 5GB`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-yaml"
-    }, `# RKE cluster.yml
----
-services:
-  etcd:
-    extra_args:
-      quota-backend-bytes: 5368709120
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "scaling-etcd-disk-performance"
-    }, `Scaling etcd disk performance`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can follow the recommendations from `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://etcd.io/docs/v3.4.0/tuning/#disk"
-    }, `the etcd docs`), ` on how to tune the disk priority on the host.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Additionally, to reduce IO contention on the disks for etcd, you can use a dedicated device for the data and wal directory. Based on etcd best practices, mirroring RAID configurations are unnecessary because etcd replicates data between the nodes in the cluster. You can use striping RAID configurations to increase available IOPS.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To implement this solution in an RKE cluster, the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `/var/lib/etcd/data`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `/var/lib/etcd/wal`), ` directories will need to have disks mounted and formatted on the underlying host. In the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `extra_args`), ` directive of the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `etcd`), ` service, you must include the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `wal_dir`), ` directory. Without specifying the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `wal_dir`), `, etcd process will try to manipulate the underlying `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `wal`), ` mount with insufficient permissions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-yaml"
-    }, `# RKE cluster.yml
----
-services:
-  etcd:
-    extra_args:
-      data-dir: '/var/lib/rancher/etcd/data/'
-      wal-dir: '/var/lib/rancher/etcd/wal/wal_dir'
-    extra_binds:
-      - '/var/lib/etcd/data:/var/lib/rancher/etcd/data'
-      - '/var/lib/etcd/wal:/var/lib/rancher/etcd/wal'
-`)));
+        "href": "/v2.7/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"
+    }, `Cluster Options`), ` how to configure the cluster options.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The following features are not tested:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Monitoring, alerts, notifiers, pipelines and logging`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Launching apps from the catalog`)));
 }
 MDXContent.isMDXComponent = true;
 

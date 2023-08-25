@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[41050],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[71070],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 60163:
+/***/ 69963:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,50 +308,39 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Tuning etcd for Large Installations'
+    title: 'Continuous Delivery'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
-    "id": "version-2.6/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
-    "title": "Tuning etcd for Large Installations",
-    "description": "When running larger Rancher installations with 15 or more clusters it is recommended to increase the default keyspace for etcd from the default 2GB. The maximum setting is 8GB and the host should have enough RAM to keep the entire dataset in memory. When increasing this value you should also increase the size of the host. The keyspace size can also be adjusted in smaller installations if you anticipate a high rate of change of pods during the garbage collection interval.",
-    "source": "@site/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs.md",
-    "sourceDirName": "how-to-guides/advanced-user-guides",
-    "slug": "/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
-    "permalink": "/v2.6/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
+    "unversionedId": "how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery",
+    "id": "version-2.6/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery",
+    "title": "Continuous Delivery",
+    "description": "As of Rancher v2.5, Fleet comes preinstalled in Rancher, and as of Rancher v2.6, Fleet can no longer be fully disabled. However, the Fleet feature for GitOps continuous delivery may be disabled using the continuous-delivery feature flag.",
+    "source": "@site/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery.md",
+    "sourceDirName": "how-to-guides/advanced-user-guides/enable-experimental-features",
+    "slug": "/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery",
+    "permalink": "/v2.6/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1668452187,
-    "formattedLastUpdatedAt": "Nov 14, 2022",
+    "lastUpdatedAt": 1692993467,
+    "formattedLastUpdatedAt": "Aug 25, 2023",
     "frontMatter": {
-        "title": "Tuning etcd for Large Installations"
+        "title": "Continuous Delivery"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Opening Ports with firewalld",
-        "permalink": "/v2.6/how-to-guides/advanced-user-guides/open-ports-with-firewalld"
+        "title": "UI for Istio Virtual Services and Destination Rules",
+        "permalink": "/v2.6/how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features"
     },
     "next": {
-        "title": "Enabling the API Audit Log to Record System Events",
-        "permalink": "/v2.6/how-to-guides/advanced-user-guides/enable-api-audit-log"
+        "title": "Opening Ports with firewalld",
+        "permalink": "/v2.6/how-to-guides/advanced-user-guides/open-ports-with-firewalld"
     }
 };
 const assets = {};
-const toc = [
-    {
-        value: 'Example: This snippet of the RKE cluster.yml file increases the keyspace size to 5GB',
-        id: 'example-this-snippet-of-the-rke-clusteryml-file-increases-the-keyspace-size-to-5gb',
-        level: 3
-    },
-    {
-        value: 'Scaling etcd disk performance',
-        id: 'scaling-etcd-disk-performance',
-        level: 2
-    }
-];
+const toc = [];
 const layoutProps = {
     toc
 };
@@ -363,55 +352,54 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When running larger Rancher installations with 15 or more clusters it is recommended to increase the default keyspace for etcd from the default 2GB. The maximum setting is 8GB and the host should have enough RAM to keep the entire dataset in memory. When increasing this value you should also increase the size of the host. The keyspace size can also be adjusted in smaller installations if you anticipate a high rate of change of pods during the garbage collection interval.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The etcd data set is automatically cleaned up on a five minute interval by Kubernetes. There are situations, e.g. deployment thrashing, where enough events could be written to etcd and deleted before garbage collection occurs and cleans things up causing the keyspace to fill up. If you see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `mvcc: database space exceeded`), ` errors, in the etcd logs or Kubernetes API server logs, you should consider increasing the keyspace size. This can be accomplished by setting the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `As of Rancher v2.5, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://etcd.io/docs/v3.4.0/op-guide/maintenance/#space-quota"
-    }, `quota-backend-bytes`), ` setting on the etcd servers.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "example-this-snippet-of-the-rke-clusteryml-file-increases-the-keyspace-size-to-5gb"
-    }, `Example: This snippet of the RKE cluster.yml file increases the keyspace size to 5GB`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-yaml"
-    }, `# RKE cluster.yml
----
-services:
-  etcd:
-    extra_args:
-      quota-backend-bytes: 5368709120
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "scaling-etcd-disk-performance"
-    }, `Scaling etcd disk performance`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can follow the recommendations from `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "href": "/v2.6/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
+    }, `Fleet`), ` comes preinstalled in Rancher, and as of Rancher v2.6, Fleet can no longer be fully disabled. However, the Fleet feature for GitOps continuous delivery may be disabled using the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `continuous-delivery`), ` feature flag.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To enable or disable this feature, refer to the instructions on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://etcd.io/docs/v3.4.0/tuning/#disk"
-    }, `the etcd docs`), ` on how to tune the disk priority on the host.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Additionally, to reduce IO contention on the disks for etcd, you can use a dedicated device for the data and wal directory. Based on etcd best practices, mirroring RAID configurations are unnecessary because etcd replicates data between the nodes in the cluster. You can use striping RAID configurations to increase available IOPS.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To implement this solution in an RKE cluster, the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        "href": "/v2.6/pages-for-subheaders/enable-experimental-features"
+    }, `the main page about enabling experimental features.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
+        parentName: "table"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "thead"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
+        parentName: "tr",
+        "align": null
+    }, `Environment Variable Key`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
+        parentName: "tr",
+        "align": null
+    }, `Default Value`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
+        parentName: "tr",
+        "align": null
+    }, `Description`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tbody", {
+        parentName: "table"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
+    }, `continuous-delivery`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
+    }, `true`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `This flag disables the GitOps continuous delivery feature of Fleet.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If Fleet was disabled in Rancher v2.5.x, it will become enabled if Rancher is upgraded to v2.6.x. Only the continuous delivery part of Fleet can be disabled. When `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `/var/lib/etcd/data`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `continuous-delivery`), ` is disabled, the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `/var/lib/etcd/wal`), ` directories will need to have disks mounted and formatted on the underlying host. In the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `gitjob`), ` deployment is no longer deployed into the Rancher server's local cluster, and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `extra_args`), ` directive of the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `etcd`), ` service, you must include the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `wal_dir`), ` directory. Without specifying the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `wal_dir`), `, etcd process will try to manipulate the underlying `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `wal`), ` mount with insufficient permissions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-yaml"
-    }, `# RKE cluster.yml
----
-services:
-  etcd:
-    extra_args:
-      data-dir: '/var/lib/rancher/etcd/data/'
-      wal-dir: '/var/lib/rancher/etcd/wal/wal_dir'
-    extra_binds:
-      - '/var/lib/etcd/data:/var/lib/rancher/etcd/data'
-      - '/var/lib/etcd/wal:/var/lib/rancher/etcd/wal'
-`)));
+    }, `continuous-delivery`), ` is not shown in the Rancher UI.`));
 }
 MDXContent.isMDXComponent = true;
 

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[40072],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[22236],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 22366:
+/***/ 43438:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64",
-    "id": "version-2.7/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64",
+    "id": "version-2.6/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64",
     "title": "Running on ARM64 (Experimental)",
     "description": "Running on an ARM64 platform is currently an experimental feature and is not yet officially supported in Rancher. Therefore, we do not recommend using ARM64 based nodes in a production environment.",
-    "source": "@site/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64.md",
+    "source": "@site/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64.md",
     "sourceDirName": "how-to-guides/advanced-user-guides/enable-experimental-features",
     "slug": "/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64",
-    "permalink": "/v2.7/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64",
+    "permalink": "/v2.6/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "version": "2.6",
+    "lastUpdatedAt": 1692993467,
+    "formattedLastUpdatedAt": "Aug 25, 2023",
     "frontMatter": {
         "title": "Running on ARM64 (Experimental)"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Enabling Experimental Features",
-        "permalink": "/v2.7/pages-for-subheaders/enable-experimental-features"
+        "permalink": "/v2.6/pages-for-subheaders/enable-experimental-features"
     },
     "next": {
         "title": "Allow Unsupported Storage Drivers",
-        "permalink": "/v2.7/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers"
+        "permalink": "/v2.6/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers"
     }
 };
 const assets = {};
@@ -352,7 +352,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "caution"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
@@ -366,7 +369,7 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `Only for Docker Install. Please note that the following installation command replaces the examples found in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/pages-for-subheaders/rancher-on-a-single-node-with-docker"
+        "href": "/v2.6/pages-for-subheaders/rancher-on-a-single-node-with-docker"
     }, `Docker Install link`), `:`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
@@ -403,7 +406,7 @@ version's release notes in the following two ways:`), /*#__PURE__*/ (0,_mdx_js_r
         parentName: "ul"
     }, `CNI Network Provider must be `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/faq/container-network-interface-providers#flannel"
+        "href": "/v2.6/faq/container-network-interface-providers#flannel"
     }, `Flannel`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Importing clusters that contain ARM64 based nodes`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", {
@@ -412,7 +415,7 @@ version's release notes in the following two ways:`), /*#__PURE__*/ (0,_mdx_js_r
         parentName: "ul"
     }, `Kubernetes cluster version must be 1.12 or higher`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Please see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"
+        "href": "/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"
     }, `Cluster Options`), ` how to configure the cluster options.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The following features are not tested:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Monitoring, alerts, notifiers, pipelines and logging`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {

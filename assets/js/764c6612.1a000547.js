@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[81638],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[30164],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 51860:
+/***/ 56548:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
-    "id": "version-2.7/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
+    "id": "how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
     "title": "Docker Install with TLS Termination at Layer-7 NGINX Load Balancer",
     "description": "For development and testing environments that have a special requirement to terminate TLS/SSL at a load balancer instead of your Rancher Server container, deploy Rancher and configure a load balancer to work with it conjunction.",
-    "source": "@site/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer.md",
+    "source": "@site/docs/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer.md",
     "sourceDirName": "how-to-guides/advanced-user-guides",
     "slug": "/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
-    "permalink": "/v2.7/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
+    "permalink": "/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1689711635,
-    "formattedLastUpdatedAt": "Jul 18, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1692993467,
+    "formattedLastUpdatedAt": "Aug 25, 2023",
     "frontMatter": {
         "title": "Docker Install with TLS Termination at Layer-7 NGINX Load Balancer"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Enabling the API Audit Log to Record System Events",
-        "permalink": "/v2.7/how-to-guides/advanced-user-guides/enable-api-audit-log"
+        "permalink": "/how-to-guides/advanced-user-guides/enable-api-audit-log"
     },
     "next": {
         "title": "Best Practices Guide",
-        "permalink": "/v2.7/pages-for-subheaders/best-practices"
+        "permalink": "/pages-for-subheaders/best-practices"
     }
 };
 const assets = {};
@@ -413,18 +413,21 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For development and testing environments that have a special requirement to terminate TLS/SSL at a load balancer instead of your Rancher Server container, deploy Rancher and configure a load balancer to work with it conjunction.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `A layer-7 load balancer can be beneficial if you want to centralize your TLS termination in your infrastructure. Layer-7 load balancing also offers the capability for your load balancer to make decisions based on HTTP attributes such as cookies, etc. that a layer-4 load balancer is not able to concern itself with.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This install procedure walks you through deployment of Rancher using a single container, and then provides a sample configuration for a layer-7 NGINX load balancer.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For development and testing environments that have a special requirement to terminate TLS/SSL at a load balancer instead of your Rancher Server container, deploy Rancher and configure a load balancer to work with it conjunction.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `A layer-7 load balancer can be beneficial if you want to centralize your TLS termination in your infrastructure. Layer-7 load balancing also offers the capability for your load balancer to make decisions based on HTTP attributes such as cookies, etc. that a layer-4 load balancer is not able to concern itself with.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This install procedure walks you through deployment of Rancher using a single container, and then provides a sample configuration for a layer-7 NGINX load balancer.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "requirements-for-os-docker-hardware-and-networking"
     }, `Requirements for OS, Docker, Hardware, and Networking`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Make sure that your node fulfills the general `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/installation-requirements"
+        "href": "/pages-for-subheaders/installation-requirements"
     }, `installation requirements.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "installation-outline"
     }, `Installation Outline`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "1-provision-linux-host"
     }, `1. Provision Linux Host`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Provision a single Linux host according to our `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/installation-requirements"
+        "href": "/pages-for-subheaders/installation-requirements"
     }, `Requirements`), ` to launch your Rancher Server.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "2-choose-an-ssl-option-and-install-rancher"
     }, `2. Choose an SSL Option and Install Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For security purposes, SSL (Secure Sockets Layer) is required when using Rancher. SSL secures all Rancher network communication, like when you login or interact with a cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
@@ -666,27 +669,27 @@ http {
         parentName: "li"
     }, `Recommended:`), ` Review Single Node `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-docker-installed-rancher"
+        "href": "/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-docker-installed-rancher"
     }, `Backup`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-docker-installed-rancher"
+        "href": "/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-docker-installed-rancher"
     }, `Restore`), `. Although you don't have any data you need to back up right now, we recommend creating backups after regular Rancher use.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Create a Kubernetes cluster: `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
+        "href": "/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
     }, `Provisioning Kubernetes Clusters`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "faq-and-troubleshooting"
     }, `FAQ and Troubleshooting`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For help troubleshooting certificates, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/certificate-troubleshooting"
+        "href": "/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/certificate-troubleshooting"
     }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "advanced-options"
     }, `Advanced Options`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "api-auditing"
     }, `API Auditing`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you want to record all transactions with the Rancher API, enable the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/advanced-user-guides/enable-api-audit-log"
+        "href": "/how-to-guides/advanced-user-guides/enable-api-audit-log"
     }, `API Auditing`), ` feature by adding the flags below into your install command.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
     }, `-e AUDIT_LEVEL=1 \\
@@ -698,7 +701,7 @@ http {
         "id": "air-gap"
     }, `Air Gap`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you are visiting this page to complete an `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/air-gapped-helm-cli-install"
+        "href": "/pages-for-subheaders/air-gapped-helm-cli-install"
     }, `Air Gap Installation`), `, you must pre-pend your private registry URL to the server tag when running the installation command in the option that you choose. Add `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `<REGISTRY.DOMAIN.COM:PORT>`), ` with your private registry URL in front of `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -721,7 +724,7 @@ http {
   rancher/rancher:latest
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This operation requires `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/rancher-on-a-single-node-with-docker#privileged-access-for-rancher"
+        "href": "/pages-for-subheaders/rancher-on-a-single-node-with-docker#privileged-access-for-rancher"
     }, `privileged access`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This layer 7 NGINX configuration is tested on NGINX version 1.13 (mainline) and 1.14 (stable).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
