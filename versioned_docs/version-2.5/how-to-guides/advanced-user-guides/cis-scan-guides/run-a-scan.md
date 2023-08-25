@@ -2,6 +2,10 @@
 title: Run a Scan
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/cis-scan-guides/run-a-scan"/>
+</head>
+
 When a ClusterScan custom resource is created, it launches a new CIS scan on the cluster for the chosen ClusterScanProfile.
 
 :::note
