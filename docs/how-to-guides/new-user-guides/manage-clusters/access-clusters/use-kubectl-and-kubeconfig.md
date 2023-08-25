@@ -31,7 +31,7 @@ These instructions assume that you have already created a Kubernetes cluster, an
 
 :::
 
-1. Click **☰** in the top left corner of the Rancher portal.
+1. Click **☰** in the top left corner of the Rancher UI.
 1. Select **Cluster Management**.
 1. Select the checkbox next to the name of the cluster whose kubeconfig file you want to download.
 1. Click the **Download KubeConfig** button above the table.

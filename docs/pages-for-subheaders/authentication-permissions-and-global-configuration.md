@@ -2,7 +2,7 @@
 title: Authentication, Permissions and Global Settings
 ---
 
-After installation, the [system administrator](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md) should configure Rancher to configure authentication, authorization, security, and global settings for the Rancher portal.
+After installation, the [system administrator](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md) should configure Rancher to configure authentication, authorization, security, and global settings for the Rancher UI.
 
 ## First Log In
 
@@ -52,14 +52,14 @@ For more information on how metadata works and how to configure metadata config,
 
 Options that control certain global-level Rancher settings are available from the top navigation menu. 
 
-Click **☰** in the top left corner of the Rancher portal, then select **Global Settings**, to view and configure the following menu items:
+Click **☰** in the top left corner of the Rancher UI, then select **Global Settings**, to view and configure the following menu items:
 
 - **Settings**: Various Rancher defaults, such as the minimum length for a user's password (`password-min-length`). You should be cautious when modifying these settings, as invalid values may break your Rancher installation.
 - **Feature Flags**: Rancher features that can be toggled on or off. Some of these flags are for [experimental features](#enabling-experimental-features).
 - **Banners**: UI elements you can add to fixed locations on the portal. For example, you can use these options to [set a custom banner](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding.md#fixed-banners) for users when they login to Rancher. 
-- **Branding**: Rancher portal design elements that you can [customize](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding.md). You can add a custom logo or favicon, and modify UI colors.
-- **Performance**: UI performance settings for the Rancher portal, such as incremental resource loading.
-- **Home Links**: Links displayed on the Rancher portal **Home** page. You can modify visibility for the default links or add your own links.
+- **Branding**: Rancher UI design elements that you can [customize](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding.md). You can add a custom logo or favicon, and modify UI colors.
+- **Performance**: UI performance settings for the Rancher UI, such as incremental resource loading.
+- **Home Links**: Links displayed on the Rancher UI **Home** page. You can modify visibility for the default links or add your own links.
 
 ### Enabling Experimental Features
 

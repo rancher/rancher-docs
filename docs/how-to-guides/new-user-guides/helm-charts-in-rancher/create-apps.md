@@ -6,9 +6,9 @@ title: Creating Apps
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps"/>
 </head>
 
-Rancher's App Marketplace contains additional Kubernetes apps that augement the functionality and infrastructure of your clusters. You can find the Apps Marketplace within the Rancher portal:
+Rancher's App Marketplace contains additional Kubernetes apps that augement the functionality and infrastructure of your clusters. You can find the Apps Marketplace within the Rancher UI:
 
-1. Click **☰** in the top left corner of the Rancher portal.
+1. Click **☰** in the top left corner of the Rancher UI.
 1. Select **Apps** from the left sidebar menu.
 1. Select **Charts** to view the Marketplace.  
 
