@@ -2,6 +2,10 @@
 title: Opening Ports with firewalld
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/open-ports-with-firewalld"/>
+</head>
+
 > We recommend disabling firewalld. For Kubernetes 1.19.x and higher, firewalld must be turned off.
 
 Some distributions of Linux [derived from RHEL,](https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux#Rebuilds) including Oracle Linux, may have default firewall rules that block communication with Helm.
