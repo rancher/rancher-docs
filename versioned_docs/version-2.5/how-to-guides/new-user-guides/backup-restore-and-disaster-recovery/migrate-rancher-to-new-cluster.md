@@ -93,7 +93,7 @@ spec:
 
 ### 3. Install cert-manager
 
-Follow the steps to [install cert-manager](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#5-install-cert-manager) in the documentation about installing cert-manager on Kubernetes.
+Follow the steps to [install cert-manager](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#4-install-cert-manager) in the documentation about installing cert-manager on Kubernetes.
 
 ### 4. Bring up Rancher with Helm
 

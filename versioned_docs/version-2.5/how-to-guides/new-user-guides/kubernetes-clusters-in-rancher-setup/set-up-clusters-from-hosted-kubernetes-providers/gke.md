@@ -136,7 +136,7 @@ Use Rancher to set up and configure your Kubernetes cluster.
 
     >**Note:** After submitting your private key, you may have to enable the Google Kubernetes Engine API. If prompted, browse to the URL displayed in the Rancher UI to enable the API.
 
-6. Select your cluster options, node options and security options. For help, refer to the [GKE Cluster Configuration Reference.](#gke-before-v2-5-8)
+6. Select your cluster options, node options and security options. For help, refer to the [GKE Cluster Configuration Reference.](../../../../pages-for-subheaders/gke-cluster-configuration.md)
 9. Review your options to confirm they're correct. Then click **Create**.
 
 **Result:** You have successfully deployed a GKE cluster.

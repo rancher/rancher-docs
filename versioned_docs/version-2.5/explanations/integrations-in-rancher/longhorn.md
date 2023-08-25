@@ -35,11 +35,11 @@ These instructions assume you are using Rancher v2.5, but Longhorn can be instal
 
 ### Installing Longhorn with Rancher
 
-1. Fulfill all [Installation Requirements.](https://longhorn.io/docs/1.1.0/deploy/install/#installation-requirements)
+1. Fulfill all [Installation Requirements.](https://github.com/longhorn/website/blob/master/content/docs/archives/1.1.0/deploy/install/_index.md#installation-requirements)
 1. Go to the **Cluster Explorer** in the Rancher UI.
 1. Click **Apps.**
 1. Click `longhorn`.
-1. Optional: To customize the initial settings, click **Longhorn Default Settings** and edit the configuration. For help customizing the settings, refer to the [Longhorn documentation.](https://longhorn.io/docs/1.0.2/references/settings/)
+1. Optional: To customize the initial settings, click **Longhorn Default Settings** and edit the configuration. For help customizing the settings, refer to the [Longhorn documentation.](https://github.com/longhorn/website/blob/master/content/docs/archives/1.0.2/references/settings.md)
 1. Click **Install.**
 
 **Result:** Longhorn is deployed in the Kubernetes cluster.
