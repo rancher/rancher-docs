@@ -2,6 +2,10 @@
 title: 4. Add Deployments and Services with the Istio Sidecar
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/istio-setup-guide/use-istio-sidecar"/>
+</head>
+
 > **Prerequisite:** To enable Istio for a workload, the cluster and namespace must have Istio enabled.
 
 Enabling Istio in a namespace only enables automatic sidecar injection for new workloads. To enable the Envoy sidecar for existing workloads, you need to enable it manually for each workload.
