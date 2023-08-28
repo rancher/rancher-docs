@@ -32,17 +32,13 @@ On the **Clusters** page, select **⁝** at the end of each row to view a submen
 * View YAML
 * Download YAML 
 
-:::note
-All options available in the UI use the Rancher API. Therefore any action possible in the UI is also possible in the Rancher CLI or Rancher API.
-:::
-
 ## Cluster Dashboard
 
-On the **Clusters** page, select the **Explore** button at the end of each row to view that cluster's **Cluster Dashboard**.
+On the **Clusters** page, select the **Explore** button at the end of each row to view that cluster's **Cluster Dashboard**. You can also view the dashboard by clicking the name of a cluster in the table, then clicking the **Explore** buttton on the **Cluster** page.
 
-You can also view the **Cluster Dashboard** from the Rancher UI **Home** page, by clicking on the name of a cluster.
+The **Cluster Dashboard** is also accessible from the Rancher UI **Home** page, by clicking on the name of a cluster.
 
-The **Cluster Dashboard** is also accessible from the **☰** in the top navigation bar:
+You can also access the **Cluster Dashboard** from the **☰** in the top navigation bar:
 
 1. Click **☰**.
 1. Select the name of a cluster from the **Explore Cluster** menu option.
