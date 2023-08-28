@@ -14,7 +14,7 @@ For information on how to set up an authentication system, see [this section.](a
 
 There are several paths to view and manage clusters through the Rancher UI.
 
-## Clusters Page
+### Clusters Page
 
 You can access the **Clusters** page from the **☰** menu:
 
@@ -32,7 +32,7 @@ On the **Clusters** page, select **⁝** at the end of each row to view a submen
 * View YAML
 * Download YAML 
 
-## Cluster Dashboard
+### Cluster Dashboard
 
 On the **Clusters** page, select the **Explore** button at the end of each row to view that cluster's **Cluster Dashboard**. You can also view the dashboard by clicking the name of a cluster in the table, then clicking the **Explore** buttton on the **Cluster** page.
 
