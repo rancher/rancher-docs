@@ -3,6 +3,8 @@ title: Monitoring and Alerting
 description: Prometheus lets you view metrics from your different Rancher and Kubernetes objects. Learn about the scope of monitoring and how to enable cluster monitoring
 ---
 
+The `rancher-monitoring` application can quickly deploy leading open-source monitoring and alerting solutions onto your cluster.
+
 The `rancher-monitoring` application, introduced in Rancher v2.5, is powered by [Prometheus](https://prometheus.io/), [Grafana](https://grafana.com/grafana/),  [Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/), the [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator), and the [Prometheus adapter.](https://github.com/DirectXMan12/k8s-prometheus-adapter) 
 
 For information on V1 monitoring and alerting, available in Rancher v2.2 up to v2.4, please see the Rancher v2.0—v2.4 docs on [cluster monitoring](../../versioned_docs/version-2.0-2.4/pages-for-subheaders/cluster-monitoring.md), [alerting](../../versioned_docs/v2.0-v2.4/pages-for-subheaders/cluster-alerts.md), [notifiers](../../versioned_docs/v2.0-v2.4/explanations/integrations-in-rancher/notifiers) and other [tools](../../versioned_docs/v2.0-v2.4/pages-for-subheaders/project-tools.md).
