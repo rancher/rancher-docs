@@ -9,14 +9,6 @@ This section is about how to deploy Rancher for your air gapped environment. An 
 
 Rancher recommends installing Rancher on a Kubernetes cluster. A highly available Kubernetes Installation is comprised of three nodes running the Rancher server components on a Kubernetes cluster. The persistence layer (etcd) is also replicated on these three nodes, providing redundancy and data duplication in case one of the nodes fails.
 
-This section describes installing Rancher in five parts:
-
-- [A. Add the Helm Chart Repository](#a-add-the-helm-chart-repository)
-- [B. Choose your SSL Configuration](#b-choose-your-ssl-configuration)
-- [C. Render the Rancher Helm Template](#c-render-the-rancher-helm-template)
-- [D. Install Rancher](#d-install-rancher)
-- [E. For Rancher versions before v2.3.0, Configure System Charts](#e-for-rancher-versions-before-v2-3-0-configure-system-charts)
-
 ### A. Add the Helm Chart Repository
 
 From a system that has access to the internet, fetch the latest Helm chart and copy the resulting manifests to a system that has access to the Rancher server cluster.

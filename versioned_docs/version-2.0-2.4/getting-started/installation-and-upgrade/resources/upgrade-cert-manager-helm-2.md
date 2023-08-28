@@ -9,8 +9,8 @@ title: Upgrading Cert-Manager with Helm 2
 Rancher uses cert-manager to automatically generate and renew TLS certificates for HA deployments of Rancher. As of Fall 2019, three important changes to cert-manager are set to occur that you need to take action on if you have an HA deployment of Rancher:
 
 1. [Let's Encrypt will be blocking cert-manager instances older than 0.8.0 starting November 1st 2019.](https://community.letsencrypt.org/t/blocking-old-cert-manager-versions/98753)
-1. [Cert-manager is deprecating and replacing the certificate.spec.acme.solvers field](https://docs.cert-manager.io/en/latest/tasks/upgrading/upgrading-0.7-0.8.html#upgrading-from-v0-7-to-v0-8). This change has no exact deadline.
-1. [Cert-manager is deprecating `v1alpha1` API and replacing its API group](https://cert-manager.io/docs/installation/upgrading/upgrading-0.10-0.11/)
+1. [Cert-manager is deprecating and replacing the certificate.spec.acme.solvers field](https://cert-manager.io/docs/installation/upgrading/upgrading-0.7-0.8). This change has no exact deadline.
+1. [Cert-manager is deprecating `v1alpha1` API and replacing its API group](https://cert-manager.io/docs/installation/upgrading/upgrading-0.10-0.11)
 
 To address these changes, this guide will do two things:
 
@@ -156,12 +156,12 @@ cert-manager-webhook-5b5dd6999-kst4x            1/1     Running     0          3
 cert-manager-cainjector-3ba5cd2bcd-de332x       1/1     Running     0          3m
 ```
 
-If the ‘webhook’ pod (2nd line) is in a ContainerCreating state, it may still be waiting for the Secret to be mounted into the pod. Wait a couple of minutes for this to happen but if you experience problems, please check cert-manager's [troubleshooting](https://docs.cert-manager.io/en/latest/getting-started/troubleshooting.html) guide.
+If the ‘webhook’ pod (2nd line) is in a ContainerCreating state, it may still be waiting for the Secret to be mounted into the pod. Wait a couple of minutes for this to happen but if you experience problems, please check cert-manager's [troubleshooting](https://cert-manager.io/docs/troubleshooting/) guide.
 
 > **Note:** The above instructions ask you to add the disable-validation label to the kube-system namespace. Here are additional resources that explain why this is necessary:
 >
-> - [Information on the disable-validation label](https://docs.cert-manager.io/en/latest/tasks/upgrading/upgrading-0.4-0.5.html?highlight=certmanager.k8s.io%2Fdisable-validation#disabling-resource-validation-on-the-cert-manager-namespace)
-> - [Information on webhook validation for certificates](https://docs.cert-manager.io/en/latest/getting-started/webhook.html)
+> - [Information on the disable-validation label](https://cert-manager.io/docs/installation/upgrading/upgrading-0.4-0.5#disabling-resource-validation-on-the-cert-manager-namespace)
+> - [Information on webhook validation for certificates](https://cert-manager.io/docs/concepts/webhook/)
 
 ## Cert-Manager API change and data migration
 
