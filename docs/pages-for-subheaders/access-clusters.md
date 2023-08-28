@@ -10,14 +10,20 @@ For more information on roles-based access control, see [this section.](manage-r
 
 For information on how to set up an authentication system, see [this section.](authentication-config.md)
 
+## Clusters in Rancher UI
 
 There are several paths to view and manage clusters through the Rancher UI.
 
-### Cluster List
+## Clusters Page
 
-A table listing available clusters is present on the Rancher **Home** page. Click on the name of a cluster to view that cluster's **Cluster Dashboard**.
+You can access the **Clusters** page from the **☰** menu:
 
-You can also perform management tasks by selecting the **Manage** button above the table. This will take you to the cluster management page. Select the **Explore** button at the end of each row to view that cluster's **Cluster Dashboard**, or select **⁝** at the end of each row to reveal a submenu featuring the following management options:
+1. Click **☰**.
+1. Select **Cluster Management**.
+
+You can also access the **Clusters** page by clicking the **Manage** button above the clusters table on the Rancher UI **Home** page.
+
+On the **Clusters** page, select **⁝** at the end of each row to view a submenu with the following options:
 
 * [Kubectl Shell](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)
 * Download KubeConfig
@@ -30,18 +36,18 @@ You can also perform management tasks by selecting the **Manage** button above t
 All options available in the UI use the Rancher API. Therefore any action possible in the UI is also possible in the Rancher CLI or Rancher API.
 :::
 
-### Top Navigation Bar
+## Cluster Dashboard
 
-The cluster dashboard is also accessible from the **☰** in the top navigation bar:
+On the **Clusters** page, select the **Explore** button at the end of each row to view that cluster's **Cluster Dashboard**.
+
+You can also view the **Cluster Dashboard** from the Rancher UI **Home** page, by clicking on the name of a cluster.
+
+The **Cluster Dashboard** is also accessible from the **☰** in the top navigation bar:
 
 1. Click **☰**.
 1. Select the name of a cluster from the **Explore Cluster** menu option.
 
-
-You can access the cluster management page from the **☰** menu as well:
-
-1. Click **☰**.
-1. Select **Cluster Management**.
+The **Cluster Dashboard** lists information about a specific cluster, such as number of nodes, memory usage, events, and resources.
 
 ## kubectl
 
