@@ -122,7 +122,7 @@ When you configure a readiness check using Rancher v2.x, the `readinessProbe` di
 
 HTTP checks monitor your deployment's health by sending an HTTP GET request to a specific URL path that you define. If the pod responds with a message range of `200`-`400`, the health check is considered successful. If the pod replies with any other value, the check is considered unsuccessful, so Kubernetes kills and replaces the pod according to its [restart policy](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy). (this applies to Liveness probes, for Readiness probes, it will mark the pod as Unready).
 
-You can configure the probe along with values for specifying its behavior by selecting the **HTTP returns successful status** or **HTTPS returns successful status**. For more information, see [Deploying Workloads](../kubernetes-resources-setup/workloads-and-pods/deploy-workloads.md).  For help setting probe timeout and threshold values, see [Health Check Parameter Mappings](#healthcheck-parameter-mappings).
+You can configure the probe along with values for specifying its behavior by selecting the **HTTP returns successful status** or **HTTPS returns successful status**. For more information, see [Deploying Workloads](../kubernetes-resources-setup/workloads-and-pods/deploy-workloads.md).  For help setting probe timeout and threshold values, see [Health Check Parameter Mappings](#health-check-parameter-mappings).
 
 ![HTTP Check](/img/readiness-check-http.png)
 

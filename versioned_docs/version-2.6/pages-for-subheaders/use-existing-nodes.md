@@ -69,7 +69,7 @@ If you're using Amazon EC2 as your host and want to use the [dual-stack](https:/
 
 :::
 
-8. **Optional**: Click **[Show advanced options](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents.md)** to specify IP address(es) to use when registering the node, override the hostname of the node, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
+8. **Optional**: Click **[Show advanced options](../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md)** to specify IP address(es) to use when registering the node, override the hostname of the node, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
 
 9. Copy the command displayed on screen to your clipboard.
 

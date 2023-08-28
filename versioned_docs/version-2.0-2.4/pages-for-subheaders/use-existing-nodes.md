@@ -57,7 +57,7 @@ Provision the host according to the [installation requirements](../how-to-guides
     >- Using Windows nodes as Kubernetes workers? See [this section](use-windows-clusters.md).
     >- Bare-Metal Server Reminder: If you plan on dedicating bare-metal servers to each role, you must provision a bare-metal server for each role (i.e. provision multiple bare-metal servers).
 
-8.	<a id="step-8"></a>**Optional**: Click **[Show advanced options](admin-settings/agent-options/)** to specify IP address(es) to use when registering the node, override the hostname of the node, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
+8.	<a id="step-8"></a>**Optional**: Click **[Show advanced options](../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md)** to specify IP address(es) to use when registering the node, override the hostname of the node, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
 
 9. Copy the command displayed on screen to your clipboard.
 

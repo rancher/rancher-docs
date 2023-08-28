@@ -34,7 +34,7 @@ The following steps will quickly deploy a Rancher Server on DigitalOcean with a 
     - `rancher_server_admin_password` - Admin password for created Rancher server
 
 1. **Optional:** Modify optional variables within `terraform.tfvars`.
-See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [DO Quickstart Readme](https://github.com/rancher/quickstart/tree/master/do) for more information.
+See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [DO Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/do#readme) for more information.
 Suggestions include:
     - `do_region` - DigitalOcean region, choose the closest instead of the default
     - `prefix` - Prefix for all created resources

@@ -46,7 +46,7 @@ Rancher Server is designed to be secure by default and requires SSL/TLS configur
 
 When Rancher is installed on an air gapped Kubernetes cluster, there are two recommended options for the source of the certificate.
 
-> **Note:** If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](../../../../../reference-guides/installation-references/helm-chart-options#external-tls-termination).
+> **Note:** If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](../../../../../reference-guides/installation-references/helm-chart-options.md#external-tls-termination).
 
 | Configuration                              | Chart option                 | Description                                                                                                                                                 | Requires cert-manager |
 | ------------------------------------------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
@@ -231,7 +231,7 @@ For security purposes, SSL (Secure Sockets Layer) is required when using Rancher
 
 > **Do you want to...**
 >
-> - Configure custom CA root certificate to access your services? See [Custom CA root certificate](../../../../../reference-guides/installation-references/helm-chart-options#additional-trusted-cas).
+> - Configure custom CA root certificate to access your services? See [Custom CA root certificate](../../../../../reference-guides/installation-references/helm-chart-options.md#additional-trusted-cas).
 > - Record all transactions with the Rancher API? See [API Auditing](../../../../../reference-guides/single-node-rancher-in-docker/advanced-options.md#api-audit-log).
 
 - For Rancher before v2.3.0, you will need to mirror the `system-charts` repository to a location in your network that Rancher can reach. Then, after Rancher is installed, you will need to configure Rancher to use that repository. For details, refer to the documentation on [setting up the system charts for Rancher before v2.3.0.](../../../resources/local-system-charts.md)

@@ -113,7 +113,7 @@ _Available as of v2.1.0_
 1. Click **Authenticate**.
 
 >**Note:**
-> 1. Pipeline uses Gitlab [v4 API](https://docs.gitlab.com/ee/api/v3_to_v4.html) and the supported Gitlab version is 9.0+.
+> 1. Pipeline uses Gitlab [v4 API](https://github.com/gitlabhq/gitlabhq/blob/9-0-stable/doc/api/v3_to_v4.md) and the supported Gitlab version is 9.0+.
 > 2. If you use GitLab 10.7+ and your Rancher setup is in a local network, enable the **Allow requests to the local network from hooks and services** option in GitLab admin settings.
 
 </TabItem>

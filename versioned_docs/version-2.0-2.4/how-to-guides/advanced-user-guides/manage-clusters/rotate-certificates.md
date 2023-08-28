@@ -85,6 +85,6 @@ If you are upgrading from Rancher v2.0.13 or earlier, or v2.1.8 or earlier, and 
     cp -r /etc/kubernetes/ssl /etc/kubernetes/.tmp
     ```
 
-1. Rotate the certificates. For Rancher v2.0.x and v2.1.x, use the [Rancher API.](#certificate-rotation-in-rancher-v2-1-x-and-v2-0-x) For Rancher 2.2.x, [use the UI.](#certificate-rotation-in-rancher-v2-2-x)
+1. Rotate the certificates. For Rancher v2.0.x and v2.1.x, use the [Rancher API.](#certificate-rotation-in-rancher-v21x-and-v20x) For Rancher 2.2.x, [use the UI.](#certificate-rotation-in-rancher-v22x)
 
 1. After the command is finished, check if the `worker` nodes are Active. If not, log in to each `worker` node and restart the kubelet and proxy.

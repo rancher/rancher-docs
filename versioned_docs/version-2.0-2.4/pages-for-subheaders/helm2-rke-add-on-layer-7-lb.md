@@ -90,8 +90,8 @@ RKE uses a YAML config file to install and configure your Kubernetes cluster. Th
 
 1. Download one of following templates, depending on the SSL certificate you're using.
 
-    - [Template for self-signed certificate<br/> `3-node-externalssl-certificate.yml`](https://raw.githubusercontent.com/rancher/rancher/master/rke-templates/3-node-externalssl-certificate.yml)
-    - [Template for certificate signed by recognized CA<br/> `3-node-externalssl-recognizedca.yml`](https://raw.githubusercontent.com/rancher/rancher/master/rke-templates/3-node-externalssl-recognizedca.yml)
+    - [Template for self-signed certificate<br/> `3-node-externalssl-certificate.yml`](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/cluster-yml-templates/node-externalssl-certificate.md)
+    - [Template for certificate signed by recognized CA<br/> `3-node-externalssl-recognizedca.yml`](../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/cluster-yml-templates/node-externalssl-recognizedca.md)
 
     >**Advanced Config Options:**
     >
@@ -152,7 +152,7 @@ Choose from the following options:
 >Create a self-signed certificate.
 >
 >- The certificate files must be in PEM format.
->- The certificate files must be encoded in [base64](#base64).
+>- The certificate files must be encoded in base64.
 >- In your certificate file, include all intermediate certificates in the chain. Order your certificates with your certificate first, followed by the intermediates. For an example, see [Certificate Troubleshooting.](../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/certificate-troubleshooting.md)
 
 In `kind: Secret` with `name: cattle-keys-ingress`, replace `<BASE64_CA>` with the base64 encoded string of the CA Certificate file (usually called `ca.pem` or `ca.crt`)

@@ -21,12 +21,12 @@ The following table displays each service discovery feature available in the two
 
 Service Discovery Feature | Rancher v1.6 | Rancher v2.x | Description
 --------------------------|--------------|--------------|-------------
-[service discovery within and across stack][1] (i.e., clusters) | ✓ | ✓ | All services in the stack are resolvable by `<service_name>` and by `<service_name>.<stack_name>` across stacks.
+[service discovery within and across namespaces][1] (i.e., clusters) | ✓ | ✓ | All services in the stack are resolvable by `<service_name>` and by `<service_name>.<stack_name>` across stacks.
 [container discovery][2] | ✓ | ✓ | All containers are resolvable globally by their name.
 [service alias name creation][3] | ✓ | ✓ | Adding an alias name to services and linking to other services using aliases.
 [discovery of external services][4] | ✓  | ✓ | Pointing to services deployed outside of Rancher using the external IP(s) or a domain name.
 
-[1]: #service-discovery-within-and-across-stacks
+[1]: #service-discovery-within-and-across-namespaces
 [2]: #container-discovery
 [3]: #service-name-alias-creation
 [4]: #service-name-alias-creation

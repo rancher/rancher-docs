@@ -16,7 +16,7 @@ To schedule scans for an existing cluster:
 1. Click **Tools > CIS Scans.**
 1. Click **Add Schedule.** This takes you to the section of the cluster editing page that is applicable to configuring a schedule for CIS scans. (This section can also be reached by going to the cluster view, clicking **⋮ > Edit,** and going to the **Advanced Options.**)
 1. In the **CIS Scan Enabled** field, click **Yes.**
-[defined in a separate ConfigMap](#skip-tests)
+[defined in a separate ConfigMap](./skip-tests.md)
 1. In the **CIS Scan Interval (cron)** job, enter a [cron expression](https://en.wikipedia.org/wiki/Cron#CRON_expression) to define how often the cluster will be scanned.
 1. In the **CIS Scan Report Retention** field, enter the number of past reports that should be kept.
 
