@@ -8,9 +8,9 @@ title: Nodes and Node Pools
 
 After you launch a Kubernetes cluster in Rancher, you can manage individual nodes from the cluster's **Node** tab. 
 
-1. Click **☰** in the top left corner of the Rancher UI.
-1. Select **Home**.
-1. Click the name of the cluster whose nodes you want to manage in the **Clusters** table.
+1. Click **☰** in the top left corner.
+1. Select **Cluster Management**.
+1. Find the cluster whose nodes you want to manage, and click the **Explore** button at the end of the row.
 1. Select **Nodes** from the left navigation sidebar.
 
 Depending on the [option used](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md) to provision the cluster, there are different node options available.
