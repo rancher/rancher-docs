@@ -35,16 +35,82 @@
        url('../fonts/lato/lato-regular.woff') format('woff2'), /* Super Modern Browsers */
        url('../fonts/lato/lato-regular.woff2') format('woff'), /* Modern Browsers */
 }
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2453ff;
-  --ifm-color-primary-dark: #073cff;
-  --ifm-color-primary-darker: #0035f7;
-  --ifm-color-primary-darkest: #002ccc;
-  --ifm-color-primary-light: #416aff;
-  --ifm-color-primary-lighter: #5075ff;
-  --ifm-color-primary-lightest: #7b98ff;
+
+@tailwind base;
+
+@layer base {
+  :root {
+    --docs-color-primary-100: 26 144 255;
+    --docs-color-primary-200: 33 96 253;
+
+    --docs-color-secondary-700: 232 232 236;
+    --docs-color-secondary-800: 245 245 247;
+    --docs-color-secondary-900: 251 251 251;
+    --docs-color-secondary-1000: 255 255 255;
+
+    --docs-color-text-400: 71 71 71;
+  }
+
+  html[data-theme='dark'] {
+    --docs-color-text-400: 153 153 153;
+
+    --docs-color-secondary-700: 71 71 71;
+    --docs-color-secondary-800: 38 38 38;
+    --docs-color-secondary-900: 25 25 25;
+    --docs-color-secondary-1000: 0 0 0;
+  }
+
+  body {
+    @apply font-sans antialiased;
+  }
+
+  .homepage a {
+    --ifm-link-hover-color: currentColor;
+  }
+
+  .no-underline-links {
+    --ifm-link-hover-decoration: none;
+  }
+
+  a {
+    @apply cursor-pointer;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-jakarta;
+  }
+
+  .homepage section,
+  .homepage section * {
+    @apply box-border;
+  }
 }
+
+:root {
+  --ifm-color-primary-lightest: #80bbe2;
+  --ifm-color-primary-lighter: #5eaadb;
+  --ifm-color-primary-light: #53a4d8;
+  --ifm-color-primary: #3d98d3;
+  --ifm-color-primary-dark: #2d8bc8;
+  --ifm-color-primary-darker: #2b83bc;
+  --ifm-color-primary-darkest: #236c9b;
+  --ifm-code-font-size: 95%;
+
+  --docs-color-border: #dadde1;
+
+  --docs-color-text: #000000;
+  --docs-color-text-100: #646464;
+
+  --docs-color-background: #ffffff;
+  --docs-color-background-100: #f8f8f8;
+  --docs-color-background-200: #efefef;
+  --docs-color-background-300: #dcdcdc;
+}
+
 @media (max-width: 768px) {
   #theme-main h1 {
     font-size: 50px !important;
@@ -161,6 +227,42 @@ a.btn.navbar__github::before {
   position: absolute;
 }
 
+img[src$='#terminal'] {
+  display: block;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pad {
+  padding: 0 1rem;
+}
+
+.center {
+  width: 100%;
+  max-width: 1080px;
+  margin: 1rem auto;
+  min-height: 400px;
+}
+
+.homepage-content {
+  padding-bottom: 6rem;
+}
+
+#hero {
+  padding: 2rem 0 1.5rem 0;
+  margin-bottom: 4rem;
+  border-bottom: 1px solid var(--docs-color-border);
+}
+
+#hero h2 {
+  font-size: 36px;
+}
+
+#hero p {
+  color: var(--docs-color-text-100);
+}
+
 .section-content {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -196,13 +298,6 @@ a.btn.navbar__github::before {
   margin: 0rem 0 1.25rem 0;
   margin-top: -0.5rem;
 }
-
-.google-link {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
 
 .has-sub-sections > .section-content .section-description {
   font-size: 14px;
@@ -275,4 +370,20 @@ details code {
 
 details p {
   font-weight: 300;
+}
+
+@media screen and (max-width: 1160px) {
+  /* Hide icons when header UI breaks */
+  .pseudo-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-content {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .two-cols .section-content {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
