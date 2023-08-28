@@ -50,15 +50,15 @@ For more information on how metadata works and how to configure metadata config,
 
 ## Global Settings
 
-Options that control certain global-level Rancher settings are available from the top navigation menu. 
+Options that control certain global-level Rancher settings are available from the top navigation bar. 
 
-Click **☰** in the top left corner of the Rancher UI, then select **Global Settings**, to view and configure the following menu items:
+Click **☰** in the top left corner, then select **Global Settings**, to view and configure the following settings:
 
 - **Settings**: Various Rancher defaults, such as the minimum length for a user's password (`password-min-length`). You should be cautious when modifying these settings, as invalid values may break your Rancher installation.
 - **Feature Flags**: Rancher features that can be toggled on or off. Some of these flags are for [experimental features](#enabling-experimental-features).
-- **Banners**: UI elements you can add to fixed locations on the portal. For example, you can use these options to [set a custom banner](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding.md#fixed-banners) for users when they login to Rancher. 
+- **Banners**: Elements you can add to fixed locations on the portal. For example, you can use these options to [set a custom banner](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding.md#fixed-banners) for users when they login to Rancher. 
 - **Branding**: Rancher UI design elements that you can [customize](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding.md). You can add a custom logo or favicon, and modify UI colors.
-- **Performance**: UI performance settings for the Rancher UI, such as incremental resource loading.
+- **Performance**: Performance settings for the Rancher UI, such as incremental resource loading.
 - **Home Links**: Links displayed on the Rancher UI **Home** page. You can modify visibility for the default links or add your own links.
 
 ### Enabling Experimental Features
@@ -69,10 +69,10 @@ Rancher includes some features that are experimental and/or disabled by default.
 
 **Global Configuration** options aren't visible unless you activate the **legacy** [feature flag](enable-experimental-features.md). The **legacy** flag is disabled by default on fresh Rancher installs of v2.6 and later. If you upgrade from an earlier Rancher version, or activate the **legacy** feature flag on Rancher v2.6 and later, **Global Configuration** is available from the top navigation menu:
 
-1. Click **☰** in the top left corner of the portal.
-1. Select **Global Configuration** from the **Legacy Apps** section of the sidebar.
+1. Click **☰** in the top left corner.
+1. Select **Global Configuration** from the **Legacy Apps**.
 
-The following features are available within the **Global Configuration** sidebar:
+The following features are available under **Global Configuration**:
 
 - **Catalogs**
 - **Global DNS Entries**
