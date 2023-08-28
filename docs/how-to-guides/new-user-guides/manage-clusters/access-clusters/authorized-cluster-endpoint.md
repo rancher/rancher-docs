@@ -8,7 +8,7 @@ title: How the Authorized Cluster Endpoint Works
 
 This section describes how the kubectl CLI, the kubeconfig file, and the authorized cluster endpoint work together to allow you to access a downstream Kubernetes cluster directly, without authenticating through the Rancher server. It is intended to provide background information and context to the instructions for [how to set up kubectl to directly access a cluster.](use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster)
 
-### About the KubeConfig File
+### About the Kubeconfig File
 
 The kubeconfig file is used to configure access to Kubernetes when used in conjunction with the kubectl command line tool (or other clients).
 
@@ -16,7 +16,7 @@ The kubeconfig file and its contents are specific each cluster. It can be downlo
 
 1. Click **☰** in the top left corner.
 1. Select **Cluster Management**.
-1. Find the cluster whose KubeConfig you want to download, and select **⁝** at the end of the row. 
+1. Find the cluster whose kubeconfig you want to download, and select **⁝** at the end of the row. 
 1. Select **Download KubeConfig** from the submenu.
 
 You will need a separate kubeconfig file for each cluster that you have access to in Rancher.

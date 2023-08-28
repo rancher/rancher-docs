@@ -33,7 +33,7 @@ These instructions assume that you have already created a Kubernetes cluster, an
 
 1. Click **☰** in the top left corner.
 1. Select **Cluster Management**.
-1. Find the cluster whose KubeConfig you want to download, and select **⁝** at the end of the row. 
+1. Find the cluster whose kubeconfig you want to download, and select **⁝** at the end of the row. 
 1. Select **Download KubeConfig** from the submenu.
 1. Save the YAML file on your local computer. Move the file to `~/.kube/config`. Note: The default location that kubectl uses for the kubeconfig file is `~/.kube/config`, but you can use any directory and specify it using the `--kubeconfig` flag, as in this command:
   ```
