@@ -123,7 +123,7 @@ Authorized Cluster Endpoint (ACE) can be used to directly access the Kubernetes 
 
 :::note
 
-ACE is only available on Kubernetes clusters provisioned by Rancher. In Rancher v2.6.3 and later, RKE, RKE2, and K3s all support ACE. Prior to Rancher v2.6.3, it was only available for RKE. Regardless of version, ACE is not available for clusters in a hosted Kubernetes provider, such as Amazon's EKS.
+ACE is available on Kubernetes clusters provisioned by or registered with Rancher. In Rancher v2.6.3 and later, RKE, RKE2, and K3s all support ACE. Prior to Rancher v2.6.3, it was only available for RKE. Regardless of version, ACE isn't available on clusters in a hosted Kubernetes provider, such as Amazon's EKS.
 
 :::
 
