@@ -1,6 +1,7 @@
 ---
 title: 启用实验功能
 ---
+
 Rancher 包含一些默认关闭的实验功能。在某些情况下，例如当你认为使用[不支持的存储类型](../how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md)的好处大于使用未经测试的功能的风险时，你可能想要启用实验功能。为了让你能够试用这些默认关闭的功能，我们引入了功能开关（feature flag）。
 
 实验功能可以通过以下三种方式启用：
