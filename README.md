@@ -2,14 +2,14 @@
 
 Welcome to the [Rancher docs](https://ranchermanager.docs.rancher.com/) repository. See the [Rancher software](https://github.com/rancher/rancher) repository if you have questions or suggestions about the actual Rancher platform.
 
-## Make A Suggestion
+## Make a Suggestion
 
 You can suggest changes to the Rancher docs in two ways: 
 
 1. [Open an issue](https://github.com/rancher/rancher-docs/issues/new/choose).
 1. Edit the docs in the way you see fit and open a pull request.
 
-## Edit The Docs
+## Edit the Docs
 
 To get started, [fork](https://github.com/rancher/rancher-docs/fork) and clone the rancher-docs repository.
 
@@ -19,7 +19,11 @@ For most updates, you'll need to edit a file in `/docs`, and the corresponding f
 
 If a file is moved or renamed, you'll also need to edit the `sidebars.js` files for each version, and the list of redirects in `docusaurus.config.js`. See [Moving or Renaming Docs](./moving-or-renaming-docs.md).
 
-## Style & Formatting
+### Navigate the Repo
+
+The file paths in the repo correspond to the URLs for pages on the docs website. Most index pages are found within the ./pages-for-subheaders directory. Images are in ./static/img.
+
+### Style & Formatting
 
 The docs are written in [Markdown](https://www.markdownguide.org/getting-started/). We refer to the Microsoft [style guide](https://learn.microsoft.com/en-us/style-guide/welcome/) and use standard American English. Many pages are also available in Simplified Chinese.
 
