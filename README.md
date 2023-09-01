@@ -1,16 +1,27 @@
-# Edit The Docs
+# Contribute to Rancher Docs
 
-To get started, fork and clone the rancher-docs repository.
+Welcome to the [Rancher docs](https://ranchermanager.docs.rancher.com/) repository. See the [Rancher software](https://github.com/rancher/rancher) repository if you have questions or suggestions about the actual Rancher platform.
+
+## Make A Suggestion
+
+You can suggest changes to the Rancher docs in two ways: 
+
+1. [Open an issue](https://github.com/rancher/rancher-docs/issues/new/choose).
+1. Edit the docs in the way you see fit and open a pull request.
+
+## Edit The Docs
+
+To get started, [fork](https://github.com/rancher/rancher-docs/fork) and clone the rancher-docs repository.
 
 Our repository doesn't allow you to make changes directly to the `main` branch. Create a working branch and make pull requests from your fork to [rancher/rancher-docs](https://github.com/rancher/rancher-docs).
 
 For most updates, you'll need to edit a file in `/docs`, and the corresponding file in `/versioned_docs/version-2.7`. If a change affects older versions, you can find files documenting Rancher v2.0 and later in the `/versioned_docs` directory. 
 
-If a file is moved or renamed, you'll also need to edit the `sidebars.js` files for each version, and the list of redirects in `docusaurus.config.js`. 
+If a file is moved or renamed, you'll also need to edit the `sidebars.js` files for each version, and the list of redirects in `docusaurus.config.js`. See [Moving or Renaming Docs](./moving-or-renaming-docs.md).
 
 ## Style & Formatting
 
-The docs are written in [Markdown](https://www.markdownguide.org/getting-started/). We refer to the Microsoft [style guide](https://learn.microsoft.com/en-us/style-guide/welcome/) and generally use standard American English. Many pages are also available in Simplified Chinese.
+The docs are written in [Markdown](https://www.markdownguide.org/getting-started/). We refer to the Microsoft [style guide](https://learn.microsoft.com/en-us/style-guide/welcome/) and use standard American English. Many pages are also available in Simplified Chinese.
 
 Every docs page contain metadata in the first few lines:
 
@@ -22,7 +33,7 @@ title: Some Title
 
 The `title` is rendered as the page's headline. The site renderer wraps the `title` value in `H1` tags, which are equivalent to `#` in Markdown syntax. This means that all subsequent headers on the page should be second level (`##`) or more.
 
-## Docs Website
+## Run the Docs Website
 
 The Rancher Docs website is built with [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
