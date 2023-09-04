@@ -12,7 +12,9 @@ This hardening guide is intended to be used for K3s clusters and is associated w
 
 | Rancher Version | CIS Benchmark Version | Kubernetes Version           |
 |-----------------|-----------------------|------------------------------|
-| Rancher v2.7    | Benchmark v1.7       | Kubernetes v1.25 |
+| Rancher v2.7    | Benchmark v1.23       | Kubernetes v1.23             |
+| Rancher v2.7    | Benchmark v1.24       | Kubernetes v1.24             |
+| Rancher v2.7    | Benchmark v1.7        | Kubernetes v1.25 up to v1.26 |
 
 :::note
 - In Benchmark v1.24 and later, some check ids might fail due to new file permission requirements (600 instead of 644). Impacted check ids: `1.1.15`, `1.1.17` and `4.1.15`. 
