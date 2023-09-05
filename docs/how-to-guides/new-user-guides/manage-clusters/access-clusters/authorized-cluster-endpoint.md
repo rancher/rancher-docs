@@ -12,7 +12,7 @@ This section describes how the kubectl CLI, the kubeconfig file, and the authori
 
 The kubeconfig file is used to configure access to Kubernetes when used in conjunction with the kubectl command line tool (or other clients).
 
-The kubeconfig file and its contents are specific each cluster. It can be downloaded from the **Clusters** page in Rancher:
+The kubeconfig file and its contents are specific to each cluster. It can be downloaded from the **Clusters** page in Rancher:
 
 1. Click **☰** in the top left corner.
 1. Select **Cluster Management**.
