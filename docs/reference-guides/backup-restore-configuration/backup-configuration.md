@@ -6,11 +6,6 @@ The **Backup: Create** page lets you configure a schedule, enable encryption and
 
 You must first [install](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher.md) the `rancher-backup` operator. After you do so, you can access the **Backup: Create** page:
 
-1. In the upper left corner, click **☰ > Cluster Management**.
-1. On the **Clusters** page, go to the `local` cluster and click **Explore**.
-1. Select **Rancher Backups** from the left navigation sidebar.
-1. Click the **Create** button.
-
 ## Schedule
 
 Select the first option to perform a one-time backup, or select the second option to schedule recurring backups. Selecting **Recurring Backups** lets you configure following two fields:
