@@ -1,6 +1,6 @@
 # Contribute to Rancher Docs
 
-Welcome to the [Rancher docs](https://ranchermanager.docs.rancher.com/) repository. See the [Rancher software](https://github.com/rancher/rancher) repository if you have questions or suggestions about the actual Rancher platform.
+Welcome to the [Rancher docs](https://ranchermanager.docs.rancher.com/) repository. See the [Rancher software](https://github.com/rancher/rancher) repository if you have questions or requests for the Rancher platform.
 
 ## Make a Suggestion
 
@@ -21,7 +21,7 @@ If a file is moved or renamed, you'll also need to edit the `sidebars.js` files 
 
 ### Navigate the Repo
 
-The file paths in the repo correspond to the URLs for pages on the docs website. Most index pages are found within the ./pages-for-subheaders directory. Images are in ./static/img.
+The file paths in the repo correspond to the URLs for pages on the docs website. The docs for the latest version of Rancher are located in `/docs`. Most index pages are found within the `/pages-for-subheaders` directory in `/docs`. All images are in `/static/img` in the top level of the repo. Older docs are found within `/versioned_docs` and generally follow the same structure as the files in `/docs`.
 
 ### Style & Formatting
 
