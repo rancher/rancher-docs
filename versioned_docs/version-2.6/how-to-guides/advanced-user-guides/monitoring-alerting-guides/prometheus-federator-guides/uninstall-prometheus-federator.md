@@ -2,6 +2,10 @@
 title: Uninstall Prometheus Federator
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/uninstall-prometheus-federator"/>
+</head>
+
 <Tabs>
 <TabItem value="Rancher v2.6.5+">
 

@@ -2,6 +2,10 @@
 title: SELinux RPM
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/selinux-rpm"/>
+</head>
+
 _Available as of v2.5.8_
 
 [Security-Enhanced Linux (SELinux)](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) is a security enhancement to Linux.

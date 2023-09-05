@@ -1,6 +1,10 @@
 ---
 title: Deploying Applications across Clusters
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/deploy-apps-across-clusters"/>
+</head>
 ### Fleet
 
 Rancher v2.5 introduced Fleet, a new way to deploy applications across clusters.

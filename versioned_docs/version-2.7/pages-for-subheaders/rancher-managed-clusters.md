@@ -2,6 +2,10 @@
 title: Best Practices for Rancher Managed Clusters
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/rancher-managed-clusters"/>
+</head>
+
 ### Logging
 
 Refer to [this guide](../reference-guides/best-practices/rancher-managed-clusters/logging-best-practices.md) for our recommendations for cluster-level logging and application logging.

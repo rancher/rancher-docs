@@ -2,6 +2,10 @@
 title: Customizing Grafana Dashboards
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-alerting-guides/customize-grafana-dashboard"/>
+</head>
+
 In this section, you'll learn how to customize the Grafana dashboard to show metrics that apply to a certain container.
 
 ### Prerequisites

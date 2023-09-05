@@ -2,6 +2,10 @@
 title: CIS Scan Guides
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/cis-scan-guides"/>
+</head>
+
 - [Install rancher-cis-benchmark](../how-to-guides/advanced-user-guides/cis-scan-guides/install-rancher-cis-benchmark.md)
 - [Uninstall rancher-cis-benchmark](../how-to-guides/advanced-user-guides/cis-scan-guides/uninstall-rancher-cis-benchmark.md)
 - [Run a Scan](../how-to-guides/advanced-user-guides/cis-scan-guides/run-a-scan.md)

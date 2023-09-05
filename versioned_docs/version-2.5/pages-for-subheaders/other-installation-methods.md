@@ -2,6 +2,10 @@
 title: Other Installation Methods
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/other-installation-methods"/>
+</head>
+
 ### Air Gapped Installations
 
 Follow [these steps](air-gapped-helm-cli-install.md) to install the Rancher server in an air gapped environment.

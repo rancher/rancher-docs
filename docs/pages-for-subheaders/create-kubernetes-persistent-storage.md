@@ -2,6 +2,11 @@
 title: "Kubernetes Persistent Storage: Volumes and Storage Classes"
 description: "Learn about the two ways with which you can create persistent storage in Kubernetes: persistent volumes and storage classes"
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/create-kubernetes-persistent-storage"/>
+</head>
+
 When deploying an application that needs to retain data, you'll need to create persistent storage. Persistent storage allows you to store application data external from the pod running your application. This storage practice allows you to maintain application data, even if the application's pod fails.
 
 The documents in this section assume that you understand the Kubernetes concepts of persistent volumes, persistent volume claims, and storage classes. For more information, refer to the section on [how storage works.](../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/about-persistent-storage.md)

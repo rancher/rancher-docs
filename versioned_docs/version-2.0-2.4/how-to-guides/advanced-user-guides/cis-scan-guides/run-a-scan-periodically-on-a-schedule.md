@@ -2,6 +2,10 @@
 title: Run a Scan Periodically on a Schedule
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/cis-scan-guides/run-a-scan-periodically-on-a-schedule"/>
+</head>
+
 Recurring scans can be scheduled to run on any RKE Kubernetes cluster.
 
 To enable recurring scans, edit the advanced options in the cluster configuration during cluster creation or after the cluster has been created.

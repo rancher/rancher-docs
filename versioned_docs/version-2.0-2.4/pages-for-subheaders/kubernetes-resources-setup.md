@@ -2,6 +2,10 @@
 title: Kubernetes Resources
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/kubernetes-resources-setup"/>
+</head>
+
 ## Workloads
 
 Deploy applications to your cluster nodes using [workloads](workloads-and-pods.md), which are objects that contain pods that run your apps, along with metadata that set rules for the deployment's behavior. Workloads can be deployed within the scope of the entire clusters or within a namespace.

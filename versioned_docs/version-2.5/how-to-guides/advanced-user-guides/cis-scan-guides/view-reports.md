@@ -2,6 +2,10 @@
 title: View Reports
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/cis-scan-guides/view-reports"/>
+</head>
+
 To view the generated CIS scan reports,
 
 1. In the upper left corner, click **☰ > Cluster Management**.

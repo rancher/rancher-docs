@@ -2,6 +2,10 @@
 title: 7. Generate and View Traffic
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/istio-setup-guide/generate-and-view-traffic"/>
+</head>
+
 This section describes how to view the traffic that is being managed by Istio.
 
 ## The Kiali Traffic Graph

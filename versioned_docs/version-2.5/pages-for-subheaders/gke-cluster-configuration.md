@@ -2,6 +2,10 @@
 title: GKE Cluster Configuration Reference
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/gke-cluster-configuration"/>
+</head>
+
 <Tabs>
 <TabItem value="Rancher v2.5.8+">
 

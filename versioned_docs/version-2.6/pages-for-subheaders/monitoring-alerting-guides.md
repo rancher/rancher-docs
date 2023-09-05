@@ -2,6 +2,10 @@
 title: Monitoring Guides
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/monitoring-alerting-guides"/>
+</head>
+
 - [Enable monitoring](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/enable-monitoring.md)
 - [Uninstall monitoring](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/uninstall-monitoring.md)
 - [Monitoring workloads](../how-to-guides/advanced-user-guides/monitoring-alerting-guides/set-up-monitoring-for-workloads.md)

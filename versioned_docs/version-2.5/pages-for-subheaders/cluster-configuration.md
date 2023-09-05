@@ -2,6 +2,10 @@
 title: Cluster Configuration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/cluster-configuration"/>
+</head>
+
 After you provision a Kubernetes cluster using Rancher, you can still edit options and settings for the cluster.
 
 For information on editing cluster membership, go to [this page.](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/add-users-to-clusters.md)

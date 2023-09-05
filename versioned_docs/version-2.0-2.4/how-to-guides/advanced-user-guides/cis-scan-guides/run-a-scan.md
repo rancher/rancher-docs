@@ -2,6 +2,10 @@
 title: Run a Scan
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/cis-scan-guides/run-a-scan"/>
+</head>
+
 ## Run a Scan
 
 1. From the cluster view in Rancher, click **Tools > CIS Scans.**

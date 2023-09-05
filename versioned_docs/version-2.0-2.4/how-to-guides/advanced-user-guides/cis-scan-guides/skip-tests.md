@@ -2,6 +2,10 @@
 title: Skip Tests
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/cis-scan-guides/skip-tests"/>
+</head>
+
 You can define a set of tests that will be skipped by the CIS scan when the next report is generated.
 
 These tests will be skipped for subsequent CIS scans, including both manually triggered and scheduled scans, and the tests will be skipped with any profile.

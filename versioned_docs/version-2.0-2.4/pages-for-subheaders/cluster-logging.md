@@ -3,6 +3,10 @@ title: Cluster Logging
 description: Rancher integrates with popular logging services. Learn the requirements and benefits of integrating with logging services, and enable logging on your cluster.
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/logging"/>
+</head>
+
 Logging is helpful because it allows you to:
 
 - Capture and analyze the state of your cluster

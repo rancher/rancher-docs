@@ -2,6 +2,10 @@
 title: Kubernetes Components
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/kubernetes-components"/>
+</head>
+
 The commands and steps listed in this section apply to the core Kubernetes components on [Rancher Launched Kubernetes](../pages-for-subheaders/launch-kubernetes-with-rancher.md) clusters.
 
 This section includes troubleshooting tips in the following categories:

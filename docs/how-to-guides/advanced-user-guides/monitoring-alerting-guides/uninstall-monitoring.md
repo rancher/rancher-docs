@@ -2,6 +2,10 @@
 title: Uninstall Monitoring
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-alerting-guides/uninstall-monitoring"/>
+</head>
+
 1.  Click **☰ > Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
 1. In the left navigation bar, click **Apps**.

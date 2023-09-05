@@ -2,6 +2,10 @@
 title: Uninstall Monitoring
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-alerting-guides/uninstall-monitoring"/>
+</head>
+
 <Tabs>
 <TabItem value="Rancher v2.6.5+">
 

@@ -2,6 +2,10 @@
 title: Cluster Access
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/access-clusters"/>
+</head>
+
 This section is about what tools can be used to access clusters managed by Rancher.
 
 For information on how to give users permission to access a cluster, see the section on [adding users to clusters.](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/add-users-to-clusters.md)
