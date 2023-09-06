@@ -333,7 +333,7 @@ const metadata = {
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Authentication, Permissions and Global Configuration",
+        "title": "Authentication, Permissions and Global Settings",
         "permalink": "/v2.7/pages-for-subheaders/authentication-permissions-and-global-configuration"
     },
     "next": {

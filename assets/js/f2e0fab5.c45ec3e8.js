@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[29623],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[55978],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 20280:
+/***/ 17634:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -314,19 +314,19 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig",
-    "id": "how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig",
+    "id": "version-2.7/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig",
     "title": "Access a Cluster with Kubectl and kubeconfig",
     "description": "Learn how you can access and manage your Kubernetes clusters using kubectl with kubectl Shell or with kubectl CLI and kubeconfig file. A kubeconfig file is used to configure access to Kubernetes. When you create a cluster with Rancher, it automatically creates a kubeconfig for your cluster.",
-    "source": "@site/docs/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md",
+    "source": "@site/versioned_docs/version-2.7/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md",
     "sourceDirName": "how-to-guides/new-user-guides/manage-clusters/access-clusters",
     "slug": "/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig",
-    "permalink": "/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig",
+    "permalink": "/v2.7/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1692127006,
-    "formattedLastUpdatedAt": "Aug 15, 2023",
+    "version": "2.7",
+    "lastUpdatedAt": 1694021616,
+    "formattedLastUpdatedAt": "Sep 6, 2023",
     "frontMatter": {
         "title": "Access a Cluster with Kubectl and kubeconfig",
         "description": "Learn how you can access and manage your Kubernetes clusters using kubectl with kubectl Shell or with kubectl CLI and kubeconfig file. A kubeconfig file is used to configure access to Kubernetes. When you create a cluster with Rancher, it automatically creates a kubeconfig for your cluster."
@@ -334,11 +334,11 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Cluster Access",
-        "permalink": "/pages-for-subheaders/access-clusters"
+        "permalink": "/v2.7/pages-for-subheaders/access-clusters"
     },
     "next": {
         "title": "How the Authorized Cluster Endpoint Works",
-        "permalink": "/how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint"
+        "permalink": "/v2.7/how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint"
     }
 };
 const assets = {};
@@ -417,17 +417,21 @@ function MDXContent(_param) {
         "href": "https://kubernetes.io/docs/tasks/tools/install-kubectl/"
     }, `Kubernetes documentation.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
-    }, `Log into Rancher. Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `☰ > Cluster Management`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `☰`), ` in the top left corner.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
-    }, `Go to the cluster that you want to access with kubectl and click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `Select `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `Explore`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Cluster Management`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
-    }, `In the top navigation bar, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `Find the cluster whose kubeconfig you want to download, and select `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `Download KubeConfig`), ` button.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `⁝`), ` at the end of the row. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `Select `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Download KubeConfig`), ` from the submenu.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, `Save the YAML file on your local computer. Move the file to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
@@ -450,16 +454,16 @@ function MDXContent(_param) {
         "id": "authenticating-directly-with-a-downstream-cluster"
     }, `Authenticating Directly with a Downstream Cluster`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section intended to help you set up an alternative method to access an `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/pages-for-subheaders/launch-kubernetes-with-rancher"
+        "href": "/v2.7/pages-for-subheaders/launch-kubernetes-with-rancher"
     }, `RKE cluster.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This method is only available for RKE, RKE2, and K3s clusters that have the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-authorized-cluster-endpoint"
+        "href": "/v2.7/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-authorized-cluster-endpoint"
     }, `authorized cluster endpoint`), ` enabled. When Rancher creates the cluster, it generates a kubeconfig file that includes additional kubectl context(s) for accessing your cluster. This additional context allows you to use kubectl to authenticate with the downstream cluster without authenticating through Rancher. For a longer explanation of how the authorized cluster endpoint works, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint"
+        "href": "/v2.7/how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint"
     }, `this page`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `On RKE2 and K3s clusters, you need to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters#authorized-cluster-endpoint-support-for-rke2-and-k3s-clusters"
+        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters#authorized-cluster-endpoint-support-for-rke2-and-k3s-clusters"
     }, `manually enable`), ` authorized cluster endpoints.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `We recommend that as a best practice, you should set up this method to access your RKE, RKE2, and K3s clusters, so that just in case you can’t connect to Rancher, you can still access the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "title": "Prerequisites:",
         "type": "note"
@@ -482,7 +486,7 @@ CURRENT   NAME                        CLUSTER                     AUTHINFO     N
         parentName: "p"
     }, `my-cluster-controlplane-1`), `, you would authenticate with the authorized cluster endpoint, communicating with an downstream RKE cluster directly.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/reference-guides/rancher-manager-architecture/architecture-recommendations#architecture-for-an-authorized-cluster-endpoint-ace"
+        "href": "/v2.7/reference-guides/rancher-manager-architecture/architecture-recommendations#architecture-for-an-authorized-cluster-endpoint-ace"
     }, `recommended architecture section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Now that you have the name of the context needed to authenticate directly with the cluster, you can pass the name of the context in as an option when running kubectl commands. The commands will differ depending on whether your cluster has an FQDN defined. Examples are provided in the sections below.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `kubectl`), ` works normally, it confirms that you can access your cluster while bypassing Rancher's authentication proxy.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {

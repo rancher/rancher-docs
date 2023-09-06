@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/pages-for-subheaders/access-clusters.md",
     "tags": [],
     "version": "2.5",
-    "lastUpdatedAt": 1692127491,
-    "formattedLastUpdatedAt": "Aug 15, 2023",
+    "lastUpdatedAt": 1694021616,
+    "formattedLastUpdatedAt": "Sep 6, 2023",
     "frontMatter": {
         "title": "Cluster Access"
     },

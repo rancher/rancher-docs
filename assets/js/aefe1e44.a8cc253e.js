@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[50153],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[29198],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 69546:
+/***/ 5644:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher",
-    "id": "getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher",
+    "id": "version-2.7/getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher",
     "title": "Upgrading Kubernetes without Upgrading Rancher",
     "description": "The RKE metadata feature allows you to provision clusters with new versions of Kubernetes as soon as they are released, without upgrading Rancher. This feature is useful for taking advantage of patch versions of Kubernetes, for example, if you want to upgrade to Kubernetes v1.14.7 when your Rancher server originally supported v1.14.6.",
-    "source": "@site/docs/getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher.md",
+    "source": "@site/versioned_docs/version-2.7/getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher.md",
     "sourceDirName": "getting-started/installation-and-upgrade",
     "slug": "/getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher",
-    "permalink": "/getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher",
+    "permalink": "/v2.7/getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1685049914,
-    "formattedLastUpdatedAt": "May 25, 2023",
+    "version": "2.7",
+    "lastUpdatedAt": 1694021616,
+    "formattedLastUpdatedAt": "Sep 6, 2023",
     "frontMatter": {
         "title": "Upgrading Kubernetes without Upgrading Rancher"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Upgrading and Rolling Back Kubernetes",
-        "permalink": "/getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes"
+        "permalink": "/v2.7/getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes"
     },
     "next": {
         "title": "New User Guides",
-        "permalink": "/pages-for-subheaders/new-user-guides"
+        "permalink": "/v2.7/pages-for-subheaders/new-user-guides"
     }
 };
 const assets = {};
@@ -377,7 +377,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `The Kubernetes API can change between minor versions. Therefore, we don't support introducing minor Kubernetes versions, such as introducing v1.15 when Rancher currently supports v1.14. You would need to upgrade Rancher to add support for minor Kubernetes versions.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher's Kubernetes metadata contains information specific to the Kubernetes version that Rancher uses to provision `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/pages-for-subheaders/launch-kubernetes-with-rancher"
+        "href": "/v2.7/pages-for-subheaders/launch-kubernetes-with-rancher"
     }, `RKE clusters`), `. Rancher syncs the data periodically and creates custom resource definitions (CRDs) for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
     }, `system images,`), ` `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -471,7 +471,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `Manage Cluster Drivers`), ` `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions"
+        "href": "/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions"
     }, `global role.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To force Rancher to refresh the Kubernetes metadata, a manual refresh action is available:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, `In the upper left corner, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -542,9 +542,15 @@ function MDXContent(_param) {
     }, `rke-metadata-config`), ` settings to point to the mirror. For details, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#configuring-the-metadata-synchronization"
-    }, `Configuring the Metadata Synchronization.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After new Kubernetes versions are loaded into the Rancher setup, additional steps would be required in order to use them for launching clusters. Rancher needs access to updated system images. While the metadata settings can only be changed by administrators, any user can download the Rancher system images and prepare a private container image registry for them.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Configuring the Metadata Synchronization.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After new Kubernetes versions are loaded into the Rancher setup, additional steps would be required in order to use them for launching clusters. Rancher needs access to updated system images. While the metadata settings can only be changed by administrators, any user can download the Rancher system images and prepare a private container image registry for them.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To download the system images for the private registry: `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
-    }, `To download the system images for the private registry, click the Rancher server version at the bottom left corner of the Rancher UI.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `☰`), ` in the top left corner.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `About`), ` at the bottom of the left navigation.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, `Download the OS specific image lists for Linux or Windows.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
@@ -554,7 +560,7 @@ function MDXContent(_param) {
         parentName: "ol"
     }, `Prepare the private registry using the same steps during the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images"
+        "href": "/v2.7/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images"
     }, `air gap install`), `, but instead of using the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
     }, `rancher-images.txt`), ` from the releases page, use the one obtained from the previous steps.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {

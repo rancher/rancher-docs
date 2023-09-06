@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/monitoring-and-alerting/built-in-dashboards.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "lastUpdatedAt": 1694021616,
+    "formattedLastUpdatedAt": "Sep 6, 2023",
     "frontMatter": {
         "title": "Built-in Dashboards"
     },
@@ -390,6 +390,11 @@ const toc = [
         value: 'Viewing the PrometheusRules',
         id: 'viewing-the-prometheusrules',
         level: 3
+    },
+    {
+        value: 'Legacy UI',
+        id: 'legacy-ui',
+        level: 2
     }
 ];
 const layoutProps = {
@@ -568,7 +573,14 @@ function MDXContent(_param) {
     })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information on configuring PrometheusRules in Rancher, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "/v2.7/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/prometheusrules"
-    }, `this page.`)));
+    }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "legacy-ui"
+    }, `Legacy UI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For information on the dashboards available in v2.2 to v2.4 of Rancher, before the introduction of the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `rancher-monitoring`), ` application, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "../../versioned_docs/version-2.0-2.4/explanations/integrations-in-rancher/cluster-monitoring/viewing-metrics.md"
+    }, `Rancher v2.0—v2.4 docs`), `.`));
 }
 MDXContent.isMDXComponent = true;
 

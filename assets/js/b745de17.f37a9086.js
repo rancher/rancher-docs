@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[2908],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[99110],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 56950:
+/***/ 26982:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
-    "id": "version-2.7/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
+    "id": "how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
     "title": "Nodes and Node Pools",
-    "description": "After you launch a Kubernetes cluster in Rancher, you can manage individual nodes from the cluster's Node tab. Depending on the option used to provision the cluster, there are different node options available.",
-    "source": "@site/versioned_docs/version-2.7/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools.md",
+    "description": "After you launch a Kubernetes cluster in Rancher, you can manage individual nodes from the cluster's Node tab.",
+    "source": "@site/docs/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools.md",
     "sourceDirName": "how-to-guides/new-user-guides/manage-clusters",
     "slug": "/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
-    "permalink": "/v2.7/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
+    "permalink": "/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1692127006,
-    "formattedLastUpdatedAt": "Aug 15, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1694021616,
+    "formattedLastUpdatedAt": "Sep 6, 2023",
     "frontMatter": {
         "title": "Nodes and Node Pools"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Cluster Templates",
-        "permalink": "/v2.7/how-to-guides/new-user-guides/manage-clusters/manage-cluster-templates"
+        "permalink": "/how-to-guides/new-user-guides/manage-clusters/manage-cluster-templates"
     },
     "next": {
         "title": "Removing Kubernetes Components from Nodes",
-        "permalink": "/v2.7/how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes"
+        "permalink": "/how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes"
     }
 };
 const assets = {};
@@ -443,9 +443,25 @@ function MDXContent(_param) {
         href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools"
     })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After you launch a Kubernetes cluster in Rancher, you can manage individual nodes from the cluster's `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `Node`), ` tab. Depending on the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Node`), ` tab. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `☰`), ` in the top left corner.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `Select `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Cluster Management`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `Find the cluster whose nodes you want to manage, and click the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Explore`), ` button at the end of the row.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `Select `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Nodes`), ` from the left navigation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Depending on the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
+        "href": "/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
     }, `option used`), ` to provision the cluster, there are different node options available.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -454,7 +470,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `cluster`), ` and not individual nodes, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/cluster-configuration"
+        "href": "/pages-for-subheaders/cluster-configuration"
     }, `Editing Clusters`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "node-options-available-for-each-cluster-creation-option"
     }, `Node Options Available for Each Cluster Creation Option`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The following table lists which node options are available for each type of cluster in Rancher. Click the links in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -471,31 +487,31 @@ function MDXContent(_param) {
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "th",
-        "href": "/v2.7/pages-for-subheaders/use-new-nodes-in-an-infra-provider"
+        "href": "/pages-for-subheaders/use-new-nodes-in-an-infra-provider"
     }, `Nodes Hosted by an Infrastructure Provider`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
         parentName: "tr",
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "th",
-        "href": "/v2.7/pages-for-subheaders/use-existing-nodes"
+        "href": "/pages-for-subheaders/use-existing-nodes"
     }, `Custom Node`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
         parentName: "tr",
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "th",
-        "href": "/v2.7/pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers"
+        "href": "/pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers"
     }, `Hosted Cluster`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
         parentName: "tr",
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "th",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters"
+        "href": "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters"
     }, `Registered EKS Nodes`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
         parentName: "tr",
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "th",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters"
+        "href": "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters"
     }, `All Other Registered Nodes`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
         parentName: "tr",
         "align": null
@@ -689,26 +705,26 @@ function MDXContent(_param) {
         "id": "nodes-hosted-by-an-infrastructure-provider"
     }, `Nodes Hosted by an Infrastructure Provider`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Node pools are available when you provision Rancher-launched Kubernetes clusters on nodes that are `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/use-new-nodes-in-an-infra-provider"
+        "href": "/pages-for-subheaders/use-new-nodes-in-an-infra-provider"
     }, `hosted in an infrastructure provider.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Clusters provisioned using `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/use-new-nodes-in-an-infra-provider#node-pools"
+        "href": "/pages-for-subheaders/use-new-nodes-in-an-infra-provider#node-pools"
     }, `one of the node pool options`), ` can be scaled up or down if the node pool is edited.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `A node pool can also automatically maintain the node scale that's set during the initial cluster provisioning if `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/use-new-nodes-in-an-infra-provider#about-node-auto-replace"
+        "href": "/pages-for-subheaders/use-new-nodes-in-an-infra-provider#about-node-auto-replace"
     }, `node auto-replace is enabled.`), ` This scale determines the number of active nodes that Rancher maintains for the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher uses `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/use-new-nodes-in-an-infra-provider#node-templates"
+        "href": "/pages-for-subheaders/use-new-nodes-in-an-infra-provider#node-templates"
     }, `node templates`), ` to replace nodes in the node pool. Each node template uses cloud provider credentials to allow Rancher to set up the node in the infrastructure provider.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "nodes-provisioned-by-hosted-kubernetes-providers"
     }, `Nodes Provisioned by Hosted Kubernetes Providers`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Options for managing nodes `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers"
+        "href": "/pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers"
     }, `hosted by a Kubernetes provider`), ` are somewhat limited in Rancher. Rather than using the Rancher UI to make edits such as scaling the number of nodes up or down, edit the cluster directly.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "registered-nodes"
     }, `Registered Nodes`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Although you can deploy workloads to a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters"
+        "href": "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters"
     }, `registered cluster`), ` using Rancher, you cannot manage individual cluster nodes. All management of imported cluster nodes must take place outside of Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "managing-and-editing-individual-nodes"
     }, `Managing and Editing Individual Nodes`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Editing a node lets you:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -735,14 +751,14 @@ function MDXContent(_param) {
         "id": "viewing-a-node-in-the-rancher-api"
     }, `Viewing a Node in the Rancher API`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Select this option to view the node's `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/about-the-api"
+        "href": "/pages-for-subheaders/about-the-api"
     }, `API endpoints`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "deleting-a-node"
     }, `Deleting a Node`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Use `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
     }, `Delete`), ` to remove defective nodes from the cloud provider.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you the delete a defective node, Rancher can automatically replace it with an identically provisioned node if the node is in a node pool and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/use-new-nodes-in-an-infra-provider#about-node-auto-replace"
+        "href": "/pages-for-subheaders/use-new-nodes-in-an-infra-provider#about-node-auto-replace"
     }, `node auto-replace is enabled.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "tip"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -754,12 +770,12 @@ function MDXContent(_param) {
         "id": "scaling-nodes"
     }, `Scaling Nodes`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For nodes hosted by an infrastructure provider, you can scale the number of nodes in each `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/use-new-nodes-in-an-infra-provider#node-pools"
+        "href": "/pages-for-subheaders/use-new-nodes-in-an-infra-provider#node-pools"
     }, `node pool`), ` by using the scale controls. This option isn't available for other cluster types.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "ssh-into-a-node-hosted-by-an-infrastructure-provider"
     }, `SSH into a Node Hosted by an Infrastructure Provider`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/use-new-nodes-in-an-infra-provider"
+        "href": "/pages-for-subheaders/use-new-nodes-in-an-infra-provider"
     }, `nodes hosted by an infrastructure provider`), `, you have the option of downloading its SSH key so that you can connect to it remotely from your desktop.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {

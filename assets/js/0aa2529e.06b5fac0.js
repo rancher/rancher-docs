@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[72912],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[13073],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 16357:
+/***/ 59865:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,17 +313,17 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "pages-for-subheaders/new-user-guides",
-    "id": "version-2.7/pages-for-subheaders/new-user-guides",
+    "id": "pages-for-subheaders/new-user-guides",
     "title": "New User Guides",
     "description": "New user guides, also known as tutorials, describe practical steps for users to follow in order to complete some concrete action. These docs are known as \"learning-oriented\" docs in which users learn by \"doing\".",
-    "source": "@site/versioned_docs/version-2.7/pages-for-subheaders/new-user-guides.md",
+    "source": "@site/docs/pages-for-subheaders/new-user-guides.md",
     "sourceDirName": "pages-for-subheaders",
     "slug": "/pages-for-subheaders/new-user-guides",
-    "permalink": "/v2.7/pages-for-subheaders/new-user-guides",
+    "permalink": "/pages-for-subheaders/new-user-guides",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/pages-for-subheaders/new-user-guides.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/pages-for-subheaders/new-user-guides.md",
     "tags": [],
-    "version": "2.7",
+    "version": "current",
     "lastUpdatedAt": 1692127491,
     "formattedLastUpdatedAt": "Aug 15, 2023",
     "frontMatter": {
@@ -332,11 +332,11 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Upgrading Kubernetes without Upgrading Rancher",
-        "permalink": "/v2.7/getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher"
+        "permalink": "/getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher"
     },
     "next": {
-        "title": "Authentication, Permissions and Global Configuration",
-        "permalink": "/v2.7/pages-for-subheaders/authentication-permissions-and-global-configuration"
+        "title": "Authentication, Permissions and Global Settings",
+        "permalink": "/pages-for-subheaders/authentication-permissions-and-global-configuration"
     }
 };
 const assets = {};

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[13073],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[35761],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 59865:
+/***/ 45006:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,39 +308,60 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'New User Guides'
+    title: 'Cluster Access'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "pages-for-subheaders/new-user-guides",
-    "id": "pages-for-subheaders/new-user-guides",
-    "title": "New User Guides",
-    "description": "New user guides, also known as tutorials, describe practical steps for users to follow in order to complete some concrete action. These docs are known as \"learning-oriented\" docs in which users learn by \"doing\".",
-    "source": "@site/docs/pages-for-subheaders/new-user-guides.md",
+    "unversionedId": "pages-for-subheaders/access-clusters",
+    "id": "version-2.5/pages-for-subheaders/access-clusters",
+    "title": "Cluster Access",
+    "description": "This section is about what tools can be used to access clusters managed by Rancher.",
+    "source": "@site/versioned_docs/version-2.5/pages-for-subheaders/access-clusters.md",
     "sourceDirName": "pages-for-subheaders",
-    "slug": "/pages-for-subheaders/new-user-guides",
-    "permalink": "/pages-for-subheaders/new-user-guides",
+    "slug": "/pages-for-subheaders/access-clusters",
+    "permalink": "/zh/v2.5/pages-for-subheaders/access-clusters",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/pages-for-subheaders/new-user-guides.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/pages-for-subheaders/access-clusters.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1692127491,
-    "formattedLastUpdatedAt": "Aug 15, 2023",
+    "version": "2.5",
+    "lastUpdatedAt": 1694021616,
+    "formattedLastUpdatedAt": "2023年9月6日",
     "frontMatter": {
-        "title": "New User Guides"
+        "title": "Cluster Access"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Upgrading Kubernetes without Upgrading Rancher",
-        "permalink": "/getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher"
+        "title": "Cluster Administration",
+        "permalink": "/zh/v2.5/pages-for-subheaders/manage-clusters"
     },
     "next": {
-        "title": "Authentication, Permissions and Global Configuration",
-        "permalink": "/pages-for-subheaders/authentication-permissions-and-global-configuration"
+        "title": "Access a Cluster with Kubectl and kubeconfig",
+        "permalink": "/zh/v2.5/how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig"
     }
 };
 const assets = {};
-const toc = [];
+const toc = [
+    {
+        value: 'Rancher UI',
+        id: 'rancher-ui',
+        level: 3
+    },
+    {
+        value: 'kubectl',
+        id: 'kubectl',
+        level: 3
+    },
+    {
+        value: 'Rancher CLI',
+        id: 'rancher-cli',
+        level: 3
+    },
+    {
+        value: 'Rancher API',
+        id: 'rancher-api',
+        level: 3
+    }
+];
 const layoutProps = {
     toc
 };
@@ -354,10 +375,57 @@ function MDXContent(_param) {
         mdxType: "MDXLayout"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/pages-for-subheaders/new-user-guides"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `New user guides, also known as `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        href: "https://ranchermanager.docs.rancher.com/pages-for-subheaders/access-clusters"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section is about what tools can be used to access clusters managed by Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For information on how to give users permission to access a cluster, see the section on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/zh/v2.5/how-to-guides/advanced-user-guides/manage-clusters/access-clusters/add-users-to-clusters"
+    }, `adding users to clusters.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information on roles-based access control, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/zh/v2.5/pages-for-subheaders/manage-role-based-access-control-rbac"
+    }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For information on how to set up an authentication system, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/zh/v2.5/pages-for-subheaders/about-authentication"
+    }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "rancher-ui"
+    }, `Rancher UI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher provides an intuitive user interface for interacting with your clusters. All options available in the UI use the Rancher API. Therefore any action possible in the UI is also possible in the Rancher CLI or Rancher API.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "kubectl"
+    }, `kubectl`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can use the Kubernetes command-line tool, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://kubernetes.io/docs/reference/kubectl/overview/"
+    }, `kubectl`), `, to manage   your clusters. You have two options for using kubectl:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Rancher kubectl shell:`), ` Interact with your clusters by launching a kubectl shell available in the Rancher UI. This option requires no configuration actions on your part. For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/zh/v2.5/how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig"
+    }, `Accessing Clusters with kubectl Shell`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Terminal remote connection:`), ` You can also interact with your clusters by installing `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://kubernetes.io/docs/tasks/tools/install-kubectl/"
+    }, `kubectl`), ` on your local desktop and then copying the cluster's kubeconfig file to your local `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "li"
+    }, `~/.kube/config`), ` directory. For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/zh/v2.5/how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig"
+    }, `Accessing Clusters with kubectl and a kubeconfig File`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "rancher-cli"
+    }, `Rancher CLI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can control your clusters by downloading Rancher's own command-line interface, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/zh/v2.5/pages-for-subheaders/cli-with-rancher"
+    }, `Rancher CLI`), `. This CLI tool can interact directly with different clusters and projects or pass them `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `tutorials`), `, describe practical steps for users to follow in order to complete some concrete action. These docs are known as "learning-oriented" docs in which users learn by "doing".`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The new user guides are designed to guide beginners, or the everyday users of Rancher, through a series of steps to learn how to do something. The goal is that the user will be able to learn how to complete tasks by using easy-to-follow, meaningful, and repeatable directions. These guides will assist users to do work to then get the promised results immediately.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The average Rancher user has a level of technical skill that is above the level of "beginner"; however, the new user guides are designed to help new, or beginner, users as well as the seasoned Rancher customer equally. This is accomplished by using a combination of high-level and technical language to introduce topics and guide the user through general tasks that are essential for every Rancher user to know.`));
+    }, `kubectl`), ` commands.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "rancher-api"
+    }, `Rancher API`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Finally, you can interact with your clusters over the Rancher API. Before you use the API, you must obtain an `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/zh/v2.5/reference-guides/user-settings/api-keys"
+    }, `API key`), `. To view the different resource fields and actions for an API object, open the API UI, which can be accessed by clicking on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `View in API`), ` for any Rancher UI object.`));
 }
 MDXContent.isMDXComponent = true;
 
