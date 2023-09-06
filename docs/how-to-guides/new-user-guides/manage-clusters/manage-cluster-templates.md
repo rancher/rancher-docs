@@ -32,8 +32,8 @@ In this section, you'll learn how to add the cluster template to the `local` clu
 
 :::note Prerequisites:
 
-- You will need permission to install Helm charts on the `local` Kubernetes cluster that Rancher is installed on.
-- In order for the chart to appear in the form for creating new clusters, the chart must have the annotation `catalog.cattle.io/type: cluster-template`.
+- You will need permission to install Helm charts on the `local` Rancher cluster.
+- To make the chart viewable in the cluster creation form, both the chart and the index.yaml file must have the annotation, `catalog.cattle.io/type: cluster-template`.
 
 :::
 
