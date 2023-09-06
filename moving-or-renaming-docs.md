@@ -1,14 +1,14 @@
 # Adding, Moving, or Renaming Docs
 
-Docusaurus generates sidebars based on a JSON file named sidebars.js. When you add a new page, you need to add an entry to the sidebars.json file. When you move or rename a page, you need to update sidebars.js. If you a file or edit the file's name, you'll also need to add a redirect in docusaurus.config.json.
+Docusaurus generates sidebars based on a JSON file named `sidebars.js`. When you add a new page, you need to add an entry to the `sidebars.json` file. When you move or rename a page, you need to update `sidebars.js`. If you a file or edit the file's name, you'll also need to add a redirect in `docusaurus.config.json`.
 
 > **Note:** Avoid adding filenames that contain periods before the file extension (example: `rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25.md`). If necessary, use dashes instead of periods (`rke2-self-assessment-guide-with-cis-v1-23-k8s-v1-25.md`).
 
 ## Sidebars
 
-The sidebars.js file for the latest version of Rancher is located in the top level of the repo. Versioned docs each have their own versioned sidebar, found within `/versioned_sidebars` in the top level of the repo.
+The `sidebars.js` file for the latest version of Rancher is located in the top level of the repo. Versioned docs each have their own versioned sidebar, found within `/versioned_sidebars` in the top level of the repo.
 
-The schema for sidebars.js looks like this: 
+The schema for `sidebars.js` looks like this: 
 
 ```JS
 sidebar: [
@@ -35,7 +35,7 @@ sidebar: [
 ]
 ```
 
-Paths for docs files are listed within an `items` array. If the doc is as an index page, its entry in sidebars.json should have extra metadata, such as `category`, `link`, and `label`.
+Paths for docs files are listed within an `items` array. If the doc is as an index page, its entry in `sidebars.json` should have extra metadata, such as `category`, `link`, and `label`.
 
 ### Moving Index Pages
 
@@ -45,7 +45,7 @@ Docusaurus uses the `label` field to generate the text that appears on the dropd
 
 ### Redirecting Pages
 
-When you move a page, update redirects in the `@docusaurus/plugin-client-redirects` field within the docusaurus.config.js file. This file is located in the top level of the repo.
+When you move a page, update redirects in the `@docusaurus/plugin-client-redirects` field within the `docusaurus.config.js` file. This file is located in the top level of the repo.
 
 The schema for docs redirects looks like this:
 
