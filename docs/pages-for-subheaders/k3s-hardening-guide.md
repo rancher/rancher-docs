@@ -21,8 +21,7 @@ This hardening guide is intended to be used for K3s clusters and is associated w
 | Rancher v2.7    | Benchmark v1.7        | Kubernetes v1.25 up to v1.26 |
 
 :::note
-- In Benchmark v1.24 and later, some check ids might fail due to new file permission requirements (600 instead of 644). Impacted check ids: `1.1.15`, `1.1.17` and `4.1.15`. 
-  - In Benchmark v1.7, the `--protect-kernel-defaults` (`4.2.6`) parameter isn't required anymore, and was removed by CIS.
+- In Benchmark v1.7, the `--protect-kernel-defaults` (`4.2.6`) parameter isn't required anymore, and was removed by CIS.
 :::
 
 For more details on how to evaluate a hardened K3s cluster against the official CIS benchmark, refer to the K3s self-assessment guides for specific Kubernetes and CIS benchmark versions.
@@ -37,6 +36,28 @@ K3s passes a number of the Kubernetes CIS controls without modification, as it a
 The first section (1.1) of the CIS Benchmark primarily focuses on  pod manifest permissions and ownership. Since everything in the distribution is packaged in a single binary, this section does not apply to the core components of K3s.
 
 ## Host-level Requirements
+
+### Ensure `protect-kernel-defaults` is set
+
+<Tabs groupId="k3s-version">
+<TabItem value="v1.25 and Newer" default>
+
+`protect-kernel-defaults` is no longer required since CIS benchmark 1.7.
+
+</TabItem>
+<TabItem value="v1.24 and Older">
+
+This is a kubelet flag that will cause the kubelet to exit if the required kernel parameters are unset or are set to values that are different from the kubelet's defaults.
+
+The `protect-kernel-defaults` flag can be set in the cluster configuration in Rancher.
+
+```yaml
+spec:
+  rkeConfig:
+    machineSelectorConfig:
+      - config:
+          protect-kernel-defaults: true
+```
 
 ### Set kernel parameters
 
@@ -709,6 +730,7 @@ spec:
       - config:
           kubelet-arg:
             - make-iptables-util-chains=true                          # CIS 4.2.7
+          protect-kernel-defaults: true                               # CIS 4.2.6
 ```
 
 </TabItem>
