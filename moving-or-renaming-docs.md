@@ -37,7 +37,7 @@ sidebar: [
 
 Paths for docs files are listed within an `items` array. Their position within the file is similar to how they'll be organized within the published sidebar. 
 
-If the doc is as an index page for a topic with numerous subtopic pages, its entry in `sidebars.json` should have extra metadata, such as `category`, `link`, and `label`.
+If the doc is as an index page for a topic with numerous subtopic pages, its entry in `sidebars.js` should have extra metadata, such as `category`, `link`, and `label`.
 
 ### Moving Index Pages
 
