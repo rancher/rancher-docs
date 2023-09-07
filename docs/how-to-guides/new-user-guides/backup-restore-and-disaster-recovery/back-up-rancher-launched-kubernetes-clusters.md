@@ -264,7 +264,7 @@ We recommend that you use the `S3` backup target. It lets you store snapshots ex
 
 Although the `S3` target offers advantages over local backup, it does require extra configuration. 
 
-:::Caution
+:::caution
 
 If you use an S3 backup target, make sure that every cluster has its own bucket or folder. Rancher populates snapshot information from any available snapshot listed in the S3 bucket or folder configured for that cluster.
 

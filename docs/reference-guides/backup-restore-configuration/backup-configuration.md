@@ -68,7 +68,7 @@ Selecting the first option stores this backup in the storage location configured
 
 ### S3
 
-:::Caution
+:::caution
 
 If you use an S3 backup target, make sure that every cluster has its own bucket or folder. Rancher populates snapshot information from any available snapshot listed in the S3 bucket or folder configured for that cluster.
 
