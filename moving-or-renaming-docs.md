@@ -1,6 +1,6 @@
 # Adding, Moving, or Renaming Docs
 
-Docusaurus generates sidebars based on a JSON file named `sidebars.js`. When you add a new page, you need to add an entry to the `sidebars.js` file. When you move or rename a page, you need to update `sidebars.js`. If you a file or edit the file's name, you'll also need to add a redirect in `docusaurus.config.js`.
+Docusaurus generates sidebars based on a JSON file named `sidebars.js`. When you add a new page, you need to add an entry to the `sidebars.js` file. When you move or rename a page, you need to update `sidebars.js`. If you move a file or edit the file's name, you'll also need to add a redirect in `docusaurus.config.js`.
 
 > **Note:** Avoid adding filenames that contain periods before the file extension (example: `rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25.md`). If necessary, use dashes instead of periods (`rke2-self-assessment-guide-with-cis-v1-23-k8s-v1-25.md`).
 
@@ -35,7 +35,9 @@ sidebar: [
 ]
 ```
 
-Paths for docs files are listed within an `items` array. If the doc is as an index page, its entry in `sidebars.json` should have extra metadata, such as `category`, `link`, and `label`.
+Paths for docs files are listed within an `items` array. Their position within the file is similar to how they'll be organized within the published sidebar. 
+
+If the doc is as an index page for a topic with numerous subtopic pages, its entry in `sidebars.json` should have extra metadata, such as `category`, `link`, and `label`.
 
 ### Moving Index Pages
 
