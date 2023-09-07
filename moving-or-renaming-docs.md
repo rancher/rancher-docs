@@ -1,6 +1,6 @@
 # Adding, Moving, or Renaming Docs
 
-Docusaurus generates sidebars based on a JSON file named `sidebars.js`. When you add a new page, you need to add an entry to the `sidebars.json` file. When you move or rename a page, you need to update `sidebars.js`. If you a file or edit the file's name, you'll also need to add a redirect in `docusaurus.config.json`.
+Docusaurus generates sidebars based on a JSON file named `sidebars.js`. When you add a new page, you need to add an entry to the `sidebars.js` file. When you move or rename a page, you need to update `sidebars.js`. If you a file or edit the file's name, you'll also need to add a redirect in `docusaurus.config.js`.
 
 > **Note:** Avoid adding filenames that contain periods before the file extension (example: `rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25.md`). If necessary, use dashes instead of periods (`rke2-self-assessment-guide-with-cis-v1-23-k8s-v1-25.md`).
 
