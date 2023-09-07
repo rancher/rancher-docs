@@ -21,7 +21,7 @@ This hardening guide is intended to be used for K3s clusters and is associated w
 | Rancher v2.7    | Benchmark v1.7        | Kubernetes v1.25 up to v1.26 |
 
 :::note
-- In Benchmark v1.7, the `--protect-kernel-defaults` (`4.2.6`) parameter isn't required anymore, and was removed by CIS.
+- In Benchmark v1.7, the `--protect-kernel-defaults` (4.2.6) parameter isn't required anymore, and was removed by CIS.
 :::
 
 For more details on how to evaluate a hardened K3s cluster against the official CIS benchmark, refer to the K3s self-assessment guides for specific Kubernetes and CIS benchmark versions.
@@ -42,7 +42,7 @@ The first section (1.1) of the CIS Benchmark primarily focuses on  pod manifest 
 <Tabs groupId="k3s-version">
 <TabItem value="v1.25 and Newer" default>
 
-`protect-kernel-defaults` is no longer required since CIS benchmark 1.7.
+The `protect-kernel-defaults` is no longer required since CIS benchmark 1.7.
 
 </TabItem>
 <TabItem value="v1.24 and Older">
@@ -58,6 +58,9 @@ spec:
       - config:
           protect-kernel-defaults: true
 ```
+
+</TabItem>
+</Tabs>
 
 ### Set kernel parameters
 
