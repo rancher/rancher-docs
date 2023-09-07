@@ -1,6 +1,6 @@
 # Adding, Moving, or Renaming Docs
 
-Docusaurus generates sidebars based on a JSON file named `sidebars.js`. When you add a new page, you need to add an entry to the `sidebars.js` file. When you move or rename a page, you need to update `sidebars.js`. If you move a file or edit the file's name, you'll also need to add a redirect in `docusaurus.config.js`.
+Docusaurus generates sidebars based on a JSON file named `sidebars.js`. When you add a new doc, you need to add an entry to `sidebars.js`. Otherwise, the page won't appear in the list of sidebar topics. When you move or re-title a doc, you need to update `sidebars.js` to reflect the change to the doc's location or title. If you alter a docs file's path, by moving the file or editing the file's name, you'll also need to add a redirect to the new path in `docusaurus.config.js`.
 
 > **Note:** Avoid adding filenames that contain periods before the file extension (example: `rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25.md`). If necessary, use dashes instead of periods (`rke2-self-assessment-guide-with-cis-v1-23-k8s-v1-25.md`).
 
@@ -26,8 +26,8 @@ sidebar: [
                     id: "pages-for-subheaders/index-page-for-topic-one"
                 }
                 items: [
-                    "second-level/path/more-path/topic-one/page-a",
-                    "second-level/path/more-path/topic-one/page-b",
+                    "second-level/topic-one/page-a",
+                    "second-level/topic-one/page-b",
                 ]
             }
         ]
@@ -41,7 +41,7 @@ If the doc is as an index page for a topic with numerous subtopic pages, its ent
 
 ### Moving Index Pages
 
-Some entries in the published sidebar are clickable dropdown menus. These menu entries are indicated by `type: category` in the sidebar file. When you select the entry on the published docs site, the menu opens and you will navigate to the page indicated in `link.id`. 
+Some entries in the published sidebar are clickable dropdown menus. When a reader clicks them, they reveal a list of subtopics. These dropdown menu entries are indicated by `type: category` in the sidebar file. When you select the entry on the published docs site, the menu opens and you will navigate to the page indicated in `link.id`. 
 
 Docusaurus uses the `label` field to generate the text that appears on the dropdown menu in the sidebar. When you rename these index pages, you also need to update their `label` in the sidebar file.
 
