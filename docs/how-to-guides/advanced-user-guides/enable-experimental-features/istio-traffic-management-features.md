@@ -2,6 +2,10 @@
 title: UI for Istio Virtual Services and Destination Rules
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features"/>
+</head>
+
 This feature enables a UI that lets you create, read, update and delete virtual services and destination rules, which are traffic management features of Istio.
 
 > **Prerequisite:** Turning on this feature does not enable Istio. A cluster administrator needs to [enable Istio for the cluster](../../../pages-for-subheaders/istio-setup-guide.md) in order to use the feature.

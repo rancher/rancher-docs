@@ -2,6 +2,10 @@
 title: Best Practices for the Rancher Server
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/rancher-server"/>
+</head>
+
 This guide contains our recommendations for running the Rancher server, and is intended to be used in situations in which Rancher manages downstream Kubernetes clusters.
 
 ### Recommended Architecture and Infrastructure

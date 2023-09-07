@@ -2,6 +2,10 @@
 title: Setup Guide
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/istio-setup-guide"/>
+</head>
+
 This section describes how to enable Istio and start using it in your projects.
 
 If you use Istio for traffic management, you will need to allow external traffic to the cluster. In that case, you will need to follow all of the steps below.

@@ -3,6 +3,10 @@ title: The Horizontal Pod Autoscaler
 description: Learn about the horizontal pod autoscaler (HPA). How to manage HPAs and how to test them with a service deployment
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/horizontal-pod-autoscaler"/>
+</head>
+
 The [Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) (HPA) is a Kubernetes feature that allows you to configure your cluster to automatically scale the services it's running up or down.
 
 Rancher provides some additional features to help manage HPAs, depending on the version of Rancher.

@@ -2,6 +2,10 @@
 title: Monitoring V2 Configuration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/monitoring-v2-configuration"/>
+</head>
+
 The following sections will explain important options essential to configuring Monitoring V2 in Rancher:
 
 - [Receiver Configuration](../reference-guides/monitoring-v2-configuration/receivers.md)

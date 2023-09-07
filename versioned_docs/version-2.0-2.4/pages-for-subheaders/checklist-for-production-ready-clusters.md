@@ -2,6 +2,10 @@
 title: Checklist for Production-Ready Clusters
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/checklist-for-production-ready-clusters"/>
+</head>
+
 In this section, we recommend best practices for creating the production-ready Kubernetes clusters that will run your apps and services.
 
 For a list of requirements for your cluster, including the requirements for OS/Docker, hardware, and networking, refer to the section on [node requirements.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md)

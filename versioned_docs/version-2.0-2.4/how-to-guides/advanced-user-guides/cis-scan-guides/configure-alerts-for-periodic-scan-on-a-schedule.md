@@ -2,6 +2,10 @@
 title: Configure Alerts for Periodic Scan on a Schedule
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/cis-scan-guides/configure-alerts-for-periodic-scan-on-a-schedule"/>
+</head>
+
 Rancher provides a set of alerts for cluster scans. which are not configured to have notifiers by default:
 
 - A manual cluster scan was completed

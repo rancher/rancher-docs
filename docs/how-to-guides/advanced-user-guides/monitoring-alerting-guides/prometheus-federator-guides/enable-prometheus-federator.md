@@ -2,6 +2,10 @@
 title: Enable Prometheus Federator
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/enable-prometheus-federator"/>
+</head>
+
 ## Requirements
 
 By default, Prometheus Federator is configured and intended to be deployed alongside [rancher-monitoring](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/), which deploys Prometheus Operator alongside a Cluster Prometheus that each Project Monitoring Stack is configured to federate namespace-scoped metrics from by default.
@@ -75,7 +79,7 @@ There are no specific recommendations on how much memory the Cluster Prometheus 
 1. Click the **Prometheus Federator** chart.
 1. Click **Install**.
 1. On the **Metadata** page, click **Next**.
-1. In the **Project Release Namespace Project ID** field, the `System Project` is used as the default but can be overridden with another project with similarly [limited access](#ensure-the-cattle-monitoring-system-namespace-is-placed-into-the-system-project-or-a-similarly-locked-down-project-that-has-access-to-other-projects-in-the-cluster). Project IDs can be found with the following command run in the local upstream cluster:
+1. In the **Namespaces** > **Project Release Namespace Project ID** field, the `System Project` is used as the default but can be overridden with another project with similarly [limited access](#ensure-the-cattle-monitoring-system-namespace-is-placed-into-the-system-project-or-a-similarly-locked-down-project-that-has-access-to-other-projects-in-the-cluster). Project IDs can be found with the following command run in the local upstream cluster:
 
   ```plain
   kubectl get projects -A -o custom-columns="NAMESPACE":.metadata.namespace,"ID":.metadata.name,"NAME":.spec.displayName

@@ -2,6 +2,10 @@
 title: Debugging High Memory Usage
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-alerting-guides/debug-high-memory-usage"/>
+</head>
+
 Every time series in Prometheus is uniquely identified by its [metric name](https://prometheus.io/docs/practices/naming/#metric-names) and optional key-value pairs called [labels.](https://prometheus.io/docs/practices/naming/#labels)
 
 The labels allow the ability to filter and aggregate the time series data, but they also multiply the amount of data that Prometheus collects.

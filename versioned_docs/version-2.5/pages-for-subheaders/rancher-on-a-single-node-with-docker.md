@@ -3,6 +3,10 @@ title: Installing Rancher on a Single Node Using Docker
 description: For development and testing environments only, use a Docker install. Install Docker on a single Linux host, and deploy Rancher with a single Docker container.
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/rancher-on-a-single-node-with-docker"/>
+</head>
+
 Rancher can be installed by running a single Docker container.
 
 In this installation scenario, you'll install Docker on a single Linux host, and then deploy Rancher on your host using a single Docker container.

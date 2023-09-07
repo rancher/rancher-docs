@@ -84,7 +84,10 @@ To sync Rancher with a local mirror of the RKE metadata, an administrator would 
 
 After new Kubernetes versions are loaded into the Rancher setup, additional steps would be required in order to use them for launching clusters. Rancher needs access to updated system images. While the metadata settings can only be changed by administrators, any user can download the Rancher system images and prepare a private container image registry for them.
 
-1. To download the system images for the private registry, click the Rancher server version at the bottom left corner of the Rancher UI.
+To download the system images for the private registry: 
+
+1. Click **☰** in the top left corner.
+1. Click **About** at the bottom of the left navigation.
 1. Download the OS specific image lists for Linux or Windows.
 1. Download `rancher-images.txt`.
 1. Prepare the private registry using the same steps during the [air gap install](other-installation-methods/air-gapped-helm-cli-install/publish-images.md), but instead of using the `rancher-images.txt` from the releases page, use the one obtained from the previous steps.

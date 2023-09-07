@@ -2,6 +2,10 @@
 title: Enabling Experimental Features
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/enable-experimental-features"/>
+</head>
+
 Rancher includes some features that are experimental and disabled by default. You might want to enable these features, for example, if you decide that the benefits of using an [unsupported storage type](../getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/unsupported-storage-drivers.md) outweighs the risk of using an untested feature. Feature flags were introduced to allow you to try these features that are not enabled by default.
 
 The features can be enabled in three ways:

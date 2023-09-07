@@ -2,6 +2,10 @@
 title: Resources
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/resources"/>
+</head>
+
 ### Docker Installations
 
 The [single-node Docker installation](rancher-on-a-single-node-with-docker.md) is for Rancher users that are wanting to test out Rancher. Instead of running on a Kubernetes cluster using Helm, you install the Rancher server component on a single node using a `docker run` command.
