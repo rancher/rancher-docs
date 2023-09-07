@@ -15,19 +15,19 @@ sidebar: [
     "toplevel",
     {
         type: "category",
-        label: "second level",
+        label: "Second Level",
         items: [
             "second-level/overview",
             {
                 type: "category",
-                label: "section",
+                label: "Topic One",
                 link: {
                     type: "doc",
-                    id: "pages-for-subheaders/index-page-for-this-section"
+                    id: "pages-for-subheaders/index-page-for-topic-one"
                 }
                 items: [
-                    "second-level/index-page-for-this-section/page-a",
-                    "second-level/index-page-for-this-section/page-b",
+                    "second-level/path/more-path/topic-one/page-a",
+                    "second-level/path/more-path/topic-one/page-b",
                 ]
             }
         ]
