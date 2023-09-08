@@ -2,6 +2,10 @@
 title: Deprecated Features in Rancher
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/faq/deprecated-features-in-v2.5"/>
+</head>
+
 ### What is Rancher's Deprecation policy?
 
 We have published our official deprecation policy in the support [terms of service](https://rancher.com/support-maintenance-terms).

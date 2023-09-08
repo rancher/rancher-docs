@@ -2,6 +2,10 @@
 title: FAQ
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/faq/general-faq"/>
+</head>
+
 This FAQ is a work in progress designed to answer the questions our users most frequently ask about Rancher v2.x.
 
 See [Technical FAQ](faq/technical-items.md), for frequently asked technical questions.
