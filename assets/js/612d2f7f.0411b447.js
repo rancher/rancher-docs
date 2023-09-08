@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[84002],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[23184],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 66657:
+/***/ 53844:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters",
-    "id": "reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters",
+    "id": "version-2.7/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters",
     "title": "Private Clusters",
     "description": "In GKE, private clusters are clusters whose nodes are isolated from inbound and outbound traffic by assigning them internal IP addresses only. Private clusters in GKE have the option of exposing the control plane endpoint as a publicly accessible address or as a private address. This is different from other Kubernetes providers, which may refer to clusters with private control plane endpoints as \"private clusters\" but still allow traffic to and from nodes. You may want to create a cluster with private nodes, with or without a public control plane endpoint, depending on your organization's networking and security requirements. A GKE cluster provisioned from Rancher can use isolated nodes by selecting \"Private Cluster\" in the Cluster Options (under \"Show advanced options\"). The control plane endpoint can optionally be made private by selecting \"Enable Private Endpoint\".",
-    "source": "@site/docs/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters.md",
+    "source": "@site/versioned_docs/version-2.7/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters.md",
     "sourceDirName": "reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration",
     "slug": "/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters",
-    "permalink": "/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters",
+    "permalink": "/v2.7/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1663953084,
-    "formattedLastUpdatedAt": "Sep 23, 2022",
+    "version": "2.7",
+    "lastUpdatedAt": 1694134992,
+    "formattedLastUpdatedAt": "Sep 8, 2023",
     "frontMatter": {
         "title": "Private Clusters"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "GKE Cluster Configuration Reference",
-        "permalink": "/pages-for-subheaders/gke-cluster-configuration"
+        "permalink": "/v2.7/pages-for-subheaders/gke-cluster-configuration"
     },
     "next": {
         "title": "Launching Kubernetes on Existing Custom Nodes",
-        "permalink": "/pages-for-subheaders/use-existing-nodes"
+        "permalink": "/v2.7/pages-for-subheaders/use-existing-nodes"
     }
 };
 const assets = {};
@@ -408,7 +408,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `This scenario is not officially supported, but is described for cases in which using the Cloud NAT service is not sufficient.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If restricting both incoming and outgoing traffic to nodes is a requirement, follow the air-gapped installation instructions to set up a private container image `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://rancher.com/docs/rancher/v2.6/en/installation/other-installation-methods/air-gap/"
+        "href": "/v2.7/pages-for-subheaders/air-gapped-helm-cli-install"
     }, `registry`), ` on the VPC where the cluster is going to be, allowing the cluster nodes to access and download the images they need to run the cluster agent. If the control plane endpoint is also private, Rancher will need `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#direct-access"

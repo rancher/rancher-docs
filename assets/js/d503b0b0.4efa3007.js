@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[77592],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[79458],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 48029:
+/***/ 76164:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher",
-    "id": "version-2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher",
+    "id": "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher",
     "title": "Restoring Rancher",
     "description": "This page outlines how to perform a restore with Rancher.",
-    "source": "@site/versioned_docs/version-2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher.md",
+    "source": "@site/docs/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher.md",
     "sourceDirName": "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery",
     "slug": "/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher",
-    "permalink": "/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher",
+    "permalink": "/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1688152699,
-    "formattedLastUpdatedAt": "Jun 30, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1694134992,
+    "formattedLastUpdatedAt": "Sep 8, 2023",
     "frontMatter": {
         "title": "Restoring Rancher"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Backing up Rancher",
-        "permalink": "/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher"
+        "permalink": "/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher"
     },
     "next": {
         "title": "Migrating Rancher to a New Cluster",
-        "permalink": "/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster"
+        "permalink": "/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster"
     }
 };
 const assets = {};
@@ -395,14 +395,14 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `Follow the instructions from this page for restoring rancher on the same cluster where it was backed up from. In order to migrate rancher to a new cluster, follow the steps to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster"
+        "href": "/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster"
     }, `migrate rancher.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `While restoring rancher on the same setup, the operator will scale down the rancher deployment when restore starts, and it will scale back up the deployment once restore completes. So Rancher will be unavailable during the restore.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `If you need to restore Rancher to a previous version after an upgrade, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks"
+        "href": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks"
     }, `rollback documentation.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "additional-steps-for-rollbacks-with-rancher-v264"
     }, `Additional Steps for Rollbacks with Rancher v2.6.4+`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher v2.6.4 upgrades the cluster-api module from v0.4.4 to v1.0.2. Version v1.0.2 of the cluster-api, in turn, upgrades the Cluster API's  Custom Resource Definitions (CRDs) from `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -439,7 +439,7 @@ function MDXContent(_param) {
         parentName: "ol"
     }, `Follow these `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "https://rancher.com/docs/rancher/v2.6/en/backups/migrating-rancher/"
+        "href": "/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster"
     }, `instructions`), ` to install the rancher-backup Helm chart on the existing cluster and restore the previous state.`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -484,10 +484,10 @@ function MDXContent(_param) {
         parentName: "li"
     }, `Create the Restore with the form, or with YAML.  For creating the Restore resource using form, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/backup-restore-configuration/restore-configuration"
+        "href": "/reference-guides/backup-restore-configuration/restore-configuration"
     }, `configuration reference`), ` and to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/backup-restore-configuration/examples"
+        "href": "/reference-guides/backup-restore-configuration/examples"
     }, `examples.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -518,10 +518,10 @@ spec:
         parentName: "li"
     }, `  For help configuring the Restore, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/backup-restore-configuration/restore-configuration"
+        "href": "/reference-guides/backup-restore-configuration/restore-configuration"
     }, `configuration reference`), ` and to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/backup-restore-configuration/examples"
+        "href": "/reference-guides/backup-restore-configuration/examples"
     }, `examples.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {

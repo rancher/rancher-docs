@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[66992],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[81113],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 64248:
+/***/ 35453:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/rancher-security/security-advisories-and-cves",
-    "id": "version-2.7/reference-guides/rancher-security/security-advisories-and-cves",
+    "id": "reference-guides/rancher-security/security-advisories-and-cves",
     "title": "Security Advisories and CVEs",
     "description": "Rancher is committed to informing the community of security issues in our products. Rancher will publish security advisories and CVEs (Common Vulnerabilities and Exposures) for issues we have resolved. New security advisories are also published in Rancher's GitHub security page.",
-    "source": "@site/versioned_docs/version-2.7/reference-guides/rancher-security/security-advisories-and-cves.md",
+    "source": "@site/docs/reference-guides/rancher-security/security-advisories-and-cves.md",
     "sourceDirName": "reference-guides/rancher-security",
     "slug": "/reference-guides/rancher-security/security-advisories-and-cves",
-    "permalink": "/v2.7/reference-guides/rancher-security/security-advisories-and-cves",
+    "permalink": "/reference-guides/rancher-security/security-advisories-and-cves",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/rancher-security/security-advisories-and-cves.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/rancher-security/security-advisories-and-cves.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1694134992,
+    "formattedLastUpdatedAt": "Sep 8, 2023",
     "frontMatter": {
         "title": "Security Advisories and CVEs"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Kubernetes Security Best Practices",
-        "permalink": "/v2.7/reference-guides/rancher-security/kubernetes-security-best-practices"
+        "permalink": "/reference-guides/rancher-security/kubernetes-security-best-practices"
     },
     "next": {
         "title": "Sample PodSecurityConfiguration",
-        "permalink": "/v2.7/reference-guides/rancher-security/psa-restricted-exemptions"
+        "permalink": "/reference-guides/rancher-security/psa-restricted-exemptions"
     }
 };
 const assets = {};
@@ -742,10 +742,10 @@ function MDXContent(_param) {
         "align": null
     }, `This vulnerability only affects customers using `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "https://rancher.com/docs/rancher/v2.6/en/faq/networking/cni-providers/#weave"
+        "href": "/faq/container-network-interface-providers#weave"
     }, `Weave`), ` Container Network Interface (CNI) when configured through `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "https://rancher.com/docs/rancher/v2.6/en/admin-settings/rke-templates/"
+        "href": "/pages-for-subheaders/about-rke1-templates"
     }, `RKE templates`), `. A vulnerability was discovered in Rancher versions 2.5.0 up to and including 2.5.13, and 2.6.0 up to and including 2.6.4, where a user interface (UI) issue with RKE templates does not include a value for the Weave password when Weave is chosen as the CNI. If a cluster is created based on the mentioned template, and Weave is configured as the CNI, no password will be created for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
         "href": "https://www.weave.works/docs/net/latest/tasks/manage/security-untrusted-networks/"
@@ -774,7 +774,7 @@ function MDXContent(_param) {
         "align": null
     }, `A vulnerability was discovered in Rancher versions from 2.5.0 up to and including 2.5.12 and from 2.6.0 up to and including 2.6.3 which allows users who have create or update permissions on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/"
+        "href": "/pages-for-subheaders/manage-role-based-access-control-rbac"
     }, `Global Roles`), ` to escalate their permissions, or those of another user, to admin-level permissions. Global Roles grant users Rancher-wide permissions, such as the ability to create clusters. In the identified versions of Rancher, when users are given permission to edit or create Global Roles, they are not restricted to only granting permissions which they already posses. This vulnerability affects customers who utilize non-admin users that are able to create or edit Global Roles. The most common use case for this scenario is the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "td"
     }, `restricted-admin`), ` role.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -839,7 +839,7 @@ function MDXContent(_param) {
         "align": null
     }, `This vulnerability only affects customers using `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "https://rancher.com/docs/rancher/v2.6/en/deploy-across-clusters/fleet/"
+        "href": "/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
     }, `Fleet`), ` for continuous delivery with authenticated Git and/or Helm repositories. An issue was discovered in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "td"
     }, `go-getter`), ` library in versions prior to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -1287,7 +1287,7 @@ function MDXContent(_param) {
         "href": "https://github.com/rancher/rancher/releases/tag/v2.0.11"
     }, `Rancher v2.0.11`), ` - Rolling back from these versions or greater have specific `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/v2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks"
+        "href": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks"
     }, `instructions`), `.`)))));
 }
 MDXContent.isMDXComponent = true;
