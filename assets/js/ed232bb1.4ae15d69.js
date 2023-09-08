@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[10910],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[93857],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 82918:
+/***/ 67470:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,26 +313,26 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "contribute-to-rancher",
-    "id": "version-2.7/contribute-to-rancher",
+    "id": "version-2.5/contribute-to-rancher",
     "title": "Contributing to Rancher",
     "description": "Learn about the repositories used for Rancher and Rancher docs, how to build Rancher repositories, and what information to include when you file an issue.",
-    "source": "@site/versioned_docs/version-2.7/contribute-to-rancher.md",
+    "source": "@site/versioned_docs/version-2.5/contribute-to-rancher.md",
     "sourceDirName": ".",
     "slug": "/contribute-to-rancher",
-    "permalink": "/v2.7/contribute-to-rancher",
+    "permalink": "/v2.5/contribute-to-rancher",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/contribute-to-rancher.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/contribute-to-rancher.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1692830539,
-    "formattedLastUpdatedAt": "Aug 23, 2023",
+    "version": "2.5",
+    "lastUpdatedAt": 1694208217,
+    "formattedLastUpdatedAt": "Sep 8, 2023",
     "frontMatter": {
         "title": "Contributing to Rancher"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Rotation of Expired Webhook Certificates",
-        "permalink": "/v2.7/troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation"
+        "permalink": "/v2.5/troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation"
     }
 };
 const assets = {};
@@ -374,7 +374,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Learn about the repositories used for Rancher and Rancher docs, how to build Rancher repositories, and what information to include when you file an issue.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more detailed information on how to contribute to the development of Rancher projects, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/contribute-to-rancher"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Learn about the repositories used for Rancher and Rancher docs, how to build Rancher repositories, and what information to include when you file an issue.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more detailed information on how to contribute to the development of Rancher projects, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://github.com/rancher/rancher/wiki"
     }, `Rancher Developer Wiki`), `. The wiki has resources on many topics, including the following:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[94205],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[72804],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 16879:
+/***/ 38827:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,26 +308,37 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Security Scans'
+    slug: '/',
+    title: 'What is Rancher?',
+    sidebar_label: 'What is Rancher?',
+    description: 'Rancher adds significant value on top of Kubernetes: managing hundreds of clusters from one interface, centralizing RBAC, enabling monitoring and alerting. Read more.'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "security/security-scan/security-scan",
-    "id": "version-2.5/security/security-scan/security-scan",
-    "title": "Security Scans",
-    "description": "The documentation about CIS security scans has moved here.",
-    "source": "@site/versioned_docs/version-2.5/security/security-scan/security-scan.md",
-    "sourceDirName": "security/security-scan",
-    "slug": "/security/security-scan/",
-    "permalink": "/zh/v2.5/security/security-scan/",
+    "unversionedId": "rancher-manager",
+    "id": "version-2.7/rancher-manager",
+    "title": "What is Rancher?",
+    "description": "Rancher adds significant value on top of Kubernetes: managing hundreds of clusters from one interface, centralizing RBAC, enabling monitoring and alerting. Read more.",
+    "source": "@site/versioned_docs/version-2.7/rancher-manager.md",
+    "sourceDirName": ".",
+    "slug": "/",
+    "permalink": "/v2.7/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/security/security-scan/security-scan.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/rancher-manager.md",
     "tags": [],
-    "version": "2.5",
-    "lastUpdatedAt": 1663953084,
-    "formattedLastUpdatedAt": "2022年9月23日",
+    "version": "2.7",
+    "lastUpdatedAt": 1694208217,
+    "formattedLastUpdatedAt": "Sep 8, 2023",
     "frontMatter": {
-        "title": "Security Scans"
+        "slug": "/",
+        "title": "What is Rancher?",
+        "sidebar_label": "What is Rancher?",
+        "description": "Rancher adds significant value on top of Kubernetes: managing hundreds of clusters from one interface, centralizing RBAC, enabling monitoring and alerting. Read more."
+    },
+    "sidebar": "tutorialSidebar",
+    "next": {
+        "title": "Overview",
+        "permalink": "/v2.7/getting-started/overview"
     }
 };
 const assets = {};
@@ -343,10 +354,12 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The documentation about CIS security scans has moved `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/zh/v2.5/pages-for-subheaders/cis-scan-guides"
-    }, `here.`)));
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com"
+    })), "Rancher is a Kubernetes management tool to deploy and run clusters anywhere and on any provider.", /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher can provision Kubernetes from a hosted provider, provision compute nodes and then install Kubernetes onto them, or import existing Kubernetes clusters running anywhere.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher adds significant value on top of Kubernetes, first by centralizing authentication and role-based access control (RBAC) for all of the clusters, giving global admins the ability to control cluster access from one location.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `It then enables detailed monitoring and alerting for clusters and their resources, ships logs to external providers, and integrates directly with Helm via the Application Catalog. If you have an external CI/CD system, you can plug it into Rancher, but if you don't, Rancher even includes Fleet to help you automatically deploy and upgrade workloads.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher is a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
+        parentName: "p"
+    }, `complete`), ` container management platform for Kubernetes, giving you the tools to successfully run Kubernetes anywhere.`));
 }
 MDXContent.isMDXComponent = true;
 

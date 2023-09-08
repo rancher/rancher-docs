@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[79871],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[83995],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 17844:
+/***/ 94023:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,26 +308,26 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'RKE Cluster Configuration'
+    title: 'Security Scans'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "cluster-provisioning/rke-clusters/options/options",
-    "id": "cluster-provisioning/rke-clusters/options/options",
-    "title": "RKE Cluster Configuration",
-    "description": "This page has moved here.",
-    "source": "@site/docs/cluster-provisioning/rke-clusters/options/options.md",
-    "sourceDirName": "cluster-provisioning/rke-clusters/options",
-    "slug": "/cluster-provisioning/rke-clusters/options/",
-    "permalink": "/cluster-provisioning/rke-clusters/options/",
+    "unversionedId": "security/security-scan/security-scan",
+    "id": "version-2.0-2.4/security/security-scan/security-scan",
+    "title": "Security Scans",
+    "description": "The documentation about CIS security scans has moved here.",
+    "source": "@site/versioned_docs/version-2.0-2.4/security/security-scan/security-scan.md",
+    "sourceDirName": "security/security-scan",
+    "slug": "/security/security-scan/",
+    "permalink": "/zh/v2.0-v2.4/security/security-scan/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/cluster-provisioning/rke-clusters/options/options.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.0-2.4/security/security-scan/security-scan.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1663953084,
-    "formattedLastUpdatedAt": "Sep 23, 2022",
+    "version": "2.0-2.4",
+    "lastUpdatedAt": 1694208217,
+    "formattedLastUpdatedAt": "2023年9月8日",
     "frontMatter": {
-        "title": "RKE Cluster Configuration"
+        "title": "Security Scans"
     }
 };
 const assets = {};
@@ -343,9 +343,12 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This page has moved `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/pages-for-subheaders/cis-scan-guides"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The documentation about CIS security scans has moved `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"
+        "href": "/zh/v2.0-v2.4/pages-for-subheaders/cis-scan-guides"
     }, `here.`)));
 }
 MDXContent.isMDXComponent = true;

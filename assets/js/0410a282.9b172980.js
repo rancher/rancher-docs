@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[73072],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[73791],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 28173:
+/***/ 83224:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,26 +308,37 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'RKE Cluster Configuration'
+    slug: '/',
+    title: 'What is Rancher?',
+    sidebar_label: 'What is Rancher?',
+    description: 'Rancher adds significant value on top of Kubernetes: managing hundreds of clusters from one interface, centralizing RBAC, enabling monitoring and alerting. Read more.'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "cluster-provisioning/rke-clusters/options/options",
-    "id": "version-2.6/cluster-provisioning/rke-clusters/options/options",
-    "title": "RKE Cluster Configuration",
-    "description": "This page has moved here.",
-    "source": "@site/versioned_docs/version-2.6/cluster-provisioning/rke-clusters/options/options.md",
-    "sourceDirName": "cluster-provisioning/rke-clusters/options",
-    "slug": "/cluster-provisioning/rke-clusters/options/",
-    "permalink": "/v2.6/cluster-provisioning/rke-clusters/options/",
+    "unversionedId": "rancher-manager",
+    "id": "version-2.6/rancher-manager",
+    "title": "What is Rancher?",
+    "description": "Rancher adds significant value on top of Kubernetes: managing hundreds of clusters from one interface, centralizing RBAC, enabling monitoring and alerting. Read more.",
+    "source": "@site/versioned_docs/version-2.6/rancher-manager.md",
+    "sourceDirName": ".",
+    "slug": "/",
+    "permalink": "/v2.6/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/cluster-provisioning/rke-clusters/options/options.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/rancher-manager.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1668452187,
-    "formattedLastUpdatedAt": "Nov 14, 2022",
+    "lastUpdatedAt": 1694208217,
+    "formattedLastUpdatedAt": "Sep 8, 2023",
     "frontMatter": {
-        "title": "RKE Cluster Configuration"
+        "slug": "/",
+        "title": "What is Rancher?",
+        "sidebar_label": "What is Rancher?",
+        "description": "Rancher adds significant value on top of Kubernetes: managing hundreds of clusters from one interface, centralizing RBAC, enabling monitoring and alerting. Read more."
+    },
+    "sidebar": "tutorialSidebar",
+    "next": {
+        "title": "Overview",
+        "permalink": "/v2.6/getting-started/overview"
     }
 };
 const assets = {};
@@ -343,10 +354,12 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This page has moved `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"
-    }, `here.`)));
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher is a Kubernetes management tool to deploy and run clusters anywhere and on any provider.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher can provision Kubernetes from a hosted provider, provision compute nodes and then install Kubernetes onto them, or import existing Kubernetes clusters running anywhere.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher adds significant value on top of Kubernetes, first by centralizing authentication and role-based access control (RBAC) for all of the clusters, giving global admins the ability to control cluster access from one location.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `It then enables detailed monitoring and alerting for clusters and their resources, ships logs to external providers, and integrates directly with Helm via the Application Catalog. If you have an external CI/CD system, you can plug it into Rancher, but if you don't, Rancher even includes Fleet to help you automatically deploy and upgrade workloads.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher is a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
+        parentName: "p"
+    }, `complete`), ` container management platform for Kubernetes, giving you the tools to successfully run Kubernetes anywhere.`));
 }
 MDXContent.isMDXComponent = true;
 
