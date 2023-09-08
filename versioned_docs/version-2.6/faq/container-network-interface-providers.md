@@ -3,6 +3,10 @@ title: Container Network Interface (CNI) Providers
 description: Learn about Container Network Interface (CNI), the CNI providers Rancher provides, the features they offer, and how to choose a provider for you
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/faq/container-network-interface-providers"/>
+</head>
+
 ## What is CNI?
 
 CNI (Container Network Interface), a [Cloud Native Computing Foundation project](https://cncf.io/), consists of a specification and libraries for writing plugins to configure network interfaces in Linux containers, along with a number of  plugins. CNI concerns itself only with network connectivity of containers and removing allocated resources when the container is deleted.

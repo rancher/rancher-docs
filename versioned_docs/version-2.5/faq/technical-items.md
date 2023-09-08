@@ -2,6 +2,10 @@
 title: Technical
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/faq/technical-items"/>
+</head>
+
 ### How can I reset the administrator password?
 
 Docker Install:
