@@ -2,6 +2,10 @@
 title: Troubleshooting Controlplane Nodes
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/troubleshooting/kubernetes-components/troubleshooting-controlplane-nodes"/>
+</head>
+
 This section applies to nodes with the `controlplane` role.
 
 ## Check if the Controlplane Containers are Running

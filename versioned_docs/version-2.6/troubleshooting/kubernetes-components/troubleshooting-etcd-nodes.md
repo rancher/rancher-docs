@@ -2,6 +2,10 @@
 title: Troubleshooting etcd Nodes
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/troubleshooting/kubernetes-components/troubleshooting-etcd-nodes"/>
+</head>
+
 This section contains commands and tips for troubleshooting nodes with the `etcd` role.
 
 

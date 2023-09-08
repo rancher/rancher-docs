@@ -2,6 +2,10 @@
 title: Troubleshooting Worker Nodes and Generic Components
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/troubleshooting/kubernetes-components/troubleshooting-worker-nodes-and-generic-components"/>
+</head>
+
 This section applies to every node as it includes components that run on nodes with any role.
 
 ## Check if the Containers are Running
