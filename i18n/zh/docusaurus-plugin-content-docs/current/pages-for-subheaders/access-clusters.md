@@ -25,7 +25,7 @@ title: 集群访问
 
 在**集群**页面上，选择每行末尾的 **⁝** 以查看包含以下选项的子菜单：
 
-* [Kubectl Shell](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)
+* [Kubectl Shell](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)
 * 下载 KubeConfig
 * 将 KubeConfig 复制到剪切板
 * 编辑配置
