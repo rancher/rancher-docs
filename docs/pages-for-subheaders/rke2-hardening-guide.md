@@ -12,10 +12,13 @@ This hardening guide is intended to be used for RKE2 clusters and is associated 
 
 | Rancher Version | CIS Benchmark Version | Kubernetes Version           |
 |-----------------|-----------------------|------------------------------|
-| Rancher v2.7    | Benchmark v1.23       | Kubernetes v1.23 up to v1.25 |
+| Rancher v2.7    | Benchmark v1.23       | Kubernetes v1.23             |
+| Rancher v2.7    | Benchmark v1.24       | Kubernetes v1.24             |
+| Rancher v2.7    | Benchmark v1.7        | Kubernetes v1.25 up to v1.26 |
 
 :::note
-At the time of writing, the upstream CIS Kubernetes v1.25 benchmark is not yet available in Rancher. At this time Rancher is using the CIS v1.23 benchmark when scanning Kubernetes v1.25 clusters. Due to that, the CIS checks 5.2.2, 5.2.3, 5.2.5, 5.2.6, 5.2.7 and 5.2.8 might fail.
+- In Benchmark v1.24 and later, some check ids might fail due to new file permission requirements (600 instead of 644). Impacted check ids: `1.1.1`, `1.1.3`, `1.1.5`, `1.1.7`, `1.1.13`, `1.1.15`, `1.1.17`, `4.1.3`, `4.1.5` and `4.1.9`. 
+ - In Benchmark v1.7, the `--protect-kernel-defaults` (4.2.6) parameter is not required anymore, and was removed by CIS.
 :::
 
 For more details on how to evaluate a hardened RKE2 cluster against the official CIS benchmark, refer to the RKE2 self-assessment guides for specific Kubernetes and CIS benchmark versions.
@@ -28,6 +31,31 @@ RKE2 passes a number of the Kubernetes CIS controls without modification, as it 
 ## Host-level requirements
 
 There are two areas of host-level requirements: kernel parameters and etcd process/directory configuration. These are outlined in this section.
+
+### Ensure `protect-kernel-defaults` is set
+
+<Tabs groupId="k3s-version">
+<TabItem value="v1.25 and Newer" default>
+
+The `protect-kernel-defaults` is no longer required since CIS benchmark 1.7.
+
+</TabItem>
+<TabItem value="v1.24 and Older">
+
+This is a kubelet flag that will cause the kubelet to exit if the required kernel parameters are unset or are set to values that are different from the kubelet's defaults.
+
+The `protect-kernel-defaults` flag can be set in the cluster configuration in Rancher.
+
+```yaml
+spec:
+  rkeConfig:
+    machineSelectorConfig:
+      - config:
+          protect-kernel-defaults: true
+```
+
+</TabItem>
+</Tabs>
 
 ### Set kernel parameters
 
@@ -64,22 +92,6 @@ sudo useradd -r -c "etcd user" -s /sbin/nologin -M etcd -U
 
 The runtime requirements to pass the CIS Benchmark are centered around pod security, network policies and kernel parameters. Most of this is automatically handled by RKE2 when using a valid `cis-1.xx` profile, but some additional operator intervention is required. These are outlined in this section.
 
-### Ensure `protect-kernel-defaults` is set
-
-This is a kubelet flag that will cause the kubelet to exit if the required kernel parameters are unset or are set to values that are different from the kubelet's defaults.
-
-Both `protect-kernel-defaults` and `profile` flags can be set in the RKE2 template configuration file.
-When the `profile` flag is set, RKE2 will set the flag to `true` if it is unset.
-
-```yaml
-spec:
-  rkeConfig:
-    machineSelectorConfig:
-      - config:
-          profile: # use cis-1.23 or cis-1.6
-          protect-kernel-defaults: true
-```
-
 ### PodSecurity
 
 RKE2 always runs with some amount of pod security.
@@ -89,7 +101,7 @@ RKE2 always runs with some amount of pod security.
 
 On v1.25 and newer, [Pod Security Admissions (PSAs)](https://kubernetes.io/docs/concepts/security/pod-security-admission/) are used for pod security.
 
-Below is the minimum necessary configuration needed for hardening RKE2 to pass CIS v1.23 hardened profile `rke2-cis-1.23-hardened` available in Rancher.
+Below is the minimum necessary configuration needed for hardening RKE2 to pass CIS v1.23 hardened profile `rke2-cis-1.7-hardened` available in Rancher.
 
 ```yaml
 spec:
@@ -230,7 +242,6 @@ spec:
     machineSelectorConfig:
       - config:
           profile: cis-1.23
-          protect-kernel-defaults: true
 ```
 </TabItem>
 
