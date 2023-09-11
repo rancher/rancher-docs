@@ -17,8 +17,8 @@ This hardening guide is intended to be used for RKE clusters and is associated w
 | Rancher v2.7    | Benchmark v1.7        | Kubernetes v1.25 up to v1.26 |
 
 :::note
-- Since Benchmark v1.24, check id `4.1.7 Ensure that the certificate authorities file permissions are set to 600 or more restrictive (Automated)` might fail, as /etc/kubernetes/ssl/kube-ca.pem is provisioned in 644 by default.
-- Since Benchmark v1.7 (latest), `--protect-kernel-defaults` (check id 4.2.6) parameter is not required anymore, and was replaced.
+- In Benchmark v1.24 and later, check id `4.1.7 Ensure that the certificate authorities file permissions are set to 600 or more restrictive (Automated)` might fail, as `/etc/kubernetes/ssl/kube-ca.pem` is set to 644 by default.
+- In Benchmark v1.7, the `--protect-kernel-defaults` (`4.2.6`) parameter isn't required anymore, and was removed by CIS.
 :::
 
 For more details on how to evaluate a hardened RKE cluster against the official CIS benchmark, refer to the RKE self-assessment guides for specific Kubernetes and CIS benchmark versions.
