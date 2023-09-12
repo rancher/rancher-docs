@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/manage-clusters/manage-cluster-templates.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1692127006,
-    "formattedLastUpdatedAt": "Aug 15, 2023",
+    "lastUpdatedAt": 1694526971,
+    "formattedLastUpdatedAt": "Sep 12, 2023",
     "frontMatter": {
         "title": "Cluster Templates"
     },
@@ -430,9 +430,9 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `You will need permission to install Helm charts on the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
-    }, `local`), ` Kubernetes cluster that Rancher is installed on.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `local`), ` Rancher cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `In order for the chart to appear in the form for creating new clusters, the chart must have the annotation `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `To make the chart viewable in the cluster creation form, both the chart and the index.yaml file must have the annotation, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
     }, `catalog.cattle.io/type: cluster-template`), `.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
