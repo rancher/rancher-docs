@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[42902],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[18064],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 44931:
+/***/ 71212:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,42 +308,42 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Rendering the Helm Template in an Air-Gapped Environment'
+    title: 'Upgrading in an Air-Gapped Environment'
 };
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/air-gapped-upgrades",
-    "id": "version-2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/air-gapped-upgrades",
-    "title": "Rendering the Helm Template in an Air-Gapped Environment",
+    "id": "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/air-gapped-upgrades",
+    "title": "Upgrading in an Air-Gapped Environment",
     "description": "These instructions assume you have already followed the instructions for a Kubernetes upgrade on this page, including the prerequisites, up until step 3. Upgrade Rancher.",
-    "source": "@site/versioned_docs/version-2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/air-gapped-upgrades.md",
+    "source": "@site/docs/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/air-gapped-upgrades.md",
     "sourceDirName": "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster",
     "slug": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/air-gapped-upgrades",
-    "permalink": "/v2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/air-gapped-upgrades",
+    "permalink": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/air-gapped-upgrades",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/air-gapped-upgrades.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/air-gapped-upgrades.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1686095509,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1694642522,
+    "formattedLastUpdatedAt": "Sep 13, 2023",
     "frontMatter": {
-        "title": "Rendering the Helm Template in an Air-Gapped Environment"
+        "title": "Upgrading in an Air-Gapped Environment"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Upgrades",
-        "permalink": "/v2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades"
+        "permalink": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades"
     },
     "next": {
         "title": "Installing Rancher on Amazon EKS",
-        "permalink": "/v2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks"
+        "permalink": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Rancher Helm Template Options',
-        id: 'rancher-helm-template-options',
+        value: 'Rancher Helm Upgrade Options',
+        id: 'rancher-helm-upgrade-options',
         level: 3
     },
     {
@@ -354,11 +354,6 @@ const toc = [
     {
         value: 'Option B: Certificates from Files using Kubernetes Secrets',
         id: 'option-b-certificates-from-files-using-kubernetes-secrets',
-        level: 3
-    },
-    {
-        value: 'Apply the Rendered Templates',
-        id: 'apply-the-rendered-templates',
         level: 3
     },
     {
@@ -392,10 +387,10 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `These instructions assume you have already followed the instructions for a Kubernetes upgrade on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades"
+        "href": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades"
     }, `this page,`), ` including the prerequisites, up until step 3. Upgrade Rancher.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "rancher-helm-template-options"
-    }, `Rancher Helm Template Options`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Render the Rancher template using the same chosen options that were used when installing Rancher. Use the reference table below to replace each placeholder. Rancher needs to be configured to use the private registry in order to provision any Rancher launched Kubernetes clusters or Rancher tools.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Based on the choice you made during installation, complete one of the procedures below.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
+        "id": "rancher-helm-upgrade-options"
+    }, `Rancher Helm Upgrade Options`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To upgrade with Helm, apply the same options that you used when installing Rancher. Refer to the reference table below to replace each placeholder. Rancher needs to be configured to use the private registry in order to provision any Rancher launched Kubernetes clusters or Rancher tools.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Based on the choice you made during installation, complete one of the procedures below.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "thead"
@@ -451,8 +446,7 @@ function MDXContent(_param) {
         "id": "option-a-default-self-signed-certificate"
     }, `Option A: Default Self-signed Certificate`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
-    }, `helm template rancher ./rancher-<VERSION>.tgz --output-dir . \\
-    --no-hooks \\ # prevent files for Helm hooks from being generated
+    }, `helm upgrade rancher ./rancher-<VERSION>.tgz \\
     --namespace cattle-system \\
     --set hostname=<RANCHER.YOURDOMAIN.COM> \\
     --set certmanager.version=<CERTMANAGER_VERSION> \\
@@ -464,8 +458,7 @@ function MDXContent(_param) {
     }, `Option B: Certificates from Files using Kubernetes Secrets`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-plain"
-    }, `helm template rancher ./rancher-<VERSION>.tgz --output-dir . \\
-    --no-hooks \\ # prevent files for Helm hooks from being generated
+    }, `helm upgrade rancher ./rancher-<VERSION>.tgz \\
     --namespace cattle-system \\
     --set hostname=<RANCHER.YOURDOMAIN.COM> \\
     --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \\
@@ -479,8 +472,7 @@ function MDXContent(_param) {
     }, `--set ingress.tls.source=secret`), `:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-plain"
-    }, `helm template rancher ./rancher-<VERSION>.tgz --output-dir . \\
-    --no-hooks \\ # prevent files for Helm hooks from being generated
+    }, `helm upgrade rancher ./rancher-<VERSION>.tgz \\
     --namespace cattle-system \\
     --set hostname=<RANCHER.YOURDOMAIN.COM> \\
     --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \\
@@ -488,14 +480,6 @@ function MDXContent(_param) {
     --set privateCA=true \\
     --set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \\ # Set a default private registry to be used in Rancher
     --set useBundledSystemChart=true # Use the packaged Rancher system charts
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "apply-the-rendered-templates"
-    }, `Apply the Rendered Templates`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Copy the rendered manifest directories to a system with access to the Rancher server cluster and apply the rendered templates.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Use `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kubectl`), ` to apply the rendered manifests.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-plain"
-    }, `kubectl -n cattle-system apply -R -f ./rancher
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "verify-the-upgrade"
     }, `Verify the Upgrade`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Log into Rancher to confirm that the upgrade succeeded.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {

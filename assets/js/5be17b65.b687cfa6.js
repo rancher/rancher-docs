@@ -335,7 +335,7 @@ const metadata = {
         "permalink": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks"
     },
     "next": {
-        "title": "Rendering the Helm Template in an Air-Gapped Environment",
+        "title": "Upgrading in an Air-Gapped Environment",
         "permalink": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/air-gapped-upgrades"
     }
 };

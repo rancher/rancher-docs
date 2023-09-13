@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/pages-for-subheaders/enable-experimental-features.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1692817960,
-    "formattedLastUpdatedAt": "Aug 23, 2023",
+    "lastUpdatedAt": 1694642522,
+    "formattedLastUpdatedAt": "Sep 13, 2023",
     "frontMatter": {
         "title": "Enabling Experimental Features"
     },
@@ -352,8 +352,8 @@ const toc = [
         level: 3
     },
     {
-        value: 'Rendering the Helm Chart for Air Gap Installations',
-        id: 'rendering-the-helm-chart-for-air-gap-installations',
+        value: 'Enabling Features for Air Gap Installs',
+        id: 'enabling-features-for-air-gap-installs',
         level: 3
     },
     {
@@ -451,14 +451,13 @@ function MDXContent(_param) {
     }, `If you are installing an alpha version, Helm requires adding the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `--devel`), ` option to the command.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "rendering-the-helm-chart-for-air-gap-installations"
-    }, `Rendering the Helm Chart for Air Gap Installations`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For an air gap installation of Rancher, you need to add a Helm chart repository and render a Helm template before installing Rancher with Helm. For details, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "id": "enabling-features-for-air-gap-installs"
+    }, `Enabling Features for Air Gap Installs`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To perform an `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "/v2.7/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha"
-    }, `air gap installation documentation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Here is an example of a command for passing in the feature flag names when rendering the Helm template. In the below example, two features are enabled by passing the feature flag names in a comma separated list.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Helm command is as follows:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    }, `air gap installation of Rancher`), `, add a Helm chart repository and download a Helm chart, then install Rancher with Helm.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you install the Helm chart, you should pass in feature flag names in a comma separated list, as in the following example:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
-    }, `helm template rancher ./rancher-<VERSION>.tgz --output-dir . \\
-  --no-hooks \\ # prevent files for Helm hooks from being generated
+    }, `helm install rancher ./rancher-<VERSION>.tgz \\
   --namespace cattle-system \\
   --set hostname=<RANCHER.YOURDOMAIN.COM> \\
   --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \\

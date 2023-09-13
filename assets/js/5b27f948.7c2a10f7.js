@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[43802],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[52764],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 36188:
+/***/ 15154:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "pages-for-subheaders/enable-experimental-features",
-    "id": "version-2.6/pages-for-subheaders/enable-experimental-features",
+    "id": "pages-for-subheaders/enable-experimental-features",
     "title": "Enabling Experimental Features",
     "description": "Rancher includes some features that are experimental and disabled by default. You might want to enable these features, for example, if you decide that the benefits of using an unsupported storage type outweighs the risk of using an untested feature. Feature flags were introduced to allow you to try these features that are not enabled by default.",
-    "source": "@site/versioned_docs/version-2.6/pages-for-subheaders/enable-experimental-features.md",
+    "source": "@site/docs/pages-for-subheaders/enable-experimental-features.md",
     "sourceDirName": "pages-for-subheaders",
     "slug": "/pages-for-subheaders/enable-experimental-features",
-    "permalink": "/v2.6/pages-for-subheaders/enable-experimental-features",
+    "permalink": "/pages-for-subheaders/enable-experimental-features",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/pages-for-subheaders/enable-experimental-features.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/pages-for-subheaders/enable-experimental-features.md",
     "tags": [],
-    "version": "2.6",
-    "lastUpdatedAt": 1692817960,
-    "formattedLastUpdatedAt": "Aug 23, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1694642522,
+    "formattedLastUpdatedAt": "Sep 13, 2023",
     "frontMatter": {
         "title": "Enabling Experimental Features"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Create a Custom Benchmark Version for Running a Cluster Scan",
-        "permalink": "/v2.6/how-to-guides/advanced-user-guides/cis-scan-guides/create-a-custom-benchmark-version-to-run"
+        "permalink": "/how-to-guides/advanced-user-guides/cis-scan-guides/create-a-custom-benchmark-version-to-run"
     },
     "next": {
         "title": "Running on ARM64 (Experimental)",
-        "permalink": "/v2.6/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64"
+        "permalink": "/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64"
     }
 };
 const assets = {};
@@ -352,8 +352,8 @@ const toc = [
         level: 3
     },
     {
-        value: 'Rendering the Helm Chart for Air Gap Installations',
-        id: 'rendering-the-helm-chart-for-air-gap-installations',
+        value: 'Enabling Features for Air Gap Installs',
+        id: 'enabling-features-for-air-gap-installs',
         level: 3
     },
     {
@@ -398,7 +398,7 @@ function MDXContent(_param) {
         href: "https://ranchermanager.docs.rancher.com/pages-for-subheaders/enable-experimental-features"
     })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher includes some features that are experimental and disabled by default. You might want to enable these features, for example, if you decide that the benefits of using an `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers"
+        "href": "/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers"
     }, `unsupported storage type`), ` outweighs the risk of using an untested feature. Feature flags were introduced to allow you to try these features that are not enabled by default.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The features can be enabled in three ways:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -422,7 +422,7 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `A set value, which can be configured with the Rancher API or UI`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If no value has been set, Rancher uses the default value.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Because the API sets the actual value and the command line sets the default value, that means that if you enable or disable a feature with the API or UI, it will override any value set with the command line.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For example, if you install Rancher, then set a feature flag to true with the Rancher API, then upgrade Rancher with a command that sets the feature flag to false, the default value will still be false, but the feature will still be enabled because it was set with the Rancher API. If you then deleted the set value (true) with the Rancher API, setting it to NULL, the default value (false) would take effect. See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/getting-started/installation-and-upgrade/installation-references/feature-flags"
+        "href": "/getting-started/installation-and-upgrade/installation-references/feature-flags"
     }, `feature flags page`), ` for more information.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "enabling-features-when-starting-rancher"
     }, `Enabling Features when Starting Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you install Rancher, enable the feature you want with a feature flag. The command is different depending on whether you are installing Rancher on a single node or if you are doing a Kubernetes Installation of Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
@@ -433,7 +433,11 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `Values set from the Rancher API will override the value passed in through the command line.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When installing Rancher with a Helm chart, use the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `--set`), ` option. In the below example, two features are enabled by passing the feature flag names in a comma separated list:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    }, `--set`), ` option. In the below example, two features are enabled by passing the feature flag names in a comma separated list:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For Kubernetes v1.25 or later, set `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `global.cattle.psp.enabled`), ` to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `false`), ` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
     }, `helm install rancher rancher-latest/rancher \\
   --namespace cattle-system \\
@@ -447,14 +451,13 @@ function MDXContent(_param) {
     }, `If you are installing an alpha version, Helm requires adding the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `--devel`), ` option to the command.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "rendering-the-helm-chart-for-air-gap-installations"
-    }, `Rendering the Helm Chart for Air Gap Installations`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For an air gap installation of Rancher, you need to add a Helm chart repository and render a Helm template before installing Rancher with Helm. For details, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "id": "enabling-features-for-air-gap-installs"
+    }, `Enabling Features for Air Gap Installs`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To perform an `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha"
-    }, `air gap installation documentation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Here is an example of a command for passing in the feature flag names when rendering the Helm template. In the below example, two features are enabled by passing the feature flag names in a comma separated list.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Helm command is as follows:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        "href": "/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha"
+    }, `air gap installation of Rancher`), `, add a Helm chart repository and download a Helm chart, then install Rancher with Helm.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you install the Helm chart, you should pass in feature flag names in a comma separated list, as in the following example:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
-    }, `helm template rancher ./rancher-<VERSION>.tgz --output-dir . \\
-  --no-hooks \\ # prevent files for Helm hooks from being generated
+    }, `helm install rancher ./rancher-<VERSION>.tgz \\
   --namespace cattle-system \\
   --set hostname=<RANCHER.YOURDOMAIN.COM> \\
   --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \\
