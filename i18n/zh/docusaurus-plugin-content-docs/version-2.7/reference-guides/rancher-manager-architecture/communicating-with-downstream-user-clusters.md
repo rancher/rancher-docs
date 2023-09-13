@@ -129,4 +129,4 @@ Rancher 的 GitHub 代码仓库如下：
 - [Rancher CLI](https://github.com/rancher/cli)
 - [应用商店](https://github.com/rancher/helm)
 
-以上仅列出部分 Rancher 最重要的仓库。详情请参见[参与 Rancher 开源贡献](../../contribute-to-rancher.md#仓库)。如需获取 Rancher 使用的所有库和项目，请参见 `rancher/rancher` 仓库中的 [`go.mod` 文件](https://github.com/rancher/rancher/blob/master/go.mod)。
+以上仅列出部分 Rancher 最重要的仓库。详情请参见[参与 Rancher 开源贡献](../../contribute-to-rancher.md#rancher-仓库)。如需获取 Rancher 使用的所有库和项目，请参见 `rancher/rancher` 仓库中的 [`go.mod` 文件](https://github.com/rancher/rancher/blob/master/go.mod)。

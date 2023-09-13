@@ -22,9 +22,8 @@ title: 安全
 安全是 Rancher 全部功能的基础。Rancher 集成了全部主流身份验证工具和服务，并提供了企业级的 [RBAC 功能](manage-role-based-access-control-rbac.md)，让你的 Kubernetes 集群更加安全。
 
 本文介绍了安全相关的文档以及资源，让你的 Rancher 安装和下游 Kubernetes 集群更加安全。
-### NeuVector 与 Rancher 的集成
 
-_2.6.5 的新功能_
+### NeuVector 与 Rancher 的集成
 
 NeuVector 是一个开源的、以容器为中心的安全应用程序，现已集成到 Rancher 中。NeuVector 提供生产安全、DevOps 漏洞保护和容器防火墙等功能。请参阅 [Rancher 文档](../integrations-in-rancher/neuvector.md)和 [NeuVector 文档](https://open-docs.neuvector.com/)了解更多信息。
 
