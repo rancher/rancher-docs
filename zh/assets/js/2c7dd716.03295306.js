@@ -335,8 +335,8 @@ const metadata = {
         "permalink": "/zh/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs"
     },
     "next": {
-        "title": "7 层 NGINX 负载均衡器上的 TLS 终止（Docker 安装）",
-        "permalink": "/zh/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer"
+        "title": "Enabling the API Audit Log in Downstream Clusters",
+        "permalink": "/zh/how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters"
     }
 };
 const assets = {};

@@ -331,8 +331,8 @@ const metadata = {
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Enabling the API Audit Log to Record System Events",
-        "permalink": "/v2.7/how-to-guides/advanced-user-guides/enable-api-audit-log"
+        "title": "Enabling the API Audit Log in Downstream Clusters",
+        "permalink": "/v2.7/how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters"
     },
     "next": {
         "title": "Best Practices Guide",

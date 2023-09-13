@@ -335,8 +335,8 @@ const metadata = {
         "permalink": "/v2.7/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs"
     },
     "next": {
-        "title": "Docker Install with TLS Termination at Layer-7 NGINX Load Balancer",
-        "permalink": "/v2.7/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer"
+        "title": "Enabling the API Audit Log in Downstream Clusters",
+        "permalink": "/v2.7/how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters"
     }
 };
 const assets = {};

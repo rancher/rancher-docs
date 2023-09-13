@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[91343],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[38888],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 87711:
+/***/ 91827:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,50 +308,45 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Supportconfig bundle'
+    title: 'Enabling the API Audit Log in Downstream Clusters'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/cloud-marketplace/supportconfig",
-    "id": "version-2.7/integrations-in-rancher/cloud-marketplace/supportconfig",
-    "title": "Supportconfig bundle",
-    "description": "After installing the CSP adapter, you will have the ability to generate a supportconfig bundle. This bundle is a tar file which can be used to quickly provide information to support.",
-    "source": "@site/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/supportconfig.md",
-    "sourceDirName": "integrations-in-rancher/cloud-marketplace",
-    "slug": "/integrations-in-rancher/cloud-marketplace/supportconfig",
-    "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/supportconfig",
+    "unversionedId": "how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters",
+    "id": "how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters",
+    "title": "Enabling the API Audit Log in Downstream Clusters",
+    "description": "Kubernetes auditing provides a security-relevant chronological set of records about a cluster. Kube-apiserver performs auditing. Requests generate an event at each stage of its execution, which is then preprocessed according to a certain policy and written to a backend. The policy determines what’s recorded and the backend persists the records.",
+    "source": "@site/docs/how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters.md",
+    "sourceDirName": "how-to-guides/advanced-user-guides",
+    "slug": "/how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters",
+    "permalink": "/how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/supportconfig.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1694646350,
+    "formattedLastUpdatedAt": "Sep 13, 2023",
     "frontMatter": {
-        "title": "Supportconfig bundle"
+        "title": "Enabling the API Audit Log in Downstream Clusters"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Common Issues",
-        "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues"
+        "title": "Enabling the API Audit Log to Record System Events",
+        "permalink": "/how-to-guides/advanced-user-guides/enable-api-audit-log"
     },
     "next": {
-        "title": "CIS Scans",
-        "permalink": "/v2.7/pages-for-subheaders/cis-scans"
+        "title": "Docker Install with TLS Termination at Layer-7 NGINX Load Balancer",
+        "permalink": "/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer"
     }
 };
 const assets = {};
-const toc = [
-    {
-        value: 'Accessing through Rancher',
-        id: 'accessing-through-rancher',
-        level: 3
-    },
-    {
-        value: 'Accessing without rancher',
-        id: 'accessing-without-rancher',
-        level: 3
-    }
-];
+const toc = [];
+const makeShortcode = (name)=>function MDXDefaultShortcode(props) {
+        console.warn("Component " + name + " was not imported, exported, or provided by MDXProvider as global scope");
+        return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("div", props);
+    };
+const Tabs = makeShortcode("Tabs");
+const TabItem = makeShortcode("TabItem");
 const layoutProps = {
     toc
 };
@@ -363,80 +358,131 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After installing the CSP adapter, you will have the ability to generate a supportconfig bundle. This bundle is a tar file which can be used to quickly provide information to support.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These bundles can be created through Rancher or through direct access to the cluster that Rancher is installed on. Note that accessing through Rancher is preferred.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "blockquote"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Note:`), ` Only admin users can generate/download supportconfig bundles, regardless of method.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "accessing-through-rancher"
-    }, `Accessing through Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `First, click on the hamburger menu. Then click the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `Get Support`), ` button.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
-        alt: "Get Support",
-        src: (__webpack_require__(25225)/* ["default"] */ .Z),
-        width: "280",
-        height: "525"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In the next page, click on the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `Generate Support Config`), ` button.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "blockquote"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Note:`), ` If the adapter is not installed, the option to generate the supportconfig bundle will not be present. You must install the CSP adapter to generate a supportconfig bundle.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
-        alt: "Get Support",
-        src: (__webpack_require__(74321)/* ["default"] */ .Z),
-        width: "1279",
-        height: "882"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "accessing-without-rancher"
-    }, `Accessing without rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `First, generate a kubeconfig for the cluster that Rancher is installed on.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "blockquote"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Note:`), ` If Rancher is down, you will not be able to use a kubeconfig token generated by Rancher to access the cluster.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Configure your shell environment to use this kubeconfig token:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Kubernetes auditing provides a security-relevant chronological set of records about a cluster. Kube-apiserver performs auditing. Requests generate an event at each stage of its execution, which is then preprocessed according to a certain policy and written to a backend. The policy determines what’s recorded and the backend persists the records.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You might want to configure the audit log as part of compliance with the Center for Internet Security (CIS) Kubernetes Benchmark controls.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For configuration details, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/"
+    }, `official Kubernetes documentation`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(Tabs, {
+        groupId: "k8s-distro",
+        mdxType: "Tabs"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(TabItem, {
+        value: "RKE2/K3s",
+        default: true,
+        mdxType: "TabItem"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `This feature is available in Rancher v2.7.2 and above.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `As a prerequisite, you need to create a secret or configmap which will be the source of the audit policy.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The secret or configmap must meet the following two requirements:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `It must be in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "li"
+    }, `fleet-default`), ` namespace where the Cluster object exists.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `It must have the annotation `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "li"
+    }, `rke.cattle.io/object-authorized-for-clusters: cluster-name1,cluster-name2`), ` which permits the target clusters to use it.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "tip"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `Rancher Dashboard provides an easy-to-use form for creating the secret or configmap.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Example:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
-        "className": "language-bash"
-    }, `export KUBECONFIG=$MY_KUBECONFIG_PATH
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `It is recommended to create a temporary working directory while running this command, like below:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-bash"
-    }, `mkdir temp && cd temp
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Then, retrieve the supportconfig bundle:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-bash"
-    }, `mkdir rancher && kubectl get configmap csp-config -n cattle-csp-adapter-system -o=jsonpath='{.data.data}' >> rancher/config.json && tar -c -f supportconfig_rancher.tar rancher && rm -rf rancher
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This will create a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        "className": "language-yaml"
+    }, `apiVersion: v1
+data:
+  audit-policy: >-
+    IyBMb2cgYWxsIHJlcXVlc3RzIGF0IHRoZSBNZXRhZGF0YSBsZXZlbC4KYXBpVmVyc2lvbjogYXVkaXQuazhzLmlvL3YxCmtpbmQ6IFBvbGljeQpydWxlczoKLSBsZXZlbDogTWV0YWRhdGE=
+kind: Secret
+metadata:
+  annotations:
+    rke.cattle.io/object-authorized-for-clusters: cluster1
+  name: name1
+  namespace: fleet-default
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The audit log can be enabled and configured by editing the cluster in YAML and utilizing the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `supportconfig_rancher.tar`), ` file in your current directory.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Users who run these commands on Mac may experience issues due to incompatibilities between gnu-tar and bsd-tar. If support has issues reading a supportconfig that you produce, try using the below command after making gnu-tar accessible as `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `machineSelectorFiles`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `gtar`), ` on your path:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    }, `machineGlobalConfig`), ` directives.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Example:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
-        "className": "language-bash"
-    }, `mkdir rancher && kubectl get configmap csp-config -n cattle-csp-adapter-system -o=jsonpath='{.data.data}' >> rancher/config.json && gtar -c -f supportconfig_rancher.tar rancher && rm -rf rancher
-`)));
+        "className": "language-yaml"
+    }, `apiVersion: provisioning.cattle.io/v1
+kind: Cluster
+spec:
+  rkeConfig:
+    machineGlobalConfig:
+      kube-apiserver-arg:
+        - audit-policy-file=<customized-path>/dev-audit-policy.yaml
+        - audit-log-path=<customized-path>/dev-audit.logs
+    machineSelectorFiles:
+      - fileSources:
+          - configMap:
+              name: ''
+            secret:
+              items:
+                - key: audit-policy
+                  path: <customized-path>/dev-audit-policy.yaml
+              name: dev-audit-policy
+        machineLabelSelector:
+          matchLabels:
+            rke.cattle.io/control-plane-role: 'true'
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information about cluster configuration, refer to the REK2 or K3s cluster configuration reference pages.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(TabItem, {
+        value: "RKE1",
+        mdxType: "TabItem"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The audit log can be enabled and configured by editing the cluster with YAML.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When the audit log is enabled, RKE1 default values will be applied.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-yaml"
+    }, `# 
+# Rancher Config
+# 
+rancher_kubernetes_engine_config:
+  services:
+    kube-api:
+      audit_log:
+        enabled: true
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can customize the audit log by using the configuration directive.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-yaml"
+    }, `# 
+# Rancher Config
+# 
+rancher_kubernetes_engine_config:
+  services:
+    kube-api:
+      audit_log:
+        enabled: true
+        configuration:
+          max_age: 6
+          max_backup: 6
+          max_size: 110
+          path: /var/log/kube-audit/audit-log.json
+          format: json
+          policy:
+            apiVersion: audit.k8s.io/v1 # This is required.
+            kind: Policy
+            omitStages:
+              - "RequestReceived"
+            rules:
+              # Log pod changes at RequestResponse level
+              - level: RequestResponse
+                resources:
+                  - group: ""
+                    # Resource "pods" doesn't match requests to any subresource of pods,
+                    # which is consistent with the RBAC policy.
+                    resources: ["pods"]
+              # Log "pods/log", "pods/status" at Metadata level
+              - level: Metadata
+                resources:
+                  - group: ""
+                    resources: ["pods/log", "pods/status"]
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For configuration details, refer to the official `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://rke.docs.rancher.com/config-options/audit-log"
+    }, `RKE1 documentation`), `.`))));
 }
 MDXContent.isMDXComponent = true;
 
-
-/***/ }),
-
-/***/ 74321:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/generate-support-config-912d39d2192bf813b437e5438c624d4a.png");
-
-/***/ }),
-
-/***/ 25225:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/support-help-56c36c59f2a37b080d228a10d55f2ad1.png");
 
 /***/ })
 

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[41422],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[72592],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 866:
+/***/ 82081:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,17 +313,17 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
-    "id": "how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
+    "id": "version-2.7/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
     "title": "7 层 NGINX 负载均衡器上的 TLS 终止（Docker 安装）",
     "description": "如果你的开发或测试环境要求在负载均衡器上终止 TLS/SSL，而不是在 Rancher Server 上，请部署 Rancher 并配置负载均衡器。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/current/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer.md",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.7/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer.md",
     "sourceDirName": "how-to-guides/advanced-user-guides",
     "slug": "/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
-    "permalink": "/zh/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
+    "permalink": "/zh/v2.7/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer.md",
     "tags": [],
-    "version": "current",
+    "version": "2.7",
     "lastUpdatedAt": 1691458626,
     "formattedLastUpdatedAt": "2023年8月8日",
     "frontMatter": {
@@ -331,12 +331,12 @@ const metadata = {
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "启用 API 审计日志以记录系统事件",
-        "permalink": "/zh/how-to-guides/advanced-user-guides/enable-api-audit-log"
+        "title": "Enabling the API Audit Log in Downstream Clusters",
+        "permalink": "/zh/v2.7/how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters"
     },
     "next": {
         "title": "最佳实践",
-        "permalink": "/zh/pages-for-subheaders/best-practices"
+        "permalink": "/zh/v2.7/pages-for-subheaders/best-practices"
     }
 };
 const assets = {};
@@ -417,14 +417,14 @@ function MDXContent(_param) {
         "id": "操作系统docker硬件和网络要求"
     }, `操作系统，Docker，硬件和网络要求`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `请确保你的节点满足常规的`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/pages-for-subheaders/installation-requirements"
+        "href": "/zh/v2.7/pages-for-subheaders/installation-requirements"
     }, `安装要求`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "安装概要"
     }, `安装概要`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "1-配置-linux-主机"
     }, `1. 配置 Linux 主机`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `根据我们的`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/pages-for-subheaders/installation-requirements"
+        "href": "/zh/v2.7/pages-for-subheaders/installation-requirements"
     }, `要求`), `配置一个 Linux 主机来启动 Rancher Server。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "2-选择一个-ssl-选项并安装-rancher"
     }, `2. 选择一个 SSL 选项并安装 Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `出于安全考虑，使用 Rancher 时请使用 SSL（Secure Sockets Layer）。SSL 保护所有 Rancher 网络通信（如登录和与集群交互）的安全。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
@@ -664,27 +664,27 @@ http {
         parentName: "li"
     }, `推荐`), `：检查单节点`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/zh/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-docker-installed-rancher"
+        "href": "/zh/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-docker-installed-rancher"
     }, `备份`), `和`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/zh/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-docker-installed-rancher"
+        "href": "/zh/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-docker-installed-rancher"
     }, `恢复`), `。你可能暂时没有需要备份的数据，但是我们建议你在常规使用 Rancher 后创建备份。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `创建 Kubernetes 集群：`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/zh/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
+        "href": "/zh/v2.7/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
     }, `配置 Kubernetes 集群`), `。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "常见问题和故障排除"
     }, `常见问题和故障排除`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果你需要对证书进行故障排除，请参见`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/certificate-troubleshooting"
+        "href": "/zh/v2.7/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/certificate-troubleshooting"
     }, `此章节`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "高级选项"
     }, `高级选项`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "api-审计"
     }, `API 审计`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果你需要记录所有 Rancher API 事务，请将以下标志添加到安装命令中，从而启用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/how-to-guides/advanced-user-guides/enable-api-audit-log"
+        "href": "/zh/v2.7/how-to-guides/advanced-user-guides/enable-api-audit-log"
     }, `API 审计`), `功能。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
     }, `-e AUDIT_LEVEL=1 \\
@@ -696,7 +696,7 @@ http {
         "id": "离线环境"
     }, `离线环境`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果你访问此页面是为了完成`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/pages-for-subheaders/air-gapped-helm-cli-install"
+        "href": "/zh/v2.7/pages-for-subheaders/air-gapped-helm-cli-install"
     }, `离线安装`), `，则在运行安装命令时，先将你的私有镜像仓库 URL 附加到 Server 标志中。也就是说，在 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `rancher/rancher:latest`), ` 前面添加 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -719,7 +719,7 @@ http {
   rancher/rancher:latest
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `此操作需要 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/pages-for-subheaders/rancher-on-a-single-node-with-docker#rancher-%E7%89%B9%E6%9D%83%E8%AE%BF%E9%97%AE"
+        "href": "/zh/v2.7/pages-for-subheaders/rancher-on-a-single-node-with-docker#rancher-%E7%89%B9%E6%9D%83%E8%AE%BF%E9%97%AE"
     }, `privileged 访问`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `这个 7 层 NGINX 配置已经在 NGINX 1.13（Mainline）和 1.14（Stable）版本上进行了测试。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
