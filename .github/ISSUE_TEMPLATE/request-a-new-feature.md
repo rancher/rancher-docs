@@ -4,10 +4,9 @@ about: For requesting new feature(s) to be added to the docs.
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
-## Connected Issues
+## Related Issues
 
 <!--
 List any issues or tickets on other platforms that are associated with the request. For example, include a link to the issue tracking that feature in the Rancher repo, or list the Jira ticket number for the request. 
