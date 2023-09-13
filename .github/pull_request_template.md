@@ -4,11 +4,13 @@ Check the Rancher docs issues to see if there is an existing issue for this pull
 
 Fixes #[issue_number]
 
-<!-- Reminder
-Verify if changes pertain to other versions of Rancher. If they do, finalize the edits on one version of the page, then apply the edits to the other versions.
+## Reminders
 
-If the pull request is dependent on an upcoming release, make sure to target the release branch instead of `main`.
--->
+- See the [README](../README.md) for more details on how to work with the Rancher docs.
+
+- Verify if changes pertain to other versions of Rancher. If they do, finalize the edits on one version of the page, then apply the edits to the other versions.
+
+- If the pull request is dependent on an upcoming release, make sure to target the release branch instead of `main`.
 
 ## Description
 
