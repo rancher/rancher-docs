@@ -392,7 +392,7 @@ This feature is available in Rancher v2.7.2 and later.
 
 :::
 
-Deliver files to nodes, so that the files can be in place before initiating k3s server or agent processes.
+Deliver files to nodes, so that the files can be in place before initiating RKE2 server or agent processes.
 The content of the file is retrieved from either a secret or a configmap. The target nodes are filtered by the `machineLabelSelector`.
 
 Example :
