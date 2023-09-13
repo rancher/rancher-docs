@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/backup-restore-configuration/examples.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1667002146,
-    "formattedLastUpdatedAt": "Oct 29, 2022",
+    "lastUpdatedAt": 1694636947,
+    "formattedLastUpdatedAt": "Sep 13, 2023",
     "frontMatter": {
         "title": "Examples"
     },
@@ -415,11 +415,6 @@ const toc = [
         value: 'Restore from EC2 Nodes with IAM Permissions to Access S3',
         id: 'restore-from-ec2-nodes-with-iam-permissions-to-access-s3',
         level: 3
-    },
-    {
-        value: 'Example Credential Secret for Storing Backups in S3',
-        id: 'example-credential-secret-for-storing-backups-in-s3',
-        level: 2
     },
     {
         value: 'Example EncryptionConfiguration',
@@ -687,19 +682,6 @@ spec:
       region: us-west-2
       endpoint: s3.us-west-2.amazonaws.com
   encryptionConfigSecretName: test-encryptionconfig
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "example-credential-secret-for-storing-backups-in-s3"
-    }, `Example Credential Secret for Storing Backups in S3`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-yaml"
-    }, `apiVersion: v1
-kind: Secret
-metadata:
-  name: creds
-type: Opaque
-data:
-  accessKey: <Enter your base64-encoded access key>
-  secretKey: <Enter your base64-encoded secret key>
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "example-encryptionconfiguration"
     }, `Example EncryptionConfiguration`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The snippet below demonstrates two different types of secrets and their relevance with respect to Backup and Restore of custom resources.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The first example is that of a secret that is used to encrypt the backup files. The backup operator, in this case, will not be able to read the secrets encryption file. It only uses the contents of the secret.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The second example is that of a Kubernetes secrets encryption config file that is used to encrypt secrets when stored in etcd. `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
