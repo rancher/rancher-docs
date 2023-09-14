@@ -78,3 +78,23 @@ possible to enable debug logs in `rancher-machine` when provisioning RKE1, RKE2 
 Just like the `trace` log level above, `rancher-machine` debug logs can contain sensitive information.
 
 :::
+
+
+## Cattle-cluster-agent debug logs
+
+If you need to troubleshoot the initialization of `cattle-cluster-agent` the log levels can be set during the 
+initialization of the downstream clusters.  
+
+Wile creating a Cluster under `Cluster Configuration -> Agent Environment Vars` some variables can be set to define
+the log level.  
+
+
+For trace-level `CATTLE_TRACE` or `RANCHER_TRACE` must be set to `true`
+
+For debug-level `CATTLE_DEBUG` or `RANCHER_DEUBG` must be set to `true`
+
+:::caution
+
+Just like the `trace` log level above, `cattle-cluster-agent` debug logs can contain sensitive information.
+
+:::
