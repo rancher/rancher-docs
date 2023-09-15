@@ -2,6 +2,10 @@
 title: Tips for Setting Up Containers
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/best-practices/rancher-managed-clusters/tips-to-set-up-containers"/>
+</head>
+
 Running well-built containers can greatly impact the overall performance and security of your environment.
 
 Below are a few tips for setting up your containers.
