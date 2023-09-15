@@ -2,6 +2,10 @@
 title: Restore Configuration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/backup-restore-configuration/restore-configuration"/>
+</head>
+
 The Restore Create page lets you provide details of the backup to restore from
 
 ![](/img/backup_restore/restore/restore.png)
