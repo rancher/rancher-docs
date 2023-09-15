@@ -2,15 +2,11 @@
 title: 创建应用
 ---
 
-Rancher 的应用市场基于 Helm 仓库和 Helm Chart。你可以添加基于 HTTP 的标准 Helm 仓库以及任何包含 Chart 的 Git 仓库。
-
 :::tip
 
 有关开发 Chart 的完整演示，请参阅 Helm 官方文档中的 [Chart 模板开发者指南](https://helm.sh/docs/chart_template_guide/)。
 
 :::
-
-
 
 ## Chart 类型
 

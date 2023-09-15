@@ -1,5 +1,5 @@
 ---
-title: Rendering the Helm Template in an Air-Gapped Environment
+title: Upgrading in an Air-Gapped Environment
 ---
 
 <head>
@@ -12,9 +12,9 @@ These instructions assume you have already followed the instructions for a Kuber
 
 :::
 
-### Rancher Helm Template Options
+### Rancher Helm Upgrade Options
 
-Render the Rancher template using the same chosen options that were used when installing Rancher. Use the reference table below to replace each placeholder. Rancher needs to be configured to use the private registry in order to provision any Rancher launched Kubernetes clusters or Rancher tools.
+To upgrade with Helm, apply the same options that you used when installing Rancher. Refer to the reference table below to replace each placeholder. Rancher needs to be configured to use the private registry in order to provision any Rancher launched Kubernetes clusters or Rancher tools.
 
 Based on the choice you made during installation, complete one of the procedures below.
 
@@ -29,8 +29,7 @@ Placeholder | Description
 ### Option A: Default Self-signed Certificate
 
 ```
-helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
-    --no-hooks \ # prevent files for Helm hooks from being generated
+helm upgrade rancher ./rancher-<VERSION>.tgz \
 	--namespace cattle-system \
 	--set hostname=<RANCHER.YOURDOMAIN.COM> \
 	--set certmanager.version=<CERTMANAGER_VERSION> \
@@ -42,8 +41,7 @@ helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
 ### Option B: Certificates from Files using Kubernetes Secrets
 
 ```plain
-helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
-	--no-hooks \ # prevent files for Helm hooks from being generated
+helm upgrade rancher ./rancher-<VERSION>.tgz \
 	--namespace cattle-system \
 	--set hostname=<RANCHER.YOURDOMAIN.COM> \
 	--set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
@@ -55,8 +53,7 @@ helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
 If you are using a Private CA signed cert, add `--set privateCA=true` following `--set ingress.tls.source=secret`:
 
 ```plain
-helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
-	--no-hooks \ # prevent files for Helm hooks from being generated
+helm upgrade rancher ./rancher-<VERSION>.tgz \
 	--namespace cattle-system \
 	--set hostname=<RANCHER.YOURDOMAIN.COM> \
 	--set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
@@ -64,16 +61,6 @@ helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
 	--set privateCA=true \
 	--set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \ # Set a default private registry to be used in Rancher
 	--set useBundledSystemChart=true # Use the packaged Rancher system charts
-```
-
-### Apply the Rendered Templates
-
-Copy the rendered manifest directories to a system with access to the Rancher server cluster and apply the rendered templates.
-
-Use `kubectl` to apply the rendered manifests.
-
-```plain
-kubectl -n cattle-system apply -R -f ./rancher
 ```
 
 ## Verify the Upgrade

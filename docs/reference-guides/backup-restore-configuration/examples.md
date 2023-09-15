@@ -246,19 +246,6 @@ spec:
   encryptionConfigSecretName: test-encryptionconfig
 ```
 
-## Example Credential Secret for Storing Backups in S3
-
-```yaml
-apiVersion: v1
-kind: Secret
-metadata:
-  name: creds
-type: Opaque
-data:
-  accessKey: <Enter your base64-encoded access key>
-  secretKey: <Enter your base64-encoded secret key>
-```
-
 ## Example EncryptionConfiguration
 
 The snippet below demonstrates two different types of secrets and their relevance with respect to Backup and Restore of custom resources.

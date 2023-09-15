@@ -2,6 +2,7 @@
 title: Kubernetes 镜像仓库和 Docker 镜像仓库
 description: 了解 Docker 镜像仓库和 Kubernetes 镜像仓库、它们的用例以及如何在 Rancher UI 中使用私有镜像仓库
 ---
+
 镜像仓库是 Kubernetes 密文（Secret），包含用于向[私有 Docker 镜像仓库](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/)进行身份验证的凭证。
 
 “Registry” 这个词可能有两种意思，可指代 Docker 或 Kubernetes 镜像仓库：

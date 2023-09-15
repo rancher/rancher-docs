@@ -101,7 +101,7 @@ Below are some examples of some **incorrect** uses or expectations of Rancher Ba
 
 ### Upgrades
 
-- Using Rancher backups for upgrading Rancher versions is not a valid use case. The recommended procedure is to take a backup of the current version, then upgrade your Rancher instance using [these instructions](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades), and then taking **another** backup after the upgrade is complete. This way if the upgrade fails you have a backup to restore to, and the second backup will be valid to restore to the upgraded Rancher version.
+- Using Rancher backups for upgrading Rancher versions is not a valid use case. The recommended procedure is to take a backup of the current version, then upgrade your Rancher instance using [these instructions](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades.md), and then taking **another** backup after the upgrade is complete. This way if the upgrade fails you have a backup to restore to, and the second backup will be valid to restore to the upgraded Rancher version.
 - Using Rancher backups for upgrading Kubernetes versions is not a valid use case either. Because the Kubernetes API and available resources are tied to the version, upgrading using backup restore can lead to issues with misaligned sets of resources which may be deprecated, unsupported, or updated. How to upgrade your cluster version will depend on how it was provisioned however the same format as above is recommended (backup, upgrade, backup).
 
 ### ResourceSet

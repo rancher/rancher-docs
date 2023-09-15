@@ -22,7 +22,7 @@ Rancher Backups Chart 是我们的灾难恢复和迁移解决方案。此 Chart 
 
 ### 还原
 
-有两种主要的还原场景：还原正在运行 Rancher 的集群以及还原新集群。只有将备份还原到该备份的源集群，且在还原过程中启用了 [`prune` 选项](../../../reference-guides/backup-restore-configuration/restore-configuration.md#在还原期间修剪)时，你才能还原正在运行 Rancher 的集群。还原具有与备份类似的输入。它需要备份文件名、encryptionConfigSecret 名称和存储位置。
+有两种主要的还原场景：还原正在运行 Rancher 的集群以及还原新集群。只有将备份还原到该备份的源集群，且在还原过程中启用了 [`prune` 选项](../../../reference-guides/backup-restore-configuration/restore-configuration.md#还原过程中修剪)时，你才能还原正在运行 Rancher 的集群。还原具有与备份类似的输入。它需要备份文件名、encryptionConfigSecret 名称和存储位置。
 
 资源按以下顺序还原：
 
@@ -97,7 +97,7 @@ Rancher Backups Chart 包含了一个[默认 resourceSet](https://github.com/ran
 
 ### 升级
 
-- 使用 Rancher Backups 来升级 Rancher 版本不是一个有效用法。推荐的做法是：先备份当前版本，然后按照[说明](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades)升级你的 Rancher 实例，在升级完成后再进行**另一个**备份。这样，如果升级失败，你就有一个可以用来还原的备份，而第二个备份将能用于还原到升级后的 Rancher 版本。
+- 使用 Rancher Backups 来升级 Rancher 版本不是一个有效用法。推荐的做法是：先备份当前版本，然后按照[说明](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades.md)升级你的 Rancher 实例，在升级完成后再进行**另一个**备份。这样，如果升级失败，你就有一个可以用来还原的备份，而第二个备份将能用于还原到升级后的 Rancher 版本。
 - 使用 Rancher Backups 来升级 Kubernetes 版本也不是一个有效用法。由于 Kubernetes API 以及可用资源与版本相关，因此使用备份还原的方法来进行升级可能会导致资源集不对齐的问题，这些资源可能已被弃用、不受支持或已更新。升级集群版本的方式取决于其配置方式，但建议使用上述的流程（备份、升级、备份）。
 
 ### ResourceSet

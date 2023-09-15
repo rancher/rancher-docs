@@ -16,7 +16,7 @@ For information on how to set up an authentication system, see [this section.](a
 
 On the **Clusters** page, select **⁝** at the end of each row to view a submenu with the following options:
 
-* [Kubectl Shell](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)
+* [Kubectl Shell](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)
 * Download KubeConfig
 * Copy KubeConfig to Clipboard
 * Edit Config
