@@ -2,6 +2,10 @@
 title: Networking
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/troubleshooting/other-troubleshooting-tips/networking"/>
+</head>
+
 The commands/steps listed on this page can be used to check networking related issues in your cluster.
 
 Make sure you configured the correct kubeconfig (for example, `export KUBECONFIG=$PWD/kube_config_cluster.yml` for Rancher HA) or are using the embedded kubectl via the UI.

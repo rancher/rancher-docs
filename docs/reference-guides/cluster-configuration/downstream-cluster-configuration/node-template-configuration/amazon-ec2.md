@@ -2,6 +2,10 @@
 title: EC2 Node Template Configuration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/amazon-ec2"/>
+</head>
+
 For more details about EC2, nodes, refer to the official documentation for the [EC2 Management Console](https://aws.amazon.com/ec2).
 
 ### Region

@@ -2,6 +2,10 @@
 title: Allow Unsupported Storage Drivers
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers"/>
+</head>
+
 This feature allows you to use types for storage providers and provisioners that are not enabled by default.
 
 To enable or disable this feature, refer to the instructions on [the main page about enabling experimental features.](../../../pages-for-subheaders/enable-experimental-features.md)

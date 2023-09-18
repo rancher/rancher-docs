@@ -160,7 +160,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 ### Agent 环境变量
 
-为 [Rancher agent](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/rancher-agents/) 设置环境变量的选项。你可以使用键值对设置环境变量。有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/reference/linux_agent_config)。
+为 [Rancher agent](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents.md) 设置环境变量的选项。你可以使用键值对设置环境变量。有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/reference/linux_agent_config)。
 
 ### etcd
 

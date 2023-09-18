@@ -2,6 +2,10 @@
 title: Nutanix Node Template Configuration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/nutanix"/>
+</head>
+
 ## Account Access
 
 | Parameter                    | Required | Description | Default

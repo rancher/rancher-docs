@@ -56,9 +56,10 @@ The `cattle-node-agent` is deployed using a [DaemonSet](https://kubernetes.io/do
 
 ### 4. Authorized Cluster Endpoint
 
-An authorized cluster endpoint allows users to connect to the Kubernetes API server of a downstream cluster without having to route their requests through the Rancher authentication proxy.
+An authorized cluster endpoint (ACE) allows users to connect to the Kubernetes API server of a downstream cluster without having to route their requests through the Rancher authentication proxy.
 
-> The authorized cluster endpoint only works on Rancher-launched Kubernetes clusters. In other words, it only works in clusters where Rancher [used RKE](../../pages-for-subheaders/launch-kubernetes-with-rancher.md) to provision the cluster. It is not available for imported clusters, or for clusters in a hosted Kubernetes provider, such as Amazon's EKS.
+> ACE is available on RKE, RKE2, and K3s clusters that are provisioned or registered with Rancher. It's not available on  clusters in a hosted Kubernetes provider, such as Amazon's EKS.
+
 
 There are two main reasons why a user might need the authorized cluster endpoint:
 
@@ -129,4 +130,4 @@ The GitHub repositories for Rancher can be found at the following links:
 - [Rancher CLI](https://github.com/rancher/cli)
 - [Catalog applications](https://github.com/rancher/helm)
 
-This is a partial list of the most important Rancher repositories. For more details about Rancher source code, refer to the section on [contributing to Rancher.](../../contribute-to-rancher.md#repositories) To see all libraries and projects used in Rancher, see the [`go.mod` file](https://github.com/rancher/rancher/blob/master/go.mod) in the `rancher/rancher` repository.
+This is a partial list of the most important Rancher repositories. For more details about Rancher source code, refer to the section on [contributing to Rancher.](../../contribute-to-rancher.md#rancher-repositories) To see all libraries and projects used in Rancher, see the [`go.mod` file](https://github.com/rancher/rancher/blob/master/go.mod) in the `rancher/rancher` repository.

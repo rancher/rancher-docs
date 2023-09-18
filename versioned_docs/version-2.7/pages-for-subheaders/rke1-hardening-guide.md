@@ -16,10 +16,13 @@ This hardening guide is intended to be used for RKE clusters and is associated w
 
 | Rancher Version | CIS Benchmark Version | Kubernetes Version           |
 |-----------------|-----------------------|------------------------------|
-| Rancher v2.7    | Benchmark v1.23       | Kubernetes v1.23 up to v1.25 |
+| Rancher v2.7    | Benchmark v1.23       | Kubernetes v1.23             |
+| Rancher v2.7    | Benchmark v1.24       | Kubernetes v1.24             |
+| Rancher v2.7    | Benchmark v1.7        | Kubernetes v1.25 up to v1.26 |
 
 :::note
-At the time of writing, the upstream CIS Kubernetes v1.25 benchmark is not yet available in Rancher. At this time Rancher is using the CIS v1.23 benchmark when scanning Kubernetes v1.25 clusters. Due to that, the CIS checks 5.2.3, 5.2.4, 5.2.5 and 5.2.6 might fail.
+- In Benchmark v1.24 and later, check id `4.1.7 Ensure that the certificate authorities file permissions are set to 600 or more restrictive (Automated)` might fail, as `/etc/kubernetes/ssl/kube-ca.pem` is set to 644 by default.
+- In Benchmark v1.7, the `--protect-kernel-defaults` (`4.2.6`) parameter isn't required anymore, and was removed by CIS.
 :::
 
 For more details on how to evaluate a hardened RKE cluster against the official CIS benchmark, refer to the RKE self-assessment guides for specific Kubernetes and CIS benchmark versions.
@@ -247,7 +250,6 @@ services:
   kubelet:
     extra_args:
       feature-gates: RotateKubeletServerCertificate=true
-      protect-kernel-defaults: "true"
     generate_serving_certificate: true
 addons: |
   apiVersion: networking.k8s.io/v1
@@ -444,7 +446,6 @@ rancher_kubernetes_engine_config:
     kubelet:
       extra_args:
         feature-gates: RotateKubeletServerCertificate=true
-        protect-kernel-defaults: true
         tls-cipher-suites: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_128_GCM_SHA256
       generate_serving_certificate: true
     scheduler:

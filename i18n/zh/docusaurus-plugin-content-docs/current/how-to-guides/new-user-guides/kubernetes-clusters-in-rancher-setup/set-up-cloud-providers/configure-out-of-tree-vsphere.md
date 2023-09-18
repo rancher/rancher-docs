@@ -4,7 +4,7 @@ title: 配置树外 vSphere 云提供商
 
 Kubernetes 正在逐渐不在树内维护云提供商。vSphere 有一个树外云提供商，可通过安装 vSphere 云提供商和云存储插件来使用。
 
-本页介绍如何在启动集群后安装 Cloud Provider Interface (CPI) 和 Cloud Storage Interface (CSI) 插件。
+本文介绍了如何在设置集群后安装 Cloud Provider Interface (CPI) 和 Cloud Storage Interface (CSI) 插件。
 
 ## 先决条件
 

@@ -2,6 +2,10 @@
 title: Pod Security Policies
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/manage-projects/manage-pod-security-policies"/>
+</head>
+
 :::note
 
 These cluster options are only available for [clusters in which Rancher has launched Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md).

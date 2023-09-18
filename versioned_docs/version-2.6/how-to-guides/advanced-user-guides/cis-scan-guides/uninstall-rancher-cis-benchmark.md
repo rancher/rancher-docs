@@ -2,6 +2,10 @@
 title: Uninstall Rancher CIS Benchmark
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/cis-scan-guides/uninstall-rancher-cis-benchmark"/>
+</head>
+
 <Tabs>
 <TabItem value="Rancher v2.6.5+">
 

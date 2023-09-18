@@ -2,6 +2,10 @@
 title: Syncing
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters"/>
+</head>
+
 Syncing is the feature for EKS and GKE clusters that causes Rancher to update the clusters' values so they are up to date with their corresponding cluster object in the hosted Kubernetes provider. This enables Rancher to not be the sole owner of a hosted cluster’s state. Its largest limitation is that processing an update from Rancher and another source at the same time or within 5 minutes of one finishing may cause the state from one source to completely overwrite the other.
 
 ### How it works

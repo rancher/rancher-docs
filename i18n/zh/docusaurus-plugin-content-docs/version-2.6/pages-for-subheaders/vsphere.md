@@ -2,6 +2,7 @@
 title: 创建 vSphere 集群
 description: 使用 Rancher 创建 vSphere 集群。集群可能包括具有不同属性的 VM 组，这些属性可用于细粒度控制节点的大小。
 ---
+
 import YouTube from '@site/src/components/YouTube'
 
 你可以结合使用 Rancher 与 vSphere，从而在本地体验云环境的操作。

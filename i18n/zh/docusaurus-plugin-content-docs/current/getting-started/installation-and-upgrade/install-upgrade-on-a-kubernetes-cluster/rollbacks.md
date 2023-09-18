@@ -22,7 +22,7 @@ Rancher v2.6.4 将 cluster-api 模块从 v0.4.4 升级到 v1.0.2。反过来，c
 ### 从 v2.6.4+ 回滚到较低版本的 v2.6.x
 
 1. 按照[说明](https://github.com/rancher/rancher-cleanup/blob/main/README.md)运行脚本。
-1. 按照[说明](https://rancher.com/docs/rancher/v2.6/en/backups/migrating-rancher/)在现有集群上安装 rancher-backup Helm Chart 并恢复之前的状态。
+1. 按照[说明](../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md)在现有集群上安装 rancher-backup Helm Chart 并恢复之前的状态。
    1. 省略步骤 3。
    1. 执行到步骤 4 时，在要回滚到的 local 集群上安装 Rancher 2.6.x 版本。
 

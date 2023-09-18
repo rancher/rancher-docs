@@ -68,6 +68,12 @@ kubectl create secret generic encryptionconfig \
 
 ### S3
 
+:::caution
+
+如果你使用 S3 备份目标，请确保每个集群都有自己的存储桶或文件夹。Rancher 将使用集群配置的 S3 存储桶或文件夹中的可用快照来填充快照信息。
+
+:::
+
 S3 存储位置包含以下配置字段：
 
 1. **凭证密文**（可选）：如果你需要使用 AWS 访问密钥（access key）和密文密钥（secret key）来访问 S3 存储桶，请使用带有密钥和指令 `accessKey` 和 `secretKey` 的凭证来创建密文。它可以是任意一个命名空间。你可以点击[此处](#credentialsecret-示例)查看示例密文。如果运行 operator 的节点在 EC2 中，并且设置了允许它们访问 S3 的 IAM 权限，则此指令是不必要的（如[本节](#ec2-节点访问-s3-的-iam-权限)所述）。凭证密文下拉菜单列出了所有命名空间的密文。

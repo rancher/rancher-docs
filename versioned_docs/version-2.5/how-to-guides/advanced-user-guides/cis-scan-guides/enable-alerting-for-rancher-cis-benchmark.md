@@ -2,6 +2,10 @@
 title: Enable Alerting for Rancher CIS Benchmark
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/cis-scan-guides/enable-alerting-for-rancher-cis-benchmark"/>
+</head>
+
 Alerts can be configured to be sent out for a scan that runs on a schedule.
 
 :::note Prerequisite: 

@@ -2,6 +2,10 @@
 title: DigitalOcean Node Template Configuration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/digitalocean"/>
+</head>
+
 Account access information is stored as a cloud credential. Cloud credentials are stored as Kubernetes secrets. Multiple node templates can use the same cloud credential. You can use an existing cloud credential or create a new one.
 
 ### Droplet Options

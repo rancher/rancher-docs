@@ -2,6 +2,10 @@
 title: Logging
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/troubleshooting/other-troubleshooting-tips/logging"/>
+</head>
+
 ## Log levels
 
 The following log levels are used in Rancher:

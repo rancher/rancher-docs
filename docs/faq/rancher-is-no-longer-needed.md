@@ -2,6 +2,10 @@
 title: Rancher is No Longer Needed
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/faq/rancher-is-no-longer-needed"/>
+</head>
+
 This page is intended to answer questions about what happens if you don't want Rancher anymore, if you don't want a cluster to be managed by Rancher anymore, or if the Rancher server is deleted.
 
 

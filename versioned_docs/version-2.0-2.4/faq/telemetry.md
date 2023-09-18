@@ -2,6 +2,10 @@
 title: Telemetry
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/faq/telemetry"/>
+</head>
+
 ### What is Telemetry?
 
 Telemetry collects aggregate information about the size of Rancher installations, versions of components used, and which features are used.  This information is used by Rancher Labs to help make the product better and is not shared with third-parties.

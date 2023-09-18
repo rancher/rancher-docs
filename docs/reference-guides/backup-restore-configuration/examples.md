@@ -2,6 +2,10 @@
 title: Examples
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/backup-restore-configuration/examples"/>
+</head>
+
 This section contains examples of Backup and Restore custom resources.
 
 The default backup storage location is configured when the `rancher-backup` operator is installed or upgraded.
@@ -240,19 +244,6 @@ spec:
       region: us-west-2
       endpoint: s3.us-west-2.amazonaws.com
   encryptionConfigSecretName: test-encryptionconfig
-```
-
-## Example Credential Secret for Storing Backups in S3
-
-```yaml
-apiVersion: v1
-kind: Secret
-metadata:
-  name: creds
-type: Opaque
-data:
-  accessKey: <Enter your base64-encoded access key>
-  secretKey: <Enter your base64-encoded secret key>
 ```
 
 ## Example EncryptionConfiguration

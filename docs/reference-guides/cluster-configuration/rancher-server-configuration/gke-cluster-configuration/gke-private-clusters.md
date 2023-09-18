@@ -2,6 +2,10 @@
 title: Private Clusters
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters"/>
+</head>
+
 In GKE, [private clusters](https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept) are clusters whose nodes are isolated from inbound and outbound traffic by assigning them internal IP addresses only. Private clusters in GKE have the option of exposing the control plane endpoint as a publicly accessible address or as a private address. This is different from other Kubernetes providers, which may refer to clusters with private control plane endpoints as "private clusters" but still allow traffic to and from nodes. You may want to create a cluster with private nodes, with or without a public control plane endpoint, depending on your organization's networking and security requirements. A GKE cluster provisioned from Rancher can use isolated nodes by selecting "Private Cluster" in the Cluster Options (under "Show advanced options"). The control plane endpoint can optionally be made private by selecting "Enable Private Endpoint".
 
 ### Private Nodes
@@ -26,7 +30,7 @@ This scenario is not officially supported, but is described for cases in which u
 
 :::
 
-If restricting both incoming and outgoing traffic to nodes is a requirement, follow the air-gapped installation instructions to set up a private container image [registry](https://rancher.com/docs/rancher/v2.6/en/installation/other-installation-methods/air-gap/) on the VPC where the cluster is going to be, allowing the cluster nodes to access and download the images they need to run the cluster agent. If the control plane endpoint is also private, Rancher will need [direct access](#direct-access) to it.
+If restricting both incoming and outgoing traffic to nodes is a requirement, follow the air-gapped installation instructions to set up a private container image [registry](../../../../pages-for-subheaders/air-gapped-helm-cli-install.md) on the VPC where the cluster is going to be, allowing the cluster nodes to access and download the images they need to run the cluster agent. If the control plane endpoint is also private, Rancher will need [direct access](#direct-access) to it.
 
 ### Private Control Plane Endpoint
 
