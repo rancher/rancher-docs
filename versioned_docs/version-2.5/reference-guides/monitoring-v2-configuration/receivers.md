@@ -2,6 +2,10 @@
 title: Receiver Configuration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/monitoring-v2-configuration/receivers"/>
+</head>
+
 The [Alertmanager Config](https://prometheus.io/docs/alerting/latest/configuration/#configuration-file) Secret contains the configuration of an Alertmanager instance that sends out notifications based on alerts it receives from Prometheus.
 
 > This section assumes familiarity with how monitoring components work together. For more information about Alertmanager, see [this section.](../../explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works.md#3-how-alertmanager-works)

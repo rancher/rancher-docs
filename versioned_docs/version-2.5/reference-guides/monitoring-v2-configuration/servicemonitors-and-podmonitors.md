@@ -2,6 +2,10 @@
 title: ServiceMonitor and PodMonitor Configuration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors"/>
+</head>
+
 ServiceMonitors and PodMonitors are both pseudo-CRDs that map the scrape configuration of the Prometheus custom resource.
 
 These configuration objects declaratively specify the endpoints that Prometheus will scrape metrics from.
