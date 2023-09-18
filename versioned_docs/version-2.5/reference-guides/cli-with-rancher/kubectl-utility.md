@@ -2,6 +2,10 @@
 title: kubectl Utility
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/cli-with-rancher/kubectl-utility"/>
+</head>
+
 ## kubectl
 
 Interact with Rancher using kubectl.
