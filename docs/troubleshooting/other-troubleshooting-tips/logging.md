@@ -95,6 +95,6 @@ For debug-level `CATTLE_DEBUG` or `RANCHER_DEUBG` must be set to `true`
 
 :::caution
 
-Just like the `trace` log level above, `cattle-cluster-agent` debug logs can contain sensitive information.
+The `cattle-cluster-agent` debug logs may contain sensitive information.
 
 :::
