@@ -85,8 +85,7 @@ Just like the `trace` log level above, `rancher-machine` debug logs can contain 
 If you need to troubleshoot the initialization of `cattle-cluster-agent` the log levels can be set during the 
 initialization of the downstream clusters.  
 
-Wile creating a Cluster under `Cluster Configuration -> Agent Environment Vars` some variables can be set to define
-the log level.  
+When you create a cluster under **Cluster Configuration > Agent Environment Vars** you can set variables to define the log level.  
 
 
 For trace-level `CATTLE_TRACE` or `RANCHER_TRACE` must be set to `true`
