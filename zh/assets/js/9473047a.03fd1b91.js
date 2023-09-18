@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[47901],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[58860],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 18926:
+/***/ 29499:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,47 +308,57 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'ServiceMonitor and PodMonitor Configuration'
+    title: 'Examples'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors",
-    "id": "version-2.6/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors",
-    "title": "ServiceMonitor and PodMonitor Configuration",
-    "description": "ServiceMonitors and PodMonitors are both pseudo-CRDs that map the scrape configuration of the Prometheus custom resource.",
-    "source": "@site/versioned_docs/version-2.6/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors.md",
+    "unversionedId": "reference-guides/monitoring-v2-configuration/examples",
+    "id": "version-2.5/reference-guides/monitoring-v2-configuration/examples",
+    "title": "Examples",
+    "description": "ServiceMonitor",
+    "source": "@site/versioned_docs/version-2.5/reference-guides/monitoring-v2-configuration/examples.md",
     "sourceDirName": "reference-guides/monitoring-v2-configuration",
-    "slug": "/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors",
-    "permalink": "/v2.6/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors",
+    "slug": "/reference-guides/monitoring-v2-configuration/examples",
+    "permalink": "/zh/v2.5/reference-guides/monitoring-v2-configuration/examples",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/reference-guides/monitoring-v2-configuration/examples.md",
     "tags": [],
-    "version": "2.6",
-    "lastUpdatedAt": 1668452187,
-    "formattedLastUpdatedAt": "Nov 14, 2022",
+    "version": "2.5",
+    "lastUpdatedAt": 1695053208,
+    "formattedLastUpdatedAt": "2023年9月18日",
     "frontMatter": {
-        "title": "ServiceMonitor and PodMonitor Configuration"
+        "title": "Examples"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Route Configuration",
-        "permalink": "/v2.6/reference-guides/monitoring-v2-configuration/routes"
+        "title": "Helm Chart Options",
+        "permalink": "/zh/v2.5/reference-guides/monitoring-v2-configuration/helm-chart-options"
     },
     "next": {
-        "title": "Helm Chart Options",
-        "permalink": "/v2.6/reference-guides/monitoring-v2-configuration/helm-chart-options"
+        "title": "User Settings",
+        "permalink": "/zh/v2.5/pages-for-subheaders/user-settings"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'ServiceMonitors',
-        id: 'servicemonitors',
+        value: 'ServiceMonitor',
+        id: 'servicemonitor',
         level: 3
     },
     {
-        value: 'PodMonitors',
-        id: 'podmonitors',
+        value: 'PodMonitor',
+        id: 'podmonitor',
+        level: 3
+    },
+    {
+        value: 'PrometheusRule',
+        id: 'prometheusrule',
+        level: 3
+    },
+    {
+        value: 'Alertmanager Config',
+        id: 'alertmanager-config',
         level: 3
     }
 ];
@@ -363,35 +373,36 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `ServiceMonitors and PodMonitors are both pseudo-CRDs that map the scrape configuration of the Prometheus custom resource.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These configuration objects declaratively specify the endpoints that Prometheus will scrape metrics from.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `ServiceMonitors are more commonly used than PodMonitors, and we recommend them for most use cases.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "type": "note"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, `This section assumes familiarity with how monitoring components work together. For more information about Alertmanager, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com//reference-guides/monitoring-v2-configuration/examples"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "servicemonitor"
+    }, `ServiceMonitor`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `An example ServiceMonitor custom resource can be found `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works"
-    }, `this section.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "servicemonitors"
-    }, `ServiceMonitors`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This pseudo-CRD maps to a section of the Prometheus custom resource configuration. It declaratively specifies how groups of Kubernetes services should be monitored.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When a ServiceMonitor is created, the Prometheus Operator updates the Prometheus scrape configuration to include the ServiceMonitor configuration. Then Prometheus begins scraping metrics from the endpoint defined in the ServiceMonitor.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Any Services in your cluster that match the labels located within the ServiceMonitor `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `selector`), ` field will be monitored based on the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `endpoints`), ` specified on the ServiceMonitor. For more information on what fields can be specified, please look at the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "href": "https://github.com/prometheus-operator/prometheus-operator/blob/master/example/prometheus-operator-crd/monitoring.coreos.com_servicemonitors.yaml"
+    }, `here.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "podmonitor"
+    }, `PodMonitor`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `An example PodMonitor can be found `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#servicemonitor"
-    }, `spec`), ` provided by Prometheus Operator.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information about how ServiceMonitors work, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "href": "https://github.com/prometheus-operator/prometheus-operator/blob/master/example/user-guides/getting-started/example-app-pod-monitor.yaml"
+    }, `here.`), ` An example Prometheus resource that refers to it can be found `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/running-exporters.md"
-    }, `Prometheus Operator documentation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "podmonitors"
-    }, `PodMonitors`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This pseudo-CRD maps to a section of the Prometheus custom resource configuration. It declaratively specifies how group of pods should be monitored.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When a PodMonitor is created, the Prometheus Operator updates the Prometheus scrape configuration to include the PodMonitor configuration. Then Prometheus begins scraping metrics from the endpoint defined in the PodMonitor.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Any Pods in your cluster that match the labels located within the PodMonitor `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `selector`), ` field will be monitored based on the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `podMetricsEndpoints`), ` specified on the PodMonitor. For more information on what fields can be specified, please look at the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "href": "https://github.com/prometheus-operator/prometheus-operator/blob/master/example/user-guides/getting-started/prometheus-pod-monitor.yaml"
+    }, `here.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "prometheusrule"
+    }, `PrometheusRule`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For users who are familiar with Prometheus, a PrometheusRule contains the alerting and recording rules that you would normally place in a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#podmonitorspec"
-    }, `spec`), ` provided by Prometheus Operator.`));
+        "href": "https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/"
+    }, `Prometheus rule file`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For a more fine-grained application of PrometheusRules within your cluster, the ruleSelector field on a Prometheus resource allows you to select which PrometheusRules should be loaded onto Prometheus based on the labels attached to the PrometheusRules resources.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `An example PrometheusRule is on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/alerting.md"
+    }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "alertmanager-config"
+    }, `Alertmanager Config`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For an example configuration, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/zh/v2.5/reference-guides/monitoring-v2-configuration/receivers#example-alertmanager-configs"
+    }, `this section`), `.`));
 }
 MDXContent.isMDXComponent = true;
 

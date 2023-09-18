@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[86006],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[42476],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 13004:
+/***/ 78376:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/monitoring-v2-configuration/routes",
-    "id": "reference-guides/monitoring-v2-configuration/routes",
+    "id": "version-2.7/reference-guides/monitoring-v2-configuration/routes",
     "title": "Route Configuration",
     "description": "The route configuration is the section of the Alertmanager custom resource that controls how the alerts fired by Prometheus are grouped and filtered before they reach the receiver.",
-    "source": "@site/docs/reference-guides/monitoring-v2-configuration/routes.md",
+    "source": "@site/versioned_docs/version-2.7/reference-guides/monitoring-v2-configuration/routes.md",
     "sourceDirName": "reference-guides/monitoring-v2-configuration",
     "slug": "/reference-guides/monitoring-v2-configuration/routes",
-    "permalink": "/reference-guides/monitoring-v2-configuration/routes",
+    "permalink": "/v2.7/reference-guides/monitoring-v2-configuration/routes",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/monitoring-v2-configuration/routes.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/monitoring-v2-configuration/routes.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1689711635,
-    "formattedLastUpdatedAt": "Jul 18, 2023",
+    "version": "2.7",
+    "lastUpdatedAt": 1695053208,
+    "formattedLastUpdatedAt": "Sep 18, 2023",
     "frontMatter": {
         "title": "Route Configuration"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Receiver Configuration",
-        "permalink": "/reference-guides/monitoring-v2-configuration/receivers"
+        "permalink": "/v2.7/reference-guides/monitoring-v2-configuration/receivers"
     },
     "next": {
         "title": "ServiceMonitor and PodMonitor Configuration",
-        "permalink": "/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors"
+        "permalink": "/v2.7/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors"
     }
 };
 const assets = {};
@@ -383,7 +383,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The route configuration is the section of the Alertmanager custom resource that controls how the alerts fired by Prometheus are grouped and filtered before they reach the receiver.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When a Route is changed, the Prometheus Operator regenerates the Alertmanager custom resource to reflect the changes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information about configuring routes, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com//reference-guides/monitoring-v2-configuration/routes"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The route configuration is the section of the Alertmanager custom resource that controls how the alerts fired by Prometheus are grouped and filtered before they reach the receiver.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When a Route is changed, the Prometheus Operator regenerates the Alertmanager custom resource to reflect the changes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information about configuring routes, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://www.prometheus.io/docs/alerting/latest/configuration/#route"
     }, `official Alertmanager documentation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
@@ -392,7 +395,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `This section assumes familiarity with how monitoring components work together. For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works"
+        "href": "/v2.7/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works"
     }, `this section.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "route-restrictions"
     }, `Route Restrictions`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Alertmanager proxies alerts for Prometheus based on its receivers and a routing tree that filters alerts to certain receivers based on labels.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Alerting drivers proxy alerts for Alertmanager to non-native receivers, such as Microsoft Teams and SMS.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In the Rancher UI for configuring routes and receivers, you can configure routing trees with one root and then a depth of one more level, for a tree with a depth of two. But if you use a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -405,7 +408,7 @@ function MDXContent(_param) {
         "id": "receiver"
     }, `Receiver`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The route needs to refer to a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/reference-guides/monitoring-v2-configuration/receivers"
+        "href": "/v2.7/reference-guides/monitoring-v2-configuration/receivers"
     }, `receiver`), ` that has already been configured.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "grouping"
     }, `Grouping`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
@@ -434,7 +437,7 @@ function MDXContent(_param) {
     }, `N/a`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, `List of labels to group by. All labels must be unique. Special label "..." (aggregate by all possible labels), if provided, must be the only element in the list. Accepts a list of strings. See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `List of labels to group by. Labels must be unique. Special label "..." (aggregate by all possible labels), if provided, must be the only element in the list. Accepts a list of strings. See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
         "href": "https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#route"
     }, `upstream documentation`), ` for details.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {

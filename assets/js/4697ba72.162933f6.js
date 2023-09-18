@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[99988],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[1847],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 43173:
+/***/ 21811:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors",
-    "id": "version-2.5/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors",
+    "id": "reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors",
     "title": "ServiceMonitor and PodMonitor Configuration",
     "description": "ServiceMonitors and PodMonitors are both pseudo-CRDs that map the scrape configuration of the Prometheus custom resource.",
-    "source": "@site/versioned_docs/version-2.5/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors.md",
+    "source": "@site/docs/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors.md",
     "sourceDirName": "reference-guides/monitoring-v2-configuration",
     "slug": "/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors",
-    "permalink": "/zh/v2.5/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors",
+    "permalink": "/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors.md",
     "tags": [],
-    "version": "2.5",
-    "lastUpdatedAt": 1663953084,
-    "formattedLastUpdatedAt": "2022年9月23日",
+    "version": "current",
+    "lastUpdatedAt": 1695053208,
+    "formattedLastUpdatedAt": "Sep 18, 2023",
     "frontMatter": {
         "title": "ServiceMonitor and PodMonitor Configuration"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Route Configuration",
-        "permalink": "/zh/v2.5/reference-guides/monitoring-v2-configuration/routes"
+        "permalink": "/reference-guides/monitoring-v2-configuration/routes"
     },
     "next": {
         "title": "Helm Chart Options",
-        "permalink": "/zh/v2.5/reference-guides/monitoring-v2-configuration/helm-chart-options"
+        "permalink": "/reference-guides/monitoring-v2-configuration/helm-chart-options"
     }
 };
 const assets = {};
@@ -363,11 +363,16 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `ServiceMonitors and PodMonitors are both pseudo-CRDs that map the scrape configuration of the Prometheus custom resource.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These configuration objects declaratively specify the endpoints that Prometheus will scrape metrics from.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `ServiceMonitors are more commonly used than PodMonitors, and we recommend them for most use cases.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "blockquote"
-    }, `This section assumes familiarity with how monitoring components work together. For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com//reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `ServiceMonitors and PodMonitors are both pseudo-CRDs that map the scrape configuration of the Prometheus custom resource.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These configuration objects declaratively specify the endpoints that Prometheus will scrape metrics from.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `ServiceMonitors are more commonly used than PodMonitors, and we recommend them for most use cases.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `This section assumes familiarity with how monitoring components work together. For more information about Alertmanager, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works"
+        "href": "/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works"
     }, `this section.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "servicemonitors"
     }, `ServiceMonitors`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This pseudo-CRD maps to a section of the Prometheus custom resource configuration. It declaratively specifies how groups of Kubernetes services should be monitored.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When a ServiceMonitor is created, the Prometheus Operator updates the Prometheus scrape configuration to include the ServiceMonitor configuration. Then Prometheus begins scraping metrics from the endpoint defined in the ServiceMonitor.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Any Services in your cluster that match the labels located within the ServiceMonitor `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {

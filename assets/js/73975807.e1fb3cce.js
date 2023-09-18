@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[93522],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[53224],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 9777:
+/***/ 33144:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/monitoring-v2-configuration/helm-chart-options",
-    "id": "version-2.7/reference-guides/monitoring-v2-configuration/helm-chart-options",
+    "id": "version-2.5/reference-guides/monitoring-v2-configuration/helm-chart-options",
     "title": "Helm Chart Options",
     "description": "Configuring Resource Limits and Requests",
-    "source": "@site/versioned_docs/version-2.7/reference-guides/monitoring-v2-configuration/helm-chart-options.md",
+    "source": "@site/versioned_docs/version-2.5/reference-guides/monitoring-v2-configuration/helm-chart-options.md",
     "sourceDirName": "reference-guides/monitoring-v2-configuration",
     "slug": "/reference-guides/monitoring-v2-configuration/helm-chart-options",
-    "permalink": "/v2.7/reference-guides/monitoring-v2-configuration/helm-chart-options",
+    "permalink": "/v2.5/reference-guides/monitoring-v2-configuration/helm-chart-options",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/monitoring-v2-configuration/helm-chart-options.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/reference-guides/monitoring-v2-configuration/helm-chart-options.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "version": "2.5",
+    "lastUpdatedAt": 1695053208,
+    "formattedLastUpdatedAt": "Sep 18, 2023",
     "frontMatter": {
         "title": "Helm Chart Options"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "ServiceMonitor and PodMonitor Configuration",
-        "permalink": "/v2.7/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors"
+        "permalink": "/v2.5/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors"
     },
     "next": {
         "title": "Examples",
-        "permalink": "/v2.7/reference-guides/monitoring-v2-configuration/examples"
+        "permalink": "/v2.5/reference-guides/monitoring-v2-configuration/examples"
     }
 };
 const assets = {};
@@ -383,7 +383,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com//reference-guides/monitoring-v2-configuration/helm-chart-options"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "configuring-resource-limits-and-requests"
     }, `Configuring Resource Limits and Requests`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The resource requests and limits can be configured when installing `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
@@ -558,7 +561,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, `rancher-monitoring`), ` Helm chart. In the chart options, reference the secret in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `Alerting > Additional Secrets`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `Alerting > Additional Secrets.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
     }, `Result:`), ` The default Alertmanager custom resource will have access to your trusted CA.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "additional-scrape-configurations"
@@ -571,15 +574,15 @@ function MDXContent(_param) {
         "href": "https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scrape_config"
     }, `scrape_config section`), ` specifies a set of targets and parameters describing how to scrape them. In the general case, one scrape configuration specifies a single job.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `An example of where this might be used is with Istio. For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations"
+        "href": "https://rancher.com/docs/rancher/v2.5/en/istio/configuration-reference/selectors-and-scrape"
     }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "configuring-applications-packaged-within-monitoring-v2"
     }, `Configuring Applications Packaged within Monitoring v2`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `We deploy kube-state-metrics and node-exporter with monitoring v2. Node exporter are deployed as DaemonSets. In the monitoring v2 helm chart, in the values.yaml, each of the things are deployed as sub charts.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `We also deploy grafana which is not managed by prometheus.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you look at what the helm chart is doing like in kube-state-metrics, there are plenty more values that you can set that aren’t exposed in the top level chart.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `But in the top level chart you can add values that override values that exist in the sub chart.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "increase-the-replicas-of-alertmanager"
     }, `Increase the Replicas of Alertmanager`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `As part of the chart deployment options, you can opt to increase the number of replicas of the Alertmanager deployed onto your cluster. The replicas can all be managed using the same underlying Alertmanager Config Secret. For more information on the Alertmanager Config Secret, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/alertmanager#multiple-alertmanager-replicas"
-    }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "href": "/v2.5/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/alertmanager#multiple-alertmanager-replicas"
+    }, `this section`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "configuring-the-namespace-for-a-persistent-grafana-dashboard"
     }, `Configuring the Namespace for a Persistent Grafana Dashboard`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To specify that you would like Grafana to watch for ConfigMaps across all namespaces, set this value in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"

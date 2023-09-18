@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[36097],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[47685],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 18615:
+/***/ 42670:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/monitoring-v2-configuration/examples",
-    "id": "reference-guides/monitoring-v2-configuration/examples",
+    "id": "version-2.7/reference-guides/monitoring-v2-configuration/examples",
     "title": "Examples",
     "description": "ServiceMonitor",
-    "source": "@site/docs/reference-guides/monitoring-v2-configuration/examples.md",
+    "source": "@site/versioned_docs/version-2.7/reference-guides/monitoring-v2-configuration/examples.md",
     "sourceDirName": "reference-guides/monitoring-v2-configuration",
     "slug": "/reference-guides/monitoring-v2-configuration/examples",
-    "permalink": "/reference-guides/monitoring-v2-configuration/examples",
+    "permalink": "/v2.7/reference-guides/monitoring-v2-configuration/examples",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/monitoring-v2-configuration/examples.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/monitoring-v2-configuration/examples.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1685656966,
-    "formattedLastUpdatedAt": "Jun 1, 2023",
+    "version": "2.7",
+    "lastUpdatedAt": 1695053208,
+    "formattedLastUpdatedAt": "Sep 18, 2023",
     "frontMatter": {
         "title": "Examples"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Helm Chart Options",
-        "permalink": "/reference-guides/monitoring-v2-configuration/helm-chart-options"
+        "permalink": "/v2.7/reference-guides/monitoring-v2-configuration/helm-chart-options"
     },
     "next": {
         "title": "Prometheus Federator",
-        "permalink": "/pages-for-subheaders/prometheus-federator"
+        "permalink": "/v2.7/pages-for-subheaders/prometheus-federator"
     }
 };
 const assets = {};
@@ -373,7 +373,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com//reference-guides/monitoring-v2-configuration/examples"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "servicemonitor"
     }, `ServiceMonitor`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `An example ServiceMonitor custom resource can be found `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
@@ -398,7 +401,7 @@ function MDXContent(_param) {
         "id": "alertmanager-config"
     }, `Alertmanager Config`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For an example configuration, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/reference-guides/monitoring-v2-configuration/receivers#example-alertmanager-configs"
+        "href": "/v2.7/reference-guides/monitoring-v2-configuration/receivers#example-alertmanager-configs"
     }, `this section`), `.`));
 }
 MDXContent.isMDXComponent = true;

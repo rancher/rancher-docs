@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.5/reference-guides/monitoring-v2-configuration/routes.md",
     "sourceDirName": "reference-guides/monitoring-v2-configuration",
     "slug": "/reference-guides/monitoring-v2-configuration/routes",
-    "permalink": "/v2.5/reference-guides/monitoring-v2-configuration/routes",
+    "permalink": "/zh/v2.5/reference-guides/monitoring-v2-configuration/routes",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/reference-guides/monitoring-v2-configuration/routes.md",
     "tags": [],
     "version": "2.5",
-    "lastUpdatedAt": 1685656966,
-    "formattedLastUpdatedAt": "Jun 1, 2023",
+    "lastUpdatedAt": 1695053208,
+    "formattedLastUpdatedAt": "2023年9月18日",
     "frontMatter": {
         "title": "Route Configuration"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Receiver Configuration",
-        "permalink": "/v2.5/reference-guides/monitoring-v2-configuration/receivers"
+        "permalink": "/zh/v2.5/reference-guides/monitoring-v2-configuration/receivers"
     },
     "next": {
         "title": "ServiceMonitor and PodMonitor Configuration",
-        "permalink": "/v2.5/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors"
+        "permalink": "/zh/v2.5/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors"
     }
 };
 const assets = {};
@@ -389,14 +389,17 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The route configuration is the section of the Alertmanager custom resource that controls how the alerts fired by Prometheus are grouped and filtered before they reach the receiver.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When a Route is changed, the Prometheus Operator regenerates the Alertmanager custom resource to reflect the changes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information about configuring routes, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com//reference-guides/monitoring-v2-configuration/routes"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The route configuration is the section of the Alertmanager custom resource that controls how the alerts fired by Prometheus are grouped and filtered before they reach the receiver.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When a Route is changed, the Prometheus Operator regenerates the Alertmanager custom resource to reflect the changes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information about configuring routes, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://www.prometheus.io/docs/alerting/latest/configuration/#route"
     }, `official Alertmanager documentation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "blockquote"
     }, `This section assumes familiarity with how monitoring components work together. For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.5/explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works"
+        "href": "/zh/v2.5/explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works"
     }, `this section.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "route-restrictions"
     }, `Route Restrictions`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Alertmanager proxies alerts for Prometheus based on its receivers and a routing tree that filters alerts to certain receivers based on labels.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Alerting drivers proxy alerts for Alertmanager to non-native receivers, such as Microsoft Teams and SMS.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In the Rancher UI for configuring routes and receivers, you can configure routing trees with one root and then a depth of one more level, for a tree with a depth of two. But if you use a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -414,7 +417,7 @@ function MDXContent(_param) {
         "id": "receiver"
     }, `Receiver`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The route needs to refer to a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.5/reference-guides/monitoring-v2-configuration/receivers"
+        "href": "/zh/v2.5/reference-guides/monitoring-v2-configuration/receivers"
     }, `receiver`), ` that has already been configured.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "grouping"
     }, `Grouping`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
@@ -509,7 +512,7 @@ function MDXContent(_param) {
         mdxType: "TabItem"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Alertmanager must be configured in YAML, as shown in this `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.5/reference-guides/monitoring-v2-configuration/examples#alertmanager-config"
+        "href": "/zh/v2.5/reference-guides/monitoring-v2-configuration/examples#alertmanager-config"
     }, `example.`)))));
 }
 MDXContent.isMDXComponent = true;
