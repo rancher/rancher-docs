@@ -1,10 +1,16 @@
-## API Quickstart Guide
+---
+title: API Quickstart Guide
+---
 
 First, locate the server url of your Rancher instance. This can be found in the "Global Settings" page.
+
 Second, create an API Key (rancher token) with no scope.
 
-**Warning:** An API Key with no scope grants unrestricted access to all resources that your user can access. This token should be securely stored, and rotated frequently to prevent unauthorized use.
+:::warning
 
+An API Key with no scope grants unrestricted access to all resources that your user can access. This token should be securely stored, and rotated frequently to prevent unauthorized use.
+
+:::
 
 Third, using the below format, create a `kubeconfig.yaml` file (replace `$SERVER_URL` with the server url and `$API_KEY` with the API Key):
 
@@ -38,7 +44,7 @@ You can then use this file (just like any other kubeconfig) with any compatible 
 
 For more information on the options available in the kubeconfig file, see the [upstream documentation](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/).
 
-### Example Using Kubectl
+## Kubectl Example
 
 Set your KUBECONFIG env var to refer to the new Rancher kubeconfig that was just created:
 
@@ -100,7 +106,7 @@ Replace `$PROJECT_NAME` with the name of the project (displayed by kubectl after
 kubectl delete project $PROJECT_NAME -n local
 ```
 
-### Specifying CA Certs
+## Specifying CA Certs
 
 Most setups will require additional modification to the above template to ensure that the compatible tool can recognize the CA certs that rancher is using.
 
