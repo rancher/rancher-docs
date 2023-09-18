@@ -87,9 +87,9 @@ The `cattle-cluster-agent` log levels can be set when you initialize the downstr
 When you create a cluster under **Cluster Configuration > Agent Environment Vars** you can set variables to define the log level.  
 
 
-For trace-level `CATTLE_TRACE` or `RANCHER_TRACE` must be set to `true`
+- Trace-level logging: Set `CATTLE_TRACE` or `RANCHER_TRACE` to `true`
 
-For debug-level `CATTLE_DEBUG` or `RANCHER_DEUBG` must be set to `true`
+-  Debug-level logging: Set `CATTLE_DEBUG` or `RANCHER_DEUBG` to `true`
 
 :::caution
 
