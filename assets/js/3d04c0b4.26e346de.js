@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[79187],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[11184],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 19968:
+/***/ 40215:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/backup-restore-configuration/backup-configuration",
-    "id": "reference-guides/backup-restore-configuration/backup-configuration",
+    "id": "version-2.7/reference-guides/backup-restore-configuration/backup-configuration",
     "title": "Backup Configuration",
-    "description": "The Backup: Create page lets you configure a schedule, enable encryption and specify the storage location for your backups.",
-    "source": "@site/docs/reference-guides/backup-restore-configuration/backup-configuration.md",
+    "description": "The Backup Create page lets you configure a schedule, enable encryption and specify the storage location for your backups.",
+    "source": "@site/versioned_docs/version-2.7/reference-guides/backup-restore-configuration/backup-configuration.md",
     "sourceDirName": "reference-guides/backup-restore-configuration",
     "slug": "/reference-guides/backup-restore-configuration/backup-configuration",
-    "permalink": "/reference-guides/backup-restore-configuration/backup-configuration",
+    "permalink": "/v2.7/reference-guides/backup-restore-configuration/backup-configuration",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/backup-restore-configuration/backup-configuration.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/backup-restore-configuration/backup-configuration.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1694636947,
-    "formattedLastUpdatedAt": "Sep 13, 2023",
+    "version": "2.7",
+    "lastUpdatedAt": 1695050587,
+    "formattedLastUpdatedAt": "Sep 18, 2023",
     "frontMatter": {
         "title": "Backup Configuration"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Rancher Backup Configuration Reference",
-        "permalink": "/pages-for-subheaders/backup-restore-configuration"
+        "permalink": "/v2.7/pages-for-subheaders/backup-restore-configuration"
     },
     "next": {
         "title": "Restore Configuration",
-        "permalink": "/reference-guides/backup-restore-configuration/restore-configuration"
+        "permalink": "/v2.7/reference-guides/backup-restore-configuration/restore-configuration"
     }
 };
 const assets = {};
@@ -360,11 +360,6 @@ const toc = [
         value: 'S3',
         id: 's3',
         level: 3
-    },
-    {
-        value: 'YAML Directive Fields',
-        id: 'yaml-directive-fields',
-        level: 4
     },
     {
         value: 'Example S3 Storage Configuration',
@@ -403,16 +398,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Backup: Create`), ` page lets you configure a schedule, enable encryption and specify the storage location for your backups.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You must first `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher"
-    }, `install`), ` the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `rancher-backup`), ` operator. After you do so, you can access the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Backup: Create`), ` page:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com//reference-guides/backup-restore-configuration/backup-configuration"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Backup Create page lets you configure a schedule, enable encryption and specify the storage location for your backups.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "schedule"
     }, `Schedule`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Select the first option to perform a one-time backup, or select the second option to schedule recurring backups. Selecting `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
@@ -489,7 +478,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `For example, when `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster"
+        "href": "/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster"
     }, `migrating Rancher to a new cluster`), ` the file is used to re-create the secret in the new cluster.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The operator consumes the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `EncryptionConfiguration`), ` as a Kubernetes Secret in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -555,30 +544,21 @@ function MDXContent(_param) {
         parentName: "p"
     }, `rancher-backup`), ` operator.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Selecting the first option stores this backup in the storage location configured while installing the rancher-backup chart. The second option lets you configure a different S3 compatible storage provider for storing the backup.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "s3"
-    }, `S3`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "type": "caution"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, `If you use an S3 backup target, make sure that every cluster has its own bucket or folder. Rancher populates snapshot information from any available snapshot listed in the S3 bucket or folder configured for that cluster.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The S3 storage location contains the following configuration fields:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `S3`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The S3 storage location contains the following configuration fields:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `Credential Secret`), ` (optional): If you need an AWS access key or secret key to access an S3 bucket, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "/how-to-guides/new-user-guides/kubernetes-resources-setup/secrets"
-    }, `create a secret`), ` using your credentials, with keys and directives named `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `Credential Secret`), ` (optional): If you need to use the AWS Access keys Secret keys to access s3 bucket, create a secret with your credentials with keys and the directives `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
     }, `accessKey`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
-    }, `secretKey`), `. The secret can be in any namespace. An example secret is `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `secretKey`), `. It can be in any namespace. An example secret is `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
         "href": "#example-credentialsecret"
-    }, `here`), `. This directive is unnecessary if the nodes running your operator are in EC2 and assigned `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `here.`), ` This directive is unnecessary if the nodes running your operator are in EC2 and set up with IAM permissions that allow them to access S3, as described in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
         "href": "#iam-permissions-for-ec2-nodes-to-access-s3"
-    }, `IAM permissions to access S3`), `. The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Credential Secret`), ` dropdown lists secrets in all namespaces.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `this section.`), ` The Credential Secret dropdown lists the secrets in all namespaces.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
@@ -613,9 +593,7 @@ function MDXContent(_param) {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `Skip TLS Verifications`), ` (optional): Set to true if you are not using TLS.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
-        "id": "yaml-directive-fields"
-    }, `YAML Directive Fields`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
+    }, `Skip TLS Verifications`), ` (optional): Set to true if you are not using TLS.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "thead"
@@ -640,20 +618,19 @@ function MDXContent(_param) {
     }, `credentialSecretName`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, `If you need an AWS access key or secret key to access an S3 bucket, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "td",
-        "href": "/how-to-guides/new-user-guides/kubernetes-resources-setup/secrets"
-    }, `create a secret`), ` using your credentials, with keys and directives named `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `If you need to use the AWS Access keys Secret keys to access s3 bucket, create a secret with your credentials with keys and the directives `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "td"
     }, `accessKey`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "td"
-    }, `secretKey`), `. The secret can be in any namespace. An example secret is `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `secretKey`), `. It can be in any namespace as long as you provide that namespace in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
+    }, `credentialSecretNamespace`), `. An example secret is `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
         "href": "#example-credentialsecret"
-    }, `here`), `. This directive is unnecessary if the nodes running your operator are in EC2 and assigned `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `here.`), ` This directive is unnecessary if the nodes running your operator are in EC2 and set up with IAM permissions that allow them to access S3, as described in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
         "href": "#iam-permissions-for-ec2-nodes-to-access-s3"
-    }, `IAM permissions to access S3`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+    }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
@@ -860,7 +837,7 @@ data:
         "id": "examples"
     }, `Examples`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For example Backup custom resources, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/reference-guides/backup-restore-configuration/examples#backup"
+        "href": "/v2.7/reference-guides/backup-restore-configuration/examples#backup"
     }, `this page.`)));
 }
 MDXContent.isMDXComponent = true;

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[73016],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[54608],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 52612:
+/***/ 9926:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/backup-restore-configuration/restore-configuration",
-    "id": "version-2.6/reference-guides/backup-restore-configuration/restore-configuration",
+    "id": "version-2.7/reference-guides/backup-restore-configuration/restore-configuration",
     "title": "Restore Configuration",
     "description": "The Restore Create page lets you provide details of the backup to restore from",
-    "source": "@site/versioned_docs/version-2.6/reference-guides/backup-restore-configuration/restore-configuration.md",
+    "source": "@site/versioned_docs/version-2.7/reference-guides/backup-restore-configuration/restore-configuration.md",
     "sourceDirName": "reference-guides/backup-restore-configuration",
     "slug": "/reference-guides/backup-restore-configuration/restore-configuration",
-    "permalink": "/v2.6/reference-guides/backup-restore-configuration/restore-configuration",
+    "permalink": "/v2.7/reference-guides/backup-restore-configuration/restore-configuration",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/backup-restore-configuration/restore-configuration.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/backup-restore-configuration/restore-configuration.md",
     "tags": [],
-    "version": "2.6",
-    "lastUpdatedAt": 1668452187,
-    "formattedLastUpdatedAt": "Nov 14, 2022",
+    "version": "2.7",
+    "lastUpdatedAt": 1695050587,
+    "formattedLastUpdatedAt": "Sep 18, 2023",
     "frontMatter": {
         "title": "Restore Configuration"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Backup Configuration",
-        "permalink": "/v2.6/reference-guides/backup-restore-configuration/backup-configuration"
+        "permalink": "/v2.7/reference-guides/backup-restore-configuration/backup-configuration"
     },
     "next": {
         "title": "Backup Storage Location Configuration",
-        "permalink": "/v2.6/reference-guides/backup-restore-configuration/storage-configuration"
+        "permalink": "/v2.7/reference-guides/backup-restore-configuration/storage-configuration"
     }
 };
 const assets = {};
@@ -388,7 +388,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Restore Create page lets you provide details of the backup to restore from`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com//reference-guides/backup-restore-configuration/restore-configuration"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Restore Create page lets you provide details of the backup to restore from`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
         src: (__webpack_require__(41399)/* ["default"] */ .Z),
         width: "2870",
         height: "1074"
@@ -425,7 +428,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `backup.StorageLocation`), ` configuration in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/reference-guides/backup-restore-configuration/backup-configuration#storage-location"
+        "href": "/v2.7/reference-guides/backup-restore-configuration/backup-configuration#storage-location"
     }, `Backup custom resource.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
         src: (__webpack_require__(17357)/* ["default"] */ .Z),
         width: "2344",

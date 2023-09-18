@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[11184],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[92522],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 40215:
+/***/ 23932:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/backup-restore-configuration/backup-configuration",
-    "id": "version-2.7/reference-guides/backup-restore-configuration/backup-configuration",
+    "id": "version-2.6/reference-guides/backup-restore-configuration/backup-configuration",
     "title": "Backup Configuration",
     "description": "The Backup Create page lets you configure a schedule, enable encryption and specify the storage location for your backups.",
-    "source": "@site/versioned_docs/version-2.7/reference-guides/backup-restore-configuration/backup-configuration.md",
+    "source": "@site/versioned_docs/version-2.6/reference-guides/backup-restore-configuration/backup-configuration.md",
     "sourceDirName": "reference-guides/backup-restore-configuration",
     "slug": "/reference-guides/backup-restore-configuration/backup-configuration",
-    "permalink": "/v2.7/reference-guides/backup-restore-configuration/backup-configuration",
+    "permalink": "/v2.6/reference-guides/backup-restore-configuration/backup-configuration",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/backup-restore-configuration/backup-configuration.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/backup-restore-configuration/backup-configuration.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "version": "2.6",
+    "lastUpdatedAt": 1695050587,
+    "formattedLastUpdatedAt": "Sep 18, 2023",
     "frontMatter": {
         "title": "Backup Configuration"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Rancher Backup Configuration Reference",
-        "permalink": "/v2.7/pages-for-subheaders/backup-restore-configuration"
+        "permalink": "/v2.6/pages-for-subheaders/backup-restore-configuration"
     },
     "next": {
         "title": "Restore Configuration",
-        "permalink": "/v2.7/reference-guides/backup-restore-configuration/restore-configuration"
+        "permalink": "/v2.6/reference-guides/backup-restore-configuration/restore-configuration"
     }
 };
 const assets = {};
@@ -398,7 +398,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Backup Create page lets you configure a schedule, enable encryption and specify the storage location for your backups.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com//reference-guides/backup-restore-configuration/backup-configuration"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Backup Create page lets you configure a schedule, enable encryption and specify the storage location for your backups.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "schedule"
     }, `Schedule`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Select the first option to perform a one-time backup, or select the second option to schedule recurring backups. Selecting `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
@@ -475,7 +478,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `For example, when `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster"
+        "href": "/v2.6/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster"
     }, `migrating Rancher to a new cluster`), ` the file is used to re-create the secret in the new cluster.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The operator consumes the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `EncryptionConfiguration`), ` as a Kubernetes Secret in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -834,7 +837,7 @@ data:
         "id": "examples"
     }, `Examples`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For example Backup custom resources, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/backup-restore-configuration/examples#backup"
+        "href": "/v2.6/reference-guides/backup-restore-configuration/examples#backup"
     }, `this page.`)));
 }
 MDXContent.isMDXComponent = true;

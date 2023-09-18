@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.5/reference-guides/backup-restore-configuration/backup-configuration.md",
     "sourceDirName": "reference-guides/backup-restore-configuration",
     "slug": "/reference-guides/backup-restore-configuration/backup-configuration",
-    "permalink": "/v2.5/reference-guides/backup-restore-configuration/backup-configuration",
+    "permalink": "/zh/v2.5/reference-guides/backup-restore-configuration/backup-configuration",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/reference-guides/backup-restore-configuration/backup-configuration.md",
     "tags": [],
     "version": "2.5",
-    "lastUpdatedAt": 1676641701,
-    "formattedLastUpdatedAt": "Feb 17, 2023",
+    "lastUpdatedAt": 1695050587,
+    "formattedLastUpdatedAt": "2023年9月18日",
     "frontMatter": {
         "title": "Backup Configuration"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Rancher Backup Configuration Reference",
-        "permalink": "/v2.5/pages-for-subheaders/backup-restore-configuration"
+        "permalink": "/zh/v2.5/pages-for-subheaders/backup-restore-configuration"
     },
     "next": {
         "title": "Restore Configuration",
-        "permalink": "/v2.5/reference-guides/backup-restore-configuration/restore-configuration"
+        "permalink": "/zh/v2.5/reference-guides/backup-restore-configuration/restore-configuration"
     }
 };
 const assets = {};
@@ -398,7 +398,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Backup Create page lets you configure a schedule, enable encryption and specify the storage location for your backups.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com//reference-guides/backup-restore-configuration/backup-configuration"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Backup Create page lets you configure a schedule, enable encryption and specify the storage location for your backups.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
         src: (__webpack_require__(91806)/* ["default"] */ .Z),
         width: "2861",
         height: "1292"
@@ -816,7 +819,7 @@ data:
         "id": "examples"
     }, `Examples`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For example Backup custom resources, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.5/reference-guides/backup-restore-configuration/examples#backup"
+        "href": "/zh/v2.5/reference-guides/backup-restore-configuration/examples#backup"
     }, `this page.`)));
 }
 MDXContent.isMDXComponent = true;

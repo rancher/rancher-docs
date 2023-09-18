@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[48771],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[3957],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 84300:
+/***/ 79014:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/backup-restore-configuration/restore-configuration",
-    "id": "reference-guides/backup-restore-configuration/restore-configuration",
+    "id": "version-2.5/reference-guides/backup-restore-configuration/restore-configuration",
     "title": "Restore Configuration",
     "description": "The Restore Create page lets you provide details of the backup to restore from",
-    "source": "@site/docs/reference-guides/backup-restore-configuration/restore-configuration.md",
+    "source": "@site/versioned_docs/version-2.5/reference-guides/backup-restore-configuration/restore-configuration.md",
     "sourceDirName": "reference-guides/backup-restore-configuration",
     "slug": "/reference-guides/backup-restore-configuration/restore-configuration",
-    "permalink": "/reference-guides/backup-restore-configuration/restore-configuration",
+    "permalink": "/zh/v2.5/reference-guides/backup-restore-configuration/restore-configuration",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/backup-restore-configuration/restore-configuration.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/reference-guides/backup-restore-configuration/restore-configuration.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1663953084,
-    "formattedLastUpdatedAt": "Sep 23, 2022",
+    "version": "2.5",
+    "lastUpdatedAt": 1695050587,
+    "formattedLastUpdatedAt": "2023年9月18日",
     "frontMatter": {
         "title": "Restore Configuration"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Backup Configuration",
-        "permalink": "/reference-guides/backup-restore-configuration/backup-configuration"
+        "permalink": "/zh/v2.5/reference-guides/backup-restore-configuration/backup-configuration"
     },
     "next": {
         "title": "Backup Storage Location Configuration",
-        "permalink": "/reference-guides/backup-restore-configuration/storage-configuration"
+        "permalink": "/zh/v2.5/reference-guides/backup-restore-configuration/storage-configuration"
     }
 };
 const assets = {};
@@ -388,7 +388,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Restore Create page lets you provide details of the backup to restore from`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com//reference-guides/backup-restore-configuration/restore-configuration"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Restore Create page lets you provide details of the backup to restore from`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
         src: (__webpack_require__(41399)/* ["default"] */ .Z),
         width: "2870",
         height: "1074"
@@ -425,7 +428,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `backup.StorageLocation`), ` configuration in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/reference-guides/backup-restore-configuration/backup-configuration#storage-location"
+        "href": "/zh/v2.5/reference-guides/backup-restore-configuration/backup-configuration#storage-location"
     }, `Backup custom resource.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
         src: (__webpack_require__(17357)/* ["default"] */ .Z),
         width: "2344",
@@ -468,12 +471,12 @@ function MDXContent(_param) {
         "align": null
     }, `Provide the name of the Secret from `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "td"
-    }, `cattle-resources-system`), ` namespace, that contains the encryption config file.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "title": "Important:",
-        "type": "note"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, `This field should only be set if the backup was created with encryption enabled. Providing the incorrect encryption config will cause the restore to fail.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }, `cattle-resources-system`), ` namespace, that contains the encryption config file.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Important`), `
+This field should only be set if the backup was created with encryption enabled. Providing the incorrect encryption config will cause the restore to fail.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "prune-during-restore"
     }, `Prune During Restore`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"

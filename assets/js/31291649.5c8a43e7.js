@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[6349],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[36378],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 75173:
+/***/ 7026:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/backup-restore-configuration/examples",
-    "id": "version-2.7/reference-guides/backup-restore-configuration/examples",
+    "id": "version-2.6/reference-guides/backup-restore-configuration/examples",
     "title": "Examples",
     "description": "This section contains examples of Backup and Restore custom resources.",
-    "source": "@site/versioned_docs/version-2.7/reference-guides/backup-restore-configuration/examples.md",
+    "source": "@site/versioned_docs/version-2.6/reference-guides/backup-restore-configuration/examples.md",
     "sourceDirName": "reference-guides/backup-restore-configuration",
     "slug": "/reference-guides/backup-restore-configuration/examples",
-    "permalink": "/v2.7/reference-guides/backup-restore-configuration/examples",
+    "permalink": "/v2.6/reference-guides/backup-restore-configuration/examples",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/backup-restore-configuration/examples.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/backup-restore-configuration/examples.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "version": "2.6",
+    "lastUpdatedAt": 1695050587,
+    "formattedLastUpdatedAt": "Sep 18, 2023",
     "frontMatter": {
         "title": "Examples"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Backup Storage Location Configuration",
-        "permalink": "/v2.7/reference-guides/backup-restore-configuration/storage-configuration"
+        "permalink": "/v2.6/reference-guides/backup-restore-configuration/storage-configuration"
     },
     "next": {
         "title": "Kubernetes Concepts",
-        "permalink": "/v2.7/reference-guides/kubernetes-concepts"
+        "permalink": "/v2.6/reference-guides/kubernetes-concepts"
     }
 };
 const assets = {};
@@ -438,7 +438,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section contains examples of Backup and Restore custom resources.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The default backup storage location is configured when the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com//reference-guides/backup-restore-configuration/examples"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section contains examples of Backup and Restore custom resources.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The default backup storage location is configured when the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `rancher-backup`), ` operator is installed or upgraded.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Encrypted backups can only be restored if the Restore custom resource uses the same encryption configuration secret that was used to create the backup.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "backup"
@@ -448,7 +451,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `Note:`), ` Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/backup-restore-configuration/backup-configuration"
+        "href": "/v2.6/reference-guides/backup-restore-configuration/backup-configuration"
     }, `backup config reference page`), ` for more information on configuring the options below.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "backup-in-the-default-location-with-encryption"
     }, `Backup in the Default Location with Encryption`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
@@ -555,7 +558,7 @@ spec:
         parentName: "p"
     }, `rancher-backup`), ` have `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/backup-restore-configuration/backup-configuration#iam-permissions-for-ec2-nodes-to-access-s3"
+        "href": "/v2.6/reference-guides/backup-restore-configuration/backup-configuration#iam-permissions-for-ec2-nodes-to-access-s3"
     }, `these permissions for access to S3.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-yaml"
@@ -580,7 +583,7 @@ spec:
         parentName: "p"
     }, `Note:`), ` Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/backup-restore-configuration/restore-configuration"
+        "href": "/v2.6/reference-guides/backup-restore-configuration/restore-configuration"
     }, `restore config reference page`), ` for more information on configuring the options below.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "restore-using-the-default-backup-file-location"
     }, `Restore Using the Default Backup File Location`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
@@ -670,7 +673,7 @@ spec:
         parentName: "p"
     }, `rancher-backup`), ` have `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/backup-restore-configuration/backup-configuration#iam-permissions-for-ec2-nodes-to-access-s3"
+        "href": "/v2.6/reference-guides/backup-restore-configuration/backup-configuration#iam-permissions-for-ec2-nodes-to-access-s3"
     }, `these permissions for access to S3.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-yaml"
