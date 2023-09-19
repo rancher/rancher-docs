@@ -2,6 +2,10 @@
 title: Troubleshooting nginx-proxy
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/troubleshooting/kubernetes-components/troubleshooting-nginx-proxy"/>
+</head>
+
 The `nginx-proxy` container is deployed on every node that does not have the `controlplane` role. It provides access to all the nodes with the `controlplane` role by dynamically generating the NGINX configuration based on available nodes with the `controlplane` role.
 
 ## Check if the Container is Running

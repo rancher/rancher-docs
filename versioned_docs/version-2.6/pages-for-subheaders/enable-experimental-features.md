@@ -1,6 +1,11 @@
 ---
 title: Enabling Experimental Features
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/enable-experimental-features"/>
+</head>
+
 Rancher includes some features that are experimental and disabled by default. You might want to enable these features, for example, if you decide that the benefits of using an [unsupported storage type](../how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md) outweighs the risk of using an untested feature. Feature flags were introduced to allow you to try these features that are not enabled by default.
 
 The features can be enabled in three ways:
@@ -48,17 +53,14 @@ If you are installing an alpha version, Helm requires adding the `--devel` optio
 
 :::
 
-### Rendering the Helm Chart for Air Gap Installations
+### Enabling Features for Air Gap Installs
 
-For an air gap installation of Rancher, you need to add a Helm chart repository and render a Helm template before installing Rancher with Helm. For details, refer to the [air gap installation documentation.](../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha.md)
+To perform an [air gap installation of Rancher](../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha.md), add a Helm chart repository and download a Helm chart, then install Rancher with Helm.
 
-Here is an example of a command for passing in the feature flag names when rendering the Helm template. In the below example, two features are enabled by passing the feature flag names in a comma separated list.
-
-The Helm command is as follows:
+When you install the Helm chart, you should pass in feature flag names in a comma separated list, as in the following example:
 
 ```
-helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
-  --no-hooks \ # prevent files for Helm hooks from being generated
+helm install rancher ./rancher-<VERSION>.tgz \
   --namespace cattle-system \
   --set hostname=<RANCHER.YOURDOMAIN.COM> \
   --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \

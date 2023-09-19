@@ -2,6 +2,10 @@
 title: Examples
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/backup-restore-configuration/examples"/>
+</head>
+
 This section contains examples of Backup and Restore custom resources.
 
 The default backup storage location is configured when the `rancher-backup` operator is installed or upgraded.

@@ -2,6 +2,10 @@
 title: AKS Cluster Configuration Reference
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration"/>
+</head>
+
 ## Changes in Rancher v2.6
 
 - Support for adding more than one node pool

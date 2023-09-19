@@ -2,6 +2,10 @@
 title: User Settings
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/user-settings"/>
+</head>
+
 Within Rancher, each user has a number of settings associated with their login: personal preferences, API keys, etc. You can configure these settings by choosing from the **User Settings** menu. You can open this menu by clicking your avatar, located within the main menu.
 
 ![User Settings Menu](/img/user-settings.png)

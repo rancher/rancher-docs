@@ -2,7 +2,7 @@
 title: 参与 Rancher 社区贡献
 ---
 
-本节介绍 Rancher 使用的仓库、如何构建仓库以及提交 issue 时要包含的信息。
+本文介绍了 Rancher 仓库和 Rancher 文档、如何构建 Rancher 仓库以及提交 issue 时要包含哪些信息。
 
 有关如何为 Rancher 项目开发做出贡献的更多详细信息，请参阅 [Rancher Developer Wiki](https://github.com/rancher/rancher/wiki)。Wiki 包含以下主题的资源：
 
@@ -14,7 +14,15 @@ title: 参与 Rancher 社区贡献
 
 在 Rancher Users Slack 上，开发者的频道是 **#developer**。
 
-## 仓库
+## Rancher 文档
+
+如果你对此网站上的文档有建议，请在主 [Rancher 文档](https://github.com/rancher/rancher-docs)仓库中[提交 issue](https://github.com/rancher/rancher-docs/issues/new/choose)。此仓库包含 Rancher v2.0 及更高版本的文档。
+
+有关贡献和构建 Rancher v2.x 文档仓库的更多详细信息，请参阅 [Rancher 文档 README](https://github.com/rancher/rancher-docs#readme)。
+
+有关 Rancher v1.6 及更早版本的文档，请参阅 [Rancher 1.x docs](https://github.com/rancher/rancher.github.io) 仓库，其中包含 https://rancher.com/docs/rancher/v1.6/en/ 的源文件。
+
+## Rancher 仓库
 
 所有仓库都位于我们的主要 GitHub 组织内。Rancher 使用了很多仓库，以下是部分主要仓库的描述：
 
@@ -38,19 +46,19 @@ title: 参与 Rancher 社区贡献
 ![Rancher diagram](/img/ranchercomponentsdiagram-2.6.svg)<br/>
 <sup>用于配置/管理 Kubernetes 集群的 Rancher 组件。</sup>
 
-## 构建
+### 构建 Rancher 仓库
 
 每个仓库都应该有一个 Makefile，并且可以使用 `make` 命令进行构建。`make` 目标基于仓库中 `/scripts` 目录中的脚本，每个目标都使用 [Dapper](https://github.com/rancher/dapper) 在孤立的环境中运行。`Dockerfile.dapper` 将用于此操作，它包含了所需的所有构建工具。
 
 默认目标是 `ci`，它将运行 `./scripts/validate`、`./scripts/build`、`./scripts/test ` 和 `./scripts/package`。生成的二进制文件将在 `./build/bin` 中，通常也打包在 Docker 镜像中。
 
-## Bug、Issue 和疑问
+### Rancher Bug、Issue 或疑问
 
 如果你发现任何 bug 或问题，由于有人可能遇到过同样的问题，或者我们已经正在寻找解决方案，因此请先在[已报告 issue](https://github.com/rancher/rancher/issues) 中搜索。
 
 如果找不到与你的问题相关的内容，请通过[提出 issue](https://github.com/rancher/rancher/issues/new) 与我们联系。与 Rancher 相关的仓库有很多，但请将 issue 提交到 Rancher 仓库中，这样能确保我们能看到这些 issue。如果你想就一个用例提出问题或询问其他用户，你可以在 [Rancher 论坛](https://forums.rancher.com)上发帖。
 
-### 提交 Issue 的检查清单
+#### 提交 Issue 的检查清单
 
 提交问题时请遵循此清单，以便我们调查和解决问题。如果你能提供更多信息，我们就可以使用更多数据来确定导致问题的原因或发现更多相关的内容。
 
@@ -126,11 +134,3 @@ title: 参与 Rancher 社区贡献
    - Docker Daemon 日志记录（可能并不全部存在，取决于操作系统）
       - `/var/log/docker.log`
 - **指标**：如果你遇到性能问题，请提供尽可能多的指标数据（文件或屏幕截图）来帮助我们确定问题。如果你遇到主机相关的问题，你可以提供 `top`、`free -m`、`df` 的输出，这些输出会显示进程/内存/磁盘的使用情况。
-
-## 文档
-
-如果你对我们的文档有修改意见，请在我们的文档仓库中提交 PR。
-
-- [Rancher 2.x 文档仓库](https://github.com/rancher/docs)：Rancher 2.x 所有文档都在这个仓库中。具体位于仓库的 `content` 文件夹中。
-
-- [Rancher 1.x 文档仓库](https://github.com/rancher/rancher.github.io)：Rancher 1.x 所有文档都在这个仓库中。具体位于仓库的 `rancher` 文件夹中。

@@ -2,6 +2,7 @@
 title: "Kubernetes 持久存储：卷和存储类"
 description: "了解在 Kubernetes 中创建持久存储的两种方式：持久卷和存储类"
 ---
+
 在部署需要保​​留数据的应用时，你需要创建持久存储。持久存储允许你在运行应用的 pod 之外存储应用数据。即使运行应用的 pod 发生故障，这种存储方式也能让你保留应用数据。
 
 本文假设你已了解 Kubernetes 的持久卷、持久卷声明和存储类的概念。如需更多信息，请参阅[存储的工作原理](../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/about-persistent-storage.md)。

@@ -80,7 +80,10 @@ Rancher Server 会定期刷新 `rke-metadata-config` 来下载新的 Kubernetes 
 
 在将新的 Kubernetes 版本加载到 Rancher Server 中之后，需要执行其他步骤才能使用它们启动集群。Rancher 需要访问更新的系统镜像。虽然只有管理员可以更改元数据设置，但任何用户都可以下载 Rancher 系统镜像并为镜像准备私有容器镜像仓库。
 
-1. 要把系统镜像下载到私有镜像仓库，请单击 Rancher UI 左下角的 Rancher Server 版本。
+要下载私有镜像仓库的系统镜像：
+
+1. 点击左上角的 **☰**。
+1. 点击左侧导航底部的**简介**。
 1. 下载适用于 Linux 或 Windows 操作系统的镜像。
 1. 下载 `rancher-images.txt`。
 1. 使用[离线环境安装](other-installation-methods/air-gapped-helm-cli-install/publish-images.md)时使用的步骤准备私有镜像仓库，但不要使用发布页面中的 `rancher-images.txt`，而是使用上一个步骤中获取的文件。

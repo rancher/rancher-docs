@@ -2,6 +2,10 @@
 title: VSphere Node Template Configuration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere"/>
+</head>
+
 ## Account Access
 
 | Parameter                | Required | Description |

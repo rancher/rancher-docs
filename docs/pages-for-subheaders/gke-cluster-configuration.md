@@ -2,6 +2,10 @@
 title: GKE Cluster Configuration Reference
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/gke-cluster-configuration"/>
+</head>
+
 ## Changes in Rancher v2.6
 
 - Support for additional configuration options:

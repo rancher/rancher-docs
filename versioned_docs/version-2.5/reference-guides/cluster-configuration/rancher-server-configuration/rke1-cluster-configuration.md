@@ -2,6 +2,10 @@
 title: RKE Cluster Configuration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"/>
+</head>
+
 In [clusters launched by RKE](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md), you can edit any of the remaining options that follow.
 
 - [Configuration Options in the Rancher UI](#configuration-options-in-the-rancher-ui)

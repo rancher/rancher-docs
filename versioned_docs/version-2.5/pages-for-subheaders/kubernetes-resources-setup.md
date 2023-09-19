@@ -2,6 +2,10 @@
 title: Kubernetes Resources
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/kubernetes-resources-setup"/>
+</head>
+
 > The <b>Cluster Explorer</b> is a new feature in Rancher v2.5 that allows you to view and manipulate all of the custom resources and CRDs in a Kubernetes cluster from the Rancher UI. This section will be updated to reflect the way that Kubernetes resources are handled in Rancher v2.5.
 
 ## Workloads

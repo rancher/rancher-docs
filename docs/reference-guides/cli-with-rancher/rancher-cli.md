@@ -3,6 +3,10 @@ title: Rancher CLI
 description: Interact with Rancher using command line interface (CLI) tools from your workstation.
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/cli-with-rancher/rancher-cli"/>
+</head>
+
 The Rancher CLI (Command Line Interface) is a unified tool that you can use to interact with Rancher. With this tool, you can operate Rancher using a command line rather than the GUI.
 
 ### Download Rancher CLI
@@ -10,7 +14,7 @@ The Rancher CLI (Command Line Interface) is a unified tool that you can use to i
 The binary can be downloaded directly from the UI.
 
 1. In the upper left corner, click **☰**.
-1. At the bottom, click **v2.6.x**, where **v2.6.x** is a hyperlinked text indicating the installed Rancher version.
+1. At the bottom of the navigation sidebar menu, click **About**.
 1. Under the **CLI Downloads section**, there are links to download the binaries for Windows, Mac, and Linux. You can also check the [releases page for our CLI](https://github.com/rancher/cli/releases) for direct downloads of the binary.
 
 ### Requirements

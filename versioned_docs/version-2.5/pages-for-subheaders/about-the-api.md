@@ -2,6 +2,10 @@
 title: API
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/about-the-api"/>
+</head>
+
 ## How to use the API
 
 The API has its own user interface accessible from a web browser.  This is an easy way to see resources, perform actions, and see the equivalent cURL or HTTP request & response.  To access it, click on your user avatar in the upper right corner. Under **API & Keys**, you can find the URL endpoint as well as create [API keys](../reference-guides/user-settings/api-keys.md).

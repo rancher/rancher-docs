@@ -6,6 +6,7 @@ description: "Kubernetes supports load balancing in two ways: Layer-4 Load Balan
 <head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing"/>
 </head>
+
 Kubernetes supports load balancing in two ways: Layer-4 Load Balancing and Layer-7 Load Balancing.
 
 ## Layer-4 Load Balancer

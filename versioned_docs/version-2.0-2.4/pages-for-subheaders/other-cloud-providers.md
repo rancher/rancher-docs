@@ -2,6 +2,10 @@
 title: Other Cloud Providers
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/set-up-cloud-providers"/>
+</head>
+
 The following sections will outline how to set up the following cloud providers:
 
 - [Amazon Cloud Provider](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/amazon.md)

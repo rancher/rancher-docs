@@ -2,6 +2,10 @@
 title: Configure Alerts for Periodic Scan on a Schedule
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/cis-scan-guides/configure-alerts-for-periodic-scan-on-a-schedule"/>
+</head>
+
 It is possible to run a ClusterScan on a schedule.
 
 A scheduled scan can also specify if you should receive alerts when the scan completes.

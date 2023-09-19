@@ -2,6 +2,10 @@
 title: Istio
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/istio"/>
+</head>
+
 _Available as of v2.3.0_
 
 [Istio](https://istio.io/) is an open-source tool that makes it easier for DevOps teams to observe, control, troubleshoot, and secure the traffic within a complex network of microservices.

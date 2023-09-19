@@ -1,6 +1,10 @@
 ---
-title: Authentication, Permissions and Global Configuration
+title: Authentication, Permissions and Global Settings
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/authentication-permissions-and-global-configuration"/>
+</head>
 
 After installation, the [system administrator](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md) should configure Rancher to configure authentication, authorization, security, default settings, security policies, drivers and global DNS entries.
 
@@ -48,6 +52,34 @@ Rancher Kubernetes Metadata contains Kubernetes version information which Ranche
 
 For more information on how metadata works and how to configure metadata config, see [Rancher Kubernetes Metadata](../getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher.md).
 
-## Enabling Experimental Features
+## Global Settings
 
-Rancher includes some features that are experimental and disabled by default. Feature flags were introduced to allow you to try these features. For more information, refer to the section about [feature flags.](enable-experimental-features.md)
+Options that control certain global-level Rancher settings are available from the top navigation bar. 
+
+Click **☰** in the top left corner, then select **Global Settings**, to view and configure the following settings:
+
+- **Settings**: Various Rancher defaults, such as the minimum length for a user's password (`password-min-length`). You should be cautious when modifying these settings, as invalid values may break your Rancher installation.
+- **Feature Flags**: Rancher features that can be toggled on or off. Some of these flags are for [experimental features](#enabling-experimental-features).
+- **Banners**: Elements you can add to fixed locations on the portal. For example, you can use these options to [set a custom banner](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding.md#fixed-banners) for users when they login to Rancher. 
+- **Branding**: Rancher UI design elements that you can [customize](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding.md). You can add a custom logo or favicon, and modify UI colors.
+- **Performance**: Performance settings for the Rancher UI, such as incremental resource loading.
+- **Home Links**: Links displayed on the Rancher UI **Home** page. You can modify visibility for the default links or add your own links.
+
+### Enabling Experimental Features
+
+Rancher includes some features that are experimental and/or disabled by default. Feature flags allow you to enable these features. For more information, refer to the section about [feature flags.](enable-experimental-features.md)
+
+### Global Configuration
+
+**Global Configuration** options aren't visible unless you activate the **legacy** [feature flag](enable-experimental-features.md). The **legacy** flag is disabled by default on fresh Rancher installs of v2.6 and later. If you upgrade from an earlier Rancher version, or activate the **legacy** feature flag on Rancher v2.6 and later, **Global Configuration** is available from the top navigation menu:
+
+1. Click **☰** in the top left corner.
+1. Select **Global Configuration** from the **Legacy Apps**.
+
+The following features are available under **Global Configuration**:
+
+- **Catalogs**
+- **Global DNS Entries**
+- **Global DNS Providers**
+
+As these are legacy features, please see the Rancher v2.0—v2.4 docs on [catalogs](../../version-2.0-2.4/pages-for-subheaders/helm-charts-in-rancher.md), [global DNS entries](../../version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns.md#adding-a-global-dns-entry), and [global DNS providers](../../version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns.md#editing-a-global-dns-provider) for more details.

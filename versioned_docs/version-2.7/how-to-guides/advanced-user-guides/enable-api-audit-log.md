@@ -2,6 +2,10 @@
 title: Enabling the API Audit Log to Record System Events
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-api-audit-log"/>
+</head>
+
 You can enable the API audit log to record the sequence of system events initiated by individual users. You can know what happened, when it happened, who initiated it, and what cluster it affected. When you enable this feature, all requests to the Rancher API and all responses from it are written to a log.
 
 You can enable API Auditing during Rancher installation or upgrade.

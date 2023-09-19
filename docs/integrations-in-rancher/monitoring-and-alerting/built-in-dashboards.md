@@ -111,3 +111,7 @@ You can also see the rules in the Prometheus UI:
 ![PrometheusRules UI](/img/prometheus-rules-ui.png)
 
 For more information on configuring PrometheusRules in Rancher, see [this page.](../../how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/prometheusrules.md)
+
+## Legacy UI
+
+For information on the dashboards available in v2.2 to v2.4 of Rancher, before the introduction of the `rancher-monitoring` application, see the [Rancher v2.0—v2.4 docs](../../../versioned_docs/version-2.0-2.4/explanations/integrations-in-rancher/cluster-monitoring/viewing-metrics.md).

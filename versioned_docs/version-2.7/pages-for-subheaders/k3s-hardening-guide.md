@@ -2,6 +2,10 @@
 title: K3s Hardening Guide
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/k3s-hardening-guide"/>
+</head>
+
 This document provides prescriptive guidance for how to harden a K3s cluster intended for production, before provisioning it with Rancher. It outlines the configurations and controls required for Center for Information Security (CIS) Kubernetes benchmark controls.
 
 :::note
@@ -12,10 +16,12 @@ This hardening guide is intended to be used for K3s clusters and is associated w
 
 | Rancher Version | CIS Benchmark Version | Kubernetes Version           |
 |-----------------|-----------------------|------------------------------|
-| Rancher v2.7    | Benchmark v1.23       | Kubernetes v1.23 up to v1.25 |
+| Rancher v2.7    | Benchmark v1.23       | Kubernetes v1.23             |
+| Rancher v2.7    | Benchmark v1.24       | Kubernetes v1.24             |
+| Rancher v2.7    | Benchmark v1.7        | Kubernetes v1.25 up to v1.26 |
 
 :::note
-At the time of writing, the upstream CIS Kubernetes v1.25 benchmark is not yet available in Rancher. At this time Rancher is using the CIS v1.23 benchmark when scanning Kubernetes v1.25 clusters.
+In Benchmark v1.7, the `--protect-kernel-defaults` (4.2.6) parameter isn't required anymore, and was removed by CIS.
 :::
 
 For more details on how to evaluate a hardened K3s cluster against the official CIS benchmark, refer to the K3s self-assessment guides for specific Kubernetes and CIS benchmark versions.
@@ -33,6 +39,14 @@ The first section (1.1) of the CIS Benchmark primarily focuses on  pod manifest 
 
 ### Ensure `protect-kernel-defaults` is set
 
+<Tabs groupId="k3s-version">
+<TabItem value="v1.25 and Newer" default>
+
+The `protect-kernel-defaults` is no longer required since CIS benchmark 1.7.
+
+</TabItem>
+<TabItem value="v1.24 and Older">
+
 This is a kubelet flag that will cause the kubelet to exit if the required kernel parameters are unset or are set to values that are different from the kubelet's defaults.
 
 The `protect-kernel-defaults` flag can be set in the cluster configuration in Rancher.
@@ -44,6 +58,9 @@ spec:
       - config:
           protect-kernel-defaults: true
 ```
+
+</TabItem>
+</Tabs>
 
 ### Set kernel parameters
 
@@ -717,7 +734,6 @@ spec:
       - config:
           kubelet-arg:
             - make-iptables-util-chains=true                          # CIS 4.2.7
-          protect-kernel-defaults: true                               # CIS 4.2.6
 ```
 
 </TabItem>

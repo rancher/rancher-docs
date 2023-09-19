@@ -3,6 +3,10 @@ title: Security
 
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/faq/security"/>
+</head>
+
 **Is there a Hardening Guide?**
 
 The Hardening Guide is now located in the main [Security](../pages-for-subheaders/rancher-security.md) section.
