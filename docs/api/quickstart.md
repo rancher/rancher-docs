@@ -4,16 +4,15 @@ title: API Quick Start Guide
 
 1. In the upper left corner, click **☰ > Global Settings**. 
 1. Find and copy the address in the `server-url` field.
-1. Create a Rancher token with no scope. This will serve as your API key:
-  1. <!-- steps to create API key -->
+1. [Create](../reference-guides/user-settings/api-keys#creating-an-api-key) a Rancher API key with no scope.
 
 :::warning
 
-A Rancher token with no scope grants unrestricted access to all resources that the user can access. This token should be securely stored and rotated frequently to prevent unauthorized use.
+A Rancher API key with no scope grants unrestricted access to all resources that the user can access. This key should be stored securely and rotated frequently to prevent unauthorized use.
 
 :::
 
-1. Create a `kubeconfig.yaml` file in the following format. Replace `$SERVER_URL` with the server url and `$API_KEY` with your Rancher token:
+1. Create a `kubeconfig.yaml` file in the following format. Replace `$SERVER_URL` with the server url and `$API_KEY` with your Rancher API key:
 
 ```yaml
 apiVersion: v1
@@ -74,15 +73,15 @@ kind: Project
 metadata:
   # name should be unique accross all projects in every cluster
   name: p-abc123
-  # generateName can be used instead of name for random generation
+  # generateName can be used instead of `name` to randomly generate a name.
   # generateName: p-
-  # namespace should match spec.ClusterName
+  # namespace should match spec.ClusterName.
   namespace: local
 spec:
-  # clusterName should match metadata.Name of the target cluster
+  # clusterName should match `metadata.Name` of the target cluster.
   clusterName: local
   description: Example Project 
-  # displayName is the human-readable name, visible from the UI
+  # displayName is the human-readable name and is visible from the UI.
   displayName: Example
 ```
 
