@@ -1,18 +1,19 @@
 ---
-title: API Quickstart Guide
+title: API Quick Start Guide
 ---
 
-First, locate the server url of your Rancher instance. This can be found in the "Global Settings" page.
-
-Second, create an API Key (rancher token) with no scope.
+1. In the upper left corner, click **☰ > Global Settings**. 
+1. Find and copy the address in the `server-url` field.
+1. Create a Rancher token with no scope. This will serve as your API key:
+  1. <!-- steps to create API key -->
 
 :::warning
 
-An API Key with no scope grants unrestricted access to all resources that your user can access. This token should be securely stored, and rotated frequently to prevent unauthorized use.
+A Rancher token with no scope grants unrestricted access to all resources that the user can access. This token should be securely stored and rotated frequently to prevent unauthorized use.
 
 :::
 
-Third, using the below format, create a `kubeconfig.yaml` file (replace `$SERVER_URL` with the server url and `$API_KEY` with the API Key):
+1. Create a `kubeconfig.yaml` file in the following format. Replace `$SERVER_URL` with the server url and `$API_KEY` with your Rancher token:
 
 ```yaml
 apiVersion: v1
@@ -40,31 +41,32 @@ contexts:
 current-context: "rancher"
 ```
 
-You can then use this file (just like any other kubeconfig) with any compatible tool (such as kubectl or client-go). See the [example](#example-using-kubectl) section below for a quick demo which uses kubectl. The [ca-certs](#specifying-ca-certs) section below provides more information on changing this file to deal with more complex cert setups.
+You can use this file with any compatible tool, such as kubectl or client-go. For a quick demo, see the [kubectl example](#api-kubectl-example) below. 
 
-For more information on the options available in the kubeconfig file, see the [upstream documentation](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/).
+For more information about handling more complex certificate setups, see the [ca-certs](#specifying-ca-certs) section.
 
-## Kubectl Example
+For more information on available kubeconfig options, see the [upstream documentation](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/).
 
-Set your KUBECONFIG env var to refer to the new Rancher kubeconfig that was just created:
+## API Kubectl Example
+
+1. Set your KUBECONFIG environmental variable to refer to the Rancher kubeconfig you just created:
 
 ```bash
 export KUBECONFIG=$(pwd)/kubeconfig.yaml
 ```
 
-Use `kubectl explain` to view the available fields for projects:
+:::tip
+
+Use `kubectl explain` to view the available fields for projects, or complex sub-fields of resources:
 
 ```bash
 kubectl explain projects
-```
-
-You can also use `kubectl explain` to view detailed information on complex sub-fields of resources:
-
-```bash
 kubectl explain projects.spec
 ```
 
-Add the following content to a file called `project.yaml`:
+:::
+
+1. Add the following content to a file named `project.yaml`:
 
 ```yaml
 apiVersion: management.cattle.io/v3
@@ -84,13 +86,13 @@ spec:
   displayName: Example
 ```
 
-Create the project:
+1. Create the project:
 
 ```bash
 kubectl create -f project.yaml
 ```
 
-Delete the project:
+1. Delete the project:
 
 If you used `name` when creating the project:
 
@@ -108,9 +110,11 @@ kubectl delete project $PROJECT_NAME -n local
 
 ## Specifying CA Certs
 
-Most setups will require additional modification to the above template to ensure that the compatible tool can recognize the CA certs that rancher is using.
+To ensure that your tools can recognize Rancher's CA certificates, most setups require additional modifications to the above template.
 
-In many cases, the certs that are being used by Rancher can be found by viewing the `cacerts` setting in the UI. Copy this value to a file called `rancher.crt`. The following commands will convert this file to base64 output (and trim all new-lines), update the cluster in the kubeconfig with the cert, and remove the `rancher.crt` file:
+In many cases, the certificates used by Rancher can be viewed by visiting the `cacerts` field in **☰ > Global Settings**. Copy the `cacerts` value to a file named `rancher.crt`. 
+
+The following commands will convert `rancher.crt` to base64 output,  trim all new-lines, and update the cluster in the kubeconfig with the certificate, then finishing by removing the `rancher.crt` file:
 
 ```bash
 export KUBECONFIG=$PATH_TO_RANCHER_KUBECONFIG
@@ -118,13 +122,13 @@ kubectl config set clusters.rancher.certificate-authority-data $(cat rancher.crt
 rm rancher.crt
 ```
 
-If you are using self-signed certs that aren't trusted by your system, you can set the insecure option in your kubeconfig using kubectl:
+If you use self-signed certificatess that aren't trusted by your system, you can set the insecure option in your kubeconfig with kubectl:
 
-**Warning:** This option represents a security risk, and should not be used in production.
+**Warning:** This option shouldn't be used in production as it is a security risk.
 
 ```bash
 export KUBECONFIG=$PATH_TO_RANCHER_KUBECONFIG
 kubectl config set clusters.rancher.insecure-skip-tls-verify true
 ```
 
-If your rancher instance is proxied by another service, you will need to extract the cert that service is using and add it to the kubeconfig file, as demonstrated above.
+If your Rancher instance is proxied by another service, you must extract the certificate that the service is using, and add it to the kubeconfig file, as demonstrated above.
