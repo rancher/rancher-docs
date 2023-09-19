@@ -124,7 +124,11 @@ rm rancher.crt
 
 If you use self-signed certificatess that aren't trusted by your system, you can set the insecure option in your kubeconfig with kubectl:
 
-**Warning:** This option shouldn't be used in production as it is a security risk.
+:::warning 
+
+This option shouldn't be used in production as it is a security risk.
+
+:::
 
 ```bash
 export KUBECONFIG=$PATH_TO_RANCHER_KUBECONFIG
