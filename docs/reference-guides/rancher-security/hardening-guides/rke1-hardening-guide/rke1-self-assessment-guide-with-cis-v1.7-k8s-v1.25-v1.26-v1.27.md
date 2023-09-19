@@ -1,5 +1,5 @@
 ---
-title: RKE Self-Assessment Guide - CIS Benchmark v1.23 - K8s v1.25
+title: RKE Self-Assessment Guide - CIS Benchmark v1.7 - K8s v1.25/v1.26/v1.27
 ---
 
 This document is a companion to the [RKE Hardening Guide](../../../../pages-for-subheaders/rke1-hardening-guide.md), which provides prescriptive guidance on how to harden RKE clusters that are running in production and managed by Rancher. This benchmark guide helps you evaluate the security of a hardened cluster against each control in the CIS Kubernetes Benchmark.
@@ -9,7 +9,7 @@ This guide corresponds to the following versions of Rancher, CIS Benchmarks, and
 
 | Rancher Version | CIS Benchmark Version | Kubernetes Version |
 |-----------------|-----------------------|--------------------|
-| Rancher v2.7    | Benchmark v1.7       | Kubernetes v1.25   |
+| Rancher v2.7    | Benchmark v1.7       | Kubernetes v1.25/v1.26/v1.27   |
 
 This guide walks through the various controls and provide updated example commands to audit compliance in Rancher created clusters. Because Rancher and RKE install Kubernetes services as Docker containers, many of the control verification checks in the CIS Kubernetes Benchmark don't apply. These checks will return a result of `Not Applicable`.
 
