@@ -109,7 +109,6 @@ This reference contains variables that you can use in `questions.yml` nested und
 | 	label             | string  | true      |  Define the UI label. |
 | 	description       | string  | false      |  Specify the description of the variable.|
 | 	type              | string  | false      |  Default to `string` if not specified (current supported types are string, multiline, boolean, int, enum, password, storageclass, hostname, pvc, and secret).|
-
 | 	default           | string  | false      |  Specify the default value. Only used if there is no corresponding value in the `values.yml` file. |
 | 	group             | string  | false      |  Group questions by input value. |
 | 	options           | []string | false     |  Specify the options when the variable type is `enum`, for example: options:<br/> - "ClusterIP" <br/> - "NodePort" <br/> - "LoadBalancer"|
