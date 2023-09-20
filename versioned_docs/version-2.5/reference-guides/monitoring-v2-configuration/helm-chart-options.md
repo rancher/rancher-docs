@@ -2,6 +2,10 @@
 title: Helm Chart Options
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/monitoring-v2-configuration/helm-chart-options"/>
+</head>
+
 ## Configuring Resource Limits and Requests
 
 The resource requests and limits can be configured when installing `rancher-monitoring`.
