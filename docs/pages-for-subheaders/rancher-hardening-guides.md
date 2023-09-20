@@ -28,7 +28,7 @@ Each self-assessment guide is accompanied by a hardening guide. These guides wer
 |--------------------|-----------------------|-----------------------|------------------|
 | Kubernetes v1.23 | CIS v1.23 | [Link](../reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.23.md) | [Link](rke1-hardening-guide.md) |
 | Kubernetes v1.24 | CIS v1.24 | [Link](../reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.24-k8s-v1.24.md) | [Link](rke1-hardening-guide.md) |
-| Kubernetes v1.25 | CIS v1.7 | [Link](../reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25.md) | [Link](rke1-hardening-guide.md) |
+| Kubernetes v1.25/v1.26/v1.27 | CIS v1.7 | [Link](../reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27.md) | [Link](rke1-hardening-guide.md) |
 
 ### RKE2 Guides
 
