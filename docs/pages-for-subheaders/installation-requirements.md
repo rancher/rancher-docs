@@ -109,8 +109,6 @@ Please note that a highly available setup with at least 3 nodes is required for 
 | Small           | Up to 150  | Up to 1500   | 2      | 8 GB     | 2 cores, 4 GB + 1000 IOPS |
 | Medium          | Up to 300  | Up to 3000   | 4      | 16 GB    | 2 cores, 4 GB + 1000 IOPS |
 | Large           | Up to 500  | Up to 5000   | 8      | 32 GB    | 2 cores, 4 GB + 1000 IOPS |
-| X-Large         | Up to 1000 | Up to 10,000 | 16     | 64 GB    | 2 cores, 4 GB + 1000 IOPS |
-| XX-Large        | Up to 2000 | Up to 20,000 | 32     | 128 GB   | 2 cores, 4 GB + 1000 IOPS |
 
 ### RKE and Hosted Kubernetes
 
@@ -125,8 +123,6 @@ These requirements apply to RKE Kubernetes clusters, as well as to hosted Kubern
 | Small           | Up to 150  | Up to 1500   | 2      | 8 GB    |
 | Medium          | Up to 300  | Up to 3000   | 4      | 16 GB   |
 | Large           | Up to 500  | Up to 5000   | 8      | 32 GB   |
-| X-Large         | Up to 1000 | Up to 10,000 | 16     | 64 GB   |
-| XX-Large        | Up to 2000 | Up to 20,000 | 32     | 128 GB  |
 
 ### Docker
 
