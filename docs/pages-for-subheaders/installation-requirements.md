@@ -101,6 +101,8 @@ Please note that a highly available setup with at least 3 nodes is required for 
 
 (†): Depending on various factors, larger deployment sizes are generally possible with ad-hoc hardware recommendations and tuning. You can [contact Rancher](https://rancher.com/contact/) for a customized evaluation.
 
+Refer to RKE2 documentation for more detailed information on [RKE2 general requirements](https://docs.rke2.io/install/requirements).
+
 ### K3s Kubernetes
 
 Minimum CPU and memory requirements for each individual node in the [Kubernetes cluster Rancher is installed in](install-upgrade-on-a-kubernetes-cluster.md) are listed in the table below.
@@ -114,6 +116,8 @@ Please note that a highly available setup with at least 3 nodes is required for 
 | Large           | Up to 500  | Up to 5000   | 16    | 64 GB | 8 vCPUs, 32 GB + 4000 IOPS |
 
 Note: External Database Host refers to the optional possibility of hosting [k3s cluster data store on an external dedicated host](https://docs.k3s.io/datastore). Exact requirements will depend on the chosen data store, this table is a guideline only.
+
+Refer to k3s documentation for more detailed information on [k3s general requirements](https://docs.k3s.io/installation/requirements).
 
 ### Hosted Kubernetes
 
@@ -141,6 +145,7 @@ Please note that a highly available setup with at least 3 nodes is required for 
 | Medium          | Up to 300 | Up to 3000 | 8     | 32 GB |
 | Large           | Up to 500 | Up to 5000 | 16    | 64 GB |
 
+Refer to RKE documentation for more detailed information on [RKE general requirements](https://rke.docs.rancher.com/os).
 
 ### Docker
 
