@@ -63,7 +63,7 @@ For more information see [Installing Docker,](../getting-started/installation-an
 
 ## Hardware Requirements
 
-The following sections describe the CPU, memory, and I/O requirements for nodes where Rancher is installed.
+The following sections describe the CPU, memory, and I/O requirements for nodes where Rancher is installed based on the size of the infrastructure it manages.
 
 ### Premise
 
@@ -92,12 +92,12 @@ Minimum CPU and memory requirements for each individual node in the [Kubernetes 
 
 Please note that a highly available setup with at least 3 nodes is required for all production usages.
 
-| Deployment Size | Clusters  | Nodes      | vCPUs | RAM   |
-|-----------------|-----------|------------|-------|-------|
-| Small           | Up to 150 | Up to 1500 | 4     | 16 GB |
-| Medium          | Up to 300 | Up to 3000 | 8     | 32 GB |
-| Large (*)       | Up to 500 | Up to 5000 | 16    | 64 GB |
-| Larger          | (†)       | (†)        | (†)   | (†)   |
+| Managed Infrastructure Size | Clusters  | Nodes      | vCPUs | RAM   |
+|-----------------------------|-----------|------------|-------|-------|
+| Small                       | Up to 150 | Up to 1500 | 4     | 16 GB |
+| Medium                      | Up to 300 | Up to 3000 | 8     | 32 GB |
+| Large (*)                   | Up to 500 | Up to 5000 | 16    | 64 GB |
+| Larger (†)                  | (†)       | (†)        | (†)   | (†)   |
 
 (*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tips-for-scaling-rancher.md).
 
@@ -111,11 +111,11 @@ Minimum CPU and memory requirements for each individual node in the [Kubernetes 
 
 Please note that a highly available setup with at least 3 nodes is required for all production usages.
 
-| Deployment Size | Clusters  | Nodes      | vCPUs | RAM   | External Database Host (†) |
-|-----------------|-----------|------------|-------|-------|----------------------------|
-| Small           | Up to 150 | Up to 1500 | 4     | 16 GB | 2 vCPUs, 8 GB + 1000 IOPS  |
-| Medium          | Up to 300 | Up to 3000 | 8     | 32 GB | 4 vCPUs, 16 GB + 2000 IOPS |
-| Large (*)       | Up to 500 | Up to 5000 | 16    | 64 GB | 8 vCPUs, 32 GB + 4000 IOPS |
+| Managed Infrastructure Size | Clusters  | Nodes      | vCPUs | RAM   | External Database Host (†) |
+|-----------------------------|-----------|------------|-------|-------|----------------------------|
+| Small                       | Up to 150 | Up to 1500 | 4     | 16 GB | 2 vCPUs, 8 GB + 1000 IOPS  |
+| Medium                      | Up to 300 | Up to 3000 | 8     | 32 GB | 4 vCPUs, 16 GB + 2000 IOPS |
+| Large (*)                   | Up to 500 | Up to 5000 | 16    | 64 GB | 8 vCPUs, 32 GB + 4000 IOPS |
 
 (*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tips-for-scaling-rancher.md).
 
@@ -131,11 +131,11 @@ Please note that a highly available setup with at least 3 nodes is required for 
 
 These requirements apply hosted Kubernetes clusters such as EKS, AKS, or GKE. They do not apply to Rancher SaaS solutions such as Rancher Prime Hosted](https://www.rancher.com/products/rancher).
 
-| Deployment Size | Clusters  | Nodes      | vCPUs | RAM   |
-|-----------------|-----------|------------|-------|-------|
-| Small           | Up to 150 | Up to 1500 | 4     | 16 GB |
-| Medium          | Up to 300 | Up to 3000 | 8     | 32 GB |
-| Large (*)       | Up to 500 | Up to 5000 | 16    | 64 GB |
+| Managed Infrastructure Size | Clusters  | Nodes      | vCPUs | RAM   |
+|-----------------------------|-----------|------------|-------|-------|
+| Small                       | Up to 150 | Up to 1500 | 4     | 16 GB |
+| Medium                      | Up to 300 | Up to 3000 | 8     | 32 GB |
+| Large (*)                   | Up to 500 | Up to 5000 | 16    | 64 GB |
 
 (*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tips-for-scaling-rancher.md).
 
@@ -145,11 +145,11 @@ Minimum CPU and memory requirements for each individual node in the [Kubernetes 
 
 Please note that a highly available setup with at least 3 nodes is required for all production usages.
 
-| Deployment Size | Clusters  | Nodes      | vCPUs | RAM   |
-|-----------------|-----------|------------|-------|-------|
-| Small           | Up to 150 | Up to 1500 | 4     | 16 GB |
-| Medium          | Up to 300 | Up to 3000 | 8     | 32 GB |
-| Large (*)       | Up to 500 | Up to 5000 | 16    | 64 GB |
+| Managed Infrastructure Size | Clusters  | Nodes      | vCPUs | RAM   |
+|-----------------------------|-----------|------------|-------|-------|
+| Small                       | Up to 150 | Up to 1500 | 4     | 16 GB |
+| Medium                      | Up to 300 | Up to 3000 | 8     | 32 GB |
+| Large (*)                   | Up to 500 | Up to 5000 | 16    | 64 GB |
 
 (*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tips-for-scaling-rancher.md).
 
@@ -161,10 +161,10 @@ Minimum CPU and memory requirements for a [single node installation of Rancher](
 
 Please note that a Docker installation is only suitable for development or testing purposes and is not meant to be used in production environments.
 
-| Deployment Size | Clusters | Nodes     | vCPUs | RAM  |
-| --------------- | -------- | --------- | ----- | ---- |
-| Small           | Up to 5  | Up to 50  | 1     | 4 GB |
-| Medium          | Up to 15 | Up to 200 | 2     | 8 GB |
+| Managed Infrastructure Size | Clusters | Nodes     | vCPUs | RAM  |
+|-----------------------------|----------|-----------|-------|------|
+| Small                       | Up to 5  | Up to 50  | 1     | 4 GB |
+| Medium                      | Up to 15 | Up to 200 | 2     | 8 GB |
 
 ## Ingress
 
