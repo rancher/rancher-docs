@@ -92,11 +92,14 @@ Minimum CPU and memory requirements for each individual node in the [Kubernetes 
 
 Please note that a highly available setup with at least 3 nodes is required for all production usages.
 
-| Deployment Size | Clusters   | Nodes        | vCPUs | RAM   |
-| --------------- | ---------- | ------------ |-------|-------|
-| Small           | Up to 150  | Up to 1500   | 4     | 16 GB |
-| Medium          | Up to 300  | Up to 3000   | 8     | 32 GB |
-| Large           | Up to 500  | Up to 5000   | 16    | 64 GB |
+| Deployment Size | Clusters  | Nodes      | vCPUs | RAM   |
+|-----------------|-----------|------------|-------|-------|
+| Small           | Up to 150 | Up to 1500 | 4     | 16 GB |
+| Medium          | Up to 300 | Up to 3000 | 8     | 32 GB |
+| Large           | Up to 500 | Up to 5000 | 16    | 64 GB |
+| Larger          | (†)       | (†)        | (†)   | (†)   |
+
+(†): Depending on various factors, larger deployment sizes are generally possible with ad-hoc hardware recommendations and tuning. You can [contact Rancher](https://rancher.com/contact/) for a customized evaluation.
 
 ### K3s Kubernetes
 
