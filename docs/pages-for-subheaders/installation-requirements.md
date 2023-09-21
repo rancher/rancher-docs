@@ -92,11 +92,11 @@ Minimum CPU and memory requirements for each individual node in the [Kubernetes 
 
 Please note that a highly available setup with at least 3 nodes is required for all production usages.
 
-| Deployment Size | Clusters | Nodes     | vCPUs | RAM  |
-| --------------- | -------- | --------- | ----- | ---- |
-| Small           | Up to 5  | Up to 50  | 2     | 5 GB |
-| Medium          | Up to 15 | Up to 200 | 3     | 9 GB |
-
+| Deployment Size | Clusters   | Nodes        | vCPUs | RAM   |
+| --------------- | ---------- | ------------ |-------|-------|
+| Small           | Up to 150  | Up to 1500   | 4     | 16 GB |
+| Medium          | Up to 300  | Up to 3000   | 8     | 32 GB |
+| Large           | Up to 500  | Up to 5000   | 16    | 64 GB |
 
 ### K3s Kubernetes
 
@@ -104,11 +104,11 @@ Minimum CPU and memory requirements for each individual node in the [Kubernetes 
 
 Please note that a highly available setup with at least 3 nodes is required for all production usages.
 
-| Deployment Size | Clusters   | Nodes        | vCPUs  | RAM      | Database Size             |
-| --------------- | ---------- | ------------ | -------| ---------| ------------------------- |
-| Small           | Up to 150  | Up to 1500   | 2      | 8 GB     | 2 cores, 4 GB + 1000 IOPS |
-| Medium          | Up to 300  | Up to 3000   | 4      | 16 GB    | 2 cores, 4 GB + 1000 IOPS |
-| Large           | Up to 500  | Up to 5000   | 8      | 32 GB    | 2 cores, 4 GB + 1000 IOPS |
+| Deployment Size | Clusters   | Nodes        | vCPUs | RAM   | Database Size             |
+| --------------- | ---------- | ------------ |-------|-------| ------------------------- |
+| Small           | Up to 150  | Up to 1500   | 4     | 16 GB | 2 cores, 4 GB + 1000 IOPS |
+| Medium          | Up to 300  | Up to 3000   | 8     | 32 GB | 2 cores, 4 GB + 1000 IOPS |
+| Large           | Up to 500  | Up to 5000   | 16    | 64 GB | 2 cores, 4 GB + 1000 IOPS |
 
 ### RKE and Hosted Kubernetes
 
