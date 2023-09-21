@@ -63,11 +63,28 @@ For more information see [Installing Docker,](../getting-started/installation-an
 
 ## Hardware Requirements
 
-The following sections describe the CPU, memory, and disk requirements for the nodes where the Rancher server is installed.
+The following sections describe the CPU, memory, and I/O requirements for nodes where Rancher is installed.
 
-## CPU and Memory
+### Premise
 
-Hardware requirements scale based on the size of your Rancher deployment. Provision each individual node according to the requirements. The requirements are different depending on if you are installing Rancher in a single container with Docker, or if you are installing Rancher on a Kubernetes cluster.
+Rancher's hardware footprint depends on a number of factors, including:
+ - size of managed infrastructure (eg. node count, cluster count)
+ - complexity of the desired access control rules (eg. `RoleBinding` object count)
+ - number of workloads (eg. Kubernetes deployments, Fleet deployments)
+ - usage patterns (eg. subset of functionality actively used, frequency of use, number of concurrently active users)
+
+Because of the high number of influencing factors and their variability over time, requirements in this document have to be interpreted as reasonable starting points that worked acceptably well in most observed use cases so far. Nevertheless, particular use cases may differ - with higher or lower requirements. For enquiries about a specific scenario please [contact Rancher](https://rancher.com/contact/) for further guidance.
+
+:::note Evolution:
+
+Rancher's code base evolves, use cases change, and the body of accumulated Rancher experience grows every day.
+
+Because of that, this document's recommendations are subject to change over time with the aim of providing increasingly more concrete and accurate guidelines.
+
+If you find your Rancher deployment does not comply with recommendations in this document, while it used to comply with earlier revisions, you can [contact Rancher](https://rancher.com/contact/) for an ad-hoc evaluation.
+
+:::
+
 
 ### RKE2 Kubernetes
 
