@@ -107,25 +107,40 @@ Minimum CPU and memory requirements for each individual node in the [Kubernetes 
 
 Please note that a highly available setup with at least 3 nodes is required for all production usages.
 
-| Deployment Size | Clusters   | Nodes        | vCPUs | RAM   | Database Size             |
-| --------------- | ---------- | ------------ |-------|-------| ------------------------- |
-| Small           | Up to 150  | Up to 1500   | 4     | 16 GB | 2 cores, 4 GB + 1000 IOPS |
-| Medium          | Up to 300  | Up to 3000   | 8     | 32 GB | 2 cores, 4 GB + 1000 IOPS |
-| Large           | Up to 500  | Up to 5000   | 16    | 64 GB | 2 cores, 4 GB + 1000 IOPS |
+| Deployment Size | Clusters   | Nodes        | vCPUs | RAM   | External Database Host     |
+| --------------- | ---------- | ------------ |-------|-------|----------------------------|
+| Small           | Up to 150  | Up to 1500   | 4     | 16 GB | 2 vCPUs, 8 GB + 1000 IOPS  |
+| Medium          | Up to 300  | Up to 3000   | 8     | 32 GB | 4 vCPUs, 16 GB + 2000 IOPS |
+| Large           | Up to 500  | Up to 5000   | 16    | 64 GB | 8 vCPUs, 32 GB + 4000 IOPS |
 
-### RKE and Hosted Kubernetes
+Note: External Database Host refers to the optional possibility of hosting [k3s cluster data store on an external dedicated host](https://docs.k3s.io/datastore). Exact requirements will depend on the chosen data store, this table is a guideline only.
+
+### Hosted Kubernetes
 
 Minimum CPU and memory requirements for each individual node in the [Kubernetes cluster Rancher is installed in](install-upgrade-on-a-kubernetes-cluster.md) are listed in the table below.
 
 Please note that a highly available setup with at least 3 nodes is required for all production usages.
 
-These requirements apply to RKE Kubernetes clusters, as well as to hosted Kubernetes clusters such as EKS.
+These requirements apply hosted Kubernetes clusters such as EKS, AKS, or GKE. They do not apply to Rancher SaaS solutions such as Rancher Prime Hosted](https://www.rancher.com/products/rancher).
 
-| Deployment Size | Clusters   | Nodes        | vCPUs  | RAM     |
-| --------------- | ---------- | ------------ | -------| ------- |
-| Small           | Up to 150  | Up to 1500   | 2      | 8 GB    |
-| Medium          | Up to 300  | Up to 3000   | 4      | 16 GB   |
-| Large           | Up to 500  | Up to 5000   | 8      | 32 GB   |
+| Deployment Size | Clusters  | Nodes      | vCPUs | RAM   |
+|-----------------|-----------|------------|-------|-------|
+| Small           | Up to 150 | Up to 1500 | 4     | 16 GB |
+| Medium          | Up to 300 | Up to 3000 | 8     | 32 GB |
+| Large           | Up to 500 | Up to 5000 | 16    | 64 GB |
+
+### RKE
+
+Minimum CPU and memory requirements for each individual node in the [Kubernetes cluster Rancher is installed in](install-upgrade-on-a-kubernetes-cluster.md) are listed in the table below.
+
+Please note that a highly available setup with at least 3 nodes is required for all production usages.
+
+| Deployment Size | Clusters  | Nodes      | vCPUs | RAM   |
+|-----------------|-----------|------------|-------|-------|
+| Small           | Up to 150 | Up to 1500 | 4     | 16 GB |
+| Medium          | Up to 300 | Up to 3000 | 8     | 32 GB |
+| Large           | Up to 500 | Up to 5000 | 16    | 64 GB |
+
 
 ### Docker
 
