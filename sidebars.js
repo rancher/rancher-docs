@@ -828,7 +828,8 @@ const sidebars = {
               items: [
                 "reference-guides/best-practices/rancher-server/on-premises-rancher-in-vsphere",
                 "reference-guides/best-practices/rancher-server/rancher-deployment-strategy",
-                "reference-guides/best-practices/rancher-server/tips-for-running-rancher"
+                "reference-guides/best-practices/rancher-server/tips-for-running-rancher",
+                "reference-guides/best-practices/rancher-server/tips-for-scaling-rancher"
               ]
             },
             {
