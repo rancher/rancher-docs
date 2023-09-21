@@ -39,11 +39,11 @@ If you don't feel comfortable doing so, you might check suggestions in the [resp
 
 If you plan to run Rancher on ARM64, see [Running on ARM64 (Experimental).](../how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64.md)
 
-### RKE Specific Requirements
+### RKE2 Specific Requirements
 
-For the container runtime, RKE should work with any modern Docker version.
+For the container runtime, RKE2 bundles its own containerd. Docker is not required for RKE2 installs.
 
-For more information see [Installing Docker,](../getting-started/installation-and-upgrade/installation-requirements/install-docker.md)
+For details on which OS versions were tested with RKE2, refer to the [Rancher support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions).
 
 ### K3s Specific Requirements
 
@@ -55,11 +55,11 @@ If you are installing Rancher on a K3s cluster with **Raspbian Buster**, follow 
 
 If you are installing Rancher on a K3s cluster with Alpine Linux, follow [these steps](https://rancher.com/docs/k3s/latest/en/advanced/#additional-preparation-for-alpine-linux-setup) for additional setup.
 
-### RKE2 Specific Requirements
+### RKE Specific Requirements
 
-For the container runtime, RKE2 bundles its own containerd. Docker is not required for RKE2 installs.
+For the container runtime, RKE should work with any modern Docker version.
 
-For details on which OS versions were tested with RKE2, refer to the [Rancher support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions).
+For more information see [Installing Docker,](../getting-started/installation-and-upgrade/installation-requirements/install-docker.md)
 
 ## Hardware Requirements
 
@@ -68,6 +68,30 @@ The following sections describe the CPU, memory, and disk requirements for the n
 ## CPU and Memory
 
 Hardware requirements scale based on the size of your Rancher deployment. Provision each individual node according to the requirements. The requirements are different depending on if you are installing Rancher in a single container with Docker, or if you are installing Rancher on a Kubernetes cluster.
+
+### RKE2 Kubernetes
+
+These CPU and memory requirements apply to each instance with RKE2 installed. Minimum recommendations are outlined here.
+
+| Deployment Size | Clusters | Nodes     | vCPUs | RAM  |
+| --------------- | -------- | --------- | ----- | ---- |
+| Small           | Up to 5  | Up to 50  | 2     | 5 GB |
+| Medium          | Up to 15 | Up to 200 | 3     | 9 GB |
+
+
+### K3s Kubernetes
+
+These CPU and memory requirements apply to each host in a [K3s Kubernetes cluster where the Rancher server is installed.](install-upgrade-on-a-kubernetes-cluster.md)
+
+| Deployment Size | Clusters   | Nodes        | vCPUs  | RAM      | Database Size             |
+| --------------- | ---------- | ------------ | -------| ---------| ------------------------- |
+| Small           | Up to 150  | Up to 1500   | 2      | 8 GB     | 2 cores, 4 GB + 1000 IOPS |
+| Medium          | Up to 300  | Up to 3000   | 4      | 16 GB    | 2 cores, 4 GB + 1000 IOPS |
+| Large           | Up to 500  | Up to 5000   | 8      | 32 GB    | 2 cores, 4 GB + 1000 IOPS |
+| X-Large         | Up to 1000 | Up to 10,000 | 16     | 64 GB    | 2 cores, 4 GB + 1000 IOPS |
+| XX-Large        | Up to 2000 | Up to 20,000 | 32     | 128 GB   | 2 cores, 4 GB + 1000 IOPS |
+
+Every use case and environment is different. Please [contact Rancher](https://rancher.com/contact/) to review yours.
 
 ### RKE and Hosted Kubernetes
 
@@ -84,30 +108,6 @@ These requirements apply to RKE Kubernetes clusters, as well as to hosted Kubern
 | XX-Large        | Up to 2000 | Up to 20,000 | 32     | 128 GB  |
 
 Every use case and environment is different. Please [contact Rancher](https://rancher.com/contact/) to review yours.
-
-### K3s Kubernetes
-
-These CPU and memory requirements apply to each host in a [K3s Kubernetes cluster where the Rancher server is installed.](install-upgrade-on-a-kubernetes-cluster.md)
-
-| Deployment Size | Clusters   | Nodes        | vCPUs  | RAM      | Database Size             |
-| --------------- | ---------- | ------------ | -------| ---------| ------------------------- |
-| Small           | Up to 150  | Up to 1500   | 2      | 8 GB     | 2 cores, 4 GB + 1000 IOPS |
-| Medium          | Up to 300  | Up to 3000   | 4      | 16 GB    | 2 cores, 4 GB + 1000 IOPS |
-| Large           | Up to 500  | Up to 5000   | 8      | 32 GB    | 2 cores, 4 GB + 1000 IOPS |
-| X-Large         | Up to 1000 | Up to 10,000 | 16     | 64 GB    | 2 cores, 4 GB + 1000 IOPS |
-| XX-Large        | Up to 2000 | Up to 20,000 | 32     | 128 GB   | 2 cores, 4 GB + 1000 IOPS |
-
-Every use case and environment is different. Please [contact Rancher](https://rancher.com/contact/) to review yours.
-
-
-### RKE2 Kubernetes
-
-These CPU and memory requirements apply to each instance with RKE2 installed. Minimum recommendations are outlined here.
-
-| Deployment Size | Clusters | Nodes     | vCPUs | RAM  |
-| --------------- | -------- | --------- | ----- | ---- |
-| Small           | Up to 5  | Up to 50  | 2     | 5 GB |
-| Medium          | Up to 15 | Up to 200 | 3     | 9 GB |
 
 ### Docker
 
