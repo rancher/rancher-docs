@@ -76,12 +76,13 @@ Rancher's hardware footprint depends on a number of factors, including:
 Because of the high number of influencing factors and their variability over time, requirements in this document have to be interpreted as reasonable starting points that worked acceptably well in most observed use cases so far. Nevertheless, particular use cases may differ - with higher or lower requirements. For enquiries about a specific scenario please [contact Rancher](https://rancher.com/contact/) for further guidance.
 
 In particular, requirements on this page are subject to "typical use" conditions, which include:
- - total count of Kubernetes resources under 60k per type
+ - total count of Kubernetes resources under 60 thousand per type
  - up to 120 pods per node
  - up to 200 CRDs in the upstream (local) cluster
  - up to 100 CRDs in downstream clusters
  - up to 50 Fleet deployments
 Higher numbers are possible but requirements might be higher.
+Note that visualization in the UI might be impacted for users with visibility on all resources in a type above 20 thousand total items.
 
 :::note Evolution:
 
