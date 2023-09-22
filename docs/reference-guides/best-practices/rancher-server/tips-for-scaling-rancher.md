@@ -19,7 +19,7 @@ This guide aims to introduce the approaches that should be considered to scale R
 The largest bottleneck when scaling Rancher is resource growth in the local Kubernetes cluster. The local cluster contains information for all downstream clusters. Many operations that apply to downstream clusters will create new objects in the local cluster and require computation from handlers running in the local cluster.
 
 ### Managing Your Object Counts
-ETCD eventually encounters limitations to the number of a single Kubernetes resource type it can store. These exact numbers are not well documented. From internal observations we usually see performance issues once a single resource type's object count exceeds 60k, and often that type is Rolebindings.
+etcd eventually encounters limitations to the number of a single Kubernetes resource type it can store. These exact numbers are not well documented. From internal observations we usually see performance issues once a single resource type's object count exceeds 60k, and often that type is Rolebindings.
 
 Rolebindings are created in the local cluster as a side effect of many operations.
 
@@ -59,7 +59,7 @@ A large component of performance is the local cluster and how it was configured.
 ### Keeping Kubernetes Versions Up to Date
 Similar to Rancher versions, it is advisable to keep your kubernetes cluster up to date. This will ensure that your cluster contains any available performance enhancements or bug fixes.
 
-### Optimizing ETCD
-The two main bottlenecks to [ETCD performance](https://etcd.io/docs/v3.4/op-guide/performance/) are disk speed and network speed. Optimization to either should improve performance. For information regarding ETCD performance see [Slow etcd performance (performance testing and optimization)](https://www.suse.com/support/kb/doc/?id=000020100) and [Tuning etcd for Large Installations](https://docs.ranchermanager.rancher.io/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs). Information on disks can also be found [in our docs](https://docs.Ranchermanager.Rancher.io/v2.5/pages-for-subheaders/installation-requirements#disks).
+### Optimizing etcd
+The two main bottlenecks to [etcd performance](https://etcd.io/docs/v3.4/op-guide/performance/) are disk speed and network speed. Optimization to either should improve performance. For information regarding etcd performance see [Slow etcd performance (performance testing and optimization)](https://www.suse.com/support/kb/doc/?id=000020100) and [Tuning etcd for Large Installations](https://docs.ranchermanager.rancher.io/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs). Information on disks can also be found [in our docs](https://docs.Ranchermanager.Rancher.io/v2.5/pages-for-subheaders/installation-requirements#disks).
 
-Theoretically, the more nodes in an ETCD cluster the slower it will be due to replication requirements [source](https://etcd.io/docs/v3.3/faq). This may be counter-intuitive to common scaling approaches. It can also be inferred that ETCD performance will be inversely affected by distance between nodes as that will slow down network communication.
+Theoretically, the more nodes in an etcd cluster the slower it will be due to replication requirements [source](https://etcd.io/docs/v3.3/faq). This may be counter-intuitive to common scaling approaches. It can also be inferred that etcd performance will be inversely affected by distance between nodes as that will slow down network communication.
