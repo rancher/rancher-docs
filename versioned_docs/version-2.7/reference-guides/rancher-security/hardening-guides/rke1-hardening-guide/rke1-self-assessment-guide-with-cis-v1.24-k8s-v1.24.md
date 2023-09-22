@@ -2,6 +2,10 @@
 title: RKE Self-Assessment Guide - CIS Benchmark v1.24 - K8s v1.24
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.24-k8s-v1.24"/>
+</head>
+
 This document is a companion to the [RKE Hardening Guide](../../../../pages-for-subheaders/rke1-hardening-guide.md), which provides prescriptive guidance on how to harden RKE clusters that are running in production and managed by Rancher. This benchmark guide helps you evaluate the security of a hardened cluster against each control in the CIS Kubernetes Benchmark.
 
 
