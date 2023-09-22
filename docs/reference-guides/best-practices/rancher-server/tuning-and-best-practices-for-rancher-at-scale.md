@@ -33,8 +33,16 @@ It is recommended to attempt reducing `RoleBindings` in the local cluster in the
 * Only use custom roles if necessary
 * Use as few rules as possible in custom roles
 * Consider whether adding a role to a user is redundant
-* Consider that using less, but more powerful, clusters may be more efficient
+* Consider using less, but more powerful, clusters
+* Keep into account that Kubernetes permissions are always "additive" (allow-list) rather than "subtractive" (deny-list). Whenever applicable, try to minimize configurations that gives access to "all but one aspect" (cluster, project, namespace...) as that will result in the creation of a high number of `RoleBindings`
 * Experiment to see if creating new projects or creating new clusters manifests in fewer `RoleBindings` for your specific use case.
+
+### RoleBinding count estimation
+
+Predicting exactly the number of `RoleBindings` a given configuration will create depends on many factors and is complicated to calculate. However, it is possible to give a first estimation according to considerations below:
+* As a minimum estimation consider the formula `32C + U + 2UaC + 8P + 5Pa`, where `C` is the cluster count, `U` is the user count, `Ua` is the average count of users with a membership on a cluster, `P` is the project count, and `Pa` is the average number of users with a membership on a project
+* The Restricted Admin role follows a different formula, as every user with Restricted Admin role will result in at least `7C + 2P + 2` additional `RoleBindings`
+* The number of `RoleBindings` generally increases linearly with cluster count, project count, and user count
 
 ### Using New Apps Over Legacy Apps
 There are two app Kubernetes resources that Rancher uses: `apps.projects.cattle.io` and `apps.cattle.cattle.io`. Legacy apps, `apps.projects.cattle.io`, were first introduced with the former UI (Cluster Manager) and are now outdated. New apps, `apps.catalog.cattle.io`, are found in the current UI (Cluster Explorer) for their respective cluster. New apps are preferable because their data resides in downstream clusters, freeing up resources in the local cluster.
