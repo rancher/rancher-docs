@@ -58,6 +58,11 @@ In short, if you notice CPU usage peaks every 15 hours, add the CATTLE_SYNC_ONLY
 ## Optimizations Outside of Rancher
 A large component of performance is the local cluster and how it was configured. This cluster can introduce a bottleneck before Rancher software ever runs. When Rancher nodes experience high resource usage, you can use the command "top" to identify whether it is Rancher or a Kubernetes component that is consuming the resource in excess.
 
+### Manage local cluster nodes directly, use RKE2 as the Kubernetes distribution of choice
+Managed Kubernetes services make it easier to deploy and run Kubernetes clusters, but they also typically limit control on configuration and insights on individual nodes and services. As Rancher can be particularly demanding on the local cluster, especially in large scale scenarios, it is recommended to have full control of the nodes and their configuration.
+
+Among Rancher Kubernetes distributions RKE2 is recommended for all Rancher large scale use cases.
+
 ### Keeping Kubernetes Versions Up to Date
 Similar to Rancher versions, it is advisable to keep your kubernetes cluster up to date. This will ensure that your cluster contains any available performance enhancements or bug fixes.
 
