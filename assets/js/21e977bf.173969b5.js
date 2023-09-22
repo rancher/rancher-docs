@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.5/reference-guides/rancher-manager-architecture/rancher-server-and-components.md",
     "sourceDirName": "reference-guides/rancher-manager-architecture",
     "slug": "/reference-guides/rancher-manager-architecture/rancher-server-and-components",
-    "permalink": "/zh/v2.5/reference-guides/rancher-manager-architecture/rancher-server-and-components",
+    "permalink": "/v2.5/reference-guides/rancher-manager-architecture/rancher-server-and-components",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/reference-guides/rancher-manager-architecture/rancher-server-and-components.md",
     "tags": [],
     "version": "2.5",
-    "lastUpdatedAt": 1662663074,
-    "formattedLastUpdatedAt": "2022年9月8日",
+    "lastUpdatedAt": 1695413935,
+    "formattedLastUpdatedAt": "Sep 22, 2023",
     "frontMatter": {
         "title": "Rancher Server and Components"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Architecture",
-        "permalink": "/zh/v2.5/pages-for-subheaders/rancher-manager-architecture"
+        "permalink": "/v2.5/pages-for-subheaders/rancher-manager-architecture"
     },
     "next": {
         "title": "Communicating with Downstream User Clusters",
-        "permalink": "/zh/v2.5/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters"
+        "permalink": "/v2.5/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters"
     }
 };
 const assets = {};
@@ -352,15 +352,18 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The majority of Rancher 2.x software runs on the Rancher Server. Rancher Server includes all the software components used to manage the entire Rancher deployment.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The figure below illustrates the high-level architecture of Rancher 2.x. The figure depicts a Rancher Server installation that manages two downstream Kubernetes clusters: one created by RKE and another created by Amazon EKS (Elastic Kubernetes Service).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For the best performance and security, we recommend a dedicated Kubernetes cluster for the Rancher management server. Running user workloads on this cluster is not advised. After deploying Rancher, you can `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/reference-guides/rancher-manager-architecture/rancher-server-and-components"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The majority of Rancher 2.x software runs on the Rancher Server. Rancher Server includes all the software components used to manage the entire Rancher deployment.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The figure below illustrates the high-level architecture of Rancher 2.x. The figure depicts a Rancher Server installation that manages two downstream Kubernetes clusters: one created by RKE and another created by Amazon EKS (Elastic Kubernetes Service).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For the best performance and security, we recommend a dedicated Kubernetes cluster for the Rancher management server. Running user workloads on this cluster is not advised. After deploying Rancher, you can `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
+        "href": "/v2.5/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
     }, `create or import clusters`), ` for running your workloads.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The diagram below shows how users can manipulate both `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/pages-for-subheaders/launch-kubernetes-with-rancher"
+        "href": "/v2.5/pages-for-subheaders/launch-kubernetes-with-rancher"
     }, `Rancher-launched Kubernetes`), ` clusters and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers"
+        "href": "/v2.5/pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers"
     }, `hosted Kubernetes`), ` clusters through Rancher's authentication proxy:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("figcaption", null, "Managing Kubernetes Clusters through Rancher's Authentication Proxy"), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
         alt: "Architecture",
         src: (__webpack_require__(16904)/* ["default"] */ .Z),
@@ -368,7 +371,7 @@ function MDXContent(_param) {
         height: "792"
     })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can install Rancher on a single node, or on a high-availability Kubernetes cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `A high-availability Kubernetes installation is recommended for production.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `A Docker installation of Rancher is recommended only for development and testing purposes. The ability to migrate Rancher to a high-availability cluster depends on the Rancher version:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Rancher backup operator can be used to migrate Rancher from the single Docker container install to an installation on a high-availability Kubernetes cluster. For details, refer to the documentation on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster"
+        "href": "/v2.5/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster"
     }, `migrating Rancher to a new cluster.`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Rancher server, regardless of the installation method, should always run on nodes that are separate from the downstream user clusters that it manages. If Rancher is installed on a high-availability Kubernetes cluster, it should run on a separate cluster from the cluster(s) it manages.`));
 }
 MDXContent.isMDXComponent = true;

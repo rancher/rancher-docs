@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[77519],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[61497],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 38618:
+/***/ 82322:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/rancher-manager-architecture/architecture-recommendations",
-    "id": "version-2.7/reference-guides/rancher-manager-architecture/architecture-recommendations",
+    "id": "reference-guides/rancher-manager-architecture/architecture-recommendations",
     "title": "Architecture Recommendations",
     "description": "If you are installing Rancher on a single node, the main architecture recommendation that applies to your installation is that the node running Rancher should be separate from downstream clusters.",
-    "source": "@site/versioned_docs/version-2.7/reference-guides/rancher-manager-architecture/architecture-recommendations.md",
+    "source": "@site/docs/reference-guides/rancher-manager-architecture/architecture-recommendations.md",
     "sourceDirName": "reference-guides/rancher-manager-architecture",
     "slug": "/reference-guides/rancher-manager-architecture/architecture-recommendations",
-    "permalink": "/v2.7/reference-guides/rancher-manager-architecture/architecture-recommendations",
+    "permalink": "/reference-guides/rancher-manager-architecture/architecture-recommendations",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/rancher-manager-architecture/architecture-recommendations.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/rancher-manager-architecture/architecture-recommendations.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1689636720,
-    "formattedLastUpdatedAt": "Jul 17, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1695413935,
+    "formattedLastUpdatedAt": "Sep 22, 2023",
     "frontMatter": {
         "title": "Architecture Recommendations"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Communicating with Downstream User Clusters",
-        "permalink": "/v2.7/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters"
+        "permalink": "/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters"
     },
     "next": {
         "title": "Cluster Configuration",
-        "permalink": "/v2.7/pages-for-subheaders/cluster-configuration"
+        "permalink": "/pages-for-subheaders/cluster-configuration"
     }
 };
 const assets = {};
@@ -408,7 +408,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you are installing Rancher on a single node, the main architecture recommendation that applies to your installation is that the node running Rancher should be `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/reference-guides/rancher-manager-architecture/architecture-recommendations"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you are installing Rancher on a single node, the main architecture recommendation that applies to your installation is that the node running Rancher should be `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#separation-of-rancher-and-user-clusters"
     }, `separate from downstream clusters.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
@@ -453,7 +456,7 @@ function MDXContent(_param) {
         "id": "environment-for-kubernetes-installations"
     }, `Environment for Kubernetes Installations`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `It is strongly recommended to install Rancher on a Kubernetes cluster on hosted infrastructure such as Amazon's EC2 or Google Compute Engine.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For the best performance and greater security, we recommend a dedicated Kubernetes cluster for the Rancher management server. Running user workloads on this cluster is not advised. After deploying Rancher, you can `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
+        "href": "/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
     }, `create or import clusters`), ` for running your workloads.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "recommended-node-roles-for-kubernetes-installations"
     }, `Recommended Node Roles for Kubernetes Installations`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The below recommendations apply when Rancher is installed on a K3s Kubernetes cluster or an RKE Kubernetes cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
@@ -491,26 +494,26 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `No other workloads than Rancher itself should be created on this cluster.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Because no additional workloads will be deployed on the Rancher server cluster, in most cases it is not necessary to use the same architecture that we recommend for the scalability and reliability of downstream clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more best practices for downstream clusters, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/checklist-for-production-ready-clusters"
+        "href": "/pages-for-subheaders/checklist-for-production-ready-clusters"
     }, `production checklist`), ` or our `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/best-practices"
+        "href": "/pages-for-subheaders/best-practices"
     }, `best practices guide.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "architecture-for-an-authorized-cluster-endpoint-ace"
     }, `Architecture for an Authorized Cluster Endpoint (ACE)`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you are using an `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-authorized-cluster-endpoint"
+        "href": "/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-authorized-cluster-endpoint"
     }, `authorized cluster endpoint (ACE),`), ` we recommend creating an FQDN pointing to a load balancer which balances traffic across your nodes with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `controlplane`), ` role.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you are using private CA signed certificates on the load balancer, you have to supply the CA certificate, which will be included in the generated kubeconfig file to validate the certificate chain. See the documentation on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig"
+        "href": "/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig"
     }, `kubeconfig files`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/user-settings/api-keys#creating-an-api-key"
+        "href": "/reference-guides/user-settings/api-keys#creating-an-api-key"
     }, `API keys`), ` for more information.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `ACE support is available for registered RKE2 and K3s clusters. To view the manual steps to perform on the downstream cluster to enable the ACE, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters#authorized-cluster-endpoint-support-for-rke2-and-k3s-clusters"
+        "href": "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters#authorized-cluster-endpoint-support-for-rke2-and-k3s-clusters"
     }, `here`), `.`));
 }
 MDXContent.isMDXComponent = true;

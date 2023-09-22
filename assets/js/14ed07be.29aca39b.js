@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[48351],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[97981],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 98310:
+/***/ 89311:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters",
-    "id": "reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters",
+    "id": "version-2.7/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters",
     "title": "Communicating with Downstream User Clusters",
     "description": "This section describes how Rancher provisions and manages the downstream user clusters that run your apps and services.",
-    "source": "@site/docs/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md",
+    "source": "@site/versioned_docs/version-2.7/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md",
     "sourceDirName": "reference-guides/rancher-manager-architecture",
     "slug": "/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters",
-    "permalink": "/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters",
+    "permalink": "/v2.7/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1694639215,
-    "formattedLastUpdatedAt": "Sep 13, 2023",
+    "version": "2.7",
+    "lastUpdatedAt": 1695413935,
+    "formattedLastUpdatedAt": "Sep 22, 2023",
     "frontMatter": {
         "title": "Communicating with Downstream User Clusters"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Rancher Server and Components",
-        "permalink": "/reference-guides/rancher-manager-architecture/rancher-server-and-components"
+        "permalink": "/v2.7/reference-guides/rancher-manager-architecture/rancher-server-and-components"
     },
     "next": {
         "title": "Architecture Recommendations",
-        "permalink": "/reference-guides/rancher-manager-architecture/architecture-recommendations"
+        "permalink": "/v2.7/reference-guides/rancher-manager-architecture/architecture-recommendations"
     }
 };
 const assets = {};
@@ -408,7 +408,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section describes how Rancher provisions and manages the downstream user clusters that run your apps and services.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The below diagram shows how the cluster controllers, cluster agents, and node agents allow Rancher to control downstream clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("figcaption", null, "Communicating with Downstream Clusters"), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section describes how Rancher provisions and manages the downstream user clusters that run your apps and services.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The below diagram shows how the cluster controllers, cluster agents, and node agents allow Rancher to control downstream clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("figcaption", null, "Communicating with Downstream Clusters"), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
         alt: "Rancher Components",
         src: (__webpack_require__(78422)/* ["default"] */ .Z),
         width: "758",
@@ -443,7 +446,7 @@ the pods. Bob is authenticated through Rancher's authentication proxy.`), /*#__P
         "href": "https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/"
     }, `service account,`), ` which provides an identity for processes that run in a pod.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `By default, Rancher generates a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig"
+        "href": "/v2.7/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig"
     }, `kubeconfig file`), ` that contains credentials for proxying through the Rancher server to connect to the Kubernetes API server on a downstream user cluster. The kubeconfig file (`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `kube_config_rancher-cluster.yml`), `) contains full access to the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
@@ -504,7 +507,7 @@ the pods. Bob is authenticated through Rancher's authentication proxy.`), /*#__P
         parentName: "p"
     }, `helm`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You will need to use a context defined in this kubeconfig file to access the cluster if Rancher goes down. Therefore, we recommend exporting the kubeconfig file so that if Rancher goes down, you can still use the credentials in the file to access your cluster. For more information, refer to the section on accessing your cluster with `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig"
+        "href": "/v2.7/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig"
     }, `kubectl and the kubeconfig file.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "important-files"
     }, `Important Files`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The files mentioned below are needed to maintain, troubleshoot and upgrade your cluster:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -525,7 +528,7 @@ the pods. Bob is authenticated through Rancher's authentication proxy.`), /*#__P
         parentName: "p"
     }, `Note:`), ` The "rancher-cluster" parts of the two latter file names are dependent on how you name the RKE cluster configuration file.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information on connecting to a cluster without the Rancher authentication proxy and other configuration options, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig"
+        "href": "/v2.7/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig"
     }, `kubeconfig file`), ` documentation.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "tools-for-provisioning-kubernetes-clusters"
     }, `Tools for Provisioning Kubernetes Clusters`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The tools that Rancher uses to provision downstream user clusters depends on the type of cluster that is being provisioned.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
@@ -592,7 +595,7 @@ the pods. Bob is authenticated through Rancher's authentication proxy.`), /*#__P
         "href": "https://github.com/rancher/helm"
     }, `Catalog applications`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This is a partial list of the most important Rancher repositories. For more details about Rancher source code, refer to the section on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/contribute-to-rancher#rancher-repositories"
+        "href": "/v2.7/contribute-to-rancher#rancher-repositories"
     }, `contributing to Rancher.`), ` To see all libraries and projects used in Rancher, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://github.com/rancher/rancher/blob/master/go.mod"

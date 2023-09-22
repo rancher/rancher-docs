@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[57256],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[56859],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 46603:
+/***/ 80289:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/prometheus-federator/rbac",
-    "id": "reference-guides/prometheus-federator/rbac",
+    "id": "version-2.6/reference-guides/prometheus-federator/rbac",
     "title": "Role-Based Access Control",
     "description": "This section describes the expectations for Role-Based Access Control (RBAC) for Prometheus Federator.",
-    "source": "@site/docs/reference-guides/prometheus-federator/rbac.md",
+    "source": "@site/versioned_docs/version-2.6/reference-guides/prometheus-federator/rbac.md",
     "sourceDirName": "reference-guides/prometheus-federator",
     "slug": "/reference-guides/prometheus-federator/rbac",
-    "permalink": "/reference-guides/prometheus-federator/rbac",
+    "permalink": "/v2.6/reference-guides/prometheus-federator/rbac",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/prometheus-federator/rbac.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/prometheus-federator/rbac.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1663953084,
-    "formattedLastUpdatedAt": "Sep 23, 2022",
+    "version": "2.6",
+    "lastUpdatedAt": 1695413935,
+    "formattedLastUpdatedAt": "Sep 22, 2023",
     "frontMatter": {
         "title": "Role-Based Access Control"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Prometheus Federator",
-        "permalink": "/pages-for-subheaders/prometheus-federator"
+        "permalink": "/v2.6/pages-for-subheaders/prometheus-federator"
     },
     "next": {
         "title": "User Settings",
-        "permalink": "/pages-for-subheaders/user-settings"
+        "permalink": "/v2.6/pages-for-subheaders/user-settings"
     }
 };
 const assets = {};
@@ -352,9 +352,12 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section describes the expectations for Role-Based Access Control (RBAC) for Prometheus Federator.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `As described in the section on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/reference-guides/prometheus-federator/rbac"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section describes the expectations for Role-Based Access Control (RBAC) for Prometheus Federator.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `As described in the section on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/pages-for-subheaders/prometheus-federator#namespaces"
+        "href": "/v2.6/pages-for-subheaders/prometheus-federator#namespaces"
     }, `namespaces`), `, Prometheus Federator expects that Project Owners, Project Members, and other users in the cluster with Project-level permissions (e.g. permissions in a certain set of namespaces identified by a single label selector) have minimal permissions in any namespaces except the Project Registration Namespace (which is imported into the project by default) and those that already comprise their projects. Therefore, in order to allow Project Owners to assign specific chart permissions to other users in their Project namespaces, the Helm Project Operator will automatically watch the following bindings:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `ClusterRoleBindings`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
