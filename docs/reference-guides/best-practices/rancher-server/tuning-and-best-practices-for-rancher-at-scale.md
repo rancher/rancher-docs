@@ -1,10 +1,12 @@
 ---
-title: Tips for Scaling Rancher
+title: Tuning and Best Practices for Rancher at Scale
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/best-practices/rancher-server/tips-for-scaling-rancher"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale"/>
+:docs/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md
 </head>
+
 
 This guide aims to introduce the approaches that should be considered to scale Rancher setups, and associated challenges with doing so. As systems grow performance will naturally reduce, but there are steps we can take to minimize the load put on Rancher, as well as optimize Rancher's ability to handle these larger setups.
 

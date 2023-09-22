@@ -1166,6 +1166,10 @@ module.exports = {
           {
             to: "/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25",
             from: "/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25"
+          },
+          {
+            to: "/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale",
+            from: "/reference-guides/best-practices/rancher-server/tips-for-scaling-rancher"
           }
         ],
       },

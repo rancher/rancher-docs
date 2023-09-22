@@ -108,7 +108,7 @@ Please note that a highly available setup with at least 3 nodes is required for 
 | Large (*)                   | Up to 500 | Up to 5000 | 16    | 64 GB |
 | Larger (†)                  | (†)       | (†)        | (†)   | (†)   |
 
-(*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tips-for-scaling-rancher.md).
+(*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md).
 
 (†): Depending on various factors, larger deployment sizes are generally possible with ad-hoc hardware recommendations and tuning. You can [contact Rancher](https://rancher.com/contact/) for a customized evaluation.
 
@@ -126,7 +126,7 @@ Please note that a highly available setup with at least 3 nodes is required for 
 | Medium                      | Up to 300 | Up to 3000 | 8     | 32 GB | 4 vCPUs, 16 GB + 2000 IOPS |
 | Large (*)                   | Up to 500 | Up to 5000 | 16    | 64 GB | 8 vCPUs, 32 GB + 4000 IOPS |
 
-(*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tips-for-scaling-rancher.md).
+(*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md).
 
 (†): External Database Host refers to the optional possibility of hosting [k3s cluster data store on an external dedicated host](https://docs.k3s.io/datastore). Exact requirements will depend on the chosen data store, this table is a guideline only.
 
@@ -146,7 +146,7 @@ These requirements apply hosted Kubernetes clusters such as EKS, AKS, or GKE. Th
 | Medium                      | Up to 300 | Up to 3000 | 8     | 32 GB |
 | Large (*)                   | Up to 500 | Up to 5000 | 16    | 64 GB |
 
-(*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tips-for-scaling-rancher.md).
+(*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md).
 
 ### RKE
 
@@ -160,7 +160,7 @@ Please note that a highly available setup with at least 3 nodes is required for 
 | Medium                      | Up to 300 | Up to 3000 | 8     | 32 GB |
 | Large (*)                   | Up to 500 | Up to 5000 | 16    | 64 GB |
 
-(*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tips-for-scaling-rancher.md).
+(*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md).
 
 Refer to RKE documentation for more detailed information on [RKE general requirements](https://rke.docs.rancher.com/os).
 
