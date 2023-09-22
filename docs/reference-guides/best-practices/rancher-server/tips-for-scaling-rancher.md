@@ -23,7 +23,9 @@ etcd eventually encounters limitations to the number of a single Kubernetes reso
 
 `RoleBindings` are created in the local cluster as a side effect of many operations.
 
-Considerations when attempting reduce `RoleBindings` in the local cluster:
+Considerations when attempting to reduce `RoleBindings` in the local cluster:
+* Limit the use of the [Restricted Admin](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions#restricted-admin) role, preferring others wherever applicable
+* If [external authentication](../../../pages-for-subheaders/authentication-config) is configured, use groups to assign roles preferably
 * Only add users to clusters and projects when necessary
 * Remove clusters and projects when they are no longer needed
 * Only use custom roles if necessary
