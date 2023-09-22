@@ -19,18 +19,18 @@ This guide aims to introduce the approaches that should be considered to scale R
 The largest bottleneck when scaling Rancher is resource growth in the local Kubernetes cluster. The local cluster contains information for all downstream clusters. Many operations that apply to downstream clusters will create new objects in the local cluster and require computation from handlers running in the local cluster.
 
 ### Managing Your Object Counts
-etcd eventually encounters limitations to the number of a single Kubernetes resource type it can store. These exact numbers are not well documented. From internal observations we usually see performance issues once a single resource type's object count exceeds 60k, and often that type is Rolebindings.
+etcd eventually encounters limitations to the number of a single Kubernetes resource type it can store. These exact numbers are not well documented. From internal observations we usually see performance issues once a single resource type's object count exceeds 60k, and often that type is `RoleBindings`.
 
-Rolebindings are created in the local cluster as a side effect of many operations.
+`RoleBindings` are created in the local cluster as a side effect of many operations.
 
-Considerations when attempting reduce rolebindings in the local cluster:
+Considerations when attempting reduce `RoleBindings` in the local cluster:
 * Only add users to clusters and projects when necessary
 * Remove clusters and projects when they are no longer needed
 * Only use custom roles if necessary
 * Use as few rules as possible in custom roles
 * Consider whether adding a role to a user is redundant
 * Consider that using less, but more powerful, clusters may be more efficient
-* Experiment to see if creating new projects or creating new clusters manifests in fewer rolebindings for your specific use case.
+* Experiment to see if creating new projects or creating new clusters manifests in fewer `RoleBindings` for your specific use case.
 
 ### Using New Apps Over Legacy Apps
 There are two app kubernetes resources that Rancher uses: apps.projects.cattle.io and apps.cattle.cattle.io. The legacy apps, apps.projects.cattle.io, were introduced first in the Cluster Manager and are now outdated. The new apps, apps.catalog.cattle.io, are found in the Cluster Explorer for their respective cluster. The new apps are preferrable because they live in the downstream cluster while the legacy apps live in the local cluster.
