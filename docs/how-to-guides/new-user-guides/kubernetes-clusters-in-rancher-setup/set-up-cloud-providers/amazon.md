@@ -342,7 +342,7 @@ spec:
       - config:
           kubelet-arg:
             - cloud-provider=external
-          machineLabelSelector: rke.cattle.io/etcd-role=true
+        machineLabelSelector: rke.cattle.io/etcd-role=true
 ```
 
 - Control Plane
@@ -357,22 +357,21 @@ spec:
             - cloud-provider=external
           kube-controller-manager-arg:
             - cloud-provider=external
-          machineLabelSelector: rke.cattle.io/control-plane-role=true
+        machineLabelSelector: rke.cattle.io/control-plane-role=true
 ```
 
 - Worker
 
-```
-
+```yaml
 spec:
   rkeConfig:
     machineSelectorConfig:
       - config:
-          disable-cloud-controller: true
           kubelet-arg:
             - cloud-provider=external
-          machineLabelSelector: rke.cattle.io/worker-role=true
+        machineLabelSelector: rke.cattle.io/worker-role=true
 ```
+
 2. Select `Aws` if relying on the above mechanism to set the provider ID.
    Otherwise, select `External (out-of-tree)` cloud provider, which sets `--cloud-provider=external` for Kubernetes components.
 3. Specify the `aws-cloud-controller-manager` helm chart as an additional manifest to install:
