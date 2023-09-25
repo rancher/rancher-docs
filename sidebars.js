@@ -624,6 +624,7 @@ const sidebars = {
               },
               items: [
                 "how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps",
+                "how-to-guides/new-user-guides/helm-charts-in-rancher/updating-legacy-apps",
               ]
             },
             {
