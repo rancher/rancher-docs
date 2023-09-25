@@ -155,3 +155,138 @@ For information on configuring the refresh interval, see [this section.](../../.
 ## Programmatically Creating AKS Clusters
 
 The most common way to programmatically deploy AKS clusters through Rancher is by using the Rancher2 Terraform provider. The documentation for creating clusters with Terraform is [here.](https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster)
+
+
+## AKS with custom Azure role
+
+### Setting Up the Resource Group with the Azure Command Line Tool
+
+You can create the Resource Group by running this command:
+```
+az group create --location AZURE_LOCATION_NAME --resource-group AZURE_RESOURCE_GROUP_NAME
+```
+
+### Setting Up the Service Principal with the Azure Command Line Tool
+
+You can create the Service Principal by running this command:
+```
+az ad sp create-for-rbac --skip-assignment
+```
+
+The result should show information about the new service principal:
+``` {
+  "appId": "<CLIENT_ID>",
+  "displayName": "<SERVICE-PRINCIPAL-NAME>",
+  "password": "<CLIENT_SECRET>",
+  "tenant": "<TENANT_NAME>"
+}
+```
+
+### Setting Up the Minimum Permission Role with the Azure Command Line Tool
+
+You can create the Minimum Rancher AKSv2 Permission Role by running this command:
+
+```
+cat >> rancher-azure.json << EOF
+
+{
+    "Name": "Rancher AKSv2",
+    "IsCustom": true,
+    "Description": "Everything needed by Rancher AKSv2 operator",
+    "Actions": [
+        "Microsoft.Compute/disks/delete",
+        "Microsoft.Compute/disks/read",
+        "Microsoft.Compute/disks/write",
+        "Microsoft.Compute/diskEncryptionSets/read",
+        "Microsoft.Compute/locations/DiskOperations/read",
+        "Microsoft.Compute/locations/vmSizes/read",
+        "Microsoft.Compute/locations/operations/read",
+        "Microsoft.Compute/proximityPlacementGroups/write",
+        "Microsoft.Compute/snapshots/delete",
+        "Microsoft.Compute/snapshots/read",
+        "Microsoft.Compute/snapshots/write",
+        "Microsoft.Compute/virtualMachineScaleSets/manualUpgrade/action",
+        "Microsoft.Compute/virtualMachineScaleSets/delete",
+        "Microsoft.Compute/virtualMachineScaleSets/read",
+        "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/read",
+        "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/ipconfigurations/publicipaddresses/read",
+        "Microsoft.Compute/virtualMachineScaleSets/virtualmachines/instanceView/read",
+        "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/read",
+        "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/write",
+        "Microsoft.Compute/virtualMachineScaleSets/write",
+        "Microsoft.Compute/virtualMachines/read",
+        "Microsoft.Compute/virtualMachines/write",
+        "Microsoft.ContainerService/managedClusters/read",
+        "Microsoft.ContainerService/managedClusters/write",
+        "Microsoft.ContainerService/managedClusters/accessProfiles/listCredential/action",
+        "Microsoft.ContainerService/managedClusters/agentPools/read",
+        "Microsoft.ContainerService/managedClusters/agentPools/write",
+        "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action",
+        "Microsoft.Network/applicationGateways/read",
+        "Microsoft.Network/applicationGateways/write",
+        "Microsoft.Network/loadBalancers/write",
+        "Microsoft.Network/loadBalancers/backendAddressPools/join/action",
+        "Microsoft.Network/loadBalancers/delete",
+        "Microsoft.Network/loadBalancers/read",
+        "Microsoft.Network/networkInterfaces/join/action",
+        "Microsoft.Network/networkInterfaces/read",
+        "Microsoft.Network/networkInterfaces/write",
+        "Microsoft.Network/networkSecurityGroups/read",
+        "Microsoft.Network/networkSecurityGroups/write",
+        "Microsoft.Network/publicIPAddresses/delete",
+        "Microsoft.Network/publicIPAddresses/join/action",
+        "Microsoft.Network/publicIPAddresses/read",
+        "Microsoft.Network/publicIPAddresses/write",
+        "Microsoft.Network/publicIPPrefixes/join/action",
+        "Microsoft.Network/privatednszones/*",
+        "Microsoft.Network/routeTables/read",
+        "Microsoft.Network/routeTables/routes/delete",
+        "Microsoft.Network/routeTables/routes/read",
+        "Microsoft.Network/routeTables/routes/write",
+        "Microsoft.Network/routeTables/write",
+        "Microsoft.Network/virtualNetworks/read",
+        "Microsoft.Network/virtualNetworks/subnets/join/action",
+        "Microsoft.Network/virtualNetworks/subnets/read",
+        "Microsoft.Network/virtualNetworks/joinLoadBalancer/action",
+        "Microsoft.OperationalInsights/workspaces/sharedkeys/read",
+        "Microsoft.OperationalInsights/workspaces/read",
+        "Microsoft.OperationsManagement/solutions/write",
+        "Microsoft.OperationsManagement/solutions/read",
+        "Microsoft.Resources/subscriptions/resourcegroups/read",
+        "Microsoft.Resources/subscriptions/resourcegroups/write",
+        "Microsoft.Storage/operations/read",
+        "Microsoft.Storage/storageAccounts/listKeys/action",
+        "Microsoft.Storage/storageAccounts/delete",
+        "Microsoft.Storage/storageAccounts/read",
+        "Microsoft.Storage/storageAccounts/write"
+    ],
+    "NotActions": [],
+    "DataActions": [],
+    "NotDataActions": [],
+    "AssignableScopes": [
+        "/subscriptions/f5e1bf9e-ec79-4fc5-8354-53e2fcc0d99f"
+    ]
+}
+EOF
+```
+
+You can apply the Rancher AKSv2 Role by running this command:
+```
+az role definition create --role-definition rancher-azure.json
+```
+
+Verify if the Rancher AKSv2 Role was created:
+```
+az role definition list | grep "Rancher AKSv2"
+```
+
+### Setting Up the Role Assignment to Service Principal with the Azure Command Line Tool
+
+Assign Rancher AKSv2 Role to Service Principal with the Azure Command Line Tool:
+
+```
+az role assignment create \
+--assignee CLIENT_ID \
+--scope "/subscriptions/SUBSCRIPTION_ID/resourceGroups/RESOURCE_GROUP_NAME" \
+--role "Rancher AKSv2"
+```
