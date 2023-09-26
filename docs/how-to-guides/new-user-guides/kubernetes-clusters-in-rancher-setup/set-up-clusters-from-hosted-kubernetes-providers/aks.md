@@ -217,7 +217,7 @@ cat >> rancher-azure.json << EOF
         "Microsoft.Compute/virtualMachines/read",
         "Microsoft.Compute/virtualMachines/write",
         "Microsoft.ContainerService/managedClusters/read",
-        "Microsoft.ContainerService/managedClusters/write",
+        "Microsoft.ContainerService/managedClusters/delete",
         "Microsoft.ContainerService/managedClusters/accessProfiles/listCredential/action",
         "Microsoft.ContainerService/managedClusters/agentPools/read",
         "Microsoft.ContainerService/managedClusters/agentPools/write",
