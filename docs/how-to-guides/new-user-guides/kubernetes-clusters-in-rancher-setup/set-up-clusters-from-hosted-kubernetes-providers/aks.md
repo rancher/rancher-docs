@@ -8,7 +8,6 @@ title: Creating an AKS Cluster
 
 You can use Rancher to create a cluster hosted in Microsoft Azure Kubernetes Service (AKS).
 
-
 ## Prerequisites in Microsoft Azure
 
 :::caution
@@ -63,6 +62,14 @@ You can also create the service principal and give it Contributor privileges by 
 az ad sp create-for-rbac \
   --scope /subscriptions/$<SUBSCRIPTION-ID>/resourceGroups/$<GROUP> \
   --role Contributor
+```
+
+### Setting Up the Service Principal with the Azure Command Line Tool
+
+You can create the Resource Group by running this command:
+
+```
+az group create --location AZURE_LOCATION_NAME --resource-group AZURE_RESOURCE_GROUP_NAME
 ```
 
 ### Setting Up the Service Principal from the Azure Portal
@@ -124,6 +131,17 @@ When provisioning an AKS cluster in the Rancher UI, RBAC is not configurable bec
 
 RBAC is required for AKS clusters that are registered or imported into Rancher.
 
+### Setting Up the Role Assignment to Service Principal with the Azure Command Line Tool
+
+Assign the Rancher AKSv2 role to the service principal with the Azure Command Line Tool:
+
+```
+az role assignment create \
+--assignee CLIENT_ID \
+--scope "/subscriptions/SUBSCRIPTION_ID/resourceGroups/RESOURCE_GROUP_NAME" \
+--role "Rancher AKSv2"
+```
+
 ## AKS Cluster Configuration Reference
 
 For more information about how to configure AKS clusters from the Rancher UI, see the [configuration reference.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration.md)
@@ -146,43 +164,7 @@ Please be aware that when registering an existing AKS cluster, the cluster might
 
 For more information about connecting to an AKS private cluster, see the [AKS documentation.](https://docs.microsoft.com/en-us/azure/aks/private-clusters#options-for-connecting-to-the-private-cluster)
 
-## Syncing
-
-The AKS provisioner can synchronize the state of an AKS cluster between Rancher and the provider. For an in-depth technical explanation of how this works, see [Syncing.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters.md)
-
-For information on configuring the refresh interval, see [this section.](../../../../pages-for-subheaders/gke-cluster-configuration.md#configuring-the-refresh-interval)
-
-## Programmatically Creating AKS Clusters
-
-The most common way to programmatically deploy AKS clusters through Rancher is by using the Rancher2 Terraform provider. The documentation for creating clusters with Terraform is [here.](https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster)
-
-
-## AKS with custom Azure role
-
-### Setting Up the Resource Group with the Azure Command Line Tool
-
-You can create the Resource Group by running this command:
-```
-az group create --location AZURE_LOCATION_NAME --resource-group AZURE_RESOURCE_GROUP_NAME
-```
-
-### Setting Up the Service Principal with the Azure Command Line Tool
-
-You can create the Service Principal by running this command:
-```
-az ad sp create-for-rbac --skip-assignment
-```
-
-The result should show information about the new service principal:
-``` {
-  "appId": "<CLIENT_ID>",
-  "displayName": "<SERVICE-PRINCIPAL-NAME>",
-  "password": "<CLIENT_SECRET>",
-  "tenant": "<TENANT_NAME>"
-}
-```
-
-### Setting Up the Minimum Permission Role with the Azure Command Line Tool
+## Setting Up the Minimum Permission Role with the Azure Command Line Tool
 
 You can create the Minimum Rancher AKSv2 Permission Role by running this command:
 
@@ -217,6 +199,7 @@ cat >> rancher-azure.json << EOF
         "Microsoft.Compute/virtualMachines/read",
         "Microsoft.Compute/virtualMachines/write",
         "Microsoft.ContainerService/managedClusters/read",
+        "Microsoft.ContainerService/managedClusters/write"
         "Microsoft.ContainerService/managedClusters/delete",
         "Microsoft.ContainerService/managedClusters/accessProfiles/listCredential/action",
         "Microsoft.ContainerService/managedClusters/agentPools/read",
@@ -271,22 +254,24 @@ EOF
 ```
 
 You can apply the Rancher AKSv2 Role by running this command:
+
 ```
 az role definition create --role-definition rancher-azure.json
 ```
 
 Verify if the Rancher AKSv2 Role was created:
+
 ```
 az role definition list | grep "Rancher AKSv2"
 ```
 
-### Setting Up the Role Assignment to Service Principal with the Azure Command Line Tool
+## Syncing
 
-Assign Rancher AKSv2 Role to Service Principal with the Azure Command Line Tool:
+The AKS provisioner can synchronize the state of an AKS cluster between Rancher and the provider. For an in-depth technical explanation of how this works, see [Syncing.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters.md)
 
-```
-az role assignment create \
---assignee CLIENT_ID \
---scope "/subscriptions/SUBSCRIPTION_ID/resourceGroups/RESOURCE_GROUP_NAME" \
---role "Rancher AKSv2"
-```
+For information on configuring the refresh interval, see [this section.](../../../../pages-for-subheaders/gke-cluster-configuration.md#configuring-the-refresh-interval)
+
+
+## Programmatically Creating AKS Clusters
+
+The most common way to programmatically deploy AKS clusters through Rancher is by using the Rancher2 Terraform provider. The documentation for creating clusters with Terraform is [here](https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster).
