@@ -6,7 +6,7 @@ title: API Quick Start Guide
 2. Find and copy the address in the `server-url` field.
 3. [Create](../reference-guides/user-settings/api-keys#creating-an-api-key) a Rancher API key with no scope.
 
-  :::warning
+  :::danger
 
   A Rancher API key with no scope grants unrestricted access to all resources that the user can access. To prevent unauthorized use, this key should be stored securely and rotated frequently.
 
@@ -14,40 +14,39 @@ title: API Quick Start Guide
 
 4. Create a `kubeconfig.yaml` file. Replace `$SERVER_URL` with the server url and `$API_KEY` with your Rancher API key:
 
-  ```yaml
-  apiVersion: v1
-  kind: Config
-  clusters:
-  - name: "rancher"
-    cluster:
-      server: "$SERVER_URL"
-      # Uncomment the following line if your server is using self-signed certs. This option is not recommended for production
-      # insecure-skip-tls-verify: true
+    ```yaml
+    apiVersion: v1
+    kind: Config
+    clusters:
+    - name: "rancher"
+      cluster:
+        server: "$SERVER_URL"
+        # Uncomment the following line if your server is using self-signed certs. This option is not recommended for production
+        # insecure-skip-tls-verify: true
 
-  users:
-  - name: "rancher"
-    user:
-      token: "$API_KEY"
+    users:
+    - name: "rancher"
+      user:
+        token: "$API_KEY"
 
+    contexts:
+    - name: "rancher"
+      context:
+        user: "rancher"
+        cluster: "rancher"
 
-  contexts:
-  - name: "rancher"
-    context:
-      user: "rancher"
-      cluster: "rancher"
+    current-context: "rancher"
+    ```
 
-  current-context: "rancher"
-```
-
-You can use this file with any compatible tool, such as kubectl or client-go. For a quick demo, see the [kubectl example](#api-kubectl-example). 
+You can use this file with any compatible tool, such as kubectl or [client-go](https://github.com/kubernetes/client-go). For a quick demo, see the [kubectl example](#api-kubectl-example). 
 
 For more information on handling more complex certificate setups, see [Specifying CA Certs](#specifying-ca-certs).
 
 For more information on available kubeconfig options, see the [upstream documentation](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/).
 
-## API Kubectl Example
+## API kubectl Example
 
-1. Set your KUBECONFIG environmental variable to the kubeconfig file you just created:
+1. Set your KUBECONFIG environment variable to the kubeconfig file you just created:
 
   ```bash
   export KUBECONFIG=$(pwd)/kubeconfig.yaml
@@ -70,7 +69,7 @@ For more information on available kubeconfig options, see the [upstream document
   apiVersion: management.cattle.io/v3
   kind: Project
   metadata:
-    # name should be unique accross all projects in every cluster
+    # name should be unique across all projects in every cluster
     name: p-abc123
     # generateName can be used instead of `name` to randomly generate a name.
     # generateName: p-
@@ -115,7 +114,7 @@ To ensure that your tools can recognize Rancher's CA certificates, most setups r
 1. In the upper left corner, click **☰ > Global Settings**. 
 2. Find and copy the value in the `ca-certs` field.
 3. Save the value in a file named `rancher.crt`.
-4. The following commands will convert `rancher.crt` to base64 output,  trim all new-lines, and update the cluster in the kubeconfig with the certificate, then finishing by removing the `rancher.crt` file:
+4. The following commands will convert `rancher.crt` to base64 output, trim all new-lines, and update the cluster in the kubeconfig with the certificate, then finishing by removing the `rancher.crt` file:
 
   ```bash
   export KUBECONFIG=$PATH_TO_RANCHER_KUBECONFIG
@@ -124,7 +123,7 @@ To ensure that your tools can recognize Rancher's CA certificates, most setups r
   ```
 5. (Optional) If you use self-signed certificatess that aren't trusted by your system, you can set the insecure option in your kubeconfig with kubectl:
 
-  :::warning 
+  :::danger
 
   This option shouldn't be used in production as it is a security risk.
 
