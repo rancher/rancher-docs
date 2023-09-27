@@ -3,7 +3,7 @@ title: Private Clusters
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters"/>
 </head>
 
 _Available as of v2.5.8_

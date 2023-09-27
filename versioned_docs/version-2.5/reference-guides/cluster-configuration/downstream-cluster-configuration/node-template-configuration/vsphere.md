@@ -3,7 +3,7 @@ title: VSphere Node Template Configuration
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere"/>
 </head>
 
 The following node template configuration reference applies to Rancher v2.3.3+.

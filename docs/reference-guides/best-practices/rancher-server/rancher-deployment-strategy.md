@@ -3,7 +3,7 @@ title: Rancher Deployment Strategy
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/best-practices/rancher-server/rancher-deployment-strategy"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/best-practices/rancher-server/rancher-deployment-strategy"/>
 </head>
 
 There are two recommended deployment strategies for a Rancher instance that manages downstream Kubernetes clusters. Each one has its own pros and cons. Read more about which one would fit best for your use case.

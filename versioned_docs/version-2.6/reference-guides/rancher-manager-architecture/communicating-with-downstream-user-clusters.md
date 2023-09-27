@@ -2,10 +2,6 @@
 title: Communicating with Downstream User Clusters
 ---
 
-<head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters"/>
-</head>
-
 This section describes how Rancher provisions and manages the downstream user clusters that run your apps and services.
 
 The below diagram shows how the cluster controllers, cluster agents, and node agents allow Rancher to control downstream clusters.

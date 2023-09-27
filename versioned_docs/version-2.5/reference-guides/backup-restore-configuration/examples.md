@@ -3,7 +3,7 @@ title: Examples
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/backup-restore-configuration/examples"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/backup-restore-configuration/examples"/>
 </head>
 
 This section contains examples of Backup and Restore custom resources.

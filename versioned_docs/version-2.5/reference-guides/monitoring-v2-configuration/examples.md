@@ -3,7 +3,7 @@ title: Examples
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/monitoring-v2-configuration/examples"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/monitoring-v2-configuration/examples"/>
 </head>
 
 ### ServiceMonitor
