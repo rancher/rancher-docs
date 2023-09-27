@@ -3,7 +3,7 @@ title: Route Configuration
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/monitoring-v2-configuration/routes"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/monitoring-v2-configuration/routes"/>
 </head>
 
 The route configuration is the section of the Alertmanager custom resource that controls how the alerts fired by Prometheus are grouped and filtered before they reach the receiver.

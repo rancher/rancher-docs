@@ -3,7 +3,7 @@ title: Syncing
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters"/>
 </head>
 
 Syncing allows Rancher to update cluster values so that they're up to date with the corresponding cluster object hosted in AKS, EKS or GKE. This enables sources other than Rancher to own a hosted cluster’s state. 

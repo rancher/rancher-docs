@@ -702,6 +702,7 @@ spec:
       - config:
           kubelet-arg:
             - make-iptables-util-chains=true                          # CIS 4.2.7
+          protect-kernel-defaults: true                               # CIS 4.2.6
 ```
 
 </TabItem>
@@ -733,7 +734,6 @@ spec:
       - config:
           kubelet-arg:
             - make-iptables-util-chains=true                          # CIS 4.2.7
-          protect-kernel-defaults: true                               # CIS 4.2.6
 ```
 
 </TabItem>

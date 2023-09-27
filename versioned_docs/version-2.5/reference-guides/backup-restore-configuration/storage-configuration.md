@@ -3,7 +3,7 @@ title: Backup Storage Location Configuration
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/backup-restore-configuration/storage-configuration"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/backup-restore-configuration/storage-configuration"/>
 </head>
 
 Configure a storage location where all backups are saved by default. You will have the option to override this with each backup, but will be limited to using an S3-compatible object store.
