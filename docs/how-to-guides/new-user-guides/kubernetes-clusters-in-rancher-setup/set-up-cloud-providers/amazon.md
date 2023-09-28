@@ -21,7 +21,7 @@ To set up the Amazon cloud provider,
 
 :::note Important:
 
-In Kubernetes 1.27 and later, you must use an out-of-tree AWS cloud provider. The steps listed below are still required to set up an Amazon cloud provider. You can proceed to [set up an out-of-tree cloud provider for RKE1](#using-out-of-tree-aws-cloud-provider-for-rke1) after creating an IAM role and configuring the ClusterID.
+In Kubernetes 1.27 and later, you must use an out-of-tree AWS cloud provider. In-tree Cloud Providers have been removed completely, and will no longer continue to function post-upgrade to Kubernetes 1.27. The steps listed below are still required to set up an Amazon cloud provider. You can proceed to [set up an out-of-tree cloud provider for RKE1](#using-out-of-tree-aws-cloud-provider-for-rke1) after creating an IAM role and configuring the ClusterID.
 
 You can also [migrate from an in-tree to out-of-tree AWS cloud provider](#migrating-to-out-of-tree-aws-cloud-provider-for-rke1) on Kubernetes 1.26 and earlier. All existing clusters must migrate prior to upgrading to 1.27 in order to stay functional.
 
@@ -468,4 +468,12 @@ spec:
 6. Optionally, AWS cloud controller manager can be updated to disable leader migration. Upgrade the chart and remove following section from container args:
 ```
 - --enable-leader-migration=true 
+```
+
+7. The Cloud Provider is responsible for setting the ProviderID of the node on successful 
+
+Check if all nodes are initialized with the ProviderID with the following command:
+
+```
+kubectl describe nodes | grep "ProviderID"
 ```
