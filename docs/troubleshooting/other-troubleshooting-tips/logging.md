@@ -89,7 +89,7 @@ When you create a cluster under **Cluster Configuration > Agent Environment Vars
 
 - Trace-level logging: Set `CATTLE_TRACE` or `RANCHER_TRACE` to `true`
 
--  Debug-level logging: Set `CATTLE_DEBUG` or `RANCHER_DEUBG` to `true`
+- Debug-level logging: Set `CATTLE_DEBUG` or `RANCHER_DEUBG` to `true`
 
 :::caution
 
