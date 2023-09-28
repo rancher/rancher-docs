@@ -66,7 +66,7 @@ az ad sp create-for-rbac \
 
 ### Setting Up the Service Principal with the Azure Command Line Tool
 
-You can create the Resource Group by running this command:
+Create the Resource Group by running this command:
 
 ```
 az group create --location AZURE_LOCATION_NAME --resource-group AZURE_RESOURCE_GROUP_NAME
@@ -166,7 +166,7 @@ For more information about connecting to an AKS private cluster, see the [AKS do
 
 ## Setting Up the Minimum Permission Role with the Azure Command Line Tool
 
-You can create the Minimum Rancher AKSv2 Permission Role by running this command:
+1. Create the Minimum Rancher AKSv2 Permission Role by running this command:
 
 ```
 cat >> rancher-azure.json << EOF
@@ -254,13 +254,13 @@ cat >> rancher-azure.json << EOF
 EOF
 ```
 
-You can apply the Rancher AKSv2 Role by running this command:
+2. Apply the Rancher AKSv2 Role:
 
 ```
 az role definition create --role-definition rancher-azure.json
 ```
 
-Verify if the Rancher AKSv2 Role was created:
+3. Verify if the Rancher AKSv2 Role was created:
 
 ```
 az role definition list | grep "Rancher AKSv2"
