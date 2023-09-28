@@ -168,103 +168,102 @@ For more information about connecting to an AKS private cluster, see the [AKS do
 
 1. Create the Minimum Rancher AKSv2 Permission Role by running this command:
 
-```
-cat >> rancher-azure.json << EOF
-
-{
-    "Name": "Rancher AKSv2",
-    "IsCustom": true,
-    "Description": "Everything needed by Rancher AKSv2 operator",
-    "Actions": [
-        "Microsoft.Compute/disks/delete",
-        "Microsoft.Compute/disks/read",
-        "Microsoft.Compute/disks/write",
-        "Microsoft.Compute/diskEncryptionSets/read",
-        "Microsoft.Compute/locations/DiskOperations/read",
-        "Microsoft.Compute/locations/vmSizes/read",
-        "Microsoft.Compute/locations/operations/read",
-        "Microsoft.Compute/proximityPlacementGroups/write",
-        "Microsoft.Compute/snapshots/delete",
-        "Microsoft.Compute/snapshots/read",
-        "Microsoft.Compute/snapshots/write",
-        "Microsoft.Compute/virtualMachineScaleSets/manualUpgrade/action",
-        "Microsoft.Compute/virtualMachineScaleSets/delete",
-        "Microsoft.Compute/virtualMachineScaleSets/read",
-        "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/read",
-        "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/ipconfigurations/publicipaddresses/read",
-        "Microsoft.Compute/virtualMachineScaleSets/virtualmachines/instanceView/read",
-        "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/read",
-        "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/write",
-        "Microsoft.Compute/virtualMachineScaleSets/write",
-        "Microsoft.Compute/virtualMachines/read",
-        "Microsoft.Compute/virtualMachines/write",
-        "Microsoft.ContainerService/managedClusters/read",
-        "Microsoft.ContainerService/managedClusters/write"
-        "Microsoft.ContainerService/managedClusters/write"
-        "Microsoft.ContainerService/managedClusters/delete",
-        "Microsoft.ContainerService/managedClusters/accessProfiles/listCredential/action",
-        "Microsoft.ContainerService/managedClusters/agentPools/read",
-        "Microsoft.ContainerService/managedClusters/agentPools/write",
-        "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action",
-        "Microsoft.Network/applicationGateways/read",
-        "Microsoft.Network/applicationGateways/write",
-        "Microsoft.Network/loadBalancers/write",
-        "Microsoft.Network/loadBalancers/backendAddressPools/join/action",
-        "Microsoft.Network/loadBalancers/delete",
-        "Microsoft.Network/loadBalancers/read",
-        "Microsoft.Network/networkInterfaces/join/action",
-        "Microsoft.Network/networkInterfaces/read",
-        "Microsoft.Network/networkInterfaces/write",
-        "Microsoft.Network/networkSecurityGroups/read",
-        "Microsoft.Network/networkSecurityGroups/write",
-        "Microsoft.Network/publicIPAddresses/delete",
-        "Microsoft.Network/publicIPAddresses/join/action",
-        "Microsoft.Network/publicIPAddresses/read",
-        "Microsoft.Network/publicIPAddresses/write",
-        "Microsoft.Network/publicIPPrefixes/join/action",
-        "Microsoft.Network/privatednszones/*",
-        "Microsoft.Network/routeTables/read",
-        "Microsoft.Network/routeTables/routes/delete",
-        "Microsoft.Network/routeTables/routes/read",
-        "Microsoft.Network/routeTables/routes/write",
-        "Microsoft.Network/routeTables/write",
-        "Microsoft.Network/virtualNetworks/read",
-        "Microsoft.Network/virtualNetworks/subnets/join/action",
-        "Microsoft.Network/virtualNetworks/subnets/read",
-        "Microsoft.Network/virtualNetworks/joinLoadBalancer/action",
-        "Microsoft.OperationalInsights/workspaces/sharedkeys/read",
-        "Microsoft.OperationalInsights/workspaces/read",
-        "Microsoft.OperationsManagement/solutions/write",
-        "Microsoft.OperationsManagement/solutions/read",
-        "Microsoft.Resources/subscriptions/resourcegroups/read",
-        "Microsoft.Resources/subscriptions/resourcegroups/write",
-        "Microsoft.Storage/operations/read",
-        "Microsoft.Storage/storageAccounts/listKeys/action",
-        "Microsoft.Storage/storageAccounts/delete",
-        "Microsoft.Storage/storageAccounts/read",
-        "Microsoft.Storage/storageAccounts/write"
-    ],
-    "NotActions": [],
-    "DataActions": [],
-    "NotDataActions": [],
-    "AssignableScopes": [
-        "/subscriptions/f5e1bf9e-ec79-4fc5-8354-53e2fcc0d99f"
-    ]
-}
-EOF
-```
+  ```
+  cat >> rancher-azure.json << EOF
+  
+  {
+      "Name": "Rancher AKSv2",
+      "IsCustom": true,
+      "Description": "Everything needed by Rancher AKSv2 operator",
+      "Actions": [
+         "Microsoft.Compute/disks/delete",
+          "Microsoft.Compute/disks/read",
+          "Microsoft.Compute/disks/write",
+          "Microsoft.Compute/diskEncryptionSets/read",
+          "Microsoft.Compute/locations/DiskOperations/read",
+          "Microsoft.Compute/locations/vmSizes/read",
+          "Microsoft.Compute/locations/operations/read",
+          "Microsoft.Compute/proximityPlacementGroups/write",
+          "Microsoft.Compute/snapshots/delete",
+          "Microsoft.Compute/snapshots/read",
+          "Microsoft.Compute/snapshots/write",
+          "Microsoft.Compute/virtualMachineScaleSets/manualUpgrade/action",
+          "Microsoft.Compute/virtualMachineScaleSets/delete",
+          "Microsoft.Compute/virtualMachineScaleSets/read",
+          "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/read",
+          "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/ipconfigurations/publicipaddresses/read",
+          "Microsoft.Compute/virtualMachineScaleSets/virtualmachines/instanceView/read",
+          "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/read",
+          "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/write",
+          "Microsoft.Compute/virtualMachineScaleSets/write",
+          "Microsoft.Compute/virtualMachines/read",
+          "Microsoft.Compute/virtualMachines/write",
+          "Microsoft.ContainerService/managedClusters/read",
+          "Microsoft.ContainerService/managedClusters/write"
+          "Microsoft.ContainerService/managedClusters/delete",
+          "Microsoft.ContainerService/managedClusters/accessProfiles/listCredential/action",
+          "Microsoft.ContainerService/managedClusters/agentPools/read",
+          "Microsoft.ContainerService/managedClusters/agentPools/write",
+          "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action",
+          "Microsoft.Network/applicationGateways/read",
+          "Microsoft.Network/applicationGateways/write",
+          "Microsoft.Network/loadBalancers/write",
+          "Microsoft.Network/loadBalancers/backendAddressPools/join/action",
+          "Microsoft.Network/loadBalancers/delete",
+          "Microsoft.Network/loadBalancers/read",
+          "Microsoft.Network/networkInterfaces/join/action",
+          "Microsoft.Network/networkInterfaces/read",
+          "Microsoft.Network/networkInterfaces/write",
+          "Microsoft.Network/networkSecurityGroups/read",
+          "Microsoft.Network/networkSecurityGroups/write",
+          "Microsoft.Network/publicIPAddresses/delete",
+          "Microsoft.Network/publicIPAddresses/join/action",
+          "Microsoft.Network/publicIPAddresses/read",
+          "Microsoft.Network/publicIPAddresses/write",
+          "Microsoft.Network/publicIPPrefixes/join/action",
+          "Microsoft.Network/privatednszones/*",
+          "Microsoft.Network/routeTables/read",
+          "Microsoft.Network/routeTables/routes/delete",
+          "Microsoft.Network/routeTables/routes/read",
+          "Microsoft.Network/routeTables/routes/write",
+          "Microsoft.Network/routeTables/write",
+          "Microsoft.Network/virtualNetworks/read",
+          "Microsoft.Network/virtualNetworks/subnets/join/action",
+          "Microsoft.Network/virtualNetworks/subnets/read",
+          "Microsoft.Network/virtualNetworks/joinLoadBalancer/action",
+          "Microsoft.OperationalInsights/workspaces/sharedkeys/read",
+          "Microsoft.OperationalInsights/workspaces/read",
+          "Microsoft.OperationsManagement/solutions/write",
+          "Microsoft.OperationsManagement/solutions/read",
+          "Microsoft.Resources/subscriptions/resourcegroups/read",
+          "Microsoft.Resources/subscriptions/resourcegroups/write",
+          "Microsoft.Storage/operations/read",
+          "Microsoft.Storage/storageAccounts/listKeys/action",
+          "Microsoft.Storage/storageAccounts/delete",
+          "Microsoft.Storage/storageAccounts/read",
+          "Microsoft.Storage/storageAccounts/write"
+      ],
+      "NotActions": [],
+      "DataActions": [],
+      "NotDataActions": [],
+      "AssignableScopes": [
+          "/subscriptions/f5e1bf9e-ec79-4fc5-8354-53e2fcc0d99f"
+      ]
+  }
+  EOF
+  ```
 
 2. Apply the Rancher AKSv2 Role:
 
-```
-az role definition create --role-definition rancher-azure.json
-```
+  ```
+  az role definition create --role-definition rancher-azure.json
+  ```
 
 3. Verify if the Rancher AKSv2 Role was created:
 
-```
-az role definition list | grep "Rancher AKSv2"
-```
+  ```
+  az role definition list | grep "Rancher AKSv2"
+  ```
 
 ## Syncing
 
