@@ -2,6 +2,10 @@
 title: About rke2-selinux
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-security/selinux-rpm/about-rke2-selinux"/>
+</head>
+
 `rke2-selinux` provides policies for RKE2. It is installed automatically when the RKE2 installer script detects that it is running on an RPM-based distro.
 
 The `rke2-selinux` GitHub repository is [here.](https://github.com/rancher/rke2-selinux)
