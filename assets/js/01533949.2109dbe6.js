@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[32621],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[15474],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 50571:
+/***/ 81258:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,46 +313,46 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "troubleshooting/other-troubleshooting-tips/logging",
-    "id": "version-2.7/troubleshooting/other-troubleshooting-tips/logging",
+    "id": "troubleshooting/other-troubleshooting-tips/logging",
     "title": "Logging",
-    "description": "Log levels",
-    "source": "@site/versioned_docs/version-2.7/troubleshooting/other-troubleshooting-tips/logging.md",
+    "description": "Log Levels",
+    "source": "@site/docs/troubleshooting/other-troubleshooting-tips/logging.md",
     "sourceDirName": "troubleshooting/other-troubleshooting-tips",
     "slug": "/troubleshooting/other-troubleshooting-tips/logging",
-    "permalink": "/v2.7/troubleshooting/other-troubleshooting-tips/logging",
+    "permalink": "/troubleshooting/other-troubleshooting-tips/logging",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/troubleshooting/other-troubleshooting-tips/logging.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/troubleshooting/other-troubleshooting-tips/logging.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1695919733,
-    "formattedLastUpdatedAt": "Sep 28, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1696000331,
+    "formattedLastUpdatedAt": "Sep 29, 2023",
     "frontMatter": {
         "title": "Logging"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Registered Clusters",
-        "permalink": "/v2.7/troubleshooting/other-troubleshooting-tips/registered-clusters"
+        "permalink": "/troubleshooting/other-troubleshooting-tips/registered-clusters"
     },
     "next": {
         "title": "User ID Tracking in Audit Logs",
-        "permalink": "/v2.7/troubleshooting/other-troubleshooting-tips/user-id-tracking-in-audit-logs"
+        "permalink": "/troubleshooting/other-troubleshooting-tips/user-id-tracking-in-audit-logs"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Log levels',
+        value: 'Log Levels',
         id: 'log-levels',
         level: 2
     },
     {
-        value: 'How to configure a log level',
+        value: 'How to Configure a Log Level',
         id: 'how-to-configure-a-log-level',
         level: 3
     },
     {
-        value: 'Kubernetes install',
+        value: 'Kubernetes Install',
         id: 'kubernetes-install',
         level: 4
     },
@@ -362,12 +362,12 @@ const toc = [
         level: 4
     },
     {
-        value: 'Rancher machine debug logs',
+        value: 'Rancher Machine Debug Logs',
         id: 'rancher-machine-debug-logs',
         level: 2
     },
     {
-        value: 'Cattle-cluster-agent debug logs',
+        value: 'Cattle-cluster-agent Debug Logs',
         id: 'cattle-cluster-agent-debug-logs',
         level: 2
     }
@@ -388,7 +388,7 @@ function MDXContent(_param) {
         href: "https://ranchermanager.docs.rancher.com/troubleshooting/other-troubleshooting-tips/logging"
     })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "log-levels"
-    }, `Log levels`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The following log levels are used in Rancher:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
+    }, `Log Levels`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The following log levels are used in Rancher:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "thead"
@@ -432,9 +432,9 @@ function MDXContent(_param) {
         "align": null
     }, `Logs very detailed messages on internal functions. This is very verbose and can contain sensitive information.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "how-to-configure-a-log-level"
-    }, `How to configure a log level`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+    }, `How to Configure a Log Level`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "kubernetes-install"
-    }, `Kubernetes install`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Kubernetes Install`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Configure debug log level`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
@@ -470,7 +470,7 @@ $ docker logs -f <container_id>
 OK
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "rancher-machine-debug-logs"
-    }, `Rancher machine debug logs`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you need to troubleshoot the creation of objects in your infrastructure provider of choice, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `Rancher Machine Debug Logs`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you need to troubleshoot the creation of objects in your infrastructure provider of choice, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `rancher-machine`), `
 debug logs might be helpful to you.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `It's possible to enable debug logs for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -506,7 +506,7 @@ possible to enable debug logs in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPO
         parentName: "p"
     }, `rancher-machine`), ` debug logs can contain sensitive information.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "cattle-cluster-agent-debug-logs"
-    }, `Cattle-cluster-agent debug logs`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `Cattle-cluster-agent Debug Logs`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `cattle-cluster-agent`), ` log levels can be set when you initialize downstream clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you create a cluster under `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
@@ -528,7 +528,7 @@ possible to enable debug logs in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPO
         parentName: "p"
     }, `CATTLE_DEBUG`), ` or `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `RANCHER_DEUBG`), ` to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `RANCHER_DEBUG`), ` to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `true`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "caution"
