@@ -99,7 +99,7 @@ If you roll back to Rancher v2.7.5 or earlier, you may see webhook versions that
 
 To help alleviate these issues, you can run the [adjust-downstream-webhook](https://github.com/rancherlabs/support-tools/tree/master/adjust-downstream-webhook) shell script after roll back. This script selects and installs the proper webhook version (or removes the webhook entirely) for the corresponding Rancher version. 
 
-### Project Members or Owners Can't Create Namespaces 
+### Project Members and Owners Can't Create Namespaces 
 
 **Note:** This affects Rancher versions `v2.7.2 - v2.7.4`
 
