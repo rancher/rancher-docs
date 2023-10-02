@@ -2,7 +2,7 @@
 title: API Quick Start Guide
 ---
 
-The Rancher API is a programatic interface for your upstream and downstream clusters. Anything you can do through the Rancher GUI can also be performed through the commandline, using the Rancher API. This guide will help get you started on using the API from your client of choice.
+The Rancher API is a programatic interface for your upstream and downstream clusters. This guide will help get you started on using the API from your client of choice.
 
 1. In the upper left corner, click **☰ > Global Settings**. 
 2. Find and copy the address in the `server-url` field.
