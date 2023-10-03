@@ -65,7 +65,7 @@ For more information, see [Installing Docker](../getting-started/installation-an
 
 The following sections describe the CPU, memory, and I/O requirements for nodes where Rancher is installed. Requirements vary based on the size of the infrastructure.
 
-### Premise
+### Practical Considerations
 
 Rancher's hardware footprint depends on a number of factors, including:
 
