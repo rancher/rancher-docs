@@ -102,12 +102,12 @@ The following table lists minimum CPU and memory requirements for each node in t
 
 Please note that a highly available setup with at least three nodes is required for production.
 
-| Managed Infrastructure Size | Clusters  | Nodes      | vCPUs | RAM   |
-|-----------------------------|-----------|------------|-------|-------|
-| Small                       | Up to 150 | Up to 1500 | 4     | 16 GB |
-| Medium                      | Up to 300 | Up to 3000 | 8     | 32 GB |
-| Large (*)                   | Up to 500 | Up to 5000 | 16    | 64 GB |
-| Larger (†)                  | (†)       | (†)        | (†)   | (†)   |
+| Managed Infrastructure Size | Maximum number of Clusters | Maximum number of Nodes | vCPUs | RAM   |
+|-----------------------------|----------------------------|-------------------------|-------|-------|
+| Small                       | 150                        | 1500                    | 4     | 16 GB |
+| Medium                      | 300                        | 3000                    | 8     | 32 GB |
+| Large (*)                   | 500                        | 5000                    | 16    | 64 GB |
+| Larger (†)                  | (†)                        | (†)                     | (†)   | (†)   |
 
 (*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md).
 
@@ -121,11 +121,11 @@ The following table lists minimum CPU and memory requirements for each node in t
 
 Please note that a highly available setup with at least three nodes is required for production.
 
-| Managed Infrastructure Size | Clusters  | Nodes      | vCPUs | RAM   | External Database Host (†) |
-|-----------------------------|-----------|------------|-------|-------|----------------------------|
-| Small                       | Up to 150 | Up to 1500 | 4     | 16 GB | 2 vCPUs, 8 GB + 1000 IOPS  |
-| Medium                      | Up to 300 | Up to 3000 | 8     | 32 GB | 4 vCPUs, 16 GB + 2000 IOPS |
-| Large (*)                   | Up to 500 | Up to 5000 | 16    | 64 GB | 8 vCPUs, 32 GB + 4000 IOPS |
+| Managed Infrastructure Size | Maximum number of Clusters | Maximum number of Nodes | vCPUs | RAM   | External Database Host (†) |
+|-----------------------------|----------------------------|-------------------------|-------|-------|----------------------------|
+| Small                       | 150                        | 1500                    | 4     | 16 GB | 2 vCPUs, 8 GB + 1000 IOPS  |
+| Medium                      | 300                        | 3000                    | 8     | 32 GB | 4 vCPUs, 16 GB + 2000 IOPS |
+| Large (*)                   | 500                        | 5000                    | 16    | 64 GB | 8 vCPUs, 32 GB + 4000 IOPS |
 
 (*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md).
 
@@ -141,11 +141,11 @@ Please note that a highly available setup with at least three nodes is required 
 
 These requirements apply to hosted Kubernetes clusters such as Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service  (AKS), or Google Kubernetes Engine (GKE). They don't apply to Rancher SaaS solutions such as [Rancher Prime Hosted](https://www.rancher.com/products/rancher).
 
-| Managed Infrastructure Size | Clusters  | Nodes      | vCPUs | RAM   |
-|-----------------------------|-----------|------------|-------|-------|
-| Small                       | Up to 150 | Up to 1500 | 4     | 16 GB |
-| Medium                      | Up to 300 | Up to 3000 | 8     | 32 GB |
-| Large (*)                   | Up to 500 | Up to 5000 | 16    | 64 GB |
+| Managed Infrastructure Size | Maximum number of Clusters | Maximum number of Nodes | vCPUs | RAM   |
+|-----------------------------|----------------------------|-------------------------|-------|-------|
+| Small                       | 150                        | 1500                    | 4     | 16 GB |
+| Medium                      | 300                        | 3000                    | 8     | 32 GB |
+| Large (*)                   | 500                        | 5000                    | 16    | 64 GB |
 
 (*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md).
 
@@ -155,11 +155,11 @@ The following table lists minimum CPU and memory requirements for each node in t
 
 Please note that a highly available setup with at least three nodes is required for production.
 
-| Managed Infrastructure Size | Clusters  | Nodes      | vCPUs | RAM   |
-|-----------------------------|-----------|------------|-------|-------|
-| Small                       | Up to 150 | Up to 1500 | 4     | 16 GB |
-| Medium                      | Up to 300 | Up to 3000 | 8     | 32 GB |
-| Large (*)                   | Up to 500 | Up to 5000 | 16    | 64 GB |
+| Managed Infrastructure Size | Maximum number of Clusters | Maximum number of Nodes | vCPUs | RAM   |
+|-----------------------------|----------------------------|-------------------------|-------|-------|
+| Small                       | 150                        | 1500                    | 4     | 16 GB |
+| Medium                      | 300                        | 3000                    | 8     | 32 GB |
+| Large (*)                   | 500                        | 5000                    | 16    | 64 GB |
 
 (*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md).
 
@@ -171,10 +171,10 @@ The following table lists minimum CPU and memory requirements for a [single Dock
 
 Please note that a Docker installation is only suitable for development or testing purposes and is not meant to be used in production environments.
 
-| Managed Infrastructure Size | Clusters | Nodes     | vCPUs | RAM  |
-|-----------------------------|----------|-----------|-------|------|
-| Small                       | Up to 5  | Up to 50  | 1     | 4 GB |
-| Medium                      | Up to 15 | Up to 200 | 2     | 8 GB |
+| Managed Infrastructure Size | Maximum number of Clusters | Maximum number of Nodes | vCPUs | RAM  |
+|-----------------------------|----------------------------|-------------------------|-------|------|
+| Small                       | 5                          | 50                      | 1     | 4 GB |
+| Medium                      | 15                         | 200                     | 2     | 8 GB |
 
 ## Ingress
 
