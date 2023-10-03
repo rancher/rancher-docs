@@ -83,7 +83,7 @@ In particular, requirements on this page are subject to typical use assumptions,
  - Up to 100 CRDs in downstream clusters.
  - Up to 50 Fleet deployments.
 
-Higher numbers are possible but requirements might be higher. If you have more than 20 thousand resources of the same type, you might not be able to see all resources through the Rancher UI.
+Higher numbers are possible but requirements might be higher. If you have more than 20 thousand resources of the same type, loading time of the whole list through the Rancher UI might take several seconds.
 
 :::note Evolution:
 
