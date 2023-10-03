@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/aks.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1691795289,
-    "formattedLastUpdatedAt": "Aug 11, 2023",
+    "lastUpdatedAt": 1696341445,
+    "formattedLastUpdatedAt": "Oct 3, 2023",
     "frontMatter": {
         "title": "Creating an AKS Cluster"
     },
@@ -352,6 +352,11 @@ const toc = [
         level: 3
     },
     {
+        value: 'Setting Up the Service Principal with the Azure Command Line Tool',
+        id: 'setting-up-the-service-principal-with-the-azure-command-line-tool-1',
+        level: 3
+    },
+    {
         value: 'Setting Up the Service Principal from the Azure Portal',
         id: 'setting-up-the-service-principal-from-the-azure-portal',
         level: 3
@@ -372,6 +377,11 @@ const toc = [
         level: 2
     },
     {
+        value: 'Setting Up the Role Assignment to Service Principal with the Azure Command Line Tool',
+        id: 'setting-up-the-role-assignment-to-service-principal-with-the-azure-command-line-tool',
+        level: 3
+    },
+    {
         value: 'AKS Cluster Configuration Reference',
         id: 'aks-cluster-configuration-reference',
         level: 2
@@ -379,6 +389,11 @@ const toc = [
     {
         value: 'Private Clusters',
         id: 'private-clusters',
+        level: 2
+    },
+    {
+        value: 'Setting Up the Minimum Permission Role with the Azure Command Line Tool',
+        id: 'setting-up-the-minimum-permission-role-with-the-azure-command-line-tool',
         level: 2
     },
     {
@@ -449,6 +464,11 @@ function MDXContent(_param) {
     }, `az ad sp create-for-rbac \\
   --scope /subscriptions/$<SUBSCRIPTION-ID>/resourceGroups/$<GROUP> \\
   --role Contributor
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "setting-up-the-service-principal-with-the-azure-command-line-tool-1"
+    }, `Setting Up the Service Principal with the Azure Command Line Tool`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Create the Resource Group by running this command:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `az group create --location AZURE_LOCATION_NAME --resource-group AZURE_RESOURCE_GROUP_NAME
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "setting-up-the-service-principal-from-the-azure-portal"
     }, `Setting Up the Service Principal from the Azure Portal`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can also follow these instructions to set up a service principal and give it role-based access from the Azure Portal.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -618,7 +638,15 @@ function MDXContent(_param) {
         parentName: "p"
     }, `Active`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "role-based-access-control"
-    }, `Role-based Access Control`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When provisioning an AKS cluster in the Rancher UI, RBAC is not configurable because it is required to be enabled.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `RBAC is required for AKS clusters that are registered or imported into Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }, `Role-based Access Control`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When provisioning an AKS cluster in the Rancher UI, RBAC is not configurable because it is required to be enabled.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `RBAC is required for AKS clusters that are registered or imported into Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "setting-up-the-role-assignment-to-service-principal-with-the-azure-command-line-tool"
+    }, `Setting Up the Role Assignment to Service Principal with the Azure Command Line Tool`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Assign the Rancher AKSv2 role to the service principal with the Azure Command Line Tool:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `az role assignment create \\
+--assignee CLIENT_ID \\
+--scope "/subscriptions/SUBSCRIPTION_ID/resourceGroups/RESOURCE_GROUP_NAME" \\
+--role "Rancher AKSv2"
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "aks-cluster-configuration-reference"
     }, `AKS Cluster Configuration Reference`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information about how to configure AKS clusters from the Rancher UI, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
@@ -638,6 +666,116 @@ function MDXContent(_param) {
         parentName: "p",
         "href": "https://docs.microsoft.com/en-us/azure/aks/private-clusters#options-for-connecting-to-the-private-cluster"
     }, `AKS documentation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "setting-up-the-minimum-permission-role-with-the-azure-command-line-tool"
+    }, `Setting Up the Minimum Permission Role with the Azure Command Line Tool`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, `Create the Minimum Rancher AKSv2 Permission Role by running this command:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `cat >> rancher-azure.json << EOF
+
+{
+    "Name": "Rancher AKSv2",
+    "IsCustom": true,
+    "Description": "Everything needed by Rancher AKSv2 operator",
+    "Actions": [
+       "Microsoft.Compute/disks/delete",
+        "Microsoft.Compute/disks/read",
+        "Microsoft.Compute/disks/write",
+        "Microsoft.Compute/diskEncryptionSets/read",
+        "Microsoft.Compute/locations/DiskOperations/read",
+        "Microsoft.Compute/locations/vmSizes/read",
+        "Microsoft.Compute/locations/operations/read",
+        "Microsoft.Compute/proximityPlacementGroups/write",
+        "Microsoft.Compute/snapshots/delete",
+        "Microsoft.Compute/snapshots/read",
+        "Microsoft.Compute/snapshots/write",
+        "Microsoft.Compute/virtualMachineScaleSets/manualUpgrade/action",
+        "Microsoft.Compute/virtualMachineScaleSets/delete",
+        "Microsoft.Compute/virtualMachineScaleSets/read",
+        "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/read",
+        "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/ipconfigurations/publicipaddresses/read",
+        "Microsoft.Compute/virtualMachineScaleSets/virtualmachines/instanceView/read",
+        "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/read",
+        "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/write",
+        "Microsoft.Compute/virtualMachineScaleSets/write",
+        "Microsoft.Compute/virtualMachines/read",
+        "Microsoft.Compute/virtualMachines/write",
+        "Microsoft.ContainerService/managedClusters/read",
+        "Microsoft.ContainerService/managedClusters/write"
+        "Microsoft.ContainerService/managedClusters/delete",
+        "Microsoft.ContainerService/managedClusters/accessProfiles/listCredential/action",
+        "Microsoft.ContainerService/managedClusters/agentPools/read",
+        "Microsoft.ContainerService/managedClusters/agentPools/write",
+        "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action",
+        "Microsoft.Network/applicationGateways/read",
+        "Microsoft.Network/applicationGateways/write",
+        "Microsoft.Network/loadBalancers/write",
+        "Microsoft.Network/loadBalancers/backendAddressPools/join/action",
+        "Microsoft.Network/loadBalancers/delete",
+        "Microsoft.Network/loadBalancers/read",
+        "Microsoft.Network/networkInterfaces/join/action",
+        "Microsoft.Network/networkInterfaces/read",
+        "Microsoft.Network/networkInterfaces/write",
+        "Microsoft.Network/networkSecurityGroups/read",
+        "Microsoft.Network/networkSecurityGroups/write",
+        "Microsoft.Network/publicIPAddresses/delete",
+        "Microsoft.Network/publicIPAddresses/join/action",
+        "Microsoft.Network/publicIPAddresses/read",
+        "Microsoft.Network/publicIPAddresses/write",
+        "Microsoft.Network/publicIPPrefixes/join/action",
+        "Microsoft.Network/privatednszones/*",
+        "Microsoft.Network/routeTables/read",
+        "Microsoft.Network/routeTables/routes/delete",
+        "Microsoft.Network/routeTables/routes/read",
+        "Microsoft.Network/routeTables/routes/write",
+        "Microsoft.Network/routeTables/write",
+        "Microsoft.Network/virtualNetworks/read",
+        "Microsoft.Network/virtualNetworks/subnets/join/action",
+        "Microsoft.Network/virtualNetworks/subnets/read",
+        "Microsoft.Network/virtualNetworks/joinLoadBalancer/action",
+        "Microsoft.OperationalInsights/workspaces/sharedkeys/read",
+        "Microsoft.OperationalInsights/workspaces/read",
+        "Microsoft.OperationsManagement/solutions/write",
+        "Microsoft.OperationsManagement/solutions/read",
+        "Microsoft.Resources/subscriptions/resourcegroups/read",
+        "Microsoft.Resources/subscriptions/resourcegroups/write",
+        "Microsoft.Storage/operations/read",
+        "Microsoft.Storage/storageAccounts/listKeys/action",
+        "Microsoft.Storage/storageAccounts/delete",
+        "Microsoft.Storage/storageAccounts/read",
+        "Microsoft.Storage/storageAccounts/write"
+    ],
+    "NotActions": [],
+    "DataActions": [],
+    "NotDataActions": [],
+    "AssignableScopes": [
+        "/subscriptions/SUBSCRIPTION_ID"
+    ]
+}
+EOF
+`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, `Apply the Rancher AKSv2 Role:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `az role definition create --role-definition rancher-azure.json
+`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, `Verify if the Rancher AKSv2 Role was created:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `az role definition list | grep "Rancher AKSv2"
+`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "syncing"
     }, `Syncing`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The AKS provisioner can synchronize the state of an AKS cluster between Rancher and the provider. For an in-depth technical explanation of how this works, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
@@ -650,7 +788,7 @@ function MDXContent(_param) {
     }, `Programmatically Creating AKS Clusters`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The most common way to programmatically deploy AKS clusters through Rancher is by using the Rancher2 Terraform provider. The documentation for creating clusters with Terraform is `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster"
-    }, `here.`)));
+    }, `here`), `.`));
 }
 MDXContent.isMDXComponent = true;
 
