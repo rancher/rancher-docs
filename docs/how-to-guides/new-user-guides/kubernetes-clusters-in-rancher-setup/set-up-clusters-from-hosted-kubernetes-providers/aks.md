@@ -247,7 +247,7 @@ For more information about connecting to an AKS private cluster, see the [AKS do
       "DataActions": [],
       "NotDataActions": [],
       "AssignableScopes": [
-          "/subscriptions/f5e1bf9e-ec79-4fc5-8354-53e2fcc0d99f"
+          "/subscriptions/SUBSCRIPTION_ID"
       ]
   }
   EOF
