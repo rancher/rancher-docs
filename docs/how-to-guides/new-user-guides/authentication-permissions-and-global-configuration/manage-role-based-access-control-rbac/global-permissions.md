@@ -64,13 +64,15 @@ The default roles, Administrator and Standard User, each come with multiple glob
 
 Administrators can enforce custom global permissions in multiple ways:
 
-- [Changing the default permissions for new users](#configuring-default-global-permissions)
-- [Configuring global permissions for individual users](#configuring-global-permissions-for-individual-users)
-- [Configuring global permissions for groups](#configuring-global-permissions-for-groups)
+- [Creating custom global roles](#creating-custom-global-roles).
+- [Changing the default permissions for new users](#configuring-default-global-permissions).
+- [Configuring global permissions for individual users](#configuring-global-permissions-for-individual-users).
+- [Configuring global permissions for groups](#configuring-global-permissions-for-groups).
 
-### Custom Global Permissions Reference
+### Combining Built-in GlobalRoles
 
-The following table lists each custom global permission available and whether it is included in the default global permissions, `Administrator`, `Standard User` and `User-Base`.
+Rancher provides several GlobalRoles which grant granular permissions for certain common use cases.
+The following table lists each built-in global permission available and whether it is included in the default global permissions, `Administrator`, `Standard User` and `User-Base`.
 
 | Custom Global Permission           | Administrator | Standard User | User-Base |
 | ---------------------------------- | ------------- | ------------- |-----------|
@@ -99,6 +101,112 @@ For details on which Kubernetes resources correspond to each global permission,
 - When viewing the resources associated with default roles created by Rancher, if there are multiple Kubernetes API resources on one line item, the resource will have `(Custom)` appended to it. These are not custom resources but just an indication that there are multiple Kubernetes API resources as one resource.
 
 :::
+
+### Custom GlobalRoles
+
+Users may wish to create custom GlobalRoles as a way of satisfying a use case not directly addressed by our built-in GlobalRoles. 
+
+Users can create a custom GlobalRole using the UI or one of the supported automation methods. The rules that can specified are of the same type as the rules used by upstream roles and clusterRoles. 
+
+#### Escalate and Bind verb
+
+When giving permissions on GlobalRoles, keep in mind that Rancher respects the `escalate` and `bind` verb, in a similar fashion to [upstream kubernetes](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#restrictions-on-role-creation-or-update).
+
+Both of these verbs (which are given on the GlobalRoles resource) can grant users the permission bypass Rancher's privilege escalation checks (allowing users to potentially become admins), and as such, they should be given only with great caution.
+
+The `escalate` verb allows users to change a GlobalRole and add any permission, even if they do not have the permissions in the current GlobalRole or the new version of the GlobalRole. 
+The `bind` verb allows users to create a GlobalRoleBinding to the specified GlobalRole, even if they do not have the permissions in the GlobalRole. 
+
+:::danger
+
+The wildcard verb `*` also includes the `bind` and `escalate` verbs. This means that giving `*` on GlobalRoles to a user gives them both `escalate` and `bind` as well.
+
+:::
+
+##### Examples
+
+To grant permission to escalate only the `test-gr` GlobalRole:
+
+```yaml
+rules:
+- apiGroups:
+  - 'management.cattle.io'
+  resources:
+  - 'globalroles'
+  resourceNames:
+  - 'test-gr'
+  verbs:
+  - 'escalate'
+```
+
+To grant permission to escalate all GlobalRoles:
+
+```yaml
+rules:
+- apiGroups:
+  - 'management.cattle.io'
+  resources:
+  - 'globalroles'
+  verbs:
+  - 'escalate'
+```
+
+To grant permission to create bindings (which bypass escalation checks) to only the `test-gr` GlobalRole:
+
+```yaml
+rules:
+- apiGroups:
+  - 'management.cattle.io'
+  resources:
+  - 'globalroles'
+  resourceNames:
+  - 'test-gr'
+  verbs:
+  - 'bind'
+- apiGroups:
+  - 'management.cattle.io'
+  resources:
+  - 'globalrolebindings'
+  verbs:
+  - 'create'
+```
+
+Granting `*` permissions (which also includes both `escalate` and `bind`):
+
+```yaml
+rules:
+- apiGroups:
+  - 'management.cattle.io'
+  resources:
+  - 'globalroles'
+  verbs:
+  - '*'
+```
+
+#### Permissions on Downstream Clusters
+
+GlobalRoles provide the ability to grant one (or more) RoleTemplates on every downstream cluster through the `inheritedClusterRoles` field. Values in this field must refer to a RoleTemplate which exists and has a `context` of Cluster.
+
+When this field is used, users gain the specified permissions on all current or future downstream clusters. For an example, consider the following GlobalRole:
+
+```yaml
+apiVersion: management.cattle.io/v3
+kind: GlobalRole
+displayName: All Downstream Owner 
+metadata:
+  name: all-downstream-owner
+inheritedClusterRoles:
+- cluster-owner
+```
+
+Any user with this permission will be a cluster-owner on all downstream clusters. If a new cluster is added (regardless of type), the user will be made an owner on that cluster as well.
+
+:::danger
+
+Using this field on [default Global Roles](#configuring-default-global-permissions) is not recommended - this may result in users gaining excessive permissions.
+
+:::
+
 
 ### Configuring Default Global Permissions
 
