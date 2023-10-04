@@ -109,7 +109,7 @@ Please note that a highly available setup with at least three nodes is required 
 | Large (*)                   | 500                        | 5000                    | 16    | 64 GB |
 | Larger (†)                  | (†)                        | (†)                     | (†)   | (†)   |
 
-(*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md).
+(*): Large deployments require that you [follow best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md) for adequate performance.
 
 (†): Larger deployment sizes are generally possible with ad-hoc hardware recommendations and tuning. You can [contact Rancher](https://rancher.com/contact/) for a custom evaluation.
 
