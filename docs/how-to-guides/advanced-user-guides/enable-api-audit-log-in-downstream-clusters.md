@@ -14,13 +14,40 @@ For configuration details, refer to the [official Kubernetes documentation](http
 
 
 <Tabs groupId="k8s-distro">
-<TabItem value="RKE2/K3s" default>
+<TabItem value="RKE2" default>
+
+### Method 1: set the `audit-policy-file` option in `machineGlobalConfig`
+
+Unlike in the upstream RKE2 where the value of the `audit-policy-file` option is expected to be the path to the audit policy file,
+in Rancher you can set the `audit-policy-file` option with the content, and Rancher will convert it to a file and configure RKE2 server options.
+
+Example:
+```yaml
+apiVersion: provisioning.cattle.io/v1
+kind: Cluster
+spec:
+  rkeConfig:
+    machineGlobalConfig:
+      audit-policy-file: |
+        apiVersion: audit.k8s.io/v1 
+        kind: Policy 
+        rules: 
+        - level: RequestResponse
+          resources:
+          - group: ""
+            resources: 
+            - pods
+```
+
+### Method 2: Use the directives `machineSelectorFiles` and `machineGlobalConfig`
 
 :::note
 
 This feature is available in Rancher v2.7.2 and above.
 
 :::
+
+You can utilize the `machineSelectorFiles` to deliver the audit policy file to the control plane nodes, and the `machineGlobalConfig` to set the options on kube-apiserver.
 
 As a prerequisite, you need to create a secret or configmap which will be the source of the audit policy.
 
@@ -77,7 +104,88 @@ spec:
             rke.cattle.io/control-plane-role: 'true'
 ```
 
-For more information about cluster configuration, refer to the REK2 or K3s cluster configuration reference pages.
+:::tip
+
+Alternatively, you can use the directive `machineSelectorConfig` with proper machineLabelSelectors to achieve the same effect.
+
+:::
+
+For more information about cluster configuration, refer to the RKE2 cluster configuration reference pages.
+
+</TabItem>
+
+<TabItem value="K3s" default>
+
+:::note
+
+This feature is available in Rancher v2.7.2 and above.
+
+:::
+
+You can utilize the `machineSelectorFiles` to deliver the audit policy file to the control plane nodes, and the `machineGlobalConfig` to set the options on kube-apiserver.
+
+As a prerequisite, you need to create a secret or configmap which will be the source of the audit policy.
+
+The secret or configmap must meet the following two requirements:
+
+1. It must be in the `fleet-default` namespace where the Cluster object exists.
+2. It must have the annotation `rke.cattle.io/object-authorized-for-clusters: cluster-name1,cluster-name2` which permits the target clusters to use it.
+
+:::tip
+
+Rancher Dashboard provides an easy-to-use form for creating the secret or configmap.
+
+:::
+
+Example:
+
+```yaml
+apiVersion: v1
+data:
+  audit-policy: >-
+    IyBMb2cgYWxsIHJlcXVlc3RzIGF0IHRoZSBNZXRhZGF0YSBsZXZlbC4KYXBpVmVyc2lvbjogYXVkaXQuazhzLmlvL3YxCmtpbmQ6IFBvbGljeQpydWxlczoKLSBsZXZlbDogTWV0YWRhdGE=
+kind: Secret
+metadata:
+  annotations:
+    rke.cattle.io/object-authorized-for-clusters: cluster1
+  name: name1
+  namespace: fleet-default
+```
+
+The audit log can be enabled and configured by editing the cluster in YAML and utilizing the `machineSelectorFiles` and `machineGlobalConfig` directives.
+
+Example:
+
+```yaml
+apiVersion: provisioning.cattle.io/v1
+kind: Cluster
+spec:
+  rkeConfig:
+    machineGlobalConfig:
+      kube-apiserver-arg:
+        - audit-policy-file=<customized-path>/dev-audit-policy.yaml
+        - audit-log-path=<customized-path>/dev-audit.logs
+    machineSelectorFiles:
+      - fileSources:
+          - configMap:
+              name: ''
+            secret:
+              items:
+                - key: audit-policy
+                  path: <customized-path>/dev-audit-policy.yaml
+              name: dev-audit-policy
+        machineLabelSelector:
+          matchLabels:
+            rke.cattle.io/control-plane-role: 'true'
+```
+
+:::tip
+
+Alternatively, you can use the directive `machineSelectorConfig` with proper machineLabelSelectors to achieve the same effect.
+
+:::
+
+For more information about cluster configuration, refer to the K3s cluster configuration reference pages.
 
 </TabItem>
 
