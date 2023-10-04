@@ -11,7 +11,7 @@ This guide describes the best practices and tuning approaches to scale Rancher s
 
 ## Optimizing Rancher Performance
 
-* Keep Rancher up to date with patch releases. Performance improvements and bug fixes are made continuously, and the latest release incorporates the largest set ofperformance related development, experience and feedback from many users.
+* Keep Rancher up to date with patch releases. We are continuously improving Rancher with performance enhancements and bug fixes. The latest Rancher release contains all accumulated improvements to performance and stability, plus updates based on developer experience and user feedback.
 
 * Always scale up gradually, and monitor and observe any changes in behavior while doing do. It is usually easier to resolve performance problems as soon as they surface, before other problems obscure the root cause.
 
@@ -19,7 +19,7 @@ This guide describes the best practices and tuning approaches to scale Rancher s
 
 ## Minimizing Load on the Upstream Cluster
 
-One typical bottleneck when scaling up Rancher is resource growth in the local Kubernetes cluster. The local cluster contains information for all downstream clusters. Many operations that apply to downstream clusters will create new objects in the local cluster and require computation from handlers running in the local cluster.
+When scaling up Rancher, one typical bottleneck is resource growth in the upstream (local) Kubernetes cluster. The upstream cluster contains information for all downstream clusters. Many operations that apply to downstream clusters create new objects in the upstream cluster and require computation from handlers running in the upstream cluster.
 
 ### Managing Your Object Counts
 
@@ -41,25 +41,25 @@ You can reduce the number of `RoleBindings` in the upstream cluster in the follo
 
 ### RoleBinding Count Estimation
 
-Predicting exactly the number of `RoleBindings` a given configuration will create depends on many factors and is complicated to calculate. However, it is possible to give a first estimation according to considerations below:
-* As a minimum estimation consider the formula `32C + U + 2UaC + 8P + 5Pa`, where `C` is the cluster count, `U` is the user count, `Ua` is the average count of users with a membership on a cluster, `P` is the project count, and `Pa` is the average number of users with a membership on a project
+Predicting how many `RoleBinding` objects a given configuration will create is complicated. However, the following considerations can offer a rough estimate:
+* For a minimum estimate, use the formula `32C + U + 2UaC + 8P + 5Pa`, where `C` is the total number of clusters, `U` is the total number of users, `Ua` is the average number of users with a membership on a cluster, `P` is the total number of projects, and `Pa` is the average number of users with a membership on a project.
 * The Restricted Admin role follows a different formula, as every user with this role results in at least `7C + 2P + 2` additional `RoleBinding` objects.
 * The number of `RoleBindings` increases linearly with the number of clusters, projects, and users.
 
 ### Using New Apps Over Legacy Apps
 
-There are two app Kubernetes resources that Rancher uses: `apps.projects.cattle.io` and `apps.cattle.cattle.io`. Legacy apps, `apps.projects.cattle.io`, were first introduced with the former UI (Cluster Manager) and are now outdated. New apps, `apps.catalog.cattle.io`, are found in the current UI (Cluster Explorer) for their respective cluster. New apps are preferable because their data resides in downstream clusters, freeing up resources in the local cluster.
+Rancher uses two Kubernetes app resources: `apps.projects.cattle.io` and `apps.cattle.cattle.io`. Legacy apps, represented by `apps.projects.cattle.io`, were introduced with the former Cluster Manager UI and are now outdated. Current apps, represented by `apps.catalog.cattle.io`, are found in the Cluster Explorer UI for their respective cluster. `Apps.cattle.cattle.io` apps are preferable because their data resides in downstream clusters, which frees up resources in the upstream cluster.
 
-It is recommended to remove any remaining legacy apps that appear in the Cluster Manager, replacing them with apps in the Cluster Explorer for their target cluster if necessary and creating any future apps in the cluster's Cluster Explorer only.
+You should remove any remaining legacy apps that appear in the Cluster Manager UI, and replace them with apps in the Cluster Explorer UI. Create any new apps only in the Cluster Explorer UI.
 
 ### Using the Authorized Cluster Endpoint (ACE)
 
-An [Authorized Cluster Endpoint](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-authorized-cluster-endpoint) option exist to access the Kubernetes API of Rancher provisioned RKE1, RKE2, and K3s clusters. When enabled this adds a context to generated kubeconfig files generated for the cluster that uses a direct endpoint to the cluster, thereby bypassing Rancher. That reduces load on Rancher for use cases where unmediated API access is acceptable or preferable.
+An [Authorized Cluster Endpoint](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-authorized-cluster-endpoint) (ACE) provides access to the Kubernetes API of Rancher-provisioned RKE, RKE2, and K3s clusters. When enabled, the ACE adds a context to kubeconfig files generated for the cluster. The context uses a direct endpoint to the cluster, thereby bypassing Rancher. This reduces load on Rancher for cases where unmediated API access is acceptable or preferable.
 
 Note that, in order for `kubeconfig` to take advantage of ACE, users need to issue the `kubectl use-context <ace context name>` command in order to start using it.
 
 ### Experimental: Option to Reduce Event Handler Executions
-The bulk of Rancher's logic occurs on event handlers. These event handlers run on an object whenever the object is updated, and when Rancher is started. Additionally, they run every 15 hours when caches are synced. In scaled setups these scheduled runs come with huge performance costs because every handler is being run on every applicable object. However, this scheduled execution of handlers can be disabled using the CATTLE_SYNC_ONLY_CHANGED_OBJECTS environment variable. If resource allocation spikes are seen on an interval of about 15 hours it is possible this setting can help.
+The bulk of Rancher's logic occurs on event handlers. These event handlers run on an object whenever the object is updated, and when Rancher is started. Additionally, they run every 15 hours when Rancher syncs caches. In scaled setups these scheduled runs come with huge performance costs because every handler is being run on every applicable object. However, the scheduled handler execution can be disabled with the `CATTLE_SYNC_ONLY_CHANGED_OBJECTS` environment variable. If resource allocation spikes are seen every 15 hours, this setting can help.
 
 The value for `CATTLE_SYNC_ONLY_CHANGED_OBJECTS` can be a comma separated list of the following options. The values refer to types of handlers and controllers (the structures that contain and run handlers). Adding the controller types to the variable disables that set of controllers from running their handlers as part of cache resyncing.
 
@@ -75,7 +75,7 @@ Important influencing factors are the underlying cluster's own performance and c
 
 ### Manage Upstream Cluster Nodes Directly with RKE2
 
-As Rancher can be particularly demanding on the local cluster, especially in large scale scenarios, it is recommended to have full control of its configuration and its nodes. For example, when Rancher nodes experience high resource usage, standard Linux troubleshooting techniques and tools are recommended to identify whether Rancher, Kubernetes components, or OS components are the root cause of the excess resource consumption.
+As Rancher can be very demanding on the upstream cluster, especially at scale, you should have full administrative control of the cluster's configuration and nodes. To identify the root cause of excess resource consumption, use standard Linux troubleshooting techniques and tools. This can aid in distinguishing between whether Rancher, Kubernetes, or operating system components are causing issues. 
 
 Although managed Kubernetes services make it easier to deploy and run Kubernetes clusters, they are discouraged for the upstream cluster in high scale scenarios. Managed Kubernetes services typically limit access to configuration and insights on individual nodes and services.
 
@@ -89,7 +89,7 @@ You should keep the local Kubernetes cluster up to date. This will ensure that y
 
 Etcd is the backend database for Kubernetes and for Rancher. It plays a very important role in Rancher performance.
 
-The two main bottlenecks to [etcd performance](https://etcd.io/docs/v3.4/op-guide/performance/) are disk speed and network speed. It is thus recommended that etcd runs on dedicated nodes with SSDs with high IOPS and a fast network setup. For more information regarding etcd performance see [Slow etcd performance (performance testing and optimization)](https://www.suse.com/support/kb/doc/?id=000020100) and [Tuning etcd for Large Installations](../../../how-to-guides/advanced-user-guides/tune-etcd-for-large-installs). Information on disks can also be found in the [Installation Requirements](../../../pages-for-subheaders/installation-requirements#disks) page.
+The two main bottlenecks to [etcd performance](https://etcd.io/docs/v3.4/op-guide/performance/) are disk and network speed. Etcd should run on dedicated nodes with a fast network setup and with SSDs that have high input/output operations per second (IOPS). For more information regarding etcd performance, see [Slow etcd performance (performance testing and optimization)](https://www.suse.com/support/kb/doc/?id=000020100) and [Tuning etcd for Large Installations](../../../how-to-guides/advanced-user-guides/tune-etcd-for-large-installs). Information on disks can also be found in the [Installation Requirements](../../../pages-for-subheaders/installation-requirements#disks).
 
 It's best to run etcd on exactly three nodes, as adding more nodes will reduce operation speed. This may be counter-intuitive to common scaling approaches, but it's due to etcd's [replication mechanisms](https://etcd.io/docs/v3.5/faq/#what-is-maximum-cluster-size).
 
