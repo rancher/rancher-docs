@@ -67,7 +67,7 @@ The value for `CATTLE_SYNC_ONLY_CHANGED_OBJECTS` can be a comma separated list o
 * `user` refers to user controllers which run for every cluster. Some of these run on the same node as management controllers, while others run in the downstream cluster. This option targets the former.
 * `scaled` refers to scaled controllers which run on every Rancher node. You should avoid setting this value, as the scaled handlers are responsible for critical functions and changes may disrupt cluster stability.
 
-In short, if you notice CPU usage peaks every 15 hours, add the CATTLE_SYNC_ONLY_CHANGED_OBJECTS environment variable to your rancher deployment with the value `mgmt,user`.
+In short, if you notice CPU usage peaks every 15 hours, add the `CATTLE_SYNC_ONLY_CHANGED_OBJECTS` environment variable to your Rancher deployment (in the `spec.containers.env` list) with the value `mgmt,user`
 
 ## Optimizations Outside of Rancher
 
