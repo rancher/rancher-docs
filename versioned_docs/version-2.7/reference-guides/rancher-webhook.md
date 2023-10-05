@@ -38,7 +38,7 @@ You can find an in-progress list of the resources that the webhook validates in 
 
 ## Bypassing the Webhook
 
-Sometimes, bypassing Rancher's webhook validation may be necessary to perform emergency restore operations or fix other critical issues. The bypass operation is exhaustive, meaning no webhook validations or mutations will apply when using it. It is not possible to bypass some validations or mutations and have others still apply - they are either all bypassed or all active.
+Sometimes, you must bypass Rancher's webhook validation to perform emergency restore operations or fix other critical issues. The bypass operation is exhaustive, meaning no webhook validations or mutations apply when you use it. It is not possible to bypass some validations or mutations and have others still apply - they are either all bypassed or all active.
 
 :::danger
 
@@ -103,6 +103,6 @@ To help alleviate these issues, you can run the [adjust-downstream-webhook](http
 
 **Note:** This affects Rancher versions `v2.7.2 - v2.7.4`
 
-Project users may not be able to create namespaces in projects. This issue is caused by Rancher automatically upgrading the webhook to a version compatible with a more recent version of Rancher than the one currently installed. 
+Project users may not be able to create namespaces in projects. This includes project owners. This issue is caused by Rancher automatically upgrading the webhook to a version compatible with a more recent version of Rancher than the one currently installed. 
 
 To help alleviate these issues, you can run the [adjust-downstream-webhook](https://github.com/rancherlabs/support-tools/tree/master/adjust-downstream-webhook) shell script after roll back. This script selects and installs the proper webhook version (or removes the webhook entirely) for the corresponding Rancher version. 
