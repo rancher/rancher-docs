@@ -74,7 +74,15 @@ Like the authorized cluster endpoint, the `kube-api-auth` authentication service
 
 With this endpoint enabled for the downstream cluster, Rancher generates an extra Kubernetes context in the kubeconfig file in order to connect directly to the cluster. This file has the credentials for `kubectl` and `helm`.
 
-You will need to use a context defined in this kubeconfig file to access the cluster if Rancher goes down. Therefore, we recommend exporting the kubeconfig file so that if Rancher goes down, you can still use the credentials in the file to access your cluster. For more information, refer to the section on accessing your cluster with [kubectl and the kubeconfig file.](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)
+:::note
+
+To use the ACE context in your kubeconfig, run `kubectl use-context <ace context name>` after enabling it.
+
+:::
+
+For more information, refer to the section on accessing your cluster with [kubectl and the kubeconfig file](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md).
+
+We recommend exporting the kubeconfig file so that if Rancher goes down, you can still use the credentials in the file to access your cluster.
 
 ## Impersonation
 
