@@ -3,7 +3,7 @@ title: Tips for Running Rancher
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/best-practices/rancher-server/tips-for-running-rancher"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/best-practices/rancher-server/tips-for-running-rancher"/>
 </head>
 
 This guide is geared toward use cases where Rancher is used to manage downstream Kubernetes clusters. The high-availability setup is intended to prevent losing access to downstream clusters if the Rancher server is not available.

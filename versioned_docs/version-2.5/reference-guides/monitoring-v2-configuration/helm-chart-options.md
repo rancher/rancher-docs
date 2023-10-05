@@ -3,7 +3,7 @@ title: Helm Chart Options
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/monitoring-v2-configuration/helm-chart-options"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/monitoring-v2-configuration/helm-chart-options"/>
 </head>
 
 ## Configuring Resource Limits and Requests
