@@ -2,7 +2,7 @@
 title: API Quick Start Guide
 ---
 
-Rancher's resources can be accessed through the Kubernetes API. This guide will help you get started on using this API (from your client of choice) as a Rancher user.
+You can access Rancher's resources through the Kubernetes API. This guide will help you get started on using this API as a Rancher user.
 
 1. In the upper left corner, click **☰ > Global Settings**. 
 2. Find and copy the address in the `server-url` field.
