@@ -127,7 +127,7 @@ Please note that a highly available setup with at least three nodes is required 
 | Medium                      | 300                        | 3000                    | 8     | 32 GB | 4 vCPUs, 16 GB + 2000 IOPS |
 | Large (*)                   | 500                        | 5000                    | 16    | 64 GB | 8 vCPUs, 32 GB + 4000 IOPS |
 
-(*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md).
+(*): Large deployments require that you [follow best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md) for adequate performance.
 
 (†): External Database Host refers to hosting the K3s cluster data store on an [dedicated external host](https://docs.k3s.io/datastore). This is optional. Exact requirements depend on the external data store.
 
@@ -147,7 +147,7 @@ These requirements apply to hosted Kubernetes clusters such as Amazon Elastic Ku
 | Medium                      | 300                        | 3000                    | 8     | 32 GB |
 | Large (*)                   | 500                        | 5000                    | 16    | 64 GB |
 
-(*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md).
+(*): Large deployments require that you [follow best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md) for adequate performance.
 
 ### RKE
 
@@ -161,7 +161,7 @@ Please note that a highly available setup with at least three nodes is required 
 | Medium                      | 300                        | 3000                    | 8     | 32 GB |
 | Large (*)                   | 500                        | 5000                    | 16    | 64 GB |
 
-(*): Large deployments require [additional tuning and following of best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md).
+(*): Large deployments require that you [follow best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md) for adequate performance.
 
 Refer to the RKE documentation for more detailed information on [general requirements](https://rke.docs.rancher.com/os).
 
