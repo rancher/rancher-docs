@@ -348,6 +348,7 @@ chartValues:
     chart-name:
         key: value
 ```
+
 ### machineGlobalConfig
 
 Specify RKE2 configurations. Any configuration change made here will apply to every node. The configuration options available in the [standalone version of RKE2](https://docs.rke2.io/reference/server_config) can be applied here.
@@ -359,6 +360,31 @@ machineGlobalConfig:
     etcd-arg:
         - key1=value1
         - key2=value2
+```
+
+To ease the need to put files on nodes beforehand, Rancher expects the values of the following options to be the configuration's content, unlike RKE2, where the values should be file paths:
+- audit-policy-file
+- cloud-provider-config
+- private-registry
+
+Rancher will deliver the files to target nodes, and set the proper options in the RKE2 Server.
+
+Example:
+```yaml
+apiVersion: provisioning.cattle.io/v1
+kind: Cluster
+spec:
+  rkeConfig:
+    machineGlobalConfig:
+      audit-policy-file: 
+        apiVersion: audit.k8s.io/v1 
+        kind: Policy 
+        rules: 
+        - level: RequestResponse
+          resources:
+          - group: ""
+            resources: 
+            - pods
 ```
 
 ### machineSelectorConfig
@@ -384,6 +410,7 @@ machineSelectorConfig
         key1: value1
         key2: value2
 ```
+
 ### machineSelectorFiles
 
 :::note

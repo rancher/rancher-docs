@@ -331,6 +331,31 @@ machineGlobalConfig:
         - key2=value2
 ```
 
+To ease the need to put files on nodes beforehand, Rancher expects the values of the following options to be the configuration's content,unlike K3s, where the values should be file paths:
+- private-registry
+- flannel-conf
+
+Rancher will deliver the files to target nodes, and set the proper options in the K3s Server.
+
+Example:
+```yaml
+apiVersion: provisioning.cattle.io/v1
+kind: Cluster
+spec:
+  rkeConfig:
+    machineGlobalConfig:
+      private-registry: |
+        mirrors:
+          docker.io:
+            endpoint:
+              - "http://mycustomreg.com:5000"
+        configs:
+          "mycustomreg:5000":
+            auth:
+              username: xxxxxx # this is the registry username
+              password: xxxxxx # this is the registry password
+```
+
 ### machineSelectorConfig
 
 `machineSelectorConfig` is the same as [`machineGlobalConfig`](#machineglobalconfig) except that a [label](#kubernetes-node-labels) selector can be specified with the configuration. The configuration will only be applied to nodes that match the provided label selector.
