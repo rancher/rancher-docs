@@ -23,9 +23,7 @@ You can access Rancher's resources through the Kubernetes API. This guide will h
     - name: "rancher"
       cluster:
         server: "$SERVER_URL"
-        # Uncomment the following line if your server is using self-signed certs. This option is not recommended for production
-        # insecure-skip-tls-verify: true
-
+    
     users:
     - name: "rancher"
       user:
