@@ -52,18 +52,16 @@ For more information on available kubeconfig options, see the [upstream document
   export KUBECONFIG=$(pwd)/kubeconfig.yaml
   ```
 
-  :::tip
-
-  Use `kubectl explain` to view the available fields for projects, or complex sub-fields of resources:
+2. Use `kubectl explain` to view the available fields for projects, or complex sub-fields of resources:
 
   ```bash
   kubectl explain projects
   kubectl explain projects.spec
   ```
+  
+Not all resources may have detailed output.
 
-  :::
-
-2. Add the following content to a file named `project.yaml`:
+3. Add the following content to a file named `project.yaml`:
 
   ```yaml
   apiVersion: management.cattle.io/v3
@@ -83,13 +81,13 @@ For more information on available kubeconfig options, see the [upstream document
     displayName: Example
   ```
 
-3. Create the project:
+4. Create the project:
 
   ```bash
   kubectl create -f project.yaml
   ```
 
-4. Delete the project:
+5. Delete the project:
 
   How you delete the project depends on how you created the project name.
 
@@ -114,6 +112,11 @@ To ensure that your tools can recognize Rancher's CA certificates, most setups r
 1. In the upper left corner, click **☰ > Global Settings**. 
 2. Find and copy the value in the `ca-certs` field.
 3. Save the value in a file named `rancher.crt`.
+
+  :::note
+  If your Rancher instance is proxied by another service, you must extract the certificate that the service is using, and add it to the kubeconfig file, as demonstrated in step 5.
+  :::
+
 4. The following commands will convert `rancher.crt` to base64 output, trim all new-lines, and update the cluster in the kubeconfig with the certificate, then finishing by removing the `rancher.crt` file:
 
   ```bash
