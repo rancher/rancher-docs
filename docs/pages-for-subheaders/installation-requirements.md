@@ -69,12 +69,12 @@ The following sections describe the CPU, memory, and I/O requirements for nodes 
 
 Rancher's hardware footprint depends on a number of factors, including:
 
- - Size of the managed infrastructure (eg. node count, cluster count).
- - Complexity of the desired access control rules (eg. `RoleBinding` object count).
- - Number of workloads (eg. Kubernetes deployments, Fleet deployments).
- - Usage patterns (eg. subset of functionality actively used, frequency of use, number of concurrent users).
+ - Size of the managed infrastructure (e.g., node count, cluster count).
+ - Complexity of the desired access control rules (e.g., `RoleBinding` object count).
+ - Number of workloads (e.g., Kubernetes deployments, Fleet deployments).
+ - Usage patterns (e.g., subset of functionality actively used, frequency of use, number of concurrent users).
 
-Since there are a high number of influencing factors that may vary over time, the requirements listed here should be understood as reasonable starting points that work well for most use cases. Nevertheless, your use case may have  higher or lower requirements. For enquiries about a specific scenario please [contact Rancher](https://rancher.com/contact/) for further guidance.
+Since there are a high number of influencing factors that may vary over time, the requirements listed here should be understood as reasonable starting points that work well for most use cases. Nevertheless, your use case may have different requirements. For inquiries about a specific scenario please [contact Rancher](https://rancher.com/contact/) for further guidance.
 
 In particular, requirements on this page are subject to typical use assumptions, which include:
  - Under 60 thousand total Kubernetes resources, per type.
@@ -102,7 +102,7 @@ The following table lists minimum CPU and memory requirements for each node in t
 
 Please note that a highly available setup with at least three nodes is required for production.
 
-| Managed Infrastructure Size | Maximum number of Clusters | Maximum number of Nodes | vCPUs | RAM   |
+| Managed Infrastructure Size | Maximum Number of Clusters | Maximum Number of Nodes | vCPUs | RAM   |
 |-----------------------------|----------------------------|-------------------------|-------|-------|
 | Small                       | 150                        | 1500                    | 4     | 16 GB |
 | Medium                      | 300                        | 3000                    | 8     | 32 GB |
@@ -139,7 +139,7 @@ The following table lists minimum CPU and memory requirements for each node in t
 
 Please note that a highly available setup with at least three nodes is required for production.
 
-These requirements apply to hosted Kubernetes clusters such as Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service  (AKS), or Google Kubernetes Engine (GKE). They don't apply to Rancher SaaS solutions such as [Rancher Prime Hosted](https://www.rancher.com/products/rancher).
+These requirements apply to hosted Kubernetes clusters such as Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), or Google Kubernetes Engine (GKE). They don't apply to Rancher SaaS solutions such as [Rancher Prime Hosted](https://www.rancher.com/products/rancher).
 
 | Managed Infrastructure Size | Maximum number of Clusters | Maximum number of Nodes | vCPUs | RAM   |
 |-----------------------------|----------------------------|-------------------------|-------|-------|

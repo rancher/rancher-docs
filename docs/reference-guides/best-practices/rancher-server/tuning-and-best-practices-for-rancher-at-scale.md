@@ -15,7 +15,7 @@ This guide describes the best practices and tuning approaches to scale Rancher s
 
 * Always scale up gradually, and monitor and observe any changes in behavior while doing do. It is usually easier to resolve performance problems as soon as they surface, before other problems obscure the root cause.
 
-* Reduce network latency between the upstream Rancher cluster and downstream clusters to the extent possible. Note that latency is, among other factors, a function of geographic distance - if a you require clusters or nodes spread across the world, consider multiple Rancher installations.
+* Reduce network latency between the upstream Rancher cluster and downstream clusters to the extent possible. Note that latency is, among other factors, a function of geographic distance - if you require clusters or nodes spread across the world, consider multiple Rancher installations.
 
 ## Minimizing Load on the Upstream Cluster
 
@@ -42,7 +42,12 @@ You can reduce the number of `RoleBindings` in the upstream cluster in the follo
 ### RoleBinding Count Estimation
 
 Predicting how many `RoleBinding` objects a given configuration will create is complicated. However, the following considerations can offer a rough estimate:
-* For a minimum estimate, use the formula `32C + U + 2UaC + 8P + 5Pa`, where `C` is the total number of clusters, `U` is the total number of users, `Ua` is the average number of users with a membership on a cluster, `P` is the total number of projects, and `Pa` is the average number of users with a membership on a project.
+* For a minimum estimate, use the formula `32C + U + 2UaC + 8P + 5Pa`. 
+  * `C` is the total number of clusters.
+  * `U` is the total number of users.
+  * `Ua` is the average number of users with a membership on a cluster.
+  * `P` is the total number of projects.
+  * `Pa` is the average number of users with a membership on a project.
 * The Restricted Admin role follows a different formula, as every user with this role results in at least `7C + 2P + 2` additional `RoleBinding` objects.
 * The number of `RoleBindings` increases linearly with the number of clusters, projects, and users.
 
@@ -57,6 +62,7 @@ You should remove any remaining legacy apps that appear in the Cluster Manager U
 An [Authorized Cluster Endpoint](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-authorized-cluster-endpoint) (ACE) provides access to the Kubernetes API of Rancher-provisioned RKE, RKE2, and K3s clusters. When enabled, the ACE adds a context to kubeconfig files generated for the cluster. The context uses a direct endpoint to the cluster, thereby bypassing Rancher. This reduces load on Rancher for cases where unmediated API access is acceptable or preferable. See [Authorized Cluster Endpoint](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-authorized-cluster-endpoint) for more information and configuration instructions.
 
 ### Reducing Event Handler Executions
+
 The bulk of Rancher's logic occurs on event handlers. These event handlers run on an object whenever the object is updated, and when Rancher is started. Additionally, they run every 15 hours when Rancher syncs caches. In scaled setups these scheduled runs come with huge performance costs because every handler is being run on every applicable object. However, the scheduled handler execution can be disabled with the `CATTLE_SYNC_ONLY_CHANGED_OBJECTS` environment variable. If resource allocation spikes are seen every 15 hours, this setting can help.
 
 The value for `CATTLE_SYNC_ONLY_CHANGED_OBJECTS` can be a comma separated list of the following options. The values refer to types of handlers and controllers (the structures that contain and run handlers). Adding the controller types to the variable disables that set of controllers from running their handlers as part of cache resyncing.
