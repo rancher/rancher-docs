@@ -1194,6 +1194,10 @@ module.exports = {
           {
             to: "/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale",
             from: "/reference-guides/best-practices/rancher-server/tips-for-scaling-rancher"
+          },
+          {
+            to: "/v2.7/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale",
+            from: "/v2.7/reference-guides/best-practices/rancher-server/tips-for-scaling-rancher"
           }
         ],
       },
