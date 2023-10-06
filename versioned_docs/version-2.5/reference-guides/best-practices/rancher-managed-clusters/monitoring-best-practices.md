@@ -3,7 +3,7 @@ title: Monitoring Best Practices
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/best-practices/rancher-managed-clusters/monitoring-best-practices"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/best-practices/rancher-managed-clusters/monitoring-best-practices"/>
 </head>
 
 Configuring sensible monitoring and alerting rules is vital for running any production workloads securely and reliably. This is not different when using Kubernetes and Rancher. Fortunately the integrated monitoring and alerting functionality makes this whole process a lot easier.

@@ -12,7 +12,7 @@ This guide corresponds to the following versions of Rancher, CIS Benchmarks, and
 
 | Rancher Version | CIS Benchmark Version | Kubernetes Version |
 |-----------------|-----------------------|--------------------|
-| Rancher v2.7    | Benchmark v1.7       | Kubernetes v1.25   |
+| Rancher v2.7    | Benchmark v1.7        | Kubernetes v1.25   |
 
 This guide walks through the various controls and provide updated example commands to audit compliance in Rancher created clusters. Because Rancher and RKE2 install Kubernetes services as Docker containers, many of the control verification checks in the CIS Kubernetes Benchmark don't apply. These checks will return a result of `Not Applicable`.
 
