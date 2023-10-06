@@ -141,7 +141,7 @@ Please note that a highly available setup with at least three nodes is required 
 
 These requirements apply to hosted Kubernetes clusters such as Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), or Google Kubernetes Engine (GKE). They don't apply to Rancher SaaS solutions such as [Rancher Prime Hosted](https://www.rancher.com/products/rancher).
 
-| Managed Infrastructure Size | Maximum number of Clusters | Maximum number of Nodes | vCPUs | RAM   |
+| Managed Infrastructure Size | Maximum Number of Clusters | Maximum Number of Nodes | vCPUs | RAM   |
 |-----------------------------|----------------------------|-------------------------|-------|-------|
 | Small                       | 150                        | 1500                    | 4     | 16 GB |
 | Medium                      | 300                        | 3000                    | 8     | 32 GB |
@@ -155,7 +155,7 @@ The following table lists minimum CPU and memory requirements for each node in t
 
 Please note that a highly available setup with at least three nodes is required for production.
 
-| Managed Infrastructure Size | Maximum number of Clusters | Maximum number of Nodes | vCPUs | RAM   |
+| Managed Infrastructure Size | Maximum Number of Clusters | Maximum Number of Nodes | vCPUs | RAM   |
 |-----------------------------|----------------------------|-------------------------|-------|-------|
 | Small                       | 150                        | 1500                    | 4     | 16 GB |
 | Medium                      | 300                        | 3000                    | 8     | 32 GB |
@@ -171,7 +171,7 @@ The following table lists minimum CPU and memory requirements for a [single Dock
 
 Please note that a Docker installation is only suitable for development or testing purposes and is not meant to be used in production environments.
 
-| Managed Infrastructure Size | Maximum number of Clusters | Maximum number of Nodes | vCPUs | RAM  |
+| Managed Infrastructure Size | Maximum Number of Clusters | Maximum Number of Nodes | vCPUs | RAM  |
 |-----------------------------|----------------------------|-------------------------|-------|------|
 | Small                       | 5                          | 50                      | 1     | 4 GB |
 | Medium                      | 15                         | 200                     | 2     | 8 GB |
