@@ -362,6 +362,31 @@ machineGlobalConfig:
         - key2=value2
 ```
 
+To make it easier to put files on nodes beforehand, Rancher expects the following values to be included in the configuration, while RKE2 expects the values to be entered as file paths:
+- audit-policy-file
+- cloud-provider-config
+- private-registry
+
+Rancher delivers the files to target nodes, and sets the proper options in the RKE2 server.
+
+Example:
+```yaml
+apiVersion: provisioning.cattle.io/v1
+kind: Cluster
+spec:
+  rkeConfig:
+    machineGlobalConfig:
+      audit-policy-file: 
+        apiVersion: audit.k8s.io/v1 
+        kind: Policy 
+        rules: 
+        - level: RequestResponse
+          resources:
+          - group: ""
+            resources: 
+            - pods
+```
+
 ### machineSelectorConfig
 
 `machineSelectorConfig` is the same as [`machineGlobalConfig`](#machineglobalconfig) except that a [label](#kubernetes-node-labels) selector can be specified with the configuration. The configuration will only be applied to nodes that match the provided label selector.
@@ -384,31 +409,6 @@ machineSelectorConfig
       matchLabels:
         key1: value1
         key2: value2
-```
-
-To ease the need to put files on nodes beforehand, Rancher expects the values of the following options to be the configuration's content, unlike RKE2, where the values should be file paths:
-- audit-policy-file
-- cloud-provider-config
-- private-registry
-
-Rancher will deliver the files to target nodes, and set the proper options in the RKE2 Server.
-
-Example:
-```yaml
-apiVersion: provisioning.cattle.io/v1
-kind: Cluster
-spec:
-  rkeConfig:
-    machineGlobalConfig:
-      audit-policy-file: 
-        apiVersion: audit.k8s.io/v1 
-        kind: Policy 
-        rules: 
-        - level: RequestResponse
-          resources:
-          - group: ""
-            resources: 
-            - pods
 ```
 
 ### machineSelectorFiles

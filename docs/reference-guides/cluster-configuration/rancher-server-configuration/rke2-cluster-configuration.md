@@ -362,12 +362,12 @@ machineGlobalConfig:
         - key2=value2
 ```
 
-To ease the need to put files on nodes beforehand, Rancher expects the values of the following options to be the configuration's content, unlike RKE2, where the values should be file paths:
+To make it easier to put files on nodes beforehand, Rancher expects the following values to be included in the configuration, while RKE2 expects the values to be entered as file paths:
 - audit-policy-file
 - cloud-provider-config
 - private-registry
 
-Rancher will deliver the files to target nodes, and set the proper options in the RKE2 Server.
+Rancher delivers the files to target nodes, and sets the proper options in the RKE2 server.
 
 Example:
 ```yaml
@@ -467,7 +467,7 @@ machineSelectorFiles:
 The secret or configmap must meet the following requirements:
 
 1. It must be in the `fleet-default` namespace where the Cluster object exists.
-2. It must have the annotation `rke.cattle.io/object-authorized-for-clusters: cluster-name1,cluster-name2`, which permits the target clusters to use it.  
+2. It must have the annotation `rke.cattle.io/object-authorized-for-clusters: cluster-name1,cluster-name2`, which permits the target clusters to use it.
 
 :::tip
 

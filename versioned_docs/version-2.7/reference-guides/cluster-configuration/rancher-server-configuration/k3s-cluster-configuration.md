@@ -318,6 +318,7 @@ chartValues:
     chart-name:
         key: value
 ```
+
 ### machineGlobalConfig
 
 Specify K3s configurations. Any configuration change made here will apply to every node. The configuration options available in the [standalone version of k3s](https://docs.k3s.io/cli/server) can be applied here.
@@ -331,11 +332,11 @@ machineGlobalConfig:
         - key2=value2
 ```
 
-To ease the need to put files on nodes beforehand, Rancher expects the values of the following options to be the configuration's content,unlike K3s, where the values should be file paths:
+To make it easier to put files on nodes beforehand, Rancher expects the following values to be included in the configuration, while K3s expects the values to be entered as file paths:
 - private-registry
 - flannel-conf
 
-Rancher will deliver the files to target nodes, and set the proper options in the K3s Server.
+Rancher delivers the files to target nodes, and sets the proper options in the K3s server.
 
 Example:
 ```yaml
@@ -379,6 +380,7 @@ machineSelectorConfig
         key1: value1
         key2: value2
 ```
+
 ### machineSelectorFiles
 
 :::note
