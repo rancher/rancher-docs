@@ -2,6 +2,10 @@
 title: Communicating with Downstream User Clusters
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters"/>
+</head>
+
 This section describes how Rancher provisions and manages the downstream user clusters that run your apps and services.
 
 The below diagram shows how the cluster controllers, cluster agents, and node agents allow Rancher to control downstream clusters.
@@ -24,7 +28,7 @@ the pods. Bob is authenticated through Rancher's authentication proxy.
 
 The authentication proxy forwards all Kubernetes API calls to downstream clusters. It integrates with authentication services like local authentication, Active Directory, and GitHub. On every Kubernetes API call, the authentication proxy authenticates the caller and sets the proper Kubernetes impersonation headers before forwarding the call to Kubernetes masters.
 
-Rancher communicates with Kubernetes clusters using a [service account,](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) which provides an identity for processes that run in a pod.
+Rancher communicates with Kubernetes clusters using a [service account](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/). Each user account in Rancher correlates with an equivalent service account in the downstream cluster. Rancher uses the service account to [impersonate](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#user-impersonation) the user, which provides all the permissions the user is intended to have.
 
 By default, Rancher generates a [kubeconfig file](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md) that contains credentials for proxying through the Rancher server to connect to the Kubernetes API server on a downstream user cluster. The kubeconfig file (`kube_config_rancher-cluster.yml`) contains full access to the cluster.
 
@@ -74,6 +78,87 @@ Like the authorized cluster endpoint, the `kube-api-auth` authentication service
 With this endpoint enabled for the downstream cluster, Rancher generates an extra Kubernetes context in the kubeconfig file in order to connect directly to the cluster. This file has the credentials for `kubectl` and `helm`.
 
 You will need to use a context defined in this kubeconfig file to access the cluster if Rancher goes down. Therefore, we recommend exporting the kubeconfig file so that if Rancher goes down, you can still use the credentials in the file to access your cluster. For more information, refer to the section on accessing your cluster with [kubectl and the kubeconfig file.](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)
+
+## Impersonation
+
+Users technically exist only on the upstream cluster. Rancher creates [RoleBindings and ClusterRoleBindings](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding) that refer to Rancher users, even though there is [no actual User resource](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#users-in-kubernetes) on the downstream cluster.
+
+When users interact with a downstream cluster through the authentication proxy, there needs to be some entity downstream to serve as the actor for those requests. Rancher creates service accounts to be that entity. Each service account is only granted one permission, which is to **impersonate** the user they belong to. If there was only one service account that could impersonate any user, then it would be possible for a malicious user to corrupt that account and escalate their privileges by impersonating another user. This issue was the basis for a [CVE](https://github.com/rancher/rancher/security/advisories/GHSA-pvxj-25m6-7vqr).
+
+### Impersonation Troubleshooting
+
+On the downstream cluster, five resources handle impersonation:
+
+- namespace: `cattle-impersonation-system`
+- service account: `cattle-impersonation-system/cattle-impersonation-<user ID>`
+- account token secret: `cattle-impersonation-system/cattle-impersonation-<user ID>-token-<hash>`
+- cluster role: `cattle-impersonation-<user ID>`
+- cluster role binding: `cattle-impersonation-<user ID>`
+
+In this example of a typical impersonation cluster role, the system is configured to use `github` as the auth provider:
+
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+ creationTimestamp: "2021-10-06T18:20:13Z"
+ labels:
+   authz.cluster.cattle.io/impersonator: "true"
+   cattle.io/creator: norman
+ name: cattle-impersonation-user-abcde
+ resourceVersion: "3528"
+ uid: a7478731-72a0-4343-b09f-c3bf12552d77
+rules:
+# allowed to impersonate user user-abcde
+- apiGroups:
+ - ""
+ resourceNames:
+ - user-abcde
+ resources:
+ - users
+ verbs:
+ - impersonate
+# allowed to impersonate listed groups
+- apiGroups:
+ - ""
+ resourceNames:
+ - github_team://123 # group from GitHub auth provider
+ - system:authenticated # automatic group from Kubernetes
+ - system:cattle:authenticated # automatic group from Rancher
+ resources:
+ - groups
+ verbs:
+ - impersonate
+# allowed to impersonate principal ID github_user://098
+- apiGroups:
+ - authentication.k8s.io
+ resourceNames:
+ - github_user://098 # principal ID from GitHub auth provider
+ resources:
+ - userextras/principalid
+ verbs:
+ - impersonate
+# allowed to impersonate username example
+- apiGroups:
+ - authentication.k8s.io
+ resourceNames:
+ - example # username from GitHub auth provider
+ resources:
+ - userextras/username
+ verbs:
+ - impersonate
+```
+
+When you troubleshoot impersonation issues, check whether these resources exist for the user, and whether the rules in the cluster role look similar to the above. For example:
+
+```bash
+kubectl --namespace cattle-impersonation-system get serviceaccount cattle-impersonation-<user ID>
+kubectl --namespace cattle-impersonation-system get secret cattle-impersonation-<user ID>-token-<hash>
+kubectl get clusterrole cattle-impersonation-<user ID> --output yaml
+kubectl get clusterrolebinding cattle-impersonation-<user ID>
+```
+
+If you see an error related to "impersonation" in the UI, pay close attention to the *end* of the error message, which should indicate the real reason that the request failed.
 
 ## Important Files
 
