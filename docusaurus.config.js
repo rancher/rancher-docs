@@ -133,7 +133,7 @@ module.exports = {
             //   banner: 'unreleased'
             // },
             latest: {
-              label: 'latest',
+              label: 'Latest',
               path: '',
               banner: 'none'
             },
