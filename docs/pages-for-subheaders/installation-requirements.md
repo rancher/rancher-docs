@@ -121,15 +121,15 @@ The following table lists minimum CPU and memory requirements for each node in t
 
 Please note that a highly available setup with at least three nodes is required for production.
 
-| Managed Infrastructure Size | Maximum number of Clusters | Maximum number of Nodes | vCPUs | RAM   | External Database Host (†) |
+| Managed Infrastructure Size | Maximum Number of Clusters | Maximum Number of Nodes | vCPUs | RAM   | External Database Host (*) |
 |-----------------------------|----------------------------|-------------------------|-------|-------|----------------------------|
 | Small                       | 150                        | 1500                    | 4     | 16 GB | 2 vCPUs, 8 GB + 1000 IOPS  |
 | Medium                      | 300                        | 3000                    | 8     | 32 GB | 4 vCPUs, 16 GB + 2000 IOPS |
-| Large (*)                   | 500                        | 5000                    | 16    | 64 GB | 8 vCPUs, 32 GB + 4000 IOPS |
+| Large (†)                   | 500                        | 5000                    | 16    | 64 GB | 8 vCPUs, 32 GB + 4000 IOPS |
 
-(*): Large deployments require that you [follow best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md) for adequate performance.
+(*): External Database Host refers to hosting the K3s cluster data store on an [dedicated external host](https://docs.k3s.io/datastore). This is optional. Exact requirements depend on the external data store.
 
-(†): External Database Host refers to hosting the K3s cluster data store on an [dedicated external host](https://docs.k3s.io/datastore). This is optional. Exact requirements depend on the external data store.
+(†): Large deployments require that you [follow best practices](../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md) for adequate performance.
 
 Refer to the K3s documentation for more detailed information on [general requirements](https://docs.k3s.io/installation/requirements).
 
