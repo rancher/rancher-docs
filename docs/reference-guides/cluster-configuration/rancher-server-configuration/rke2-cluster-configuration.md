@@ -367,7 +367,7 @@ To make it easier to put files on nodes beforehand, Rancher expects the followin
 - cloud-provider-config
 - private-registry
 
-Rancher delivers the files to target nodes, and sets the proper options in the RKE2 server.
+Rancher delivers the files to the path `/var/lib/rancher/rke2/etc/config-files/<option>` in target nodes, and sets the proper options in the RKE2 server.
 
 Example:
 ```yaml

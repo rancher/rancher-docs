@@ -336,7 +336,7 @@ To make it easier to put files on nodes beforehand, Rancher expects the followin
 - private-registry
 - flannel-conf
 
-Rancher delivers the files to target nodes, and sets the proper options in the K3s server.
+Rancher delivers the files to the path `/var/lib/rancher/k3s/etc/config-files/<option>` in target nodes, and sets the proper options in the K3s server.
 
 Example:
 ```yaml
