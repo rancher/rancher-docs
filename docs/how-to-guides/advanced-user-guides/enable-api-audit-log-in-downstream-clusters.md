@@ -18,7 +18,7 @@ For configuration details, refer to the [official Kubernetes documentation](http
 
 ### Method 1 (Recommended): Set `audit-policy-file` in `machineGlobalConfig`
 
-You can set `audit-policy-file` the configuration, Rancher delivers the file to target nodes, and sets the proper options in the RKE2 server.
+You can set `audit-policy-file` in the configuration file. Rancher delivers the file to target nodes, and sets the proper options in the RKE2 server.
 
 Example:
 ```yaml
@@ -46,9 +46,9 @@ This feature is available in Rancher v2.7.2 and later.
 
 :::
 
-You can use the `machineSelectorFiles` to deliver the audit policy file to the control plane nodes, and the `machineGlobalConfig` to set the options on kube-apiserver.
+You can use `machineSelectorFiles` to deliver the audit policy file to the control plane nodes, and `machineGlobalConfig` to set the options on kube-apiserver.
 
-As a prerequisite, you must create a secret or configmap to be the source of the audit policy.
+As a prerequisite, you must create a [secret](../new-user-guides/kubernetes-resources-setup/secrets.md) or [configmap](../new-user-guides/kubernetes-resources-setup/secrets.md) to be the source of the audit policy.
 
 The secret or configmap must meet the following requirements:
 
@@ -76,7 +76,7 @@ metadata:
   namespace: fleet-default
 ```
 
-The audit log can be enabled and configured by editing the cluster in YAML and utilizing the `machineSelectorFiles` and `machineGlobalConfig` directives.
+Enable and configure the audit log by editing the cluster in YAML, and utilizing the `machineSelectorFiles` and `machineGlobalConfig` directives.
 
 Example:
 
@@ -105,11 +105,11 @@ spec:
 
 :::tip
 
-Alternatively, you can use the directive `machineSelectorConfig` with proper machineLabelSelectors to achieve the same effect.
+You can also use the directive `machineSelectorConfig` with proper machineLabelSelectors to achieve the same effect.
 
 :::
 
-For more information about cluster configuration, refer to the RKE2 cluster configuration reference pages.
+For more information about cluster configuration, refer to the [RKE2 cluster configuration reference](../../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md) pages.
 
 </TabItem>
 
@@ -121,9 +121,9 @@ This feature is available in Rancher v2.7.2 and later.
 
 :::
 
-You can use the `machineSelectorFiles` to deliver the audit policy file to the control plane nodes, and the `machineGlobalConfig` to set the options on kube-apiserver.
+You can use `machineSelectorFiles` to deliver the audit policy file to the control plane nodes, and `machineGlobalConfig` to set the options on kube-apiserver.
 
-As a prerequisite, you must create a secret or configmap to be the source of the audit policy.
+As a prerequisite, you must create a [secret](../new-user-guides/kubernetes-resources-setup/secrets.md) or [configmap](../new-user-guides/kubernetes-resources-setup/secrets.md) to be the source of the audit policy.
 
 The secret or configmap must meet the following requirements:
 
@@ -151,7 +151,7 @@ metadata:
   namespace: fleet-default
 ```
 
-The audit log can be enabled and configured by editing the cluster in YAML and utilizing the `machineSelectorFiles` and `machineGlobalConfig` directives.
+Enable and configure the audit log by editing the cluster in YAML, and utilizing the `machineSelectorFiles` and `machineGlobalConfig` directives.
 
 Example:
 
@@ -180,11 +180,11 @@ spec:
 
 :::tip
 
-Alternatively, you can use the directive `machineSelectorConfig` with proper machineLabelSelectors to achieve the same effect.
+You can also use the directive `machineSelectorConfig` with proper machineLabelSelectors to achieve the same effect.
 
 :::
 
-For more information about cluster configuration, refer to the K3s cluster configuration reference pages.
+For more information about cluster configuration, refer to the [K3s cluster configuration reference](../../reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration.md) pages.
 
 </TabItem>
 
