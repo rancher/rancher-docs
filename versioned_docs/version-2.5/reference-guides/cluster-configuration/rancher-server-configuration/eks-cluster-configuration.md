@@ -3,7 +3,7 @@ title: EKS Cluster Configuration Reference
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration" />
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration"/>
 </head>
 
 <Tabs>

@@ -8,7 +8,6 @@ title: Creating an AKS Cluster
 
 You can use Rancher to create a cluster hosted in Microsoft Azure Kubernetes Service (AKS).
 
-
 ## Prerequisites in Microsoft Azure
 
 :::caution
@@ -63,6 +62,14 @@ You can also create the service principal and give it Contributor privileges by 
 az ad sp create-for-rbac \
   --scope /subscriptions/$<SUBSCRIPTION-ID>/resourceGroups/$<GROUP> \
   --role Contributor
+```
+
+### Setting Up the Service Principal with the Azure Command Line Tool
+
+Create the Resource Group by running this command:
+
+```
+az group create --location AZURE_LOCATION_NAME --resource-group AZURE_RESOURCE_GROUP_NAME
 ```
 
 ### Setting Up the Service Principal from the Azure Portal
@@ -124,6 +131,17 @@ When provisioning an AKS cluster in the Rancher UI, RBAC is not configurable bec
 
 RBAC is required for AKS clusters that are registered or imported into Rancher.
 
+### Setting Up the Role Assignment to Service Principal with the Azure Command Line Tool
+
+Assign the Rancher AKSv2 role to the service principal with the Azure Command Line Tool:
+
+```
+az role assignment create \
+--assignee CLIENT_ID \
+--scope "/subscriptions/SUBSCRIPTION_ID/resourceGroups/RESOURCE_GROUP_NAME" \
+--role "Rancher AKSv2"
+```
+
 ## AKS Cluster Configuration Reference
 
 For more information about how to configure AKS clusters from the Rancher UI, see the [configuration reference.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration.md)
@@ -146,12 +164,114 @@ Please be aware that when registering an existing AKS cluster, the cluster might
 
 For more information about connecting to an AKS private cluster, see the [AKS documentation.](https://docs.microsoft.com/en-us/azure/aks/private-clusters#options-for-connecting-to-the-private-cluster)
 
+## Setting Up the Minimum Permission Role with the Azure Command Line Tool
+
+1. Create the Minimum Rancher AKSv2 Permission Role by running this command:
+
+  ```
+  cat >> rancher-azure.json << EOF
+  
+  {
+      "Name": "Rancher AKSv2",
+      "IsCustom": true,
+      "Description": "Everything needed by Rancher AKSv2 operator",
+      "Actions": [
+         "Microsoft.Compute/disks/delete",
+          "Microsoft.Compute/disks/read",
+          "Microsoft.Compute/disks/write",
+          "Microsoft.Compute/diskEncryptionSets/read",
+          "Microsoft.Compute/locations/DiskOperations/read",
+          "Microsoft.Compute/locations/vmSizes/read",
+          "Microsoft.Compute/locations/operations/read",
+          "Microsoft.Compute/proximityPlacementGroups/write",
+          "Microsoft.Compute/snapshots/delete",
+          "Microsoft.Compute/snapshots/read",
+          "Microsoft.Compute/snapshots/write",
+          "Microsoft.Compute/virtualMachineScaleSets/manualUpgrade/action",
+          "Microsoft.Compute/virtualMachineScaleSets/delete",
+          "Microsoft.Compute/virtualMachineScaleSets/read",
+          "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/read",
+          "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/ipconfigurations/publicipaddresses/read",
+          "Microsoft.Compute/virtualMachineScaleSets/virtualmachines/instanceView/read",
+          "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/read",
+          "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/write",
+          "Microsoft.Compute/virtualMachineScaleSets/write",
+          "Microsoft.Compute/virtualMachines/read",
+          "Microsoft.Compute/virtualMachines/write",
+          "Microsoft.ContainerService/managedClusters/read",
+          "Microsoft.ContainerService/managedClusters/write"
+          "Microsoft.ContainerService/managedClusters/delete",
+          "Microsoft.ContainerService/managedClusters/accessProfiles/listCredential/action",
+          "Microsoft.ContainerService/managedClusters/agentPools/read",
+          "Microsoft.ContainerService/managedClusters/agentPools/write",
+          "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action",
+          "Microsoft.Network/applicationGateways/read",
+          "Microsoft.Network/applicationGateways/write",
+          "Microsoft.Network/loadBalancers/write",
+          "Microsoft.Network/loadBalancers/backendAddressPools/join/action",
+          "Microsoft.Network/loadBalancers/delete",
+          "Microsoft.Network/loadBalancers/read",
+          "Microsoft.Network/networkInterfaces/join/action",
+          "Microsoft.Network/networkInterfaces/read",
+          "Microsoft.Network/networkInterfaces/write",
+          "Microsoft.Network/networkSecurityGroups/read",
+          "Microsoft.Network/networkSecurityGroups/write",
+          "Microsoft.Network/publicIPAddresses/delete",
+          "Microsoft.Network/publicIPAddresses/join/action",
+          "Microsoft.Network/publicIPAddresses/read",
+          "Microsoft.Network/publicIPAddresses/write",
+          "Microsoft.Network/publicIPPrefixes/join/action",
+          "Microsoft.Network/privatednszones/*",
+          "Microsoft.Network/routeTables/read",
+          "Microsoft.Network/routeTables/routes/delete",
+          "Microsoft.Network/routeTables/routes/read",
+          "Microsoft.Network/routeTables/routes/write",
+          "Microsoft.Network/routeTables/write",
+          "Microsoft.Network/virtualNetworks/read",
+          "Microsoft.Network/virtualNetworks/subnets/join/action",
+          "Microsoft.Network/virtualNetworks/subnets/read",
+          "Microsoft.Network/virtualNetworks/joinLoadBalancer/action",
+          "Microsoft.OperationalInsights/workspaces/sharedkeys/read",
+          "Microsoft.OperationalInsights/workspaces/read",
+          "Microsoft.OperationsManagement/solutions/write",
+          "Microsoft.OperationsManagement/solutions/read",
+          "Microsoft.Resources/subscriptions/resourcegroups/read",
+          "Microsoft.Resources/subscriptions/resourcegroups/write",
+          "Microsoft.Storage/operations/read",
+          "Microsoft.Storage/storageAccounts/listKeys/action",
+          "Microsoft.Storage/storageAccounts/delete",
+          "Microsoft.Storage/storageAccounts/read",
+          "Microsoft.Storage/storageAccounts/write"
+      ],
+      "NotActions": [],
+      "DataActions": [],
+      "NotDataActions": [],
+      "AssignableScopes": [
+          "/subscriptions/SUBSCRIPTION_ID"
+      ]
+  }
+  EOF
+  ```
+
+2. Apply the Rancher AKSv2 Role:
+
+  ```
+  az role definition create --role-definition rancher-azure.json
+  ```
+
+3. Verify if the Rancher AKSv2 Role was created:
+
+  ```
+  az role definition list | grep "Rancher AKSv2"
+  ```
+
 ## Syncing
 
 The AKS provisioner can synchronize the state of an AKS cluster between Rancher and the provider. For an in-depth technical explanation of how this works, see [Syncing.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters.md)
 
 For information on configuring the refresh interval, see [this section.](../../../../pages-for-subheaders/gke-cluster-configuration.md#configuring-the-refresh-interval)
 
+
 ## Programmatically Creating AKS Clusters
 
-The most common way to programmatically deploy AKS clusters through Rancher is by using the Rancher2 Terraform provider. The documentation for creating clusters with Terraform is [here.](https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster)
+The most common way to programmatically deploy AKS clusters through Rancher is by using the Rancher2 Terraform provider. The documentation for creating clusters with Terraform is [here](https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster).
