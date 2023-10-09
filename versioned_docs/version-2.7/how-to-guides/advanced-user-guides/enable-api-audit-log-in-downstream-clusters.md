@@ -18,7 +18,7 @@ For configuration details, refer to the [official Kubernetes documentation](http
 
 ### Method 1 (Recommended): Set `audit-policy-file` in `machineGlobalConfig`
 
-You can set `audit-policy-file` in the configuration file. Rancher delivers the file to target nodes, and sets the proper options in the RKE2 server.
+You can set `audit-policy-file` in the configuration file. Rancher delivers the file to the path `/var/lib/rancher/rke2/etc/config-files/audit-policy-file` in control plane nodes, and sets the proper options in the RKE2 server.
 
 Example:
 ```yaml
