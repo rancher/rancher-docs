@@ -23,7 +23,7 @@ When scaling up Rancher, one typical bottleneck is resource growth in the upstre
 
 ### Managing Your Object Counts
 
-Etcd is the backing database for Kubernetes and for Rancher. The database may eventually encounter limitations to the number of a single Kubernetes resource type it can store. Exact limits vary and depend on a number of factors. However, experience indicates that performance issues frequently arise once a single resource type's object count exceeds 60 thousand. Often that type is `RoleBinding`.
+Etcd is the backing database for Kubernetes and for Rancher. The database may eventually encounter limitations to the number of a single Kubernetes resource type it can store. Exact limits vary and depend on a number of factors. However, experience indicates that performance issues frequently arise once a single resource type's object count exceeds 60,000. Often that type is `RoleBinding`.
 
 This is typical in Rancher, as many operations create new `RoleBinding` objects in the upstream cluster as a side effect.
 
