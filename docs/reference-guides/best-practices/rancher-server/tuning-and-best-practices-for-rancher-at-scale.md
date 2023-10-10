@@ -7,7 +7,7 @@ title: Tuning and Best Practices for Rancher at Scale
 </head>
 
 
-This guide describes the best practices and tuning approaches to scale Rancher setups, and the associated challenges with doing so. As systems grow performance will naturally reduce, but there are steps that can minimize the load put on Rancher, and optimize Rancher's ability to manage larger infrastructures.
+This guide describes the best practices and tuning approaches to scale Rancher setups and the associated challenges with doing so. As systems grow, performance will naturally reduce, but there are steps that can minimize the load put on Rancher and optimize Rancher's ability to manage larger infrastructures.
 
 ## Optimizing Rancher Performance
 
