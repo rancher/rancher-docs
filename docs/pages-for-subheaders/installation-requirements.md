@@ -57,7 +57,7 @@ If you are installing Rancher on a K3s cluster with Alpine Linux, follow [these 
 
 ### RKE Specific Requirements
 
-For the container runtime, RKE should work with any modern Docker version.
+RKE requires a Docker container runtime. Supported Docker versions are specified in the [Support Matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/) page.
 
 For more information, see [Installing Docker](../getting-started/installation-and-upgrade/installation-requirements/install-docker.md).
 
