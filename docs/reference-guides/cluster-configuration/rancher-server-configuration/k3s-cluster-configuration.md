@@ -318,6 +318,7 @@ chartValues:
     chart-name:
         key: value
 ```
+
 ### machineGlobalConfig
 
 Specify K3s configurations. Any configuration change made here will apply to every node. The configuration options available in the [standalone version of k3s](https://docs.k3s.io/cli/server) can be applied here.
@@ -329,6 +330,31 @@ machineGlobalConfig:
     etcd-arg:
         - key1=value1
         - key2=value2
+```
+
+To make it easier to put files on nodes beforehand, Rancher expects the following values to be included in the configuration, while K3s expects the values to be entered as file paths:
+- private-registry
+- flannel-conf
+
+Rancher delivers the files to the path `/var/lib/rancher/k3s/etc/config-files/<option>` in target nodes, and sets the proper options in the K3s server.
+
+Example:
+```yaml
+apiVersion: provisioning.cattle.io/v1
+kind: Cluster
+spec:
+  rkeConfig:
+    machineGlobalConfig:
+      private-registry: |
+        mirrors:
+          docker.io:
+            endpoint:
+              - "http://mycustomreg.com:5000"
+        configs:
+          "mycustomreg:5000":
+            auth:
+              username: xxxxxx # this is the registry username
+              password: xxxxxx # this is the registry password
 ```
 
 ### machineSelectorConfig
@@ -354,6 +380,7 @@ machineSelectorConfig
         key1: value1
         key2: value2
 ```
+
 ### machineSelectorFiles
 
 :::note

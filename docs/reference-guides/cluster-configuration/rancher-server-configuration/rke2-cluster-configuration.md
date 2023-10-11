@@ -348,6 +348,7 @@ chartValues:
     chart-name:
         key: value
 ```
+
 ### machineGlobalConfig
 
 Specify RKE2 configurations. Any configuration change made here will apply to every node. The configuration options available in the [standalone version of RKE2](https://docs.rke2.io/reference/server_config) can be applied here.
@@ -359,6 +360,31 @@ machineGlobalConfig:
     etcd-arg:
         - key1=value1
         - key2=value2
+```
+
+To make it easier to put files on nodes beforehand, Rancher expects the following values to be included in the configuration, while RKE2 expects the values to be entered as file paths:
+- audit-policy-file
+- cloud-provider-config
+- private-registry
+
+Rancher delivers the files to the path `/var/lib/rancher/rke2/etc/config-files/<option>` in target nodes, and sets the proper options in the RKE2 server.
+
+Example:
+```yaml
+apiVersion: provisioning.cattle.io/v1
+kind: Cluster
+spec:
+  rkeConfig:
+    machineGlobalConfig:
+      audit-policy-file: 
+        apiVersion: audit.k8s.io/v1 
+        kind: Policy 
+        rules: 
+        - level: RequestResponse
+          resources:
+          - group: ""
+            resources: 
+            - pods
 ```
 
 ### machineSelectorConfig
@@ -384,6 +410,7 @@ machineSelectorConfig
         key1: value1
         key2: value2
 ```
+
 ### machineSelectorFiles
 
 :::note
@@ -440,7 +467,7 @@ machineSelectorFiles:
 The secret or configmap must meet the following requirements:
 
 1. It must be in the `fleet-default` namespace where the Cluster object exists.
-2. It must have the annotation `rke.cattle.io/object-authorized-for-clusters: cluster-name1,cluster-name2`, which permits the target clusters to use it.  
+2. It must have the annotation `rke.cattle.io/object-authorized-for-clusters: cluster-name1,cluster-name2`, which permits the target clusters to use it.
 
 :::tip
 
