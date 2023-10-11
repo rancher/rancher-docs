@@ -6,8 +6,10 @@ title: Backup Configuration
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/backup-restore-configuration/backup-configuration"/>
 </head>
 
-The Backup Create page lets you configure a schedule, enable encryption and specify the storage location for your backups.
+The **Backup: Create** page lets you configure a schedule, enable encryption and specify the storage location for your backups.
 
+
+You must first [install](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher.md) the `rancher-backup` operator. After you do so, you can access the **Backup: Create** page:
 
 ## Schedule
 
@@ -72,9 +74,15 @@ Selecting the first option stores this backup in the storage location configured
 
 ### S3
 
+:::caution
+
+If you use an S3 backup target, make sure that every cluster has its own bucket or folder. Rancher populates snapshot information from any available snapshot listed in the S3 bucket or folder configured for that cluster.
+
+:::
+
 The S3 storage location contains the following configuration fields:
 
-1. **Credential Secret** (optional): If you need to use the AWS Access keys Secret keys to access s3 bucket, create a secret with your credentials with keys and the directives `accessKey` and `secretKey`. It can be in any namespace. An example secret is [here.](#example-credentialsecret) This directive is unnecessary if the nodes running your operator are in EC2 and set up with IAM permissions that allow them to access S3, as described in [this section.](#iam-permissions-for-ec2-nodes-to-access-s3) The Credential Secret dropdown lists the secrets in all namespaces.
+1. **Credential Secret** (optional): If you need an AWS access key or secret key to access an S3 bucket, [create a secret](../../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) using your credentials, with keys and directives named `accessKey` and `secretKey`. The secret can be in any namespace. An example secret is [here](#example-credentialsecret). This directive is unnecessary if the nodes running your operator are in EC2 and assigned [IAM permissions to access S3](#iam-permissions-for-ec2-nodes-to-access-s3). The **Credential Secret** dropdown lists secrets in all namespaces.
 1. **Bucket Name**: The name of the S3 bucket where backup files will be stored.
 1. **Region** (optional): The AWS [region](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/) where the S3 bucket is located. This field isn't needed for configuring MinIO.
 1. **Folder** (optional): The name of the folder in the S3 bucket where backup files will be stored. Nested folders (e.g., `rancher/cluster1`) are not supported. If this field is left empty, the default behavior is to store the backup files in the root folder of the S3 bucket.
@@ -83,9 +91,11 @@ The S3 storage location contains the following configuration fields:
 1. **Skip TLS Verifications** (optional): Set to true if you are not using TLS.
 
 
+#### YAML Directive Fields
+
 | YAML Directive Name | Description | Required |
 | ---------------- | ---------------- | ------------ |
-| `credentialSecretName` |  If you need to use the AWS Access keys Secret keys to access s3 bucket, create a secret with your credentials with keys and the directives `accessKey` and `secretKey`. It can be in any namespace as long as you provide that namespace in `credentialSecretNamespace`. An example secret is [here.](#example-credentialsecret) This directive is unnecessary if the nodes running your operator are in EC2 and set up with IAM permissions that allow them to access S3, as described in [this section.](#iam-permissions-for-ec2-nodes-to-access-s3)  |  |
+| `credentialSecretName` |  If you need an AWS access key or secret key to access an S3 bucket, [create a secret](../../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) using your credentials, with keys and directives named `accessKey` and `secretKey`. The secret can be in any namespace. An example secret is [here](#example-credentialsecret). This directive is unnecessary if the nodes running your operator are in EC2 and assigned [IAM permissions to access S3](#iam-permissions-for-ec2-nodes-to-access-s3). |  |
 | `credentialSecretNamespace` | The namespace of the secret containing the credentials to access S3. This directive is unnecessary if the nodes running your operator are in EC2 and set up with IAM permissions that allow them to access S3, as described in [this section.](#iam-permissions-for-ec2-nodes-to-access-s3) |  |
 | `bucketName` | The name of the S3 bucket where backup files will be stored. | ✓ |
 | `folder` | The name of the folder in the S3 bucket where backup files will be stored. Nested folders (e.g., `rancher/cluster1`) are not supported. If this field is left empty, the default behavior is to store the backup files in the root folder of the S3 bucket. | |

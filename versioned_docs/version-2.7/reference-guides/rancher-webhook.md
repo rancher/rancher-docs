@@ -34,11 +34,11 @@ It provides essential protection for Rancher-managed clusters, preventing securi
 
 ## What Resources Does the Webhook Validate?
 
-An in-progress list of the resources that the webhook validates can be found in the [webhook's repo](https://github.com/rancher/webhook/blob/release/v0.4/docs.md). Checks specific to one version can be found by viewing the `docs.md` file associated with a particular tag (note that webhook versions prior to `v0.3.6` won't have this file).
+An in-progress list of the resources that the webhook validates can be found in the [webhook's repo](https://github.com/rancher/webhook/blob/release/v0.4/docs.md). These docs are organized by group/version and resource (top-level header is group/version, next level header is resource). Checks specific to one version can be found by viewing the `docs.md` file associated with a particular tag (note that webhook versions prior to `v0.3.6` won't have this file).
 
 ## Bypassing the Webhook
 
-Sometimes, it may be necessary to bypass Rancher's webhook validation to perform emergency restore operations, or fix other critical issues. The bypass operation is exhaustive, meaning that no webhook checks will apply when this is used. It is not possible to bypass some checks and have others still apply - they are either all bypassed, or all active. 
+Sometimes, it may be necessary to bypass Rancher's webhook validation to perform emergency restore operations, or fix other critical issues. The bypass operation is exhaustive, meaning that no webhook validations or mutations will apply when this is used. It is not possible to bypass some mutations or validations and have others still apply - they are either all bypassed, or all active. 
 
 :::danger
 
@@ -61,9 +61,11 @@ One workaround for this issue [documented by Calico](https://docs.tigera.io/cali
 
 ``` bash
 helm repo add rancher-charts https://charts.rancher.io 
-helm upgrade --reuse-values rancher-webhook rancher-chart/rancher-webhook  -n cattle-system --set global.hostNetwork=true
+helm upgrade --reuse-values rancher-webhook rancher-charts/rancher-webhook  -n cattle-system --set global.hostNetwork=true
 ```
 **Note:** This temporary workaround may violate an environment's security policy. This workaround also requires that port 9443 is unused on the host network.
+
+**Note:** Helm, by default, uses a type that some webhook versions validate (secrets) to store information. In these cases, it's recommended to first directly update the deployment with the hostNetwork=true value using kubectl, and then perform the helm commands listed above to avoid drift between the helm configuration and the actual state in the cluster.
 
 ### Private GKE Cluster
 

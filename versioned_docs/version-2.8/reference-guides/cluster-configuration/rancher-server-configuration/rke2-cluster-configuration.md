@@ -440,7 +440,7 @@ machineSelectorFiles:
 The secret or configmap must meet the following requirements:
 
 1. It must be in the `fleet-default` namespace where the Cluster object exists.
-2. It must have the annotation `rke.cattle.io/object-authorized-for-clusters: cluster-name1,cluster-name2`, which permits the target clusters to use it.  
+2. It must have the annotation `rke.cattle.io/object-authorized-for-clusters: cluster-name1,cluster-name2`, which permits the target clusters to use it.
 
 :::tip
 

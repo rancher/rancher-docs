@@ -64,7 +64,6 @@ An authorized cluster endpoint (ACE) allows users to connect to the Kubernetes A
 
 > ACE is available on RKE, RKE2, and K3s clusters that are provisioned or registered with Rancher. It's not available on  clusters in a hosted Kubernetes provider, such as Amazon's EKS.
 
-
 There are two main reasons why a user might need the authorized cluster endpoint:
 
 - To access a downstream user cluster while Rancher is down

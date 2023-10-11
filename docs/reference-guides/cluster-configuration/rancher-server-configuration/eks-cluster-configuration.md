@@ -152,4 +152,3 @@ The syncing interval can be changed by running `kubectl edit setting eks-refresh
 If the `eks-refresh-cron` setting was previously set, the migration will happen automatically.
 
 The shorter the refresh window, the less likely any race conditions will occur, but it does increase the likelihood of encountering request limits that may be in place for AWS APIs.
-
