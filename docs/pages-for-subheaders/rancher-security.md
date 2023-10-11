@@ -98,4 +98,4 @@ For recommendations on securing your Rancher Manager deployments, refer to the [
 
 ### Rancher Webhook Hardening
 
-The Rancher webhook deploys on both the upstream Rancher cluster and all provisioned clusters. For recommendations on hardening the Rancher webhook, see the [Hardening the Rancher Webhook](../reference-guides/rancher-security/rancher-webhook-hardening.md) guide.
+The Rancher webhook deploys on both the upstream (local) Rancher cluster and all provisioned clusters. See the [Hardening the Rancher Webhook](../reference-guides/rancher-security/rancher-webhook-hardening.md) guide for recommendations on protecting your clusters.

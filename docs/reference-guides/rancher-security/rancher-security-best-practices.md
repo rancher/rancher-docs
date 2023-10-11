@@ -6,12 +6,11 @@ title: Rancher Security Best Practices
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-security/rancher-security-best-practices"/>
 </head>
 
-### Restrict public access to /version and /rancherversion path
+### Restrict Public Access to /version and /rancherversion path
 
-The Rancher Manager server provides information about the version it is running and the Go version that was used to built it. That information is accessible via the `/version` path, and is generally used to automate version bumps, confirm a deployment was successful, amongst other things. The server also provides Rancher Manager version information accessible via the `/rancherversion` path.
+The upstream (local) Rancher instance provides information about the Rancher version it is running and the Go version that was used to built it. That information is accessible via the `/version` path, which is used for tasks such as automating version bumps, or confirming that a deployment was successful. The upstream instance also provides Rancher version information accessible via the `/rancherversion` path.
 
-Such information can be used by adversaries to identify the running version and cross relate it with potential bugs that it may have. In cases where the Rancher server is publicly available through the internet, it is recommended that the path `/version` and `/rancherversion` be blocked by using a Layer 7 firewall.
+Adversaries can misuse this information to identify the running Rancher version and cross-relate it with potential bugs to exploit. If your upstream Rancher instance is publicly available on the web, use a Layer 7 firewall to block `/version` and `/rancherversion`.
 
 Further references: 
-- OWASP Web Application Security Testing - [Enumerate Infrastructure and Application Admin Interfaces](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/05-Enumerate_Infrastructure_and_Application_Admin_Interfaces.html).
-- [Expose `/rancherversion` endpoint](https://github.com/rancher/rancher/pull/38445)
+See [OWASP Web Application Security Testing - Enumerate Infrastructure and Application Admin Interfaces](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/05-Enumerate_Infrastructure_and_Application_Admin_Interfaces.html) for more information on protecting your server.
