@@ -48,7 +48,7 @@ This feature is available in Rancher v2.7.2 and later.
 
 You can use `machineSelectorFiles` to deliver the audit policy file to the control plane nodes, and `machineGlobalConfig` to set the options on kube-apiserver.
 
-As a prerequisite, you must create a [secret](../new-user-guides/kubernetes-resources-setup/secrets.md) or [configmap](../new-user-guides/kubernetes-resources-setup/secrets.md) to be the source of the audit policy.
+As a prerequisite, you must create a [secret](../new-user-guides/kubernetes-resources-setup/secrets.md) or [configmap](../new-user-guides/kubernetes-resources-setup/configmaps.md) to be the source of the audit policy.
 
 The secret or configmap must meet the following requirements:
 
@@ -123,7 +123,7 @@ This feature is available in Rancher v2.7.2 and later.
 
 You can use `machineSelectorFiles` to deliver the audit policy file to the control plane nodes, and `machineGlobalConfig` to set the options on kube-apiserver.
 
-As a prerequisite, you must create a [secret](../new-user-guides/kubernetes-resources-setup/secrets.md) or [configmap](../new-user-guides/kubernetes-resources-setup/secrets.md) to be the source of the audit policy.
+As a prerequisite, you must create a [secret](../new-user-guides/kubernetes-resources-setup/secrets.md) or [configmap](../new-user-guides/kubernetes-resources-setup/configmaps.md) to be the source of the audit policy.
 
 The secret or configmap must meet the following requirements:
 
@@ -132,7 +132,7 @@ The secret or configmap must meet the following requirements:
 
 :::tip
 
-Rancher Dashboard provides an easy-to-use form for creating the secret or configmap.
+Rancher Dashboard provides an easy-to-use form for creating the [secret](../new-user-guides/kubernetes-resources-setup/secrets.md) or [configmap](../new-user-guides/kubernetes-resources-setup/configmaps.md).
 
 :::
 
