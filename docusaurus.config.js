@@ -124,10 +124,23 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           showLastUpdateTime: true,
           editUrl: 'https://github.com/rancher/rancher-docs/edit/main/',
-          lastVersion: 'current',
+          // lastVersion: '2.7',
+          includeCurrentVersion: false,
           versions: {
-            current: {
-              label: 'Latest'
+            // current: {
+            //   label: 'Next 🚧',
+            //   path: 'next',
+            //   banner: 'unreleased'
+            // },
+            latest: {
+              label: 'Latest',
+              path: '',
+              banner: 'none'
+            },
+            2.8: {
+              label: 'v2.8 (Preview)',
+              path: 'v2.8',
+              banner: 'unreleased'
             },
             2.7: {
               label: 'v2.7',
