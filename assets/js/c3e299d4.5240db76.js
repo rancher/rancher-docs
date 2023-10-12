@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 15660:
+/***/ 45582:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.5/reference-guides/amazon-eks-permissions/minimum-eks-permissions.md",
     "sourceDirName": "reference-guides/amazon-eks-permissions",
     "slug": "/reference-guides/amazon-eks-permissions/minimum-eks-permissions",
-    "permalink": "/zh/v2.5/reference-guides/amazon-eks-permissions/minimum-eks-permissions",
+    "permalink": "/v2.5/reference-guides/amazon-eks-permissions/minimum-eks-permissions",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/reference-guides/amazon-eks-permissions/minimum-eks-permissions.md",
     "tags": [],
     "version": "2.5",
     "lastUpdatedAt": 1691090900,
-    "formattedLastUpdatedAt": "2023年8月3日",
+    "formattedLastUpdatedAt": "Aug 3, 2023",
     "frontMatter": {
         "title": "Minimum EKS Permissions"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Creating an EKS Cluster",
-        "permalink": "/zh/v2.5/pages-for-subheaders/amazon-eks-permissions"
+        "permalink": "/v2.5/pages-for-subheaders/amazon-eks-permissions"
     },
     "next": {
         "title": "Rancher Backup Configuration Reference",
-        "permalink": "/zh/v2.5/pages-for-subheaders/backup-restore-configuration"
+        "permalink": "/v2.5/pages-for-subheaders/backup-restore-configuration"
     }
 };
 const assets = {};

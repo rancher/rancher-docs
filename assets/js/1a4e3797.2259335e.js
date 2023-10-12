@@ -5771,8 +5771,8 @@ var ExecutionEnvironment = __webpack_require__(58087);
 var Head = __webpack_require__(71098);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js + 1 modules
 var Link = __webpack_require__(31984);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/index.js + 2 modules
-var client = __webpack_require__(55995);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/index.js + 1 modules
+var client = __webpack_require__(88249);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useDocusaurusContext.js
 var useDocusaurusContext = __webpack_require__(8241);
 ;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/usePluralForm.js
@@ -6102,7 +6102,7 @@ function SearchPageContent() {
     });
     const [loaderRef, setLoaderRef] = (0,react.useState)(null);
     const prevY = (0,react.useRef)(0);
-    const observer = (0,react.useRef)(ExecutionEnvironment/* default.canUseIntersectionObserver */.Z.canUseIntersectionObserver && new IntersectionObserver((entries)=>{
+    const observer = (0,react.useRef)(ExecutionEnvironment["default"].canUseIntersectionObserver && new IntersectionObserver((entries)=>{
         const { isIntersecting , boundingClientRect: { y: currentY  }  } = entries[0];
         if (isIntersecting && prevY.current > currentY) {
             searchResultStateDispatcher({

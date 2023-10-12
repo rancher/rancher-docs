@@ -222,8 +222,8 @@ function DocPaginator(props) {
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useDocusaurusContext.js
 var useDocusaurusContext = __webpack_require__(8241);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/index.js + 2 modules
-var client = __webpack_require__(55995);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/index.js + 1 modules
+var client = __webpack_require__(88249);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/ThemeClassNames.js
 var ThemeClassNames = __webpack_require__(65319);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/contexts/docsPreferredVersion.js
