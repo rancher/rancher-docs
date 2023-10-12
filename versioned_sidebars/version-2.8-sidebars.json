@@ -1262,6 +1262,13 @@
         }
       ]
     },
-    "contribute-to-rancher"
+    "contribute-to-rancher",
+    {
+      "type": "category",
+      "label": "API",
+      "items": [
+        "api/api-reference"
+      ]
+    }
   ]
 }
