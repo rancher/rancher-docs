@@ -13,9 +13,7 @@ For Kubernetes v1.21 and up, the NGINX Ingress controller no longer runs in host
 
 Because of this change to the controller, the default RKE1 behavior no longer sets `hostNetwork` to `true`. However, you must set `hostNetwork` to `true` for TCP- and UDP-based Services to work. To do so, [edit](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#editing-clusters-with-yaml) the cluster's YAML and follow the steps in the [official RKE1 doccumention](https://rke.docs.rancher.com/config-options/add-ons/ingress-controllers#configuring-network-options).
 
-
 :::
-
 
 - [Specify a hostname to use](#specify-a-hostname-to-use)
 - [Certificates](#certificates)

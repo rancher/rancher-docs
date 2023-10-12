@@ -51,8 +51,6 @@ If you have a cluster with DRS enabled, setting up [VM-VM Affinity Rules](https:
 
 ## Creating a vSphere Cluster
 
-The a vSphere cluster is created in Rancher depends on the Rancher version.
-
 <Tabs>
 <TabItem value="Rancher v2.2.0+">
 

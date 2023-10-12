@@ -1117,7 +1117,6 @@ const sidebars = {
             "reference-guides/rancher-security/kubernetes-security-best-practices",
             "reference-guides/rancher-security/security-advisories-and-cves",
             "reference-guides/rancher-security/psa-restricted-exemptions",
-            "reference-guides/rancher-security/rancher-webhook-hardening",
           ],
         }
       ]
