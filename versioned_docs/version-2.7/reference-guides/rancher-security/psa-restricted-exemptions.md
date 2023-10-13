@@ -46,6 +46,7 @@ plugins:
                      cattle-monitoring-system,
                      cattle-neuvector-system,
                      cattle-prometheus,
+                     cattle-provisioning-capi-system,
                      cattle-resources-system,
                      cattle-sriov-system,
                      cattle-system,
