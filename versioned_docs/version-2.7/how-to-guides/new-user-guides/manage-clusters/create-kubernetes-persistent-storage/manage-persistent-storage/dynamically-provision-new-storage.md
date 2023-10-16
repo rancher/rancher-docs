@@ -12,7 +12,7 @@ This section assumes that you understand the Kubernetes concepts of storage clas
 
 New storage is often provisioned by a cloud provider such as Amazon EBS. However, new storage doesn't have to be in the cloud.
 
-If you have a pool of block storage, and you don't want to use a cloud provider, Longhorn could help you provide persistent storage to your Kubernetes cluster. For more information, see [this page.](../../../../../integrations-in-rancher/longhorn.md)
+If you have a pool of block storage, and you don't want to use a cloud provider, Longhorn could help you provide persistent storage to your Kubernetes cluster. For more information, see [Cloud Native Storage with Longhorn](../../../../../integrations-in-rancher/longhorn/longhorn.md.
 
 To provision new storage for your workloads, follow these steps:
 
