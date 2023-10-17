@@ -1125,6 +1125,7 @@ const sidebars = {
       type: 'category',
       label: 'Integrations in Rancher',
       items: [
+        'integrations-in-rancher/epinio',
         {
           type: 'category',
           label: 'Cloud Marketplace Integration',
