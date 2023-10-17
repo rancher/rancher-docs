@@ -29,9 +29,7 @@ In Rancher v2.6.4, the cluster-api module is upgraded from v0.4.4 to v1.0.2. The
 
 In Rancher v2.7.7, the app `rancher-provisioning-capi` is installed on the upstream (local) cluster automatically as a replacement for the embedded cluster-api controllers. Conflicts and unexpected errors will occur if the upstream cluster contains both the app, and Rancher v2.7.6 and earlier. Therefore, alternative steps are needed if you attempt to move from Rancher v2.7.7 to any previous version of Rancher v2.7.x.
 
-### Steps
-
-#### Step 1: Clean Up the Upstream (Local) Cluster
+### Step 1: Clean Up the Upstream (Local) Cluster
 
 To avoid rollback failure, follow these [instructions](https://github.com/rancher/rancher-cleanup/blob/main/README.md) to run the scripts **before** you attempt a restore operation or rollback:
 
@@ -48,7 +46,7 @@ There will be downtime while `cleanup.sh` runs, since the script deletes resourc
 
 See the [rancher/rancher-cleanup repo](https://github.com/rancher/rancher-cleanup) for more details and source code.
 
-#### Step 2: Restore the Backup and Bring Up Rancher
+### Step 2: Restore the Backup and Bring Up Rancher
 
 At this point, there should be no Rancher-related resources on the upstream cluster. Therefore, the next step will be the same as if you were migrating Rancher to a new cluster that contains no Rancher resources.
 
@@ -73,9 +71,7 @@ A restore is performed by creating a Restore custom resource.
 
 :::
 
-### Steps
-
-#### Step 1: Create the Restore Custom Resource
+### Step 1: Create the Restore Custom Resource
 
 1. Click **☰ > Cluster Management**.
 1. Go to the local cluster and click **Explore**.
@@ -124,7 +120,7 @@ kubectl get pods -n cattle-resources-system
 kubectl logs -n cattle-resources-system -f
 ```
 
-#### Step 2: Roll Back to a Previous Rancher Version
+### Step 2: Roll Back to a Previous Rancher Version
 
 Rancher can be rolled back using the Helm CLI. To roll back to the previous version:
 
