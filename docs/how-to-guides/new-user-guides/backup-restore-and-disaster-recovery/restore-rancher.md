@@ -16,9 +16,9 @@ Follow the instructions from this page when:
 
 While restoring Rancher on the same setup, the operator will scale down the Rancher deployment when restore starts, and it will scale back up the deployment once restore completes. Rancher will be unavailable during the restore.
 
-::: 
+:::
 
-:::tip 
+:::tip
 
 * Follow those steps to [migrate Rancher](migrate-rancher-to-new-cluster.md).
 * If you need to restore Rancher to a previous version after an upgrade, see the [rollback documentation](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks.md).

@@ -6,13 +6,13 @@ title: Rollbacks
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks"/>
 </head>
 
-This page outlines how to rollback Rancher to a previous version after an upgrade. 
+This page outlines how to rollback Rancher to a previous version after an upgrade.
 
 Follow the instructions from this page when:
 - The running Rancher instance has been upgraded to a newer version after the backup was made.
 - The upstream (local) cluster is the same as where the backup was made.
 
-:::tip 
+:::tip
 
 * Follow these steps to [migrate Rancher](../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md).
 * If you need to restore Rancher to its previous state at the same Rancher version, see the [restore documentation]( ../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher.md).
