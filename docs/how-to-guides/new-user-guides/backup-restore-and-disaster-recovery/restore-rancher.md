@@ -9,19 +9,19 @@ title: Restoring Rancher
 This page outlines how to perform a restore with Rancher.
 
 Follow the instructions from this page when:
-- the running Rancher is at the same version as when the backup was made
-- the local cluster is the same as where the backup was made 
+- The running Rancher instance is at the same version as when the backup was made.
+- The upstream (local) cluster is the same as where the backup was made.
 
 :::note Important
 
-While restoring rancher on the same setup, the operator will scale down the rancher deployment when restore starts, and it will scale back up the deployment once restore completes. So Rancher will be unavailable during the restore.
+While restoring Rancher on the same setup, the operator will scale down the Rancher deployment when restore starts, and it will scale back up the deployment once restore completes. Rancher will be unavailable during the restore.
 
 ::: 
 
 :::tip 
 
-* If you need to migrate rancher to a new cluster, follow those steps to [migrate rancher.](migrate-rancher-to-new-cluster.md)
-* If you need to restore Rancher to a previous version after an upgrade, see the [rollback documentation.](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks.md)
+* Follow those steps to [migrate Rancher](migrate-rancher-to-new-cluster.md).
+* If you need to restore Rancher to a previous version after an upgrade, see the [rollback documentation](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks.md).
 
 :::
 

@@ -9,31 +9,29 @@ title: Rollbacks
 This page outlines how to rollback Rancher to a previous version after an upgrade. 
 
 Follow the instructions from this page when:
-- the running Rancher has been upgraded to a newer version after the backup was made 
-- the local cluster is the same as where the backup was made
+- The running Rancher instance has been upgraded to a newer version after the backup was made.
+- The upstream (local) cluster is the same as where the backup was made.
 
-:::tip
+:::tip 
 
-* If you need to migrate rancher to a new cluster, follow those steps to [migrate rancher.](../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md)
-* If you need to restore Rancher to its previous state at the same Rancher version, see the [restore documentation.]( ../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher.md)
+* Follow these steps to [migrate Rancher](../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md).
+* If you need to restore Rancher to its previous state at the same Rancher version, see the [restore documentation]( ../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher.md).
 
 :::
 
 ## Alternative Steps for Special Scenarios
 
 Alternative steps need to be performed for rollbacks in the following scenarios:
-- Rolling back from v2.6.4 and later to a lower version of v2.6.x
-- Rolling back from v2.7.7 and later to a lower version of v2.7.x
-
-### Reasons
+- Rolling back from v2.6.4 and later to an earlier version of v2.6.x.
+- Rolling back from v2.7.7 and later to an earlier version of v2.7.x.
 
 In Rancher v2.6.4, the cluster-api module is upgraded from v0.4.4 to v1.0.2. The cluster-api v1.0.2, in turn, upgrades the apiVersions of its Custom Resource Definitions (CRDs) from `cluster.x-k8s.io/v1alpha4` to `cluster.x-k8s.io/v1beta1`. Custom Resources (CRs) that use the older apiVersion (v1alpha4) are incompatible with v1beta1, which  causes rollbacks to fail when you attempt to move from Rancher v2.6.4 to any previous version of Rancher v2.6.x.
 
-In Rancher v2.7.7, the app `rancher-provisioning-capi` is installed on the local cluster automatically as the replacement of the embedded cluster-api controllers. Conflicts and unexpected errors will occur if the app and Rancher 2.7.6 and lower exist in the same local cluster. Therefore, alternative steps are needed if you attempt to move from Rancher v2.7.7 to any previous version of Rancher v2.7.x.
+In Rancher v2.7.7, the app `rancher-provisioning-capi` is installed on the upstream (local) cluster automatically as a replacement for the embedded cluster-api controllers. Conflicts and unexpected errors will occur if the upstream cluster contains both the app, and Rancher v2.7.6 and earlier. Therefore, alternative steps are needed if you attempt to move from Rancher v2.7.7 to any previous version of Rancher v2.7.x.
 
 ### Steps
 
-#### Step 1: Clean Up the Local Cluster
+#### Step 1: Clean Up the Upstream (Local) Cluster
 
 To avoid rollback failure, follow these [instructions](https://github.com/rancher/rancher-cleanup/blob/main/README.md) to run the scripts **before** you attempt a restore operation or rollback:
 
@@ -46,17 +44,17 @@ There will be downtime while `cleanup.sh` runs, since the script deletes resourc
 
 :::
 
-**Result:** all Rancher-related resources should be cleaned up on the local cluster.
+**Result:** all Rancher-related resources should be cleaned up on the upstream (local) cluster.
 
 See the [rancher/rancher-cleanup repo](https://github.com/rancher/rancher-cleanup) for more details and source code.
 
 #### Step 2: Restore the Backup and Bring Up Rancher
 
-At this point, there should be no Rancher-related resources on the local cluster. Therefore, technically, you will do the same as migrating Rancher to a new cluster.
+At this point, there should be no Rancher-related resources on the upstream cluster. Therefore, the next step will be the same as if you were migrating Rancher to a new cluster that contains no Rancher resources.
 
 Follow these [instructions](./migrate-rancher-to-new-cluster.md) to install the Rancher-Backup Helm chart and restore Rancher to its previous state.
 Please keep in mind that:
-1. Step 3 can be skipped, because the Cert-Manager app should still exist on the local cluster if it was installed before.
+1. Step 3 can be skipped, because the Cert-Manager app should still exist on the upstream (local) cluster if it was installed before.
 2. At Step 4, install the Rancher version you intend to roll back to.
 
 ## Rolling Back to Rancher v2.5.0+
