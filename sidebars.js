@@ -1127,17 +1127,6 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Virtualization on Kubernetes with Harvester',
-          link: {
-            type: 'doc',
-            id: "integrations-in-rancher/harvester/harvester"
-          },
-          items: [
-            'integrations-in-rancher/harvester/overview'
-          ]
-        },
-        {
-          type: 'category',
           label: 'Cloud Marketplace Integration',
           link: {
             type: 'doc',
@@ -1188,6 +1177,7 @@ const sidebars = {
             "integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy",
           ]
         },
+        "integrations-in-rancher/harvester",
         {
           type: 'category',
           label: 'Istio',

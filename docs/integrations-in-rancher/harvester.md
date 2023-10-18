@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Harvester Integration
 ---
 
 Introduced in Rancher v2.6.1, [Harvester](https://docs.harvesterhci.io/) is an open-source hyper-converged infrastructure (HCI) software built on Kubernetes. Harvester installs on bare metal servers and provides integrated virtualization and distributed storage capabilities. Although Harvester operates using Kubernetes, it does not require users to know Kubernetes concepts, making it a more user-friendly application.
@@ -36,3 +36,13 @@ In addition, other networking considerations are as follows:
 - Follow the networking setup guidance [here](https://docs.harvesterhci.io/v1.1/networking/clusternetwork).
 
 For other port requirements for other guest clusters, such as K3s and RKE1, please see [these docs](https://docs.harvesterhci.io/v1.1/install/requirements/#guest-clusters).
+
+### Limitations
+
+---
+**Applicable to Rancher v2.6.1 and v2.6.2 only:**
+
+- Harvester v0.3.0 doesn’t support air-gapped environment installation.
+- Harvester v0.3.0 doesn’t support upgrade from v0.2.0 nor upgrade to v1.0.0.
+
+---
