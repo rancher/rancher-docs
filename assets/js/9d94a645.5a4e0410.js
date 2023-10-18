@@ -325,8 +325,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/pages-for-subheaders/installation-requirements.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1696937584,
-    "formattedLastUpdatedAt": "Oct 10, 2023",
+    "lastUpdatedAt": 1697657402,
+    "formattedLastUpdatedAt": "Oct 18, 2023",
     "frontMatter": {
         "title": "Installation Requirements",
         "description": "Learn the node requirements for each node running Rancher server when you’re configuring  Rancher to run either in a Docker or Kubernetes setup"
@@ -347,6 +347,11 @@ const toc = [
         value: 'Kubernetes Compatibility with Rancher',
         id: 'kubernetes-compatibility-with-rancher',
         level: 2
+    },
+    {
+        value: 'Install Rancher on a Hardened Kubernetes cluster',
+        id: 'install-rancher-on-a-hardened-kubernetes-cluster',
+        level: 3
     },
     {
         value: 'Operating Systems and Container Runtime Requirements',
@@ -464,7 +469,12 @@ function MDXContent(_param) {
     }, `Kubernetes Compatibility with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher needs to be installed on a supported Kubernetes version. Consult the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://www.suse.com/suse-rancher/support-matrix/all-supported-versions"
-    }, `Rancher support matrix`), ` to ensure that your intended version of Kubernetes is supported.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }, `Rancher support matrix`), ` to ensure that your intended version of Kubernetes is supported.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "install-rancher-on-a-hardened-kubernetes-cluster"
+    }, `Install Rancher on a Hardened Kubernetes cluster`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you install Rancher on a hardened Kubernetes cluster, check the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates#exempting-required-rancher-namespaces"
+    }, `Exempting Required Rancher Namespaces`), ` section for detailed requirements.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "operating-systems-and-container-runtime-requirements"
     }, `Operating Systems and Container Runtime Requirements`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `All supported operating systems are 64-bit x86. Rancher should work with any modern Linux distribution.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",

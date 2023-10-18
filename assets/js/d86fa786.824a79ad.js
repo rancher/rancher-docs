@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/rancher-security/psa-restricted-exemptions.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1696258051,
-    "formattedLastUpdatedAt": "Oct 2, 2023",
+    "lastUpdatedAt": 1697657402,
+    "formattedLastUpdatedAt": "Oct 18, 2023",
     "frontMatter": {
         "title": "Sample PodSecurityConfiguration"
     },
@@ -397,6 +397,7 @@ plugins:
                      cattle-monitoring-system,
                      cattle-neuvector-system,
                      cattle-prometheus,
+                     cattle-provisioning-capi-system,
                      cattle-resources-system,
                      cattle-sriov-system,
                      cattle-system,

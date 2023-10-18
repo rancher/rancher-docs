@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[71625],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[52070],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 43727:
+/***/ 55812:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates",
-    "id": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates",
+    "id": "version-2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates",
     "title": "Pod Security Admission (PSA) Configuration Templates",
     "description": "Pod Security admission (PSA) configuration templates are a Rancher custom-defined resource (CRD), available in Rancher v2.7.2 and above. The templates provide pre-defined security configurations that you can apply to a cluster:",
-    "source": "@site/docs/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates.md",
+    "source": "@site/versioned_docs/version-2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates.md",
     "sourceDirName": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration",
     "slug": "/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates",
-    "permalink": "/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates",
+    "permalink": "/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1686450196,
-    "formattedLastUpdatedAt": "Jun 11, 2023",
+    "version": "2.7",
+    "lastUpdatedAt": 1697657402,
+    "formattedLastUpdatedAt": "Oct 18, 2023",
     "frontMatter": {
         "title": "Pod Security Admission (PSA) Configuration Templates"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Pod Security Standards (PSS) & Pod Security Admission (PSA)",
-        "permalink": "/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards"
+        "permalink": "/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards"
     },
     "next": {
         "title": "Configuring a Global Default Private Registry",
-        "permalink": "/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry"
+        "permalink": "/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry"
     }
 };
 const assets = {};
@@ -409,7 +409,7 @@ function MDXContent(_param) {
         href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates"
     })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards"
+        "href": "/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards"
     }, `Pod Security admission (PSA)`), ` configuration templates are a Rancher custom-defined resource (CRD), available in Rancher v2.7.2 and above. The templates provide pre-defined security configurations that you can apply to a cluster:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -420,7 +420,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, `rancher-restricted`), `: A heavily restricted configuration that follows current best practices for hardening pods. You must make `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards#rancher-on-psa-restricted-clusters"
+        "href": "/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards#rancher-on-psa-restricted-clusters"
     }, `namespace-level exemptions`), ` for Rancher components.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "assign-a-pod-security-admissions-psa-configuration-template"
     }, `Assign a Pod Security Admissions (PSA) Configuration Template`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can assign a PSA template at the same time that you create a downstream cluster. You can also add a template by configuring an existing cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
@@ -488,7 +488,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `CIS Profile`), `, you won't meet required CIS benchmarks. See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/pages-for-subheaders/rke2-hardening-guide"
+        "href": "/v2.7/pages-for-subheaders/rke2-hardening-guide"
     }, `RKE2 hardening guide`), ` for more details.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(TabItem, {
         value: "RKE1",
         mdxType: "TabItem"
@@ -597,7 +597,7 @@ function MDXContent(_param) {
     }, `Exempting Required Rancher Namespaces`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you run Rancher on a Kubernetes cluster that enforces a restrictive security policy by default, you'll need to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#exempting-namespaces"
-    }, `exempt the following namespaces`), `, otherwise the policy might prevent Rancher system pods from  running properly.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `exempt the following namespaces`), `, otherwise the policy might prevent Rancher system pods from running properly.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
@@ -614,6 +614,10 @@ function MDXContent(_param) {
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
     }, `cattle-csp-adapter-system`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "li"
+    }, `cattle-elemental-system`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
@@ -674,6 +678,14 @@ function MDXContent(_param) {
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
     }, `cattle-prometheus`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "li"
+    }, `cattle-provisioning-capi-system`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "li"
+    }, `cattle-resources-system`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
@@ -741,7 +753,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `rancher-restricted`), ` policy, for use in downstream clusters. For a complete template which has all the exemptions you need to run Rancher, please refer to this `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/reference-guides/rancher-security/psa-restricted-exemptions"
+        "href": "/v2.7/reference-guides/rancher-security/psa-restricted-exemptions"
     }, `sample Admission Configuration`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "exempting-namespaces"
     }, `Exempting Namespaces`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you assign the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
