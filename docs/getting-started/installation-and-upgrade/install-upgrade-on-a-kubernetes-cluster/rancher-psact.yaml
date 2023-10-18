@@ -17,6 +17,7 @@ plugins:
       - cattle-system
       - cattle-epinio-system
       - cattle-fleet-system
+      - cattle-fleet-local-system
       - longhorn-system
       - cattle-neuvector-system
       - cattle-monitoring-system
@@ -32,6 +33,7 @@ plugins:
       - cattle-sriov-system
       - cattle-ui-plugin-system
       - tigera-operator
+      - cattle-provisioning-capi-system
     kind: PodSecurityConfiguration
   name: PodSecurity
   path: ""

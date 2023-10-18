@@ -85,12 +85,13 @@ Any user that is bound to the above permission will be able to change the restri
 
 ## Exempting Required Rancher Namespaces
 
-When you run Rancher on a Kubernetes cluster that enforces a restrictive security policy by default, you'll need to [exempt the following namespaces](#exempting-namespaces), otherwise the policy might prevent Rancher system pods from  running properly.
+When you run Rancher on a Kubernetes cluster that enforces a restrictive security policy by default, you'll need to [exempt the following namespaces](#exempting-namespaces), otherwise the policy might prevent Rancher system pods from running properly.
 
 - `calico-apiserver`
 - `calico-system`
 - `cattle-alerting`
 - `cattle-csp-adapter-system`
+- `cattle-elemental-system`
 - `cattle-epinio-system`
 - `cattle-externalip-system`
 - `cattle-fleet-local-system`
@@ -106,6 +107,8 @@ When you run Rancher on a Kubernetes cluster that enforces a restrictive securit
 - `cattle-monitoring-system`
 - `cattle-neuvector-system`
 - `cattle-prometheus`
+- `cattle-provisioning-capi-system`
+- `cattle-resources-system`
 - `cattle-sriov-system`
 - `cattle-system`
 - `cattle-ui-plugin-system`

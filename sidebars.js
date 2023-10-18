@@ -57,7 +57,7 @@ const sidebars = {
             "getting-started/quick-start-guides/deploy-rancher-manager/prime",
             {
               type: 'category',
-              label: 'Deploy Rancher Workloads',
+              label: 'Deploy Workloads',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/deploy-rancher-workloads",
