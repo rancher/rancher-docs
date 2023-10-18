@@ -1091,6 +1091,7 @@
       },
       "items": [
         {
+          "type": "category",
           "label": "Virtualization on Kubernetes with Harvester",
           "link": {
             "type": "doc",
@@ -1109,6 +1110,7 @@
           },
           "items": [
             "integrations-in-rancher/longhorn/overview"
+          ]
         },
         {
           "type": "category",

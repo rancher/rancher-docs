@@ -1127,17 +1127,6 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Container Security with Neuvector',
-          link: {
-            type: 'doc',
-            id: "integrations-in-rancher/neuvector/neuvector"
-          },
-          items: [
-            'integrations-in-rancher/neuvector/overview'
-          ]
-        },
-        {
-          type: 'category',
           label: 'Cloud Marketplace Integration',
           link: {
             type: 'doc',
@@ -1258,6 +1247,7 @@ const sidebars = {
             "integrations-in-rancher/monitoring-and-alerting/promql-expressions",
           ]
         },
+        "integrations-in-rancher/neuvector",
 
         "integrations-in-rancher/opa-gatekeeper",
 
