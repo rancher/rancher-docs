@@ -6,7 +6,7 @@ title: Upgrading Cert-Manager
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/resources/upgrade-cert-manager"/>
 </head>
 
-Rancher is compatible with the API version cert-manager.io/v1 and was last tested with cert-manager version v1.13.1
+Rancher is compatible with the API version cert-manager.io/v1 and was last tested with cert-manager version v1.13.1.
 
 Rancher uses cert-manager to automatically generate and renew TLS certificates for HA deployments of Rancher. As of Fall 2019, three important changes to cert-manager are set to occur that you need to take action on if you have an HA deployment of Rancher:
 
