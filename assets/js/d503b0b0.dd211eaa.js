@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1697131614,
-    "formattedLastUpdatedAt": "Oct 12, 2023",
+    "lastUpdatedAt": 1697649307,
+    "formattedLastUpdatedAt": "Oct 18, 2023",
     "frontMatter": {
         "title": "Restoring Rancher"
     },
@@ -342,34 +342,24 @@ const metadata = {
 const assets = {};
 const toc = [
     {
-        value: 'Additional Steps for Rollbacks with Rancher v2.6.4+',
-        id: 'additional-steps-for-rollbacks-with-rancher-v264',
-        level: 2
-    },
-    {
-        value: 'Rolling back from v2.6.4+ to lower versions of v2.6.x',
-        id: 'rolling-back-from-v264-to-lower-versions-of-v26x',
-        level: 3
-    },
-    {
         value: 'Create the Restore Custom Resource',
         id: 'create-the-restore-custom-resource',
-        level: 3
+        level: 2
     },
     {
         value: 'Logs',
         id: 'logs',
-        level: 3
+        level: 2
     },
     {
         value: 'Cleanup',
         id: 'cleanup',
-        level: 3
+        level: 2
     },
     {
         value: 'Known Issues',
         id: 'known-issues',
-        level: 3
+        level: 2
     }
 ];
 const layoutProps = {
@@ -386,67 +376,30 @@ function MDXContent(_param) {
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
         href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This page outlines how to perform a restore with Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "title": "Important:",
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This page outlines how to perform a restore with Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Follow the instructions from this page when:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `The running Rancher instance is at the same version as when the backup was made.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `The upstream (local) cluster is the same as where the backup was made.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "title": "Important",
         "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `While restoring Rancher on the same setup, the operator will scale down the Rancher deployment when restore starts, and it will scale back up the deployment once restore completes. Rancher will be unavailable during the restore.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "tip"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", {
         parentName: "admonition"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Follow the instructions from this page for restoring rancher on the same cluster where it was backed up from. In order to migrate rancher to a new cluster, follow the steps to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Follow those steps to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
         "href": "/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster"
-    }, `migrate rancher.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `While restoring rancher on the same setup, the operator will scale down the rancher deployment when restore starts, and it will scale back up the deployment once restore completes. So Rancher will be unavailable during the restore.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `migrate Rancher`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `If you need to restore Rancher to a previous version after an upgrade, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
         "href": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks"
-    }, `rollback documentation.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "additional-steps-for-rollbacks-with-rancher-v264"
-    }, `Additional Steps for Rollbacks with Rancher v2.6.4+`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher v2.6.4 upgrades the cluster-api module from v0.4.4 to v1.0.2. Version v1.0.2 of the cluster-api, in turn, upgrades the Cluster API's  Custom Resource Definitions (CRDs) from `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `cluster.x-k8s.io/v1alpha4`), ` to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `cluster.x-k8s.io/v1beta1`), `. The CRDs upgrade to v1beta1 causes rollbacks to fail when you attempt to move from Rancher v2.6.4 to any previous version of Rancher v2.6.x. This is because CRDs that use the older apiVersion (v1alpha4) are incompatible with v1beta1.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To avoid rollback failure, the following Rancher scripts should be run `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `before`), ` you attempt a restore operation or rollback: `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `verify.sh`), `:  Checks for any Rancher-related resources in the cluster. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `cleanup.sh`), `: Cleans up the cluster.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://github.com/rancher/rancher-cleanup"
-    }, `rancher/rancher-cleanup repo`), ` for more details and source code.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "type": "caution"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, ` There will be downtime while `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `cleanup.sh`), ` runs, since the script deletes resources created by Rancher.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "rolling-back-from-v264-to-lower-versions-of-v26x"
-    }, `Rolling back from v2.6.4+ to lower versions of v2.6.x`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Follow these `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "https://github.com/rancher/rancher-cleanup/blob/main/README.md"
-    }, `instructions`), ` to run the scripts.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Follow these `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster"
-    }, `instructions`), ` to install the rancher-backup Helm chart on the existing cluster and restore the previous state.`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", {
-        parentName: "li"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Omit Step 3.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `When you reach Step 4, install the Rancher v2.6.x version on the local cluster you intend to roll back to.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `rollback documentation`), `.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "create-the-restore-custom-resource"
     }, `Create the Restore Custom Resource`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `A restore is performed by creating a Restore custom resource.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
@@ -536,14 +489,14 @@ spec:
         parentName: "ol"
     }, `Cluster-scoped resources`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
-    }, `Namespaced resources`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `Namespaced resources`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "logs"
     }, `Logs`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To check how the restore is progressing, you can check the logs of the operator. Run this command to follow the logs:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
     }, `kubectl logs -n cattle-resources-system -l app.kubernetes.io/name=rancher-backup -f
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "cleanup"
-    }, `Cleanup`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you created the restore resource with kubectl, remove the resource to prevent a naming conflict with future restores.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `Cleanup`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you created the restore resource with kubectl, remove the resource to prevent a naming conflict with future restores.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "known-issues"
     }, `Known Issues`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In some cases, after restoring the backup, Rancher logs will show errors similar to the following:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
