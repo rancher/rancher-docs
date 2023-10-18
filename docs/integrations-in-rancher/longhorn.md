@@ -1,10 +1,6 @@
 ---
-title: Overview
+title: Longhorn - Cloud native distributed block storage for Kubernetes
 ---
-
-<head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/longhorn/overview"/>
-</head>
 
 [Longhorn](https://longhorn.io/) is a lightweight, reliable, and easy-to-use distributed block storage system for Kubernetes.
 

@@ -50,7 +50,7 @@ Longhorn is free, open source software. Originally developed by Rancher Labs, it
 
 If you have a pool of block storage, Longhorn can help you provide persistent storage to your Kubernetes cluster without relying on cloud providers. For more information about Longhorn features, refer to the [documentation.](https://longhorn.io/docs/latest/what-is-longhorn/)
 
-Rancher v2.5 simplified the process of installing Longhorn on a Rancher-managed cluster. For more information, see [Cloud Native Storage with Longhorn](../integrations-in-rancher/longhorn/longhorn.md).
+Rancher v2.5 simplified the process of installing Longhorn on a Rancher-managed cluster. For more information, see [this page.](../integrations-in-rancher/longhorn.md)
 
 ### Provisioning Storage Examples
 

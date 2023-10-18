@@ -1127,17 +1127,6 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Cloud Native Storage with Longhorn',
-          link: {
-            type: 'doc',
-            id: "integrations-in-rancher/longhorn/longhorn"
-          },
-          items: [
-            'integrations-in-rancher/longhorn/overview'
-          ]
-        },
-        {
-          type: 'category',
           label: 'Cloud Marketplace Integration',
           link: {
             type: 'doc',
@@ -1216,6 +1205,7 @@ const sidebars = {
             }
           ]
         },
+        "integrations-in-rancher/longhorn",
         {
           type: 'category',
           label: 'Logging',
