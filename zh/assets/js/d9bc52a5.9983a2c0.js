@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/getting-started/quick-start-guides/deploy-rancher-manager/helm-cli.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1688521962,
-    "formattedLastUpdatedAt": "2023年7月5日",
+    "lastUpdatedAt": 1697570561,
+    "formattedLastUpdatedAt": "2023年10月17日",
     "frontMatter": {
         "title": "Helm CLI 快速入门"
     },
@@ -485,7 +485,7 @@ scp root@<IP_OF_LINUX_MACHINE>:/etc/rancher/k3s/k3s.yaml $env:USERPROFILE\\.kube
 
 kubectl create namespace cattle-system
 
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/<VERSION>/cert-manager.crds.yaml
 
 helm repo add jetstack https://charts.jetstack.io
 
@@ -493,14 +493,12 @@ helm repo update
 
 helm install cert-manager jetstack/cert-manager \\
   --namespace cert-manager \\
-  --create-namespace \\
-  --version v1.11.0
+  --create-namespace
 
 # Windows Powershell
 helm install cert-manager jetstack/cert-manager \`
   --namespace cert-manager \`
-  --create-namespace \`
-  --version v1.11.0
+  --create-namespace
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `安装 Rancher 的最终命令如下。该命令需要一个将流量转发到 Linux 主机的域名。为了简化本教程，你可以使用假域名。`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `<IP_OF_LINUX_NODE>.sslip.io`), ` 是一个假域名的例子。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `要安装特定的 Rancher 版本，请使用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {

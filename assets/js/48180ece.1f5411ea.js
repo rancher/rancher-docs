@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[38184],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[38550],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 98753:
+/***/ 59026:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images",
-    "id": "version-2.7/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images",
+    "id": "getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images",
     "title": "2. Collect and Publish Images to your Private Registry",
     "description": "This section describes how to set up your private registry so that when you install Rancher, Rancher will pull all the required images from this registry.",
-    "source": "@site/versioned_docs/version-2.7/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images.md",
+    "source": "@site/docs/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images.md",
     "sourceDirName": "getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install",
     "slug": "/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images",
-    "permalink": "/v2.7/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images",
+    "permalink": "/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "Jun 6, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1697570561,
+    "formattedLastUpdatedAt": "Oct 17, 2023",
     "frontMatter": {
         "title": "2. Collect and Publish Images to your Private Registry"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "1. Set up Infrastructure and Private Registry",
-        "permalink": "/v2.7/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/infrastructure-private-registry"
+        "permalink": "/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/infrastructure-private-registry"
     },
     "next": {
         "title": "3. Install Kubernetes (Skip for Docker Installs)",
-        "permalink": "/v2.7/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-kubernetes"
+        "permalink": "/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-kubernetes"
     }
 };
 const assets = {};
@@ -459,10 +459,10 @@ function MDXContent(_param) {
         href: "https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images"
     })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section describes how to set up your private registry so that when you install Rancher, Rancher will pull all the required images from this registry.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `By default, all images used to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
+        "href": "/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
     }, `provision Kubernetes clusters`), ` or launch any tools in Rancher, e.g. monitoring, pipelines, alerts, are pulled from Docker Hub. In an air gapped installation of Rancher, you will need a private registry that is located somewhere accessible by your Rancher server. Then, you will load the registry with all the images.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Populating the private registry with images is the same process for installing Rancher with Docker and for installing Rancher on a Kubernetes cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The steps in this section differ depending on whether or not you are planning to use Rancher to provision a downstream cluster with Windows nodes or not. By default, we provide the steps of how to populate your private registry assuming that Rancher will provision downstream Kubernetes clusters with only Linux nodes. But if you plan on provisioning any `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/use-windows-clusters"
+        "href": "/pages-for-subheaders/use-windows-clusters"
     }, `downstream Kubernetes clusters using Windows nodes`), `, there are separate instructions to support the images needed.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "title": "Prerequisites:",
         "type": "note"
@@ -598,7 +598,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.12.0, please see our `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/resources/upgrade-cert-manager"
+        "href": "/getting-started/installation-and-upgrade/resources/upgrade-cert-manager"
     }, `upgrade documentation`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
@@ -606,7 +606,7 @@ function MDXContent(_param) {
         "className": "language-plain"
     }, `helm repo add jetstack https://charts.jetstack.io
 helm repo update
-helm fetch jetstack/cert-manager --version v1.11.0
+helm fetch jetstack/cert-manager
 helm template ./cert-manager-<version>.tgz | awk '$1 ~ /image:/ {print $2}' | sed s/\\"//g >> ./rancher-images.txt
 `))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
@@ -1008,7 +1008,7 @@ helm template ./cert-manager-<version>.tgz | awk '$1 ~ /image:/ {print $2}' | se
         parentName: "admonition"
     }, `Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.12.0, please see our `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/resources/upgrade-cert-manager"
+        "href": "/getting-started/installation-and-upgrade/resources/upgrade-cert-manager"
     }, `upgrade documentation`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
@@ -1016,7 +1016,7 @@ helm template ./cert-manager-<version>.tgz | awk '$1 ~ /image:/ {print $2}' | se
         "className": "language-plain"
     }, `helm repo add jetstack https://charts.jetstack.io
 helm repo update
-helm fetch jetstack/cert-manager --version v1.11.0
+helm fetch jetstack/cert-manager
 helm template ./cert-manager-<version>.tgz | awk '$1 ~ /image:/ {print $2}' | sed s/\\"//g >> ./rancher-images.txt
 `))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
@@ -1116,12 +1116,12 @@ helm template ./cert-manager-<version>.tgz | awk '$1 ~ /image:/ {print $2}' | se
         "id": "next-step-for-kubernetes-installs---launch-a-kubernetes-cluster"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "h3",
-        "href": "/v2.7/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-kubernetes"
+        "href": "/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-kubernetes"
     }, `Next step for Kubernetes Installs - Launch a Kubernetes Cluster`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "next-step-for-docker-installs---install-rancher"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "h3",
-        "href": "/v2.7/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha"
+        "href": "/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha"
     }, `Next step for Docker Installs - Install Rancher`)));
 }
 MDXContent.isMDXComponent = true;

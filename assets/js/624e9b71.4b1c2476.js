@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[3877],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[62583],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 85410:
+/***/ 15804:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/installation-and-upgrade/resources/upgrade-cert-manager",
-    "id": "version-2.8/getting-started/installation-and-upgrade/resources/upgrade-cert-manager",
+    "id": "version-2.7/getting-started/installation-and-upgrade/resources/upgrade-cert-manager",
     "title": "Upgrading Cert-Manager",
-    "description": "Rancher uses cert-manager to automatically generate and renew TLS certificates for HA deployments of Rancher. As of Fall 2019, three important changes to cert-manager are set to occur that you need to take action on if you have an HA deployment of Rancher:",
-    "source": "@site/versioned_docs/version-2.8/getting-started/installation-and-upgrade/resources/upgrade-cert-manager.md",
+    "description": "Rancher is compatible with the API version cert-manager.io/v1 and was last tested with cert-manager version v1.13.1.",
+    "source": "@site/versioned_docs/version-2.7/getting-started/installation-and-upgrade/resources/upgrade-cert-manager.md",
     "sourceDirName": "getting-started/installation-and-upgrade/resources",
     "slug": "/getting-started/installation-and-upgrade/resources/upgrade-cert-manager",
-    "permalink": "/v2.8/getting-started/installation-and-upgrade/resources/upgrade-cert-manager",
+    "permalink": "/v2.7/getting-started/installation-and-upgrade/resources/upgrade-cert-manager",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/getting-started/installation-and-upgrade/resources/upgrade-cert-manager.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/getting-started/installation-and-upgrade/resources/upgrade-cert-manager.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "Oct 6, 2023",
+    "version": "2.7",
+    "lastUpdatedAt": 1697647410,
+    "formattedLastUpdatedAt": "Oct 18, 2023",
     "frontMatter": {
         "title": "Upgrading Cert-Manager"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "About Custom CA Root Certificates",
-        "permalink": "/v2.8/getting-started/installation-and-upgrade/resources/custom-ca-root-certificates"
+        "permalink": "/v2.7/getting-started/installation-and-upgrade/resources/custom-ca-root-certificates"
     },
     "next": {
         "title": "Updating the Rancher Certificate",
-        "permalink": "/v2.8/getting-started/installation-and-upgrade/resources/update-rancher-certificate"
+        "permalink": "/v2.7/getting-started/installation-and-upgrade/resources/update-rancher-certificate"
     }
 };
 const assets = {};
@@ -396,7 +396,7 @@ function MDXContent(_param) {
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
         href: "https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/resources/upgrade-cert-manager"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher uses cert-manager to automatically generate and renew TLS certificates for HA deployments of Rancher. As of Fall 2019, three important changes to cert-manager are set to occur that you need to take action on if you have an HA deployment of Rancher:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher is compatible with the API version cert-manager.io/v1 and was last tested with cert-manager version v1.13.1.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher uses cert-manager to automatically generate and renew TLS certificates for HA deployments of Rancher. As of Fall 2019, three important changes to cert-manager are set to occur that you need to take action on if you have an HA deployment of Rancher:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
@@ -545,8 +545,7 @@ issuer,clusterissuer,certificates,certificaterequests > cert-manager-backup.yaml
         "className": "language-plain"
     }, `helm install \\
   cert-manager jetstack/cert-manager \\
-  --namespace cert-manager \\
-  --version v1.11.0
+  --namespace cert-manager
 `))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -572,7 +571,7 @@ issuer,clusterissuer,certificates,certificaterequests > cert-manager-backup.yaml
         parentName: "li"
     }, `Follow the guide to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images"
+        "href": "/v2.7/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images"
     }, `Prepare your Private Registry`), ` with the images needed for the upgrade.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -596,7 +595,7 @@ helm repo update
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-plain"
-    }, `helm fetch jetstack/cert-manager --version v1.11.0
+    }, `helm fetch jetstack/cert-manager
 `))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -821,7 +820,7 @@ cert-manager-webhook-787858fcdb-nlzsq      1/1     Running   0          2m
         "id": "cert-manager-api-change-and-data-migration"
     }, `Cert-Manager API change and data migration`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("hr", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher now supports cert-manager versions 1.6.2 and 1.7.1. We recommend v1.7.x because v 1.6.x will reach end-of-life on March 30, 2022. To read more, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster#4-install-cert-manager"
+        "href": "/v2.7/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster#4-install-cert-manager"
     }, `cert-manager docs`), `. For instructions on upgrading cert-manager from version 1.5 to 1.6, see the upstream cert-manager documentation `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://cert-manager.io/docs/installation/upgrading/upgrading-1.5-1.6/"

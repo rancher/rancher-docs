@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1683884717,
-    "formattedLastUpdatedAt": "2023年5月12日",
+    "lastUpdatedAt": 1697570561,
+    "formattedLastUpdatedAt": "2023年10月17日",
     "frontMatter": {
         "title": "2. 收集镜像并发布到私有仓库"
     },
@@ -603,7 +603,7 @@ function MDXContent(_param) {
         "className": "language-plain"
     }, `helm repo add jetstack https://charts.jetstack.io
 helm repo update
-helm fetch jetstack/cert-manager --version v1.11.0
+helm fetch jetstack/cert-manager
 helm template ./cert-manager-<version>.tgz | awk '$1 ~ /image:/ {print $2}' | sed s/\\"//g >> ./rancher-images.txt
 `))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
@@ -1001,7 +1001,7 @@ helm template ./cert-manager-<version>.tgz | awk '$1 ~ /image:/ {print $2}' | se
         "className": "language-plain"
     }, `helm repo add jetstack https://charts.jetstack.io
 helm repo update
-helm fetch jetstack/cert-manager --version v1.11.0
+helm fetch jetstack/cert-manager
 helm template ./cert-manager-<version>.tgz | awk '$1 ~ /image:/ {print $2}' | sed s/\\"//g >> ./rancher-images.txt
 `))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"

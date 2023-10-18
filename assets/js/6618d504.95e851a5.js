@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[52602],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[32959],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 11074:
+/***/ 18992:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/quick-start-guides/deploy-rancher-manager/helm-cli",
-    "id": "version-2.7/getting-started/quick-start-guides/deploy-rancher-manager/helm-cli",
+    "id": "getting-started/quick-start-guides/deploy-rancher-manager/helm-cli",
     "title": "Helm CLI Quick Start",
     "description": "These instructions capture a quick way to set up a proof-of-concept Rancher installation.",
-    "source": "@site/versioned_docs/version-2.7/getting-started/quick-start-guides/deploy-rancher-manager/helm-cli.md",
+    "source": "@site/docs/getting-started/quick-start-guides/deploy-rancher-manager/helm-cli.md",
     "sourceDirName": "getting-started/quick-start-guides/deploy-rancher-manager",
     "slug": "/getting-started/quick-start-guides/deploy-rancher-manager/helm-cli",
-    "permalink": "/v2.7/getting-started/quick-start-guides/deploy-rancher-manager/helm-cli",
+    "permalink": "/getting-started/quick-start-guides/deploy-rancher-manager/helm-cli",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/getting-started/quick-start-guides/deploy-rancher-manager/helm-cli.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/getting-started/quick-start-guides/deploy-rancher-manager/helm-cli.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1688057655,
-    "formattedLastUpdatedAt": "Jun 29, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1697570561,
+    "formattedLastUpdatedAt": "Oct 17, 2023",
     "frontMatter": {
         "title": "Helm CLI Quick Start"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Rancher Outscale Quick Start Guide",
-        "permalink": "/v2.7/getting-started/quick-start-guides/deploy-rancher-manager/outscale-qs"
+        "permalink": "/getting-started/quick-start-guides/deploy-rancher-manager/outscale-qs"
     },
     "next": {
         "title": "Rancher Prime",
-        "permalink": "/v2.7/getting-started/quick-start-guides/deploy-rancher-manager/prime"
+        "permalink": "/getting-started/quick-start-guides/deploy-rancher-manager/prime"
     }
 };
 const assets = {};
@@ -384,10 +384,10 @@ function MDXContent(_param) {
         href: "https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-rancher-manager/helm-cli"
     })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These instructions capture a quick way to set up a proof-of-concept Rancher installation.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These instructions assume you have a Linux virtual machine that you will communicate with from your local workstation. Rancher will be installed on the Linux machine. You will need to retrieve the IP address of that machine so that you can access Rancher from your local workstation. Rancher is designed to manage Kubernetes clusters remotely, so any Kubernetes cluster that Rancher manages in the future will also need to be able to reach this IP address.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `We don't recommend installing Rancher locally because it creates a networking problem. Installing Rancher on localhost does not allow Rancher to communicate with downstream Kubernetes clusters, so on localhost you wouldn't be able to test Rancher's cluster provisioning or cluster management functionality.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Your Linux machine can be anywhere. It could be an Amazon EC2 instance, a Digital Ocean droplet, or an Azure virtual machine, to name a few examples. Other Rancher docs often use 'node' as a generic term for all of these. One possible way to deploy a Linux machine is by setting up an Amazon EC2 instance as shown in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2"
+        "href": "/how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2"
     }, `this tutorial`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The full installation requirements are `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/installation-requirements"
+        "href": "/pages-for-subheaders/installation-requirements"
     }, `here`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "install-k3s-on-linux"
     }, `Install K3s on Linux`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher needs to be installed on a supported Kubernetes version. To find out which versions of Kubernetes are supported for your Rancher version, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -486,7 +486,7 @@ scp root@<IP_OF_LINUX_MACHINE>:/etc/rancher/k3s/k3s.yaml $env:USERPROFILE\\.kube
 
 kubectl create namespace cattle-system
 
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/<VERSION>/cert-manager.crds.yaml
 
 helm repo add jetstack https://charts.jetstack.io
 
@@ -494,14 +494,12 @@ helm repo update
 
 helm install cert-manager jetstack/cert-manager \\
   --namespace cert-manager \\
-  --create-namespace \\
-  --version v1.11.0
+  --create-namespace
 
 # Windows Powershell
 helm install cert-manager jetstack/cert-manager \`
   --namespace cert-manager \`
-  --create-namespace \`
-  --version v1.11.0
+  --create-namespace
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The final command to install Rancher is below. The command requires a domain name that forwards traffic to the Linux machine. For the sake of simplicity in this tutorial, you can use a fake domain name to create your proof-of-concept. An example of a fake domain name would be `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `<IP_OF_LINUX_NODE>.sslip.io`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To install a specific Rancher version, use the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -510,7 +508,7 @@ helm install cert-manager jetstack/cert-manager \`
         parentName: "p"
     }, `--version 2.6.6`), `). Otherwise, the latest Rancher is installed by default. Refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/resources/choose-a-rancher-version"
+        "href": "/getting-started/installation-and-upgrade/resources/choose-a-rancher-version"
     }, `Choosing a Rancher Version`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For Kubernetes v1.25 or later, set `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `global.cattle.psp.enabled`), ` to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -533,10 +531,10 @@ helm install rancher rancher-latest/rancher \`
         parentName: "p"
     }, `<IP_OF_LINUX_NODE>.sslip.io`), ` in a web browser, you should see the Rancher UI.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To make these instructions simple, we used a fake domain name and self-signed certificates to do this installation. Therefore, you will probably need to add a security exception to your web browser to see the Rancher UI. Note that for production installs, you would need a high-availability setup with a load balancer, a real domain name and real certificates.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These instructions also left out the full installation requirements and other installation options. If you have any issues with these steps, refer to the full `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster"
+        "href": "/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster"
     }, `Helm CLI installation docs.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To launch new Kubernetes clusters with your new Rancher server, you may need to set up cloud credentials in Rancher. For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/launch-kubernetes-with-rancher"
+        "href": "/pages-for-subheaders/launch-kubernetes-with-rancher"
     }, `Launching Kubernetes clusters with Rancher.`)));
 }
 MDXContent.isMDXComponent = true;

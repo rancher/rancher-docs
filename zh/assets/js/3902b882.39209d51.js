@@ -325,8 +325,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1688521962,
-    "formattedLastUpdatedAt": "2023年7月5日",
+    "lastUpdatedAt": 1697570561,
+    "formattedLastUpdatedAt": "2023年10月17日",
     "frontMatter": {
         "title": "在 Kubernetes 集群上安装/升级 Rancher",
         "description": "了解如何在开发和生产环境中安装 Rancher。了解单节点和高可用安装"
@@ -747,7 +747,7 @@ function MDXContent(_param) {
     }, `cert-manager 文档`), `。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
     }, `# 如果你手动安装了CRD，而不是在 Helm 安装命令中添加了 \`--set installCRDs=true\` 选项，你应该在升级 Helm Chart 之前升级 CRD 资源。
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/<VERSION>/cert-manager.crds.yaml
 
 # 添加 Jetstack Helm 仓库
 helm repo add jetstack https://charts.jetstack.io
@@ -758,8 +758,7 @@ helm repo update
 # 安装 cert-manager Helm Chart
 helm install cert-manager jetstack/cert-manager \\
   --namespace cert-manager \\
-  --create-namespace \\
-  --version v1.11.0
+  --create-namespace
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `安装完 cert-manager 后，你可以通过检查 cert-manager 命名空间中正在运行的 Pod 来验证它是否已正确部署：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
     }, `kubectl get pods --namespace cert-manager
