@@ -1085,7 +1085,21 @@
     {
       "type": "category",
       "label": "Integrations in Rancher",
+      "link": {
+        "type": "doc",
+        "id": "integrations-in-rancher/integrations-in-rancher"
+      },
       "items": [
+        {
+          "label": "Virtualization on Kubernetes with Harvester",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/harvester/harvester"
+          },
+          "items": [
+            "integrations-in-rancher/harvester/overview"
+          ]
+        },
         {
           "type": "category",
           "label": "Cloud Native Storage with Longhorn",
@@ -1095,7 +1109,6 @@
           },
           "items": [
             "integrations-in-rancher/longhorn/overview"
-          ]
         },
         {
           "type": "category",
@@ -1149,7 +1162,6 @@
             "integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy"
           ]
         },
-        "integrations-in-rancher/harvester",
         {
           "type": "category",
           "label": "Istio",

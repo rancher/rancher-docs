@@ -23,6 +23,10 @@ See our page on [best practices](../reference-guides/best-practices/rancher-serv
 
 Rancher needs to be installed on a supported Kubernetes version. Consult the [Rancher support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions) to ensure that your intended version of Kubernetes is supported.
 
+### Install Rancher on a Hardened Kubernetes cluster
+
+If you install Rancher on a hardened Kubernetes cluster, check the [Exempting Required Rancher Namespaces](../../../docs/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates.md#exempting-required-rancher-namespaces) section for detailed requirements.
+
 ## Operating Systems and Container Runtime Requirements
 
 All supported operating systems are 64-bit x86. Rancher should work with any modern Linux distribution.
