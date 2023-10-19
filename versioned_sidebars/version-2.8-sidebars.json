@@ -1125,6 +1125,7 @@
         },
         "integrations-in-rancher/kubewarden/kubewarden",
         "integrations-in-rancher/rancher-desktop",
+        "integrations-in-rancher/epinio/epinio",
         {
           "type": "category",
           "label": "Cloud Marketplace Integration",
