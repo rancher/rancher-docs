@@ -1126,6 +1126,20 @@
         },
         "integrations-in-rancher/kubewarden/kubewarden",
         "integrations-in-rancher/opni/opni",
+        {
+          "type": "category",
+          "label": "Continuous Delivery with Fleet",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/fleet/fleet"
+          },
+          "items": [
+            "integrations-in-rancher/fleet/overview",
+            "integrations-in-rancher/fleet/architecture",
+            "integrations-in-rancher/fleet/windows-support",
+            "integrations-in-rancher/fleet/use-fleet-behind-a-proxy"
+          ]
+        },
         "integrations-in-rancher/rancher-desktop",
         "integrations-in-rancher/epinio/epinio",
         {
@@ -1165,19 +1179,6 @@
             "integrations-in-rancher/cis-scans/rbac-for-cis-scans",
             "integrations-in-rancher/cis-scans/skipped-and-not-applicable-tests",
             "integrations-in-rancher/cis-scans/custom-benchmark"
-          ]
-        },
-        {
-          "type": "category",
-          "label": "Continuous Delivery with Fleet",
-          "link": {
-            "type": "doc",
-            "id": "pages-for-subheaders/fleet-gitops-at-scale"
-          },
-          "items": [
-            "integrations-in-rancher/fleet-gitops-at-scale/architecture",
-            "integrations-in-rancher/fleet-gitops-at-scale/windows-support",
-            "integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy"
           ]
         },
         {
