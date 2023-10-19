@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[92822],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[63619],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 83543:
+/***/ 73522:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,35 +308,35 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: '云市场集成'
+    title: 'Cloud Marketplace Integration'
 };
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "pages-for-subheaders/cloud-marketplace",
     "id": "version-2.8/pages-for-subheaders/cloud-marketplace",
-    "title": "云市场集成",
-    "description": "Rancher 提供与云市场的集成，让你能轻松购买云提供商上的安装支持。此外，该集成还支持生成 supportconfig bundle，你可以将该 bundle 提供给 Rancher。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.8/pages-for-subheaders/cloud-marketplace.md",
+    "title": "Cloud Marketplace Integration",
+    "description": "Rancher offers integration with cloud marketplaces to easily purchase support for installations hosted on certain cloud providers. In addition, this integration also provides the ability to generate a supportconfig bundle which can be provided to rancher support.",
+    "source": "@site/versioned_docs/version-2.8/pages-for-subheaders/cloud-marketplace.md",
     "sourceDirName": "pages-for-subheaders",
     "slug": "/pages-for-subheaders/cloud-marketplace",
-    "permalink": "/zh/v2.8/pages-for-subheaders/cloud-marketplace",
+    "permalink": "/v2.8/pages-for-subheaders/cloud-marketplace",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/pages-for-subheaders/cloud-marketplace.md",
     "tags": [],
     "version": "2.8",
     "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "2023年10月6日",
+    "formattedLastUpdatedAt": "Oct 6, 2023",
     "frontMatter": {
-        "title": "云市场集成"
+        "title": "Cloud Marketplace Integration"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Integrations in Rancher",
-        "permalink": "/zh/v2.8/integrations-in-rancher/"
+        "title": "Overview",
+        "permalink": "/v2.8/integrations-in-rancher/harvester/overview"
     },
     "next": {
-        "title": "AWS Marketplace 集成",
-        "permalink": "/zh/v2.8/pages-for-subheaders/aws-cloud-marketplace"
+        "title": "AWS Marketplace Integration",
+        "permalink": "/v2.8/pages-for-subheaders/aws-cloud-marketplace"
     }
 };
 const assets = {};
@@ -352,7 +352,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 提供与云市场的集成，让你能轻松购买云提供商上的安装支持。此外，该集成还支持生成 supportconfig bundle，你可以将该 bundle 提供给 Rancher。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `此集成仅支持 AWS。`));
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/pages-for-subheaders/cloud-marketplace"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher offers integration with cloud marketplaces to easily purchase support for installations hosted on certain cloud providers. In addition, this integration also provides the ability to generate a supportconfig bundle which can be provided to rancher support.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This integration only supports AWS.`));
 }
 MDXContent.isMDXComponent = true;
 

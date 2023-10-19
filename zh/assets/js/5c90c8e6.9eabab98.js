@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[32823],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[53797],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 24865:
+/***/ 47244:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,35 +308,35 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Feature Flags'
+    title: '功能开关'
 };
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/installation-and-upgrade/installation-references/feature-flags",
     "id": "version-2.8/getting-started/installation-and-upgrade/installation-references/feature-flags",
-    "title": "Feature Flags",
-    "description": "With feature flags, you can try out optional or experimental features, and enable legacy features that are being phased out.",
-    "source": "@site/versioned_docs/version-2.8/getting-started/installation-and-upgrade/installation-references/feature-flags.md",
+    "title": "功能开关",
+    "description": "使用功能开关（Feature Flag），你可以试用可选或实验性的功能并启用正在逐步淘汰的旧版功能。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.8/getting-started/installation-and-upgrade/installation-references/feature-flags.md",
     "sourceDirName": "getting-started/installation-and-upgrade/installation-references",
     "slug": "/getting-started/installation-and-upgrade/installation-references/feature-flags",
-    "permalink": "/v2.8/getting-started/installation-and-upgrade/installation-references/feature-flags",
+    "permalink": "/zh/v2.8/getting-started/installation-and-upgrade/installation-references/feature-flags",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/getting-started/installation-and-upgrade/installation-references/feature-flags.md",
     "tags": [],
     "version": "2.8",
     "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "Oct 6, 2023",
+    "formattedLastUpdatedAt": "2023年10月6日",
     "frontMatter": {
-        "title": "Feature Flags"
+        "title": "功能开关"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "TLS Settings",
-        "permalink": "/v2.8/getting-started/installation-and-upgrade/installation-references/tls-settings"
+        "title": "TLS 设置",
+        "permalink": "/zh/v2.8/getting-started/installation-and-upgrade/installation-references/tls-settings"
     },
     "next": {
-        "title": "Install/Upgrade Rancher on a Kubernetes Cluster",
-        "permalink": "/v2.8/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster"
+        "title": "在 Kubernetes 集群上安装/升级 Rancher",
+        "permalink": "/zh/v2.8/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster"
     }
 };
 const assets = {};
@@ -352,98 +352,95 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
-        rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-references/feature-flags"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `With feature flags, you can try out optional or experimental features, and enable legacy features that are being phased out.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To learn more about feature values and how to enable them, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `使用功能开关（Feature Flag），你可以试用可选或实验性的功能并启用正在逐步淘汰的旧版功能。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `要了解功能的值以及如何启用它们，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/pages-for-subheaders/enable-experimental-features"
-    }, `Enabling Experimental Features`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "href": "/zh/v2.8/pages-for-subheaders/enable-experimental-features"
+    }, `启用实验性功能`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
-    }, `Some feature flags require a restart of the Rancher container. Features that require a restart are marked in the Rancher UI.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The following is a list of feature flags available in Rancher. If you've upgraded from a previous Rancher version, you may see additional flags in the Rancher UI, such as `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `某些功能要求重新启动 Rancher 容器。Rancher UI 中标记了要求重启的功能。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `以下是 Rancher 中可用的功能开关列表。如果你是从旧 Rancher 版本升级的，你可能会在 Rancher UI 中看到其他功能，例如 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `proxy`), ` or `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `proxy`), ` 或 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `dashboard`), ` (both `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `dashboard`), `（均`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.5/reference-guides/installation-references/feature-flags"
-    }, `discontinued`), `):`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        "href": "/zh/v2.5/reference-guides/installation-references/feature-flags"
+    }, `已中断`), `）：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
-    }, `continuous-delivery`), `: Allows Fleet GitOps to be disabled separately from Fleet. See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `continuous-delivery`), `：允许从 Fleet 中单独禁用 Fleet GitOps。有关详细信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.8/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery"
-    }, `Continuous Delivery.`), ` for more information.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        "href": "/zh/v2.8/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery"
+    }, `持续交付`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
-    }, `fleet`), `: The Rancher provisioning framework in v2.6 and later requires Fleet. The flag will be automatically enabled when you upgrade, even if you disabled this flag in an earlier version of Rancher. See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `fleet`), `：v2.6 及更高版本的 Rancher 配置框架需要 Fleet。即使你在旧 Rancher 版本中禁用了该标志，该标志也将在升级时自动启用。有关详细信息，请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
-    }, `Fleet - GitOps at Scale`), ` for more information.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        "href": "/zh/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
+    }, `Fleet - GitOps at Scale`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
-    }, `harvester`), `: Manages access to the Virtualization Management page, where users can navigate directly to Harvester clusters and access the Harvester UI. See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `harvester`), `：管理 Virtualization Management 页面的访问。用户可以在该页面直接导航到 Harvester 集群并访问 Harvester UI。有关详细信息，请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.8/integrations-in-rancher/harvester"
-    }, `Harvester Integration`), ` for more information.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        "href": "../../../integrations-in-rancher/harvester.md"
+    }, `Harvester 集成`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
-    }, `istio-virtual-service-ui`), `: Enables a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `istio-virtual-service-ui`), `：启用`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.8/how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features"
-    }, `visual interface`), ` to create, read, update, and delete Istio virtual services and destination rules, which are Istio traffic management features.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        "href": "/zh/v2.8/how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features"
+    }, `可视界面`), `来创建、读取、更新和删除 Istio 虚拟服务和目标规则，这些都是 Istio 流量管理功能。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
-    }, `legacy`), `: Enables a set of features from 2.5.x and earlier, that are slowly being phased out in favor of newer implementations. These are a mix of deprecated features as well as features that will eventually be available to newer versions. This flag is disabled by default on new Rancher installations. If you're upgrading from a previous version of Rancher, this flag is enabled.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `legacy`), `：启用 2.5.x 及更早版本的一组功能，这些功能正逐渐被新的实现淘汰。它们是已弃用以及后续可用于新版本的功能组合。新的 Rancher 安装会默认禁用此标志。如果你从以前版本的 Rancher 升级，此标志会启用。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
-    }, `multi-cluster-management`), `: Allows multi-cluster provisioning and management of Kubernetes clusters. This flag can only be set at install time. It can't be enabled or disabled later.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `multi-cluster-management`), `：允许配置和管理多个 Kubernetes 集群。此标志只能在安装时设置。后续无法启用或禁用它。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
-    }, `rke1-custom-node-cleanup`), `: Enables cleanup of deleted RKE1 custom nodes. We recommend that you keep this flag enabled, to prevent removed nodes from attempting to rejoin the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `rke1-custom-node-cleanup`), `：清除已删除的 RKE1 自定义节点。建议你启用此标志，以防止已删除的节点尝试重新加入集群。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
-    }, `rke2`), `: Enables provisioning RKE2 clusters. This flag is enabled by default.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `rke2`), `：启用配置 RKE2 集群。此标志默认启用。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
-    }, `token-hashing`), `: Enables token hashing. Once enabled, existing tokens will be hashed and all new tokens will be hashed automatically with the SHA256 algorithm. Once a token is hashed it can't be undone. This flag can't be disabled after its enabled. See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `token-hashing`), `：启用令牌哈希。启用后，会使用 SHA256 算法对现有 Token 和所有新 Token 进行哈希处理。一旦对 Token 进行哈希处理，就无法撤消操作。此标志在启用后无法禁用。有关详细信息，请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.8/reference-guides/about-the-api/api-tokens#token-hashing"
-    }, `API Tokens`), ` for more information.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        "href": "/zh/v2.8/reference-guides/about-the-api/api-tokens#%E4%BB%A4%E7%89%8C%E5%93%88%E5%B8%8C"
+    }, `API 令牌`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
-    }, `unsupported-storage-drivers`), `: Enables types for storage providers and provisioners that aren't enabled by default. See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `unsupported-storage-drivers`), `：允许启用非默认启用的存储提供程序和卷插件。有关详细信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.8/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers"
-    }, `Allow Unsupported Storage Drivers`), ` for more information.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The following table shows the availability and default values for some feature flags in Rancher. Features marked "GA" are generally available:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
+        "href": "/zh/v2.8/how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers"
+    }, `允许使用不受支持的存储驱动程序`), `。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `下表介绍了 Rancher 中功能开关的可用性和默认值。标记为“GA”的功能已普遍可用：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "thead"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
         parentName: "tr",
         "align": null
-    }, `Feature Flag Name`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
+    }, `功能开关名称`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
         parentName: "tr",
         "align": null
-    }, `Default Value`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
+    }, `默认值`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
         parentName: "tr",
         "align": null
-    }, `Status`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
+    }, `状态`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
         parentName: "tr",
         "align": null
-    }, `Available As Of`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tbody", {
+    }, `可用于`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tbody", {
         parentName: "table"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
@@ -478,7 +475,7 @@ function MDXContent(_param) {
     }, `true`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Can no longer be disabled`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+    }, `不能禁用`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, `v2.6.0`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
@@ -514,7 +511,7 @@ function MDXContent(_param) {
     }, `true`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Experimental`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+    }, `实验功能`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, `v2.6.1`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
@@ -527,11 +524,11 @@ function MDXContent(_param) {
     }, `legacy`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `新安装：`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "td"
-    }, `false`), ` for new installs, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `false`), `；升级：`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "td"
-    }, `true`), ` for upgrades`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+    }, `true`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, `GA`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -570,7 +567,7 @@ function MDXContent(_param) {
     }, `true`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Experimental`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+    }, `实验功能`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, `v2.6.0`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
@@ -583,11 +580,11 @@ function MDXContent(_param) {
     }, `token-hashing`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `新安装：`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "td"
-    }, `false`), ` for new installs, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `false`), `；升级：`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "td"
-    }, `true`), ` for upgrades`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+    }, `true`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, `GA`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {

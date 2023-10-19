@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[959],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[27573],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -652,7 +652,7 @@ const PortsImportedHosted = ()=>/*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__
 
 /***/ }),
 
-/***/ 39857:
+/***/ 7221:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -678,7 +678,7 @@ var PortsIaasNodes = __webpack_require__(15071);
 var PortsCustomNodes = __webpack_require__(27466);
 // EXTERNAL MODULE: ./src/components/PortsImportedHosted.js
 var PortsImportedHosted = __webpack_require__(12496);
-;// CONCATENATED MODULE: ./i18n/zh/docusaurus-plugin-content-docs/version-2.8/shared-files/_common-ports-table.md
+;// CONCATENATED MODULE: ./versioned_docs/version-2.8/shared-files/_common-ports-table.md
 /* @jsxRuntime classic */ /* @jsx mdx */ /* @jsxFrag React.Fragment */ function _define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
@@ -781,13 +781,13 @@ function MDXContent(_param) {
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": "center"
-    }, `协议`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Protocol`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": "center"
-    }, `端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Port`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `描述`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
+    }, `Description`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
@@ -800,7 +800,7 @@ function MDXContent(_param) {
     }, `22`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Node Driver SSH 配置`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Node driver SSH provisioning`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -811,7 +811,7 @@ function MDXContent(_param) {
     }, `179`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Calico BGP 端口`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Calico BGP Port`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -822,7 +822,7 @@ function MDXContent(_param) {
     }, `2376`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Node Driver Docker daemon TLS 端口`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Node driver Docker daemon TLS port`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -833,7 +833,7 @@ function MDXContent(_param) {
     }, `2379`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `etcd 客户端请求`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `etcd client requests`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -844,7 +844,7 @@ function MDXContent(_param) {
     }, `2380`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `etcd 对等通信`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `etcd peer communication`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -855,7 +855,7 @@ function MDXContent(_param) {
     }, `8472`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Canal/Flannel VXLAN 覆盖网络`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Canal/Flannel VXLAN overlay networking`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -866,7 +866,7 @@ function MDXContent(_param) {
     }, `4789`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Windows 集群中的 Flannel VXLAN 覆盖网络`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Flannel VXLAN overlay networking on Windows cluster`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -899,7 +899,7 @@ function MDXContent(_param) {
     }, `9100`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Monitoring 从 Linux node-exporter 中抓取指标所需的默认端口`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Default port required by Monitoring to scrape metrics from Linux node-exporters`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -921,7 +921,7 @@ function MDXContent(_param) {
     }, `9796`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Monitoring 从 Windows node-exporter 中抓取指标所需的默认端口`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Default port required by Monitoring to scrape metrics from Windows node-exporters`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -932,7 +932,7 @@ function MDXContent(_param) {
     }, `6783`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Weave 端口`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Weave Port`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -943,7 +943,7 @@ function MDXContent(_param) {
     }, `6783-6784`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Weave UDP 端口`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Weave UDP Ports`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -954,7 +954,7 @@ function MDXContent(_param) {
     }, `10250`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Metrics Server 与所有节点 API 的通信`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Metrics server communication with all nodes API`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -976,11 +976,11 @@ function MDXContent(_param) {
     }, `30000-32767`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `NodePort 端口范围`)))));
+    }, `NodePort port range`)))));
 }
 MDXContent.isMDXComponent = true;
 
-;// CONCATENATED MODULE: ./i18n/zh/docusaurus-plugin-content-docs/version-2.8/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md
+;// CONCATENATED MODULE: ./versioned_docs/version-2.8/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md
 /* @jsxRuntime classic */ /* @jsx mdx */ /* @jsxFrag React.Fragment */ function port_requirements_define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
@@ -1063,37 +1063,37 @@ function port_requirements_object_without_properties_loose(source, excluded) {
 
 
 const port_requirements_frontMatter = {
-    title: '端口要求',
-    description: '了解 Rancher 正常运行所需的端口要求，包括 Rancher 节点和下游 Kubernetes 集群节点'
+    title: 'Port Requirements',
+    description: 'Read about port requirements needed in order for Rancher to operate properly, both for Rancher nodes and downstream Kubernetes cluster nodes'
 };
 const port_requirements_contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/installation-and-upgrade/installation-requirements/port-requirements",
     "id": "version-2.8/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
-    "title": "端口要求",
-    "description": "了解 Rancher 正常运行所需的端口要求，包括 Rancher 节点和下游 Kubernetes 集群节点",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.8/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md",
+    "title": "Port Requirements",
+    "description": "Read about port requirements needed in order for Rancher to operate properly, both for Rancher nodes and downstream Kubernetes cluster nodes",
+    "source": "@site/versioned_docs/version-2.8/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md",
     "sourceDirName": "getting-started/installation-and-upgrade/installation-requirements",
     "slug": "/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
-    "permalink": "/zh/v2.8/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
+    "permalink": "/v2.8/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "2023年10月6日",
+    "lastUpdatedAt": 1697500308,
+    "formattedLastUpdatedAt": "Oct 16, 2023",
     "frontMatter": {
-        "title": "端口要求",
-        "description": "了解 Rancher 正常运行所需的端口要求，包括 Rancher 节点和下游 Kubernetes 集群节点"
+        "title": "Port Requirements",
+        "description": "Read about port requirements needed in order for Rancher to operate properly, both for Rancher nodes and downstream Kubernetes cluster nodes"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Dockershim",
-        "permalink": "/zh/v2.8/getting-started/installation-and-upgrade/installation-requirements/dockershim"
+        "permalink": "/v2.8/getting-started/installation-and-upgrade/installation-requirements/dockershim"
     },
     "next": {
-        "title": "安装参考",
-        "permalink": "/zh/v2.8/pages-for-subheaders/installation-references"
+        "title": "Installation References",
+        "permalink": "/v2.8/pages-for-subheaders/installation-references"
     }
 };
 const assets = {};
@@ -1103,83 +1103,83 @@ const assets = {};
 
 const port_requirements_toc = [
     {
-        value: 'Rancher 节点',
-        id: 'rancher-节点',
+        value: 'Rancher Nodes',
+        id: 'rancher-nodes',
         level: 2
     },
     {
-        value: 'K3s 上 Rancher Server 节点的端口',
-        id: 'k3s-上-rancher-server-节点的端口',
+        value: 'Ports for Rancher Server Nodes on K3s',
+        id: 'ports-for-rancher-server-nodes-on-k3s',
         level: 3
     },
     {
-        value: 'RKE 上 Rancher Server 节点的端口',
-        id: 'rke-上-rancher-server-节点的端口',
+        value: 'Ports for Rancher Server Nodes on RKE',
+        id: 'ports-for-rancher-server-nodes-on-rke',
         level: 3
     },
     {
-        value: 'RKE2 上 Rancher Server 节点的端口',
-        id: 'rke2-上-rancher-server-节点的端口',
+        value: 'Ports for Rancher Server Nodes on RKE2',
+        id: 'ports-for-rancher-server-nodes-on-rke2',
         level: 3
     },
     {
-        value: 'Docker 安装的 Rancher Server 的端口',
-        id: 'docker-安装的-rancher-server-的端口',
+        value: 'Ports for Rancher Server in Docker',
+        id: 'ports-for-rancher-server-in-docker',
         level: 3
     },
     {
-        value: '下游 Kubernetes 集群节点',
-        id: '下游-kubernetes-集群节点',
+        value: 'Downstream Kubernetes Cluster Nodes',
+        id: 'downstream-kubernetes-cluster-nodes',
         level: 2
     },
     {
-        value: 'Harvester 集群的端口',
-        id: 'harvester-集群的端口',
+        value: 'Ports for Harvester Clusters',
+        id: 'ports-for-harvester-clusters',
         level: 3
     },
     {
-        value: 'Rancher 使用节点池启动 Kubernetes 集群的端口',
-        id: 'rancher-使用节点池启动-kubernetes-集群的端口',
+        value: 'Ports for Rancher Launched Kubernetes Clusters using Node Pools',
+        id: 'ports-for-rancher-launched-kubernetes-clusters-using-node-pools',
         level: 3
     },
     {
-        value: 'Rancher 使用自定义节点启动 Kubernetes 集群的端口',
-        id: 'rancher-使用自定义节点启动-kubernetes-集群的端口',
+        value: 'Ports for Rancher Launched Kubernetes Clusters using Custom Nodes',
+        id: 'ports-for-rancher-launched-kubernetes-clusters-using-custom-nodes',
         level: 3
     },
     {
-        value: '托管 Kubernetes 集群的端口',
-        id: '托管-kubernetes-集群的端口',
+        value: 'Ports for Hosted Kubernetes Clusters',
+        id: 'ports-for-hosted-kubernetes-clusters',
         level: 3
     },
     {
-        value: '已注册集群的端口',
-        id: '已注册集群的端口',
+        value: 'Ports for Registered Clusters',
+        id: 'ports-for-registered-clusters',
         level: 3
     },
     {
-        value: '其他端口注意事项',
-        id: '其他端口注意事项',
+        value: 'Other Port Considerations',
+        id: 'other-port-considerations',
         level: 2
     },
     {
-        value: '常用端口',
-        id: '常用端口',
+        value: 'Commonly Used Ports',
+        id: 'commonly-used-ports',
         level: 3
     },
     {
-        value: '本地节点流量',
-        id: '本地节点流量',
+        value: 'Local Node Traffic',
+        id: 'local-node-traffic',
         level: 3
     },
     {
-        value: 'Rancher AWS EC2 安全组',
-        id: 'rancher-aws-ec2-安全组',
+        value: 'Rancher AWS EC2 Security Group',
+        id: 'rancher-aws-ec2-security-group',
         level: 3
     },
     {
-        value: '打开 SUSE Linux 端口',
-        id: '打开-suse-linux-端口',
+        value: 'Opening SUSE Linux Ports',
+        id: 'opening-suse-linux-ports',
         level: 3
     }
 ];
@@ -1200,45 +1200,48 @@ function port_requirements_MDXContent(_param) {
     return /*#__PURE__*/ (0,esm/* mdx */.kt)(port_requirements_MDXLayout, port_requirements_object_spread_props(port_requirements_object_spread({}, port_requirements_layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `为了确保能正常运行，Rancher 需要在 Rancher 节点和下游 Kubernetes 集群节点上开放一些端口。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("h2", {
-        "id": "rancher-节点"
-    }, `Rancher 节点`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `下表列出了运行 Rancher Server 的节点之间需要开放的端口。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `不同的 Rancher Server 架构有不同的端口要求。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `Rancher 可以安装在任何 Kubernetes 集群上。如果你的 Rancher 安装在 K3s、RKE 或 RKE2 Kubernetes 集群上，请参考下面的标签页。对于其他 Kubernetes 发行版，请参见该发行版的文档，了解集群节点的端口要求。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
-        "title": "注意事项：",
+    }), /*#__PURE__*/ (0,esm/* mdx */.kt)("head", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-requirements/port-requirements"
+    })), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `To operate properly, Rancher requires a number of ports to be open on Rancher nodes and on downstream Kubernetes cluster nodes.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("h2", {
+        "id": "rancher-nodes"
+    }, `Rancher Nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table lists the ports that need to be open to and from nodes that are running the Rancher server.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The port requirements differ based on the Rancher server architecture.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `Rancher can be installed on any Kubernetes cluster. For Rancher installs on a K3s, RKE, or RKE2 Kubernetes cluster, refer to the tabs below. For other Kubernetes distributions, refer to the distribution's documentation for the port requirements for cluster nodes.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
+        "title": "Notes:",
         "type": "note"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", {
         parentName: "admonition"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
         parentName: "ul"
-    }, `Rancher 节点可能要求额外出站访问已配置的外部验证提供程序（如 LDAP）。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
+    }, `Rancher nodes may also require additional outbound access for any external authentication provider which is configured (LDAP for example).`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
         parentName: "ul"
-    }, `Kubernetes 建议节点端口服务使用 TCP 30000-32767。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
+    }, `Kubernetes recommends TCP 30000-32767 for node port services.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
         parentName: "ul"
-    }, `对于防火墙，可能需要在集群和 Pod CIDR 内启用流量。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
+    }, `For firewalls, traffic may need to be enabled within the cluster and pod CIDR.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
         parentName: "ul"
-    }, `Rancher 节点可能还需要出站访问用于存储集群备份（如 Minio）的外部 S3 上的位置。`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
-        "id": "k3s-上-rancher-server-节点的端口"
-    }, `K3s 上 Rancher Server 节点的端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "单击展开"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `K3s server 需要开放端口 6443 才能供节点访问。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `使用 Flannel VXLAN 时，节点需要能够通过 UDP 端口 8472 访问其他节点。节点不应监听任何其他端口。K3s 使用反向隧道，建立节点与 Server 的出站连接，所有 kubelet 流量都通过该隧道进行。但是，如果你不使用 Flannel，而是使用自定义的 CNI，K3s 则不需要打开 8472 端口。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `如果要使用 Metrics Server，则需要在每个节点上打开端口 10250。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
-        "title": "重要提示：",
+    }, `Rancher nodes may also need outbound access to an external S3 location which is used for storing cluster backups (Minio for example).`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
+        "id": "ports-for-rancher-server-nodes-on-k3s"
+    }, `Ports for Rancher Server Nodes on K3s`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The K3s server needs port 6443 to be accessible by the nodes.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The nodes need to be able to reach other nodes over UDP port 8472 when Flannel VXLAN is used. The node should not listen on any other port. K3s uses reverse tunneling such that the nodes make outbound connections to the server and all kubelet traffic runs through that tunnel. However, if you do not use Flannel and provide your own custom CNI, then port 8472 is not needed by K3s.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `If you wish to utilize the metrics server, you will need to open port 10250 on each node.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
+        "title": "Important:",
         "type": "note"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
         parentName: "admonition"
-    }, `节点上的 VXLAN 端口会开放集群网络，让任何人均能访问集群。因此，不要将 VXLAN 端口暴露给外界。请使用禁用 8472 端口的防火墙/安全组来运行节点。`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `下表描述了入站和出站流量的端口要求：`), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Rancher Server 节点的入站规则"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
+    }, `The VXLAN port on nodes should not be exposed to the world as it opens up your cluster network to be accessed by anyone. Run your nodes behind a firewall/security group that disables access to port 8472.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following tables break down the port requirements for inbound and outbound traffic:`), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Inbound Rules for Rancher Server Nodes"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "thead"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `协议`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Protocol`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Port`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `源`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Source`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `描述`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
+    }, `Description`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
@@ -1251,10 +1254,10 @@ function port_requirements_MDXContent(_param) {
     }, `80`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `执行外部 SSL 终止的负载均衡器/代理`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Load balancer/proxy that does external SSL termination`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `使用外部 SSL 终止时的 Rancher UI/API`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Rancher UI/API when external SSL termination is used`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1265,10 +1268,10 @@ function port_requirements_MDXContent(_param) {
     }, `443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `Server 节点`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `Agent 节点`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `托管/注册的 Kubernetes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `任何需要使用 Rancher UI 或 API 的源`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `server nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `agent nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `hosted/registered Kubernetes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `any source that needs to be able to use the Rancher UI or API`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Rancher Agent，Rancher UI/API，kubectl`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Rancher agent, Rancher UI/API, kubectl`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1279,7 +1282,7 @@ function port_requirements_MDXContent(_param) {
     }, `6443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `K3s Server 节点`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `K3s server nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
     }, `Kubernetes API`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
@@ -1293,10 +1296,10 @@ function port_requirements_MDXContent(_param) {
     }, `8472`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `K3s Server 和 Agent 节点`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `K3s server and agent nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `仅 Flannel VXLAN 需要`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Required only for Flannel VXLAN.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1307,26 +1310,26 @@ function port_requirements_MDXContent(_param) {
     }, `10250`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `K3s Server 和 Agent 节点`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `K3s server and agent nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `kubelet`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Rancher 节点的出站规则"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
+    }, `kubelet`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Outbound Rules for Rancher Nodes"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "thead"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `协议`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Protocol`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Port`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `目标`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Destination`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `描述`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
+    }, `Description`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
@@ -1339,10 +1342,10 @@ function port_requirements_MDXContent(_param) {
     }, `22`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `使用 Node Driver 创建的节点的任何节点 IP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Any node IP from a node created using Node Driver`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `使用 Node Driver SSH 配置节点`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `SSH provisioning of nodes using Node Driver`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1367,10 +1370,10 @@ function port_requirements_MDXContent(_param) {
     }, `2376`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `使用 Node Driver 创建的节点的任何节点 IP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Any node IP from a node created using Node driver`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Docker Machine 使用的 Docker daemon TLS 端口`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Docker daemon TLS port used by Docker Machine`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1381,25 +1384,25 @@ function port_requirements_MDXContent(_param) {
     }, `6443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `托管/导入的 Kubernetes API`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Hosted/Imported Kubernetes API`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Kubernetes API Server`))))), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
-        "id": "rke-上-rancher-server-节点的端口"
-    }, `RKE 上 Rancher Server 节点的端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "单击展开"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `通常情况下，Rancher 安装在三个 RKE 节点上，这些节点都有 etcd、controlplane 和 worker 角色。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `下表描述了 Rancher 节点之间流量的端口要求：`), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Rancher 节点的流量规则"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
+    }, `Kubernetes API server`))))), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
+        "id": "ports-for-rancher-server-nodes-on-rke"
+    }, `Ports for Rancher Server Nodes on RKE`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `Typically Rancher is installed on three RKE nodes that all have the etcd, control plane and worker roles.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following tables break down the port requirements for traffic between the Rancher nodes:`), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Rules for traffic between Rancher nodes"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "thead"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `协议`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Protocol`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Port`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `描述`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
+    }, `Description`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
@@ -1412,7 +1415,7 @@ function port_requirements_MDXContent(_param) {
     }, `443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Rancher Agents`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Rancher agents`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1423,7 +1426,7 @@ function port_requirements_MDXContent(_param) {
     }, `2379`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `etcd 客户端请求`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `etcd client requests`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1434,7 +1437,7 @@ function port_requirements_MDXContent(_param) {
     }, `2380`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `etcd 对等通信`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `etcd peer communication`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1456,7 +1459,7 @@ function port_requirements_MDXContent(_param) {
     }, `8443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `NGINX Ingress 的验证 Webhook`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Nginx Ingress's Validating Webhook`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1467,7 +1470,7 @@ function port_requirements_MDXContent(_param) {
     }, `8472`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Canal/Flannel VXLAN 覆盖网络`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Canal/Flannel VXLAN overlay networking`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1489,7 +1492,7 @@ function port_requirements_MDXContent(_param) {
     }, `10250`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Metrics Server 与所有节点的通信`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Metrics server communication with all nodes`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1500,23 +1503,23 @@ function port_requirements_MDXContent(_param) {
     }, `10254`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Ingress controller livenessProbe/readinessProbe`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `下表描述了入站和出站流量的端口要求：`), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Rancher 节点的入站规则"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
+    }, `Ingress controller livenessProbe/readinessProbe`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following tables break down the port requirements for inbound and outbound traffic:`), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Inbound Rules for Rancher Nodes"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "thead"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `协议`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Protocol`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Port`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `源`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Source`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `描述`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
+    }, `Description`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
@@ -1532,7 +1535,7 @@ function port_requirements_MDXContent(_param) {
     }, `RKE CLI`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `RKE 通过 SSH 配置节点`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `SSH provisioning of node by RKE`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1543,10 +1546,10 @@ function port_requirements_MDXContent(_param) {
     }, `80`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `负载均衡器/反向代理`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Load Balancer/Reverse Proxy`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `到 Rancher UI/API 的 HTTP 流量`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `HTTP traffic to Rancher UI/API`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1557,10 +1560,10 @@ function port_requirements_MDXContent(_param) {
     }, `443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `负载均衡器/反向代理`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `所有集群节点和其他 API/UI 客户端的 IP`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `Load Balancer/Reverse Proxy`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `IPs of all cluster nodes and other API/UI clients`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `到 Rancher UI/API 的 HTTPS 流量`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `HTTPS traffic to Rancher UI/API`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1571,26 +1574,26 @@ function port_requirements_MDXContent(_param) {
     }, `6443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Kubernetes API 客户端`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Kubernetes API clients`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `到 Kubernetes API 的 HTTPS 流量`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Rancher 节点的出站规则"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
+    }, `HTTPS traffic to Kubernetes API`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Outbound Rules for Rancher Nodes"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "thead"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `协议`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Protocol`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Port`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `目标`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Destination`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `描述`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
+    }, `Description`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
@@ -1617,10 +1620,10 @@ function port_requirements_MDXContent(_param) {
     }, `22`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `使用 Node Driver 创建的任何节点`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Any node created using a node driver`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Node Driver 通过 SSH 配置节点`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `SSH provisioning of node by node driver`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1631,10 +1634,10 @@ function port_requirements_MDXContent(_param) {
     }, `2376`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `使用 Node Driver 创建的任何节点`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Any node created using a node driver`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Node Driver 使用的 Docker daemon TLS 端口`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Docker daemon TLS port used by node driver`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1645,10 +1648,10 @@ function port_requirements_MDXContent(_param) {
     }, `6443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `托管/导入的 Kubernetes API`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Hosted/Imported Kubernetes API`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Kubernetes API Server`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Kubernetes API server`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1656,36 +1659,36 @@ function port_requirements_MDXContent(_param) {
     }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `提供商依赖`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Provider dependent`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `托管集群中 Kubernetes API 端点的端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Port of the Kubernetes API endpoint in hosted cluster`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
     }, `Kubernetes API`))))), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
-        "id": "rke2-上-rancher-server-节点的端口"
-    }, `RKE2 上 Rancher Server 节点的端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "单击展开"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `RKE2 server 需要开放端口 6443 和 9345 才能供集群中的其他节点访问。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `使用 Flannel VXLAN 时，所有节点都需要能够通过 UDP 端口 8472 访问其他节点。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `如果要使用 Metrics Server，则需要在每个节点上打开端口 10250。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
-        "title": "重要提示：",
+        "id": "ports-for-rancher-server-nodes-on-rke2"
+    }, `Ports for Rancher Server Nodes on RKE2`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The RKE2 server needs port 6443 and 9345 to be accessible by other nodes in the cluster.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `All nodes need to be able to reach other nodes over UDP port 8472 when Flannel VXLAN is used.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `If you wish to utilize the metrics server, you will need to open port 10250 on each node.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
+        "title": "Important:",
         "type": "note"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
         parentName: "admonition"
-    }, `节点上的 VXLAN 端口会开放集群网络，让任何人均能访问集群。因此，不要将 VXLAN 端口暴露给外界。请使用禁用 8472 端口的防火墙/安全组来运行节点。`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "RKE2 Server 节点的入站规则"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
+    }, `The VXLAN port on nodes should not be exposed to the world as it opens up your cluster network to be accessed by anyone. Run your nodes behind a firewall/security group that disables access to port 8472.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Inbound Rules for RKE2 Server Nodes"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "thead"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `协议`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Protocol`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Port`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `源`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Source`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `描述`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
+    }, `Description`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
@@ -1698,10 +1701,10 @@ function port_requirements_MDXContent(_param) {
     }, `9345`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `RKE2 Server 和 Agent 节点`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `RKE2 server and agent nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `节点注册。需要在所有 Server 节点上将端口开放给集群中的所有其他节点。`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Node registration. Port should be open on all server nodes to all other nodes in the cluster.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1712,7 +1715,7 @@ function port_requirements_MDXContent(_param) {
     }, `6443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `RKE2 Agent 节点`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `RKE2 agent nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
     }, `Kubernetes API`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
@@ -1726,10 +1729,10 @@ function port_requirements_MDXContent(_param) {
     }, `8472`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `RKE2 Server 和 Agent 节点`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `RKE2 server and agent nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `仅 Flannel VXLAN 需要`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Required only for Flannel VXLAN`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1740,7 +1743,7 @@ function port_requirements_MDXContent(_param) {
     }, `10250`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `RKE2 Server 和 Agent 节点`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `RKE2 server and agent nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
     }, `kubelet`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
@@ -1754,10 +1757,10 @@ function port_requirements_MDXContent(_param) {
     }, `2379`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `RKE2 Server 节点`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `RKE2 server nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `etcd 客户端端口`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `etcd client port`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1768,10 +1771,10 @@ function port_requirements_MDXContent(_param) {
     }, `2380`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `RKE2 Server 节点`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `RKE2 server nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `etcd 对等端口`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `etcd peer port`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1782,10 +1785,10 @@ function port_requirements_MDXContent(_param) {
     }, `30000-32767`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `RKE2 Server 和 Agent 节点`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `RKE2 server and agent nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `NodePort 端口范围。可以使用 TCP 或 UDP。`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `NodePort port range. Can use TCP or UDP.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1796,10 +1799,10 @@ function port_requirements_MDXContent(_param) {
     }, `5473`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Calico-node pod 连接到 typha pod`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Calico-node pod connecting to typha pod`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `使用 Calico 部署时需要`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Required when deploying with Calico`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1810,10 +1813,10 @@ function port_requirements_MDXContent(_param) {
     }, `80`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `执行外部 SSL 终止的负载均衡器/代理`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Load balancer/proxy that does external SSL termination`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `使用外部 SSL 终止时的 Rancher UI/API`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Rancher UI/API when external SSL termination is used`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1824,28 +1827,28 @@ function port_requirements_MDXContent(_param) {
     }, `443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `托管/注册的 Kubernetes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `任何需要使用 Rancher UI 或 API 的源`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `hosted/registered Kubernetes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `any source that needs to be able to use the Rancher UI or API`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Rancher Agent，Rancher UI/API，kubectl。如果负载均衡器执行 TLS 终止，则不需要。`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `所有出站流量通常都是允许的。`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
-        "id": "docker-安装的-rancher-server-的端口"
-    }, `Docker 安装的 Rancher Server 的端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "单击展开"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `下表描述了 Rancher 节点入站和出站流量的端口要求：`), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Rancher 节点的入站规则"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
+    }, `Rancher agent, Rancher UI/API, kubectl. Not needed if you have a load balancer doing TLS termination.`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `Typically all outbound traffic is allowed.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
+        "id": "ports-for-rancher-server-in-docker"
+    }, `Ports for Rancher Server in Docker`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following tables break down the port requirements for Rancher nodes, for inbound and outbound traffic:`), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Inbound Rules for Rancher Node"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "thead"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `协议`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Protocol`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Port`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `源`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Source`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `描述`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
+    }, `Description`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
@@ -1858,10 +1861,10 @@ function port_requirements_MDXContent(_param) {
     }, `80`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `执行外部 SSL 终止的负载均衡器/代理`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Load balancer/proxy that does external SSL termination`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `使用外部 SSL 终止时的 Rancher UI/API`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Rancher UI/API when external SSL termination is used`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1872,26 +1875,26 @@ function port_requirements_MDXContent(_param) {
     }, `443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `托管/注册的 Kubernetes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `任何需要使用 Rancher UI 或 API 的源`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `hosted/registered Kubernetes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `any source that needs to be able to use the Rancher UI or API`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Rancher Agent，Rancher UI/API，kubectl`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Rancher 节点的出站规则"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
+    }, `Rancher agent, Rancher UI/API, kubectl`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Outbound Rules for Rancher Node"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "thead"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `协议`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Protocol`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Port`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `源`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Source`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `描述`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
+    }, `Description`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
@@ -1904,10 +1907,10 @@ function port_requirements_MDXContent(_param) {
     }, `22`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `使用 Node Driver 创建的节点的任何节点 IP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Any node IP from a node created using Node Driver`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `使用 Node Driver SSH 配置节点`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `SSH provisioning of nodes using Node Driver`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1932,10 +1935,10 @@ function port_requirements_MDXContent(_param) {
     }, `2376`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `使用 Node Driver 创建的节点的任何节点 IP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Any node IP from a node created using a node driver`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Docker Machine 使用的 Docker daemon TLS 端口`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Docker daemon TLS port used by Docker Machine`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1946,19 +1949,19 @@ function port_requirements_MDXContent(_param) {
     }, `6443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `托管/导入的 Kubernetes API`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Hosted/Imported Kubernetes API`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Kubernetes API Server`))))), /*#__PURE__*/ (0,esm/* mdx */.kt)("h2", {
-        "id": "下游-kubernetes-集群节点"
-    }, `下游 Kubernetes 集群节点`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `下游 Kubernetes 集群用于运行你的应用和服务。本节介绍了哪些端口需要在下游集群的节点上打开，以便 Rancher 能够与它们进行通信。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `不同的下游集群的启动方式有不同的端口要求。下面的每个标签都列出了不同`, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+    }, `Kubernetes API server`))))), /*#__PURE__*/ (0,esm/* mdx */.kt)("h2", {
+        "id": "downstream-kubernetes-cluster-nodes"
+    }, `Downstream Kubernetes Cluster Nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `Downstream Kubernetes clusters run your apps and services. This section describes what ports need to be opened on the nodes in downstream clusters so that Rancher can communicate with them.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The port requirements differ depending on how the downstream cluster was launched. Each of the tabs below list the ports that need to be opened for different `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.8/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
-    }, `集群类型`), `所需打开的端口。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `下图描述了为每个`, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+        "href": "/v2.8/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
+    }, `cluster types`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following diagram depicts the ports that are opened for each `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.8/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
-    }, `集群类型`), `打开的端口。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Rancher 管理面板的端口要求"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("img", {
-        alt: "基本端口要求",
+        "href": "/v2.8/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
+    }, `cluster type`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Port Requirements for the Rancher Management Plane"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("img", {
+        alt: "Basic Port Requirements",
         src: (__webpack_require__(79901)/* ["default"] */ .Z),
         width: "856",
         height: "488"
@@ -1966,104 +1969,104 @@ function port_requirements_MDXContent(_param) {
         "type": "tip"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
         parentName: "admonition"
-    }, `如果你对安全性的关注不是太高，而且也愿意多打开几个端口，你可以参考`, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+    }, `If security isn't a large concern and you're okay with opening a few additional ports, you can use the table in `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "#%E5%B8%B8%E7%94%A8%E7%AB%AF%E5%8F%A3"
-    }, `常用端口`), `中列出的端口，而不是参考下方的表格。`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
-        "id": "harvester-集群的端口"
-    }, `Harvester 集群的端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `有关 Harvester 端口要求的更多信息，请参阅`, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+        "href": "#commonly-used-ports"
+    }, `Commonly Used Ports`), ` as your port reference instead of the comprehensive tables below.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
+        "id": "ports-for-harvester-clusters"
+    }, `Ports for Harvester Clusters`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `Refer to the `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.8/integrations-in-rancher/harvester#%E7%AB%AF%E5%8F%A3%E8%A6%81%E6%B1%82"
-    }, `此处`), `。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
-        "id": "rancher-使用节点池启动-kubernetes-集群的端口"
-    }, `Rancher 使用节点池启动 Kubernetes 集群的端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "单击展开"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `下表描述了节点在`, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+        "href": "/v2.8/integrations-in-rancher/harvester/overview#port-requirements"
+    }, `Harvester Integration Overview`), ` for more information on Harvester port requirements.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
+        "id": "ports-for-rancher-launched-kubernetes-clusters-using-node-pools"
+    }, `Ports for Rancher Launched Kubernetes Clusters using Node Pools`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.8/pages-for-subheaders/use-new-nodes-in-an-infra-provider"
-    }, `云提供商`), `中创建的情况下，`, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+        "href": "/v2.8/pages-for-subheaders/launch-kubernetes-with-rancher"
+    }, `Rancher Launched Kubernetes`), ` with nodes created in an `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.8/pages-for-subheaders/launch-kubernetes-with-rancher"
-    }, `Rancher 启动 Kubernetes`), ` 的端口要求。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
+        "href": "/v2.8/pages-for-subheaders/use-new-nodes-in-an-infra-provider"
+    }, `Infrastructure Provider`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
         parentName: "admonition"
-    }, `在 AWS EC2 或 DigitalOcean 等云提供商中创建集群期间，Rancher 会自动打开所需的端口。`)), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsIaasNodes/* default */.Z, {
+    }, `The required ports are automatically opened by Rancher during creation of clusters in cloud providers like Amazon EC2 or DigitalOcean.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsIaasNodes/* default */.Z, {
         mdxType: "PortsIaasNodes"
     })), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
-        "id": "rancher-使用自定义节点启动-kubernetes-集群的端口"
-    }, `Rancher 使用自定义节点启动 Kubernetes 集群的端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "单击展开"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `下表描述了使用`, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+        "id": "ports-for-rancher-launched-kubernetes-clusters-using-custom-nodes"
+    }, `Ports for Rancher Launched Kubernetes Clusters using Custom Nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.8/pages-for-subheaders/use-existing-nodes"
-    }, `自定义节点`), `的情况下，`, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+        "href": "/v2.8/pages-for-subheaders/launch-kubernetes-with-rancher"
+    }, `Rancher Launched Kubernetes`), ` with `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.8/pages-for-subheaders/launch-kubernetes-with-rancher"
-    }, `Rancher 启动 Kubernetes`), ` 的端口要求。`), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsCustomNodes/* default */.Z, {
+        "href": "/v2.8/pages-for-subheaders/use-existing-nodes"
+    }, `Custom Nodes`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsCustomNodes/* default */.Z, {
         mdxType: "PortsCustomNodes"
     })), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
-        "id": "托管-kubernetes-集群的端口"
-    }, `托管 Kubernetes 集群的端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "单击展开"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `下表描述了`, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+        "id": "ports-for-hosted-kubernetes-clusters"
+    }, `Ports for Hosted Kubernetes Clusters`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.8/pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers"
-    }, `托管集群`), `的端口要求。`), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsImportedHosted/* default */.Z, {
+        "href": "/v2.8/pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers"
+    }, `hosted clusters`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsImportedHosted/* default */.Z, {
         mdxType: "PortsImportedHosted"
     })), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
-        "id": "已注册集群的端口"
-    }, `已注册集群的端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
+        "id": "ports-for-registered-clusters"
+    }, `Ports for Registered Clusters`), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
         parentName: "admonition"
-    }, `在 Rancher 2.5 之前，注册集群被称为导入集群。`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "单击展开"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `下表描述了`, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+    }, `Registered clusters were called imported clusters before Rancher v2.5.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters"
-    }, `注册集群`), `的端口要求。`), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsImportedHosted/* default */.Z, {
+        "href": "/v2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters"
+    }, `registered clusters`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsImportedHosted/* default */.Z, {
         mdxType: "PortsImportedHosted"
     })), /*#__PURE__*/ (0,esm/* mdx */.kt)("h2", {
-        "id": "其他端口注意事项"
-    }, `其他端口注意事项`), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
-        "id": "常用端口"
-    }, `常用端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `无论集群是什么类型，常用端口通常在你的 Kubernetes 节点上打开。`), /*#__PURE__*/ (0,esm/* mdx */.kt)(MDXContent, {
+        "id": "other-port-considerations"
+    }, `Other Port Considerations`), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
+        "id": "commonly-used-ports"
+    }, `Commonly Used Ports`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `These ports are typically opened on your Kubernetes nodes, regardless of what type of cluster it is.`), /*#__PURE__*/ (0,esm/* mdx */.kt)(MDXContent, {
         mdxType: "CommonPortsTable"
     }), /*#__PURE__*/ (0,esm/* mdx */.kt)("hr", null), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
-        "id": "本地节点流量"
-    }, `本地节点流量`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `上述要求中标记为`, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
+        "id": "local-node-traffic"
+    }, `Local Node Traffic`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `Ports marked as `, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
         parentName: "p"
-    }, `本地流量`), `（例如 `, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
+    }, `local traffic`), ` (i.e., `, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
         parentName: "p"
-    }, `9099 TCP`), `）的端口会用于 Kubernetes 健康检查 （`, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
+    }, `9099 TCP`), `) in the above requirements are used for Kubernetes healthchecks (`, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
         parentName: "p"
-    }, `livenessProbe`), ` 和 `, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
+    }, `livenessProbe`), ` and`, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
         parentName: "p"
-    }, `readinessProbe`), `）。
-这些健康检查是在节点本身执行的。在大多数云环境中，这种本地流量是默认允许的。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `但是，在以下情况下可能会阻止此流量：`), /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
+    }, `readinessProbe`), `).
+These healthchecks are executed on the node itself. In most cloud environments, this local traffic is allowed by default.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `However, this traffic may be blocked when:`), /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
         parentName: "ul"
-    }, `你已在节点上应用了严格的主机防火墙策略。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
+    }, `You have applied strict host firewall policies on the node.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
         parentName: "ul"
-    }, `你正在使用有多个接口（多宿主）的节点。`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `在这些情况下，你必须在你的主机防火墙中主动允许这种流量，如果是公共/私有云托管的主机（例如 AWS 或 OpenStack），你需要在你的安全组配置中主动允许此流量。请记住，如果你在安全组中使用安全组作为源或目标，主动开放端口只适用于节点/实例的私有接口。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
-        "id": "rancher-aws-ec2-安全组"
-    }, `Rancher AWS EC2 安全组`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `当你使用 `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+    }, `You are using nodes that have multiple interfaces (multihomed).`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `In these cases, you have to explicitly allow this traffic in your host firewall, or in case of public/private cloud hosted machines (i.e. AWS or OpenStack), in your security group configuration. Keep in mind that when using a security group as source or destination in your security group, explicitly opening ports only applies to the private interface of the nodes / instances.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
+        "id": "rancher-aws-ec2-security-group"
+    }, `Rancher AWS EC2 Security Group`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `When using the `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.8/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster"
-    }, `AWS EC2 Node Driver`), ` 在 Rancher 中配置集群节点时，你可以让 Rancher 创建一个名为 `, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
+        "href": "/v2.8/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster"
+    }, `AWS EC2 node driver`), ` to provision cluster nodes in Rancher, you can choose to let Rancher create a security group called `, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
         parentName: "p"
-    }, `rancher-nodes`), ` 的安全组。以下规则会自动添加到该安全组中。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
+    }, `rancher-nodes`), `. The following rules are automatically added to this security group.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "thead"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `类型`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Type`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": "center"
-    }, `协议`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Protocol`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": "center"
-    }, `端口范围`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Port Range`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": null
-    }, `源/目标`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+    }, `Source/Destination`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
         parentName: "tr",
         "align": "center"
-    }, `规则类型`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
+    }, `Rule Type`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
@@ -2082,7 +2085,7 @@ function port_requirements_MDXContent(_param) {
     }, `0.0.0.0/0`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `入站`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Inbound`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -2099,12 +2102,12 @@ function port_requirements_MDXContent(_param) {
     }, `0.0.0.0/0`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `入站`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Inbound`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `自定义 TCP 规则`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Custom TCP Rule`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
     }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
@@ -2116,12 +2119,12 @@ function port_requirements_MDXContent(_param) {
     }, `0.0.0.0/0`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `入站`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Inbound`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `自定义 TCP 规则`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Custom TCP Rule`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
     }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
@@ -2133,12 +2136,12 @@ function port_requirements_MDXContent(_param) {
     }, `0.0.0.0/0`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `入站`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Inbound`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `自定义 TCP 规则`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Custom TCP Rule`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
     }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
@@ -2150,12 +2153,12 @@ function port_requirements_MDXContent(_param) {
     }, `sg-xxx (rancher-nodes)`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `入站`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Inbound`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `自定义 UDP 规则`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Custom UDP Rule`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
     }, `UDP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
@@ -2167,12 +2170,12 @@ function port_requirements_MDXContent(_param) {
     }, `sg-xxx (rancher-nodes)`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `入站`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Inbound`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `自定义 TCP 规则`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Custom TCP Rule`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
     }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
@@ -2184,12 +2187,12 @@ function port_requirements_MDXContent(_param) {
     }, `0.0.0.0/0`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `入站`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Inbound`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `自定义 UDP 规则`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Custom UDP Rule`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
     }, `UDP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
@@ -2201,12 +2204,12 @@ function port_requirements_MDXContent(_param) {
     }, `sg-xxx (rancher-nodes)`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `入站`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Inbound`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `自定义 TCP 规则`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Custom TCP Rule`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
     }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
@@ -2218,12 +2221,12 @@ function port_requirements_MDXContent(_param) {
     }, `sg-xxx (rancher-nodes)`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `入站`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Inbound`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `自定义 TCP 规则`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Custom TCP Rule`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
     }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
@@ -2235,12 +2238,12 @@ function port_requirements_MDXContent(_param) {
     }, `sg-xxx (rancher-nodes)`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `入站`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Inbound`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `自定义 TCP 规则`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Custom TCP Rule`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
     }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
@@ -2252,12 +2255,12 @@ function port_requirements_MDXContent(_param) {
     }, `0.0.0.0/0`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `入站`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Inbound`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `自定义 UDP 规则`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `Custom UDP Rule`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
     }, `UDP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
@@ -2269,26 +2272,26 @@ function port_requirements_MDXContent(_param) {
     }, `0.0.0.0/0`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `入站`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Inbound`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `所有流量`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `All traffic`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `全部`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `All`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `全部`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `All`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
     }, `0.0.0.0/0`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `出站`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
-        "id": "打开-suse-linux-端口"
-    }, `打开 SUSE Linux 端口`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `SUSE Linux 可能有一个防火墙，默认情况下会阻止所有端口。要打开将主机添加到自定义集群所需的端口：`), /*#__PURE__*/ (0,esm/* mdx */.kt)(Tabs, {
+    }, `Outbound`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
+        "id": "opening-suse-linux-ports"
+    }, `Opening SUSE Linux Ports`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `SUSE Linux may have a firewall that blocks all ports by default. To open the ports needed for adding the host to a custom cluster,`), /*#__PURE__*/ (0,esm/* mdx */.kt)(Tabs, {
         mdxType: "Tabs"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)(TabItem, {
         value: "SLES 15 / openSUSE Leap 15",
@@ -2297,11 +2300,11 @@ function port_requirements_MDXContent(_param) {
         parentName: "ol"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
         parentName: "li"
-    }, `SSH 进入实例。`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
+    }, `SSH into the instance.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
         parentName: "li"
-    }, `以文本模式启动 YaST：`), /*#__PURE__*/ (0,esm/* mdx */.kt)("pre", {
+    }, `Start YaST in text mode:`), /*#__PURE__*/ (0,esm/* mdx */.kt)("pre", {
         parentName: "li"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("code", {
         parentName: "pre"
@@ -2310,26 +2313,26 @@ function port_requirements_MDXContent(_param) {
         parentName: "ol"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
         parentName: "li"
-    }, `导航到`, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
+    }, `Navigate to `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
         parentName: "p"
-    }, `安全和用户`), ` > `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
+    }, `Security and Users`), ` > `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
         parentName: "p"
-    }, `防火墙`), ` > `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
+    }, `Firewall`), ` > `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
         parentName: "p"
-    }, `区域：公共`), ` > `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
+    }, `Zones:public`), ` > `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
         parentName: "p"
-    }, `端口`), `。要在界面内导航，请参照`, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+    }, `Ports`), `. To navigate within the interface, follow these `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
         "href": "https://doc.opensuse.org/documentation/leap/reference/html/book-reference/cha-yast-text.html#sec-yast-cli-navigate"
-    }, `说明`), `。`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
+    }, `instructions`), `.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
         parentName: "li"
-    }, `要打开所需的端口，把它们输入到 `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
+    }, `To open the required ports, enter them into the `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
         parentName: "p"
-    }, `TCP 端口`), ` 和 `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
+    }, `TCP Ports`), ` and `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
         parentName: "p"
-    }, `UDP 端口`), ` 字段。在这个例子中，端口 9796 和 10250 也被打开，用于监控。由此产生的字段应类似于以下内容：`), /*#__PURE__*/ (0,esm/* mdx */.kt)("pre", {
+    }, `UDP Ports`), ` fields. In this example, ports 9796 and 10250 are also opened for monitoring. The resulting fields should look similar to the following:`), /*#__PURE__*/ (0,esm/* mdx */.kt)("pre", {
         parentName: "li"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("code", {
         parentName: "pre",
@@ -2342,18 +2345,18 @@ UDP Ports
         parentName: "ol"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
         parentName: "li"
-    }, `所有必须端口都输入后，选择`, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
+    }, `When all required ports are enter, select `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
         parentName: "p"
-    }, `接受`), `。`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)(TabItem, {
+    }, `Accept`), `.`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)(TabItem, {
         value: "SLES 12 / openSUSE Leap 42",
         mdxType: "TabItem"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ol", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
         parentName: "ol"
-    }, `SSH 进入实例。`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
+    }, `SSH into the instance.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
         parentName: "ol"
-    }, `编辑 `, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
+    }, `Edit /`, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
         parentName: "li"
-    }, `/etc/sysconfig/SuSEfirewall2`), ` 并打开所需的端口。在这个例子中，端口 9796 和 10250 也被打开，用于监控。`, /*#__PURE__*/ (0,esm/* mdx */.kt)("pre", {
+    }, `etc/sysconfig/SuSEfirewall2`), ` and open the required ports. In this example, ports 9796 and 10250 are also opened for monitoring:`, /*#__PURE__*/ (0,esm/* mdx */.kt)("pre", {
         parentName: "li"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("code", {
         parentName: "pre"
@@ -2362,14 +2365,14 @@ FW_SERVICES_EXT_UDP="8472 30000:32767"
 FW_ROUTE=yes
 `))), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
         parentName: "ol"
-    }, `用新的端口重启防火墙：`, /*#__PURE__*/ (0,esm/* mdx */.kt)("pre", {
+    }, `Restart the firewall with the new ports:`, /*#__PURE__*/ (0,esm/* mdx */.kt)("pre", {
         parentName: "li"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("code", {
         parentName: "pre"
     }, `SuSEfirewall2
 `)))))), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
         parentName: "p"
-    }, `结果`), ` ：该节点已打开添加到自定义集群所需的端口。`));
+    }, `Result:`), ` The node has the open ports required to be added to a custom cluster.`));
 }
 port_requirements_MDXContent.isMDXComponent = true;
 

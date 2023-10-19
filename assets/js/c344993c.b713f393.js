@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[28091],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[45192],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 10495:
+/***/ 65865:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,58 +308,48 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Harvester Integration'
+    title: 'Virtualization on Kubernetes with Harvester'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/harvester",
-    "id": "version-2.8/integrations-in-rancher/harvester",
-    "title": "Harvester Integration",
-    "description": "Introduced in Rancher v2.6.1, Harvester is an open-source hyper-converged infrastructure (HCI) software built on Kubernetes. Harvester installs on bare metal servers and provides integrated virtualization and distributed storage capabilities. Although Harvester operates using Kubernetes, it does not require users to know Kubernetes concepts, making it a more user-friendly application.",
-    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/harvester.md",
-    "sourceDirName": "integrations-in-rancher",
-    "slug": "/integrations-in-rancher/harvester",
-    "permalink": "/v2.8/integrations-in-rancher/harvester",
+    "unversionedId": "integrations-in-rancher/harvester/harvester",
+    "id": "version-2.8/integrations-in-rancher/harvester/harvester",
+    "title": "Virtualization on Kubernetes with Harvester",
+    "description": "Harvester",
+    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/harvester/harvester.md",
+    "sourceDirName": "integrations-in-rancher/harvester",
+    "slug": "/integrations-in-rancher/harvester/",
+    "permalink": "/v2.8/integrations-in-rancher/harvester/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/harvester.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/harvester/harvester.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "Oct 6, 2023",
+    "lastUpdatedAt": 1697500308,
+    "formattedLastUpdatedAt": "Oct 16, 2023",
     "frontMatter": {
-        "title": "Harvester Integration"
+        "title": "Virtualization on Kubernetes with Harvester"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Using Fleet Behind a Proxy",
-        "permalink": "/v2.8/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy"
+        "title": "Integrations in Rancher",
+        "permalink": "/v2.8/integrations-in-rancher/"
     },
     "next": {
-        "title": "Istio",
-        "permalink": "/v2.8/pages-for-subheaders/istio"
+        "title": "Overview",
+        "permalink": "/v2.8/integrations-in-rancher/harvester/overview"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Feature Flag',
-        id: 'feature-flag',
-        level: 3
+        value: 'Harvester',
+        id: 'harvester',
+        level: 2
     },
     {
-        value: 'Harvester Node Driver',
-        id: 'harvester-node-driver',
-        level: 3
-    },
-    {
-        value: 'Port Requirements',
-        id: 'port-requirements',
-        level: 3
-    },
-    {
-        value: 'Limitations',
-        id: 'limitations',
-        level: 3
+        value: 'Harvester with Rancher',
+        id: 'harvester-with-rancher',
+        level: 2
     }
 ];
 const layoutProps = {
@@ -373,70 +363,14 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Introduced in Rancher v2.6.1, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "harvester"
+    }, `Harvester`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Introduced in Rancher v2.6.1, Harvester is an open-source hyper-converged infrastructure (HCI) software built on Kubernetes. Harvester installs on bare metal servers and provides integrated virtualization and distributed storage capabilities. Although Harvester operates using Kubernetes, it does not require users to know Kubernetes concepts, making it a more user-friendly application.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "harvester-with-rancher"
+    }, `Harvester with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `With Rancher Prime and Harvester, IT operators now have access to an enterprise-ready, simple-to-use infrastructure platform that cohesively manages their virtual machines and Kubernetes clusters alongside one another. For more information on the support offering, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://docs.harvesterhci.io/"
-    }, `Harvester`), ` is an open-source hyper-converged infrastructure (HCI) software built on Kubernetes. Harvester installs on bare metal servers and provides integrated virtualization and distributed storage capabilities. Although Harvester operates using Kubernetes, it does not require users to know Kubernetes concepts, making it a more user-friendly application.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "feature-flag"
-    }, `Feature Flag`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Harvester feature flag is used to manage access to the Virtualization Management (VM) page in Rancher where users can navigate directly to Harvester clusters and access the Harvester UI. The Harvester feature flag is enabled by default. Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/v2.8/pages-for-subheaders/enable-experimental-features"
-    }, `here`), ` for more information on feature flags in Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To navigate to the Harvester cluster, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `☰ > Virtualization Management`), `. From Harvester Clusters page, click one of the clusters listed to go to the single Harvester cluster view.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "li"
-    }, `If the Harvester feature flag is enabled, Harvester clusters will be filtered out from any pages or apps (such as Fleet and the multi-cluster app) that list Kubernetes clusters.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "li"
-    }, `If the Harvester feature flag is disabled, and a Harvester cluster is imported, the Harvester cluster will be shown in the Rancher cluster list in the Cluster Management page. Harvester clusters will only be shown on the cluster list when the feature flag is off.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "li"
-    }, `With the Harvester integration, Harvester clusters can now be imported into Rancher as a cluster type `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `Harvester`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "li"
-    }, `Users may import a Harvester cluster only on the Virtualization Management page. Importing a cluster on the Cluster Management page is not supported, and a warning will advise you to return to the VM page to do so.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "harvester-node-driver"
-    }, `Harvester Node Driver`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.harvesterhci.io/v1.1/rancher/node/node-driver/"
-    }, `Harvester node driver`), ` is generally available for RKE and RKE2 options in Rancher. The node driver is available whether or not the Harvester feature flag is enabled. Note that the node driver is off by default. Users may create RKE or RKE2 clusters on Harvester only from the Cluster Management page.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Harvester allows `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `.ISO`), ` images to be uploaded and displayed through the Harvester UI, but this is not supported in the Rancher UI. This is because `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `.ISO`), ` images usually require additional setup that interferes with a clean deployment (without requiring user intervention), and they are not typically used in cloud environments.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/v2.8/pages-for-subheaders/about-provisioning-drivers#node-drivers"
-    }, `here`), ` for more information on node drivers in Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "port-requirements"
-    }, `Port Requirements`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The port requirements for the Harvester cluster can be found `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.harvesterhci.io/v1.1/install/requirements#networking"
-    }, `here`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In addition, other networking considerations are as follows:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Be sure to enable VLAN trunk ports of the physical switch for VM VLAN networks.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Follow the networking setup guidance `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "https://docs.harvesterhci.io/v1.1/networking/clusternetwork"
-    }, `here`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For other port requirements for other guest clusters, such as K3s and RKE1, please see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.harvesterhci.io/v1.1/install/requirements/#guest-clusters"
-    }, `these docs`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "limitations"
-    }, `Limitations`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("hr", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Applicable to Rancher v2.6.1 and v2.6.2 only:`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Harvester v0.3.0 doesn’t support air-gapped environment installation.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Harvester v0.3.0 doesn’t support upgrade from v0.2.0 nor upgrade to v1.0.0.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("hr", null));
+        "href": "https://www.suse.com/suse-harvester/support-matrix/all-supported-versions/harvester-v1-2-0/"
+    }, `Support Matrix`), `. With the Rancher Virtualization Management feature, users can import and manage multiple Harvester clusters. Leveraging the Rancher's authentication feature and RBAC control for multi-tenancy support.`));
 }
 MDXContent.isMDXComponent = true;
 

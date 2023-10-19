@@ -331,8 +331,8 @@ const metadata = {
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Harvester Integration",
-        "permalink": "/v2.8/integrations-in-rancher/harvester"
+        "title": "Using Fleet Behind a Proxy",
+        "permalink": "/v2.8/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy"
     },
     "next": {
         "title": "CPU and Memory Allocations",

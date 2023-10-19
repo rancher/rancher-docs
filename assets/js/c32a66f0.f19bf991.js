@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/pages-for-subheaders/about-provisioning-drivers.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "Oct 6, 2023",
+    "lastUpdatedAt": 1697500308,
+    "formattedLastUpdatedAt": "Oct 16, 2023",
     "frontMatter": {
         "title": "Provisioning Drivers"
     },
@@ -457,8 +457,8 @@ function MDXContent(_param) {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.8/integrations-in-rancher/harvester#harvester-node-driver/"
-    }, `Harvester`), `, available in Rancher v2.6.1`)));
+        "href": "/v2.8/integrations-in-rancher/harvester/overview#harvester-node-driver/"
+    }, `Harvester`), `, available as of Rancher v2.6.1`)));
 }
 MDXContent.isMDXComponent = true;
 

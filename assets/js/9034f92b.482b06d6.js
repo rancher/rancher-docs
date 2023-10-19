@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[93030],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[38274],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 64712:
+/***/ 18387:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,58 +308,53 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Harvester 集成'
+    title: 'Using Fleet Behind a Proxy'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/harvester",
-    "id": "version-2.8/integrations-in-rancher/harvester",
-    "title": "Harvester 集成",
-    "description": "Harvester 是 Rancher 2.6.1 新增的功能，Harvester 是基于 Kubernetes 构建的开源超融合基础架构 (HCI) 软件。Harvester 安装在裸金属服务器上，提供集成的虚拟化和分布式存储功能。虽然 Harvester 使用 Kubernetes 运行，但它不需要用户了解 Kubernetes 概念，因此是一个更加用户友好的应用。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.8/integrations-in-rancher/harvester.md",
-    "sourceDirName": "integrations-in-rancher",
-    "slug": "/integrations-in-rancher/harvester",
-    "permalink": "/zh/v2.8/integrations-in-rancher/harvester",
+    "unversionedId": "integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy",
+    "id": "version-2.8/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy",
+    "title": "Using Fleet Behind a Proxy",
+    "description": "In this section, you'll learn how to enable Fleet in a setup that has a Rancher server with a public IP a Kubernetes cluster that has no public IP, but is configured to use a proxy.",
+    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy.md",
+    "sourceDirName": "integrations-in-rancher/fleet-gitops-at-scale",
+    "slug": "/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy",
+    "permalink": "/v2.8/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/harvester.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy.md",
     "tags": [],
     "version": "2.8",
     "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "2023年10月6日",
+    "formattedLastUpdatedAt": "Oct 6, 2023",
     "frontMatter": {
-        "title": "Harvester 集成"
+        "title": "Using Fleet Behind a Proxy"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "在代理后使用 Fleet",
-        "permalink": "/zh/v2.8/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy"
+        "title": "Windows Support",
+        "permalink": "/v2.8/integrations-in-rancher/fleet-gitops-at-scale/windows-support"
     },
     "next": {
         "title": "Istio",
-        "permalink": "/zh/v2.8/pages-for-subheaders/istio"
+        "permalink": "/v2.8/pages-for-subheaders/istio"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: '功能开关',
-        id: '功能开关',
-        level: 3
+        value: 'Required Environment Variables',
+        id: 'required-environment-variables',
+        level: 2
     },
     {
-        value: 'Harvester 主机驱动',
-        id: 'harvester-主机驱动',
-        level: 3
+        value: 'Setting Environment Variables in the Rancher UI',
+        id: 'setting-environment-variables-in-the-rancher-ui',
+        level: 2
     },
     {
-        value: '端口要求',
-        id: '端口要求',
-        level: 3
-    },
-    {
-        value: '限制',
-        id: '限制',
-        level: 3
+        value: 'Setting Environment Variables on Private Nodes',
+        id: 'setting-environment-variables-on-private-nodes',
+        level: 2
     }
 ];
 const layoutProps = {
@@ -373,82 +368,99 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Harvester 是 Rancher 2.6.1 新增的功能，`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.harvesterhci.io/"
-    }, `Harvester`), ` 是基于 Kubernetes 构建的开源超融合基础架构 (HCI) 软件。Harvester 安装在裸金属服务器上，提供集成的虚拟化和分布式存储功能。虽然 Harvester 使用 Kubernetes 运行，但它不需要用户了解 Kubernetes 概念，因此是一个更加用户友好的应用。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "功能开关"
-    }, `功能开关`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你可以使用 Harvester 的功能开关来管理 Harvester 在 Rancher 虚拟化管理页面的访问，用户可以在该页面直接导航到 Harvester 集群并访问 Harvester UI。Harvester 的功能开关是默认启用的。如需了解 Rancher 中功能开关的更多详细信息，请单击`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/zh/v2.8/pages-for-subheaders/enable-experimental-features"
-    }, `此处`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `要导航到 Harvester 集群，请单击 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In this section, you'll learn how to enable Fleet in a setup that has a Rancher server with a public IP a Kubernetes cluster that has no public IP, but is configured to use a proxy.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher does not establish connections with registered downstream clusters. The Rancher agent deployed on the downstream cluster must be able to establish the connection with Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To set up Fleet to work behind a proxy, you will need to set the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `☰ > 虚拟化管理`), `。在 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Harvester 集群`), `页面中，单击集群以转到该 Harvester 集群的视图。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    }, `Agent Environment Variables`), ` for the downstream cluster. These are cluster-level configuration options.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Through the Rancher UI, you can configure these environment variables for any cluster type, including registered and custom clusters. The variables can be added while editing an existing cluster or while provisioning a new cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For public downstream clusters, it is sufficient to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "#setting-environment-variables-in-the-rancher-ui"
+    }, `set the required environment variables in the Rancher UI.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For private nodes or private clusters, the environment variables need to be set on the nodes themselves. Then the environment variables are configured from the Rancher UI, typically when provisioning a custom cluster or when registering the private cluster. For an example of how to set the environment variables on Ubuntu node in a K3s Kubernetes cluster, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "#setting-environment-variables-on-private-nodes"
+    }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "required-environment-variables"
+    }, `Required Environment Variables`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When adding Fleet agent environment variables for the proxy, replace <PROXY_IP> with your private proxy IP.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
+        parentName: "table"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "thead"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
+        parentName: "tr",
+        "align": null
+    }, `Variable Name`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
+        parentName: "tr",
+        "align": null
+    }, `Value`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tbody", {
+        parentName: "table"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
+    }, `HTTP_PROXY`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `http://<PROXY_IP>:8888`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
+    }, `HTTPS_PROXY`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `http://<PROXY_IP>:8888`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
+    }, `NO_PROXY`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "setting-environment-variables-in-the-rancher-ui"
+    }, `Setting Environment Variables in the Rancher UI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To add the environment variable to an existing cluster,`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `如果启用了 Harvester 功能开关，则会从列出 Kubernetes 集群的任何页面或应用（例如 Fleet 和多集群应用）中过滤掉 Harvester 集群。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    }, `☰ > Cluster Management`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `Go to the cluster where you want to add environment variables and click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `如果禁用了 Harvester 功能开关，并且导入了 Harvester 集群，Harvester 集群将显示在`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `集群管理`), `页面的 Rancher 集群列表中。仅当功能开关为关闭时，Harvester 集群才会显示在集群列表中。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    }, `⋮ > Edit Config`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `集成 Harvester 后，你可以将 Harvester 集群导入 Rancher，对应的集群类型是 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `Harvester`), `。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    }, `Advanced Options`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `用户只能在`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `虚拟化管理`), `页面上导入 Harvester 集群。在`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `集群管理`), `页面上导入集群是不支持的，而且会出现警告。建议你返回`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `虚拟化管理`), `页面执行此操作。`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "harvester-主机驱动"
-    }, `Harvester 主机驱动`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.harvesterhci.io/v1.1/rancher/node/node-driver/"
-    }, `Harvester 主机驱动`), ` 通常可用于 Rancher 中的 RKE 和 RKE2 选项。无论 Harvester 功能开关是否启用，主机驱动都是可用的。请注意，默认情况下主机驱动是关闭的。用户只能通过`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `集群管理`), `页面在 Harvester 上创建 RKE 或 RKE2 集群。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Harvester 允许通过 Harvester UI 上传和显示 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `.ISO`), ` 镜像，但 Rancher UI 不支持。这是因为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `.ISO`), ` 镜像通常需要额外的设置，这会干扰干净的部署（即无需用户干预），并且它们通常不用于云环境。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如需了解 Rancher 中主机驱动的更多详细信息，请单击`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/zh/v2.8/pages-for-subheaders/about-provisioning-drivers#%E4%B8%BB%E6%9C%BA%E9%A9%B1%E5%8A%A8"
-    }, `此处`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "端口要求"
-    }, `端口要求`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `可以在`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.harvesterhci.io/v1.1/install/requirements#networking"
-    }, `此处`), `找到 Harvester 集群的端口要求。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `此外，其他网络注意事项如下：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `请务必为 VM VLAN 网络启用物理交换机的 VLAN 中继端口。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `按照`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Add Environment Variable`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `Enter the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "https://docs.harvesterhci.io/v1.1/networking/clusternetwork"
-    }, `此处`), `的网络设置指南进行操作。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `对于其他集群（例如 K3s 和 RKE1）的其他端口要求，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.harvesterhci.io/v1.1/install/requirements/#guest-clusters"
-    }, `这些文档`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "限制"
-    }, `限制`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("hr", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        "href": "#required-environment-variables"
+    }, `required environment variables`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Save`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `仅适用于 Rancher v2.6.1 和 v2.6.2`), `：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Harvester 0.3.0 不支持离线环境安装。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `不支持将 Harvester 0.2.0 升级到 0.3.0，也不支持升级到新的 1.0.0 版本。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("hr", null));
+    }, `Result:`), ` The Fleet agent works behind a proxy.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "setting-environment-variables-on-private-nodes"
+    }, `Setting Environment Variables on Private Nodes`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For private nodes and private clusters, the proxy environment variables need to be set on the nodes themselves, as well as configured from the Rancher UI.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This example shows how the environment variables would be set up on an Ubuntu node in a K3s Kubernetes cluster:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `ssh -o ForwardAgent=yes ubuntu@<public_proxy_ip>
+ssh <k3s_ip>
+export proxy_private_ip=<private_proxy_ip>
+export HTTP_PROXY=http://\${proxy_private_ip}:8888
+export HTTPS_PROXY=http://\${proxy_private_ip}:8888
+export NO_PROXY=127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+`)));
 }
 MDXContent.isMDXComponent = true;
 

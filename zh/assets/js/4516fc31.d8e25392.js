@@ -171,8 +171,8 @@ const metadata = {
         "permalink": "/zh/v2.8/reference-guides/rancher-security/rancher-webhook-hardening"
     },
     "next": {
-        "title": "云市场集成",
-        "permalink": "/zh/v2.8/pages-for-subheaders/cloud-marketplace"
+        "title": "Virtualization on Kubernetes with Harvester",
+        "permalink": "/zh/v2.8/integrations-in-rancher/harvester/"
     }
 };
 const assets = {};

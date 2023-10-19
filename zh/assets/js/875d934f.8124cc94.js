@@ -331,8 +331,8 @@ const metadata = {
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Harvester 集成",
-        "permalink": "/zh/v2.8/integrations-in-rancher/harvester"
+        "title": "在代理后使用 Fleet",
+        "permalink": "/zh/v2.8/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy"
     },
     "next": {
         "title": "CPU 和内存分配",
