@@ -45,27 +45,6 @@ If the requested resources exceed the remaining capacity in the project for thos
 However, this is not the case with namespaces created **_outside_** of Rancher's UI. For namespaces created via `kubectl`, Rancher
 will assign a resource quota that has a **zero** amount for any resource that requested more capacity than what remains in the project.
 
-To create a project with a resource quota via `kubectl`, use the `spec.resourceQuota` and `spec.namespaceDefaultResourceQuota` fields:
-
-```
-apiVersion: management.cattle.io/v3
-kind: Project
-metadata:
-  generateName: p-
-  namespace: c-m-abcde
-spec:
-  clusterName: c-m-abcde
-  displayName: myproject
-  resourceQuota:
-    limit:
-      limitsCpu: 1000m
-  namespaceDefaultResourceQuota:
-    limit:
-      limitsCpu: 50m
-```
-
-Use `metadata.generateName` to ensure a unique project ID. Set `metadata.namespace` and `spec.clusterName` to the ID for the cluster the project belongs to.
-
 To create a namespace in an existing project via `kubectl`, use the `field.cattle.io/projectId` annotation. To override the default
 requested quota limit, use the `field.cattle.io/resourceQuota` annotation.
 

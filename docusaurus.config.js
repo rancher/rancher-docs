@@ -1,5 +1,7 @@
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
+const tailwindPlugin = require('./plugins/tailwind-plugin.cjs');
+
 module.exports = {
   title: 'Rancher',
   tagline: '',
@@ -124,18 +126,10 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           showLastUpdateTime: true,
           editUrl: 'https://github.com/rancher/rancher-docs/edit/main/',
-          // lastVersion: '2.7',
-          includeCurrentVersion: false,
+          lastVersion: 'current',
           versions: {
-            // current: {
-            //   label: 'Next 🚧',
-            //   path: 'next',
-            //   banner: 'unreleased'
-            // },
-            latest: {
+            current: {
               label: 'Latest',
-              path: '',
-              banner: 'none'
             },
             2.8: {
               label: 'v2.8 (Preview)',
@@ -172,8 +166,27 @@ module.exports = {
         },
       },
     ],
+    [
+      'redocusaurus',
+      {
+        // Plugin Options for loading OpenAPI files
+        specs: [
+          {
+            id: 'rancher-api',
+            spec: 'openapi/swagger.json',
+            // route: '/api/',
+          },
+        ],
+        // Theme Options for modifying how redoc renders them
+        theme: {
+          // Change with your site colors
+          primaryColor: '#1890ff',
+        },
+      },
+    ],
   ],
   plugins: [
+   tailwindPlugin,
    [
       '@docusaurus/plugin-client-redirects',
       {
@@ -1203,6 +1216,14 @@ module.exports = {
           {
             to: "/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
             from: "/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25"
+          },
+          {
+            to: "/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale",
+            from: "/reference-guides/best-practices/rancher-server/tips-for-scaling-rancher"
+          },
+          {
+            to: "/v2.7/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale",
+            from: "/v2.7/reference-guides/best-practices/rancher-server/tips-for-scaling-rancher"
           }
         ],
       },

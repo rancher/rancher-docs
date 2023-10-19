@@ -57,7 +57,7 @@ const sidebars = {
             "getting-started/quick-start-guides/deploy-rancher-manager/prime",
             {
               type: 'category',
-              label: 'Deploy Rancher Workloads',
+              label: 'Deploy Workloads',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/deploy-rancher-workloads",
@@ -828,7 +828,8 @@ const sidebars = {
               items: [
                 "reference-guides/best-practices/rancher-server/on-premises-rancher-in-vsphere",
                 "reference-guides/best-practices/rancher-server/rancher-deployment-strategy",
-                "reference-guides/best-practices/rancher-server/tips-for-running-rancher"
+                "reference-guides/best-practices/rancher-server/tips-for-running-rancher",
+                "reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale"
               ]
             },
             {
@@ -1116,7 +1117,6 @@ const sidebars = {
             "reference-guides/rancher-security/kubernetes-security-best-practices",
             "reference-guides/rancher-security/security-advisories-and-cves",
             "reference-guides/rancher-security/psa-restricted-exemptions",
-            "reference-guides/rancher-security/rancher-webhook-hardening",
           ],
         }
       ]

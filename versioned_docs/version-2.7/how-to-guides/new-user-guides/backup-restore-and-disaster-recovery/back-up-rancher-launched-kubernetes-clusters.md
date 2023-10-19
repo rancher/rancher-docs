@@ -260,11 +260,19 @@ By default, the `local` backup target is selected. The benefits of this option i
 
 ### S3 Backup Target
 
-The `S3` backup target allows users to configure a S3 compatible backend to store the snapshots. The primary benefit of this option is that if the cluster loses all the etcd nodes, the cluster can still be restored as the snapshots are stored externally. Rancher recommends external targets like `S3` backup, however its configuration requirements do require additional effort that should be considered. Additionally, it is recommended to ensure that every cluster has a unique bucket and/or folder, as Rancher will populate snapshot information for any available snapshot that is listed in the S3 bucket/folder that is configured for the cluster.
+We recommend that you use the `S3` backup target. It lets you store snapshots externally, on an S3 compatible backend. Since the snapshots aren't stored locally, you can still restore the cluster even if you lose all etcd nodes. 
+
+Although the `S3` target offers advantages over local backup, it does require extra configuration. 
+
+:::caution
+
+If you use an S3 backup target, make sure that every cluster has its own bucket or folder. Rancher populates snapshot information from any available snapshot listed in the S3 bucket or folder configured for that cluster.
+
+:::
 
 | Option | Description | Required|
 |---|---|---|
-|S3 Bucket Name| S3 bucket name where backups will be stored| *|
+|S3 Bucket Name| Name of S3 bucket to store backups| *|
 |S3 Region|S3 region for the backup bucket| |
 |S3 Region Endpoint|S3 regions endpoint for the backup bucket|* |
 |S3 Access Key|S3 access key with permission to access the backup bucket|*|

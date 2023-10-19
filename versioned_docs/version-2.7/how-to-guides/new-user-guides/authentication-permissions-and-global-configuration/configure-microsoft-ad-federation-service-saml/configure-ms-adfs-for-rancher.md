@@ -6,7 +6,7 @@ title: 1. Configuring Microsoft AD FS for Rancher
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-microsoft-ad-federation-service-saml/configure-ms-adfs-for-rancher"/>
 </head>
 
-Before configuring Rancher to support AD FS users, you must add Rancher as a [relying party trust](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/technical-reference/understanding-key-ad-fs-concepts) in AD FS.
+Before you configure Rancher to support Active Directory Federation Service (AD FS), you must add Rancher as a [relying party trust](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/technical-reference/understanding-key-ad-fs-concepts) in AD FS.
 
 1. Log into your AD server as an administrative user.
 

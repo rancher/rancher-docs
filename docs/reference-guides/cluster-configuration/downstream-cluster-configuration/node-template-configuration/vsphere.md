@@ -17,7 +17,7 @@ Your cloud credential has these fields:
 | Credential Field | Description |
 |-----------------|--------------|
 | vCenter or ESXi Server |  Enter the vCenter or ESXi hostname/IP. ESXi is the virtualization platform where you create and run virtual machines and virtual appliances. vCenter Server is the service through which you manage multiple hosts connected in a network and pool host resources. |
-| Port | Optional: configure configure the port of the vCenter or ESXi server. |
+| Port | Configure the port of the vCenter or ESXi server. |
 | Username and password | Enter your vSphere login username and password. |
 
 ## Scheduling
