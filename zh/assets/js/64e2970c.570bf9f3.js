@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[19969],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[92822],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 99944:
+/***/ 83543:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,45 +308,39 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Kubernetes on the Desktop with Rancher Desktop'
+    title: '云市场集成'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/rancher-desktop",
-    "id": "version-2.8/integrations-in-rancher/rancher-desktop",
-    "title": "Kubernetes on the Desktop with Rancher Desktop",
-    "description": "Developing and testing cloud-native applications on your desktop requires a set of foundational blocks such as a virtual machine (if on macOS or Windows), a container run time, Kubernetes, popular utilities, etc. Installing these components individually and getting them to work with each other can get pesky at times. Rancher Desktop nicely bundles all these essential building blocks into an easily installable and manageable desktop application that offers the key features below.",
-    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/rancher-desktop.md",
-    "sourceDirName": "integrations-in-rancher",
-    "slug": "/integrations-in-rancher/rancher-desktop",
-    "permalink": "/zh/v2.8/integrations-in-rancher/rancher-desktop",
+    "unversionedId": "pages-for-subheaders/cloud-marketplace",
+    "id": "version-2.8/pages-for-subheaders/cloud-marketplace",
+    "title": "云市场集成",
+    "description": "Rancher 提供与云市场的集成，让你能轻松购买云提供商上的安装支持。此外，该集成还支持生成 supportconfig bundle，你可以将该 bundle 提供给 Rancher。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.8/pages-for-subheaders/cloud-marketplace.md",
+    "sourceDirName": "pages-for-subheaders",
+    "slug": "/pages-for-subheaders/cloud-marketplace",
+    "permalink": "/zh/v2.8/pages-for-subheaders/cloud-marketplace",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/rancher-desktop.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/pages-for-subheaders/cloud-marketplace.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1697508298,
-    "formattedLastUpdatedAt": "2023年10月17日",
+    "lastUpdatedAt": 1696627994,
+    "formattedLastUpdatedAt": "2023年10月6日",
     "frontMatter": {
-        "title": "Kubernetes on the Desktop with Rancher Desktop"
+        "title": "云市场集成"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Advanced Policy Management with Kubewarden",
-        "permalink": "/zh/v2.8/integrations-in-rancher/kubewarden/"
+        "title": "Application Development Engine with Epinio",
+        "permalink": "/zh/v2.8/integrations-in-rancher/epinio/"
     },
     "next": {
-        "title": "云市场集成",
-        "permalink": "/zh/v2.8/pages-for-subheaders/cloud-marketplace"
+        "title": "AWS Marketplace 集成",
+        "permalink": "/zh/v2.8/pages-for-subheaders/aws-cloud-marketplace"
     }
 };
 const assets = {};
-const toc = [
-    {
-        value: 'Trying Rancher on Rancher Desktop',
-        id: 'trying-rancher-on-rancher-desktop',
-        level: 2
-    }
-];
+const toc = [];
 const layoutProps = {
     toc
 };
@@ -358,44 +352,7 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
-        rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/rancher-desktop"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Developing and testing cloud-native applications on your desktop requires a set of foundational blocks such as a virtual machine (if on macOS or Windows), a container run time, Kubernetes, popular utilities, etc. Installing these components individually and getting them to work with each other can get pesky at times. Rancher Desktop nicely bundles all these essential building blocks into an easily installable and manageable desktop application that offers the key features below. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Simple and easy installation on macOS, Linux and Windows operating systems.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `A ready to use light weight Kubernetes distribution (K3s) and the ability to pick Kubernetes versions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `GUI-based cluster dashboard powered by Rancher to explore your local cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Freedom to choose between multiple container engines (dockerd(moby) vs. containerd).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Preferences settings to configure the application to fit your needs.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Bundled tools required for your container, Kubernetes-based development, operations workflows.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Periodic updates to maintain the bundled tools’ versions up to date.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Integrates with proven tools/IDEs (VS Code extensions, Skaffold, etc). `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Image & Registry access control.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Support for Docker extensions.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To learn more about Rancher Desktop, visit `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://rancherdesktop.io"
-    }, `https://rancherdesktop.io`), ` and read the docs at `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.rancherdesktop.io/"
-    }, `https://docs.rancherdesktop.io/`), ` `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To install Rancher Desktop on your machine, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.rancherdesktop.io/getting-started/installation"
-    }, `installation guide`), `. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "trying-rancher-on-rancher-desktop"
-    }, `Trying Rancher on Rancher Desktop`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher Desktop offers all the necessary setup and tools to make it easy for you to try out containerized and Helm-based applications. For example, you can try out Rancher Kubernetes Management platform right on your desktop using Rancher Desktop by following this `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.rancherdesktop.io/how-to-guides/rancher-on-rancher-desktop"
-    }, `How-to guide`), `.`));
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 提供与云市场的集成，让你能轻松购买云提供商上的安装支持。此外，该集成还支持生成 supportconfig bundle，你可以将该 bundle 提供给 Rancher。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `此集成仅支持 AWS。`));
 }
 MDXContent.isMDXComponent = true;
 

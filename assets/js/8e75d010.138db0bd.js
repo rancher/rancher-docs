@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[92822],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[79401],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 83543:
+/***/ 70574:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,39 +308,50 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: '云市场集成'
+    title: 'Application Development Engine with Epinio'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "pages-for-subheaders/cloud-marketplace",
-    "id": "version-2.8/pages-for-subheaders/cloud-marketplace",
-    "title": "云市场集成",
-    "description": "Rancher 提供与云市场的集成，让你能轻松购买云提供商上的安装支持。此外，该集成还支持生成 supportconfig bundle，你可以将该 bundle 提供给 Rancher。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.8/pages-for-subheaders/cloud-marketplace.md",
-    "sourceDirName": "pages-for-subheaders",
-    "slug": "/pages-for-subheaders/cloud-marketplace",
-    "permalink": "/zh/v2.8/pages-for-subheaders/cloud-marketplace",
+    "unversionedId": "integrations-in-rancher/epinio/epinio",
+    "id": "version-2.8/integrations-in-rancher/epinio/epinio",
+    "title": "Application Development Engine with Epinio",
+    "description": "Epinio lets developers go from application sources to URL in a single step. Epinio is an Application Development Platform. It deploys on Kubernetes and lets application developers and operators work together without conflict.",
+    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/epinio/epinio.md",
+    "sourceDirName": "integrations-in-rancher/epinio",
+    "slug": "/integrations-in-rancher/epinio/",
+    "permalink": "/v2.8/integrations-in-rancher/epinio/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/pages-for-subheaders/cloud-marketplace.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/epinio/epinio.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "2023年10月6日",
+    "lastUpdatedAt": 1697752245,
+    "formattedLastUpdatedAt": "Oct 19, 2023",
     "frontMatter": {
-        "title": "云市场集成"
+        "title": "Application Development Engine with Epinio"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Kubernetes on the Desktop with Rancher Desktop",
-        "permalink": "/zh/v2.8/integrations-in-rancher/rancher-desktop"
+        "permalink": "/v2.8/integrations-in-rancher/rancher-desktop"
     },
     "next": {
-        "title": "AWS Marketplace 集成",
-        "permalink": "/zh/v2.8/pages-for-subheaders/aws-cloud-marketplace"
+        "title": "Cloud Marketplace Integration",
+        "permalink": "/v2.8/pages-for-subheaders/cloud-marketplace"
     }
 };
 const assets = {};
-const toc = [];
+const toc = [
+    {
+        value: 'Epinio with Rancher',
+        id: 'epinio-with-rancher',
+        level: 2
+    },
+    {
+        value: 'Epinio with Rancher Prime',
+        id: 'epinio-with-rancher-prime',
+        level: 2
+    }
+];
 const layoutProps = {
     toc
 };
@@ -352,7 +363,22 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 提供与云市场的集成，让你能轻松购买云提供商上的安装支持。此外，该集成还支持生成 supportconfig bundle，你可以将该 bundle 提供给 Rancher。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `此集成仅支持 AWS。`));
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/epinio"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Epinio lets developers go from application sources to URL in a single step. Epinio is an Application Development Platform. It deploys on Kubernetes and lets application developers and operators work together without conflict. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "epinio-with-rancher"
+    }, `Epinio with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Epinio's integration with Rancher lets developers quickly start using it without having to deal with the installation process or the configuration. You can install Epinio from the Apps. Currently the team is working to have Epinio available as a Rancher extension.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "epinio-with-rancher-prime"
+    }, `Epinio with Rancher Prime`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `On top of the specific support service, Rancher Prime customers of Epinio should expect better integration of Epinio with other Rancher projects such as: `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Better integration with Rancher authentication.  `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Integrating Neuvector/Kubewarden with Epinio.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Using a custom Chart template with the right annotations to integrate with monitoring for example.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `A better service marketplace.`)));
 }
 MDXContent.isMDXComponent = true;
 

@@ -331,8 +331,8 @@ const metadata = {
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Kubernetes on the Desktop with Rancher Desktop",
-        "permalink": "/v2.8/integrations-in-rancher/rancher-desktop"
+        "title": "Application Development Engine with Epinio",
+        "permalink": "/v2.8/integrations-in-rancher/epinio/"
     },
     "next": {
         "title": "AWS Marketplace Integration",
