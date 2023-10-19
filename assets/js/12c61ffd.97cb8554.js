@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[32515],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[4446],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 25778:
+/***/ 63145:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,47 +308,38 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Advanced Policy Management with Kubewarden'
+    title: 'Observability with Opni'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/kubewarden/kubewarden",
-    "id": "version-2.8/integrations-in-rancher/kubewarden/kubewarden",
-    "title": "Advanced Policy Management with Kubewarden",
-    "description": "Kubewarden is a Policy Engine that secures and helps manage your cluster resources. It allows for validation and mutation of resource requests via policies, including context-aware policies and verifying image signatures. It can run policies in monitor or enforcing mode and provides an overview of the state of the cluster.",
-    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/kubewarden/kubewarden.md",
-    "sourceDirName": "integrations-in-rancher/kubewarden",
-    "slug": "/integrations-in-rancher/kubewarden/",
-    "permalink": "/zh/v2.8/integrations-in-rancher/kubewarden/",
+    "unversionedId": "integrations-in-rancher/opni/opni",
+    "id": "version-2.8/integrations-in-rancher/opni/opni",
+    "title": "Observability with Opni",
+    "description": "Opni with Rancher",
+    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/opni/opni.md",
+    "sourceDirName": "integrations-in-rancher/opni",
+    "slug": "/integrations-in-rancher/opni/",
+    "permalink": "/v2.8/integrations-in-rancher/opni/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/kubewarden/kubewarden.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/opni/opni.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1697741218,
-    "formattedLastUpdatedAt": "2023年10月19日",
+    "lastUpdatedAt": 1697751616,
+    "formattedLastUpdatedAt": "Oct 19, 2023",
     "frontMatter": {
-        "title": "Advanced Policy Management with Kubewarden"
-    },
-    "sidebar": "tutorialSidebar",
-    "previous": {
-        "title": "Overview",
-        "permalink": "/zh/v2.8/integrations-in-rancher/neuvector/overview"
-    },
-    "next": {
-        "title": "Kubernetes on the Desktop with Rancher Desktop",
-        "permalink": "/zh/v2.8/integrations-in-rancher/rancher-desktop"
+        "title": "Observability with Opni"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Kubewarden with Rancher',
-        id: 'kubewarden-with-rancher',
+        value: 'Opni with Rancher',
+        id: 'opni-with-rancher',
         level: 2
     },
     {
-        value: 'Kubewarden with Rancher Prime',
-        id: 'kubewarden-with-rancher-prime',
+        value: 'Opni with Rancher Prime',
+        id: 'opni-with-rancher-prime',
         level: 2
     }
 ];
@@ -363,25 +354,11 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
-        rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/kubewarden"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Kubewarden is a Policy Engine that secures and helps manage your cluster resources. It allows for validation and mutation of resource requests via policies, including context-aware policies and verifying image signatures. It can run policies in monitor or enforcing mode and provides an overview of the state of the cluster. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Kubewarden aims to be the Universal Policy Engine by enabling and simplifying Policy as Code. Kubewarden policies are compiled into WebAssembly: they are small (400KBs ~ 2MBs), sandboxed, secure, and portable. It aims to be universal by catering to each persona in your organization:  `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Policy User: manage and declare policies using Kubernetes Custom Resources, reuse existing policies written in Rego (OPA and Gatekeeper). Test the policies outside the cluster in CI/CD. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Policy Developer: write policies in your preferred Wasm-compiling language (Rego, Go, Rust, C#, Swift, Typescript, and more to come). Reuse the ecosystem of tools, libraries, and workflows you already know. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Policy Distributor: policies are OCI artifacts, serve them through your OCI repository and use industry standards in your infrastructure, like Software-Bill-Of-Materials and artifact signatures. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Cluster Operator: Kubewarden is modular (OCI registry, PolicyServers, Audit Scanner, Controller). Configure your deployment to suit your needs, segregating different tenants. Get an overview of past, current, and possible violations across the cluster with the Audit Scanner and the PolicyReports. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Kubewarden Integrator: use it as a platform to write new Kubewarden modules and custom policies. `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "kubewarden-with-rancher"
-    }, `Kubewarden with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Kubewarden’s upstream Helm charts are fully integrated as Rancher Apps, providing a UI for the install options. The charts also come with defaults that respect the Rancher stack (for example: not policing Rancher system namespaces), and default PolicyServer and Policies. Users have access to all Kubewarden features and can deploy PolicyServers and Policies manually by interacting with the Kubernetes API (e.g.: using kubectl). `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Kubewarden provides a full replacement of the removed Kubernetes Pod Security Policies. Kubewarden also integrates with the new Pod Security Admission feature introduced by a recent version of Kubernetes by augmenting its security capabilities. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "kubewarden-with-rancher-prime"
-    }, `Kubewarden with Rancher Prime`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The available Rancher UI Extension for Kubewarden integrates it into the Rancher UI. The UI Extension automates the installation and configuration of the Kubewarden stack and configures access to the policies maintained by SUSE. The UI Extension provides access to a curated catalog of ready-to-use policies. Using the UI Extension, one can browse, install, and configure these policies. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The UI Extension provides an overview of the Kubewarden stack components and their behavior. This includes access to the Kubewarden metrics and trace events. An operator can understand the impact of policies on the cluster and troubleshoot issues. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In addition, the UI Extension provides the Policy Reporter UI, which gives a visual overview of the compliance status of the Kubernetes cluster. With this UI, an operator can quickly identify all non-compliant Kubernetes resources, understand the reasons for violations and act accordingly.
-All of this with the support offering of Rancher Prime.`));
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "opni-with-rancher"
+    }, `Opni with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "opni-with-rancher-prime"
+    }, `Opni with Rancher Prime`));
 }
 MDXContent.isMDXComponent = true;
 

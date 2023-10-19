@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[45192],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[39389],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 65865:
+/***/ 14903:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,26 +308,26 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Virtualization on Kubernetes with Harvester'
+    title: 'Kubernetes Distributions'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/harvester/harvester",
-    "id": "version-2.8/integrations-in-rancher/harvester/harvester",
-    "title": "Virtualization on Kubernetes with Harvester",
-    "description": "Harvester",
-    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/harvester/harvester.md",
-    "sourceDirName": "integrations-in-rancher/harvester",
-    "slug": "/integrations-in-rancher/harvester/",
-    "permalink": "/zh/v2.8/integrations-in-rancher/harvester/",
+    "unversionedId": "integrations-in-rancher/kubernetes-distributions/kubernetes-distributions",
+    "id": "version-2.8/integrations-in-rancher/kubernetes-distributions/kubernetes-distributions",
+    "title": "Kubernetes Distributions",
+    "description": "Kubernetes Distributions with Rancher",
+    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/kubernetes-distributions/kubernetes-distributions.md",
+    "sourceDirName": "integrations-in-rancher/kubernetes-distributions",
+    "slug": "/integrations-in-rancher/kubernetes-distributions/",
+    "permalink": "/zh/v2.8/integrations-in-rancher/kubernetes-distributions/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/harvester/harvester.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/kubernetes-distributions/kubernetes-distributions.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1697500308,
-    "formattedLastUpdatedAt": "2023年10月16日",
+    "lastUpdatedAt": 1697751616,
+    "formattedLastUpdatedAt": "2023年10月19日",
     "frontMatter": {
-        "title": "Virtualization on Kubernetes with Harvester"
+        "title": "Kubernetes Distributions"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
@@ -335,20 +335,20 @@ const metadata = {
         "permalink": "/zh/v2.8/integrations-in-rancher/"
     },
     "next": {
-        "title": "Overview",
-        "permalink": "/zh/v2.8/integrations-in-rancher/harvester/overview"
+        "title": "Virtualization on Kubernetes with Harvester",
+        "permalink": "/zh/v2.8/integrations-in-rancher/harvester/"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Harvester',
-        id: 'harvester',
+        value: 'Kubernetes Distributions with Rancher',
+        id: 'kubernetes-distributions-with-rancher',
         level: 2
     },
     {
-        value: 'Harvester with Rancher',
-        id: 'harvester-with-rancher',
+        value: 'Kubernetes Distributions with Rancher Prime',
+        id: 'kubernetes-distributions-with-rancher-prime',
         level: 2
     }
 ];
@@ -364,13 +364,10 @@ function MDXContent(_param) {
         components: components,
         mdxType: "MDXLayout"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "harvester"
-    }, `Harvester`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Introduced in Rancher v2.6.1, Harvester is an open-source hyper-converged infrastructure (HCI) software built on Kubernetes. Harvester installs on bare metal servers and provides integrated virtualization and distributed storage capabilities. Although Harvester operates using Kubernetes, it does not require users to know Kubernetes concepts, making it a more user-friendly application.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "harvester-with-rancher"
-    }, `Harvester with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `With Rancher Prime and Harvester, IT operators now have access to an enterprise-ready, simple-to-use infrastructure platform that cohesively manages their virtual machines and Kubernetes clusters alongside one another. For more information on the support offering, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://www.suse.com/suse-harvester/support-matrix/all-supported-versions/harvester-v1-2-0/"
-    }, `Support Matrix`), `. With the Rancher Virtualization Management feature, users can import and manage multiple Harvester clusters. Leveraging the Rancher's authentication feature and RBAC control for multi-tenancy support.`));
+        "id": "kubernetes-distributions-with-rancher"
+    }, `Kubernetes Distributions with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "kubernetes-distributions-with-rancher-prime"
+    }, `Kubernetes Distributions with Rancher Prime`));
 }
 MDXContent.isMDXComponent = true;
 

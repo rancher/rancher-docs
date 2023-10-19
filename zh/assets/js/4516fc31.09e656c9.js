@@ -155,24 +155,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/integrations-in-rancher.mdx",
     "sourceDirName": "integrations-in-rancher",
     "slug": "/integrations-in-rancher/",
-    "permalink": "/v2.8/integrations-in-rancher/",
+    "permalink": "/zh/v2.8/integrations-in-rancher/",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/integrations-in-rancher.mdx",
     "tags": [],
     "version": "2.8",
     "lastUpdatedAt": 1697670284,
-    "formattedLastUpdatedAt": "Oct 18, 2023",
+    "formattedLastUpdatedAt": "2023年10月18日",
     "frontMatter": {
         "title": "Integrations in Rancher"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Hardening the Rancher Webhook",
-        "permalink": "/v2.8/reference-guides/rancher-security/rancher-webhook-hardening"
+        "permalink": "/zh/v2.8/reference-guides/rancher-security/rancher-webhook-hardening"
     },
     "next": {
-        "title": "Virtualization on Kubernetes with Harvester",
-        "permalink": "/v2.8/integrations-in-rancher/harvester/"
+        "title": "Kubernetes Distributions",
+        "permalink": "/zh/v2.8/integrations-in-rancher/kubernetes-distributions/"
     }
 };
 const assets = {};

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[19969],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[32515],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 99944:
+/***/ 25778:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,42 +308,47 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Kubernetes on the Desktop with Rancher Desktop'
+    title: 'Advanced Policy Management with Kubewarden'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/rancher-desktop",
-    "id": "version-2.8/integrations-in-rancher/rancher-desktop",
-    "title": "Kubernetes on the Desktop with Rancher Desktop",
-    "description": "Developing and testing cloud-native applications on your desktop requires a set of foundational blocks such as a virtual machine (if on macOS or Windows), a container run time, Kubernetes, popular utilities, etc. Installing these components individually and getting them to work with each other can get pesky at times. Rancher Desktop nicely bundles all these essential building blocks into an easily installable and manageable desktop application that offers the key features below.",
-    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/rancher-desktop.md",
-    "sourceDirName": "integrations-in-rancher",
-    "slug": "/integrations-in-rancher/rancher-desktop",
-    "permalink": "/v2.8/integrations-in-rancher/rancher-desktop",
+    "unversionedId": "integrations-in-rancher/kubewarden/kubewarden",
+    "id": "version-2.8/integrations-in-rancher/kubewarden/kubewarden",
+    "title": "Advanced Policy Management with Kubewarden",
+    "description": "Kubewarden is a Policy Engine that secures and helps manage your cluster resources. It allows for validation and mutation of resource requests via policies, including context-aware policies and verifying image signatures. It can run policies in monitor or enforcing mode and provides an overview of the state of the cluster.",
+    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/kubewarden/kubewarden.md",
+    "sourceDirName": "integrations-in-rancher/kubewarden",
+    "slug": "/integrations-in-rancher/kubewarden/",
+    "permalink": "/v2.8/integrations-in-rancher/kubewarden/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/rancher-desktop.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/kubewarden/kubewarden.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1697508298,
-    "formattedLastUpdatedAt": "Oct 17, 2023",
+    "lastUpdatedAt": 1697741218,
+    "formattedLastUpdatedAt": "Oct 19, 2023",
     "frontMatter": {
-        "title": "Kubernetes on the Desktop with Rancher Desktop"
+        "title": "Advanced Policy Management with Kubewarden"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Advanced Policy Management with Kubewarden",
-        "permalink": "/v2.8/integrations-in-rancher/kubewarden/"
+        "title": "Overview",
+        "permalink": "/v2.8/integrations-in-rancher/neuvector/overview"
     },
     "next": {
-        "title": "Application Development Engine with Epinio",
-        "permalink": "/v2.8/integrations-in-rancher/epinio/"
+        "title": "Kubernetes Distributions",
+        "permalink": "/v2.8/integrations-in-rancher/kubernetes-distributions/"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Trying Rancher on Rancher Desktop',
-        id: 'trying-rancher-on-rancher-desktop',
+        value: 'Kubewarden with Rancher',
+        id: 'kubewarden-with-rancher',
+        level: 2
+    },
+    {
+        value: 'Kubewarden with Rancher Prime',
+        id: 'kubewarden-with-rancher-prime',
         level: 2
     }
 ];
@@ -360,42 +365,23 @@ function MDXContent(_param) {
         mdxType: "MDXLayout"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/rancher-desktop"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Developing and testing cloud-native applications on your desktop requires a set of foundational blocks such as a virtual machine (if on macOS or Windows), a container run time, Kubernetes, popular utilities, etc. Installing these components individually and getting them to work with each other can get pesky at times. Rancher Desktop nicely bundles all these essential building blocks into an easily installable and manageable desktop application that offers the key features below. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/kubewarden"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Kubewarden is a Policy Engine that secures and helps manage your cluster resources. It allows for validation and mutation of resource requests via policies, including context-aware policies and verifying image signatures. It can run policies in monitor or enforcing mode and provides an overview of the state of the cluster. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Kubewarden aims to be the Universal Policy Engine by enabling and simplifying Policy as Code. Kubewarden policies are compiled into WebAssembly: they are small (400KBs ~ 2MBs), sandboxed, secure, and portable. It aims to be universal by catering to each persona in your organization:  `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Simple and easy installation on macOS, Linux and Windows operating systems.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Policy User: manage and declare policies using Kubernetes Custom Resources, reuse existing policies written in Rego (OPA and Gatekeeper). Test the policies outside the cluster in CI/CD. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `A ready to use light weight Kubernetes distribution (K3s) and the ability to pick Kubernetes versions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Policy Developer: write policies in your preferred Wasm-compiling language (Rego, Go, Rust, C#, Swift, Typescript, and more to come). Reuse the ecosystem of tools, libraries, and workflows you already know. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `GUI-based cluster dashboard powered by Rancher to explore your local cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Policy Distributor: policies are OCI artifacts, serve them through your OCI repository and use industry standards in your infrastructure, like Software-Bill-Of-Materials and artifact signatures. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Freedom to choose between multiple container engines (dockerd(moby) vs. containerd).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Cluster Operator: Kubewarden is modular (OCI registry, PolicyServers, Audit Scanner, Controller). Configure your deployment to suit your needs, segregating different tenants. Get an overview of past, current, and possible violations across the cluster with the Audit Scanner and the PolicyReports. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Preferences settings to configure the application to fit your needs.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Bundled tools required for your container, Kubernetes-based development, operations workflows.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Periodic updates to maintain the bundled tools’ versions up to date.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Integrates with proven tools/IDEs (VS Code extensions, Skaffold, etc). `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Image & Registry access control.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Support for Docker extensions.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To learn more about Rancher Desktop, visit `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://rancherdesktop.io"
-    }, `https://rancherdesktop.io`), ` and read the docs at `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.rancherdesktop.io/"
-    }, `https://docs.rancherdesktop.io/`), ` `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To install Rancher Desktop on your machine, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.rancherdesktop.io/getting-started/installation"
-    }, `installation guide`), `. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "trying-rancher-on-rancher-desktop"
-    }, `Trying Rancher on Rancher Desktop`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher Desktop offers all the necessary setup and tools to make it easy for you to try out containerized and Helm-based applications. For example, you can try out Rancher Kubernetes Management platform right on your desktop using Rancher Desktop by following this `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.rancherdesktop.io/how-to-guides/rancher-on-rancher-desktop"
-    }, `How-to guide`), `.`));
+    }, `Kubewarden Integrator: use it as a platform to write new Kubewarden modules and custom policies. `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "kubewarden-with-rancher"
+    }, `Kubewarden with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Kubewarden’s upstream Helm charts are fully integrated as Rancher Apps, providing a UI for the install options. The charts also come with defaults that respect the Rancher stack (for example: not policing Rancher system namespaces), and default PolicyServer and Policies. Users have access to all Kubewarden features and can deploy PolicyServers and Policies manually by interacting with the Kubernetes API (e.g.: using kubectl). `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Kubewarden provides a full replacement of the removed Kubernetes Pod Security Policies. Kubewarden also integrates with the new Pod Security Admission feature introduced by a recent version of Kubernetes by augmenting its security capabilities. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "kubewarden-with-rancher-prime"
+    }, `Kubewarden with Rancher Prime`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The available Rancher UI Extension for Kubewarden integrates it into the Rancher UI. The UI Extension automates the installation and configuration of the Kubewarden stack and configures access to the policies maintained by SUSE. The UI Extension provides access to a curated catalog of ready-to-use policies. Using the UI Extension, one can browse, install, and configure these policies. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The UI Extension provides an overview of the Kubewarden stack components and their behavior. This includes access to the Kubewarden metrics and trace events. An operator can understand the impact of policies on the cluster and troubleshoot issues. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In addition, the UI Extension provides the Policy Reporter UI, which gives a visual overview of the compliance status of the Kubernetes cluster. With this UI, an operator can quickly identify all non-compliant Kubernetes resources, understand the reasons for violations and act accordingly.
+All of this with the support offering of Rancher Prime.`));
 }
 MDXContent.isMDXComponent = true;
 
