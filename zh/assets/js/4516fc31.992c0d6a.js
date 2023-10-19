@@ -155,24 +155,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/integrations-in-rancher.mdx",
     "sourceDirName": "integrations-in-rancher",
     "slug": "/integrations-in-rancher/",
-    "permalink": "/v2.8/integrations-in-rancher/",
+    "permalink": "/zh/v2.8/integrations-in-rancher/",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/integrations-in-rancher.mdx",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1697670284,
-    "formattedLastUpdatedAt": "Oct 18, 2023",
+    "lastUpdatedAt": 1697752688,
+    "formattedLastUpdatedAt": "2023年10月19日",
     "frontMatter": {
         "title": "Integrations in Rancher"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Hardening the Rancher Webhook",
-        "permalink": "/v2.8/reference-guides/rancher-security/rancher-webhook-hardening"
+        "permalink": "/zh/v2.8/reference-guides/rancher-security/rancher-webhook-hardening"
     },
     "next": {
         "title": "Kubernetes Distributions",
-        "permalink": "/v2.8/integrations-in-rancher/kubernetes-distributions/"
+        "permalink": "/zh/v2.8/integrations-in-rancher/kubernetes-distributions/"
     }
 };
 const assets = {};
@@ -200,40 +200,44 @@ function MDXContent(_param) {
         }),
         mdxType: "CardSection"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)(Card, {
+        title: "Kubernetes Distributions",
+        to: "./integrations-in-rancher/kubernetes-distributions",
+        mdxType: "Card"
+    }), /*#__PURE__*/ (0,esm/* mdx */.kt)(Card, {
         title: "Virtualization on Kubernetes with Harvester",
-        to: "/integrations-in-rancher/harvester",
+        to: "./integrations-in-rancher/harvester",
         mdxType: "Card"
     }), /*#__PURE__*/ (0,esm/* mdx */.kt)(Card, {
         title: "Cloud Native Storage with Longhorn",
-        to: "/integrations-in-rancher/longhorn",
+        to: "./integrations-in-rancher/longhorn",
         mdxType: "Card"
     }), /*#__PURE__*/ (0,esm/* mdx */.kt)(Card, {
         title: "Container Security with NeuVector",
-        to: "/integrations-in-rancher/neuvector",
+        to: "./integrations-in-rancher/neuvector",
         mdxType: "Card"
     }), /*#__PURE__*/ (0,esm/* mdx */.kt)(Card, {
         title: "Advanced Policy Management with Kubewarden",
-        to: "/integrations-in-rancher/kubewarden",
+        to: "./integrations-in-rancher/kubewarden",
         mdxType: "Card"
     }), /*#__PURE__*/ (0,esm/* mdx */.kt)(Card, {
         title: "Operating System Management with Elemental",
-        to: "/integrations-in-rancher/elemental",
+        to: "./integrations-in-rancher/elemental",
         mdxType: "Card"
     }), /*#__PURE__*/ (0,esm/* mdx */.kt)(Card, {
         title: "Observability with Opni",
-        to: "/integrations-in-rancher/opni",
+        to: "./integrations-in-rancher/opni",
         mdxType: "Card"
     }), /*#__PURE__*/ (0,esm/* mdx */.kt)(Card, {
         title: "Continuous Delivery with Fleet",
-        to: "/integrations-in-rancher/fleet",
+        to: "./integrations-in-rancher/fleet",
         mdxType: "Card"
     }), /*#__PURE__*/ (0,esm/* mdx */.kt)(Card, {
         title: "Kubernetes on the Desktop",
-        to: "/integrations-in-rancher/rancher-desktop",
+        to: "./integrations-in-rancher/rancher-desktop",
         mdxType: "Card"
     }), /*#__PURE__*/ (0,esm/* mdx */.kt)(Card, {
         title: "Application Development Engine with Epinio",
-        to: "/integrations-in-rancher/epinio",
+        to: "./integrations-in-rancher/epinio",
         mdxType: "Card"
     })));
 }
