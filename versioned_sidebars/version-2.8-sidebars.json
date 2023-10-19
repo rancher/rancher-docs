@@ -1090,7 +1090,6 @@
         "id": "integrations-in-rancher/integrations-in-rancher"
       },
       "items": [
-        "integrations-in-rancher/kubewarden/kubewarden",
         {
           "type": "category",
           "label": "Virtualization on Kubernetes with Harvester",
@@ -1124,6 +1123,8 @@
             "integrations-in-rancher/neuvector/overview"
           ]
         },
+        "integrations-in-rancher/kubewarden/kubewarden",
+        "integrations-in-rancher/rancher-desktop",
         {
           "type": "category",
           "label": "Cloud Marketplace Integration",
