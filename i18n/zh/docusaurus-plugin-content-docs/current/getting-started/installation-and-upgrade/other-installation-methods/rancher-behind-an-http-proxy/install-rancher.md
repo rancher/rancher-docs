@@ -31,7 +31,7 @@ kubectl create namespace cert-manager
 安装 cert-manager 的 CustomResourceDefinitions：
 
 ```
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/<VERSION>/cert-manager.crds.yaml
 ```
 
 使用 Helm 安装 cert-manager。请注意，cert-manager 还需要你配置代理，以防它需要与 Let's Encrypt 或其他外部证书颁发商进行通信：
@@ -44,7 +44,7 @@ kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/
 
 ```
 helm upgrade --install cert-manager jetstack/cert-manager \
-  --namespace cert-manager --version v1.11.0 \
+  --namespace cert-manager \
   --set http_proxy=http://${proxy_host} \
   --set https_proxy=http://${proxy_host} \
   --set no_proxy=127.0.0.0/8\\,10.0.0.0/8\\,cattle-system.svc\\,172.16.0.0/12\\,192.168.0.0/16\\,.svc\\,.cluster.local

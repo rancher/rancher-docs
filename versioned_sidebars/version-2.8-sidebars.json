@@ -1085,7 +1085,45 @@
     {
       "type": "category",
       "label": "Integrations in Rancher",
+      "link": {
+        "type": "doc",
+        "id": "integrations-in-rancher/integrations-in-rancher"
+      },
       "items": [
+        {
+          "type": "category",
+          "label": "Virtualization on Kubernetes with Harvester",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/harvester/harvester"
+          },
+          "items": [
+            "integrations-in-rancher/harvester/overview"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Cloud Native Storage with Longhorn",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/longhorn/longhorn"
+          },
+          "items": [
+            "integrations-in-rancher/longhorn/overview"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Container Security with Neuvector",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/neuvector/neuvector"
+          },
+          "items": [
+            "integrations-in-rancher/neuvector/overview"
+          ]
+        },
+        "integrations-in-rancher/kubewarden/kubewarden",
         "integrations-in-rancher/rancher-desktop",
         {
           "type": "category",
@@ -1139,7 +1177,6 @@
             "integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy"
           ]
         },
-        "integrations-in-rancher/harvester",
         {
           "type": "category",
           "label": "Istio",
@@ -1167,7 +1204,6 @@
             }
           ]
         },
-        "integrations-in-rancher/longhorn",
         {
           "type": "category",
           "label": "Logging",
@@ -1209,7 +1245,6 @@
             "integrations-in-rancher/monitoring-and-alerting/promql-expressions"
           ]
         },
-        "integrations-in-rancher/neuvector",
         "integrations-in-rancher/opa-gatekeeper",
         "integrations-in-rancher/rancher-extensions"
       ]

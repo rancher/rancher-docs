@@ -1,5 +1,7 @@
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
+const tailwindPlugin = require('./plugins/tailwind-plugin.cjs');
+
 module.exports = {
   title: 'Rancher',
   tagline: '',
@@ -184,6 +186,7 @@ module.exports = {
     ],
   ],
   plugins: [
+   tailwindPlugin,
    [
       '@docusaurus/plugin-client-redirects',
       {
