@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/kubewarden/kubewarden.md",
     "sourceDirName": "integrations-in-rancher/kubewarden",
     "slug": "/integrations-in-rancher/kubewarden/",
-    "permalink": "/zh/v2.8/integrations-in-rancher/kubewarden/",
+    "permalink": "/v2.8/integrations-in-rancher/kubewarden/",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/kubewarden/kubewarden.md",
     "tags": [],
     "version": "2.8",
     "lastUpdatedAt": 1697741218,
-    "formattedLastUpdatedAt": "2023年10月19日",
+    "formattedLastUpdatedAt": "Oct 19, 2023",
     "frontMatter": {
         "title": "Advanced Policy Management with Kubewarden"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Integrations in Rancher",
-        "permalink": "/zh/v2.8/integrations-in-rancher/"
+        "title": "Overview",
+        "permalink": "/v2.8/integrations-in-rancher/neuvector/overview"
     },
     "next": {
-        "title": "Virtualization on Kubernetes with Harvester",
-        "permalink": "/zh/v2.8/integrations-in-rancher/harvester/"
+        "title": "Kubernetes on the Desktop with Rancher Desktop",
+        "permalink": "/v2.8/integrations-in-rancher/rancher-desktop"
     }
 };
 const assets = {};

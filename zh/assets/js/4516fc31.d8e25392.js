@@ -171,8 +171,8 @@ const metadata = {
         "permalink": "/zh/v2.8/reference-guides/rancher-security/rancher-webhook-hardening"
     },
     "next": {
-        "title": "Advanced Policy Management with Kubewarden",
-        "permalink": "/zh/v2.8/integrations-in-rancher/kubewarden/"
+        "title": "Virtualization on Kubernetes with Harvester",
+        "permalink": "/zh/v2.8/integrations-in-rancher/harvester/"
     }
 };
 const assets = {};

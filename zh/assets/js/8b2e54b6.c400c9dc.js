@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[45192],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[19969],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 65865:
+/***/ 99944:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,26 +308,26 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Virtualization on Kubernetes with Harvester'
+    title: 'Kubernetes on the Desktop with Rancher Desktop'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/harvester/harvester",
-    "id": "version-2.8/integrations-in-rancher/harvester/harvester",
-    "title": "Virtualization on Kubernetes with Harvester",
-    "description": "Harvester",
-    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/harvester/harvester.md",
-    "sourceDirName": "integrations-in-rancher/harvester",
-    "slug": "/integrations-in-rancher/harvester/",
-    "permalink": "/zh/v2.8/integrations-in-rancher/harvester/",
+    "unversionedId": "integrations-in-rancher/rancher-desktop",
+    "id": "version-2.8/integrations-in-rancher/rancher-desktop",
+    "title": "Kubernetes on the Desktop with Rancher Desktop",
+    "description": "Developing and testing cloud-native applications on your desktop requires a set of foundational blocks such as a virtual machine (if on macOS or Windows), a container run time, Kubernetes, popular utilities, etc. Installing these components individually and getting them to work with each other can get pesky at times. Rancher Desktop nicely bundles all these essential building blocks into an easily installable and manageable desktop application that offers the key features below.",
+    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/rancher-desktop.md",
+    "sourceDirName": "integrations-in-rancher",
+    "slug": "/integrations-in-rancher/rancher-desktop",
+    "permalink": "/zh/v2.8/integrations-in-rancher/rancher-desktop",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/harvester/harvester.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/rancher-desktop.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1697500308,
-    "formattedLastUpdatedAt": "2023年10月16日",
+    "lastUpdatedAt": 1697508298,
+    "formattedLastUpdatedAt": "2023年10月17日",
     "frontMatter": {
-        "title": "Virtualization on Kubernetes with Harvester"
+        "title": "Kubernetes on the Desktop with Rancher Desktop"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
@@ -335,20 +335,15 @@ const metadata = {
         "permalink": "/zh/v2.8/integrations-in-rancher/kubewarden/"
     },
     "next": {
-        "title": "Overview",
-        "permalink": "/zh/v2.8/integrations-in-rancher/harvester/overview"
+        "title": "云市场集成",
+        "permalink": "/zh/v2.8/pages-for-subheaders/cloud-marketplace"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Harvester',
-        id: 'harvester',
-        level: 2
-    },
-    {
-        value: 'Harvester with Rancher',
-        id: 'harvester-with-rancher',
+        value: 'Trying Rancher on Rancher Desktop',
+        id: 'trying-rancher-on-rancher-desktop',
         level: 2
     }
 ];
@@ -363,14 +358,44 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "harvester"
-    }, `Harvester`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Introduced in Rancher v2.6.1, Harvester is an open-source hyper-converged infrastructure (HCI) software built on Kubernetes. Harvester installs on bare metal servers and provides integrated virtualization and distributed storage capabilities. Although Harvester operates using Kubernetes, it does not require users to know Kubernetes concepts, making it a more user-friendly application.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "harvester-with-rancher"
-    }, `Harvester with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `With Rancher Prime and Harvester, IT operators now have access to an enterprise-ready, simple-to-use infrastructure platform that cohesively manages their virtual machines and Kubernetes clusters alongside one another. For more information on the support offering, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/rancher-desktop"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Developing and testing cloud-native applications on your desktop requires a set of foundational blocks such as a virtual machine (if on macOS or Windows), a container run time, Kubernetes, popular utilities, etc. Installing these components individually and getting them to work with each other can get pesky at times. Rancher Desktop nicely bundles all these essential building blocks into an easily installable and manageable desktop application that offers the key features below. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Simple and easy installation on macOS, Linux and Windows operating systems.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `A ready to use light weight Kubernetes distribution (K3s) and the ability to pick Kubernetes versions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `GUI-based cluster dashboard powered by Rancher to explore your local cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Freedom to choose between multiple container engines (dockerd(moby) vs. containerd).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Preferences settings to configure the application to fit your needs.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Bundled tools required for your container, Kubernetes-based development, operations workflows.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Periodic updates to maintain the bundled tools’ versions up to date.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Integrates with proven tools/IDEs (VS Code extensions, Skaffold, etc). `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Image & Registry access control.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Support for Docker extensions.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To learn more about Rancher Desktop, visit `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://www.suse.com/suse-harvester/support-matrix/all-supported-versions/harvester-v1-2-0/"
-    }, `Support Matrix`), `. With the Rancher Virtualization Management feature, users can import and manage multiple Harvester clusters. Leveraging the Rancher's authentication feature and RBAC control for multi-tenancy support.`));
+        "href": "https://rancherdesktop.io"
+    }, `https://rancherdesktop.io`), ` and read the docs at `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://docs.rancherdesktop.io/"
+    }, `https://docs.rancherdesktop.io/`), ` `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To install Rancher Desktop on your machine, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://docs.rancherdesktop.io/getting-started/installation"
+    }, `installation guide`), `. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "trying-rancher-on-rancher-desktop"
+    }, `Trying Rancher on Rancher Desktop`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher Desktop offers all the necessary setup and tools to make it easy for you to try out containerized and Helm-based applications. For example, you can try out Rancher Kubernetes Management platform right on your desktop using Rancher Desktop by following this `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://docs.rancherdesktop.io/how-to-guides/rancher-on-rancher-desktop"
+    }, `How-to guide`), `.`));
 }
 MDXContent.isMDXComponent = true;
 

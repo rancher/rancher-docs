@@ -335,8 +335,8 @@ const metadata = {
         "permalink": "/zh/v2.8/integrations-in-rancher/neuvector/"
     },
     "next": {
-        "title": "云市场集成",
-        "permalink": "/zh/v2.8/pages-for-subheaders/cloud-marketplace"
+        "title": "Advanced Policy Management with Kubewarden",
+        "permalink": "/zh/v2.8/integrations-in-rancher/kubewarden/"
     }
 };
 const assets = {};
