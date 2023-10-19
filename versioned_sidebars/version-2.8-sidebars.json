@@ -1090,6 +1090,7 @@
         "id": "integrations-in-rancher/integrations-in-rancher"
       },
       "items": [
+        "integrations-in-rancher/kubewarden/kubewarden",
         {
           "type": "category",
           "label": "Virtualization on Kubernetes with Harvester",
