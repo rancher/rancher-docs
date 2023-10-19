@@ -1090,6 +1090,7 @@
         "id": "integrations-in-rancher/integrations-in-rancher"
       },
       "items": [
+        "integrations-in-rancher/kubernetes-distributions/kubernetes-distributions",
         {
           "type": "category",
           "label": "Virtualization on Kubernetes with Harvester",
@@ -1124,6 +1125,7 @@
           ]
         },
         "integrations-in-rancher/kubewarden/kubewarden",
+        "integrations-in-rancher/kubernetes-distributions/kubernetes-distributions",
         "integrations-in-rancher/rancher-desktop",
         "integrations-in-rancher/epinio/epinio",
         {
