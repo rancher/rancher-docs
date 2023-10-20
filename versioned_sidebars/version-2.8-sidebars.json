@@ -1125,6 +1125,7 @@
           ]
         },
         "integrations-in-rancher/kubewarden/kubewarden",
+        "integrations-in-rancher/elemental/elemental",
         "integrations-in-rancher/opni/opni",
         {
           "type": "category",
