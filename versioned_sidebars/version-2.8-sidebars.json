@@ -1125,7 +1125,7 @@
           ]
         },
         "integrations-in-rancher/kubewarden/kubewarden",
-        "integrations-in-rancher/kubernetes-distributions/kubernetes-distributions",
+        "integrations-in-rancher/opni/opni",
         "integrations-in-rancher/rancher-desktop",
         "integrations-in-rancher/epinio/epinio",
         {
