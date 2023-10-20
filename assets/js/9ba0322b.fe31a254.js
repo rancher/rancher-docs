@@ -335,8 +335,8 @@ const metadata = {
         "permalink": "/v2.8/integrations-in-rancher/neuvector/overview"
     },
     "next": {
-        "title": "Kubernetes Distributions",
-        "permalink": "/v2.8/integrations-in-rancher/kubernetes-distributions/"
+        "title": "Observability with Opni",
+        "permalink": "/v2.8/integrations-in-rancher/opni/"
     }
 };
 const assets = {};

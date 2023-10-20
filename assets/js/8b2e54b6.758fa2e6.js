@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/rancher-desktop.md",
     "sourceDirName": "integrations-in-rancher",
     "slug": "/integrations-in-rancher/rancher-desktop",
-    "permalink": "/zh/v2.8/integrations-in-rancher/rancher-desktop",
+    "permalink": "/v2.8/integrations-in-rancher/rancher-desktop",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/rancher-desktop.md",
     "tags": [],
     "version": "2.8",
     "lastUpdatedAt": 1697508298,
-    "formattedLastUpdatedAt": "2023年10月17日",
+    "formattedLastUpdatedAt": "Oct 17, 2023",
     "frontMatter": {
         "title": "Kubernetes on the Desktop with Rancher Desktop"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Kubernetes Distributions",
-        "permalink": "/zh/v2.8/integrations-in-rancher/kubernetes-distributions/"
+        "title": "Observability with Opni",
+        "permalink": "/v2.8/integrations-in-rancher/opni/"
     },
     "next": {
         "title": "Application Development Engine with Epinio",
-        "permalink": "/zh/v2.8/integrations-in-rancher/epinio/"
+        "permalink": "/v2.8/integrations-in-rancher/epinio/"
     }
 };
 const assets = {};

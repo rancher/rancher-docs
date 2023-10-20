@@ -319,15 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/opni/opni.md",
     "sourceDirName": "integrations-in-rancher/opni",
     "slug": "/integrations-in-rancher/opni/",
-    "permalink": "/v2.8/integrations-in-rancher/opni/",
+    "permalink": "/zh/v2.8/integrations-in-rancher/opni/",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/opni/opni.md",
     "tags": [],
     "version": "2.8",
     "lastUpdatedAt": 1697751616,
-    "formattedLastUpdatedAt": "Oct 19, 2023",
+    "formattedLastUpdatedAt": "2023年10月19日",
     "frontMatter": {
         "title": "Observability with Opni"
+    },
+    "sidebar": "tutorialSidebar",
+    "previous": {
+        "title": "Advanced Policy Management with Kubewarden",
+        "permalink": "/zh/v2.8/integrations-in-rancher/kubewarden/"
+    },
+    "next": {
+        "title": "Kubernetes on the Desktop with Rancher Desktop",
+        "permalink": "/zh/v2.8/integrations-in-rancher/rancher-desktop"
     }
 };
 const assets = {};
