@@ -1,10 +1,6 @@
 ---
-title: Continuous Delivery with Fleet
+title: Overview
 ---
-
-<head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"/>
-</head>
 
 Continuous Delivery with Fleet is GitOps at scale. Fleet is designed to manage up to a million clusters. It’s also lightweight enough that it works great for a [single cluster](https://fleet.rancher.io/installation#default-install) too, but it really shines when you get to a [large scale](https://fleet.rancher.io/installation#configuration-for-multi-cluster). By large scale we mean either a lot of clusters, a lot of deployments, or a lot of teams in a single organization.
 
@@ -13,7 +9,7 @@ Fleet is a separate project from Rancher, and can be installed on any Kubernetes
 
 ## Architecture
 
-For information about how Fleet works, see [this page](../integrations-in-rancher/fleet-gitops-at-scale/architecture.md).
+For information about how Fleet works, see the [Architecture](./architecture.md) page.
 
 ## Accessing Fleet in the Rancher UI
 
@@ -41,7 +37,7 @@ Follow the steps below to access Continuous Delivery in the Rancher UI:
 
 ## Windows Support
 
-For details on support for clusters with Windows nodes, see [this page](../integrations-in-rancher/fleet-gitops-at-scale/windows-support.md).
+For details on support for clusters with Windows nodes, see the [Windows Support](./windows-support.md) page.
 
 ## GitHub Repository
 
@@ -49,7 +45,7 @@ The Fleet Helm charts are available [here](https://github.com/rancher/fleet/rele
 
 ## Using Fleet Behind a Proxy
 
-For details on using Fleet behind a proxy, see [this page](../integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy.md).
+For details on using Fleet behind a proxy, see the [Using Fleet Behind a Proxy](./use-fleet-behind-a-proxy.md) page.
 
 ## Helm Chart Dependencies
 
@@ -59,7 +55,7 @@ The Helm chart in the git repository must include its dependencies in the charts
 
 ## Troubleshooting
 
-- **Known Issue**: clientSecretName and helmSecretName secrets for Fleet gitrepos are not included in the backup nor restore created by the [backup-restore-operator](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher.md#1-install-the-rancher-backup-operator). We will update the community once a permanent solution is in place.
+- **Known Issue**: clientSecretName and helmSecretName secrets for Fleet gitrepos are not included in the backup nor restore created by the [backup-restore-operator](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher.md#1-install-the-rancher-backup-operator). We will update the community once a permanent solution is in place.
 
 - **Temporary Workaround**: By default, user-defined secrets are not backed up in Fleet. It is necessary to recreate secrets if performing a disaster recovery restore or migration of Rancher into a fresh cluster. To modify resourceSet to include extra resources you want to backup, refer to docs [here](https://github.com/rancher/backup-restore-operator#user-flow).
 
