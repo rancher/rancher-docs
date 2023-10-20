@@ -335,8 +335,8 @@ const metadata = {
         "permalink": "/zh/v2.8/integrations-in-rancher/neuvector/overview"
     },
     "next": {
-        "title": "Observability with Opni",
-        "permalink": "/zh/v2.8/integrations-in-rancher/opni/"
+        "title": "Operating System Management with Elemental",
+        "permalink": "/zh/v2.8/integrations-in-rancher/elemental/"
     }
 };
 const assets = {};
