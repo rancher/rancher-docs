@@ -276,5 +276,5 @@ v0.11 版本标志着删除先前 Cert-Manager 版本中使用的 v1alpha1 API�
 
 如需了解变更细节以及迁移说明，请参见[将 Cert-Manager 从 v0.10 升级到 v0.11](https://cert-manager.io/docs/installation/upgrading/upgrading-0.10-0.11/)。
 
-如需获得更多信息，请参见 [Cert-Manager 升级](https://cert-manager.io/docs/installation/upgrading/)。
+如需获得更多信息，请参见 [Cert-Manager 升级](https://cert-manager.io/docs/installation/upgrade/)。
 
