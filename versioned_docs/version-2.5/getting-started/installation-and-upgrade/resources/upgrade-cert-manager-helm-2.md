@@ -178,4 +178,4 @@ We have also removed support for the old configuration format that was deprecate
 
 Details about the change and migration instructions can be found in the [cert-manager v0.10 to v0.11 upgrade instructions](https://cert-manager.io/docs/installation/upgrading/upgrading-0.10-0.11/).
 
-For information on upgrading from all other versions of cert-manager, refer to the [official documentation](https://cert-manager.io/docs/installation/upgrading/).
+For information on upgrading from all other versions of cert-manager, refer to the [official documentation](https://cert-manager.io/docs/installation/upgrade/).
