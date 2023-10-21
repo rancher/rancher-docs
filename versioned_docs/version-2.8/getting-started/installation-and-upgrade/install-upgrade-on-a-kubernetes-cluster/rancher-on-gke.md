@@ -14,7 +14,7 @@ If you already have a GKE Kubernetes cluster, skip to the step about [installing
 
 - You will need a Google account.
 - You will need a Google Cloud billing account. You can manage your Cloud Billing accounts using the Google Cloud Console. For more information about the Cloud Console, visit [General guide to the console.](https://support.google.com/cloud/answer/3465889?hl=en&ref_topic=3340599)
-- You will need a cloud quota for at least one in-use IP address and at least 2 CPUs. For more details about hardware requirements for the Rancher server, refer to [this section.](../../../pages-for-subheaders/installation-requirements.md#rke-and-hosted-kubernetes)
+- You will need a cloud quota for at least one in-use IP address and at least 2 CPUs. For more details about hardware requirements for the Rancher server, refer to [this section.](../../../pages-for-subheaders/installation-requirements.md)
 
 ## 1. Enable the Kubernetes Engine API
 
