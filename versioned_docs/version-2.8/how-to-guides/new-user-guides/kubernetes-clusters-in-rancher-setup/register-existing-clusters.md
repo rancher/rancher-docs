@@ -31,7 +31,7 @@ kubectl create clusterrolebinding cluster-admin-binding \
 
 Since, by default, Google Kubernetes Engine (GKE) doesn't grant the `cluster-admin` role, you must run these commands on GKE clusters before you can register them. To learn more about role-based access control for GKE, please see [the official Google documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control).
 
-### Elastic Kubernetes Service (EKS), EKS-Anywhere, EKS Anywhere on Bare Metal, Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE)  
+### Elastic Kubernetes Service (EKS), EKS Anywhere, EKS Anywhere on Bare Metal, Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE)  
 
 To successfully import or provision EKS, AKS, and GKE clusters from Rancher, the cluster must have at least one managed node group. 
 
