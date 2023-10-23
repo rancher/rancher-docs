@@ -51,9 +51,9 @@ In v2.7.0, the built-in extensions will not be displayed under the **Available**
 
 ### Importing and Installing Extensions in an Air-Gapped Environment
 
-1. Find the address of the container image you want to import as an extension.
+1. Find the address of the container image you want to import as an extension. Rancher provides some extensions, such as Kubewarden and Elemental, through the `ui-plugin-catalog` container image at https://hub.docker.com/r/rancher/ui-plugin-catalog/tags. You should import and use the latest tagged version of the image to ensure you receive the latest features and security updates.
 
-1. [Create](../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) a registry secret within the `cattle-UI-plugin-system` namespace. Enter the domain of the image address in the **Registry Domain Name** field.
+1. **(Optional)** If the container image is private: [Create](../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) a registry secret within the `cattle-UI-plugin-system` namespace. Enter the domain of the image address in the **Registry Domain Name** field.
 
 1. Click **☰**, then select **Extensions**, under **Configuration**.
 
