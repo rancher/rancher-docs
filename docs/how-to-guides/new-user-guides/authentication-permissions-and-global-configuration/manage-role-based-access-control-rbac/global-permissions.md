@@ -72,7 +72,7 @@ Administrators can enforce custom global permissions in multiple ways:
 ### Combining Built-in GlobalRoles
 
 Rancher provides several GlobalRoles which grant granular permissions for certain common use cases.
-The following table lists each built-in global permission available and whether it is included in the default global permissions, `Administrator`, `Standard User` and `User-Base`.
+The following table lists each built-in global permission and whether it is included in the default global permissions, `Administrator`, `Standard User` and `User-Base`.
 
 | Custom Global Permission           | Administrator | Standard User | User-Base |
 | ---------------------------------- | ------------- | ------------- |-----------|
