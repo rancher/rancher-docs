@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1691795289,
-    "formattedLastUpdatedAt": "Aug 11, 2023",
+    "lastUpdatedAt": 1698098146,
+    "formattedLastUpdatedAt": "Oct 23, 2023",
     "frontMatter": {
         "title": "Registering Existing Clusters"
     },
@@ -357,8 +357,8 @@ const toc = [
         level: 3
     },
     {
-        value: 'EKS, AKS and GKE Clusters',
-        id: 'eks-aks-and-gke-clusters',
+        value: 'Elastic Kubernetes Service (EKS), EKS Anywhere, EKS Anywhere on Bare Metal, Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE)',
+        id: 'elastic-kubernetes-service-eks-eks-anywhere-eks-anywhere-on-bare-metal-azure-kubernetes-service-aks-and-google-kubernetes-engine-gke',
         level: 3
     },
     {
@@ -457,11 +457,11 @@ function MDXContent(_param) {
         parentName: "p",
         "href": "https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control"
     }, `the official Google documentation`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "eks-aks-and-gke-clusters"
-    }, `EKS, AKS and GKE Clusters`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To successfully import them into or provision them from Rancher, Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE) clusters must have at least one managed node group. In addition, GKE Autopilot clusters aren't supported. See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "id": "elastic-kubernetes-service-eks-eks-anywhere-eks-anywhere-on-bare-metal-azure-kubernetes-service-aks-and-google-kubernetes-engine-gke"
+    }, `Elastic Kubernetes Service (EKS), EKS Anywhere, EKS Anywhere on Bare Metal, Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE)`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To successfully import or provision EKS, AKS, and GKE clusters from Rancher, the cluster must have at least one managed node group. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `EKS Anywhere, and EKS Anywhere on Bare Metal clusters can be imported into Rancher with an API address and credentials, as with any downstream cluster. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `GKE Autopilot clusters aren't supported. See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison"
-    }, `Compare GKE Autopilot and Standard`), ` for more information about the difference between GKE modes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }, `Compare GKE Autopilot and Standard`), ` for more information about the differences between GKE modes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "registering-a-cluster"
     }, `Registering a Cluster`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
