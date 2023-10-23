@@ -35,7 +35,7 @@ Since, by default, Google Kubernetes Engine (GKE) doesn't grant the `cluster-adm
 
 To successfully import or provision EKS, AKS, and GKE clusters from Rancher, the cluster must have at least one managed node group. 
 
-EKS-Anywhere, and EKS Anywhere on Bare Metal clusters can be imported into Rancher with an API address and credentials, as with any downstream cluster. 
+EKS Anywhere, and EKS Anywhere on Bare Metal clusters can be imported into Rancher with an API address and credentials, as with any downstream cluster. 
 
 GKE Autopilot clusters aren't supported. See [Compare GKE Autopilot and Standard](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison) for more information about the differences between GKE modes.
 
