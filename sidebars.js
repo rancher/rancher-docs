@@ -1302,6 +1302,16 @@ const sidebars = {
         }
       ]
     },
+    {
+      type: 'category',
+      label: 'Rancher Kubernetes API',
+      items: [
+        "api/quickstart",
+        {
+
+        }
+      ]
+    },
     "contribute-to-rancher",
   ]
 }
