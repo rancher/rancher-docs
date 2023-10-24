@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[6220],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[6546],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 40246:
+/***/ 77781:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters",
-    "id": "version-2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters",
+    "id": "version-2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters",
     "title": "Registering Existing Clusters",
     "description": "The cluster registration feature replaced the feature to import clusters.",
-    "source": "@site/versioned_docs/version-2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md",
+    "source": "@site/versioned_docs/version-2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md",
     "sourceDirName": "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup",
     "slug": "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters",
-    "permalink": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters",
+    "permalink": "/v2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1698098146,
-    "formattedLastUpdatedAt": "Oct 23, 2023",
+    "version": "2.8",
+    "lastUpdatedAt": 1698177285,
+    "formattedLastUpdatedAt": "Oct 24, 2023",
     "frontMatter": {
         "title": "Registering Existing Clusters"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Migrating vSphere In-tree Volumes to Out-of-tree",
-        "permalink": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/migrate-from-in-tree-to-out-of-tree"
+        "permalink": "/v2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/migrate-from-in-tree-to-out-of-tree"
     },
     "next": {
         "title": "Launching Kubernetes with Rancher",
-        "permalink": "/v2.7/pages-for-subheaders/launch-kubernetes-with-rancher"
+        "permalink": "/v2.8/pages-for-subheaders/launch-kubernetes-with-rancher"
     }
 };
 const assets = {};
@@ -357,8 +357,8 @@ const toc = [
         level: 3
     },
     {
-        value: 'Elastic Kubernetes Service (EKS), EKS Anywhere, EKS Anywhere on Bare Metal, Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE)',
-        id: 'elastic-kubernetes-service-eks-eks-anywhere-eks-anywhere-on-bare-metal-azure-kubernetes-service-aks-and-google-kubernetes-engine-gke',
+        value: 'Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE)',
+        id: 'elastic-kubernetes-service-eks-azure-kubernetes-service-aks-and-google-kubernetes-engine-gke',
         level: 3
     },
     {
@@ -440,7 +440,7 @@ function MDXContent(_param) {
         "id": "kubernetes-node-roles"
     }, `Kubernetes Node Roles`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Registered RKE Kubernetes clusters must have all three node roles - etcd, controlplane and worker. A cluster with only controlplane components cannot be registered in Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information on RKE node roles, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/checklist-for-production-ready-clusters#cluster-architecture"
+        "href": "/v2.8/pages-for-subheaders/checklist-for-production-ready-clusters#cluster-architecture"
     }, `best practices.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "permissions"
     }, `Permissions`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To register a cluster in Rancher, you must have `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -457,8 +457,8 @@ function MDXContent(_param) {
         parentName: "p",
         "href": "https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control"
     }, `the official Google documentation`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "elastic-kubernetes-service-eks-eks-anywhere-eks-anywhere-on-bare-metal-azure-kubernetes-service-aks-and-google-kubernetes-engine-gke"
-    }, `Elastic Kubernetes Service (EKS), EKS Anywhere, EKS Anywhere on Bare Metal, Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE)`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To successfully import or provision EKS, AKS, and GKE clusters from Rancher, the cluster must have at least one managed node group. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `EKS Anywhere, and EKS Anywhere on Bare Metal clusters can be imported into Rancher with an API address and credentials, as with any downstream cluster. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `GKE Autopilot clusters aren't supported. See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "id": "elastic-kubernetes-service-eks-azure-kubernetes-service-aks-and-google-kubernetes-engine-gke"
+    }, `Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE)`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To successfully import or provision EKS, AKS, and GKE clusters from Rancher, the cluster must have at least one managed node group. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `EKS Anywhere clusters can be imported/registered into Rancher with an API address and credentials, as with any downstream cluster. EKS Anywhere clusters are treated as imported clusters and do not have full lifecycle support from Rancher. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `GKE Autopilot clusters aren't supported. See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison"
     }, `Compare GKE Autopilot and Standard`), ` for more information about the differences between GKE modes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
@@ -492,7 +492,7 @@ a. Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx *
         parentName: "li"
     }, `Cluster Options`), ` to set environment variables for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents"
+        "href": "/v2.8/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents"
     }, `rancher cluster agent`), `. The environment variables can be set using key value pairs. If rancher agent requires use of proxy to communicate with Rancher server, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
     }, `HTTP_PROXY`), `, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -622,22 +622,22 @@ b. Enable Project Network Isolation to ensure the cluster supports Kubernetes `,
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles"
+        "href": "/v2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles"
     }, `Manage cluster access`), ` through role-based access control`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Enable `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/pages-for-subheaders/monitoring-and-alerting"
+        "href": "/v2.8/pages-for-subheaders/monitoring-and-alerting"
     }, `monitoring, alerts and notifiers`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Enable `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/pages-for-subheaders/logging"
+        "href": "/v2.8/pages-for-subheaders/logging"
     }, `logging`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Enable `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/pages-for-subheaders/istio"
+        "href": "/v2.8/pages-for-subheaders/istio"
     }, `Istio`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Manage projects and workloads`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
@@ -658,7 +658,7 @@ b. Enable Project Network Isolation to ensure the cluster supports Kubernetes `,
         parentName: "li"
     }, `The ability to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes"
+        "href": "/v2.8/getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes"
     }, `upgrade the Kubernetes version`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         parentName: "li",
         "type": "danger"
@@ -680,7 +680,7 @@ b. Enable Project Network Isolation to ensure the cluster supports Kubernetes `,
         parentName: "p"
     }, `disconnects`), ` from the cluster. The cluster remains live, although it's no longer in Rancher. You can still access the deregistered cluster in the same way you did before you registered it.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
+        "href": "/v2.8/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
     }, `Cluster Management Capabilities by Cluster Type`), ` for more information about what features are available for managing registered clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "configuring-rke2-and-k3s-cluster-upgrades"
     }, `Configuring RKE2 and K3s Cluster Upgrades`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
@@ -728,7 +728,7 @@ b. Enable Project Network Isolation to ensure the cluster supports Kubernetes `,
         parentName: "p"
     }, `Available as of v2.6.3`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Authorized Cluster Endpoint (ACE) support has been added for registered RKE2 and K3s clusters. This support includes manual steps you will perform on the downstream cluster to enable the ACE. For additional information on the authorized cluster endpoint, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint"
+        "href": "/v2.8/how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint"
     }, `here`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "title": "Notes:",
         "type": "note"
@@ -752,7 +752,7 @@ b. Enable Project Network Isolation to ensure the cluster supports Kubernetes `,
         parentName: "p"
     }, `kube-api-authn-webhook`), `, then this would also have to be done manually. For more information on this webhook, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint#about-the-kube-api-auth-authentication-webhook"
+        "href": "/v2.8/how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint#about-the-kube-api-auth-authentication-webhook"
     }, `here`), `.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h6", {
         "id": "manual-steps-to-be-taken-on-the-control-plane-of-each-downstream-cluster-to-enable-ace"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
