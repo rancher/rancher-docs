@@ -31,11 +31,11 @@ kubectl create clusterrolebinding cluster-admin-binding \
 
 Since, by default, Google Kubernetes Engine (GKE) doesn't grant the `cluster-admin` role, you must run these commands on GKE clusters before you can register them. To learn more about role-based access control for GKE, please see [the official Google documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control).
 
-### Elastic Kubernetes Service (EKS), EKS Anywhere, EKS Anywhere on Bare Metal, Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE)  
+### Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE)  
 
 To successfully import or provision EKS, AKS, and GKE clusters from Rancher, the cluster must have at least one managed node group. 
 
-EKS Anywhere, and EKS Anywhere on Bare Metal clusters can be imported into Rancher with an API address and credentials, as with any downstream cluster. 
+EKS Anywhere clusters can be imported/registered into Rancher with an API address and credentials, as with any downstream cluster. EKS Anywhere clusters are treated as imported clusters and do not have full lifecycle support from Rancher. 
 
 GKE Autopilot clusters aren't supported. See [Compare GKE Autopilot and Standard](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison) for more information about the differences between GKE modes.
 
