@@ -1,5 +1,5 @@
 ---
-title: EKS Cluster Configuration Reference
+title: EKS Cluster Configuration Reference | 2.6
 ---
 
 <head>

@@ -28,8 +28,8 @@ Etcd is the backing database for Kubernetes and for Rancher. The database may ev
 This is typical in Rancher, as many operations create new `RoleBinding` objects in the upstream cluster as a side effect.
 
 You can reduce the number of `RoleBindings` in the upstream cluster in the following ways:
-* Limit the use of the [Restricted Admin](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions#restricted-admin) role. Apply other roles wherever possible.
-* If you use [external authentication](../../../pages-for-subheaders/authentication-config), use groups to assign roles.
+* Limit the use of the [Restricted Admin](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#restricted-admin) role. Apply other roles wherever possible.
+* If you use [external authentication](../../../pages-for-subheaders/authentication-config.md), use groups to assign roles.
 * Only add users to clusters and projects when necessary.
 * Remove clusters and projects when they are no longer needed.
 * Only use custom roles if necessary.
@@ -59,7 +59,7 @@ You should remove any remaining legacy apps that appear in the Cluster Manager U
 
 ### Using the Authorized Cluster Endpoint (ACE)
 
-An [Authorized Cluster Endpoint](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-authorized-cluster-endpoint) (ACE) provides access to the Kubernetes API of Rancher-provisioned RKE, RKE2, and K3s clusters. When enabled, the ACE adds a context to kubeconfig files generated for the cluster. The context uses a direct endpoint to the cluster, thereby bypassing Rancher. This reduces load on Rancher for cases where unmediated API access is acceptable or preferable. See [Authorized Cluster Endpoint](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-authorized-cluster-endpoint) for more information and configuration instructions.
+An [Authorized Cluster Endpoint](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint) (ACE) provides access to the Kubernetes API of Rancher-provisioned RKE, RKE2, and K3s clusters. When enabled, the ACE adds a context to kubeconfig files generated for the cluster. The context uses a direct endpoint to the cluster, thereby bypassing Rancher. This reduces load on Rancher for cases where unmediated API access is acceptable or preferable. See [Authorized Cluster Endpoint](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint) for more information and configuration instructions.
 
 ### Reducing Event Handler Executions
 
@@ -93,7 +93,7 @@ You should keep the local Kubernetes cluster up to date. This will ensure that y
 
 Etcd is the backend database for Kubernetes and for Rancher. It plays a very important role in Rancher performance.
 
-The two main bottlenecks to [etcd performance](https://etcd.io/docs/v3.4/op-guide/performance/) are disk and network speed. Etcd should run on dedicated nodes with a fast network setup and with SSDs that have high input/output operations per second (IOPS). For more information regarding etcd performance, see [Slow etcd performance (performance testing and optimization)](https://www.suse.com/support/kb/doc/?id=000020100) and [Tuning etcd for Large Installations](../../../how-to-guides/advanced-user-guides/tune-etcd-for-large-installs). Information on disks can also be found in the [Installation Requirements](../../../pages-for-subheaders/installation-requirements#disks).
+The two main bottlenecks to [etcd performance](https://etcd.io/docs/v3.4/op-guide/performance/) are disk and network speed. Etcd should run on dedicated nodes with a fast network setup and with SSDs that have high input/output operations per second (IOPS). For more information regarding etcd performance, see [Slow etcd performance (performance testing and optimization)](https://www.suse.com/support/kb/doc/?id=000020100) and [Tuning etcd for Large Installations](../../../how-to-guides/advanced-user-guides/tune-etcd-for-large-installs.md). Information on disks can also be found in the [Installation Requirements](../../../pages-for-subheaders/installation-requirements.md#disks).
 
 It's best to run etcd on exactly three nodes, as adding more nodes will reduce operation speed. This may be counter-intuitive to common scaling approaches, but it's due to etcd's [replication mechanisms](https://etcd.io/docs/v3.5/faq/#what-is-maximum-cluster-size).
 

@@ -39,7 +39,7 @@ node-taint:
 
 ## Customizing the RancherD Helm Chart
 
-Rancher is launched as a [Helm](https://helm.sh/) chart using the cluster’s [Helm integration.](https://docs.rke2.io/helm/) This means that you can easily customize the application through a manifest file describing your custom parameters.
+Rancher is launched as a [Helm](https://helm.sh/) chart using the cluster’s [Helm integration.](https://docs.rke2.io/helm) This means that you can easily customize the application through a manifest file describing your custom parameters.
 
 The RancherD chart provisions Rancher in a daemonset. It exposes hostport `8080/8443` down to the container port (`80/443`), and uses hostpath to mount certs if needed.
 

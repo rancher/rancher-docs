@@ -34,7 +34,7 @@ This second method, the capability to connect directly to the cluster's Kubernet
 
 To use the authorized cluster endpoint, you will need to configure kubectl to use the extra kubectl context in the kubeconfig file that Rancher generates for you when the RKE cluster is created. This file can be downloaded from the cluster view in the Rancher UI, and the instructions for configuring kubectl are on [this page.](use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster)
 
-These methods of communicating with downstream Kubernetes clusters are also explained in the [architecture page](../../../../pages-for-subheaders/rancher-manager-architecture.md#communicating-with-downstream-user-clusters) in the larger context of explaining how Rancher works and how Rancher communicates with downstream clusters.
+These methods of communicating with downstream Kubernetes clusters are also explained in the [architecture page](../../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md) in the larger context of explaining how Rancher works and how Rancher communicates with downstream clusters.
 
 ### About the kube-api-auth Authentication Webhook
 

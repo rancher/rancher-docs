@@ -282,5 +282,5 @@ We have also removed support for the old configuration format that was deprecate
 
 Details about the change and migration instructions can be found in the [cert-manager v0.10 to v0.11 upgrade instructions](https://cert-manager.io/docs/installation/upgrading/upgrading-0.10-0.11/).
 
-More info about [cert-manager upgrade information](https://cert-manager.io/docs/installation/upgrading/).
+More info about [cert-manager upgrade information](https://cert-manager.io/docs/installation/upgrade/).
 

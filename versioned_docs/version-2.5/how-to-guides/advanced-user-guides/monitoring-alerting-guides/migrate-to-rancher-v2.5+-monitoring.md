@@ -8,7 +8,7 @@ If you previously enabled Monitoring, Alerting, or Notifiers in Rancher before v
 
 As of v2.2.0, Rancher's Cluster Manager allowed users to enable Monitoring & Alerting V1 (both powered by [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator)) independently within a cluster.
 
-When Monitoring is enabled, Monitoring V1 deploys [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/docs/grafana/latest/getting-started/what-is-grafana/) onto a cluster to monitor the state of processes of your cluster nodes, Kubernetes components, and software deployments and create custom dashboards to make it easy to visualize collected metrics.
+When Monitoring is enabled, Monitoring V1 deploys [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/docs/grafana/latest/introduction/) onto a cluster to monitor the state of processes of your cluster nodes, Kubernetes components, and software deployments and create custom dashboards to make it easy to visualize collected metrics.
 
 Monitoring V1 could be configured on both a cluster-level and on a project-level and would automatically scrape certain workloads deployed as Apps on the Rancher cluster.
 
@@ -116,12 +116,11 @@ or add the Prometheus Rule through the Cluster Explorer
 
 ![](/img/monitoring/migration/alert_2.4_to_2.5_target.png)
 
-For more details on how to configure PrometheusRules in Monitoring V2 see [Monitoring Configuration](../../../pages-for-subheaders/monitoring-v2-configuration-guides.md#prometheusrules).
+For more details on how to configure PrometheusRules in Monitoring V2 see [Monitoring Configuration](../../advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/prometheusrules.md).
 
 ### Migrating Notifiers
 
-There is no direct equivalent for how notifiers work in Monitoring V1. Instead you have to replicate the desired setup with [Routes and Receivers](../../../pages-for-subheaders/monitoring-v2-configuration-guides.md#alertmanager-config) in Monitoring V2.
-
+There is no direct equivalent for how notifiers work in Monitoring V1. Instead you have to replicate the desired setup with [Routes and Receivers](../../advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/alertmanager.md) in Monitoring V2.
 
 ### Migrating for RKE Template Users
 

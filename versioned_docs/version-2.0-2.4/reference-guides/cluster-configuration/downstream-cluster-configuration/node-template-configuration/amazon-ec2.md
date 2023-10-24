@@ -45,7 +45,7 @@ Please refer to [Amazon EC2 security group when using Node Driver](../../../../g
 
 Configure the instances that will be created. Make sure you configure the correct **SSH User** for the configured AMI.
 
-If you need to pass an **IAM Instance Profile Name** (not ARN), for example, when you want to use a [Kubernetes Cloud Provider](../../../../pages-for-subheaders/set-up-cloud-providers.md), you will need an additional permission in your policy. See [Example IAM policy with PassRole](#example-iam-policy-with-passrole) for an example policy.
+If you need to pass an **IAM Instance Profile Name** (not ARN), for example, when you want to use a [Kubernetes Cloud Provider](../../../../pages-for-subheaders/set-up-cloud-providers.md), you will need an additional permission in your policy. See [Example IAM policy with PassRole](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy-with-passrole) for an example policy.
 
 ### Engine Options
 

@@ -20,11 +20,11 @@ On the Rancher Users Slack, the channel for developers is **#developer**.
 
 ## Rancher Docs
 
-If you have suggestions for the documentation on this website, [open](https://github.com/rancher/rancher-docs/issues/new/choose) an issue in the main [Rancher docs](https://github.com/rancher/rancher-docs) repository. This repo contains documentation for Rancher v2.0 and later. 
+If you have suggestions for the documentation on this website, [open](https://github.com/rancher/rancher-docs/issues/new/choose) an issue in the main [Rancher docs](https://github.com/rancher/rancher-docs) repository. This repo contains documentation for Rancher v2.0 and later.
 
 See the [Rancher docs README](https://github.com/rancher/rancher-docs#readme) for more details on contributing to and building the Rancher v2.x docs repo.
 
-For documentation describing Rancher v1.6 and earlier, see the [Rancher 1.x docs](https://github.com/rancher/rancher.github.io) repo, which contains source files for https://rancher.com/docs/rancher/v1.6/en/. 
+For documentation describing Rancher v1.6 and earlier, see the [Rancher 1.x docs](https://github.com/rancher/rancher.github.io) repo, which contains source files for https://rancher.com/docs/rancher/v1.6/en/.
 
 ## Rancher Repositories
 
