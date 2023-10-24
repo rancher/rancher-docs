@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1697649307,
-    "formattedLastUpdatedAt": "Oct 18, 2023",
+    "lastUpdatedAt": 1698171107,
+    "formattedLastUpdatedAt": "Oct 24, 2023",
     "frontMatter": {
         "title": "Rollbacks"
     },
@@ -456,7 +456,7 @@ function MDXContent(_param) {
         "id": "step-2-restore-the-backup-and-bring-up-rancher"
     }, `Step 2: Restore the Backup and Bring Up Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `At this point, there should be no Rancher-related resources on the upstream cluster. Therefore, the next step will be the same as if you were migrating Rancher to a new cluster that contains no Rancher resources.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Follow these `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "./migrate-rancher-to-new-cluster.md"
+        "href": "/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster"
     }, `instructions`), ` to install the Rancher-Backup Helm chart and restore Rancher to its previous state.
 Please keep in mind that:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
