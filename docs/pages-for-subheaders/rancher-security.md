@@ -91,7 +91,3 @@ For recommendations on securing your Kubernetes cluster, refer to the [Kubernete
 ### Rancher Security Best Practices
 
 For recommendations on securing your Rancher Manager deployments, refer to the [Rancher Security Best Practices](../reference-guides/rancher-security/rancher-security-best-practices.md) guide.
-
-### Rancher Webhook Hardening
-
-The Rancher webhook deploys on both the upstream (local) Rancher cluster and all provisioned clusters. See the [Hardening the Rancher Webhook](../reference-guides/rancher-security/rancher-webhook-hardening.md) guide for recommendations on protecting your clusters.
