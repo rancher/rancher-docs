@@ -41,7 +41,7 @@ In v2.7.0, the built-in extensions will not be displayed under the **Available**
 
     ![Manage repositories](/img/manage-repos.png)
 
-5. Under the **Available** tab, click **Install** on the desired extension and version as in the example below. Note that you can easily update your extension as the button to **Update** will appear on the extension if one is available.
+5. Under the **Available** tab, click **Install** on the desired extension and version as in the example below. You can also update your extension from this screen, as the button to **Update** will appear on the extension if one is available.
 
     ![Install Kubewarden](/img/install-kubewarden.png)
 
@@ -75,7 +75,7 @@ In v2.7.0, the built-in extensions will not be displayed under the **Available**
 
 ## Uninstalling Extensions
 
-There are two ways in which you can uninstall or disable your extensions:
+There are two ways to uninstall or disable an extension:
 
 1. Under the **Installed** tab, click the **Uninstall** button on the extension you wish to remove.
 
