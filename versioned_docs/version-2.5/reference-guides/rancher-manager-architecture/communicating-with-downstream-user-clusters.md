@@ -2,6 +2,10 @@
 title: Communicating with Downstream User Clusters
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters"/>
+</head>
+
 This section describes how Rancher provisions and manages the downstream user clusters that run your apps and services.
 
 The below diagram shows how the cluster controllers, cluster agents, and node agents allow Rancher to control downstream clusters.
@@ -129,4 +133,4 @@ The GitHub repositories for Rancher can be found at the following links:
 - [Rancher CLI](https://github.com/rancher/cli)
 - [Catalog applications](https://github.com/rancher/helm)
 
-This is a partial list of the most important Rancher repositories. For more details about Rancher source code, refer to the section on [contributing to Rancher.](../../contribute-to-rancher.md#repositories) To see all libraries and projects used in Rancher, see the [`go.mod` file](https://github.com/rancher/rancher/blob/master/go.mod) in the `rancher/rancher` repository.
+This is a partial list of the most important Rancher repositories. For more details about Rancher source code, refer to the section on [contributing to Rancher.](../../contribute-to-rancher.md#rancher-repositories) To see all libraries and projects used in Rancher, see the [`go.mod` file](https://github.com/rancher/rancher/blob/master/go.mod) in the `rancher/rancher` repository.

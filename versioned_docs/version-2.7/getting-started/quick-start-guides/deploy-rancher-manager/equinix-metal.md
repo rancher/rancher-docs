@@ -39,8 +39,8 @@ Begin deploying an Equinix Metal Host. Equinix Metal Servers can be provisioned 
 
 :::note Notes:
 
-- When provisioning a new Equinix Metal Server via the CLI or API you will need to be able to provide the following information:  project-id, plan, metro, and the operating-system
-- When using a cloud-hosted virtual machine you need to allow inbound TCP communication to ports 80 and 443.  Please see your cloud-host's documentation for information regarding port configuration.
+- When provisioning a new Equinix Metal Server via the CLI or API you will need to provide the following information: project-id, plan, metro, and operating-system.
+- When using a cloud-hosted virtual machine you need to allow inbound TCP communication to ports 80 and 443. Please see your cloud host's documentation for information regarding port configuration.
 - For a full list of port requirements, refer to [Docker Installation](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md).
 - Provision the host according to our [Requirements](../../../pages-for-subheaders/installation-requirements.md).
 

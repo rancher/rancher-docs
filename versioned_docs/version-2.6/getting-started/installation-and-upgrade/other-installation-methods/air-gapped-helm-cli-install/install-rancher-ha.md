@@ -117,7 +117,7 @@ Copy the fetched charts to a system that has access to the Rancher server cluste
 
 ##### 1. Install Cert-Manager
 
-Install cert-manager with the options you would like to use to install the chart. Remember to set the `image.repository` option to pull the image from your private registry. This will create a `cert-manager` directory with the Kubernetes manifest files.
+Install cert-manager with the same options you would use to install the chart. Remember to set the `image.repository` option to pull the image from your private registry.
 
 :::note
 
@@ -139,7 +139,7 @@ If you are using self-signed certificates, install cert-manager:
 2. Create the cert-manager CustomResourceDefinitions (CRDs).
 
     ```plain
-    kubectl apply -f cert-manager/cert-manager-crd.yaml
+    kubectl apply -f cert-manager-crd.yaml
     ```
 
 3. Install cert-manager.

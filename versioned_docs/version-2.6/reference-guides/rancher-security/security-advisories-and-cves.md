@@ -2,6 +2,10 @@
 title: Security Advisories and CVEs
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-security/security-advisories-and-cves"/>
+</head>
+
 Rancher is committed to informing the community of security issues in our products. Rancher will publish security advisories and CVEs (Common Vulnerabilities and Exposures) for issues we have resolved. New security advisories are also published in Rancher's GitHub [security page](https://github.com/rancher/rancher/security/advisories).
 
 | ID | Description | Date | Resolution |

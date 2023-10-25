@@ -2,6 +2,10 @@
 title: Backup Configuration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/backup-restore-configuration/backup-configuration"/>
+</head>
+
 The Backup Create page lets you configure a schedule, enable encryption and specify the storage location for your backups.
 
 ![](/img/backup_restore/backup/backup.png)

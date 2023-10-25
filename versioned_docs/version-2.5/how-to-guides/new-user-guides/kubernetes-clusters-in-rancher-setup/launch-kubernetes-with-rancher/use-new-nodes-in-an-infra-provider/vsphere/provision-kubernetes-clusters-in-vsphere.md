@@ -51,8 +51,6 @@ If you have a cluster with DRS enabled, setting up [VM-VM Affinity Rules](https:
 
 ## Creating a vSphere Cluster
 
-The a vSphere cluster is created in Rancher depends on the Rancher version.
-
 1. [Create your cloud credentials](#1-create-your-cloud-credentials)
 2. [Create a node template with your cloud credentials](#2-create-a-node-template-with-your-cloud-credentials)
 3. [Create a cluster with node pools using the node template](#3-create-a-cluster-with-node-pools-using-the-node-template)
