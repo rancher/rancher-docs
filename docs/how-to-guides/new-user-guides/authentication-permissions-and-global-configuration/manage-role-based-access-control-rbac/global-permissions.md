@@ -108,13 +108,14 @@ You can create custom GlobalRoles to satisfy use cases not directly addressed by
 
 Create custom GlobalRole through the UI or through automation (such as the Rancher Kubernetes API). You can specify the same type of rules as the rules for upstream roles and clusterRoles. 
 
-#### Escalate and Bind verb
+#### Escalate and Bind verbs
 
 When giving permissions on GlobalRoles, keep in mind that Rancher respects the `escalate` and `bind` verbs, in a similar fashion to [Kubernetes](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#restrictions-on-role-creation-or-update).
 
 Both of these verbs, which are given on the GlobalRoles resource, can grant users the permission to bypass Rancher's privilege escalation checks. This potentially allows users to become admins. Since this represents a serious security risk, `bind` and `escalate` should be distributed to users with great caution. 
 
 The `escalate` verb allows users to change a GlobalRole and add any permission, even if the users doesn't have the permissions in the current GlobalRole or the new version of the GlobalRole. 
+
 The `bind` verb allows users to create a GlobalRoleBinding to the specified GlobalRole, even if they do not have the permissions in the GlobalRole. 
 
 :::danger
@@ -123,7 +124,7 @@ The wildcard verb `*` also includes the `bind` and `escalate` verbs. This means 
 
 :::
 
-##### Examples
+##### Custom GlobalRole Examples
 
 To grant permission to escalate only the `test-gr` GlobalRole:
 
@@ -171,7 +172,7 @@ rules:
   - 'create'
 ```
 
-Granting `*` permissions (which also includes both `escalate` and `bind`):
+Granting `*` permissions (which includes both `escalate` and `bind`):
 
 ```yaml
 rules:
@@ -183,11 +184,11 @@ rules:
   - '*'
 ```
 
-#### Permissions on Downstream Clusters
+#### GlobalRole Permissions on Downstream Clusters
 
 GlobalRoles can grant one or more RoleTemplates on every downstream cluster through the `inheritedClusterRoles` field. Values in this field must refer to a RoleTemplate which exists and has a `context` of Cluster.
 
-With this field, users gain the specified permissions on all current or future downstream clusters. For an example, consider the following GlobalRole:
+With this field, users gain the specified permissions on all current or future downstream clusters. For example, consider the following GlobalRole:
 
 ```yaml
 apiVersion: management.cattle.io/v3
@@ -203,7 +204,7 @@ Any user with this permission will be a cluster-owner on all downstream clusters
 
 :::danger
 
-Using this field on [default Global Roles](#configuring-default-global-permissions) may result in users gaining excessive permissions.
+Using this field on [default GlobalRoles](#configuring-default-global-permissions) may result in users gaining excessive permissions.
 
 :::
 
@@ -291,7 +292,7 @@ To refresh group memberships,
 
 :::warning Deprecated
 
-The Restricted Admin role is deprecated, and will be removed in a future version of Rancher (2.10 or higher). As an alternative, you should make a custom role with the desired permissions instead of relying on this built-in role).
+The Restricted Admin role is deprecated, and will be removed in a future version of Rancher (2.10 or higher). You should make a custom role with the desired permissions instead of relying on this built-in role.
 
 :::
 
