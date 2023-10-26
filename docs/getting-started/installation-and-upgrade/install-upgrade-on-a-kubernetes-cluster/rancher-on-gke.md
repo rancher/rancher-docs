@@ -154,7 +154,7 @@ helm upgrade --install \
   --namespace ingress-nginx \
   --set controller.service.type=LoadBalancer \
   --version 4.0.18 \
-  --create-namespace 
+  --create-namespace
 ```
 
 ## 8. Get the Load Balancer IP
@@ -202,4 +202,4 @@ In Rancher v2.7.5, if you intend to use the default GKE ingress on your cluster 
 --set service.type=NodePort
 ```
 
-This is necessary because of compatibility issues between this setup and ClusterIP, the default type for `cattle-system/rancher`. 
+This is necessary because of compatibility issues between this setup and ClusterIP, the default type for `cattle-system/rancher`.
