@@ -152,7 +152,7 @@ Choose from the following options:
 >Create a self-signed certificate.
 >
 >- The certificate files must be in PEM format.
->- The certificate files must be encoded in [base64](#base64).
+>- The certificate files must be encoded in base64.
 >- In your certificate file, include all intermediate certificates in the chain. Order your certificates with your certificate first, followed by the intermediates. For an example, see [Certificate Troubleshooting.](../../../other-installation-methods/rancher-on-a-single-node-with-docker/certificate-troubleshooting.md)
 
 In `kind: Secret` with `name: cattle-keys-ingress`, replace `<BASE64_CA>` with the base64 encoded string of the CA Certificate file (usually called `ca.pem` or `ca.crt`)

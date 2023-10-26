@@ -22,5 +22,5 @@ jobs:
         run: yarn run remark --quiet --use remark-validate-links --use remark-lint-no-dead-urls ./docs
       - name: Test build website
         env:
-          NODE_OPTIONS: "--max_old_space_size=6144"
+          NODE_OPTIONS: "--max_old_space_size=4096"
         run: yarn build --no-minify

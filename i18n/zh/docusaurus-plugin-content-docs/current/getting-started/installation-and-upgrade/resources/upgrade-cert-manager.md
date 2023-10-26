@@ -92,8 +92,7 @@ Rancher 使用 cert-manager 为 Rancher 高可用部署自动生成和续期 TLS
    ```plain
    helm install \
      cert-manager jetstack/cert-manager \
-     --namespace cert-manager \
-     --version v1.11.0
+     --namespace cert-manager
    ```
 
 1. [恢复备份资源](https://cert-manager.io/docs/tutorials/backup/#restoring-resources)：
@@ -125,7 +124,7 @@ Rancher 使用 cert-manager 为 Rancher 高可用部署自动生成和续期 TLS
 1. 从 [Helm Chart 仓库](https://artifacthub.io/packages/helm/cert-manager/cert-manager)中获取最新可用的 cert-manager Chart：
 
    ```plain
-   helm fetch jetstack/cert-manager --version v1.11.0
+   helm fetch jetstack/cert-manager
    ```
 
 1. 使用安装 Chart 的选项来渲染 cert-manager 模板。记住要设置 `image.repository` 选项，以从你的私有镜像仓库拉取镜像。此操作会创建一个包含 Kubernetes manifest 文件的 `cert-manager` 目录。
@@ -277,5 +276,5 @@ v0.11 版本标志着删除先前 Cert-Manager 版本中使用的 v1alpha1 API�
 
 如需了解变更细节以及迁移说明，请参见[将 Cert-Manager 从 v0.10 升级到 v0.11](https://cert-manager.io/docs/installation/upgrading/upgrading-0.10-0.11/)。
 
-如需获得更多信息，请参见 [Cert-Manager 升级](https://cert-manager.io/docs/installation/upgrading/)。
+如需获得更多信息，请参见 [Cert-Manager 升级](https://cert-manager.io/docs/installation/upgrade/)。
 

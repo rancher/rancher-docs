@@ -3,7 +3,7 @@ title: Backup Storage Location Configuration
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com//reference-guides/backup-restore-configuration/storage-configuration"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/backup-restore-configuration/storage-configuration"/>
 </head>
 
 Configure a storage location where all backups are saved by default. You will have the option to override this with each backup, but will be limited to using an S3-compatible object store.
@@ -21,7 +21,7 @@ You can choose to not have any operator-level storage location configured. If yo
 
 | Parameter | Description |
 | -------------- | -------------- |
-| Credential Secret | Choose the credentials for S3 from your secrets in Rancher. [Example](examples.md#example-credential-secret-for-storing-backups-in-s3). |
+| Credential Secret | Choose the credentials for S3 from your secrets in Rancher. [Example](backup-configuration.md#example-credentialsecret). |
 | Bucket Name | Enter the name of the [S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) where the backups will be stored. Default: `rancherbackups`. |
 | Region | The [AWS region](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/) where the S3 bucket is located. |
 | Folder | The [folder in the S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/using-folders.html) where the backups will be stored. If this field is left empty, the default behavior is to store the backup files in the root folder of the S3 bucket. |

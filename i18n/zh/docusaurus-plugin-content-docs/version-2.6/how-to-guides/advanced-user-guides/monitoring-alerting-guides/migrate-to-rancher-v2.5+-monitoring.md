@@ -9,7 +9,7 @@ title: 迁移到 Rancher 2.5+ Monitoring
 
 从 2.2.0 开始，旧版 Rancher UI 中的全局视图允许用户在集群内独立启用 Monitoring & Alerting V1（均由 [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator) 提供支持）。
 
-启用 Monitoring 后，Monitoring V1 会将 [Prometheus](https://prometheus.io/) 和 [Grafana](https://grafana.com/docs/grafana/latest/getting-started/what-is-grafana/) 部署到集群上，从而监控集群节点、Kubernetes 组件和软件部署的进程状态，并创建自定义仪表板来简化指标的可视化。
+启用 Monitoring 后，Monitoring V1 会将 [Prometheus](https://prometheus.io/) 和 [Grafana](https://grafana.com/docs/grafana/latest/introduction/) 部署到集群上，从而监控集群节点、Kubernetes 组件和软件部署的进程状态，并创建自定义仪表板来简化指标的可视化。
 
 Monitoring V1 可以在集群级别和项目级别进行配置，并且会自动抓取 Rancher 集群上部署为应用的某些工作负载。
 

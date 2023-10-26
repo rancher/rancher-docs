@@ -14,11 +14,6 @@ For the instructions to upgrade Rancher installed with Docker, refer to [this pa
 
 To upgrade the components in your Kubernetes cluster, or the definition of the [Kubernetes services](https://rancher.com/docs/rke/latest/en/config-options/services/) or [add-ons](https://rancher.com/docs/rke/latest/en/config-options/add-ons/), refer to the [upgrade documentation for RKE](https://rancher.com/docs/rke/latest/en/upgrades/), the Rancher Kubernetes Engine.
 
-- [Prerequisites](#prerequisites)
-- [Upgrade Outline](#upgrade-outline)
-- [Known Upgrade Issues](#known-upgrade-issues)
-- [RKE Add-on Installs](#rke-add-on-installs)
-
 ## Prerequisites
 
 ### Access to kubeconfig

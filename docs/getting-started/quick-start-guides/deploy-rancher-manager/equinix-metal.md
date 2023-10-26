@@ -33,7 +33,7 @@ This Quick Start Guide is divided into different tasks for easier consumption.
 
 ### 1. Provision a Equinix Metal Host
 
-Begin deploying an Equinix Metal Host. Equinix Metal Servers can be provisioned from either the Equinix Metal console, CLI, or API. You can find instructions for each deployment type on the [Equinix Metal deployment documentation](https://metal.equinix.com/developers/docs/deploy/on-demand/). You can find additional documentation on Equinix Metal server types and prices below:
+Begin deploying an Equinix Metal Host. Equinix Metal Servers can be provisioned from either the Equinix Metal console, API, or CLI. You can find instructions for each deployment type on the [Equinix Metal deployment documentation](https://metal.equinix.com/developers/docs/deploy/on-demand/). You can find additional documentation on Equinix Metal server types and prices below:
   - [Equinix Metal Server Types](https://metal.equinix.com/developers/docs/servers/about/)
   - [Equinix Metal Pricing](https://metal.equinix.com/developers/docs/servers/server-specs/)
 

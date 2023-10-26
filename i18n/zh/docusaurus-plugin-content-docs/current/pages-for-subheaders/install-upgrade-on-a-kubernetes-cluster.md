@@ -145,7 +145,7 @@ Rancher Management Server 默认需要 SSL/TLS 配置来保证访问的安全性
 
 ```
 # 如果你手动安装了CRD，而不是在 Helm 安装命令中添加了 `--set installCRDs=true` 选项，你应该在升级 Helm Chart 之前升级 CRD 资源。
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/<VERSION>/cert-manager.crds.yaml
 
 # 添加 Jetstack Helm 仓库
 helm repo add jetstack https://charts.jetstack.io
@@ -156,8 +156,7 @@ helm repo update
 # 安装 cert-manager Helm Chart
 helm install cert-manager jetstack/cert-manager \
   --namespace cert-manager \
-  --create-namespace \
-  --version v1.11.0
+  --create-namespace
 ```
 
 安装完 cert-manager 后，你可以通过检查 cert-manager 命名空间中正在运行的 Pod 来验证它是否已正确部署：

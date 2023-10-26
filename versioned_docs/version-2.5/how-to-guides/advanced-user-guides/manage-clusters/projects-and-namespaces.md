@@ -106,7 +106,7 @@ Standard users are only authorized for project access in two situations:
 
 ## Pod Security Policies
 
-Rancher extends Kubernetes to allow the application of [Pod Security Policies](https://kubernetes.io/docs/concepts/policluster-admin/pod-security-policy/) at the [project level](../manage-projects/manage-pod-security-policies.md) in addition to the [cluster level.](./add-a-pod-security-policy.md) However, as a best practice, we recommend applying Pod Security Policies at the cluster level.
+Rancher extends Kubernetes to allow the application of [Pod Security Policies](https://kubernetes.io/docs/concepts/policy/pod-security-policy/) at the [project level](../manage-projects/manage-pod-security-policies.md) in addition to the [cluster level.](./add-a-pod-security-policy.md) However, as a best practice, we recommend applying Pod Security Policies at the cluster level.
 
 ## Creating Projects
 

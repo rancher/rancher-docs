@@ -2,7 +2,7 @@
 title: Global Permissions
 ---
 
-<head> 
+<head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions"/>
 </head>
 
@@ -93,7 +93,7 @@ When a user logs into Rancher using an external authentication provider for the 
 
 To see the default permissions for new users, go to the **Global** view and click **Security > Roles.** On the **Global** tab, there is a column named **New User Default.** When adding a new local user, the user receives all default global permissions that are marked as checked in this column, and you can [change them to meet your needs.](#configuring-default-global-permissions)
 
-Permissions can be assigned to an individual user with [these steps.](#configuring-global-permissions-for-existing-individual-users)
+Permissions can be assigned to an individual user with [these steps.](#configuring-global-permissions-for-individual-users)
 
 You can [assign a role to everyone in the group at the same time](#configuring-global-permissions-for-groups) if the external authentication provider supports groups.
 

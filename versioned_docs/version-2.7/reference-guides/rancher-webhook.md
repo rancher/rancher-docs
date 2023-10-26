@@ -34,11 +34,11 @@ It provides essential protection for Rancher-managed clusters, preventing securi
 
 ## What Resources Does the Webhook Validate?
 
-You can find an in-progress list of the resources that the webhook validates in the [webhook's repo](https://github.com/rancher/webhook/blob/release/v0.4/docs.md). These docs are organized by group/version and resource (top-level header is group/version, next level header is resource). Checks specific to one version can be found by viewing the `docs.md` file associated with a particular tag (note that webhook versions prior to `v0.3.6` won't have this file).
+You can find an in-progress list of the resources that the webhook validates in the [webhook's repo](https://github.com/rancher/webhook/blob/release/v0.4/docs.md). These docs are organized by group/version (top-level header) and resource (next level header). The checks specific to one version can be found by viewing the `docs.md` file associated with a particular tag. Note that webhook versions prior to `v0.3.6` lack this file.
 
 ## Bypassing the Webhook
 
-Sometimes, you must bypass Rancher's webhook validation to perform emergency restore operations or fix other critical issues. The bypass operation is exhaustive, meaning no webhook validations or mutations apply when you use it. It is not possible to bypass some validations or mutations and have others still apply - they are either all bypassed or all active.
+Sometimes, you must bypass Rancher's webhook validation to perform emergency restore operations or fix other critical issues. The bypass operation is exhaustive, meaning that no webhook validations or mutations apply when you use it. It's not possible to bypass some validations or mutations and have others still apply. They are either all bypassed or all active.
 
 :::danger
 
@@ -65,7 +65,11 @@ helm upgrade --reuse-values rancher-webhook rancher-charts/rancher-webhook  -n c
 ```
 **Note:** This temporary workaround may violate an environment's security policy. This workaround also requires that port 9443 is unused on the host network.
 
+<<<<<<< HEAD
 **Note:** Helm uses secrets by default. This is a datatype that some webhook versions validate to store information. In these cases, directly update the deployment with the hostNetwork=true value using kubectl, then run the helm commands listed above to avoid drift between the helm configuration and the actual state in the cluster.
+=======
+**Note:** Helm, by default, uses a type that some webhook versions validate (secrets) to store information. In these cases, it's recommended to first directly update the deployment with the hostNetwork=true value using kubectl, and then perform the helm commands listed above to avoid drift between the helm configuration and the actual state in the cluster.
+>>>>>>> main
 
 ### Private GKE Cluster
 
@@ -80,7 +84,7 @@ This issue occurs because firewall rules restrict communication between the API 
 
 The webhook provides extra validations on [namespaces](https://github.com/rancher/webhook/blob/release/v0.4/docs.md#psa-label-validation). One of these validations ensures that users can only update PSA relevant labels if they have the proper permissions (`updatepsa` for `projects` in `management.cattle.io`). This can result in specific operators, such as Tigera or Trident, failing when they attempt to deploy namespaces with PSA labels. There are several ways to resolve this issue:
 
-- Configure the application to create a namespace with no PSA labels. If users wish to apply a PSA to these namespaces, they can add them to a project with the desired PSA after configuration. See the [docs on PSS and PSA resources](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards) for instructions on how.
+- Configure the application to create a namespace with no PSA labels. If users wish to apply a PSA to these namespaces, they can add them to a project with the desired PSA after configuration. See the [docs on PSS and PSA resources](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards.md) for instructions on how.
   - This is the preferred option, though not all applications can be configured in this fashion.
 - Manually grant the operator permissions to manage PSAs for namespaces.
   - This option will introduce security risks, since the operator will now be able to set the PSA for the namespaces it has access to. This could allow the operator to deploy a privileged pod, or effect cluster takeover through other means.

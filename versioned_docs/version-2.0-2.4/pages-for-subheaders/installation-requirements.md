@@ -16,7 +16,7 @@ Make sure the node(s) for the Rancher server fulfill the following requirements:
 - [Operating Systems and Container Runtime Requirements](#operating-systems-and-container-runtime-requirements)
 - [Hardware Requirements](#hardware-requirements)
   - [CPU and Memory](#cpu-and-memory)
-  - [CPU and Memory for Rancher before v2.4.0](#cpu-and-memory-for-rancher-before-v2-4-0)
+  - [CPU and Memory for Rancher before v2.4.0](#cpu-and-memory-for-rancher-before-v240)
   - [Disks](#disks)
 - [Networking Requirements](#networking-requirements)
   - [Node IP Addresses](#node-ip-addresses)
@@ -71,7 +71,7 @@ Hardware requirements scale based on the size of your Rancher deployment. Provis
 
 These requirements apply to each host in an [RKE Kubernetes cluster where the Rancher server is installed.](install-upgrade-on-a-kubernetes-cluster.md)
 
-Performance increased in Rancher v2.4.0. For the requirements of Rancher before v2.4.0, refer to [this section.](#cpu-and-memory-for-rancher-before-v2-4-0)
+Performance increased in Rancher v2.4.0. For the requirements of Rancher before v2.4.0, refer to [this section.](#cpu-and-memory-for-rancher-before-v240)
 
 | Deployment Size | Clusters   | Nodes        | vCPUs  | RAM     |
 | --------------- | ---------- | ------------ | -------| ------- |

@@ -14,21 +14,6 @@ Any Helm charts from a global catalog can be used to deploy and manage multi-clu
 
 After creating a multi-cluster application, you can program a [Global DNS entry](helm-charts-in-rancher/globaldns.md) to make it easier to access the application.
 
-- [Prerequisites](#prerequisites)
-- [Launching a multi-cluster app](#launching-a-multi-cluster-app)
-- [Multi-cluster app configuration options](#multi-cluster-app-configuration-options)
-  - [Targets](#targets)
-  - [Upgrades](#upgrades)
-  - [Roles](#roles)
-- [Application configuration options](#application-configuration-options)
-  - [Using a questions.yml file](#using-a-questions-yml-file)
-  - [Key value pairs for native Helm charts](#key-value-pairs-for-native-helm-charts)
-  - [Members](#members)
-  - [Overriding application configuration options for specific projects](#overriding-application-configuration-options-for-specific-projects)
-- [Upgrading multi-cluster app roles and projects](#upgrading-multi-cluster-app-roles-and-projects)
-- [Multi-cluster application management](#multi-cluster-application-management)
-- [Deleting a multi-cluster application](#deleting-a-multi-cluster-application)
-
 ## Prerequisites
 
 To create a multi-cluster app in Rancher, you must have at least one of the following permissions:

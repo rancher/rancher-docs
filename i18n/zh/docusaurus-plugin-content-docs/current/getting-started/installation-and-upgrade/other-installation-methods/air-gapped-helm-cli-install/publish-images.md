@@ -67,7 +67,7 @@ title: '2. 收集镜像并发布到私有仓库'
    ```plain
    helm repo add jetstack https://charts.jetstack.io
    helm repo update
-   helm fetch jetstack/cert-manager --version v1.11.0
+   helm fetch jetstack/cert-manager
    helm template ./cert-manager-<version>.tgz | awk '$1 ~ /image:/ {print $2}' | sed s/\"//g >> ./rancher-images.txt
    ```
 
@@ -246,7 +246,7 @@ Linux 镜像需要在 Linux 主机上收集和推送，但是你必须先将 Win
    ```plain
    helm repo add jetstack https://charts.jetstack.io
    helm repo update
-   helm fetch jetstack/cert-manager --version v1.11.0
+   helm fetch jetstack/cert-manager
    helm template ./cert-manager-<version>.tgz | awk '$1 ~ /image:/ {print $2}' | sed s/\"//g >> ./rancher-images.txt
    ```
 

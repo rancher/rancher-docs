@@ -2,6 +2,10 @@
 title: Communicating with Downstream User Clusters
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters"/>
+</head>
+
 This section describes how Rancher provisions and manages the downstream user clusters that run your apps and services.
 
 The below diagram shows how the cluster controllers, cluster agents, and node agents allow Rancher to control downstream clusters.
@@ -60,7 +64,6 @@ An authorized cluster endpoint (ACE) allows users to connect to the Kubernetes A
 
 > ACE is available on RKE, RKE2, and K3s clusters that are provisioned or registered with Rancher. It's not available on  clusters in a hosted Kubernetes provider, such as Amazon's EKS.
 
-
 There are two main reasons why a user might need the authorized cluster endpoint:
 
 - To access a downstream user cluster while Rancher is down
@@ -74,7 +77,15 @@ Like the authorized cluster endpoint, the `kube-api-auth` authentication service
 
 With this endpoint enabled for the downstream cluster, Rancher generates an extra Kubernetes context in the kubeconfig file in order to connect directly to the cluster. This file has the credentials for `kubectl` and `helm`.
 
-You will need to use a context defined in this kubeconfig file to access the cluster if Rancher goes down. Therefore, we recommend exporting the kubeconfig file so that if Rancher goes down, you can still use the credentials in the file to access your cluster. For more information, refer to the section on accessing your cluster with [kubectl and the kubeconfig file.](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)
+:::note
+
+To use the ACE context in your kubeconfig, run `kubectl use-context <ace context name>` after enabling it.
+
+:::
+
+For more information, refer to the section on accessing your cluster with [kubectl and the kubeconfig file](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md).
+
+We recommend exporting the kubeconfig file so that if Rancher goes down, you can still use the credentials in the file to access your cluster.
 
 ## Impersonation
 

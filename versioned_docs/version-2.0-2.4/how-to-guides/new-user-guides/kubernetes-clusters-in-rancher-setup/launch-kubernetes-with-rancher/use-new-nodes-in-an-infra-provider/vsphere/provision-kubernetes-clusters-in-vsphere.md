@@ -51,8 +51,6 @@ If you have a cluster with DRS enabled, setting up [VM-VM Affinity Rules](https:
 
 ## Creating a vSphere Cluster
 
-The a vSphere cluster is created in Rancher depends on the Rancher version.
-
 <Tabs>
 <TabItem value="Rancher v2.2.0+">
 
@@ -111,7 +109,7 @@ You can access your cluster after its state is updated to **Active.**
 
 Use Rancher to create a Kubernetes cluster in vSphere.
 
-For Rancher versions before v2.0.4, when you create the cluster, you will also need to follow the steps in [this section](http://localhost:9001/rancher/v2.0-v2.4/en/cluster-provisioning/rke-clusters/node-pools/vsphere/vpshere-node-template-config/prior-to-2.0.4/#disk-uuids) to enable disk UUIDs.
+For Rancher versions before v2.0.4, when you create the cluster, you will also need to follow the steps in [this section](../../../../../../reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere/prior-to-v2.0.4.md#disk-uuids) to enable disk UUIDs.
 
 1. From the **Clusters** page, click **Add Cluster**.
 1. Choose **vSphere**.
