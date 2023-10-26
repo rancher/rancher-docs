@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[72977],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[31032],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 45319:
+/***/ 79964:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "pages-for-subheaders/rancher-security",
-    "id": "version-2.8/pages-for-subheaders/rancher-security",
+    "id": "pages-for-subheaders/rancher-security",
     "title": "Security",
     "description": "Security policy",
-    "source": "@site/versioned_docs/version-2.8/pages-for-subheaders/rancher-security.md",
+    "source": "@site/docs/pages-for-subheaders/rancher-security.md",
     "sourceDirName": "pages-for-subheaders",
     "slug": "/pages-for-subheaders/rancher-security",
-    "permalink": "/v2.8/pages-for-subheaders/rancher-security",
+    "permalink": "/pages-for-subheaders/rancher-security",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/pages-for-subheaders/rancher-security.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/pages-for-subheaders/rancher-security.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1698178257,
-    "formattedLastUpdatedAt": "Oct 24, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1698361522,
+    "formattedLastUpdatedAt": "Oct 26, 2023",
     "frontMatter": {
         "title": "Security"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Rancher Webhook",
-        "permalink": "/v2.8/reference-guides/rancher-webhook"
+        "permalink": "/reference-guides/rancher-webhook"
     },
     "next": {
         "title": "Self-Assessment and Hardening Guides for Rancher",
-        "permalink": "/v2.8/pages-for-subheaders/rancher-hardening-guides"
+        "permalink": "/pages-for-subheaders/rancher-hardening-guides"
     }
 };
 const assets = {};
@@ -384,11 +384,6 @@ const toc = [
     {
         value: 'Rancher Security Best Practices',
         id: 'rancher-security-best-practices',
-        level: 3
-    },
-    {
-        value: 'Rancher Webhook Hardening',
-        id: 'rancher-webhook-hardening',
         level: 3
     }
 ];
@@ -445,12 +440,12 @@ function MDXContent(_param) {
         href: "https://forums.rancher.com/c/announcements"
     }, "Rancher announcements forum"), " for release updates.")))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Security is at the heart of all Rancher features. From integrating with all the popular authentication tools and services, to an enterprise grade `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/pages-for-subheaders/manage-role-based-access-control-rbac"
+        "href": "/pages-for-subheaders/manage-role-based-access-control-rbac"
     }, `RBAC capability`), `, Rancher makes your Kubernetes clusters even more secure.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `On this page, we provide security related documentation along with resources to help you secure your Rancher installation and your downstream Kubernetes clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "neuvector-integration-with-rancher"
     }, `NeuVector Integration with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `NeuVector is an open-source, container-focused security application that is now integrated into Rancher. NeuVector provides production security, DevOps vulnerability protection, and a container firewall, et al. Please see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/integrations-in-rancher/neuvector/"
+        "href": "/integrations-in-rancher/neuvector"
     }, `Rancher docs`), ` and the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://open-docs.neuvector.com/"
@@ -464,7 +459,7 @@ function MDXContent(_param) {
         "href": "https://www.cisecurity.org/cis-benchmarks/"
     }, `CIS`), ` (Center for Internet Security) Kubernetes Benchmark.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The CIS Kubernetes Benchmark is a reference document that can be used to establish a secure configuration baseline for Kubernetes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Center for Internet Security (CIS) is a 501(c`, `)`, `(3) non-profit organization, formed in October 2000, with a mission to "identify, develop, validate, promote, and sustain best practice solutions for cyber defense and build and lead communities to enable an environment of trust in cyberspace".`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `CIS Benchmarks are best practices for the secure configuration of a target system. CIS Benchmarks are developed through the generous volunteer efforts of subject matter experts, technology vendors, public and private community members, and the CIS Benchmark Development team.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Benchmark provides recommendations of two types: Automated and Manual. We run tests related to only Automated recommendations.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When Rancher runs a CIS security scan on a cluster, it generates a report showing the results of each test, including a summary with the number of passed, skipped and failed tests. The report also includes remediation steps for any failed tests.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For details, refer to the section on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/pages-for-subheaders/cis-scan-guides"
+        "href": "/pages-for-subheaders/cis-scan-guides"
     }, `security scans`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "selinux-rpm"
     }, `SELinux RPM`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -476,7 +471,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `rke2-selinux`), `. For details, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/pages-for-subheaders/selinux-rpm"
+        "href": "/pages-for-subheaders/selinux-rpm"
     }, `this page`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "rancher-hardening-guide"
     }, `Rancher Hardening Guide`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Rancher Hardening Guide is based on controls and best practices found in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -494,7 +489,7 @@ function MDXContent(_param) {
         "href": "https://www.cisecurity.org/benchmark/kubernetes/"
     }, `CIS website`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Each version of Rancher's self-assessment guide corresponds to specific versions of the hardening guide, Rancher, Kubernetes, and the CIS Benchmark.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "third-party-penetration-test-reports"
-    }, `Third-party Penetration Test Reports`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher periodically hires third parties to perform security audits and penetration tests of the Rancher 2.x software stack. The environments under test follow the Rancher provided hardening guides at the time of the testing. Previous penetration test reports are available below.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Results:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Third-party Penetration Test Reports`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher periodically hires third parties to perform security audits and penetration tests of the Rancher software stack. The environments under test follow the Rancher provided hardening guides at the time of the testing. Previous penetration test reports are available below.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Results:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
@@ -504,27 +499,22 @@ function MDXContent(_param) {
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
         "href": "https://releases.rancher.com/documents/security/pen-tests/2019/UntamedTheory-Rancher_SecurityAssessment-20190712_v5.pdf"
-    }, `Untamed Theory Pen Test - March 2019`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `Untamed Theory Pen Test - March 2019`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Please note that new reports are no longer shared or made publicly available.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "rancher-security-advisories-and-cves"
     }, `Rancher Security Advisories and CVEs`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher is committed to informing the community of security issues in our products. For the list of CVEs (Common Vulnerabilities and Exposures) for issues we have resolved, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/reference-guides/rancher-security/security-advisories-and-cves"
+        "href": "/reference-guides/rancher-security/security-advisories-and-cves"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "kubernetes-security-best-practices"
     }, `Kubernetes Security Best Practices`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For recommendations on securing your Kubernetes cluster, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/reference-guides/rancher-security/kubernetes-security-best-practices"
+        "href": "/reference-guides/rancher-security/kubernetes-security-best-practices"
     }, `Kubernetes Security Best Practices`), ` guide.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "rancher-security-best-practices"
     }, `Rancher Security Best Practices`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For recommendations on securing your Rancher Manager deployments, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/reference-guides/rancher-security/rancher-security-best-practices"
-    }, `Rancher Security Best Practices`), ` guide.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "rancher-webhook-hardening"
-    }, `Rancher Webhook Hardening`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Rancher webhook deploys on both the upstream Rancher cluster and all provisioned clusters. For recommendations on hardening the Rancher webhook, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/v2.8/reference-guides/rancher-security/rancher-webhook-hardening"
-    }, `Hardening the Rancher Webhook`), ` guide.`));
+        "href": "/reference-guides/rancher-security/rancher-security-best-practices"
+    }, `Rancher Security Best Practices`), ` guide.`));
 }
 MDXContent.isMDXComponent = true;
 
