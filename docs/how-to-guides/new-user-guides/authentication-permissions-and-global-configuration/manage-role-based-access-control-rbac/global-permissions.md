@@ -104,22 +104,22 @@ For details on which Kubernetes resources correspond to each global permission,
 
 ### Custom GlobalRoles
 
-Users may wish to create custom GlobalRoles as a way of satisfying a use case not directly addressed by our built-in GlobalRoles. 
+You can create custom GlobalRoles to satisfy use cases not directly addressed by built-in GlobalRoles. 
 
-Users can create a custom GlobalRole using the UI or one of the supported automation methods. The rules that can specified are of the same type as the rules used by upstream roles and clusterRoles. 
+Create custom GlobalRole through the UI or through automation (such as the Rancher Kubernetes API). You can specify the same type of rules as the rules for upstream roles and clusterRoles. 
 
 #### Escalate and Bind verb
 
-When giving permissions on GlobalRoles, keep in mind that Rancher respects the `escalate` and `bind` verb, in a similar fashion to [upstream kubernetes](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#restrictions-on-role-creation-or-update).
+When giving permissions on GlobalRoles, keep in mind that Rancher respects the `escalate` and `bind` verbs, in a similar fashion to [Kubernetes](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#restrictions-on-role-creation-or-update).
 
-Both of these verbs (which are given on the GlobalRoles resource) can grant users the permission bypass Rancher's privilege escalation checks (allowing users to potentially become admins), and as such, they should be given only with great caution.
+Both of these verbs, which are given on the GlobalRoles resource, can grant users the permission to bypass Rancher's privilege escalation checks. This potentially allows users to become admins. Since this represents a serious security risk, `bind` and `escalate` should be distributed to users with great caution. 
 
-The `escalate` verb allows users to change a GlobalRole and add any permission, even if they do not have the permissions in the current GlobalRole or the new version of the GlobalRole. 
+The `escalate` verb allows users to change a GlobalRole and add any permission, even if the users doesn't have the permissions in the current GlobalRole or the new version of the GlobalRole. 
 The `bind` verb allows users to create a GlobalRoleBinding to the specified GlobalRole, even if they do not have the permissions in the GlobalRole. 
 
 :::danger
 
-The wildcard verb `*` also includes the `bind` and `escalate` verbs. This means that giving `*` on GlobalRoles to a user gives them both `escalate` and `bind` as well.
+The wildcard verb `*` also includes the `bind` and `escalate` verbs. This means that giving `*` on GlobalRoles to a user also gives them both `escalate` and `bind`.
 
 :::
 
@@ -185,9 +185,9 @@ rules:
 
 #### Permissions on Downstream Clusters
 
-GlobalRoles provide the ability to grant one (or more) RoleTemplates on every downstream cluster through the `inheritedClusterRoles` field. Values in this field must refer to a RoleTemplate which exists and has a `context` of Cluster.
+GlobalRoles can grant one or more RoleTemplates on every downstream cluster through the `inheritedClusterRoles` field. Values in this field must refer to a RoleTemplate which exists and has a `context` of Cluster.
 
-When this field is used, users gain the specified permissions on all current or future downstream clusters. For an example, consider the following GlobalRole:
+With this field, users gain the specified permissions on all current or future downstream clusters. For an example, consider the following GlobalRole:
 
 ```yaml
 apiVersion: management.cattle.io/v3
@@ -199,11 +199,11 @@ inheritedClusterRoles:
 - cluster-owner
 ```
 
-Any user with this permission will be a cluster-owner on all downstream clusters. If a new cluster is added (regardless of type), the user will be made an owner on that cluster as well.
+Any user with this permission will be a cluster-owner on all downstream clusters. If a new cluster is added, regardless of type, the user will be an owner on that cluster as well.
 
 :::danger
 
-Using this field on [default Global Roles](#configuring-default-global-permissions) is not recommended - this may result in users gaining excessive permissions.
+Using this field on [default Global Roles](#configuring-default-global-permissions) may result in users gaining excessive permissions.
 
 :::
 
@@ -291,7 +291,7 @@ To refresh group memberships,
 
 :::warning Deprecated
 
-The Restricted Admin role is deprecated, and will be removed in a future version of rancher (2.10 or higher). Users are encouraged to make a custom role with the desired permissions rather than relying on this built-in role).
+The Restricted Admin role is deprecated, and will be removed in a future version of Rancher (2.10 or higher). As an alternative, you should make a custom role with the desired permissions instead of relying on this built-in role).
 
 :::
 
