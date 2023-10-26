@@ -24,6 +24,8 @@ If you have any specific firewall rules or configuration, you will need to add t
 ## Linux Dependencies
 
 The packages that need to be installed on the template are listed below. These will have slightly different names based on distribution; some distributions ship these by default, for example.
+These dependencies are souly what is required for Rancher's cluster provisioner to work.
+Additional dependencies required by Kubernetes will be installed automatically by the cluster provisioner.
 
 * curl
 * wget
