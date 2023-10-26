@@ -29,7 +29,7 @@ On this page, we provide security related documentation along with resources to 
 
 ### NeuVector Integration with Rancher
 
-NeuVector is an open-source, container-focused security application that is now integrated into Rancher. NeuVector provides production security, DevOps vulnerability protection, and a container firewall, et al. Please see the [Rancher docs](../integrations-in-rancher/neuvector.md) and the [NeuVector docs](https://open-docs.neuvector.com/) for more information.
+NeuVector is an open-source, container-focused security application that is now integrated into Rancher. NeuVector provides production security, DevOps vulnerability protection, and a container firewall, et al. Please see the [Rancher docs](../integrations-in-rancher/neuvector/neuvector.md) and the [NeuVector docs](https://open-docs.neuvector.com/) for more information.
 
 ### Running a CIS Security Scan on a Kubernetes Cluster
 
