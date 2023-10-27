@@ -106,7 +106,7 @@ For details on which Kubernetes resources correspond to each global permission,
 
 You can create custom GlobalRoles to satisfy use cases not directly addressed by built-in GlobalRoles. 
 
-Create custom GlobalRole through the UI or through automation (such as the Rancher Kubernetes API). You can specify the same type of rules as the rules for upstream roles and clusterRoles. 
+Create custom GlobalRoles through the UI or through automation (such as the Rancher Kubernetes API). You can specify the same type of rules as the rules for upstream roles and clusterRoles. 
 
 #### Escalate and Bind verbs
 
