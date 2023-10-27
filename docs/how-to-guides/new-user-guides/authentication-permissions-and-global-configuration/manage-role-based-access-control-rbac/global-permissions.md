@@ -296,7 +296,7 @@ The Restricted Admin role is deprecated, and will be removed in a future version
 
 :::
 
-A new `restricted-admin` role was created in Rancher v2.5 in order to prevent privilege escalation from the local Rancher server Kubernetes cluster. This role has full administrator access to all downstream clusters managed by Rancher, but it does not have permission to alter the local Kubernetes cluster.
+A new `restricted-admin` role was created in Rancher v2.5 in order to prevent privilege escalation on the local Rancher server Kubernetes cluster. This role has full administrator access to all downstream clusters managed by Rancher, but it does not have permission to alter the local Kubernetes cluster.
 
 The `restricted-admin` can create other `restricted-admin` users with an equal level of access.
 
