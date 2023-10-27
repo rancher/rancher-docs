@@ -2,6 +2,10 @@
 title: Longhorn - Cloud native distributed block storage for Kubernetes
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/longhorn"/>
+</head>
+
 [Longhorn](https://longhorn.io/) is a lightweight, reliable and easy-to-use distributed block storage system for Kubernetes.
 
 Longhorn is free, open source software. Originally developed by Rancher Labs, it is now being developed as a sandbox project of the Cloud Native Computing Foundation. It can be installed on any Kubernetes cluster with Helm, with kubectl, or with the Rancher UI. You can learn more about its architecture [here.](https://longhorn.io/docs/1.0.2/concepts/)
@@ -31,11 +35,11 @@ These instructions assume you are using Rancher v2.5, but Longhorn can be instal
 
 ### Installing Longhorn with Rancher
 
-1. Fulfill all [Installation Requirements.](https://longhorn.io/docs/1.1.0/deploy/install/#installation-requirements)
+1. Fulfill all [Installation Requirements.](https://github.com/longhorn/website/blob/master/content/docs/archives/1.1.0/deploy/install/_index.md#installation-requirements)
 1. Go to the **Cluster Explorer** in the Rancher UI.
 1. Click **Apps.**
 1. Click `longhorn`.
-1. Optional: To customize the initial settings, click **Longhorn Default Settings** and edit the configuration. For help customizing the settings, refer to the [Longhorn documentation.](https://longhorn.io/docs/1.0.2/references/settings/)
+1. Optional: To customize the initial settings, click **Longhorn Default Settings** and edit the configuration. For help customizing the settings, refer to the [Longhorn documentation.](https://github.com/longhorn/website/blob/master/content/docs/archives/1.0.2/references/settings.md)
 1. Click **Install.**
 
 **Result:** Longhorn is deployed in the Kubernetes cluster.

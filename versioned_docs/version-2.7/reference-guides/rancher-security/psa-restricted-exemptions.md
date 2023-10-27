@@ -2,6 +2,10 @@
 title: Sample PodSecurityConfiguration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-security/psa-restricted-exemptions"/>
+</head>
+
 The following PodSecurityConfiguration contains the required Rancher namespace exemptions for a `rancher-restricted` cluster to run properly.
 
 ```yaml
@@ -42,6 +46,7 @@ plugins:
                      cattle-monitoring-system,
                      cattle-neuvector-system,
                      cattle-prometheus,
+                     cattle-provisioning-capi-system,
                      cattle-resources-system,
                      cattle-sriov-system,
                      cattle-system,

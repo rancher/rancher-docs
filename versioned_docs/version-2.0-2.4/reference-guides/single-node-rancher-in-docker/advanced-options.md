@@ -2,14 +2,7 @@
 title: Advanced Options for Docker Installs
 ---
 
-When installing Rancher, there are several [advanced options](../../pages-for-subheaders/resources.md) that can be enabled:
-
-- [Custom CA Certificate](#custom-ca-certificate)
-- [API Audit Log](#api-audit-log)
-- [TLS Settings](#tls-settings)
-- [Air Gap](#air-gap)
-- [Persistent Data](#persistent-data)
-- [Running `rancher/rancher` and `rancher/rancher-agent` on the Same Node](#running-rancher-rancher-and-rancher-rancher-agent-on-the-same-node)
+When installing Rancher, there are several [advanced options](../../pages-for-subheaders/resources.md) that can be enabled.
 
 ### Custom CA Certificate
 

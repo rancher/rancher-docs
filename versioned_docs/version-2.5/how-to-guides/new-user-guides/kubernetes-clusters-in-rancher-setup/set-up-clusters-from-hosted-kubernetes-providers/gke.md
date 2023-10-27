@@ -85,7 +85,7 @@ Private GKE clusters are supported. Note: This advanced setup can require more s
 For details on configuring GKE clusters in Rancher, see [this page.](../../../../pages-for-subheaders/gke-cluster-configuration.md)
 ## Updating Kubernetes Version
 
-The Kubernetes version of a cluster can be upgraded to any version available in the region or zone fo the GKE cluster. Upgrading the master Kubernetes version does not automatically upgrade worker nodes. Nodes can be upgraded independently.
+The Kubernetes version of a cluster can be upgraded to any version available in the region or zone for the GKE cluster. Upgrading the master Kubernetes version does not automatically upgrade worker nodes. Nodes can be upgraded independently.
 
 >**Note**
 >GKE has removed basic authentication in 1.19+. In order to upgrade a cluster to 1.19+, basic authentication must be disabled in the Google Cloud. Otherwise, an error will appear in Rancher when an upgrade to 1.19+ is attempted. You can follow the [Google documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication#disabling_authentication_with_a_static_password). After this, the Kubernetes version can be updated to 1.19+ via Rancher.
@@ -136,7 +136,7 @@ Use Rancher to set up and configure your Kubernetes cluster.
 
     >**Note:** After submitting your private key, you may have to enable the Google Kubernetes Engine API. If prompted, browse to the URL displayed in the Rancher UI to enable the API.
 
-6. Select your cluster options, node options and security options. For help, refer to the [GKE Cluster Configuration Reference.](#gke-before-v2-5-8)
+6. Select your cluster options, node options and security options. For help, refer to the [GKE Cluster Configuration Reference.](../../../../pages-for-subheaders/gke-cluster-configuration.md)
 9. Review your options to confirm they're correct. Then click **Create**.
 
 **Result:** You have successfully deployed a GKE cluster.

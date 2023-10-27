@@ -35,7 +35,7 @@ The following steps will quickly deploy a Rancher server on GCP in a single-node
     - `rancher_server_admin_password` - Admin password for created Rancher server
 
 1. **Optional:** Modify optional variables within `terraform.tfvars`.
-See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [GCP Quickstart Readme](https://github.com/rancher/quickstart/tree/master/gcp) for more information.
+See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [GCP Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/gcp#readme) for more information.
 Suggestions include:
     - `gcp_region` - Google GCP region, choose the closest instead of the default
     - `prefix` - Prefix for all created resources

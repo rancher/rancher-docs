@@ -195,7 +195,7 @@ Input or select an **Expression**. The dropdown shows the original metrics from 
 - [**Container**](https://github.com/google/cadvisor)
 - [**Kubernetes Resources**](https://github.com/kubernetes/kube-state-metrics)
 - **Customize**
-- [**Project Level Grafana**](http://docs.grafana.org/administration/metrics/)
+- [**Project Level Grafana**](https://grafana.com/docs/grafana/latest/setup-grafana/set-up-grafana-monitoring/)
 - **Project Level Prometheus**
 
 ### Is

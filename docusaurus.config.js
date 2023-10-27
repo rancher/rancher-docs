@@ -1,5 +1,7 @@
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
+const tailwindPlugin = require('./plugins/tailwind-plugin.cjs');
+
 module.exports = {
   title: 'Rancher',
   tagline: '',
@@ -127,7 +129,12 @@ module.exports = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: 'Latest'
+              label: 'Latest',
+            },
+            2.8: {
+              label: 'v2.8 (Preview)',
+              path: 'v2.8',
+              banner: 'unreleased'
             },
             2.7: {
               label: 'v2.7',
@@ -159,13 +166,44 @@ module.exports = {
         },
       },
     ],
+    [
+      'redocusaurus',
+      {
+        // Plugin Options for loading OpenAPI files
+        specs: [
+          {
+            id: 'rancher-api',
+            spec: 'openapi/swagger.json',
+            // route: '/api/',
+          },
+        ],
+        // Theme Options for modifying how redoc renders them
+        theme: {
+          // Change with your site colors
+          primaryColor: '#1890ff',
+        },
+      },
+    ],
   ],
   plugins: [
+   tailwindPlugin,
    [
       '@docusaurus/plugin-client-redirects',
       {
         fromExtensions: ['html', 'htm'],
         redirects: [
+          { // Redirects for dashboard#9970
+            to: '/v2.8/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences',
+            from: '/v2.8/cluster-provisioning/rke-clusters/behavior-differences-between-rke1-and-rke2/'
+          },
+          {
+            to: '/v2.7/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences',
+            from: '/v2.7/cluster-provisioning/rke-clusters/behavior-differences-between-rke1-and-rke2/'
+          },
+          {
+            to: '/v2.6/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences',
+            from: '/v2.6/cluster-provisioning/rke-clusters/behavior-differences-between-rke1-and-rke2/'
+          }, // Redirects for dashboard#9970 (end)
           { // Redirects for restructure from PR #234 (start)
             to: '/faq/general-faq',
             from: '/faq'
@@ -1143,29 +1181,61 @@ module.exports = {
             from: '/v2.6/explanations/integrations-in-rancher/opa-gatekeeper'
           }, // Redirects for restructure from PR #234 (end)
           {
-            to: "/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25",
+            to: "/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
+            from: "/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
+          },
+          {
+            to: "/v2.7/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
+            from: "/2.7/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
+          },
+          {
+            to: "/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
             from: "/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.25"
           },
           {
-            to: "/v2.7/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25",
+            to: "/v2.7/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
             from: "/v2.7/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.25"
 
           },
           {
-            to: "/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25",
+            to: "/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
+            from: "/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
+          },
+          {
+            to: "/v2.7/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
+            from: "/v2.7/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
+          },
+          {
+            to: "/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
             from: "/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.25"
           },
           {
-            to: "/v2.7/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25",
+            to: "/v2.7/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
             from: "/v2.7/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.25"
           },
           {
-            to: "/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25",
+            to: "/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
+            from: "/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
+          },
+          {
+            to: "/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
+            from: "/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
+          },
+          {
+            to: "/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
             from: "/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25"
           },
           {
-            to: "/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25",
+            to: "/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
             from: "/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25"
+          },
+          {
+            to: "/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale",
+            from: "/reference-guides/best-practices/rancher-server/tips-for-scaling-rancher"
+          },
+          {
+            to: "/v2.7/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale",
+            from: "/v2.7/reference-guides/best-practices/rancher-server/tips-for-scaling-rancher"
           }
         ],
       },

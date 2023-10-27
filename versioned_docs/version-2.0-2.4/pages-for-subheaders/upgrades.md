@@ -35,7 +35,7 @@ Review the [known upgrade issues](#known-upgrade-issues) in the Rancher document
 
 A more complete list of known issues for each Rancher version can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums.](https://forums.rancher.com/c/announcements/12)
 
-Note that upgrades _to_ or _from_ any chart in the [rancher-alpha repository](../reference-guides/installation-references/helm-chart-options.md#helm-chart-repositories/) aren't supported.
+Note that upgrades _to_ or _from_ any chart in the [rancher-alpha repository](../getting-started/installation-and-upgrade/resources/choose-a-rancher-version.md#helm-chart-repositories) aren't supported.
 
 ### Helm Version
 
@@ -49,7 +49,7 @@ For migration of installs started with Helm 2, refer to the official [Helm 2 to 
 
 ### For upgrades from v2.0-v2.2 with external TLS termination
 
-If you are upgrading Rancher from v2.x to v2.3+, and you are using external TLS termination, you will need to edit the cluster.yml to [enable using forwarded host headers.](../reference-guides/installation-references/helm-chart-options.md#configuring-ingress-for-external-tls-when-using-nginx-v0-25)
+If you are upgrading Rancher from v2.x to v2.3+, and you are using external TLS termination, you will need to edit the cluster.yml to [enable using forwarded host headers.](../reference-guides/installation-references/helm-chart-options.md#configuring-ingress-for-external-tls-when-using-nginx-v025)
 
 ### For upgrades with cert-manager older than 0.8.0
 
@@ -82,7 +82,7 @@ You'll use the backup as a restoration point if something goes wrong during upgr
 
 1. Get the repository name that you used to install Rancher.
 
-    For information about the repos and their differences, see [Helm Chart Repositories](../reference-guides/installation-references/helm-chart-options.md#helm-chart-repositories).
+    For information about the repos and their differences, see [Helm Chart Repositories](../getting-started/installation-and-upgrade/resources/choose-a-rancher-version.md#helm-chart-repositories).
 
     - Latest: Recommended for trying out the newest features
         ```

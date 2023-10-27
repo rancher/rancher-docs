@@ -73,12 +73,14 @@ Each version of Rancher's self-assessment guide corresponds to specific versions
 
 ### Third-party Penetration Test Reports
 
-Rancher periodically hires third parties to perform security audits and penetration tests of the Rancher 2.x software stack. The environments under test follow the Rancher provided hardening guides at the time of the testing. Previous penetration test reports are available below.
+Rancher periodically hires third parties to perform security audits and penetration tests of the Rancher software stack. The environments under test follow the Rancher provided hardening guides at the time of the testing. Previous penetration test reports are available below.
 
 Results:
 
 - [Cure53 Pen Test - July 2019](https://releases.rancher.com/documents/security/pen-tests/2019/RAN-01-cure53-report.final.pdf)
 - [Untamed Theory Pen Test - March 2019](https://releases.rancher.com/documents/security/pen-tests/2019/UntamedTheory-Rancher_SecurityAssessment-20190712_v5.pdf)
+
+Please note that new reports are no longer shared or made publicly available.
 
 ### Rancher Security Advisories and CVEs
 
@@ -87,3 +89,7 @@ Rancher is committed to informing the community of security issues in our produc
 ### Kubernetes Security Best Practices
 
 For recommendations on securing your Kubernetes cluster, refer to the [Kubernetes Security Best Practices](../reference-guides/rancher-security/kubernetes-security-best-practices.md) guide.
+
+### Rancher Security Best Practices
+
+For recommendations on securing your Rancher Manager deployments, refer to the [Rancher Security Best Practices](../reference-guides/rancher-security/rancher-security-best-practices.md) guide.

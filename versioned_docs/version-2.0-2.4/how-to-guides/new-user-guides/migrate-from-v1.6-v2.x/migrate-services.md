@@ -254,7 +254,7 @@ Following importation, you can view your v1.6 services in the v2.x UI as Kuberne
 
 ## What Now?
 
-Although the migration-tool CLI parses your Rancher v1.6 Compose files to Kubernetes manifests, there are discrepancies between v1.6 and v2.x that you must address by manually editing your parsed [Kubernetes manifests](#output). In other words, you need to edit each workload and service imported into Rancher v2.x, as displayed below.
+Although the migration-tool CLI parses your Rancher v1.6 Compose files to Kubernetes manifests, there are discrepancies between v1.6 and v2.x that you must address by manually editing your parsed [Kubernetes manifests](#migration-tools-cli-output). In other words, you need to edit each workload and service imported into Rancher v2.x, as displayed below.
 
 <figcaption>Edit Migrated Services</figcaption>
 
@@ -279,7 +279,7 @@ Directive | Instructions
 [scale][5] | In v1.6, scale refers to the number of container replicas running on a single node. In v2.x, this feature is replaced by replica sets.
 start_on_create | No Kubernetes equivalent. No action is required from you.
 
-[1]:./monitor-apps.md#configuring-probes-in-rancher-v2-x
+[1]:./monitor-apps.md#configuring-probes-in-rancher-v2x
 [2]:./schedule-services.md#scheduling-using-labels
 [3]:./discover-services.md
 [4]:./expose-services.md
@@ -289,6 +289,6 @@ start_on_create | No Kubernetes equivalent. No action is required from you.
 
 [7]:./schedule-services.md#scheduling-using-labels
 [8]:./schedule-services.md#scheduling-global-services
-[9]:./schedule-services.md#label-affinity-antiaffinity
+[9]:./schedule-services.md#label-affinityantiaffinity
 
 ### [Next: Expose Your Services](expose-services.md)

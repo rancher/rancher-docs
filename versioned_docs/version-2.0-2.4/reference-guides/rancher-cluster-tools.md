@@ -43,7 +43,7 @@ For details, refer to [Notifiers.](../explanations/integrations-in-rancher/notif
 
 _Available as of v2.3_
 
-[Istio](https:cluster-admin/tools/istio.io/) is an open-source tool that makes it easier for DevOps teams to observe, control, troubleshoot, and secure the traffic within a complex network of microservices.
+[Istio](https://istio.io/) is an open-source tool that makes it easier for DevOps teams to observe, control, troubleshoot, and secure the traffic within a complex network of microservices.
 
 Refer to the Istio documentation [here.](../pages-for-subheaders/istio.md)
 
