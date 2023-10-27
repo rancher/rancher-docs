@@ -192,6 +192,18 @@ module.exports = {
       {
         fromExtensions: ['html', 'htm'],
         redirects: [
+          { // Redirects for dashboard#9970
+            to: '/v2.8/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences',
+            from: '/v2.8/cluster-provisioning/rke-clusters/behavior-differences-between-rke1-and-rke2/'
+          },
+          {
+            to: '/v2.7/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences',
+            from: '/v2.7/cluster-provisioning/rke-clusters/behavior-differences-between-rke1-and-rke2/'
+          },
+          {
+            to: '/v2.6/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences',
+            from: '/v2.6/cluster-provisioning/rke-clusters/behavior-differences-between-rke1-and-rke2/'
+          }, // Redirects for dashboard#9970 (end)
           { // Redirects for restructure from PR #234 (start)
             to: '/faq/general-faq',
             from: '/faq'
