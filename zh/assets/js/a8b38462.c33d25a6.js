@@ -335,8 +335,8 @@ const metadata = {
         "permalink": "/zh/v2.8/troubleshooting/other-troubleshooting-tips/user-id-tracking-in-audit-logs"
     },
     "next": {
-        "title": "参与 Rancher 社区贡献",
-        "permalink": "/zh/v2.8/contribute-to-rancher"
+        "title": "API Quick Start Guide",
+        "permalink": "/zh/v2.8/api/quickstart"
     }
 };
 const assets = {};
