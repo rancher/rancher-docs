@@ -205,7 +205,7 @@ In addition to these default roles, the following additional Rancher project rol
 |--------------------------|-------------------------------|-------|------|
 | View Monitoring* | [monitoring-ui-view](#monitoring-ui-view)    |    2.4.8+    |  9.4.204+ |
 
-\* A User bound to the **View Monitoring** Rancher role only has permissions to access external Monitoring UIs if provided links to those UIs. In order to access the Monitoring Pane to get those links, the User must be a Project Member of at least one Project.
+\* A user bound to the **View Monitoring** Rancher role with read-only permissions won't have access to Grafana links in the monitoring UI. They can still access external Monitoring UIs if provided links to those UIs. In order to access the Monitoring Pane to get those links, the user must be a project member of at least one Project.
 
 ### Differences in 2.5.x
 
