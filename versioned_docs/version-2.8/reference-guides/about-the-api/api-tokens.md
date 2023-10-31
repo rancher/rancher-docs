@@ -43,9 +43,7 @@ This setting is used by all kubeconfig tokens except those created by the CLI to
 
 ### Disable Tokens in Generated Kubeconfigs
 
-1. Set the `kubeconfig-generate-token` setting to `false`. This setting instructs Rancher to no longer automatically generate a token when a user clicks on download a kubeconfig file. Once this setting is deactivated, a generated kubeconfig will reference the [Rancher CLI](../cli-with-rancher/kubectl-utility.md#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl) to retrieve a short-lived token for the cluster. When this kubeconfig is used in a client, such as `kubectl`, the Rancher CLI needs to be installed to complete the log in request.
-
-2. Set the `kubeconfig-default-token-TTL-minutes` setting to the desired duration in minutes. By default, `kubeconfig-default-token-TTL-minutes` is 43200 (30 days).
+Set the `kubeconfig-generate-token` setting to `false`. This setting instructs Rancher to no longer automatically generate a token when a user clicks on download a kubeconfig file. Once this setting is deactivated, a generated kubeconfig will reference the [Rancher CLI](../cli-with-rancher/kubectl-utility.md#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl) to retrieve a short-lived token for the cluster. When this kubeconfig is used in a client, such as `kubectl`, the Rancher CLI needs to be installed to complete the log in request.
 
 ### Token Hashing
 
