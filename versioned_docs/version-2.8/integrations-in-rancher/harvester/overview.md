@@ -6,7 +6,7 @@ Introduced in Rancher v2.6.1, [Harvester](https://docs.harvesterhci.io/) is an o
 
 ### Feature Flag
 
-The Harvester feature flag is used to manage access to the Virtualization Management (VM) page in Rancher where users can navigate directly to Harvester clusters and access the Harvester UI. The Harvester feature flag is enabled by default. Click [here](../pages-for-subheaders/enable-experimental-features.md) for more information on feature flags in Rancher.
+The Harvester feature flag is used to manage access to the Virtualization Management (VM) page in Rancher where users can navigate directly to Harvester clusters and access the Harvester UI. The Harvester feature flag is enabled by default. Click [here](../../pages-for-subheaders/enable-experimental-features.md) for more information on feature flags in Rancher.
 
 To navigate to the Harvester cluster, click **☰ > Virtualization Management**. From Harvester Clusters page, click one of the clusters listed to go to the single Harvester cluster view.
 
@@ -24,7 +24,7 @@ The [Harvester node driver](https://docs.harvesterhci.io/v1.1/rancher/node/node-
 
 Harvester allows `.ISO` images to be uploaded and displayed through the Harvester UI, but this is not supported in the Rancher UI. This is because `.ISO` images usually require additional setup that interferes with a clean deployment (without requiring user intervention), and they are not typically used in cloud environments.
 
-Click [here](../pages-for-subheaders/about-provisioning-drivers.md#node-drivers) for more information on node drivers in Rancher.
+Click [here](../../pages-for-subheaders/about-provisioning-drivers.md#node-drivers) for more information on node drivers in Rancher.
 
 ### Port Requirements
 
@@ -33,6 +33,6 @@ The port requirements for the Harvester cluster can be found [here](https://docs
 In addition, other networking considerations are as follows:
 
 - Be sure to enable VLAN trunk ports of the physical switch for VM VLAN networks.
-- Follow the networking setup guidance [here](https://docs.harvesterhci.io/v1.1/networking/clusternetwork).
+- Follow the networking setup guidance [here](https://docs.harvesterhci.io/v1.1/networking/index).
 
 For other port requirements for other guest clusters, such as K3s and RKE1, please see [these docs](https://docs.harvesterhci.io/v1.1/install/requirements/#guest-clusters).
