@@ -88,26 +88,73 @@ module.exports = {
       },
       items: [
         {
-            type: "localeDropdown",
-            position: "right",
-        },
-        {
-          href: 'https://github.com/rancher/rancher-docs',
-          label: 'GitHub',
-          position: 'right',
-          className: 'navbar__github',
-        },
-        {
-          href: 'https://www.rancher.com',
-          label: 'Rancher Home',
-          position: 'right',
-        },
-        {
           type: 'docsVersionDropdown',
           position: 'left',
           dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
           dropdownActiveClassDisabled: false,
         },
+        {
+          type: "localeDropdown",
+          position: "left",
+        },
+        {
+          type: "search",
+          position: "left",
+        },
+        {
+          type: 'dropdown',
+          label: 'Quick Links',
+          position: 'right',
+          items: [
+            {
+              href: 'https://github.com/rancher/rancher',
+              label: 'GitHub',
+            },
+            {
+              href: 'https://github.com/rancher/rancher-docs',
+              label: 'Docs GitHub',
+            },
+          ]
+        },
+        {
+          type: 'dropdown',
+          label: 'More from SUSE',
+          position: 'right',
+          items: [
+            {
+              href: 'https://www.rancher.com',
+              label: 'Rancher',
+            },
+            {
+              type: 'html',
+              value: '<hr style="margin: 0.3rem 0;">',
+            },
+            {
+              href: 'https://elemental.docs.rancher.com/',
+              label: 'Elemental',
+            },
+            {
+              href: 'https://epinio.io/',
+              label: 'Epinio',
+            },
+            {
+              href: 'https://fleet.rancher.io/',
+              label: 'Fleet',
+            },
+            {
+              href: 'https://harvesterhci.io',
+              label: 'Harvester',
+            },
+            {
+              type: 'html',
+              value: '<hr style="margin: 0.3rem 0;">',
+            },
+            {
+              href: 'https://opensource.suse.com',
+              label: 'More Projects...',
+            },
+          ]
+        }
       ],
     },
     footer: {
