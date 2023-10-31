@@ -325,8 +325,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/deploy-workloads.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "Oct 6, 2023",
+    "lastUpdatedAt": 1698710573,
+    "formattedLastUpdatedAt": "Oct 31, 2023",
     "frontMatter": {
         "title": "Deploying Workloads",
         "description": "Read this step by step guide for deploying workloads. Deploy a workload to run an application in one or more containers."
@@ -496,7 +496,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, `The cluster must be using the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#aws"
+        "href": "https://github.com/kubernetes/website/blob/release-1.18/content/en/docs/concepts/cluster-administration/cloud-providers.md#aws"
     }, `AWS cloud provider`), ` option. For more information on enabling this option see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "/v2.8/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster"

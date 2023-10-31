@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/pages-for-subheaders/authentication-permissions-and-global-configuration.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "Oct 6, 2023",
+    "lastUpdatedAt": 1698710573,
+    "formattedLastUpdatedAt": "Oct 31, 2023",
     "frontMatter": {
         "title": "Authentication, Permissions and Global Settings"
     },
@@ -551,13 +551,13 @@ function MDXContent(_param) {
         parentName: "li"
     }, `Global DNS Providers`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `As these are legacy features, please see the Rancher v2.0—v2.4 docs on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../versioned_docs/version-2.0-2.4/pages-for-subheaders/helm-charts-in-rancher.md"
+        "href": "/v2.0-v2.4/pages-for-subheaders/helm-charts-in-rancher"
     }, `catalogs`), `, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns.md#adding-a-global-dns-entry"
+        "href": "/v2.0-v2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns#adding-a-global-dns-entry"
     }, `global DNS entries`), `, and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns.md#editing-a-global-dns-provider"
+        "href": "/v2.0-v2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns#editing-a-global-dns-provider"
     }, `global DNS providers`), ` for more details.`));
 }
 MDXContent.isMDXComponent = true;

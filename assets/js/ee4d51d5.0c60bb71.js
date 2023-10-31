@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/monitoring-and-alerting/built-in-dashboards.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "Oct 6, 2023",
+    "lastUpdatedAt": 1698710573,
+    "formattedLastUpdatedAt": "Oct 31, 2023",
     "frontMatter": {
         "title": "Built-in Dashboards"
     },
@@ -579,7 +579,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `rancher-monitoring`), ` application, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../../versioned_docs/version-2.0-2.4/explanations/integrations-in-rancher/cluster-monitoring/viewing-metrics.md"
+        "href": "/v2.0-v2.4/explanations/integrations-in-rancher/cluster-monitoring/viewing-metrics"
     }, `Rancher v2.0—v2.4 docs`), `.`));
 }
 MDXContent.isMDXComponent = true;

@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/harvester/overview.md",
     "sourceDirName": "integrations-in-rancher/harvester",
     "slug": "/integrations-in-rancher/harvester/overview",
-    "permalink": "/zh/v2.8/integrations-in-rancher/harvester/overview",
+    "permalink": "/v2.8/integrations-in-rancher/harvester/overview",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/harvester/overview.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1697500308,
-    "formattedLastUpdatedAt": "2023年10月16日",
+    "lastUpdatedAt": 1698710573,
+    "formattedLastUpdatedAt": "Oct 31, 2023",
     "frontMatter": {
         "title": "Overview"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Virtualization on Kubernetes with Harvester",
-        "permalink": "/zh/v2.8/integrations-in-rancher/harvester/"
+        "permalink": "/v2.8/integrations-in-rancher/harvester/"
     },
     "next": {
         "title": "Cloud Native Storage with Longhorn",
-        "permalink": "/zh/v2.8/integrations-in-rancher/longhorn/"
+        "permalink": "/v2.8/integrations-in-rancher/longhorn/"
     }
 };
 const assets = {};
@@ -375,7 +375,7 @@ function MDXContent(_param) {
         "id": "feature-flag"
     }, `Feature Flag`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Harvester feature flag is used to manage access to the Virtualization Management (VM) page in Rancher where users can navigate directly to Harvester clusters and access the Harvester UI. The Harvester feature flag is enabled by default. Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../pages-for-subheaders/enable-experimental-features.md"
+        "href": "/v2.8/pages-for-subheaders/enable-experimental-features"
     }, `here`), ` for more information on feature flags in Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To navigate to the Harvester cluster, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
     }, `☰ > Virtualization Management`), `. From Harvester Clusters page, click one of the clusters listed to go to the single Harvester cluster view.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -407,7 +407,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `.ISO`), ` images usually require additional setup that interferes with a clean deployment (without requiring user intervention), and they are not typically used in cloud environments.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../pages-for-subheaders/about-provisioning-drivers.md#node-drivers"
+        "href": "/v2.8/pages-for-subheaders/about-provisioning-drivers#node-drivers"
     }, `here`), ` for more information on node drivers in Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "port-requirements"
     }, `Port Requirements`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The port requirements for the Harvester cluster can be found `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -419,7 +419,7 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `Follow the networking setup guidance `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "https://docs.harvesterhci.io/v1.1/networking/clusternetwork"
+        "href": "https://docs.harvesterhci.io/v1.1/networking/index"
     }, `here`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For other port requirements for other guest clusters, such as K3s and RKE1, please see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://docs.harvesterhci.io/v1.1/install/requirements/#guest-clusters"
