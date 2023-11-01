@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[47547],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[47631],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 52608:
+/***/ 89997:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/installation-and-upgrade/resources/choose-a-rancher-version",
-    "id": "getting-started/installation-and-upgrade/resources/choose-a-rancher-version",
+    "id": "version-2.0-2.4/getting-started/installation-and-upgrade/resources/choose-a-rancher-version",
     "title": "Choosing a Rancher Version",
     "description": "This section describes how to choose a Rancher version.",
-    "source": "@site/docs/getting-started/installation-and-upgrade/resources/choose-a-rancher-version.md",
+    "source": "@site/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/resources/choose-a-rancher-version.md",
     "sourceDirName": "getting-started/installation-and-upgrade/resources",
     "slug": "/getting-started/installation-and-upgrade/resources/choose-a-rancher-version",
-    "permalink": "/getting-started/installation-and-upgrade/resources/choose-a-rancher-version",
+    "permalink": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/resources/choose-a-rancher-version",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/getting-started/installation-and-upgrade/resources/choose-a-rancher-version.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/resources/choose-a-rancher-version.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1685049914,
-    "formattedLastUpdatedAt": "May 25, 2023",
+    "version": "2.0-2.4",
+    "lastUpdatedAt": 1698804408,
+    "formattedLastUpdatedAt": "2023年11月1日",
     "frontMatter": {
         "title": "Choosing a Rancher Version"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Resources",
-        "permalink": "/pages-for-subheaders/resources"
+        "permalink": "/zh/v2.0-v2.4/pages-for-subheaders/resources"
     },
     "next": {
         "title": "Helm Version Requirements",
-        "permalink": "/getting-started/installation-and-upgrade/resources/helm-version-requirements"
+        "permalink": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/resources/helm-version-requirements"
     }
 };
 const assets = {};
@@ -386,20 +386,20 @@ function MDXContent(_param) {
         parentName: "p"
     }, `Helm chart`), ` on a Kubernetes cluster. Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/getting-started/installation-and-upgrade/resources/helm-version-requirements"
+        "href": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/resources/helm-version-requirements"
     }, `Helm version requirements`), ` to choose a version of Helm to install Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For Docker installations of Rancher, which is used for development and testing, you will install Rancher as a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `Docker image`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(Tabs, {
+    }, `Docker image.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(Tabs, {
         mdxType: "Tabs"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(TabItem, {
         value: "Helm Charts",
         mdxType: "TabItem"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When installing, upgrading, or rolling back Rancher Server when it is `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster"
+        "href": "/zh/v2.0-v2.4/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster"
     }, `installed on a Kubernetes cluster`), `, Rancher server is installed using a Helm chart on a Kubernetes cluster. Therefore, as you prepare to install or upgrade a high availability Rancher configuration, you must add a Helm chart repository that contains the charts for installing Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/getting-started/installation-and-upgrade/resources/helm-version-requirements"
+        "href": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/resources/helm-version-requirements"
     }, `Helm version requirements`), ` to choose a version of Helm to install Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "helm-chart-repositories"
     }, `Helm Chart Repositories`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher provides several different Helm chart repositories to choose from. We align our latest and stable Helm chart repositories with the Docker tags that are used for a Docker installation. Therefore, the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -468,11 +468,24 @@ function MDXContent(_param) {
         parentName: "td"
     }, `to`), ` or `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
         parentName: "td"
-    }, `from`), ` charts in the rancher-alpha repository to any other chart, regardless or repository, aren't supported.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), "Instructions on when to select these repos are available below in [Switching to a Different Helm Chart Repository](#switching-to-a-different-helm-chart-repository).", /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "type": "note"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, `All charts in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `from`), ` charts in the rancher-alpha repository to any other chart, regardless or repository, aren't supported.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Instructions on when to select these repos are available below in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "#switching-to-a-different-helm-chart-repository"
+    }, `Switching to a Different Helm Chart Repository`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Note:`), ` The introduction of the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `rancher-latest`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `rancher-stable`), ` Helm Chart repositories was introduced after Rancher v2.1.0, so the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `rancher-stable`), ` repository contains some Rancher versions that were never marked as `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `rancher/rancher:stable`), `. The versions of Rancher that were tagged as `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `rancher/rancher:stable`), ` before v2.1.0 are v2.0.4, v2.0.6, v2.0.8. Post v2.1.0, all charts in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `rancher-stable`), ` repository will correspond with any Rancher version tagged as `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
@@ -494,13 +507,15 @@ For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MO
     }, `--version`), ` parameter like in the following example:`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), `
 `, ` `, ` `, ` `, ` `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `helm fetch rancher-stable/rancher --version=2.4.8`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `helm fetch rancher-stable/rancher --version=2.4.8`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For the Rancher v2.1.x versions, there were some Helm charts where the version was a build number, i.e. `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `yyyy.mm.<build-number>`), `. These charts have been replaced with the equivalent Rancher version and are no longer available.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "switching-to-a-different-helm-chart-repository"
-    }, `Switching to a Different Helm Chart Repository`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After installing Rancher, if you want to change which Helm chart repository to install Rancher from, you will need to follow these steps.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "type": "note"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, `Because the rancher-alpha repository contains only alpha charts, switching between the rancher-alpha repository and the rancher-stable or rancher-latest repository for upgrades is not supported.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Switching to a Different Helm Chart Repository`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After installing Rancher, if you want to change which Helm chart repository to install Rancher from, you will need to follow these steps.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Note:`), ` Because the rancher-alpha repository contains only alpha charts, switching between the rancher-alpha repository and the rancher-stable or rancher-latest repository for upgrades is not supported.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Latest: Recommended for trying out the newest features`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
         parentName: "li"
@@ -520,7 +535,7 @@ For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MO
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
-    }, `helm repo add rancher-alpha https://releases.rancher.com/server-charts/alpha
+    }, `helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
 `)), `  Note: Upgrades are not supported to, from, or between Alphas.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -565,13 +580,13 @@ rancher-<CHART_REPO>        https://releases.rancher.com/server-charts/<CHART_RE
         parentName: "li"
     }, `Continue to follow the steps to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades"
+        "href": "/zh/v2.0-v2.4/pages-for-subheaders/upgrades"
     }, `upgrade Rancher`), ` from the new Helm chart repository.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(TabItem, {
         value: "Docker Images",
         mdxType: "TabItem"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When performing `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/pages-for-subheaders/rancher-on-a-single-node-with-docker"
+        "href": "/zh/v2.0-v2.4/pages-for-subheaders/rancher-on-a-single-node-with-docker"
     }, `Docker installs`), `, upgrades, or rollbacks, you can use `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
         parentName: "p"
     }, `tags`), ` to install a specific version of Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
@@ -622,10 +637,12 @@ rancher-<CHART_REPO>        https://releases.rancher.com/server-charts/<CHART_RE
     }, `rancher/rancher:<v2.X.X>`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, `You can install specific versions of Rancher by using the tag from a previous release. See what's available at DockerHub.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "type": "note"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", {
-        parentName: "admonition"
+    }, `You can install specific versions of Rancher by using the tag from a previous release. See what's available at DockerHub.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Notes:`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", {
+        parentName: "blockquote"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
