@@ -65,11 +65,7 @@ helm upgrade --reuse-values rancher-webhook rancher-charts/rancher-webhook  -n c
 ```
 **Note:** This temporary workaround may violate an environment's security policy. This workaround also requires that port 9443 is unused on the host network.
 
-<<<<<<< HEAD
 **Note:** Helm uses secrets by default. This is a datatype that some webhook versions validate to store information. In these cases, directly update the deployment with the hostNetwork=true value using kubectl, then run the helm commands listed above to avoid drift between the helm configuration and the actual state in the cluster.
-=======
-**Note:** Helm, by default, uses a type that some webhook versions validate (secrets) to store information. In these cases, it's recommended to first directly update the deployment with the hostNetwork=true value using kubectl, and then perform the helm commands listed above to avoid drift between the helm configuration and the actual state in the cluster.
->>>>>>> main
 
 ### Private GKE Cluster
 
@@ -105,7 +101,7 @@ To help alleviate these issues, you can run the [adjust-downstream-webhook](http
 
 ### Project Users Can't Create Namespaces 
 
-**Note:** This affects Rancher versions `v2.7.2 - v2.7.4`
+**Note:** The following affects Rancher v2.7.2 - v2.7.4.
 
 Project users may not be able to create namespaces in projects. This includes project owners. This issue is caused by Rancher automatically upgrading the webhook to a version compatible with a more recent version of Rancher than the one currently installed. 
 

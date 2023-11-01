@@ -101,7 +101,7 @@ To help alleviate these issues, you can run the [adjust-downstream-webhook](http
 
 ### Project Users Can't Create Namespaces 
 
-**Note:** This affects Rancher versions `v2.7.2 - v2.7.4`
+**Note:** The following affects Rancher v2.7.2 - v2.7.4.
 
 Project users may not be able to create namespaces in projects. This includes project owners. This issue is caused by Rancher automatically upgrading the webhook to a version compatible with a more recent version of Rancher than the one currently installed. 
 
