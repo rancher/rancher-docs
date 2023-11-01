@@ -14,14 +14,14 @@ module.exports = {
   projectName: 'rancher-docs', // Usually your repo name.
   trailingSlash: false,
   i18n: {
-    defaultLocale: "en",
-    locales: ["en", "zh"],
+    defaultLocale: 'en',
+    locales: ['en', 'zh'],
     localeConfigs: {
       en: {
-        label: "English",
+        label: 'English',
       },
       zh: {
-        label: "简体中文",
+        label: '简体中文',
       },
     },
   },
@@ -69,8 +69,8 @@ module.exports = {
       //... other Algolia params
     },
     colorMode: {
-      // "light" | "dark"
-      defaultMode: "light",
+      // 'light' | 'dark'
+      defaultMode: 'light',
 
       // Hides the switch in the navbar
       // Useful if you want to support a single color mode
@@ -80,7 +80,7 @@ module.exports = {
       additionalLanguages: ['rust'],
     },
     navbar: {
-      title: "",
+      title: '',
       logo: {
         alt: 'logo',
         src: 'img/rancher-logo-horiz-color.svg',
@@ -88,26 +88,73 @@ module.exports = {
       },
       items: [
         {
-            type: "localeDropdown",
-            position: "right",
-        },
-        {
-          href: 'https://github.com/rancher/rancher-docs',
-          label: 'GitHub',
-          position: 'right',
-          className: 'navbar__github',
-        },
-        {
-          href: 'https://www.rancher.com',
-          label: 'Rancher Home',
-          position: 'right',
-        },
-        {
           type: 'docsVersionDropdown',
           position: 'left',
           dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
           dropdownActiveClassDisabled: false,
         },
+        {
+          type: 'localeDropdown',
+          position: 'left',
+        },
+        {
+          type: 'search',
+          position: 'left',
+        },
+        {
+          type: 'dropdown',
+          label: 'Quick Links',
+          position: 'right',
+          items: [
+            {
+              href: 'https://github.com/rancher/rancher',
+              label: 'GitHub',
+            },
+            {
+              href: 'https://github.com/rancher/rancher-docs',
+              label: 'Docs GitHub',
+            },
+          ]
+        },
+        {
+          type: 'dropdown',
+          label: 'More from SUSE',
+          position: 'right',
+          items: [
+            {
+              href: 'https://www.rancher.com',
+              label: 'Rancher',
+            },
+            {
+              type: 'html',
+              value: '<hr style="margin: 0.3rem 0;">',
+            },
+            {
+              href: 'https://elemental.docs.rancher.com/',
+              label: 'Elemental',
+            },
+            {
+              href: 'https://epinio.io/',
+              label: 'Epinio',
+            },
+            {
+              href: 'https://fleet.rancher.io/',
+              label: 'Fleet',
+            },
+            {
+              href: 'https://harvesterhci.io',
+              label: 'Harvester',
+            },
+            {
+              type: 'html',
+              value: '<hr style="margin: 0.3rem 0;">',
+            },
+            {
+              href: 'https://opensource.suse.com',
+              label: 'More Projects...',
+            },
+          ]
+        }
       ],
     },
     footer: {
@@ -159,7 +206,7 @@ module.exports = {
         blog: false, // Optional: disable the blog plugin
         // ...
         theme: {
-          customCss: [require.resolve("./src/css/custom.css")],
+          customCss: [require.resolve('./src/css/custom.css')],
         },
         googleTagManager: {
           containerId: 'GTM-57KS2MW',
@@ -1181,61 +1228,61 @@ module.exports = {
             from: '/v2.6/explanations/integrations-in-rancher/opa-gatekeeper'
           }, // Redirects for restructure from PR #234 (end)
           {
-            to: "/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
-            from: "/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
+            to: '/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.24-k8s-v1.24',
+            from: '/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.24'
           },
           {
-            to: "/v2.7/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
-            from: "/2.7/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
+            to: '/v2.7/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.24-k8s-v1.24',
+            from: '/2.7/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.24'
           },
           {
-            to: "/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
-            from: "/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.25"
+            to: '/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27',
+            from: '/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.25'
           },
           {
-            to: "/v2.7/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
-            from: "/v2.7/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.25"
+            to: '/v2.7/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27',
+            from: '/v2.7/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.25'
 
           },
           {
-            to: "/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
-            from: "/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
+            to: '/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.24-k8s-v1.24',
+            from: '/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.24'
           },
           {
-            to: "/v2.7/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
-            from: "/v2.7/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
+            to: '/v2.7/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.24-k8s-v1.24',
+            from: '/v2.7/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.24'
           },
           {
-            to: "/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
-            from: "/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.25"
+            to: '/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27',
+            from: '/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.25'
           },
           {
-            to: "/v2.7/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
-            from: "/v2.7/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.25"
+            to: '/v2.7/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27',
+            from: '/v2.7/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.25'
           },
           {
-            to: "/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
-            from: "/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
+            to: '/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.24-k8s-v1.24',
+            from: '/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.24'
           },
           {
-            to: "/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
-            from: "/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.24"
+            to: '/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.24-k8s-v1.24',
+            from: '/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.24'
           },
           {
-            to: "/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
-            from: "/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25"
+            to: '/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27',
+            from: '/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25'
           },
           {
-            to: "/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
-            from: "/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25"
+            to: '/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27',
+            from: '/v2.7/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25'
           },
           {
-            to: "/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale",
-            from: "/reference-guides/best-practices/rancher-server/tips-for-scaling-rancher"
+            to: '/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale',
+            from: '/reference-guides/best-practices/rancher-server/tips-for-scaling-rancher'
           },
           {
-            to: "/v2.7/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale",
-            from: "/v2.7/reference-guides/best-practices/rancher-server/tips-for-scaling-rancher"
+            to: '/v2.7/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale',
+            from: '/v2.7/reference-guides/best-practices/rancher-server/tips-for-scaling-rancher'
           }
         ],
       },
@@ -1254,6 +1301,5 @@ module.exports = {
       type:'text/javascript',
       async: true
     },
-    // "/scripts/optanonwrapper.js"
   ],
 };
