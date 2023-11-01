@@ -205,7 +205,7 @@ In addition to these default roles, the following Rancher project roles can be a
 |--------------------------|-------------------------------|-------|------|
 | View Monitoring* | [monitoring-ui-view](#monitoring-ui-view)    |    2.4.8+    |  9.4.204+ |
 
-\* A user bound to the **View Monitoring** Rancher role and read-only project permissions can't view links in the monitoring UI. They can still access external Monitoring UIs if provided links to those UIs. In order to access the Monitoring pane to get those links, the user must be a project member of at least one Project. If you wish to grant access to users with the **View Monitoring** role and read-only project permissions, move the `cattle-monitoring-system` namespace into the project. 
+\* A user bound to the **View Monitoring** Rancher role and read-only project permissions can't view links in the monitoring UI. They can still access external monitoring UIs if provided links to those UIs. If you wish to grant access to users with the **View Monitoring** role and read-only project permissions, move the `cattle-monitoring-system` namespace into the project. 
 
 ### Differences in 2.5.x
 
