@@ -53,7 +53,7 @@ In v2.7.0, the built-in extensions will not be displayed under the **Available**
 
 1. Find the address of the container image you want to import as an extension. Rancher provides some extensions, such as Kubewarden and Elemental, through the `ui-plugin-catalog` container image at https://hub.docker.com/r/rancher/ui-plugin-catalog/tags. You should import and use the latest tagged version of the image to ensure you receive the latest features and security updates.
 
-1. **(Optional)** If the container image is private: [Create](../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) a registry secret within the `cattle-UI-plugin-system` namespace. Enter the domain of the image address in the **Registry Domain Name** field.
+    * **(Optional)** If the container image is private: [Create](../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) a registry secret within the `cattle-UI-plugin-system` namespace. Enter the domain of the image address in the **Registry Domain Name** field.
 
 1. Click **☰**, then select **Extensions**, under **Configuration**.
 
@@ -63,7 +63,7 @@ In v2.7.0, the built-in extensions will not be displayed under the **Available**
 
 1. Enter the image address in the **Catalog Image Reference** field. 
 
-1. Select the secret you just created from the **Pull Secrets** drop-down menu.
+    * **(Optional)** If the container image is private: Select the secret you just created from the **Pull Secrets** drop-down menu.
 
 1. Click **Load**. The extension will now be **Pending**.
 
@@ -91,17 +91,13 @@ You must reload the page after disabling extensions or display issues may occur.
 
 :::
 
-## Rolling Back Extensions
+## Updating and Upgrading Extensions
 
-Under the **Installed** tab, click the **Rollback** button on the extension you wish to roll back.
+1. Click **☰ > Extensions** under **Configuration**.
+1. Select the **Updates** tab. 
+1. Click **Update**.
 
-![Roll back extensions](/img/roll-back-extension.png)
-
-:::caution
-
-You must reload the page after rolling back extensions or display issues may occur.
-
-:::
+If there is a new version of the extension, there will also be an **Update** button visible on the associated card for the extension in the **Available** tab.
 
 ## Developing Extensions
 
