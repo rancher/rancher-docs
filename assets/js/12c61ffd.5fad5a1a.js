@@ -315,7 +315,7 @@ const metadata = {
     "unversionedId": "integrations-in-rancher/opni/opni",
     "id": "version-2.8/integrations-in-rancher/opni/opni",
     "title": "Observability with Opni",
-    "description": "Opni with Rancher",
+    "description": "Opni is a multi-cluster and multi-tenant observability platform. Purpose-built on Kubernetes, Opni simplifies the process of creating and managing backends, agents, and data related to logging, monitoring, and tracing. With built-in AIOps, Opni allows users to swiftly detect anomalous activities in their data.",
     "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/opni/opni.md",
     "sourceDirName": "integrations-in-rancher/opni",
     "slug": "/integrations-in-rancher/opni/",
@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/opni/opni.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1697751616,
-    "formattedLastUpdatedAt": "Oct 19, 2023",
+    "lastUpdatedAt": 1698886375,
+    "formattedLastUpdatedAt": "Nov 2, 2023",
     "frontMatter": {
         "title": "Observability with Opni"
     },
@@ -345,11 +345,6 @@ const toc = [
         value: 'Opni with Rancher',
         id: 'opni-with-rancher',
         level: 2
-    },
-    {
-        value: 'Opni with Rancher Prime',
-        id: 'opni-with-rancher-prime',
-        level: 2
     }
 ];
 const layoutProps = {
@@ -363,11 +358,20 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/opni"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Opni is a multi-cluster and multi-tenant observability platform. Purpose-built on Kubernetes, Opni simplifies the process of creating and managing backends, agents, and data related to logging, monitoring, and tracing. With built-in AIOps, Opni allows users to swiftly detect anomalous activities in their data.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Opni components work together to provide a comprehensive observability platform. Key components include:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Observability Backends: Opni Logging enhances Opensearch for easy searching, visualization, and analysis of logs, traces and Kubernetes events. Opni Monitoring extends Cortex for multi-cluster, long-term storage of Prometheus metrics.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Observability Agents: Agents are software that collects observability data (logs, metrics, traces, and events) from their host and sends it to an observability backend. The Opni agent enables collection of logs, Kubernetes events, OpenTelemetry traces, and Prometheus metrics.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `AIOps: Applies AL and machine learning to IT and observability data. Open AIOps features include log anomaly detection using pretrained models for Kubernetes control plane, Rancher and Longhorn.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Alerting and SLOs: Triggers and reliability targets for services enables utilizing Opni data to effectively make informed decisions regarding software operations.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "opni-with-rancher"
-    }, `Opni with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "opni-with-rancher-prime"
-    }, `Opni with Rancher Prime`));
+    }, `Opni with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Opni’s Helm charts are currently maintained in a charts-specific branch of the Opni GitHub project. Once this branch is added as a repository in Rancher, the Opni installation can be performed through the Rancher UI. Efforts are underway now to streamline this process by including these charts directly within Rancher itself, and offering Opni as a fully integrated Rancher App.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Opni’s log anomaly detection process includes purpose-built, pre-trained models for RKE2, K3s, Longhorn and Rancher agent logs. This advanced modeling ensures first class support for log anomaly detection for the core suite of Rancher products.`));
 }
 MDXContent.isMDXComponent = true;
 
