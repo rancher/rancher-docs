@@ -124,6 +124,7 @@ module.exports = {
             {
               href: 'https://www.rancher.com',
               label: 'Rancher',
+              className: 'navbar__icon navbar__rancher'
             },
             {
               type: 'html',
@@ -132,18 +133,22 @@ module.exports = {
             {
               href: 'https://elemental.docs.rancher.com/',
               label: 'Elemental',
+              className: 'navbar__icon navbar__elemental'
             },
             {
               href: 'https://epinio.io/',
               label: 'Epinio',
+              className: 'navbar__icon navbar__epinio'
             },
             {
               href: 'https://fleet.rancher.io/',
               label: 'Fleet',
+              className: 'navbar__icon navbar__fleet'
             },
             {
               href: 'https://harvesterhci.io',
               label: 'Harvester',
+              className: 'navbar__icon navbar__harvester'
             },
             {
               type: 'html',
@@ -152,6 +157,7 @@ module.exports = {
             {
               href: 'https://opensource.suse.com',
               label: 'More Projects...',
+              className: 'navbar__icon navbar__suse'
             },
           ]
         }
