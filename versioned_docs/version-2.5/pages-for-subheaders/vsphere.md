@@ -15,7 +15,7 @@ Rancher can provision nodes in vSphere and install Kubernetes on them. When crea
 
 A vSphere cluster may consist of multiple groups of VMs with distinct properties, such as the amount of memory or the number of vCPUs. This grouping allows for fine-grained control over the sizing of nodes for each Kubernetes role.
 
-- [vSphere Enhancements in Rancher v2.3](#vsphere-enhancements-in-rancher-v2-3)
+- [vSphere Enhancements in Rancher v2.3](#vsphere-enhancements-in-rancher-v23)
 - [Creating a vSphere Cluster](#creating-a-vsphere-cluster)
 - [Provisioning Storage](#provisioning-storage)
 - [Enabling the vSphere Cloud Provider](#enabling-the-vsphere-cloud-provider)

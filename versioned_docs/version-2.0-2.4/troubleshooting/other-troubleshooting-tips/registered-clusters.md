@@ -2,6 +2,10 @@
 title: Imported clusters
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/troubleshooting/other-troubleshooting-tips/registered-clusters"/>
+</head>
+
 The commands/steps listed on this page can be used to check clusters that you are importing or that are imported in Rancher.
 
 Make sure you configured the correct kubeconfig (for example, `export KUBECONFIG=$PWD/kubeconfig_from_imported_cluster.yml`)

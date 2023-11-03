@@ -2,6 +2,10 @@
 title: Run a Scan Periodically on a Schedule
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/cis-scan-guides/run-a-scan-periodically-on-a-schedule"/>
+</head>
+
 To run a ClusterScan on a schedule,
 
 1. In the upper left corner, click **☰ > Cluster Management**.

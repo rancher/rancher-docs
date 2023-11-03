@@ -29,8 +29,8 @@ Kubernetes v1.18+ | CIS v1.6 | [Link](../reference-guides/rancher-security/ranch
 
 Kubernetes Version | CIS Benchmark Version | Self Assessment Guide | Hardening Guides
 ---|---|---|---
-Kubernetes v1.18 | CIS v1.5 | [Link](https://docs.rke2.io/security/cis_self_assessment15/) | [Link](https://docs.rke2.io/security/hardening_guide/)
-Kubernetes v1.20 | CIS v1.6 | [Link](https://docs.rke2.io/security/cis_self_assessment16/) | [Link](https://docs.rke2.io/security/hardening_guide/)
+Kubernetes v1.18 | CIS v1.5 | [Link](https://github.com/rancher/rke2-docs/blob/f36b47ae8de3d859ae2db8ddf26beeb26c3e80b1/docs/security/cis_self_assessment15.md) | [Link](https://docs.rke2.io/security/hardening_guide)
+Kubernetes v1.20 | CIS v1.6 | [Link](https://docs.rke2.io/security/cis_self_assessment16) | [Link](https://docs.rke2.io/security/hardening_guide)
 
 ### K3s Guides
 

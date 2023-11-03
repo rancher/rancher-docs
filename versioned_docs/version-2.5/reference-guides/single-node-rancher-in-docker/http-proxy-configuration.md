@@ -38,4 +38,4 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-As of Rancher v2.5, privileged access is [required.](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v2-5)
+As of Rancher v2.5, privileged access is [required.](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v25)

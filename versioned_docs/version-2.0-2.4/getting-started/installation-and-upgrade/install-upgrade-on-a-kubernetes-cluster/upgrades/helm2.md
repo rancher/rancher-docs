@@ -21,7 +21,7 @@ If you installed Rancher using the RKE Add-on yaml, follow the directions to [mi
 >**Notes:**
 >
 > - [Let's Encrypt will be blocking cert-manager instances older than 0.8.0 starting November 1st 2019.](https://community.letsencrypt.org/t/blocking-old-cert-manager-versions/98753) Upgrade cert-manager to the latest version by following [these instructions.](../../resources/upgrade-cert-manager.md)
-> - If you are upgrading Rancher from v2.x to v2.3+, and you are using external TLS termination, you will need to edit the cluster.yml to [enable using forwarded host headers.](../../../../reference-guides/installation-references/helm-chart-options.md#configuring-ingress-for-external-tls-when-using-nginx-v0-25)
+> - If you are upgrading Rancher from v2.x to v2.3+, and you are using external TLS termination, you will need to edit the cluster.yml to [enable using forwarded host headers.](../../../../reference-guides/installation-references/helm-chart-options.md#configuring-ingress-for-external-tls-when-using-nginx-v025)
 > - The upgrade instructions assume you are using Helm 3. For migration of installs started with Helm 2, refer to the official [Helm 2 to 3 migration docs.](https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/) This [section](../../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/helm2.md) provides a copy of the older upgrade instructions that used Helm 2, and it is intended to be used if upgrading to Helm 3 is not feasible.
 
 ## Prerequisites
@@ -53,7 +53,7 @@ of your Kubernetes cluster running Rancher server. You'll use the snapshot as a 
 
 1. Get the repository name that you used to install Rancher.
 
-    For information about the repos and their differences, see [Helm Chart Repositories](../../../../reference-guides/installation-references/helm-chart-options.md#helm-chart-repositories).
+    For information about the repos and their differences, see [Helm Chart Repositories](../../resources/choose-a-rancher-version.md#helm-chart-repositories).
 
     - Latest: Recommended for trying out the newest features
         ```

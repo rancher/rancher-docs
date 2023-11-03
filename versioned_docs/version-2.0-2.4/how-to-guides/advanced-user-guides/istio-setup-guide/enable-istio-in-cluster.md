@@ -2,6 +2,10 @@
 title: 1. Enable Istio in the Cluster
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/istio-setup-guide/enable-istio-in-cluster"/>
+</head>
+
 This cluster uses the default Nginx controller to allow traffic into the cluster.
 
 A Rancher [administrator](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md) or [cluster owner](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles) can configure Rancher to deploy Istio in a Kubernetes cluster.

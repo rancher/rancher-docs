@@ -2,7 +2,11 @@
 title: Logging
 ---
 
-## Log levels
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/troubleshooting/other-troubleshooting-tips/logging"/>
+</head>
+
+## Log Levels
 
 The following log levels are used in Rancher:
 
@@ -12,9 +16,9 @@ The following log levels are used in Rancher:
 | `debug` | Logs more detailed messages that can be used to debug. |
 | `trace` | Logs very detailed messages on internal functions. This is very verbose and can contain sensitive information. |
 
-### How to configure a log level
+### How to Configure a Log Level
 
-#### Kubernetes install
+#### Kubernetes Install
 
 * Configure debug log level
 
@@ -54,7 +58,7 @@ $ docker exec -ti <container_id> loglevel --set info
 OK
 ```
 
-## Rancher machine debug logs
+## Rancher Machine Debug Logs
 If you need to troubleshoot the creation of objects in your infrastructure provider of choice, `rancher-machine`
 debug logs might be helpful to you.
 
@@ -72,5 +76,21 @@ possible to enable debug logs in `rancher-machine` when provisioning RKE1, RKE2 
 :::caution
 
 Just like the `trace` log level above, `rancher-machine` debug logs can contain sensitive information.
+
+:::
+
+
+## Cattle-cluster-agent Debug Logs
+
+The `cattle-cluster-agent` log levels can be set when you initialize downstream clusters.
+
+When you create a cluster under **Cluster Configuration > Agent Environment Vars** you can set variables to define the log level.
+- Trace-level logging: Set `CATTLE_TRACE` or `RANCHER_TRACE` to `true`
+
+- Debug-level logging: Set `CATTLE_DEBUG` or `RANCHER_DEBUG` to `true`
+
+:::caution
+
+The `cattle-cluster-agent` debug logs may contain sensitive information.
 
 :::

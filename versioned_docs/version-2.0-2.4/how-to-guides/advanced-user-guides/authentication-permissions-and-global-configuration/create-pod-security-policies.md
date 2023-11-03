@@ -2,7 +2,7 @@
 title: Pod Security Policies
 ---
 
-<head> 
+<head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies"/>
 </head>
 

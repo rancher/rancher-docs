@@ -104,7 +104,7 @@ This section covers three methods to reconfigure Rancher agents to trust the pri
 
 #### Why is this step required?
 
-When Rancher is configured with a certificate signed by a private CA, the CA certificate chain is downloaded into Rancher agent containers. Agents compare the checksum of the downloaded certificate against the `CATTLE_CA_CHECKSUM` environment variable. This means that, when the private CA certificate is changed on Rancher server side, the environvment variable `CATTLE_CA_CHECKSUM` must be updated accordingly.
+When Rancher is configured with a certificate signed by a private CA, the CA certificate chain is downloaded into Rancher agent containers. Agents compare the checksum of the downloaded certificate against the `CATTLE_CA_CHECKSUM` environment variable. This means that, when the private CA certificate is changed on Rancher server side, the environment variable `CATTLE_CA_CHECKSUM` must be updated accordingly.
 
 #### Which method should I choose?
 

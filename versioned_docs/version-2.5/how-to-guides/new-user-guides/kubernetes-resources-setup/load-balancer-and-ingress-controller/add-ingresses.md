@@ -21,7 +21,7 @@ Ingress can be added for workloads to provide load balancing, SSL termination an
 
 ## Ingress Rule Configuration
 
-- [Automatically generate a sslip.io hostname](#automatically-generate-a-sslip-io-hostname)
+- [Automatically generate a sslip.io hostname](#automatically-generate-a-sslipio-hostname)
 - [Specify a hostname to use](#specify-a-hostname-to-use)
 - [Use as the default backend](#use-as-the-default-backend)
 - [Certificates](#certificates)

@@ -151,19 +151,10 @@ resource "rancher2_cluster" "my-eks-to-import" {
 
 The control that Rancher has to manage a registered cluster depends on the type of cluster.
 
-<Tabs>
-<TabItem value="Rancher v2.5.8+">
-
-- [Changes in v2.5.8](#changes-in-v2-5-8)
-- [Features for All Registered Clusters](#2-5-8-features-for-all-registered-clusters)
-- [Additional Features for Registered K3s Clusters](#2-5-8-additional-features-for-registered-k3s-clusters)
-- [Additional Features for Registered EKS and GKE Clusters](#additional-features-for-registered-eks-and-gke-clusters)
-
 ### Changes in v2.5.8
 
 Greater management capabilities are now available for [registered GKE clusters.](#additional-features-for-registered-eks-and-gke-clusters) The same configuration options are available for registered GKE clusters as for the GKE clusters created through the Rancher UI.
 
-<a id="2-5-8-features-for-all-registered-clusters"></a>
 ### Features for All Registered Clusters
 
 After registering a cluster, the cluster owner can:
@@ -174,7 +165,6 @@ After registering a cluster, the cluster owner can:
 - Enable [Istio](../../../pages-for-subheaders/istio.md)
 - Manage projects and workloads
 
-<a id="2-5-8-additional-features-for-registered-k3s-clusters"></a>
 ### Additional Features for Registered K3s Clusters
 
 [K3s](https://rancher.com/docs/k3s/latest/en/) is a lightweight, fully compliant Kubernetes distribution.
@@ -184,6 +174,9 @@ When a K3s cluster is registered in Rancher, Rancher will recognize it as K3s. T
 - The ability to [upgrade the K3s version](../../../getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes.md)
 - The ability to configure the maximum number of nodes that will be upgraded concurrently
 - The ability to see a read-only version of the K3s cluster's configuration arguments and environment variables used to launch each node in the cluster
+
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.5.8+">
 
 ### Additional Features for Registered EKS and GKE Clusters
 
@@ -197,32 +190,6 @@ The capabilities for registered clusters are listed in the table on [this page.]
 
 </TabItem>
 <TabItem value="Rancher before v2.5.8">
-
-- [Features for All Registered Clusters](#before-2-5-8-features-for-all-registered-clusters)
-- [Additional Features for Registered K3s Clusters](#before-2-5-8-additional-features-for-registered-k3s-clusters)
-- [Additional Features for Registered EKS Clusters](#additional-features-for-registered-eks-clusters)
-
-<a id="before-2-5-8-features-for-all-registered-clusters"></a>
-### Features for All Registered Clusters
-
-After registering a cluster, the cluster owner can:
-
-- [Manage cluster access](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md) through role-based access control
-- Enable [monitoring, alerts and notifiers](../../../pages-for-subheaders/monitoring-and-alerting.md)
-- Enable [logging](../../../pages-for-subheaders/logging.md)
-- Enable [Istio](../../../pages-for-subheaders/istio.md)
-- Manage projects and workloads
-
-<a id="before-2-5-8-additional-features-for-registered-k3s-clusters"></a>
-### Additional Features for Registered K3s Clusters
-
-[K3s](https://rancher.com/docs/k3s/latest/en/) is a lightweight, fully compliant Kubernetes distribution.
-
-When a K3s cluster is registered in Rancher, Rancher will recognize it as K3s. The Rancher UI will expose the features for [all registered clusters,](#features-for-all-registered-clusters) in addition to the following features for editing and upgrading the cluster:
-
-- The ability to [upgrade the K3s version](../../../getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes.md)
-- The ability to configure the maximum number of nodes that will be upgraded concurrently
-- The ability to see a read-only version of the K3s cluster's configuration arguments and environment variables used to launch each node in the cluster
 
 ### Additional Features for Registered EKS Clusters
 

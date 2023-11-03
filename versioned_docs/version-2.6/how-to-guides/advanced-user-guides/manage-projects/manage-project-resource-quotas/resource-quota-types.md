@@ -2,6 +2,10 @@
 title: Resource Quota Type Reference
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/manage-projects/manage-project-resource-quotas/resource-quota-types"/>
+</head>
+
 When you create a resource quota, you are configuring the pool of resources available to the project. You can set the following resource limits for the following resource types.
 
 | Resource Type            | Description                                                                                                                                                                                       |

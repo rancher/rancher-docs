@@ -96,7 +96,7 @@ To enable draining each node during a cluster upgrade,
 
 :::note
 
-There is a [known issue](https://github.com/rancher/rancher/issues/25478) in which the Rancher UI doesn't show state of etcd and controlplane as drained, even though they are being drained.
+There is a [known issue](https://github.com/rancher/rancher/issues/25478) in which the Rancher UI doesn't show the state of etcd and controlplane as drained, even though they are being drained.
 
 :::
 

@@ -2,6 +2,10 @@
 title: Configure Alerts for Periodic Scan on a Schedule
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/cis-scan-guides/configure-alerts-for-periodic-scan-on-a-schedule"/>
+</head>
+
 It is possible to run a ClusterScan on a schedule.
 
 A scheduled scan can also specify if you should receive alerts when the scan completes.
@@ -17,7 +21,7 @@ The CIS Benchmark application supports two types of alerts:
 
 Before enabling alerts for `rancher-cis-benchmark`, make sure to install the `rancher-monitoring` application and configure the Receivers and Routes. For more information, see [this section.](../../../explanations/integrations-in-rancher/cis-scans/configuration-reference.md)
 
-While configuring the routes for `rancher-cis-benchmark` alerts, you can specify the matching using the key-value pair `job: rancher-cis-scan`. An example route configuration is [here.](../../../reference-guides/monitoring-v2-configuration/receivers/#example-route-config-for-cis-scan-alerts)
+While configuring the routes for `rancher-cis-benchmark` alerts, you can specify the matching using the key-value pair `job: rancher-cis-scan`. An example route configuration is [here.](../../../reference-guides/monitoring-v2-configuration/receivers.md#example-route-config-for-cis-scan-alerts)
 
 :::
 

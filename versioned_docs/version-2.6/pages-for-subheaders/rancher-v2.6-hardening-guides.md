@@ -36,7 +36,7 @@ These guides have been tested along with the Rancher v2.6 release. Each self-ass
 | Type | Kubernetes Version | CIS Benchmark Version | Self Assessment Guide | Hardening Guides |
 | ---- | ------------------ | --------------------- | --------------------- | ---------------- |
 | Rancher provisioned RKE2 cluster |  Kubernetes v1.21 up to v1.23 | CIS v1.6 | [Link](../reference-guides/rancher-security/rancher-v2.6-hardening-guides/rke2-self-assessment-guide-with-cis-v1.6-benchmark.md) | [Link](../reference-guides/rancher-security/rancher-v2.6-hardening-guides/rke2-hardening-guide-with-cis-v1.6-benchmark.md) |
-| Standalone RKE2 | Kubernetes v1.21 up to v1.23 | CIS v1.6 | [Link](https://docs.rke2.io/security/cis_self_assessment16/) | [Link](https://docs.rke2.io/security/hardening_guide/) |
+| Standalone RKE2 | Kubernetes v1.21 up to v1.23 | CIS v1.6 | [Link](https://docs.rke2.io/security/cis_self_assessment16) | [Link](https://docs.rke2.io/security/hardening_guide) |
 
 ### K3s Guides
 

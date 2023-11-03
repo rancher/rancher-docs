@@ -2,6 +2,10 @@
 title: Skip Tests
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/cis-scan-guides/skip-tests"/>
+</head>
+
 CIS scans can be run using test profiles with user-defined skips.
 
 To skip tests, you will create a custom CIS scan profile. A profile contains the configuration for the CIS scan, which includes the benchmark versions to use and any specific tests to skip in that benchmark.

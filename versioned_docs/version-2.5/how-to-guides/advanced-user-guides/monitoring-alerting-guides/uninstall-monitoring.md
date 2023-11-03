@@ -2,6 +2,10 @@
 title: Uninstall Monitoring
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-alerting-guides/uninstall-monitoring"/>
+</head>
+
 1. From the **Cluster Explorer,** click Apps & Marketplace.
 1. Click **Installed Apps.**
 1. Go to the `cattle-monitoring-system` namespace and check the boxes for `rancher-monitoring-crd` and `rancher-monitoring`.

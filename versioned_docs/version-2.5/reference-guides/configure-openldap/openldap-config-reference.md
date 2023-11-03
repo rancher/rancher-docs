@@ -2,7 +2,7 @@
 title: OpenLDAP Configuration Reference
 ---
 
-<head> 
+<head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-openldap/openldap-config-reference"/>
 </head>
 
@@ -12,7 +12,7 @@ For further details on configuring OpenLDAP authentication, refer to the [offici
 
 - [Background: OpenLDAP Authentication Flow](#background-openldap-authentication-flow)
 - [OpenLDAP server configuration](#openldap-server-configuration)
-- [User/group schema configuration](#user-group-schema-configuration)
+- [User/group schema configuration](#usergroup-schema-configuration)
   - [User schema configuration](#user-schema-configuration)
   - [Group schema configuration](#group-schema-configuration)
 

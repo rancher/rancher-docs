@@ -49,7 +49,7 @@ The Benchmark provides recommendations of two types: Scored and Not Scored. We r
 
 When Rancher runs a CIS security scan on a cluster, it generates a report showing the results of each test, including a summary with the number of passed, skipped and failed tests. The report also includes remediation steps for any failed tests.
 
-For details, refer to the section on [security scans.](cis-scans)
+For details, refer to the section on [security scans.](cis-scan-guides.md)
 
 ### Rancher Hardening Guide
 

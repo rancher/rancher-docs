@@ -33,7 +33,7 @@ The port requirements for the Harvester cluster can be found [here](https://docs
 In addition, other networking considerations are as follows:
 
 - Be sure to enable VLAN trunk ports of the physical switch for VM VLAN networks.
-- Follow the networking setup guidance [here](https://docs.harvesterhci.io/v1.1/networking/clusternetwork).
+- Follow the networking setup guidance [here](https://docs.harvesterhci.io/v1.1/networking/index).
 
 For other port requirements for other guest clusters, such as K3s and RKE1, please see [these docs](https://docs.harvesterhci.io/v1.1/install/requirements/#guest-clusters).
 

@@ -6,22 +6,12 @@ See the [Logging operator documentation](https://kube-logging.github.io/docs/con
 
 See [Rancher Integration with Logging Services: Troubleshooting](../../../../pages-for-subheaders/logging.md#The-Logging-Buffer-Overloads-Pods) for how to resolve memory problems with the logging buffer.
 
-## Configuration
-
-<Tabs>
-<TabItem value="v2.5.8+">
-
-- [Outputs](#outputs-2-5-8)
-- [ClusterOutputs](#clusteroutputs-2-5-8)
-
-## Changes in v2.5.8
-
-The `Outputs` and `ClusterOutputs` can now be configured by filling out forms in the Rancher UI.
-
-
-<a id="outputs-2-5-8"></a>
-
 ## Outputs
+
+As of Rancher v2.5.8, the `Outputs` and `ClusterOutputs` can now be configured by filling out forms in the Rancher UI.
+
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.5.8+">
 
 The `Output` resource defines where your `Flows` can send the log messages. `Outputs` are the final stage for a logging `Flow`.
 
@@ -55,24 +45,8 @@ The Rancher UI provides forms for configuring the `Output` type, target, and acc
 
 For example configuration for each logging plugin supported by the logging operator, see the [Logging operator documentation](https://kube-logging.github.io/docs/configuration/plugins/outputs/).
 
-<a id="clusteroutputs-2-5-8"></a>
-
-## ClusterOutputs
-
-`ClusterOutput` defines an `Output` without namespace restrictions. It is only effective when deployed in the same namespace as the logging operator.
-
-For the details of the `ClusterOutput` custom resource, see [ClusterOutput.](https://kube-logging.github.io/docs/configuration/crds/v1beta1/clusteroutput_types/)
-
 </TabItem>
 <TabItem value="Rancher before v2.5.8">
-
-- [Outputs](#outputs-2-5-0)
-- [ClusterOutputs](#clusteroutputs-2-5-0)
-
-
-<a id="outputs-2-5-0"></a>
-
-## Outputs
 
 The `Output` resource defines where your `Flows` can send the log messages. `Outputs` are the final stage for a logging `Flow`.
 
@@ -84,9 +58,20 @@ You can use secrets in these definitions, but they must also be in the same name
 
 For examples of configuration for each logging plugin supported by the logging operator, see the [logging operator documentation.](https://kube-logging.github.io/docs/configuration/plugins/outputs/)
 
-<a id="clusteroutputs-2-5-0"></a>
+</TabItem>
+</Tabs>
 
 ## ClusterOutputs
+
+<Tabs groupId="rancher-version">
+<TabItem value="Rancher v2.5.8+">
+
+`ClusterOutput` defines an `Output` without namespace restrictions. It is only effective when deployed in the same namespace as the logging operator.
+
+For the details of the `ClusterOutput` custom resource, see [ClusterOutput.](https://kube-logging.github.io/docs/configuration/crds/v1beta1/clusteroutput_types/)
+
+</TabItem>
+<TabItem value="Rancher before v2.5.8">
 
 `ClusterOutput` defines an `Output` without namespace restrictions. It is only effective when deployed in the same namespace as the logging operator.
 
@@ -99,15 +84,9 @@ For example configuration for each logging plugin supported by the logging opera
 </TabItem>
 </Tabs>
 
-
 ## YAML Examples
 
 Once logging is installed, you can use these examples to help craft your own logging pipeline.
-
-- [Cluster Output to ElasticSearch](#cluster-output-to-elasticsearch)
-- [Output to Splunk](#output-to-splunk)
-- [Output to Syslog](#output-to-syslog)
-- [Unsupported Outputs](#unsupported-outputs)
 
 ### Cluster Output to ElasticSearch
 
@@ -142,7 +121,6 @@ spec:
 ```
 
 We should now see our configured index with logs in it.
-
 
 ### Output to Splunk
 

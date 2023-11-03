@@ -54,7 +54,7 @@ If you are installing Rancher in a development or testing environment where iden
 
 Log into your Linux host, and then run the minimum installation command below.
 
-As of Rancher v2.5, privileged access is [required.](#privileged-access-for-rancher-v2-5)
+As of Rancher v2.5, privileged access is [required.](#privileged-access-for-rancher-v25)
 
 ```bash
 docker run -d --restart=unless-stopped \
@@ -81,7 +81,7 @@ After creating your certificate, run the Docker command below to install Rancher
 | `<PRIVATE_KEY.pem>` | The path to the private key for your certificate.            |
 | `<CA_CERTS.pem>`        | The path to the certificate authority's certificate.         |
 
-As of Rancher v2.5, privileged access is [required.](#privileged-access-for-rancher-v2-5)
+As of Rancher v2.5, privileged access is [required.](#privileged-access-for-rancher-v25)
 
 ```bash
 docker run -d --restart=unless-stopped \
@@ -113,7 +113,7 @@ After obtaining your certificate, run the Docker command below.
 | `<FULL_CHAIN.pem>`  | The path to your full certificate chain.                     |
 | `<PRIVATE_KEY.pem>` | The path to the private key for your certificate. |
 
-As of Rancher v2.5, privileged access is [required.](#privileged-access-for-rancher-v2-5)
+As of Rancher v2.5, privileged access is [required.](#privileged-access-for-rancher-v25)
 
 ```bash
 docker run -d --restart=unless-stopped \
@@ -143,7 +143,7 @@ After you fulfill the prerequisites, you can install Rancher using a Let's Encry
 | ----------------- | ------------------- |
 | `<YOUR.DNS.NAME>` | Your domain address |
 
-As of Rancher v2.5, privileged access is [required.](#privileged-access-for-rancher-v2-5)
+As of Rancher v2.5, privileged access is [required.](#privileged-access-for-rancher-v25)
 
 ```
 docker run -d --restart=unless-stopped \

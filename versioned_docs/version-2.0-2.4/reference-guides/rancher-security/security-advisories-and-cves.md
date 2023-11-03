@@ -2,6 +2,10 @@
 title: Rancher CVEs and Resolutions
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-security/security-advisories-and-cves"/>
+</head>
+
 Rancher is committed to informing the community of security issues in our products. Rancher will publish CVEs (Common Vulnerabilities and Exposures) for issues we have resolved.
 
 | ID | Description | Date | Resolution |

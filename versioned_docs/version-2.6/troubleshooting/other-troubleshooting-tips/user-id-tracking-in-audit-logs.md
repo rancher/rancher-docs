@@ -2,6 +2,10 @@
 title: User ID Tracking in Audit Logs
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/troubleshooting/other-troubleshooting-tips/user-id-tracking-in-audit-logs"/>
+</head>
+
 The following audit logs are used in Rancher to track events occuring on the local and downstream clusters:
 
 * [Kubernetes Audit Logs](https://rancher.com/docs/rke/latest/en/config-options/audit-log/)

@@ -85,7 +85,7 @@ Private GKE clusters are supported. Note: This advanced setup can require more s
 For details on configuring GKE clusters in Rancher, see [this page.](../../../../pages-for-subheaders/gke-cluster-configuration.md)
 ## Updating Kubernetes Version
 
-The Kubernetes version of a cluster can be upgraded to any version available in the region or zone fo the GKE cluster. Upgrading the master Kubernetes version does not automatically upgrade worker nodes. Nodes can be upgraded independently.
+The Kubernetes version of a cluster can be upgraded to any version available in the region or zone for the GKE cluster. Upgrading the master Kubernetes version does not automatically upgrade worker nodes. Nodes can be upgraded independently.
 
 :::note
 

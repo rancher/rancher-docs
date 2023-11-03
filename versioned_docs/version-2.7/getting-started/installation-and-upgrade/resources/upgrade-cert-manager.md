@@ -6,6 +6,8 @@ title: Upgrading Cert-Manager
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/resources/upgrade-cert-manager"/>
 </head>
 
+Rancher is compatible with the API version cert-manager.io/v1 and was last tested with cert-manager version v1.13.1.
+
 Rancher uses cert-manager to automatically generate and renew TLS certificates for HA deployments of Rancher. As of Fall 2019, three important changes to cert-manager are set to occur that you need to take action on if you have an HA deployment of Rancher:
 
 1. [Let's Encrypt will be blocking cert-manager instances older than 0.8.0 starting November 1st 2019.](https://community.letsencrypt.org/t/blocking-old-cert-manager-versions/98753)
@@ -96,8 +98,7 @@ In order to upgrade cert-manager, follow these instructions:
     ```plain
     helm install \
       cert-manager jetstack/cert-manager \
-      --namespace cert-manager \
-      --version v1.11.0
+      --namespace cert-manager
     ```
 
 1. [Restore back up resources](https://cert-manager.io/docs/tutorials/backup/#restoring-resources)
@@ -129,7 +130,7 @@ Before you can perform the upgrade, you must prepare your air gapped environment
 1. Fetch the latest cert-manager chart available from the [Helm chart repository](https://artifacthub.io/packages/helm/cert-manager/cert-manager).
 
     ```plain
-    helm fetch jetstack/cert-manager --version v1.11.0
+    helm fetch jetstack/cert-manager
     ```
 
 1. Render the cert manager template with the options you would like to use to install the chart. Remember to set the `image.repository` option to pull the image from your private registry. This will create a `cert-manager` directory with the Kubernetes manifest files.
@@ -281,5 +282,5 @@ We have also removed support for the old configuration format that was deprecate
 
 Details about the change and migration instructions can be found in the [cert-manager v0.10 to v0.11 upgrade instructions](https://cert-manager.io/docs/installation/upgrading/upgrading-0.10-0.11/).
 
-More info about [cert-manager upgrade information](https://cert-manager.io/docs/installation/upgrading/).
+More info about [cert-manager upgrade information](https://cert-manager.io/docs/installation/upgrade/).
 

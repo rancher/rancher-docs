@@ -289,7 +289,7 @@ Input or select an **Expression**, the dropdown shows the original metrics from 
 - [**Kubernetes Components**](https://github.com/kubernetes/metrics)
 - [**Kubernetes Resources**](https://github.com/kubernetes/kube-state-metrics)
 - [**Fluentd**](https://docs.fluentd.org/v1.0/articles/monitoring-prometheus) (supported by [Logging](./cluster-logging.md))
-- [**Cluster Level Grafana**](http://docs.grafana.org/administration/metrics/)
+- [**Cluster Level Grafana**](https://grafana.com/docs/grafana/latest/setup-grafana/set-up-grafana-monitoring/)
 - **Cluster Level Prometheus**
 
 ### Is

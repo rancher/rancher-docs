@@ -57,7 +57,7 @@ const sidebars = {
             "getting-started/quick-start-guides/deploy-rancher-manager/prime",
             {
               type: 'category',
-              label: 'Deploy Rancher Workloads',
+              label: 'Deploy Workloads',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/deploy-rancher-workloads",
@@ -800,6 +800,7 @@ const sidebars = {
             "how-to-guides/advanced-user-guides/open-ports-with-firewalld",
             "how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
             "how-to-guides/advanced-user-guides/enable-api-audit-log",
+            "how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters",
             "how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
           ]
         }
@@ -827,7 +828,8 @@ const sidebars = {
               items: [
                 "reference-guides/best-practices/rancher-server/on-premises-rancher-in-vsphere",
                 "reference-guides/best-practices/rancher-server/rancher-deployment-strategy",
-                "reference-guides/best-practices/rancher-server/tips-for-running-rancher"
+                "reference-guides/best-practices/rancher-server/tips-for-running-rancher",
+                "reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale"
               ]
             },
             {
@@ -1068,8 +1070,8 @@ const sidebars = {
                   },
                   items: [
                     "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
-                    "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.24",
-                    "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25",
+                    "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
+                    "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
                   ],
                 },
                 {
@@ -1081,8 +1083,8 @@ const sidebars = {
                   },
                   items: [
                     "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
-                    "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.24",
-                    "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25",
+                    "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
+                    "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
                   ],
                 },
                 {
@@ -1094,8 +1096,8 @@ const sidebars = {
                   },
                   items: [
                     "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
-                    "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.24",
-                    "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25",
+                    "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
+                    "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
                   ],
                 },
               ],
@@ -1113,6 +1115,7 @@ const sidebars = {
               ],
             },
             "reference-guides/rancher-security/kubernetes-security-best-practices",
+            "reference-guides/rancher-security/rancher-security-best-practices",
             "reference-guides/rancher-security/security-advisories-and-cves",
             "reference-guides/rancher-security/psa-restricted-exemptions",
           ],

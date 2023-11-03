@@ -14,7 +14,6 @@ For more information on roles-based access control, see [this section.](manage-r
 
 For information on how to set up an authentication system, see [this section.](about-authentication.md)
 
-
 ### Rancher UI
 
 Rancher provides an intuitive user interface for interacting with your clusters. All options available in the UI use the Rancher API. Therefore any action possible in the UI is also possible in the Rancher CLI or Rancher API.
