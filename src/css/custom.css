@@ -229,9 +229,8 @@ a.btn.navbar__github::before {
 
 .navbar__rancher:before {
   mask: url(/static/img/header/icon-rancher.png) no-repeat 100% 100%;
-  mask-size: cover;
+  mask-size: contain;
   width: 35px;
-  padding-bottom: 7px;
   background-color: #2e68e9;
 }
 
