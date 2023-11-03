@@ -6,23 +6,29 @@ title: Kubernetes on the Desktop with Rancher Desktop
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/rancher-desktop"/>
 </head>
 
-Developing and testing cloud-native applications on your desktop requires a set of foundational blocks such as a virtual machine (if on macOS or Windows), a container run time, Kubernetes, popular utilities, etc. Installing these components individually and getting them to work with each other can get pesky at times. Rancher Desktop nicely bundles all these essential building blocks into an easily installable and manageable desktop application that offers the key features below. 
+
+Rancher Desktop bundles together essential tools for developing and testing cloud-native applications from your desktop.
+
+If you're working from your local machine on apps intended for cloud environments, you normally need a lot of preparation. You need to select a container run-time, install Kubernetes and popular utilities, and possibly set up a virtual machine. Installing components individually and getting them to work together can be a time-consuming process.
+
+To reduce the complexity, Rancher Desktop offers teams the following key features:
 
 - Simple and easy installation on macOS, Linux and Windows operating systems.
-- A ready to use light weight Kubernetes distribution (K3s) and the ability to pick Kubernetes versions.
-- GUI-based cluster dashboard powered by Rancher to explore your local cluster.
-- Freedom to choose between multiple container engines (dockerd(moby) vs. containerd).
-- Preferences settings to configure the application to fit your needs.
-- Bundled tools required for your container, Kubernetes-based development, operations workflows.
-- Periodic updates to maintain the bundled tools’ versions up to date.
-- Integrates with proven tools/IDEs (VS Code extensions, Skaffold, etc). 
+- K3s, a ready-to-use, light-weight Kubernetes distribution.
+- The ability to easily switch between Kubernetes versions.
+- A GUI-based cluster dashboard powered by Rancher to explore your local cluster.
+- Freedom to choose your container engine: dockerd (moby) or containerd.
+- Preference settings to configure the application to suit your needs.
+- Bundled tools required for your container, for Kubernetes-based development, and for operation workflows.
+- Periodic updates to keep bundled tools up to date.
+- Integration with popular tools/IDEs, including VS Code and Skaffold.
 - Image & Registry access control.
 - Support for Docker extensions.
 
-To learn more about Rancher Desktop, visit https://rancherdesktop.io and read the docs at https://docs.rancherdesktop.io/ 
+Visit the [Rancher Desktop](https://rancherdesktop.io) website and read the [docs](https://docs.rancherdesktop.io/) to learn more.
 
 To install Rancher Desktop on your machine, refer to the [installation guide](https://docs.rancherdesktop.io/getting-started/installation). 
 
 ## Trying Rancher on Rancher Desktop 
 
-Rancher Desktop offers all the necessary setup and tools to make it easy for you to try out containerized and Helm-based applications. For example, you can try out Rancher Kubernetes Management platform right on your desktop using Rancher Desktop by following this [How-to guide](https://docs.rancherdesktop.io/how-to-guides/rancher-on-rancher-desktop).
+Rancher Desktop offers the setup and tools you need to easily try out containerized, Helm-based applications. You can get started with the Rancher Kubernetes Management platform using Rancher Desktop, by following this [how-to guide](https://docs.rancherdesktop.io/how-to-guides/rancher-on-rancher-desktop).
