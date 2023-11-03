@@ -23,5 +23,5 @@ Elemental in Rancher:
 ## Elemental with Rancher Prime 
 
 - Deeply integrated already as GUI Extension in Rancher. 
-- Extends the Rancher story to OS. Working perfectly with SLE Micro for Rrancher today, in future with SLE Micro. Selling the full stack. 
+- Extends the Rancher story to the OS. Working perfectly with SLE Micro for Rancher today.
  
