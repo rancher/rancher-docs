@@ -315,40 +315,50 @@ const metadata = {
     "unversionedId": "integrations-in-rancher/kubernetes-distributions/kubernetes-distributions",
     "id": "version-2.8/integrations-in-rancher/kubernetes-distributions/kubernetes-distributions",
     "title": "Kubernetes Distributions",
-    "description": "Kubernetes Distributions with Rancher",
+    "description": "K3s",
     "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/kubernetes-distributions/kubernetes-distributions.md",
     "sourceDirName": "integrations-in-rancher/kubernetes-distributions",
     "slug": "/integrations-in-rancher/kubernetes-distributions/",
-    "permalink": "/v2.8/integrations-in-rancher/kubernetes-distributions/",
+    "permalink": "/zh/v2.8/integrations-in-rancher/kubernetes-distributions/",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/kubernetes-distributions/kubernetes-distributions.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1697751616,
-    "formattedLastUpdatedAt": "Oct 19, 2023",
+    "lastUpdatedAt": 1698944100,
+    "formattedLastUpdatedAt": "2023年11月2日",
     "frontMatter": {
         "title": "Kubernetes Distributions"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Integrations in Rancher",
-        "permalink": "/v2.8/integrations-in-rancher/"
+        "permalink": "/zh/v2.8/integrations-in-rancher/"
     },
     "next": {
         "title": "Virtualization on Kubernetes with Harvester",
-        "permalink": "/v2.8/integrations-in-rancher/harvester/"
+        "permalink": "/zh/v2.8/integrations-in-rancher/harvester/"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Kubernetes Distributions with Rancher',
-        id: 'kubernetes-distributions-with-rancher',
+        value: 'K3s',
+        id: 'k3s',
         level: 2
     },
     {
-        value: 'Kubernetes Distributions with Rancher Prime',
-        id: 'kubernetes-distributions-with-rancher-prime',
+        value: 'K3s with Rancher',
+        id: 'k3s-with-rancher',
+        level: 3
+    },
+    {
+        value: 'RKE2',
+        id: 'rke2',
+        level: 2
+    },
+    {
+        value: 'RKE2 with Rancher',
+        id: 'rke2-with-rancher',
         level: 2
     }
 ];
@@ -364,10 +374,52 @@ function MDXContent(_param) {
         components: components,
         mdxType: "MDXLayout"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "kubernetes-distributions-with-rancher"
-    }, `Kubernetes Distributions with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "kubernetes-distributions-with-rancher-prime"
-    }, `Kubernetes Distributions with Rancher Prime`));
+        "id": "k3s"
+    }, `K3s`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `K3s is a lightweight, fully compliant Kubernetes distribution designed for a range of use cases, including edge computing, IoT, CI/CD, development and embedding Kubernetes into applications. It simplifies Kubernetes management by packaging the system as a single binary, using sqlite3 as the default storage, and offering a user-friendly launcher. K3s includes essential features like local storage and load balancing, Helm chart controller and the Traefik CNI. It minimizes external dependencies and provides a streamlined Kubernetes experience. K3s was donated to the CNCF as a Sandbox Project in June 2020.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "k3s-with-rancher"
+    }, `K3s with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Rancher allows easy provision of K3s across a range of platforms including Amazon EC2, DigitalOcean, Azure, vSphere, or existing servers.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Standard Rancher management of Kubernetes clusters including all outlined `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md#cluster-management-capabilities-by-cluster-type"
+    }, `cluster management capabilities`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "rke2"
+    }, `RKE2`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `RKE2 is a compliant Kubernetes distribution developed by Rancher. It is specifically designed for security and compliance within the U.S. Federal Government sector.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Primary characteristics of RKE2 include:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Security and Compliance Focus`), `: RKE2 places a strong emphasis on security and compliance, operating under a "secure by default" framework, making it suitable for government services and highly regulated industries like finance and healthcare.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `CIS Kubernetes Benchmark Conformance`), `: RKE2 comes pre-configured to meet the CIS Kubernetes Hardening Benchmark (currently supporting v1.23 and v1.7), with minimal manual intervention required.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `FIPS 140-2 Compliance`), `: RKE2 complies with the FIPS 140-2 standard using FIPS-validated crypto modules for its components.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Embedded etcd`), `: RKE2 defaults to using an embedded etcd as its data store. This aligns it more closely with standard Kubernetes practices, allowing better integration with other Kubernetes tools and reducing the risk of misconfiguration.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Alignment with Upstream Kubernetes`), `: RKE2 aims to stay closely aligned with upstream Kubernetes, reducing the risk of non-conformance that may occur when using distributions that deviate from standard Kubernetes practices.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Multiple CNI Support`), `: RKE2 offers support for multiple Container Network Interface (CNI) plugins, including Cilium, Calico, and Multus. This is essential for use cases such as telco distribution centers and factories with various production facilities.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "rke2-with-rancher"
+    }, `RKE2 with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Rancher allows easy provision of RKE2 across a range of platforms including Amazon EC2, DigitalOcean, Azure, vSphere, or existing servers.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Standard Rancher management of Kubernetes clusters including all outlined `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md#cluster-management-capabilities-by-cluster-type"
+    }, `cluster management capabilities`), `.`)));
 }
 MDXContent.isMDXComponent = true;
 
