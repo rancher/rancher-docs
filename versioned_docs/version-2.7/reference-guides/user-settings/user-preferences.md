@@ -2,6 +2,10 @@
 title: User Preferences
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/user-settings/user-preferences"/>
+</head>
+
 You can set preferences to personalize your Rancher experience. To change preference settings:
 
 1. Click on your user avatar in the upper right corner.
