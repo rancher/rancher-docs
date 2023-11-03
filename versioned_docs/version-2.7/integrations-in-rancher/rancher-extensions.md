@@ -26,7 +26,7 @@ Examples of built-in Rancher extensions are Fleet, Explorer, and Harvester. Exam
 
 :::info
 
-In v2.7.0, the built-in extensions will not be displayed under the **Available** tab. Therefore, you will need to manually add the desired repos to install extensions. We will update the community once these extensions have been pulled out to be available for selection.
+If you've upgraded from an older Rancher version to v2.7.0, uninstalled built-in extensions are no longer listed under the Available tab, unless you've manually imported them.
 
 :::
 <br/>
