@@ -26,7 +26,7 @@ Examples of built-in Rancher extensions are Fleet, Explorer, and Harvester. Exam
 
 :::info
 
-If you've upgraded from an older Rancher version to v2.7.0, uninstalled built-in extensions are no longer listed under the Available tab, unless you've manually imported them.
+If you've upgraded from an older Rancher version to v2.7.0, uninstalled built-in extensions are no longer listed under the **Available** tab, unless you've manually imported them.
 
 :::
 <br/>
@@ -41,7 +41,7 @@ If you've upgraded from an older Rancher version to v2.7.0, uninstalled built-in
 
     ![Manage repositories](/img/manage-repos.png)
 
-5. Under the **Available** tab, click **Install** on the desired extension and version as in the example below. Note that you can easily update your extension as the button to **Update** will appear on the extension if one is available.
+5. Under the **Available** tab, click **Install** on the desired extension and version as in the example below. You can also update your extension from this screen, as the button to **Update** will appear on the extension if one is available.
 
     ![Install Kubewarden](/img/install-kubewarden.png)
 
@@ -49,9 +49,33 @@ If you've upgraded from an older Rancher version to v2.7.0, uninstalled built-in
 
     ![Reload button](/img/reload-button.png)
 
+### Importing and Installing Extensions in an Air-Gapped Environment
+
+1. Find the address of the container image you want to import as an extension. Rancher provides some extensions, such as Kubewarden and Elemental, through the `ui-plugin-catalog` container image at https://hub.docker.com/r/rancher/ui-plugin-catalog/tags. You should import and use the latest tagged version of the image to ensure you receive the latest features and security updates.
+
+    * **(Optional)** If the container image is private: [Create](../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) a registry secret within the `cattle-UI-plugin-system` namespace. Enter the domain of the image address in the **Registry Domain Name** field.
+
+1. Click **☰**, then select **Extensions**, under **Configuration**.
+
+1. On the top right, click **⋮ > Manage Extension Catalogs**.
+
+1. Select the **Import Extension Catalog** button.
+
+1. Enter the image address in the **Catalog Image Reference** field. 
+
+    * **(Optional)** If the container image is private: Select the secret you just created from the **Pull Secrets** drop-down menu.
+
+1. Click **Load**. The extension will now be **Pending**.
+
+1. Return to the **Extensions** page.
+
+1. Select the **Available** tab, and click the **Reload** button to make sure that the list of extensions is up to date.
+
+1. Find the extension you just added, and click the **Install** button.
+
 ## Uninstalling Extensions
 
-There are two ways in which you can uninstall or disable your extensions:
+There are two ways to uninstall or disable an extension:
 
 1. Under the **Installed** tab, click the **Uninstall** button on the extension you wish to remove.
 
@@ -67,17 +91,13 @@ You must reload the page after disabling extensions or display issues may occur.
 
 :::
 
-## Rolling Back Extensions
+## Updating and Upgrading Extensions
 
-Under the **Installed** tab, click the **Rollback** button on the extension you wish to roll back.
+1. Click **☰ > Extensions** under **Configuration**.
+1. Select the **Updates** tab. 
+1. Click **Update**.
 
-![Roll back extensions](/img/roll-back-extension.png)
-
-:::caution
-
-You must reload the page after rolling back extensions or display issues may occur.
-
-:::
+If there is a new version of the extension, there will also be an **Update** button visible on the associated card for the extension in the **Available** tab.
 
 ## Developing Extensions
 
