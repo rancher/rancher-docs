@@ -24,7 +24,7 @@ The [Harvester node driver](https://docs.harvesterhci.io/v1.1/rancher/node/node-
 
 Harvester allows `.ISO` images to be uploaded and displayed through the Harvester UI, but this is not supported in the Rancher UI. This is because `.ISO` images usually require additional setup that interferes with a clean deployment (without requiring user intervention), and they are not typically used in cloud environments.
 
-Click [here](../../pages-for-subheaders/about-provisioning-drivers.md#node-drivers) for more information on node drivers in Rancher.
+See [Provisioning Drivers](../../pages-for-subheaders/about-provisioning-drivers.md#node-drivers) for more information on node drivers in Rancher.
 
 ### Port Requirements
 
