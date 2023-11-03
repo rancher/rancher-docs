@@ -4,7 +4,8 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-/* Import fonts. */
+
+ /* Import fonts. */
 
 /* poppins */
 @font-face {
@@ -208,6 +209,74 @@ a.btn.navbar__github::before {
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+}
+
+/* Navbar "More from SUSE" items. Thanks to Nunix. https://github.com/rancher/elemental-docs/pull/235 */
+
+.navbar__icon {
+  font-family: poppins,sans-serif;
+  font-size: 16px;
+}
+
+.navbar__icon:before {
+  content: "";
+  display: inline-flex;
+  height: 20px;
+  width: 20px;
+  margin-right: 4px;
+  background-color: var(--ifm-navbar-link-color);
+}
+
+.navbar__rancher:before {
+  mask: url(/static/img/header/icon-rancher.png) no-repeat 100% 100%;
+  mask-size: contain;
+  width: 35px;
+  background-color: #2e68e9;
+}
+
+.navbar__elemental:before {
+  mask: url(/static/img/header/icon-elemental.png) no-repeat 100% 100%;
+  mask-size: cover;
+  width: 35px;
+  height: 22px;
+  padding-bottom: 7px;
+  background-color: #7100d4;
+}
+
+.navbar__epinio:before {
+  mask: url(/static/img/header/icon-epinio.png) no-repeat 100% 100%;
+  mask-size: cover;
+  width: 35px;
+  height: 22px;
+  padding-bottom: 7px;
+  background-color: #004d93;
+}
+
+.navbar__fleet:before {
+  mask: url(/static/img/header/icon-fleet.png) no-repeat 100% 100%;
+  mask-size: cover;
+  width: 35px;
+  height: 22px;
+  padding-bottom: 7px;
+  background-color: #00b056;
+}
+
+.navbar__harvester:before {
+  mask: url(/static/img/header/icon-harvester.png) no-repeat 100% 100%;
+  mask-size: cover;
+  width: 35px;
+  height: 22px;
+  padding-bottom: 7px;
+  background-color: #00a580;
+}
+
+.navbar__suse:before {
+  mask: url(/static/img/header/icon-suse.png) no-repeat 100% 100%;
+  mask-size: cover;
+  width: 35px;
+  height: 13px;
+  padding-bottom: 7px;
+  background-color: #30ba78;
 }
 
 
