@@ -2,6 +2,10 @@
 title: Advanced Options for Docker Installs
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/single-node-rancher-in-docker/advanced-options"/>
+</head>
+
 When installing Rancher, there are several [advanced options](../../pages-for-subheaders/resources.md) that can be enabled:
 
 - [Custom CA Certificate](#custom-ca-certificate)

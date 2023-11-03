@@ -2,6 +2,10 @@
 title: API Keys
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/user-settings/api-keys"/>
+</head>
+
 ## API Keys and User Authentication
 
 If you want to access your Rancher clusters, projects, or other objects using external applications, you can do so using the Rancher API. However, before your application can access the API, you must provide the app with a key used to authenticate with Rancher. You can obtain a key using the Rancher UI.
