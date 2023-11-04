@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[45192],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[22326],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 65865:
+/***/ 50928:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,47 +308,52 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Virtualization on Kubernetes with Harvester'
+    title: 'Operating System Management with Elemental'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/harvester/harvester",
-    "id": "version-2.8/integrations-in-rancher/harvester/harvester",
-    "title": "Virtualization on Kubernetes with Harvester",
-    "description": "Harvester",
-    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/harvester/harvester.md",
-    "sourceDirName": "integrations-in-rancher/harvester",
-    "slug": "/integrations-in-rancher/harvester/",
-    "permalink": "/zh/v2.8/integrations-in-rancher/harvester/",
+    "unversionedId": "integrations-in-rancher/elemental/elemental",
+    "id": "version-2.8/integrations-in-rancher/elemental/elemental",
+    "title": "Operating System Management with Elemental",
+    "description": "Elemental enables cloud-native host management. Elemental allows you to onboard any machine in any location, whether its in a datacenter or on the edge, and integrate them seamlessly into Kubernetes while managing your workflows (e.g., OS updates).",
+    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/elemental/elemental.md",
+    "sourceDirName": "integrations-in-rancher/elemental",
+    "slug": "/integrations-in-rancher/elemental/",
+    "permalink": "/zh/v2.8/integrations-in-rancher/elemental/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/harvester/harvester.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/elemental/elemental.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1697500308,
-    "formattedLastUpdatedAt": "2023年10月16日",
+    "lastUpdatedAt": 1699052129,
+    "formattedLastUpdatedAt": "2023年11月3日",
     "frontMatter": {
-        "title": "Virtualization on Kubernetes with Harvester"
+        "title": "Operating System Management with Elemental"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Kubernetes Distributions",
-        "permalink": "/zh/v2.8/integrations-in-rancher/kubernetes-distributions/"
+        "title": "Advanced Policy Management with Kubewarden",
+        "permalink": "/zh/v2.8/integrations-in-rancher/kubewarden/"
     },
     "next": {
-        "title": "Overview",
-        "permalink": "/zh/v2.8/integrations-in-rancher/harvester/overview"
+        "title": "Observability with Opni",
+        "permalink": "/zh/v2.8/integrations-in-rancher/opni/"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Harvester',
-        id: 'harvester',
+        value: 'Elemental with Rancher',
+        id: 'elemental-with-rancher',
         level: 2
     },
     {
-        value: 'Harvester with Rancher',
-        id: 'harvester-with-rancher',
+        value: 'When should I use Elemental?',
+        id: 'when-should-i-use-elemental',
+        level: 3
+    },
+    {
+        value: 'Elemental with Rancher Prime',
+        id: 'elemental-with-rancher-prime',
         level: 2
     }
 ];
@@ -363,14 +368,33 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "harvester"
-    }, `Harvester`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Introduced in Rancher v2.6.1, Harvester is an open-source hyper-converged infrastructure (HCI) software built on Kubernetes. Harvester installs on bare metal servers and provides integrated virtualization and distributed storage capabilities. Although Harvester operates using Kubernetes, it does not require users to know Kubernetes concepts, making it a more user-friendly application.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "harvester-with-rancher"
-    }, `Harvester with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `With Rancher Prime and Harvester, IT operators now have access to an enterprise-ready, simple-to-use infrastructure platform that cohesively manages their virtual machines and Kubernetes clusters alongside one another. For more information on the support offering, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://www.suse.com/suse-harvester/support-matrix/all-supported-versions/harvester-v1-2-0/"
-    }, `Support Matrix`), `. With the Rancher Virtualization Management feature, users can import and manage multiple Harvester clusters. Leveraging the Rancher's authentication feature and RBAC control for multi-tenancy support.`));
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Elemental enables cloud-native host management. Elemental allows you to onboard any machine in any location, whether its in a datacenter or on the edge, and integrate them seamlessly into Kubernetes while managing your workflows (e.g., OS updates). `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "elemental-with-rancher"
+    }, `Elemental with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Elemental in Rancher:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Is Kubernetes native, which allows you to manage the OS via Elemental in Kubernetes clusters. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Is nondisruptive from a Kubernetes operational perspective.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Is declarative and GitOps friendly. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Allows OCI Image-based flows, which are trusted, deterministic, and predictable. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Works at scale. It enables fleet-sized OS management.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "when-should-i-use-elemental"
+    }, `When should I use Elemental?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Elemental enables cloud-native OS management from Rancher manager. It works with any OS (e.g., SLE Micro vanilla). `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Elemental allows cloud-native management for machines in datacenters and on the edge.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Elemental is flexible and allows platform teams to perform all kind of workflows across their fleet of machines.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "elemental-with-rancher-prime"
+    }, `Elemental with Rancher Prime`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Deeply integrated already as GUI Extension in Rancher. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Extends the Rancher story to the OS. Working perfectly with SLE Micro for Rancher today.`)));
 }
 MDXContent.isMDXComponent = true;
 

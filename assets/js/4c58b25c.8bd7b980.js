@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[19969],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[22326],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 99944:
+/***/ 50928:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,42 +308,52 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Kubernetes on the Desktop with Rancher Desktop'
+    title: 'Operating System Management with Elemental'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/rancher-desktop",
-    "id": "version-2.8/integrations-in-rancher/rancher-desktop",
-    "title": "Kubernetes on the Desktop with Rancher Desktop",
-    "description": "Developing and testing cloud-native applications on your desktop requires a set of foundational blocks such as a virtual machine (if on macOS or Windows), a container run time, Kubernetes, popular utilities, etc. Installing these components individually and getting them to work with each other can get pesky at times. Rancher Desktop nicely bundles all these essential building blocks into an easily installable and manageable desktop application that offers the key features below.",
-    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/rancher-desktop.md",
-    "sourceDirName": "integrations-in-rancher",
-    "slug": "/integrations-in-rancher/rancher-desktop",
-    "permalink": "/zh/v2.8/integrations-in-rancher/rancher-desktop",
+    "unversionedId": "integrations-in-rancher/elemental/elemental",
+    "id": "version-2.8/integrations-in-rancher/elemental/elemental",
+    "title": "Operating System Management with Elemental",
+    "description": "Elemental enables cloud-native host management. Elemental allows you to onboard any machine in any location, whether its in a datacenter or on the edge, and integrate them seamlessly into Kubernetes while managing your workflows (e.g., OS updates).",
+    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/elemental/elemental.md",
+    "sourceDirName": "integrations-in-rancher/elemental",
+    "slug": "/integrations-in-rancher/elemental/",
+    "permalink": "/v2.8/integrations-in-rancher/elemental/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/rancher-desktop.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/elemental/elemental.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1697508298,
-    "formattedLastUpdatedAt": "2023年10月17日",
+    "lastUpdatedAt": 1699052129,
+    "formattedLastUpdatedAt": "Nov 3, 2023",
     "frontMatter": {
-        "title": "Kubernetes on the Desktop with Rancher Desktop"
+        "title": "Operating System Management with Elemental"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Using Fleet Behind a Proxy",
-        "permalink": "/zh/v2.8/integrations-in-rancher/fleet/use-fleet-behind-a-proxy"
+        "title": "Advanced Policy Management with Kubewarden",
+        "permalink": "/v2.8/integrations-in-rancher/kubewarden/"
     },
     "next": {
-        "title": "Application Development Engine with Epinio",
-        "permalink": "/zh/v2.8/integrations-in-rancher/epinio/"
+        "title": "Observability with Opni",
+        "permalink": "/v2.8/integrations-in-rancher/opni/"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Trying Rancher on Rancher Desktop',
-        id: 'trying-rancher-on-rancher-desktop',
+        value: 'Elemental with Rancher',
+        id: 'elemental-with-rancher',
+        level: 2
+    },
+    {
+        value: 'When should I use Elemental?',
+        id: 'when-should-i-use-elemental',
+        level: 3
+    },
+    {
+        value: 'Elemental with Rancher Prime',
+        id: 'elemental-with-rancher-prime',
         level: 2
     }
 ];
@@ -358,44 +368,33 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
-        rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/rancher-desktop"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Developing and testing cloud-native applications on your desktop requires a set of foundational blocks such as a virtual machine (if on macOS or Windows), a container run time, Kubernetes, popular utilities, etc. Installing these components individually and getting them to work with each other can get pesky at times. Rancher Desktop nicely bundles all these essential building blocks into an easily installable and manageable desktop application that offers the key features below. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Elemental enables cloud-native host management. Elemental allows you to onboard any machine in any location, whether its in a datacenter or on the edge, and integrate them seamlessly into Kubernetes while managing your workflows (e.g., OS updates). `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "elemental-with-rancher"
+    }, `Elemental with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Elemental in Rancher:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Simple and easy installation on macOS, Linux and Windows operating systems.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Is Kubernetes native, which allows you to manage the OS via Elemental in Kubernetes clusters. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `A ready to use light weight Kubernetes distribution (K3s) and the ability to pick Kubernetes versions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Is nondisruptive from a Kubernetes operational perspective.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `GUI-based cluster dashboard powered by Rancher to explore your local cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Is declarative and GitOps friendly. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Freedom to choose between multiple container engines (dockerd(moby) vs. containerd).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Allows OCI Image-based flows, which are trusted, deterministic, and predictable. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Preferences settings to configure the application to fit your needs.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Works at scale. It enables fleet-sized OS management.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "when-should-i-use-elemental"
+    }, `When should I use Elemental?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Bundled tools required for your container, Kubernetes-based development, operations workflows.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Elemental enables cloud-native OS management from Rancher manager. It works with any OS (e.g., SLE Micro vanilla). `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Periodic updates to maintain the bundled tools’ versions up to date.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Elemental allows cloud-native management for machines in datacenters and on the edge.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Integrates with proven tools/IDEs (VS Code extensions, Skaffold, etc). `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Elemental is flexible and allows platform teams to perform all kind of workflows across their fleet of machines.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "elemental-with-rancher-prime"
+    }, `Elemental with Rancher Prime`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Image & Registry access control.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Deeply integrated already as GUI Extension in Rancher. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Support for Docker extensions.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To learn more about Rancher Desktop, visit `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://rancherdesktop.io"
-    }, `https://rancherdesktop.io`), ` and read the docs at `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.rancherdesktop.io/"
-    }, `https://docs.rancherdesktop.io/`), ` `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To install Rancher Desktop on your machine, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.rancherdesktop.io/getting-started/installation"
-    }, `installation guide`), `. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "trying-rancher-on-rancher-desktop"
-    }, `Trying Rancher on Rancher Desktop`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher Desktop offers all the necessary setup and tools to make it easy for you to try out containerized and Helm-based applications. For example, you can try out Rancher Kubernetes Management platform right on your desktop using Rancher Desktop by following this `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.rancherdesktop.io/how-to-guides/rancher-on-rancher-desktop"
-    }, `How-to guide`), `.`));
+    }, `Extends the Rancher story to the OS. Working perfectly with SLE Micro for Rancher today.`)));
 }
 MDXContent.isMDXComponent = true;
 

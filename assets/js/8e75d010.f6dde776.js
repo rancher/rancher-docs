@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[19969],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[79401],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 99944:
+/***/ 70574:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,42 +308,47 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Kubernetes on the Desktop with Rancher Desktop'
+    title: 'Application Development Engine with Epinio'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/rancher-desktop",
-    "id": "version-2.8/integrations-in-rancher/rancher-desktop",
-    "title": "Kubernetes on the Desktop with Rancher Desktop",
-    "description": "Developing and testing cloud-native applications on your desktop requires a set of foundational blocks such as a virtual machine (if on macOS or Windows), a container run time, Kubernetes, popular utilities, etc. Installing these components individually and getting them to work with each other can get pesky at times. Rancher Desktop nicely bundles all these essential building blocks into an easily installable and manageable desktop application that offers the key features below.",
-    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/rancher-desktop.md",
-    "sourceDirName": "integrations-in-rancher",
-    "slug": "/integrations-in-rancher/rancher-desktop",
-    "permalink": "/v2.8/integrations-in-rancher/rancher-desktop",
+    "unversionedId": "integrations-in-rancher/epinio/epinio",
+    "id": "version-2.8/integrations-in-rancher/epinio/epinio",
+    "title": "Application Development Engine with Epinio",
+    "description": "Epinio is a Kubernetes-based Application Development Platform. It helps operators and developers collaborate without conflict, and accelerates the development process. With Epinio, teams can move from application sources to a live URL in a single step.",
+    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/epinio/epinio.md",
+    "sourceDirName": "integrations-in-rancher/epinio",
+    "slug": "/integrations-in-rancher/epinio/",
+    "permalink": "/v2.8/integrations-in-rancher/epinio/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/rancher-desktop.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/epinio/epinio.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1697508298,
-    "formattedLastUpdatedAt": "Oct 17, 2023",
+    "lastUpdatedAt": 1699052129,
+    "formattedLastUpdatedAt": "Nov 3, 2023",
     "frontMatter": {
-        "title": "Kubernetes on the Desktop with Rancher Desktop"
+        "title": "Application Development Engine with Epinio"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Using Fleet Behind a Proxy",
-        "permalink": "/v2.8/integrations-in-rancher/fleet/use-fleet-behind-a-proxy"
+        "title": "Kubernetes on the Desktop with Rancher Desktop",
+        "permalink": "/v2.8/integrations-in-rancher/rancher-desktop"
     },
     "next": {
-        "title": "Application Development Engine with Epinio",
-        "permalink": "/v2.8/integrations-in-rancher/epinio/"
+        "title": "Cloud Marketplace Integration",
+        "permalink": "/v2.8/pages-for-subheaders/cloud-marketplace"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Trying Rancher on Rancher Desktop',
-        id: 'trying-rancher-on-rancher-desktop',
+        value: 'Epinio with Rancher',
+        id: 'epinio-with-rancher',
+        level: 2
+    },
+    {
+        value: 'Epinio with Rancher Prime',
+        id: 'epinio-with-rancher-prime',
         level: 2
     }
 ];
@@ -360,42 +365,20 @@ function MDXContent(_param) {
         mdxType: "MDXLayout"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/rancher-desktop"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Developing and testing cloud-native applications on your desktop requires a set of foundational blocks such as a virtual machine (if on macOS or Windows), a container run time, Kubernetes, popular utilities, etc. Installing these components individually and getting them to work with each other can get pesky at times. Rancher Desktop nicely bundles all these essential building blocks into an easily installable and manageable desktop application that offers the key features below. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/epinio"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Epinio is a Kubernetes-based Application Development Platform. It helps operators and developers collaborate without conflict, and accelerates the development process. With Epinio, teams can move from application sources to a live URL in a single step.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "epinio-with-rancher"
+    }, `Epinio with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Epinio's integration with Rancher gives developers a jump start, without having to deal with the installation process or configuration. You can install Epinio directly from the Rancher UI's Apps page.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "epinio-with-rancher-prime"
+    }, `Epinio with Rancher Prime`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher Prime customers can expect better integration of Epinio with other areas in the Rancher ecosystem such as:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Simple and easy installation on macOS, Linux and Windows operating systems.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Better integration with Rancher authentication.  `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `A ready to use light weight Kubernetes distribution (K3s) and the ability to pick Kubernetes versions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Integration with Neuvector and Kubewarden.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `GUI-based cluster dashboard powered by Rancher to explore your local cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Custom Helm chart templates with preset annotations to seamlessly integrate with monitoring and other key tools.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Freedom to choose between multiple container engines (dockerd(moby) vs. containerd).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Preferences settings to configure the application to fit your needs.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Bundled tools required for your container, Kubernetes-based development, operations workflows.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Periodic updates to maintain the bundled tools’ versions up to date.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Integrates with proven tools/IDEs (VS Code extensions, Skaffold, etc). `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Image & Registry access control.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Support for Docker extensions.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To learn more about Rancher Desktop, visit `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://rancherdesktop.io"
-    }, `https://rancherdesktop.io`), ` and read the docs at `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.rancherdesktop.io/"
-    }, `https://docs.rancherdesktop.io/`), ` `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To install Rancher Desktop on your machine, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.rancherdesktop.io/getting-started/installation"
-    }, `installation guide`), `. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "trying-rancher-on-rancher-desktop"
-    }, `Trying Rancher on Rancher Desktop`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher Desktop offers all the necessary setup and tools to make it easy for you to try out containerized and Helm-based applications. For example, you can try out Rancher Kubernetes Management platform right on your desktop using Rancher Desktop by following this `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.rancherdesktop.io/how-to-guides/rancher-on-rancher-desktop"
-    }, `How-to guide`), `.`));
+    }, `Improved service marketplace.`)));
 }
 MDXContent.isMDXComponent = true;
 

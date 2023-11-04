@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/harvester/harvester.md",
     "sourceDirName": "integrations-in-rancher/harvester",
     "slug": "/integrations-in-rancher/harvester/",
-    "permalink": "/v2.8/integrations-in-rancher/harvester/",
+    "permalink": "/zh/v2.8/integrations-in-rancher/harvester/",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/harvester/harvester.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1697500308,
-    "formattedLastUpdatedAt": "Oct 16, 2023",
+    "lastUpdatedAt": 1699043356,
+    "formattedLastUpdatedAt": "2023年11月3日",
     "frontMatter": {
         "title": "Virtualization on Kubernetes with Harvester"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Kubernetes Distributions",
-        "permalink": "/v2.8/integrations-in-rancher/kubernetes-distributions/"
+        "permalink": "/zh/v2.8/integrations-in-rancher/kubernetes-distributions/"
     },
     "next": {
         "title": "Overview",
-        "permalink": "/v2.8/integrations-in-rancher/harvester/overview"
+        "permalink": "/zh/v2.8/integrations-in-rancher/harvester/overview"
     }
 };
 const assets = {};
@@ -365,7 +365,7 @@ function MDXContent(_param) {
         mdxType: "MDXLayout"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "harvester"
-    }, `Harvester`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Introduced in Rancher v2.6.1, Harvester is an open-source hyper-converged infrastructure (HCI) software built on Kubernetes. Harvester installs on bare metal servers and provides integrated virtualization and distributed storage capabilities. Although Harvester operates using Kubernetes, it does not require users to know Kubernetes concepts, making it a more user-friendly application.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }, `Harvester`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Introduced in Rancher v2.6.1, Harvester is an open-source hyper-converged infrastructure (HCI) software built on Kubernetes. Harvester installs on bare metal servers and provides integrated virtualization and distributed storage capabilities. Although Harvester operates using Kubernetes, it does not require knowledge of Kubernetes concepts, making it more user-friendly.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "harvester-with-rancher"
     }, `Harvester with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `With Rancher Prime and Harvester, IT operators now have access to an enterprise-ready, simple-to-use infrastructure platform that cohesively manages their virtual machines and Kubernetes clusters alongside one another. For more information on the support offering, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",

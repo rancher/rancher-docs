@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[79401],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[45192],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 70574:
+/***/ 65865:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,47 +308,47 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Application Development Engine with Epinio'
+    title: 'Virtualization on Kubernetes with Harvester'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/epinio/epinio",
-    "id": "version-2.8/integrations-in-rancher/epinio/epinio",
-    "title": "Application Development Engine with Epinio",
-    "description": "Epinio lets developers go from application sources to URL in a single step. Epinio is an Application Development Platform. It deploys on Kubernetes and lets application developers and operators work together without conflict.",
-    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/epinio/epinio.md",
-    "sourceDirName": "integrations-in-rancher/epinio",
-    "slug": "/integrations-in-rancher/epinio/",
-    "permalink": "/v2.8/integrations-in-rancher/epinio/",
+    "unversionedId": "integrations-in-rancher/harvester/harvester",
+    "id": "version-2.8/integrations-in-rancher/harvester/harvester",
+    "title": "Virtualization on Kubernetes with Harvester",
+    "description": "Harvester",
+    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/harvester/harvester.md",
+    "sourceDirName": "integrations-in-rancher/harvester",
+    "slug": "/integrations-in-rancher/harvester/",
+    "permalink": "/v2.8/integrations-in-rancher/harvester/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/epinio/epinio.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/harvester/harvester.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1697752245,
-    "formattedLastUpdatedAt": "Oct 19, 2023",
+    "lastUpdatedAt": 1699043356,
+    "formattedLastUpdatedAt": "Nov 3, 2023",
     "frontMatter": {
-        "title": "Application Development Engine with Epinio"
+        "title": "Virtualization on Kubernetes with Harvester"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Kubernetes on the Desktop with Rancher Desktop",
-        "permalink": "/v2.8/integrations-in-rancher/rancher-desktop"
+        "title": "Kubernetes Distributions",
+        "permalink": "/v2.8/integrations-in-rancher/kubernetes-distributions/"
     },
     "next": {
-        "title": "Cloud Marketplace Integration",
-        "permalink": "/v2.8/pages-for-subheaders/cloud-marketplace"
+        "title": "Overview",
+        "permalink": "/v2.8/integrations-in-rancher/harvester/overview"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Epinio with Rancher',
-        id: 'epinio-with-rancher',
+        value: 'Harvester',
+        id: 'harvester',
         level: 2
     },
     {
-        value: 'Epinio with Rancher Prime',
-        id: 'epinio-with-rancher-prime',
+        value: 'Harvester with Rancher',
+        id: 'harvester-with-rancher',
         level: 2
     }
 ];
@@ -363,22 +363,14 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
-        rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/epinio"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Epinio lets developers go from application sources to URL in a single step. Epinio is an Application Development Platform. It deploys on Kubernetes and lets application developers and operators work together without conflict. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "epinio-with-rancher"
-    }, `Epinio with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Epinio's integration with Rancher lets developers quickly start using it without having to deal with the installation process or the configuration. You can install Epinio from the Apps. Currently the team is working to have Epinio available as a Rancher extension.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "epinio-with-rancher-prime"
-    }, `Epinio with Rancher Prime`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `On top of the specific support service, Rancher Prime customers of Epinio should expect better integration of Epinio with other Rancher projects such as: `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Better integration with Rancher authentication.  `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Integrating Neuvector/Kubewarden with Epinio.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Using a custom Chart template with the right annotations to integrate with monitoring for example.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `A better service marketplace.`)));
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "harvester"
+    }, `Harvester`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Introduced in Rancher v2.6.1, Harvester is an open-source hyper-converged infrastructure (HCI) software built on Kubernetes. Harvester installs on bare metal servers and provides integrated virtualization and distributed storage capabilities. Although Harvester operates using Kubernetes, it does not require knowledge of Kubernetes concepts, making it more user-friendly.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "harvester-with-rancher"
+    }, `Harvester with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `With Rancher Prime and Harvester, IT operators now have access to an enterprise-ready, simple-to-use infrastructure platform that cohesively manages their virtual machines and Kubernetes clusters alongside one another. For more information on the support offering, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://www.suse.com/suse-harvester/support-matrix/all-supported-versions/harvester-v1-2-0/"
+    }, `Support Matrix`), `. With the Rancher Virtualization Management feature, users can import and manage multiple Harvester clusters. Leveraging the Rancher's authentication feature and RBAC control for multi-tenancy support.`));
 }
 MDXContent.isMDXComponent = true;
 
