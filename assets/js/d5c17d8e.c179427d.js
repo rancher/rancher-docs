@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.5/pages-for-subheaders/quick-start-guides.md",
     "sourceDirName": "pages-for-subheaders",
     "slug": "/pages-for-subheaders/quick-start-guides",
-    "permalink": "/zh/v2.5/pages-for-subheaders/quick-start-guides",
+    "permalink": "/v2.5/pages-for-subheaders/quick-start-guides",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/pages-for-subheaders/quick-start-guides.md",
     "tags": [],
     "version": "2.5",
-    "lastUpdatedAt": 1692127491,
-    "formattedLastUpdatedAt": "2023年8月15日",
+    "lastUpdatedAt": 1699310198,
+    "formattedLastUpdatedAt": "Nov 6, 2023",
     "frontMatter": {
         "title": "Rancher Deployment Quick Start Guides"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "What Are Divio Docs?",
-        "permalink": "/zh/v2.5/getting-started/introduction/what-are-divio-docs"
+        "permalink": "/v2.5/getting-started/introduction/what-are-divio-docs"
     },
     "next": {
         "title": "Deploying Rancher Server",
-        "permalink": "/zh/v2.5/pages-for-subheaders/deploy-rancher-manager"
+        "permalink": "/v2.5/pages-for-subheaders/deploy-rancher-manager"
     }
 };
 const assets = {};
@@ -355,20 +355,27 @@ function MDXContent(_param) {
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
         href: "https://ranchermanager.docs.rancher.com/pages-for-subheaders/quick-start-guides"
-    })), ">**Note:** The intent of these guides is to quickly launch a sandbox that you can use to evaluate Rancher. These guides are not intended for production environments. For comprehensive setup instructions, see [Installation](/zh/v2.5/pages-for-subheaders/installation-and-upgrade).", /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Howdy buckaroos! Use this section of the docs to jump start your deployment and testing of Rancher 2.x! It contains instructions for a simple Rancher setup and some common use cases. We plan on adding more content to this section in the future.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `We have Quick Start Guides for:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Note:`), ` The intent of these guides is to quickly launch a sandbox that you can use to evaluate Rancher. These guides are not intended for production environments. For comprehensive setup instructions, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/v2.5/pages-for-subheaders/installation-and-upgrade"
+    }, `Installation`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Howdy buckaroos! Use this section of the docs to jump start your deployment and testing of Rancher 2.x! It contains instructions for a simple Rancher setup and some common use cases. We plan on adding more content to this section in the future.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `We have Quick Start Guides for:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/pages-for-subheaders/deploy-rancher-manager"
+        "href": "/v2.5/pages-for-subheaders/deploy-rancher-manager"
     }, `Deploying Rancher Server`), `: Get started running Rancher using the method most convenient for you.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/pages-for-subheaders/deploy-rancher-workloads"
+        "href": "/v2.5/pages-for-subheaders/deploy-rancher-workloads"
     }, `Deploying Workloads`), `: Deploy a simple `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://kubernetes.io/docs/concepts/workloads/"
