@@ -6,9 +6,9 @@ title: General FAQ
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/faq/general-faq"/>
 </head>
 
-This FAQ is a work in progress designed to answers the questions our users most frequently ask about Rancher v2.x.
+This FAQ is a work in progress designed to answer the questions most frequently asked about Rancher v2.x.
 
-See [Technical FAQ](technical-items.md), for frequently asked technical questions.
+See the [Technical FAQ](technical-items.md) for frequently asked technical questions.
 
 <br/>
 
@@ -32,9 +32,7 @@ Rancher supports Windows Server 1809 containers. For details on how to set up a 
 
 **Does Rancher support Istio?**
 
-Rancher supports [Istio.](../pages-for-subheaders/istio.md)
-
-Furthermore, Istio is implemented in our micro-PaaS "Rio", which works on Rancher 2.x along with any CNCF compliant Kubernetes cluster. You can read more about it [here](https://rio.io/)
+Rancher supports [Istio](../pages-for-subheaders/istio.md).
 
 <br/>
 
