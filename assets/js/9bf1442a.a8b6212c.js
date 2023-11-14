@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[46174],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[39979],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 23662:
+/***/ 10238:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,34 +313,85 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "faq/general-faq",
-    "id": "version-2.8/faq/general-faq",
+    "id": "version-2.6/faq/general-faq",
     "title": "General FAQ",
     "description": "This FAQ is a work in progress designed to answer the questions most frequently asked about Rancher v2.x.",
-    "source": "@site/versioned_docs/version-2.8/faq/general-faq.md",
+    "source": "@site/versioned_docs/version-2.6/faq/general-faq.md",
     "sourceDirName": "faq",
     "slug": "/faq/general-faq",
-    "permalink": "/v2.8/faq/general-faq",
+    "permalink": "/v2.6/faq/general-faq",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/faq/general-faq.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/faq/general-faq.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1699899403,
-    "formattedLastUpdatedAt": "Nov 13, 2023",
+    "version": "2.6",
+    "lastUpdatedAt": 1699996475,
+    "formattedLastUpdatedAt": "Nov 14, 2023",
     "frontMatter": {
         "title": "General FAQ"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Rancher Extensions",
-        "permalink": "/v2.8/integrations-in-rancher/rancher-extensions"
+        "title": "OPA Gatekeeper",
+        "permalink": "/v2.6/integrations-in-rancher/opa-gatekeeper"
     },
     "next": {
         "title": "Deprecated Features in Rancher",
-        "permalink": "/v2.8/faq/deprecated-features-in-v2.5"
+        "permalink": "/v2.6/faq/deprecated-features-in-v2.5"
     }
 };
 const assets = {};
-const toc = [];
+const toc = [
+    {
+        value: 'Does Rancher v2.x support Docker Swarm and Mesos as environment types?',
+        id: 'does-rancher-v2x-support-docker-swarm-and-mesos-as-environment-types',
+        level: 2
+    },
+    {
+        value: 'Is it possible to manage Azure Kubernetes Services with Rancher v2.x?',
+        id: 'is-it-possible-to-manage-azure-kubernetes-services-with-rancher-v2x',
+        level: 2
+    },
+    {
+        value: 'Does Rancher support Windows?',
+        id: 'does-rancher-support-windows',
+        level: 2
+    },
+    {
+        value: 'Does Rancher support Istio?',
+        id: 'does-rancher-support-istio',
+        level: 2
+    },
+    {
+        value: 'Will Rancher v2.x support Hashicorp&#39;s Vault for storing secrets?',
+        id: 'will-rancher-v2x-support-hashicorps-vault-for-storing-secrets',
+        level: 2
+    },
+    {
+        value: 'Does Rancher v2.x support RKT containers as well?',
+        id: 'does-rancher-v2x-support-rkt-containers-as-well',
+        level: 2
+    },
+    {
+        value: 'Does Rancher v2.x support Calico, Contiv, Contrail, Flannel, Weave net, etc., for embedded and registered Kubernetes?',
+        id: 'does-rancher-v2x-support-calico-contiv-contrail-flannel-weave-net-etc-for-embedded-and-registered-kubernetes',
+        level: 2
+    },
+    {
+        value: 'Are you planning on supporting Traefik for existing setups?',
+        id: 'are-you-planning-on-supporting-traefik-for-existing-setups',
+        level: 2
+    },
+    {
+        value: 'Can I import OpenShift Kubernetes clusters into v2.x?',
+        id: 'can-i-import-openshift-kubernetes-clusters-into-v2x',
+        level: 2
+    },
+    {
+        value: 'Is Longhorn integrated with Rancher?',
+        id: 'is-longhorn-integrated-with-rancher',
+        level: 2
+    }
+];
 const layoutProps = {
     toc
 };
@@ -357,37 +408,43 @@ function MDXContent(_param) {
         href: "https://ranchermanager.docs.rancher.com/faq/general-faq"
     })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This FAQ is a work in progress designed to answer the questions most frequently asked about Rancher v2.x.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/faq/technical-items"
-    }, `Technical FAQ`), ` for frequently asked technical questions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Does Rancher v2.x support Docker Swarm and Mesos as environment types?`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When creating an environment in Rancher v2.x, Swarm and Mesos will no longer be standard options you can select. However, both Swarm and Mesos will continue to be available as Catalog applications you can deploy. It was a tough decision to make but, in the end, it came down to adoption. For example, out of more than 15,000 clusters, only about 200 or so are running Swarm.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Is it possible to manage Azure Kubernetes Services with Rancher v2.x?`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Yes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Does Rancher support Windows?`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher supports Windows Server 1809 containers. For details on how to set up a cluster with Windows worker nodes, refer to the section on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "href": "/v2.6/faq/technical-items"
+    }, `Technical FAQ`), ` for frequently asked technical questions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "does-rancher-v2x-support-docker-swarm-and-mesos-as-environment-types"
+    }, `Does Rancher v2.x support Docker Swarm and Mesos as environment types?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Swarm and Mesos are no longer selectable options when you create a new environment in Rancher v2.x. However, both Swarm and Mesos will continue to be available as Catalog applications you can deploy. It was a tough decision to make but, in the end, it came down to adoption. For example, out of more than 15,000 clusters, only about 200 were running Swarm.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "is-it-possible-to-manage-azure-kubernetes-services-with-rancher-v2x"
+    }, `Is it possible to manage Azure Kubernetes Services with Rancher v2.x?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Yes. See our `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/pages-for-subheaders/use-windows-clusters"
-    }, `configuring custom clusters for Windows.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Does Rancher support Istio?`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher supports `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "href": "/v2.6/pages-for-subheaders/manage-clusters"
+    }, `Cluster Administration`), ` guide for what Rancher features are available on AKS, as well as our `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/pages-for-subheaders/istio"
-    }, `Istio`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Will Rancher v2.x support Hashicorp's Vault for storing secrets?`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Secrets management is on our roadmap but we haven't assigned it to a specific release yet.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Does Rancher v2.x support RKT containers as well?`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `At this time, we only support Docker.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Does Rancher v2.x support Calico, Contiv, Contrail, Flannel, Weave net, etc., for embedded and registered Kubernetes?`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Out-of-the-box, Rancher provides the following CNI network providers for Kubernetes clusters: Canal, Flannel, Calico and Weave.  Always refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "href": "/v2.6/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks"
+    }, `documentation on AKS`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "does-rancher-support-windows"
+    }, `Does Rancher support Windows?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Yes. Rancher supports Windows Server 1809 containers. For details on how to set up a cluster with Windows worker nodes, refer to the section on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/v2.6/pages-for-subheaders/use-windows-clusters"
+    }, `configuring custom clusters for Windows.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "does-rancher-support-istio"
+    }, `Does Rancher support Istio?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Yes. Rancher supports `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/v2.6/pages-for-subheaders/istio"
+    }, `Istio`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "will-rancher-v2x-support-hashicorps-vault-for-storing-secrets"
+    }, `Will Rancher v2.x support Hashicorp's Vault for storing secrets?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Secrets management is on our roadmap but we haven't assigned it to a specific release yet.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "does-rancher-v2x-support-rkt-containers-as-well"
+    }, `Does Rancher v2.x support RKT containers as well?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `At this time, we only support Docker.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "does-rancher-v2x-support-calico-contiv-contrail-flannel-weave-net-etc-for-embedded-and-registered-kubernetes"
+    }, `Does Rancher v2.x support Calico, Contiv, Contrail, Flannel, Weave net, etc., for embedded and registered Kubernetes?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Out-of-the-box, Rancher provides the following CNI network providers for Kubernetes clusters: Canal, Flannel, Calico and Weave.  Always refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://rancher.com/support-maintenance-terms/"
-    }, `Rancher Support Matrix`), ` for details about what is officially supported.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Are you planning on supporting Traefik for existing setups?`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `We don't currently plan on providing embedded Traefik support, but we're still exploring load-balancing approaches.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Can I import OpenShift Kubernetes clusters into v2.x?`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Our goal is to run any upstream Kubernetes clusters. Therefore, Rancher v2.x should work with OpenShift, but we haven't tested it yet.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Are you going to integrate Longhorn?`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Yes. Longhorn was integrated into Rancher v2.5+.`));
+    }, `Rancher Support Matrix`), ` for details about what is officially supported.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "are-you-planning-on-supporting-traefik-for-existing-setups"
+    }, `Are you planning on supporting Traefik for existing setups?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `We don't currently plan on providing embedded Traefik support, but we're still exploring load-balancing approaches.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "can-i-import-openshift-kubernetes-clusters-into-v2x"
+    }, `Can I import OpenShift Kubernetes clusters into v2.x?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Our goal is to run any Kubernetes clusters. Therefore, Rancher v2.x should work with OpenShift, but we haven't tested it yet.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "is-longhorn-integrated-with-rancher"
+    }, `Is Longhorn integrated with Rancher?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Yes. Longhorn is integrated with Rancher v2.5 and later.`));
 }
 MDXContent.isMDXComponent = true;
 
