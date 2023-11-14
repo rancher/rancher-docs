@@ -99,6 +99,21 @@ You must reload the page after disabling extensions or display issues may occur.
 
 If there is a new version of the extension, there will also be an **Update** button visible on the associated card for the extension in the **Available** tab.
 
+### Updating and Upgrading Extensions in an Air-gapped Environment
+
+1. Click **☰**, then click on the name of your local cluster.
+1. From the sidebar, select **Workloads > Deployments**.
+1. From the namespaces dropdown menu, select **All Namespaces**.
+1. Find the **cattle-ui-plugin-system** namespace. 
+
+</TK Waiting for answer>
+
+## Deleting Extension Repositories
+
+1. Click **☰ > Extensions** under **Configuration**.
+1. On the top right, click **⋮ > Manage Repositories**.
+1. Find the name of the extension repository you want to delete. Select the checkbox next to the repository name, then click **Delete**.
+
 ## Developing Extensions
 
 To learn how to develop your own extensions, refer to the official [Getting Started](https://rancher.github.io/dashboard/extensions/extensions-getting-started) guide.
