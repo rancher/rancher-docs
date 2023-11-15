@@ -18,4 +18,4 @@ See [OWASP Web Application Security Testing - Enumerate Infrastructure and Appli
 
 Some environments may require additional security controls for session management. For example, you may want to limit users' concurrent active sessions  or restrict which geolocations those sessions can be initiated from. Such features are not supported by Rancher out of the box. 
 
-If you require such features, combine Layer 7 firewalls with [external authentication providers](../../pages-for-subheaders/authentication-config#external-vs-local-authentication.md).
+If you require such features, combine Layer 7 firewalls with [external authentication providers](../../pages-for-subheaders/authentication-config.md#external-vs-local-authentication).
