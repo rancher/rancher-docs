@@ -14,8 +14,8 @@ Adversaries can misuse this information to identify the running Rancher version 
 
 See [OWASP Web Application Security Testing - Enumerate Infrastructure and Application Admin Interfaces](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/05-Enumerate_Infrastructure_and_Application_Admin_Interfaces.html) for more information on protecting your server.
 
-### Session management
+### Session Management
 
-Some environments may require extra security controls regarding session management. The upstream Rancher instance does not implement a limit for active sessions for a specific user. 
+Some environments may require additional security controls for session management. For example, you may want to limit users' concurrent active sessions  or restrict which geolocations those sessions can be initiated from. Such features are not supported by Rancher out of the box. 
 
-If your Rancher instance is deployed in an environment which requires additional security requirements, use a Layer 7 firewall behind it.
+If you require such features, combine Layer 7 firewalls with [external authentication providers](../../pages-for-subheaders/authentication-config#external-vs-local-authentication.md).
