@@ -21,11 +21,11 @@ To set up the Amazon cloud provider,
 
 :::note Important:
 
-In Kubernetes 1.27 and later, you must use an out-of-tree AWS cloud provider. In-tree Cloud Providers have been removed completely, and will no longer continue to function post-upgrade to Kubernetes 1.27. The steps listed below are still required to set up an Amazon cloud provider. You can proceed to [set up an out-of-tree cloud provider for RKE1](#using-the-out-of-tree-aws-cloud-provider-for-rke1) after creating an IAM role and configuring the ClusterID.
+In Kubernetes 1.27 and later, you must use an out-of-tree AWS cloud provider. In-tree cloud providers have been removed completely, and won't work after you upgrade to Kubernetes 1.27. The steps listed below are still required to set up an Amazon cloud provider. You can [set up an out-of-tree cloud provider for RKE1](#using-the-out-of-tree-aws-cloud-provider-for-rke1) after creating an IAM role and configuring the ClusterID.
 
-You can also [migrate from an in-tree to out-of-tree AWS cloud provider](#migrating-to-the-out-of-tree-aws-cloud-provider-for-rke1) on Kubernetes 1.26 and earlier. All existing clusters must migrate prior to upgrading to 1.27 in order to stay functional.
+You can also [migrate from an in-tree to an out-of-tree AWS cloud provider](#migrating-to-the-out-of-tree-aws-cloud-provider-for-rke1) on Kubernetes 1.26 and earlier. All existing clusters must migrate prior to upgrading to v1.27 in order to stay functional.
 
-Starting with Kubernetes 1.23, you have to deactivate the `CSIMigrationAWS` feature gate in order to use the in-tree AWS cloud provider. You can do this by setting `feature-gates=CSIMigrationAWS=false` as an additional argument for the cluster's Kubelet, Controller Manager, API Server and Scheduler in the advanced cluster configuration.
+Starting with Kubernetes 1.23, you must deactivate the `CSIMigrationAWS` feature gate to use the in-tree AWS cloud provider. You can do this by setting `feature-gates=CSIMigrationAWS=false` as an additional argument for the cluster's Kubelet, Controller Manager, API Server and Scheduler in the advanced cluster configuration.
 
 :::
 
