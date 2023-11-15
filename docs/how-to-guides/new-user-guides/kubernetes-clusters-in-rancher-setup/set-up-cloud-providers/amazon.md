@@ -188,15 +188,15 @@ rancher_kubernetes_engine_config:
     useInstanceMetadataHostname: true
 ```
 
-You must not enable `useInstanceMetadataHostname` when setting custom values for `hostname-override` for custom clusters. When you create a [custom cluster](../../../../pages-for-subheaders/use-existing-nodes.md), you can add [`--node-name`](../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options) to the `docker run` node registration command to set `hostname-override` - for example, `"$(hostname -f)"`). This can be done manually or by using **Show Advanced Options** in the Rancher UI to add **Node Name**.
+You must not enable `useInstanceMetadataHostname` when setting custom values for `hostname-override` for custom clusters. When you create a [custom cluster](../../../../pages-for-subheaders/use-existing-nodes.md), add [`--node-name`](../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options) to the `docker run` node registration command to set `hostname-override` —for example, `"$(hostname -f)"`). This can be done manually or by using **Show Advanced Options** in the Rancher UI to add **Node Name**.
 
 2. Select cloud provider. 
 
-Selecting **External Amazon (out-of-tree)** will set `--cloud-provider=external` and enable `useInstanceMetadataHostname`. As mentioned in step 1, enabling `useInstanceMetadataHostname` will query ec2 metadata service and set `http://169.254.169.254/latest/meta-data/hostname` as `hostname-override` for `kubelet` and `kube-proxy`. 
+Selecting **External Amazon (out-of-tree)** will set `--cloud-provider=external` and enable `useInstanceMetadataHostname`. As mentioned in step 1, enabling `useInstanceMetadataHostname` will query the EC2 metadata service and set `http://169.254.169.254/latest/meta-data/hostname` as `hostname-override` for `kubelet` and `kube-proxy`.
 
 ::: note
 
-You must disable `useInstanceMetadataHostname` when setting custom node name via `node-name` for custom clusters.
+You must disable `useInstanceMetadataHostname` when setting a custom node name via `node-name` for custom clusters.
 
 ::: 
 
@@ -231,7 +231,7 @@ The upstream documentation for the AWS cloud controller manager can be found [he
 
 6. Select the namespace, `kube-system`, and enable **Customize Helm options before install**.
 
-7. Add the following container args: 
+7. Add the following container arguments: 
 
 ```
   - '--use-service-account-credentials=true'
@@ -268,34 +268,36 @@ nodeSelector:
   node-role.kubernetes.io/controlplane: 'true'
 ```
 
-:::note for Rancher `<v2.8.0`:
-	
-There's currently [a known issue](https://github.com/rancher/dashboard/issues/9249) which doesn't allow nodeSelector to be updated from the Rancher UI.  Continue installing the chart and then edit the daemonset manually to set the `nodeSelector`. 
+:::note
+
+There's currently [a known issue](https://github.com/rancher/dashboard/issues/9249) where nodeSelector can't be updated from the Rancher UI.  Continue installing the chart and then edit the daemonset manually to set the `nodeSelector`:
+
+``` 
+nodeSelector:
+  node-role.kubernetes.io/controlplane: 'true'
+```
 
 :::
 
-10. Install the chart and confirm that daemonset `aws-cloud-controller-manager` is running. Verify `aws-cloud-controller-manager` pods are running in target namespace (`kube-system` unless modified in step 6). 
-
-```
-
-```
+10. Install the chart and confirm that the daemonset `aws-cloud-controller-manager` is running. Verify `aws-cloud-controller-manager` pods are running in target namespace (`kube-system` unless modified in step 6). 
 
 ### Migrating to the Out-of-Tree AWS Cloud Provider for RKE1
 
-In order to upgrade existing cluster with in-tree cloud provider to AWS cloud controller manager, you can run stop kube controller manager and install AWS cloud controller manager in many ways. Refer to [External cloud controller manager](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for details.
 
-When downtime is acceptable, you can switch to external cloud provider which removes in-tree components and then deploy charts to install AWS cloud controller manager as explained in [using out of tree cloud provider](#using-out-of-tree-aws-cloud-provider).
+To migrate from an in-tree cloud provider to the out-of-tree AWS cloud provider, you must stop the existing cluster's kube controller manager and install the AWS cloud controller manager. There are many ways to do this. Refer to the official AWS documentation on the [external cloud controller manager](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for details.
 
-When control plane cannot tolerate downtime, leader migration must be enabled to facilitate a smooth migration from the controllers in the kube controller manager to their counterparts in the cloud controller manager. Refer to [Using leader migration](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for more details.
+If it's acceptable to have some downtime, you can [switch to an external cloud provider](#using-out-of-tree-aws-cloud-provider), which removes in-tree components and then deploy charts to install the AWS cloud controller manager.
+
+If your setup can't tolerate any control plane downtime, you must enable leader migration. This facilitates a smooth transition from the controllers in the kube controller manager to their counterparts in the cloud controller manager. Refer to the official AWS documentation on [Using leader migration](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for more details.
 
 **Important**
-- [Cloud controller migration docs](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#before-you-begin) mentions that it is possible to migrate with the same Kubernetes version, but assumes that migration is part of Kubernetes upgrade.
+- The Kubernetes [cloud controller migration documentation](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#before-you-begin) mentions that it is possible to migrate with the same Kubernetes version, but assumes that migration is part of a  Kubernetes upgrade.
 
-- Refer [Migrate to use cloud controller manager](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/) to confirm if any customizations are required before migrating.
-  Confirm [migration configuration values](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#default-configuration) and special case around [migrating IPAM controllers](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#node-ipam-controller-migration).
+- Refer to the Kubernetes documentation on [migrating to use the cloud controller manager](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/) to see if you need to customize your setup before migrating.
+  Confirm your [migration configuration values](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#default-configuration). If your cloud provider provides an implementation of the Node IPAM controller,  you also need to [migrate the IPAM controller](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#node-ipam-controller-migration).
 
 
-1. Update cluster config to enable leader migration in `cluster.yml`
+1. Update the cluster config to enable leader migration in `cluster.yml`
 
 ```
 services:
@@ -303,28 +305,30 @@ services:
     extra_args:
       enable-leader-migration: "true"
 ```
-Note that cloud provider is still `aws` at this step.
+
+Note that the cloud provider is still `aws` at this step.
+
 ```
 cloud_provider:
   name: aws
 ```
 
-2. Cordon control plane nodes so aws cloud controller pods run on nodes only after upgrading to external cloud provider.
+2. Cordon the control plane nodes, so that AWS cloud controller pods run on nodes only after upgrading to the external cloud provider.
 
 ```
 kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
 ```
 
-3. The steps to install AWS cloud controller manager for migration are same as fresh installation, but you must enable leader migration. 
-Add the following to the container arguments in step 7 when following the [steps to install chart](#helm-chart-installation):
+3. To install the AWS cloud controller manager, enable leader migration and follow the same steps as when installing AWS on a new cluster.
+To enable leader migration, add the following to the container arguments in step 7 while following the [steps to install the chart](#helm-chart-installation):
 
 ```
 - '--enable-leader-migration=true' 
 ```
 
-4. Confirm the chart is installed but the new pods aren't running yet due to cordoned controlplane nodes. After updating the cluster in the next step, rke will uncordon each node after upgrading and `aws-controller-manager` pods will be scheduled.
+4. Confirm that the chart is installed but the new pods aren't running yet due to cordoned controlplane nodes. After updating the cluster in the next step, RKE will uncordon each node after upgrading and `aws-controller-manager` pods will be scheduled.
 
-5. Update cluster.yml to change cloud provider and remove leader migration args from kube-controller.
+5. Update cluster.yml to change the cloud provider and remove the leader migration arguments from the kube-controller.
 
 Selecting **External Amazon (out-of-tree)** will set `--cloud-provider=external` and allow enabling `useInstanceMetadataHostname`. You must enable `useInstanceMetadataHostname` for node-driver clusters and for custom clusters if not providing custom node name via `--node-name`. Enabling `useInstanceMetadataHostname` will query ec2 metadata service and set `/hostname` as `hostname-override` for `kubelet` and `kube-proxy`:
 
@@ -343,11 +347,11 @@ services:
       enable-leader-migration: "true"
 ```
 
-6. If upgrading Kubernetes version, set Kubernetes version as well.
+6. If  you're upgrading the cluster's Kubernetes version, set the Kubernetes version as well.
 
-7. Update the cluster. There should be new `aws-cloud-controller-manager` pods running in the cluster.  
+7. Update the cluster. The `aws-cloud-controller-manager` pods should now be running.
 
-8. Optionally after the upgrade, AWS cloud controller manager can be updated to disable leader migration. Upgrade the chart and remove following section from container arguments:
+8. (Optional) After the upgrade, you can update the AWS cloud controller manager to disable leader migration. Upgrade the chart and remove the following section from the container arguments:
 ```
 - --enable-leader-migration=true 
 ```
@@ -506,7 +510,7 @@ spec:
             - enable-leader-migration=true
 ```
 
-6. Optionally, AWS cloud controller manager can be updated to disable leader migration. Upgrade the chart and remove following section from container args:
+6. (Optional) After the upgrade, you can update the AWS cloud controller manager to disable leader migration. Upgrade the chart and remove the following section from the container arguments:
 ```
 - --enable-leader-migration=true 
 ```
