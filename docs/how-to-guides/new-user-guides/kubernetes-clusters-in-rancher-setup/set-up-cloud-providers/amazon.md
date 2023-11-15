@@ -7,12 +7,12 @@ weight: 1
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon"/>
 </head>
 
-When using the `Amazon` cloud provider, you can leverage the following capabilities:
+When you use Amazon as a cloud provider, you can leverage the following capabilities:
 
-- **Load Balancers:** Launches an AWS Elastic Load Balancer (ELB) when choosing `Layer-4 Load Balancer` in **Port Mapping** or when launching a `Service` with `type: LoadBalancer`.
-- **Persistent Volumes**: Allows you to use AWS Elastic Block Stores (EBS) for persistent volumes.
+- **Load Balancers:** Launch an AWS Elastic Load Balancer (ELB) when you select `Layer-4 Load Balancer` in **Port Mapping** or when you launch a `Service` with `type: LoadBalancer`.
+- **Persistent Volumes**: Use AWS Elastic Block Stores (EBS) for persistent volumes.
 
-See [cloud-provider-aws README](https://kubernetes.github.io/cloud-provider-aws/) for all information regarding the Amazon cloud provider.
+See the [cloud-provider-aws README](https://kubernetes.github.io/cloud-provider-aws/) for more information about the Amazon cloud provider.
 
 To set up the Amazon cloud provider,
 
@@ -21,9 +21,9 @@ To set up the Amazon cloud provider,
 
 :::note Important:
 
-In Kubernetes 1.27 and later, you must use an out-of-tree AWS cloud provider. In-tree Cloud Providers have been removed completely, and will no longer continue to function post-upgrade to Kubernetes 1.27. The steps listed below are still required to set up an Amazon cloud provider. You can proceed to [set up an out-of-tree cloud provider for RKE1](#using-out-of-tree-aws-cloud-provider-for-rke1) after creating an IAM role and configuring the ClusterID.
+In Kubernetes 1.27 and later, you must use an out-of-tree AWS cloud provider. In-tree Cloud Providers have been removed completely, and will no longer continue to function post-upgrade to Kubernetes 1.27. The steps listed below are still required to set up an Amazon cloud provider. You can proceed to [set up an out-of-tree cloud provider for RKE1](#using-the-out-of-tree-aws-cloud-provider-for-rke1) after creating an IAM role and configuring the ClusterID.
 
-You can also [migrate from an in-tree to out-of-tree AWS cloud provider](#migrating-to-out-of-tree-aws-cloud-provider-for-rke1) on Kubernetes 1.26 and earlier. All existing clusters must migrate prior to upgrading to 1.27 in order to stay functional.
+You can also [migrate from an in-tree to out-of-tree AWS cloud provider](#migrating-to-the-out-of-tree-aws-cloud-provider-for-rke1) on Kubernetes 1.26 and earlier. All existing clusters must migrate prior to upgrading to 1.27 in order to stay functional.
 
 Starting with Kubernetes 1.23, you have to deactivate the `CSIMigrationAWS` feature gate in order to use the in-tree AWS cloud provider. You can do this by setting `feature-gates=CSIMigrationAWS=false` as an additional argument for the cluster's Kubelet, Controller Manager, API Server and Scheduler in the advanced cluster configuration.
 
@@ -207,7 +207,7 @@ rancher_kubernetes_engine_config:
     useInstanceMetadataHostname: true/false
 ```
 
-Existing clusters using **External** cloud provider will set `--cloud-provider=external` for Kubernetes components but not facilitate setting node name.
+Existing clusters using **External** cloud provider will set `--cloud-provider=external` for Kubernetes components but won't set the node name.
 
 3. Install the AWS cloud controller manager after the cluster finishes provisioning. Note that the cluster isn't successfully provisioned and nodes are still in an `uninitialized` state until you deploy the cloud controller manager. This can be done via [Helm charts in UI](#helm-chart-installation) or manually.
 
@@ -217,7 +217,7 @@ The upstream documentation for the AWS cloud controller manager can be found [he
 
 :::
 
-### Using Out-of-tree AWS Cloud Provider for RKE2
+### Using the Out-of-tree AWS Cloud Provider for RKE2
 
 1. [Node name conventions and other prerequisites](https://cloud-provider-aws.sigs.k8s.io/prerequisites/) must be followed for cloud provider to find the instance correctly.
 2. Rancher managed RKE2/K3s clusters don't support configuring `providerID`, however the engine will set the node name correctly if the following configuration is set on the provisioning cluster object:
@@ -373,11 +373,11 @@ nodeSelector:
 
 To migrate from an in-tree cloud provider to the out-of-tree AWS cloud provider, you must stop the existing cluster's kube controller manager and install the AWS cloud controller manager. There are many ways to do this. Refer to the official AWS documentation on the [external cloud controller manager](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for details.
 
-If it's acceptable to have some downtime, you can [switch to an external cloud provider](#using-out-of-tree-aws-cloud-provider), which removes in-tree components and then deploy charts to install the AWS cloud controller manager.
+If it's acceptable to have some downtime, you can [switch to an external cloud provider](#using-the-out-of-tree-aws-cloud-provider), which removes in-tree components and then deploy charts to install the AWS cloud controller manager.
 
 If your setup can't tolerate any control plane downtime, you must enable leader migration. This facilitates a smooth transition from the controllers in the kube controller manager to their counterparts in the cloud controller manager. Refer to the official AWS documentation on [Using leader migration](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for more details.
 
-:::note Important
+:::note Important:
 The Kubernetes [cloud controller migration documentation](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#before-you-begin) states that it's possible to migrate with the same Kubernetes version, but assumes that the migration is part of a  Kubernetes upgrade. Refer to the Kubernetes documentation on [migrating to use the cloud controller manager](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/) to see if you need to customize your setup before migrating. Confirm your [migration configuration values](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#default-configuration). If your cloud provider provides an implementation of the Node IPAM controller,  you also need to [migrate the IPAM controller](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#node-ipam-controller-migration).
 :::
 
@@ -415,7 +415,7 @@ kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
 
 5. Update cluster.yml to change the cloud provider and remove the leader migration arguments from the kube-controller.
 
-Selecting **External Amazon (out-of-tree)** will set `--cloud-provider=external` and allow enabling `useInstanceMetadataHostname`. You must enable `useInstanceMetadataHostname` for node-driver clusters and for custom clusters if not providing custom node name via `--node-name`. Enabling `useInstanceMetadataHostname` will query ec2 metadata service and set `/hostname` as `hostname-override` for `kubelet` and `kube-proxy`:
+Selecting **External Amazon (out-of-tree)** will set `--cloud-provider=external` and allow enabling `useInstanceMetadataHostname`. You must enable `useInstanceMetadataHostname` for node-driver clusters and for custom clusters if you don't provide a custom node name via `--node-name`. Enabling `useInstanceMetadataHostname` queries the EC2 metadata service and sets `/hostname` as `hostname-override` for `kubelet` and `kube-proxy`:
 
 ```yaml
 rancher_kubernetes_engine_config:
@@ -471,7 +471,7 @@ spec:
 kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
 ```
 
-3. To install the AWS cloud controller manager with leader migration enabled, follow steps 1-3 for [deploying a cloud controller manager chart](#using-out-of-tree-aws-cloud-provider-for-rke2).
+3. To install the AWS cloud controller manager with leader migration enabled, follow steps 1-3 for [deploying a cloud controller manager chart](#using-the-out-of-tree-aws-cloud-provider-for-rke2).
 
 Update container args to enable leader migration:
 
@@ -507,9 +507,7 @@ spec:
 - --enable-leader-migration=true 
 ```
 
-7. The Cloud Provider is responsible for setting the ProviderID of the node.
-
-Check if all nodes are initialized with the ProviderID:
+7. The cloud provider is responsible for setting the ProviderID of the node. Check if all nodes are initialized with the ProviderID:
 
 ```bash
 kubectl describe nodes | grep "ProviderID"
