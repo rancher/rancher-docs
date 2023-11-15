@@ -424,7 +424,7 @@ rancher_kubernetes_engine_config:
     useInstanceMetadataHostname: true/false
 ```
 
-Remove `enable-leader-migration`:
+Remove `enable-leader-migration` if you don't want it enabled in your cluster:
 
 ```yaml
 services:
@@ -433,15 +433,18 @@ services:
       enable-leader-migration: "true"
 ```
 
-6. If  you're upgrading the cluster's Kubernetes version, set the Kubernetes version as well.
-
-7. Update the cluster. The `aws-cloud-controller-manager` pods should now be running.
-
-8. (Optional) After the upgrade, you can update the AWS cloud controller manager to disable leader migration. Upgrade the chart and remove the following section from the container arguments:
+:::tip
+You can also disable leader migration after step 7. Upgrade the chart and remove the following section from the container arguments:
 
 ```yaml
 - --enable-leader-migration=true 
 ```
+
+:::
+
+6. If  you're upgrading the cluster's Kubernetes version, set the Kubernetes version as well.
+
+7. Update the cluster. The `aws-cloud-controller-manager` pods should now be running.
 
 #### Migrating to the Out-of-Tree AWS Cloud Provider for RKE2
 
@@ -471,9 +474,7 @@ spec:
 kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
 ```
 
-3. To install the AWS cloud controller manager with leader migration enabled, follow steps 1-3 for [deploying a cloud controller manager chart](#using-the-out-of-tree-aws-cloud-provider-for-rke2).
-
-Update container args to enable leader migration:
+3. To install the AWS cloud controller manager with leader migration enabled, follow steps 1-3 for [deploying a cloud controller manager chart](#using-the-out-of-tree-aws-cloud-provider-for-rke2). In step 3 of the fresh install steps, add the following container arg to the `additionalManifest` to enable leader migration:
 
 ```bash
 - '--enable-leader-migration=true' 
@@ -481,16 +482,14 @@ Update container args to enable leader migration:
 
 4. Install the chart and confirm that the daemonset `aws-cloud-controller-manager` successfully deploys.
 
-5. Update the provisioning cluster to change the cloud provider and remove leader migration args from kube-controller.
-
-If upgrading the Kubernetes version, set the Kubernetes version as well.
+5. Update the provisioning cluster to change the cloud provider and remove leader migration args from kube-controller. If upgrading the Kubernetes version, set the Kubernetes version as well in the `machineSelectorConfig` section of the cluster YAML file:
 
 ```yaml
 cloud_provider:
   name: external
 ```
 
-Remove `enable-leader-migration`:
+Remove `enable-leader-migration` if you don't want it enabled in your cluster:
 
 ```yaml
 spec:
@@ -501,13 +500,16 @@ spec:
             - enable-leader-migration=true
 ```
 
-6. (Optional) After the upgrade, you can update the AWS cloud controller manager to disable leader migration. Upgrade the chart and remove the following section from the container arguments:
+:::tip
+You can also disable leader migration after the upgrade. Upgrade the chart and remove the following section from the container arguments:
 
 ```yaml
 - --enable-leader-migration=true 
 ```
 
-7. The cloud provider is responsible for setting the ProviderID of the node. Check if all nodes are initialized with the ProviderID:
+:::
+
+6. The cloud provider is responsible for setting the ProviderID of the node. Check if all nodes are initialized with the ProviderID:
 
 ```bash
 kubectl describe nodes | grep "ProviderID"
