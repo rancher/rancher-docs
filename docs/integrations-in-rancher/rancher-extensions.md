@@ -106,7 +106,7 @@ If there is a new version of the extension, there will also be an **Update** but
 1. From the namespaces dropdown menu, select **All Namespaces**.
 1. Find the **cattle-ui-plugin-system** namespace. 
 
-</TK Waiting for answer>
+<!-- TK Waiting for answer -->
 
 ## Deleting Extension Repositories
 
