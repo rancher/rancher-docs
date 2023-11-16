@@ -34,11 +34,11 @@ It provides essential protection for Rancher-managed clusters, preventing securi
 
 ## What Resources Does the Webhook Validate?
 
-An in-progress list of the resources that the webhook validates can be found in the [webhook's repo](https://github.com/rancher/webhook/blob/release/v0.4/docs.md). These docs are organized by group/version and resource (top-level header is group/version, next level header is resource). Checks specific to one version can be found by viewing the `docs.md` file associated with a particular tag (note that webhook versions prior to `v0.3.6` won't have this file).
+You can find an in-progress list of the resources that the webhook validates in the [webhook's repo](https://github.com/rancher/webhook/blob/release/v0.4/docs.md). These docs are organized by group/version and resource (top-level header is group/version, next level header is resource). Checks specific to one version can be found by viewing the `docs.md` file associated with a particular tag (note that webhook versions prior to `v0.3.6` won't have this file).
 
 ## Bypassing the Webhook
 
-Sometimes, it may be necessary to bypass Rancher's webhook validation to perform emergency restore operations, or fix other critical issues. The bypass operation is exhaustive, meaning that no webhook validations or mutations will apply when this is used. It is not possible to bypass some mutations or validations and have others still apply - they are either all bypassed, or all active. 
+Sometimes, you must bypass Rancher's webhook validation to perform emergency restore operations or fix other critical issues. The bypass operation is exhaustive, meaning no webhook validations or mutations apply when you use it. It is not possible to bypass some validations or mutations and have others still apply - they are either all bypassed or all active.
 
 :::danger
 
@@ -65,7 +65,7 @@ helm upgrade --reuse-values rancher-webhook rancher-charts/rancher-webhook  -n c
 ```
 **Note:** This temporary workaround may violate an environment's security policy. This workaround also requires that port 9443 is unused on the host network.
 
-**Note:** Helm, by default, uses a type that some webhook versions validate (secrets) to store information. In these cases, it's recommended to first directly update the deployment with the hostNetwork=true value using kubectl, and then perform the helm commands listed above to avoid drift between the helm configuration and the actual state in the cluster.
+**Note:** Helm uses secrets by default. This is a datatype that some webhook versions validate to store information. In these cases, directly update the deployment with the hostNetwork=true value using kubectl, then run the helm commands listed above to avoid drift between the helm configuration and the actual state in the cluster.
 
 ### Private GKE Cluster
 
@@ -99,10 +99,10 @@ If you roll back to Rancher v2.7.5 or earlier, you may see webhook versions that
 
 To help alleviate these issues, you can run the [adjust-downstream-webhook](https://github.com/rancherlabs/support-tools/tree/master/adjust-downstream-webhook) shell script after roll back. This script selects and installs the proper webhook version (or removes the webhook entirely) for the corresponding Rancher version. 
 
-### Project Members Can't Create Namespaces 
+### Project Users Can't Create Namespaces 
 
-**Note:** This affects Rancher versions `v2.7.2 - v2.7.4`
+**Note:** The following affects Rancher v2.7.2 - v2.7.4.
 
-Project users who aren't owners may not be able to create namespaces in projects. This issue is caused by Rancher automatically upgrading the webhook to a version compatible with a more recent version of Rancher than the one currently installed. 
+Project users may not be able to create namespaces in projects. This includes project owners. This issue is caused by Rancher automatically upgrading the webhook to a version compatible with a more recent version of Rancher than the one currently installed. 
 
 To help alleviate these issues, you can run the [adjust-downstream-webhook](https://github.com/rancherlabs/support-tools/tree/master/adjust-downstream-webhook) shell script after roll back. This script selects and installs the proper webhook version (or removes the webhook entirely) for the corresponding Rancher version. 
