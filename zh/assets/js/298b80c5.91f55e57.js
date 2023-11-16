@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.8/reference-guides/rancher-security/rancher-security-best-practices.md",
     "sourceDirName": "reference-guides/rancher-security",
     "slug": "/reference-guides/rancher-security/rancher-security-best-practices",
-    "permalink": "/v2.8/reference-guides/rancher-security/rancher-security-best-practices",
+    "permalink": "/zh/v2.8/reference-guides/rancher-security/rancher-security-best-practices",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/reference-guides/rancher-security/rancher-security-best-practices.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1698178257,
-    "formattedLastUpdatedAt": "Oct 24, 2023",
+    "lastUpdatedAt": 1700152502,
+    "formattedLastUpdatedAt": "2023年11月16日",
     "frontMatter": {
         "title": "Rancher Security Best Practices"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Kubernetes Security Best Practices",
-        "permalink": "/v2.8/reference-guides/rancher-security/kubernetes-security-best-practices"
+        "title": "Kubernetes 安全最佳实践",
+        "permalink": "/zh/v2.8/reference-guides/rancher-security/kubernetes-security-best-practices"
     },
     "next": {
-        "title": "Security Advisories and CVEs",
-        "permalink": "/v2.8/reference-guides/rancher-security/security-advisories-and-cves"
+        "title": "安全公告和 CVE",
+        "permalink": "/zh/v2.8/reference-guides/rancher-security/security-advisories-and-cves"
     }
 };
 const assets = {};
@@ -344,6 +344,11 @@ const toc = [
     {
         value: 'Restrict Public Access to /version and /rancherversion Path',
         id: 'restrict-public-access-to-version-and-rancherversion-path',
+        level: 3
+    },
+    {
+        value: 'Session Management',
+        id: 'session-management',
         level: 3
     }
 ];
@@ -374,7 +379,12 @@ function MDXContent(_param) {
     }, `/rancherversion`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/05-Enumerate_Infrastructure_and_Application_Admin_Interfaces.html"
-    }, `OWASP Web Application Security Testing - Enumerate Infrastructure and Application Admin Interfaces`), ` for more information on protecting your server.`));
+    }, `OWASP Web Application Security Testing - Enumerate Infrastructure and Application Admin Interfaces`), ` for more information on protecting your server.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "session-management"
+    }, `Session Management`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Some environments may require additional security controls for session management. For example, you may want to limit users' concurrent active sessions or restrict which geolocations those sessions can be initiated from. Such features are not supported by Rancher out of the box. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you require such features, combine Layer 7 firewalls with `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "../../pages-for-subheaders/authentication-config.md#external-vs-local-authentication"
+    }, `external authentication providers`), `.`));
 }
 MDXContent.isMDXComponent = true;
 
