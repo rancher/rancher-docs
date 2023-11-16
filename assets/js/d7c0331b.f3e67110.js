@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/rancher-webhook.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1697846459,
-    "formattedLastUpdatedAt": "Oct 21, 2023",
+    "lastUpdatedAt": 1700164288,
+    "formattedLastUpdatedAt": "Nov 16, 2023",
     "frontMatter": {
         "title": "Rancher Webhook"
     },
@@ -387,8 +387,8 @@ const toc = [
         level: 3
     },
     {
-        value: 'Project Members Can&#39;t Create Namespaces',
-        id: 'project-members-cant-create-namespaces',
+        value: 'Project Users Can&#39;t Create Namespaces',
+        id: 'project-users-cant-create-namespaces',
         level: 3
     }
 ];
@@ -494,7 +494,7 @@ Rancher deploys Rancher-Webhook as a separate deployment and service in both loc
 Rancher relies on the Rancher-Webhook as an integral part of its functionality. Without the webhook, Rancher would not be a complete product.
 It provides essential protection for Rancher-managed clusters, preventing security vulnerabilities and ensuring the consistency and stability of the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "what-resources-does-the-webhook-validate"
-    }, `What Resources Does the Webhook Validate?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `An in-progress list of the resources that the webhook validates can be found in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `What Resources Does the Webhook Validate?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can find an in-progress list of the resources that the webhook validates in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://github.com/rancher/webhook/blob/release/v0.4/docs.md"
     }, `webhook's repo`), `. These docs are organized by group/version and resource (top-level header is group/version, next level header is resource). Checks specific to one version can be found by viewing the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -503,7 +503,7 @@ It provides essential protection for Rancher-managed clusters, preventing securi
         parentName: "p"
     }, `v0.3.6`), ` won't have this file).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "bypassing-the-webhook"
-    }, `Bypassing the Webhook`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Sometimes, it may be necessary to bypass Rancher's webhook validation to perform emergency restore operations, or fix other critical issues. The bypass operation is exhaustive, meaning that no webhook validations or mutations will apply when this is used. It is not possible to bypass some mutations or validations and have others still apply - they are either all bypassed, or all active. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+    }, `Bypassing the Webhook`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Sometimes, you must bypass Rancher's webhook validation to perform emergency restore operations or fix other critical issues. The bypass operation is exhaustive, meaning no webhook validations or mutations apply when you use it. It is not possible to bypass some validations or mutations and have others still apply - they are either all bypassed or all active.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "danger"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
@@ -534,7 +534,7 @@ helm upgrade --reuse-values rancher-webhook rancher-charts/rancher-webhook  -n c
         parentName: "p"
     }, `Note:`), ` This temporary workaround may violate an environment's security policy. This workaround also requires that port 9443 is unused on the host network.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `Note:`), ` Helm, by default, uses a type that some webhook versions validate (secrets) to store information. In these cases, it's recommended to first directly update the deployment with the hostNetwork=true value using kubectl, and then perform the helm commands listed above to avoid drift between the helm configuration and the actual state in the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `Note:`), ` Helm uses secrets by default. This is a datatype that some webhook versions validate to store information. In these cases, directly update the deployment with the hostNetwork=true value using kubectl, then run the helm commands listed above to avoid drift between the helm configuration and the actual state in the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "private-gke-cluster"
     }, `Private GKE Cluster`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When using a private GKE cluster, errors may occur that prevent the Kubernetes API server from communicating with the webhook. The following error message may appear:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
@@ -586,12 +586,10 @@ helm upgrade --reuse-values rancher-webhook rancher-charts/rancher-webhook  -n c
         parentName: "p",
         "href": "https://github.com/rancherlabs/support-tools/tree/master/adjust-downstream-webhook"
     }, `adjust-downstream-webhook`), ` shell script after roll back. This script selects and installs the proper webhook version (or removes the webhook entirely) for the corresponding Rancher version. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "project-members-cant-create-namespaces"
-    }, `Project Members Can't Create Namespaces`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        "id": "project-users-cant-create-namespaces"
+    }, `Project Users Can't Create Namespaces`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `Note:`), ` This affects Rancher versions `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `v2.7.2 - v2.7.4`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Project users who aren't owners may not be able to create namespaces in projects. This issue is caused by Rancher automatically upgrading the webhook to a version compatible with a more recent version of Rancher than the one currently installed. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To help alleviate these issues, you can run the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Note:`), ` The following affects Rancher v2.7.2 - v2.7.4.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Project users may not be able to create namespaces in projects. This includes project owners. This issue is caused by Rancher automatically upgrading the webhook to a version compatible with a more recent version of Rancher than the one currently installed. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To help alleviate these issues, you can run the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://github.com/rancherlabs/support-tools/tree/master/adjust-downstream-webhook"
     }, `adjust-downstream-webhook`), ` shell script after roll back. This script selects and installs the proper webhook version (or removes the webhook entirely) for the corresponding Rancher version.`));
