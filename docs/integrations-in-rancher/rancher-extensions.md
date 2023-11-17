@@ -91,6 +91,13 @@ You must reload the page after disabling extensions or display issues may occur.
 
 :::
 
+## Deleting Helm Charts
+
+1. Click **☰**, then click on the name of your local cluster.
+1. From the sidebar, select **Apps > Installed Apps**.
+1. Find the name of the chart you want to delete and select the checkbox next to it. 
+1. Click **Delete**.
+
 ## Updating and Upgrading Extensions
 
 1. Click **☰ > Extensions** under **Configuration**.
@@ -101,11 +108,13 @@ If there is a new version of the extension, there will also be an **Update** but
 
 ### Updating and Upgrading an Extensions Repository in an Air-gapped Environment
 
+Extensions repository that aren't air-gapped are automatically updated. If the repository is air-gapped, you must update it manually.
+
 First, mirror the latest changes to your private repository by following the same steps for initially [importing and installing an extension repository](#importing-and-installing-extensions-in-an-air-gapped-environment).
 
 After you mirror the latest changes, follow these steps:
 
-1. Click **☰**, then click on the name of your local cluster.
+1. Click **☰ > Local**.
 1. From the sidebar, select **Workloads > Deployments**.
 1. From the namespaces dropdown menu, select **All Namespaces**.
 1. Find the **cattle-ui-plugin-system** namespace. 
