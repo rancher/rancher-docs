@@ -99,7 +99,7 @@ You must reload the page after disabling extensions or display issues may occur.
 
 If there is a new version of the extension, there will also be an **Update** button visible on the associated card for the extension in the **Available** tab.
 
-### Updating and Upgrading Extensions in an Air-gapped Environment
+### Updating and Upgrading an Extensions Repository in an Air-gapped Environment
 
 1. Click **☰**, then click on the name of your local cluster.
 1. From the sidebar, select **Workloads > Deployments**.
