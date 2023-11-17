@@ -101,12 +101,18 @@ If there is a new version of the extension, there will also be an **Update** but
 
 ### Updating and Upgrading an Extensions Repository in an Air-gapped Environment
 
+First, mirror the latest changes to your private repository by following the same steps for initially [importing and installing an extension repository](#importing-and-installing-extensions-in-an-air-gapped-environment).
+
+After you mirror the latest changes, follow these steps:
+
 1. Click **☰**, then click on the name of your local cluster.
 1. From the sidebar, select **Workloads > Deployments**.
 1. From the namespaces dropdown menu, select **All Namespaces**.
 1. Find the **cattle-ui-plugin-system** namespace. 
-
-<!-- TK Waiting for answer -->
+1. Select the `ui-plugin-catalog` deployment.
+1. Click **⋮ > Edit config**.
+1. Select the version you want to use from the list. The version number is the number appended to the repository's name; for example, **rancher/ui-plugin-catalog:1.0.2**.
+1. Click **Save**.
 
 ## Deleting Extension Repositories
 
