@@ -111,7 +111,7 @@ After you mirror the latest changes, follow these steps:
 1. Find the **cattle-ui-plugin-system** namespace. 
 1. Select the `ui-plugin-catalog` deployment.
 1. Click **⋮ > Edit config**.
-1. Select the version you want to use from the list. The version number is the number appended to the repository's name; for example, **rancher/ui-plugin-catalog:1.0.2**.
+1. Update the **Container image** field with the container of the deployment.
 1. Click **Save**.
 
 ## Deleting Extension Repositories
