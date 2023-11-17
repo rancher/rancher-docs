@@ -159,7 +159,7 @@ If you share resources between clusters, you can change the tag to:
 
 **Key** = `kubernetes.io/cluster/<cluster-id>` **Value** = `shared`.
 
-The string value, `<cluster-id>`, should be the Kubernetes cluster's ID. Technically, the `<cluster-id>` value can be any string you like, as long as you use the same value across all tags set. In practice, if the `ClusterID` is automatically configured for some nodes, as it is with Amazon EC2 nodes, you should consistently use that same string across all of your resources, even if you have to manually set the tag.
+The string value, `<cluster-id>`, is the Kubernetes cluster's ID.
 
 ### Using Amazon Elastic Container Registry (ECR)
 
