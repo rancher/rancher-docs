@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/aks.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "Oct 6, 2023",
+    "lastUpdatedAt": 1700234297,
+    "formattedLastUpdatedAt": "Nov 17, 2023",
     "frontMatter": {
         "title": "Creating an AKS Cluster"
     },
@@ -349,11 +349,6 @@ const toc = [
     {
         value: 'Setting Up the Service Principal with the Azure Command Line Tool',
         id: 'setting-up-the-service-principal-with-the-azure-command-line-tool',
-        level: 3
-    },
-    {
-        value: 'Setting Up the Service Principal with the Azure Command Line Tool',
-        id: 'setting-up-the-service-principal-with-the-azure-command-line-tool-1',
         level: 3
     },
     {
@@ -464,9 +459,7 @@ function MDXContent(_param) {
     }, `az ad sp create-for-rbac \\
   --scope /subscriptions/$<SUBSCRIPTION-ID>/resourceGroups/$<GROUP> \\
   --role Contributor
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "setting-up-the-service-principal-with-the-azure-command-line-tool-1"
-    }, `Setting Up the Service Principal with the Azure Command Line Tool`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Create the Resource Group by running this command:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Create the Resource Group by running this command:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
     }, `az group create --location AZURE_LOCATION_NAME --resource-group AZURE_RESOURCE_GROUP_NAME
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
@@ -682,7 +675,7 @@ function MDXContent(_param) {
     "IsCustom": true,
     "Description": "Everything needed by Rancher AKSv2 operator",
     "Actions": [
-       "Microsoft.Compute/disks/delete",
+        "Microsoft.Compute/disks/delete",
         "Microsoft.Compute/disks/read",
         "Microsoft.Compute/disks/write",
         "Microsoft.Compute/diskEncryptionSets/read",
@@ -705,11 +698,12 @@ function MDXContent(_param) {
         "Microsoft.Compute/virtualMachines/read",
         "Microsoft.Compute/virtualMachines/write",
         "Microsoft.ContainerService/managedClusters/read",
-        "Microsoft.ContainerService/managedClusters/write"
+        "Microsoft.ContainerService/managedClusters/write",
         "Microsoft.ContainerService/managedClusters/delete",
         "Microsoft.ContainerService/managedClusters/accessProfiles/listCredential/action",
         "Microsoft.ContainerService/managedClusters/agentPools/read",
         "Microsoft.ContainerService/managedClusters/agentPools/write",
+        "Microsoft.ContainerService/managedClusters/agentPools/delete",
         "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action",
         "Microsoft.Network/applicationGateways/read",
         "Microsoft.Network/applicationGateways/write",
