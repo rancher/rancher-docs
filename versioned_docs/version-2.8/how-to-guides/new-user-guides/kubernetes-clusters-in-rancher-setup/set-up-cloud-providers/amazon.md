@@ -147,17 +147,19 @@ Do not tag multiple security groups. Tagging multiple groups generates an error 
 
 :::
 
-When you create an [Amazon EC2 Cluster](../../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md), the `ClusterID` is automatically configured for the created nodes. Other resources still need to be tagged manually.
+When you create an [Amazon EC2 Cluster](../../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md), the `ClusterID` is automatically configured for the created nodes. Other resources still need to be manually tagged.
 
 Use the following tag:
 
-**Key** = `kubernetes.io/cluster/CLUSTERID` **Value** = `owned`
+**Key** = `kubernetes.io/cluster/<cluster-id>` **Value** = `owned`
 
-`CLUSTERID` can be any string you like, as long as it is equal across all tags set.
+Setting the value of the tag to `owned` tells the cluster that all resources with this tag are owned and managed by this cluster. 
 
-Setting the value of the tag to `owned` tells the cluster that all resources with this tag are owned and managed by this cluster. If you share resources between clusters, you can change the tag to:
+If you share resources between clusters, you can change the tag to:
 
-**Key** = `kubernetes.io/cluster/CLUSTERID` **Value** = `shared`.
+**Key** = `kubernetes.io/cluster/<cluster-id>` **Value** = `shared`.
+
+The string value, `<cluster-id>`, is the Kubernetes cluster's ID. 
 
 ### Using Amazon Elastic Container Registry (ECR)
 
