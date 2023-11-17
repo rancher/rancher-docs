@@ -21,7 +21,7 @@ To set up the Amazon cloud provider,
 
 :::note Important:
 
-In Kubernetes 1.27 and later, you must use an out-of-tree AWS cloud provider. In-tree cloud providers have been removed completely, and won't work after you upgrade to Kubernetes 1.27. The steps listed below are still required to set up an Amazon cloud provider. You can [set up an out-of-tree cloud provider for RKE1](#using-the-out-of-tree-aws-cloud-provider-for-rke1) after creating an IAM role and configuring the ClusterID.
+In Kubernetes 1.27 and later, you must use an out-of-tree AWS cloud provider. In-tree cloud providers have been deprecated, and the amazon cloud provider has been removed completely, and won't work after an upgrade to Kubernetes 1.27. The steps listed below are still required to set up an Amazon cloud provider. You can [set up an out-of-tree cloud provider for RKE1](#using-the-out-of-tree-aws-cloud-provider-for-rke1) after creating an IAM role and configuring the ClusterID.
 
 You can also [migrate from an in-tree to an out-of-tree AWS cloud provider](#migrating-to-the-out-of-tree-aws-cloud-provider-for-rke1) on Kubernetes 1.26 and earlier. All existing clusters must migrate prior to upgrading to v1.27 in order to stay functional.
 
@@ -209,7 +209,7 @@ rancher_kubernetes_engine_config:
 
 Existing clusters using **External** cloud provider will set `--cloud-provider=external` for Kubernetes components but won't set the node name.
 
-3. Install the AWS cloud controller manager after the cluster finishes provisioning. Note that the cluster isn't successfully provisioned and nodes are still in an `uninitialized` state until you deploy the cloud controller manager. This can be done via [Helm charts in UI](#helm-chart-installation) or manually.
+3. Install the AWS cloud controller manager after the cluster finishes provisioning. Note that the cluster isn't successfully provisioned and nodes are still in an `uninitialized` state until you deploy the cloud controller manager. This can be done via [Helm charts in UI](#helm-chart-installation-from-ui) or manually.
 
 :::note
 
@@ -217,7 +217,290 @@ The upstream documentation for the AWS cloud controller manager can be found [he
 
 :::
 
-### Using the Out-of-tree AWS Cloud Provider for RKE2
+### Helm Chart Installation from CLI
+
+:::tip
+
+Official upstream docs can be found [here](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager).
+
+1. Add the helm repository:
+
+```shell
+helm repo add aws-cloud-controller-manager https://kubernetes.github.io/cloud-provider-aws
+helm repo update
+```
+
+2. Create a `values.yaml` file to override default `values.yaml` with the following contents:
+
+```yaml
+# values.yaml
+hostNetworking: true
+tolerations:
+  - effect: NoSchedule
+    key: node.cloudprovider.kubernetes.io/uninitialized
+    value: 'true'
+  - effect: NoSchedule
+    value: 'true'
+    key: node-role.kubernetes.io/controlplane
+nodeSelector:
+  node-role.kubernetes.io/controlplane: 'true'
+args:
+  - --configure-cloud-routes=false
+  - --use-service-account-credentials=true
+  - --v=2
+  - --cloud-provider=aws
+clusterRoleRules:
+  - apiGroups:
+      - ""
+    resources:
+      - events
+    verbs:
+      - create
+      - patch
+      - update
+  - apiGroups:
+      - ""
+    resources:
+      - nodes
+    verbs:
+      - '*'
+  - apiGroups:
+      - ""
+    resources:
+      - nodes/status
+    verbs:
+      - patch
+  - apiGroups:
+      - ""
+    resources:
+      - services
+    verbs:
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - ""
+    resources:
+      - services/status
+    verbs:
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+     - ''
+    resources:
+      - serviceaccounts
+    verbs:
+    - create
+    - get
+  - apiGroups:
+      - ""
+    resources:
+      - persistentvolumes
+    verbs:
+      - get
+      - list
+      - update
+      - watch
+  - apiGroups:
+      - ""
+    resources:
+      - endpoints
+    verbs:
+      - create
+      - get
+      - list
+      - watch
+      - update
+  - apiGroups:
+      - coordination.k8s.io
+    resources:
+      - leases
+    verbs:
+      - create
+      - get
+      - list
+      - watch
+      - update
+  - apiGroups:
+      - ""
+    resources:
+      - serviceaccounts/token
+    verbs:
+      - create
+```
+
+3. Install the helm chart:
+
+```shell
+helm upgrade --install aws-cloud-controller-manager aws-cloud-controller-manager/aws-cloud-controller-manager --values values.yaml
+```
+
+Verify the helm chart installed successfully with the following command:
+
+```shell
+helm status -n kube-system aws-cloud-controller-manager
+```
+
+4. (Optional) Verify the cloud controller manager update was successfully rolled out with the following command:
+
+```shell
+kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
+```
+
+### Helm Chart Installation from UI
+
+1. Click **☰**, then select the name of the cluster from the left navigation.
+
+2. Select **Apps** > **Repositories**.
+
+3. Click the **Create** button.
+
+4. Enter `https://kubernetes.github.io/cloud-provider-aws` in the **Index URL** field.
+
+5. Select **Apps** > **Charts** from the left navigation and install **aws-cloud-controller-manager**.
+
+6. Select the namespace, `kube-system`, and enable **Customize Helm options before install**.
+
+7. Add the following container arguments: 
+
+```
+  - '--use-service-account-credentials=true'
+  - '--configure-cloud-routes=false'
+```   
+
+8. Add `get` to `verbs` for `serviceaccounts` resources in `clusterRoleRules`. This allows the cloud controller manager to get service accounts upon startup.
+
+```
+  - apiGroups:
+      - ''
+    resources:
+      - serviceaccounts
+    verbs:
+      - create
+      - get
+```
+
+9. Rancher-provisioned RKE nodes are tainted `node-role.kubernetes.io/controlplane` so you must update tolerations and the nodeSelector:
+
+```
+tolerations:
+  - effect: NoSchedule
+    key: node.cloudprovider.kubernetes.io/uninitialized
+    value: 'true'
+  - effect: NoSchedule
+    value: 'true'
+    key: node-role.kubernetes.io/controlplane
+
+```
+
+```
+nodeSelector:
+  node-role.kubernetes.io/controlplane: 'true'
+```
+
+:::note
+
+There's currently [a known issue](https://github.com/rancher/dashboard/issues/9249) where nodeSelector can't be updated from the Rancher UI.  Continue installing the chart and then edit the daemonset manually to set the `nodeSelector`:
+
+```  
+nodeSelector:
+  node-role.kubernetes.io/controlplane: 'true'
+```
+
+:::
+
+10. Install chart and confirm daemonset `aws-cloud-controller-manager` deploys successfully with the following command:
+
+```shell
+kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
+```
+
+### Migrating to the Out-of-Tree AWS Cloud Provider for RKE1
+
+
+To migrate from an in-tree cloud provider to the out-of-tree AWS cloud provider, you must stop the existing cluster's kube controller manager and install the AWS cloud controller manager. There are many ways to do this. Refer to the official AWS documentation on the [external cloud controller manager](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for details.
+
+If it's acceptable to have some downtime, you can [switch to an external cloud provider](#using-out-of-tree-aws-cloud-provider), which removes in-tree components and then deploy charts to install the AWS cloud controller manager.
+
+If your setup can't tolerate any control plane downtime, you must enable leader migration. This facilitates a smooth transition from the controllers in the kube controller manager to their counterparts in the cloud controller manager. Refer to the official AWS documentation on [Using leader migration](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for more details.
+
+**Important**
+- The Kubernetes [cloud controller migration documentation](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#before-you-begin) mentions that it is possible to migrate with the same Kubernetes version, but assumes that migration is part of a  Kubernetes upgrade.
+
+- Refer to the Kubernetes documentation on [migrating to use the cloud controller manager](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/) to see if you need to customize your setup before migrating.
+  Confirm your [migration configuration values](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#default-configuration). If your cloud provider provides an implementation of the Node IPAM controller,  you also need to [migrate the IPAM controller](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#node-ipam-controller-migration).
+
+
+1. Update the cluster config to enable leader migration in `cluster.yml`
+
+```
+services:
+  kube-controller:
+    extra_args:
+      enable-leader-migration: "true"
+```
+
+Note that the cloud provider is still `aws` at this step.
+
+```
+cloud_provider:
+  name: aws
+```
+
+2. Cordon the control plane nodes, so that AWS cloud controller pods run on nodes only after upgrading to the external cloud provider.
+
+```
+kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
+```
+
+3. To install the AWS cloud controller manager, enable leader migration and follow the same steps as when installing AWS on a new cluster.
+To enable leader migration, add the following to the container arguments in step 7 while following the [steps to install the chart](#helm-chart-installation-from-ui):
+
+```
+- '--enable-leader-migration=true' 
+```
+
+4. Confirm that the chart is installed but the new pods aren't running yet due to cordoned controlplane nodes. After updating the cluster in the next step, RKE will uncordon each node after upgrading and `aws-controller-manager` pods will be scheduled.
+
+5. Update cluster.yml to change the cloud provider and remove the leader migration arguments from the kube-controller.
+
+Selecting **External Amazon (out-of-tree)** will set `--cloud-provider=external` and allow enabling `useInstanceMetadataHostname`. You must enable `useInstanceMetadataHostname` for node-driver clusters and for custom clusters if not providing custom node name via `--node-name`. Enabling `useInstanceMetadataHostname` will query ec2 metadata service and set `/hostname` as `hostname-override` for `kubelet` and `kube-proxy`:
+
+```
+rancher_kubernetes_engine_config:
+  cloud_provider:
+    name: external-aws
+    useInstanceMetadataHostname: true/false
+```
+
+**Remove** `enable-leader-migration` from:
+```
+services:
+  kube-controller:
+    extra_args:
+      enable-leader-migration: "true"
+```
+
+6. If  you're upgrading the cluster's Kubernetes version, set the Kubernetes version as well.
+
+7. Update the cluster. The `aws-cloud-controller-manager` pods should now be running.
+
+8. (Optional) After the upgrade, leader migration is no longer required due to only one cloud-controller-manager and can be removed. Upgrade the chart and remove the following section from the container arguments:
+
+```
+- --enable-leader-migration=true 
+```
+
+Verify the cloud controller manager update was successfully rolled out with the following command:
+
+```shell
+kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
+```
+
+### Using Out-of-tree AWS Cloud Provider for RKE2
 
 1. [Node name conventions and other prerequisites](https://cloud-provider-aws.sigs.k8s.io/prerequisites/) must be followed for cloud provider to find the instance correctly.
 2. Rancher managed RKE2/K3s clusters don't support configuring `providerID`, however the engine will set the node name correctly if the following configuration is set on the provisioning cluster object:
@@ -231,7 +514,7 @@ spec:
 
 :::note
 
-This option will be passed to the configuration of the various kubernetes components that run on the node, and must be overridden per component:
+This option will be passed to the configuration of the various kubernetes components that run on the node, and must be overridden per component to prevent the in-tree provider from running unintentionally:
 
 :::
 
@@ -244,7 +527,12 @@ spec:
       - config:
           kubelet-arg:
             - cloud-provider=external
-        machineLabelSelector: rke.cattle.io/etcd-role:true
+        machineLabelSelector:
+          matchExpressions:
+            - key: rke.cattle.io/etcd-role
+              operator: In
+              values:
+                - 'true'
 ```
 
 - Control Plane
@@ -254,14 +542,19 @@ spec:
   rkeConfig:
     machineSelectorConfig:
       - config:
-          disable-cloud-controller: true
-          kube-apiserver-arg:
-            - cloud-provider=external
-          kube-controller-manager-arg:
-            - cloud-provider=external
-          kubelet-arg:
-            - cloud-provider=external                        
-        machineLabelSelector: rke.cattle.io/control-plane-role:true
+        disable-cloud-controller: true
+        kube-apiserver-arg:
+          - cloud-provider=external
+        kube-controller-manager-arg:
+          - cloud-provider=external
+        kubelet-arg:
+          - cloud-provider=external
+        machineLabelSelector:
+          matchExpressions:
+            - key: rke.cattle.io/control-plane-role
+              operator: In
+              values:
+                - 'true'
 ```
 
 - Worker
@@ -273,11 +566,16 @@ spec:
       - config:
           kubelet-arg:
             - cloud-provider=external
-        machineLabelSelector: rke.cattle.io/worker-role:true
+        machineLabelSelector:
+          matchExpressions:
+            - key: rke.cattle.io/worker-role
+              operator: In
+              values:
+                - 'true'
 ```
 
 2. Select `Amazon` if relying on the above mechanism to set the provider ID.
-   Otherwise, select `External (out-of-tree)` cloud provider, which sets `--cloud-provider=external` for Kubernetes components.
+   Otherwise, select **External (out-of-tree)** cloud provider, which sets `--cloud-provider=external` for Kubernetes components.
 
 3. Specify the `aws-cloud-controller-manager` helm chart as an additional manifest to install:
 
@@ -305,7 +603,140 @@ spec:
             - --cloud-provider=aws
 ```
 
-### Helm Chart Installation
+### Helm Chart Installation from CLI
+
+:::tip
+
+Official upstream docs can be found [here](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager).
+
+1. Add the helm repository:
+
+```shell
+helm repo add aws-cloud-controller-manager https://kubernetes.github.io/cloud-provider-aws
+helm repo update
+```
+
+2. Create a `values.yaml` file to override default `values.yaml` with the following contents:
+
+```yaml
+# values.yaml
+hostNetworking: true
+tolerations:
+  - effect: NoSchedule
+    key: node.cloudprovider.kubernetes.io/uninitialized
+    value: 'true'
+  - effect: NoSchedule
+    value: 'true'
+    key: node-role.kubernetes.io/controlplane
+nodeSelector:
+  node-role.kubernetes.io/controlplane: 'true'
+args:
+  - --configure-cloud-routes=false
+  - --use-service-account-credentials=true
+  - --v=2
+  - --cloud-provider=aws
+clusterRoleRules:
+  - apiGroups:
+      - ""
+    resources:
+      - events
+    verbs:
+      - create
+      - patch
+      - update
+  - apiGroups:
+      - ""
+    resources:
+      - nodes
+    verbs:
+      - '*'
+  - apiGroups:
+      - ""
+    resources:
+      - nodes/status
+    verbs:
+      - patch
+  - apiGroups:
+      - ""
+    resources:
+      - services
+    verbs:
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - ""
+    resources:
+      - services/status
+    verbs:
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+     - ''
+    resources:
+      - serviceaccounts
+    verbs:
+    - create
+    - get
+  - apiGroups:
+      - ""
+    resources:
+      - persistentvolumes
+    verbs:
+      - get
+      - list
+      - update
+      - watch
+  - apiGroups:
+      - ""
+    resources:
+      - endpoints
+    verbs:
+      - create
+      - get
+      - list
+      - watch
+      - update
+  - apiGroups:
+      - coordination.k8s.io
+    resources:
+      - leases
+    verbs:
+      - create
+      - get
+      - list
+      - watch
+      - update
+  - apiGroups:
+      - ""
+    resources:
+      - serviceaccounts/token
+    verbs:
+      - create
+```
+
+3. Install the helm chart:
+
+```shell
+helm upgrade --install aws-cloud-controller-manager aws-cloud-controller-manager/aws-cloud-controller-manager --values values.yaml
+```
+
+Verify the helm chart installed successfully with the following command:
+
+```shell
+helm status -n kube-system aws-cloud-controller-manager
+```
+
+4. (Optional) Verify the cloud controller manager update was successfully rolled out with the following command:
+
+```shell
+kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
+```
+
+### Helm Chart Installation from UI
 
 1. Click **☰**, then select the name of the cluster from the left navigation.
 
@@ -405,7 +836,7 @@ cloud_provider:
 kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
 ```
 
-3. To install the AWS cloud controller manager, enable leader migration and follow the same steps as when installing AWS on a new cluster. To enable leader migration, add the following to the container arguments in step 7 while following the [steps to install the chart](#helm-chart-installation):
+3. To install the AWS cloud controller manager, enable leader migration and follow the same steps as when installing AWS on a new cluster. To enable leader migration, add the following to the container arguments in step 7 while following the [steps to install the chart](#helm-chart-installation-from-ui):
 
 ```bash
 - '--enable-leader-migration=true' 
@@ -456,7 +887,13 @@ spec:
     machineSelectorConfig:
       - config:
           kube-controller-manager-arg:
-            - enable-leader-migration=true
+            - enable-leader-migration
+        machineLabelSelector:
+          matchExpressions:
+            - key: rke.cattle.io/control-plane-role
+              operator: In
+              values:
+                - 'true'
 ```
 
 Note that the cloud provider is still `aws` at this step:
@@ -472,6 +909,10 @@ spec:
 
 ```bash
 kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
+
+3. To install AWS cloud controller manager with leader migration enabled, follow Steps 1-3 for [deploying cloud controller manager chart](#using-out-of-tree-aws-cloud-provider-for-rke2)
+From Kubernetes 1.22 onwards, the kube-controller-manager will utilize a default configuration which will satisfy the controller-to-manager migration. 
+Update container args of the `aws-cloud-controller-manager` under `spec.rkeConfig.additionalManifest` to enable leader migration:
 ```
 
 3. To install the AWS cloud controller manager with leader migration enabled, follow steps 1-3 for [deploying a cloud controller manager chart](#using-the-out-of-tree-aws-cloud-provider-for-rke2). In step 3 of the fresh install steps, add the following container arg to the `additionalManifest` to enable leader migration:
@@ -480,16 +921,31 @@ kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
 - '--enable-leader-migration=true' 
 ```
 
-4. Install the chart and confirm that the daemonset `aws-cloud-controller-manager` successfully deploys.
+4. Install the chart and confirm daemonset `aws-cloud-controller-manager` successfully deploys with the following command:
 
-5. Update the provisioning cluster to change the cloud provider and remove leader migration args from kube-controller. If upgrading the Kubernetes version, set the Kubernetes version as well in the `machineSelectorConfig` section of the cluster YAML file:
-
-```yaml
-cloud_provider:
-  name: external
+```shell
+kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
 ```
 
+5. Update the provisioning cluster to change the cloud provider and remove leader migration args from kube-controller. 
+If upgrading the Kubernetes version, set the Kubernetes version as well in the `spec.kubernetesVersion` section of the cluster YAML file
+
+:::note Important
+
+Only remove `cloud-provider-name: aws` if not relying on the rke2 supervisor to correctly set the providerID.
+
+:::
+
 Remove `enable-leader-migration` if you don't want it enabled in your cluster:
+
+```
+spec:
+  rkeConfig:
+    machineGlobalConfig:
+      cloud-provider-name: external
+```
+
+Remove `enable-leader-migration` from:
 
 ```yaml
 spec:
@@ -497,14 +953,26 @@ spec:
     machineSelectorConfig:
       - config:
           kube-controller-manager-arg:
-            - enable-leader-migration=true
+            - enable-leader-migration
+        machineLabelSelector:
+          matchExpressions:
+            - key: rke.cattle.io/control-plane-role
+              operator: In
+              values:
+                - 'true'
 ```
-
 :::tip
-You can also disable leader migration after the upgrade. Upgrade the chart and remove the following section from the container arguments:
+You can also disable leader migration after the upgrade, as leader migration is no longer required due to only one cloud-controller-manager and can be removed.
+Upgrade the chart and remove the following section from the container arguments:
 
 ```yaml
 - --enable-leader-migration=true 
+```
+
+Verify the cloud controller manager update was successfully rolled out with the following command:
+
+```shell
+kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
 ```
 
 :::
