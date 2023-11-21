@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters.md",
     "sourceDirName": "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery",
     "slug": "/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters",
-    "permalink": "/v2.0-v2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters",
+    "permalink": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters.md",
     "tags": [],
     "version": "2.0-2.4",
-    "lastUpdatedAt": 1670452794,
-    "formattedLastUpdatedAt": "Dec 7, 2022",
+    "lastUpdatedAt": 1700533703,
+    "formattedLastUpdatedAt": "2023年11月21日",
     "frontMatter": {
         "title": "Backing up Rancher Installed on an RKE Kubernetes Cluster"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Restoring Rancher Installed on a K3s Kubernetes Cluster",
-        "permalink": "/v2.0-v2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-k3s-installed-rancher"
+        "permalink": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-k3s-installed-rancher"
     },
     "next": {
         "title": "Restoring Backups—Kubernetes installs",
-        "permalink": "/v2.0-v2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup"
+        "permalink": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup"
     }
 };
 const assets = {};
@@ -498,7 +498,7 @@ function MDXContent(_param) {
     backup_config:
       enabled: true     # enables recurring etcd snapshots
       interval_hours: 6 # time increment between snapshots
-      retention: 60     # time in days before snapshot purge
+      retention: 6     # number of snapshots to retain before rotation
       # Optional S3
       s3backupconfig:
         access_key: "myaccesskey"
