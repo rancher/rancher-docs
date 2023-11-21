@@ -1311,17 +1311,15 @@
       "items": [
         "api/quickstart",
         {
-
-        }
-      ]
-    },
-    "contribute-to-rancher",
-    {
-      "type": "category",
-      "label": "API",
-      "items": [
+          "type": "category",
+          "label": "Example Workflows",
+          "items": [
+            "api/workflows/projects"
+          ]
+        },
         "api/api-reference"
       ]
-    }
+    },
+    "contribute-to-rancher"
   ]
 }
