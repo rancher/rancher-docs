@@ -4,15 +4,6 @@ title: Creating Custom Catalogs
 
 Custom catalogs can be added into Rancher at a global scope, cluster scope, or project scope.
 
-- [Adding catalog repositories](#adding-catalog-repositories)
-  - [Add custom Git repositories](#add-custom-git-repositories)
-  - [Add custom Helm chart repositories](#add-custom-helm-chart-repositories)
-  - [Add private Git/Helm chart repositories](#add-private-git-helm-chart-repositories)
-- [Adding global catalogs](#adding-global-catalogs)
-- [Adding cluster level catalogs](#adding-cluster-level-catalogs)
-- [Adding project level catalogs](#adding-project-level-catalogs)
-- [Custom catalog configuration reference](#custom-catalog-configuration-reference)
-
 ## Adding Catalog Repositories
 
 Adding a catalog is as simple as adding a catalog name, a URL and a branch name.

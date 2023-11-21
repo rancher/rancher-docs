@@ -3,7 +3,7 @@ title: 4. Install Rancher
 ---
 
 
-<head> 
+<head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha"/>
 </head>
 
@@ -13,14 +13,6 @@ This section is about how to deploy Rancher for your air gapped environment. An 
 <TabItem value="Kubernetes Install (Recommended)">
 
 Rancher recommends installing Rancher on a Kubernetes cluster. A highly available Kubernetes install is comprised of three nodes running the Rancher server components on a Kubernetes cluster. The persistence layer (etcd) is also replicated on these three nodes, providing redundancy and data duplication in case one of the nodes fails.
-
-This section describes installing Rancher in five parts:
-
-- [1. Add the Helm Chart Repository](#1-add-the-helm-chart-repository)
-- [2. Choose your SSL Configuration](#2-choose-your-ssl-configuration)
-- [3. Render the Rancher Helm Template](#3-render-the-rancher-helm-template)
-- [4. Install Rancher](#4-install-rancher)
-- [5. For Rancher versions before v2.3.0, Configure System Charts](#5-for-rancher-versions-before-v2-3-0-configure-system-charts)
 
 ## 1. Add the Helm Chart Repository
 
@@ -76,7 +68,7 @@ When setting up the Rancher Helm template, there are several options in the Helm
 | `systemDefaultRegistry` | `<REGISTRY.YOURDOMAIN.COM:PORT>` | Configure Rancher server to always pull from your private registry when provisioning clusters.  |
 | `useBundledSystemChart` | `true`                           | Configure Rancher server to use the packaged copy of Helm system charts. The [system charts](https://github.com/rancher/system-charts) repository contains all the catalog items required for features such as monitoring, logging, alerting and global DNS. These [Helm charts](https://github.com/rancher/system-charts) are located in GitHub, but since you are in an air gapped environment, using the charts that are bundled within Rancher is much easier than setting up a Git mirror. _Available as of v2.3.0_ |
 
-Based on the choice your made in [B. Choose your SSL Configuration](#b-choose-your-ssl-configuration), complete one of the procedures below.
+Based on the choice your made in [2. Choose your SSL Configuration](#2-choose-your-ssl-configuration), complete one of the procedures below.
 
 ### Option A: Default Self-Signed Certificate
 
@@ -188,7 +180,7 @@ Copy the rendered manifest directories to a system that has access to the Ranche
 
 Use `kubectl` to create namespaces and apply the rendered manifests.
 
-If you choose to use self-signed certificates in [B. Choose your SSL Configuration](#b-choose-your-ssl-configuration), install cert-manager.
+If you choose to use self-signed certificates in [2. Choose your SSL Configuration](#2-choose-your-ssl-configuration), install cert-manager.
 
 ### For Self-Signed Certificate Installs, Install Cert-manager
 

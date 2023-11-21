@@ -2,6 +2,10 @@
 title: Advanced Options for Docker Installs
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/single-node-rancher-in-docker/advanced-options"/>
+</head>
+
 ### Custom CA Certificate
 
 If you want to configure Rancher to use a CA root certificate to be used when validating services, you would start the Rancher container sharing the directory that contains the CA root certificate.

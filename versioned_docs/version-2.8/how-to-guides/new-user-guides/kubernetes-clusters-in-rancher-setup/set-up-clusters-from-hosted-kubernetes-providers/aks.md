@@ -64,8 +64,6 @@ az ad sp create-for-rbac \
   --role Contributor
 ```
 
-### Setting Up the Service Principal with the Azure Command Line Tool
-
 Create the Resource Group by running this command:
 
 ```
@@ -176,7 +174,7 @@ For more information about connecting to an AKS private cluster, see the [AKS do
       "IsCustom": true,
       "Description": "Everything needed by Rancher AKSv2 operator",
       "Actions": [
-         "Microsoft.Compute/disks/delete",
+          "Microsoft.Compute/disks/delete",
           "Microsoft.Compute/disks/read",
           "Microsoft.Compute/disks/write",
           "Microsoft.Compute/diskEncryptionSets/read",
@@ -199,11 +197,12 @@ For more information about connecting to an AKS private cluster, see the [AKS do
           "Microsoft.Compute/virtualMachines/read",
           "Microsoft.Compute/virtualMachines/write",
           "Microsoft.ContainerService/managedClusters/read",
-          "Microsoft.ContainerService/managedClusters/write"
+          "Microsoft.ContainerService/managedClusters/write",
           "Microsoft.ContainerService/managedClusters/delete",
           "Microsoft.ContainerService/managedClusters/accessProfiles/listCredential/action",
           "Microsoft.ContainerService/managedClusters/agentPools/read",
           "Microsoft.ContainerService/managedClusters/agentPools/write",
+          "Microsoft.ContainerService/managedClusters/agentPools/delete",
           "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action",
           "Microsoft.Network/applicationGateways/read",
           "Microsoft.Network/applicationGateways/write",

@@ -36,12 +36,12 @@ This feature enables kubectl to authenticate with the Rancher server and get a n
 4. SAML providers - Ping, Okta, ADFS, Keycloak, Shibboleth
 
 When you first run kubectl, for example, `kubectl get pods`, it will ask you to pick an auth provider and log in with the Rancher server.
-The kubeconfig token is cached in the path where you run kubectl under `./.cache/token`. This token is valid till [it expires](../../reference-guides/about-the-api/api-tokens.md#setting-ttl-on-kubeconfig-tokens-period), or [gets deleted from the Rancher server](../../reference-guides/about-the-api/api-tokens.md#deleting-tokens)
+The kubeconfig token is cached in the path where you run kubectl under `./.cache/token`. This token is valid till [it expires](../../reference-guides/about-the-api/api-tokens.md#setting-ttl-on-kubeconfig-tokens), or [gets deleted from the Rancher server](../../reference-guides/about-the-api/api-tokens.md#deleting-tokens)
 Upon expiration, the next `kubectl get pods` will ask you to log in with the Rancher server again.
 
 _Note_
 
-As of CLI [v2.4.10](https://github.com/ranchquick-start-guide/cli/releases/tag/v2.4.10), the kubeconfig token can be cached at a chosen path with `cache-dir` flag or env var `RANCHER_CACHE_DIR`.
+As of CLI [v2.4.10](https://github.com/rancher/cli/releases/tag/v2.4.10), the kubeconfig token can be cached at a chosen path with `cache-dir` flag or env var `RANCHER_CACHE_DIR`.
 
 _**Current Known Issues**_
 

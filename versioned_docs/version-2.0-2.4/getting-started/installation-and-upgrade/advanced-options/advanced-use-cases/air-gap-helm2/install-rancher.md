@@ -9,14 +9,6 @@ This section is about how to deploy Rancher for your air gapped environment. An 
 
 Rancher recommends installing Rancher on a Kubernetes cluster. A highly available Kubernetes Installation is comprised of three nodes running the Rancher server components on a Kubernetes cluster. The persistence layer (etcd) is also replicated on these three nodes, providing redundancy and data duplication in case one of the nodes fails.
 
-This section describes installing Rancher in five parts:
-
-- [A. Add the Helm Chart Repository](#a-add-the-helm-chart-repository)
-- [B. Choose your SSL Configuration](#b-choose-your-ssl-configuration)
-- [C. Render the Rancher Helm Template](#c-render-the-rancher-helm-template)
-- [D. Install Rancher](#d-install-rancher)
-- [E. For Rancher versions before v2.3.0, Configure System Charts](#e-for-rancher-versions-before-v2-3-0-configure-system-charts)
-
 ### A. Add the Helm Chart Repository
 
 From a system that has access to the internet, fetch the latest Helm chart and copy the resulting manifests to a system that has access to the Rancher server cluster.
@@ -54,7 +46,7 @@ Rancher Server is designed to be secure by default and requires SSL/TLS configur
 
 When Rancher is installed on an air gapped Kubernetes cluster, there are two recommended options for the source of the certificate.
 
-> **Note:** If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](../../../../../reference-guides/installation-references/helm-chart-options#external-tls-termination).
+> **Note:** If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](../../../../../reference-guides/installation-references/helm-chart-options.md#external-tls-termination).
 
 | Configuration                              | Chart option                 | Description                                                                                                                                                 | Requires cert-manager |
 | ------------------------------------------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
@@ -239,7 +231,7 @@ For security purposes, SSL (Secure Sockets Layer) is required when using Rancher
 
 > **Do you want to...**
 >
-> - Configure custom CA root certificate to access your services? See [Custom CA root certificate](../../../../../reference-guides/installation-references/helm-chart-options#additional-trusted-cas).
+> - Configure custom CA root certificate to access your services? See [Custom CA root certificate](../../../../../reference-guides/installation-references/helm-chart-options.md#additional-trusted-cas).
 > - Record all transactions with the Rancher API? See [API Auditing](../../../../../reference-guides/single-node-rancher-in-docker/advanced-options.md#api-audit-log).
 
 - For Rancher before v2.3.0, you will need to mirror the `system-charts` repository to a location in your network that Rancher can reach. Then, after Rancher is installed, you will need to configure Rancher to use that repository. For details, refer to the documentation on [setting up the system charts for Rancher before v2.3.0.](../../../resources/local-system-charts.md)

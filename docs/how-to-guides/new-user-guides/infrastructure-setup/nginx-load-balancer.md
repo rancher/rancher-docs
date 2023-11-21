@@ -72,7 +72,6 @@ After installing NGINX, you need to update the NGINX configuration file, `nginx.
         }
         server {
             listen 443 ssl;
-            proxy_pass rancher_servers_https;
             ssl_certificate /path/to/tls.crt;
             ssl_certificate_key /path/to/key.key;
             location / {

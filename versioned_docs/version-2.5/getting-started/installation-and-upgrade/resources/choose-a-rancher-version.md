@@ -33,7 +33,6 @@ Rancher provides several different Helm chart repositories to choose from. We al
 | rancher-stable | `helm repo add rancher-stable https://releases.rancher.com/server-charts/stable` | Adds a repository of Helm charts for older, stable versions of Rancher. We recommend using this repo for production environments.                                                                                                                                                          |
 | rancher-alpha  | `helm repo add rancher-alpha https://releases.rancher.com/server-charts/alpha`   | Adds a repository of Helm charts for alpha versions of Rancher for previewing upcoming releases. These releases are discouraged in production environments. Upgrades _to_ or _from_ charts in the rancher-alpha repository to any other chart, regardless or repository, aren't supported. |
 
-<br/>
 Instructions on when to select these repos are available below in [Switching to a Different Helm Chart Repository](#switching-to-a-different-helm-chart-repository).
 
 > **Note:** All charts in the `rancher-stable` repository will correspond with any Rancher version tagged as `stable`.

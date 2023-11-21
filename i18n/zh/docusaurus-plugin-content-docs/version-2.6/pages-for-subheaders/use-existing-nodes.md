@@ -99,7 +99,7 @@ description: 要创建具有自定义节点的集群，你需要访问集群中�
 
 :::note
 
-你可以使用 Amazon EC2 实例，而无需在 Kubernetes 中配置云提供商。如果你想使用特定的 Kubernetes 云提供商功能，配置云提供商即可。如需更多信息，请参阅 [Kubernetes 云提供商](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/)。
+你可以使用 Amazon EC2 实例，而无需在 Kubernetes 中配置云提供商。如果你想使用特定的 Kubernetes 云提供商功能，配置云提供商即可。如需更多信息，请参阅 [Kubernetes 云提供商](https://github.com/kubernetes/website/blob/release-1.18/content/en/docs/concepts/cluster-administration/cloud-providers.md)。
 
 :::
 

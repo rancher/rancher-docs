@@ -8,7 +8,7 @@ title: Logging Best Practices
 
 In this guide, we recommend best practices for cluster-level logging and application logging.
 
-- [Changes in Logging in Rancher v2.5](#changes-in-logging-in-rancher-v2-5)
+- [Changes in Logging in Rancher v2.5](#changes-in-logging-in-rancher-v25)
 - [Cluster-level Logging](#cluster-level-logging)
 - [Application Logging](#application-logging)
 - [General Best Practices](#general-best-practices)

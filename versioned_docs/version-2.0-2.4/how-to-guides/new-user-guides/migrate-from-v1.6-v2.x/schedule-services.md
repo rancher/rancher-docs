@@ -40,7 +40,7 @@ Option | v1.6 Feature | v2.x Feature
 [Schedule a certain number of pods?](#schedule-a-certain-number-of-pods) | ✓ | ✓
 [Schedule pods to specific node?](#scheduling-pods-to-a-specific-node) | ✓ | ✓
 [Schedule to nodes using labels?](#applying-labels-to-nodes-and-pods) | ✓ | ✓
-[Schedule to nodes using label affinity/anti-affinity rules?](#label-affinity-antiaffinity) | ✓ | ✓
+[Schedule to nodes using label affinity/anti-affinity rules?](#label-affinityantiaffinity) | ✓ | ✓
 [Schedule based on resource constraints?](#scheduling-pods-using-resource-constraints) | ✓ | ✓
 [Preventing scheduling specific services to specific hosts?](#preventing-scheduling-specific-services-to-specific-nodes) | ✓ | ✓
 [Schedule services globally?](#scheduling-global-services) | ✓ | ✓

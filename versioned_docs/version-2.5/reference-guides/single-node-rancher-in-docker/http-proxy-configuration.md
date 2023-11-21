@@ -2,6 +2,10 @@
 title: HTTP Proxy Configuration
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/single-node-rancher-in-docker/http-proxy-configuration"/>
+</head>
+
 If you operate Rancher behind a proxy and you want to access services through the proxy (such as retrieving catalogs), you must provide Rancher information about your proxy. As Rancher is written in Go, it uses the common proxy environment variables as shown below.
 
 Make sure `NO_PROXY` contains the network addresses, network address ranges and domains that should be excluded from using the proxy.
@@ -38,4 +42,4 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-As of Rancher v2.5, privileged access is [required.](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v2-5)
+As of Rancher v2.5, privileged access is [required.](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v25)

@@ -130,7 +130,7 @@ If you choose to assign a public IP address to your cluster's worker nodes, you 
 
 If you're using **Custom: Choose from your existing VPC and Subnets**:
 
-(If you're using **Standard**, skip to the [instance options.)](#select-instance-options-2-4)
+(If you're using **Standard**, skip to the [instance options.)](#instance-options)
 
 1. Make sure **Custom: Choose from your existing VPC and Subnets** is selected.
 
@@ -169,8 +169,6 @@ Amazon Documentation:
 
 ### Instance Options
 
-<a id="select-instance-options-2-4"></a>
-
 Instance type and size of your worker nodes affects how many IP addresses each worker node will have available. See this [documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) for more information.
 
 Option | Description
@@ -181,8 +179,6 @@ Desired ASG Size | The number of instances that your cluster will provision.
 User Data | Custom commands can to be passed to perform automated configuration tasks **WARNING: Modifying this may cause your nodes to be unable to join the cluster.** _Note: Available as of v2.2.0_
 
 ## Troubleshooting
-
-If your changes were overwritten, it could be due to the way the cluster data is synced with EKS. Changes shouldn't be made to the cluster from another source, such as in the EKS console, and in Rancher within a five-minute span. For information on how this works and how to configure the refresh interval, refer to [Syncing.](#syncing)
 
 If an unauthorized error is returned while attempting to modify or import the cluster and the cluster was not created with the role or user that your credentials belong to, refer to [Security and Compliance.](#security-and-compliance)
 
