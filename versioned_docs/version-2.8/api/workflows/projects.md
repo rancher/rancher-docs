@@ -25,7 +25,7 @@ Use `metadata.generateName` to ensure a unique project ID, but note that `kubect
 
 Set `metadata.namespace` and `spec.clusterName` to the ID for the cluster the project belongs to.
 
-### Creating a Project With Resource Quota
+### Creating a Project With a Resource Quota
 
 Refer to [Kubernetes Resource Quota](https://kubernetes.io/docs/concepts/policy/resource-quotas/).
 
