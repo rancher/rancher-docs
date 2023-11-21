@@ -67,7 +67,7 @@ The steps to enable recurring snapshots differ based on the version of RKE.
         backup_config:
           enabled: true     # enables recurring etcd snapshots
           interval_hours: 6 # time increment between snapshots
-          retention: 60     # time in days before snapshot purge
+          retention: 6     # number of snapshots to retain before rotation
           # Optional S3
           s3backupconfig:
             access_key: "myaccesskey"
