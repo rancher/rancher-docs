@@ -96,7 +96,7 @@ Note the format, `<cluster ID>:<project ID>`.
 
 ## Deleting a Project
 
-Look up the project to delete in the cluster namespace since it generated using `metadata.generateName`:
+Look up the project to delete in the cluster namespace:
 
 ```bash
 kubectl --namespace c-m-abcde get projects
