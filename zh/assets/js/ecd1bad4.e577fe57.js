@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.8/api/quickstart.md",
     "sourceDirName": "api",
     "slug": "/api/quickstart",
-    "permalink": "/v2.8/api/quickstart",
+    "permalink": "/zh/v2.8/api/quickstart",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/api/quickstart.md",
     "tags": [],
     "version": "2.8",
     "lastUpdatedAt": 1698677313,
-    "formattedLastUpdatedAt": "Oct 30, 2023",
+    "formattedLastUpdatedAt": "2023年10月30日",
     "frontMatter": {
         "title": "API Quick Start Guide"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Rotation of Expired Webhook Certificates",
-        "permalink": "/v2.8/troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation"
+        "title": "过期 Webhook 证书轮换",
+        "permalink": "/zh/v2.8/troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation"
     },
     "next": {
-        "title": "Contributing to Rancher",
-        "permalink": "/v2.8/contribute-to-rancher"
+        "title": "Projects",
+        "permalink": "/zh/v2.8/api/workflows/projects"
     }
 };
 const assets = {};

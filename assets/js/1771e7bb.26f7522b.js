@@ -121,6 +121,10 @@ const metadata = {
     },
     "sidebar": "tutorialSidebar",
     "previous": {
+        "title": "Projects",
+        "permalink": "/v2.8/api/workflows/projects"
+    },
+    "next": {
         "title": "Contributing to Rancher",
         "permalink": "/v2.8/contribute-to-rancher"
     }

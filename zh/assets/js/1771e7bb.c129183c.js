@@ -121,6 +121,10 @@ const metadata = {
     },
     "sidebar": "tutorialSidebar",
     "previous": {
+        "title": "Projects",
+        "permalink": "/zh/v2.8/api/workflows/projects"
+    },
+    "next": {
         "title": "参与 Rancher 社区贡献",
         "permalink": "/zh/v2.8/contribute-to-rancher"
     }
