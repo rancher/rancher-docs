@@ -197,7 +197,7 @@ The relationship between the default roles deployed by Rancher (i.e. cluster-own
 | project-owner | admin | monitoring-admin | RoleBinding within Project namespace |
 | project-member | edit | monitoring-edit | RoleBinding within Project namespace |
 
-In addition to these default Roles, the following additional Rancher project roles can be applied to members of your Cluster to provide additional access to Monitoring. These Rancher Roles will be tied to ClusterRoles deployed by the Monitoring chart:
+In addition to these default roles, the following Rancher project roles can be applied to members of your cluster to provide access to monitoring. These Rancher roles are tied to ClusterRoles deployed by the monitoring chart:
 
 <figcaption>Non-default Rancher Permissions and Corresponding Kubernetes ClusterRoles</figcaption>
 
@@ -205,7 +205,7 @@ In addition to these default Roles, the following additional Rancher project rol
 |--------------------------|-------------------------------|-------|------|
 | View Monitoring* | [monitoring-ui-view](#monitoring-ui-view)    |    2.4.8+    |  9.4.204+ |
 
-\* A User bound to the **View Monitoring** Rancher Role only has permissions to access external Monitoring UIs if provided links to those UIs. In order to access the Monitoring Pane to get those links, the User must be a Project Member of at least one Project.
+\* A user bound to the **View Monitoring** Rancher role and read-only project permissions can't view links in the monitoring UI. They can still access external monitoring UIs if provided links to those UIs. If you wish to grant access to users with the **View Monitoring** role and read-only project permissions, move the `cattle-monitoring-system` namespace into the project. 
 
 ### Differences in 2.5.x
 
