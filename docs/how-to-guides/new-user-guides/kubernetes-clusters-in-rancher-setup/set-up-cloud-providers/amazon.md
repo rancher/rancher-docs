@@ -909,9 +909,6 @@ kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
 3. To install AWS cloud controller manager with leader migration enabled, follow Steps 1-3 for [deploying cloud controller manager chart](#using-out-of-tree-aws-cloud-provider-for-rke2)
 From Kubernetes 1.22 onwards, the kube-controller-manager will utilize a default configuration which will satisfy the controller-to-manager migration. 
 Update container args of the `aws-cloud-controller-manager` under `spec.rkeConfig.additionalManifest` to enable leader migration:
-```
-
-3. To install the AWS cloud controller manager with leader migration enabled, follow steps 1-3 for [deploying a cloud controller manager chart](#using-the-out-of-tree-aws-cloud-provider-for-rke2). In step 3 of the fresh install steps, add the following container arg to the `additionalManifest` to enable leader migration:
 
 ```shell
 - '--enable-leader-migration=true' 
