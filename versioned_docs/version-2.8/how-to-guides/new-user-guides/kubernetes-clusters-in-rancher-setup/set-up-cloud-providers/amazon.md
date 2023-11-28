@@ -508,7 +508,7 @@ kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
 
 ### Using Out-of-tree AWS Cloud Provider for RKE2
 
-1. [Node name conventions and other prerequisites](https://cloud-provider-aws.sigs.k8s.io/prerequisites/) must be followed for cloud provider to find the instance correctly.
+1. [Node name conventions and other prerequisities ](https://cloud-provider-aws.sigs.k8s.io/prerequisites/) must be followed so that the cloud provider can find the instance.
 
 2. Rancher managed RKE2/K3s clusters don't support configuring `providerID`. However, the engine will set the node name correctly if the following configuration is set on the provisioning cluster object:
 
