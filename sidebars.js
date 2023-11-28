@@ -1148,6 +1148,38 @@ const sidebars = {
                 'integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues'
               ]
             },
+            {
+              type: 'category',
+              label: 'AWS Marketplace PAYG Integration',
+              link: {
+                type: 'doc',
+                id: "pages-for-subheaders/aws-marketplace-payg-integration"
+              },
+              items: [
+                  'integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/rancher-prime-aws',
+                  'integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/installing-rancher-prime',
+                  'integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/upgrading-rancher-payg-cluster',
+                  'integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/troubleshooting',
+                  'integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/common-issues'
+
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Azure Marketplace PAYG Integration',
+              link: {
+                type: 'doc',
+                id: "pages-for-subheaders/azure-marketplace-payg-integration"
+              },
+              items: [
+                  'integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/rancher-prime-azure',
+                  'integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime',
+                  'integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/upgrading-rancher-payg-cluster',
+                  'integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/troubleshooting',
+                  'integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues'
+
+              ]
+            },
             'integrations-in-rancher/cloud-marketplace/supportconfig'
           ]
         },
