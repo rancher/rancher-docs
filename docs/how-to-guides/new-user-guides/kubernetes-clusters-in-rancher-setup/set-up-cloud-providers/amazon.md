@@ -21,7 +21,7 @@ To set up the Amazon cloud provider,
 
 :::note Important:
 
-In Kubernetes 1.27 and later, you must use an out-of-tree AWS cloud provider. In-tree cloud providers have been deprecated, and the amazon cloud provider has been removed completely, and won't work after an upgrade to Kubernetes 1.27. The steps listed below are still required to set up an Amazon cloud provider. You can [set up an out-of-tree cloud provider for RKE](#using-the-out-of-tree-aws-cloud-provider-for-rke) after creating an IAM role and configuring the ClusterID.
+In Kubernetes 1.27 and later, you must use an out-of-tree AWS cloud provider. In-tree cloud providers have been deprecated. The Amazon cloud provider has been removed completely, and won't work after an upgrade to Kubernetes 1.27. The steps listed below are still required to set up an Amazon cloud provider. You can [set up an out-of-tree cloud provider for RKE](#using-the-out-of-tree-aws-cloud-provider-for-rke) after creating an IAM role and configuring the ClusterID.
 
 You can also [migrate from an in-tree to an out-of-tree AWS cloud provider](#migrating-to-the-out-of-tree-aws-cloud-provider-for-rke) on Kubernetes 1.26 and earlier. All existing clusters must migrate prior to upgrading to v1.27 in order to stay functional.
 
@@ -219,7 +219,7 @@ Existing clusters that use an **External** cloud provider will set `--cloud-prov
 
 Refer to the offical AWS upstream documentation for the [cloud controller manager](https://kubernetes.github.io/cloud-provider-aws).
 
-### Helm Chart Installation from CLI
+#### Helm Chart Installation from CLI
 
 Official upstream docs for [Helm chart installation](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager) can be found on Github.
 
@@ -332,7 +332,7 @@ clusterRoleRules:
       - create
 ```
 
-3. Install the helm chart:
+3. Install the Helm chart:
 
 ```shell
 helm upgrade --install aws-cloud-controller-manager -n kube-system aws-cloud-controller-manager/aws-cloud-controller-manager --values values.yaml
@@ -344,7 +344,7 @@ Verify that the Helm chart installed successfully:
 helm status -n kube-system aws-cloud-controller-manager
 ```
 
-4. If present, edit daemonset to remove the default node selector `node-role.kubernetes.io/control-plane: ""`:
+4. If present, edit the Daemonset to remove the default node selector `node-role.kubernetes.io/control-plane: ""`:
 
 ```shell
 kubectl edit daemonset aws-cloud-controller-manager -n kube-system
@@ -356,7 +356,7 @@ kubectl edit daemonset aws-cloud-controller-manager -n kube-system
 kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
 ```
 
-### Helm Chart Installation from UI
+#### Helm Chart Installation from UI
 
 1. Click **☰**, then select the name of the cluster from the left navigation.
 
@@ -418,7 +418,7 @@ nodeSelector:
 
 :::
 
-10. Install the chart and confirm that the daemonset `aws-cloud-controller-manager` deploys successfully:
+10. Install the chart and confirm that the Daemonset `aws-cloud-controller-manager` deploys successfully:
 
 ```shell
 kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
@@ -580,7 +580,7 @@ spec:
 
 2. Select `Amazon` if relying on the above mechanism to set the provider ID. Otherwise, select **External (out-of-tree)** cloud provider, which sets `--cloud-provider=external` for Kubernetes components.
 
-3. Specify the `aws-cloud-controller-manager` helm chart as an additional manifest to install:
+3. Specify the `aws-cloud-controller-manager` Helm chart as an additional manifest to install:
 
 ```yaml
 spec:
@@ -606,11 +606,11 @@ spec:
             - --cloud-provider=aws
 ```
 
-### Helm Chart Installation from CLI
+#### Helm Chart Installation from CLI
 
-Official upstream docs for [helm chart installation](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager) can be found on Github.
+Official upstream docs for [Helm chart installation](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager) can be found on Github.
 
-1. Add the helm repository:
+1. Add the Helm repository:
 
 ```shell
 helm repo add aws-cloud-controller-manager https://kubernetes.github.io/cloud-provider-aws
@@ -719,7 +719,7 @@ clusterRoleRules:
       - create
 ```
 
-3. Install the helm chart:
+3. Install the Helm chart:
 
 ```shell
 helm upgrade --install aws-cloud-controller-manager aws-cloud-controller-manager/aws-cloud-controller-manager --values values.yaml
@@ -737,7 +737,7 @@ helm status -n kube-system aws-cloud-controller-manager
 kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
 ```
 
-### Helm Chart Installation from UI
+#### Helm Chart Installation from UI
 
 1. Click **☰**, then select the name of the cluster from the left navigation.
 
@@ -799,7 +799,7 @@ nodeSelector:
 
 :::
 
-10. Install the chart and confirm that the daemonset `aws-cloud-controller-manager` is running. Verify `aws-cloud-controller-manager` pods are running in target namespace (`kube-system` unless modified in step 6). 
+10. Install the chart and confirm that the Daemonset `aws-cloud-controller-manager` is running. Verify `aws-cloud-controller-manager` pods are running in target namespace (`kube-system` unless modified in step 6). 
 
 ### Migrating to the Out-of-Tree AWS Cloud Provider 
 
@@ -920,7 +920,7 @@ Update container args of the `aws-cloud-controller-manager` under `spec.rkeConfi
 - '--enable-leader-migration=true' 
 ```
 
-4. Install the chart and confirm that the daemonset `aws-cloud-controller-manager` successfully deployed:
+4. Install the chart and confirm that the Daemonset `aws-cloud-controller-manager` successfully deployed:
 
 ```shell
 kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
