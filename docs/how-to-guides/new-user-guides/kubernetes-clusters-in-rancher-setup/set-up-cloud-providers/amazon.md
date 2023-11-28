@@ -335,7 +335,7 @@ clusterRoleRules:
 3. Install the helm chart:
 
 ```shell
-helm upgrade --install aws-cloud-controller-manager aws-cloud-controller-manager/aws-cloud-controller-manager --values values.yaml
+helm upgrade --install aws-cloud-controller-manager -n kube-system aws-cloud-controller-manager/aws-cloud-controller-manager --values values.yaml
 ```
 
 Verify that the helm chart installed successfully:
@@ -344,7 +344,13 @@ Verify that the helm chart installed successfully:
 helm status -n kube-system aws-cloud-controller-manager
 ```
 
-4. (Optional) Verify that the cloud controller manager update succeeded:
+4. If present, edit daemonset to remove the default node selector `node-role.kubernetes.io/control-plane: ""`:
+
+```shell
+kubectl edit daemonset aws-cloud-controller-manager -n kube-system
+```
+
+5. (Optional) Verify that the cloud controller manager update succeeded:
 
 ```shell
 kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
