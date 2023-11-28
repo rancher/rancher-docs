@@ -21,7 +21,9 @@ It is required to use the same hostname that was set as the server URL in the fi
 
 Rancher version must be v2.5.0 and up
 
-Since Rancher can be installed on any Kubernetes cluster, Rancher can be migrated from any Kubernetes cluster to another Kubernetes cluster using this backup and restore method. This method will only migrate the resources related to the Rancher application and no other applications on the Kubernetes cluster. Please refer to the [support matrix](https://www.suse.com/lifecycle/) to identify which Kubernetes cluster types and versions are supported for the Rancher version that you are restoring. 
+Rancher can be installed on any Kubernetes cluster, including hosted Kubernetes clusters such as Amazon EKS clusters. For help installing Kubernetes, refer to the documentation of the Kubernetes distribution.
+
+Since Rancher can be installed on any Kubernetes cluster, you can use this backup and restore method to migrate Rancher from one Kubernetes cluster to any other Kubernetes cluster. This method *only* migrates Rancher-related resources and won't affect other applications on the cluster. Refer to the [support matrix](https://www.suse.com/lifecycle/) to identify which Kubernetes cluster types and versions are supported for your Rancher version. 
 
 
 ### 1. Install the rancher-backup Helm chart
