@@ -10,7 +10,7 @@ If you are migrating Rancher to a new Kubernetes cluster, you don't need to inst
 
 ### Prerequisites
 
-These instructions assume you have [created a backup](back-up-rancher.md) and you have already installed a new Kubernetes cluster where Rancher will be deployed.
+These instructions assume that you have [created a backup](back-up-rancher.md) and already installed a new Kubernetes cluster where Rancher will be deployed. The backup is specific to the Rancher application and can only migrate the Rancher application.
 
 :::caution
 
