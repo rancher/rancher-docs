@@ -47,7 +47,7 @@
             },
             {
               "type": "category",
-              "label": "Deploy Rancher Workloads",
+              "label": "Deploy Workloads",
               "link": {
                 "type": "doc",
                 "id": "pages-for-subheaders/deploy-rancher-workloads"
