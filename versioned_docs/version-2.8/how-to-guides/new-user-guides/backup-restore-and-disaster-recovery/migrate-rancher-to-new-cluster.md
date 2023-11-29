@@ -8,9 +8,10 @@ title: Migrating Rancher to a New Cluster
 
 If you are migrating Rancher to a new Kubernetes cluster, you don't need to install Rancher on the new cluster first. If Rancher is restored to a new cluster with Rancher already installed, it can cause problems.
 
+
 ### Prerequisites
 
-These instructions assume you have [created a backup](back-up-rancher.md) and you have already installed a new Kubernetes cluster where Rancher will be deployed.
+These instructions assume that you have [created a backup](back-up-rancher.md) and  already installed a new Kubernetes cluster where Rancher will be deployed. The backup is specific to the Rancher application and can only migrate the Rancher application. 
 
 :::caution
 
@@ -24,6 +25,9 @@ Rancher can be installed on any Kubernetes cluster, including hosted Kubernetes 
 
 - [RKE Kubernetes installation docs](https://rancher.com/docs/rke/latest/en/installation/)
 - [K3s Kubernetes installation docs](https://rancher.com/docs/k3s/latest/en/installation/)
+
+Since Rancher can be installed on any Kubernetes cluster, you can use this backup and restore method to migrate Rancher from one Kubernetes cluster to any other Kubernetes cluster. This method *only* migrates Rancher-related resources and won't affect other applications on the cluster. Refer to the [support matrix](https://www.suse.com/lifecycle/) to identify which Kubernetes cluster types and versions are supported for your Rancher version. 
+
 
 ### 1. Install the rancher-backup Helm chart
 Install the [rancher-backup chart](https://github.com/rancher/backup-restore-operator/tags), using a version in the 2.x.x major version range:
