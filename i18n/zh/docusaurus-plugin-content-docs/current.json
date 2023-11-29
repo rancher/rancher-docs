@@ -15,9 +15,9 @@
     "message": "部署 Rancher",
     "description": "The label for category Deploy Rancher in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Deploy Rancher Workloads": {
+  "sidebar.tutorialSidebar.category.Deploy Workloads": {
     "message": "部署 Rancher 工作负载",
-    "description": "The label for category Deploy Rancher Workloads in sidebar tutorialSidebar"
+    "description": "The label for category Deploy Workloads in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Installation and Upgrade": {
     "message": "安装和升级",

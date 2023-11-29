@@ -19,9 +19,9 @@
     "message": "Deploy Rancher",
     "description": "The label for category Deploy Rancher in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Deploy Rancher Workloads": {
-    "message": "Deploy Rancher Workloads",
-    "description": "The label for category Deploy Rancher Workloads in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Deploy Workloads": {
+    "message": "Deploy Workloads",
+    "description": "The label for category Deploy Workloads in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Installation and Upgrade": {
     "message": "Installation and Upgrade",
