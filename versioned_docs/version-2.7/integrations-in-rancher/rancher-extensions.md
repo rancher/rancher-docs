@@ -26,7 +26,7 @@ Examples of built-in Rancher extensions are Fleet, Explorer, and Harvester. Exam
 
 :::info
 
-In v2.7.0, the built-in extensions aren't displayed under the **Available** tab. Therefore, you'll need to manually add the desired repos to install extensions.
+In v2.7.0, the built-in extensions will not be displayed under the **Available** tab. Therefore, you will need to manually add the desired repos to install extensions. We will update the community once these extensions have been pulled out to be available for selection.
 
 :::
 <br/>
@@ -41,7 +41,7 @@ In v2.7.0, the built-in extensions aren't displayed under the **Available** tab.
 
     ![Manage repositories](/img/manage-repos.png)
 
-5. Under the **Available** tab, click **Install** on the desired extension and version as in the example below. You can also update your extension from this screen, as the button to **Update** will appear on the extension if one is available.
+5. Under the **Available** tab, click **Install** on the desired extension and version as in the example below. Note that you can easily update your extension as the button to **Update** will appear on the extension if one is available.
 
     ![Install Kubewarden](/img/install-kubewarden.png)
 
@@ -49,33 +49,9 @@ In v2.7.0, the built-in extensions aren't displayed under the **Available** tab.
 
     ![Reload button](/img/reload-button.png)
 
-### Importing and Installing Extensions in an Air-Gapped Environment
-
-1. Find the address of the container image repository  that you want to import as an extension. Rancher provides some extensions, such as Kubewarden and Elemental, through the `ui-plugin-catalog` container image at https://hub.docker.com/r/rancher/ui-plugin-catalog/tags. You should import and use the latest tagged version of the image to ensure you receive the latest features and security updates.
-
-    * **(Optional)** If the container image is private: [Create](../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) a registry secret within the `cattle-ui-plugin-system` namespace. Enter the domain of the image address in the **Registry Domain Name** field.
-
-1. Click **☰**, then select **Extensions**, under **Configuration**.
-
-1. On the top right, click **⋮ > Manage Extension Catalogs**.
-
-1. Select the **Import Extension Catalog** button.
-
-1. Enter the image address in the **Catalog Image Reference** field. 
-
-    * **(Optional)** If the container image is private: Select the secret you just created from the **Pull Secrets** drop-down menu.
-
-1. Click **Load**. The extension will now be **Pending**.
-
-1. Return to the **Extensions** page.
-
-1. Select the **Available** tab, and click the **Reload** button to make sure that the list of extensions is up to date.
-
-1. Find the extension you just added, and click the **Install** button.
-
 ## Uninstalling Extensions
 
-There are two ways to uninstall or disable an extension:
+There are two ways in which you can uninstall or disable your extensions:
 
 1. Under the **Installed** tab, click the **Uninstall** button on the extension you wish to remove.
 
@@ -91,49 +67,17 @@ You must reload the page after disabling extensions or display issues may occur.
 
 :::
 
-## Updating and Upgrading Extensions
+## Rolling Back Extensions
 
-1. Click **☰ > Extensions** under **Configuration**.
-1. Select the **Updates** tab. 
-1. Click **Update**.
+Under the **Installed** tab, click the **Rollback** button on the extension you wish to roll back.
 
-If there is a new version of the extension, there will also be an **Update** button visible on the associated card for the extension in the **Available** tab.
+![Roll back extensions](/img/roll-back-extension.png)
 
-### Updating and Upgrading an Extensions Repository in an Air-gapped Environment
+:::caution
 
-Extensions repositories that aren't air-gapped are automatically updated. If the repository is air-gapped, you must update it manually.
+You must reload the page after rolling back extensions or display issues may occur.
 
-First, mirror the latest changes to your private registry by following the same steps for initially [importing and installing an extension repository](#importing-and-installing-extensions-in-an-air-gapped-environment).
-
-After you mirror the latest changes, follow these steps:
-
-1. Click **☰ > Local**.
-1. From the sidebar, select **Workloads > Deployments**.
-1. From the namespaces dropdown menu, select **cattle-ui-plugin-system**.
-1. Find the **cattle-ui-plugin-system** namespace. 
-1. Select the `ui-plugin-catalog` deployment.
-1. Click **⋮ > Edit config**.
-1. Update the **Container Image** field within the deployment's container with the latest image.
-1. Click **Save**.
-
-## Deleting Helm Charts
-
-1. Click **☰**, then click on the name of your local cluster.
-1. From the sidebar, select **Apps > Installed Apps**.
-1. Find the name of the chart you want to delete and select the checkbox next to it. 
-1. Click **Delete**.
-
-## Deleting Extension Repositories
-
-1. Click **☰ > Extensions** under **Configuration**.
-1. On the top right, click **⋮ > Manage Repositories**.
-1. Find the name of the extension repository you want to delete. Select the checkbox next to the repository name, then click **Delete**.
-
-## Deleting Extension Repository Container Images
-
-1. Click **☰**, then select **Extensions**, under **Configuration**.
-1. On the top right, click **⋮ > Manage Extension Catalogs**.
-1. Find the name of the container image you want to delete. Click **⋮ > Uninstall**.
+:::
 
 ## Developing Extensions
 
