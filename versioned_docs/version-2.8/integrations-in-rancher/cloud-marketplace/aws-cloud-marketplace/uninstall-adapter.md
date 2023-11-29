@@ -2,6 +2,10 @@
 title: Uninstalling The Adapter
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/uninstall-adapter"/>
+</head>
+
 ### 1. Uninstall the adapter chart using helm.
 
 ```bash

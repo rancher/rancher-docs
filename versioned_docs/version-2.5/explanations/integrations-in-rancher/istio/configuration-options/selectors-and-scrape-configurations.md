@@ -2,6 +2,10 @@
 title: Selectors and Scrape Configs
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations"/>
+</head>
+
 The Monitoring app sets `prometheus.prometheusSpec.ignoreNamespaceSelectors=false`, which enables monitoring across all namespaces by default.
 
 This ensures you can view traffic, metrics and graphs for resources deployed in a namespace with `istio-injection=enabled` label.

@@ -2,6 +2,10 @@
 title: Role-based Access Control for Logging
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/logging/rbac-for-logging"/>
+</head>
+
 Rancher logging has two roles, `logging-admin` and `logging-view`.
 
 - `logging-admin` gives users full access to namespaced `Flows` and `Outputs`

@@ -2,6 +2,10 @@
 title: Tools for Logging, Monitoring, and Visibility
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-project-tools"/>
+</head>
+
 Rancher contains a variety of tools that aren't included in Kubernetes to assist in your DevOps operations. Rancher can integrate with external services to help your clusters run more efficiently.
 
 ## Notifiers and Alerts

@@ -2,6 +2,10 @@
 title: How Monitoring Works
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works"/>
+</head>
+
 ## 1. Architecture Overview
 
 _**The following sections describe how data flows through the Monitoring V2 application:**_

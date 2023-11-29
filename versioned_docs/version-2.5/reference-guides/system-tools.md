@@ -2,6 +2,10 @@
 title: System Tools
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/system-tools"/>
+</head>
+
 System Tools is a tool to perform operational tasks on [Rancher Launched Kubernetes](../pages-for-subheaders/launch-kubernetes-with-rancher.md) clusters or [installations of Rancher on an RKE cluster.](../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md) The tasks include:
 
 * Collect logging and system metrics from nodes.

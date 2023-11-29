@@ -2,6 +2,10 @@
 title: PromQL Expression Reference
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/monitoring-and-alerting/promql-expressions"/>
+</head>
+
 The PromQL expressions in this doc can be used to configure alerts.
 
 For more information about querying the Prometheus time series database, refer to the official [Prometheus documentation.](https://prometheus.io/docs/prometheus/latest/querying/basics/)

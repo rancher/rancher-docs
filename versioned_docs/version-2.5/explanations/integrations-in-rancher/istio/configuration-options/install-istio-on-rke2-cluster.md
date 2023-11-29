@@ -2,6 +2,10 @@
 title: Additional Steps for Installing Istio on an RKE2 Cluster
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/istio/configuration-options/install-istio-on-rke2-cluster"/>
+</head>
+
 Through the **Cluster Explorer,** when installing or upgrading Istio through **Apps & Marketplace,**
 
 1. Click **Components.**

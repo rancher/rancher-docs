@@ -2,6 +2,10 @@
 title: Roles-based Access Control
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cis-scans/rbac-for-cis-scans"/>
+</head>
+
 This section describes the permissions required to use the rancher-cis-benchmark App.
 
 The rancher-cis-benchmark is a cluster-admin only feature by default.

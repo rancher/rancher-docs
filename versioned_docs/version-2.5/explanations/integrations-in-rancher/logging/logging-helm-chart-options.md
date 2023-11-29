@@ -2,6 +2,10 @@
 title: rancher-logging Helm Chart Options
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/logging/logging-helm-chart-options"/>
+</head>
+
 ### Enable/Disable Windows Node Logging
 
 _Available as of v2.5.8_

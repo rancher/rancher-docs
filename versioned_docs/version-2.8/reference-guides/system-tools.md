@@ -2,6 +2,10 @@
 title: System Tools
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/system-tools"/>
+</head>
+
 :::note
 
 System Tools has been deprecated since June 2022.

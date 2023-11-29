@@ -2,6 +2,10 @@
 title: Role-based Access Control
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/istio/rbac-for-istio"/>
+</head>
+
 This section describes the permissions required to access Istio features.
 
 The rancher istio chart installs three `ClusterRoles`

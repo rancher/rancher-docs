@@ -2,6 +2,10 @@
 title: CPU and Memory Allocations
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/istio/cpu-and-memory-allocations"/>
+</head>
+
 This section describes the minimum recommended computing resources for the Istio components in a cluster.
 
 The CPU and memory allocations for each component are [configurable.](#configuring-resource-allocations)

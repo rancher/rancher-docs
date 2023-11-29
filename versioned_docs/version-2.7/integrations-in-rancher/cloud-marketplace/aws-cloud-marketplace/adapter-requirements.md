@@ -2,6 +2,10 @@
 title: Prerequisites
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements"/>
+</head>
+
 ### 1. Setting Up License Manager and Purchasing Support
 
 First, complete the [first step](https://docs.aws.amazon.com/license-manager/latest/userguide/getting-started.html) of the license manager one-time setup.

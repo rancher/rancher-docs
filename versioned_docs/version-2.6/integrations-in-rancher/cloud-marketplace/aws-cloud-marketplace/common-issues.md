@@ -2,6 +2,10 @@
 title: Common Issues
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues"/>
+</head>
+
 **After installing the adapter, a banner message appears in Rancher that says "AWS Marketplace Adapter: Unable to run the adapter, please check the adapter logs"**
 
 This error indicates that while the adapter was installed into the cluster, an error has occurred which prevents it from properly checking-in/checking-out licenses.
