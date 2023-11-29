@@ -26,7 +26,7 @@ Examples of built-in Rancher extensions are Fleet, Explorer, and Harvester. Exam
 
 :::info
 
-If you've upgraded from an older Rancher version to v2.7.0, uninstalled built-in extensions are no longer listed under the **Available** tab, unless you've manually imported them.
+In v2.7.0, the built-in extensions aren't displayed under the **Available** tab. Therefore, you'll need to manually add the desired repos to install extensions.
 
 :::
 <br/>
@@ -51,9 +51,9 @@ If you've upgraded from an older Rancher version to v2.7.0, uninstalled built-in
 
 ### Importing and Installing Extensions in an Air-Gapped Environment
 
-1. Find the address of the container image you want to import as an extension. Rancher provides some extensions, such as Kubewarden and Elemental, through the `ui-plugin-catalog` container image at https://hub.docker.com/r/rancher/ui-plugin-catalog/tags. You should import and use the latest tagged version of the image to ensure you receive the latest features and security updates.
+1. Find the address of the container image repository  that you want to import as an extension. Rancher provides some extensions, such as Kubewarden and Elemental, through the `ui-plugin-catalog` container image at https://hub.docker.com/r/rancher/ui-plugin-catalog/tags. You should import and use the latest tagged version of the image to ensure you receive the latest features and security updates.
 
-    * **(Optional)** If the container image is private: [Create](../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) a registry secret within the `cattle-UI-plugin-system` namespace. Enter the domain of the image address in the **Registry Domain Name** field.
+    * **(Optional)** If the container image is private: [Create](../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) a registry secret within the `cattle-ui-plugin-system` namespace. Enter the domain of the image address in the **Registry Domain Name** field.
 
 1. Click **☰**, then select **Extensions**, under **Configuration**.
 
@@ -98,6 +98,42 @@ You must reload the page after disabling extensions or display issues may occur.
 1. Click **Update**.
 
 If there is a new version of the extension, there will also be an **Update** button visible on the associated card for the extension in the **Available** tab.
+
+### Updating and Upgrading an Extensions Repository in an Air-gapped Environment
+
+Extensions repositories that aren't air-gapped are automatically updated. If the repository is air-gapped, you must update it manually.
+
+First, mirror the latest changes to your private registry by following the same steps for initially [importing and installing an extension repository](#importing-and-installing-extensions-in-an-air-gapped-environment).
+
+After you mirror the latest changes, follow these steps:
+
+1. Click **☰ > Local**.
+1. From the sidebar, select **Workloads > Deployments**.
+1. From the namespaces dropdown menu, select **cattle-ui-plugin-system**.
+1. Find the **cattle-ui-plugin-system** namespace. 
+1. Select the `ui-plugin-catalog` deployment.
+1. Click **⋮ > Edit config**.
+1. Update the **Container Image** field within the deployment's container with the latest image.
+1. Click **Save**.
+
+## Deleting Helm Charts
+
+1. Click **☰**, then click on the name of your local cluster.
+1. From the sidebar, select **Apps > Installed Apps**.
+1. Find the name of the chart you want to delete and select the checkbox next to it. 
+1. Click **Delete**.
+
+## Deleting Extension Repositories
+
+1. Click **☰ > Extensions** under **Configuration**.
+1. On the top right, click **⋮ > Manage Repositories**.
+1. Find the name of the extension repository you want to delete. Select the checkbox next to the repository name, then click **Delete**.
+
+## Deleting Extension Repository Container Images
+
+1. Click **☰**, then select **Extensions**, under **Configuration**.
+1. On the top right, click **⋮ > Manage Extension Catalogs**.
+1. Find the name of the container image you want to delete. Click **⋮ > Uninstall**.
 
 ## Developing Extensions
 
