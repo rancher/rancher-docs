@@ -91,13 +91,6 @@ You must reload the page after disabling extensions or display issues may occur.
 
 :::
 
-## Deleting Helm Charts
-
-1. Click **☰**, then click on the name of your local cluster.
-1. From the sidebar, select **Apps > Installed Apps**.
-1. Find the name of the chart you want to delete and select the checkbox next to it. 
-1. Click **Delete**.
-
 ## Updating and Upgrading Extensions
 
 1. Click **☰ > Extensions** under **Configuration**.
@@ -123,11 +116,24 @@ After you mirror the latest changes, follow these steps:
 1. Update the **Container Image** field within the deployment's container with the latest image.
 1. Click **Save**.
 
+## Deleting Helm Charts
+
+1. Click **☰**, then click on the name of your local cluster.
+1. From the sidebar, select **Apps > Installed Apps**.
+1. Find the name of the chart you want to delete and select the checkbox next to it. 
+1. Click **Delete**.
+
 ## Deleting Extension Repositories
 
 1. Click **☰ > Extensions** under **Configuration**.
 1. On the top right, click **⋮ > Manage Repositories**.
 1. Find the name of the extension repository you want to delete. Select the checkbox next to the repository name, then click **Delete**.
+
+## Deleting Extension Repository Container Images
+
+1. Click **☰**, then select **Extensions**, under **Configuration**.
+1. On the top right, click **⋮ > Manage Extension Catalogs**.
+1. Find the name of the container image you want to delete. Click **⋮ > Uninstall**.
 
 ## Developing Extensions
 
