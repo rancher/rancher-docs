@@ -127,7 +127,7 @@ The webhook should only accept requests from the Kubernetes API server. By defau
 6. Create a configmap in the `cattle-system` namespace on the provisioned cluster with these values:
 
     ```
-    kubectl --namespace cattle-system create configmap --from-file=rancher-webhook=values.yaml
+    kubectl --namespace cattle-system create configmap rancher-config --from-file=rancher-webhook=values.yaml
     ```
 
     The webhook will restart with these values.
