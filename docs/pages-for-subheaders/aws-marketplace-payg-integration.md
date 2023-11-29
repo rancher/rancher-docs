@@ -8,7 +8,7 @@ title: AWS Marketplace Pay-as-you-go (PAYG) Integration
 
 ## Overview
 
-Rancher integrates with AWS Marketplace as a Pay-as-you-go offering. This will be in addition to the existing [AWS License integration](https://ranchermanager.docs.rancher.com/pages-for-subheaders/aws-cloud-marketplace) which is currently available. Customers will need information about their options and the features and limitations of the PAYG offerings.
+Rancher integrates with AWS Marketplace as a pay-as-you-go (PAYG) offering. This will be in addition to the existing [AWS License integration](https://ranchermanager.docs.rancher.com/pages-for-subheaders/aws-cloud-marketplace) which is currently available. Customers will need information about their options and the features and limitations of the PAYG offerings.
 
 ## Limitations
 

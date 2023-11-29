@@ -2,8 +2,6 @@
 title: Troubleshooting
 ---
 
-## Troubleshooting
-
 This section contains information to help you troubleshoot issues when installing Rancher Prime PAYG.
 
 Jobs and Pods:

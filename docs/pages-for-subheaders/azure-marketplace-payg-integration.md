@@ -4,7 +4,7 @@ title: Azure Marketplace Pay-as-you-go (PAYG) Integration
 
 ## Overview
 
-Rancher integrates with Azure Marketplace as a Pay-as-you-go offering.
+Rancher integrates with Azure Marketplace as a pay-as-you-go (PAYG) offering.
 
 ## Limitations
 
