@@ -16,7 +16,7 @@
     "description": "The label for category Deploy Rancher in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Deploy Workloads": {
-    "message": "部署 Rancher 工作负载",
+    "message": "部署工作负载",
     "description": "The label for category Deploy Workloads in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Installation and Upgrade": {
