@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.8/reference-guides/rancher-security/rancher-webhook-hardening.md",
     "sourceDirName": "reference-guides/rancher-security",
     "slug": "/reference-guides/rancher-security/rancher-webhook-hardening",
-    "permalink": "/v2.8/reference-guides/rancher-security/rancher-webhook-hardening",
+    "permalink": "/zh/v2.8/reference-guides/rancher-security/rancher-webhook-hardening",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/reference-guides/rancher-security/rancher-webhook-hardening.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "Oct 6, 2023",
+    "lastUpdatedAt": 1701291817,
+    "formattedLastUpdatedAt": "2023年11月29日",
     "frontMatter": {
         "title": "Hardening the Rancher Webhook"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Sample PodSecurityConfiguration",
-        "permalink": "/v2.8/reference-guides/rancher-security/psa-restricted-exemptions"
+        "title": "PodSecurityConfiguration 示例",
+        "permalink": "/zh/v2.8/reference-guides/rancher-security/psa-restricted-exemptions"
     },
     "next": {
         "title": "Integrations in Rancher",
-        "permalink": "/v2.8/integrations-in-rancher/"
+        "permalink": "/zh/v2.8/integrations-in-rancher/"
     }
 };
 const assets = {};
@@ -553,7 +553,7 @@ auth:
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
-    }, `kubectl --namespace cattle-system create configmap --from-file=rancher-webhook=values.yaml
+    }, `kubectl --namespace cattle-system create configmap rancher-config --from-file=rancher-webhook=values.yaml
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
     }, `The webhook will restart with these values.`))));
