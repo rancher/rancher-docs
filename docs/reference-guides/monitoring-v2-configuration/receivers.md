@@ -183,7 +183,7 @@ The SMS receiver is not a native receiver and must be enabled before it can be u
 1. Select the **SMS** option and click **Install**.
 1. Take note of the namespace used as it will be required in a later step.
 
-### Configure the SMS Receiver
+### Configuring the SMS Receiver
 
 The SMS receiver can be configured by updating its ConfigMap. For example, the following is a minimal SMS receiver configuration.
 
