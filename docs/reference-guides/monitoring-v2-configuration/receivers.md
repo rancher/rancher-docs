@@ -24,8 +24,6 @@ This section assumes familiarity with how monitoring components work together. F
 
 :::
 
-To create notification receivers in the Rancher UI,
-
 <Tabs>
 <TabItem value="Rancher v2.6.5+">
 
