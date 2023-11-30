@@ -19,16 +19,7 @@ Each Rancher version is designed to be compatible with a single version of the w
 
 | Rancher Version | Webhook Version |
 |-----------------|:---------------:|
-| v2.7.0          |     v0.3.0      |
-| v2.7.1          |     v0.3.0      |
-| v2.7.2          |     v0.3.2      |
-| v2.7.3          |     v0.3.3      |
-| v2.7.4          |     v0.3.4      |
-| v2.7.5          |     v0.3.5      |
-| v2.7.6          |     v0.3.5      |
-| v2.7.7          |     v0.3.6      |
-| v2.7.8          |     v0.3.6      |
-| v2.7.9          |     v0.3.6      |
+| v2.8.0          |     v0.4.1      |
 
 ## Why Do We Need It?
 
