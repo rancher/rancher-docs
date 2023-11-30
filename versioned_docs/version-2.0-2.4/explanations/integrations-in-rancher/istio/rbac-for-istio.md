@@ -2,6 +2,10 @@
 title: Role-based Access Control
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/istio/rbac-for-istio"/>
+</head>
+
 This section describes the permissions required to access Istio features and how to configure access to the Kiali and Jaeger visualizations.
 
 ## Cluster-level Access

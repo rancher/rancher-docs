@@ -2,6 +2,10 @@
 title: Outputs and ClusterOutputs
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/logging/custom-resource-configuration/outputs-and-clusteroutputs"/>
+</head>
+
 See the [Logging operator documentation](https://kube-logging.github.io/docs/configuration/flow/) for the full details on how to configure  `Flows` and `ClusterFlows`.
 
 See [Rancher Integration with Logging Services: Troubleshooting](../../../pages-for-subheaders/logging.md#The-Logging-Buffer-Overloads-Pods) for how to resolve memory problems with the logging buffer.

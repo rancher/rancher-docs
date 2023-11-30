@@ -1,6 +1,11 @@
 ---
 title: Role-based Access Control
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring"/>
+</head>
+
 This section describes the expectations for RBAC for Rancher Monitoring.
 
 

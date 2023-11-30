@@ -2,6 +2,10 @@
 title: Supportconfig bundle
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloud-marketplace/supportconfig"/>
+</head>
+
 After installing the CSP adapter, you will have the ability to generate a supportconfig bundle. This bundle is a tar file which can be used to quickly provide information to support.
 
 These bundles can be created through Rancher or through direct access to the cluster that Rancher is installed on. Note that accessing through Rancher is preferred.

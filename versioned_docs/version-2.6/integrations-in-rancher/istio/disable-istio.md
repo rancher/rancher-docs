@@ -2,6 +2,10 @@
 title: Disabling Istio
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/istio/disable-istio"/>
+</head>
+
 This section describes how to uninstall Istio in a cluster or disable a namespace, or workload.
 
 ## Uninstall Istio in a Cluster

@@ -2,6 +2,10 @@
 title: Additional Steps for Project Network Isolation
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/istio/configuration-options/project-network-isolation"/>
+</head>
+
 In clusters where:
 
 - You are using the Canal network plugin with Rancher before v2.5.8, or you are using Rancher v2.5.8+ with an any RKE network plug-in that supports the enforcement of Kubernetes network policies, such as Canal or the Cisco ACI plugin

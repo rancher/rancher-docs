@@ -2,6 +2,10 @@
 title: Working with Taints and Tolerations
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/logging/taints-and-tolerations"/>
+</head>
+
 "Tainting" a Kubernetes node causes pods to repel running on that node.
 
 Unless the pods have a `toleration` for that node's taint, they will run on other nodes in the cluster.

@@ -2,6 +2,10 @@
 title: Creating a Custom Benchmark Version for Running a Cluster Scan
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cis-scans/custom-benchmark"/>
+</head>
+
 _Available as of v2.5.4_
 
 Each Benchmark Version defines a set of test configuration files that define the CIS tests to be run by the <a href="https://github.com/aquasecurity/kube-bench" target="_blank">kube-bench</a> tool.

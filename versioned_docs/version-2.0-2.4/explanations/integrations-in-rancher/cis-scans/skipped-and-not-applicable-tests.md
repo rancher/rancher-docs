@@ -2,6 +2,10 @@
 title: Skipped and Not Applicable Tests
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cis-scans/skipped-and-not-applicable-tests"/>
+</head>
+
 This section lists the tests that are skipped in the permissive test profile for RKE.
 
 All the tests that are skipped and not applicable on this page will be counted as Not Applicable in the generated report. The skipped test count will only mention the user-defined skipped tests. This allows user-skipped tests to be distinguished from the tests that are skipped by default in the RKE permissive test profile.

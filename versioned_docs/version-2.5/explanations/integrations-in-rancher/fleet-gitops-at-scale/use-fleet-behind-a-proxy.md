@@ -2,6 +2,10 @@
 title: Using Fleet Behind a Proxy
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy"/>
+</head>
+
 _Available as of v2.5.8_
 
 In this section, you'll learn how to enable Fleet in a setup that has a Rancher server with a public IP a Kubernetes cluster that has no public IP, but is configured to use a proxy.
