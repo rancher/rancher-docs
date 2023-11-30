@@ -17,15 +17,9 @@ In order to deploy and run the adapter successfully, you need to ensure its vers
 
 :::
 
-| Rancher Version | Adapter Version |
-|-----------------|:---------------:|
-| v2.7.0          |     v2.0.0      |
-| v2.7.1          |     v2.0.0      |
-| v2.7.2          |     v2.0.1      |
-| v2.7.3          |     v2.0.1      |
-| v2.7.4          |     v2.0.1      |
-| v2.7.5          |     v2.0.2      |
-
+| Rancher Version | Adapter Version  |
+|-----------------|:----------------:|
+| v2.8.0          | v103.0.0+up3.0.0 |
 
 ### 1. Gain Access to the Local Cluster
 
@@ -156,4 +150,4 @@ Finally, restart the rancher-csp-adapter deployment to ensure that the updated v
 kubectl rollout restart deploy rancher-csp-adapter -n cattle-csp-adapter-system
 ```
 
-> **Note:** There are methods such as cert-manager's [trust operator](https://cert-manager.io/docs/projects/trust/) which can help reduce the number of manual rotation tasks over time. While these options are not officially supported, they may be useful to users wishing to automate some of these tasks.
+> **Note:** Methods such as cert-manager's [trust operator](https://cert-manager.io/docs/projects/trust/) allow you to automate some of these tasks. Although these methods aren't officially supported, they can reduce how often you need to manually rotate certificates.
