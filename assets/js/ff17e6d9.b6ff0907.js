@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[43845],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[20731],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 65191:
+/***/ 96006:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter",
-    "id": "version-2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter",
+    "id": "version-2.8/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter",
     "title": "Installing the Adapter",
     "description": "Important: If you are attempting to re-install the adapter, you may experience errant out-of-compliance messages for up to an hour.",
-    "source": "@site/versioned_docs/version-2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter.md",
+    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter.md",
     "sourceDirName": "integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace",
     "slug": "/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter",
-    "permalink": "/v2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter",
+    "permalink": "/v2.8/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter.md",
     "tags": [],
-    "version": "2.6",
-    "lastUpdatedAt": 1670452794,
-    "formattedLastUpdatedAt": "Dec 7, 2022",
+    "version": "2.8",
+    "lastUpdatedAt": 1701361490,
+    "formattedLastUpdatedAt": "Nov 30, 2023",
     "frontMatter": {
         "title": "Installing the Adapter"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Prerequisites",
-        "permalink": "/v2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements"
+        "permalink": "/v2.8/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements"
     },
     "next": {
         "title": "Uninstalling The Adapter",
-        "permalink": "/v2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/uninstall-adapter"
+        "permalink": "/v2.8/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/uninstall-adapter"
     }
 };
 const assets = {};
@@ -389,7 +389,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "blockquote"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
@@ -418,30 +421,10 @@ In order to deploy and run the adapter successfully, you need to ensure its vers
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, `v2.6.7*`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+    }, `v2.8.0`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `v1.0.1`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `v2.6.8*`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": "center"
-    }, `v1.0.1`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `v2.6.9`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": "center"
-    }, `v1.0.1`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "blockquote"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Note:`), ` While the adapter can technically be installed on Rancher v2.6.7 and v2.6.8, it is recommended to use version 2.6.9 or higher to avoid unexpected issues`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `v103.0.0+up3.0.0`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "1-gain-access-to-the-local-cluster"
     }, `1. Gain Access to the Local Cluster`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "blockquote"
@@ -463,7 +446,7 @@ In order to deploy and run the adapter successfully, you need to ensure its vers
         "id": "3-create-certificate-secrets"
     }, `3. Create Certificate Secrets`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The adapter requires access to the root CA that Rancher is using to communicate with the Rancher server. You can read more about which certificate options Rancher supports in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/getting-started/installation-and-upgrade/installation-references/helm-chart-options"
+        "href": "/v2.8/getting-started/installation-and-upgrade/installation-references/helm-chart-options"
     }, `chart options page`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If your Rancher install uses a certificate signed by a recognized Certificate Authority such as Let's Encrypt, then you can safely skip to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#4-install-the-chart"
@@ -582,10 +565,10 @@ additionalTrustedCAs: true
         parentName: "blockquote"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `Note:`), ` There are methods such as cert-manager's `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Note:`), ` Methods such as cert-manager's `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://cert-manager.io/docs/projects/trust/"
-    }, `trust operator`), ` which can help reduce the number of manual rotation tasks over time. While these options are not officially supported, they may be useful to users wishing to automate some of these tasks.`)));
+    }, `trust operator`), ` allow you to automate some of these tasks. Although these methods aren't officially supported, they can reduce how often you need to manually rotate certificates.`)));
 }
 MDXContent.isMDXComponent = true;
 
