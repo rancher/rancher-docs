@@ -305,7 +305,7 @@ You must not enable `useInstanceMetadataHostname` when setting custom values for
 
 Selecting **External Amazon (out-of-tree)** sets `--cloud-provider=external` and enables `useInstanceMetadataHostname`. As mentioned in step 1, enabling `useInstanceMetadataHostname` will query the EC2 metadata service and set `http://169.254.169.254/latest/meta-data/hostname` as `hostname-override` for `kubelet` and `kube-proxy`.
 
-::: note
+:::note
 
 You must disable `useInstanceMetadataHostname` when setting a custom node name for custom clusters via `node-name`.
 

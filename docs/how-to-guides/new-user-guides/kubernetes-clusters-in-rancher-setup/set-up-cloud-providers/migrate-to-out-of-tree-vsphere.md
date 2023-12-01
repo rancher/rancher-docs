@@ -1,5 +1,5 @@
 ---
-title: Migrating vSphere In-tree Volumes to Out-of-tree
+title: Migrating vSphere In-tree to Out-of-tree
 ---
 
 <head>

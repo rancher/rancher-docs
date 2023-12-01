@@ -6,9 +6,9 @@ title: Migrating Amazon In-tree to Out-of-tree
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/migrate-to-out-of-tree-amazon"/>
 </head>
 
-Kubernetes is moving away from maintaining cloud providers in-tree. In-tree cloud providers have been deprecated, and, in Kubernetes 1.27 and later, have been removed completely.
+Kubernetes is moving away from maintaining cloud providers in-tree. In Kubernetes 1.27 and later, the in-tree cloud providers have been removed.
 
-You can [migrate from an in-tree to an out-of-tree AWS cloud provider](./amazon.md#migrating-to-the-out-of-tree-aws-cloud-provider-for-rke) on Kubernetes 1.26 and earlier. All existing clusters must migrate prior to upgrading to v1.27 in order to stay functional.
+You can migrate from an in-tree to an out-of-tree AWS cloud provider on Kubernetes 1.26 and earlier. All existing clusters must migrate prior to upgrading to v1.27 in order to stay functional.
 
 To migrate from the in-tree cloud provider to the out-of-tree AWS cloud provider, you must stop the existing cluster's kube controller manager and install the AWS cloud controller manager. There are many ways to do this. Refer to the official AWS documentation on the [external cloud controller manager](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for details.
 
@@ -20,72 +20,8 @@ If your setup can't tolerate any control plane downtime, you must enable leader 
 The Kubernetes [cloud controller migration documentation](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#before-you-begin) states that it's possible to migrate with the same Kubernetes version, but assumes that the migration is part of a  Kubernetes upgrade. Refer to the Kubernetes documentation on [migrating to use the cloud controller manager](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/) to see if you need to customize your setup before migrating. Confirm your [migration configuration values](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#default-configuration). If your cloud provider provides an implementation of the Node IPAM controller,  you also need to [migrate the IPAM controller](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#node-ipam-controller-migration).
 :::
 
-## Migrating to the Out-of-Tree AWS Cloud Provider for RKE
-
-1. Update the cluster config to enable leader migration in `cluster.yml`:
-
-```yaml
-services:
-  kube-controller:
-    extra_args:
-      enable-leader-migration: "true"
-```
-
-Note that the cloud provider is still `aws` at this step:
-
-```yaml
-cloud_provider:
-  name: aws
-```
-
-2. Cordon the control plane nodes, so that AWS cloud controller pods run on nodes only after upgrading to the external cloud provider:
-
-```shell
-kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
-```
-
-3. To install the AWS cloud controller manager, you must enable leader migration and follow the same steps as when installing AWS on a new cluster. To enable leader migration, add the following to the container arguments in step 7 while following the [steps to install the chart](./amazon.md#helm-chart-installation-from-ui-for-rke):
-
-```yaml
-- '--enable-leader-migration=true' 
-```
-
-4. Confirm that the chart is installed but that the new pods aren't running yet due to cordoned controlplane nodes. After updating the cluster in the next step, RKE will upgrade and uncordon each node, and schedule `aws-controller-manager` pods.
-
-5. Update `cluster.yml` to change the cloud provider and remove the leader migration arguments from the kube-controller.
-
-Selecting **External Amazon (out-of-tree)** sets `--cloud-provider=external` and lets you enable `useInstanceMetadataHostname`. You must enable `useInstanceMetadataHostname` for node-driver clusters and for custom clusters if not you don't provide a custom node name via `--node-name`. Enabling `useInstanceMetadataHostname` will query ec2 metadata service and set `/hostname` as `hostname-override` for `kubelet` and `kube-proxy`:
-
-```yaml
-rancher_kubernetes_engine_config:
-  cloud_provider:
-    name: external-aws
-    useInstanceMetadataHostname: true/false
-```
-
-Remove `enable-leader-migration` if you don't want it enabled in your cluster:
-
-```yaml
-services:
-  kube-controller:
-    extra_args:
-      enable-leader-migration: "true"
-```
-
-:::tip
-You can also disable leader migration after you finish the migration. Upgrade the chart and remove the following section from the container arguments:
-
-```yaml
-- --enable-leader-migration=true 
-```
-
-:::
-
-6. If  you're upgrading the cluster's Kubernetes version, set the Kubernetes version as well.
-
-7. Update the cluster. The `aws-cloud-controller-manager` pods should now be running.
-
-#### Migrating to the Out-of-Tree AWS Cloud Provider for RKE2
+<Tabs>
+<TabItem value="RKE2">
 
 1. Update the cluster config to enable leader migration:
 
@@ -175,6 +111,7 @@ Upgrade the chart and remove the following section from the container arguments:
 ```yaml
 - --enable-leader-migration=true 
 ```
+:::
 
 Verify the cloud controller manager update was successfully rolled out with the following command:
 
@@ -182,10 +119,78 @@ Verify the cloud controller manager update was successfully rolled out with the 
 kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
 ```
 
-:::
-
 6. The cloud provider is responsible for setting the ProviderID of the node. Check if all nodes are initialized with the ProviderID:
 
 ```shell
 kubectl describe nodes | grep "ProviderID"
 ```
+
+</TabItem>
+
+<TabItem value="RKE">
+
+1. Update the cluster config to enable leader migration in `cluster.yml`:
+
+```yaml
+services:
+  kube-controller:
+    extra_args:
+      enable-leader-migration: "true"
+```
+
+Note that the cloud provider is still `aws` at this step:
+
+```yaml
+cloud_provider:
+  name: aws
+```
+
+2. Cordon the control plane nodes, so that AWS cloud controller pods run on nodes only after upgrading to the external cloud provider:
+
+```shell
+kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
+```
+
+3. To install the AWS cloud controller manager, you must enable leader migration and follow the same steps as when installing AWS on a new cluster. To enable leader migration, add the following to the container arguments in step 7 while following the [steps to install the chart](./amazon.md#helm-chart-installation-from-ui-for-rke):
+
+```yaml
+- '--enable-leader-migration=true' 
+```
+
+4. Confirm that the chart is installed but that the new pods aren't running yet due to cordoned controlplane nodes. After updating the cluster in the next step, RKE will upgrade and uncordon each node, and schedule `aws-controller-manager` pods.
+
+5. Update `cluster.yml` to change the cloud provider and remove the leader migration arguments from the kube-controller.
+
+  Selecting **External Amazon (out-of-tree)** sets `--cloud-provider=external` and lets you enable `useInstanceMetadataHostname`. You must enable `useInstanceMetadataHostname` for node-driver clusters and for custom clusters if not you don't provide a custom node name via `--node-name`. Enabling `useInstanceMetadataHostname` will query ec2 metadata service and set `/hostname` as `hostname-override` for `kubelet` and `kube-proxy`:
+
+```yaml
+rancher_kubernetes_engine_config:
+  cloud_provider:
+    name: external-aws
+    useInstanceMetadataHostname: true/false
+```
+
+  Remove `enable-leader-migration` if you don't want it enabled in your cluster:
+
+  ```yaml
+  services:
+    kube-controller:
+      extra_args:
+        enable-leader-migration: "true"
+  ```
+
+:::tip
+You can also disable leader migration after you finish the migration. Upgrade the chart and remove the following section from the container arguments:
+
+```yaml
+- --enable-leader-migration=true 
+```
+:::
+
+6. If  you're upgrading the cluster's Kubernetes version, set the Kubernetes version as well.
+
+7. Update the cluster. The `aws-cloud-controller-manager` pods should now be running.
+
+</TabItem>
+</Tabs>
+
