@@ -646,15 +646,15 @@ module.exports = {
             from: '/explanations/integrations-in-rancher/cis-scans/custom-benchmark'
           },
           {
-            to: '/integrations-in-rancher/fleet-gitops-at-scale/architecture',
+            to: '/integrations-in-rancher/fleet/architecture',
             from: '/explanations/integrations-in-rancher/fleet-gitops-at-scale/architecture'
           },
           {
-            to: '/integrations-in-rancher/fleet-gitops-at-scale/windows-support',
+            to: '/integrations-in-rancher/fleet/windows-support',
             from: '/explanations/integrations-in-rancher/fleet-gitops-at-scale/windows-support'
           },
           {
-            to: '/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy',
+            to: '/integrations-in-rancher/fleet/use-fleet-behind-a-proxy',
             from: '/explanations/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy'
           },
           {

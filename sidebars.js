@@ -1118,14 +1118,72 @@ const sidebars = {
             "reference-guides/rancher-security/rancher-security-best-practices",
             "reference-guides/rancher-security/security-advisories-and-cves",
             "reference-guides/rancher-security/psa-restricted-exemptions",
+            "reference-guides/rancher-security/rancher-webhook-hardening"
           ],
         }
       ]
     },
     {
-      type: 'category',
-      label: 'Integrations in Rancher',
-      items: [
+      "type": "category",
+      "label": "Integrations in Rancher",
+      "link": {
+        "type": "doc",
+        "id": "integrations-in-rancher/integrations-in-rancher"
+      },
+      "items": [
+        "integrations-in-rancher/kubernetes-distributions/kubernetes-distributions",
+        {
+          "type": "category",
+          "label": "Virtualization on Kubernetes with Harvester",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/harvester/harvester"
+          },
+          "items": [
+            "integrations-in-rancher/harvester/overview"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Cloud Native Storage with Longhorn",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/longhorn/longhorn"
+          },
+          "items": [
+            "integrations-in-rancher/longhorn/overview"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Container Security with Neuvector",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/neuvector/neuvector"
+          },
+          "items": [
+            "integrations-in-rancher/neuvector/overview"
+          ]
+        },
+        "integrations-in-rancher/kubewarden/kubewarden",
+        "integrations-in-rancher/elemental/elemental",
+        "integrations-in-rancher/opni/opni",
+        {
+          "type": "category",
+          "label": "Continuous Delivery with Fleet",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/fleet/fleet"
+          },
+          "items": [
+            "integrations-in-rancher/fleet/overview",
+            "integrations-in-rancher/fleet/architecture",
+            "integrations-in-rancher/fleet/windows-support",
+            "integrations-in-rancher/fleet/use-fleet-behind-a-proxy"
+          ]
+        },
+        "integrations-in-rancher/rancher-desktop",
+        "integrations-in-rancher/epinio/epinio",
         {
           type: 'category',
           label: 'Cloud Marketplace Integration',
@@ -1167,20 +1225,6 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Continuous Delivery with Fleet',
-          link: {
-            type: 'doc',
-            id: "pages-for-subheaders/fleet-gitops-at-scale",
-          },
-          items: [
-            "integrations-in-rancher/fleet-gitops-at-scale/architecture",
-            "integrations-in-rancher/fleet-gitops-at-scale/windows-support",
-            "integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy",
-          ]
-        },
-        "integrations-in-rancher/harvester",
-        {
-          type: 'category',
           label: 'Istio',
           link: {
             type: 'doc',
@@ -1206,7 +1250,6 @@ const sidebars = {
             }
           ]
         },
-        "integrations-in-rancher/longhorn",
         {
           type: 'category',
           label: 'Logging',
@@ -1248,10 +1291,7 @@ const sidebars = {
             "integrations-in-rancher/monitoring-and-alerting/promql-expressions",
           ]
         },
-        "integrations-in-rancher/neuvector",
-
         "integrations-in-rancher/opa-gatekeeper",
-
         "integrations-in-rancher/rancher-extensions",
       ]
     },
@@ -1303,6 +1343,21 @@ const sidebars = {
             "troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation",
           ]
         }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Rancher Kubernetes API",
+      "items": [
+        "api/quickstart",
+        {
+          "type": "category",
+          "label": "Example Workflows",
+          "items": [
+            "api/workflows/projects"
+          ]
+        },
+        "api/api-reference"
       ]
     },
     "contribute-to-rancher",
