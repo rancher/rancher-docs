@@ -185,7 +185,7 @@ module.exports = {
               label: 'Latest',
             },
             2.8: {
-              label: 'v2.8 (Preview)',
+              label: 'v2.8',
               path: 'v2.8',
               banner: 'unreleased'
             },
