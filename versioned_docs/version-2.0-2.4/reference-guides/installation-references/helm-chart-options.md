@@ -137,7 +137,7 @@ Add your IP exceptions to the `noProxy` list. Make sure you add the Pod cluster 
 
 ### Additional Trusted CAs
 
-If you have private registries, catalogs or a proxy that intercepts certificates, you may need to add these trusted CAs to Rancher.
+If you have private registries, catalogs or a proxy that intercepts certificates, you may need to add more trusted CAs to Rancher.
 
 ```plain
 --set additionalTrustedCAs=true
