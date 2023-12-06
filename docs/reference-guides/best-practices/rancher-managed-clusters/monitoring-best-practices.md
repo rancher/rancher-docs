@@ -66,7 +66,7 @@ In general, you want to scrape data from all the workloads running in your clust
 
 ### About Prometheus Exporters
 
-A lot of 3rd party workloads like databases, queues or web-servers either already support exposing metrics in a Prometheus format, or there are so called exporters available that translate between the tool's metrics and the format that Prometheus understands. Usually you can add these exporters as additional sidecar containers to the workload's Pods. A lot of helm charts already include options to deploy the correct exporter. Additionally you can find a curated list of exports by SysDig on [promcat.io](https://promcat.io/) and on [ExporterHub](https://exporterhub.io/).
+Many 3rd party workloads, such as databases, queues, and web-servers, already support exposing metrics in a Prometheus format, or offer exporters that translate between the tool's metrics and a format that Prometheus understands. You can usually add these exporters as additional sidecar containers to the workload's Pods. Many Helm charts already include options to deploy the correct exporter. You can find a curated list of exports by SysDig on [promcat.io](https://promcat.io/) and on [ExporterHub](https://exporterhub.io/).
 
 ### Prometheus support in Programming Languages and Frameworks
 
@@ -74,7 +74,7 @@ To get your own custom application metrics into Prometheus, you have to collect 
 
 ### ServiceMonitors and PodMonitors
 
-Once all your workloads expose metrics in a Prometheus format, you have to configure Prometheus to scrape it. Under the hood Rancher is using the [prometheus-operator](https://github.com/prometheus-operator/prometheus-operator). This makes it easy to add additional scraping targets with ServiceMonitors and PodMonitors. A lot of helm charts already include an option to create these monitors directly. You can also find more information in the Rancher documentation.
+Once all your workloads expose metrics in a Prometheus format, you have to configure Prometheus to scrape it. Under the hood Rancher is using the [prometheus-operator](https://github.com/prometheus-operator/prometheus-operator). This makes it easy to add additional scraping targets with ServiceMonitors and PodMonitors. Many Helm charts let you to create these monitors directly. You can also find more information in the Rancher documentation.
 
 ### Prometheus Push Gateway
 

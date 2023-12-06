@@ -60,7 +60,7 @@ helm upgrade --reuse-values rancher-webhook rancher-charts/rancher-webhook  -n c
 ```
 **Note:** This temporary workaround may violate an environment's security policy. This workaround also requires that port 9443 is unused on the host network.
 
-**Note:** Helm uses secrets by default. This is a datatype that some webhook versions validate to store information. In these cases, directly update the deployment with the hostNetwork=true value using kubectl, then run the helm commands listed above to avoid drift between the helm configuration and the actual state in the cluster.
+**Note:** Helm uses secrets by default. This is a datatype that some webhook versions validate to store information. In these cases, directly update the deployment with the hostNetwork=true value using kubectl, then run the Helm commands listed above to prevent drift between the Helm configuration and the actual state of the cluster.
 
 ### Private GKE Cluster
 

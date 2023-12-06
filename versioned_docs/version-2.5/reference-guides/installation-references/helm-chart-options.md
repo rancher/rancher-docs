@@ -123,7 +123,7 @@ Example on setting a static proxy header with `ingress.configurationSnippet`. Th
 
 ### HTTP Proxy
 
-Rancher requires internet access for some functionality (helm charts). Use `proxy` to set your proxy server.
+Rancher requires internet access for some functionality, such as reaching remote Helm charts. Use `proxy` to set your proxy server.
 
 Add your IP exceptions to the `noProxy` list. Make sure you add the Pod cluster IP range (default: `10.42.0.0/16`), Service cluster IP range (default: `10.43.0.0/16`), the internal cluster domains (default: `.svc,.cluster.local`) and any worker cluster `controlplane` nodes. Rancher supports CIDR notation ranges in this list.
 

@@ -6,7 +6,7 @@ title: 404 - default backend
 >
 >Please use the Rancher Helm chart to install Rancher on a Kubernetes cluster. For details, see the [Kubernetes Install ](../../../../../resources/helm-version-requirements.md).
 >
->If you are currently using the RKE add-on install method, see [Migrating from a Kubernetes Install with an RKE Add-on](../../../../../install-upgrade-on-a-kubernetes-cluster/upgrades/migrating-from-rke-add-on.md) for details on how to move to using the helm chart.
+>If you are currently using the RKE add-on install method, see [Migrating from a Kubernetes Install with an RKE Add-on](../../../../../install-upgrade-on-a-kubernetes-cluster/upgrades/migrating-from-rke-add-on.md) for details on how to start using the Helm chart.
 
 To debug issues around this error, you will need to download the command-line tool `kubectl`. See [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) how to download `kubectl` for your platform.
 

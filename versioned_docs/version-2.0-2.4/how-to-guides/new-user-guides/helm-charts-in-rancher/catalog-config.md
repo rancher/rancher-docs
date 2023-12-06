@@ -27,7 +27,7 @@ The Git URL needs to be one that `git clone` [can handle](https://git-scm.com/do
 
 A Helm chart repository is an HTTP server that contains one or more packaged charts. Any HTTP server that can serve YAML files and tar files and can answer GET requests can be used as a repository server.
 
-Helm comes with a built-in package server for developer testing (`helm serve`). The Helm team has tested other servers, including Google Cloud Storage with website mode enabled, S3 with website mode enabled or hosting custom chart repository server using open-source projects like [ChartMuseum](https://github.com/helm/chartmuseum).
+Helm comes with Helm serve, a built-in package server for developer testing. The Helm team has tested other servers, including Google Cloud Storage with website mode enabled, S3 with website mode enabled or hosting custom chart repository server using open-source projects like [ChartMuseum](https://github.com/helm/chartmuseum).
 
 In Rancher, you can add the custom Helm chart repository with only a catalog name and the URL address of the chart repository.
 
