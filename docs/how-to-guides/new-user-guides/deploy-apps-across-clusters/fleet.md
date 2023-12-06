@@ -13,7 +13,7 @@ Fleet is a separate project from Rancher, and can be installed on any Kubernetes
 
 ## Architecture
 
-For information about how Fleet works, see [this page.](../../../integrations-in-rancher/fleet-gitops-at-scale/architecture.md)
+For information about how Fleet works, see [this page.](../../../integrations-in-rancher/fleet/architecture.md)
 
 ## Accessing Fleet in the Rancher UI
 
@@ -38,7 +38,7 @@ Follow the steps below to access Continuous Delivery in the Rancher UI:
 
 ## Windows Support
 
-For details on support for clusters with Windows nodes, see [this page.](../../../integrations-in-rancher/fleet-gitops-at-scale/windows-support.md)
+For details on support for clusters with Windows nodes, see [this page.](../../../integrations-in-rancher/fleet/windows-support.md)
 
 
 ## GitHub Repository
@@ -48,13 +48,13 @@ The Fleet Helm charts are available [here.](https://github.com/rancher/fleet/rel
 
 ## Using Fleet Behind a Proxy
 
-For details on using Fleet behind a proxy, see [this page.](../../../integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy.md)
+For details on using Fleet behind a proxy, see [this page.](../../../integrations-in-rancher/fleet/use-fleet-behind-a-proxy.md)
 
 ## Helm Chart Dependencies
 
 In order for Helm charts with dependencies to deploy successfully, you must run a manual command (as listed below), as it is up to the user to fulfill the dependency list. If you do not do this and proceed to clone your repository and run `helm install`, your installation will fail because the dependencies will be missing.
 
-The Helm chart in the git repository must include its dependencies in the charts subdirectory. You must either manually run `helm dependencies update $chart` OR run `helm dependencies build $chart` locally, then commit the complete charts directory to your git repository. Note that you will update your commands with the applicable parameters.
+The Helm chart in the git repository must include its dependencies in the charts subdirectory. You must either manually run `helm dependencies update $chart` or run `helm dependencies build $chart` locally, then commit the complete charts directory to your git repository. Note that you will update your commands with the applicable parameters.
 
 ## Troubleshooting
 

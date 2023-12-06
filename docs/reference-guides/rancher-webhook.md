@@ -15,16 +15,11 @@ Each Rancher version is designed to be compatible with a single version of the w
 
 **Note:** Rancher manages deployment and upgrade of the webhook. Under most circumstances, no user intervention should be needed to ensure that the webhook version is compatible with the version of Rancher that you are running.
 
+<!-- releaseTask -->
+
 | Rancher Version | Webhook Version |
 |-----------------|:---------------:|
-| v2.7.0          |     v0.3.0      |
-| v2.7.1          |     v0.3.0      |
-| v2.7.2          |     v0.3.2      |
-| v2.7.3          |     v0.3.3      |
-| v2.7.4          |     v0.3.4      |
-| v2.7.5          |     v0.3.5      |
-| v2.7.6          |     v0.3.5      |
-
+| v2.8.0          |     v0.4.2      |
 
 ## Why Do We Need It?
 
@@ -65,7 +60,7 @@ helm upgrade --reuse-values rancher-webhook rancher-charts/rancher-webhook  -n c
 ```
 **Note:** This temporary workaround may violate an environment's security policy. This workaround also requires that port 9443 is unused on the host network.
 
-**Note:** Helm uses secrets by default. This is a datatype that some webhook versions validate to store information. In these cases, directly update the deployment with the hostNetwork=true value using kubectl, then run the helm commands listed above to avoid drift between the helm configuration and the actual state in the cluster.
+**Note:** Helm uses secrets by default. This is a datatype that some webhook versions validate to store information. In these cases, directly update the deployment with the hostNetwork=true value using kubectl, then run the Helm commands listed above to prevent drift between the Helm configuration and the actual state of the cluster.
 
 ### Private GKE Cluster
 

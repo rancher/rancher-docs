@@ -16,7 +16,7 @@ These installation instructions assume you are using Helm 3.
 
 ### Install cert-manager
 
-Add the cert-manager helm repository:
+Add the cert-manager Helm repository:
 
 ```
 helm repo add jetstack https://charts.jetstack.io
@@ -65,7 +65,7 @@ kubectl rollout status deployment -n cert-manager cert-manager-webhook
 
 ### Install Rancher
 
-Next you can install Rancher itself. First add the helm repository:
+Next you can install Rancher itself. First, add the Helm repository:
 
 ```
 helm repo add rancher-latest https://releases.rancher.com/server-charts/latest

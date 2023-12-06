@@ -74,7 +74,7 @@ You'll use the backup as a restoration point if something goes wrong during upgr
 
 ## 2. Update the Helm chart repository
 
-1. Update your local helm repo cache.
+1. Update your local Helm repo cache:
 
     ```
     helm repo update
@@ -281,6 +281,6 @@ Upgrading from v2.0.7 or earlier | Rancher introduced the `system` project, whic
 
 **Important: RKE add-on install is only supported up to Rancher v2.0.8**
 
-Please use the Rancher helm chart to install Rancher on a Kubernetes cluster. For details, see the [Kubernetes Install](install-upgrade-on-a-kubernetes-cluster.md).
+Please use the Rancher Helm chart to install Rancher on a Kubernetes cluster. For details, see the [Kubernetes Install](install-upgrade-on-a-kubernetes-cluster.md).
 
-If you are currently using the RKE add-on install method, see [Migrating from a RKE add-on install](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/migrating-from-rke-add-on.md) for details on how to move to using the helm chart.
+If you are currently using the RKE add-on install method, see [Migrating from a RKE add-on install](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/migrating-from-rke-add-on.md) for details on how to start using the Helm chart.

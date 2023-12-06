@@ -55,7 +55,7 @@ You'll use the backup as a restore point if something goes wrong during upgrade.
 
 ### 2. Update the Helm chart repository
 
-1. Update your local helm repo cache.
+1. Update your local Helm repo cache:
 
     ```
     helm repo update
