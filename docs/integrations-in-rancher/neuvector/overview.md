@@ -1,14 +1,14 @@
 ---
-title: NeuVector Integration
+title: Overview
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/neuvector"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/neuvector/overview"/>
 </head>
 
 ### NeuVector Integration in Rancher
 
-[NeuVector 5.x](https://open-docs.neuvector.com/) is an open-source container-centric security platform that is integrated with Rancher. NeuVector offers real-time compliance, visibility, and protection for critical applications and data during runtime. NeuVector provides a firewall, container process/file system monitoring, security auditing with CIS benchmarks, and vulnerability scanning. For more information on Rancher security, please see the [security documentation](../pages-for-subheaders/rancher-security.md).
+[NeuVector 5.x](https://open-docs.neuvector.com/) is an open-source container-centric security platform that is integrated with Rancher. NeuVector offers real-time compliance, visibility, and protection for critical applications and data during runtime. NeuVector provides a firewall, container process/file system monitoring, security auditing with CIS benchmarks, and vulnerability scanning. For more information on Rancher security, please see the [security documentation](../../pages-for-subheaders/rancher-security.md).
 
 NeuVector can be enabled through a Helm chart that may be installed either through **Apps** or through the **Cluster Tools** button in the Rancher UI. Once the Helm chart is installed, users can easily [deploy and manage NeuVector clusters within Rancher](https://open-docs.neuvector.com/deploying/rancher#deploy-and-manage-neuvector-through-rancher-apps-marketplace).
 

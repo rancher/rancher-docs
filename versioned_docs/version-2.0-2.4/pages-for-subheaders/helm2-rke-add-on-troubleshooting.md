@@ -6,7 +6,7 @@ title: Troubleshooting HA RKE Add-On Install
 >
 >Please use the Rancher Helm chart to install Rancher on a Kubernetes cluster. For details, see the [Kubernetes Install ](../getting-started/installation-and-upgrade/resources/helm-version-requirements.md).
 >
->If you are currently using the RKE add-on install method, see [Migrating from a Kubernetes Install with an RKE Add-on](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/migrating-from-rke-add-on.md) for details on how to move to using the helm chart.
+>If you are currently using the RKE add-on install method, see [Migrating from a Kubernetes Install with an RKE Add-on](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/migrating-from-rke-add-on.md) for details on how to start using the Helm chart.
 
 This section contains common errors seen when setting up a Kubernetes installation.
 

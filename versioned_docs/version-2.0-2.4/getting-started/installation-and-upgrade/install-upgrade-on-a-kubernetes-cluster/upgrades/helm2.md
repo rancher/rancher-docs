@@ -45,7 +45,7 @@ of your Kubernetes cluster running Rancher server. You'll use the snapshot as a 
 
 ### B. Update the Helm chart repository
 
-1. Update your local helm repo cache.
+1. Update your local Helm repo cache.
 
     ```
     helm repo update

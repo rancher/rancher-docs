@@ -23,7 +23,7 @@ The Helm Stable and Helm Incubators are populated with native Helm charts. Howev
 
 ### Rancher Charts
 
-Rancher charts mirror native helm charts, although they add two files that enhance user experience: `app-readme.md` and `questions.yaml`. Read more about them in [Additional Files for Rancher Charts.](#additional-files-for-rancher-charts)
+Rancher charts mirror native Helm charts, although they add two files that enhance user experience: `app-readme.md` and `questions.yaml`. Read more about them in [Additional Files for Rancher Charts](#additional-files-for-rancher-charts).
 
 Advantages of Rancher charts include:
 

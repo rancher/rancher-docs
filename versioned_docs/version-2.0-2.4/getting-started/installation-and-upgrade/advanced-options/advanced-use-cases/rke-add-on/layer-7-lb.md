@@ -7,7 +7,7 @@ import SslFaqHa from '@site/src/components/SslFaqHa'
 >
 >Please use the Rancher Helm chart to install Rancher on a Kubernetes cluster. For details, see the [Kubernetes Install](../../../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md).
 >
->If you are currently using the RKE add-on install method, see [Migrating from a Kubernetes Install with an RKE Add-on](../../../install-upgrade-on-a-kubernetes-cluster/upgrades/migrating-from-rke-add-on.md) for details on how to move to using the helm chart.
+>If you are currently using the RKE add-on install method, see [Migrating from a Kubernetes Install with an RKE Add-on](../../../install-upgrade-on-a-kubernetes-cluster/upgrades/migrating-from-rke-add-on.md) for details on how to start using the Helm chart.
 
 This procedure walks you through setting up a 3-node cluster using the Rancher Kubernetes Engine (RKE). The cluster's sole purpose is running pods for Rancher. The setup is based on:
 

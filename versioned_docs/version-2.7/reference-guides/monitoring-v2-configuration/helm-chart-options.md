@@ -49,13 +49,11 @@ An example of where this might be used is with Istio. For more information, see 
 
 ## Configuring Applications Packaged within Monitoring v2
 
-We deploy kube-state-metrics and node-exporter with monitoring v2. Node exporter are deployed as DaemonSets. In the monitoring v2 helm chart, in the values.yaml, each of the things are deployed as sub charts.
+We deploy kube-state-metrics and node-exporter with monitoring v2. The node exporters are deployed as DaemonSets. Each of these entities are deployed as sub-charts through the monitoring v2 Helm chart, values.yaml.
 
-We also deploy grafana which is not managed by prometheus.
+We also deploy Grafana, which is not managed by Prometheus.
 
-If you look at what the helm chart is doing like in kube-state-metrics, there are plenty more values that you can set that aren’t exposed in the top level chart.
-
-But in the top level chart you can add values that override values that exist in the sub chart.
+Many values aren’t exposed in the top level chart. However, you can add values to the top level chart to override values that exist in the sub-charts.
 
 ### Increase the Replicas of Alertmanager
 

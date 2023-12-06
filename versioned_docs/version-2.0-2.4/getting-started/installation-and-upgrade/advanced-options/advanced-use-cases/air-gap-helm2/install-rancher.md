@@ -13,12 +13,19 @@ Rancher recommends installing Rancher on a Kubernetes cluster. A highly availabl
 
 From a system that has access to the internet, fetch the latest Helm chart and copy the resulting manifests to a system that has access to the Rancher server cluster.
 
-1. If you haven't already, initialize `helm` locally on a workstation that has internet access. Note: Refer to the [Helm version requirements](../../../resources/choose-a-rancher-version.md) to choose a version of Helm to install Rancher.
+1. If you haven't already, initialize Helm locally on a workstation that has internet access. 
+
+:::note
+
+Refer to the [Helm version requirements](../../../resources/choose-a-rancher-version.md) to choose a version of Helm to install Rancher.
+
+:::
+
     ```plain
     helm init -c
     ```
 
-2. Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher](../../../resources/choose-a-rancher-version.md).
+2. Use the `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher](../../../resources/choose-a-rancher-version.md).
     - Latest: Recommended for trying out the newest features
         ```
         helm repo add rancher-latest https://releases.rancher.com/server-charts/latest

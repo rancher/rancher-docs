@@ -1,16 +1,12 @@
 ---
-title: Harvester Integration
+title: Overview
 ---
-
-<head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/harvester"/>
-</head>
 
 Introduced in Rancher v2.6.1, [Harvester](https://docs.harvesterhci.io/) is an open-source hyper-converged infrastructure (HCI) software built on Kubernetes. Harvester installs on bare metal servers and provides integrated virtualization and distributed storage capabilities. Although Harvester operates using Kubernetes, it does not require users to know Kubernetes concepts, making it a more user-friendly application.
 
 ### Feature Flag
 
-The Harvester feature flag is used to manage access to the Virtualization Management (VM) page in Rancher where users can navigate directly to Harvester clusters and access the Harvester UI. The Harvester feature flag is enabled by default. Click [here](../pages-for-subheaders/enable-experimental-features.md) for more information on feature flags in Rancher.
+The Harvester feature flag is used to manage access to the Virtualization Management (VM) page in Rancher where users can navigate directly to Harvester clusters and access the Harvester UI. The Harvester feature flag is enabled by default. Click [here](../../pages-for-subheaders/enable-experimental-features.md) for more information on feature flags in Rancher.
 
 To navigate to the Harvester cluster, click **☰ > Virtualization Management**. From Harvester Clusters page, click one of the clusters listed to go to the single Harvester cluster view.
 
@@ -28,7 +24,7 @@ The [Harvester node driver](https://docs.harvesterhci.io/v1.1/rancher/node/node-
 
 Harvester allows `.ISO` images to be uploaded and displayed through the Harvester UI, but this is not supported in the Rancher UI. This is because `.ISO` images usually require additional setup that interferes with a clean deployment (without requiring user intervention), and they are not typically used in cloud environments.
 
-Click [here](../pages-for-subheaders/about-provisioning-drivers.md#node-drivers) for more information on node drivers in Rancher.
+See [Provisioning Drivers](../../pages-for-subheaders/about-provisioning-drivers.md#node-drivers) for more information on node drivers in Rancher.
 
 ### Port Requirements
 
@@ -40,13 +36,3 @@ In addition, other networking considerations are as follows:
 - Follow the networking setup guidance [here](https://docs.harvesterhci.io/v1.1/networking/index).
 
 For other port requirements for other guest clusters, such as K3s and RKE1, please see [these docs](https://docs.harvesterhci.io/v1.1/install/requirements/#guest-clusters).
-
-### Limitations
-
----
-**Applicable to Rancher v2.6.1 and v2.6.2 only:**
-
-- Harvester v0.3.0 doesn’t support air-gapped environment installation.
-- Harvester v0.3.0 doesn’t support upgrade from v0.2.0 nor upgrade to v1.0.0.
-
----
