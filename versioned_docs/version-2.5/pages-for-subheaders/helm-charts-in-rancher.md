@@ -14,7 +14,7 @@ In Rancher v2.5, the Apps and Marketplace feature replaced the catalog system.
 
 In the cluster manager, Rancher uses a catalog system to import bundles of charts and then uses those charts to either deploy custom helm applications or Rancher's tools such as Monitoring or Istio. The catalog system is still available in the cluster manager in Rancher v2.5, but it is deprecated.
 
-Now in the Cluster Explorer, Rancher uses a similar but simplified version of the same system. Repositories can be added in the same way that catalogs were, but are specific to the current cluster. Rancher tools come as pre-loaded repositories which deploy as standalone helm charts.
+Now in the Cluster Explorer, Rancher uses a similar but simplified version of the same system. Repositories can be added in the same way that catalogs were, but are specific to the current cluster. Rancher tools come as pre-loaded repositories which deploy as standalone Helm charts.
 
 ### Charts
 
@@ -34,7 +34,7 @@ All three types are deployed and managed in the same way.
 
 From the left sidebar select _"Repositories"_.
 
-These items represent helm repositories, and can be either traditional helm endpoints which have an index.yaml, or git repositories which will be cloned and can point to a specific branch. In order to use custom charts, simply add your repository here and they will become available in the Charts tab under the name of the repository.
+These items represent Helm repositories, and can be either traditional Helm endpoints which have an index.yaml, or git repositories which will be cloned and can point to a specific branch. In order to use custom charts, simply add your repository here and they will become available in the Charts tab under the name of the repository.
 
 To add a private CA for Helm Chart repositories:
 

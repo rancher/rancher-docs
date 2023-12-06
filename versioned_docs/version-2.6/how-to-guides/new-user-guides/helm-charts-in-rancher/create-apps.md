@@ -26,7 +26,7 @@ Native Helm charts include an application along with other software required to 
 
 ### Rancher Charts
 
-Rancher charts are native helm charts with two files that enhance user experience: `app-readme.md` and `questions.yaml`. Read more about them in [Additional Files for Rancher Charts.](#additional-files-for-rancher-charts)
+Rancher charts are native Helm charts with two files that enhance user experience: `app-readme.md` and `questions.yaml`. Read more about them in [Additional Files for Rancher Charts.](#additional-files-for-rancher-charts)
 
 Rancher charts add simplified chart descriptions and configuration forms to make the application deployment easy. Rancher users do not need to read through the entire list of Helm variables to understand how to launch an application.
 

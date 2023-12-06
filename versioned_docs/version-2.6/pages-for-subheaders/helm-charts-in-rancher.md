@@ -82,7 +82,7 @@ Apps managed by the Cluster Manager (the global view in the legacy Rancher UI) s
 
 From the left sidebar select _"Repositories"_.
 
-These items represent helm repositories, and can be either traditional helm endpoints which have an index.yaml, or git repositories which will be cloned and can point to a specific branch. In order to use custom charts, simply add your repository here and they will become available in the Charts tab under the name of the repository.
+These items represent Helm repositories, and can be either traditional Helm endpoints which have an index.yaml, or git repositories which will be cloned and can point to a specific branch. In order to use custom charts, simply add your repository here and they will become available in the Charts tab under the name of the repository.
 
 To add a private CA for Helm Chart repositories:
 

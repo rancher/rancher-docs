@@ -44,7 +44,7 @@ export default function HomepageFeatures(): JSX.Element {
             title="Install Rancher"
             icon={<ArrowUpRegular />}
             to="/getting-started/quick-start-guides/deploy-rancher-manager/helm-cli"
-            description="Quick way to helm install Rancher in a Kubernetes cluster"
+            description="Quick way to Helm install Rancher in a Kubernetes cluster"
           />
           <Card
             title="Deploy Workloads"
