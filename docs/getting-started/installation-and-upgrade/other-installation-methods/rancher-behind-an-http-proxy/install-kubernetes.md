@@ -145,7 +145,7 @@ sudo systemctl restart docker
 
 You can now provision node driver clusters from an air-gapped cluster configured to use a proxy for outbound connections.
 
-In addition to setting the default rules for a proxy server, you will need to add additional rules, shown below, to provision node driver clusters from a proxied Rancher environment.
+In addition to setting the default rules for a proxy server, you must also add the rules shown below to provision node driver clusters from a proxied Rancher environment.
 
 You will configure your filepath according to your setup, e.g., `/etc/apt/apt.conf.d/proxy.conf`:
 

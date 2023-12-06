@@ -36,7 +36,7 @@ You must have an SSL certificate that Ingress can use to encrypt and decrypt com
 1. Click **Add Certificate**.
 1. Select a **Certificate - Secret Name** from the drop-down list.
 1. Enter the host using encrypted communication.
-1. To add additional hosts that use the certificate, click **Add Hosts**.
+1. To add more hosts that use the same certificate, click **Add Hosts**.
 
 ## Labels and Annotations
 

@@ -54,7 +54,7 @@ _New in v2.6.4_
 
 You can now provision node driver clusters from an air-gapped cluster configured to use a proxy for outbound connections.
 
-In addition to setting the default rules for a proxy server as shown above, you will need to add additional rules, shown below, to provision node driver clusters from a proxied Rancher environment.
+In addition to setting the default rules for a proxy server as shown above, you must also add the following rules to provision node driver clusters from a proxied Rancher environment:
 
 You will configure your filepath according to your setup, e.g., `/etc/apt/apt.conf.d/proxy.conf`:
 

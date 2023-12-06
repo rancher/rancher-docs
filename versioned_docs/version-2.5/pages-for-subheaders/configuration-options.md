@@ -26,7 +26,7 @@ For more information on Overlay Files, refer to the [Istio documentation.](https
 
 The Monitoring app sets `prometheus.prometheusSpec.ignoreNamespaceSelectors=false` which enables monitoring across all namespaces by default. This ensures you can view traffic, metrics and graphs for resources deployed in a namespace with `istio-injection=enabled` label.
 
-If you would like to limit Prometheus to specific namespaces, set `prometheus.prometheusSpec.ignoreNamespaceSelectors=true`. Once you do this, you will need to add additional configuration to continue to monitor your resources.
+If you would like to limit Prometheus to specific namespaces, set `prometheus.prometheusSpec.ignoreNamespaceSelectors=true`. Once you do this, you must perform some additional configuration to continue to monitor your resources.
 
 For details, refer to [this section.](../explanations/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md)
 
