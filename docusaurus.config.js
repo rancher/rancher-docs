@@ -582,8 +582,11 @@ module.exports = {
             from: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/vsphere/configure-out-of-tree-vsphere'
           },
           {
-            to: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/migrate-from-in-tree-to-out-of-tree',
+            to: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/migrate-to-out-of-tree-vsphere',
             from: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/vsphere/migrate-from-in-tree-to-out-of-tree'
+          },
+          { to: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/migrate-to-out-of-tree-vsphere', 
+            from: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/migrate-from-in-tree-to-out-of-tree'
           },
           {
             to: '/how-to-guides/new-user-guides/add-users-to-projects',
@@ -646,15 +649,15 @@ module.exports = {
             from: '/explanations/integrations-in-rancher/cis-scans/custom-benchmark'
           },
           {
-            to: '/integrations-in-rancher/fleet-gitops-at-scale/architecture',
+            to: '/integrations-in-rancher/fleet/architecture',
             from: '/explanations/integrations-in-rancher/fleet-gitops-at-scale/architecture'
           },
           {
-            to: '/integrations-in-rancher/fleet-gitops-at-scale/windows-support',
+            to: '/integrations-in-rancher/fleet/windows-support',
             from: '/explanations/integrations-in-rancher/fleet-gitops-at-scale/windows-support'
           },
           {
-            to: '/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy',
+            to: '/integrations-in-rancher/fleet/use-fleet-behind-a-proxy',
             from: '/explanations/integrations-in-rancher/fleet-gitops-at-scale/use-fleet-behind-a-proxy'
           },
           {

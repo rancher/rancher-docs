@@ -31,7 +31,7 @@ Creating a persistent volume in Rancher will not create a storage volume. It onl
 
 The steps to set up a persistent storage device will differ based on your infrastructure. We provide examples of how to set up storage using [vSphere,](../../provisioning-storage-examples/vsphere-storage.md) [NFS,](../../provisioning-storage-examples/nfs-storage.md) or Amazon's [EBS.](../../provisioning-storage-examples/persistent-storage-in-amazon-ebs.md)
 
-If you have a pool of block storage, and you don't want to use a cloud provider, Longhorn could help you provide persistent storage to your Kubernetes cluster. For more information, see [this page.](../../../../../integrations-in-rancher/longhorn.md)
+If you have a pool of block storage, and you don't want to use a cloud provider, Longhorn could help you provide persistent storage to your Kubernetes cluster. For more information, see [Cloud Native Storage with Longhorn](../../../../../integrations-in-rancher/longhorn/longhorn.md).
 
 ### 2. Add a PersistentVolume that refers to the persistent storage
 
