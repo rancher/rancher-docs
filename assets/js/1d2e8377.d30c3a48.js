@@ -212,6 +212,37 @@ function createElement (type, props) {
 
 /***/ }),
 
+/***/ 19383:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(67294);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(45697);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+// This code was authored by bravemaster619 https://dev.to/bravemaster619/simplest-way-to-embed-a-youtube-video-in-your-react-app-3bk2
+const YoutubeEmbed = ({ id })=>/*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "video-responsive"
+    }, /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.createElement("iframe", {
+        width: "853",
+        height: "480",
+        src: `https://www.youtube.com/embed/${id}`,
+        frameBorder: "0",
+        allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+        allowFullScreen: true,
+        title: "Embedded youtube"
+    }));
+YoutubeEmbed.propTypes = {
+    embedId: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string).isRequired
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (YoutubeEmbed);
+
+
+/***/ }),
+
 /***/ 96248:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -226,6 +257,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(67294);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3905);
+/* harmony import */ var _site_src_components_YouTube__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(19383);
 /* @jsxRuntime classic */ /* @jsx mdx */ /* @jsxFrag React.Fragment */ function _define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
@@ -325,8 +357,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "Oct 6, 2023",
+    "lastUpdatedAt": 1701875038,
+    "formattedLastUpdatedAt": "Dec 6, 2023",
     "frontMatter": {
         "title": "Rancher AWS Marketplace Quick Start",
         "description": "Use Amazon EKS to deploy Rancher server."
@@ -342,6 +374,7 @@ const metadata = {
     }
 };
 const assets = {};
+
 const toc = [];
 const layoutProps = {
     toc
@@ -363,10 +396,10 @@ function MDXContent(_param) {
     }, `deploy Rancher to Amazon Web Services (AWS)`), `. To learn more, see our `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://aws.amazon.com/marketplace/pp/prodview-go7ent7goo5ae"
-    }, `Amazon Marketplace listing`), `. Watch the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://youtu.be/9dznJ7Ons0M"
-    }, `demo`), ` for a walkthrough of AWS Marketplace SUSE Rancher setup.`));
+    }, `Amazon Marketplace listing`), `. Watch the demo for a walkthrough of AWS Marketplace SUSE Rancher setup:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_site_src_components_YouTube__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
+        id: "9dznJ7Ons0M",
+        mdxType: "YouTube"
+    }));
 }
 MDXContent.isMDXComponent = true;
 
