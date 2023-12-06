@@ -13,7 +13,7 @@ In order to leverage the template to create new VMs, Rancher has some [specific 
 
 ## Requirements
 
-There is specific tooling required for both Linux and Windows VMs to be usable by the vSphere node driver. The most critical dependency is [cloud-init](https://cloud-init.io/) for Linux and [cloudbase-init](https://cloudbase.it/cloudbase-init/) for Windows. Both of these are used for provisioning the VMs by configuring the hostname and by setting up the SSH access and the default Rancher user. Users can add additional content to these as desired if other configuration is needed. In addition, other requirements are listed below for reference.
+There is specific tooling required for both Linux and Windows VMs to be usable by the vSphere node driver. The most critical dependency is [cloud-init](https://cloud-init.io/) for Linux and [cloudbase-init](https://cloudbase.it/cloudbase-init/) for Windows. Both of these are used for provisioning the VMs by configuring the hostname and by setting up the SSH access and the default Rancher user. Users can add more content to these as desired if other configuration is needed. In addition, other requirements are listed below for reference.
 
 :::note
 

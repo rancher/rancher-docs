@@ -10,7 +10,7 @@ The Monitoring app sets `prometheus.prometheusSpec.ignoreNamespaceSelectors=fals
 
 This ensures you can view traffic, metrics and graphs for resources deployed in a namespace with `istio-injection=enabled` label.
 
-If you would like to limit Prometheus to specific namespaces, set `prometheus.prometheusSpec.ignoreNamespaceSelectors=true`. Once you do this, you will need to add additional configuration to continue to monitor your resources.
+If you would like to limit Prometheus to specific namespaces, set `prometheus.prometheusSpec.ignoreNamespaceSelectors=true`. Once you do this, you must perform some additional configuration to continue to monitor your resources.
 
 
 ### Limiting Monitoring to Specific Namespaces by Setting ignoreNamespaceSelectors to True

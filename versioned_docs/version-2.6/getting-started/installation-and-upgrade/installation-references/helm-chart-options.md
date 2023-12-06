@@ -44,7 +44,7 @@ For information on enabling experimental features, refer to [this page.](../../.
 | `debug`                        | false                                                 | `bool` - set debug flag on rancher server                                                                                                         |
 | `extraEnv`                     | []                                                    | `list` - set additional environment variables for Rancher                                                          |
 | `imagePullSecrets`             | []                                                    | `list` - list of names of Secret resource containing private registry credentials                                                                 |
-| `ingress.configurationSnippet` | ""                                                    | `string` - Add additional Nginx configuration. Can be used for proxy configuration.   |
+| `ingress.configurationSnippet` | ""                                                    | `string` - additional Nginx configuration. Can be used for proxy configuration.   |
 | `ingress.extraAnnotations`     | {}                                                    | `map` - additional annotations to customize the ingress                                                                                           |
 |  `ingress.enabled` |  true   |    When set to false, Helm will not install a Rancher ingress. Set the option to false to deploy your own ingress.   |
 | `letsEncrypt.ingress.class`    | ""                                                    | `string` - optional ingress class for the cert-manager acmesolver ingress that responds to the Let's Encrypt ACME challenges. Options: traefik, nginx.       |                      |
@@ -189,7 +189,7 @@ To learn more about how to configure environment variables, refer to [Define Env
 
 ### Additional Trusted CAs
 
-If you have private registries, catalogs or a proxy that intercepts certificates, you may need to add additional trusted CAs to Rancher.
+If you have private registries, catalogs or a proxy that intercepts certificates, you may need to add more trusted CAs to Rancher.
 
 ```plain
 --set additionalTrustedCAs=true

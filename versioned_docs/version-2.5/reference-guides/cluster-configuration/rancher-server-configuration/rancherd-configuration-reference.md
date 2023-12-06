@@ -112,7 +112,7 @@ It can be run with the following options:
 |--------|-------------|
 | `--bind-address value` |  RancherD bind address (default: 0.0.0.0) |
 | `--advertise-address value`  | IP address that apiserver uses to advertise to members of the cluster (default: node-external-ip/node-ip) |
-| `--tls-san value`   | Add additional hostname or IP as a Subject Alternative Name in the TLS cert |
+| `--tls-san value`   | Add hostname or IP as a Subject Alternative Name in the TLS cert |
 
 ### Data
 

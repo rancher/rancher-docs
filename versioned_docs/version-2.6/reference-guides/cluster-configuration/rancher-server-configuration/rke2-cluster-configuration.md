@@ -212,7 +212,7 @@ Option to change the range of ports that can be used for [NodePort services](htt
 
 #### TLS Alternate Names
 
-Add additional hostnames or IPv4/IPv6 addresses as Subject Alternative Names on the server TLS cert.
+Add hostnames or IPv4/IPv6 addresses as Subject Alternative Names on the server TLS cert.
 
 #### Authorized Cluster Endpoint
 

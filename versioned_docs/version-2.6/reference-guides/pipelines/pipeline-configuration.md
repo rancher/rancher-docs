@@ -299,7 +299,7 @@ You can enable notifications to any notifiers based on the build status of a pip
 
     :::
 
-1. For each recipient, select which notifier type from the dropdown. Based on the type of notifier, you can use the default recipient or override the recipient with a different one. For example, if you have a notifier for _Slack_, you can update which channel to send the notification to. You can add additional notifiers by clicking **Add Recipient**.
+1. For each recipient, select which notifier type from the dropdown. Based on the type of notifier, you can use the default recipient or override the recipient with a different one. For example, if you have a notifier for _Slack_, you can update which channel to send the notification to. You can add more notifiers by clicking **Add Recipient**.
 
 ### Configuring Notifications by YAML
 

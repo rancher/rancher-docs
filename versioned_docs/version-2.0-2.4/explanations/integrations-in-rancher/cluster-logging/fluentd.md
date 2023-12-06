@@ -10,7 +10,7 @@ If your organization uses [Fluentd](https://www.fluentd.org/), you can configure
 
 ## Fluentd Configuration
 
-You can add multiple Fluentd Servers. If you want to add additional Fluentd servers, click **Add Fluentd Server**. For each Fluentd server, complete the configuration information:
+You can add multiple Fluentd Servers. First, click **Add Fluentd Server**. For each Fluentd server, complete the configuration information:
 
 1. In the **Endpoint** field, enter the address and port of your Fluentd instance, e.g. `http://Fluentd-server:24224`.
 

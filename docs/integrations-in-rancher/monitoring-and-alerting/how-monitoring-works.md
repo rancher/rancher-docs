@@ -88,7 +88,7 @@ A PrometheusRule allows you to define one or more RuleGroups. Each RuleGroup con
 - Labels that should be attached to the alert or record that identify it (e.g. cluster name or severity)
 - Annotations that encode any additional important pieces of information that need to be displayed on the notification for an alert (e.g. summary, description, message, runbook URL, etc.). This field is not required for recording rules.
 
-On evaluating a [rule](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#rule), Prometheus will execute the provided PromQL query, add additional provided labels (or annotations - only for alerting rules), and execute the appropriate action for the rule. For example, an Alerting Rule that adds `team: front-end` as a label to the provided PromQL query will append that label to the fired alert, which will allow Alertmanager to forward the alert to the correct Receiver.
+Upon evaluating a [rule](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#rule), Prometheus runs the provided PromQL query, adds the provided labels, and runs the appropriate action for the rule. If the rule triggers an alert, Prometheus also adds the provided annotations. For example, an Alerting Rule that adds `team: front-end` as a label to the provided PromQL query will append that label to the fired alert, which will allow Alertmanager to forward the alert to the correct Receiver.
 
 ### Alerting and Recording Rules
 

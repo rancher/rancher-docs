@@ -39,13 +39,13 @@ For each application that you want to route traffic to, you will need to create 
 
 ## Permissions for Global DNS Providers and Entries
 
-By default, only [global administrators](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md) and the creator of the Global DNS provider or Global DNS entry have access to use, edit and delete them. When creating the provider or entry, the creator can add additional users in order for those users to access and manage them. By default, these members will get `Owner` role to manage them.
+By default, only [global administrators](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md) and the creator of the Global DNS provider or Global DNS entry have access to use, edit and delete them. When creating the provider or entry, the creator can add more users in order for those users to access and manage them. By default, these members will get `Owner` role to manage them.
 
 ## Setting up Global DNS for Applications
 
 1. From the **Global View**, select **Tools > Global DNS Providers**.
 1. To add a provider, choose from the available provider options and configure the Global DNS Provider with necessary credentials and an optional domain. For help, see [DNS Provider Configuration.](#dns-provider-configuration)
-1. (Optional) Add additional users so they could  use the provider when creating Global DNS entries as well as manage the Global DNS provider.
+1. (Optional) Add more users so they can also use the provider when creating Global DNS entries and manage the Global DNS provider.
 1. (Optional) Pass any custom values in the Additional Options section.
 
 ## Adding a Global DNS Entry

@@ -63,7 +63,7 @@ Use this option to set an ingress rule for handling requests that don't match an
 1. Click **Add Certificate**.
 1. Select a **Certificate** from the drop-down list.
 1. Enter the **Host** using encrypted communication.
-1. To add additional hosts that use the certificate, click **Add Hosts**.
+1. To add more hosts that use the same certificate, click **Add Hosts**.
 
 ### Labels and Annotations
 

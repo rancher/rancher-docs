@@ -88,7 +88,7 @@ You can access your cluster after its state is updated to **Active.**
 1. Use **Cluster Options** to choose the version of Kubernetes that will be installed, what network provider will be used and if you want to enable project network isolation. To see more cluster options, click on **Show advanced options.** Refer to [Selecting Cloud Providers](../../../../../pages-for-subheaders/set-up-cloud-providers.md) to configure the Kubernetes Cloud Provider. For help configuring the cluster, refer to the [RKE cluster configuration reference.](../../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)
 1. Add one or more node pools to your cluster. Each node pool uses a node template to provision new nodes. For more information about node pools, including best practices for assigning Kubernetes roles to them, see [this section.](../../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md) To create a node template, click **Add Node Template**. For help filling out the node template, refer to [EC2 Node Template Configuration.](../../../../../reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/amazon-ec2.md)
 1. Click **Create**.
-1. **Optional:** Add additional node pools.
+1. **Optional:** Add more node pools.
 1. Review your cluster settings to confirm they are correct. Then click **Create**.
 
 **Result:**
