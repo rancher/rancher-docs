@@ -19,7 +19,7 @@ For most updates, you'll need to edit a file in the `/docs` directory, which rep
 
 Whenever an update is made to `/docs`, you should apply the same change to the corresponding file in `/versioned_docs/version-2.8`. If a change only affects older versions, you don't need to mirror it to the `/docs` directory.
 
-If a file is moved or renamed, you'll also need to edit the `sidebars.js` files for each version, and the list of redirects in `docusaurus.config.js`. See [Moving or Renaming Docs](./moving-or-renaming-docs.md).
+If a file is moved or renamed, you'll also need to edit the `sidebars.js` files for each affected version, as well as the list of redirects in `docusaurus.config.js`. See [Moving or Renaming Docs](./moving-or-renaming-docs.md).
 
 ### Navigate the Repo
 
