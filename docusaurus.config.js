@@ -187,6 +187,7 @@ module.exports = {
             2.8: {
               label: 'v2.8',
               path: 'v2.8',
+              banner: 'none'
             },
             2.7: {
               label: 'v2.7',
