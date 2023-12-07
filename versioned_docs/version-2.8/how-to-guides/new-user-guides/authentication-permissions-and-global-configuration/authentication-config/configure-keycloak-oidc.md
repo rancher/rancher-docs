@@ -16,7 +16,7 @@ If you have an existing configuration using the SAML protocol and want to switch
 ## Prerequisites
 
 - On Rancher, Keycloak (SAML) is disabled.
-- You must have a [Keycloak IdP Server](https://www.keycloak.org/docs/latest/server_installation/) configured.
+- You must have a [Keycloak IdP Server]https://www.keycloak.org/guides#getting-started configured.
 - In Keycloak, create a [new OIDC client](https://www.keycloak.org/docs/latest/server_admin/#oidc-clients), with the settings below. See the [Keycloak documentation](https://www.keycloak.org/docs/latest/server_admin/#oidc-clients) for help.
 
      Setting | Value
