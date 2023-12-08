@@ -15,7 +15,7 @@ Follow the instructions from this page when:
 :::tip
 
 * Follow these steps to [migrate Rancher](../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md).
-* If you need to restore Rancher to its previous state at the same Rancher version, see the [restore documentation]( ../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher.md).
+* If you need to restore Rancher to its previous state at the same Rancher version, see the [restore documentation](../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher.md).
 
 :::
 
