@@ -48,7 +48,7 @@ The `rancher-backup` operator can be installed from the Rancher UI, or with the 
 
 :::note
 
-There is a known issue in Fleet that occurs after performing a restoration using the backup-restore-operator: Secrets used for clientSecretName and helmSecretName are not included in Fleet gitrepos. Refer [here](./fleet-gitops-at-scale.md#troubleshooting) for a workaround.
+There is a known issue in Fleet that occurs after performing a restoration using the backup-restore-operator: Secrets used for clientSecretName and helmSecretName are not included in Fleet gitrepos. Refer [Fleet Troubleshooting](../integrations-in-rancher/fleet/overview.md#troubleshooting) for a workaround.
 
 :::
 

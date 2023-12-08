@@ -6,7 +6,7 @@ You can access Rancher's resources through the Kubernetes API. This guide will h
 
 1. In the upper left corner, click **☰ > Global Settings**. 
 2. Find and copy the address in the `server-url` field.
-3. [Create](../reference-guides/user-settings/api-keys#creating-an-api-key) a Rancher API key with no scope.
+3. [Create](../reference-guides/user-settings/api-keys.md#creating-an-api-key) a Rancher API key with no scope.
 
   :::danger
 

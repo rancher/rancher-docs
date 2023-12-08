@@ -11,7 +11,7 @@ If your organization uses Keycloak Identity Provider (IdP) for user authenticati
 
 ## Prerequisites
 
-- You must have a [Keycloak IdP Server](https://www.keycloak.org/docs/latest/server_installation/) configured.
+- You must have a [Keycloak IdP Server](https://www.keycloak.org/guides#getting-started) configured.
 - In Keycloak, create a [new SAML client](https://www.keycloak.org/docs/latest/server_admin/#saml-clients), with the settings below. See the [Keycloak documentation](https://www.keycloak.org/docs/latest/server_admin/#saml-clients) for help.
 
      Setting | Value
