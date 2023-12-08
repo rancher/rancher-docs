@@ -12,7 +12,7 @@ description: 创建 Keycloak OpenID Connect (OIDC) 客户端并配置 Rancher �
 ## 先决条件
 
 - 已在 Rancher 上禁用 Keycloak (SAML)。
-- 你必须配置了 [Keycloak IdP 服务器]https://www.keycloak.org/guides#getting-started。
+- 你必须配置了 [Keycloak IdP 服务器](https://www.keycloak.org/guides#getting-started)。
 - 在 Keycloak 中，使用以下设置创建一个[新的 OIDC 客户端](https://www.keycloak.org/docs/latest/server_admin/#oidc-clients)。如需获取帮助，请参见 [Keycloak 文档](https://www.keycloak.org/docs/latest/server_admin/#oidc-clients)。
 
    | 设置 | 值 |
