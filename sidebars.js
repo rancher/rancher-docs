@@ -492,13 +492,25 @@ const sidebars = {
                     id: "pages-for-subheaders/set-up-cloud-providers",
                   },
                   items: [
-                    "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon",
-                    "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/migrate-to-out-of-tree-amazon",
+                    {
+                    type: 'category',
+                    label: 'Amazon',
+                    items: [
+                      "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon/configure-amazon",
+                      "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon/migrate-to-out-of-tree-amazon",
+                      ]
+                    },
                     "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/azure",
                     "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/google-compute-engine",
-                    "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere",
-                    "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere",
-                    "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/migrate-to-out-of-tree-vsphere",
+                    {
+                      type: 'category',
+                      label: 'vSphere',
+                      items: [
+                        "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/vsphere/configure-in-tree-vsphere",
+                        "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/vsphere/configure-out-of-tree-vsphere",
+                        "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/vsphere/migrate-to-out-of-tree-vsphere",
+                        ]
+                      },
                   ]
                 },
                 "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters",

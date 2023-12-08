@@ -8,7 +8,7 @@ title: vSphere Storage
 
 To provide stateful workloads with vSphere storage, we recommend creating a vSphereVolume StorageClass. This practice dynamically provisions vSphere storage when workloads request volumes through a PersistentVolumeClaim.
 
-In order to dynamically provision storage in vSphere, the vSphere provider must be enabled. See the following pages for more: [Out-of-tree vSphere](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere.md) and [in-tree vSphere](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere.md).
+In order to dynamically provision storage in vSphere, the vSphere provider must be enabled. See the following pages for more: [Out-of-tree vSphere](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/vsphere/configure-out-of-tree-vsphere.md) and [in-tree vSphere](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/vsphere/configure-in-tree-vsphere.md).
 
 
 ### Prerequisites

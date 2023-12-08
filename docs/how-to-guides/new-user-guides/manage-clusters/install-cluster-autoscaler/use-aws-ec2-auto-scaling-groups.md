@@ -232,7 +232,7 @@ On AWS EC2, we should create a few objects to configure our system. We've define
       sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:<RANCHER_VERSION> --server https://<RANCHER_URL> --token <RANCHER_TOKEN> --ca-checksum <RANCHER_CA_CHECKCSUM> --address ${PUBLIC_IP} --internal-address ${PRIVATE_IP} ${K8S_ROLES}
       ```
 
-More info is at [RKE clusters on AWS](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon.md) and [Cluster Autoscaler on AWS.](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md)
+More info is at [RKE clusters on AWS](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon/configure-amazon.md) and [Cluster Autoscaler on AWS.](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md)
 
 ### 3. Deploy Nodes
 

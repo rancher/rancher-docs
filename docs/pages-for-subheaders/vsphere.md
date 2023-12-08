@@ -51,10 +51,10 @@ In [this section,](../how-to-guides/new-user-guides/launch-kubernetes-with-ranch
 
 ## Provisioning Storage
 
-For an example of how to provision storage in vSphere using Rancher, refer to [this section.](../how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/vsphere-storage.md) In order to dynamically provision storage in vSphere, the vSphere provider must be enabled. Refer to [in-tree vSphere config](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere.md) and [out-of-tree vSphere config](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere.md).
+For an example of how to provision storage in vSphere using Rancher, refer to [this section.](../how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/vsphere-storage.md) In order to dynamically provision storage in vSphere, the vSphere provider must be enabled. Refer to [in-tree vSphere config](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/vsphere/configure-in-tree-vsphere.md) and [out-of-tree vSphere config](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/vsphere/configure-out-of-tree-vsphere.md).
 
 ## Enabling the vSphere Cloud Provider
 
 When a cloud provider is set up in Rancher, the Rancher server can automatically provision new infrastructure for the cluster, including new nodes or persistent storage devices.
 
-For details on enabling the vSphere cloud provider, refer to [in-tree vSphere config](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere.md) and [out-of-tree vSphere config](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere.md).
+For details on enabling the vSphere cloud provider, refer to [in-tree vSphere config](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/vsphere/configure-in-tree-vsphere.md) and [out-of-tree vSphere config](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/vsphere/configure-out-of-tree-vsphere.md).
