@@ -18,7 +18,9 @@ For example, this command could be used to install on one of the main Linux dist
 curl https://releases.rancher.com/install-docker/<version-number>.sh | sh
 ```
 
-Consult the [Rancher support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-8-0/) to match a validated Docker version with your operating system and version of Rancher. To find out whether a script is available for installing a certain Docker version, refer to this [GitHub repository,](https://github.com/rancher/install-docker) which contains all of Rancher's Docker installation scripts.
+Consult the [Rancher support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-8-0/) to match a validated Docker version with your operating system and version of Rancher. Although the support matrix lists Rancher releases down to the patch version, only the major and minor version of the release are relevant for the Rancher installation scripts.
+
+To find out whether a script is available for installing a certain Docker version, refer to this [GitHub repository,](https://github.com/rancher/install-docker) which contains all of Rancher's Docker installation scripts.
 
 Note that the following sysctl setting must be applied:
 
