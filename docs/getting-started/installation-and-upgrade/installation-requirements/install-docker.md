@@ -12,16 +12,16 @@ There are a couple of options for installing Docker. One option is to refer to t
 
 Another option is to use one of Rancher's Docker installation scripts, which are available for most recent versions of Docker.
 
-For example, this command could be used to install Docker 20.10 on the main Linux distributions like SUSE Linux Enterprise or Ubuntu:
+For example, this command could be used to install Docker 24.0 on the main Linux distributions like SUSE Linux Enterprise or Ubuntu:
 
-```
-curl https://releases.rancher.com/install-docker/20.10.sh | sh
+```bash
+curl https://releases.rancher.com/install-docker/24.0.sh | sh
 ```
 
 Rancher has installation scripts for every version of upstream Docker that Kubernetes supports. To find out whether a script is available for installing a certain Docker version, refer to this [GitHub repository,](https://github.com/rancher/install-docker) which contains all of Rancher's Docker installation scripts.
 
 Note that the following sysctl setting must be applied:
 
-```
+```bash
 net.bridge.bridge-nf-call-iptables=1
 ```
