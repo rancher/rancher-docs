@@ -12,7 +12,7 @@ There are a couple of options for installing Docker. One option is to refer to t
 
 Another option is to use one of Rancher's Docker installation scripts, which are available for most recent versions of Docker.
 
-For example, this command could be used to install Docker 24.0 on the main Linux distributions like SUSE Linux Enterprise or Ubuntu:
+For example, this command could be used to install Docker 24.0 on the main Linux distributions such as SUSE Linux Enterprise or Ubuntu:
 
 ```bash
 curl https://releases.rancher.com/install-docker/24.0.sh | sh
