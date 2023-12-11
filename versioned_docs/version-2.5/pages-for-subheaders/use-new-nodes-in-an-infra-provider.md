@@ -6,11 +6,11 @@ title: Launching Kubernetes on New Nodes in an Infrastructure Provider
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/use-new-nodes-in-an-infra-provider"/>
 </head>
 
-Using Rancher, you can create pools of nodes based on a [node template](use-new-nodes-in-an-infra-provider.md#node-templates). This node template defines the parameters you want to use to launch nodes in your infrastructure providers or cloud providers.
+Using Rancher, you can create pools of nodes based on a [node template](#node-templates). This node template defines the parameters you want to use to launch nodes in your infrastructure providers or cloud providers.
 
 One benefit of installing Kubernetes on node pools hosted by an infrastructure provider is that if a node loses connectivity with the cluster, Rancher can automatically create another node to join the cluster to ensure that the count of the node pool is as expected.
 
-The available cloud providers to create a node template are decided based on active [node drivers](use-new-nodes-in-an-infra-provider.md#node-drivers).
+The available cloud providers to create a node template are decided based on active [node drivers](#node-drivers).
 
 ## Node Templates
 

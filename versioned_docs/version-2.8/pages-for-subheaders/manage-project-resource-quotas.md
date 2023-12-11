@@ -19,7 +19,7 @@ Resource quotas in Rancher include the same functionality as the [native version
 Edit resource quotas when:
 
 - You want to limit the resources that a project and its namespaces can use.
-- You want to scale the resources available to a project up or down when a research quota is already in effect.
+- You want to scale the resources available to a project up or down when a resource quota is already in effect.
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to apply a resource quota and click **Explore**.
