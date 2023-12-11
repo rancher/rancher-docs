@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.5/pages-for-subheaders/use-new-nodes-in-an-infra-provider.md",
     "sourceDirName": "pages-for-subheaders",
     "slug": "/pages-for-subheaders/use-new-nodes-in-an-infra-provider",
-    "permalink": "/zh/v2.5/pages-for-subheaders/use-new-nodes-in-an-infra-provider",
+    "permalink": "/v2.5/pages-for-subheaders/use-new-nodes-in-an-infra-provider",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/pages-for-subheaders/use-new-nodes-in-an-infra-provider.md",
     "tags": [],
     "version": "2.5",
-    "lastUpdatedAt": 1692127491,
-    "formattedLastUpdatedAt": "2023年8月15日",
+    "lastUpdatedAt": 1702076482,
+    "formattedLastUpdatedAt": "Dec 8, 2023",
     "frontMatter": {
         "title": "Launching Kubernetes on New Nodes in an Infrastructure Provider"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Launching Kubernetes with Rancher",
-        "permalink": "/zh/v2.5/pages-for-subheaders/launch-kubernetes-with-rancher"
+        "permalink": "/v2.5/pages-for-subheaders/launch-kubernetes-with-rancher"
     },
     "next": {
         "title": "Creating an Amazon EC2 Cluster",
-        "permalink": "/zh/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster"
+        "permalink": "/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster"
     }
 };
 const assets = {};
@@ -413,10 +413,10 @@ function MDXContent(_param) {
         href: "https://ranchermanager.docs.rancher.com/pages-for-subheaders/use-new-nodes-in-an-infra-provider"
     })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Using Rancher, you can create pools of nodes based on a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/pages-for-subheaders/use-new-nodes-in-an-infra-provider#node-templates"
+        "href": "#node-templates"
     }, `node template`), `. This node template defines the parameters you want to use to launch nodes in your infrastructure providers or cloud providers.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `One benefit of installing Kubernetes on node pools hosted by an infrastructure provider is that if a node loses connectivity with the cluster, Rancher can automatically create another node to join the cluster to ensure that the count of the node pool is as expected.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The available cloud providers to create a node template are decided based on active `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/pages-for-subheaders/use-new-nodes-in-an-infra-provider#node-drivers"
+        "href": "#node-drivers"
     }, `node drivers`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "node-templates"
     }, `Node Templates`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `A node template is the saved configuration for the parameters to use when provisioning nodes in a specific cloud provider. These nodes can be launched from the UI. Rancher uses `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -545,15 +545,15 @@ function MDXContent(_param) {
         parentName: "li"
     }, `Multiple node templates can share the same cloud credential to create node pools. If your key is compromised or expired, the cloud credential can be updated in a single place, which allows all node templates that are using it to be updated at once.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After cloud credentials are created, the user can start `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/reference-guides/user-settings/manage-cloud-credentials"
+        "href": "/v2.5/reference-guides/user-settings/manage-cloud-credentials"
     }, `managing the cloud credentials that they created`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "node-drivers"
     }, `Node Drivers`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you don't find the node driver that you want to use, you can see if it is available in Rancher's built-in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers#activatingdeactivating-node-drivers"
+        "href": "/v2.5/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers#activatingdeactivating-node-drivers"
     }, `node drivers and activate it`), `, or you can `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers#adding-custom-node-drivers"
+        "href": "/v2.5/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers#adding-custom-node-drivers"
     }, `add your own custom node driver`), `.`));
 }
 MDXContent.isMDXComponent = true;
