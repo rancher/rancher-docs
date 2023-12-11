@@ -2,6 +2,8 @@
 title: Installing Rancher Prime on AWS
 ---
 
+This page covers installing Rancher...
+
 ## Installing Rancher  
 
 1. Log helm into the AWS Marketplace Elastic Container Registry (ECR) to fetch the application. The AWS Marketplace ECR is always in the `us-east-1` region:
@@ -20,9 +22,9 @@ title: Installing Rancher Prime on AWS
 
   Rancher Prime utilizes cert-manager to issue and maintain its certificates. Rancher will generate a CA certificate of its own, and sign a cert using that CA.
 
-  The Rancher hostname must be resolvable by a public DNS. Please refer to the [Prerequisites](rancher-prime-aws.md#prerequisites) section for more details. For example, if the DNS name is rancher.my.org, HOST_NAME=rancher.my.org.
-
   :::
+
+  The Rancher hostname must be resolvable by a public DNS. Please refer to the [Prerequisites](rancher-prime-aws.md#prerequisites) section for more details. For example, if the DNS name is rancher.my.org, HOST_NAME=rancher.my.org.
 
   ```shell
   helm install -n cattle-rancher-csp-deployer-system rancher-cloud --create-namespace \
@@ -72,7 +74,7 @@ title: Installing Rancher Prime on AWS
 
 ### Check Helm Chart Installation
 
-To check if helm chart installation is completed, run following command:
+Check that the helm chart installation is completed:
 
 ```shell
 helm ls -n cattle-rancher-csp-deployer-system
