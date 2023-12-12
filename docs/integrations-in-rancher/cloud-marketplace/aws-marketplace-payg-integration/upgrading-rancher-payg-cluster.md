@@ -2,9 +2,9 @@
 title: Upgrading Rancher Prime PAYG Cluster in AWS
 ---
 
-The AWS Marketplace PAYG offering is tied to a billing adapter and the Rancher Prime version. These are updated periodically as new version of the billing adapter or Rancher Prime are released.
+The AWS Marketplace PAYG offering is tied to a billing adapter and the Rancher Prime version. These are updated periodically as new version of the billing adapter or Rancher Prime are released. In this situation, the helm chart will be updated with new tags and digests, and a new version of the helm chart will be uploaded.
 
-In this situation, the helm chart will be updated with new tags and digests, and a new version of the helm chart will be uploaded. To upgrade the deployed helm chart with the latest version, run the following helm command:
+To upgrade the deployed helm chart with the latest version, run the following helm command:
 
 ```shell
 helm upgrade -n cattle-rancher-csp-deployer-system rancher-cloud --create-namespace \
@@ -23,3 +23,9 @@ To check if the upgraded Helm chart deployed successfully:
 ```shell
 helm ls -n cattle-rancher-csp-deployer-system
 ```
+
+:::note
+
+PAYG customers will have constraints on getting updates to the offer based on the latest version SUSE has published to AWS, which may trail slightly behind the latest Rancher release.
+
+:::
