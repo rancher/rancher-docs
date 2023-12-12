@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[72514],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[14418],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 28566:
+/***/ 28792:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/installation-and-upgrade/installation-requirements/install-docker",
-    "id": "version-2.0-2.4/getting-started/installation-and-upgrade/installation-requirements/install-docker",
+    "id": "version-2.5/getting-started/installation-and-upgrade/installation-requirements/install-docker",
     "title": "Installing Docker",
     "description": "Docker is required to be installed on nodes where the Rancher server will be installed with Helm or Docker.",
-    "source": "@site/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/installation-requirements/install-docker.md",
+    "source": "@site/versioned_docs/version-2.5/getting-started/installation-and-upgrade/installation-requirements/install-docker.md",
     "sourceDirName": "getting-started/installation-and-upgrade/installation-requirements",
     "slug": "/getting-started/installation-and-upgrade/installation-requirements/install-docker",
-    "permalink": "/v2.0-v2.4/getting-started/installation-and-upgrade/installation-requirements/install-docker",
+    "permalink": "/v2.5/getting-started/installation-and-upgrade/installation-requirements/install-docker",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/installation-requirements/install-docker.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/getting-started/installation-and-upgrade/installation-requirements/install-docker.md",
     "tags": [],
-    "version": "2.0-2.4",
-    "lastUpdatedAt": 1685125170,
-    "formattedLastUpdatedAt": "May 26, 2023",
+    "version": "2.5",
+    "lastUpdatedAt": 1702394675,
+    "formattedLastUpdatedAt": "Dec 12, 2023",
     "frontMatter": {
         "title": "Installing Docker"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Installation Requirements",
-        "permalink": "/v2.0-v2.4/pages-for-subheaders/installation-requirements"
+        "permalink": "/v2.5/pages-for-subheaders/installation-requirements"
     },
     "next": {
         "title": "Port Requirements",
-        "permalink": "/v2.0-v2.4/getting-started/installation-and-upgrade/installation-requirements/port-requirements"
+        "permalink": "/v2.5/getting-started/installation-and-upgrade/installation-requirements/port-requirements"
     }
 };
 const assets = {};
@@ -358,13 +358,14 @@ function MDXContent(_param) {
     })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Docker is required to be installed on nodes where the Rancher server will be installed with Helm or Docker.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `There are a couple of options for installing Docker. One option is to refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://docs.docker.com/install/"
-    }, `official Docker documentation`), ` about how to install Docker on Linux. The steps will vary based on the Linux distribution.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Another option is to use one of Rancher's Docker installation scripts, which are available for most recent versions of Docker.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For example, this command could be used to install Docker 19.03 on Ubuntu:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre"
-    }, `curl https://releases.rancher.com/install-docker/19.03.sh | sh
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher has installation scripts for every version of upstream Docker that Kubernetes supports. To find out whether a script is available for installing a certain Docker version, refer to this `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `official Docker documentation`), ` about how to install Docker on Linux. The steps will vary based on the Linux distribution.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Another option is to use one of Rancher's Docker installation scripts, which are available for most recent versions of Docker. Rancher has installation scripts for every version of upstream Docker that Kubernetes supports.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For example, this command could be used to install on one of the main Linux distributions, such as SUSE Linux Enterprise or Ubuntu:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `curl https://releases.rancher.com/install-docker/<version-number>.sh | sh
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Consult the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://github.com/rancher/install-docker"
-    }, `GitHub repository,`), ` which contains all of Rancher's Docker installation scripts.`));
+        "href": "https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-5-16/"
+    }, `Rancher support matrix`), ` to match a validated Docker version with your operating system and version of Rancher. Although the support matrix lists validated Docker versions down to the patch version, only the major and minor version of the release are relevant for the Docker installation scripts.`));
 }
 MDXContent.isMDXComponent = true;
 
