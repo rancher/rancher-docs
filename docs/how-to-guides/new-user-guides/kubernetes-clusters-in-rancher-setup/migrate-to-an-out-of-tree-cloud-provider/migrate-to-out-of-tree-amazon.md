@@ -12,7 +12,7 @@ You can migrate from an in-tree to an out-of-tree AWS cloud provider on Kubernet
 
 To migrate from the in-tree cloud provider to the out-of-tree AWS cloud provider, you must stop the existing cluster's kube controller manager and install the AWS cloud controller manager. There are many ways to do this. Refer to the official AWS documentation on the [external cloud controller manager](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for details.
 
-If it's acceptable to have some downtime, you can [switch to an external cloud provider](./configure-amazon.md#using-the-out-of-tree-aws-cloud-provider-for-rke), which removes in-tree components and then deploy charts to install the AWS cloud controller manager.
+If it's acceptable to have some downtime, you can [switch to an external cloud provider](./amazon.md#using-the-out-of-tree-aws-cloud-provider), which removes in-tree components and then deploy charts to install the AWS cloud controller manager.
 
 If your setup can't tolerate any control plane downtime, you must enable leader migration. This facilitates a smooth transition from the controllers in the kube controller manager to their counterparts in the cloud controller manager. Refer to the official AWS documentation on [Using leader migration](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for more details.
 
@@ -20,7 +20,7 @@ If your setup can't tolerate any control plane downtime, you must enable leader 
 The Kubernetes [cloud controller migration documentation](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#before-you-begin) states that it's possible to migrate with the same Kubernetes version, but assumes that the migration is part of a  Kubernetes upgrade. Refer to the Kubernetes documentation on [migrating to use the cloud controller manager](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/) to see if you need to customize your setup before migrating. Confirm your [migration configuration values](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#default-configuration). If your cloud provider provides an implementation of the Node IPAM controller,  you also need to [migrate the IPAM controller](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#node-ipam-controller-migration).
 :::
 
-<Tabs>
+<Tabs groupId="k8s-distro">
 <TabItem value="RKE2">
 
 1. Update the cluster config to enable leader migration:
@@ -55,9 +55,7 @@ spec:
 kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
 ```
 
-3. To install the AWS cloud controller manager with leader migration enabled, follow Steps 1-3 for [deploying the cloud controller manager chart](./configure-amazon.md#using-out-of-tree-aws-cloud-provider-for-rke2)
-From Kubernetes 1.22 onwards, the kube-controller-manager will utilize a default configuration which will satisfy the controller-to-manager migration. 
-Update container args of the `aws-cloud-controller-manager` under `spec.rkeConfig.additionalManifest` to enable leader migration:
+3. To install the AWS cloud controller manager with leader migration enabled, follow Steps 1-3 for [deploying the cloud controller manager chart](./amazon.md#using-out-of-tree-aws-cloud-provider-for-rke2). From Kubernetes 1.22 onwards, the kube-controller-manager will utilize a default configuration which will satisfy the controller-to-manager migration. Update container args of the `aws-cloud-controller-manager` under `spec.rkeConfig.additionalManifest` to enable leader migration:
 
 ```shell
 - '--enable-leader-migration=true' 
@@ -151,7 +149,7 @@ cloud_provider:
 kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
 ```
 
-3. To install the AWS cloud controller manager, you must enable leader migration and follow the same steps as when installing AWS on a new cluster. To enable leader migration, add the following to the container arguments in step 7 while following the [steps to install the chart](./configure-amazon.md#helm-chart-installation-from-ui-for-rke):
+3. To install the AWS cloud controller manager, you must enable leader migration and follow the same steps as when installing AWS on a new cluster. To enable leader migration, add the following to the container arguments in step 7 while following the [steps to install the chart](./amazon.md#helm-chart-installation-from-ui):
 
 ```yaml
 - '--enable-leader-migration=true' 

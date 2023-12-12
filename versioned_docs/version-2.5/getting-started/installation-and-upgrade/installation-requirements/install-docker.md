@@ -10,12 +10,12 @@ Docker is required to be installed on nodes where the Rancher server will be ins
 
 There are a couple of options for installing Docker. One option is to refer to the [official Docker documentation](https://docs.docker.com/install/) about how to install Docker on Linux. The steps will vary based on the Linux distribution.
 
-Another option is to use one of Rancher's Docker installation scripts, which are available for most recent versions of Docker.
+Another option is to use one of Rancher's Docker installation scripts, which are available for most recent versions of Docker. Rancher has installation scripts for every version of upstream Docker that Kubernetes supports.
 
-For example, this command could be used to install Docker 20.10 on Ubuntu:
+For example, this command could be used to install on one of the main Linux distributions, such as SUSE Linux Enterprise or Ubuntu:
 
+```bash
+curl https://releases.rancher.com/install-docker/<version-number>.sh | sh
 ```
-curl https://releases.rancher.com/install-docker/20.10.sh | sh
-```
 
-Rancher has installation scripts for every version of upstream Docker that Kubernetes supports. To find out whether a script is available for installing a certain Docker version, refer to this [GitHub repository,](https://github.com/rancher/install-docker) which contains all of Rancher's Docker installation scripts.
+Consult the [Rancher support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-5-16/) to match a validated Docker version with your operating system and version of Rancher. Although the support matrix lists validated Docker versions down to the patch version, only the major and minor version of the release are relevant for the Docker installation scripts.

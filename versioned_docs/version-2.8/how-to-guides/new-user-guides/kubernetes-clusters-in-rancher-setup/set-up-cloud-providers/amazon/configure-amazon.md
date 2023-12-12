@@ -9,7 +9,7 @@ weight: 1
 
 :::note Important:
 
-In Kubernetes 1.27 and later, you must use an out-of-tree AWS cloud provider. In-tree cloud providers have been deprecated. The Amazon cloud provider has been removed completely, and won't work after an upgrade to Kubernetes 1.27. The steps listed below are still required to set up an Amazon cloud provider. You can [set up an out-of-tree cloud provider for RKE](#using-the-out-of-tree-aws-cloud-provider-for-rke) after creating an IAM role and configuring the ClusterID.
+In Kubernetes 1.27 and later, you must use an out-of-tree AWS cloud provider. In-tree cloud providers have been deprecated. The Amazon cloud provider has been removed completely, and won't work after an upgrade to Kubernetes 1.27. The steps listed below are still required to set up an Amazon cloud provider. You can [set up an out-of-tree cloud provider](#using-the-out-of-tree-aws-cloud-provider) after creating an IAM role and configuring the ClusterID.
 
 You can also [migrate from an in-tree to an out-of-tree AWS cloud provider](./migrate-to-out-of-tree-amazon.md) on Kubernetes 1.26 and earlier. All existing clusters must migrate prior to upgrading to v1.27 in order to stay functional.
 
@@ -177,7 +177,7 @@ The kubelet component has the ability to automatically obtain ECR credentials, w
 
 ### Using the Out-of-Tree AWS Cloud Provider
 
-<Tabs>
+<Tabs groupId="k8s-distro">
 <TabItem value="RKE2">
 
 1. [Node name conventions and other prerequisites](https://cloud-provider-aws.sigs.k8s.io/prerequisites/) must be followed for the cloud provider to find the instance correctly.
@@ -329,7 +329,7 @@ Refer to the offical AWS upstream documentation for the [cloud controller manage
 
 ### Helm Chart Installation from CLI
 
-<Tabs>
+<Tabs groupId="k8s-distro">
 <TabItem value="RKE2">
 
 Official upstream docs for [Helm chart installation](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager) can be found on Github.
@@ -605,7 +605,7 @@ kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
 
 ### Helm Chart Installation from UI
 
-<Tabs>
+<Tabs groupId="k8s-distro">
 <TabItem value="RKE2">
 
 1. Click **☰**, then select the name of the cluster from the left navigation.

@@ -56,7 +56,7 @@ For users who didn't rotate their webhook certificates, and they have expired af
 Rancher launched Kubernetes clusters have the ability to rotate the auto-generated certificates through the UI.
 
 1. In the upper left corner, click **☰ > Cluster Management**.
-1. On the **Clusters** page, go to the cluster you want to rotate certificates for amd click **⋮ > Rotate Certificates**.
+1. On the **Clusters** page, go to the cluster you want to rotate certificates for and click **⋮ > Rotate Certificates**.
 1. Select which certificates that you want to rotate.
 
    * Rotate all Service certificates (keep the same CA)
