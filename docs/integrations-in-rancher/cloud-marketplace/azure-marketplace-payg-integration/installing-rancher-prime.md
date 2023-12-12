@@ -79,3 +79,7 @@ The Rancher hostname must be resolvable by public DNS. Please refer to the [Prer
 ## Rancher Prime PAYG Billing
 
 View billing information in the Azure Portal by going to **Home** > **Subscriptions** > **Cost Management - Cost analysis**.
+
+## Uninstalling Rancher Prime PAYG Offering
+
+To uninstall the Rancher Prime PAYG offering, migrate any non-Rancher workloads to a different cluster and destroy the Rancher cluster.

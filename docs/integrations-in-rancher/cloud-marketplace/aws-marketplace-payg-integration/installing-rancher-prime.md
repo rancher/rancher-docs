@@ -140,3 +140,7 @@ You may now login to Rancher dashboard by pointing your browser to the Rancher s
 The Rancher hostname must be resolvable by public DNS. Please refer to the [Prerequisites](rancher-prime-aws.md#prerequisites) section for more details.
 
 :::
+
+## Uninstalling Rancher Prime PAYG Offering
+
+To uninstall the Rancher Prime PAYG offering, migrate any non-Rancher workloads to a different cluster and destroy the Rancher cluster.
