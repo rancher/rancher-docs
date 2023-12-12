@@ -68,7 +68,7 @@ On the **Extensions + applications** page, the **Provisioning State** may show *
 
 ## Log into the Rancher Dashboard
 
-You may now login to Rancher dashboard by pointing your browser to the Rancher server URL **https://<Rancher hostname\>**, where **Rancher hostname** is the [hostname](#rancher-configuration) you have chosen.
+You may now login to Rancher dashboard by pointing your browser to the Rancher server URL *https://<Rancher hostname\>*, where *Rancher hostname* is the [hostname](#rancher-configuration) you have chosen when configuring Rancher.
 
 :::note
 

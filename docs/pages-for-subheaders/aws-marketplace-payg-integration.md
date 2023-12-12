@@ -20,4 +20,4 @@ distribution in AWS, on-prem, or at the edge. To learn more, see our [AWS Market
 
 ## FAQ
 
-For a list of frequently asked questions, refer to this [document](https://suse.imagerelay.com/share/02f3aa9b4faa4aefb829b6d4d3f25980).
+For a list of frequently asked questions, refer to this [Rancher Prime by SUSE on AWS Marketplace FAQ – November 2023](https://suse.imagerelay.com/share/02f3aa9b4faa4aefb829b6d4d3f25980).
