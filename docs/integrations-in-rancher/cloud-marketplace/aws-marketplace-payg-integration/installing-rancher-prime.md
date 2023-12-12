@@ -65,12 +65,12 @@ eksctl create iamserviceaccount \
 
   :::
 
-  The Rancher hostname must be resolvable by a public DNS. Please refer to the [Prerequisites](rancher-prime-aws.md#prerequisites) section for more details. For example, if the DNS name is rancher.my.org, HOST_NAME=rancher.my.org.
+  The Rancher hostname must be resolvable by a public DNS. Please refer to the [Prerequisites](./rancher-prime-aws.md#prerequisites) section for more details. For example, if the DNS name is rancher.my.org, HOST_NAME=rancher.my.org.
 
   ```shell
   helm install -n cattle-rancher-csp-deployer-system rancher-cloud --create-namespace \
-  oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/suse/{{repository}}/rancher-cloud-helm/rancher-cloud \
-    --version {{chart_version}} \
+  oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/suse/$REPOSITORY/rancher-cloud-helm/rancher-cloud \
+    --version $CHART_VERSION \
     --set rancherHostname=$HOST_NAME \
     --set rancherServerURL=https://$HOST_NAME \
     --set rancherReplicas=$REPLICAS \
@@ -87,13 +87,13 @@ eksctl create iamserviceaccount \
   :::
 
   ```shell
-  kubectl logs -f <pod> -n cattle-rancher-csp-deployer-system
+  kubectl logs -f $POD -n cattle-rancher-csp-deployer-system
   ```
 
 1. After a successful deployment, running the following command should produce a similar output.
 
   ```shell
-  kubectl get deployments --all-namespaces=true
+  kubectl get deployments --all-namespaces
   ```
 
   ```shell

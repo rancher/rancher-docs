@@ -72,7 +72,7 @@ You may now login to Rancher dashboard by pointing your browser to the Rancher s
 
 :::note
 
-The Rancher hostname must be resolvable by public DNS. Please refer to the [Prerequisites](rancher-prime-azure.md#prerequisites) section for more details.
+The Rancher hostname must be resolvable by public DNS. Please refer to the [Prerequisites](./rancher-prime-azure.md#prerequisites) section for more details.
 
 :::
 
