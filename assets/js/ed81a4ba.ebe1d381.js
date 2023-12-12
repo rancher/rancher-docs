@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[80408],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[7607],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 88870:
+/***/ 52163:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/manage-clusters/rotate-certificates",
-    "id": "version-2.8/how-to-guides/new-user-guides/manage-clusters/rotate-certificates",
+    "id": "how-to-guides/new-user-guides/manage-clusters/rotate-certificates",
     "title": "Certificate Rotation",
     "description": "Rotating Kubernetes certificates may result in your cluster being temporarily unavailable as components are restarted. For production environments, it's recommended to perform this action during a maintenance window.",
-    "source": "@site/versioned_docs/version-2.8/how-to-guides/new-user-guides/manage-clusters/rotate-certificates.md",
+    "source": "@site/docs/how-to-guides/new-user-guides/manage-clusters/rotate-certificates.md",
     "sourceDirName": "how-to-guides/new-user-guides/manage-clusters",
     "slug": "/how-to-guides/new-user-guides/manage-clusters/rotate-certificates",
-    "permalink": "/v2.8/how-to-guides/new-user-guides/manage-clusters/rotate-certificates",
+    "permalink": "/how-to-guides/new-user-guides/manage-clusters/rotate-certificates",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/how-to-guides/new-user-guides/manage-clusters/rotate-certificates.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/manage-clusters/rotate-certificates.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "Oct 6, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1702403581,
+    "formattedLastUpdatedAt": "Dec 12, 2023",
     "frontMatter": {
         "title": "Certificate Rotation"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Projects and Kubernetes Namespaces with Rancher",
-        "permalink": "/v2.8/how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces"
+        "permalink": "/how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces"
     },
     "next": {
         "title": "Encryption Key Rotation",
-        "permalink": "/v2.8/how-to-guides/new-user-guides/manage-clusters/rotate-encryption-key"
+        "permalink": "/how-to-guides/new-user-guides/manage-clusters/rotate-encryption-key"
     }
 };
 const assets = {};
@@ -429,7 +429,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `For users who didn't rotate their webhook certificates, and they have expired after one year, please see this `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation"
+        "href": "/troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation"
     }, `page`), ` for help.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "certificate-rotation"
     }, `Certificate Rotation`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher launched Kubernetes clusters have the ability to rotate the auto-generated certificates through the UI.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -444,7 +444,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, `On the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `Clusters`), ` page, go to the cluster you want to rotate certificates for amd click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `Clusters`), ` page, go to the cluster you want to rotate certificates for and click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
     }, `⋮ > Rotate Certificates`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
