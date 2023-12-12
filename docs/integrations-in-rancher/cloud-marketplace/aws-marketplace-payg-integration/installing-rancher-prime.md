@@ -1,8 +1,49 @@
 ---
-title: Installing Rancher Prime on AWS
+title: Installing Rancher Prime PAYG on AWS
 ---
 
-This page covers installing Rancher...
+This page covers how to install the Rancher Prime PAYG offering on Amazon's AWS Marketplace.
+
+## Preparing your cluster
+
+### OIDC provider
+
+Your EKS cluster is required to have an OIDC provider installed. To check for an OIDC provider first find the OIDC issuer with the following command. Substitute `$CLUSTER_NAME` with the *Name* of your EKS cluster and $REGION with *region* where it is running:
+
+```shell
+aws eks describe-cluster --name $CLUSTER_NAME --region $REGION --query cluster.identity.oidc.issuer --output text
+```
+
+A URL is returned, like `https://oidc.eks.region.amazonaws.com/id/1234567890ABCDEF`. The part after `https://` will be referred to in later instructions as the *OIDC Provider Identity* (e.g. `oidc.eks.region.amazonaws.com/id/1234567890ABCDEF`). The final section of the URL, `1234567890ABCDEF`, is the $OIDC_ID.
+
+Using the $OIDC_ID of the issuer found above, you can check if a provider is installed with the following command:
+
+```shell
+aws iam list-open-id-connect-providers | grep $OIDC_ID
+```
+
+If there is no output, you will need to create an OIDC provider:
+
+```shell
+eksctl utils associate-iam-oidc-provider --cluster $CLUSTER_NAME --region $REGION --approve
+```
+
+### IAM Role
+
+To provide the necessary permissions, an IAM role and an attached policy are required. The role name is passed as an argument during the *helm* deployment.
+
+Create the role with a *role name* of your choosing (for example, `rancher-csp-iam-role`), and the required policy attached to it:
+
+```shell
+eksctl create iamserviceaccount \
+  --name rancher-csp-billing-adapter \
+  --namespace cattle-csp-billing-adapter-system \
+  --cluster $CLUSTER_NAME \
+  --region $REGION \
+  --role-name $ROLE_NAME --role-only \
+  --attach-policy-arn 'arn:aws:iam::aws:policy/AWSMarketplaceMeteringFullAccess' \
+  --approve
+```
 
 ## Installing Rancher  
 
@@ -89,3 +130,13 @@ helm status rancher-cloud -n cattle-rancher-csp-deployer-system
 Refer to the [Troubleshooting](troubleshooting.md) section for a failed installation.
 
 After the helm chart installation is completed, Rancher Prime is successfully installed.
+
+## Log into the Rancher Dashboard
+
+You may now login to Rancher dashboard by pointing your browser to the Rancher server URL **https://<Rancher hostname\>**, where **Rancher hostname** is the [hostname](#rancher-configuration) you have chosen.
+
+:::note
+
+The Rancher hostname must be resolvable by public DNS. Please refer to the [Prerequisites](rancher-prime-aws.md#prerequisites) section for more details.
+
+:::

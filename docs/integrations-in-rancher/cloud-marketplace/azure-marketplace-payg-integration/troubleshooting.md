@@ -1,16 +1,18 @@
 ---
-title: Troubleshooting
+title: Troubleshooting Rancher Prime PAYG Cluster in Azure
 ---
 
-This section contains information to help you troubleshoot issues when install Rancher and configure Billing-adapter
+This section contains information to help you troubleshoot issues when installing Rancher Prime PAYG and configuring the Billing-adapter.
 
-After successful deployment, it should list similar pod and chart output 
+## Deployment
 
-```
+After a successful deployment, check the status of the deployment, it should list similar pod and chart output.
+
+```shell
 kubectl get deployments --all-namespaces=true
 ```
 
-```
+```shell
 NAMESPACE                           NAME                          READY   UP-TO-DATE   AVAILABLE   AGE
 cattle-csp-billing-adapter-system   csp-rancher-usage-operator    1/1     1            1           8h
 cattle-csp-billing-adapter-system   rancher-csp-billing-adapter   1/1     1            1           8h
@@ -32,86 +34,53 @@ kube-system                         konnectivity-agent            2/2     2     
 kube-system                         metrics-server                2/2     2            2           20h
 ```
 
+## Jobs and Pods
 
-Jobs and Pods:
+Check the status of pods or jobs:
 
-Check that pods or jobs have status Running/Completed
-
-
-```
+```shell
 kubectl get pods --all-namespaces
 ```
 
+if a pod is not in Running state, you can attempt to find the root cause with the following commands:
 
-if a pod is not in Running state, you can dig into the root cause by running:
-      
-Describe pod
+- Describe pod: `kubectl describe pod <pod name> -n <namespaces>`
+- Pod container logs: `kubectl logs <pod name> -n <namespaces>`
+- Describe job: `kubectl describe job <job name> -n <namespaces>`
+- Logs from the containers of pods of the job: `kubectl logs -l job-name=<job name> -n <namespaces>`
 
+## Rancher Usage Record Not found
 
-```
-kubectl describe pod <pod name> -n <namespaces>
-```
+When you attempt to retrive a usage record, you might see the following message:
 
-Pod container logs
-
-
-```
-kubectl logs <pod name> -n <namespaces>
+```shell
+Error from server (NotFound): cspadapterusagerecords.susecloud.net "rancher-usage-record" not found" Check Configuration, Retrieve generated configuration csp-config
 ```
 
-Describe job
+To resolve the error, run:
 
-
-```
-kubectl describe job <job name> -n <namespaces>
-```
-
-Logs from the containers of pods of the job
-
-```
-kubectl logs -l job-name=<job name> -n <namespaces>
-```
-
-
-###Rancher Usage Record Not found: 
-
-Error:
-
-```
-Error from server (NotFound): cspadapterusagerecords.susecloud.net "rancher-usage-record" not found"
- Check Configuration, Retrieve generated configuration csp-config
-```
-    
-
-Solution:
-
-```
+```shell
 kubectl get cm -n cattle-csp-billing-adapter-system csp-config -o yaml
 ```
 
-if a configuration is not listed, you can dig into the root cause by checking the pod status and log (Refer Jobs and Pods section).
+If a configuration is not listed, you can attempt to find the root cause by checking the pod status and log. See [Jobs and Pods](#jobs-and-pods) for more details.
 
+## Multiple extensions of same type
 
-###Multiple extensions of same type: 
+When you attept to install an extension of the same type, you will see the following message:
 
-Error:
-
-```
+```shell
 Multiple extensions of same type is not allowed at this scope. (Code: ValidationFailed)"
 ```
 
-Solution:
+AKS cluster already has the extension with the same type. To resolve the error, uninstall the extension and re-deploy with the same cluster.
 
-AKS cluster already has the extension with the same type. Uninstall the extension and re-deploy with the same cluster.
+## Resource already existing in your cluster
 
-###Resource already existing in your cluster: 
+When you attept to install a resource or extension that already exists, you will see the following message:
 
-Error:
-
-```
+```shell
 Helm installation failed : Resource already existing in your cluster : Recommendation Manually delete the resource(s) that currently exist in your cluster and try installation again. To delete these resources run the following commands: kubectl delete <resource type> -n <resource namespace> <resource name> : InnerError [rendered manifests contain a resource that already exists. Unable to continue with install: ServiceAccount "rancher" in namespace "cattle-system" exists and cannot be imported into the current release: invalid ownership metadata; annotation validation error: key "meta.helm.sh/release-name" must equal "test-nv2-reinstall": current value is "testnv2-plan"]
 ```
 
-Solution:
-
-AKS cluster already has the extension. Uninstall the extension as it suggested in the Error by deleting the resource via the kubectl command. or Uninstall the extension in Azure Console and re-deploy with the same cluster.
+AKS cluster already has the extension installed. To resolve the error, uninstall the extension as suggested in the error message by deleting the resource via the kubectl command, or uninstall the extension in Azure Console and re-deploy with the same cluster.

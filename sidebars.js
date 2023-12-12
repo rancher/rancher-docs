@@ -1150,7 +1150,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'AWS Marketplace PAYG Integration',
+              label: 'AWS Marketplace Pay-as-you-go (PAYG)',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/aws-marketplace-payg-integration"
@@ -1166,7 +1166,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Azure Marketplace PAYG Integration',
+              label: 'Azure Marketplace Pay-as-you-go (PAYG)',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/azure-marketplace-payg-integration"

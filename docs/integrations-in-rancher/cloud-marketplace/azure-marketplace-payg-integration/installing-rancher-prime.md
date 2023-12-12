@@ -1,112 +1,81 @@
 ---
-title: Installing Rancher Prime on Azure
+title: Installing Rancher Prime PAYG on Azure
 ---
 
-## How to install Rancher Prime PAYG
+This page covers how to install the Rancher Prime PAYG offering on Microsoft's Azure Marketplace.
 
-The following is a step by step walk-through for creating a new deployment of
-Rancher Prime from the Azure Marketplace page.
+## How to Install Rancher Prime PAYG
 
-1. Click "Rancher Prime with 24x7 Support" offer (either "EU and UK only" or
-   "non-EU and non-UK only") that corresponds to the location where your account
-   is registered.
-2. Choose the plan from the dropdown list. ( "Plans + Pricing" tab more details about Software plan)
-3. Click 'Create' 
+Refer to the following steps for creating a new deployment of Rancher Prime from the Azure Marketplace page.
+
+1. Select the **Rancher Prime with 24x7 Support** offer (either **EU and UK only** or **non-EU and non-UK only**) that corresponds to the location where your account is registered.
+1. Choose the plan from the dropdown list. View the **Plans + Pricing** tab for more details about the plan.
+1. Select **Create**.
 
 ### Basics
 
-1. Select existing subscription from the dropdown list.
-2. Select existing Resource group from the dropdown list.
-3. Select existing AKS Cluster Name from the dropdown list.
-4. Choose name for Cluster extension resource name. It can be consisted of
-   alphanumeric and dots, and the length must be between 2 and 253 characters.
+On the **Basics** tab, specify the **Project details** and **Instance details**:
 
-   ---
-   **NOTE**
+1. Select an existing subscription from the dropdown list.
+1. Select an existing Resource group from the dropdown list.
+   :::note
 
    The **Create new** resource group feature is not supported.
 
-   ---
-
-click 'Next'
+   :::
+   ![Create new resource group not supported](/img/install-rancher-prime-basics-create-new.png)
+1. Select an existing AKS Cluster Name from the dropdown list.
+1. Choose a name for the Cluster extension resource name. It can consist of alphanumeric characters and dots, and the length must be between 2 and 253 characters.
+![Basics tab](/img/install-rancher-prime-basics.png)
+1. Select **Next**.
 
 ### Rancher Configuration
 
-1. Enter the hostname for Rancher, and it must be a fully qualified domain
-   name (FQDN). The Rancher server URL will be created using this hostname.
+On the **Rancher Configuraion** tab, specify the following informaiton:
 
-   ---
-   **NOTE**
+1. Enter the **Hostname** for Rancher. The Rancher hostname must be a fully qualified domain name (FQDN) and the Rancher server URL will be created using this hostname.
+
+   :::note
 
    The IP address of the Rancher hostname must be resolvable by a public DNS.
 
-   ---
+   :::
 
-2. Using the slide bar, select the number of Rancher replicas.
-3. Choose bootstrap password as it is suggested by the tip. The bootstrap
-   password will be used to authenticate to the Rancher dashboard during first
-   login.
+1. Using the slide bar, select the number of **Replicas**.
+1. Choose and confirm a **Bootstrap Password**. During the first login, you will use the bootstrap password to authenticate to the Rancher dashboard.
+   :::note
 
-   ---
-   **NOTE**
+   The current Rancher deployment exposes the bootstrap password in the Cluster configuration settings in Azure Portal. Until this is resolved, we suggest changing the Admin password after initial login by editing your profile in the Rancher dashboard.
 
-   The current Rancher deployment exposes the bootstrap password in the Cluster
-   configuration settings in Azure Portal. Until this is resolved, it is
-   suggested to change the Admin password after the initial login. Edit profile
-   in the Rancher dashboard to change password.
-
-   ---
-
-click 'Next'
+   :::
+   ![Rancher Confgiuration](/img/install-rancher-prime-configuration.png)
+1. Select **Next**.
 
 ### Review + create
 
+1. On the **Review + create** tab, review the summary of the offer (Price, Basics, Rancher Configuration) and the link to **view automation template** (Azure Resource Manager Template).
+1. Select **Create** to start the deployment.
 
-  This will summarize the offer and link to "view automation template" (Azure Resource Manager Template) 
+### Deployment Complete
 
+After the deployment is completed, the Rancher Prime Kubernetes service extension is successfully installed.
 
-     Price
-     Basics
-     Rancher Configuration
+:::note
 
-click 'Create'
+On the **Extensions + applications** page, the **Provisioning State** may show **Succeeded** even though the deployment may still be in progress. You can monitor the deployment progress by logging into the AKS cluster and looking at the **rancher-cloud** deployment.
 
-### Deployment Complete 
+:::
 
-Deployment will be in progress. After it is completed, the Rancher Prime
-Kubernetes service extension is successfully installed.
+## Log into the Rancher Dashboard
 
- ---
- ** NOTE: **
+You may now login to Rancher dashboard by pointing your browser to the Rancher server URL **https://<Rancher hostname\>**, where **Rancher hostname** is the [hostname](#rancher-configuration) you have chosen.
 
- In the "Extensions + applications" page, the "Provisioning State" may show
- "Succeeded" even though the provision may still be in progress. You may monitor
- the actual progragress by logging into the AKS cluster and follow the
- "rancher-cloud" deployment.
+:::note
 
- ---
+The Rancher hostname must be resolvable by public DNS. Please refer to the [Prerequisites](rancher-prime-azure.md#prerequisites) section for more details.
 
-## Log into the Rancher dashboard
+:::
 
-You may now login to Rancher dashboard by point your browser to Rancher server
-URL **https://<Rancher hostname\>**, where **Rancher hostname** is the hostname
-you have chosen previously.
+## Rancher Prime PAYG Billing
 
- ---
- **NOTE**
-
- The Rancher hostname must be resolvable by public DNS. Please refer to the
- [Prerequisites](#prerequisites) section for more details.
-
- ---
-
-## How To Use Rancher
-
-Please refer to the [Rancher documentation](https://ranchermanager.docs.rancher.com/)
-on how to use Rancher.
-
-## Rancher Prime PAYG billing
-
-Billing will be available in the Azure Portal billing
-
-Home > Cost Management <subscription\> | Cost analysis
+View billing information in the Azure Portal by going to **Home** > **Subscriptions** > **Cost Management - Cost analysis**.

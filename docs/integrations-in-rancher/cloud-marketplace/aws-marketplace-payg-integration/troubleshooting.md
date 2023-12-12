@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting
+title: Troubleshooting Rancher Prime PAYG Cluster in AWS
 ---
 
 This section contains information to help you troubleshoot issues when installing Rancher Prime PAYG.
@@ -44,13 +44,10 @@ oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/suse/{{repository}}/rancher-c
 
 ## Rancher Usage Record Not found
 
-Error:
-
 When you attempt to retrive a usage record, you might see the following message:
 
 ```shell
-Error from server (NotFound): cspadapterusagerecords.susecloud.net "rancher-usage-record" not found"
- Check Configuration, Retrieve generated configuration csp-config
+Error from server (NotFound): cspadapterusagerecords.susecloud.net "rancher-usage-record" not found" Check Configuration, Retrieve generated configuration csp-config
 ```
 
 To resolve the error, run:
