@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[66602],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[2116],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 9470:
+/***/ 38266:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps",
-    "id": "version-2.7/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps",
+    "id": "version-2.8/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps",
     "title": "Creating Apps",
     "description": "For a complete walkthrough of developing charts, see the Chart Template Developer's Guide in the official Helm documentation.",
-    "source": "@site/versioned_docs/version-2.7/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps.md",
+    "source": "@site/versioned_docs/version-2.8/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps.md",
     "sourceDirName": "how-to-guides/new-user-guides/helm-charts-in-rancher",
     "slug": "/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps",
-    "permalink": "/v2.7/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps",
+    "permalink": "/v2.8/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1701897451,
-    "formattedLastUpdatedAt": "Dec 6, 2023",
+    "version": "2.8",
+    "lastUpdatedAt": 1702411772,
+    "formattedLastUpdatedAt": "Dec 12, 2023",
     "frontMatter": {
         "title": "Creating Apps"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Helm Charts in Rancher",
-        "permalink": "/v2.7/pages-for-subheaders/helm-charts-in-rancher"
+        "permalink": "/v2.8/pages-for-subheaders/helm-charts-in-rancher"
     },
     "next": {
         "title": "Deploying Applications across Clusters",
-        "permalink": "/v2.7/pages-for-subheaders/deploy-apps-across-clusters"
+        "permalink": "/v2.8/pages-for-subheaders/deploy-apps-across-clusters"
     }
 };
 const assets = {};
@@ -684,7 +684,7 @@ rancher_max_version: 2.3.99
         "align": null
     }, `Default to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "td"
-    }, `string`), ` if not specified (current supported types are string, multiline, boolean, int, enum, password, storageclass, hostname, pvc, and secret).`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+    }, `string`), ` if not specified (current supported types are string, multiline, boolean, int, enum, password, storageclass, hostname, pvc, secret and cloudcredential).`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
