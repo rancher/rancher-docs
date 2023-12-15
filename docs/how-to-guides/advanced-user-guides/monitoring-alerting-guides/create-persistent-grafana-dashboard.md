@@ -81,7 +81,7 @@ To create the ConfigMap through the Rancher UI, first make sure that you are cur
 
 :::note
 
-The actual key/value pair may differ if you have modified the Helm chart to check for a different dashboard label and value.
+The actual key/value pair may differ if you have modified the Helm chart to watch a different dashboard label and value.
 
 :::
 
