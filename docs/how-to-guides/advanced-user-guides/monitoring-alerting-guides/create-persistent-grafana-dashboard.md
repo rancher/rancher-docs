@@ -79,7 +79,11 @@ To create the ConfigMap through the Rancher UI, first make sure that you are cur
 
 **Result:** After the ConfigMap is created, it should show up on the Grafana UI and be persisted even if the Grafana pod is restarted.
 
-Note that the actual key/value pair may differ if you have modified the Helm chart to check for a different dashboard label and value.
+:::note
+
+The actual key/value pair may differ if you have modified the Helm chart to check for a different dashboard label and value.
+
+:::
 
 Dashboards that are persisted using ConfigMaps cannot be deleted or edited from the Grafana UI.
 
