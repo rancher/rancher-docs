@@ -35,7 +35,7 @@ For details on enabling the Google Compute Engine cloud provider, refer to [this
 
 ### Setting up the vSphere Cloud Provider
 
-For details on enabling the vSphere cloud provider, refer to [in-tree vSphere config](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/vsphere/configure-in-tree-vsphere.md) and [out-of-tree vSphere config](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/vsphere/configure-out-of-tree-vsphere.md).
+For details on enabling the vSphere cloud provider, refer to [in-tree vSphere config](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere.md) and [out-of-tree vSphere config](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere.md).
 
 ### Setting up a Custom Cloud Provider
 
