@@ -23,7 +23,7 @@ The following cloud providers can be enabled:
 
 ### Setting up the Amazon Cloud Provider
 
-For details on enabling the Amazon cloud provider, refer to [this page.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon/configure-amazon.md)
+For details on enabling the Amazon cloud provider, refer to [this page.](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon.md)
 
 ### Setting up the Azure Cloud Provider
 

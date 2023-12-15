@@ -36,9 +36,9 @@ All nodes added to the cluster must be able to interact with EC2 so that they ca
 * The first policy is for the nodes with the `controlplane` role. These nodes have to be able to create/remove EC2 resources. The following IAM policy is an example, please remove any unneeded permissions for your use case.
 * The second policy is for the nodes with the `etcd` or `worker` role. These nodes only have to be able to retrieve information from EC2.
 
-While creating an [Amazon EC2 cluster](../../../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md), you must fill in the **IAM Instance Profile Name** (not ARN) of the created IAM role when creating the **Node Template**.
+While creating an [Amazon EC2 cluster](../../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md), you must fill in the **IAM Instance Profile Name** (not ARN) of the created IAM role when creating the **Node Template**.
 
-While creating a [Custom cluster](../../../../../pages-for-subheaders/use-existing-nodes.md), you must manually attach the IAM role to the instance(s).
+While creating a [Custom cluster](../../../../pages-for-subheaders/use-existing-nodes.md), you must manually attach the IAM role to the instance(s).
 
 IAM Policy for nodes with the `controlplane` role:
 
@@ -151,7 +151,7 @@ Do not tag multiple security groups. Tagging multiple groups generates an error 
 
 :::
 
-When you create an [Amazon EC2 Cluster](../../../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md), the `ClusterID` is automatically configured for the created nodes. Other resources still need to be manually tagged.
+When you create an [Amazon EC2 Cluster](../../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md), the `ClusterID` is automatically configured for the created nodes. Other resources still need to be manually tagged.
 
 Use the following tag:
 
@@ -299,7 +299,7 @@ rancher_kubernetes_engine_config:
     useInstanceMetadataHostname: true
 ```
 
-You must not enable `useInstanceMetadataHostname` when setting custom values for `hostname-override` for custom clusters. When you create a [custom cluster](../../../../../pages-for-subheaders/use-existing-nodes.md), add [`--node-name`](../../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) to the `docker run` node registration command to set `hostname-override` — for example, `"$(hostname -f)"`. This can be done manually or by using **Show Advanced Options** in the Rancher UI to add **Node Name**.
+You must not enable `useInstanceMetadataHostname` when setting custom values for `hostname-override` for custom clusters. When you create a [custom cluster](../../../../pages-for-subheaders/use-existing-nodes.md), add [`--node-name`](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) to the `docker run` node registration command to set `hostname-override` — for example, `"$(hostname -f)"`. This can be done manually or by using **Show Advanced Options** in the Rancher UI to add **Node Name**.
 
 2. Select the cloud provider. 
 
