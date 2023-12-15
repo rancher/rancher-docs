@@ -3,7 +3,7 @@ title: Migrating Amazon In-tree to Out-of-tree
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/migrate-to-out-of-tree-amazon"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-amazon"/>
 </head>
 
 Kubernetes is moving away from maintaining cloud providers in-tree. In Kubernetes 1.27 and later, the in-tree cloud providers have been removed.
