@@ -33,8 +33,8 @@ Fix the problem and run:
 
 ```shell
 helm upgrade -n cattle-rancher-csp-deployer-system rancher-cloud --create-namespace \
-oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/suse/{{repository}}/rancher-cloud-helm/rancher-cloud --install \
-  --version {{chart_version}} \
+oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/suse/$REPOSITORY/rancher-cloud-helm/rancher-cloud --install \
+  --version $CHART_VERSION \
   --set rancherHostname=$HOST_NAME \
   --set rancherServerURL=https://$HOST_NAME \
   --set rancherReplicas=$REPLICAS \
@@ -53,7 +53,7 @@ Error from server (NotFound): cspadapterusagerecords.susecloud.net "rancher-usag
 To resolve the error, run:
 
 ```shell
-kubectl get cm -n cattle-csp-billing-adapter-system csp-config -o yaml
+kubectl get configmap -n cattle-csp-billing-adapter-system csp-config -o yaml
 ```
 
 If a configuration is not listed, you can attempt to find the root cause by checking the pod status and log. See [Jobs and Pods](#jobs-and-pods) for more details.

@@ -61,7 +61,7 @@ eksctl create iamserviceaccount \
 
   :::note
 
-  Rancher Prime utilizes cert-manager to issue and maintain its certificates. Rancher will generate a CA certificate of its own, and sign a cert using that CA.
+  Rancher Prime utilizes cert-manager to issue and maintain its certificates. Rancher will generate a CA certificate of its own, and sign a certificate using that CA.
 
   :::
 

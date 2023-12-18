@@ -60,7 +60,7 @@ Error from server (NotFound): cspadapterusagerecords.susecloud.net "rancher-usag
 To resolve the error, run:
 
 ```shell
-kubectl get cm -n cattle-csp-billing-adapter-system csp-config -o yaml
+kubectl get configmap -n cattle-csp-billing-adapter-system csp-config -o yaml
 ```
 
 If a configuration is not listed, you can attempt to find the root cause by checking the pod status and log. See [Jobs and Pods](#jobs-and-pods) for more details.

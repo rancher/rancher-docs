@@ -41,7 +41,7 @@ On the **Rancher Configuraion** tab, specify the following informaiton:
 
    :::
 
-1. Using the slide bar, select the number of **Replicas**.
+1. Using the slider, select the number of **Replicas**.
 1. Choose and confirm a **Bootstrap Password**. During the first login, you will use the bootstrap password to authenticate to the Rancher dashboard.
    :::note
 
@@ -68,7 +68,7 @@ On the **Extensions + applications** page, the **Provisioning State** may show *
 
 ## Log into the Rancher Dashboard
 
-You may now login to Rancher dashboard by pointing your browser to the Rancher server URL *https://<Rancher hostname\>*, where *Rancher hostname* is the [hostname](#rancher-configuration) you have chosen when configuring Rancher.
+You may now login to Rancher dashboard by pointing your browser to the Rancher server URL *https://$RANCHER_HOSTNAME*, where *Rancher hostname* is the [hostname](#rancher-configuration) you have chosen when configuring Rancher.
 
 :::note
 

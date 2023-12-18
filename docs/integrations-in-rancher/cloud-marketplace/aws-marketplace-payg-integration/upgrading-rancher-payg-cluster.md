@@ -24,7 +24,7 @@ To check if the upgraded Helm chart deployed successfully:
 helm ls -n cattle-rancher-csp-deployer-system
 ```
 
-:::note
+:::warning
 
 PAYG customers will have constraints on getting updates to the offer based on the latest version SUSE has published to AWS, which may trail slightly behind the latest Rancher release.
 
