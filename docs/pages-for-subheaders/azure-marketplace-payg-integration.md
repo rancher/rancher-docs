@@ -79,6 +79,15 @@ When purchasing Rancher Prime via the Azure Marketplace, the billing is as follo
 
 Rancher Prime has different pricing tiers when purchasing via the Azure Marketplace. This is based on the number of nodes which Rancher is managing.Details of the tiers are shown below, please check the listing for further pricing information.
 
+| Tier     | Nodes (from) |  Nodes (to) |
+| :------: | :----------: | :---------: |
+| **1**    | 5            | 15          |
+| **2**    | 16           | 50          |
+| **3**    | 51           | 100         |
+| **4**    | 101          | 250         |
+| **5**    | 251          | 1000        |
+| **6**    | 1001         |             |
+
 #### Is there a way to try Rancher before purchasing?
 
 If using the Rancher Prime listing in the Azure Marketplace, billing will commence from the time of deployment. You can try Rancher by deploying it per standard documentation. When ready to benefit from a supported platform and have this billed through Azure, deploy Rancher Prime via the Azure Marketplace and migrate your configuration.
@@ -99,6 +108,12 @@ Using Rancher to manage 10 nodes, for 1 month (730 hours) with no additional nod
 Using Rancher to manage 10 nodes for 3 weeks (562 hours) in the month and bursting to 30 nodes for 1 week (168 hours).
 - **Transient Cluster:**
 A temporary deployment of Rancher on 20 nodes for 2 weeks (336 hours).
+
+|                   | Hours Active (Hours Rancher is active in the month) | Nodes (Managed Nodes counted at each check-in) | Usage total (Sum of nodes reported at each check-in) | Average Node Count (Usage total / hours active) | Note                |
+| ----------------- | :--:                                        | :------------------------:                     | :----:                                          | :--:                                       | :------------------------------:  |
+| **Static Usage**  | 730                                         | 10                                             | 7300                                            | 10                                         | 10 @ Tier 1                       |
+| **Bursting Model**    | 730                                         | 10 (562 hrs), 30 (168 hrs)                      | 10660                                           | 15                                         | 15 @ Tier 1 (rounded from 14.6)   |
+| **Transient Cluster** | 336                                         | 20                                             | 6720                                            | 20                                         | 20 @ Tier 2                       |
 
 #### Are special commercial terms available?
 
