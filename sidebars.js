@@ -1156,7 +1156,7 @@ const sidebars = {
                 id: "pages-for-subheaders/aws-marketplace-payg-integration"
               },
               items: [
-                  'integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/rancher-prime-aws',
+                  'integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/prerequisites',
                   'integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/installing-rancher-prime',
                   'integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/upgrading-rancher-payg-cluster',
                   'integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/troubleshooting',
@@ -1172,7 +1172,7 @@ const sidebars = {
                 id: "pages-for-subheaders/azure-marketplace-payg-integration"
               },
               items: [
-                  'integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/rancher-prime-azure',
+                  'integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites',
                   'integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime',
                   'integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/upgrading-rancher-payg-cluster',
                   'integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/troubleshooting',
