@@ -1,5 +1,5 @@
 ---
-title: Role-Based Access Control (RBAC)
+title: Managing Role-Based Access Control (RBAC)
 ---
 
 <head>

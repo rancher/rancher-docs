@@ -274,7 +274,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Manage Role-Based Access Control (RBAC)',
+                  label: 'Managing Role-Based Access Control (RBAC)',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/manage-role-based-access-control-rbac",
