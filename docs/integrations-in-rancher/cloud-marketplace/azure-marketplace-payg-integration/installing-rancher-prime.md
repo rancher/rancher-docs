@@ -31,16 +31,14 @@ On the **Basics** tab, specify the **Project details** and **Instance details**:
 
 ### Rancher Configuration
 
-On the **Rancher Configuraion** tab, specify the following informaiton:
+On the **Rancher Configuraion** tab, specify the following information:
 
 1. Enter the **Hostname** for Rancher. The Rancher hostname must be a fully qualified domain name (FQDN) and the Rancher server URL will be created using this hostname.
-
    :::note
 
    The IP address of the Rancher hostname must be resolvable by a public DNS.
 
    :::
-
 1. Using the slider, select the number of **Replicas**.
 1. Choose and confirm a **Bootstrap Password**. During the first login, you will use the bootstrap password to authenticate to the Rancher dashboard.
    :::note
@@ -48,7 +46,7 @@ On the **Rancher Configuraion** tab, specify the following informaiton:
    The current Rancher deployment exposes the bootstrap password in the Cluster configuration settings in Azure Portal. Until this is resolved, we suggest changing the Admin password after initial login by editing your profile in the Rancher dashboard.
 
    :::
-   ![Rancher Confgiuration](/img/install-rancher-prime-configuration.png)
+   ![Rancher Configuration](/img/install-rancher-prime-configuration.png)
 1. Select **Next**.
 
 ### Review + create

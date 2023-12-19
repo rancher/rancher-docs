@@ -10,8 +10,9 @@ title: AWS Marketplace Pay-as-you-go (PAYG) Integration
 
 Rancher Prime integrates with the AWS Marketplace as a pay-as-you-go (PAYG) offering. This brings the value of running and managing Kubernetes environments to AWS customers, with the benefit of a new pay monthly pricing model available through the AWS Marketplace. This listing will enable you to manage any CNCF-certified Kubernetes
 distribution in AWS, on-prem, or at the edge. To learn more, see our non-EMEMA and EMEA AWS Marketplace offerings for Rancher Prime:
-- [Rancher Prime (non-EMEA)](https://aws.amazon.com/marketplace/pp/prodview-f2bvszurj2p2c)
-- [Rancher Prime (EMEA)](https://aws.amazon.com/marketplace/pp/prodview-ocgjwd5c2aj5i)
+
+- [Rancher Prime](https://aws.amazon.com/marketplace/pp/prodview-f2bvszurj2p2c)
+- [Rancher Prime (EMEA Orders Only)](https://aws.amazon.com/marketplace/pp/prodview-ocgjwd5c2aj5i)
 
 ## Limitations
 
@@ -35,8 +36,9 @@ By selecting the Rancher Prime listing from the AWS Marketplace, customers can d
 #### Where do I find the Rancher Prime listings?
 
 The listings can be found in the AWS Marketplace, there are two listings:
-- Rancher Prime (No EU, EEA, or UK Orders)
-- Rancher Prime (EU, EEA, or UK Orders)
+
+- Rancher Prime
+- Rancher Prime (EMEA Orders Only)
 
 #### Why are there 2 listings, which one should I use?
 
@@ -97,7 +99,7 @@ charge will be for 5 nodes.
 
 #### What are the pricing tiers?
 
-Rancher Prime has different pricing tiers when purchasing via the AWS Marketplace. This is based on the number of nodes which Rancher is managing.Details of the tiers are below, please check the listing for further pricing information.
+Rancher Prime has different pricing tiers when purchasing via the AWS Marketplace. This is based on the number of nodes which Rancher is managing. Details of the tiers are below, please check the listing for further pricing information.
 
 | Tier     | Nodes (from) |  Nodes (to) |
 | :------: | :----------: | :---------: |
@@ -170,7 +172,7 @@ One of the easiest ways to get started is to deploy the AWS Marketplace listing 
 
 #### What is the minimum version of Rancher required to support AWS Marketplace billing?
 
-The minimum version supporting marketplace billing is Rancher 2.7.8.
+The minimum version supporting marketplace billing is Rancher 2.7.9.
 
 #### What version of Rancher is installed when using the Marketplace listing?
 
