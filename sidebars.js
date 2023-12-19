@@ -240,7 +240,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Configure OpenLDAP',
+                  label: 'Configuring OpenLDAP',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/configure-openldap",
