@@ -251,7 +251,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Configure Microsoft AD Federation Service (SAML)',
+                  label: 'Configuring Microsoft AD Federation Service (SAML)',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/configure-microsoft-ad-federation-service-saml",
@@ -263,7 +263,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Configure Shibboleth (SAML)',
+                  label: 'Configuring Shibboleth (SAML)',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/configure-shibboleth-saml",
