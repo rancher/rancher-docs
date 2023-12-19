@@ -1,5 +1,5 @@
 ---
-title: Authentication Config
+title: Configuring Authentication
 ---
 
 <head>
