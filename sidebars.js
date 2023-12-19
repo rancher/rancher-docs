@@ -219,7 +219,7 @@ const sidebars = {
               items: [
                 {
                   type: 'category',
-                  label: 'Authentication Config',
+                  label: 'Configuring Authentication',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/authentication-config",
