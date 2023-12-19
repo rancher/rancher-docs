@@ -1,5 +1,5 @@
 ---
-title: Syncing
+title: Syncing Hosted Clusters
 ---
 
 <head>
