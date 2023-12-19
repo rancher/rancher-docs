@@ -1,5 +1,5 @@
 ---
-title: Certificate Troubleshooting
+title: Troubleshooting Certificates
 ---
 
 <head>
