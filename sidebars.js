@@ -456,7 +456,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Set Up Clusters from Hosted Kubernetes Providers',
+                  label: 'Setting up Clusters from Hosted Kubernetes Providers',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers",
@@ -486,7 +486,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Set Up Cloud Providers',
+                  label: 'Setting up Cloud Providers',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/set-up-cloud-providers",

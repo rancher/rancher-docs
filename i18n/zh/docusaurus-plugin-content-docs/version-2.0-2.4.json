@@ -144,7 +144,7 @@
     "description": "The label for category Checklist for Production-Ready Clusters in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Set Up Clusters from Hosted Kubernetes Providers": {
-    "message": "Set Up Clusters from Hosted Kubernetes Providers",
+    "message": "Setting up Clusters from Hosted Kubernetes Providers",
     "description": "The label for category Set Up Clusters from Hosted Kubernetes Providers in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Launch Kubernetes with Rancher": {
@@ -164,7 +164,7 @@
     "description": "The label for category Use Windows Clusters in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Set Up Cloud Providers": {
-    "message": "Set Up Cloud Providers",
+    "message": "Setting up Cloud Providers",
     "description": "The label for category Set Up Cloud Providers in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Other Cloud Providers": {
