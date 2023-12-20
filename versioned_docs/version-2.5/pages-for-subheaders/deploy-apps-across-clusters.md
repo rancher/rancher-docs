@@ -14,4 +14,4 @@ Fleet is GitOps at scale. For more information, refer to the [Fleet section](../
 
 In Rancher before v2.5, the multi-cluster apps feature was used to deploy applications across clusters. The multi-cluster apps feature is deprecated, but still available in Rancher v2.5.
 
-Refer to the documentation [here](../how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps.md).
+See the [multi-cluster app documentation](../how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps.md) for more details.
