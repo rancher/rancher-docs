@@ -1,5 +1,5 @@
 ---
-title: Setting up Infrastructurefor a High Availability RKE Kubernetes Cluster
+title: Setting up Infrastructure for a High Availability RKE Kubernetes Cluster
 ---
 
 <head> 
