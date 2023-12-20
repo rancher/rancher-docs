@@ -514,7 +514,7 @@ const sidebars = {
               items: [
                 {
                   type: 'category',
-                  label: 'Use New Nodes in an Infra Provider',
+                  label: 'Launching New Nodes in an Infra Provider',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/use-new-nodes-in-an-infra-provider",

@@ -152,7 +152,7 @@
     "description": "The label for category Launch Kubernetes with Rancher in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Use New Nodes in an Infra Provider": {
-    "message": "Use New Nodes in an Infra Provider",
+    "message": "Launching New Nodes in an Infra Provider",
     "description": "The label for category Use New Nodes in an Infra Provider in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.vSphere": {
