@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/reference-guides/user-settings/manage-cloud-credentials.md",
     "tags": [],
     "version": "2.5",
-    "lastUpdatedAt": 1699037391,
-    "formattedLastUpdatedAt": "2023年11月3日",
+    "lastUpdatedAt": 1703111770,
+    "formattedLastUpdatedAt": "2023年12月20日",
     "frontMatter": {
         "title": "Managing Cloud Credentials"
     },
@@ -394,9 +394,9 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `In the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `User Settings`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `All cloud credentials are bound to the user profile of who created it. They `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `User Settings`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Cloud credentials are bound to their creator's user profile. They `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `cannot`), ` be shared across users.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }, `cannot`), ` be shared between non-admin users. However, admins are able to view and manage the cloud credentials of other users.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "creating-a-cloud-credential-from-user-settings"
     }, `Creating a Cloud Credential from User Settings`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
