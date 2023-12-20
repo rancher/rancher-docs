@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[11588],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[36083],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 72618:
+/***/ 20674:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,39 +313,34 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "pages-for-subheaders/deploy-apps-across-clusters",
-    "id": "version-2.8/pages-for-subheaders/deploy-apps-across-clusters",
+    "id": "version-2.6/pages-for-subheaders/deploy-apps-across-clusters",
     "title": "跨集群部署应用",
-    "description": "Fleet",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.8/pages-for-subheaders/deploy-apps-across-clusters.md",
+    "description": "Rancher 2.5 引入了 Fleet，这是一种跨集群部署应用的新方式。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/pages-for-subheaders/deploy-apps-across-clusters.md",
     "sourceDirName": "pages-for-subheaders",
     "slug": "/pages-for-subheaders/deploy-apps-across-clusters",
-    "permalink": "/zh/v2.8/pages-for-subheaders/deploy-apps-across-clusters",
+    "permalink": "/zh/v2.6/pages-for-subheaders/deploy-apps-across-clusters",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/pages-for-subheaders/deploy-apps-across-clusters.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/pages-for-subheaders/deploy-apps-across-clusters.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "2023年10月6日",
+    "version": "2.6",
+    "lastUpdatedAt": 1703094682,
+    "formattedLastUpdatedAt": "2023年12月20日",
     "frontMatter": {
         "title": "跨集群部署应用"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "创建应用",
-        "permalink": "/zh/v2.8/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps"
+        "permalink": "/zh/v2.6/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps"
     },
     "next": {
         "title": "使用 Feet 进行持续交付",
-        "permalink": "/zh/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
+        "permalink": "/zh/v2.6/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
     }
 };
 const assets = {};
 const toc = [
-    {
-        value: 'Fleet',
-        id: 'fleet',
-        level: 3
-    },
     {
         value: '多集群应用',
         id: '多集群应用',
@@ -363,16 +358,14 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "fleet"
-    }, `Fleet`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 2.5 引入了 Fleet，这是一种跨集群部署应用的新方式。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `使用 Fleet 的持续交付是大规模的 GitOps。如需更多信息，请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 2.5 引入了 Fleet，这是一种跨集群部署应用的新方式。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `使用 Fleet 的持续交付是大规模的 GitOps。如需更多信息，请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
+        "href": "/zh/v2.6/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
     }, `Fleet`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "多集群应用"
     }, `多集群应用`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在 2.5 之前的 Rancher 版本中，多集群应用功能用于跨集群部署应用。我们已弃用多集群应用功能，但你仍然可以在 Rancher 2.5 中使用该功能。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `详情请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps"
+        "href": "/zh/v2.6/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps"
     }, `此文档`), `。`));
 }
 MDXContent.isMDXComponent = true;

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[36083],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[28612],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 20674:
+/***/ 65849:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,47 +308,42 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: '跨集群部署应用'
+    title: 'Deploying Applications across Clusters'
 };
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "pages-for-subheaders/deploy-apps-across-clusters",
     "id": "version-2.6/pages-for-subheaders/deploy-apps-across-clusters",
-    "title": "跨集群部署应用",
-    "description": "Fleet",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/pages-for-subheaders/deploy-apps-across-clusters.md",
+    "title": "Deploying Applications across Clusters",
+    "description": "Rancher v2.5 introduced Fleet, a new way to deploy applications across clusters.",
+    "source": "@site/versioned_docs/version-2.6/pages-for-subheaders/deploy-apps-across-clusters.md",
     "sourceDirName": "pages-for-subheaders",
     "slug": "/pages-for-subheaders/deploy-apps-across-clusters",
-    "permalink": "/zh/v2.6/pages-for-subheaders/deploy-apps-across-clusters",
+    "permalink": "/v2.6/pages-for-subheaders/deploy-apps-across-clusters",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/pages-for-subheaders/deploy-apps-across-clusters.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1694162158,
-    "formattedLastUpdatedAt": "2023年9月8日",
+    "lastUpdatedAt": 1703094682,
+    "formattedLastUpdatedAt": "Dec 20, 2023",
     "frontMatter": {
-        "title": "跨集群部署应用"
+        "title": "Deploying Applications across Clusters"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "创建应用",
-        "permalink": "/zh/v2.6/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps"
+        "title": "Creating Apps",
+        "permalink": "/v2.6/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps"
     },
     "next": {
-        "title": "使用 Feet 进行持续交付",
-        "permalink": "/zh/v2.6/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
+        "title": "Continuous Delivery with Fleet",
+        "permalink": "/v2.6/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Fleet',
-        id: 'fleet',
-        level: 3
-    },
-    {
-        value: '多集群应用',
-        id: '多集群应用',
+        value: 'Multi-cluster Apps',
+        id: 'multi-cluster-apps',
         level: 3
     }
 ];
@@ -363,17 +358,18 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "fleet"
-    }, `Fleet`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 2.5 引入了 Fleet，这是一种跨集群部署应用的新方式。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `使用 Fleet 的持续交付是大规模的 GitOps。如需更多信息，请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/pages-for-subheaders/deploy-apps-across-clusters"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher v2.5 introduced Fleet, a new way to deploy applications across clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Continuous Delivery with Fleet is GitOps at scale. For more information, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.6/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
-    }, `Fleet`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "多集群应用"
-    }, `多集群应用`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在 2.5 之前的 Rancher 版本中，多集群应用功能用于跨集群部署应用。我们已弃用多集群应用功能，但你仍然可以在 Rancher 2.5 中使用该功能。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `详情请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "href": "/v2.6/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
+    }, `Fleet section`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "multi-cluster-apps"
+    }, `Multi-cluster Apps`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In Rancher before v2.5, the multi-cluster apps feature was used to deploy applications across clusters. The multi-cluster apps feature is deprecated, but still available in Rancher v2.5.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.6/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps"
-    }, `此文档`), `。`));
+        "href": "/v2.6/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps"
+    }, `multi-cluster app documentation`), ` for more details.`));
 }
 MDXContent.isMDXComponent = true;
 

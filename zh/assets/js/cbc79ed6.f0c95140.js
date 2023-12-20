@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[78545],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[5105],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 40891:
+/***/ 97728:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "pages-for-subheaders/deploy-apps-across-clusters",
-    "id": "pages-for-subheaders/deploy-apps-across-clusters",
+    "id": "version-2.5/pages-for-subheaders/deploy-apps-across-clusters",
     "title": "Deploying Applications across Clusters",
-    "description": "Fleet",
-    "source": "@site/docs/pages-for-subheaders/deploy-apps-across-clusters.md",
+    "description": "Rancher v2.5 introduces Fleet, a new way to deploy applications across clusters.",
+    "source": "@site/versioned_docs/version-2.5/pages-for-subheaders/deploy-apps-across-clusters.md",
     "sourceDirName": "pages-for-subheaders",
     "slug": "/pages-for-subheaders/deploy-apps-across-clusters",
-    "permalink": "/pages-for-subheaders/deploy-apps-across-clusters",
+    "permalink": "/zh/v2.5/pages-for-subheaders/deploy-apps-across-clusters",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/pages-for-subheaders/deploy-apps-across-clusters.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/pages-for-subheaders/deploy-apps-across-clusters.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1692127491,
-    "formattedLastUpdatedAt": "Aug 15, 2023",
+    "version": "2.5",
+    "lastUpdatedAt": 1703094682,
+    "formattedLastUpdatedAt": "2023年12月20日",
     "frontMatter": {
         "title": "Deploying Applications across Clusters"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Creating Apps",
-        "permalink": "/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps"
+        "title": "Helm Charts in Rancher",
+        "permalink": "/zh/v2.5/pages-for-subheaders/helm-charts-in-rancher"
     },
     "next": {
-        "title": "Continuous Delivery with Fleet",
-        "permalink": "/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
+        "title": "Fleet - GitOps at Scale",
+        "permalink": "/zh/v2.5/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
     }
 };
 const assets = {};
@@ -344,7 +344,7 @@ const toc = [
     {
         value: 'Multi-cluster Apps',
         id: 'multi-cluster-apps',
-        level: 3
+        level: 2
     }
 ];
 const layoutProps = {
@@ -361,15 +361,15 @@ function MDXContent(_param) {
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
         href: "https://ranchermanager.docs.rancher.com/pages-for-subheaders/deploy-apps-across-clusters"
-    })), "### Fleet", /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher v2.5 introduced Fleet, a new way to deploy applications across clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Continuous Delivery with Fleet is GitOps at scale. For more information, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher v2.5 introduces Fleet, a new way to deploy applications across clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Fleet is GitOps at scale. For more information, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
-    }, `Fleet section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "href": "/zh/v2.5/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
+    }, `Fleet section`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "multi-cluster-apps"
-    }, `Multi-cluster Apps`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In Rancher before v2.5, the multi-cluster apps feature was used to deploy applications across clusters. The multi-cluster apps feature is deprecated, but still available in Rancher v2.5.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Refer to the documentation `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Multi-cluster Apps`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In Rancher before v2.5, the multi-cluster apps feature was used to deploy applications across clusters. The multi-cluster apps feature is deprecated, but still available in Rancher v2.5.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps"
-    }, `here.`)));
+        "href": "/zh/v2.5/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps"
+    }, `multi-cluster app documentation`), ` for more details.`));
 }
 MDXContent.isMDXComponent = true;
 
