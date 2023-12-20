@@ -100,7 +100,7 @@
     "description": "The label for category Set Up Clusters from Hosted Kubernetes Providers in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Launch Kubernetes with Rancher": {
-    "message": "Launch Kubernetes with Rancher",
+    "message": "Launching Kubernetes with Rancher",
     "description": "The label for category Launch Kubernetes with Rancher in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Use New Nodes in an Infra Provider": {

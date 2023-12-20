@@ -506,7 +506,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Launch Kubernetes with Rancher',
+              label: 'Launching Kubernetes with Rancher',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/launch-kubernetes-with-rancher",
