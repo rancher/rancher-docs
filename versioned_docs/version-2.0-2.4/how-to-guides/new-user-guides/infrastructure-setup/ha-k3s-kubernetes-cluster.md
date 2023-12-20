@@ -1,5 +1,5 @@
 ---
-title: Set up Infrastructure for a High Availability K3s Kubernetes Cluster
+title: Setting up Infrastructurefor a High Availability K3s Kubernetes Cluster
 ---
 
 <head> 
