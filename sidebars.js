@@ -672,7 +672,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Manage Projects',
+              label: 'Project Administration',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/manage-projects",

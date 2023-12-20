@@ -260,7 +260,7 @@
     "description": "The label for category Provisioning Storage Examples in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Manage Projects": {
-    "message": "Manage Projects",
+    "message": "Project Administration",
     "description": "The label for category Manage Projects in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Manage Project Resource Quotas": {
