@@ -786,7 +786,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Enable Experimental Features',
+              label: 'Enabling Experimental Features',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/enable-experimental-features",

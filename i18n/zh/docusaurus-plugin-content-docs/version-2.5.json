@@ -64,7 +64,7 @@
     "description": "The label for category Advanced Options in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Enable Experimental Features": {
-    "message": "Enable Experimental Features",
+    "message": "Enabling Experimental Features",
     "description": "The label for category Enable Experimental Features in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Advanced Use Cases": {

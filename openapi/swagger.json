@@ -4296,7 +4296,7 @@
               "type": "string"
             },
             "enableProjectMonitoring": {
-              "description": "EnableProjectMonitoring indicates whether Monitoring V1 should be enabled for this project. Deprecated. Use the Monitoring V2 app instead. Defaults to false.",
+              "description": "EnablingProjectMonitoring indicates whether Monitoring V1 should be enabled for this project. Deprecated. Use the Monitoring V2 app instead. Defaults to false.",
               "type": "boolean"
             },
             "namespaceDefaultResourceQuota": {
