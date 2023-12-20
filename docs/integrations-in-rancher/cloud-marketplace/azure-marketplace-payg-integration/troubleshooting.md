@@ -2,7 +2,7 @@
 title: Troubleshooting Rancher Prime PAYG Cluster in Azure
 ---
 
-This section contains information to help you troubleshoot issues when installing Rancher Prime PAYG and configuring the Billing-adapter.
+This section contains information to help troubleshoot issues when installing the Rancher Prime PAYG offer and configuring the Billing-adapter.
 
 ## Deployment
 

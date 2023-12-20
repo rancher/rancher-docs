@@ -2,7 +2,7 @@
 title: Troubleshooting Rancher Prime PAYG Cluster in AWS
 ---
 
-This section contains information to help you troubleshoot issues when installing Rancher Prime PAYG.
+This section contains information to help troubleshoot issues when installing the Rancher Prime PAYG offer.
 
 ## Jobs and Pods
 
@@ -12,7 +12,7 @@ Check the status of pods or jobs:
 kubectl get pods --all-namespaces
 ```
 
-If a pod is not in a Running state, you can attempt to find the root cause with the following commands:
+If a pod is not in a `Running` state, you can attempt to find the root cause with the following commands:
 
 - Describe pod: `kubectl describe pod <pod name> -n <namespaces>`
 - Pod container logs: `kubectl logs <pod name> -n <namespaces>`
@@ -21,15 +21,15 @@ If a pod is not in a Running state, you can attempt to find the root cause with 
 
 ## Recovery from Failed Pods
 
-If any of the pods aren't running, check the rancher-cloud Pod:
+If any of the pods aren't running, check the `rancher-cloud` Pod:
 
 ```shell
 kubectl get pods --all-namespaces | grep rancher-cloud
 ```
 
-If the rancher-cloud pod is in an Error state, wait for the pod to be deleted. This should take about one minute.
+If the `rancher-cloud` pod is in an `Error` state, wait for the pod to be deleted. This should take about one minute.
 
-Fix the problem and run:  
+Fix the problem and run:
 
 ```shell
 helm upgrade -n cattle-rancher-csp-deployer-system rancher-cloud --create-namespace \
@@ -44,7 +44,7 @@ oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/suse/$REPOSITORY/rancher-clou
 
 ## Rancher Usage Record Not found
 
-When you attempt to retrive a usage record, you might see the following message:
+When you attempt to retrieve a usage record, you might see the following message:
 
 ```shell
 Error from server (NotFound): cspadapterusagerecords.susecloud.net "rancher-usage-record" not found" Check Configuration, Retrieve generated configuration csp-config
