@@ -16,6 +16,6 @@ Continuous Delivery with Fleet is GitOps at scale. For more information, refer t
 
 ### Multi-cluster Apps
 
-In Rancher before v2.5, the multi-cluster apps feature was used to deploy applications across clusters. The multi-cluster apps feature is deprecated, but still available in Rancher v2.6.
+In Rancher before v2.5, the multi-cluster apps feature was used to deploy applications across clusters. The multi-cluster apps feature is deprecated, but still available as a legacy feature.
 
 See the [multi-cluster app documentation](../how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps.md) for more details.
