@@ -326,7 +326,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Manage Clusters',
+              label: 'Cluster Administration',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/manage-clusters",
