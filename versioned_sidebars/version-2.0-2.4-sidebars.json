@@ -32,7 +32,7 @@
             "getting-started/quick-start-guides/cli",
             {
               "type": "category",
-              "label": "Deploy Rancher",
+              "label": "Deploying Rancher",
               "link": {
                 "type": "doc",
                 "id": "pages-for-subheaders/deploy-rancher-manager"
@@ -48,7 +48,7 @@
             },
             {
               "type": "category",
-              "label": "Deploy Workloads",
+              "label": "Deploying Workloads",
               "link": {
                 "type": "doc",
                 "id": "pages-for-subheaders/deploy-rancher-workloads"

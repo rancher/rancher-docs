@@ -35,7 +35,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Deploy Rancher',
+              label: 'Deploying Rancher',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/deploy-rancher-manager",
@@ -57,7 +57,7 @@ const sidebars = {
             "getting-started/quick-start-guides/deploy-rancher-manager/prime",
             {
               type: 'category',
-              label: 'Deploy Workloads',
+              label: 'Deploying Workloads',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/deploy-rancher-workloads",
@@ -629,7 +629,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Deploy Apps Across Clusters',
+              label: 'Deploying Apps Across Clusters',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/deploy-apps-across-clusters",
