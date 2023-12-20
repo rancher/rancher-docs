@@ -17,7 +17,7 @@ You can create cloud credentials in two contexts:
 - [During creation of a node template](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#node-templates) for a cluster.
 - In the **User Settings**
 
-Cloud credentials are permanently bound to their creator's user profile. They **cannot** be shared between non-admin users. However, admins are able to view and manage the cloud credentials of other users.
+Cloud credentials are bound to their creator's user profile. They **cannot** be shared between non-admin users. However, admins are able to view and manage the cloud credentials of other users.
 
 ## Creating a Cloud Credential from User Settings
 
