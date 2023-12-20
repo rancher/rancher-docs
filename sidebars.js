@@ -681,7 +681,7 @@ const sidebars = {
                 "how-to-guides/advanced-user-guides/manage-projects/manage-pod-security-policies",
                 {
                   type: 'category',
-                  label: 'Manage Project Resource Quotas',
+                  label: 'Project Resource Quotas',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/manage-project-resource-quotas",

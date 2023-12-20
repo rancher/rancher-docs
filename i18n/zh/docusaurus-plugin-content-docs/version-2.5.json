@@ -212,7 +212,7 @@
     "description": "The label for category Manage Projects in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Manage Project Resource Quotas": {
-    "message": "Manage Project Resource Quotas",
+    "message": "Project Resource Quotas",
     "description": "The label for category Manage Project Resource Quotas in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Monitoring/Alerting Guides": {
