@@ -160,7 +160,7 @@
     "description": "The label for category vSphere in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Use Windows Clusters": {
-    "message": "Use Windows Clusters",
+    "message": "Launching Kubernetes on Windows Clusters",
     "description": "The label for category Use Windows Clusters in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Set Up Cloud Providers": {

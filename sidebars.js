@@ -472,7 +472,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Use Windows Clusters',
+                  label: 'Launching Kubernetes on Windows Clusters',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/use-windows-clusters",
