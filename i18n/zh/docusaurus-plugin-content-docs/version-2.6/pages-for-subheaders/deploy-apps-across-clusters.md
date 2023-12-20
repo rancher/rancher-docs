@@ -2,7 +2,6 @@
 title: 跨集群部署应用
 ---
 
-### Fleet
 
 Rancher 2.5 引入了 Fleet，这是一种跨集群部署应用的新方式。
 
