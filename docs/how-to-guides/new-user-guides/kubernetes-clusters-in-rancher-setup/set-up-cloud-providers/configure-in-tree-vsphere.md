@@ -1,5 +1,5 @@
 ---
-title: How to Configure an In-tree vSphere Cloud Provider
+title: Configuring an In-tree vSphere Cloud Provider
 ---
 
 <head>
