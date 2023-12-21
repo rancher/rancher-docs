@@ -46,6 +46,8 @@ For more information on available kubeconfig options, see the [upstream document
 
 ## API kubectl Example
 
+In this example, we'll show how to use kubectl to create a project, followed by deleting it.
+
 1. Set your KUBECONFIG environment variable to the kubeconfig file you just created:
 
   ```bash
