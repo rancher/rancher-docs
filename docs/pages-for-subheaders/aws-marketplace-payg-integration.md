@@ -15,7 +15,7 @@ Rancher Prime integrates with the AWS Marketplace as a pay-as-you-go (PAYG) offe
 
 ## Limitations
 
-- Currently, you must be running Rancher Manager v2.7.9. When you deploy a supported PAYG version, you can update to newer versions of Rancher Manager when the listing is updated.
+- Currently, you must be running Rancher v2.7.9. When you deploy a supported PAYG version, you can update to newer versions of Rancher when the listing is updated.
 
 ## How to Use
 
@@ -65,8 +65,7 @@ Please read the addendum at the end of this FAQ for a list of countries that can
 
 ‘Rancher Setup’ is no longer available via AWS Marketplace. Customers should deploy an EKS Cluster to host Rancher. Please refer to the best practice documentation.
 
-Follow the steps in the following guide except for the Rancher installation. The Rancher product install should be carried out as per the directions on the Marketplace listing.
-https://ranchermanager.docs.rancher.com/getting-started/installation-andupgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks
+Follow the steps in this [guide](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks.md) except for the Rancher installation. The Rancher product install should be carried out as per the directions on the Marketplace listing.
 
 ### Billing
 
@@ -80,8 +79,7 @@ No. A new deployment of Rancher Prime is required to benefit from the new monthl
 
 #### I have an existing deployment covered by a Rancher subscription; can I use this new listing in AWS for new deployments?
 
-Yes, the listing works independently from your existing subscriptions. Please remember that support processes may be different for deployments using
-your existing subscription and those billed via the AWS Marketplace.
+Yes, the listing works independently from your existing subscriptions. Please remember that support processes may be different for deployments using your existing subscription and those billed via the AWS Marketplace.
 
 #### Tell me more about how the billing for Rancher Prime works via AWS?
 
@@ -113,9 +111,7 @@ Rancher Prime has different pricing tiers when purchasing via the AWS Marketplac
 
 If using the Rancher Prime listing in the AWS Marketplace, billing will commence from the time of deployment.
 
-Rancher can be deployed manually using the standard documentation and repositories. When ready to benefit from a supported platform and have this billed via the AWS Marketplace, follow the available documentation to deploy Rancher Prime from the AWS Marketplace and migrate.
-
-https://ranchermanager.docs.rancher.com/getting-started/installation-andupgrade/install-upgrade-on-a-kubernetes-cluster/upgrades
+Rancher can be deployed manually using the standard documentation and repositories. When ready to benefit from a supported platform and have this billed via the AWS Marketplace, follow the available [documentation](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades.md) to deploy Rancher Prime from the AWS Marketplace and migrate.
 
 #### How does SUSE calculate the ‘average number of managed nodes’ to bill for?
 
@@ -189,9 +185,7 @@ version available at the time of listing.
 Typically, these are updated quarterly, or more frequently if there are security issues.
 
 To update Rancher to a current version before the marketplace listing is updated, please
-see the product documentation.
-
-https://ranchermanager.docs.rancher.com/pages-for-subheaders/installation-andupgrade
+see the following [documentation](../pages-for-subheaders/installation-and-upgrade.md).
 
 #### I have many Kubernetes clusters across multiple AWS accounts, does the Rancher Prime billing still work and enable tiered pricing?
 
@@ -217,23 +211,19 @@ Yes, simply deploy the AWS Marketplace listing for Rancher Prime.
 
 In order to benefit from monthly billing via the AWS Marketplace, the primary Rancher cluster needs to be deployed from the listing. It is then possible to migrate the existing Rancher configuration to the new deployment.
 
-Please follow the documentation and be sure to back up the existing Rancher configuration.
-
-Documentation can be found at the following link: https://ranchermanager.docs.rancher.com/getting-started/installation-andupgrade/install-upgrade-on-a-kubernetes-cluster/upgrades
+Please follow the [documentation](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades.md) and be sure to back up the existing Rancher configuration.
 
 ### Technical (Product)
 
 #### How do I get support?
 
-It is very simple to open a support case with SUSE for Rancher Prime. Create a ‘supportconfig’ via the Rancher UI and upload the output to the SUSE Customer Center. The support config bundle can be exported from the Rancher console using the ‘Get Support’ button at the bottom of the page. For deployments when Rancher is managing multiple downstream clusters, export the support config bundle from the primary cluster only.
+It is very simple to [open a support case](https://scc.suse.com/cloudsupport) with SUSE for Rancher Prime. Create a ‘supportconfig’ via the Rancher UI and upload the output to the SUSE Customer Center. The support config bundle can be exported from the Rancher console using the ‘Get Support’ button at the bottom of the page. For deployments when Rancher is managing multiple downstream clusters, export the support config bundle from the primary cluster only.
 
-https://scc.suse.com/cloudsupport
-
-If the billing mechanism on the primary cluster is active, a support case will be opened. Further details can be found in the Rancher documentation: https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloudmarketplace/supportconfig
+If the billing mechanism on the primary cluster is active, a support case will be opened. Further details can be found in the [documentation](../integrations-in-rancher/cloud-marketplace/supportconfig.md).
 
 #### What are the resource requirements for installing Rancher on EKS?
 
-Please check the official documentation for best practices deployments.
+Please check the official documentation for best practices.
 
 #### Is there any difference between Rancher Prime from the AWS Marketplace and the versions I can run in my own data center?
 
@@ -259,15 +249,4 @@ Yes, nodes can run anywhere. SUSE Rancher will count the total number of nodes m
 
 #### How do I get fixes and updates for Rancher?
 
-To update the Rancher product to a current version before the marketplace listing is updated, please see the documentation.
-
-https://ranchermanager.docs.rancher.com/getting-started/installation-andupgrade/install-upgrade-on-a-kubernetes-cluster/upgrades
-
-### Miscellaneous
-
-#### Where can I find out more about Rancher?
-
-More information can be found at the following sites:
-
-https://ranchermanager.docs.rancher.com/
-https://www.rancher.com/products/rancher
+To update the Rancher product to a current version before the marketplace listing is updated, please see the [documentation](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades.md).

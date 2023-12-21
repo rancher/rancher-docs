@@ -15,11 +15,11 @@ Rancher Prime integrates with the Azure Marketplace as a pay-as-you-go (PAYG) of
 
 ## Limitations
 
-- Currently, you must be running Rancher Manager v2.7.9. When you deploy a supported PAYG version, you will be able to update to newer versions of Rancher Manager when the listing is updated.
+- Currently, you must be running Rancher v2.7.9. When you deploy a supported PAYG version, you will be able to update to newer versions of Rancher when the listing is updated.
 
 ## How to Use
 
-1. Complete the [prerequisite steps](../integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/rancher-prime-azure.md).
+1. Complete the [prerequisite steps](../integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites.md).
 2. [Install the Rancher Prime PAYG offering on the Azure Marketplace](../integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime.md).
 
 ## FAQ
@@ -138,7 +138,7 @@ It is possible to set up an annual commitment via an Azure Private Offer, these 
 
 #### Do I need a Kubernetes cluster running in Azure to install Rancher and be billed via the Azure Marketplace?
 
-Yes. To benefit from monthly billing via Azure, the primary Rancher cluster must be an Azure Kubernetes Service (AKS) cluster running in your Azure account. 
+Yes. To benefit from monthly billing via Azure, the primary Rancher cluster must be an Azure Kubernetes Service (AKS) cluster running in your Azure account.
 
 #### On which Kubernetes distributions can the Rancher Prime Azure Marketplace listing be deployed?
 
@@ -166,7 +166,7 @@ No. There is no choice over the Rancher version when deploying using the Azure M
 
 #### How often is the listing updated (including the version of Rancher, etc.)?
 
-The marketplace listing is tied to a specific version of Rancher, usually it is the latest version available at the time the listing was last updated. Typically, the marketplace listing is updated quarterly, or more frequently to address any new security issues. To update Rancher to a current version before the marketplace listing is updated, please see the product documentation.
+The marketplace listing is tied to a specific version of Rancher, usually it is the latest version available at the time the listing was last updated. Typically, the marketplace listing is updated quarterly, or more frequently to address any new security issues. To update Rancher to a current version before the marketplace listing is updated, please see the following [documentation](../pages-for-subheaders/installation-and-upgrade.md).
 
 #### I have many Kubernetes clusters across multiple Azure accounts; does the Rancher Prime billing still work and enable tiered pricing?
 
@@ -194,7 +194,7 @@ No. You need to deploy Rancher Prime with the Azure Marketplace listing and migr
 
 #### How do I get support?
 
-It is very simple to open a support case with SUSE for Rancher Prime. Create a ‘supportconfig’ via the Rancher UI (click Get Support under the hamburger menu and follow instructions), then upload the ‘supportconfig’ output to the SUSE Customer Center. If the billing mechanism is active, a support case will be opened. See Supportconfig bundle in the Rancher documentation for more details.
+It is very simple to [open a support case](https://scc.suse.com/cloudsupport) with SUSE for Rancher Prime. Create a ‘supportconfig’ via the Rancher UI (click Get Support under the hamburger menu and follow instructions), then upload the ‘supportconfig’ output to the SUSE Customer Center. If the billing mechanism is active, a support case will be opened. See Supportconfig bundle in the Rancher [documentation](../integrations-in-rancher/cloud-marketplace/supportconfig.md) for more details.
 
 :::note
 
@@ -204,11 +204,11 @@ For deployments where Rancher Prime is managing multiple downstream clusters, be
 
 #### What are the resource requirements for installing Rancher on AKS?
 
-Check the official documentation for best practices. Is there any difference between Rancher Prime from the Azure
+Check the official documentation for [best practices](../pages-for-subheaders/installation-requirements.md#hosted-kubernetes).
 
-#### Marketplace and the versions I can run in my own data center?
+#### Is there any difference between Rancher Prime from Azure Marketplace and the versions I can run in my own data center?
 
-Rancher Prime available in the Azure Marketplace is the same product, with the same functionality that you would install manually in the cloud or on-premises.The only difference between deploying manually and deploying via the marketplace listing is the billing route.
+Rancher Prime available in the Azure Marketplace is the same product, with the same functionality that you would install manually in the cloud or on-premises. The only difference between deploying manually and deploying via the marketplace listing is the billing route.
 
 #### Does the primary cluster (responsible for billing) need to run 24/7?
 
@@ -224,4 +224,4 @@ If the Racher Prime cluster is offline or disconnected from the Azure billing fr
 
 #### How do I get fixes and updates for Rancher?
 
-To update the Rancher product to a current version before the marketplace listing is updated, see Upgrades in the official documentation.
+To update the Rancher product to a current version before the marketplace listing is updated, please see the [documentation](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades.md).

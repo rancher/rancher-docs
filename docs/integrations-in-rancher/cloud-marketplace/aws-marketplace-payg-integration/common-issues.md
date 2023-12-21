@@ -8,4 +8,4 @@ title: AWS Marketplace Common Issues
    helm uninstall -n cattle-rancher-csp-deployer-system rancher-cloud
    ```
 
-1. When migrating Rancher to a different EKS by following the steps specified in [Rancher Backups and Disaster Recovery](https://ranchermanager.docs.rancher.com/pages-for-subheaders/backup-restore-and-disaster-recovery), you must reinstall Rancher Prime on the target EKS cluster after restoring from the backup. Furthermore, the restored Rancher version must not be newer than the version available in the AWS marketplace.
+1. When migrating Rancher to a different EKS by following the steps specified in [Rancher Backups and Disaster Recovery](/versioned_docs/version-2.7/pages-for-subheaders/backup-restore-and-disaster-recovery.md), you must reinstall Rancher Prime on the target EKS cluster after restoring from the backup. Furthermore, the restored Rancher version must not be newer than the version available in the AWS marketplace.
