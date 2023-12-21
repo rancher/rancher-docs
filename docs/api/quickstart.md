@@ -4,7 +4,7 @@ title: API Quick Start Guide
 
 You can access Rancher's resources through the Kubernetes API. This guide will help you get started on using this API as a Rancher user.
 
-1. In the upper left corner, click **☰ > Global Settings**. 
+1. In the upper left corner, click **☰ > Global Settings**.
 2. Find and copy the address in the `server-url` field.
 3. [Create](../reference-guides/user-settings/api-keys.md#creating-an-api-key) a Rancher API key with no scope.
 
@@ -38,7 +38,7 @@ You can access Rancher's resources through the Kubernetes API. This guide will h
     current-context: "rancher"
     ```
 
-You can use this file with any compatible tool, such as kubectl or [client-go](https://github.com/kubernetes/client-go). For a quick demo, see the [kubectl example](#api-kubectl-example). 
+You can use this file with any compatible tool, such as kubectl or [client-go](https://github.com/kubernetes/client-go). For a quick demo, see the [kubectl example](#api-kubectl-example).
 
 For more information on handling more complex certificate setups, see [Specifying CA Certs](#specifying-ca-certs).
 
@@ -46,7 +46,13 @@ For more information on available kubeconfig options, see the [upstream document
 
 ## API kubectl Example
 
-In this example, we'll show how to use kubectl to create a project, followed by deleting it.
+In this example, we'll show how to use kubectl to create a project, followed by deleting it. For a list of other Rancher resources available, refer to the [API Reference](./api-reference.mdx) page.
+
+:::note
+
+At this time, not all Rancher resources have been made available through the Rancher Kubernetes API.
+
+:::
 
 1. Set your KUBECONFIG environment variable to the kubeconfig file you just created:
 
@@ -111,7 +117,7 @@ Not all resources may have detailed output.
 
 To ensure that your tools can recognize Rancher's CA certificates, most setups require additional modifications to the above template.
 
-1. In the upper left corner, click **☰ > Global Settings**. 
+1. In the upper left corner, click **☰ > Global Settings**.
 2. Find and copy the value in the `ca-certs` field.
 3. Save the value in a file named `rancher.crt`.
 
