@@ -46,7 +46,7 @@ On the **Rancher Configuraion** tab, specify the following information:
    The current Rancher deployment exposes the bootstrap password in the Cluster configuration settings in Azure Portal. Until this is resolved, we suggest changing the Admin password after initial login by editing your profile in the Rancher dashboard.
 
    :::
-   ![Rancher Configuration](/img/install-rancher-prime-configuration.png)
+   ![Rancher Configuration](/img/install-rancher-prime-bootstrap-password.png)
 1. Select **Next**.
 
 ### Review + create
@@ -70,13 +70,23 @@ You may now login to Rancher dashboard by pointing your browser to the Rancher s
 
 :::note
 
-The Rancher hostname must be resolvable by public DNS. Please refer to the [Prerequisites](./rancher-prime-azure.md#prerequisites) section for more details.
+The Rancher hostname must be resolvable by public DNS. Please refer to the [Prerequisites](./prerequisites) section for more details.
 
 :::
 
+## How to Use Rancher
+
+After logging into Rancher Prime, you should notice the Welcome to Rancher Prime message at the top of the screen.
+
+![Rancher Prime Home](/img/install-rancher-prime-home.png)
+
+If your Rancher Prime PAYG deployment only has **Welcome to Rancher** at the top of the screen, please ensure you've updated to the latest version, and reset the branding to default (i.e. "suse") from **Global Settings**.
+
+![Global Settings](/img/install-rancher-prime-global-settings.png)
+
 ## Rancher Prime PAYG Billing
 
-View billing information in the Azure Portal by going to **Home** > **Subscriptions** > **Cost Management - Cost analysis**.
+View billing information in the Azure Portal by going to **Home** > **Cost Management (subscription) | Cost analysis**.
 
 ## Uninstalling Rancher Prime PAYG Offering
 
