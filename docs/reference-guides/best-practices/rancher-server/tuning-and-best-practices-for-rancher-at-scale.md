@@ -29,7 +29,7 @@ This is typical in Rancher, as many operations create new `RoleBinding` objects 
 
 You can reduce the number of `RoleBindings` in the upstream cluster in the following ways:
 * Limit the use of the [Restricted Admin](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#restricted-admin) role. Apply other roles wherever possible.
-* If you use [external authentication](../../../pages-for-subheaders/authentication-config.md), use groups to assign roles.
+* If you use [external authentication](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/authentication-config.md), use groups to assign roles.
 * Only add users to clusters and projects when necessary.
 * Remove clusters and projects when they are no longer needed.
 * Only use custom roles if necessary.
@@ -93,7 +93,7 @@ You should keep the local Kubernetes cluster up to date. This will ensure that y
 
 Etcd is the backend database for Kubernetes and for Rancher. It plays a very important role in Rancher performance.
 
-The two main bottlenecks to [etcd performance](https://etcd.io/docs/v3.4/op-guide/performance/) are disk and network speed. Etcd should run on dedicated nodes with a fast network setup and with SSDs that have high input/output operations per second (IOPS). For more information regarding etcd performance, see [Slow etcd performance (performance testing and optimization)](https://www.suse.com/support/kb/doc/?id=000020100) and [Tuning etcd for Large Installations](../../../how-to-guides/advanced-user-guides/tune-etcd-for-large-installs.md). Information on disks can also be found in the [Installation Requirements](../../../pages-for-subheaders/installation-requirements.md#disks).
+The two main bottlenecks to [etcd performance](https://etcd.io/docs/v3.4/op-guide/performance/) are disk and network speed. Etcd should run on dedicated nodes with a fast network setup and with SSDs that have high input/output operations per second (IOPS). For more information regarding etcd performance, see [Slow etcd performance (performance testing and optimization)](https://www.suse.com/support/kb/doc/?id=000020100) and [Tuning etcd for Large Installations](../../../how-to-guides/advanced-user-guides/tune-etcd-for-large-installs.md). Information on disks can also be found in the [Installation Requirements](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md#disks).
 
 It's best to run etcd on exactly three nodes, as adding more nodes will reduce operation speed. This may be counter-intuitive to common scaling approaches, but it's due to etcd's [replication mechanisms](https://etcd.io/docs/v3.5/faq/#what-is-maximum-cluster-size).
 

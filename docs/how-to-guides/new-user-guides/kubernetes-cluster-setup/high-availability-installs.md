@@ -14,7 +14,7 @@ Then Helm is used to install Rancher on top of the Kubernetes cluster. Helm uses
 
 The Rancher server data is stored on etcd. This etcd database also runs on all three nodes, and requires an odd number of nodes so that it can always elect a leader with a majority of the etcd cluster. If the etcd database cannot elect a leader, etcd can fail, requiring the cluster to be restored from backup.
 
-For information on how Rancher works, regardless of the installation method, refer to the [architecture section.](../../../pages-for-subheaders/rancher-manager-architecture.md)
+For information on how Rancher works, regardless of the installation method, refer to the [architecture section.](../../../reference-guides/rancher-manager-architecture/rancher-manager-architecture.md)
 
 ### Recommended Architecture
 

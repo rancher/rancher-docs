@@ -6,10 +6,10 @@ title: Managing Node Templates
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/user-settings/manage-node-templates"/>
 </head>
 
-When you provision a cluster [hosted by an infrastructure provider](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md), [node templates](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#node-templates) are used to provision the cluster nodes. These templates use Docker Machine configuration options to define an operating system image and settings/parameters for the node. You can create node templates in two contexts:
+When you provision a cluster [hosted by an infrastructure provider](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md), [node templates](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#node-templates) are used to provision the cluster nodes. These templates use Docker Machine configuration options to define an operating system image and settings/parameters for the node. You can create node templates in two contexts:
 
-- While [provisioning a node pool cluster](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md).
-- At any time, from your [user settings](../../pages-for-subheaders/user-settings.md).
+- While [provisioning a node pool cluster](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md).
+- At any time, from your [user settings](user-settings.md).
 
 When you create a node template, it is bound to your user profile. Node templates cannot be shared among users. You can delete stale node templates that you no longer user from your user settings.
 
@@ -20,7 +20,7 @@ When you create a node template, it is bound to your user profile. Node template
 1. Click **Add Template**.
 1. Select one of the cloud providers available. Then follow the instructions on screen to configure the template.
 
-**Result:** The template is configured. You can use the template later when you [provision a node pool cluster](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md).
+**Result:** The template is configured. You can use the template later when you [provision a node pool cluster](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md).
 
 ## Updating a Node Template
 
@@ -30,7 +30,7 @@ When you create a node template, it is bound to your user profile. Node template
 
     :::note
 
-    The default `active` [node drivers](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md) and any node driver, that has fields marked as `password`, are required to use [cloud credentials](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#cloud-credentials).
+    The default `active` [node drivers](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md) and any node driver, that has fields marked as `password`, are required to use [cloud credentials](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#cloud-credentials).
 
     :::
 
@@ -47,7 +47,7 @@ When creating new node templates from your user settings, you can clone an exist
 1. Find the template you want to clone. Then select **⋮ > Clone**.
 1. Complete the rest of the form.
 
-**Result:** The template is cloned and configured. You can use the template later when you [provision a node pool cluster](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md).
+**Result:** The template is cloned and configured. You can use the template later when you [provision a node pool cluster](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md).
 
 ## Deleting a Node Template
 
