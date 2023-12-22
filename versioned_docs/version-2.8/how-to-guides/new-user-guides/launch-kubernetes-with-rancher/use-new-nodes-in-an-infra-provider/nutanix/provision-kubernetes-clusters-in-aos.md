@@ -55,7 +55,7 @@ Setting up [VM-VM Anti-Affinity Policies](https://portal.nutanix.com/page/docume
 
 ### 1. Create a node template
 
-Creating a [node template](../../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#node-templates) for Nutanix AOS will allow Rancher to provision new nodes in Nutanix AOS. Node templates can be reused for other clusters.
+Creating a [node template](../use-new-nodes-in-an-infra-provider.md#node-templates) for Nutanix AOS will allow Rancher to provision new nodes in Nutanix AOS. Node templates can be reused for other clusters.
 
 1. Click **☰ > Cluster Management**.
 1. Click **RKE1 Configuration > Node Templates**.
@@ -75,7 +75,7 @@ Use Rancher to create a Kubernetes cluster in Nutanix AOS.
 1. Enter a **Cluster Name**, then click **Continue**.
 1. Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users who can access the cluster. Use the **Role** drop-down to set permissions for each user.
 1. Use **Cluster Options** to choose the version of Kubernetes that will be installed, what network provider will be used, and whether you want to enable project network isolation. To see more cluster options, click on **Show advanced options**. For help configuring the cluster, refer to the [RKE cluster configuration reference.](../../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)
-1. Add one or more node pools to your cluster. Each node pool uses a node template to provision new nodes. For more information about node pools, including best practices for assigning Kubernetes roles to the nodes, see [this section.](../../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#node-pools)
+1. Add one or more node pools to your cluster. Each node pool uses a node template to provision new nodes. For more information about node pools, including best practices for assigning Kubernetes roles to the nodes, see [this section.](../use-new-nodes-in-an-infra-provider.md#node-pools)
 1. Review your options to confirm they're correct. Then click **Create**.
 
 **Result:** Your cluster is created and assigned a state of **Provisioning**. Rancher is standing up your cluster.

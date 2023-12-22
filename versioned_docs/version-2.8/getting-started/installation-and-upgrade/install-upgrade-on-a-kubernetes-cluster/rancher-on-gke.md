@@ -8,13 +8,13 @@ title: Installing Rancher on a Google Kubernetes Engine Cluster
 
 In this section, you'll learn how to install Rancher using Google Kubernetes Engine.
 
-If you already have a GKE Kubernetes cluster, skip to the step about [installing an ingress.](#7-install-an-ingress) Then install the Rancher Helm chart following the instructions on [this page.](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#install-the-rancher-helm-chart)
+If you already have a GKE Kubernetes cluster, skip to the step about [installing an ingress.](#7-install-an-ingress) Then install the Rancher Helm chart following the instructions on [this page.](install-upgrade-on-a-kubernetes-cluster.md#install-the-rancher-helm-chart)
 
 ## Prerequisites
 
 - You will need a Google account.
 - You will need a Google Cloud billing account. You can manage your Cloud Billing accounts using the Google Cloud Console. For more information about the Cloud Console, visit [General guide to the console.](https://support.google.com/cloud/answer/3465889?hl=en&ref_topic=3340599)
-- You will need a cloud quota for at least one in-use IP address and at least 2 CPUs. For more details about hardware requirements for the Rancher server, refer to [this section.](../../../pages-for-subheaders/installation-requirements.md)
+- You will need a cloud quota for at least one in-use IP address and at least 2 CPUs. For more details about hardware requirements for the Rancher server, refer to [this section.](../installation-requirements/installation-requirements.md)
 
 ## 1. Enable the Kubernetes Engine API
 
@@ -184,7 +184,7 @@ There are many valid ways to set up the DNS. For help, refer to the Google Cloud
 
 ## 10. Install the Rancher Helm chart
 
-Next, install the Rancher Helm chart by following the instructions on [this page.](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#install-the-rancher-helm-chart) The Helm instructions are the same for installing Rancher on any Kubernetes distribution.
+Next, install the Rancher Helm chart by following the instructions on [this page.](install-upgrade-on-a-kubernetes-cluster.md#install-the-rancher-helm-chart) The Helm instructions are the same for installing Rancher on any Kubernetes distribution.
 
 Use the DNS name from the previous step as the Rancher server URL when you install Rancher. It can be passed in as a Helm option. For example, if the DNS name is `rancher.my.org`, you could run the Helm installation command with the option `--set hostname=rancher.my.org`.
 
@@ -194,7 +194,7 @@ When installing Rancher on top of this setup, you will also need to set the name
 --set ingress.ingressClassName=nginx
 ```
 
-Refer [here for the Helm install command](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#5-install-rancher-with-helm-and-your-chosen-certificate-option) for your chosen certificate option.
+Refer [here for the Helm install command](install-upgrade-on-a-kubernetes-cluster.md#5-install-rancher-with-helm-and-your-chosen-certificate-option) for your chosen certificate option.
 
 In Rancher v2.7.5, if you intend to use the default GKE ingress on your cluster without enabling VPC-native cluster mode, you need to set the following flag:
 

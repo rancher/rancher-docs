@@ -17,7 +17,7 @@ The following instructions will guide you through upgrading a Rancher server tha
 ## Prerequisites
 
 - **Review the [known upgrade issues](../../install-upgrade-on-a-kubernetes-cluster/upgrades.md#known-upgrade-issues)** section in the Rancher documentation for the most noteworthy issues to consider when upgrading Rancher. A more complete list of known issues for each Rancher version can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums](https://forums.rancher.com/c/announcements/12). Note that upgrades to or from any chart in the [rancher-alpha repository](../../resources/choose-a-rancher-version.md#helm-chart-repositories) aren’t supported.
-- **For [air gap installs only,](../../../../pages-for-subheaders/air-gapped-helm-cli-install.md) collect and populate images for the new Rancher server version**. Follow the guide to [populate your private registry](../air-gapped-helm-cli-install/publish-images.md) with the images for the Rancher version that you want to upgrade to.
+- **For [air gap installs only,](../air-gapped-helm-cli-install/air-gapped-helm-cli-install.md) collect and populate images for the new Rancher server version**. Follow the guide to [populate your private registry](../air-gapped-helm-cli-install/publish-images.md) with the images for the Rancher version that you want to upgrade to.
 
 ## Placeholder Review
 
@@ -151,7 +151,7 @@ docker run -d --volumes-from rancher-data \
   rancher/rancher:<RANCHER_VERSION_TAG>
 ```
 
-Privileged access is [required.](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
+Privileged access is [required.](rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
 
 </details>
 
@@ -187,7 +187,7 @@ docker run -d --volumes-from rancher-data \
   rancher/rancher:<RANCHER_VERSION_TAG>
 ```
 
-Privileged access is [required.](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
+Privileged access is [required.](rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
 
 </details>
 
@@ -222,7 +222,7 @@ docker run -d --volumes-from rancher-data \
   --no-cacerts
 ```
 
-Privileged access is [required.](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
+Privileged access is [required.](rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
 </details>
 
 #### Option D: Let's Encrypt Certificate
@@ -259,7 +259,7 @@ docker run -d --volumes-from rancher-data \
   --acme-domain <YOUR.DNS.NAME>
 ```
 
-Privileged access is [required.](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
+Privileged access is [required.](rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
 
 </details>
 
@@ -292,7 +292,7 @@ Placeholder | Description
       <REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher:<RANCHER_VERSION_TAG>
 ```
 
-Privileged access is [required.](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
+Privileged access is [required.](rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
 </details>
 
 #### Option B: Bring Your Own Certificate: Self-Signed
@@ -328,7 +328,7 @@ docker run -d --restart=unless-stopped \
     --privileged \
     <REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher:<RANCHER_VERSION_TAG>
 ```
-Privileged access is [required.](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
+Privileged access is [required.](rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
 </details>
 
 #### Option C: Bring Your Own Certificate: Signed by Recognized CA
@@ -370,7 +370,7 @@ docker run -d --volumes-from rancher-data \
      --privileged
      <REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher:<RANCHER_VERSION_TAG>
 ```
-privileged access is [required.](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
+privileged access is [required.](rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
 </details>
 
 </TabItem>
