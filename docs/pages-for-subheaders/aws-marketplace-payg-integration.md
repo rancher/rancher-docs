@@ -180,11 +180,7 @@ No. There is no choice over the Rancher version when deploying using the AWS Mar
 #### How often is the listing updated (including the version of Rancher, etc.)?
 
 Cloud marketplace listings are tied to a specific version of Rancher, usually the latest
-version available at the time of listing.
-
-Typically, these are updated quarterly, or more frequently if there are security issues.
-
-To update Rancher to a current version before the marketplace listing is updated, please see the following [documentation](./installation-and-upgrade.md).
+version available at the time of listing. Typically, these are updated quarterly, or more frequently if there are security issues.
 
 #### I have many Kubernetes clusters across multiple AWS accounts, does the Rancher Prime billing still work and enable tiered pricing?
 

@@ -166,7 +166,7 @@ No. There is no choice over the Rancher version when deploying using the Azure M
 
 #### How often is the listing updated (including the version of Rancher, etc.)?
 
-The marketplace listing is tied to a specific version of Rancher, usually it is the latest version available at the time the listing was last updated. Typically, the marketplace listing is updated quarterly, or more frequently to address any new security issues. To update Rancher to a current version before the marketplace listing is updated, please see the following [documentation](../pages-for-subheaders/installation-and-upgrade.md).
+The marketplace listing is tied to a specific version of Rancher, usually it is the latest version available at the time the listing was last updated. Typically, the marketplace listing is updated quarterly, or more frequently to address any new security issues.
 
 #### I have many Kubernetes clusters across multiple Azure accounts; does the Rancher Prime billing still work and enable tiered pricing?
 
