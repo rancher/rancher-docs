@@ -184,8 +184,7 @@ version available at the time of listing.
 
 Typically, these are updated quarterly, or more frequently if there are security issues.
 
-To update Rancher to a current version before the marketplace listing is updated, please
-see the following [documentation](../pages-for-subheaders/installation-and-upgrade.md).
+To update Rancher to a current version before the marketplace listing is updated, please see the following [documentation](./installation-and-upgrade.md).
 
 #### I have many Kubernetes clusters across multiple AWS accounts, does the Rancher Prime billing still work and enable tiered pricing?
 

@@ -70,7 +70,7 @@ You may now login to Rancher dashboard by pointing your browser to the Rancher s
 
 :::note
 
-The Rancher hostname must be resolvable by public DNS. Please refer to the [Prerequisites](./prerequisites) section for more details.
+The Rancher hostname must be resolvable by public DNS. Please refer to the [Prerequisites](prerequisites.md) section for more details.
 
 :::
 
