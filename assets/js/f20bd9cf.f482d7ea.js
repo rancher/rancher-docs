@@ -315,7 +315,7 @@ const metadata = {
     "unversionedId": "pages-for-subheaders/deploy-apps-across-clusters",
     "id": "pages-for-subheaders/deploy-apps-across-clusters",
     "title": "Deploying Applications across Clusters",
-    "description": "Rancher uses Fleet to deploy applications across clusters.",
+    "description": "Rancher offers several ways to deploy applications across clusters, depending on version.",
     "source": "@site/docs/pages-for-subheaders/deploy-apps-across-clusters.md",
     "sourceDirName": "pages-for-subheaders",
     "slug": "/pages-for-subheaders/deploy-apps-across-clusters",
@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/pages-for-subheaders/deploy-apps-across-clusters.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1703094682,
-    "formattedLastUpdatedAt": "Dec 20, 2023",
+    "lastUpdatedAt": 1703606341,
+    "formattedLastUpdatedAt": "Dec 26, 2023",
     "frontMatter": {
         "title": "Deploying Applications across Clusters"
     },
@@ -342,9 +342,14 @@ const metadata = {
 const assets = {};
 const toc = [
     {
+        value: 'Fleet',
+        id: 'fleet',
+        level: 2
+    },
+    {
         value: 'Multi-cluster Apps',
         id: 'multi-cluster-apps',
-        level: 3
+        level: 2
     }
 ];
 const layoutProps = {
@@ -361,12 +366,14 @@ function MDXContent(_param) {
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
         href: "https://ranchermanager.docs.rancher.com/pages-for-subheaders/deploy-apps-across-clusters"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher uses Fleet to deploy applications across clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Continuous Delivery with Fleet is GitOps at scale. For more information, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher offers several ways to deploy applications across clusters, depending on version.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "fleet"
+    }, `Fleet`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher v2.5 and later uses Fleet to deploy applications across clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Continuous Delivery with Fleet is GitOps at scale. For more information, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
-    }, `Fleet section`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `Fleet section`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "multi-cluster-apps"
-    }, `Multi-cluster Apps`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In Rancher before v2.5, the multi-cluster apps feature was used to deploy applications across clusters. The multi-cluster apps feature is deprecated, but still available in Rancher v2.5.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Multi-cluster Apps`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In Rancher before v2.5, the multi-cluster apps feature was used to deploy applications across clusters. The multi-cluster apps feature is deprecated, but still available as a legacy feature.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps"
     }, `multi-cluster app documentation`), ` for more details.`));
