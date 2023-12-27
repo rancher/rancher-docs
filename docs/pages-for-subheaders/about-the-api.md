@@ -83,4 +83,11 @@ You can use browser developer tools to capture how the Rancher API is called. Fo
 1. Right-click `cluster?_replace=true` and click **Copy > Copy as cURL.**
 1. Paste the result into any text editor. You will be able to see the POST request, including the URL it was sent to, all of the headers, and the full body of the request. This command can be used to create a cluster from the command line. Note: The request should be stored in a safe place because it contains credentials.
 
-Additionally, you can use the **View in API** link to view captured Rancher API calls for your respective clusters and resources located in the clickable `⋮` from the UI. This feature is not enabled by default. In order to enable, click on your **User Tile** in the top right corner of the UI and from the dropdown click on **Preferences**. Once on the page, navigate to the `Advanced Features` section and click the **Enable "View in API"** button. Once checked, the **View in API** link will now appear under the `⋮` sub-menu on resource pages in the UI.
+### Enable View in API
+
+You can also view captured Rancher API calls for your respective clusters and resources. This feature is not enabled by default. To enable it: 
+
+1. Click on your **User Tile** in the top right corner of the UI and select **Preferences** from the dropdown menu. 
+2. Under the **Advanced Features** section, click **Enable "View in API"**
+ 
+Once checked, the **View in API** link will now appear under the **⋮** sub-menu on resource pages in the UI.
