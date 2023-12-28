@@ -1,5 +1,5 @@
 ---
-title: EKS Cluster Configuration Reference | 2.6
+title: EKS Cluster Configuration Reference
 ---
 
 <head>
@@ -140,6 +140,26 @@ The following settings are also configurable. All of these except for the "Node 
 | Labels | Kubernetes labels applied to the nodes in the managed node group. |
 | Tags | These are tags for the managed node group and do not propagate to any of the associated resources. |
 
+### Self-managed Amazon Linux Nodes
+
+Rancher can import an EKS cluster with self-managed Amazon Linux nodes. This type of cluster needs to be configured based on AWS documentation for launching self-managed Amazon Linux nodes. EKS clusters with self-managed Amazon Linux nodes are usually operated by the Karpenter project. After provisioning an EKS cluster with self-managed Amazon Linux nodes, it can be easily imported into Rancher Manager and then managed by it. However, the nodes won't be visible in Rancher Manager.
+
+### IAM Roles for Service Accounts
+
+An Applications Deployment running on an EKS cluster can make requests to AWS services via IAM permissions. These applications must sign their requests with AWS credentials. IAM roles for service accounts manage these credentials using an AWS OIDC endpoint. Rather than distributing AWS credentials to containers or relying on an EC2 instance's role, you can link an [IAM role to a Kubernetes service account](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) and configure your Pods to use this account.
+
+:::note
+
+It isn't supported for the Rancher pods when Rancher Manager is running in an EKS cluster.
+
+:::
+
+
+To enable IAM roles for service accounts:
+1. [Create an IAM OIDC provider for your cluster](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html)
+2. [Configure a Kubernetes service account to assume an IAM role](https://docs.aws.amazon.com/eks/latest/userguide/associate-service-account-role.html)
+3. [Configure Pods to use a Kubernetes service account](https://docs.aws.amazon.com/eks/latest/userguide/pod-configuration.html)
+4. [Use a supported AWS SDK](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts-minimum-sdk.html)
 
 ### Configuring the Refresh Interval
 
