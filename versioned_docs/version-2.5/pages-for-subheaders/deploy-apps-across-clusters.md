@@ -6,14 +6,16 @@ title: Deploying Applications across Clusters
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/deploy-apps-across-clusters"/>
 </head>
 
-### Fleet
+Rancher offers several ways to deploy applications across clusters, depending on version.
 
-Rancher v2.5 introduced Fleet, a new way to deploy applications across clusters.
+## Fleet
 
-Fleet is GitOps at scale. For more information, refer to the [Fleet section.](../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md)
+Rancher v2.5 introduces Fleet, a new way to deploy applications across clusters.
 
-### Multi-cluster Apps
+Fleet is GitOps at scale. For more information, refer to the [Fleet section](../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md).
+
+## Multi-cluster Apps
 
 In Rancher before v2.5, the multi-cluster apps feature was used to deploy applications across clusters. The multi-cluster apps feature is deprecated, but still available in Rancher v2.5.
 
-Refer to the documentation [here.](../how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps.md)
+See the [multi-cluster app documentation](../how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps.md) for more details.
