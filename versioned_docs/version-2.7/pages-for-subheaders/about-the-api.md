@@ -88,5 +88,5 @@ You can also view captured Rancher API calls for your respective clusters and re
 
 1. Click on your **User Tile** in the top right corner of the UI and select **Preferences** from the dropdown menu. 
 2. Under the **Advanced Features** section, click **Enable "View in API"**
- 
+
 Once checked, the **View in API** link will now appear under the **⋮** sub-menu on resource pages in the UI.
