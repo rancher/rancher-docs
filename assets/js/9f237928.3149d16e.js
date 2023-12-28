@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[36489],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[56984],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 78897:
+/***/ 98973:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "pages-for-subheaders/about-the-api",
-    "id": "version-2.8/pages-for-subheaders/about-the-api",
+    "id": "version-2.7/pages-for-subheaders/about-the-api",
     "title": "API",
     "description": "How to use the API",
-    "source": "@site/versioned_docs/version-2.8/pages-for-subheaders/about-the-api.md",
+    "source": "@site/versioned_docs/version-2.7/pages-for-subheaders/about-the-api.md",
     "sourceDirName": "pages-for-subheaders",
     "slug": "/pages-for-subheaders/about-the-api",
-    "permalink": "/v2.8/pages-for-subheaders/about-the-api",
+    "permalink": "/v2.7/pages-for-subheaders/about-the-api",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/pages-for-subheaders/about-the-api.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/pages-for-subheaders/about-the-api.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "Oct 6, 2023",
+    "version": "2.7",
+    "lastUpdatedAt": 1703788687,
+    "formattedLastUpdatedAt": "Dec 28, 2023",
     "frontMatter": {
         "title": "API"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "kubectl Utility",
-        "permalink": "/v2.8/reference-guides/cli-with-rancher/kubectl-utility"
+        "permalink": "/v2.7/reference-guides/cli-with-rancher/kubectl-utility"
     },
     "next": {
         "title": "API Tokens",
-        "permalink": "/v2.8/reference-guides/about-the-api/api-tokens"
+        "permalink": "/v2.7/reference-guides/about-the-api/api-tokens"
     }
 };
 const assets = {};
@@ -375,6 +375,11 @@ const toc = [
         value: 'Capturing Rancher API Calls',
         id: 'capturing-rancher-api-calls',
         level: 2
+    },
+    {
+        value: 'Enable View in API',
+        id: 'enable-view-in-api',
+        level: 3
     }
 ];
 const makeShortcode = (name)=>function MDXDefaultShortcode(props) {
@@ -431,19 +436,19 @@ function MDXContent(_param) {
         "id": "authentication"
     }, `Authentication`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `API requests must include authentication information.  Authentication is done with HTTP basic authentication using `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/reference-guides/user-settings/api-keys"
+        "href": "/v2.7/reference-guides/user-settings/api-keys"
     }, `API Keys`), `. API keys can create new clusters and have access to multiple clusters via `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `/v3/clusters/`), `. `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles"
+        "href": "/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles"
     }, `Cluster and project roles`), ` apply to these keys and restrict what clusters and projects the account can see and what actions they can take.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `By default, some cluster-level API tokens are generated with infinite time-to-live (`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `ttl=0`), `). In other words, API tokens with `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `ttl=0`), ` never expire unless you invalidate them. For details on how to invalidate them, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/reference-guides/about-the-api/api-tokens"
+        "href": "/v2.7/reference-guides/about-the-api/api-tokens"
     }, `API tokens page`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "making-requests"
     }, `Making requests`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The API is generally RESTful but has several features to make the definition of everything discoverable by a client so that generic clients can be written instead of having to write specific code for every type of resource.  For detailed info about the generic API spec, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -588,7 +593,25 @@ function MDXContent(_param) {
         parentName: "li"
     }, `Copy > Copy as cURL.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
-    }, `Paste the result into any text editor. You will be able to see the POST request, including the URL it was sent to, all of the headers, and the full body of the request. This command can be used to create a cluster from the command line. Note: The request should be stored in a safe place because it contains credentials.`)));
+    }, `Paste the result into any text editor. You will be able to see the POST request, including the URL it was sent to, all of the headers, and the full body of the request. This command can be used to create a cluster from the command line. Note: The request should be stored in a safe place because it contains credentials.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "enable-view-in-api"
+    }, `Enable View in API`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can also view captured Rancher API calls for your respective clusters and resources. This feature is not enabled by default. To enable it: `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `Click on your `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `User Tile`), ` in the top right corner of the UI and select `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Preferences`), ` from the dropdown menu. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `Under the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Advanced Features`), ` section, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Enable "View in API"`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Once checked, the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `View in API`), ` link will now appear under the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `⋮`), ` sub-menu on resource pages in the UI.`));
 }
 MDXContent.isMDXComponent = true;
 
