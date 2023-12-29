@@ -1,5 +1,5 @@
 ---
-title: 1. Enable Istio in the Cluster
+title: Enable Istio in the Cluster
 ---
 
 <head>
