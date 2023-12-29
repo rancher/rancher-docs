@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/rancher-security/selinux-rpm/about-rancher-selinux.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1696258051,
-    "formattedLastUpdatedAt": "Oct 2, 2023",
+    "lastUpdatedAt": 1703847033,
+    "formattedLastUpdatedAt": "Dec 29, 2023",
     "frontMatter": {
         "title": "About rancher-selinux"
     },
@@ -393,7 +393,7 @@ function MDXContent(_param) {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
-    }, `The rancher-selinux RPM was tested with CentOS 7 and 8.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `The rancher-selinux RPM was tested with CentOS 7, 8 and 9.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "1-set-up-the-yum-repo"
     }, `1. Set up the yum repo`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Set up the yum repo to install `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
@@ -417,6 +417,16 @@ enabled=1
 gpgcheck=1 
 gpgkey=https://rpm.rancher.io/public.key 
 EOF
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In order to use the RPM repository, on a CentOS 9 or RHEL 9 system, run the following bash snippet:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `# cat << EOF > /etc/yum.repos.d/rancher.repo 
+[rancher] 
+name=Rancher 
+baseurl=https://rpm.rancher.io/rancher/production/centos/9/noarch
+enabled=1 
+gpgcheck=1 
+gpgkey=https://rpm.rancher.io/public.key 
+EOF
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "2-installing-the-rpm"
     }, `2. Installing the RPM`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Install the RPM:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
@@ -429,7 +439,7 @@ EOF
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
-    }, `Logging v2 was tested with SELinux on RHEL/CentOS 7 and 8.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Applications do not automatically work once the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `Logging v2 was tested with SELinux on RHEL/CentOS 7, 8 and 9.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Applications do not automatically work once the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `rancher-selinux`), ` RPM is installed on the host. They need to be configured to run in an allowed SELinux container domain provided by the RPM. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To configure the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
