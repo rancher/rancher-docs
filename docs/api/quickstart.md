@@ -50,7 +50,7 @@ In this example, we'll show how to use kubectl to create a project, followed by 
 
 :::note
 
-At this time, not all Rancher resources have been made available through the Rancher Kubernetes API.
+At this time, not all Rancher resources are available through the Rancher Kubernetes API.
 
 :::
 
