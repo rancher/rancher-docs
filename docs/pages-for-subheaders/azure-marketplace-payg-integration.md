@@ -224,4 +224,4 @@ If the Racher Prime cluster is offline or disconnected from the Azure billing fr
 
 #### How do I get fixes and updates for Rancher?
 
-To update the Rancher product to a current version before the marketplace listing is updated, please see the [documentation](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades.md).
+To update the Rancher product to a current version before the marketplace listing is updated, please see [upgrading Rancher Prime PAYG cluster in Azure](../integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/upgrading-rancher-payg-cluster.md).
