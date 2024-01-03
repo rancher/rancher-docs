@@ -218,7 +218,7 @@ If the billing mechanism on the primary cluster is active, a support case will b
 
 #### What are the resource requirements for installing Rancher on EKS?
 
-Please check the official documentation for best practices.
+Please check the documentation for best practices.
 
 #### Is there any difference between Rancher Prime from the AWS Marketplace and the versions I can run in my own data center?
 
@@ -244,4 +244,4 @@ Yes, nodes can run anywhere. SUSE Rancher will count the total number of nodes m
 
 #### How do I get fixes and updates for Rancher?
 
-To update the Rancher product to a current version before the marketplace listing is updated, please see [upgrading Rancher Prime PAYG cluster in AWS](../integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/upgrading-rancher-payg-cluster.md).
+To update to the latest version of the Rancher Prime PAYG offering supported in the marketplace listing, please see [upgrading Rancher Prime PAYG cluster in AWS](../integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/upgrading-rancher-payg-cluster.md).

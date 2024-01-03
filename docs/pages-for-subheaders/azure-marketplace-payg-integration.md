@@ -204,7 +204,7 @@ For deployments where Rancher Prime is managing multiple downstream clusters, be
 
 #### What are the resource requirements for installing Rancher on AKS?
 
-Check the official documentation for [best practices](../pages-for-subheaders/installation-requirements.md#hosted-kubernetes).
+Check the documentation for [best practices](../pages-for-subheaders/installation-requirements.md#hosted-kubernetes).
 
 #### Is there any difference between Rancher Prime from Azure Marketplace and the versions I can run in my own data center?
 
@@ -224,4 +224,4 @@ If the Racher Prime cluster is offline or disconnected from the Azure billing fr
 
 #### How do I get fixes and updates for Rancher?
 
-To update the Rancher product to a current version before the marketplace listing is updated, please see [upgrading Rancher Prime PAYG cluster in Azure](../integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/upgrading-rancher-payg-cluster.md).
+To update to the latest version of the Rancher Prime PAYG offering supported in the marketplace listing, please see [upgrading Rancher Prime PAYG cluster in Azure](../integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/upgrading-rancher-payg-cluster.md).
