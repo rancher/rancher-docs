@@ -175,7 +175,13 @@ The AWS Marketplace listing for Rancher Prime is tied to a specific version of R
 
 #### I need a prior version of Rancher, can I still use the listing?
 
-No. There is no choice over the Rancher version when deploying using the AWS Marketplace listing. If a prior version of Rancher is required, this must be installed manually using the standard documentation. Billing via AWS Marketplace may not be supported with previous versions.
+No. There is no choice over the Rancher version when deploying using the AWS Marketplace listing. If a prior version of Rancher is required, this must be installed manually using the standard documentation.
+
+:::note
+
+Billing through AWS Marketplace may not be supported with previous versions.
+
+:::
 
 #### How often is the listing updated (including the version of Rancher, etc.)?
 

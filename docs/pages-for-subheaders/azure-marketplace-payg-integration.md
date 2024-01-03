@@ -162,7 +162,13 @@ The Rancher Prime marketplace listing is tied to a specific version of Rancher, 
 
 #### I need a prior version of Rancher; can I still use the listing?
 
-No. There is no choice over the Rancher version when deploying using the Azure Marketplace listing. If a prior version of Rancher is required, this must be installed manually using the standard documentation. NOTE: Billing through the Azure Marketplace may not be supported with earlier versions.
+No. There is no choice over the Rancher version when deploying using the Azure Marketplace listing. If a prior version of Rancher is required, this must be installed manually using the standard documentation.
+
+:::note
+
+Billing through the Azure Marketplace may not be supported with earlier versions.
+
+:::
 
 #### How often is the listing updated (including the version of Rancher, etc.)?
 
