@@ -8,7 +8,7 @@ title: AWS Marketplace Pay-as-you-go (PAYG) Integration
 
 ## Overview
 
-Rancher Prime integrates with the AWS Marketplace as a pay-as-you-go (PAYG) offering. This brings the value of running and managing Kubernetes environments to AWS customers, benefiting from a new pay monthly pricing model available through the AWS Marketplace. This listing will enable you to manage any CNCF-certified Kubernetes distribution in AWS, on-prem, or at the edge. To learn more, see our non-EMEMA and EMEA AWS Marketplace offerings for Rancher Prime:
+Rancher Prime integrates with the AWS Marketplace as a pay-as-you-go (PAYG) offering. This brings the value of running and managing Kubernetes environments to AWS customers, benefiting from a new pay-monthly pricing model available through the AWS Marketplace. This listing will enable you to manage any CNCF-certified Kubernetes distribution in AWS, on-prem, or at the edge. To learn more, see our non-EMEMA and EMEA AWS Marketplace offerings for Rancher Prime:
 
 - [Rancher Prime](https://aws.amazon.com/marketplace/pp/prodview-f2bvszurj2p2c)
 - [Rancher Prime (EMEA Orders Only)](https://aws.amazon.com/marketplace/pp/prodview-ocgjwd5c2aj5i)

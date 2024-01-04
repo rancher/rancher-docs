@@ -2,7 +2,7 @@
 title: Installing Rancher Prime PAYG on AWS
 ---
 
-This page covers how to install the Rancher Prime PAYG offering on Amazon's AWS Marketplace.
+This page covers installing the Rancher Prime PAYG offering on Amazon's AWS Marketplace.
 
 ## Preparing your cluster
 
@@ -65,7 +65,7 @@ eksctl create iamserviceaccount \
 
   :::
 
-  The Rancher hostname must be resolvable by a public DNS. Please refer to the [Prerequisites](prerequisites.md) section for more details. For example, if the DNS name is rancher.my.org, `$HOST_NAME`=`rancher.my.org`.
+  The Rancher hostname must be resolvable by a public DNS. For more details, please refer to the [Prerequisites](prerequisites.md) section. For example, if the DNS name is rancher.my.org, `$HOST_NAME`=`rancher.my.org`.
 
   ```shell
   helm install -n cattle-rancher-csp-deployer-system rancher-cloud --create-namespace \
@@ -137,7 +137,7 @@ You may now log in to the Rancher dashboard by pointing your browser to the Ranc
 
 :::note
 
-The Rancher hostname must be resolvable by public DNS. Please refer to the [Prerequisites](prerequisites.md) section for more details.
+The Rancher hostname must be resolvable by public DNS. For more details, please refer to the [Prerequisites](prerequisites.md) section.
 
 :::
 

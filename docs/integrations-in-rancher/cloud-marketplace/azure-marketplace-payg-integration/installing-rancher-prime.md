@@ -2,7 +2,7 @@
 title: Installing Rancher Prime PAYG on Azure
 ---
 
-This page covers how to install the Rancher Prime PAYG offering on Microsoft's Azure Marketplace.
+This page covers installing the Rancher Prime PAYG offering on Microsoft's Azure Marketplace.
 
 ## How to Install Rancher Prime PAYG
 
@@ -16,17 +16,19 @@ Refer to the following steps for creating a new deployment of Rancher Prime from
 
 On the **Basics** tab, specify the **Project details** and **Instance details**:
 
-1. Select an existing subscription from the dropdown list.
-1. Select an existing Resource group from the dropdown list.
+1. Select an existing **Subscription** from the dropdown list.
+1. Select an existing **Resource group** from the dropdown list.
+
    :::note
 
    The **Create new** resource group feature is not supported.
 
    :::
    ![Create new resource group not supported](/img/install-rancher-prime-basics-create-new.png)
-1. Select an existing AKS Cluster Name from the dropdown list.
-1. Choose a name for the Cluster extension resource name. It can consist of alphanumeric characters and dots, and the length must be between 2 and 253 characters.
-![Basics tab](/img/install-rancher-prime-basics.png)
+1. Select an existing **AKS Cluster Name** from the dropdown list.
+1. Choose an **Extension Resource name**. It can consist of alphanumeric characters and dots; the length must be between 2 and 253 characters.
+
+   ![Basics tab](/img/install-rancher-prime-basics.png)
 1. Select **Next**.
 
 ### Rancher Configuration
@@ -80,7 +82,7 @@ After logging into Rancher Prime, you should notice the Welcome to Rancher Prime
 
 ![Rancher Prime Home](/img/install-rancher-prime-home.png)
 
-If your Rancher Prime PAYG deployment only has **Welcome to Rancher** at the top of the screen, please ensure you've updated to the latest version, and reset the branding to default (i.e. "suse") from **Global Settings**.
+If your Rancher Prime PAYG deployment only has **Welcome to Rancher** at the top of the screen, please ensure you've updated to the latest version, and reset the branding to default (i.e., "suse") from **Global Settings**.
 
 ![Global Settings](/img/install-rancher-prime-global-settings.png)
 

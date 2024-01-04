@@ -2,7 +2,7 @@
 title: Troubleshooting Rancher Prime PAYG Cluster in AWS
 ---
 
-This section contains information to help troubleshoot issues when installing the Rancher Prime PAYG offer.
+This section contains information to help troubleshoot issues when installing the Rancher Prime PAYG offering.
 
 ## Jobs and Pods
 
@@ -19,9 +19,9 @@ If a pod is not in a `Running` state, you can attempt to find the root cause wit
 - Describe job: `kubectl describe job <job name> -n <namespaces>`
 - Logs from the containers of pods of the job: `kubectl logs -l job-name=<job name> -n <namespaces>`
 
-## Recovery from Failed Pods
+## Recovering from Failed Pods
 
-If any of the pods aren't running, check the `rancher-cloud` Pod:
+If any of the pods aren't running, check the `rancher-cloud` pod:
 
 ```shell
 kubectl get pods --all-namespaces | grep rancher-cloud

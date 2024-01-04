@@ -2,7 +2,7 @@
 title: Troubleshooting Rancher Prime PAYG Cluster in Azure
 ---
 
-This section contains information to help troubleshoot issues when installing the Rancher Prime PAYG offer and configuring the Billing-adapter.
+This section contains information to help troubleshoot issues when installing the Rancher Prime PAYG offer and configuring the billing adapter.
 
 ## Deployment
 
@@ -42,7 +42,7 @@ Check the status of pods or jobs:
 kubectl get pods --all-namespaces
 ```
 
-if a pod is not in Running state, you can attempt to find the root cause with the following commands:
+If a pod is not in Running state, you can attempt to find the root cause with the following commands:
 
 - Describe pod: `kubectl describe pod <pod name> -n <namespaces>`
 - Pod container logs: `kubectl logs <pod name> -n <namespaces>`
@@ -51,7 +51,7 @@ if a pod is not in Running state, you can attempt to find the root cause with th
 
 ## Rancher Usage Record Not found
 
-When you attempt to retrive a usage record, you might see the following message:
+When you attempt to retrieve a usage record, you might see the following message:
 
 ```shell
 Error from server (NotFound): cspadapterusagerecords.susecloud.net "rancher-usage-record" not found" Check Configuration, Retrieve generated configuration csp-config
@@ -65,9 +65,9 @@ kubectl get configmap -n cattle-csp-billing-adapter-system csp-config -o yaml
 
 If a configuration is not listed, you can attempt to find the root cause by checking the pod status and log. See [Jobs and Pods](#jobs-and-pods) for more details.
 
-## Multiple extensions of same type
+## Multiple Extensions of the Same Type
 
-When you attept to install an extension of the same type, you will see the following message:
+When you attempt to install an extension of the same type, you will see the following message:
 
 ```shell
 Multiple extensions of same type is not allowed at this scope. (Code: ValidationFailed)"
@@ -75,9 +75,9 @@ Multiple extensions of same type is not allowed at this scope. (Code: Validation
 
 AKS cluster already has the extension with the same type. To resolve the error, uninstall the extension and re-deploy with the same cluster.
 
-## Resource already existing in your cluster
+## Resource Already Existing in your Cluster
 
-When you attept to install a resource or extension that already exists, you will see the following message:
+When you attempt to install a resource or extension that already exists, you will see the following message:
 
 ```shell
 Helm installation failed : Resource already existing in your cluster : Recommendation Manually delete the resource(s) that currently exist in your cluster and try installation again. To delete these resources run the following commands: kubectl delete <resource type> -n <resource namespace> <resource name> : InnerError [rendered manifests contain a resource that already exists. Unable to continue with install: ServiceAccount "rancher" in namespace "cattle-system" exists and cannot be imported into the current release: invalid ownership metadata; annotation validation error: key "meta.helm.sh/release-name" must equal "test-nv2-reinstall": current value is "testnv2-plan"]
