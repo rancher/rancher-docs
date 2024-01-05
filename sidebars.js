@@ -1148,38 +1148,6 @@ const sidebars = {
                 'integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues'
               ]
             },
-            {
-              type: 'category',
-              label: 'AWS Marketplace Pay-as-you-go (PAYG)',
-              link: {
-                type: 'doc',
-                id: "pages-for-subheaders/aws-marketplace-payg-integration"
-              },
-              items: [
-                  'integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/prerequisites',
-                  'integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/installing-rancher-prime',
-                  'integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/upgrading-rancher-payg-cluster',
-                  'integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/troubleshooting',
-                  'integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/common-issues'
-
-              ]
-            },
-            {
-              type: 'category',
-              label: 'Azure Marketplace Pay-as-you-go (PAYG)',
-              link: {
-                type: 'doc',
-                id: "pages-for-subheaders/azure-marketplace-payg-integration"
-              },
-              items: [
-                  'integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites',
-                  'integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime',
-                  'integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/upgrading-rancher-payg-cluster',
-                  'integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/troubleshooting',
-                  'integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues'
-
-              ]
-            },
             'integrations-in-rancher/cloud-marketplace/supportconfig'
           ]
         },
