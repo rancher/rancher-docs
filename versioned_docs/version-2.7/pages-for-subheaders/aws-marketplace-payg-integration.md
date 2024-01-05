@@ -49,7 +49,262 @@ No. The Rancher listing on AWS is not available to purchase in all countries.
 
 Your billing country is based on the AWS Account ID used to do the deployment.
 
-Please read the addendum at the end of this FAQ for a list of countries that can and cannot transact Rancher Prime via the AWS Marketplace.
+Please refer to the following lists of countries that can and cannot transact Rancher Prime via the AWS Marketplace.
+
+<details>
+  <summary>Countries that can transact SUSE Rancher Support through the AWS Marketplace</summary>
+    <div>
+      <li>Australia, AU</li>
+      <li>Austria, AT</li>
+      <li>Bangladesh, BD</li>
+      <li>Belgium, BE</li>
+      <li>Bulgaria, BG</li>
+      <li>Cameroon, CM</li>
+      <li>Canada, CA</li>
+      <li>Chile, CL</li>
+      <li>Croatia, HR</li>
+      <li>Cyprus, CY</li>
+      <li>Czech Republic, CZ</li>
+      <li>Denmark, DK</li>
+      <li>Egypt, EG</li>
+      <li>Estonia, EE</li>
+      <li>Finland, FI</li>
+      <li>France, FR</li>
+      <li>Germany, DE</li>
+      <li>Greece, GR</li>
+      <li>Hungary, HU</li>
+      <li>Iceland, IS</li>
+      <li>India, IN</li>
+      <li>Indonesia, ID</li>
+      <li>Ireland, IE</li>
+      <li>Isle of Man, IM</li>
+      <li>Italy, IT</li>
+      <li>Kenya, KE</li>
+      <li>Kingdom of Saudi Arabia, SA</li>
+      <li>Korea, Republic of, KR</li>
+      <li>Latvia, LV</li>
+      <li>Lithuania, LT</li>
+      <li>Liechtenstein, LI</li>
+      <li>Luxembourg, LU</li>
+      <li>Malaysia, MY</li>
+      <li>Malta, MT</li>
+      <li>Netherlands, NL</li>
+      <li>New Zealand, NZ</li>
+      <li>Norway, NO</li>
+      <li>Poland, PL</li>
+      <li>Portugal, PT</li>
+      <li>Romania, RO</li>
+      <li>Russian Federation, RU</li>
+      <li>Singapore, SG</li>
+      <li>Slovakia, SK</li>
+      <li>Slovenia, SI</li>
+      <li>South Africa, ZA</li>
+      <li>Spain, ES</li>
+      <li>Sweden, SE</li>
+      <li>Switzerland, CH</li>
+      <li>Taiwan, Province of China, TW</li>
+      <li>Turkey, TR</li>
+      <li>United Kingdom, GB</li>
+      <li>United States, US</li>
+  </div>
+</details>
+
+<details>
+  <summary>Countries that cannot transact SUSE Rancher Support via the AWS Marketplace</summary>
+    <div>
+      <li>Afghanistan, AF</li>
+      <li>Åland Islands, AX</li>
+      <li>Albania, AL</li>
+      <li>Algeria, DZ</li>
+      <li>American Samoa, AS</li>
+      <li>Andorra, AD</li>
+      <li>Angola, AO</li>
+      <li>Anguilla, AI</li>
+      <li>Antarctica, AQ</li>
+      <li>Antigua and Barbuda, AG</li>
+      <li>Argentina, AR</li>
+      <li>Armenia, AM</li>
+      <li>Aruba, AW</li>
+      <li>Azerbaijan, AZ</li>
+      <li>Bahamas, BS</li>
+      <li>Bahrain, BH</li>
+      <li>Barbados, BB</li>
+      <li>Belarus, BY</li>
+      <li>Belize, BZ</li>
+      <li>Benin, BJ</li>
+      <li>Bermuda, BM</li>
+      <li>Bhutan, BT</li>
+      <li>Bonaire, BQ</li>
+      <li>Bolivarian Republic of Venezuela, VE</li>
+      <li>Bosnia and Herzegovina, BA</li>
+      <li>Botswana, BW</li>
+      <li>Bouvet Island, BV</li>
+      <li>Brazil, BR</li>
+      <li>British Indian Ocean Territory, IO</li>
+      <li>Brunei Darussalam, BN</li>
+      <li>Burkina Faso, BF</li>
+      <li>Burundi, BI</li>
+      <li>Cambodia, KH</li>
+      <li>Cape Verde, CV</li>
+      <li>Cayman Islands, KY</li>
+      <li>Central African Republic, CF</li>
+      <li>Chad, TD</li>
+      <li>China, CN</li>
+      <li>Christmas Island, CX</li>
+      <li>Cocos (Keeling) Islands, CC</li>
+      <li>Colombia, CO</li>
+      <li>Comoros, KM</li>
+      <li>Congo, CG</li>
+      <li>Cook Islands, CK</li>
+      <li>Costa Rica, CR</li>
+      <li>Côte d'Ivoire, CI</li>
+      <li>Curaçao, CW</li>
+      <li>Democratic Republic of the Congo, CD</li>
+      <li>Djibouti, DJ</li>
+      <li>Dominica, DM</li>
+      <li>Dominican Republic, DO</li>
+      <li>Ecuador, EC</li>
+      <li>El Salvador, SV</li>
+      <li>Equatorial Guinea, GQ</li>
+      <li>Eritrea, ER</li>
+      <li>Ethiopia, ET</li>
+      <li>Falkland Islands (Malvinas), FK</li>
+      <li>Faroe Islands, FO</li>
+      <li>Federated States of Micronesia, FM</li>
+      <li>Fiji, FJ</li>
+      <li>Former Yugoslav Republic of Macedonia, MK</li>
+      <li>French Guiana, GF</li>
+      <li>French Polynesia, PF</li>
+      <li>French Southern Territories, TF</li>
+      <li>Gabon, GA</li>
+      <li>Gambia, GM</li>
+      <li>Georgia, GE</li>
+      <li>Ghana, GH</li>
+      <li>Gibraltar, GI</li>
+      <li>Greenland, GL</li>
+      <li>Grenada, GD</li>
+      <li>Guadeloupe, GP</li>
+      <li>Guam, GU</li>
+      <li>Guatemala, GT</li>
+      <li>Guernsey, GG</li>
+      <li>Guinea, GN</li>
+      <li>Guinea-Bissau, GW</li>
+      <li>Guyana, GY</li>
+      <li>Haiti, HT</li>
+      <li>Heard Island and McDonald Islands, HM</li>
+      <li>Holy See (Vatican  City State), VA</li>
+      <li>Honduras, HN</li>
+      <li>Hong Kong, HK</li>
+      <li>Iraq, IQ</li>
+      <li>Israel, IL</li>
+      <li>Jamaica, JM</li>
+      <li>Japan, JP</li>
+      <li>Jersey, JE</li>
+      <li>Jordan, JO</li>
+      <li>Kazakhstan, KZ</li>
+      <li>Kiribati, KI</li>
+      <li>Kuwait, KW</li>
+      <li>Kyrgyzstan, KG</li>
+      <li>Lao People's Democratic Republic, LA</li>
+      <li>Lebanon, LB</li>
+      <li>Lesotho, LS</li>
+      <li>Liberia, LR</li>
+      <li>Libyan Arab Jamahiriya, LY</li>
+      <li>Macao, MO</li>
+      <li>Madagascar, MG</li>
+      <li>Malawi, MW</li>
+      <li>Maldives, MV</li>
+      <li>Mali, ML</li>
+      <li>Marshall Islands, MH</li>
+      <li>Martinique, MQ</li>
+      <li>Mauritania, MR</li>
+      <li>Mauritius, MU</li>
+      <li>Mayotte, YT</li>
+      <li>Mexico, MX</li>
+      <li>Mongolia, MN</li>
+      <li>Montenegro, ME</li>
+      <li>Montserrat, MS</li>
+      <li>Morocco, MA</li>
+      <li>Mozambique, MZ</li>
+      <li>Myanmar, MM</li>
+      <li>Namibia, NA</li>
+      <li>Nauru, NR</li>
+      <li>Nepal, NP</li>
+      <li>New Caledonia, NC</li>
+      <li>Nicaragua, NI</li>
+      <li>Niger, NE</li>
+      <li>Nigeria, NG</li>
+      <li>Niue, NU</li>
+      <li>Norfolk Island, NF</li>
+      <li>Northern Mariana Islands, MP</li>
+      <li>Oman, OM</li>
+      <li>Pakistan, PK</li>
+      <li>Palau, PW</li>
+      <li>Occupied Palestinian Territory, PS</li>
+      <li>Panama, PA</li>
+      <li>Papua New Guinea, PG</li>
+      <li>Paraguay, PY</li>
+      <li>Peru, PE</li>
+      <li>Philippines, PH</li>
+      <li>Pitcairn, PN</li>
+      <li>Plurinational State of Bolivia, BO</li>
+      <li>Puerto Rico, PR</li>
+      <li>Qatar, QA</li>
+      <li>Republic of Moldova, MD</li>
+      <li>Réunion, RE</li>
+      <li>Rwanda, RW</li>
+      <li>Saint Barthélemy, BL</li>
+      <li>Saint Helena, Ascension and Tristan da Cunha, SH</li>
+      <li>Saint Kitts and Nevis, KN</li>
+      <li>Saint Lucia, LC</li>
+      <li>Saint Martin, MF</li>
+      <li>Saint Pierre and Miquelon, PM</li>
+      <li>Saint Vincent and the Grenadines, VC</li>
+      <li>Samoa, WS</li>
+      <li>San Marino, SM</li>
+      <li>Sao Tome and Principe, ST</li>
+      <li>Senegal, SN</li>
+      <li>Serbia, RS</li>
+      <li>Seychelles, SC</li>
+      <li>Sierra Leone, SL</li>
+      <li>Sint Maarten, SX</li>
+      <li>Solomon Islands, SB</li>
+      <li>Somalia, SO</li>
+      <li>South Georgia and the South Sandwich Islands, GS</li>
+      <li>South Sudan, SS</li>
+      <li>Sri Lanka, LK</li>
+      <li>Suriname, SR</li>
+      <li>Svalbard and Jan Mayen, SJ</li>
+      <li>Swaziland, SZ</li>
+      <li>Tajikistan, TJ</li>
+      <li>Thailand, TH</li>
+      <li>Timor-Leste, TL</li>
+      <li>Togo, TG</li>
+      <li>Tokelau, TK</li>
+      <li>Tonga, TO</li>
+      <li>Trinidad and Tobago, TT</li>
+      <li>Tunisia, TN</li>
+      <li>Turkmenistan, TM</li>
+      <li>Turks and Caicos Islands, TC</li>
+      <li>Tuvalu, TV</li>
+      <li>Uganda, UG</li>
+      <li>Ukraine, UA</li>
+      <li>United Arab Emirates, AE</li>
+      <li>United Republic of Tanzania, TZ</li>
+      <li>United States Minor Outlying Islands, UM</li>
+      <li>Uruguay, UY</li>
+      <li>Uzbekistan, UZ</li>
+      <li>Vanuatu, VU</li>
+      <li>Viet Nam, VN</li>
+      <li>Virgin Islands, British, VG</li>
+      <li>Virgin Islands, U.S., VI</li>
+      <li>Wallis and Futuna, WF</li>
+      <li>Western Sahara, EH</li>
+      <li>Yemen, YE</li>
+      <li>Zambia, ZM</li>
+      <li>Zimbabwe, ZW</li>
+    </div>
+</details>
 
 #### My AWS account is in the USA, but I want to deploy Rancher in another AWS region, a region that is in a country where I currently cannot transact Rancher Prime. Is this possible?
 
@@ -58,8 +313,6 @@ Yes. As long as your AWS account is billed to one of the allowed countries, it i
 #### Is this listing available in China?
 
 While it is not possible to transact/bill Rancher Prime in China, it is possible to deploy into AWS regions in China.
-
-Please read the addendum at the end of this FAQ for a list of countries that can and cannot transact Rancher Prime via the AWS Marketplace.
 
 #### Can I still deploy Rancher using the "Rancher Setup" listing from the AWS Marketplace?
 
