@@ -14,7 +14,7 @@ Your EKS cluster requires an OIDC provider to be installed. To check for an OIDC
 aws eks describe-cluster --name $CLUSTER_NAME --region $REGION --query cluster.identity.oidc.issuer --output text
 ```
 
-A URL is returned, like `https://oidc.eks.region.amazonaws.com/id/1234567890ABCDEF`. The part after `https://` will be referred to in later instructions as the OIDC Provider Identity (e.g. `oidc.eks.region.amazonaws.com/id/1234567890ABCDEF`). The final section of the URL, `1234567890ABCDEF`, is the `$OIDC_ID`.
+A URL is returned, like `https://oidc.eks.region.amazonaws.com/id/1234567890ABCDEF`. The part after `https://` (e.g. `oidc.eks.region.amazonaws.com/id/1234567890ABCDEF`) will be referred to in later instructions as the OIDC Provider Identity. The final section of the URL, `1234567890ABCDEF`, is the `$OIDC_ID`.
 
 Using the `$OIDC_ID` of the issuer found above, you can check if a provider is installed with the following command:
 
@@ -65,7 +65,7 @@ eksctl create iamserviceaccount \
 
   :::
 
-  The Rancher hostname must be resolvable by a public DNS. For more details, please refer to the [Prerequisites](prerequisites.md) section. For example, if the DNS name is rancher.my.org, `$HOST_NAME`=`rancher.my.org`.
+  The Rancher hostname must be resolvable by a public DNS. For more details, please refer to the [Prerequisites](prerequisites.md) section. For example, if the DNS name is `rancher.my.org`, then replace `$HOST_NAME` with `rancher.my.org` when running the `helm install` command.
 
   ```shell
   helm install -n cattle-rancher-csp-deployer-system rancher-cloud --create-namespace \
@@ -133,7 +133,7 @@ After the Helm chart installation is complete, Rancher Prime is successfully ins
 
 ## Log into the Rancher Dashboard
 
-You may now log in to the Rancher dashboard by pointing your browser to the Rancher server URL `https://$RANCHER_HOSTNAME`, where the Rancher hostname is the [hostname](#installing-rancher) is your chosen hostname when installing Rancher.
+You may now log in to the Rancher dashboard by pointing your browser to the Rancher server URL `https://$RANCHER_HOSTNAME`, where`$RANCHER_HOSTNAME` is the hostname chosen when [installing Rancher](#installing-rancher).
 
 :::note
 

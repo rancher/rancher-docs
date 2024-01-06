@@ -9,7 +9,7 @@ This section contains information to help troubleshoot issues when installing th
 After a successful deployment, check the status of the deployment, it should list similar pod and chart output.
 
 ```shell
-kubectl get deployments --all-namespaces=true
+kubectl get deployments --all-namespaces
 ```
 
 ```shell
