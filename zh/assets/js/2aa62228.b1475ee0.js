@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/air-gap-helm2/prepare-nodes.md",
     "sourceDirName": "getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/air-gap-helm2",
     "slug": "/getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/air-gap-helm2/prepare-nodes",
-    "permalink": "/v2.0-v2.4/getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/air-gap-helm2/prepare-nodes",
+    "permalink": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/air-gap-helm2/prepare-nodes",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/air-gap-helm2/prepare-nodes.md",
     "tags": [],
     "version": "2.0-2.4",
-    "lastUpdatedAt": 1685050877,
-    "formattedLastUpdatedAt": "May 25, 2023",
+    "lastUpdatedAt": 1704574878,
+    "formattedLastUpdatedAt": "2024年1月6日",
     "frontMatter": {
         "title": "1. Prepare your Node(s)"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Installing Rancher in an Air Gapped Environment with Helm 2",
-        "permalink": "/v2.0-v2.4/pages-for-subheaders/air-gap-helm2"
+        "permalink": "/zh/v2.0-v2.4/pages-for-subheaders/air-gap-helm2"
     },
     "next": {
         "title": "2. Collect and Publish Images to your Private Registry",
-        "permalink": "/v2.0-v2.4/getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/air-gap-helm2/populate-private-registry"
+        "permalink": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/air-gap-helm2/populate-private-registry"
     }
 };
 const assets = {};
@@ -435,7 +435,7 @@ function MDXContent(_param) {
         "id": "os-docker-hardware-and-networking"
     }, `OS, Docker, Hardware, and Networking`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Make sure that your node(s) fulfill the general `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.0-v2.4/pages-for-subheaders/installation-requirements"
+        "href": "/zh/v2.0-v2.4/pages-for-subheaders/installation-requirements"
     }, `installation requirements.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "private-registry"
     }, `Private Registry`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher supports air gap installs using a private registry. You must have your own private registry or other means of distributing Docker images to your machines.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you need help with creating a private registry, please refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -462,7 +462,7 @@ function MDXContent(_param) {
         "href": "https://docs.helm.sh/using_helm/#installing-helm"
     }, `helm`), ` - Package management for Kubernetes. Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.0-v2.4/getting-started/installation-and-upgrade/resources/choose-a-rancher-version"
+        "href": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/resources/choose-a-rancher-version"
     }, `Helm version requirements`), ` to choose a version of Helm to install Rancher.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(TabItem, {
         value: "Docker Install",
         mdxType: "TabItem"
@@ -470,7 +470,7 @@ function MDXContent(_param) {
         "id": "os-docker-hardware-and-networking-1"
     }, `OS, Docker, Hardware, and Networking`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Make sure that your node(s) fulfill the general `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.0-v2.4/pages-for-subheaders/installation-requirements"
+        "href": "/zh/v2.0-v2.4/pages-for-subheaders/installation-requirements"
     }, `installation requirements.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "private-registry-1"
     }, `Private Registry`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher supports air gap installs using a private registry. You must have your own private registry or other means of distributing Docker images to your machines.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you need help with creating a private registry, please refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -502,7 +502,7 @@ function MDXContent(_param) {
         "id": "a-provision-three-air-gapped-linux-hosts-according-to-our-requirements"
     }, `A. Provision three air gapped Linux hosts according to our requirements`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These hosts will be disconnected from the internet, but require being able to connect with your private registry.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `View hardware and software requirements for each of your cluster nodes in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.0-v2.4/pages-for-subheaders/installation-requirements"
+        "href": "/zh/v2.0-v2.4/pages-for-subheaders/installation-requirements"
     }, `Requirements`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "b-set-up-your-load-balancer"
     }, `B. Set up your Load Balancer`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When setting up the Kubernetes cluster that will run the Rancher server components, an Ingress controller pod will be deployed on each of your nodes. The Ingress controller pods are bound to ports TCP/80 and TCP/443 on the host network and are the entry point for HTTPS traffic to the Rancher server.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You will need to configure a load balancer as a basic Layer 4 TCP forwarder to direct traffic to these ingress controller pods. The exact configuration will vary depending on your environment.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -518,12 +518,12 @@ Only use this load balancer (i.e, the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK
         parentName: "ul"
     }, `For an example showing how to set up an NGINX load balancer, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.0-v2.4/how-to-guides/new-user-guides/infrastructure-setup/amazon-elb-load-balancer"
+        "href": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `For an example showing how to set up an Amazon NLB load balancer, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.0-v2.4/how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer"
+        "href": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/infrastructure-setup/amazon-elb-load-balancer"
     }, `this page.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(TabItem, {
         value: "Docker Install",
         mdxType: "TabItem"
@@ -537,12 +537,12 @@ Only use this load balancer (i.e, the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK
         "id": "a-provision-a-single-air-gapped-linux-host-according-to-our-requirements"
     }, `A. Provision a single, air gapped Linux host according to our Requirements`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These hosts will be disconnected from the internet, but require being able to connect with your private registry.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `View hardware and software requirements for each of your cluster nodes in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.0-v2.4/pages-for-subheaders/installation-requirements"
+        "href": "/zh/v2.0-v2.4/pages-for-subheaders/installation-requirements"
     }, `Requirements`), `.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "next-collect-and-publish-images-to-your-private-registry"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "h3",
-        "href": "/v2.0-v2.4/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images"
+        "href": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images"
     }, `Next: Collect and Publish Images to your Private Registry`)));
 }
 MDXContent.isMDXComponent = true;
