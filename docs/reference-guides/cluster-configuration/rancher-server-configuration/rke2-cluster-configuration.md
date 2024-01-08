@@ -362,8 +362,8 @@ machineGlobalConfig:
         - key2=value2
 ```
 
-There are some configuration options which aren't supported to be changed when provisioning via Rancher:
-- data-dir (Folder to hold state), will always stay the default `/var/lib/rancher/rke2`
+There are some configuration options that can't be changed when provisioning via Rancher:
+- data-dir (folder to hold state), which defaults to `/var/lib/rancher/rke2`.
 
 To make it easier to put files on nodes beforehand, Rancher expects the following values to be included in the configuration, while RKE2 expects the values to be entered as file paths:
 - audit-policy-file
