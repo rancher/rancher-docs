@@ -1,5 +1,5 @@
 ---
-title: 7. Generate and View Traffic
+title: Generate and View Traffic
 ---
 
 <head>
