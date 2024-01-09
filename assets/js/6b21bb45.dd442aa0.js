@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[18771],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[63598],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 62731:
+/***/ 6396:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring",
-    "id": "version-2.7/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring",
+    "id": "version-2.8/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring",
     "title": "Role-based Access Control",
     "description": "This section describes the expectations for RBAC for Rancher Monitoring.",
-    "source": "@site/versioned_docs/version-2.7/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md",
+    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md",
     "sourceDirName": "integrations-in-rancher/monitoring-and-alerting",
     "slug": "/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring",
-    "permalink": "/v2.7/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring",
+    "permalink": "/v2.8/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1701357034,
-    "formattedLastUpdatedAt": "Nov 30, 2023",
+    "version": "2.8",
+    "lastUpdatedAt": 1704823487,
+    "formattedLastUpdatedAt": "Jan 9, 2024",
     "frontMatter": {
         "title": "Role-based Access Control"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "How Monitoring Works",
-        "permalink": "/v2.7/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works"
+        "permalink": "/v2.8/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works"
     },
     "next": {
         "title": "Built-in Dashboards",
-        "permalink": "/v2.7/integrations-in-rancher/monitoring-and-alerting/built-in-dashboards"
+        "permalink": "/v2.8/integrations-in-rancher/monitoring-and-alerting/built-in-dashboards"
     }
 };
 const assets = {};
@@ -771,7 +771,17 @@ function MDXContent(_param) {
         id: "monitoring-ui-view"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
         parentName: "td"
-    }, `Available as of Monitoring v2 14.5.100+`), ` This ClusterRole allows users to view metrics graphs for the specified cluster in the Rancher UI. This is done by granting read-only access to external Monitoring UIs. Users with this role have permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Grafana, and Alertmanager UIs through the Rancher proxy.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `Available as of Monitoring v2 14.5.100+`), ` This ClusterRole allows users with write access to the project to view metrics graphs for the specified cluster in the Rancher UI. This is done by granting Read-only access to external Monitoring UIs. Users with this role have permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Grafana, and Alertmanager UIs through the Rancher proxy.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `A user bound to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `View Monitoring`), ` Rancher role and read-only project permissions can't view links in the Monitoring UI. They can still access external monitoring UIs if provided links to those UIs. If you wish to grant access to users with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `View Monitoring`), ` role and read-only project permissions, move the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `cattle-monitoring-system`), ` namespace into the project.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "assigning-roles-and-clusterroles-with-kubectl"
     }, `Assigning Roles and ClusterRoles with kubectl`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "using-kubectl-create"
@@ -995,11 +1005,11 @@ subjects:
         "align": null
     }, `9.4.204+`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `*`, ` A user bound to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `View Monitoring`), ` Rancher role and read-only project permissions can't view links in the monitoring UI. They can still access external monitoring UIs if provided links to those UIs. If you wish to grant access to users with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `View Monitoring`), ` Rancher role and read-only project permissions can't view links in the Monitoring UI. They can still access external monitoring UIs if provided links to those UIs. If you wish to grant access to users with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
     }, `View Monitoring`), ` role and read-only project permissions, move the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `cattle-monitoring-system`), ` namespace into the project. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `cattle-monitoring-system`), ` namespace into the project.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "differences-in-25x"
     }, `Differences in 2.5.x`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Users with the project-member or project-owners roles assigned will not be given access to either Prometheus or Grafana in Rancher 2.5.x since we only create Grafana or Prometheus on a cluster-level.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In addition, while project owners will still be only able to add ServiceMonitors / PodMonitors that scrape resources within their project's namespace by default, PrometheusRules are not scoped to a single namespace / project. Therefore, any alert rules or recording rules created by project-owners within their project namespace will be applied across the entire cluster, although they will be unable to view / edit / delete any rules that were created outside the project's namespace.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "assigning-additional-access"

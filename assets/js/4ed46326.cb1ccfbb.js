@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1701357034,
-    "formattedLastUpdatedAt": "Nov 30, 2023",
+    "lastUpdatedAt": 1704823487,
+    "formattedLastUpdatedAt": "Jan 9, 2024",
     "frontMatter": {
         "title": "Role-based Access Control"
     },
@@ -771,7 +771,17 @@ function MDXContent(_param) {
         id: "monitoring-ui-view"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
         parentName: "td"
-    }, `Available as of Monitoring v2 14.5.100+`), ` This ClusterRole allows users to view metrics graphs for the specified cluster in the Rancher UI. This is done by granting read-only access to external Monitoring UIs. Users with this role have permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Grafana, and Alertmanager UIs through the Rancher proxy.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `Available as of Monitoring v2 14.5.100+`), ` This ClusterRole allows users with write access to the project to view metrics graphs for the specified cluster in the Rancher UI. This is done by granting Read-only access to external Monitoring UIs. Users with this role have permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Alertmanager, and Grafana UIs through the Rancher proxy.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `A user bound to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `View Monitoring`), ` Rancher role and read-only project permissions can't view links in the Monitoring UI. They can still access external monitoring UIs if provided links to those UIs. If you wish to grant access to users with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `View Monitoring`), ` role and read-only project permissions, move the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `cattle-monitoring-system`), ` namespace into the project.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "assigning-roles-and-clusterroles-with-kubectl"
     }, `Assigning Roles and ClusterRoles with kubectl`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "using-kubectl-create"
@@ -995,7 +1005,7 @@ subjects:
         "align": null
     }, `9.4.204+`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `*`, ` A user bound to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `View Monitoring`), ` Rancher role and read-only project permissions can't view links in the monitoring UI. They can still access external monitoring UIs if provided links to those UIs. If you wish to grant access to users with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `View Monitoring`), ` Rancher role and read-only project permissions can't view links in the Monitoring UI. They can still access external monitoring UIs if provided links to those UIs. If you wish to grant access to users with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
     }, `View Monitoring`), ` role and read-only project permissions, move the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
