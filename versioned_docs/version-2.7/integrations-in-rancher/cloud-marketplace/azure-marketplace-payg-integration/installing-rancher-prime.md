@@ -81,7 +81,7 @@ The Rancher hostname must be resolvable by public DNS. Please refer to the [Prer
 
 ## How to Use Rancher
 
-After logging into Rancher Prime, you should notice the Welcome to Rancher Prime message at the top of the screen.
+After logging into Rancher Prime, you should notice the **Welcome to Rancher Prime** message at the top of the screen.
 
 ![Rancher Prime Home](/img/install-rancher-prime-home.png)
 
