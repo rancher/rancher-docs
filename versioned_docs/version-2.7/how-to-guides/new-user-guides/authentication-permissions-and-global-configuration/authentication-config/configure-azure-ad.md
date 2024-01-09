@@ -47,7 +47,6 @@ Before enabling Azure AD within Rancher, you must register Rancher with Azure.
     ![New App Registration](/img/new-app-registration.png)
 
     1. Enter a **Name** (something like `Rancher`).
-    <a id="3.2"></a>
 
     1. From **Supported account types**, select "Accounts in this organizational directory only (AzureADTest only - Single tenant)" This corresponds to the legacy app registration options.
 
@@ -264,7 +263,7 @@ Admins should create a [Rancher backup](../../../new-user-guides/backup-restore-
 
 #### Air-Gapped Environments
 
-In air-gapped environments, admins should ensure that their endpoints are [whitelisted](#3.2) since the Graph Endpoint URL is changing.
+In air-gapped environments, admins should ensure that their endpoints are whitelisted (see note on [Step 3.2 of Register Rancher with Azure](#1-register-rancher-with-azure)) since the Graph Endpoint URL is changing.
 
 #### Rolling Back the Migration
 

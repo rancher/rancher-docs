@@ -113,7 +113,7 @@ Monitoring also creates additional `ClusterRoles` that aren't assigned to users 
 
 | Role | Purpose  |
 | ------------------------------| ---------------------------|
-| monitoring-ui-view | <a id="monitoring-ui-view"></a>_Available as of Monitoring v2 14.5.100+_ Provides read-only access to external Monitoring UIs by giving a user permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Grafana, and Alertmanager UIs through the Rancher proxy. |
+| monitoring-ui-view | _Available as of Monitoring v2 14.5.100+_ Provides read-only access to external Monitoring UIs by giving a user permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Grafana, and Alertmanager UIs through the Rancher proxy. |
 
 ### Assigning Roles and ClusterRoles with kubectl
 
@@ -209,7 +209,7 @@ In addition to these default Roles, the following additional Rancher project rol
 
 | Rancher Role  |  Kubernetes ClusterRole | Available In Rancher From | Available in Monitoring v2 From |
 |--------------------------|-------------------------------|-------|------|
-| View Monitoring* | [monitoring-ui-view](#monitoring-ui-view)    |    2.4.8+    |  9.4.204+ |
+| View Monitoring* | [monitoring-ui-view](#additional-monitoring-clusterroles)    |    2.4.8+    |  9.4.204+ |
 
 \* A User bound to the **View Monitoring** Rancher Role only has permissions to access external Monitoring UIs if provided links to those UIs. In order to access the Monitoring Pane to get those links, the User must be a Project Member of at least one Project.
 
