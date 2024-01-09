@@ -41,18 +41,13 @@ After you complete [Configuring Microsoft AD FS for Rancher](configure-ms-adfs-f
 | UID Field                 | An AD attribute that is unique to every user. <br/><br/>Example: `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn`                                                                                   |
 | Groups Field              | Make entries for managing group memberships. <br/><br/>Example: `http://schemas.xmlsoap.org/claims/Group`                                                                                                      |
 | Rancher API Host          | The URL for your Rancher Server.                                                                                                                                                                               |
-| Private Key / Certificate | This is a key-certificate pair to create a secure shell between Rancher and your AD FS. Ensure you set the Common Name (CN) to your Rancher Server URL.<br/><br/>[Certificate creation command](#cert-command) |
+| Private Key / Certificate | This is a key-certificate pair to create a secure shell between Rancher and your AD FS. Ensure you set the Common Name (CN) to your Rancher Server URL.<br/><br/>[Certificate creation command](#example-certificate-creation-command) |
 | Metadata XML              | The `federationmetadata.xml` file exported from your AD FS server. <br/><br/>You can find this file at `https://<AD_SERVER>/federationmetadata/2007-06/federationmetadata.xml`.                                |
 
-
-<a id="cert-command"></a>
-
-:::tip
+### Example Certificate Creation Command
 
 You can generate a certificate using an openssl command. For example:
 
 ```
 openssl req -x509 -newkey rsa:2048 -keyout myservice.key -out myservice.cert -days 365 -nodes -subj "/CN=myservice.example.com"
 ```
-
-:::
