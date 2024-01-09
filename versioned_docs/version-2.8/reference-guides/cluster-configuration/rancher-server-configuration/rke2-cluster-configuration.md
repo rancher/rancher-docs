@@ -361,6 +361,9 @@ machineGlobalConfig:
         - key2=value2
 ```
 
+There are some configuration options that can't be changed when provisioning via Rancher:
+- data-dir (folder to hold state), which defaults to `/var/lib/rancher/rke2`.
+
 ### machineSelectorConfig
 
 `machineSelectorConfig` is the same as [`machineGlobalConfig`](#machineglobalconfig) except that a [label](#kubernetes-node-labels) selector can be specified with the configuration. The configuration will only be applied to nodes that match the provided label selector.
