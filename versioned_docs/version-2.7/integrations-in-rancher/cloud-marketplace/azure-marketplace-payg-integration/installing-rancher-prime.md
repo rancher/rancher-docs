@@ -16,6 +16,8 @@ Refer to the following steps for creating a new deployment of Rancher Prime from
 
 On the **Basics** tab, specify the **Project details** and **Instance details**:
 
+![Basics tab](/img/install-rancher-prime-basics.png)
+
 1. Select an existing **Subscription** from the dropdown list.
 1. Select an existing **Resource group** from the dropdown list.
 
@@ -23,17 +25,19 @@ On the **Basics** tab, specify the **Project details** and **Instance details**:
 
    The **Create new** resource group feature is not supported.
 
-   :::
    ![Create new resource group not supported](/img/install-rancher-prime-basics-create-new.png)
+
+   :::
+
 1. Select an existing **AKS Cluster Name** from the dropdown list.
 1. Choose an **Extension Resource name**. It can consist of alphanumeric characters and dots; the length must be between 2 and 253 characters.
-
-   ![Basics tab](/img/install-rancher-prime-basics.png)
 1. Select **Next**.
 
 ### Rancher Configuration
 
 On the **Rancher Configuraion** tab, specify the following information:
+
+![Rancher Configuration](/img/install-rancher-prime-bootstrap-password.png)
 
 1. Enter the **Hostname** for Rancher. The Rancher hostname must be a fully qualified domain name (FQDN) and the Rancher server URL will be created using this hostname.
    :::note
@@ -48,7 +52,6 @@ On the **Rancher Configuraion** tab, specify the following information:
    The current Rancher deployment exposes the bootstrap password in the Cluster configuration settings in Azure Portal. Until this is resolved, we suggest changing the Admin password after initial login by editing your profile in the Rancher dashboard.
 
    :::
-   ![Rancher Configuration](/img/install-rancher-prime-bootstrap-password.png)
 1. Select **Next**.
 
 ### Review + create
