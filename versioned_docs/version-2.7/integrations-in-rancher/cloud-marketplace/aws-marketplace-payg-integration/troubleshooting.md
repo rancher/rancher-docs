@@ -14,10 +14,10 @@ kubectl get pods --all-namespaces
 
 If a pod is not in a `Running` state, you can attempt to find the root cause with the following commands:
 
-- Describe pod: `kubectl describe pod <pod name> -n <namespaces>`
-- Pod container logs: `kubectl logs <pod name> -n <namespaces>`
-- Describe job: `kubectl describe job <job name> -n <namespaces>`
-- Logs from the containers of pods of the job: `kubectl logs -l job-name=<job name> -n <namespaces>`
+- Describe pod: `kubectl describe pod $POD_NAME -n $NAMESPACE`
+- Pod container logs: `kubectl logs $POD_NAME -n $NAMESPACE`
+- Describe job: `kubectl describe job $JOB_NAME -n $NAMESPACE`
+- Logs from the containers of pods of the job: `kubectl logs -l job-name=$JOB_NAME -n $NAMESPACE`
 
 ## Recovering from Failed Pods
 
