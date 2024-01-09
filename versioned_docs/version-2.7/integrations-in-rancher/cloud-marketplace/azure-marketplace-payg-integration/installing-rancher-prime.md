@@ -96,3 +96,5 @@ View billing information in the Azure Portal by going to **Home** > **Cost Manag
 ## Uninstalling Rancher Prime PAYG Offering
 
 To uninstall the Rancher Prime PAYG offering, migrate any non-Rancher workloads to a different cluster and destroy the Rancher cluster.
+
+Uninstalling Rancher Prime may not cleanly remove all the resources that Rancher created. You are encouraged to use the [Rancher resource cleanup script](https://github.com/rancher/rancher-cleanup) to perform a more comprehensive cleanup if necessary. However, it is recommended to migrate any other workloads off the cluster and prepare to destroy the cluster to complete the uninstallation since cleanup is not recoverable.
