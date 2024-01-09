@@ -364,6 +364,31 @@ machineGlobalConfig:
 There are some configuration options that can't be changed when provisioning via Rancher:
 - data-dir (folder to hold state), which defaults to `/var/lib/rancher/rke2`.
 
+To make it easier to put files on nodes beforehand, Rancher expects the following values to be included in the configuration, while RKE2 expects the values to be entered as file paths:
+- audit-policy-file
+- cloud-provider-config
+- private-registry
+
+Rancher delivers the files to the path `/var/lib/rancher/rke2/etc/config-files/<option>` in target nodes, and sets the proper options in the RKE2 server.
+
+Example:
+```yaml
+apiVersion: provisioning.cattle.io/v1
+kind: Cluster
+spec:
+  rkeConfig:
+    machineGlobalConfig:
+      audit-policy-file: 
+        apiVersion: audit.k8s.io/v1 
+        kind: Policy 
+        rules: 
+        - level: RequestResponse
+          resources:
+          - group: ""
+            resources: 
+            - pods
+```
+
 ### machineSelectorConfig
 
 `machineSelectorConfig` is the same as [`machineGlobalConfig`](#machineglobalconfig) except that a [label](#kubernetes-node-labels) selector can be specified with the configuration. The configuration will only be applied to nodes that match the provided label selector.
