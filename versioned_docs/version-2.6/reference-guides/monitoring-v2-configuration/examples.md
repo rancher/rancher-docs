@@ -8,13 +8,11 @@ title: Monitoring V2 Configuration Examples
 
 ### ServiceMonitor
 
-See the official prometheus-operator Github for an example [ServiceMonitor](https://github.com/prometheus-operator/prometheus-operator/blob/master/example/prometheus-operator-crd/monitoring.coreos.com_servicemonitors.yaml) YAML.
+See the official prometheus-operator GitHub repo for an example [ServiceMonitor](https://github.com/prometheus-operator/prometheus-operator/blob/master/example/prometheus-operator-crd/monitoring.coreos.com_servicemonitors.yaml) YAML.
 
 ### PodMonitor
 
-See the official prometheus-operator Github for an example [PodMonitor](https://github.com/prometheus-operator/prometheus-operator/blob/master/example/user-guides/getting-started/example-app-pod-monitor.yaml) YAML.
-
-Refer to the official prometheus-operator Github for an [example Prometheus resource](https://github.com/prometheus-operator/prometheus-operator/blob/master/example/user-guides/getting-started/prometheus-pod-monitor.yaml) that refers to a PodMonitor.
+See the [Prometheus Operator documentation](https://prometheus-operator.dev/docs/user-guides/getting-started/#using-podmonitors) for an example PodMonitor and an example Prometheus resource that refers to a PodMonitor.
 
 ### PrometheusRule
 
@@ -22,7 +20,7 @@ A PrometheusRule contains the alerting and recording rules that you would usuall
 
 For a more fine-grained approach, the `ruleSelector` field on a Prometheus resource can select which PrometheusRules should be loaded onto Prometheus, based on the labels attached to the PrometheusRules resources.
 
-See the official prometheus-operator Github for an example [PrometheusRule](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/alerting.md).
+See the [Prometheus Operator documentation](https://prometheus-operator.dev/docs/user-guides/alerting/) for an example PrometheusRule.
 
 ### Alertmanager Config
 
