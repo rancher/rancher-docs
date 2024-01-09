@@ -9,7 +9,7 @@ Before using Rancher Prime on AWS as a pay-as-you-go (PAYG) offering, you need t
 - Get the Load Balancer IP. Please refer to [Rancher documentation](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks.md#6-get-load-balancer-ip) and save the EXTERNAL-IP.
 - The Rancher hostname must be a fully qualified domain name (FQDN), and its corresponding IP address must be resolvable from a public DNS. Please refer to [Rancher documentation](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks.md#7-set-up-dns) for instructions on how to set up DNS. This DNS is set up to point to the EXTERNAL-IP saved.
 - Installation requires you to have the following tools available and properly configured to access your AWS account and your EKS cluster:
-  - `aws`
-  - `curl`
-  - `eksctl`
-  - `helm` (v3 or greater)
+  - [`aws`](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+  - [`curl`](https://curl.se/docs/install.html)
+  - [`eksctl`](https://eksctl.io/installation/)
+  - [`helm` (v3 or greater)](https://helm.sh/docs/intro/quickstart/#install-helm)
