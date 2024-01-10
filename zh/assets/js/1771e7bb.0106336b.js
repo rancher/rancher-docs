@@ -1,6 +1,6 @@
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[27757],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[84152],{
 
-/***/ 92623:
+/***/ 92506:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -103,30 +103,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "api/api-reference",
-    "id": "api/api-reference",
+    "id": "version-2.8/api/api-reference",
     "title": "API Reference",
-    "description": "",
-    "source": "@site/docs/api/api-reference.mdx",
+    "description": "At this time, not all Rancher resources are available through the Rancher Kubernetes API.",
+    "source": "@site/versioned_docs/version-2.8/api/api-reference.mdx",
     "sourceDirName": "api",
     "slug": "/api/api-reference",
-    "permalink": "/api/api-reference",
+    "permalink": "/zh/v2.8/api/api-reference",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/api/api-reference.mdx",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/api/api-reference.mdx",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1701892107,
-    "formattedLastUpdatedAt": "Dec 6, 2023",
+    "version": "2.8",
+    "lastUpdatedAt": 1704926839,
+    "formattedLastUpdatedAt": "2024年1月10日",
     "frontMatter": {
         "title": "API Reference"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Projects",
-        "permalink": "/api/workflows/projects"
+        "permalink": "/zh/v2.8/api/workflows/projects"
     },
     "next": {
-        "title": "Contributing to Rancher",
-        "permalink": "/contribute-to-rancher"
+        "title": "参与 Rancher 社区贡献",
+        "permalink": "/zh/v2.8/contribute-to-rancher"
     }
 };
 const assets = {};
@@ -143,7 +143,11 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_theme_ApiDocMdx__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `At this time, not all Rancher resources are available through the Rancher Kubernetes API.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_theme_ApiDocMdx__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
         id: "rancher-api",
         mdxType: "ApiDocMdx"
     }));

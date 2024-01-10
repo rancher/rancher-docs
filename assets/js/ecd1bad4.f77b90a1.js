@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[79906],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[83455],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 25504:
+/***/ 23060:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "api/quickstart",
-    "id": "api/quickstart",
+    "id": "version-2.8/api/quickstart",
     "title": "API Quick Start Guide",
     "description": "You can access Rancher's resources through the Kubernetes API. This guide will help you get started on using this API as a Rancher user.",
-    "source": "@site/docs/api/quickstart.md",
+    "source": "@site/versioned_docs/version-2.8/api/quickstart.md",
     "sourceDirName": "api",
     "slug": "/api/quickstart",
-    "permalink": "/api/quickstart",
+    "permalink": "/v2.8/api/quickstart",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/api/quickstart.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/api/quickstart.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1701992219,
-    "formattedLastUpdatedAt": "Dec 7, 2023",
+    "version": "2.8",
+    "lastUpdatedAt": 1704926839,
+    "formattedLastUpdatedAt": "Jan 10, 2024",
     "frontMatter": {
         "title": "API Quick Start Guide"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Rotation of Expired Webhook Certificates",
-        "permalink": "/troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation"
+        "permalink": "/v2.8/troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation"
     },
     "next": {
         "title": "Projects",
-        "permalink": "/api/workflows/projects"
+        "permalink": "/v2.8/api/workflows/projects"
     }
 };
 const assets = {};
@@ -369,7 +369,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, `In the upper left corner, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `☰ > Global Settings`), `. `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `☰ > Global Settings`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
@@ -381,7 +381,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/reference-guides/user-settings/api-keys#creating-an-api-key"
+        "href": "/v2.8/reference-guides/user-settings/api-keys#creating-an-api-key"
     }, `Create`), ` a Rancher API key with no scope.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         parentName: "li",
         "type": "danger"
@@ -427,7 +427,7 @@ current-context: "rancher"
     }, `client-go`), `. For a quick demo, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#api-kubectl-example"
-    }, `kubectl example`), `. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information on handling more complex certificate setups, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `kubectl example`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information on handling more complex certificate setups, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#specifying-ca-certs"
     }, `Specifying CA Certs`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information on available kubeconfig options, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -435,7 +435,14 @@ current-context: "rancher"
         "href": "https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/"
     }, `upstream documentation`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "api-kubectl-example"
-    }, `API kubectl Example`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `API kubectl Example`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In this example, we'll show how to use kubectl to create a project, followed by deleting it. For a list of other Rancher resources available, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/v2.8/api/api-reference"
+    }, `API Reference`), ` page.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `At this time, not all Rancher resources are available through the Rancher Kubernetes API.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
@@ -538,7 +545,7 @@ spec:
         parentName: "li"
     }, `In the upper left corner, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `☰ > Global Settings`), `. `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `☰ > Global Settings`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"

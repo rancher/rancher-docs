@@ -105,7 +105,7 @@ const metadata = {
     "unversionedId": "api/api-reference",
     "id": "api/api-reference",
     "title": "API Reference",
-    "description": "",
+    "description": "At this time, not all Rancher resources are available through the Rancher Kubernetes API.",
     "source": "@site/docs/api/api-reference.mdx",
     "sourceDirName": "api",
     "slug": "/api/api-reference",
@@ -114,8 +114,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/api/api-reference.mdx",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1701892107,
-    "formattedLastUpdatedAt": "2023年12月6日",
+    "lastUpdatedAt": 1704217604,
+    "formattedLastUpdatedAt": "2024年1月2日",
     "frontMatter": {
         "title": "API Reference"
     },
@@ -143,7 +143,11 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_theme_ApiDocMdx__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `At this time, not all Rancher resources are available through the Rancher Kubernetes API.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_theme_ApiDocMdx__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
         id: "rancher-api",
         mdxType: "ApiDocMdx"
     }));
