@@ -13,7 +13,7 @@ This section covers the configuration options that are available in Rancher for 
 You can configure the Kubernetes options one of two ways:
 
 - [Rancher UI](#configuration-options-in-the-rancher-ui): Use the Rancher UI to select options that are commonly customized when setting up a Kubernetes cluster.
-- [Cluster Config File](#cluster-config-file): Instead of using the Rancher UI to choose Kubernetes options for the cluster, advanced users can create a K3s config file. Using a config file allows you to set any of the [options](https://rancher.com/docs/k3s/latest/en/installation/install-options/) available in an K3s installation.
+- [Cluster Config File](#cluster-config-file-reference): Instead of using the Rancher UI to choose Kubernetes options for the cluster, advanced users can create a K3s config file. Using a config file allows you to set any of the [options](https://rancher.com/docs/k3s/latest/en/installation/install-options/) available in an K3s installation.
 
 ## Editing Clusters in the Rancher UI
 
@@ -329,6 +329,31 @@ machineGlobalConfig:
     etcd-arg:
         - key1=value1
         - key2=value2
+```
+
+To make it easier to put files on nodes beforehand, Rancher expects the following values to be included in the configuration, while K3s expects the values to be entered as file paths:
+- private-registry
+- flannel-conf
+
+Rancher delivers the files to the path `/var/lib/rancher/k3s/etc/config-files/<option>` in target nodes, and sets the proper options in the K3s server.
+
+Example:
+```yaml
+apiVersion: provisioning.cattle.io/v1
+kind: Cluster
+spec:
+  rkeConfig:
+    machineGlobalConfig:
+      private-registry: |
+        mirrors:
+          docker.io:
+            endpoint:
+              - "http://mycustomreg.com:5000"
+        configs:
+          "mycustomreg:5000":
+            auth:
+              username: xxxxxx # this is the registry username
+              password: xxxxxx # this is the registry password
 ```
 
 ### machineSelectorConfig

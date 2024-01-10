@@ -11,7 +11,7 @@ weight: 1
 
 In Kubernetes 1.27 and later, you must use an out-of-tree AWS cloud provider. In-tree cloud providers have been deprecated. The Amazon cloud provider has been removed completely, and won't work after an upgrade to Kubernetes 1.27. The steps listed below are still required to set up an Amazon cloud provider. You can [set up an out-of-tree cloud provider](#using-the-out-of-tree-aws-cloud-provider) after creating an IAM role and configuring the ClusterID.
 
-You can also [migrate from an in-tree to an out-of-tree AWS cloud provider](./migrate-to-out-of-tree-amazon.md) on Kubernetes 1.26 and earlier. All existing clusters must migrate prior to upgrading to v1.27 in order to stay functional.
+You can also [migrate from an in-tree to an out-of-tree AWS cloud provider](../migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-amazon.md) on Kubernetes 1.26 and earlier. All existing clusters must migrate prior to upgrading to v1.27 in order to stay functional.
 
 Starting with Kubernetes 1.23, you must deactivate the `CSIMigrationAWS` feature gate to use the in-tree AWS cloud provider. You can do this by setting `feature-gates=CSIMigrationAWS=false` as an additional argument for the cluster's Kubelet, Controller Manager, API Server and Scheduler in the advanced cluster configuration.
 
