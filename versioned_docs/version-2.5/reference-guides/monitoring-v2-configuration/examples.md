@@ -24,4 +24,4 @@ See the [Prometheus Operator documentation](https://prometheus-operator.dev/docs
 
 ### Alertmanager Config
 
-See the Rancher docs page on Recievers for an example [Alertmanager config](./receivers.md#example-alertmanager-configs).
+See the Rancher docs page on Receivers for an example [Alertmanager config](./receivers.md#example-alertmanager-configs).
