@@ -1,5 +1,5 @@
 ---
-title: Template Enforcement
+title: Enforcing Templates
 ---
 
 <head>

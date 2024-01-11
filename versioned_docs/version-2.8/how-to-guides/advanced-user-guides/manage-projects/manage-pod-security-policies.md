@@ -1,5 +1,5 @@
 ---
-title: Pod Security Policies
+title: Applying Pod Security Policies to Projects
 ---
 
 <head>

@@ -35,7 +35,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Deploy Rancher',
+              label: 'Deploying Rancher',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/deploy-rancher-manager",
@@ -57,7 +57,7 @@ const sidebars = {
             "getting-started/quick-start-guides/deploy-rancher-manager/prime",
             {
               type: 'category',
-              label: 'Deploy Workloads',
+              label: 'Deploying Workloads',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/deploy-rancher-workloads",
@@ -219,7 +219,7 @@ const sidebars = {
               items: [
                 {
                   type: 'category',
-                  label: 'Authentication Config',
+                  label: 'Configuring Authentication',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/authentication-config",
@@ -240,7 +240,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Configure OpenLDAP',
+                  label: 'Configuring OpenLDAP',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/configure-openldap",
@@ -251,7 +251,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Configure Microsoft AD Federation Service (SAML)',
+                  label: 'Configuring Microsoft AD Federation Service (SAML)',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/configure-microsoft-ad-federation-service-saml",
@@ -263,7 +263,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Configure Shibboleth (SAML)',
+                  label: 'Configuring Shibboleth (SAML)',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/configure-shibboleth-saml",
@@ -274,7 +274,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Manage Role-Based Access Control (RBAC)',
+                  label: 'Managing Role-Based Access Control (RBAC)',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/manage-role-based-access-control-rbac",
@@ -326,7 +326,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Manage Clusters',
+              label: 'Cluster Administration',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/manage-clusters",
@@ -456,7 +456,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Set Up Clusters from Hosted Kubernetes Providers',
+                  label: 'Setting up Clusters from Hosted Kubernetes Providers',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers",
@@ -472,7 +472,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Use Windows Clusters',
+                  label: 'Launching Kubernetes on Windows Clusters',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/use-windows-clusters",
@@ -486,7 +486,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Set Up Cloud Providers',
+                  label: 'Setting up Cloud Providers',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/set-up-cloud-providers",
@@ -512,7 +512,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Launch Kubernetes with Rancher',
+              label: 'Launching Kubernetes with Rancher',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/launch-kubernetes-with-rancher",
@@ -520,7 +520,7 @@ const sidebars = {
               items: [
                 {
                   type: 'category',
-                  label: 'Use New Nodes in an Infra Provider',
+                  label: 'Launching New Nodes in an Infra Provider',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/use-new-nodes-in-an-infra-provider",
@@ -635,7 +635,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Deploy Apps Across Clusters',
+              label: 'Deploying Apps Across Clusters',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/deploy-apps-across-clusters",
@@ -678,7 +678,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Manage Projects',
+              label: 'Project Administration',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/manage-projects",
@@ -687,7 +687,7 @@ const sidebars = {
                 "how-to-guides/advanced-user-guides/manage-projects/manage-pod-security-policies",
                 {
                   type: 'category',
-                  label: 'Manage Project Resource Quotas',
+                  label: 'Project Resource Quotas',
                   link: {
                     type: 'doc',
                     id: "pages-for-subheaders/manage-project-resource-quotas",
@@ -792,7 +792,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Enable Experimental Features',
+              label: 'Enabling Experimental Features',
               link: {
                 type: 'doc',
                 id: "pages-for-subheaders/enable-experimental-features",

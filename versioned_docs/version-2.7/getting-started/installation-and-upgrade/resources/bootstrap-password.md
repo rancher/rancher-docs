@@ -1,5 +1,5 @@
 ---
-title: Bootstrap Password
+title: Setting up the Bootstrap Password
 ---
 
 <head>
