@@ -68,15 +68,22 @@ The following commands are available for use in Rancher CLI.
 | `catalog`  | Performs operations on [catalogs](../../pages-for-subheaders/helm-charts-in-rancher.md).  |
 | `clusters, [cluster]`  | Performs operations on your [clusters](../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md).  |
 | `context`  | Switches between Rancher [projects](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md). For an example, see [Project Selection](#project-selection).  |
+| `globaldns`  | Performs operations on global DNS providers and entries.  | <!-- Review -->
 | `inspect [OPTIONS] [RESOURCEID RESOURCENAME]`  | Displays details about [Kubernetes resources](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#resource-types) or Rancher resources (i.e.: [projects](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md) and [workloads](../../pages-for-subheaders/workloads-and-pods.md)). Specify resources by name or ID.  |
-| `kubectl`  |Runs [kubectl commands](https://kubernetes.io/docs/reference/kubectl/overview/#operations).   |
+| `kubectl`  | Runs [kubectl commands](https://kubernetes.io/docs/reference/kubectl/overview/#operations).   |
 | `login, [l]`  | Logs into a Rancher Server. For an example, see [CLI Authentication](#cli-authentication).  |
-| `namespaces, [namespace]`  |Performs operations on namespaces.   |
-| `nodes, [node]`  |Performs operations on nodes.   |
+| machines, [machine]  | Performs operations on machines.  | <!-- Review -->
+| multiclusterapps, [multiclusterapp mcapps mcapp]  | Performs operations with multi-cluster apps.  | <!-- Review -->
+| `namespaces, [namespace]`  | Performs operations on namespaces.  | <!-- Review -->
+| `nodes, [node]`  | Performs operations on nodes.  |  <!-- Review -->
 | `projects, [project]`  | Performs operations on [projects](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md).  |
 | `ps`  | Displays [workloads](../../pages-for-subheaders/workloads-and-pods.md) in a project.  |
+| `server`  | Performs operations for the server.  | <!-- Review -->
 | `settings, [setting]`  | Shows the current settings for your Rancher Server.  |
 | `ssh`  | Connects to one of your cluster nodes using the SSH protocol.  |
+| up  | Applies compose config.  | <!-- Review -->
+| wait  | Waits for resoruces clusters, app, project, multiClusterApp.  | <!-- Review -->
+| token  | Authentictes and generates new kubeconfig token.  | <!-- Review -->
 | `help, [h]`  | Shows a list of commands or help for one command.  |
 
 
