@@ -8,7 +8,7 @@ title: Updating the Rancher Certificate
 
 ## Updating a Private CA Certificate
 
-Follow these steps to rotate an SSL certificate and private CA used by Rancher [installed on a Kubernetes cluster](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md), or migrate to an SSL certificate signed by a private CA.
+Follow these steps to rotate an SSL certificate and private CA used by Rancher [installed on a Kubernetes cluster](../install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md), or migrate to an SSL certificate signed by a private CA.
 
 A summary of the steps is as follows:
 

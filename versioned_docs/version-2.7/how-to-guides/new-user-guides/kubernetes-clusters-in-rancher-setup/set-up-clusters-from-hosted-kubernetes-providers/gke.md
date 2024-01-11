@@ -63,7 +63,7 @@ Use Rancher to set up and configure your Kubernetes cluster. To successfully cre
 1. Optional: Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.
 1. Optional: Add Kubernetes [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) to the cluster.
 1. Enter your Google project ID and your Google cloud credentials.
-1. Fill out the rest of the form. For help, refer to the [GKE cluster configuration reference.](../../../../pages-for-subheaders/gke-cluster-configuration.md)
+1. Fill out the rest of the form. For help, refer to the [GKE cluster configuration reference.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md)
 1. Click **Create**.
 
 **Result:** You have successfully deployed a GKE cluster.
@@ -83,7 +83,7 @@ Private GKE clusters are supported. Note: This advanced setup can require more s
 
 ## Configuration Reference
 
-For details on configuring GKE clusters in Rancher, see [this page.](../../../../pages-for-subheaders/gke-cluster-configuration.md)
+For details on configuring GKE clusters in Rancher, see [this page.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md)
 ## Updating Kubernetes Version
 
 The Kubernetes version of a cluster can be upgraded to any version available in the region or zone for the GKE cluster. Upgrading the master Kubernetes version does not automatically upgrade worker nodes. Nodes can be upgraded independently.
@@ -98,7 +98,7 @@ GKE has removed basic authentication in 1.19+. In order to upgrade a cluster to 
 
 The GKE provisioner can synchronize the state of a GKE cluster between Rancher and the provider. For an in-depth technical explanation of how this works, see [Syncing.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters.md)
 
-For information on configuring the refresh interval, see [this section.](../../../../pages-for-subheaders/gke-cluster-configuration.md#configuring-the-refresh-interval)
+For information on configuring the refresh interval, see [this section.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md#configuring-the-refresh-interval)
 
 ## Programmatically Creating GKE Clusters
 
