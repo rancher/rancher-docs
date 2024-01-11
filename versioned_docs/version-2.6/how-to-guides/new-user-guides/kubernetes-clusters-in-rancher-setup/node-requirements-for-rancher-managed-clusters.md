@@ -10,7 +10,7 @@ This page describes the requirements for the Rancher managed Kubernetes clusters
 
 :::note
 
-If Rancher is installed on a high-availability Kubernetes cluster, the Rancher server three-node cluster and downstream clusters have different requirements. For Rancher installation requirements, refer to the node requirements in the [installation section.](../../../pages-for-subheaders/installation-requirements.md)
+If Rancher is installed on a high-availability Kubernetes cluster, the Rancher server three-node cluster and downstream clusters have different requirements. For Rancher installation requirements, refer to the node requirements in the [installation section.](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md)
 
 :::
 
@@ -47,7 +47,7 @@ SUSE Linux may have a firewall that blocks all ports by default. In that situati
 
 ### Flatcar Container Linux Nodes
 
-When [Launching Kubernetes with Rancher](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) using Flatcar Container Linux nodes, it is required to use the following configuration in the [Cluster Config File](../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#rke-cluster-config-file-reference)
+When [Launching Kubernetes with Rancher](../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) using Flatcar Container Linux nodes, it is required to use the following configuration in the [Cluster Config File](../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#rke-cluster-config-file-reference)
 
 <Tabs>
 <TabItem value="Canal">
@@ -92,13 +92,13 @@ It is also required to enable the Docker service, you can enable the Docker serv
 systemctl enable docker.service
 ```
 
-The Docker service is enabled automatically when using [Node Drivers](../../../pages-for-subheaders/about-provisioning-drivers.md#node-drivers).
+The Docker service is enabled automatically when using [Node Drivers](../authentication-permissions-and-global-configuration/about-provisioning-drivers/about-provisioning-drivers.md#node-drivers).
 
 ### Windows Nodes
 
 Nodes with Windows Server must run Docker Enterprise Edition.
 
-Windows nodes can be used for worker nodes only. See [Configuring Custom Clusters for Windows](../../../pages-for-subheaders/use-windows-clusters.md)
+Windows nodes can be used for worker nodes only. See [Configuring Custom Clusters for Windows](use-windows-clusters/use-windows-clusters.md)
 
 ## Hardware Requirements
 
@@ -114,7 +114,7 @@ For hardware recommendations for etcd clusters in production, refer to the offic
 
 For a production cluster, we recommend that you restrict traffic by opening only the ports defined in the port requirements below.
 
-The ports required to be open are different depending on how the user cluster is launched. Each of the sections below list the ports that need to be opened for different [cluster creation options](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md).
+The ports required to be open are different depending on how the user cluster is launched. Each of the sections below list the ports that need to be opened for different [cluster creation options](kubernetes-clusters-in-rancher-setup.md).
 
 For a breakdown of the port requirements for etcd nodes, controlplane nodes, and worker nodes in a Kubernetes cluster, refer to the [port requirements for the Rancher Kubernetes Engine.](https://rancher.com/docs/rke/latest/en/os/#ports)
 
@@ -124,4 +124,4 @@ Details on which ports are used in each situation are found under [Downstream Cl
 
 If you want to provision a Kubernetes cluster that is compliant with the CIS (Center for Internet Security) Kubernetes Benchmark, we recommend to following our hardening guide to configure your nodes before installing Kubernetes.
 
-For more information on the hardening guide and details on which version of the guide corresponds to your Rancher and Kubernetes versions, refer to the [security section.](../../../pages-for-subheaders/rancher-security.md#rancher-hardening-guide)
+For more information on the hardening guide and details on which version of the guide corresponds to your Rancher and Kubernetes versions, refer to the [security section.](../../../reference-guides/rancher-security/rancher-security.md#rancher-hardening-guide)
