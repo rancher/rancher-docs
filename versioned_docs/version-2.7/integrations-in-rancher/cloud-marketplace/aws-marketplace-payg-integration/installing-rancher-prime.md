@@ -143,10 +143,16 @@ The Rancher hostname must be resolvable by public DNS. For more details, please 
 
 ## Uninstalling Rancher Prime PAYG Offering
 
-To uninstall the Rancher Prime PAYG offering, migrate any non-Rancher workloads to a different cluster and destroy the Rancher cluster.
+Run the following command to uninstall Rancher Prime:
 
-Uninstalling Rancher Prime may not cleanly remove all the resources that Rancher created. You are encouraged to use the [Rancher resource cleanup script](https://github.com/rancher/rancher-cleanup) to perform a more comprehensive cleanup if necessary. However, we recommend first preparing and migrating any other workloads off the cluster to destroy the cluster to complete the uninstallation since cleanup is not recoverable.
+```shell
+helm uninstall -n cattle-rancher-csp-deployer-system rancher-cloud
+```
 
-   ```shell
-   helm uninstall -n cattle-rancher-csp-deployer-system rancher-cloud
-   ```
+Uninstalling Rancher Prime may not cleanly remove all Kubernetes resources that Rancher created. You can use the [Rancher resource cleanup script](https://github.com/rancher/rancher-cleanup) to perform a more comprehensive cleanup.
+
+The best practice for uninstalling the Rancher Prime PAYG offering is to migrate any non-Rancher workloads to a different cluster and destroy the Rancher cluster.
+
+:::important
+Ensure you prepare and migrate any non-Rancher workloads off the cluster before destroying the cluster since these resources are not recoverable.
+:::
