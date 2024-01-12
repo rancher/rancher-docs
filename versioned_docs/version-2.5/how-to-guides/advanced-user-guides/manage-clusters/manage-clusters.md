@@ -26,7 +26,7 @@ Alternatively, you can switch between projects and clusters directly in the navi
 
 After clusters have been [provisioned into Rancher](../../new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md), [cluster owners](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles) will need to manage these clusters. There are many different options of how to manage your cluster.
 
-import ClusterCapabilitiesTable from '../shared-files/_cluster-capabilities-table.md';
+import ClusterCapabilitiesTable from '../../../shared-files/_cluster-capabilities-table.md';
 
 <ClusterCapabilitiesTable />
 

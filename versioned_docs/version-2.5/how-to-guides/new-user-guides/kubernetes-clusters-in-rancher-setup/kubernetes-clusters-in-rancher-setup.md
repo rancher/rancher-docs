@@ -17,7 +17,7 @@ For a conceptual overview of how the Rancher server provisions clusters and what
 
 The following table summarizes the options and settings available for each cluster type:
 
-import ClusterCapabilitiesTable from '../shared-files/_cluster-capabilities-table.md';
+import ClusterCapabilitiesTable from '../../../shared-files/_cluster-capabilities-table.md';
 
 <ClusterCapabilitiesTable />
 
