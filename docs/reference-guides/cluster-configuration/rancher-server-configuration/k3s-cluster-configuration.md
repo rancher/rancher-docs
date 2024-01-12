@@ -310,7 +310,8 @@ spec:
 
 ### additionalManifest
 
-Specify the addition manifest(s) to be delivered to the control plane nodes. 
+Specify additional manifests to deliver to the control plane nodes.
+
 The value is a String, and will be placed at the path `/var/lib/rancher/k3s/server/manifests/rancher/addons.yaml` on target nodes.
 
 Example:
@@ -326,10 +327,9 @@ additionalManifest: |-
 
 :::note
 
-It is discouraged to provide HelmChartConfig for customizing the system charts via `additionalManifest`,
-it could cause unexpected behavior due to how multiple HelmChartConfig for the same chart being handled.
+If you want to customize system charts, you should use the `chartValues` field as described below.
 
-The recommended approach is to utilize the `chartValues` field which is explained below.
+Alternatives, such as using a HelmChartConfig to customize the system charts via `additionalManifest`, can cause unexpected behavior, due to having multiple HelmChartConfigs for the same chart.
 
 :::
 
