@@ -16,7 +16,7 @@ Resource quotas in Rancher include the same functionality as the [native version
 
 ### Applying Resource Quotas to Existing Projects
 
-Edit [resource quotas](../../../../pages-for-subheaders/manage-project-resource-quotas.md) when:
+Edit resource quotas when:
 
 - You want to limit the resources that a project and its namespaces can use.
 - You want to scale the resources available to a project up or down when a resource quota is already in effect.
