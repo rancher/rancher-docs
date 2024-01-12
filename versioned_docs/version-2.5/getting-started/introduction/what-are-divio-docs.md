@@ -4,7 +4,7 @@ title: What Are Divio Docs?
 
 The [Divio documentation system](https://documentation.divio.com/) is a software documentation paradigm that is based on functionality and the premise that the best documentation is specific, concise, and purposeful. Divio traditionally consists of four main categories: tutorials, how-to guides, reference guides, and explanations.
 
-In our docs, we have used this guideline to craft a unique set of docs which include [getting started](../../getting-started.md), [how-to guides](../../how-to-guides.md) (including [new](../../pages-for-subheaders/new-user-guides.md) and [advanced user guides](../../pages-for-subheaders/advanced-user-guides.md)), [reference guides](../../reference-guides.md), [explanations](../../explanations.md), an [FAQ section](../../faq.md), [troubleshooting tips](../../troubleshooting.md), and the ability to [contribute to Rancher](../../contribute-to-rancher.md).
+In our docs, we have used this guideline to craft a unique set of docs which include [getting started](../../getting-started.md), [how-to guides](../../how-to-guides.md) (including [new](../../how-to-guides/new-user-guides/new-user-guides.md) and [advanced user guides](../../how-to-guides/advanced-user-guides/advanced-user-guides.md)), [reference guides](../../reference-guides.md), [explanations](../../explanations.md), an [FAQ section](../../faq.md), [troubleshooting tips](../../troubleshooting.md), and the ability to [contribute to Rancher](../../contribute-to-rancher.md).
 
 - [Getting Started](#getting-started)
 - [How-to Guides](#how-to-guides)
@@ -27,7 +27,7 @@ To get up and running with Rancher quickly, we have included a **Getting Started
 
 The goal of this section is to be able to assist users in deploying Rancher and workloads and to install or upgrade Rancher quickly and effectively.
 
-Please see the [introduction](../../pages-for-subheaders/introduction.md), [quick start guides](../../pages-for-subheaders/quick-start-guides.md), and the [installation and upgrade](../../pages-for-subheaders/installation-and-upgrade.md) sections for more.
+Please see the [introduction](introduction.md), [quick start guides](../quick-start-guides/quick-start-guides.md), and the [installation and upgrade](../installation-and-upgrade/installation-and-upgrade.md) sections for more.
 
 ## How-to Guides
 
@@ -59,7 +59,7 @@ These docs may also include some usage steps in the course of description; howev
 
 The users who utilize reference guides are knowledgeable with the Rancher product as well as how to use it. They will benefit from detailed descriptions of something to be used when needing to refer to specifics of usage.
 
-Good examples of Rancher reference guides would be the [Rancher architecture](../../pages-for-subheaders/rancher-manager-architecture.md) and [cluster configuration guides](../../pages-for-subheaders/cluster-configuration.md).
+Good examples of Rancher reference guides would be the [Rancher architecture](../../reference-guides/rancher-manager-architecture/rancher-manager-architecture.md) and [cluster configuration guides](../../reference-guides/cluster-configuration/cluster-configuration.md).
 
 ## Explanations
 
@@ -67,13 +67,13 @@ Explanation docs are concerned primarily with providing theoretical knowledge fo
 
 Explanatory docs do not instruct the user how to do something, as in tutorials and how-to guides, nor do they give detailed descriptions as references do. Explanations serve to give substance and background on both simple and complex topics.
 
-For our new docs, we are working to build up this section as most of our previous documentation was process-oriented rather than discussion-oriented. Currently, we feature [Integrations in Rancher](../../pages-for-subheaders/integrations-in-rancher.md) to discuss our integrated products.
+For our new docs, we are working to build up this section as most of our previous documentation was process-oriented rather than discussion-oriented. Currently, we feature [Integrations in Rancher](../../explanations/integrations-in-rancher/integrations-in-rancher.md) to discuss our integrated products.
 
 ### Integrations in Rancher
 
 Over time, Rancher has accrued several products and projects that have been integrated into the Rancher UI. To assist users in learning more about these integrations, this subsection has been added under **Explanations**.
 
-Examples of some of these integrations are [Continuous Delivery with Fleet](../../pages-for-subheaders/fleet-gitops-at-scale.md) and [Monitoring and Alerting](../../pages-for-subheaders/monitoring-and-alerting.md).
+Examples of some of these integrations are [Continuous Delivery with Fleet](../../explanations/integrations-in-rancher/fleet-gitops-at-scale/fleet-gitops-at-scale.md) and [Monitoring and Alerting](../../explanations/integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md).
 
 ## Other Docs Categories
 

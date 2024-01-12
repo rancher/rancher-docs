@@ -38,4 +38,4 @@ kubectl -n cattle-system create secret generic tls-ca \
 
 ## Updating a Private CA Certificate
 
-Follow the steps on [this page](update-rancher-certificate.md) to update the SSL certificate of the ingress in a Rancher [high availability Kubernetes installation](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md) or to switch from the default self-signed certificate to a custom certificate.
+Follow the steps on [this page](update-rancher-certificate.md) to update the SSL certificate of the ingress in a Rancher [high availability Kubernetes installation](../install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md) or to switch from the default self-signed certificate to a custom certificate.

@@ -28,10 +28,10 @@ You can assign resources at the project level so that each namespace in the proj
 
 You can assign the following resources directly to namespaces:
 
-- [Workloads](../../../pages-for-subheaders/workloads-and-pods.md)
-- [Load Balancers/Ingress](../../../pages-for-subheaders/load-balancer-and-ingress-controller.md)
+- [Workloads](../../new-user-guides/kubernetes-resources-setup/workloads-and-pods/workloads-and-pods.md)
+- [Load Balancers/Ingress](../../new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/load-balancer-and-ingress-controller.md)
 - [Service Discovery Records](../../new-user-guides/kubernetes-resources-setup/create-services.md)
-- [Persistent Volume Claims](../../../pages-for-subheaders/create-kubernetes-persistent-storage.md)
+- [Persistent Volume Claims](create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md)
 - [Certificates](../../new-user-guides/kubernetes-resources-setup/encrypt-http-communication.md)
 - [ConfigMaps](../../new-user-guides/kubernetes-resources-setup/configmaps.md)
 - [Registries](../../new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries.md)
@@ -157,14 +157,14 @@ To add members:
 
 ### 4. Optional: Add Resource Quotas
 
-Resource quotas limit the resources that a project (and its namespaces) can consume. For more information, see [Resource Quotas](../../../pages-for-subheaders/manage-project-resource-quotas.md).
+Resource quotas limit the resources that a project (and its namespaces) can consume. For more information, see [Resource Quotas](../manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md).
 
 To add a resource quota,
 
 1. Click **Add Quota**.
-1. Select a Resource Type. For more information, see [Resource Quotas.](../../../pages-for-subheaders/manage-project-resource-quotas.md).
+1. Select a Resource Type. For more information, see [Resource Quotas.](../manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md).
 1. Enter values for the **Project Limit** and the **Namespace Default Limit**.
-1. **Optional:** Specify **Container Default Resource Limit**, which will be applied to every container started in the project. The parameter is recommended if you have CPU or Memory limits set by the Resource Quota. It can be overridden on per an individual namespace or a container level. For more information, see [Container Default Resource Limit](../../../pages-for-subheaders/manage-project-resource-quotas.md)
+1. **Optional:** Specify **Container Default Resource Limit**, which will be applied to every container started in the project. The parameter is recommended if you have CPU or Memory limits set by the Resource Quota. It can be overridden on per an individual namespace or a container level. For more information, see [Container Default Resource Limit](../manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md)
 1. Click **Create**.
 
 **Result:** Your project is created. You can view it from the cluster's **Projects/Namespaces** view.

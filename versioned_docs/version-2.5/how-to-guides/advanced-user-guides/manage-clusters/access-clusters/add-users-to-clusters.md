@@ -32,14 +32,14 @@ Cluster administrators can edit the membership for a cluster, controlling which 
 
     If external authentication is configured:
 
-    - Rancher returns users from your [external authentication](../../../../pages-for-subheaders/about-authentication.md) source as you type.
+    - Rancher returns users from your [external authentication](../../authentication-permissions-and-global-configuration/about-authentication/about-authentication.md) source as you type.
 
         >**Using AD but can't find your users?**
         >There may be an issue with your search attribute configuration. See [Configuring Active Directory Authentication: Step 5](../../authentication-permissions-and-global-configuration/about-authentication/authentication-config/configure-active-directory.md).
 
     - A drop-down allows you to add groups instead of individual users. The drop-down only lists groups that you, the logged in user, are part of.
 
-        >**Note:** If you are logged in as a local user, external users do not display in your search results. For more information, see [External Authentication Configuration and Principal Users](../../../../pages-for-subheaders/about-authentication.md#external-authentication-configuration-and-principal-users).
+        >**Note:** If you are logged in as a local user, external users do not display in your search results. For more information, see [External Authentication Configuration and Principal Users](../../authentication-permissions-and-global-configuration/about-authentication/about-authentication.md#external-authentication-configuration-and-principal-users).
 
 4. Assign the user or group **Cluster** roles.
 

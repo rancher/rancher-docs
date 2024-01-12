@@ -38,7 +38,7 @@ For migration of installs started with Helm 2, refer to the official [Helm 2 to 
 
 ### For air gap installs: Populate private registry
 
-For [air gap installs only,](../../../pages-for-subheaders/air-gapped-helm-cli-install.md) collect and populate images for the new Rancher server version. Follow the guide to [populate your private registry](../other-installation-methods/air-gapped-helm-cli-install/publish-images.md) with the images for the Rancher version that you want to upgrade to.
+For [air gap installs only,](../other-installation-methods/air-gapped-helm-cli-install/air-gapped-helm-cli-install.md) collect and populate images for the new Rancher server version. Follow the guide to [populate your private registry](../other-installation-methods/air-gapped-helm-cli-install/publish-images.md) with the images for the Rancher version that you want to upgrade to.
 
 ### For upgrades from a Rancher server with a hidden local cluster
 
