@@ -236,7 +236,7 @@ More info is at [RKE clusters on AWS](../../../new-user-guides/kubernetes-cluste
 
 Once we've configured AWS, let's create VMs to bootstrap our cluster:
 
-* master (etcd+controlplane): Depending your needs, deploy three master instances with proper size. More info is at [the recommendations for production-ready clusters.](../../../../pages-for-subheaders/checklist-for-production-ready-clusters.md)
+* master (etcd+controlplane): Depending your needs, deploy three master instances with proper size. More info is at [the recommendations for production-ready clusters.](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters/checklist-for-production-ready-clusters.md)
   * IAM role: `K8sMasterRole`
   * Security group: `K8sMasterSg`
   * Tags:

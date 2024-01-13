@@ -12,7 +12,7 @@ A Rancher [administrator](../authentication-permissions-and-global-configuration
 
 ## Prerequisites
 
-This guide assumes you have already [installed Rancher,](../../../pages-for-subheaders/installation-and-upgrade.md) and you have already [provisioned a separate Kubernetes cluster](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md) on which you will install Istio.
+This guide assumes you have already [installed Rancher,](../../../getting-started/installation-and-upgrade/installation-and-upgrade.md) and you have already [provisioned a separate Kubernetes cluster](../../new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md) on which you will install Istio.
 
 The nodes in your cluster must meet the [CPU and memory requirements.](../../../explanations/integrations-in-rancher/istio/cpu-and-memory-allocations.md)
 

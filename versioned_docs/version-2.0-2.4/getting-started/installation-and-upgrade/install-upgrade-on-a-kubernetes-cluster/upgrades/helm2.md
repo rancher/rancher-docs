@@ -8,7 +8,7 @@ title: Upgrading Rancher Installed on Kubernetes with Helm 2
 
 > Helm 3 has been released.  If you are using Helm 2, we recommend [migrating to Helm 3](https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/) because it is simpler to use and more secure than Helm 2.
 >
-> The [current instructions for Upgrading Rancher Installed on Kubernetes](../../../../pages-for-subheaders/upgrades.md) use Helm 3.
+> The [current instructions for Upgrading Rancher Installed on Kubernetes](upgrades.md) use Helm 3.
 >
 > This section provides a copy of the older instructions for upgrading Rancher with Helm 2, and it is intended to be used if upgrading to Helm 3 is not feasible.
 
@@ -26,8 +26,8 @@ If you installed Rancher using the RKE Add-on yaml, follow the directions to [mi
 
 ## Prerequisites
 
-- **Review the [known upgrade issues](../../../../pages-for-subheaders/upgrades.md)** in the Rancher documentation for the most noteworthy issues to consider when upgrading Rancher. A more complete list of known issues for each Rancher version can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums.](https://forums.rancher.com/c/announcements/12)
-- **For [air gap installs only,](../../../../pages-for-subheaders/air-gapped-helm-cli-install.md) collect and populate images for the new Rancher server version.** Follow the guide to [populate your private registry](../../other-installation-methods/air-gapped-helm-cli-install/publish-images.md) with the images for the Rancher version that you want to upgrade to.
+- **Review the [known upgrade issues](upgrades.md)** in the Rancher documentation for the most noteworthy issues to consider when upgrading Rancher. A more complete list of known issues for each Rancher version can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums.](https://forums.rancher.com/c/announcements/12)
+- **For [air gap installs only,](../../other-installation-methods/air-gapped-helm-cli-install/air-gapped-helm-cli-install.md) collect and populate images for the new Rancher server version.** Follow the guide to [populate your private registry](../../other-installation-methods/air-gapped-helm-cli-install/publish-images.md) with the images for the Rancher version that you want to upgrade to.
 
 ## Upgrade Outline
 

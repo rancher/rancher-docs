@@ -4,7 +4,7 @@ title: Project Logging
 
 Rancher can integrate with a variety of popular logging services and tools that exist outside of your Kubernetes clusters.
 
-For background information about how logging integrations work, refer to the [cluster administration section.](../../pages-for-subheaders/cluster-logging.md#how-logging-integrations-work)
+For background information about how logging integrations work, refer to the [cluster administration section.](../../explanations/integrations-in-rancher/cluster-logging/cluster-logging.md#how-logging-integrations-work)
 
 Rancher supports the following services:
 
@@ -40,7 +40,7 @@ Setting up a logging service to collect logs from your cluster/project has sever
 
 You can configure logging at either cluster level or project level.
 
-- [Cluster logging](../../pages-for-subheaders/cluster-logging.md) writes logs for every pod in the cluster, i.e. in all the projects. For [RKE clusters](../../pages-for-subheaders/launch-kubernetes-with-rancher.md), it also writes logs for all the Kubernetes system components.
+- [Cluster logging](../../explanations/integrations-in-rancher/cluster-logging/cluster-logging.md) writes logs for every pod in the cluster, i.e. in all the projects. For [RKE clusters](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md), it also writes logs for all the Kubernetes system components.
 
 - Project logging writes logs for every pod in that particular project.
 

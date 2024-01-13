@@ -10,7 +10,7 @@ In this section, you will provision the underlying infrastructure for your Ranch
 
 An air gapped environment is an environment where the Rancher server is installed offline or behind a firewall.
 
-The infrastructure depends on whether you are installing Rancher on a K3s Kubernetes cluster, an RKE Kubernetes cluster, or a single Docker container. For more information on each installation option, refer to [this page.](../../../../pages-for-subheaders/installation-and-upgrade.md)
+The infrastructure depends on whether you are installing Rancher on a K3s Kubernetes cluster, an RKE Kubernetes cluster, or a single Docker container. For more information on each installation option, refer to [this page.](../../installation-and-upgrade.md)
 
 <Tabs>
 <TabItem value="K3s">
@@ -27,7 +27,7 @@ We recommend setting up the following infrastructure for a high-availability ins
 
 These hosts will be disconnected from the internet, but require being able to connect with your private registry.
 
-Make sure that your nodes fulfill the general installation requirements for [OS, container runtime, hardware, and networking.](../../../../pages-for-subheaders/installation-requirements.md)
+Make sure that your nodes fulfill the general installation requirements for [OS, container runtime, hardware, and networking.](../../installation-requirements/installation-requirements.md)
 
 For an example of one way to set up Linux nodes, refer to this [tutorial](../../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md) for setting up nodes as instances in Amazon EC2.
 
@@ -107,7 +107,7 @@ The etcd database requires an odd number of nodes so that it can always elect a 
 
 These hosts will be disconnected from the internet, but require being able to connect with your private registry.
 
-Make sure that your nodes fulfill the general installation requirements for [OS, container runtime, hardware, and networking.](../../../../pages-for-subheaders/installation-requirements.md)
+Make sure that your nodes fulfill the general installation requirements for [OS, container runtime, hardware, and networking.](../../installation-requirements/installation-requirements.md)
 
 For an example of one way to set up Linux nodes, refer to this [tutorial](../../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md) for setting up nodes as instances in Amazon EC2.
 
@@ -161,7 +161,7 @@ If you need help with creating a private registry, please refer to the [official
 
 This host will be disconnected from the Internet, but needs to be able to connect to your private registry.
 
-Make sure that your node fulfills the general installation requirements for [OS, Docker, hardware, and networking.](../../../../pages-for-subheaders/installation-requirements.md)
+Make sure that your node fulfills the general installation requirements for [OS, Docker, hardware, and networking.](../../installation-requirements/installation-requirements.md)
 
 For an example of one way to set up Linux nodes, refer to this [tutorial](../../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md) for setting up nodes as instances in Amazon EC2.
 

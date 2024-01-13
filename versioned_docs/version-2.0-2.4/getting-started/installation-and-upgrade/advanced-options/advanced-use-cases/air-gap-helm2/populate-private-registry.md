@@ -10,11 +10,11 @@ title: '2. Collect and Publish Images to your Private Registry'
 >
 > **Note:** Populating the private registry with images is the same process for HA and Docker installations, the differences in this section is based on whether or not you are planning to provision a Windows cluster or not.
 
-By default, all images used to [provision Kubernetes clusters](../../../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md) or launch any [tools](../../../../../reference-guides/rancher-cluster-tools.md) in Rancher, e.g. monitoring, pipelines, alerts, are pulled from Docker Hub. In an air gap installation of Rancher, you will need a private registry that is located somewhere accessible by your Rancher server. Then, you will load the registry with all the images.
+By default, all images used to [provision Kubernetes clusters](../../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md) or launch any [tools](../../../../../reference-guides/rancher-cluster-tools.md) in Rancher, e.g. monitoring, pipelines, alerts, are pulled from Docker Hub. In an air gap installation of Rancher, you will need a private registry that is located somewhere accessible by your Rancher server. Then, you will load the registry with all the images.
 
 This section describes how to set up your private registry so that when you install Rancher, Rancher will pull all the required images from this registry.
 
-By default, we provide the steps of how to populate your private registry assuming you are provisioning Linux only clusters, but if you plan on provisioning any [Windows clusters](../../../../../pages-for-subheaders/use-windows-clusters.md), there are separate instructions to support the images needed for a Windows cluster.
+By default, we provide the steps of how to populate your private registry assuming you are provisioning Linux only clusters, but if you plan on provisioning any [Windows clusters](../../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/use-windows-clusters.md), there are separate instructions to support the images needed for a Windows cluster.
 
 <Tabs>
 <TabItem value="Linux Only Clusters">

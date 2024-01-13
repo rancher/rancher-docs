@@ -8,4 +8,4 @@ These docs may also include some usage steps in the course of description; howev
 
 The users who utilize reference guides are knowledgeable with the Rancher product as well as how to use it. They will benefit from detailed descriptions of something to be used when needing to refer to specifics of usage.
 
-Good examples of Rancher reference guides would be the [Rancher architecture](./pages-for-subheaders/rancher-manager-architecture.md) and [cluster configuration guides](./pages-for-subheaders/cluster-configuration.md).
+Good examples of Rancher reference guides would be the [Rancher architecture](reference-guides/rancher-manager-architecture/rancher-manager-architecture.md) and [cluster configuration guides](reference-guides/cluster-configuration/cluster-configuration.md).

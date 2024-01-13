@@ -15,7 +15,7 @@ This section is about how to prepare your node(s) to install Rancher for your ai
 
 ### OS, Docker, Hardware, and Networking
 
-Make sure that your node(s) fulfill the general [installation requirements.](../../../../../pages-for-subheaders/installation-requirements.md)
+Make sure that your node(s) fulfill the general [installation requirements.](../../../installation-requirements/installation-requirements.md)
 
 ### Private Registry
 
@@ -37,7 +37,7 @@ The following CLI tools are required for the Kubernetes Install. Make sure these
 
 ### OS, Docker, Hardware, and Networking
 
-Make sure that your node(s) fulfill the general [installation requirements.](../../../../../pages-for-subheaders/installation-requirements.md)
+Make sure that your node(s) fulfill the general [installation requirements.](../../../installation-requirements/installation-requirements.md)
 
 ### Private Registry
 
@@ -70,7 +70,7 @@ Rancher recommends installing Rancher on a Kubernetes cluster. A highly availabl
 
 These hosts will be disconnected from the internet, but require being able to connect with your private registry.
 
-View hardware and software requirements for each of your cluster nodes in [Requirements](../../../../../pages-for-subheaders/installation-requirements.md).
+View hardware and software requirements for each of your cluster nodes in [Requirements](../../../installation-requirements/installation-requirements.md).
 
 ### B. Set up your Load Balancer
 
@@ -99,7 +99,7 @@ Instead of running the Docker installation, you have the option to follow the Ku
 
 These hosts will be disconnected from the internet, but require being able to connect with your private registry.
 
-View hardware and software requirements for each of your cluster nodes in [Requirements](../../../../../pages-for-subheaders/installation-requirements.md).
+View hardware and software requirements for each of your cluster nodes in [Requirements](../../../installation-requirements/installation-requirements.md).
 
 </TabItem>
 </Tabs>

@@ -43,4 +43,4 @@ To create a new alert,
 
 **Result:** The alert is created and activated. The notifications will be triggered when the a scan is run on a cluster and the active alerts have satisfied conditions.
 
-For more information about alerts, refer to [this page.](../../../pages-for-subheaders/cluster-alerts.md)
+For more information about alerts, refer to [this page.](../../../explanations/integrations-in-rancher/cluster-alerts/cluster-alerts.md)

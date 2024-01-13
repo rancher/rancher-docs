@@ -8,7 +8,7 @@ title: Troubleshooting
 
 This section contains information to help you troubleshoot issues when using Rancher.
 
-- [Kubernetes components](pages-for-subheaders/kubernetes-components.md)
+- [Kubernetes components](troubleshooting/kubernetes-components/kubernetes-components.md)
 
     If you need help troubleshooting core Kubernetes cluster components like:
     * `etcd`
@@ -33,7 +33,7 @@ This section contains information to help you troubleshoot issues when using Ran
 
 - [Troubleshooting Rancher installed on Kubernetes](troubleshooting/other-troubleshooting-tips/rancher-ha.md)
 
-    If you experience issues with your [Rancher server installed on Kubernetes](pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md)
+    If you experience issues with your [Rancher server installed on Kubernetes](getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md)
 
 - [Imported clusters](troubleshooting/other-troubleshooting-tips/registered-clusters.md)
 

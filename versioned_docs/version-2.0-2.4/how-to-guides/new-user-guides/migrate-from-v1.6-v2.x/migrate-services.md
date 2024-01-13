@@ -48,7 +48,7 @@ Next, use the migration-tools CLI to export all stacks in all of the Cattle envi
 
     **Step Result:** migration-tools exports Compose files (`docker-compose.yml` and `rancher-compose.yml`) for each stack in the `--export-dir` directory. If you omitted this option, Compose files are output to your current directory.
 
-    A unique directory is created for each environment and stack. For example, if we export each [environment/stack](../../../pages-for-subheaders/migrate-from-v1.6-v2.x.md#migration-example-files) from Rancher v1.6, the following directory structure is created:
+    A unique directory is created for each environment and stack. For example, if we export each [environment/stack](migrate-from-v1.6-v2.x.md#migration-example-files) from Rancher v1.6, the following directory structure is created:
 
     ```
     export/                            # migration-tools --export-dir
@@ -90,7 +90,7 @@ When a you export a service from Rancher v1.6 that exposes public ports, migrati
 
 #### Migration Example File Output
 
-If we parse the two example files from [Migration Example Files](../../../pages-for-subheaders/migrate-from-v1.6-v2.x.md#migration-example-files), `docker-compose.yml` and `rancher-compose.yml`, the following files are output:
+If we parse the two example files from [Migration Example Files](migrate-from-v1.6-v2.x.md#migration-example-files), `docker-compose.yml` and `rancher-compose.yml`, the following files are output:
 
 File | Description
 -----|------------
@@ -233,7 +233,7 @@ You can deploy the Kubernetes manifests created by migration-tools by importing 
 </TabItem>
 <TabItem value="Rancher CLI">
 
->**Prerequisite:** [Install Rancher CLI](../../../pages-for-subheaders/cli-with-rancher.md) for Rancher v2.x.
+>**Prerequisite:** [Install Rancher CLI](../../../reference-guides/cli-with-rancher/cli-with-rancher.md) for Rancher v2.x.
 
 Use the following Rancher CLI commands to deploy your application using Rancher v2.x. For each Kubernetes manifest output by migration-tools CLI, enter one of the commands below to import it into Rancher v2.x.
 
@@ -262,7 +262,7 @@ Although the migration-tool CLI parses your Rancher v1.6 Compose files to Kubern
 
 As mentioned in [Migration Tools CLI Output](#migration-tools-cli-output), the `output.txt` files generated during parsing lists the manual steps you must make for each deployment. Review the upcoming topics for more information on manually editing your Kubernetes specs.
 
-Open your `output.txt` file and take a look at its contents. When you parsed your Compose files into Kubernetes manifests, migration-tools CLI output a manifest for each workload that it creates for Kubernetes. For example, our when our [Migration Example Files](../../../pages-for-subheaders/migrate-from-v1.6-v2.x.md#migration-example-files) are parsed into Kubernetes manifests, `output.txt` lists each resultant parsed [Kubernetes manifest file](#migration-example-file-output) (i.e., workloads). Each workload features a list of action items to restore operations for the workload in v2.x.
+Open your `output.txt` file and take a look at its contents. When you parsed your Compose files into Kubernetes manifests, migration-tools CLI output a manifest for each workload that it creates for Kubernetes. For example, our when our [Migration Example Files](migrate-from-v1.6-v2.x.md#migration-example-files) are parsed into Kubernetes manifests, `output.txt` lists each resultant parsed [Kubernetes manifest file](#migration-example-file-output) (i.e., workloads). Each workload features a list of action items to restore operations for the workload in v2.x.
 
 <figcaption>Output.txt Example</figcaption>
 

@@ -8,7 +8,7 @@ This section assumes that you understand how persistent storage works in Kuberne
 
 >**Prerequisites (for both parts A and B):**
 >
->[Persistent volumes](../../pages-for-subheaders/create-kubernetes-persistent-storage.md) must be available for the cluster.
+>[Persistent volumes](../../how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md) must be available for the cluster.
 
 ### A. Configuring Persistent Data for Docker Registry
 

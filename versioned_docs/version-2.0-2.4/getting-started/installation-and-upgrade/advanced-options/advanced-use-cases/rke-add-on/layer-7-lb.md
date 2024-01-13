@@ -5,7 +5,7 @@ import SslFaqHa from '@site/src/components/SslFaqHa'
 
 > #### **Important: RKE add-on install is only supported up to Rancher v2.0.8**
 >
->Please use the Rancher Helm chart to install Rancher on a Kubernetes cluster. For details, see the [Kubernetes Install](../../../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md).
+>Please use the Rancher Helm chart to install Rancher on a Kubernetes cluster. For details, see the [Kubernetes Install](../../../install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md).
 >
 >If you are currently using the RKE add-on install method, see [Migrating from a Kubernetes Install with an RKE Add-on](../../../install-upgrade-on-a-kubernetes-cluster/upgrades/migrating-from-rke-add-on.md) for details on how to start using the Helm chart.
 
@@ -26,7 +26,7 @@ Installation of Rancher in a high-availability configuration involves multiple p
 
 ## 1. Provision Linux Hosts
 
-Provision three Linux hosts according to our [Requirements](../../../../../pages-for-subheaders/installation-requirements.md).
+Provision three Linux hosts according to our [Requirements](../../../installation-requirements/installation-requirements.md).
 
 ## 2. Configure Load Balancer
 
@@ -262,7 +262,7 @@ During installation, RKE automatically generates a config file named `kube_confi
 ## What's Next?
 
 - **Recommended:** Review [Creating Backups—High Availability Back Up and Restoration](../../../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters.md) to learn how to backup your Rancher Server in case of a disaster scenario.
-- Create a Kubernetes cluster: [Creating a Cluster](../../../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md).
+- Create a Kubernetes cluster: [Creating a Cluster](../../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md).
 
 <br/>
 

@@ -4,11 +4,11 @@ title: Viewing Metrics
 
 _Available as of v2.2.0_
 
-After you've enabled monitoring at either the [cluster level](../../../pages-for-subheaders/cluster-monitoring.md) or [project level](./project-monitoring.md), you will want to be start viewing the data being collected. There are multiple ways to view this data.
+After you've enabled monitoring at either the [cluster level](cluster-monitoring.md) or [project level](./project-monitoring.md), you will want to be start viewing the data being collected. There are multiple ways to view this data.
 
 ## Rancher Dashboard
 
->**Note:** This is only available if you've enabled monitoring at the [cluster level](../../../pages-for-subheaders/cluster-monitoring.md). Project specific analytics must be viewed using the project's Grafana instance.
+>**Note:** This is only available if you've enabled monitoring at the [cluster level](cluster-monitoring.md). Project specific analytics must be viewed using the project's Grafana instance.
 
 Rancher's dashboards are available at multiple locations:
 
@@ -32,7 +32,7 @@ When analyzing these metrics, don't be concerned about any single standalone met
 
 ## Grafana
 
-If you've enabled monitoring at either the [cluster level](../../../pages-for-subheaders/cluster-monitoring.md) or [project level](./project-monitoring.md), Rancher automatically creates a link to Grafana instance. Use this link to view monitoring data.
+If you've enabled monitoring at either the [cluster level](cluster-monitoring.md) or [project level](./project-monitoring.md), Rancher automatically creates a link to Grafana instance. Use this link to view monitoring data.
 
 Grafana allows you to query, visualize, alert, and ultimately, understand your cluster and workload data. For more information on Grafana and its capabilities, visit the [Grafana website](https://grafana.com/grafana).
 
