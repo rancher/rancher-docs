@@ -103,4 +103,4 @@ Congratulations! You have created your first cluster.
 
 #### What's Next?
 
-Use Rancher to create a deployment. For more information, see [Creating Deployments](../deploy-workloads/deploy-rancher-workloads.md).
+Use Rancher to create a deployment. For more information, see [Creating Deployments](../deploy-workloads/deploy-workloads.md).

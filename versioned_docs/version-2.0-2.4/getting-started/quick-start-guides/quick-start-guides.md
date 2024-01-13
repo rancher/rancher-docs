@@ -14,6 +14,6 @@ We have Quick Start Guides for:
 
 - [Deploying Rancher Server](deploy-rancher-manager/deploy-rancher-manager.md): Get started running Rancher using the method most convenient for you.
 
-- [Deploying Workloads](deploy-workloads/deploy-rancher-workloads.md): Deploy a simple [workload](https://kubernetes.io/docs/concepts/workloads/) and expose it, letting you access it from outside the cluster.
+- [Deploying Workloads](deploy-workloads/deploy-workloads.md): Deploy a simple [workload](https://kubernetes.io/docs/concepts/workloads/) and expose it, letting you access it from outside the cluster.
 
 - [Using the CLI](cli.md): Use `kubectl` or Rancher command line interface (CLI) to interact with your Rancher instance.

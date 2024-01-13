@@ -63,7 +63,7 @@ Two Kubernetes clusters are deployed into your AWS account, one running Rancher 
 
 ### What's Next?
 
-Use Rancher to create a deployment. For more information, see [Creating Deployments](../deploy-workloads/deploy-rancher-workloads.md).
+Use Rancher to create a deployment. For more information, see [Creating Deployments](../deploy-workloads/deploy-workloads.md).
 
 ## Destroying the Environment
 

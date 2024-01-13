@@ -51,7 +51,7 @@
               "label": "Deploying Workloads",
               "link": {
                 "type": "doc",
-                "id": "getting-started/quick-start-guides/deploy-workloads/deploy-rancher-workloads"
+                "id": "getting-started/quick-start-guides/deploy-workloads/deploy-workloads"
               },
               "items": [
                 "getting-started/quick-start-guides/deploy-workloads/workload-ingress",
