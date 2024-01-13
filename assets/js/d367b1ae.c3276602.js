@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1704760227,
-    "formattedLastUpdatedAt": "Jan 9, 2024",
+    "lastUpdatedAt": 1705098618,
+    "formattedLastUpdatedAt": "Jan 12, 2024",
     "frontMatter": {
         "title": "K3s Cluster Configuration Reference"
     },
@@ -580,6 +580,11 @@ const toc = [
         value: 'Cluster Config File Reference',
         id: 'cluster-config-file-reference',
         level: 2
+    },
+    {
+        value: 'additionalManifest',
+        id: 'additionalmanifest',
+        level: 3
     },
     {
         value: 'chartValues',
@@ -864,6 +869,7 @@ spec:
   kubernetesVersion: v1.26.7+k3s1
   localClusterAuthEndpoint: {}
   rkeConfig:
+    additionalManifest: ""
     chartValues: {}
     etcd:
       snapshotRetention: 5
@@ -938,8 +944,33 @@ spec:
         skipWaitForDeleteTimeoutSeconds: 0
         timeout: 120
 `))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "additionalmanifest"
+    }, `additionalManifest`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Specify additional manifests to deliver to the control plane nodes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The value is a String, and will be placed at the path `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `/var/lib/rancher/k3s/server/manifests/rancher/addons.yaml`), ` on target nodes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Example:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-yaml"
+    }, `additionalManifest: |-
+  apiVersion: v1
+  kind: Namespace
+  metadata:
+    name: name-xxxx
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `If you want to customize system charts, you should use the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `chartValues`), ` field as described below.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `Alternatives, such as using a HelmChartConfig to customize the system charts via `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `additionalManifest`), `, can cause unexpected behavior, due to having multiple HelmChartConfigs for the same chart.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "chartvalues"
-    }, `chartValues`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Specify the values for the system charts installed by K3s.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Example:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    }, `chartValues`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Specify the values for the system charts installed by K3s.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information about how K3s manges packaged components, please refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://docs.k3s.io/installation/packaged-components"
+    }, `K3s documentation`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Example:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-yaml"
     }, `chartValues:
