@@ -38,7 +38,7 @@ helm upgrade rancher ./rancher-<VERSION>.tgz \
 	--set useBundledSystemChart=true # Use the packaged Rancher system charts
 ```
 
-#### Resolving UPGRADE FAILED error
+#### Resolving UPGRADE FAILED Error
 
 If you encounter the error message, `Error: UPGRADE FAILED: "rancher" has no deployed releases`, Rancher might have been  installed via the `helm template` command. The `helm template` command can cause problems with Helm hooks. To successfully upgrade Rancher, use the following commands instead:
 
