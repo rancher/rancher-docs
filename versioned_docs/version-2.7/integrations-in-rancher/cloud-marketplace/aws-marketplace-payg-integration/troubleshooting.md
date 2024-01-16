@@ -42,7 +42,7 @@ oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/suse/$REPOSITORY/rancher-clou
   --set global.aws.roleName=$ROLE_NAME
 ```
 
-## Rancher Usage Record Not found
+## Rancher Usage Record Not Found
 
 When you attempt to retrieve a usage record, you might see the following message:
 

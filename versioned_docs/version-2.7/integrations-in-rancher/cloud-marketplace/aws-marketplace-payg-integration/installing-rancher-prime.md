@@ -8,39 +8,39 @@ This page covers installing the Rancher Prime PAYG offering on Amazon's AWS Mark
 
 ### OIDC provider
 
-Your EKS cluster requires an OIDC provider to be installed. To check for an OIDC provider, find the OIDC issuer with the following command. Substitute `$CLUSTER_NAME` with the name of your EKS cluster and `$REGION` with the region where it is running:
+Your EKS cluster requires that you install an OIDC provider. To check that you've installed an OIDC provider, find the OIDC issuer with the following command. Substitute `<cluster-name>` with the name of your EKS cluster and `<region>` with the region where it is running:
 
 ```shell
-aws eks describe-cluster --name $CLUSTER_NAME --region $REGION --query cluster.identity.oidc.issuer --output text
+aws eks describe-cluster --name <cluster-name> --region <region> --query cluster.identity.oidc.issuer --output text
 ```
 
-A URL is returned, like `https://oidc.eks.region.amazonaws.com/id/1234567890ABCDEF`. The part after `https://` (e.g. `oidc.eks.region.amazonaws.com/id/1234567890ABCDEF`) will be referred to in later instructions as the OIDC Provider Identity. The final section of the URL, `1234567890ABCDEF`, is the `$OIDC_ID`.
+This should return an URL, such as `https://oidc.eks.region.amazonaws.com/id/1234567890ABCDEF`. The part after `https://` (e.g. `oidc.eks.region.amazonaws.com/id/1234567890ABCDEF`) is the OIDC Provider Identity. The final section of the URL, `1234567890ABCDEF`, is the OIDC ID.
 
-Using the `$OIDC_ID` of the issuer found above, you can check if a provider is installed with the following command:
+Use the OIDC ID to check if the EKS cluster has a provider:
 
 ```shell
-aws iam list-open-id-connect-providers | grep $OIDC_ID
+aws iam list-open-id-connect-providers | grep <oidc-id>
 ```
 
-If there is no output, you will need to create an OIDC provider:
+If the last command produces no output, create an OIDC provider:
 
 ```shell
-eksctl utils associate-iam-oidc-provider --cluster $CLUSTER_NAME --region $REGION --approve
+eksctl utils associate-iam-oidc-provider --cluster <cluster-name> --region <region> --approve
 ```
 
 ### IAM Role
 
-An IAM role and an attached policy are required to provide the necessary permissions. The role name is passed as an argument during the Helm deployment.
+You must create an IAM role and an attached policy to provide the necessary permissions. The role name is passed as an argument during the Helm deployment.
 
-Create the role with a `$ROLE_NAME` of your choosing (for example, `rancher-csp-iam-role`) and the required policy attached to it:
+Create the role with a `<role-name>` of your choosing (for example, `rancher-csp-iam-role`) and attach the required policy:
 
 ```shell
 eksctl create iamserviceaccount \
   --name rancher-csp-billing-adapter \
   --namespace cattle-csp-billing-adapter-system \
-  --cluster $CLUSTER_NAME \
-  --region $REGION \
-  --role-name $ROLE_NAME --role-only \
+  --cluster <cluster-name> \
+  --region <region> \
+  --role-name <role-name> --role-only \
   --attach-policy-arn 'arn:aws:iam::aws:policy/AWSMarketplaceMeteringFullAccess' \
   --approve
 ```
@@ -57,32 +57,32 @@ eksctl create iamserviceaccount \
     --password-stdin 709825985650.dkr.ecr.us-east-1.amazonaws.com
   ```
 
-1. Install Rancher into your cluster using Helm. Customize your Helm installation values if needed:
+1. Install Rancher with Helm. Customize your Helm installation values if needed:
 
   :::note
 
-  Rancher Prime utilizes cert-manager to issue and maintain its certificates. Rancher will generate a CA certificate of its own and sign a certificate using that CA.
+  Rancher Prime uses cert-manager to issue and maintain its certificates. Rancher generates its own CA certificate and signs certificates with that CA.
 
   :::
 
-  The Rancher hostname must be resolvable by a public DNS. For more details, please refer to the [Prerequisites](prerequisites.md) section. For example, if the DNS name is `rancher.my.org`, then replace `$HOST_NAME` with `rancher.my.org` when running the `helm install` command.
+  The Rancher hostname must be resolvable by a public DNS. For more details, see [Prerequisites](prerequisites.md). For example, if the DNS name is `rancher.my.org`, then replace `<host-name>` with `rancher.my.org` when running the `helm install` command.
 
   ```shell
   helm install -n cattle-rancher-csp-deployer-system rancher-cloud --create-namespace \
   oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/suse/$REPOSITORY/rancher-cloud-helm/rancher-cloud \
-    --version $CHART_VERSION \
-    --set rancherHostname=$HOST_NAME \
-    --set rancherServerURL=https://$HOST_NAME \
-    --set rancherReplicas=$REPLICAS \
-    --set rancherBootstrapPassword=$BOOTSTRAP_PASSWORD \
+    --version <chart-version> \
+    --set rancherHostname=<host-name>\
+    --set rancherServerURL=https://<host-name>\
+    --set rancherReplicas=<replicas> \
+    --set rancherBootstrapPassword=<bootstrap-password>\
     --set rancherIngressClassName=nginx \
-    --set global.aws.accountNumber=$AWS_ACCOUNT_ID \
-    --set global.aws.roleName=$ROLE_NAME
+    --set global.aws.accountNumber=<aws-account-id>\
+    --set global.aws.roleName=<role-name>
   ```
 
   :::note
 
-  Monitor the logs for the `rancher-cloud` pod since it is deleted 1 minute after a successful or failed installation.
+  Monitor the logs for the `rancher-cloud` pod since it is deleted one minute after a successful or failed installation.
 
   ```shell
   kubectl logs -f rancher-cloud -n cattle-rancher-csp-deployer-system
@@ -90,11 +90,13 @@ eksctl create iamserviceaccount \
 
   :::
 
-1. After a successful deployment, running the following command should produce a similar output:
+1. After a successful deployment, the following command should produce similar output:
 
   ```shell
   kubectl get deployments --all-namespaces
   ```
+
+**Response:**
 
   ```shell
   NAMESPACE                           NAME                          READY   UP-TO-DATE   AVAILABLE   AGE
@@ -115,25 +117,25 @@ eksctl create iamserviceaccount \
 
 ### Check Helm Chart Installation
 
-Check that the Helm chart installation is complete:
+1. Check that the Helm chart installation completed:
 
 ```shell
 helm ls -n cattle-rancher-csp-deployer-system
 ```
 
-After completing the Helm chart installation, you can verify the installation was successful:
+2. Verify the status of the installation:
 
 ```shell
 helm status rancher-cloud -n cattle-rancher-csp-deployer-system
 ```
 
-Refer to the [Troubleshooting](troubleshooting.md) section for a failed installation.
+Refer to the [Troubleshooting](troubleshooting.md) section if installation fails.
 
-After the Helm chart installation is complete, Rancher Prime is successfully installed.
+When Helm chart installation successfully completes, Rancher Prime will be installed.
 
 ## Log into the Rancher Dashboard
 
-You may now log in to the Rancher dashboard by pointing your browser to the Rancher server URL `https://$RANCHER_HOSTNAME`, where`$RANCHER_HOSTNAME` is the hostname chosen when [installing Rancher](#installing-rancher).
+You may now log in to the Rancher dashboard by pointing your browser to the Rancher server URL `https://<host-name>`. The `<host-name>` is the hostname you entered when you [installed Rancher](#installing-rancher).
 
 :::note
 
@@ -149,7 +151,7 @@ Run the following command to uninstall Rancher Prime:
 helm uninstall -n cattle-rancher-csp-deployer-system rancher-cloud
 ```
 
-Uninstalling Rancher Prime may not cleanly remove all Kubernetes resources that Rancher created. You can use the [Rancher resource cleanup script](https://github.com/rancher/rancher-cleanup) to perform a more comprehensive cleanup.
+Uninstalling Rancher Prime may not remove all of the Kubernetes resources created by Rancher. Run the [Rancher resource cleanup script](https://github.com/rancher/rancher-cleanup) to perform a more comprehensive cleanup.
 
 The best practice for uninstalling the Rancher Prime PAYG offering is to migrate any non-Rancher workloads to a different cluster and destroy the Rancher cluster.
 
