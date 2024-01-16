@@ -6,11 +6,13 @@ This section contains information to help troubleshoot issues when installing th
 
 ## Deployment
 
-After a successful deployment, check the status of the deployment, it should list similar pod and chart output.
+After a successful deployment, check the status of the deployment. It should list similar pod and chart output as the example below.
 
 ```shell
 kubectl get deployments --all-namespaces
 ```
+
+**Response:**
 
 ```shell
 NAMESPACE                           NAME                          READY   UP-TO-DATE   AVAILABLE   AGE
@@ -42,19 +44,19 @@ Check the status of pods or jobs:
 kubectl get pods --all-namespaces
 ```
 
-If a pod is not in Running state, you can attempt to find the root cause with the following commands:
+If a pod is not in a `Running` state, you can attempt to find the root cause with the following commands:
 
 - Describe pod: `kubectl describe pod $POD_NAME -n $NAMESPACE`
 - Pod container logs: `kubectl logs $POD_NAME -n $NAMESPACE`
 - Describe job: `kubectl describe job $JOB_NAME -n $NAMESPACE`
 - Logs from the containers of pods of the job: `kubectl logs -l job-name=$JOB_NAME -n $NAMESPACE`
 
-## Rancher Usage Record Not found
+## Rancher Usage Record Not Found
 
 When you attempt to retrieve a usage record, you might see the following message:
 
 ```shell
-Error from server (NotFound): cspadapterusagerecords.susecloud.net "rancher-usage-record" not found" Check Configuration, Retrieve generated configuration csp-config
+Error from server (NotFound): cspadapterusagerecords.susecloud.net "rancher-usage-record not found" Check Configuration, Retrieve generated configuration csp-config
 ```
 
 To resolve the error, run:
@@ -73,7 +75,7 @@ When you attempt to install an extension of the same type, you will see the foll
 Multiple extensions of same type is not allowed at this scope. (Code: ValidationFailed)"
 ```
 
-AKS cluster already has the extension with the same type. To resolve the error, uninstall the extension and re-deploy with the same cluster.
+The AKS cluster already has the extension with the same type. To resolve the error, uninstall the extension and re-deploy to the same cluster.
 
 ## Resource Already Existing in your Cluster
 
@@ -83,4 +85,4 @@ When you attempt to install a resource or extension that already exists, you wil
 Helm installation failed : Resource already existing in your cluster : Recommendation Manually delete the resource(s) that currently exist in your cluster and try installation again. To delete these resources run the following commands: kubectl delete <resource type> -n <resource namespace> <resource name> : InnerError [rendered manifests contain a resource that already exists. Unable to continue with install: ServiceAccount "rancher" in namespace "cattle-system" exists and cannot be imported into the current release: invalid ownership metadata; annotation validation error: key "meta.helm.sh/release-name" must equal "test-nv2-reinstall": current value is "testnv2-plan"]
 ```
 
-AKS cluster already has the extension installed. To resolve the error, uninstall the extension as suggested in the error message by deleting the resource via the kubectl command, or uninstall the extension in Azure Console and re-deploy with the same cluster.
+The AKS cluster already has the extension installed. To resolve the error, uninstall the extension as suggested in the error message, by deleting the resource via the kubectl command, or uninstall the extension in the Azure Console and re-deploy to the same cluster.
