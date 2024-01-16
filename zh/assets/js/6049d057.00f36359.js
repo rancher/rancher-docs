@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[87955],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[95455],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 63452:
+/***/ 40944:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "integrations-in-rancher/fleet/fleet",
-    "id": "version-2.8/integrations-in-rancher/fleet/fleet",
+    "id": "integrations-in-rancher/fleet/fleet",
     "title": "Continuous Delivery with Fleet",
     "description": "Fleet orchestrates and manages the continuous delivery of applications through the supply chain for fleets of clusters. Fleet organizes the supply chain to help teams deliver with confidence and trust in a timely manner using GitOps as a safe operating model.",
-    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/fleet/fleet.md",
+    "source": "@site/docs/integrations-in-rancher/fleet/fleet.md",
     "sourceDirName": "integrations-in-rancher/fleet",
     "slug": "/integrations-in-rancher/fleet/",
-    "permalink": "/zh/v2.8/integrations-in-rancher/fleet/",
+    "permalink": "/zh/integrations-in-rancher/fleet/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/fleet/fleet.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/integrations-in-rancher/fleet/fleet.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1697826973,
-    "formattedLastUpdatedAt": "2023年10月20日",
+    "version": "current",
+    "lastUpdatedAt": 1705420955,
+    "formattedLastUpdatedAt": "2024年1月16日",
     "frontMatter": {
         "title": "Continuous Delivery with Fleet"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Observability with Opni",
-        "permalink": "/zh/v2.8/integrations-in-rancher/opni/"
+        "permalink": "/zh/integrations-in-rancher/opni/"
     },
     "next": {
         "title": "Overview",
-        "permalink": "/zh/v2.8/integrations-in-rancher/fleet/overview"
+        "permalink": "/zh/integrations-in-rancher/fleet/overview"
     }
 };
 const assets = {};
@@ -378,7 +378,7 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `I am a platform operator and want to provision clusters with all components using a scalable and safe operating model (GitOps).  `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `I am an application developer and want to get my latest changes to automatically into my development environment. `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }, `I am an application developer and want my latest changes to automatically go into my development environment.  `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "fleet-with-rancher-prime"
     }, `Fleet with Rancher Prime`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Fleet is already deeply integrated as the Continuous Delivery tool and GitOps Engine in Rancher. `));
 }

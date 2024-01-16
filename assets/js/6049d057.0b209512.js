@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/docs/integrations-in-rancher/fleet/fleet.md",
     "sourceDirName": "integrations-in-rancher/fleet",
     "slug": "/integrations-in-rancher/fleet/",
-    "permalink": "/zh/integrations-in-rancher/fleet/",
+    "permalink": "/integrations-in-rancher/fleet/",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/integrations-in-rancher/fleet/fleet.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1701892107,
-    "formattedLastUpdatedAt": "2023年12月6日",
+    "lastUpdatedAt": 1705420955,
+    "formattedLastUpdatedAt": "Jan 16, 2024",
     "frontMatter": {
         "title": "Continuous Delivery with Fleet"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Observability with Opni",
-        "permalink": "/zh/integrations-in-rancher/opni/"
+        "permalink": "/integrations-in-rancher/opni/"
     },
     "next": {
         "title": "Overview",
-        "permalink": "/zh/integrations-in-rancher/fleet/overview"
+        "permalink": "/integrations-in-rancher/fleet/overview"
     }
 };
 const assets = {};
@@ -378,7 +378,7 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `I am a platform operator and want to provision clusters with all components using a scalable and safe operating model (GitOps).  `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `I am an application developer and want to get my latest changes to automatically into my development environment. `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }, `I am an application developer and want my latest changes to automatically go into my development environment.  `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "fleet-with-rancher-prime"
     }, `Fleet with Rancher Prime`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Fleet is already deeply integrated as the Continuous Delivery tool and GitOps Engine in Rancher. `));
 }

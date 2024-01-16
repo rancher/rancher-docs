@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/fleet/fleet.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1697826973,
-    "formattedLastUpdatedAt": "Oct 20, 2023",
+    "lastUpdatedAt": 1705420955,
+    "formattedLastUpdatedAt": "Jan 16, 2024",
     "frontMatter": {
         "title": "Continuous Delivery with Fleet"
     },
@@ -378,7 +378,7 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `I am a platform operator and want to provision clusters with all components using a scalable and safe operating model (GitOps).  `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `I am an application developer and want to get my latest changes to automatically into my development environment. `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }, `I am an application developer and want my latest changes to automatically go into my development environment. `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "fleet-with-rancher-prime"
     }, `Fleet with Rancher Prime`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Fleet is already deeply integrated as the Continuous Delivery tool and GitOps Engine in Rancher. `));
 }
