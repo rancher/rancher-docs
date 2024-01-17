@@ -1,5 +1,5 @@
 ---
-title: 6. Set up Istio's Components for Traffic Management
+title: Set up Istio's Components for Traffic Management
 ---
 
 <head>
