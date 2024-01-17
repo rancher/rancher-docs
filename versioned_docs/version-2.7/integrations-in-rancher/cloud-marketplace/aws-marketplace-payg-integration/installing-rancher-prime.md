@@ -155,6 +155,6 @@ Uninstalling Rancher Prime may not remove all of the Kubernetes resources create
 
 The best practice for uninstalling the Rancher Prime PAYG offering is to migrate any non-Rancher workloads to a different cluster and destroy the Rancher cluster.
 
-:::important
+:::note warning
 Ensure you prepare and migrate any non-Rancher workloads off the cluster before destroying the cluster since these resources are not recoverable.
 :::
