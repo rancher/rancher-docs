@@ -21,26 +21,26 @@ If a pod is not in a `Running` state, you can attempt to find the root cause wit
 
 ## Recovering from Failed Pods
 
-If any of the pods aren't running, check the `rancher-cloud` pod:
+1. If any of the pods aren't running, check the `rancher-cloud` pod:
 
-```shell
-kubectl get pods --all-namespaces | grep rancher-cloud
-```
+  ```shell
+  kubectl get pods --all-namespaces | grep rancher-cloud
+  ```
 
-If the `rancher-cloud` pod is in an `Error` state, wait for the pod to be deleted. This should take about one minute.
+1. If the `rancher-cloud` pod is in an `Error` state, wait for the pod to be deleted. This should take about one minute.
 
-Fix the problem and run:
+1. Fix the problem and run:
 
-```shell
-helm upgrade -n cattle-rancher-csp-deployer-system rancher-cloud --create-namespace \
-oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/suse/<repository>/rancher-cloud-helm/rancher-cloud --install \
-  --version <chart-version> \
-  --set rancherHostname=<host-name> \
-  --set rancherServerURL=https://<host-name> \
-  --set rancherReplicas=<replicas> \
-  --set global.aws.accountNumber=<aws-account-id> \
-  --set global.aws.roleName=<role-name>
-```
+  ```shell
+  helm upgrade -n cattle-rancher-csp-deployer-system rancher-cloud --create-namespace \
+  oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/suse/<repository>/rancher-cloud-helm/rancher-cloud --install \
+    --version <chart-version> \
+    --set rancherHostname=<host-name> \
+    --set rancherServerURL=https://<host-name> \
+    --set rancherReplicas=<replicas> \
+    --set global.aws.accountNumber=<aws-account-id> \
+    --set global.aws.roleName=<role-name>
+  ```
 
 ## Rancher Usage Record Not Found
 
