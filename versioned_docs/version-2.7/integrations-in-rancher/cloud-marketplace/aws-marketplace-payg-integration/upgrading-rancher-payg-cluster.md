@@ -8,14 +8,14 @@ To upgrade the deployed Helm chart to the latest version, run the following Helm
 
 ```shell
 helm upgrade -n cattle-rancher-csp-deployer-system rancher-cloud --create-namespace \
-oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/suse/$REPOSITORY/rancher-cloud-helm/rancher-cloud \
-  --version $UPGRADED_CHART_VERSION \
-  --set rancherHostname=$HOST_NAME \
-  --set rancherServerURL=https://$HOST_NAME \
-  --set rancherReplicas=$REPLICAS \
+oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/suse/<respository>/rancher-cloud-helm/rancher-cloud \
+  --version <upgraded-chart-version> \
+  --set rancherHostname=<host-name> \
+  --set rancherServerURL=https://<host-name> \
+  --set rancherReplicas=<replicas> \
   --set rancherIngressClassName=nginx \
-  --set global.aws.accountNumber=$AWS_ACCOUNT_ID \
-  --set global.aws.roleName=$ROLE_NAME
+  --set global.aws.accountNumber=<aws-account-id> \
+  --set global.aws.roleName=<role-name>
 ```
 
 To check if the upgraded Helm chart deployed successfully, run the following Helm command:
