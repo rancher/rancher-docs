@@ -14,7 +14,7 @@ Your EKS cluster requires that you install an OIDC provider. To check that you'v
 aws eks describe-cluster --name <cluster-name> --region <region> --query cluster.identity.oidc.issuer --output text
 ```
 
-This should return an URL, such as `https://oidc.eks.region.amazonaws.com/id/1234567890ABCDEF`. The part after `https://` (e.g. `oidc.eks.region.amazonaws.com/id/1234567890ABCDEF`) is the OIDC Provider Identity. The final section of the URL, `1234567890ABCDEF`, is the OIDC ID.
+This should return a URL, such as `https://oidc.eks.region.amazonaws.com/id/1234567890ABCDEF`. The part after `https://` (e.g. `oidc.eks.region.amazonaws.com/id/1234567890ABCDEF`) is the OIDC Provider Identity. The final section of the URL, `1234567890ABCDEF`, is the OIDC ID.
 
 Use the OIDC ID to check if the EKS cluster has a provider:
 
@@ -155,6 +155,6 @@ Uninstalling Rancher Prime may not remove all of the Kubernetes resources create
 
 The best practice for uninstalling the Rancher Prime PAYG offering is to migrate any non-Rancher workloads to a different cluster and destroy the Rancher cluster.
 
-:::note warning
+:::warning
 Ensure you prepare and migrate any non-Rancher workloads off the cluster before destroying the cluster since these resources are not recoverable.
 :::

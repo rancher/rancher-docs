@@ -54,7 +54,7 @@ On the **Rancher Configuraion** tab, specify the following information:
    :::
 1. Select **Next**.
 
-### Review + Create
+### Review + create
 
 1. On the **Review + create** tab, review the summary of the offer (Price, Basics, Rancher Configuration) and the link to **view automation template** (Azure Resource Manager Template).
 1. Select **Create** to start the deployment.
@@ -99,6 +99,6 @@ Uninstalling Rancher Prime may not remove all of the Kubernetes resources create
 
 The best practice for uninstalling the Rancher Prime PAYG offering is to migrate any non-Rancher workloads to a different cluster and destroy the Rancher cluster.
 
-:::note warning
+:::warning
 Ensure that you prepare and migrate any non-Rancher workloads off of the cluster before you destroy the cluster. These resources are nonrecoverable.
 :::
