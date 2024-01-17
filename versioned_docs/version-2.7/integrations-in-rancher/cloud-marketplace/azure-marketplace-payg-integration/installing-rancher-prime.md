@@ -6,7 +6,7 @@ This page covers installing the Rancher Prime PAYG offering on Microsoft's Azure
 
 ## How to Install Rancher Prime PAYG
 
-The following steps describe how to create a new deployment of Rancher Prime from the [Azure Marketplace](https://azuremarketplace.microsoft.com) page.
+The following steps describe how to create a new deployment of Rancher Prime from the Azure Marketplace page.
 
 1. Select the **Rancher Prime with 24x7 Support** offer (either **EU and UK only** or **non-EU and non-UK only**) that corresponds to the location where your account is registered.
 1. Choose a plan from the dropdown menu. View the **Plans + Pricing** tab for more details about the plan.
