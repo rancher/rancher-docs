@@ -40,7 +40,7 @@ helm upgrade rancher ./rancher-<VERSION>.tgz \
 
 #### Resolving UPGRADE FAILED Error
 
-If you encounter the error message, `Error: UPGRADE FAILED: "rancher" has no deployed releases`, Rancher might have been  installed via the `helm template` command. To successfully upgrade Rancher, use the following commands instead:
+If you encounter the error message, `Error: UPGRADE FAILED: "rancher" has no deployed releases`, Rancher might have been  installed via the `helm template` command. To successfully upgrade Rancher, use the following command instead:
 
 ```
 helm template rancher ./rancher-<VERSION>.tgz \
@@ -53,6 +53,11 @@ helm template rancher ./rancher-<VERSION>.tgz \
 	--set useBundledSystemChart=true # Use the packaged Rancher system charts
 ```
 
+After you run the Helm command, apply the rendered template:
+
+```
+kubectl -n cattle-system apply -R -f ./rancher
+```
 
 ### Option B: Certificates from Files using Kubernetes Secrets
 

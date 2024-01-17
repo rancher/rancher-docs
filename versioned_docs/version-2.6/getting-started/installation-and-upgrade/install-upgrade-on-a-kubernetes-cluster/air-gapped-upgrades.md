@@ -53,6 +53,12 @@ helm template rancher ./rancher-<VERSION>.tgz \
 	--set useBundledSystemChart=true # Use the packaged Rancher system charts
 ```
 
+After you run the Helm command, apply the rendered template:
+
+```
+kubectl -n cattle-system apply -R -f ./rancher
+```
+
 ### Option B: Certificates from Files using Kubernetes Secrets
 
 ```plain
