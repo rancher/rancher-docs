@@ -57,7 +57,7 @@ eksctl create iamserviceaccount \
     --password-stdin 709825985650.dkr.ecr.us-east-1.amazonaws.com
   ```
 
-1. Install Rancher with Helm. Customize your Helm installation values if needed:
+1. Install Rancher with Helm. Customize your Helm installation values if needed.
 
   :::note
 
@@ -135,11 +135,11 @@ When Helm chart installation successfully completes, Rancher Prime will be insta
 
 ## Log into the Rancher Dashboard
 
-You may now log in to the Rancher dashboard by pointing your browser to the Rancher server URL `https://<host-name>`. The `<host-name>` is the hostname you entered when you [installed Rancher](#installing-rancher).
+You may now log in to the Rancher dashboard by pointing your browser to the Rancher server URL, `https://<host-name>`. The `<host-name>` is the hostname you entered when you [installed Rancher](#installing-rancher).
 
 :::note
 
-The Rancher hostname must be resolvable by public DNS. For more details, please refer to the [Prerequisites](prerequisites.md) section.
+The Rancher hostname must be resolvable by public DNS. For more details, see [Prerequisites](prerequisites.md).
 
 :::
 
@@ -156,5 +156,5 @@ Uninstalling Rancher Prime may not remove all of the Kubernetes resources create
 The best practice for uninstalling the Rancher Prime PAYG offering is to migrate any non-Rancher workloads to a different cluster and destroy the Rancher cluster.
 
 :::warning
-Ensure you prepare and migrate any non-Rancher workloads off the cluster before destroying the cluster since these resources are not recoverable.
+Ensure that you prepare and migrate any non-Rancher workloads off of the cluster before you destroy the cluster. These resources are nonrecoverable.
 :::

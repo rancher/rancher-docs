@@ -47,7 +47,7 @@ If a pod is not in a `Running` state, you can attempt to find the root cause wit
 When you attempt to retrieve a usage record, you might see the following message:
 
 ```shell
-Error from server (NotFound): cspadapterusagerecords.susecloud.net "rancher-usage-record" not found" Check Configuration, Retrieve generated configuration csp-config
+Error from server (NotFound): cspadapterusagerecords.susecloud.net "rancher-usage-record not found" Check Configuration, Retrieve generated configuration csp-config
 ```
 
 To resolve the error, run:
