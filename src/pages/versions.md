@@ -54,6 +54,8 @@ Below are the documentation and release notes for previous versions of Rancher 2
 
 <br/>
 
+Below are the documentation and release notes for previous versions of Rancher 2.7.x:
+
 <table>
   <tr>
     <td><b>v2.7.8</b></td>
