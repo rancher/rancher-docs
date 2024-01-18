@@ -1,10 +1,8 @@
 ---
-title: Azure Marketplace Common Issues
+title: Common Issues for Rancher Prime PAYG on Azure
 ---
 
 This page covers some common issues that might arise when setting up the Rancher Prime PAYG offering on Microsoft's Azure Marketplace.
-
-
 
 ### Migrating Rancher to a Different AKS Cluster
 
