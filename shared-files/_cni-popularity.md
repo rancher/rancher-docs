@@ -1,5 +1,5 @@
 <!-- releaseTask -->
-The following table summarizes different GitHub metrics to give you an idea of each project's popularity and activity. This data was collected in January 2024.
+The following table summarizes different GitHub metrics to give you an idea of each project's popularity and activity levels. This data was collected in January 2024.
 
 | Provider | Project | Stars | Forks | Contributors |
 | ---- | ---- | ---- | ---- | ---- |
