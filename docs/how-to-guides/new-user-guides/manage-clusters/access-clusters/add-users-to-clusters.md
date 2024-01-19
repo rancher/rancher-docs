@@ -35,7 +35,7 @@ Cluster administrators can edit the membership for a cluster, controlling which 
 
     If external authentication is configured:
 
-    - Rancher returns users from your [external authentication](../../../../pages-for-subheaders/authentication-config.md) source as you type.
+    - Rancher returns users from your [external authentication](../../authentication-permissions-and-global-configuration/authentication-config/authentication-config.md) source as you type.
 
 		:::note Using AD but can't find your users?
 
@@ -47,7 +47,7 @@ Cluster administrators can edit the membership for a cluster, controlling which 
 
 		:::note
 
-		If you are logged in as a local user, external users do not display in your search results. For more information, see [External Authentication Configuration and Principal Users](../../../../pages-for-subheaders/authentication-config.md#external-authentication-configuration-and-principal-users).
+		If you are logged in as a local user, external users do not display in your search results. For more information, see [External Authentication Configuration and Principal Users](../../authentication-permissions-and-global-configuration/authentication-config/authentication-config.md#external-authentication-configuration-and-principal-users).
 
 		:::
 

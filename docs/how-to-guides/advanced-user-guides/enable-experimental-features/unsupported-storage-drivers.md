@@ -8,7 +8,7 @@ title: Allowing Unsupported Storage Drivers
 
 This feature allows you to use types for storage providers and provisioners that are not enabled by default.
 
-To enable or disable this feature, refer to the instructions on [the main page about enabling experimental features.](../../../pages-for-subheaders/enable-experimental-features.md)
+To enable or disable this feature, refer to the instructions on [the main page about enabling experimental features.](enable-experimental-features.md)
 
 Environment Variable Key | Default Value | Description
 ---|---|---

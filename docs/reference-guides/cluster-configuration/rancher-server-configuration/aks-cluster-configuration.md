@@ -17,7 +17,7 @@ title: AKS Cluster Configuration Reference
 
 When provisioning an AKS cluster in the Rancher UI, RBAC cannot be disabled. If role-based access control is disabled for the cluster in AKS, the cluster cannot be registered or imported into Rancher.
 
-Rancher can configure member roles for AKS clusters in the same way as any other cluster. For more information, see the section on [role-based access control.](../../../pages-for-subheaders/manage-role-based-access-control-rbac.md)
+Rancher can configure member roles for AKS clusters in the same way as any other cluster. For more information, see the section on [role-based access control.](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md)
 
 ## Cloud Credentials
 

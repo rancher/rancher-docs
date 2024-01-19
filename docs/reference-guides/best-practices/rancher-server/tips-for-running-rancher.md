@@ -30,11 +30,11 @@ For best performance, run all three of your nodes in the same geographic datacen
 It's strongly recommended to have a "staging" or "pre-production" environment of the Kubernetes cluster that Rancher runs on. This environment should mirror your production environment as closely as possible in terms of software and hardware configuration.
 
 ### Monitor Your Clusters to Plan Capacity
-The Rancher server's Kubernetes cluster should run within the [system and hardware requirements](../../../pages-for-subheaders/installation-requirements.md) as closely as possible. The more you deviate from the system and hardware requirements, the more risk you take.
+The Rancher server's Kubernetes cluster should run within the [system and hardware requirements](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md) as closely as possible. The more you deviate from the system and hardware requirements, the more risk you take.
 
 However, metrics-driven capacity planning analysis should be the ultimate guidance for scaling Rancher, because the published requirements take into account a variety of workload types.
 
 Using Rancher, you can monitor the state and processes of your cluster nodes, Kubernetes components, and software deployments through integration with Prometheus, a leading open-source monitoring solution, and Grafana, which lets you visualize the metrics from Prometheus.
 
-After you [enable monitoring](../../../pages-for-subheaders/monitoring-and-alerting.md) in the cluster, you can set up alerts to let you know if your cluster is approaching its capacity. You can also use the Prometheus and Grafana monitoring framework to establish a baseline for key metrics as you scale.
+After you [enable monitoring](../../../integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md) in the cluster, you can set up alerts to let you know if your cluster is approaching its capacity. You can also use the Prometheus and Grafana monitoring framework to establish a baseline for key metrics as you scale.
 
