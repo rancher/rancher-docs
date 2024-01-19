@@ -1,5 +1,5 @@
 ---
-title: Vagrant Quick Start
+title: Rancher Vagrant Quick Start
 ---
 
 <head>
