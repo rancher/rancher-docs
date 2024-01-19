@@ -121,7 +121,7 @@ When using `cilium` or `multus,cilium` as your container network interface provi
 
 ##### Cloud Provider
 
-You can configure a [Kubernetes cloud provider](../../../pages-for-subheaders/set-up-cloud-providers.md). If you want to use dynamically provisioned [volumes and storage](../../../pages-for-subheaders/create-kubernetes-persistent-storage.md) in Kubernetes, typically you must select the specific cloud provider in order to use it. For example, if you want to use Amazon EBS, you would need to select the `aws` cloud provider.
+You can configure a [Kubernetes cloud provider](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/set-up-cloud-providers.md). If you want to use dynamically provisioned [volumes and storage](../../../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md) in Kubernetes, typically you must select the specific cloud provider in order to use it. For example, if you want to use Amazon EBS, you would need to select the `aws` cloud provider.
 
 :::note
 
@@ -139,7 +139,7 @@ The default [pod security admission configuration template](../../../how-to-guid
 
 ##### Worker CIS Profile
 
-Select a [CIS benchmark](../../../pages-for-subheaders/cis-scan-guides.md) to validate the system configuration against.
+Select a [CIS benchmark](../../../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md) to validate the system configuration against.
 
 ##### Project Network Isolation
 
