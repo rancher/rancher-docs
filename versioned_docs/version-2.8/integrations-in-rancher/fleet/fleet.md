@@ -12,7 +12,7 @@ Many users often manage over 10 clusters at a time. Given the proliferation of c
 
 - I need to deploy my monitoring stack (e.g., Grafana, Prometheus) across geographical regions, each with different retention policies.
 - I am a platform operator and want to provision clusters with all components using a scalable and safe operating model (GitOps).  
-- I am an application developer and want to get my latest changes to automatically into my development environment. 
+- I am an application developer and want my latest changes to automatically go into my development environment. 
 
 ## Fleet with Rancher Prime
 

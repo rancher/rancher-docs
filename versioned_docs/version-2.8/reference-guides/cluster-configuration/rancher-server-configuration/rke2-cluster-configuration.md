@@ -280,6 +280,7 @@ spec:
   kubernetesVersion: v1.25.12+rke2r1
   localClusterAuthEndpoint: {}
   rkeConfig:
+    additionalManifest: ""
     chartValues:
       rke2-calico: {}
     etcd:
@@ -337,9 +338,36 @@ spec:
 ```
 </details>
 
+### additionalManifest
+
+Specify additional manifests to deliver to the control plane nodes.
+
+The value is a String, and will be placed at the path `/var/lib/rancher/rke2/server/manifests/rancher/addons.yaml` on target nodes.
+
+Example:
+
+```yaml
+additionalManifest: |-
+  apiVersion: v1
+  kind: Namespace
+  metadata:
+    name: name-xxxx
+```
+
+
+:::note
+
+If you want to customize system charts, you should use the `chartValues` field as described below.
+
+Alternatives, such as using a HelmChartConfig to customize the system charts via `additionalManifest`, can cause unexpected behavior, due to having multiple HelmChartConfigs for the same chart.
+
+:::
+
 ### chartValues
 
 Specify the values for the system charts installed by RKE2.
+
+For more information about how RKE2 manges packaged components, please refer to [RKE2 documentation](https://docs.rke2.io/helm).
 
 Example:
 
