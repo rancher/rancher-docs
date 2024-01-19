@@ -9,7 +9,7 @@ title: Configuring a Global Default Private Registry
 :::note
 This page describes how to configure a global default private registry from the Rancher UI, after Rancher is already installed. 
 
-For instructions on how to set up a private registry during Rancher installation, refer to the [air-gapped installation guide](../../../pages-for-subheaders/air-gapped-helm-cli-install.md).
+For instructions on how to set up a private registry during Rancher installation, refer to the [air-gapped installation guide](../../../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/air-gapped-helm-cli-install.md).
 
 :::
 

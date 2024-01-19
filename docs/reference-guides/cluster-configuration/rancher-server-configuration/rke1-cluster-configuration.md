@@ -6,7 +6,7 @@ title: RKE Cluster Configuration Reference
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"/>
 </head>
 
-When Rancher installs Kubernetes, it uses [RKE](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) or [RKE2](https://docs.rke2.io/) as the Kubernetes distribution.
+When Rancher installs Kubernetes, it uses [RKE](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) or [RKE2](https://docs.rke2.io/) as the Kubernetes distribution.
 
 This section covers the configuration options that are available in Rancher for a new or existing RKE Kubernetes cluster.
 
@@ -20,7 +20,7 @@ You can configure the Kubernetes options one of two ways:
 
 The RKE cluster config options are nested under the `rancher_kubernetes_engine_config` directive. For more information, see the section about the [cluster config file.](#rke-cluster-config-file-reference)
 
-In [clusters launched by RKE](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md), you can edit any of the remaining options that follow.
+In [clusters launched by RKE](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md), you can edit any of the remaining options that follow.
 
 For an example of RKE config file syntax, see the [RKE documentation](https://rancher.com/docs/rke/latest/en/example-yamls/).
 
@@ -92,7 +92,7 @@ Project network isolation is available if you are using any RKE network plugin t
 
 ### Kubernetes Cloud Providers
 
-You can configure a [Kubernetes cloud provider](../../../pages-for-subheaders/set-up-cloud-providers.md). If you want to use dynamically provisioned [volumes and storage](../../../pages-for-subheaders/create-kubernetes-persistent-storage.md) in Kubernetes, typically you must select the specific cloud provider in order to use it. For example, if you want to use Amazon EBS, you would need to select the `aws` cloud provider.
+You can configure a [Kubernetes cloud provider](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/set-up-cloud-providers.md). If you want to use dynamically provisioned [volumes and storage](../../../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md) in Kubernetes, typically you must select the specific cloud provider in order to use it. For example, if you want to use Amazon EBS, you would need to select the `aws` cloud provider.
 
 :::note
 
@@ -135,7 +135,7 @@ We recommend using a load balancer with the authorized cluster endpoint. For det
 
 ### Node Pools
 
-For information on using the Rancher UI to set up node pools in an RKE cluster, refer to [this page.](../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)
+For information on using the Rancher UI to set up node pools in an RKE cluster, refer to [this page.](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)
 
 ### NGINX Ingress
 
@@ -329,7 +329,7 @@ See [Docker Root Directory](#docker-root-directory).
 
 ### enable_cluster_monitoring
 
-Option to enable or disable [Cluster Monitoring](../../../pages-for-subheaders/monitoring-and-alerting.md).
+Option to enable or disable [Cluster Monitoring](../../../integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md).
 
 ### enable_network_policy
 

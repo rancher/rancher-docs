@@ -17,7 +17,7 @@ The control that Rancher has to manage a registered cluster depends on the type 
 
 Registered RKE Kubernetes clusters must have all three node roles - etcd, controlplane and worker. A cluster with only controlplane components cannot be registered in Rancher.
 
-For more information on RKE node roles, see the [best practices.](../../../pages-for-subheaders/checklist-for-production-ready-clusters.md#cluster-architecture)
+For more information on RKE node roles, see the [best practices.](checklist-for-production-ready-clusters/checklist-for-production-ready-clusters.md#cluster-architecture)
 
 ### Permissions
 
@@ -114,9 +114,9 @@ The control that Rancher has to manage a registered cluster depends on the type 
 After registering a cluster, the cluster owner can:
 
 - [Manage cluster access](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md) through role-based access control
-- Enable [monitoring, alerts and notifiers](../../../pages-for-subheaders/monitoring-and-alerting.md)
-- Enable [logging](../../../pages-for-subheaders/logging.md)
-- Enable [Istio](../../../pages-for-subheaders/istio.md)
+- Enable [monitoring, alerts and notifiers](../../../integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md)
+- Enable [logging](../../../integrations-in-rancher/logging/logging.md)
+- Enable [Istio](../../../integrations-in-rancher/istio/istio.md)
 - Manage projects and workloads
 
 ### Additional Features for Registered RKE2 and K3s Clusters
@@ -141,7 +141,7 @@ Rancher handles registered EKS, AKS, or GKE clusters similarly to clusters creat
 
 When you create an EKS, AKS, or GKE cluster in Rancher, then delete it, Rancher destroys the cluster. When you delete a registered cluster through Rancher, the Rancher server _disconnects_ from the cluster. The cluster remains live, although it's no longer in Rancher. You can still access the deregistered cluster in the same way you did before you registered it.
 
-See [Cluster Management Capabilities by Cluster Type](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md) for more information about what features are available for managing registered clusters.
+See [Cluster Management Capabilities by Cluster Type](kubernetes-clusters-in-rancher-setup.md) for more information about what features are available for managing registered clusters.
 
 ## Configuring RKE2 and K3s Cluster Upgrades
 

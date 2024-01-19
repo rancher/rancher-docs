@@ -8,7 +8,7 @@ title: Applying Pod Security Policies to Projects
 
 :::note
 
-These cluster options are only available for [clusters in which Rancher has launched Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md).
+These cluster options are only available for [clusters in which Rancher has launched Kubernetes](../../new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md).
 
 :::
 

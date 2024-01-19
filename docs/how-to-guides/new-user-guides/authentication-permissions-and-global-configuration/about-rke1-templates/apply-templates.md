@@ -17,7 +17,7 @@ You can't change a cluster to use a different RKE template. You can only update 
 
 ### Creating a Cluster from an RKE Template
 
-To add a cluster [hosted by an infrastructure provider](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) using an RKE template, use these steps:
+To add a cluster [hosted by an infrastructure provider](../../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) using an RKE template, use these steps:
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, click **Create** and choose the infrastructure provider.
@@ -31,7 +31,7 @@ To add a cluster [hosted by an infrastructure provider](../../../../pages-for-su
 
 When the template owner creates a template, each setting has a switch in the Rancher UI that indicates if users can override the setting.
 
-- If the setting allows a user override, you can update these settings in the cluster by [editing the cluster.](../../../../pages-for-subheaders/cluster-configuration.md)
+- If the setting allows a user override, you can update these settings in the cluster by [editing the cluster.](../../../../reference-guides/cluster-configuration/cluster-configuration.md)
 - If the switch is turned off, you cannot change these settings unless the cluster owner creates a template revision that lets you override them. If there are settings that you want to change, but don't have the option to, you will need to contact the template owner to get a new revision of the template.
 
 If a cluster was created from an RKE template, you can edit the cluster to update the cluster to a new revision of the template.
