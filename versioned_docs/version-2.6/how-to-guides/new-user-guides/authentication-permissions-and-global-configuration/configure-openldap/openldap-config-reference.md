@@ -8,7 +8,7 @@ title: OpenLDAP Configuration Reference
 
 For further details on configuring OpenLDAP authentication, refer to the [official documentation.](https://www.openldap.org/doc/)
 
-> Before you proceed with the configuration, please familiarize yourself with the concepts of [External Authentication Configuration and Principal Users](../../../../pages-for-subheaders/authentication-config.md#external-authentication-configuration-and-principal-users).
+> Before you proceed with the configuration, please familiarize yourself with the concepts of [External Authentication Configuration and Principal Users](../authentication-config/authentication-config.md#external-authentication-configuration-and-principal-users).
 
 
 ## Background: OpenLDAP Authentication Flow

@@ -8,7 +8,7 @@ This section assumes that you understand how persistent storage works in Kuberne
 
 :::note Prerequisites for both parts A and B:
 
-[Persistent volumes](../../pages-for-subheaders/create-kubernetes-persistent-storage.md) must be available for the cluster.
+[Persistent volumes](../../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md) must be available for the cluster.
 
 :::
 

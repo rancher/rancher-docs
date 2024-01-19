@@ -10,7 +10,7 @@ In environments using GitHub, you can configure Rancher to allow sign on using G
 
 :::note Prerequisites:
 
-Read [External Authentication Configuration and Principal Users](../../../../pages-for-subheaders/authentication-config.md#external-authentication-configuration-and-principal-users).
+Read [External Authentication Configuration and Principal Users](authentication-config.md#external-authentication-configuration-and-principal-users).
 
 :::
 

@@ -82,7 +82,7 @@ Rolling back to a previous version of Rancher destroys any changes made to Ranch
     --privileged \
     rancher/rancher:<PRIOR_RANCHER_VERSION>
     ```
-    Privileged access is [required.](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
+    Privileged access is [required.](rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
 
     :::danger
 
