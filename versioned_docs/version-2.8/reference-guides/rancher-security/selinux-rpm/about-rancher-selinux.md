@@ -16,7 +16,7 @@ The `rancher-selinux` GitHub repository is [here.](https://github.com/rancher/ra
 
 :::note Requirement:
 
-The rancher-selinux RPM was tested with CentOS 7 and 8.
+The rancher-selinux RPM was tested with CentOS 7, 8 and 9.
 
 :::
 
@@ -49,6 +49,20 @@ gpgcheck=1
 gpgkey=https://rpm.rancher.io/public.key 
 EOF
 ```
+
+In order to use the RPM repository, on a CentOS 9 or RHEL 9 system, run the following bash snippet:
+
+```
+# cat << EOF > /etc/yum.repos.d/rancher.repo 
+[rancher] 
+name=Rancher 
+baseurl=https://rpm.rancher.io/rancher/production/centos/9/noarch
+enabled=1 
+gpgcheck=1 
+gpgkey=https://rpm.rancher.io/public.key 
+EOF
+```
+
 ### 2. Installing the RPM
 
 Install the RPM:
@@ -61,7 +75,7 @@ yum -y install rancher-selinux
 
 :::note Requirement:
 
-Logging v2 was tested with SELinux on RHEL/CentOS 7 and 8.
+Logging v2 was tested with SELinux on RHEL/CentOS 7, 8 and 9.
 
 :::
 

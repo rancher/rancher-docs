@@ -1,5 +1,5 @@
 ---
-title: Configuration for Storage Classes in Azure
+title: Configuring Storage Classes in Azure
 ---
 
 <head>

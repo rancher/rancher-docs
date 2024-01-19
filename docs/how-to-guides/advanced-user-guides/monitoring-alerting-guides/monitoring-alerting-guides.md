@@ -1,5 +1,5 @@
 ---
-title: Monitoring Guides
+title: Monitoring/Alerting Guides
 ---
 
 <head>

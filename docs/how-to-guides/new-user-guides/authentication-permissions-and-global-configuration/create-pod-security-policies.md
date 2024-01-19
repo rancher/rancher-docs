@@ -1,5 +1,5 @@
 ---
-title: Pod Security Policies
+title: Creating Pod Security Policies
 ---
 
 <head> 

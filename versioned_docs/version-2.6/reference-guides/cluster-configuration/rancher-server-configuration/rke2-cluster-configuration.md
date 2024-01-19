@@ -114,7 +114,7 @@ For more details on the different networking providers and how to configure them
 
 [Dual-stack](https://docs.rke2.io/install/network_options#dual-stack-configuration) networking is supported for all CNI providers. To configure RKE2 in dual-stack mode, set valid IPv4/IPv6 CIDRs for your [Cluster CIDR](#cluster-cidr) and/or [Service CIDR](#service-cidr).
 
-###### Additional Configuration {#dual-stack-additional-config}
+###### Dual-stack Additional Configuration
 
 When using `cilium` or `multus,cilium` as your container network interface provider, ensure the **Enable IPv6 Support** option is also enabled.
 
@@ -186,7 +186,7 @@ IPv4 and/or IPv6 network CIDRs to use for pod IPs (default: 10.42.0.0/16).
 
 To configure [dual-stack](https://docs.rke2.io/install/network_options#dual-stack-configuration) mode, enter a valid IPv4/IPv6 CIDR. For example `10.42.0.0/16,2001:cafe:42:0::/56`.
 
-[Additional configuration](#dual-stack-additional-config) is required when using `cilium` or `multus,cilium` as your [container network](#container-network-provider) interface provider.
+[Additional configuration](#dual-stack-additional-configuration) is required when using `cilium` or `multus,cilium` as your [container network](#container-network-provider) interface provider.
 
 #### Service CIDR
 
@@ -196,7 +196,7 @@ IPv4/IPv6 network CIDRs to use for service IPs (default: 10.43.0.0/16).
 
 To configure [dual-stack](https://docs.rke2.io/install/network_options#dual-stack-configuration) mode, enter a valid IPv4/IPv6 CIDR. For example `10.42.0.0/16,2001:cafe:42:0::/56`.
 
-[Additional configuration](#dual-stack-additional-config) is required when using `cilium ` or `multus,cilium` as your [container network](#container-network-provider) interface provider.
+[Additional configuration](#dual-stack-additional-configuration) is required when using `cilium ` or `multus,cilium` as your [container network](#container-network-provider) interface provider.
 
 #### Cluster DNS
 
@@ -330,6 +330,9 @@ machineGlobalConfig:
         - key1=value1
         - key2=value2
 ```
+
+There are some configuration options that can't be changed when provisioning via Rancher:
+- data-dir (folder to hold state), which defaults to `/var/lib/rancher/rke2`.
 
 ### machineSelectorConfig
 

@@ -47,7 +47,7 @@ You can fill your custom catalogs with either Helm Charts or Rancher Charts, alt
         questions:
         - variable: persistence.enabled
           default: "false"
-          description: "Enable persistent volume for WordPress"
+          description: "Enabling persistent volume for WordPress"
           type: boolean
           required: true
           label: WordPress Persistent Volume Enabled

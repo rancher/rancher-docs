@@ -115,7 +115,7 @@ For more details on the different networking providers and how to configure them
 
 [Dual-stack](https://docs.rke2.io/install/network_options#dual-stack-configuration) networking is supported for all CNI providers. To configure RKE2 in dual-stack mode, set valid IPv4/IPv6 CIDRs for your [Cluster CIDR](#cluster-cidr) and/or [Service CIDR](#service-cidr).
 
-###### Additional Configuration {#dual-stack-additional-config}
+###### Dual-stack Additional Configuration
 
 When using `cilium` or `multus,cilium` as your container network interface provider, ensure the **Enable IPv6 Support** option is also enabled.
 
@@ -191,7 +191,7 @@ IPv4 and/or IPv6 network CIDRs to use for pod IPs (default: 10.42.0.0/16).
 
 To configure [dual-stack](https://docs.rke2.io/install/network_options#dual-stack-configuration) mode, enter a valid IPv4/IPv6 CIDR. For example `10.42.0.0/16,2001:cafe:42:0::/56`.
 
-[Additional configuration](#dual-stack-additional-config) is required when using `cilium` or `multus,cilium` as your [container network](#container-network-provider) interface provider.
+[Additional configuration](#dual-stack-additional-configuration) is required when using `cilium` or `multus,cilium` as your [container network](#container-network-provider) interface provider.
 
 ##### Service CIDR
 
@@ -201,7 +201,7 @@ IPv4/IPv6 network CIDRs to use for service IPs (default: 10.43.0.0/16).
 
 To configure [dual-stack](https://docs.rke2.io/install/network_options#dual-stack-configuration) mode, enter a valid IPv4/IPv6 CIDR. For example `10.42.0.0/16,2001:cafe:42:0::/56`.
 
-[Additional configuration](#dual-stack-additional-config) is required when using `cilium ` or `multus,cilium` as your [container network](#container-network-provider) interface provider.
+[Additional configuration](#dual-stack-additional-configuration) is required when using `cilium ` or `multus,cilium` as your [container network](#container-network-provider) interface provider.
 
 ##### Cluster DNS
 
@@ -280,6 +280,7 @@ spec:
   kubernetesVersion: v1.25.12+rke2r1
   localClusterAuthEndpoint: {}
   rkeConfig:
+    additionalManifest: ""
     chartValues:
       rke2-calico: {}
     etcd:
@@ -337,9 +338,36 @@ spec:
 ```
 </details>
 
+### additionalManifest
+
+Specify additional manifests to deliver to the control plane nodes.
+
+The value is a String, and will be placed at the path `/var/lib/rancher/rke2/server/manifests/rancher/addons.yaml` on target nodes.
+
+Example:
+
+```yaml
+additionalManifest: |-
+  apiVersion: v1
+  kind: Namespace
+  metadata:
+    name: name-xxxx
+```
+
+
+:::note
+
+If you want to customize system charts, you should use the `chartValues` field as described below.
+
+Alternatives, such as using a HelmChartConfig to customize the system charts via `additionalManifest`, can cause unexpected behavior, due to having multiple HelmChartConfigs for the same chart.
+
+:::
+
 ### chartValues
 
 Specify the values for the system charts installed by RKE2.
+
+For more information about how RKE2 manges packaged components, please refer to [RKE2 documentation](https://docs.rke2.io/helm).
 
 Example:
 
@@ -359,6 +387,34 @@ machineGlobalConfig:
     etcd-arg:
         - key1=value1
         - key2=value2
+```
+
+There are some configuration options that can't be changed when provisioning via Rancher:
+- data-dir (folder to hold state), which defaults to `/var/lib/rancher/rke2`.
+
+To make it easier to put files on nodes beforehand, Rancher expects the following values to be included in the configuration, while RKE2 expects the values to be entered as file paths:
+- audit-policy-file
+- cloud-provider-config
+- private-registry
+
+Rancher delivers the files to the path `/var/lib/rancher/rke2/etc/config-files/<option>` in target nodes, and sets the proper options in the RKE2 server.
+
+Example:
+```yaml
+apiVersion: provisioning.cattle.io/v1
+kind: Cluster
+spec:
+  rkeConfig:
+    machineGlobalConfig:
+      audit-policy-file: 
+        apiVersion: audit.k8s.io/v1 
+        kind: Policy 
+        rules: 
+        - level: RequestResponse
+          resources:
+          - group: ""
+            resources: 
+            - pods
 ```
 
 ### machineSelectorConfig
