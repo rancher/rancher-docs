@@ -100,7 +100,7 @@ The OpenLDAP service account is used for all searches. Rancher users will see us
 
 [Configure the settings](../configure-openldap/openldap-config-reference.md) for the OpenLDAP server, groups and users. Note that nested group membership isn't available.
 
-> Before you proceed with the configuration, please familiarise yourself with [external authentication configuration and principal users](../../../../pages-for-subheaders/authentication-config.md#external-authentication-configuration-and-principal-users).
+> Before you proceed with the configuration, please familiarise yourself with [external authentication configuration and principal users](authentication-config.md#external-authentication-configuration-and-principal-users).
 
 1. Sign into Rancher using a local user assigned the [administrator](https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions) role (i.e., the _local principal_).
 1. In the top left corner, click **☰ > Users & Authentication**.

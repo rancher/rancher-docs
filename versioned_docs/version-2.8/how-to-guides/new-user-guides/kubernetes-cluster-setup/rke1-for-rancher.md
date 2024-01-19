@@ -14,7 +14,7 @@ Rancher can run on any Kubernetes cluster, included hosted Kubernetes solutions 
 
 :::
 
-For systems without direct internet access, refer to [Air Gap: Kubernetes install.](../../../pages-for-subheaders/air-gapped-helm-cli-install.md)
+For systems without direct internet access, refer to [Air Gap: Kubernetes install.](../../../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/air-gapped-helm-cli-install.md)
 
 :::tip Single-node Installation Tip:
 
@@ -192,5 +192,5 @@ The "rancher-cluster" parts of the two latter file names are dependent on how yo
 See the [Troubleshooting](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/troubleshooting.md) page.
 
 
-### [Next: Install Rancher](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md)
+### [Next: Install Rancher](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md)
 
