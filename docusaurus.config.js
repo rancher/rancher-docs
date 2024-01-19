@@ -593,6 +593,354 @@ module.exports = {
             to: '/v2.8/how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods',
             from: '/v2.8/pages-for-subheaders/workloads-and-pods'
           }, // Redirects for pages-for-subheaders removal [2.8] (end)
+          { // Redirects for pages-for-subheaders removal [latest]
+            to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers',
+            from: '/pages-for-subheaders/about-provisioning-drivers'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates',
+            from: '/pages-for-subheaders/about-rke1-templates'
+          },
+          {
+            to: '/reference-guides/about-the-api',
+            from: '/pages-for-subheaders/about-the-api'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/manage-clusters/access-clusters',
+            from: '/pages-for-subheaders/access-clusters'
+          },
+          {
+            to: '/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration',
+            from: '/pages-for-subheaders/advanced-configuration'
+          },
+          {
+            to: '/how-to-guides/advanced-user-guides',
+            from: '/pages-for-subheaders/advanced-user-guides'
+          },
+          {
+            to: '/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install',
+            from: '/pages-for-subheaders/air-gapped-helm-cli-install'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config',
+            from: '/pages-for-subheaders/authentication-config'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration',
+            from: '/pages-for-subheaders/authentication-permissions-and-global-configuration'
+          },
+          {
+            to: '/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace',
+            from: '/pages-for-subheaders/aws-cloud-marketplace'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery',
+            from: '/pages-for-subheaders/backup-restore-and-disaster-recovery'
+          },
+          {
+            to: '/reference-guides/backup-restore-configuration',
+            from: '/pages-for-subheaders/backup-restore-configuration'
+          },
+          {
+            to: '/reference-guides/best-practices',
+            from: '/pages-for-subheaders/best-practices'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters',
+            from: '/pages-for-subheaders/checklist-for-production-ready-clusters'
+          },
+          {
+            to: '/how-to-guides/advanced-user-guides/cis-scan-guides',
+            from: '/pages-for-subheaders/cis-scan-guides'
+          },
+          {
+            to: '/integrations-in-rancher/cis-scans',
+            from: '/pages-for-subheaders/cis-scans'
+          },
+          {
+            to: '/reference-guides/cli-with-rancher',
+            from: '/pages-for-subheaders/cli-with-rancher'
+          },
+          {
+            to: '/integrations-in-rancher/cloud-marketplace',
+            from: '/pages-for-subheaders/cloud-marketplace'
+          },
+          {
+            to: '/reference-guides/cluster-configuration',
+            from: '/pages-for-subheaders/cluster-configuration'
+          },
+          {
+            to: '/integrations-in-rancher/istio/configuration-options',
+            from: '/pages-for-subheaders/configuration-options'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-microsoft-ad-federation-service-saml',
+            from: '/pages-for-subheaders/configure-microsoft-ad-federation-service-saml'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-openldap',
+            from: '/pages-for-subheaders/configure-openldap'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-shibboleth-saml',
+            from: '/pages-for-subheaders/configure-shibboleth-saml'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage',
+            from: '/pages-for-subheaders/create-kubernetes-persistent-storage'
+          },
+          {
+            to: '/integrations-in-rancher/logging/custom-resource-configuration',
+            from: '/pages-for-subheaders/custom-resource-configuration'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/deploy-apps-across-clusters',
+            from: '/pages-for-subheaders/deploy-apps-across-clusters'
+          },
+          {
+            to: '/getting-started/quick-start-guides/deploy-rancher-manager',
+            from: '/pages-for-subheaders/deploy-rancher-manager'
+          },
+          {
+            to: '/getting-started/quick-start-guides/deploy-workloads',
+            from: '/pages-for-subheaders/deploy-rancher-workloads'
+          },
+          {
+            to: '/reference-guides/cluster-configuration/downstream-cluster-configuration',
+            from: '/pages-for-subheaders/downstream-cluster-configuration'
+          },
+          {
+            to: '/how-to-guides/advanced-user-guides/enable-experimental-features',
+            from: '/pages-for-subheaders/enable-experimental-features'
+          },
+          {
+            to: '/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration',
+            from: '/pages-for-subheaders/gke-cluster-configuration'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/helm-charts-in-rancher',
+            from: '/pages-for-subheaders/helm-charts-in-rancher'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/kubernetes-resources-setup/horizontal-pod-autoscaler',
+            from: '/pages-for-subheaders/horizontal-pod-autoscaler'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/infrastructure-setup',
+            from: '/pages-for-subheaders/infrastructure-setup'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/manage-clusters/install-cluster-autoscaler',
+            from: '/pages-for-subheaders/install-cluster-autoscaler'
+          },
+          {
+            to: '/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster',
+            from: '/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster'
+          },
+          {
+            to: '/getting-started/installation-and-upgrade',
+            from: '/pages-for-subheaders/installation-and-upgrade'
+          },
+          {
+            to: '/getting-started/installation-and-upgrade/installation-references',
+            from: '/pages-for-subheaders/installation-references'
+          },
+          {
+            to: '/getting-started/installation-and-upgrade/installation-requirements',
+            from: '/pages-for-subheaders/installation-requirements'
+          },
+          {
+            to: '/how-to-guides/advanced-user-guides/istio-setup-guide',
+            from: '/pages-for-subheaders/istio-setup-guide'
+          },
+          {
+            to: '/integrations-in-rancher/istio',
+            from: '/pages-for-subheaders/istio'
+          },
+          {
+            to: '/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide',
+            from: '/pages-for-subheaders/k3s-hardening-guide'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/kubernetes-cluster-setup',
+            from: '/pages-for-subheaders/kubernetes-cluster-setup'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup',
+            from: '/pages-for-subheaders/kubernetes-clusters-in-rancher-setup'
+          },
+          {
+            to: '/troubleshooting/kubernetes-components',
+            from: '/pages-for-subheaders/kubernetes-components'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/kubernetes-resources-setup',
+            from: '/pages-for-subheaders/kubernetes-resources-setup'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/launch-kubernetes-with-rancher',
+            from: '/pages-for-subheaders/launch-kubernetes-with-rancher'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller',
+            from: '/pages-for-subheaders/load-balancer-and-ingress-controller'
+          },
+          {
+            to: '/integrations-in-rancher/logging',
+            from: '/pages-for-subheaders/logging'
+          },
+          {
+            to: '/reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration',
+            from: '/pages-for-subheaders/machine-configuration'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/manage-clusters',
+            from: '/pages-for-subheaders/manage-clusters'
+          },
+          {
+            to: '/how-to-guides/advanced-user-guides/manage-projects/manage-project-resource-quotas',
+            from: '/pages-for-subheaders/manage-project-resource-quotas'
+          },
+          {
+            to: '/how-to-guides/advanced-user-guides/manage-projects',
+            from: '/pages-for-subheaders/manage-projects'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac',
+            from: '/pages-for-subheaders/manage-role-based-access-control-rbac'
+          },
+          {
+            to: '/how-to-guides/advanced-user-guides/monitoring-alerting-guides',
+            from: '/pages-for-subheaders/monitoring-alerting-guides'
+          },
+          {
+            to: '/integrations-in-rancher/monitoring-and-alerting',
+            from: '/pages-for-subheaders/monitoring-and-alerting'
+          },
+          {
+            to: '/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides',
+            from: '/pages-for-subheaders/monitoring-v2-configuration-guides'
+          },
+          {
+            to: '/reference-guides/monitoring-v2-configuration',
+            from: '/pages-for-subheaders/monitoring-v2-configuration'
+          },
+          {
+            to: '/how-to-guides/new-user-guides',
+            from: '/pages-for-subheaders/new-user-guides'
+          },
+          {
+            to: '/reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration',
+            from: '/pages-for-subheaders/node-template-configuration'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix',
+            from: '/pages-for-subheaders/nutanix'
+          },
+          {
+            to: '/getting-started/installation-and-upgrade/other-installation-methods',
+            from: '/pages-for-subheaders/other-installation-methods'
+          },
+          {
+            to: '/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides',
+            from: '/pages-for-subheaders/prometheus-federator-guides'
+          },
+          {
+            to: '/reference-guides/prometheus-federator',
+            from: '/pages-for-subheaders/prometheus-federator'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples',
+            from: '/pages-for-subheaders/provisioning-storage-examples'
+          },
+          {
+            to: '/getting-started/quick-start-guides',
+            from: '/pages-for-subheaders/quick-start-guides'
+          },
+          {
+            to: '/getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy',
+            from: '/pages-for-subheaders/rancher-behind-an-http-proxy'
+          },
+          {
+            to: '/reference-guides/rancher-security/hardening-guides',
+            from: '/pages-for-subheaders/rancher-hardening-guides'
+          },
+          {
+            to: '/reference-guides/best-practices/rancher-managed-clusters',
+            from: '/pages-for-subheaders/rancher-managed-clusters'
+          },
+          {
+            to: '/reference-guides/rancher-manager-architecture',
+            from: '/pages-for-subheaders/rancher-manager-architecture'
+          },
+          {
+            to: '/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker',
+            from: '/pages-for-subheaders/rancher-on-a-single-node-with-docker'
+          },
+          {
+            to: '/reference-guides/rancher-security',
+            from: '/pages-for-subheaders/rancher-security'
+          },
+          {
+            to: '/reference-guides/cluster-configuration/rancher-server-configuration',
+            from: '/pages-for-subheaders/rancher-server-configuration'
+          },
+          {
+            to: '/reference-guides/best-practices/rancher-server',
+            from: '/pages-for-subheaders/rancher-server'
+          },
+          {
+            to: '/getting-started/installation-and-upgrade/resources',
+            from: '/pages-for-subheaders/resources'
+          },
+          {
+            to: '/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide',
+            from: '/pages-for-subheaders/rke1-hardening-guide'
+          },
+          {
+            to: '/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide',
+            from: '/pages-for-subheaders/rke2-hardening-guide'
+          },
+          {
+            to: '/reference-guides/rancher-security/selinux-rpm',
+            from: '/pages-for-subheaders/selinux-rpm'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers',
+            from: '/pages-for-subheaders/set-up-cloud-providers'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers',
+            from: '/pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers'
+          },
+          {
+            to: '/reference-guides/single-node-rancher-in-docker',
+            from: '/pages-for-subheaders/single-node-rancher-in-docker'
+          },
+          {
+            to: '/reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes',
+            from: '/pages-for-subheaders/use-existing-nodes'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider',
+            from: '/pages-for-subheaders/use-new-nodes-in-an-infra-provider'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters',
+            from: '/pages-for-subheaders/use-windows-clusters'
+          },
+          {
+            to: '/reference-guides/user-settings',
+            from: '/pages-for-subheaders/user-settings'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere',
+            from: '/pages-for-subheaders/vsphere'
+          },
+          {
+            to: '/how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods',
+            from: '/pages-for-subheaders/workloads-and-pods'
+          }, // Redirects for pages-for-subheaders removal [latest] (end)
           { // Redirects for dashboard#9970
             to: '/v2.8/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences',
             from: '/v2.8/cluster-provisioning/rke-clusters/behavior-differences-between-rke1-and-rke2/'
