@@ -1,5 +1,5 @@
 ---
-title: 4. Add Deployments and Services with the Istio Sidecar
+title: Add Deployments and Services with the Istio Sidecar
 ---
 
 <head>

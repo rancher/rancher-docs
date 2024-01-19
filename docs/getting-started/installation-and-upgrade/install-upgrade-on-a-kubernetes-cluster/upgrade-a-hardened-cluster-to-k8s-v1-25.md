@@ -1,5 +1,5 @@
 ---
-title: Upgrade a Hardened Custom/Imported Cluster to Kubernetes v1.25
+title: Upgrading a Hardened Custom/Imported Cluster to Kubernetes v1.25
 ---
 
 <head>

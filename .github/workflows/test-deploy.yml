@@ -18,8 +18,10 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - name: Check links
-        run: yarn run remark --quiet --use remark-validate-links --use remark-lint-no-dead-urls ./docs
+      - name: Check Markdown links
+        run: yarn run remark --quiet --use remark-validate-links ./docs
+      - name: Check External links
+        run: yarn run remark --quiet --use remark-lint-no-dead-urls ./docs
       - name: Test build website
         env:
           NODE_OPTIONS: "--max_old_space_size=4096"

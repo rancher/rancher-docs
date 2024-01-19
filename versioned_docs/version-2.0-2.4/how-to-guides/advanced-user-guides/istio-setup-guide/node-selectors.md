@@ -1,5 +1,5 @@
 ---
-title: 3. Select the Nodes Where Istio Components Will be Deployed
+title: Select the Nodes Where Istio Components Will be Deployed
 ---
 
 > **Prerequisite:** Your cluster needs a worker node that can designated for Istio. The worker node should meet the [resource requirements.](../../../explanations/integrations-in-rancher/istio/cpu-and-memory-allocations.md)

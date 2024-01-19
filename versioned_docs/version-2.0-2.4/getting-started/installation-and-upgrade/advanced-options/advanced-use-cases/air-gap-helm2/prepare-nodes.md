@@ -83,8 +83,8 @@ You will need to configure a load balancer as a basic Layer 4 TCP forwarder to d
 
 **Load Balancer Configuration Samples:**
 
-- For an example showing how to set up an NGINX load balancer, refer to [this page.](../../../../../how-to-guides/new-user-guides/infrastructure-setup/amazon-elb-load-balancer.md)
-- For an example showing how to set up an Amazon NLB load balancer, refer to [this page.](../../../../../how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer.md)
+- For an example showing how to set up an NGINX load balancer, refer to [this page.](../../../../../how-to-guides/new-user-guides/infrastructure-setup/nginx-load-balancer.md)
+- For an example showing how to set up an Amazon NLB load balancer, refer to [this page.](../../../../../how-to-guides/new-user-guides/infrastructure-setup/amazon-elb-load-balancer.md)
 
 </TabItem>
 <TabItem value="Docker Install">
