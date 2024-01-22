@@ -10,10 +10,10 @@ Below are the documentation and release notes for the currently released version
 
 <table>
   <tr>
-    <td><b>v2.8.0</b></td>
+    <td><b>v2.8.1</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.8">Documentation</a></td>
-    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.8.0">Release Notes</a></td>
-    <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-8-0/">Support Matrix</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.8.1">Release Notes</a></td>
+    <td><center>N/A</center></td>
   </tr>
 </table>
 
@@ -41,20 +41,33 @@ Below are the documentation and release notes for the currently released version
 
 ### Past versions
 
+Below are the documentation and release notes for previous versions of Rancher 2.8.x:
+
+<table>
+  <tr>
+    <td><b>v2.8.0</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.8">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.8.0">Release Notes</a></td>
+    <td><center>N/A</center></td>
+  </tr>
+</table>
+
+<br/>
+
 Below are the documentation and release notes for previous versions of Rancher 2.7.x:
 
 <table>
-<tr>
+  <tr>
     <td><b>v2.7.8</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.7">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.7.8">Release Notes</a></td>
-    <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-7-8/">Support Matrix</a></td>
+    <td><center>N/A</center></td>
   </tr>
   <tr>
     <td><b>v2.7.7</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.7">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.7.7">Release Notes</a></td>
-    <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-7-7/">Support Matrix</a></td>
+    <td><center>N/A</center></td>
   </tr>
   <tr>
     <td><b>v2.7.6</b></td>
@@ -196,7 +209,7 @@ Below are the documentation and release notes for legacy versions of Rancher 2.5
     <td><b>v2.5.17</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.5">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.5.17">Release Notes</a></td>
-    <td><center>N / A</center></td>
+    <td><center>N/A</center></td>
   </tr>
   <tr>
     <td><b>v2.5.16</b></td>
