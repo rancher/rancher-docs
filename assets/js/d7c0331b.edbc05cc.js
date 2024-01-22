@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/rancher-webhook.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1705530908,
-    "formattedLastUpdatedAt": "Jan 17, 2024",
+    "lastUpdatedAt": 1701897451,
+    "formattedLastUpdatedAt": "Dec 6, 2023",
     "frontMatter": {
         "title": "Rancher Webhook"
     },
@@ -438,14 +438,6 @@ Rancher deploys Rancher-Webhook as a separate deployment and service in both loc
         parentName: "tr",
         "align": null
     }, `v2.8.0`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": "center"
-    }, `v0.4.2`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `v2.8.1`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": "center"
     }, `v0.4.2`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
