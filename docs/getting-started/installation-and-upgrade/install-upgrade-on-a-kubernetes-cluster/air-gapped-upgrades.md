@@ -43,7 +43,7 @@ helm upgrade rancher ./rancher-<VERSION>.tgz \
 If you encounter the error message, `Error: UPGRADE FAILED: "rancher" has no deployed releases`, Rancher might have been  installed via the `helm template` command. To successfully upgrade Rancher, use the following command instead:
 
 ```
-helm template rancher ./rancher-<VERSION>.tgz \
+helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
     --no-hooks \ # prevent files for Helm hooks from being generated
 	--namespace cattle-system \
 	--set hostname=<RANCHER.YOURDOMAIN.COM> \
