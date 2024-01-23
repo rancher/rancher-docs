@@ -73,4 +73,5 @@ When you're done using your sandbox, destroy the Rancher Server and your cluster
 
 - [Amazon AWS: Destroying the Environment](../deploy-rancher-manager/aws.md#destroying-the-environment)
 - [DigitalOcean: Destroying the Environment](../deploy-rancher-manager/digitalocean.md#destroying-the-environment)
+- [Linode: Destroying the Environment](../deploy-rancher-manager/linode.md#destroying-the-environment)
 - [Vagrant: Destroying the Environment](../deploy-rancher-manager/vagrant.md#destroying-the-environment)

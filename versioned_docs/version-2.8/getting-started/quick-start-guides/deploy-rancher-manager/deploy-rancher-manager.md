@@ -14,6 +14,7 @@ Use one of the following guides to deploy and provision Rancher and a Kubernetes
 - [DigitalOcean](digitalocean.md) (uses Terraform)
 - [GCP](gcp.md) (uses Terraform)
 - [Hetzner Cloud](hetzner-cloud.md) (uses Terraform)
+- [Linode](linode.md) (uses Terraform)
 - [Vagrant](vagrant.md)
 - [Equinix Metal](equinix-metal.md)
 - [Outscale](outscale-qs.md) (uses Terraform)
