@@ -6,13 +6,13 @@
 | --- | --- | ---| ---|----|
 | [Using kubectl and a kubeconfig file to Access a Cluster](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md) | ✓ | ✓ | ✓ | ✓ |
 | [Managing Cluster Members](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/add-users-to-clusters.md) | ✓ | ✓ | ✓ | ✓ |
-| [Editing and Upgrading Clusters](../pages-for-subheaders/cluster-configuration.md) | ✓ | ✓ | ✓ | ✓<sup>2</sup> |
+| [Editing and Upgrading Clusters](../reference-guides/cluster-configuration/cluster-configuration.md) | ✓ | ✓ | ✓ | ✓<sup>2</sup> |
 | [Managing Nodes](../how-to-guides/advanced-user-guides/manage-clusters/nodes-and-node-pools.md) | ✓ | ✓ | ✓ | ✓<sup>3</sup> |
-| [Managing Persistent Volumes and Storage Classes](../pages-for-subheaders/create-kubernetes-persistent-storage.md) | ✓ | ✓ | ✓ | ✓ |
+| [Managing Persistent Volumes and Storage Classes](../how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md) | ✓ | ✓ | ✓ | ✓ |
 | [Managing Projects, Namespaces and Workloads](../how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces.md) | ✓ | ✓ | ✓ | ✓ |
-| [Using App Catalogs](../pages-for-subheaders/helm-charts-in-rancher.md/) | ✓ | ✓ | ✓ | ✓ |
+| [Using App Catalogs](../how-to-guides/new-user-guides/helm-charts-in-rancher.md/) | ✓ | ✓ | ✓ | ✓ |
 | Configuring Tools (Alerts, Notifiers, Logging, Monitoring, Istio) | ✓ | ✓ | ✓ | ✓ |
-| [Running Security Scans](../pages-for-subheaders/cis-scans.md) | ✓ | ✓ | ✓ | ✓ |
+| [Running Security Scans](../explanations/integrations-in-rancher/cis-scans/cis-scans.md) | ✓ | ✓ | ✓ | ✓ |
 | [Use existing configuration to create additional clusters](../how-to-guides/advanced-user-guides/manage-clusters/clone-cluster-configuration.md)| ✓ | ✓ |✓ | |
 | [Ability to rotate certificates](../how-to-guides/advanced-user-guides/manage-clusters/rotate-certificates.md) | ✓ | ✓  | | |
 | Ability to [backup](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters.md) and [restore](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md) Rancher-launched clusters | ✓ | ✓ | | ✓<sup>4</sup> |
@@ -35,13 +35,13 @@
 | --- | --- | ---| ---|----|
 | [Using kubectl and a kubeconfig file to Access a Cluster](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md) | ✓ | ✓ | ✓ | ✓ |
 | [Managing Cluster Members](../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/add-users-to-clusters.md) | ✓ | ✓ | ✓ | ✓ |
-| [Editing and Upgrading Clusters](../pages-for-subheaders/cluster-configuration.md) | ✓ | ✓ | ✓ | ✓<sup>1</sup> |
+| [Editing and Upgrading Clusters](../reference-guides/cluster-configuration/cluster-configuration.md) | ✓ | ✓ | ✓ | ✓<sup>1</sup> |
 | [Managing Nodes](../how-to-guides/advanced-user-guides/manage-clusters/nodes-and-node-pools.md) | ✓ | ✓ | ✓ | ✓<sup>2</sup> |
-| [Managing Persistent Volumes and Storage Classes](../pages-for-subheaders/create-kubernetes-persistent-storage.md) | ✓ | ✓ | ✓ | ✓ |
+| [Managing Persistent Volumes and Storage Classes](../how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md) | ✓ | ✓ | ✓ | ✓ |
 | [Managing Projects, Namespaces and Workloads](../how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces.md) | ✓ | ✓ | ✓ | ✓ |
-| [Using App Catalogs](../pages-for-subheaders/helm-charts-in-rancher.md) | ✓ | ✓ | ✓ | ✓ |
+| [Using App Catalogs](../how-to-guides/new-user-guides/helm-charts-in-rancher.md) | ✓ | ✓ | ✓ | ✓ |
 | Configuring Tools (Alerts, Notifiers, Logging, Monitoring, Istio) | ✓ | ✓ | ✓ | ✓ |
-| [Running Security Scans](../pages-for-subheaders/cis-scans.md) | ✓ | ✓ | ✓ | ✓ |
+| [Running Security Scans](../explanations/integrations-in-rancher/cis-scans/cis-scans.md) | ✓ | ✓ | ✓ | ✓ |
 | [Use existing configuration to create additional clusters](../how-to-guides/advanced-user-guides/manage-clusters/clone-cluster-configuration.md)| ✓ | ✓ |✓ | |
 | [Ability to rotate certificates](../how-to-guides/advanced-user-guides/manage-clusters/rotate-certificates.md) | ✓ |  | ✓ | |
 | Ability to [backup](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters.md) and [restore](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md) Rancher-launched clusters | ✓ | ✓ | | ✓<sup>3</sup> |

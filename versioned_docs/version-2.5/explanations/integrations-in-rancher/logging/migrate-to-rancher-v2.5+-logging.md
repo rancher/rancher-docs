@@ -11,7 +11,7 @@ Among the many features and changes in the new logging functionality is the remo
 
 ## Installation
 
-To install logging in Rancher v2.5+, refer to the [installation instructions](../../../pages-for-subheaders/logging.md#enabling-logging).
+To install logging in Rancher v2.5+, refer to the [installation instructions](logging.md#enabling-logging).
 
 ### Terminology
 

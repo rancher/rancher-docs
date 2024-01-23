@@ -46,9 +46,9 @@ Using Rancher, you can create a Pod Security Policy using our GUI rather than cr
 
 ### Requirements
 
-Rancher can only assign PSPs for clusters that are [launched using RKE.](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)
+Rancher can only assign PSPs for clusters that are [launched using RKE.](../../new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)
 
-You must enable PSPs at the cluster level before you can assign them to a project. This can be configured by [editing the cluster.](../../../pages-for-subheaders/cluster-configuration.md)
+You must enable PSPs at the cluster level before you can assign them to a project. This can be configured by [editing the cluster.](../../../reference-guides/cluster-configuration/cluster-configuration.md)
 
 It is a best practice to set PSP at the cluster level.
 

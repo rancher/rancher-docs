@@ -36,8 +36,8 @@ The restore operation will work on a cluster that is not in a healthy or active 
 
 > **Prerequisites:**
 >
-> - The options below are available only for [Rancher-launched RKE Kubernetes clusters](../../pages-for-subheaders/launch-kubernetes-with-rancher.md) and [Registered K3s Kubernetes clusters.](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md#additional-features-for-registered-k3s-clusters)
-> - Before upgrading Kubernetes, [back up your cluster.](../../pages-for-subheaders/backup-restore-and-disaster-recovery.md)
+> - The options below are available only for [Rancher-launched RKE Kubernetes clusters](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) and [Registered K3s Kubernetes clusters.](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md#additional-features-for-registered-k3s-clusters)
+> - Before upgrading Kubernetes, [back up your cluster.](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/backup-restore-and-disaster-recovery.md)
 
 1. From the **Global** view, find the cluster for which you want to upgrade Kubernetes. Select **&#8942; > Edit**.
 

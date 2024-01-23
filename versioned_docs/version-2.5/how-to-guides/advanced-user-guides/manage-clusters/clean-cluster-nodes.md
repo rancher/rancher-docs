@@ -27,9 +27,9 @@ When cleaning nodes provisioned using Rancher, the following components are dele
 | All resources create under the `management.cattle.io` API Group                | ✓               | ✓                 | ✓                   |                     |
 | All CRDs created by Rancher v2.x                                               | ✓               | ✓                 | ✓                   |                     |
 
-[1]: ../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md
-[2]: ../../../pages-for-subheaders/use-existing-nodes.md
-[3]: ../../../pages-for-subheaders/amazon-eks-permissions.md
+[1]: ../../new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md
+[2]: ../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md
+[3]: ../../../reference-guides/amazon-eks-permissions/amazon-eks-permissions.md
 [4]: ../../new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md
 
 ## Removing a Node from a Cluster by Rancher UI

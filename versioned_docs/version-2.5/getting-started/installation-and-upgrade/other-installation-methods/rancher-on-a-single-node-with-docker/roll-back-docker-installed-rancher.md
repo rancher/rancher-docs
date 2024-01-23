@@ -78,7 +78,7 @@ If you have issues upgrading Rancher, roll it back to its latest known healthy s
     --privileged \
     rancher/rancher:<PRIOR_RANCHER_VERSION>
     ```
-    As of Rancher v2.5, privileged access is [required.](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v25)
+    As of Rancher v2.5, privileged access is [required.](rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v25)
 
     >**Note:** _Do not_ stop the rollback after initiating it, even if the rollback process seems longer than expected. Stopping the rollback may result in database issues during future upgrades.
 

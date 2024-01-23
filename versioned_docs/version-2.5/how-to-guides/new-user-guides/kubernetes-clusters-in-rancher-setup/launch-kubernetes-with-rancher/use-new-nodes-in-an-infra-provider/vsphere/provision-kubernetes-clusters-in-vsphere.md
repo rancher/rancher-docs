@@ -68,7 +68,7 @@ If you have a cluster with DRS enabled, setting up [VM-VM Affinity Rules](https:
 
 ### 2. Create a node template with your cloud credentials
 
-Creating a [node template](../../../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#node-templates) for vSphere will allow Rancher to provision new nodes in vSphere. Node templates can be reused for other clusters.
+Creating a [node template](../use-new-nodes-in-an-infra-provider.md#node-templates) for vSphere will allow Rancher to provision new nodes in vSphere. Node templates can be reused for other clusters.
 
 1. In the Rancher UI, click the user profile button in the upper right corner, and click **Node Templates.**
 1. Click **Add Template.**
@@ -85,8 +85,8 @@ Clusters won't begin provisioning until all three node roles (worker, etcd and c
 1. Enter a **Cluster Name.**
 1. Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.
 1. Use **Cluster Options** to choose the version of Kubernetes that will be installed, what network provider will be used and if you want to enable project network isolation. To see more cluster options, click on **Show advanced options.** For help configuring the cluster, refer to the [RKE cluster configuration reference.](cluster-provisioning/rke-clusters/options)
-1. If you want to dynamically provision persistent storage or other infrastructure later, you will need to enable the vSphere cloud provider by modifying the cluster YAML file. For details, refer to [this section.](../../../../../../pages-for-subheaders/vsphere-cloud-provider.md)
-1. Add one or more node pools to your cluster. Each node pool uses a node template to provision new nodes. For more information about node pools, including best practices for assigning Kubernetes roles to the nodes, see [this section.](../../../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#node-pools)
+1. If you want to dynamically provision persistent storage or other infrastructure later, you will need to enable the vSphere cloud provider by modifying the cluster YAML file. For details, refer to [this section.](../../set-up-cloud-providers/vsphere/vsphere.md)
+1. Add one or more node pools to your cluster. Each node pool uses a node template to provision new nodes. For more information about node pools, including best practices for assigning Kubernetes roles to the nodes, see [this section.](../use-new-nodes-in-an-infra-provider.md#node-pools)
 1. Review your options to confirm they're correct. Then click **Create**.
 
 **Result:**
@@ -107,4 +107,4 @@ After creating your cluster, you can access it through the Rancher UI. As a best
 
 - **Access your cluster with the kubectl CLI:** Follow [these steps](../../../../../advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#accessing-clusters-with-kubectl-from-your-workstation) to access clusters with kubectl on your workstation. In this case, you will be authenticated through the Rancher server’s authentication proxy, then Rancher will connect you to the downstream cluster. This method lets you manage the cluster without the Rancher UI.
 - **Access your cluster with the kubectl CLI, using the authorized cluster endpoint:** Follow [these steps](../../../../../advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster) to access your cluster with kubectl directly, without authenticating through Rancher. We recommend setting up this alternative method to access your cluster so that in case you can’t connect to Rancher, you can still access the cluster.
-- **Provision Storage:** For an example of how to provision storage in vSphere using Rancher, refer to [this section.](../../../../../advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/provisioning-storage-examples/vsphere-storage.md) In order to dynamically provision storage in vSphere, the vSphere provider must be [enabled.](../../../../../../pages-for-subheaders/vsphere-cloud-provider.md)
+- **Provision Storage:** For an example of how to provision storage in vSphere using Rancher, refer to [this section.](../../../../../advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/provisioning-storage-examples/vsphere-storage.md) In order to dynamically provision storage in vSphere, the vSphere provider must be [enabled.](../../set-up-cloud-providers/vsphere/vsphere.md)

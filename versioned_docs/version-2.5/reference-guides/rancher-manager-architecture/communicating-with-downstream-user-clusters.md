@@ -62,7 +62,7 @@ The `cattle-node-agent` is deployed using a [DaemonSet](https://kubernetes.io/do
 
 An authorized cluster endpoint allows users to connect to the Kubernetes API server of a downstream cluster without having to route their requests through the Rancher authentication proxy.
 
-> The authorized cluster endpoint only works on Rancher-launched Kubernetes clusters. In other words, it only works in clusters where Rancher [used RKE](../../pages-for-subheaders/launch-kubernetes-with-rancher.md) to provision the cluster. It is not available for registered clusters, or for clusters in a hosted Kubernetes provider, such as Amazon's EKS.
+> The authorized cluster endpoint only works on Rancher-launched Kubernetes clusters. In other words, it only works in clusters where Rancher [used RKE](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) to provision the cluster. It is not available for registered clusters, or for clusters in a hosted Kubernetes provider, such as Amazon's EKS.
 
 There are two main reasons why a user might need the authorized cluster endpoint:
 

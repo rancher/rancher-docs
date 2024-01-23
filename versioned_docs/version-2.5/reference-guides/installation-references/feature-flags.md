@@ -8,7 +8,7 @@ title: Feature Flags
 
 With feature flags, you can try out optional or experimental features.
 
-To learn more about feature values and how to enable them, see [Enabling Experimental Features](../../pages-for-subheaders/enable-experimental-features.md).
+To learn more about feature values and how to enable them, see [Enabling Experimental Features](../../getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/enable-experimental-features.md).
 
 :::note
 
