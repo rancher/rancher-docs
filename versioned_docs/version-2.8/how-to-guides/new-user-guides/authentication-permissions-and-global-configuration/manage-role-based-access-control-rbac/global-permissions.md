@@ -56,7 +56,7 @@ You can [assign a role to everyone in the group at the same time](#configuring-g
 
 Using custom permissions is convenient for providing users with narrow or specialized access to Rancher.
 
-When a user from an [external authentication source](../../../../pages-for-subheaders/authentication-config.md) signs into Rancher for the first time, they're automatically assigned a set of global permissions (hereafter, permissions). By default, after a user logs in for the first time, they are created as a user and assigned the default `user` permission. The standard `user` permission allows users to login and create clusters.
+When a user from an [external authentication source](../authentication-config/authentication-config.md) signs into Rancher for the first time, they're automatically assigned a set of global permissions (hereafter, permissions). By default, after a user logs in for the first time, they are created as a user and assigned the default `user` permission. The standard `user` permission allows users to login and create clusters.
 
 However, in some organizations, these permissions may extend too much access. Rather than assigning users the default global permissions of `Administrator` or `Standard User`, you can assign them a more restrictive set of custom global permissions.
 
@@ -64,7 +64,6 @@ The default roles, Administrator and Standard User, each come with multiple glob
 
 Administrators can enforce custom global permissions in multiple ways:
 
-- [Creating custom global roles](#creating-custom-global-roles).
 - [Changing the default permissions for new users](#configuring-default-global-permissions).
 - [Configuring global permissions for individual users](#configuring-global-permissions-for-individual-users).
 - [Configuring global permissions for groups](#configuring-global-permissions-for-groups).
@@ -256,7 +255,7 @@ If a user is removed from the external authentication provider group, they would
 
 You can only assign a global role to a group if:
 
-* You have set up an [external authentication provider](../../../../pages-for-subheaders/authentication-config.md#external-vs-local-authentication)
+* You have set up an [external authentication provider](../authentication-config/authentication-config.md#external-vs-local-authentication)
 * The external authentication provider supports [user groups](../authentication-config/manage-users-and-groups.md)
 * You have already set up at least one user group with the authentication provider
 

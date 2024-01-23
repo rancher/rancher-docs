@@ -14,7 +14,7 @@ We don't recommend installing Rancher locally because it creates a networking pr
 
 Your Linux machine can be anywhere. It could be an Amazon EC2 instance, a Digital Ocean droplet, or an Azure virtual machine, to name a few examples. Other Rancher docs often use 'node' as a generic term for all of these. One possible way to deploy a Linux machine is by setting up an Amazon EC2 instance as shown in [this tutorial](../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md).
 
-The full installation requirements are [here](../../../pages-for-subheaders/installation-requirements.md).
+The full installation requirements are [here](../../installation-and-upgrade/installation-requirements/installation-requirements.md).
 
 ## Install K3s on Linux
 
@@ -151,6 +151,6 @@ Now if you navigate to `<IP_OF_LINUX_NODE>.sslip.io` in a web browser, you shoul
 
 To make these instructions simple, we used a fake domain name and self-signed certificates to do this installation. Therefore, you will probably need to add a security exception to your web browser to see the Rancher UI. Note that for production installs, you would need a high-availability setup with a load balancer, a real domain name and real certificates.
 
-These instructions also left out the full installation requirements and other installation options. If you have any issues with these steps, refer to the full [Helm CLI installation docs.](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md)
+These instructions also left out the full installation requirements and other installation options. If you have any issues with these steps, refer to the full [Helm CLI installation docs.](../../installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md)
 
-To launch new Kubernetes clusters with your new Rancher server, you may need to set up cloud credentials in Rancher. For more information, see [Launching Kubernetes clusters with Rancher.](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)
+To launch new Kubernetes clusters with your new Rancher server, you may need to set up cloud credentials in Rancher. For more information, see [Launching Kubernetes clusters with Rancher.](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)

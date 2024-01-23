@@ -1,5 +1,5 @@
 ---
-title: 4. Set up the Istio Gateway
+title: Set up the Istio Gateway
 ---
 
 <head>

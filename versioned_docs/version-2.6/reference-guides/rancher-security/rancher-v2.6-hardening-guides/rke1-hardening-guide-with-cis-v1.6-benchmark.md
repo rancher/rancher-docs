@@ -446,7 +446,7 @@ upgrade_strategy:
 
 ### Reference Hardened RKE Template Configuration
 
-The reference RKE template provides the configuration needed to achieve a hardened install of Kubernetes. RKE templates are used to provision Kubernetes and define Rancher settings. Follow the Rancher [documentation](../../../pages-for-subheaders/installation-and-upgrade.md) for additional installation and RKE template details.
+The reference RKE template provides the configuration needed to achieve a hardened install of Kubernetes. RKE templates are used to provision Kubernetes and define Rancher settings. Follow the Rancher [documentation](../../../getting-started/installation-and-upgrade/installation-and-upgrade.md) for additional installation and RKE template details.
 
 ```yaml
 #

@@ -1,5 +1,5 @@
 ---
-title: 2. Enable Istio in a Namespace
+title: Enable Istio in a Namespace
 ---
 
 <head>

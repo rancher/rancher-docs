@@ -121,7 +121,7 @@ When using `cilium` or `multus,cilium` as your container network interface provi
 
 ##### Cloud Provider
 
-You can configure a [Kubernetes cloud provider](../../../pages-for-subheaders/set-up-cloud-providers.md). If you want to use dynamically provisioned [volumes and storage](../../../pages-for-subheaders/create-kubernetes-persistent-storage.md) in Kubernetes, typically you must select the specific cloud provider in order to use it. For example, if you want to use Amazon EBS, you would need to select the `aws` cloud provider.
+You can configure a [Kubernetes cloud provider](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/set-up-cloud-providers.md). If you want to use dynamically provisioned [volumes and storage](../../../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md) in Kubernetes, typically you must select the specific cloud provider in order to use it. For example, if you want to use Amazon EBS, you would need to select the `aws` cloud provider.
 
 :::note
 
@@ -139,7 +139,7 @@ The default [pod security admission configuration template](../../../how-to-guid
 
 ##### Worker CIS Profile
 
-Select a [CIS benchmark](../../../pages-for-subheaders/cis-scan-guides.md) to validate the system configuration against.
+Select a [CIS benchmark](../../../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md) to validate the system configuration against.
 
 ##### Project Network Isolation
 
@@ -280,6 +280,7 @@ spec:
   kubernetesVersion: v1.25.12+rke2r1
   localClusterAuthEndpoint: {}
   rkeConfig:
+    additionalManifest: ""
     chartValues:
       rke2-calico: {}
     etcd:
@@ -337,9 +338,36 @@ spec:
 ```
 </details>
 
+### additionalManifest
+
+Specify additional manifests to deliver to the control plane nodes.
+
+The value is a String, and will be placed at the path `/var/lib/rancher/rke2/server/manifests/rancher/addons.yaml` on target nodes.
+
+Example:
+
+```yaml
+additionalManifest: |-
+  apiVersion: v1
+  kind: Namespace
+  metadata:
+    name: name-xxxx
+```
+
+
+:::note
+
+If you want to customize system charts, you should use the `chartValues` field as described below.
+
+Alternatives, such as using a HelmChartConfig to customize the system charts via `additionalManifest`, can cause unexpected behavior, due to having multiple HelmChartConfigs for the same chart.
+
+:::
+
 ### chartValues
 
 Specify the values for the system charts installed by RKE2.
+
+For more information about how RKE2 manges packaged components, please refer to [RKE2 documentation](https://docs.rke2.io/helm).
 
 Example:
 

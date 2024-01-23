@@ -27,7 +27,7 @@ If admins have [kubeconfig token generation turned off](../../../../reference-gu
 
 ### Two Authentication Methods for RKE Clusters
 
-If the cluster is not an [RKE cluster,](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) the kubeconfig file allows you to access the cluster in only one way: it lets you be authenticated with the Rancher server, then Rancher allows you to run kubectl commands on the cluster.
+If the cluster is not an [RKE cluster,](../../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) the kubeconfig file allows you to access the cluster in only one way: it lets you be authenticated with the Rancher server, then Rancher allows you to run kubectl commands on the cluster.
 
 For RKE clusters, the kubeconfig file allows you to be authenticated in two ways:
 

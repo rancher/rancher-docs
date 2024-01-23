@@ -150,7 +150,7 @@ For more information about connecting to an AKS private cluster, see the [AKS do
 
 The AKS provisioner can synchronize the state of an AKS cluster between Rancher and the provider. For an in-depth technical explanation of how this works, see [Syncing.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters.md)
 
-For information on configuring the refresh interval, see [this section.](../../../../pages-for-subheaders/gke-cluster-configuration.md#configuring-the-refresh-interval)
+For information on configuring the refresh interval, see [this section.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md#configuring-the-refresh-interval)
 
 ## Programmatically Creating AKS Clusters
 
