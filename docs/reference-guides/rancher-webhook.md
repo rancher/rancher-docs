@@ -9,7 +9,7 @@ title: Rancher Webhook
 Rancher-Webhook is an essential component of Rancher that works in conjunction with Kubernetes to enhance security and enable critical features for Rancher-managed clusters. 
 
 It integrates with Kubernetes' extensible admission controllers, as described in the [Kubernetes documentation](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/), which allows Rancher-Webhook to inspect specific requests sent to the Kubernetes API server, and add custom, Rancher-specific validation and mutations to the requests that are specific to Rancher. Rancher-Webhook manages the resources to be validated using the `rancher.cattle.io` `ValidatingWebhookConfiguration` and the `rancher.cattle.io` `MutatingWebhookConfiguration`, and will override any manual edits.
-Rancher deploys Rancher-Webhook as a separate deployment and service in both local and downstream clusters. Rancher manages Rancher-Webhook using Helm. It's important to note that Rancher may override modifications made by users to the Helm release.
+Rancher deploys Rancher-Webhook as a separate deployment and service in both local and downstream clusters. Rancher manages Rancher-Webhook using Helm. It's important to note that Rancher may override modifications made by users to the Helm release. To safely modify these values see [Customizing Rancher-Webhook Configuration](#customizing-rancher-webhook-configuration).
 
 Each Rancher version is designed to be compatible with a single version of the webhook. The compatible versions are provided below for convenience.
 
@@ -48,20 +48,56 @@ To bypass the webhook, impersonate both the `rancher-webhook-sudo` service accou
 kubectl create -f example.yaml --as=system:serviceaccount:cattle-system:rancher-webhook-sudo --as-group=system:masters
 ```
 
+## Customizing Rancher-Webhook Configuration
+Rancher allows users to add custom helm values to the helm installation of Rancher-Webhook. When Rancher installs the rancher-webhook chart via helm it will check for custom helm values defined in a ConfigMap with the name `rancher-config` in the `cattle-system` namespace under the data key `rancher-webhook`. The value of this key must be valid YAML.
+``` yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rancher-config
+  namespace: cattle-system
+  labels:
+    app.kubernetes.io/part-of: "rancher"
+data:
+  rancher-webhook: '{"port": 9553, "priorityClassName": "system-node-critical"}'
+
+```
+Rancher will redeploy the Rancher-Webhook chart when changes to the ConfigMap values are detected.
+
+### Customising Rancher-Webhook During Rancher Installation
+You can customize the local cluster's Rancher-webhook's helm values during the initial Helm installation of the Rancher chart. All values used in the Rancher-Webhook chart can be accessed as nested variables under the `webhook` name. 
+These values will be synced to the `rancher-config` ConfigMap during installation.
+
+```bash
+helm install rancher rancher-<CHART_REPO>/rancher \
+  --namespace cattle-system \
+  ... 
+  --set webhook.port=9553 \
+  --set webhook.priorityClassName="system-node-critical"
+```
+
 ## Common Issues
 
 ### EKS Cluster with Calico CNI
 
 Users running an EKS cluster with Calico CNI may run into errors when the Kubernetes API server attempts to contact the Rancher-Webhook. 
-One workaround for this issue [documented by Calico](https://docs.tigera.io/calico/latest/getting-started/kubernetes/managed-public-cloud/eks#install-eks-with-calico-networking) involves setting `hostNetwork=true` for the webhook deployment. Users can change this using the Helm commands below on the affected clusters.
+One workaround for this issue [documented by Calico](https://docs.tigera.io/calico/latest/getting-started/kubernetes/managed-public-cloud/eks#install-eks-with-calico-networking) involves setting `hostNetwork=true` for the webhook deployment. Users can change this by adding the helm value `global.hostNetwork=true` to the value to the `rancher-config` ConfigMap see [Customizing Rancher-Webhook Configuration](#customizing-rancher-webhook-configuration) for more info.
 
 ``` bash
-helm repo add rancher-charts https://charts.rancher.io 
-helm upgrade --reuse-values rancher-webhook rancher-charts/rancher-webhook  -n cattle-system --set global.hostNetwork=true
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rancher-config
+  namespace: cattle-system
+  labels:
+    app.kubernetes.io/part-of: "rancher"
+data:
+  rancher-webhook: '{"global": {"hostNetwork": true}}'
 ```
+
 **Note:** This temporary workaround may violate an environment's security policy. This workaround also requires that port 9443 is unused on the host network.
 
-**Note:** Helm uses secrets by default. This is a datatype that some webhook versions validate to store information. In these cases, directly update the deployment with the hostNetwork=true value using kubectl, then run the Helm commands listed above to prevent drift between the Helm configuration and the actual state of the cluster.
+**Note:** Helm uses secrets by default to store information. This is a resource that some webhook versions validate. In these cases, directly update the deployment with the hostNetwork=true value using kubectl, then update the webhook configuration as specified above.
 
 ### Private GKE Cluster
 
