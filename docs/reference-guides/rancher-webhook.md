@@ -62,11 +62,11 @@ data:
   rancher-webhook: '{"port": 9553, "priorityClassName": "system-node-critical"}'
 
 ```
-Rancher will redeploy the Rancher-Webhook chart when changes to the ConfigMap values are detected.
+Rancher redeploys the Rancher-Webhook chart when changes to the ConfigMap values are detected.
 
-### Customising Rancher-Webhook During Rancher Installation
+### Customizing Rancher-Webhook During Rancher Installation
 You can customize the local cluster's Rancher-webhook's helm values during the initial Helm installation of the Rancher chart. All values used in the Rancher-Webhook chart can be accessed as nested variables under the `webhook` name. 
-These values will be synced to the `rancher-config` ConfigMap during installation.
+These values are synced to the `rancher-config` ConfigMap during installation.
 
 ```bash
 helm install rancher rancher-<CHART_REPO>/rancher \
@@ -81,7 +81,7 @@ helm install rancher rancher-<CHART_REPO>/rancher \
 ### EKS Cluster with Calico CNI
 
 Users running an EKS cluster with Calico CNI may run into errors when the Kubernetes API server attempts to contact the Rancher-Webhook. 
-One workaround for this issue [documented by Calico](https://docs.tigera.io/calico/latest/getting-started/kubernetes/managed-public-cloud/eks#install-eks-with-calico-networking) involves setting `hostNetwork=true` for the webhook deployment. Users can change this by adding the helm value `global.hostNetwork=true` to the value to the `rancher-config` ConfigMap see [Customizing Rancher-Webhook Configuration](#customizing-rancher-webhook-configuration) for more info.
+One workaround for this issue, as [documented by Calico](https://docs.tigera.io/calico/latest/getting-started/kubernetes/managed-public-cloud/eks#install-eks-with-calico-networking) involves setting `hostNetwork=true` for the webhook deployment. You can change this value by adding the Helm value `global.hostNetwork=true` to the `rancher-config` ConfigMap. See [Customizing Rancher-Webhook Configuration](#customizing-rancher-webhook-configuration) for more info.
 
 ``` bash
 apiVersion: v1
@@ -97,7 +97,7 @@ data:
 
 **Note:** This temporary workaround may violate an environment's security policy. This workaround also requires that port 9443 is unused on the host network.
 
-**Note:** Helm uses secrets by default to store information. This is a resource that some webhook versions validate. In these cases, directly update the deployment with the hostNetwork=true value using kubectl, then update the webhook configuration as specified above.
+**Note:** By default, Helm stores information as secrets. Secrets are a resource that some webhook versions validate. In these cases, directly update the deployment with the `hostNetwork=true` value using kubectl, then update the webhook configuration as specified above.
 
 ### Private GKE Cluster
 
