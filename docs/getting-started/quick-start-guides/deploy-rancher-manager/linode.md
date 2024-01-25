@@ -38,14 +38,16 @@ Deploying to Linode will incur charges.
 
 4. Edit `terraform.tfvars` and customize the following variables:
     - `linode_token` - The Linode Personal Access Token mentioned above.
-    - `rancher_server_admin_password` - Admin password for created Rancher server (minimum 12 characters)
+    - `rancher_server_admin_password` - Admin password for created Rancher server (minimum 12 characters).
 
 5. **Optional:** Modify optional variables within `terraform.tfvars`.
 See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [Linode Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/linode) for more information. Suggestions include:
-   - `linode_region` - The target Linode region to provision the server and cluster in. (Default `eu-central`)
+   - `linode_region` - The target Linode region to provision the server and cluster in.
+     - Default: `eu-central`
      - For a complete list of regions, see the [official Region Availability page](https://www.linode.com/global-infrastructure/availability/).
    - `prefix` - The prefix for all created infrastructure.
-   - `linode_type` - The type/plan that all infrastructure Linodes should use. (Default `g6-standard-2`)
+   - `linode_type` - The type/plan that all infrastructure Linodes should use.
+     - Default: `g6-standard-2` 
      - For a complete list of plans, see the [official Plan Types page](https://www.linode.com/docs/products/compute/compute-instances/plans/).
 
 6. Run `terraform init`.
@@ -62,8 +64,8 @@ See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [Lino
     workload_node_ip = yy.yy.yy.yy
     ```
 
-8. Paste the `rancher_server_url` from the output above into the browser. Log in when prompted (default username is `admin`, use the password set in `rancher_server_admin_password`).
-9. ssh to the Rancher Server using the `id_rsa` key generated in `quickstart/rancher/linode`.
+8. Paste the `rancher_server_url` from the output above into the browser and log in when prompted. The default username is `admin` and the password is defined in `rancher_server_admin_password`.
+9. `ssh` into the Rancher Server using the `id_rsa` key generated in `quickstart/rancher/linode`.
 
 #### Result
 
