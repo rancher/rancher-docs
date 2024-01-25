@@ -1174,7 +1174,6 @@ const sidebars = {
         },
         "integrations-in-rancher/kubewarden/kubewarden",
         "integrations-in-rancher/elemental/elemental",
-        "integrations-in-rancher/opni/opni",
         {
           "type": "category",
           "label": "Continuous Delivery with Fleet",
@@ -1190,7 +1189,6 @@ const sidebars = {
           ]
         },
         "integrations-in-rancher/rancher-desktop",
-        "integrations-in-rancher/epinio/epinio",
         {
           type: 'category',
           label: 'Cloud Marketplace Integration',
