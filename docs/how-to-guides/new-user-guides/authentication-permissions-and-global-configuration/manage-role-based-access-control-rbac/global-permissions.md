@@ -93,31 +93,17 @@ Signed-in users can change themselves over to the `restricted-admin` if they wis
 
 ## Global Permission Assignment
 
-Global permissions for local users are assigned differently than users who log in to Rancher using external authentication.
-
-### Global Permissions for New Local Users
-
 When you create a new local user, you assign them a global permission as you complete the **Add User** form.
 
-To see the default permissions for new users,
+When a user logs into Rancher using an external authentication provider for the first time, they are automatically assigned the  **New User Default** global permissions. By default, Rancher assigns the **Standard User** permission for new users.
+
+To see what the **New User Default** is set to,
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
 1. In the left navigation bar, click **Roles**.
 1. The **Roles** page has tabs for roles grouped by scope. Each table lists the roles in that scope. In the **Global** tab, in the **New User Default** column, the permissions given to new users by default are indicated with a checkmark.
 
 You can [change the default global permissions to meet your needs.](#configuring-default-global-permissions)
-
-### Global Permissions for Users with External Authentication
-
-When a user logs into Rancher using an external authentication provider for the first time, they are automatically assigned the  **New User Default** global permissions. By default, Rancher assigns the **Standard User** permission for new users.
-
-To see the default permissions for new users,
-
-1. In the upper left corner, click **☰ > Users & Authentication**.
-1. In the left navigation bar, click **Roles**.
-1. The **Roles** page has tabs for roles grouped by scope. Each table lists the roles in that scope. In the **New User Default** column on each page, the permissions given to new users by default are indicated with a checkmark.
-
-You can [change the default permissions to meet your needs.](#configuring-default-global-permissions)
 
 Permissions can be [assigned](#configuring-global-permissions-for-individual-users) to an individual user.
 
