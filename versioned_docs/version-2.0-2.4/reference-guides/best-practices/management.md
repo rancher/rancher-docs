@@ -18,7 +18,7 @@ These tips can help you solve problems before they happen.
 
 ### Run Rancher on a Supported OS and Supported Docker Version
 
-Rancher is container-based and can potentially run on any Linux-based operating system. However, only operating systems listed in the [requirements documentation](../../pages-for-subheaders/installation-requirements.md) should be used for running Rancher, along with a supported version of Docker. These versions have been most thoroughly tested and can be properly supported by the Rancher Support team.
+Rancher is container-based and can potentially run on any Linux-based operating system. However, only operating systems listed in the [requirements documentation](../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md) should be used for running Rancher, along with a supported version of Docker. These versions have been most thoroughly tested and can be properly supported by the Rancher Support team.
 
 ### Upgrade Your Kubernetes Version
 
@@ -50,7 +50,7 @@ Certificates can be renewed for Rancher-provisioned clusters [through the Ranche
 
 ### Enable Recurring Snapshots for Backing up and Restoring the Cluster
 
-Make sure etcd recurring snapshots are enabled. Extend the snapshot retention to a period of time that meets your business needs. In the event of a catastrophic failure or deletion of data, this may be your only recourse for recovery. For details about configuring snapshots, refer to the [RKE documentation](https://rancher.com/docs/rke/latest/en/etcd-snapshots/) or the [Rancher documentation on backups](../../pages-for-subheaders/backup-restore-and-disaster-recovery.md).
+Make sure etcd recurring snapshots are enabled. Extend the snapshot retention to a period of time that meets your business needs. In the event of a catastrophic failure or deletion of data, this may be your only recourse for recovery. For details about configuring snapshots, refer to the [RKE documentation](https://rancher.com/docs/rke/latest/en/etcd-snapshots/) or the [Rancher documentation on backups](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/backup-restore-and-disaster-recovery.md).
 
 ### Provision Clusters with Rancher
 
@@ -102,13 +102,13 @@ Provision three or more control plane nodes. Some control plane components, such
 
 ### Monitor Your Cluster
 
-Closely monitor and scale your nodes as needed. You should [enable cluster monitoring](../../pages-for-subheaders/cluster-monitoring.md) and use the Prometheus metrics and Grafana visualization options as a starting point.
+Closely monitor and scale your nodes as needed. You should [enable cluster monitoring](../../explanations/integrations-in-rancher/cluster-monitoring/cluster-monitoring.md) and use the Prometheus metrics and Grafana visualization options as a starting point.
 
 ## Tips for Security
 
 Below are some basic tips for increasing security in Rancher. For more detailed information about securing your cluster, you can refer to these resources:
 
-- Rancher's [security documentation and Kubernetes cluster hardening guide](../../pages-for-subheaders/rancher-security.md)
+- Rancher's [security documentation and Kubernetes cluster hardening guide](../rancher-security/rancher-security.md)
 - [101 More Security Best Practices for Kubernetes](https://rancher.com/blog/2019/2019-01-17-101-more-kubernetes-security-best-practices/)
 
 ### Update Rancher with Security Patches

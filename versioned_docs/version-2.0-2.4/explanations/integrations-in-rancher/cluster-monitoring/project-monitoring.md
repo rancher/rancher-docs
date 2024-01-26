@@ -9,9 +9,9 @@ Using Rancher, you can monitor the state and processes of your cluster nodes, Ku
 
 ### Monitoring Scope
 
-Using Prometheus, you can monitor Rancher at both the [cluster level](../../../pages-for-subheaders/cluster-monitoring.md) and project level. For each cluster and project that is enabled for monitoring, Rancher deploys a Prometheus server.
+Using Prometheus, you can monitor Rancher at both the [cluster level](cluster-monitoring.md) and project level. For each cluster and project that is enabled for monitoring, Rancher deploys a Prometheus server.
 
-- [Cluster monitoring](../../../pages-for-subheaders/cluster-monitoring.md/) allows you to view the health of your Kubernetes cluster. Prometheus collects metrics from the cluster components below, which you can view in graphs and charts.
+- [Cluster monitoring](cluster-monitoring.md/) allows you to view the health of your Kubernetes cluster. Prometheus collects metrics from the cluster components below, which you can view in graphs and charts.
 
     - Kubernetes control plane
     - etcd database
@@ -25,7 +25,7 @@ Only [administrators](../../../how-to-guides/advanced-user-guides/authentication
 
 ### Enabling Project Monitoring
 
-> **Prerequisite:** Cluster monitoring must be [enabled.](../../../pages-for-subheaders/cluster-monitoring.md)
+> **Prerequisite:** Cluster monitoring must be [enabled.](cluster-monitoring.md)
 
 1. Go to the project where monitoring should be enabled. Note: When cluster monitoring is enabled, monitoring is also enabled by default in the **System** project.
 
@@ -43,12 +43,12 @@ Prometheus|750m| 750Mi | 1000m | 1000Mi | Yes
 Grafana | 100m | 100Mi | 200m | 200Mi | No
 
 
-**Result:** A single application,`project-monitoring`, is added as an [application](../../../pages-for-subheaders/helm-charts-in-rancher.md) to the project. After the application is `active`, you can start viewing project metrics through the [Rancher dashboard](../../../pages-for-subheaders/cluster-monitoring.md/) or directly from Grafana.
+**Result:** A single application,`project-monitoring`, is added as an [application](../../../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md) to the project. After the application is `active`, you can start viewing project metrics through the [Rancher dashboard](cluster-monitoring.md/) or directly from Grafana.
 
 > The default username and password for the Grafana instance will be `admin/admin`. However, Grafana dashboards are served via the Rancher authentication proxy, so only users who are currently authenticated into the Rancher server have access to the Grafana dashboard.
 
 ### Project Metrics
-[Workload metrics](./expression.md#workload-metrics) are available for the project if monitoring is enabled at the [cluster level](../../../pages-for-subheaders/cluster-monitoring.md/) and at the [project level.](#enabling-project-monitoring)
+[Workload metrics](./expression.md#workload-metrics) are available for the project if monitoring is enabled at the [cluster level](cluster-monitoring.md/) and at the [project level.](#enabling-project-monitoring)
 
 You can monitor custom metrics from any [exporters.](https://prometheus.io/docs/instrumenting/exporters/) You can also expose some custom endpoints on deployments without needing to configure Prometheus for your project.
 

@@ -8,16 +8,16 @@ Duplication of imported clusters is not supported.
 
 | Cluster Type                     | Cloneable?    |
 |----------------------------------|---------------|
-| [Nodes Hosted by Infrastructure Provider](../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md) | ✓ |
-| [Hosted Kubernetes Providers](../../../pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers.md) | ✓    |
-| [Custom Cluster](../../../pages-for-subheaders/use-existing-nodes.md)              | ✓              |
+| [Nodes Hosted by Infrastructure Provider](../../new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md) | ✓ |
+| [Hosted Kubernetes Providers](../../new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/set-up-clusters-from-hosted-kubernetes-providers.md) | ✓    |
+| [Custom Cluster](../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md)              | ✓              |
 | [Imported Cluster](../../new-user-guides/kubernetes-clusters-in-rancher-setup/import-existing-clusters.md)            |               |
 
 > **Warning:** During the process of duplicating a cluster, you will edit a config file full of cluster settings. However, we recommend editing only values explicitly listed in this document, as cluster duplication is designed for simple cluster copying, _not_ wide scale configuration changes. Editing other values may invalidate the config file, which will lead to cluster deployment failure.
 
 ## Prerequisites
 
-Download and install [Rancher CLI](../../../pages-for-subheaders/cli-with-rancher.md). Remember to [create an API bearer token](../../../reference-guides/user-settings/api-keys.md) if necessary.
+Download and install [Rancher CLI](../../../reference-guides/cli-with-rancher/cli-with-rancher.md). Remember to [create an API bearer token](../../../reference-guides/user-settings/api-keys.md) if necessary.
 
 
 ## 1. Export Cluster Config

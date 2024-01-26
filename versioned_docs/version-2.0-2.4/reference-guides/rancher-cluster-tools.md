@@ -21,13 +21,13 @@ Logging is helpful because it allows you to:
 
 Rancher can integrate with Elasticsearch, splunk, kafka, syslog, and fluentd.
 
-Refer to the logging documentation [here.](../pages-for-subheaders/cluster-logging.md)
+Refer to the logging documentation [here.](../explanations/integrations-in-rancher/cluster-logging/cluster-logging.md)
 
 ## Monitoring
 
 Using Rancher, you can monitor the state and processes of your cluster nodes, Kubernetes components, and software deployments through integration with [Prometheus](https://prometheus.io/), a leading open-source monitoring solution.
 
-For details, refer to [Monitoring.](../pages-for-subheaders/cluster-monitoring.md)
+For details, refer to [Monitoring.](../explanations/integrations-in-rancher/cluster-monitoring/cluster-monitoring.md)
 
 ## Alerts
 
@@ -35,7 +35,7 @@ After monitoring is enabled, you can set up alerts and notifiers that provide th
 
 Alerts are rules that trigger notifications. Before you can receive alerts, you must configure one or more notifier in Rancher. The scope for alerts can be set at either the cluster or project level.
 
-For details, refer to [Alerts.](../pages-for-subheaders/cluster-alerts.md)
+For details, refer to [Alerts.](../explanations/integrations-in-rancher/cluster-alerts/cluster-alerts.md)
 
 ## Notifiers
 
@@ -49,7 +49,7 @@ _Available as of v2.3_
 
 [Istio](https://istio.io/) is an open-source tool that makes it easier for DevOps teams to observe, control, troubleshoot, and secure the traffic within a complex network of microservices.
 
-Refer to the Istio documentation [here.](../pages-for-subheaders/istio.md)
+Refer to the Istio documentation [here.](../explanations/integrations-in-rancher/istio/istio.md)
 
 ## OPA Gatekeeper
 
@@ -59,4 +59,4 @@ Refer to the Istio documentation [here.](../pages-for-subheaders/istio.md)
 
 Rancher can run a security scan to check whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark.
 
-Refer to the CIS scan documentation [here.](../pages-for-subheaders/cis-scans.md)
+Refer to the CIS scan documentation [here.](../explanations/integrations-in-rancher/cis-scans/cis-scans.md)

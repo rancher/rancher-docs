@@ -18,12 +18,12 @@ After you download the kubeconfig file, you will be able to use the kubeconfig f
 
 _Available as of v2.4.6_
 
-If admins have [enforced TTL on kubeconfig tokens](../../../../reference-guides/about-the-api/api-tokens.md#setting-ttl-on-kubeconfig-tokens), the kubeconfig file requires [rancher cli](../../../../pages-for-subheaders/cli-with-rancher.md) to be present in your PATH.
+If admins have [enforced TTL on kubeconfig tokens](../../../../reference-guides/about-the-api/api-tokens.md#setting-ttl-on-kubeconfig-tokens), the kubeconfig file requires [rancher cli](../../../../reference-guides/cli-with-rancher/cli-with-rancher.md) to be present in your PATH.
 
 
 ### Two Authentication Methods for RKE Clusters
 
-If the cluster is not an [RKE cluster,](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) the kubeconfig file allows you to access the cluster in only one way: it lets you be authenticated with the Rancher server, then Rancher allows you to run kubectl commands on the cluster.
+If the cluster is not an [RKE cluster,](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) the kubeconfig file allows you to access the cluster in only one way: it lets you be authenticated with the Rancher server, then Rancher allows you to run kubectl commands on the cluster.
 
 For RKE clusters, the kubeconfig file allows you to be authenticated in two ways:
 
@@ -38,7 +38,7 @@ These methods of communicating with downstream Kubernetes clusters are also expl
 
 ### About the kube-api-auth Authentication Webhook
 
-The `kube-api-auth` microservice is deployed to provide the user authentication functionality for the [authorized cluster endpoint,](../../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint) which is only available for [RKE clusters.](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) When you access the user cluster using `kubectl`, the cluster's Kubernetes API server authenticates you by using the `kube-api-auth` service as a webhook.
+The `kube-api-auth` microservice is deployed to provide the user authentication functionality for the [authorized cluster endpoint,](../../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint) which is only available for [RKE clusters.](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) When you access the user cluster using `kubectl`, the cluster's Kubernetes API server authenticates you by using the `kube-api-auth` service as a webhook.
 
 During cluster provisioning, the file `/etc/kubernetes/kube-api-authn-webhook.yaml` is deployed and `kube-apiserver` is configured with `--authentication-token-webhook-config-file=/etc/kubernetes/kube-api-authn-webhook.yaml`. This configures the `kube-apiserver` to query `http://127.0.0.1:6440/v1/authenticate` to determine authentication for bearer tokens.
 

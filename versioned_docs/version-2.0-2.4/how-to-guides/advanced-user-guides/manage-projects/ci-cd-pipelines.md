@@ -12,4 +12,4 @@ After configuring Rancher and GitHub, you can deploy containers running Jenkins 
 - Run unit tests.
 - Run regression tests.
 
-For details, refer to the [pipelines](../../../pages-for-subheaders/pipelines.md) section.
+For details, refer to the [pipelines](../../../reference-guides/pipelines/pipelines.md) section.

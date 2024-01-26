@@ -11,15 +11,15 @@ There are two different agent resources deployed on Rancher managed clusters:
 - [cattle-cluster-agent](#cattle-cluster-agent)
 - [cattle-node-agent](#cattle-node-agent)
 
-For a conceptual overview of how the Rancher server provisions clusters and communicates with them, refer to the [architecture](../../../../pages-for-subheaders/rancher-manager-architecture.md)
+For a conceptual overview of how the Rancher server provisions clusters and communicates with them, refer to the [architecture](../../../../reference-guides/rancher-manager-architecture/rancher-manager-architecture.md)
 
 ### cattle-cluster-agent
 
-The `cattle-cluster-agent` is used to connect to the Kubernetes API of [Rancher Launched Kubernetes](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) clusters. The `cattle-cluster-agent` is deployed using a Deployment resource.
+The `cattle-cluster-agent` is used to connect to the Kubernetes API of [Rancher Launched Kubernetes](launch-kubernetes-with-rancher.md) clusters. The `cattle-cluster-agent` is deployed using a Deployment resource.
 
 ### cattle-node-agent
 
-The `cattle-node-agent` is used to interact with nodes in a [Rancher Launched Kubernetes](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) cluster when performing cluster operations. Examples of cluster operations are upgrading Kubernetes version and creating/restoring etcd snapshots. The `cattle-node-agent` is deployed using a DaemonSet resource to make sure it runs on every node. The `cattle-node-agent` is used as fallback option to connect to the Kubernetes API of [Rancher Launched Kubernetes](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) clusters when `cattle-cluster-agent` is unavailable.
+The `cattle-node-agent` is used to interact with nodes in a [Rancher Launched Kubernetes](launch-kubernetes-with-rancher.md) cluster when performing cluster operations. Examples of cluster operations are upgrading Kubernetes version and creating/restoring etcd snapshots. The `cattle-node-agent` is deployed using a DaemonSet resource to make sure it runs on every node. The `cattle-node-agent` is used as fallback option to connect to the Kubernetes API of [Rancher Launched Kubernetes](launch-kubernetes-with-rancher.md) clusters when `cattle-cluster-agent` is unavailable.
 
 > **Note:** In Rancher v2.2.4 and lower, the `cattle-node-agent` pods did not tolerate all taints, causing Kubernetes upgrades to fail on these nodes. The fix for this has been included in Rancher v2.2.5 and higher.
 

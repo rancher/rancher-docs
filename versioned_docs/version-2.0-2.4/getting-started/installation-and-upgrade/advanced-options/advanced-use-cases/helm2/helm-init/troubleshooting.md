@@ -19,4 +19,4 @@ helm version --server
 Error: could not find tiller
 ```
 
-When you have confirmed that `tiller` has been removed, please follow the steps provided in [Initialize Helm (Install tiller)](../../../../../../pages-for-subheaders/helm2-helm-init.md) to install `tiller` with the correct `ServiceAccount`.
+When you have confirmed that `tiller` has been removed, please follow the steps provided in [Initialize Helm (Install tiller)](helm-init.md) to install `tiller` with the correct `ServiceAccount`.

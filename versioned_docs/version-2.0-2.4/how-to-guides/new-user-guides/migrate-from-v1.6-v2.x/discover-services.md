@@ -48,7 +48,7 @@ Pods can also be resolved using the `hostname` and `subdomain` fields if set in 
 
 When you migrate v1.6 services to v2.x, Rancher does not automatically create a Kubernetes service record for each migrated deployment. Instead, you'll have to link the deployment and service together manually, using any of the methods listed below.
 
-In the image below, the `web-deployment.yml` and `web-service.yml` files [created after parsing](migrate-services.md#migration-example-file-output) our [migration example services](../../../pages-for-subheaders/migrate-from-v1.6-v2.x.md#migration-example-files) are linked together.
+In the image below, the `web-deployment.yml` and `web-service.yml` files [created after parsing](migrate-services.md#migration-example-file-output) our [migration example services](migrate-from-v1.6-v2.x.md#migration-example-files) are linked together.
 
 <figcaption>Linked Workload and Kubernetes Service</figcaption>
 

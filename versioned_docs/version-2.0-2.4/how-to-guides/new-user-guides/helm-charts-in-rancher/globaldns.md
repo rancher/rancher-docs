@@ -6,7 +6,7 @@ _Available as of v2.2.0_
 
 Rancher's Global DNS feature provides a way to program an external DNS provider to route traffic to your Kubernetes applications. Since the DNS programming supports spanning applications across different Kubernetes clusters, Global DNS is configured at a global level. An application can become highly available as it allows you to have one application run on different Kubernetes clusters. If one of your Kubernetes clusters goes down, the application would still be accessible.
 
-> **Note:** Global DNS is only available in [Kubernetes installations](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md) with the `local` cluster enabled.
+> **Note:** Global DNS is only available in [Kubernetes installations](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md) with the `local` cluster enabled.
 
 - [Global DNS Providers](#global-dns-providers)
 - [Global-DNS-Entries](#global-dns-entries)

@@ -43,7 +43,7 @@ For more information on private Git/Helm catalogs, refer to the [custom catalog 
 
  1. From the **Global** view, choose **Tools > Catalogs** in the navigation bar. In versions before v2.2.0, you can select **Catalogs** directly in the navigation bar.
  2. Click **Add Catalog**.
- 3. Complete the form. Select the Helm version that will be used to launch all of the apps in the catalog. For more information about the Helm version, refer to [this section.](../../../pages-for-subheaders/helm-charts-in-rancher.md#catalog-helm-deployment-versions)
+ 3. Complete the form. Select the Helm version that will be used to launch all of the apps in the catalog. For more information about the Helm version, refer to [this section.](helm-charts-in-rancher.md#catalog-helm-deployment-versions)
 4. Click **Create**.
 
  **Result**: Your custom global catalog is added to Rancher. Once it is in `Active` state, it has completed synchronization and you will be able to start deploying [multi-cluster apps](../deploy-apps-across-clusters.md) or [applications in any project](./launching-apps.md) from this catalog.
@@ -61,10 +61,10 @@ _Available as of v2.2.0_
 1. From the **Global** view, navigate to your cluster that you want to start adding custom catalogs.
 2. Choose the **Tools > Catalogs** in the navigation bar.
 2. Click **Add Catalog**.
-3. Complete the form. By default, the form will provide the ability to select `Scope` of the catalog. When you have added a catalog from the **Cluster** scope, it is defaulted to `Cluster`. Select the Helm version that will be used to launch all of the apps in the catalog. For more information about the Helm version, refer to [this section.](../../../pages-for-subheaders/helm-charts-in-rancher.md#catalog-helm-deployment-versions)
+3. Complete the form. By default, the form will provide the ability to select `Scope` of the catalog. When you have added a catalog from the **Cluster** scope, it is defaulted to `Cluster`. Select the Helm version that will be used to launch all of the apps in the catalog. For more information about the Helm version, refer to [this section.](helm-charts-in-rancher.md#catalog-helm-deployment-versions)
 5. Click **Create**.
 
-**Result**: Your custom cluster catalog is added to Rancher. Once it is in `Active` state, it has completed synchronization and you will be able to start deploying  [applications in any project in that cluster](../../../pages-for-subheaders/helm-charts-in-rancher.md) from this catalog.
+**Result**: Your custom cluster catalog is added to Rancher. Once it is in `Active` state, it has completed synchronization and you will be able to start deploying  [applications in any project in that cluster](helm-charts-in-rancher.md) from this catalog.
 
 ## Adding Project Level Catalogs
 
@@ -80,10 +80,10 @@ _Available as of v2.2.0_
 1. From the **Global** view, navigate to your project that you want to start adding custom catalogs.
 2. Choose the **Tools > Catalogs** in the navigation bar.
 2. Click **Add Catalog**.
-3. Complete the form. By default, the form will provide the ability to select `Scope` of the catalog. When you have added a catalog from the **Project** scope, it is defaulted to `Cluster`. Select the Helm version that will be used to launch all of the apps in the catalog. For more information about the Helm version, refer to [this section.](../../../pages-for-subheaders/helm-charts-in-rancher.md#catalog-helm-deployment-versions)
+3. Complete the form. By default, the form will provide the ability to select `Scope` of the catalog. When you have added a catalog from the **Project** scope, it is defaulted to `Cluster`. Select the Helm version that will be used to launch all of the apps in the catalog. For more information about the Helm version, refer to [this section.](helm-charts-in-rancher.md#catalog-helm-deployment-versions)
 5. Click **Create**.
 
-**Result**: Your custom project catalog is added to Rancher. Once it is in `Active` state, it has completed synchronization and you will be able to start deploying  [applications in that project](../../../pages-for-subheaders/helm-charts-in-rancher.md) from this catalog.
+**Result**: Your custom project catalog is added to Rancher. Once it is in `Active` state, it has completed synchronization and you will be able to start deploying  [applications in that project](helm-charts-in-rancher.md) from this catalog.
 
 ## Custom Catalog Configuration Reference
 
