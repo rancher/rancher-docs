@@ -146,6 +146,11 @@ module.exports = {
               className: 'navbar__icon navbar__harvester'
             },
             {
+              href: 'https://rancherdesktop.io/',
+              label: 'Rancher Desktop',
+              className: 'navbar__icon navbar__rancher__desktop'
+            },
+            {
               type: 'html',
               value: '<hr style="margin: 0.3rem 0;">',
             },
