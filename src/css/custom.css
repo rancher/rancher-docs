@@ -243,15 +243,6 @@ a.btn.navbar__github::before {
   background-color: #7100d4;
 }
 
-.navbar__epinio:before {
-  mask: url(/static/img/header/icon-epinio.png) no-repeat 100% 100%;
-  mask-size: cover;
-  width: 35px;
-  height: 22px;
-  padding-bottom: 7px;
-  background-color: #004d93;
-}
-
 .navbar__fleet:before {
   mask: url(/static/img/header/icon-fleet.png) no-repeat 100% 100%;
   mask-size: cover;
@@ -268,6 +259,15 @@ a.btn.navbar__github::before {
   height: 22px;
   padding-bottom: 7px;
   background-color: #00a580;
+}
+
+.navbar__rancher__desktop:before {
+  mask: url(/static/img/header/icon-rancher-desktop.png) no-repeat 100% 100%;
+  mask-size: cover;
+  width: 35px;
+  height: 22px;
+  padding-bottom: 7px;
+  background-color: #0081be;
 }
 
 .navbar__suse:before {
