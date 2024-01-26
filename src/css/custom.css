@@ -262,7 +262,7 @@ a.btn.navbar__github::before {
 }
 
 .navbar__rancher__desktop:before {
-  mask: url(/static/img/icon-rancher-desktop.png) no-repeat 100% 100%;
+  mask: url(/static/img/header/icon-rancher-desktop.png) no-repeat 100% 100%;
   mask-size: cover;
   width: 35px;
   height: 22px;
