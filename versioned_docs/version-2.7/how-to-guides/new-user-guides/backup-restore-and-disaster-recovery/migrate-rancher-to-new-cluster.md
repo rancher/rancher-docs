@@ -11,7 +11,7 @@ If you are migrating Rancher to a new Kubernetes cluster, you don't need to inst
 
 ### Prerequisites
 
-These instructions assume that you have [created a backup](back-up-rancher.md) and  already installed a new Kubernetes cluster where Rancher will be deployed. The backup is specific to the Rancher application and can only migrate the Rancher application. 
+These instructions assume that you have [created a backup](back-up-rancher.md) and  already installed a new Kubernetes cluster where Rancher will be deployed. The backup is specific to the Rancher application and can only migrate the Rancher application.
 
 :::caution
 
@@ -21,12 +21,9 @@ It is required to use the same hostname that was set as the server URL in the fi
 
 Rancher version must be v2.5.0 and up
 
-Rancher can be installed on any Kubernetes cluster, including hosted Kubernetes clusters such as Amazon EKS clusters. For help installing Kubernetes, refer to the documentation of the Kubernetes distribution. One of Rancher's Kubernetes distributions may also be used:
+Rancher can be installed on any Kubernetes cluster, including hosted Kubernetes clusters such as Amazon EKS clusters. For help installing Kubernetes, refer to the documentation of the Kubernetes distribution. A Rancher-created Kubernetes distributions such as, but not limited to, [RKE](https://rke.docs.rancher.com/installation) or [K3s](https://docs.k3s.io/installation) may also be used.
 
-- [RKE Kubernetes installation docs](https://rancher.com/docs/rke/latest/en/installation/)
-- [K3s Kubernetes installation docs](https://rancher.com/docs/k3s/latest/en/installation/)
-
-Since Rancher can be installed on any Kubernetes cluster, you can use this backup and restore method to migrate Rancher from one Kubernetes cluster to any other Kubernetes cluster. This method *only* migrates Rancher-related resources and won't affect other applications on the cluster. Refer to the [support matrix](https://www.suse.com/lifecycle/) to identify which Kubernetes cluster types and versions are supported for your Rancher version. 
+Since Rancher can be installed on any Kubernetes cluster, you can use this backup and restore method to migrate Rancher from one Kubernetes cluster to any other Kubernetes cluster. This method *only* migrates Rancher-related resources and won't affect other applications on the cluster. Refer to the [support matrix](https://www.suse.com/lifecycle/) to identify which Kubernetes cluster types and versions are supported for your Rancher version.
 
 
 ### 1. Install the rancher-backup Helm chart
@@ -160,7 +157,7 @@ Kubernetes v1.22, available as an experimental feature of v2.6.3, does not suppo
 
 ### 3. Install cert-manager
 
-Follow the steps to [install cert-manager](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#4-install-cert-manager) in the documentation about installing cert-manager on Kubernetes.
+Follow the steps to [install cert-manager](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md#4-install-cert-manager) in the documentation about installing cert-manager on Kubernetes.
 
 ### 4. Bring up Rancher with Helm
 

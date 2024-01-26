@@ -34,21 +34,21 @@ The Rancher API server is built on top of an embedded Kubernetes API server and 
 
 ### Authorization and Role-Based Access Control
 
-- **User management:** The Rancher API server [manages user identities](../pages-for-subheaders/authentication-config.md) that correspond to external authentication providers like Active Directory or GitHub, in addition to local users.
-- **Authorization:** The Rancher API server manages [access control](../pages-for-subheaders/manage-role-based-access-control-rbac.md) and [security](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) policies.
+- **User management:** The Rancher API server [manages user identities](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/authentication-config.md) that correspond to external authentication providers like Active Directory or GitHub, in addition to local users.
+- **Authorization:** The Rancher API server manages [access control](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md) and [security](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) policies.
 
 ### Working with Kubernetes
 
-- **Provisioning Kubernetes clusters:** The Rancher API server can [provision Kubernetes](../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md) on existing nodes, or perform [Kubernetes upgrades.](installation-and-upgrade/upgrade-and-roll-back-kubernetes.md)
-- **Catalog management:** Rancher provides the ability to use a [catalog of Helm charts](../pages-for-subheaders/helm-charts-in-rancher.md) that make it easy to repeatedly deploy applications.
-- **Managing projects:** A project is a group of multiple namespaces and access control policies within a cluster. A project is a Rancher concept, not a Kubernetes concept, which allows you to manage multiple namespaces as a group and perform Kubernetes operations in them. The Rancher UI provides features for [project administration](../pages-for-subheaders/manage-projects.md) and for [managing applications within projects.](../pages-for-subheaders/kubernetes-resources-setup.md)
-- **Fleet Continuous Delivery:** Within Rancher, you can leverage [Fleet Continuous Delivery](../pages-for-subheaders/fleet-gitops-at-scale.md) to deploy applications from git repositories, without any manual operation, to targeted downstream Kubernetes clusters.
-- **Istio:** Our [integration with Istio](../pages-for-subheaders/istio.md) is designed so that a Rancher operator, such as an administrator or cluster owner, can deliver Istio to developers. Then developers can use Istio to enforce security policies, troubleshoot problems, or manage traffic for green/blue deployments, canary deployments, or A/B testing.
+- **Provisioning Kubernetes clusters:** The Rancher API server can [provision Kubernetes](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md) on existing nodes, or perform [Kubernetes upgrades.](installation-and-upgrade/upgrade-and-roll-back-kubernetes.md)
+- **Catalog management:** Rancher provides the ability to use a [catalog of Helm charts](../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md) that make it easy to repeatedly deploy applications.
+- **Managing projects:** A project is a group of multiple namespaces and access control policies within a cluster. A project is a Rancher concept, not a Kubernetes concept, which allows you to manage multiple namespaces as a group and perform Kubernetes operations in them. The Rancher UI provides features for [project administration](../how-to-guides/advanced-user-guides/manage-projects/manage-projects.md) and for [managing applications within projects.](../how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-resources-setup.md)
+- **Fleet Continuous Delivery:** Within Rancher, you can leverage [Fleet Continuous Delivery](../integrations-in-rancher/fleet-gitops-at-scale/fleet-gitops-at-scale.md) to deploy applications from git repositories, without any manual operation, to targeted downstream Kubernetes clusters.
+- **Istio:** Our [integration with Istio](../integrations-in-rancher/istio/istio.md) is designed so that a Rancher operator, such as an administrator or cluster owner, can deliver Istio to developers. Then developers can use Istio to enforce security policies, troubleshoot problems, or manage traffic for green/blue deployments, canary deployments, or A/B testing.
 
 ### Working with Cloud Infrastructure
 
 - **Tracking nodes:** The Rancher API server tracks identities of all the [nodes](../how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools.md) in all clusters.
-- **Setting up infrastructure:**  When configured to use a cloud provider, Rancher can dynamically provision [new nodes](../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md) and [persistent storage](../pages-for-subheaders/create-kubernetes-persistent-storage.md) in the cloud.
+- **Setting up infrastructure:**  When configured to use a cloud provider, Rancher can dynamically provision [new nodes](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md) and [persistent storage](../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md) in the cloud.
 
 ### Cluster Visibility
 
@@ -58,9 +58,9 @@ The Rancher API server is built on top of an embedded Kubernetes API server and 
 
 ## Editing Downstream Clusters with Rancher
 
-The options and settings available for an existing cluster change based on the method that you used to provision it. For example, only clusters [provisioned by RKE](../pages-for-subheaders/launch-kubernetes-with-rancher.md) have **Cluster Options** available for editing.
+The options and settings available for an existing cluster change based on the method that you used to provision it. For example, only clusters [provisioned by RKE](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) have **Cluster Options** available for editing.
 
-After a cluster is created with Rancher, a cluster administrator can manage cluster membership or manage node pools, among [other options.](../pages-for-subheaders/cluster-configuration.md)
+After a cluster is created with Rancher, a cluster administrator can manage cluster membership or manage node pools, among [other options.](../reference-guides/cluster-configuration/cluster-configuration.md)
 
 The following table summarizes the options and settings available for each cluster type:
 

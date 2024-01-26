@@ -132,18 +132,11 @@ The following table summarizes the different features available for each CNI net
 
 - Ingress/Egress Policies: This feature allows you to manage routing control for both Kubernetes and non-Kubernetes communications.
 
-#### CNI Community Popularity
+### CNI Community Popularity
 
-The following table summarizes different GitHub metrics to give you an idea of each project's popularity and activity. This data was collected in January 2020.
+import CNIPopularityTable from '/shared-files/_cni-popularity.md';
 
-| Provider | Project | Stars | Forks | Contributors |
-| ---- | ---- | ---- | ---- | ---- |
-| Canal | https://github.com/projectcalico/canal | 614 | 89 | 19 |
-| flannel | https://github.com/coreos/flannel | 4977 | 1.4k | 140 |
-| Calico | https://github.com/projectcalico/calico | 1534 | 429 | 135 |
-| Weave | https://github.com/weaveworks/weave/ | 5737 | 559 | 73 |
-
-<br/>
+<CNIPopularityTable />
 
 ### Which CNI Provider Should I Use?
 

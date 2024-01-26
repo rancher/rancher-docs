@@ -26,7 +26,7 @@ The etcd database requires an odd number of nodes so that it can always elect a 
 
 ### 1. Set up Linux Nodes
 
-Make sure that your nodes fulfill the general installation requirements for [OS, container runtime, hardware, and networking.](../../../pages-for-subheaders/installation-requirements.md)
+Make sure that your nodes fulfill the general installation requirements for [OS, container runtime, hardware, and networking.](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md)
 
 For an example of one way to set up Linux nodes, refer to this [tutorial](../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md) for setting up nodes as instances in Amazon EC2.
 

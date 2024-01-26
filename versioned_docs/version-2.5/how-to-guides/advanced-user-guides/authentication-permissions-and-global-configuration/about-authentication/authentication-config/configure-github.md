@@ -8,7 +8,7 @@ title: Configure GitHub
 
 In environments using GitHub, you can configure Rancher to allow sign on using GitHub credentials.
 
->**Prerequisites:** Read [External Authentication Configuration and Principal Users](../../../../../pages-for-subheaders/about-authentication.md#external-authentication-configuration-and-principal-users).
+>**Prerequisites:** Read [External Authentication Configuration and Principal Users](../about-authentication.md#external-authentication-configuration-and-principal-users).
 
 1.  Sign into Rancher using a local user assigned the `administrator` role (i.e., the _local principal_).
 

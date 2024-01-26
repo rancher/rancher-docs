@@ -20,7 +20,7 @@ Logging is helpful because it allows you to:
 
 Rancher can integrate with Elasticsearch, splunk, kafka, syslog, and fluentd.
 
-For more information, refer to the logging documentation [here.](../pages-for-subheaders/logging.md)
+For more information, refer to the logging documentation [here.](../explanations/integrations-in-rancher/logging/logging.md)
 
 ## Monitoring and Alerts
 
@@ -32,7 +32,7 @@ Notifiers are services that inform you of alert events. You can configure notifi
 
 Alerts are rules that trigger those notifications. Before you can receive alerts, you must configure one or more notifier in Rancher. The scope for alerts can be set at either the cluster or project level.
 
-For more information, refer to the monitoring documentation [here.](../pages-for-subheaders/monitoring-and-alerting.md)
+For more information, refer to the monitoring documentation [here.](../explanations/integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md)
 
 ## Istio
 
@@ -40,7 +40,7 @@ For more information, refer to the monitoring documentation [here.](../pages-for
 
 Rancher's integration with Istio was improved in Rancher v2.5.
 
-For more information, refer to the Istio documentation [here.](../pages-for-subheaders/istio.md)
+For more information, refer to the Istio documentation [here.](../explanations/integrations-in-rancher/istio/istio.md)
 
 ## OPA Gatekeeper
 
@@ -50,4 +50,4 @@ For more information, refer to the Istio documentation [here.](../pages-for-subh
 
 Rancher can run a security scan to check whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark.
 
-For more information, refer to the CIS scan documentation [here.](../pages-for-subheaders/cis-scan-guides.md)
+For more information, refer to the CIS scan documentation [here.](../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md)

@@ -15,13 +15,13 @@ Deploy a workload to run an application in one or more containers.
 
 1. Enter a **Name** for the workload.
 
-1. Select a [workload type](../../../../pages-for-subheaders/workloads-and-pods.md). The workload defaults to a scalable deployment, but you can change the workload type by clicking **More options.**
+1. Select a [workload type](workloads-and-pods.md). The workload defaults to a scalable deployment, but you can change the workload type by clicking **More options.**
 
 1. From the **Docker Image** field, enter the name of the Docker image that you want to deploy to the project, optionally prefacing it with the registry host (e.g. `quay.io`, `registry.gitlab.com`, etc.). During deployment, Rancher pulls this image from the specified public or private registry. If no registry host is provided, Rancher will pull the image from [Docker Hub](https://hub.docker.com/explore/). Enter the name exactly as it appears in the registry server, including any required path, and optionally including the desired tag (e.g. `registry.gitlab.com/user/path/image:tag`). If no tag is provided, the `latest` tag will be automatically used.
 
 1. Either select an existing namespace, or click **Add to a new namespace** and enter a new namespace.
 
-1. Click **Add Port** to enter a port mapping, which enables access to the application inside and outside of the cluster . For more information, see [Services](../../../../pages-for-subheaders/workloads-and-pods.md#services).
+1. Click **Add Port** to enter a port mapping, which enables access to the application inside and outside of the cluster . For more information, see [Services](workloads-and-pods.md#services).
 
 1. Configure the remaining options:
 
@@ -45,7 +45,7 @@ Deploy a workload to run an application in one or more containers.
         >
         >- In [Amazon AWS](https://aws.amazon.com/), the nodes must be in the same Availability Zone and possess IAM permissions to attach/unattach volumes.
         >
-        >- The cluster must be using the [AWS cloud provider](https://github.com/kubernetes/website/blob/release-1.18/content/en/docs/concepts/cluster-administration/cloud-providers.md#aws) option. For more information on enabling this option see [Creating an Amazon EC2 Cluster](../../kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md) or [Creating a Custom Cluster](../../../../pages-for-subheaders/use-existing-nodes.md).
+        >- The cluster must be using the [AWS cloud provider](https://github.com/kubernetes/website/blob/release-1.18/content/en/docs/concepts/cluster-administration/cloud-providers.md#aws) option. For more information on enabling this option see [Creating an Amazon EC2 Cluster](../../kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md) or [Creating a Custom Cluster](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md).
 
 
 1. Click **Show Advanced Options** and configure:

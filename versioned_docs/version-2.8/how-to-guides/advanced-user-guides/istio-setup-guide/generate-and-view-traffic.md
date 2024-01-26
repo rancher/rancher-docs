@@ -1,5 +1,5 @@
 ---
-title: 6. Generate and View Traffic
+title: Generate and View Traffic from Istio
 ---
 
 <head>

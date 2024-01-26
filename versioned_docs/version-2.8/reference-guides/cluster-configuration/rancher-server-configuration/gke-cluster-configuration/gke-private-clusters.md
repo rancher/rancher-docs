@@ -30,7 +30,7 @@ This scenario is not officially supported, but is described for cases in which u
 
 :::
 
-If restricting both incoming and outgoing traffic to nodes is a requirement, follow the air-gapped installation instructions to set up a private container image [registry](../../../../pages-for-subheaders/air-gapped-helm-cli-install.md) on the VPC where the cluster is going to be, allowing the cluster nodes to access and download the images they need to run the cluster agent. If the control plane endpoint is also private, Rancher will need [direct access](#direct-access) to it.
+If restricting both incoming and outgoing traffic to nodes is a requirement, follow the air-gapped installation instructions to set up a private container image [registry](../../../../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/air-gapped-helm-cli-install.md) on the VPC where the cluster is going to be, allowing the cluster nodes to access and download the images they need to run the cluster agent. If the control plane endpoint is also private, Rancher will need [direct access](#direct-access) to it.
 
 ### Private Control Plane Endpoint
 

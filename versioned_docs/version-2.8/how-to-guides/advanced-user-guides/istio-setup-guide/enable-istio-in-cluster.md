@@ -1,5 +1,5 @@
 ---
-title: 1. Enable Istio in the Cluster
+title: Enable Istio in the Cluster
 ---
 
 <head>
@@ -23,11 +23,11 @@ title: 1. Enable Istio in the Cluster
 1. If you have not already installed your own monitoring app, you will be prompted to install the rancher-monitoring app. Optional: Set your Selector or Scrape config options on rancher-monitoring app install.
 1. Optional: Configure member access and [resource limits](../../../integrations-in-rancher/istio/cpu-and-memory-allocations.md) for the Istio components. Ensure you have enough resources on your worker nodes to enable Istio.
 1. Optional: Make additional configuration changes to values.yaml if needed.
-1. Optional: Add further resources or configuration via the [overlay file](../../../pages-for-subheaders/configuration-options.md#overlay-file).
+1. Optional: Add further resources or configuration via the [overlay file](../../../integrations-in-rancher/istio/configuration-options/configuration-options.md#overlay-file).
 1. Click **Install**.
 
 **Result:** Istio is installed at the cluster level.
 
 ## Additional Config Options
 
-For more information on configuring Istio, refer to the [configuration reference.](../../../pages-for-subheaders/configuration-options.md)
+For more information on configuring Istio, refer to the [configuration reference.](../../../integrations-in-rancher/istio/configuration-options/configuration-options.md)

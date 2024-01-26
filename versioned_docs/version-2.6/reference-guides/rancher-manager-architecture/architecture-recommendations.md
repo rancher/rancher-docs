@@ -57,7 +57,7 @@ We recommend the following configurations for the load balancer and Ingress cont
 
 It is strongly recommended to install Rancher on a Kubernetes cluster on hosted infrastructure such as Amazon's EC2 or Google Compute Engine.
 
-For the best performance and greater security, we recommend a dedicated Kubernetes cluster for the Rancher management server. Running user workloads on this cluster is not advised. After deploying Rancher, you can [create or import clusters](../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md) for running your workloads.
+For the best performance and greater security, we recommend a dedicated Kubernetes cluster for the Rancher management server. Running user workloads on this cluster is not advised. After deploying Rancher, you can [create or import clusters](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md) for running your workloads.
 
 ## Recommended Node Roles for Kubernetes Installations
 
@@ -99,7 +99,7 @@ With that said, it is safe to use all three roles on three nodes when setting up
 
 Because no additional workloads will be deployed on the Rancher server cluster, in most cases it is not necessary to use the same architecture that we recommend for the scalability and reliability of downstream clusters.
 
-For more best practices for downstream clusters, refer to the [production checklist](../../pages-for-subheaders/checklist-for-production-ready-clusters.md) or our [best practices guide.](../../pages-for-subheaders/best-practices.md)
+For more best practices for downstream clusters, refer to the [production checklist](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters/checklist-for-production-ready-clusters.md) or our [best practices guide.](../best-practices/best-practices.md)
 
 ## Architecture for an Authorized Cluster Endpoint (ACE)
 

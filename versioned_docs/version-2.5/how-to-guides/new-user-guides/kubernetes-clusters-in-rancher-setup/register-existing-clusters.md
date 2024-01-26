@@ -20,7 +20,7 @@ The control that Rancher has to manage a registered cluster depends on the type 
 
 Registered RKE Kubernetes clusters must have all three node roles - etcd, controlplane and worker. A cluster with only controlplane components cannot be registered in Rancher.
 
-For more information on RKE node roles, see the [best practices.](../../../pages-for-subheaders/checklist-for-production-ready-clusters.md#cluster-architecture)
+For more information on RKE node roles, see the [best practices.](checklist-for-production-ready-clusters/checklist-for-production-ready-clusters.md#cluster-architecture)
 
 ### Permissions
 
@@ -160,9 +160,9 @@ Greater management capabilities are now available for [registered GKE clusters.]
 After registering a cluster, the cluster owner can:
 
 - [Manage cluster access](../../advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md) through role-based access control
-- Enable [monitoring, alerts and notifiers](../../../pages-for-subheaders/monitoring-and-alerting.md)
-- Enable [logging](../../../pages-for-subheaders/logging.md)
-- Enable [Istio](../../../pages-for-subheaders/istio.md)
+- Enable [monitoring, alerts and notifiers](../../../explanations/integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md)
+- Enable [logging](../../../explanations/integrations-in-rancher/logging/logging.md)
+- Enable [Istio](../../../explanations/integrations-in-rancher/istio/istio.md)
 - Manage projects and workloads
 
 ### Additional Features for Registered K3s Clusters
@@ -186,7 +186,7 @@ Amazon EKS clusters and GKE clusters can now be registered in Rancher. For the m
 
 When you delete an EKS cluster or GKE cluster that was created in Rancher, the cluster is destroyed. When you delete a cluster that was registered in Rancher, it is disconnected from the Rancher server, but it still exists and you can still access it in the same way you did before it was registered in Rancher.
 
-The capabilities for registered clusters are listed in the table on [this page.](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)
+The capabilities for registered clusters are listed in the table on [this page.](kubernetes-clusters-in-rancher-setup.md)
 
 </TabItem>
 <TabItem value="Rancher before v2.5.8">
@@ -199,7 +199,7 @@ Amazon EKS clusters can now be registered in Rancher. For the most part, registe
 
 When you delete an EKS cluster that was created in Rancher, the cluster is destroyed. When you delete an EKS cluster that was registered in Rancher, it is disconnected from the Rancher server, but it still exists and you can still access it in the same way you did before it was registered in Rancher.
 
-The capabilities for registered EKS clusters are listed in the table on [this page.](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)
+The capabilities for registered EKS clusters are listed in the table on [this page.](kubernetes-clusters-in-rancher-setup.md)
 
 </TabItem>
 </Tabs>

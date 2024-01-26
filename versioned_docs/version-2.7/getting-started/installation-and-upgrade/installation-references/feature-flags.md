@@ -8,7 +8,7 @@ title: Feature Flags
 
 With feature flags, you can try out optional or experimental features, and enable legacy features that are being phased out.
 
-To learn more about feature values and how to enable them, see [Enabling Experimental Features](../../../pages-for-subheaders/enable-experimental-features.md).
+To learn more about feature values and how to enable them, see [Enabling Experimental Features](../../../how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features.md).
 
 :::note
 

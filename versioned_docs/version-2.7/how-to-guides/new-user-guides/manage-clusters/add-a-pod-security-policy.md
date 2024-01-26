@@ -8,7 +8,7 @@ title: Adding a Pod Security Policy
 
 :::note Prerequisite:
 
-The options below are available only for clusters that are [launched using RKE.](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)
+The options below are available only for clusters that are [launched using RKE.](../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)
 
 :::
 
@@ -22,7 +22,7 @@ You can assign a pod security policy when you provision a cluster. However, if y
 
     :::note
 
-    This option is only available for clusters [provisioned by RKE](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md).
+    This option is only available for clusters [provisioned by RKE](../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md).
 
     :::
 

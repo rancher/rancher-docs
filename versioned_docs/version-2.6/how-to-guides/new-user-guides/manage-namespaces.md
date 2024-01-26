@@ -12,10 +12,10 @@ Although you assign resources at the project level so that each namespace in the
 
 Resources that you can assign directly to namespaces include:
 
-- [Workloads](../../pages-for-subheaders/workloads-and-pods.md)
-- [Load Balancers/Ingress](../../pages-for-subheaders/load-balancer-and-ingress-controller.md)
+- [Workloads](kubernetes-resources-setup/workloads-and-pods/workloads-and-pods.md)
+- [Load Balancers/Ingress](kubernetes-resources-setup/load-balancer-and-ingress-controller/load-balancer-and-ingress-controller.md)
 - [Service Discovery Records](kubernetes-resources-setup/create-services.md)
-- [Persistent Volume Claims](../../pages-for-subheaders/create-kubernetes-persistent-storage.md)
+- [Persistent Volume Claims](manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md)
 - [Certificates](kubernetes-resources-setup/encrypt-http-communication.md)
 - [ConfigMaps](kubernetes-resources-setup/configmaps.md)
 - [Registries](kubernetes-resources-setup/kubernetes-and-docker-registries.md)
@@ -44,7 +44,7 @@ When working with project resources that you can assign to a namespace (i.e., [w
 1. Click **Cluster > Projects/Namespaces**.
 1. Go to the project where you want to add a namespace and click **Create Namespace**. Alternately, go to **Not in a Project** to create a namespace not associated with a project.
 
-1. **Optional:** If your project has [Resource Quotas](../../pages-for-subheaders/manage-project-resource-quotas.md) in effect, you can override the default resource **Limits** (which places a cap on the resources that the namespace can consume).
+1. **Optional:** If your project has [Resource Quotas](../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md) in effect, you can override the default resource **Limits** (which places a cap on the resources that the namespace can consume).
 
 1. Enter a **Name** and then click **Create**.
 
@@ -64,7 +64,7 @@ Cluster admins and members may occasionally need to move a namespace to another 
     :::note Notes:
 
     - Don't move the namespaces in the `System` project. Moving these namespaces can adversely affect cluster networking.
-    - You cannot move a namespace into a project that already has a [resource quota](../../pages-for-subheaders/manage-project-resource-quotas.md)configured.
+    - You cannot move a namespace into a project that already has a [resource quota](../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md)configured.
     - If you move a namespace from a project that has a quota set to a project with no quota set, the quota is removed from the namespace.
 
 1. Choose a new project for the new namespace and then click **Move**. Alternatively, you can remove the namespace from all projects by selecting **None**.
