@@ -47,6 +47,7 @@ const sidebars = {
                 "getting-started/quick-start-guides/deploy-rancher-manager/digitalocean",
                 "getting-started/quick-start-guides/deploy-rancher-manager/gcp",
                 "getting-started/quick-start-guides/deploy-rancher-manager/hetzner-cloud",
+                "getting-started/quick-start-guides/deploy-rancher-manager/linode",
                 "getting-started/quick-start-guides/deploy-rancher-manager/vagrant",
                 "getting-started/quick-start-guides/deploy-rancher-manager/equinix-metal",
                 "getting-started/quick-start-guides/deploy-rancher-manager/outscale-qs",

@@ -23,7 +23,7 @@ To create, edit, or delete drivers, you need _one_ of the following permissions:
 
 ## Activating/Deactivating Node Drivers
 
-By default, Rancher only activates drivers for the most popular cloud providers, Amazon EC2, Azure, DigitalOcean and vSphere. If you want to show or hide any node driver, you can change its status.
+By default, Rancher only activates drivers for the most popular cloud providers, Amazon EC2, Azure, DigitalOcean, Linode and vSphere. If you want to show or hide any node driver, you can change its status.
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 
