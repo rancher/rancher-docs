@@ -19,8 +19,8 @@ Rancher Prime integrates with the [Azure Marketplace](https://azuremarketplace.m
 
 ## How to Use
 
-1. Complete the [prerequisite steps](../integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites.md).
-2. [Install the Rancher Prime PAYG offering on the Azure Marketplace](../integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime.md).
+1. Complete the [prerequisite steps](prerequisites.md).
+2. [Install the Rancher Prime PAYG offering on the Azure Marketplace](installing-rancher-prime.md).
 
 ## FAQ
 
@@ -202,7 +202,7 @@ No. You need to deploy Rancher Prime with the Azure Marketplace listing and migr
 
 #### How do I get support?
 
-It is very simple to [open a support case](https://scc.suse.com/cloudsupport) with SUSE for Rancher Prime. Create a ‘supportconfig’ via the Rancher UI (click Get Support under the hamburger menu and follow instructions), then upload the ‘supportconfig’ output to the SUSE Customer Center. If the billing mechanism is active, a support case will be opened. See Supportconfig bundle in the Rancher [documentation](../integrations-in-rancher/cloud-marketplace/supportconfig.md) for more details.
+It is very simple to [open a support case](https://scc.suse.com/cloudsupport) with SUSE for Rancher Prime. Create a ‘supportconfig’ via the Rancher UI (click Get Support under the hamburger menu and follow instructions), then upload the ‘supportconfig’ output to the SUSE Customer Center. If the billing mechanism is active, a support case will be opened. See Supportconfig bundle in the Rancher [documentation](../supportconfig.md) for more details.
 
 :::note
 
@@ -212,7 +212,7 @@ For deployments where Rancher Prime is managing multiple downstream clusters, be
 
 #### What are the resource requirements for installing Rancher on AKS?
 
-Check the documentation for [best practices](../pages-for-subheaders/installation-requirements.md#hosted-kubernetes).
+Check the documentation for [best practices](../../../pages-for-subheaders/installation-requirements.md#hosted-kubernetes).
 
 #### Is there any difference between Rancher Prime from Azure Marketplace and the versions I can run in my own data center?
 
@@ -232,4 +232,4 @@ If the Racher Prime cluster is offline or disconnected from the Azure billing fr
 
 #### How do I get fixes and updates for Rancher?
 
-To update to the latest version of the Rancher Prime PAYG offering supported in the marketplace listing, please see [upgrading Rancher Prime PAYG cluster in Azure](../integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/upgrading-rancher-payg-cluster.md).
+To update to the latest version of the Rancher Prime PAYG offering supported in the marketplace listing, please see [upgrading Rancher Prime PAYG cluster in Azure](upgrading-rancher-payg-cluster.md).
