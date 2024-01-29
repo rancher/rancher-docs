@@ -3,7 +3,7 @@ title: AWS Marketplace Pay-as-you-go (PAYG) Integration
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/aws-marketplace-payg-integration"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/aws-marketplace-payg-integration"/>
 </head>
 
 ## Overview
