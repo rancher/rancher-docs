@@ -212,7 +212,7 @@ For deployments where Rancher Prime is managing multiple downstream clusters, be
 
 #### What are the resource requirements for installing Rancher on AKS?
 
-Check the documentation for [best practices](../../../pages-for-subheaders/installation-requirements.md#hosted-kubernetes).
+Check the documentation for [best practices](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md#hosted-kubernetes).
 
 #### Is there any difference between Rancher Prime from Azure Marketplace and the versions I can run in my own data center?
 
