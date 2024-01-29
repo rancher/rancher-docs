@@ -3,7 +3,7 @@ title: Configuration Options
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/configuration-options"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/istio/configuration-options"/>
 </head>
 
 ### Egress Support

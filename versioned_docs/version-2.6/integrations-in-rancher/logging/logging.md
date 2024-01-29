@@ -4,7 +4,7 @@ description: Rancher integrates with popular logging services. Learn the require
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/logging"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/logging"/>
 </head>
 
 The [Logging operator](https://kube-logging.github.io/docs/) now powers Rancher's logging solution in place of the former, in-house solution.

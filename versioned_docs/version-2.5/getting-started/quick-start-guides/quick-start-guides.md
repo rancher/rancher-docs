@@ -3,7 +3,7 @@ title: Rancher Deployment Quick Start Guides
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/quick-start-guides"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides"/>
 </head>
 
 >**Note:** The intent of these guides is to quickly launch a sandbox that you can use to evaluate Rancher. These guides are not intended for production environments. For comprehensive setup instructions, see [Installation](../installation-and-upgrade/installation-and-upgrade.md).

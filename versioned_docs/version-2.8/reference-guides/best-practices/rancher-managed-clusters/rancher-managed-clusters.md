@@ -3,7 +3,7 @@ title: Best Practices for Rancher Managed Clusters
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/rancher-managed-clusters"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/best-practices/rancher-managed-clusters"/>
 </head>
 
 ### Logging

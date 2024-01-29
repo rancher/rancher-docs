@@ -3,7 +3,7 @@ title: Helm Charts in Rancher
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/helm-charts-in-rancher"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/helm-charts-in-rancher"/>
 </head>
 
 In this section, you'll learn how to manage Helm chart repositories and applications in Rancher. Helm chart repositories are managed using **Apps & Marketplace** (Rancher before v2.6.5) or **Apps** (Rancher v2.6.5+). It uses a catalog-like system to import bundles of charts from repositories and then uses those charts to either deploy custom Helm applications or Rancher's tools such as Monitoring or Istio. Rancher tools come as pre-loaded repositories which deploy as standalone Helm charts. Any additional repositories are only added to the current cluster.

@@ -4,7 +4,7 @@ description: Rancher enables the use of catalogs to repeatedly deploy applicatio
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/helm-charts-in-rancher"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/helm-charts-in-rancher"/>
 </head>
 
 Rancher provides the ability to use a catalog of Helm charts that make it easy to repeatedly deploy applications.

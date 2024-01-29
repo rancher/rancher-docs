@@ -3,7 +3,7 @@ title: CIS Scans
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/cis-scans"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cis-scans"/>
 </head>
 
 Rancher can run a security scan to check whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark. The CIS scans can run on any Kubernetes cluster, including hosted Kubernetes providers such as EKS, AKS, and GKE.

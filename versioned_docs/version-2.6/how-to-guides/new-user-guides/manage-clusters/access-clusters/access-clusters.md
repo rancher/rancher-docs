@@ -3,7 +3,7 @@ title: Cluster Access
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/access-clusters"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/access-clusters"/>
 </head>
 
 This section is about what tools can be used to access clusters managed by Rancher.

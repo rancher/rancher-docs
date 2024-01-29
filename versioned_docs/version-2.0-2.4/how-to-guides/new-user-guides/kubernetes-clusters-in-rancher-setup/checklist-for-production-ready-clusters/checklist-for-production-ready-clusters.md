@@ -3,7 +3,7 @@ title: Checklist for Production-Ready Clusters
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/checklist-for-production-ready-clusters"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters"/>
 </head>
 
 In this section, we recommend best practices for creating the production-ready Kubernetes clusters that will run your apps and services.

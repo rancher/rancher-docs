@@ -3,7 +3,7 @@ title: Setup Guide
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/istio-setup-guide"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/istio-setup-guide"/>
 </head>
 
 This section describes how to enable Istio and start using it in your projects.

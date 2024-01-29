@@ -3,7 +3,7 @@ title: CIS Scan Guides
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/cis-scan-guides"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/cis-scan-guides"/>
 </head>
 
 - [Install rancher-cis-benchmark](install-rancher-cis-benchmark.md)

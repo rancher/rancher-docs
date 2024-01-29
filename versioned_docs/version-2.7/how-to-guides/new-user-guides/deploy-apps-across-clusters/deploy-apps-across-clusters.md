@@ -3,7 +3,7 @@ title: Deploying Applications across Clusters
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/deploy-apps-across-clusters"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/deploy-apps-across-clusters"/>
 </head>
 
 Rancher offers several ways to deploy applications across clusters, depending on version.

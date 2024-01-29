@@ -3,7 +3,7 @@ title: Launching Kubernetes with Rancher
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/launch-kubernetes-with-rancher"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/launch-kubernetes-with-rancher"/>
 </head>
 
 You can have Rancher launch a Kubernetes cluster using any nodes you want. When Rancher deploys Kubernetes onto these nodes, you can choose between [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/) (RKE) or [RKE2](https://docs.rke2.io) distributions. Rancher can launch Kubernetes on any computers, including:

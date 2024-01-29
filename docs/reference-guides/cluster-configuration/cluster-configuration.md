@@ -3,7 +3,7 @@ title: Cluster Configuration
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/cluster-configuration"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration"/>
 </head>
 
 After you provision a Kubernetes cluster using Rancher, you can still edit options and settings for the cluster.

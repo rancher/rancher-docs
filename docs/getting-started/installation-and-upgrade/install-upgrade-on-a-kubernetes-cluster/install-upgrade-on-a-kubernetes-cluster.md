@@ -4,7 +4,7 @@ description: Learn how to install Rancher in development and production environm
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster"/>
 </head>
 
 In this section, you'll learn how to deploy Rancher on a Kubernetes cluster using the Helm CLI.

@@ -3,7 +3,7 @@ title: Rancher Server Configuration
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/rancher-server-configuration"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration"/>
 </head>
 
 - [RKE1 Cluster Configuration](rke1-cluster-configuration.md)
