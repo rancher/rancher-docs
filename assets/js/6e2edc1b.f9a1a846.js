@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/azure-marketplace-payg-integration.md",
     "sourceDirName": "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration",
     "slug": "/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/",
-    "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/",
+    "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/azure-marketplace-payg-integration.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1706546529,
-    "formattedLastUpdatedAt": "2024年1月29日",
+    "lastUpdatedAt": 1706552981,
+    "formattedLastUpdatedAt": "Jan 29, 2024",
     "frontMatter": {
         "title": "Azure Marketplace Pay-as-you-go (PAYG) Integration"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Common Issues for Rancher Prime PAYG on AWS",
-        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/common-issues"
+        "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/common-issues"
     },
     "next": {
         "title": "Prerequisites",
-        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites"
+        "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites"
     }
 };
 const assets = {};
@@ -601,12 +601,12 @@ function MDXContent(_param) {
         parentName: "ol"
     }, `Complete the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites"
+        "href": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites"
     }, `prerequisite steps`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime"
+        "href": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime"
     }, `Install the Rancher Prime PAYG offering on the Azure Marketplace`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "faq"
     }, `FAQ`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The following is a list of frequently asked questions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
@@ -912,7 +912,7 @@ A temporary deployment of Rancher on 20 nodes for 2 weeks (336 hours).`)), /*#__
         "href": "https://scc.suse.com/cloudsupport"
     }, `open a support case`), ` with SUSE for Rancher Prime. Create a ‘supportconfig’ via the Rancher UI (click Get Support under the hamburger menu and follow instructions), then upload the ‘supportconfig’ output to the SUSE Customer Center. If the billing mechanism is active, a support case will be opened. See Supportconfig bundle in the Rancher `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../supportconfig.md"
+        "href": "/v2.7/integrations-in-rancher/cloud-marketplace/supportconfig"
     }, `documentation`), ` for more details.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -921,7 +921,7 @@ A temporary deployment of Rancher on 20 nodes for 2 weeks (336 hours).`)), /*#__
         "id": "what-are-the-resource-requirements-for-installing-rancher-on-aks"
     }, `What are the resource requirements for installing Rancher on AKS?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Check the documentation for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../../pages-for-subheaders/installation-requirements.md#hosted-kubernetes"
+        "href": "/v2.7/getting-started/installation-and-upgrade/installation-requirements/#hosted-kubernetes"
     }, `best practices`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "is-there-any-difference-between-rancher-prime-from-azure-marketplace-and-the-versions-i-can-run-in-my-own-data-center"
     }, `Is there any difference between Rancher Prime from Azure Marketplace and the versions I can run in my own data center?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher Prime available in the Azure Marketplace is the same product, with the same functionality that you would install manually in the cloud or on-premises. The only difference between deploying manually and deploying via the marketplace listing is the billing route.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
@@ -934,7 +934,7 @@ A temporary deployment of Rancher on 20 nodes for 2 weeks (336 hours).`)), /*#__
         "id": "how-do-i-get-fixes-and-updates-for-rancher"
     }, `How do I get fixes and updates for Rancher?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To update to the latest version of the Rancher Prime PAYG offering supported in the marketplace listing, please see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/upgrading-rancher-payg-cluster"
+        "href": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/upgrading-rancher-payg-cluster"
     }, `upgrading Rancher Prime PAYG cluster in Azure`), `.`));
 }
 MDXContent.isMDXComponent = true;

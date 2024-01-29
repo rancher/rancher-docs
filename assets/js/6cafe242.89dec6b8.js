@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime.md",
     "sourceDirName": "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration",
     "slug": "/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime",
-    "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime",
+    "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1705517623,
-    "formattedLastUpdatedAt": "2024年1月17日",
+    "lastUpdatedAt": 1706325485,
+    "formattedLastUpdatedAt": "Jan 27, 2024",
     "frontMatter": {
         "title": "Installing Rancher Prime PAYG on Azure"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Prerequisites",
-        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites"
+        "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites"
     },
     "next": {
         "title": "Upgrading Rancher Prime PAYG Cluster in Azure",
-        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/upgrading-rancher-payg-cluster"
+        "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/upgrading-rancher-payg-cluster"
     }
 };
 const assets = {};
@@ -550,14 +550,14 @@ function MDXContent(_param) {
         parentName: "p"
     }, `<host-name>`), ` is the hostname you entered when you `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "#installing-rancher"
-    }, `installed Rancher`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "href": "#rancher-configuration"
+    }, `configured Rancher`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
     }, `The Rancher hostname must be resolvable by public DNS. See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites"
+        "href": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites"
     }, `Prerequisites`), ` for more details.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "how-to-use-rancher"
     }, `How to Use Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After you login to Rancher Prime, you should notice the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {

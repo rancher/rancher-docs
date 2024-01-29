@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1705604516,
-    "formattedLastUpdatedAt": "Jan 18, 2024",
+    "lastUpdatedAt": 1706325485,
+    "formattedLastUpdatedAt": "Jan 27, 2024",
     "frontMatter": {
         "title": "Common Issues for Rancher Prime PAYG on Azure"
     },
@@ -362,7 +362,7 @@ function MDXContent(_param) {
         "id": "migrating-rancher-to-a-different-aks-cluster"
     }, `Migrating Rancher to a Different AKS Cluster`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you migrate Rancher to a different AKS cluster by following the steps in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../../pages-for-subheaders/backup-restore-and-disaster-recovery.md"
+        "href": "/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/"
     }, `Rancher Backups and Disaster Recovery`), `, you must reinstall Rancher Prime on the target AKS cluster after restoring from the backup. Furthermore, the restored Rancher version must not be newer than the version available in the Azure Marketplace.`));
 }
 MDXContent.isMDXComponent = true;

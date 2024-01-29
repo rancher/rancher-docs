@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[5684],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[77050],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 16072:
+/***/ 93139:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,42 +308,42 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Common Issues for Rancher Prime PAYG on Azure'
+    title: 'Common Issues for Rancher Prime PAYG on AWS'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues",
-    "id": "version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues",
-    "title": "Common Issues for Rancher Prime PAYG on Azure",
-    "description": "This page covers some common issues that might arise when setting up the Rancher Prime PAYG offering on Microsoft's Azure Marketplace.",
-    "source": "@site/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues.md",
-    "sourceDirName": "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration",
-    "slug": "/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues",
-    "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues",
+    "unversionedId": "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/common-issues",
+    "id": "version-2.7/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/common-issues",
+    "title": "Common Issues for Rancher Prime PAYG on AWS",
+    "description": "This page covers some common issues that might arise when setting up the Rancher Prime PAYG offering on Amazon's AWS Marketplace.",
+    "source": "@site/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/common-issues.md",
+    "sourceDirName": "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration",
+    "slug": "/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/common-issues",
+    "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/common-issues",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/common-issues.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1705604516,
-    "formattedLastUpdatedAt": "2024年1月18日",
+    "lastUpdatedAt": 1706325485,
+    "formattedLastUpdatedAt": "Jan 27, 2024",
     "frontMatter": {
-        "title": "Common Issues for Rancher Prime PAYG on Azure"
+        "title": "Common Issues for Rancher Prime PAYG on AWS"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Troubleshooting Rancher Prime PAYG Cluster in Azure",
-        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/troubleshooting"
+        "title": "Troubleshooting Rancher Prime PAYG Cluster in AWS",
+        "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/troubleshooting"
     },
     "next": {
-        "title": "Supportconfig Bundle",
-        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/supportconfig"
+        "title": "Azure Marketplace Pay-as-you-go (PAYG) Integration",
+        "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Migrating Rancher to a Different AKS Cluster',
-        id: 'migrating-rancher-to-a-different-aks-cluster',
+        value: 'Migrating Rancher to a different EKS Cluster',
+        id: 'migrating-rancher-to-a-different-eks-cluster',
         level: 3
     }
 ];
@@ -358,12 +358,12 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This page covers some common issues that might arise when setting up the Rancher Prime PAYG offering on Microsoft's Azure Marketplace.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "migrating-rancher-to-a-different-aks-cluster"
-    }, `Migrating Rancher to a Different AKS Cluster`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you migrate Rancher to a different AKS cluster by following the steps in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This page covers some common issues that might arise when setting up the Rancher Prime PAYG offering on Amazon's AWS Marketplace.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "migrating-rancher-to-a-different-eks-cluster"
+    }, `Migrating Rancher to a different EKS Cluster`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you migrate Rancher to a different EKS cluster by following the steps in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../../pages-for-subheaders/backup-restore-and-disaster-recovery.md"
-    }, `Rancher Backups and Disaster Recovery`), `, you must reinstall Rancher Prime on the target AKS cluster after restoring from the backup. Furthermore, the restored Rancher version must not be newer than the version available in the Azure Marketplace.`));
+        "href": "/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/"
+    }, `Rancher Backups and Disaster Recovery`), `, you must reinstall Rancher Prime on the target EKS cluster after restoring from the backup. Furthermore, the restored Rancher version must not be newer than the version available in the AWS Marketplace.`));
 }
 MDXContent.isMDXComponent = true;
 
