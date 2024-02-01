@@ -1,5 +1,5 @@
 ---
-title: SUSE Rancher AWS Marketplace Quick Start
+title: Rancher Prime AWS Marketplace Quick Start
 description: Deploy SUSE Rancher from the AWS Marketplace listing.
 ---
 
