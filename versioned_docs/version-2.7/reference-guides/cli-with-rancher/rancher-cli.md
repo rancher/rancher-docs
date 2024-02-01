@@ -72,18 +72,18 @@ The following commands are available for use in Rancher CLI.
 | `inspect [OPTIONS] [RESOURCEID RESOURCENAME]`  | Displays details about [Kubernetes resources](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#resource-types) or Rancher resources (i.e.: [projects](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md) and [workloads](../../pages-for-subheaders/workloads-and-pods.md)). Specify resources by name or ID.  |
 | `kubectl`  | Runs [kubectl commands](https://kubernetes.io/docs/reference/kubectl/overview/#operations).   |
 | `login, [l]`  | Logs into a Rancher Server. For an example, see [CLI Authentication](#cli-authentication).  |
-| machines, [machine]  | Performs operations on machines.  | <!-- Review -->
-| multiclusterapps, [multiclusterapp mcapps mcapp]  | Performs operations with multi-cluster apps.  | <!-- Review -->
-| `namespaces, [namespace]`  | Performs operations on namespaces.  | <!-- Review -->
-| `nodes, [node]`  | Performs operations on nodes.  |  <!-- Review -->
+| machines, [machine]  | Performs operations on machines.  |
+| `multiclusterapps, [multiclusterapp mcapps mcapp]`  | Performs operations with multi-cluster apps.  |
+| `namespaces, [namespace]`  | Performs operations on [namespaces](../../how-to-guides/new-user-guides/manage-namespaces.md).  |
+| `nodes, [node]`  | Performs operations on [nodes](../../how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools.md).  |
 | `projects, [project]`  | Performs operations on [projects](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md).  |
 | `ps`  | Displays [workloads](../../pages-for-subheaders/workloads-and-pods.md) in a project.  |
-| `server`  | Performs operations for the server.  | <!-- Review -->
+| `server`  | Performs operations for the server.  |
 | `settings, [setting]`  | Shows the current settings for your Rancher Server.  |
 | `ssh`  | Connects to one of your cluster nodes using the SSH protocol.  |
-| up  | Applies compose config.  | <!-- Review -->
-| wait  | Waits for resoruces clusters, app, project, multiClusterApp.  | <!-- Review -->
-| token  | Authentictes and generates new kubeconfig token.  | <!-- Review -->
+| `up`  | Applies compose config.  |
+| `wait`  | Waits for resoruces cluster, app, project, multiClusterApp.  |
+| `token`  | Authentictes and generates new kubeconfig token.  |
 | `help, [h]`  | Shows a list of commands or help for one command.  |
 
 
