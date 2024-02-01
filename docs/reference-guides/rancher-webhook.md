@@ -49,7 +49,7 @@ kubectl create -f example.yaml --as=system:serviceaccount:cattle-system:rancher-
 ```
 
 ## Customizing Rancher-Webhook Configuration
-Rancher allows users to add custom helm values to the helm installation of Rancher-Webhook. When Rancher installs the rancher-webhook chart via helm it will check for custom helm values defined in a ConfigMap with the name `rancher-config` in the `cattle-system` namespace under the data key `rancher-webhook`. The value of this key must be valid YAML.
+You can add custom Helm values when you install Rancher-Webhook via Helm. During a Helm install of the Rancher-Webhook chart, Rancher checks for custom Helm values. These custom values must be defined in a ConfigMap named `rancher-config`, in the `cattle-system` namespace, under the data key, `rancher-webhook`. The value of this key must be valid YAML.
 ``` yaml
 apiVersion: v1
 kind: ConfigMap
@@ -65,7 +65,7 @@ data:
 Rancher redeploys the Rancher-Webhook chart when changes to the ConfigMap values are detected.
 
 ### Customizing Rancher-Webhook During Rancher Installation
-You can customize the local cluster's Rancher-webhook's helm values during the initial Helm installation of the Rancher chart. All values used in the Rancher-Webhook chart can be accessed as nested variables under the `webhook` name. 
+When you use Helm to install the Rancher chart, you can add custom Helm values to the Rancher-Webhook of the local cluster. All values in the Rancher-Webhook chart are accessible as nested variables under the `webhook` name.
 These values are synced to the `rancher-config` ConfigMap during installation.
 
 ```bash
