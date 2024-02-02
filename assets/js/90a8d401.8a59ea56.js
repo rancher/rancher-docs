@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[18856],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[15002],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 18564:
+/***/ 6577:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -314,19 +314,19 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/quick-start-guides/deploy-rancher-manager/aws",
-    "id": "getting-started/quick-start-guides/deploy-rancher-manager/aws",
+    "id": "version-2.7/getting-started/quick-start-guides/deploy-rancher-manager/aws",
     "title": "Rancher AWS Quick Start Guide",
     "description": "Read this step by step Rancher AWS guide to quickly deploy a Rancher server with a single-node downstream Kubernetes cluster attached.",
-    "source": "@site/docs/getting-started/quick-start-guides/deploy-rancher-manager/aws.md",
+    "source": "@site/versioned_docs/version-2.7/getting-started/quick-start-guides/deploy-rancher-manager/aws.md",
     "sourceDirName": "getting-started/quick-start-guides/deploy-rancher-manager",
     "slug": "/getting-started/quick-start-guides/deploy-rancher-manager/aws",
-    "permalink": "/getting-started/quick-start-guides/deploy-rancher-manager/aws",
+    "permalink": "/v2.7/getting-started/quick-start-guides/deploy-rancher-manager/aws",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/getting-started/quick-start-guides/deploy-rancher-manager/aws.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/getting-started/quick-start-guides/deploy-rancher-manager/aws.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1703280782,
-    "formattedLastUpdatedAt": "Dec 22, 2023",
+    "version": "2.7",
+    "lastUpdatedAt": 1705011762,
+    "formattedLastUpdatedAt": "Jan 11, 2024",
     "frontMatter": {
         "title": "Rancher AWS Quick Start Guide",
         "description": "Read this step by step Rancher AWS guide to quickly deploy a Rancher server with a single-node downstream Kubernetes cluster attached."
@@ -334,11 +334,11 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Deploying Rancher Server",
-        "permalink": "/getting-started/quick-start-guides/deploy-rancher-manager/"
+        "permalink": "/v2.7/getting-started/quick-start-guides/deploy-rancher-manager/"
     },
     "next": {
-        "title": "Rancher AWS Marketplace Quick Start",
-        "permalink": "/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace"
+        "title": "Rancher Prime AWS Marketplace Quick Start",
+        "permalink": "/v2.7/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace"
     }
 };
 const assets = {};
@@ -394,7 +394,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `The intent of these guides is to quickly launch a sandbox that you can use to evaluate Rancher. These guides are not intended for production environments. For comprehensive setup instructions, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/getting-started/installation-and-upgrade/"
+        "href": "/v2.7/getting-started/installation-and-upgrade/"
     }, `Installation`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "prerequisites"
     }, `Prerequisites`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
@@ -569,7 +569,7 @@ workload_node_ip = yy.yy.yy.yy
         "id": "whats-next"
     }, `What's Next?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Use Rancher to create a deployment. For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/getting-started/quick-start-guides/deploy-workloads/"
+        "href": "/v2.7/getting-started/quick-start-guides/deploy-workloads/"
     }, `Creating Deployments`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "destroying-the-environment"
     }, `Destroying the Environment`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {

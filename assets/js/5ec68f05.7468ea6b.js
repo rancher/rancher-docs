@@ -340,15 +340,15 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Rancher AWS Marketplace Quick Start',
-    description: 'Use Amazon EKS to deploy Rancher server.'
+    title: 'Rancher Prime AWS Marketplace Quick Start',
+    description: 'Deploy SUSE Rancher from the AWS Marketplace listing.'
 };
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace",
     "id": "version-2.7/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace",
-    "title": "Rancher AWS Marketplace Quick Start",
-    "description": "Use Amazon EKS to deploy Rancher server.",
+    "title": "Rancher Prime AWS Marketplace Quick Start",
+    "description": "Deploy SUSE Rancher from the AWS Marketplace listing.",
     "source": "@site/versioned_docs/version-2.7/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace.md",
     "sourceDirName": "getting-started/quick-start-guides/deploy-rancher-manager",
     "slug": "/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace",
@@ -357,11 +357,11 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1701875038,
-    "formattedLastUpdatedAt": "Dec 6, 2023",
+    "lastUpdatedAt": 1706886611,
+    "formattedLastUpdatedAt": "Feb 2, 2024",
     "frontMatter": {
-        "title": "Rancher AWS Marketplace Quick Start",
-        "description": "Use Amazon EKS to deploy Rancher server."
+        "title": "Rancher Prime AWS Marketplace Quick Start",
+        "description": "Deploy SUSE Rancher from the AWS Marketplace listing."
     },
     "sidebar": "tutorialSidebar",
     "previous": {
@@ -390,16 +390,18 @@ function MDXContent(_param) {
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
         href: "https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Amazon Elastic Kubernetes Service (EKS) can quickly `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can quickly deploy Rancher Prime on Amazon Elastic Kubernetes Service (EKS.) To learn more, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://documentation.suse.com/trd/kubernetes/single-html/gs_rancher_aws-marketplace/"
-    }, `deploy Rancher to Amazon Web Services (AWS)`), `. To learn more, see our `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "href": "https://suse-enceladus.github.io/marketplace-docs/rancher-prime/aws/?repository=rancher-payg-billing-adapter-llc-prd"
+    }, `instructions`), ` under Usage Information in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://aws.amazon.com/marketplace/pp/prodview-go7ent7goo5ae"
-    }, `Amazon Marketplace listing`), `. Watch the demo for a walkthrough of AWS Marketplace SUSE Rancher setup:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_site_src_components_YouTube__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
+        "href": "https://aws.amazon.com/marketplace/pp/prodview-f2bvszurj2p2c"
+    }, `AWS Marketplace listing`), `. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h1", {
+        "id": "youtube-id9dznj7ons0m"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_site_src_components_YouTube__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
         id: "9dznJ7Ons0M",
         mdxType: "YouTube"
-    }));
+    })));
 }
 MDXContent.isMDXComponent = true;
 

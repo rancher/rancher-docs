@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[4826],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[88661],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 77120:
+/***/ 71774:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -314,31 +314,31 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/quick-start-guides/deploy-rancher-manager/azure",
-    "id": "version-2.8/getting-started/quick-start-guides/deploy-rancher-manager/azure",
+    "id": "getting-started/quick-start-guides/deploy-rancher-manager/azure",
     "title": "Rancher Azure Quick Start Guide",
     "description": "Read this step by step Rancher Azure guide to quickly deploy a Rancher server with a single-node downstream Kubernetes cluster attached.",
-    "source": "@site/versioned_docs/version-2.8/getting-started/quick-start-guides/deploy-rancher-manager/azure.md",
+    "source": "@site/docs/getting-started/quick-start-guides/deploy-rancher-manager/azure.md",
     "sourceDirName": "getting-started/quick-start-guides/deploy-rancher-manager",
     "slug": "/getting-started/quick-start-guides/deploy-rancher-manager/azure",
-    "permalink": "/v2.8/getting-started/quick-start-guides/deploy-rancher-manager/azure",
+    "permalink": "/getting-started/quick-start-guides/deploy-rancher-manager/azure",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/getting-started/quick-start-guides/deploy-rancher-manager/azure.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/getting-started/quick-start-guides/deploy-rancher-manager/azure.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1703291432,
-    "formattedLastUpdatedAt": "Dec 23, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1703280782,
+    "formattedLastUpdatedAt": "Dec 22, 2023",
     "frontMatter": {
         "title": "Rancher Azure Quick Start Guide",
         "description": "Read this step by step Rancher Azure guide to quickly deploy a Rancher server with a single-node downstream Kubernetes cluster attached."
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Rancher AWS Marketplace Quick Start",
-        "permalink": "/v2.8/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace"
+        "title": "Rancher Prime AWS Marketplace Quick Start",
+        "permalink": "/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace"
     },
     "next": {
         "title": "Rancher DigitalOcean Quick Start Guide",
-        "permalink": "/v2.8/getting-started/quick-start-guides/deploy-rancher-manager/digitalocean"
+        "permalink": "/getting-started/quick-start-guides/deploy-rancher-manager/digitalocean"
     }
 };
 const assets = {};
@@ -389,7 +389,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `The intent of these guides is to quickly launch a sandbox that you can use to evaluate Rancher. These guides are not intended for production environments. For comprehensive setup instructions, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/getting-started/installation-and-upgrade/"
+        "href": "/getting-started/installation-and-upgrade/"
     }, `Installation`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "prerequisites"
     }, `Prerequisites`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
@@ -566,7 +566,7 @@ workload_node_ip = yy.yy.yy.yy
         "id": "whats-next"
     }, `What's Next?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Use Rancher to create a deployment. For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/getting-started/quick-start-guides/deploy-workloads/"
+        "href": "/getting-started/quick-start-guides/deploy-workloads/"
     }, `Creating Deployments`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "destroying-the-environment"
     }, `Destroying the Environment`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
