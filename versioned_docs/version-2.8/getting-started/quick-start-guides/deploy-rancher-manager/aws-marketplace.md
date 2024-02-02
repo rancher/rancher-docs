@@ -1,6 +1,6 @@
 ---
-title: Rancher AWS Marketplace Quick Start
-description: Use Amazon EKS to deploy Rancher server.
+title: Rancher Prime AWS Marketplace Quick Start
+description: Deploy SUSE Rancher from the AWS Marketplace listing.
 ---
 
 <head>
@@ -9,6 +9,6 @@ description: Use Amazon EKS to deploy Rancher server.
 
 import YouTube from '@site/src/components/YouTube'
 
-Amazon Elastic Kubernetes Service (EKS) can quickly [deploy Rancher to Amazon Web Services (AWS)](https://documentation.suse.com/trd/kubernetes/single-html/gs_rancher_aws-marketplace/). To learn more, see our [Amazon Marketplace listing](https://aws.amazon.com/marketplace/pp/prodview-go7ent7goo5ae). Watch the demo for a walkthrough of AWS Marketplace SUSE Rancher setup:
+You can quickly deploy Rancher Prime on Amazon Elastic Kubernetes Service (EKS.) To learn more, see the [instructions](https://suse-enceladus.github.io/marketplace-docs/rancher-prime/aws/?repository=rancher-payg-billing-adapter-llc-prd) under Usage Information in the [AWS Marketplace listing](https://aws.amazon.com/marketplace/pp/prodview-f2bvszurj2p2c). 
 
-<YouTube id="9dznJ7Ons0M"/>
+# <YouTube id="9dznJ7Ons0M"/> 
