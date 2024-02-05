@@ -4,7 +4,7 @@ description: For development and testing environments only, use a Docker install
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/rancher-on-a-single-node-with-docker"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker"/>
 </head>
 
 Rancher can be installed by running a single Docker container.

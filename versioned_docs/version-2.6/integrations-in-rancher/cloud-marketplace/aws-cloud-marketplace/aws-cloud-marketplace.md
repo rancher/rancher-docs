@@ -3,7 +3,7 @@ title: AWS Marketplace Integration
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/aws-cloud-marketplace"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace"/>
 </head>
 
 ## Overview

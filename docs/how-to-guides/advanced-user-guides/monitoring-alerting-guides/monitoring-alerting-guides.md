@@ -3,7 +3,7 @@ title: Monitoring/Alerting Guides
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/monitoring-alerting-guides"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-alerting-guides"/>
 </head>
 
 - [Enable monitoring](enable-monitoring.md)

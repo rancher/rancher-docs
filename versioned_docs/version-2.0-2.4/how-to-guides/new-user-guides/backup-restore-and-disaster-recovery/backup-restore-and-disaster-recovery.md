@@ -4,7 +4,7 @@ keywords: [rancher v2.0-v2.4 backup restore, rancher v2.0-v2.4 backup and restor
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/backup-restore-and-disaster-recovery"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery"/>
 </head>
 
 This section is devoted to protecting your data in a disaster scenario.

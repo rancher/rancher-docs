@@ -3,7 +3,7 @@ title: API
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/about-the-api"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/about-the-api"/>
 </head>
 
 ## How to use the API

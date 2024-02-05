@@ -2,6 +2,10 @@
 title: Projects
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/api/workflows/projects"/>
+</head>
+
 ## Creating a Project
 
 Project resources may only be created on the management cluster. See below for [creating namespaces under projects in a managed cluster](#creating-a-namespace-in-a-project).

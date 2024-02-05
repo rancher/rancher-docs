@@ -3,7 +3,7 @@ title: Managing Role-Based Access Control (RBAC)
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/manage-role-based-access-control-rbac"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac"/>
 </head>
 
 Within Rancher, each person authenticates as a _user_, which is a login that grants you access to Rancher. As mentioned in [Authentication](../authentication-config/authentication-config.md), users can either be local or external.
