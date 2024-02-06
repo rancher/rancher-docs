@@ -142,7 +142,7 @@ The following settings are also configurable. All of these except for the "Node 
 
 ### Self-managed Amazon Linux Nodes
 
-Rancher can import an EKS cluster with self-managed Amazon Linux nodes. This type of cluster needs to be configured based on AWS documentation for launching self-managed Amazon Linux nodes. EKS clusters with self-managed Amazon Linux nodes are usually operated by the Karpenter project. After provisioning an EKS cluster with self-managed Amazon Linux nodes, it can be easily imported into Rancher Manager and then managed by it. However, the nodes won't be visible in Rancher Manager.
+Rancher can import an EKS cluster with self-managed Amazon Linux nodes. This type of cluster needs to be configured based on [AWS documentation for launching self-managed Amazon Linux nodes](https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html). EKS clusters with self-managed Amazon Linux nodes are usually operated by the [Karpenter](https://karpenter.sh/docs/) project. After you provision an EKS cluster with self-managed Amazon Linux nodes, the cluster can be easily imported into Rancher Manager and then managed by it. However, the nodes won't be visible in Rancher Manager.
 
 ### IAM Roles for Service Accounts
 
@@ -157,9 +157,9 @@ It isn't supported for the Rancher pods when Rancher Manager is running in an EK
 
 To enable IAM roles for service accounts:
 1. [Create an IAM OIDC provider for your cluster](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html)
-2. [Configure a Kubernetes service account to assume an IAM role](https://docs.aws.amazon.com/eks/latest/userguide/associate-service-account-role.html)
-3. [Configure Pods to use a Kubernetes service account](https://docs.aws.amazon.com/eks/latest/userguide/pod-configuration.html)
-4. [Use a supported AWS SDK](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts-minimum-sdk.html)
+1. [Configure a Kubernetes service account to assume an IAM role](https://docs.aws.amazon.com/eks/latest/userguide/associate-service-account-role.html)
+1. [Configure Pods to use a Kubernetes service account](https://docs.aws.amazon.com/eks/latest/userguide/pod-configuration.html)
+1. [Use a supported AWS SDK](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts-minimum-sdk.html)
 
 ### Configuring the Refresh Interval
 
