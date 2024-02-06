@@ -21,6 +21,26 @@ This guide describes the best practices and tuning approaches to scale Rancher s
 
 When scaling up Rancher, one typical bottleneck is resource growth in the upstream (local) Kubernetes cluster. The upstream cluster contains information for all downstream clusters. Many operations that apply to downstream clusters create new objects in the upstream cluster and require computation from handlers running in the upstream cluster.
 
+### Minimizing Third-Party Software on the Upstream Cluster
+
+Running Rancher at scale can put significant load on internal Kubernetes components, such as `etcd` or `kubeapiserver`. Issues may arise if third-party software interferes with the performance of those components or with Rancher.
+
+Every third-party piece of software carries a risk of interference. To prevent performance issues on the upstream cluster, you should avoid running any other apps or components, beyond Kubernetes system components and Rancher itself.
+
+Software in the following categories generally won't interfere with Rancher or Kubernetes system performance:
+ * Rancher internal components, such as Fleet
+ * Rancher extensions
+ * Cluster API components
+ * CNIs
+ * Cloud controller managers
+ * Observability and monitoring tools (with the exception of prometheus-rancher-exporter)
+
+On the other hand, the following software are found to interfere with Rancher performance at scale:
+ * [CrossPlane](https://www.crossplane.io/)
+ * [Argo CD](https://argoproj.github.io/cd/)
+ * [Flux](https://fluxcd.io/)
+ * [prometheus-rancher-exporter](https://github.com/David-VTUK/prometheus-rancher-exporter) (see [issue 33](https://github.com/David-VTUK/prometheus-rancher-exporter/issues/33))
+
 ### Managing Your Object Counts
 
 Etcd is the backing database for Kubernetes and for Rancher. The database may eventually encounter limitations to the number of a single Kubernetes resource type it can store. Exact limits vary and depend on a number of factors. However, experience indicates that performance issues frequently arise once a single resource type's object count exceeds 60,000. Often that type is `RoleBinding`.
