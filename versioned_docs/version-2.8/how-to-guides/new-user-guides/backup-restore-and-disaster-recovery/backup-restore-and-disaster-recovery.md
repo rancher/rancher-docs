@@ -91,7 +91,7 @@ A migration is performed by following [these steps.](migrate-rancher-to-new-clus
 
 ## Default Storage Location Configuration
 
-Configure a storage location where all backups are saved by default. Various configuration options are available, including specifying an S3-compatible object store as the location for individual backups or choosing an existing `StorageClass` during installation of the `backup-restore-operator` helm chart. You will also have the option to override the configured storage location with each backup, but will be limited to using an S3-compatible or Minio object store.
+Configure a default storage location for your backups. There are various configuration options, such as specifying an S3-compatible object store as the location for individual backups or choosing an existing `StorageClass` during installation of the `backup-restore-operator` Helm chart. You also have the option to override the configured storage location with each backup, but are limited to using an S3-compatible or Minio object store.
 
 For information on configuring these options, refer to [this page.](../../../reference-guides/backup-restore-configuration/storage-configuration.md)
 
