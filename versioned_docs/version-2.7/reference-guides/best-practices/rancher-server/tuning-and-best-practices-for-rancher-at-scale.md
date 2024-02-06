@@ -21,21 +21,21 @@ This guide describes the best practices and tuning approaches to scale Rancher s
 
 When scaling up Rancher, one typical bottleneck is resource growth in the upstream (local) Kubernetes cluster. The upstream cluster contains information for all downstream clusters. Many operations that apply to downstream clusters create new objects in the upstream cluster and require computation from handlers running in the upstream cluster.
 
-### Minimizing third-party software that runs on the Upstream Cluster
+### Minimizing Third-Party Software on the Upstream Cluster
 
-Running Rancher at scale can put significant load on internal Kubernetes components such as `etcd` or `kubeapiserver`, therefore issues may arise if third party software interferes with the performance of those components or Rancher itself.
+Running Rancher at scale can put significant load on internal Kubernetes components, such as `etcd` or `kubeapiserver`. Issues may arise if third-party software interferes with the performance of those components or with Rancher.
 
-In general, every third party piece of software carries a risk of interference, therefore to avoid performance issues it is recommended to limit software running on the Upstream Cluster to Kubernetes system components and Rancher itself as close as possible.
+Every third-party piece of software carries a risk of interference. To prevent performance issues on the upstream cluster, you should avoid running any other apps or components, beyond Kubernetes system components and Rancher itself.
 
-Within that premise, software in the following categories is generally safe to use:
+Software in the following categories generally won't interfere with Rancher or Kubernetes system performance:
+ * Rancher internal components, such as Fleet
+ * Rancher extensions
+ * Cluster API components
  * CNIs
  * Cloud controller managers
- * Observability and monitoring tools (see an exception below)
- * Cluster API components
- * Rancher internal components such as Fleet
- * Rancher extensions
+ * Observability and monitoring tools (with the exception of prometheus-rancher-exporter)
 
-Conversely, applications that were found to interfere significantly with Rancher performance at scale include:
+On the other hand, the following software was found to interfere with Rancher performance at scale:
  * [CrossPlane](https://www.crossplane.io/)
  * [Argo CD](https://argoproj.github.io/cd/)
  * [Flux](https://fluxcd.io/)
