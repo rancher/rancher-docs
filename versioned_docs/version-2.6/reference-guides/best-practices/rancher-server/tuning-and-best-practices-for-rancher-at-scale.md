@@ -35,7 +35,7 @@ Software in the following categories generally won't interfere with Rancher or K
  * Cloud controller managers
  * Observability and monitoring tools (with the exception of prometheus-rancher-exporter)
 
-On the other hand, the following software was found to interfere with Rancher performance at scale:
+On the other hand, the following software are found to interfere with Rancher performance at scale:
  * [CrossPlane](https://www.crossplane.io/)
  * [Argo CD](https://argoproj.github.io/cd/)
  * [Flux](https://fluxcd.io/)
