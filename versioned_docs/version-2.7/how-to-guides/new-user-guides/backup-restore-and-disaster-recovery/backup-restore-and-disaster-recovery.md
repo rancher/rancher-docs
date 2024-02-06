@@ -97,4 +97,4 @@ For information on configuring these options, refer to [this page.](../../../ref
 
 ### Example YAML File: Rancher Backup Helm Chart
 
-The example [values.yaml file](../../../reference-guides/backup-restore-configuration/storage-configuration.md#example-valuesyaml-for-the-rancher-backup-helm-chart) can be used to configure the `backup-restore-operator` when the Helm CLI is used to install it.
+The example [values.yaml file](../../../reference-guides/backup-restore-configuration/storage-configuration.md#example-yaml-file-rancher-backup-helm-chart) can be used to configure the `backup-restore-operator` when the Helm CLI is used to install it.
