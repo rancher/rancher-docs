@@ -46,7 +46,7 @@ To use your own dashboard:
 
 ### 2. Create a ConfigMap using the Grafana JSON model
 
-Create a ConfigMap in the namespace that contains your Grafana Dashboards (e.g. cattle-dashboards by default).
+Create a ConfigMap in the namespace that contains your Grafana Dashboards (e.g. `cattle-dashboards` by default).
 
 The ConfigMap should look like this:
 
@@ -65,18 +65,25 @@ data:
 
 By default, Grafana is configured to watch all ConfigMaps with the `grafana_dashboard` label within the `cattle-dashboards` namespace.
 
-To specify that you would like Grafana to watch for ConfigMaps across all namespaces, refer to [this section.](#configuring-namespaces-for-the-grafana-dashboard-configmap)
+To specify that you would like Grafana to watch for ConfigMaps across all namespaces, refer to [this section](#configuring-namespaces-for-the-grafana-dashboard-configmap). 
 
-To create the ConfigMap in the Rancher UI,
+To create the ConfigMap through the Rancher UI, first make sure that you are currently logged in to the Grafana UI, to ensure that dashboards import without encountering permissions issues. Then, return to the Rancher UI and perform the following steps:
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to see the visualizations and click **Explore**.
 1. Click **More Resources > Core > ConfigMaps**.
 1. Click **Create**.
-1. Set up the key-value pairs similar to the example above. When entering the value for `<dashboard-name>.json`, click **Read from File** to upload the JSON data model as the value.
+1. On the **Data** tab, set up the key-value pairs similar to the example above. When entering the value for `<dashboard-name>.json`, click **Read from File** to upload the JSON data model as the value.
+1. On the **Labels & Annotations** tab, click **Add Label** and enter `grafana_dashboard` as the key, and `1` as the value.
 1. Click **Create**.
 
 **Result:** After the ConfigMap is created, it should show up on the Grafana UI and be persisted even if the Grafana pod is restarted.
+
+:::note
+
+The actual key-value pair may differ if you have modified the Helm chart to watch a different dashboard label and value.
+
+:::
 
 Dashboards that are persisted using ConfigMaps cannot be deleted or edited from the Grafana UI.
 
