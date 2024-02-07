@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[56238],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[2953],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 79378:
+/***/ 21436:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/advanced-user-guides/monitoring-alerting-guides/create-persistent-grafana-dashboard",
-    "id": "how-to-guides/advanced-user-guides/monitoring-alerting-guides/create-persistent-grafana-dashboard",
+    "id": "version-2.8/how-to-guides/advanced-user-guides/monitoring-alerting-guides/create-persistent-grafana-dashboard",
     "title": "Persistent Grafana Dashboards",
     "description": "To allow the Grafana dashboard to persist after the Grafana instance restarts, add the dashboard configuration JSON into a ConfigMap. ConfigMaps also allow the dashboards to be deployed with a GitOps or CD based approach. This allows the dashboard to be put under version control.",
-    "source": "@site/docs/how-to-guides/advanced-user-guides/monitoring-alerting-guides/create-persistent-grafana-dashboard.md",
+    "source": "@site/versioned_docs/version-2.8/how-to-guides/advanced-user-guides/monitoring-alerting-guides/create-persistent-grafana-dashboard.md",
     "sourceDirName": "how-to-guides/advanced-user-guides/monitoring-alerting-guides",
     "slug": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/create-persistent-grafana-dashboard",
-    "permalink": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/create-persistent-grafana-dashboard",
+    "permalink": "/v2.8/how-to-guides/advanced-user-guides/monitoring-alerting-guides/create-persistent-grafana-dashboard",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/advanced-user-guides/monitoring-alerting-guides/create-persistent-grafana-dashboard.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/how-to-guides/advanced-user-guides/monitoring-alerting-guides/create-persistent-grafana-dashboard.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1692825523,
-    "formattedLastUpdatedAt": "Aug 23, 2023",
+    "version": "2.8",
+    "lastUpdatedAt": 1707344045,
+    "formattedLastUpdatedAt": "Feb 7, 2024",
     "frontMatter": {
         "title": "Persistent Grafana Dashboards"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Customizing Grafana Dashboards",
-        "permalink": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/customize-grafana-dashboard"
+        "permalink": "/v2.8/how-to-guides/advanced-user-guides/monitoring-alerting-guides/customize-grafana-dashboard"
     },
     "next": {
         "title": "Debugging High Memory Usage",
-        "permalink": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/debug-high-memory-usage"
+        "permalink": "/v2.8/how-to-guides/advanced-user-guides/monitoring-alerting-guides/debug-high-memory-usage"
     }
 };
 const assets = {};
@@ -423,7 +423,7 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `To see the links to the external monitoring UIs, including Grafana dashboards, you will need at least a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring#users-with-rancher-based-permissions"
+        "href": "/v2.8/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring#users-with-rancher-based-permissions"
     }, `project-member role.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "1-get-the-json-model-of-the-dashboard-that-you-want-to-persist"
     }, `1. Get the JSON model of the dashboard that you want to persist`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To create a persistent dashboard, you will need to get the JSON model of the dashboard you want to persist. You can use a premade dashboard or build your own.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To use a premade dashboard, go to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -460,7 +460,9 @@ function MDXContent(_param) {
         parentName: "li"
     }, `Copy the JSON data structure that appears.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "2-create-a-configmap-using-the-grafana-json-model"
-    }, `2. Create a ConfigMap using the Grafana JSON model`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Create a ConfigMap in the namespace that contains your Grafana Dashboards (e.g. cattle-dashboards by default).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The ConfigMap should look like this:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    }, `2. Create a ConfigMap using the Grafana JSON model`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Create a ConfigMap in the namespace that contains your Grafana Dashboards (e.g. `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `cattle-dashboards`), ` by default).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The ConfigMap should look like this:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-yaml"
     }, `apiVersion: v1
@@ -480,7 +482,7 @@ data:
     }, `cattle-dashboards`), ` namespace.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To specify that you would like Grafana to watch for ConfigMaps across all namespaces, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#configuring-namespaces-for-the-grafana-dashboard-configmap"
-    }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To create the ConfigMap in the Rancher UI,`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `this section`), `. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To create the ConfigMap through the Rancher UI, first make sure that you are currently logged in to the Grafana UI, to ensure that dashboards import without encountering permissions issues. Then, return to the Rancher UI and perform the following steps:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, `In the upper left corner, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
@@ -500,17 +502,33 @@ data:
         parentName: "li"
     }, `Create`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
-    }, `Set up the key-value pairs similar to the example above. When entering the value for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `On the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Data`), ` tab, set up the key-value pairs similar to the example above. When entering the value for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
     }, `<dashboard-name>.json`), `, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
     }, `Read from File`), ` to upload the JSON data model as the value.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
+    }, `On the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Labels & Annotations`), ` tab, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Add Label`), ` and enter `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "li"
+    }, `grafana_dashboard`), ` as the key, and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "li"
+    }, `1`), ` as the value.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
     }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
     }, `Create`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `Result:`), ` After the ConfigMap is created, it should show up on the Grafana UI and be persisted even if the Grafana pod is restarted.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Dashboards that are persisted using ConfigMaps cannot be deleted or edited from the Grafana UI.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you attempt to delete the dashboard in the Grafana UI, you will see the error message "Dashboard cannot be deleted because it was provisioned." To delete the dashboard, you will need to delete the ConfigMap.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `Result:`), ` After the ConfigMap is created, it should show up on the Grafana UI and be persisted even if the Grafana pod is restarted.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `The actual key-value pair may differ if you have modified the Helm chart to watch a different dashboard label and value.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Dashboards that are persisted using ConfigMaps cannot be deleted or edited from the Grafana UI.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you attempt to delete the dashboard in the Grafana UI, you will see the error message "Dashboard cannot be deleted because it was provisioned." To delete the dashboard, you will need to delete the ConfigMap.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "configuring-namespaces-for-the-grafana-dashboard-configmap"
     }, `Configuring Namespaces for the Grafana Dashboard ConfigMap`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To specify that you would like Grafana to watch for ConfigMaps across all namespaces, set this value in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
