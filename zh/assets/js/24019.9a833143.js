@@ -1,216 +1,4 @@
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[25263],{
-
-/***/ 3905:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Zo: () => (/* binding */ MDXProvider),
-/* harmony export */   kt: () => (/* binding */ createElement)
-/* harmony export */ });
-/* unused harmony exports MDXContext, useMDXComponents, withMDXComponents */
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(67294);
-
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    if (enumerableOnly) symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    });
-    keys.push.apply(keys, symbols);
-  }
-
-  return keys;
-}
-
-function _objectSpread2(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-
-    if (i % 2) {
-      ownKeys(Object(source), true).forEach(function (key) {
-        _defineProperty(target, key, source[key]);
-      });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-      ownKeys(Object(source)).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
-    }
-  }
-
-  return target;
-}
-
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-
-  var target = _objectWithoutPropertiesLoose(source, excluded);
-
-  var key, i;
-
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-
-  return target;
-}
-
-var isFunction = function isFunction(obj) {
-  return typeof obj === 'function';
-};
-
-var MDXContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext({});
-var withMDXComponents = function withMDXComponents(Component) {
-  return function (props) {
-    var allComponents = useMDXComponents(props.components);
-    return /*#__PURE__*/React.createElement(Component, _extends({}, props, {
-      components: allComponents
-    }));
-  };
-};
-var useMDXComponents = function useMDXComponents(components) {
-  var contextComponents = react__WEBPACK_IMPORTED_MODULE_0__.useContext(MDXContext);
-  var allComponents = contextComponents;
-
-  if (components) {
-    allComponents = isFunction(components) ? components(contextComponents) : _objectSpread2(_objectSpread2({}, contextComponents), components);
-  }
-
-  return allComponents;
-};
-var MDXProvider = function MDXProvider(props) {
-  var allComponents = useMDXComponents(props.components);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(MDXContext.Provider, {
-    value: allComponents
-  }, props.children);
-};
-
-var TYPE_PROP_NAME = 'mdxType';
-var DEFAULTS = {
-  inlineCode: 'code',
-  wrapper: function wrapper(_ref) {
-    var children = _ref.children;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {}, children);
-  }
-};
-var MDXCreateElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function (props, ref) {
-  var propComponents = props.components,
-      mdxType = props.mdxType,
-      originalType = props.originalType,
-      parentName = props.parentName,
-      etc = _objectWithoutProperties(props, ["components", "mdxType", "originalType", "parentName"]);
-
-  var components = useMDXComponents(propComponents);
-  var type = mdxType;
-  var Component = components["".concat(parentName, ".").concat(type)] || components[type] || DEFAULTS[type] || originalType;
-
-  if (propComponents) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Component, _objectSpread2(_objectSpread2({
-      ref: ref
-    }, etc), {}, {
-      components: propComponents
-    }));
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Component, _objectSpread2({
-    ref: ref
-  }, etc));
-});
-MDXCreateElement.displayName = 'MDXCreateElement';
-function createElement (type, props) {
-  var args = arguments;
-  var mdxType = props && props.mdxType;
-
-  if (typeof type === 'string' || mdxType) {
-    var argsLength = args.length;
-    var createElementArgArray = new Array(argsLength);
-    createElementArgArray[0] = MDXCreateElement;
-    var newProps = {};
-
-    for (var key in props) {
-      if (hasOwnProperty.call(props, key)) {
-        newProps[key] = props[key];
-      }
-    }
-
-    newProps.originalType = type;
-    newProps[TYPE_PROP_NAME] = typeof type === 'string' ? type : mdxType;
-    createElementArgArray[1] = newProps;
-
-    for (var i = 2; i < argsLength; i++) {
-      createElementArgArray[i] = args[i];
-    }
-
-    return react__WEBPACK_IMPORTED_MODULE_0__.createElement.apply(null, createElementArgArray);
-  }
-
-  return react__WEBPACK_IMPORTED_MODULE_0__.createElement.apply(null, args);
-}
-
-
-
-
-/***/ }),
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[24019],{
 
 /***/ 87594:
 /***/ ((module, exports) => {
@@ -255,45 +43,30 @@ module.exports = parsePart;
 
 /***/ }),
 
-/***/ 70369:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (()=>null);
-
-
-/***/ }),
-
-/***/ 27339:
+/***/ 24999:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  Z: () => (/* binding */ Admonition)
+  Z: () => (/* binding */ Heading)
 });
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(67294);
 // EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
 var clsx_m = __webpack_require__(86010);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/ThemeClassNames.js
-var ThemeClassNames = __webpack_require__(65319);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
 var Translate = __webpack_require__(92210);
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Admonition/styles.module.css
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/useThemeConfig.js
+var useThemeConfig = __webpack_require__(86016);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js + 1 modules
+var Link = __webpack_require__(31984);
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/styles.module.css
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"admonition":"admonition_LlT9","admonitionHeading":"admonitionHeading_tbUL","admonitionIcon":"admonitionIcon_kALy","admonitionContent":"admonitionContent_S0QG"});
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Admonition/index.js
+/* harmony default export */ const styles_module = ({"anchorWithStickyNavbar":"anchorWithStickyNavbar_LWe7","anchorWithHideOnScrollNavbar":"anchorWithHideOnScrollNavbar_WYt5"});
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/index.js
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -351,165 +124,139 @@ function _object_spread_props(target, source) {
     }
     return target;
 }
-
-
-
-
-
-function NoteIcon() {
-    return /*#__PURE__*/ react.createElement("svg", {
-        viewBox: "0 0 14 16"
-    }, /*#__PURE__*/ react.createElement("path", {
-        fillRule: "evenodd",
-        d: "M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"
-    }));
-}
-function TipIcon() {
-    return /*#__PURE__*/ react.createElement("svg", {
-        viewBox: "0 0 12 16"
-    }, /*#__PURE__*/ react.createElement("path", {
-        fillRule: "evenodd",
-        d: "M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"
-    }));
-}
-function DangerIcon() {
-    return /*#__PURE__*/ react.createElement("svg", {
-        viewBox: "0 0 12 16"
-    }, /*#__PURE__*/ react.createElement("path", {
-        fillRule: "evenodd",
-        d: "M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"
-    }));
-}
-function InfoIcon() {
-    return /*#__PURE__*/ react.createElement("svg", {
-        viewBox: "0 0 14 16"
-    }, /*#__PURE__*/ react.createElement("path", {
-        fillRule: "evenodd",
-        d: "M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"
-    }));
-}
-function CautionIcon() {
-    return /*#__PURE__*/ react.createElement("svg", {
-        viewBox: "0 0 16 16"
-    }, /*#__PURE__*/ react.createElement("path", {
-        fillRule: "evenodd",
-        d: "M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"
-    }));
-}
-// eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
-const AdmonitionConfigs = {
-    note: {
-        infimaClassName: 'secondary',
-        iconComponent: NoteIcon,
-        label: /*#__PURE__*/ react.createElement(Translate/* default */.Z, {
-            id: "theme.admonition.note",
-            description: "The default label used for the Note admonition (:::note)"
-        }, "note")
-    },
-    tip: {
-        infimaClassName: 'success',
-        iconComponent: TipIcon,
-        label: /*#__PURE__*/ react.createElement(Translate/* default */.Z, {
-            id: "theme.admonition.tip",
-            description: "The default label used for the Tip admonition (:::tip)"
-        }, "tip")
-    },
-    danger: {
-        infimaClassName: 'danger',
-        iconComponent: DangerIcon,
-        label: /*#__PURE__*/ react.createElement(Translate/* default */.Z, {
-            id: "theme.admonition.danger",
-            description: "The default label used for the Danger admonition (:::danger)"
-        }, "danger")
-    },
-    info: {
-        infimaClassName: 'info',
-        iconComponent: InfoIcon,
-        label: /*#__PURE__*/ react.createElement(Translate/* default */.Z, {
-            id: "theme.admonition.info",
-            description: "The default label used for the Info admonition (:::info)"
-        }, "info")
-    },
-    caution: {
-        infimaClassName: 'warning',
-        iconComponent: CautionIcon,
-        label: /*#__PURE__*/ react.createElement(Translate/* default */.Z, {
-            id: "theme.admonition.caution",
-            description: "The default label used for the Caution admonition (:::caution)"
-        }, "caution")
+function _object_without_properties(source, excluded) {
+    if (source == null) return {};
+    var target = _object_without_properties_loose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
     }
-};
-// Legacy aliases, undocumented but kept for retro-compatibility
-const aliases = {
-    secondary: 'note',
-    important: 'info',
-    success: 'tip',
-    warning: 'danger'
-};
-function getAdmonitionConfig(unsafeType) {
-    var _aliases_unsafeType;
-    const type = (_aliases_unsafeType = aliases[unsafeType]) !== null && _aliases_unsafeType !== void 0 ? _aliases_unsafeType : unsafeType;
-    const config = AdmonitionConfigs[type];
-    if (config) {
-        return config;
+    return target;
+}
+function _object_without_properties_loose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
     }
-    console.warn(`No admonition config found for admonition type "${type}". Using Info as fallback.`);
-    return AdmonitionConfigs.info;
+    return target;
 }
-// Workaround because it's difficult in MDX v1 to provide a MDX title as props
-// See https://github.com/facebook/docusaurus/pull/7152#issuecomment-1145779682
-function extractMDXAdmonitionTitle(children) {
-    const items = react.Children.toArray(children);
-    const mdxAdmonitionTitle = items.find((item)=>{
-        var _item_props;
-        return /*#__PURE__*/ react.isValidElement(item) && ((_item_props = item.props) === null || _item_props === void 0 ? void 0 : _item_props.mdxType) === 'mdxAdmonitionTitle';
+
+
+
+
+
+
+function Heading(_param) {
+    var { as: As, id } = _param, props = _object_without_properties(_param, [
+        "as",
+        "id"
+    ]);
+    const { navbar: { hideOnScroll } } = (0,useThemeConfig/* useThemeConfig */.L)();
+    // H1 headings do not need an id because they don't appear in the TOC.
+    if (As === 'h1' || !id) {
+        return /*#__PURE__*/ react.createElement(As, _object_spread_props(_object_spread({}, props), {
+            id: undefined
+        }));
+    }
+    const anchorTitle = (0,Translate/* translate */.I)({
+        id: 'theme.common.headingLinkTitle',
+        message: 'Direct link to {heading}',
+        description: 'Title for link to heading'
+    }, {
+        heading: typeof props.children === 'string' ? props.children : id
     });
-    const rest = /*#__PURE__*/ react.createElement(react.Fragment, null, items.filter((item)=>item !== mdxAdmonitionTitle));
-    return {
-        mdxAdmonitionTitle,
-        rest
-    };
-}
-function processAdmonitionProps(props) {
-    const { mdxAdmonitionTitle, rest } = extractMDXAdmonitionTitle(props.children);
-    var _props_title;
-    return _object_spread_props(_object_spread({}, props), {
-        title: (_props_title = props.title) !== null && _props_title !== void 0 ? _props_title : mdxAdmonitionTitle,
-        children: rest
-    });
-}
-function Admonition(props) {
-    const { children, type, title, icon: iconProp } = processAdmonitionProps(props);
-    const typeConfig = getAdmonitionConfig(type);
-    const titleLabel = title !== null && title !== void 0 ? title : typeConfig.label;
-    const { iconComponent: IconComponent } = typeConfig;
-    const icon = iconProp !== null && iconProp !== void 0 ? iconProp : /*#__PURE__*/ react.createElement(IconComponent, null);
-    return /*#__PURE__*/ react.createElement("div", {
-        className: (0,clsx_m/* default */.Z)(ThemeClassNames/* ThemeClassNames */.k.common.admonition, ThemeClassNames/* ThemeClassNames */.k.common.admonitionType(props.type), 'alert', `alert--${typeConfig.infimaClassName}`, styles_module.admonition)
-    }, /*#__PURE__*/ react.createElement("div", {
-        className: styles_module.admonitionHeading
-    }, /*#__PURE__*/ react.createElement("span", {
-        className: styles_module.admonitionIcon
-    }, icon), titleLabel), /*#__PURE__*/ react.createElement("div", {
-        className: styles_module.admonitionContent
-    }, children));
+    return /*#__PURE__*/ react.createElement(As, _object_spread_props(_object_spread({}, props), {
+        className: (0,clsx_m/* default */.Z)('anchor', hideOnScroll ? styles_module.anchorWithHideOnScrollNavbar : styles_module.anchorWithStickyNavbar, props.className),
+        id: id
+    }), props.children, /*#__PURE__*/ react.createElement(Link/* default */.Z, {
+        className: "hash-link",
+        to: `#${id}`,
+        "aria-label": anchorTitle,
+        title: anchorTitle
+    }, "​"));
 }
 
 
 /***/ }),
 
-/***/ 957:
+/***/ 69167:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  Z: () => (/* binding */ CodeBlock)
+  Z: () => (/* binding */ theme_MDXComponents)
 });
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(67294);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(71098);
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/Head.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ function _object_without_properties(source, excluded) {
+    if (source == null) return {};
+    var target = _object_without_properties_loose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+function _object_without_properties_loose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+
+
+// MDX elements are wrapped through the MDX pragma. In some cases (notably usage
+// with Head/Helmet) we need to unwrap those elements.
+function unwrapMDXElement(element) {
+    var _element_props;
+    if (((_element_props = element.props) === null || _element_props === void 0 ? void 0 : _element_props.mdxType) && element.props.originalType) {
+        const _element_props = element.props, { mdxType, originalType } = _element_props, newProps = _object_without_properties(_element_props, [
+            "mdxType",
+            "originalType"
+        ]);
+        return /*#__PURE__*/ react.createElement(element.props.originalType, newProps);
+    }
+    return element;
+}
+function MDXHead(props) {
+    const unwrappedChildren = react.Children.map(props.children, (child)=>/*#__PURE__*/ react.isValidElement(child) ? unwrapMDXElement(child) : child);
+    return /*#__PURE__*/ react.createElement(Head/* default */.Z, props, unwrappedChildren);
+}
+
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsBrowser.js
 var useIsBrowser = __webpack_require__(30358);
 // EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
@@ -821,9 +568,9 @@ function _object_spread_props(target, source) {
     }
     return target;
 }
-function _object_without_properties(source, excluded) {
+function Container_object_without_properties(source, excluded) {
     if (source == null) return {};
-    var target = _object_without_properties_loose(source, excluded);
+    var target = Container_object_without_properties_loose(source, excluded);
     var key, i;
     if (Object.getOwnPropertySymbols) {
         var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
@@ -836,7 +583,7 @@ function _object_without_properties(source, excluded) {
     }
     return target;
 }
-function _object_without_properties_loose(source, excluded) {
+function Container_object_without_properties_loose(source, excluded) {
     if (source == null) return {};
     var target = {};
     var sourceKeys = Object.keys(source);
@@ -854,7 +601,7 @@ function _object_without_properties_loose(source, excluded) {
 
 
 function CodeBlockContainer(_param) {
-    var { as: As } = _param, props = _object_without_properties(_param, [
+    var { as: As } = _param, props = Container_object_without_properties(_param, [
         "as"
     ]);
     const prismTheme = usePrismTheme();
@@ -1961,37 +1708,75 @@ function CodeBlock(_param) {
     }, props), children);
 }
 
-
-/***/ }),
-
-/***/ 1755:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  Z: () => (/* binding */ Details_Details)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(67294);
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
-var clsx_m = __webpack_require__(86010);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsBrowser.js
-var useIsBrowser = __webpack_require__(30358);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/components/Collapsible/index.js
-var Collapsible = __webpack_require__(52647);
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-common/lib/components/Details/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"details":"details_lb9f","isBrowser":"isBrowser_bmU9","collapsibleContent":"collapsibleContent_i85q"});
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-common/lib/components/Details/index.js
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/Code.js
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */ function _define_property(obj, key, value) {
+ */ 
+
+function MDXCode(props) {
+    const inlineElements = [
+        'a',
+        'abbr',
+        'b',
+        'br',
+        'button',
+        'cite',
+        'code',
+        'del',
+        'dfn',
+        'em',
+        'i',
+        'img',
+        'input',
+        'ins',
+        'kbd',
+        'label',
+        'object',
+        'output',
+        'q',
+        'ruby',
+        's',
+        'small',
+        'span',
+        'strong',
+        'sub',
+        'sup',
+        'time',
+        'u',
+        'var',
+        'wbr'
+    ];
+    const shouldBeInline = react.Children.toArray(props.children).every((el)=>{
+        var _el_props;
+        return typeof el === 'string' && !el.includes('\n') || /*#__PURE__*/ (0,react.isValidElement)(el) && inlineElements.includes((_el_props = el.props) === null || _el_props === void 0 ? void 0 : _el_props.mdxType);
+    });
+    return shouldBeInline ? /*#__PURE__*/ react.createElement("code", props) : /*#__PURE__*/ react.createElement(CodeBlock, props);
+}
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js + 1 modules
+var Link = __webpack_require__(31984);
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/A.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 
+
+function MDXA(props) {
+    return /*#__PURE__*/ react.createElement(Link/* default */.Z, props);
+}
+
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/Pre.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ function Pre_define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
             value: value,
@@ -2004,7 +1789,7 @@ var Collapsible = __webpack_require__(52647);
     }
     return obj;
 }
-function _object_spread(target) {
+function Pre_object_spread(target) {
     for(var i = 1; i < arguments.length; i++){
         var source = arguments[i] != null ? arguments[i] : {};
         var ownKeys = Object.keys(source);
@@ -2014,144 +1799,24 @@ function _object_spread(target) {
             }));
         }
         ownKeys.forEach(function(key) {
-            _define_property(target, key, source[key]);
+            Pre_define_property(target, key, source[key]);
         });
     }
     return target;
 }
-function ownKeys(object, enumerableOnly) {
-    var keys = Object.keys(object);
-    if (Object.getOwnPropertySymbols) {
-        var symbols = Object.getOwnPropertySymbols(object);
-        if (enumerableOnly) {
-            symbols = symbols.filter(function(sym) {
-                return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-            });
-        }
-        keys.push.apply(keys, symbols);
-    }
-    return keys;
-}
-function _object_spread_props(target, source) {
-    source = source != null ? source : {};
-    if (Object.getOwnPropertyDescriptors) {
-        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-        ownKeys(Object(source)).forEach(function(key) {
-            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-        });
-    }
-    return target;
-}
-function _object_without_properties(source, excluded) {
-    if (source == null) return {};
-    var target = _object_without_properties_loose(source, excluded);
-    var key, i;
-    if (Object.getOwnPropertySymbols) {
-        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-        for(i = 0; i < sourceSymbolKeys.length; i++){
-            key = sourceSymbolKeys[i];
-            if (excluded.indexOf(key) >= 0) continue;
-            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-            target[key] = source[key];
-        }
-    }
-    return target;
-}
-function _object_without_properties_loose(source, excluded) {
-    if (source == null) return {};
-    var target = {};
-    var sourceKeys = Object.keys(source);
-    var key, i;
-    for(i = 0; i < sourceKeys.length; i++){
-        key = sourceKeys[i];
-        if (excluded.indexOf(key) >= 0) continue;
-        target[key] = source[key];
-    }
-    return target;
-}
 
 
-
-
-
-function isInSummary(node) {
-    if (!node) {
-        return false;
-    }
-    return node.tagName === 'SUMMARY' || isInSummary(node.parentElement);
+function MDXPre(props) {
+    var _props_children_props;
+    return /*#__PURE__*/ react.createElement(CodeBlock, /*#__PURE__*/ (0,react.isValidElement)(props.children) && ((_props_children_props = props.children.props) === null || _props_children_props === void 0 ? void 0 : _props_children_props.originalType) === 'code' ? props.children.props : Pre_object_spread({}, props));
 }
-function hasParent(node, parent) {
-    if (!node) {
-        return false;
-    }
-    return node === parent || hasParent(node.parentElement, parent);
-}
-/**
- * A mostly un-styled `<details>` element with smooth collapsing. Provides some
- * very lightweight styles, but you should bring your UI.
- */ function Details(_param) {
-    var { summary, children } = _param, props = _object_without_properties(_param, [
-        "summary",
-        "children"
-    ]);
-    const isBrowser = (0,useIsBrowser/* default */.Z)();
-    const detailsRef = (0,react.useRef)(null);
-    const { collapsed, setCollapsed } = (0,Collapsible/* useCollapsible */.u)({
-        initialState: !props.open
-    });
-    // Use a separate state for the actual details prop, because it must be set
-    // only after animation completes, otherwise close animations won't work
-    const [open, setOpen] = (0,react.useState)(props.open);
-    const summaryElement = /*#__PURE__*/ react.isValidElement(summary) ? summary : /*#__PURE__*/ react.createElement("summary", null, summary !== null && summary !== void 0 ? summary : 'Details');
-    return(// eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
-    /*#__PURE__*/ react.createElement("details", _object_spread_props(_object_spread({}, props), {
-        ref: detailsRef,
-        open: open,
-        "data-collapsed": collapsed,
-        className: (0,clsx_m/* default */.Z)(styles_module.details, isBrowser && styles_module.isBrowser, props.className),
-        onMouseDown: (e)=>{
-            const target = e.target;
-            // Prevent a double-click to highlight summary text
-            if (isInSummary(target) && e.detail > 1) {
-                e.preventDefault();
-            }
-        },
-        onClick: (e)=>{
-            e.stopPropagation(); // For isolation of multiple nested details/summary
-            const target = e.target;
-            const shouldToggle = isInSummary(target) && hasParent(target, detailsRef.current);
-            if (!shouldToggle) {
-                return;
-            }
-            e.preventDefault();
-            if (collapsed) {
-                setCollapsed(false);
-                setOpen(true);
-            } else {
-                setCollapsed(true);
-            // Don't do this, it breaks close animation!
-            // setOpen(false);
-            }
-        }
-    }), summaryElement, /*#__PURE__*/ react.createElement(Collapsible/* Collapsible */.z, {
-        lazy: false,
-        collapsed: collapsed,
-        disableSSRStyle: true // Allows component to work fine even with JS disabled!
-        ,
-        onCollapseTransitionEnd: (newCollapsed)=>{
-            setCollapsed(newCollapsed);
-            setOpen(!newCollapsed);
-        }
-    }, /*#__PURE__*/ react.createElement("div", {
-        className: styles_module.collapsibleContent
-    }, children))));
-} //# sourceMappingURL=index.js.map
 
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Details/styles.module.css
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/components/Collapsible/index.js
+var Collapsible = __webpack_require__(52647);
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-common/lib/components/Details/styles.module.css
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const Details_styles_module = ({"details":"details_b_Ee"});
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js
+/* harmony default export */ const Details_styles_module = ({"details":"details_lb9f","isBrowser":"isBrowser_bmU9","collapsibleContent":"collapsibleContent_i85q"});
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-common/lib/components/Details/index.js
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -2169,24 +1834,6 @@ function hasParent(node, parent) {
         obj[key] = value;
     }
     return obj;
-}
-function _extends() {
-    _extends = Object.assign || function(target) {
-        for(var i = 1; i < arguments.length; i++){
-            var source = arguments[i];
-            for(var key in source){
-                if (Object.prototype.hasOwnProperty.call(source, key)) {
-                    target[key] = source[key];
-                }
-            }
-        }
-        return target;
-    };
-    return _extends.apply(this, arguments);
-}
-function _object_destructuring_empty(o) {
-    if (o === null || o === void 0) throw new TypeError("Cannot destructure " + o);
-    return o;
 }
 function Details_object_spread(target) {
     for(var i = 1; i < arguments.length; i++){
@@ -2227,107 +1874,9 @@ function Details_object_spread_props(target, source) {
     }
     return target;
 }
-
-
-
-
-// Should we have a custom details/summary comp in Infima instead of reusing
-// alert classes?
-const InfimaClasses = 'alert alert--info';
-function Details_Details(_param) {
-    var props = _extends({}, _object_destructuring_empty(_param));
-    return /*#__PURE__*/ react.createElement(Details, Details_object_spread_props(Details_object_spread({}, props), {
-        className: (0,clsx_m/* default */.Z)(InfimaClasses, Details_styles_module.details, props.className)
-    }));
-}
-
-
-/***/ }),
-
-/***/ 24999:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  Z: () => (/* binding */ Heading)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(67294);
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
-var clsx_m = __webpack_require__(86010);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
-var Translate = __webpack_require__(92210);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/useThemeConfig.js
-var useThemeConfig = __webpack_require__(86016);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js + 1 modules
-var Link = __webpack_require__(31984);
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"anchorWithStickyNavbar":"anchorWithStickyNavbar_LWe7","anchorWithHideOnScrollNavbar":"anchorWithHideOnScrollNavbar_WYt5"});
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ function _define_property(obj, key, value) {
-    if (key in obj) {
-        Object.defineProperty(obj, key, {
-            value: value,
-            enumerable: true,
-            configurable: true,
-            writable: true
-        });
-    } else {
-        obj[key] = value;
-    }
-    return obj;
-}
-function _object_spread(target) {
-    for(var i = 1; i < arguments.length; i++){
-        var source = arguments[i] != null ? arguments[i] : {};
-        var ownKeys = Object.keys(source);
-        if (typeof Object.getOwnPropertySymbols === "function") {
-            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
-                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-            }));
-        }
-        ownKeys.forEach(function(key) {
-            _define_property(target, key, source[key]);
-        });
-    }
-    return target;
-}
-function ownKeys(object, enumerableOnly) {
-    var keys = Object.keys(object);
-    if (Object.getOwnPropertySymbols) {
-        var symbols = Object.getOwnPropertySymbols(object);
-        if (enumerableOnly) {
-            symbols = symbols.filter(function(sym) {
-                return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-            });
-        }
-        keys.push.apply(keys, symbols);
-    }
-    return keys;
-}
-function _object_spread_props(target, source) {
-    source = source != null ? source : {};
-    if (Object.getOwnPropertyDescriptors) {
-        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-        ownKeys(Object(source)).forEach(function(key) {
-            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-        });
-    }
-    return target;
-}
-function _object_without_properties(source, excluded) {
+function Details_object_without_properties(source, excluded) {
     if (source == null) return {};
-    var target = _object_without_properties_loose(source, excluded);
+    var target = Details_object_without_properties_loose(source, excluded);
     var key, i;
     if (Object.getOwnPropertySymbols) {
         var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
@@ -2340,7 +1889,7 @@ function _object_without_properties(source, excluded) {
     }
     return target;
 }
-function _object_without_properties_loose(source, excluded) {
+function Details_object_without_properties_loose(source, excluded) {
     if (source == null) return {};
     var target = {};
     var sourceKeys = Object.keys(source);
@@ -2357,64 +1906,89 @@ function _object_without_properties_loose(source, excluded) {
 
 
 
-
-function Heading(_param) {
-    var { as: As, id } = _param, props = _object_without_properties(_param, [
-        "as",
-        "id"
-    ]);
-    const { navbar: { hideOnScroll } } = (0,useThemeConfig/* useThemeConfig */.L)();
-    // H1 headings do not need an id because they don't appear in the TOC.
-    if (As === 'h1' || !id) {
-        return /*#__PURE__*/ react.createElement(As, _object_spread_props(_object_spread({}, props), {
-            id: undefined
-        }));
+function isInSummary(node) {
+    if (!node) {
+        return false;
     }
-    const anchorTitle = (0,Translate/* translate */.I)({
-        id: 'theme.common.headingLinkTitle',
-        message: 'Direct link to {heading}',
-        description: 'Title for link to heading'
-    }, {
-        heading: typeof props.children === 'string' ? props.children : id
-    });
-    return /*#__PURE__*/ react.createElement(As, _object_spread_props(_object_spread({}, props), {
-        className: (0,clsx_m/* default */.Z)('anchor', hideOnScroll ? styles_module.anchorWithHideOnScrollNavbar : styles_module.anchorWithStickyNavbar, props.className),
-        id: id
-    }), props.children, /*#__PURE__*/ react.createElement(Link/* default */.Z, {
-        className: "hash-link",
-        to: `#${id}`,
-        "aria-label": anchorTitle,
-        title: anchorTitle
-    }, "​"));
+    return node.tagName === 'SUMMARY' || isInSummary(node.parentElement);
 }
+function hasParent(node, parent) {
+    if (!node) {
+        return false;
+    }
+    return node === parent || hasParent(node.parentElement, parent);
+}
+/**
+ * A mostly un-styled `<details>` element with smooth collapsing. Provides some
+ * very lightweight styles, but you should bring your UI.
+ */ function Details(_param) {
+    var { summary, children } = _param, props = Details_object_without_properties(_param, [
+        "summary",
+        "children"
+    ]);
+    const isBrowser = (0,useIsBrowser/* default */.Z)();
+    const detailsRef = (0,react.useRef)(null);
+    const { collapsed, setCollapsed } = (0,Collapsible/* useCollapsible */.u)({
+        initialState: !props.open
+    });
+    // Use a separate state for the actual details prop, because it must be set
+    // only after animation completes, otherwise close animations won't work
+    const [open, setOpen] = (0,react.useState)(props.open);
+    const summaryElement = /*#__PURE__*/ react.isValidElement(summary) ? summary : /*#__PURE__*/ react.createElement("summary", null, summary !== null && summary !== void 0 ? summary : 'Details');
+    return(// eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
+    /*#__PURE__*/ react.createElement("details", Details_object_spread_props(Details_object_spread({}, props), {
+        ref: detailsRef,
+        open: open,
+        "data-collapsed": collapsed,
+        className: (0,clsx_m/* default */.Z)(Details_styles_module.details, isBrowser && Details_styles_module.isBrowser, props.className),
+        onMouseDown: (e)=>{
+            const target = e.target;
+            // Prevent a double-click to highlight summary text
+            if (isInSummary(target) && e.detail > 1) {
+                e.preventDefault();
+            }
+        },
+        onClick: (e)=>{
+            e.stopPropagation(); // For isolation of multiple nested details/summary
+            const target = e.target;
+            const shouldToggle = isInSummary(target) && hasParent(target, detailsRef.current);
+            if (!shouldToggle) {
+                return;
+            }
+            e.preventDefault();
+            if (collapsed) {
+                setCollapsed(false);
+                setOpen(true);
+            } else {
+                setCollapsed(true);
+            // Don't do this, it breaks close animation!
+            // setOpen(false);
+            }
+        }
+    }), summaryElement, /*#__PURE__*/ react.createElement(Collapsible/* Collapsible */.z, {
+        lazy: false,
+        collapsed: collapsed,
+        disableSSRStyle: true // Allows component to work fine even with JS disabled!
+        ,
+        onCollapseTransitionEnd: (newCollapsed)=>{
+            setCollapsed(newCollapsed);
+            setOpen(!newCollapsed);
+        }
+    }, /*#__PURE__*/ react.createElement("div", {
+        className: Details_styles_module.collapsibleContent
+    }, children))));
+} //# sourceMappingURL=index.js.map
 
-
-/***/ }),
-
-/***/ 74414:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  Z: () => (/* binding */ MDXImg)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(67294);
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
-var clsx_m = __webpack_require__(86010);
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/Img/styles.module.css
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Details/styles.module.css
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"img":"img_ev3q"});
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/Img/index.js
+/* harmony default export */ const theme_Details_styles_module = ({"details":"details_b_Ee"});
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */ function _define_property(obj, key, value) {
+ */ function theme_Details_define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
             value: value,
@@ -2427,7 +2001,25 @@ var clsx_m = __webpack_require__(86010);
     }
     return obj;
 }
-function _object_spread(target) {
+function Details_extends() {
+    Details_extends = Object.assign || function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source){
+                if (Object.prototype.hasOwnProperty.call(source, key)) {
+                    target[key] = source[key];
+                }
+            }
+        }
+        return target;
+    };
+    return Details_extends.apply(this, arguments);
+}
+function _object_destructuring_empty(o) {
+    if (o === null || o === void 0) throw new TypeError("Cannot destructure " + o);
+    return o;
+}
+function theme_Details_object_spread(target) {
     for(var i = 1; i < arguments.length; i++){
         var source = arguments[i] != null ? arguments[i] : {};
         var ownKeys = Object.keys(source);
@@ -2437,12 +2029,12 @@ function _object_spread(target) {
             }));
         }
         ownKeys.forEach(function(key) {
-            _define_property(target, key, source[key]);
+            theme_Details_define_property(target, key, source[key]);
         });
     }
     return target;
 }
-function ownKeys(object, enumerableOnly) {
+function theme_Details_ownKeys(object, enumerableOnly) {
     var keys = Object.keys(object);
     if (Object.getOwnPropertySymbols) {
         var symbols = Object.getOwnPropertySymbols(object);
@@ -2455,12 +2047,12 @@ function ownKeys(object, enumerableOnly) {
     }
     return keys;
 }
-function _object_spread_props(target, source) {
+function theme_Details_object_spread_props(target, source) {
     source = source != null ? source : {};
     if (Object.getOwnPropertyDescriptors) {
         Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
     } else {
-        ownKeys(Object(source)).forEach(function(key) {
+        theme_Details_ownKeys(Object(source)).forEach(function(key) {
             Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
         });
     }
@@ -2469,45 +2061,24 @@ function _object_spread_props(target, source) {
 
 
 
-function transformImgClassName(className) {
-    return (0,clsx_m/* default */.Z)(className, styles_module.img);
+
+// Should we have a custom details/summary comp in Infima instead of reusing
+// alert classes?
+const InfimaClasses = 'alert alert--info';
+function Details_Details(_param) {
+    var props = Details_extends({}, _object_destructuring_empty(_param));
+    return /*#__PURE__*/ react.createElement(Details, theme_Details_object_spread_props(theme_Details_object_spread({}, props), {
+        className: (0,clsx_m/* default */.Z)(InfimaClasses, theme_Details_styles_module.details, props.className)
+    }));
 }
-function MDXImg(props) {
-    return(// eslint-disable-next-line jsx-a11y/alt-text
-    /*#__PURE__*/ react.createElement("img", _object_spread_props(_object_spread({
-        loading: "lazy"
-    }, props), {
-        className: transformImgClassName(props.className)
-    })));
-}
 
-
-/***/ }),
-
-/***/ 89216:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  Z: () => (/* binding */ MDXUl)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(67294);
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
-var clsx_m = __webpack_require__(86010);
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/Ul/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"containsTaskList":"containsTaskList_mC6p"});
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/Ul/index.js
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/Details.js
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */ function _define_property(obj, key, value) {
+ */ function MDXComponents_Details_define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
             value: value,
@@ -2520,7 +2091,7 @@ var clsx_m = __webpack_require__(86010);
     }
     return obj;
 }
-function _object_spread(target) {
+function MDXComponents_Details_object_spread(target) {
     for(var i = 1; i < arguments.length; i++){
         var source = arguments[i] != null ? arguments[i] : {};
         var ownKeys = Object.keys(source);
@@ -2530,12 +2101,12 @@ function _object_spread(target) {
             }));
         }
         ownKeys.forEach(function(key) {
-            _define_property(target, key, source[key]);
+            MDXComponents_Details_define_property(target, key, source[key]);
         });
     }
     return target;
 }
-function ownKeys(object, enumerableOnly) {
+function MDXComponents_Details_ownKeys(object, enumerableOnly) {
     var keys = Object.keys(object);
     if (Object.getOwnPropertySymbols) {
         var symbols = Object.getOwnPropertySymbols(object);
@@ -2548,12 +2119,103 @@ function ownKeys(object, enumerableOnly) {
     }
     return keys;
 }
-function _object_spread_props(target, source) {
+function MDXComponents_Details_object_spread_props(target, source) {
     source = source != null ? source : {};
     if (Object.getOwnPropertyDescriptors) {
         Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
     } else {
-        ownKeys(Object(source)).forEach(function(key) {
+        MDXComponents_Details_ownKeys(Object(source)).forEach(function(key) {
+            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+    }
+    return target;
+}
+
+
+function MDXDetails(props) {
+    const items = react.Children.toArray(props.children);
+    // Split summary item from the rest to pass it as a separate prop to the
+    // Details theme component
+    const summary = items.find((item)=>{
+        var _item_props;
+        return /*#__PURE__*/ react.isValidElement(item) && ((_item_props = item.props) === null || _item_props === void 0 ? void 0 : _item_props.mdxType) === 'summary';
+    });
+    const children = /*#__PURE__*/ react.createElement(react.Fragment, null, items.filter((item)=>item !== summary));
+    return /*#__PURE__*/ react.createElement(Details_Details, MDXComponents_Details_object_spread_props(MDXComponents_Details_object_spread({}, props), {
+        summary: summary
+    }), children);
+}
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/index.js + 1 modules
+var Heading = __webpack_require__(24999);
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/Heading.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 
+
+function MDXHeading(props) {
+    return /*#__PURE__*/ react.createElement(Heading/* default */.Z, props);
+}
+
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/Ul/styles.module.css
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const Ul_styles_module = ({"containsTaskList":"containsTaskList_mC6p"});
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/Ul/index.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ function Ul_define_property(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function Ul_object_spread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {};
+        var ownKeys = Object.keys(source);
+        if (typeof Object.getOwnPropertySymbols === "function") {
+            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+            }));
+        }
+        ownKeys.forEach(function(key) {
+            Ul_define_property(target, key, source[key]);
+        });
+    }
+    return target;
+}
+function Ul_ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+    if (Object.getOwnPropertySymbols) {
+        var symbols = Object.getOwnPropertySymbols(object);
+        if (enumerableOnly) {
+            symbols = symbols.filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+            });
+        }
+        keys.push.apply(keys, symbols);
+    }
+    return keys;
+}
+function Ul_object_spread_props(target, source) {
+    source = source != null ? source : {};
+    if (Object.getOwnPropertyDescriptors) {
+        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+        Ul_ownKeys(Object(source)).forEach(function(key) {
             Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
         });
     }
@@ -2570,13 +2232,378 @@ function transformUlClassName(className) {
     return (0,clsx_m/* default */.Z)(className, // This class is set globally by GitHub/MDX. We keep the global class, and
     // add another class to get a task list without the default ul styling
     // See https://github.com/syntax-tree/mdast-util-to-hast/issues/28
-    (className === null || className === void 0 ? void 0 : className.includes('contains-task-list')) && styles_module.containsTaskList);
+    (className === null || className === void 0 ? void 0 : className.includes('contains-task-list')) && Ul_styles_module.containsTaskList);
 }
 function MDXUl(props) {
-    return /*#__PURE__*/ react.createElement("ul", _object_spread_props(_object_spread({}, props), {
+    return /*#__PURE__*/ react.createElement("ul", Ul_object_spread_props(Ul_object_spread({}, props), {
         className: transformUlClassName(props.className)
     }));
 }
+
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/Img/styles.module.css
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const Img_styles_module = ({"img":"img_ev3q"});
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/Img/index.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ function Img_define_property(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function Img_object_spread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {};
+        var ownKeys = Object.keys(source);
+        if (typeof Object.getOwnPropertySymbols === "function") {
+            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+            }));
+        }
+        ownKeys.forEach(function(key) {
+            Img_define_property(target, key, source[key]);
+        });
+    }
+    return target;
+}
+function Img_ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+    if (Object.getOwnPropertySymbols) {
+        var symbols = Object.getOwnPropertySymbols(object);
+        if (enumerableOnly) {
+            symbols = symbols.filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+            });
+        }
+        keys.push.apply(keys, symbols);
+    }
+    return keys;
+}
+function Img_object_spread_props(target, source) {
+    source = source != null ? source : {};
+    if (Object.getOwnPropertyDescriptors) {
+        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+        Img_ownKeys(Object(source)).forEach(function(key) {
+            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+    }
+    return target;
+}
+
+
+
+function transformImgClassName(className) {
+    return (0,clsx_m/* default */.Z)(className, Img_styles_module.img);
+}
+function MDXImg(props) {
+    return(// eslint-disable-next-line jsx-a11y/alt-text
+    /*#__PURE__*/ react.createElement("img", Img_object_spread_props(Img_object_spread({
+        loading: "lazy"
+    }, props), {
+        className: transformImgClassName(props.className)
+    })));
+}
+
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Admonition/styles.module.css
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const Admonition_styles_module = ({"admonition":"admonition_LlT9","admonitionHeading":"admonitionHeading_tbUL","admonitionIcon":"admonitionIcon_kALy","admonitionContent":"admonitionContent_S0QG"});
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Admonition/index.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ function Admonition_define_property(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function Admonition_object_spread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {};
+        var ownKeys = Object.keys(source);
+        if (typeof Object.getOwnPropertySymbols === "function") {
+            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+            }));
+        }
+        ownKeys.forEach(function(key) {
+            Admonition_define_property(target, key, source[key]);
+        });
+    }
+    return target;
+}
+function Admonition_ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+    if (Object.getOwnPropertySymbols) {
+        var symbols = Object.getOwnPropertySymbols(object);
+        if (enumerableOnly) {
+            symbols = symbols.filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+            });
+        }
+        keys.push.apply(keys, symbols);
+    }
+    return keys;
+}
+function Admonition_object_spread_props(target, source) {
+    source = source != null ? source : {};
+    if (Object.getOwnPropertyDescriptors) {
+        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+        Admonition_ownKeys(Object(source)).forEach(function(key) {
+            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+    }
+    return target;
+}
+
+
+
+
+
+function NoteIcon() {
+    return /*#__PURE__*/ react.createElement("svg", {
+        viewBox: "0 0 14 16"
+    }, /*#__PURE__*/ react.createElement("path", {
+        fillRule: "evenodd",
+        d: "M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"
+    }));
+}
+function TipIcon() {
+    return /*#__PURE__*/ react.createElement("svg", {
+        viewBox: "0 0 12 16"
+    }, /*#__PURE__*/ react.createElement("path", {
+        fillRule: "evenodd",
+        d: "M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"
+    }));
+}
+function DangerIcon() {
+    return /*#__PURE__*/ react.createElement("svg", {
+        viewBox: "0 0 12 16"
+    }, /*#__PURE__*/ react.createElement("path", {
+        fillRule: "evenodd",
+        d: "M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"
+    }));
+}
+function InfoIcon() {
+    return /*#__PURE__*/ react.createElement("svg", {
+        viewBox: "0 0 14 16"
+    }, /*#__PURE__*/ react.createElement("path", {
+        fillRule: "evenodd",
+        d: "M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"
+    }));
+}
+function CautionIcon() {
+    return /*#__PURE__*/ react.createElement("svg", {
+        viewBox: "0 0 16 16"
+    }, /*#__PURE__*/ react.createElement("path", {
+        fillRule: "evenodd",
+        d: "M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"
+    }));
+}
+// eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
+const AdmonitionConfigs = {
+    note: {
+        infimaClassName: 'secondary',
+        iconComponent: NoteIcon,
+        label: /*#__PURE__*/ react.createElement(Translate/* default */.Z, {
+            id: "theme.admonition.note",
+            description: "The default label used for the Note admonition (:::note)"
+        }, "note")
+    },
+    tip: {
+        infimaClassName: 'success',
+        iconComponent: TipIcon,
+        label: /*#__PURE__*/ react.createElement(Translate/* default */.Z, {
+            id: "theme.admonition.tip",
+            description: "The default label used for the Tip admonition (:::tip)"
+        }, "tip")
+    },
+    danger: {
+        infimaClassName: 'danger',
+        iconComponent: DangerIcon,
+        label: /*#__PURE__*/ react.createElement(Translate/* default */.Z, {
+            id: "theme.admonition.danger",
+            description: "The default label used for the Danger admonition (:::danger)"
+        }, "danger")
+    },
+    info: {
+        infimaClassName: 'info',
+        iconComponent: InfoIcon,
+        label: /*#__PURE__*/ react.createElement(Translate/* default */.Z, {
+            id: "theme.admonition.info",
+            description: "The default label used for the Info admonition (:::info)"
+        }, "info")
+    },
+    caution: {
+        infimaClassName: 'warning',
+        iconComponent: CautionIcon,
+        label: /*#__PURE__*/ react.createElement(Translate/* default */.Z, {
+            id: "theme.admonition.caution",
+            description: "The default label used for the Caution admonition (:::caution)"
+        }, "caution")
+    }
+};
+// Legacy aliases, undocumented but kept for retro-compatibility
+const aliases = {
+    secondary: 'note',
+    important: 'info',
+    success: 'tip',
+    warning: 'danger'
+};
+function getAdmonitionConfig(unsafeType) {
+    var _aliases_unsafeType;
+    const type = (_aliases_unsafeType = aliases[unsafeType]) !== null && _aliases_unsafeType !== void 0 ? _aliases_unsafeType : unsafeType;
+    const config = AdmonitionConfigs[type];
+    if (config) {
+        return config;
+    }
+    console.warn(`No admonition config found for admonition type "${type}". Using Info as fallback.`);
+    return AdmonitionConfigs.info;
+}
+// Workaround because it's difficult in MDX v1 to provide a MDX title as props
+// See https://github.com/facebook/docusaurus/pull/7152#issuecomment-1145779682
+function extractMDXAdmonitionTitle(children) {
+    const items = react.Children.toArray(children);
+    const mdxAdmonitionTitle = items.find((item)=>{
+        var _item_props;
+        return /*#__PURE__*/ react.isValidElement(item) && ((_item_props = item.props) === null || _item_props === void 0 ? void 0 : _item_props.mdxType) === 'mdxAdmonitionTitle';
+    });
+    const rest = /*#__PURE__*/ react.createElement(react.Fragment, null, items.filter((item)=>item !== mdxAdmonitionTitle));
+    return {
+        mdxAdmonitionTitle,
+        rest
+    };
+}
+function processAdmonitionProps(props) {
+    const { mdxAdmonitionTitle, rest } = extractMDXAdmonitionTitle(props.children);
+    var _props_title;
+    return Admonition_object_spread_props(Admonition_object_spread({}, props), {
+        title: (_props_title = props.title) !== null && _props_title !== void 0 ? _props_title : mdxAdmonitionTitle,
+        children: rest
+    });
+}
+function Admonition(props) {
+    const { children, type, title, icon: iconProp } = processAdmonitionProps(props);
+    const typeConfig = getAdmonitionConfig(type);
+    const titleLabel = title !== null && title !== void 0 ? title : typeConfig.label;
+    const { iconComponent: IconComponent } = typeConfig;
+    const icon = iconProp !== null && iconProp !== void 0 ? iconProp : /*#__PURE__*/ react.createElement(IconComponent, null);
+    return /*#__PURE__*/ react.createElement("div", {
+        className: (0,clsx_m/* default */.Z)(ThemeClassNames/* ThemeClassNames */.k.common.admonition, ThemeClassNames/* ThemeClassNames */.k.common.admonitionType(props.type), 'alert', `alert--${typeConfig.infimaClassName}`, Admonition_styles_module.admonition)
+    }, /*#__PURE__*/ react.createElement("div", {
+        className: Admonition_styles_module.admonitionHeading
+    }, /*#__PURE__*/ react.createElement("span", {
+        className: Admonition_styles_module.admonitionIcon
+    }, icon), titleLabel), /*#__PURE__*/ react.createElement("div", {
+        className: Admonition_styles_module.admonitionContent
+    }, children));
+}
+
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Noop.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ /* harmony default export */ const Noop = (()=>null);
+
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/index.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ function MDXComponents_define_property(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function MDXComponents_object_spread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {};
+        var ownKeys = Object.keys(source);
+        if (typeof Object.getOwnPropertySymbols === "function") {
+            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+            }));
+        }
+        ownKeys.forEach(function(key) {
+            MDXComponents_define_property(target, key, source[key]);
+        });
+    }
+    return target;
+}
+
+
+
+
+
+
+
+
+
+
+
+const MDXComponents = {
+    head: MDXHead,
+    code: MDXCode,
+    a: MDXA,
+    pre: MDXPre,
+    details: MDXDetails,
+    ul: MDXUl,
+    img: MDXImg,
+    h1: (props)=>/*#__PURE__*/ react.createElement(MDXHeading, MDXComponents_object_spread({
+            as: "h1"
+        }, props)),
+    h2: (props)=>/*#__PURE__*/ react.createElement(MDXHeading, MDXComponents_object_spread({
+            as: "h2"
+        }, props)),
+    h3: (props)=>/*#__PURE__*/ react.createElement(MDXHeading, MDXComponents_object_spread({
+            as: "h3"
+        }, props)),
+    h4: (props)=>/*#__PURE__*/ react.createElement(MDXHeading, MDXComponents_object_spread({
+            as: "h4"
+        }, props)),
+    h5: (props)=>/*#__PURE__*/ react.createElement(MDXHeading, MDXComponents_object_spread({
+            as: "h5"
+        }, props)),
+    h6: (props)=>/*#__PURE__*/ react.createElement(MDXHeading, MDXComponents_object_spread({
+            as: "h6"
+        }, props)),
+    admonition: Admonition,
+    mermaid: Noop
+};
+/* harmony default export */ const theme_MDXComponents = (MDXComponents);
 
 
 /***/ }),
@@ -2590,7 +2617,7 @@ function MDXUl(props) {
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(67294);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3905);
-/* harmony import */ var _theme_MDXComponents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(29768);
+/* harmony import */ var _theme_MDXComponents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(42391);
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
