@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[87728],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[54977],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 5973:
+/***/ 21123:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/backup-restore-configuration/storage-configuration",
-    "id": "version-2.8/reference-guides/backup-restore-configuration/storage-configuration",
+    "id": "reference-guides/backup-restore-configuration/storage-configuration",
     "title": "Backup Storage Location Configuration",
     "description": "Configure a storage location where all backups are saved by default. You will have the option to override this with each backup, but will be limited to using an S3-compatible object store.",
-    "source": "@site/versioned_docs/version-2.8/reference-guides/backup-restore-configuration/storage-configuration.md",
+    "source": "@site/docs/reference-guides/backup-restore-configuration/storage-configuration.md",
     "sourceDirName": "reference-guides/backup-restore-configuration",
     "slug": "/reference-guides/backup-restore-configuration/storage-configuration",
-    "permalink": "/v2.8/reference-guides/backup-restore-configuration/storage-configuration",
+    "permalink": "/reference-guides/backup-restore-configuration/storage-configuration",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/reference-guides/backup-restore-configuration/storage-configuration.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/backup-restore-configuration/storage-configuration.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1697846522,
-    "formattedLastUpdatedAt": "Oct 21, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1707176490,
+    "formattedLastUpdatedAt": "Feb 5, 2024",
     "frontMatter": {
         "title": "Backup Storage Location Configuration"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Restore Configuration",
-        "permalink": "/v2.8/reference-guides/backup-restore-configuration/restore-configuration"
+        "permalink": "/reference-guides/backup-restore-configuration/restore-configuration"
     },
     "next": {
         "title": "Backup and Restore Examples",
-        "permalink": "/v2.8/reference-guides/backup-restore-configuration/examples"
+        "permalink": "/reference-guides/backup-restore-configuration/examples"
     }
 };
 const assets = {};
@@ -367,8 +367,8 @@ const toc = [
         level: 3
     },
     {
-        value: 'Example values.yaml for the rancher-backup Helm Chart',
-        id: 'example-valuesyaml-for-the-rancher-backup-helm-chart',
+        value: 'Example YAML File: Rancher Backup Helm Chart',
+        id: 'example-yaml-file-rancher-backup-helm-chart',
         level: 2
     }
 ];
@@ -414,7 +414,7 @@ function MDXContent(_param) {
         "align": null
     }, `Choose the credentials for S3 from your secrets in Rancher. `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/v2.8/reference-guides/backup-restore-configuration/backup-configuration#example-credentialsecret"
+        "href": "/reference-guides/backup-restore-configuration/backup-configuration#example-credentialsecret"
     }, `Example`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -485,7 +485,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `rancher-backup`), ` chart by selecting the StorageClass option will create a Persistent Volume Claim (PVC), and Kubernetes will in turn dynamically provision a Persistent Volume (PV) where all the backups will be saved by default.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For information about creating storage classes refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/dynamically-provision-new-storage"
+        "href": "/how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/dynamically-provision-new-storage"
     }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "title": "Important:",
         "type": "note"
@@ -498,7 +498,7 @@ If no such StorageClass is available, after the PV is provisioned, make sure to 
         "id": "existing-persistent-volume"
     }, `Existing Persistent Volume`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Select an existing Persistent Volume (PV) that will be used to store your backups. For information about creating PersistentVolumes in Rancher, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/set-up-existing-storage#2-add-a-persistentvolume-that-refers-to-the-persistent-storage"
+        "href": "/how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/set-up-existing-storage#2-add-a-persistentvolume-that-refers-to-the-persistent-storage"
     }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "title": "Important:",
         "type": "note"
@@ -507,12 +507,12 @@ If no such StorageClass is available, after the PV is provisioned, make sure to 
     }, `It is highly recommended to use a Persistent Volume with a reclaim policy of "Retain". Otherwise if the PVC created by the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `rancher-backup`), ` chart gets deleted (either during app upgrade, or accidentally), the PV will get deleted too, which means all backups saved in it will get deleted.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "example-valuesyaml-for-the-rancher-backup-helm-chart"
-    }, `Example values.yaml for the rancher-backup Helm Chart`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The documented `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        "id": "example-yaml-file-rancher-backup-helm-chart"
+    }, `Example YAML File: Rancher Backup Helm Chart`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The documented `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `values.yaml`), ` file that can be used to configure `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `values.yaml`), ` file that can be used to configure the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `rancher-backup`), ` operator when the Helm CLI is used can be found in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `backup-restore-operator`), ` when the Helm CLI is used can be found in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://github.com/rancher/backup-restore-operator/blob/master/charts/rancher-backup/values.yaml"
     }, `backup-restore-operator repository.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information about `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {

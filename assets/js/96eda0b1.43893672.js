@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/backup-restore-configuration/storage-configuration.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1697846551,
-    "formattedLastUpdatedAt": "Oct 21, 2023",
+    "lastUpdatedAt": 1707176490,
+    "formattedLastUpdatedAt": "Feb 5, 2024",
     "frontMatter": {
         "title": "Backup Storage Location Configuration"
     },
@@ -367,8 +367,8 @@ const toc = [
         level: 3
     },
     {
-        value: 'Example values.yaml for the rancher-backup Helm Chart',
-        id: 'example-valuesyaml-for-the-rancher-backup-helm-chart',
+        value: 'Example YAML File: Rancher Backup Helm Chart',
+        id: 'example-yaml-file-rancher-backup-helm-chart',
         level: 2
     }
 ];
@@ -507,12 +507,12 @@ If no such StorageClass is available, after the PV is provisioned, make sure to 
     }, `It is highly recommended to use a Persistent Volume with a reclaim policy of "Retain". Otherwise if the PVC created by the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `rancher-backup`), ` chart gets deleted (either during app upgrade, or accidentally), the PV will get deleted too, which means all backups saved in it will get deleted.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "example-valuesyaml-for-the-rancher-backup-helm-chart"
-    }, `Example values.yaml for the rancher-backup Helm Chart`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The documented `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        "id": "example-yaml-file-rancher-backup-helm-chart"
+    }, `Example YAML File: Rancher Backup Helm Chart`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The documented `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `values.yaml`), ` file that can be used to configure `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `values.yaml`), ` file that can be used to configure the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `rancher-backup`), ` operator when the Helm CLI is used can be found in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `backup-restore-operator`), ` when the Helm CLI is used can be found in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://github.com/rancher/backup-restore-operator/blob/master/charts/rancher-backup/values.yaml"
     }, `backup-restore-operator repository.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information about `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {

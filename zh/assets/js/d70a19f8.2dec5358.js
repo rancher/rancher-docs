@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[81905],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[87120],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 89245:
+/***/ 72023:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -319,19 +319,19 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/backup-restore-and-disaster-recovery",
-    "id": "version-2.8/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/backup-restore-and-disaster-recovery",
+    "id": "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/backup-restore-and-disaster-recovery",
     "title": "Backups and Disaster Recovery",
     "description": "In this section, you'll learn how to create backups of Rancher, how to restore Rancher from backup, and how to migrate Rancher to a new Kubernetes cluster.",
-    "source": "@site/versioned_docs/version-2.8/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/backup-restore-and-disaster-recovery.md",
+    "source": "@site/docs/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/backup-restore-and-disaster-recovery.md",
     "sourceDirName": "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery",
     "slug": "/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/",
-    "permalink": "/zh/v2.8/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/",
+    "permalink": "/zh/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/backup-restore-and-disaster-recovery.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/backup-restore-and-disaster-recovery.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "2024年1月29日",
+    "version": "current",
+    "lastUpdatedAt": 1707245580,
+    "formattedLastUpdatedAt": "2024年2月6日",
     "frontMatter": {
         "title": "Backups and Disaster Recovery",
         "keywords": [
@@ -344,11 +344,11 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "多集群应用",
-        "permalink": "/zh/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps"
+        "permalink": "/zh/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps"
     },
     "next": {
         "title": "备份恢复使用指南",
-        "permalink": "/zh/v2.8/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide"
+        "permalink": "/zh/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide"
     }
 };
 const assets = {};
@@ -399,8 +399,8 @@ const toc = [
         level: 2
     },
     {
-        value: 'Example values.yaml for the rancher-backup Helm Chart',
-        id: 'example-valuesyaml-for-the-rancher-backup-helm-chart',
+        value: 'Example YAML File: Rancher Backup Helm Chart',
+        id: 'example-yaml-file-rancher-backup-helm-chart',
         level: 3
     }
 ];
@@ -482,10 +482,10 @@ function MDXContent(_param) {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
-    }, `There is a known issue in Fleet that occurs after performing a restoration using the backup-restore-operator: Secrets used for clientSecretName and helmSecretName are not included in Fleet gitrepos. Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `There is a known issue in Fleet that occurs after performing a restoration using the backup-restore-operator: Secrets used for clientSecretName and helmSecretName are not included in Fleet gitrepos. Refer `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.8/integrations-in-rancher/fleet/overview#troubleshooting"
-    }, `Fleet Troubleshooting`), ` section for a workaround.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "href": "/zh/integrations-in-rancher/fleet/overview#troubleshooting"
+    }, `Fleet Troubleshooting`), ` for a workaround.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "installing-rancher-backup-with-the-rancher-ui"
     }, `Installing rancher-backup with the Rancher UI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
@@ -559,17 +559,21 @@ function MDXContent(_param) {
         "href": "migrate-rancher-to-new-cluster.md"
     }, `these steps.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "default-storage-location-configuration"
-    }, `Default Storage Location Configuration`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Configure a storage location where all backups are saved by default. You will have the option to override this with each backup, but will be limited to using an S3-compatible or Minio object store.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For information on configuring these options, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Default Storage Location Configuration`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Configure a default storage location for your backups. There are various configuration options, such as specifying an S3-compatible object store as the location for individual backups or choosing an existing `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `StorageClass`), ` during installation of the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `backup-restore-operator`), ` Helm chart. You also have the option to override the configured storage location with each backup, but are limited to using an S3-compatible or Minio object store.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For information on configuring these options, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "../../../reference-guides/backup-restore-configuration/storage-configuration.md"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "example-valuesyaml-for-the-rancher-backup-helm-chart"
-    }, `Example values.yaml for the rancher-backup Helm Chart`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The example `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "id": "example-yaml-file-rancher-backup-helm-chart"
+    }, `Example YAML File: Rancher Backup Helm Chart`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The example `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../../reference-guides/backup-restore-configuration/storage-configuration.md#example-valuesyaml-for-the-rancher-backup-helm-chart"
+        "href": "../../../reference-guides/backup-restore-configuration/storage-configuration.md#example-yaml-file-rancher-backup-helm-chart"
     }, `values.yaml file`), ` can be used to configure the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `rancher-backup`), ` operator when the Helm CLI is used to install it.`));
+    }, `backup-restore-operator`), ` when the Helm CLI is used to install it.`));
 }
 MDXContent.isMDXComponent = true;
 
