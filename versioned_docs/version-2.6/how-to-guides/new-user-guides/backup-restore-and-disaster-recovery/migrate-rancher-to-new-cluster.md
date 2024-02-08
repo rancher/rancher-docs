@@ -26,7 +26,7 @@ Since Rancher can be installed on any Kubernetes cluster, you can use this backu
 
 ### 1. Install the rancher-backup Helm chart
 
-Install the [rancher-backup chart](https://github.com/rancher/backup-restore-operator/tags), using a version in the 2.x.x major version range:
+Install the [rancher-backup chart](https://github.com/rancher/backup-restore-operator/tags):
 
   1. Add the Helm repository:
 
@@ -35,11 +35,11 @@ Install the [rancher-backup chart](https://github.com/rancher/backup-restore-ope
      helm repo update
      ```
 
-  1. Select and set `CHART_VERSION` variable with a 100.x.x rancher-backup release version:
+  1. Select and set a `CHART_VERSION` variable with a rancher-backup release version compatible with your version of Rancher. See the [support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions), within the **Rancher Apps / Cluster Tools** section, to see which rancher-backup release versions are supported:
 
      ```bash
      helm search repo --versions rancher-charts/rancher-backup
-     CHART_VERSION=<2.x.x>
+     CHART_VERSION=<x.x.x>
      ```
 
   1. Install the charts:
