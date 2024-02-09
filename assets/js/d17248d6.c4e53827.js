@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[81113],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[15299],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 35453:
+/***/ 1486:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/rancher-security/security-advisories-and-cves",
-    "id": "reference-guides/rancher-security/security-advisories-and-cves",
+    "id": "version-2.6/reference-guides/rancher-security/security-advisories-and-cves",
     "title": "Security Advisories and CVEs",
     "description": "Rancher is committed to informing the community of security issues in our products. Rancher will publish security advisories and CVEs (Common Vulnerabilities and Exposures) for issues we have resolved. New security advisories are also published in Rancher's GitHub security page.",
-    "source": "@site/docs/reference-guides/rancher-security/security-advisories-and-cves.md",
+    "source": "@site/versioned_docs/version-2.6/reference-guides/rancher-security/security-advisories-and-cves.md",
     "sourceDirName": "reference-guides/rancher-security",
     "slug": "/reference-guides/rancher-security/security-advisories-and-cves",
-    "permalink": "/reference-guides/rancher-security/security-advisories-and-cves",
+    "permalink": "/v2.6/reference-guides/rancher-security/security-advisories-and-cves",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/rancher-security/security-advisories-and-cves.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/rancher-security/security-advisories-and-cves.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1703280782,
-    "formattedLastUpdatedAt": "Dec 22, 2023",
+    "version": "2.6",
+    "lastUpdatedAt": 1707500737,
+    "formattedLastUpdatedAt": "Feb 9, 2024",
     "frontMatter": {
         "title": "Security Advisories and CVEs"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Rancher Security Best Practices",
-        "permalink": "/reference-guides/rancher-security/rancher-security-best-practices"
+        "title": "Kubernetes Security Best Practices",
+        "permalink": "/v2.6/reference-guides/rancher-security/kubernetes-security-best-practices"
     },
     "next": {
-        "title": "Sample PodSecurityConfiguration",
-        "permalink": "/reference-guides/rancher-security/psa-restricted-exemptions"
+        "title": "Cloud Marketplace Integration",
+        "permalink": "/v2.6/integrations-in-rancher/cloud-marketplace/"
     }
 };
 const assets = {};
@@ -383,6 +383,116 @@ function MDXContent(_param) {
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
+        "href": "https://github.com/rancher/norman/security/advisories/GHSA-r8f4-hv23-6qp6"
+    }, `CVE-2023-32193`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `An issue was discovered in Rancher versions up to and including 2.6.13, 2.7.9 and 2.8.1, where multiple Cross-Site Scripting (XSS) vulnerabilities can be exploited via the Rancher UI (Norman).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `8 Feb 2024`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Rancher `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.8.2"
+    }, `v2.8.2`), `, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.7.10"
+    }, `v2.7.10`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.6.14"
+    }, `v2.6.14`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/apiserver/security/advisories/GHSA-833m-37f7-jq55"
+    }, `CVE-2023-32192`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `An issue was discovered in Rancher versions up to and including 2.6.13, 2.7.9 and 2.8.1, where multiple Cross-Site Scripting (XSS) vulnerabilities can be exploited via the Rancher UI (Apiserver).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `8 Feb 2024`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Rancher `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.8.2"
+    }, `v2.8.2`), `, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.7.10"
+    }, `v2.7.10`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.6.14"
+    }, `v2.6.14`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/security/advisories/GHSA-xfj7-qf8w-2gcr"
+    }, `CVE-2023-22649`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `An issue was discovered in Rancher versions up to and including 2.6.13, 2.7.9 and 2.8.1, in which sensitive data may be leaked into Rancher's audit logs.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `8 Feb 2024`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Rancher `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.8.2"
+    }, `v2.8.2`), `, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.7.10"
+    }, `v2.7.10`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.6.14"
+    }, `v2.6.14`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/security/advisories/GHSA-c85r-fwc7-45vc"
+    }, `CVE-2023-32194`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `An issue was discovered in Rancher versions up to and including 2.6.13, 2.7.9 and 2.8.1, where granting a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
+    }, `create`), ` or `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
+    }, `*`), ` global role for a resource type of "namespaces"; no matter the API group, the subject will receive `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
+    }, `*`), ` permissions for core namespaces.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `8 Feb 2024`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Rancher `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.8.2"
+    }, `v2.8.2`), `, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.7.10"
+    }, `v2.7.10`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.6.14"
+    }, `v2.6.14`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
         "href": "https://github.com/rancher/rancher/security/advisories/GHSA-vf6j-6739-78m8"
     }, `CVE-2023-22648`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
@@ -395,8 +505,8 @@ function MDXContent(_param) {
         "align": null
     }, `Rancher `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "https://github.com/rancher/rancher/releases/tag/v2.7.4"
-    }, `v2.7.4`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.6.13"
+    }, `v2.6.13`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
@@ -415,8 +525,8 @@ function MDXContent(_param) {
         "align": null
     }, `Rancher `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "https://github.com/rancher/rancher/releases/tag/v2.7.4"
-    }, `v2.7.4`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.6.13"
+    }, `v2.6.13`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
@@ -435,8 +545,8 @@ function MDXContent(_param) {
         "align": null
     }, `Rancher `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "https://github.com/rancher/rancher/releases/tag/v2.7.4"
-    }, `v2.7.4`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.6.13"
+    }, `v2.6.13`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
@@ -455,28 +565,33 @@ function MDXContent(_param) {
         "align": null
     }, `Rancher `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "https://github.com/rancher/rancher/releases/tag/v2.7.4"
-    }, `v2.7.4`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.6.13"
+    }, `v2.6.13`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "https://github.com/rancher/rancher/security/advisories/GHSA-6m9f-pj6w-w87g"
-    }, `CVE-2023-22651`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        "href": "https://github.com/rancher/rancher/security/advisories/GHSA-7m72-mh5r-6j3r"
+    }, `CVE-2022-43759`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, `The Rancher admissions webhook may become misconfigured due to a  failure in the webhook's update logic. The admissions webhook enforces validation rules and security checks before resources are admitted into the Kubernetes cluster. When the webhook is operating in a degraded state, it no longer validates any resources, which can result in severe privilege escalations and data corruption.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+    }, `An issue was discovered in Rancher versions from 2.5.0 up to and including 2.5.16 and from 2.6.0 up to and including 2.6.9, where an authorization logic flaw allows privilege escalation via project role template binding (PRTB) and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
+    }, `-promoted`), ` roles.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, `24 April 2023`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+    }, `24 January 2023`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, `Rancher `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "https://github.com/rancher/rancher/releases/tag/v2.7.3"
-    }, `v2.7.3`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.6.10"
+    }, `v2.6.10`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.5.17"
+    }, `v2.5.17`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
@@ -745,10 +860,10 @@ function MDXContent(_param) {
         "align": null
     }, `This vulnerability only affects customers using `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/faq/container-network-interface-providers#weave"
+        "href": "https://rancher.com/docs/rancher/v2.6/en/faq/networking/cni-providers/#weave"
     }, `Weave`), ` Container Network Interface (CNI) when configured through `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/"
+        "href": "https://rancher.com/docs/rancher/v2.6/en/admin-settings/rke-templates/"
     }, `RKE templates`), `. A vulnerability was discovered in Rancher versions 2.5.0 up to and including 2.5.13, and 2.6.0 up to and including 2.6.4, where a user interface (UI) issue with RKE templates does not include a value for the Weave password when Weave is chosen as the CNI. If a cluster is created based on the mentioned template, and Weave is configured as the CNI, no password will be created for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
         "href": "https://www.weave.works/docs/net/latest/tasks/manage/security-untrusted-networks/"
@@ -777,7 +892,7 @@ function MDXContent(_param) {
         "align": null
     }, `A vulnerability was discovered in Rancher versions from 2.5.0 up to and including 2.5.12 and from 2.6.0 up to and including 2.6.3 which allows users who have create or update permissions on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/"
+        "href": "https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/"
     }, `Global Roles`), ` to escalate their permissions, or those of another user, to admin-level permissions. Global Roles grant users Rancher-wide permissions, such as the ability to create clusters. In the identified versions of Rancher, when users are given permission to edit or create Global Roles, they are not restricted to only granting permissions which they already posses. This vulnerability affects customers who utilize non-admin users that are able to create or edit Global Roles. The most common use case for this scenario is the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "td"
     }, `restricted-admin`), ` role.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -842,7 +957,7 @@ function MDXContent(_param) {
         "align": null
     }, `This vulnerability only affects customers using `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"
+        "href": "https://rancher.com/docs/rancher/v2.6/en/deploy-across-clusters/fleet/"
     }, `Fleet`), ` for continuous delivery with authenticated Git and/or Helm repositories. An issue was discovered in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "td"
     }, `go-getter`), ` library in versions prior to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -1290,7 +1405,7 @@ function MDXContent(_param) {
         "href": "https://github.com/rancher/rancher/releases/tag/v2.0.11"
     }, `Rancher v2.0.11`), ` - Rolling back from these versions or greater have specific `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks"
+        "href": "/v2.6/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks"
     }, `instructions`), `.`)))));
 }
 MDXContent.isMDXComponent = true;
