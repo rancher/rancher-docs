@@ -64,7 +64,7 @@ The default roles, Administrator and Standard User, each come with multiple glob
 
 Administrators can enforce custom global permissions in multiple ways:
 
-- [Creating custom global roles](#creating-custom-global-roles).
+- [Creating custom global roles](#custom-globalroles).
 - [Changing the default permissions for new users](#configuring-default-global-permissions).
 - [Configuring global permissions for individual users](#configuring-global-permissions-for-individual-users).
 - [Configuring global permissions for groups](#configuring-global-permissions-for-groups).
@@ -207,7 +207,6 @@ Any user with this permission will be a cluster-owner on all downstream clusters
 Using this field on [default GlobalRoles](#configuring-default-global-permissions) may result in users gaining excessive permissions.
 
 :::
-
 
 ### Configuring Default Global Permissions
 
@@ -356,7 +355,6 @@ The following table lists the permissions and actions that a `restricted-admin` 
 | | Deploy GKE cluster | Yes | Yes | Yes | |
 | | Deploy AKS cluster | Yes | Yes | Yes | |
 
-
 ### Changing Global Administrators to Restricted Admins
 
 In previous version, the docs recommended that all users should be changed over to Restricted Admin if the role was in use. Users are now encouraged to use a custom-built role using the cluster permissions feature, and migrate any current restricted admins to use that approach. 
@@ -364,5 +362,3 @@ In previous version, the docs recommended that all users should be changed over 
 This can be done through **Security > Users** and moving any Administrator role over to Restricted Administrator.
 
 Signed-in users can change themselves over to the `restricted-admin` if they wish, but they should only do that as the last step, otherwise they won't have the permissions to do so.
-
-

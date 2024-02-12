@@ -64,7 +64,7 @@ The default roles, Administrator and Standard User, each come with multiple glob
 
 Administrators can enforce custom global permissions in multiple ways:
 
-- [Creating custom global roles](#creating-custom-global-roles).
+- [Creating custom global roles](#custom-globalroles).
 - [Changing the default permissions for new users](#configuring-default-global-permissions).
 - [Configuring global permissions for individual users](#configuring-global-permissions-for-individual-users).
 - [Configuring global permissions for groups](#configuring-global-permissions-for-groups).
