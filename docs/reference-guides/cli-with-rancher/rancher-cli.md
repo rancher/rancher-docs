@@ -82,8 +82,8 @@ The following commands are available for use in Rancher CLI.
 | `settings, [setting]`  | Shows the current settings for your Rancher Server.  |
 | `ssh`  | Connects to one of your cluster nodes using the SSH protocol.  |
 | `up`  | Applies compose config.  |
-| `wait`  | Waits for resoruces cluster, app, project, multiClusterApp.  |
-| `token`  | Authentictes and generates new kubeconfig token.  |
+| `wait`  | Waits for resources cluster, app, project, multiClusterApp.  |
+| `token`  | Authenticates and generates new kubeconfig token.  |
 | `help, [h]`  | Shows a list of commands or help for one command.  |
 
 ### Rancher CLI Help
