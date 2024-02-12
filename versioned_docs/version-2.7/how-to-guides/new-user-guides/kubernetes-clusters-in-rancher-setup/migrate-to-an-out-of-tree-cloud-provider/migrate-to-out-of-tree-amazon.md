@@ -7,7 +7,7 @@ title: Migrating Amazon In-tree to Out-of-tree
 </head>
 
 :::note
-Rancher Prime provides access to Rancher v2.7.11, a version of Rancher v2.7.x which has support for Kubernetes 1.27. If you use Rancher v2.7.11 and upgrade to Kubernetes 1.27, you must use an out-of-tree cloud provider.
+Rancher Prime provides access to Rancher v2.7.11, a version of Rancher v2.7.x which supports Kubernetes 1.27. If you use Rancher v2.7.11 and upgrade to Kubernetes 1.27, you must use an out-of-tree cloud provider.
 :::
 
 Kubernetes is moving away from maintaining cloud providers in-tree. In Kubernetes 1.27 and later, the in-tree cloud providers have been removed. 
@@ -16,7 +16,7 @@ You can migrate from an in-tree to an out-of-tree AWS cloud provider on Kubernet
 
 To migrate from the in-tree cloud provider to the out-of-tree AWS cloud provider, you must stop the existing cluster's kube controller manager and install the AWS cloud controller manager. There are many ways to do this. Refer to the official AWS documentation on the [external cloud controller manager](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for details.
 
-If it's acceptable to have some downtime, you can [switch to an external cloud provider](../set-up-cloud-providers/amazon.md#using-the-out-of-tree-aws-cloud-provider), which removes in-tree components and then deploy charts to install the AWS cloud controller manager.
+If it's acceptable to have some downtime during migration, follow the instructions to [set up an external cloud provider](../set-up-cloud-providers/amazon.md#using-the-out-of-tree-aws-cloud-provider). These instructions outline how to configure the out-of-tree cloud provider for a newly provisioned cluster. During set up, there will be some downtime, as there is a time gap between when the old cloud provider stops running and when the new cloud provider starts to run.
 
 If your setup can't tolerate any control plane downtime, you must enable leader migration. This facilitates a smooth transition from the controllers in the kube controller manager to their counterparts in the cloud controller manager. Refer to the official AWS documentation on [Using leader migration](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for more details.
 

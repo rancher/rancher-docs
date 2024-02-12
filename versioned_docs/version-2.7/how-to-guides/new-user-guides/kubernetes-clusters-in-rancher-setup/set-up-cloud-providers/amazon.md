@@ -9,7 +9,7 @@ weight: 1
 
 :::note Important:
 
-In Kubernetes 1.27 and later, you must use an out-of-tree AWS cloud provider. In-tree cloud providers have been deprecated. The Amazon cloud provider has been removed completely, and won't work after an upgrade to Kubernetes 1.27. The steps listed below are still required to set up an Amazon cloud provider. You can [set up an out-of-tree cloud provider for RKE](#using-the-out-of-tree-aws-cloud-provider-for-rke) after creating an IAM role and configuring the ClusterID.
+Rancher Prime provides access to Rancher v2.7.11, a version of Rancher v2.7.x which supports Kubernetes 1.27. If you use Rancher v2.7.11 and upgrade to Kubernetes 1.27, you must use an out-of-tree cloud provider. In Kubernetes 1.27, in-tree cloud providers have been deprecated. The Amazon cloud provider has been removed completely, and won't work after an upgrade to Kubernetes 1.27. The steps listed below are still required to set up an Amazon cloud provider. You can [set up an out-of-tree cloud provider for RKE](#using-the-out-of-tree-aws-cloud-provider-for-rke) after creating an IAM role and configuring the ClusterID.
 
 You can also [migrate from an in-tree to an out-of-tree AWS cloud provider](../migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-amazon.md) on Kubernetes 1.26 and earlier. All existing clusters must migrate prior to upgrading to v1.27 in order to stay functional.
 
