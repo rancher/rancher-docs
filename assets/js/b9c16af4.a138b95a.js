@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[48617],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[60683],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 52387:
+/***/ 17730:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,35 +308,35 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'EKS Cluster Configuration Reference | 2.6'
+    title: 'EKS Cluster Configuration Reference'
 };
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration",
-    "id": "reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration",
-    "title": "EKS Cluster Configuration Reference | 2.6",
+    "id": "version-2.8/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration",
+    "title": "EKS Cluster Configuration Reference",
     "description": "Account Access",
-    "source": "@site/docs/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration.md",
+    "source": "@site/versioned_docs/version-2.8/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration.md",
     "sourceDirName": "reference-guides/cluster-configuration/rancher-server-configuration",
     "slug": "/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration",
-    "permalink": "/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration",
+    "permalink": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1697840378,
-    "formattedLastUpdatedAt": "Oct 20, 2023",
+    "version": "2.8",
+    "lastUpdatedAt": 1707757599,
+    "formattedLastUpdatedAt": "Feb 12, 2024",
     "frontMatter": {
-        "title": "EKS Cluster Configuration Reference | 2.6"
+        "title": "EKS Cluster Configuration Reference"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "K3s Cluster Configuration Reference",
-        "permalink": "/reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration"
+        "permalink": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration"
     },
     "next": {
         "title": "AKS Cluster Configuration Reference",
-        "permalink": "/reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration"
+        "permalink": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration"
     }
 };
 const assets = {};
@@ -468,7 +468,7 @@ function MDXContent(_param) {
         "align": null
     }, `Select the cloud credentials that you created for your IAM policy. For more information on creating cloud credentials in Rancher, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/reference-guides/user-settings/manage-cloud-credentials"
+        "href": "/v2.8/reference-guides/user-settings/manage-cloud-credentials"
     }, `this page.`))))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "service-role"
     }, `Service Role`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Choose a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -701,7 +701,11 @@ function MDXContent(_param) {
     }, `Tag each EC2 instance and its volumes in the node group`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Optional`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+    }, `Optional`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "caution"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `You can't directly update a node group to a newer Kubernetes version if the node group was created from a custom launch template. You must create a new launch template with the proper Kubernetes version, and associate the node group with the new template.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "rancher-managed-launch-templates"
     }, `Rancher-managed Launch Templates`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you do not specify a launch template, then you will be able to configure the above options in the Rancher UI and all of them can be updated after creation. In order to take advantage of all of these options, Rancher will create and manage a launch template for you. Each cluster in Rancher will have one Rancher-managed launch template and each managed node group that does not have a specified launch template will have one version of the managed launch template. The name of this launch template will have the prefix "rancher-managed-lt-" followed by the display name of the cluster. In addition, the Rancher-managed launch template will be tagged with the key "rancher-managed-template" and value "do-not-modify-or-delete" to help identify it as Rancher-managed. It is important that this launch template and its versions not be modified, deleted, or used with any other clusters or managed node groups. Doing so could result in your node groups being "degraded" and needing to be destroyed and recreated.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "custom-amis"
