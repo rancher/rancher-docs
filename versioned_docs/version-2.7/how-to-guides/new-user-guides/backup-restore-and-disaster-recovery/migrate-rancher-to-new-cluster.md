@@ -40,7 +40,6 @@ Install the [`rancher-backup chart`](https://github.com/rancher/backup-restore-o
   1. Set a `CHART_VERSION` variable, selecting a `rancher-backup` chart version compatible with your version of Rancher. See the [support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions), within the **Rancher Apps / Cluster Tools** section, to see which `rancher-backup` versions are supported:
 
      ```bash
-     helm search repo --versions rancher-charts/rancher-backup
      CHART_VERSION=<x.x.x>
      ```
 
