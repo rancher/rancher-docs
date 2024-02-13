@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[15661],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[80901],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 83870:
+/***/ 92926:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -314,19 +314,19 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/cli-with-rancher/rancher-cli",
-    "id": "version-2.6/reference-guides/cli-with-rancher/rancher-cli",
+    "id": "version-2.7/reference-guides/cli-with-rancher/rancher-cli",
     "title": "Rancher CLI",
     "description": "Interact with Rancher using command line interface (CLI) tools from your workstation.",
-    "source": "@site/versioned_docs/version-2.6/reference-guides/cli-with-rancher/rancher-cli.md",
+    "source": "@site/versioned_docs/version-2.7/reference-guides/cli-with-rancher/rancher-cli.md",
     "sourceDirName": "reference-guides/cli-with-rancher",
     "slug": "/reference-guides/cli-with-rancher/rancher-cli",
-    "permalink": "/v2.6/reference-guides/cli-with-rancher/rancher-cli",
+    "permalink": "/v2.7/reference-guides/cli-with-rancher/rancher-cli",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/cli-with-rancher/rancher-cli.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/cli-with-rancher/rancher-cli.md",
     "tags": [],
-    "version": "2.6",
-    "lastUpdatedAt": 1705016351,
-    "formattedLastUpdatedAt": "Jan 11, 2024",
+    "version": "2.7",
+    "lastUpdatedAt": 1707849828,
+    "formattedLastUpdatedAt": "Feb 13, 2024",
     "frontMatter": {
         "title": "Rancher CLI",
         "description": "Interact with Rancher using command line interface (CLI) tools from your workstation."
@@ -334,11 +334,11 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "CLI with Rancher",
-        "permalink": "/v2.6/reference-guides/cli-with-rancher/"
+        "permalink": "/v2.7/reference-guides/cli-with-rancher/"
     },
     "next": {
         "title": "kubectl Utility",
-        "permalink": "/v2.6/reference-guides/cli-with-rancher/kubectl-utility"
+        "permalink": "/v2.7/reference-guides/cli-with-rancher/kubectl-utility"
     }
 };
 const assets = {};
@@ -401,11 +401,9 @@ function MDXContent(_param) {
         parentName: "li"
     }, `☰`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
-    }, `At the bottom, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `At the bottom of the navigation sidebar menu, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `v2.6.x`), `, where `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `v2.6.x`), ` is a hyperlinked text indicating the installed Rancher version.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `About`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, `Under the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
@@ -420,7 +418,7 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `An API Bearer Token, which is used to authenticate with Rancher. For more information about obtaining a Bearer Token, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.6/reference-guides/user-settings/api-keys"
+        "href": "/v2.7/reference-guides/user-settings/api-keys"
     }, `Creating an API Key`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "cli-authentication"
     }, `CLI Authentication`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Before you can use Rancher CLI to control your Rancher Server, you must authenticate using an API Bearer Token. Log in using the following command (replace `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -435,7 +433,7 @@ function MDXContent(_param) {
         "id": "project-selection"
     }, `Project Selection`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Before you can perform any commands, you must select a Rancher project to perform those commands against. To select a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces"
+        "href": "/v2.7/how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces"
     }, `project`), ` to work on, use the command `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `./rancher context switch`), `. When you enter this command, a list of available projects displays. Enter a number to choose your project.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -496,7 +494,7 @@ INFO[0005] Saving config to /Users/markbishop/.ranchcli2.json
         "align": null
     }, `Performs operations on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/v2.6/how-to-guides/new-user-guides/helm-charts-in-rancher/"
+        "href": "/v2.7/how-to-guides/new-user-guides/helm-charts-in-rancher/"
     }, `catalogs`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -509,7 +507,7 @@ INFO[0005] Saving config to /Users/markbishop/.ranchcli2.json
         "align": null
     }, `Performs operations on your `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/"
+        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/"
     }, `clusters`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -522,11 +520,21 @@ INFO[0005] Saving config to /Users/markbishop/.ranchcli2.json
         "align": null
     }, `Switches between Rancher `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/v2.6/how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces"
+        "href": "/v2.7/how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces"
     }, `projects`), `. For an example, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
         "href": "#project-selection"
     }, `Project Selection`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
+    }, `globaldns`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Performs operations on global DNS providers and entries.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
@@ -541,10 +549,10 @@ INFO[0005] Saving config to /Users/markbishop/.ranchcli2.json
         "href": "https://kubernetes.io/docs/reference/kubectl/cheatsheet/#resource-types"
     }, `Kubernetes resources`), ` or Rancher resources (i.e.: `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/v2.6/how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces"
+        "href": "/v2.7/how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces"
     }, `projects`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/"
+        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/"
     }, `workloads`), `). Specify resources by name or ID.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -578,10 +586,33 @@ INFO[0005] Saving config to /Users/markbishop/.ranchcli2.json
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "td"
+    }, `machines, [machine]`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Performs operations on machines.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
+    }, `multiclusterapps, [multiclusterapp mcapps mcapp]`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Performs operations with multi-cluster apps.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
     }, `namespaces, [namespace]`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Performs operations on namespaces.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+    }, `Performs operations on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "/v2.7/how-to-guides/new-user-guides/manage-namespaces"
+    }, `namespaces`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
@@ -591,7 +622,10 @@ INFO[0005] Saving config to /Users/markbishop/.ranchcli2.json
     }, `nodes, [node]`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Performs operations on nodes.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+    }, `Performs operations on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "/v2.7/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools"
+    }, `nodes`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
@@ -603,7 +637,7 @@ INFO[0005] Saving config to /Users/markbishop/.ranchcli2.json
         "align": null
     }, `Performs operations on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/v2.6/how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces"
+        "href": "/v2.7/how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces"
     }, `projects`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -616,8 +650,18 @@ INFO[0005] Saving config to /Users/markbishop/.ranchcli2.json
         "align": null
     }, `Displays `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/"
+        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/"
     }, `workloads`), ` in a project.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
+    }, `server`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Performs operations for the server.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
@@ -644,6 +688,36 @@ INFO[0005] Saving config to /Users/markbishop/.ranchcli2.json
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "td"
+    }, `up`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Applies compose config.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
+    }, `wait`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Waits for resources cluster, app, project, multiClusterApp.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
+    }, `token`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Authenticates and generates new kubeconfig token.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "td"
     }, `help, [h]`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
@@ -659,7 +733,7 @@ INFO[0005] Saving config to /Users/markbishop/.ranchcli2.json
         parentName: "p"
     }, `cannot`), ` be used to install `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/new-user-guides/helm-charts-in-rancher/"
+        "href": "/v2.7/how-to-guides/new-user-guides/helm-charts-in-rancher/"
     }, `dashboard apps or Rancher feature charts`), `.`));
 }
 MDXContent.isMDXComponent = true;
