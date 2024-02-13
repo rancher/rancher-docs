@@ -2,7 +2,7 @@
 title: Prometheus Custom Metrics Adapter
 ---
 
-After you've enabled [cluster level monitoring](../../../pages-for-subheaders/cluster-monitoring.md), You can view the metrics data from Rancher. You can also deploy the Prometheus custom metrics adapter then you can use the HPA with metrics stored in cluster monitoring.
+After you've enabled [cluster level monitoring](cluster-monitoring.md), You can view the metrics data from Rancher. You can also deploy the Prometheus custom metrics adapter then you can use the HPA with metrics stored in cluster monitoring.
 
 ## Deploy Prometheus Custom Metrics Adapter
 

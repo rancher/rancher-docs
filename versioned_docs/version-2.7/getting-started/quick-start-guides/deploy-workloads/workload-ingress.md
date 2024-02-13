@@ -23,7 +23,7 @@ For this workload, you'll be deploying the application Rancher Hello-World.
 1. Click **Deployment**.
 1. Enter a **Name** for your workload.
 1. From the **Container Image** field, enter `rancher/hello-world`. This field is case-sensitive.
-1. Click **Add Port** and `Cluster IP` for the `Service Type` and enter `80` in the **Private Container Port** field. You may leave the `Name` blank or specify any name that you wish. Adding a port enables access to the application inside and outside of the cluster. For more information, see [Services](../../../pages-for-subheaders/workloads-and-pods.md#services).
+1. Click **Add Port** and `Cluster IP` for the `Service Type` and enter `80` in the **Private Container Port** field. You may leave the `Name` blank or specify any name that you wish. Adding a port enables access to the application inside and outside of the cluster. For more information, see [Services](../../../how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/workloads-and-pods.md#services).
 1. Click **Create**.
 
 **Result:**
@@ -73,4 +73,5 @@ When you're done using your sandbox, destroy the Rancher Server and your cluster
 
 - [Amazon AWS: Destroying the Environment](../deploy-rancher-manager/aws.md#destroying-the-environment)
 - [DigitalOcean: Destroying the Environment](../deploy-rancher-manager/digitalocean.md#destroying-the-environment)
+- [Linode: Destroying the Environment](../deploy-rancher-manager/linode.md#destroying-the-environment)
 - [Vagrant: Destroying the Environment](../deploy-rancher-manager/vagrant.md#destroying-the-environment)

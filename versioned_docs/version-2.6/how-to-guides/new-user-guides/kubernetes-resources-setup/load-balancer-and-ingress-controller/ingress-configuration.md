@@ -1,6 +1,6 @@
 ---
-title: Ingress Configuration
-description: Ingress configuration
+title: Configuring an Ingress
+description: Configuring an Ingress
 ---
 
 <head>

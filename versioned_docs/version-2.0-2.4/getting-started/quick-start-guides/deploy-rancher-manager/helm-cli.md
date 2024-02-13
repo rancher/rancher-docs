@@ -2,13 +2,17 @@
 title: Manual Quick Start
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-rancher-manager/helm-cli"/>
+</head>
+
 Howdy Partner! This tutorial walks you through:
 
 - Installation of Rancher 2.x
 - Creation of your first cluster
 - Deployment of an application, Nginx
 
->**Note:** The intent of these guides is to quickly launch a sandbox that you can use to evaluate Rancher. These guides are not intended for production environments. For comprehensive setup instructions, see [Installation](../../../pages-for-subheaders/installation-and-upgrade.md).
+>**Note:** The intent of these guides is to quickly launch a sandbox that you can use to evaluate Rancher. These guides are not intended for production environments. For comprehensive setup instructions, see [Installation](../../installation-and-upgrade/installation-and-upgrade.md).
 
 ## Quick Start Outline
 
@@ -28,7 +32,7 @@ This Quick Start Guide is divided into different tasks for easier consumption.
   >
   > For a full list of port requirements, refer to [Docker Installation](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md).
 
-  Provision the host according to our [Requirements](../../../pages-for-subheaders/installation-requirements.md).
+  Provision the host according to our [Requirements](../../installation-and-upgrade/installation-requirements/installation-requirements.md).
 
 ### 2. Install Rancher
 
@@ -103,4 +107,4 @@ Congratulations! You have created your first cluster.
 
 #### What's Next?
 
-Use Rancher to create a deployment. For more information, see [Creating Deployments](../../../pages-for-subheaders/deploy-rancher-workloads.md).
+Use Rancher to create a deployment. For more information, see [Creating Deployments](../deploy-workloads/deploy-workloads.md).

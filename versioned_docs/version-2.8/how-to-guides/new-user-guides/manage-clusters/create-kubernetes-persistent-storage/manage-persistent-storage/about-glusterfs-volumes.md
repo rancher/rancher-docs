@@ -8,7 +8,7 @@ title: GlusterFS Volumes
 
 :::note
 
-This section only applies to [RKE clusters.](../../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)
+This section only applies to [RKE clusters.](../../../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)
 
 :::
 

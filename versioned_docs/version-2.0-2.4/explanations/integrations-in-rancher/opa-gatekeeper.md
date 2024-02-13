@@ -32,7 +32,7 @@ OPA Gatekeeper is made available via Rancher's Helm system chart, and it is inst
 > **Prerequisites:**
 >
 > - Only administrators and cluster owners can enable OPA Gatekeeper.
-> - The dashboard needs to be enabled using the `dashboard` feature flag. For more information, refer to the [section on enabling experimental features.](../../pages-for-subheaders/enable-experimental-features.md)
+> - The dashboard needs to be enabled using the `dashboard` feature flag. For more information, refer to the [section on enabling experimental features.](../../getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/enable-experimental-features.md)
 
 1. Navigate to the cluster's **Dashboard** view.
 1. On the left side menu, expand the cluster menu and click on **OPA Gatekeeper.**

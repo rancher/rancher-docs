@@ -9,16 +9,16 @@ A layer-7 load balancer can be beneficial if you want to centralize your TLS ter
 This install procedure walks you through deployment of Rancher using a single container, and then provides a sample configuration for a layer-7 NGINX load balancer.
 
 > **Want to skip the external load balancer?**
-> See [Docker Installation](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md) instead.
+> See [Docker Installation](../../other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md) instead.
 
 ## Requirements for OS, Docker, Hardware, and Networking
 
-Make sure that your node fulfills the general [installation requirements.](../../../../pages-for-subheaders/installation-requirements.md)
+Make sure that your node fulfills the general [installation requirements.](../../installation-requirements/installation-requirements.md)
 
 
 ## 1. Provision Linux Host
 
-Provision a single Linux host according to our [Requirements](../../../../pages-for-subheaders/installation-requirements.md) to launch your Rancher Server.
+Provision a single Linux host according to our [Requirements](../../installation-requirements/installation-requirements.md) to launch your Rancher Server.
 
 ## 2. Choose an SSL Option and Install Rancher
 
@@ -156,7 +156,7 @@ http {
 ## What's Next?
 
 - **Recommended:** Review Single Node [Backup](../../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-docker-installed-rancher.md) and [Restore](../../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-docker-installed-rancher.md). Although you don't have any data you need to back up right now, we recommend creating backups after regular Rancher use.
-- Create a Kubernetes cluster: [Provisioning Kubernetes Clusters](../../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md).
+- Create a Kubernetes cluster: [Provisioning Kubernetes Clusters](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md).
 
 <br/>
 
@@ -178,7 +178,7 @@ If you want to record all transactions with the Rancher API, enable the [API Aud
 
 ### Air Gap
 
-If you are visiting this page to complete an [Air Gap Installation](../../../../pages-for-subheaders/air-gapped-helm-cli-install.md), you must pre-pend your private registry URL to the server tag when running the installation command in the option that you choose. Add `<REGISTRY.DOMAIN.COM:PORT>` with your private registry URL in front of `rancher/rancher:latest`.
+If you are visiting this page to complete an [Air Gap Installation](../../other-installation-methods/air-gapped-helm-cli-install/air-gapped-helm-cli-install.md), you must pre-pend your private registry URL to the server tag when running the installation command in the option that you choose. Add `<REGISTRY.DOMAIN.COM:PORT>` with your private registry URL in front of `rancher/rancher:latest`.
 
 **Example:**
 
@@ -198,7 +198,7 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-As of Rancher v2.5, privileged access is [required.](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v25)
+As of Rancher v2.5, privileged access is [required.](../../other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v25)
 
 This layer 7 NGINX configuration is tested on NGINX version 1.13 (mainline) and 1.14 (stable).
 

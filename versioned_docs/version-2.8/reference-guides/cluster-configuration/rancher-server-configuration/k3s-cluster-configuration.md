@@ -231,6 +231,7 @@ spec:
   kubernetesVersion: v1.26.7+k3s1
   localClusterAuthEndpoint: {}
   rkeConfig:
+    additionalManifest: ""
     chartValues: {}
     etcd:
       snapshotRetention: 5
@@ -307,9 +308,36 @@ spec:
 ```
 </details>
 
+### additionalManifest
+
+Specify additional manifests to deliver to the control plane nodes.
+
+The value is a String, and will be placed at the path `/var/lib/rancher/k3s/server/manifests/rancher/addons.yaml` on target nodes.
+
+Example:
+
+```yaml
+additionalManifest: |-
+  apiVersion: v1
+  kind: Namespace
+  metadata:
+    name: name-xxxx
+```
+
+
+:::note
+
+If you want to customize system charts, you should use the `chartValues` field as described below.
+
+Alternatives, such as using a HelmChartConfig to customize the system charts via `additionalManifest`, can cause unexpected behavior, due to having multiple HelmChartConfigs for the same chart.
+
+:::
+
 ### chartValues
 
 Specify the values for the system charts installed by K3s.
+
+For more information about how K3s manges packaged components, please refer to [K3s documentation](https://docs.k3s.io/installation/packaged-components).
 
 Example:
 

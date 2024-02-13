@@ -58,7 +58,7 @@ When you need to make changes to your infrastructure, instead of manually updati
 
 This section describes one way that you can make security and compliance-related config files standard in your clusters.
 
-When you create a [CIS benchmark compliant cluster,](../../../../pages-for-subheaders/rancher-security.md) you have an encryption config file and an audit log config file.
+When you create a [CIS benchmark compliant cluster,](../../../../reference-guides/rancher-security/rancher-security.md) you have an encryption config file and an audit log config file.
 
 Your infrastructure provisioning system can write those files to disk. Then in your RKE template, you would specify where those files will be, then add your encryption config file and audit log config file as extra mounts to the `kube-api-server`.
 

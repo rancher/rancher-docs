@@ -13,7 +13,7 @@ Only [administrators](../../how-to-guides/advanced-user-guides/authentication-pe
 
 ## Alerts Scope
 
-The scope for alerts can be set at either the [cluster level](../../pages-for-subheaders/cluster-alerts.md) or project level.
+The scope for alerts can be set at either the [cluster level](../../explanations/integrations-in-rancher/cluster-alerts/cluster-alerts.md) or project level.
 
 At the project level, Rancher monitors specific deployments and sends alerts for:
 
@@ -184,7 +184,7 @@ You can disable these advanced options when configuring a specific rule.
 ## Metric Expression Alerts
 _Available as of v2.2.4_
 
-If you enable [project monitoring](../../pages-for-subheaders/project-tools.md#monitoring), this alert type monitors for the overload from Prometheus expression querying.
+If you enable [project monitoring](rancher-project-tools.md#monitoring), this alert type monitors for the overload from Prometheus expression querying.
 
 Each of the below sections corresponds to a part of the alert rule configuration section in the Rancher UI.
 

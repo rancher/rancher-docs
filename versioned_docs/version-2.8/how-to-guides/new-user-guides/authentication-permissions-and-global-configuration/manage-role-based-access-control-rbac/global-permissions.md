@@ -56,7 +56,7 @@ You can [assign a role to everyone in the group at the same time](#configuring-g
 
 Using custom permissions is convenient for providing users with narrow or specialized access to Rancher.
 
-When a user from an [external authentication source](../../../../pages-for-subheaders/authentication-config.md) signs into Rancher for the first time, they're automatically assigned a set of global permissions (hereafter, permissions). By default, after a user logs in for the first time, they are created as a user and assigned the default `user` permission. The standard `user` permission allows users to login and create clusters.
+When a user from an [external authentication source](../authentication-config/authentication-config.md) signs into Rancher for the first time, they're automatically assigned a set of global permissions (hereafter, permissions). By default, after a user logs in for the first time, they are created as a user and assigned the default `user` permission. The standard `user` permission allows users to login and create clusters.
 
 However, in some organizations, these permissions may extend too much access. Rather than assigning users the default global permissions of `Administrator` or `Standard User`, you can assign them a more restrictive set of custom global permissions.
 
@@ -64,7 +64,7 @@ The default roles, Administrator and Standard User, each come with multiple glob
 
 Administrators can enforce custom global permissions in multiple ways:
 
-- [Creating custom global roles](#creating-custom-global-roles).
+- [Creating custom global roles](#custom-globalroles).
 - [Changing the default permissions for new users](#configuring-default-global-permissions).
 - [Configuring global permissions for individual users](#configuring-global-permissions-for-individual-users).
 - [Configuring global permissions for groups](#configuring-global-permissions-for-groups).
@@ -208,7 +208,6 @@ Using this field on [default GlobalRoles](#configuring-default-global-permission
 
 :::
 
-
 ### Configuring Default Global Permissions
 
 If you want to restrict the default permissions for new users, you can remove the `user` permission as default role and then assign multiple individual permissions as default instead. Conversely, you can also add administrative permissions on top of a set of other standard permissions.
@@ -256,7 +255,7 @@ If a user is removed from the external authentication provider group, they would
 
 You can only assign a global role to a group if:
 
-* You have set up an [external authentication provider](../../../../pages-for-subheaders/authentication-config.md#external-vs-local-authentication)
+* You have set up an [external authentication provider](../authentication-config/authentication-config.md#external-vs-local-authentication)
 * The external authentication provider supports [user groups](../authentication-config/manage-users-and-groups.md)
 * You have already set up at least one user group with the authentication provider
 
@@ -356,7 +355,6 @@ The following table lists the permissions and actions that a `restricted-admin` 
 | | Deploy GKE cluster | Yes | Yes | Yes | |
 | | Deploy AKS cluster | Yes | Yes | Yes | |
 
-
 ### Changing Global Administrators to Restricted Admins
 
 In previous version, the docs recommended that all users should be changed over to Restricted Admin if the role was in use. Users are now encouraged to use a custom-built role using the cluster permissions feature, and migrate any current restricted admins to use that approach. 
@@ -364,5 +362,3 @@ In previous version, the docs recommended that all users should be changed over 
 This can be done through **Security > Users** and moving any Administrator role over to Restricted Administrator.
 
 Signed-in users can change themselves over to the `restricted-admin` if they wish, but they should only do that as the last step, otherwise they won't have the permissions to do so.
-
-

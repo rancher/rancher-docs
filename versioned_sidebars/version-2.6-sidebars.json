@@ -11,15 +11,15 @@
           "label": "Quick Start Guides",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/quick-start-guides"
+            "id": "getting-started/quick-start-guides/quick-start-guides"
           },
           "items": [
             {
               "type": "category",
-              "label": "Deploy Rancher",
+              "label": "Deploying Rancher",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/deploy-rancher-manager"
+                "id": "getting-started/quick-start-guides/deploy-rancher-manager/deploy-rancher-manager"
               },
               "items": [
                 "getting-started/quick-start-guides/deploy-rancher-manager/aws",
@@ -28,6 +28,7 @@
                 "getting-started/quick-start-guides/deploy-rancher-manager/digitalocean",
                 "getting-started/quick-start-guides/deploy-rancher-manager/gcp",
                 "getting-started/quick-start-guides/deploy-rancher-manager/hetzner-cloud",
+                "getting-started/quick-start-guides/deploy-rancher-manager/linode",
                 "getting-started/quick-start-guides/deploy-rancher-manager/vagrant",
                 "getting-started/quick-start-guides/deploy-rancher-manager/equinix-metal",
                 "getting-started/quick-start-guides/deploy-rancher-manager/outscale-qs",
@@ -36,10 +37,10 @@
             },
             {
               "type": "category",
-              "label": "Deploy Workloads",
+              "label": "Deploying Workloads",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/deploy-rancher-workloads"
+                "id": "getting-started/quick-start-guides/deploy-workloads/deploy-workloads"
               },
               "items": [
                 "getting-started/quick-start-guides/deploy-workloads/workload-ingress",
@@ -53,7 +54,7 @@
           "label": "Installation and Upgrade",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/installation-and-upgrade"
+            "id": "getting-started/installation-and-upgrade/installation-and-upgrade"
           },
           "items": [
             {
@@ -61,7 +62,7 @@
               "label": "Installation Requirements",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/installation-requirements"
+                "id": "getting-started/installation-and-upgrade/installation-requirements/installation-requirements"
               },
               "items": [
                 "getting-started/installation-and-upgrade/installation-requirements/install-docker",
@@ -74,7 +75,7 @@
               "label": "Installation References",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/installation-references"
+                "id": "getting-started/installation-and-upgrade/installation-references/installation-references"
               },
               "items": [
                 "getting-started/installation-and-upgrade/installation-references/helm-chart-options",
@@ -87,7 +88,7 @@
               "label": "Install/Upgrade on a Kubernetes Cluster",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster"
+                "id": "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster"
               },
               "items": [
                 "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks",
@@ -104,7 +105,7 @@
               "label": "Other Installation Methods",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/other-installation-methods"
+                "id": "getting-started/installation-and-upgrade/other-installation-methods/other-installation-methods"
               },
               "items": [
                 {
@@ -112,7 +113,7 @@
                   "label": "Air-Gapped Helm CLI Install",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/air-gapped-helm-cli-install"
+                    "id": "getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/air-gapped-helm-cli-install"
                   },
                   "items": [
                     "getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/infrastructure-private-registry",
@@ -127,7 +128,7 @@
                   "label": "Rancher on a Single Node with Docker",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/rancher-on-a-single-node-with-docker"
+                    "id": "getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker"
                   },
                   "items": [
                     "getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/upgrade-docker-installed-rancher",
@@ -140,7 +141,7 @@
                   "label": "Rancher Behind an HTTP Proxy",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/rancher-behind-an-http-proxy"
+                    "id": "getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/rancher-behind-an-http-proxy"
                   },
                   "items": [
                     "getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/set-up-infrastructure",
@@ -155,7 +156,7 @@
               "label": "Resources",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/resources"
+                "id": "getting-started/installation-and-upgrade/resources/resources"
               },
               "items": [
                 "getting-started/installation-and-upgrade/resources/choose-a-rancher-version",
@@ -183,7 +184,7 @@
           "label": "New User Guides",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/new-user-guides"
+            "id": "how-to-guides/new-user-guides/new-user-guides"
           },
           "items": [
             {
@@ -191,15 +192,15 @@
               "label": "Authentication, Permissions, and Global Configuration",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/authentication-permissions-and-global-configuration"
+                "id": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-permissions-and-global-configuration"
               },
               "items": [
                 {
                   "type": "category",
-                  "label": "Authentication Config",
+                  "label": "Configuring Authentication",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/authentication-config"
+                    "id": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/authentication-config"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/manage-users-and-groups",
@@ -217,10 +218,10 @@
                 },
                 {
                   "type": "category",
-                  "label": "Configure OpenLDAP",
+                  "label": "Configuring OpenLDAP",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/configure-openldap"
+                    "id": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-openldap/configure-openldap"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-openldap/openldap-config-reference"
@@ -228,10 +229,10 @@
                 },
                 {
                   "type": "category",
-                  "label": "Configure Microsoft AD Federation Service (SAML)",
+                  "label": "Configuring Microsoft AD Federation Service (SAML)",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/configure-microsoft-ad-federation-service-saml"
+                    "id": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-microsoft-ad-federation-service-saml/configure-microsoft-ad-federation-service-saml"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-microsoft-ad-federation-service-saml/configure-ms-adfs-for-rancher",
@@ -240,10 +241,10 @@
                 },
                 {
                   "type": "category",
-                  "label": "Configure Shibboleth (SAML)",
+                  "label": "Configuring Shibboleth (SAML)",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/configure-shibboleth-saml"
+                    "id": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-shibboleth-saml/configure-shibboleth-saml"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-shibboleth-saml/about-group-permissions"
@@ -251,10 +252,10 @@
                 },
                 {
                   "type": "category",
-                  "label": "Manage Role-Based Access Control (RBAC)",
+                  "label": "Managing Role-Based Access Control (RBAC)",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/manage-role-based-access-control-rbac"
+                    "id": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/manage-role-based-access-control-rbac"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions",
@@ -268,7 +269,7 @@
                   "label": "About Provisioning Drivers",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/about-provisioning-drivers"
+                    "id": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/about-provisioning-drivers"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-cluster-drivers",
@@ -280,7 +281,7 @@
                   "label": "About RKE1 Templates",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/about-rke1-templates"
+                    "id": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/about-rke1-templates"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/creator-permissions",
@@ -300,10 +301,10 @@
             },
             {
               "type": "category",
-              "label": "Manage Clusters",
+              "label": "Cluster Administration",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/manage-clusters"
+                "id": "how-to-guides/new-user-guides/manage-clusters/manage-clusters"
               },
               "items": [
                 {
@@ -311,7 +312,7 @@
                   "label": "Access Clusters",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/access-clusters"
+                    "id": "how-to-guides/new-user-guides/manage-clusters/access-clusters/access-clusters"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig",
@@ -324,7 +325,7 @@
                   "label": "Install Cluster Autoscaler",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/install-cluster-autoscaler"
+                    "id": "how-to-guides/new-user-guides/manage-clusters/install-cluster-autoscaler/install-cluster-autoscaler"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/manage-clusters/install-cluster-autoscaler/use-aws-ec2-auto-scaling-groups"
@@ -335,7 +336,7 @@
                   "label": "Create Kubernetes Persistent Storage",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/create-kubernetes-persistent-storage"
+                    "id": "how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/about-persistent-storage",
@@ -351,7 +352,7 @@
                   "label": "Provisioning Storage Examples",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/provisioning-storage-examples"
+                    "id": "how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/provisioning-storage-examples"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/persistent-storage-in-amazon-ebs",
@@ -374,7 +375,7 @@
               "label": "Kubernetes Cluster Setup",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/kubernetes-cluster-setup"
+                "id": "how-to-guides/new-user-guides/kubernetes-cluster-setup/kubernetes-cluster-setup"
               },
               "items": [
                 "how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs",
@@ -388,7 +389,7 @@
               "label": "Infrastructure Setup",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/infrastructure-setup"
+                "id": "how-to-guides/new-user-guides/infrastructure-setup/infrastructure-setup"
               },
               "items": [
                 "how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster",
@@ -405,7 +406,7 @@
               "label": "Kubernetes Clusters in Rancher Setup",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/kubernetes-clusters-in-rancher-setup"
+                "id": "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup"
               },
               "items": [
                 "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters",
@@ -414,7 +415,7 @@
                   "label": "Checklist for Production-Ready Clusters",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/checklist-for-production-ready-clusters"
+                    "id": "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters/checklist-for-production-ready-clusters"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters/recommended-cluster-architecture",
@@ -423,10 +424,10 @@
                 },
                 {
                   "type": "category",
-                  "label": "Set Up Clusters from Hosted Kubernetes Providers",
+                  "label": "Setting up Clusters from Hosted Kubernetes Providers",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers"
+                    "id": "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/set-up-clusters-from-hosted-kubernetes-providers"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks",
@@ -439,10 +440,10 @@
                 },
                 {
                   "type": "category",
-                  "label": "Use Windows Clusters",
+                  "label": "Launching Kubernetes on Windows Clusters",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/use-windows-clusters"
+                    "id": "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/use-windows-clusters"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/azure-storageclass-configuration",
@@ -453,10 +454,10 @@
                 },
                 {
                   "type": "category",
-                  "label": "Set Up Cloud Providers",
+                  "label": "Setting up Cloud Providers",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/set-up-cloud-providers"
+                    "id": "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/set-up-cloud-providers"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon",
@@ -472,18 +473,18 @@
             },
             {
               "type": "category",
-              "label": "Launch Kubernetes with Rancher",
+              "label": "Launching Kubernetes with Rancher",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/launch-kubernetes-with-rancher"
+                "id": "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher"
               },
               "items": [
                 {
                   "type": "category",
-                  "label": "Use New Nodes in an Infra Provider",
+                  "label": "Launching New Nodes in an Infra Provider",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/use-new-nodes-in-an-infra-provider"
+                    "id": "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster",
@@ -494,7 +495,7 @@
                       "label": "vSphere",
                       "link": {
                         "type": "doc",
-                        "id": "pages-for-subheaders/vsphere"
+                        "id": "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/vsphere"
                       },
                       "items": [
                         "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere",
@@ -507,7 +508,7 @@
                       "label": "Nutanix",
                       "link": {
                         "type": "doc",
-                        "id": "pages-for-subheaders/nutanix"
+                        "id": "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/nutanix"
                       },
                       "items": [
                         "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/provision-kubernetes-clusters-in-aos"
@@ -524,7 +525,7 @@
               "label": "Kubernetes Resources Setup",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/kubernetes-resources-setup"
+                "id": "how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-resources-setup"
               },
               "items": [
                 {
@@ -532,7 +533,7 @@
                   "label": "Workloads and Pods",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/workloads-and-pods"
+                    "id": "how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/workloads-and-pods"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/deploy-workloads",
@@ -546,7 +547,7 @@
                   "label": "Horizontal Pod Autoscaler",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/horizontal-pod-autoscaler"
+                    "id": "how-to-guides/new-user-guides/kubernetes-resources-setup/horizontal-pod-autoscaler/horizontal-pod-autoscaler"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/kubernetes-resources-setup/horizontal-pod-autoscaler/about-hpas",
@@ -560,7 +561,7 @@
                   "label": "Load Balancer and Ingress Controller",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/load-balancer-and-ingress-controller"
+                    "id": "how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/load-balancer-and-ingress-controller"
                   },
                   "items": [
                     "how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing",
@@ -580,7 +581,7 @@
               "label": "Helm Charts in Rancher",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/helm-charts-in-rancher"
+                "id": "how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher"
               },
               "items": [
                 "how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps"
@@ -588,10 +589,10 @@
             },
             {
               "type": "category",
-              "label": "Deploy Apps Across Clusters",
+              "label": "Deploying Apps Across Clusters",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/deploy-apps-across-clusters"
+                "id": "how-to-guides/new-user-guides/deploy-apps-across-clusters/deploy-apps-across-clusters"
               },
               "items": [
                 "how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet",
@@ -603,7 +604,7 @@
               "label": "Backup, Restore, and Disaster Recovery",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/backup-restore-and-disaster-recovery"
+                "id": "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/backup-restore-and-disaster-recovery"
               },
               "items": [
                 "how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide",
@@ -625,25 +626,25 @@
           "label": "Advanced User Guides",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/advanced-user-guides"
+            "id": "how-to-guides/advanced-user-guides/advanced-user-guides"
           },
           "items": [
             {
               "type": "category",
-              "label": "Manage Projects",
+              "label": "Project Administration",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/manage-projects"
+                "id": "how-to-guides/advanced-user-guides/manage-projects/manage-projects"
               },
               "items": [
                 "how-to-guides/advanced-user-guides/manage-projects/ci-cd-pipelines",
                 "how-to-guides/advanced-user-guides/manage-projects/manage-pod-security-policies",
                 {
                   "type": "category",
-                  "label": "Manage Project Resource Quotas",
+                  "label": "Project Resource Quotas",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/manage-project-resource-quotas"
+                    "id": "how-to-guides/advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas"
                   },
                   "items": [
                     "how-to-guides/advanced-user-guides/manage-projects/manage-project-resource-quotas/about-project-resource-quotas",
@@ -659,7 +660,7 @@
               "label": "Monitoring/Alerting Guides",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/monitoring-alerting-guides"
+                "id": "how-to-guides/advanced-user-guides/monitoring-alerting-guides/monitoring-alerting-guides"
               },
               "items": [
                 "how-to-guides/advanced-user-guides/monitoring-alerting-guides/enable-monitoring",
@@ -674,7 +675,7 @@
                   "label": "Prometheus Federator Guides",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/prometheus-federator-guides"
+                    "id": "how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/prometheus-federator-guides"
                   },
                   "items": [
                     "how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/enable-prometheus-federator",
@@ -691,7 +692,7 @@
               "label": "Monitoring V2 Configuration Guides",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/monitoring-v2-configuration-guides"
+                "id": "how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/monitoring-v2-configuration-guides"
               },
               "items": [
                 {
@@ -699,7 +700,7 @@
                   "label": "Advanced Configuration",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/advanced-configuration"
+                    "id": "how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/advanced-configuration"
                   },
                   "items": [
                     "how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/alertmanager",
@@ -714,7 +715,7 @@
               "label": "Istio Setup Guide",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/istio-setup-guide"
+                "id": "how-to-guides/advanced-user-guides/istio-setup-guide/istio-setup-guide"
               },
               "items": [
                 "how-to-guides/advanced-user-guides/istio-setup-guide/enable-istio-in-cluster",
@@ -730,7 +731,7 @@
               "label": "CIS Scan Guides",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/cis-scan-guides"
+                "id": "how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides"
               },
               "items": [
                 "how-to-guides/advanced-user-guides/cis-scan-guides/install-rancher-cis-benchmark",
@@ -746,10 +747,10 @@
             },
             {
               "type": "category",
-              "label": "Enable Experimental Features",
+              "label": "Enabling Experimental Features",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/enable-experimental-features"
+                "id": "how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features"
               },
               "items": [
                 "how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64",
@@ -775,7 +776,7 @@
           "label": "Best Practices",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/best-practices"
+            "id": "reference-guides/best-practices/best-practices"
           },
           "items": [
             {
@@ -783,7 +784,7 @@
               "label": "Rancher Server",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/rancher-server"
+                "id": "reference-guides/best-practices/rancher-server/rancher-server"
               },
               "items": [
                 "reference-guides/best-practices/rancher-server/on-premises-rancher-in-vsphere",
@@ -797,7 +798,7 @@
               "label": "Rancher-Managed Clusters",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/rancher-managed-clusters"
+                "id": "reference-guides/best-practices/rancher-managed-clusters/rancher-managed-clusters"
               },
               "items": [
                 "reference-guides/best-practices/rancher-managed-clusters/logging-best-practices",
@@ -813,7 +814,7 @@
           "label": "Rancher Architecture",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/rancher-manager-architecture"
+            "id": "reference-guides/rancher-manager-architecture/rancher-manager-architecture"
           },
           "items": [
             "reference-guides/rancher-manager-architecture/rancher-server-and-components",
@@ -826,7 +827,7 @@
           "label": "Cluster Configuration",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/cluster-configuration"
+            "id": "reference-guides/cluster-configuration/cluster-configuration"
           },
           "items": [
             {
@@ -834,7 +835,7 @@
               "label": "Rancher Server Configuration",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/rancher-server-configuration"
+                "id": "reference-guides/cluster-configuration/rancher-server-configuration/rancher-server-configuration"
               },
               "items": [
                 "reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration",
@@ -847,7 +848,7 @@
                   "label": "GKE Cluster Configuration",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/gke-cluster-configuration"
+                    "id": "reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration"
                   },
                   "items": [
                     "reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters"
@@ -858,7 +859,7 @@
                   "label": "Use Existing Nodes",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/use-existing-nodes"
+                    "id": "reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes"
                   },
                   "items": [
                     "reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options"
@@ -872,7 +873,7 @@
               "label": "Downstream Cluster Configuration",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/downstream-cluster-configuration"
+                "id": "reference-guides/cluster-configuration/downstream-cluster-configuration/downstream-cluster-configuration"
               },
               "items": [
                 {
@@ -880,7 +881,7 @@
                   "label": "Node Template Configuration",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/node-template-configuration"
+                    "id": "reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/node-template-configuration"
                   },
                   "items": [
                     "reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/amazon-ec2",
@@ -895,7 +896,7 @@
                   "label": "Machine Configuration",
                   "link": {
                     "type": "doc",
-                    "id": "pages-for-subheaders/machine-configuration"
+                    "id": "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/machine-configuration"
                   },
                   "items": [
                     "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/amazon-ec2",
@@ -912,7 +913,7 @@
           "label": "Single-Node Rancher in Docker",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/single-node-rancher-in-docker"
+            "id": "reference-guides/single-node-rancher-in-docker/single-node-rancher-in-docker"
           },
           "items": [
             "reference-guides/single-node-rancher-in-docker/http-proxy-configuration",
@@ -924,7 +925,7 @@
           "label": "Backup & Restore Configuration",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/backup-restore-configuration"
+            "id": "reference-guides/backup-restore-configuration/backup-restore-configuration"
           },
           "items": [
             "reference-guides/backup-restore-configuration/backup-configuration",
@@ -939,7 +940,7 @@
           "label": "Monitoring V2 Configuration",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/monitoring-v2-configuration"
+            "id": "reference-guides/monitoring-v2-configuration/monitoring-v2-configuration"
           },
           "items": [
             "reference-guides/monitoring-v2-configuration/receivers",
@@ -954,7 +955,7 @@
           "label": "Prometheus Federator",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/prometheus-federator"
+            "id": "reference-guides/prometheus-federator/prometheus-federator"
           },
           "items": [
             "reference-guides/prometheus-federator/rbac"
@@ -965,7 +966,7 @@
           "label": "User Settings",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/user-settings"
+            "id": "reference-guides/user-settings/user-settings"
           },
           "items": [
             "reference-guides/user-settings/api-keys",
@@ -979,7 +980,7 @@
           "label": "CLI with Rancher",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/cli-with-rancher"
+            "id": "reference-guides/cli-with-rancher/cli-with-rancher"
           },
           "items": [
             "reference-guides/cli-with-rancher/rancher-cli",
@@ -991,7 +992,7 @@
           "label": "About the API",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/about-the-api"
+            "id": "reference-guides/about-the-api/about-the-api"
           },
           "items": [
             "reference-guides/about-the-api/api-tokens"
@@ -1006,7 +1007,7 @@
           "label": "Pipelines",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/pipelines"
+            "id": "reference-guides/pipelines/pipelines"
           },
           "items": [
             "reference-guides/pipelines/concepts",
@@ -1021,7 +1022,7 @@
           "label": "Rancher Security",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/rancher-security"
+            "id": "reference-guides/rancher-security/rancher-security"
           },
           "items": [
             {
@@ -1029,7 +1030,7 @@
               "label": "Rancher v2.6 Hardening Guides",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/rancher-v2.6-hardening-guides"
+                "id": "reference-guides/rancher-security/rancher-v2.6-hardening-guides/rancher-v2.6-hardening-guides"
               },
               "items": [
                 "reference-guides/rancher-security/rancher-v2.6-hardening-guides/rke1-hardening-guide-with-cis-v1.6-benchmark",
@@ -1043,7 +1044,7 @@
               "label": "SELinux RPM",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/selinux-rpm"
+                "id": "reference-guides/rancher-security/selinux-rpm/selinux-rpm"
               },
               "items": [
                 "reference-guides/rancher-security/selinux-rpm/about-rancher-selinux",
@@ -1065,7 +1066,7 @@
           "label": "Cloud Marketplace Integration",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/cloud-marketplace"
+            "id": "integrations-in-rancher/cloud-marketplace/cloud-marketplace"
           },
           "items": [
             {
@@ -1073,7 +1074,7 @@
               "label": "AWS Marketplace Integration",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/aws-cloud-marketplace"
+                "id": "integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/aws-cloud-marketplace"
               },
               "items": [
                 "integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements",
@@ -1090,7 +1091,7 @@
           "label": "CIS Scans",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/cis-scans"
+            "id": "integrations-in-rancher/cis-scans/cis-scans"
           },
           "items": [
             "integrations-in-rancher/cis-scans/configuration-reference",
@@ -1104,7 +1105,7 @@
           "label": "Continuous Delivery with Fleet",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/fleet-gitops-at-scale"
+            "id": "integrations-in-rancher/fleet-gitops-at-scale/fleet-gitops-at-scale"
           },
           "items": [
             "integrations-in-rancher/fleet-gitops-at-scale/architecture",
@@ -1118,7 +1119,7 @@
           "label": "Istio",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/istio"
+            "id": "integrations-in-rancher/istio/istio"
           },
           "items": [
             "integrations-in-rancher/istio/cpu-and-memory-allocations",
@@ -1129,7 +1130,7 @@
               "label": "Configuration Options",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/configuration-options"
+                "id": "integrations-in-rancher/istio/configuration-options/configuration-options"
               },
               "items": [
                 "integrations-in-rancher/istio/configuration-options/pod-security-policies",
@@ -1146,7 +1147,7 @@
           "label": "Logging",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/logging"
+            "id": "integrations-in-rancher/logging/logging"
           },
           "items": [
             "integrations-in-rancher/logging/logging-architecture",
@@ -1159,7 +1160,7 @@
               "label": "Custom Resource Configuration",
               "link": {
                 "type": "doc",
-                "id": "pages-for-subheaders/custom-resource-configuration"
+                "id": "integrations-in-rancher/logging/custom-resource-configuration/custom-resource-configuration"
               },
               "items": [
                 "integrations-in-rancher/logging/custom-resource-configuration/flows-and-clusterflows",
@@ -1173,7 +1174,7 @@
           "label": "Monitoring and Alerting",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/monitoring-and-alerting"
+            "id": "integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting"
           },
           "items": [
             "integrations-in-rancher/monitoring-and-alerting/how-monitoring-works",
@@ -1212,7 +1213,7 @@
           "label": "Kubernetes Components",
           "link": {
             "type": "doc",
-            "id": "pages-for-subheaders/kubernetes-components"
+            "id": "troubleshooting/kubernetes-components/kubernetes-components"
           },
           "items": [
             "troubleshooting/kubernetes-components/troubleshooting-etcd-nodes",

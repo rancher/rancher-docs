@@ -1,12 +1,12 @@
 ---
-title: Pod Security Policies
+title: Applying Pod Security Policies to Projects
 ---
 
 <head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/manage-projects/manage-pod-security-policies"/>
 </head>
 
-> These cluster options are only available for [clusters in which Rancher has launched Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md).
+> These cluster options are only available for [clusters in which Rancher has launched Kubernetes](../../new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md).
 
 You can always assign a pod security policy (PSP) to an existing project if you didn't assign one during creation.
 

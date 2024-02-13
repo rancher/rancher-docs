@@ -1,5 +1,5 @@
 ---
-title: How to Configure an Out-of-tree vSphere Cloud Provider
+title: Configuring an Out-of-tree vSphere Cloud Provider
 ---
 
 <head>

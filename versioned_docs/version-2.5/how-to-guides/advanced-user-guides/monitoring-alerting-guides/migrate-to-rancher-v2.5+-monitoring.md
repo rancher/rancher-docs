@@ -22,7 +22,7 @@ Unlike in Monitoring & Alerting V1, both features are packaged in a single Helm 
 
 Monitoring V2 can only be configured on the cluster level. Project-level monitoring and alerting is no longer supported.
 
-For more information on how to configure Monitoring & Alerting V2, see [this page.](../../../pages-for-subheaders/monitoring-v2-configuration-guides.md)
+For more information on how to configure Monitoring & Alerting V2, see [this page.](../monitoring-v2-configuration-guides/monitoring-v2-configuration-guides.md)
 
 ## Changes to Role-based Access Control
 

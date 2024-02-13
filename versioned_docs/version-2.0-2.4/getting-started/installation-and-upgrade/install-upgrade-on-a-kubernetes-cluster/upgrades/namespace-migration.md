@@ -56,7 +56,7 @@ You can prevent cluster networking issues from occurring during your upgrade to 
 
 1. Repeat these steps for each cluster where you've assigned system namespaces to projects.
 
-**Result:** All system namespaces are moved out of Rancher projects. You can now safely begin the [upgrade](../../../../pages-for-subheaders/upgrades.md).
+**Result:** All system namespaces are moved out of Rancher projects. You can now safely begin the [upgrade](upgrades.md).
 
 ## Restoring Cluster Networking
 

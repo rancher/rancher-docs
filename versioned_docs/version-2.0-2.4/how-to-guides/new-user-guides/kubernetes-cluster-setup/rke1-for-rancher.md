@@ -14,7 +14,7 @@ As of Rancher v2.4, the Rancher management server can be installed on either an 
 
 The Rancher management server can only be run on Kubernetes cluster in an infrastructure provider where Kubernetes is installed using RKE or K3s. Use of Rancher on hosted Kubernetes providers, such as EKS, is not supported.
 
-For systems without direct internet access, refer to [Air Gap: Kubernetes install.](../../../pages-for-subheaders/air-gap-helm2.md)
+For systems without direct internet access, refer to [Air Gap: Kubernetes install.](../../../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/air-gap-helm2/air-gap-helm2.md)
 
 > **Single-node Installation Tip:**
 > In a single-node Kubernetes cluster, the Rancher server does not have high availability, which is important for running Rancher in production. However, installing Rancher on a single-node cluster can be useful if you want to save resources by using a single node in the short term, while preserving a high-availability migration path.

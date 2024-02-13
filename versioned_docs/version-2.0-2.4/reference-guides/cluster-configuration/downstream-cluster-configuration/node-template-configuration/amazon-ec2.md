@@ -28,7 +28,7 @@ See [Amazon Documentation: Adding Permissions to a User (Console)](https://docs.
 See our three example JSON policies:
 
 - [Example IAM Policy](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy)
-- [Example IAM Policy with PassRole](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy-with-passrole) (needed if you want to use [Kubernetes Cloud Provider](../../../../pages-for-subheaders/set-up-cloud-providers.md) or want to pass an IAM Profile to an instance)
+- [Example IAM Policy with PassRole](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy-with-passrole) (needed if you want to use [Kubernetes Cloud Provider](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/set-up-cloud-providers.md) or want to pass an IAM Profile to an instance)
 - [Example IAM Policy to allow encrypted EBS volumes](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy-to-allow-encrypted-ebs-volumes) policy to an user.
 
 ### Authenticate & Configure Nodes
@@ -45,7 +45,7 @@ Please refer to [Amazon EC2 security group when using Node Driver](../../../../g
 
 Configure the instances that will be created. Make sure you configure the correct **SSH User** for the configured AMI.
 
-If you need to pass an **IAM Instance Profile Name** (not ARN), for example, when you want to use a [Kubernetes Cloud Provider](../../../../pages-for-subheaders/set-up-cloud-providers.md), you will need an additional permission in your policy. See [Example IAM policy with PassRole](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy-with-passrole) for an example policy.
+If you need to pass an **IAM Instance Profile Name** (not ARN), for example, when you want to use a [Kubernetes Cloud Provider](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/set-up-cloud-providers.md), you will need an additional permission in your policy. See [Example IAM policy with PassRole](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy-with-passrole) for an example policy.
 
 ### Engine Options
 
@@ -67,7 +67,7 @@ See [Amazon Documentation: Adding Permissions to a User (Console)](https://docs.
 See our three example JSON policies:
 
 - [Example IAM Policy](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy)
-- [Example IAM Policy with PassRole](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy-with-passrole) (needed if you want to use [Kubernetes Cloud Provider](../../../../pages-for-subheaders/set-up-cloud-providers.md) or want to pass an IAM Profile to an instance)
+- [Example IAM Policy with PassRole](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy-with-passrole) (needed if you want to use [Kubernetes Cloud Provider](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/set-up-cloud-providers.md) or want to pass an IAM Profile to an instance)
 - [Example IAM Policy to allow encrypted EBS volumes](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy-to-allow-encrypted-ebs-volumes) policy to an user.
 
 ### Zone and Network
@@ -88,7 +88,7 @@ Make sure you configure the correct **SSH User** for the configured AMI.
 
 ### IAM Instance Profile Name
 
-If you need to pass an **IAM Instance Profile Name** (not ARN), for example, when you want to use a [Kubernetes Cloud Provider](../../../../pages-for-subheaders/set-up-cloud-providers.md), you will need an additional permission in your policy. See [Example IAM policy with PassRole](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy-with-passrole) for an example policy.
+If you need to pass an **IAM Instance Profile Name** (not ARN), for example, when you want to use a [Kubernetes Cloud Provider](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/set-up-cloud-providers.md), you will need an additional permission in your policy. See [Example IAM policy with PassRole](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md#example-iam-policy-with-passrole) for an example policy.
 
 ### Docker Daemon
 

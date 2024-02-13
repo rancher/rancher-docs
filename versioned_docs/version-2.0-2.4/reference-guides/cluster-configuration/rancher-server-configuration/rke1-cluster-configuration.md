@@ -6,7 +6,7 @@ title: RKE Cluster Configuration Reference
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"/>
 </head>
 
-When Rancher installs Kubernetes, it uses [RKE](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) as the Kubernetes distribution.
+When Rancher installs Kubernetes, it uses [RKE](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) as the Kubernetes distribution.
 
 This section covers the configuration options that are available in Rancher for a new or existing RKE Kubernetes cluster.
 
@@ -22,7 +22,7 @@ This section is a cluster configuration reference, covering the following topics
 
 ## Rancher UI Options
 
-When creating a cluster using one of the options described in [Rancher Launched Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md), you can configure basic Kubernetes options using the **Cluster Options** section.
+When creating a cluster using one of the options described in [Rancher Launched Kubernetes](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md), you can configure basic Kubernetes options using the **Cluster Options** section.
 
 ### Kubernetes Version
 
@@ -62,7 +62,7 @@ When Weave is selected as network provider, Rancher will automatically enable en
 
 ### Kubernetes Cloud Providers
 
-You can configure a [Kubernetes cloud provider](../../../pages-for-subheaders/set-up-cloud-providers.md). If you want to use [volumes and storage](../../../pages-for-subheaders/create-kubernetes-persistent-storage.md) in Kubernetes, typically you must select the specific cloud provider in order to use it. For example, if you want to use Amazon EBS, you would need to select the `aws` cloud provider.
+You can configure a [Kubernetes cloud provider](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/set-up-cloud-providers.md). If you want to use [volumes and storage](../../../how-to-guides/advanced-user-guides/manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md) in Kubernetes, typically you must select the specific cloud provider in order to use it. For example, if you want to use Amazon EBS, you would need to select the `aws` cloud provider.
 
 >**Note:** If the cloud provider you want to use is not listed as an option, you will need to use the [config file option](#cluster-config-file) to configure the cloud provider. Please reference the [RKE cloud provider documentation](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/) on how to configure the cloud provider.
 
@@ -101,7 +101,7 @@ We recommend using a load balancer with the authorized cluster endpoint. For det
 
 ### Node Pools
 
-For information on using the Rancher UI to set up node pools in an RKE cluster, refer to [this page.](../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)
+For information on using the Rancher UI to set up node pools in an RKE cluster, refer to [this page.](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)
 
 ## Advanced Options
 
@@ -125,7 +125,7 @@ Option to enable and select a default [Pod Security Policy](../../../how-to-guid
 
 ### Docker Version on Nodes
 
-Option to require [a supported Docker version](../../../pages-for-subheaders/installation-requirements.md) installed on the cluster nodes that are added to the cluster, or to allow unsupported Docker versions installed on the cluster nodes.
+Option to require [a supported Docker version](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md) installed on the cluster nodes that are added to the cluster, or to allow unsupported Docker versions installed on the cluster nodes.
 
 ### Docker Root Directory
 
@@ -354,7 +354,7 @@ See [Docker Root Directory](#docker-root-directory).
 
 ### enable_cluster_monitoring
 
-Option to enable or disable [Cluster Monitoring](../../../pages-for-subheaders/cluster-monitoring.md).
+Option to enable or disable [Cluster Monitoring](../../../explanations/integrations-in-rancher/cluster-monitoring/cluster-monitoring.md).
 
 ### enable_network_policy
 

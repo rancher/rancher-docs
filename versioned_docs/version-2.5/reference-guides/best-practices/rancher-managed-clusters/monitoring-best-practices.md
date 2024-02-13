@@ -8,7 +8,7 @@ title: Monitoring Best Practices
 
 Configuring sensible monitoring and alerting rules is vital for running any production workloads securely and reliably. This is not different when using Kubernetes and Rancher. Fortunately the integrated monitoring and alerting functionality makes this whole process a lot easier.
 
-The [Rancher monitoring documentation](../../../pages-for-subheaders/monitoring-and-alerting.md) describes how you can set up a complete Prometheus and Grafana stack. Out of the box this will scrape monitoring data from all system and Kubernetes components in your cluster and provide sensible dashboards and alerts for them to get started. But for a reliable setup, you also need to monitor your own workloads and adapt Prometheus and Grafana to your own specific use cases and cluster sizes. This document aims to give you best practices for this.
+The [Rancher monitoring documentation](../../../explanations/integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md) describes how you can set up a complete Prometheus and Grafana stack. Out of the box this will scrape monitoring data from all system and Kubernetes components in your cluster and provide sensible dashboards and alerts for them to get started. But for a reliable setup, you also need to monitor your own workloads and adapt Prometheus and Grafana to your own specific use cases and cluster sizes. This document aims to give you best practices for this.
 
 
 ## What to Monitor
@@ -91,7 +91,7 @@ Sometimes it is useful to monitor workloads from the outside. For this, you can 
 
 If you have a (micro)service architecture where multiple individual workloads within your cluster are communicating with each other, it is really important to have detailed metrics and traces about this traffic to understand how all these workloads are communicating with each other and where a problem or bottleneck may be.
 
-Of course you can monitor all this internal traffic in all your workloads and expose these metrics to Prometheus. But this can quickly become quite work intensive. Service Meshes like Istio, which can be installed with [a click](../../../pages-for-subheaders/istio.md) in Rancher, can do this automatically and provide rich telemetry about the traffic between all services.
+Of course you can monitor all this internal traffic in all your workloads and expose these metrics to Prometheus. But this can quickly become quite work intensive. Service Meshes like Istio, which can be installed with [a click](../../../explanations/integrations-in-rancher/istio/istio.md) in Rancher, can do this automatically and provide rich telemetry about the traffic between all services.
 
 ## Real User Monitoring
 
@@ -99,7 +99,7 @@ Monitoring the availability and performance of all your internal workloads is vi
 
 ## Security Monitoring
 
-In addition to monitoring workloads to detect performance, availability or scalability problems, the cluster and the workloads running into it should also be monitored for potential security problems. A good starting point is to frequently run and alert on [CIS Scans](../../../pages-for-subheaders/cis-scans.md) which check if the cluster is configured according to security best practices.
+In addition to monitoring workloads to detect performance, availability or scalability problems, the cluster and the workloads running into it should also be monitored for potential security problems. A good starting point is to frequently run and alert on [CIS Scans](../../../explanations/integrations-in-rancher/cis-scans/cis-scans.md) which check if the cluster is configured according to security best practices.
 
 For the workloads, you can have a look at Kubernetes and Container security solutions like [Falco](https://falco.org/), [Aqua Kubernetes Security](https://www.aquasec.com/solutions/kubernetes-container-security/), [SysDig](https://sysdig.com/).
 
@@ -113,4 +113,4 @@ When setting up alerts, configure them for all the workloads that are critical t
 
 If an alert starts firing, but there is nothing you can do about it at the moment, it's also fine to silence the alert for a certain amount of time, so that you can look at it later.
 
-You can find more information on how to set up alerts and notification channels in the [Rancher Documentation](../../../pages-for-subheaders/monitoring-and-alerting.md).
+You can find more information on how to set up alerts and notification channels in the [Rancher Documentation](../../../explanations/integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md).

@@ -189,5 +189,5 @@ After you set up notifiers, you can manage them. From the **Global** view, open 
 
 After creating a notifier, set up alerts to receive notifications of Rancher system events.
 
-- [Cluster owners](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles) can set up alerts at the [cluster level](../../pages-for-subheaders/cluster-alerts.md).
+- [Cluster owners](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles) can set up alerts at the [cluster level](cluster-alerts/cluster-alerts.md).
 - [Project owners](../../how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-roles) can set up alerts at the [project level](../../reference-guides/rancher-project-tools/project-alerts.md).

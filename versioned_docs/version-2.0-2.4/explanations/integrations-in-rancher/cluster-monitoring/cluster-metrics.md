@@ -38,7 +38,7 @@ Some of the biggest metrics to look out for:
 
 ### Etcd Metrics
 
->**Note:** Only supported for [Rancher launched Kubernetes clusters](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md).
+>**Note:** Only supported for [Rancher launched Kubernetes clusters](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md).
 
 Etcd metrics display the operations of the etcd database on each of your cluster nodes. After establishing a baseline of normal etcd operational metrics, observe them for abnormal deltas between metric refreshes, which indicate potential issues with etcd. Always address etcd issues immediately!
 
@@ -60,7 +60,7 @@ Some of the biggest metrics to look out for:
 
 Kubernetes components metrics display data about the cluster's individual Kubernetes components. Primarily, it displays information about connections and latency for each component: the API server, controller manager, scheduler, and ingress controller.
 
->**Note:** The metrics for the controller manager, scheduler and ingress controller are only supported for [Rancher launched Kubernetes clusters](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md).
+>**Note:** The metrics for the controller manager, scheduler and ingress controller are only supported for [Rancher launched Kubernetes clusters](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md).
 
 When analyzing Kubernetes component metrics, don't be concerned about any single standalone metric in the charts and graphs that display. Rather, you should establish a baseline for metrics considered normal following a period of observation, e.g. the range of values that your components usually operate within and are considered normal. After you establish this baseline, be on the lookout for large deltas in the charts and graphs, as these big changes usually indicate a problem that you need to investigate.
 
@@ -90,7 +90,7 @@ Some of the more important component metrics to monitor are:
 
 ## Rancher Logging Metrics
 
-Although the Dashboard for a cluster primarily displays data sourced from Prometheus, it also displays information for cluster logging, provided that you have [configured Rancher to use a logging service](../../../pages-for-subheaders/cluster-logging.md).
+Although the Dashboard for a cluster primarily displays data sourced from Prometheus, it also displays information for cluster logging, provided that you have [configured Rancher to use a logging service](../cluster-logging/cluster-logging.md).
 
 [_Get expressions for Rancher Logging Metrics_](./expression.md#rancher-logging-metrics)
 

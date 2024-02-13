@@ -6,7 +6,7 @@ title: Advanced Options for Docker Installs
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/single-node-rancher-in-docker/advanced-options"/>
 </head>
 
-When installing Rancher, there are several [advanced options](../../pages-for-subheaders/resources.md) that can be enabled:
+When installing Rancher, there are several [advanced options](../../getting-started/installation-and-upgrade/resources/resources.md) that can be enabled:
 
 - [Custom CA Certificate](#custom-ca-certificate)
 - [API Audit Log](#api-audit-log)
@@ -28,7 +28,7 @@ Use the command example to start a Rancher container with your private CA certif
 
 The example below is based on having the CA root certificates in the `/host/certs` directory on the host and mounting this directory on `/container/certs` inside the Rancher container.
 
-As of Rancher v2.5, privileged access is [required.](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v25)
+As of Rancher v2.5, privileged access is [required.](../../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v25)
 
 ```
 docker run -d --restart=unless-stopped \
@@ -47,7 +47,7 @@ The API Audit Log writes to `/var/log/auditlog` inside the rancher container by 
 
 See [API Audit Log](../../getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/enable-api-audit-log.md) for more information and options.
 
-As of Rancher v2.5, privileged access is [required.](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v25)
+As of Rancher v2.5, privileged access is [required.](../../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v25)
 
 ```
 docker run -d --restart=unless-stopped \
@@ -70,7 +70,7 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-As of Rancher v2.5, privileged access is [required.](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v25)
+As of Rancher v2.5, privileged access is [required.](../../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v25)
 
 See [TLS settings](../installation-references/tls-settings.md) for more information and options.
 
@@ -96,7 +96,7 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-As of Rancher v2.5, privileged access is [required.](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v25)
+As of Rancher v2.5, privileged access is [required.](../../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v25)
 
 ### Running `rancher/rancher` and `rancher/rancher-agent` on the Same Node
 
@@ -115,4 +115,4 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-As of Rancher v2.5, privileged access is [required.](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v25)
+As of Rancher v2.5, privileged access is [required.](../../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher-v25)

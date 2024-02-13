@@ -154,7 +154,7 @@ If a user is removed from the external authentication provider group, they would
 
 > **Prerequisites:** You can only assign a global role to a group if:
 >
-> * You have set up an [external authentication provider](../../../../pages-for-subheaders/about-authentication.md#external-vs-local-authentication)
+> * You have set up an [external authentication provider](../about-authentication/about-authentication.md#external-vs-local-authentication)
 > * The external authentication provider supports [user groups](../about-authentication/authentication-config/manage-users-and-groups.md)
 > * You have already set up at least one user group with the authentication provider
 

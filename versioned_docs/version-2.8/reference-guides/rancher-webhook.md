@@ -20,6 +20,8 @@ Each Rancher version is designed to be compatible with a single version of the w
 | Rancher Version | Webhook Version |
 |-----------------|:---------------:|
 | v2.8.0          |     v0.4.2      |
+| v2.8.1          |     v0.4.2      |
+| v2.8.2          |     v0.4.2      |
 
 ## Why Do We Need It?
 

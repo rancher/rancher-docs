@@ -65,11 +65,11 @@ The following commands are available for use in Rancher CLI.
 | Command  | Result  |
 |---|---|
 | `apps, [app]`  | Performs operations on catalog applications (i.e., individual [Helm charts](https://docs.helm.sh/developing_charts/)) or Rancher charts.  |
-| `catalog`  | Performs operations on [catalogs](../../pages-for-subheaders/helm-charts-in-rancher.md).  |
-| `clusters, [cluster]`  | Performs operations on your [clusters](../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md).  |
+| `catalog`  | Performs operations on [catalogs](../../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md).  |
+| `clusters, [cluster]`  | Performs operations on your [clusters](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md).  |
 | `context`  | Switches between Rancher [projects](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md). For an example, see [Project Selection](#project-selection).  |
 | `globaldns`  | Performs operations on global DNS providers and entries.  |
-| `inspect [OPTIONS] [RESOURCEID RESOURCENAME]`  | Displays details about [Kubernetes resources](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#resource-types) or Rancher resources (i.e.: [projects](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md) and [workloads](../../pages-for-subheaders/workloads-and-pods.md)). Specify resources by name or ID.  |
+| `inspect [OPTIONS] [RESOURCEID RESOURCENAME]`  | Displays details about [Kubernetes resources](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#resource-types) or Rancher resources (i.e.: [projects](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md) and [workloads](../../how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/workloads-and-pods.md)). Specify resources by name or ID.  |
 | `kubectl`  | Runs [kubectl commands](https://kubernetes.io/docs/reference/kubectl/overview/#operations).   |
 | `login, [l]`  | Logs into a Rancher Server. For an example, see [CLI Authentication](#cli-authentication).  |
 | `machines, [machine]`  | Performs operations on machines.  |
@@ -77,7 +77,7 @@ The following commands are available for use in Rancher CLI.
 | `namespaces, [namespace]`  | Performs operations on [namespaces](../../how-to-guides/new-user-guides/manage-namespaces.md).   |
 | `nodes, [node]`  | Performs operations on [nodes](../../how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools.md).   |
 | `projects, [project]`  | Performs operations on [projects](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md).  |
-| `ps`  | Displays [workloads](../../pages-for-subheaders/workloads-and-pods.md) in a project.  |
+| `ps`  | Displays [workloads](../../how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/workloads-and-pods.md) in a project.  |
 | `server`  | Performs operations for the server.  |
 | `settings, [setting]`  | Shows the current settings for your Rancher Server.  |
 | `ssh`  | Connects to one of your cluster nodes using the SSH protocol.  |
@@ -95,4 +95,4 @@ All commands accept the `--help` flag, which documents each command's usage.
 
 ### Limitations
 
-The Rancher CLI **cannot** be used to install [dashboard apps or Rancher feature charts](../../pages-for-subheaders/helm-charts-in-rancher.md).
+The Rancher CLI **cannot** be used to install [dashboard apps or Rancher feature charts](../../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md).

@@ -2,6 +2,10 @@
 title: Restoring Backups—Kubernetes installs
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup"/>
+</head>
+
 This procedure describes how to use RKE to restore a snapshot of the Rancher Kubernetes cluster.
 This will restore the Kubernetes configuration and the Rancher database and state.
 

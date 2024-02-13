@@ -1,5 +1,5 @@
 ---
-title: Set up Infrastructure for a High Availability K3s Kubernetes Cluster
+title: Setting up Infrastructure for a High Availability K3s Kubernetes Cluster
 ---
 
 <head> 
@@ -10,7 +10,7 @@ This tutorial is intended to help you provision the underlying infrastructure fo
 
 The recommended infrastructure for the Rancher-only Kubernetes cluster differs depending on whether Rancher will be installed on a K3s Kubernetes cluster, an RKE Kubernetes cluster, or a single Docker container.
 
-For more information about each installation option, refer to [this page.](../../../pages-for-subheaders/installation-and-upgrade.md)
+For more information about each installation option, refer to [this page.](../../../getting-started/installation-and-upgrade/installation-and-upgrade.md)
 
 > **Note:** These nodes must be in the same region. You may place these servers in separate availability zones (datacenter).
 
@@ -23,7 +23,7 @@ To install the Rancher management server on a high-availability K3s cluster, we 
 
 ### 1. Set up Linux Nodes
 
-Make sure that your nodes fulfill the general installation requirements for [OS, container runtime, hardware, and networking.](../../../pages-for-subheaders/installation-requirements.md)
+Make sure that your nodes fulfill the general installation requirements for [OS, container runtime, hardware, and networking.](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md)
 
 For an example of one way to set up Linux nodes, refer to this [tutorial](../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md) for setting up nodes as instances in Amazon EC2.
 

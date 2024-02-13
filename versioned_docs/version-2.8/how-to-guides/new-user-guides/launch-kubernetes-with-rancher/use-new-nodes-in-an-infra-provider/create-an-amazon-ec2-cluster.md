@@ -18,7 +18,7 @@ Then you will create an EC2 cluster in Rancher, and when configuring the new clu
 - **AWS EC2 Access Key and Secret Key** that will be used to create the instances. See [Amazon Documentation: Creating Access Keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) how to create an Access Key and Secret Key.
 - **IAM Policy created** to add to the user of the Access Key And Secret Key. See [Amazon Documentation: Creating IAM Policies (Console)](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html#access_policies_create-start) how to create an IAM policy. See our three example JSON policies below:
   - [Example IAM Policy](#example-iam-policy)
-  - [Example IAM Policy with PassRole](#example-iam-policy-with-passrole) (needed if you want to use [Kubernetes Cloud Provider](../../../../pages-for-subheaders/set-up-cloud-providers.md) or want to pass an IAM Profile to an instance)
+  - [Example IAM Policy with PassRole](#example-iam-policy-with-passrole) (needed if you want to use [Kubernetes Cloud Provider](../../kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/set-up-cloud-providers.md) or want to pass an IAM Profile to an instance)
   - [Example IAM Policy to allow encrypted EBS volumes](#example-iam-policy-to-allow-encrypted-ebs-volumes)
 - **IAM Policy added as Permission** to the user. See [Amazon Documentation: Adding Permissions to a User (Console)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_change-permissions.html#users_change_permissions-add-console) how to attach it to an user.
 
@@ -48,7 +48,7 @@ The steps to create a cluster differ based on your Rancher version.
 
 ### 2. Create a node template with your cloud credentials and information from EC2
 
-Creating a [node template](../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#node-templates) for EC2 will allow Rancher to provision new nodes in EC2. Node templates can be reused for other clusters.
+Creating a [node template](use-new-nodes-in-an-infra-provider.md#node-templates) for EC2 will allow Rancher to provision new nodes in EC2. Node templates can be reused for other clusters.
 
 1. Click **☰ > Cluster Management**.
 1. Click **RKE1 Configuration > Node Templates**
@@ -64,14 +64,14 @@ Creating a [node template](../../../../pages-for-subheaders/use-new-nodes-in-an-
 
 ### 3. Create a cluster with node pools using the node template
 
-Add one or more node pools to your cluster. For more information about node pools, see [this section.](../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)
+Add one or more node pools to your cluster. For more information about node pools, see [this section.](use-new-nodes-in-an-infra-provider.md)
 
 1. Click **☰ > Cluster Management**.
 1. On the **Clusters** page, click **Create**.
 1. Click **Amazon EC2**.
-1. Create a node pool for each Kubernetes role. For each node pool, choose a node template that you created. For more information about node pools, including best practices for assigning Kubernetes roles to them, see [this section.](../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)
+1. Create a node pool for each Kubernetes role. For each node pool, choose a node template that you created. For more information about node pools, including best practices for assigning Kubernetes roles to them, see [this section.](use-new-nodes-in-an-infra-provider.md)
 1. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.
-1. Use **Cluster Options** to choose the version of Kubernetes that will be installed, what network provider will be used and if you want to enable project network isolation. Refer to [Selecting Cloud Providers](../../../../pages-for-subheaders/set-up-cloud-providers.md) to configure the Kubernetes Cloud Provider. For help configuring the cluster, refer to the [RKE cluster configuration reference.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)
+1. Use **Cluster Options** to choose the version of Kubernetes that will be installed, what network provider will be used and if you want to enable project network isolation. Refer to [Selecting Cloud Providers](../../kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/set-up-cloud-providers.md) to configure the Kubernetes Cloud Provider. For help configuring the cluster, refer to the [RKE cluster configuration reference.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)
 
     :::note
 
@@ -107,7 +107,7 @@ If you already have a set of cloud credentials to use, skip this section.
 1. Click **Amazon EC2**.
 1. Select a **Cloud Credential**, if more than one exists. Otherwise, it's preselected.
 1. Enter a **Cluster Name**.
-1. Create a machine pool for each Kubernetes role. Refer to the [best practices](../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#node-roles) for recommendations on role assignments and counts.
+1. Create a machine pool for each Kubernetes role. Refer to the [best practices](use-new-nodes-in-an-infra-provider.md#node-roles) for recommendations on role assignments and counts.
     1. For each machine pool, define the machine configuration. Refer to [the EC2 machine configuration reference](../../../../reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/amazon-ec2.md) for information on configuration options.
 1. Use the **Cluster Configuration** to choose the version of Kubernetes that will be installed, what network provider will be used and if you want to enable project network isolation. For help configuring the cluster, refer to the [RKE2 cluster configuration reference.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md)
 1. Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.

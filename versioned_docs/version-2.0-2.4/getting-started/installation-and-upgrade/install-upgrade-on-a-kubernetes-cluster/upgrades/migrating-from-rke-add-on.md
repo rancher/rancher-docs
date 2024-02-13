@@ -101,5 +101,5 @@ addons: |-
 
 From here follow the standard install steps.
 
-* [3 - Initialize Helm](../../../../pages-for-subheaders/helm2-helm-init.md)
-* [4 - Install Rancher](../../../../pages-for-subheaders/helm-rancher.md)
+* [3 - Initialize Helm](../../advanced-options/advanced-use-cases/helm2/helm-init/helm-init.md)
+* [4 - Install Rancher](../../advanced-options/advanced-use-cases/helm2/helm-rancher/helm-rancher.md)

@@ -1,5 +1,5 @@
 ---
-title: Set up Infrastructure for a High Availability RKE2 Kubernetes Cluster
+title: Setting up Infrastructure for a High Availability RKE2 Kubernetes Cluster
 ---
 
 <head> 
@@ -24,7 +24,7 @@ To install the Rancher management server on a high-availability RKE2 cluster, we
 
 ### 1. Set up Linux Nodes
 
-Make sure that your nodes fulfill the general installation requirements for [OS, container runtime, hardware, and networking.](../../../pages-for-subheaders/installation-requirements.md)
+Make sure that your nodes fulfill the general installation requirements for [OS, container runtime, hardware, and networking.](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md)
 
 For an example of one way to set up Linux nodes, refer to this [tutorial](nodes-in-amazon-ec2.md) for setting up nodes as instances in Amazon EC2.
 

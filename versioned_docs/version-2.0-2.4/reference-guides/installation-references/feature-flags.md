@@ -8,7 +8,7 @@ title: Feature Flags
 
 Feature flags were introduced to allow you to try experimental features that are not enabled by default.
 
-To learn about feature values and how to enable features, refer [here](../../pages-for-subheaders/enable-experimental-features.md).
+To learn about feature values and how to enable features, refer [here](../../getting-started/installation-and-upgrade/advanced-options/enable-experimental-features/enable-experimental-features.md).
 
 :::note 
 

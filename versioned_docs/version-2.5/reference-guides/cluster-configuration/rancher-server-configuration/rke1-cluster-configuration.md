@@ -6,7 +6,7 @@ title: RKE Cluster Configuration
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"/>
 </head>
 
-In [clusters launched by RKE](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md), you can edit any of the remaining options that follow.
+In [clusters launched by RKE](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md), you can edit any of the remaining options that follow.
 
 - [Configuration Options in the Rancher UI](#configuration-options-in-the-rancher-ui)
 - [Editing Clusters with YAML](#editing-clusters-with-yaml)
@@ -60,7 +60,7 @@ If you enable **Pod Security Policy Support**, use this drop-down to choose the 
 
 ### Cloud Provider
 
-If you're using a cloud provider to host cluster nodes launched by RKE, enable [this option](../../../pages-for-subheaders/set-up-cloud-providers.md) so that you can use the cloud provider's native features. If you want to store persistent data for your cloud-hosted cluster, this option is required.
+If you're using a cloud provider to host cluster nodes launched by RKE, enable [this option](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/set-up-cloud-providers.md) so that you can use the cloud provider's native features. If you want to store persistent data for your cloud-hosted cluster, this option is required.
 
 ## Editing Clusters with YAML
 
