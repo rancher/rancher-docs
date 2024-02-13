@@ -896,17 +896,6 @@ function MDXContent(_param) {
     }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `9100`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `Default port required by Monitoring to scrape metrics from Linux node-exporters`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
-        parentName: "tr",
-        "align": "center"
-    }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
-        parentName: "tr",
-        "align": "center"
     }, `9443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
@@ -921,7 +910,7 @@ function MDXContent(_param) {
     }, `9796`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Default port required by Monitoring to scrape metrics from Windows node-exporters`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Default port required by Monitoring to scrape metrics from Linux and Windows node-exporters`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",

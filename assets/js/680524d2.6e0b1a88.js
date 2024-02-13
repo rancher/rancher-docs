@@ -1,6 +1,6 @@
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[84152],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[27757],{
 
-/***/ 92506:
+/***/ 92623:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -103,30 +103,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "api/api-reference",
-    "id": "version-2.8/api/api-reference",
+    "id": "api/api-reference",
     "title": "API Reference",
     "description": "At this time, not all Rancher resources are available through the Rancher Kubernetes API.",
-    "source": "@site/versioned_docs/version-2.8/api/api-reference.mdx",
+    "source": "@site/docs/api/api-reference.mdx",
     "sourceDirName": "api",
     "slug": "/api/api-reference",
-    "permalink": "/v2.8/api/api-reference",
+    "permalink": "/api/api-reference",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/api/api-reference.mdx",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/api/api-reference.mdx",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1704926839,
-    "formattedLastUpdatedAt": "Jan 10, 2024",
+    "version": "current",
+    "lastUpdatedAt": 1707778138,
+    "formattedLastUpdatedAt": "Feb 12, 2024",
     "frontMatter": {
         "title": "API Reference"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Projects",
-        "permalink": "/v2.8/api/workflows/projects"
+        "permalink": "/api/workflows/projects"
     },
     "next": {
         "title": "Contributing to Rancher",
-        "permalink": "/v2.8/contribute-to-rancher"
+        "permalink": "/contribute-to-rancher"
     }
 };
 const assets = {};
@@ -143,7 +143,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/api/api-reference"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[41916],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[23977],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -652,7 +652,7 @@ const PortsImportedHosted = ()=>/*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__
 
 /***/ }),
 
-/***/ 20899:
+/***/ 75178:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -678,7 +678,7 @@ var PortsIaasNodes = __webpack_require__(15071);
 var PortsCustomNodes = __webpack_require__(27466);
 // EXTERNAL MODULE: ./src/components/PortsImportedHosted.js
 var PortsImportedHosted = __webpack_require__(12496);
-;// CONCATENATED MODULE: ./versioned_docs/version-2.6/shared-files/_common-ports-table.md
+;// CONCATENATED MODULE: ./versioned_docs/version-2.7/shared-files/_common-ports-table.md
 /* @jsxRuntime classic */ /* @jsx mdx */ /* @jsxFrag React.Fragment */ function _define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
@@ -896,17 +896,6 @@ function MDXContent(_param) {
     }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `9100`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `Default port required by Monitoring to scrape metrics from Linux node-exporters`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
-        parentName: "tr",
-        "align": "center"
-    }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
-        parentName: "tr",
-        "align": "center"
     }, `9443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
@@ -921,7 +910,7 @@ function MDXContent(_param) {
     }, `9796`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Default port required by Monitoring to scrape metrics from Windows node-exporters`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Default port required by Monitoring to scrape metrics from Linux and Windows node-exporters`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -980,7 +969,7 @@ function MDXContent(_param) {
 }
 MDXContent.isMDXComponent = true;
 
-;// CONCATENATED MODULE: ./versioned_docs/version-2.6/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md
+;// CONCATENATED MODULE: ./versioned_docs/version-2.7/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md
 /* @jsxRuntime classic */ /* @jsx mdx */ /* @jsxFrag React.Fragment */ function port_requirements_define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
@@ -1069,18 +1058,18 @@ const port_requirements_frontMatter = {
 const port_requirements_contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/installation-and-upgrade/installation-requirements/port-requirements",
-    "id": "version-2.6/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
+    "id": "version-2.7/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
     "title": "Port Requirements",
     "description": "Read about port requirements needed in order for Rancher to operate properly, both for Rancher nodes and downstream Kubernetes cluster nodes",
-    "source": "@site/versioned_docs/version-2.6/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md",
+    "source": "@site/versioned_docs/version-2.7/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md",
     "sourceDirName": "getting-started/installation-and-upgrade/installation-requirements",
     "slug": "/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
-    "permalink": "/v2.6/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
+    "permalink": "/v2.7/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md",
     "tags": [],
-    "version": "2.6",
-    "lastUpdatedAt": 1705016351,
+    "version": "2.7",
+    "lastUpdatedAt": 1705011762,
     "formattedLastUpdatedAt": "Jan 11, 2024",
     "frontMatter": {
         "title": "Port Requirements",
@@ -1089,11 +1078,11 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Dockershim",
-        "permalink": "/v2.6/getting-started/installation-and-upgrade/installation-requirements/dockershim"
+        "permalink": "/v2.7/getting-started/installation-and-upgrade/installation-requirements/dockershim"
     },
     "next": {
         "title": "Installation References",
-        "permalink": "/v2.6/getting-started/installation-and-upgrade/installation-references/"
+        "permalink": "/v2.7/getting-started/installation-and-upgrade/installation-references/"
     }
 };
 const assets = {};
@@ -1131,6 +1120,11 @@ const port_requirements_toc = [
         value: 'Downstream Kubernetes Cluster Nodes',
         id: 'downstream-kubernetes-cluster-nodes',
         level: 2
+    },
+    {
+        value: 'Ports for Harvester Clusters',
+        id: 'ports-for-harvester-clusters',
+        level: 3
     },
     {
         value: 'Ports for Rancher Launched Kubernetes Clusters using Node Pools',
@@ -1816,20 +1810,6 @@ function port_requirements_MDXContent(_param) {
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `HTTP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `80`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `Load balancer/proxy that does external SSL termination`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `Rancher UI/API when external SSL termination is used`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
-        parentName: "tr",
-        "align": null
     }, `HTTPS`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
@@ -1965,10 +1945,10 @@ function port_requirements_MDXContent(_param) {
         "id": "downstream-kubernetes-cluster-nodes"
     }, `Downstream Kubernetes Cluster Nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `Downstream Kubernetes clusters run your apps and services. This section describes what ports need to be opened on the nodes in downstream clusters so that Rancher can communicate with them.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The port requirements differ depending on how the downstream cluster was launched. Each of the tabs below list the ports that need to be opened for different `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/"
+        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/"
     }, `cluster types`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following diagram depicts the ports that are opened for each `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/"
+        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/"
     }, `cluster type`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Port Requirements for the Rancher Management Plane"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("img", {
         alt: "Basic Port Requirements",
         src: (__webpack_require__(79901)/* ["default"] */ .Z),
@@ -1982,13 +1962,18 @@ function port_requirements_MDXContent(_param) {
         parentName: "p",
         "href": "#commonly-used-ports"
     }, `Commonly Used Ports`), ` as your port reference instead of the comprehensive tables below.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
+        "id": "ports-for-harvester-clusters"
+    }, `Ports for Harvester Clusters`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `Refer `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+        parentName: "p",
+        "href": "/v2.7/integrations-in-rancher/harvester#port-requirements"
+    }, `here`), ` for more information on Harvester port requirements.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
         "id": "ports-for-rancher-launched-kubernetes-clusters-using-node-pools"
     }, `Ports for Rancher Launched Kubernetes Clusters using Node Pools`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/"
+        "href": "/v2.7/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/"
     }, `Rancher Launched Kubernetes`), ` with nodes created in an `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/"
+        "href": "/v2.7/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/"
     }, `Infrastructure Provider`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
@@ -1999,17 +1984,17 @@ function port_requirements_MDXContent(_param) {
         "id": "ports-for-rancher-launched-kubernetes-clusters-using-custom-nodes"
     }, `Ports for Rancher Launched Kubernetes Clusters using Custom Nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/"
+        "href": "/v2.7/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/"
     }, `Rancher Launched Kubernetes`), ` with `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/"
+        "href": "/v2.7/reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/"
     }, `Custom Nodes`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsCustomNodes/* default */.Z, {
         mdxType: "PortsCustomNodes"
     })), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
         "id": "ports-for-hosted-kubernetes-clusters"
     }, `Ports for Hosted Kubernetes Clusters`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/"
+        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/"
     }, `hosted clusters`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsImportedHosted/* default */.Z, {
         mdxType: "PortsImportedHosted"
     })), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
@@ -2020,7 +2005,7 @@ function port_requirements_MDXContent(_param) {
         parentName: "admonition"
     }, `Registered clusters were called imported clusters before Rancher v2.5.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters"
+        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters"
     }, `registered clusters`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsImportedHosted/* default */.Z, {
         mdxType: "PortsImportedHosted"
     })), /*#__PURE__*/ (0,esm/* mdx */.kt)("h2", {
@@ -2048,7 +2033,7 @@ These healthchecks are executed on the node itself. In most cloud environments, 
         "id": "rancher-aws-ec2-security-group"
     }, `Rancher AWS EC2 Security Group`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `When using the `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster"
+        "href": "/v2.7/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster"
     }, `AWS EC2 node driver`), ` to provision cluster nodes in Rancher, you can choose to let Rancher create a security group called `, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
         parentName: "p"
     }, `rancher-nodes`), `. The following rules are automatically added to this security group.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {

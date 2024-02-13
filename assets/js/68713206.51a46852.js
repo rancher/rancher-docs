@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[8362],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[41916],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -652,7 +652,7 @@ const PortsImportedHosted = ()=>/*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__
 
 /***/ }),
 
-/***/ 71019:
+/***/ 20899:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -678,7 +678,7 @@ var PortsIaasNodes = __webpack_require__(15071);
 var PortsCustomNodes = __webpack_require__(27466);
 // EXTERNAL MODULE: ./src/components/PortsImportedHosted.js
 var PortsImportedHosted = __webpack_require__(12496);
-;// CONCATENATED MODULE: ./versioned_docs/version-2.0-2.4/shared-files/_common-ports-table.md
+;// CONCATENATED MODULE: ./versioned_docs/version-2.6/shared-files/_common-ports-table.md
 /* @jsxRuntime classic */ /* @jsx mdx */ /* @jsxFrag React.Fragment */ function _define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
@@ -896,17 +896,6 @@ function MDXContent(_param) {
     }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `9100`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `Default port required by Monitoring to scrape metrics from Linux node-exporters`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
-        parentName: "tr",
-        "align": "center"
-    }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
-        parentName: "tr",
-        "align": "center"
     }, `9443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
@@ -921,7 +910,7 @@ function MDXContent(_param) {
     }, `9796`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Default port required by Monitoring to scrape metrics from Windows node-exporters`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Default port required by Monitoring to scrape metrics from Linux and Windows node-exporters`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -954,7 +943,7 @@ function MDXContent(_param) {
     }, `10250`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `kubelet API`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Metrics server communication with all nodes API`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -980,7 +969,7 @@ function MDXContent(_param) {
 }
 MDXContent.isMDXComponent = true;
 
-;// CONCATENATED MODULE: ./versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md
+;// CONCATENATED MODULE: ./versioned_docs/version-2.6/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md
 /* @jsxRuntime classic */ /* @jsx mdx */ /* @jsxFrag React.Fragment */ function port_requirements_define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
@@ -1069,31 +1058,31 @@ const port_requirements_frontMatter = {
 const port_requirements_contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/installation-and-upgrade/installation-requirements/port-requirements",
-    "id": "version-2.0-2.4/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
+    "id": "version-2.6/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
     "title": "Port Requirements",
     "description": "Read about port requirements needed in order for Rancher to operate properly, both for Rancher nodes and downstream Kubernetes cluster nodes",
-    "source": "@site/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md",
+    "source": "@site/versioned_docs/version-2.6/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md",
     "sourceDirName": "getting-started/installation-and-upgrade/installation-requirements",
     "slug": "/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
-    "permalink": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
+    "permalink": "/v2.6/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md",
     "tags": [],
-    "version": "2.0-2.4",
-    "lastUpdatedAt": 1705104464,
-    "formattedLastUpdatedAt": "2024年1月13日",
+    "version": "2.6",
+    "lastUpdatedAt": 1705016351,
+    "formattedLastUpdatedAt": "Jan 11, 2024",
     "frontMatter": {
         "title": "Port Requirements",
         "description": "Read about port requirements needed in order for Rancher to operate properly, both for Rancher nodes and downstream Kubernetes cluster nodes"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Installing Docker",
-        "permalink": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/installation-requirements/install-docker"
+        "title": "Dockershim",
+        "permalink": "/v2.6/getting-started/installation-and-upgrade/installation-requirements/dockershim"
     },
     "next": {
-        "title": "Install Rancher on a Kubernetes Cluster",
-        "permalink": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/"
+        "title": "Installation References",
+        "permalink": "/v2.6/getting-started/installation-and-upgrade/installation-references/"
     }
 };
 const assets = {};
@@ -1115,6 +1104,11 @@ const port_requirements_toc = [
     {
         value: 'Ports for Rancher Server Nodes on RKE',
         id: 'ports-for-rancher-server-nodes-on-rke',
+        level: 3
+    },
+    {
+        value: 'Ports for Rancher Server Nodes on RKE2',
+        id: 'ports-for-rancher-server-nodes-on-rke2',
         level: 3
     },
     {
@@ -1143,8 +1137,8 @@ const port_requirements_toc = [
         level: 3
     },
     {
-        value: 'Ports for Imported Clusters',
-        id: 'ports-for-imported-clusters',
+        value: 'Ports for Registered Clusters',
+        id: 'ports-for-registered-clusters',
         level: 3
     },
     {
@@ -1173,6 +1167,12 @@ const port_requirements_toc = [
         level: 3
     }
 ];
+const makeShortcode = (name)=>function MDXDefaultShortcode(props) {
+        console.warn("Component " + name + " was not imported, exported, or provided by MDXProvider as global scope");
+        return /*#__PURE__*/ (0,esm/* mdx */.kt)("div", props);
+    };
+const Tabs = makeShortcode("Tabs");
+const TabItem = makeShortcode("TabItem");
 const port_requirements_layoutProps = {
     toc: port_requirements_toc
 };
@@ -1189,25 +1189,27 @@ function port_requirements_MDXContent(_param) {
         href: "https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-requirements/port-requirements"
     })), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `To operate properly, Rancher requires a number of ports to be open on Rancher nodes and on downstream Kubernetes cluster nodes.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("h2", {
         "id": "rancher-nodes"
-    }, `Rancher Nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table lists the ports that need to be open to and from nodes that are running the Rancher server.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The port requirements differ based on the Rancher server architecture.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("blockquote", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
-        parentName: "blockquote"
-    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
-        parentName: "p"
-    }, `Notes:`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", {
-        parentName: "blockquote"
+    }, `Rancher Nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table lists the ports that need to be open to and from nodes that are running the Rancher server.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The port requirements differ based on the Rancher server architecture.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `Rancher can be installed on any Kubernetes cluster. For Rancher installs on a K3s, RKE, or RKE2 Kubernetes cluster, refer to the tabs below. For other Kubernetes distributions, refer to the distribution's documentation for the port requirements for cluster nodes.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
+        "title": "Notes:",
+        "type": "note"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", {
+        parentName: "admonition"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
         parentName: "ul"
     }, `Rancher nodes may also require additional outbound access for any external authentication provider which is configured (LDAP for example).`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
         parentName: "ul"
     }, `Kubernetes recommends TCP 30000-32767 for node port services.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
         parentName: "ul"
-    }, `For firewalls, traffic may need to be enabled within the cluster and pod CIDR.`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
+    }, `For firewalls, traffic may need to be enabled within the cluster and pod CIDR.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
+        parentName: "ul"
+    }, `Rancher nodes may also need outbound access to an external S3 location which is used for storing cluster backups (Minio for example).`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
         "id": "ports-for-rancher-server-nodes-on-k3s"
-    }, `Ports for Rancher Server Nodes on K3s`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The K3s server needs port 6443 to be accessible by the nodes.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The nodes need to be able to reach other nodes over UDP port 8472 when Flannel VXLAN is used. The node should not listen on any other port. K3s uses reverse tunneling such that the nodes make outbound connections to the server and all kubelet traffic runs through that tunnel. However, if you do not use Flannel and provide your own custom CNI, then port 8472 is not needed by K3s.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `If you wish to utilize the metrics server, you will need to open port 10250 on each node.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("blockquote", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
-        parentName: "blockquote"
-    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
-        parentName: "p"
-    }, `Important:`), ` The VXLAN port on nodes should not be exposed to the world as it opens up your cluster network to be accessed by anyone. Run your nodes behind a firewall/security group that disables access to port 8472.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following tables break down the port requirements for inbound and outbound traffic:`), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Inbound Rules for Rancher Server Nodes"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
+    }, `Ports for Rancher Server Nodes on K3s`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The K3s server needs port 6443 to be accessible by the nodes.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The nodes need to be able to reach other nodes over UDP port 8472 when Flannel VXLAN is used. The node should not listen on any other port. K3s uses reverse tunneling such that the nodes make outbound connections to the server and all kubelet traffic runs through that tunnel. However, if you do not use Flannel and provide your own custom CNI, then port 8472 is not needed by K3s.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `If you wish to utilize the metrics server, you will need to open port 10250 on each node.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
+        "title": "Important:",
+        "type": "note"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
+        parentName: "admonition"
+    }, `The VXLAN port on nodes should not be exposed to the world as it opens up your cluster network to be accessed by anyone. Run your nodes behind a firewall/security group that disables access to port 8472.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following tables break down the port requirements for inbound and outbound traffic:`), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Inbound Rules for Rancher Server Nodes"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "thead"
@@ -1250,7 +1252,7 @@ function port_requirements_MDXContent(_param) {
     }, `443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `server nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `agent nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `hosted/imported Kubernetes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `any source that needs to be able to use the Rancher UI or API`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `server nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `agent nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `hosted/registered Kubernetes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `any source that needs to be able to use the Rancher UI or API`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
     }, `Rancher agent, Rancher UI/API, kubectl`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
@@ -1435,6 +1437,17 @@ function port_requirements_MDXContent(_param) {
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
+    }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `8443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Nginx Ingress's Validating Webhook`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
     }, `UDP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
@@ -1463,7 +1476,7 @@ function port_requirements_MDXContent(_param) {
     }, `10250`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `kubelet`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Metrics server communication with all nodes`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1577,16 +1590,10 @@ function port_requirements_MDXContent(_param) {
     }, `443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
-        parentName: "td"
-    }, `35.160.43.145`), `,`, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
-        parentName: "td"
-    }, `35.167.242.46`), `,`, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
-        parentName: "td"
-    }, `52.33.59.17`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `git.rancher.io`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Rancher catalog (git.rancher.io)`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Rancher catalog`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1643,6 +1650,185 @@ function port_requirements_MDXContent(_param) {
         parentName: "tr",
         "align": null
     }, `Kubernetes API`))))), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
+        "id": "ports-for-rancher-server-nodes-on-rke2"
+    }, `Ports for Rancher Server Nodes on RKE2`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The RKE2 server needs port 6443 and 9345 to be accessible by other nodes in the cluster.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `All nodes need to be able to reach other nodes over UDP port 8472 when Flannel VXLAN is used.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `If you wish to utilize the metrics server, you will need to open port 10250 on each node.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
+        "title": "Important:",
+        "type": "note"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
+        parentName: "admonition"
+    }, `The VXLAN port on nodes should not be exposed to the world as it opens up your cluster network to be accessed by anyone. Run your nodes behind a firewall/security group that disables access to port 8472.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Inbound Rules for RKE2 Server Nodes"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
+        parentName: "table"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "thead"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+        parentName: "tr",
+        "align": null
+    }, `Protocol`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+        parentName: "tr",
+        "align": null
+    }, `Port`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+        parentName: "tr",
+        "align": null
+    }, `Source`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+        parentName: "tr",
+        "align": null
+    }, `Description`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
+        parentName: "table"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `9345`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `RKE2 server and agent nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Node registration. Port should be open on all server nodes to all other nodes in the cluster.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `6443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `RKE2 agent nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Kubernetes API`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `UDP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `8472`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `RKE2 server and agent nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Required only for Flannel VXLAN`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `10250`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `RKE2 server and agent nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `kubelet`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `2379`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `RKE2 server nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `etcd client port`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `2380`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `RKE2 server nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `etcd peer port`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `30000-32767`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `RKE2 server and agent nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `NodePort port range. Can use TCP or UDP.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `5473`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Calico-node pod connecting to typha pod`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Required when deploying with Calico`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `HTTP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `80`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Load balancer/proxy that does external SSL termination`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Rancher UI/API when external SSL termination is used`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `HTTP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `80`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Load balancer/proxy that does external SSL termination`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Rancher UI/API when external SSL termination is used`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `HTTPS`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `hosted/registered Kubernetes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `any source that needs to be able to use the Rancher UI or API`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Rancher agent, Rancher UI/API, kubectl. Not needed if you have a load balancer doing TLS termination.`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `Typically all outbound traffic is allowed.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
         "id": "ports-for-rancher-server-in-docker"
     }, `Ports for Rancher Server in Docker`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following tables break down the port requirements for Rancher nodes, for inbound and outbound traffic:`), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Inbound Rules for Rancher Node"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
         parentName: "table"
@@ -1687,7 +1873,7 @@ function port_requirements_MDXContent(_param) {
     }, `443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `hosted/imported Kubernetes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `any source that needs to be able to use the Rancher UI or API`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ul", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `hosted/registered Kubernetes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", null, `any source that needs to be able to use the Rancher UI or API`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
     }, `Rancher agent, Rancher UI/API, kubectl`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Outbound Rules for Rancher Node"), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
@@ -1768,21 +1954,19 @@ function port_requirements_MDXContent(_param) {
         "id": "downstream-kubernetes-cluster-nodes"
     }, `Downstream Kubernetes Cluster Nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `Downstream Kubernetes clusters run your apps and services. This section describes what ports need to be opened on the nodes in downstream clusters so that Rancher can communicate with them.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The port requirements differ depending on how the downstream cluster was launched. Each of the tabs below list the ports that need to be opened for different `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/"
+        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/"
     }, `cluster types`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following diagram depicts the ports that are opened for each `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/"
+        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/"
     }, `cluster type`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Port Requirements for the Rancher Management Plane"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("img", {
         alt: "Basic Port Requirements",
         src: (__webpack_require__(79901)/* ["default"] */ .Z),
         width: "856",
         height: "488"
-    })), /*#__PURE__*/ (0,esm/* mdx */.kt)("blockquote", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
-        parentName: "blockquote"
-    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
-        parentName: "p"
-    }, `Tip:`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
-        parentName: "blockquote"
+    })), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
+        "type": "tip"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
+        parentName: "admonition"
     }, `If security isn't a large concern and you're okay with opening a few additional ports, you can use the table in `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
         "href": "#commonly-used-ports"
@@ -1790,40 +1974,43 @@ function port_requirements_MDXContent(_param) {
         "id": "ports-for-rancher-launched-kubernetes-clusters-using-node-pools"
     }, `Ports for Rancher Launched Kubernetes Clusters using Node Pools`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/"
+        "href": "/v2.6/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/"
     }, `Rancher Launched Kubernetes`), ` with nodes created in an `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/"
-    }, `Infrastructure Provider`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("blockquote", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
-        parentName: "blockquote"
-    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
-        parentName: "p"
-    }, `Note:`), `
-The required ports are automatically opened by Rancher during creation of clusters in cloud providers like Amazon EC2 or DigitalOcean.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsIaasNodes/* default */.Z, {
+        "href": "/v2.6/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/"
+    }, `Infrastructure Provider`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
+        parentName: "admonition"
+    }, `The required ports are automatically opened by Rancher during creation of clusters in cloud providers like Amazon EC2 or DigitalOcean.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsIaasNodes/* default */.Z, {
         mdxType: "PortsIaasNodes"
     })), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
         "id": "ports-for-rancher-launched-kubernetes-clusters-using-custom-nodes"
     }, `Ports for Rancher Launched Kubernetes Clusters using Custom Nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/"
+        "href": "/v2.6/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/"
     }, `Rancher Launched Kubernetes`), ` with `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.0-v2.4/reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/"
+        "href": "/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/"
     }, `Custom Nodes`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsCustomNodes/* default */.Z, {
         mdxType: "PortsCustomNodes"
     })), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
         "id": "ports-for-hosted-kubernetes-clusters"
     }, `Ports for Hosted Kubernetes Clusters`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/"
+        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/"
     }, `hosted clusters`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsImportedHosted/* default */.Z, {
         mdxType: "PortsImportedHosted"
     })), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
-        "id": "ports-for-imported-clusters"
-    }, `Ports for Imported Clusters`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+        "id": "ports-for-registered-clusters"
+    }, `Ports for Registered Clusters`), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
+        parentName: "admonition"
+    }, `Registered clusters were called imported clusters before Rancher v2.5.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/import-existing-clusters"
-    }, `imported clusters`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsImportedHosted/* default */.Z, {
+        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters"
+    }, `registered clusters`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsImportedHosted/* default */.Z, {
         mdxType: "PortsImportedHosted"
     })), /*#__PURE__*/ (0,esm/* mdx */.kt)("h2", {
         "id": "other-port-considerations"
@@ -1850,7 +2037,7 @@ These healthchecks are executed on the node itself. In most cloud environments, 
         "id": "rancher-aws-ec2-security-group"
     }, `Rancher AWS EC2 Security Group`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `When using the `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster"
+        "href": "/v2.6/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster"
     }, `AWS EC2 node driver`), ` to provision cluster nodes in Rancher, you can choose to let Rancher create a security group called `, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
         parentName: "p"
     }, `rancher-nodes`), `. The following rules are automatically added to this security group.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
@@ -2097,7 +2284,66 @@ These healthchecks are executed on the node itself. In most cloud environments, 
         "align": "center"
     }, `Outbound`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
         "id": "opening-suse-linux-ports"
-    }, `Opening SUSE Linux Ports`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `SUSE Linux may have a firewall that blocks all ports by default. To open the ports needed for adding the host to a custom cluster,`), /*#__PURE__*/ (0,esm/* mdx */.kt)("ol", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
+    }, `Opening SUSE Linux Ports`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `SUSE Linux may have a firewall that blocks all ports by default. To open the ports needed for adding the host to a custom cluster,`), /*#__PURE__*/ (0,esm/* mdx */.kt)(Tabs, {
+        mdxType: "Tabs"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)(TabItem, {
+        value: "SLES 15 / openSUSE Leap 15",
+        mdxType: "TabItem"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ol", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
+        parentName: "li"
+    }, `SSH into the instance.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
+        parentName: "li"
+    }, `Start YaST in text mode:`), /*#__PURE__*/ (0,esm/* mdx */.kt)("pre", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("code", {
+        parentName: "pre"
+    }, `sudo yast2
+`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
+        parentName: "li"
+    }, `Navigate to `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
+        parentName: "p"
+    }, `Security and Users`), ` > `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
+        parentName: "p"
+    }, `Firewall`), ` > `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
+        parentName: "p"
+    }, `Zones:public`), ` > `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
+        parentName: "p"
+    }, `Ports`), `. To navigate within the interface, follow these `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+        parentName: "p",
+        "href": "https://doc.opensuse.org/documentation/leap/reference/html/book-reference/cha-yast-text.html#sec-yast-cli-navigate"
+    }, `instructions`), `.`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
+        parentName: "li"
+    }, `To open the required ports, enter them into the `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
+        parentName: "p"
+    }, `TCP Ports`), ` and `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
+        parentName: "p"
+    }, `UDP Ports`), ` fields. In this example, ports 9796 and 10250 are also opened for monitoring. The resulting fields should look similar to the following:`), /*#__PURE__*/ (0,esm/* mdx */.kt)("pre", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("code", {
+        parentName: "pre",
+        "className": "language-yaml"
+    }, `TCP Ports
+22, 80, 443, 2376, 2379, 2380, 6443, 9099, 9796, 10250, 10254, 30000-32767
+UDP Ports
+8472, 30000-32767
+`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
+        parentName: "li"
+    }, `When all required ports are enter, select `, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
+        parentName: "p"
+    }, `Accept`), `.`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)(TabItem, {
+        value: "SLES 12 / openSUSE Leap 42",
+        mdxType: "TabItem"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("ol", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
         parentName: "ol"
     }, `SSH into the instance.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("li", {
         parentName: "ol"
@@ -2117,7 +2363,7 @@ FW_ROUTE=yes
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("code", {
         parentName: "pre"
     }, `SuSEfirewall2
-`)))), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
+`)))))), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
         parentName: "p"
     }, `Result:`), ` The node has the open ports required to be added to a custom cluster.`));
 }

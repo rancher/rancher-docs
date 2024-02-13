@@ -155,24 +155,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/integrations-in-rancher.mdx",
     "sourceDirName": "integrations-in-rancher",
     "slug": "/integrations-in-rancher/",
-    "permalink": "/v2.8/integrations-in-rancher/",
+    "permalink": "/zh/v2.8/integrations-in-rancher/",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/integrations-in-rancher.mdx",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1706212297,
-    "formattedLastUpdatedAt": "Jan 25, 2024",
+    "lastUpdatedAt": 1707778138,
+    "formattedLastUpdatedAt": "2024年2月12日",
     "frontMatter": {
         "title": "Integrations in Rancher"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Hardening the Rancher Webhook",
-        "permalink": "/v2.8/reference-guides/rancher-security/rancher-webhook-hardening"
+        "permalink": "/zh/v2.8/reference-guides/rancher-security/rancher-webhook-hardening"
     },
     "next": {
         "title": "Kubernetes Distributions",
-        "permalink": "/v2.8/integrations-in-rancher/kubernetes-distributions/"
+        "permalink": "/zh/v2.8/integrations-in-rancher/kubernetes-distributions/"
     }
 };
 const assets = {};
@@ -190,7 +190,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Prime is the Rancher ecosystem’s enterprise offering, with additional security, extended lifecycles, and access to Prime-exclusive documentation. Rancher Prime installation assets are hosted on a trusted SUSE registry, owned and managed by Rancher. The trusted Prime registry includes only stable releases that have been community-tested. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Prime also offers options for production support, as well as add-ons to your subscription that tailor to your commercial needs.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To learn more and get started with Rancher Prime, please visit `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Prime is the Rancher ecosystem’s enterprise offering, with additional security, extended lifecycles, and access to Prime-exclusive documentation. Rancher Prime installation assets are hosted on a trusted SUSE registry, owned and managed by Rancher. The trusted Prime registry includes only stable releases that have been community-tested. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Prime also offers options for production support, as well as add-ons to your subscription that tailor to your commercial needs.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To learn more and get started with Rancher Prime, please visit `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://www.rancher.com/quick-start"
     }, `this page`), `. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_site_src_components_CardComponents__WEBPACK_IMPORTED_MODULE_2__/* .CardSection */ .u, {

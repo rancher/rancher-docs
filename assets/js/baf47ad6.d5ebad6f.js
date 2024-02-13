@@ -896,17 +896,6 @@ function MDXContent(_param) {
     }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": "center"
-    }, `9100`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `Default port required by Monitoring to scrape metrics from Linux node-exporters`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
-        parentName: "tr",
-        "align": "center"
-    }, `TCP`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
-        parentName: "tr",
-        "align": "center"
     }, `9443`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
@@ -921,7 +910,7 @@ function MDXContent(_param) {
     }, `9796`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Default port required by Monitoring to scrape metrics from Windows node-exporters`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `Default port required by Monitoring to scrape metrics from Linux and Windows node-exporters`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -1075,13 +1064,13 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.5/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md",
     "sourceDirName": "getting-started/installation-and-upgrade/installation-requirements",
     "slug": "/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
-    "permalink": "/zh/v2.5/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
+    "permalink": "/v2.5/getting-started/installation-and-upgrade/installation-requirements/port-requirements",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/getting-started/installation-and-upgrade/installation-requirements/port-requirements.md",
     "tags": [],
     "version": "2.5",
     "lastUpdatedAt": 1705019780,
-    "formattedLastUpdatedAt": "2024年1月12日",
+    "formattedLastUpdatedAt": "Jan 12, 2024",
     "frontMatter": {
         "title": "Port Requirements",
         "description": "Read about port requirements needed in order for Rancher to operate properly, both for Rancher nodes and downstream Kubernetes cluster nodes"
@@ -1089,11 +1078,11 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Installing Docker",
-        "permalink": "/zh/v2.5/getting-started/installation-and-upgrade/installation-requirements/install-docker"
+        "permalink": "/v2.5/getting-started/installation-and-upgrade/installation-requirements/install-docker"
     },
     "next": {
         "title": "Install/Upgrade Rancher on a Kubernetes Cluster",
-        "permalink": "/zh/v2.5/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/"
+        "permalink": "/v2.5/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/"
     }
 };
 const assets = {};
@@ -1931,10 +1920,10 @@ function port_requirements_MDXContent(_param) {
         "id": "downstream-kubernetes-cluster-nodes"
     }, `Downstream Kubernetes Cluster Nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `Downstream Kubernetes clusters run your apps and services. This section describes what ports need to be opened on the nodes in downstream clusters so that Rancher can communicate with them.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The port requirements differ depending on how the downstream cluster was launched. Each of the tabs below list the ports that need to be opened for different `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/"
+        "href": "/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/"
     }, `cluster types`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following diagram depicts the ports that are opened for each `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/"
+        "href": "/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/"
     }, `cluster type`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("figcaption", null, "Port Requirements for the Rancher Management Plane"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("img", {
         alt: "Basic Port Requirements",
         src: (__webpack_require__(79901)/* ["default"] */ .Z),
@@ -1953,10 +1942,10 @@ function port_requirements_MDXContent(_param) {
         "id": "ports-for-rancher-launched-kubernetes-clusters-using-node-pools"
     }, `Ports for Rancher Launched Kubernetes Clusters using Node Pools`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/"
+        "href": "/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/"
     }, `Rancher Launched Kubernetes`), ` with nodes created in an `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/"
+        "href": "/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/"
     }, `Infrastructure Provider`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("blockquote", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
         parentName: "blockquote"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("strong", {
@@ -1968,24 +1957,24 @@ The required ports are automatically opened by Rancher during creation of cluste
         "id": "ports-for-rancher-launched-kubernetes-clusters-using-custom-nodes"
     }, `Ports for Rancher Launched Kubernetes Clusters using Custom Nodes`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/"
+        "href": "/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/"
     }, `Rancher Launched Kubernetes`), ` with `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/"
+        "href": "/v2.5/reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/"
     }, `Custom Nodes`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsCustomNodes/* default */.Z, {
         mdxType: "PortsCustomNodes"
     })), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
         "id": "ports-for-hosted-kubernetes-clusters"
     }, `Ports for Hosted Kubernetes Clusters`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/"
+        "href": "/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/"
     }, `hosted clusters`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsImportedHosted/* default */.Z, {
         mdxType: "PortsImportedHosted"
     })), /*#__PURE__*/ (0,esm/* mdx */.kt)("h3", {
         "id": "ports-for-registered-clusters"
     }, `Ports for Registered Clusters`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `Note: Registered clusters were called imported clusters before Rancher v2.5.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("details", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("summary", null, "Click to expand"), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table depicts the port requirements for `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters"
+        "href": "/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters"
     }, `registered clusters`), `.`), /*#__PURE__*/ (0,esm/* mdx */.kt)(PortsImportedHosted/* default */.Z, {
         mdxType: "PortsImportedHosted"
     })), /*#__PURE__*/ (0,esm/* mdx */.kt)("h2", {
@@ -2013,7 +2002,7 @@ These healthchecks are executed on the node itself. In most cloud environments, 
         "id": "rancher-aws-ec2-security-group"
     }, `Rancher AWS EC2 Security Group`), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `When using the `, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster"
+        "href": "/v2.5/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster"
     }, `AWS EC2 node driver`), ` to provision cluster nodes in Rancher, you can choose to let Rancher create a security group called `, /*#__PURE__*/ (0,esm/* mdx */.kt)("inlineCode", {
         parentName: "p"
     }, `rancher-nodes`), `. The following rules are automatically added to this security group.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {

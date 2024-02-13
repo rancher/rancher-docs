@@ -109,24 +109,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.8/api/api-reference.mdx",
     "sourceDirName": "api",
     "slug": "/api/api-reference",
-    "permalink": "/zh/v2.8/api/api-reference",
+    "permalink": "/v2.8/api/api-reference",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/api/api-reference.mdx",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1704926839,
-    "formattedLastUpdatedAt": "2024年1月10日",
+    "lastUpdatedAt": 1707778138,
+    "formattedLastUpdatedAt": "Feb 12, 2024",
     "frontMatter": {
         "title": "API Reference"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Projects",
-        "permalink": "/zh/v2.8/api/workflows/projects"
+        "permalink": "/v2.8/api/workflows/projects"
     },
     "next": {
-        "title": "参与 Rancher 社区贡献",
-        "permalink": "/zh/v2.8/contribute-to-rancher"
+        "title": "Contributing to Rancher",
+        "permalink": "/v2.8/contribute-to-rancher"
     }
 };
 const assets = {};
@@ -143,7 +143,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/api/api-reference"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
