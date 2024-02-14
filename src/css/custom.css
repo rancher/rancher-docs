@@ -135,6 +135,23 @@ code {
   font-family: 'Roboto Mono', monospace;
 }
 
+dd {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+dd+p {
+  margin-inline-start: 40px; /*This is intended to match the margin spacing for the dd element*/
+}
+
+dt {
+  font-weight: bold;
+}
+
+dt+p {
+  margin-bottom: 0;
+}
+
 hr {
   background-image: -webkit-linear-gradient(left,#f3f3f3,#adadb1,#f3f3f3);
   margin: 0 auto;
