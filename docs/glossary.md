@@ -43,7 +43,7 @@ This page covers Rancher-specific terminology and symbols which might be unfamil
         Apps
     </dt>
     <p>
-        <b>Versions: Rancher v2.6.5 and later</b>
+        <b>Versions:</b> Rancher v2.6.5 and later
     </p>
     <dd>
         When describing navigation within Rancher, the section of the Rancher UI where you manage Helm chart repositories. In earlier versions of Rancher, this section was called <i>Apps & Marketplace</i>, or <i>Catalogs</i>.
