@@ -142,7 +142,6 @@ dd {
 
 dd+p {
   margin-inline-start: 40px; /*This is intended to match the margin spacing for the dd element*/
-  font-weight: lighter;
 }
 
 dt {
