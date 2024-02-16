@@ -6,7 +6,7 @@ title: Rancher Documentation Versions
 
 ### Current versions
 
-Below are the documentation and release notes for the currently released version of Rancher 2.8.x:
+Here you can find links to supporting documentation for the current released version of Rancher v2.8, and its availability for [Rancher Prime](/v2.8/getting-started/quick-start-guides/deploy-rancher-manager/prime) and the Community version of Rancher:
 
 <table>
   <tr>
@@ -27,7 +27,7 @@ Below are the documentation and release notes for the currently released version
   </tr>
 </table>
 
-Below are the documentation and release notes for the currently released version of Rancher 2.7.x:
+Here you can find links to supporting documentation for the current released version of Rancher v2.7, and its availability for [Rancher Prime](/v2.7/getting-started/quick-start-guides/deploy-rancher-manager/prime) and the Community version of Rancher:
 
 <table>
   <tr>
@@ -48,7 +48,7 @@ Below are the documentation and release notes for the currently released version
   </tr>
 </table>
 
-Below are the documentation and release notes for the currently released version of Rancher 2.6.x:
+Here you can find links to supporting documentation for the current released version of Rancher v2.6:
 
 <table>
   <tr>
@@ -67,7 +67,7 @@ Below are the documentation and release notes for the currently released version
 
 ### Past versions
 
-Below are the documentation and release notes for previous versions of Rancher 2.8.x:
+Here you can find links to supporting documentation for previous versions of Rancher v2.8, and their availability for [Rancher Prime](/v2.8/getting-started/quick-start-guides/deploy-rancher-manager/prime) and the Community version of Rancher:
 
 <table>
   <tr>
@@ -98,7 +98,7 @@ Below are the documentation and release notes for previous versions of Rancher 2
 
 <br/>
 
-Below are the documentation and release notes for previous versions of Rancher 2.7.x:
+Here you can find links to supporting documentation for previous versions of Rancher v2.7, and their availability for [Rancher Prime](/v2.7/getting-started/quick-start-guides/deploy-rancher-manager/prime) and the Community version of Rancher:
 
 <table>
   <tr>
@@ -193,7 +193,7 @@ Below are the documentation and release notes for previous versions of Rancher 2
 
 <br/>
 
-Below are the documentation and release notes for previous versions of Rancher 2.6.x:
+Here you can find links to supporting documentation for previous versions of Rancher v2.6:
 
 <table>
   <tr>
@@ -292,7 +292,7 @@ Below are the documentation and release notes for previous versions of Rancher 2
 
 ### Legacy versions (EOL)
 
-Below are the documentation and release notes for legacy versions of Rancher 2.5.x:
+Here you can find links to supporting documentation for legacy versions of Rancher v2.5:
 
 <table>
   <tr>
@@ -413,7 +413,7 @@ Below are the documentation and release notes for legacy versions of Rancher 2.5
 
 <br/>
 
-Below is the documentation for legacy versions of Rancher 2.0 - 2.4.x:
+Here you can find links to supporting documentation for legacy versions of v2.0-v2.4:
 
 <table>
   <tr>
@@ -421,7 +421,7 @@ Below is the documentation for legacy versions of Rancher 2.0 - 2.4.x:
     <th>Documentation</th>
   </tr>
   <tr>
-    <td><b>v2.0 - v2.4</b></td>
+    <td><b>v2.0-v2.4</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.0-v2.4">Documentation</a></td>
   </tr>
 </table>
