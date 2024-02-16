@@ -13,7 +13,7 @@ This centralized user authentication is accomplished using the Rancher authentic
 
 :::warning
 
-The account you use to enable your external provider will be granted Admin-level permissions. See [External Authentication Configuration and Principal Users](#external-authentication-configuration-and-principal-users) to understand why.
+The account you use to enable your external provider will be granted Admin-level permissions. This includes test accounts. See [External Authentication Configuration and Principal Users](#external-authentication-configuration-and-principal-users) to understand why.
 
 :::
 
