@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/rancher-security/security-advisories-and-cves.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1707500737,
-    "formattedLastUpdatedAt": "Feb 9, 2024",
+    "lastUpdatedAt": 1708099107,
+    "formattedLastUpdatedAt": "Feb 16, 2024",
     "frontMatter": {
         "title": "Security Advisories and CVEs"
     },
@@ -377,6 +377,26 @@ function MDXContent(_param) {
     }, `Resolution`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tbody", {
         parentName: "table"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22030"
+    }, `CVE-2024-22030`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `A vulnerability was discovered in Rancher's and Fleet's agents, currently deemed a medium to high severity CVE, that under very specific circumstances allows a malicious actor to take over existing Rancher nodes. The attacker would need to have control of an expired domain or execute a DNS spoofing/hijacking attack against the domain in order to exploit this vulnerability. The targeted domain is the one used as the Rancher URL (the server-url of the Rancher cluster). At the moment there is no fix available and it affects all supported versions of Rancher. Customers and users are advised to follow the recommendations and best practices described in our `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://www.suse.com/c/rancher-security-update/"
+    }, `blog post`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `16 Feb 2024`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Pending`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
