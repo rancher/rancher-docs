@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[11473],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[17565],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 36939:
+/***/ 51978:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/monitoring-v2-configuration/receivers",
-    "id": "version-2.7/reference-guides/monitoring-v2-configuration/receivers",
+    "id": "version-2.8/reference-guides/monitoring-v2-configuration/receivers",
     "title": "Receiver Configuration",
     "description": "The Alertmanager Config Secret contains the configuration of an Alertmanager instance that sends out notifications based on alerts it receives from Prometheus.",
-    "source": "@site/versioned_docs/version-2.7/reference-guides/monitoring-v2-configuration/receivers.md",
+    "source": "@site/versioned_docs/version-2.8/reference-guides/monitoring-v2-configuration/receivers.md",
     "sourceDirName": "reference-guides/monitoring-v2-configuration",
     "slug": "/reference-guides/monitoring-v2-configuration/receivers",
-    "permalink": "/v2.7/reference-guides/monitoring-v2-configuration/receivers",
+    "permalink": "/v2.8/reference-guides/monitoring-v2-configuration/receivers",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/monitoring-v2-configuration/receivers.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/reference-guides/monitoring-v2-configuration/receivers.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1696548729,
-    "formattedLastUpdatedAt": "Oct 5, 2023",
+    "version": "2.8",
+    "lastUpdatedAt": 1708548171,
+    "formattedLastUpdatedAt": "Feb 21, 2024",
     "frontMatter": {
         "title": "Receiver Configuration"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Monitoring V2 Configuration",
-        "permalink": "/v2.7/reference-guides/monitoring-v2-configuration/"
+        "permalink": "/v2.8/reference-guides/monitoring-v2-configuration/"
     },
     "next": {
         "title": "Route Configuration",
-        "permalink": "/v2.7/reference-guides/monitoring-v2-configuration/routes"
+        "permalink": "/v2.8/reference-guides/monitoring-v2-configuration/routes"
     }
 };
 const assets = {};
@@ -397,8 +397,8 @@ const toc = [
         level: 3
     },
     {
-        value: 'Configure the Teams Receiver',
-        id: 'configure-the-teams-receiver',
+        value: 'Configuring the Teams Receiver',
+        id: 'configuring-the-teams-receiver',
         level: 3
     },
     {
@@ -412,8 +412,8 @@ const toc = [
         level: 3
     },
     {
-        value: 'Configure the SMS Receiver',
-        id: 'configure-the-sms-receiver',
+        value: 'Configuring the SMS Receiver',
+        id: 'configuring-the-sms-receiver',
         level: 3
     },
     {
@@ -476,7 +476,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `This section assumes familiarity with how monitoring components work together. For more information about Alertmanager, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works#3-how-alertmanager-works"
+        "href": "/v2.8/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works#3-how-alertmanager-works"
     }, `this section.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "creating-receivers-in-the-rancher-ui"
     }, `Creating Receivers in the Rancher UI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
@@ -491,7 +491,7 @@ function MDXContent(_param) {
     }, `If you configured monitoring with an existing Alertmanager Secret, it must have a format that is supported by Rancher's UI. Otherwise you will only be able to make changes based on modifying the Alertmanager Secret directly. Note: We are continuing to make enhancements to what kinds of Alertmanager Configurations we can support using the Routes and Receivers UI, so please `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
         "href": "https://github.com/rancher/rancher/issues/new"
-    }, `file an issue`), ` if you have a request for a feature enhancement.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To create notification receivers in the Rancher UI,`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(Tabs, {
+    }, `file an issue`), ` if you have a request for a feature enhancement.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(Tabs, {
         mdxType: "Tabs"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(TabItem, {
         value: "Rancher v2.6.5+",
@@ -988,26 +988,36 @@ function MDXContent(_param) {
     }, `Install`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, `Take note of the namespace used as it will be required in a later step.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "configure-the-teams-receiver"
-    }, `Configure the Teams Receiver`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Teams receiver can be configured by updating its ConfigMap. For example, the following is a minimal Teams receiver configuration.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        "id": "configuring-the-teams-receiver"
+    }, `Configuring the Teams Receiver`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, `To configure the Teams receiver, update its ConfigMap. The following example is a minimal Teams receiver configuration:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-yaml"
     }, `[Microsoft Teams]
-teams-instance-1: https://your-teams-webhook-url
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When configuration is complete, add the receiver using the steps in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+connector: https://your-teams-webhook-url
+`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, `After you update the configuration, follow the instructions in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#creating-receivers-in-the-rancher-ui"
-    }, `this section`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Use the example below as the URL where:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `Creating Receivers in the Rancher UI`), ` to add the receiver. Use the example below to form your URL. Make sure to replace `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `<namespace>`), ` with the namespace of the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `rancher-alerting-drivers`), ` app:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
         parentName: "li"
-    }, `ns-1`), ` is replaced with the namespace where the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `rancher-alerting-drivers`), ` app is installed`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-yaml"
-    }, `url: http://rancher-alerting-drivers-prom2teams.ns-1.svc:8089/v2/teams-instance-1
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }, `url: http://rancher-alerting-drivers-prom2teams.<namespace>.svc:8089/v2/connector
+`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "sms"
     }, `SMS`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "enabling-the-sms-receiver-for-rancher-managed-clusters"
@@ -1042,8 +1052,8 @@ teams-instance-1: https://your-teams-webhook-url
     }, `Install`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, `Take note of the namespace used as it will be required in a later step.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "configure-the-sms-receiver"
-    }, `Configure the SMS Receiver`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The SMS receiver can be configured by updating its ConfigMap. For example, the following is a minimal SMS receiver configuration.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        "id": "configuring-the-sms-receiver"
+    }, `Configuring the SMS Receiver`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The SMS receiver can be configured by updating its ConfigMap. For example, the following is a minimal SMS receiver configuration.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-yaml"
     }, `providers:
@@ -1166,12 +1176,12 @@ receivers:
         parentName: "p"
     }, `rancher-cis-benchmark`), `, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/advanced-user-guides/cis-scan-guides/enable-alerting-for-rancher-cis-benchmark"
+        "href": "/v2.8/how-to-guides/advanced-user-guides/cis-scan-guides/enable-alerting-for-rancher-cis-benchmark"
     }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "trusted-ca-for-notifiers"
     }, `Trusted CA for Notifiers`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you need to add a trusted CA to your notifier, follow the steps in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/monitoring-v2-configuration/helm-chart-options#trusted-ca-for-notifiers"
+        "href": "/v2.8/reference-guides/monitoring-v2-configuration/helm-chart-options#trusted-ca-for-notifiers"
     }, `this section.`)));
 }
 MDXContent.isMDXComponent = true;
