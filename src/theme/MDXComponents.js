@@ -10,8 +10,8 @@ export default {
   // Re-use the default mapping
   ...MDXComponents,
 
-  Tabs,
-  TabItem,
+  Tabs: Tabs,
+  TabItem: TabItem,
 
   CardSection,
   Card,

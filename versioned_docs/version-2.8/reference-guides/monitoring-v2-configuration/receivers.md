@@ -24,8 +24,6 @@ This section assumes familiarity with how monitoring components work together. F
 
 :::
 
-To create notification receivers in the Rancher UI,
-
 <Tabs>
 <TabItem value="Rancher v2.6.5+">
 
@@ -152,24 +150,20 @@ The Teams receiver is not a native receiver and must be enabled before it can be
 1. Select the **Teams** option and click **Install**.
 1. Take note of the namespace used as it will be required in a later step.
 
-### Configure the Teams Receiver
+### Configuring the Teams Receiver
 
-The Teams receiver can be configured by updating its ConfigMap. For example, the following is a minimal Teams receiver configuration.
+1. To configure the Teams receiver, update its ConfigMap. The following example is a minimal Teams receiver configuration:
 
-```yaml
-[Microsoft Teams]
-teams-instance-1: https://your-teams-webhook-url
-```
+    ```yaml
+    [Microsoft Teams]
+    connector: https://your-teams-webhook-url
+    ```
 
-When configuration is complete, add the receiver using the steps in [this section](#creating-receivers-in-the-rancher-ui).
+2. After you update the configuration, follow the instructions in [Creating Receivers in the Rancher UI](#creating-receivers-in-the-rancher-ui) to add the receiver. Use the example below to form your URL. Make sure to replace `<namespace>` with the namespace of the `rancher-alerting-drivers` app:
 
-Use the example below as the URL where:
-
-- `ns-1` is replaced with the namespace where the `rancher-alerting-drivers` app is installed
-
-```yaml
-url: http://rancher-alerting-drivers-prom2teams.ns-1.svc:8089/v2/teams-instance-1
-```
+    ```yaml
+    url: http://rancher-alerting-drivers-prom2teams.<namespace>.svc:8089/v2/connector
+    ```
 
 <!-- https://github.com/idealista/prom2teams -->
 
@@ -187,7 +181,7 @@ The SMS receiver is not a native receiver and must be enabled before it can be u
 1. Select the **SMS** option and click **Install**.
 1. Take note of the namespace used as it will be required in a later step.
 
-### Configure the SMS Receiver
+### Configuring the SMS Receiver
 
 The SMS receiver can be configured by updating its ConfigMap. For example, the following is a minimal SMS receiver configuration.
 
