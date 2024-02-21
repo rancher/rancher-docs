@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[23220],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[33446],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,239 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 27820:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   ZP: () => (/* binding */ MDXContent)
-/* harmony export */ });
-/* unused harmony exports frontMatter, contentTitle, toc */
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(67294);
-/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3905);
-/* @jsxRuntime classic */ /* @jsx mdx */ /* @jsxFrag React.Fragment */ function _define_property(obj, key, value) {
-    if (key in obj) {
-        Object.defineProperty(obj, key, {
-            value: value,
-            enumerable: true,
-            configurable: true,
-            writable: true
-        });
-    } else {
-        obj[key] = value;
-    }
-    return obj;
-}
-function _object_spread(target) {
-    for(var i = 1; i < arguments.length; i++){
-        var source = arguments[i] != null ? arguments[i] : {};
-        var ownKeys = Object.keys(source);
-        if (typeof Object.getOwnPropertySymbols === "function") {
-            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
-                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-            }));
-        }
-        ownKeys.forEach(function(key) {
-            _define_property(target, key, source[key]);
-        });
-    }
-    return target;
-}
-function ownKeys(object, enumerableOnly) {
-    var keys = Object.keys(object);
-    if (Object.getOwnPropertySymbols) {
-        var symbols = Object.getOwnPropertySymbols(object);
-        if (enumerableOnly) {
-            symbols = symbols.filter(function(sym) {
-                return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-            });
-        }
-        keys.push.apply(keys, symbols);
-    }
-    return keys;
-}
-function _object_spread_props(target, source) {
-    source = source != null ? source : {};
-    if (Object.getOwnPropertyDescriptors) {
-        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-        ownKeys(Object(source)).forEach(function(key) {
-            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-        });
-    }
-    return target;
-}
-function _object_without_properties(source, excluded) {
-    if (source == null) return {};
-    var target = _object_without_properties_loose(source, excluded);
-    var key, i;
-    if (Object.getOwnPropertySymbols) {
-        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-        for(i = 0; i < sourceSymbolKeys.length; i++){
-            key = sourceSymbolKeys[i];
-            if (excluded.indexOf(key) >= 0) continue;
-            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-            target[key] = source[key];
-        }
-    }
-    return target;
-}
-function _object_without_properties_loose(source, excluded) {
-    if (source == null) return {};
-    var target = {};
-    var sourceKeys = Object.keys(source);
-    var key, i;
-    for(i = 0; i < sourceKeys.length; i++){
-        key = sourceKeys[i];
-        if (excluded.indexOf(key) >= 0) continue;
-        target[key] = source[key];
-    }
-    return target;
-}
-
-
-const frontMatter = {};
-const contentTitle = (/* unused pure expression or super */ null && (undefined));
-const toc = [];
-const layoutProps = {
-    toc
-};
-const MDXLayout = "wrapper";
-function MDXContent(_param) {
-    var { components } = _param, props = _object_without_properties(_param, [
-        "components"
-    ]);
-    return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
-        components: components,
-        mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The following table summarizes different GitHub metrics to give you an idea of each project's popularity and activity levels. This data was collected in February 2024.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
-        parentName: "table"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "thead"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
-        parentName: "tr",
-        "align": null
-    }, `Provider`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
-        parentName: "tr",
-        "align": null
-    }, `Project`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
-        parentName: "tr",
-        "align": null
-    }, `Stars`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
-        parentName: "tr",
-        "align": null
-    }, `Forks`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
-        parentName: "tr",
-        "align": null
-    }, `Contributors`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tbody", {
-        parentName: "table"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `Canal`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "td",
-        "href": "https://github.com/projectcalico/canal"
-    }, `https://github.com/projectcalico/canal`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `708`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `103`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `20`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `Flannel`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "td",
-        "href": "https://github.com/flannel-io/flannel"
-    }, `https://github.com/flannel-io/flannel`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `8.4k`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `2.9k`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `231`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `Calico`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "td",
-        "href": "https://github.com/projectcalico/calico"
-    }, `https://github.com/projectcalico/calico`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `5.3k`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `1.2k`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `335`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `Weave`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "td",
-        "href": "https://github.com/weaveworks/weave/"
-    }, `https://github.com/weaveworks/weave/`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `6.5k`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `670`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `87`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `Cilium`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "td",
-        "href": "https://github.com/cilium/cilium"
-    }, `https://github.com/cilium/cilium`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `17.8k`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `2.6k`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `699`)))));
-}
-MDXContent.isMDXComponent = true;
-
-
-/***/ }),
-
-/***/ 48362:
+/***/ 39110:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -458,7 +226,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(67294);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3905);
-/* harmony import */ var _shared_files_cni_popularity_md__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(27820);
 /* @jsxRuntime classic */ /* @jsx mdx */ /* @jsxFrag React.Fragment */ function _define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
@@ -547,19 +314,19 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "faq/container-network-interface-providers",
-    "id": "version-2.7/faq/container-network-interface-providers",
+    "id": "version-2.8/faq/container-network-interface-providers",
     "title": "Container Network Interface (CNI) Providers",
     "description": "Learn about Container Network Interface (CNI), the CNI providers Rancher provides, the features they offer, and how to choose a provider for you",
-    "source": "@site/versioned_docs/version-2.7/faq/container-network-interface-providers.md",
+    "source": "@site/versioned_docs/version-2.8/faq/container-network-interface-providers.md",
     "sourceDirName": "faq",
     "slug": "/faq/container-network-interface-providers",
-    "permalink": "/v2.7/faq/container-network-interface-providers",
+    "permalink": "/v2.8/faq/container-network-interface-providers",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/faq/container-network-interface-providers.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/faq/container-network-interface-providers.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1705966535,
-    "formattedLastUpdatedAt": "Jan 22, 2024",
+    "version": "2.8",
+    "lastUpdatedAt": 1708541793,
+    "formattedLastUpdatedAt": "Feb 21, 2024",
     "frontMatter": {
         "title": "Container Network Interface (CNI) Providers",
         "description": "Learn about Container Network Interface (CNI), the CNI providers Rancher provides, the features they offer, and how to choose a provider for you"
@@ -567,15 +334,14 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Telemetry",
-        "permalink": "/v2.7/faq/telemetry"
+        "permalink": "/v2.8/faq/telemetry"
     },
     "next": {
         "title": "Rancher is No Longer Needed",
-        "permalink": "/v2.7/faq/rancher-is-no-longer-needed"
+        "permalink": "/v2.8/faq/rancher-is-no-longer-needed"
     }
 };
 const assets = {};
-
 const toc = [
     {
         value: 'What is CNI?',
@@ -663,6 +429,11 @@ const toc = [
         level: 2
     }
 ];
+const makeShortcode = (name)=>function MDXDefaultShortcode(props) {
+        console.warn("Component " + name + " was not imported, exported, or provided by MDXProvider as global scope");
+        return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("div", props);
+    };
+const CNIPopularityTable = makeShortcode("CNIPopularityTable");
 const layoutProps = {
     toc
 };
@@ -736,7 +507,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `51821`), `. For more details, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters"
+        "href": "/v2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters"
     }, `the port requirements for user clusters`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
         src: (__webpack_require__(24313)/* ["default"] */ .Z),
         width: "1782",
@@ -771,7 +542,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `8472`), ` (VXLAN). See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters#networking-requirements"
+        "href": "/v2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters#networking-requirements"
     }, `the port requirements for user clusters`), ` for more details.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
         alt: "Flannel Diagram",
         src: (__webpack_require__(16930)/* ["default"] */ .Z),
@@ -795,7 +566,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `6784`), ` (data ports). See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters#networking-requirements"
+        "href": "/v2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters#networking-requirements"
     }, `port requirements for user clusters`), ` for more details.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information, see the following pages:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -821,7 +592,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `5473`), ` is needed when using Typha. See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters#networking-requirements"
+        "href": "/v2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters#networking-requirements"
     }, `the port requirements for user clusters`), ` for more details.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "title": "Important:",
         "type": "note"
@@ -1081,7 +852,7 @@ spec:
         parentName: "li"
     }, `Ingress/Egress Policies: This feature allows you to manage routing control for both Kubernetes and non-Kubernetes communications.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "cni-community-popularity"
-    }, `CNI Community Popularity`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_shared_files_cni_popularity_md__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .ZP, {
+    }, `CNI Community Popularity`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(CNIPopularityTable, {
         mdxType: "CNIPopularityTable"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "which-cni-provider-should-i-use"
@@ -1089,10 +860,10 @@ spec:
         "id": "how-can-i-configure-a-cni-network-provider"
     }, `How can I configure a CNI network provider?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Please see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"
+        "href": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"
     }, `Cluster Options`), ` on how to configure a network provider for your cluster. For more advanced configuration options, please see how to configure your cluster using a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration#rke-cluster-config-file-reference"
+        "href": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration#rke-cluster-config-file-reference"
     }, `Config File`), ` and the options for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://rancher.com/docs/rke/latest/en/config-options/add-ons/network-plugins/"

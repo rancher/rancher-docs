@@ -1222,18 +1222,29 @@ function Card({ id, icon, title, description, to }) {
 
 /***/ }),
 
-/***/ 42391:
+/***/ 421:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _theme_original_MDXComponents__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(69167);
-/* harmony import */ var _theme_Tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(93070);
-/* harmony import */ var _theme_TabItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(50551);
-/* harmony import */ var _components_CardComponents__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13073);
-// Import the original mapper
-function _define_property(obj, key, value) {
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  Z: () => (/* binding */ theme_MDXComponents)
+});
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/index.js + 39 modules
+var MDXComponents = __webpack_require__(69167);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
+var Tabs = __webpack_require__(93070);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
+var TabItem = __webpack_require__(50551);
+// EXTERNAL MODULE: ./src/components/CardComponents.tsx
+var CardComponents = __webpack_require__(13073);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(67294);
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/dist/esm.js
+var esm = __webpack_require__(3905);
+;// CONCATENATED MODULE: ./shared-files/_cni-popularity.md
+/* @jsxRuntime classic */ /* @jsx mdx */ /* @jsxFrag React.Fragment */ function _define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
             value: value,
@@ -1285,15 +1296,239 @@ function _object_spread_props(target, source) {
     }
     return target;
 }
+function _object_without_properties(source, excluded) {
+    if (source == null) return {};
+    var target = _object_without_properties_loose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+function _object_without_properties_loose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+
+
+const frontMatter = {};
+const contentTitle = (/* unused pure expression or super */ null && (undefined));
+const toc = [];
+const layoutProps = {
+    toc
+};
+const MDXLayout = "wrapper";
+function MDXContent(_param) {
+    var { components } = _param, props = _object_without_properties(_param, [
+        "components"
+    ]);
+    return /*#__PURE__*/ (0,esm/* mdx */.kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
+        components: components,
+        mdxType: "MDXLayout"
+    }), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table summarizes different GitHub metrics to give you an idea of each project's popularity and activity levels. This data was collected in February 2024.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
+        parentName: "table"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "thead"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+        parentName: "tr",
+        "align": null
+    }, `Provider`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+        parentName: "tr",
+        "align": null
+    }, `Project`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+        parentName: "tr",
+        "align": null
+    }, `Stars`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+        parentName: "tr",
+        "align": null
+    }, `Forks`), /*#__PURE__*/ (0,esm/* mdx */.kt)("th", {
+        parentName: "tr",
+        "align": null
+    }, `Contributors`))), /*#__PURE__*/ (0,esm/* mdx */.kt)("tbody", {
+        parentName: "table"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Canal`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/projectcalico/canal"
+    }, `https://github.com/projectcalico/canal`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `708`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `103`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `20`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Flannel`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/flannel-io/flannel"
+    }, `https://github.com/flannel-io/flannel`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `8.4k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `2.9k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `231`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Calico`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/projectcalico/calico"
+    }, `https://github.com/projectcalico/calico`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `5.3k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `1.2k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `335`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Weave`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/weaveworks/weave/"
+    }, `https://github.com/weaveworks/weave/`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `6.5k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `670`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `87`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `Cilium`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/cilium/cilium"
+    }, `https://github.com/cilium/cilium`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `17.8k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `2.6k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `699`)))));
+}
+MDXContent.isMDXComponent = true;
+
+;// CONCATENATED MODULE: ./src/theme/MDXComponents.js
+// Import the original mapper
+function MDXComponents_define_property(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function MDXComponents_object_spread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {};
+        var ownKeys = Object.keys(source);
+        if (typeof Object.getOwnPropertySymbols === "function") {
+            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+            }));
+        }
+        ownKeys.forEach(function(key) {
+            MDXComponents_define_property(target, key, source[key]);
+        });
+    }
+    return target;
+}
+function MDXComponents_ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+    if (Object.getOwnPropertySymbols) {
+        var symbols = Object.getOwnPropertySymbols(object);
+        if (enumerableOnly) {
+            symbols = symbols.filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+            });
+        }
+        keys.push.apply(keys, symbols);
+    }
+    return keys;
+}
+function MDXComponents_object_spread_props(target, source) {
+    source = source != null ? source : {};
+    if (Object.getOwnPropertyDescriptors) {
+        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+        MDXComponents_ownKeys(Object(source)).forEach(function(key) {
+            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+    }
+    return target;
+}
 
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_object_spread_props(_object_spread({}, _theme_original_MDXComponents__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z), {
-    Tabs: _theme_Tabs__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z,
-    TabItem: _theme_TabItem__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z,
-    CardSection: _components_CardComponents__WEBPACK_IMPORTED_MODULE_3__/* .CardSection */ .u,
-    Card: _components_CardComponents__WEBPACK_IMPORTED_MODULE_3__/* .Card */ .Z
+
+/* harmony default export */ const theme_MDXComponents = (MDXComponents_object_spread_props(MDXComponents_object_spread({}, MDXComponents/* default */.Z), {
+    Tabs: Tabs/* default */.Z,
+    TabItem: TabItem/* default */.Z,
+    CardSection: CardComponents/* CardSection */.u,
+    Card: CardComponents/* Card */.Z,
+    CNIPopularityTable: MDXContent
 }));
 
 

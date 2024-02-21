@@ -2617,7 +2617,7 @@ const MDXComponents = {
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(67294);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3905);
-/* harmony import */ var _theme_MDXComponents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(42391);
+/* harmony import */ var _theme_MDXComponents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(421);
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
