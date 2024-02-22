@@ -140,21 +140,16 @@ dd {
   margin-bottom: 1rem;
 }
 
-dd+p {
-  margin-inline-start: 40px; /*This is intended to match the margin spacing for the dd element*/
-}
-
 dt {
   font-weight: bold;
+  margin-top: 1rem;
 }
 
-dt+p {
-  margin-bottom: 0;
-}
-
-dt+p, dd+p {
+dl p {
   font-size: .9rem;
   font-weight: lighter;
+  margin-inline-start: 40px; /*This is intended to match the margin spacing for the dd element*/
+  margin-bottom: 0;
 }
 
 hr {

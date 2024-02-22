@@ -19,37 +19,28 @@
 
 <dl>
     <dt>
-        App
-    </dt>
-    <dd>
-        Unless specified otherwise, a Rancher application. Rancher applications use either Helm charts or Rancher charts to deploy.
-    </dd>
-    <p>
-        <b>Related terms:</b> <i>Rancher charts</i>
-    </p>
-    <dt>
         Apps
     </dt>
-    <p>
-        <b>Versions:</b> Rancher v2.6.5 and later
-    </p>
     <dd>
         When describing navigation within Rancher, the section of the Rancher UI where you manage Helm chart repositories. In earlier versions of Rancher, this section was called <i>Apps & Marketplace</i>, or <i>Catalogs</i>.
     </dd>
     <p>
-        <b>Related terms:</b> <i>Apps & Marketplace, Catalogs</i>
+        <b>Versions:</b> Rancher v2.6.5 and later
+    </p>
+    <p>
+        <b>Synonyms:</b> <i>Apps & Marketplace, Catalogs</i>
     </p>
     <dt>
         Apps & Marketplace
     </dt>
-    <p>
-        <b>Versions:</b> Rancher v2.5.0–2.6.5
-    </p>
     <dd>
         The section of the Rancher UI where you manage Helm chart repositories. In earlier versions of Rancher, this section was called <i>Catalogs</i>. In later versions, it is called <i>Apps</i>.
     </dd>
     <p>
-        <b>Related terms:</b> <i>Apps, Catalogs</i>
+        <b>Versions:</b> Rancher v2.5.0–2.6.5
+    </p>
+    <p>
+        <b>Synonyms:</b> <i>Apps, Catalogs</i>
     </p>
 </dl>
 
@@ -59,14 +50,14 @@
     <dt>
         Catalogs
     </dt>
-    <p>
-        <b>Versions:</b> Rancher v2.4.x and earlier
-    </p>
     <dd>
         The section of the Rancher UI where you manage Helm chart repositories. In later versions of Rancher, this section is called <i>Apps & Marketplace</i>, or <i>Apps</i>.
     </dd>
     <p>
-        <b>Related terms:</b> <i>Apps, Apps & Marketplace</i>
+        <b>Versions:</b> Rancher v2.4.x and earlier
+    </p>
+    <p>
+        <b>Synonyms:</b> <i>Apps, Apps & Marketplace</i>
     </p>
     <dt>
         Community
@@ -89,7 +80,10 @@
         Placeholder 
     </dd>
     <p>
-        <b>Related terms:</b> <i>Managed cluster</i>
+        <b>Synonyms:</b> <i>Managed cluster</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>Hosted cluster, Imported cluster, Rancher server</i>
     </p>
 </dl>
 
@@ -103,7 +97,7 @@
         Placeholder 
     </dd>
     <p>
-        <b>Related terms:</b> <i>Apps</i>
+        <b>Related terms:</b> <i>Apps & Marketplace</i>
     </p>
 </dl>
 
@@ -131,7 +125,10 @@
         Placeholder 
     </dd>
     <p>
-        <b>Related terms:</b> <i>Rancher server</i>
+        <b>Synonyms:</b> <i>Rancher server, Upstream cluster</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>Managed cluster</i>
     </p>
 </dl>
 
@@ -145,7 +142,10 @@
         Placeholder
     </dd>
     <p>
-        <b>Related terms:</b> <i>Downstream cluster</i>
+        <b>Synonyms:</b> <i>Downstream cluster</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>Rancher server</i>
     </p>
 </dl>
 
@@ -170,7 +170,10 @@
         Placeholder
     </dd>
     <p>
-        <b>Related terms:</b> <i>Rancher Prime</i>
+        <b>Versions:</b> Rancher v2.8 and later
+    </p>
+    <p>
+        <b>Related terms:</b> <i>Community</i>
     </p>
     <dt>
         Project
@@ -220,7 +223,10 @@
         An alternative name for <i>Rancher Prime</i>. 
     </dd>
     <p>
-        <b>Related terms:</b> <i>Rancher Prime</i>
+        <b>Synonyms:</b> <i>Rancher Prime</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>Community</i>
     </p>
     <dt>
         Rancher Kubernetes API (RK-API)
@@ -247,12 +253,12 @@
     <dt>
         Rancher Prime
     </dt>
-    <p>
-        <b>Versions:</b> Rancher v2.8 and later
-    </p>
     <dd>
         Placeholder
     </dd>
+    <p>
+        <b>Versions:</b> Rancher v2.8 and later
+    </p>
     <p>
         <b>Related terms:</b> <i>Rancher Community</i>
     </p>
@@ -263,7 +269,7 @@
         Placeholder 
     </dd>
     <p>
-        <b>Related terms:</b> <i>Upstream cluster</i>
+        <b>Synonyms:</b> <i>Local cluster, Upstream cluster</i>
     </p>
     <dt>
         RKE1
@@ -277,14 +283,14 @@
     <dt>
         RKE2
     </dt>
-    <p>
-        <b>Versions:</b> Rancher v2.6.0
-    </p>
     <dd>
         A version of the Rancher Kubernetes Engine (RKE) that is designed for security and compliance with US federal government standards. Sometimes called <i>RKE Government</i>.
     </dd>
     <p>
-        <b>Related terms:</b> <i>RKE Government</i>
+        <b>Versions:</b> Rancher v2.6.0
+    </p>
+    <p>
+        <b>Synonyms:</b> <i>RKE Government</i>
     </p>
     <dt>
         RKE Government
@@ -296,7 +302,7 @@
         An alternative name for RKE2.
     </dd>
     <p>
-        <b>Related terms:</b> <i>RKE2</i>
+        <b>Synonyms:</b> <i>RKE2</i>
     </p>
 </dl>
 
@@ -316,6 +322,6 @@
         Placeholder 
     </dd>
     <p>
-        <b>Related terms:</b> <i>Rancher server</i>
+        <b>Synonyms:</b> <i>Local cluster, Rancher server</i>
     </p>
 </dl>
