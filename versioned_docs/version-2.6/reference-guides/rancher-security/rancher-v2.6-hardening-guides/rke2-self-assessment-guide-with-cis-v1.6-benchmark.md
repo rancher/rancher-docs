@@ -270,7 +270,7 @@ root:root
 **Remediation:**
 Run the below command (based on the file location on your system) on the master node.
 For example,
-chmod 644 <path/to/cni/files>
+`chmod 644 <path/to/cni/files>`
 
 **Audit:**
 
@@ -286,7 +286,7 @@ stat -c %a <path/to/cni/files>
 **Remediation:**
 Run the below command (based on the file location on your system) on the master node.
 For example,
-chown root:root <path/to/cni/files>
+`chown root:root <path/to/cni/files>`
 
 **Audit:**
 
@@ -838,8 +838,11 @@ Follow the Kubernetes documentation and set up the TLS connection between the
 apiserver and kubelets. Then, edit API server pod specification file
 /var/lib/rancher/rke2/agent/pod-manifests/kube-apiserver.yaml on the master node and set the
 kubelet client certificate and key parameters as below.
+
+```console
 --kubelet-client-certificate=<path/to/client-certificate-file>
 --kubelet-client-key=<path/to/client-key-file>
+```
 
 **Audit:**
 
@@ -985,7 +988,7 @@ Follow the Kubernetes documentation and set the desired limits in a configuratio
 Then, edit the API server pod specification file /var/lib/rancher/rke2/agent/pod-manifests/kube-apiserver.yaml
 and set the below parameters.
 --enable-admission-plugins=...,EventRateLimit,...
---admission-control-config-file=<path/to/configuration/file>
+`--admission-control-config-file=<path/to/configuration/file>`
 
 **Audit:**
 
@@ -1613,7 +1616,7 @@ root 5275 5222 15 14:58 ? 00:01:26 kube-apiserver --audit-policy-file=/etc/ranch
 **Remediation:**
 Follow the Kubernetes documentation and configure a EncryptionConfig file.
 Then, edit the API server pod specification file /var/lib/rancher/rke2/agent/pod-manifests/kube-apiserver.yaml
-on the master node and set the --encryption-provider-config parameter to the path of that file: --encryption-provider-config=</path/to/EncryptionConfig/File>
+on the master node and set the --encryption-provider-config parameter to the path of that file: `--encryption-provider-config=</path/to/EncryptionConfig/File>`
 
 **Audit:**
 
@@ -1813,7 +1816,7 @@ root 5522 5416 3 14:58 ? 00:00:16 kube-controller-manager --flex-volume-plugin-d
 
 **Remediation:**
 Edit the Controller Manager pod specification file /var/lib/rancher/rke2/agent/pod-manifests/kube-controller-manager.yaml
-on the master node and set the --root-ca-file parameter to the certificate bundle file`.
+on the master node and set the --root-ca-file parameter to the certificate bundle file.
 `--root-ca-file=<path/to/file>`
 
 **Audit:**

@@ -491,7 +491,7 @@ All configuration is passed in as arguments at container run time.
 **Remediation:**
 Run the below command (based on the file location on your system) on the master node.
 For example,
-chmod 644 <path/to/cni/files>
+`chmod 644 <path/to/cni/files>`
 
 
 **Audit:**
@@ -508,7 +508,7 @@ stat -c permissions=%a <path/to/cni/files>
 **Remediation:**
 Run the below command (based on the file location on your system) on the master node.
 For example,
-chown root:root <path/to/cni/files>
+`chown root:root <path/to/cni/files>`
 
 
 **Audit:**
@@ -733,9 +733,11 @@ Follow the Kubernetes documentation and set up the TLS connection between the
 apiserver and kubelets. Then, edit API server pod specification file
 /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the
 kubelet client certificate and key parameters as below.
+
+```console
 --kubelet-client-certificate=<path/to/client-certificate-file>
 --kubelet-client-key=<path/to/client-key-file>
-
+```
 
 **Audit:**
 
@@ -880,7 +882,7 @@ Follow the Kubernetes documentation and set the desired limits in a configuratio
 Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml
 and set the below parameters.
 --enable-admission-plugins=...,EventRateLimit,...
---admission-control-config-file=<path/to/configuration/file>
+`--admission-control-config-file=<path/to/configuration/file>`
 
 
 **Audit:**
@@ -1522,7 +1524,7 @@ root        4643    4626 22 16:15 ?        00:00:46 kube-apiserver --etcd-keyfil
 **Remediation:**
 Follow the Kubernetes documentation and configure a EncryptionConfig file.
 Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml
-on the master node and set the --encryption-provider-config parameter to the path of that file: --encryption-provider-config=</path/to/EncryptionConfig/File>
+on the master node and set the --encryption-provider-config parameter to the path of that file: `--encryption-provider-config=</path/to/EncryptionConfig/File>`
 
 
 **Audit:**
@@ -1741,7 +1743,7 @@ root        4788    4773  4 16:16 ?        00:00:09 kube-controller-manager --co
 
 **Remediation:**
 Edit the Controller Manager pod specification file /etc/kubernetes/manifests/kube-controller-manager.yaml
-on the master node and set the --root-ca-file parameter to the certificate bundle file`.
+on the master node and set the --root-ca-file parameter to the certificate bundle file.
 `--root-ca-file=<path/to/file>`
 
 

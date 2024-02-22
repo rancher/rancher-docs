@@ -183,7 +183,7 @@ If you are visiting this page to complete an [Air Gap Installation](air-gap-helm
 
 **Example:**
 
-     <REGISTRY.DOMAIN.COM:PORT>/rancher/rancher:latest
+     `<REGISTRY.DOMAIN.COM:PORT>/rancher/rancher:latest`
 
 ### Persistent Data
 

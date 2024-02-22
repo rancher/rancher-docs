@@ -20,7 +20,7 @@ If your organization uses Keycloak Identity Provider (IdP) for user authenticati
       `Sign Assertions` | `ON` <sup>1</sup>
       All other `ON/OFF` Settings | `OFF`
       `Client ID` | Either `https://yourRancherHostURL/v1-saml/keycloak/saml/metadata` or the value configured in the `Entry ID Field` of the Rancher Keycloak configuration<sup>2</sup>
-      `Client Name` | <CLIENT_NAME> (e.g. `rancher`)
+      `Client Name` | `<CLIENT_NAME>` (e.g. `rancher`)
       `Client Protocol` | `SAML`
       `Valid Redirect URI` | `https://yourRancherHostURL/v1-saml/keycloak/saml/acs`
 
@@ -52,7 +52,7 @@ From the **Installation** tab, choose the **SAML Metadata IDPSSODescriptor** for
 
 Verify the IDP metadata contains the following attributes:
 
-```
+```console
 xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
 xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
 xmlns:ds="http://www.w3.org/2000/09/xmldsig#"

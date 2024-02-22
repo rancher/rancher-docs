@@ -1,7 +1,6 @@
 ---
 title: Kubernetes Install with External Load Balancer (TCP/Layer 4)
 ---
-import SSlFaqHa from '@site/src/components/SslFaqHa'
 
 > #### **Important: RKE add-on install is only supported up to Rancher v2.0.8**
 >
@@ -375,7 +374,3 @@ You have a couple of options:
 - Create a Kubernetes cluster: [Provisioning Kubernetes Clusters](../../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md).
 
 <br/>
-
-## FAQ and Troubleshooting
-
-<SslFaqHa/>

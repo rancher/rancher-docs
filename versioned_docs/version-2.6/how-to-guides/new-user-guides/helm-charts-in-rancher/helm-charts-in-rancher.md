@@ -16,7 +16,7 @@ Starting in Rancher v2.6.0, a new versioning scheme for Rancher feature charts w
 
 :::note
 
-Any major versions that are less than the ones mentioned in the table below are meant for 2.5 and below only. For example, you are advised to not use <100.x.x versions of Monitoring in 2.6.x+.
+Any major versions that are less than the ones mentioned in the table below are meant for 2.5 and below only. For example, you are advised to not use `<100.x.x` versions of Monitoring in `2.6.x+`.
 
 :::
 

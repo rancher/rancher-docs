@@ -53,11 +53,13 @@ systemctl start rke2-server.service
 ```
 1. To join the rest of the nodes, you need to configure each additional node with the same shared token or the one generated automatically. Here is an example of the configuration file:
 
+        ```console
         token: my-shared-secret
         server: https://<DNS-DOMAIN>:9345
         tls-san:
           - my-kubernetes-domain.com
           - another-kubernetes-domain.com
+        ```
 After that, you need to run the installer and enable, then start, rke2:
 
         curl -sfL https://get.rke2.io | sh -

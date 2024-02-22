@@ -196,7 +196,7 @@ If you are visiting this page to complete an [Air Gap Installation](../../gettin
 
 **Example:**
 
-     <REGISTRY.DOMAIN.COM:PORT>/rancher/rancher:latest
+     `<REGISTRY.DOMAIN.COM:PORT>/rancher/rancher:latest`
 
 ### Persistent Data
 

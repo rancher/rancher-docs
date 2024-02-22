@@ -229,8 +229,10 @@ Authorized Cluster Endpoint (ACE) support has been added for registered RKE2 and
 
 3. Run the following commands:
 
+        ```console
         sudo systemctl stop {rke2,k3s}-server
         sudo systemctl start {rke2,k3s}-server
+        ```
 
 4. Finally, you **must** go back to the Rancher UI and edit the imported cluster there to complete the ACE enablement. Click on **⋮ > Edit Config**, then click the **Networking** tab under Cluster Configuration. Finally, click the **Enabled** button for **Authorized Endpoint**. Once the ACE is enabled, you then have the option of entering a fully qualified domain name (FQDN) and certificate information.
 
