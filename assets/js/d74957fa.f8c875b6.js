@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[9230],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[63147],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 76034:
+/***/ 55179:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "api/workflows/projects",
-    "id": "version-2.8/api/workflows/projects",
+    "id": "api/workflows/projects",
     "title": "Projects",
     "description": "Creating a Project",
-    "source": "@site/versioned_docs/version-2.8/api/workflows/projects.md",
+    "source": "@site/docs/api/workflows/projects.md",
     "sourceDirName": "api/workflows",
     "slug": "/api/workflows/projects",
-    "permalink": "/zh/v2.8/api/workflows/projects",
+    "permalink": "/api/workflows/projects",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/api/workflows/projects.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/api/workflows/projects.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "2024年1月29日",
+    "version": "current",
+    "lastUpdatedAt": 1708707047,
+    "formattedLastUpdatedAt": "Feb 23, 2024",
     "frontMatter": {
         "title": "Projects"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "API Quick Start Guide",
-        "permalink": "/zh/v2.8/api/quickstart"
+        "permalink": "/api/quickstart"
     },
     "next": {
         "title": "API Reference",
-        "permalink": "/zh/v2.8/api/api-reference"
+        "permalink": "/api/api-reference"
     }
 };
 const assets = {};
@@ -495,7 +495,7 @@ EOF
         parentName: "pre",
         "className": "language-bash"
     }, `kubectl --namespace c-m-abcde delete project p-vwxyz
-`)));
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Note that this command doesn't delete the namespaces and resources that formerly belonged to the project.`));
 }
 MDXContent.isMDXComponent = true;
 

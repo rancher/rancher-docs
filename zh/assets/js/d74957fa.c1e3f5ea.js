@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/docs/api/workflows/projects.md",
     "sourceDirName": "api/workflows",
     "slug": "/api/workflows/projects",
-    "permalink": "/api/workflows/projects",
+    "permalink": "/zh/api/workflows/projects",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/api/workflows/projects.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "Jan 29, 2024",
+    "lastUpdatedAt": 1708707047,
+    "formattedLastUpdatedAt": "2024年2月23日",
     "frontMatter": {
         "title": "Projects"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "API Quick Start Guide",
-        "permalink": "/api/quickstart"
+        "permalink": "/zh/api/quickstart"
     },
     "next": {
         "title": "API Reference",
-        "permalink": "/api/api-reference"
+        "permalink": "/zh/api/api-reference"
     }
 };
 const assets = {};
@@ -495,7 +495,7 @@ EOF
         parentName: "pre",
         "className": "language-bash"
     }, `kubectl --namespace c-m-abcde delete project p-vwxyz
-`)));
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Note that this command doesn't delete the namespaces and resources that formerly belonged to the project.`));
 }
 MDXContent.isMDXComponent = true;
 
