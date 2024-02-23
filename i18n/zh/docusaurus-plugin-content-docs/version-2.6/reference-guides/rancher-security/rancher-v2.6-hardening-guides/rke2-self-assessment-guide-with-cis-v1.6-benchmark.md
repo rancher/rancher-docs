@@ -261,7 +261,7 @@ root:root
 
 **修正措施**：
 在 Master 节点上运行以下命令（基于系统上的文件位置）。
-例如：chmod 644 <path/to/cni/files>
+例如：`chmod 644 <path/to/cni/files>`
 
 **审计**：
 
@@ -276,7 +276,7 @@ stat -c %a <path/to/cni/files>
 
 **修正措施**：
 在 Master 节点上运行以下命令（基于系统上的文件位置）。
-例如：chown root:root <path/to/cni/files>
+例如：`chown root:root <path/to/cni/files>`
 
 **审计**：
 
@@ -807,8 +807,10 @@ root 5275 5222 15 14:58 ?00:01:26 kube-apiserver --audit-policy-file=/etc/ranche
 
 **修正措施**：
 遵循 Kubernetes 文档设置 apiserver 和 kubelets 的 TLS 连接。然后，在 Master 节点上编辑 API Server pod 规范文件 /var/lib/rancher/rke2/agent/pod-manifests/kube-apiserver.yaml，并设置以下 kubelet 客户端证书和密钥参数。
+```console
 --kubelet-client-certificate=<path/to/client-certificate-file>
 --kubelet-client-key=<path/to/client-key-file>
+```
 
 **审计**：
 
@@ -946,7 +948,7 @@ root 5275 5222 15 14:58 ?00:01:26 kube-apiserver --audit-policy-file=/etc/ranche
 遵循 Kubernetes 文档并在配置文件中设置所需的限制。
 然后，编辑 API Server pod 规范文件 /var/lib/rancher/rke2/agent/pod-manifests/kube-apiserver.yaml，并设置以下参数。
 --enable-admission-plugins=...,EventRateLimit,...
---admission-control-config-file=<path/to/configuration/file>
+`--admission-control-config-file=<path/to/configuration/file>`
 
 **审计**：
 
@@ -1540,7 +1542,7 @@ root 5275 5222 15 14:58 ?00:01:26 kube-apiserver --audit-policy-file=/etc/ranche
 **修正措施**：
 按照 Kubernetes 文档并配置 EncryptionConfig 文件。
 然后，在 Master 节点上编辑 API Server pod 规范文件 /var/lib/rancher/rke2/agent/pod-manifests/kube-apiserver.yaml，并将 `--encryption-provider-config` 参数设置为该文件的路径：
---encryption-provider-config=</path/to/EncryptionConfig/File>
+`--encryption-provider-config=</path/to/EncryptionConfig/File>`
 
 **审计**：
 

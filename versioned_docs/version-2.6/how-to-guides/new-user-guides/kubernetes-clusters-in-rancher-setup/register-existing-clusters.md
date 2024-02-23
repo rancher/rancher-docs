@@ -240,7 +240,7 @@ Authorized Cluster Endpoint (ACE) support has been added for registered RKE2 and
     ```
 
 1. Add the following to the config file (or create one if it doesn’t exist); note that the default location is `/etc/rancher/{rke2,k3s}/config.yaml`:
-    ```yaml
+    ```console
     kube-apiserver-arg:
         - authentication-token-webhook-config-file=/var/lib/rancher/{rke2,k3s}/kube-api-authn-webhook.yaml
     ```
