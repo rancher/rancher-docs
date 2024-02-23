@@ -21,24 +21,24 @@
     <dt>
         Apps
     </dt>
-    <dd>
-        When describing navigation within Rancher, the section of the Rancher UI where you manage Helm chart repositories. In earlier versions of Rancher, this section was called <i>Apps & Marketplace</i>, or <i>Catalogs</i>.
-    </dd>
     <p>
         <b>Versions:</b> Rancher v2.6.5 and later
     </p>
+    <dd>
+        When describing navigation within Rancher, the section of the Rancher UI where you manage Helm chart repositories. In earlier versions of Rancher, this section was called <i>Apps & Marketplace</i>, or <i>Catalogs</i>.
+    </dd>
     <p>
         <b>Synonyms:</b> <i>Apps & Marketplace, Catalogs</i>
     </p>
     <dt>
         Apps & Marketplace
     </dt>
+    <p>
+        Rancher v2.5.0–2.6.5
+    </p>
     <dd>
         The section of the Rancher UI where you manage Helm chart repositories. In earlier versions of Rancher, this section was called <i>Catalogs</i>. In later versions, it is called <i>Apps</i>.
     </dd>
-    <p>
-        <b>Versions:</b> Rancher v2.5.0–2.6.5
-    </p>
     <p>
         <b>Synonyms:</b> <i>Apps, Catalogs</i>
     </p>
@@ -50,12 +50,19 @@
     <dt>
         Catalogs
     </dt>
-    <dd>
-        The section of the Rancher UI where you manage Helm chart repositories. In later versions of Rancher, this section is called <i>Apps & Marketplace</i>, or <i>Apps</i>.
-    </dd>
     <p>
-        <b>Versions:</b> Rancher v2.4.x and earlier
+        <b>Versions:</b> (Def. 1) Rancher v2.4.x and earlier, (Def. 2) Rancher v2.7.x and later
     </p>
+    <dd>
+        <ul>
+            <li>
+                The section of the Rancher UI where you manage Helm chart repositories. In later versions of Rancher, this section is called <i>Apps & Marketplace</i>, or <i>Apps</i>.
+            </li>
+            <li>
+                Extension catalogs, container image repositories that can be imported to add extensions to your Rancher instance.
+            </li>
+        </ul>
+    </dd>
     <p>
         <b>Synonyms:</b> <i>Apps, Apps & Marketplace</i>
     </p>
@@ -77,7 +84,7 @@
         Downstream cluster
     </dt>
     <dd>
-        Placeholder 
+        A Kubernetes cluster that is managed by a cluster which hosts Rancher.  
     </dd>
     <p>
         <b>Synonyms:</b> <i>Managed cluster</i>
@@ -97,7 +104,7 @@
         Placeholder 
     </dd>
     <p>
-        <b>Related terms:</b> <i>Apps & Marketplace</i>
+        <b>Related terms:</b> <i>Apps & Marketplace, Catalogs, Integrations</i>
     </p>
 </dl>
 
@@ -166,12 +173,12 @@
     <dt>
         Prime
     </dt>
-    <dd>
-        Placeholder
-    </dd>
     <p>
         <b>Versions:</b> Rancher v2.8 and later
     </p>
+    <dd>
+        Placeholder
+    </dd>
     <p>
         <b>Related terms:</b> <i>Community</i>
     </p>
@@ -283,20 +290,20 @@
     <dt>
         RKE2
     </dt>
+    <p>
+        <b>Versions:</b> Rancher v2.6.0 and later
+    </p>
     <dd>
         A version of the Rancher Kubernetes Engine (RKE) that is designed for security and compliance with US federal government standards. Sometimes called <i>RKE Government</i>.
     </dd>
-    <p>
-        <b>Versions:</b> Rancher v2.6.0
-    </p>
     <p>
         <b>Synonyms:</b> <i>RKE Government</i>
     </p>
     <dt>
         RKE Government
     </dt>
-        <p>
-        <b>Versions:</b> Rancher v2.6.0
+    <p>
+        <b>Versions:</b> Rancher v2.6.0 and later
     </p>
     <dd>
         An alternative name for RKE2.
