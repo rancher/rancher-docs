@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/rancher-cluster-tools.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1703280782,
-    "formattedLastUpdatedAt": "Dec 22, 2023",
+    "lastUpdatedAt": 1708725747,
+    "formattedLastUpdatedAt": "Feb 23, 2024",
     "frontMatter": {
         "title": "Cluster Tools for Logging, Monitoring, and Visibility"
     },
@@ -367,6 +367,11 @@ const toc = [
         level: 2
     }
 ];
+const makeShortcode = (name)=>function MDXDefaultShortcode(props) {
+        console.warn("Component " + name + " was not imported, exported, or provided by MDXProvider as global scope");
+        return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("div", props);
+    };
+const DeprecationOPAGatekeeper = makeShortcode("DeprecationOPAGatekeeper");
 const layoutProps = {
     toc
 };
@@ -414,7 +419,10 @@ function MDXContent(_param) {
         "href": "/integrations-in-rancher/istio/"
     }, `here.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "opa-gatekeeper"
-    }, `OPA Gatekeeper`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `OPA Gatekeeper`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(DeprecationOPAGatekeeper, {
+        link: "../integrations-in-rancher/kubewarden",
+        mdxType: "DeprecationOPAGatekeeper"
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://github.com/open-policy-agent/gatekeeper"
     }, `OPA Gatekeeper`), ` is an open-source project that provides integration between OPA and Kubernetes to provide policy control via admission controller webhooks. For details on how to enable Gatekeeper in Rancher, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {

@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/opa-gatekeeper.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1701357034,
-    "formattedLastUpdatedAt": "Nov 30, 2023",
+    "lastUpdatedAt": 1708725747,
+    "formattedLastUpdatedAt": "Feb 23, 2024",
     "frontMatter": {
         "title": "OPA Gatekeeper"
     },
@@ -387,6 +387,11 @@ const toc = [
         level: 2
     }
 ];
+const makeShortcode = (name)=>function MDXDefaultShortcode(props) {
+        console.warn("Component " + name + " was not imported, exported, or provided by MDXProvider as global scope");
+        return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("div", props);
+    };
+const DeprecationOPAGatekeeper = makeShortcode("DeprecationOPAGatekeeper");
 const layoutProps = {
     toc
 };
@@ -401,7 +406,10 @@ function MDXContent(_param) {
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
         href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/opa-gatekeeper"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To ensure consistency and compliance, every organization needs the ability to define and enforce policies in its environment in an automated way. `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(DeprecationOPAGatekeeper, {
+        link: "kubewarden",
+        mdxType: "DeprecationOPAGatekeeper"
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To ensure consistency and compliance, every organization needs the ability to define and enforce policies in its environment in an automated way. `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://www.openpolicyagent.org/"
     }, `OPA (Open Policy Agent)`), ` is a policy engine that facilitates policy-based control for cloud native environments. Rancher provides the ability to enable OPA Gatekeeper in Kubernetes clusters, and also installs a couple of built-in policy definitions, which are also called constraint templates.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `OPA provides a high-level declarative language that lets you specify policy as code and ability to extend simple APIs to offload policy decision-making.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
