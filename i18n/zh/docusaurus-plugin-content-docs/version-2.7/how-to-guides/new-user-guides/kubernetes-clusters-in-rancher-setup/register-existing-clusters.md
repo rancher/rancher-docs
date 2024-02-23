@@ -221,8 +221,10 @@ _从 v2.6.3 起可用_
 
 3. 运行以下命令：
 
+        ```console
         sudo systemctl stop {rke2,k3s}-server
         sudo systemctl start {rke2,k3s}-server
+        ```
 
 4. 最后，你**必须**返回 Rancher UI 并在那里编辑导入的集群，从而完成 ACE 启用。单击 **⋮ > 编辑配置**，然后单击**集群配置**下的**网络**选项卡。最后，单击**授权端点**的**启用**按钮。启用 ACE 后，你可以输入完全限定的域名 (FQDN) 和证书信息。
 
