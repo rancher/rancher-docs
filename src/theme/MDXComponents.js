@@ -8,6 +8,7 @@ import { CardSection, Card } from '../components/CardComponents';
 
 import CNIPopularityTable from '/shared-files/_cni-popularity.md';
 import DeprecationOPAGatekeeper from '/shared-files/_deprecation-opa-gatekeeper.md';
+import DeprecationWeave from '/shared-files/_deprecation-weave.md';
 
 export default {
   // Re-use the default mapping
@@ -21,4 +22,5 @@ export default {
 
   CNIPopularityTable,
   DeprecationOPAGatekeeper,
+  DeprecationWeave,
 };
