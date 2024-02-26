@@ -34,7 +34,7 @@
         Apps & Marketplace
     </dt>
     <p>
-        Rancher v2.5.0–2.6.5
+        <b>Versions:</b> Rancher v2.5.0–2.6.5
     </p>
     <dd>
         The section of the Rancher UI where you manage Helm chart repositories. In earlier versions of Rancher, this section was called <i>Catalogs</i>. In later versions, it is called <i>Apps</i>.
@@ -51,17 +51,17 @@
         Catalogs
     </dt>
     <p>
-        <b>Versions:</b> (Def. 1) Rancher v2.4.x and earlier, (Def. 2) Rancher v2.7.x and later
+        <b>Versions:</b> 1. Rancher v2.4.x and earlier 2. Rancher v2.7.x and later
     </p>
     <dd>
-        <ul>
+        <ol>
             <li>
                 The section of the Rancher UI where you manage Helm chart repositories. In later versions of Rancher, this section is called <i>Apps & Marketplace</i>, or <i>Apps</i>.
             </li>
             <li>
                 Extension catalogs, container image repositories that can be imported to add extensions to your Rancher instance.
             </li>
-        </ul>
+        </ol>
     </dd>
     <p>
         <b>Synonyms:</b> <i>Apps, Apps & Marketplace</i>
