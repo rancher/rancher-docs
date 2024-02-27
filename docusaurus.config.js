@@ -1682,7 +1682,7 @@ module.exports = {
             from: '/v2.8/pages-for-subheaders/about-rke1-templates'
           },
           {
-            to: '/v2.8/reference-guides/about-the-api',
+            to: '/v2.8/api/previous-rancher-api-versions',
             from: '/v2.8/pages-for-subheaders/about-the-api'
           },
           {
@@ -2030,7 +2030,7 @@ module.exports = {
             from: '/pages-for-subheaders/about-rke1-templates'
           },
           {
-            to: '/reference-guides/about-the-api',
+            to: '/api/previous-rancher-api-versions',
             from: '/pages-for-subheaders/about-the-api'
           },
           {
