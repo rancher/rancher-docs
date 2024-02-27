@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[40383],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[44663],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 33120:
+/***/ 21015:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,34 +313,39 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/installation-and-upgrade/resources/helm-version-requirements",
-    "id": "version-2.8/getting-started/installation-and-upgrade/resources/helm-version-requirements",
+    "id": "getting-started/installation-and-upgrade/resources/helm-version-requirements",
     "title": "Helm Version Requirements",
     "description": "This section contains the requirements for Helm, which is the tool used to install Rancher on a high-availability Kubernetes cluster.",
-    "source": "@site/versioned_docs/version-2.8/getting-started/installation-and-upgrade/resources/helm-version-requirements.md",
+    "source": "@site/docs/getting-started/installation-and-upgrade/resources/helm-version-requirements.md",
     "sourceDirName": "getting-started/installation-and-upgrade/resources",
     "slug": "/getting-started/installation-and-upgrade/resources/helm-version-requirements",
-    "permalink": "/v2.8/getting-started/installation-and-upgrade/resources/helm-version-requirements",
+    "permalink": "/getting-started/installation-and-upgrade/resources/helm-version-requirements",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/getting-started/installation-and-upgrade/resources/helm-version-requirements.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/getting-started/installation-and-upgrade/resources/helm-version-requirements.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "Oct 6, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1708994491,
+    "formattedLastUpdatedAt": "Feb 27, 2024",
     "frontMatter": {
         "title": "Helm Version Requirements"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Choosing a Rancher Version",
-        "permalink": "/v2.8/getting-started/installation-and-upgrade/resources/choose-a-rancher-version"
+        "permalink": "/getting-started/installation-and-upgrade/resources/choose-a-rancher-version"
     },
     "next": {
         "title": "Adding TLS Secrets",
-        "permalink": "/v2.8/getting-started/installation-and-upgrade/resources/add-tls-secrets"
+        "permalink": "/getting-started/installation-and-upgrade/resources/add-tls-secrets"
     }
 };
 const assets = {};
 const toc = [];
+const makeShortcode = (name)=>function MDXDefaultShortcode(props) {
+        console.warn("Component " + name + " was not imported, exported, or provided by MDXProvider as global scope");
+        return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("div", props);
+    };
+const DeprecationHelm2 = makeShortcode("DeprecationHelm2");
 const layoutProps = {
     toc
 };
@@ -363,7 +368,9 @@ function MDXContent(_param) {
     }, `Helm 2 to 3 Migration Docs.`), ` `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "/versioned_docs/version-2.0-2.4/pages-for-subheaders/helm2.md"
-    }, `This section`), ` provides a copy of the older high-availability Rancher installation instructions that used Helm 2, and it is intended to be used if upgrading to Helm 3 is not feasible.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `This section`), ` provides a copy of the older high-availability Rancher installation instructions that used Helm 2, and it is intended to be used if upgrading to Helm 3 is not feasible.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(DeprecationHelm2, {
+        mdxType: "DeprecationHelm2"
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Helm v3.2.x or higher is required to install or upgrade Rancher v2.5.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"

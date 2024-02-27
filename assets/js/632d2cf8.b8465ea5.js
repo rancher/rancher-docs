@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[3877],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[10889],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 85410:
+/***/ 13359:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/installation-and-upgrade/resources/upgrade-cert-manager",
-    "id": "version-2.8/getting-started/installation-and-upgrade/resources/upgrade-cert-manager",
+    "id": "getting-started/installation-and-upgrade/resources/upgrade-cert-manager",
     "title": "Upgrading Cert-Manager",
     "description": "Rancher is compatible with the API version cert-manager.io/v1 and was last tested with cert-manager version v1.13.1.",
-    "source": "@site/versioned_docs/version-2.8/getting-started/installation-and-upgrade/resources/upgrade-cert-manager.md",
+    "source": "@site/docs/getting-started/installation-and-upgrade/resources/upgrade-cert-manager.md",
     "sourceDirName": "getting-started/installation-and-upgrade/resources",
     "slug": "/getting-started/installation-and-upgrade/resources/upgrade-cert-manager",
-    "permalink": "/v2.8/getting-started/installation-and-upgrade/resources/upgrade-cert-manager",
+    "permalink": "/getting-started/installation-and-upgrade/resources/upgrade-cert-manager",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/getting-started/installation-and-upgrade/resources/upgrade-cert-manager.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/getting-started/installation-and-upgrade/resources/upgrade-cert-manager.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1703291432,
-    "formattedLastUpdatedAt": "Dec 23, 2023",
+    "version": "current",
+    "lastUpdatedAt": 1708994491,
+    "formattedLastUpdatedAt": "Feb 27, 2024",
     "frontMatter": {
         "title": "Upgrading Cert-Manager"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "About Custom CA Root Certificates",
-        "permalink": "/v2.8/getting-started/installation-and-upgrade/resources/custom-ca-root-certificates"
+        "permalink": "/getting-started/installation-and-upgrade/resources/custom-ca-root-certificates"
     },
     "next": {
         "title": "Updating the Rancher Certificate",
-        "permalink": "/v2.8/getting-started/installation-and-upgrade/resources/update-rancher-certificate"
+        "permalink": "/getting-started/installation-and-upgrade/resources/update-rancher-certificate"
     }
 };
 const assets = {};
@@ -382,6 +382,11 @@ const toc = [
         level: 2
     }
 ];
+const makeShortcode = (name)=>function MDXDefaultShortcode(props) {
+        console.warn("Component " + name + " was not imported, exported, or provided by MDXProvider as global scope");
+        return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("div", props);
+    };
+const DeprecationHelm2 = makeShortcode("DeprecationHelm2");
 const layoutProps = {
     toc
 };
@@ -571,7 +576,7 @@ issuer,clusterissuer,certificates,certificaterequests > cert-manager-backup.yaml
         parentName: "li"
     }, `Follow the guide to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images"
+        "href": "/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/publish-images"
     }, `Prepare your Private Registry`), ` with the images needed for the upgrade.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -616,7 +621,9 @@ helm repo update
 --set image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-controller
 --set webhook.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-webhook
 --set cainjector.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-cainjector
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(DeprecationHelm2, {
+        mdxType: "DeprecationHelm2"
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
     }, `The Helm 2 command is as follows:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
         parentName: "li"
@@ -820,7 +827,7 @@ cert-manager-webhook-787858fcdb-nlzsq      1/1     Running   0          2m
         "id": "cert-manager-api-change-and-data-migration"
     }, `Cert-Manager API change and data migration`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("hr", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher now supports cert-manager versions 1.6.2 and 1.7.1. We recommend v1.7.x because v 1.6.x will reach end-of-life on March 30, 2022. To read more, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/#4-install-cert-manager"
+        "href": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/#4-install-cert-manager"
     }, `cert-manager docs`), `. For instructions on upgrading cert-manager from version 1.5 to 1.6, see the upstream cert-manager documentation `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://cert-manager.io/docs/installation/upgrading/upgrading-1.5-1.6/"

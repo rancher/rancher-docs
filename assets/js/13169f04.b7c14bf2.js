@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[34746],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[11908],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 60860:
+/***/ 20701:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-rancher",
-    "id": "getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-rancher",
+    "id": "version-2.8/getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-rancher",
     "title": "3. Install Rancher",
     "description": "Now that you have a running RKE cluster, you can install Rancher in it. For security reasons all traffic to Rancher must be encrypted with TLS. For this tutorial you are going to automatically issue a self-signed certificate through cert-manager. In a real-world use-case you will likely use Let's Encrypt or provide your own certificate.",
-    "source": "@site/docs/getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-rancher.md",
+    "source": "@site/versioned_docs/version-2.8/getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-rancher.md",
     "sourceDirName": "getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy",
     "slug": "/getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-rancher",
-    "permalink": "/getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-rancher",
+    "permalink": "/v2.8/getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-rancher",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-rancher.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-rancher.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1701897451,
-    "formattedLastUpdatedAt": "Dec 6, 2023",
+    "version": "2.8",
+    "lastUpdatedAt": 1708994491,
+    "formattedLastUpdatedAt": "Feb 27, 2024",
     "frontMatter": {
         "title": "3. Install Rancher"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "2. Install Kubernetes",
-        "permalink": "/getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-kubernetes"
+        "permalink": "/v2.8/getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/install-kubernetes"
     },
     "next": {
         "title": "Resources",
-        "permalink": "/getting-started/installation-and-upgrade/resources/"
+        "permalink": "/v2.8/getting-started/installation-and-upgrade/resources/"
     }
 };
 const assets = {};
@@ -362,6 +362,11 @@ const toc = [
         level: 3
     }
 ];
+const makeShortcode = (name)=>function MDXDefaultShortcode(props) {
+        console.warn("Component " + name + " was not imported, exported, or provided by MDXProvider as global scope");
+        return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("div", props);
+    };
+const DeprecationHelm2 = makeShortcode("DeprecationHelm2");
 const layoutProps = {
     toc
 };
@@ -381,7 +386,9 @@ function MDXContent(_param) {
         "href": "https://cert-manager.io/"
     }, `cert-manager`), `. In a real-world use-case you will likely use Let's Encrypt or provide your own certificate.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "install-the-helm-cli"
-    }, `Install the Helm CLI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Install the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Install the Helm CLI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(DeprecationHelm2, {
+        mdxType: "DeprecationHelm2"
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Install the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://helm.sh/docs/intro/install/"
     }, `Helm`), ` CLI on a host where you have a kubeconfig to access your Kubernetes cluster:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
@@ -444,24 +451,24 @@ kubectl rollout status deployment -n cert-manager cert-manager-webhook
         parentName: "admonition"
     }, `If you don't intend to send telemetry data, opt out `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/faq/telemetry"
+        "href": "/v2.8/faq/telemetry"
     }, `telemetry`), ` during the initial login. Leaving this active in an air-gapped environment can cause issues if the sockets cannot be opened successfully.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "additional-resources"
     }, `Additional Resources`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These resources could be helpful when installing Rancher:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/getting-started/installation-and-upgrade/installation-references/helm-chart-options"
+        "href": "/v2.8/getting-started/installation-and-upgrade/installation-references/helm-chart-options"
     }, `Rancher Helm chart options`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/getting-started/installation-and-upgrade/resources/add-tls-secrets"
+        "href": "/v2.8/getting-started/installation-and-upgrade/resources/add-tls-secrets"
     }, `Adding TLS secrets`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/troubleshooting"
+        "href": "/v2.8/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/troubleshooting"
     }, `Troubleshooting Rancher Kubernetes Installations`))));
 }
 MDXContent.isMDXComponent = true;

@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1703291432,
-    "formattedLastUpdatedAt": "Dec 23, 2023",
+    "lastUpdatedAt": 1708994491,
+    "formattedLastUpdatedAt": "Feb 27, 2024",
     "frontMatter": {
         "title": "Upgrades"
     },
@@ -407,6 +407,11 @@ const toc = [
         level: 2
     }
 ];
+const makeShortcode = (name)=>function MDXDefaultShortcode(props) {
+        console.warn("Component " + name + " was not imported, exported, or provided by MDXProvider as global scope");
+        return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("div", props);
+    };
+const DeprecationHelm2 = makeShortcode("DeprecationHelm2");
 const layoutProps = {
     toc
 };
@@ -461,7 +466,9 @@ function MDXContent(_param) {
         "href": "/v2.8/getting-started/installation-and-upgrade/resources/choose-a-rancher-version#helm-chart-repositories"
     }, `rancher-alpha repository`), ` aren't supported.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "helm-version"
-    }, `Helm Version`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The upgrade instructions assume you are using Helm 3.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For migration of installs started with Helm 2, refer to the official `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Helm Version`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(DeprecationHelm2, {
+        mdxType: "DeprecationHelm2"
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The upgrade instructions assume you are using Helm 3.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For migration of installs started with Helm 2, refer to the official `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/"
     }, `Helm 2 to 3 migration docs.`), ` The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
