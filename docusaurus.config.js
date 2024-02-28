@@ -1686,6 +1686,10 @@ module.exports = {
             from: '/v2.8/pages-for-subheaders/about-the-api'
           },
           {
+            to: '/v2.8/api/previous-rancher-api-versions',
+            from: '/v2.8/reference-guides/about-the-api'
+          },
+          {
             to: '/v2.8/how-to-guides/new-user-guides/manage-clusters/access-clusters',
             from: '/v2.8/pages-for-subheaders/access-clusters'
           },
