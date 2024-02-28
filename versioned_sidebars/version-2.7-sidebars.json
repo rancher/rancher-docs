@@ -1118,6 +1118,7 @@
               },
               "items": [
                   "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/prerequisites",
+                  "integrations-in-rancher/cloud-marketplace/unified-payg-faq",
                   "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/installing-rancher-prime",
                   "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/upgrading-rancher-payg-cluster",
                   "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/troubleshooting",
@@ -1134,11 +1135,11 @@
               },
               "items": [
                   "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites",
+                  "integrations-in-rancher/cloud-marketplace/unified-payg-faq",
                   "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime",
                   "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/upgrading-rancher-payg-cluster",
                   "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/troubleshooting",
                   "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues"
-
               ]
             },
             "integrations-in-rancher/cloud-marketplace/supportconfig"
