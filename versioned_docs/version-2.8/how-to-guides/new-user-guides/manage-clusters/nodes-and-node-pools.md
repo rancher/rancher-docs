@@ -76,7 +76,7 @@ To manage individual nodes, browse to the cluster that you want to manage and th
 
 ## Viewing a Node in the Rancher API
 
-Select this option to view the node's [API endpoints](../../../reference-guides/about-the-api/about-the-api.md).
+Select this option to view the node's [API endpoints](../../../api/quickstart.md).
 
 ## Deleting a Node
 

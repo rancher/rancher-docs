@@ -21,7 +21,7 @@ API Keys are composed of four components:
 
 :::note
 
-Users may opt to enable [token hashing](../about-the-api/api-tokens.md).
+Users may opt to enable [token hashing](../../api/previous-rancher-api-versions/api-tokens.md).
 
 :::
 
