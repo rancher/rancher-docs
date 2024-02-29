@@ -59,7 +59,7 @@ For more information on configuring access to monitoring, see [this page.](rbac-
 
 :::note
 
-Rancher and Project read permissions do not necessarily apply to monitoring resources. See [monitoring-ui-view](rbac-for-monitoring.md#additional-monitoring-clusterroles) for more details.
+Rancher and Project read permissions don't necessarily apply to monitoring resources. See [monitoring-ui-view](rbac-for-monitoring.md#additional-monitoring-clusterroles) for more details.
 
 :::
 
