@@ -320,25 +320,25 @@ const metadata = {
     "source": "@site/docs/integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md",
     "sourceDirName": "integrations-in-rancher/monitoring-and-alerting",
     "slug": "/integrations-in-rancher/monitoring-and-alerting/",
-    "permalink": "/integrations-in-rancher/monitoring-and-alerting/",
+    "permalink": "/zh/integrations-in-rancher/monitoring-and-alerting/",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "Jan 29, 2024",
+    "lastUpdatedAt": 1709232348,
+    "formattedLastUpdatedAt": "2024年2月29日",
     "frontMatter": {
         "title": "Monitoring and Alerting",
         "description": "Prometheus lets you view metrics from your different Rancher and Kubernetes objects. Learn about the scope of monitoring and how to enable cluster monitoring"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Outputs and ClusterOutputs",
-        "permalink": "/integrations-in-rancher/logging/custom-resource-configuration/outputs-and-clusteroutputs"
+        "title": "Outputs 和 ClusterOutputs",
+        "permalink": "/zh/integrations-in-rancher/logging/custom-resource-configuration/outputs-and-clusteroutputs"
     },
     "next": {
-        "title": "How Monitoring Works",
-        "permalink": "/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works"
+        "title": "Monitoring 的工作原理",
+        "permalink": "/zh/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works"
     }
 };
 const assets = {};
@@ -448,7 +448,7 @@ function MDXContent(_param) {
         "href": "/versioned_docs/version-2.0-2.4/pages-for-subheaders/cluster-alerts.md"
     }, `alerting`), `, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.0-v2.4/explanations/integrations-in-rancher/notifiers"
+        "href": "/zh/v2.0-v2.4/explanations/integrations-in-rancher/notifiers"
     }, `notifiers`), ` and other `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "/versioned_docs/version-2.0-2.4/pages-for-subheaders/project-tools.md"
@@ -470,7 +470,7 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `Exposes collected metrics from Prometheus to the Kubernetes Custom Metrics API via Prometheus Adapter for use in HPA.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works"
+        "href": "how-monitoring-works.md"
     }, `How Monitoring Works`), ` for an explanation of how the monitoring components work together.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "default-components-and-deployments"
     }, `Default Components and Deployments`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
@@ -480,7 +480,7 @@ function MDXContent(_param) {
         "href": "https://github.com/prometheus-operator/kube-prometheus"
     }, `kube-prometheus`), ` project) onto a cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `It also deploys an Alertmanager UI and a Prometheus UI. For more information about these tools, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/integrations-in-rancher/monitoring-and-alerting/built-in-dashboards"
+        "href": "built-in-dashboards.md"
     }, `Built-in Dashboards.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "default-metrics-exporters"
     }, `Default Metrics Exporters`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `By default, Rancher Monitoring deploys exporters (such as `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -493,95 +493,102 @@ function MDXContent(_param) {
         "id": "default-alerts"
     }, `Default Alerts`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The monitoring application deploys some alerts by default. To see the default alerts, go to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/integrations-in-rancher/monitoring-and-alerting/built-in-dashboards#alertmanager-ui"
+        "href": "built-in-dashboards.md#alertmanager-ui"
     }, `Alertmanager UI`), ` and click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
     }, `Expand all groups.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "components-exposed-in-the-rancher-ui"
     }, `Components Exposed in the Rancher UI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For a list of monitoring components exposed in the Rancher UI, along with common use cases for editing them, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works#components-exposed-in-the-rancher-ui"
+        "href": "how-monitoring-works.md#components-exposed-in-the-rancher-ui"
     }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "role-based-access-control"
-    }, `Role-based Access Control`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For information on configuring access to monitoring, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Role-based Access Control`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information on configuring access to monitoring, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring"
-    }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "href": "rbac-for-monitoring.md"
+    }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `Rancher and Project read permissions don't necessarily apply to monitoring resources. See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "rbac-for-monitoring.md#additional-monitoring-clusterroles"
+    }, `monitoring-ui-view`), ` for more details.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "guides"
     }, `Guides`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/enable-monitoring"
+        "href": "../../how-to-guides/advanced-user-guides/monitoring-alerting-guides/enable-monitoring.md"
     }, `Enable monitoring`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/uninstall-monitoring"
+        "href": "../../how-to-guides/advanced-user-guides/monitoring-alerting-guides/uninstall-monitoring.md"
     }, `Uninstall monitoring`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/set-up-monitoring-for-workloads"
+        "href": "../../how-to-guides/advanced-user-guides/monitoring-alerting-guides/set-up-monitoring-for-workloads.md"
     }, `Monitoring workloads`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/customize-grafana-dashboard"
+        "href": "../../how-to-guides/advanced-user-guides/monitoring-alerting-guides/customize-grafana-dashboard.md"
     }, `Customizing Grafana dashboards`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/create-persistent-grafana-dashboard"
+        "href": "../../how-to-guides/advanced-user-guides/monitoring-alerting-guides/create-persistent-grafana-dashboard.md"
     }, `Persistent Grafana dashboards`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/debug-high-memory-usage"
+        "href": "../../how-to-guides/advanced-user-guides/monitoring-alerting-guides/debug-high-memory-usage.md"
     }, `Debugging high memory usage`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "configuration"
     }, `Configuration`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "configuring-monitoring-resources-in-rancher"
     }, `Configuring Monitoring Resources in Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The configuration reference assumes familiarity with how monitoring components work together. For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works"
+        "href": "how-monitoring-works.md"
     }, `How Monitoring Works.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors"
+        "href": "../../reference-guides/monitoring-v2-configuration/servicemonitors-and-podmonitors.md"
     }, `ServiceMonitor and PodMonitor`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/reference-guides/monitoring-v2-configuration/receivers"
+        "href": "../../reference-guides/monitoring-v2-configuration/receivers.md"
     }, `Receiver`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/reference-guides/monitoring-v2-configuration/routes"
+        "href": "../../reference-guides/monitoring-v2-configuration/routes.md"
     }, `Route`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/prometheusrules"
+        "href": "../../how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/prometheusrules.md"
     }, `PrometheusRule`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/prometheus"
+        "href": "../../how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/prometheus.md"
     }, `Prometheus`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/alertmanager"
+        "href": "../../how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration/alertmanager.md"
     }, `Alertmanager`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "configuring-helm-chart-options"
     }, `Configuring Helm Chart Options`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `rancher-monitoring`), ` chart options, including options to set resource limits and requests, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/reference-guides/monitoring-v2-configuration/helm-chart-options"
+        "href": "../../reference-guides/monitoring-v2-configuration/helm-chart-options.md"
     }, `Helm Chart Options`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "windows-cluster-support"
     }, `Windows Cluster Support`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When deployed onto an RKE1 Windows cluster, Monitoring V2 will now automatically deploy a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -599,7 +606,7 @@ function MDXContent(_param) {
         "href": "https://github.com/rancher/wins"
     }, `wins`), ` version of v0.1.0.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more details on how to upgrade wins on existing Windows hosts, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/integrations-in-rancher/monitoring-and-alerting/windows-support"
+        "href": "windows-support.md"
     }, `Windows cluster support for Monitoring V2.`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "known-issues"
     }, `Known Issues`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `There is a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -611,7 +618,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `prometheus.prometheusSpec.resources.memory.request`), ` to 1750 Mi.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/advanced-user-guides/monitoring-alerting-guides/debug-high-memory-usage"
+        "href": "../../how-to-guides/advanced-user-guides/monitoring-alerting-guides/debug-high-memory-usage.md"
     }, `Debugging High Memory Usage`), ` for advice and recommendations.`));
 }
 MDXContent.isMDXComponent = true;
