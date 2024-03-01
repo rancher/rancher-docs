@@ -29,8 +29,7 @@ Each Rancher version is designed to be compatible with a single version of the w
 | v2.7.7          |     v0.3.6      |
 | v2.7.8          |     v0.3.6      |
 | v2.7.9          |     v0.3.6      |
-| v2.7.10         |     v0.3.6      |
-| v2.7.11         |     v0.3.7      |
+| v2.7.10          |     v0.3.6      |
 
 ## Why Do We Need It?
 
