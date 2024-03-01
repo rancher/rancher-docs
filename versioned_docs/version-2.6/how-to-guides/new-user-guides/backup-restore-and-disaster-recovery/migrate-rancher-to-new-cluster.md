@@ -25,7 +25,8 @@ Rancher can be installed on any Kubernetes cluster, including hosted Kubernetes 
 Since Rancher can be installed on any Kubernetes cluster, you can use this backup and restore method to migrate Rancher from one Kubernetes cluster to any other Kubernetes cluster. This method *only* migrates Rancher-related resources and won't affect other applications on the cluster. Refer to the [support matrix](https://www.suse.com/lifecycle/) to identify which Kubernetes cluster types and versions are supported for your Rancher version.
 
 ### 1. Install the rancher-backup Helm chart
-Install the [rancher-backup chart](https://github.com/rancher/backup-restore-operator/tags), using a version in the 2.x.x major version range:
+
+Install the [`rancher-backup chart`](https://github.com/rancher/backup-restore-operator/tags):
 
   1. Add the Helm repository:
 
@@ -34,13 +35,14 @@ Install the [rancher-backup chart](https://github.com/rancher/backup-restore-ope
      helm repo update
      ```
 
-  1. Select and set `CHART_VERSION` variable with a 2.x.x rancher-backup release version:
+  1. Set a `CHART_VERSION` variable, selecting a `rancher-backup` chart version compatible with your version of Rancher. See the [support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions), within the **Rancher Apps / Cluster Tools** section, to see which `rancher-backup` versions are supported:
+
      ```bash
-     helm search repo --versions rancher-charts/rancher-backup
-     CHART_VERSION=<2.x.x>
+     CHART_VERSION=<chart-version>
      ```
 
   1. Install the charts:
+   
      ```bash
      helm install rancher-backup-crd rancher-charts/rancher-backup-crd -n cattle-resources-system --create-namespace --version $CHART_VERSION
      helm install rancher-backup rancher-charts/rancher-backup -n cattle-resources-system --version $CHART_VERSION
@@ -48,7 +50,7 @@ Install the [rancher-backup chart](https://github.com/rancher/backup-restore-ope
 
      :::note
 
-     The above assumes an environment with outbound connectivity to Docker Hub
+     The above assumes an environment with outbound connectivity to Docker Hub.
 
      For an **air-gapped environment**, use the Helm value below to pull the `backup-restore-operator` image from your private registry when installing the rancher-backup Helm chart.
 
