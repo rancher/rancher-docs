@@ -312,7 +312,7 @@ function MDXContent(_param) {
     }, `1.2k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `335`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `336`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -326,10 +326,10 @@ function MDXContent(_param) {
     }, `https://github.com/weaveworks/weave/`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `6.5k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `6.6k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `670`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `679`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
     }, `87`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
@@ -346,13 +346,13 @@ function MDXContent(_param) {
     }, `https://github.com/cilium/cilium`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `17.8k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `18k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
     }, `2.6k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `699`)))));
+    }, `706`)))));
 }
 MDXContent.isMDXComponent = true;
 
