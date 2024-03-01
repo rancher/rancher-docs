@@ -70,10 +70,10 @@
         Community
     </dt>
     <dd>
-        Placeholder -- we also use <a href="https://www.rancher.com/community">The Community by SUSE</a>, as in, the community of users. Rancher Community Edition?
+        A build of Rancher that's available to the entire Rancher community.
     </dd>
     <p>
-        <b>Related terms:</b> <i>Rancher Prime</i>
+        <b>Related terms:</b> <i>Prime, Rancher Prime</i>
     </p>
 </dl>
 
@@ -84,13 +84,13 @@
         Downstream cluster
     </dt>
     <dd>
-        A Kubernetes cluster that is managed by a cluster which hosts Rancher.  
+        An alternative name for a Kubernetes cluster that is managed by a Rancher server. A Rancher server is the cluster that hosts Rancher.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Managed cluster</i>
     </p>
     <p>
-        <b>Related terms:</b> <i>Hosted cluster, Imported cluster, Rancher server</i>
+        <b>Related terms:</b> <i>Hosted cluster, Imported cluster, Rancher server, Registered cluster</i>
     </p>
 </dl>
 
@@ -100,11 +100,48 @@
     <dt>
         Extension
     </dt>
+    <p>
+        <b>Versions:</b> Rancher v2.7.0 and later
+    </p>
     <dd>
-        Placeholder 
+        Helm charts that can extend and enhance the Rancher UI, and tailor Rancher to your specific environment. Some Extensions require manual installation on a cluster, while others are built into Rancher. Some examples of common Extensions include Fleet and Harvester (both built-in), Kubewarden (manual), and Elemental (manual).  
     </dd>
     <p>
         <b>Related terms:</b> <i>Apps & Marketplace, Catalogs, Integrations</i>
+    </p>
+</dl>
+
+## H
+
+<dl>
+    <dt>
+        Hosted cluster
+    </dt>
+    <dd>
+        A managed cluster that is hosted in the cloud, by a Kubernetes provider. Rancher integrates with the hosted Kubernetes provider's cloud APIs, so that you can manage the remote cluster from the Rancher UI. Rancher supports a variety of hosted Kubernetes providers, including Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE).  
+    </dd>
+    <p>
+        <b>Related terms:</b> <i>Managed cluster</i>
+    </p>
+</dl>
+
+## I
+
+<dl>
+    <dt>
+        Imported cluster
+    </dt>
+    <p>
+        <b>Versions:</b> Rancher 2.0 to v2.4
+    </p>
+    <dd>
+        An existing cluster which is provisioned by a third-party and connected to a Rancher server. Rancher agents are set up to communicate between the imported cluster and the Rancher server, so that the imported cluster can be managed by Rancher. <b>Registered</b> clusters in later versions of Rancher are roughly synonymous with imported clusters. The main difference is that the Rancher UI provides more management features for registered clusters, and, in some cases, may offer the same features to imported clusters as clusters provisioned through Rancher. 
+    </dd>
+    <p>
+        <b>Synonyms:</b> Registered cluster
+    </p>
+    <p>
+        <b>Related terms:</b> <i>Managed cluster</i>
     </p>
 </dl>
 
@@ -115,7 +152,7 @@
         K3s
     </dt>
     <dd>
-        Placeholder 
+        A lightweight Kubernetes distribution chiefly designed for workloads that run unattended under tight resource constraints. "K3s" isn't an acronym; it is wordplay on "K8s", an abbreviation for "Kubernetes", and refers to the small footprint of the distribution.
     </dd>
     <p>
         <b>Related terms:</b> <i>RKE</i>
@@ -129,7 +166,7 @@
         Local cluster
     </dt>
     <dd>
-        Placeholder 
+        An alternative name for the cluster which hosts Rancher. The cluster that hosts Rancher works as a server that manages other clusters. 
     </dd>
     <p>
         <b>Synonyms:</b> <i>Rancher server, Upstream cluster</i>
@@ -146,7 +183,7 @@
         Managed cluster
     </dt>
     <dd>
-        Placeholder
+        A Kubernetes cluster that is managed by a Rancher server. Managed clusters can run on a variety of infrastructure and can be located anywhere. Rancher can provision Kubernetes from a hosted provider, provision compute nodes and then install Kubernetes onto them, or import existing Kubernetes clusters running anywhere.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Downstream cluster</i>
@@ -160,6 +197,12 @@
 
 <dl>
     <dt>
+        Neuvector Prime <!-- Neuvector also has a prime offering -->
+    </dt>
+    <dd>
+        Placeholder
+    </dd>
+    <dt>
         Node template
     </dt>
     <dd>
@@ -171,11 +214,8 @@
 
 <dl>
     <dt>
-        Prime
+        Prime <!-- Both Neuvector and Rancher have stand-alone Prime offerings, plus there's a SaaS offering. Rancher Prime Hosted, with Prime in the name -->
     </dt>
-    <p>
-        <b>Versions:</b> Rancher v2.8 and later
-    </p>
     <dd>
         Placeholder
     </dd>
@@ -260,15 +300,24 @@
     <dt>
         Rancher Prime
     </dt>
+    <p>
+        <b>Versions:</b> Rancher v2.8 and later
+    </p>
     <dd>
         Placeholder
     </dd>
     <p>
-        <b>Versions:</b> Rancher v2.8 and later
-    </p>
-    <p>
         <b>Related terms:</b> <i>Rancher Community</i>
     </p>
+    <dt>
+        Rancher Prime Hosted <!-- SaaS offering -- see https://www.rancher.com/products/rancher-platform and scroll down-->
+    </dt>
+    <p>
+        <b>Versions:</b> Rancher v2.8 and later
+    </p>
+    <dd>
+        Placeholder
+    </dd>
     <dt>
         Rancher server
     </dt>
@@ -277,6 +326,18 @@
     </dd>
     <p>
         <b>Synonyms:</b> <i>Local cluster, Upstream cluster</i>
+    </p>
+    <dt>
+        Registered cluster
+    </dt>
+    <dd>
+        Placeholder 
+    </dd>
+    <p>
+        <b>Synonyms:</b>
+    </p>
+    <p>
+        <b>Related terms:</b> <i></i>
     </p>
     <dt>
         RKE1
