@@ -10,6 +10,8 @@ Now that you have a running RKE cluster, you can install Rancher in it. For secu
 
 ### Install the Helm CLI
 
+<DeprecationHelm2 />
+
 Install the [Helm](https://helm.sh/docs/intro/install/) CLI on a host where you have a kubeconfig to access your Kubernetes cluster:
 
 ```

@@ -111,3 +111,5 @@ Delete the project under the cluster namespace:
 ```bash
 kubectl --namespace c-m-abcde delete project p-vwxyz
 ```
+
+Note that this command doesn't delete the namespaces and resources that formerly belonged to the project. 
