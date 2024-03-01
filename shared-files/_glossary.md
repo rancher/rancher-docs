@@ -84,7 +84,7 @@
         Downstream cluster
     </dt>
     <dd>
-        An alternative name for a Kubernetes cluster that is managed by a Rancher server. A Rancher server is the cluster that hosts Rancher.
+        An alternative name for a Kubernetes cluster that is managed by a Rancher server.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Managed cluster</i>
@@ -135,7 +135,7 @@
         <b>Versions:</b> Rancher 2.0 to v2.4
     </p>
     <dd>
-        An existing cluster which is provisioned by a third-party and connected to a Rancher server. Rancher agents are set up to communicate between the imported cluster and the Rancher server, so that the imported cluster can be managed by Rancher. <b>Registered</b> clusters in later versions of Rancher are roughly synonymous with imported clusters. The main difference is that the Rancher UI provides more management features for registered clusters, and, in some cases, may offer the same features to imported clusters as clusters provisioned through Rancher. 
+        An existing cluster which is provisioned by a third-party and connected to a Rancher server. Rancher agents are set up to communicate between the imported cluster and the Rancher server, so that the imported cluster can be managed by Rancher. <b>Registered</b> clusters in later versions of Rancher are roughly synonymous with imported clusters. The main difference is that the Rancher UI provides more management features for registered clusters, and, in some cases, may offer the same featureset to imported clusters as to clusters provisioned through Rancher. 
     </dd>
     <p>
         <b>Synonyms:</b> Registered cluster
@@ -152,7 +152,7 @@
         K3s
     </dt>
     <dd>
-        A lightweight Kubernetes distribution chiefly designed for workloads that run unattended under tight resource constraints. "K3s" isn't an acronym; it is wordplay on "K8s", an abbreviation for "Kubernetes", and refers to the small footprint of the distribution.
+        A lightweight Kubernetes distribution chiefly designed for workloads that run unattended under tight resource constraints.
     </dd>
     <p>
         <b>Related terms:</b> <i>RKE</i>
@@ -166,7 +166,7 @@
         Local cluster
     </dt>
     <dd>
-        An alternative name for the cluster which hosts Rancher. The cluster that hosts Rancher works as a server that manages other clusters. 
+        An alternative name for the cluster which hosts Rancher. In this case, "local" refers to the location of the Rancher installation, not to the user's local workstation. Local clusters can be hosted on-premises, in air-gapped environments, or in the cloud. Because the cluster that hosts Rancher works as a server that manages other clusters, it is also called a Rancher server. 
     </dd>
     <p>
         <b>Synonyms:</b> <i>Rancher server, Upstream cluster</i>
@@ -183,7 +183,7 @@
         Managed cluster
     </dt>
     <dd>
-        A Kubernetes cluster that is managed by a Rancher server. Managed clusters can run on a variety of infrastructure and can be located anywhere. Rancher can provision Kubernetes from a hosted provider, provision compute nodes and then install Kubernetes onto them, or import existing Kubernetes clusters running anywhere.
+        A Kubernetes cluster that is managed by a Rancher server. Managed clusters can run on a variety of infrastructure and can be located anywhere. 
     </dd>
     <p>
         <b>Synonyms:</b> <i>Downstream cluster</i>
