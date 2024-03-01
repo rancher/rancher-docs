@@ -197,10 +197,10 @@
 
 <dl>
     <dt>
-        Neuvector Prime <!--Neuvector also has a prime offering-->
+        Neuvector Prime 
     </dt>
     <dd>
-        Placeholder
+        Placeholder - Note that this can be used stand-alone or in combination with Rancher Prime
     </dd>
     <dt>
         Node template
@@ -214,10 +214,10 @@
 
 <dl>
     <dt>
-        Prime <!-- Both Neuvector and Rancher have stand-alone Prime offerings, plus there's a SaaS offering. Rancher Prime Hosted, with Prime in the name -->
+        Prime 
     </dt>
     <dd>
-        Placeholder
+        Placeholder - Both Neuvector and Rancher have stand-alone Prime offerings, plus there's a SaaS offering. Rancher Prime Hosted, with Prime in the name
     </dd>
     <p>
         <b>Related terms:</b> <i>Community</i>
@@ -310,13 +310,13 @@
         <b>Related terms:</b> <i>Rancher Community</i>
     </p>
     <dt>
-        Rancher Prime Hosted <!-- SaaS offering -- see https://www.rancher.com/products/rancher-platform and scroll down-->
+        Rancher Prime Hosted
     </dt>
     <p>
         <b>Versions:</b> Rancher v2.8 and later
     </p>
     <dd>
-        Placeholder
+        Placeholder - SaaS offering -- see https://www.rancher.com/products/rancher-platform and scroll down
     </dd>
     <dt>
         Rancher server
