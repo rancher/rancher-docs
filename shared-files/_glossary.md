@@ -197,7 +197,7 @@
 
 <dl>
     <dt>
-        Neuvector Prime <!-- Neuvector also has a prime offering -->
+        Neuvector Prime <!--Neuvector also has a prime offering-->
     </dt>
     <dd>
         Placeholder
