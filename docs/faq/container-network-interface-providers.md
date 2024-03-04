@@ -86,6 +86,8 @@ For more information, see the [Flannel GitHub Page](https://github.com/flannel-i
 
 #### Weave
 
+<DeprecationWeave />
+
 ![Weave Logo](/img/weave-logo.png)
 
 Weave enables networking and network policy in Kubernetes clusters across the cloud. Additionally, it support encrypting traffic between the peers.
