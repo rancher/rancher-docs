@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[13085],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[13085,27918],{
 
 /***/ 1456:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -114,7 +114,7 @@ function Card({ id, icon, title, description, to }) {
 
 /***/ }),
 
-/***/ 70507:
+/***/ 42224:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
@@ -462,6 +462,110 @@ function _deprecation_opa_gatekeeper_MDXContent(_param) {
 }
 _deprecation_opa_gatekeeper_MDXContent.isMDXComponent = true;
 
+;// CONCATENATED MODULE: ./shared-files/_deprecation-weave.md
+/* @jsxRuntime classic */ /* @jsx mdx */ /* @jsxFrag React.Fragment */ function _deprecation_weave_define_property(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function _deprecation_weave_object_spread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {};
+        var ownKeys = Object.keys(source);
+        if (typeof Object.getOwnPropertySymbols === "function") {
+            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+            }));
+        }
+        ownKeys.forEach(function(key) {
+            _deprecation_weave_define_property(target, key, source[key]);
+        });
+    }
+    return target;
+}
+function _deprecation_weave_ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+    if (Object.getOwnPropertySymbols) {
+        var symbols = Object.getOwnPropertySymbols(object);
+        if (enumerableOnly) {
+            symbols = symbols.filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+            });
+        }
+        keys.push.apply(keys, symbols);
+    }
+    return keys;
+}
+function _deprecation_weave_object_spread_props(target, source) {
+    source = source != null ? source : {};
+    if (Object.getOwnPropertyDescriptors) {
+        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+        _deprecation_weave_ownKeys(Object(source)).forEach(function(key) {
+            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+    }
+    return target;
+}
+function _deprecation_weave_object_without_properties(source, excluded) {
+    if (source == null) return {};
+    var target = _deprecation_weave_object_without_properties_loose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+function _deprecation_weave_object_without_properties_loose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+
+
+const _deprecation_weave_frontMatter = {};
+const _deprecation_weave_contentTitle = (/* unused pure expression or super */ null && (undefined));
+const _deprecation_weave_toc = [];
+const _deprecation_weave_layoutProps = {
+    toc: _deprecation_weave_toc
+};
+const _deprecation_weave_MDXLayout = "wrapper";
+function _deprecation_weave_MDXContent(_param) {
+    var { components } = _param, props = _deprecation_weave_object_without_properties(_param, [
+        "components"
+    ]);
+    return /*#__PURE__*/ (0,esm/* mdx */.kt)(_deprecation_weave_MDXLayout, _deprecation_weave_object_spread_props(_deprecation_weave_object_spread({}, _deprecation_weave_layoutProps, props), {
+        components: components,
+        mdxType: "MDXLayout"
+    }), /*#__PURE__*/ (0,esm/* mdx */.kt)("admonition", {
+        "type": "warning"
+    }, /*#__PURE__*/ (0,esm/* mdx */.kt)("p", {
+        parentName: "admonition"
+    }, `The Weave CNI plugin for RKE with Kubernetes v1.27 and later is now deprecated. Weave will be removed in RKE with Kubernetes v1.30.`)));
+}
+_deprecation_weave_MDXContent.isMDXComponent = true;
+
 ;// CONCATENATED MODULE: ./shared-files/_deprecation-helm2.md
 /* @jsxRuntime classic */ /* @jsx mdx */ /* @jsxFrag React.Fragment */ function _deprecation_helm2_define_property(obj, key, value) {
     if (key in obj) {
@@ -627,6 +731,7 @@ function MDXComponents_object_spread_props(target, source) {
 
 
 
+
 /* harmony default export */ const theme_MDXComponents = (MDXComponents_object_spread_props(MDXComponents_object_spread({}, MDXComponents/* default */.Z), {
     Tabs: Tabs/* default */.Z,
     TabItem: TabItem/* default */.Z,
@@ -634,6 +739,7 @@ function MDXComponents_object_spread_props(target, source) {
     Card: CardComponents/* Card */.Z,
     CNIPopularityTable: MDXContent,
     DeprecationOPAGatekeeper: _deprecation_opa_gatekeeper_MDXContent,
+    DeprecationWeave: _deprecation_weave_MDXContent,
     DeprecationHelm2: _deprecation_helm2_MDXContent
 }));
 

@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1705011762,
-    "formattedLastUpdatedAt": "Jan 11, 2024",
+    "lastUpdatedAt": 1708726378,
+    "formattedLastUpdatedAt": "Feb 23, 2024",
     "frontMatter": {
         "title": "RKE Cluster Configuration Reference"
     },
@@ -497,6 +497,11 @@ const toc = [
         level: 3
     }
 ];
+const makeShortcode = (name)=>function MDXDefaultShortcode(props) {
+        console.warn("Component " + name + " was not imported, exported, or provided by MDXProvider as global scope");
+        return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("div", props);
+    };
+const DeprecationWeave = makeShortcode("DeprecationWeave");
 const layoutProps = {
     toc
 };
@@ -622,7 +627,9 @@ function MDXContent(_param) {
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
         "href": "https://github.com/weaveworks/weave"
-    }, `Weave`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+    }, `Weave`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(DeprecationWeave, {
+        mdxType: "DeprecationWeave"
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "title": "Notes on Weave:",
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {

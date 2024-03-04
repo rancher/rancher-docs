@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[33446],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[76921],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 39110:
+/***/ 31573:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -314,19 +314,19 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "faq/container-network-interface-providers",
-    "id": "version-2.8/faq/container-network-interface-providers",
+    "id": "faq/container-network-interface-providers",
     "title": "Container Network Interface (CNI) Providers",
     "description": "Learn about Container Network Interface (CNI), the CNI providers Rancher provides, the features they offer, and how to choose a provider for you",
-    "source": "@site/versioned_docs/version-2.8/faq/container-network-interface-providers.md",
+    "source": "@site/docs/faq/container-network-interface-providers.md",
     "sourceDirName": "faq",
     "slug": "/faq/container-network-interface-providers",
-    "permalink": "/v2.8/faq/container-network-interface-providers",
+    "permalink": "/faq/container-network-interface-providers",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/faq/container-network-interface-providers.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/faq/container-network-interface-providers.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1708541793,
-    "formattedLastUpdatedAt": "Feb 21, 2024",
+    "version": "current",
+    "lastUpdatedAt": 1708726378,
+    "formattedLastUpdatedAt": "Feb 23, 2024",
     "frontMatter": {
         "title": "Container Network Interface (CNI) Providers",
         "description": "Learn about Container Network Interface (CNI), the CNI providers Rancher provides, the features they offer, and how to choose a provider for you"
@@ -334,11 +334,11 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Telemetry",
-        "permalink": "/v2.8/faq/telemetry"
+        "permalink": "/faq/telemetry"
     },
     "next": {
         "title": "Rancher is No Longer Needed",
-        "permalink": "/v2.8/faq/rancher-is-no-longer-needed"
+        "permalink": "/faq/rancher-is-no-longer-needed"
     }
 };
 const assets = {};
@@ -433,6 +433,7 @@ const makeShortcode = (name)=>function MDXDefaultShortcode(props) {
         console.warn("Component " + name + " was not imported, exported, or provided by MDXProvider as global scope");
         return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("div", props);
     };
+const DeprecationWeave = makeShortcode("DeprecationWeave");
 const CNIPopularityTable = makeShortcode("CNIPopularityTable");
 const layoutProps = {
     toc
@@ -507,7 +508,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `51821`), `. For more details, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters"
+        "href": "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters"
     }, `the port requirements for user clusters`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
         src: (__webpack_require__(24313)/* ["default"] */ .Z),
         width: "1782",
@@ -542,7 +543,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `8472`), ` (VXLAN). See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters#networking-requirements"
+        "href": "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters#networking-requirements"
     }, `the port requirements for user clusters`), ` for more details.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
         alt: "Flannel Diagram",
         src: (__webpack_require__(16930)/* ["default"] */ .Z),
@@ -553,7 +554,9 @@ function MDXContent(_param) {
         "href": "https://github.com/flannel-io/flannel"
     }, `Flannel GitHub Page`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "weave"
-    }, `Weave`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
+    }, `Weave`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(DeprecationWeave, {
+        mdxType: "DeprecationWeave"
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
         alt: "Weave Logo",
         src: (__webpack_require__(93743)/* ["default"] */ .Z),
         width: "229",
@@ -566,7 +569,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `6784`), ` (data ports). See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters#networking-requirements"
+        "href": "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters#networking-requirements"
     }, `port requirements for user clusters`), ` for more details.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information, see the following pages:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -592,7 +595,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `5473`), ` is needed when using Typha. See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters#networking-requirements"
+        "href": "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters#networking-requirements"
     }, `the port requirements for user clusters`), ` for more details.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "title": "Important:",
         "type": "note"
@@ -860,10 +863,10 @@ spec:
         "id": "how-can-i-configure-a-cni-network-provider"
     }, `How can I configure a CNI network provider?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Please see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"
+        "href": "/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"
     }, `Cluster Options`), ` on how to configure a network provider for your cluster. For more advanced configuration options, please see how to configure your cluster using a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration#rke-cluster-config-file-reference"
+        "href": "/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration#rke-cluster-config-file-reference"
     }, `Config File`), ` and the options for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://rancher.com/docs/rke/latest/en/config-options/add-ons/network-plugins/"
