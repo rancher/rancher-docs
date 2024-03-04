@@ -145,6 +145,8 @@ Before you can perform the upgrade, you must prepare your air gapped environment
     --set cainjector.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-cainjector
     ```
 
+    <DeprecationHelm2 />
+    
     The Helm 2 command is as follows:
 
     ```plain

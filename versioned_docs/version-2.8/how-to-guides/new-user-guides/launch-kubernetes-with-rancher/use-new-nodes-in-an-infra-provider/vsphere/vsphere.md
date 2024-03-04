@@ -4,7 +4,7 @@ description: Use Rancher to create a vSphere cluster. It may consist of groups o
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/vsphere"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere"/>
 </head>
 
 import YouTube from '@site/src/components/YouTube'

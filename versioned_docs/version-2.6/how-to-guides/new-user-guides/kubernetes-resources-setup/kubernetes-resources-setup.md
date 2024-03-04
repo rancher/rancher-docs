@@ -3,7 +3,7 @@ title: Kubernetes Resources
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/kubernetes-resources-setup"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-resources-setup"/>
 </head>
 
 You can view and manipulate all of the custom resources and CRDs in a Kubernetes cluster from the Rancher UI.

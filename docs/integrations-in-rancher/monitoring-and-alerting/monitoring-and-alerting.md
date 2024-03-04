@@ -4,7 +4,7 @@ description: Prometheus lets you view metrics from your different Rancher and Ku
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/monitoring-and-alerting"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/monitoring-and-alerting"/>
 </head>
 
 The `rancher-monitoring` application can quickly deploy leading open-source monitoring and alerting solutions onto your cluster.
@@ -55,7 +55,13 @@ For a list of monitoring components exposed in the Rancher UI, along with common
 
 ## Role-based Access Control
 
-For information on configuring access to monitoring, see [this page.](rbac-for-monitoring.md)
+For more information on configuring access to monitoring, see [this page.](rbac-for-monitoring.md)
+
+:::note
+
+Rancher and Project read permissions don't necessarily apply to monitoring resources. See [monitoring-ui-view](rbac-for-monitoring.md#additional-monitoring-clusterroles) for more details.
+
+:::
 
 ## Guides
 

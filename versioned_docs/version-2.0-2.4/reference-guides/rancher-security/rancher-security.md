@@ -3,7 +3,7 @@ title: Security
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/rancher-security"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-security"/>
 </head>
 
 <table width="100%">

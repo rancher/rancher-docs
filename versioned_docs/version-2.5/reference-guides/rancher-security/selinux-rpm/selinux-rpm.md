@@ -3,7 +3,7 @@ title: SELinux RPM
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/selinux-rpm"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-security/selinux-rpm"/>
 </head>
 
 _Available as of v2.5.8_

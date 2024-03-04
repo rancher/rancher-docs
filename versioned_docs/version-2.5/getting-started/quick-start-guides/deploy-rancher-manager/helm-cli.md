@@ -2,6 +2,10 @@
 title: Manual Quick Start
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-rancher-manager/helm-cli"/>
+</head>
+
 Howdy Partner! This tutorial walks you through:
 
 - Installation of Rancher 2.x

@@ -2,6 +2,10 @@
 title: Kubernetes Distributions
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/kubernetes-distributions"/>
+</head>
+
 ## K3s
 
 K3s is a lightweight, fully compliant Kubernetes distribution designed for a range of use cases, including edge computing, IoT, CI/CD, development and embedding Kubernetes into applications. It simplifies Kubernetes management by packaging the system as a single binary, using sqlite3 as the default storage, and offering a user-friendly launcher. K3s includes essential features like local storage and load balancing, Helm chart controller and the Traefik CNI. It minimizes external dependencies and provides a streamlined Kubernetes experience. K3s was donated to the CNCF as a Sandbox Project in June 2020.

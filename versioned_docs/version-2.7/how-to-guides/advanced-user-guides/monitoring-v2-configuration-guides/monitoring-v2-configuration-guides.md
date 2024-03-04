@@ -3,7 +3,7 @@ title: Configuration
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/monitoring-v2-configuration-guides"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides"/>
 </head>
 
 This page captures some of the most important options for configuring Monitoring V2 in the Rancher UI.

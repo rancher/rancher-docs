@@ -3,7 +3,7 @@ title: Istio
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/istio"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/istio"/>
 </head>
 
 _Available as of v2.3.0_

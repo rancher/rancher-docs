@@ -3,7 +3,7 @@ title: CIS Scans
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/cis-scans"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cis-scans"/>
 </head>
 
 _Available as of v2.4.0_

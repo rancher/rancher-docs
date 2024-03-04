@@ -2,6 +2,10 @@
 title: Projects
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/api/workflows/projects"/>
+</head>
+
 ## Creating a Project
 
 Project resources may only be created on the management cluster. See below for [creating namespaces under projects in a managed cluster](#creating-a-namespace-in-a-project).
@@ -107,3 +111,5 @@ Delete the project under the cluster namespace:
 ```bash
 kubectl --namespace c-m-abcde delete project p-vwxyz
 ```
+
+Note that this command doesn't delete the namespaces and resources that formerly belonged to the project.

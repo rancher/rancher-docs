@@ -23,7 +23,7 @@ If a file is moved or renamed, you'll also need to edit the `sidebars.js` files 
 
 ### Navigate the Repo
 
-The file paths in the repo correspond to the URLs for pages on the docs website. The docs for the latest version of Rancher are located in `/docs`. Most index pages are found within the `/pages-for-subheaders` directory in `/docs`. All images are in `/static/img` in the top level of the repo. Older docs are found within `/versioned_docs` and generally follow the same structure as the files in `/docs`.
+The file paths in the repo correspond to the URLs for pages on the docs website. The docs for the latest version of Rancher are located in `/docs`. All images are in `/static/img` in the top level of the repo. Older docs are found within `/versioned_docs` and generally follow the same structure as the files in `/docs`.
 
 ### Style & Formatting
 

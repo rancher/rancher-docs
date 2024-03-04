@@ -3,7 +3,7 @@ title: Project Resource Quotas
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/manage-project-resource-quotas"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/manage-projects/manage-project-resource-quotas"/>
 </head>
 
 _Available as of v2.1.0_

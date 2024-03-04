@@ -2,6 +2,10 @@
 title: API Quick Start Guide
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/api/quickstart"/>
+</head>
+
 You can access Rancher's resources through the Kubernetes API. This guide will help you get started on using this API as a Rancher user.
 
 1. In the upper left corner, click **☰ > Global Settings**.

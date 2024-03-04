@@ -2,6 +2,10 @@
 title: Fleet - GitOps at Scale
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet"/>
+</head>
+
 _Available as of Rancher v2.5_
 
 Fleet is GitOps at scale. Fleet is designed to manage up to a million clusters. It's also lightweight enough that it works great for a [single cluster](https://fleet.rancher.io/installation#default-install) too, but it really shines when you get to a [large scale.](https://fleet.rancher.io/installation#configuration-for-multi-cluster) By large scale we mean either a lot of clusters, a lot of deployments, or a lot of teams in a single organization.
