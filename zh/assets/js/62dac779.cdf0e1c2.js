@@ -335,8 +335,8 @@ const metadata = {
         "permalink": "/zh/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere"
     },
     "next": {
-        "title": "将 vSphere 树内卷迁移到树外",
-        "permalink": "/zh/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/migrate-from-in-tree-to-out-of-tree"
+        "title": "Migrating Amazon In-tree to Out-of-tree",
+        "permalink": "/zh/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-amazon"
     }
 };
 const assets = {};
