@@ -142,7 +142,7 @@ The following settings are also configurable. All of these except for the "Node 
 
 ### Self-managed Amazon Linux Nodes
 
-You can register an EKS cluster containing self-managed Amazon Linux nodes. You must configure this type of cluster according to the instructions in the official AWS documentation for [launching self-managed Amazon Linux nodes](https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html). EKS clusters containing self-managed Amazon Linux nodes are usually operated by the [Karpenter](https://karpenter.sh/docs/) project. After you provision an EKS cluster containing self-managed Amazon Linux nodes, [register the cluster](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md) so it can be managed by Rancher. However, the nodes won't be visible in the Rancher UI.
+You can register an EKS cluster containing self-managed Amazon Linux nodes. You must configure this type of cluster according to the instructions in the official AWS documentation for [launching self-managed Amazon Linux nodes](https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html). EKS clusters containing self-managed Amazon Linux nodes are usually operated by the [Karpenter](https://karpenter.sh/docs/) project. After you provision an EKS cluster containing self-managed Amazon Linux nodes, [register the cluster](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md) so it can be managed by Rancher. However, the nodes won't be visible in the Rancher UI.
 
 ### IAM Roles for Service Accounts
 
