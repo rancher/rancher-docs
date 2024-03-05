@@ -84,7 +84,7 @@
         Downstream cluster
     </dt>
     <dd>
-        An alternative name for a Kubernetes cluster that is managed by a Rancher server.
+        An alternative name for a <i>Managed</i> cluster: a Kubernetes cluster that is managed by a Rancher server.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Managed cluster</i>
@@ -104,7 +104,7 @@
         <b>Versions:</b> Rancher v2.7.0 and later
     </p>
     <dd>
-        Helm charts that can extend and enhance the Rancher UI, and tailor Rancher to your specific environment. Some Extensions require manual installation on a cluster, while others are built into Rancher. Some examples of common Extensions include Fleet and Harvester (both built-in), Kubewarden (manual), and Elemental (manual).  
+        Helm charts that can extend and enhance the Rancher UI, and tailor Rancher to your specific environment. Some Extensions require manual installation on a cluster, while others are built into Rancher. Built-in Extensions include Fleet and Harvester. Manually installed Extensions inlcude Kubewarden and Elemental.  
     </dd>
     <p>
         <b>Related terms:</b> <i>Apps & Marketplace, Catalogs, Integrations</i>
@@ -118,7 +118,7 @@
         Hosted cluster
     </dt>
     <dd>
-        A managed cluster that is hosted in the cloud, by a Kubernetes provider. Rancher integrates with the hosted Kubernetes provider's cloud APIs, so that you can manage the remote cluster from the Rancher UI. Rancher supports a variety of hosted Kubernetes providers, including Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE).  
+        A managed cluster that is hosted in the cloud, by a Kubernetes provider. Rancher supports a variety of hosted Kubernetes providers, including Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE). Rancher integrates with the hosted Kubernetes provider's cloud APIs, so that you can manage the cluster from the Rancher UI.
     </dd>
     <p>
         <b>Related terms:</b> <i>Managed cluster</i>
@@ -132,10 +132,10 @@
         Imported cluster
     </dt>
     <p>
-        <b>Versions:</b> Rancher 2.0 to v2.4
+        <b>Versions:</b> Rancher 2.0–v2.4
     </p>
     <dd>
-        An existing cluster which is provisioned by a third-party and connected to a Rancher server. Rancher agents are set up to communicate between the imported cluster and the Rancher server, so that the imported cluster can be managed by Rancher. <b>Registered</b> clusters in later versions of Rancher are roughly synonymous with imported clusters. The main difference is that the Rancher UI provides more management features for registered clusters, and, in some cases, may offer the same featureset to imported clusters as to clusters provisioned through Rancher. 
+        An existing cluster that was provisioned by a third-party, then set up to be managed by Rancher. <i>Registered clusters</i> in later versions of Rancher are roughly synonymous with imported clusters. The main difference is that there are more management features exposed in the Rancher UI for registered clusters than for imported clusters. 
     </dd>
     <p>
         <b>Synonyms:</b> Registered cluster
@@ -166,7 +166,7 @@
         Local cluster
     </dt>
     <dd>
-        An alternative name for the cluster which hosts Rancher. In this case, "local" refers to the location of the Rancher installation, not to the user's local workstation. Local clusters can be hosted on-premises, in air-gapped environments, or in the cloud. Because the cluster that hosts Rancher works as a server that manages other clusters, it is also called a Rancher server. 
+        An alternative name for the <i>Rancher server</i>, the cluster which hosts Rancher and manages other clusters. Here, <i>local</i> refers to the location of the Rancher installation, not to the user's local workstation. Local clusters can be hosted on-premises, in air-gapped environments, or in the cloud.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Rancher server, Upstream cluster</i>
@@ -183,7 +183,7 @@
         Managed cluster
     </dt>
     <dd>
-        A Kubernetes cluster that is managed by a Rancher server. Managed clusters can run on a variety of infrastructure and can be located anywhere. 
+        A Kubernetes cluster that is managed by a Rancher server. Managed clusters can run on a variety of infrastructure and can be located anywhere, including in the cloud, on-premises, or in air-gapped environments. 
     </dd>
     <p>
         <b>Synonyms:</b> <i>Downstream cluster</i>
