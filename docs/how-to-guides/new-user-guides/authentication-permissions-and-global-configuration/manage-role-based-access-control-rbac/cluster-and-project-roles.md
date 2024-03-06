@@ -215,7 +215,7 @@ There are two methods for changing default cluster/project roles:
 
 :::
 
-### Configuring Default Role Templates for Cluster and Project Creators
+### Configuring Default Roles for Cluster and Project Creators
 
 You can change the cluster or project role(s) that are automatically assigned to the creating user.
 
