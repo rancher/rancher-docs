@@ -41,7 +41,7 @@ Alternatively, the administrator can give all new users the default permission t
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
 1. In the left navigation bar, click **Role Templates**.
-    * In Rancher 2.7.6 and earlier, the **Role Templates** section is labeled **Roles**.
+    * In Rancher v2.7.6 and earlier, the **Role Templates** page is labeled **Roles**.
 1. Go to the role named **Create new RKE Cluster Templates and click **⋮ > Edit Config**.
 1. Select the option **Yes: Default role for new users**.
 1. Click **Save**.
