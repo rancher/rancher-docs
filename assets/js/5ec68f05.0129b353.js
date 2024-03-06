@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[60174],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[56613],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,38 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 19383:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(67294);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(45697);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-
-
-// This code was authored by bravemaster619 https://dev.to/bravemaster619/simplest-way-to-embed-a-youtube-video-in-your-react-app-3bk2
-const YoutubeEmbed = ({ id })=>/*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "video-responsive"
-    }, /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.createElement("iframe", {
-        width: "853",
-        height: "480",
-        src: `https://www.youtube.com/embed/${id}`,
-        frameBorder: "0",
-        allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
-        allowFullScreen: true,
-        title: "Embedded youtube"
-    }));
-YoutubeEmbed.propTypes = {
-    embedId: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string).isRequired
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (YoutubeEmbed);
-
-
-/***/ }),
-
-/***/ 96248:
+/***/ 47815:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -257,7 +226,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(67294);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3905);
-/* harmony import */ var _site_src_components_YouTube__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(19383);
 /* @jsxRuntime classic */ /* @jsx mdx */ /* @jsxFrag React.Fragment */ function _define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
@@ -346,19 +314,19 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace",
-    "id": "version-2.8/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace",
+    "id": "version-2.7/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace",
     "title": "Rancher Prime AWS Marketplace Quick Start",
     "description": "Deploy SUSE Rancher from the AWS Marketplace listing.",
-    "source": "@site/versioned_docs/version-2.8/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace.md",
+    "source": "@site/versioned_docs/version-2.7/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace.md",
     "sourceDirName": "getting-started/quick-start-guides/deploy-rancher-manager",
     "slug": "/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace",
-    "permalink": "/v2.8/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace",
+    "permalink": "/v2.7/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/getting-started/quick-start-guides/deploy-rancher-manager/aws-marketplace.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1706886611,
-    "formattedLastUpdatedAt": "Feb 2, 2024",
+    "version": "2.7",
+    "lastUpdatedAt": 1709758238,
+    "formattedLastUpdatedAt": "Mar 6, 2024",
     "frontMatter": {
         "title": "Rancher Prime AWS Marketplace Quick Start",
         "description": "Deploy SUSE Rancher from the AWS Marketplace listing."
@@ -366,15 +334,14 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Rancher AWS Quick Start Guide",
-        "permalink": "/v2.8/getting-started/quick-start-guides/deploy-rancher-manager/aws"
+        "permalink": "/v2.7/getting-started/quick-start-guides/deploy-rancher-manager/aws"
     },
     "next": {
         "title": "Rancher Azure Quick Start Guide",
-        "permalink": "/v2.8/getting-started/quick-start-guides/deploy-rancher-manager/azure"
+        "permalink": "/v2.7/getting-started/quick-start-guides/deploy-rancher-manager/azure"
     }
 };
 const assets = {};
-
 const toc = [];
 const layoutProps = {
     toc
@@ -396,12 +363,7 @@ function MDXContent(_param) {
     }, `instructions`), ` under Usage Information in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://aws.amazon.com/marketplace/pp/prodview-f2bvszurj2p2c"
-    }, `AWS Marketplace listing`), `. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h1", {
-        "id": "youtube-id9dznj7ons0m"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_site_src_components_YouTube__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
-        id: "9dznJ7Ons0M",
-        mdxType: "YouTube"
-    })));
+    }, `AWS Marketplace listing`), `.`));
 }
 MDXContent.isMDXComponent = true;
 
