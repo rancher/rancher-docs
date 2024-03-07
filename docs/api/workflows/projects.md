@@ -29,6 +29,12 @@ Use `metadata.generateName` to ensure a unique project ID, but note that `kubect
 
 Set `metadata.namespace` and `spec.clusterName` to the ID for the cluster the project belongs to.
 
+:::note
+
+If you're a cluster member, set `metadata.annotations.field.cattle.io/creatorId` to `cluster-member-user-id`. This allows the project to respond to `get` requests and be visible when you log in as a member. You don't need to set this annotation if you're a cluster owner or admin.
+
+:::
+
 ### Creating a Project With a Resource Quota
 
 Refer to [Kubernetes Resource Quota](https://kubernetes.io/docs/concepts/policy/resource-quotas/).
