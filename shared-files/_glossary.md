@@ -67,6 +67,15 @@
         <b>Synonyms:</b> <i>Apps, Apps & Marketplace</i>
     </p>
     <dt>
+        Cloud credentials
+    </dt>
+    <dd>
+        Placeholder
+    </dd>
+    <p>
+        <b>Related terms:</b> <i>Hosted clusters</i>
+    </p>
+    <dt>
         Community
     </dt>
     <dd>
@@ -80,6 +89,12 @@
 ## D
 
 <dl>
+    <dt>
+        Deployment
+    </dt>
+    <dd>
+        Placeholder
+    </dd>
     <dt>
         Downstream cluster
     </dt>
@@ -109,6 +124,12 @@
     <p>
         <b>Related terms:</b> <i>Apps & Marketplace, Catalogs, Integrations</i>
     </p>
+    <dt>
+        External authentication
+    </dt>
+    <dd>
+        Placeholder
+    </dd>
 </dl>
 
 ## H
@@ -143,6 +164,12 @@
     <p>
         <b>Related terms:</b> <i>Managed cluster</i>
     </p>
+    <dt>
+        Integration
+    </dt>
+    <dd>
+        Placeholder
+    </dd>
 </dl>
 
 ## K
@@ -163,6 +190,12 @@
 
 <dl>
     <dt>
+        Local authentication
+    </dt>
+    <dd>
+        Placeholder
+    </dd>
+    <dt>
         Local cluster
     </dt>
     <dd>
@@ -179,6 +212,12 @@
 ## M
 
 <dl>
+    <dt>
+        Machine pool
+    </dt>
+    <dd>
+        Placeholder
+    </dd>
     <dt>
         Managed cluster
     </dt>
@@ -208,6 +247,12 @@
     <dd>
         Placeholder
     </dd>
+    <dt>
+        Node template
+    </dt>
+    <dd>
+        Placeholder
+    </dd>
 </dl>
 
 ## P
@@ -227,6 +272,12 @@
     </dt>
     <dd>
         Placeholder 
+    </dd>
+    <dt>
+        Project resource quota
+    </dt>
+    <dd>
+        Placeholder
     </dd>
     <dt>
         PSA
@@ -372,6 +423,12 @@
     <p>
         <b>Synonyms:</b> <i>RKE2</i>
     </p>
+    <dt>
+        Roles
+    </dt>
+    <dd>
+        Placeholder
+    </dd>
 </dl>
 
 ## U
@@ -392,4 +449,21 @@
     <p>
         <b>Synonyms:</b> <i>Local cluster, Rancher server</i>
     </p>
+    <dt>
+        Users
+    </dt>
+    <dd>
+        Placeholder
+    </dd>
+</dl>
+
+## W
+
+<dl>
+    <dt>
+        Workload
+    </dt>
+    <dd>
+        Placeholder
+    </dd>
 </dl>
