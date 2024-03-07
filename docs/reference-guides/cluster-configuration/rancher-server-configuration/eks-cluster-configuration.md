@@ -154,7 +154,6 @@ Linking to an IAM role is not supported for Rancher pods in an EKS cluster.
 
 :::
 
-
 To enable IAM roles for service accounts:
 1. [Create an IAM OIDC provider for your cluster](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html)
 1. [Configure a Kubernetes service account to assume an IAM role](https://docs.aws.amazon.com/eks/latest/userguide/associate-service-account-role.html)
