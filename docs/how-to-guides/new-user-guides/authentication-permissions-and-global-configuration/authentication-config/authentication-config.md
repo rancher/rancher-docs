@@ -13,7 +13,7 @@ This centralized user authentication is accomplished using the Rancher authentic
 
 :::warning
 
-The account you use to enable your external provider will be granted Admin-level permissions. This includes test accounts. See [External Authentication Configuration and Principal Users](#external-authentication-configuration-and-principal-users) to understand why.
+The account used to enable the external provider will be granted admin permissions. If you use a test account or non-admin account, that account will still be granted admin-level permissions. See [External Authentication Configuration and Principal Users](#external-authentication-configuration-and-principal-users) to understand why.
 
 :::
 
@@ -88,7 +88,7 @@ Configuring external authentication requires:
 - A local user assigned the administrator role, called hereafter the _local principal_.
 - An external user that can authenticate with your external authentication service, called hereafter the _external principal_.
 
-The configuration of external authentication also affects how principal users are managed within Rancher. Specifically, when a user account  enables an external provider, it is granted Admin-level permissions. This is because the local principal and external principal share the same user ID and access rights.
+The configuration of external authentication also affects how principal users are managed within Rancher. Specifically, when a user account enables an external provider, it is granted Admin-level permissions. This is because the local principal and external principal share the same user ID and access rights.
 
 The following instructions demonstrate these effects:
 
