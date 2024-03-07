@@ -12,7 +12,7 @@ Rancher Prime provides access to Rancher v2.7.11, a version of Rancher v2.7.x wh
 
 Kubernetes is moving away from maintaining cloud providers in-tree. In Kubernetes 1.27 and later, the in-tree cloud providers have been removed. The Rancher UI allows you to upgrade to Kubernetes v1.27 when you migrate from an in-tree to out-of-tree provider. 
 
-However, if you're performing a manual migration, existing clusters must upgrade to Kubernetes v1.27 in order to remain functional.
+However, if you're performing a manual migration, existing clusters must upgrade to Kubernetes v1.27 after you migrate in order to remain functional.
 
 To migrate from the in-tree cloud provider to the out-of-tree AWS cloud provider, you must stop the existing cluster's kube controller manager and install the AWS cloud controller manager. There are many ways to do this. Refer to the official AWS documentation on the [external cloud controller manager](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for details.
 
