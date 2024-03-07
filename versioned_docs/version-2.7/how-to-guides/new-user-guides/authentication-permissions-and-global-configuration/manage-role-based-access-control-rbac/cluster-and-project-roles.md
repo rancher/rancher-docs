@@ -11,7 +11,8 @@ Cluster and project roles define user authorization inside a cluster or project.
 To manage these roles,
 
 1. Click **☰ > Users & Authentication**.
-1. In the left navigation bar, click **Roles** and go to the **Cluster** or **Project/Namespaces** tab.
+1. In the left navigation bar, click **Role Templates** and go to the **Cluster** or **Project/Namespaces** tab.
+    * In Rancher v2.7.6 and earlier, the **Role Templates** page is labeled **Roles**.
 
 ### Membership and Role Assignment
 
@@ -73,7 +74,8 @@ The following table lists the permissions available for the `Manage Nodes` role 
 For details on how each cluster role can access Kubernetes resources, you can look them up in the Rancher UI:
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
-1. In the left navigation bar, click **Roles**.
+1. In the left navigation bar, click **Role Templates**. 
+    * In Rancher v2.7.6 and earlier, the **Role Templates** page is labeled **Roles**.
 1. Click the **Cluster** tab.
 1. Click the name of an individual role. The table shows all of the operations and resources that are permitted by the role.
 
@@ -220,7 +222,8 @@ There are two methods for changing default cluster/project roles:
 You can change the cluster or project role(s) that are automatically assigned to the creating user.
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
-1. In the left navigation bar, click **Roles**.
+1. In the left navigation bar, click **Role Templates**. 
+    * In Rancher v2.7.6 and earlier, the **Role Templates** page is labeled **Roles**.
 1. Click the **Cluster** or **Project/Namespaces** tab.
 1. Find the custom or individual role that you want to use as default. Then edit the role by selecting **⋮ > Edit Config**.
 1. In the **Cluster Creator Default** or **Project Creator Default** section, enable the role as the default.
