@@ -335,7 +335,7 @@ const metadata = {
         "permalink": "/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration"
     },
     "next": {
-        "title": "EKS Cluster Configuration Reference | 2.6",
+        "title": "EKS Cluster Configuration Reference",
         "permalink": "/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration"
     }
 };

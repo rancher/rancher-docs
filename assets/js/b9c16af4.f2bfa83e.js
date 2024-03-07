@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[48617],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[60683],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 52387:
+/***/ 17730:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,35 +308,35 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'EKS Cluster Configuration Reference | 2.6'
+    title: 'EKS Cluster Configuration Reference'
 };
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration",
-    "id": "reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration",
-    "title": "EKS Cluster Configuration Reference | 2.6",
+    "id": "version-2.8/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration",
+    "title": "EKS Cluster Configuration Reference",
     "description": "Account Access",
-    "source": "@site/docs/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration.md",
+    "source": "@site/versioned_docs/version-2.8/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration.md",
     "sourceDirName": "reference-guides/cluster-configuration/rancher-server-configuration",
     "slug": "/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration",
-    "permalink": "/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration",
+    "permalink": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1707757599,
-    "formattedLastUpdatedAt": "Feb 12, 2024",
+    "version": "2.8",
+    "lastUpdatedAt": 1709830564,
+    "formattedLastUpdatedAt": "Mar 7, 2024",
     "frontMatter": {
-        "title": "EKS Cluster Configuration Reference | 2.6"
+        "title": "EKS Cluster Configuration Reference"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "K3s Cluster Configuration Reference",
-        "permalink": "/reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration"
+        "permalink": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration"
     },
     "next": {
         "title": "AKS Cluster Configuration Reference",
-        "permalink": "/reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration"
+        "permalink": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration"
     }
 };
 const assets = {};
@@ -417,6 +417,16 @@ const toc = [
         level: 4
     },
     {
+        value: 'Self-managed Amazon Linux Nodes',
+        id: 'self-managed-amazon-linux-nodes',
+        level: 3
+    },
+    {
+        value: 'IAM Roles for Service Accounts',
+        id: 'iam-roles-for-service-accounts',
+        level: 3
+    },
+    {
         value: 'Configuring the Refresh Interval',
         id: 'configuring-the-refresh-interval',
         level: 3
@@ -468,7 +478,7 @@ function MDXContent(_param) {
         "align": null
     }, `Select the cloud credentials that you created for your IAM policy. For more information on creating cloud credentials in Rancher, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/reference-guides/user-settings/manage-cloud-credentials"
+        "href": "/v2.8/reference-guides/user-settings/manage-cloud-credentials"
     }, `this page.`))))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "service-role"
     }, `Service Role`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Choose a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -803,6 +813,46 @@ function MDXContent(_param) {
         parentName: "tr",
         "align": null
     }, `These are tags for the managed node group and do not propagate to any of the associated resources.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "self-managed-amazon-linux-nodes"
+    }, `Self-managed Amazon Linux Nodes`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can register an EKS cluster containing self-managed Amazon Linux nodes. You must configure this type of cluster according to the instructions in the official AWS documentation for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html"
+    }, `launching self-managed Amazon Linux nodes`), `. EKS clusters containing self-managed Amazon Linux nodes are usually operated by the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://karpenter.sh/docs/"
+    }, `Karpenter`), ` project. After you provision an EKS cluster containing self-managed Amazon Linux nodes, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/v2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters"
+    }, `register the cluster`), ` so it can be managed by Rancher. However, the nodes won't be visible in the Rancher UI.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "iam-roles-for-service-accounts"
+    }, `IAM Roles for Service Accounts`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `An Applications Deployment running on an EKS cluster can make requests to AWS services via IAM permissions. These applications must sign their requests with AWS credentials. IAM roles for service accounts manage these credentials using an AWS OIDC endpoint. Rather than distributing AWS credentials to containers or relying on an EC2 instance's role, you can link an `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html"
+    }, `IAM role to a Kubernetes service account`), ` and configure your Pods to use this account.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `Linking to an IAM role is not supported for Rancher pods in an EKS cluster.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To enable IAM roles for service accounts:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html"
+    }, `Create an IAM OIDC provider for your cluster`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://docs.aws.amazon.com/eks/latest/userguide/associate-service-account-role.html"
+    }, `Configure a Kubernetes service account to assume an IAM role`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://docs.aws.amazon.com/eks/latest/userguide/pod-configuration.html"
+    }, `Configure Pods to use a Kubernetes service account`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts-minimum-sdk.html"
+    }, `Use a supported AWS SDK`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "configuring-the-refresh-interval"
     }, `Configuring the Refresh Interval`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"

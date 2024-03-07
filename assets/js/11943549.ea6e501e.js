@@ -331,7 +331,7 @@ const metadata = {
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "EKS Cluster Configuration Reference | 2.6",
+        "title": "EKS Cluster Configuration Reference",
         "permalink": "/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration"
     },
     "next": {
