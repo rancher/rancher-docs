@@ -41,7 +41,10 @@ For more information, refer to the monitoring documentation [here.](../integrati
 Rancher's integration with Istio was improved in Rancher v2.5.
 
 For more information, refer to the Istio documentation [here.](../integrations-in-rancher/istio/istio.md)
+
 ## OPA Gatekeeper
+
+<DeprecationOPAGatekeeper link="../integrations-in-rancher/kubewarden" />
 
 [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper) is an open-source project that provides integration between OPA and Kubernetes to provide policy control via admission controller webhooks. For details on how to enable Gatekeeper in Rancher, refer to the [OPA Gatekeeper section.](../integrations-in-rancher/opa-gatekeeper.md)
 
