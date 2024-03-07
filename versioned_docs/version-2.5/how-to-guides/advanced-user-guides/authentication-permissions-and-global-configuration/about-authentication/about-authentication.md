@@ -81,7 +81,7 @@ Configuring external authentication requires:
 - A local user assigned the administrator role, called hereafter the _local principal_.
 - An external user that can authenticate with your external authentication service, called hereafter the _external principal_.
 
-The configuration of external authentication also affects how principal users are managed within Rancher. Specifically, when a user account enables an external provider, it is granted Admin-level permissions. This is because the local principal and external principal share the same user ID and access rights.
+The configuration of external authentication also affects how principal users are managed within Rancher. Specifically, when a user account enables an external provider, it is granted admin-level permissions. This is because the local principal and external principal share the same user ID and access rights.
 
 The following instructions demonstrate these effects:
 
