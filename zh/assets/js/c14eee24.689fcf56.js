@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[25741],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[7927],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 2541:
+/***/ 1049:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher",
-    "id": "version-2.7/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher",
+    "id": "version-2.8/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher",
     "title": "Helm Charts in Rancher",
     "description": "In this section, you'll learn how to manage Helm chart repositories and applications in Rancher. Helm chart repositories are managed using Apps. It uses a catalog-like system to import bundles of charts from repositories and then uses those charts to either deploy custom Helm applications or Rancher's tools such as Monitoring or Istio. Rancher tools come as pre-loaded repositories which deploy as standalone Helm charts. Any additional repositories are only added to the current cluster.",
-    "source": "@site/versioned_docs/version-2.7/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md",
+    "source": "@site/versioned_docs/version-2.8/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md",
     "sourceDirName": "how-to-guides/new-user-guides/helm-charts-in-rancher",
     "slug": "/how-to-guides/new-user-guides/helm-charts-in-rancher/",
-    "permalink": "/v2.7/how-to-guides/new-user-guides/helm-charts-in-rancher/",
+    "permalink": "/zh/v2.8/how-to-guides/new-user-guides/helm-charts-in-rancher/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "Jan 29, 2024",
+    "version": "2.8",
+    "lastUpdatedAt": 1709838655,
+    "formattedLastUpdatedAt": "2024年3月7日",
     "frontMatter": {
         "title": "Helm Charts in Rancher"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Kubernetes Registry and Container Image Registry",
-        "permalink": "/v2.7/how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries"
+        "title": "Kubernetes 镜像仓库和容器镜像仓库",
+        "permalink": "/zh/v2.8/how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries"
     },
     "next": {
-        "title": "Creating Apps",
-        "permalink": "/v2.7/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps"
+        "title": "创建应用",
+        "permalink": "/zh/v2.8/how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps"
     }
 };
 const assets = {};
@@ -360,6 +360,26 @@ const toc = [
         value: 'Repositories',
         id: 'repositories',
         level: 3
+    },
+    {
+        value: 'Add Custom Git Repositories',
+        id: 'add-custom-git-repositories',
+        level: 4
+    },
+    {
+        value: 'Add Custom Helm Chart Repositories',
+        id: 'add-custom-helm-chart-repositories',
+        level: 4
+    },
+    {
+        value: 'Add Private Git/Helm Chart Repositories',
+        id: 'add-private-githelm-chart-repositories',
+        level: 4
+    },
+    {
+        value: 'Add a Private CA to Repositories',
+        id: 'add-a-private-ca-to-repositories',
+        level: 4
     },
     {
         value: 'Helm Compatibility',
@@ -661,7 +681,28 @@ function MDXContent(_param) {
         "id": "repositories"
     }, `Repositories`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `From the left sidebar select `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
         parentName: "p"
-    }, `"Repositories"`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These items represent Helm repositories, and can be either traditional Helm endpoints which have an index.yaml, or git repositories which will be cloned and can point to a specific branch. In order to use custom charts, simply add your repository here and they will become available in the Charts tab under the name of the repository.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To add a private CA for Helm Chart repositories:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `"Repositories"`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These items represent Helm repositories, and can be either traditional Helm endpoints which have an index.yaml, or Git repositories which will be cloned and can point to a specific branch. In order to use custom charts, simply add your repository here and they will become available in the Charts tab under the name of the repository.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+        "id": "add-custom-git-repositories"
+    }, `Add Custom Git Repositories`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Create`), ` and select the target, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Git repository containing Helm chart...`), ` to add a custom Git repository that contains your Helm charts or cluster template definitions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You must enter a name and a Git repository URL. The other fields, including the description, are optional. Enter an alternative branch name if you don't want to pull from the default, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `main`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Whenever you add a chart repository to Rancher, it becomes available immediately.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+        "id": "add-custom-helm-chart-repositories"
+    }, `Add Custom Helm Chart Repositories`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can add your own Helm chart repositories to serve chart packages to Rancher. You can use any HTTP server, as long as the server can respond to GET requests and serve YAML files and tar archives.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information on Helm chart repositories, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://helm.sh/docs/topics/chart_repository/"
+    }, `official Helm docs`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To add a custom Helm chart repository to Rancher, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Create`), ` and select `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `http(s) URL to an index generated by Helm`), ` as the target. Enter a repo name and the index URL address of the chart repository.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+        "id": "add-private-githelm-chart-repositories"
+    }, `Add Private Git/Helm Chart Repositories`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can add private Git or Helm chart repositories with SSH key credentials or an HTTP basic auth secret, such as a username and password.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+        "id": "add-a-private-ca-to-repositories"
+    }, `Add a Private CA to Repositories`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To add a private CA to Helm chart repositories:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
@@ -763,7 +804,7 @@ spec:
         parentName: "ul"
     }, `The legacy `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/how-to-guides/advanced-user-guides/enable-experimental-features/"
+        "href": "/zh/v2.8/how-to-guides/advanced-user-guides/enable-experimental-features/"
     }, `feature flag`), ` must be turned on (if it's not turned on automatically because of having a legacy app before upgrading)`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `You can upgrade the app from cluster explorer, from the left nav section `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
