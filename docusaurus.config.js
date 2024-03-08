@@ -1330,7 +1330,7 @@ module.exports = {
             from: '/v2.7/pages-for-subheaders/aws-marketplace-payg-integration'
           }, // Redirect for aws pages-for-subheader removal
           {
-            to: '/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration`,
+            to: '/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration',
             from: '/v2.7/pages-for-subheaders/azure-marketplace-payg-integration'
           }, // Redirect for azure pages-for-subheader removal
           {
