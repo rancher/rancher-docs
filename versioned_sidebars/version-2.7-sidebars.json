@@ -1117,7 +1117,7 @@
           "label": "Cloud Marketplace Pay-as-you-go (PAYG) Integration",
           "link": {
             "type": "doc",
-            "id": "integrations-in-rancher/cloud-marketplace/unified-payg-faq"
+            "id": "integrations-in-rancher/cloud-marketplace/cloud-marketplace-payg-integration"
           },
           "items": [
             {
