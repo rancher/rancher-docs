@@ -2369,6 +2369,14 @@ module.exports = {
             to: '/how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods',
             from: '/pages-for-subheaders/workloads-and-pods'
           }, // Redirects for pages-for-subheaders removal [latest] (end)
+          {
+            to: '/2.7/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration',
+            from: '/2.7/pages-for-subheaders/aws-marketplace-payg-integration' 
+          }, // Redirect for aws pages-for-subheader removal
+          {
+            to: '/2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration',
+            from: '/2.7/pages-for-subheaders/azure-marketplace-payg-integration'
+          }, // Redirect for azure pages-for-subheader removal
           { // Redirects for dashboard#9970
             to: '/v2.8/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences',
             from: '/v2.8/cluster-provisioning/rke-clusters/behavior-differences-between-rke1-and-rke2/'
