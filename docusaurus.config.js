@@ -1326,7 +1326,7 @@ module.exports = {
             from: '/v2.7/pages-for-subheaders/about-provisioning-drivers'
           },
           {
-            to: '/v2.7/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration`,
+            to: '/v2.7/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration',
             from: '/v2.7/pages-for-subheaders/aws-marketplace-payg-integration'
           }, // Redirect for aws pages-for-subheader removal
           {
