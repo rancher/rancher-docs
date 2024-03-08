@@ -1330,6 +1330,10 @@ module.exports = {
             from: '/v2.7/pages-for-subheaders/aws-marketplace-payg-integration'
           },
           {
+            to: `/2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration`,
+            from: '/v2.7/pages-for-subheaders/azure-marketplace-payg-integration'
+          },
+          {
             to: '/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates',
             from: '/v2.7/pages-for-subheaders/about-rke1-templates'
           },
@@ -1686,6 +1690,10 @@ module.exports = {
             from: '/v2.8/pages-for-subheaders/aws-marketplace-payg-integration'
           },
           {
+            to: `/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration`,
+            from: '/pages-for-subheaders/azure-marketplace-payg-integration'
+          },
+          {
             to: '/v2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates',
             from: '/v2.8/pages-for-subheaders/about-rke1-templates'
           },
@@ -2036,6 +2044,10 @@ module.exports = {
           {
             to: `/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace`,
             from: '/pages-for-subheaders/aws-marketplace-payg-integration'
+          },
+          {
+            to: `/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration`,
+            from: '/pages-for-subheaders/azure-marketplace-payg-integration'
           },
           {
             to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates',
