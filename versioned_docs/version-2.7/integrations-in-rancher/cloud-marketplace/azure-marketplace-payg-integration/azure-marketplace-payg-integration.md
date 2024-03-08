@@ -21,3 +21,7 @@ Rancher Prime integrates with the [Azure Marketplace](https://azuremarketplace.m
 
 1. Complete the [prerequisite steps](prerequisites.md).
 2. [Install the Rancher Prime PAYG offering on the Azure Marketplace](installing-rancher-prime.md).
+
+## FAQ
+
+For a list of frequently asked questions, refer to [FAQ](../cloud-marketplace-payg-integration.md#faq).
