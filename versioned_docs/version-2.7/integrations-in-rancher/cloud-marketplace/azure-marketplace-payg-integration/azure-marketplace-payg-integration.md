@@ -24,4 +24,4 @@ Rancher Prime integrates with the [Azure Marketplace](https://azuremarketplace.m
 
 ## FAQ
 
-For a list of frequently asked questions, refer to [FAQ](../cloud-marketplace-payg-integration.md#faq).
+For a list of frequently asked questions, refer to the [pay-as-you-go FAQ](../cloud-marketplace-payg-integration.md#faq).
