@@ -31,7 +31,7 @@ Set `metadata.namespace` and `spec.clusterName` to the ID for the cluster the pr
 
 :::note
 
-If you're a cluster member, set `metadata.annotations.field.cattle.io/creatorId` to `cluster-member-user-id`. This allows the project to respond to `get` requests and be visible when you log in as a member. You don't need to set this annotation if you're a cluster owner or admin.
+If the account you are using to create a project is a cluster member, set `metadata.annotations.field.cattle.io/creatorId` to the user ID for the account. This allows the project to respond to your **GET** requests and be visible when you login to the Rancher UI through the account. You don't need to set this annotation if the account is a cluster owner or admin.
 
 :::
 
