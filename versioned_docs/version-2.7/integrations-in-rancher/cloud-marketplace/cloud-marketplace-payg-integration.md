@@ -65,9 +65,7 @@ No. The Rancher listing on the cloud is not available to purchase in all countri
 
 Your billing country is based on the cloud provider Account ID used to do the deployment.
 
-Please refer to the following lists of countries that can and cannot transact Rancher Prime via the AWS and Azure Marketplace.
-
-https://documentation.suse.com/sle-public-cloud/all/html/public-cloud/countrylist.html#
+Please refer to [Geographical availability](https://documentation.suse.com/sle-public-cloud/all/html/public-cloud/countrylist.html#) for a list of countries that can and cannot transact Rancher Prime via the AWS and Azure Marketplace.
 
 #### My cloud provider account is in the USA, but I want to deploy Rancher in another region, a region that is in a country where I currently cannot transact Rancher Prime. Is this possible?
 
@@ -155,7 +153,7 @@ Depending on the deployment, and the cloud provider, securing special commercial
 
 #### Can my spend on Rancher Prime count towards my cloud provider discount program?
 
-Yes this should be possible.
+Yes. This should be possible through the:
 
 - Azure MACC Program
 - AWS Enterprise Discount Program
@@ -260,4 +258,6 @@ Yes. Managed nodes (managed clusters) can run anywhere. SUSE Rancher will count 
 
 #### How do I get fixes and updates for Rancher?
 
-To update to the latest version of the Rancher Prime PAYG offering supported in the marketplace listing, please see [upgrading Rancher Prime PAYG cluster in AWS](../cloud-marketplace/aws-marketplace-payg-integration/upgrading-rancher-payg-cluster.md).
+To update to the latest version of the Rancher Prime PAYG offering supported in the marketplace listing, please see:
+  - [Upgrading Rancher Prime PAYG cluster in AWS](../cloud-marketplace/aws-marketplace-payg-integration/upgrading-rancher-payg-cluster.md)
+  - [Upgrading Rancher Prime PAYG cluster in Azure](../cloud-marketplace/azure-marketplace-payg-integration/upgrading-rancher-payg-cluster.md)
