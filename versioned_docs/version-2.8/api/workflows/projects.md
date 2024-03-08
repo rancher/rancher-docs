@@ -29,11 +29,25 @@ Use `metadata.generateName` to ensure a unique project ID, but note that `kubect
 
 Set `metadata.namespace` and `spec.clusterName` to the ID for the cluster the project belongs to.
 
-:::note
+If you create a project through a cluster member account, you must include the annotation, `field.cattle.io/creatorId`, and set it to the cluster member account's user ID.
 
-If the account you are using to create a project is a cluster member, set `metadata.annotations.field.cattle.io/creatorId` to the user ID for the account. This allows the project to respond to your **GET** requests and be visible when you login to the Rancher UI through the account. You don't need to set this annotation if the account is a cluster owner or admin.
+```bash
+kubectl create -f - <<EOF
+apiVersion: management.cattle.io/v3
+kind: Project
+metadata:
+  annotations: 
+  field.cattle.io/creatorId:
+    user-id
+  generateName: p-
+  namespace: c-m-abcde
+spec:
+  clusterName: c-m-abcde
+  displayName: myproject
+EOF
+```
 
-:::
+Setting the `field.cattle.io/creatorId` field allows the cluster member account to see project resources with the `get` command and view the project in the Rancher UI. Cluster owner and admin accounts don't need to set this annotation to perform these tasks.
 
 ### Creating a Project With a Resource Quota
 
