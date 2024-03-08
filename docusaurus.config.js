@@ -1326,6 +1326,10 @@ module.exports = {
             from: '/v2.7/pages-for-subheaders/about-provisioning-drivers'
           },
           {
+            to: `/v2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace`,
+            from: '/v2.7/pages-for-subheaders/aws-marketplace-payg-integration'
+          },
+          {
             to: '/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates',
             from: '/v2.7/pages-for-subheaders/about-rke1-templates'
           },
@@ -1678,6 +1682,10 @@ module.exports = {
             from: '/v2.8/pages-for-subheaders/about-provisioning-drivers'
           },
           {
+            to: `/v2.8/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace`,
+            from: '/v2.8/pages-for-subheaders/aws-marketplace-payg-integration'
+          },
+          {
             to: '/v2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates',
             from: '/v2.8/pages-for-subheaders/about-rke1-templates'
           },
@@ -2024,6 +2032,10 @@ module.exports = {
           { // Redirects for pages-for-subheaders removal [latest]
             to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers',
             from: '/pages-for-subheaders/about-provisioning-drivers'
+          },
+          {
+            to: `/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace`,
+            from: '/pages-for-subheaders/aws-marketplace-payg-integration'
           },
           {
             to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates',
