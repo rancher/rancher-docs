@@ -22,11 +22,11 @@ Now in the Cluster Explorer, Rancher uses a similar but simplified version of th
 
 From the top-left menu select **Apps & Marketplace** and you will be taken to the **Charts** page.
 
-The **Charts** page contains all Rancher, Partner, and Custom Charts.
+The **Charts** page contains all Rancher, Partner, and Custom charts.
 
-* Rancher tools such as Logging or Monitoring are included under the Rancher label
-* Partner charts reside under the Partners label
-* Custom charts will show up under the name of the repository
+* Rancher tools such as Logging or Monitoring are included under the Rancher label.
+* Partner charts reside under the Partners label.
+* Custom charts will show up under the name of the repository.
 
 All three types are deployed and managed in the same way.
 

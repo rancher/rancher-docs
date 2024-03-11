@@ -66,11 +66,11 @@ To display prerelease versions:
 
 From the top-left menu select **Apps** and you will be taken to the **Charts** page.
 
-The charts page contains all Rancher, Partner, and Custom Charts.
+The **Charts** page contains all Rancher, Partner, and Custom charts.
 
-* Rancher tools such as Logging or Monitoring are included under the Rancher label
-* Partner charts reside under the Partners label
-* Custom charts will show up under the name of the repository
+* Rancher tools such as Logging or Monitoring are included under the Rancher label.
+* Partner charts reside under the Partners label.
+* Custom charts will show up under the name of the repository.
 
 All three types are deployed and managed in the same way.
 
@@ -154,7 +154,7 @@ Only Helm 3 compatible charts are supported.
 
 ### Deployment and Upgrades
 
-From the **Charts** tab select a Chart to install. Rancher and Partner charts may have extra configurations available through custom pages or questions.yaml files, but all chart installations can modify the values.yaml and other basic settings. Once you click install, a Helm operation job is deployed, and the console for the job is displayed.
+From the **Charts** tab select a chart to install. Rancher and Partner charts may have extra configurations available through custom pages or questions.yaml files, but all chart installations can modify the values.yaml and other basic settings. Once you click install, a Helm operation job is deployed, and the console for the job is displayed.
 
 To view all recent changes, go to the **Recent Operations** tab. From there you can view the call that was made, conditions, events, and logs.
 
