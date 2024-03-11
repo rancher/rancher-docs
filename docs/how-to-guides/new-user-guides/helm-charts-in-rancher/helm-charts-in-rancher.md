@@ -169,7 +169,7 @@ If you are upgrading your chart using **Customize Helm options before upgrade**,
 
   * use the default upgrade option ( i.e do not use `--force` option )
   * uninstall the existing chart and install the upgraded chart
-  * delete the resources with immutable fields from the cluster before performing the **--force** upgrade
+  * delete the resources with immutable fields from the cluster before performing the `--force` upgrade
 
 :::
 

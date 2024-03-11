@@ -170,7 +170,7 @@ Most Rancher tools have additional pages located in the toolbar below the **Apps
 
 :::caution
 
-If you are upgrading your chart using **Customize Helm options before upgrade**, please be aware that using the **--force** option may result in errors if your chart has immutable fields. This is because some objects in Kubernetes cannot be changed once they are created. To ensure you do not get this error you can:
+If you are upgrading your chart using **Customize Helm options before upgrade**, please be aware that using the `--force` option may result in errors if your chart has immutable fields. This is because some objects in Kubernetes cannot be changed once they are created. To ensure you do not get this error you can:
 
   * Use the default upgrade option ( i.e do not use `--force` option ).
   * Uninstall the existing chart and install the upgraded chart.
