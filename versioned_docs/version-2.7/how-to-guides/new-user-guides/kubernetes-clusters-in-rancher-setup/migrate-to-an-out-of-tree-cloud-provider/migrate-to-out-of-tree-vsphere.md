@@ -1,10 +1,14 @@
 ---
-title: Migrating vSphere In-tree Volumes to Out-of-tree
+title: Migrating vSphere In-tree to Out-of-tree
 ---
 
 <head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-vsphere"/>
 </head>
+
+:::note
+Rancher Prime provides access to Rancher v2.7.11, a version of Rancher v2.7.x which supports Kubernetes 1.27. If you use Rancher v2.7.11 and upgrade to Kubernetes 1.27, you must use an out-of-tree cloud provider.
+:::
 
 Kubernetes is moving away from maintaining cloud providers in-tree. vSphere has an out-of-tree cloud provider that can be used by installing the vSphere cloud provider and cloud storage plugins.
 
@@ -64,7 +68,7 @@ Once all nodes are tainted by the running the script, launch the Helm vSphere CP
 1. Click **☰ > Cluster Management**.
 1. Go to the cluster where the vSphere CPI chart will be installed and click **Explore**.
 1. Click **Apps > Charts**.
-1. Click **vSphere CPI**..
+1. Click **vSphere CPI**.
 1. Click **Install**.
 1. Fill out the required vCenter details and click **Install**.
 
@@ -81,7 +85,7 @@ kubectl describe nodes | grep "ProviderID"
 1. Click **☰ > Cluster Management**.
 1. Go to the cluster where the vSphere CSI chart will be installed and click **Explore**.
 1. Click **Apps > Charts**.
-1. Click **vSphere CSI**..
+1. Click **vSphere CSI**.
 1. Click **Install**.
 1. Fill out the required vCenter details and click **Install**.
 1. Check **Customize Helm options before install** and click **Next**.

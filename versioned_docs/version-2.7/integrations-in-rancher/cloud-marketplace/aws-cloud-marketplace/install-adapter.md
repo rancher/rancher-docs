@@ -29,6 +29,8 @@ In order to deploy and run the adapter successfully, you need to ensure its vers
 | v2.7.7          |     v2.0.2      |
 | v2.7.8          |     v2.0.2      |
 | v2.7.9          |     v2.0.2      |
+| v2.7.10         |     v2.0.2      |
+| v2.7.11         |     v2.0.4      |
 
 
 ### 1. Gain Access to the Local Cluster

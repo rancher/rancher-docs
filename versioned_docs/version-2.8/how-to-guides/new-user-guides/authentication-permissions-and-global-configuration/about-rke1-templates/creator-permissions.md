@@ -40,8 +40,8 @@ An administrator can individually grant the role **Create RKE Templates** to any
 Alternatively, the administrator can give all new users the default permission to create RKE templates by following the following steps. This will not affect the permissions of existing users.
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
-1. In the left navigation bar, click **Roles**.
-1. Go to the role named **Create new RKE Cluster Templates and click **⋮ > Edit Config**.
+1. In the left navigation bar, click **Role Templates**.
+1. Select **Create new RKE Cluster Templates** and click **⋮ > Edit Config**.
 1. Select the option **Yes: Default role for new users**.
 1. Click **Save**.
 1. If you would like new users to also be able to create RKE template revisions, enable that role as default as well.
