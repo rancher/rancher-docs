@@ -625,7 +625,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Helm Charts in Rancher',
+              label: 'Helm Charts and Apps',
               link: {
                 type: 'doc',
                 id: "how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher",

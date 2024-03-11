@@ -1,12 +1,22 @@
 ---
-title: Helm Charts in Rancher
+title: Helm Charts and Apps
 ---
 
 <head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/helm-charts-in-rancher"/>
 </head>
 
-In this section, you'll learn how to manage Helm chart repositories and applications in Rancher. Helm chart repositories are managed using **Apps**. It uses a catalog-like system to import bundles of charts from repositories and then uses those charts to either deploy custom Helm applications or Rancher's tools such as Monitoring or Istio. Rancher tools come as pre-loaded repositories which deploy as standalone Helm charts. Any additional repositories are only added to the current cluster.
+In this section, you'll learn how to manage Helm chart repositories and apps in Rancher. 
+
+Helm chart repositories in Rancher are managed using **Apps**.
+
+## Catalogs
+
+In Rancher v2.4 and earlier, repositories of applications were called "catalogs". In Rancher v2.5, the section of the UI formerly named **Catalogs** was renamed to **Apps & Marketplace**, and later, **Apps**.
+
+## Helm Charts in Rancher
+
+Rancher uses a catalog-like system to import bundles of charts from repositories and then uses those charts to either deploy custom Helm applications or Rancher's tools such as Monitoring or Istio. Rancher tools come as pre-loaded repositories which deploy as standalone Helm charts. Any additional repositories are only added to the current cluster.
 
 ### Versioning Scheme
 
@@ -167,12 +177,11 @@ If you are upgrading your chart using _"Customize Helm options before upgrade"_ 
 
 The upgrade button has been removed for legacy apps from the **Apps > Installed Apps** page.
 
-If you have a legacy app installed and want to upgrade it:
+If you have a legacy app installed and want to upgrade it, the legacy [feature flag](../../advanced-user-guides/enable-experimental-features/enable-experimental-features.md) must be turned on. If you have a legacy app already running before you upgrade, this flag will already be on.
 
-- The legacy [feature flag](../../advanced-user-guides/enable-experimental-features/enable-experimental-features.md) must be turned on (if it's not turned on automatically because of having a legacy app before upgrading)
-- You can upgrade the app from cluster explorer, from the left nav section **Legacy > Project > Apps**
-- For multi-cluster apps, you can go to **≡ > Multi-cluster Apps** and upgrade the app from there
+- You can upgrade the app from cluster explorer, from the left nav section **Legacy > Project > Apps**.
+- For multi-cluster apps, go to **≡ > Multi-cluster Apps** and upgrade the app from there.
 
 ### Limitations
 
-Dashboard apps or Rancher feature charts **cannot** be installed using the Rancher CLI.
+Dashboard apps or Rancher feature charts **cannot** be installed using the Rancher CLI.  
