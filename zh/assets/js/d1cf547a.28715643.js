@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[10176],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[27188],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 27021:
+/***/ 4160:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -314,19 +314,19 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting",
-    "id": "version-2.8/integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting",
+    "id": "integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting",
     "title": "Monitoring and Alerting",
     "description": "Prometheus lets you view metrics from your different Rancher and Kubernetes objects. Learn about the scope of monitoring and how to enable cluster monitoring",
-    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md",
+    "source": "@site/docs/integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md",
     "sourceDirName": "integrations-in-rancher/monitoring-and-alerting",
     "slug": "/integrations-in-rancher/monitoring-and-alerting/",
-    "permalink": "/zh/v2.8/integrations-in-rancher/monitoring-and-alerting/",
+    "permalink": "/zh/integrations-in-rancher/monitoring-and-alerting/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1709232348,
-    "formattedLastUpdatedAt": "2024年2月29日",
+    "version": "current",
+    "lastUpdatedAt": 1710192449,
+    "formattedLastUpdatedAt": "2024年3月11日",
     "frontMatter": {
         "title": "Monitoring and Alerting",
         "description": "Prometheus lets you view metrics from your different Rancher and Kubernetes objects. Learn about the scope of monitoring and how to enable cluster monitoring"
@@ -334,11 +334,11 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Outputs 和 ClusterOutputs",
-        "permalink": "/zh/v2.8/integrations-in-rancher/logging/custom-resource-configuration/outputs-and-clusteroutputs"
+        "permalink": "/zh/integrations-in-rancher/logging/custom-resource-configuration/outputs-and-clusteroutputs"
     },
     "next": {
         "title": "Monitoring 的工作原理",
-        "permalink": "/zh/v2.8/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works"
+        "permalink": "/zh/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works"
     }
 };
 const assets = {};
@@ -442,16 +442,16 @@ function MDXContent(_param) {
         "href": "https://github.com/DirectXMan12/k8s-prometheus-adapter"
     }, `Prometheus adapter.`), ` `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For information on V1 monitoring and alerting, available in Rancher v2.2 up to v2.4, please see the Rancher v2.0—v2.4 docs on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/versioned_docs/version-2.0-2.4/pages-for-subheaders/cluster-monitoring.md"
+        "href": "/zh/v2.0-v2.4/explanations/integrations-in-rancher/cluster-monitoring/"
     }, `cluster monitoring`), `, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/versioned_docs/version-2.0-2.4/pages-for-subheaders/cluster-alerts.md"
+        "href": "/zh/v2.0-v2.4/explanations/integrations-in-rancher/cluster-alerts/"
     }, `alerting`), `, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "/zh/v2.0-v2.4/explanations/integrations-in-rancher/notifiers"
     }, `notifiers`), ` and other `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/versioned_docs/version-2.0-2.4/pages-for-subheaders/project-tools.md"
+        "href": "/zh/v2.0-v2.4/reference-guides/rancher-project-tools/"
     }, `tools`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Using the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `rancher-monitoring`), ` application, you can quickly deploy leading open-source monitoring and alerting solutions onto your cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {

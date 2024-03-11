@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[89546],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[20471],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 18879:
+/***/ 42883:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-permissions-and-global-configuration",
-    "id": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-permissions-and-global-configuration",
+    "id": "version-2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-permissions-and-global-configuration",
     "title": "Authentication, Permissions and Global Settings",
     "description": "After installation, the system administrator should configure Rancher to configure authentication, authorization, security, default settings, security policies, drivers and global DNS entries.",
-    "source": "@site/docs/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-permissions-and-global-configuration.md",
+    "source": "@site/versioned_docs/version-2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-permissions-and-global-configuration.md",
     "sourceDirName": "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration",
     "slug": "/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/",
-    "permalink": "/zh/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/",
+    "permalink": "/zh/v2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-permissions-and-global-configuration.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-permissions-and-global-configuration.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "2024年1月29日",
+    "version": "2.8",
+    "lastUpdatedAt": 1708996784,
+    "formattedLastUpdatedAt": "2024年2月27日",
     "frontMatter": {
         "title": "Authentication, Permissions and Global Settings"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "New User Guides",
-        "permalink": "/zh/how-to-guides/new-user-guides/"
+        "permalink": "/zh/v2.8/how-to-guides/new-user-guides/"
     },
     "next": {
         "title": "Configuring Authentication",
-        "permalink": "/zh/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/"
+        "permalink": "/zh/v2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/"
     }
 };
 const assets = {};
@@ -416,7 +416,7 @@ function MDXContent(_param) {
         "id": "authentication"
     }, `Authentication`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `One of the key features that Rancher adds to Kubernetes is centralized user authentication. This feature allows to set up local users and/or connect to an external authentication provider. By connecting to an external authentication provider, you can leverage that provider's user and groups.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information how authentication works and how to configure each provider, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/"
+        "href": "/zh/v2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/"
     }, `Authentication`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "authorization"
     }, `Authorization`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Within Rancher, each person authenticates as a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
@@ -425,7 +425,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `authorization`), `, or their access rights within the system, is determined by the user's role. Rancher provides built-in roles to allow you to easily configure a user's permissions to resources, but Rancher also provides the ability to customize the roles for each Kubernetes resource.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information how authorization works and how to customize roles, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/"
+        "href": "/zh/v2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/"
     }, `Roles Based Access Control (RBAC)`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "pod-security-policies"
     }, `Pod Security Policies`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
@@ -437,13 +437,13 @@ function MDXContent(_param) {
         "id": "provisioning-drivers"
     }, `Provisioning Drivers`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Drivers in Rancher allow you to manage which providers can be used to provision `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/"
+        "href": "/zh/v2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/"
     }, `hosted Kubernetes clusters`), ` or `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/"
+        "href": "/zh/v2.8/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/"
     }, `nodes in an infrastructure provider`), ` to allow Rancher to deploy and manage Kubernetes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/"
+        "href": "/zh/v2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/"
     }, `Provisioning Drivers`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "adding-kubernetes-versions-into-rancher"
     }, `Adding Kubernetes Versions into Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `With this feature, you can upgrade to the latest version of Kubernetes as soon as it is released, without upgrading Rancher. This feature allows you to easily upgrade Kubernetes patch versions (i.e. `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -452,13 +452,13 @@ function MDXContent(_param) {
         parentName: "p"
     }, `v1.X.0`), `) as Kubernetes tends to deprecate or add APIs between minor versions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The information that Rancher uses to provision `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/"
+        "href": "/zh/v2.8/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/"
     }, `RKE clusters`), ` is now located in the Rancher Kubernetes Metadata. For details on metadata configuration and how to change the Kubernetes version used for provisioning RKE clusters, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "../../../getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher.md"
     }, `Rancher Kubernetes Metadata.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher Kubernetes Metadata contains Kubernetes version information which Rancher uses to provision `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/"
+        "href": "/zh/v2.8/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/"
     }, `RKE clusters`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information on how metadata works and how to configure metadata config, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "../../../getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher.md"
@@ -509,7 +509,7 @@ function MDXContent(_param) {
         "id": "enabling-experimental-features"
     }, `Enabling Experimental Features`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher includes some features that are experimental and/or disabled by default. Feature flags allow you to enable these features. For more information, refer to the section about `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/how-to-guides/advanced-user-guides/enable-experimental-features/"
+        "href": "/zh/v2.8/how-to-guides/advanced-user-guides/enable-experimental-features/"
     }, `feature flags.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "global-configuration"
     }, `Global Configuration`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -518,7 +518,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `legacy`), ` `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/how-to-guides/advanced-user-guides/enable-experimental-features/"
+        "href": "/zh/v2.8/how-to-guides/advanced-user-guides/enable-experimental-features/"
     }, `feature flag`), `. The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
     }, `legacy`), ` flag is disabled by default on fresh Rancher installs of v2.6 and later. If you upgrade from an earlier Rancher version, or activate the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -551,7 +551,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, `Global DNS Providers`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `As these are legacy features, please see the Rancher v2.0—v2.4 docs on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/versioned_docs/version-2.0-2.4/pages-for-subheaders/helm-charts-in-rancher.md"
+        "href": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/"
     }, `catalogs`), `, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns#adding-a-global-dns-entry"

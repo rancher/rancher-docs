@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "Jan 29, 2024",
+    "lastUpdatedAt": 1708996784,
+    "formattedLastUpdatedAt": "Feb 27, 2024",
     "frontMatter": {
         "title": "GKE Cluster Configuration Reference"
     },
@@ -880,7 +880,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `The default option is "Container-Optimized OS with Docker". The read-only filesystem on GCP's Container-Optimized OS is not compatible with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/versioned_docs/version-2.0-2.4/pages-for-subheaders/cluster-logging.md"
+        "href": "/v2.0-v2.4/explanations/integrations-in-rancher/cluster-logging/"
     }, `legacy logging`), ` implementation in Rancher. If you need to use the legacy logging feature, select "Ubuntu with Docker" or "Ubuntu with Containerd". The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "/integrations-in-rancher/logging/"

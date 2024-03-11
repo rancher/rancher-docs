@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.8/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md",
     "sourceDirName": "reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration",
     "slug": "/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/",
-    "permalink": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/",
+    "permalink": "/zh/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "Jan 29, 2024",
+    "lastUpdatedAt": 1708996784,
+    "formattedLastUpdatedAt": "2024年2月27日",
     "frontMatter": {
         "title": "GKE Cluster Configuration Reference"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "AKS Cluster Configuration Reference",
-        "permalink": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration"
+        "title": "AKS 集群配置参考",
+        "permalink": "/zh/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration"
     },
     "next": {
-        "title": "Private Clusters",
-        "permalink": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters"
+        "title": "私有集群",
+        "permalink": "/zh/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters"
     }
 };
 const assets = {};
@@ -783,7 +783,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `Private clusters require additional planning and configuration outside of Rancher. Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters"
+        "href": "gke-private-clusters.md"
     }, `private cluster guide`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Assign nodes only internal IP addresses. Private cluster nodes cannot access the public internet unless additional networking steps are taken in GCP.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "enable-private-endpoint"
     }, `Enable Private Endpoint`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
@@ -792,7 +792,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `Private clusters require additional planning and configuration outside of Rancher. Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters"
+        "href": "gke-private-clusters.md"
     }, `private cluster guide`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
         parentName: "p"
     }, `Mutable: no`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Locks down external access to the control plane endpoint. Only available if `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -880,10 +880,10 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `The default option is "Container-Optimized OS with Docker". The read-only filesystem on GCP's Container-Optimized OS is not compatible with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/versioned_docs/version-2.0-2.4/pages-for-subheaders/cluster-logging.md"
+        "href": "/zh/v2.0-v2.4/explanations/integrations-in-rancher/cluster-logging/"
     }, `legacy logging`), ` implementation in Rancher. If you need to use the legacy logging feature, select "Ubuntu with Docker" or "Ubuntu with Containerd". The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/integrations-in-rancher/logging/"
+        "href": "/zh/v2.8/integrations-in-rancher/logging/"
     }, `current logging feature`), ` is compatible with the Container-Optimized OS image.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
