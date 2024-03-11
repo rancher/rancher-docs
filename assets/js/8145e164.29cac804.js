@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.8/api/workflows/projects.md",
     "sourceDirName": "api/workflows",
     "slug": "/api/workflows/projects",
-    "permalink": "/zh/v2.8/api/workflows/projects",
+    "permalink": "/v2.8/api/workflows/projects",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/api/workflows/projects.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1708707047,
-    "formattedLastUpdatedAt": "2024年2月23日",
+    "lastUpdatedAt": 1710166529,
+    "formattedLastUpdatedAt": "Mar 11, 2024",
     "frontMatter": {
         "title": "Projects"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "API Quick Start Guide",
-        "permalink": "/zh/v2.8/api/quickstart"
+        "permalink": "/v2.8/api/quickstart"
     },
     "next": {
         "title": "API Reference",
-        "permalink": "/zh/v2.8/api/api-reference"
+        "permalink": "/v2.8/api/api-reference"
     }
 };
 const assets = {};
@@ -418,7 +418,29 @@ EOF
         parentName: "p"
     }, `metadata.namespace`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `spec.clusterName`), ` to the ID for the cluster the project belongs to.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `spec.clusterName`), ` to the ID for the cluster the project belongs to.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you create a project through a cluster member account, you must include the annotation, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `field.cattle.io/creatorId`), `, and set it to the cluster member account's user ID.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `kubectl create -f - <<EOF
+apiVersion: management.cattle.io/v3
+kind: Project
+metadata:
+  annotations: 
+  field.cattle.io/creatorId:
+    user-id
+  generateName: p-
+  namespace: c-m-abcde
+spec:
+  clusterName: c-m-abcde
+  displayName: myproject
+EOF
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Setting the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `field.cattle.io/creatorId`), ` field allows the cluster member account to see project resources with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `get`), ` command and view the project in the Rancher UI. Cluster owner and admin accounts don't need to set this annotation to perform these tasks.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "creating-a-project-with-a-resource-quota"
     }, `Creating a Project With a Resource Quota`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
