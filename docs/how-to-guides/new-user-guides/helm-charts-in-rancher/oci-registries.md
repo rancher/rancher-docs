@@ -2,15 +2,11 @@
 title: Using OCI Helm Chart Registries
 ---
 
-Rancher v2.9.0 introduces [Open Container Initiative (OCI)-based Helm chart registries](https://helm.sh/docs/topics/registries/) to Rancher. This feature allows you to deploy Helm charts stored as OCI artifacts.
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/helm-charts-in-rancher/oci-registries"/>
+</head>
 
-<!-- Unedited draft below -->
-
-Helm version 3 introduced the feature of storing helm chart as OCI artifacts in container registries. With Rancher 2.9.0, the repositories page in Apps section supports adding OCI based Helm repositories. Before Rancher 2.9.0, we can create only Git based or http based Helm repositories. From Rancher 2.9.0, a third option of adding OCI based helm repositories will be shown. 
-
-
-[Screenshort of the third option]
-
+Helm v3 introduced storing Helm charts as [Open Container Initiative (OCI)](https://opencontainers.org/about/overview/) artifacts in container registries. With Rancher v2.9.0, you can add [OCI-based Helm chart registries](https://helm.sh/docs/topics/registries/) alongside http- and Git-based repositories. This means you can deploy apps that are stored as OCI artifacts.
 
 ## Create <!-- Unedited draft -->
 
@@ -63,7 +59,7 @@ Select on the repository and click on delete button on the top.
 
 ## Limitations of OCI-based Helm Registries in Rancher
 
-Due to security concerns, there are size limitations on how large a Helm chart you can deploy through an OCI-based registry, and how much metadata you can use to describe the Helm charts within a single OCI URL.
+Due to security concerns, there are limitations on how large a Helm chart you can deploy through an OCI-based registry, and how much metadata you can use to describe the Helm charts within a single OCI URL.
 
 Rancher can deploy Helm charts stored as OCI artifacts up to 20 MB in size.
 
