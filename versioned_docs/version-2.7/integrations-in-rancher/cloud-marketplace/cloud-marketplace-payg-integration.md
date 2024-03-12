@@ -3,25 +3,26 @@ title: Cloud Marketplace Pay-as-you-go (PAYG) Integration
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/aws-marketplace-payg-integration"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/v2.7/integrations-in-rancher/cloud-marketplace/cloud-marketplace-payg-integration"/>
 </head>
 
 ## Overview
 
-Rancher Prime integrates with the [AWS Marketplace](https://aws.amazon.com/marketplace) and [Azure Marketplace](https://azuremarketplace.microsoft.com/) as a pay-as-you-go (PAYG) offering. This brings the value of running and managing Kubernetes environments to cloud customers, who benefit from a new pay-monthly pricing model available through their preferred cloud provider's marketplace. This listing will enable you to manage any CNCF-certified Kubernetes distribution in AWS, Azure, on-prem, or at the edge. To learn more, see our non-EMEA and EMEA Marketplace offerings for Rancher Prime:
+Rancher Prime integrates with the [AWS Marketplace](https://aws.amazon.com/marketplace) and [Azure Marketplace](https://azuremarketplace.microsoft.com/) as a pay-as-you-go (PAYG) offering. This brings the value of running and managing Kubernetes environments to cloud customers, who benefit from a new pay-monthly pricing model available through their preferred cloud provider's marketplace. This listing will enable you to manage any CNCF-certified Kubernetes distribution in AWS, Azure, on-prem, or at the edge. To learn more, see our non-EMEA and EMEA marketplace offerings for Rancher Prime:
 
-#### AWS
+### AWS
 
 - [Rancher Prime](https://aws.amazon.com/marketplace/pp/prodview-f2bvszurj2p2c)
-- [Rancher Prime (EMEA Orders Only)](https://aws.amazon.com/marketplace/pp/prodview-ocgjwd5c2aj5i)
+- [Rancher Prime (EMEA orders only)](https://aws.amazon.com/marketplace/pp/prodview-ocgjwd5c2aj5i)
 
-#### Azure
+### Azure
+
 - [Rancher Prime with 24x7 Support](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/suse.rancher-prime-llc/selectionMode~/false/resourceGroupId//resourceGroupLocation//dontDiscardJourney~/false/selectedMenuId/home/launchingContext~/%7B%22galleryItemId%22%3A%22suse.rancher-prime-llcpay-as-you-go%22%2C%22source%22%3A%5B%22GalleryFeaturedMenuItemPart%22%2C%22VirtualizedTileDetails%22%5D%2C%22menuItemId%22%3A%22home%22%2C%22subMenuItemId%22%3A%22Search%20results%22%2C%22telemetryId%22%3A%221dafcf16-920e-46ea-80c9-dc85c6bd3a17%22%7D/searchTelemetryId/c2300fb7-ba7b-462a-ba57-a37cb5e2822d)
 - [Rancher Prime with 24x7 Support (EMEA Orders Only)](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/suseirelandltd1692213356027.rancher-prime-ltd/selectionMode~/false/resourceGroupId//resourceGroupLocation//dontDiscardJourney~/false/selectedMenuId/home/launchingContext~/%7B%22galleryItemId%22%3A%22suseirelandltd1692213356027.rancher-prime-ltdpay-as-you-go%22%2C%22source%22%3A%5B%22GalleryFeaturedMenuItemPart%22%2C%22VirtualizedTileDetails%22%5D%2C%22menuItemId%22%3A%22home%22%2C%22subMenuItemId%22%3A%22Search%20results%22%2C%22telemetryId%22%3A%22c6b1d79a-b577-47b0-90e5-41e6c49688ab%22%7D/searchTelemetryId/1793144d-e0d9-466e-8e36-dfeddc73163b)
 
-## Limitations
+## Limitation
 
-- Currently, you must be running Rancher v2.7.9. When you deploy a supported PAYG version, you can update to newer versions of Rancher when the listing is updated.
+Currently, you must be running Rancher v2.7.9. When you deploy a supported PAYG version, you can update to newer versions of Rancher when the listing is updated.
 
 ## How to Use (AWS)
 
@@ -65,7 +66,7 @@ No. The PAYG listing isn't available in all countries.
 
 Your billing country is based on the cloud provider Account ID for the deployment.
 
-Please refer to [Geographical availability](https://documentation.suse.com/sle-public-cloud/all/html/public-cloud/countrylist.html#) for a list of countries that can and cannot access Rancher Prime via the AWS and Azure cloud marketplaces.
+Please refer to [Geographical availability](https://documentation.suse.com/sle-public-cloud/all/html/public-cloud/countrylist.html) for a list of countries that can and cannot access Rancher Prime via the AWS and Azure cloud marketplaces.
 
 #### My cloud provider account is in the USA, but I want to deploy Rancher in another region, a region that is in a country where I currently cannot transact Rancher Prime. Is this possible?
 
@@ -93,7 +94,7 @@ No. A new deployment of Rancher Prime is required to benefit from the new monthl
 
 Yes. The listing works independently of your existing subscriptions. Please remember that support processes may be different for deployments using your existing subscription and deployments billed via the cloud marketplace.
 
-#### Tell me more about how the billing for Rancher Prime works for the cloud marketplace.
+#### Can you tell me more about how the billing for Rancher Prime works for the cloud marketplace?
 
 When purchasing Rancher Prime via the cloud marketplace, the billing is as follows:
 
@@ -182,7 +183,7 @@ The cloud marketplace listings for Rancher Prime are deployed using Helm.
 
 #### What is the easiest way to get started?
 
-One of the easiest ways to get started is to deploy the Marketplace listing for Rancher Prime to an existing EKS or AKS cluster. Follow the instructions in the usage section, a Helm chart takes care of the installation and the setup for billing.
+Deploy a listing for Rancher Prime to an existing EKS or AKS cluster. Follow the instructions in the usage section. a Helm chart takes care of the installation and setup for billing.
 
 #### What version of Rancher is installed when using a marketplace listing?
 
