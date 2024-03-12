@@ -60,9 +60,11 @@ If you need to update immediately, you can perform a manual refresh:
 1. Find the row associated with the OCI registry, and click **⋮**.
 1. From the submenu, select **Edit Config**.
 
-## Delete
+## Delete an OCI Registry
 
-Select on the repository and click on delete button on the top.
+1. Click **☰ > Cluster Management**.
+1. In the left navigation bar, under **Advanced**, select **Repositories**.
+1. Select the row associated with the OCI registry, and click **Delete**.
 
 ## Limitations of OCI-based Helm Registries in Rancher
 
