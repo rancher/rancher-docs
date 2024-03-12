@@ -43,13 +43,17 @@ The CRD that is linked to the OCI Helm Repository is ClusterRepo.
 
 A new field has been introduced only for OCI URLs which is spec.insecurePlainHttp. This allows insecure connections to registry without SSL check and works exactly how the field works in ORAS CLI - https://oras.land/docs/commands/use_oras_cli since under the hood Rancher manager uses oras library
 
-## Refresh <!-- Unedited draft -->
+## Refresh OCI Registry
 
-Rancher manager refreshes the repository every 6 hours But if you want to refresh immediately, select the repository and click on refresh on the top. 
+Rancher automatically refreshes the OCI registry every 6 hours. 
 
-For docs about how to install/unsintall/update a helm chart please refer to this doc link
+If you need to update immediately, you can perform a manual refresh:
 
-## Update <!-- Unedited draft -->
+1. Click **☰ > Cluster Management**.
+1. In the left navigation bar, under **Advanced**, select **Repositories**.
+1. Select the row associated with the OCI registry, and click **Refresh**.
+
+## Update OCI Registry <!-- Unedited draft -->
 
 Select on the repository and click on edit config to update the configuration. 
 
