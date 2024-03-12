@@ -24,15 +24,22 @@ Rancher Prime integrates with the [AWS Marketplace](https://aws.amazon.com/marke
 
 Currently, you must be running Rancher v2.7.9. When you deploy a supported PAYG version, you can update to newer versions of Rancher when the listing is updated.
 
-## How to Use (AWS)
+## How to Use
+
+<Tabs>
+<TabItem value="How to Use (AWS)">
 
 1. Complete the [prerequisite steps](../cloud-marketplace/aws-marketplace-payg-integration/prerequisites.md).
 2. [Install the Rancher Prime PAYG offering on the AWS Marketplace](../cloud-marketplace/aws-marketplace-payg-integration/installing-rancher-prime.md).
 
-## How to Use (Azure)
+</TabItem>
+<TabItem value="How to Use (Azure)">
 
 1. Complete the [prerequisite steps](../cloud-marketplace/azure-marketplace-payg-integration/prerequisites.md).
 2. [Install the Rancher Prime PAYG offering on the Azure Marketplace](../cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime.md).
+
+</TabItem>
+</Tabs>
 
 ## FAQ
 
