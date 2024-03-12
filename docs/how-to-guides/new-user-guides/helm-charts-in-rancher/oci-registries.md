@@ -53,9 +53,12 @@ If you need to update immediately, you can perform a manual refresh:
 1. In the left navigation bar, under **Advanced**, select **Repositories**.
 1. Select the row associated with the OCI registry, and click **Refresh**.
 
-## Update OCI Registry <!-- Unedited draft -->
+## Update OCI Registry Configuration <!-- Unedited draft -->
 
-Select on the repository and click on edit config to update the configuration. 
+1. Click **☰ > Cluster Management**.
+1. In the left navigation bar, under **Advanced**, select **Repositories**.
+1. Find the row associated with the OCI registry, and click **⋮**.
+1. From the submenu, select **Edit Config**.
 
 ## Delete
 
