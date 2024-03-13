@@ -8,7 +8,36 @@ title: Using OCI Helm Chart Registries
 
 Helm v3 introduced storing Helm charts as [Open Container Initiative (OCI)](https://opencontainers.org/about/overview/) artifacts in container registries. With Rancher v2.9.0, you can add [OCI-based Helm chart registries](https://helm.sh/docs/topics/registries/) alongside http- and Git-based repositories. This means you can deploy apps that are stored as OCI artifacts.
 
-## Create <!-- Unedited draft -->
+## Add an OCI Registry
+
+To add an OCI Registry through the Rancher UI:
+
+1. Click **☰ > Cluster Management**.
+1. In the left navigation bar, under **Advanced**, select **Repositories**.
+1. Click **Create**.
+1. Enter a name and description for the registry. Select **OCI** as the target.
+1. Enter the URL for the registry. An OCI registry URL consists of three parts:
+  - Registry host
+  - Repository namespace
+  - Tag
+
+<!-- Parse out examples of different URLs -->
+
+1. Select **Basicauth** from the authentication field and enter a username and password as required. 
+1. Add any labels and annotations.
+1. Click **Create**.
+
+It may take some time for the OCI registry to become active. This is particularly true if the OCI endpoint contains multiple repositories. 
+
+Once the registry switches to an `Active` state, you can view the Helm charts in the OCI registry from the Rancher UI:
+
+1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
+1. Click **Apps > Charts**.
+1. Select the OCI repository from the dropdown.
+
+The `spec.insecurePlainHttp` field allows insecure connections to OCI registries. When this field is set to `true`, Rancher will connect to the OCI endpoint without performing an SSL check. This works exactly the same as how the `spec.insecurePlainHttp` field works in [ORAS CLI](https://oras.land/docs/commands/use_oras_cli), since under the hood Rancher manager uses the ORAS library.
+
+<!-- Unedited draft -->
 
 To create a OCI based helm repository, you need to click on Create in repositories page. 
 Define a name and description for it. Select the target as OCI. 
@@ -41,9 +70,9 @@ The CRD that is linked to the OCI Helm Repository is ClusterRepo.
 
 [Screenshot of the ClusterRepo YAML]
 
-A new field has been introduced only for OCI URLs which is spec.insecurePlainHttp. This allows insecure connections to registry without SSL check and works exactly how the field works in ORAS CLI - https://oras.land/docs/commands/use_oras_cli since under the hood Rancher manager uses oras library
 
-## Refresh OCI Registry
+
+## Refresh a OCI Registry
 
 Rancher automatically refreshes the OCI registry every 6 hours. 
 
@@ -76,7 +105,7 @@ The metadata field in index.yaml can store up to 30 MB of information about the 
 
 ## Troubleshooting OCI-based Helm Registries <!-- Unedited draft -->
 
-To view logs, please enable the debug option of rancher 
+To view logs, enable the debug option of rancher 
 
 The first option if there is any discrepancy is to refresh a cluster repository 
 The last option is to delete the oci helm repository clusterrepo and readd it. This will not delete any already installed helm charts.
