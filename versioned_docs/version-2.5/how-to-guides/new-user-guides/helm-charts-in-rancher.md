@@ -106,7 +106,7 @@ To view all recent changes, go to the **Recent Operations** tab. From there you 
 
 After installing a chart, you can find it in the **Installed Apps** tab. In this section you can upgrade or delete the installation, and see further details. When choosing to upgrade, the form and values presented will be the same as installation.
 
-Most Rancher tools have additional pages located in the toolbar below the **Apps & Marketplace** section to help manage and use the features. These pages include links to dashboards, forms to easily add Custom Resources, and additional information.
+Most Rancher tools have additional pages located in the toolbar below the **Apps & Marketplace** section to help manage and use features. These pages include links to dashboards, forms to easily add Custom Resources, and additional information.
 
 > If you are upgrading your chart using **Customize Helm options before upgrade** , please be aware that using the `--force` option may result in errors if your chart has immutable fields. This is because some objects in Kubernetes cannot be changed once they are created. To ensure you do not get this error you can:
   * Use the default upgrade option ( i.e do not use `--force` option).
