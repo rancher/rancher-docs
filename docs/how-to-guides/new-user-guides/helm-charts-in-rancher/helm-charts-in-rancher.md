@@ -18,7 +18,7 @@ Rancher uses a catalog-like system to import bundles of charts from repositories
 
 The Rancher feature charts versioning scheme is centered around the major version of the charts and the `+up` annotation for upstream charts, where applicable.
 
-**Major Version:** The charts' major version is tied to Rancher's minor versions. When you upgrade to a new Rancher minor version, you should ensure that all of your **Apps** charts are also upgraded to the correct release line for the chart.
+**Major Version:** The major version of feature charts is tied to particular minor versions of Rancher. When you upgrade to a new Rancher minor version, you should ensure that all of your feature charts are also upgraded to the correct release line for the chart.
 
 #### Feature Charts
 
@@ -92,7 +92,7 @@ The **Repositories** page lists your Helm repositories. These include traditiona
 
 To access the **Repositories** page:
 
-1. Click **☰**. Find **Explore Cluster** in the left navigation menu and select a cluster.
+1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
 1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
 
 #### Add Custom Git Repositories
@@ -193,7 +193,7 @@ If you are upgrading your chart using **Customize Helm options before upgrade**,
 
 The upgrade button isn't available for legacy apps on the **Apps > Installed Apps** page.
 
-If you have a legacy app installed and want to upgrade it, the legacy [feature flag](../../advanced-user-guides/enable-experimental-features/enable-experimental-features.md) must be turned on. If you had a legacy app already running before you upgraded Rancher, this flag is automatically turned on.
+If you want to upgrade an installed legacy app, the [legacy feature flag](../../advanced-user-guides/enable-experimental-features/enable-experimental-features.md) must be turned on. This flag is automatically turned on if you had a legacy app already running before you upgraded Rancher.
 
 1. Enable the [legacy feature flag](../../advanced-user-guides/enable-experimental-features/enable-experimental-features.md), if it isn't enabled already. This flag is enabled automatically if you upgrade Rancher while running a legacy app.
 1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
