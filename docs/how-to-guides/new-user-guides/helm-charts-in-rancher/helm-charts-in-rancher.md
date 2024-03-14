@@ -1,12 +1,18 @@
 ---
-title: Helm Charts in Rancher
+title: Helm Charts and Apps
 ---
 
 <head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/helm-charts-in-rancher"/>
 </head>
 
-In this section, you'll learn how to manage Helm chart repositories and applications in Rancher. Helm chart repositories are managed using **Apps**. Rancher uses a catalog-like system to import bundles of charts from repositories and then uses those charts to either deploy custom Helm applications or Rancher's tools, such as Monitoring or Istio. Rancher tools come as pre-loaded repositories which deploy as standalone Helm charts. Any additional repositories are only added to the current cluster.
+In this section, you'll learn how to manage Helm chart repositories and apps in Rancher. 
+
+Helm chart repositories in Rancher are managed using **Apps**.
+
+## Helm Charts in Rancher
+
+Rancher uses a catalog-like system to import bundles of charts from repositories and then uses those charts to either deploy custom Helm applications or Rancher's tools such as Monitoring or Istio. Rancher tools come as pre-loaded repositories which deploy as standalone Helm charts. Any additional repositories are only added to the current cluster.
 
 ### Versioning Scheme
 
@@ -50,6 +56,14 @@ To display prerelease versions:
 1. Click on your user avatar in the upper right corner.
 1. Click **Preferences**.
 1. Under **Helm Charts**, select **Include Prerelease Versions**.
+
+### Catalogs, Apps, and the Rancher UI
+
+In [Rancher v2.4 and earlier](../../../../versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md), repositories of ready-to-deploy applications were called "catalogs". These repositories were managed through the **Catalogs** section of the UI. 
+
+Rancher v2.5 replaced the former catalog system with a new **Apps & Marketplace** feature. 
+
+Since Rancher v2.6.5, the **Apps & Marketplace** feature is named **Apps** in the UI.
 
 ### Charts
 
@@ -119,8 +133,7 @@ To add a private CA to Helm chart repositories, you must add a base64 encoded co
 
 1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
 1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
-1. Find the row associated with the Git or HTTP-based repository you want to add a private CA to, and click **⋮**.
-1. Select **Edit YAML**.
+1. Find the row associated with the Git or HTTP-based repository you want to add a private CA to, and click **⋮ > Edit YAML**.
 1. Set the `caBundle` value, as in the following example:
 
   ```yaml
@@ -137,7 +150,7 @@ To add a private CA to Helm chart repositories, you must add a base64 encoded co
 
 The Repo.Spec contains a `disableSameOriginCheck` value. This value allows you to bypass the same origin checks, sending the repository Authentication information as a Basic Auth Header with all API calls. This is not recommended but can be used as a temporary solution in cases of non-standard Helm chart repositories, such as those that have redirects to a different origin URL.
 
-To use this feature for an existing Helm chart repository, follow the previous instructions for adding a private CA, up to step 5. In the `spec` portion of the YAML file, add `disableSameOriginCheck` and set it to `true`.
+To use this feature for an existing Helm chart repository, follow previous steps up to edit the YAML. On the `spec` portion of the YAML file, add `disableSameOriginCheck` and set it to `true`.
 
 ```yaml
 [...]
@@ -180,7 +193,7 @@ If you are upgrading your chart using **Customize Helm options before upgrade**,
 
 The upgrade button isn't available for legacy apps on the **Apps > Installed Apps** page.
 
-If you have a legacy app installed and want to upgrade it:
+If you have a legacy app installed and want to upgrade it, the legacy [feature flag](../../advanced-user-guides/enable-experimental-features/enable-experimental-features.md) must be turned on. If you had a legacy app already running before you upgraded Rancher, this flag is automatically turned on.
 
 1. Enable the [legacy feature flag](../../advanced-user-guides/enable-experimental-features/enable-experimental-features.md), if it isn't enabled already. This flag is enabled automatically if you upgrade Rancher while running a legacy app.
 1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
