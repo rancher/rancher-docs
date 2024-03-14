@@ -13,6 +13,10 @@ Rancher Prime integrates with the [AWS Marketplace](https://aws.amazon.com/marke
 - [Rancher Prime](https://aws.amazon.com/marketplace/pp/prodview-f2bvszurj2p2c)
 - [Rancher Prime (EMEA Orders Only)](https://aws.amazon.com/marketplace/pp/prodview-ocgjwd5c2aj5i)
 
+## FAQ
+
+For more details on how Rancher pay-as-you-go offerings work, refer to the [pay-as-you-go FAQ](../cloud-marketplace-payg-integration.md#faq).
+
 ## Limitations
 
 - Currently, you must be running Rancher v2.7.9. When you deploy a supported PAYG version, you can update to newer versions of Rancher when the listing is updated.
@@ -21,7 +25,3 @@ Rancher Prime integrates with the [AWS Marketplace](https://aws.amazon.com/marke
 
 1. Complete the [prerequisite steps](prerequisites.md).
 2. [Install the Rancher Prime PAYG offering on the AWS Marketplace](installing-rancher-prime.md).
-
-## FAQ
-
-For a list of frequently asked questions, refer to the [pay-as-you-go FAQ](../cloud-marketplace-payg-integration.md#faq).
