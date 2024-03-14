@@ -65,7 +65,7 @@ Rancher v2.5 replaced the former catalog system with a new **Apps & Marketplace*
 
 Since Rancher v2.6.5, the **Apps & Marketplace** feature is named **Apps** in the UI.
 
-### Charts
+## Charts
 
 The **Charts** page contains all Rancher, Partner, and Custom charts. You can filter charts by selecting the left-most dropdown menu:
 
@@ -86,7 +86,7 @@ To access the **Charts** page:
 1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
 1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Charts**.
 
-### Repositories
+## Repositories
 
 The **Repositories** page lists your Helm repositories. These include traditional Helm endpoints which have an index.yaml, and Git repositories that are cloned and point to a specific branch. To use custom charts, add your repository here. Once added, you can access custom charts in the **Charts** page, listed under the name of the repository.
 
@@ -108,7 +108,7 @@ To add a custom Git repository that contains your Helm charts or cluster templat
 
 After you add a chart repository to Rancher, it becomes available immediately.
 
-#### Add Custom Helm Chart Repositories
+### Add Custom Helm Chart Repositories
 
 You can add your own Helm chart repositories to serve chart packages to Rancher. You can use any HTTP server, as long as the server can respond to GET requests and serve YAML files and tar archives.
 
@@ -123,11 +123,11 @@ To add a custom Helm chart repository to Rancher:
 1. Enter a repo name and the index URL address of the chart repository.
 1. Click **Create** to add the repository. 
 
-#### Add Private Git/Helm Chart Repositories
+### Add Private Git/Helm Chart Repositories
 
 You can add private Git or Helm chart repositories with SSH key credentials or an HTTP basic auth secret, such as a username and password.
 
-#### Add a Private CA to Repositories
+### Add a Private CA to Repositories
 
 To add a private CA to Helm chart repositories, you must add a base64 encoded copy of the CA certificate in DER format to the `spec.caBundle field` of the chart repo, such as `openssl x509 -outform der -in ca.pem | base64 -w0`. Instructions are the same for both Git- and HTTP-based repositories:
 
@@ -165,7 +165,7 @@ spec:
 
 Only Helm 3 compatible charts are supported.
 
-### Deployment and Upgrades
+## Deployment and Upgrades
 
 1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
 1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Charts**.
@@ -189,7 +189,7 @@ If you are upgrading your chart using **Customize Helm options before upgrade**,
 
 :::
 
-#### Legacy Apps
+### Legacy Apps
 
 The upgrade button isn't available for legacy apps on the **Apps > Installed Apps** page.
 
@@ -206,6 +206,6 @@ To upgrade legacy multi-cluster apps:
 1. Click **☰**. 
 1. Under **Legacy Apps**, click **Multi-cluster Apps**.
 
-### Limitations
+## Limitations
 
 Dashboard apps or Rancher feature charts can't be installed using the Rancher CLI.
