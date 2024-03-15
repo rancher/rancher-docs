@@ -335,8 +335,8 @@ const metadata = {
         "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/uninstall-adapter"
     },
     "next": {
-        "title": "AWS Marketplace Pay-as-you-go (PAYG) Integration",
-        "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/"
+        "title": "Supportconfig bundle",
+        "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/supportconfig"
     }
 };
 const assets = {};

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[91033],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[12495],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 87711:
+/***/ 18271:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,48 +308,58 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Supportconfig bundle'
+    title: 'Azure Marketplace Pay-as-you-go (PAYG) Integration'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/cloud-marketplace/supportconfig",
-    "id": "version-2.7/integrations-in-rancher/cloud-marketplace/supportconfig",
-    "title": "Supportconfig bundle",
-    "description": "After installing the CSP adapter, you will have the ability to generate a supportconfig bundle. This bundle is a tar file which can be used to quickly provide information to support.",
-    "source": "@site/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/supportconfig.md",
-    "sourceDirName": "integrations-in-rancher/cloud-marketplace",
-    "slug": "/integrations-in-rancher/cloud-marketplace/supportconfig",
-    "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/supportconfig",
+    "unversionedId": "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/azure-marketplace-payg-integration",
+    "id": "version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/azure-marketplace-payg-integration",
+    "title": "Azure Marketplace Pay-as-you-go (PAYG) Integration",
+    "description": "Overview",
+    "source": "@site/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/azure-marketplace-payg-integration.md",
+    "sourceDirName": "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration",
+    "slug": "/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/",
+    "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/supportconfig.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/azure-marketplace-payg-integration.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1701357034,
-    "formattedLastUpdatedAt": "Nov 30, 2023",
+    "lastUpdatedAt": 1710437107,
+    "formattedLastUpdatedAt": "Mar 14, 2024",
     "frontMatter": {
-        "title": "Supportconfig bundle"
+        "title": "Azure Marketplace Pay-as-you-go (PAYG) Integration"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Common Issues for Rancher Prime PAYG on Azure",
-        "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues"
+        "title": "Common Issues for Rancher Prime PAYG on AWS",
+        "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/common-issues"
     },
     "next": {
-        "title": "CIS Scans",
-        "permalink": "/v2.7/integrations-in-rancher/cis-scans/"
+        "title": "Prerequisites",
+        "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Accessing through Rancher',
-        id: 'accessing-through-rancher',
-        level: 3
+        value: 'Overview',
+        id: 'overview',
+        level: 2
     },
     {
-        value: 'Accessing without rancher',
-        id: 'accessing-without-rancher',
-        level: 3
+        value: 'FAQ',
+        id: 'faq',
+        level: 2
+    },
+    {
+        value: 'Limitations',
+        id: 'limitations',
+        level: 2
+    },
+    {
+        value: 'How to Use',
+        id: 'how-to-use',
+        level: 2
     }
 ];
 const layoutProps = {
@@ -365,81 +375,47 @@ function MDXContent(_param) {
         mdxType: "MDXLayout"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloud-marketplace/supportconfig"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After installing the CSP adapter, you will have the ability to generate a supportconfig bundle. This bundle is a tar file which can be used to quickly provide information to support.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These bundles can be created through Rancher or through direct access to the cluster that Rancher is installed on. Note that accessing through Rancher is preferred.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "blockquote"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Note:`), ` Only admin users can generate/download supportconfig bundles, regardless of method.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "accessing-through-rancher"
-    }, `Accessing through Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `First, click on the hamburger menu. Then click the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `Get Support`), ` button.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
-        alt: "Get Support",
-        src: (__webpack_require__(25225)/* ["default"] */ .Z),
-        width: "280",
-        height: "525"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In the next page, click on the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `Generate Support Config`), ` button.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "blockquote"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Note:`), ` If the adapter is not installed, the option to generate the supportconfig bundle will not be present. You must install the CSP adapter to generate a supportconfig bundle.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
-        alt: "Get Support",
-        src: (__webpack_require__(74321)/* ["default"] */ .Z),
-        width: "1279",
-        height: "882"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "accessing-without-rancher"
-    }, `Accessing without rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `First, generate a kubeconfig for the cluster that Rancher is installed on.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "blockquote"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Note:`), ` If Rancher is down, you will not be able to use a kubeconfig token generated by Rancher to access the cluster.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Configure your shell environment to use this kubeconfig token:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-bash"
-    }, `export KUBECONFIG=$MY_KUBECONFIG_PATH
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `It is recommended to create a temporary working directory while running this command, like below:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-bash"
-    }, `mkdir temp && cd temp
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Then, retrieve the supportconfig bundle:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-bash"
-    }, `mkdir rancher && kubectl get configmap csp-config -n cattle-csp-adapter-system -o=jsonpath='{.data.data}' >> rancher/config.json && tar -c -f supportconfig_rancher.tar rancher && rm -rf rancher
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This will create a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `supportconfig_rancher.tar`), ` file in your current directory.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Users who run these commands on Mac may experience issues due to incompatibilities between gnu-tar and bsd-tar. If support has issues reading a supportconfig that you produce, try using the below command after making gnu-tar accessible as `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `gtar`), ` on your path:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-bash"
-    }, `mkdir rancher && kubectl get configmap csp-config -n cattle-csp-adapter-system -o=jsonpath='{.data.data}' >> rancher/config.json && gtar -c -f supportconfig_rancher.tar rancher && rm -rf rancher
-`)));
+        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/azure-marketplace-payg-integration"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "overview"
+    }, `Overview`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher Prime integrates with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://azuremarketplace.microsoft.com"
+    }, `Azure Marketplace`), ` as a pay-as-you-go (PAYG) offering. This brings the value of running and managing Kubernetes environments to Azure customers, benefiting from a new pay-monthly pricing model available through the Azure Marketplace. This listing will enable you to manage any CNCF-certified Kubernetes distribution in Azure, on-prem, or at the edge. To learn more, see our non-EMEMA and EMEA Azure Marketplace offerings for Rancher Prime:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/suse.rancher-prime-llc/selectionMode~/false/resourceGroupId//resourceGroupLocation//dontDiscardJourney~/false/selectedMenuId/home/launchingContext~/%7B%22galleryItemId%22%3A%22suse.rancher-prime-llcpay-as-you-go%22%2C%22source%22%3A%5B%22GalleryFeaturedMenuItemPart%22%2C%22VirtualizedTileDetails%22%5D%2C%22menuItemId%22%3A%22home%22%2C%22subMenuItemId%22%3A%22Search%20results%22%2C%22telemetryId%22%3A%221dafcf16-920e-46ea-80c9-dc85c6bd3a17%22%7D/searchTelemetryId/c2300fb7-ba7b-462a-ba57-a37cb5e2822d"
+    }, `Rancher Prime with 24x7 Support`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/suseirelandltd1692213356027.rancher-prime-ltd/selectionMode~/false/resourceGroupId//resourceGroupLocation//dontDiscardJourney~/false/selectedMenuId/home/launchingContext~/%7B%22galleryItemId%22%3A%22suseirelandltd1692213356027.rancher-prime-ltdpay-as-you-go%22%2C%22source%22%3A%5B%22GalleryFeaturedMenuItemPart%22%2C%22VirtualizedTileDetails%22%5D%2C%22menuItemId%22%3A%22home%22%2C%22subMenuItemId%22%3A%22Search%20results%22%2C%22telemetryId%22%3A%22c6b1d79a-b577-47b0-90e5-41e6c49688ab%22%7D/searchTelemetryId/1793144d-e0d9-466e-8e36-dfeddc73163b"
+    }, `Rancher Prime with 24x7 Support (EMEA Orders Only)`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "faq"
+    }, `FAQ`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more details on how Rancher pay-as-you-go offerings work, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/v2.7/integrations-in-rancher/cloud-marketplace/cloud-marketplace-payg-integration#faq"
+    }, `pay-as-you-go FAQ`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "limitations"
+    }, `Limitations`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Currently, you must be running Rancher v2.7.9. When you deploy a supported PAYG version, you can update to newer versions of Rancher when the listing is updated.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "how-to-use"
+    }, `How to Use`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `Complete the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites"
+    }, `prerequisite steps`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime"
+    }, `Install the Rancher Prime PAYG offering on the Azure Marketplace`), `.`)));
 }
 MDXContent.isMDXComponent = true;
 
-
-/***/ }),
-
-/***/ 74321:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/generate-support-config-912d39d2192bf813b437e5438c624d4a.png");
-
-/***/ }),
-
-/***/ 25225:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/support-help-56c36c59f2a37b080d228a10d55f2ad1.png");
 
 /***/ })
 

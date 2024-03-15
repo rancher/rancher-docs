@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[5684],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[10067],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 16072:
+/***/ 57035:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,45 +308,39 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Common Issues for Rancher Prime PAYG on Azure'
+    title: '常见问题'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues",
-    "id": "version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues",
-    "title": "Common Issues for Rancher Prime PAYG on Azure",
-    "description": "This page covers some common issues that might arise when setting up the Rancher Prime PAYG offering on Microsoft's Azure Marketplace.",
-    "source": "@site/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues.md",
-    "sourceDirName": "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration",
-    "slug": "/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues",
-    "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues",
+    "unversionedId": "integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues",
+    "id": "version-2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues",
+    "title": "常见问题",
+    "description": "安装 Adapter 后，Rancher 中出现一条横幅消息，上面写着 \"AWS Marketplace Adapter: Unable to run the adapter, please check the adapter logs\"",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues.md",
+    "sourceDirName": "integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace",
+    "slug": "/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues",
+    "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1706325485,
-    "formattedLastUpdatedAt": "Jan 27, 2024",
+    "lastUpdatedAt": 1686092423,
+    "formattedLastUpdatedAt": "2023年6月6日",
     "frontMatter": {
-        "title": "Common Issues for Rancher Prime PAYG on Azure"
+        "title": "常见问题"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Troubleshooting Rancher Prime PAYG Cluster in Azure",
-        "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/troubleshooting"
+        "title": "卸载 Adapter",
+        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/uninstall-adapter"
     },
     "next": {
-        "title": "Supportconfig bundle",
-        "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/supportconfig"
+        "title": "Supportconfig Bundle",
+        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/supportconfig"
     }
 };
 const assets = {};
-const toc = [
-    {
-        value: 'Migrating Rancher to a Different AKS Cluster',
-        id: 'migrating-rancher-to-a-different-aks-cluster',
-        level: 3
-    }
-];
+const toc = [];
 const layoutProps = {
     toc
 };
@@ -358,12 +352,26 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This page covers some common issues that might arise when setting up the Rancher Prime PAYG offering on Microsoft's Azure Marketplace.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "migrating-rancher-to-a-different-aks-cluster"
-    }, `Migrating Rancher to a Different AKS Cluster`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you migrate Rancher to a different AKS cluster by following the steps in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `安装 Adapter 后，Rancher 中出现一条横幅消息，上面写着 "AWS Marketplace Adapter: Unable to run the adapter, please check the adapter logs"`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `此错误表示 Adapter 安装到集群中时发生了一个错误，导致它无法正确签入/签出许可证。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `这通常是因为 IAM 角色设置不正确。请查看`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/"
-    }, `Rancher Backups and Disaster Recovery`), `, you must reinstall Rancher Prime on the target AKS cluster after restoring from the backup. Furthermore, the restored Rancher version must not be newer than the version available in the Azure Marketplace.`));
+        "href": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements"
+    }, `先决条件`), `并确认：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `已创建一个 OIDC 提供程序，并且它已关联到运行 Rancher 的集群。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `IAM 角色已配置为信任此 OIDC 提供程序。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `IAM 角色至少具有策略中概述的权限。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果上述所有配置均已正确配置，请联系支持寻求帮助。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `我看到一条横幅消息，上面写着 "AWS Marketplace Adapter: You have exceeded your licensed node count. At least x more license(s) are required in AWS to become compliant"`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `此消息表明你没有足够的 Entitlement 来满足 Rancher 当前管理的节点数量。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `请记住以下限制：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `每个 Entitlement 仅对一定数量的节点有效。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `当前由 Rancher 管理的每个节点都计入你的总使用量（安装了集群 Rancher 的节点除外）。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `每个 Entitlement 最多可以被一个 Rancher 实例使用。例如，如果你的账户中有两个正在运行的 Rancher 实例（每个都安装在单独的 EKS 集群上），那么你至少需要两个 Entitlement。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你最近可能还卸载/重新安装了 Adapter。如果 Adapter 丢失了它当前管理的许可证的跟踪，则可能需要一个小时来解析许可证的实际状态。`));
 }
 MDXContent.isMDXComponent = true;
 

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[10067],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[64112],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 57035:
+/***/ 28191:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,39 +308,50 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: '常见问题'
+    title: 'Supportconfig Bundle'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues",
-    "id": "version-2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues",
-    "title": "常见问题",
-    "description": "安装 Adapter 后，Rancher 中出现一条横幅消息，上面写着 \"AWS Marketplace Adapter: Unable to run the adapter, please check the adapter logs\"",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues.md",
-    "sourceDirName": "integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace",
-    "slug": "/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues",
-    "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues",
+    "unversionedId": "integrations-in-rancher/cloud-marketplace/supportconfig",
+    "id": "version-2.7/integrations-in-rancher/cloud-marketplace/supportconfig",
+    "title": "Supportconfig Bundle",
+    "description": "安装 CSP Adapter 后，你将能够生成一个 Supportconfig Bundle。此 Bundle 是一个 tar 包，可用于快速提供支持信息。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.7/integrations-in-rancher/cloud-marketplace/supportconfig.md",
+    "sourceDirName": "integrations-in-rancher/cloud-marketplace",
+    "slug": "/integrations-in-rancher/cloud-marketplace/supportconfig",
+    "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/supportconfig",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/supportconfig.md",
     "tags": [],
     "version": "2.7",
     "lastUpdatedAt": 1686092423,
     "formattedLastUpdatedAt": "2023年6月6日",
     "frontMatter": {
-        "title": "常见问题"
+        "title": "Supportconfig Bundle"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "卸载 Adapter",
-        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/uninstall-adapter"
+        "title": "常见问题",
+        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues"
     },
     "next": {
-        "title": "AWS Marketplace Pay-as-you-go (PAYG) Integration",
-        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/"
+        "title": "Cloud Marketplace Pay-as-you-go (PAYG) Integration",
+        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/cloud-marketplace-payg-integration"
     }
 };
 const assets = {};
-const toc = [];
+const toc = [
+    {
+        value: '通过 Rancher 访问',
+        id: '通过-rancher-访问',
+        level: 3
+    },
+    {
+        value: '不通过 Rancher 进行访问',
+        id: '不通过-rancher-进行访问',
+        level: 3
+    }
+];
 const layoutProps = {
     toc
 };
@@ -352,29 +363,80 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `安装 CSP Adapter 后，你将能够生成一个 Supportconfig Bundle。此 Bundle 是一个 tar 包，可用于快速提供支持信息。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你可以通过 Rancher 或通过直接访问安装 Rancher 的集群来创建这些 Bundle。请注意，建议通过 Rancher 访问。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `安装 Adapter 后，Rancher 中出现一条横幅消息，上面写着 "AWS Marketplace Adapter: Unable to run the adapter, please check the adapter logs"`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `此错误表示 Adapter 安装到集群中时发生了一个错误，导致它无法正确签入/签出许可证。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `这通常是因为 IAM 角色设置不正确。请查看`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements"
-    }, `先决条件`), `并确认：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `已创建一个 OIDC 提供程序，并且它已关联到运行 Rancher 的集群。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `IAM 角色已配置为信任此 OIDC 提供程序。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `IAM 角色至少具有策略中概述的权限。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果上述所有配置均已正确配置，请联系支持寻求帮助。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `注意`), `：无论采用何种方法，只有管理员可以生成/下载 Supportconfig Bundle。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "通过-rancher-访问"
+    }, `通过 Rancher 访问`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `首先，点击汉堡菜单。然后单击 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `我看到一条横幅消息，上面写着 "AWS Marketplace Adapter: You have exceeded your licensed node count. At least x more license(s) are required in AWS to become compliant"`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `此消息表明你没有足够的 Entitlement 来满足 Rancher 当前管理的节点数量。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `请记住以下限制：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `每个 Entitlement 仅对一定数量的节点有效。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `当前由 Rancher 管理的每个节点都计入你的总使用量（安装了集群 Rancher 的节点除外）。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `每个 Entitlement 最多可以被一个 Rancher 实例使用。例如，如果你的账户中有两个正在运行的 Rancher 实例（每个都安装在单独的 EKS 集群上），那么你至少需要两个 Entitlement。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你最近可能还卸载/重新安装了 Adapter。如果 Adapter 丢失了它当前管理的许可证的跟踪，则可能需要一个小时来解析许可证的实际状态。`));
+    }, `Get Support`), ` 按钮。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
+        alt: "Get Support",
+        src: (__webpack_require__(25225)/* ["default"] */ .Z),
+        width: "280",
+        height: "525"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在下一页中，单击 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `Generate Support Config`), ` 按钮。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `注意`), `：如果未安装 Adapter ，则不会出现生成 Supportconfig Bundle 的选项。你必须安装 CSP Adapter 才能生成 Supportconfig Bundle。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
+        alt: "Get Support",
+        src: (__webpack_require__(74321)/* ["default"] */ .Z),
+        width: "1279",
+        height: "882"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "不通过-rancher-进行访问"
+    }, `不通过 Rancher 进行访问`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `首先，为安装 Rancher 的集群生成 kubeconfig。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `注意`), `：如果 Rancher 宕机，你将无法使用 Rancher 生成的 kubeconfig 令牌访问集群。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `配置你的 shell 环境以使用此 kubeconfig 令牌：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `export KUBECONFIG=$MY_KUBECONFIG_PATH
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `建议在运行此命令时创建一个临时工作目录，如下所示：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `mkdir temp && cd temp
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `然后，检索 Supportconfig Bundle：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `mkdir rancher && kubectl get configmap csp-config -n cattle-csp-adapter-system -o=jsonpath='{.data.data}' >> rancher/config.json && tar -c -f supportconfig_rancher.tar rancher && rm -rf rancher
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `这将在你的当前目录中创建一个 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `supportconfig_rancher.tar`), ` 文件。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `由于 gnu-tar 和 bsd-tar 不兼容，在 Mac 上运行这些命令的用户可能会遇到问题。如果支持部门在读取你制作的 Supportconfig 时出现问题，你可以先尝试在你的路径上将 gnu-tar 作为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `gtar`), ` 进行访问，然后运行以下命令：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `mkdir rancher && kubectl get configmap csp-config -n cattle-csp-adapter-system -o=jsonpath='{.data.data}' >> rancher/config.json && gtar -c -f supportconfig_rancher.tar rancher && rm -rf rancher
+`)));
 }
 MDXContent.isMDXComponent = true;
 
+
+/***/ }),
+
+/***/ 74321:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/generate-support-config-912d39d2192bf813b437e5438c624d4a.png");
+
+/***/ }),
+
+/***/ 25225:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/support-help-56c36c59f2a37b080d228a10d55f2ad1.png");
 
 /***/ })
 

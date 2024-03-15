@@ -331,8 +331,8 @@ const metadata = {
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Supportconfig Bundle",
-        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/supportconfig"
+        "title": "Common Issues for Rancher Prime PAYG on Azure",
+        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues"
     },
     "next": {
         "title": "配置",

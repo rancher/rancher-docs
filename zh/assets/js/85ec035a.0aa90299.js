@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[64112],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[5684],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 28191:
+/***/ 16072:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,31 +308,31 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Supportconfig Bundle'
+    title: 'Common Issues for Rancher Prime PAYG on Azure'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/cloud-marketplace/supportconfig",
-    "id": "version-2.7/integrations-in-rancher/cloud-marketplace/supportconfig",
-    "title": "Supportconfig Bundle",
-    "description": "安装 CSP Adapter 后，你将能够生成一个 Supportconfig Bundle。此 Bundle 是一个 tar 包，可用于快速提供支持信息。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.7/integrations-in-rancher/cloud-marketplace/supportconfig.md",
-    "sourceDirName": "integrations-in-rancher/cloud-marketplace",
-    "slug": "/integrations-in-rancher/cloud-marketplace/supportconfig",
-    "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/supportconfig",
+    "unversionedId": "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues",
+    "id": "version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues",
+    "title": "Common Issues for Rancher Prime PAYG on Azure",
+    "description": "This page covers some common issues that might arise when setting up the Rancher Prime PAYG offering on Microsoft's Azure Marketplace.",
+    "source": "@site/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues.md",
+    "sourceDirName": "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration",
+    "slug": "/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues",
+    "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/supportconfig.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1686092423,
-    "formattedLastUpdatedAt": "2023年6月6日",
+    "lastUpdatedAt": 1706325485,
+    "formattedLastUpdatedAt": "2024年1月27日",
     "frontMatter": {
-        "title": "Supportconfig Bundle"
+        "title": "Common Issues for Rancher Prime PAYG on Azure"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Common Issues for Rancher Prime PAYG on Azure",
-        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues"
+        "title": "Troubleshooting Rancher Prime PAYG Cluster in Azure",
+        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/troubleshooting"
     },
     "next": {
         "title": "CIS Scans",
@@ -342,13 +342,8 @@ const metadata = {
 const assets = {};
 const toc = [
     {
-        value: '通过 Rancher 访问',
-        id: '通过-rancher-访问',
-        level: 3
-    },
-    {
-        value: '不通过 Rancher 进行访问',
-        id: '不通过-rancher-进行访问',
+        value: 'Migrating Rancher to a Different AKS Cluster',
+        id: 'migrating-rancher-to-a-different-aks-cluster',
         level: 3
     }
 ];
@@ -363,80 +358,15 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `安装 CSP Adapter 后，你将能够生成一个 Supportconfig Bundle。此 Bundle 是一个 tar 包，可用于快速提供支持信息。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你可以通过 Rancher 或通过直接访问安装 Rancher 的集群来创建这些 Bundle。请注意，建议通过 Rancher 访问。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "blockquote"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `注意`), `：无论采用何种方法，只有管理员可以生成/下载 Supportconfig Bundle。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "通过-rancher-访问"
-    }, `通过 Rancher 访问`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `首先，点击汉堡菜单。然后单击 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `Get Support`), ` 按钮。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
-        alt: "Get Support",
-        src: (__webpack_require__(25225)/* ["default"] */ .Z),
-        width: "280",
-        height: "525"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在下一页中，单击 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `Generate Support Config`), ` 按钮。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "blockquote"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `注意`), `：如果未安装 Adapter ，则不会出现生成 Supportconfig Bundle 的选项。你必须安装 CSP Adapter 才能生成 Supportconfig Bundle。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
-        alt: "Get Support",
-        src: (__webpack_require__(74321)/* ["default"] */ .Z),
-        width: "1279",
-        height: "882"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "不通过-rancher-进行访问"
-    }, `不通过 Rancher 进行访问`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `首先，为安装 Rancher 的集群生成 kubeconfig。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "blockquote"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `注意`), `：如果 Rancher 宕机，你将无法使用 Rancher 生成的 kubeconfig 令牌访问集群。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `配置你的 shell 环境以使用此 kubeconfig 令牌：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-bash"
-    }, `export KUBECONFIG=$MY_KUBECONFIG_PATH
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `建议在运行此命令时创建一个临时工作目录，如下所示：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-bash"
-    }, `mkdir temp && cd temp
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `然后，检索 Supportconfig Bundle：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-bash"
-    }, `mkdir rancher && kubectl get configmap csp-config -n cattle-csp-adapter-system -o=jsonpath='{.data.data}' >> rancher/config.json && tar -c -f supportconfig_rancher.tar rancher && rm -rf rancher
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `这将在你的当前目录中创建一个 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `supportconfig_rancher.tar`), ` 文件。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `由于 gnu-tar 和 bsd-tar 不兼容，在 Mac 上运行这些命令的用户可能会遇到问题。如果支持部门在读取你制作的 Supportconfig 时出现问题，你可以先尝试在你的路径上将 gnu-tar 作为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `gtar`), ` 进行访问，然后运行以下命令：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-bash"
-    }, `mkdir rancher && kubectl get configmap csp-config -n cattle-csp-adapter-system -o=jsonpath='{.data.data}' >> rancher/config.json && gtar -c -f supportconfig_rancher.tar rancher && rm -rf rancher
-`)));
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This page covers some common issues that might arise when setting up the Rancher Prime PAYG offering on Microsoft's Azure Marketplace.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "migrating-rancher-to-a-different-aks-cluster"
+    }, `Migrating Rancher to a Different AKS Cluster`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you migrate Rancher to a different AKS cluster by following the steps in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/zh/v2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/"
+    }, `Rancher Backups and Disaster Recovery`), `, you must reinstall Rancher Prime on the target AKS cluster after restoring from the backup. Furthermore, the restored Rancher version must not be newer than the version available in the Azure Marketplace.`));
 }
 MDXContent.isMDXComponent = true;
 
-
-/***/ }),
-
-/***/ 74321:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/generate-support-config-912d39d2192bf813b437e5438c624d4a.png");
-
-/***/ }),
-
-/***/ 25225:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/support-help-56c36c59f2a37b080d228a10d55f2ad1.png");
 
 /***/ })
 
