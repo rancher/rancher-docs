@@ -18,7 +18,7 @@ Rancher uses a catalog-like system to import bundles of charts from repositories
 
 The Rancher feature charts versioning scheme is centered around the major version of the charts and the `+up` annotation for upstream charts, where applicable.
 
-**Major Version:** The major version of feature charts is tied to particular minor versions of Rancher. When you upgrade to a new Rancher minor version, you should ensure that all of your feature charts are also upgraded to the correct release line for the chart.
+**Major Version:** The major version of feature charts are tied to particular minor versions of Rancher. When you upgrade to a new Rancher minor version, you should ensure that all of your feature charts are also upgraded to the correct release line for the chart.
 
 #### Feature Charts
 

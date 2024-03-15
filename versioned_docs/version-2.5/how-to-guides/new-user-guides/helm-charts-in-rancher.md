@@ -81,18 +81,20 @@ To add a private CA to Helm chart repositories:
     [...]
     ```
 
-> **Note:** Helm chart repositories with authentication
->
-> As of Rancher v2.5.12, a new value `disableSameOriginCheck` has been added to the Repo.Spec. This allows users to bypass the same origin checks, sending the repository Authentication information as a Basic Auth Header with all API calls. This is not recommended but can be used as a temporary solution in cases of non-standard Helm chart repositories such as those that have redirects to a different origin URL.
->
-> To use this feature for an existing Helm chart repository, click <b>⋮ > Edit YAML</b>. On the `spec` portion of the YAML file, add `disableSameOriginCheck` and set it to `true`.
->
-> ```yaml
+:::note Helm chart repositories with authentication
+
+As of Rancher v2.5.12, a new value `disableSameOriginCheck` has been added to the Repo.Spec. This allows users to bypass the same origin checks, sending the repository Authentication information as a Basic Auth Header with all API calls. This is not recommended but can be used as a temporary solution in cases of non-standard Helm chart repositories such as those that have redirects to a different origin URL.
+
+To use this feature for an existing Helm chart repository, click **⋮ > Edit YAML**. On the `spec` portion of the YAML file, add `disableSameOriginCheck` and set it to `true`.
+
+```yaml
 [...]
 spec:
   disableSameOriginCheck: true
 [...]
 ```
+
+:::
 
 ### Helm Compatibility
 
@@ -108,7 +110,12 @@ After installing a chart, you can find it in the **Installed Apps** tab. In this
 
 Most Rancher tools have additional pages located in the toolbar below the **Apps & Marketplace** section to help manage and use features. These pages include links to dashboards, forms to easily add Custom Resources, and additional information.
 
-> If you are upgrading your chart using **Customize Helm options before upgrade** , please be aware that using the `--force` option may result in errors if your chart has immutable fields. This is because some objects in Kubernetes cannot be changed once they are created. To ensure you do not get this error you can:
-  * Use the default upgrade option ( i.e do not use `--force` option).
+:::caution
+
+If you are upgrading your chart using **Customize Helm options before upgrade**, please be aware that using the `--force` option may result in errors if your chart has immutable fields. This is because some objects in Kubernetes cannot be changed once they are created. To ensure you do not get this error you can:
+
+  * Use the default upgrade option ( i.e do not use `--force` option ).
   * Uninstall the existing chart and install the upgraded chart.
   * Delete the resources with immutable fields from the cluster before performing the `--force` upgrade.
+
+:::
