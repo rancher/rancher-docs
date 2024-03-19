@@ -325,8 +325,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "Jan 29, 2024",
+    "lastUpdatedAt": 1709858385,
+    "formattedLastUpdatedAt": "Mar 8, 2024",
     "frontMatter": {
         "title": "Install/Upgrade Rancher on a Kubernetes Cluster",
         "description": "Learn how to install Rancher in development and production environments. Read about single node and high availability installation"
@@ -766,6 +766,7 @@ helm repo update
 helm install cert-manager jetstack/cert-manager \\
   --namespace cert-manager \\
   --create-namespace \\
+  --set installCRDs=true \\
   --version v1.11.0
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Once you’ve installed cert-manager, you can verify it is deployed correctly by checking the cert-manager namespace for running pods:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"

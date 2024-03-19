@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[52470],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[89235],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 87682:
+/***/ 17590:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -314,19 +314,19 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster",
-    "id": "version-2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster",
+    "id": "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster",
     "title": "Install/Upgrade Rancher on a Kubernetes Cluster",
     "description": "Learn how to install Rancher in development and production environments. Read about single node and high availability installation",
-    "source": "@site/versioned_docs/version-2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md",
+    "source": "@site/docs/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md",
     "sourceDirName": "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster",
     "slug": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/",
-    "permalink": "/v2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/",
+    "permalink": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "Jan 29, 2024",
+    "version": "current",
+    "lastUpdatedAt": 1709858385,
+    "formattedLastUpdatedAt": "Mar 8, 2024",
     "frontMatter": {
         "title": "Install/Upgrade Rancher on a Kubernetes Cluster",
         "description": "Learn how to install Rancher in development and production environments. Read about single node and high availability installation"
@@ -334,11 +334,11 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Feature Flags",
-        "permalink": "/v2.7/getting-started/installation-and-upgrade/installation-references/feature-flags"
+        "permalink": "/getting-started/installation-and-upgrade/installation-references/feature-flags"
     },
     "next": {
         "title": "Rollbacks",
-        "permalink": "/v2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks"
+        "permalink": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks"
     }
 };
 const assets = {};
@@ -454,51 +454,51 @@ function MDXContent(_param) {
         parentName: "li"
     }, `RKE:`), ` For the tutorial to install an RKE Kubernetes cluster, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher"
+        "href": "/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher"
     }, `this page.`), ` For help setting up the infrastructure for a high-availability RKE cluster, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster"
+        "href": "/how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
     }, `K3s:`), ` For the tutorial to install a K3s Kubernetes cluster, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher"
+        "href": "/how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher"
     }, `this page.`), ` For help setting up the infrastructure for a high-availability K3s cluster, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster"
+        "href": "/how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
     }, `RKE2:`), ` For the tutorial to install an RKE2 Kubernetes cluster, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher"
+        "href": "/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher"
     }, `this page.`), ` For help setting up the infrastructure for a high-availability RKE2 cluster, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/how-to-guides/new-user-guides/infrastructure-setup/ha-rke2-kubernetes-cluster"
+        "href": "/how-to-guides/new-user-guides/infrastructure-setup/ha-rke2-kubernetes-cluster"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
     }, `Amazon EKS:`), ` For details on how to install Rancher on Amazon EKS, including how to install an Ingress controller so that the Rancher server can be accessed, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks"
+        "href": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
     }, `AKS:`), ` For details on how to install Rancher with Azure Kubernetes Service, including how to install an Ingress controller so that the Rancher server can be accessed, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks"
+        "href": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
     }, `GKE:`), ` For details on how to install Rancher with Google Kubernetes Engine, including how to install an Ingress controller so that the Rancher server can be accessed, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-gke"
+        "href": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-gke"
     }, `this page.`), ` GKE has two modes of operation when creating a Kubernetes cluster, Autopilot and Standard mode. The cluster configuration for Autopilot mode has restrictions on editing the kube-system namespace. However, Rancher needs to create resources in the kube-system namespace during installation. As a result, you will not be able to install Rancher on a GKE cluster created in Autopilot mode.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "ingress-controller"
     }, `Ingress Controller`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Rancher UI and API are exposed through an Ingress. This means the Kubernetes cluster that you install Rancher in must contain an Ingress controller.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For RKE, RKE2, and K3s installations, you don't have to install the Ingress controller manually because one is installed by default.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For distributions that do not include an Ingress Controller by default, like a hosted Kubernetes cluster such as EKS, GKE, or AKS, you have to deploy an Ingress controller first. Note that the Rancher Helm chart does not set an `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -527,7 +527,7 @@ function MDXContent(_param) {
         "href": "https://docs.helm.sh/using_helm/#installing-helm"
     }, `helm`), ` - Package management for Kubernetes. Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/getting-started/installation-and-upgrade/resources/helm-version-requirements"
+        "href": "/getting-started/installation-and-upgrade/resources/helm-version-requirements"
     }, `Helm version requirements`), ` to choose a version of Helm to install Rancher. Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
         "href": "https://helm.sh/docs/intro/install/"
@@ -538,13 +538,13 @@ function MDXContent(_param) {
         "href": "https://helm.sh/"
     }, `Helm`), ` package manager for Kubernetes. Helm charts provide templating syntax for Kubernetes YAML manifest documents. With Helm, we can create configurable deployments instead of just using static files.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For systems without direct internet access, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha"
+        "href": "/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha"
     }, `Air Gap: Kubernetes install`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To choose a Rancher version to install, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/resources/choose-a-rancher-version"
+        "href": "/getting-started/installation-and-upgrade/resources/choose-a-rancher-version"
     }, `Choosing a Rancher Version.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To choose a version of Helm to install Rancher with, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/resources/helm-version-requirements"
+        "href": "/getting-started/installation-and-upgrade/resources/helm-version-requirements"
     }, `Helm version requirements`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -590,7 +590,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `helm repo add`), ` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/resources/choose-a-rancher-version"
+        "href": "/getting-started/installation-and-upgrade/resources/choose-a-rancher-version"
     }, `Choosing a Rancher Version`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Latest: Recommended for trying out the newest features`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
@@ -627,7 +627,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `If you want terminate SSL/TLS externally, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/installation-references/helm-chart-options#external-tls-termination"
+        "href": "/getting-started/installation-and-upgrade/installation-references/helm-chart-options#external-tls-termination"
     }, `TLS termination on an External Load Balancer`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `There are three recommended options for the source of the certificate used for TLS termination at the Rancher server:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -722,7 +722,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `ingress.tls.source=secret`), `), or if you use `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/installation-references/helm-chart-options#external-tls-termination"
+        "href": "/getting-started/installation-and-upgrade/installation-references/helm-chart-options#external-tls-termination"
     }, `TLS termination on an external load balancer`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This step is only required to use certificates issued by Rancher's generated CA (`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `ingress.tls.source=rancher`), `) or to request Let's Encrypt issued certificates (`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -736,7 +736,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.11.0, please see our `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/resources/upgrade-cert-manager"
+        "href": "/getting-started/installation-and-upgrade/resources/upgrade-cert-manager"
     }, `upgrade documentation`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These instructions are adapted from the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://cert-manager.io/docs/installation/kubernetes/#installing-with-helm"
@@ -761,7 +761,8 @@ helm repo update
 # Install the cert-manager Helm chart
 helm install cert-manager jetstack/cert-manager \\
   --namespace cert-manager \\
-  --create-namespace
+  --create-namespace \\
+  --set installCRDs=true
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Once you’ve installed cert-manager, you can verify it is deployed correctly by checking the cert-manager namespace for running pods:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
     }, `kubectl get pods --namespace cert-manager
@@ -924,7 +925,7 @@ deployment "rancher" successfully rolled out
         parentName: "admonition"
     }, `If you want to check if your certificates are correct, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/faq/technical-items#how-do-i-check-common-name-and-subject-alternative-names-in-my-server-certificate"
+        "href": "/faq/technical-items#how-do-i-check-common-name-and-subject-alternative-names-in-my-server-certificate"
     }, `How do I check Common Name and Subject Alternative Names in my server certificate?`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Set the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -971,25 +972,25 @@ deployment "rancher" successfully rolled out
   --set privateCA=true
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Now that Rancher is deployed, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/resources/add-tls-secrets"
+        "href": "/getting-started/installation-and-upgrade/resources/add-tls-secrets"
     }, `Adding TLS Secrets`), ` to publish the certificate files so Rancher and the Ingress controller can use them.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Rancher chart configuration has many options for customizing the installation to suit your specific environment. Here are some common advanced scenarios.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/getting-started/installation-and-upgrade/installation-references/helm-chart-options#http-proxy"
+        "href": "/getting-started/installation-and-upgrade/installation-references/helm-chart-options#http-proxy"
     }, `HTTP Proxy`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/getting-started/installation-and-upgrade/installation-references/helm-chart-options#private-registry-and-air-gap-installs"
+        "href": "/getting-started/installation-and-upgrade/installation-references/helm-chart-options#private-registry-and-air-gap-installs"
     }, `Private Container Image Registry`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/getting-started/installation-and-upgrade/installation-references/helm-chart-options#external-tls-termination"
+        "href": "/getting-started/installation-and-upgrade/installation-references/helm-chart-options#external-tls-termination"
     }, `TLS Termination on an External Load Balancer`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/installation-references/helm-chart-options"
+        "href": "/getting-started/installation-and-upgrade/installation-references/helm-chart-options"
     }, `Chart Options`), ` for the full list of options.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "6-verify-that-the-rancher-server-is-successfully-deployed"
     }, `6. Verify that the Rancher Server is Successfully Deployed`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After adding the secrets, check if Rancher was rolled out successfully:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
@@ -1016,7 +1017,7 @@ rancher   3         3         3            3           3m
         "id": "finishing-up"
     }, `Finishing Up`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `That's it. You should have a functional Rancher server.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In a web browser, go to the DNS name that forwards traffic to your load balancer. Then you should be greeted by the colorful login page.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Doesn't work? Take a look at the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/troubleshooting"
+        "href": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/troubleshooting"
     }, `Troubleshooting`), ` Page`));
 }
 MDXContent.isMDXComponent = true;
