@@ -79,7 +79,6 @@ Time to live (TTL) duration in minutes, used to determine when a kubeconfig toke
 ### auth-token-max-ttl-minutes
 
 Maximum Time to Live (TTL) in minutes allowed for auth tokens. If a user attempts to create a token with a TTL greater than `auth-token-max-ttl-minutes`, Rancher sets the token TTL to the value of `auth-token-max-ttl-minutes`. Applies to all kubeconfig tokens and API tokens.
-**Rancher v2.6.5 and earlier: Applies only to tokens created for authenticating API requests.**
 
 ### kubeconfig-generate-token
 

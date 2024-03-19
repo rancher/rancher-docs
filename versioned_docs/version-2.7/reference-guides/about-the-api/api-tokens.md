@@ -30,7 +30,7 @@ The following is a complete list of tokens generated with `ttl=0`:
 | `compose-token-*` | Token for compose                                                                      |
 | `helm-token-*`    | Token for Helm chart deployment                                                        |
 | `telemetry-*`     | Telemetry token                                                                        |
-| `drain-node-*`    | Token for drain (we use `kubectl` for drain because there is no native Kubernetes API) |
+| `drain-node-*`    | Token for drain (Rancher uses `kubectl` for drain because there is no native Kubernetes API) |
 
 
 ### Setting TTL on Kubeconfig Tokens
@@ -45,7 +45,7 @@ This setting is used by all kubeconfig tokens except those created by the CLI to
 
 ## Disable Tokens in Generated Kubeconfigs
 
-1. Set the `kubeconfig-generate-token` setting to `false`. This setting instructs Rancher to no longer automatically generate a token when a user clicks on download a kubeconfig file. Once this setting is deactivated, a generated kubeconfig references the [Rancher CLI](../cli-with-rancher/kubectl-utility.md#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl) to retrieve a short-lived token for the cluster. When this kubeconfig is used in a client, such as `kubectl`, the Rancher CLI needs to be installed to complete the log in request.
+1. Set the `kubeconfig-generate-token` setting to `false`. This setting instructs Rancher to no longer automatically generate a token when a user clicks on download a kubeconfig file. When this setting is deactivated, a generated kubeconfig references the [Rancher CLI](../cli-with-rancher/kubectl-utility.md#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl) to retrieve a short-lived token for the cluster. When this kubeconfig is used in a client, such as `kubectl`, the Rancher CLI needs to be installed to complete the log in request.
 
 2. Set the `kubeconfig-token-ttl-minutes` setting to the desired duration in minutes. By default, `kubeconfig-token-ttl-minutes` is 960 (16 hours).
 
