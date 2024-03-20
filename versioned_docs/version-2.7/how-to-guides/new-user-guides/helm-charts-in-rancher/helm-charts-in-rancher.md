@@ -167,6 +167,8 @@ Only Helm 3 compatible charts are supported.
 
 ## Deployment and Upgrades
 
+To install and deploy a chart:
+
 1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
 1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Charts**.
 1. Select a chart, and click **Install**. 
