@@ -167,6 +167,8 @@ Only Helm 3 compatible charts are supported.
 
 ## Deployment and Upgrades
 
+To install and deploy a chart:
+
 1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
 1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Charts**.
 1. Select a chart, and click **Install**. 
@@ -195,7 +197,7 @@ The upgrade button isn't available for legacy apps on the **Apps > Installed App
 
 If you want to upgrade an installed legacy app, the [legacy feature flag](../../advanced-user-guides/enable-experimental-features/enable-experimental-features.md) must be turned on. This flag is automatically turned on if you had a legacy app already running before you upgraded Rancher.
 
-1. Enable the [legacy feature flag](../../advanced-user-guides/enable-experimental-features/enable-experimental-features.md), if it isn't enabled already. This flag is enabled automatically if you upgrade Rancher while running a legacy app.
+1. Enable the [legacy feature flag](../../advanced-user-guides/enable-experimental-features/enable-experimental-features.md), if it isn't enabled already.
 1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
 1. Click **Legacy > Project > Apps**.
 
