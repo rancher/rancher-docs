@@ -325,8 +325,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1708460936,
-    "formattedLastUpdatedAt": "Feb 20, 2024",
+    "lastUpdatedAt": 1710963514,
+    "formattedLastUpdatedAt": "Mar 20, 2024",
     "frontMatter": {
         "title": "Setting up the Amazon Cloud Provider",
         "weight": 1
@@ -897,9 +897,9 @@ tolerations:
     value: 'true'
   - effect: NoSchedule
     value: 'true'
-    key: node-role.kubernetes.io/controlplane
+    key: node-role.kubernetes.io/control-plane
 nodeSelector:
-  node-role.kubernetes.io/controlplane: 'true'
+  node-role.kubernetes.io/control-plane: 'true'
 args:
   - --configure-cloud-routes=false
   - --use-service-account-credentials=true
@@ -1245,9 +1245,9 @@ clusterRoleRules:
         "start": 9
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
-    }, `Rancher-provisioned RKE nodes are tainted `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `Rancher-provisioned RKE2 nodes are tainted `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
-    }, `node-role.kubernetes.io/controlplane`), `. Update tolerations and the nodeSelector:`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    }, `node-role.kubernetes.io/control-plane`), `. Update tolerations and the nodeSelector:`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-yaml"
     }, `tolerations:
@@ -1256,13 +1256,13 @@ clusterRoleRules:
     value: 'true'
   - effect: NoSchedule
     value: 'true'
-    key: node-role.kubernetes.io/controlplane
+    key: node-role.kubernetes.io/control-plane
 
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-yaml"
     }, `nodeSelector:
-  node-role.kubernetes.io/controlplane: 'true'
+  node-role.kubernetes.io/control-plane: 'true'
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -1278,7 +1278,7 @@ clusterRoleRules:
         parentName: "pre",
         "className": "language-yaml"
     }, `nodeSelector:
-  node-role.kubernetes.io/controlplane: 'true'
+  node-role.kubernetes.io/control-plane: 'true'
 `))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", {
         "start": 10
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {

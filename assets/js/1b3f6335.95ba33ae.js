@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-amazon.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1707772392,
-    "formattedLastUpdatedAt": "Feb 12, 2024",
+    "lastUpdatedAt": 1710963514,
+    "formattedLastUpdatedAt": "Mar 20, 2024",
     "frontMatter": {
         "title": "Migrating Amazon In-tree to Out-of-tree"
     },
@@ -430,7 +430,7 @@ function MDXContent(_param) {
     }, `Cordon control plane nodes so that AWS cloud controller pods run on nodes only after upgrading to the external cloud provider:`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-shell"
-    }, `kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
+    }, `kubectl cordon -l "node-role.kubernetes.io/control-plane=true"
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", {
         "start": 3
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
