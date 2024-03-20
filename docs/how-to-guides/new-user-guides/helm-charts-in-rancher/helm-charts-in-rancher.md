@@ -18,7 +18,7 @@ Rancher uses a catalog-like system to import bundles of charts from repositories
 
 The Rancher feature charts versioning scheme is centered around the major version of the charts and the `+up` annotation for upstream charts, where applicable.
 
-**Major Version:** The major version of feature charts are tied to particular minor versions of Rancher. When you upgrade to a new Rancher minor version, you should ensure that all of your feature charts are also upgraded to the correct release line for the chart.
+**Major Version:** The major versions of feature charts are tied to particular minor versions of Rancher. When you upgrade to a new Rancher minor version, you should ensure that all of your feature charts are also upgraded to the correct release line for the chart.
 
 #### Feature Charts
 
@@ -201,7 +201,7 @@ If you want to upgrade an installed legacy app, the [legacy feature flag](../../
 1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
 1. Click **Legacy > Project > Apps**.
 
-If you don't see **Apps** listed under **Legacy > Project**, click the project/namespace filter in the top navigation bar and select a project.
+If you don't see **Apps** listed under **Legacy > Project**, click the project/namespace search bar in the top navigation and select the relevant project from the dropdown menu.
 
 To upgrade legacy multi-cluster apps:
 

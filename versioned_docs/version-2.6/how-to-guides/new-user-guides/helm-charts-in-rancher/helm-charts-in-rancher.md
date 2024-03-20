@@ -16,7 +16,7 @@ Rancher uses a catalog-like system to import bundles of charts from repositories
 
 Starting in Rancher v2.6.0, a new versioning scheme for Rancher feature charts was implemented. The changes are centered around the major version of the charts and the +up annotation for upstream charts, where applicable.
 
-**Major Version:** The major version of the charts is tied to Rancher minor versions. When you upgrade to a new Rancher minor version, you should ensure that all of your **Apps & Marketplace** (Rancher before v2.6.5) or **Apps** (Rancher v2.6.5+) charts are also upgraded to the correct release line for the chart.
+**Major Version:** The major versions of feature charts are tied to Rancher minor versions. When you upgrade to a new Rancher minor version, you should ensure that all of your **Apps & Marketplace** (Rancher before v2.6.5) or **Apps** (Rancher v2.6.5+) charts are also upgraded to the correct release line for the chart.
 
 :::note
 
@@ -45,7 +45,6 @@ Any major versions that are less than the ones mentioned in the table below are 
 | rancher-vsphere-csi | 100.3.0+up2.5.1-rancher1 | 100.3.0+up2.5.1-rancher1 |
 | rancher-wins-upgrader | 0.0.100 | 100.0.1+up0.0.1 |
 
-<br/>
 **Charts based on upstream:** For charts that are based on upstreams, the +up annotation should inform you of what upstream version the Rancher chart is tracking. Check the upstream version compatibility with Rancher during upgrades also.
 
 - As an example, `100.x.x+up16.6.0` for Monitoring tracks upstream kube-prometheus-stack `16.6.0` with some Rancher patches added to it.
