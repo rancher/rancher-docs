@@ -18,10 +18,10 @@ To add an OCI registry through the Rancher UI:
 1. Enter a name and description for the registry. Select **OCI** as the target.
 1. Enter the URL for the registry. You can use this field to finetune how many charts you want to make availabe for installation on Rancher. More generic endpoints target more charts, as the following examples demonstrate:
 
-  1. **oci://<registry-host>/**: Every chart in the registry becomes available for installation, regardless of namespace or tag.
-  1. **oci://<registry-host>/<namespace>**: Every chart in the specified namespace within the registry becomes available for installation.
-  1. **oci://<registry-host>/<namespace>/<chart-name>**: Only the specified chart and any associated tags or versions of that chart become available for installation.
-  1. **oci://<registry-host>/<namespace>/<chart-name>:<tag>**: Only the chart with the specified tag becomes available for installation.
+  1. **oci://\<registry-host\>/**: Every chart in the registry becomes available for installation, regardless of namespace or tag.
+  1. **oci://\<registry-host\>/\<namespace\>**: Every chart in the specified namespace within the registry becomes available for installation.
+  1. **oci://\<registry-host\>/\<namespace\>/\<chart-name\>**: Only the specified chart and any associated tags or versions of that chart become available for installation.
+  1. **oci://\<registry-host\>/\<namespace\>/\<chart-name\>:\<tag\>**: Only the chart with the specified tag becomes available for installation.
 
 1. Select **Basicauth** from the authentication field and enter a username and password as required. 
 1. Add any labels and annotations.
