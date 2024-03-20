@@ -10,26 +10,26 @@ Helm v3 introduced storing Helm charts as [Open Container Initiative (OCI)](http
 
 ## Add an OCI Registry
 
-To add an OCI Registry through the Rancher UI:
+To add an OCI registry through the Rancher UI:
 
 1. Click **☰ > Cluster Management**.
 1. In the left navigation bar, under **Advanced**, select **Repositories**.
 1. Click **Create**.
 1. Enter a name and description for the registry. Select **OCI** as the target.
-1. Enter the URL for the registry. An OCI registry URL consists of three parts:
-  - Registry host
-  - Repository namespace
-  - Tag
+1. Enter the URL for the registry. You can use this field to finetune how many charts you want to make availabe for installation on Rancher. More generic endpoints target more charts, as the following examples demonstrate:
 
-<!-- Parse out examples of different URLs -->
+  1. **oci://<registry-host>/**: Every chart in the registry becomes available for installation, regardless of namespace or tag.
+  1. **oci://<registry-host>/<namespace>**: Every chart in the specified namespace within the registry becomes available for installation.
+  1. **oci://<registry-host>/<namespace>/<chart-name>**: Only the specified chart and any associated tags or versions of that chart become available for installation.
+  1. **oci://<registry-host>/<namespace>/<chart-name>:<tag>**: Only the chart with the specified tag becomes available for installation.
 
 1. Select **Basicauth** from the authentication field and enter a username and password as required. 
 1. Add any labels and annotations.
 1. Click **Create**.
 
-It may take some time for the OCI registry to become active. This is particularly true if the OCI endpoint contains multiple repositories. 
+It may take some time for the OCI registry to activate. This is particularly true if the OCI endpoint contains multiple repositories. 
 
-Once the registry switches to an `Active` state, you can view the Helm charts in the OCI registry from the Rancher UI:
+To view Helm charts in the OCI registry after it achieves an `Active` state:
 
 1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
 1. Click **Apps > Charts**.
@@ -37,40 +37,9 @@ Once the registry switches to an `Active` state, you can view the Helm charts in
 
 The `spec.insecurePlainHttp` field allows insecure connections to OCI registries. When this field is set to `true`, Rancher will connect to the OCI endpoint without performing an SSL check. This works exactly the same as how the `spec.insecurePlainHttp` field works in [ORAS CLI](https://oras.land/docs/commands/use_oras_cli), since under the hood Rancher manager uses the ORAS library.
 
-<!-- Unedited draft -->
+The CRD that is linked to the OCI Helm registry is `ClusterRepo`.
 
-To create a OCI based helm repository, you need to click on Create in repositories page. 
-Define a name and description for it. Select the target as OCI. 
-Input the OCI URL. The OCI URl consists of three parts 
-Registry Host 
-Repository namespace 
-Tag 
-The different values of OCI URL can be 
-oci://dp.apps.rancher.io/charts/etcd:1.0.1 - In this case, only one chart i.e etcd with one version 1.0.1 will be taken into account and will be available in the Charts page. 
-oci://dp.apps.rancher.io/charts/etcd - In this case, only one chart i.e etcd with all versions aka tags available will be taken into account and will be available in the Charts page.
-oci://dp.apps.rancher.io/charts -   In this case, all helm chart with all versions aka tags available in the charts repository namespace will be taken into account and will be available to install in the Charts page.
-oci://dp.apps.rancher.io/ - In this case, all helm chart with all versions aka tags available in the entire registry will be taken into account and will be available to install in the Charts page.
-
-It is recommended to use the 1st option if it suits you and second option and so on…and last option is the least recommended option since it might stress your OCI registries if it contains non helm charts and Rancher scans your entire registry. Note that your OCI registry needs to support v2/_catalog API endpoint for 4th option.
-
-Select the authentication of basicauth and insert username and password is necessary. Right now OCI based helm repositories only support basicauth. 
-Add labels and annotation if necessary. 
-
-[Screenshot of the Create OCI based HElm repo page with values inserted]
-
-
-Click on create and wait for sometime.if your OCI endpoint contains more repositories then it might take some time. So please be patient. 
-
-Once the STATE of the reposutory changes to Active, click on Charts page and select the repository you created in the dropdown to view all the helm charts from the OCI url you added. 
-
-[screenshot of Charts page]
-
-
-The CRD that is linked to the OCI Helm Repository is ClusterRepo.
-
-[Screenshot of the ClusterRepo YAML]
-
-
+[Screenshot of the ClusterRepo YAML]<!-- Engineers - Can we get this screenshot? Thank you! -->
 
 ## Refresh a OCI Registry
 
@@ -82,7 +51,7 @@ If you need to update immediately, you can perform a manual refresh:
 1. In the left navigation bar, under **Advanced**, select **Repositories**.
 1. Select the row associated with the OCI registry, and click **Refresh**.
 
-## Update OCI Registry Configuration <!-- Unedited draft -->
+## Update OCI Registry Configuration
 
 1. Click **☰ > Cluster Management**.
 1. In the left navigation bar, under **Advanced**, select **Repositories**.
@@ -97,9 +66,9 @@ If you need to update immediately, you can perform a manual refresh:
 
 ## Limitations of OCI-based Helm Registries in Rancher
 
-Due to security concerns, there are limitations on how large a Helm chart you can deploy through an OCI-based registry, and how much metadata you can use to describe the Helm charts within a single OCI URL.
+Due to security concerns, there are limitations on how large of a Helm chart you can deploy through an OCI-based registry, and how much metadata you can use to describe the Helm charts within a single OCI endpoint.
 
-Rancher can deploy Helm charts stored as OCI artifacts up to 20 MB in size.
+Rancher can deploy OCI Helm charts up to 20 MB in size.
 
 The metadata field in index.yaml can store up to 30 MB of information about the Helm charts within an OCI-based registry.
 
