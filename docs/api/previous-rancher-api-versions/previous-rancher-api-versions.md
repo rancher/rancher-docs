@@ -1,14 +1,14 @@
 ---
-title: API
+title: Previous API Guide
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/about-the-api"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/api/previous-rancher-api-versions"/>
 </head>
 
-## How to use the API
+## How to Use the API
 
-The API has its own user interface accessible from a web browser.  This is an easy way to see resources, perform actions, and see the equivalent cURL or HTTP request & response.  To access it:
+The past Rancher versions `v2.7.x` and below have their own API user interfaces accessible from a [web browser](https://ranchermanager.docs.rancher.com/v2.7/reference-guides/about-the-api). This is an easy way to see resources, perform actions, and see the equivalent cURL or HTTP request & response.  To access it:
 
 <Tabs>
 <TabItem value="Rancher v2.6.4+">
@@ -27,7 +27,7 @@ Go to the URL endpoint at `https://<RANCHER_FQDN>/v3`, where `<RANCHER_FQDN>` is
 
 ## Authentication
 
-API requests must include authentication information.  Authentication is done with HTTP basic authentication using [API Keys](../user-settings/api-keys.md). API keys can create new clusters and have access to multiple clusters via `/v3/clusters/`. [Cluster and project roles](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md) apply to these keys and restrict what clusters and projects the account can see and what actions they can take.
+API requests must include authentication information.  Authentication is done with HTTP basic authentication using [API Keys](../../reference-guides/user-settings/api-keys.md). API keys can create new clusters and have access to multiple clusters via `/v3/clusters/`. [Cluster and project roles](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md) apply to these keys and restrict what clusters and projects the account can see and what actions they can take.
 
 By default, some cluster-level API tokens are generated with infinite time-to-live (`ttl=0`). In other words, API tokens with `ttl=0` never expire unless you invalidate them. For details on how to invalidate them, refer to the [API tokens page](api-tokens.md).
 

@@ -1034,17 +1034,6 @@ const sidebars = {
             "reference-guides/cli-with-rancher/kubectl-utility",
           ]
         },
-        {
-          type: 'category',
-          label: 'About the API',
-          link: {
-            type: 'doc',
-            id: "reference-guides/about-the-api/about-the-api",
-          },
-          items: [
-            "reference-guides/about-the-api/api-tokens",
-          ]
-        },
         "reference-guides/rancher-cluster-tools",
 
         "reference-guides/rancher-project-tools",
@@ -1363,7 +1352,15 @@ const sidebars = {
             "api/workflows/projects"
           ]
         },
-        "api/api-reference"
+        "api/api-reference",
+        {
+          "type": "category",
+          "label": "Previous API Versions",
+          "items": [
+            "api/previous-rancher-api-versions/previous-rancher-api-versions",
+            "api/previous-rancher-api-versions/api-tokens",
+          ]
+        },
       ]
     },
     "contribute-to-rancher",
