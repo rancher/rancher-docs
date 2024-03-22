@@ -12,7 +12,7 @@ In this section, you'll learn how to manage Helm chart repositories and apps in 
 
 In Rancher v2.5, the **Apps and Marketplace** feature replaces the catalog system.
 
-In the cluster manager, Rancher uses a catalog system to import bundles of charts and then uses those charts to either deploy custom helm applications or Rancher's tools such as Monitoring or Istio. The catalog system is still available in the cluster manager in Rancher v2.5, but it is deprecated.
+In the cluster manager, Rancher uses a catalog system to import bundles of charts and then uses those charts to either deploy custom Kubernetes applications or Rancher's tools such as Monitoring or Istio. The catalog system is still available in the cluster manager in Rancher v2.5, but it is deprecated.
 
 ### Helm Charts in Rancher
 
