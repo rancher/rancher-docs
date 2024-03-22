@@ -95,7 +95,7 @@ To access the **Repositories** page:
 1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
 1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
 
-#### Add Custom Git Repositories
+### Add Custom Git Repositories
 
 To add a custom Git repository that contains your Helm charts or cluster template definitions:
 
