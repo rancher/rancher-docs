@@ -132,7 +132,7 @@ You can add private Git or Helm chart repositories with SSH key credentials or a
 
 ### Add a Private CA to Repositories
 
-To add a private CA to Helm chart repositories, you must add a base64 encoded copy of the CA certificate in DER format to the `spec.caBundle field` of the chart repo, such as `openssl x509 -outform der -in ca.pem | base64 -w0`. Instructions are the same for both Git- and HTTP-based repositories:
+To add a private CA to Helm chart repositories, you must add a base64 encoded copy of the CA certificate in DER format to the `spec.caBundle field` of the chart repo, such as `openssl x509 -outform der -in ca.pem | base64 -w0`. Instructions are the same for both Git-based and HTTP-based repositories:
 
 1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
 1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
