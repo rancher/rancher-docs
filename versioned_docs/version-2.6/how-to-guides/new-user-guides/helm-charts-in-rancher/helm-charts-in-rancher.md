@@ -57,7 +57,7 @@ When upgrading Rancher versions, don't downgrade the version of the chart that y
 
 Helm chart repositories are now managed using **Apps & Marketplace** (before v2.6.5) or **Apps** (Rancher v2.6.5 and later).
 
-## Charts
+## Access Charts
 
 <Tabs groupId="rancher-version">
 <TabItem value="Rancher v2.6.5+">
@@ -86,7 +86,7 @@ Apps managed by the Cluster Manager (the global view in the legacy Rancher UI) s
 
 :::
 
-## Repositories
+## Manage Repositories
 
 The **Repositories** page lists your Helm repositories. These include traditional Helm endpoints which have an index.yaml, and Git repositories that are cloned and point to a specific branch. To use custom charts, add your repository here. Once added, you can access custom charts in the **Charts** page, listed under the name of the repository.
 
@@ -156,7 +156,7 @@ spec:
 
 Only Helm 3 compatible charts are supported.
 
-## Deployment and Upgrades
+## Deploy and Upgrade Charts
 
 From the **Charts** tab select a chart to install. Rancher and Partner charts may have extra configurations available through custom pages or questions.yaml files, but all chart installations can modify the values.yaml and other basic settings. Once you click install, a Helm operation job is deployed, and the console for the job is displayed.
 

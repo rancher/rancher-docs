@@ -65,7 +65,7 @@ Rancher v2.5 replaced the former catalog system with a new **Apps & Marketplace*
 
 Since Rancher v2.6.5, the **Apps & Marketplace** feature is named **Apps** in the UI.
 
-## Charts
+## Access Charts
 
 The **Charts** page contains all Rancher, Partner, and Custom charts. You can filter charts by selecting the left-most dropdown menu:
 
@@ -86,7 +86,7 @@ To access the **Charts** page:
 1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
 1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Charts**.
 
-## Repositories
+## Manage Repositories
 
 The **Repositories** page lists your Helm repositories. These include traditional Helm endpoints which have an index.yaml, and Git repositories that are cloned and point to a specific branch. To use custom charts, add your repository here. Once added, you can access custom charts in the **Charts** page, listed under the name of the repository.
 
@@ -165,7 +165,7 @@ spec:
 
 Only Helm 3 compatible charts are supported.
 
-## Deployment and Upgrades
+## Deploy and Upgrade Charts
 
 To install and deploy a chart:
 

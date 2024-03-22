@@ -100,7 +100,7 @@ spec:
 
 The Cluster Explorer only supports Helm 3 compatible charts.
 
-## Deployment and Upgrades
+## Deploy and Upgrade Charts
 
 From the **Charts** tab select a chart to install. Rancher and Partner charts may have extra configurations available through custom pages or questions.yaml files, but all chart installations can modify the values.yaml and other basic settings. Once you click install, a Helm operation job is deployed, and the console for the job is displayed.
 

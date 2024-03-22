@@ -165,7 +165,7 @@ spec:
 
 Only Helm 3 compatible charts are supported.
 
-## Deployment and Upgrades
+## Deploy and Upgrade Charts
 
 To install and deploy a chart:
 
