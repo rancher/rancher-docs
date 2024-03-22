@@ -8,7 +8,7 @@ title: Helm Charts and Apps
 
 In this section, you'll learn how to manage Helm chart repositories and applications in Rancher. 
 
-## Helm Charts in Rancher
+## How Helm Charts Work in Rancher
 
 Rancher uses a catalog-like system to import bundles of charts from repositories and then uses those charts to either deploy custom Kubernetes applications or Rancher's tools such as Monitoring or Istio. Rancher tools come as pre-loaded repositories which deploy as standalone Helm charts. Any additional repositories are only added to the current cluster.
 

@@ -8,9 +8,9 @@ title: Helm Charts and Apps
 
 In this section, you'll learn how to manage Helm chart repositories and apps in Rancher. 
 
-Helm chart repositories in Rancher are managed using **Apps**.
+## How Helm Charts Work in Rancher
 
-## Helm Charts in Rancher
+Helm chart repositories in Rancher are managed using **Apps**.
 
 Rancher uses a catalog-like system to import bundles of charts from repositories and then uses those charts to either deploy custom Kubernetes applications or Rancher's tools such as Monitoring or Istio. Rancher tools come as pre-loaded repositories which deploy as standalone Helm charts. Any additional repositories are only added to the current cluster.
 
@@ -20,7 +20,7 @@ The Rancher feature charts versioning scheme is centered around the major versio
 
 **Major Version:** The major versions of feature charts are tied to particular minor versions of Rancher. When you upgrade to a new Rancher minor version, you should ensure that all of your feature charts are also upgraded to the correct release line for the chart.
 
-### Prerelease Versions
+#### Prerelease Versions
 
 Prereleases adhere to [the specification](https://semver.org/#spec-item-9) defined by [Semantic Versioning 2.0.0](https://semver.org/). For example, a Helm chart with a version of `0.1.3-dev.12ab4f` is considered a prerelease. Prerelease versions are not displayed by default and must be configured to do so.
 
@@ -30,7 +30,7 @@ To display prerelease versions:
 1. Click **Preferences**.
 1. Under **Helm Charts**, select **Include Prerelease Versions**.
 
-#### Feature Charts
+### Feature Charts
 
 | **Name** | **Supported Minimum Version** | **Supported Maximum Version** |
 | ---------------- | ------------ | ------------ |
