@@ -24,7 +24,7 @@ Any major versions that are less than the ones mentioned in the table below are 
 
 :::
 
-#### Feature Charts
+### Feature Charts
 
 | **Name** | **Supported Minimum Version** | **Supported Maximum Version** |
 | ---------------- | ------------ | ------------ |
@@ -45,11 +45,11 @@ Any major versions that are less than the ones mentioned in the table below are 
 | rancher-vsphere-csi | 100.3.0+up2.5.1-rancher1 | 100.3.0+up2.5.1-rancher1 |
 | rancher-wins-upgrader | 0.0.100 | 100.0.1+up0.0.1 |
 
-**Charts based on upstream:** For charts that are based on upstreams, the +up annotation should inform you of what upstream version the Rancher chart is tracking. Check the upstream version compatibility with Rancher during upgrades also.
+**Charts based on upstream:** The `+up` annotation for the chart indicates which upstream version the Rancher chart is tracking. For example, `100.x.x+up16.6.0` for Monitoring tracks upstream kube-prometheus-stack `16.6.0` with some additional Rancher patches.
 
-- As an example, `100.x.x+up16.6.0` for Monitoring tracks upstream kube-prometheus-stack `16.6.0` with some Rancher patches added to it.
+When you upgrade, make sure that the upstream chart version is compatible with your Rancher version. 
 
-- On upgrades, ensure that you are not downgrading the version of the chart that you are using. For example, if you are using a version of Monitoring > `16.6.0` in Rancher 2.5, you should not upgrade to `100.x.x+up16.6.0`. Instead, you should upgrade to the appropriate version in the next release.
+When upgrading Rancher versions, don't downgrade the version of the chart that you are using. For example, if you are using a version of Monitoring that is later than `16.6.0` in Rancher v2.5, you shouldn't upgrade to `100.x.x+up16.6.0`. Instead, you should upgrade to the appropriate version in the next release.
 
 ### Catalogs, Apps, and the Rancher UI
 
