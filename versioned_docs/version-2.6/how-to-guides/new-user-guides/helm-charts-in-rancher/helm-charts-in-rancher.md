@@ -99,7 +99,7 @@ To add a custom Git repository that contains your Helm charts or cluster templat
 1. Select **Repositories** from the left nevigation menu.
 1. Click **Create**.
 1. Select the target, **Git repository containing Helm chart...**.
-1. You must enter a name and a Git repository URL. The other fields, including the description, are optional. Enter an alternative branch name if you don't want to pull from the default branch, `main`.
+1. You must enter a name and a Git repository URL. The other fields, including the description, are optional. Enter an alternative branch name if you don't want to pull from whichever branch the repo owner has set as the default. Usually, the default branch is named either `main` or `master`.
 1. Click **Create** to add the repository. 
 
 After you add a chart repository to Rancher, it becomes available immediately.

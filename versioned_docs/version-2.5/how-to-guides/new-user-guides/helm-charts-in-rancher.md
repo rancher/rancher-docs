@@ -42,7 +42,7 @@ These items represent Helm repositories, and can be either traditional Helm endp
 
 Click **Create** and select the target, **Git repository containing Helm chart...** to add a custom Git repository that contains your Helm charts or cluster template definitions.
 
-You must enter a name and a Git repository URL. The other fields, including the description, are optional. Enter an alternative branch name if you don't want to pull from the default, `main`.
+You must enter a name and a Git repository URL. The other fields, including the description, are optional. Enter an alternative branch name if you don't want to pull from the repo's default branch. Usually, the default branch is either `main` or `master`.
 
 Whenever you add a chart repository to Rancher, it becomes available immediately.
 
