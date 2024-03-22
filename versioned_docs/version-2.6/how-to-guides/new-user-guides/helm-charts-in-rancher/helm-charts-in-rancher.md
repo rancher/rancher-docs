@@ -88,7 +88,7 @@ Apps managed by the Cluster Manager (the global view in the legacy Rancher UI) s
 
 ## Manage Repositories
 
-The **Repositories** page lists your Helm repositories. These include traditional Helm endpoints which have an index.yaml, and Git repositories that are cloned and point to a specific branch. To use custom charts, add your repository here. Once added, you can access custom charts in the **Charts** page, listed under the name of the repository.
+The **Repositories** page lists your Helm repositories. These include traditional Helm endpoints which have an index.yaml, and Git repositories that are cloned and point to a specific branch. To use custom charts, add your repository here. After you add a repository, you can access custom charts in the **Charts** page, listed under the name of the repository.
 
 To access the **Repositories** page, select **Repositories** from the left nevigation menu.
 
@@ -158,7 +158,7 @@ Only Helm 3 compatible charts are supported.
 
 ## Deploy and Upgrade Charts
 
-From the **Charts** tab select a chart to install. Rancher and Partner charts may have extra configurations available through custom pages or questions.yaml files, but all chart installations can modify the values.yaml and other basic settings. Once you click install, a Helm operation job is deployed, and the console for the job is displayed.
+From the **Charts** tab select a chart to install. Rancher and Partner charts may have extra configurations available through custom pages or questions.yaml files, but all chart installations can modify the values.yaml and other basic settings. After you click install, a Helm operation job is deployed, and the console for the job is displayed.
 
 To view all recent changes, go to the **Recent Operations** tab. From there you can view the call that was made, conditions, events, and logs.
 
@@ -168,7 +168,7 @@ Most Rancher tools have additional pages located in the toolbar below the **Apps
 
 :::caution
 
-If you are upgrading your chart using **Customize Helm options before upgrade**, please be aware that using the `--force` option may result in errors if your chart has immutable fields. This is because some objects in Kubernetes cannot be changed once they are created. To ensure you do not get this error you can:
+If you are upgrading your chart using **Customize Helm options before upgrade**, please be aware that using the `--force` option may result in errors if your chart has immutable fields. This is because some objects in Kubernetes cannot be changed after they are created. To ensure you do not get this error you can:
 
   * Use the default upgrade option ( i.e do not use `--force` option ).
   * Uninstall the existing chart and install the upgraded chart.

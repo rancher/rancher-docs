@@ -89,7 +89,7 @@ To access the **Charts** page:
 
 ## Manage Repositories
 
-The **Repositories** page lists your Helm repositories. These include traditional Helm endpoints which have an index.yaml, and Git repositories that are cloned and point to a specific branch. To use custom charts, add your repository here. Once added, you can access custom charts in the **Charts** page, listed under the name of the repository.
+The **Repositories** page lists your Helm repositories. These include traditional Helm endpoints which have an index.yaml, and Git repositories that are cloned and point to a specific branch. To use custom charts, add your repository here. After you add a repository, you can access custom charts in the **Charts** page, listed under the name of the repository.
 
 To access the **Repositories** page:
 
@@ -177,7 +177,7 @@ To install and deploy a chart:
 1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Charts**.
 1. Select a chart, and click **Install**. 
 
-Rancher and Partner charts may have extra configurations available through custom pages or questions.yaml files. However, all chart installations can modify the values.yaml and other basic settings. Once you click **Install**, a Helm operation job is deployed, and the console for the job is displayed.
+Rancher and Partner charts may have extra configurations available through custom pages or questions.yaml files. However, all chart installations can modify the values.yaml and other basic settings. After you click **Install**, a Helm operation job is deployed, and the console for the job is displayed.
 
 To view all recent changes, click **Apps > Recent Operations** in the left navigation menu. From there you can view the calls, conditions, events, and logs.
 
