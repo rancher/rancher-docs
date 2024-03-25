@@ -3,7 +3,7 @@ title: Azure Marketplace Pay-as-you-go (PAYG) Integration
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/azure-marketplace-payg-integration"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration"/>
 </head>
 
 ## Overview
