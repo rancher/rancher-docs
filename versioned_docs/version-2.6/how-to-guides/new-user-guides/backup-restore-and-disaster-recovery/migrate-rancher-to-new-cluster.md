@@ -185,3 +185,7 @@ helm install rancher rancher-latest/rancher -n cattle-system -f rancher-values.y
 ```
 
 :::
+
+### 5. Redirect DNS to the New Cluster
+
+After migration completes, make sure to update your DNS records so that traffic is routed to the cluster's new address. Instructions for how to do this depend on your specific environment, and how your DNS was initially set up. Refer to your hosting provider's documentation for more details.
