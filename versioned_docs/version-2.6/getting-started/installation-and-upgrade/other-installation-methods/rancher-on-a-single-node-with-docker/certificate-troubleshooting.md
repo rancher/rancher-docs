@@ -6,6 +6,8 @@ title: Troubleshooting Certificates
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/certificate-troubleshooting"/>
 </head>
 
+<DockerSupportWarning />
+
 ### How Do I Know if My Certificates are in PEM Format?
 
 You can recognize the PEM format by the following traits:

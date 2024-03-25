@@ -6,6 +6,8 @@ title: Rolling Back Rancher Installed with Docker
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/roll-back-docker-installed-rancher"/>
 </head>
 
+<DockerSupportWarning />
+
 If a Rancher upgrade does not complete successfully, you'll have to roll back to your Rancher setup that you were using before [Docker Upgrade](./upgrade-docker-installed-rancher.md). Rolling back restores:
 
 - Your previous version of Rancher.
