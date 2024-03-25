@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/azure-marketplace-payg-integration.md",
     "sourceDirName": "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration",
     "slug": "/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/",
-    "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/",
+    "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/azure-marketplace-payg-integration.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1710437107,
-    "formattedLastUpdatedAt": "Mar 14, 2024",
+    "lastUpdatedAt": 1711390893,
+    "formattedLastUpdatedAt": "2024年3月25日",
     "frontMatter": {
         "title": "Azure Marketplace Pay-as-you-go (PAYG) Integration"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Common Issues for Rancher Prime PAYG on AWS",
-        "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/common-issues"
+        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/common-issues"
     },
     "next": {
         "title": "Prerequisites",
-        "permalink": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites"
+        "permalink": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites"
     }
 };
 const assets = {};
@@ -373,10 +373,7 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
-        rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/azure-marketplace-payg-integration"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "overview"
     }, `Overview`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher Prime integrates with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
@@ -395,7 +392,7 @@ function MDXContent(_param) {
         "id": "faq"
     }, `FAQ`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more details on how Rancher pay-as-you-go offerings work, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/integrations-in-rancher/cloud-marketplace/cloud-marketplace-payg-integration#faq"
+        "href": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/cloud-marketplace-payg-integration#faq"
     }, `pay-as-you-go FAQ`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "limitations"
     }, `Limitations`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -406,12 +403,12 @@ function MDXContent(_param) {
         parentName: "ol"
     }, `Complete the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites"
+        "href": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites"
     }, `prerequisite steps`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime"
+        "href": "/zh/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime"
     }, `Install the Rancher Prime PAYG offering on the Azure Marketplace`), `.`)));
 }
 MDXContent.isMDXComponent = true;
