@@ -14,6 +14,14 @@ Helm chart repositories in Rancher are managed using **Apps**.
 
 Rancher uses a catalog-like system to import bundles of charts from repositories and then uses those charts to either deploy custom Kubernetes applications or Rancher's tools such as Monitoring or Istio. Rancher tools come as pre-loaded repositories which deploy as standalone Helm charts. Any additional repositories are only added to the current cluster.
 
+### Catalogs, Apps, and the Rancher UI
+
+[Rancher v2.4 and earlier](/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md), repositories of ready-to-deploy applications were called "catalogs". These repositories were managed through the **Catalogs** section of the UI. 
+
+Rancher v2.5 replaced the former catalog system with a new **Apps & Marketplace** feature. 
+
+Since Rancher v2.6.5, the **Apps & Marketplace** feature is named **Apps** in the UI.
+
 ### Versioning Scheme
 
 The Rancher feature charts versioning scheme is centered around the major version of the charts and the `+up` annotation for upstream charts, where applicable.
@@ -56,14 +64,6 @@ To display prerelease versions:
 When you upgrade, make sure that the upstream chart version is compatible with your Rancher version.
 
 When upgrading Rancher versions, don't downgrade the version of the chart that you are using. For example, if you are using a version of Monitoring that is later than `16.6.0` in Rancher v2.5, you shouldn't upgrade to `100.x.x+up16.6.0`. Instead, you should upgrade to the appropriate version in the next release.
-
-### Catalogs, Apps, and the Rancher UI
-
-[Rancher v2.4 and earlier](/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md), repositories of ready-to-deploy applications were called "catalogs". These repositories were managed through the **Catalogs** section of the UI. 
-
-Rancher v2.5 replaced the former catalog system with a new **Apps & Marketplace** feature. 
-
-Since Rancher v2.6.5, the **Apps & Marketplace** feature is named **Apps** in the UI.
 
 ## Access Charts
 

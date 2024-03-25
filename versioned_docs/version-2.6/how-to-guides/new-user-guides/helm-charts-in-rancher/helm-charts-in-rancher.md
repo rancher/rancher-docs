@@ -12,11 +12,17 @@ In this section, you'll learn how to manage Helm chart repositories and applicat
 
 Rancher uses a catalog-like system to import bundles of charts from repositories and then uses those charts to either deploy custom Kubernetes applications or Rancher's tools such as Monitoring or Istio. Rancher tools come as pre-loaded repositories which deploy as standalone Helm charts. Any additional repositories are only added to the current cluster.
 
-### Changes in Rancher v2.6
+### Catalogs, Apps, and the Rancher UI
 
-Starting in Rancher v2.6.0, a new versioning scheme for Rancher feature charts was implemented. The changes are centered around the major version of the charts and the +up annotation for upstream charts, where applicable.
+[Rancher v2.4 and earlier](/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md), repositories of ready-to-deploy applications were called "catalogs". These repositories were managed through the **Catalogs** section of the UI.  
 
-**Major Version:** The major versions of feature charts are tied to Rancher minor versions. When you upgrade to a new Rancher minor version, you should ensure that all of your **Apps & Marketplace** (Rancher before v2.6.5) or **Apps** (Rancher v2.6.5+) charts are also upgraded to the correct release line for the chart.
+Helm chart repositories are now managed using **Apps & Marketplace** (before Rancher v2.6.5) or **Apps** (Rancher v2.6.5 and later).
+
+### Versioning Changes in Rancher v2.6
+
+Starting in Rancher v2.6.0, a new versioning scheme for Rancher feature charts was implemented. The changes are centered around the major version of the charts and the `+up` annotation for upstream charts, where applicable.
+
+**Major Version:** The major versions of feature charts are tied to Rancher minor versions. When you upgrade to a new Rancher minor version, you should ensure that all of your charts are also upgraded to the correct release line for the chart.
 
 :::note
 
@@ -50,12 +56,6 @@ Any major versions that are less than the ones mentioned in the table below are 
 When you upgrade, make sure that the upstream chart version is compatible with your Rancher version.
 
 When upgrading Rancher versions, don't downgrade the version of the chart that you are using. For example, if you are using a version of Monitoring that is later than `16.6.0` in Rancher v2.5, you shouldn't upgrade to `100.x.x+up16.6.0`. Instead, you should upgrade to the appropriate version in the next release.
-
-### Catalogs, Apps, and the Rancher UI
-
-[Rancher v2.4 and earlier](/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md), repositories of ready-to-deploy applications were called "catalogs". These repositories were managed through the **Catalogs** section of the UI.  
-
-Helm chart repositories are now managed using **Apps & Marketplace** (before v2.6.5) or **Apps** (Rancher v2.6.5 and later).
 
 ## Access Charts
 
