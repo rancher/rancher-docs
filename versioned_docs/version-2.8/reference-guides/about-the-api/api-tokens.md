@@ -10,8 +10,9 @@ By default, some cluster-level API tokens are generated with infinite time-to-li
 
 You can deactivate API tokens by deleting them or by deactivating the user account.
 
-### Deleting tokens
-To delete a token,
+## Deleting Tokens
+
+To delete a token:
 
 1. Go to the list of all tokens in the Rancher API view at `https://<Rancher-Server-IP>/v3/tokens`.
 
@@ -19,7 +20,7 @@ To delete a token,
 
 1. Click **Delete**.
 
-Here is the complete list of tokens that are generated with `ttl=0`:
+The following is a complete list of tokens generated with `ttl=0`:
 
 | Token             | Description                                                                            |
 | ----------------- | -------------------------------------------------------------------------------------- |
@@ -28,12 +29,11 @@ Here is the complete list of tokens that are generated with `ttl=0`:
 | `compose-token-*` | Token for compose                                                                      |
 | `helm-token-*`    | Token for Helm chart deployment                                                        |
 | `telemetry-*`     | Telemetry token                                                                        |
-| `drain-node-*`    | Token for drain (we use `kubectl` for drain because there is no native Kubernetes API) |
+| `drain-node-*`    | Token for drain (Rancher uses `kubectl` for drain because there is no native Kubernetes API). |
 
+## Setting TTL on Kubeconfig Tokens
 
-### Setting TTL on Kubeconfig Tokens
-
-Admins can set a global time-to-live (TTL) on Kubeconfig tokens. Changing the default kubeconfig TTL can be done by navigating to global settings and setting [`kubeconfig-default-token-ttl-minutes`](#kubeconfig-default-token-ttl-minutes) to the desired duration in minutes. The default value of [`kubeconfig-default-token-ttl-minutes`](#kubeconfig-default-token-ttl-minutes) is 43200, which is 30 days.
+Admins can set a global time-to-live (TTL) on Kubeconfig tokens. Changing the default kubeconfig TTL can be done by navigating to global settings and setting [`kubeconfig-default-token-ttl-minutes`](#kubeconfig-default-token-ttl-minutes) to the desired duration in minutes. As of Rancher v2.8, the default value of [`kubeconfig-default-token-ttl-minutes`](#kubeconfig-default-token-ttl-minutes) is `43200`, which means that tokens expire in 30 days.
 
 :::note
 
@@ -41,42 +41,45 @@ This setting is used by all kubeconfig tokens except those created by the CLI to
 
 :::
 
-### Disable Tokens in Generated Kubeconfigs
+## Disable Tokens in Generated Kubeconfigs
 
-Set the `kubeconfig-generate-token` setting to `false`. This setting instructs Rancher to no longer automatically generate a token when a user clicks on download a kubeconfig file. Once this setting is deactivated, a generated kubeconfig will reference the [Rancher CLI](../cli-with-rancher/kubectl-utility.md#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl) to retrieve a short-lived token for the cluster. When this kubeconfig is used in a client, such as `kubectl`, the Rancher CLI needs to be installed to complete the log in request.
+Set the `kubeconfig-generate-token` setting to `false`. This setting instructs Rancher to no longer automatically generate a token when a user clicks on download a kubeconfig file. When this setting is deactivated, a generated kubeconfig references the [Rancher CLI](../cli-with-rancher/kubectl-utility.md#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl) to retrieve a short-lived token for the cluster. When this kubeconfig is used in a client, such as `kubectl`, the Rancher CLI needs to be installed to complete the log in request.
 
-### Token Hashing
+## Token Hashing
 
-Users can enable token hashing, where tokens will undergo a one-way hash using the SHA256 algorithm. This is a non-reversible process, once enabled, this feature cannot be disabled. It is advisable to take backups prior to enabling and/or evaluating in a test environment first.
+Users can enable token hashing, where tokens undergo a one-way hash using the SHA256 algorithm. This is a non-reversible process: once enabled, this feature cannot be disabled. It is advisable to take backups prior to enabling and/or evaluating in a test environment first.
 
 To enable token hashing, refer to [this section](../../how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features.md).
 
-This feature will affect all tokens which include, but are not limited to, the following:
+This feature affects all tokens which include, but are not limited to, the following:
 
 - Kubeconfig tokens
 - Bearer tokens API keys/calls
 - Tokens used by internal operations
 
-### Token Settings
+## Token Settings
+
 These global settings affect Rancher token behavior.
 
 | Setting                                                                         | Description                                                                                                                                                                                                                    |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [`auth-user-session-ttl-minutes`](#auth-user-session-ttl-minutes)               | TTL in minutes on a user auth session token.                                                                                                                                                                                   |
-| [`kubeconfig-default-token-TTL-minutes`](#kubeconfig-default-token-ttl-minutes) | Default TTL applied to all kubeconfig tokens except those [generated by Rancher CLI](#disable-tokens-in-generated-kubeconfigs). **Introduced in version 2.6.6.**                                                   |
-| [`auth-token-max-ttl-minutes`](#auth-token-max-ttl-minutes)                     | Max TTL for all tokens except those controlled by [`auth-user-session-ttl-minutes`](#auth-user-session-ttl-minutes).                                                                                                           |
+| [`kubeconfig-default-token-ttl-minutes`](#kubeconfig-default-token-ttl-minutes) | Default TTL applied to all kubeconfig tokens except those [generated by Rancher CLI](#disable-tokens-in-generated-kubeconfigs).                                         |
+| [`auth-token-max-ttl-minutes`](#auth-token-max-ttl-minutes)                     | Max TTL for all tokens except those controlled by [`auth-user-session-ttl-minutes`](#auth-user-session-ttl-minutes).                                                                                                      |
 | [`kubeconfig-generate-token`](#kubeconfig-generate-token)                       | If true, automatically generate tokens when a user downloads a kubeconfig.                                                                                                                                                     |
 
-#### auth-user-session-ttl-minutes
-Time to live (TTL) duration in minutes used to determine when a user auth session token expires. When expired, the user will be required to log in and obtain a new token. This setting is not affected by [`auth-token-max-ttl-minutes`](#auth-token-max-ttl-minutes). Session tokens are created when a user logs into Rancher.
+### auth-user-session-ttl-minutes
 
-#### kubeconfig-default-token-TTL-minutes
-Time to live (TTL) duration in minutes used to determine when a kubeconfig token expires. When the token is expired, the API will reject the token. This setting can not be larger than [`auth-token-max-ttl-minutes`](#auth-token-max-ttl-minutes). This setting applies to a token generated in a requested kubeconfig file. Except those [generated by Rancher CLI](#disable-tokens-in-generated-kubeconfigs).
-**Introduced in version 2.6.6**.
+Time to live (TTL) duration in minutes, used to determine when a user auth session token expires. When expired, the user must log in and obtain a new token. This setting is not affected by [`auth-token-max-ttl-minutes`](#auth-token-max-ttl-minutes). Session tokens are created when a user logs into Rancher.
 
-#### auth-token-max-ttl-minutes
-Maximum Time to Live (TTL) in minutes allowed for auth tokens. If a user attempts to create a token with a TTL greater than `auth-token-max-ttl-minutes`, Rancher will set the token TTL to the value of `auth-token-max-ttl-minutes`. Auth tokens are tokens created for authenticating API requests.
-**Changed in version 2.6.6: Applies to all kubeconfig tokens and api tokens.**
+### kubeconfig-default-token-ttl-minutes
 
-#### kubeconfig-generate-token
-When true, kubeconfigs requested through the UI will contain a valid token. When false, the kubeconfig will contain a command that uses the Rancher CLI to prompt the user to log in. [The CLI then will retrieve and cache a token for the user](../cli-with-rancher/kubectl-utility.md#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl).
+Time to live (TTL) duration in minutes, used to determine when a kubeconfig token expires. When the token is expired, the API rejects the token. This setting can't be larger than [`auth-token-max-ttl-minutes`](#auth-token-max-ttl-minutes). This setting applies to tokens generated in a requested kubeconfig file, except for tokens [generated by Rancher CLI](#disable-tokens-in-generated-kubeconfigs). As of Rancher v2.8, the default duration is `43200`, which means that tokens expire in 30 days.
+
+### auth-token-max-ttl-minutes
+
+Maximum Time to Live (TTL) in minutes allowed for auth tokens. If a user attempts to create a token with a TTL greater than `auth-token-max-ttl-minutes`, Rancher sets the token TTL to the value of `auth-token-max-ttl-minutes`. Applies to all kubeconfig tokens and API tokens. As of Rancher v2.8, the default duration is `129600`, which means that tokens expire in 90 days.
+
+### kubeconfig-generate-token
+
+When true, kubeconfigs requested through the UI contain a valid token. When false, kubeconfigs contain a command that uses the Rancher CLI to prompt the user to log in. [The CLI then retrieves and caches a token for the user](../cli-with-rancher/kubectl-utility.md#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl).
