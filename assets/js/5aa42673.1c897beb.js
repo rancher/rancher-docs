@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[876],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[82418],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 61449:
+/***/ 97267:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,83 +313,78 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/about-the-api/api-tokens",
-    "id": "reference-guides/about-the-api/api-tokens",
+    "id": "version-2.8/reference-guides/about-the-api/api-tokens",
     "title": "API Tokens",
     "description": "By default, some cluster-level API tokens are generated with infinite time-to-live (ttl=0). In other words, API tokens with ttl=0 never expire unless you invalidate them. Tokens are not invalidated by changing a password.",
-    "source": "@site/docs/reference-guides/about-the-api/api-tokens.md",
+    "source": "@site/versioned_docs/version-2.8/reference-guides/about-the-api/api-tokens.md",
     "sourceDirName": "reference-guides/about-the-api",
     "slug": "/reference-guides/about-the-api/api-tokens",
-    "permalink": "/reference-guides/about-the-api/api-tokens",
+    "permalink": "/v2.8/reference-guides/about-the-api/api-tokens",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/reference-guides/about-the-api/api-tokens.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/reference-guides/about-the-api/api-tokens.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1703280782,
-    "formattedLastUpdatedAt": "Dec 22, 2023",
+    "version": "2.8",
+    "lastUpdatedAt": 1711404317,
+    "formattedLastUpdatedAt": "Mar 25, 2024",
     "frontMatter": {
         "title": "API Tokens"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "API",
-        "permalink": "/reference-guides/about-the-api/"
+        "permalink": "/v2.8/reference-guides/about-the-api/"
     },
     "next": {
         "title": "Cluster Tools for Logging, Monitoring, and Visibility",
-        "permalink": "/reference-guides/rancher-cluster-tools"
+        "permalink": "/v2.8/reference-guides/rancher-cluster-tools"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Deleting tokens',
+        value: 'Deleting Tokens',
         id: 'deleting-tokens',
-        level: 3
+        level: 2
     },
     {
         value: 'Setting TTL on Kubeconfig Tokens',
         id: 'setting-ttl-on-kubeconfig-tokens',
-        level: 3
+        level: 2
     },
     {
         value: 'Disable Tokens in Generated Kubeconfigs',
         id: 'disable-tokens-in-generated-kubeconfigs',
-        level: 3
+        level: 2
     },
     {
         value: 'Token Hashing',
         id: 'token-hashing',
-        level: 3
+        level: 2
     },
     {
         value: 'Token Settings',
         id: 'token-settings',
-        level: 3
+        level: 2
     },
     {
         value: 'auth-user-session-ttl-minutes',
         id: 'auth-user-session-ttl-minutes',
-        level: 4
+        level: 3
     },
     {
-        value: 'kubeconfig-default-token-TTL-minutes',
+        value: 'kubeconfig-default-token-ttl-minutes',
         id: 'kubeconfig-default-token-ttl-minutes',
-        level: 4
-    },
-    {
-        value: 'kubeconfig-token-ttl-minutes',
-        id: 'kubeconfig-token-ttl-minutes',
-        level: 4
+        level: 3
     },
     {
         value: 'auth-token-max-ttl-minutes',
         id: 'auth-token-max-ttl-minutes',
-        level: 4
+        level: 3
     },
     {
         value: 'kubeconfig-generate-token',
         id: 'kubeconfig-generate-token',
-        level: 4
+        level: 3
     }
 ];
 const layoutProps = {
@@ -410,9 +405,9 @@ function MDXContent(_param) {
         parentName: "p"
     }, `ttl=0`), `). In other words, API tokens with `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `ttl=0`), ` never expire unless you invalidate them. Tokens are not invalidated by changing a password.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can deactivate API tokens by deleting them or by deactivating the user account.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `ttl=0`), ` never expire unless you invalidate them. Tokens are not invalidated by changing a password.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can deactivate API tokens by deleting them or by deactivating the user account.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "deleting-tokens"
-    }, `Deleting tokens`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To delete a token,`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Deleting Tokens`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To delete a token:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
@@ -430,7 +425,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `Delete`), `.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Here is the complete list of tokens that are generated with `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `Delete`), `.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The following is a complete list of tokens generated with `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `ttl=0`), `:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
         parentName: "table"
@@ -445,16 +440,6 @@ function MDXContent(_param) {
     }, `Description`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tbody", {
         parentName: "table"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "td"
-    }, `kubeconfig-*`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `Kubeconfig token`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
@@ -516,62 +501,52 @@ function MDXContent(_param) {
     }, `drain-node-*`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, `Token for drain (we use `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `Token for drain (Rancher uses `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "td"
-    }, `kubectl`), ` for drain because there is no native Kubernetes API)`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `kubectl`), ` for drain because there is no native Kubernetes API).`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "setting-ttl-on-kubeconfig-tokens"
     }, `Setting TTL on Kubeconfig Tokens`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Admins can set a global time-to-live (TTL) on Kubeconfig tokens. Changing the default kubeconfig TTL can be done by navigating to global settings and setting `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#kubeconfig-default-token-ttl-minutes"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "a"
-    }, `kubeconfig-default-token-ttl-minutes`)), ` to the desired duration in minutes. The default value of `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `kubeconfig-default-token-ttl-minutes`)), ` to the desired duration in minutes. As of Rancher v2.8, the default value of `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#kubeconfig-default-token-ttl-minutes"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "a"
-    }, `kubeconfig-default-token-ttl-minutes`)), ` is 0, which means tokens never expire.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+    }, `kubeconfig-default-token-ttl-minutes`)), ` is `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `43200`), `, which means that tokens expire in 30 days.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
         "type": "note"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "admonition"
     }, `This setting is used by all kubeconfig tokens except those created by the CLI to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#disable-tokens-in-generated-kubeconfigs"
-    }, `generate kubeconfig tokens`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `generate kubeconfig tokens`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "disable-tokens-in-generated-kubeconfigs"
-    }, `Disable Tokens in Generated Kubeconfigs`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "li"
-    }, `Set the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `Disable Tokens in Generated Kubeconfigs`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Set the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `kubeconfig-generate-token`), ` setting to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `false`), `. This setting instructs Rancher to no longer automatically generate a token when a user clicks on download a kubeconfig file. Once this setting is deactivated, a generated kubeconfig will reference the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `false`), `. This setting instructs Rancher to no longer automatically generate a token when a user clicks on download a kubeconfig file. When this setting is deactivated, a generated kubeconfig references the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/reference-guides/cli-with-rancher/kubectl-utility#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl"
+        "href": "/v2.8/reference-guides/cli-with-rancher/kubectl-utility#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl"
     }, `Rancher CLI`), ` to retrieve a short-lived token for the cluster. When this kubeconfig is used in a client, such as `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `kubectl`), `, the Rancher CLI needs to be installed to complete the log in request.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "li"
-    }, `Set the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kubeconfig-token-ttl-minutes`), ` setting to the desired duration in minutes. By default, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kubeconfig-token-ttl-minutes`), ` is 960 (16 hours).`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `kubectl`), `, the Rancher CLI needs to be installed to complete the log in request.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "token-hashing"
-    }, `Token Hashing`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Users can enable token hashing, where tokens will undergo a one-way hash using the SHA256 algorithm. This is a non-reversible process, once enabled, this feature cannot be disabled. It is advisable to take backups prior to enabling and/or evaluating in a test environment first.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To enable token hashing, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Token Hashing`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Users can enable token hashing, where tokens undergo a one-way hash using the SHA256 algorithm. This is a non-reversible process: once enabled, this feature cannot be disabled. It is advisable to take backups prior to enabling and/or evaluating in a test environment first.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To enable token hashing, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/how-to-guides/advanced-user-guides/enable-experimental-features/"
-    }, `this section`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This feature will affect all tokens which include, but are not limited to, the following:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        "href": "/v2.8/how-to-guides/advanced-user-guides/enable-experimental-features/"
+    }, `this section`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This feature affects all tokens which include, but are not limited to, the following:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Kubeconfig tokens`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Bearer tokens API keys/calls`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Tokens used by internal operations`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `Tokens used by internal operations`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "token-settings"
     }, `Token Settings`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `These global settings affect Rancher token behavior.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
         parentName: "table"
@@ -608,32 +583,13 @@ function MDXContent(_param) {
         "href": "#kubeconfig-default-token-ttl-minutes"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "a"
-    }, `kubeconfig-default-token-TTL-minutes`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+    }, `kubeconfig-default-token-ttl-minutes`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
     }, `Default TTL applied to all kubeconfig tokens except those `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
         "href": "#disable-tokens-in-generated-kubeconfigs"
-    }, `generated by Rancher CLI`), `. `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "td"
-    }, `Introduced in version 2.6.6.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "td",
-        "href": "#kubeconfig-token-ttl-minutes"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "a"
-    }, `kubeconfig-token-ttl-minutes`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `TTL used for tokens generated via the CLI.  `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "td"
-    }, `Deprecated since version 2.6.6, and will be removed in 2.8.0.`), ` This setting will be removed, and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "td"
-    }, `kubeconfig-default-token-TTL-minutes`), ` will be used for all kubeconfig tokens.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+    }, `generated by Rancher CLI`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
@@ -664,61 +620,39 @@ function MDXContent(_param) {
     }, `kubeconfig-generate-token`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, `If true, automatically generate tokens when a user downloads a kubeconfig.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+    }, `If true, automatically generate tokens when a user downloads a kubeconfig.`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "auth-user-session-ttl-minutes"
-    }, `auth-user-session-ttl-minutes`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Time to live (TTL) duration in minutes used to determine when a user auth session token expires. When expired, the user will be required to log in and obtain a new token. This setting is not affected by `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `auth-user-session-ttl-minutes`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Time to live (TTL) duration in minutes, used to determine when a user auth session token expires. When expired, the user must log in and obtain a new token. This setting is not affected by `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#auth-token-max-ttl-minutes"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "a"
-    }, `auth-token-max-ttl-minutes`)), `. Session tokens are created when a user logs into Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+    }, `auth-token-max-ttl-minutes`)), `. Session tokens are created when a user logs into Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "kubeconfig-default-token-ttl-minutes"
-    }, `kubeconfig-default-token-TTL-minutes`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Time to live (TTL) duration in minutes used to determine when a kubeconfig token expires. When the token is expired, the API will reject the token. This setting can not be larger than `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `kubeconfig-default-token-ttl-minutes`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Time to live (TTL) duration in minutes, used to determine when a kubeconfig token expires. When the token is expired, the API rejects the token. This setting can't be larger than `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#auth-token-max-ttl-minutes"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "a"
-    }, `auth-token-max-ttl-minutes`)), `. This setting applies to a token generated in a requested kubeconfig file. Except those `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `auth-token-max-ttl-minutes`)), `. This setting applies to tokens generated in a requested kubeconfig file, except for tokens `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#disable-tokens-in-generated-kubeconfigs"
-    }, `generated by Rancher CLI`), `.
-`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `generated by Rancher CLI`), `. As of Rancher v2.8, the default duration is `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `Introduced in version 2.6.6`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
-        "id": "kubeconfig-token-ttl-minutes"
-    }, `kubeconfig-token-ttl-minutes`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Time to live (TTL) duration in minutes used to determine when a kubeconfig token that was generated by the CLI expires. Tokens are generated by the CLI when `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "#kubeconfig-generate-token"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "a"
-    }, `kubeconfig-generate-token`)), ` is false. When the token is expired, the API will reject the token. This setting can not be larger than `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "#auth-token-max-ttl-minutes"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "a"
-    }, `auth-token-max-ttl-minutes`)), `.
-`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Deprecated since version 2.6.6, and will be removed in 2.8.0: This setting will be replaced with the value of `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "strong",
-        "href": "#kubeconfig-default-token-ttl-minutes"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "a"
-    }, `kubeconfig-default-token-TTL-minutes`)), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+    }, `43200`), `, which means that tokens expire in 30 days.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "auth-token-max-ttl-minutes"
     }, `auth-token-max-ttl-minutes`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Maximum Time to Live (TTL) in minutes allowed for auth tokens. If a user attempts to create a token with a TTL greater than `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `auth-token-max-ttl-minutes`), `, Rancher will set the token TTL to the value of `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `auth-token-max-ttl-minutes`), `, Rancher sets the token TTL to the value of `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `auth-token-max-ttl-minutes`), `. Auth tokens are tokens created for authenticating API requests.
-`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `auth-token-max-ttl-minutes`), `. Applies to all kubeconfig tokens and API tokens. As of Rancher v2.8, the default duration is `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `Changed in version 2.6.6: Applies to all kubeconfig tokens and api tokens.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+    }, `129600`), `, which means that tokens expire in 90 days.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "kubeconfig-generate-token"
-    }, `kubeconfig-generate-token`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When true, kubeconfigs requested through the UI will contain a valid token. When false, the kubeconfig will contain a command that uses the Rancher CLI to prompt the user to log in. `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `kubeconfig-generate-token`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When true, kubeconfigs requested through the UI contain a valid token. When false, kubeconfigs contain a command that uses the Rancher CLI to prompt the user to log in. `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/reference-guides/cli-with-rancher/kubectl-utility#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl"
-    }, `The CLI then will retrieve and cache a token for the user`), `.`));
+        "href": "/v2.8/reference-guides/cli-with-rancher/kubectl-utility#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl"
+    }, `The CLI then retrieves and caches a token for the user`), `.`));
 }
 MDXContent.isMDXComponent = true;
 
