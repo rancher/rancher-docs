@@ -51,7 +51,7 @@ This setting is used by all kubeconfig tokens except those created by the CLI to
 
 ## Token Hashing
 
-Users can enable token hashing, where tokens undergo a one-way hash using the SHA256 algorithm. This is a non-reversible process: once enabled, this feature can't be disabled. It is advisable to take backups prior to enabling and/or evaluating in a test environment first.
+Users can enable token hashing, where tokens undergo a one-way hash using the SHA256 algorithm. This is a non-reversible process: once enabled, this feature cannot be disabled. It is advisable to take backups prior to enabling and/or evaluating in a test environment first.
 
 To enable token hashing, refer to [this section](../../how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features.md).
 
