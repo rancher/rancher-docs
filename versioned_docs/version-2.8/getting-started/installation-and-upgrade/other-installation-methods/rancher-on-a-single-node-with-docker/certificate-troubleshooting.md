@@ -6,7 +6,9 @@ title: Troubleshooting Certificates
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/certificate-troubleshooting"/>
 </head>
 
-### How Do I Know if My Certificates are in PEM Format?
+<DockerSupportWarning />
+
+## How Do I Know if My Certificates are in PEM Format?
 
 You can recognize the PEM format by the following traits:
 
@@ -48,7 +50,7 @@ VWQqljhfacYPgp8KJUJENQ9h5hZ2nSCrI+W00Jcw4QcEdCI8HL5wmg==
 -----END PRIVATE KEY-----
 ```
 
-### Converting a Certificate Key From PKCS8 to PKCS1
+## Converting a Certificate Key From PKCS8 to PKCS1
 
 If you are using a PKCS8 certificate key file, Rancher will log the following line:
 
@@ -64,7 +66,7 @@ openssl rsa -in key.pem -out convertedkey.pem
 
 You can now use `convertedkey.pem` as certificate key file for Rancher.
 
-### What is the Order of Certificates if I Want to Add My Intermediate(s)?
+## What is the Order of Certificates if I Want to Add My Intermediate(s)?
 
 The order of adding certificates is as follows:
 
@@ -77,7 +79,7 @@ The order of adding certificates is as follows:
 -----END CERTIFICATE-----
 ```
 
-### How Do I Validate My Certificate Chain?
+## How Do I Validate My Certificate Chain?
 
 You can validate the certificate chain by using the `openssl` binary. If the output of the command (see the command example below) ends with `Verify return code: 0 (ok)`, your certificate chain is valid. The `ca.pem` file must be the same as you added to the `rancher/rancher` container.
 

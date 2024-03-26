@@ -8,6 +8,8 @@ title: Upgrading Rancher Installed with Docker
 
 The following instructions will guide you through upgrading a Rancher server that was installed with Docker.
 
+<DockerSupportWarning />
+
 ## Prerequisites
 
 - **Review the [known upgrade issues](../../install-upgrade-on-a-kubernetes-cluster/upgrades/upgrades.md#known-upgrade-issues) in the Rancher documentation for the most noteworthy issues to consider when upgrading Rancher. A more complete list of known issues for each Rancher version can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums.](https://forums.rancher.com/c/announcements/12) Note that upgrades to or from any chart in the [rancher-alpha repository](../../resources/choose-a-rancher-version.md#helm-chart-repositories) aren’t supported.
