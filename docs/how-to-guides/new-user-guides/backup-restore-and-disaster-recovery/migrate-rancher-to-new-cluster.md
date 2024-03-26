@@ -15,7 +15,7 @@ These instructions assume that you have [created a backup](back-up-rancher.md) a
 
 :::caution
 
-It is required to use the same hostname that was set as the server URL in the first cluster. If not done, downstream clusters will show as unavailable in the cluster management page of the UI, and you won't be able to click inside the cluster or on the cluster's <b>Explore</b> button.
+You must use the same hostname that was set as the server URL in the original cluster. If you don't, downstream clusters will show as unavailable in the cluster management page of the UI, and you won't be able to click inside the cluster or on the cluster's <b>Explore</b> button.
 
 :::
 
@@ -190,6 +190,8 @@ helm install rancher rancher-latest/rancher -n cattle-system -f rancher-values.y
 
 :::
 
-### 5. Redirect DNS to the New Cluster
+### 5. Redirect Traffic to the New Cluster
 
-After migration completes, make sure to update your DNS records so that traffic is routed to the cluster's new address. Instructions for how to do this depend on your specific environment, and how your DNS was initially set up. Refer to your hosting provider's documentation for more details.
+After migration completes, update your DNS records and any load balancers, so that traffic is routed correctly to the migrated cluster. Remember that you must use the same hostname that was set as the server URL in the original cluster.
+
+Full instructions on how to redirect traffic to the migrated cluster differ based on your specific environment. Refer to your hosting provider's documentation for more details.
