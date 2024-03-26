@@ -135,7 +135,7 @@ To add a private CA to Helm chart repositories, you must add a base64 encoded co
 
 1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
 1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
-1. Find the row associated with the Git or HTTP-based repository you want to add a private CA to, and click **⋮ > Edit YAML**.
+1. Find the row associated with the Git-based or HTTP-based repository you want to add a private CA to, and click **⋮ > Edit YAML**.
 1. Set the `caBundle` value, as in the following example:
 
   ```yaml
