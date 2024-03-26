@@ -337,7 +337,7 @@ const metadata = {
         "permalink": "/v2.6/how-to-guides/new-user-guides/kubernetes-resources-setup/secrets"
     },
     "next": {
-        "title": "Helm Charts in Rancher",
+        "title": "Helm Charts and Apps",
         "permalink": "/v2.6/how-to-guides/new-user-guides/helm-charts-in-rancher/"
     }
 };
