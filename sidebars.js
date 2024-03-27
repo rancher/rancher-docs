@@ -1055,7 +1055,7 @@ const sidebars = {
         "reference-guides/rancher-webhook",
         {
           type: 'category',
-          label: 'Rancher Security',
+          label: 'Rancher Security Guides',
           link: {
             type: 'doc',
             id: "reference-guides/rancher-security/rancher-security",
