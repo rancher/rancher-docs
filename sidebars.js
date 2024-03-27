@@ -892,7 +892,7 @@ const sidebars = {
                 "reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration",
                 {
                   type: 'category',
-                  label: 'GKE Cluster Configuration',
+                  label: 'GKE Cluster Configuration Reference',
                   link: {
                     type: 'doc',
                     id: "reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration",
