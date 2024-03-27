@@ -1,5 +1,5 @@
 ---
-title: Backups and Disaster Recovery
+title: Backup, Restore, and Disaster Recovery
 keywords: [rancher v2.6 backup restore, rancher v2.6 backup and restore, backup restore rancher v2.6, backup and restore rancher v2.6]
 ---
 

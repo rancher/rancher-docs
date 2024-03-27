@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes Persistent Storage: Volumes and Storage Classes"
+title: Create Kubernetes Persistent Volumes and Storage Classes
 description: "Learn about the two ways with which you can create persistent storage in Kubernetes: persistent volumes and storage classes"
 ---
 

@@ -16,7 +16,7 @@
           "items": [
             {
               "type": "category",
-              "label": "Deploying Rancher",
+              "label": "Deploying Rancher Server",
               "link": {
                 "type": "doc",
                 "id": "getting-started/quick-start-guides/deploy-rancher-manager/deploy-rancher-manager"
@@ -503,7 +503,7 @@
                     "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster",
                     {
                       "type": "category",
-                      "label": "vSphere",
+                      "label": "Creating a vSphere Cluster",
                       "link": {
                         "type": "doc",
                         "id": "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/vsphere"
@@ -516,7 +516,7 @@
                     },
                     {
                       "type": "category",
-                      "label": "Nutanix",
+                      "label": "Creating a Nutanix AOS Cluster",
                       "link": {
                         "type": "doc",
                         "id": "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/nutanix"
@@ -721,7 +721,7 @@
             },
             {
               "type": "category",
-              "label": "Istio Setup Guide",
+              "label": "Istio Setup Guides",
               "link": {
                 "type": "doc",
                 "id": "how-to-guides/advanced-user-guides/istio-setup-guide/istio-setup-guide"
@@ -783,7 +783,7 @@
       "items": [
         {
           "type": "category",
-          "label": "Best Practices",
+          "label": "Best Practice Guides",
           "link": {
             "type": "doc",
             "id": "reference-guides/best-practices/best-practices"
@@ -855,7 +855,7 @@
                 "reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration",
                 {
                   "type": "category",
-                  "label": "GKE Cluster Configuration",
+                  "label": "GKE Cluster Configuration Reference",
                   "link": {
                     "type": "doc",
                     "id": "reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration"
@@ -1015,7 +1015,7 @@
         "reference-guides/rancher-webhook",
         {
           "type": "category",
-          "label": "Rancher Security",
+          "label": "Rancher Security Guides",
           "link": {
             "type": "doc",
             "id": "reference-guides/rancher-security/rancher-security"

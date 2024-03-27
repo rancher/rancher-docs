@@ -1,5 +1,5 @@
 ---
-title: Telemetry
+title: Telemetry FAQ
 ---
 
 <head>

@@ -1,5 +1,5 @@
 ---
-title: Setup Guide
+title: Istio Setup Guides
 ---
 
 <head>

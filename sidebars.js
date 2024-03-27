@@ -35,7 +35,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Deploying Rancher',
+              label: 'Deploying Rancher Server',
               link: {
                 type: 'doc',
                 id: "getting-started/quick-start-guides/deploy-rancher-manager/deploy-rancher-manager",
@@ -534,7 +534,7 @@ const sidebars = {
                     "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster",
                     {
                       type: 'category',
-                      label: 'vSphere',
+                      label: 'Creating a vSphere Cluster',
                       link: {
                         type: 'doc',
                         id: "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/vsphere",
@@ -547,7 +547,7 @@ const sidebars = {
                     },
                     {
                       type: 'category',
-                      label: 'Nutanix',
+                      label: 'Creating a Nutanix AOS Cluster',
                       link: {
                         type: 'doc',
                         id: "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/nutanix",
@@ -820,7 +820,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Best Practices',
+          label: 'Best Practice Guides',
           link: {
             type: 'doc',
             id: "reference-guides/best-practices/best-practices",
@@ -892,7 +892,7 @@ const sidebars = {
                 "reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration",
                 {
                   type: 'category',
-                  label: 'GKE Cluster Configuration',
+                  label: 'GKE Cluster Configuration Reference',
                   link: {
                     type: 'doc',
                     id: "reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration",
@@ -1055,7 +1055,7 @@ const sidebars = {
         "reference-guides/rancher-webhook",
         {
           type: 'category',
-          label: 'Rancher Security',
+          label: 'Rancher Security Guides',
           link: {
             type: 'doc',
             id: "reference-guides/rancher-security/rancher-security",

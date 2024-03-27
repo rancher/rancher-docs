@@ -1,5 +1,5 @@
 ---
-title: Architecture
+title: Logging Architecture
 ---
 
 <head>

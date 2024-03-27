@@ -1,5 +1,5 @@
 ---
-title: Security
+title: Security FAQ
 ---
 
 <head>

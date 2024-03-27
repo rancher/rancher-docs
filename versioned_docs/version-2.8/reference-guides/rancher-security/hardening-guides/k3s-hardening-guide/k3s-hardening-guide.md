@@ -1,5 +1,5 @@
 ---
-title: K3s Hardening Guide
+title: K3s Hardening Guides
 ---
 
 <head>
