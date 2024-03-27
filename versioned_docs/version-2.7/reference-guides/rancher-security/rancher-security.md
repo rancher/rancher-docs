@@ -1,5 +1,5 @@
 ---
-title: title: Rancher Security Guides
+title: Rancher Security Guides
 
 ---
 
