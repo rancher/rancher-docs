@@ -404,7 +404,7 @@
               },
               {
                 "type": "category",
-                "label": "Kubernetes Clusters in Rancher Setup",
+                "label": "Setting Up Kubernetes Clusters in Rancher",
                 "link": {
                   "type": "doc",
                   "id": "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup"
