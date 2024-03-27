@@ -52,7 +52,7 @@ Install the [`rancher-backup chart`](https://github.com/rancher/backup-restore-o
 
      The above assumes an environment with outbound connectivity to Docker Hub.
 
-     For an **air-gapped environment**, use the Helm value below to pull the `backup-restore-operator` image from your private registry when installing the rancher-backup Helm chart.
+     For an **air-gapped environment**, set a `$REGISTRY` variable to point to the path to your registry. Then, use the following Helm value to pull the `backup-restore-operator` image from your private registry when you install the rancher-backup Helm chart.
 
      ```bash
      --set image.repository $REGISTRY/rancher/backup-restore-operator
@@ -185,3 +185,9 @@ helm install rancher rancher-latest/rancher -n cattle-system -f rancher-values.y
 ```
 
 :::
+
+### 5. Redirect Traffic to the New Cluster
+
+After migration completes, update your DNS records and any load balancers, so that traffic is routed correctly to the migrated cluster. Remember that you must use the same hostname that was set as the server URL in the original cluster.
+
+Full instructions on how to redirect traffic to the migrated cluster differ based on your specific environment. Refer to your hosting provider's documentation for more details.

@@ -15,7 +15,7 @@ These instructions assume that you have [created a backup](back-up-rancher.md) a
 
 :::caution
 
-It is required to use the same hostname that was set as the server URL in the first cluster. If not done, downstream clusters will show as unavailable in the cluster management page of the UI, and you won't be able to click inside the cluster or on the cluster's <b>Explore</b> button.
+You must use the same hostname that was set as the server URL in the original cluster. If you don't, downstream clusters will show as unavailable in the cluster management page of the UI, and you won't be able to click inside the cluster or on the cluster's <b>Explore</b> button.
 
 :::
 
@@ -54,7 +54,7 @@ Install the [`rancher-backup chart`](https://github.com/rancher/backup-restore-o
 
      The above assumes an environment with outbound connectivity to Docker Hub.
 
-     For an **air-gapped environment**, use the Helm value below to pull the `backup-restore-operator` image from your private registry when installing the rancher-backup Helm chart.
+     For an **air-gapped environment**, set a `$REGISTRY` variable to point to the path to your registry. Then, use the following Helm value to pull the `backup-restore-operator` image from your private registry when you install the rancher-backup Helm chart.
 
      ```bash
      --set image.repository $REGISTRY/rancher/backup-restore-operator
@@ -189,3 +189,9 @@ helm install rancher rancher-latest/rancher -n cattle-system -f rancher-values.y
 ```
 
 :::
+
+### 5. Redirect Traffic to the New Cluster
+
+After migration completes, update your DNS records and any load balancers, so that traffic is routed correctly to the migrated cluster. Remember that you must use the same hostname that was set as the server URL in the original cluster.
+
+Full instructions on how to redirect traffic to the migrated cluster differ based on your specific environment. Refer to your hosting provider's documentation for more details.
