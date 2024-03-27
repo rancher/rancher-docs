@@ -47,11 +47,13 @@ systemctl start rke2-server.service
 ```
 1. 要加入其余的节点，使用同一个共享或自动生成的 Token 来配置每个额外的节点。以下是配置文件的示例：
 
+        ```console
         token: my-shared-secret
         server: https://<DNS-DOMAIN>:9345
         tls-san:
           - my-kubernetes-domain.com
           - another-kubernetes-domain.com
+          ```
 运行安装程序，然后启用并启动 RKE2：
 
         curl -sfL https://get.rke2.io | sh -

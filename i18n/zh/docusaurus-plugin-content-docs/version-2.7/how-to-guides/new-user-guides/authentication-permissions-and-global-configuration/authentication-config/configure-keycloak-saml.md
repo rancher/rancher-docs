@@ -16,7 +16,7 @@ description: 创建 Keycloak SAML 客户端并配置 Rancher 以使用 Keycloak�
    | `Sign Assertions` | `ON` <sup>1</sup> |
    | 所有其他 `ON/OFF` 设置 | `OFF` |
    | `Client ID` | 输入 `https://yourRancherHostURL/v1-saml/keycloak/saml/metadata`，或在 Rancher Keycloak 配置<sup>2</sup> 中 `Entry ID 字段`的值。 |
-   | `Client Name` | <CLIENT_NAME> (例如 `rancher`) |
+   | `Client Name` | `<CLIENT_NAME>` (例如 `rancher`) |
    | `Client Protocol` | `SAML` |
    | `Valid Redirect URI` | `https://yourRancherHostURL/v1-saml/keycloak/saml/acs` |
 

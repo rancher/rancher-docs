@@ -222,15 +222,17 @@ Authorized Cluster Endpoint (ACE) support has been added for registered RKE2 and
     ```
 
 2. Add the following to the config file (or create one if it doesn’t exist); note that the default location is `/etc/rancher/{rke2,k3s}/config.yaml`:
-    ```yaml
+    ```console
     kube-apiserver-arg:
         - authentication-token-webhook-config-file=/var/lib/rancher/{rke2,k3s}/kube-api-authn-webhook.yaml
     ```
 
 3. Run the following commands:
 
+        ```console
         sudo systemctl stop {rke2,k3s}-server
         sudo systemctl start {rke2,k3s}-server
+        ```
 
 4. Finally, you **must** go back to the Rancher UI and edit the imported cluster there to complete the ACE enablement. Click on **⋮ > Edit Config**, then click the **Networking** tab under Cluster Configuration. Finally, click the **Enabled** button for **Authorized Endpoint**. Once the ACE is enabled, you then have the option of entering a fully qualified domain name (FQDN) and certificate information.
 

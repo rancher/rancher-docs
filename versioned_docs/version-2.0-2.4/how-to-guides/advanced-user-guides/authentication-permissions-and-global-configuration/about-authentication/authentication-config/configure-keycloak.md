@@ -22,7 +22,7 @@ If your organization uses Keycloak Identity Provider (IdP) for user authenticati
       `Sign Assertions` | `ON` <sup>1</sup>
       All other `ON/OFF` Settings | `OFF`
       `Client ID` | Either `https://yourRancherHostURL/v1-saml/keycloak/saml/metadata` or the value configured in the `Entry ID Field` of the Rancher Keycloak configuration<sup>2</sup>
-      `Client Name` | <CLIENT_NAME> (e.g. `rancher`)
+      `Client Name` | `<CLIENT_NAME>` (e.g. `rancher`)
       `Client Protocol` | `SAML`
       `Valid Redirect URI` | `https://yourRancherHostURL/v1-saml/keycloak/saml/acs`
 
