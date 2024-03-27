@@ -516,7 +516,7 @@
                     },
                     {
                       "type": "category",
-                      "label": "Nutanix",
+                      "label": "Creating a Nutanix AOS Cluster",
                       "link": {
                         "type": "doc",
                         "id": "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/nutanix"
