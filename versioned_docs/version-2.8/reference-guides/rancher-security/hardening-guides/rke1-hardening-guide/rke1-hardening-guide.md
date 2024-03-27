@@ -1,5 +1,5 @@
 ---
-title: RKE Hardening Guide
+RKE Hardening Guides
 ---
 
 <head>
