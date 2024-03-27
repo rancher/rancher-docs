@@ -1,5 +1,5 @@
 ---
-title: Best Practices Guide
+title: Best Practice Guides
 ---
 
 <head>

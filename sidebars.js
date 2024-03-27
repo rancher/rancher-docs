@@ -820,7 +820,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Best Practices',
+          label: 'Best Practice Guides',
           link: {
             type: 'doc',
             id: "reference-guides/best-practices/best-practices",
