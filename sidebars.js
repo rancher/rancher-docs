@@ -35,7 +35,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Deploying Ranche Server',
+              label: 'Deploying Rancher Server',
               link: {
                 type: 'doc',
                 id: "getting-started/quick-start-guides/deploy-rancher-manager/deploy-rancher-manager",
