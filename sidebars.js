@@ -436,7 +436,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Setting Up Kubernetes Clusters in Rancher',
+              label: 'Setting up Kubernetes Clusters in Rancher',
               link: {
                 type: 'doc',
                 id: "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup",
