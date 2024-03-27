@@ -1,5 +1,5 @@
 ---
-title: K3s Hardening Guide
+title: K3s Hardening Guides
 ---
 
 This document provides prescriptive guidance for how to harden a K3s cluster intended for production, before provisioning it with Rancher. It outlines the configurations and controls required for Center for Information Security (CIS) Kubernetes benchmark controls.
