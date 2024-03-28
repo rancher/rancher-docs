@@ -1367,6 +1367,7 @@ const sidebars = {
       ]
     },
     "contribute-to-rancher",
+    "glossary",
   ]
 }
 module.exports = sidebars;
