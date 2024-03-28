@@ -64,26 +64,26 @@
     "description": "The label for category New User Guides in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Authentication, Permissions, and Global Configuration": {
-    "message": "身份验证、权限和全局配置",
+    "message": "认证、权限和全局配置",
     "description": "The label for category Authentication, Permissions, and Global Configuration in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Authentication Config": {
-    "message": "身份验证配置",
+  "sidebar.tutorialSidebar.category.Configuring Authentication": {
+    "message": "配置认证",
     "description": "The label for category Authentication Config in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Configure OpenLDAP": {
+  "sidebar.tutorialSidebar.category.Configuring OpenLDAP": {
     "message": "配置 OpenLDAP",
     "description": "The label for category Configure OpenLDAP in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Configure Microsoft AD Federation Service (SAML)": {
+  "sidebar.tutorialSidebar.category.Configuring Microsoft AD Federation Service (SAML)": {
     "message": "配置 Microsoft AD FS (SAML)",
     "description": "The label for category Configure Microsoft AD Federation Service (SAML) in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Configure Shibboleth (SAML)": {
+  "sidebar.tutorialSidebar.category.Configuring Shibboleth (SAML)": {
     "message": "配置 Shibboleth (SAML)",
     "description": "The label for category Configure Shibboleth (SAML) in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Manage Role-Based Access Control (RBAC)": {
+  "sidebar.tutorialSidebar.category.Managing Role-Based Access Control (RBAC)": {
     "message": "管理 RBAC",
     "description": "The label for category Manage Role-Based Access Control (RBAC) in sidebar tutorialSidebar"
   },
