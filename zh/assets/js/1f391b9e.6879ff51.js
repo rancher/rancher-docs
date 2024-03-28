@@ -1,5 +1,73 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[27918],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[13085,27918],{
+
+/***/ 1456:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ MDXPage)
+});
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(67294);
+// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
+var clsx_m = __webpack_require__(86010);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/metadataUtils.js + 1 modules
+var metadataUtils = __webpack_require__(89712);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/ThemeClassNames.js
+var ThemeClassNames = __webpack_require__(65319);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Layout/index.js + 71 modules
+var Layout = __webpack_require__(33737);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXContent/index.js
+var MDXContent = __webpack_require__(99387);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TOC/index.js + 1 modules
+var TOC = __webpack_require__(48704);
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXPage/styles.module.css
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const styles_module = ({"mdxPageWrapper":"mdxPageWrapper_j9I6"});
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXPage/index.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 
+
+
+
+
+
+
+function MDXPage(props) {
+    const { content: MDXPageContent } = props;
+    const { metadata: { title, description, frontMatter } } = MDXPageContent;
+    const { wrapperClassName, hide_table_of_contents: hideTableOfContents } = frontMatter;
+    return /*#__PURE__*/ react.createElement(metadataUtils/* HtmlClassNameProvider */.FG, {
+        className: (0,clsx_m/* default */.Z)(wrapperClassName !== null && wrapperClassName !== void 0 ? wrapperClassName : ThemeClassNames/* ThemeClassNames */.k.wrapper.mdxPages, ThemeClassNames/* ThemeClassNames */.k.page.mdxPage)
+    }, /*#__PURE__*/ react.createElement(metadataUtils/* PageMetadata */.d, {
+        title: title,
+        description: description
+    }), /*#__PURE__*/ react.createElement(Layout/* default */.Z, null, /*#__PURE__*/ react.createElement("main", {
+        className: "container container--fluid margin-vert--lg"
+    }, /*#__PURE__*/ react.createElement("div", {
+        className: (0,clsx_m/* default */.Z)('row', styles_module.mdxPageWrapper)
+    }, /*#__PURE__*/ react.createElement("div", {
+        className: (0,clsx_m/* default */.Z)('col', !hideTableOfContents && 'col--8')
+    }, /*#__PURE__*/ react.createElement("article", null, /*#__PURE__*/ react.createElement(MDXContent/* default */.Z, null, /*#__PURE__*/ react.createElement(MDXPageContent, null)))), !hideTableOfContents && MDXPageContent.toc.length > 0 && /*#__PURE__*/ react.createElement("div", {
+        className: "col col--2"
+    }, /*#__PURE__*/ react.createElement(TOC/* default */.Z, {
+        toc: MDXPageContent.toc,
+        minHeadingLevel: frontMatter.toc_min_heading_level,
+        maxHeadingLevel: frontMatter.toc_max_heading_level
+    }))))));
+}
+
+
+/***/ }),
 
 /***/ 13073:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -163,7 +231,7 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,esm/* mdx */.kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table summarizes different GitHub metrics to give you an idea of each project's popularity and activity levels. This data was collected in February 2024.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
+    }), /*#__PURE__*/ (0,esm/* mdx */.kt)("p", null, `The following table summarizes different GitHub metrics to give you an idea of each project's popularity and activity levels. This data was collected in March 2024.`), /*#__PURE__*/ (0,esm/* mdx */.kt)("table", null, /*#__PURE__*/ (0,esm/* mdx */.kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "thead"
@@ -201,7 +269,7 @@ function MDXContent(_param) {
     }, `708`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `103`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `100`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
     }, `20`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
@@ -238,13 +306,13 @@ function MDXContent(_param) {
     }, `https://github.com/projectcalico/calico`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `5.3k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `5.4k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
     }, `1.2k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `336`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
+    }, `339`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
@@ -261,7 +329,7 @@ function MDXContent(_param) {
     }, `6.6k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `679`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `661`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
     }, `87`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("tr", {
@@ -278,13 +346,13 @@ function MDXContent(_param) {
     }, `https://github.com/cilium/cilium`)), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `18k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
+    }, `18.2k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
     }, `2.6k`), /*#__PURE__*/ (0,esm/* mdx */.kt)("td", {
         parentName: "tr",
         "align": null
-    }, `706`)))));
+    }, `717`)))));
 }
 MDXContent.isMDXComponent = true;
 
