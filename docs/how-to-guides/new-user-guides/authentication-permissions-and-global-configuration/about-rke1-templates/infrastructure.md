@@ -50,7 +50,9 @@ When you need to make changes to your infrastructure, instead of manually updati
 
 - You can also modify auth in the Terraform provider.
 
-- You can reverse engineer how to do define a setting in Terraform by changing the setting in Rancher, then going back and checking your Terraform state file to see how it maps to the current state of your infrastructure.## Tip for Creating CIS Benchmark Compliant Clusters
+- You can reverse engineer how to do define a setting in Terraform by changing the setting in Rancher, then going back and checking your Terraform state file to see how it maps to the current state of your infrastructure.
+
+## Tip for Creating CIS Benchmark Compliant Clusters
 
 This section describes one way that you can make security and compliance-related config files standard in your clusters.
 
