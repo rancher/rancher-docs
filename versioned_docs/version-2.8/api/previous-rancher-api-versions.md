@@ -8,7 +8,7 @@ title: Previous API Guide
 
 ## How to Use the API
 
-The past Rancher versions `v2.7.x` and below have their own API user interfaces accessible from a [web browser](https://ranchermanager.docs.rancher.com/v2.7/reference-guides/about-the-api). This is an easy way to see resources, perform actions, and see the equivalent cURL or HTTP request & response.  To access it:
+The API has its own user interface accessible from a web browser. This is an easy way to see resources, perform actions, and see the equivalent cURL or HTTP request & response. To access it:
 
 <Tabs>
 <TabItem value="Rancher v2.6.4+">

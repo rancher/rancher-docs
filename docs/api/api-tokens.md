@@ -6,7 +6,7 @@ title: Using API Tokens in Past Rancher Versions
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/api/previous-rancher-api-versions/api-tokens"/>
 </head>
 
-Rancher `v2.8.0` introduced the [Rancher Kubernetes API](../api-reference.mdx) which can be used to manage Rancher resources through `kubectl`. In past Rancher versions `v2.7.x` and below you can access token resources through the previously used [web interface](https://ranchermanager.docs.rancher.com/v2.7/reference-guides/about-the-api).
+Rancher `v2.8.0` introduced the [Rancher Kubernetes API](../api-reference.mdx) which can be used to manage Rancher resources through `kubectl` or the [web interface](../previous-rancher-api-versions#enable-view-in-api).
 
 By default, some cluster-level API tokens are generated with infinite time-to-live (`ttl=0`). In other words, API tokens with `ttl=0` never expire unless you invalidate them. Tokens are not invalidated by changing a password.
 
