@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[84468],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[61073],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 9383:
+/***/ 140:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "troubleshooting/general-troubleshooting",
-    "id": "troubleshooting/general-troubleshooting",
+    "id": "version-2.8/troubleshooting/general-troubleshooting",
     "title": "一般故障排除",
     "description": "本文用于帮助你解决使用 Rancher 时遇到的问题。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/current/troubleshooting/general-troubleshooting.md",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.8/troubleshooting/general-troubleshooting.md",
     "sourceDirName": "troubleshooting",
     "slug": "/troubleshooting/general-troubleshooting",
-    "permalink": "/zh/troubleshooting/general-troubleshooting",
+    "permalink": "/zh/v2.8/troubleshooting/general-troubleshooting",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/troubleshooting/general-troubleshooting.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/troubleshooting/general-troubleshooting.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1666730466,
-    "formattedLastUpdatedAt": "2022年10月25日",
+    "version": "2.8",
+    "lastUpdatedAt": 1696627994,
+    "formattedLastUpdatedAt": "2023年10月6日",
     "frontMatter": {
         "title": "一般故障排除"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "卸载 Rancher",
-        "permalink": "/zh/faq/rancher-is-no-longer-needed"
+        "permalink": "/zh/v2.8/faq/rancher-is-no-longer-needed"
     },
     "next": {
-        "title": "Kubernetes Components",
-        "permalink": "/zh/troubleshooting/kubernetes-components/"
+        "title": "Kubernetes 组件",
+        "permalink": "/zh/v2.8/troubleshooting/kubernetes-components/"
     }
 };
 const assets = {};
@@ -397,7 +397,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/troubleshooting/other-troubleshooting-tips/kubernetes-resources"
+        "href": "/zh/v2.8/troubleshooting/other-troubleshooting-tips/kubernetes-resources"
     }, `Kubernetes resources`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
     }, ` 本节介绍了对节点、Ingress Controller 和 Rancher Agent 等 Kubernetes 资源进行故障排除的选项。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -406,7 +406,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/troubleshooting/other-troubleshooting-tips/networking"
+        "href": "/zh/v2.8/troubleshooting/other-troubleshooting-tips/networking"
     }, `网络`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
     }, ` 介绍了解决网络问题的步骤。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -415,7 +415,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/troubleshooting/other-troubleshooting-tips/dns"
+        "href": "/zh/v2.8/troubleshooting/other-troubleshooting-tips/dns"
     }, `DNS`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
     }, ` 解决集群的名称解析问题。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -424,7 +424,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/troubleshooting/other-troubleshooting-tips/rancher-ha"
+        "href": "/zh/v2.8/troubleshooting/other-troubleshooting-tips/rancher-ha"
     }, `对安装在 Kubernetes 上的 Rancher 进行故障排除`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
     }, ` 解决`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -436,7 +436,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/troubleshooting/other-troubleshooting-tips/logging"
+        "href": "/zh/v2.8/troubleshooting/other-troubleshooting-tips/logging"
     }, `Logging`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
     }, ` 了解可以配置哪些日志级别，以及如何配置日志级别。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -445,7 +445,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/troubleshooting/other-troubleshooting-tips/user-id-tracking-in-audit-logs"
+        "href": "/zh/v2.8/troubleshooting/other-troubleshooting-tips/user-id-tracking-in-audit-logs"
     }, `审计日志中的用户 ID 跟踪`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
     }, ` 了解 Rancher 管理员如何通过外部身份提供程序用户名从 Rancher 审计日志和 Kubernetes 审计日志中跟踪事件。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -454,7 +454,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation"
+        "href": "/zh/v2.8/troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation"
     }, `过期的 Webhook 证书`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
     }, ` 了解如何在每年到期后轮换 Rancher webhook 证书密钥。`))));

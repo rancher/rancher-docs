@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[18196],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[13187],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 9824:
+/***/ 8942:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,26 +313,26 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "contribute-to-rancher",
-    "id": "version-2.8/contribute-to-rancher",
+    "id": "contribute-to-rancher",
     "title": "参与 Rancher 社区贡献",
     "description": "本文介绍了 Rancher 仓库和 Rancher 文档、如何构建 Rancher 仓库以及提交 issue 时要包含哪些信息。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.8/contribute-to-rancher.md",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/current/contribute-to-rancher.md",
     "sourceDirName": ".",
     "slug": "/contribute-to-rancher",
-    "permalink": "/zh/v2.8/contribute-to-rancher",
+    "permalink": "/zh/contribute-to-rancher",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/contribute-to-rancher.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/contribute-to-rancher.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "2023年10月6日",
+    "version": "current",
+    "lastUpdatedAt": 1694162158,
+    "formattedLastUpdatedAt": "2023年9月8日",
     "frontMatter": {
         "title": "参与 Rancher 社区贡献"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "API Reference",
-        "permalink": "/zh/v2.8/api/api-reference"
+        "title": "API 参考",
+        "permalink": "/zh/api/api-reference"
     }
 };
 const assets = {};

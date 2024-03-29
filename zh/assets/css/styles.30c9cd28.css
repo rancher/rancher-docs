@@ -3939,243 +3939,6 @@ body {
   flex-direction: column;
 }
 
-.redocusaurus-styles {
-  display: none;
-}
-
-.redocusaurus .redoc-wrap {
-  border-bottom: 1px solid var(--ifm-toc-border-color);
-}
-
-/* ------ Headings Overrides ------- */
-
-.redocusaurus h2,
-.redocusaurus h3,
-.redocusaurus h4 {
-  color: var(--ifm-font-color-base);
-}
-
-.redocusaurus h5 {
-  color: var(--ifm-font-color-secondary) !important;
-}
-
-.redocusaurus h5 > span {
-  color: var(--ifm-font-color-secondary) !important;
-}
-
-/* Fixes https://github.com/rohit-gohri/redocusaurus/issues/18 */
-
-html[data-theme='dark'] .redocusaurus h1 > a:nth-child(1)::before {
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGcgY2xhc3M9ImxheWVyIj4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBhdGggZD0ibTQ1OS43LDIzMy40bC05MC41LDkwLjVjLTUwLDUwIC0xMzEsNTAgLTE4MSwwYy03LjksLTcuOCAtMTQsLTE2LjcgLTE5LjQsLTI1LjhsNDIuMSwtNDIuMWMyLC0yIDQuNSwtMy4yIDYuOCwtNC41YzIuOSw5LjkgOCwxOS4zIDE1LjgsMjcuMmMyNSwyNSA2NS42LDI0LjkgOTAuNSwwbDkwLjUsLTkwLjVjMjUsLTI1IDI1LC02NS42IDAsLTkwLjVjLTI0LjksLTI1IC02NS41LC0yNSAtOTAuNSwwbC0zMi4yLDMyLjJjLTI2LjEsLTEwLjIgLTU0LjIsLTEyLjkgLTgxLjYsLTguOWw2OC42LC02OC42YzUwLC01MCAxMzEsLTUwIDE4MSwwYzQ5LjgsNDkuOSA0OS44LDEzMSAtMC4xLDE4MXptLTIzOS40LDE0OC44bC0zMi4yLDMyLjJjLTI1LDI0LjkgLTY1LjYsMjQuOSAtOTAuNSwwYy0yNSwtMjUgLTI1LC02NS42IDAsLTkwLjVsOTAuNSwtOTAuNWMyNSwtMjUgNjUuNSwtMjUgOTAuNSwwYzcuOCw3LjggMTIuOSwxNy4yIDE1LjgsMjcuMWMyLjQsLTEuNCA0LjgsLTIuNSA2LjgsLTQuNWw0Mi4xLC00MmMtNS40LC05LjIgLTExLjYsLTE4IC0xOS40LC0yNS44Yy01MCwtNTAgLTEzMSwtNTAgLTE4MSwwbC05MC41LDkwLjVjLTUwLDUwIC01MCwxMzEgMCwxODFjNTAsNTAgMTMxLDUwIDE4MSwwbDY4LjYsLTY4LjZjLTI3LjQsNCAtNTUuNiwxLjIgLTgxLjcsLTguOXoiIGZpbGw9IiNmZmZmZmYiIGlkPSJzdmdfMSIvPgogPC9nPgo8L3N2Zz4=');
-}
-
-html[data-theme='dark'] .redocusaurus h2 > a:nth-child(1)::before {
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGcgY2xhc3M9ImxheWVyIj4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBhdGggZD0ibTQ1OS43LDIzMy40bC05MC41LDkwLjVjLTUwLDUwIC0xMzEsNTAgLTE4MSwwYy03LjksLTcuOCAtMTQsLTE2LjcgLTE5LjQsLTI1LjhsNDIuMSwtNDIuMWMyLC0yIDQuNSwtMy4yIDYuOCwtNC41YzIuOSw5LjkgOCwxOS4zIDE1LjgsMjcuMmMyNSwyNSA2NS42LDI0LjkgOTAuNSwwbDkwLjUsLTkwLjVjMjUsLTI1IDI1LC02NS42IDAsLTkwLjVjLTI0LjksLTI1IC02NS41LC0yNSAtOTAuNSwwbC0zMi4yLDMyLjJjLTI2LjEsLTEwLjIgLTU0LjIsLTEyLjkgLTgxLjYsLTguOWw2OC42LC02OC42YzUwLC01MCAxMzEsLTUwIDE4MSwwYzQ5LjgsNDkuOSA0OS44LDEzMSAtMC4xLDE4MXptLTIzOS40LDE0OC44bC0zMi4yLDMyLjJjLTI1LDI0LjkgLTY1LjYsMjQuOSAtOTAuNSwwYy0yNSwtMjUgLTI1LC02NS42IDAsLTkwLjVsOTAuNSwtOTAuNWMyNSwtMjUgNjUuNSwtMjUgOTAuNSwwYzcuOCw3LjggMTIuOSwxNy4yIDE1LjgsMjcuMWMyLjQsLTEuNCA0LjgsLTIuNSA2LjgsLTQuNWw0Mi4xLC00MmMtNS40LC05LjIgLTExLjYsLTE4IC0xOS40LC0yNS44Yy01MCwtNTAgLTEzMSwtNTAgLTE4MSwwbC05MC41LDkwLjVjLTUwLDUwIC01MCwxMzEgMCwxODFjNTAsNTAgMTMxLDUwIDE4MSwwbDY4LjYsLTY4LjZjLTI3LjQsNCAtNTUuNiwxLjIgLTgxLjcsLTguOXoiIGZpbGw9IiNmZmZmZmYiIGlkPSJzdmdfMSIvPgogPC9nPgo8L3N2Zz4=');
-}
-
-/* ------- Sidebar Overrides (Left Panel) ------- */
-
-.redocusaurus .menu-content {
-  border-right: 1px solid var(--ifm-toc-border-color);
-}
-
-/**
- * Hide Logo as already in navbar
- * @see https://github.com/rohit-gohri/redocusaurus/issues/123
- */
-
-.redocusaurus-has-logo .menu-content > div:first-child {
-  display: none;
-}
-
-.redocusaurus .operation-type {
-  margin-top: 6px;
-  font-size: 8px;
-}
-
-/* ------- Right Panel Overrides ------- */
-
-.redocusaurus code {
-  padding: 0px;
-  /* Fix weird overlay on curly braces */
-  background-color: transparent;
-}
-
-.redocusaurus
-  ul
-  > li.react-tabs__tab--selected:not(.tab-error):not(.tab-success) {
-  color: #303846 !important;
-}
-
-/** Fixes https://github.com/rohit-gohri/redocusaurus/issues/65 */
-
-html:not([data-theme='dark'])
-  .redocusaurus
-  .redoc-wrap
-  .api-content
-  > div
-  > div:nth-child(1)
-  > div:nth-child(2)
-  h3 {
-  color: var(--ifm-font-color-base-inverse);
-}
-
-/* Background of server selection dropdown */
-
-html[data-theme='dark']
-  .redocusaurus
-  div[id^='operation']
-  > div
-  > div:nth-child(2)
-  > div:nth-child(1)
-  > div:nth-child(2) {
-  background-color: rgb(27, 32, 40);
-  color: var(--ifm-font-color-secondary);
-}
-
-html[data-theme='dark']
-  .redocusaurus
-  div[id^='operation']
-  > div
-  > div:nth-child(2)
-  > div:nth-child(1)
-  > div:nth-child(2)
-  > div
-  > div:nth-child(2)
-  > div {
-  background-color: var(--ifm-background-color);
-}
-
-/* Fixes https://github.com/rohit-gohri/redocusaurus/issues/8 */
-
-html[data-theme='dark']
-  .redocusaurus
-  div[id^='tag']
-  > div
-  > div:nth-child(2)
-  > div:nth-child(1)
-  > div:nth-child(2) {
-  background-color: rgb(27, 32, 40);
-  color: var(--ifm-font-color-secondary);
-}
-
-html[data-theme='dark']
-  .redocusaurus
-  div[id^='tag']
-  > div
-  > div:nth-child(2)
-  > div:nth-child(1)
-  > div:nth-child(2)
-  > div
-  > div:nth-child(2)
-  > div {
-  background-color: var(--ifm-background-color);
-}
-
-/* Fixes https://github.com/rohit-gohri/redocusaurus/issues/306 */
-
-html[data-theme='dark'] 
-  .redocusaurus 
-  div[id^='tag']
-  button:has(span):has(.operation-type) {
-  background-color: var(--ifm-color-gray-800);
-}
-
-html[data-theme='dark'] 
-  .redocusaurus 
-  div[id^='tag'] 
-  button + div {
-  background-color: var(--ifm-color-emphasis-0);
-}
-
-/* Padding above Response Samples heading */
-
-.redocusaurus .react-tabs__tab-panel--selected {
-  margin-bottom: 10px;
-}
-
-/* 
- * Code Samples
- * @see https://github.com/rohit-gohri/redocusaurus/issues/217
- */
-
-html:not([data-theme='dark'])
-  .redocusaurus
-  div[id^='react-tabs']
-  > div:nth-child(1)
-  > pre:nth-child(2) {
-  background-color: transparent;
-}
-
-/** https://github.com/rohit-gohri/redocusaurus/issues/45 */
-
-html:not([data-theme='dark']) .redocusaurus div[id^='react-tabs'] code {
-  color: var(--ifm-color-emphasis-0);
-}
-
-/* ------ Schema Styling Overrides ------- */
-
-.redocusaurus table th {
-  border: none;
-}
-
-.redocusaurus table td {
-  border-top: none;
-  border-right: none;
-}
-
-.redocusaurus table td:nth-child(1) {
-  border-bottom: none;
-}
-
-.redocusaurus table td:nth-child(2) {
-  border-left: none;
-}
-
-.redocusaurus table tr {
-  background-color: var(--ifm-background-color);
-}
-
-.redocusaurus table > tbody > tr {
-  color: var(--ifm-font-color-base);
-}
-
-.redocusaurus table tbody tr table {
-  background-color: var(--ifm-background-surface-color);
-}
-
-.redocusaurus table tbody tr table tbody tr {
-  background-color: var(--ifm-background-surface-color);
-}
-
-.redocusaurus tr.last + tr > td > div {
-  background-color: var(--ifm-background-color) !important;
-}
-
-.redocusaurus span.dropdown-selector-value {
-  color: var(--ifm-font-color-secondary);
-}
-
-/* Authentication tables */
-
-.redocusaurus table.security-details tr:nth-child(2n + 1) {
-  background-color: var(--ifm-background-surface-color);
-}
-
-[data-theme='dark'] .redocusaurus .api-content div h5 + svg polygon {
-  filter: invert(1);
-}
-
-.redocusaurus-schema.hide-example > div > div > div:nth-child(2) {
-  display: none;
-}
-.redocusaurus-schema.hide-example > div > div > div:nth-child(1) {
-  width: 100%;
-}
-.redocusaurus-schema > div:last-child {
-  min-height: 0;
-}
-
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -4814,6 +4577,243 @@ TODO bad, but we currently always show light mode when there's no data-theme
 
 html:not([data-theme]) .themedComponent--light_NU7w {
   display: initial;
+}
+
+.redocusaurus-styles {
+  display: none;
+}
+
+.redocusaurus .redoc-wrap {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+/* ------ Headings Overrides ------- */
+
+.redocusaurus h2,
+.redocusaurus h3,
+.redocusaurus h4 {
+  color: var(--ifm-font-color-base);
+}
+
+.redocusaurus h5 {
+  color: var(--ifm-font-color-secondary) !important;
+}
+
+.redocusaurus h5 > span {
+  color: var(--ifm-font-color-secondary) !important;
+}
+
+/* Fixes https://github.com/rohit-gohri/redocusaurus/issues/18 */
+
+html[data-theme='dark'] .redocusaurus h1 > a:nth-child(1)::before {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGcgY2xhc3M9ImxheWVyIj4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBhdGggZD0ibTQ1OS43LDIzMy40bC05MC41LDkwLjVjLTUwLDUwIC0xMzEsNTAgLTE4MSwwYy03LjksLTcuOCAtMTQsLTE2LjcgLTE5LjQsLTI1LjhsNDIuMSwtNDIuMWMyLC0yIDQuNSwtMy4yIDYuOCwtNC41YzIuOSw5LjkgOCwxOS4zIDE1LjgsMjcuMmMyNSwyNSA2NS42LDI0LjkgOTAuNSwwbDkwLjUsLTkwLjVjMjUsLTI1IDI1LC02NS42IDAsLTkwLjVjLTI0LjksLTI1IC02NS41LC0yNSAtOTAuNSwwbC0zMi4yLDMyLjJjLTI2LjEsLTEwLjIgLTU0LjIsLTEyLjkgLTgxLjYsLTguOWw2OC42LC02OC42YzUwLC01MCAxMzEsLTUwIDE4MSwwYzQ5LjgsNDkuOSA0OS44LDEzMSAtMC4xLDE4MXptLTIzOS40LDE0OC44bC0zMi4yLDMyLjJjLTI1LDI0LjkgLTY1LjYsMjQuOSAtOTAuNSwwYy0yNSwtMjUgLTI1LC02NS42IDAsLTkwLjVsOTAuNSwtOTAuNWMyNSwtMjUgNjUuNSwtMjUgOTAuNSwwYzcuOCw3LjggMTIuOSwxNy4yIDE1LjgsMjcuMWMyLjQsLTEuNCA0LjgsLTIuNSA2LjgsLTQuNWw0Mi4xLC00MmMtNS40LC05LjIgLTExLjYsLTE4IC0xOS40LC0yNS44Yy01MCwtNTAgLTEzMSwtNTAgLTE4MSwwbC05MC41LDkwLjVjLTUwLDUwIC01MCwxMzEgMCwxODFjNTAsNTAgMTMxLDUwIDE4MSwwbDY4LjYsLTY4LjZjLTI3LjQsNCAtNTUuNiwxLjIgLTgxLjcsLTguOXoiIGZpbGw9IiNmZmZmZmYiIGlkPSJzdmdfMSIvPgogPC9nPgo8L3N2Zz4=');
+}
+
+html[data-theme='dark'] .redocusaurus h2 > a:nth-child(1)::before {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGcgY2xhc3M9ImxheWVyIj4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBhdGggZD0ibTQ1OS43LDIzMy40bC05MC41LDkwLjVjLTUwLDUwIC0xMzEsNTAgLTE4MSwwYy03LjksLTcuOCAtMTQsLTE2LjcgLTE5LjQsLTI1LjhsNDIuMSwtNDIuMWMyLC0yIDQuNSwtMy4yIDYuOCwtNC41YzIuOSw5LjkgOCwxOS4zIDE1LjgsMjcuMmMyNSwyNSA2NS42LDI0LjkgOTAuNSwwbDkwLjUsLTkwLjVjMjUsLTI1IDI1LC02NS42IDAsLTkwLjVjLTI0LjksLTI1IC02NS41LC0yNSAtOTAuNSwwbC0zMi4yLDMyLjJjLTI2LjEsLTEwLjIgLTU0LjIsLTEyLjkgLTgxLjYsLTguOWw2OC42LC02OC42YzUwLC01MCAxMzEsLTUwIDE4MSwwYzQ5LjgsNDkuOSA0OS44LDEzMSAtMC4xLDE4MXptLTIzOS40LDE0OC44bC0zMi4yLDMyLjJjLTI1LDI0LjkgLTY1LjYsMjQuOSAtOTAuNSwwYy0yNSwtMjUgLTI1LC02NS42IDAsLTkwLjVsOTAuNSwtOTAuNWMyNSwtMjUgNjUuNSwtMjUgOTAuNSwwYzcuOCw3LjggMTIuOSwxNy4yIDE1LjgsMjcuMWMyLjQsLTEuNCA0LjgsLTIuNSA2LjgsLTQuNWw0Mi4xLC00MmMtNS40LC05LjIgLTExLjYsLTE4IC0xOS40LC0yNS44Yy01MCwtNTAgLTEzMSwtNTAgLTE4MSwwbC05MC41LDkwLjVjLTUwLDUwIC01MCwxMzEgMCwxODFjNTAsNTAgMTMxLDUwIDE4MSwwbDY4LjYsLTY4LjZjLTI3LjQsNCAtNTUuNiwxLjIgLTgxLjcsLTguOXoiIGZpbGw9IiNmZmZmZmYiIGlkPSJzdmdfMSIvPgogPC9nPgo8L3N2Zz4=');
+}
+
+/* ------- Sidebar Overrides (Left Panel) ------- */
+
+.redocusaurus .menu-content {
+  border-right: 1px solid var(--ifm-toc-border-color);
+}
+
+/**
+ * Hide Logo as already in navbar
+ * @see https://github.com/rohit-gohri/redocusaurus/issues/123
+ */
+
+.redocusaurus-has-logo .menu-content > div:first-child {
+  display: none;
+}
+
+.redocusaurus .operation-type {
+  margin-top: 6px;
+  font-size: 8px;
+}
+
+/* ------- Right Panel Overrides ------- */
+
+.redocusaurus code {
+  padding: 0px;
+  /* Fix weird overlay on curly braces */
+  background-color: transparent;
+}
+
+.redocusaurus
+  ul
+  > li.react-tabs__tab--selected:not(.tab-error):not(.tab-success) {
+  color: #303846 !important;
+}
+
+/** Fixes https://github.com/rohit-gohri/redocusaurus/issues/65 */
+
+html:not([data-theme='dark'])
+  .redocusaurus
+  .redoc-wrap
+  .api-content
+  > div
+  > div:nth-child(1)
+  > div:nth-child(2)
+  h3 {
+  color: var(--ifm-font-color-base-inverse);
+}
+
+/* Background of server selection dropdown */
+
+html[data-theme='dark']
+  .redocusaurus
+  div[id^='operation']
+  > div
+  > div:nth-child(2)
+  > div:nth-child(1)
+  > div:nth-child(2) {
+  background-color: rgb(27, 32, 40);
+  color: var(--ifm-font-color-secondary);
+}
+
+html[data-theme='dark']
+  .redocusaurus
+  div[id^='operation']
+  > div
+  > div:nth-child(2)
+  > div:nth-child(1)
+  > div:nth-child(2)
+  > div
+  > div:nth-child(2)
+  > div {
+  background-color: var(--ifm-background-color);
+}
+
+/* Fixes https://github.com/rohit-gohri/redocusaurus/issues/8 */
+
+html[data-theme='dark']
+  .redocusaurus
+  div[id^='tag']
+  > div
+  > div:nth-child(2)
+  > div:nth-child(1)
+  > div:nth-child(2) {
+  background-color: rgb(27, 32, 40);
+  color: var(--ifm-font-color-secondary);
+}
+
+html[data-theme='dark']
+  .redocusaurus
+  div[id^='tag']
+  > div
+  > div:nth-child(2)
+  > div:nth-child(1)
+  > div:nth-child(2)
+  > div
+  > div:nth-child(2)
+  > div {
+  background-color: var(--ifm-background-color);
+}
+
+/* Fixes https://github.com/rohit-gohri/redocusaurus/issues/306 */
+
+html[data-theme='dark'] 
+  .redocusaurus 
+  div[id^='tag']
+  button:has(span):has(.operation-type) {
+  background-color: var(--ifm-color-gray-800);
+}
+
+html[data-theme='dark'] 
+  .redocusaurus 
+  div[id^='tag'] 
+  button + div {
+  background-color: var(--ifm-color-emphasis-0);
+}
+
+/* Padding above Response Samples heading */
+
+.redocusaurus .react-tabs__tab-panel--selected {
+  margin-bottom: 10px;
+}
+
+/* 
+ * Code Samples
+ * @see https://github.com/rohit-gohri/redocusaurus/issues/217
+ */
+
+html:not([data-theme='dark'])
+  .redocusaurus
+  div[id^='react-tabs']
+  > div:nth-child(1)
+  > pre:nth-child(2) {
+  background-color: transparent;
+}
+
+/** https://github.com/rohit-gohri/redocusaurus/issues/45 */
+
+html:not([data-theme='dark']) .redocusaurus div[id^='react-tabs'] code {
+  color: var(--ifm-color-emphasis-0);
+}
+
+/* ------ Schema Styling Overrides ------- */
+
+.redocusaurus table th {
+  border: none;
+}
+
+.redocusaurus table td {
+  border-top: none;
+  border-right: none;
+}
+
+.redocusaurus table td:nth-child(1) {
+  border-bottom: none;
+}
+
+.redocusaurus table td:nth-child(2) {
+  border-left: none;
+}
+
+.redocusaurus table tr {
+  background-color: var(--ifm-background-color);
+}
+
+.redocusaurus table > tbody > tr {
+  color: var(--ifm-font-color-base);
+}
+
+.redocusaurus table tbody tr table {
+  background-color: var(--ifm-background-surface-color);
+}
+
+.redocusaurus table tbody tr table tbody tr {
+  background-color: var(--ifm-background-surface-color);
+}
+
+.redocusaurus tr.last + tr > td > div {
+  background-color: var(--ifm-background-color) !important;
+}
+
+.redocusaurus span.dropdown-selector-value {
+  color: var(--ifm-font-color-secondary);
+}
+
+/* Authentication tables */
+
+.redocusaurus table.security-details tr:nth-child(2n + 1) {
+  background-color: var(--ifm-background-surface-color);
+}
+
+[data-theme='dark'] .redocusaurus .api-content div h5 + svg polygon {
+  filter: invert(1);
+}
+
+.redocusaurus-schema.hide-example > div > div > div:nth-child(2) {
+  display: none;
+}
+.redocusaurus-schema.hide-example > div > div > div:nth-child(1) {
+  width: 100%;
+}
+.redocusaurus-schema > div:last-child {
+  min-height: 0;
 }
 
 /*! @docsearch/css 3.5.2 | MIT License | © Algolia, Inc. and contributors | https://docsearch.algolia.com */

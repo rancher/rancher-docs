@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[85032],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[75926],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 71010:
+/***/ 77370:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,42 +308,67 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Kubernetes Components'
+    title: '项目'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "troubleshooting/kubernetes-components/kubernetes-components",
-    "id": "troubleshooting/kubernetes-components/kubernetes-components",
-    "title": "Kubernetes Components",
-    "description": "The commands and steps listed in this section apply to the core Kubernetes components on Rancher Launched Kubernetes clusters.",
-    "source": "@site/docs/troubleshooting/kubernetes-components/kubernetes-components.md",
-    "sourceDirName": "troubleshooting/kubernetes-components",
-    "slug": "/troubleshooting/kubernetes-components/",
-    "permalink": "/zh/troubleshooting/kubernetes-components/",
+    "unversionedId": "api/workflows/projects",
+    "id": "version-2.8/api/workflows/projects",
+    "title": "项目",
+    "description": "创建项目",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.8/api/workflows/projects.md",
+    "sourceDirName": "api/workflows",
+    "slug": "/api/workflows/projects",
+    "permalink": "/zh/v2.8/api/workflows/projects",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/troubleshooting/kubernetes-components/kubernetes-components.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/api/workflows/projects.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "2024年1月29日",
+    "version": "2.8",
+    "lastUpdatedAt": 1711723677,
+    "formattedLastUpdatedAt": "2024年3月29日",
     "frontMatter": {
-        "title": "Kubernetes Components"
+        "title": "项目"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "一般故障排除",
-        "permalink": "/zh/troubleshooting/general-troubleshooting"
+        "title": "API 快速入门指南",
+        "permalink": "/zh/v2.8/api/quickstart"
     },
     "next": {
-        "title": "etcd 节点故障排除",
-        "permalink": "/zh/troubleshooting/kubernetes-components/troubleshooting-etcd-nodes"
+        "title": "API 参考",
+        "permalink": "/zh/v2.8/api/api-reference"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Kubernetes Component Diagram',
-        id: 'kubernetes-component-diagram',
+        value: '创建项目',
+        id: '创建项目',
+        level: 2
+    },
+    {
+        value: '创建一个基本项目',
+        id: '创建一个基本项目',
+        level: 3
+    },
+    {
+        value: '创建一个具有 Resource Quota 的项目',
+        id: '创建一个具有-resource-quota-的项目',
+        level: 3
+    },
+    {
+        value: '创建一个具有 Container Limit Ranges 的项目',
+        id: '创建一个具有-container-limit-ranges-的项目',
+        level: 3
+    },
+    {
+        value: '在项目中创建命名空间',
+        id: '在项目中创建命名空间',
+        level: 2
+    },
+    {
+        value: '删除项目',
+        id: '删除项目',
         level: 2
     }
 ];
@@ -360,51 +385,142 @@ function MDXContent(_param) {
         mdxType: "MDXLayout"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/troubleshooting/kubernetes-components"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The commands and steps listed in this section apply to the core Kubernetes components on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        href: "https://ranchermanager.docs.rancher.com/zh/api/workflows/projects"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "创建项目"
+    }, `创建项目`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `项目资源只能在管理集群上创建，请参考下文了解如何`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md"
-    }, `Rancher Launched Kubernetes`), ` clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section includes troubleshooting tips in the following categories:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "troubleshooting-etcd-nodes.md"
-    }, `Troubleshooting etcd Nodes`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "troubleshooting-controlplane-nodes.md"
-    }, `Troubleshooting Controlplane Nodes`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "troubleshooting-nginx-proxy.md"
-    }, `Troubleshooting nginx-proxy Nodes`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "troubleshooting-worker-nodes-and-generic-components.md"
-    }, `Troubleshooting Worker Nodes and Generic Components`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "kubernetes-component-diagram"
-    }, `Kubernetes Component Diagram`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
-        alt: "Cluster diagram",
-        src: (__webpack_require__(56492)/* ["default"] */ .Z),
-        width: "772",
-        height: "1145"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("sup", null, "Lines show the traffic flow between components. Colors are used purely for visual aid"));
+        "href": "#%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%88%9B%E5%BB%BA%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"
+    }, `在管理集群中的项目下创建命名空间`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "创建一个基本项目"
+    }, `创建一个基本项目`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `kubectl create -f - <<EOF
+apiVersion: management.cattle.io/v3
+kind: Project
+metadata:
+  generateName: p-
+  namespace: c-m-abcde
+spec:
+  clusterName: c-m-abcde
+  displayName: myproject
+EOF
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `使用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `metadata.generateName`), ` 来确保一个唯一的项目 ID，但是需要注意 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `kubectl apply`), ` 不能与 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `metadata.generateName`), ` 一起使用，因此必须使用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `kubectl create`), ` 来替代。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `将 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `metadata.namespace`), ` 和 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `spec.clusterName`), ` 设置为项目所属的集群 ID。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果你通过集群成员账户创建项目，则必须包含注释 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `field.cattle.io/creatorId`), `，并将注释值设置为集群成员账号的用户 ID。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `kubectl create -f - <<EOF
+apiVersion: management.cattle.io/v3
+kind: Project
+metadata:
+  annotations: 
+  field.cattle.io/creatorId:
+    user-id
+  generateName: p-
+  namespace: c-m-abcde
+spec:
+  clusterName: c-m-abcde
+  displayName: myproject
+EOF
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `设置 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `field.cattle.io/creatorId`), ` 字段允许集群成员账户通过 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `get`), ` 命令查看项目资源，并可以在 Rancher UI 中查看项目。集群所有者和管理员账号不需要设置此注释。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "创建一个具有-resource-quota-的项目"
+    }, `创建一个具有 Resource Quota 的项目`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `请查看 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://kubernetes.io/docs/concepts/policy/resource-quotas/"
+    }, `Kubernetes Resource Quota`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `kubectl create -f - <<EOF
+apiVersion: management.cattle.io/v3
+kind: Project
+metadata:
+  generateName: p-
+  namespace: c-m-abcde
+spec:
+  clusterName: c-m-abcde
+  displayName: myproject
+  resourceQuota:
+    limit:
+      limitsCpu: 1000m
+  namespaceDefaultResourceQuota:
+    limit:
+      limitsCpu: 50m
+EOF
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "创建一个具有-container-limit-ranges-的项目"
+    }, `创建一个具有 Container Limit Ranges 的项目`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `请查看 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://kubernetes.io/docs/concepts/policy/limit-range/"
+    }, `Kubernetes Limit Ranges`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `kubectl create -f - <<EOF
+apiVersion: management.cattle.io/v3
+kind: Project
+metadata:
+  generateName: p-
+  namespace: c-m-abcde
+spec:
+  clusterName: c-m-abcde
+  displayName: myproject
+  containerDefaultResourceLimit:
+    limitsCpu:    100m
+    limitsMemory: 100Mi
+    requestsCpu:  50m
+    requestsMemory: 50Mi
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "在项目中创建命名空间"
+    }, `在项目中创建命名空间`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `项目资源保存在管理集群中，即使该项目使用于托管集群也是如此。项目下的命名空间保存在托管集群中。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在管理集群上查找你正在管理的集群的项目 ID，因为它是使用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `metadata.generateName`), ` 生成的：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `kubectl --namespace c-m-abcde get projects
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在托管集群上，使用项目注释创建命名空间:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `kubectl apply -f - <<EOF
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mynamespace
+  annotations:
+    field.cattle.io/projectId: c-m-abcde:p-vwxyz
+EOF
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `注意格式：`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `<cluster ID>:<project ID>`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "删除项目"
+    }, `删除项目`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在集群命名空间中查找要删除的项目：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `kubectl --namespace c-m-abcde get projects
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `删除集群命名空间下的项目：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `kubectl --namespace c-m-abcde delete project p-vwxyz
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `请注意此命令不会删除以前属于该项目的命名空间和资源。`));
 }
 MDXContent.isMDXComponent = true;
 
-
-/***/ }),
-
-/***/ 56492:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/clusterdiagram-2b66ee124fed594265b3bc07fa1f145d.svg");
 
 /***/ })
 

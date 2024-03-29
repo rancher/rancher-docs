@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[19271],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[95979],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 72679:
+/***/ 5689:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,43 +308,48 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Kubernetes Components'
+    title: '过期 Webhook 证书轮换'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "troubleshooting/kubernetes-components/kubernetes-components",
-    "id": "version-2.8/troubleshooting/kubernetes-components/kubernetes-components",
-    "title": "Kubernetes Components",
-    "description": "The commands and steps listed in this section apply to the core Kubernetes components on Rancher Launched Kubernetes clusters.",
-    "source": "@site/versioned_docs/version-2.8/troubleshooting/kubernetes-components/kubernetes-components.md",
-    "sourceDirName": "troubleshooting/kubernetes-components",
-    "slug": "/troubleshooting/kubernetes-components/",
-    "permalink": "/zh/v2.8/troubleshooting/kubernetes-components/",
+    "unversionedId": "troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation",
+    "id": "troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation",
+    "title": "过期 Webhook 证书轮换",
+    "description": "如果你的 Rancher 版本安装了 rancher-webhook，某些版本创建的证书将在一年后过期。如果证书未续订，你需要轮换你的 webhook 证书。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/current/troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation.md",
+    "sourceDirName": "troubleshooting/other-troubleshooting-tips",
+    "slug": "/troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation",
+    "permalink": "/zh/troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/troubleshooting/kubernetes-components/kubernetes-components.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/troubleshooting/other-troubleshooting-tips/expired-webhook-certificate-rotation.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "2024年1月29日",
+    "version": "current",
+    "lastUpdatedAt": 1663953084,
+    "formattedLastUpdatedAt": "2022年9月23日",
     "frontMatter": {
-        "title": "Kubernetes Components"
+        "title": "过期 Webhook 证书轮换"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "一般故障排除",
-        "permalink": "/zh/v2.8/troubleshooting/general-troubleshooting"
+        "title": "审计日志中的用户 ID 跟踪",
+        "permalink": "/zh/troubleshooting/other-troubleshooting-tips/user-id-tracking-in-audit-logs"
     },
     "next": {
-        "title": "etcd 节点故障排除",
-        "permalink": "/zh/v2.8/troubleshooting/kubernetes-components/troubleshooting-etcd-nodes"
+        "title": "API 快速入门指南",
+        "permalink": "/zh/api/quickstart"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Kubernetes Component Diagram',
-        id: 'kubernetes-component-diagram',
-        level: 2
+        value: '1. 如果用户具有集群访问权限，运行以下命令：',
+        id: '1-如果用户具有集群访问权限运行以下命令',
+        level: 5
+    },
+    {
+        value: '2. 如果用户没有集群访问权限，使用 <code>kubectl</code>：',
+        id: '2-如果用户没有集群访问权限使用-kubectl',
+        level: 5
     }
 ];
 const layoutProps = {
@@ -358,53 +363,51 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
-        rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/troubleshooting/kubernetes-components"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The commands and steps listed in this section apply to the core Kubernetes components on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md"
-    }, `Rancher Launched Kubernetes`), ` clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section includes troubleshooting tips in the following categories:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "troubleshooting-etcd-nodes.md"
-    }, `Troubleshooting etcd Nodes`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "troubleshooting-controlplane-nodes.md"
-    }, `Troubleshooting Controlplane Nodes`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "troubleshooting-nginx-proxy.md"
-    }, `Troubleshooting nginx-proxy Nodes`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "troubleshooting-worker-nodes-and-generic-components.md"
-    }, `Troubleshooting Worker Nodes and Generic Components`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "kubernetes-component-diagram"
-    }, `Kubernetes Component Diagram`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
-        alt: "Cluster diagram",
-        src: (__webpack_require__(56492)/* ["default"] */ .Z),
-        width: "772",
-        height: "1145"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("sup", null, "Lines show the traffic flow between components. Colors are used purely for visual aid"));
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果你的 Rancher 版本安装了 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `rancher-webhook`), `，某些版本创建的证书将在一年后过期。如果证书未续订，你需要轮换你的 webhook 证书。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在 Rancher v2.6.3 及更高版本中，rancher-webhook deployments 将在到期日期后 30 天或更短的时间内自动更新其 TLS 证书。如果你使用的是 v2.6.2 或更低版本，你可以通过下面两种方法来解决这个问题。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+        "id": "1-如果用户具有集群访问权限运行以下命令"
+    }, `1. 如果用户具有集群访问权限，运行以下命令：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `kubectl delete secret -n cattle-system cattle-webhook-tls
+kubectl delete mutatingwebhookconfigurations.admissionregistration.k8s.io --ignore-not-found=true rancher.cattle.io
+kubectl delete pod -n cattle-system -l app=rancher-webhook
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+        "id": "2-如果用户没有集群访问权限使用-kubectl"
+    }, `2. 如果用户没有集群访问权限，使用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "h5"
+    }, `kubectl`), `：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, `删除 local 集群 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `cattle-system`), ` 命名空间中的 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `cattle-webhook-tls`), ` 密文。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, `删除 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `rancher.cattle.io`), ` mutating webhook。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, `删除 local 集群 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `cattle-system`), ` 命名空间中的 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `rancher-webhook`), ` pod。`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "note"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `webhook 证书过期问题不止示例中列出的 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `cattle-webhook-tls`), `。你需要相应地填写你过期的证书密文。`)));
 }
 MDXContent.isMDXComponent = true;
 
-
-/***/ }),
-
-/***/ 56492:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/clusterdiagram-2b66ee124fed594265b3bc07fa1f145d.svg");
 
 /***/ })
 
