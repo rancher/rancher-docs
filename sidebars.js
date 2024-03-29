@@ -1353,14 +1353,8 @@ const sidebars = {
           ]
         },
         "api/api-reference",
-        {
-          "type": "category",
-          "label": "Previous API Versions",
-          "items": [
-            "api/previous-rancher-api-versions/previous-rancher-api-versions",
-            "api/previous-rancher-api-versions/api-tokens",
-          ]
-        },
+        "api/api-tokens",
+        "api/previous-rancher-api-versions",
       ]
     },
     "contribute-to-rancher",
