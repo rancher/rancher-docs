@@ -1354,7 +1354,7 @@ const sidebars = {
         },
         "api/api-reference",
         "api/api-tokens",
-        "api/previous-rancher-api-versions",
+        "api/v3-rancher-api-guide",
       ]
     },
     "contribute-to-rancher",

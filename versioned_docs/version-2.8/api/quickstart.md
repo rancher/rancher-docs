@@ -1,5 +1,5 @@
 ---
-title: API Quick Start Guide
+title: RK-API Quick Start Guide
 ---
 
 <head>
