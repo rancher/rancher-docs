@@ -382,6 +382,10 @@
     "sidebar.tutorialSidebar.category.Continuous Delivery with Fleet": {
       "message": "使用 Fleet 进行持续交付",
       "description": "The label for category Continuous Delivery with Fleet in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Example Workflows": {
+      "message": "工作流程示例",
+      "description": "The label for category Example Workflows in sidebar tutorialSidebar"
     }
   }
   
