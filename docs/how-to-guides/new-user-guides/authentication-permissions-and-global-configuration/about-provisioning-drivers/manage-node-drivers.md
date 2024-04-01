@@ -23,13 +23,17 @@ To create, edit, or delete drivers, you need _one_ of the following permissions:
 
 ## Activating/Deactivating Node Drivers
 
-By default, Rancher only activates drivers for the most popular cloud providers, Amazon EC2, Azure, DigitalOcean, Linode and vSphere. If you want to show or hide any node driver, you can change its status.
+By default, Rancher only activates drivers for the most popular cloud providers, such as Amazon EC2, Azure, DigitalOcean, Linode and vSphere. If you want to show or hide any node driver, you can change its status.
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 
 2.  In the left navigation menu, click **Drivers**.
 
 2.	On the **Node Drivers** tab, select the driver that you wish to activate or deactivate and click **⋮ > Activate** or **⋮ > Deactivate**.
+
+### Consequences of Deactivating or Deleting Node Drivers
+
+When you deactivate or delete a node driver, the nodes deployed with that driver become inaccessible. For example, if you are have a vSphere cluster, and you disable the vSphere node driver used to deploy the cluster's nodes, the initial node in the cluster will fail, and the entire cluster will become inaccessible. Attempts to delete the VMware nodes will fail, with nodes stuck in an extended `Deleting` state.
 
 ## Adding Custom Node Drivers
 
@@ -40,6 +44,6 @@ If you want to use a node driver that Rancher doesn't support out-of-the-box, yo
 1. On **Node Drivers** tab, click **Add Node Driver**.
 1.	Complete the **Add Node Driver** form. Then click **Create**.
 
-### Developing your own node driver
+### Developing Your Own Node Drivers
 
 Node drivers are implemented with [Docker Machine](https://docs.docker.com/machine/).
