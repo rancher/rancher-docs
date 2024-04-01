@@ -31,9 +31,9 @@ By default, Rancher only activates drivers for the most popular cloud providers,
 
 2.	On the **Node Drivers** tab, select the driver that you wish to activate or deactivate and click **⋮ > Activate** or **⋮ > Deactivate**.
 
-### Consequences of Deactivating or Deleting Node Drivers
+### Consequences of Deactivating Node Drivers
 
-When you deactivate or delete a node driver, the nodes deployed with that driver become inaccessible. For example, if you are have a vSphere cluster, and you disable the vSphere node driver used to deploy the cluster's nodes, the initial node in the cluster will fail, and the entire cluster will become inaccessible. Attempts to delete the VMware nodes will fail, with nodes stuck in an extended `Deleting` state.
+When you deactivate or delete a node driver, the nodes deployed with that driver become inaccessible. For example, if you have an active vSphere cluster, and you disable the vSphere node driver used to deploy the cluster's nodes, the initial node in the cluster will fail, and the entire cluster will become inaccessible. Attempts to delete the VMware nodes will fail, with nodes stuck in an extended `Removing` state.
 
 ## Adding Custom Node Drivers
 
