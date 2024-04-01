@@ -6,11 +6,15 @@ title: Setting up the Bootstrap Password
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/resources/bootstrap-password"/>
 </head>
 
-When Rancher starts for the first time, a password is randomly generated for the first admin user. When the admin first logs in to Rancher, the UI shows commands that can be used to retrieve the bootstrap password. The admin needs to run those commands and log in with the bootstrap password. Then Rancher gives the admin an opportunity to reset the password.
+When you install Rancher, you can use a variable to set a bootstrap password for the first admin account. If you choose not to set a bootstrap password, Rancher randomly generates a bootstrap password for this account.
 
-The bootstrap password is randomly generated if it is not set during installation with a variable. For details on how to set the bootstrap password using a variable, see below.
+For details on how to use a variable to set the bootstrap password, see below.
 
-### Specifying the Bootstrap Password in Helm Installs
+## Bootstrap Password Requirements
+
+The bootstrap password must be at least 12 characters long.
+
+## Specifying the Bootstrap Password in Helm Installs
 
 For a Helm install, users can specify the bootstrap password variable by configuring it in the Helm chart values with `.Values.bootstrapPassword`.
 
@@ -20,7 +24,7 @@ The password will be stored in a Kubernetes secret. After Rancher is installed, 
 kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{ .data.bootstrapPassword|base64decode}}{{ "\n" }}'
 ```
 
-### Specifying the Bootstrap Password in Docker Installs
+## Specifying the Bootstrap Password in Docker Installs
 
 For a Docker install, you can specify the bootstrap password by passing `-e CATTLE_BOOTSTRAP_PASSWORD=password` to the Docker install command.
 
