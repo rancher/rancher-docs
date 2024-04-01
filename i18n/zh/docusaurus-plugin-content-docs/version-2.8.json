@@ -124,32 +124,40 @@
     "description": "The label for category Infrastructure Setup in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Kubernetes Clusters in Rancher Setup": {
-    "message": "Rancher 设置中的 Kubernetes 集群",
+    "message": "Rancher 中的 Kubernetes 集群设置",
     "description": "The label for category Kubernetes Clusters in Rancher Setup in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Checklist for Production-Ready Clusters": {
     "message": "生产就绪集群检查清单",
     "description": "The label for category Checklist for Production-Ready Clusters in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Set Up Clusters from Hosted Kubernetes Providers": {
+  "sidebar.tutorialSidebar.category.Setting up Clusters from Hosted Kubernetes Providers": {
     "message": "通过托管 Kubernetes 提供商设置集群",
     "description": "The label for category Set Up Clusters from Hosted Kubernetes Providers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Launching Kubernetes on Windows Clusters": {
+    "message": "在 Windows 集群上启动 Kubernetes",
+    "description": "The label for category Launching Kubernetes on Windows Clusters in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Use Windows Clusters": {
     "message": "使用 Windows 集群",
     "description": "The label for category Use Windows Clusters in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Set Up Cloud Providers": {
+  "sidebar.tutorialSidebar.category.Setting up Cloud Providers": {
     "message": "设置 Cloud Provider",
-    "description": "The label for category Set Up Cloud Providers in sidebar tutorialSidebar"
+    "description": "The label for category Setting up Cloud Providers in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Launch Kubernetes with Rancher": {
     "message": "使用 Rancher 启动 Kubernetes",
     "description": "The label for category Launch Kubernetes with Rancher in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Use New Nodes in an Infra Provider": {
+  "sidebar.tutorialSidebar.category.Migrate to an Out-of-tree Cloud Provider": {
+    "message": "迁移到树外云提供商",
+    "description": "The label for category Migrate to an Out-of-tree Cloud Provider in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Launching New Nodes in an Infra Provider": {
     "message": "在基础设施提供商中使用新节点",
-    "description": "The label for category Use New Nodes in an Infra Provider in sidebar tutorialSidebar"
+    "description": "The label for category Launching New Nodes in an Infra Provider in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.vSphere": {
     "message": "vSphere",
