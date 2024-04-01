@@ -124,7 +124,7 @@
     "description": "The label for category Infrastructure Setup in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Kubernetes Clusters in Rancher Setup": {
-    "message": "Rancher中的 Kubernetes 集群设置",
+    "message": "Rancher 设置中的 Kubernetes 集群",
     "description": "The label for category Kubernetes Clusters in Rancher Setup in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Checklist for Production-Ready Clusters": {
