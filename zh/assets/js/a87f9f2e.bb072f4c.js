@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[56471],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[89181],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 70112:
+/***/ 93142:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,37 +313,37 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration",
-    "id": "version-2.6/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration",
+    "id": "version-2.5/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration",
     "title": "GKE Cluster Configuration Reference",
-    "description": "Changes in Rancher v2.6",
-    "source": "@site/versioned_docs/version-2.6/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md",
+    "description": "Changes in v2.5.8",
+    "source": "@site/versioned_docs/version-2.5/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md",
     "sourceDirName": "reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration",
     "slug": "/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/",
-    "permalink": "/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/",
+    "permalink": "/zh/v2.5/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md",
     "tags": [],
-    "version": "2.6",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "Jan 29, 2024",
+    "version": "2.5",
+    "lastUpdatedAt": 1712005118,
+    "formattedLastUpdatedAt": "2024年4月1日",
     "frontMatter": {
         "title": "GKE Cluster Configuration Reference"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "AKS Cluster Configuration Reference",
-        "permalink": "/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration"
+        "title": "EKS Cluster Configuration Reference",
+        "permalink": "/zh/v2.5/reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration"
     },
     "next": {
         "title": "Private Clusters",
-        "permalink": "/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters"
+        "permalink": "/zh/v2.5/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Changes in Rancher v2.6',
-        id: 'changes-in-rancher-v26',
+        value: 'Changes in v2.5.8',
+        id: 'changes-in-v258',
         level: 2
     },
     {
@@ -389,11 +389,6 @@ const toc = [
     {
         value: 'Network Policy',
         id: 'network-policy',
-        level: 3
-    },
-    {
-        value: 'Project Network Isolation',
-        id: 'project-network-isolation',
         level: 3
     },
     {
@@ -532,11 +527,6 @@ const toc = [
         level: 3
     },
     {
-        value: 'Network Tags',
-        id: 'network-tags',
-        level: 3
-    },
-    {
         value: 'Group Details',
         id: 'group-details',
         level: 2
@@ -580,8 +570,199 @@ const toc = [
         value: 'Configuring the Refresh Interval',
         id: 'configuring-the-refresh-interval',
         level: 3
+    },
+    {
+        value: 'Labels &amp; Annotations',
+        id: 'labels--annotations',
+        level: 2
+    },
+    {
+        value: 'Kubernetes Options',
+        id: 'kubernetes-options',
+        level: 2
+    },
+    {
+        value: 'Location Type',
+        id: 'location-type',
+        level: 3
+    },
+    {
+        value: 'Zone',
+        id: 'zone',
+        level: 3
+    },
+    {
+        value: 'Additional Zones',
+        id: 'additional-zones',
+        level: 3
+    },
+    {
+        value: 'Kubernetes Version',
+        id: 'kubernetes-version-2',
+        level: 3
+    },
+    {
+        value: 'Container Address Range',
+        id: 'container-address-range-1',
+        level: 3
+    },
+    {
+        value: 'Alpha Features',
+        id: 'alpha-features',
+        level: 3
+    },
+    {
+        value: 'Legacy Authorization',
+        id: 'legacy-authorization',
+        level: 3
+    },
+    {
+        value: 'Stackdriver Logging',
+        id: 'stackdriver-logging',
+        level: 3
+    },
+    {
+        value: 'Stackdriver Monitoring',
+        id: 'stackdriver-monitoring',
+        level: 3
+    },
+    {
+        value: 'Kubernetes Dashboard',
+        id: 'kubernetes-dashboard',
+        level: 3
+    },
+    {
+        value: 'Http Load Balancing',
+        id: 'http-load-balancing',
+        level: 3
+    },
+    {
+        value: 'Horizontal Pod Autoscaling',
+        id: 'horizontal-pod-autoscaling-1',
+        level: 3
+    },
+    {
+        value: 'Maintenance Window',
+        id: 'maintenance-window-1',
+        level: 3
+    },
+    {
+        value: 'Network',
+        id: 'network-1',
+        level: 3
+    },
+    {
+        value: 'Node Subnet / Subnet',
+        id: 'node-subnet--subnet-1',
+        level: 3
+    },
+    {
+        value: 'Ip Aliases',
+        id: 'ip-aliases-1',
+        level: 3
+    },
+    {
+        value: 'Pod address range',
+        id: 'pod-address-range',
+        level: 3
+    },
+    {
+        value: 'Service address range',
+        id: 'service-address-range-1',
+        level: 3
+    },
+    {
+        value: 'Cluster Labels',
+        id: 'cluster-labels',
+        level: 3
+    },
+    {
+        value: 'Node Options',
+        id: 'node-options',
+        level: 2
+    },
+    {
+        value: 'Node Count',
+        id: 'node-count',
+        level: 3
+    },
+    {
+        value: 'Machine Type',
+        id: 'machine-type-1',
+        level: 3
+    },
+    {
+        value: 'Image Type',
+        id: 'image-type-1',
+        level: 3
+    },
+    {
+        value: 'Root Disk Type',
+        id: 'root-disk-type-1',
+        level: 3
+    },
+    {
+        value: 'Root Disk Size',
+        id: 'root-disk-size',
+        level: 3
+    },
+    {
+        value: 'Local SSD disks',
+        id: 'local-ssd-disks-1',
+        level: 3
+    },
+    {
+        value: 'Preemptible nodes (beta)',
+        id: 'preemptible-nodes-beta-1',
+        level: 3
+    },
+    {
+        value: 'Auto Upgrade',
+        id: 'auto-upgrade-1',
+        level: 3
+    },
+    {
+        value: 'Auto Repair',
+        id: 'auto-repair-1',
+        level: 3
+    },
+    {
+        value: 'Node Pool Autoscaling',
+        id: 'node-pool-autoscaling',
+        level: 3
+    },
+    {
+        value: 'Taints',
+        id: 'taints-1',
+        level: 3
+    },
+    {
+        value: 'Node Labels',
+        id: 'node-labels-1',
+        level: 3
+    },
+    {
+        value: 'Security Options',
+        id: 'security-options',
+        level: 2
+    },
+    {
+        value: 'Service Account',
+        id: 'service-account',
+        level: 3
+    },
+    {
+        value: 'Access Scopes',
+        id: 'access-scopes-1',
+        level: 3
     }
 ];
+const makeShortcode = (name)=>function MDXDefaultShortcode(props) {
+        console.warn("Component " + name + " was not imported, exported, or provided by MDXProvider as global scope");
+        return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("div", props);
+    };
+const Tabs = makeShortcode("Tabs");
+const TabItem = makeShortcode("TabItem");
 const layoutProps = {
     toc
 };
@@ -596,17 +777,46 @@ function MDXContent(_param) {
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
         href: "https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "changes-in-rancher-v26"
-    }, `Changes in Rancher v2.6`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(Tabs, {
+        mdxType: "Tabs"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(TabItem, {
+        value: "Rancher v2.5.8+",
+        mdxType: "TabItem"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "changes-in-v258"
+    }, `Changes in v2.5.8`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Support for additional configuration options:`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", {
+    }, `We now support private GKE clusters. Note: This advanced setup can require more steps during the cluster provisioning process. For details, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/zh/v2.5/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters"
+    }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://cloud.google.com/vpc/docs/shared-vpc"
+    }, `Shared VPCs`), ` are now supported.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `We now support more configuration options for Rancher managed GKE clusters:`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Project network isolation`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Project`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `Network tags`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }, `Network policy`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Network policy config`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Node pools and node configuration options:`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `More image types are available for the nodes`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `The maximum number of pods per node can be configured`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Node pools can be added while configuring the GKE cluster`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `When provisioning a GKE cluster, you can now use reusable cloud credentials instead of using a service account token directly to create the cluster.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "cluster-location"
     }, `Cluster Location`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
         parentName: "table"
@@ -733,10 +943,6 @@ function MDXContent(_param) {
         parentName: "p",
         "href": "https://cloud.google.com/kubernetes-engine/docs/how-to/network-policy"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "project-network-isolation"
-    }, `Project Network Isolation`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
-        parentName: "p"
-    }, `Mutable: yes`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `choose whether to enable or disable inter-project communication. Note that enabling Project Network Isolation will automatically enable Network Policy and Network Policy Config, but not vice versa.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "node-ipv4-cidr-block"
     }, `Node Ipv4 CIDR Block`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
         parentName: "p"
@@ -777,22 +983,18 @@ function MDXContent(_param) {
         "id": "private-cluster"
     }, `Private Cluster`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
         parentName: "p"
-    }, `Mutable: no`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "type": "caution"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, `Private clusters require additional planning and configuration outside of Rancher. Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Mutable: no`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, `Warning: private clusters require additional planning and configuration outside of Rancher. Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters"
+        "href": "/zh/v2.5/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters"
     }, `private cluster guide`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Assign nodes only internal IP addresses. Private cluster nodes cannot access the public internet unless additional networking steps are taken in GCP.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "enable-private-endpoint"
-    }, `Enable Private Endpoint`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "type": "caution"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, `Private clusters require additional planning and configuration outside of Rancher. Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Enable Private Endpoint`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, `Warning: private clusters require additional planning and configuration outside of Rancher. Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters"
+        "href": "/zh/v2.5/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters"
     }, `private cluster guide`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
         parentName: "p"
     }, `Mutable: no`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Locks down external access to the control plane endpoint. Only available if `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -874,21 +1076,17 @@ function MDXContent(_param) {
     }, `Mutable: yes`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The node operating system image. For more information for the node image options that GKE offers for each OS, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://cloud.google.com/kubernetes-engine/docs/concepts/node-images#available_node_images"
-    }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "type": "note"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, `The default option is "Container-Optimized OS with Docker". The read-only filesystem on GCP's Container-Optimized OS is not compatible with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, `Note: the default option is "Container-Optimized OS with Docker". The read-only filesystem on GCP's Container-Optimized OS is not compatible with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../../../../version-2.0-2.4/pages-for-subheaders/cluster-logging.md"
+        "href": "/zh/v2.0-v2.4/explanations/integrations-in-rancher/cluster-logging/"
     }, `legacy logging`), ` implementation in Rancher. If you need to use the legacy logging feature, select "Ubuntu with Docker" or "Ubuntu with Containerd". The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/integrations-in-rancher/logging/"
-    }, `current logging feature`), ` is compatible with the Container-Optimized OS image.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "type": "note"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, `If selecting "Windows Long Term Service Channel" or "Windows Semi-Annual Channel" for the node pool image type, you must also add at least one Container-Optimized OS or Ubuntu node pool.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "href": "/zh/v2.5/explanations/integrations-in-rancher/logging/"
+    }, `logging feature as of v2.5`), ` is compatible with the Container-Optimized OS image.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, `Note: if selecting "Windows Long Term Service Channel" or "Windows Semi-Annual Channel" for the node pool image type, you must also add at least one Container-Optimized OS or Ubuntu node pool.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "machine-type"
     }, `Machine Type`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
         parentName: "p"
@@ -927,14 +1125,7 @@ function MDXContent(_param) {
     }, `Mutable: no`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can apply labels to the node pool, which applies the labels to all nodes in the pool.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Invalid labels can prevent upgrades or can prevent Rancher from starting. For details on label syntax requirements, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set"
-    }, `Kubernetes documentation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "network-tags"
-    }, `Network Tags`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
-        parentName: "p"
-    }, `Mutable: no`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can add network tags to the node pool to make firewall rules and routes between subnets. Tags will apply to all nodes in the pool.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For details on tag syntax and requirements, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://cloud.google.com/vpc/docs/add-remove-network-tags"
-    }, `Kubernetes documentation`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+    }, `Kubernetes documentation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "group-details"
     }, `Group Details`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In this section, enter details describing the node pool.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "name"
@@ -1001,7 +1192,233 @@ function MDXContent(_param) {
         "id": "configuring-the-refresh-interval"
     }, `Configuring the Refresh Interval`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The refresh interval can be configured through the setting "gke-refresh", which is an integer representing seconds.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The default value is 300 seconds.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The syncing interval can be changed by running `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `kubectl edit setting gke-refresh`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The shorter the refresh window, the less likely any race conditions will occur, but it does increase the likelihood of encountering request limits that may be in place for GCP APIs.`));
+    }, `kubectl edit setting gke-refresh`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The shorter the refresh window, the less likely any race conditions will occur, but it does increase the likelihood of encountering request limits that may be in place for GCP APIs.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(TabItem, {
+        value: "Rancher before v2.5.8",
+        mdxType: "TabItem"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "labels--annotations"
+    }, `Labels & Annotations`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Add Kubernetes `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/"
+    }, `labels`), ` or `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/"
+    }, `annotations`), ` to the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Invalid labels can prevent upgrades or can prevent Rancher from starting. For details on label syntax requirements, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set"
+    }, `Kubernetes documentation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "kubernetes-options"
+    }, `Kubernetes Options`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "location-type"
+    }, `Location Type`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Zonal or Regional. With GKE, you can create a cluster tailored to the availability requirements of your workload and your budget. By default, a cluster's nodes run in a single compute zone. When multiple zones are selected, the cluster's nodes will span multiple compute zones, while the controlplane is located in a single zone. Regional clusters increase the availability of the controlplane as well. For help choosing the type of cluster availability, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/best-practices/scalability#choosing_a_regional_or_zonal_control_plane"
+    }, `these docs.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/concepts/types-of-clusters#regional_clusters"
+    }, `regional clusters,`), ` you can select a region. For more information about available regions and zones, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/compute/docs/regions-zones#available"
+    }, `this section`), `. The first part of each zone name is the name of the region.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The location type can't be changed after the cluster is created.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "zone"
+    }, `Zone`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Each region in Compute engine contains a number of zones.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information about available regions and zones, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/compute/docs/regions-zones#available"
+    }, `these docs.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "additional-zones"
+    }, `Additional Zones`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For zonal clusters, you can select additional zones to create a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/concepts/types-of-clusters#multi-zonal_clusters"
+    }, `multi-zone cluster.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "kubernetes-version-2"
+    }, `Kubernetes Version`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Link to list of GKE kubernetes versions`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "container-address-range-1"
+    }, `Container Address Range`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The IP address range for pods in the cluster. Must be a valid CIDR range, e.g. 10.42.0.0/16. If not specified, a random range is automatically chosen from 10.0.0.0/8 and will exclude ranges already allocated to VMs, other clusters, or routes. Automatically chosen ranges may conflict with reserved IP addresses, dynamic routes, or routes within VPCs peering with the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "alpha-features"
+    }, `Alpha Features`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Turns on all Kubernetes alpha API groups and features for the cluster. When enabled, the cluster cannot be upgraded and will be deleted automatically after 30 days. Alpha clusters are not recommended for production use as they are not covered by the GKE SLA. For more information, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/concepts/alpha-clusters"
+    }, `this page`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "legacy-authorization"
+    }, `Legacy Authorization`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This option is deprecated and it is recommended to leave it disabled. For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/how-to/hardening-your-cluster#leave_abac_disabled"
+    }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "stackdriver-logging"
+    }, `Stackdriver Logging`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Enable logging with Google Cloud's Operations Suite, formerly called Stackdriver. For details, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/logging/docs/basic-concepts"
+    }, `documentation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "stackdriver-monitoring"
+    }, `Stackdriver Monitoring`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Enable monitoring with Google Cloud's Operations Suite, formerly called Stackdriver. For details, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/monitoring/docs/monitoring-overview"
+    }, `documentation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "kubernetes-dashboard"
+    }, `Kubernetes Dashboard`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Enable the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards#kubernetes_dashboard"
+    }, `Kubernetes dashboard add-on.`), ` Starting with GKE v1.15, you will no longer be able to enable the Kubernetes Dashboard by using the add-on API.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "http-load-balancing"
+    }, `Http Load Balancing`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Set up `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/tutorials/http-balancer"
+    }, `HTTP(S) load balancing.`), ` To use Ingress, you must have the HTTP(S) Load Balancing add-on enabled.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "horizontal-pod-autoscaling-1"
+    }, `Horizontal Pod Autoscaling`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Horizontal Pod Autoscaler changes the shape of your Kubernetes workload by automatically increasing or decreasing the number of Pods in response to the workload's CPU or memory consumption, or in response to custom metrics reported from within Kubernetes or external metrics from sources outside of your cluster. For more information, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/concepts/horizontalpodautoscaler"
+    }, `documentation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "maintenance-window-1"
+    }, `Maintenance Window`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Set the start time for a 4 hour maintenance window. The time is specified in the UTC time zone using the HH:MM format. For more information, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions"
+    }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "network-1"
+    }, `Network`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Compute Engine Network that the cluster connects to. Routes and firewalls will be created using this network. If using `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/vpc/docs/shared-vpc"
+    }, `Shared VPCs`), `, the VPC networks that are shared to your project will appear here. will be available to select in this field. For more information, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/vpc/docs/vpc#vpc_networks_and_subnets"
+    }, `this page`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "node-subnet--subnet-1"
+    }, `Node Subnet / Subnet`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Compute Engine subnetwork that the cluster connects to. This subnetwork must belong to the network specified in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Network`), ` field. Select an existing subnetwork, or select "Auto Create Subnetwork" to have one automatically created. If not using an existing network, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Subnetwork Name`), ` is required to generate one. If using `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/vpc/docs/shared-vpc"
+    }, `Shared VPCs`), `, the VPC subnets that are shared to your project will appear here. If using a Shared VPC network, you cannot select "Auto Create Subnetwork". For more information, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/vpc/docs/vpc#vpc_networks_and_subnets"
+    }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "ip-aliases-1"
+    }, `Ip Aliases`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Enable `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/vpc/docs/alias-ip"
+    }, `alias IPs`), `. This enables VPC-native traffic routing. Required if using `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/vpc/docs/shared-vpc"
+    }, `Shared VPCs`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "pod-address-range"
+    }, `Pod address range`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you create a VPC-native cluster, you specify a subnet in a VPC network. The cluster uses three unique subnet IP address ranges for nodes, pods, and services. For more information on IP address ranges, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/concepts/alias-ips#cluster_sizing"
+    }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "service-address-range-1"
+    }, `Service address range`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you create a VPC-native cluster, you specify a subnet in a VPC network. The cluster uses three unique subnet IP address ranges for nodes, pods, and services. For more information on IP address ranges, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/concepts/alias-ips#cluster_sizing"
+    }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "cluster-labels"
+    }, `Cluster Labels`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `A `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/how-to/creating-managing-labels"
+    }, `cluster label`), ` is a key-value pair that helps you organize your Google Cloud clusters. You can attach a label to each resource, then filter the resources based on their labels. Information about labels is forwarded to the billing system, so you can break down your billing charges by label.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "node-options"
+    }, `Node Options`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "node-count"
+    }, `Node Count`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Integer for the starting number of nodes in the node pool.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "machine-type-1"
+    }, `Machine Type`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information on Google Cloud machine types, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/compute/docs/machine-types#machine_types"
+    }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "image-type-1"
+    }, `Image Type`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Ubuntu or Container-Optimized OS images are available.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information about GKE node image options, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/concepts/node-images#available_node_images"
+    }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "root-disk-type-1"
+    }, `Root Disk Type`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Standard persistent disks are backed by standard hard disk drives (HDD), while SSD persistent disks are backed by solid state drives (SSD). For more information, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/compute/docs/disks"
+    }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "root-disk-size"
+    }, `Root Disk Size`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The size in GB of the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/compute/docs/disks"
+    }, `root disk.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "local-ssd-disks-1"
+    }, `Local SSD disks`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Configure each node's local SSD disk storage in GB.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Local SSDs are physically attached to the server that hosts your VM instance. Local SSDs have higher throughput and lower latency than standard persistent disks or SSD persistent disks. The data that you store on a local SSD persists only until the instance is stopped or deleted. For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/compute/docs/disks#localssds"
+    }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "preemptible-nodes-beta-1"
+    }, `Preemptible nodes (beta)`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Preemptible nodes, also called preemptible VMs, are Compute Engine VM instances that last a maximum of 24 hours in general, and provide no availability guarantees. For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/how-to/preemptible-vms"
+    }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "auto-upgrade-1"
+    }, `Auto Upgrade`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, `Note: Enabling the Auto Upgrade feature for Nodes is not recommended.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When enabled, the auto-upgrade feature keeps the nodes in your cluster up-to-date with the cluster control plane (master) version when your control plane is `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/upgrades#automatic_cp_upgrades"
+    }, `updated on your behalf.`), ` For more information about auto-upgrading nodes, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-upgrades"
+    }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "auto-repair-1"
+    }, `Auto Repair`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `GKE's node auto-repair feature helps you keep the nodes in your cluster in a healthy, running state. When enabled, GKE makes periodic checks on the health state of each node in your cluster. If a node fails consecutive health checks over an extended time period, GKE initiates a repair process for that node. For more information, see the section on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-repair"
+    }, `auto-repairing nodes.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "node-pool-autoscaling"
+    }, `Node Pool Autoscaling`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Enable node pool autoscaling based on cluster load. For more information, see the documentation on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-autoscaler#adding_a_node_pool_with_autoscaling"
+    }, `adding a node pool with autoscaling.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "taints-1"
+    }, `Taints`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you apply a taint to a node, only Pods that tolerate the taint are allowed to run on the node. In a GKE cluster, you can apply a taint to a node pool, which applies the taint to all nodes in the pool.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "node-labels-1"
+    }, `Node Labels`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can apply labels to the node pool, which applies the labels to all nodes in the pool.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Invalid labels can prevent upgrades or can prevent Rancher from starting. For details on label syntax requirements, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set"
+    }, `Kubernetes documentation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "security-options"
+    }, `Security Options`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "service-account"
+    }, `Service Account`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Create a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://console.cloud.google.com/projectselector/iam-admin/serviceaccounts"
+    }, `Service Account`), ` with a JSON private key and provide the JSON here. See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances"
+    }, `Google Cloud docs`), ` for more info about creating a service account. These IAM roles are required: Compute Viewer (`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `roles/compute.viewer`), `), (Project) Viewer (`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `roles/viewer`), `), Kubernetes Engine Admin (`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `roles/container.admin`), `), Service Account User (`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `roles/iam.serviceAccountUser`), `). More info on roles can be found `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/kubernetes-engine/docs/how-to/iam-integration"
+    }, `here.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "access-scopes-1"
+    }, `Access Scopes`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Access scopes are the legacy method of specifying permissions for your nodes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Allow default access:`), ` The default access for new clusters is the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://cloud.google.com/compute/docs/access/service-accounts?hl=en_US#default_service_account"
+    }, `Compute Engine default service account.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Allow full access to all Cloud APIs:`), ` Generally, you can just set the cloud-platform access scope to allow full access to all Cloud APIs, then grant the service account only relevant IAM roles. The combination of access scopes granted to the virtual machine instance and the IAM roles granted to the service account determines the amount of access the service account has for that instance.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "li"
+    }, `Set access for each API:`), ` Alternatively, you can choose to set specific scopes that permit access to the particular API methods that the service will call.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances"
+    }, `section about enabling service accounts for a VM.`)))));
 }
 MDXContent.isMDXComponent = true;
 

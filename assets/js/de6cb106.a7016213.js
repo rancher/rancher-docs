@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/getting-started/installation-and-upgrade/resources/helm-version-requirements.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1685049914,
-    "formattedLastUpdatedAt": "May 25, 2023",
+    "lastUpdatedAt": 1712000929,
+    "formattedLastUpdatedAt": "Apr 1, 2024",
     "frontMatter": {
         "title": "Helm Version Requirements"
     },
@@ -362,7 +362,7 @@ function MDXContent(_param) {
         "href": "https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/"
     }, `Helm 2 to 3 Migration Docs.`), ` `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../../../version-2.0-2.4/pages-for-subheaders/helm2.md"
+        "href": "/v2.0-v2.4/getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/"
     }, `This section`), ` provides a copy of the older high-availability Rancher installation instructions that used Helm 2, and it is intended to be used if upgrading to Helm 3 is not feasible.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Helm v3.2.x or higher is required to install or upgrade Rancher v2.5.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {

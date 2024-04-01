@@ -319,24 +319,24 @@ const metadata = {
     "source": "@site/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md",
     "sourceDirName": "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades",
     "slug": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration",
-    "permalink": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration",
+    "permalink": "/v2.0-v2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration",
     "draft": false,
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md",
     "tags": [],
     "version": "2.0-2.4",
-    "lastUpdatedAt": 1705104464,
-    "formattedLastUpdatedAt": "2024年1月13日",
+    "lastUpdatedAt": 1712005118,
+    "formattedLastUpdatedAt": "Apr 1, 2024",
     "frontMatter": {
         "title": "Upgrading to v2.0.7+ — Namespace Migration"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Migrating from a Kubernetes Install with an RKE Add-on",
-        "permalink": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/migrating-from-rke-add-on"
+        "permalink": "/v2.0-v2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/migrating-from-rke-add-on"
     },
     "next": {
         "title": "Upgrading Rancher Installed on Kubernetes with Helm 2",
-        "permalink": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/helm2"
+        "permalink": "/v2.0-v2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/helm2"
     }
 };
 const assets = {};
@@ -421,7 +421,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `Note:`), ` If you are upgrading from from Rancher v2.0.13 or earlier, or v2.1.8 or earlier, and your cluster's certificates have expired, you will need to perform `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.0-v2.4/how-to-guides/advanced-user-guides/manage-clusters/rotate-certificates#rotating-expired-certificates-after-upgrading-older-rancher-versions"
+        "href": "/v2.0-v2.4/how-to-guides/advanced-user-guides/manage-clusters/rotate-certificates#rotating-expired-certificates-after-upgrading-older-rancher-versions"
     }, `additional steps`), ` to rotate the certificates.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "preventing-cluster-networking-issues"
     }, `Preventing Cluster Networking Issues`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can prevent cluster networking issues from occurring during your upgrade to v2.0.7+ by unassigning system namespaces from all of your Rancher projects. Complete this task if you've assigned any of a cluster's system namespaces into a Rancher project.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -496,7 +496,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `Result:`), ` All system namespaces are moved out of Rancher projects. You can now safely begin the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/"
+        "href": "/v2.0-v2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/"
     }, `upgrade`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "restoring-cluster-networking"
     }, `Restoring Cluster Networking`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Reset the cluster nodes' network policies to restore connectivity.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -711,14 +711,14 @@ done
         parentName: "li"
     }, `Using the cluster's `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../../../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md"
+        "href": "../../../../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#accessing-clusters-with-kubectl-shell-in-the-rancher-ui"
     }, `embedded kubectl shell`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
     }, `By `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../../../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md"
+        "href": "../../../../how-to-guides/advanced-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#accessing-clusters-with-kubectl-from-your-workstation"
     }, `downloading the cluster kubeconfig file and running it`), ` from your workstation.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
         parentName: "li"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {

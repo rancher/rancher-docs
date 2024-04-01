@@ -325,8 +325,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1710963514,
-    "formattedLastUpdatedAt": "Mar 20, 2024",
+    "lastUpdatedAt": 1712000929,
+    "formattedLastUpdatedAt": "Apr 1, 2024",
     "frontMatter": {
         "title": "Setting up the Amazon Cloud Provider",
         "weight": 1
@@ -794,7 +794,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `hostname-override`), ` for custom clusters. When you create a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../../../pages-for-subheaders/use-existing-nodes.md"
+        "href": "../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes"
     }, `custom cluster`), `, add `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "/v2.7/reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options"
