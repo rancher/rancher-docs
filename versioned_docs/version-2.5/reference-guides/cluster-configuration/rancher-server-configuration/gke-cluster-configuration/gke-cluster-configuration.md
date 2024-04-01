@@ -199,7 +199,7 @@ _Mutable: yes_
 
 The node operating system image. For more information for the node image options that GKE offers for each OS, refer to [this page.](https://cloud.google.com/kubernetes-engine/docs/concepts/node-images#available_node_images)
 
-> Note: the default option is "Container-Optimized OS with Docker". The read-only filesystem on GCP's Container-Optimized OS is not compatible with the [legacy logging](../../../../../version-2.0-2.4/explanations/integrations-in-rancher/cluster-logging/cluster-logging.md) implementation in Rancher. If you need to use the legacy logging feature, select "Ubuntu with Docker" or "Ubuntu with Containerd". The [logging feature as of v2.5](../../../../explanations/integrations-in-rancher/logging/logging.md) is compatible with the Container-Optimized OS image.
+> Note: the default option is "Container-Optimized OS with Docker". The read-only filesystem on GCP's Container-Optimized OS is not compatible with the [legacy logging](/versioned_docs/version-2.0-2.4/explanations/integrations-in-rancher/cluster-logging/cluster-logging.md) implementation in Rancher. If you need to use the legacy logging feature, select "Ubuntu with Docker" or "Ubuntu with Containerd". The [logging feature as of v2.5](../../../../explanations/integrations-in-rancher/logging/logging.md) is compatible with the Container-Optimized OS image.
 
 > Note: if selecting "Windows Long Term Service Channel" or "Windows Semi-Annual Channel" for the node pool image type, you must also add at least one Container-Optimized OS or Ubuntu node pool.
 
