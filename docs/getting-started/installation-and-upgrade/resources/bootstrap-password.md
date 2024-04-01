@@ -6,7 +6,13 @@ title: Setting up the Bootstrap Password
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/resources/bootstrap-password"/>
 </head>
 
-When you install Rancher, you can use a variable to set a bootstrap password for the first admin account. If you choose not to set a bootstrap password, Rancher randomly generates a bootstrap password for this account.
+:::tip
+
+If you choose not to set a bootstrap password, Rancher randomly generates a bootstrap password for the first admin account.
+
+:::
+
+When you install Rancher, you can use a variable to set a bootstrap password for the first admin account.
 
 For details on how to use a variable to set the bootstrap password, see below.
 
@@ -14,22 +20,50 @@ For details on how to use a variable to set the bootstrap password, see below.
 
 The bootstrap password must be at least 12 characters long.
 
-## Specifying the Bootstrap Password in Helm Installs
+## Specifying the Bootstrap Password 
 
-For a Helm install, users can specify the bootstrap password variable by configuring it in the Helm chart values with `.Values.bootstrapPassword`.
+To specify the bootstrap password during initial Rancher installation, run the following commands.
 
-The password will be stored in a Kubernetes secret. After Rancher is installed, the UI will show instructions for how to retrieve the password using kubectl:
+<Tabs>
+<TabItem value="Helm">
+Set the following value in the Rancher Helm chart:
 
+```yaml
+.Values.bootstrapPassword
 ```
+
+</TabItem>
+<TabItem value="Docker">
+Pass the following value to the Docker install command:
+
+```bash
+-e CATTLE_BOOTSTRAP_PASSWORD=$PASSWORD
+```
+
+`$PASSWORD` represents your chosen boostrap password.
+
+</TabItem>
+</Tabs>
+
+## Retrieving the Bootstrap Password
+
+The password is stored in the Docker container logs. After Rancher is installed, the UI shows instructions for how to retrieve the password based on your installation method. 
+
+<Tabs>
+<TabItem value="Helm">
+To retrieve the password, use kubectl:
+
+```bash
 kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{ .data.bootstrapPassword|base64decode}}{{ "\n" }}'
 ```
 
-## Specifying the Bootstrap Password in Docker Installs
+</TabItem>
+<TabItem value="Docker">
+To retrieve the password, use the Docker container ID:
 
-For a Docker install, you can specify the bootstrap password by passing `-e CATTLE_BOOTSTRAP_PASSWORD=password` to the Docker install command.
-
-The password will be stored in the Docker container logs. After Rancher is installed, the UI will show instructions for how to retrieve the password using the Docker container ID:
-
-```
+```bash
 docker logs  container-id  2>&1 | grep "Bootstrap Password:"
 ```
+
+</TabItem>
+</Tabs>
