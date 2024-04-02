@@ -6,11 +6,11 @@ title: Node Drivers
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers"/>
 </head>
 
-Node drivers are used to provision hosts, which Rancher uses to launch and manage Kubernetes clusters. A node driver is the same as a [Docker Machine driver](https://docs.docker.com/machine/drivers/). The availability of which node driver to display when creating node templates is defined based on the node driver's status. Only `active` node drivers will be displayed as an option for creating node templates. By default, Rancher is packaged with many existing Docker Machine drivers, but you can also create custom node drivers to add to Rancher.
+Node drivers are used to provision hosts, which Rancher uses to launch and manage Kubernetes clusters. A node driver is the same as a [Docker Machine driver](https://docs.docker.com/machine/drivers/). By default, Rancher is packaged with many existing Docker Machine drivers, but you can also create custom node drivers to add to Rancher.
 
-If there are specific node drivers that you don't want to show to your users, you would need to de-activate these node drivers.
+When you create node templates, only `Active` node drivers are displayed in the Rancher UI. If there are specific node drivers that you don't want to show your users, you must deactivate these node drivers.
 
-#### Managing Node Drivers
+## Managing Node Drivers
 
 :::note Prerequisites:
 
@@ -21,7 +21,7 @@ To create, edit, or delete drivers, you need _one_ of the following permissions:
 
 :::
 
-## Activating/Deactivating Node Drivers
+### Activating/Deactivating Node Drivers
 
 By default, Rancher only activates drivers for the most popular cloud providers, such as Amazon EC2, Azure, DigitalOcean, Linode and vSphere. If you want to show or hide any node driver, you can change its status.
 
@@ -31,11 +31,15 @@ By default, Rancher only activates drivers for the most popular cloud providers,
 
 2.	On the **Node Drivers** tab, select the driver that you wish to activate or deactivate and click **⋮ > Activate** or **⋮ > Deactivate**.
 
-### Consequences of Deactivating Node Drivers
+#### Consequences of Deactivating Node Drivers
 
-When you deactivate or delete a node driver, the nodes deployed with that driver become inaccessible. For example, if you have an active vSphere cluster, and you disable the vSphere node driver used to deploy the cluster's nodes, the initial node in the cluster will fail, and the entire cluster will become inaccessible. Attempts to delete the VMware nodes will fail, with nodes stuck in an extended `Removing` state.
+Deactivating a node driver doesn't just affect its visibility in the Rancher UI.
 
-## Adding Custom Node Drivers
+When you deactivate or delete a node driver, any nodes deployed with that driver become inaccessible. 
+
+For example, if you have an active vSphere cluster, and you deactivate the vSphere node driver to hide it in the UI, the initial node in your vSphere cluster will fail, and the entire cluster will become inaccessible. Attempts to delete the VvSphere nodes will fail, with nodes stuck in an extended `Removing` state.
+
+### Adding Custom Node Drivers
 
 If you want to use a node driver that Rancher doesn't support out-of-the-box, you can add that provider's driver in order to start using them to create node templates and eventually node pools for your Kubernetes cluster.
 
