@@ -3,7 +3,7 @@ title: Previous v3 Rancher API Guide
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/api/previous-rancher-api-versions"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/api/v3-rancher-api-guide"/>
 </head>
 
 ## How to Use the API
