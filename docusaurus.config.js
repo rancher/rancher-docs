@@ -1694,10 +1694,6 @@ module.exports = {
             from: '/v2.8/pages-for-subheaders/about-the-api'
           },
           {
-            to: '/v2.8/api/v3-rancher-api-guide',
-            from: '/v2.8/reference-guides/about-the-api'
-          },
-          {
             to: '/v2.8/how-to-guides/new-user-guides/manage-clusters/access-clusters',
             from: '/v2.8/pages-for-subheaders/access-clusters'
           },
@@ -3436,7 +3432,25 @@ module.exports = {
           {
             to: '/v2.7/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale',
             from: '/v2.7/reference-guides/best-practices/rancher-server/tips-for-scaling-rancher'
+          },
+          // Redirects for restructure from PR #1147 (start)
+          {
+            to: '/v2.8/api/v3-rancher-api-guide',
+            from: '/v2.8/reference-guides/about-the-api'
+          },
+          {
+            to: '/v2.8/api/api-tokens',
+            from: '/v2.8/reference-guides/about-the-api/api-tokens'
+          },
+          {
+            to: '/api/v3-rancher-api-guide',
+            from: '/reference-guides/about-the-api'
+          },
+          {
+            to: '/api/api-tokens',
+            from: '/reference-guides/about-the-api/api-tokens'
           }
+          // Redirects for restructure from PR #1147 (end)
         ],
       },
     ],
