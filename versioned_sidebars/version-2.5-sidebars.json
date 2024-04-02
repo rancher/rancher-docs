@@ -1199,7 +1199,7 @@
         "id": "faq"
       },
       "items": [
-        "faq/deprecated-features-in-v2.5",
+        "faq/deprecated-features",
         "faq/install-and-configure-kubectl",
         "faq/technical-items",
         "faq/security",

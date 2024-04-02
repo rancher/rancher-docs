@@ -1306,7 +1306,7 @@ const sidebars = {
       label: 'FAQ',
       items: [
         "faq/general-faq",
-        "faq/deprecated-features-in-v2.5",
+        "faq/deprecated-features",
         "faq/install-and-configure-kubectl",
         "faq/dockershim",
         "faq/technical-items",
