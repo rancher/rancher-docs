@@ -45,13 +45,13 @@ This setting is used by all kubeconfig tokens except those created by the CLI to
 
 ## Disable Tokens in Generated Kubeconfigs
 
-Set the `kubeconfig-generate-token` setting to `false`. This setting instructs Rancher to no longer automatically generate a token when a user clicks on download a kubeconfig file. When this setting is deactivated, a generated kubeconfig references the [Rancher CLI](../cli-with-rancher/kubectl-utility.md#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl) to retrieve a short-lived token for the cluster. When this kubeconfig is used in a client, such as `kubectl`, the Rancher CLI needs to be installed to complete the log in request.
+Set the `kubeconfig-generate-token` setting to `false`. This setting instructs Rancher to no longer automatically generate a token when a user clicks on download a kubeconfig file. When this setting is deactivated, a generated kubeconfig references the [Rancher CLI](../reference-guides/cli-with-rancher/kubectl-utility.md#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl) to retrieve a short-lived token for the cluster. When this kubeconfig is used in a client, such as `kubectl`, the Rancher CLI needs to be installed to complete the log in request.
 
 ## Token Hashing
 
 Users can enable token hashing, where tokens undergo a one-way hash using the SHA256 algorithm. This is a non-reversible process: once enabled, this feature cannot be disabled. It is advisable to take backups prior to enabling and/or evaluating in a test environment first.
 
-To enable token hashing, refer to [this section](../../how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features.md).
+To enable token hashing, refer to [this section](../how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features.md).
 
 This feature affects all tokens which include, but are not limited to, the following:
 
@@ -84,4 +84,4 @@ Maximum Time to Live (TTL) in minutes allowed for auth tokens. If a user attempt
 
 ### kubeconfig-generate-token
 
-When true, kubeconfigs requested through the UI contain a valid token. When false, kubeconfigs contain a command that uses the Rancher CLI to prompt the user to log in. [The CLI then retrieves and caches a token for the user](../cli-with-rancher/kubectl-utility.md#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl).
+When true, kubeconfigs requested through the UI contain a valid token. When false, kubeconfigs contain a command that uses the Rancher CLI to prompt the user to log in. [The CLI then retrieves and caches a token for the user](../reference-guides/cli-with-rancher/kubectl-utility.md#authentication-with-kubectl-and-kubeconfig-tokens-with-ttl).
