@@ -16,14 +16,19 @@ Rancher will publish deprecated features as part of the [release notes](https://
 
 | Patch Version |  Release Date |
 |---------------|---------------|
-| [2.6.0](https://github.com/rancher/rancher/releases/tag/v2.6.0) |  Aug 31, 2021  |
-| [2.6.1](https://github.com/rancher/rancher/releases/tag/v2.6.1) |  Oct 11, 2021  |
-| [2.6.2](https://github.com/rancher/rancher/releases/tag/v2.6.2) |  Oct 19, 2021  |
-| [2.6.3](https://github.com/rancher/rancher/releases/tag/v2.6.3) |  Dec 21, 2021  |
-| [2.6.4](https://github.com/rancher/rancher/releases/tag/v2.6.4) |  Mar 31, 2022  |
-| [2.6.5](https://github.com/rancher/rancher/releases/tag/v2.6.5) |  May 12, 2022  |
-| [2.6.6](https://github.com/rancher/rancher/releases/tag/v2.6.6) |  Jun 30, 2022  |
-
+| [2.7.12](https://github.com/rancher/rancher/releases/tag/v2.7.12) |  Mar 28, 2024  |
+| [2.7.11](https://github.com/rancher/rancher/releases/tag/v2.7.11) |  Mar 1, 2024  |
+| [2.7.10](https://github.com/rancher/rancher/releases/tag/v2.7.10) |  Feb 8, 2024  |
+| [2.7.9](https://github.com/rancher/rancher/releases/tag/v2.7.9) |  Oct 26, 2023  |
+| [2.7.8](https://github.com/rancher/rancher/releases/tag/v2.7.8) |  Oct 5, 2023  |
+| [2.7.7](https://github.com/rancher/rancher/releases/tag/v2.7.7) |  Sep 28, 2023  |
+| [2.7.6](https://github.com/rancher/rancher/releases/tag/v2.7.6) |  Aug 30, 2023  |
+| [2.7.5](https://github.com/rancher/rancher/releases/tag/v2.7.5) |  Jun 29, 2023  |
+| [2.7.4](https://github.com/rancher/rancher/releases/tag/v2.7.4) |  May 31, 2023  |
+| [2.7.3](https://github.com/rancher/rancher/releases/tag/v2.7.3) |  Apr 24, 2023  |
+| [2.7.2](https://github.com/rancher/rancher/releases/tag/v2.7.2) |  Apr 11, 2023  |
+| [2.7.1](https://github.com/rancher/rancher/releases/tag/v2.7.1) |  Jan 24, 2023  |
+| [2.7.0](https://github.com/rancher/rancher/releases/tag/v2.7.0) |  Nov 16, 2022  |
 
 ### What can I expect when a feature is marked for deprecation?
 
