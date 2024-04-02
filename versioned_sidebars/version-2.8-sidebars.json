@@ -1305,7 +1305,6 @@
       "label": "Rancher Kubernetes API",
       "items": [
         "api/quickstart",
-        "api/v3-rancher-api-guide",
         {
           "type": "category",
           "label": "Example Workflows",
@@ -1313,8 +1312,9 @@
             "api/workflows/projects"
           ]
         },
+        "api/api-reference",
         "api/api-tokens",
-        "api/api-reference"
+        "api/v3-rancher-api-guide"
       ]
     },
     "contribute-to-rancher"
