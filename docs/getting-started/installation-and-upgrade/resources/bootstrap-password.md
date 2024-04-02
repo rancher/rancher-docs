@@ -16,9 +16,11 @@ When you install Rancher, you can use a variable to set a bootstrap password for
 
 For details on how to use a variable to set the bootstrap password, see below.
 
-## Bootstrap Password Requirements
+## Password Requirements
 
-The bootstrap password must be at least 12 characters long.
+The bootstrap password can be any length.
+
+When you reset the first admin account's password after first login, the new password must be at least 12 characters long.
 
 ## Specifying the Bootstrap Password 
 
@@ -47,7 +49,7 @@ Pass the following value to the Docker install command:
 
 ## Retrieving the Bootstrap Password
 
-The password is stored in the Docker container logs. After Rancher is installed, the UI shows instructions for how to retrieve the password based on your installation method. 
+The bootstrap password is stored in the Docker container logs. After Rancher is installed, the UI shows instructions for how to retrieve the password based on your installation method. 
 
 <Tabs>
 <TabItem value="Helm">
