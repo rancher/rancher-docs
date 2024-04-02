@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1708460574,
-    "formattedLastUpdatedAt": "Feb 20, 2024",
+    "lastUpdatedAt": 1712067548,
+    "formattedLastUpdatedAt": "Apr 2, 2024",
     "frontMatter": {
         "title": "Installing the Adapter"
     },
@@ -510,6 +510,14 @@ In order to deploy and run the adapter successfully, you need to ensure its vers
         parentName: "tr",
         "align": null
     }, `v2.7.11`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": "center"
+    }, `v2.0.4`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `v2.7.12`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": "center"
     }, `v2.0.4`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
