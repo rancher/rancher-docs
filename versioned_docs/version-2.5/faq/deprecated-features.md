@@ -3,7 +3,7 @@ title: Deprecated Features in Rancher v2.5
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/faq/deprecated-features-in-v2.5"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/faq/deprecated-features"/>
 </head>
 
 ### What is Rancher's Deprecation policy?
