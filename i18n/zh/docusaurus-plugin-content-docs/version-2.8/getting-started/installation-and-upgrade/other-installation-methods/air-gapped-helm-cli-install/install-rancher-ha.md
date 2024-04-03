@@ -102,14 +102,14 @@ helm repo update
 从 [Helm Chart 仓库](https://artifacthub.io/packages/helm/cert-manager/cert-manager)中获取最新可用的 cert-manager Chart：
 
 ```plain
-helm fetch jetstack/cert-manager --version v1.11.0
+helm fetch jetstack/cert-manager
 ```
 
 ##### 3. 检索 Cert-Manager CRD
 
 为 cert-manager 下载所需的 CRD 文件：
 ```plain
-curl -L -o cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
+curl -L -o cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/releases/download/<VERSION>/cert-manager.crds.yaml
 ```
 
 ### 4. 安装 Rancher
@@ -146,7 +146,7 @@ curl -L -o cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/re
 3. 安装 cert-manager。
 
    ```plain
-   helm install cert-manager ./cert-manager-v1.11.0.tgz \
+   helm install cert-manager ./cert-manager-<VERSION>.tgz \
        --namespace cert-manager \
        --set image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-controller \
        --set webhook.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-webhook \
