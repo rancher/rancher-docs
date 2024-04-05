@@ -117,84 +117,74 @@ Rancher provides some extensions, such as Kubewarden and Elemental, through the 
   docker pull rancher/ui-plugin-catalog:1.0.0
   docker tag rancher/ui-plugin-catalog:1.0.0 $REGISTRY_ENDPOINT/rancher/ui-plugin-catalog:1.0.0
   docker push $REGISTRY_ENDPOINT/rancher/ui-plugin-catalog:1.0.0
-1. Use the mirrored image to create a Kubernetes [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/):
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: ui-plugin-catalog
-  namespace: cattle-ui-plugin-system
-  labels:
-    catalog.cattle.io/ui-extensions-catalog-image: ui-plugin-catalog
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
+2. Use the mirrored image to create a Kubernetes [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/):
+  ```yaml
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: ui-plugin-catalog
+    namespace: cattle-ui-plugin-system
+    labels:
       catalog.cattle.io/ui-extensions-catalog-image: ui-plugin-catalog
-  template:
-    metadata:
-      namespace: cattle-ui-plugin-system
-      labels:
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
         catalog.cattle.io/ui-extensions-catalog-image: ui-plugin-catalog
-    spec:
-      containers:
-      - name: server
-        image: my-private-registry.com/rancher/ui-plugin-catalog:1.0.0
-        imagePullPolicy: Always
-      imagePullSecrets:
-        - name: my-registry-credentials
-```
-1. Expose the deployment by creating a [ClusterIP service](https://kubernetes.io/docs/concepts/services-networking/service/#type-clusterip):
-```yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: ui-plugin-catalog-svc
-  namespace: cattle-ui-plugin-system
-spec:
-  ports:
-    - name: catalog-svc-port
-      port: 8080
-      protocol: TCP
-      targetPort: 8080
-  selector:
-    catalog.cattle.io/ui-extensions-catalog-image: ui-plugin-catalog
-  type: ClusterIP
-```
-1. Create a [ClusterRepo](../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md) that targets the ClusterIP service:
-```yaml
-apiVersion: catalog.cattle.io/v1
-kind: ClusterRepo
-metadata:
-  name: ui-plugin-catalog-repo
-spec:
-  url: http://ui-plugin-catalog-svc.cattle-ui-plugin-system:8080
-```
+    template:
+      metadata:
+        namespace: cattle-ui-plugin-system
+        labels:
+          catalog.cattle.io/ui-extensions-catalog-image: ui-plugin-catalog
+      spec:
+        containers:
+        - name: server
+          image: my-private-registry.com/rancher/ui-plugin-catalog:1.0.0
+          imagePullPolicy: Always
+        imagePullSecrets:
+          - name: my-registry-credentials
+  ```
+3. Expose the deployment by creating a [ClusterIP service](https://kubernetes.io/docs/concepts/services-networking/service/#type-clusterip):
+  ```yaml
+  apiVersion: v1
+  kind: Service
+  metadata:
+    name: ui-plugin-catalog-svc
+    namespace: cattle-ui-plugin-system
+  spec:
+    ports:
+      - name: catalog-svc-port
+        port: 8080
+        protocol: TCP
+        targetPort: 8080
+    selector:
+      catalog.cattle.io/ui-extensions-catalog-image: ui-plugin-catalog
+    type: ClusterIP
+  ```
+4. Create a [ClusterRepo](../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md) that targets the ClusterIP service:
+  ```yaml
+  apiVersion: catalog.cattle.io/v1
+  kind: ClusterRepo
+  metadata:
+    name: ui-plugin-catalog-repo
+  spec:
+    url: http://ui-plugin-catalog-svc.cattle-ui-plugin-system:8080
+  ```
 
 After you successfully set up these resources, you can install the extensions from the `ui-plugin-charts` manifest into your air-gapped environment.
 
 ### Importing and Installing Extensions in an Air-gapped Environment
 
 1. Find the address of the container image repository that you want to import as an extension. You should import and use the latest tagged version of the image to ensure you receive the latest features and security updates.
-
     * **(Optional)** If the container image is private: [Create](../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) a registry secret within the `cattle-ui-plugin-system` namespace. Enter the domain of the image address in the **Registry Domain Name** field.
-
 1. Click **☰**, then select **Extensions**, under **Configuration**.
-
 1. On the top right, click **⋮ > Manage Extension Catalogs**.
-
 1. Select the **Import Extension Catalog** button.
-
 1. Enter the image address in the **Catalog Image Reference** field. 
-
     * **(Optional)** If the container image is private, select the secret you just created from the **Pull Secrets** drop-down menu.
-
 1. Click **Load**. The extension will now be **Pending**.
-
 1. Return to the **Extensions** page.
-
 1. Select the **Available** tab, and click the **Reload** button to make sure that the list of extensions is up to date.
-
 1. Find the extension you just added, and click the **Install** button.
 
 ### Updating and Upgrading an Extensions Repository in an Air-gapped Environment
