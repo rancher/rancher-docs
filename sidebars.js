@@ -758,7 +758,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Istio Setup Guide',
+              label: 'Istio Setup Guides',
               link: {
                 type: 'doc',
                 id: "how-to-guides/advanced-user-guides/istio-setup-guide/istio-setup-guide",
