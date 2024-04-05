@@ -72,7 +72,7 @@ Since SAML does not support user lookup, SAML-based authentication providers do 
 
 ## Minimum Password Length
 
-By default, user passwords must be at least 12 characters long. However, you can customize the password length requirment:
+By default, user passwords must be at least 12 characters long. Starting in Rancher v2.6.9, you can customize the password length requirement:
 
 1. In the upper left corner, click **☰ > Global Settings**.
 1. Go to **`password-min-length`** and click **⋮ > Edit Setting**.
