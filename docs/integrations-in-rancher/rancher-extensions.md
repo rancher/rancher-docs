@@ -53,7 +53,60 @@ In v2.7.0, the built-in extensions aren't displayed under the **Available** tab.
 
     ![Reload button](/img/reload-button.png)
 
-### Accessing Rancher UI Extensions in Air-Gapped Environments
+## Updating and Upgrading Extensions
+
+1. Click **☰ > Extensions** under **Configuration**.
+1. Select the **Updates** tab. 
+1. Click **Update**.
+
+If there is a new version of the extension, there will also be an **Update** button visible on the associated card for the extension in the **Available** tab.
+
+## Deleting Helm Charts
+
+1. Click **☰**, then click on the name of your local cluster.
+1. From the sidebar, select **Apps > Installed Apps**.
+1. Find the name of the chart you want to delete and select the checkbox next to it. 
+1. Click **Delete**.
+
+## Deleting Extension Repositories
+
+1. Click **☰ > Extensions** under **Configuration**.
+1. On the top right, click **⋮ > Manage Repositories**.
+1. Find the name of the extension repository you want to delete. Select the checkbox next to the repository name, then click **Delete**.
+
+## Deleting Extension Repository Container Images
+
+1. Click **☰**, then select **Extensions**, under **Configuration**.
+1. On the top right, click **⋮ > Manage Extension Catalogs**.
+1. Find the name of the container image you want to delete. Click **⋮ > Uninstall**.
+
+## Uninstalling Extensions
+
+There are two ways to uninstall or disable an extension:
+
+1. Under the **Installed** tab, click the **Uninstall** button on the extension you wish to remove.
+
+    ![Uninstall extensions](/img/uninstall-extension.png)
+
+1. On the extensions management page, click **⋮ > Disable Extension Support**. This will disable all installed extensions.
+
+    ![Disable extensions](/img/disable-extension-support.png)
+
+:::caution
+
+You must reload the page after disabling extensions or display issues may occur.
+
+:::
+
+## Developing Extensions
+
+To learn how to develop your own extensions, refer to the official [Getting Started](https://rancher.github.io/dashboard/extensions/extensions-getting-started) guide.
+
+## Working with Extensions in an Air-gapped Environment
+
+If you intend to work with extensions in an air-gapped environment, you must perform some extra steps before you can complete certain tasks.
+
+### Accessing Rancher UI Extensions in an Air-Gapped Environment
 
 Rancher provides some extensions, such as Kubewarden and Elemental, through the `ui-plugin-catalog` container image at https://hub.docker.com/r/rancher/ui-plugin-catalog/tags. If you're trying to install these extensions in an air-gapped environment, you must make the `ui-plugin-catalog` accessible.
 
@@ -144,32 +197,6 @@ After you successfully set up these resources, you can install the extensions fr
 
 1. Find the extension you just added, and click the **Install** button.
 
-## Uninstalling Extensions
-
-There are two ways to uninstall or disable an extension:
-
-1. Under the **Installed** tab, click the **Uninstall** button on the extension you wish to remove.
-
-    ![Uninstall extensions](/img/uninstall-extension.png)
-
-1. On the extensions management page, click **⋮ > Disable Extension Support**. This will disable all installed extensions.
-
-    ![Disable extensions](/img/disable-extension-support.png)
-
-:::caution
-
-You must reload the page after disabling extensions or display issues may occur.
-
-:::
-
-## Updating and Upgrading Extensions
-
-1. Click **☰ > Extensions** under **Configuration**.
-1. Select the **Updates** tab. 
-1. Click **Update**.
-
-If there is a new version of the extension, there will also be an **Update** button visible on the associated card for the extension in the **Available** tab.
-
 ### Updating and Upgrading an Extensions Repository in an Air-gapped Environment
 
 Extensions repositories that aren't air-gapped are automatically updated. If the repository is air-gapped, you must update it manually.
@@ -186,26 +213,3 @@ After you mirror the latest changes, follow these steps:
 1. Click **⋮ > Edit config**.
 1. Update the **Container Image** field within the deployment's container with the latest image.
 1. Click **Save**.
-
-## Deleting Helm Charts
-
-1. Click **☰**, then click on the name of your local cluster.
-1. From the sidebar, select **Apps > Installed Apps**.
-1. Find the name of the chart you want to delete and select the checkbox next to it. 
-1. Click **Delete**.
-
-## Deleting Extension Repositories
-
-1. Click **☰ > Extensions** under **Configuration**.
-1. On the top right, click **⋮ > Manage Repositories**.
-1. Find the name of the extension repository you want to delete. Select the checkbox next to the repository name, then click **Delete**.
-
-## Deleting Extension Repository Container Images
-
-1. Click **☰**, then select **Extensions**, under **Configuration**.
-1. On the top right, click **⋮ > Manage Extension Catalogs**.
-1. Find the name of the container image you want to delete. Click **⋮ > Uninstall**.
-
-## Developing Extensions
-
-To learn how to develop your own extensions, refer to the official [Getting Started](https://rancher.github.io/dashboard/extensions/extensions-getting-started) guide.
