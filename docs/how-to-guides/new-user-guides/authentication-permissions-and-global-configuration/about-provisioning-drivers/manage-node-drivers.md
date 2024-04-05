@@ -26,10 +26,8 @@ To create, edit, or delete drivers, you need _one_ of the following permissions:
 By default, Rancher only activates drivers for the most popular cloud providers, such as Amazon EC2, Azure, DigitalOcean, Linode and vSphere. If you want to show or hide any node driver, you can change its status.
 
 1. In the upper left corner, click **☰ > Cluster Management**.
-
-2.  In the left navigation menu, click **Drivers**.
-
-2.	On the **Node Drivers** tab, select the driver that you wish to activate or deactivate and click **⋮ > Activate** or **⋮ > Deactivate**.
+1.  In the left navigation menu, click **Drivers**.
+1.	On the **Node Drivers** tab, select the driver that you wish to activate or deactivate and click **⋮ > Activate** or **⋮ > Deactivate**.
 
 #### Consequences of Deactivating Node Drivers
 
@@ -37,7 +35,13 @@ Deactivating a node driver doesn't just affect its visibility in the Rancher UI.
 
 When you deactivate or delete a node driver, any nodes deployed with that driver become inaccessible. 
 
-For example, if you have an active vSphere cluster, and you deactivate the vSphere node driver to hide it in the UI, the initial node in your vSphere cluster will fail, and the entire cluster will become inaccessible. Attempts to delete the VvSphere nodes will fail, with nodes stuck in an extended `Removing` state.
+For example, if you deactivate the vSphere node driver to hide it in the UI, and you have a vSphere cluster associated with Rancher, the initial node in your vSphere cluster will fail, and the entire cluster will become inaccessible. Attempts to delete the vSphere nodes will fail, with nodes stuck in an extended `Removing` state.
+
+Before you deactivate a node driver, make sure that it has no associated clusters. This can be determined by checking the providers listed for your clusters:
+
+1. In the upper left corner, click **☰ > Cluster Management**.
+1. Select **Clusters**.
+1. The **Provider** name is the fourth column of the table on the **Clusters** page. 
 
 ### Adding Custom Node Drivers
 
