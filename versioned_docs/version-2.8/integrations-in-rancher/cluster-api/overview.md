@@ -57,7 +57,7 @@ There are two ways to install Rancher Turtles with Helm, depending on whether yo
 - [Install Rancher Turtles with CAPI Operator as a dependency](#install-rancher-turtles-with-cluster-api-capi-operator-capi-as-a-helm-dependency).
 - [Install Rancher Turtles without CAPI Operator](#install-rancher-turtles-without-cluster-api-capi-operator-as-a-helm-dependency).
 
-The CAPI Operator is required for installing Rancher Turtles. You can choose whether you want to take care of this dependency yourself or let the Rancher Turtles Helm chart manage it for you. [Installing Turtles as a dependency](#install-rancher-turtles-with-cluster-api-operator-as-a-helm-dependency) is simpler, but your best option depends on your specific configuration.
+The CAPI Operator is required for installing Rancher Turtles. You can choose whether you want to take care of this dependency yourself or let the Rancher Turtles Helm chart manage it for you. [Installing Turtles as a dependency](#install-rancher-turtles-with-cluster-api-capi-operator-as-a-helm-dependency) is simpler, but your best option depends on your specific configuration.
 
 The CAPI Operator allows for handling the lifecycle of CAPI providers using a declarative approach, extending the capabilities of `clusterctl`. If you want to learn more about it, you can refer to [Cluster API Operator book](https://cluster-api-operator.sigs.k8s.io/).
 
