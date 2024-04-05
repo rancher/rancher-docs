@@ -22,12 +22,13 @@ The bootstrap password can be any length.
 
 When you reset the first admin account's password after first login, the new password must be at least 12 characters long.
 
-## Specifying the Bootstrap Password 
+## Specifying the Bootstrap Password
 
 To specify the bootstrap password during initial Rancher installation, run the following commands.
 
 <Tabs>
 <TabItem value="Helm">
+
 Set the following value in the Rancher Helm chart:
 
 ```yaml
@@ -36,6 +37,7 @@ Set the following value in the Rancher Helm chart:
 
 </TabItem>
 <TabItem value="Docker">
+
 Pass the following value to the Docker install command:
 
 ```bash
@@ -53,6 +55,7 @@ The bootstrap password is stored in the Docker container logs. After Rancher is 
 
 <Tabs>
 <TabItem value="Helm">
+
 To retrieve the password, use kubectl:
 
 ```bash
@@ -61,6 +64,7 @@ kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{
 
 </TabItem>
 <TabItem value="Docker">
+
 To retrieve the password, use the Docker container ID:
 
 ```bash
