@@ -61,7 +61,7 @@ In v2.7.0, the built-in extensions aren't displayed under the **Available** tab.
 
 If there is a new version of the extension, there will also be an **Update** button visible on the associated card for the extension in the **Available** tab.
 
-## Deleting Helm Charts
+## Deleting Extensions
 
 1. Click **☰**, then click on the name of your local cluster.
 1. From the sidebar, select **Apps > Installed Apps**.
@@ -108,15 +108,15 @@ If you intend to work with extensions in an air-gapped environment, you must per
 
 ### Accessing Rancher UI Extensions in an Air-Gapped Environment
 
-Rancher provides some extensions, such as Kubewarden and Elemental, through the `ui-plugin-catalog` container image at https://hub.docker.com/r/rancher/ui-plugin-catalog/tags. If you're trying to install these extensions in an air-gapped environment, you must make the `ui-plugin-catalog` accessible.
+Rancher provides some extensions, such as Kubewarden and Elemental, through the `ui-plugin-catalog` container image at https://hub.docker.com/r/rancher/ui-plugin-catalog/tags. If you're trying to install these extensions in an air-gapped environment, you must make the `ui-plugin-catalog` image accessible.
 
 1. Mirror the `ui-plugin-catalog` image to a private registry:
 
   ```bash
-  export REGISTRY_ENDPOINT="my-private-registry.com"
-  docker pull rancher/ui-plugin-catalog:1.0.0
-  docker tag rancher/ui-plugin-catalog:1.0.0 $REGISTRY_ENDPOINT/rancher/ui-plugin-catalog:1.0.0
-  docker push $REGISTRY_ENDPOINT/rancher/ui-plugin-catalog:1.0.0
+  export REGISTRY_ENDPOINT=<my-private-registry-endpoint> # e.g. "my-private-registry.com"
+  docker pull rancher/ui-plugin-catalog:<tag>
+  docker tag rancher/ui-plugin-catalog:<tag> $REGISTRY_ENDPOINT/rancher/ui-plugin-catalog:<tag>
+  docker push $REGISTRY_ENDPOINT/rancher/ui-plugin-catalog:<tag>
 2. Use the mirrored image to create a Kubernetes [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/):
   ```yaml
   apiVersion: apps/v1
@@ -139,10 +139,10 @@ Rancher provides some extensions, such as Kubewarden and Elemental, through the 
       spec:
         containers:
         - name: server
-          image: my-private-registry.com/rancher/ui-plugin-catalog:1.0.0
+          image: <my-private-registry-endpoint>/rancher/ui-plugin-catalog:<tag>
           imagePullPolicy: Always
         imagePullSecrets:
-          - name: my-registry-credentials
+          - name: <my-registry-credentials>
   ```
 3. Expose the deployment by creating a [ClusterIP service](https://kubernetes.io/docs/concepts/services-networking/service/#type-clusterip):
   ```yaml
@@ -176,7 +176,7 @@ After you successfully set up these resources, you can install the extensions fr
 ### Importing and Installing Extensions in an Air-gapped Environment
 
 1. Find the address of the container image repository that you want to import as an extension. You should import and use the latest tagged version of the image to ensure you receive the latest features and security updates.
-    * **(Optional)** If the container image is private: [Create](../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) a registry secret within the `cattle-ui-plugin-system` namespace. Enter the domain of the image address in the **Registry Domain Name** field.
+    - **(Optional)** If the container image is private: [Create](../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) a registry secret within the `cattle-ui-plugin-system` namespace. Enter the domain of the image address in the **Registry Domain Name** field.
 1. Click **☰**, then select **Extensions**, under **Configuration**.
 1. On the top right, click **⋮ > Manage Extension Catalogs**.
 1. Select the **Import Extension Catalog** button.
@@ -184,8 +184,8 @@ After you successfully set up these resources, you can install the extensions fr
     * **(Optional)** If the container image is private, select the secret you just created from the **Pull Secrets** drop-down menu.
 1. Click **Load**. The extension will now be **Pending**.
 1. Return to the **Extensions** page.
-1. Select the **Available** tab, and click the **Reload** button to make sure that the list of extensions is up to date.
-1. Find the extension you just added, and click the **Install** button.
+1. Select the **Available** tab, and click **Reload** to make sure that the list of extensions is up to date.
+1. Find the extension you just added, and click **Install**.
 
 ### Updating and Upgrading an Extensions Repository in an Air-gapped Environment
 
