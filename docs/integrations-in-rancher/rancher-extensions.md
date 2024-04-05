@@ -78,7 +78,7 @@ If there is a new version of the extension, there will also be an **Update** but
 
 1. Click **☰**, then select **Extensions**, under **Configuration**.
 1. On the top right, click **⋮ > Manage Extension Catalogs**.
-1. Find the name of the container image you want to delete. Click **⋮ > Uninstall**.
+1. Find the name of the container image you want to delete, then click **⋮ > Uninstall**.
 
 ## Uninstalling Extensions
 
@@ -111,12 +111,12 @@ If you intend to work with extensions in an air-gapped environment, you must per
 Rancher provides some extensions, such as Kubewarden and Elemental, through the `ui-plugin-catalog` container image at https://hub.docker.com/r/rancher/ui-plugin-catalog/tags. If you're trying to install these extensions in an air-gapped environment, you must make the `ui-plugin-catalog` accessible.
 
 1. Mirror the `ui-plugin-catalog` image to a private registry:
-```bash
-export REGISTRY_ENDPOINT="my-private-registry.com"
-docker pull rancher/ui-plugin-catalog:1.0.0
-docker tag rancher/ui-plugin-catalog:1.0.0 $REGISTRY_ENDPOINT/rancher/ui-plugin-catalog:1.0.0
-docker push $REGISTRY_ENDPOINT/rancher/ui-plugin-catalog:1.0.0
-```
+
+  ```bash
+  export REGISTRY_ENDPOINT="my-private-registry.com"
+  docker pull rancher/ui-plugin-catalog:1.0.0
+  docker tag rancher/ui-plugin-catalog:1.0.0 $REGISTRY_ENDPOINT/rancher/ui-plugin-catalog:1.0.0
+  docker push $REGISTRY_ENDPOINT/rancher/ui-plugin-catalog:1.0.0
 1. Use the mirrored image to create a Kubernetes [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/):
 ```yaml
 apiVersion: apps/v1
@@ -187,7 +187,7 @@ After you successfully set up these resources, you can install the extensions fr
 
 1. Enter the image address in the **Catalog Image Reference** field. 
 
-    * **(Optional)** If the container image is private: Select the secret you just created from the **Pull Secrets** drop-down menu.
+    * **(Optional)** If the container image is private, select the secret you just created from the **Pull Secrets** drop-down menu.
 
 1. Click **Load**. The extension will now be **Pending**.
 
