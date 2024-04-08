@@ -31,14 +31,6 @@ If you already have the Cluster API (CAPI) Operator installed in your cluster, y
 
 :::
 
-:::info prerequisite
-Before installing Rancher Turtles in your Rancher environment, you must disable Rancher's `embedded-cluster-api` functionality. This also includes cleaning up Rancher-specific webhooks that otherwise would conflict with CAPI ones.
-
-To simplify setting up Rancher for installing Rancher Turtles, the official Rancher Turtles Helm chart includes a `pre-install` hook that removes the following:
-- Disables the `embedded-cluster-api` feature in Rancher.
-- Deletes the `mutating-webhook-configuration` and `validating-webhook-configuration` webhooks, as they are no longer needed.
-:::
-
 ### Installing via the Rancher UI
 
 By adding the Turtles repository via the Rancher UI, Rancher can process the installation and configuration of the CAPI Extension.
@@ -62,6 +54,12 @@ The installation may take a few minutes and after completing you can see the fol
 - `rancher-turtles-system/rancher-turtles-controller-manager`
 - `rancher-turtles-system/rancher-turtles-cluster-api-operator`
 - `capi-system/capi-controller-manager`
+
+#### Demo
+
+This demo illustrates how to use the Rancher UI to install Rancher Turtles, create/import a CAPI cluster, and install monitoring on the cluster:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lGsr7KfBjgU?si=ORkzuAJjcdXUXMxh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Installing via Helm
 
@@ -214,10 +212,6 @@ spec:
 ```bash
 kubectl apply -f feature.yaml
 ```
-
-## Demo
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lGsr7KfBjgU?si=ORkzuAJjcdXUXMxh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Security
 
