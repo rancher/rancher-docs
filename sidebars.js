@@ -735,7 +735,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Monitoring V2 Configuration Guides',
+              label: 'Monitoring Configuration Guides',
               link: {
                 type: 'doc',
                 id: "how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/monitoring-v2-configuration-guides",
@@ -984,7 +984,7 @@ const sidebars = {
         "reference-guides/kubernetes-concepts",
         {
           type: 'category',
-          label: 'Monitoring V2 Configuration',
+          label: 'Monitoring Configuration Reference',
           link: {
             type: 'doc',
             id: "reference-guides/monitoring-v2-configuration/monitoring-v2-configuration",

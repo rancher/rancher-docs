@@ -1,5 +1,5 @@
 ---
-title: Monitoring V2 Configuration Guides
+title: Monitoring Configuration Guides
 ---
 
 <head>
