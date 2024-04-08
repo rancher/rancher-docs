@@ -53,29 +53,32 @@ In v2.7.0, the built-in extensions aren't displayed under the **Available** tab.
 
     ![Reload button](/img/reload-button.png)
 
-### Importing and Installing Extensions in an Air-Gapped Environment
+## Updating and Upgrading Extensions
 
-1. Find the address of the container image repository  that you want to import as an extension. Rancher provides some extensions, such as Kubewarden and Elemental, through the `ui-plugin-catalog` container image at https://hub.docker.com/r/rancher/ui-plugin-catalog/tags. You should import and use the latest tagged version of the image to ensure you receive the latest features and security updates.
+1. Click **☰ > Extensions** under **Configuration**.
+1. Select the **Updates** tab. 
+1. Click **Update**.
 
-    * **(Optional)** If the container image is private: [Create](../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) a registry secret within the `cattle-ui-plugin-system` namespace. Enter the domain of the image address in the **Registry Domain Name** field.
+If there is a new version of the extension, there will also be an **Update** button visible on the associated card for the extension in the **Available** tab.
+
+## Deleting Extensions
+
+1. Click **☰**, then click on the name of your local cluster.
+1. From the sidebar, select **Apps > Installed Apps**.
+1. Find the name of the chart you want to delete and select the checkbox next to it. 
+1. Click **Delete**.
+
+## Deleting Extension Repositories
+
+1. Click **☰ > Extensions** under **Configuration**.
+1. On the top right, click **⋮ > Manage Repositories**.
+1. Find the name of the extension repository you want to delete. Select the checkbox next to the repository name, then click **Delete**.
+
+## Deleting Extension Repository Container Images
 
 1. Click **☰**, then select **Extensions**, under **Configuration**.
-
 1. On the top right, click **⋮ > Manage Extension Catalogs**.
-
-1. Select the **Import Extension Catalog** button.
-
-1. Enter the image address in the **Catalog Image Reference** field. 
-
-    * **(Optional)** If the container image is private: Select the secret you just created from the **Pull Secrets** drop-down menu.
-
-1. Click **Load**. The extension will now be **Pending**.
-
-1. Return to the **Extensions** page.
-
-1. Select the **Available** tab, and click the **Reload** button to make sure that the list of extensions is up to date.
-
-1. Find the extension you just added, and click the **Install** button.
+1. Find the name of the container image you want to delete, then click **⋮ > Uninstall**.
 
 ## Uninstalling Extensions
 
@@ -95,13 +98,94 @@ You must reload the page after disabling extensions or display issues may occur.
 
 :::
 
-## Updating and Upgrading Extensions
+## Developing Extensions
 
-1. Click **☰ > Extensions** under **Configuration**.
-1. Select the **Updates** tab. 
-1. Click **Update**.
+To learn how to develop your own extensions, refer to the official [Getting Started](https://rancher.github.io/dashboard/extensions/extensions-getting-started) guide.
 
-If there is a new version of the extension, there will also be an **Update** button visible on the associated card for the extension in the **Available** tab.
+## Working with Extensions in an Air-gapped Environment
+
+If you intend to work with extensions in an air-gapped environment, you must perform some extra steps before you can complete certain tasks.
+
+### Accessing Rancher UI Extensions in an Air-Gapped Environment
+
+Rancher provides some extensions, such as Kubewarden and Elemental, through the `ui-plugin-catalog` container image at https://hub.docker.com/r/rancher/ui-plugin-catalog/tags. If you're trying to install these extensions in an air-gapped environment, you must make the `ui-plugin-catalog` image accessible.
+
+1. Mirror the `ui-plugin-catalog` image to a private registry:
+
+  ```bash
+  export REGISTRY_ENDPOINT=<my-private-registry-endpoint> # e.g. "my-private-registry.com"
+  docker pull rancher/ui-plugin-catalog:<tag>
+  docker tag rancher/ui-plugin-catalog:<tag> $REGISTRY_ENDPOINT/rancher/ui-plugin-catalog:<tag>
+  docker push $REGISTRY_ENDPOINT/rancher/ui-plugin-catalog:<tag>
+2. Use the mirrored image to create a Kubernetes [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/):
+  ```yaml
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: ui-plugin-catalog
+    namespace: cattle-ui-plugin-system
+    labels:
+      catalog.cattle.io/ui-extensions-catalog-image: ui-plugin-catalog
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        catalog.cattle.io/ui-extensions-catalog-image: ui-plugin-catalog
+    template:
+      metadata:
+        namespace: cattle-ui-plugin-system
+        labels:
+          catalog.cattle.io/ui-extensions-catalog-image: ui-plugin-catalog
+      spec:
+        containers:
+        - name: server
+          image: <my-private-registry-endpoint>/rancher/ui-plugin-catalog:<tag>
+          imagePullPolicy: Always
+        imagePullSecrets:
+          - name: <my-registry-credentials>
+  ```
+3. Expose the deployment by creating a [ClusterIP service](https://kubernetes.io/docs/concepts/services-networking/service/#type-clusterip):
+  ```yaml
+  apiVersion: v1
+  kind: Service
+  metadata:
+    name: ui-plugin-catalog-svc
+    namespace: cattle-ui-plugin-system
+  spec:
+    ports:
+      - name: catalog-svc-port
+        port: 8080
+        protocol: TCP
+        targetPort: 8080
+    selector:
+      catalog.cattle.io/ui-extensions-catalog-image: ui-plugin-catalog
+    type: ClusterIP
+  ```
+4. Create a [ClusterRepo](../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md) that targets the ClusterIP service:
+  ```yaml
+  apiVersion: catalog.cattle.io/v1
+  kind: ClusterRepo
+  metadata:
+    name: ui-plugin-catalog-repo
+  spec:
+    url: http://ui-plugin-catalog-svc.cattle-ui-plugin-system:8080
+  ```
+
+After you successfully set up these resources, you can install the extensions from the `ui-plugin-charts` manifest into your air-gapped environment.
+
+### Importing and Installing Extensions in an Air-gapped Environment
+
+1. Find the address of the container image repository that you want to import as an extension. You should import and use the latest tagged version of the image to ensure you receive the latest features and security updates.
+    - **(Optional)** If the container image is private: [Create](../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) a registry secret within the `cattle-ui-plugin-system` namespace. Enter the domain of the image address in the **Registry Domain Name** field.
+1. Click **☰**, then select **Extensions**, under **Configuration**.
+1. On the top right, click **⋮ > Manage Extension Catalogs**.
+1. Select the **Import Extension Catalog** button.
+1. Enter the image address in the **Catalog Image Reference** field. 
+    * **(Optional)** If the container image is private, select the secret you just created from the **Pull Secrets** drop-down menu.
+1. Click **Load**. The extension will now be **Pending**.
+1. Return to the **Extensions** page.
+1. Select the **Available** tab, and click **Reload** to make sure that the list of extensions is up to date.
+1. Find the extension you just added, and click **Install**.
 
 ### Updating and Upgrading an Extensions Repository in an Air-gapped Environment
 
@@ -119,26 +203,3 @@ After you mirror the latest changes, follow these steps:
 1. Click **⋮ > Edit config**.
 1. Update the **Container Image** field within the deployment's container with the latest image.
 1. Click **Save**.
-
-## Deleting Helm Charts
-
-1. Click **☰**, then click on the name of your local cluster.
-1. From the sidebar, select **Apps > Installed Apps**.
-1. Find the name of the chart you want to delete and select the checkbox next to it. 
-1. Click **Delete**.
-
-## Deleting Extension Repositories
-
-1. Click **☰ > Extensions** under **Configuration**.
-1. On the top right, click **⋮ > Manage Repositories**.
-1. Find the name of the extension repository you want to delete. Select the checkbox next to the repository name, then click **Delete**.
-
-## Deleting Extension Repository Container Images
-
-1. Click **☰**, then select **Extensions**, under **Configuration**.
-1. On the top right, click **⋮ > Manage Extension Catalogs**.
-1. Find the name of the container image you want to delete. Click **⋮ > Uninstall**.
-
-## Developing Extensions
-
-To learn how to develop your own extensions, refer to the official [Getting Started](https://rancher.github.io/dashboard/extensions/extensions-getting-started) guide.
