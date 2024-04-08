@@ -8,7 +8,7 @@ title: Overview
 
 ## Architecture Diagram
 
-Below is a visual representation of the key components of Rancher Turtles and their relationship to Rancher Manager and the Rancher Cluster Agent. Understanding these components is essential for gaining insights into how Rancher leverages the CAPI operator for cluster management.
+Below is a visual representation of the key components of Rancher Turtles and their relationship to Rancher and the Rancher Cluster Agent. Understanding these components is essential for gaining insights into how Rancher leverages the CAPI operator for cluster management.
 
 ![overview](/img/30000ft_view.png)
 
@@ -125,7 +125,9 @@ stringData:
 ```
 
 :::info
+
 For detailed information on the values supported by the chart and their usage, refer to [Helm chart options](https://turtles.docs.rancher.com/docs/reference-guides/rancher-turtles-chart/values)
+
 :::
 
 #### Install Rancher Turtles without `Cluster API (CAPI) Operator` as a Helm dependency
@@ -162,7 +164,7 @@ The previous commands tell Helm to ignore installing `cluster-api-operator` as a
 :::caution
 When installing Rancher Turtles in your Rancher environment, by default, Rancher Turtles enables the CAPI Operator cleanup. This includes cleaning up CAPI Operator specific webhooks and deployments that otherwise cause issues with Rancher provisioning.
 
-To simplify uninstalling Rancher Turtles (via Rancher Manager or Helm command), the official Rancher Turtles Helm chart includes a `post-delete` hook that that removes the following:
+To simplify uninstalling Rancher Turtles (via Rancher or Helm command), the official Rancher Turtles Helm chart includes a `post-delete` hook that that removes the following:
 - Deletes the `mutating-webhook-configuration` and `validating-webhook-configuration` webhooks that are no longer needed.
 - Deletes the CAPI `deployments` that are no longer needed.
 :::
@@ -176,10 +178,12 @@ helm uninstall -n rancher-turtles-system rancher-turtles --cascade foreground --
 This may take a few minutes to complete.
 
 :::note
+
 Remember that, if you use a different name for the installation or a different namespace, you may need to customize the command for your specific configuration.
+
 :::
 
-Once Rancher Turtles is uninstalled, Rancher's `embedded-cluster-api` feature must be re-enabled:
+After Rancher Turtles is uninstalled, Rancher's `embedded-cluster-api` feature must be re-enabled:
 
 1. Create a `feature.yaml` file, with `embedded-cluster-api` set to true:
 ```yaml title="feature.yaml"
@@ -194,6 +198,10 @@ spec:
 ```bash
 kubectl apply -f feature.yaml
 ```
+
+## Demo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lGsr7KfBjgU?si=ORkzuAJjcdXUXMxh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Security
 
