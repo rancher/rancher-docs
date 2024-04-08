@@ -12,9 +12,14 @@ Below is a visual representation of the key components of Rancher Turtles and th
 
 ![overview](/img/30000ft_view.png)
 
-## Demo
+## Prerequisites
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lGsr7KfBjgU?si=ORkzuAJjcdXUXMxh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+Before installing Rancher Turtles in your Rancher environment, you must disable Rancher's `embedded-cluster-api` functionality. This also includes cleaning up Rancher-specific webhooks that otherwise would conflict with CAPI ones.
+
+To simplify setting up Rancher for installing Rancher Turtles, the official Rancher Turtles Helm chart includes a `pre-install` hook that removes the following:
+
+- Disables the `embedded-cluster-api` feature in Rancher.
+- Deletes the `mutating-webhook-configuration` and `validating-webhook-configuration` webhooks, as they are no longer needed.
 
 ## Installing the Rancher Turtles Operator
 
