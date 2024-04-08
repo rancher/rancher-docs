@@ -18,6 +18,10 @@ The bootstrap password can be any length.
 
 When you reset the first admin account's password after first login, the new password must be at least 12 characters long.
 
+You can [customize the minimum password length](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/manage-users-and-groups.md#minimum-password-length) for user accounts, within limitations.
+
+Minimum password length can be any positive integer value between 2 and 256. Decimal values and leading zeroes are not allowed.
+
 ## Specifying the Bootstrap Password
 
 <Tabs>
