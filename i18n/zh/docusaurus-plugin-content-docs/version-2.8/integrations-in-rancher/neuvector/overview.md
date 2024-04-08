@@ -143,7 +143,7 @@ kubectl patch cronjob neuvector-updater-pod -n cattle-neuvector-system --patch '
 
 你需要为强化集群环境进行额外的配置。
 
-> **注意：**你必须更新 RKE2 和 K3s 强化集群中的配置，如下所示。
+> **注意：** 你必须更新 RKE2 和 K3s 强化集群中的配置，如下所示。
 
 1. 单击 **☰ > 集群管理**。
 1. 选择你创建的集群，并点击 **Explore**。

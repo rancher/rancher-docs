@@ -29,7 +29,6 @@ Fleet 预安装在 Rancher 中，并由 Rancher UI 中的**持续交付**选项�
    - 默认情况下，选择 **fleet-default**，包括通过 Rancher 注册的所有下游集群。
 
    - 你可以切换到 **fleet-local**，它仅包含 **local** 集群，或者你可以创建自己的工作空间，将集群分配和移动到其中。
-
    - 然后，你可以通过单击左侧导航栏上的**集群**来管理集群。
 
 1. 单击左侧导航栏上的 **Gitrepos**，将 gitrepo 部署到当前工作空间的集群中。
@@ -48,7 +47,7 @@ Fleet Helm charts 可在[此处](https://github.com/rancher/fleet/releases)获�
 
 ## 在代理后使用 Fleet
 
-有关在代理后面使用 Fleet 的详细信息，请参阅[在代理后使用 Fleet](./use-fleet-behind-a-proxy) 页面。
+有关在代理后面使用 Fleet 的详细信息，请参阅[在代理后使用 Fleet](./use-fleet-behind-a-proxy)页面。
 
 ## Helm Chart 依赖
 
