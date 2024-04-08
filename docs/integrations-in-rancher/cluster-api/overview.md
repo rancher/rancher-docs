@@ -6,6 +6,12 @@ title: Overview
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cluster-api/overview"/>
 </head>
 
+## Architecture Diagram
+
+Below is a visual representation of the key components of Rancher Turtles and their relationship to Rancher Manager and the Rancher Cluster Agent. Understanding these components is essential for gaining insights into how Rancher leverages the CAPI operator for cluster management.
+
+![overview](/img/30000ft_view.png)
+
 ## Demo
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lGsr7KfBjgU?si=ORkzuAJjcdXUXMxh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -15,7 +21,9 @@ title: Overview
 You can install the Rancher Turtles operator via the Rancher UI, or with Helm. The first method is recommended for most environments.
 
 :::caution
+
 If you already have the Cluster API (CAPI) Operator installed in your cluster, you must use the [manual Helm installation method](./overview.md#via-helm-install).
+
 :::
 
 :::info prerequisite
@@ -186,12 +194,6 @@ spec:
 ```bash
 kubectl apply -f feature.yaml
 ```
-
-## Architecture Diagram
-
-Below is a visual representation of the key components of Rancher Turtles and their relationship to Rancher Manager and the Rancher Cluster Agent. Understanding these components is essential for gaining insights into how Rancher leverages the CAPI operator for cluster management.
-
-![overview](/img/30000ft_view.png)
 
 ## Security
 
