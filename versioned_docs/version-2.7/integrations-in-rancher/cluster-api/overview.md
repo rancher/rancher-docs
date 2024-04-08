@@ -27,7 +27,7 @@ You can install the Rancher Turtles operator via the Rancher UI, or with Helm. T
 
 :::caution
 
-If you already have the Cluster API (CAPI) Operator installed in your cluster, you must use the [manual Helm installation method](./overview.md#installing-via-helm).
+If you already have the Cluster API (CAPI) Operator installed in your cluster, you must use the [manual Helm installation method](#installing-via-helm).
 
 :::
 
@@ -47,7 +47,7 @@ By adding the Turtles repository via the Rancher UI, Rancher can process the ins
 1. Click **Rancher Turtles - the Cluster API Extension**.
 1. Click **Install > Next > Install**.
 
-This process uses the default values for the Helm chart, which are good for most installations. If your configuration requires overriding some of these defaults, you can either specify the values during installation from the Rancher UI or you can [manually install the chart via Helm](./overview.md#installing-via-helm). For details about available values, see the Rancher Turtles [Helm chart reference guide](https://turtles.docs.rancher.com/docs/reference-guides/rancher-turtles-chart/values).
+This process uses the default values for the Helm chart, which are good for most installations. If your configuration requires overriding some of these defaults, you can either specify the values during installation from the Rancher UI or you can [manually install the chart via Helm](#installing-via-helm). For details about available values, see the Rancher Turtles [Helm chart reference guide](https://turtles.docs.rancher.com/docs/reference-guides/rancher-turtles-chart/values).
 
 The installation may take a few minutes and after completing you can see the following new deployments in the cluster:
 
