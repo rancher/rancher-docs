@@ -1220,7 +1220,7 @@ const sidebars = {
           "label": "Cluster API (CAPI) with Rancher Turtles",
           "link": {
             "type": "doc",
-            "id": "integrations-in-rancher/cluster-api/capi"
+            "id": "integrations-in-rancher/cluster-api/cluster-api"
           },
           "items": [
             "integrations-in-rancher/cluster-api/overview"
