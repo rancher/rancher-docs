@@ -386,5 +386,17 @@
   "sidebar.tutorialSidebar.category.Example Workflows": {
     "message": "工作流程示例",
     "description": "The label for category Example Workflows in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Virtualization on Kubernetes with Harvester": {
+    "message": "使用 Harvester 在 Kubernetes 上进行虚拟化",
+    "description": "The label for category Virtualization on Kubernetes with Harvester in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Cloud Native Storage with Longhorn": {
+    "message": "使用 Longhorn 进行云原生存储",
+    "description": "The label for category Cloud Native Storage with Longhorn in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Container Security with Neuvector": {
+    "message": "使用 NeuVector 实现容器安全",
+    "description": "The label for category Container Security with Neuvector in sidebar tutorialSidebar"
   }
 }

@@ -3,7 +3,7 @@ title: Advanced Policy Management with Kubewarden
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/kubewarden"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/integrations-in-rancher/kubewarden"/>
 </head>
 
 Kubewarden is a Policy Engine that secures and helps manage your cluster resources. It allows for validation and mutation of resource requests via policies, including context-aware policies and verifying image signatures. It can run policies in monitor or enforcing mode and provides an overview of the state of the cluster. 

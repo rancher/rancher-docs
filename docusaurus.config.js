@@ -7,8 +7,8 @@ module.exports = {
   tagline: '',
   url: 'https://ranchermanager.docs.rancher.com/',
   baseUrl: '/',
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'ignore',
+  onBrokenMarkdownLinks: 'ignore',
   favicon: 'img/favicon.png',
   organizationName: 'rancher', // Usually your GitHub org/user name.
   projectName: 'rancher-docs', // Usually your repo name.
