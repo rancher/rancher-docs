@@ -1217,7 +1217,7 @@ const sidebars = {
         },
         {
           "type": "category",
-          "label": "Cluster API with Rancher Turtles",
+          "label": "Cluster API (CAPI) with Rancher Turtles",
           "link": {
             "type": "doc",
             "id": "integrations-in-rancher/cluster-api/capi"
