@@ -6,7 +6,7 @@ title: Rancher Extensions
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/rancher-extensions"/>
 </head>
 
-New in Rancher v2.7.0, Rancher introduces **extensions**. Extensions allow users, developers, partners, and customers to extend and enhance the Rancher UI. In addition, users can make changes and create enhancements to their UI functionality independent of Rancher releases. Extensions will enable users to build on top of Rancher to better tailor it to their respective environments. Note that users will also have the ability to update to new versions as well as roll back to a previous version.
+Extensions allow users, developers, partners, and customers to extend and enhance the Rancher UI. In addition, users can make changes and create enhancements to their UI functionality independent of Rancher releases. Extensions will enable users to build on top of Rancher to better tailor it to their respective environments. Note that users will also have the ability to update to new versions as well as roll back to a previous version.
 
 Extensions are Helm charts that can only be installed once into a cluster; therefore, these charts have been simplified and separated from the general Helm charts listed under **Apps**.
 
@@ -27,13 +27,6 @@ Examples of built-in Rancher extensions are Fleet, Explorer, and Harvester. Exam
     ![Rancher extension repository](/img/add-rancher-extension-repo.png)
 
 3. On the **Extensions** page, click on the **Available** tab to select which extensions you want to install.
-
-:::info
-
-In v2.7.0, the built-in extensions aren't displayed under the **Available** tab. Therefore, you'll need to manually add the desired repos to install extensions.
-
-:::
-<br/>
 
 4. If no extensions are showing as available, you may manually add repos as follows:
 
