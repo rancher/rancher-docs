@@ -257,6 +257,26 @@ module.exports = {
             to: '/v2.7/integrations-in-rancher/fleet',
             from: ['/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters','/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet','/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps']
           },// Redirects for multi-cluster apps removal (rancher-docs/issues/734) (end)
+          {
+            to: '/faq/deprecated-features',
+            from: '/faq/deprecated-features-in-v2.5'
+          },
+          {
+            to: '/v2.8/faq/deprecated-features',
+            from: '/v2.8/faq/deprecated-features-in-v2.5'
+          },
+          {
+            to: '/v2.7/faq/deprecated-features',
+            from: '/v2.7/faq/deprecated-features-in-v2.5'
+          },
+          {
+            to: '/v2.6/faq/deprecated-features',
+            from: '/v2.6/faq/deprecated-features-in-v2.5'
+          },
+          {
+            to: '/v2.5/faq/deprecated-features',
+            from: '/v2.5/faq/deprecated-features-in-v2.5'
+          },
           { // Redirects for pages-for-subheaders removal [2.0-2.4]
             to: '/v2.0-v2.4/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication',
             from: '/v2.0-v2.4/pages-for-subheaders/about-authentication'
