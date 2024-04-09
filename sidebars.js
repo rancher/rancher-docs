@@ -636,18 +636,6 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Deploying Apps Across Clusters',
-              link: {
-                type: 'doc',
-                id: "how-to-guides/new-user-guides/deploy-apps-across-clusters/deploy-apps-across-clusters",
-              },
-              items: [
-                "how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet",
-                "how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps",
-              ]
-            },
-            {
-              type: 'category',
               label: 'Backup, Restore, and Disaster Recovery',
               link: {
                 type: 'doc',
@@ -1216,6 +1204,17 @@ const sidebars = {
           ]
         },
         {
+          "type": "category",
+          "label": "Cluster API (CAPI) with Rancher Turtles",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/cluster-api/cluster-api"
+          },
+          "items": [
+            "integrations-in-rancher/cluster-api/overview"
+          ]
+        },
+        {
           type: 'category',
           label: 'CIS Scans',
           link: {
@@ -1306,7 +1305,7 @@ const sidebars = {
       label: 'FAQ',
       items: [
         "faq/general-faq",
-        "faq/deprecated-features-in-v2.5",
+        "faq/deprecated-features",
         "faq/install-and-configure-kubectl",
         "faq/dockershim",
         "faq/technical-items",

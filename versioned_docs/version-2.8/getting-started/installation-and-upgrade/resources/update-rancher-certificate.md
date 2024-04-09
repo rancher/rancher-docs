@@ -180,7 +180,7 @@ Repeat the below steps for each downstream cluster:
 
 ### 5. Force Update Fleet clusters to reconnect the fleet-agent to Rancher
 
-Select 'Force Update' for the clusters within the [Continuous Delivery](../../../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md#accessing-fleet-in-the-rancher-ui) view of the Rancher UI to allow the fleet-agent in downstream clusters to successfully connect to Rancher.
+Select 'Force Update' for the clusters within the [Continuous Delivery](../../../integrations-in-rancher/fleet/overview.md#accessing-fleet-in-the-rancher-ui) view of the Rancher UI to allow the fleet-agent in downstream clusters to successfully connect to Rancher.
 
 #### Why is this step required?
 
@@ -260,7 +260,7 @@ As a private CA is no longer being used, the `CATTLE_CA_CHECKSUM` environment va
 
 ### 5. Force Update Fleet clusters to reconnect the fleet-agent to Rancher
 
-Select 'Force Update' for the clusters within the [Continuous Delivery](../../../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md#accessing-fleet-in-the-rancher-ui) view of the Rancher UI to allow the fleet-agent in downstream clusters to successfully connect to Rancher.
+Select 'Force Update' for the clusters within the [Continuous Delivery](../../../integrations-in-rancher/fleet/overview.md#accessing-fleet-in-the-rancher-ui) view of the Rancher UI to allow the fleet-agent in downstream clusters to successfully connect to Rancher.
 
 #### Why is this step required?
 
