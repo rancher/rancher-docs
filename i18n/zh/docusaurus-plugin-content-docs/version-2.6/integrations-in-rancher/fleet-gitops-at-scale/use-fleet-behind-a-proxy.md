@@ -16,12 +16,12 @@ Rancher 不会与已注册的下游集群建立连接。部署在下游集群上
 
 ## 必要的环境变量
 
-为代理添加 Fleet agent 环境变量时，将 <PROXY_IP> 替换为你的私有代理 IP。
+为代理添加 Fleet agent 环境变量时，将 `<PROXY_IP>` 替换为你的私有代理 IP。
 
 | 变量名称 | 值 |
 |------------------|--------|
-| `HTTP_PROXY` | http://<PROXY_IP>:8888 |
-| `HTTPS_PROXY` | http://<PROXY_IP>:8888 |
+| `HTTP_PROXY` | `http://<PROXY_IP>:8888` |
+| `HTTPS_PROXY` | `http://<PROXY_IP>:8888` |
 | `NO_PROXY` | 127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local |
 
 ## 在 Rancher UI 中设置环境变量

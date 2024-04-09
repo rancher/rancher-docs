@@ -134,7 +134,7 @@ All configuration is passed in as arguments at container run time.
 
 **Remediation:**
 Run the below command (based on the file location on your system) on the control plane node.
-For example, chmod 600 <path/to/cni/files\>
+For example, `chmod 600 <path/to/cni/files\>`
 
 **Audit:**
 
@@ -156,7 +156,7 @@ ps -ef | grep kubelet | grep -- --cni-conf-dir | sed 's%.*cni-conf-dir[= ]\([^ ]
 **Remediation:**
 Run the below command (based on the file location on your system) on the control plane node.
 For example,
-chown root:root <path/to/cni/files\>
+`chown root:root <path/to/cni/files\>`
 
 **Audit:**
 
@@ -467,7 +467,7 @@ root 4018 3998 5 Sep11 ? 01:03:21 kube-apiserver --advertise-address=172.31.4.22
 **Remediation:**
 Follow the documentation and configure alternate mechanisms for authentication. Then,
 edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml
-on the control plane node and remove the --token-auth-file=<filename\> parameter.
+on the control plane node and remove the `--token-auth-file=<filename\>` parameter.
 
 **Audit:**
 
@@ -525,8 +525,11 @@ Follow the Kubernetes documentation and set up the TLS connection between the
 apiserver and kubelets. Then, edit API server pod specification file
 /etc/kubernetes/manifests/kube-apiserver.yaml on the control plane node and set the
 kubelet client certificate and key parameters as below.
+
+```console
 --kubelet-client-certificate=<path/to/client-certificate-file\>
 --kubelet-client-key=<path/to/client-key-file\>
+```
 
 **Audit:**
 
@@ -556,7 +559,7 @@ Follow the Kubernetes documentation and setup the TLS connection between
 the apiserver and kubelets. Then, edit the API server pod specification file
 /etc/kubernetes/manifests/kube-apiserver.yaml on the control plane node and set the
 --kubelet-certificate-authority parameter to the path to the cert file for the certificate authority.
---kubelet-certificate-authority=<ca-string\>
+`--kubelet-certificate-authority=<ca-string\>`
 When generating serving certificates, functionality could break in conjunction with hostname overrides which are required for certain cloud providers.
 
 ### 1.2.6 Ensure that the --authorization-mode argument is not set to AlwaysAllow (Automated)
@@ -654,7 +657,7 @@ Follow the Kubernetes documentation and set the desired limits in a configuratio
 Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml
 and set the below parameters.
 --enable-admission-plugins=...,EventRateLimit,...
---admission-control-config-file=<path/to/configuration/file\>
+`--admission-control-config-file=<path/to/configuration/file\>`
 
 **Audit:**
 
@@ -1073,7 +1076,7 @@ root 4018 3998 5 Sep11 ? 01:03:22 kube-apiserver --advertise-address=172.31.4.22
 Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml
 on the control plane node and set the --service-account-key-file parameter
 to the public key file for service accounts. For example,
---service-account-key-file=<filename\>
+`--service-account-key-file=<filename\>`
 
 **Audit:**
 
@@ -1102,8 +1105,11 @@ root 4018 3998 5 Sep11 ? 01:03:22 kube-apiserver --advertise-address=172.31.4.22
 Follow the Kubernetes documentation and set up the TLS connection between the apiserver and etcd.
 Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml
 on the control plane node and set the etcd certificate and key file parameters.
+
+```console
 --etcd-certfile=<path/to/client-certificate-file\>
 --etcd-keyfile=<path/to/client-key-file\>
+```
 
 **Audit:**
 
@@ -1132,8 +1138,11 @@ root 4018 3998 5 Sep11 ? 01:03:22 kube-apiserver --advertise-address=172.31.4.22
 Follow the Kubernetes documentation and set up the TLS connection on the apiserver.
 Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml
 on the control plane node and set the TLS certificate and private key file parameters.
+
+```console
 --tls-cert-file=<path/to/tls-certificate-file\>
 --tls-private-key-file=<path/to/tls-key-file\>
+```
 
 **Audit:**
 
@@ -1162,7 +1171,7 @@ root 4018 3998 5 Sep11 ? 01:03:22 kube-apiserver --advertise-address=172.31.4.22
 Follow the Kubernetes documentation and set up the TLS connection on the apiserver.
 Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml
 on the control plane node and set the client certificate authority file.
---client-ca-file=<path/to/client-ca-file\>
+`--client-ca-file=<path/to/client-ca-file\>`
 
 **Audit:**
 
@@ -1191,7 +1200,7 @@ root 4018 3998 5 Sep11 ? 01:03:22 kube-apiserver --advertise-address=172.31.4.22
 Follow the Kubernetes documentation and set up the TLS connection between the apiserver and etcd.
 Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml
 on the control plane node and set the etcd certificate authority file parameter.
---etcd-cafile=<path/to/ca-file\>
+`--etcd-cafile=<path/to/ca-file\>`
 
 **Audit:**
 
@@ -1220,7 +1229,7 @@ root 4018 3998 5 Sep11 ? 01:03:22 kube-apiserver --advertise-address=172.31.4.22
 Follow the Kubernetes documentation and configure a EncryptionConfig file.
 Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml
 on the control plane node and set the --encryption-provider-config parameter to the path of that file.
-For example, --encryption-provider-config=</path/to/EncryptionConfig/File\>
+For example, `--encryption-provider-config=</path/to/EncryptionConfig/File\>`
 
 **Audit:**
 
@@ -1390,7 +1399,7 @@ root 4184 4163 1 Sep11 ? 00:20:06 kube-controller-manager --configure-cloud-rout
 Edit the Controller Manager pod specification file /etc/kubernetes/manifests/kube-controller-manager.yaml
 on the control plane node and set the --service-account-private-key-file parameter
 to the private key file for service accounts.
---service-account-private-key-file=<filename\>
+`--service-account-private-key-file=<filename\>`
 
 **Audit:**
 
@@ -1417,8 +1426,8 @@ root 4184 4163 1 Sep11 ? 00:20:06 kube-controller-manager --configure-cloud-rout
 
 **Remediation:**
 Edit the Controller Manager pod specification file /etc/kubernetes/manifests/kube-controller-manager.yaml
-on the control plane node and set the --root-ca-file parameter to the certificate bundle file`.
---root-ca-file=<path/to/file\>
+on the control plane node and set the --root-ca-file parameter to the certificate bundle file.
+`--root-ca-file=<path/to/file\>`
 
 **Audit:**
 
@@ -1542,8 +1551,11 @@ root 4339 4318 0 Sep11 ? 00:03:28 kube-scheduler --authentication-kubeconfig=/et
 Follow the etcd service documentation and configure TLS encryption.
 Then, edit the etcd pod specification file /etc/kubernetes/manifests/etcd.yaml
 on the master node and set the below parameters.
+
+```console
 --cert-file=</path/to/ca-file\>
 --key-file=</path/to/key-file\>
+```
 
 **Audit:**
 
@@ -1629,8 +1641,11 @@ Follow the etcd service documentation and configure peer TLS encryption as appro
 for your etcd cluster.
 Then, edit the etcd pod specification file /etc/kubernetes/manifests/etcd.yaml on the
 master node and set the below parameters.
+
+```console
 --peer-client-file=</path/to/peer-cert-file\>
 --peer-key-file=</path/to/peer-key-file\>
+```
 
 **Audit:**
 
@@ -1717,7 +1732,7 @@ Follow the etcd documentation and create a dedicated certificate authority setup
 etcd service.
 Then, edit the etcd pod specification file /etc/kubernetes/manifests/etcd.yaml on the
 master node and set the below parameter.
---trusted-ca-file=</path/to/ca-file\>
+`--trusted-ca-file=</path/to/ca-file\>`
 
 **Audit:**
 
@@ -1950,7 +1965,7 @@ root:root
 
 **Remediation:**
 Run the following command to modify the file permissions of the
---client-ca-file chmod 600 <filename\>
+`--client-ca-file chmod 600 <filename\>`
 
 **Audit:**
 
@@ -1977,7 +1992,7 @@ permissions=644
 
 **Remediation:**
 Run the following command to modify the ownership of the --client-ca-file.
-chown root:root <filename\>
+`chown root:root <filename\>`
 
 **Audit:**
 
@@ -2110,7 +2125,7 @@ the location of the client CA file.
 If using command line arguments, edit the kubelet service file
 /etc/systemd/system/kubelet.service.d/10-kubeadm.conf on each worker node and
 set the below parameter in KUBELET_AUTHZ_ARGS variable.
---client-ca-file=<path/to/client-ca-file\>
+`--client-ca-file=<path/to/client-ca-file\>`
 Based on your system, restart the kubelet service. For example,
 systemctl daemon-reload
 systemctl restart kubelet.service
@@ -2321,8 +2336,12 @@ to the location of the corresponding private key file.
 If using command line arguments, edit the kubelet service file
 /etc/systemd/system/kubelet.service.d/10-kubeadm.conf on each worker node and
 set the below parameters in KUBELET_CERTIFICATE_ARGS variable.
+
+```console
 --tls-cert-file=<path/to/tls-certificate-file\>
 --tls-private-key-file=<path/to/tls-key-file\>
+```
+
 Based on your system, restart the kubelet service. For example,
 systemctl daemon-reload
 systemctl restart kubelet.service

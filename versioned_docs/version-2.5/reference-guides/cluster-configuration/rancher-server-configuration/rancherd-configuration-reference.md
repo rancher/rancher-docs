@@ -158,7 +158,7 @@ It can be run with the following options:
 | `--etcd-disable-snapshots`  | Disable automatic etcd snapshots |
 |  `--etcd-snapshot-schedule-cron value`  | Snapshot interval time in cron spec. eg. every 5 hours '* */5 * * *' (default: "0 */12 * * *") |
 | `--etcd-snapshot-retention value`   | Number of snapshots to retain (default: 5) |
-|  `--etcd-snapshot-dir value`  | Directory to save db snapshots. (Default location: ${data-dir}/db/snapshots) |
+|  `--etcd-snapshot-dir value`  | `Directory to save db snapshots. (Default location: ${data-dir}/db/snapshots)` |
 |  `--cluster-reset-restore-path value`  | Path to snapshot file to be restored |
 
 ### System Images Registry

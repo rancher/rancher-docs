@@ -37,7 +37,7 @@ Begin by using Rancher CLI to export the configuration for the cluster that you 
 1. Enter the following command to export the configuration for your cluster.
 
 
-        ./rancher clusters export <RESOURCE_ID>
+        `./rancher clusters export <RESOURCE_ID>`
 
 
     **Step Result:** The YAML for a cloned cluster prints to Terminal.

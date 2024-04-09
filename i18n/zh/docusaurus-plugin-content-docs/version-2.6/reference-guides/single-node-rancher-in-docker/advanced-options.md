@@ -67,7 +67,7 @@ docker run -d --restart=unless-stopped \
 
 **示例**：
 
-     <REGISTRY.DOMAIN.COM:PORT>/rancher/rancher:latest
+     `<REGISTRY.DOMAIN.COM:PORT>/rancher/rancher:latest`
 
 ### 持久化数据
 
