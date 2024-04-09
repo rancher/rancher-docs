@@ -1217,6 +1217,17 @@
         "integrations-in-rancher/longhorn",
         {
           "type": "category",
+          "label": "Cluster API (CAPI) with Rancher Turtles",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/cluster-api/cluster-api"
+          },
+          "items": [
+            "integrations-in-rancher/cluster-api/overview"
+          ]
+        },
+        {
+          "type": "category",
           "label": "Logging",
           "link": {
             "type": "doc",

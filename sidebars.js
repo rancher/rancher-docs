@@ -1216,6 +1216,17 @@ const sidebars = {
           ]
         },
         {
+          "type": "category",
+          "label": "Cluster API (CAPI) with Rancher Turtles",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/cluster-api/cluster-api"
+          },
+          "items": [
+            "integrations-in-rancher/cluster-api/overview"
+          ]
+        },
+        {
           type: 'category',
           label: 'CIS Scans',
           link: {
