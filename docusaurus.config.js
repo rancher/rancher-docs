@@ -245,6 +245,18 @@ module.exports = {
       {
         fromExtensions: ['html', 'htm'],
         redirects: [
+          { // Redirects for multi-cluster apps removal (rancher-docs/issues/734)
+            to: '/integrations-in-rancher/fleet',
+            from: ['/how-to-guides/new-user-guides/deploy-apps-across-clusters','/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet','/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps']
+          },
+          {
+            to: '/v2.8/integrations-in-rancher/fleet',
+            from: ['/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters','/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet','/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps']
+          }, 
+          {
+            to: '/v2.7/integrations-in-rancher/fleet',
+            from: ['/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters','/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet','/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps']
+          },// Redirects for multi-cluster apps removal (rancher-docs/issues/734) (end)
           { // Redirects for pages-for-subheaders removal [2.0-2.4]
             to: '/v2.0-v2.4/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication',
             from: '/v2.0-v2.4/pages-for-subheaders/about-authentication'
