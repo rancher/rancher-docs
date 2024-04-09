@@ -405,7 +405,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Kubernetes Cluster Setup',
+              label: 'Setting up a Kubernetes Cluster for Rancher Server',
               link: {
                 type: 'doc',
                 id: "how-to-guides/new-user-guides/kubernetes-cluster-setup/kubernetes-cluster-setup",

@@ -1,5 +1,5 @@
 ---
-title: Kubernetes Cluster Setup
+title: Setting up a Kubernetes Cluster for Rancher Server
 ---
 
 <head>
