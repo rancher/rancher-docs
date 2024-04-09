@@ -245,6 +245,18 @@ module.exports = {
       {
         fromExtensions: ['html', 'htm'],
         redirects: [
+          { // Redirects for multi-cluster apps removal (rancher-docs/issues/734)
+            to: '/integrations-in-rancher/fleet',
+            from: ['/pages-for-subheaders/deploy-apps-across-clusters', '/how-to-guides/new-user-guides/deploy-apps-across-clusters', '/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet', '/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps']
+          },
+          {
+            to: '/v2.8/integrations-in-rancher/fleet',
+            from: ['/v2.8/pages-for-subheaders/deploy-apps-across-clusters', '/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters', '/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet', '/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps']
+          }, 
+          {
+            to: '/v2.7/integrations-in-rancher/fleet-gitops-at-scale',
+            from: ['/v2.7/pages-for-subheaders/deploy-apps-across-clusters', '/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters', '/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet', '/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps']
+          },// Redirects for multi-cluster apps removal (rancher-docs/issues/734) (end)
           {
             to: '/faq/deprecated-features',
             from: '/faq/deprecated-features-in-v2.5'
@@ -1450,10 +1462,6 @@ module.exports = {
             from: '/v2.7/pages-for-subheaders/custom-resource-configuration'
           },
           {
-            to: '/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters',
-            from: '/v2.7/pages-for-subheaders/deploy-apps-across-clusters'
-          },
-          {
             to: '/v2.7/getting-started/quick-start-guides/deploy-rancher-manager',
             from: '/v2.7/pages-for-subheaders/deploy-rancher-manager'
           },
@@ -1802,10 +1810,6 @@ module.exports = {
             from: '/v2.8/pages-for-subheaders/custom-resource-configuration'
           },
           {
-            to: '/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters',
-            from: '/v2.8/pages-for-subheaders/deploy-apps-across-clusters'
-          },
-          {
             to: '/v2.8/getting-started/quick-start-guides/deploy-rancher-manager',
             from: '/v2.8/pages-for-subheaders/deploy-rancher-manager'
           },
@@ -2148,10 +2152,6 @@ module.exports = {
           {
             to: '/integrations-in-rancher/logging/custom-resource-configuration',
             from: '/pages-for-subheaders/custom-resource-configuration'
-          },
-          {
-            to: '/how-to-guides/new-user-guides/deploy-apps-across-clusters',
-            from: '/pages-for-subheaders/deploy-apps-across-clusters'
           },
           {
             to: '/getting-started/quick-start-guides/deploy-rancher-manager',
