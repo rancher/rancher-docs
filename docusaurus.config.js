@@ -254,7 +254,7 @@ module.exports = {
             from: ['/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters','/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet','/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps']
           }, 
           {
-            to: '/v2.7/integrations-in-rancher/fleet',
+            to: '/v2.7/integrations-in-rancher/fleet-gitops-at-scale',
             from: ['/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters','/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet','/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps']
           },// Redirects for multi-cluster apps removal (rancher-docs/issues/734) (end)
           {
