@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1707851107,
-    "formattedLastUpdatedAt": "Feb 13, 2024",
+    "lastUpdatedAt": 1712697092,
+    "formattedLastUpdatedAt": "Apr 9, 2024",
     "frontMatter": {
         "title": "Migrating Rancher to a New Cluster"
     },
@@ -364,6 +364,11 @@ const toc = [
     {
         value: '4. Bring up Rancher with Helm',
         id: '4-bring-up-rancher-with-helm',
+        level: 3
+    },
+    {
+        value: '5. Redirect Traffic to the New Cluster',
+        id: '5-redirect-traffic-to-the-new-cluster',
         level: 3
     }
 ];
@@ -460,14 +465,14 @@ helm install rancher-backup rancher-charts/rancher-backup -n cattle-resources-sy
         parentName: "admonition"
     }, `For an `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `air-gapped environment`), `, use the Helm value below to pull the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `air-gapped environment`), `, use the following Helm value to pull the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `backup-restore-operator`), ` image from your private registry when installing the rancher-backup Helm chart.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
+    }, `backup-restore-operator`), ` image from your private registry when you install the rancher-backup Helm chart.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", {
         parentName: "admonition"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-bash"
-    }, `--set image.repository $REGISTRY/rancher/backup-restore-operator
+    }, `--set image.repository <registry>/rancher/backup-restore-operator
 `))))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "2-restore-from-backup-using-a-restore-custom-resource"
     }, `2. Restore from backup using a Restore custom resource`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
@@ -690,7 +695,9 @@ spec:
         parentName: "pre",
         "className": "language-bash"
     }, `helm install rancher rancher-latest/rancher -n cattle-system -f rancher-values.yaml --version x.y.z
-`))));
+`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "5-redirect-traffic-to-the-new-cluster"
+    }, `5. Redirect Traffic to the New Cluster`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After migration completes, update your DNS records and any load balancers, so that traffic is routed correctly to the migrated cluster. Remember that you must use the same hostname that was set as the server URL in the original cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Full instructions on how to redirect traffic to the migrated cluster differ based on your specific environment. Refer to your hosting provider's documentation for more details.`));
 }
 MDXContent.isMDXComponent = true;
 
