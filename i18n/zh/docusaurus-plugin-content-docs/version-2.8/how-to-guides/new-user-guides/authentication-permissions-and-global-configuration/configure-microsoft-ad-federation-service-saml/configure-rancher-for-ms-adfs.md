@@ -2,6 +2,10 @@
 title: 2. 在 Rancher 中配置 Microsoft AD FS
 ---
 
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-microsoft-ad-federation-service-saml/configure-rancher-for-ms-adfs"/>
+</head>
+
 完成[在 Microsoft AD FS 中配置 Rancher](configure-ms-adfs-for-rancher.md) 后，将你的 Active Directory Federation Service (AD FS) 信息输入 Rancher，以便 AD FS 用户可以通过 Rancher 进行身份认证。
 
 :::note 配置 ADFS 服务器的重要说明：
@@ -30,16 +34,15 @@ title: 2. 在 Rancher 中配置 Microsoft AD FS
 
 ## 配置
 
-| 字段 | 描述 |
-|---------------------------|-----------------|
-| 显示名称字段 | 包含用户显示名称的 AD 属性。<br/><br/>示例：`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name` |
-| 用户名字段 | 包含用户名/给定名称的 AD 属性。<br/><br/>示例：`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname` |
-| UID 字段 | 每个用户独有的 AD 属性。<br/><br/>示例：`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn` |
-| 用户组字段 | 创建用于管理组成员关系的条目。<br/><br/>示例：`http://schemas.xmlsoap.org/claims/Group` |
-| Rancher API 主机 | Rancher Server 的 URL。 |
-| 私钥/证书 | 在 Rancher 和你的 AD FS 之间创建安全外壳（SSH）的密钥/证书对。确保将 Common Name (CN) 设置为 Rancher Server URL。<br/><br/>[证书创建命令](#cert-command) |
-| 元数据 XML | 从 AD FS 服务器导出的 `federationmetadata.xml` 文件。<br/><br/>你可以在 `https://<AD_SERVER>/federationmetadata/2007-06/federationmetadata.xml` 找到该文件。 |
-
+| 字段             | 描述                                                                                                                                                         |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 显示名称字段     | 包含用户显示名称的 AD 属性。<br/><br/>示例：`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`                                                     |
+| 用户名字段       | 包含用户名/给定名称的 AD 属性。<br/><br/>示例：`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname`                                             |
+| UID 字段         | 每个用户独有的 AD 属性。<br/><br/>示例：`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn`                                                          |
+| 用户组字段       | 创建用于管理组成员关系的条目。<br/><br/>示例：`http://schemas.xmlsoap.org/claims/Group`                                                                      |
+| Rancher API 主机 | Rancher Server 的 URL。                                                                                                                                      |
+| 私钥/证书        | 在 Rancher 和你的 AD FS 之间创建安全外壳（SSH）的密钥/证书对。确保将 Common Name (CN) 设置为 Rancher Server URL。<br/><br/>[证书创建命令](#cert-command)     |
+| 元数据 XML       | 从 AD FS 服务器导出的 `federationmetadata.xml` 文件。<br/><br/>你可以在 `https://<AD_SERVER>/federationmetadata/2007-06/federationmetadata.xml` 找到该文件。 |
 
 <a id="cert-command"></a>
 

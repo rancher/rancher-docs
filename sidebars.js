@@ -625,7 +625,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Helm Charts in Rancher',
+              label: 'Helm Charts and Apps',
               link: {
                 type: 'doc',
                 id: "how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher",
@@ -1216,6 +1216,17 @@ const sidebars = {
           ]
         },
         {
+          "type": "category",
+          "label": "Cluster API (CAPI) with Rancher Turtles",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/cluster-api/cluster-api"
+          },
+          "items": [
+            "integrations-in-rancher/cluster-api/overview"
+          ]
+        },
+        {
           type: 'category',
           label: 'CIS Scans',
           link: {
@@ -1306,7 +1317,7 @@ const sidebars = {
       label: 'FAQ',
       items: [
         "faq/general-faq",
-        "faq/deprecated-features-in-v2.5",
+        "faq/deprecated-features",
         "faq/install-and-configure-kubectl",
         "faq/dockershim",
         "faq/technical-items",

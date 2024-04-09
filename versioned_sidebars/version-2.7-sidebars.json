@@ -589,7 +589,7 @@
             },
             {
               "type": "category",
-              "label": "Helm Charts in Rancher",
+              "label": "Helm Charts and Apps",
               "link": {
                 "type": "doc",
                 "id": "how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher"
@@ -1116,6 +1116,17 @@
                 "integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues"
               ]
             },
+            "integrations-in-rancher/cloud-marketplace/supportconfig"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Cloud Marketplace Pay-as-you-go (PAYG) Integration",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/cloud-marketplace/cloud-marketplace-payg-integration"
+          },
+          "items": [
             {
               "type": "category",
               "label": "AWS Marketplace Pay-as-you-go (PAYG)",
@@ -1124,12 +1135,11 @@
                 "id": "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/aws-marketplace-payg-integration"
               },
               "items": [
-                  "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/prerequisites",
-                  "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/installing-rancher-prime",
-                  "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/upgrading-rancher-payg-cluster",
-                  "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/troubleshooting",
-                  "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/common-issues"
-
+                "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/prerequisites",
+                "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/installing-rancher-prime",
+                "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/upgrading-rancher-payg-cluster",
+                "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/troubleshooting",
+                "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/common-issues"
               ]
             },
             {
@@ -1140,15 +1150,13 @@
                 "id": "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/azure-marketplace-payg-integration"
               },
               "items": [
-                  "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites",
-                  "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime",
-                  "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/upgrading-rancher-payg-cluster",
-                  "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/troubleshooting",
-                  "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues"
-
+                "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites",
+                "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime",
+                "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/upgrading-rancher-payg-cluster",
+                "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/troubleshooting",
+                "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues"
               ]
-            },
-            "integrations-in-rancher/cloud-marketplace/supportconfig"
+            }
           ]
         },
         {
@@ -1209,6 +1217,17 @@
         "integrations-in-rancher/longhorn",
         {
           "type": "category",
+          "label": "Cluster API (CAPI) with Rancher Turtles",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/cluster-api/cluster-api"
+          },
+          "items": [
+            "integrations-in-rancher/cluster-api/overview"
+          ]
+        },
+        {
+          "type": "category",
           "label": "Logging",
           "link": {
             "type": "doc",
@@ -1258,7 +1277,7 @@
       "label": "FAQ",
       "items": [
         "faq/general-faq",
-        "faq/deprecated-features-in-v2.5",
+        "faq/deprecated-features",
         "faq/install-and-configure-kubectl",
         "faq/dockershim",
         "faq/technical-items",

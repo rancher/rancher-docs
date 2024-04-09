@@ -78,7 +78,7 @@ A restore is performed by creating a Restore custom resource.
 1. In the left navigation bar, click **Rancher Backups > Restore**.
     :::note
 
-    If the Rancher Backups app is not visible, you will need to install it from the Charts page in **Apps**. Refer [here](../../../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md#charts) for more information.
+    If the Rancher Backups app is not visible, you will need to install it from the Charts page in **Apps**. Refer [here](../../../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md#access-charts) for more information.
 
     :::
 
