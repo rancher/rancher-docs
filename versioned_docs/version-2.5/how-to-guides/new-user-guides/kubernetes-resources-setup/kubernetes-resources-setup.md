@@ -1,5 +1,5 @@
 ---
-title: Kubernetes Resources
+title: Kubernetes Resources Setup
 ---
 
 <head>

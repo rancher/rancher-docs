@@ -35,7 +35,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Deploying Rancher',
+              label: 'Deploying Rancher Server',
               link: {
                 type: 'doc',
                 id: "getting-started/quick-start-guides/deploy-rancher-manager/deploy-rancher-manager",
@@ -405,7 +405,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Kubernetes Cluster Setup',
+              label: 'Setting up a Kubernetes Cluster for Rancher Server',
               link: {
                 type: 'doc',
                 id: "how-to-guides/new-user-guides/kubernetes-cluster-setup/kubernetes-cluster-setup",
@@ -534,7 +534,7 @@ const sidebars = {
                     "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster",
                     {
                       type: 'category',
-                      label: 'vSphere',
+                      label: 'Creating a vSphere Cluster',
                       link: {
                         type: 'doc',
                         id: "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/vsphere",
@@ -547,7 +547,7 @@ const sidebars = {
                     },
                     {
                       type: 'category',
-                      label: 'Nutanix',
+                      label: 'Creating a Nutanix AOS Cluster',
                       link: {
                         type: 'doc',
                         id: "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/nutanix",
@@ -723,7 +723,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Monitoring V2 Configuration Guides',
+              label: 'Monitoring Configuration Guides',
               link: {
                 type: 'doc',
                 id: "how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/monitoring-v2-configuration-guides",
@@ -746,7 +746,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Istio Setup Guide',
+              label: 'Istio Setup Guides',
               link: {
                 type: 'doc',
                 id: "how-to-guides/advanced-user-guides/istio-setup-guide/istio-setup-guide",
@@ -808,7 +808,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Best Practices',
+          label: 'Best Practice Guides',
           link: {
             type: 'doc',
             id: "reference-guides/best-practices/best-practices",
@@ -880,7 +880,7 @@ const sidebars = {
                 "reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration",
                 {
                   type: 'category',
-                  label: 'GKE Cluster Configuration',
+                  label: 'GKE Cluster Configuration Reference',
                   link: {
                     type: 'doc',
                     id: "reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration",
@@ -972,7 +972,7 @@ const sidebars = {
         "reference-guides/kubernetes-concepts",
         {
           type: 'category',
-          label: 'Monitoring V2 Configuration',
+          label: 'Monitoring Configuration Reference',
           link: {
             type: 'doc',
             id: "reference-guides/monitoring-v2-configuration/monitoring-v2-configuration",
@@ -1043,7 +1043,7 @@ const sidebars = {
         "reference-guides/rancher-webhook",
         {
           type: 'category',
-          label: 'Rancher Security',
+          label: 'Rancher Security Guides',
           link: {
             type: 'doc',
             id: "reference-guides/rancher-security/rancher-security",
