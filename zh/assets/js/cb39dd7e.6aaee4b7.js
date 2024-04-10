@@ -1,0 +1,392 @@
+"use strict";
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[89068],{
+
+/***/ 3905:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Zo: () => (/* binding */ MDXProvider),
+/* harmony export */   kt: () => (/* binding */ createElement)
+/* harmony export */ });
+/* unused harmony exports MDXContext, useMDXComponents, withMDXComponents */
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(67294);
+
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+
+  var target = _objectWithoutPropertiesLoose(source, excluded);
+
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
+}
+
+var isFunction = function isFunction(obj) {
+  return typeof obj === 'function';
+};
+
+var MDXContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext({});
+var withMDXComponents = function withMDXComponents(Component) {
+  return function (props) {
+    var allComponents = useMDXComponents(props.components);
+    return /*#__PURE__*/React.createElement(Component, _extends({}, props, {
+      components: allComponents
+    }));
+  };
+};
+var useMDXComponents = function useMDXComponents(components) {
+  var contextComponents = react__WEBPACK_IMPORTED_MODULE_0__.useContext(MDXContext);
+  var allComponents = contextComponents;
+
+  if (components) {
+    allComponents = isFunction(components) ? components(contextComponents) : _objectSpread2(_objectSpread2({}, contextComponents), components);
+  }
+
+  return allComponents;
+};
+var MDXProvider = function MDXProvider(props) {
+  var allComponents = useMDXComponents(props.components);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(MDXContext.Provider, {
+    value: allComponents
+  }, props.children);
+};
+
+var TYPE_PROP_NAME = 'mdxType';
+var DEFAULTS = {
+  inlineCode: 'code',
+  wrapper: function wrapper(_ref) {
+    var children = _ref.children;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {}, children);
+  }
+};
+var MDXCreateElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function (props, ref) {
+  var propComponents = props.components,
+      mdxType = props.mdxType,
+      originalType = props.originalType,
+      parentName = props.parentName,
+      etc = _objectWithoutProperties(props, ["components", "mdxType", "originalType", "parentName"]);
+
+  var components = useMDXComponents(propComponents);
+  var type = mdxType;
+  var Component = components["".concat(parentName, ".").concat(type)] || components[type] || DEFAULTS[type] || originalType;
+
+  if (propComponents) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Component, _objectSpread2(_objectSpread2({
+      ref: ref
+    }, etc), {}, {
+      components: propComponents
+    }));
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Component, _objectSpread2({
+    ref: ref
+  }, etc));
+});
+MDXCreateElement.displayName = 'MDXCreateElement';
+function createElement (type, props) {
+  var args = arguments;
+  var mdxType = props && props.mdxType;
+
+  if (typeof type === 'string' || mdxType) {
+    var argsLength = args.length;
+    var createElementArgArray = new Array(argsLength);
+    createElementArgArray[0] = MDXCreateElement;
+    var newProps = {};
+
+    for (var key in props) {
+      if (hasOwnProperty.call(props, key)) {
+        newProps[key] = props[key];
+      }
+    }
+
+    newProps.originalType = type;
+    newProps[TYPE_PROP_NAME] = typeof type === 'string' ? type : mdxType;
+    createElementArgArray[1] = newProps;
+
+    for (var i = 2; i < argsLength; i++) {
+      createElementArgArray[i] = args[i];
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_0__.createElement.apply(null, createElementArgArray);
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0__.createElement.apply(null, args);
+}
+
+
+
+
+/***/ }),
+
+/***/ 88957:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(67294);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3905);
+/* @jsxRuntime classic */ /* @jsx mdx */ /* @jsxFrag React.Fragment */ function _define_property(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function _object_spread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {};
+        var ownKeys = Object.keys(source);
+        if (typeof Object.getOwnPropertySymbols === "function") {
+            ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+            }));
+        }
+        ownKeys.forEach(function(key) {
+            _define_property(target, key, source[key]);
+        });
+    }
+    return target;
+}
+function ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+    if (Object.getOwnPropertySymbols) {
+        var symbols = Object.getOwnPropertySymbols(object);
+        if (enumerableOnly) {
+            symbols = symbols.filter(function(sym) {
+                return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+            });
+        }
+        keys.push.apply(keys, symbols);
+    }
+    return keys;
+}
+function _object_spread_props(target, source) {
+    source = source != null ? source : {};
+    if (Object.getOwnPropertyDescriptors) {
+        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+        ownKeys(Object(source)).forEach(function(key) {
+            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+    }
+    return target;
+}
+function _object_without_properties(source, excluded) {
+    if (source == null) return {};
+    var target = _object_without_properties_loose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+function _object_without_properties_loose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+
+
+const frontMatter = {
+    title: 'Container Security with NeuVector'
+};
+const contentTitle = undefined;
+const metadata = {
+    "unversionedId": "integrations-in-rancher/neuvector/neuvector",
+    "id": "version-2.8/integrations-in-rancher/neuvector/neuvector",
+    "title": "Container Security with NeuVector",
+    "description": "NeuVector is the only 100% open source, Zero Trust container security platform. Continuously scan throughout the container lifecycle. Remove security roadblocks. Bake in security policies at the start to maximize developer agility. NeuVector provides vulnerability and compliance scanning and management from build to production. The unique NeuVector run-time protection protects network connections within and ingress/egress to the cluster with a Layer7 container firewall. Additionally, NeuVector monitors process and file activity in containers and on hosts to stop unauthorized activity.",
+    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/neuvector/neuvector.md",
+    "sourceDirName": "integrations-in-rancher/neuvector",
+    "slug": "/integrations-in-rancher/neuvector/",
+    "permalink": "/zh/v2.8/integrations-in-rancher/neuvector/",
+    "draft": false,
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/neuvector/neuvector.md",
+    "tags": [],
+    "version": "2.8",
+    "lastUpdatedAt": 1697739239,
+    "formattedLastUpdatedAt": "2023年10月19日",
+    "frontMatter": {
+        "title": "Container Security with NeuVector"
+    },
+    "sidebar": "tutorialSidebar",
+    "previous": {
+        "title": "Overview",
+        "permalink": "/zh/v2.8/integrations-in-rancher/longhorn/overview"
+    },
+    "next": {
+        "title": "Overview",
+        "permalink": "/zh/v2.8/integrations-in-rancher/neuvector/overview"
+    }
+};
+const assets = {};
+const toc = [
+    {
+        value: 'NeuVector with Rancher',
+        id: 'neuvector-with-rancher',
+        level: 2
+    },
+    {
+        value: 'NeuVector Prime with Rancher Prime',
+        id: 'neuvector-prime-with-rancher-prime',
+        level: 2
+    }
+];
+const layoutProps = {
+    toc
+};
+const MDXLayout = "wrapper";
+function MDXContent(_param) {
+    var { components } = _param, props = _object_without_properties(_param, [
+        "components"
+    ]);
+    return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
+        components: components,
+        mdxType: "MDXLayout"
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/neuvector"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `NeuVector is the only 100% open source, Zero Trust container security platform. Continuously scan throughout the container lifecycle. Remove security roadblocks. Bake in security policies at the start to maximize developer agility. NeuVector provides vulnerability and compliance scanning and management from build to production. The unique NeuVector run-time protection protects network connections within and ingress/egress to the cluster with a Layer7 container firewall. Additionally, NeuVector monitors process and file activity in containers and on hosts to stop unauthorized activity. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "neuvector-with-rancher"
+    }, `NeuVector with Rancher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `All NeuVector features are available through Rancher with integrated deployment and single-sign on to the NeuVector console. Rancher cluster admins are able to deploy and manage the NeuVector deployment on their clusters and easily configure NeuVector through Helm values, configMaps, custom resource definitions (CRDs) and the NeuVector console. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `With NeuVector and Rancher: `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Deploy, manage and secure multiple clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Manage and report vulnerabilities and compliance results for Rancher workloads and nodes.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "neuvector-prime-with-rancher-prime"
+    }, `NeuVector Prime with Rancher Prime`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The NeuVector UI Extension for Rancher Manager is available and supported for Rancher Prime and NeuVector Prime customers. This extension provides: `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Automated deployment of NeuVector, including the Rancher Prime NeuVector Extension dashboard.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Access to important security information from each cluster, such as critical security events, vulnerability scan results, and ingress/egress exposures.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Integrated vulnerability (CVE) and compliance scan results directly in Rancher resources such as nodes and containers/pods.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Integrated actions such as manual triggers of scans on Rancher resources.`)));
+}
+MDXContent.isMDXComponent = true;
+
+
+/***/ })
+
+}]);
