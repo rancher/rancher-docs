@@ -27,7 +27,12 @@ Minimum password length can be any positive integer value between 2 and 256. Dec
 <Tabs>
 <TabItem value="Helm">
 
-Set `.Values.bootstrapPassword` in the Rancher Helm chart.
+During [Rancher installation](getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster), set `bootstrapPassword` alongside any other flags for the Rancher Helm chart. For example:
+
+```bash
+helm install rancher rancher-<CHART_REPO>/rancher \
+  --set bootstrapPassword=<password>
+```
 
 </TabItem>
 <TabItem value="Docker">
