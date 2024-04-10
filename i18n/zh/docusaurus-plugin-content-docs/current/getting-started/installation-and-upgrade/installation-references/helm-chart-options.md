@@ -7,7 +7,7 @@ keywords: [rancher helm chart, rancher helm 选项, rancher helm chart 选项, h
 
 如需选择 Helm Chart 版本，请参见[本页](../../../getting-started/installation-and-upgrade/resources/choose-a-rancher-version.md)。
 
-了解开启实验性功能的详情，请参见[本页](../../../pages-for-subheaders/enable-experimental-features.md)。
+了解开启实验性功能的详情，请参见[本页](../../../how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features.md)。
 
 ## 常用选项
 
@@ -81,13 +81,13 @@ kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{
 
 启用 [API 审计日志](../../../how-to-guides/advanced-user-guides/enable-api-audit-log.md)。
 
-你可以像收集其他容器日志一样收集此日志。在 Rancher Server 集群上为 `System` 项目启用 [Logging](../../../pages-for-subheaders/logging.md)。
+你可以像收集其他容器日志一样收集此日志。在 Rancher Server 集群上为 `System` 项目启用 [Logging](../../../integrations-in-rancher/logging/logging.md)。
 
 ```plain
 --set auditLog.level=1
 ```
 
-默认情况下，启用审计日志会在 Rancher pod 中创建一个 Sidecar 容器。这个容器（`rancher-audit-log`）会把日志流传输到 `stdout`。你可以像收集其他容器日志一样收集此日志。如果你使用 Sidecar 作为审计日志的目标时， `hostPath`，`maxAge`，`maxBackups` 和 `maxSize` 选项不会生效。建议使用你的操作系统或 Docker Daemon 的日志轮换功能来控制磁盘空间的使用。请为 Rancher Server 集群或 System 项目启用 [Logging](../../../pages-for-subheaders/logging.md)。
+默认情况下，启用审计日志会在 Rancher pod 中创建一个 Sidecar 容器。这个容器（`rancher-audit-log`）会把日志流传输到 `stdout`。你可以像收集其他容器日志一样收集此日志。如果你使用 Sidecar 作为审计日志的目标时， `hostPath`，`maxAge`，`maxBackups` 和 `maxSize` 选项不会生效。建议使用你的操作系统或 Docker Daemon 的日志轮换功能来控制磁盘空间的使用。请为 Rancher Server 集群或 System 项目启用 [Logging](../../../integrations-in-rancher/logging/logging.md)。
 
 将 `auditLog.destination` 的值设为 `hostPath`，可以将日志转发到与主机系统共享的卷，而不是传输到 Sidecar 容器。如果目标设置为 `hostPath`，你可能需要调整其他 auditLog 参数以进行日志轮换。
 
@@ -202,7 +202,7 @@ kubectl -n cattle-system create secret generic tls-ca-additional --from-file=ca-
 
 ### 私有仓库和离线安装
 
-有关使用私有仓库安装 Rancher 的详情，请参见[离线安装](../../../pages-for-subheaders/air-gapped-helm-cli-install.md)。
+有关使用私有仓库安装 Rancher 的详情，请参见[离线安装](../other-installation-methods/air-gapped-helm-cli-install/air-gapped-helm-cli-install.md)。
 
 ## 外部 TLS 终止
 

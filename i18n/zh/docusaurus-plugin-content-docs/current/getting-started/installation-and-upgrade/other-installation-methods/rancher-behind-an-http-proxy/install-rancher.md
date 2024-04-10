@@ -6,6 +6,8 @@ title: 3. 安装 Rancher
 
 ### 安装 Helm CLI
 
+<DeprecationHelm2 />
+
 在具有 kubeconfig 的主机上安装 [Helm](https://helm.sh/docs/intro/install/) CLI 以访问 Kubernetes 集群：
 
 ```

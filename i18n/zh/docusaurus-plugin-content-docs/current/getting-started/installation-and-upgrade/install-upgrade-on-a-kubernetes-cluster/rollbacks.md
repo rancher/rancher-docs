@@ -2,16 +2,37 @@
 title: 回滚
 ---
 
-## 使用 Rancher 2.6.4+ 进行回滚的其他步骤
+本页概述了如何在升级 Rancher 后将 Rancher 回滚到之前的版本。
+
+请在以下情况时按照本页的说明进行操作：
+- 正在运行的 Rancher 实例在备份完成后升级到了更新的版本。
+- 上游（本地）集群与进行备份的集群相同。
+
+:::tip
+
+* [请参阅这些步骤来迁移 Rancher](../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md).
+* 如果你需要还原 Rancher 到同一版本的之前的状态, 请参阅[还原 Rancher](../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher.md).
+
+:::
+
+## 特殊场景下的操作
+
+在以下场景中需要执行替代步骤来进行回滚：
+- 从 v2.6.4 及更高版本回滚到 v2.6.x 的早期版本。
+- 从 v2.7.7 及更高版本回滚到 v2.7.x 的早期版本。
 
 Rancher v2.6.4 将 cluster-api 模块从 v0.4.4 升级到 v1.0.2。反过来，cluster-api 的 v1.0.2 版本将集群 API 的自定义资源定义 (CRD) 从 `cluster.x-k8s.io/v1alpha4` 升级到 `cluster.x-k8s.io/v1beta1`。当你尝试将 Rancher v2.6.4 回滚到以前版本的 Rancher v2.6.x 时，CRD 升级到 v1beta1 会导致回滚失败。这是因为使用旧 apiVersion (v1alpha4) 的 CRD 与 v1beta1 不兼容。
 
-要避免回滚失败，你需要在尝试恢复操作或回滚**之前**运行以下 Rancher 脚本：
+在 Rancher v2.7.7 版本中，应用 `rancher-provisioning-capi` 会自动安装在上游（本地）集群上，来替代嵌入的 cluster-api 控制器。 如果上游集群同时包含该应用和 Rancher v2.7.6 及更早版本，则会发生冲突和意外错误。 因此，如果你尝试从 Rancher v2.7.7 回滚到 Rancher v2.7.x 的任何早期版本，需要执行替代的步骤。
 
-* `verify.sh`：检查集群中是否有任何与 Rancher 相关的资源。
+### 步骤 1： 清理上游（本地）集群
+
+要避免回滚失败，你需要在尝试恢复操作或回滚**之前**根据该[说明](https://github.com/rancher/rancher-cleanup/blob/main/README.md)运行以下 Rancher 脚本：
+
+
 * `cleanup.sh`：清理集群。
+* `verify.sh`：检查集群中是否有任何与 Rancher 相关的资源。
 
-有关详细信息和源代码，请参阅 [rancher/rancher-cleanup repo](https://github.com/rancher/rancher-cleanup)。
 
 :::caution
 
@@ -19,12 +40,17 @@ Rancher v2.6.4 将 cluster-api 模块从 v0.4.4 升级到 v1.0.2。反过来，c
 
 :::
 
-### 从 v2.6.4+ 回滚到较低版本的 v2.6.x
+**结果：** 上游（本地）集群中所有 Rancher 关联的资源将被清理。
 
-1. 按照[说明](https://github.com/rancher/rancher-cleanup/blob/main/README.md)运行脚本。
-1. 按照[说明](../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md)在现有集群上安装 rancher-backup Helm Chart 并恢复之前的状态。
-   1. 省略步骤 3。
-   1. 执行到步骤 4 时，在要回滚到的 local 集群上安装 Rancher 2.6.x 版本。
+请参阅 [rancher/rancher-cleanup 仓库](https://github.com/rancher/rancher-cleanup) 以获取更多细节和源码。
+
+### 步骤 2： 还原备份并启动 Rancher
+
+此时上游集群上应该已经没有 Rancher 相关的资源了。 因此，下一步与将 Rancher 迁移到不包含 Rancher 资源的新集群相同。
+
+按照[说明](../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md)安装 Rancher-Backup Helm Chart 并恢复 Rancher 到之前的状态。请记住：
+1. 步骤 3 可以跳过，因为之前安装的 Cert-Manager 应用应该还在上游（本地）集群中。
+2. 执行到步骤 4 时，在要回滚到的 local 集群上安装你需要的 Rancher 版本。
 
 ## 回滚到 Rancher 2.5.0+
 
@@ -42,14 +68,14 @@ Rancher v2.6.4 将 cluster-api 模块从 v0.4.4 升级到 v1.0.2。反过来，c
 
 :::
 
-### 创建 Restore 自定义资源
+### 步骤 1 ：创建 Restore 自定义资源
 
 1. 点击 **☰ > 集群管理**。
 1. 找到你的本地集群，并点击 **Explore**。
 1. 在左侧导航栏中，点击 **Rancher 备份 > 还原**。
    :::note
 
-   如果 Rancher Backups 应用不可见，你需要到 **Apps** 的 Charts 页面中安装应用。详情请参见[此处](../../../pages-for-subheaders/helm-charts-in-rancher.md#charts)。
+   如果 Rancher Backups 应用不可见，你需要到 **Apps** 的 Charts 页面中安装应用。详情请参见[此处](../../../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md#access-charts)。
 
    :::
 
@@ -91,7 +117,7 @@ kubectl get pods -n cattle-resources-system
 kubectl logs -n cattle-resources-system -f
 ```
 
-### 回滚到上一个 Rancher 版本
+### 步骤 2：回滚到上一个 Rancher 版本
 
 你可以使用 Helm CLI 回滚 Rancher。要回滚到上一个版本：
 
