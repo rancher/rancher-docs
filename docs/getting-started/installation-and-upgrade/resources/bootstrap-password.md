@@ -37,7 +37,7 @@ helm install rancher rancher-<CHART_REPO>/rancher \
 </TabItem>
 <TabItem value="Docker">
 
-Pass the following value to the Docker install command:
+Pass the following value to the [Docker install command](../other-installation-methods/air-gapped-helm-cli-install/docker-install-commands.md):
 
 ```bash
 -e CATTLE_BOOTSTRAP_PASSWORD=<password>
