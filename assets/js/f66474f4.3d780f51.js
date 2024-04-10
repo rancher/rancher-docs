@@ -315,7 +315,7 @@ const metadata = {
     "unversionedId": "getting-started/quick-start-guides/deploy-rancher-manager/prime",
     "id": "version-2.8/getting-started/quick-start-guides/deploy-rancher-manager/prime",
     "title": "Rancher Prime",
-    "description": "Prime is the Rancher ecosystem’s enterprise offering, with additional security, extended lifecycles, and access to Prime-exclusive documentation. Rancher Prime installation assets are hosted on a trusted SUSE registry, owned and managed by Rancher. The trusted Prime registry includes only stable releases that have been community-tested.",
+    "description": "SUSE Rancher introduces Rancher Prime – an evolution of Rancher – from version v2.7. Rancher Prime is the new commercially available enterprise offering of Rancher, built on the same open source code. The Rancher project will continue to be 100% open source. Prime introduces additional value with greater security assurances, extended lifecycles, access to focused architectures and Kubernetes advisories. Rancher Prime will also offer options to get production support for innovative Rancher projects. With Rancher Prime, installation assets are hosted on a trusted registry owned and managed by Rancher.",
     "source": "@site/versioned_docs/version-2.8/getting-started/quick-start-guides/deploy-rancher-manager/prime.md",
     "sourceDirName": "getting-started/quick-start-guides/deploy-rancher-manager",
     "slug": "/getting-started/quick-start-guides/deploy-rancher-manager/prime",
@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/getting-started/quick-start-guides/deploy-rancher-manager/prime.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1701357034,
-    "formattedLastUpdatedAt": "Nov 30, 2023",
+    "lastUpdatedAt": 1712759797,
+    "formattedLastUpdatedAt": "Apr 10, 2024",
     "frontMatter": {
         "title": "Rancher Prime"
     },
@@ -355,7 +355,7 @@ function MDXContent(_param) {
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
         href: "https://ranchermanager.docs.rancher.com/getting-started/quick-start-guides/deploy-rancher-manager/prime"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Prime is the Rancher ecosystem’s enterprise offering, with additional security, extended lifecycles, and access to Prime-exclusive documentation. Rancher Prime installation assets are hosted on a trusted SUSE registry, owned and managed by Rancher. The trusted Prime registry includes only stable releases that have been community-tested. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Prime also offers options for production support, as well as add-ons to your subscription that tailor to your commercial needs.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To learn more and get started with Rancher Prime, please visit `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `SUSE Rancher introduces Rancher Prime – an evolution of Rancher – from version v2.7. Rancher Prime is the new commercially available enterprise offering of Rancher, built on the same open source code. The Rancher project will continue to be 100% open source. Prime introduces additional value with greater security assurances, extended lifecycles, access to focused architectures and Kubernetes advisories. Rancher Prime will also offer options to get production support for innovative Rancher projects. With Rancher Prime, installation assets are hosted on a trusted registry owned and managed by Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Prime also offers options for production support, as well as add-ons to your subscription that tailor to your commercial needs.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To learn more and get started with Rancher Prime, please visit `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://www.rancher.com/quick-start"
     }, `this page`), `.`));
