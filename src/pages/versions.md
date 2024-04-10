@@ -21,7 +21,7 @@ Here you can find links to supporting documentation for the current released ver
     <td><b>v2.8.3</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.8">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.8.3">Release Notes</a></td>
-    <td><center>N/A</center></td>
+    <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-8-3/">Support Matrix</a></td>
     <td><center>&#10003;</center></td>
     <td><center>&#10003;</center></td>
   </tr>
