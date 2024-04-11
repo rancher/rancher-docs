@@ -34,8 +34,9 @@ jobs:
             echo ${ALL_CHANGED_FILES}
             echo "ALL_CHANGED_FILES=$ALL_CHANGED_FILES" >> $GITHUB_ENV
       - uses: errata-ai/vale-action@reviewdog
+        if: steps.changed-markdown-files.outputs.any_changed == 'true'
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         with:
-          separator: ","
+          separator: ", "
           files: ${{env.ALL_CHANGED_FILES}}
