@@ -9,37 +9,33 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
+          submodules: true
       - name: Get all changed markdown files
         id: changed-markdown-files
         uses: tj-actions/changed-files@v42
         with:
             # Avoid using single or double quotes for multiline patterns
             files: |
-               **.md
+               docs/**
+               versioned_docs/**
             separator: ","
+        env:
+            ALL_CHANGED_FILES: ${{ 0 }}
+      - name: No files changed?
+        if: steps.changed-markdown-files.outputs.any_changed == 'false'
+        run: |
+              echo "No files changed"
+              echo "ALL_CHANGED_FILES=$ALL_CHANGED_FILES" >> $GITHUB_ENV
       - name: List all changed files markdown files
         if: steps.changed-markdown-files.outputs.any_changed == 'true'
         env:
             ALL_CHANGED_FILES: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
         run: |
             echo ${ALL_CHANGED_FILES}
-            for file in ${ALL_CHANGED_FILES}; do
-              echo "$file was changed"
-              echo "ALL_CHANGED_FILES=$ALL_CHANGED_FILES" >> $GITHUB_ENV
-            done
-      - name: No files changed?
-        if: steps.changed-markdown-files.outputs.any_changed == 'false'
-        env:
-            ALL_CHANGED_FILES: ${{ 0 }}
-        run: |
-            echo "${ALL_CHANGED_FILES}"
-            for file in ${ALL_CHANGED_FILES}; do
-                echo "No filed changed"
-                echo "ALL_CHANGED_FILES=$ALL_CHANGED_FILES" >> $GITHUB_ENV
-            done
+            echo "ALL_CHANGED_FILES=$ALL_CHANGED_FILES" >> $GITHUB_ENV
       - uses: errata-ai/vale-action@reviewdog
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         with:
-          separator: ","
+          separator: ", "
           files: ${{env.ALL_CHANGED_FILES}}
