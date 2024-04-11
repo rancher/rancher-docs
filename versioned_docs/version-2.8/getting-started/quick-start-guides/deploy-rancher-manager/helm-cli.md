@@ -130,7 +130,7 @@ To install a specific Rancher version, use the `--version` flag (e.g., `--versio
 
 For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
-Note the password requires a minimum of 12 characters.
+See [Setting up the Bootstrap Password](../../installation-and-upgrade/resources/bootstrap-password.md#password-requirements) for password requirments.
 
 ```
 helm install rancher rancher-latest/rancher \
