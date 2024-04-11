@@ -19,6 +19,7 @@ jobs:
                docs/**
                versioned_docs/**
             separator: ","
+            since_last_remote_commit: 'true'
         env:
             ALL_CHANGED_FILES: ${{ 0 }}
       - name: No files changed?
