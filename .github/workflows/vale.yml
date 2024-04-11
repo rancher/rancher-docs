@@ -30,7 +30,9 @@ jobs:
         if: steps.changed-markdown-files.outputs.any_changed == 'true'
         env:
             ALL_CHANGED_FILES: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
+            ALL_CHANGED_FILES_COUNT: ${{ steps.changed-markdown-files.outputs.all_changed_files_count }}
         run: |
+            echo ${ALL_CHANGED_FILES_COUNT}
             echo ${ALL_CHANGED_FILES}
             echo "ALL_CHANGED_FILES=$ALL_CHANGED_FILES" >> $GITHUB_ENV
       - uses: errata-ai/vale-action@reviewdog
