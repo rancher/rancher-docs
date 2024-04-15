@@ -16,7 +16,7 @@ Below is a visual representation of the key components of Rancher Turtles and th
 
 [SLSA](https://slsa.dev/spec/v1.0/about) is a set of incrementally adoptable guidelines for supply chain security, established by industry consensus. The specification set by SLSA is useful for both software producers and consumers: producers can follow SLSA’s guidelines to make their software supply chain more secure, and consumers can use SLSA to make decisions about whether to trust a software package.
 
-Rancher Turtles meets [SLSA Level 3](https://slsa.dev/spec/v1.0/levels#build-l3) requirements for appropriate build platform, consistent build process, and provenance distribution. For more information, visit the [Rancher Turtles Security](https://turtles.docs.rancher.com/docs/security/slsa) document.
+Rancher Turtles meets [SLSA Level 3](https://slsa.dev/spec/v1.0/levels#build-l3) requirements for appropriate build platform, consistent build process, and provenance distribution. For more information, visit the [Rancher Turtles Security](https://turtles.docs.rancher.com/security/slsa) document.
 
 ## Prerequisites
 
