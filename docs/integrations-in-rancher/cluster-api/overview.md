@@ -14,9 +14,9 @@ Below is a visual representation of the key components of Rancher Turtles and th
 
 ## Security
 
-[SLSA](https://slsa.dev/spec/v1.0/about) is a set of incrementally adoptable guidelines for supply chain security, established by industry consensus. The specification set by SLSA is useful for both software producers and consumers: producers can follow SLSA’s guidelines to make their software supply chain more secure, and consumers can use SLSA to make decisions about whether to trust a software package.
+As defined by [Supply-chain Levels for Software Artifacts (SLSA)](https://slsa.dev/spec/v1.0/about), SLSA is a set of incrementally adoptable guidelines for supply chain security, established by industry consensus. The specification set by SLSA is useful for both software producers and consumers: producers can follow SLSA’s guidelines to make their software supply chain more secure, and consumers can use SLSA to make decisions about whether to trust a software package.
 
-Rancher Turtles meets [SLSA Level 3](https://slsa.dev/spec/v1.0/levels#build-l3) requirements for appropriate build platform, consistent build process, and provenance distribution. For more information, visit the [Rancher Turtles Security](https://turtles.docs.rancher.com/security/slsa) document.
+Rancher Turtles meets [SLSA Level 3](https://slsa.dev/spec/v1.0/levels#build-l3) requirements as an appropriate hardened build platform, with consistent build processes, and provenance distribution. For more information, visit the [Rancher Turtles Security](https://turtles.docs.rancher.com/security/slsa) document.
 
 ## Prerequisites
 
@@ -27,7 +27,17 @@ To simplify setting up Rancher for installing Rancher Turtles, the official Ranc
 - Disables the `embedded-cluster-api` feature in Rancher.
 - Deletes the `mutating-webhook-configuration` and `validating-webhook-configuration` webhooks, as they are no longer needed.
 
-The above webhooks can be removed through the Rancher UI as well and are accessed from the left-hand navigation from your local cluster under the **More Resources** > **Admission** section or found by using the **Resource Search** field and inputting the webhook names. Additionally, the following `kubectl` commands can also be used to remove the necessary webhooks:
+These webhooks can be removed through the Rancher UI as well:
+
+1. In the upper left corner, click **☰** > **Cluster Management**.
+1. Select your local cluster.
+1. In the left-hand navigation menu, select **More Resources** > **Admission**.
+1. From the dropdown you will see the Resource pages for `MutatingWebhookConfiguration` and `ValidatingWebhookConfiguration`, click through both pages to remove the necessary webhooks.
+1. On the respective Resource pages, click the **⋮** that are attached to the `mutating-webhook-configuration` and `validating-webhook-configuration` webhooks to select the **Delete** option. Once deleted, you should see the webhooks removed immediately.
+
+They can also be accessed by entering the names of the webhooks into the **Resource Search** field.
+
+The following `kubectl` commands can manually remove the necessary webhooks:
 
 ```console
 kubectl delete mutatingwebhookconfiguration.admissionregistration.k8s.io mutating-webhook-configuration
