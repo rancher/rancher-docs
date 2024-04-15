@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[59755],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[4827],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 86302:
+/***/ 16627:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -321,18 +321,18 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "getting-started/installation-and-upgrade/installation-references/helm-chart-options",
-    "id": "version-2.8/getting-started/installation-and-upgrade/installation-references/helm-chart-options",
+    "id": "getting-started/installation-and-upgrade/installation-references/helm-chart-options",
     "title": "Rancher Helm Chart Options",
     "description": "This page is a configuration reference for the Rancher Helm chart.",
-    "source": "@site/versioned_docs/version-2.8/getting-started/installation-and-upgrade/installation-references/helm-chart-options.md",
+    "source": "@site/docs/getting-started/installation-and-upgrade/installation-references/helm-chart-options.md",
     "sourceDirName": "getting-started/installation-and-upgrade/installation-references",
     "slug": "/getting-started/installation-and-upgrade/installation-references/helm-chart-options",
-    "permalink": "/v2.8/getting-started/installation-and-upgrade/installation-references/helm-chart-options",
+    "permalink": "/getting-started/installation-and-upgrade/installation-references/helm-chart-options",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/getting-started/installation-and-upgrade/installation-references/helm-chart-options.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/getting-started/installation-and-upgrade/installation-references/helm-chart-options.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1713194939,
+    "version": "current",
+    "lastUpdatedAt": 1713204935,
     "formattedLastUpdatedAt": "Apr 15, 2024",
     "frontMatter": {
         "title": "Rancher Helm Chart Options",
@@ -348,11 +348,11 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Installation References",
-        "permalink": "/v2.8/getting-started/installation-and-upgrade/installation-references/"
+        "permalink": "/getting-started/installation-and-upgrade/installation-references/"
     },
     "next": {
         "title": "TLS Settings",
-        "permalink": "/v2.8/getting-started/installation-and-upgrade/installation-references/tls-settings"
+        "permalink": "/getting-started/installation-and-upgrade/installation-references/tls-settings"
     }
 };
 const assets = {};
@@ -459,10 +459,10 @@ function MDXContent(_param) {
         href: "https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-references/helm-chart-options"
     })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This page is a configuration reference for the Rancher Helm chart.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For help choosing a Helm chart version, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/getting-started/installation-and-upgrade/resources/choose-a-rancher-version"
+        "href": "/getting-started/installation-and-upgrade/resources/choose-a-rancher-version"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For information on enabling experimental features, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/how-to-guides/advanced-user-guides/enable-experimental-features/"
+        "href": "/how-to-guides/advanced-user-guides/enable-experimental-features/"
     }, `this page.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "common-options"
     }, `Common Options`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
@@ -623,7 +623,11 @@ function MDXContent(_param) {
         "align": null
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "td"
-    }, `string`), ` - Have Rancher detect and import the "local" (upstream) Rancher server cluster.  _Note: This option is no longer available in v2.5.0.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+    }, `string`), ` - Have Rancher detect and import the "local" (upstream) Rancher server cluster.  `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
+        parentName: "td"
+    }, `Note: This option is no longer available in v2.5.0. Consider using the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "em"
+    }, `restrictedAdmin`), ` option to prevent users from modifying the local cluster.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
@@ -689,7 +693,7 @@ function MDXContent(_param) {
         parentName: "td"
     }, `int`), ` - set the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/v2.8/how-to-guides/advanced-user-guides/enable-api-audit-log"
+        "href": "/how-to-guides/advanced-user-guides/enable-api-audit-log"
     }, `API Audit Log`), ` level. 0 is off. `, `[0-3]`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
@@ -1055,8 +1059,8 @@ function MDXContent(_param) {
         parentName: "td"
     }, `true`), `, the initial Rancher user has restricted access to the local Kubernetes cluster to prevent privilege escalation. For more information, see the section about the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "td",
-        "href": "/v2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions#restricted-admin"
-    }, `restricted-admin role.`), ` _Note: this option is deprecated, and may be removed in v2.10.0 or later.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        "href": "/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions#restricted-admin"
+    }, `restricted-admin role`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
@@ -1134,18 +1138,18 @@ function MDXContent(_param) {
         "id": "bootstrap-password"
     }, `Bootstrap Password`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/getting-started/installation-and-upgrade/resources/bootstrap-password"
+        "href": "/getting-started/installation-and-upgrade/resources/bootstrap-password"
     }, `set a specific bootstrap password`), ` during Rancher installation. If you don't set a specific bootstrap password, Rancher randomly generates a password for the first admin account.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you log in for the first time, use the bootstrap password you set to log in. If you did not set a bootstrap password, the Rancher UI shows commands that can be used to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/getting-started/installation-and-upgrade/resources/bootstrap-password#retrieving-the-bootstrap-password"
+        "href": "/getting-started/installation-and-upgrade/resources/bootstrap-password#retrieving-the-bootstrap-password"
     }, `retrieve the bootstrap password`), `. Run those commands and log in to the account. After you log in for the first time, you are asked to reset the admin password.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "api-audit-log"
     }, `API Audit Log`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Enabling the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/how-to-guides/advanced-user-guides/enable-api-audit-log"
+        "href": "/how-to-guides/advanced-user-guides/enable-api-audit-log"
     }, `API Audit Log`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can collect this log as you would any container log. Enable `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/integrations-in-rancher/logging/"
+        "href": "/integrations-in-rancher/logging/"
     }, `logging`), ` for the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `System`), ` Project on the Rancher server cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
@@ -1166,7 +1170,7 @@ function MDXContent(_param) {
         parentName: "p"
     }, `maxSize`), ` options do not apply. It's advised to use your OS or Docker daemon's log rotation features to control disk space use. Enable `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/integrations-in-rancher/logging/"
+        "href": "/integrations-in-rancher/logging/"
     }, `logging`), ` for the Rancher server cluster or System Project.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Set the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `auditLog.destination`), ` to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -1206,7 +1210,7 @@ function MDXContent(_param) {
         "id": "tls-settings"
     }, `TLS Settings`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `When you install Rancher inside of a Kubernetes cluster, TLS is offloaded at the cluster's ingress controller. The possible TLS settings depend on the used ingress controller.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/getting-started/installation-and-upgrade/installation-references/tls-settings"
+        "href": "/getting-started/installation-and-upgrade/installation-references/tls-settings"
     }, `TLS settings`), ` for more information and options.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "import-local-cluster"
     }, `Import `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -1279,7 +1283,7 @@ Rancher supports CIDR notation ranges in this list.`)), /*#__PURE__*/ (0,_mdx_js
         parentName: "p"
     }, `extraEnv`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The following is an example of setting proxy using the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `extraEnv`), ` chart option:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    }, `proxy`), ` chart option:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-plain"
     }, `--set proxy="http://<proxy_url:proxy_port>/"
@@ -1335,7 +1339,7 @@ Rancher supports CIDR notation ranges in this list.`)), /*#__PURE__*/ (0,_mdx_js
         "id": "private-registry-and-air-gap-installs"
     }, `Private Registry and Air Gap Installs`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For details on installing Rancher with a private registry, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/"
+        "href": "/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/"
     }, `air gap installation docs.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "external-tls-termination"
     }, `External TLS Termination`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `We recommend configuring your load balancer as a Layer 4 balancer, forwarding plain 80/tcp and 443/tcp to the Rancher Management cluster nodes. The Ingress Controller on the cluster will redirect http traffic on port 80 to https on port 443.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You may terminate the SSL/TLS on a L7 load balancer external to the Rancher cluster (ingress). Use the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -1348,7 +1352,7 @@ Rancher supports CIDR notation ranges in this list.`)), /*#__PURE__*/ (0,_mdx_js
         parentName: "p"
     }, `--set privateCA=true`), ` and see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/getting-started/installation-and-upgrade/resources/add-tls-secrets"
+        "href": "/getting-started/installation-and-upgrade/resources/add-tls-secrets"
     }, `Adding TLS Secrets - Using a Private CA Signed Certificate`), ` to add the CA cert for Rancher.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Your load balancer must support long lived websocket connections and will need to insert proxy headers so Rancher can route links correctly.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "configuring-ingress-for-external-tls-when-using-nginx-v025"
     }, `Configuring Ingress for External TLS when Using NGINX v0.25`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In NGINX v0.25, the behavior of NGINX has `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
