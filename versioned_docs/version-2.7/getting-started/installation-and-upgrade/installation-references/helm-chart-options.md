@@ -153,7 +153,7 @@ Rancher supports CIDR notation ranges in this list.
 
 When not including sensitive data, the `proxy` or `extraEnv` chart options can be used. When using `extraEnv` the `noProxy` Helm option is ignored. Therefore, the `NO_PROXY` environment variable must also be set with `extraEnv`.
 
-The following is an example of setting proxy using the `extraEnv` chart option:
+The following is an example of setting proxy using the `proxy` chart option:
 
 ```plain
 --set proxy="http://<proxy_url:proxy_port>/"
