@@ -12,6 +12,12 @@ Below is a visual representation of the key components of Rancher Turtles and th
 
 ![overview](/img/30000ft_view.png)
 
+## Security
+
+[SLSA](https://slsa.dev/spec/v1.0/about) is a set of incrementally adoptable guidelines for supply chain security, established by industry consensus. The specification set by SLSA is useful for both software producers and consumers: producers can follow SLSA’s guidelines to make their software supply chain more secure, and consumers can use SLSA to make decisions about whether to trust a software package.
+
+Rancher Turtles meets [SLSA Level 3](https://slsa.dev/spec/v1.0/levels#build-l3) requirements for appropriate build platform, consistent build process, and provenance distribution. For more information, visit the [Rancher Turtles Security](https://turtles.docs.rancher.com/docs/security/slsa) document.
+
 ## Prerequisites
 
 Before installing Rancher Turtles in your Rancher environment, you must disable Rancher's `embedded-cluster-api` functionality. This also includes cleaning up Rancher-specific webhooks that otherwise would conflict with CAPI ones.
@@ -20,6 +26,35 @@ To simplify setting up Rancher for installing Rancher Turtles, the official Ranc
 
 - Disables the `embedded-cluster-api` feature in Rancher.
 - Deletes the `mutating-webhook-configuration` and `validating-webhook-configuration` webhooks, as they are no longer needed.
+
+The above webhooks can be removed through the Rancher UI as well and are accessed from the left-hand navigation from your local cluster under the **More Resources** > **Admission** section or found by using the **Resource Search** field and inputting the webhook names. Additionally, the following `kubectl` commands can also be used to remove the necessary webhooks:
+
+```console
+kubectl delete mutatingwebhookconfiguration.admissionregistration.k8s.io mutating-webhook-configuration
+```
+
+```console
+kubectl delete validatingwebhookconfigurations.admissionregistration.k8s.io validating-webhook-configuration
+```
+
+Use the following example to disable the `embedded-cluster-api` feature from the console:
+
+1. Create a `feature.yaml` file, with `embedded-cluster-api` set to false:
+
+```yaml title="feature.yaml"
+apiVersion: management.cattle.io/v3
+kind: Feature
+metadata:
+  name: embedded-cluster-api
+spec:
+  value: false
+```
+
+2. Use `kubectl` to apply the `feature.yaml` file to the cluster:
+
+```bash
+kubectl apply -f feature.yaml
+```
 
 ## Installing the Rancher Turtles Operator
 
@@ -63,14 +98,14 @@ This demo illustrates how to use the Rancher UI to install Rancher Turtles, crea
 
 ### Installing via Helm
 
-There are two ways to install Rancher Turtles with Helm, depending on whether you include the CAPI operator as a dependency:
+There are two ways to install Rancher Turtles with Helm, depending on whether you include the [CAPI Operator](https://github.com/kubernetes-sigs/cluster-api-operator) as a dependency:
 
 - [Install Rancher Turtles with CAPI Operator as a dependency](#installing-rancher-turtles-with-cluster-api-capi-operator-as-a-helm-dependency).
 - [Install Rancher Turtles without CAPI Operator](#installing-rancher-turtles-without-cluster-api-capi-operator-as-a-helm-dependency).
 
 The CAPI Operator is required for installing Rancher Turtles. You can choose whether you want to take care of this dependency yourself or let the Rancher Turtles Helm chart manage it for you. [Installing Turtles as a dependency](#installing-rancher-turtles-with-cluster-api-capi-operator-as-a-helm-dependency) is simpler, but your best option depends on your specific configuration.
 
-The CAPI Operator allows for handling the lifecycle of CAPI providers using a declarative approach, extending the capabilities of `clusterctl`. If you want to learn more about it, you can refer to [Cluster API Operator book](https://cluster-api-operator.sigs.k8s.io/).
+The CAPI Operator allows for handling the lifecycle of [CAPI providers](https://turtles.docs.rancher.com/tasks/capi-operator/installing_core_provider) using a declarative approach, extending the capabilities of `clusterctl`. If you want to learn more about it, you can refer to [Cluster API Operator book](https://cluster-api-operator.sigs.k8s.io/).
 
 #### Installing Rancher Turtles with `Cluster API (CAPI) Operator` as a Helm dependency
 
@@ -213,9 +248,3 @@ spec:
 ```bash
 kubectl apply -f feature.yaml
 ```
-
-## Security
-
-[SLSA](https://slsa.dev/spec/v1.0/about) is a set of incrementally adoptable guidelines for supply chain security, established by industry consensus. The specification set by SLSA is useful for both software producers and consumers: producers can follow SLSA’s guidelines to make their software supply chain more secure, and consumers can use SLSA to make decisions about whether to trust a software package.
-
-Rancher Turtles meets [SLSA Level 3](https://slsa.dev/spec/v1.0/levels#build-l3) requirements for appropriate build platform, consistent build process, and provenance distribution. For more information, visit the [Rancher Turtles Security](https://turtles.docs.rancher.com/docs/security/slsa) document.
