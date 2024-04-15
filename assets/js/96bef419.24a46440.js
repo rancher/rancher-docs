@@ -332,7 +332,7 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/getting-started/installation-and-upgrade/installation-references/helm-chart-options.md",
     "tags": [],
     "version": "2.7",
-    "lastUpdatedAt": 1713205013,
+    "lastUpdatedAt": 1713194939,
     "formattedLastUpdatedAt": "Apr 15, 2024",
     "frontMatter": {
         "title": "Rancher Helm Chart Options",
@@ -1281,7 +1281,7 @@ Rancher supports CIDR notation ranges in this list.`)), /*#__PURE__*/ (0,_mdx_js
         parentName: "p"
     }, `extraEnv`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The following is an example of setting proxy using the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `proxy`), ` chart option:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    }, `extraEnv`), ` chart option:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-plain"
     }, `--set proxy="http://<proxy_url:proxy_port>/"
