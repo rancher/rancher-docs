@@ -1,5 +1,5 @@
 ---
-title: Technical
+title: Technical FAQ
 ---
 
 <head>

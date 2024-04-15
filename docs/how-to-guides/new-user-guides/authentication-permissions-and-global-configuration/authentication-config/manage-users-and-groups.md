@@ -8,7 +8,7 @@ title: Users and Groups
 
 Rancher relies on users and groups to determine who is allowed to log in to Rancher and which resources they can access. When you configure an external authentication provider, users from that provider will be able to log in to your Rancher server. When a user logs in, the authentication provider will supply your Rancher server with a list of groups to which the user belongs.
 
-Access to clusters, projects, multi-cluster apps, and global DNS providers and entries can be controlled by adding either individual users or groups to these resources. When you add a group to a resource, all users who are members of that group in the authentication provider, will be able to access the resource with the permissions that you've specified for the group. For more information on roles and permissions, see [Role Based Access Control](../manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md).
+Access to clusters, projects, and global DNS providers and entries can be controlled by adding either individual users or groups to these resources. When you add a group to a resource, all users who are members of that group in the authentication provider, will be able to access the resource with the permissions that you've specified for the group. For more information on roles and permissions, see [Role Based Access Control](../manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md).
 
 ## Managing Members
 

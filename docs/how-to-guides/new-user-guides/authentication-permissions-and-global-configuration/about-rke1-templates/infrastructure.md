@@ -25,7 +25,6 @@ This section focuses on how to use Terraform with the [Rancher 2 Terraform provi
 Terraform allows you to:
 
 - Define almost any kind of infrastructure-as-code, including servers, databases, load balancers, monitoring, firewall settings, and SSL certificates
-- Leverage catalog apps and multi-cluster apps
 - Codify infrastructure across many platforms, including Rancher and major cloud providers
 - Commit infrastructure-as-code to version control
 - Easily repeat configuration and setup of infrastructure

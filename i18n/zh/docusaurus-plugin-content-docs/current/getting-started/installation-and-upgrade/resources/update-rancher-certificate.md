@@ -4,7 +4,7 @@ title: 更新 Rancher 证书
 
 ## 更新私有 CA 证书
 
-按照以下步骤轮换[安装在 Kubernetes 集群上](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md)、由 Rancher 使用的 SSL 证书和私有 CA，或转用由私有 CA 签发的 SSL 证书。
+按照以下步骤轮换[安装在 Kubernetes 集群上](../install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md)、由 Rancher 使用的 SSL 证书和私有 CA，或转用由私有 CA 签发的 SSL 证书。
 
 步骤概述：
 

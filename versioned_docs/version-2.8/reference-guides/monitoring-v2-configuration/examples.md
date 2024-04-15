@@ -1,5 +1,5 @@
 ---
-title: Monitoring V2 Configuration Examples
+title: Monitoring Configuration Examples
 ---
 
 <head>

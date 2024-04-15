@@ -11,7 +11,7 @@ title: 选择 Rancher 版本
 <Tabs>
 <TabItem value="Helm Charts">
 
-如果 Rancher Server 是[安装在 Kubernetes 集群上](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md)的，Rancher Server 的安装，升级和回滚中，都是使用 Kubernetes 集群上的 Helm Chart 来安装 Rancher 的。因此，在准备安装或升级 Rancher 高可用时，必须添加包含用于安装 Rancher 的 Chart 的 Helm Chart 仓库。
+如果 Rancher Server 是[安装在 Kubernetes 集群上](../install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md)的，Rancher Server 的安装，升级和回滚中，都是使用 Kubernetes 集群上的 Helm Chart 来安装 Rancher 的。因此，在准备安装或升级 Rancher 高可用时，必须添加包含用于安装 Rancher 的 Chart 的 Helm Chart 仓库。
 
 请参见 [Helm 版本要求](helm-version-requirements.md)选择 Helm 版本来安装 Rancher。
 
