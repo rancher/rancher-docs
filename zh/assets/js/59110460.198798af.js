@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[99245],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[90820],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 54595:
+/***/ 96830:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,52 +308,47 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Deprecated Features in Rancher'
+    title: '安装和配置 kubectl'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "faq/deprecated-features",
-    "id": "faq/deprecated-features",
-    "title": "Deprecated Features in Rancher",
-    "description": "What is Rancher's deprecation policy?",
-    "source": "@site/docs/faq/deprecated-features.md",
+    "unversionedId": "faq/install-and-configure-kubectl",
+    "id": "faq/install-and-configure-kubectl",
+    "title": "安装和配置 kubectl",
+    "description": "kubectl 是一个 CLI 工具，用于运行 Kubernetes 集群相关的命令。Rancher 2.x 中的许多维护和管理任务都需要它。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/current/faq/install-and-configure-kubectl.md",
     "sourceDirName": "faq",
-    "slug": "/faq/deprecated-features",
-    "permalink": "/zh/faq/deprecated-features",
+    "slug": "/faq/install-and-configure-kubectl",
+    "permalink": "/zh/faq/install-and-configure-kubectl",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/faq/deprecated-features.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/faq/install-and-configure-kubectl.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1712246648,
-    "formattedLastUpdatedAt": "2024年4月4日",
+    "lastUpdatedAt": 1663953084,
+    "formattedLastUpdatedAt": "2022年9月23日",
     "frontMatter": {
-        "title": "Deprecated Features in Rancher"
+        "title": "安装和配置 kubectl"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "一般常见问题解答",
-        "permalink": "/zh/faq/general-faq"
+        "title": "Rancher 中已弃用的功能",
+        "permalink": "/zh/faq/deprecated-features"
     },
     "next": {
-        "title": "安装和配置 kubectl",
-        "permalink": "/zh/faq/install-and-configure-kubectl"
+        "title": "Dockershim",
+        "permalink": "/zh/faq/dockershim"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'What is Rancher&#39;s deprecation policy?',
-        id: 'what-is-ranchers-deprecation-policy',
+        value: '安装',
+        id: '安装',
         level: 3
     },
     {
-        value: 'Where can I find out which features have been deprecated in Rancher?',
-        id: 'where-can-i-find-out-which-features-have-been-deprecated-in-rancher',
-        level: 3
-    },
-    {
-        value: 'What can I expect when a feature is marked for deprecation?',
-        id: 'what-can-i-expect-when-a-feature-is-marked-for-deprecation',
+        value: '配置',
+        id: '配置',
         level: 3
     }
 ];
@@ -368,78 +363,40 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
-        rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/faq/deprecated-features"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "what-is-ranchers-deprecation-policy"
-    }, `What is Rancher's deprecation policy?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `We have published our official deprecation policy in the support `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `kubectl`), ` 是一个 CLI 工具，用于运行 Kubernetes 集群相关的命令。Rancher 2.x 中的许多维护和管理任务都需要它。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "安装"
+    }, `安装`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://rancher.com/support-maintenance-terms"
-    }, `terms of service`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "where-can-i-find-out-which-features-have-been-deprecated-in-rancher"
-    }, `Where can I find out which features have been deprecated in Rancher?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher will publish deprecated features as part of the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://github.com/rancher/rancher/releases"
-    }, `release notes`), ` for Rancher found on GitHub. Please consult the following patch releases for deprecated features:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
-        parentName: "table"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "thead"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
-        parentName: "tr",
-        "align": null
-    }, `Patch Version`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
-        parentName: "tr",
-        "align": null
-    }, `Release Date`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tbody", {
-        parentName: "table"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "td",
-        "href": "https://github.com/rancher/rancher/releases/tag/v2.8.3"
-    }, `2.8.3`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `Mar 28, 2024`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "td",
-        "href": "https://github.com/rancher/rancher/releases/tag/v2.8.2"
-    }, `2.8.2`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `Feb 8, 2024`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "td",
-        "href": "https://github.com/rancher/rancher/releases/tag/v2.8.1"
-    }, `2.8.1`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `Jan 22, 2024`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
-        parentName: "tbody"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "td",
-        "href": "https://github.com/rancher/rancher/releases/tag/v2.8.0"
-    }, `2.8.0`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
-        parentName: "tr",
-        "align": null
-    }, `Dec 6, 2023`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "what-can-i-expect-when-a-feature-is-marked-for-deprecation"
-    }, `What can I expect when a feature is marked for deprecation?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In the release where functionality is marked as "Deprecated", it will still be available and supported allowing upgrades to follow the usual procedure. Once upgraded, users/admins should start planning to move away from the deprecated functionality before upgrading to the release it marked as removed. The recommendation for new deployments is to not use the deprecated feature.`));
+        "href": "https://kubernetes.io/docs/tasks/tools/install-kubectl/"
+    }, `kubectl 安装`), `将 kubectl 安装到你的操作系统上。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "配置"
+    }, `配置`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `使用 RKE 创建 Kubernetes 集群时，RKE 会在本地目录中创建一个 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `kube_config_cluster.yml`), `，该文件包含使用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `kubectl`), ` 或 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `helm`), ` 等工具连接到新集群的凭证。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你可以将此文件复制为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `$HOME/.kube/config`), `。如果你使用多个 Kubernetes 集群，将 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `KUBECONFIG`), ` 环境变量设置为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `kube_config_cluster.yml`), ` 的路径：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `export KUBECONFIG=$(pwd)/kube_config_cluster.yml
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `使用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `kubectl`), ` 测试你的连接性，并查看你是否可以获取节点列表：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `kubectl get nodes
+ NAME                          STATUS    ROLES                      AGE       VERSION
+165.227.114.63                Ready     controlplane,etcd,worker   11m       v1.10.1
+165.227.116.167               Ready     controlplane,etcd,worker   11m       v1.10.1
+165.227.127.226               Ready     controlplane,etcd,worker   11m       v1.10.1
+`)));
 }
 MDXContent.isMDXComponent = true;
 

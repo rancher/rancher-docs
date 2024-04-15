@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[65333],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[69210],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 43003:
+/***/ 80645:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,39 +308,55 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Cluster API (CAPI) with Rancher Turtles'
+    title: 'Rancher 中已弃用的功能'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/cluster-api/cluster-api",
-    "id": "version-2.8/integrations-in-rancher/cluster-api/cluster-api",
-    "title": "Cluster API (CAPI) with Rancher Turtles",
-    "description": "Rancher Turtles is a Rancher extension that manages the lifecycle of provisioned Kubernetes clusters, by providing integration between your Cluster API (CAPI) and Rancher. With Rancher Turtles, you can:",
-    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/cluster-api/cluster-api.md",
-    "sourceDirName": "integrations-in-rancher/cluster-api",
-    "slug": "/integrations-in-rancher/cluster-api/",
-    "permalink": "/zh/v2.8/integrations-in-rancher/cluster-api/",
+    "unversionedId": "faq/deprecated-features",
+    "id": "version-2.8/faq/deprecated-features",
+    "title": "Rancher 中已弃用的功能",
+    "description": "Rancher 的弃用策略是什么？",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.8/faq/deprecated-features.md",
+    "sourceDirName": "faq",
+    "slug": "/faq/deprecated-features",
+    "permalink": "/zh/v2.8/faq/deprecated-features",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/cluster-api/cluster-api.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/faq/deprecated-features.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1712604400,
-    "formattedLastUpdatedAt": "2024年4月8日",
+    "lastUpdatedAt": 1713186274,
+    "formattedLastUpdatedAt": "2024年4月15日",
     "frontMatter": {
-        "title": "Cluster API (CAPI) with Rancher Turtles"
+        "title": "Rancher 中已弃用的功能"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Supportconfig Bundle",
-        "permalink": "/zh/v2.8/integrations-in-rancher/cloud-marketplace/supportconfig"
+        "title": "一般常见问题解答",
+        "permalink": "/zh/v2.8/faq/general-faq"
     },
     "next": {
-        "title": "Overview",
-        "permalink": "/zh/v2.8/integrations-in-rancher/cluster-api/overview"
+        "title": "安装和配置 kubectl",
+        "permalink": "/zh/v2.8/faq/install-and-configure-kubectl"
     }
 };
 const assets = {};
-const toc = [];
+const toc = [
+    {
+        value: 'Rancher 的弃用策略是什么？',
+        id: 'rancher-的弃用策略是什么',
+        level: 3
+    },
+    {
+        value: '在哪里可以了解 Rancher 中已弃用哪些功能？',
+        id: '在哪里可以了解-rancher-中已弃用哪些功能',
+        level: 3
+    },
+    {
+        value: '当一个功能被标记为弃用我可以得到什么样的预期？',
+        id: '当一个功能被标记为弃用我可以得到什么样的预期',
+        level: 3
+    }
+];
 const layoutProps = {
     toc
 };
@@ -354,27 +370,76 @@ function MDXContent(_param) {
         mdxType: "MDXLayout"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/cluster-api"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        href: "https://ranchermanager.docs.rancher.com/zh/faq/deprecated-features"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "rancher-的弃用策略是什么"
+    }, `Rancher 的弃用策略是什么？`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `我们已经在支持的`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://turtles.docs.rancher.com/"
-    }, `Rancher Turtles`), ` is a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "href": "https://rancher.com/support-maintenance-terms"
+    }, `服务条款`), `中发布了官方的弃用策略。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "在哪里可以了解-rancher-中已弃用哪些功能"
+    }, `在哪里可以了解 Rancher 中已弃用哪些功能？`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 将在 GitHub 上发布的 Rancher 的`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../rancher-extensions.md"
-    }, `Rancher extension`), ` that manages the lifecycle of provisioned Kubernetes clusters, by providing integration between your Cluster API (CAPI) and Rancher. With Rancher Turtles, you can:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Import CAPI clusters into Rancher, by installing the Rancher Cluster Agent in CAPI provisioned clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Configure the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "https://turtles.docs.rancher.com/docs/reference-guides/rancher-turtles-chart/values#cluster-api-operator-values"
-    }, `CAPI Operator`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/zh/v2.8/integrations-in-rancher/cluster-api/overview"
-    }, `Overview`), ` section outlines installation options, Rancher Turtles architecture, and a brief demo. For more details, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://turtles.docs.rancher.com/"
-    }, `Rancher Turtles documentation`), `.`));
+        "href": "https://github.com/rancher/rancher/releases"
+    }, `发版说明`), `中发布已弃用的功能。有关已弃用的功能，请参阅以下的补丁版本：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
+        parentName: "table"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "thead"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
+        parentName: "tr",
+        "align": null
+    }, `Patch 版本`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
+        parentName: "tr",
+        "align": null
+    }, `发布时间`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tbody", {
+        parentName: "table"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.8.3"
+    }, `2.8.3`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `2024 年 3 月 28 日`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.8.2"
+    }, `2.8.2`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `2024 年 2 月 8 日`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.8.1"
+    }, `2.8.1`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `2024 年 1 月 22 日`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.8.0"
+    }, `2.8.0`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `2023 年 12 月 6 日`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "当一个功能被标记为弃用我可以得到什么样的预期"
+    }, `当一个功能被标记为弃用我可以得到什么样的预期？`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `当功能被标记为“已弃用”时，它依然可用并得到支持，允许按照常规的流程进行升级。一旦升级完成，用户/管理员应开始计划在升级到标记为已移除的版本之前放弃使用已弃用的功能。对于新的部署，建议不要使用已弃用的功能。`));
 }
 MDXContent.isMDXComponent = true;
 

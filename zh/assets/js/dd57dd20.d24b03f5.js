@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[13781],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[5835],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 65991:
+/***/ 86451:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "integrations-in-rancher/cloud-marketplace/supportconfig",
-    "id": "version-2.8/integrations-in-rancher/cloud-marketplace/supportconfig",
+    "id": "integrations-in-rancher/cloud-marketplace/supportconfig",
     "title": "Supportconfig Bundle",
     "description": "安装 CSP Adapter 后，你将能够生成一个 Supportconfig Bundle。此 Bundle 是一个 tar 包，可用于快速提供支持信息。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.8/integrations-in-rancher/cloud-marketplace/supportconfig.md",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/current/integrations-in-rancher/cloud-marketplace/supportconfig.md",
     "sourceDirName": "integrations-in-rancher/cloud-marketplace",
     "slug": "/integrations-in-rancher/cloud-marketplace/supportconfig",
-    "permalink": "/zh/v2.8/integrations-in-rancher/cloud-marketplace/supportconfig",
+    "permalink": "/zh/integrations-in-rancher/cloud-marketplace/supportconfig",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/cloud-marketplace/supportconfig.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/integrations-in-rancher/cloud-marketplace/supportconfig.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "2023年10月6日",
+    "version": "current",
+    "lastUpdatedAt": 1666730466,
+    "formattedLastUpdatedAt": "2022年10月25日",
     "frontMatter": {
         "title": "Supportconfig Bundle"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "常见问题",
-        "permalink": "/zh/v2.8/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues"
+        "permalink": "/zh/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues"
     },
     "next": {
-        "title": "Cluster API (CAPI) with Rancher Turtles",
-        "permalink": "/zh/v2.8/integrations-in-rancher/cluster-api/"
+        "title": "Cluster API (CAPI) 与 Rancher Turtles",
+        "permalink": "/zh/integrations-in-rancher/cluster-api/"
     }
 };
 const assets = {};

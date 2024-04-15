@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[21834],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[13781],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 28209:
+/***/ 65991:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,39 +308,50 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: '一般常见问题解答'
+    title: 'Supportconfig Bundle'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "faq/general-faq",
-    "id": "faq/general-faq",
-    "title": "一般常见问题解答",
-    "description": "本文包含了用户常见的 Rancher 2.x 问题。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/current/faq/general-faq.md",
-    "sourceDirName": "faq",
-    "slug": "/faq/general-faq",
-    "permalink": "/zh/faq/general-faq",
+    "unversionedId": "integrations-in-rancher/cloud-marketplace/supportconfig",
+    "id": "version-2.8/integrations-in-rancher/cloud-marketplace/supportconfig",
+    "title": "Supportconfig Bundle",
+    "description": "安装 CSP Adapter 后，你将能够生成一个 Supportconfig Bundle。此 Bundle 是一个 tar 包，可用于快速提供支持信息。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.8/integrations-in-rancher/cloud-marketplace/supportconfig.md",
+    "sourceDirName": "integrations-in-rancher/cloud-marketplace",
+    "slug": "/integrations-in-rancher/cloud-marketplace/supportconfig",
+    "permalink": "/zh/v2.8/integrations-in-rancher/cloud-marketplace/supportconfig",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/faq/general-faq.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/cloud-marketplace/supportconfig.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1691458626,
-    "formattedLastUpdatedAt": "2023年8月8日",
+    "version": "2.8",
+    "lastUpdatedAt": 1696627994,
+    "formattedLastUpdatedAt": "2023年10月6日",
     "frontMatter": {
-        "title": "一般常见问题解答"
+        "title": "Supportconfig Bundle"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Rancher 扩展",
-        "permalink": "/zh/integrations-in-rancher/rancher-extensions"
+        "title": "常见问题",
+        "permalink": "/zh/v2.8/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/common-issues"
     },
     "next": {
-        "title": "Deprecated Features in Rancher",
-        "permalink": "/zh/faq/deprecated-features"
+        "title": "Cluster API (CAPI) 与 Rancher Turtles",
+        "permalink": "/zh/v2.8/integrations-in-rancher/cluster-api/"
     }
 };
 const assets = {};
-const toc = [];
+const toc = [
+    {
+        value: '通过 Rancher 访问',
+        id: '通过-rancher-访问',
+        level: 3
+    },
+    {
+        value: '不通过 Rancher 进行访问',
+        id: '不通过-rancher-进行访问',
+        level: 3
+    }
+];
 const layoutProps = {
     toc
 };
@@ -352,45 +363,80 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `本文包含了用户常见的 Rancher 2.x 问题。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `有关常见技术问题，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/zh/faq/technical-items"
-    }, `常见技术问题解答`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `安装 CSP Adapter 后，你将能够生成一个 Supportconfig Bundle。此 Bundle 是一个 tar 包，可用于快速提供支持信息。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你可以通过 Rancher 或通过直接访问安装 Rancher 的集群来创建这些 Bundle。请注意，建议通过 Rancher 访问。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `Rancher 2.x 支持 Docker Swarm 和 Mesos 作为环境类型吗？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果你在 Rancher 2.x 中创建环境，Swarm 和 Mesos 将不再是可选的标准选项。但是，Swarm 和 Mesos 还能继续作为可以部署的商店应用程序。这是一个艰难的决定，但这是大势所趋。比如说，15,000 多个集群可能只有大约 200 个在运行 Swarm。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `注意`), `：无论采用何种方法，只有管理员可以生成/下载 Supportconfig Bundle。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "通过-rancher-访问"
+    }, `通过 Rancher 访问`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `首先，点击汉堡菜单。然后单击 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `是否可以使用 Rancher 2.x 管理 Azure Kubernetes 服务？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `是的。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `Get Support`), ` 按钮。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
+        alt: "Get Support",
+        src: (__webpack_require__(25225)/* ["default"] */ .Z),
+        width: "280",
+        height: "525"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在下一页中，单击 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `Rancher 是否支持 Windows？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 支持 Windows Server 1809 容器。有关如何使用 Windows Worker 节点设置集群的详细信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "../pages-for-subheaders/use-windows-clusters.md"
-    }, `为 Windows 配置自定义集群`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `Generate Support Config`), ` 按钮。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `Rancher 是否支持 Istio？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 支持 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "../pages-for-subheaders/istio.md"
-    }, `Istio`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `此外，Istio 是在我们的微型 PaaS “Rio” 中实现的，它可以运行在 Rancher 2.x 以及任何符合 CNCF 的 Kubernetes 集群上。详情请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://rio.io/"
-    }, `这里`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `注意`), `：如果未安装 Adapter ，则不会出现生成 Supportconfig Bundle 的选项。你必须安装 CSP Adapter 才能生成 Supportconfig Bundle。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
+        alt: "Get Support",
+        src: (__webpack_require__(74321)/* ["default"] */ .Z),
+        width: "1279",
+        height: "882"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "不通过-rancher-进行访问"
+    }, `不通过 Rancher 进行访问`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `首先，为安装 Rancher 的集群生成 kubeconfig。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `Rancher 2.x 是否支持使用 Hashicorp 的 Vault 来存储密文？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `密文管理已在我们的 roadmap 上，但我们尚未将该功能分配给特定版本。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `注意`), `：如果 Rancher 宕机，你将无法使用 Rancher 生成的 kubeconfig 令牌访问集群。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `配置你的 shell 环境以使用此 kubeconfig 令牌：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `export KUBECONFIG=$MY_KUBECONFIG_PATH
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `建议在运行此命令时创建一个临时工作目录，如下所示：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `mkdir temp && cd temp
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `然后，检索 Supportconfig Bundle：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `mkdir rancher && kubectl get configmap csp-config -n cattle-csp-adapter-system -o=jsonpath='{.data.data}' >> rancher/config.json && tar -c -f supportconfig_rancher.tar rancher && rm -rf rancher
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `这将在你的当前目录中创建一个 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `Rancher 2.x 是否也支持 RKT 容器？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `目前，我们只支持 Docker。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `supportconfig_rancher.tar`), ` 文件。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `由于 gnu-tar 和 bsd-tar 不兼容，在 Mac 上运行这些命令的用户可能会遇到问题。如果支持部门在读取你制作的 Supportconfig 时出现问题，你可以先尝试在你的路径上将 gnu-tar 作为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `Rancher 2.x 是否支持将 Calico、Contiv、Contrail、Flannel、Weave net 等网络插件用于嵌入和已注册的 Kubernetes？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 开箱即用地为 Kubernetes 集群提供了几个 CNI 网络插件，分别是 Canal、Flannel、Calico 和 Weave。有关官方支持的详细信息，请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://rancher.com/support-maintenance-terms/"
-    }, `Rancher 支持矩阵`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Rancher 是否计划支持 Traefik？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `目前，我们不打算提供嵌入式 Traefik 支持，但我们仍在探索负载均衡方案。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `我可以将 OpenShift Kubernetes 集群导入 2.x 吗？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `我们的目标是运行任何上游 Kubernetes 集群。因此，Rancher 2.x 应该可以与 OpenShift 一起使用，但我们尚未对此进行测试。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Rancher 会集成 Longhorn 吗？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `是的。Longhorn 已集成到 Rancher 2.5+ 中。`));
+    }, `gtar`), ` 进行访问，然后运行以下命令：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-bash"
+    }, `mkdir rancher && kubectl get configmap csp-config -n cattle-csp-adapter-system -o=jsonpath='{.data.data}' >> rancher/config.json && gtar -c -f supportconfig_rancher.tar rancher && rm -rf rancher
+`)));
 }
 MDXContent.isMDXComponent = true;
 
+
+/***/ }),
+
+/***/ 74321:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/generate-support-config-912d39d2192bf813b437e5438c624d4a.png");
+
+/***/ }),
+
+/***/ 25225:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/support-help-56c36c59f2a37b080d228a10d55f2ad1.png");
 
 /***/ })
 

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[76969],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[89344],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 83750:
+/***/ 72484:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,17 +313,17 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "integrations-in-rancher/cis-scans/cis-scans",
-    "id": "integrations-in-rancher/cis-scans/cis-scans",
+    "id": "version-2.8/integrations-in-rancher/cis-scans/cis-scans",
     "title": "CIS 扫描",
     "description": "Rancher 可以通过运行安全扫描来检查 Kubernetes 是否按照 CIS Kubernetes Benchmark 中定义的安全最佳实践进行部署。CIS 扫描可以运行在任何 Kubernetes 集群，包括托管的 Kubernetes，例如 EKS、AKS 和 GKE。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/current/integrations-in-rancher/cis-scans/cis-scans.md",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.8/integrations-in-rancher/cis-scans/cis-scans.md",
     "sourceDirName": "integrations-in-rancher/cis-scans",
     "slug": "/integrations-in-rancher/cis-scans/",
-    "permalink": "/zh/integrations-in-rancher/cis-scans/",
+    "permalink": "/zh/v2.8/integrations-in-rancher/cis-scans/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/integrations-in-rancher/cis-scans/cis-scans.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/cis-scans/cis-scans.md",
     "tags": [],
-    "version": "current",
+    "version": "2.8",
     "lastUpdatedAt": 1712783943,
     "formattedLastUpdatedAt": "2024年4月10日",
     "frontMatter": {
@@ -331,12 +331,12 @@ const metadata = {
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Overview",
-        "permalink": "/zh/integrations-in-rancher/cluster-api/overview"
+        "title": "概述",
+        "permalink": "/zh/v2.8/integrations-in-rancher/cluster-api/overview"
     },
     "next": {
         "title": "配置",
-        "permalink": "/zh/integrations-in-rancher/cis-scans/configuration-reference"
+        "permalink": "/zh/v2.8/integrations-in-rancher/cis-scans/configuration-reference"
     }
 };
 const assets = {};
@@ -408,7 +408,7 @@ function MDXContent(_param) {
         "id": "关于生成的报告"
     }, `关于生成的报告`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `每次扫描都会生成一份报告，你可以在 Rancher UI 中查看该报告，并以 CSV 格式下载它。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `默认情况下使用 CIS Benchmark v1.6。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Benchmark 版本包含在生成的报告中。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Benchmark 提供两种类型的建议，分别是自动（Automated）和手动（Manual）。Benchmark 中标记为 Manual 的建议不包含在生成的报告中。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `一些测试会被标记为“不适用”。由于 Rancher 配置 RKE 集群的方式，这些测试不会在任何 CIS 扫描中运行。有关如何审核测试结果，以及为什么某些测试会被标记为不适用，请参阅 Rancher 的 Kubernetes 对应版本的`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/reference-guides/rancher-security/#CIS-Benchmark-%E5%92%8C%E8%87%AA%E6%88%91%E8%AF%84%E4%BC%B0"
+        "href": "/zh/v2.8/reference-guides/rancher-security/#CIS-Benchmark-%E5%92%8C%E8%87%AA%E6%88%91%E8%AF%84%E4%BC%B0"
     }, `自测指南`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `该报告包含以下信息：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
         parentName: "table"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
@@ -555,7 +555,7 @@ function MDXContent(_param) {
         parentName: "td"
     }, `kube-bench`), ` 报告，则会显示。`)))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/reference-guides/rancher-security/"
+        "href": "/zh/v2.8/reference-guides/rancher-security/"
     }, `集群加固指南中的表格`), `，以了解 Kubernetes、Benchmark、Rancher 以及我们的集群强化指南的版本对应关系。另外，请参阅强化指南，以获取符合 CIS 的集群的配置文件以及修复失败测试的信息。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "测试配置文件"
     }, `测试配置文件`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `以下是可用的配置文件：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -616,7 +616,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, `Hardened`), `：此配置文件不会跳过任何测试（不适用的测试除外）。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `EKS 和 GKE 集群扫描的配置文件基于这些集群类型特定的 CIS Benchmark 版本。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `要通过 “Hardened” 配置文件，你需要遵从`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/reference-guides/rancher-security/#Rancher-%E5%8A%A0%E5%9B%BA%E6%8C%87%E5%8D%97"
+        "href": "/zh/v2.8/reference-guides/rancher-security/#Rancher-%E5%8A%A0%E5%9B%BA%E6%8C%87%E5%8D%97"
     }, `强化指南`), `并使用强化指南中定义的 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `cluster.yml`), ` 来配置一个强化集群。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `默认配置文件和支持的 CIS Benchmark 版本取决于扫描的集群类型：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -635,22 +635,22 @@ function MDXContent(_param) {
         "id": "跳过和不适用的测试"
     }, `跳过和不适用的测试`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `有关要跳过和不适用的测试列表，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/how-to-guides/advanced-user-guides/cis-scan-guides/skip-tests"
+        "href": "/zh/v2.8/how-to-guides/advanced-user-guides/cis-scan-guides/skip-tests"
     }, `此页面`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `目前，只有用户定义的跳过测试会在生成报告中标记为跳过。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果某个默认配置文件将某个测试定义为跳过，则该测试也会标记为不适用。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "rbac"
     }, `RBAC`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `有关权限的详细信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/integrations-in-rancher/cis-scans/rbac-for-cis-scans"
+        "href": "/zh/v2.8/integrations-in-rancher/cis-scans/rbac-for-cis-scans"
     }, `此页面`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "配置"
     }, `配置`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `有关为扫描、配置文件和 Benchmark 版本配置自定义资源的更多信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/integrations-in-rancher/cis-scans/configuration-reference"
+        "href": "/zh/v2.8/integrations-in-rancher/cis-scans/configuration-reference"
     }, `此页面`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "操作指南"
     }, `操作指南`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `要了解如何运行 CIS 扫描，请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/how-to-guides/advanced-user-guides/cis-scan-guides/"
+        "href": "/zh/v2.8/how-to-guides/advanced-user-guides/cis-scan-guides/"
     }, `CIS 扫描指南`), `。`));
 }
 MDXContent.isMDXComponent = true;

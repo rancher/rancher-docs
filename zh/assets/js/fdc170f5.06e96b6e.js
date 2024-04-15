@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[35776],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[99242],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 52886:
+/***/ 33206:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,50 +308,39 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: '安装和配置 kubectl'
+    title: 'Cluster API (CAPI) 与 Rancher Turtles'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "faq/install-and-configure-kubectl",
-    "id": "version-2.8/faq/install-and-configure-kubectl",
-    "title": "安装和配置 kubectl",
-    "description": "kubectl 是一个 CLI 工具，用于运行 Kubernetes 集群相关的命令。Rancher 2.x 中的许多维护和管理任务都需要它。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.8/faq/install-and-configure-kubectl.md",
-    "sourceDirName": "faq",
-    "slug": "/faq/install-and-configure-kubectl",
-    "permalink": "/zh/v2.8/faq/install-and-configure-kubectl",
+    "unversionedId": "integrations-in-rancher/cluster-api/cluster-api",
+    "id": "integrations-in-rancher/cluster-api/cluster-api",
+    "title": "Cluster API (CAPI) 与 Rancher Turtles",
+    "description": "Rancher Turtles 是一个 Rancher 扩展，通过提供 Cluster API (CAPI) 和 Rancher 之间的集成来管理配置的 Kubernetes 集群的生命周期。使用 Rancher Turtles，你可以：",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/current/integrations-in-rancher/cluster-api/cluster-api.md",
+    "sourceDirName": "integrations-in-rancher/cluster-api",
+    "slug": "/integrations-in-rancher/cluster-api/",
+    "permalink": "/zh/integrations-in-rancher/cluster-api/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/faq/install-and-configure-kubectl.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/integrations-in-rancher/cluster-api/cluster-api.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1696627994,
-    "formattedLastUpdatedAt": "2023年10月6日",
+    "version": "current",
+    "lastUpdatedAt": 1713186274,
+    "formattedLastUpdatedAt": "2024年4月15日",
     "frontMatter": {
-        "title": "安装和配置 kubectl"
+        "title": "Cluster API (CAPI) 与 Rancher Turtles"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Deprecated Features in Rancher",
-        "permalink": "/zh/v2.8/faq/deprecated-features"
+        "title": "Supportconfig Bundle",
+        "permalink": "/zh/integrations-in-rancher/cloud-marketplace/supportconfig"
     },
     "next": {
-        "title": "Dockershim",
-        "permalink": "/zh/v2.8/faq/dockershim"
+        "title": "概述",
+        "permalink": "/zh/integrations-in-rancher/cluster-api/overview"
     }
 };
 const assets = {};
-const toc = [
-    {
-        value: '安装',
-        id: '安装',
-        level: 3
-    },
-    {
-        value: '配置',
-        id: '配置',
-        level: 3
-    }
-];
+const toc = [];
 const layoutProps = {
     toc
 };
@@ -363,40 +352,29 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kubectl`), ` 是一个 CLI 工具，用于运行 Kubernetes 集群相关的命令。Rancher 2.x 中的许多维护和管理任务都需要它。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "安装"
-    }, `安装`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/zh/integrations-in-rancher/cluster-api"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://kubernetes.io/docs/tasks/tools/install-kubectl/"
-    }, `kubectl 安装`), `将 kubectl 安装到你的操作系统上。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "配置"
-    }, `配置`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `使用 RKE 创建 Kubernetes 集群时，RKE 会在本地目录中创建一个 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kube_config_cluster.yml`), `，该文件包含使用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kubectl`), ` 或 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `helm`), ` 等工具连接到新集群的凭证。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你可以将此文件复制为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `$HOME/.kube/config`), `。如果你使用多个 Kubernetes 集群，将 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `KUBECONFIG`), ` 环境变量设置为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kube_config_cluster.yml`), ` 的路径：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre"
-    }, `export KUBECONFIG=$(pwd)/kube_config_cluster.yml
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `使用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kubectl`), ` 测试你的连接性，并查看你是否可以获取节点列表：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre"
-    }, `kubectl get nodes
- NAME                          STATUS    ROLES                      AGE       VERSION
-165.227.114.63                Ready     controlplane,etcd,worker   11m       v1.10.1
-165.227.116.167               Ready     controlplane,etcd,worker   11m       v1.10.1
-165.227.127.226               Ready     controlplane,etcd,worker   11m       v1.10.1
-`)));
+        "href": "https://turtles.docs.rancher.com/"
+    }, `Rancher Turtles`), ` 是一个 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/zh/integrations-in-rancher/rancher-extensions"
+    }, `Rancher 扩展`), `，通过提供 Cluster API (CAPI) 和 Rancher 之间的集成来管理配置的 Kubernetes 集群的生命周期。使用 Rancher Turtles，你可以：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `通过在 CAPI 配置的集群中安装 Rancher Cluster Agent，将 CAPI 集群导入 Rancher。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `配置 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://turtles.docs.rancher.com/docs/reference-guides/rancher-turtles-chart/values#cluster-api-operator-values"
+    }, `CAPI Operator`), `。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/zh/integrations-in-rancher/cluster-api/overview"
+    }, `概述`), `部分介绍了安装选项、Rancher Turtles 架构和简要 Demo。有关详细信息，请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://turtles.docs.rancher.com/"
+    }, `Rancher Turtles 文档`), `。`));
 }
 MDXContent.isMDXComponent = true;
 

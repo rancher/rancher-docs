@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[50888],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[50552],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 783:
+/***/ 81630:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,35 +308,35 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Cluster API (CAPI) with Rancher Turtles'
+    title: '一般常见问题解答'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/cluster-api/cluster-api",
-    "id": "integrations-in-rancher/cluster-api/cluster-api",
-    "title": "Cluster API (CAPI) with Rancher Turtles",
-    "description": "Rancher Turtles is a Rancher extension that manages the lifecycle of provisioned Kubernetes clusters, by providing integration between your Cluster API (CAPI) and Rancher. With Rancher Turtles, you can:",
-    "source": "@site/docs/integrations-in-rancher/cluster-api/cluster-api.md",
-    "sourceDirName": "integrations-in-rancher/cluster-api",
-    "slug": "/integrations-in-rancher/cluster-api/",
-    "permalink": "/zh/integrations-in-rancher/cluster-api/",
+    "unversionedId": "faq/general-faq",
+    "id": "version-2.8/faq/general-faq",
+    "title": "一般常见问题解答",
+    "description": "本文包含了用户常见的 Rancher 2.x 问题。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.8/faq/general-faq.md",
+    "sourceDirName": "faq",
+    "slug": "/faq/general-faq",
+    "permalink": "/zh/v2.8/faq/general-faq",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/integrations-in-rancher/cluster-api/cluster-api.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/faq/general-faq.md",
     "tags": [],
-    "version": "current",
-    "lastUpdatedAt": 1712604400,
-    "formattedLastUpdatedAt": "2024年4月8日",
+    "version": "2.8",
+    "lastUpdatedAt": 1696627994,
+    "formattedLastUpdatedAt": "2023年10月6日",
     "frontMatter": {
-        "title": "Cluster API (CAPI) with Rancher Turtles"
+        "title": "一般常见问题解答"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Supportconfig Bundle",
-        "permalink": "/zh/integrations-in-rancher/cloud-marketplace/supportconfig"
+        "title": "Rancher 扩展",
+        "permalink": "/zh/v2.8/integrations-in-rancher/rancher-extensions"
     },
     "next": {
-        "title": "Overview",
-        "permalink": "/zh/integrations-in-rancher/cluster-api/overview"
+        "title": "Rancher 中已弃用的功能",
+        "permalink": "/zh/v2.8/faq/deprecated-features"
     }
 };
 const assets = {};
@@ -352,29 +352,42 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
-        rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/cluster-api"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `本文包含了用户常见的 Rancher 2.x 问题。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `有关常见技术问题，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://turtles.docs.rancher.com/"
-    }, `Rancher Turtles`), ` is a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "href": "/zh/v2.8/faq/technical-items"
+    }, `常见技术问题解答`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Rancher 2.x 支持 Docker Swarm 和 Mesos 作为环境类型吗？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果你在 Rancher 2.x 中创建环境，Swarm 和 Mesos 将不再是可选的标准选项。但是，Swarm 和 Mesos 还能继续作为可以部署的商店应用程序。这是一个艰难的决定，但这是大势所趋。比如说，15,000 多个集群可能只有大约 200 个在运行 Swarm。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `是否可以使用 Rancher 2.x 管理 Azure Kubernetes 服务？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `是的。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Rancher 是否支持 Windows？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 支持 Windows Server 1809 容器。有关如何使用 Windows Worker 节点设置集群的详细信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../rancher-extensions.md"
-    }, `Rancher extension`), ` that manages the lifecycle of provisioned Kubernetes clusters, by providing integration between your Cluster API (CAPI) and Rancher. With Rancher Turtles, you can:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Import CAPI clusters into Rancher, by installing the Rancher Cluster Agent in CAPI provisioned clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Configure the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "https://turtles.docs.rancher.com/docs/reference-guides/rancher-turtles-chart/values#cluster-api-operator-values"
-    }, `CAPI Operator`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "href": "../pages-for-subheaders/use-windows-clusters.md"
+    }, `为 Windows 配置自定义集群`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Rancher 是否支持 Istio？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 支持 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/integrations-in-rancher/cluster-api/overview"
-    }, `Overview`), ` section outlines installation options, Rancher Turtles architecture, and a brief demo. For more details, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        "href": "../pages-for-subheaders/istio.md"
+    }, `Istio`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `此外，Istio 是在我们的微型 PaaS “Rio” 中实现的，它可以运行在 Rancher 2.x 以及任何符合 CNCF 的 Kubernetes 集群上。详情请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://turtles.docs.rancher.com/"
-    }, `Rancher Turtles documentation`), `.`));
+        "href": "https://rio.io/"
+    }, `这里`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Rancher 2.x 是否支持使用 Hashicorp 的 Vault 来存储密文？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `密文管理已在我们的 roadmap 上，但我们尚未将该功能分配给特定版本。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Rancher 2.x 是否也支持 RKT 容器？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `目前，我们只支持 Docker。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Rancher 2.x 是否支持将 Calico、Contiv、Contrail、Flannel、Weave net 等网络插件用于嵌入和已注册的 Kubernetes？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 开箱即用地为 Kubernetes 集群提供了几个 CNI 网络插件，分别是 Canal、Flannel、Calico 和 Weave。有关官方支持的详细信息，请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://rancher.com/support-maintenance-terms/"
+    }, `Rancher 支持矩阵`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Rancher 是否计划支持 Traefik？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `目前，我们不打算提供嵌入式 Traefik 支持，但我们仍在探索负载均衡方案。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `我可以将 OpenShift Kubernetes 集群导入 2.x 吗？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `我们的目标是运行任何上游 Kubernetes 集群。因此，Rancher 2.x 应该可以与 OpenShift 一起使用，但我们尚未对此进行测试。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Rancher 会集成 Longhorn 吗？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `是的。Longhorn 已集成到 Rancher 2.5+ 中。`));
 }
 MDXContent.isMDXComponent = true;
 
