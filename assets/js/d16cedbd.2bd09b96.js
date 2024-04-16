@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/integrations-in-rancher/cluster-api/cluster-api.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1712604400,
-    "formattedLastUpdatedAt": "Apr 8, 2024",
+    "lastUpdatedAt": 1713290353,
+    "formattedLastUpdatedAt": "Apr 16, 2024",
     "frontMatter": {
         "title": "Cluster API (CAPI) with Rancher Turtles"
     },
@@ -367,7 +367,7 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `Configure the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "https://turtles.docs.rancher.com/docs/reference-guides/rancher-turtles-chart/values#cluster-api-operator-values"
+        "href": "https://turtles.docs.rancher.com/reference-guides/rancher-turtles-chart/values#cluster-api-operator-values"
     }, `CAPI Operator`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "/integrations-in-rancher/cluster-api/overview"

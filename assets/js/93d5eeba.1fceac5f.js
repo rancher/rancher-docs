@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[10030],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[65333],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 5286:
+/***/ 43003:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "integrations-in-rancher/cluster-api/cluster-api",
-    "id": "version-2.7/integrations-in-rancher/cluster-api/cluster-api",
+    "id": "version-2.8/integrations-in-rancher/cluster-api/cluster-api",
     "title": "Cluster API (CAPI) with Rancher Turtles",
     "description": "Rancher Turtles is a Rancher extension that manages the lifecycle of provisioned Kubernetes clusters, by providing integration between your Cluster API (CAPI) and Rancher. With Rancher Turtles, you can:",
-    "source": "@site/versioned_docs/version-2.7/integrations-in-rancher/cluster-api/cluster-api.md",
+    "source": "@site/versioned_docs/version-2.8/integrations-in-rancher/cluster-api/cluster-api.md",
     "sourceDirName": "integrations-in-rancher/cluster-api",
     "slug": "/integrations-in-rancher/cluster-api/",
-    "permalink": "/zh/v2.7/integrations-in-rancher/cluster-api/",
+    "permalink": "/v2.8/integrations-in-rancher/cluster-api/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/integrations-in-rancher/cluster-api/cluster-api.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/integrations-in-rancher/cluster-api/cluster-api.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1712604400,
-    "formattedLastUpdatedAt": "2024年4月8日",
+    "version": "2.8",
+    "lastUpdatedAt": 1713290353,
+    "formattedLastUpdatedAt": "Apr 16, 2024",
     "frontMatter": {
         "title": "Cluster API (CAPI) with Rancher Turtles"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Longhorn - Kubernetes 的云原生分布式块存储",
-        "permalink": "/zh/v2.7/integrations-in-rancher/longhorn"
+        "title": "Supportconfig bundle",
+        "permalink": "/v2.8/integrations-in-rancher/cloud-marketplace/supportconfig"
     },
     "next": {
         "title": "Overview",
-        "permalink": "/zh/v2.7/integrations-in-rancher/cluster-api/overview"
+        "permalink": "/v2.8/integrations-in-rancher/cluster-api/overview"
     }
 };
 const assets = {};
@@ -360,17 +360,17 @@ function MDXContent(_param) {
         "href": "https://turtles.docs.rancher.com/"
     }, `Rancher Turtles`), ` is a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../rancher-extensions.md"
+        "href": "/v2.8/integrations-in-rancher/rancher-extensions"
     }, `Rancher extension`), ` that manages the lifecycle of provisioned Kubernetes clusters, by providing integration between your Cluster API (CAPI) and Rancher. With Rancher Turtles, you can:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Import CAPI clusters into Rancher, by installing the Rancher Cluster Agent in CAPI provisioned clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Configure the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "https://turtles.docs.rancher.com/docs/reference-guides/rancher-turtles-chart/values#cluster-api-operator-values"
+        "href": "https://turtles.docs.rancher.com/reference-guides/rancher-turtles-chart/values#cluster-api-operator-values"
     }, `CAPI Operator`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.7/integrations-in-rancher/cluster-api/overview"
+        "href": "/v2.8/integrations-in-rancher/cluster-api/overview"
     }, `Overview`), ` section outlines installation options, Rancher Turtles architecture, and a brief demo. For more details, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://turtles.docs.rancher.com/"
