@@ -20,7 +20,7 @@ The pod can be scheduled to any of the hosts you used for your cluster, but that
 
 To test the overlay network, you can launch the following `DaemonSet` definition. This will run a `swiss-army-knife` container on every host (image was developed by Rancher engineers and can be found here: https://github.com/rancherlabs/swiss-army-knife), which we will use to run a `ping` test between containers on all hosts.
 
-:::note
+:::caution
 
 The `swiss-army-knife` container does not support Windows nodes. It also [does not support ARM nodes](https://github.com/leodotcloud/swiss-army-knife/issues/18), such as a Raspberry Pi. When the test encounters incompatible nodes, this is recorded in the pod logs with the message, `exec user process caused: exec format error`.
 
