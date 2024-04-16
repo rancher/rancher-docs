@@ -32,10 +32,10 @@ These webhooks can be removed through the Rancher UI as well:
 1. In the upper left corner, click **☰** > **Cluster Management**.
 1. Select your local cluster.
 1. In the left-hand navigation menu, select **More Resources** > **Admission**.
-1. From the dropdown you will see the Resource pages for `MutatingWebhookConfiguration` and `ValidatingWebhookConfiguration`, click through both pages to remove the necessary webhooks.
-1. On the respective Resource pages, click the **⋮** that are attached to the `mutating-webhook-configuration` and `validating-webhook-configuration` webhooks to select the **Delete** option. Once deleted, you should see the webhooks removed immediately.
+1. From the dropdown, select the Resource pages for `MutatingWebhookConfiguration` and `ValidatingWebhookConfiguration`.
+1. On the respective Resource pages, click the **⋮** that are attached to the `mutating-webhook-configuration` and `validating-webhook-configuration` webhooks and select the **Delete** option.
 
-They can also be accessed by entering the names of the webhooks into the **Resource Search** field.
+The webhooks can also be accessed by entering the names of the webhooks into the **Resource Search** field.
 
 The following `kubectl` commands can manually remove the necessary webhooks:
 
