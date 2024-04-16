@@ -92,7 +92,7 @@ By adding the Turtles repository via the Rancher UI, Rancher can process the ins
 1. Click **Rancher Turtles - the Cluster API Extension**.
 1. Click **Install > Next > Install**.
 
-This process uses the default values for the Helm chart, which are good for most installations. If your configuration requires overriding some of these defaults, you can either specify the values during installation from the Rancher UI or you can [manually install the chart via Helm](#installing-via-helm). For details about available values, see the Rancher Turtles [Helm chart reference guide](https://turtles.docs.rancher.com/docs/reference-guides/rancher-turtles-chart/values).
+This process uses the default values for the Helm chart, which are good for most installations. If your configuration requires overriding some of these defaults, you can either specify the values during installation from the Rancher UI or you can [manually install the chart via Helm](#installing-via-helm). For details about available values, see the Rancher Turtles [Helm chart reference guide](https://turtles.docs.rancher.com/reference-guides/rancher-turtles-chart/values).
 
 The installation may take a few minutes and after completing you can see the following new deployments in the cluster:
 
@@ -177,7 +177,7 @@ stringData:
 
 :::info
 
-For detailed information on the values supported by the chart and their usage, refer to [Helm chart options](https://turtles.docs.rancher.com/docs/reference-guides/rancher-turtles-chart/values)
+For detailed information on the values supported by the chart and their usage, refer to [Helm chart options](https://turtles.docs.rancher.com/reference-guides/rancher-turtles-chart/values)
 
 :::
 
@@ -185,7 +185,7 @@ For detailed information on the values supported by the chart and their usage, r
 
 :::note
 
-Remember that if you opt for this installation option, you must manage the CAPI Operator installation yourself. You can follow the [CAPI Operator guide](https://turtles.docs.rancher.com/docs/tasks/capi-operator/intro) in the Rancher Turtles documentation for assistance.
+Remember that if you opt for this installation option, you must manage the CAPI Operator installation yourself. You can follow the [CAPI Operator guide](https://turtles.docs.rancher.com/tasks/capi-operator/intro) in the Rancher Turtles documentation for assistance.
 
 :::
 
