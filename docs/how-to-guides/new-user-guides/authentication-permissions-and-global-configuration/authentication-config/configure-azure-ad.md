@@ -225,10 +225,9 @@ To complete configuration, enter information about your AD instance in the Ranch
 
 **Result:** Azure Active Directory authentication is configured.
 
+#### (Optional) Configure Authentication with Multiple Rancher Domains
 
-#### (Optional) Configure Authentication with Multiple Domains
-
-If you wish to use multiple domain names to manage Rancher, you must manually edit the Azure AD configuration. You can only enter one redirect URI through the Rancher UI, but you can manually configure Azure AD so that alternative domains redirect correctly after authentication suceeds. If you don't manually edit the Azure AD configuration, any domains you wish to use will automatically redirect to the **Redirect URI** value you entered when you registered the app. 
+If you wish to manage Rancher by using multiple domain names, you must manually edit the Azure AD configuration file, `azuread`. This allows you to adjust the redirect URI as needed for your domains. If you don't manually edit `azuread`, then upon a successful login attempt, any Rancher domains will automatically redirect to the **Redirect URI** value you entered when you registered the app in [Step 1. Register Rancher with Azure](#1-register-rancher-with-azure). For example, if you have two domains, _rancher.primary-site.io_ and _rancher.alt-site.io_, you must manually edit `azuread` to prevent a user logging in to _rancher.alt-site.org_ from being redirected to _rancher.primary-site.org_ when authentication suceeds.
 
 ### Migrating from Azure AD Graph API to Microsoft Graph API
 
