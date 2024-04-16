@@ -8,9 +8,9 @@ title: Configure Azure AD
 
 ## Microsoft Graph API
 
-Azure AD is set up through Microsoft Graph API. Learn how to [set up](#new-user-setup) Azure AD with a new instance or [migrate](#migrating-from-azure-ad-graph-api-to-microsoft-graph-api) an existing instance from Azure AD Graph API to Microsoft Graph API.
+Microsoft Graph API is now the flow through which you will set up Azure AD. The below sections will assist [new users](#new-user-setup) in configuring Azure AD with a new instance as well as assist existing Azure app owners in [migrating to the new flow](#migrating-from-azure-ad-graph-api-to-microsoft-graph-api).
 
-The Microsoft Graph API flow in Rancher is constantly evolving, and is still in active development. Use the latest patched version available to receive new features and improvements.
+The Microsoft Graph API flow in Rancher is constantly evolving. We recommend that you use the latest patched version of 2.7, as it is still in active development and will continue to receive new features and improvements.
 
 ### New User Setup
 
@@ -319,7 +319,7 @@ Token Endpoint   | https://login.partner.microsoftonline.cn/{tenantID}/oauth2/v2
 
 >**Important:**
 >
-> The [Azure AD Graph API](https://docs.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview) is deprecated and will be retired by Microsoft at any time after June 30, 2023, without advance notice. We will update our docs to advise the community when it is retired. Rancher now uses the [Microsoft Graph API](https://docs.microsoft.com/en-us/graph/use-the-api) as the new flow to set up Azure AD as the external auth provider.
+>- The [Azure AD Graph API](https://docs.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview) is deprecated and will be retired by Microsoft at any time after June 30, 2023, without advance notice. We will update our docs to advise the community when it is retired. Rancher now uses the [Microsoft Graph API](https://docs.microsoft.com/en-us/graph/use-the-api) as the new flow to set up Azure AD as the external auth provider.
 >
 >
 >- If you're a new user, or wish to migrate, refer to the new flow instructions for <a href="#microsoft-graph-api/" target="_blank">Rancher v2.7.0+</a>.
