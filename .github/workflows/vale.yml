@@ -10,6 +10,8 @@ jobs:
         with:
           fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
           submodules: true
+      - run: |
+          echo "MERGE_BASE=$(git merge-base remotes/origin/${{ github.head_ref }} remotes/origin/main)" >> $GITHUB_ENV
       - name: Get all changed markdown files
         id: changed-markdown-files
         uses: tj-actions/changed-files@v42
@@ -19,7 +21,7 @@ jobs:
                docs/**
                versioned_docs/**
             separator: ","
-            since_last_remote_commit: 'true'
+            base_sha: ${{ env.MERGE_BASE }}
         env:
             ALL_CHANGED_FILES: ${{ 0 }}
       - name: No files changed?
@@ -32,14 +34,16 @@ jobs:
         env:
             ALL_CHANGED_FILES: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
             ALL_CHANGED_FILES_COUNT: ${{ steps.changed-markdown-files.outputs.all_changed_files_count }}
+            SHA: ${{ github.head_ref }}
+            HEAD: ${{ github.base_ref }}
         run: |
-            echo ${ALL_CHANGED_FILES_COUNT}
+            echo "Total Files Changed:" ${ALL_CHANGED_FILES_COUNT}
             echo ${ALL_CHANGED_FILES}
             echo "ALL_CHANGED_FILES=$ALL_CHANGED_FILES" >> $GITHUB_ENV
       - uses: errata-ai/vale-action@v2.1.0
         if: steps.changed-markdown-files.outputs.any_changed == 'true'
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           separator: ", "
-          files: ${{env.ALL_CHANGED_FILES}}
+          files: ${{ env.ALL_CHANGED_FILES }}
