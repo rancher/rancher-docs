@@ -11,7 +11,7 @@ jobs:
           fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
           submodules: true
       - run: |
-          echo "MERGE_BASE=$(git merge-base remotes/origin/${{ github.head_ref }} remotes/origin/main)" >> $GITHUB_ENV
+            echo "MERGE_BASE=$(git merge-base remotes/origin/${{ github.head_ref }} remotes/origin/main)" >> $GITHUB_ENV
       - name: Get all changed markdown files
         id: changed-markdown-files
         uses: tj-actions/changed-files@v42
