@@ -14,6 +14,13 @@ jobs:
             echo "111"
             git branch -a
             echo "222"
+            echo "PR head ref:" ${{ github.event.pull_request.head.ref }}
+            echo "PR head sha:" ${{ github.event.pull_request.head.sha }}
+            echo "PR base ref:" ${{ github.event.pull_request.base.ref }}
+            echo "PR base sha:" ${{ github.event.pull_request.base.sha }}
+            echo "777"
+            git rev-parse remotes/origin/main
+            echo "888"
             git merge-base remotes/pull/${{ github.event.number }}/merge remotes/origin/main
             echo "MERGE_BASE=$(git merge-base remotes/pull/${{ github.event.number }}/merge remotes/origin/main)" >> $GITHUB_ENV
       - name: Get all changed markdown files
