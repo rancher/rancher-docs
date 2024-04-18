@@ -14,7 +14,7 @@ jobs:
             echo "111"
             git branch -a
             echo "222"
-            echo "MERGE_BASE=$(git merge-base remotes/origin/${{ github.head_ref }} remotes/origin/main)" >> $GITHUB_ENV
+            echo "MERGE_BASE=$(git merge-base remotes/pull/${{ github.event.number }}/merge remotes/origin/main)" >> $GITHUB_ENV
       - name: Get all changed markdown files
         id: changed-markdown-files
         uses: tj-actions/changed-files@v42
