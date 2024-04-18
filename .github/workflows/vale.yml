@@ -1,3 +1,5 @@
+# Test 
+
 name: Style check
 on: [pull_request]
 
@@ -19,7 +21,7 @@ jobs:
                docs/**
                versioned_docs/**
             separator: ","
-            base_sha: ${{ github.event.pull_request.base.sha }}
+            base_sha: ${{ github.base.sha }}
         env:
             ALL_CHANGED_FILES: ${{ 0 }}
       - name: No files changed?
