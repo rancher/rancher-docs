@@ -10,19 +10,6 @@ jobs:
         with:
           fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
           submodules: true
-      - run: |
-            echo "111"
-            git branch -a
-            echo "222"
-            echo "PR head ref:" ${{ github.event.pull_request.head.ref }}
-            echo "PR head sha:" ${{ github.event.pull_request.head.sha }}
-            echo "PR base ref:" ${{ github.event.pull_request.base.ref }}
-            echo "PR base sha:" ${{ github.event.pull_request.base.sha }}
-            echo "777"
-            git rev-parse remotes/origin/main
-            echo "888"
-            git merge-base remotes/pull/${{ github.event.number }}/merge remotes/origin/main
-            echo "MERGE_BASE=$(git merge-base remotes/pull/${{ github.event.number }}/merge remotes/origin/main)" >> $GITHUB_ENV
       - name: Get all changed markdown files
         id: changed-markdown-files
         uses: tj-actions/changed-files@v42
@@ -32,7 +19,7 @@ jobs:
                docs/**
                versioned_docs/**
             separator: ","
-            base_sha: ${{ env.MERGE_BASE }}
+            base_sha: ${{ github.event.pull_request.base.sha }}
         env:
             ALL_CHANGED_FILES: ${{ 0 }}
       - name: No files changed?
