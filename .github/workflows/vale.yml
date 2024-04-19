@@ -1,4 +1,8 @@
-# Test 
+# This action gets all changed markdown files in /docs and /versioned_docs using tj-actions/changed-files@v42
+# It compares new commits in the PR with the base commit (github.event.pull_request.base.sha)
+# It checks if no markdown files are changed 
+# It shows a count of markdown files and lists all changed markdown files
+# It uses Vale (https://vale.sh/docs/vale-cli/installation/) to provide feedback base off the SUSE Style Guide / OpenSUSE style rules (https://github.com/openSUSE/suse-vale-styleguide)
 
 name: Style check
 on: [pull_request]
