@@ -21,6 +21,7 @@ Smaller distributions such as Alpine and BusyBox reduce container image size and
 Popular distributions such as Ubuntu, Fedora, and CentOS are more field-tested and offer more functionality.
 
 ### Start with a FROM scratch container
+
 If your microservice is a standalone static binary, you should use a FROM scratch container.
 
 The FROM scratch container is an [official Docker image](https://hub.docker.com/_/scratch) that is empty so that you can use it to design minimal images.
@@ -28,9 +29,11 @@ The FROM scratch container is an [official Docker image](https://hub.docker.com/
 This will have the smallest attack surface and smallest image size.
 
 ### Run Container Processes as Unprivileged
+
 When possible, use a non-privileged user when running processes within your container. While container runtimes provide isolation, vulnerabilities and attacks are still possible. Inadvertent or accidental host mounts can also be impacted if the container is running as root. For details on configuring a security context for a pod or container, refer to the [Kubernetes docs](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/).
 
 ### Define Resource Limits
+
 Apply CPU and memory limits to your pods. This can help manage the resources on your worker nodes and avoid a malfunctioning microservice from impacting other microservices.
 
 In standard Kubernetes, you can set resource limits on the namespace level. In Rancher, you can set resource limits on the project level and they will propagate to all the namespaces within the project. For details, refer to the Rancher docs.
@@ -40,6 +43,7 @@ When setting resource quotas, if you set anything related to CPU or Memory (i.e.
 The Kubernetes docs have more information on how resource limits can be set at the [container level](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#resource-requests-and-limits-of-pod-and-container) and the namespace level.
 
 ### Define Resource Requirements
+
 You should apply CPU and memory requirements to your pods. This is crucial for informing the scheduler which type of compute node your pod needs to be placed on, and ensuring it does not over-provision that node. In Kubernetes, you can set a resource requirement by defining `resources.requests` in the resource requests field in a pod's container spec. For details, refer to the [Kubernetes docs](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#resource-requests-and-limits-of-pod-and-container).
 
 :::note
@@ -50,7 +54,10 @@ If you set a resource limit for the namespace that the pod is deployed in, and t
 
 It is recommended to define resource requirements on the container level because otherwise, the scheduler makes assumptions that will likely not be helpful to your application when the cluster experiences load.
 
+TODO we recommend to set your CPU request at 50m and memory request at 100Mi, however this is a base recommendation and customers should choose based on resources available in their environment and their use case on how they use Rancher.
+
 ### Liveness and Readiness Probes
+
 Set up liveness and readiness probes for your container. Unless your container completely crashes, Kubernetes will not know it's unhealthy unless you create an endpoint or mechanism that can report container status. Alternatively, make sure your container halts and crashes if unhealthy.
 
 The Kubernetes docs show how to [configure liveness and readiness probes for containers.](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/)
