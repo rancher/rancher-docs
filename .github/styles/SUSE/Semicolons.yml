@@ -1,7 +1,0 @@
-extends: existence
-message: "Use semicolons judiciously."
-nonword: true
-scope: sentence
-level: suggestion
-tokens:
-  - ';\S'

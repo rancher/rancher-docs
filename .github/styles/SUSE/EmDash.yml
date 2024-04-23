@@ -1,7 +1,0 @@
-extends: existence
-message: "Do not put a space before or after a dash."
-scope: raw
-nonword: true
-level: error
-tokens:
-  - ' &mdash; '

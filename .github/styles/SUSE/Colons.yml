@@ -1,6 +1,0 @@
-extends: existence
-message: "The first word after a colon should be in lowercase, unless the phrase after the colon is a complete sentence."
-nonword: true
-level: warning
-tokens:
-  - ': [A-Z][a-z ]'

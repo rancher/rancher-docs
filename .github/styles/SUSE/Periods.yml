@@ -1,6 +1,0 @@
-extends: existence
-message: "Don't use periods with acronyms or initialisms such as '%s'."
-level: error
-nonword: true
-tokens:
-  - '\b(?:[A-Z]\.){3,}'

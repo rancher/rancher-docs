@@ -1,6 +1,0 @@
-extends: existence
-message: "Avoid using exclamation points in text."
-nonword: true
-level: error
-tokens:
-  - '\w!(?:\s|$)'

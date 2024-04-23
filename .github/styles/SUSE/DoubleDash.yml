@@ -1,7 +1,0 @@
-extends: substitution
-message: "Replace double dash with an entity."
-level: warning
-action:
-  name: replace
-swap:
-  (?:\s*)--(?:\s*) : '&mdash;'

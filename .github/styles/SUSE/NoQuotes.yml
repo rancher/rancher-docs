@@ -1,8 +1,0 @@
-extends: existence
-message: "Consider replacing quotation marks with <quote/> in '%s'."
-nonword: true
-level: warning
-tokens:
-  - '"[^"]+"'
-  - "'(?:[a-zA-Z0-9 ])+'"
-  - "'[^(?:'s )?]+'"

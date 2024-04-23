@@ -1,6 +1,0 @@
-extends: existence
-message: "Simple series, consider removing the last comma in '%s'."
-scope: sentence
-level: warning
-raw:
-  - '((\w+,(\s|\n)+){2}(and|or))'

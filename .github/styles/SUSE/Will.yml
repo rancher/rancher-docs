@@ -1,6 +1,0 @@
-extends: existence
-message: "Avoid using future tense"
-ignorecase: true
-level: error
-tokens:
-  - will

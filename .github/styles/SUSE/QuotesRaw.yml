@@ -1,6 +1,0 @@
-extends: existence
-message: "Commas and periods go inside quotation marks."
-scope: raw
-level: error
-tokens:
-  - '</quote>[.,?]'
