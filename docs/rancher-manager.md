@@ -8,7 +8,9 @@ description: "Rancher adds significant value on top of Kubernetes: managing hund
 <head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com"/>
 </head>
- 
+
+Test edit 
+
 Rancher is a Kubernetes management tool to deploy and run clusters anywhere and on any provider.
 
 Rancher can provision Kubernetes from a hosted provider, provision compute nodes and then install Kubernetes onto them, or import existing Kubernetes clusters running anywhere.
