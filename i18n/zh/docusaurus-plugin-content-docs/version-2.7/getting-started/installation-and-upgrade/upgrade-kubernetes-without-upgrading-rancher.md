@@ -2,6 +2,10 @@
 title: 在不升级 Rancher 的情况下升级 Kubernetes
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher"/>
+</head>
+
 RKE 元数据功能允许你在新版本 Kubernetes 发布后立即为集群配置新版本，而无需升级 Rancher。此功能对于使用 Kubernetes 的补丁版本非常有用，例如，在原本支持 Kubernetes v1.14.6 的 Rancher Server 版本中，将 Kubernetes 升级到 v1.14.7。
 
 :::note
@@ -10,7 +14,7 @@ Kubernetes API 可以在次要版本之间更改。因此，我们不支持引�
 
 :::
 
-Rancher 的 Kubernetes 元数据包含 Rancher 用于配置 [RKE 集群](../../pages-for-subheaders/launch-kubernetes-with-rancher.md)的 Kubernetes 版本信息。Rancher 会定期同步数据并为 **系统镜像**、**服务选项**和**插件模板**创建自定义资源定义 (CRD)。因此，当新的 Kubernetes 版本与 Rancher Server 版本兼容时，Kubernetes 元数据可以使 Rancher 使用新版本来配置集群。元数据概述了 [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/) (RKE) 用于部署各种 Kubernetes 版本的信息。
+Rancher 的 Kubernetes 元数据包含 Rancher 用于配置 [RKE 集群](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)的 Kubernetes 版本信息。Rancher 会定期同步数据并为 **系统镜像**、**服务选项**和**插件模板**创建自定义资源定义 (CRD)。因此，当新的 Kubernetes 版本与 Rancher Server 版本兼容时，Kubernetes 元数据可以使 Rancher 使用新版本来配置集群。元数据概述了 [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/) (RKE) 用于部署各种 Kubernetes 版本的信息。
 
 下表描述了受周期性数据同步影响的 CRD。
 
@@ -20,11 +24,11 @@ Rancher 的 Kubernetes 元数据包含 Rancher 用于配置 [RKE 集群](../../p
 
 :::
 
-| 资源 | 描述 | Rancher API URL |
-|----------|-------------|-----------------|
-| 系统镜像 | 用于通过 RKE 部署 Kubernetes 集群的系统镜像列表。 | `<RANCHER_SERVER_URL>/v3/rkek8ssystemimages` |
-| 服务选项 | 传递给 Kubernetes 组件的默认选项，例如 `kube-api`、`scheduler`、`kubelet`、`kube-proxy` 和 `kube-controller-manager` | `<RANCHER_SERVER_URL>/v3/rkek8sserviceoptions` |
-| 插件模板 | 用于部署插件组件的 YAML 定义，例如 Canal、Calico、Flannel、Weave、Kube-dns、CoreDNS、`metrics-server`、`nginx-ingress` | `<RANCHER_SERVER_URL>/v3/rkeaddons` |
+| 资源     | 描述                                                                                                                   | Rancher API URL                                |
+| -------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| 系统镜像 | 用于通过 RKE 部署 Kubernetes 集群的系统镜像列表。                                                                      | `<RANCHER_SERVER_URL>/v3/rkek8ssystemimages`   |
+| 服务选项 | 传递给 Kubernetes 组件的默认选项，例如 `kube-api`、`scheduler`、`kubelet`、`kube-proxy` 和 `kube-controller-manager`   | `<RANCHER_SERVER_URL>/v3/rkek8sserviceoptions` |
+| 插件模板 | 用于部署插件组件的 YAML 定义，例如 Canal、Calico、Flannel、Weave、Kube-dns、CoreDNS、`metrics-server`、`nginx-ingress` | `<RANCHER_SERVER_URL>/v3/rkeaddons`            |
 
 管理员可以通过配置 RKE 元数据设置来执行以下操作：
 
@@ -48,7 +52,7 @@ Rancher 的 Kubernetes 元数据包含 Rancher 用于配置 [RKE 集群](../../p
 
 :::caution
 
-只有管​​理员可以更改这些设置。
+只有管 ​​ 理员可以更改这些设置。
 
 :::
 
@@ -64,6 +68,7 @@ RKE 元数据的配置控制 Rancher 同步元数据的频率以及从何处下�
 
 - `refresh-interval-minutes`：Rancher 等待同步元数据的时间。如果要禁用定期刷新，请将 `refresh-interval-minutes` 设置为 0。
 - `url`：Rancher 从中获取数据的 HTTP 路径。该路径必须是 JSON 文件的直接路径。例如，Rancher v2.4 的默认 URL 是 `https://releases.rancher.com/kontainer-driver-metadata/release-v2.4/data.json`。
+
 1. 单击**保存**。
 
 如果你没有离线设置，则无需指定 Rancher 获取元数据的 URL，因为默认是从 [Rancher 的元数据 Git 仓库获取](https://github.com/rancher/kontainer-driver-metadata/blob/dev-v2.5/data/data.json)的。
@@ -80,7 +85,10 @@ Rancher Server 会定期刷新 `rke-metadata-config` 来下载新的 Kubernetes 
 
 在将新的 Kubernetes 版本加载到 Rancher Server 中之后，需要执行其他步骤才能使用它们启动集群。Rancher 需要访问更新的系统镜像。虽然只有管理员可以更改元数据设置，但任何用户都可以下载 Rancher 系统镜像并为镜像准备私有容器镜像仓库。
 
-1. 要把系统镜像下载到私有镜像仓库，请单击 Rancher UI 左下角的 Rancher Server 版本。
+要下载私有镜像仓库的系统镜像：
+
+1. 点击左上角的 **☰**。
+1. 点击左侧导航底部的**简介**。
 1. 下载适用于 Linux 或 Windows 操作系统的镜像。
 1. 下载 `rancher-images.txt`。
 1. 使用[离线环境安装](other-installation-methods/air-gapped-helm-cli-install/publish-images.md)时使用的步骤准备私有镜像仓库，但不要使用发布页面中的 `rancher-images.txt`，而是使用上一个步骤中获取的文件。

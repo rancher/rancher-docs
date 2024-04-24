@@ -2,6 +2,10 @@
 title: 升级 Docker 安装的 Rancher
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/upgrade-docker-installed-rancher"/>
+</head>
+
 本文介绍如何升级通过 Docker 安装的 Rancher Server。
 
 :::caution
@@ -13,7 +17,7 @@ title: 升级 Docker 安装的 Rancher
 ## 先决条件
 
 - 在 Rancher 文档中**检查[已知升级问题](../../install-upgrade-on-a-kubernetes-cluster/upgrades.md#已知升级问题)**，了解升级 Rancher 时最需要注意的问题。你可以在 [GitHub](https://github.com/rancher/rancher/releases) 发布说明以及 [Rancher 论坛](https://forums.rancher.com/c/announcements/12)中找到每个 Rancher 版本的已知问题。不支持升级或升级到 [rancher-alpha 仓库](../../resources/choose-a-rancher-version.md#helm-chart-仓库)中的任何 Chart。
-- **[仅适用于离线安装](../../../../pages-for-subheaders/air-gapped-helm-cli-install.md)：为新的 Rancher Server 版本收集和推送镜像**。按照指南为你想要升级的目标 Rancher 版本[推送镜像到私有镜像仓库](../air-gapped-helm-cli-install/publish-images.md)。
+- **[仅适用于离线安装](../air-gapped-helm-cli-install/air-gapped-helm-cli-install.md)：为新的 Rancher Server 版本收集和推送镜像**。按照指南为你想要升级的目标 Rancher 版本[推送镜像到私有镜像仓库](../air-gapped-helm-cli-install/publish-images.md)。
 
 ## 占位符
 
@@ -41,12 +45,13 @@ docker ps
 
 ![占位符参考](/img/placeholder-ref.png)
 
-| 占位符 | 示例 | 描述 |
-| -------------------------- | -------------------------- | --------------------------------------------------------- |
-| `<RANCHER_CONTAINER_TAG>` | `v2.1.3` | 首次安装拉取的 rancher/rancher 镜像。 |
-| `<RANCHER_CONTAINER_NAME>` | `festive_mestorf` | 你的 Rancher 容器的名称。 |
-| `<RANCHER_VERSION>` | `v2.1.3` | 你为其创建备份的 Rancher 版本。 |
-| `<DATE>` | `2018-12-19` | 数据容器或备份的创建日期。 |
+| 占位符                     | 示例              | 描述                                  |
+| -------------------------- | ----------------- | ------------------------------------- |
+| `<RANCHER_CONTAINER_TAG>`  | `v2.1.3`          | 首次安装拉取的 rancher/rancher 镜像。 |
+| `<RANCHER_CONTAINER_NAME>` | `festive_mestorf` | 你的 Rancher 容器的名称。             |
+| `<RANCHER_VERSION>`        | `v2.1.3`          | 你为其创建备份的 Rancher 版本。       |
+| `<DATE>`                   | `2018-12-19`      | 数据容器或备份的创建日期。            |
+
 <br/>
 
 可以通过远程连接登录到 Rancher Server 所在的主机并输入命令 `docker ps` 以查看正在运行的容器，从而获得 `<RANCHER_CONTAINER_TAG>` 和 `<RANCHER_CONTAINER_NAME>`。你还可以运行 `docker ps -a` 命令查看停止了的容器。在创建备份期间，你随时可以运行这些命令来获得帮助。
@@ -54,6 +59,7 @@ docker ps
 ## 升级
 
 在升级期间，你可以为当前 Rancher 容器创建数据的副本及备份，以确保可以在升级出现问题时可以进行回滚。然后，你可使用现有数据将新版本的 Rancher 部署到新容器中。
+
 ### 1. 创建 Rancher Server 容器的数据副本
 
 1. 使用远程终端连接，登录到运行 Rancher Server 的节点。
@@ -75,6 +81,7 @@ docker ps
 1. <a id="tarball"></a>从你刚刚创建的数据容器（<code>rancher-data</code>）中，创建一个备份 tar 包（<code>rancher-data-backup-&lt;RANCHER_VERSION&gt;-&lt;DATE&gt;.tar.gz</code>）。
 
    如果升级期间出现问题，此压缩包可以用作回滚点。替换占位符来运行以下命令。
+
    ```
    docker run --volumes-from rancher-data -v "$PWD:/backup" --rm busybox tar zcvf /backup/rancher-data-backup-<RANCHER_VERSION>-<DATE>.tar.gz /var/lib/rancher
    ```
@@ -94,8 +101,8 @@ docker ps
 
 拉取你需要升级到的 Rancher 版本镜像。
 
-| 占位符 | 描述 |
-------------|-------------
+| 占位符                  | 描述                                                                                           |
+| ----------------------- | ---------------------------------------------------------------------------------------------- |
 | `<RANCHER_VERSION_TAG>` | 你想要升级到的 [Rancher 版本](../../installation-references/helm-chart-options.md)的版本标签。 |
 
 ```
@@ -135,8 +142,8 @@ docker pull rancher/rancher:<RANCHER_VERSION_TAG>
 
 如果你使用 Rancher 生成的自签名证书，则将 `--volumes-from rancher-data` 添加到你启动原始 Rancher Server 容器的命令中。
 
-| 占位符 | 描述 |
-------------|-------------
+| 占位符                  | 描述                                                                                           |
+| ----------------------- | ---------------------------------------------------------------------------------------------- |
 | `<RANCHER_VERSION_TAG>` | 你想要升级到的 [Rancher 版本](../../installation-references/helm-chart-options.md)的版本标签。 |
 
 ```
@@ -164,12 +171,12 @@ docker run -d --volumes-from rancher-data \
 
 :::
 
-| 占位符 | 描述 |
-------------|-------------
-| `<CERT_DIRECTORY>` | 包含证书文件的目录的路径。 |
-| `<FULL_CHAIN.pem>` | 完整证书链的路径。 |
-| `<PRIVATE_KEY.pem>` | 证书私钥的路径。 |
-| `<CA_CERTS.pem>` | CA 证书的路径。 |
+| 占位符                  | 描述                                                                                           |
+| ----------------------- | ---------------------------------------------------------------------------------------------- |
+| `<CERT_DIRECTORY>`      | 包含证书文件的目录的路径。                                                                     |
+| `<FULL_CHAIN.pem>`      | 完整证书链的路径。                                                                             |
+| `<PRIVATE_KEY.pem>`     | 证书私钥的路径。                                                                               |
+| `<CA_CERTS.pem>`        | CA 证书的路径。                                                                                |
 | `<RANCHER_VERSION_TAG>` | 你想要升级到的 [Rancher 版本](../../installation-references/helm-chart-options.md)的版本标签。 |
 
 ```
@@ -200,11 +207,11 @@ docker run -d --volumes-from rancher-data \
 
 :::
 
-| 占位符 | 描述 |
-------------|-------------
-| `<CERT_DIRECTORY>` | 包含证书文件的目录的路径。 |
-| `<FULL_CHAIN.pem>` | 完整证书链的路径。 |
-| `<PRIVATE_KEY.pem>` | 证书私钥的路径。 |
+| 占位符                  | 描述                                                                                           |
+| ----------------------- | ---------------------------------------------------------------------------------------------- |
+| `<CERT_DIRECTORY>`      | 包含证书文件的目录的路径。                                                                     |
+| `<FULL_CHAIN.pem>`      | 完整证书链的路径。                                                                             |
+| `<PRIVATE_KEY.pem>`     | 证书私钥的路径。                                                                               |
 | `<RANCHER_VERSION_TAG>` | 你想要升级到的 [Rancher 版本](../../installation-references/helm-chart-options.md)的版本标签。 |
 
 ```
@@ -219,6 +226,7 @@ docker run -d --volumes-from rancher-data \
 ```
 
 特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+
 </details>
 
 #### 选项 D：Let's Encrypt 证书
@@ -241,10 +249,10 @@ Let's Encrypt 对新证书请求有频率限制。因此，请限制创建或销
 
 :::
 
-| 占位符 | 描述 |
-------------|-------------
+| 占位符                  | 描述                                                                                           |
+| ----------------------- | ---------------------------------------------------------------------------------------------- |
 | `<RANCHER_VERSION_TAG>` | 你想要升级到的 [Rancher 版本](../../installation-references/helm-chart-options.md)的版本标签。 |
-| `<YOUR.DNS.NAME>` | 你最初使用的域名 |
+| `<YOUR.DNS.NAME>`       | 你最初使用的域名                                                                               |
 
 ```
 docker run -d --volumes-from rancher-data \
@@ -273,10 +281,10 @@ docker run -d --volumes-from rancher-data \
 
 如果你使用 Rancher 生成的自签名证书，则将 `--volumes-from rancher-data` 添加到你启动原始 Rancher Server 容器的命令中。
 
-| 占位符 | 描述 |
-------------|-------------
-| `<REGISTRY.YOURDOMAIN.COM:PORT>` | 私有镜像仓库的 URL 和端口。 |
-| `<RANCHER_VERSION_TAG>` | 你想要升级到的 [Rancher 版本](../../installation-references/helm-chart-options.md)的版本标签。 |
+| 占位符                           | 描述                                                                                           |
+| -------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `<REGISTRY.YOURDOMAIN.COM:PORT>` | 私有镜像仓库的 URL 和端口。                                                                    |
+| `<RANCHER_VERSION_TAG>`          | 你想要升级到的 [Rancher 版本](../../installation-references/helm-chart-options.md)的版本标签。 |
 
 ```
   docker run -d --volumes-from rancher-data \
@@ -289,6 +297,7 @@ docker run -d --volumes-from rancher-data \
 ```
 
 特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+
 </details>
 
 #### 选项 B：使用你自己的证书 - 自签名
@@ -304,14 +313,14 @@ docker run -d --volumes-from rancher-data \
 
 :::
 
-| 占位符 | 描述 |
-------------|-------------
-| `<CERT_DIRECTORY>` | 包含证书文件的目录的路径。 |
-| `<FULL_CHAIN.pem>` | 完整证书链的路径。 |
-| `<PRIVATE_KEY.pem>` | 证书私钥的路径。 |
-| `<CA_CERTS.pem>` | CA 证书的路径。 |
-| `<REGISTRY.YOURDOMAIN.COM:PORT>` | 私有镜像仓库的 URL 和端口。 |
-| `<RANCHER_VERSION_TAG>` | 你想要升级到的 [Rancher 版本](../../installation-references/helm-chart-options.md)的版本标签。 |
+| 占位符                           | 描述                                                                                           |
+| -------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `<CERT_DIRECTORY>`               | 包含证书文件的目录的路径。                                                                     |
+| `<FULL_CHAIN.pem>`               | 完整证书链的路径。                                                                             |
+| `<PRIVATE_KEY.pem>`              | 证书私钥的路径。                                                                               |
+| `<CA_CERTS.pem>`                 | CA 证书的路径。                                                                                |
+| `<REGISTRY.YOURDOMAIN.COM:PORT>` | 私有镜像仓库的 URL 和端口。                                                                    |
+| `<RANCHER_VERSION_TAG>`          | 你想要升级到的 [Rancher 版本](../../installation-references/helm-chart-options.md)的版本标签。 |
 
 ```
 docker run -d --restart=unless-stopped \
@@ -324,7 +333,9 @@ docker run -d --restart=unless-stopped \
     --privileged \
     <REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher:<RANCHER_VERSION_TAG>
 ```
+
 特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+
 </details>
 
 #### 选项 C：使用你自己的证书 - 可信 CA 签名的证书
@@ -340,13 +351,13 @@ docker run -d --restart=unless-stopped \
 
 :::
 
-| 占位符 | 描述 |
-------------|-------------
-| `<CERT_DIRECTORY>` | 包含证书文件的目录的路径。 |
-| `<FULL_CHAIN.pem>` | 完整证书链的路径。 |
-| `<PRIVATE_KEY.pem>` | 证书私钥的路径。 |
-| `<REGISTRY.YOURDOMAIN.COM:PORT>` | 私有镜像仓库的 URL 和端口。 |
-| `<RANCHER_VERSION_TAG>` | 你想要升级到的 [Rancher 版本](../../installation-references/helm-chart-options.md)的版本标签。 |
+| 占位符                           | 描述                                                                                           |
+| -------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `<CERT_DIRECTORY>`               | 包含证书文件的目录的路径。                                                                     |
+| `<FULL_CHAIN.pem>`               | 完整证书链的路径。                                                                             |
+| `<PRIVATE_KEY.pem>`              | 证书私钥的路径。                                                                               |
+| `<REGISTRY.YOURDOMAIN.COM:PORT>` | 私有镜像仓库的 URL 和端口。                                                                    |
+| `<RANCHER_VERSION_TAG>`          | 你想要升级到的 [Rancher 版本](../../installation-references/helm-chart-options.md)的版本标签。 |
 
 :::note
 
@@ -366,7 +377,9 @@ docker run -d --volumes-from rancher-data \
      --privileged
      <REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher:<RANCHER_VERSION_TAG>
 ```
+
 特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+
 </details>
 
 </TabItem>

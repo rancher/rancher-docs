@@ -2,12 +2,15 @@
 title: 升级
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades"/>
+</head>
+
 本文介绍如何升级使用 Helm 安装在 Kubernetes 集群上的 Rancher Server。这些步骤也适用于使用 Helm 进行的离线安装。
 
 有关使用 Docker 安装的 Rancher 的升级说明，请参见[本页。](../other-installation-methods/rancher-on-a-single-node-with-docker/upgrade-docker-installed-rancher.md)
 
 如需升级 Kubernetes 集群中的组件，或 [Kubernetes services](https://rancher.com/docs/rke/latest/en/config-options/services/) 或 [附加组件（add-on）](https://rancher.com/docs/rke/latest/en/config-options/add-ons/)的定义，请参见 [RKE 升级文档](https://rancher.com/docs/rke/latest/en/upgrades/)的 Rancher Kubernetes 引擎。
-
 
 ## 先决条件
 
@@ -24,7 +27,10 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 如需查看每个 Rancher 版本的已知问题，请参见 [GitHub](https://github.com/rancher/rancher/releases) 中的发行说明，或查看 [Rancher 论坛](https://forums.rancher.com/c/announcements/12)。
 
 不支持 _升级_ 或 _升级到_ [rancher-alpha 仓库](../resources/choose-a-rancher-version.md#helm-chart-仓库)中的任何 Chart。
+
 ### Helm 版本
+
+<DeprecationHelm2 />
 
 本安装指南假定你使用的是 Helm 3。
 
@@ -32,7 +38,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
 ### 离线安装：推送镜像到私有镜像仓库
 
-[仅适用于离线安装](../../../pages-for-subheaders/air-gapped-helm-cli-install.md)：为新的 Rancher Server 版本收集和推送镜像。使用你需要针对 Rancher 版本升级的镜像，按照步骤[推送镜像到私有镜像仓库](../other-installation-methods/air-gapped-helm-cli-install/publish-images.md)。
+[仅适用于离线安装](../other-installation-methods/air-gapped-helm-cli-install/air-gapped-helm-cli-install.md)：为新的 Rancher Server 版本收集和推送镜像。使用你需要针对 Rancher 版本升级的镜像，按照步骤[推送镜像到私有镜像仓库](../other-installation-methods/air-gapped-helm-cli-install/publish-images.md)。
 
 ### 使用 cert-manager 0.8.0 之前的版本升级
 
@@ -41,7 +47,6 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 ## 升级概要
 
 按照以下步骤升级 Rancher Server：
-
 
 ### 1. 备份运行 Rancher Server 的 Kubernetes 集群
 
@@ -59,21 +64,21 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
 1. 获取你用来安装 Rancher 的仓库名称。
 
-   关于仓库及其区别，请参见 [Helm Chart Repositories](../resources/choose-a-rancher-version.md#helm-chart-仓库)。
+   关于仓库及其区别，请参见 [Helm Chart 仓库](../resources/choose-a-rancher-version.md#helm-chart-仓库)。
 
    - Latest：建议用于试用最新功能
-      ```
-      helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
-      ```
+     ```
+     helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
+     ```
    - Stable：建议用于生产环境
-      ```
-      helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
-      ```
+     ```
+     helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+     ```
    - Alpha：即将发布的实验性预览。
-      ```
-      helm repo add rancher-alpha https://releases.rancher.com/server-charts/alpha
-      ```
-      注意：不支持升级到 Alpha 版、从 Alpha 版升级或在 Alpha 版之间升级。
+     ```
+     helm repo add rancher-alpha https://releases.rancher.com/server-charts/alpha
+     ```
+     注意：不支持升级到 Alpha 版、从 Alpha 版升级或在 Alpha 版之间升级。
 
    ```
    helm repo list
@@ -96,6 +101,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
    ```plain
    helm fetch rancher-<CHART_REPO>/rancher
    ```
+
    你可以通过 `--version=` 标记，来指定要升级的目标 Chart 版本。例如：
 
    ```plain
@@ -112,7 +118,6 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
 :::
 
-
 从当前安装的 Rancher Helm Chart 中获取用 `--set`传递的值。
 
 ```
@@ -128,13 +133,16 @@ hostname: rancher.my.org
 :::
 
 :::tip
+
 Deployment 的名称可能会有所不同。例如，如果你通过 AWS Marketplace 部署 Rancher，则 Deployment 的名称为“rancher-stable”。
 因此：
+
 ```
 helm get values rancher-stable -n cattle-system
 
 hostname: rancher.my.org
 ```
+
 :::
 
 如果要将 cert-manager 从 v1.5 或更早的版本升级到最新版本，请参阅 [cert-manager upgrade docs](../resources/upgrade-cert-manager.md#选项-c升级-15-及以下版本的-cert-manager) 了解如何在不卸载或重新安装 Rancher 的情况下升级 cert-manager。否则，请按照以下[ Rancher 升级步骤](#rancher-升级步骤)进行操作。
@@ -160,13 +168,16 @@ helm upgrade rancher rancher-<CHART_REPO>/rancher \
 :::
 
 :::tip
+
 如果你通过 AWS Marketplace 部署 Rancher，则 Deployment 的名称为“rancher-stable”。
 因此：
+
 ```
 helm upgrade rancher-stable rancher-<CHART_REPO>/rancher \
   --namespace cattle-system \
   --set hostname=rancher.my.org
 ```
+
 :::
 
 另外，你也可以将当前的值导出到一个文件中，并在升级时引用该文件。例如，如果你只需要改变 Rancher 的版本：

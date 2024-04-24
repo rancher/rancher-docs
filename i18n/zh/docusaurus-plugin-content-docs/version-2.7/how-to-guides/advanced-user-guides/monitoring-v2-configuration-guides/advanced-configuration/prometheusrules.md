@@ -1,5 +1,5 @@
 ---
-title: 配置 PrometheusRule
+title: PrometheusRule 配置
 ---
 
 PrometheusRule 定义了一组 Prometheus 告警和/或记录规则。

@@ -2,13 +2,13 @@
 | --- | --- | ---| ---|----|
 | [使用 kubectl 和 kubeconfig 文件来访问集群](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md) | ✓ | ✓ | ✓ | ✓ |
 | [管理集群成员](../how-to-guides/new-user-guides/manage-clusters/access-clusters/add-users-to-clusters.md) | ✓ | ✓ | ✓ | ✓ |
-| [编辑和升级集群](../pages-for-subheaders/cluster-configuration.md) | ✓ | ✓ | ✓ | ✓<sup>2</sup> |
+| [编辑和升级集群](../reference-guides/cluster-configuration/cluster-configuration.md) | ✓ | ✓ | ✓ | ✓<sup>2</sup> |
 | [管理节点](../how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools.md) | ✓ | ✓ | ✓ | ✓<sup>3</sup> |
-| [管理持久卷和存储类](../pages-for-subheaders/create-kubernetes-persistent-storage.md) | ✓ | ✓ | ✓ | ✓ |
+| [管理持久卷和存储类](../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md) | ✓ | ✓ | ✓ | ✓ |
 | [管理项目、命名空间和工作负载](../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md) | ✓ | ✓ | ✓ | ✓ |
-| [使用应用目录](../pages-for-subheaders/helm-charts-in-rancher.md) | ✓ | ✓ | ✓ | ✓ |
-| 配置工具（[Alerts、Notifiers、Monitoring](../pages-for-subheaders/monitoring-and-alerting.md)、[Logging](../pages-for-subheaders/logging.md) 和 [Istio](../pages-for-subheaders/istio.md)） | ✓ | ✓ | ✓ | ✓ |
-| [运行安全扫描](../pages-for-subheaders/cis-scan-guides.md) | ✓ | ✓ | ✓ | ✓ |
+| [使用应用目录](../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md) | ✓ | ✓ | ✓ | ✓ |
+| 配置工具（[Alerts、Notifiers、Monitoring](../integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md)、[Logging](../integrations-in-rancher/logging/logging.md) 和 [Istio](../integrations-in-rancher/istio/istio.md)） | ✓ | ✓ | ✓ | ✓ |
+| [运行安全扫描](../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md) | ✓ | ✓ | ✓ | ✓ |
 | [轮换证书](../how-to-guides/new-user-guides/manage-clusters/rotate-certificates.md) | ✓ | ✓ |  | |
 | [备份](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters.md)和[恢复](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md) Rancher 启动的集群 | ✓ | ✓ |  | ✓<sup>4</sup> |
 | [在 Rancher 无法访问集群时清理 Kubernetes 组件](../how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes.md) | ✓ | | | |
