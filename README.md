@@ -39,6 +39,16 @@ title: Some Title
 
 The `title` is rendered as the page's headline. The site renderer wraps the `title` value in `H1` tags, which are equivalent to `#` in Markdown syntax. This means that all subsequent headers on the page should be second level (`##`) or more.
 
+Moving forward, we are referring to the SUSE [style guide](https://documentation.suse.com/style/current/pdf/style-guide_en.pdf). The **Style check / runner / vale (pull_request)** check used [Vale](https://vale.sh/) to make style and grammar suggestions for new or updated documentation based on the SUSE style guide. To review these suggestions when working on a PR:
+
+1. Select the details of the **Style check / runner / vale (pull_request)** check.
+1. In the logs, go to **Run errata-ai/vale-action@v2.1.0** and select **Running vale with reviewdog 🐶 ...** to view the suggestions.
+1. New or updated files are checked against the SUSE style guide. Suggestions have the following format: '{"message": "[suse-vale-styleguide.Rule] Rule description", "location": {"path": "file-path", "range": {"start": {"line": , "column": }}}, "severity": " "}'
+
+For example: '{"message": "[suse-vale-styleguide.Usage] Use 'certain' instead of 'some'", "location": {"path": "docs/contribute-to-rancher.md", "range": {"start": {"line": 3, "column": 132}}}, "severity": "WARNING"}'
+
+1. Incorporate the suggestions when possible and appropriate.
+
 ## Run the Docs Website
 
 The Rancher Docs website is built with [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
