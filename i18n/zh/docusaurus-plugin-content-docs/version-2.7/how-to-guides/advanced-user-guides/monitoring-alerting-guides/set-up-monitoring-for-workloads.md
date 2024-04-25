@@ -8,7 +8,7 @@ title: 为工作负载设置 Monitoring
 
 如果你只需要工作负载的 CPU 和内存时间序列，则不需要部署 ServiceMonitor 或 PodMonitor，因为 Monitoring 应用默认会收集资源使用情况的指标数据。资源使用的时间序列数据在 Prometheus 的本地时间序列数据库中。
 
-Grafana 显示聚合数据，你也可以使用 PromQL 查询来查看单个工作负载的数据。进行 PromQL 查询后，你可以在 Prometheus UI 中单独执行查询并查看可视化的时间序列，你也可以使用查询来自定义显示工作负载指标的 Grafana 仪表板。有关工作负载指标的 PromQL 查询示例，请参阅[本节](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/expression/#workload-metrics)。
+Grafana 显示聚合数据，你也可以使用 PromQL 查询来查看单个工作负载的数据。进行 PromQL 查询后，你可以在 Prometheus UI 中单独执行查询并查看可视化的时间序列，你也可以使用查询来自定义显示工作负载指标的 Grafana 仪表板。有关工作负载指标的 PromQL 查询示例，请参阅[本节](../../../integrations-in-rancher/monitoring-and-alerting/promql-expressions.md#工作负载指标)。
 
 要为你的工作负载设置自定义指标，你需要设置一个 Exporter 并创建一个新的 ServiceMonitor 自定义资源，从而将 Prometheus 配置为从 Exporter 中抓取指标。
 

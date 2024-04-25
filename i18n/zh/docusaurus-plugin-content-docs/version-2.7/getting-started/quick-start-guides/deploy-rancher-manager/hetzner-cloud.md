@@ -3,11 +3,15 @@ title: Rancher Hetzner Cloud 快速入门指南
 description: 阅读此分步 Rancher Hetzner Cloud 指南，以快速部署带有单节点下游 Kubernetes 集群的 Rancher Server。
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/getting-started/quick-start-guides/deploy-rancher-manager/hetzner-cloud"/>
+</head>
+
 你可以参考以下步骤，在 Hetzner Cloud 的单节点 K3s Kubernetes 集群中快速部署 Rancher Server，并附加一个单节点下游 Kubernetes 集群。
 
 :::caution
 
-本章节中提供的指南，旨在帮助你快速启动一个用于 Rancher 的沙盒，以评估 Rancher 是否能满足你的使用需求。快速入门指南不适用于生产环境。如果你需要获取生产环境的操作指导，请参见[安装](../../../pages-for-subheaders/installation-and-upgrade.md)。
+本章节中提供的指南，旨在帮助你快速启动一个用于 Rancher 的沙盒，以评估 Rancher 是否能满足你的使用需求。快速入门指南不适用于生产环境。如果你需要获取生产环境的操作指导，请参见[安装](../../installation-and-upgrade/installation-and-upgrade.md)。
 
 :::
 
@@ -67,7 +71,7 @@ description: 阅读此分步 Rancher Hetzner Cloud 指南，以快速部署带�
 
 ### 后续操作
 
-使用 Rancher 创建 deployment。详情请参见[创建 Deployment](../../../pages-for-subheaders/deploy-rancher-workloads.md)。
+使用 Rancher 创建 deployment。详情请参见[创建 Deployment](../deploy-workloads/deploy-workloads.md)。
 
 ## 销毁环境
 

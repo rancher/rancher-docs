@@ -1,65 +1,76 @@
 ---
 title: Rancher Helm Chart 选项
-keywords: [rancher helm chart, rancher helm 选项, rancher helm chart 选项, helm chart rancher, helm 选项 rancher, helm chart 选项 rancher]
+keywords:
+  [
+    rancher helm chart,
+    rancher helm 选项,
+    rancher helm chart 选项,
+    helm chart rancher,
+    helm 选项 rancher,
+    helm chart 选项 rancher,
+  ]
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/getting-started/installation-and-upgrade/installation-references/helm-chart-options"/>
+</head>
 
 本文提供了 Rancher Helm Chart 的配置参考。
 
 如需选择 Helm Chart 版本，请参见[本页](../../../getting-started/installation-and-upgrade/resources/choose-a-rancher-version.md)。
 
-了解开启实验性功能的详情，请参见[本页](../../../pages-for-subheaders/enable-experimental-features.md)。
+了解开启实验性功能的详情，请参见[本页](../../../how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features.md)。
 
 ## 常用选项
 
-| 选项 | 默认值 | 描述 |
-| ------------------------- | ------------- | ---------------------------------------------------------------------------------- |
-| `bootstrapPassword` | " " | `string` - 为第一个管理员用户设置[引导密码](#引导密码)。登录后，管理员需要重置密码。如不设置，会使用随机生成的引导密码。 |
-| `hostname` | " " | `string` - 你的 Rancher Server 的完全限定的域名（FQDN) |
-| `ingress.tls.source` | "rancher" | `string` - 从哪里获取 Ingress 的证书- "rancher, letsEncrypt, secret" |
-| `letsEncrypt.email` | " " | `string` - 你的邮箱地址 |
-| `letsEncrypt.environment` | "production" | `string` - 可选项："staging, production" |
-| `privateCA` | false | `bool` - 如果你的证书是由私有 CA 签发的，把这个值设置为 true |
+| 选项                      | 默认值       | 描述                                                                                                                     |
+| ------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `bootstrapPassword`       | " "          | `string` - 为第一个管理员用户设置[引导密码](#引导密码)。登录后，管理员需要重置密码。如不设置，会使用随机生成的引导密码。 |
+| `hostname`                | " "          | `string` - 你的 Rancher Server 的完全限定的域名（FQDN)                                                                   |
+| `ingress.tls.source`      | "rancher"    | `string` - 从哪里获取 Ingress 的证书- "rancher, letsEncrypt, secret"                                                     |
+| `letsEncrypt.email`       | " "          | `string` - 你的邮箱地址                                                                                                  |
+| `letsEncrypt.environment` | "production" | `string` - 可选项："staging, production"                                                                                 |
+| `privateCA`               | false        | `bool` - 如果你的证书是由私有 CA 签发的，把这个值设置为 true                                                             |
 
 <br/>
 
 ## 高级选项
 
-| 选项 | 默认值 | 描述 |
-| ------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `additionalTrustedCAs` | false | `bool` - 请参见[额外的授信 CA](#额外的授信-ca) |
-| `addLocal` | "true" | `string` - 让 Rancher 检测并导入 “local” Rancher Server 集群。_注意：此选项在 2.5.0 中已不可用。你可考虑使用 `restrictedAdmin` 选项，来避免用户修改本地集群。_ |
-| `antiAffinity` | "preferred" | `string` - Rancher Pod 的反亲和性规则 - "preferred, required" |
-| `auditLog.destination` | "sidecar" | `string` - 发送审计日志到 Sidecar 容器的控制台或 hostPath 卷 - "sidecar, hostPath" |
-| `auditLog.hostPath` | "/var/log/rancher/audit" | `string` - 主机上的日志文件目标地址（仅当`auditLog.destination` 的值是 `hostPath` 时生效） |
-| `auditLog.level` | 0 | `int` - 设置 [API 审计日志](../../../how-to-guides/advanced-user-guides/enable-api-audit-log.md)等级。0 代表关闭。[0-3] |
-| `auditLog.maxAge` | 1 | `int` - 旧审计日志文件最多可保留的天数（仅当`auditLog.destination` 的值是 `hostPath` 时生效） |
-| `auditLog.maxBackup` | 1 | `int` - 审计文件最大可保留的个数（仅当 `auditLog.destination` 的值是 `hostPath` 时生效） |
-| `auditLog.maxSize` | 100 | `int` - 在审计日志被轮换前的最大容量，单位是 MB（仅当 `auditLog.destination` 的值是 `hostPath` 时生效） |
-| `auditLog.image.repository` | "registry.suse.com/bci/bci-micro" | `string` - 用于收集审计日志的镜像的位置。 |
-| `auditLog.image.tag` | "15.4.14.3" | `string` - 用于收集审计日志的镜像的标签。 |
-| `auditLog.image.pullPolicy` | "IfNotPresent" | `string` - 覆盖 auditLog 镜像的 imagePullPolicy - “Always”、“Never”、“IfNotPresent”。 |
-| `busyboxImage` | "" | `string` - 用于收集审计日志的 busybox 镜像位置。_注意：此选项已弃用，请使用 `auditLog.image.repository` 来控制审计 sidecar 镜像_。 |
-| `certmanager.version` | "" | `string` - 设置 cert-manager compatibility |
-| `debug` | false | `bool` - 在 Rancher Server 设置 debug 参数 |
-| `extraEnv` | [] | `list` - 为 Rancher 额外设置环境变量 |
-| `imagePullSecrets` | [] | `list` - 私有镜像仓库凭证的密文名称列表 |
-| `ingress.configurationSnippet` | "" | `string` - 添加额外的 Nginx 配置。可用于代理配置。 |
-| `ingress.extraAnnotations` | {} | `map` - 用于自定义 Ingress 的额外注释 |
-| `ingress.enabled` | true | 如果值为 false，Helm 不会安装 Rancher Ingress。你可把值设为 false 以部署你自己的 Ingress。 |
-| `letsEncrypt.ingress.class` | "" | `string` - cert-manager acmesolver ingress 的可选 ingress 类，用于响应 Let's Encrypt ACME 质询。选项：traefik，nginx。 |                      |
-| `noProxy` | "127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local,cattle-system.svc" | `string` - 不使用代理的主机名或 IP 地址的逗号分隔列表 |                                     |
-| `proxy` | "" | `string` - 给 Rancher 配置的 HTTP[S] 代理 |
-| `rancherImage` | "rancher/rancher" | `string` - Rancher 镜像源 |
-| `rancherImagePullPolicy` | "IfNotPresent" | `string` - 覆盖 Rancher Server 镜像的 imagePullPolicy - "Always", "Never", "IfNotPresent" |
-| `rancherImageTag` | 和 Chart 版本一致 | `string` - rancher/rancher 镜像标签 |
-| `replicas` | 3 | `int` - Rancher Server 副本数。如果设为 -1，会根据集群中的可用节点数自动选择 1，2或3。 |
-| `resources` | {} | `map` - Rancher Pod 资源请求和限制 |
-| `restrictedAdmin` | `false` | `bool` - 如果值为 true，初始的 Rancher 用户访问本地 Kubernetes 集群会受到限制，以避免权限升级。详情请参见 [restricted-admin 角色](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#受限管理员)。 |
-| `systemDefaultRegistry` | "" | `string` - 用于所有系统容器镜像的私有仓库，例如 http://registry.example.com/ |
-| `tls` | "ingress" | `string` - 详情请参见[外部 TLS 终止](#外部-tls-终止)。- "ingress, external" |
-| `useBundledSystemChart` | `false` | `bool` - 选择 Rancher Server 打包的 system-charts。此参数用于离线环境安装。 |
-| `global.cattle.psp.enabled` | `true` | `bool` - 使用 Rancher v2.7.2-v2.7.4 时，选择 `false` 以禁用 Kubernetes v1.25 及更高版本的 PSP。使用 Rancher v2.7.5 及更高版本时，Rancher 会尝试检测集群是否运行不支持 PSP 的 Kubernetes 版本，如果确定集群不支持 PSP，则将默认 PSP 的使用设置为 false。你仍然可以通过显式提供此值的 `true` 或 `false` 来手动覆盖此值。在支持 PSP 的集群中（例如使用 Kubernetes v1.24 或更低版本的集群），Rancher 仍将默认使用 PSP。 |
-
+| 选项                           | 默认值                                                                                      | 描述                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ------------------------------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| `additionalTrustedCAs`         | false                                                                                       | `bool` - 请参见[额外的授信 CA](#额外的授信-ca)                                                                                                                                                                                                                                                                                                                                                                      |
+| `addLocal`                     | "true"                                                                                      | `string` - 让 Rancher 检测并导入 “local” Rancher Server 集群。_注意：此选项在 2.5.0 中已不可用。你可考虑使用 `restrictedAdmin` 选项，来避免用户修改本地集群。_                                                                                                                                                                                                                                                      |
+| `antiAffinity`                 | "preferred"                                                                                 | `string` - Rancher Pod 的反亲和性规则 - "preferred, required"                                                                                                                                                                                                                                                                                                                                                       |
+| `auditLog.destination`         | "sidecar"                                                                                   | `string` - 发送审计日志到 Sidecar 容器的控制台或 hostPath 卷 - "sidecar, hostPath"                                                                                                                                                                                                                                                                                                                                  |
+| `auditLog.hostPath`            | "/var/log/rancher/audit"                                                                    | `string` - 主机上的日志文件目标地址（仅当`auditLog.destination` 的值是 `hostPath` 时生效）                                                                                                                                                                                                                                                                                                                          |
+| `auditLog.level`               | 0                                                                                           | `int` - 设置 [API 审计日志](../../../how-to-guides/advanced-user-guides/enable-api-audit-log.md)等级。0 代表关闭。[0-3]                                                                                                                                                                                                                                                                                             |
+| `auditLog.maxAge`              | 1                                                                                           | `int` - 旧审计日志文件最多可保留的天数（仅当`auditLog.destination` 的值是 `hostPath` 时生效）                                                                                                                                                                                                                                                                                                                       |
+| `auditLog.maxBackup`           | 1                                                                                           | `int` - 审计文件最大可保留的个数（仅当 `auditLog.destination` 的值是 `hostPath` 时生效）                                                                                                                                                                                                                                                                                                                            |
+| `auditLog.maxSize`             | 100                                                                                         | `int` - 在审计日志被轮换前的最大容量，单位是 MB（仅当 `auditLog.destination` 的值是 `hostPath` 时生效）                                                                                                                                                                                                                                                                                                             |
+| `auditLog.image.repository`    | "registry.suse.com/bci/bci-micro"                                                           | `string` - 用于收集审计日志的镜像的位置。                                                                                                                                                                                                                                                                                                                                                                           |
+| `auditLog.image.tag`           | "15.4.14.3"                                                                                 | `string` - 用于收集审计日志的镜像的标签。                                                                                                                                                                                                                                                                                                                                                                           |
+| `auditLog.image.pullPolicy`    | "IfNotPresent"                                                                              | `string` - 覆盖 auditLog 镜像的 imagePullPolicy - “Always”、“Never”、“IfNotPresent”。                                                                                                                                                                                                                                                                                                                               |
+| `busyboxImage`                 | ""                                                                                          | `string` - 用于收集审计日志的 busybox 镜像位置。_注意：此选项已弃用，请使用 `auditLog.image.repository` 来控制审计 sidecar 镜像_。                                                                                                                                                                                                                                                                                  |
+| `certmanager.version`          | ""                                                                                          | `string` - 设置 cert-manager compatibility                                                                                                                                                                                                                                                                                                                                                                          |
+| `debug`                        | false                                                                                       | `bool` - 在 Rancher Server 设置 debug 参数                                                                                                                                                                                                                                                                                                                                                                          |
+| `extraEnv`                     | []                                                                                          | `list` - 为 Rancher 额外设置环境变量                                                                                                                                                                                                                                                                                                                                                                                |
+| `imagePullSecrets`             | []                                                                                          | `list` - 私有镜像仓库凭证的密文名称列表                                                                                                                                                                                                                                                                                                                                                                             |
+| `ingress.configurationSnippet` | ""                                                                                          | `string` - 添加额外的 Nginx 配置。可用于代理配置。                                                                                                                                                                                                                                                                                                                                                                  |
+| `ingress.extraAnnotations`     | {}                                                                                          | `map` - 用于自定义 Ingress 的额外注释                                                                                                                                                                                                                                                                                                                                                                               |
+| `ingress.enabled`              | true                                                                                        | 如果值为 false，Helm 不会安装 Rancher Ingress。你可把值设为 false 以部署你自己的 Ingress。                                                                                                                                                                                                                                                                                                                          |
+| `letsEncrypt.ingress.class`    | ""                                                                                          | `string` - cert-manager acmesolver ingress 的可选 ingress 类，用于响应 Let's Encrypt ACME 质询。选项：traefik，nginx。                                                                                                                                                                                                                                                                                              |     |
+| `noProxy`                      | "127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local,cattle-system.svc" | `string` - 不使用代理的主机名或 IP 地址的逗号分隔列表                                                                                                                                                                                                                                                                                                                                                               |     |
+| `proxy`                        | ""                                                                                          | `string` - 给 Rancher 配置的 HTTP[S] 代理                                                                                                                                                                                                                                                                                                                                                                           |
+| `rancherImage`                 | "rancher/rancher"                                                                           | `string` - Rancher 镜像源                                                                                                                                                                                                                                                                                                                                                                                           |
+| `rancherImagePullPolicy`       | "IfNotPresent"                                                                              | `string` - 覆盖 Rancher Server 镜像的 imagePullPolicy - "Always", "Never", "IfNotPresent"                                                                                                                                                                                                                                                                                                                           |
+| `rancherImageTag`              | 和 Chart 版本一致                                                                           | `string` - rancher/rancher 镜像标签                                                                                                                                                                                                                                                                                                                                                                                 |
+| `replicas`                     | 3                                                                                           | `int` - Rancher Server 副本数。如果设为 -1，会根据集群中的可用节点数自动选择 1，2 或 3。                                                                                                                                                                                                                                                                                                                            |
+| `resources`                    | {}                                                                                          | `map` - Rancher Pod 资源请求和限制                                                                                                                                                                                                                                                                                                                                                                                  |
+| `restrictedAdmin`              | `false`                                                                                     | `bool` - 如果值为 true，初始的 Rancher 用户访问本地 Kubernetes 集群会受到限制，以避免权限升级。详情请参见 [restricted-admin 角色](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#受限管理员)。                                                                                                              |
+| `systemDefaultRegistry`        | ""                                                                                          | `string` - 用于所有系统容器镜像的私有仓库，例如 http://registry.example.com/                                                                                                                                                                                                                                                                                                                                        |
+| `tls`                          | "ingress"                                                                                   | `string` - 详情请参见[外部 TLS 终止](#外部-tls-终止)。- "ingress, external"                                                                                                                                                                                                                                                                                                                                         |
+| `useBundledSystemChart`        | `false`                                                                                     | `bool` - 选择 Rancher Server 打包的 system-charts。此参数用于离线环境安装。                                                                                                                                                                                                                                                                                                                                         |
+| `global.cattle.psp.enabled`    | `true`                                                                                      | `bool` - 使用 Rancher v2.7.2-v2.7.4 时，选择 `false` 以禁用 Kubernetes v1.25 及更高版本的 PSP。使用 Rancher v2.7.5 及更高版本时，Rancher 会尝试检测集群是否运行不支持 PSP 的 Kubernetes 版本，如果确定集群不支持 PSP，则将默认 PSP 的使用设置为 false。你仍然可以通过显式提供此值的 `true` 或 `false` 来手动覆盖此值。在支持 PSP 的集群中（例如使用 Kubernetes v1.24 或更低版本的集群），Rancher 仍将默认使用 PSP。 |
 
 ### 引导密码
 
@@ -81,13 +92,13 @@ kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{
 
 启用 [API 审计日志](../../../how-to-guides/advanced-user-guides/enable-api-audit-log.md)。
 
-你可以像收集其他容器日志一样收集此日志。在 Rancher Server 集群上为 `System` 项目启用 [Logging](../../../pages-for-subheaders/logging.md)。
+你可以像收集其他容器日志一样收集此日志。在 Rancher Server 集群上为 `System` 项目启用 [Logging](../../../integrations-in-rancher/logging/logging.md)。
 
 ```plain
 --set auditLog.level=1
 ```
 
-默认情况下，启用审计日志会在 Rancher pod 中创建一个 Sidecar 容器。这个容器（`rancher-audit-log`）会把日志流传输到 `stdout`。你可以像收集其他容器日志一样收集此日志。如果你使用 Sidecar 作为审计日志的目标时， `hostPath`，`maxAge`，`maxBackups` 和 `maxSize` 选项不会生效。建议使用你的操作系统或 Docker Daemon 的日志轮换功能来控制磁盘空间的使用。请为 Rancher Server 集群或 System 项目启用 [Logging](../../../pages-for-subheaders/logging.md)。
+默认情况下，启用审计日志会在 Rancher pod 中创建一个 Sidecar 容器。这个容器（`rancher-audit-log`）会把日志流传输到 `stdout`。你可以像收集其他容器日志一样收集此日志。如果你使用 Sidecar 作为审计日志的目标时， `hostPath`，`maxAge`，`maxBackups` 和 `maxSize` 选项不会生效。建议使用你的操作系统或 Docker Daemon 的日志轮换功能来控制磁盘空间的使用。请为 Rancher Server 集群或 System 项目启用 [Logging](../../../integrations-in-rancher/logging/logging.md)。
 
 将 `auditLog.destination` 的值设为 `hostPath`，可以将日志转发到与主机系统共享的卷，而不是传输到 Sidecar 容器。如果目标设置为 `hostPath`，你可能需要调整其他 auditLog 参数以进行日志轮换。
 
@@ -151,21 +162,23 @@ kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{
 Rancher 的一些功能（Helm Chart）需要使用互联网才能使用。你可以使用 `proxy` 设置代理服务器，或使用 `extraEnv` 设置 `HTTPS_PROXY` 环境变量来指向代理服务器。
 
 将要排除的 IP 使用逗号分隔列表添加到 `noProxy` Chart value 中。确保添加了以下值：
+
 - Pod 集群 IP 范围（默认值：`10.42.0.0/16`）。
 - Service Cluster IP 范围（默认值：`10.43.0.0/16`）。
 - 内部集群域（默认值：`.svc,.cluster.local`）。
 - 任何 Worker 集群 `controlplane` 节点。
-   Rancher 支持在此列表中使用 CIDR 表示法来表示范围。
+  Rancher 支持在此列表中使用 CIDR 表示法来表示范围。
 
 不包括敏感数据时，可以使用 `proxy` 或 `extraEnv` Chart 选项。使用 `extraEnv` 时将忽略 `noProxy` Helm 选项。因此，`NO_PROXY` 环境变量也必须设置为 `extraEnv`。
 
-以下是使用 `extraEnv` Chart 选项设置代理的示例：
+以下是使用 `proxy` Chart 选项设置代理的示例：
 
 ```plain
 --set proxy="http://<proxy_url:proxy_port>/"
 ```
 
 使用 `extraEnv` Chart 选项设置代理的示例：
+
 ```plain
 --set extraEnv[1].name=HTTPS_PROXY
 --set extraEnv[1].value="http://<proxy_url>:<proxy_port>/"
@@ -176,6 +189,7 @@ Rancher 的一些功能（Helm Chart）需要使用互联网才能使用。你�
 包含敏感数据（例如代理认证凭证）时，请使用 `extraEnv` 选项和 `valueFrom.secretRef` 来防止敏感数据在 Helm 或 Rancher 部署中暴露。
 
 下面是使用 `extraEnv` 配置代理的示例。此示例 Secret 在 Secret 的 `"https-proxy-url"` 键中包含 `"http://<username>:<password>@<proxy_url>:<proxy_port>/"` 值：
+
 ```plain
 --set extraEnv[1].name=HTTPS_PROXY
 --set extraEnv[1].valueFrom.secretKeyRef.name=secret-name
@@ -202,7 +216,7 @@ kubectl -n cattle-system create secret generic tls-ca-additional --from-file=ca-
 
 ### 私有仓库和离线安装
 
-有关使用私有仓库安装 Rancher 的详情，请参见[离线安装](../../../pages-for-subheaders/air-gapped-helm-cli-install.md)。
+有关使用私有仓库安装 Rancher 的详情，请参见[离线安装](../other-installation-methods/air-gapped-helm-cli-install/air-gapped-helm-cli-install.md)。
 
 ## 外部 TLS 终止
 
@@ -226,7 +240,7 @@ kubectl -n cattle-system create secret generic tls-ca-additional --from-file=ca-
 ingress:
   provider: nginx
   options:
-    use-forwarded-headers: 'true'
+    use-forwarded-headers: "true"
 ```
 
 ### 必须的 Header

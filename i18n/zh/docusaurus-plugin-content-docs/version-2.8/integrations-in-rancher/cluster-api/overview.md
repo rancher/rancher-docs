@@ -12,6 +12,12 @@ title: 概述
 
 ![overview](/img/30000ft_view.png)
 
+## 安全
+
+[SLSA](https://slsa.dev/spec/v1.0/about) 是一套由行业共识制定的可逐步采用的供应链安全指南。SLSA 制定的规范对软件生产者和消费者都很有用：生产者可以遵循 SLSA 的指导方针，使他们的软件供应链更加安全，消费者可以使用 SLSA 来决定是否信任软件包。
+
+Rancher Turtles 满足 [SLSA Level 3](https://slsa.dev/spec/v1.0/levels#build-l3) 对适当的构建平台、一致的构建过程和来源分布的要求。更多信息请参阅 [Rancher Turtles 安全](https://turtles.docs.rancher.com/security/slsa)文档。
+
 ## 先决条件
 
 在 Rancher 环境中安装 Rancher Turtles 之前，你必须禁用 Rancher 的 `embedded-cluster-api` 功能。这还包括清理 Rancher 专用的 webhook，否则这些 webhook 将与 CAPI 的 webhook 冲突。
@@ -20,6 +26,45 @@ title: 概述
 
 - 禁用 Rancher 中的 `embedded-cluster-api` 功能。
 - 删除不再需要的 `mutating-webhook-configuration` 和 `validating-webhook-configuration` webhook。
+
+这些 webhook 也可以通过 Rancher UI 删除：
+
+1. 点击左上角 **☰ > 集群管理**。
+1. 选择你的 local 集群。
+1. 在左侧导航菜单，选择 **More Resources** > **Admission**。
+1. 在下拉菜单中，选择资源页面的 `MutatingWebhookConfiguration` 和 `ValidatingWebhookConfiguration`。
+1. 在相应的资源页面上，点击 `mutating-webhook-configuration` and `validating-webhook-configuration` 后面的 **⋮** 然后选择 **删除**。
+
+还可以通过在 **Resource Search** 字段中输入 webhook 的名称来访问到具体的 webhook。
+
+以下的 `kubectl` 命令可以手动删除必要的 webhook：
+
+```console
+kubectl delete mutatingwebhookconfiguration.admissionregistration.k8s.io mutating-webhook-configuration
+```
+
+```console
+kubectl delete validatingwebhookconfigurations.admissionregistration.k8s.io validating-webhook-configuration
+```
+
+使用以下示例从控制台禁用 `embedded-cluster-api` 功能：
+
+1. 创建一个 `feature.yaml` 文件，将 `embedded-cluster-api` 设置为 false：
+
+```yaml title="feature.yaml"
+apiVersion: management.cattle.io/v3
+kind: Feature
+metadata:
+  name: embedded-cluster-api
+spec:
+  value: false
+```
+
+2. 使用 `kubectl` 将 `feature.yaml` 文件应用到集群：
+
+```bash
+kubectl apply -f feature.yaml
+```
 
 ## 安装 Rancher Turtles Operator
 
@@ -47,7 +92,7 @@ title: 概述
 1. 点击 **Rancher Turtles - the Cluster API Extension**。
 1. 点击 **Install > Next > Install**.
 
-此过程使用 Helm chart 的默认值，这些值适用于大部分的安装场景。如果你的配置需要覆盖其中一些默认值，你可以在安装期间通过 Rancher UI 指定这些值，也可以通过 [Helm 手动安装 Chart](#通过-helm-安装)。有关可用的 values 设置的详细信息，请参阅 Rancher Turtles 的 [Helm chart 参考指南](https://turtles.docs.rancher.com/docs/reference-guides/rancher-turtles-chart/values)。
+此过程使用 Helm chart 的默认值，这些值适用于大部分的安装场景。如果你的配置需要覆盖其中一些默认值，你可以在安装期间通过 Rancher UI 指定这些值，也可以通过 [Helm 手动安装 Chart](#通过-helm-安装)。有关可用的 values 设置的详细信息，请参阅 Rancher Turtles 的 [Helm chart 参考指南](https://turtles.docs.rancher.com/reference-guides/rancher-turtles-chart/values)。
 
 安装可能需要几分钟时间，安装完成后，你可以在集群中看到以下新部署：
 
@@ -132,7 +177,7 @@ stringData:
 
 :::info
 
-有关 chart 支持的 values 及其用法的详细信息，请参阅 [Helm chart 选项](https://turtles.docs.rancher.com/docs/reference-guides/rancher-turtles-chart/values)
+有关 chart 支持的 values 及其用法的详细信息，请参阅 [Helm chart 选项](https://turtles.docs.rancher.com/reference-guides/rancher-turtles-chart/values)
 
 :::
 
@@ -140,7 +185,7 @@ stringData:
 
 :::note
 
-请记住，如果使用此安装选项，你必须自行管理 CAPI Operator 的安装。你可以参照 Rancher Turtles 文档中的 [CAPI Operator 指南](https://turtles.docs.rancher.com/docs/tasks/capi-operator/intro)
+请记住，如果使用此安装选项，你必须自行管理 CAPI Operator 的安装。你可以参照 Rancher Turtles 文档中的 [CAPI Operator 指南](https://turtles.docs.rancher.com/tasks/capi-operator/intro)
 
 :::
 
@@ -213,9 +258,3 @@ spec:
 ```bash
 kubectl apply -f feature.yaml
 ```
-
-## 安全
-
-[SLSA](https://slsa.dev/spec/v1.0/about) 是一套由行业共识制定的可逐步采用的供应链安全指南。SLSA 制定的规范对软件生产者和消费者都很有用：生产者可以遵循 SLSA 的指导方针，使他们的软件供应链更加安全，消费者可以使用 SLSA 来决定是否信任软件包。
-
-Rancher Turtles 满足 [SLSA Level 3](https://slsa.dev/spec/v1.0/levels#build-l3) 对适当的构建平台、一致的构建过程和来源分布的要求。更多信息请参阅 [Rancher Turtles 安全](https://turtles.docs.rancher.com/docs/security/slsa)文档。

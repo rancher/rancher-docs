@@ -2,6 +2,10 @@
 title: 安装 Adapter
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter"/>
+</head>
+
 > **重要提示**：如果你尝试重新安装 Adapter，你可能会在长达一小时的时间内收到不合规的错误消息。
 
 ### Rancher 与 Adapter 的兼容性矩阵
@@ -14,14 +18,20 @@ title: 安装 Adapter
 :::
 
 | Rancher 版本 | Adapter 版本 |
-|-----------------|:---------------:|
-| v2.7.0 | v2.0.0 |
-| v2.7.1 | v2.0.0 |
-| v2.7.2 | v2.0.1 |
-| v2.7.3 | v2.0.1 |
-| v2.7.4 | v2.0.1 |
-| v2.7.5 | v2.0.2 |
-
+| ------------ | :----------: |
+| v2.7.0       |    v2.0.0    |
+| v2.7.1       |    v2.0.0    |
+| v2.7.2       |    v2.0.1    |
+| v2.7.3       |    v2.0.1    |
+| v2.7.4       |    v2.0.1    |
+| v2.7.5       |    v2.0.2    |
+| v2.7.6       |    v2.0.2    |
+| v2.7.7       |    v2.0.2    |
+| v2.7.8       |    v2.0.2    |
+| v2.7.9       |    v2.0.2    |
+| v2.7.10      |    v2.0.2    |
+| v2.7.11      |    v2.0.4    |
+| v2.7.12      |    v2.0.4    |
 
 ### 1. 获取对 Local 集群的访问权限
 
@@ -88,7 +98,6 @@ helm repo add rancher-charts https://charts.rancher.io
 helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter --namespace cattle-csp-adapter-system --set aws.enabled=true --set aws.roleName=$MY_ROLE_NAME --set-string aws.accountNumber=$MY_ACC_NUM --version $CSP_ADAPTER_VERSION
 ```
 
-
 你也可以使用 `values.yaml` 并指定以下选项：
 
 ```yaml
@@ -152,4 +161,4 @@ kubectl delete secret tls-ca-additional -n cattle-csp-adapter-system
 kubectl rollout restart deploy rancher-csp-adapter -n cattle-csp-adapter-system
 ```
 
-> **注意**：有一些方法（例如 cert-manager 的 [trust operator](https://cert-manager.io/docs/projects/trust/)）可以帮助你减少手动轮换任务的数量。这些选项不受官方支持，但可能对想要自动化某些任务的用户有用。
+> **注意**：有一些方法（例如 cert-manager 的 [trust operator](https://cert-manager.io/docs/projects/trust/)）可以帮助你自动执行一些任务。尽管这些方法不受官方支持，但它们可以减少手动轮换任务的频率。

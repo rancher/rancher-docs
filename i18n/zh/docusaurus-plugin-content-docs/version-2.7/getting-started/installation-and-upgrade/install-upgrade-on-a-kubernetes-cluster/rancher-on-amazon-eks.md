@@ -2,9 +2,13 @@
 title: 在 Amazon EKS 上安装 Rancher
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks"/>
+</head>
+
 本文介绍了如何在 Amazon EKS 集群上安装 Rancher。你也可以[通过 AWS Marketplace 安装 Rancher](../../quick-start-guides/deploy-rancher-manager/aws-marketplace.md)。
 
-如果你已经有一个 EKS Kubernetes 集群，请直接跳转到[安装 Ingress](#5-安装-ingress)这个步骤。然后按照[此处](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#安装-rancher-helm-chart)的步骤安装 Rancher Helm Chart。
+如果你已经有一个 EKS Kubernetes 集群，请直接跳转到[安装 Ingress](#5-安装-ingress)这个步骤。然后按照[此处](install-upgrade-on-a-kubernetes-cluster.md#安装-rancher-helm-chart)的步骤安装 Rancher Helm Chart。
 
 ## 为 Rancher Server 创建 EKS 集群
 
@@ -37,12 +41,12 @@ aws configure
 
 输入以下参数：
 
-| 值 | 描述 |
-|-------|-------------|
-| AWS Access Key ID | 具有 EKS 权限的 IAM 用户的访问密钥凭证。 |
-| AWS Secret Access Key | 具有 EKS 权限的 IAM 用户的密文密钥凭证。 |
-| Default region name | 集群节点所在的 [AWS 区域](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html#Concepts.RegionsAndAvailabilityZones.Regions)。 |
-| Default output format | 输入 `json`。 |
+| 值                    | 描述                                                                                                                                                                       |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AWS Access Key ID     | 具有 EKS 权限的 IAM 用户的访问密钥凭证。                                                                                                                                   |
+| AWS Secret Access Key | 具有 EKS 权限的 IAM 用户的密文密钥凭证。                                                                                                                                   |
+| Default region name   | 集群节点所在的 [AWS 区域](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html#Concepts.RegionsAndAvailabilityZones.Regions)。 |
+| Default output format | 输入 `json`。                                                                                                                                                              |
 
 ### 3. 创建 EKS 集群
 
@@ -138,7 +142,7 @@ ingress-nginx-controller   LoadBalancer   10.100.90.18   a904a952c73bf4f668a17c4
 
 ### 8. 安装 Rancher Helm Chart
 
-按照[本页](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#安装-rancher-helm-chart)的说明安装 Rancher Helm Chart。任何 Kubernetes 发行版上安装的 Rancher 的 Helm 说明都是一样的。
+按照[本页](install-upgrade-on-a-kubernetes-cluster.md#安装-rancher-helm-chart)的说明安装 Rancher Helm Chart。任何 Kubernetes 发行版上安装的 Rancher 的 Helm 说明都是一样的。
 
 安装 Rancher 时，使用上一步获取的 DNS 名称作为 Rancher Server 的 URL。它可以作为 Helm 选项传递进来。例如，如果 DNS 名称是 `rancher.my.org`，你需要使用 `--set hostname=rancher.my.org` 选项来运行 Helm 安装命令。
 
@@ -148,4 +152,4 @@ ingress-nginx-controller   LoadBalancer   10.100.90.18   a904a952c73bf4f668a17c4
 --set ingress.ingressClassName=nginx
 ```
 
-请参阅[Helm 安装命令](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#5-根据你选择的证书选项通过-helm-安装-rancher)了解你的证书选项。
+请参阅[Helm 安装命令](install-upgrade-on-a-kubernetes-cluster.md#5-根据你选择的证书选项通过-helm-安装-rancher)了解你的证书选项。

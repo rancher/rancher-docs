@@ -2,7 +2,14 @@
 title: 节点和节点池
 ---
 
-在 Rancher 中启动 Kubernetes 集群后，你可以从集群的**节点**选项卡管理各个节点。不同的配置集群[选项](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)对应不同的可用节点选项。
+在 Rancher 中启动 Kubernetes 集群后，你可以从集群的**节点**选项卡管理各个节点。
+
+1. 点击左上角的 **☰**。
+1. 选择**集群管理**。
+1. 找到要管理其节点的集群，然后单击行末尾的**浏览**按钮。
+1. 从左侧导航中选择**节点**。
+
+不同的集群配置[选项](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)对应不同的可用节点选项。
 
 :::note
 
