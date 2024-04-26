@@ -283,17 +283,20 @@ Move the images in the `rancher-images.tar.gz` to your private registry using th
 
 The image list, `rancher-images.txt` or `rancher-windows-images.txt`, is expected to be on the workstation in the same directory that you are running the `rancher-load-images.sh` script. The `rancher-images.tar.gz` should also be in the same directory.
 
-1. Log into your private registry if required:
+1. Ensure that the rancher project is created in your private registry.
+   Otherwise, an error will be reported like project rancher not found.
+   
+2. Log into your private registry if required:
    ```plain
    docker login <REGISTRY.YOURDOMAIN.COM:PORT>
    ```
 
-1. Make `rancher-load-images.sh` an executable:
+3. Make `rancher-load-images.sh` an executable:
    ```
    chmod +x rancher-load-images.sh
    ```
 
-1. Use `rancher-load-images.sh` to extract, tag and push the images from `rancher-images.tar.gz` to your private registry:
+4. Use `rancher-load-images.sh` to extract, tag and push the images from `rancher-images.tar.gz` to your private registry:
 
 ```plain
 ./rancher-load-images.sh --image-list ./rancher-images.txt \
