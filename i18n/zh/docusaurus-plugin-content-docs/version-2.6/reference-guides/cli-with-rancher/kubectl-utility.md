@@ -2,6 +2,10 @@
 title: kubectl 实用程序
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/reference-guides/cli-with-rancher/kubectl-utility"/>
+</head>
+
 ## kubectl
 
 kubectl 用于与 Rancher 进行交互。
