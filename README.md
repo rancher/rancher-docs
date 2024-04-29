@@ -45,7 +45,7 @@ Moving forward, we are referring to the SUSE [style guide](https://documentation
 1. In the logs, go to **Run errata-ai/vale-action@v2.1.0** and select **Running vale with reviewdog 🐶 ...** to view the suggestions.
 1. New or updated files are checked against the SUSE style guide. Suggestions have the following format: '{"message": "[suse-vale-styleguide.Rule] Rule description", "location": {"path": "file-path", "range": {"start": {"line": , "column": }}}, "severity": " "}'
 
-For example: '{"message": "[suse-vale-styleguide.Usage] Use 'certain' instead of 'some'", "location": {"path": "docs/contribute-to-rancher.md", "range": {"start": {"line": 3, "column": 132}}}, "severity": "WARNING"}'
+    For example: '{"message": "[suse-vale-styleguide.Usage] Use 'certain' instead of 'some'", "location": {"path": "docs/contribute-to-rancher.md", "range": {"start": {"line": 3, "column": 132}}}, "severity": "WARNING"}'
 
 1. Incorporate the suggestions when possible and appropriate.
 
