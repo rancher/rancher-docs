@@ -283,8 +283,8 @@ Move the images in the `rancher-images.tar.gz` to your private registry using th
 
 The image list, `rancher-images.txt` or `rancher-windows-images.txt`, is expected to be on the workstation in the same directory that you are running the `rancher-load-images.sh` script. The `rancher-images.tar.gz` should also be in the same directory.
 
-1. Ensure that the rancher project is created in your private registry.
-   Otherwise, an error will be reported like project rancher not found.
+1. Ensure that the Rancher project is in your private registry.
+   If not, you'll see an error message, such as, "project rancher not found".
    
 2. Log into your private registry if required:
    ```plain
