@@ -37,6 +37,12 @@ Deactivating a node driver doesn't just affect its visibility in the Rancher UI.
 
 For example, if you deactivate a vSphere node driver to hide it in the UI, and you have a vSphere cluster that was deployed with that driver, the initial node in the cluster will fail, and the entire cluster will become inaccessible. Attempts to delete the vSphere nodes will fail, with nodes stuck in an extended `Removing` state.
 
+Before you deactivate a node driver, make sure that it has no associated clusters. One way to check is to see if the respective platform for a driver is listed among your clusters:
+
+1. In the upper left corner, click **☰ > Cluster Management**.
+1. Select **Clusters**.
+1. The **Provider** name is the fourth column of the table on the **Clusters** page.
+
 :::
 
 ### Adding Custom Node Drivers
