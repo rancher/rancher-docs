@@ -23,21 +23,21 @@ The `cattle-node-agent` is used to interact with nodes in a [Rancher Launched Ku
 
 ### Requests
 
-The `cattle-cluster-agent` pod does not define default CPU and memory request values. As a baseline, we recommend setting the CPU request at `50m` and memory request at `100Mi`. However, it is important that you ensure your cluster has the correct resources available and the use case has been assessed appropriately before doing so.
+The `cattle-cluster-agent` pod does not define the default CPU and memory request values. As a baseline, we recommend setting the CPU request at `50m` and memory request at `100Mi`. However, it is important that you assess your use case appropriately and that you allocate the correct resources to your cluster for your needs.
 
 To configure request values through the UI:
 
 <Tabs groupId="k8s-distro">
 <TabItem value="RKE">
 
-1. When you create or edit an existing cluster, go to the **Cluster Options** section.
+1. When you [create](./launch-kubernetes-with-rancher.md) or edit an existing cluster, go to the **Cluster Options** section.
 1. Expand the **Cluster Configuration** subsection.
 1. Configure your request values using the **CPU Requests** and **Memory Requests** fields as needed.
 
 </TabItem>
 <TabItem value="RKE2/K3s">
 
-1. When you create or edit an existing cluster, go to the **Cluster Configuration**.
+1. When you [create](./launch-kubernetes-with-rancher.md) or edit an existing cluster, go to the **Cluster Configuration**.
 1. Select the **Cluster Agent** subsection.
 1. Configure your request values using the **CPU Reservation** and **Memory Reservation** fields as needed.
 
