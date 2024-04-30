@@ -21,11 +21,62 @@ The `cattle-cluster-agent` is used to connect to the Kubernetes API of [Rancher 
 
 The `cattle-node-agent` is used to interact with nodes in a [Rancher Launched Kubernetes](launch-kubernetes-with-rancher.md) cluster when performing cluster operations. Examples of cluster operations are upgrading Kubernetes version and creating/restoring etcd snapshots. The `cattle-node-agent` is deployed using a DaemonSet resource to make sure it runs on every node. The `cattle-node-agent` is used as fallback option to connect to the Kubernetes API of [Rancher Launched Kubernetes](launch-kubernetes-with-rancher.md) clusters when `cattle-cluster-agent` is unavailable.
 
+### Requests
+
+The `cattle-cluster-agent` pod does not define the default CPU and memory request values. As a baseline, we recommend setting the CPU request at `50m` and memory request at `100Mi`. However, it is important that you assess your use case appropriately and that you allocate the correct resources to your cluster for your needs.
+
+To configure request values through the UI:
+
+<Tabs groupId="k8s-distro">
+<TabItem value="RKE">
+
+1. When you [create](./launch-kubernetes-with-rancher.md) or edit an existing cluster, go to the **Cluster Options** section.
+1. Expand the **Cluster Configuration** subsection.
+1. Configure your request values using the **CPU Requests** and **Memory Requests** fields as needed.
+
+</TabItem>
+<TabItem value="RKE2/K3s">
+
+1. When you [create](./launch-kubernetes-with-rancher.md) or edit an existing cluster, go to the **Cluster Configuration**.
+1. Select the **Cluster Agent** subsection.
+1. Configure your request values using the **CPU Reservation** and **Memory Reservation** fields as needed.
+
+</TabItem>
+</Tabs>
+
+If you prefer to configure via YAML, add the following snippet to your configuration file:
+
+<Tabs groupId="k8s-distro">
+<TabItem value="RKE">
+
+```yaml
+cluster_agent_deployment_customization:
+  override_resource_requirements:
+    requests:
+      cpu: 50m
+      memory: 100Mi
+```
+
+</TabItem>
+<TabItem value="RKE2/K3s">
+
+```yaml
+spec:
+  clusterAgentDeploymentCustomization:
+    overrideResourceRequirements:
+      requests:
+        cpu: 50m
+        memory: 100Mi 
+```
+
+</TabItem>
+</Tabs>
+
 ### Scheduling rules
 
-The `cattle-cluster-agent` uses either a fixed set of tolerations, or dynamically-added tolerations based on taints applied to the control plane nodes. This structure allows [Taint based Evictions](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/#taint-based-evictions) to work properly for `cattle-cluster-agent`. 
+The `cattle-cluster-agent` uses either a fixed set of tolerations, or dynamically-added tolerations based on taints applied to the control plane nodes. This structure allows [Taint based Evictions](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/#taint-based-evictions) to work properly for `cattle-cluster-agent`.
 
-If control plane nodes are present in the cluster, the default tolerations will be replaced with tolerations matching the taints on the control plane nodes. The default set of tolerations are described below. 
+If control plane nodes are present in the cluster, the default tolerations will be replaced with tolerations matching the taints on the control plane nodes. The default set of tolerations are described below.
 
 | Component              | nodeAffinity nodeSelectorTerms             | nodeSelector | Tolerations                                                                    |
 | ---------------------- | ------------------------------------------ | ------------ | ------------------------------------------------------------------------------ |
