@@ -21,7 +21,7 @@ To test the overlay network, you can launch the following `DaemonSet` definition
 
 :::note
 
-This container [does not support ARM nodes](https://github.com/leodotcloud/swiss-army-knife/issues/18), such as a Raspberry Pi. This will be seen in the pod logs as `exec user process caused: exec format error`.
+The `swiss-army-knife` container does not support Windows nodes. It also [does not support ARM nodes](https://github.com/leodotcloud/swiss-army-knife/issues/18), such as a Raspberry Pi. When the test encounters incompatible nodes, this is recorded in the pod logs as an error message, such as `exec user process caused: exec format error` for ARM nodes, or `ImagePullBackOff (Back-off pulling image "rancherlabs/swiss-army-knife)` for Windows nodes.
 
 :::
 
