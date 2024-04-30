@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[31865],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[96440],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 55661:
+/***/ 8062:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "troubleshooting/other-troubleshooting-tips/networking",
-    "id": "version-2.6/troubleshooting/other-troubleshooting-tips/networking",
+    "id": "version-2.0-2.4/troubleshooting/other-troubleshooting-tips/networking",
     "title": "Networking",
     "description": "The commands/steps listed on this page can be used to check networking related issues in your cluster.",
-    "source": "@site/versioned_docs/version-2.6/troubleshooting/other-troubleshooting-tips/networking.md",
+    "source": "@site/versioned_docs/version-2.0-2.4/troubleshooting/other-troubleshooting-tips/networking.md",
     "sourceDirName": "troubleshooting/other-troubleshooting-tips",
     "slug": "/troubleshooting/other-troubleshooting-tips/networking",
-    "permalink": "/v2.6/troubleshooting/other-troubleshooting-tips/networking",
+    "permalink": "/zh/v2.0-v2.4/troubleshooting/other-troubleshooting-tips/networking",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/troubleshooting/other-troubleshooting-tips/networking.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.0-2.4/troubleshooting/other-troubleshooting-tips/networking.md",
     "tags": [],
-    "version": "2.6",
-    "lastUpdatedAt": 1694201701,
-    "formattedLastUpdatedAt": "Sep 8, 2023",
+    "version": "2.0-2.4",
+    "lastUpdatedAt": 1714512079,
+    "formattedLastUpdatedAt": "2024年4月30日",
     "frontMatter": {
         "title": "Networking"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Kubernetes Resources",
-        "permalink": "/v2.6/troubleshooting/other-troubleshooting-tips/kubernetes-resources"
+        "title": "Kubernetes resources",
+        "permalink": "/zh/v2.0-v2.4/troubleshooting/other-troubleshooting-tips/kubernetes-resources"
     },
     "next": {
         "title": "DNS",
-        "permalink": "/v2.6/troubleshooting/other-troubleshooting-tips/dns"
+        "permalink": "/zh/v2.0-v2.4/troubleshooting/other-troubleshooting-tips/dns"
     }
 };
 const assets = {};
@@ -365,6 +365,11 @@ const toc = [
         value: 'Overlay network broken when using Canal/Flannel due to missing node annotations',
         id: 'overlay-network-broken-when-using-canalflannel-due-to-missing-node-annotations',
         level: 4
+    },
+    {
+        value: 'System namespace pods network connectivity broken',
+        id: 'system-namespace-pods-network-connectivity-broken',
+        level: 4
     }
 ];
 const layoutProps = {
@@ -383,11 +388,11 @@ function MDXContent(_param) {
         href: "https://ranchermanager.docs.rancher.com/troubleshooting/other-troubleshooting-tips/networking"
     })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The commands/steps listed on this page can be used to check networking related issues in your cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Make sure you configured the correct kubeconfig (for example, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `export KUBECONFIG=$PWD/kube_config_cluster.yml`), ` for Rancher HA) or are using the embedded kubectl via the UI.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `export KUBECONFIG=$PWD/kube_config_rancher-cluster.yml`), ` for Rancher HA) or are using the embedded kubectl via the UI.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "double-check-if-all-the-required-ports-are-opened-in-your-host-firewall"
     }, `Double check if all the required ports are opened in your (host) firewall`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Double check if all the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters#networking-requirements"
+        "href": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters#networking-requirements"
     }, `required ports`), ` are opened in your (host) firewall. The overlay network uses UDP in comparison to all other required ports which are TCP.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "check-if-overlay-network-is-functioning-correctly"
     }, `Check if overlay network is functioning correctly`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The pod can be scheduled to any of the hosts you used for your cluster, but that means that the NGINX ingress controller needs to be able to route the request from `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -403,16 +408,20 @@ function MDXContent(_param) {
         "href": "https://github.com/rancherlabs/swiss-army-knife"
     }, `https://github.com/rancherlabs/swiss-army-knife`), `), which we will use to run a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `ping`), ` test between containers on all hosts.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "type": "note"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, `This container `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `ping`), ` test between containers on all hosts.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Note:`), ` The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `swiss-army-knife`), ` container does not support Windows nodes. It also `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://github.com/leodotcloud/swiss-army-knife/issues/18"
-    }, `does not support ARM nodes`), `, such as a Raspberry Pi. This will be seen in the pod logs as `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `does not support ARM nodes`), `, such as a Raspberry Pi. When the test encounters incompatible nodes, this is recorded in the pod logs as an error message, such as `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `exec user process caused: exec format error`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `exec user process caused: exec format error`), ` for ARM nodes, or `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `ImagePullBackOff (Back-off pulling image "rancherlabs/swiss-army-knife)`), ` for Windows nodes.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
         parentName: "li"
@@ -513,7 +522,7 @@ wk1 can reach wk1
         parentName: "p"
     }, `wk2`), ` has no connectivity over the overlay network. This could be because the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters#networking-requirements"
+        "href": "/zh/v2.0-v2.4/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters#networking-requirements"
     }, `required ports`), ` for overlay networking are not opened for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `wk2`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -579,7 +588,47 @@ wk1 can reach wk1
     }, `jq`), ` to be installed):`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre"
     }, `kubectl get nodes -o json | jq '.items[].metadata | select(.annotations["flannel.alpha.coreos.com/public-ip"] == null or .annotations["flannel.alpha.coreos.com/kube-subnet-manager"] == null or .annotations["flannel.alpha.coreos.com/backend-type"] == null or .annotations["flannel.alpha.coreos.com/backend-data"] == null) | .name'
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If there is no output, the cluster is not affected.`));
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If there is no output, the cluster is not affected.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+        "id": "system-namespace-pods-network-connectivity-broken"
+    }, `System namespace pods network connectivity broken`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "blockquote"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Note:`), ` This applies only to Rancher upgrades from v2.0.6 or earlier to v2.0.7 or later. Upgrades from v2.0.7 to later version are unaffected.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("table", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("thead", {
+        parentName: "table"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "thead"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
+        parentName: "tr",
+        "align": null
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("th", {
+        parentName: "tr",
+        "align": null
+    }))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tbody", {
+        parentName: "table"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `GitHub issue`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/issues/15146"
+    }, `#15146`))))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If pods in system namespaces cannot communicate with pods in other system namespaces, you will need to follow the instructions in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration"
+    }, `Upgrading to v2.0.7+ — Namespace Migration`), ` to restore connectivity. Symptoms include:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `NGINX ingress controller showing `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "li"
+    }, `504 Gateway Time-out`), ` when accessed.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `NGINX ingress controller logging `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "li"
+    }, `upstream timed out (110: Connection timed out) while connecting to upstream`), ` when accessed.`)));
 }
 MDXContent.isMDXComponent = true;
 
