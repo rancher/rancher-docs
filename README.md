@@ -27,17 +27,7 @@ The file paths in the repo correspond to the URLs for pages on the docs website.
 
 ### Style & Formatting
 
-The docs are written in [Markdown](https://www.markdownguide.org/getting-started/). We refer to the Microsoft [style guide](https://learn.microsoft.com/en-us/style-guide/welcome/) and use standard American English. Many pages are also available in Simplified Chinese.
-
-Every docs page contain metadata in the first few lines:
-
-```
----
-title: Some Title
----
-```
-
-The `title` is rendered as the page's headline. The site renderer wraps the `title` value in `H1` tags, which are equivalent to `#` in Markdown syntax. This means that all subsequent headers on the page should be second level (`##`) or more.
+The docs are written in [Markdown](https://www.markdownguide.org/getting-started/). We use standard American English and many pages are also available in Simplified Chinese.
 
 Moving forward, we are referring to the SUSE [style guide](https://documentation.suse.com/style/current/pdf/style-guide_en.pdf). The **Style check / runner / vale (pull_request)** check used [Vale](https://vale.sh/) to make style and grammar suggestions for new or updated documentation based on the SUSE style guide. To review these suggestions when working on a PR:
 
@@ -48,6 +38,16 @@ Moving forward, we are referring to the SUSE [style guide](https://documentation
     For example: '{"message": "[suse-vale-styleguide.Usage] Use 'certain' instead of 'some'", "location": {"path": "docs/contribute-to-rancher.md", "range": {"start": {"line": 3, "column": 132}}}, "severity": "WARNING"}'
 
 1. Incorporate the suggestions when possible and appropriate.
+
+Every docs page contain metadata in the first few lines:
+
+```
+---
+title: Some Title
+---
+```
+
+The `title` is rendered as the page's headline. The site renderer wraps the `title` value in `H1` tags, which are equivalent to `#` in Markdown syntax. This means that all subsequent headers on the page should be second level (`##`) or more.
 
 ## Run the Docs Website
 
