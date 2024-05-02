@@ -41,7 +41,7 @@ Before you deactivate a node driver, make sure that it has no associated cluster
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. Select **Clusters**.
-1. The **Provider** name is the fourth column of the table on the **Clusters** page.
+1. Check the **Provider** column of the table for instances of the node driver you are deactivating.
 
 :::
 
