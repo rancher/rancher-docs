@@ -70,7 +70,6 @@
   }
 
   td {
-    /*min-width: 150px;*/
     width: auto;
     overflow-wrap: anywhere; /* For browser compatibility */
   }
