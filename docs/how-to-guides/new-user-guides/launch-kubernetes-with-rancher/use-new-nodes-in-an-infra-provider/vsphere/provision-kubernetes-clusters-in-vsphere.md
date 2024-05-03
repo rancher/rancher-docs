@@ -1,12 +1,12 @@
 ---
-title: Provisioning Kubernetes Clusters in vSphere
+title: Provisioning Kubernetes Clusters in VMware vSphere
 ---
 
 <head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere"/>
 </head>
 
-In this section, you'll learn how to use Rancher to install an [RKE](https://rancher.com/docs/rke/latest/en/)  Kubernetes cluster in vSphere.
+In this section, you'll learn how to use Rancher to install an [RKE](https://rancher.com/docs/rke/latest/en/)  Kubernetes cluster in VMware vSphere.
 
 First, you will set up your vSphere cloud credentials in Rancher. Then you will use your cloud credentials to create a node template, which Rancher will use to provision nodes in vSphere.
 
@@ -20,13 +20,13 @@ For details on configuring RKE Kubernetes clusters in Rancher, refer to the [clu
 - [Preparation in vSphere](#preparation-in-vsphere)
 - [Creating a vSphere Cluster](#creating-a-vsphere-cluster)
 
-## Preparation in vSphere
+## Preparation in VMware vSphere
 
 This section describes the requirements for setting up vSphere so that Rancher can provision VMs and clusters.
 
 The node templates are documented and tested with the vSphere Web Services API version 6.5.
 
-### Create Credentials in vSphere
+### Create Credentials in VMware vSphere
 
 Before proceeding to create a cluster, you must ensure that you have a vSphere user with sufficient permissions. When you set up a node template, the template will need to use these vSphere credentials.
 
@@ -42,7 +42,7 @@ It must be ensured that the hosts running the Rancher server are able to establi
 
 See [Node Networking Requirements](../../../kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md#networking-requirements) for a detailed list of port requirements applicable for creating nodes on an infrastructure provider.
 
-### Valid ESXi License for vSphere API Access
+### Valid ESXi License for VMware vSphere API Access
 
 The free ESXi license does not support API access. The vSphere servers must have a valid or evaluation ESXi license.
 
@@ -50,7 +50,7 @@ The free ESXi license does not support API access. The vSphere servers must have
 
 If you have a cluster with DRS enabled, setting up [VM-VM Affinity Rules](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-7297C302-378F-4AF2-9BD6-6EDB1E0A850A.html) is recommended. These rules allow VMs assigned the etcd and control-plane roles to operate on separate ESXi hosts when they are assigned to different node pools. This practice ensures that the failure of a single physical machine does not affect the availability of those planes.
 
-## Creating a vSphere Cluster
+## Creating a VMware vSphere Cluster
 
 1. [Create your cloud credentials](#1-create-your-cloud-credentials)
 2. [Create a node template with your cloud credentials](#2-create-a-node-template-with-your-cloud-credentials)

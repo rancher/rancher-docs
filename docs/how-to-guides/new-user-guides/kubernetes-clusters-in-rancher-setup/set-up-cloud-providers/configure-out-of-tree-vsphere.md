@@ -1,12 +1,12 @@
 ---
-title: Setting Up an Out-of-tree vSphere Cloud Provider
+title: Setting Up an Out-of-tree VMware vSphere Cloud Provider
 ---
 
 <head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere"/>
 </head>
 
-Kubernetes is moving away from maintaining cloud providers in-tree. vSphere has an out-of-tree cloud provider that can be used by installing the vSphere cloud provider and cloud storage plugins.
+Kubernetes is moving away from maintaining cloud providers in-tree. VMware vSphere has an out-of-tree cloud provider that can be used by installing the vSphere cloud provider and cloud storage plugins.
 
 This page covers how to install the Cloud Provider Interface (CPI) and Cloud Storage Interface (CSI) plugins after setting up a cluster.
 
