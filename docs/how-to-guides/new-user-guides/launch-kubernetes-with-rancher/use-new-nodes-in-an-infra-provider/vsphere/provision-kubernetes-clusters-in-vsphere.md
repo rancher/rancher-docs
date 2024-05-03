@@ -17,8 +17,8 @@ For details on configuring the vSphere node template, refer to the [vSphere node
 For details on configuring RKE Kubernetes clusters in Rancher, refer to the [cluster configuration reference.](../../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#rke-cluster-config-file-reference)
 
 
-- [Preparation in vSphere](#preparation-in-vsphere)
-- [Creating a vSphere Cluster](#creating-a-vsphere-cluster)
+- [Preparation in vSphere](#preparation-in-vmware-vsphere)
+- [Creating a vSphere Cluster](#creating-a-vmware-vsphere-cluster)
 
 ## Preparation in VMware vSphere
 
