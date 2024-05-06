@@ -25,7 +25,7 @@ Using the vSphere out-of-tree cloud provider requires Linux nodes and is not sup
 
 The Cloud Provider Interface (CPI) should be installed first before installing the Cloud Storage Interface (CSI).
 
-### 1. Create a vSphere cluster
+### 1. Create a VMware vSphere cluster
 
 1. Click **☰ > Cluster Management**.
 1. On the **Clusters** page, click **Create**.
