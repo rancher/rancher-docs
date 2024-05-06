@@ -308,7 +308,7 @@
     "description": "The label for category Node Template Configuration in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Creating a vSphere Cluster": {
-    "message": "Creating a vSphere Cluster",
+    "message": "Creating a VMware vSphere Cluster",
     "description": "The label for category Creating a vSphere Cluster in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Single-Node Rancher in Docker": {

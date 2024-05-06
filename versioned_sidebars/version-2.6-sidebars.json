@@ -492,7 +492,7 @@
                     "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster",
                     {
                       "type": "category",
-                      "label": "Creating a vSphere Cluster",
+                      "label": "Creating a VMware vSphere Cluster",
                       "link": {
                         "type": "doc",
                         "id": "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/vsphere"
