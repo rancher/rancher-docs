@@ -3137,6 +3137,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+table td:nth-child(1) {
+    overflow-wrap: normal;
+  }
+td {
+    width: auto;
+    overflow-wrap: anywhere; /* For browser compatibility */
+  }
 a {
   cursor: pointer;
 }
