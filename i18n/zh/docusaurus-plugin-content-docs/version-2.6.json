@@ -11,11 +11,11 @@
     "message": "快速入门指南",
     "description": "The label for category Quick Start Guides in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Deploy Rancher": {
+  "sidebar.tutorialSidebar.category.Deploying Rancher Server": {
     "message": "部署 Rancher",
     "description": "The label for category Deploy Rancher in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Deploy Workloads": {
+  "sidebar.tutorialSidebar.category.Deploying Workloads": {
     "message": "部署工作负载",
     "description": "The label for category Deploy Workloads in sidebar tutorialSidebar"
   },

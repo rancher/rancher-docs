@@ -10,7 +10,7 @@ Kubernetes API 可以在次要版本之间更改。因此，我们不支持引�
 
 :::
 
-Rancher 的 Kubernetes 元数据包含 Rancher 用于配置 [RKE 集群](../../pages-for-subheaders/launch-kubernetes-with-rancher.md)的 Kubernetes 版本信息。Rancher 会定期同步数据并为 **系统镜像**、**服务选项**和**插件模板**创建自定义资源定义 (CRD)。因此，当新的 Kubernetes 版本与 Rancher Server 版本兼容时，Kubernetes 元数据可以使 Rancher 使用新版本来配置集群。元数据概述了 [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/) (RKE) 用于部署各种 Kubernetes 版本的信息。
+Rancher 的 Kubernetes 元数据包含 Rancher 用于配置 [RKE 集群](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)的 Kubernetes 版本信息。Rancher 会定期同步数据并为 **系统镜像**、**服务选项**和**插件模板**创建自定义资源定义 (CRD)。因此，当新的 Kubernetes 版本与 Rancher Server 版本兼容时，Kubernetes 元数据可以使 Rancher 使用新版本来配置集群。元数据概述了 [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/) (RKE) 用于部署各种 Kubernetes 版本的信息。
 
 下表描述了受周期性数据同步影响的 CRD。
 

@@ -6,7 +6,7 @@ title: '1. 设置基础设施和私有镜像仓库'
 
 离线环境是 Rancher Server 离线安装或安装在防火墙后面的环境。
 
-Rancher 安装在 K3s Kubernetes 集群、RKE Kubernetes 集群还是单个 Docker 容器上对应的基础设施设置会有所不同。如需了解各个安装方式的更多信息，请参见[本页](../../../../pages-for-subheaders/installation-and-upgrade.md)。
+Rancher 安装在 K3s Kubernetes 集群、RKE Kubernetes 集群还是单个 Docker 容器上对应的基础设施设置会有所不同。如需了解各个安装方式的更多信息，请参见[本页](../../installation-and-upgrade.md)。
 
 Rancher 可以安装在任何 Kubernetes 集群上。为了阅读方便，我们在下文中仍提供了 RKE 和 K3s Kubernetes 基础设施教程。
 

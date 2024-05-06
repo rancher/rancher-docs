@@ -1,5 +1,5 @@
 ---
-title: 在离线环境中渲染 Helm 模板
+title: 在离线环境中升级
 ---
 
 :::note
@@ -35,6 +35,26 @@ helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
 	--set useBundledSystemChart=true # Use the packaged Rancher system charts
 ```
 
+#### 解决 UPGRADE FAILED 错误
+
+如果你遇到错误消息 `Error: UPGRADE FAILED: "rancher" has no deployed releases`，Rancher 可能是通过 `helm template` 命令安装的。要成功升级 Rancher，请改用以下命令：
+
+```
+helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
+    --no-hooks \ # prevent files for Helm hooks from being generated
+	--namespace cattle-system \
+	--set hostname=<RANCHER.YOURDOMAIN.COM> \
+	--set certmanager.version=<CERTMANAGER_VERSION> \
+	--set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
+	--set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \ # Set a default private registry to be used in Rancher
+	--set useBundledSystemChart=true # Use the packaged Rancher system charts
+```
+
+执行 Helm 命令后，需要应用渲染后的模板：
+
+```
+kubectl -n cattle-system apply -R -f ./rancher
+```
 ### 选项 B：使用 Kubernetes 密文从文件中获取证书
 
 ```plain
@@ -60,16 +80,6 @@ helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
 	--set privateCA=true \
 	--set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \ # Set a default private registry to be used in Rancher
 	--set useBundledSystemChart=true # Use the packaged Rancher system charts
-```
-
-### 应用已渲染的模板
-
-将渲染的 manifest 目录复制到可以访问 Rancher Server 集群的系统中，并应用渲染的模板。
-
-使用 `kubectl` 来应用渲染的 manifest。
-
-```plain
-kubectl -n cattle-system apply -R -f ./rancher
 ```
 
 ## 验证升级
