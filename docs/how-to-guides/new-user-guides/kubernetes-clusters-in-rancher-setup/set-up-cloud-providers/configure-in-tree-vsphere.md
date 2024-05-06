@@ -1,12 +1,12 @@
 ---
-title: Setting Up an In-tree vSphere Cloud Provider
+title: Setting Up an In-tree VMware vSphere Cloud Provider
 ---
 
 <head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere"/>
 </head>
 
-To set up the in-tree vSphere cloud provider, follow these steps while creating the vSphere cluster in Rancher:
+To set up the in-tree VMware vSphere cloud provider, follow these steps while creating the vSphere cluster in Rancher:
 
 1. Set **Cloud Provider** option to `Custom` or `Custom (In-Tree)`.
 1. Click on **Edit as YAML**

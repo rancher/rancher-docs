@@ -1,5 +1,5 @@
 ---
-title: Creating a vSphere Virtual Machine Template
+title: Creating a VMware vSphere Virtual Machine Template
 ---
 
 <head>
