@@ -2,6 +2,10 @@
 title: 2. 在 Rancher 中配置 Microsoft AD FS
 ---
 
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-microsoft-ad-federation-service-saml/configure-rancher-for-ms-adfs"/>
+</head>
+
 完成[在 Microsoft AD FS 中配置 Rancher](configure-ms-adfs-for-rancher.md) 后，将你的 Active Directory Federation Service (AD FS) 信息输入 Rancher，以便 AD FS 用户可以通过 Rancher 进行身份认证。
 
 :::note 配置 ADFS 服务器的重要说明：

@@ -4,7 +4,7 @@ title: OpenLDAP 配置参考
 
 有关配置 OpenLDAP 认证的更多详细信息，请参见[官方文档](https://www.openldap.org/doc/)。
 
-> 在开始之前，请熟悉[外部身份验证配置和主体用户](../../../../pages-for-subheaders/authentication-config.md#外部身份验证配置和用户主体)的概念。
+> 在开始之前，请熟悉[外部认证配置和用户主体](../authentication-config/authentication-config.md#外部认证配置和用户主体)的概念。
 
 
 ## 背景：OpenLDAP 认证流程
