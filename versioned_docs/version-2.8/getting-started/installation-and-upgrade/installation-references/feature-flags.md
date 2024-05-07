@@ -26,7 +26,7 @@ The following is a list of feature flags available in Rancher. If you've upgrade
 - `multi-cluster-management`: Allows multi-cluster provisioning and management of Kubernetes clusters. This flag can only be set at install time. It can't be enabled or disabled later.
 - `rke1-custom-node-cleanup`: Enables cleanup of deleted RKE1 custom nodes. We recommend that you keep this flag enabled, to prevent removed nodes from attempting to rejoin the cluster.
 - `rke2`: Enables provisioning RKE2 clusters. This flag is enabled by default.
-- `token-hashing`: Enables token hashing. Once enabled, existing tokens will be hashed and all new tokens will be hashed automatically with the SHA256 algorithm. Once a token is hashed it can't be undone. This flag can't be disabled after its enabled. See [API Tokens](../../../api/api-tokens.md#token-hashing) for more information.
+- `token-hashing`: Enables token hashing. Once enabled, existing tokens are hashed and all new tokens are hashed automatically with the SHA256 algorithm. Once a token is hashed it can't be undone. This flag can't be disabled after its enabled. See [API Tokens](../../../api/api-tokens.md#token-hashing) for more information.
 - `unsupported-storage-drivers`: Enables types for storage providers and provisioners that aren't enabled by default. See [Allow Unsupported Storage Drivers](../../../how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md) for more information.
 
 The following table shows the availability and default values for some feature flags in Rancher. Features marked "GA" are generally available:

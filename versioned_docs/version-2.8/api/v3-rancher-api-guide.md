@@ -27,7 +27,7 @@ Go to the URL endpoint at `https://<RANCHER_FQDN>/v3`, where `<RANCHER_FQDN>` is
 
 ## Authentication
 
-API requests must include authentication information.  Authentication is done with HTTP basic authentication using [API Keys](../reference-guides/user-settings/api-keys.md). API keys can create new clusters and have access to multiple clusters via `/v3/clusters/`. [Cluster and project roles](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md) apply to these keys and restrict what clusters and projects the account can see and what actions they can take.
+API requests must include authentication information. Authentication is done with HTTP basic authentication using [API Keys](../reference-guides/user-settings/api-keys.md). API keys can create new clusters and have access to multiple clusters via `/v3/clusters/`. [Cluster and project roles](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md) apply to these keys and restrict what clusters and projects the account can see and what actions they can take.
 
 By default, some cluster-level API tokens are generated with infinite time-to-live (`ttl=0`). In other words, API tokens with `ttl=0` never expire unless you invalidate them. For details on how to invalidate them, refer to the [API tokens page](api-tokens.md).
 
@@ -47,7 +47,7 @@ The API is generally RESTful but has several features to make the definition of 
 
 - In practice, you will probably just want to construct URL strings.  We highly suggest limiting this to the top-level to list a collection (`/v3/<type>`) or get a specific resource (`/v3/<type>/<id>`).  Anything deeper than that is subject to change in future releases.
 
-- Resources have relationships between each other called links.  Each resource includes a map of `links` with the name of the link and the URL to retrieve that information.  Again you should `GET` the resource and then follow the URL in the `links` map, not construct these strings yourself.
+- Resources have relationships between each other called links.  Each resource includes a map of `links` with the name of the link and the URL to retrieve that information. Again you should `GET` the resource and then follow the URL in the `links` map, not construct these strings yourself.
 
 - Most resources have actions, which do something or change the state of the resource.  To use these, send a HTTP `POST` to the URL in the `actions` map for the action you want.  Some actions require input or produce output, see the individual documentation for each type or the schemas for specific information.
 
