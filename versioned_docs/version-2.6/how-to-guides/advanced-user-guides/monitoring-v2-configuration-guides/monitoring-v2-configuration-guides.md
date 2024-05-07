@@ -1,5 +1,5 @@
 ---
-title: Configuration
+title: Monitoring Configuration Guides
 ---
 
 <head>

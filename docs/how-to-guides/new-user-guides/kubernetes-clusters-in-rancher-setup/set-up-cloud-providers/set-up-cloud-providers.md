@@ -33,7 +33,7 @@ For details on enabling the Azure cloud provider, refer to [this page.](azure.md
 
 For details on enabling the Google Compute Engine cloud provider, refer to [this page.](google-compute-engine.md)
 
-### Setting up the vSphere Cloud Provider
+### Setting up the VMware vSphere Cloud Provider
 
 For details on enabling the vSphere cloud provider, refer to [in-tree vSphere config](configure-in-tree-vsphere.md) and [out-of-tree vSphere config](configure-out-of-tree-vsphere.md).
 

@@ -1,5 +1,5 @@
 ---
-title: The Horizontal Pod Autoscaler
+title: Horizontal Pod Autoscaler
 description: Learn about the horizontal pod autoscaler (HPA). How to manage HPAs and how to test them with a service deployment
 ---
 

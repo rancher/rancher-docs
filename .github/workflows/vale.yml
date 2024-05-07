@@ -1,0 +1,53 @@
+# This action gets all changed markdown files in /docs and /versioned_docs using tj-actions/changed-files@v42
+# It compares new commits in the PR with the base commit (github.event.pull_request.base.sha)
+# It checks if no markdown files are changed 
+# It shows a count of markdown files and lists all changed markdown files
+# It uses Vale (https://vale.sh/docs/vale-cli/installation/) to provide feedback base off the SUSE Style Guide / OpenSUSE style rules (https://github.com/openSUSE/suse-vale-styleguide)
+
+name: Style check
+on: [pull_request]
+
+jobs:
+  vale-lint:
+    name: runner / vale
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
+          submodules: true
+      - name: Get all changed markdown files
+        id: changed-markdown-files
+        uses: tj-actions/changed-files@v42
+        with:
+            # Avoid using single or double quotes for multiline patterns
+            files: |
+               docs/**
+               versioned_docs/**
+            separator: ","
+            base_sha: ${{ github.event.pull_request.base.sha }}
+        env:
+            ALL_CHANGED_FILES: ${{ 0 }}
+      - name: No files changed?
+        if: steps.changed-markdown-files.outputs.any_changed == 'false'
+        run: |
+              echo "No files changed"
+              echo "ALL_CHANGED_FILES=$ALL_CHANGED_FILES" >> $GITHUB_ENV
+      - name: List all changed files markdown files
+        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        env:
+            ALL_CHANGED_FILES: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
+            ALL_CHANGED_FILES_COUNT: ${{ steps.changed-markdown-files.outputs.all_changed_files_count }}
+            SHA: ${{ github.head_ref }}
+            HEAD: ${{ github.base_ref }}
+        run: |
+            echo "Total Files Changed:" ${ALL_CHANGED_FILES_COUNT}
+            echo ${ALL_CHANGED_FILES}
+            echo "ALL_CHANGED_FILES=$ALL_CHANGED_FILES" >> $GITHUB_ENV
+      - uses: errata-ai/vale-action@v2.1.0
+        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          separator: ", "
+          files: ${{ env.ALL_CHANGED_FILES }}

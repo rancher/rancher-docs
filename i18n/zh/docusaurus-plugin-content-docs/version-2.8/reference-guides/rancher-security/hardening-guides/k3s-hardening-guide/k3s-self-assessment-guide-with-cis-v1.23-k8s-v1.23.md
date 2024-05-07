@@ -1,36 +1,40 @@
 ---
-title: K3s Self-Assessment Guide - CIS Benchmark v1.23 - K8s v1.23
+title: K3s 自我评估指南 - CIS Benchmark v1.23 - K8s v1.23
 ---
 
-This document is a companion to the [K3s Hardening Guide](../../../../pages-for-subheaders/k3s-hardening-guide.md), which provides prescriptive guidance on how to harden K3s clusters that are running in production and managed by Rancher. This benchmark guide helps you evaluate the security of a hardened cluster against each control in the CIS Kubernetes Benchmark.
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.23"/>
+</head>
 
-This guide corresponds to the following versions of Rancher, CIS Benchmarks, and Kubernetes:
+本文档是 [K3s 加固指南](k3s-hardening-guide.md)的配套文档，该指南提供了关于如何加固正在生产环境中运行并由 Rancher 管理的 K3s 集群的指导方针。本 benchmark 指南可帮助你根据 CIS Kubernetes Benchmark 中的每个 control 来评估加固集群的安全性。
 
-| Rancher Version | CIS Benchmark Version | Kubernetes Version |
+本指南对应以下版本的 Rancher、CIS Benchmarks 和 Kubernetes：
+
+| Rancher 版本     | CIS Benchmark 版本    | Kubernetes 版本     |
 |-----------------|-----------------------|--------------------|
 | Rancher v2.7    | Benchmark v1.23       | Kubernetes v1.23   |
 
-This document is for Rancher operators, security teams, auditors and decision makers.
+本文档适用于 Rancher 运维人员、安全团队、审计员和决策者。
 
-For more information about each control, including detailed descriptions and remediations for failing tests, refer to the corresponding section of the CIS Kubernetes Benchmark v1.23. You can download the benchmark, after creating a free account, at [Center for Internet Security (CIS)](https://www.cisecurity.org/benchmark/kubernetes/).
+有关每个 control 的更多信息，包括详细描述和未通过测试的补救措施，请参考 CIS Kubernetes Benchmark v1.23 的相应部分。你可以在[互联网安全中心 (CIS)](https://www.cisecurity.org/benchmark/kubernetes/)创建免费账户后下载 benchmark。
 
-## Testing Methodology
+## 测试方法
 
-Each control in the CIS Kubernetes Benchmark was evaluated against a K3s cluster that was configured according to the accompanying hardening guide.
+每个 CIS Kubernetes Benchmark 中的 control 都根据附带的加固指南评估了针对 K3s 集群的配置。
 
-Where control audits differ from the original CIS benchmark, the audit commands specific to K3s are provided for testing.
+当 control 审计与原始的 CIS benchmark 不同的时候，提供了针对 K3s 的特定审计命令，以供测试使用。
 
-These are the possible results for each control:
+以下是每个 control 可能的结果：
 
-- **Pass** - The K3s cluster passes the audit outlined in the benchmark.
-- **Not Applicable** - The control is not applicable to K3s because of how it is designed to operate. The remediation section explains why.
-- **Warn** - The control is manual in the CIS benchmark and it depends on the cluster's use-case or some other factor that must be determined by the cluster operator. These controls have been evaluated to ensure K3s doesn't prevent their implementation, but no further configuration or auditing of the cluster has been performed.
+- **Pass（通过）** - K3s 集群通过了 benchmark 中概述的审计。
+- **Not Applicable（不适用）** - 由于 K3s 的设计方式，该 control 不适用于 K3s。在补救措施部分解释了原因。
+- **Warn（警告）** - 在 CIS benchmark 中，该 control 是手动的，它取决于集群的使用情况或其他必须由集群操作员确定的因素。这些 control 措施已经过评估，以确保 K3s 不会阻止其实施，但尚未对集群进行进一步的配置或审计。
 
-This guide makes the assumption that K3s is running as a Systemd unit. Your installation may vary. Adjust the "audit" commands to fit your scenario.
+本指南假设 K3s 作为 Systemd 单元运行。你的安装可能会有所不同。调整"审计"命令以适合你的场景。
 
 :::note
 
-This guide only covers `automated` (previously called `scored`) tests.
+本指南仅涵盖 `automated`（之前称为 `scored`）测试。
 
 :::
 

@@ -2,6 +2,10 @@
 title: Rancher Equinix Metal 快速入门
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/getting-started/quick-start-guides/deploy-rancher-manager/equinix-metal"/>
+</head>
+
 ## 本章节引导你：
 
 - 配置 Equinix Metal server
@@ -11,7 +15,7 @@ title: Rancher Equinix Metal 快速入门
 
 :::caution
 
-本章节中提供的指南，旨在帮助你快速启动一个用于 Rancher 的沙盒，以评估 Rancher 是否能满足你的使用需求。不建议将 Docker 安装用于生产环境。如果你需要获取生产环境的操作指导，请参见[安装](../../../pages-for-subheaders/installation-and-upgrade.md)。
+本章节中提供的指南，旨在帮助你快速启动一个用于 Rancher 的沙盒，以评估 Rancher 是否能满足你的使用需求。不建议将 Docker 安装用于生产环境。如果你需要获取生产环境的操作指导，请参见[安装](../../installation-and-upgrade/installation-and-upgrade.md)。
 
 :::
 
@@ -29,7 +33,7 @@ title: Rancher Equinix Metal 快速入门
 
 ### 1. 配置 Equinix Metal 主机
 
-开始部署 Equinix Metal 主机。你可以使用 Equinix Metal 控制台，API 或 CLI 来配置 Equinix Metal Server。如果你需要了解每种 Deployment 类型的说明，请参见 [Equinix Metal 部署](https://metal.equinix.com/developers/docs/deploy/on-demand/)。以下链接介绍 Equinix Metal Server 的类型以及价格：
+开始部署 Equinix Metal 主机。你可以使用 Equinix Metal 控制台、CLI 或 API 来配置 Equinix Metal Server。如果你需要了解每种 Deployment 类型的说明，请参见 [Equinix Metal 部署](https://metal.equinix.com/developers/docs/deploy/on-demand/)。以下链接介绍 Equinix Metal Server 的类型以及价格：
 - [Equinix Metal Server 类型](https://metal.equinix.com/developers/docs/servers/about/)
 - [Equinix Metal 价格](https://metal.equinix.com/developers/docs/servers/server-specs/)
 
@@ -38,7 +42,7 @@ title: Rancher Equinix Metal 快速入门
 - 如果使用 CLI 或 API 配置新的 Equinix Metal Server，你需要提供项目 ID、计划、metro 和操作系统。
 - 当使用云主机的虚拟机时，你需要允许 80 和 443 端口的入站 TCP 通信。有关端口配置的信息，请参见你的云主机的文档。
 - 如需了解所有端口要求，请参见 [Docker 安装](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md)。
-- 根据我们的[要求](../../../pages-for-subheaders/installation-requirements.md)配置主机。
+- 根据我们的[要求](../../installation-and-upgrade/installation-requirements/installation-requirements.md)配置主机。
 
 :::
 ### 2. 安装 Rancher
@@ -103,4 +107,4 @@ title: Rancher Equinix Metal 快速入门
 
 #### 后续操作
 
-使用 Rancher 创建 deployment。详情请参见[创建 Deployment](../../../pages-for-subheaders/deploy-rancher-workloads.md)。
+使用 Rancher 创建 deployment。详情请参见[创建 Deployment](../deploy-workloads/deploy-workloads.md)。

@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes Persistent Storage: Volumes and Storage Classes"
+title: Create Kubernetes Persistent Volumes and Storage Classes
 description: "Learn about the two ways with which you can create persistent storage in Kubernetes: persistent volumes and storage classes"
 ---
 
@@ -67,7 +67,7 @@ In [Rancher Launched Kubernetes clusters](../../launch-kubernetes-with-rancher/l
 ### hostPath Volumes
 Before you create a hostPath volume, you need to set up an [extra_bind](https://rancher.com/docs/rke/latest/en/config-options/services/services-extras/#extra-binds/) in your cluster configuration. This will mount the path as a volume in your kubelets, which can then be used for hostPath volumes in your workloads.
 
-### Migrating vSphere Cloud Provider from In-tree to Out-of-tree
+### Migrating VMware vSphere Cloud Provider from In-tree to Out-of-tree
 
 Kubernetes is moving away from maintaining cloud providers in-tree. vSphere has an out-of-tree cloud provider that can be used by installing the vSphere cloud provider and cloud storage plugins.
 

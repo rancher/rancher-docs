@@ -6,7 +6,7 @@ title: Continuous Delivery
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery"/>
 </head>
 
-[Fleet](../../../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md) comes preinstalled in Rancher can't be fully disabled. However, the Fleet feature for GitOps continuous delivery may be disabled using the `continuous-delivery` feature flag.
+[Continuous Delivery with Fleet](../../../integrations-in-rancher/fleet/fleet.md) comes preinstalled in Rancher and can't be fully disabled. However, the Fleet feature for GitOps continuous delivery may be disabled using the `continuous-delivery` feature flag.
 
 To enable or disable this feature, refer to the instructions on [the main page about enabling experimental features.](enable-experimental-features.md)
 

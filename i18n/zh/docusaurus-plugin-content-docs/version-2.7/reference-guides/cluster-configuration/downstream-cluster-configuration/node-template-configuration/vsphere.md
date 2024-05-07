@@ -13,7 +13,7 @@ title: vSphere 节点模板配置
 | 凭证字段 | 描述 |
 |-----------------|--------------|
 | vCenter 或 ESXi Server | 输入 vCenter 或 ESXi 主机名/IP。ESXi 是你创建和运行虚拟机和虚拟设备的虚拟化平台。你可以通过 vCenter Server 服务来管理网络中连接的多个主机并池化主机资源。 |
-| 端口 | 配置 vCenter 或 ESXi Server 的端口。 |
+| 端口 | 可选：配置 vCenter 或 ESXi Server 的端口。 |
 | 用户名和密码 | 你的 vSphere 登录用户名和密码。 |
 
 ## 调度

@@ -1,5 +1,5 @@
 ---
-title: Longhorn - Cloud native distributed block storage for Kubernetes
+title: Cloud Native Storage with Longhorn
 ---
 
 <head>

@@ -10,7 +10,7 @@ title: Helm CLI 快速入门
 
 你的 Linux 主机可以位于任何地方。例如，它可以是 Amazon EC2 实例、Digital Ocean Droplet 或 Azure 虚拟机。其他 Rancher 文档也经常称它们为“节点”。部署 Linux 主机的一种方法是设置一个 Amazon EC2 实例，如[本教程](../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md)中所示。
 
-完整的安装要求在[这里](../../../pages-for-subheaders/installation-requirements.md)。
+完整的安装要求在[这里](../../installation-and-upgrade/installation-requirements/installation-requirements.md)。
 
 ## 在 Linux 上安装 K3s
 
@@ -147,6 +147,6 @@ helm install rancher rancher-latest/rancher `
 
 为了简化说明，我们使用了一个假域名和自签名证书来进行安装。因此，你可能需要在 Web 浏览器中添加一个安全例外来查看 Rancher UI。请注意，对于生产安装，你需要具有负载均衡器、真实域名和真实证书的高可用性设置。
 
-这些说明还省略了完整的安装要求和其他安装选项。如果你对这些步骤有任何疑问，请参阅完整的 [Helm CLI 安装文档](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md)。
+这些说明还省略了完整的安装要求和其他安装选项。如果你对这些步骤有任何疑问，请参阅完整的 [Helm CLI 安装文档](../../installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md)。
 
-要使用新的 Rancher Server 来启动新的 Kubernetes 集群，你可能需要在 Rancher 中设置云凭证。有关更多信息，请参阅[使用 Rancher 启动 Kubernetes 集群](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)。
+要使用新的 Rancher Server 来启动新的 Kubernetes 集群，你可能需要在 Rancher 中设置云凭证。有关更多信息，请参阅[使用 Rancher 启动 Kubernetes 集群](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)。

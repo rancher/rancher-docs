@@ -4,7 +4,7 @@ title: 功能开关
 
 使用功能开关（Feature Flag），你可以试用可选或实验性的功能并启用正在逐步淘汰的旧版功能。
 
-要了解功能的值以及如何启用它们，请参阅[启用实验性功能](../../../pages-for-subheaders/enable-experimental-features.md)。
+要了解功能的值以及如何启用它们，请参阅[启用实验性功能](../../../how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features.md)。
 
 :::note
 
@@ -16,7 +16,7 @@ title: 功能开关
 
 - `continuous-delivery`：允许从 Fleet 中单独禁用 Fleet GitOps。有关详细信息，请参阅[持续交付](../../../how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery.md)。
 - `fleet`：v2.6 及更高版本的 Rancher 配置框架需要 Fleet。即使你在旧 Rancher 版本中禁用了该标志，该标志也将在升级时自动启用。有关详细信息，请参阅 [Fleet - GitOps at Scale](../../../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md)。
-- `harvester`：管理 Virtualization Management 页面的访问。用户可以在该页面直接导航到 Harvester 集群并访问 Harvester UI。有关详细信息，请参阅 [Harvester 集成](../../../integrations-in-rancher/harvester.md)。
+- `harvester`：管理 Virtualization Management 页面的访问。用户可以在该页面直接导航到 Harvester 集群并访问 Harvester UI。有关详细信息，请参阅 [Harvester 集成](../../../integrations-in-rancher/harvester/overview.md)。
 - `istio-virtual-service-ui`：启用[可视界面](../../../how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features.md)来创建、读取、更新和删除 Istio 虚拟服务和目标规则，这些都是 Istio 流量管理功能。
 - `legacy`：启用 2.5.x 及更早版本的一组功能，这些功能正逐渐被新的实现淘汰。它们是已弃用以及后续可用于新版本的功能组合。新的 Rancher 安装会默认禁用此标志。如果你从以前版本的 Rancher 升级，此标志会启用。
 - `multi-cluster-management`：允许配置和管理多个 Kubernetes 集群。此标志只能在安装时设置。后续无法启用或禁用它。

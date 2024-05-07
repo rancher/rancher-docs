@@ -39,7 +39,7 @@ Deploying to Outscale will incur charges.
 4. Edit `terraform.tfvars` and customize the following variables:
     - `access_key_id` - Outscale access key
     - `secret_key_id` - Outscale secret key
-    - `rancher_server_admin_password` - Admin password for created Rancher server (minimum 12 characters)
+    - `rancher_server_admin_password` - Admin password for created Rancher server. See [Setting up the Bootstrap Password](../../installation-and-upgrade/resources/bootstrap-password.md#password-requirements) for password requirments.
 
 5. **Optional:** Modify optional variables within `terraform.tfvars`.
 See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [Outscale Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/outscale) for more information.

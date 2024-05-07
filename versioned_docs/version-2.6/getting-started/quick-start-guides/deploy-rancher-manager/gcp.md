@@ -39,8 +39,8 @@ Deploying to Google GCP will incur charges.
 
 4. Edit `terraform.tfvars` and customize the following variables:
     - `gcp_account_json` - GCP service account file path and file name
-    - `rancher_server_admin_password` - Admin password for created Rancher server (minimum 12 characters)
-
+    - `rancher_server_admin_password` - Admin password for created Rancher server. See [Setting up the Bootstrap Password](../../installation-and-upgrade/resources/bootstrap-password.md#password-requirements) for password requirments.
+    
 5. **Optional:** Modify optional variables within `terraform.tfvars`.
 See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [GCP Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/gcp) for more information.
 Suggestions include:

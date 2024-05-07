@@ -40,7 +40,7 @@ Backups are created as .tar.gz files. These files can be pushed to S3 or Minio, 
 
 :::note
 
-There is a known issue in Fleet that occurs after performing a restoration using the backup-restore-operator: Secrets used for clientSecretName and helmSecretName are not included in Fleet gitrepos. Refer [here](../deploy-apps-across-clusters/fleet.md#troubleshooting) for a workaround.
+There is a known issue in Fleet that occurs after performing a restoration using the backup-restore-operator: Secrets used for clientSecretName and helmSecretName are not included in Fleet gitrepos. Refer [here](../../../integrations-in-rancher/fleet/overview.md#troubleshooting) for a workaround.
 
 :::
 

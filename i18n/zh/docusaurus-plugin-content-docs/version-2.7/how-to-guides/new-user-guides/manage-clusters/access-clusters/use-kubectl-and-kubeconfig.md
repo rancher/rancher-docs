@@ -27,9 +27,10 @@ description: "了解如何通过 kubectl Shell 使用 kubectl，或通过 kubect
 
 :::
 
-1. 登录到 Rancher。点击 **☰ > 集群管理**。
-1. 转到要使用 kubectl 访问的集群，然后单击 **Explore**。
-1. 在顶部导航栏中，单击**下载 KubeConfig** 按钮。
+1. 点击左上角的 **☰**。
+1. 选择**集群管理**。
+1. 找到要下载其 kubeconfig 的集群，然后选择行末尾的 **⁝**。
+1. 从子菜单中选择**下载 KubeConfig**。
 1. 将 YAML 文件保存在本地计算机上。将文件移动到 `~/.kube/config`。注意：kubectl 用于 kubeconfig 文件的默认位置是 `~/.kube/config`。但是你也可以运行类似以下的命令，使用 `--kubeconfig` 标志指定任何其他目录：
 ```
 kubectl --kubeconfig /custom/path/kube.config get pods

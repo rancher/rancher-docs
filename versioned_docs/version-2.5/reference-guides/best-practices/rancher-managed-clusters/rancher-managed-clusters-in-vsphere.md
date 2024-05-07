@@ -1,5 +1,5 @@
 ---
-title: Best Practices for Rancher Managed vSphere Clusters
+title: Best Practices for Rancher Managed VMware vSphere Clusters
 ---
 
 <head>
