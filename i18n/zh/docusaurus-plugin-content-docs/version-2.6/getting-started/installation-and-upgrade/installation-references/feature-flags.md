@@ -4,7 +4,7 @@ title: 功能开关
 
 使用功能开关（Feature Flag），你可以试用可选或实验性的功能并启用正在逐步淘汰的旧版功能。
 
-要了解功能的值以及如何启用它们，请参阅[启用实验性功能](../../../pages-for-subheaders/enable-experimental-features.md)。
+要了解功能的值以及如何启用它们，请参阅[启用实验性功能](../../../how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features.md)。
 
 :::note
 

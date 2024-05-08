@@ -2,6 +2,8 @@
 title: 回滚 Docker 安装的 Rancher
 ---
 
+<DockerSupportWarning />
+
 如果 Rancher 升级没有成功完成，你需要回滚到你在 [Docker 升级](upgrade-docker-installed-rancher.md)之前使用的 Rancher 设置。回滚可以恢复：
 
 - 先前版本的 Rancher。
@@ -78,7 +80,7 @@ docker pull rancher/rancher:<PRIOR_RANCHER_VERSION>
    --privileged \
    rancher/rancher:<PRIOR_RANCHER_VERSION>
    ```
-   特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+   特权访问是[必须](rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 
    :::danger
 

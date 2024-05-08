@@ -11,7 +11,7 @@ title: Rancher Equinix Metal 快速入门
 
 :::caution
 
-本章节中提供的指南，旨在帮助你快速启动一个用于 Rancher 的沙盒，以评估 Rancher 是否能满足你的使用需求。不建议将 Docker 安装用于生产环境。如果你需要获取生产环境的操作指导，请参见[安装](../../../pages-for-subheaders/installation-and-upgrade.md)。
+本章节中提供的指南，旨在帮助你快速启动一个用于 Rancher 的沙盒，以评估 Rancher 是否能满足你的使用需求。不建议将 Docker 安装用于生产环境。如果你需要获取生产环境的操作指导，请参见[安装](../../installation-and-upgrade/installation-and-upgrade.md)。
 
 :::
 
@@ -38,7 +38,7 @@ title: Rancher Equinix Metal 快速入门
 - 如果使用 CLI 或 API 配置新的 Equinix Metal Server，你需要提供项目 ID、计划、metro 和操作系统。
 - 当使用云主机的虚拟机时，你需要允许 80 和 443 端口的入站 TCP 通信。有关端口配置的信息，请参见你的云主机的文档。
 - 如需了解所有端口要求，请参见 [Docker 安装](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md)。
-- 根据我们的[要求](../../../pages-for-subheaders/installation-requirements.md)配置主机。
+- 根据我们的[要求](../../installation-and-upgrade/installation-requirements/installation-requirements.md)配置主机。
 
 :::
 ### 2. 安装 Rancher
@@ -103,4 +103,4 @@ title: Rancher Equinix Metal 快速入门
 
 #### 后续操作
 
-使用 Rancher 创建 deployment。详情请参见[创建 Deployment](../../../pages-for-subheaders/deploy-rancher-workloads.md)。
+使用 Rancher 创建 deployment。详情请参见[创建 Deployment](../deploy-workloads/deploy-workloads.md)。
