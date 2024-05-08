@@ -2,10 +2,18 @@
 title: 安全公告和 CVE
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/reference-guides/rancher-security/security-advisories-and-cves"/>
+</head>
+
 Rancher 致力于向社区披露我们产品的安全问题。我们会针对已解决的问题发布安全公告和 CVE（Common Vulnerabilities and Exposures，通用漏洞披露）。Rancher GitHub 上的[安全页面](https://github.com/rancher/rancher/security/advisories)也会发布新的安全公告。
 
 | ID | 描述 | 日期 | 解决 |
 |----|-------------|------|------------|
+| [CVE-2023-32193](https://github.com/rancher/norman/security/advisories/GHSA-r8f4-hv23-6qp6) | 在 Rancher 2.6.13、2.7.9 和 2.8.1 及之前的版本中发现了一个问题。多个 Cross-Site Scripting (XSS) 漏洞可通过 Rancher UI (Norman) 进行利用。 | 2024 年 2 月 8 日 | Rancher [v2.8.2](https://github.com/rancher/rancher/releases/tag/v2.8.2)、[v2.7.10](https://github.com/rancher/rancher/releases/tag/v2.7.10) 和 [v2.6.14](https://github.com/rancher/rancher/releases/tag/v2.6.14) |
+| [CVE-2023-32192](https://github.com/rancher/apiserver/security/advisories/GHSA-833m-37f7-jq55) | 在 Rancher 2.6.13、2.7.9 和 2.8.1 及之前的版本中发现了一个问题。多个 Cross-Site Scripting (XSS) 漏洞，可以通过 Rancher UI (Apiserver) 进行利用 | 2024 年 2 月 8 日 | Rancher [v2.8.2](https://github.com/rancher/rancher/releases/tag/v2.8.2)、[v2.7.10](https://github.com/rancher/rancher/releases/tag/v2.7.10) 和 [v2.6.14](https://github.com/rancher/rancher/releases/tag/v2.6.14) |
+| [CVE-2023-22649](https://github.com/rancher/rancher/security/advisories/GHSA-xfj7-qf8w-2gcr) | 在 Rancher 2.6.13、2.7.9 和 2.8.1 及之前的版本中发现了一个问题。敏感数据可能会泄漏到 Rancher 的审计日志中。 | 2024 年 2 月 8 日 | Rancher [v2.8.2](https://github.com/rancher/rancher/releases/tag/v2.8.2)、[v2.7.10](https://github.com/rancher/rancher/releases/tag/v2.7.10) 和 [v2.6.14](https://github.com/rancher/rancher/releases/tag/v2.6.14) |
+| [CVE-2023-32194](https://github.com/rancher/rancher/security/advisories/GHSA-c85r-fwc7-45vc) | 在 Rancher 2.6.13、2.7.9 和 2.8.1 及之前的版本中发现了一个问题。当为 “namespace” 资源类型授予 `create` 或 `*` 全局角色时，任何 API 组中拥有权限的用户可以管理核心 API 组中的 namespace。 | 2024 年 2 月 8 日 | Rancher [v2.8.2](https://github.com/rancher/rancher/releases/tag/v2.8.2)、[v2.7.10](https://github.com/rancher/rancher/releases/tag/v2.7.10) 和 [v2.6.14](https://github.com/rancher/rancher/releases/tag/v2.6.14) |
 | [CVE-2023-22648](https://github.com/rancher/rancher/security/advisories/GHSA-vf6j-6739-78m8) | 在 Rancher 2.6.12 和 2.7.3 及之前的版本中发现了一个问题。在用户注销并重新登录到 Rancher UI 之前，Azure AD 中的权限更改不会反映给用户。 | 2023 年 5 月 31 日 | Rancher [v2.6.13](https://github.com/rancher/rancher/releases/tag/v2.6.13) |
 | [CVE-2022-43760](https://github.com/rancher/rancher/security/advisories/GHSA-46v3-ggjg-qq3x) | 在 Rancher 2.6.12 和 2.7.3 及之前的版本中发现了一个问题。攻击者可以通过 Rancher UI 利用多个跨站脚本 (XSS) 漏洞。 | 2023 年 5 月 31 日 | Rancher [v2.6.13](https://github.com/rancher/rancher/releases/tag/v2.6.13) |
 | [CVE-2020-10676](https://github.com/rancher/rancher/security/advisories/GHSA-8vhc-hwhc-cpj4) | 在 Rancher 2.6.12 和 2.7.3 及之前的版本中发现了一个问题。具有更新命名空间权限的用户可以将该命名空间移动到他们无权访问的项目中。 | 2023 年 5 月 31 日 | Rancher [v2.6.13](https://github.com/rancher/rancher/releases/tag/v2.6.13) |

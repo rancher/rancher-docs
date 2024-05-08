@@ -2,6 +2,10 @@
 title: API 令牌
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/reference-guides/about-the-api/api-tokens"/>
+</head>
+
 默认情况下，某些集群级别的 API 令牌是使用无限期 TTL（`ttl=0`）生成的。换言之，除非你让令牌失效，否则 `ttl=0` 的 API 令牌永远不会过期。令牌不会因为更改密码而失效。
 
 要停用 API 令牌，你可以删除令牌或停用用户账号。
