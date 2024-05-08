@@ -64,28 +64,28 @@
     "description": "The label for category New User Guides in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Authentication, Permissions, and Global Configuration": {
-    "message": "身份验证、权限和全局配置",
+    "message": "认证、权限和全局配置",
     "description": "The label for category Authentication, Permissions, and Global Configuration in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Authentication Config": {
-    "message": "身份验证配置",
-    "description": "The label for category Authentication Config in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Configuring Authentication": {
+    "message": "配置认证",
+    "description": "The label for category Configuring Authentication in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Configure OpenLDAP": {
+  "sidebar.tutorialSidebar.category.Configuring OpenLDAP": {
     "message": "配置 OpenLDAP",
-    "description": "The label for category Configure OpenLDAP in sidebar tutorialSidebar"
+    "description": "The label for category Configuring OpenLDAP in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Configure Microsoft AD Federation Service (SAML)": {
+  "sidebar.tutorialSidebar.category.Configuring Microsoft AD Federation Service (SAML)": {
     "message": "配置 Microsoft AD FS (SAML)",
-    "description": "The label for category Configure Microsoft AD Federation Service (SAML) in sidebar tutorialSidebar"
+    "description": "The label for category Configuring Microsoft AD Federation Service (SAML) in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Configure Shibboleth (SAML)": {
+  "sidebar.tutorialSidebar.category.Configuring Shibboleth (SAML)": {
     "message": "配置 Shibboleth (SAML)",
-    "description": "The label for category Configure Shibboleth (SAML) in sidebar tutorialSidebar"
+    "description": "The label for category Configuring Shibboleth (SAML) in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Manage Role-Based Access Control (RBAC)": {
+  "sidebar.tutorialSidebar.category.Managing Role-Based Access Control (RBAC)": {
     "message": "管理 RBAC",
-    "description": "The label for category Manage Role-Based Access Control (RBAC) in sidebar tutorialSidebar"
+    "description": "The label for category Managing Role-Based Access Control (RBAC) in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.About Provisioning Drivers": {
     "message": "关于 Provisioning 驱动",
@@ -95,9 +95,9 @@
     "message": "关于 RKE1 模板",
     "description": "The label for category About RKE1 Templates in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Manage Clusters": {
-    "message": "管理集群",
-    "description": "The label for category Manage Clusters in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Cluster Administration": {
+    "message": "集群管理",
+    "description": "The label for category Cluster Administration in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Access Clusters": {
     "message": "访问集群",
@@ -115,9 +115,9 @@
     "message": "配置存储示例",
     "description": "The label for category Provisioning Storage Examples in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Kubernetes Cluster Setup": {
-    "message": "Kubernetes 集群设置",
-    "description": "The label for category Kubernetes Cluster Setup in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Setting up a Kubernetes Cluster for Rancher Server": {
+    "message": "为 Rancher 设置 Kubernetes 集群",
+    "description": "The label for category Setting up a Kubernetes Cluster for Rancher Server in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Infrastructure Setup": {
     "message": "基础设施设置",
@@ -147,21 +147,21 @@
     "message": "设置 Cloud Provider",
     "description": "The label for category Setting up Cloud Providers in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Launch Kubernetes with Rancher": {
+  "sidebar.tutorialSidebar.category.Launching Kubernetes with Rancher": {
     "message": "使用 Rancher 启动 Kubernetes",
-    "description": "The label for category Launch Kubernetes with Rancher in sidebar tutorialSidebar"
+    "description": "The label for category Launching Kubernetes with Rancher in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Launching New Nodes in an Infra Provider": {
     "message": "在基础设施提供商中使用新节点",
     "description": "The label for category Launching New Nodes in an Infra Provider in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.vSphere": {
-    "message": "vSphere",
-    "description": "The label for category vSphere in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Creating a vSphere Cluster": {
+    "message": "创建 vSphere 集群",
+    "description": "The label for category Creating a vSphere Cluster in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Nutanix": {
-    "message": "Nutanix",
-    "description": "The label for category Nutanix in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Creating a Nutanix AOS Cluster": {
+    "message": "创建 Nutanix AOS 集群",
+    "description": "The label for category Creating a Nutanix AOS Cluster in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Kubernetes Resources Setup": {
     "message": "Kubernetes 资源设置",
@@ -179,13 +179,13 @@
     "message": "负载均衡和 Ingress Controller",
     "description": "The label for category Load Balancer and Ingress Controller in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Helm Charts in Rancher": {
-    "message": "Rancher 中的 Helm Chart",
-    "description": "The label for category Helm Charts in Rancher in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Helm Charts and Apps": {
+    "message": "Helm Charts 和 Apps",
+    "description": "The label for category Helm Charts and Apps in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Deploy Apps Across Clusters": {
+  "sidebar.tutorialSidebar.category.Deploying Apps Across Clusters": {
     "message": "跨集群部署应用",
-    "description": "The label for category Deploy Apps Across Clusters in sidebar tutorialSidebar"
+    "description": "The label for category Deploying Apps Across Clusters in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Backup, Restore, and Disaster Recovery": {
     "message": "备份、还原和灾难恢复",
@@ -195,13 +195,13 @@
     "message": "高级用户指南",
     "description": "The label for category Advanced User Guides in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Manage Projects": {
-    "message": "管理项目",
-    "description": "The label for category Manage Projects in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Project Administration": {
+    "message": "项目管理",
+    "description": "The label for category Project Administration in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Manage Project Resource Quotas": {
-    "message": "管理项目资源配额",
-    "description": "The label for category Manage Project Resource Quotas in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Project Resource Quotas": {
+    "message": "项目资源配额",
+    "description": "The label for category Project Resource Quotas in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Monitoring/Alerting Guides": {
     "message": "Monitoring/Alerting 指南",
@@ -211,33 +211,33 @@
     "message": "Prometheus Federator 指南",
     "description": "The label for category Prometheus Federator Guides in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Monitoring V2 Configuration Guides": {
-    "message": "Monitoring V2 配置指南",
-    "description": "The label for category Monitoring V2 Configuration Guides in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Monitoring Configuration Guides": {
+    "message": "Monitoring 配置指南",
+    "description": "The label for category Monitoring Configuration Guides in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Advanced Configuration": {
     "message": "高级配置",
     "description": "The label for category Advanced Configuration in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Istio Setup Guide": {
+  "sidebar.tutorialSidebar.category.Istio Setup Guides": {
     "message": "Istio 设置指南",
-    "description": "The label for category Istio Setup Guide in sidebar tutorialSidebar"
+    "description": "The label for category Istio Setup Guides in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.CIS Scan Guides": {
     "message": "CIS 扫描指南",
     "description": "The label for category CIS Scan Guides in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Enable Experimental Features": {
+  "sidebar.tutorialSidebar.category.Enabling Experimental Features": {
     "message": "启用实验功能",
-    "description": "The label for category Enable Experimental Features in sidebar tutorialSidebar"
+    "description": "The label for category Enabling Experimental Features in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Reference Guides": {
     "message": "参考指南",
     "description": "The label for category Reference Guides in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Best Practices": {
+  "sidebar.tutorialSidebar.category.Best Practice Guides": {
     "message": "最佳实践",
-    "description": "The label for category Best Practices in sidebar tutorialSidebar"
+    "description": "The label for category Best Practice Guides in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Rancher Server": {
     "message": "Rancher Server",
@@ -259,9 +259,9 @@
     "message": "Rancher Server 配置",
     "description": "The label for category Rancher Server Configuration in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.GKE Cluster Configuration": {
+  "sidebar.tutorialSidebar.category.GKE Cluster Configuration Reference": {
     "message": "GKE 集群配置",
-    "description": "The label for category GKE Cluster Configuration in sidebar tutorialSidebar"
+    "description": "The label for category GKE Cluster Configuration Reference in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Use Existing Nodes": {
     "message": "使用现有节点",
@@ -287,9 +287,9 @@
     "message": "备份和恢复配置",
     "description": "The label for category Backup & Restore Configuration in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Monitoring V2 Configuration": {
-    "message": "Monitoring V2 配置",
-    "description": "The label for category Monitoring V2 Configuration in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Monitoring Configuration Reference": {
+    "message": "Monitoring 配置",
+    "description": "The label for category Monitoring Configuration Reference in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Prometheus Federator": {
     "message": "Prometheus Federator",
@@ -311,9 +311,9 @@
     "message": "流水线",
     "description": "The label for category Pipelines in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Rancher Security": {
-    "message": "Rancher 安全",
-    "description": "The label for category Rancher Security in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Rancher Security Guides": {
+    "message": "Rancher 安全指南",
+    "description": "The label for category Rancher Security Guides in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Rancher v2.6 Hardening Guides": {
     "message": "Rancher 2.6 强化指南",
