@@ -331,7 +331,7 @@ const metadata = {
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Configuring Authentication",
+        "title": "配置认证",
         "permalink": "/zh/v2.6/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/"
     },
     "next": {

@@ -335,7 +335,7 @@ const metadata = {
         "permalink": "/zh/v2.6/getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes"
     },
     "next": {
-        "title": "New User Guides",
+        "title": "新用户指南",
         "permalink": "/zh/v2.6/how-to-guides/new-user-guides/"
     }
 };

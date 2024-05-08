@@ -324,18 +324,18 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-shibboleth-saml/about-group-permissions.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1688521962,
-    "formattedLastUpdatedAt": "2023年7月5日",
+    "lastUpdatedAt": 1715051329,
+    "formattedLastUpdatedAt": "2024年5月7日",
     "frontMatter": {
         "title": "Shibboleth 和 OpenLDAP 的组权限"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Configuring Shibboleth (SAML)",
+        "title": "配置 Shibboleth (SAML)",
         "permalink": "/zh/v2.6/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-shibboleth-saml/"
     },
     "next": {
-        "title": "Managing Role-Based Access Control (RBAC)",
+        "title": "管理 RBAC",
         "permalink": "/zh/v2.6/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/"
     }
 };
@@ -363,7 +363,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `由于 Shibboleth 是 SAML 提供者，因此它不支持搜索用户组的功能。虽然 Shibboleth 集成可以验证用户凭证，但是如果没有其他配置，Shibboleth 不能在 Rancher 中给用户组分配权限。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你可以通过配置 OpenLDAP 标识提供者来解决这个问题。如果让 Shibboleth 使用 OpenLDAP 后端，你将能够在 Rancher 中搜索组，并从 Rancher UI 将集群、项目或命名空间等资源分配给用户组。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/zh/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-shibboleth-saml/about-group-permissions"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `由于 Shibboleth 是 SAML 提供者，因此它不支持搜索用户组的功能。虽然 Shibboleth 集成可以验证用户凭证，但是如果没有其他配置，Shibboleth 不能在 Rancher 中给用户组分配权限。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你可以通过配置 OpenLDAP 来解决这个问题。如果让 Shibboleth 使用 OpenLDAP 后端，你将能够在 Rancher 中搜索组，并从 Rancher UI 将集群、项目或命名空间等资源分配给用户组。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "名词解释"
     }, `名词解释`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
@@ -373,7 +376,7 @@ function MDXContent(_param) {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `SAML`), `：安全声明标记语言（Security Assertion Markup Language），用于在身份提供程序和服务提供商之间交换身份验证和授权数据的开放标准。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `SAML`), `：安全声明标记语言（Security Assertion Markup Language），用于在身份提供程序和服务提供商之间交换认证和授权数据的开放标准。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"

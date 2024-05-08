@@ -335,7 +335,7 @@ const metadata = {
         "permalink": "/zh/v2.6/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-pingidentity"
     },
     "next": {
-        "title": "Configuring OpenLDAP",
+        "title": "配置 OpenLDAP",
         "permalink": "/zh/v2.6/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-openldap/"
     }
 };

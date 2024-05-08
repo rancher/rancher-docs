@@ -331,7 +331,7 @@ const metadata = {
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Kubernetes Components",
+        "title": "Kubernetes 组件",
         "permalink": "/zh/v2.6/troubleshooting/kubernetes-components/"
     },
     "next": {

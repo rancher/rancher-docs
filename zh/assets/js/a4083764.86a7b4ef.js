@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[34193],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[49424],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 89049:
+/***/ 72115:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,60 +308,39 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: '集群访问'
+    title: '新用户指南'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "how-to-guides/new-user-guides/manage-clusters/access-clusters/access-clusters",
-    "id": "version-2.6/how-to-guides/new-user-guides/manage-clusters/access-clusters/access-clusters",
-    "title": "集群访问",
-    "description": "本节介绍可以用来访问 Rancher 管理的集群的工具。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/how-to-guides/new-user-guides/manage-clusters/access-clusters/access-clusters.md",
-    "sourceDirName": "how-to-guides/new-user-guides/manage-clusters/access-clusters",
-    "slug": "/how-to-guides/new-user-guides/manage-clusters/access-clusters/",
-    "permalink": "/zh/v2.6/how-to-guides/new-user-guides/manage-clusters/access-clusters/",
+    "unversionedId": "how-to-guides/new-user-guides/new-user-guides",
+    "id": "version-2.6/how-to-guides/new-user-guides/new-user-guides",
+    "title": "新用户指南",
+    "description": "新用户指南，也称为 教程，描述了用户在完成一些具体操作时要遵循的实用步骤。这些文档被称为“以学习为导向”的文档，用户通过“实际操作”来学习。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/how-to-guides/new-user-guides/new-user-guides.md",
+    "sourceDirName": "how-to-guides/new-user-guides",
+    "slug": "/how-to-guides/new-user-guides/",
+    "permalink": "/zh/v2.6/how-to-guides/new-user-guides/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/new-user-guides/manage-clusters/access-clusters/access-clusters.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/new-user-guides/new-user-guides.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1714368573,
-    "formattedLastUpdatedAt": "2024年4月29日",
+    "lastUpdatedAt": 1715051329,
+    "formattedLastUpdatedAt": "2024年5月7日",
     "frontMatter": {
-        "title": "集群访问"
+        "title": "新用户指南"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "集群管理",
-        "permalink": "/zh/v2.6/how-to-guides/new-user-guides/manage-clusters/"
+        "title": "在不升级 Rancher 的情况下升级 Kubernetes",
+        "permalink": "/zh/v2.6/getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher"
     },
     "next": {
-        "title": "使用 Kubectl 和 kubeconfig 访问集群",
-        "permalink": "/zh/v2.6/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig"
+        "title": "认证、权限和全局配置",
+        "permalink": "/zh/v2.6/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/"
     }
 };
 const assets = {};
-const toc = [
-    {
-        value: 'Rancher UI',
-        id: 'rancher-ui',
-        level: 3
-    },
-    {
-        value: 'kubectl',
-        id: 'kubectl',
-        level: 3
-    },
-    {
-        value: 'Rancher CLI',
-        id: 'rancher-cli',
-        level: 3
-    },
-    {
-        value: 'Rancher API',
-        id: 'rancher-api',
-        level: 3
-    }
-];
+const toc = [];
 const layoutProps = {
     toc
 };
@@ -375,57 +354,10 @@ function MDXContent(_param) {
         mdxType: "MDXLayout"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/zh/how-to-guides/new-user-guides/manage-clusters/access-clusters"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `本节介绍可以用来访问 Rancher 管理的集群的工具。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `有关如何授予用户访问集群的权限的信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/zh/v2.6/how-to-guides/new-user-guides/manage-clusters/access-clusters/add-users-to-clusters"
-    }, `将用户添加到集群`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `有关 RBAC 的更多信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md"
-    }, `本节`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `有关如何设置身份验证系统的信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "../../authentication-permissions-and-global-configuration/authentication-config/authentication-config.md"
-    }, `本节`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "rancher-ui"
-    }, `Rancher UI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 提供了一个直观的用户界面来让你与集群进行交互。UI 中所有可用的选项都使用 Rancher API。因此，UI 中的任何操作都可以在 Rancher CLI 或 Rancher API 中进行。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "kubectl"
-    }, `kubectl`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你可以使用 Kubernetes 命令行工具 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://kubernetes.io/docs/reference/kubectl/overview/"
-    }, `kubectl`), ` 来管理你的集群。使用 kubectl 有两种选择：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Rancher kubectl shell`), `：通过启动 Rancher UI 中可用的 kubectl shell 与集群交互。此选项不需要你进行任何配置操作。有关详细信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "/zh/v2.6/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig"
-    }, `使用 kubectl Shell 访问集群`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `终端远程连接`), `：你也可以通过在本地桌面上安装 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "https://kubernetes.io/docs/tasks/tools/install-kubectl/"
-    }, `kubectl`), ` ，然后将集群的 kubeconfig 文件复制到本地 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `~/.kube/config`), ` 目录来与集群交互。有关更多信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "/zh/v2.6/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig"
-    }, `使用 kubectl 和 kubeconfig 文件访问集群`), `。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "rancher-cli"
-    }, `Rancher CLI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你可以下载 Rancher 自己的命令行工具 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/zh/v2.6/reference-guides/cli-with-rancher/"
-    }, `Rancher CLI`), ` 来控制你的集群。这个 CLI 工具可以直接与不同的集群和项目进行交互，或者向它们传递 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        href: "https://ranchermanager.docs.rancher.com/zh/how-to-guides/new-user-guides"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `新用户指南，也称为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `kubectl`), ` 命令。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "rancher-api"
-    }, `Rancher API`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `最后，你可以通过 Rancher API 与集群进行交互。在使用 API 之前，你必须先获取 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/zh/v2.6/reference-guides/user-settings/api-keys"
-    }, `API 密钥`), `。要查看 API 对象的不同资源字段和操作，请打开 API UI（API UI 可以通过单击 Rancher UI 对象的`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `在 API 中查看`), `访问）。`));
+    }, `教程`), `，描述了用户在完成一些具体操作时要遵循的实用步骤。这些文档被称为“以学习为导向”的文档，用户通过“实际操作”来学习。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `新用户指南旨在指导初学者或 Rancher 的日常用户通过一系列步骤来学习如何做某件事。目标是让用户可以通过易于操作、有意义的、可重复的指示来学习如何完成任务。这些指南将帮助用户完成工作，然后立即获得承诺的结果。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `普通的 Rancher 用户的技术水平高于“初学者”，但是新用户指南旨在同等的帮助新用户、初学者以及经验丰富的 Rancher 客户，这是通过结合使用高级和技术语言来介绍主题并指导用户完成每个 Rancher 用户都必须了解的一般任务来实现的。`));
 }
 MDXContent.isMDXComponent = true;
 

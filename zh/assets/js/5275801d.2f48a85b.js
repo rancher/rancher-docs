@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[30881],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[20083],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 27605:
+/***/ 33529:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,15 +308,15 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Kubernetes Components'
+    title: 'Kubernetes 组件'
 };
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "troubleshooting/kubernetes-components/kubernetes-components",
     "id": "version-2.6/troubleshooting/kubernetes-components/kubernetes-components",
-    "title": "Kubernetes Components",
-    "description": "The commands and steps listed in this section apply to the core Kubernetes components on Rancher Launched Kubernetes clusters.",
-    "source": "@site/versioned_docs/version-2.6/troubleshooting/kubernetes-components/kubernetes-components.md",
+    "title": "Kubernetes 组件",
+    "description": "本文列出的命令和步骤适用于 Rancher 启动的 Kubernetes 集群上的核心 Kubernetes 组件。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/troubleshooting/kubernetes-components/kubernetes-components.md",
     "sourceDirName": "troubleshooting/kubernetes-components",
     "slug": "/troubleshooting/kubernetes-components/",
     "permalink": "/zh/v2.6/troubleshooting/kubernetes-components/",
@@ -324,10 +324,10 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/troubleshooting/kubernetes-components/kubernetes-components.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "2024年1月29日",
+    "lastUpdatedAt": 1715051329,
+    "formattedLastUpdatedAt": "2024年5月7日",
     "frontMatter": {
-        "title": "Kubernetes Components"
+        "title": "Kubernetes 组件"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
@@ -342,8 +342,8 @@ const metadata = {
 const assets = {};
 const toc = [
     {
-        value: 'Kubernetes Component Diagram',
-        id: 'kubernetes-component-diagram',
+        value: 'Kubernetes 组件图',
+        id: 'kubernetes-组件图',
         level: 2
     }
 ];
@@ -360,38 +360,38 @@ function MDXContent(_param) {
         mdxType: "MDXLayout"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/troubleshooting/kubernetes-components"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The commands and steps listed in this section apply to the core Kubernetes components on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        href: "https://ranchermanager.docs.rancher.com/zh/troubleshooting/kubernetes-components"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `本文列出的命令和步骤适用于 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md"
-    }, `Rancher Launched Kubernetes`), ` clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section includes troubleshooting tips in the following categories:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        "href": "/zh/v2.6/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/"
+    }, `Rancher 启动的 Kubernetes`), ` 集群上的核心 Kubernetes 组件。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `本文包括以下类别的故障排除提示：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "troubleshooting-etcd-nodes.md"
-    }, `Troubleshooting etcd Nodes`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        "href": "/zh/v2.6/troubleshooting/kubernetes-components/troubleshooting-etcd-nodes"
+    }, `etcd 节点故障排除`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "troubleshooting-controlplane-nodes.md"
-    }, `Troubleshooting Controlplane Nodes`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        "href": "/zh/v2.6/troubleshooting/kubernetes-components/troubleshooting-controlplane-nodes"
+    }, `Controlplane 节点故障排除`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "troubleshooting-nginx-proxy.md"
-    }, `Troubleshooting nginx-proxy Nodes`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        "href": "/zh/v2.6/troubleshooting/kubernetes-components/troubleshooting-nginx-proxy"
+    }, `nginx-proxy 节点故障排除`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "troubleshooting-worker-nodes-and-generic-components.md"
-    }, `Troubleshooting Worker Nodes and Generic Components`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "kubernetes-component-diagram"
-    }, `Kubernetes Component Diagram`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
-        alt: "Cluster diagram",
+        "href": "/zh/v2.6/troubleshooting/kubernetes-components/troubleshooting-worker-nodes-and-generic-components"
+    }, `Worker 节点和通用组件故障排除`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "kubernetes-组件图"
+    }, `Kubernetes 组件图`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
+        alt: "集群图",
         src: (__webpack_require__(56492)/* ["default"] */ .Z),
         width: "772",
         height: "1145"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("sup", null, "Lines show the traffic flow between components. Colors are used purely for visual aid"));
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", null)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("sup", null, "线条表示组件之间的通信。而颜色纯粹用于视觉辅助。"));
 }
 MDXContent.isMDXComponent = true;
 
