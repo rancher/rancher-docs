@@ -331,7 +331,7 @@ const metadata = {
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "AWS Marketplace Integration",
+        "title": "AWS Marketplace 集成",
         "permalink": "/zh/v2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/"
     },
     "next": {

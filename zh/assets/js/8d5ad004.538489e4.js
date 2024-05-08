@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[32642],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[74015],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 1085:
+/***/ 81954:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,15 +308,15 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Cloud Marketplace Integration'
+    title: '云市场集成'
 };
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "integrations-in-rancher/cloud-marketplace/cloud-marketplace",
     "id": "version-2.6/integrations-in-rancher/cloud-marketplace/cloud-marketplace",
-    "title": "Cloud Marketplace Integration",
-    "description": "Rancher offers integration with cloud marketplaces to easily purchase support for installations hosted on certain cloud providers. In addition, this integration also provides the ability to generate a supportconfig bundle which can be provided to rancher support.",
-    "source": "@site/versioned_docs/version-2.6/integrations-in-rancher/cloud-marketplace/cloud-marketplace.md",
+    "title": "云市场集成",
+    "description": "Rancher 提供与云市场的集成，以便轻松购买对托管在某些云提供商上的安装支持。此外，此集成还提供了生成 Supportconfig Bundle 的功能，该 Bundle 可以给 rancher 提供支持。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/integrations-in-rancher/cloud-marketplace/cloud-marketplace.md",
     "sourceDirName": "integrations-in-rancher/cloud-marketplace",
     "slug": "/integrations-in-rancher/cloud-marketplace/",
     "permalink": "/zh/v2.6/integrations-in-rancher/cloud-marketplace/",
@@ -324,10 +324,10 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/integrations-in-rancher/cloud-marketplace/cloud-marketplace.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "2024年1月29日",
+    "lastUpdatedAt": 1715069824,
+    "formattedLastUpdatedAt": "2024年5月7日",
     "frontMatter": {
-        "title": "Cloud Marketplace Integration"
+        "title": "云市场集成"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
@@ -335,7 +335,7 @@ const metadata = {
         "permalink": "/zh/v2.6/reference-guides/rancher-security/security-advisories-and-cves"
     },
     "next": {
-        "title": "AWS Marketplace Integration",
+        "title": "AWS Marketplace 集成",
         "permalink": "/zh/v2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/"
     }
 };
@@ -354,8 +354,8 @@ function MDXContent(_param) {
         mdxType: "MDXLayout"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloud-marketplace"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher offers integration with cloud marketplaces to easily purchase support for installations hosted on certain cloud providers. In addition, this integration also provides the ability to generate a supportconfig bundle which can be provided to rancher support.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `As of Rancher v2.6.7, only AWS is supported for this integration.`));
+        href: "https://ranchermanager.docs.rancher.com/zh/integrations-in-rancher/cloud-marketplace"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 提供与云市场的集成，以便轻松购买对托管在某些云提供商上的安装支持。此外，此集成还提供了生成 Supportconfig Bundle 的功能，该 Bundle 可以给 rancher 提供支持。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `从 Rancher v2.6.7 开始，此集成仅支持 AWS。`));
 }
 MDXContent.isMDXComponent = true;
 

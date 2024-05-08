@@ -473,7 +473,7 @@ function MDXContent(_param) {
         parentName: "li"
     }, `Fleet 持续交付`), `：在 Rancher 中，你可以使用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "../integrations-in-rancher/fleet-gitops-at-scale/fleet-gitops-at-scale.md"
+        "href": "/zh/v2.6/integrations-in-rancher/fleet-gitops-at-scale/"
     }, `Fleet 持续交付`), `将应用程序从 Git 仓库部署到目标下游 Kubernetes 集群，无需任何手动操作。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {

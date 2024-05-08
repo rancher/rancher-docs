@@ -335,7 +335,7 @@ const metadata = {
         "permalink": "/zh/v2.6/integrations-in-rancher/cis-scans/skipped-and-not-applicable-tests"
     },
     "next": {
-        "title": "Continuous Delivery with Fleet",
+        "title": "使用 Feet 进行持续交付",
         "permalink": "/zh/v2.6/integrations-in-rancher/fleet-gitops-at-scale/"
     }
 };

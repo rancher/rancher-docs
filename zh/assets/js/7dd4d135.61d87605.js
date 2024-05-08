@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[13988],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[7877],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 86904:
+/***/ 93861:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,60 +308,39 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'AWS Marketplace Integration'
+    title: '架构'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/aws-cloud-marketplace",
-    "id": "version-2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/aws-cloud-marketplace",
-    "title": "AWS Marketplace Integration",
-    "description": "Overview",
-    "source": "@site/versioned_docs/version-2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/aws-cloud-marketplace.md",
-    "sourceDirName": "integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace",
-    "slug": "/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/",
-    "permalink": "/zh/v2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/",
+    "unversionedId": "integrations-in-rancher/fleet-gitops-at-scale/architecture",
+    "id": "version-2.6/integrations-in-rancher/fleet-gitops-at-scale/architecture",
+    "title": "架构",
+    "description": "Fleet 可以管理来自 Git 的原始 Kubernetes YAML、Helm Chart、Kustomize 或三者的任何组合的部署。无论来源如何，所有资源都会动态转化为 Helm Chart，Helm 会用作引擎来将所有资源部署到集群中。这给了你高度的控制、一致性和可审计性。Fleet 不仅关注扩展能力，而且还提供高度的控制和可见性，从而让用户准确了解集群上安装的内容。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/integrations-in-rancher/fleet-gitops-at-scale/architecture.md",
+    "sourceDirName": "integrations-in-rancher/fleet-gitops-at-scale",
+    "slug": "/integrations-in-rancher/fleet-gitops-at-scale/architecture",
+    "permalink": "/zh/v2.6/integrations-in-rancher/fleet-gitops-at-scale/architecture",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/aws-cloud-marketplace.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/integrations-in-rancher/fleet-gitops-at-scale/architecture.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "2024年1月29日",
+    "lastUpdatedAt": 1668452187,
+    "formattedLastUpdatedAt": "2022年11月14日",
     "frontMatter": {
-        "title": "AWS Marketplace Integration"
+        "title": "架构"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Cloud Marketplace Integration",
-        "permalink": "/zh/v2.6/integrations-in-rancher/cloud-marketplace/"
+        "title": "使用 Feet 进行持续交付",
+        "permalink": "/zh/v2.6/integrations-in-rancher/fleet-gitops-at-scale/"
     },
     "next": {
-        "title": "先决条件",
-        "permalink": "/zh/v2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements"
+        "title": "Windows 支持",
+        "permalink": "/zh/v2.6/integrations-in-rancher/fleet-gitops-at-scale/windows-support"
     }
 };
 const assets = {};
-const toc = [
-    {
-        value: 'Overview',
-        id: 'overview',
-        level: 2
-    },
-    {
-        value: 'Limitations',
-        id: 'limitations',
-        level: 2
-    },
-    {
-        value: 'How to Use',
-        id: 'how-to-use',
-        level: 2
-    },
-    {
-        value: 'FAQ',
-        id: 'faq',
-        level: 2
-    }
-];
+const toc = [];
 const layoutProps = {
     toc
 };
@@ -373,48 +352,25 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
-        rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "overview"
-    }, `Overview`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher offers an integration with the AWS Marketplace which allows users to purchase a support contract with SUSE. This integration allows you easily adjust your support needs as you start to support more clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "limitations"
-    }, `Limitations`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `You must be running Rancher v2.6.7 or higher`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Rancher must be deployed with additional metrics enabled.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Rancher must be installed on an EKS cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `You must purchase at least one entitlement to Rancher support through AWS Marketplace.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `You may need additional setup to support proxy/airgap use cases. See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "adapter-requirements.md"
-    }, `prerequisites`), ` for more information.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "how-to-use"
-    }, `How to Use`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Complete the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "adapter-requirements.md"
-    }, `prerequisite steps`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "install-adapter.md"
-    }, `Install the CSP Adapter`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "faq"
-    }, `FAQ`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Can I purchase support for more nodes later on?`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Yes. Simply go to the AWS Marketplace entry that you used to initially purchase support and increase the number of entitlements.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "p"
-    }, `Can I use multiple instances of Rancher in the same AWS account?`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Yes. However, each cluster that Rancher is installed in will need to adhere to the prerequisites.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `In addition, keep in mind that a given entitlement can only be used by one Rancher management server at a time.`));
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Fleet 可以管理来自 Git 的原始 Kubernetes YAML、Helm Chart、Kustomize 或三者的任何组合的部署。无论来源如何，所有资源都会动态转化为 Helm Chart，Helm 会用作引擎来将所有资源部署到集群中。这给了你高度的控制、一致性和可审计性。Fleet 不仅关注扩展能力，而且还提供高度的控制和可见性，从而让用户准确了解集群上安装的内容。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
+        alt: "架构",
+        src: (__webpack_require__(14956)/* ["default"] */ .Z),
+        width: "1366",
+        height: "960"
+    })));
 }
 MDXContent.isMDXComponent = true;
 
+
+/***/ }),
+
+/***/ 14956:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/fleet-architecture-f708ce634648101dc98f451dcd59fe84.svg");
 
 /***/ })
 

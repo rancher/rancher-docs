@@ -492,7 +492,7 @@ function MDXContent(_param) {
         parentName: "admonition"
     }, `使用 backup-restore-operator 执行恢复后，Fleet 中会出现一个已知问题：用于 clientSecretName 和 helmSecretName 的密文不包含在 Fleet 的 Git 仓库中。请参见`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../../integrations-in-rancher/fleet-gitops-at-scale/fleet-gitops-at-scale.md#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4"
+        "href": "/zh/v2.6/integrations-in-rancher/fleet-gitops-at-scale/#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4"
     }, `此处`), `获得解决方法。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "使用-rancher-ui-安装-rancher-backup"
     }, `使用 Rancher UI 安装 rancher-backup`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(Tabs, {

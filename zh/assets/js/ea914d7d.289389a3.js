@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[7877],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[6846],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 93861:
+/***/ 74620:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,39 +308,60 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: '架构'
+    title: 'AWS Marketplace 集成'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "integrations-in-rancher/fleet-gitops-at-scale/architecture",
-    "id": "version-2.6/integrations-in-rancher/fleet-gitops-at-scale/architecture",
-    "title": "架构",
-    "description": "Fleet 可以管理来自 Git 的原始 Kubernetes YAML、Helm Chart、Kustomize 或三者的任何组合的部署。无论来源如何，所有资源都会动态转化为 Helm Chart，Helm 会用作引擎来将所有资源部署到集群中。这给了你高度的控制、一致性和可审计性。Fleet 不仅关注扩展能力，而且还提供高度的控制和可见性，从而让用户准确了解集群上安装的内容。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/integrations-in-rancher/fleet-gitops-at-scale/architecture.md",
-    "sourceDirName": "integrations-in-rancher/fleet-gitops-at-scale",
-    "slug": "/integrations-in-rancher/fleet-gitops-at-scale/architecture",
-    "permalink": "/zh/v2.6/integrations-in-rancher/fleet-gitops-at-scale/architecture",
+    "unversionedId": "integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/aws-cloud-marketplace",
+    "id": "version-2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/aws-cloud-marketplace",
+    "title": "AWS Marketplace 集成",
+    "description": "概述",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/aws-cloud-marketplace.md",
+    "sourceDirName": "integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace",
+    "slug": "/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/",
+    "permalink": "/zh/v2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/integrations-in-rancher/fleet-gitops-at-scale/architecture.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/aws-cloud-marketplace.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1668452187,
-    "formattedLastUpdatedAt": "2022年11月14日",
+    "lastUpdatedAt": 1715069824,
+    "formattedLastUpdatedAt": "2024年5月7日",
     "frontMatter": {
-        "title": "架构"
+        "title": "AWS Marketplace 集成"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Continuous Delivery with Fleet",
-        "permalink": "/zh/v2.6/integrations-in-rancher/fleet-gitops-at-scale/"
+        "title": "云市场集成",
+        "permalink": "/zh/v2.6/integrations-in-rancher/cloud-marketplace/"
     },
     "next": {
-        "title": "Windows 支持",
-        "permalink": "/zh/v2.6/integrations-in-rancher/fleet-gitops-at-scale/windows-support"
+        "title": "先决条件",
+        "permalink": "/zh/v2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements"
     }
 };
 const assets = {};
-const toc = [];
+const toc = [
+    {
+        value: '概述',
+        id: '概述',
+        level: 2
+    },
+    {
+        value: '限制',
+        id: '限制',
+        level: 2
+    },
+    {
+        value: '如何使用',
+        id: '如何使用',
+        level: 2
+    },
+    {
+        value: '常见问题',
+        id: '常见问题',
+        level: 2
+    }
+];
 const layoutProps = {
     toc
 };
@@ -352,25 +373,48 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Fleet 可以管理来自 Git 的原始 Kubernetes YAML、Helm Chart、Kustomize 或三者的任何组合的部署。无论来源如何，所有资源都会动态转化为 Helm Chart，Helm 会用作引擎来将所有资源部署到集群中。这给了你高度的控制、一致性和可审计性。Fleet 不仅关注扩展能力，而且还提供高度的控制和可见性，从而让用户准确了解集群上安装的内容。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
-        alt: "架构",
-        src: (__webpack_require__(14956)/* ["default"] */ .Z),
-        width: "1366",
-        height: "960"
-    })));
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/zh/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "概述"
+    }, `概述`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher 提供与 AWS Marketplace 的集成，允许用户购买 SUSE 的支持合同。当你开始支持更多集群时，这种集成使你可以轻松调整支持需求。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "限制"
+    }, `限制`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `你必须运行 Rancher v2.6.7 或更高版本。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Rancher 的部署必须启用额外的指标。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Rancher 必须安装在 EKS 集群上。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `你必须通过 AWS Marketplace 购买至少一项 Rancher 支持的权限。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `你可能需要额外的设置来支持代理/离线用例。有关更多信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/zh/v2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements"
+    }, `先决条件`), `。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "如何使用"
+    }, `如何使用`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `完成`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/zh/v2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/adapter-requirements"
+    }, `先决条件`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/zh/v2.6/integrations-in-rancher/cloud-marketplace/aws-cloud-marketplace/install-adapter"
+    }, `安装 CSP Adapter`), `。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "常见问题"
+    }, `常见问题`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `我以后可以购买对更多节点的支持吗？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `可以。只需转到你最初用于购买支持的 AWS Marketplace 条目并增加权限数量即可。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `我可以在同一个 AWS 账户中使用多个 Rancher 实例吗？`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `可以。但是，Rancher 安装的每个集群都需要遵守先决条件。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `此外，一个给定的权限一次只能由一个 Rancher 管理服务器使用。`));
 }
 MDXContent.isMDXComponent = true;
 
-
-/***/ }),
-
-/***/ 14956:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/fleet-architecture-f708ce634648101dc98f451dcd59fe84.svg");
 
 /***/ })
 

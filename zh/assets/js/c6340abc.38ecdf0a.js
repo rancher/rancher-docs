@@ -335,7 +335,7 @@ const metadata = {
         "permalink": "/zh/v2.6/reference-guides/rancher-security/kubernetes-security-best-practices"
     },
     "next": {
-        "title": "Cloud Marketplace Integration",
+        "title": "云市场集成",
         "permalink": "/zh/v2.6/integrations-in-rancher/cloud-marketplace/"
     }
 };
