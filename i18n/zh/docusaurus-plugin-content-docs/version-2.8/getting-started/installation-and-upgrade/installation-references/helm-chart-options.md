@@ -159,7 +159,7 @@ Rancher 的一些功能（Helm Chart）需要使用互联网才能使用。你�
 
 不包括敏感数据时，可以使用 `proxy` 或 `extraEnv` Chart 选项。使用 `extraEnv` 时将忽略 `noProxy` Helm 选项。因此，`NO_PROXY` 环境变量也必须设置为 `extraEnv`。
 
-以下是使用 `extraEnv` Chart 选项设置代理的示例：
+以下是使用 `proxy` Chart 选项设置代理的示例：
 
 ```plain
 --set proxy="http://<proxy_url:proxy_port>/"

@@ -2,6 +2,10 @@
 title: 添加 TLS 密文
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/getting-started/installation-and-upgrade/resources/add-tls-secrets"/>
+</head>
+
 我们使用证书和密钥将 `cattle-system` 命名空间中的 `tls-rancher-ingress` 密文配置好后，Kubernetes 会为 Rancher 创建对象和服务。
 
 将服务器证书和所需的所有中间证书合并到名为 `tls.crt`的文件中。将证书密钥复制到名为 `tls.key` 的文件中。
@@ -42,4 +46,4 @@ Rancher 启动时会检索配置的 `tls-ca` 密文。如果 Rancher 在运行�
 
 ## 更新私有 CA 证书
 
-按照[步骤](update-rancher-certificate.md)更新 [Rancher 高可用 Kubernetes 安装](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md)中的 Ingress，或从默认自签名证书切换到自定义证书。
+按照[步骤](update-rancher-certificate.md)更新 [Rancher 高可用 Kubernetes 安装](../install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md)中的 Ingress，或从默认自签名证书切换到自定义证书。

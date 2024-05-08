@@ -9,7 +9,6 @@ description: Ingress 配置
 
 由于 controller 的这一更改，默认 RKE1 配置不再将 `hostNetwork` 设置为 `true`。但是，你必须将 `hostNetwork` 设置为 `true` 才能使基于 TCP 和 UDP 的 Service 正常工作。为此，请[编辑](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#使用-yaml-编辑集群)集群的 YAML 并按照[官方 RKE1 文档](https://rke.docs.rancher.com/config-options/add-ons/ingress-controllers#configuring-network-options)中的步骤操作。
 
-
 :::
 
 ## 指定要使用的主机名

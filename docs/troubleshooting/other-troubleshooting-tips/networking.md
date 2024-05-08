@@ -13,15 +13,16 @@ Make sure you configured the correct kubeconfig (for example, `export KUBECONFIG
 ### Double check if all the required ports are opened in your (host) firewall
 
 Double check if all the [required ports](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md#networking-requirements) are opened in your (host) firewall. The overlay network uses UDP in comparison to all other required ports which are TCP.
+
 ### Check if overlay network is functioning correctly
 
 The pod can be scheduled to any of the hosts you used for your cluster, but that means that the NGINX ingress controller needs to be able to route the request from `NODE_1` to `NODE_2`. This happens over the overlay network. If the overlay network is not functioning, you will experience intermittent TCP/HTTP connection failures due to the NGINX ingress controller not being able to route to the pod.
 
 To test the overlay network, you can launch the following `DaemonSet` definition. This will run a `swiss-army-knife` container on every host (image was developed by Rancher engineers and can be found here: https://github.com/rancherlabs/swiss-army-knife), which we will use to run a `ping` test between containers on all hosts.
 
-:::note
+:::caution
 
-This container [does not support ARM nodes](https://github.com/leodotcloud/swiss-army-knife/issues/18), such as a Raspberry Pi. This will be seen in the pod logs as `exec user process caused: exec format error`.
+The `swiss-army-knife` container does not support Windows nodes. It also [does not support ARM nodes](https://github.com/leodotcloud/swiss-army-knife/issues/18), such as a Raspberry Pi. When the test encounters incompatible nodes, this is recorded in the pod logs as an error message, such as `exec user process caused: exec format error` for ARM nodes, or `ImagePullBackOff (Back-off pulling image "rancherlabs/swiss-army-knife)` for Windows nodes.
 
 :::
 

@@ -2,6 +2,12 @@
 title: 回滚 Docker 安装的 Rancher
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/roll-back-docker-installed-rancher"/>
+</head>
+
+<DockerSupportWarning />
+
 如果 Rancher 升级没有成功完成，你需要回滚到你在 [Docker 升级](upgrade-docker-installed-rancher.md)之前使用的 Rancher 设置。回滚可以恢复：
 
 - 先前版本的 Rancher。
@@ -21,12 +27,13 @@ docker pull rancher/rancher:<PRIOR_RANCHER_VERSION>
 
 <sup>终端 <code>docker ps</code> 命令，显示如何找到 <code>&lt;PRIOR_RANCHER_VERSION&gt;</code> 和 <code>&lt;RANCHER_CONTAINER_NAME&gt;</code></sup>![占位符参考](/img/placeholder-ref-2.png)
 
-| 占位符 | 示例 | 描述 |
-| -------------------------- | -------------------------- | ------------------------------------------------------- |
-| `<PRIOR_RANCHER_VERSION>` | `v2.0.5` | 升级前使用的 rancher/rancher 镜像。 |
-| `<RANCHER_CONTAINER_NAME>` | `festive_mestorf` | 你的 Rancher 容器的名称。 |
-| `<RANCHER_VERSION>` | `v2.0.5` | 备份对应的 Rancher 版本。 |
-| `<DATE>` | `9-27-18` | 数据容器或备份的创建日期。 |
+| 占位符                     | 示例              | 描述                                |
+| -------------------------- | ----------------- | ----------------------------------- |
+| `<PRIOR_RANCHER_VERSION>`  | `v2.0.5`          | 升级前使用的 rancher/rancher 镜像。 |
+| `<RANCHER_CONTAINER_NAME>` | `festive_mestorf` | 你的 Rancher 容器的名称。           |
+| `<RANCHER_VERSION>`        | `v2.0.5`          | 备份对应的 Rancher 版本。           |
+| `<DATE>`                   | `9-27-18`         | 数据容器或备份的创建日期。          |
+
 <br/>
 
 可以通过远程连接登录到 Rancher Server 所在的主机并输入命令 `docker ps` 以查看正在运行的容器，从而获得 `<PRIOR_RANCHER_VERSION>` 和 `<RANCHER_CONTAINER_NAME>` 。你还可以运行 `docker ps -a` 命令查看停止了的容器。在创建备份期间，你随时可以运行这些命令来获得帮助。
@@ -56,6 +63,7 @@ docker pull rancher/rancher:<PRIOR_RANCHER_VERSION>
    ```
    docker stop <RANCHER_CONTAINER_NAME>
    ```
+
    你可输入 `docker ps`获取 Rancher 容器的名称。
 
 1. 将你在 [Docker 升级](upgrade-docker-installed-rancher.md)时创建的备份压缩包移动到 Rancher Server。切换到你将其移动到的目录。输入 `dir` 以确认它在该位置。
@@ -71,6 +79,7 @@ docker pull rancher/rancher:<PRIOR_RANCHER_VERSION>
    ```
 
 1. 将 `<PRIOR_RANCHER_VERSION>` 占位符指向数据容器，启动一个新的 Rancher Server 容器。
+
    ```
    docker run -d --volumes-from rancher-data \
    --restart=unless-stopped \
@@ -78,7 +87,8 @@ docker pull rancher/rancher:<PRIOR_RANCHER_VERSION>
    --privileged \
    rancher/rancher:<PRIOR_RANCHER_VERSION>
    ```
-   特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+
+   特权访问是[必须](rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 
    :::danger
 

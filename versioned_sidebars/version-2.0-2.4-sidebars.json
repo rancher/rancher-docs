@@ -459,7 +459,7 @@
                                     "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster",
                                    {
                                     "type": "category",
-                                    "label": "Creating a vSphere Cluster",
+                                    "label": "Creating a VMware vSphere Cluster",
                                     "link": {
                                       "type": "doc",
                                       "id": "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/vsphere"
@@ -977,7 +977,7 @@
                     "reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/azure",
                     {
                       "type": "category",
-                      "label": "Creating a vSphere Cluster",
+                      "label": "Creating a VMware vSphere Cluster",
                       "link": {
                         "type": "doc",
                         "id": "reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere/vsphere"

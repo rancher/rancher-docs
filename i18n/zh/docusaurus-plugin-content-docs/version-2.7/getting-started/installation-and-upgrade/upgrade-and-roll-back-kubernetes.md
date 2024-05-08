@@ -2,10 +2,13 @@
 title: 升级和回滚 Kubernetes
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes"/>
+</head>
+
 升级到最新版本的 Rancher 之后，下游 Kubernetes 集群可以升级为 Rancher 支持的最新的 Kubernetes 版本。
 
 Rancher 使用 RKE（Rancher Kubernetes Engine）来预置和编辑 RKE 集群。有关为 RKE 集群配置升级策略的更多信息，请参阅 [RKE 文档](https://rancher.com/docs/rke/latest/en/)。
-
 
 ## 经过测试的 Kubernetes 版本
 
@@ -16,7 +19,6 @@ Rancher 在发布新版本之前，会对其与 Kubernetes 的最新次要版本
 RKE v1.1.0 改变了集群升级的方式。
 
 在 [RKE 文档](https://rancher.com/docs/rke/latest/en/upgrades/how-upgrades-work)中，你将了解编辑或升级 RKE Kubernetes 集群时会发生的情况。
-
 
 ## 升级的最佳实践
 
@@ -32,9 +34,9 @@ RKE v1.1.0 改变了集群升级的方式。
 
 :::note 先决条件：
 
-- 以下选项适用于 [Rancher 启动的 Kubernetes 集群](../../pages-for-subheaders/launch-kubernetes-with-rancher.md)和[注册的 K3s Kubernetes 集群](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md#已注册-rke2-和-k3s-集群的附加功能)。
+- 以下选项适用于 [Rancher 启动的 Kubernetes 集群](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)和[注册的 K3s Kubernetes 集群](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md#已注册-rke2-和-k3s-集群的附加功能)。
 - 以下选项也适用于导入且已注册的 RKE2 集群。如果你从外部云平台导入集群但不注册，你将无法在 Rancher 中升级 Kubernetes 版本。
-- 在升级 Kubernetes 之前，先[备份你的集群](../../pages-for-subheaders/backup-restore-and-disaster-recovery.md)。
+- 在升级 Kubernetes 之前，先[备份你的集群](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/backup-restore-and-disaster-recovery.md)。
 
 :::
 
@@ -75,7 +77,7 @@ RKE v1.1.0 改变了集群升级的方式。
 
 ### 使用 Rancher UI 在升级期间启用节点清空
 
-默认情况下，RKE 会在升级之前[封锁](https://kubernetes.io/docs/concepts/architecture/nodes/#manual-node-administration)每个节点。默认情况下，[清空](https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/)会在升级期间被禁用。如果在集群配置中启用了清空​​，RKE 将在升级之前对节点进行封锁和清空。
+默认情况下，RKE 会在升级之前[封锁](https://kubernetes.io/docs/concepts/architecture/nodes/#manual-node-administration)每个节点。默认情况下，[清空](https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/)会在升级期间被禁用。如果在集群配置中启用了清空 ​​，RKE 将在升级之前对节点进行封锁和清空。
 
 要在集群升级期间清空每个节点：
 

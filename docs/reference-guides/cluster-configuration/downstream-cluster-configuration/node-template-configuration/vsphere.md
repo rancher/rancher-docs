@@ -1,5 +1,5 @@
 ---
-title: VSphere Node Template Configuration
+title: VMware vSphere Node Template Configuration
 ---
 
 <head>

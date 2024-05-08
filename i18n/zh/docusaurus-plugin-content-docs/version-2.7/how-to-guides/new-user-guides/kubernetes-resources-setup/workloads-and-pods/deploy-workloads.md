@@ -41,7 +41,7 @@ description: 阅读此步骤指南以部署工作负载。部署工作负载以�
 
    - 在 [AWS](https://aws.amazon.com/) 中，节点必须位于同一可用区中并具有附加/分离卷的 IAM 权限。
 
-   - 集群必须使用 [AWS 云提供商](https://github.com/kubernetes/website/blob/release-1.18/content/en/docs/concepts/cluster-administration/cloud-providers.md#aws)选项。有关启用此选项的更多信息，请参阅[创建 AWS EC2 集群](../../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md)或[创建自定义集群](../../../../pages-for-subheaders/use-existing-nodes.md)。
+   - 集群必须使用 [AWS 云提供商](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#aws)选项。有关启用此选项的更多信息，请参阅[创建 AWS EC2 集群](../../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md)或[创建自定义集群](../../../../pages-for-subheaders/use-existing-nodes.md)。
 
    :::
 

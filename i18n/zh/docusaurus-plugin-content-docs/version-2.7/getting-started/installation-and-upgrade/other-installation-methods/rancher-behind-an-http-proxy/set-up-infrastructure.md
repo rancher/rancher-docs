@@ -1,6 +1,10 @@
 ---
-title: '1. 配置基础设施'
+title: "1. 配置基础设施"
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/getting-started/installation-and-upgrade/other-installation-methods/rancher-behind-an-http-proxy/set-up-infrastructure"/>
+</head>
 
 在本节中，你将为 Rancher Management Server 配置底层基础设施，并使其通过 HTTP 代理访问互联网。
 
@@ -22,7 +26,7 @@ title: '1. 配置基础设施'
 
 这些主机将通过 HTTP 代理连接到互联网。
 
-请确保你的节点满足[操作系统，容器运行时，硬件和网络](../../../../pages-for-subheaders/installation-requirements.md)的常规要求。
+请确保你的节点满足[操作系统，容器运行时，硬件和网络](../../installation-requirements/installation-requirements.md)的常规要求。
 
 如需获取配置 Linux 节点的示例，请参见[在 Amazon EC2 中配置节点](../../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md)的教程。
 
@@ -59,6 +63,6 @@ title: '1. 配置基础设施'
 
 有关设置 DNS 记录以将域流量转发到 Amazon ELB 负载均衡器的指南，请参见 [AWS 官方文档](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer)。
 
-
 ### 后续操作
+
 [配置 Kubernetes 集群](install-kubernetes.md)

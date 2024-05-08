@@ -1,5 +1,5 @@
 ---
-title: vSphere Storage
+title: VMware vSphere Storage
 ---
 
 <head>
@@ -31,7 +31,7 @@ In order to provision vSphere volumes in a cluster created with the [Rancher Kub
 5. Optionally, specify additional properties for this storage class under **Parameters**. Refer to the [vSphere storage documentation](https://github.com/vmware-archive/vsphere-storage-for-kubernetes/blob/master/documentation/storageclass.md) for details.
 5. Click **Save**.
 
-### Creating a Workload with a vSphere Volume
+### Creating a Workload with a VMware vSphere Volume
 
 1. From the cluster where you configured vSphere storage, begin creating a workload as you would in [Deploying Workloads](../../../../new-user-guides/kubernetes-resources-setup/workloads-and-pods/deploy-workloads.md).
 2. For **Workload Type**, select **Stateful set of 1 pod**.
