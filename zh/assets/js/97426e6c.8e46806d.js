@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[44960],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[97627],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 88785:
+/***/ 97555:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,35 +308,35 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'RBAC'
+    title: 'RKE1 示例 YAML'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "reference-guides/prometheus-federator/rbac",
-    "id": "version-2.6/reference-guides/prometheus-federator/rbac",
-    "title": "RBAC",
-    "description": "本文介绍 Prometheus Federator RBAC。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/reference-guides/prometheus-federator/rbac.md",
-    "sourceDirName": "reference-guides/prometheus-federator",
-    "slug": "/reference-guides/prometheus-federator/rbac",
-    "permalink": "/zh/v2.6/reference-guides/prometheus-federator/rbac",
+    "unversionedId": "reference-guides/rke1-template-example-yaml",
+    "id": "version-2.6/reference-guides/rke1-template-example-yaml",
+    "title": "RKE1 示例 YAML",
+    "description": "以下是一个供参考的 RKE 模板配置文件示例。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/reference-guides/rke1-template-example-yaml.md",
+    "sourceDirName": "reference-guides",
+    "slug": "/reference-guides/rke1-template-example-yaml",
+    "permalink": "/zh/v2.6/reference-guides/rke1-template-example-yaml",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/prometheus-federator/rbac.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/rke1-template-example-yaml.md",
     "tags": [],
     "version": "2.6",
     "lastUpdatedAt": 1668452187,
     "formattedLastUpdatedAt": "2022年11月14日",
     "frontMatter": {
-        "title": "RBAC"
+        "title": "RKE1 示例 YAML"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Prometheus Federator",
-        "permalink": "/zh/v2.6/reference-guides/prometheus-federator/"
+        "title": "系统工具",
+        "permalink": "/zh/v2.6/reference-guides/system-tools"
     },
     "next": {
-        "title": "User Settings",
-        "permalink": "/zh/v2.6/reference-guides/user-settings/"
+        "title": "流水线",
+        "permalink": "/zh/v2.6/reference-guides/pipelines/"
     }
 };
 const assets = {};
@@ -352,70 +352,113 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `本文介绍 Prometheus Federator RBAC。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "../../pages-for-subheaders/prometheus-federator.md#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"
-    }, `命名空间`), `部分所述，Prometheus Federator 期望集群中具有项目级别权限（例如，具有由单个标签选择器确定的命名空间组的权限）的项目所有者、项目成员和其他用户，除了项目 Registration 命名空间（默认导入到项目中）和那些已经包含其项目的命名空间之外，在任何其他命名空间中都只有最低权限。因此，为了让项目所有者将特定 Chart 权限分配给其项目命名空间中的其他用户，Helm Project Operator 将自动监视以下绑定：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `ClusterRoleBindings`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `项目发布命名空​​间中的 RoleBindings`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果 Helm Project Operator 观察到其中一种绑定的更改，Helm Project Operator 会检查绑定指向的 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `以下是一个供参考的 RKE 模板配置文件示例。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `RKE 模板中的 YAML 使用与创建 RKE 集群时相同的自定义项。但是，由于 YAML 位于 Rancher 配置的 RKE 集群的上下文中，因此 RKE 文档中的自定义项需要嵌套在 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `roleRef`), ` 是否与具有以下名称的 ClusterRole 匹配：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `helmProjectOperator.releaseRoleBindings.clusterRoleRefs.admin`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `helmProjectOperator.releaseRoleBindings.clusterRoleRefs.edit`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `helmProjectOperator.releaseRoleBindings.clusterRoleRefs.view`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `默认情况下，这些 roleRef 分别对应 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `admin`), `、`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `edit`), ` 和 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `view`), `，它们都是 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles"
-    }, `Kubernetes 面向用户的默认角色`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "type": "note"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, `对于 Rancher RBAC 用户，这些 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles"
-    }, `Kubernetes 面向用户的默认角色`), `与`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `项目所有者`), `、`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `项目成员`), `和`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `只读`), `默认项目角色模板直接对应。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `roleRef`), ` 匹配，Helm Project Operator 将为所有用户和组过滤绑定的 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `subjects`), `，并使用它为项目 Release 命名空间中的每个角色自动构造一个 RoleBinding，该 RoleBinding 的名称与角色相同并带有以下标签：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `helm.cattle.io/project-helm-chart-role: {{ .Release.Name }}`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `helm.cattle.io/project-helm-chart-role-aggregate-from: <admin|edit|view>`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `默认情况下，Prometheus Federator 部署的底层 Chart `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `rancher-project-monitoring`), ` 会为每个项目发布命名空​​间创建三个默认角色，这些角色能授权 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `admin`), `、`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `edit`), ` 和 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `view`), ` 用户查看项目监控堆栈的 Prometheus、Alertmanager 和 Grafana UI，从而提供最低权限。如果集群管理员想要为某些用户分配额外的权限，一种做法是直接将项目 Release 命名空间中的 RoleBinding 分配给某些用户。另一种做法是创建带有上述两个标签的角色，然后，项目所有者可以控制在项目 Registration 命名空间中分配这些 RBAC 角色的用户。`));
+    }, `rancher_kubernetes_engine`), ` 指令下。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-yaml"
+    }, `#
+# Cluster Config
+#
+docker_root_dir: /var/lib/docker
+
+enable_cluster_alerting: false
+# This setting is not enforced. Clusters
+# created with this sample template
+# would have alerting turned off by default,
+# but end users could still turn alerting
+# on or off.
+
+enable_cluster_monitoring: true
+# This setting is not enforced. Clusters
+# created with this sample template
+# would have monitoring turned on
+# by default, but end users could still
+# turn monitoring on or off.
+
+enable_network_policy: false
+local_cluster_auth_endpoint:
+  enabled: true
+#
+# Rancher Config
+#
+rancher_kubernetes_engine_config: # Your RKE template config goes here.
+  addon_job_timeout: 30
+  authentication:
+    strategy: x509
+  ignore_docker_version: true
+#
+# # 目前仅支持 Nginx ingress provider
+# # 要禁用 Ingress controller，设置 \`provider: none\`
+# # 要在指定节点上禁用 Ingress，使用 node_selector，例如：
+#    provider: nginx
+#    node_selector:
+#      app: ingress
+#
+  ingress:
+    provider: nginx
+  kubernetes_version: v1.15.3-rancher3-1
+  monitoring:
+    provider: metrics-server
+#
+#   If you are using calico on AWS
+#
+#    network:
+#      plugin: calico
+#      calico_network_provider:
+#        cloud_provider: aws
+#
+# # To specify flannel interface
+#
+#    network:
+#      plugin: flannel
+#      flannel_network_provider:
+#      iface: eth1
+#
+# # To specify flannel interface for canal plugin
+#
+#    network:
+#      plugin: canal
+#      canal_network_provider:
+#        iface: eth1
+#
+  network:
+    options:
+      flannel_backend_type: vxlan
+    plugin: canal
+#
+#    services:
+#      kube-api:
+#        service_cluster_ip_range: 10.43.0.0/16
+#      kube-controller:
+#        cluster_cidr: 10.42.0.0/16
+#        service_cluster_ip_range: 10.43.0.0/16
+#      kubelet:
+#        cluster_domain: cluster.local
+#        cluster_dns_server: 10.43.0.10
+#
+  services:
+    etcd:
+      backup_config:
+        enabled: true
+        interval_hours: 12
+        retention: 6
+        safe_timestamp: false
+      creation: 12h
+      extra_args:
+        election-timeout: 5000
+        heartbeat-interval: 500
+      gid: 0
+      retention: 72h
+      snapshot: false
+      uid: 0
+    kube_api:
+      always_pull_images: false
+      pod_security_policy: false
+      service_node_port_range: 30000-32767
+  ssh_agent_auth: false
+windows_prefered_cluster: false
+`)));
 }
 MDXContent.isMDXComponent = true;
 

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[33538],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[57738],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 34706:
+/***/ 7134:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,50 +308,39 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: '安装和配置 kubectl'
+    title: '用户设置'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "faq/install-and-configure-kubectl",
-    "id": "version-2.6/faq/install-and-configure-kubectl",
-    "title": "安装和配置 kubectl",
-    "description": "kubectl 是一个 CLI 工具，用于运行 Kubernetes 集群相关的命令。Rancher 2.x 中的许多维护和管理任务都需要它。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/faq/install-and-configure-kubectl.md",
-    "sourceDirName": "faq",
-    "slug": "/faq/install-and-configure-kubectl",
-    "permalink": "/zh/v2.6/faq/install-and-configure-kubectl",
+    "unversionedId": "reference-guides/user-settings/user-settings",
+    "id": "version-2.6/reference-guides/user-settings/user-settings",
+    "title": "用户设置",
+    "description": "在 Rancher 中，每个用户都有很多与登录相关的设置，例如个人偏好、API 密钥等。你可以从用户设置菜单中配置这些设置。你可以单击主菜单中的头像来打开此菜单。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/reference-guides/user-settings/user-settings.md",
+    "sourceDirName": "reference-guides/user-settings",
+    "slug": "/reference-guides/user-settings/",
+    "permalink": "/zh/v2.6/reference-guides/user-settings/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/faq/install-and-configure-kubectl.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/user-settings/user-settings.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1668452187,
-    "formattedLastUpdatedAt": "2022年11月14日",
+    "lastUpdatedAt": 1714979167,
+    "formattedLastUpdatedAt": "2024年5月6日",
     "frontMatter": {
-        "title": "安装和配置 kubectl"
+        "title": "用户设置"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Deprecated Features in Rancher",
-        "permalink": "/zh/v2.6/faq/deprecated-features"
+        "title": "RBAC",
+        "permalink": "/zh/v2.6/reference-guides/prometheus-federator/rbac"
     },
     "next": {
-        "title": "Dockershim",
-        "permalink": "/zh/v2.6/faq/dockershim"
+        "title": "API 密钥",
+        "permalink": "/zh/v2.6/reference-guides/user-settings/api-keys"
     }
 };
 const assets = {};
-const toc = [
-    {
-        value: '安装',
-        id: '安装',
-        level: 3
-    },
-    {
-        value: '配置',
-        id: '配置',
-        level: 3
-    }
-];
+const toc = [];
 const layoutProps = {
     toc
 };
@@ -363,43 +352,61 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/zh/reference-guides/user-settings"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在 Rancher 中，每个用户都有很多与登录相关的设置，例如个人偏好、API 密钥等。你可以从`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `kubectl`), ` 是一个 CLI 工具，用于运行 Kubernetes 集群相关的命令。Rancher 2.x 中的许多维护和管理任务都需要它。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "安装"
-    }, `安装`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://kubernetes.io/docs/tasks/tools/install-kubectl/"
-    }, `kubectl 安装`), `将 kubectl 安装到你的操作系统上。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "配置"
-    }, `配置`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `使用 RKE 创建 Kubernetes 集群时，RKE 会在本地目录中创建一个 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kube_config_cluster.yml`), `，该文件包含使用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kubectl`), ` 或 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `helm`), ` 等工具连接到新集群的凭证。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你可以将此文件复制为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `$HOME/.kube/config`), `。如果你使用多个 Kubernetes 集群，将 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `KUBECONFIG`), ` 环境变量设置为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kube_config_cluster.yml`), ` 的路径：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre"
-    }, `export KUBECONFIG=$(pwd)/kube_config_cluster.yml
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `使用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kubectl`), ` 测试你的连接性，并查看你是否可以获取节点列表：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre"
-    }, `kubectl get nodes
- NAME                          STATUS    ROLES                      AGE       VERSION
-165.227.114.63                Ready     controlplane,etcd,worker   11m       v1.10.1
-165.227.116.167               Ready     controlplane,etcd,worker   11m       v1.10.1
-165.227.127.226               Ready     controlplane,etcd,worker   11m       v1.10.1
-`)));
+    }, `用户设置`), `菜单中配置这些设置。你可以单击主菜单中的头像来打开此菜单。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
+        alt: "用户设置菜单",
+        src: (__webpack_require__(72411)/* ["default"] */ .Z),
+        width: "288",
+        height: "294"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `可用的用户设置包括：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/zh/v2.6/reference-guides/user-settings/api-keys"
+    }, `API & 密钥`), `：如果你想以编程方式与 Rancher 交互，你需要一个 API 密钥。你可以按照本节中的说明获取密钥。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/zh/v2.6/reference-guides/user-settings/manage-cloud-credentials"
+    }, `云凭证`), `：管理`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/zh/v2.6/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/#%E8%8A%82%E7%82%B9%E6%A8%A1%E6%9D%BF"
+    }, `节点模板`), `使用的云凭证，从而`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/zh/v2.6/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/"
+    }, `为集群配置节点`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/zh/v2.6/reference-guides/user-settings/manage-node-templates"
+    }, `节点模板`), `：管理 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/zh/v2.6/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/"
+    }, `Rancher 用来为集群配置节点`), `的模板。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "/zh/v2.6/reference-guides/user-settings/user-preferences"
+    }, `偏好设置`), `：设置 Rancher UI 的表面首选项。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `登出：结束你的用户会话。`)));
 }
 MDXContent.isMDXComponent = true;
 
+
+/***/ }),
+
+/***/ 72411:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/user-settings-cda0eec8ae28c8bdf1742e2c5367e3d8.png");
 
 /***/ })
 

@@ -325,15 +325,15 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/cli-with-rancher/rancher-cli.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1683884717,
-    "formattedLastUpdatedAt": "2023年5月12日",
+    "lastUpdatedAt": 1714979167,
+    "formattedLastUpdatedAt": "2024年5月6日",
     "frontMatter": {
         "title": "Rancher CLI",
         "description": "Rancher CLI 是一个命令行工具，用于在工作站中与 Rancher 进行交互。"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "CLI with Rancher",
+        "title": "Rancher CLI",
         "permalink": "/zh/v2.6/reference-guides/cli-with-rancher/"
     },
     "next": {
@@ -390,7 +390,10 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher CLI（命令行界面）是一个命令行工具，可用于与 Rancher 进行交互。使用此工具，你可以使用命令行而不用通过 GUI 来操作 Rancher。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/zh/reference-guides/cli-with-rancher/rancher-cli"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher CLI（命令行界面）是一个命令行工具，可用于与 Rancher 进行交互。使用此工具，你可以使用命令行而不用通过 GUI 来操作 Rancher。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "下载-rancher-cli"
     }, `下载 Rancher CLI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你可以直接 UI 下载二进制文件。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"

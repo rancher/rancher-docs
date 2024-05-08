@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[17822],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[1693],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 3039:
+/***/ 72105:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,45 +308,39 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Kubernetes 安全最佳实践'
+    title: '概念'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "reference-guides/rancher-security/kubernetes-security-best-practices",
-    "id": "version-2.6/reference-guides/rancher-security/kubernetes-security-best-practices",
-    "title": "Kubernetes 安全最佳实践",
-    "description": "限制云元数据 API 访问",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/reference-guides/rancher-security/kubernetes-security-best-practices.md",
-    "sourceDirName": "reference-guides/rancher-security",
-    "slug": "/reference-guides/rancher-security/kubernetes-security-best-practices",
-    "permalink": "/zh/v2.6/reference-guides/rancher-security/kubernetes-security-best-practices",
+    "unversionedId": "reference-guides/pipelines/concepts",
+    "id": "version-2.6/reference-guides/pipelines/concepts",
+    "title": "概念",
+    "description": "本文解释与流水线相关的常见概念和术语。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/reference-guides/pipelines/concepts.md",
+    "sourceDirName": "reference-guides/pipelines",
+    "slug": "/reference-guides/pipelines/concepts",
+    "permalink": "/zh/v2.6/reference-guides/pipelines/concepts",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/rancher-security/kubernetes-security-best-practices.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/pipelines/concepts.md",
     "tags": [],
     "version": "2.6",
     "lastUpdatedAt": 1668452187,
     "formattedLastUpdatedAt": "2022年11月14日",
     "frontMatter": {
-        "title": "Kubernetes 安全最佳实践"
+        "title": "概念"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "关于 rke2-selinux",
-        "permalink": "/zh/v2.6/reference-guides/rancher-security/selinux-rpm/about-rke2-selinux"
+        "title": "流水线",
+        "permalink": "/zh/v2.6/reference-guides/pipelines/"
     },
     "next": {
-        "title": "安全公告和 CVE",
-        "permalink": "/zh/v2.6/reference-guides/rancher-security/security-advisories-and-cves"
+        "title": "流水线配置参考",
+        "permalink": "/zh/v2.6/reference-guides/pipelines/pipeline-configuration"
     }
 };
 const assets = {};
-const toc = [
-    {
-        value: '限制云元数据 API 访问',
-        id: '限制云元数据-api-访问',
-        level: 3
-    }
-];
+const toc = [];
 const layoutProps = {
     toc
 };
@@ -358,15 +352,74 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "限制云元数据-api-访问"
-    }, `限制云元数据 API 访问`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `AWS、Azure、DigitalOcean 或 GCP 等云提供商通常会在本地向实例公开元数据服务。默认情况下，此端点可被运行在云实例上的 pod 访问，包括在托管的 Kubernetes（如 EKS、AKS、DigitalOcean Kubernetes 或 GKE）中的 pod，并且可以包含该节点的云凭证、配置数据（如 kubelet 凭证）以及其他敏感数据。为了降低在云平台上运行的这种风险，请遵循 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `本文解释与流水线相关的常见概念和术语。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `流水线`), `：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, ` `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
+        parentName: "p"
+    }, `流水线`), ` 是一个软件交付过程，它被分成不同的阶段和步骤。设置流水线可以帮助开发者快速高效地上线新软件。Rancher 支持给每个项目单独设置流水线。流水线基于特定的仓库。它定义了构建、测试和部署代码的过程。Rancher 使用的是`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/#restricting-cloud-metadata-api-access"
-    }, `Kubernetes 安全建议`), `，即限制授予实例凭证的权限，使用网络策略限制 pod 对元数据 API 的访问，并避免使用配置数据来传递密文。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `建议你参阅你使用的云提供商的安全最佳实践，获取限制对云实例元数据 API 访问的建议和详情。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `要获取更多参考资料，请参阅 MITRE ATT&CK 知识库 - `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://attack.mitre.org/techniques/T1552/005/"
-    }, `不安全凭证：云实例元数据 API`), `。`));
+        "href": "https://jenkins.io/doc/book/pipeline-as-code/"
+    }, `流水线即代码`), `模型。在源代码仓库中，流水线配置以流水线文件表示，文件名为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `.rancher-pipeline.yml`), ` 或 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `.rancher-pipeline.yaml`), `。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `阶段`), `：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, ` 一个流水线阶段由多个步骤组成。阶段按照流水线文件中定义的顺序执行。一个阶段中的步骤是同时执行的。只有上一个阶段中的所有步骤都完成且没有失败时，下一个阶段才会开始。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `步骤`), `：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, ` 流水线步骤在指定阶段内执行。如果一个步骤以 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `0`), ` 以外的代码退出，则该步骤失败了。如果某个步骤以此失败代码退出，则整个流水线将失败并终止。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `工作空间`), `：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, ` 工作空间是所有流水线步骤共享的工作目录。在流水线开始时，源代码会被检出到工作空间。每个步骤的命令都会在工作空间中启动。在流水线执行期间，上一步骤的工件将在后续步骤中使用。工作目录是一个临时卷，将在流水线执行完成时使用 executor pod 进行清理。`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `通常，流水线阶段包括：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Build`), `：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, ` 每次将代码签入仓库时，流水线都会自动克隆仓库并构建软件的新迭代。在整个过程中，软件通常通过自动化测试进行审查。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Publish`), `：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, ` 构建完成后，将构建 Docker 镜像并将其发布到 Docker 镜像仓库，或发布商店应用模板。`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `Deploy`), `：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "li"
+    }, ` 发布工件后，你将发布你的应用，以便用户开始使用更新后的产品。`))));
 }
 MDXContent.isMDXComponent = true;
 

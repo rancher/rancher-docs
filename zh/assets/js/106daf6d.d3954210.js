@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[1030],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[90166],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 82377:
+/***/ 70889:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,39 +308,55 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: '示例 YAML 文件'
+    title: 'kubectl 实用程序'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "reference-guides/pipelines/example-yaml",
-    "id": "version-2.6/reference-guides/pipelines/example-yaml",
-    "title": "示例 YAML 文件",
-    "description": "你可以通过 UI 或使用仓库中的 YAML 文件（即 .rancher-pipeline.yml 或 .rancher-pipeline.yaml）配置流水线。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/reference-guides/pipelines/example-yaml.md",
-    "sourceDirName": "reference-guides/pipelines",
-    "slug": "/reference-guides/pipelines/example-yaml",
-    "permalink": "/zh/v2.6/reference-guides/pipelines/example-yaml",
+    "unversionedId": "reference-guides/cli-with-rancher/kubectl-utility",
+    "id": "version-2.6/reference-guides/cli-with-rancher/kubectl-utility",
+    "title": "kubectl 实用程序",
+    "description": "kubectl",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/reference-guides/cli-with-rancher/kubectl-utility.md",
+    "sourceDirName": "reference-guides/cli-with-rancher",
+    "slug": "/reference-guides/cli-with-rancher/kubectl-utility",
+    "permalink": "/zh/v2.6/reference-guides/cli-with-rancher/kubectl-utility",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/pipelines/example-yaml.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/cli-with-rancher/kubectl-utility.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1668452187,
-    "formattedLastUpdatedAt": "2022年11月14日",
+    "lastUpdatedAt": 1714979167,
+    "formattedLastUpdatedAt": "2024年5月6日",
     "frontMatter": {
-        "title": "示例 YAML 文件"
+        "title": "kubectl 实用程序"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "示例仓库",
-        "permalink": "/zh/v2.6/reference-guides/pipelines/example-repositories"
+        "title": "Rancher CLI",
+        "permalink": "/zh/v2.6/reference-guides/cli-with-rancher/rancher-cli"
     },
     "next": {
-        "title": "Rancher Security Guides",
-        "permalink": "/zh/v2.6/reference-guides/rancher-security/"
+        "title": "API",
+        "permalink": "/zh/v2.6/reference-guides/about-the-api/"
     }
 };
 const assets = {};
-const toc = [];
+const toc = [
+    {
+        value: 'kubectl',
+        id: 'kubectl',
+        level: 2
+    },
+    {
+        value: 'kubectl 实用程序',
+        id: 'kubectl-实用程序',
+        level: 3
+    },
+    {
+        value: '使用 kubectl 和 kubeconfig 令牌进行 TTL 认证',
+        id: '使用-kubectl-和-kubeconfig-令牌进行-ttl-认证',
+        level: 3
+    }
+];
 const layoutProps = {
     toc
 };
@@ -352,78 +368,64 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你可以通过 UI 或使用仓库中的 YAML 文件（即 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/zh/reference-guides/cli-with-rancher/kubectl-utility"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "kubectl"
+    }, `kubectl`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `kubectl 用于与 Rancher 进行交互。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "kubectl-实用程序"
+    }, `kubectl 实用程序`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `安装 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `.rancher-pipeline.yml`), ` 或 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `.rancher-pipeline.yaml`), `）配置流水线。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `kubectl`), `。详情请参见`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.6/reference-guides/pipelines/pipeline-configuration"
-    }, `流水线配置参考`), `中，我们提供了使用 Rancher UI 或 YAML 来配置每个功能的示例。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `以下是一个完整的 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        "href": "https://kubernetes.io/docs/tasks/tools/install-kubectl/"
+    }, `安装 kubectl`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `要配置 kubectl，通过 Rancher Web UI 访问你的集群，单击 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `rancher-pipeline.yml`), ` 示例，供想要直接使用的用户使用：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-yaml"
-    }, `# 示例
-stages:
-  - name: Build something
-    # 阶段的条件
-    when:
-      branch: master
-      event: [ push, pull_request ]
-    # 多个步骤并发运行
-    steps:
-    - runScriptConfig:
-        image: busybox
-        shellScript: echo \${FIRST_KEY} && echo \${ALIAS_ENV}
-      # 在容器中为步骤设置环境变量
-      env:
-        FIRST_KEY: VALUE
-        SECOND_KEY: VALUE2
-      # 从项目密文中设置环境变量
-      envFrom:
-      - sourceName: my-secret
-        sourceKey: secret-key
-        targetKey: ALIAS_ENV
-    - runScriptConfig:
-        image: busybox
-        shellScript: date -R
-      # 步骤条件
-      when:
-        branch: [ master, dev ]
-        event: push
-  - name: Publish my image
-    steps:
-    - publishImageConfig:
-        dockerfilePath: ./Dockerfile
-        buildContext: .
-        tag: rancher/rancher:v2.0.0
-        # 可选择推送到远端镜像仓库
-        pushRemote: true
-        registry: reg.example.com
-  - name: Deploy some workloads
-    steps:
-    - applyYamlConfig:
-        path: ./deployment.yaml
-# 流水线的分支条件
-branch:
-  include: [ master, feature/*]
-  exclude: [ dev ]
-# 以分钟为单位的超时
-timeout: 30
-notification:
-  recipients:
-  - # Recipient
-    recipient: "#mychannel"
-    # Notifier 的 ID
-    notifier: "c-wdcsr:n-c9pg7"
-  - recipient: "test@example.com"
-    notifier: "c-wdcsr:n-lkrhd"
-  # 选择发送通知的条件
-  condition: ["Failed", "Success", "Changed"]
-  # 覆盖默认消息（可选）
-  message: "my-message"
-`)));
+    }, `Kubeconfig`), `，然后复制内容并将其粘贴到你的 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `~/.kube/config`), ` 文件中。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `检查是否可以成功运行 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `kubectl cluster-info`), ` 或 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `kubectl get pods`), ` 命令。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "使用-kubectl-和-kubeconfig-令牌进行-ttl-认证"
+    }, `使用 kubectl 和 kubeconfig 令牌进行 TTL 认证`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
+        parentName: "p"
+    }, `要求`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果管理员`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/zh/v2.6/reference-guides/about-the-api/api-tokens#%E5%9C%A8%E7%94%9F%E6%88%90%E7%9A%84-kubeconfig-%E4%B8%AD%E7%A6%81%E7%94%A8%E4%BB%A4%E7%89%8C"
+    }, `关闭了 kubeconfig 令牌生成`), `，当你运行 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `kubectl`), ` 时，kubeconfig 文件需要 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/zh/v2.6/reference-guides/cli-with-rancher/rancher-cli"
+    }, `Rancher CLI`), ` 存在于你的 PATH 中。否则，你会看到这样的错误信息：
+`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `Unable to connect to the server: getting credentials: exec: exec: "rancher": executable file not found in $PATH`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `该功能可以让 kubectl 与 Rancher Server 进行身份验证，并在需要时获得新的 kubeconfig token。目前支持以下验证提供程序：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `本地`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `Active Directory (仅限 LDAP)`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `FreeIPA`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `OpenLDAP`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ol"
+    }, `SAML 身份提供商：Ping，Okta，ADFS，Keycloak 和 Shibboleth`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果你是第一次运行 kubectl（例如，`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `kubectl get pods`), `），它会要求你选择一个验证提供程序并使用 Rancher Server 登录。kubeconfig token 会被缓存到 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `./.cache/token`), ` 下你运行 kubectl 的路径中。该 Token 在`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/zh/v2.6/reference-guides/about-the-api/api-tokens#%E5%9C%A8%E7%94%9F%E6%88%90%E7%9A%84-kubeconfig-%E4%B8%AD%E7%A6%81%E7%94%A8%E4%BB%A4%E7%89%8C"
+    }, `过期`), `或`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/zh/v2.6/reference-guides/about-the-api/api-tokens#%E5%88%A0%E9%99%A4%E4%BB%A4%E7%89%8C"
+    }, `从 Rancher Server 删除`), `之前都是有效的。过期后，下一个 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `kubectl get pods`), ` 命令会要求你再次使用 Rancher Server 登录。`));
 }
 MDXContent.isMDXComponent = true;
 

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[1154],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[33538],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 11162:
+/***/ 34706:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,57 +308,47 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Access Clusters'
+    title: '安装和配置 kubectl'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "how-to-guides/new-user-guides/manage-clusters/access-clusters/access-clusters",
-    "id": "version-2.6/how-to-guides/new-user-guides/manage-clusters/access-clusters/access-clusters",
-    "title": "Access Clusters",
-    "description": "This section is about what tools can be used to access clusters managed by Rancher.",
-    "source": "@site/versioned_docs/version-2.6/how-to-guides/new-user-guides/manage-clusters/access-clusters/access-clusters.md",
-    "sourceDirName": "how-to-guides/new-user-guides/manage-clusters/access-clusters",
-    "slug": "/how-to-guides/new-user-guides/manage-clusters/access-clusters/",
-    "permalink": "/zh/v2.6/how-to-guides/new-user-guides/manage-clusters/access-clusters/",
+    "unversionedId": "faq/install-and-configure-kubectl",
+    "id": "version-2.6/faq/install-and-configure-kubectl",
+    "title": "安装和配置 kubectl",
+    "description": "kubectl 是一个 CLI 工具，用于运行 Kubernetes 集群相关的命令。Rancher 2.x 中的许多维护和管理任务都需要它。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/faq/install-and-configure-kubectl.md",
+    "sourceDirName": "faq",
+    "slug": "/faq/install-and-configure-kubectl",
+    "permalink": "/zh/v2.6/faq/install-and-configure-kubectl",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/new-user-guides/manage-clusters/access-clusters/access-clusters.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/faq/install-and-configure-kubectl.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1712697029,
-    "formattedLastUpdatedAt": "2024年4月9日",
+    "lastUpdatedAt": 1668452187,
+    "formattedLastUpdatedAt": "2022年11月14日",
     "frontMatter": {
-        "title": "Access Clusters"
+        "title": "安装和配置 kubectl"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Cluster Administration",
-        "permalink": "/zh/v2.6/how-to-guides/new-user-guides/manage-clusters/"
+        "title": "Rancher 中已弃用的功能",
+        "permalink": "/zh/v2.6/faq/deprecated-features"
     },
     "next": {
-        "title": "使用 Kubectl 和 kubeconfig 访问集群",
-        "permalink": "/zh/v2.6/how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig"
+        "title": "Dockershim",
+        "permalink": "/zh/v2.6/faq/dockershim"
     }
 };
 const assets = {};
 const toc = [
     {
-        value: 'Rancher UI',
-        id: 'rancher-ui',
+        value: '安装',
+        id: '安装',
         level: 3
     },
     {
-        value: 'kubectl',
-        id: 'kubectl',
-        level: 3
-    },
-    {
-        value: 'Rancher CLI',
-        id: 'rancher-cli',
-        level: 3
-    },
-    {
-        value: 'Rancher API',
-        id: 'rancher-api',
+        value: '配置',
+        id: '配置',
         level: 3
     }
 ];
@@ -373,59 +363,40 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
-        rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/access-clusters"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This section is about what tools can be used to access clusters managed by Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For information on how to give users permission to access a cluster, see the section on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `kubectl`), ` 是一个 CLI 工具，用于运行 Kubernetes 集群相关的命令。Rancher 2.x 中的许多维护和管理任务都需要它。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "安装"
+    }, `安装`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "add-users-to-clusters.md"
-    }, `adding users to clusters.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information on roles-based access control, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/zh/v2.6/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/"
-    }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For information on how to set up an authentication system, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/zh/v2.6/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/"
-    }, `this section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "rancher-ui"
-    }, `Rancher UI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher provides an intuitive user interface for interacting with your clusters. All options available in the UI use the Rancher API. Therefore any action possible in the UI is also possible in the Rancher CLI or Rancher API.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "kubectl"
-    }, `kubectl`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can use the Kubernetes command-line tool, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://kubernetes.io/docs/reference/kubectl/overview/"
-    }, `kubectl`), `, to manage   your clusters. You have two options for using kubectl:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Rancher kubectl shell:`), ` Interact with your clusters by launching a kubectl shell available in the Rancher UI. This option requires no configuration actions on your part. For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "use-kubectl-and-kubeconfig.md"
-    }, `Accessing Clusters with kubectl Shell`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
-        parentName: "li"
-    }, `Terminal remote connection:`), ` You can also interact with your clusters by installing `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
         "href": "https://kubernetes.io/docs/tasks/tools/install-kubectl/"
-    }, `kubectl`), ` on your local desktop and then copying the cluster's kubeconfig file to your local `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `~/.kube/config`), ` directory. For more information, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "use-kubectl-and-kubeconfig.md"
-    }, `Accessing Clusters with kubectl and a kubeconfig File`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "rancher-cli"
-    }, `Rancher CLI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can control your clusters by downloading Rancher's own command-line interface, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/zh/v2.6/reference-guides/cli-with-rancher/"
-    }, `Rancher CLI`), `. This CLI tool can interact directly with different clusters and projects or pass them `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `kubectl 安装`), `将 kubectl 安装到你的操作系统上。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "配置"
+    }, `配置`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `使用 RKE 创建 Kubernetes 集群时，RKE 会在本地目录中创建一个 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `kubectl`), ` commands.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "rancher-api"
-    }, `Rancher API`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Finally, you can interact with your clusters over the Rancher API. Before you use the API, you must obtain an `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "../../../../reference-guides/user-settings/api-keys.md"
-    }, `API key`), `. To view the different resource fields and actions for an API object, open the API UI, which can be accessed by clicking on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `kube_config_cluster.yml`), `，该文件包含使用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `View in API`), ` for any Rancher UI object.`));
+    }, `kubectl`), ` 或 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `helm`), ` 等工具连接到新集群的凭证。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你可以将此文件复制为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `$HOME/.kube/config`), `。如果你使用多个 Kubernetes 集群，将 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `KUBECONFIG`), ` 环境变量设置为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `kube_config_cluster.yml`), ` 的路径：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `export KUBECONFIG=$(pwd)/kube_config_cluster.yml
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `使用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `kubectl`), ` 测试你的连接性，并查看你是否可以获取节点列表：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `kubectl get nodes
+ NAME                          STATUS    ROLES                      AGE       VERSION
+165.227.114.63                Ready     controlplane,etcd,worker   11m       v1.10.1
+165.227.116.167               Ready     controlplane,etcd,worker   11m       v1.10.1
+165.227.127.226               Ready     controlplane,etcd,worker   11m       v1.10.1
+`)));
 }
 MDXContent.isMDXComponent = true;
 

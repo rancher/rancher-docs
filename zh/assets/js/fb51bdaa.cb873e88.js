@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[26356],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[4449],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 5327:
+/***/ 52161:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,39 +308,55 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'User Settings'
+    title: '用户偏好'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "reference-guides/user-settings/user-settings",
-    "id": "version-2.6/reference-guides/user-settings/user-settings",
-    "title": "User Settings",
-    "description": "Within Rancher, each user has a number of settings associated with their login: personal preferences, API keys, etc. You can configure these settings by choosing from the User Settings menu. You can open this menu by clicking your avatar, located within the main menu.",
-    "source": "@site/versioned_docs/version-2.6/reference-guides/user-settings/user-settings.md",
+    "unversionedId": "reference-guides/user-settings/user-preferences",
+    "id": "version-2.6/reference-guides/user-settings/user-preferences",
+    "title": "用户偏好",
+    "description": "每个用户都可以设置自己的偏好，从而按照自己的喜好调整 Rancher UI 界面。要更改偏好设置，请打开用户设置菜单，然后选择偏好设置。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/reference-guides/user-settings/user-preferences.md",
     "sourceDirName": "reference-guides/user-settings",
-    "slug": "/reference-guides/user-settings/",
-    "permalink": "/zh/v2.6/reference-guides/user-settings/",
+    "slug": "/reference-guides/user-settings/user-preferences",
+    "permalink": "/zh/v2.6/reference-guides/user-settings/user-preferences",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/user-settings/user-settings.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/user-settings/user-preferences.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "2024年1月29日",
+    "lastUpdatedAt": 1668452187,
+    "formattedLastUpdatedAt": "2022年11月14日",
     "frontMatter": {
-        "title": "User Settings"
+        "title": "用户偏好"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "RBAC",
-        "permalink": "/zh/v2.6/reference-guides/prometheus-federator/rbac"
+        "title": "管理云凭证",
+        "permalink": "/zh/v2.6/reference-guides/user-settings/manage-cloud-credentials"
     },
     "next": {
-        "title": "API 密钥",
-        "permalink": "/zh/v2.6/reference-guides/user-settings/api-keys"
+        "title": "Rancher CLI",
+        "permalink": "/zh/v2.6/reference-guides/cli-with-rancher/"
     }
 };
 const assets = {};
-const toc = [];
+const toc = [
+    {
+        value: '主题',
+        id: '主题',
+        level: 2
+    },
+    {
+        value: '我的账号',
+        id: '我的账号',
+        level: 2
+    },
+    {
+        value: '每页表格行',
+        id: '每页表格行',
+        level: 2
+    }
+];
 const layoutProps = {
     toc
 };
@@ -352,61 +368,30 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
-        rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/reference-guides/user-settings"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Within Rancher, each user has a number of settings associated with their login: personal preferences, API keys, etc. You can configure these settings by choosing from the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `每个用户都可以设置自己的偏好，从而按照自己的喜好调整 Rancher UI 界面。要更改偏好设置，请打开`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `User Settings`), ` menu. You can open this menu by clicking your avatar, located within the main menu.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("img", {
-        alt: "User Settings Menu",
-        src: (__webpack_require__(72411)/* ["default"] */ .Z),
-        width: "288",
-        height: "294"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The available user settings are:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "api-keys.md"
-    }, `API & Keys`), `: If you want to interact with Rancher programmatically, you need an API key. Follow the directions in this section to obtain a key.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "manage-cloud-credentials.md"
-    }, `Cloud Credentials`), `: Manage cloud credentials `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#node-templates"
-    }, `used by node templates`), ` to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md"
-    }, `provision nodes for clusters`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "manage-node-templates.md"
-    }, `Node Templates`), `: Manage templates `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md"
-    }, `used by Rancher to provision nodes for clusters`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "user-preferences.md"
-    }, `Preferences`), `: Sets superficial preferences for the Rancher UI.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `Log Out: Ends your user session.`)));
+    }, `用户设置`), `菜单，然后选择`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `偏好设置`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "主题"
+    }, `主题`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `选择 Rancher UI 的背景颜色。如果选择`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `自动`), `，背景颜色会在下午 6 点从浅色变为深色，然后在早上 6 点变回浅色。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "我的账号"
+    }, `我的账号`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `此部分显示用于会话的`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `名称`), `（你的显示名称）和`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `用户名`), `（你的登录名）。要更改你当前的密码，请单击`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+        parentName: "p"
+    }, `更改密码`), `按钮。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "每页表格行"
+    }, `每页表格行`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在使用表格来显示系统对象（如集群或 deployment）的页面中，你可以设置每页显示的最大对象数量。默认设置为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `50`), `。`));
 }
 MDXContent.isMDXComponent = true;
 
-
-/***/ }),
-
-/***/ 72411:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/user-settings-cda0eec8ae28c8bdf1742e2c5367e3d8.png");
 
 /***/ })
 

@@ -450,10 +450,10 @@ function MDXContent(_param) {
         "id": "流水线"
     }, `流水线`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在将您的项目`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../../reference-guides/pipelines/pipelines.md#1-%E9%85%8D%E7%BD%AE%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F"
+        "href": "/zh/v2.6/reference-guides/pipelines/#1-%E9%85%8D%E7%BD%AE%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F"
     }, `配置到版本控制提供商`), `之后，您可以添加仓库并开始为每个仓库配置流水线。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `更多信息，请`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "../../../reference-guides/pipelines/pipelines.md"
+        "href": "/zh/v2.6/reference-guides/pipelines/"
     }, `参阅`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "应用程序"
     }, `应用程序`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `除了启动应用程序的各个组件外，你还可以使用 Rancher 应用商店来启动应用，即 Helm Chart。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[99877],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[17822],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 93022:
+/***/ 3039:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,39 +308,45 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Best Practice Guides'
+    title: 'Kubernetes 安全最佳实践'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "reference-guides/best-practices/best-practices",
-    "id": "version-2.6/reference-guides/best-practices/best-practices",
-    "title": "Best Practice Guides",
-    "description": "The purpose of this section is to consolidate best practices for Rancher implementations. This also includes recommendations for related technologies, such as Kubernetes, Docker, containers, and more. The objective is to improve the outcome of a Rancher implementation using the operational experience of Rancher and its customers.",
-    "source": "@site/versioned_docs/version-2.6/reference-guides/best-practices/best-practices.md",
-    "sourceDirName": "reference-guides/best-practices",
-    "slug": "/reference-guides/best-practices/",
-    "permalink": "/zh/v2.6/reference-guides/best-practices/",
+    "unversionedId": "reference-guides/rancher-security/kubernetes-security-best-practices",
+    "id": "version-2.6/reference-guides/rancher-security/kubernetes-security-best-practices",
+    "title": "Kubernetes 安全最佳实践",
+    "description": "限制云元数据 API 访问",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/reference-guides/rancher-security/kubernetes-security-best-practices.md",
+    "sourceDirName": "reference-guides/rancher-security",
+    "slug": "/reference-guides/rancher-security/kubernetes-security-best-practices",
+    "permalink": "/zh/v2.6/reference-guides/rancher-security/kubernetes-security-best-practices",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/best-practices/best-practices.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/rancher-security/kubernetes-security-best-practices.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1712697029,
-    "formattedLastUpdatedAt": "2024年4月9日",
+    "lastUpdatedAt": 1714979167,
+    "formattedLastUpdatedAt": "2024年5月6日",
     "frontMatter": {
-        "title": "Best Practice Guides"
+        "title": "Kubernetes 安全最佳实践"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "7 层 NGINX 负载均衡器上的 TLS 终止（Docker 安装）",
-        "permalink": "/zh/v2.6/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer"
+        "title": "关于 rke2-selinux",
+        "permalink": "/zh/v2.6/reference-guides/rancher-security/selinux-rpm/about-rke2-selinux"
     },
     "next": {
-        "title": "Best Practices for the Rancher Server",
-        "permalink": "/zh/v2.6/reference-guides/best-practices/rancher-server/"
+        "title": "安全公告和 CVE",
+        "permalink": "/zh/v2.6/reference-guides/rancher-security/security-advisories-and-cves"
     }
 };
 const assets = {};
-const toc = [];
+const toc = [
+    {
+        value: '限制云元数据 API 访问',
+        id: '限制云元数据-api-访问',
+        level: 3
+    }
+];
 const layoutProps = {
     toc
 };
@@ -354,33 +360,16 @@ function MDXContent(_param) {
         mdxType: "MDXLayout"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/reference-guides/best-practices"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The purpose of this section is to consolidate best practices for Rancher implementations. This also includes recommendations for related technologies, such as Kubernetes, Docker, containers, and more. The objective is to improve the outcome of a Rancher implementation using the operational experience of Rancher and its customers.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you have any questions about how these might apply to your use case, please contact your Customer Success Manager or Support.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Use the navigation bar on the left to find the current best practices for managing and deploying the Rancher Server.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more guidance on best practices, you can consult these resources:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "/zh/v2.6/reference-guides/rancher-security/"
-    }, `Security`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "https://www.suse.com/c/rancherblog/"
-    }, `Rancher Blog`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "https://forums.rancher.com/"
-    }, `Rancher Forum`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "https://slack.rancher.io/"
-    }, `Rancher Users Slack`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "https://www.youtube.com/channel/UCh5Xtp82q8wjijP8npkVTBA/featured"
-    }, `Rancher Labs YouTube Channel - Online Meetups, Demos, Training, and Webinars`))));
+        href: "https://ranchermanager.docs.rancher.com/zh/reference-guides/rancher-security/kubernetes-security-best-practices"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "限制云元数据-api-访问"
+    }, `限制云元数据 API 访问`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `AWS、Azure、DigitalOcean 或 GCP 等云提供商通常会在本地向实例公开元数据服务。默认情况下，此端点可被运行在云实例上的 pod 访问，包括在托管的 Kubernetes（如 EKS、AKS、DigitalOcean Kubernetes 或 GKE）中的 pod，并且可以包含该节点的云凭证、配置数据（如 kubelet 凭证）以及其他敏感数据。为了降低在云平台上运行的这种风险，请遵循 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/#restricting-cloud-metadata-api-access"
+    }, `Kubernetes 安全建议`), `，即限制授予实例凭证的权限，使用网络策略限制 pod 对元数据 API 的访问，并避免使用配置数据来传递密文。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `建议你参阅你使用的云提供商的安全最佳实践，获取限制对云实例元数据 API 访问的建议和详情。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `要获取更多参考资料，请参阅 MITRE ATT&CK 知识库 - `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://attack.mitre.org/techniques/T1552/005/"
+    }, `不安全凭证：云实例元数据 API`), `。`));
 }
 MDXContent.isMDXComponent = true;
 

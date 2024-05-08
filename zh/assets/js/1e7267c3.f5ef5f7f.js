@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[55617],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[1030],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 50205:
+/***/ 82377:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,35 +308,35 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'CLI with Rancher'
+    title: '示例 YAML 文件'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "reference-guides/cli-with-rancher/cli-with-rancher",
-    "id": "version-2.6/reference-guides/cli-with-rancher/cli-with-rancher",
-    "title": "CLI with Rancher",
-    "description": "Interact with Rancher using command line interface (CLI) tools from your workstation. The following docs will describe the Rancher CLI and kubectl Utility.",
-    "source": "@site/versioned_docs/version-2.6/reference-guides/cli-with-rancher/cli-with-rancher.md",
-    "sourceDirName": "reference-guides/cli-with-rancher",
-    "slug": "/reference-guides/cli-with-rancher/",
-    "permalink": "/zh/v2.6/reference-guides/cli-with-rancher/",
+    "unversionedId": "reference-guides/pipelines/example-yaml",
+    "id": "version-2.6/reference-guides/pipelines/example-yaml",
+    "title": "示例 YAML 文件",
+    "description": "你可以通过 UI 或使用仓库中的 YAML 文件（即 .rancher-pipeline.yml 或 .rancher-pipeline.yaml）配置流水线。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/reference-guides/pipelines/example-yaml.md",
+    "sourceDirName": "reference-guides/pipelines",
+    "slug": "/reference-guides/pipelines/example-yaml",
+    "permalink": "/zh/v2.6/reference-guides/pipelines/example-yaml",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/cli-with-rancher/cli-with-rancher.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/pipelines/example-yaml.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1706551642,
-    "formattedLastUpdatedAt": "2024年1月29日",
+    "lastUpdatedAt": 1668452187,
+    "formattedLastUpdatedAt": "2022年11月14日",
     "frontMatter": {
-        "title": "CLI with Rancher"
+        "title": "示例 YAML 文件"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "用户偏好",
-        "permalink": "/zh/v2.6/reference-guides/user-settings/user-preferences"
+        "title": "示例仓库",
+        "permalink": "/zh/v2.6/reference-guides/pipelines/example-repositories"
     },
     "next": {
-        "title": "Rancher CLI",
-        "permalink": "/zh/v2.6/reference-guides/cli-with-rancher/rancher-cli"
+        "title": "Rancher 安全指南",
+        "permalink": "/zh/v2.6/reference-guides/rancher-security/"
     }
 };
 const assets = {};
@@ -352,16 +352,78 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
-        rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/reference-guides/cli-with-rancher"
-    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Interact with Rancher using command line interface (CLI) tools from your workstation. The following docs will describe the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `你可以通过 UI 或使用仓库中的 YAML 文件（即 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `.rancher-pipeline.yml`), ` 或 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `.rancher-pipeline.yaml`), `）配置流水线。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "rancher-cli.md"
-    }, `Rancher CLI`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "kubectl-utility.md"
-    }, `kubectl Utility`), `.`));
+        "href": "/zh/v2.6/reference-guides/pipelines/pipeline-configuration"
+    }, `流水线配置参考`), `中，我们提供了使用 Rancher UI 或 YAML 来配置每个功能的示例。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `以下是一个完整的 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `rancher-pipeline.yml`), ` 示例，供想要直接使用的用户使用：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre",
+        "className": "language-yaml"
+    }, `# 示例
+stages:
+  - name: Build something
+    # 阶段的条件
+    when:
+      branch: master
+      event: [ push, pull_request ]
+    # 多个步骤并发运行
+    steps:
+    - runScriptConfig:
+        image: busybox
+        shellScript: echo \${FIRST_KEY} && echo \${ALIAS_ENV}
+      # 在容器中为步骤设置环境变量
+      env:
+        FIRST_KEY: VALUE
+        SECOND_KEY: VALUE2
+      # 从项目密文中设置环境变量
+      envFrom:
+      - sourceName: my-secret
+        sourceKey: secret-key
+        targetKey: ALIAS_ENV
+    - runScriptConfig:
+        image: busybox
+        shellScript: date -R
+      # 步骤条件
+      when:
+        branch: [ master, dev ]
+        event: push
+  - name: Publish my image
+    steps:
+    - publishImageConfig:
+        dockerfilePath: ./Dockerfile
+        buildContext: .
+        tag: rancher/rancher:v2.0.0
+        # 可选择推送到远端镜像仓库
+        pushRemote: true
+        registry: reg.example.com
+  - name: Deploy some workloads
+    steps:
+    - applyYamlConfig:
+        path: ./deployment.yaml
+# 流水线的分支条件
+branch:
+  include: [ master, feature/*]
+  exclude: [ dev ]
+# 以分钟为单位的超时
+timeout: 30
+notification:
+  recipients:
+  - # Recipient
+    recipient: "#mychannel"
+    # Notifier 的 ID
+    notifier: "c-wdcsr:n-c9pg7"
+  - recipient: "test@example.com"
+    notifier: "c-wdcsr:n-lkrhd"
+  # 选择发送通知的条件
+  condition: ["Failed", "Success", "Changed"]
+  # 覆盖默认消息（可选）
+  message: "my-message"
+`)));
 }
 MDXContent.isMDXComponent = true;
 

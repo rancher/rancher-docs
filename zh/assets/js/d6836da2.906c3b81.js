@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[97627],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[48445],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 97555:
+/***/ 63637:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,35 +308,35 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'RKE1 示例 YAML'
+    title: 'SELinux RPM'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "reference-guides/rke1-template-example-yaml",
-    "id": "version-2.6/reference-guides/rke1-template-example-yaml",
-    "title": "RKE1 示例 YAML",
-    "description": "以下是一个供参考的 RKE 模板配置文件示例。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/reference-guides/rke1-template-example-yaml.md",
-    "sourceDirName": "reference-guides",
-    "slug": "/reference-guides/rke1-template-example-yaml",
-    "permalink": "/zh/v2.6/reference-guides/rke1-template-example-yaml",
+    "unversionedId": "reference-guides/rancher-security/selinux-rpm/selinux-rpm",
+    "id": "version-2.6/reference-guides/rancher-security/selinux-rpm/selinux-rpm",
+    "title": "SELinux RPM",
+    "description": "安全增强型 Linux (SELinux) 是对 Linux 的安全增强。",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/reference-guides/rancher-security/selinux-rpm/selinux-rpm.md",
+    "sourceDirName": "reference-guides/rancher-security/selinux-rpm",
+    "slug": "/reference-guides/rancher-security/selinux-rpm/",
+    "permalink": "/zh/v2.6/reference-guides/rancher-security/selinux-rpm/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/rke1-template-example-yaml.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/rancher-security/selinux-rpm/selinux-rpm.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1668452187,
-    "formattedLastUpdatedAt": "2022年11月14日",
+    "lastUpdatedAt": 1714979167,
+    "formattedLastUpdatedAt": "2024年5月6日",
     "frontMatter": {
-        "title": "RKE1 示例 YAML"
+        "title": "SELinux RPM"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "系统工具",
-        "permalink": "/zh/v2.6/reference-guides/system-tools"
+        "title": "RKE2 CIS 1.6 Benchmark - 自我评估指南 - Rancher 2.6",
+        "permalink": "/zh/v2.6/reference-guides/rancher-security/rancher-v2.6-hardening-guides/rke2-self-assessment-guide-with-cis-v1.6-benchmark"
     },
     "next": {
-        "title": "Pipelines",
-        "permalink": "/zh/v2.6/reference-guides/pipelines/"
+        "title": "关于 rancher-selinux",
+        "permalink": "/zh/v2.6/reference-guides/rancher-security/selinux-rpm/about-rancher-selinux"
     }
 };
 const assets = {};
@@ -352,113 +352,29 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `以下是一个供参考的 RKE 模板配置文件示例。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `RKE 模板中的 YAML 使用与创建 RKE 集群时相同的自定义项。但是，由于 YAML 位于 Rancher 配置的 RKE 集群的上下文中，因此 RKE 文档中的自定义项需要嵌套在 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/zh/reference-guides/rancher-security/selinux-rpm"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://en.wikipedia.org/wiki/Security-Enhanced_Linux"
+    }, `安全增强型 Linux (SELinux)`), ` 是对 Linux 的安全增强。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `它由 Red Hat 开发，是 Linux 上 MAC（mandatory access controls，强制访问控制）的实现。系统管理员可以使用 MAC 设置应用程序和用户是如何访问不同资源的，例如文件、设备、网络和进程间的通信。SELinux 还通过默认限制操作系统来增强安全性。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `被政府机构使用之后，SELinux 已成为行业标准，并在 CentOS 7 和 8 上默认启用。要检查 SELinux 是否在你的系统上启用和执行，请使用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `rancher_kubernetes_engine`), ` 指令下。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-yaml"
-    }, `#
-# Cluster Config
-#
-docker_root_dir: /var/lib/docker
-
-enable_cluster_alerting: false
-# This setting is not enforced. Clusters
-# created with this sample template
-# would have alerting turned off by default,
-# but end users could still turn alerting
-# on or off.
-
-enable_cluster_monitoring: true
-# This setting is not enforced. Clusters
-# created with this sample template
-# would have monitoring turned on
-# by default, but end users could still
-# turn monitoring on or off.
-
-enable_network_policy: false
-local_cluster_auth_endpoint:
-  enabled: true
-#
-# Rancher Config
-#
-rancher_kubernetes_engine_config: # Your RKE template config goes here.
-  addon_job_timeout: 30
-  authentication:
-    strategy: x509
-  ignore_docker_version: true
-#
-# # 目前仅支持 Nginx ingress provider
-# # 要禁用 Ingress controller，设置 \`provider: none\`
-# # 要在指定节点上禁用 Ingress，使用 node_selector，例如：
-#    provider: nginx
-#    node_selector:
-#      app: ingress
-#
-  ingress:
-    provider: nginx
-  kubernetes_version: v1.15.3-rancher3-1
-  monitoring:
-    provider: metrics-server
-#
-#   If you are using calico on AWS
-#
-#    network:
-#      plugin: calico
-#      calico_network_provider:
-#        cloud_provider: aws
-#
-# # To specify flannel interface
-#
-#    network:
-#      plugin: flannel
-#      flannel_network_provider:
-#      iface: eth1
-#
-# # To specify flannel interface for canal plugin
-#
-#    network:
-#      plugin: canal
-#      canal_network_provider:
-#        iface: eth1
-#
-  network:
-    options:
-      flannel_backend_type: vxlan
-    plugin: canal
-#
-#    services:
-#      kube-api:
-#        service_cluster_ip_range: 10.43.0.0/16
-#      kube-controller:
-#        cluster_cidr: 10.42.0.0/16
-#        service_cluster_ip_range: 10.43.0.0/16
-#      kubelet:
-#        cluster_domain: cluster.local
-#        cluster_dns_server: 10.43.0.10
-#
-  services:
-    etcd:
-      backup_config:
-        enabled: true
-        interval_hours: 12
-        retention: 6
-        safe_timestamp: false
-      creation: 12h
-      extra_args:
-        election-timeout: 5000
-        heartbeat-interval: 500
-      gid: 0
-      retention: 72h
-      snapshot: false
-      uid: 0
-    kube_api:
-      always_pull_images: false
-      pod_security_policy: false
-      service_node_port_range: 30000-32767
-  ssh_agent_auth: false
-windows_prefered_cluster: false
-`)));
+    }, `getenforce`), `：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+        parentName: "pre"
+    }, `# getenforce
+Enforcing
+`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `我们提供了 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/zh/v2.6/reference-guides/rancher-security/selinux-rpm/about-rancher-selinux"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "a"
+    }, `rancher-selinux`)), ` 和 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/zh/v2.6/reference-guides/rancher-security/selinux-rpm/about-rke2-selinux"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "a"
+    }, `rke2-selinux`)), ` 两个 RPM（Red Hat 软件包），让 Rancher 产品能够在 SELinux 主机上正常运行。`));
 }
 MDXContent.isMDXComponent = true;
 

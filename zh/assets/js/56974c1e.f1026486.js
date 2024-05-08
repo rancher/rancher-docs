@@ -331,7 +331,7 @@ const metadata = {
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Self-Assessment and Hardening Guides for Rancher v2.6",
+        "title": "Rancher v2.6 的自我评估和强化指南",
         "permalink": "/zh/v2.6/reference-guides/rancher-security/rancher-v2.6-hardening-guides/"
     },
     "next": {

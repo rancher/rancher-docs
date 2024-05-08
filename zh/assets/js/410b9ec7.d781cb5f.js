@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[90166],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[99877],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 70889:
+/***/ 93022:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,55 +308,39 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'kubectl 实用程序'
+    title: 'Best Practice Guides'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "reference-guides/cli-with-rancher/kubectl-utility",
-    "id": "version-2.6/reference-guides/cli-with-rancher/kubectl-utility",
-    "title": "kubectl 实用程序",
-    "description": "kubectl",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/reference-guides/cli-with-rancher/kubectl-utility.md",
-    "sourceDirName": "reference-guides/cli-with-rancher",
-    "slug": "/reference-guides/cli-with-rancher/kubectl-utility",
-    "permalink": "/zh/v2.6/reference-guides/cli-with-rancher/kubectl-utility",
+    "unversionedId": "reference-guides/best-practices/best-practices",
+    "id": "version-2.6/reference-guides/best-practices/best-practices",
+    "title": "Best Practice Guides",
+    "description": "The purpose of this section is to consolidate best practices for Rancher implementations. This also includes recommendations for related technologies, such as Kubernetes, Docker, containers, and more. The objective is to improve the outcome of a Rancher implementation using the operational experience of Rancher and its customers.",
+    "source": "@site/versioned_docs/version-2.6/reference-guides/best-practices/best-practices.md",
+    "sourceDirName": "reference-guides/best-practices",
+    "slug": "/reference-guides/best-practices/",
+    "permalink": "/zh/v2.6/reference-guides/best-practices/",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/cli-with-rancher/kubectl-utility.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/best-practices/best-practices.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1669187684,
-    "formattedLastUpdatedAt": "2022年11月23日",
+    "lastUpdatedAt": 1712697029,
+    "formattedLastUpdatedAt": "2024年4月9日",
     "frontMatter": {
-        "title": "kubectl 实用程序"
+        "title": "Best Practice Guides"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Rancher CLI",
-        "permalink": "/zh/v2.6/reference-guides/cli-with-rancher/rancher-cli"
+        "title": "7 层 NGINX 负载均衡器上的 TLS 终止（Docker 安装）",
+        "permalink": "/zh/v2.6/how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer"
     },
     "next": {
-        "title": "API",
-        "permalink": "/zh/v2.6/reference-guides/about-the-api/"
+        "title": "Best Practices for the Rancher Server",
+        "permalink": "/zh/v2.6/reference-guides/best-practices/rancher-server/"
     }
 };
 const assets = {};
-const toc = [
-    {
-        value: 'kubectl',
-        id: 'kubectl',
-        level: 2
-    },
-    {
-        value: 'kubectl 实用程序',
-        id: 'kubectl-实用程序',
-        level: 3
-    },
-    {
-        value: '使用 kubectl 和 kubeconfig 令牌进行 TTL 认证',
-        id: '使用-kubectl-和-kubeconfig-令牌进行-ttl-认证',
-        level: 3
-    }
-];
+const toc = [];
 const layoutProps = {
     toc
 };
@@ -368,61 +352,35 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "kubectl"
-    }, `kubectl`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `kubectl 用于与 Rancher 进行交互。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "kubectl-实用程序"
-    }, `kubectl 实用程序`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `安装 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kubectl`), `。详情请参见`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://kubernetes.io/docs/tasks/tools/install-kubectl/"
-    }, `安装 kubectl`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `要配置 kubectl，通过 Rancher Web UI 访问你的集群，单击 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `Kubeconfig`), `，然后复制内容并将其粘贴到你的 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `~/.kube/config`), ` 文件中。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `检查是否可以成功运行 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kubectl cluster-info`), ` 或 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kubectl get pods`), ` 命令。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "使用-kubectl-和-kubeconfig-令牌进行-ttl-认证"
-    }, `使用 kubectl 和 kubeconfig 令牌进行 TTL 认证`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
-        parentName: "p"
-    }, `要求`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果管理员`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/zh/v2.6/reference-guides/about-the-api/api-tokens#%E5%9C%A8%E7%94%9F%E6%88%90%E7%9A%84-kubeconfig-%E4%B8%AD%E7%A6%81%E7%94%A8%E4%BB%A4%E7%89%8C"
-    }, `关闭了 kubeconfig 令牌生成`), `，当你运行 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kubectl`), ` 时，kubeconfig 文件需要 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/zh/v2.6/reference-guides/cli-with-rancher/rancher-cli"
-    }, `Rancher CLI`), ` 存在于你的 PATH 中。否则，你会看到这样的错误信息：
-`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `Unable to connect to the server: getting credentials: exec: exec: "rancher": executable file not found in $PATH`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `该功能可以让 kubectl 与 Rancher Server 进行身份验证，并在需要时获得新的 kubeconfig token。目前支持以下验证提供程序：`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `本地`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Active Directory (仅限 LDAP)`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `FreeIPA`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `OpenLDAP`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `SAML 身份提供商：Ping，Okta，ADFS，Keycloak 和 Shibboleth`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果你是第一次运行 kubectl（例如，`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kubectl get pods`), `），它会要求你选择一个验证提供程序并使用 Rancher Server 登录。kubeconfig token 会被缓存到 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `./.cache/token`), ` 下你运行 kubectl 的路径中。该 Token 在`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/zh/v2.6/reference-guides/about-the-api/api-tokens#%E5%9C%A8%E7%94%9F%E6%88%90%E7%9A%84-kubeconfig-%E4%B8%AD%E7%A6%81%E7%94%A8%E4%BB%A4%E7%89%8C"
-    }, `过期`), `或`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/zh/v2.6/reference-guides/about-the-api/api-tokens#%E5%88%A0%E9%99%A4%E4%BB%A4%E7%89%8C"
-    }, `从 Rancher Server 删除`), `之前都是有效的。过期后，下一个 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `kubectl get pods`), ` 命令会要求你再次使用 Rancher Server 登录。`));
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/reference-guides/best-practices"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The purpose of this section is to consolidate best practices for Rancher implementations. This also includes recommendations for related technologies, such as Kubernetes, Docker, containers, and more. The objective is to improve the outcome of a Rancher implementation using the operational experience of Rancher and its customers.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you have any questions about how these might apply to your use case, please contact your Customer Success Manager or Support.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Use the navigation bar on the left to find the current best practices for managing and deploying the Rancher Server.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more guidance on best practices, you can consult these resources:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "../rancher-security/rancher-security.md"
+    }, `Security`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://www.suse.com/c/rancherblog/"
+    }, `Rancher Blog`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://forums.rancher.com/"
+    }, `Rancher Forum`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://slack.rancher.io/"
+    }, `Rancher Users Slack`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "li",
+        "href": "https://www.youtube.com/channel/UCh5Xtp82q8wjijP8npkVTBA/featured"
+    }, `Rancher Labs YouTube Channel - Online Meetups, Demos, Training, and Webinars`))));
 }
 MDXContent.isMDXComponent = true;
 
