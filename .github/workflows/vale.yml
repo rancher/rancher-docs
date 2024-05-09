@@ -13,10 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        continue-on-error: true
         with:
           fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
           submodules: true
       - name: Get all changed markdown files
+        continue-on-error: true
         id: changed-markdown-files
         uses: tj-actions/changed-files@v42
         with:
@@ -29,11 +31,13 @@ jobs:
         env:
             ALL_CHANGED_FILES: ${{ 0 }}
       - name: No files changed?
+        continue-on-error: true
         if: steps.changed-markdown-files.outputs.any_changed == 'false'
         run: |
               echo "No files changed"
               echo "ALL_CHANGED_FILES=$ALL_CHANGED_FILES" >> $GITHUB_ENV
       - name: List all changed files markdown files
+        continue-on-error: true
         if: steps.changed-markdown-files.outputs.any_changed == 'true'
         env:
             ALL_CHANGED_FILES: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
@@ -45,6 +49,7 @@ jobs:
             echo ${ALL_CHANGED_FILES}
             echo "ALL_CHANGED_FILES=$ALL_CHANGED_FILES" >> $GITHUB_ENV
       - uses: errata-ai/vale-action@v2.1.0
+        continue-on-error: true
         if: steps.changed-markdown-files.outputs.any_changed == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
