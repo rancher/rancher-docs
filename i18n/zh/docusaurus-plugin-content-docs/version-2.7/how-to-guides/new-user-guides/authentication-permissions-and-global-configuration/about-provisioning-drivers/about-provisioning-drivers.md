@@ -48,4 +48,4 @@ Rancher 支持几家主要的云提供商，但默认情况下，这些主机驱
 
 还有其他几个默认禁用的主机驱动，但打包在 Rancher 中：
 
-* [Harvester](../../../../integrations-in-rancher/harvester/overview.md#harvester-主机驱动) - 在 Rancher 2.6.1 中可用
+* [Harvester](../../../../integrations-in-rancher/harvester.md#harvester-主机驱动) - 在 Rancher 2.6.1 中可用

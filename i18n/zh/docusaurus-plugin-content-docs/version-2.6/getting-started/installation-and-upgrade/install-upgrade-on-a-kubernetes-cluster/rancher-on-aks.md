@@ -6,7 +6,7 @@ title: 在 Azure Kubernetes Service 上安装 Rancher
 
 本指南使用命令行工具来配置一个带有 Ingress 的 AKS 集群。如果你更喜欢使用 Azure 门户来配置集群，请参见[官方文档](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal)。
 
-如果你已有一个 AKS Kubernetes 集群，请直接跳到[安装 Ingress](#5-安装-ingress) 的步骤，然后按照[此页](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#安装-rancher-helm-chart)的说明安装 Rancher Helm Chart。
+如果你已有一个 AKS Kubernetes 集群，请直接跳到[安装 Ingress](#5-安装-ingress) 的步骤，然后按照[此页](install-upgrade-on-a-kubernetes-cluster.md#安装-rancher-helm-chart)的说明安装 Rancher Helm Chart。
 
 ## 先决条件
 
@@ -19,7 +19,7 @@ title: 在 Azure Kubernetes Service 上安装 Rancher
 - [Microsoft Azure 账号](https://azure.microsoft.com/en-us/free/)：用于创建部署 Rancher 和 Kubernetes 的资源。
 - [Microsoft Azure 订阅](https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/create-subscription#create-a-subscription-in-the-azure-portal)：如果你没有的话，请访问此链接查看如何创建 Microsoft Azure 订阅。
 - [Micsoroft Azure 租户](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-create-new-tenant)：访问此链接并参考教程以创建 Microsoft Azure 租户。
-- 你的订阅有足够的配额，至少有 2 个 vCPU。有关 Rancher Server 资源要求的详情，请参见[此节](../../../pages-for-subheaders/installation-requirements.md#rke-和托管-kubernetes)。
+- 你的订阅有足够的配额，至少有 2 个 vCPU。有关 Rancher Server 资源要求的详情，请参见[此节](../installation-requirements/installation-requirements.md)。
 - 在 Azure 中用 Helm 安装 Rancher 时，请使用 L7 负载均衡器来避免网络问题。详情请参见 [Azure 负载均衡器限制](https://docs.microsoft.com/en-us/azure/load-balancer/components#limitations)。
 
 ## 1. 准备你的工作站
@@ -133,7 +133,7 @@ ingress-nginx-controller   LoadBalancer   10.0.116.18    40.31.180.83   80:31229
 
 ## 8. 安装 Rancher Helm Chart
 
-按照[本页](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#安装-rancher-helm-chart)的说明安装 Rancher Helm Chart。任何 Kubernetes 发行版上安装的 Rancher 的 Helm 说明都是一样的。
+按照[本页](install-upgrade-on-a-kubernetes-cluster.md#安装-rancher-helm-chart)的说明安装 Rancher Helm Chart。任何 Kubernetes 发行版上安装的 Rancher 的 Helm 说明都是一样的。
 
 安装 Rancher 时，使用上一步获取的 DNS 名称作为 Rancher Server 的 URL。它可以作为 Helm 选项传递进来。例如，如果 DNS 名称是 `rancher.my.org`，你需要使用 `--set hostname=rancher.my.org` 选项来运行 Helm 安装命令。
 
@@ -145,4 +145,4 @@ ingress-nginx-controller   LoadBalancer   10.0.116.18    40.31.180.83   80:31229
 --set ingress.ingressClassName=nginx
 ```
 
-请参阅[Helm 安装命令](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#5-根据你选择的证书选项通过-helm-安装-rancher)了解你的证书选项。
+请参阅[Helm 安装命令](install-upgrade-on-a-kubernetes-cluster.md#5-根据你选择的证书选项通过-helm-安装-rancher)了解你的证书选项。

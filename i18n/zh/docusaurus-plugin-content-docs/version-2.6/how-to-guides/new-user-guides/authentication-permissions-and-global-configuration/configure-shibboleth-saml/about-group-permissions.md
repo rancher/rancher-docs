@@ -2,14 +2,18 @@
 title: Shibboleth 和 OpenLDAP 的组权限
 ---
 
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-shibboleth-saml/about-group-permissions"/>
+</head>
+
 由于 Shibboleth 是 SAML 提供者，因此它不支持搜索用户组的功能。虽然 Shibboleth 集成可以验证用户凭证，但是如果没有其他配置，Shibboleth 不能在 Rancher 中给用户组分配权限。
 
-你可以通过配置 OpenLDAP 标识提供者来解决这个问题。如果让 Shibboleth 使用 OpenLDAP 后端，你将能够在 Rancher 中搜索组，并从 Rancher UI 将集群、项目或命名空间等资源分配给用户组。
+你可以通过配置 OpenLDAP 来解决这个问题。如果让 Shibboleth 使用 OpenLDAP 后端，你将能够在 Rancher 中搜索组，并从 Rancher UI 将集群、项目或命名空间等资源分配给用户组。
 
 ### 名词解释
 
 - **Shibboleth**：用于计算机网络和互联网的单点登录系统。它允许用户仅使用一种身份登录到各种系统。它验证用户凭证，但不单独处理组成员身份。
-- **SAML**：安全声明标记语言（Security Assertion Markup Language），用于在身份提供程序和服务提供商之间交换身份验证和授权数据的开放标准。
+- **SAML**：安全声明标记语言（Security Assertion Markup Language），用于在身份提供程序和服务提供商之间交换认证和授权数据的开放标准。
 - **OpenLDAP**：轻型目录访问协议（LDAP）的免费开源实现。它用于管理组织的计算机和用户。OpenLDAP 对 Rancher 用户很有用，因为它支持组。只要组已存在于身份提供程序中，你就可以在 Rancher 中为组分配权限，从而让组访问资源（例如集群，项目或命名空间）。
 - **IdP 或 IDP**：身份提供程序。OpenLDAP 是身份提供程序的一个例子。
 

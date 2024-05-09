@@ -100,7 +100,7 @@ For [nodes hosted by an infrastructure provider](../launch-kubernetes-with-ranch
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to SSH into a node and click the name of the cluster.
-1. On the **Machine Pools** tab, find the node that you want to remote into and click  **⋮ > Download SSH Key**. A ZIP file containing files used for SSH will be downloaded.
+1. On the **Machine Pools** tab, find the node that you want to remote into and click  **⋮ > Download SSH Key**. A ZIP file containing files used for SSH is then downloaded.
 1. Extract the ZIP file to any location.
 1. Open Terminal. Change your location to the extracted ZIP file.
 1. Enter the following command:
@@ -111,13 +111,13 @@ For [nodes hosted by an infrastructure provider](../launch-kubernetes-with-ranch
 
 ## Cordoning a Node
 
-_Cordoning_ a node marks it as unschedulable. This feature is useful for performing short tasks on the node during small maintenance windows, like reboots, upgrades, or decommissions.  When you're done, power back on and make the node schedulable again by uncordoning it.
+_Cordoning_ a node marks it as unschedulable. This feature is useful for performing short tasks on the node during small maintenance windows, like reboots, upgrades or decommissions. When you're done, power back on and make the node schedulable again by uncordoning it.
 
 ## Draining a Node
 
 _Draining_ is the process of first cordoning the node, and then evicting all its pods. This feature is useful for performing node maintenance (like kernel upgrades or hardware maintenance). It prevents new pods from deploying to the node while redistributing existing pods so that users don't experience service interruption.
 
-- For pods with a replica set, the pod is replaced by a new pod that will be scheduled to a new node. Additionally, if the pod is part of a service, then clients will automatically be redirected to the new pod.
+- For pods with a replica set, the pod is replaced by a new pod that is scheduled to a new node. Additionally, if the pod is part of a service, then clients are automatically redirected to the new pod.
 
 - For pods with no replica set, you need to bring up a new copy of the pod, and assuming it is not part of a service, redirect clients to it.
 
@@ -127,20 +127,21 @@ However, you can override the conditions draining when you initiate the drain. Y
 
 ### Aggressive and Safe Draining Options
 
-When you configure the upgrade strategy for the cluster, you will be able to enable node draining. If node draining is enabled, you will be able to configure how pods are deleted and rescheduled.
+When you configure the upgrade strategy for the cluster, you are able to enable node draining. If node draining is enabled, you are able to configure how pods are deleted and rescheduled.
 
 - **Aggressive Mode**
 
     In this mode, pods won't get rescheduled to a new node, even if they do not have a controller. Kubernetes expects you to have your own logic that handles the deletion of these pods.
 
-    Kubernetes also expects the implementation to decide what to do with pods using emptyDir. If a pod uses emptyDir to store local data, you might not be able to safely delete it, since the data in the emptyDir will be deleted once the pod is removed from the node. Choosing aggressive mode will delete these pods.
+    Kubernetes also expects the implementation to decide what to do with pods using emptyDir. If a pod uses emptyDir to store local data, you might not be able to safely delete it, since the data in the emptyDir is deleted once the pod is removed from the node. Choosing aggressive mode deletes these pods.
 
 - **Safe Mode**
 
-    If a node has standalone pods or ephemeral data it will be cordoned but not drained.
+    If a node has stand-alone pods or ephemeral data it is cordoned but not drained.
+
 ### Grace Period
 
-The timeout given to each pod for cleaning things up, so they will have chance to exit gracefully. For example, when pods might need to finish any outstanding requests, roll back transactions or save state to some external storage. If negative, the default value specified in the pod will be used.
+The timeout given to each pod for cleaning things up so they have the chance to exit gracefully. For example, when pods might need to finish any outstanding requests, roll back transactions or save state to an external storage. If negative, the default value specified in the pod is used.
 
 ### Timeout
 
@@ -156,17 +157,17 @@ The [timeout setting](https://github.com/kubernetes/kubernetes/pull/64378) was n
 
 If there's any error related to user input, the node enters a `cordoned` state because the drain failed. You can either correct the input and attempt to drain the node again, or you can abort by uncordoning the node.
 
-If the drain continues without error, the node enters a `draining` state. You'll have the option to stop the drain when the node is in this state, which will stop the drain process and change the node's state to `cordoned`.
+If the drain continues without error, the node enters a `draining` state. You'll have the option to stop the drain when the node is in this state, which stops the drain process and changes the node's state to `cordoned`.
 
-Once drain successfully completes, the node will be in a state of `drained`. You can then power off or delete the node.
+Once drain successfully completes, the node is in a state of `drained`. You can then power off or delete the node.
 
 **Want to know more about cordon and drain?** See the [Kubernetes documentation](https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/).
 
 ## Labeling a Node to be Ignored by Rancher
 
-Some solutions, such as F5's BIG-IP integration, may require creating a node that is never registered to a cluster.
+Certain solutions, such as F5's BIG-IP integration, may require creating a node that is never registered to a cluster.
 
-Since the node will never finish registering, it will always be shown as unhealthy in the Rancher UI.
+Since the node never finishes registering, it is always shown as unhealthy in the Rancher UI.
 
 In that case, you may want to label the node to be ignored by Rancher so that Rancher only shows nodes as unhealthy when they are actually failing.
 
@@ -181,16 +182,16 @@ There is an [open issue](https://github.com/rancher/rancher/issues/24172) in whi
 
 ### Labeling Nodes to be Ignored with kubectl
 
-To add a node that will be ignored by Rancher, use `kubectl` to create a node that has the following label:
+To add a node that is ignored by Rancher, use `kubectl` to create a node that has the following label:
 
 ```
 cattle.rancher.io/node-status: ignore
 ```
 
-**Result:** If you add the node to a cluster, Rancher will not attempt to sync with this node. The node can still be part of the cluster and can be listed with `kubectl`.
+**Result**: If you add the node to a cluster, Rancher skips syncing with this node. The node can still be part of the cluster and can be listed with `kubectl`.
 
-If the label is added before the node is added to the cluster, the node will not be shown in the Rancher UI.
+If the label is added before the node is added to the cluster, the node is not shown in the Rancher UI.
 
-If the label is added after the node is added to a Rancher cluster, the node will not be removed from the UI.
+If the label is added after the node is added to a Rancher cluster, the node is not removed from the UI.
 
-If you delete the node from the Rancher server using the Rancher UI or API, the node will not be removed from the cluster if the `nodeName` is listed in the Rancher settings in the Rancher API under `v3/settings/ignore-node-name`.
+If you delete the node from the Rancher server using the Rancher UI or API, the node is not removed from the cluster if the `nodeName` is listed in the Rancher settings in the Rancher API under `v3/settings/ignore-node-name`.

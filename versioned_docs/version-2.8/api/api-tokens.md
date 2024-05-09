@@ -6,7 +6,7 @@ title: Using API Tokens
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/api/api-tokens"/>
 </head>
 
-Rancher v2.8.0 introduced the [Rancher Kubernetes API](./api-reference.mdx) which can be used to manage Rancher resources through `kubectl`. This page covers information on API tokens used with the [Rancher CLI](../reference-guides/cli-with-rancher), [kubeconfig files](../how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint.md#about-the-kubeconfig-file), Terraform, and the [v3 API browser](./v3-rancher-api-guide.md#enable-view-in-api).
+Rancher v2.8.0 introduced the [Rancher Kubernetes API](./api-reference.mdx) which can be used to manage Rancher resources through `kubectl`. This page covers information on API tokens used with the [Rancher CLI](../reference-guides/cli-with-rancher), [kubeconfig files](../how-to-guides/new-user-guides/manage-clusters/access-clusters/authorized-cluster-endpoint.md#about-the-kubeconfig-file), Terraform and the [v3 API browser](./v3-rancher-api-guide.md#enable-view-in-api).
 
 By default, some cluster-level API tokens are generated with infinite time-to-live (`ttl=0`). In other words, API tokens with `ttl=0` never expire unless you invalidate them. Tokens are not invalidated by changing a password.
 
@@ -49,7 +49,7 @@ Set the `kubeconfig-generate-token` setting to `false`. This setting instructs R
 
 ## Token Hashing
 
-Users can enable token hashing, where tokens undergo a one-way hash using the SHA256 algorithm. This is a non-reversible process: once enabled, this feature cannot be disabled. It is advisable to take backups prior to enabling and/or evaluating in a test environment first.
+Users can enable token hashing, where tokens undergo a one-way hash using the SHA256 algorithm. This is a non-reversible process: once enabled, this feature cannot be disabled. It is advisable to take backups before enabling and/or evaluating in a test environment first.
 
 To enable token hashing, refer to [this section](../how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features.md).
 

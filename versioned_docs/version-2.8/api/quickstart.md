@@ -6,7 +6,7 @@ title: RK-API Quick Start Guide
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/api/quickstart"/>
 </head>
 
-You can access Rancher's resources through the Kubernetes API. This guide will help you get started on using this API as a Rancher user.
+You can access Rancher's resources through the Kubernetes API. This guide helps you get started on using this API as a Rancher user.
 
 1. In the upper left corner, click **☰ > Global Settings**.
 2. Find and copy the address in the `server-url` field.
@@ -129,7 +129,7 @@ To ensure that your tools can recognize Rancher's CA certificates, most setups r
   If your Rancher instance is proxied by another service, you must extract the certificate that the service is using, and add it to the kubeconfig file, as demonstrated in step 5.
   :::
 
-4. The following commands will convert `rancher.crt` to base64 output, trim all new-lines, and update the cluster in the kubeconfig with the certificate, then finishing by removing the `rancher.crt` file:
+4. The following commands convert `rancher.crt` to base64 output, trim all new-lines, and update the cluster in the kubeconfig with the certificate, then finishing by removing the `rancher.crt` file:
 
   ```bash
   export KUBECONFIG=$PATH_TO_RANCHER_KUBECONFIG
