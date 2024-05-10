@@ -129,7 +129,7 @@ To ensure that your tools can recognize Rancher's CA certificates, most setups r
   If your Rancher instance is proxied by another service, you must extract the certificate that the service is using, and add it to the kubeconfig file, as demonstrated in step 5.
   :::
 
-4. The following commands convert `rancher.crt` to base64 output, trim all new-lines, and update the cluster in the kubeconfig with the certificate, then finishing by removing the `rancher.crt` file:
+4. The following commands convert `rancher.crt` to base64 output, trim all new-lines, and update the cluster in the kubeconfig with the certificate, then finish by removing the `rancher.crt` file:
 
   ```bash
   export KUBECONFIG=$PATH_TO_RANCHER_KUBECONFIG

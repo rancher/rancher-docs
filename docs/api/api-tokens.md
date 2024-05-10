@@ -49,7 +49,7 @@ Set the `kubeconfig-generate-token` setting to `false`. This setting instructs R
 
 ## Token Hashing
 
-You can [enable token hashing](../how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features.md), where tokens undergo a one-way hash using the SHA256 algorithm. This is a non-reversible process: once enabled, this feature cannot be disabled. It is advisable to take backups before enabling and/or evaluating in a test environment first.
+You can [enable token hashing](../how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features.md), where tokens undergo a one-way hash using the SHA256 algorithm. This is a non-reversible process: once enabled, this feature cannot be disabled. You should first evaluate this setting in a test environment, and/or take backups before enabling.
 
 This feature affects all tokens which include, but are not limited to, the following:
 
