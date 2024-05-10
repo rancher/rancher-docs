@@ -6,6 +6,8 @@ title: Previous v3 Rancher API Guide
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/api/v3-rancher-api-guide"/>
 </head>
 
+Rancher 2.8.0 introduced the Rancher Kubernetes API (RK-API). The previous v3 Rancher API is still available. This page describes the v3 API. For more information on RK-API, see the [RK-API quickstart](../quickstart.md) and [reference guide](../api-reference.mdx).
+
 ## How to Use the API
 
 The previous v3 API has its own user interface accessible from a [web browser](./v3-rancher-api-guide.md#enable-view-in-api). This is an easy way to see resources, perform actions, and see the equivalent `curl` or HTTP request & response. To access it:
@@ -31,31 +33,30 @@ API requests must include authentication information. Authentication is done wit
 
 By default, certain cluster-level API tokens are generated with infinite time-to-live (`ttl=0`). In other words, API tokens with `ttl=0` never expire unless you invalidate them. For details on how to invalidate them, refer to the [API tokens page](api-tokens.md).
 
-## Making requests
+## Making Requests
 
 The API is generally RESTful but has several features to make the definition of everything discoverable by a client so that generic clients can be written instead of having to write specific code for every type of resource. For detailed info about the generic API spec, [see further documentation](https://github.com/rancher/api-spec/blob/master/specification.md).
 
 - Every type has a Schema which describes:
-  - The URL to get to the collection of this type of resources
+  - The URL to get to the collection of this type of resource.
   - Every field the resource can have, along with their type, basic validation rules, whether they are required or optional, etc.
   - Every action that is possible on this type of resource, with their inputs and outputs (also as schemas).
-  - Every field that filtering is allowed on
+  - Every field that allows filtering.
   - What HTTP verb methods are available for the collection itself, or for individual resources in the collection.
 
+The design allows you to load just the list of schemas and access everything about the API. The UI for the API contains no code specific to Rancher itself. The URL to get Schemas is sent in every HTTP response as a `X-Api-Schemas` header. From there you can follow the `collection` link on each schema to know where to list resources, and follow other `links` inside of the returned resources to get any other information.
 
-- So the theory is that you can load just the list of schemas and know everything about the API. This is in fact how the UI for the API works, it contains no code specific to Rancher itself. The URL to get Schemas is sent in every HTTP response as a `X-Api-Schemas` header. From there you can follow the `collection` link on each schema to know where to list resources, and other `links` inside of the returned resources to get any other information.
+In practice, you may just want to construct URL strings. We highly suggest limiting this to the top-level to list a collection (`/v3/<type>`) or get a specific resource (`/v3/<type>/<id>`). Anything deeper than that is subject to change in future releases.
 
-- In practice, you may just want to construct URL strings. We highly suggest limiting this to the top-level to list a collection (`/v3/<type>`) or get a specific resource (`/v3/<type>/<id>`). Anything deeper than that is subject to change in future releases.
+Resources have relationships between each other called links. Each resource includes a map of `links` with the name of the link and the URL where you can retrieve that information. Again, you should `GET` the resource and then follow the URL in the `links` map, not construct these strings yourself.
 
-- Resources have relationships between each other called links. Each resource includes a map of `links` with the name of the link and the URL to retrieve that information. Again you should `GET` the resource and then follow the URL in the `links` map, not construct these strings yourself.
+Most resources have actions, which do something or change the state of the resource. To use them, send a HTTP `POST` to the URL in the `actions` map of the action you want. Certain actions require input or produce output. See the individual documentation for each type or the schemas for specific information.
 
-- Most resources have actions, which do something or change the state of the resource. To use these, send a HTTP `POST` to the URL in the `actions` map for the action you want. Certain actions require input or produce output, see the individual documentation for each type or the schemas for specific information.
+To edit a resource, send a HTTP `PUT` to the `links.update` link on the resource with the fields that you want to change. If the link is missing then you don't have permission to update the resource. Unknown fields and ones that are not editable are ignored.
 
-- To edit a resource, send a HTTP `PUT` to the `links.update` link on the resource with the fields that you want to change. If the link is missing then you don't have permission to update the resource. Unknown fields and ones that are not editable are ignored.
+To delete a resource, send a HTTP `DELETE` to the `links.remove` link on the resource. If the link is missing then you don't have permission to update the resource.
 
-- To delete a resource, send a HTTP `DELETE` to the `links.remove` link on the resource. If the link is missing then you don't have permission to update the resource.
-
-- To create a new resource, HTTP `POST` to the collection URL in the schema (which is `/v3/<type>`).
+To create a new resource, HTTP `POST` to the collection URL in the schema (which is `/v3/<type>`).
 
 ## Filtering
 
@@ -69,9 +70,9 @@ Most collections can be sorted on the server-side by common fields using HTTP qu
 
 API responses are paginated with a limit of 100 resources per page by default. This can be changed with the `limit` query parameter, up to a maximum of 1000, for example, `/v3/pods?limit=1000`. The `pagination` map in collection responses tells you whether or not you have the full result set and has a link to the next page if you do not.
 
-## Capturing Rancher API Calls
+## Capturing v3 API Calls
 
-You can use browser developer tools to capture how the Rancher API is called. For example, you could follow these steps to use the Chrome developer tools to get the API call for provisioning an RKE cluster:
+You can use browser developer tools to capture how the v3 API is called. For example, you could follow these steps to use the Chrome developer tools to get the API call for provisioning an RKE cluster:
 
 1. In the Rancher UI, go to **Cluster Management** and click **Create.**
 1. Click one of the cluster types. This example uses Digital Ocean.
@@ -85,7 +86,7 @@ You can use browser developer tools to capture how the Rancher API is called. Fo
 
 ### Enable View in API
 
-You can also view captured Rancher API calls for your respective clusters and resources. This feature is not enabled by default. To enable it:
+You can also view captured v3 API calls for your respective clusters and resources. This feature is not enabled by default. To enable it:
 
 1. Click your **User Tile** in the top right corner of the UI and select **Preferences** from the drop-down menu.
 2. Under the **Advanced Features** section, click **Enable "View in API"**
