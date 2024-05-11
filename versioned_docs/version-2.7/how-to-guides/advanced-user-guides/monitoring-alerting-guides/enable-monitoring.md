@@ -77,3 +77,85 @@ key.pfx=`base64-content`
 ```
 
 Then **Cert File Path** would be set to `/etc/alertmanager/secrets/cert.pem`.
+
+## Rancher Performance Dashboard
+
+When monitoring is installed, you are given basic health metrics about the local Rancher server, such as CPU and memory data. To get advanced metrics for your local Rancher server, you must enable the Rancher Performance Dashboard for Grafana.
+
+This dashboard provides access to the following advanced metrics:
+
+- Handler Average Execution Times Over Last 5 Minutes
+- Rancher API Average Request Times Over Last 5 Minutes
+- Subscribe Average Request Times Over Last 5 Minutes
+- Lasso Controller Work Queue Depth
+- Number of Rancher Requests
+- Number of Failed Rancher API Requests
+- K8s Proxy Store Average Request Times Over Last 5 Minutes
+- K8s Proxy Client Average Request Times Over Last 5 Minutes
+- Cached Objects by GroupVersionKind
+- Lasso Handler Executions
+- Handler Executions over last 2 minutes
+- Total Handler Executions with Error
+- Data Transmitted by Remote Dialer Sessions
+- Errors for Remote Dialer Sessions
+- Remote Dialer Connections Removed
+- Remote Dialer Connections Added by Client
+
+:::note
+
+Advanced heap analysis is not present as it is a very context-dependent technique that's meant for debugging and not intended for normal observation.
+
+:::
+
+:::note
+
+Advanced heap analysis is not present as it is a very context-dependent technique that's meant for debugging and not intended for normal observation.
+
+:::
+
+### Enabling the Rancher Performance Dashboard
+
+To enable the Rancher Performance Dashboard:
+
+<Tabs groupid="UIorCLI">
+<TabItem value="Helm">
+
+Use the following options with the Helm CLI:
+
+```bash
+--set extraEnv\[0\].name="CATTLE_PROMETHEUS_METRICS" --set-string extraEnv\[0\].value=true
+```
+
+You can also include the following snippet in your Rancher Helm chart's values.yaml file:
+
+```yaml
+extraEnv:
+  - name: "CATTLE_PROMETHEUS_METRICS"
+    value: "true"
+```
+
+</TabItem>
+<TabItem value="UI">
+
+1. Click **☰ > Cluster Management**.
+1. Go to the row of the `local` cluster and click **Explore**.
+1. Click **Workloads > Deployments**.
+1. Use the dropdown menu at the top to filter for **All Namespaces**.
+1. Under the `cattle-system` namespace, go to the `rancher` row and click **⋮ > Edit Config**
+1. Under **Environment Variables**, click **Add Variable**.
+1. For **Type**, select `Key/Value Pair`.
+1. For **Variable Name**, enter `CATTLE_PROMETHEUS_METRICS`.
+1. For **Value**, enter `true`.
+1. Click **Save** to apply the change.
+
+</TabItem>
+</Tabs>
+
+### Accessing the Rancher Performance Dashboard
+
+1. Click **☰ > Cluster Management**.
+1. Go to the row of the `local` cluster and click **Explore**.
+1. Click **Monitoring**
+1. Select the **Grafana** dashboard.
+1. From the sidebar, click **Search dashboards**.
+1. Enter `Rancher Performance Dashboard` and select it.
