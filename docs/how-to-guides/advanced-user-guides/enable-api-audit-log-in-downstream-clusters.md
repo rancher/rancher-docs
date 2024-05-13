@@ -28,14 +28,14 @@ spec:
   rkeConfig:
     machineGlobalConfig:
       audit-policy-file: |
-        apiVersion: audit.k8s.io/v1 
-        kind: Policy 
-        rules: 
-        - level: RequestResponse
-          resources:
-          - group: ""
-            resources: 
-            - pods
+        apiVersion: audit.k8s.io/v1
+        kind: Policy
+        rules:
+          - level: RequestResponse
+            resources:
+              - group: ""
+                resources:
+                  - pods
 ```
 
 ### Method 2: Use the Directives, `machineSelectorFiles` and `machineGlobalConfig`
