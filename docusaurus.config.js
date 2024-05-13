@@ -1718,10 +1718,6 @@ module.exports = {
             from: '/v2.8/pages-for-subheaders/about-rke1-templates'
           },
           {
-            to: '/v2.8/api/v3-rancher-api-guide',
-            from: '/v2.8/pages-for-subheaders/about-the-api'
-          },
-          {
             to: '/v2.8/how-to-guides/new-user-guides/manage-clusters/access-clusters',
             from: '/v2.8/pages-for-subheaders/access-clusters'
           },
@@ -2060,10 +2056,6 @@ module.exports = {
           {
             to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates',
             from: '/pages-for-subheaders/about-rke1-templates'
-          },
-          {
-            to: '/api/v3-rancher-api-guide',
-            from: '/pages-for-subheaders/about-the-api'
           },
           {
             to: '/how-to-guides/new-user-guides/manage-clusters/access-clusters',
@@ -3456,7 +3448,7 @@ module.exports = {
           // Redirects for restructure from PR #1147 (start)
           {
             to: '/v2.8/api/v3-rancher-api-guide',
-            from: '/v2.8/reference-guides/about-the-api'
+            from: ['/v2.8/reference-guides/about-the-api', '/v2.8/pages-for-subheaders/about-the-api']
           },
           {
             to: '/v2.8/api/api-tokens',
@@ -3464,7 +3456,7 @@ module.exports = {
           },
           {
             to: '/api/v3-rancher-api-guide',
-            from: '/reference-guides/about-the-api'
+            from: ['/reference-guides/about-the-api', '/pages-for-subheaders/about-the-api']
           },
           {
             to: '/api/api-tokens',

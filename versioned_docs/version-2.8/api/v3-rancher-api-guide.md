@@ -6,7 +6,7 @@ title: Previous v3 Rancher API Guide
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/api/v3-rancher-api-guide"/>
 </head>
 
-Rancher 2.8.0 introduced the Rancher Kubernetes API (RK-API). The previous v3 Rancher API is still available. This page describes the v3 API. For more information on RK-API, see the [RK-API quickstart](./quickstart.md) and [reference guide](./api-reference.mdx).
+Rancher v2.8.0 introduced the Rancher Kubernetes API (RK-API). The previous v3 Rancher API is still available. This page describes the v3 API. For more information on RK-API, see the [RK-API quickstart](./quickstart.md) and [reference guide](./api-reference.mdx).
 
 ## How to Use the API
 
