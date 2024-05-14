@@ -22,9 +22,9 @@ If you require such features, combine Layer 7 firewalls with [external authentic
 
 ## Use External Load Balancers to Protect Vulnerable Ports
 
-You should protect the following ports behind an external load balancer that has SSL offload enabled:
+You should protect the following ports behind an [external load balancer](../../how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md#layer-4-load-balancer) that has SSL offload enabled:
 
-**K3s:** Port 6443, used by the Kubernetes API.
-**RKE2:** Port 6443, used by the Kubernetes API, and port 9345, used for node registration. 
+- **K3s:** Port 6443, used by the Kubernetes API.
+- **RKE2:** Port 6443, used by the Kubernetes API, and port 9345, used for node registration. 
 
 These ports have SAN certificates which list nodes' public IP addresses. An attacker could use that information to gain unauthorized access or monitor activity on the cluster. Protecting these ports helps mitigate against nodes' public IP addresses being disclosed to potential attackers.
