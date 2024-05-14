@@ -56,4 +56,6 @@ If you want to use a node driver that Rancher doesn't support out-of-the-box, yo
 
 ### Developing Your Own Node Drivers
 
-Node drivers are implemented with [Docker Machine](https://docs.docker.com/machine/).
+Node drivers are implemented with [Rancher Machine](https://github.com/rancher/machine), a fork of [Docker Machine](https://github.com/docker/machine). Docker Machine is no longer under active development.
+
+Refer to the original [Docker Machine documentation](https://gcbw.github.io/docker.github.io/machine/) for details on how to develop your own node drivers.
