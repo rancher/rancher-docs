@@ -21,7 +21,7 @@ API Keys are composed of four components:
 
 :::note
 
-Users may opt to enable [token hashing](../about-the-api/api-tokens.md).
+Users may opt to enable [token hashing](../../api/api-tokens.md).
 
 :::
 
@@ -35,9 +35,9 @@ Users may opt to enable [token hashing](../about-the-api/api-tokens.md).
 
     The API key won't be valid after expiration. Shorter expiration periods are more secure.
 
-    Expiration period will be bound by `v3/settings/auth-token-max-ttl-minutes`. If it exceeds the max-ttl, API key will be created with max-ttl as the expiration period.
+    Expiration period is bound by `v3/settings/auth-token-max-ttl-minutes`. If it exceeds the max-ttl, API key is created with max-ttl as the expiration period.
 
-    A scope will limit the API key so that it will only work against the Kubernetes API of the specified cluster. If the cluster is configured with an Authorized Cluster Endpoint, you will be able to use a scoped token directly against the cluster's API without proxying through the Rancher server. See [Authorized Cluster Endpoints](../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint) for more information.
+    A scope limits the API key so that it only works against the Kubernetes API of the specified cluster. If the cluster is configured with an Authorized Cluster Endpoint, you are able to use a scoped token directly against the cluster's API without proxying through the Rancher server. See [Authorized Cluster Endpoints](../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint) for more information.
 
 4. Click **Create**.
 
@@ -49,7 +49,7 @@ Users may opt to enable [token hashing](../about-the-api/api-tokens.md).
 
 ## What's Next?
 
-- Enter your API key information into the application that will send requests to the Rancher API.
+- Enter your API key information into the application that sends requests to the Rancher API.
 - Learn more about the Rancher endpoints and parameters by selecting **View in API** for an object in the Rancher UI.
 - API keys are used for API calls and [Rancher CLI](../cli-with-rancher/cli-with-rancher.md).
 
