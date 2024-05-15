@@ -49,7 +49,6 @@ This is typical in Rancher, as many operations create new `RoleBinding` objects 
 
 You can reduce the number of `RoleBindings` in the upstream cluster in the following ways:
 * Limit the use of the [Restricted Admin](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#restricted-admin) role. Apply other roles wherever possible.
-* If you use [external authentication](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/authentication-config.md), use groups to assign roles.
 * Only add users to clusters and projects when necessary.
 * Remove clusters and projects when they are no longer needed.
 * Only use custom roles if necessary.
@@ -58,6 +57,12 @@ You can reduce the number of `RoleBindings` in the upstream cluster in the follo
 * Consider using less, but more powerful, clusters.
 * Kubernetes permissions are always "additive" (allow-list) rather than "subtractive" (deny-list). Try to minimize configurations that gives access to all but one aspect of a cluster, project, or namespace, as that will result in the creation of a high number of `RoleBinding` objects.
 * Experiment to see if creating new projects or clusters manifests in fewer `RoleBindings` for your specific use case.
+
+### Using External Authentication
+
+If you have fifty or more users, you should configure an [external authentication provider](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/authentication-config.md). This is necessary for better performance.
+
+After you configure external authentication, make sure to assign permissions to groups instead of to individual users. This helps reduce the `RoleBinding` object count.
 
 ### RoleBinding Count Estimation
 
