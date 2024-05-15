@@ -118,3 +118,13 @@ The two main bottlenecks to [etcd performance](https://etcd.io/docs/v3.4/op-guid
 It's best to run etcd on exactly three nodes, as adding more nodes will reduce operation speed. This may be counter-intuitive to common scaling approaches, but it's due to etcd's [replication mechanisms](https://etcd.io/docs/v3.5/faq/#what-is-maximum-cluster-size).
 
 Etcd performance will also be negatively affected by network latency between nodes as that will slow down network communication. Etcd nodes should be located together with Rancher nodes.
+
+### Browser Requirements
+
+At high scale, Rancher transfers more data from the upstream cluster to UI components running in the browser, and those components also need to perform more processing.
+
+For best performance, ensure that the host running the hardware meets these requirements:
+ - 2020 i5 10th generation Intel (4 cores) or equivalent
+ - 8 GB RAM
+ - Total network bandwith to the upstream cluster: 72 Mb/s (equivalent to a single 802.11n Wi-Fi 4 link stream, ~8 MB/s http download throughput)
+ - Round-trip time (ping time) from browser to upstream cluster: 150 ms or less
