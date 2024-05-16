@@ -6,7 +6,15 @@ title: Opening Ports with firewalld
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/open-ports-with-firewalld"/>
 </head>
 
-> We recommend disabling firewalld. For Kubernetes 1.19.x and higher, firewalld must be turned off.
+:::danger
+Enabling firewalld can cause serious network communication problems. 
+
+For proper network functioning, firewalld must be disabled on systems runninmg RKE2. [Firewalld conflicts with Canal](https://docs.rke2.io/known_issues?_highlight=firewalld#firewalld-conflicts-with-default-networking), RKE2's default networking stack.
+
+Firewalld must also be disabled on systems running Kubernetes 1.19 and later.
+
+If you enable firewalld on systems running Kubernetes 1.18 or earlier, understand that this may cause network communication problems. CNIs in Kubernetes dynamically update iptables and networking rules independently of any external firewalls, such as firewalld or Ubuntu's UFW. This can cause unexpected behavior when the CNI and the firewall conflict.
+:::
 
 Some distributions of Linux [derived from RHEL,](https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux#Rebuilds) including Oracle Linux, may have default firewall rules that block communication with Helm.
 
