@@ -27,4 +27,4 @@ You should protect the following ports behind an [external load balancer](../../
 - **K3s:** Port 6443, used by the Kubernetes API.
 - **RKE2:** Port 6443, used by the Kubernetes API, and port 9345, used for node registration. 
 
-These ports have SAN certificates which list nodes' public IP addresses. An attacker could use that information to gain unauthorized access or monitor activity on the cluster. Protecting these ports helps mitigate against nodes' public IP addresses being disclosed to potential attackers.
+These ports have TSL SAN certificates which list nodes' public IP addresses. An attacker could use that information to gain unauthorized access or monitor activity on the cluster. Protecting these ports helps mitigate against nodes' public IP addresses being disclosed to potential attackers.
