@@ -167,6 +167,23 @@ spec:
 
 Only Helm 3 compatible charts are supported.
 
+### Refresh Chart Repositories
+
+The **Refresh** button can be used to sync changes from selected Helm chart repositories on the **Repositories** page.
+
+To refresh a chart repository:
+
+1. Click **☰ > Cluster Management**.
+1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
+1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
+1. Use the toggle next to the **State** field to select all repositories, or toggle specified chart repositories to sync changes.
+1. Click **Refresh**.
+1. The **⋮** at the end of each chart repository row also includes a **Refresh** option, which can be clicked to refresh the respective repository.
+
+Non-Airgap Rancher installations upon refresh will reflect any chart repository changes immediately and you will see the **State** field for updated repositories move from `In Progress` to `Active` once the action is completed.
+
+Airgap installations where Rancher is configured to use the packaged copy of Helm system charts ([`useBundledSystemChart=true`](../../../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha.md#helm-chart-options-for-air-gap-installations)) will only refer to the [system-chart](https://github.com/rancher/system-charts) repository that comes bundled and will not be able to be refreshed or synced.
+
 ## Deploy and Upgrade Charts
 
 To install and deploy a chart:
