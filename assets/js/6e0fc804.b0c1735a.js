@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[36596],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[99245],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 76549:
+/***/ 54595:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "faq/deprecated-features",
-    "id": "version-2.8/faq/deprecated-features",
+    "id": "faq/deprecated-features",
     "title": "Deprecated Features in Rancher",
     "description": "What is Rancher's deprecation policy?",
-    "source": "@site/versioned_docs/version-2.8/faq/deprecated-features.md",
+    "source": "@site/docs/faq/deprecated-features.md",
     "sourceDirName": "faq",
     "slug": "/faq/deprecated-features",
-    "permalink": "/v2.8/faq/deprecated-features",
+    "permalink": "/faq/deprecated-features",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/faq/deprecated-features.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/faq/deprecated-features.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1712246648,
-    "formattedLastUpdatedAt": "Apr 4, 2024",
+    "version": "current",
+    "lastUpdatedAt": 1715040253,
+    "formattedLastUpdatedAt": "May 7, 2024",
     "frontMatter": {
         "title": "Deprecated Features in Rancher"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "General FAQ",
-        "permalink": "/v2.8/faq/general-faq"
+        "permalink": "/faq/general-faq"
     },
     "next": {
         "title": "Installing and Configuring kubectl",
-        "permalink": "/v2.8/faq/install-and-configure-kubectl"
+        "permalink": "/faq/install-and-configure-kubectl"
     }
 };
 const assets = {};
@@ -394,6 +394,17 @@ function MDXContent(_param) {
     }, `Release Date`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tbody", {
         parentName: "table"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+        parentName: "tbody"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "td",
+        "href": "https://github.com/rancher/rancher/releases/tag/v2.8.4"
+    }, `2.8.4`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
+        parentName: "tr",
+        "align": null
+    }, `TBD`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
