@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/faq/deprecated-features.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1715040253,
-    "formattedLastUpdatedAt": "May 7, 2024",
+    "lastUpdatedAt": 1715976574,
+    "formattedLastUpdatedAt": "May 17, 2024",
     "frontMatter": {
         "title": "Deprecated Features in Rancher"
     },
@@ -404,7 +404,7 @@ function MDXContent(_param) {
     }, `2.8.4`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
         "align": null
-    }, `TBD`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+    }, `May 16, 2024`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
         parentName: "tbody"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
         parentName: "tr",
