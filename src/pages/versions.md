@@ -39,10 +39,10 @@ Here you can find links to supporting documentation for the current released ver
     <th>Community</th>
   </tr>
   <tr>
-    <td><b>v2.7.12</b></td>
+    <td><b>v2.7.13</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.7">Documentation</a></td>
-    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.7.12">Release Notes</a></td>
-    <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-7-12/">Support Matrix</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.7.13">Release Notes</a></td>
+    <td><center>N/A</center></td>
     <td><center>&#10003;</center></td>
     <td><center>N/A</center></td>
   </tr>
@@ -124,6 +124,14 @@ Here you can find links to supporting documentation for previous versions of Ran
     <th>Support Matrix</th>
     <th>Prime</th>
     <th>Community</th>
+  </tr>
+  <tr>
+    <td><b>v2.7.12</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.7">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.7.12">Release Notes</a></td>
+    <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-7-12/">Support Matrix</a></td>
+    <td><center>&#10003;</center></td>
+    <td><center>N/A</center></td>
   </tr>
   <tr>
     <td><b>v2.7.11</b></td>
