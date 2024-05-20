@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters.md",
     "tags": [],
     "version": "current",
-    "lastUpdatedAt": 1697233618,
-    "formattedLastUpdatedAt": "Oct 13, 2023",
+    "lastUpdatedAt": 1716227001,
+    "formattedLastUpdatedAt": "May 20, 2024",
     "frontMatter": {
         "title": "Enabling the API Audit Log in Downstream Clusters"
     },
@@ -401,14 +401,14 @@ spec:
   rkeConfig:
     machineGlobalConfig:
       audit-policy-file: |
-        apiVersion: audit.k8s.io/v1 
-        kind: Policy 
-        rules: 
-        - level: RequestResponse
-          resources:
-          - group: ""
-            resources: 
-            - pods
+        apiVersion: audit.k8s.io/v1
+        kind: Policy
+        rules:
+          - level: RequestResponse
+            resources:
+              - group: ""
+                resources:
+                  - pods
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "method-2-use-the-directives-machineselectorfiles-and-machineglobalconfig"
     }, `Method 2: Use the Directives, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
