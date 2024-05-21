@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1707236552,
-    "formattedLastUpdatedAt": "Feb 6, 2024",
+    "lastUpdatedAt": 1716303542,
+    "formattedLastUpdatedAt": "May 21, 2024",
     "frontMatter": {
         "title": "Tuning and Best Practices for Rancher at Scale"
     },
@@ -399,6 +399,11 @@ const toc = [
     {
         value: 'Optimizing etcd',
         id: 'optimizing-etcd',
+        level: 3
+    },
+    {
+        value: 'Browser Requirements',
+        id: 'browser-requirements',
         level: 3
     }
 ];
@@ -618,7 +623,17 @@ function MDXContent(_param) {
     }, `Installation Requirements`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `It's best to run etcd on exactly three nodes, as adding more nodes will reduce operation speed. This may be counter-intuitive to common scaling approaches, but it's due to etcd's `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://etcd.io/docs/v3.5/faq/#what-is-maximum-cluster-size"
-    }, `replication mechanisms`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Etcd performance will also be negatively affected by network latency between nodes as that will slow down network communication. Etcd nodes should be located together with Rancher nodes.`));
+    }, `replication mechanisms`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Etcd performance will also be negatively affected by network latency between nodes as that will slow down network communication. Etcd nodes should be located together with Rancher nodes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "browser-requirements"
+    }, `Browser Requirements`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `At high scale, Rancher transfers more data from the upstream cluster to UI components running in the browser, and those components also need to perform more processing.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For best performance, ensure that the host running the hardware meets these requirements:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `2020 i5 10th generation Intel (4 cores) or equivalent`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `8 GB RAM`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Total network bandwith to the upstream cluster: 72 Mb/s (equivalent to a single 802.11n Wi-Fi 4 link stream, ~8 MB/s http download throughput)`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        parentName: "ul"
+    }, `Round-trip time (ping time) from browser to upstream cluster: 150 ms or less`)));
 }
 MDXContent.isMDXComponent = true;
 
