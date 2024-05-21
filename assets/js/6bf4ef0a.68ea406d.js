@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[79618],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[13170],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 72199:
+/***/ 21411:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -312,31 +312,31 @@ const frontMatter = {
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/open-ports-with-firewalld",
-    "id": "version-2.0-2.4/getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/open-ports-with-firewalld",
+    "unversionedId": "how-to-guides/advanced-user-guides/open-ports-with-firewalld",
+    "id": "version-2.6/how-to-guides/advanced-user-guides/open-ports-with-firewalld",
     "title": "Opening Ports with firewalld",
-    "description": "We recommend disabling firewalld. For Kubernetes 1.19.x and higher, firewalld must be turned off.",
-    "source": "@site/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/open-ports-with-firewalld.md",
-    "sourceDirName": "getting-started/installation-and-upgrade/advanced-options/advanced-use-cases",
-    "slug": "/getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/open-ports-with-firewalld",
-    "permalink": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/open-ports-with-firewalld",
+    "description": "Enabling firewalld can cause serious network communication problems.",
+    "source": "@site/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/open-ports-with-firewalld.md",
+    "sourceDirName": "how-to-guides/advanced-user-guides",
+    "slug": "/how-to-guides/advanced-user-guides/open-ports-with-firewalld",
+    "permalink": "/v2.6/how-to-guides/advanced-user-guides/open-ports-with-firewalld",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/open-ports-with-firewalld.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/how-to-guides/advanced-user-guides/open-ports-with-firewalld.md",
     "tags": [],
-    "version": "2.0-2.4",
-    "lastUpdatedAt": 1667008130,
-    "formattedLastUpdatedAt": "2022年10月29日",
+    "version": "2.6",
+    "lastUpdatedAt": 1716306153,
+    "formattedLastUpdatedAt": "May 21, 2024",
     "frontMatter": {
         "title": "Opening Ports with firewalld"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "4. Install Rancher",
-        "permalink": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/air-gap-helm2/install-rancher"
+        "title": "Continuous Delivery",
+        "permalink": "/v2.6/how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery"
     },
     "next": {
         "title": "Tuning etcd for Large Installations",
-        "permalink": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/tune-etcd-for-large-installs"
+        "permalink": "/v2.6/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs"
     }
 };
 const assets = {};
@@ -363,9 +363,23 @@ function MDXContent(_param) {
     return /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _object_spread_props(_object_spread({}, layoutProps, props), {
         components: components,
         mdxType: "MDXLayout"
-    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "blockquote"
-    }, `We recommend disabling firewalld. For Kubernetes 1.19.x and higher, firewalld must be turned off.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Some distributions of Linux `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
+        rel: "canonical",
+        href: "https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/open-ports-with-firewalld"
+    })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "danger"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `Enabling firewalld can cause serious network communication problems. `), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `For proper network function, firewalld must be disabled on systems running RKE2. `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://docs.rke2.io/known_issues#firewalld-conflicts-with-default-networking"
+    }, `Firewalld conflicts with Canal`), `, RKE2's default networking stack.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `Firewalld must also be disabled on systems running Kubernetes 1.19 and later.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `If you enable firewalld on systems running Kubernetes 1.18 or earlier, understand that this may cause networking issues. CNIs in Kubernetes dynamically update iptables and networking rules independently of any external firewalls, such as firewalld. This can cause unexpected behavior when the CNI and the external firewall conflict.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Some distributions of Linux `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux#Rebuilds"
     }, `derived from RHEL,`), ` including Oracle Linux, may have default firewall rules that block communication with Helm.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For example, one Oracle Linux image in AWS has REJECT rules that stop Helm from communicating with Tiller:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
@@ -391,7 +405,7 @@ target     prot opt source               destination
         parentName: "p"
     }, `firewalld`), ` to apply the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.0-v2.4/getting-started/installation-and-upgrade/installation-requirements/port-requirements"
+        "href": "/v2.6/getting-started/installation-and-upgrade/installation-requirements/#port-requirements"
     }, `firewall port rules`), ` for nodes in a high-availability Rancher server cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "prerequisite"
     }, `Prerequisite`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Install v7.x or later ofv`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
