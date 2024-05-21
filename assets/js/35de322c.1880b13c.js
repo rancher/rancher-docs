@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[96034],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[89222],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 85754:
+/***/ 48220:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,39 +308,44 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Tools for Logging, Monitoring, and More'
+    title: 'Project Tools for Logging, Monitoring, and Visibility'
 };
 const contentTitle = undefined;
 const metadata = {
-    "unversionedId": "reference-guides/rancher-cluster-tools",
-    "id": "version-2.0-2.4/reference-guides/rancher-cluster-tools",
-    "title": "Tools for Logging, Monitoring, and More",
+    "unversionedId": "reference-guides/rancher-project-tools",
+    "id": "version-2.7/reference-guides/rancher-project-tools",
+    "title": "Project Tools for Logging, Monitoring, and Visibility",
     "description": "Rancher contains a variety of tools that aren't included in Kubernetes to assist in your DevOps operations. Rancher can integrate with external services to help your clusters run more efficiently.",
-    "source": "@site/versioned_docs/version-2.0-2.4/reference-guides/rancher-cluster-tools.md",
+    "source": "@site/versioned_docs/version-2.7/reference-guides/rancher-project-tools.md",
     "sourceDirName": "reference-guides",
-    "slug": "/reference-guides/rancher-cluster-tools",
-    "permalink": "/v2.0-v2.4/reference-guides/rancher-cluster-tools",
+    "slug": "/reference-guides/rancher-project-tools",
+    "permalink": "/v2.7/reference-guides/rancher-project-tools",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.0-2.4/reference-guides/rancher-cluster-tools.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/rancher-project-tools.md",
     "tags": [],
-    "version": "2.0-2.4",
-    "lastUpdatedAt": 1705104464,
-    "formattedLastUpdatedAt": "Jan 13, 2024",
+    "version": "2.7",
+    "lastUpdatedAt": 1716320499,
+    "formattedLastUpdatedAt": "May 21, 2024",
     "frontMatter": {
-        "title": "Tools for Logging, Monitoring, and More"
+        "title": "Project Tools for Logging, Monitoring, and Visibility"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "API Tokens",
-        "permalink": "/v2.0-v2.4/reference-guides/about-the-api/api-tokens"
+        "title": "Cluster Tools for Logging, Monitoring, and Visibility",
+        "permalink": "/v2.7/reference-guides/rancher-cluster-tools"
     },
     "next": {
-        "title": "Tools for Logging, Monitoring, and More",
-        "permalink": "/v2.0-v2.4/reference-guides/rancher-project-tools/"
+        "title": "System Tools",
+        "permalink": "/v2.7/reference-guides/system-tools"
     }
 };
 const assets = {};
 const toc = [
+    {
+        value: 'Notifiers and Alerts',
+        id: 'notifiers-and-alerts',
+        level: 2
+    },
     {
         value: 'Logging',
         id: 'logging',
@@ -349,31 +354,6 @@ const toc = [
     {
         value: 'Monitoring',
         id: 'monitoring',
-        level: 2
-    },
-    {
-        value: 'Alerts',
-        id: 'alerts',
-        level: 2
-    },
-    {
-        value: 'Notifiers',
-        id: 'notifiers',
-        level: 2
-    },
-    {
-        value: 'Istio',
-        id: 'istio',
-        level: 2
-    },
-    {
-        value: 'OPA Gatekeeper',
-        id: 'opa-gatekeeper',
-        level: 2
-    },
-    {
-        value: 'CIS Scans',
-        id: 'cis-scans',
         level: 2
     }
 ];
@@ -390,8 +370,10 @@ function MDXContent(_param) {
         mdxType: "MDXLayout"
     }), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("head", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("link", {
         rel: "canonical",
-        href: "https://ranchermanager.docs.rancher.com/reference-guides/rancher-cluster-tools"
+        href: "https://ranchermanager.docs.rancher.com/reference-guides/rancher-project-tools"
     })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher contains a variety of tools that aren't included in Kubernetes to assist in your DevOps operations. Rancher can integrate with external services to help your clusters run more efficiently.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "notifiers-and-alerts"
+    }, `Notifiers and Alerts`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Notifiers and alerts are two features that work together to inform you of events in the Rancher system. Before they can be enabled, the monitoring application must be installed.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Notifiers are services that inform you of alert events. You can configure notifiers to send alert notifications to staff best suited to take corrective action. Notifications can be sent with Slack, email, PagerDuty, WeChat, and webhooks.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Alerts are rules that trigger those notifications. Before you can receive alerts, you must configure one or more notifier in Rancher. The scope for alerts can be set at either the cluster or project level.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "logging"
     }, `Logging`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Logging is helpful because it allows you to:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
@@ -403,51 +385,18 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `Stay informed of events like a container crashing, a pod eviction, or a node dying`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `More easily debugg and troubleshoot problems`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher can integrate with Elasticsearch, splunk, kafka, syslog, and fluentd.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Refer to the logging documentation `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `More easily debug and troubleshoot problems`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher can integrate with Elasticsearch, splunk, kafka, syslog, and fluentd.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For details, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.0-v2.4/explanations/integrations-in-rancher/cluster-logging/"
-    }, `here.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "href": "/v2.7/integrations-in-rancher/logging/"
+    }, `logging section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "monitoring"
     }, `Monitoring`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Using Rancher, you can monitor the state and processes of your cluster nodes, Kubernetes components, and software deployments through integration with `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://prometheus.io/"
-    }, `Prometheus`), `, a leading open-source monitoring solution.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For details, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Prometheus`), `, a leading open-source monitoring solution. For details, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.0-v2.4/explanations/integrations-in-rancher/cluster-monitoring/"
-    }, `Monitoring.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "alerts"
-    }, `Alerts`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After monitoring is enabled, you can set up alerts and notifiers that provide the mechanism to receive them.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Alerts are rules that trigger notifications. Before you can receive alerts, you must configure one or more notifier in Rancher. The scope for alerts can be set at either the cluster or project level.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For details, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/v2.0-v2.4/explanations/integrations-in-rancher/cluster-alerts/"
-    }, `Alerts.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "notifiers"
-    }, `Notifiers`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Notifiers are services that inform you of alert events. You can configure notifiers to send alert notifications to staff best suited to take corrective action. Notifications can be sent with Slack, email, PagerDuty, WeChat, and webhooks.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For details, refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/v2.0-v2.4/explanations/integrations-in-rancher/notifiers"
-    }, `Notifiers.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "istio"
-    }, `Istio`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
-        parentName: "p"
-    }, `Available as of v2.3`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://istio.io/"
-    }, `Istio`), ` is an open-source tool that makes it easier for DevOps teams to observe, control, troubleshoot, and secure the traffic within a complex network of microservices.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Refer to the Istio documentation `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/v2.0-v2.4/explanations/integrations-in-rancher/istio/"
-    }, `here.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "opa-gatekeeper"
-    }, `OPA Gatekeeper`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://github.com/open-policy-agent/gatekeeper"
-    }, `OPA Gatekeeper`), ` is an open-source project that provides integration between OPA and Kubernetes to provide policy control via admission controller webhooks. For details on how to enable Gatekeeper in Rancher, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/v2.0-v2.4/explanations/integrations-in-rancher/opa-gatekeeper"
-    }, `OPA Gatekeeper section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "cis-scans"
-    }, `CIS Scans`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher can run a security scan to check whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Refer to the CIS scan documentation `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/v2.0-v2.4/explanations/integrations-in-rancher/cis-scans/"
-    }, `here.`)));
+        "href": "/v2.7/integrations-in-rancher/monitoring-and-alerting/"
+    }, `monitoring section.`)));
 }
 MDXContent.isMDXComponent = true;
 

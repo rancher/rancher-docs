@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[84367],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[21156],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 83006:
+/***/ 9067:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -308,35 +308,35 @@ function _object_without_properties_loose(source, excluded) {
 
 
 const frontMatter = {
-    title: 'Project Tools for Logging, Monitoring, and Visibility'
+    title: 'Tools for Logging, Monitoring, and Visibility'
 };
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/rancher-project-tools",
-    "id": "version-2.8/reference-guides/rancher-project-tools",
-    "title": "Project Tools for Logging, Monitoring, and Visibility",
+    "id": "version-2.5/reference-guides/rancher-project-tools",
+    "title": "Tools for Logging, Monitoring, and Visibility",
     "description": "Rancher contains a variety of tools that aren't included in Kubernetes to assist in your DevOps operations. Rancher can integrate with external services to help your clusters run more efficiently.",
-    "source": "@site/versioned_docs/version-2.8/reference-guides/rancher-project-tools.md",
+    "source": "@site/versioned_docs/version-2.5/reference-guides/rancher-project-tools.md",
     "sourceDirName": "reference-guides",
     "slug": "/reference-guides/rancher-project-tools",
-    "permalink": "/v2.8/reference-guides/rancher-project-tools",
+    "permalink": "/v2.5/reference-guides/rancher-project-tools",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/reference-guides/rancher-project-tools.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.5/reference-guides/rancher-project-tools.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1703291432,
-    "formattedLastUpdatedAt": "Dec 23, 2023",
+    "version": "2.5",
+    "lastUpdatedAt": 1716320499,
+    "formattedLastUpdatedAt": "May 21, 2024",
     "frontMatter": {
-        "title": "Project Tools for Logging, Monitoring, and Visibility"
+        "title": "Tools for Logging, Monitoring, and Visibility"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
-        "title": "Cluster Tools for Logging, Monitoring, and Visibility",
-        "permalink": "/v2.8/reference-guides/rancher-cluster-tools"
+        "title": "Tools for Logging, Monitoring, and Visibility",
+        "permalink": "/v2.5/reference-guides/rancher-cluster-tools"
     },
     "next": {
         "title": "System Tools",
-        "permalink": "/v2.8/reference-guides/system-tools"
+        "permalink": "/v2.5/reference-guides/system-tools"
     }
 };
 const assets = {};
@@ -385,9 +385,9 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `Stay informed of events like a container crashing, a pod eviction, or a node dying`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `More easily debugg and troubleshoot problems`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher can integrate with Elasticsearch, splunk, kafka, syslog, and fluentd.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For details, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `More easily debug and troubleshoot problems`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher can integrate with Elasticsearch, splunk, kafka, syslog, and fluentd.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For details, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/integrations-in-rancher/logging/"
+        "href": "/v2.5/explanations/integrations-in-rancher/logging/"
     }, `logging section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "monitoring"
     }, `Monitoring`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Using Rancher, you can monitor the state and processes of your cluster nodes, Kubernetes components, and software deployments through integration with `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -395,7 +395,7 @@ function MDXContent(_param) {
         "href": "https://prometheus.io/"
     }, `Prometheus`), `, a leading open-source monitoring solution. For details, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/integrations-in-rancher/monitoring-and-alerting/"
+        "href": "/v2.5/explanations/integrations-in-rancher/monitoring-and-alerting/"
     }, `monitoring section.`)));
 }
 MDXContent.isMDXComponent = true;
