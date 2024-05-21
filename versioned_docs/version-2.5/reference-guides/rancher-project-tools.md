@@ -24,7 +24,7 @@ Logging is helpful because it allows you to:
 - Look for trends in your environment
 - Save your logs to a safe location outside of your cluster
 - Stay informed of events like a container crashing, a pod eviction, or a node dying
-- More easily debugg and troubleshoot problems
+- More easily debug and troubleshoot problems
 
 Rancher can integrate with Elasticsearch, splunk, kafka, syslog, and fluentd.
 
