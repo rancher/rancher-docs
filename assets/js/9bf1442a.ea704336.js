@@ -324,8 +324,8 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/faq/general-faq.md",
     "tags": [],
     "version": "2.6",
-    "lastUpdatedAt": 1705016351,
-    "formattedLastUpdatedAt": "Jan 11, 2024",
+    "lastUpdatedAt": 1716309702,
+    "formattedLastUpdatedAt": "May 21, 2024",
     "frontMatter": {
         "title": "General FAQ"
     },
@@ -341,11 +341,6 @@ const metadata = {
 };
 const assets = {};
 const toc = [
-    {
-        value: 'Does Rancher v2.x support Docker Swarm and Mesos as environment types?',
-        id: 'does-rancher-v2x-support-docker-swarm-and-mesos-as-environment-types',
-        level: 2
-    },
     {
         value: 'Is it possible to manage Azure Kubernetes Services with Rancher v2.x?',
         id: 'is-it-possible-to-manage-azure-kubernetes-services-with-rancher-v2x',
@@ -410,8 +405,6 @@ function MDXContent(_param) {
         parentName: "p",
         "href": "/v2.6/faq/technical-items"
     }, `Technical FAQ`), ` for frequently asked technical questions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "does-rancher-v2x-support-docker-swarm-and-mesos-as-environment-types"
-    }, `Does Rancher v2.x support Docker Swarm and Mesos as environment types?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Swarm and Mesos are no longer selectable options when you create a new environment in Rancher v2.x. However, both Swarm and Mesos will continue to be available as Catalog applications you can deploy. It was a tough decision to make but, in the end, it came down to adoption. For example, out of more than 15,000 clusters, only about 200 were running Swarm.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "is-it-possible-to-manage-azure-kubernetes-services-with-rancher-v2x"
     }, `Is it possible to manage Azure Kubernetes Services with Rancher v2.x?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Yes. See our `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",

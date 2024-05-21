@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[49823],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[17771],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 39174:
+/***/ 88754:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,39 +313,34 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "faq/general-faq",
-    "id": "version-2.7/faq/general-faq",
+    "id": "faq/general-faq",
     "title": "General FAQ",
     "description": "This FAQ is a work in progress designed to answer the questions most frequently asked about Rancher v2.x.",
-    "source": "@site/versioned_docs/version-2.7/faq/general-faq.md",
+    "source": "@site/docs/faq/general-faq.md",
     "sourceDirName": "faq",
     "slug": "/faq/general-faq",
-    "permalink": "/v2.7/faq/general-faq",
+    "permalink": "/faq/general-faq",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/faq/general-faq.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/docs/faq/general-faq.md",
     "tags": [],
-    "version": "2.7",
-    "lastUpdatedAt": 1705011762,
-    "formattedLastUpdatedAt": "Jan 11, 2024",
+    "version": "current",
+    "lastUpdatedAt": 1716309702,
+    "formattedLastUpdatedAt": "May 21, 2024",
     "frontMatter": {
         "title": "General FAQ"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Rancher Extensions",
-        "permalink": "/v2.7/integrations-in-rancher/rancher-extensions"
+        "permalink": "/integrations-in-rancher/rancher-extensions"
     },
     "next": {
         "title": "Deprecated Features in Rancher",
-        "permalink": "/v2.7/faq/deprecated-features"
+        "permalink": "/faq/deprecated-features"
     }
 };
 const assets = {};
 const toc = [
-    {
-        value: 'Does Rancher v2.x support Docker Swarm and Mesos as environment types?',
-        id: 'does-rancher-v2x-support-docker-swarm-and-mesos-as-environment-types',
-        level: 2
-    },
     {
         value: 'Is it possible to manage Azure Kubernetes Services with Rancher v2.x?',
         id: 'is-it-possible-to-manage-azure-kubernetes-services-with-rancher-v2x',
@@ -408,27 +403,25 @@ function MDXContent(_param) {
         href: "https://ranchermanager.docs.rancher.com/faq/general-faq"
     })), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This FAQ is a work in progress designed to answer the questions most frequently asked about Rancher v2.x.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `See the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/faq/technical-items"
+        "href": "/faq/technical-items"
     }, `Technical FAQ`), ` for frequently asked technical questions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "does-rancher-v2x-support-docker-swarm-and-mesos-as-environment-types"
-    }, `Does Rancher v2.x support Docker Swarm and Mesos as environment types?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Swarm and Mesos are no longer selectable options when you create a new environment in Rancher v2.x. However, both Swarm and Mesos will continue to be available as Catalog applications you can deploy. It was a tough decision to make but, in the end, it came down to adoption. For example, out of more than 15,000 clusters, only about 200 were running Swarm.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "is-it-possible-to-manage-azure-kubernetes-services-with-rancher-v2x"
     }, `Is it possible to manage Azure Kubernetes Services with Rancher v2.x?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Yes. See our `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/manage-clusters/"
+        "href": "/how-to-guides/new-user-guides/manage-clusters/"
     }, `Cluster Administration`), ` guide for what Rancher features are available on AKS, as well as our `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks"
+        "href": "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks"
     }, `documentation on AKS`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "does-rancher-support-windows"
     }, `Does Rancher support Windows?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Yes. Rancher supports Windows Server 1809 containers. For details on how to set up a cluster with Windows worker nodes, refer to the section on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/"
+        "href": "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/"
     }, `configuring custom clusters for Windows.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "does-rancher-support-istio"
     }, `Does Rancher support Istio?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Yes. Rancher supports `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.7/integrations-in-rancher/istio/"
+        "href": "/integrations-in-rancher/istio/"
     }, `Istio`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "will-rancher-v2x-support-hashicorps-vault-for-storing-secrets"
     }, `Will Rancher v2.x support Hashicorp's Vault for storing secrets?`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Secrets management is on our roadmap but we haven't assigned it to a specific release yet.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
