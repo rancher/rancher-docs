@@ -10,7 +10,7 @@ title: Opening Ports with firewalld
 
 Enabling firewalld can cause serious network communication problems. 
 
-For proper network functioning, firewalld must be disabled on systems runninmg RKE2. [Firewalld conflicts with Canal](https://docs.rke2.io/known_issues?_highlight=firewalld#firewalld-conflicts-with-default-networking), RKE2's default networking stack.
+For proper network functioning, firewalld must be disabled on systems runninmg RKE2. [Firewalld conflicts with Canal](https://docs.rke2.io/known_issues#firewalld-conflicts-with-default-networking), RKE2's default networking stack.
 
 Firewalld must also be disabled on systems running Kubernetes 1.19 and later.
 
