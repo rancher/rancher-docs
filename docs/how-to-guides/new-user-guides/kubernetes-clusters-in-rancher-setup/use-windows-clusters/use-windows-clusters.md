@@ -6,15 +6,13 @@ title: Launching Kubernetes on Windows Clusters
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters"/>
 </head>
 
-When provisioning a [custom cluster](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md) using Rancher, Rancher uses RKE (the Rancher Kubernetes Engine) to install Kubernetes on your existing nodes.
+When provisioning a [custom cluster](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md) using Rancher, Rancher uses RKE2, also known as RKE Government, to install Kubernetes on your existing nodes.
 
 In a Windows cluster provisioned with Rancher, the cluster must contain both Linux and Windows nodes. The Kubernetes controlplane can only run on Linux nodes, and the Windows nodes can only have the worker role. Windows nodes can only be used for deploying workloads.
 
-Some other requirements for Windows clusters include:
+Other requirements for Windows clusters include:
 
-- You can only add Windows nodes to a cluster if Windows support is enabled when the cluster is created. Windows support cannot be enabled for existing clusters.
-- Kubernetes 1.15+ is required.
-- The Flannel network provider must be used.
+- [Support Matrices for RKE2 versions](https://www.suse.com/suse-rke2/support-matrix/all-supported-versions/) with information on Kubernetes component versions.
 - Windows nodes must have 50 GB of disk space.
 
 For the full list of requirements, see [this section.](#requirements-for-windows-clusters)
@@ -42,9 +40,9 @@ Rancher will allow Windows workload pods to deploy on both Windows and Linux wor
 
 ## Requirements for Windows Clusters
 
-The general node requirements for networking, operating systems, and Docker are the same as the node requirements for a [Rancher installation](../../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md).
+The general node requirements for networking and operating systems are the same as the node requirements for a [Rancher installation](../../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md).
 
-### OS and Docker Requirements
+### OS Requirements
 
 Our support for Windows Server and Windows containers match the Microsoft official lifecycle for LTSC (Long-Term Servicing Channel) and SAC (Semi-Annual Channel).
 
