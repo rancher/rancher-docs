@@ -87,19 +87,19 @@ This dashboard provides access to the following advanced metrics:
 - Handler Average Execution Times Over Last 5 Minutes
 - Rancher API Average Request Times Over Last 5 Minutes
 - Subscribe Average Request Times Over Last 5 Minutes
-- Lasso Controller Work Queue Depth
-- Number of Rancher Requests
-- Number of Failed Rancher API Requests
-- K8s Proxy Store Average Request Times Over Last 5 Minutes
-- K8s Proxy Client Average Request Times Over Last 5 Minutes
-- Cached Objects by GroupVersionKind
-- Lasso Handler Executions
-- Handler Executions over last 2 minutes
-- Total Handler Executions with Error
-- Data Transmitted by Remote Dialer Sessions
-- Errors for Remote Dialer Sessions
-- Remote Dialer Connections Removed
-- Remote Dialer Connections Added by Client
+- Lasso Controller Work Queue Depth (Top 20)
+- Number of Rancher Requests (Top 20)
+- Number of Failed Rancher API Requests (Top 20)
+- K8s Proxy Store Average Request Times Over Last 5 Minutes (Top 20)
+- K8s Proxy Client Average Request Times Over Last 5 Minutes (Top 20)
+- Cached Objects by GroupVersionKind (Top 20)
+- Lasso Handler Executions (Top 20)
+- Handler Executions Over Last 2 Minutes (Top 20)
+- Total Handler Executions with Error (Top 20)
+- Data Transmitted by Remote Dialer Sessions (Top 20)
+- Errors for Remote Dialer Sessions (Top 20)
+- Remote Dialer Connections Removed (Top 20)
+- Remote Dialer Connections Added by Client (Top 20)
 
 :::note
 
@@ -158,4 +158,4 @@ extraEnv:
 1. Click **Monitoring**
 1. Select the **Grafana** dashboard.
 1. From the sidebar, click **Search dashboards**.
-1. Enter `Rancher Performance Dashboard` and select it.
+1. Enter `Rancher Performance Debugging` and select it.
