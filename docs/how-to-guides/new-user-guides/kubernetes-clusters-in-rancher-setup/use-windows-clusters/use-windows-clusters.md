@@ -178,17 +178,9 @@ The instructions for creating a Windows cluster on existing nodes are very simil
 1. On the **Clusters** page, click **Create**.
 1. Click **Custom**.
 1. Enter a name for your cluster in the **Cluster Name** field.
-1. In the **Kubernetes Version** dropdown menu, select v1.19 or above.
-1. In the **Network Provider** field, select **Flannel**.
-1. In the **Windows Support** section, click **Enabled**.
-1. Optional: After you enable Windows support, you will be able to choose the Flannel backend. There are two network options: [**Host Gateway (L2bridge)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#host-gw) and [**VXLAN (Overlay)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#vxlan). The default option is **VXLAN (Overlay)** mode.
+1. In the **Kubernetes Version** dropdown menu, select a supported Kubernetes version.
+1. In the **Container Network** field, select **Calico** or **Flannel**.
 1. Click **Next**.
-
-:::note Important:
-
-For <b>Host Gateway (L2bridge)</b> networking, it's best to use the same Layer 2 network for all nodes. Otherwise, you need to configure the route rules for them. For details, refer to the [documentation on configuring cloud-hosted VM routes.](network-requirements-for-host-gateway.md#cloud-hosted-vm-routes-configuration) You will also need to [disable private IP address checks](network-requirements-for-host-gateway.md#disabling-private-ip-address-checks) if you are using Amazon EC2, Google GCE, or Azure VM.
-
-:::
 
 ### 3. Add Nodes to the Cluster
 
