@@ -25,10 +25,8 @@ The RKE2 provisioning feature also includes installing RKE2 on Windows clusters.
 
 - Windows Containers with RKE2 powered by containerd
 - Added provisioning of Windows RKE2 custom clusters directly from the Rancher UI
-- Calico CNI for Windows RKE2 custom clusters
+- Calico or Flannel CNI for Windows RKE2 custom clusters
 - SAC releases of Windows Server (2004 and 20H2) are included in the technical preview
-
-Windows Support for RKE2 Custom Clusters requires choosing Calico as the CNI.
 
 :::note
 
@@ -68,7 +66,7 @@ Rancher will not provision the node if the node does not meet these requirements
 
 Before provisioning a new cluster, be sure that you have already installed Rancher on a device that accepts inbound network traffic. This is required in order for the cluster nodes to communicate with Rancher. If you have not already installed Rancher, please refer to the [installation documentation](../../../../getting-started/installation-and-upgrade/installation-and-upgrade.md) before proceeding with this guide.
 
-Rancher only supports Windows using Flannel as the network provider.
+Rancher supports Windows using Calico or Flannel as the network provider.
 
 There are two network options: [**Host Gateway (L2bridge)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#host-gw) and [**VXLAN (Overlay)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#vxlan). The default option is **VXLAN (Overlay)** mode.
 
@@ -143,7 +141,7 @@ If you are using the GCE (Google Compute Engine) cloud provider, you must do the
 
 This tutorial describes how to create a Rancher-provisioned cluster with the three nodes in the [recommended architecture.](#recommended-architecture)
 
-When you provision a cluster with Rancher on existing nodes, you will add nodes to the cluster by installing the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) on each one. When you create or edit your cluster from the Rancher UI, you will see a **Customize Node Run Command** that you can run on each server to add it to your cluster.
+When you provision a cluster with Rancher on existing nodes, you will add nodes to the cluster by installing the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) on each one. When you create or edit your cluster from the Rancher UI, you will see a **Registration Command** that you can run on each server to add it to your cluster.
 
 To set up a cluster with support for Windows nodes and containers, you will need to complete the tasks below.
 
