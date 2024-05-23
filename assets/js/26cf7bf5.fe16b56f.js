@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[34254],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[79480],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 55784:
+/***/ 17957:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,18 +313,18 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale",
-    "id": "version-2.6/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale",
+    "id": "version-2.7/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale",
     "title": "Tuning and Best Practices for Rancher at Scale",
     "description": "This guide describes the best practices and tuning approaches to scale Rancher setups and the associated challenges with doing so. As systems grow, performance will naturally reduce, but there are steps that can minimize the load put on Rancher and optimize Rancher's ability to manage larger infrastructures.",
-    "source": "@site/versioned_docs/version-2.6/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md",
+    "source": "@site/versioned_docs/version-2.7/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md",
     "sourceDirName": "reference-guides/best-practices/rancher-server",
     "slug": "/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale",
-    "permalink": "/v2.6/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale",
+    "permalink": "/v2.7/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md",
     "tags": [],
-    "version": "2.6",
-    "lastUpdatedAt": 1716474317,
+    "version": "2.7",
+    "lastUpdatedAt": 1716488149,
     "formattedLastUpdatedAt": "May 23, 2024",
     "frontMatter": {
         "title": "Tuning and Best Practices for Rancher at Scale"
@@ -332,11 +332,11 @@ const metadata = {
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "Tips for Running Rancher",
-        "permalink": "/v2.6/reference-guides/best-practices/rancher-server/tips-for-running-rancher"
+        "permalink": "/v2.7/reference-guides/best-practices/rancher-server/tips-for-running-rancher"
     },
     "next": {
         "title": "Best Practices for Rancher Managed Clusters",
-        "permalink": "/v2.6/reference-guides/best-practices/rancher-managed-clusters/"
+        "permalink": "/v2.7/reference-guides/best-practices/rancher-managed-clusters/"
     }
 };
 const assets = {};
@@ -359,6 +359,11 @@ const toc = [
     {
         value: 'Managing Your Object Counts',
         id: 'managing-your-object-counts',
+        level: 3
+    },
+    {
+        value: 'Using External Authentication',
+        id: 'using-external-authentication',
         level: 3
     },
     {
@@ -495,13 +500,8 @@ function MDXContent(_param) {
         parentName: "ul"
     }, `Limit the use of the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.6/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions#restricted-admin"
+        "href": "/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions#restricted-admin"
     }, `Restricted Admin`), ` role. Apply other roles wherever possible.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `If you use `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "/v2.6/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/"
-    }, `external authentication`), `, use groups to assign roles.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Only add users to clusters and projects when necessary.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
@@ -522,6 +522,13 @@ function MDXContent(_param) {
     }, `Experiment to see if creating new projects or clusters manifests in fewer `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
     }, `RoleBindings`), ` for your specific use case.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "using-external-authentication"
+    }, `Using External Authentication`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you have fifty or more users, you should configure an `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/"
+    }, `external authentication provider`), `. This is necessary for better performance.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After you configure external authentication, make sure to assign permissions to groups instead of to individual users. This helps reduce the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `RoleBinding`), ` object count.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "rolebinding-count-estimation"
     }, `RoleBinding Count Estimation`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Predicting how many `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
@@ -577,10 +584,10 @@ function MDXContent(_param) {
         "id": "using-the-authorized-cluster-endpoint-ace"
     }, `Using the Authorized Cluster Endpoint (ACE)`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `An `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-authorized-cluster-endpoint"
+        "href": "/v2.7/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-authorized-cluster-endpoint"
     }, `Authorized Cluster Endpoint`), ` (ACE) provides access to the Kubernetes API of Rancher-provisioned RKE, RKE2, and K3s clusters. When enabled, the ACE adds a context to kubeconfig files generated for the cluster. The context uses a direct endpoint to the cluster, thereby bypassing Rancher. This reduces load on Rancher for cases where unmediated API access is acceptable or preferable. See `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-authorized-cluster-endpoint"
+        "href": "/v2.7/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-authorized-cluster-endpoint"
     }, `Authorized Cluster Endpoint`), ` for more information and configuration instructions.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "reducing-event-handler-executions"
     }, `Reducing Event Handler Executions`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The bulk of Rancher's logic occurs on event handlers. These event handlers run on an object whenever the object is updated, and when Rancher is started. Additionally, they run every 15 hours when Rancher syncs caches. In scaled setups these scheduled runs come with huge performance costs because every handler is being run on every applicable object. However, the scheduled handler execution can be disabled with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -623,10 +630,10 @@ function MDXContent(_param) {
         "href": "https://www.suse.com/support/kb/doc/?id=000020100"
     }, `Slow etcd performance (performance testing and optimization)`), ` and `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs"
+        "href": "/v2.7/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs"
     }, `Tuning etcd for Large Installations`), `. Information on disks can also be found in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.6/getting-started/installation-and-upgrade/installation-requirements/#disks"
+        "href": "/v2.7/getting-started/installation-and-upgrade/installation-requirements/#disks"
     }, `Installation Requirements`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `It's best to run etcd on exactly three nodes, as adding more nodes will reduce operation speed. This may be counter-intuitive to common scaling approaches, but it's due to etcd's `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://etcd.io/docs/v3.5/faq/#what-is-maximum-cluster-size"

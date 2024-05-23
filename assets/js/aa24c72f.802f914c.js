@@ -324,7 +324,7 @@ const metadata = {
     "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md",
     "tags": [],
     "version": "2.8",
-    "lastUpdatedAt": 1716474317,
+    "lastUpdatedAt": 1716488149,
     "formattedLastUpdatedAt": "May 23, 2024",
     "frontMatter": {
         "title": "Tuning and Best Practices for Rancher at Scale"
@@ -359,6 +359,11 @@ const toc = [
     {
         value: 'Managing Your Object Counts',
         id: 'managing-your-object-counts',
+        level: 3
+    },
+    {
+        value: 'Using External Authentication',
+        id: 'using-external-authentication',
         level: 3
     },
     {
@@ -498,11 +503,6 @@ function MDXContent(_param) {
         "href": "/v2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions#restricted-admin"
     }, `Restricted Admin`), ` role. Apply other roles wherever possible.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
-    }, `If you use `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "li",
-        "href": "/v2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/"
-    }, `external authentication`), `, use groups to assign roles.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
     }, `Only add users to clusters and projects when necessary.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, `Remove clusters and projects when they are no longer needed.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -522,6 +522,13 @@ function MDXContent(_param) {
     }, `Experiment to see if creating new projects or clusters manifests in fewer `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
     }, `RoleBindings`), ` for your specific use case.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+        "id": "using-external-authentication"
+    }, `Using External Authentication`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you have fifty or more users, you should configure an `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "/v2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/"
+    }, `external authentication provider`), `. This is necessary for better performance.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `After you configure external authentication, make sure to assign permissions to groups instead of to individual users. This helps reduce the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `RoleBinding`), ` object count.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "rolebinding-count-estimation"
     }, `RoleBinding Count Estimation`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Predicting how many `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
