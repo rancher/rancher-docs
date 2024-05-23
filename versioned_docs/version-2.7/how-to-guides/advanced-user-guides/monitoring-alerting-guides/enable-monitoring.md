@@ -103,7 +103,7 @@ This dashboard provides access to the following advanced metrics:
 
 :::note
 
-Advanced heap analysis is not present as it is a very context-dependent technique that's meant for debugging and not intended for normal observation.
+Profiling data (such as advanced memory or CPU analysis) is not present as it is a very context-dependent technique that's meant for debugging and not intended for normal observation.
 
 :::
 
