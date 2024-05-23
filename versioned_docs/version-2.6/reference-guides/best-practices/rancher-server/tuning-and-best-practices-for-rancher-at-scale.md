@@ -105,6 +105,14 @@ Although managed Kubernetes services make it easier to deploy and run Kubernetes
 
 Use RKE2 for large scale use cases.
 
+### Keep all Upstream Cluster Nodes co-located
+
+To provide high availability, Kubernetes is designed to run nodes and control components in different zones. However, if nodes and control plane components are located in different zones, network traffic may be slower.
+
+Traffic between Rancher components and the Kubernetes API is especially sensitive to network latency, as is etcd traffic between nodes.
+
+To improve performance, run all upstream node clusters in the same location. In particular, make sure that latency between etcd nodes and Rancher is as low as possible.
+
 ### Keeping Kubernetes Versions Up to Date
 
 You should keep the local Kubernetes cluster up to date. This will ensure that your cluster has all available performance enhancements and bug fixes.
