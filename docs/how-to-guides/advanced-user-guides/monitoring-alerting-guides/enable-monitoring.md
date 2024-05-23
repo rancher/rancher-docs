@@ -80,7 +80,7 @@ Then **Cert File Path** would be set to `/etc/alertmanager/secrets/cert.pem`.
 
 ## Rancher Performance Dashboard
 
-When monitoring is installed, you are given basic health metrics about the local Rancher server, such as CPU and memory data. To get advanced metrics for your local Rancher server, you must enable the Rancher Performance Dashboard for Grafana.
+When monitoring is installed on the upstream (local) cluster, you are given basic health metrics about the Rancher pods, such as CPU and memory data. To get advanced metrics for your local Rancher server, you must additionally enable the Rancher Performance Dashboard for Grafana.
 
 This dashboard provides access to the following advanced metrics:
 
@@ -103,7 +103,7 @@ This dashboard provides access to the following advanced metrics:
 
 :::note
 
-Advanced heap analysis is not present as it is a very context-dependent technique that's meant for debugging and not intended for normal observation.
+Profiling data (such as advanced memory or CPU analysis) is not present as it is a very context-dependent technique that's meant for debugging and not intended for normal observation.
 
 :::
 
