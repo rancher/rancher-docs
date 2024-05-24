@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[55023],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[50367],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 50122:
+/***/ 78969:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration",
-    "id": "version-2.6/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration",
+    "id": "version-2.7/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration",
     "title": "RKE2 集群配置参考",
     "description": "本文介绍 Rancher 中可用于新的或现有的 RKE2 Kubernetes 集群的配置选项。",
-    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.6/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md",
+    "source": "@site/i18n/zh/docusaurus-plugin-content-docs/version-2.7/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md",
     "sourceDirName": "reference-guides/cluster-configuration/rancher-server-configuration",
     "slug": "/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration",
-    "permalink": "/zh/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration",
+    "permalink": "/zh/v2.7/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.7/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md",
     "tags": [],
-    "version": "2.6",
-    "lastUpdatedAt": 1686824534,
-    "formattedLastUpdatedAt": "2023年6月15日",
+    "version": "2.7",
+    "lastUpdatedAt": 1716565382,
+    "formattedLastUpdatedAt": "2024年5月24日",
     "frontMatter": {
         "title": "RKE2 集群配置参考"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "RKE 集群配置参考",
-        "permalink": "/zh/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"
+        "permalink": "/zh/v2.7/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"
     },
     "next": {
         "title": "K3s 集群配置参考",
-        "permalink": "/zh/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration"
+        "permalink": "/zh/v2.7/reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration"
     }
 };
 const assets = {};
@@ -537,6 +537,11 @@ const toc = [
         level: 4
     },
     {
+        value: '截断主机名',
+        id: '截断主机名',
+        level: 4
+    },
+    {
         value: 'TLS 可选名称',
         id: 'tls-可选名称',
         level: 4
@@ -667,17 +672,17 @@ function MDXContent(_param) {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/zh/v2.6/reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/azure"
+        "href": "/zh/v2.7/reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/azure"
     }, `Azure`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/zh/v2.6/reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/digitalocean"
+        "href": "/zh/v2.7/reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/digitalocean"
     }, `DigitalOcean`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/zh/v2.6/reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/amazon-ec2"
+        "href": "/zh/v2.7/reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/amazon-ec2"
     }, `EC2`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "池名称"
     }, `池名称`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `主机池的名称。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
@@ -714,7 +719,7 @@ function MDXContent(_param) {
         "href": "https://github.com/rancher/hyperkube"
     }, `hyperkube`), ` 打包了自己的 Kubernetes 版本。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `有关更多详细信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.6/getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes"
+        "href": "/zh/v2.7/getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes"
     }, `升级 Kubernetes`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "容器网络提供商"
     }, `容器网络提供商`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `这指的是集群使用的`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -746,13 +751,13 @@ function MDXContent(_param) {
         "href": "https://github.com/k8snetworkplumbingwg/multus-cni"
     }, `Multus`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `*`, ` 在 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.6/faq/container-network-interface-providers#cilium"
+        "href": "/zh/v2.7/faq/container-network-interface-providers#cilium"
     }, `Cilium CNI`), ` 中使用`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#%E9%A1%B9%E7%9B%AE%E7%BD%91%E7%BB%9C%E9%9A%94%E7%A6%BB"
     }, `项目网络隔离`), `时，你可以开启跨节点入口路由。详情请参见 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.6/faq/container-network-interface-providers#cilium-%E4%B8%AD%E8%B7%A8%E8%8A%82%E7%82%B9%E7%9A%84-ingress-%E8%B7%AF%E7%94%B1"
+        "href": "/zh/v2.7/faq/container-network-interface-providers#cilium-%E4%B8%AD%E8%B7%A8%E8%8A%82%E7%82%B9%E7%9A%84-ingress-%E8%B7%AF%E7%94%B1"
     }, `CNI 提供商文档`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `有关不同网络提供商以及如何配置它们的更多详细信息，请查阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://docs.rke2.io/install/network_options"
@@ -799,7 +804,7 @@ function MDXContent(_param) {
         "id": "默认-pod-安全策略"
     }, `默认 Pod 安全策略`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `为集群选择默认的 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.6/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies"
+        "href": "/zh/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies"
     }, `pod 安全策略`), `。请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://docs.rke2.io/security/pod_security_policies"
@@ -817,15 +822,15 @@ function MDXContent(_param) {
         "href": "https://coredns.io/"
     }, `CoreDNS`), ` 会安装为默认 DNS 提供程序。如果未安装 CoreDNS，则必须自己安装备用 DNS 提供程序。有关其他 CoreDNS 配置，请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://docs.rke2.io/networking#coredns"
+        "href": "https://docs.rke2.io/networking/networking_services#coredns"
     }, `RKE2 文档`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "nginx-ingress"
     }, `NGINX Ingress`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `如果你想使用高可用性配置来发布应用，并且你使用没有原生负载均衡功能的云提供商来托管主机，请启用此选项以在集群中使用 NGINX Ingress。有关其他配置选项，请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://docs.rke2.io/networking#nginx-ingress-controller"
+        "href": "https://docs.rke2.io/networking/networking_services#nginx-ingress-controller"
     }, `RKE2 文档`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `有关其他配置选项，请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://docs.rke2.io/networking#nginx-ingress-controller"
+        "href": "https://docs.rke2.io/networking/networking_services#nginx-ingress-controller"
     }, `RKE2 文档`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "metrics-server"
     }, `Metrics Server`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `这是启用或禁用 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -843,7 +848,7 @@ function MDXContent(_param) {
         "id": "agent-环境变量"
     }, `Agent 环境变量`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/rancher-agents/"
+        "href": "/zh/v2.7/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents"
     }, `Rancher agent`), ` 设置环境变量的选项。你可以使用键值对设置环境变量。有关详细信息，请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://docs.rke2.io/reference/linux_agent_config"
@@ -910,6 +915,8 @@ function MDXContent(_param) {
     }, `NodePort 服务`), `的端口范围的选项。默认值为 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `30000-32767`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+        "id": "截断主机名"
+    }, `截断主机名`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `将主机名截断为 15 个或更少字符。该字段只能在集群初始创建时设置。创建集群后，你无法再启用或禁用 15 个字符的限制。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `此设置仅影响配置了机器的集群。由于自定义集群在创建节点时设置主机名（发生在 Rancher 之外），因此该字段不限制自定义集群的主机名长度。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `截断集群中的主机名可提高与基于 Windows 的系统的兼容性。虽然 Kubernetes 允许最长的主机名长度为 63 个字符，但使用 NetBIOS 的系统将主机名限制为 15 个字符之内。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "tls-可选名称"
     }, `TLS 可选名称`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `在服务器 TLS 证书上添加其他主机名或 IPv4/IPv6 地址作为 Subject Alternative Name。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "授权集群端点"
@@ -917,10 +924,10 @@ function MDXContent(_param) {
         parentName: "p"
     }, `controlplane`), ` 角色的节点的 IP 和默认的 Kubernetes 自签名证书。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `有关授权集群端点的工作原理以及使用的原因，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.6/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-%E6%8E%88%E6%9D%83%E9%9B%86%E7%BE%A4%E7%AB%AF%E7%82%B9"
+        "href": "/zh/v2.7/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-%E6%8E%88%E6%9D%83%E9%9B%86%E7%BE%A4%E7%AB%AF%E7%82%B9"
     }, `架构介绍`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `我们建议使用具有授权集群端点的负载均衡器。有关详细信息，请参阅`, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/zh/v2.6/reference-guides/rancher-manager-architecture/architecture-recommendations#%E6%8E%88%E6%9D%83%E9%9B%86%E7%BE%A4%E7%AB%AF%E7%82%B9%E6%9E%B6%E6%9E%84"
+        "href": "/zh/v2.7/reference-guides/rancher-manager-architecture/architecture-recommendations#%E6%8E%88%E6%9D%83%E9%9B%86%E7%BE%A4%E7%AB%AF%E7%82%B9%E6%9E%B6%E6%9E%84"
     }, `推荐的架构`), `。`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "镜像仓库"
     }, `镜像仓库`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `选择要从中拉取 Rancher 镜像的镜像仓库。有关更多详细信息和配置选项，请参阅 `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {

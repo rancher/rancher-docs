@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[88216],{
+(self["webpackChunkrancher_docs"] = self["webpackChunkrancher_docs"] || []).push([[22705],{
 
 /***/ 3905:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -212,7 +212,7 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ 5725:
+/***/ 93041:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -313,30 +313,30 @@ const frontMatter = {
 const contentTitle = undefined;
 const metadata = {
     "unversionedId": "reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration",
-    "id": "version-2.8/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration",
+    "id": "version-2.6/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration",
     "title": "RKE2 Cluster Configuration Reference",
     "description": "This section covers the configuration options that are available in Rancher for a new or existing RKE2 Kubernetes cluster.",
-    "source": "@site/versioned_docs/version-2.8/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md",
+    "source": "@site/versioned_docs/version-2.6/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md",
     "sourceDirName": "reference-guides/cluster-configuration/rancher-server-configuration",
     "slug": "/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration",
-    "permalink": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration",
+    "permalink": "/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration",
     "draft": false,
-    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.8/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md",
+    "editUrl": "https://github.com/rancher/rancher-docs/edit/main/versioned_docs/version-2.6/reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md",
     "tags": [],
-    "version": "2.8",
-    "lastUpdatedAt": 1705701040,
-    "formattedLastUpdatedAt": "Jan 19, 2024",
+    "version": "2.6",
+    "lastUpdatedAt": 1716565382,
+    "formattedLastUpdatedAt": "May 24, 2024",
     "frontMatter": {
         "title": "RKE2 Cluster Configuration Reference"
     },
     "sidebar": "tutorialSidebar",
     "previous": {
         "title": "RKE Cluster Configuration Reference",
-        "permalink": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"
+        "permalink": "/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration"
     },
     "next": {
         "title": "K3s Cluster Configuration Reference",
-        "permalink": "/v2.8/reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration"
+        "permalink": "/v2.6/reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration"
     }
 };
 const assets = {};
@@ -347,19 +347,14 @@ const toc = [
         level: 2
     },
     {
-        value: 'Editing Clusters in the Rancher UI',
-        id: 'editing-clusters-in-the-rancher-ui',
+        value: 'Editing Clusters with a Form in the Rancher UI',
+        id: 'editing-clusters-with-a-form-in-the-rancher-ui',
         level: 2
     },
     {
-        value: 'Editing Clusters with a Form',
-        id: 'editing-clusters-with-a-form',
-        level: 3
-    },
-    {
-        value: 'Editing Clusters in YAML',
-        id: 'editing-clusters-in-yaml',
-        level: 3
+        value: 'Editing Clusters with YAML',
+        id: 'editing-clusters-with-yaml',
+        level: 2
     },
     {
         value: 'Configuration Options in the Rancher UI',
@@ -367,74 +362,74 @@ const toc = [
         level: 2
     },
     {
-        value: 'Machine Pool Configuration',
-        id: 'machine-pool-configuration',
-        level: 3
+        value: 'Machine Pool',
+        id: 'machine-pool',
+        level: 2
     },
     {
         value: 'Pool Name',
         id: 'pool-name',
-        level: 5
+        level: 3
     },
     {
         value: 'Machine Count',
         id: 'machine-count',
-        level: 5
+        level: 3
     },
     {
         value: 'Roles',
         id: 'roles',
-        level: 5
+        level: 3
     },
     {
         value: 'Advanced',
         id: 'advanced',
-        level: 4
+        level: 3
     },
     {
         value: 'Auto Replace',
         id: 'auto-replace',
-        level: 5
+        level: 4
     },
     {
         value: 'Drain Before Delete',
         id: 'drain-before-delete',
-        level: 5
+        level: 4
     },
     {
         value: 'Kubernetes Node Labels',
         id: 'kubernetes-node-labels',
-        level: 5
+        level: 4
     },
     {
         value: 'Taints',
         id: 'taints',
-        level: 5
+        level: 4
     },
     {
         value: 'Cluster Configuration',
         id: 'cluster-configuration',
-        level: 3
+        level: 2
     },
     {
         value: 'Basics',
         id: 'basics',
-        level: 4
+        level: 3
     },
     {
         value: 'Kubernetes Version',
         id: 'kubernetes-version',
-        level: 5
+        level: 4
     },
     {
         value: 'Container Network Provider',
         id: 'container-network-provider',
-        level: 5
+        level: 4
     },
     {
         value: 'Dual-stack Networking',
         id: 'dual-stack-networking',
-        level: 6
+        level: 5
     },
     {
         value: 'Dual-stack Additional Configuration',
@@ -444,167 +439,152 @@ const toc = [
     {
         value: 'Cloud Provider',
         id: 'cloud-provider',
-        level: 5
+        level: 4
     },
     {
         value: 'Default Pod Security Policy',
         id: 'default-pod-security-policy',
-        level: 5
-    },
-    {
-        value: 'Pod Security Admission Configuration Template',
-        id: 'pod-security-admission-configuration-template',
-        level: 5
+        level: 4
     },
     {
         value: 'Worker CIS Profile',
         id: 'worker-cis-profile',
-        level: 5
+        level: 4
     },
     {
         value: 'Project Network Isolation',
         id: 'project-network-isolation',
-        level: 5
+        level: 4
     },
     {
         value: 'CoreDNS',
         id: 'coredns',
-        level: 5
+        level: 4
     },
     {
         value: 'NGINX Ingress',
         id: 'nginx-ingress',
-        level: 5
+        level: 4
     },
     {
         value: 'Metrics Server',
         id: 'metrics-server',
-        level: 5
+        level: 4
     },
     {
         value: 'Add-On Config',
         id: 'add-on-config',
-        level: 4
+        level: 3
     },
     {
         value: 'Agent Environment Vars',
         id: 'agent-environment-vars',
-        level: 4
+        level: 3
     },
     {
         value: 'etcd',
         id: 'etcd',
-        level: 4
+        level: 3
     },
     {
         value: 'Automatic Snapshots',
         id: 'automatic-snapshots',
-        level: 5
+        level: 4
     },
     {
         value: 'Metrics',
         id: 'metrics',
-        level: 5
+        level: 4
     },
     {
         value: 'Networking',
         id: 'networking',
-        level: 4
+        level: 3
     },
     {
         value: 'Cluster CIDR',
         id: 'cluster-cidr',
-        level: 5
+        level: 4
     },
     {
         value: 'Dual-stack Networking',
         id: 'dual-stack-networking-1',
-        level: 6
+        level: 5
     },
     {
         value: 'Service CIDR',
         id: 'service-cidr',
-        level: 5
+        level: 4
     },
     {
         value: 'Dual-stack Networking',
         id: 'dual-stack-networking-2',
-        level: 6
+        level: 5
     },
     {
         value: 'Cluster DNS',
         id: 'cluster-dns',
-        level: 5
+        level: 4
     },
     {
         value: 'Cluster Domain',
         id: 'cluster-domain',
-        level: 5
+        level: 4
     },
     {
         value: 'NodePort Service Port Range',
         id: 'nodeport-service-port-range',
-        level: 5
-    },
-    {
-        value: 'Truncate Hostnames',
-        id: 'truncate-hostnames',
-        level: 5
+        level: 4
     },
     {
         value: 'TLS Alternate Names',
         id: 'tls-alternate-names',
-        level: 5
+        level: 4
     },
     {
         value: 'Authorized Cluster Endpoint',
         id: 'authorized-cluster-endpoint',
-        level: 5
+        level: 4
     },
     {
         value: 'Registries',
         id: 'registries',
-        level: 4
+        level: 3
     },
     {
         value: 'Upgrade Strategy',
         id: 'upgrade-strategy',
-        level: 4
+        level: 3
     },
     {
         value: 'Control Plane Concurrency',
         id: 'control-plane-concurrency',
-        level: 5
+        level: 4
     },
     {
         value: 'Worker Concurrency',
         id: 'worker-concurrency',
-        level: 5
+        level: 4
     },
     {
         value: 'Drain Nodes (Control Plane)',
         id: 'drain-nodes-control-plane',
-        level: 5
+        level: 4
     },
     {
         value: 'Drain Nodes (Worker Nodes)',
         id: 'drain-nodes-worker-nodes',
-        level: 5
+        level: 4
     },
     {
         value: 'Advanced',
         id: 'advanced-1',
-        level: 4
+        level: 3
     },
     {
         value: 'Cluster Config File Reference',
         id: 'cluster-config-file-reference',
         level: 2
-    },
-    {
-        value: 'additionalManifest',
-        id: 'additionalmanifest',
-        level: 3
     },
     {
         value: 'chartValues',
@@ -619,11 +599,6 @@ const toc = [
     {
         value: 'machineSelectorConfig',
         id: 'machineselectorconfig',
-        level: 3
-    },
-    {
-        value: 'machineSelectorFiles',
-        id: 'machineselectorfiles',
         level: 3
     }
 ];
@@ -657,27 +632,18 @@ function MDXContent(_param) {
         parentName: "li",
         "href": "https://docs.rke2.io/install/configuration"
     }, `options`), ` available for an RKE2 installation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
-        "id": "editing-clusters-in-the-rancher-ui"
-    }, `Editing Clusters in the Rancher UI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The Rancher UI provides two ways to edit a cluster:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+        "id": "editing-clusters-with-a-form-in-the-rancher-ui"
+    }, `Editing Clusters with a Form in the Rancher UI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To edit your cluster,`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
-    }, `With a form.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `With YAML.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "editing-clusters-with-a-form"
-    }, `Editing Clusters with a Form`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The form covers the most frequently needed options for clusters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To edit your cluster,`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    }, `In the upper left corner, click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
     }, `☰ > Cluster Management`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, `Go to the cluster you want to configure and click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
-    }, `⋮ > Edit Config`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "editing-clusters-in-yaml"
-    }, `Editing Clusters in YAML`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For a complete reference of configurable options for K3s clusters in YAML, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://rancher.com/docs/k3s/latest/en/installation/install-options/"
-    }, `K3s documentation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To edit your cluster in YAML:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `⋮ > Edit Config`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "editing-clusters-with-yaml"
+    }, `Editing Clusters with YAML`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Instead of using the Rancher UI to choose Kubernetes options for the cluster, advanced users can create an RKE2 config file. Using a config file allows you to set any of the options available in an RKE2 installation by specifying them in YAML.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To edit an RKE2 config file directly from the Rancher UI,`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ol"
     }, `Click `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "li"
@@ -691,36 +657,43 @@ function MDXContent(_param) {
         parentName: "li"
     }, `rkeConfig`), ` directive.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "configuration-options-in-the-rancher-ui"
-    }, `Configuration Options in the Rancher UI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "machine-pool-configuration"
-    }, `Machine Pool Configuration`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This subsection covers generic machine pool configurations. For specific infrastructure provider configurations, refer to the following:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    }, `Configuration Options in the Rancher UI`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
+        "type": "tip"
+    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+        parentName: "admonition"
+    }, `Some advanced configuration options are not exposed in the Rancher UI forms, but they can be enabled by editing the RKE2 cluster configuration file in YAML. For the complete reference of configurable options for RKE2 Kubernetes clusters in YAML, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+        parentName: "p",
+        "href": "https://docs.rke2.io/install/configuration"
+    }, `RKE2 documentation.`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
+        "id": "machine-pool"
+    }, `Machine Pool`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This subsection covers the generic machine pool configurations. For infrastructure provider specific, configurations refer to the following pages:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.8/reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/azure"
+        "href": "/v2.6/reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/azure"
     }, `Azure`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.8/reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/digitalocean"
+        "href": "/v2.6/reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/digitalocean"
     }, `DigitalOcean`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
         parentName: "ul"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "li",
-        "href": "/v2.8/reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/amazon-ec2"
-    }, `EC2`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+        "href": "/v2.6/reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/amazon-ec2"
+    }, `EC2`))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "pool-name"
-    }, `Pool Name`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The name of the machine pool.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `Pool Name`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The name of the machine pool.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "machine-count"
-    }, `Machine Count`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The number of machines in the pool.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `Machine Count`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The number of machines in the pool.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "roles"
-    }, `Roles`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Option to assign etcd, control plane, and worker roles to nodes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+    }, `Roles`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Option to assign etcd, control plane, and worker roles to nodes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "advanced"
-    }, `Advanced`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `Advanced`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "auto-replace"
-    }, `Auto Replace`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The amount of time nodes can be unreachable before they are automatically deleted and replaced.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `Auto Replace`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The duration nodes can be unreachable before they are automatically deleted and replaced.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "drain-before-delete"
-    }, `Drain Before Delete`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Enables draining nodes by evicting all pods before the node is deleted.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `Drain Before Delete`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Enables draining nodes by evicting all pods before the node is deleted.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "kubernetes-node-labels"
     }, `Kubernetes Node Labels`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Add `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
@@ -728,24 +701,24 @@ function MDXContent(_param) {
     }, `labels`), ` to nodes to help with organization and object selection.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For details on label syntax requirements, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set"
-    }, `Kubernetes documentation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `Kubernetes documentation.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "taints"
     }, `Taints`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Add `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/"
-    }, `taints`), ` to nodes, to prevent pods from being scheduled to or executed on the nodes, unless the pods have matching tolerations.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `taints`), ` to nodes, which can be used to prevent pods from being scheduled to or executed on nodes, unless the pods have matching tolerations.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "cluster-configuration"
-    }, `Cluster Configuration`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+    }, `Cluster Configuration`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "basics"
-    }, `Basics`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `Basics`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "kubernetes-version"
     }, `Kubernetes Version`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The version of Kubernetes installed on your cluster nodes. Rancher packages its own version of Kubernetes based on `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://github.com/rancher/hyperkube"
     }, `hyperkube`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more detail, see `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes"
-    }, `Upgrading Kubernetes`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+        "href": "/v2.6/getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes"
+    }, `Upgrading Kubernetes`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "container-network-provider"
     }, `Container Network Provider`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
@@ -779,14 +752,14 @@ function MDXContent(_param) {
         "href": "#project-network-isolation"
     }, `project network isolation`), ` in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/faq/container-network-interface-providers#cilium"
+        "href": "/v2.6/faq/container-network-interface-providers#cilium"
     }, `Cilium CNI`), `, it is possible to enable cross-node ingress routing. Click the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/faq/container-network-interface-providers#ingress-routing-across-nodes-in-cilium"
+        "href": "/v2.6/faq/container-network-interface-providers#ingress-routing-across-nodes-in-cilium"
     }, `CNI provider docs`), ` to learn more.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more details on the different networking providers and how to configure them, please view our `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://docs.rke2.io/install/network_options"
-    }, `RKE2 documentation`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h6", {
+    }, `RKE2 documentation`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
         "id": "dual-stack-networking"
     }, `Dual-stack Networking`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
@@ -805,14 +778,14 @@ function MDXContent(_param) {
         parentName: "p"
     }, `multus,cilium`), ` as your container network interface provider, ensure the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
         parentName: "p"
-    }, `Enable IPv6 Support`), ` option is also enabled.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `Enable IPv6 Support`), ` option is also enabled.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "cloud-provider"
     }, `Cloud Provider`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `You can configure a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/"
+        "href": "/v2.6/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/"
     }, `Kubernetes cloud provider`), `. If you want to use dynamically provisioned `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/"
+        "href": "/v2.6/how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/"
     }, `volumes and storage`), ` in Kubernetes, typically you must select the specific cloud provider in order to use it. For example, if you want to use Amazon EBS, you would need to select the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `aws`), ` cloud provider.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
@@ -825,48 +798,43 @@ function MDXContent(_param) {
     }, `config file option`), ` to configure the cloud provider. Please reference `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/"
-    }, `this documentation`), ` on how to configure the cloud provider.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `this documentation`), ` on how to configure the cloud provider.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "default-pod-security-policy"
-    }, `Default Pod Security Policy`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The default `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Default Pod Security Policy`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Choose the default `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies"
+        "href": "/v2.6/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies"
     }, `pod security policy`), ` for the cluster. Please refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://docs.rke2.io/security/pod_security_policies"
-    }, `RKE2 documentation`), ` on the specifications of each available policy.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
-        "id": "pod-security-admission-configuration-template"
-    }, `Pod Security Admission Configuration Template`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The default `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "/v2.8/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates"
-    }, `pod security admission configuration template`), ` for the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `RKE2 documentation`), ` on the specifications of each available policy.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "worker-cis-profile"
     }, `Worker CIS Profile`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Select a `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/how-to-guides/advanced-user-guides/cis-scan-guides/"
-    }, `CIS benchmark`), ` to validate the system configuration against.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+        "href": "/v2.6/how-to-guides/advanced-user-guides/cis-scan-guides/"
+    }, `CIS benchmark`), ` to validate the system configuration against.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "project-network-isolation"
-    }, `Project Network Isolation`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If your network provider allows project network isolation, you can choose whether to enable or disable inter-project communication.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Project network isolation is available if you are using any RKE2 network plugin that supports the enforcement of Kubernetes network policies, such as Canal.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `Project Network Isolation`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If your network provider allows project network isolation, you can choose whether to enable or disable inter-project communication.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Project network isolation is available if you are using any RKE2 network plugin that supports the enforcement of Kubernetes network policies, such as Canal.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "coredns"
     }, `CoreDNS`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `By default, `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://coredns.io/"
     }, `CoreDNS`), ` is installed as the default DNS provider. If CoreDNS is not installed, an alternate DNS provider must be installed yourself. Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://docs.rke2.io/networking#coredns"
-    }, `RKE2 documentation`), ` for additional CoreDNS configurations.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+        "href": "https://docs.rke2.io/networking/networking_services#coredns"
+    }, `RKE2 documentation`), ` for additional CoreDNS configurations.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "nginx-ingress"
     }, `NGINX Ingress`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `If you want to publish your applications in a high-availability configuration, and you're hosting your nodes with a cloud-provider that doesn't have a native load-balancing feature, enable this option to use NGINX Ingress within the cluster. Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://docs.rke2.io/networking#nginx-ingress-controller"
+        "href": "https://docs.rke2.io/networking/networking_services#nginx-ingress-controller"
     }, `RKE2 documentation`), ` for additional configuration options.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "https://docs.rke2.io/networking#nginx-ingress-controller"
-    }, `RKE2 documentation`), ` for additional configuration options.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+        "href": "https://docs.rke2.io/networking/networking_services#nginx-ingress-controller"
+    }, `RKE2 documentation`), ` for additional configuration options.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "metrics-server"
     }, `Metrics Server`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Option to enable or disable `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://rancher.com/docs/rke/latest/en/config-options/add-ons/metrics-server/"
-    }, `Metrics Server`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Each cloud provider capable of launching a cluster using RKE2 can collect metrics and monitor for your cluster nodes. Enable this option to view your node metrics from your cloud provider's portal.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+    }, `Metrics Server`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Each cloud provider capable of launching a cluster using RKE2 can collect metrics and monitor for your cluster nodes. Enable this option to view your node metrics from your cloud provider's portal.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "add-on-config"
     }, `Add-On Config`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Additional Kubernetes manifests, managed as an `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
@@ -874,28 +842,28 @@ function MDXContent(_param) {
     }, `Add-on`), `, to apply to the cluster on startup. Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://docs.rke2.io/helm#automatically-deploying-manifests-and-helm-charts"
-    }, `RKE2 documentation`), ` for details.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+    }, `RKE2 documentation`), ` for details.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "agent-environment-vars"
     }, `Agent Environment Vars`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Option to set environment variables for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents"
+        "href": "https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/rancher-agents/"
     }, `Rancher agents`), `. The environment variables can be set using key value pairs. Refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://docs.rke2.io/reference/linux_agent_config"
-    }, `RKE2 documentation`), ` for more details.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+    }, `RKE2 documentation`), ` for more details.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "etcd"
-    }, `etcd`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `etcd`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "automatic-snapshots"
     }, `Automatic Snapshots`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Option to enable or disable recurring etcd snapshots. If enabled, users have the option to configure the frequency of snapshots. For details, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://docs.rke2.io/backup_restore#creating-snapshots"
-    }, `RKE2 documentation`), `. Note that with RKE2, snapshots are stored on each etcd node. This varies from RKE1 which only stores one snapshot per cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `RKE2 documentation`), `. Note that with RKE2, snapshots are stored on each etcd node. This varies from RKE1 which only stores one snapshot per cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "metrics"
-    }, `Metrics`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Option to choose whether to expose etcd metrics to the public or only within the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+    }, `Metrics`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Option to choose whether to expose etcd metrics to the public or only within the cluster.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "networking"
-    }, `Networking`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `Networking`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "cluster-cidr"
-    }, `Cluster CIDR`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `IPv4 and/or IPv6 network CIDRs to use for pod IPs (default: 10.42.0.0/16).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h6", {
+    }, `Cluster CIDR`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `IPv4 and/or IPv6 network CIDRs to use for pod IPs (default: 10.42.0.0/16).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
         "id": "dual-stack-networking-1"
     }, `Dual-stack Networking`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To configure `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
@@ -912,9 +880,9 @@ function MDXContent(_param) {
     }, `multus,cilium`), ` as your `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#container-network-provider"
-    }, `container network`), ` interface provider.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `container network`), ` interface provider.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "service-cidr"
-    }, `Service CIDR`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `IPv4/IPv6 network CIDRs to use for service IPs (default: 10.43.0.0/16).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h6", {
+    }, `Service CIDR`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `IPv4/IPv6 network CIDRs to use for service IPs (default: 10.43.0.0/16).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
         "id": "dual-stack-networking-2"
     }, `Dual-stack Networking`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To configure `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
@@ -931,72 +899,67 @@ function MDXContent(_param) {
     }, `multus,cilium`), ` as your `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#container-network-provider"
-    }, `container network`), ` interface provider.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `container network`), ` interface provider.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "cluster-dns"
-    }, `Cluster DNS`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `IPv4 Cluster IP for coredns service. Should be in your service-cidr range (default: 10.43.0.10).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `Cluster DNS`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `IPv4 Cluster IP for coredns service. Should be in your service-cidr range (default: 10.43.0.10).`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "cluster-domain"
     }, `Cluster Domain`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Select the domain for the cluster. The default is `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `cluster.local`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `cluster.local`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "nodeport-service-port-range"
     }, `NodePort Service Port Range`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Option to change the range of ports that can be used for `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://kubernetes.io/docs/concepts/services-networking/service/#nodeport"
     }, `NodePort services`), `. The default is `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `30000-32767`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
-        "id": "truncate-hostnames"
-    }, `Truncate Hostnames`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Option to truncate hostnames to 15 characters or less. You can only set this field during the initial creation of the cluster. You can't enable or disable the 15 character limit after cluster creation.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This setting only affects machine-provisioned clusters. Since custom clusters set hostnames during their own node creation process, which occurs outside of Rancher, this field doesn't restrict custom cluster hostname length.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Truncating hostnames in a cluster improves compatibility with Windows-based systems. Although Kubernetes allows hostnames up to 63 characters in length, systems that use NetBIOS restrict hostnames to 15 characters or less.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `30000-32767`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "tls-alternate-names"
-    }, `TLS Alternate Names`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Add hostnames or IPv4/IPv6 addresses as Subject Alternative Names on the server TLS cert.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `TLS Alternate Names`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Add hostnames or IPv4/IPv6 addresses as Subject Alternative Names on the server TLS cert.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "authorized-cluster-endpoint"
     }, `Authorized Cluster Endpoint`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Authorized Cluster Endpoint can be used to directly access the Kubernetes API server, without requiring communication through Rancher.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This is enabled by default in Rancher-launched Kubernetes clusters, using the IP of the node with the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `controlplane`), ` role and the default Kubernetes self signed certificates.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more detail on how an authorized cluster endpoint works and why it is used, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-authorized-cluster-endpoint"
+        "href": "/v2.6/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters#4-authorized-cluster-endpoint"
     }, `architecture section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
-        "href": "/v2.8/reference-guides/rancher-manager-architecture/architecture-recommendations#architecture-for-an-authorized-cluster-endpoint-ace"
-    }, `recommended architecture section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+        "href": "/v2.6/reference-guides/rancher-manager-architecture/architecture-recommendations#architecture-for-an-authorized-cluster-endpoint-ace"
+    }, `recommended architecture section.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "registries"
     }, `Registries`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Select the image repository to pull Rancher images from. For more details and configuration options, see the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://docs.rke2.io/install/containerd_registry_configuration"
-    }, `RKE2 documentation`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+    }, `RKE2 documentation`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "upgrade-strategy"
-    }, `Upgrade Strategy`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `Upgrade Strategy`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "control-plane-concurrency"
-    }, `Control Plane Concurrency`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Select how many nodes can be upgraded at the same time. Can be a fixed number or percentage.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `Control Plane Concurrency`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Select how many nodes can be upgraded at the same time. Can be a fixed number or percentage.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "worker-concurrency"
-    }, `Worker Concurrency`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Select how many nodes can be upgraded at the same time. Can be a fixed number or percentage.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `Worker Concurrency`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Select how many nodes can be upgraded at the same time. Can be a fixed number or percentage.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "drain-nodes-control-plane"
-    }, `Drain Nodes (Control Plane)`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Option to remove all pods from the node prior to upgrading.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", {
+    }, `Drain Nodes (Control Plane)`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Option to remove all pods from the node prior to upgrading.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
         "id": "drain-nodes-worker-nodes"
-    }, `Drain Nodes (Worker Nodes)`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Option to remove all pods from the node prior to upgrading.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", {
+    }, `Drain Nodes (Worker Nodes)`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Option to remove all pods from the node prior to upgrading.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "advanced-1"
     }, `Advanced`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Option to set kubelet options for different nodes. For available options, refer to the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/"
     }, `Kubernetes documentation`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", {
         "id": "cluster-config-file-reference"
-    }, `Cluster Config File Reference`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Editing clusters in YAML allows you to set the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `Cluster Config File Reference`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Instead of using the Rancher UI to choose Kubernetes options for the cluster, advanced users can create a config file. Using a config file allows you to set the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://docs.rke2.io/install/configuration"
     }, `options available`), ` in an RKE2 installation, including those already listed in `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#configuration-options-in-the-rancher-ui"
-    }, `Configuration Options in the Rancher UI`), `, as well as set Rancher-specific parameters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("details", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("summary", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("b", null, "Example Cluster Config File Snippet")), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    }, `Configuration Options in the Rancher UI`), `, as well as Rancher-specific parameters.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("details", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("summary", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("b", null, "Example Cluster Config File Snippet")), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-yaml"
-    }, `apiVersion: provisioning.cattle.io/v1
-kind: Cluster
-spec:
+    }, `spec:
   cloudCredentialSecretName: cattle-global-data:cc-s879v
-  kubernetesVersion: v1.25.12+rke2r1
+  kubernetesVersion: v1.23.6+rke2r2
   localClusterAuthEndpoint: {}
   rkeConfig:
-    additionalManifest: ""
     chartValues:
       rke2-calico: {}
     etcd:
@@ -1007,9 +970,6 @@ spec:
       disable-kube-proxy: false
       etcd-expose-metrics: false
       profile: null
-      kube-apiserver-arg:
-        - audit-policy-file=/etc/rancher/rke2/user-audit-policy.yaml
-        - audit-log-path=/etc/rancher/rke2/user-audit.logs
     machinePools:
     - controlPlaneRole: true
       etcdRole: true
@@ -1023,18 +983,6 @@ spec:
     machineSelectorConfig:
     - config:
         protect-kernel-defaults: false
-    machineSelectorFiles:
-      - fileSources:
-          - configMap:
-              name: ''
-            secret:
-              name: audit-policy
-              items:
-                - key: audit-policy
-                  path: /etc/rancher/rke2/user-audit-policy.yaml
-        machineLabelSelector:
-          matchLabels:
-            rke.cattle.io/control-plane-role: 'true'
     registries: {}
     upgradeStrategy:
       controlPlaneConcurrency: "1"
@@ -1052,33 +1000,8 @@ spec:
         ignoreDaemonSets: true
         timeout: 120
 `))), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "additionalmanifest"
-    }, `additionalManifest`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Specify additional manifests to deliver to the control plane nodes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The value is a String, and will be placed at the path `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `/var/lib/rancher/rke2/server/manifests/rancher/addons.yaml`), ` on target nodes.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Example:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-yaml"
-    }, `additionalManifest: |-
-  apiVersion: v1
-  kind: Namespace
-  metadata:
-    name: name-xxxx
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "type": "note"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, `If you want to customize system charts, you should use the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `chartValues`), ` field as described below.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, `Alternatives, such as using a HelmChartConfig to customize the system charts via `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `additionalManifest`), `, can cause unexpected behavior, due to having multiple HelmChartConfigs for the same chart.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "chartvalues"
-    }, `chartValues`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Specify the values for the system charts installed by RKE2.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `For more information about how RKE2 manges packaged components, please refer to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-        parentName: "p",
-        "href": "https://docs.rke2.io/helm"
-    }, `RKE2 documentation`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Example:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    }, `chartValues`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Option to specify the values for the system charts installed by RKE2/k3s.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Example:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
         "className": "language-yaml"
     }, `chartValues:
@@ -1086,7 +1009,9 @@ spec:
         key: value
 `)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "machineglobalconfig"
-    }, `machineGlobalConfig`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Specify RKE2 configurations. Any configuration change made here will apply to every node. The configuration options available in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `machineGlobalConfig`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The RKE2/K3s configurations are nested under the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+        parentName: "p"
+    }, `machineGlobalConfig`), ` directive. Any configuration change made here will apply to every node. The configuration options available in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "https://docs.rke2.io/reference/server_config"
     }, `standalone version of RKE2`), ` can be applied here.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Example:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
@@ -1100,36 +1025,9 @@ spec:
         parentName: "ul"
     }, `data-dir (folder to hold state), which defaults to `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "li"
-    }, `/var/lib/rancher/rke2`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `To make it easier to put files on nodes beforehand, Rancher expects the following values to be included in the configuration, while RKE2 expects the values to be entered as file paths:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `audit-policy-file`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `cloud-provider-config`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ul"
-    }, `private-registry`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Rancher delivers the files to the path `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `/var/lib/rancher/rke2/etc/config-files/<option>`), ` in target nodes, and sets the proper options in the RKE2 server.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Example:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-yaml"
-    }, `apiVersion: provisioning.cattle.io/v1
-kind: Cluster
-spec:
-  rkeConfig:
-    machineGlobalConfig:
-      audit-policy-file: 
-        apiVersion: audit.k8s.io/v1 
-        kind: Policy 
-        rules: 
-        - level: RequestResponse
-          resources:
-          - group: ""
-            resources: 
-            - pods
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
+    }, `/var/lib/rancher/rke2`), `.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
         "id": "machineselectorconfig"
-    }, `machineSelectorConfig`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `machineSelectorConfig`), ` is the same as `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    }, `machineSelectorConfig`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `This is the same as `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
         parentName: "p",
         "href": "#machineglobalconfig"
     }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -1147,7 +1045,7 @@ spec:
         parentName: "p"
     }, `matchLabels`), `, both, or neither. Omitting the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
-    }, `machineLabelSelector`), ` section of this field has the same effect as putting the config in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    }, `machineLabelSelector`), ` section of this has the same effect as putting the config in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
         parentName: "p"
     }, `machineGlobalConfig`), ` section.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Example:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
         parentName: "pre",
@@ -1165,80 +1063,6 @@ spec:
       matchLabels:
         key1: value1
         key2: value2
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", {
-        "id": "machineselectorfiles"
-    }, `machineSelectorFiles`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "type": "note"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, `This feature is available in Rancher v2.7.2 and later.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Deliver files to nodes, so that the files can be in place before initiating RKE2 server or agent processes.
-The content of the file is retrieved from either a secret or a configmap. The target nodes are filtered by the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "p"
-    }, `machineLabelSelector`), `.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Example :`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-yaml"
-    }, `machineSelectorFiles:
-  - fileSources:
-      - secret:
-          items:
-            - key: example-key
-              path: path-to-put-the-file-on-nodes
-              permissions: 644 (optional)
-              hash: base64-encoded-hash-of-the-content (optional)
-          name: example-secret-name
-    machineLabelSelector:
-      matchExpressions:
-        - key: example-key
-          operator: string # Valid operators are In, NotIn, Exists and DoesNotExist.
-          values:
-            - example-value1
-            - example-value2
-      matchLabels:
-        key1: value1
-        key2: value2
-  - fileSources:
-      - configMap:
-          items:
-            - key: example-key
-              path: path-to-put-the-file-on-nodes
-              permissions: 644 (optional)
-              hash: base64-encoded-hash-of-the-content (optional)
-          name: example-configmap-name
-    machineLabelSelector:
-      matchExpressions:
-        - key: example-key
-          operator: string # Valid operators are In, NotIn, Exists and DoesNotExist.
-          values:
-            - example-value1
-            - example-value2
-      matchLabels:
-        key1: value1
-        key2: value2
-`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `The secret or configmap must meet the following requirements:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `It must be in the `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `fleet-default`), ` namespace where the Cluster object exists.`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-        parentName: "ol"
-    }, `It must have the annotation `, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-        parentName: "li"
-    }, `rke.cattle.io/object-authorized-for-clusters: cluster-name1,cluster-name2`), `, which permits the target clusters to use it.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("admonition", {
-        "type": "tip"
-    }, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
-        parentName: "admonition"
-    }, `Rancher Dashboard provides an easy-to-use form for creating the secret or configmap.`)), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, `Example:`), /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, /*#__PURE__*/ (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
-        parentName: "pre",
-        "className": "language-yaml"
-    }, `apiVersion: v1
-data:
-  audit-policy: >-
-    IyBMb2cgYWxsIHJlcXVlc3RzIGF0IHRoZSBNZXRhZGF0YSBsZXZlbC4KYXBpVmVyc2lvbjogYXVkaXQuazhzLmlvL3YxCmtpbmQ6IFBvbGljeQpydWxlczoKLSBsZXZlbDogTWV0YWRhdGE=
-kind: Secret
-metadata:
-  annotations:
-    rke.cattle.io/object-authorized-for-clusters: cluster1
-  name: name1
-  namespace: fleet-default
 `)));
 }
 MDXContent.isMDXComponent = true;
