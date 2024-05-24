@@ -145,7 +145,6 @@ When you provision a cluster with Rancher on existing nodes, you will add nodes 
 
 To set up a cluster with support for Windows nodes and containers, you will need to complete the tasks below.
 
-
 ### 1. Provision Hosts
 
 To begin provisioning a cluster on existing nodes with Windows support, prepare your hosts.
@@ -208,7 +207,6 @@ You can access your cluster after its state is updated to **Active**.
 
 - `Default`, containing the `default` namespace
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces
-
 
 It may take a few minutes for the node to be registered in your cluster.
 
