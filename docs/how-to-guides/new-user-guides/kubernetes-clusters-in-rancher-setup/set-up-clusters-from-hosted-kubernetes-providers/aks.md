@@ -28,22 +28,16 @@ The below sections describe how to set up these prerequisites using either the A
 
 ### Setting Up the Service Principal with the Azure Command Line Tool
 
-Create the service principal and give it Contributor privileges. You must provide `scopes` a full path to at least one Azure resource:
+You must assign roles to the service principal so that it has communication privileges with the AKS API. It also needs access to create and list virtual networks. 
+
+The following command creates the service principal and gives it the Contributor role. The Contributor role can manage anything on AKS but cannot give access to others. Note that you must provide `scopes` a full path to at least one Azure resource: 
 
 ```
-az ad sp create-for-rbac \
-  --role Contributor 
-  --scopes /subscriptions/<subscription-id>/resourceGroups/<group> \
-  ```
-
-
-```
-az ad sp create-for-rbac \
-  --scope /subscriptions/<subscription-id>/resourceGroups/<group> \
-  --role Contributor
+az ad sp create-for-rbac --role Contributor --scopes /subscriptions/<subscription-id>/resourceGroups/<group>
 ```
 
 The result should show information about the new service principal:
+
 ```
 {
   "appId": "xxxx--xxx",
@@ -54,21 +48,10 @@ The result should show information about the new service principal:
 }
 ```
 
-Create the Resource Group by running this command:
+The following creates a [Resource Group](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-cli) to contain your Azure resources:
 
 ```
 az group create --location <azure-location-name> --resource-group <azure-resource-group-name>
-```
-
-You must add roles to the service principal so that it has privileges for communication with the AKS API. It also needs access to create and list virtual networks.
-
-Below is an example command for assigning the Contributor role to a service principal. Contributors can manage anything on AKS but cannot give access to others:
-
-```
-az role assignment create \
-  --assignee <client-id> \
-  --scope /subscriptions/<subscription-id>/resourceGroups/<group> \
-  --role Contributor
 ```
 
 ### Setting Up the Service Principal from the Azure Portal
