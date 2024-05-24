@@ -90,12 +90,6 @@
 
 <dl>
     <dt>
-        Deployment
-    </dt>
-    <dd>
-        Placeholder
-    </dd>
-    <dt>
         Downstream cluster
     </dt>
     <dd>
@@ -124,12 +118,6 @@
     <p>
         <b>Related terms:</b> <i>Apps & Marketplace, Catalogs, Integrations</i>
     </p>
-    <dt>
-        External authentication
-    </dt>
-    <dd>
-        Placeholder
-    </dd>
 </dl>
 
 ## H
@@ -164,12 +152,6 @@
     <p>
         <b>Related terms:</b> <i>Managed cluster</i>
     </p>
-    <dt>
-        Integration
-    </dt>
-    <dd>
-        Placeholder
-    </dd>
 </dl>
 
 ## K
@@ -190,12 +172,6 @@
 
 <dl>
     <dt>
-        Local authentication
-    </dt>
-    <dd>
-        Placeholder
-    </dd>
-    <dt>
         Local cluster
     </dt>
     <dd>
@@ -213,12 +189,6 @@
 
 <dl>
     <dt>
-        Machine pool
-    </dt>
-    <dd>
-        Placeholder
-    </dd>
-    <dt>
         Managed cluster
     </dt>
     <dd>
@@ -232,88 +202,9 @@
     </p>
 </dl>
 
-## N
-
-<dl>
-    <dt>
-        Neuvector Prime 
-    </dt>
-    <dd>
-        Placeholder - Note that this can be used stand-alone or in combination with Rancher Prime
-    </dd>
-    <dt>
-        Node template
-    </dt>
-    <dd>
-        Placeholder
-    </dd>
-    <dt>
-        Node template
-    </dt>
-    <dd>
-        Placeholder
-    </dd>
-</dl>
-
-## P
-
-<dl>
-    <dt>
-        Prime 
-    </dt>
-    <dd>
-        Placeholder - Both Neuvector and Rancher have stand-alone Prime offerings, plus there's a SaaS offering. Rancher Prime Hosted, with Prime in the name
-    </dd>
-    <p>
-        <b>Related terms:</b> <i>Community</i>
-    </p>
-    <dt>
-        Project
-    </dt>
-    <dd>
-        Placeholder 
-    </dd>
-    <dt>
-        Project resource quota
-    </dt>
-    <dd>
-        Placeholder
-    </dd>
-    <dt>
-        PSA
-    </dt>
-    <dd>
-        Placeholder 
-    </dd>
-    <dt>
-        PSA configuration template (PSACT)
-    </dt>
-    <dd>
-        Placeholder 
-    </dd>
-    <dt>
-        PSP
-    </dt>
-    <dd>
-        Placeholder 
-    </dd>
-</dl>
-
 ## R
 
 <dl>
-    <dt>
-        Rancher chart
-    </dt>
-    <dd>
-        Placeholder 
-    </dd>
-    <dt>
-        Rancher Command Line Interface (CLI)
-    </dt>
-    <dd>
-        Placeholder 
-    </dd>
     <dt>
         Rancher Enterprise
     </dt>
@@ -326,12 +217,6 @@
     <p>
         <b>Related terms:</b> <i>Community</i>
     </p>
-    <dt>
-        Rancher Kubernetes API (RK-API)
-    </dt>
-    <dd>
-        Placeholder 
-    </dd>
     <dt>
         Rancher Kubernetes Engine (RKE)
     </dt>
@@ -347,48 +232,6 @@
     </dd>
     <p>
         <b>Related terms:</b> <i>K3s, RKE1, RKE2</i>
-    </p>
-    <dt>
-        Rancher Prime
-    </dt>
-    <p>
-        <b>Versions:</b> Rancher v2.8 and later
-    </p>
-    <dd>
-        Placeholder
-    </dd>
-    <p>
-        <b>Related terms:</b> <i>Rancher Community</i>
-    </p>
-    <dt>
-        Rancher Prime Hosted
-    </dt>
-    <p>
-        <b>Versions:</b> Rancher v2.8 and later
-    </p>
-    <dd>
-        Placeholder - SaaS offering -- see https://www.rancher.com/products/rancher-platform and scroll down
-    </dd>
-    <dt>
-        Rancher server
-    </dt>
-    <dd>
-        Placeholder 
-    </dd>
-    <p>
-        <b>Synonyms:</b> <i>Local cluster, Upstream cluster</i>
-    </p>
-    <dt>
-        Registered cluster
-    </dt>
-    <dd>
-        Placeholder 
-    </dd>
-    <p>
-        <b>Synonyms:</b>
-    </p>
-    <p>
-        <b>Related terms:</b> <i></i>
     </p>
     <dt>
         RKE1
@@ -423,47 +266,4 @@
     <p>
         <b>Synonyms:</b> <i>RKE2</i>
     </p>
-    <dt>
-        Roles
-    </dt>
-    <dd>
-        Placeholder
-    </dd>
-</dl>
-
-## U
-
-<dl>
-    <dt>
-        UI
-    </dt>
-    <dd>
-        Placeholder
-    </dd>
-    <dt>
-        Upstream cluster
-    </dt>
-    <dd>
-        Placeholder 
-    </dd>
-    <p>
-        <b>Synonyms:</b> <i>Local cluster, Rancher server</i>
-    </p>
-    <dt>
-        Users
-    </dt>
-    <dd>
-        Placeholder
-    </dd>
-</dl>
-
-## W
-
-<dl>
-    <dt>
-        Workload
-    </dt>
-    <dd>
-        Placeholder
-    </dd>
 </dl>
