@@ -287,6 +287,7 @@
     <p>
         <b>Synonyms:</b> <i>RKE2</i>
     </p>
+    <dt>
         Roles
     </dt>
     <dd>
