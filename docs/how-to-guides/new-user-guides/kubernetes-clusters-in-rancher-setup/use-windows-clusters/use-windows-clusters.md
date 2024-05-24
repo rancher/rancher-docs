@@ -190,14 +190,13 @@ This section describes how to register your Linux and Worker nodes to your clust
 
 In this section, we fill out a form on the Rancher UI to get a custom command to install the Rancher agent on the Linux master node. Then we will copy the command and run it on our Linux master node to register the node in the cluster.
 
-The first node in your cluster should be a Linux host has both the **Control Plane** and **etcd** roles. At a minimum, both of these roles must be enabled for this node, and this node must be added to your cluster before you can add Windows hosts.
+The first node in your cluster should be a Linux host that has both the **Control Plane** and **etcd** roles. At a minimum, both of these roles must be enabled for this node, and this node must be added to your cluster before you can add Windows hosts.
 
-1. In the **Node Operating System** section, click **Linux**.
-1. In the **Node Role** section, choose at least **etcd** and **Control Plane**. We recommend selecting all three.
+1. After cluster creation, navigate to the **Registration** tab.
+1. In **Step 1** under the **Node Role** section, select at least **etcd** and **Control Plane**. We recommend selecting all three.
 1. Optional: If you click **Show advanced options,** you can customize the settings for the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) and [node labels.](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
-1. Copy the command displayed on the screen to your clipboard.
+1. In **Step 2**, under the **Registration** section, copy the command displayed on the screen to your clipboard.
 1. SSH into your Linux host and run the command that you copied to your clipboard.
-1. When you are finished provisioning your Linux node(s), select **Done**.
 
 **Result:**
 
@@ -217,15 +216,13 @@ It may take a few minutes for the node to be registered in your cluster.
 
 In this section, we run a command to register the Linux worker node to the cluster.
 
-After the initial provisioning of your cluster, your cluster only has a single Linux host. Next, we add another Linux `worker` host, which will be used to support _Rancher cluster agent_, _Metrics server_, _DNS_ and _Ingress_ for your cluster.
+After the initial provisioning of your cluster, your cluster only has a single Linux host. Next, we add another Linux `worker` host, which will be used to support the _Rancher cluster agent_, _Metrics server_, _DNS_ and _Ingress_ for your cluster.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
-1. Go to the cluster that you created and click **⋮ > Edit Config**.
-1. Scroll down to **Node Operating System**. Choose **Linux**.
-1. In the **Customize Node Run Command** section, go to the **Node Options** and select the **Worker** role.
-1. Copy the command displayed on screen to your clipboard.
-1. Log in to your Linux host using a remote Terminal connection. Run the command copied to your clipboard.
-1. From **Rancher**, click **Save**.
+1. After cluster creation, navigate to the **Registration** tab.
+1. In **Step 1** under the **Node Role** section, select **Worker**.
+1. Optional: If you click **Show advanced options,** you can customize the settings for the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) and [node labels.](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+1. In **Step 2**, under the **Registration** section, copy the command displayed on the screen to your clipboard.
+1. SSH into your Linux host and run the command that you copied to your clipboard.
 
 **Result:** The **Worker** role is installed on your Linux host, and the node registers with Rancher. It may take a few minutes for the node to be registered in your cluster.
 
@@ -245,14 +242,15 @@ For each Linux worker node added into the cluster, the following taints will be 
 
 In this section, we run a command to register the Windows worker node to the cluster.
 
-You can add Windows hosts to the cluster by editing the cluster and choosing the **Windows** option.
+:::note
+The cluster must be up and running with Linux etcd, control plane, and worker nodes before the registration command for adding Windows workers will display.
+:::
 
-1. In the upper left corner, click **☰ > Cluster Management**.
-1. Go to the cluster that you created and click **⋮ > Edit Config**.
-1. Scroll down to **Node Operating System**. Choose **Windows**. Note: You will see that the **worker** role is the only available role.
-1. Copy the command displayed on screen to your clipboard.
+1. After cluster creation, navigate to the **Registration** tab.
+1. In **Step 1** under the **Node Role** section, select **Worker**.
+1. Optional: If you click **Show advanced options,** you can customize the settings for the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) and [node labels.](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+1. In **Step 2**, under the **Registration** section, copy the command for Windows workers displayed on the screen to your clipboard.
 1. Log in to your Windows host using your preferred tool, such as [Microsoft Remote Desktop](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients). Run the command copied to your clipboard in the **Command Prompt (CMD)**.
-1. From Rancher, click **Save**.
 1. Optional: Repeat these instructions if you want to add more Windows nodes to your cluster.
 
 **Result:** The **Worker** role is installed on your Windows host, and the node registers with Rancher. It may take a few minutes for the node to be registered in your cluster. You now have a Windows Kubernetes cluster.
