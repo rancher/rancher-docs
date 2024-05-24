@@ -231,13 +231,34 @@
         </ol>
     </dd>
     <p>
-        <b>Related terms:</b> <i>K3s, RKE1, RKE2</i>
+        <b>Related terms:</b> <i>K3s, RKE1, RKE2, RKE Government</i>
+    </p>
+    <dt>
+       Rancher Prime 
+    </dt>
+    <dd>
+        Rancher Prime is a new edition of the commercial, enterprise offering built on the the same source code. Installation assets are hosted on a trusted registry owned and managed by Rancher with additional value coming in from security assurances, extended lifecycles, access to focused architectures and Kubernetes advisories.
+    </dd>
+    <p>
+        <b>Synonyms:</b> <i>Rancher Enterprise</i>
+    </p>
+    <dt>
+        Rancher server
+    </dt>
+    <dd>
+        Rancher Server is a Kubernetes management tool to deploy and run clusters anywhere and on any provider. Rancher includes all the software and downstream cluster components used to manage the entire Rancher deployment.
+    </dd>
+    <p>
+        <b>Synonyms:</b> <i>Local cluster, Upstream cluster</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>Managed cluster</i>
     </p>
     <dt>
         RKE1
     </dt>
     <dd>
-        An alternative name for the 1.x software line of Rancher Kubernetes Engine (RKE). Sometimes called <i>RKE</i> for short.
+        An alternative name for the 1.x software line of Rancher Kubernetes Engine (RKE). Sometimes called <i>RKE</i> for short. RKE1 is a certified Kubernetes distribution and CLI/library which creates and manages a Kubernetes cluster.
     </dd>
     <p>
         <b>Related terms:</b> <i>Rancher Kubernetes Engine, RKE2</i>
@@ -249,7 +270,7 @@
         <b>Versions:</b> Rancher v2.6.0 and later
     </p>
     <dd>
-        A version of the Rancher Kubernetes Engine (RKE) that is designed for security and compliance with US federal government standards. Sometimes called <i>RKE Government</i>.
+        A fully conformant version of the Rancher Kubernetes Engine (RKE) that is designed for security and compliance with US federal government standards. Sometimes called <i>RKE Government</i>.
     </dd>
     <p>
         <b>Synonyms:</b> <i>RKE Government</i>
@@ -266,4 +287,37 @@
     <p>
         <b>Synonyms:</b> <i>RKE2</i>
     </p>
+        Roles
+    </dt>
+    <dd>
+        Within Rancher, roles determine what actions a user can make within a cluster or project.
+    </dd>
+</dl>
+
+## U
+
+<dl>
+    <dt>
+        Upstream cluster
+    </dt>
+    <dd>
+        An upstream cluster is the local Kubernetes cluster that your Rancher installation is provisioned on.
+    </dd>
+    <p>
+        <b>Synonyms:</b> <i>Local cluster, Rancher server</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>Managed cluster</i>
+    </p>
+</dl>
+
+## W
+
+<dl>
+    <dt>
+        Workload
+    </dt>
+    <dd>
+        Workloads are objects that set deployment rules for pods. Based on these rules, Kubernetes performs the deployment and updates the workload with the current state of the application. Workloads let you define the rules for application scheduling, scaling, and upgrade.
+    </dd>
 </dl>
