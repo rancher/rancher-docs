@@ -101,7 +101,7 @@ To give role-based access to your service principal,
 
 **Result:** Your service principal now has access to AKS.
 
-## 1. Create the AKS Cloud Credentials
+## Create the AKS Cloud Credentials
 
 1. In the Rancher UI, click **☰ > Cluster Management**.
 1. Click **Cloud Credentials**.
@@ -110,7 +110,7 @@ To give role-based access to your service principal,
 1. Fill out the form. For help with filling out the form, see the [configuration reference.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration.md#cloud-credentials)
 1. Click **Create**.
 
-## 2. Create the AKS Cluster
+## Create the AKS Cluster
 
 Use Rancher to set up and configure your Kubernetes cluster.
 
@@ -124,7 +124,8 @@ Use Rancher to set up and configure your Kubernetes cluster.
 
 You can access your cluster after its state is updated to **Active**.
 
-## Role-based Access Control
+## Configure Role-based Access Control
+
 When provisioning an AKS cluster in the Rancher UI, RBAC is not configurable because it is required to be enabled.
 
 RBAC is required for AKS clusters that are registered or imported into Rancher.
