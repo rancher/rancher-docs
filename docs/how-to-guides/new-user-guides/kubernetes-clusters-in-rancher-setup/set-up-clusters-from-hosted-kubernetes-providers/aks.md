@@ -31,7 +31,7 @@ The below sections describe how to set up these prerequisites using either the A
 You can create the service principal by running this command:
 
 ```
-az ad sp create-for-rbac --skip-assignment
+az ad sp create-for-rbac
 ```
 
 The result should show information about the new service principal:
