@@ -144,13 +144,13 @@ Project network isolation is available if you are using any RKE2 network plugin 
 
 #### CoreDNS
 
-By default, [CoreDNS](https://coredns.io/) is installed as the default DNS provider. If CoreDNS is not installed, an alternate DNS provider must be installed yourself. Refer to the [RKE2 documentation](https://docs.rke2.io/networking#coredns) for additional CoreDNS configurations.
+By default, [CoreDNS](https://coredns.io/) is installed as the default DNS provider. If CoreDNS is not installed, an alternate DNS provider must be installed yourself. Refer to the [RKE2 documentation](https://docs.rke2.io/networking/networking_services#coredns) for additional CoreDNS configurations.
 
 #### NGINX Ingress
 
-If you want to publish your applications in a high-availability configuration, and you're hosting your nodes with a cloud-provider that doesn't have a native load-balancing feature, enable this option to use NGINX Ingress within the cluster. Refer to the [RKE2 documentation](https://docs.rke2.io/networking#nginx-ingress-controller) for additional configuration options.
+If you want to publish your applications in a high-availability configuration, and you're hosting your nodes with a cloud-provider that doesn't have a native load-balancing feature, enable this option to use NGINX Ingress within the cluster. Refer to the [RKE2 documentation](https://docs.rke2.io/networking/networking_services#nginx-ingress-controller) for additional configuration options.
 
-Refer to the [RKE2 documentation](https://docs.rke2.io/networking#nginx-ingress-controller) for additional configuration options.
+Refer to the [RKE2 documentation](https://docs.rke2.io/networking/networking_services#nginx-ingress-controller) for additional configuration options.
 
 #### Metrics Server
 
