@@ -28,10 +28,19 @@ The below sections describe how to set up these prerequisites using either the A
 
 ### Setting Up the Service Principal with the Azure Command Line Tool
 
-You can create the service principal by running this command:
+Create the service principal and give it Contributor privileges. You must provide `scopes` a full path to at least one Azure resource:
 
 ```
-az ad sp create-for-rbac
+az ad sp create-for-rbac \
+  --role Contributor 
+  --scopes /subscriptions/<subscription-id>/resourceGroups/<group> \
+  ```
+
+
+```
+az ad sp create-for-rbac \
+  --scope /subscriptions/<subscription-id>/resourceGroups/<group> \
+  --role Contributor
 ```
 
 The result should show information about the new service principal:
@@ -45,7 +54,13 @@ The result should show information about the new service principal:
 }
 ```
 
-You also need to add roles to the service principal so that it has privileges for communication with the AKS API. It also needs access to create and list virtual networks.
+Create the Resource Group by running this command:
+
+```
+az group create --location <azure-location-name> --resource-group <azure-resource-group-name>
+```
+
+You must add roles to the service principal so that it has privileges for communication with the AKS API. It also needs access to create and list virtual networks.
 
 Below is an example command for assigning the Contributor role to a service principal. Contributors can manage anything on AKS but cannot give access to others:
 
@@ -56,31 +71,16 @@ az role assignment create \
   --role Contributor
 ```
 
-You can also create the service principal and give it Contributor privileges by combining the two commands into one. In this command, the scope needs to provide a full path to an Azure resource:
-
-```
-az ad sp create-for-rbac \
-  --scope /subscriptions/<subscription-id>/resourceGroups/<group> \
-  --role Contributor
-```
-
-Create the Resource Group by running this command:
-
-```
-az group create --location <azure-location-name> --resource-group <azure-resource-group-name>
-```
-
 ### Setting Up the Service Principal from the Azure Portal
 
-You can also follow these instructions to set up a service principal and give it role-based access from the Azure Portal.
+Follow these instructions to set up a service principal and give it role-based access from the Azure Portal.
 
 1. Go to the Microsoft Azure Portal [home page](https://portal.azure.com).
-
 1. Click **Azure Active Directory**.
 1. Click **App registrations**.
 1. Click **New registration**.
-1. Enter a name. This will be the name of your service principal.
-1. Optional: Choose which accounts can use the service principal.
+1. Enter a name for your service principal.
+  1. Optional: Choose which accounts can use the service principal.
 1. Click **Register**.
 1. You should now see the name of your service principal under **Azure Active Directory > App registrations**.
 1. Click the name of your service principal. Take note of the application ID (also called app ID or client ID) so that you can use it when provisioning your AKS cluster. Then click **Certificates & secrets**.
