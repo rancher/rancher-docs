@@ -21,7 +21,7 @@ To interact with Azure APIs, an AKS cluster requires an Azure Active Directory (
 Before creating the service principal, you need to obtain the following information from the [Microsoft Azure Portal](https://portal.azure.com):
 
 - Subscription ID
-- Client ID
+- App ID (also known as the client ID) 
 - Client secret
 
 The below sections describe how to set up these prerequisites using either the Azure command line tool or the Azure portal.
@@ -38,10 +38,10 @@ The result should show information about the new service principal:
 ```
 {
   "appId": "xxxx--xxx",
-  "displayName": "<SERVICE-PRINCIPAL-NAME>",
-  "name": "http://<SERVICE-PRINCIPAL-NAME>",
-  "password": "<SECRET>",
-  "tenant": "<TENANT NAME>"
+  "displayName": "<service-principal-name>",
+  "name": "http://<service-principal-name>",
+  "password": "<secret>",
+  "tenant": "<tenant-name>"
 }
 ```
 
@@ -51,8 +51,8 @@ Below is an example command for assigning the Contributor role to a service prin
 
 ```
 az role assignment create \
-  --assignee $appId \
-  --scope /subscriptions/$<SUBSCRIPTION-ID>/resourceGroups/$<GROUP> \
+  --assignee <client-id> \
+  --scope /subscriptions/<subscription-id>/resourceGroups/<group> \
   --role Contributor
 ```
 
@@ -60,14 +60,14 @@ You can also create the service principal and give it Contributor privileges by 
 
 ```
 az ad sp create-for-rbac \
-  --scope /subscriptions/$<SUBSCRIPTION-ID>/resourceGroups/$<GROUP> \
+  --scope /subscriptions/<subscription-id>/resourceGroups/<group> \
   --role Contributor
 ```
 
 Create the Resource Group by running this command:
 
 ```
-az group create --location AZURE_LOCATION_NAME --resource-group AZURE_RESOURCE_GROUP_NAME
+az group create --location <azure-location-name> --resource-group <azure-resource-group-name>
 ```
 
 ### Setting Up the Service Principal from the Azure Portal
@@ -136,8 +136,8 @@ Assign the Rancher AKSv2 role to the service principal with the Azure Command Li
 
 ```
 az role assignment create \
---assignee CLIENT_ID \
---scope "/subscriptions/SUBSCRIPTION_ID/resourceGroups/RESOURCE_GROUP_NAME" \
+--assignee <client-id> \
+--scope "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>" \
 --role "Rancher AKSv2"
 ```
 
