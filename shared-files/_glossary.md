@@ -25,7 +25,7 @@
         <b>Versions:</b> Rancher v2.6.5 and later
     </p>
     <dd>
-        When describing navigation within Rancher, the section of the Rancher UI where you manage Helm chart repositories. In earlier versions of Rancher, this section was called <i>Apps & Marketplace</i>, or <i>Catalogs</i>.
+        When describing navigation within Rancher, the section of the Rancher UI where you manage Helm charts and Helm chart repositories. In earlier versions of Rancher, this section was called <i>Apps & Marketplace</i>, or <i>Catalogs</i>.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Apps & Marketplace, Catalogs</i>
@@ -37,7 +37,7 @@
         <b>Versions:</b> Rancher v2.5.0–2.6.5
     </p>
     <dd>
-        The section of the Rancher UI where you manage Helm chart repositories. In earlier versions of Rancher, this section was called <i>Catalogs</i>. In later versions, it is called <i>Apps</i>.
+        The section of the Rancher UI where you manage Helm charts and Helm chart repositories. In earlier versions of Rancher, this section was called <i>Catalogs</i>. In later versions, it is called <i>Apps</i>.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Apps, Catalogs</i>
@@ -51,12 +51,12 @@
         Catalogs
     </dt>
     <p>
-        <b>Versions:</b> 1. Rancher v2.4.x and earlier 2. Rancher v2.7.x and later
+        <b>Versions:</b> 1. Rancher v2.4 and earlier 2. Rancher v2.7 and later
     </p>
     <dd>
         <ol>
             <li>
-                The section of the Rancher UI where you manage Helm chart repositories. In later versions of Rancher, this section is called <i>Apps & Marketplace</i>, or <i>Apps</i>.
+                The section of the Rancher UI where you manage Helm charts and Helm chart repositories. In later versions of Rancher, this section is called <i>Apps & Marketplace</i>, or <i>Apps</i>.
             </li>
             <li>
                 Extension catalogs, container image repositories that can be imported to add extensions to your Rancher instance.
@@ -93,13 +93,13 @@
         Downstream cluster
     </dt>
     <dd>
-        An alternative name for a <i>Managed</i> cluster: a Kubernetes cluster that is managed by a Rancher server.
+        An alternative name for a <i>Managed cluster</i>: a Kubernetes cluster that is managed by a Rancher server.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Managed cluster</i>
     </p>
     <p>
-        <b>Related terms:</b> <i>Hosted cluster, Imported cluster, Rancher server, Registered cluster</i>
+        <b>Related terms:</b> <i>Hosted cluster, Imported cluster, Rancher server, Registered cluster, Upstream cluster</i>
     </p>
 </dl>
 
@@ -113,7 +113,7 @@
         <b>Versions:</b> Rancher v2.7.0 and later
     </p>
     <dd>
-        Helm charts that can extend and enhance the Rancher UI, and tailor Rancher to your specific environment. Some Extensions require manual installation on a cluster, while others are built into Rancher. Built-in Extensions include Fleet and Harvester. Manually installed Extensions inlcude Kubewarden and Elemental.  
+        Helm charts that can extend and enhance the Rancher UI, and tailor Rancher to your specific environment. Some Extensions require manual installation on a cluster, while others are built into Rancher. Built-in Extensions include Fleet and Harvester. Manually installed Extensions include Kubewarden and Elemental.  
     </dd>
     <p>
         <b>Related terms:</b> <i>Apps & Marketplace, Catalogs, Integrations</i>
@@ -141,10 +141,10 @@
         Imported cluster
     </dt>
     <p>
-        <b>Versions:</b> Rancher 2.0–v2.4
+        <b>Versions:</b> Rancher v2.0–2.4
     </p>
     <dd>
-        An existing cluster that was provisioned by a third-party, then set up to be managed by Rancher. <i>Registered clusters</i> in later versions of Rancher are roughly synonymous with imported clusters. The main difference is that there are more management features exposed in the Rancher UI for registered clusters than for imported clusters. 
+        An existing cluster that was provisioned by a third-party, then set up to be managed by Rancher. <i>Registered clusters</i> in later versions of Rancher are roughly synonymous with imported clusters. The main difference is that there are more management features exposed in the Rancher UI for registered clusters than for imported clusters.
     </dd>
     <p>
         <b>Synonyms:</b> Registered cluster
@@ -164,7 +164,7 @@
         A lightweight Kubernetes distribution chiefly designed for workloads that run unattended under tight resource constraints.
     </dd>
     <p>
-        <b>Related terms:</b> <i>RKE</i>
+        <b>Related terms:</b> <i>RKE2</i>
     </p>
 </dl>
 
@@ -192,7 +192,7 @@
         Managed cluster
     </dt>
     <dd>
-        A Kubernetes cluster that is managed by a Rancher server. Managed clusters can run on a variety of infrastructure and can be located anywhere, including in the cloud, on-premises, or in air-gapped environments. 
+        A Kubernetes cluster that is managed by a Rancher server. Managed clusters can run on a variety of infrastructure and can be located anywhere, including in the cloud, on-premises, or in air-gapped environments.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Downstream cluster</i>
@@ -231,10 +231,13 @@
         </ol>
     </dd>
     <p>
-        <b>Related terms:</b> <i>K3s, RKE1, RKE2, RKE Government</i>
+        <b>Synonyms:</b> <i>RKE1</i> 
+    </p>
+    <p>
+        <b>Related terms:</b> <i>K3s, RKE2, RKE Government</i>
     </p>
     <dt>
-       Rancher Prime 
+       Rancher Prime
     </dt>
     <dd>
         Rancher Prime is a new edition of the commercial, enterprise offering built on the the same source code. Installation assets are hosted on a trusted registry owned and managed by Rancher with additional value coming in from security assurances, extended lifecycles, access to focused architectures and Kubernetes advisories.
@@ -258,10 +261,13 @@
         RKE1
     </dt>
     <dd>
-        An alternative name for the 1.x software line of Rancher Kubernetes Engine (RKE). Sometimes called <i>RKE</i> for short. RKE1 is a certified Kubernetes distribution and CLI/library which creates and manages a Kubernetes cluster.
+        An alternative name for the 1.x software line of <i>Rancher Kubernetes Engine (RKE)</i>. Sometimes called <i>RKE</i> for short. RKE1 is a certified Kubernetes distribution and CLI/library which creates and manages a Kubernetes cluster.
     </dd>
     <p>
-        <b>Related terms:</b> <i>Rancher Kubernetes Engine, RKE2</i>
+        <b>Synonyms:</b> <i>Rancher Kubernetes Engine</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>RKE2</i>
     </p>    
     <dt>
         RKE2
@@ -282,7 +288,7 @@
         <b>Versions:</b> Rancher v2.6.0 and later
     </p>
     <dd>
-        An alternative name for RKE2.
+        An alternative name for <i>RKE2</i>.
     </dd>
     <p>
         <b>Synonyms:</b> <i>RKE2</i>
