@@ -203,24 +203,12 @@
         Rancher is a Kubernetes management tool to deploy and run clusters anywhere and on any provider. Rancher includes all the software and downstream cluster components used to manage the entire Rancher deployment.
     </dd>
     <dt>
-        Rancher Enterprise
-    </dt>
-    <dd>
-        An alternative name for <i>Rancher Prime</i>.
-    </dd>
-    <p>
-        <b>Synonyms:</b> <i>Rancher Prime</i>
-    </p>
-    <p>
-        <b>Related terms:</b> <i>Community</i>
-    </p>
-    <dt>
         Rancher Kubernetes Engine (RKE)
     </dt>
     <dd>
         <ol>
             <li> 
-                A CNCF-certified Kubernetes distribution that runs entirely within Docker containers. There are two main versions of RKE available. The 1.x software line is sometimes called <i>RKE1</i>. The next-generation line is called <i>RKE2</i> or <i>RKE Government</i>.
+                A CNCF-certified Kubernetes distribution that runs entirely within Docker containers. There are two main versions of RKE available. The 1.x software line is sometimes called <i>RKE1</i>. The next-generation line is called <i>RKE2</i>.
             </li>
             <li>
                 Shorthand for <i>RKE1</i>, the 1.x software line of RKE.
@@ -231,7 +219,7 @@
         <b>Synonyms:</b> <i>RKE1</i> 
     </p>
     <p>
-        <b>Related terms:</b> <i>K3s, RKE2, RKE Government</i>
+        <b>Related terms:</b> <i>K3s, RKE2</i>
     </p>
     <dt>
        Rancher Prime
@@ -273,23 +261,8 @@
         <b>Versions:</b> Rancher v2.6.0 and later
     </p>
     <dd>
-        A fully conformant version of the Rancher Kubernetes Engine (RKE) that is designed for security and compliance with US federal government standards. Sometimes called <i>RKE Government</i>.
+        A fully conformant version of the Rancher Kubernetes Engine (RKE) that is designed for security and compliance with US federal government standards.
     </dd>
-    <p>
-        <b>Synonyms:</b> <i>RKE Government</i>
-    </p>
-    <dt>
-        RKE Government
-    </dt>
-    <p>
-        <b>Versions:</b> Rancher v2.6.0 and later
-    </p>
-    <dd>
-        An alternative name for <i>RKE2</i>.
-    </dd>
-    <p>
-        <b>Synonyms:</b> <i>RKE2</i>
-    </p>
     <dt>
         Roles
     </dt>
