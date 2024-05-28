@@ -54,17 +54,13 @@
         <b>Versions:</b> 1. Rancher v2.4 and earlier 2. Rancher v2.7 and later
     </p>
     <dd>
-        <ol>
-            <li>
-                The section of the Rancher UI where you manage Helm charts and Helm chart repositories. In later versions of Rancher, this section is called <i>Apps & Marketplace</i>, or <i>Apps</i>.
-            </li>
-            <li>
-                Extension catalogs, container image repositories that can be imported to add extensions to your Rancher instance.
-            </li>
-        </ol>
+        The section of the Rancher UI where you manage Helm charts and Helm chart repositories. In later versions of Rancher, this section is called <i>Apps & Marketplace</i>, or <i>Apps</i>.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Apps, Apps & Marketplace</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>Extension catalogs</i>
     </p>
     <dt>
         Community
@@ -84,7 +80,7 @@
         Downstream cluster
     </dt>
     <dd>
-        An alternative name for a <i>Managed cluster</i>: a Kubernetes cluster that is managed by a Rancher server.
+        An alternative name for a <i>managed cluster</i>, a Kubernetes cluster that is managed by a Rancher server.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Managed cluster</i>
@@ -109,6 +105,15 @@
     <p>
         <b>Related terms:</b> <i>Apps & Marketplace, Catalogs, Integrations</i>
     </p>
+    <dt>
+        Extension catalogs
+    </dt>
+    <p>
+        <b>Versions:</b> Rancher v2.7.0 and later
+    </p>
+    <dd>
+        Container image repositories that can be imported to add UI extensions to your Rancher instance.
+    </dd>
 </dl>
 
 ## H
@@ -121,7 +126,7 @@
         A managed cluster that is hosted in the cloud, by a Kubernetes provider. Rancher supports a variety of hosted Kubernetes providers, including Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE). Rancher integrates with the hosted Kubernetes provider's cloud APIs, so that you can manage the cluster from the Rancher UI.
     </dd>
     <p>
-        <b>Related terms:</b> <i>Managed cluster</i>
+        <b>Related terms:</b> <i><i>Downstream cluster, Imported cluster, Managed cluster, Registered cluster</i>
     </p>
 </dl>
 
@@ -135,13 +140,10 @@
         <b>Versions:</b> Rancher v2.0–2.4
     </p>
     <dd>
-        An existing cluster that was provisioned by a third-party, then set up to be managed by Rancher. <i>Registered clusters</i> in later versions of Rancher are roughly synonymous with imported clusters. The main difference is that there are more management features exposed in the Rancher UI for registered clusters than for imported clusters.
+        An existing cluster that was provisioned by a third party, then set up to be managed by Rancher. <i>Registered clusters</i> in later versions of Rancher are roughly synonymous with imported clusters. The main difference is that there are more management features exposed in the Rancher UI for registered clusters than for imported clusters.
     </dd>
     <p>
-        <b>Synonyms:</b> Registered cluster
-    </p>
-    <p>
-        <b>Related terms:</b> <i>Managed cluster</i>
+        <b>Related terms:</b> <i>Downstream cluster, Hosted cluster, Managed cluster, Reistered cluster</i>
     </p>
 </dl>
 
@@ -155,7 +157,7 @@
         A lightweight Kubernetes distribution chiefly designed for workloads that run unattended under tight resource constraints.
     </dd>
     <p>
-        <b>Related terms:</b> <i>RKE2</i>
+        <b>Related terms:</b> <i>RKE, RKE2</i>
     </p>
 </dl>
 
@@ -166,7 +168,7 @@
         Local cluster
     </dt>
     <dd>
-        An alternative name for the <i>Rancher server</i>, the Kubernetes cluster that hosts Rancher and manages other clusters. Here, <i>local</i> refers to the location of the Rancher installation, not to the user's local workstation. Local clusters can be hosted on-premises, in air-gapped environments, or in the cloud.
+        An alternative name for a <i>Rancher server</i>, the Kubernetes cluster that hosts Rancher and manages other clusters. Here, <i>local</i> refers to the location of the Rancher installation, not to the user's local workstation. Local clusters can be hosted on-premises, in air-gapped environments, or in the cloud.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Rancher server, Upstream cluster</i>
@@ -200,7 +202,7 @@
         Rancher 
     </dt>
     <dd>
-        Rancher is a Kubernetes management tool to deploy and run clusters anywhere and on any provider. Rancher includes all the software and downstream cluster components used to manage the entire Rancher deployment.
+        A Kubernetes management tool to deploy and run clusters anywhere and on any provider. Rancher includes all the software and downstream cluster components used to manage the entire Rancher deployment.
     </dd>
     <dt>
         Rancher Kubernetes Engine (RKE)
@@ -240,6 +242,18 @@
         <b>Synonyms:</b> <i>Local cluster, Upstream cluster</i>
     </p>
     <p>
+        <b>Related terms:</b> <i>Downstream cluster, Hosted cluster, Imported cluster, Managed cluster, Registered cluster</i>
+    </p>
+    <dt>
+        Registered cluster
+    </dt>
+    <p>
+        <b>Versions:</b> Rancher v2.0–2.4
+    </p>
+    <dd>
+        An existing cluster that was provisioned by a third party, then set up to be managed by Rancher. Older versions of Rancher use <i>Imported cluster</i> to refer to a similar concept. The main difference is that there are more management features exposed in the Rancher UI for registered clusters than for imported clusters.
+    </dd>
+    <p>
         <b>Related terms:</b> <i>Downstream cluster, Hosted cluster, Imported cluster, Managed cluster</i>
     </p>
     <dt>
@@ -263,11 +277,14 @@
     <dd>
         A fully conformant version of the Rancher Kubernetes Engine (RKE) that is designed for security and compliance with US federal government standards.
     </dd>
+    <p>
+       <b>Related terms:</b> <i>K3s, RKE</i> 
+    </p>
     <dt>
         Roles
     </dt>
     <dd>
-        Within Rancher, roles determine what actions a user can make within a cluster or project.
+        Roles determine what actions a Rancher user can make within a cluster or project.
     </dd>
 </dl>
 
@@ -278,7 +295,7 @@
         Upstream cluster
     </dt>
     <dd>
-        An alternative name for the Rancher server, that hosts Rancher and manages the other clusters in the Rancher deployment.
+        An alternative name for the Rancher server, the Kubernetes cluster that hosts Rancher and manages the other clusters in the Rancher deployment.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Local cluster, Rancher server</i>
@@ -295,6 +312,6 @@
         Workload
     </dt>
     <dd>
-        Workloads are objects that set deployment rules for pods. Based on these rules, Kubernetes performs the deployment and updates the workload with the current state of the application. Workloads let you define the rules for application scheduling, scaling, and upgrade.
+        Objects that set deployment rules for pods. Based on these rules, Kubernetes performs the deployment and updates the workload with the current state of the application. Workloads let you define the rules for application scheduling, scaling, and upgrade.
     </dd>
 </dl>
