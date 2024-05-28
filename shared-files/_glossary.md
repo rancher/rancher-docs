@@ -67,15 +67,6 @@
         <b>Synonyms:</b> <i>Apps, Apps & Marketplace</i>
     </p>
     <dt>
-        Cloud credentials
-    </dt>
-    <dd>
-        Placeholder
-    </dd>
-    <p>
-        <b>Related terms:</b> <i>Hosted clusters</i>
-    </p>
-    <dt>
         Community
     </dt>
     <dd>
