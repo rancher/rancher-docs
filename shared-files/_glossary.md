@@ -126,7 +126,7 @@
         A managed cluster that is hosted in the cloud, by a Kubernetes provider. Rancher supports a variety of hosted Kubernetes providers, including Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), and Google Kubernetes Engine (GKE). Rancher integrates with the hosted Kubernetes provider's cloud APIs, so that you can manage the cluster from the Rancher UI.
     </dd>
     <p>
-        <b>Related terms:</b> <i><i>Downstream cluster, Imported cluster, Managed cluster, Registered cluster</i>
+        <b>Related terms:</b> <i>Downstream cluster, Imported cluster, Managed cluster, Registered cluster</i>
     </p>
 </dl>
 
