@@ -30,10 +30,10 @@ The below sections describe how to set up these prerequisites using either the A
 
 You must assign roles to the service principal so that it has communication privileges with the AKS API. It also needs access to create and list virtual networks. 
 
-The following command creates the service principal and gives it the Contributor role. The Contributor role can manage anything on AKS but cannot give access to others. Note that you must provide `scopes` a full path to at least one Azure resource: 
+In the following example, the command creates the service principal and gives it the Contributor role. The Contributor role can manage anything on AKS but cannot give access to others. Note that you must provide `scopes` a full path to at least one Azure resource: 
 
 ```
-az ad sp create-for-rbac --role Contributor --scopes /subscriptions/<subscription-id>/resourceGroups/<group>
+az ad sp create-for-rbac --role Contributor --scopes /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>
 ```
 
 The result should show information about the new service principal:
@@ -51,7 +51,7 @@ The result should show information about the new service principal:
 The following creates a [Resource Group](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-cli) to contain your Azure resources:
 
 ```
-az group create --location <azure-location-name> --resource-group <azure-resource-group-name>
+az group create --location <azure-location-name> --resource-group <resource-group-name>
 ```
 
 ### Setting Up the Service Principal from the Azure Portal
@@ -63,7 +63,7 @@ Follow these instructions to set up a service principal and give it role-based a
 1. Click **App registrations**.
 1. Click **New registration**.
 1. Enter a name for your service principal.
-  1. Optional: Choose which accounts can use the service principal.
+1. Optional: Choose which accounts can use the service principal.
 1. Click **Register**.
 1. You should now see the name of your service principal under **Azure Active Directory > App registrations**.
 1. Click the name of your service principal. Take note of the application ID (also called app ID or client ID) so that you can use it when provisioning your AKS cluster. Then click **Certificates & secrets**.
