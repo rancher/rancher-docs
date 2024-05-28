@@ -166,13 +166,13 @@
         Local cluster
     </dt>
     <dd>
-        An alternative name for the <i>Rancher server</i>, the cluster which hosts Rancher and manages other clusters. Here, <i>local</i> refers to the location of the Rancher installation, not to the user's local workstation. Local clusters can be hosted on-premises, in air-gapped environments, or in the cloud.
+        An alternative name for the <i>Rancher server</i>, the Kubernetes cluster that hosts Rancher and manages other clusters. Here, <i>local</i> refers to the location of the Rancher installation, not to the user's local workstation. Local clusters can be hosted on-premises, in air-gapped environments, or in the cloud.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Rancher server, Upstream cluster</i>
     </p>
     <p>
-        <b>Related terms:</b> <i>Managed cluster</i>
+        <b>Related terms:</b> <i>Downstream cluster, Hosted cluster, Imported cluster, Managed cluster</i>
     </p>
 </dl>
 
@@ -197,10 +197,16 @@
 
 <dl>
     <dt>
+        Rancher 
+    </dt>
+    <dd>
+        Rancher is a Kubernetes management tool to deploy and run clusters anywhere and on any provider. Rancher includes all the software and downstream cluster components used to manage the entire Rancher deployment.
+    </dd>
+    <dt>
         Rancher Enterprise
     </dt>
     <dd>
-        An alternative name for <i>Rancher Prime</i>. 
+        An alternative name for <i>Rancher Prime</i>.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Rancher Prime</i>
@@ -240,19 +246,19 @@
         Rancher server
     </dt>
     <dd>
-        Rancher Server is a Kubernetes management tool to deploy and run clusters anywhere and on any provider. Rancher includes all the software and downstream cluster components used to manage the entire Rancher deployment.
+        The Kubernetes cluster that hosts Rancher and manages the other clusters in the Rancher deployment.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Local cluster, Upstream cluster</i>
     </p>
     <p>
-        <b>Related terms:</b> <i>Managed cluster</i>
+        <b>Related terms:</b> <i>Downstream cluster, Hosted cluster, Imported cluster, Managed cluster</i>
     </p>
     <dt>
         RKE1
     </dt>
     <dd>
-        An alternative name for the 1.x software line of <i>Rancher Kubernetes Engine (RKE)</i>. Sometimes called <i>RKE</i> for short. RKE1 is a certified Kubernetes distribution and CLI/library which creates and manages a Kubernetes cluster.
+        An alternative name for the v1.x software line of <i>Rancher Kubernetes Engine (RKE)</i>. Sometimes called <i>RKE</i> for short. RKE1 is a certified Kubernetes distribution and CLI/library which creates and manages a Kubernetes cluster.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Rancher Kubernetes Engine</i>
@@ -299,13 +305,13 @@
         Upstream cluster
     </dt>
     <dd>
-        An upstream cluster is the local Kubernetes cluster that your Rancher installation is provisioned on.
+        An alternative name for the Rancher server, that hosts Rancher and manages the other clusters in the Rancher deployment.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Local cluster, Rancher server</i>
     </p>
     <p>
-        <b>Related terms:</b> <i>Managed cluster</i>
+        <b>Related terms:</b> <i>Downstream cluster, Hosted cluster, Imported cluster, Managed cluster</i>
     </p>
 </dl>
 
