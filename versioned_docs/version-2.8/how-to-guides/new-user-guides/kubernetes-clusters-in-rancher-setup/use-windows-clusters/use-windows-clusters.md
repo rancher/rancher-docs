@@ -6,7 +6,7 @@ title: Launching Kubernetes on Windows Clusters
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters"/>
 </head>
 
-When provisioning a [custom cluster](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md) using Rancher, Rancher uses RKE2, also known as RKE Government, to install Kubernetes on your existing nodes.
+When provisioning a [custom cluster](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md) using Rancher, RKE2 is used to install Kubernetes on your existing nodes.
 
 In a Windows cluster provisioned with Rancher, the cluster must contain both Linux and Windows nodes. The Kubernetes controlplane can only run on Linux nodes, and the Windows nodes can only have the worker role. Windows nodes can only be used for deploying workloads.
 
@@ -141,7 +141,7 @@ If you are using the GCE (Google Compute Engine) cloud provider, you must do the
 
 This tutorial describes how to create a Rancher-provisioned cluster with the three nodes in the [recommended architecture.](#recommended-architecture)
 
-When you provision a cluster with Rancher on existing nodes, you will add nodes to the cluster by installing the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) on each one. When you create or edit your cluster from the Rancher UI, you will see a **Registration Command** that you can run on each server to add it to your cluster.
+When you provision a cluster with Rancher on existing nodes, you will add nodes to the cluster by installing the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) on each one. When you create or edit your cluster from the Rancher UI, run the **Registration Command** on each server to add it to your cluster.
 
 To set up a cluster with support for Windows nodes and containers, you will need to complete the tasks below.
 
@@ -214,7 +214,7 @@ It may take a few minutes for the node to be registered in your cluster.
 
 In this section, we run a command to register the Linux worker node to the cluster.
 
-After the initial provisioning of your cluster, your cluster only has a single Linux host. Next, we add another Linux `worker` host, which will be used to support the _Rancher cluster agent_, _Metrics server_, _DNS_ and _Ingress_ for your cluster.
+After the initial provisioning of your cluster, your cluster only has a single Linux host. Add another Linux `worker` host to support the _Rancher cluster agent_, _Metrics server_, _DNS_ and _Ingress_ for your cluster.
 
 1. After cluster creation, navigate to the **Registration** tab.
 1. In **Step 1** under the **Node Role** section, select **Worker**.
