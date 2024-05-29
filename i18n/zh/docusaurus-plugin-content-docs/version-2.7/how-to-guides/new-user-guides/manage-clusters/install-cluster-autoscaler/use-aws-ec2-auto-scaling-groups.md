@@ -300,7 +300,7 @@ title: 通过 AWS EC2 Auto Scaling 组使用 Cluster Autoscaler
 | max-node-provision-time | "15m" | CA 等待节点配置的最长时间 |
 | nodes | - | 以云提供商接受的格式设置节点组的最小、最大大小和其他配置数据。可以多次使用。格式是 `<min>:<max>:<other...>`。 |
 | node-group-auto-discovery | - | 节点组自动发现的一个或多个定义。定义表示为 `<name of discoverer>:[<key>[=<value>]]` |
-| estimator | - | "binpacking" | 用于扩容的资源评估器类型。可用值：["binpacking"] |
+| estimator |"binpacking" | 用于扩容的资源评估器类型。可用值：["binpacking"] |
 | expander | "random" | 要在扩容中使用的节点组扩展器的类型。可用值：`["random","most-pods","least-waste","price","priority"]` |
 | ignore-daemonsets-utilization | false | CA 为了缩容而计算资源利用率时，是否应忽略 DaemonSet pod |
 | ignore-mirror-pods-utilization | false | CA 为了缩容而计算资源利用率时，是否应忽略 Mirror pod |
