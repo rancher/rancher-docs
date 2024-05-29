@@ -272,7 +272,7 @@
         RKE2
     </dt>
     <p>
-        <b>Versions:</b> Rancher v2.6.0 and later
+        <b>Versions:</b> Rancher v2.6.0 and later (to provision clusters), Rancher 2.5.0 and later (to register clusters)
     </p>
     <dd>
         A fully conformant version of the Rancher Kubernetes Engine (RKE) that is designed for security and compliance with US federal government standards.
