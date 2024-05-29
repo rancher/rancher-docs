@@ -174,7 +174,7 @@
         <b>Synonyms:</b> <i>Rancher server, Upstream cluster</i>
     </p>
     <p>
-        <b>Related terms:</b> <i>Downstream cluster, Hosted cluster, Imported cluster, Managed cluster</i>
+        <b>Related terms:</b> <i>Downstream cluster, Hosted cluster, Imported cluster, Managed cluster, Registered cluster</i>
     </p>
 </dl>
 
@@ -191,7 +191,7 @@
         <b>Synonyms:</b> <i>Downstream cluster</i>
     </p>
     <p>
-        <b>Related terms:</b> <i>Rancher server</i>
+        <b>Related terms:</b> <i>Hosted cluster, Imported cluster, Rancher server, Registered cluster</i>
     </p>
 </dl>
 
@@ -229,9 +229,6 @@
     <dd>
         Rancher Prime is a new edition of the commercial, enterprise offering built on the the same source code. Installation assets are hosted on a trusted registry owned and managed by Rancher with additional value coming in from security assurances, extended lifecycles, access to focused architectures and Kubernetes advisories.
     </dd>
-    <p>
-        <b>Synonyms:</b> <i>Rancher Enterprise</i>
-    </p>
     <dt>
         Rancher server
     </dt>
@@ -266,7 +263,7 @@
         <b>Synonyms:</b> <i>Rancher Kubernetes Engine</i>
     </p>
     <p>
-        <b>Related terms:</b> <i>RKE2</i>
+        <b>Related terms:</b> <i>K3s, RKE2</i>
     </p>    
     <dt>
         RKE2
@@ -295,7 +292,7 @@
         Upstream cluster
     </dt>
     <dd>
-        An alternative name for the Rancher server, the Kubernetes cluster that hosts Rancher and manages the other clusters in the Rancher deployment.
+        An alternative name for the <i>Rancher server</i>, the Kubernetes cluster that hosts Rancher and manages the other clusters in the Rancher deployment.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Local cluster, Rancher server</i>
