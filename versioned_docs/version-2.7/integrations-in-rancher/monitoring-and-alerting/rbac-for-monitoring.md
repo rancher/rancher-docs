@@ -112,7 +112,7 @@ Monitoring also creates additional `ClusterRoles` that aren't assigned to users 
 
 | Role | Purpose  |
 | ------------------------------| ---------------------------|
-| monitoring-ui-view | _Available as of Monitoring v2 14.5.100+_ This ClusterRole allows users with write access to the project to view metrics graphs for the specified cluster in the Rancher UI. This is done by granting Read-only access to external Monitoring UIs. Users with this role have permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Grafana, and Alertmanager UIs through the Rancher proxy. |
+| monitoring-ui-view | _Available as of Monitoring v2 14.5.100+_ This ClusterRole allows users with write access to the project to view metrics graphs for the specified cluster in the Rancher UI. This is done by granting Read-only access to external Monitoring UIs. Users with this role have permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Alertmanager, and Grafana UIs through the Rancher proxy. <br/> <br/> This role doesn't grant access to monitoring endpoints. As a result, users with this role won't be able to view cluster monitoring graphs and dashboards in the Rancher UI; however, they are able to access the monitoring Grafana, Prometheus, and Alertmanager UIs if provided those links. |
 
 :::note
 
@@ -216,7 +216,11 @@ In addition to these default roles, the following Rancher project roles can be a
 |--------------------------|-------------------------------|-------|------|
 | View Monitoring* | [monitoring-ui-view](#additional-monitoring-clusterroles)    |    2.4.8+    |  9.4.204+ |
 
-\* A user bound to the **View Monitoring** Rancher role and read-only project permissions can't view links in the Monitoring UI. They can still access external monitoring UIs if provided links to those UIs. If you wish to grant access to users with the **View Monitoring** role and read-only project permissions, move the `cattle-monitoring-system` namespace into the project. 
+:::note
+
+ A user bound to the **View Monitoring** Rancher role and read-only project permissions can't view links in the Monitoring UI. They can still access external monitoring UIs if provided links to those UIs. If you wish to grant access to users with the **View Monitoring** role and read-only project permissions, move the `cattle-monitoring-system` namespace into the project. 
+
+:::note
 
 ### Differences in 2.5.x
 

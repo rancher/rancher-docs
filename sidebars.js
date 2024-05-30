@@ -35,7 +35,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Deploying Rancher',
+              label: 'Deploying Rancher Server',
               link: {
                 type: 'doc',
                 id: "getting-started/quick-start-guides/deploy-rancher-manager/deploy-rancher-manager",
@@ -405,7 +405,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Kubernetes Cluster Setup',
+              label: 'Setting up a Kubernetes Cluster for Rancher Server',
               link: {
                 type: 'doc',
                 id: "how-to-guides/new-user-guides/kubernetes-cluster-setup/kubernetes-cluster-setup",
@@ -534,7 +534,7 @@ const sidebars = {
                     "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster",
                     {
                       type: 'category',
-                      label: 'vSphere',
+                      label: 'Creating a VMware vSphere Cluster',
                       link: {
                         type: 'doc',
                         id: "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/vsphere",
@@ -547,7 +547,7 @@ const sidebars = {
                     },
                     {
                       type: 'category',
-                      label: 'Nutanix',
+                      label: 'Creating a Nutanix AOS Cluster',
                       link: {
                         type: 'doc',
                         id: "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/nutanix",
@@ -625,25 +625,13 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Helm Charts in Rancher',
+              label: 'Helm Charts and Apps',
               link: {
                 type: 'doc',
                 id: "how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher",
               },
               items: [
                 "how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps",
-              ]
-            },
-            {
-              type: 'category',
-              label: 'Deploying Apps Across Clusters',
-              link: {
-                type: 'doc',
-                id: "how-to-guides/new-user-guides/deploy-apps-across-clusters/deploy-apps-across-clusters",
-              },
-              items: [
-                "how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet",
-                "how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps",
               ]
             },
             {
@@ -735,7 +723,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Monitoring V2 Configuration Guides',
+              label: 'Monitoring Configuration Guides',
               link: {
                 type: 'doc',
                 id: "how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/monitoring-v2-configuration-guides",
@@ -758,7 +746,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Istio Setup Guide',
+              label: 'Istio Setup Guides',
               link: {
                 type: 'doc',
                 id: "how-to-guides/advanced-user-guides/istio-setup-guide/istio-setup-guide",
@@ -820,7 +808,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Best Practices',
+          label: 'Best Practice Guides',
           link: {
             type: 'doc',
             id: "reference-guides/best-practices/best-practices",
@@ -892,7 +880,7 @@ const sidebars = {
                 "reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration",
                 {
                   type: 'category',
-                  label: 'GKE Cluster Configuration',
+                  label: 'GKE Cluster Configuration Reference',
                   link: {
                     type: 'doc',
                     id: "reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration",
@@ -984,7 +972,7 @@ const sidebars = {
         "reference-guides/kubernetes-concepts",
         {
           type: 'category',
-          label: 'Monitoring V2 Configuration',
+          label: 'Monitoring Configuration Reference',
           link: {
             type: 'doc',
             id: "reference-guides/monitoring-v2-configuration/monitoring-v2-configuration",
@@ -1034,17 +1022,6 @@ const sidebars = {
             "reference-guides/cli-with-rancher/kubectl-utility",
           ]
         },
-        {
-          type: 'category',
-          label: 'About the API',
-          link: {
-            type: 'doc',
-            id: "reference-guides/about-the-api/about-the-api",
-          },
-          items: [
-            "reference-guides/about-the-api/api-tokens",
-          ]
-        },
         "reference-guides/rancher-cluster-tools",
 
         "reference-guides/rancher-project-tools",
@@ -1055,7 +1032,7 @@ const sidebars = {
         "reference-guides/rancher-webhook",
         {
           type: 'category',
-          label: 'Rancher Security',
+          label: 'Rancher Security Guides',
           link: {
             type: 'doc',
             id: "reference-guides/rancher-security/rancher-security",
@@ -1216,6 +1193,17 @@ const sidebars = {
           ]
         },
         {
+          "type": "category",
+          "label": "Cluster API (CAPI) with Rancher Turtles",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/cluster-api/cluster-api"
+          },
+          "items": [
+            "integrations-in-rancher/cluster-api/overview"
+          ]
+        },
+        {
           type: 'category',
           label: 'CIS Scans',
           link: {
@@ -1306,7 +1294,7 @@ const sidebars = {
       label: 'FAQ',
       items: [
         "faq/general-faq",
-        "faq/deprecated-features-in-v2.5",
+        "faq/deprecated-features",
         "faq/install-and-configure-kubectl",
         "faq/dockershim",
         "faq/technical-items",
@@ -1363,7 +1351,9 @@ const sidebars = {
             "api/workflows/projects"
           ]
         },
-        "api/api-reference"
+        "api/api-reference",
+        "api/api-tokens",
+        "api/v3-rancher-api-guide",
       ]
     },
     "contribute-to-rancher",

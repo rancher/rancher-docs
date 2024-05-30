@@ -134,8 +134,6 @@ The following table summarizes the different features available for each CNI net
 
 ### CNI Community Popularity
 
-import CNIPopularityTable from '/shared-files/_cni-popularity.md';
-
 <CNIPopularityTable />
 
 ### Which CNI Provider Should I Use?

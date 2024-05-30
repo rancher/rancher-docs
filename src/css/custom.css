@@ -65,6 +65,15 @@
     @apply font-sans antialiased;
   }
 
+  table td:nth-child(1) {
+    overflow-wrap: normal;
+  }
+
+  td {
+    width: auto;
+    overflow-wrap: anywhere; /* For browser compatibility */
+  }
+
   .homepage a {
     --ifm-link-hover-color: currentColor;
   }

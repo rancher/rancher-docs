@@ -36,7 +36,7 @@ You can lock roles in two contexts:
 Cluster roles and project/namespace roles can be locked, but global roles cannot.
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
-1. In the left navigation bar, click **Roles**.
+1. In the left navigation bar, click **Role Templates**.
 1. Go to the **Cluster** tab or the **Project/Namespaces** tab.
 1. From the role that you want to lock (or unlock), select **⋮ > Edit Config**.
 1. From the **Locked** option, choose the **Yes** or **No** radio button. Then click **Save**.

@@ -55,7 +55,13 @@ For a list of monitoring components exposed in the Rancher UI, along with common
 
 ## Role-based Access Control
 
-For information on configuring access to monitoring, see [this page.](rbac-for-monitoring.md)
+For more information on configuring access to monitoring, see [this page.](rbac-for-monitoring.md)
+
+:::note
+
+Rancher and Project read permissions don't necessarily apply to monitoring resources. See [monitoring-ui-view](rbac-for-monitoring.md#additional-monitoring-clusterroles) for more details.
+
+:::
 
 ## Guides
 

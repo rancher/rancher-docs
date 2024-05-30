@@ -31,8 +31,8 @@ When you create a new local user, you assign them a global permission as you com
 To see the default permissions for new users,
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
-1. In the left navigation bar, click **Roles**.
-1. The **Roles** page has tabs for roles grouped by scope. Each table lists the roles in that scope. In the **Global** tab, in the **New User Default** column, the permissions given to new users by default are indicated with a checkmark.
+1. In the left navigation bar, click **Role Templates**.
+1. The **Role Templates** page has tabs for roles grouped by scope. Each table lists the roles in that scope. In the **Global** tab, in the **New User Default** column, the permissions given to new users by default are indicated with a checkmark.
 
 You can [change the default global permissions to meet your needs.](#configuring-default-global-permissions)
 
@@ -43,8 +43,8 @@ When a user logs into Rancher using an external authentication provider for the 
 To see the default permissions for new users,
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
-1. In the left navigation bar, click **Roles**.
-1. The **Roles** page has tabs for roles grouped by scope. Each table lists the roles in that scope. In the **New User Default** column on each page, the permissions given to new users by default are indicated with a checkmark.
+1. In the left navigation bar, click **Role Templates**.
+1. The **Role Templates** page has tabs for roles grouped by scope. Each table lists the roles in that scope. In the **New User Default** column on each page, the permissions given to new users by default are indicated with a checkmark.
 
 You can [change the default permissions to meet your needs.](#configuring-default-global-permissions)
 
@@ -92,7 +92,7 @@ The following table lists each built-in global permission and whether it is incl
 For details on which Kubernetes resources correspond to each global permission,
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
-1. In the left navigation bar, click **Roles**.
+1. In the left navigation bar, click **Role Templates**.
 1.  If you click the name of an individual role, a table shows all of the operations and resources that are permitted by the role.
 
 :::note Notes:
@@ -221,7 +221,7 @@ Default roles are only assigned to users added from an external authentication p
 To change the default global permissions that are assigned to external users upon their first log in, follow these steps:
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
-1. In the left navigation bar, click **Roles**. On the **Roles** page, make sure the **Global** tab is selected.
+1. In the left navigation bar, click **Role Templates**. On the **Role Templates** page, make sure the **Global** tab is selected.
 1. Find the permissions set that you want to add or remove as a default. Then edit the permission by selecting **⋮ > Edit Config**.
 1. If you want to add the permission as a default, Select **Yes: Default role for new users** and then click **Save**. If you want to remove a default permission, edit the permission and select **No**.
 
@@ -234,7 +234,7 @@ To configure permission for a user,
 1. In the upper left corner, click **☰ > Users & Authentication**.
 1. In the left navigation bar, click **Users**.
 1. Go to the user whose access level you want to change and click **⋮ > Edit Config**.
-1. In the **Global Permissions** and **Built-in** sections, check the boxes for each permission you want the user to have. If you have created roles from the **Roles** page, they will appear in the **Custom** section and you can choose from them as well.
+1. In the **Global Permissions** and **Built-in** sections, check the boxes for each permission you want the user to have. If you have created roles from the **Role Templates** page, they will appear in the **Custom** section and you can choose from them as well.
 1. Click **Save**.
 
 **Result:** The user's global permissions have been updated.

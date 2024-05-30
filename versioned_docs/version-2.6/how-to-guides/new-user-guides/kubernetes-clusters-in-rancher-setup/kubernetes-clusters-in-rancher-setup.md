@@ -1,5 +1,5 @@
 ---
-title: Setting up Kubernetes Clusters in Rancher
+title: Kubernetes Clusters in Rancher Setup
 description: Provisioning Kubernetes Clusters
 ---
 

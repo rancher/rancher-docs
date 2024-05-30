@@ -10,8 +10,7 @@ title: Helm CLI 快速入门
 
 你的 Linux 主机可以位于任何地方。例如，它可以是 Amazon EC2 实例、Digital Ocean Droplet 或 Azure 虚拟机。其他 Rancher 文档也经常称它们为“节点”。部署 Linux 主机的一种方法是设置一个 Amazon EC2 实例，如[本教程](../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md)中所示。
 
-完整的安装要求在[这里](../../../pages-for-subheaders/installation-requirements.md)。
-
+完整的安装要求在[这里](../../installation-and-upgrade/installation-requirements/installation-requirements.md)。
 
 ## 在 Linux 上安装 K3s
 

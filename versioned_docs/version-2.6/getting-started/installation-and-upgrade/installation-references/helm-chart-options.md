@@ -17,7 +17,7 @@ For information on enabling experimental features, refer to [this page.](../../.
 
 | Option                    | Default Value | Description                                                                        |
 | ------------------------- | ------------- | ---------------------------------------------------------------------------------- |
-| `bootstrapPassword`       | " "           | `string` - Set the [bootstrap password](#bootstrap-password) for the first admin user. After logging in, the admin will need to reset their password. A randomly generated bootstrap password is used if this value is not set.
+| `bootstrapPassword`       | " "           | `string` - Set the [bootstrap password](#bootstrap-password) for the first admin user. After logging in, the admin should reset their password. A randomly generated bootstrap password is used if this value is not set.
 | `hostname`                | " "           | `string` - the Fully Qualified Domain Name for your Rancher Server                 |
 | `ingress.tls.source`      | "rancher"     | `string` - Where to get the cert for the ingress. - "rancher, letsEncrypt, secret" |
 | `letsEncrypt.email`       | " "           | `string` - Your email address                                                      |
@@ -64,19 +64,9 @@ For information on enabling experimental features, refer to [this page.](../../.
 
 ### Bootstrap Password
 
-When Rancher starts for the first time, a password is randomly generated for the first admin user. When the admin first logs in to Rancher, the UI shows commands that can be used to retrieve the bootstrap password. The admin needs to run those commands and log in with the bootstrap password. Then Rancher gives the admin an opportunity to reset the password.
+You can [set a specific bootstrap password](../resources/bootstrap-password.md) during Rancher installation. If you don't set a specific bootstrap password, Rancher randomly generates a password for the first admin account.
 
-If you want to use a specific bootstrap password instead of a randomly generated one, provide the password.
-
-```plain
---set bootstrapPassword="rancher"
-```
-
-The password, whether provided or generated, will be stored in a Kubernetes secret. After Rancher is installed, the UI will show instructions for how to retrieve the password using kubectl:
-
-```
-kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{ .data.bootstrapPassword|base64decode}}{{ "\n" }}'
-```
+When you log in for the first time, use the bootstrap password you set to log in. If you did not set a bootstrap password, the Rancher UI shows commands that can be used to [retrieve the bootstrap password](../resources/bootstrap-password.md#retrieving-the-bootstrap-password). Run those commands and log in to the account. After you log in for the first time, you are asked to reset the admin password.
 
 ### API Audit Log
 
@@ -160,7 +150,7 @@ Rancher supports CIDR notation ranges in this list.
 
 When not including sensitive data, the `proxy` or `extraEnv` chart options can be used. When using `extraEnv` the `noProxy` Helm option is ignored. Therefore, the `NO_PROXY` environment variable must also be set with `extraEnv`.
 
-The following is an example of setting proxy using the `extraEnv` chart option:
+The following is an example of setting proxy using the `proxy` chart option:
 
 ```plain
 --set proxy="http://<proxy_url:proxy_port>/"

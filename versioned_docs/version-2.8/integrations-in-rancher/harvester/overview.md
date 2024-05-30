@@ -14,7 +14,7 @@ The Harvester feature flag is used to manage access to the Virtualization Manage
 
 To navigate to the Harvester cluster, click **☰ > Virtualization Management**. From Harvester Clusters page, click one of the clusters listed to go to the single Harvester cluster view.
 
-* If the Harvester feature flag is enabled, Harvester clusters will be filtered out from any pages or apps (such as Fleet and the multi-cluster app) that list Kubernetes clusters.
+* If the Harvester feature flag is enabled, Harvester clusters will be filtered out from any pages or apps (such as Continuous Delivery with Fleet) that list Kubernetes clusters.
 
 * If the Harvester feature flag is disabled, and a Harvester cluster is imported, the Harvester cluster will be shown in the Rancher cluster list in the Cluster Management page. Harvester clusters will only be shown on the cluster list when the feature flag is off.
 

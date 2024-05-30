@@ -2,9 +2,13 @@
 title: 更新 Rancher 证书
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/getting-started/installation-and-upgrade/resources/update-rancher-certificate"/>
+</head>
+
 ## 更新私有 CA 证书
 
-按照以下步骤轮换[安装在 Kubernetes 集群上](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md)、由 Rancher 使用的 SSL 证书和私有 CA，或转用由私有 CA 签发的 SSL 证书。
+按照以下步骤轮换[安装在 Kubernetes 集群上](../install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md)、由 Rancher 使用的 SSL 证书和私有 CA，或转用由私有 CA 签发的 SSL 证书。
 
 步骤概述：
 
@@ -69,6 +73,7 @@ kubectl -n cattle-system create secret generic tls-ca \
 在这种情况下，由于 `tls-ca` secret 在启动时由 Rancher pod 读取，因此你需要重新部署 Rancher pod。
 
 你可以运行以下命令重新部署 Rancher pod：
+
 ```bash
 kubectl rollout restart deploy/rancher -n cattle-system
 ```
@@ -82,24 +87,32 @@ kubectl rollout restart deploy/rancher -n cattle-system
 以下步骤更新了 Rancher Chart 的 Helm 值，因此 Rancher pod 和 ingress 会使用在步骤 1 和 2 中创建的新私有 CA 证书。
 
 1. 调整初始安装期间使用的值，将当前值存储为：
+
 ```bash
 helm get values rancher -n cattle-system -o yaml > values.yaml
 ```
+
 1. 检索当前部署的 Rancher Chart 的版本字符串：
+
 ```bash
 helm ls -n cattle-system
 ```
+
 1. 更新 `values.yaml` 文件中的当前 Helm 值以包含下方内容：
+
 ```yaml
 ingress:
   tls:
     source: secret
 privateCA: true
 ```
+
 :::note 重要：
 由于证书由私有 CA 签发，因此确保在 `values.yaml` 文件中设置了 [`privateCA: true`](../installation-references/helm-chart-options.md#常用选项) 是非常重要的。
 :::
+
 1. 使用 `values.yaml` 文件和当前 Chart 版本升级 Helm 应用程序实例。版本必须匹配以防止 Rancher 升级。
+
 ```bash
  helm upgrade rancher rancher-stable/rancher \
   --namespace cattle-system \
@@ -164,6 +177,7 @@ kubectl edit -n cattle-system deployment/cattle-cluster-agent
 对每个下游集群重复以下步骤：
 
 1. 检索 agent 注册 kubectl 命令：
+
    1. 找到下游集群的集群 ID (c-xxxxx)。你可以在 Rancher UI 的**集群管理**中查看集群时在浏览器 URL 中找到 ID。
    1. 将 Rancher Server URL 和集群 ID 添加到以下 URL：`https://<RANCHER_SERVER_URL>/v3/clusterregistrationtokens?clusterId=<CLUSTER_ID>`。
    1. 复制 `insecureCommand` 字段中的命令，使用此命令是因为未使用私有 CA。
@@ -230,19 +244,24 @@ kubectl -n cattle-system delete secret tls-ca
 以下步骤更新了 Rancher Chart 的 Helm 值，因此 Rancher pod 和 Ingress 会使用在步骤 1 中创建的新证书。
 
 1. 调整初始安装期间使用的值，将当前值存储为：
+
 ```bash
 helm get values rancher -n cattle-system -o yaml > values.yaml
 ```
+
 1. 获取当前部署的 Rancher Chart 的版本字符串：
+
 ```bash
 helm ls -n cattle-system
 ```
+
 1. 更新 `values.yaml` 文件中的当前 Helm 值：
    1. 由于不再使用私有 CA，删除 `privateCA: true` 字段，或将其设置为 `false`。
    1. 根据需要调整 `ingress.tls.source` 字段。有关更多信息，请参阅 [Chart 选项](../installation-references/helm-chart-options.md#常用选项)。以下是一些示例：
       1. 如果使用公共 CA，继续使用 `secret`
       1. 如果使用 Let's Encrypt，将值更新为 `letsEncrypt`
 1. 使用 `values.yaml` 文件更新 Rancher Chart 的 Helm 值，并使用当前 Chart 版本防止升级：
+
 ```bash
   helm upgrade rancher rancher-stable/rancher \
    --namespace cattle-system \

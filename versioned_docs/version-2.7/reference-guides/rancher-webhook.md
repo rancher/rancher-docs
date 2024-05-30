@@ -18,19 +18,22 @@ Each Rancher version is designed to be compatible with a single version of the w
 
 <!-- releaseTask -->
 
-| Rancher Version | Webhook Version |
-|-----------------|:---------------:|
-| v2.7.0          |     v0.3.0      |
-| v2.7.1          |     v0.3.0      |
-| v2.7.2          |     v0.3.2      |
-| v2.7.3          |     v0.3.3      |
-| v2.7.4          |     v0.3.4      |
-| v2.7.5          |     v0.3.5      |
-| v2.7.6          |     v0.3.5      |
-| v2.7.7          |     v0.3.6      |
-| v2.7.8          |     v0.3.6      |
-| v2.7.9          |     v0.3.6      |
-| v2.7.10          |     v0.3.6      |
+| Rancher Version | Webhook Version | Availability in Prime | Availability in Community |
+|-----------------|-----------------|-----------------------|---------------------------|
+| v2.7.13         |     v0.3.8      | &check;               | N/A                       |
+| v2.7.12         |     v0.3.7      | &check;               | N/A                       |
+| v2.7.11         |     v0.3.7      | &check;               | N/A                       |
+| v2.7.10         |     v0.3.6      | &check;               | &check;                   |
+| v2.7.9          |     v0.3.6      | &cross;               | &check;                   |
+| v2.7.8          |     v0.3.6      | &cross;               | &check;                   |
+| v2.7.7          |     v0.3.6      | &check;               | &check;                   |
+| v2.7.6          |     v0.3.5      | &check;               | &check;                   |
+| v2.7.5          |     v0.3.5      | &check;               | &check;                   |
+| v2.7.4          |     v0.3.4      | &check;               | &check;                   |
+| v2.7.3          |     v0.3.3      | &check;               | &check;                   |
+| v2.7.2          |     v0.3.2      | &check;               | &check;                   |
+| v2.7.1          |     v0.3.0      | &check;               | &check;                   |
+| v2.7.0          |     v0.3.0      | &check;               | &check;                   |
 
 ## Why Do We Need It?
 

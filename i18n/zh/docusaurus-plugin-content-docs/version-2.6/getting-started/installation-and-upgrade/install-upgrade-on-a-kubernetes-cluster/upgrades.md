@@ -32,7 +32,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
 ### 离线安装：推送镜像到私有镜像仓库
 
-[仅适用于离线安装](../../../pages-for-subheaders/air-gapped-helm-cli-install.md)：为新的 Rancher Server 版本收集和推送镜像。使用你需要针对 Rancher 版本升级的镜像，按照步骤[推送镜像到私有镜像仓库](../other-installation-methods/air-gapped-helm-cli-install/publish-images.md)。
+[仅适用于离线安装](../other-installation-methods/air-gapped-helm-cli-install/air-gapped-helm-cli-install.md)：为新的 Rancher Server 版本收集和推送镜像。使用你需要针对 Rancher 版本升级的镜像，按照步骤[推送镜像到私有镜像仓库](../other-installation-methods/air-gapped-helm-cli-install/publish-images.md)。
 
 ### 使用 cert-manager 0.8.0 之前的版本升级
 
@@ -59,7 +59,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
 1. 获取你用来安装 Rancher 的仓库名称。
 
-   关于仓库及其区别，请参见 [Helm Chart Repositories](../resources/choose-a-rancher-version.md#helm-chart-仓库)。
+   关于仓库及其区别，请参见 [Helm Chart 仓库](../resources/choose-a-rancher-version.md#helm-chart-仓库)。
 
    - Latest：建议用于试用最新功能
       ```

@@ -31,7 +31,8 @@ While Rancher comes out-of-the-box with a set of default user roles, you can als
 The steps to add custom roles differ depending on the version of Rancher.
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
-1. In the left navigation bar, click **Roles**.
+1. In the left navigation bar, click **Role Templates**. 
+    * In Rancher v2.7.6 and earlier, the **Role Templates** page is labeled **Roles**.
 1.  Select a tab to determine the scope of the role you're adding. The tabs are:
 
   - **Global:** The role is valid for allowing members to manage global scoped resources.
@@ -65,7 +66,8 @@ The custom role can then be assigned to a user or group so that the role takes e
 To create a custom role based on an existing role,
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
-1. In the left navigation bar, click **Roles**.
+1. In the left navigation bar, click **Role Templates**. 
+    * In Rancher v2.7.6 and earlier, the **Role Templates** page is labeled **Roles**.
 1. Click the **Cluster** or **Project/Namespaces** tab. Click **Create Cluster Role** or **Create Project/Namespaces Role** depending on the scope. Note: Only cluster roles and project/namespace roles can inherit from another role.
 1. Enter a name for the role.
 1. In the **Inherit From** tab, select the role(s) that the custom role will inherit permissions from.
@@ -86,9 +88,10 @@ Custom roles can be deleted, but built-in roles cannot be deleted.
 To delete a custom role,
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
-1. In the left navigation bar, click **Roles**.
-2. Go to the custom global role that should be deleted and click **⋮ (…) > Delete**.
-3. Click **Delete**.
+1. In the left navigation bar, click **Role Templates**. 
+    * In Rancher v2.7.6 and earlier, the **Role Templates** page is labeled **Roles**.
+1. Go to the custom global role that should be deleted and click **⋮ (…) > Delete**.
+1. Click **Delete**.
 
 ## Assigning a Custom Role to a Group
 

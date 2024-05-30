@@ -30,21 +30,21 @@ Rancher API Server 是基于嵌入式 Kubernetes API Server 和 etcd 数据库�
 
 ### 授权和基于角色的权限控制（RBAC）
 
-- **用户管理**：Rancher API Server 除了管理本地用户，还[管理用户用来访问外部服务所需的认证信息](../pages-for-subheaders/authentication-config.md)，如登录 Active Directory 和 GitHub 所需的账号密码。
-- **授权**：Rancher API Server 可以管理[访问控制策略](../pages-for-subheaders/manage-role-based-access-control-rbac.md)和[安全策略](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)。
+- **用户管理**：Rancher API Server 除了管理本地用户，还[管理用户用来访问外部服务所需的认证信息](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/authentication-config.md)，如登录 Active Directory 和 GitHub 所需的账号密码。
+- **授权**：Rancher API Server 可以管理[访问控制策略](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md)和[安全策略](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)。
 
 ### 使用 Kubernetes 的功能
 
-- **配置 Kubernetes 集群**：Rancher API Server 可以在已有节点上[配置 Kubernetes](../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)，或进行 [Kubernetes 版本升级](installation-and-upgrade/upgrade-and-roll-back-kubernetes.md)。
-- **管理应用商店**：Rancher 支持使用 [Helm Chart 应用商店](../pages-for-subheaders/helm-charts-in-rancher.md)实现轻松重复部署应用。
-- **管理项目**：项目由集群中多个命名空间和访问控制策略组成，是 Rancher 中的一个概念，Kubernetes 中并没有这个概念。你可以使用项目实现以组为单位，管理多个命名空间，并进行 Kubernetes 相关操作。Rancher UI 提供用于[项目管理](../pages-for-subheaders/manage-projects.md)和[项目内应用管理](../pages-for-subheaders/kubernetes-resources-setup.md)的功能。
-- **Fleet 持续交付**：在 Rancher 中，你可以使用 [Fleet 持续交付](../pages-for-subheaders/fleet-gitops-at-scale.md)将应用程序从 Git 仓库部署到目标下游 Kubernetes 集群，无需任何手动操作。
-- **Istio**：[Rancher 与 Istio 集成](../pages-for-subheaders/istio.md)，使得管理员或集群所有者可以将 Istio 交给开发者，然后开发者使用 Istio 执行安全策略，排查问题，或为蓝绿部署，金丝雀部署，和 A/B 测试进行流量管理。
+- **配置 Kubernetes 集群**：Rancher API Server 可以在已有节点上[配置 Kubernetes](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md)，或进行 [Kubernetes 版本升级](installation-and-upgrade/upgrade-and-roll-back-kubernetes.md)。
+- **管理应用商店**：Rancher 支持使用 [Helm Chart 应用商店](../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md)实现轻松重复部署应用。
+- **管理项目**：项目由集群中多个命名空间和访问控制策略组成，是 Rancher 中的一个概念，Kubernetes 中并没有这个概念。你可以使用项目实现以组为单位，管理多个命名空间，并进行 Kubernetes 相关操作。Rancher UI 提供用于[项目管理](../how-to-guides/advanced-user-guides/manage-projects/manage-projects.md)和[项目内应用管理](../how-to-guides/new-user-guides/kubernetes-resources-setup/kubernetes-resources-setup.md)的功能。
+- **Fleet 持续交付**：在 Rancher 中，你可以使用 [Fleet 持续交付](../integrations-in-rancher/fleet-gitops-at-scale/fleet-gitops-at-scale.md)将应用程序从 Git 仓库部署到目标下游 Kubernetes 集群，无需任何手动操作。
+- **Istio**：[Rancher 与 Istio 集成](../integrations-in-rancher/istio/istio.md)，使得管理员或集群所有者可以将 Istio 交给开发者，然后开发者使用 Istio 执行安全策略，排查问题，或为蓝绿部署，金丝雀部署，和 A/B 测试进行流量管理。
 
 ### 配置云基础设施
 
 - **同步节点信息**：Rancher API Server 可以同步所有集群中全部[节点](../how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools.md)的信息。
-- **配置云基础设施**：如果你为 Rancher 配置了云提供商，Rancher 可以在云端动态配置[新节点](../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)和[持久化存储](../pages-for-subheaders/create-kubernetes-persistent-storage.md)。
+- **配置云基础设施**：如果你为 Rancher 配置了云提供商，Rancher 可以在云端动态配置[新节点](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)和[持久化存储](../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md)。
 
 ### 查看集群信息
 
@@ -54,9 +54,9 @@ Rancher API Server 是基于嵌入式 Kubernetes API Server 和 etcd 数据库�
 
 ## 使用 Rancher 编辑下游集群
 
-对于已有集群而言，可提供的选项和设置取决于你配置集群的方法。例如，只有[通过 RKE 启动](../pages-for-subheaders/launch-kubernetes-with-rancher.md)的集群才有可编辑的**集群选项**。
+对于已有集群而言，可提供的选项和设置取决于你配置集群的方法。例如，只有[通过 RKE 启动](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)的集群才有可编辑的**集群选项**。
 
-使用 Rancher 创建集群后，集群管理员可以管理集群成员，开启 Pod 安全策略，管理节点池，以及进行[其他操作](../pages-for-subheaders/cluster-configuration.md)。
+使用 Rancher 创建集群后，集群管理员可以管理集群成员，开启 Pod 安全策略，管理节点池，以及进行[其他操作](../reference-guides/cluster-configuration/cluster-configuration.md)。
 
 下表总结了每一种类型的集群和对应的可编辑的选项和设置：
 

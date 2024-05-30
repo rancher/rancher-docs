@@ -16,6 +16,6 @@ Refer to this [guide](tips-for-running-rancher.md) for our general advice for se
 
 This [guide](rancher-deployment-strategy.md) is designed to help you choose whether a regional deployment strategy or a hub-and-spoke deployment strategy is better for a Rancher server that manages downstream Kubernetes clusters.
 
-### Installing Rancher in a vSphere Environment
+### Installing Rancher in a VMware vSphere Environment
 
 This [guide](on-premises-rancher-in-vsphere.md) outlines a reference architecture for installing Rancher in a vSphere environment, in addition to standard vSphere best practices as documented by VMware.

@@ -179,9 +179,9 @@ RKE2 server 需要开放端口 6443 和 9345 才能供集群中的其他节点�
 
 下游 Kubernetes 集群用于运行你的应用和服务。本节介绍了哪些端口需要在下游集群的节点上打开，以便 Rancher 能够与它们进行通信。
 
-不同的下游集群的启动方式有不同的端口要求。下面的每个标签都列出了不同[集群类型](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)所需打开的端口。
+不同的下游集群的启动方式有不同的端口要求。下面的每个标签都列出了不同[集群类型](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md)所需打开的端口。
 
-下图描述了为每个[集群类型](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)打开的端口。
+下图描述了为每个[集群类型](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md)打开的端口。
 
 <figcaption>Rancher 管理面板的端口要求</figcaption>
 
@@ -198,7 +198,7 @@ RKE2 server 需要开放端口 6443 和 9345 才能供集群中的其他节点�
 <details>
   <summary>单击展开</summary>
 
-下表描述了节点在[云提供商](../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)中创建的情况下，[Rancher 启动 Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) 的端口要求。
+下表描述了节点在[云提供商](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)中创建的情况下，[Rancher 启动 Kubernetes](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) 的端口要求。
 
 :::note
 
@@ -215,7 +215,7 @@ RKE2 server 需要开放端口 6443 和 9345 才能供集群中的其他节点�
 <details>
   <summary>单击展开</summary>
 
-下表描述了使用[自定义节点](../../../pages-for-subheaders/use-existing-nodes.md)的情况下，[Rancher 启动 Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) 的端口要求。
+下表描述了使用[自定义节点](../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md)的情况下，[Rancher 启动 Kubernetes](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) 的端口要求。
 
 <PortsCustomNodes/>
 
@@ -226,7 +226,7 @@ RKE2 server 需要开放端口 6443 和 9345 才能供集群中的其他节点�
 <details>
   <summary>单击展开</summary>
 
-下表描述了[托管集群](../../../pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers.md)的端口要求。
+下表描述了[托管集群](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/set-up-clusters-from-hosted-kubernetes-providers.md)的端口要求。
 
 <PortsImportedHosted/>
 

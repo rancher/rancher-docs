@@ -184,6 +184,11 @@ module.exports = {
             current: {
               label: 'Latest',
             },
+            2.9: {
+              label: 'v2.9 (Preview)',
+              path: 'v2.9',
+              banner: 'unreleased'
+            },
             2.8: {
               label: 'v2.8',
               path: 'v2.8',
@@ -245,6 +250,38 @@ module.exports = {
       {
         fromExtensions: ['html', 'htm'],
         redirects: [
+          { // Redirects for multi-cluster apps removal (rancher-docs/issues/734)
+            to: '/integrations-in-rancher/fleet',
+            from: ['/pages-for-subheaders/deploy-apps-across-clusters', '/how-to-guides/new-user-guides/deploy-apps-across-clusters', '/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet', '/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps']
+          },
+          {
+            to: '/v2.8/integrations-in-rancher/fleet',
+            from: ['/v2.8/pages-for-subheaders/deploy-apps-across-clusters', '/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters', '/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet', '/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps']
+          }, 
+          {
+            to: '/v2.7/integrations-in-rancher/fleet-gitops-at-scale',
+            from: ['/v2.7/pages-for-subheaders/deploy-apps-across-clusters', '/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters', '/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet', '/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps']
+          },// Redirects for multi-cluster apps removal (rancher-docs/issues/734) (end)
+          {
+            to: '/faq/deprecated-features',
+            from: '/faq/deprecated-features-in-v2.5'
+          },
+          {
+            to: '/v2.8/faq/deprecated-features',
+            from: '/v2.8/faq/deprecated-features-in-v2.5'
+          },
+          {
+            to: '/v2.7/faq/deprecated-features',
+            from: '/v2.7/faq/deprecated-features-in-v2.5'
+          },
+          {
+            to: '/v2.6/faq/deprecated-features',
+            from: '/v2.6/faq/deprecated-features-in-v2.5'
+          },
+          {
+            to: '/v2.5/faq/deprecated-features',
+            from: '/v2.5/faq/deprecated-features-in-v2.5'
+          },
           { // Redirects for pages-for-subheaders removal [2.0-2.4]
             to: '/v2.0-v2.4/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-authentication',
             from: '/v2.0-v2.4/pages-for-subheaders/about-authentication'
@@ -1326,6 +1363,14 @@ module.exports = {
             from: '/v2.7/pages-for-subheaders/about-provisioning-drivers'
           },
           {
+            to: '/v2.7/integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration',
+            from: '/v2.7/pages-for-subheaders/aws-marketplace-payg-integration'
+          }, // Redirect for aws pages-for-subheader removal
+          {
+            to: '/v2.7/integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration',
+            from: '/v2.7/pages-for-subheaders/azure-marketplace-payg-integration'
+          }, // Redirect for azure pages-for-subheader removal
+          {
             to: '/v2.7/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates',
             from: '/v2.7/pages-for-subheaders/about-rke1-templates'
           },
@@ -1420,10 +1465,6 @@ module.exports = {
           {
             to: '/v2.7/integrations-in-rancher/logging/custom-resource-configuration',
             from: '/v2.7/pages-for-subheaders/custom-resource-configuration'
-          },
-          {
-            to: '/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters',
-            from: '/v2.7/pages-for-subheaders/deploy-apps-across-clusters'
           },
           {
             to: '/v2.7/getting-started/quick-start-guides/deploy-rancher-manager',
@@ -1682,10 +1723,6 @@ module.exports = {
             from: '/v2.8/pages-for-subheaders/about-rke1-templates'
           },
           {
-            to: '/v2.8/reference-guides/about-the-api',
-            from: '/v2.8/pages-for-subheaders/about-the-api'
-          },
-          {
             to: '/v2.8/how-to-guides/new-user-guides/manage-clusters/access-clusters',
             from: '/v2.8/pages-for-subheaders/access-clusters'
           },
@@ -1772,10 +1809,6 @@ module.exports = {
           {
             to: '/v2.8/integrations-in-rancher/logging/custom-resource-configuration',
             from: '/v2.8/pages-for-subheaders/custom-resource-configuration'
-          },
-          {
-            to: '/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters',
-            from: '/v2.8/pages-for-subheaders/deploy-apps-across-clusters'
           },
           {
             to: '/v2.8/getting-started/quick-start-guides/deploy-rancher-manager',
@@ -2030,10 +2063,6 @@ module.exports = {
             from: '/pages-for-subheaders/about-rke1-templates'
           },
           {
-            to: '/reference-guides/about-the-api',
-            from: '/pages-for-subheaders/about-the-api'
-          },
-          {
             to: '/how-to-guides/new-user-guides/manage-clusters/access-clusters',
             from: '/pages-for-subheaders/access-clusters'
           },
@@ -2120,10 +2149,6 @@ module.exports = {
           {
             to: '/integrations-in-rancher/logging/custom-resource-configuration',
             from: '/pages-for-subheaders/custom-resource-configuration'
-          },
-          {
-            to: '/how-to-guides/new-user-guides/deploy-apps-across-clusters',
-            from: '/pages-for-subheaders/deploy-apps-across-clusters'
           },
           {
             to: '/getting-started/quick-start-guides/deploy-rancher-manager',
@@ -3424,7 +3449,25 @@ module.exports = {
           {
             to: '/v2.7/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale',
             from: '/v2.7/reference-guides/best-practices/rancher-server/tips-for-scaling-rancher'
+          },
+          // Redirects for restructure from PR #1147 (start)
+          {
+            to: '/v2.8/api/v3-rancher-api-guide',
+            from: ['/v2.8/reference-guides/about-the-api', '/v2.8/pages-for-subheaders/about-the-api']
+          },
+          {
+            to: '/v2.8/api/api-tokens',
+            from: '/v2.8/reference-guides/about-the-api/api-tokens'
+          },
+          {
+            to: '/api/v3-rancher-api-guide',
+            from: ['/reference-guides/about-the-api', '/pages-for-subheaders/about-the-api']
+          },
+          {
+            to: '/api/api-tokens',
+            from: '/reference-guides/about-the-api/api-tokens'
           }
+          // Redirects for restructure from PR #1147 (end)
         ],
       },
     ],

@@ -1,12 +1,16 @@
 ---
-title: '1. 设置基础设施和私有镜像仓库'
+title: "1. 设置基础设施和私有镜像仓库"
 ---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/infrastructure-private-registry"/>
+</head>
 
 本文介绍如何在离线环境中，为 Rancher Management server 配置底层基础设施。你还将设置 Rancher 节点中必须可用的私有容器镜像仓库。
 
 离线环境是 Rancher Server 离线安装或安装在防火墙后面的环境。
 
-Rancher 安装在 K3s Kubernetes 集群、RKE Kubernetes 集群还是单个 Docker 容器上对应的基础设施设置会有所不同。如需了解各个安装方式的更多信息，请参见[本页](../../../../pages-for-subheaders/installation-and-upgrade.md)。
+Rancher 安装在 K3s Kubernetes 集群、RKE Kubernetes 集群还是单个 Docker 容器上对应的基础设施设置会有所不同。如需了解各个安装方式的更多信息，请参见[本页](../../installation-and-upgrade.md)。
 
 Rancher 可以安装在任何 Kubernetes 集群上。为了阅读方便，我们在下文中仍提供了 RKE 和 K3s Kubernetes 基础设施教程。
 
@@ -25,7 +29,7 @@ Rancher 可以安装在任何 Kubernetes 集群上。为了阅读方便，我们
 
 这些主机会断开互联网链接，但需要能与你的私有镜像仓库连接。
 
-请确保你的节点满足[操作系统，容器运行时，硬件和网络](../../../../pages-for-subheaders/installation-requirements.md)的常规要求。
+请确保你的节点满足[操作系统，容器运行时，硬件和网络](../../installation-requirements/installation-requirements.md)的常规要求。
 
 如需获取配置 Linux 节点的示例，请参见[在 Amazon EC2 中配置节点](../../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md)的教程。
 
@@ -35,9 +39,9 @@ K3s 与其他 Kubernetes 发行版不同，在于其支持使用 etcd 以外的�
 
 对于 K3s 高可用安装，你需要配置以下的其中一个数据库：
 
-* [PostgreSQL](https://www.postgresql.org/)（10.7 和 11.5 已验证）
-* [MySQL](https://www.mysql.com/)（5.7 已验证）
-* [etcd](https://etcd.io/)（3.3.15 已验证）
+- [PostgreSQL](https://www.postgresql.org/)（10.7 和 11.5 已验证）
+- [MySQL](https://www.mysql.com/)（5.7 已验证）
+- [etcd](https://etcd.io/)（3.3.15 已验证）
 
 在安装 Kubernetes 时，你需要传入 K3s 连接数据库的详细信息。
 
@@ -86,9 +90,9 @@ Rancher 支持使用私有镜像仓库进行离线安装。你必须有自己的
 
 如果你需要创建私有镜像仓库，请参阅相应运行时的文档：
 
-* [Containerd](https://github.com/containerd/containerd/blob/main/docs/cri/config.md#registry-configuration).
-   * [Nerdctl 命令和镜像仓库托管服务](https://github.com/containerd/nerdctl/blob/main/docs/registry.md)
-* [Docker](https://docs.docker.com/registry/deploying/).
+- [Containerd](https://github.com/containerd/containerd/blob/main/docs/cri/config.md#registry-configuration).
+  - [Nerdctl 命令和镜像仓库托管服务](https://github.com/containerd/nerdctl/blob/main/docs/registry.md)
+- [Docker](https://docs.docker.com/registry/deploying/).
 
 </TabItem>
 <TabItem value="RKE">
@@ -157,9 +161,9 @@ Rancher 支持使用安全的私有镜像仓库进行离线安装。你必须有
 
 如果你需要创建私有镜像仓库，请参阅相应运行时的文档：
 
-* [Containerd](https://github.com/containerd/containerd/blob/main/docs/cri/config.md#registry-configuration).
-   * [Nerdctl 命令和镜像仓库托管服务](https://github.com/containerd/nerdctl/blob/main/docs/registry.md)
-* [Docker](https://docs.docker.com/registry/deploying/).
+- [Containerd](https://github.com/containerd/containerd/blob/main/docs/cri/config.md#registry-configuration).
+  - [Nerdctl 命令和镜像仓库托管服务](https://github.com/containerd/nerdctl/blob/main/docs/registry.md)
+- [Docker](https://docs.docker.com/registry/deploying/).
 
 </TabItem>
 <TabItem value="Docker">
@@ -190,4 +194,5 @@ Rancher 支持使用私有镜像仓库在堡垒服务器中进行离线安装。
 </Tabs>
 
 ### 后续操作
+
 [收集镜像并发布到你的私有镜像仓库](publish-images.md)

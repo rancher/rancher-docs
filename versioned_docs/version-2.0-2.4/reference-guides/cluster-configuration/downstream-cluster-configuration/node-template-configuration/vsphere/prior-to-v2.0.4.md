@@ -1,5 +1,5 @@
 ---
-title: vSphere Node Template Configuration in Rancher before v2.0.4
+title: VMware vSphere Node Template Configuration in Rancher before v2.0.4
 ---
 
 ## Account Access

@@ -79,14 +79,19 @@ If you are using [local snapshots](./back-up-rancher-launched-kubernetes-cluster
     1. In the **Clusters** page, go to the cluster where you want to remove nodes.
     1. In the **Machines** tab, click **⋮ > Delete** on each node you want to delete. Initially, you will see the nodes hang in a `deleting` state, but once all etcd nodes are deleting, they will be removed together. This is due to the fact that Rancher sees all etcd nodes deleting and proceeds to "short circuit" the etcd safe-removal logic.
 
-1. After all etcd nodes are removed, add a new etcd node that you are planning to restore from.
+1. After all etcd nodes are removed, add the new etcd node that you are planning to restore from. Assign the new node the role of `all` (etcd, controlplane, and worker).
 
-    - For custom clusters, go to the **Registration** tab then copy and run the registration command on your node. If the node has previously been used in a cluster, [clean the node](../manage-clusters/clean-cluster-nodes.md#cleaning-up-nodes) first.
+    - If the node was previously in a cluster, [clean the node](../manage-clusters/clean-cluster-nodes.md#cleaning-up-nodes) first.
+    - For custom clusters, go to the **Registration** tab and check the box for `etcd, controlplane, and worker`. Then copy and run the registration command on your node.
     - For node driver clusters, a new node is provisioned automatically.
 
     At this point, Rancher will indicate that restoration from etcd snapshot is required.
 
 1. Restore from an etcd snapshot.
+
+    :::note
+    As the etcd node is a clean node, you may need to manually create the `/var/lib/rancher/<k3s/rke2>/server/db/snapshots/` path.
+    :::
 
     - For S3 snapshots, restore using the UI.
       1. Click the **Snapshots** tab to view the list of saved snapshots.
@@ -95,7 +100,15 @@ If you are using [local snapshots](./back-up-rancher-launched-kubernetes-cluster
       1. Click **Restore**.
     - For local snapshots, restore using the UI is **not** available.
       1. In the upper right corner, click **⋮ > Edit YAML**.
-      1. Define `spec.cluster.rkeConfig.etcdSnapshotRestore.name` as the filename of the snapshot on disk in `/var/lib/rancher/<k3s/rke2>/server/db/snapshots/`.
+      1. The example YAML below can be added under your `rkeConfig` to configure the etcd restore:
+
+      ```yaml
+        ...
+        rkeConfig:
+          etcdSnapshotRestore:
+            name: <string> # This field is required. Refers to the filename of the associated etcdsnapshot object.
+        ...
+      ```
 
 1. After restoration is successful, you can scale your etcd nodes back up to the desired redundancy.
 

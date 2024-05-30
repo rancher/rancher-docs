@@ -23,11 +23,21 @@ If a file is moved or renamed, you'll also need to edit the `sidebars.js` files 
 
 ### Navigate the Repo
 
-The file paths in the repo correspond to the URLs for pages on the docs website. The docs for the latest version of Rancher are located in `/docs`. Most index pages are found within the `/pages-for-subheaders` directory in `/docs`. All images are in `/static/img` in the top level of the repo. Older docs are found within `/versioned_docs` and generally follow the same structure as the files in `/docs`.
+The file paths in the repo correspond to the URLs for pages on the docs website. The docs for the latest version of Rancher are located in `/docs`. All images are in `/static/img` in the top level of the repo. Older docs are found within `/versioned_docs` and generally follow the same structure as the files in `/docs`.
 
 ### Style & Formatting
 
-The docs are written in [Markdown](https://www.markdownguide.org/getting-started/). We refer to the Microsoft [style guide](https://learn.microsoft.com/en-us/style-guide/welcome/) and use standard American English. Many pages are also available in Simplified Chinese.
+The docs are written in [Markdown](https://www.markdownguide.org/getting-started/). We use standard American English and many pages are also available in Simplified Chinese.
+
+Moving forward, we are referring to the SUSE [style guide](https://documentation.suse.com/style/current/pdf/style-guide_en.pdf). The **Style check / runner / vale (pull_request)** check used [Vale](https://vale.sh/) to make style and grammar suggestions for new or updated documentation based on the SUSE style guide. To review these suggestions when working on a PR:
+
+1. Select the details of the **Style check / runner / vale (pull_request)** check.
+1. In the logs, go to **Run errata-ai/vale-action@v2.1.0** and select **Running vale with reviewdog 🐶 ...** to view the suggestions.
+1. New or updated files are checked against the SUSE style guide. Suggestions have the following format: '{"message": "[suse-vale-styleguide.Rule] Rule description", "location": {"path": "file-path", "range": {"start": {"line": , "column": }}}, "severity": " "}'
+
+    For example: '{"message": "[suse-vale-styleguide.Usage] Use 'certain' instead of 'some'", "location": {"path": "docs/contribute-to-rancher.md", "range": {"start": {"line": 3, "column": 132}}}, "severity": "WARNING"}'
+
+1. Incorporate the suggestions when possible and appropriate.
 
 Every docs page contain metadata in the first few lines:
 

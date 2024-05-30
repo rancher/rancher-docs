@@ -4,11 +4,11 @@ title: '2. 收集镜像并发布到私有仓库'
 
 本文介绍如何配置私有镜像仓库，以便在安装 Rancher 时，Rancher 可以从此私有镜像仓库中拉取所需的镜像。
 
-默认情况下，所有用于[配置 Kubernetes 集群](../../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)或启动 Rancher 中的工具（如监控，流水线，告警等）的镜像都是从 Docker Hub 中拉取的。在 Rancher 的离线安装中，你需要一个私有仓库，该仓库位于你的 Rancher Server 中某个可访问的位置。然后，你可加载该存有所有镜像的镜像仓库。
+默认情况下，所有用于[配置 Kubernetes 集群](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md)或启动 Rancher 中的工具（如监控，流水线，告警等）的镜像都是从 Docker Hub 中拉取的。在 Rancher 的离线安装中，你需要一个私有仓库，该仓库位于你的 Rancher Server 中某个可访问的位置。然后，你可加载该存有所有镜像的镜像仓库。
 
 使用 Docker 安装 Rancher，和把 Rancher 安装到 Kubernetes 集群，其对应的推送镜像到私有镜像仓库步骤是一样的。
 
-你使用 Rancher 配置的下游集群是否有运行 Windows 的节点，决定了本文涉及的步骤。我们提供的推送镜像到私有镜像仓库步骤，是基于假设 Rancher 仅配置运行 Linux 节点的下游 Kubernetes 集群的。但是，如果你计划[在下游 Kubernetes 集群中使用 Windows 节点](../../../../pages-for-subheaders/use-windows-clusters.md)，我们有单独的文档来介绍如何为需要的镜像提供支持。
+你使用 Rancher 配置的下游集群是否有运行 Windows 的节点，决定了本文涉及的步骤。我们提供的推送镜像到私有镜像仓库步骤，是基于假设 Rancher 仅配置运行 Linux 节点的下游 Kubernetes 集群的。但是，如果你计划[在下游 Kubernetes 集群中使用 Windows 节点](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/use-windows-clusters.md)，我们有单独的文档来介绍如何为需要的镜像提供支持。
 
 :::note 先决条件：
 

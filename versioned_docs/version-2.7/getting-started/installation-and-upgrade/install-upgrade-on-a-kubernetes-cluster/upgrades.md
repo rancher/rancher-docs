@@ -28,7 +28,10 @@ The kubeconfig can also be manually targeted for the intended cluster with the `
 Review the list of known issues for each Rancher version, which can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums.](https://forums.rancher.com/c/announcements/12)
 
 Note that upgrades _to_ or _from_ any chart in the [rancher-alpha repository](../resources/choose-a-rancher-version.md#helm-chart-repositories) aren't supported.
+
 ### Helm Version
+
+<DeprecationHelm2 />
 
 The upgrade instructions assume you are using Helm 3.
 

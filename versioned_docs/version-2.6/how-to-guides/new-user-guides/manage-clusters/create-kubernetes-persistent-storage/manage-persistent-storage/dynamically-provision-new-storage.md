@@ -70,7 +70,7 @@ StatefulSets manage the deployment and scaling of Pods while maintaining a stick
 1. Click **StatefulSet**.
 1. In the **Volume Claim Templates** tab, click **Add Claim Template**.
 1. Enter a name for the persistent volume.
-1. In the **StorageClass* field, select the StorageClass that will dynamically provision storage for pods managed by this StatefulSet.
+1. In the **StorageClass** field, select the StorageClass that will dynamically provision storage for pods managed by this StatefulSet.
 1. In the **Mount Point** field, enter the path that the workload will use to access the volume.
 1. Click **Launch**.
 
@@ -84,7 +84,7 @@ To attach the PVC to an existing workload,
 1. Go to the workload that will use storage provisioned with the StorageClass that you cared at click **⋮ > Edit Config**.
 1. In the **Volume Claim Templates** section, click **Add Claim Template**.
 1. Enter a persistent volume name.
-1. In the **StorageClass* field, select the StorageClass that will dynamically provision storage for pods managed by this StatefulSet.
+1. In the **StorageClass** field, select the StorageClass that will dynamically provision storage for pods managed by this StatefulSet.
 1. In the **Mount Point** field, enter the path that the workload will use to access the volume.
 1. Click **Save**.
 

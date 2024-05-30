@@ -1,30 +1,34 @@
 ---
-title: RKE2 Self-Assessment Guide - CIS Benchmark v1.23 - K8s v1.23
+title: RKE2 自我评估指南 - CIS Benchmark v1.23 - K8s v1.23
 ---
 
-This document is a companion to the [RKE2 Hardening Guide](../../../../pages-for-subheaders/rke2-hardening-guide.md), which provides prescriptive guidance on how to harden RKE2 clusters that are running in production and managed by Rancher. This benchmark guide helps you evaluate the security of a hardened cluster against each control in the CIS Kubernetes Benchmark.
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.23"/>
+</head>
 
-This guide corresponds to the following versions of Rancher, CIS Benchmarks, and Kubernetes:
+本文档是 [RKE2 加固指南](rke2-hardening-guide.md)的配套文档，该指南提供了关于如何加固正在生产环境中运行并由 Rancher 管理的 RKE2 集群的指导方针。本 benchmark 指南可帮助你根据 CIS Kubernetes Benchmark 中的每个 control 来评估加固集群的安全性。
 
-| Rancher Version | CIS Benchmark Version | Kubernetes Version |
+本指南对应以下版本的 Rancher、CIS Benchmarks 和 Kubernetes：
+
+| Rancher 版本     | CIS Benchmark 版本    | Kubernetes 版本     |
 |-----------------|-----------------------|--------------------|
 | Rancher v2.7    | Benchmark v1.23       | Kubernetes v1.23   |
 
-This guide walks through the various controls and provide updated example commands to audit compliance in Rancher created clusters. Because Rancher and RKE2 install Kubernetes services as Docker containers, many of the control verification checks in the CIS Kubernetes Benchmark don't apply. These checks will return a result of `Not Applicable`.
+本指南将介绍各种 controls，并提供更新的示例命令来审计 Rancher 创建的集群中的合规性。由于 Rancher 和 RKE2 将 Kubernetes 服务安装为 Docker 容器，因此 CIS Kubernetes Benchmark 中的许多 control 验证检查不适用。这些检查将返回 `Not Applicable` 的结果。
 
-This document is for Rancher operators, security teams, auditors and decision makers.
+本文档适用于 Rancher 运维人员、安全团队、审计员和决策者。
 
-For more information about each control, including detailed descriptions and remediations for failing tests, refer to the corresponding section of the CIS Kubernetes Benchmark v1.23. You can download the benchmark, after creating a free account, at [Center for Internet Security (CIS)](https://www.cisecurity.org/benchmark/kubernetes/).
+有关每个 control 的更多信息，包括详细描述和未通过测试的补救措施，请参考 CIS Kubernetes Benchmark v1.23 的相应部分。你可以在[互联网安全中心 (CIS)](https://www.cisecurity.org/benchmark/kubernetes/)创建免费账户后下载 benchmark。
 
-## Testing Methodology
+## 测试方法
 
-RKE2 launches control plane components as static pods, managed by the kubelet, and uses containerd as the container runtime. Configuration is defined by arguments passed to the container at the time of initialization or via configuration file.
+RKE2 将 control plane 组件作为静态 Pod 启动，由 kubelet 管理，并使用 containerd 作为容器运行时。配置是由初始化时或通过配置文件传递给容器的参数定义的。
 
-Where control audits differ from the original CIS benchmark, the audit commands specific to Rancher are provided for testing. When performing the tests, you will need access to the command line on the hosts of all RKE2 nodes. The commands also make use of the [kubectl](https://kubernetes.io/docs/tasks/tools/) (with a valid configuration file) and [jq](https://stedolan.github.io/jq/) tools, which are required in the testing and evaluation of test results.
+在 control 审计与原始 CIS benchmark 不同时，提供了针对 Rancher 的特定审计命令以进行测试。在执行测试时，你将需要访问所有 RKE2 节点主机上的命令行。这些命令还使用了 [kubectl](https://kubernetes.io/docs/tasks/tools/)（带有有效的配置文件）和 [jq](https://stedolan.github.io/jq/) 工具，在测试和评估测试结果时这些工具是必需的。
 
 :::note
 
-This guide only covers `automated` (previously called `scored`) tests.
+本指南仅涵盖 `automated`（之前称为 `scored`）测试。
 
 :::
 

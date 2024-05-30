@@ -2,6 +2,10 @@
 title: etcd 节点故障排除
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/troubleshooting/kubernetes-components/troubleshooting-etcd-nodes"/>
+</head>
+
 本文介绍了对具有 `etcd` 角色的节点进行故障排除的命令和提示。
 
 
@@ -15,8 +19,8 @@ docker ps -a -f=name=etcd$
 
 输出示例：
 ```
-CONTAINER ID        IMAGE                         COMMAND                  CREATED             STATUS              PORTS               NAMES
-605a124503b9        rancher/coreos-etcd:v3.2.18   "/usr/local/bin/et..."   2 hours ago         Up 2 hours                              etcd
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED          STATUS          PORTS     NAMES
+d26adbd23643   rancher/mirrored-coreos-etcd:v3.5.7   "/usr/local/bin/etcd…"   30 minutes ago   Up 30 minutes             etcd
 ```
 
 ## etcd 容器日志记录
@@ -47,30 +51,13 @@ docker logs etcd
 docker exec etcd etcdctl member list
 ```
 
-如果 etcd 版本低于 3.3.x（Kubernetes 1.13.x 及更低版本）且添加节点时指定了 `--internal-address`，则使用以下命令：
-```
-docker exec etcd sh -c "etcdctl --endpoints=\$ETCDCTL_ENDPOINT member list"
-```
-
-输出示例：
-```
-xxx, started, etcd-xxx, https://IP:2380, https://IP:2379,https://IP:4001
-xxx, started, etcd-xxx, https://IP:2380, https://IP:2379,https://IP:4001
-xxx, started, etcd-xxx, https://IP:2380, https://IP:2379,https://IP:4001
-```
-
 ### 检查端点状态
 
 `RAFT TERM` 的值应该是相等的，而且 `RAFT INDEX` 相差不能太大。
 
 命令：
 ```
-docker exec -e ETCDCTL_ENDPOINTS=$(docker exec etcd /bin/sh -c "etcdctl member list | cut -d, -f5 | sed -e 's/ //g' | paste -sd ','") etcd etcdctl endpoint status --write-out table
-```
-
-如果 etcd 版本低于 3.3.x（Kubernetes 1.13.x 及更低版本）且添加节点时指定了 `--internal-address`，则使用以下命令：
-```
-docker exec etcd etcdctl endpoint status --endpoints=$(docker exec etcd /bin/sh -c "etcdctl --endpoints=\$ETCDCTL_ENDPOINT member list | cut -d, -f5 | sed -e 's/ //g' | paste -sd ','") --write-out table
+docker exec -e ETCDCTL_ENDPOINTS=$(docker exec etcd etcdctl member list | cut -d, -f5 | sed -e 's/ //g' | paste -sd ',') etcd etcdctl endpoint status --write-out table
 ```
 
 输出示例：
@@ -78,9 +65,9 @@ docker exec etcd etcdctl endpoint status --endpoints=$(docker exec etcd /bin/sh 
 +-----------------+------------------+---------+---------+-----------+-----------+------------+
 | ENDPOINT        |        ID        | VERSION | DB SIZE | IS LEADER | RAFT TERM | RAFT INDEX |
 +-----------------+------------------+---------+---------+-----------+-----------+------------+
-| https://IP:2379 | 333ef673fc4add56 |  3.2.18 |   24 MB |     false |        72 |      66887 |
-| https://IP:2379 | 5feed52d940ce4cf |  3.2.18 |   24 MB |      true |        72 |      66887 |
-| https://IP:2379 | db6b3bdb559a848d |  3.2.18 |   25 MB |     false |        72 |      66887 |
+| https://IP:2379 | 333ef673fc4add56 |  3.5.7  |   24 MB |     false |        72 |      66887 |
+| https://IP:2379 | 5feed52d940ce4cf |  3.5.7  |   24 MB |      true |        72 |      66887 |
+| https://IP:2379 | db6b3bdb559a848d |  3.5.7  |   25 MB |     false |        72 |      66887 |
 +-----------------+------------------+---------+---------+-----------+-----------+------------+
 ```
 
@@ -88,12 +75,7 @@ docker exec etcd etcdctl endpoint status --endpoints=$(docker exec etcd /bin/sh 
 
 命令：
 ```
-docker exec -e ETCDCTL_ENDPOINTS=$(docker exec etcd /bin/sh -c "etcdctl member list | cut -d, -f5 | sed -e 's/ //g' | paste -sd ','") etcd etcdctl endpoint health
-```
-
-如果 etcd 版本低于 3.3.x（Kubernetes 1.13.x 及更低版本）且添加节点时指定了 `--internal-address`，则使用以下命令：
-```
-docker exec etcd etcdctl endpoint health --endpoints=$(docker exec etcd /bin/sh -c "etcdctl --endpoints=\$ETCDCTL_ENDPOINT member list | cut -d, -f5 | sed -e 's/ //g' | paste -sd ','")
+docker exec -e ETCDCTL_ENDPOINTS=$(docker exec etcd etcdctl member list | cut -d, -f5 | sed -e 's/ //g' | paste -sd ',') etcd etcdctl endpoint health
 ```
 
 输出示例：
@@ -107,17 +89,9 @@ https://IP:2379 is healthy: successfully committed proposal: took = 2.451201ms
 
 命令：
 ```
-for endpoint in $(docker exec etcd /bin/sh -c "etcdctl member list | cut -d, -f5"); do
+for endpoint in $(docker exec etcd etcdctl member list | cut -d, -f5); do
    echo "Validating connection to ${endpoint}/health"
-   docker run --net=host -v $(docker inspect kubelet --format '{{ range .Mounts }}{{ if eq .Destination "/etc/kubernetes" }}{{ .Source }}{{ end }}{{ end }}')/ssl:/etc/kubernetes/ssl:ro appropriate/curl -s -w "\n" --cacert $(docker exec etcd printenv ETCDCTL_CACERT) --cert $(docker exec etcd printenv ETCDCTL_CERT) --key $(docker exec etcd printenv ETCDCTL_KEY) "${endpoint}/health"
-done
-```
-
-如果 etcd 版本低于 3.3.x（Kubernetes 1.13.x 及更低版本）且添加节点时指定了 `--internal-address`，则使用以下命令：
-```
-for endpoint in $(docker exec etcd /bin/sh -c "etcdctl --endpoints=\$ETCDCTL_ENDPOINT member list | cut -d, -f5"); do
-  echo "Validating connection to ${endpoint}/health";
-  docker run --net=host -v $(docker inspect kubelet --format '{{ range .Mounts }}{{ if eq .Destination "/etc/kubernetes" }}{{ .Source }}{{ end }}{{ end }}')/ssl:/etc/kubernetes/ssl:ro appropriate/curl -s -w "\n" --cacert $(docker exec etcd printenv ETCDCTL_CACERT) --cert $(docker exec etcd printenv ETCDCTL_CERT) --key $(docker exec etcd printenv ETCDCTL_KEY) "${endpoint}/health"
+   docker run --net=host -v $(docker inspect kubelet --format '{{ range .Mounts }}{{ if eq .Destination "/etc/kubernetes" }}{{ .Source }}{{ end }}{{ end }}')/ssl:/etc/kubernetes/ssl:ro appropriate/curl -s -w "\n" --cacert $(docker inspect -f '{{range $index, $value := .Config.Env}}{{if eq (index (split $value "=") 0) "ETCDCTL_CACERT" }}{{range $i, $part := (split $value "=")}}{{if gt $i 1}}{{print "="}}{{end}}{{if gt $i 0}}{{print $part}}{{end}}{{end}}{{end}}{{end}}' etcd) --cert $(docker inspect -f '{{range $index, $value := .Config.Env}}{{if eq (index (split $value "=") 0) "ETCDCTL_CERT" }}{{range $i, $part := (split $value "=")}}{{if gt $i 1}}{{print "="}}{{end}}{{if gt $i 0}}{{print $part}}{{end}}{{end}}{{end}}{{end}}' etcd) --key $(docker inspect -f '{{range $index, $value := .Config.Env}}{{if eq (index (split $value "=") 0) "ETCDCTL_KEY" }}{{range $i, $part := (split $value "=")}}{{if gt $i 1}}{{print "="}}{{end}}{{if gt $i 0}}{{print $part}}{{end}}{{end}}{{end}}{{end}}' etcd) "${endpoint}/health"
 done
 ```
 
@@ -135,28 +109,20 @@ Validating connection to https://IP:2379/health
 
 命令：
 ```
-for endpoint in $(docker exec etcd /bin/sh -c "etcdctl member list | cut -d, -f4"); do
+for endpoint in $(docker exec etcd etcdctl member list | cut -d, -f4); do
   echo "Validating connection to ${endpoint}/version";
-  docker run --net=host -v $(docker inspect kubelet --format '{{ range .Mounts }}{{ if eq .Destination "/etc/kubernetes" }}{{ .Source }}{{ end }}{{ end }}')/ssl:/etc/kubernetes/ssl:ro appropriate/curl --http1.1 -s -w "\n" --cacert $(docker exec etcd printenv ETCDCTL_CACERT) --cert $(docker exec etcd printenv ETCDCTL_CERT) --key $(docker exec etcd printenv ETCDCTL_KEY) "${endpoint}/version"
-done
-```
-
-如果 etcd 版本低于 3.3.x（Kubernetes 1.13.x 及更低版本）且添加节点时指定了 `--internal-address`，则使用以下命令：
-```
-for endpoint in $(docker exec etcd /bin/sh -c "etcdctl --endpoints=\$ETCDCTL_ENDPOINT member list | cut -d, -f4"); do
-  echo "Validating connection to ${endpoint}/version";
-  docker run --net=host -v $(docker inspect kubelet --format '{{ range .Mounts }}{{ if eq .Destination "/etc/kubernetes" }}{{ .Source }}{{ end }}{{ end }}')/ssl:/etc/kubernetes/ssl:ro appropriate/curl --http1.1 -s -w "\n" --cacert $(docker exec etcd printenv ETCDCTL_CACERT) --cert $(docker exec etcd printenv ETCDCTL_CERT) --key $(docker exec etcd printenv ETCDCTL_KEY) "${endpoint}/version"
+  docker run --net=host -v $(docker inspect kubelet --format '{{ range .Mounts }}{{ if eq .Destination "/etc/kubernetes" }}{{ .Source }}{{ end }}{{ end }}')/ssl:/etc/kubernetes/ssl:ro appropriate/curl --http1.1 -s -w "\n" --cacert $(docker inspect -f '{{range $index, $value := .Config.Env}}{{if eq (index (split $value "=") 0) "ETCDCTL_CACERT" }}{{range $i, $part := (split $value "=")}}{{if gt $i 1}}{{print "="}}{{end}}{{if gt $i 0}}{{print $part}}{{end}}{{end}}{{end}}{{end}}' etcd) --cert $(docker inspect -f '{{range $index, $value := .Config.Env}}{{if eq (index (split $value "=") 0) "ETCDCTL_CERT" }}{{range $i, $part := (split $value "=")}}{{if gt $i 1}}{{print "="}}{{end}}{{if gt $i 0}}{{print $part}}{{end}}{{end}}{{end}}{{end}}' etcd) --key $(docker inspect -f '{{range $index, $value := .Config.Env}}{{if eq (index (split $value "=") 0) "ETCDCTL_KEY" }}{{range $i, $part := (split $value "=")}}{{if gt $i 1}}{{print "="}}{{end}}{{if gt $i 0}}{{print $part}}{{end}}{{end}}{{end}}{{end}}' etcd) "${endpoint}/version"
 done
 ```
 
 输出示例：
 ```
 Validating connection to https://IP:2380/version
-{"etcdserver":"3.2.18","etcdcluster":"3.2.0"}
+{"etcdserver":"3.5.7","etcdcluster":"3.5.0"}
 Validating connection to https://IP:2380/version
-{"etcdserver":"3.2.18","etcdcluster":"3.2.0"}
+{"etcdserver":"3.5.7","etcdcluster":"3.5.0"}
 Validating connection to https://IP:2380/version
-{"etcdserver":"3.2.18","etcdcluster":"3.2.0"}
+{"etcdserver":"3.5.7","etcdcluster":"3.5.0"}
 ```
 
 ## etcd 告警
@@ -166,11 +132,6 @@ etcd 会触发告警（例如空间不足时）。
 命令：
 ```
 docker exec etcd etcdctl alarm list
-```
-
-如果 etcd 版本低于 3.3.x（Kubernetes 1.13.x 及更低版本）且添加节点时指定了 `--internal-address`，则使用以下命令：
-```
-docker exec etcd sh -c "etcdctl --endpoints=\$ETCDCTL_ENDPOINT alarm list"
 ```
 
 触发 NOSPACE 告警的输出示例：
@@ -199,12 +160,6 @@ rev=$(docker exec etcd etcdctl endpoint status --write-out json | egrep -o '"rev
 docker exec etcd etcdctl compact "$rev"
 ```
 
-如果 etcd 版本低于 3.3.x（Kubernetes 1.13.x 及更低版本）且添加节点时指定了 `--internal-address`，则使用以下命令：
-```
-rev=$(docker exec etcd sh -c "etcdctl --endpoints=\$ETCDCTL_ENDPOINT endpoint status --write-out json | egrep -o '\"revision\":[0-9]*' | egrep -o '[0-9]*'")
-docker exec etcd sh -c "etcdctl --endpoints=\$ETCDCTL_ENDPOINT compact \"$rev\""
-```
-
 输出示例：
 ```
 compacted revision xxx
@@ -214,12 +169,7 @@ compacted revision xxx
 
 命令：
 ```
-docker exec -e ETCDCTL_ENDPOINTS=$(docker exec etcd /bin/sh -c "etcdctl member list | cut -d, -f5 | sed -e 's/ //g' | paste -sd ','") etcd etcdctl defrag
-```
-
-如果 etcd 版本低于 3.3.x（Kubernetes 1.13.x 及更低版本）且添加节点时指定了 `--internal-address`，则使用以下命令：
-```
-docker exec etcd sh -c "etcdctl defrag --endpoints=$(docker exec etcd /bin/sh -c "etcdctl --endpoints=\$ETCDCTL_ENDPOINT member list | cut -d, -f5 | sed -e 's/ //g' | paste -sd ','")"
+docker exec -e ETCDCTL_ENDPOINTS=$(docker exec etcd etcdctl member list | cut -d, -f5 | sed -e 's/ //g' | paste -sd ',') etcd etcdctl defrag
 ```
 
 输出示例：
@@ -233,12 +183,7 @@ Finished defragmenting etcd member[https://IP:2379]
 
 命令：
 ```
-docker exec -e ETCDCTL_ENDPOINTS=$(docker exec etcd /bin/sh -c "etcdctl member list | cut -d, -f5 | sed -e 's/ //g' | paste -sd ','") etcd etcdctl endpoint status --write-out table
-```
-
-如果 etcd 版本低于 3.3.x（Kubernetes 1.13.x 及更低版本）且添加节点时指定了 `--internal-address`，则使用以下命令：
-```
-docker exec etcd sh -c "etcdctl endpoint status --endpoints=$(docker exec etcd /bin/sh -c "etcdctl --endpoints=\$ETCDCTL_ENDPOINT member list | cut -d, -f5 | sed -e 's/ //g' | paste -sd ','") --write-out table"
+docker exec -e ETCDCTL_ENDPOINTS=$(docker exec etcd etcdctl member list | cut -d, -f5 | sed -e 's/ //g' | paste -sd ',') etcd etcdctl endpoint status --write-out table
 ```
 
 输出示例：
@@ -246,9 +191,9 @@ docker exec etcd sh -c "etcdctl endpoint status --endpoints=$(docker exec etcd /
 +-----------------+------------------+---------+---------+-----------+-----------+------------+
 | ENDPOINT        |        ID        | VERSION | DB SIZE | IS LEADER | RAFT TERM | RAFT INDEX |
 +-----------------+------------------+---------+---------+-----------+-----------+------------+
-| https://IP:2379 |  e973e4419737125 |  3.2.18 |  553 kB |     false |        32 |    2449410 |
-| https://IP:2379 | 4a509c997b26c206 |  3.2.18 |  553 kB |     false |        32 |    2449410 |
-| https://IP:2379 | b217e736575e9dd3 |  3.2.18 |  553 kB |      true |        32 |    2449410 |
+| https://IP:2379 |  e973e4419737125 |  3.5.7  |  553 kB |     false |        32 |    2449410 |
+| https://IP:2379 | 4a509c997b26c206 |  3.5.7  |  553 kB |     false |        32 |    2449410 |
+| https://IP:2379 | b217e736575e9dd3 |  3.5.7  |  553 kB |      true |        32 |    2449410 |
 +-----------------+------------------+---------+---------+-----------+-----------+------------+
 ```
 
@@ -261,13 +206,6 @@ docker exec etcd sh -c "etcdctl endpoint status --endpoints=$(docker exec etcd /
 docker exec etcd etcdctl alarm list
 docker exec etcd etcdctl alarm disarm
 docker exec etcd etcdctl alarm list
-```
-
-如果 etcd 版本低于 3.3.x（Kubernetes 1.13.x 及更低版本）且添加节点时指定了 `--internal-address`，则使用以下命令：
-```
-docker exec etcd sh -c "etcdctl --endpoints=\$ETCDCTL_ENDPOINT alarm list"
-docker exec etcd sh -c "etcdctl --endpoints=\$ETCDCTL_ENDPOINT alarm disarm"
-docker exec etcd sh -c "etcdctl --endpoints=\$ETCDCTL_ENDPOINT alarm list"
 ```
 
 输出示例：
@@ -307,21 +245,11 @@ services:
 docker run --net=host -v $(docker inspect kubelet --format '{{ range .Mounts }}{{ if eq .Destination "/etc/kubernetes" }}{{ .Source }}{{ end }}{{ end }}')/ssl:/etc/kubernetes/ssl:ro appropriate/curl -s -XPUT -d '{"Level":"DEBUG"}' --cacert $(docker exec etcd printenv ETCDCTL_CACERT) --cert $(docker exec etcd printenv ETCDCTL_CERT) --key $(docker exec etcd printenv ETCDCTL_KEY) $(docker exec etcd printenv ETCDCTL_ENDPOINTS)/config/local/log
 ```
 
-如果 etcd 版本低于 3.3.x（Kubernetes 1.13.x 及更低版本）且添加节点时指定了 `--internal-address`，则使用以下命令：
-```
-docker run --net=host -v $(docker inspect kubelet --format '{{ range .Mounts }}{{ if eq .Destination "/etc/kubernetes" }}{{ .Source }}{{ end }}{{ end }}')/ssl:/etc/kubernetes/ssl:ro appropriate/curl -s -XPUT -d '{"Level":"DEBUG"}' --cacert $(docker exec etcd printenv ETCDCTL_CACERT) --cert $(docker exec etcd printenv ETCDCTL_CERT) --key $(docker exec etcd printenv ETCDCTL_KEY) $(docker exec etcd printenv ETCDCTL_ENDPOINT)/config/local/log
-```
-
 要将日志级别重置回默认值 (`INFO`)，你可以使用以下命令。
 
 命令：
 ```
 docker run --net=host -v $(docker inspect kubelet --format '{{ range .Mounts }}{{ if eq .Destination "/etc/kubernetes" }}{{ .Source }}{{ end }}{{ end }}')/ssl:/etc/kubernetes/ssl:ro appropriate/curl -s -XPUT -d '{"Level":"INFO"}' --cacert $(docker exec etcd printenv ETCDCTL_CACERT) --cert $(docker exec etcd printenv ETCDCTL_CERT) --key $(docker exec etcd printenv ETCDCTL_KEY) $(docker exec etcd printenv ETCDCTL_ENDPOINTS)/config/local/log
-```
-
-如果 etcd 版本低于 3.3.x（Kubernetes 1.13.x 及更低版本）且添加节点时指定了 `--internal-address`，则使用以下命令：
-```
-docker run --net=host -v $(docker inspect kubelet --format '{{ range .Mounts }}{{ if eq .Destination "/etc/kubernetes" }}{{ .Source }}{{ end }}{{ end }}')/ssl:/etc/kubernetes/ssl:ro appropriate/curl -s -XPUT -d '{"Level":"INFO"}' --cacert $(docker exec etcd printenv ETCDCTL_CACERT) --cert $(docker exec etcd printenv ETCDCTL_CERT) --key $(docker exec etcd printenv ETCDCTL_KEY) $(docker exec etcd printenv ETCDCTL_ENDPOINT)/config/local/log
 ```
 
 ## etcd 内容
@@ -335,11 +263,6 @@ docker run --net=host -v $(docker inspect kubelet --format '{{ range .Mounts }}{
 docker exec etcd etcdctl watch --prefix /registry
 ```
 
-如果 etcd 版本低于 3.3.x（Kubernetes 1.13.x 及更低版本）且添加节点时指定了 `--internal-address`，则使用以下命令：
-```
-docker exec etcd etcdctl --endpoints=\$ETCDCTL_ENDPOINT watch --prefix /registry
-```
-
 如果你只想查看受影响的键（而不是二进制数据），你可以将 `| grep -a ^/registry` 尾附到该命令来过滤键。
 
 ### 直接查询 etcd
@@ -347,11 +270,6 @@ docker exec etcd etcdctl --endpoints=\$ETCDCTL_ENDPOINT watch --prefix /registry
 命令：
 ```
 docker exec etcd etcdctl get /registry --prefix=true --keys-only
-```
-
-如果 etcd 版本低于 3.3.x（Kubernetes 1.13.x 及更低版本）且添加节点时指定了 `--internal-address`，则使用以下命令：
-```
-docker exec etcd etcdctl --endpoints=\$ETCDCTL_ENDPOINT get /registry --prefix=true --keys-only
 ```
 
 你可以使用以下命令来处理数据，从而获取每个键的计数摘要：

@@ -11,6 +11,12 @@ One of the key features that Rancher adds to Kubernetes is centralized user auth
 
 This centralized user authentication is accomplished using the Rancher authentication proxy, which is installed along with the rest of Rancher. This proxy authenticates your users and forwards their requests to your Kubernetes clusters using a service account.
 
+:::warning
+
+The account used to enable the external provider will be granted admin permissions. If you use a test account or non-admin account, that account will still be granted admin-level permissions. See [External Authentication Configuration and Principal Users](#external-authentication-configuration-and-principal-users) to understand why.
+
+:::
+
 ## External vs. Local Authentication
 
 The Rancher authentication proxy integrates with the following external authentication services.
@@ -36,7 +42,7 @@ In most cases, you should use an external authentication service over local auth
 
 ## Users and Groups
 
-Rancher relies on users and groups to determine who is allowed to log in to Rancher and which resources they can access. When authenticating with an external provider, groups are provided from the external provider based on the user. These users and groups are given specific roles to resources like clusters, projects, multi-cluster apps, and global DNS providers and entries. When you give access to a group, all users who are a member of that group in the authentication provider will be able to access the resource with the permissions that you've specified. For more information on roles and permissions, see [Role Based Access Control](../manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md).
+Rancher relies on users and groups to determine who is allowed to log in to Rancher and which resources they can access. When authenticating with an external provider, groups are provided from the external provider based on the user. These users and groups are given specific roles to resources like clusters, projects, and global DNS providers and entries. When you give access to a group, all users who are a member of that group in the authentication provider will be able to access the resource with the permissions that you've specified. For more information on roles and permissions, see [Role Based Access Control](../manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md).
 
 :::note
 
@@ -77,12 +83,14 @@ To set the Rancher access level for users in the authorization service, follow t
 
 ## External Authentication Configuration and Principal Users
 
-Configuration of external authentication requires:
+Configuring external authentication requires:
 
 - A local user assigned the administrator role, called hereafter the _local principal_.
 - An external user that can authenticate with your external authentication service, called hereafter the _external principal_.
 
-Configuration of external authentication affects how principal users are managed within Rancher. Follow the list below to better understand these effects.
+The configuration of external authentication also affects how principal users are managed within Rancher. Specifically, when a user account enables an external provider, it is granted admin-level permissions. This is because the local principal and external principal share the same user ID and access rights.
+
+The following instructions demonstrate these effects:
 
 1. Sign into Rancher as the local principal and complete configuration of external authentication.
 
