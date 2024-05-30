@@ -298,7 +298,7 @@
         <b>Synonyms:</b> <i>Local cluster, Rancher server</i>
     </p>
     <p>
-        <b>Related terms:</b> <i>Downstream cluster, Hosted cluster, Imported cluster, Managed cluster</i>
+        <b>Related terms:</b> <i>Downstream cluster, Hosted cluster, Imported cluster, Managed cluster, Registered cluster</i>
     </p>
 </dl>
 
