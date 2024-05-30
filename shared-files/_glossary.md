@@ -238,7 +238,7 @@
         Registered cluster
     </dt>
     <p>
-        <b>Versions:</b> Rancher v2.0–2.4
+        <b>Versions:</b> Rancher v2.5 and later
     </p>
     <dd>
         An existing cluster that was provisioned by a third party, then set up to be managed by Rancher. Older versions of Rancher use <i>Imported cluster</i> to refer to a similar concept. The main difference is that there are more management features exposed in the Rancher UI for registered clusters than for imported clusters.
