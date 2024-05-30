@@ -208,14 +208,7 @@
         Rancher Kubernetes Engine (RKE)
     </dt>
     <dd>
-        <ol>
-            <li> 
-                A CNCF-certified Kubernetes distribution that runs entirely within Docker containers. There are two main versions of RKE available. The 1.x software line is sometimes called <i>RKE1</i>. The next-generation line is called <i>RKE2</i>.
-            </li>
-            <li>
-                Shorthand for <i>RKE1</i>, the 1.x software line of RKE.
-            </li>
-        </ol>
+        A CNCF-certified Kubernetes distribution that runs entirely within Docker containers. There are two main versions of RKE available. The 1.x software line is sometimes called <i>RKE1</i>, or simply <i>RKE</i>. The next-generation line is called <i>RKE2</i>.
     </dd>
     <p>
         <b>Synonyms:</b> <i>RKE1</i> 
