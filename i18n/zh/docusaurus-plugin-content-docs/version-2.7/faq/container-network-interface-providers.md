@@ -90,7 +90,7 @@ Kubernetes worker 需要打开 TCP 端口 `6783`（控制端口）、UDP 端口 
 
 有关详细信息，请参阅以下页面：
 
-- [Weave Net 官网](https://www.weave.works/)
+- [Weave Net 官网](https://github.com/weaveworks/weave/blob/master/site/overview.md)
 
 ### RKE2 Kubernetes 集群
 

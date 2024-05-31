@@ -185,7 +185,7 @@ stringData:
 
 :::note
 
-请记住，如果使用此安装选项，你必须自行管理 CAPI Operator 的安装。你可以参照 Rancher Turtles 文档中的 [CAPI Operator 指南](https://turtles.docs.rancher.com/tasks/capi-operator/intro)
+请记住，如果使用此安装选项，你必须自行管理 CAPI Operator 的安装。你可以参照 Rancher Turtles 文档中的 [CAPI Operator 指南](https://turtles.docs.rancher.com/contributing/install_capi_operator)
 
 :::
 
