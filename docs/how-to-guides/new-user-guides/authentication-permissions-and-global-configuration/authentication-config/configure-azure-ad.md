@@ -133,7 +133,17 @@ Here are a few examples of permission combinations that satisfy Rancher's needs:
 
 :::
 
-#### 4. Copy Azure Application Data
+#### 4. Allow Public Client Flows
+
+To login from Rancher CLI you will need to allow Public Client Flows.
+
+1. From the navigation pane on, select **Authentication**.
+
+1. In the **Advanced Settings** enable the **public client flows**.
+
+    ![Allow Public Client Flows](/img/azure-public-client-flows.png)
+
+#### 5. Copy Azure Application Data
 
 ![Application ID](/img/app-configuration.png)
 
@@ -176,7 +186,7 @@ You'll also need to manually enter the Graph, Token, and Auth Endpoints.
   - **OAuth 2.0 token endpoint (v1)** (Token Endpoint)
   - **OAuth 2.0 authorization endpoint (v1)** (Auth Endpoint)
 
-#### 5. Configure Azure AD in Rancher
+#### 6. Configure Azure AD in Rancher
 
 To complete configuration, enter information about your AD instance in the Rancher UI.
 
@@ -188,7 +198,7 @@ To complete configuration, enter information about your AD instance in the Ranch
 
 1. Click **AzureAD**.
 
-1. Complete the **Configure Azure AD Account** form using the information you copied while completing [Copy Azure Application Data](#4-copy-azure-application-data).
+1. Complete the **Configure Azure AD Account** form using the information you copied while completing [Copy Azure Application Data](#5-copy-azure-application-data).
 
     :::caution
 
