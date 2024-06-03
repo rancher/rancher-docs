@@ -8,9 +8,18 @@ title: Enabling User Retention
 
 In Rancher v2.9.0 and later, you can enable user retention to automatically disable or delete inactive user accounts after a configurable time period.
 
-User retention is off by default.
+The user retention feature is off by default.
 
-## Required User Retention Settings 
+## Enabling User Retention with Kubectl
+
+To enable user retention, use kubectl to set `user-retention-cron`. Then, set either `delete-inactive-user-after` or `disable-inactive-user-after`, or a combination of both. In the following example, `disable-inactive-user-after` alone is set. The example command runs the user retention daemon every hour to disable accounts that have been inactive for the past 30 days:
+
+```
+kubectl edit user-retention-cron 0 * * * *
+kubectl edit disable-inactive-user-after 720h
+```
+
+### Required User Retention Settings
 
 - `user-retention-cron`: Describes how often the user retention process runs. The value is a cron expression (for example, `0 * * * *` for every hour).
 - `disable-inactive-user-after`: The amount of time that a user account can be inactive before the process disables an account. Values are expressed in [time.Duration units](https://pkg.go.dev/time#ParseDuration) (for example, `720h` for 720 hours or 30 days). If the value is not set, set to the empty string, or is equal to 0, the process does not disable any inactive accounts.
@@ -22,7 +31,7 @@ To enable user retention, you must set `user-retention-cron`. You must also set 
 
 :::
 
-The settings, `disable-inactive-user-after` and  `delete-inactive-user-after`, do not block each other from  running. For example, you can set both, giving `disable-inactive-user-after` a shorter duration than `delete-inactive-user-after`, so that the user retention process disables inactive accounts before deleting them.
+The settings, `disable-inactive-user-after` and  `delete-inactive-user-after`, do not block one another from  running. For example, you can set both, giving `disable-inactive-user-after` a shorter duration than `delete-inactive-user-after`, so that the user retention process disables inactive accounts before deleting them.
 
 ## Optional User Retention Settings
 

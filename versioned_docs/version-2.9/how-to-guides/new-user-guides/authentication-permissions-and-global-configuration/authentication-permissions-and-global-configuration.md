@@ -34,7 +34,7 @@ For more information how authorization works and how to customize roles, see [Ro
 
 In Rancher v2.9.0 and later, you can enable user retention. This feature automatically removes inactive users after a configurable period of time. 
 
-User retention is disabled by default.
+The user retention feature is disabled by default.
 
 For more information, see [Enabling User Retention](../../advanced-user-guides/enable-user-retention.md).
 
