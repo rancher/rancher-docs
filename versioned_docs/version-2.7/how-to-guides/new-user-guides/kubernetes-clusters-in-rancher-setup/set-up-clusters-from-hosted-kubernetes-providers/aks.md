@@ -28,7 +28,9 @@ The below sections describe how to set up these prerequisites using either the A
 
 ### Setting Up the Service Principal with the Azure Command Line Tool
 
-You can create the service principal by running this command:
+You must assign roles to the service principal so that it has communication privileges with the AKS API. It also needs access to create and list virtual networks. 
+
+In the following example, the command creates the service principal and gives it the Contributor role. The Contributor role can manage anything on AKS but cannot give access to others. Note that you must provide `scopes` a full path to at least one Azure resource: 
 
 ```
 az ad sp create-for-rbac --role Contributor --scopes /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>
