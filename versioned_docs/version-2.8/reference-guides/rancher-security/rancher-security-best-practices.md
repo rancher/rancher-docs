@@ -14,8 +14,17 @@ Adversaries can misuse this information to identify the running Rancher version 
 
 See [OWASP Web Application Security Testing - Enumerate Infrastructure and Application Admin Interfaces](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/05-Enumerate_Infrastructure_and_Application_Admin_Interfaces.html) for more information on protecting your server.
 
-### Session Management
+## Session Management
 
 Some environments may require additional security controls for session management. For example, you may want to limit users' concurrent active sessions or restrict which geolocations those sessions can be initiated from. Such features are not supported by Rancher out of the box. 
 
 If you require such features, combine Layer 7 firewalls with [external authentication providers](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/authentication-config.md#external-vs-local-authentication).
+
+## Use External Load Balancers to Protect Vulnerable Ports
+
+You should protect the following ports behind an [external load balancer](../../how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md#layer-4-load-balancer) that has SSL offload enabled:
+
+- **K3s:** Port 6443, used by the Kubernetes API.
+- **RKE2:** Port 6443, used by the Kubernetes API, and port 9345, used for node registration. 
+
+These ports have TLS SAN certificates which list nodes' public IP addresses. An attacker could use that information to gain unauthorized access or monitor activity on the cluster. Protecting these ports helps mitigate against nodes' public IP addresses being disclosed to potential attackers.
