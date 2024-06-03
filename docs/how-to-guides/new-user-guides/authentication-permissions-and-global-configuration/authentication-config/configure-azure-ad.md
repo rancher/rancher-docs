@@ -135,11 +135,11 @@ Here are a few examples of permission combinations that satisfy Rancher's needs:
 
 #### 4. Allow Public Client Flows
 
-To login from Rancher CLI you will need to allow Public Client Flows.
+To login from Rancher CLI you must allow Public Client Flows.
 
-1. From the navigation pane on, select **Authentication**.
+1. From the left navigation menu, select **Authentication**.
 
-1. In the **Advanced Settings** enable the **public client flows**.
+1. Under **Advanced Settings**, enable **public client flows**.
 
     ![Allow Public Client Flows](/img/azure-public-client-flows.png)
 
