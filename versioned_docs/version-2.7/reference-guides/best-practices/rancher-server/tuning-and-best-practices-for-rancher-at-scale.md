@@ -49,7 +49,6 @@ This is typical in Rancher, as many operations create new `RoleBinding` objects 
 
 You can reduce the number of `RoleBindings` in the upstream cluster in the following ways:
 * Limit the use of the [Restricted Admin](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#restricted-admin) role. Apply other roles wherever possible.
-* If you use [external authentication](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/authentication-config.md), use groups to assign roles.
 * Only add users to clusters and projects when necessary.
 * Remove clusters and projects when they are no longer needed.
 * Only use custom roles if necessary.
@@ -58,6 +57,12 @@ You can reduce the number of `RoleBindings` in the upstream cluster in the follo
 * Consider using less, but more powerful, clusters.
 * Kubernetes permissions are always "additive" (allow-list) rather than "subtractive" (deny-list). Try to minimize configurations that gives access to all but one aspect of a cluster, project, or namespace, as that will result in the creation of a high number of `RoleBinding` objects.
 * Experiment to see if creating new projects or clusters manifests in fewer `RoleBindings` for your specific use case.
+
+### Using External Authentication
+
+If you have fifty or more users, you should configure an [external authentication provider](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/authentication-config.md). This is necessary for better performance.
+
+After you configure external authentication, make sure to assign permissions to groups instead of to individual users. This helps reduce the `RoleBinding` object count.
 
 ### RoleBinding Count Estimation
 
@@ -105,6 +110,14 @@ Although managed Kubernetes services make it easier to deploy and run Kubernetes
 
 Use RKE2 for large scale use cases.
 
+### Keep all Upstream Cluster Nodes co-located
+
+To provide high availability, Kubernetes is designed to run nodes and control components in different zones. However, if nodes and control plane components are located in different zones, network traffic may be slower.
+
+Traffic between Rancher components and the Kubernetes API is especially sensitive to network latency, as is etcd traffic between nodes.
+
+To improve performance, run all upstream node clusters in the same location. In particular, make sure that latency between etcd nodes and Rancher is as low as possible.
+
 ### Keeping Kubernetes Versions Up to Date
 
 You should keep the local Kubernetes cluster up to date. This will ensure that your cluster has all available performance enhancements and bug fixes.
@@ -118,3 +131,13 @@ The two main bottlenecks to [etcd performance](https://etcd.io/docs/v3.4/op-guid
 It's best to run etcd on exactly three nodes, as adding more nodes will reduce operation speed. This may be counter-intuitive to common scaling approaches, but it's due to etcd's [replication mechanisms](https://etcd.io/docs/v3.5/faq/#what-is-maximum-cluster-size).
 
 Etcd performance will also be negatively affected by network latency between nodes as that will slow down network communication. Etcd nodes should be located together with Rancher nodes.
+
+### Browser Requirements
+
+At high scale, Rancher transfers more data from the upstream cluster to UI components running in the browser, and those components also need to perform more processing.
+
+For best performance, ensure that the host running the hardware meets these requirements:
+ - 2020 i5 10th generation Intel (4 cores) or equivalent
+ - 8 GB RAM
+ - Total network bandwith to the upstream cluster: 72 Mb/s (equivalent to a single 802.11n Wi-Fi 4 link stream, ~8 MB/s http download throughput)
+ - Round-trip time (ping time) from browser to upstream cluster: 150 ms or less

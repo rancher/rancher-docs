@@ -302,7 +302,7 @@ cloud-provider|-|Cloud provider type|
 |max-node-provision-time|"15m"|Maximum time CA waits for node to be provisioned|
 |nodes|-|sets min,max size and other configuration data for a node group in a format accepted by cloud provider. Can be used multiple times. Format: `<min>:<max>:<other...>`|
 |node-group-auto-discovery|-|One or more definition(s) of node group auto-discovery. A definition is expressed `<name of discoverer>:[<key>[=<value>]]`|
-|estimator|-|"binpacking"|Type of resource estimator to be used in scale up. Available values: ["binpacking"]|
+|estimator|"binpacking"|Type of resource estimator to be used in scale up. Available values: ["binpacking"]|
 |expander|"random"|Type of node group expander to be used in scale up. Available values: `["random","most-pods","least-waste","price","priority"]`|
 |ignore-daemonsets-utilization|false|Should CA ignore DaemonSet pods when calculating resource utilization for scaling down|
 |ignore-mirror-pods-utilization|false|Should CA ignore Mirror pods when calculating resource utilization for scaling down|

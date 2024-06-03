@@ -10,10 +10,6 @@ This FAQ is a work in progress designed to answer the questions most frequently 
 
 See the [Technical FAQ](technical-items.md) for frequently asked technical questions.
 
-## Does Rancher v2.x support Docker Swarm and Mesos as environment types?
-
-Swarm and Mesos are no longer selectable options when you create a new environment in Rancher v2.x. However, both Swarm and Mesos will continue to be available as Catalog applications you can deploy. It was a tough decision to make but, in the end, it came down to adoption. For example, out of more than 15,000 clusters, only about 200 were running Swarm.
-
 ## Is it possible to manage Azure Kubernetes Services with Rancher v2.x?
 
 Yes. See our [Cluster Administration](../how-to-guides/new-user-guides/manage-clusters/manage-clusters.md) guide for what Rancher features are available on AKS, as well as our [documentation on AKS](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks.md).
