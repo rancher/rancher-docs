@@ -6,26 +6,19 @@ title: Launching Kubernetes on Windows Clusters
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters"/>
 </head>
 
-When provisioning a [custom cluster](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md) using Rancher, RKE2 is used to install Kubernetes on your existing nodes.
+When provisioning a [custom cluster](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md) Rancher uses RKE2 to install Kubernetes on your existing nodes.
 
 In a Windows cluster provisioned with Rancher, the cluster must contain both Linux and Windows nodes. The Kubernetes controlplane can only run on Linux nodes, and the Windows nodes can only have the worker role. Windows nodes can only be used for deploying workloads.
 
-Other requirements for Windows clusters include:
-
-- [Support Matrices for RKE2 versions](https://www.suse.com/suse-rke2/support-matrix/all-supported-versions/) with information on Kubernetes component versions.
-- Windows nodes must have 50 GB of disk space.
-
-For the full list of requirements, see [this section.](#requirements-for-windows-clusters)
-
 For a summary of Kubernetes features supported in Windows, see the Kubernetes documentation on [supported functionality and limitations for using Kubernetes with Windows](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#supported-functionality-and-limitations) or the [guide for scheduling Windows containers in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/user-guide-windows-containers/).
 
-### RKE2 Windows
+### RKE2 Features for Windows Clusters
 
-The RKE2 provisioning feature also includes installing RKE2 on Windows clusters. Windows features for RKE2 include:
+Listed below are the primary RKE2 features for Windows cluster provisioning:
 
 - Windows Containers with RKE2 powered by containerd
 - Added provisioning of Windows RKE2 custom clusters directly from the Rancher UI
-- Calico or Flannel CNI for Windows RKE2 custom clusters
+- Calico CNI for Windows RKE2 custom clusters
 - SAC releases of Windows Server (2004 and 20H2) are included in the technical preview
 
 :::note
@@ -36,7 +29,7 @@ Rancher will allow Windows workload pods to deploy on both Windows and Linux wor
 
 - HostProcess containers in Windows RKE2 are supported in Kubernetes v1.24.1 and up. See [the upstream documentation](https://kubernetes.io/docs/tasks/configure-pod-container/create-hostprocess-pod/) for more information.
 
-## Requirements for Windows Clusters
+## General Requirements
 
 The general node requirements for networking and operating systems are the same as the node requirements for a [Rancher installation](../../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md).
 
@@ -48,9 +41,7 @@ For the support lifecycle dates for Windows Server, see the [Microsoft Documenta
 
 ### Kubernetes Version
 
-Kubernetes v1.15+ is required.
-
-If you are using Kubernetes v1.21 with Windows Server 20H2 Standard Core, the patch "2019-08 Servicing Stack Update for Windows Server" must be installed on the node.
+Information regarding Kubernetes component versions can be viewed in the [support matrices for RKE2 versions](https://www.suse.com/suse-rke2/support-matrix/all-supported-versions/).
 
 ### Node Requirements
 
@@ -66,13 +57,7 @@ Rancher will not provision the node if the node does not meet these requirements
 
 Before provisioning a new cluster, be sure that you have already installed Rancher on a device that accepts inbound network traffic. This is required in order for the cluster nodes to communicate with Rancher. If you have not already installed Rancher, please refer to the [installation documentation](../../../../getting-started/installation-and-upgrade/installation-and-upgrade.md) before proceeding with this guide.
 
-Rancher supports Windows using Calico or Flannel as the network provider.
-
-There are two network options: [**Host Gateway (L2bridge)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#host-gw) and [**VXLAN (Overlay)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#vxlan). The default option is **VXLAN (Overlay)** mode.
-
-For **Host Gateway (L2bridge)** networking, it's best to use the same Layer 2 network for all nodes. Otherwise, you need to configure the route rules for them. For details, refer to the [documentation on configuring cloud-hosted VM routes.](network-requirements-for-host-gateway.md#cloud-hosted-vm-routes-configuration) You will also need to [disable private IP address checks](network-requirements-for-host-gateway.md#disabling-private-ip-address-checks) if you are using Amazon EC2, Google GCE, or Azure VM.
-
-For **VXLAN (Overlay)** networking, the [KB4489899](https://support.microsoft.com/en-us/help/4489899) hotfix must be installed. Most cloud-hosted VMs already have this hotfix.
+Rancher supports Windows using Calico as the network provider.
 
 If you are configuring DHCP options sets for an AWS virtual private cloud, note that in the `domain-name` option field, only one domain name can be specified. According to the DHCP options [documentation:](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html)
 
@@ -178,7 +163,7 @@ The instructions for creating a Windows cluster on existing nodes are very simil
 1. Click **Custom**.
 1. Enter a name for your cluster in the **Cluster Name** field.
 1. In the **Kubernetes Version** dropdown menu, select a supported Kubernetes version.
-1. In the **Container Network** field, select **Calico** or **Flannel**.
+1. In the **Container Network** field, select **Calico**.
 1. Click **Next**.
 
 ### 3. Add Nodes to the Cluster
