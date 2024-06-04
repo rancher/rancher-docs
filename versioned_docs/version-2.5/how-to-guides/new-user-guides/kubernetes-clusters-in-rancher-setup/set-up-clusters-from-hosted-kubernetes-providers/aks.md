@@ -19,7 +19,7 @@ Before creating the service principal, you need to obtain the following informat
 
 - Your subscription ID
 - Your tenant ID
-- An app ID (also called a client ID)
+- Client ID (also known as app ID)
 - Client secret
 - A resource group
 

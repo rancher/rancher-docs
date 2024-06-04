@@ -22,7 +22,7 @@ To interact with Azure APIs, an AKS cluster requires an Azure Active Directory (
 Before creating the service principal, you need to obtain the following information from the [Microsoft Azure Portal](https://portal.azure.com):
 
 - Subscription ID
-- An app ID (also called a client ID)
+- Client ID (also known as app ID)
 - Client secret
 
 The below sections describe how to set up these prerequisites using either the Azure command line tool or the Azure portal.
