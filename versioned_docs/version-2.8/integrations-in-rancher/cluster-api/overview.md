@@ -185,7 +185,7 @@ For detailed information on the values supported by the chart and their usage, r
 
 :::note
 
-Remember that if you opt for this installation option, you must manage the CAPI Operator installation yourself. You can follow the [CAPI Operator guide](https://turtles.docs.rancher.com/tasks/capi-operator/intro) in the Rancher Turtles documentation for assistance.
+Remember that if you opt for this installation option, you must manage the CAPI Operator installation yourself. You can follow the [CAPI Operator guide](https://turtles.docs.rancher.com/contributing/install_capi_operator) in the Rancher Turtles documentation for assistance.
 
 :::
 
