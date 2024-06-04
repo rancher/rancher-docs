@@ -107,7 +107,7 @@ Kubernetes workers should open TCP port `6783` (control port), UDP port `6783` a
 
 For more information, see the following pages:
 
-- [Weave Net Official Site](https://www.weave.works/)
+- [Weave Net Official Site](https://github.com/weaveworks/weave/blob/master/site/overview.md)
 
 ### CNI Features by Provider
 
