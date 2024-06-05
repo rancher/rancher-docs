@@ -133,7 +133,17 @@ Here are a few examples of permission combinations that satisfy Rancher's needs:
 
 :::
 
-#### 4. Copy Azure Application Data
+#### 4. Allow Public Client Flows
+
+To login from Rancher CLI you must allow Public Client Flows.
+
+1. From the left navigation menu, select **Authentication**.
+
+1. Under **Advanced Settings**, enable **public client flows**.
+
+    ![Allow Public Client Flows](/img/azure-public-client-flows.png)
+
+#### 5. Copy Azure Application Data
 
 ![Application ID](/img/app-configuration.png)
 
