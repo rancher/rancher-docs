@@ -161,6 +161,10 @@ spec:
 [...]
 ```
 
+### Add Custom OCI Chart Repositories
+
+It has been made possible to store Helm charts as OCI artifacts in OCI registries. To support this growing trend, users can add OCI based Helm repositories to Rancher. You can find more information about it in this [docs page](./oci-repositories.md).
+
 :::
 
 ### Helm Compatibility
