@@ -36,12 +36,12 @@ The usage below defines rules about what the audit log should record and what da
 
 The following table displays what parts of API transactions are logged for each [`AUDIT_LEVEL`](#api-audit-log-options) setting.
 
-| `AUDIT_LEVEL` Setting | Request Metadata | Request Body | Response Metadata | Response Body |
-| --------------------- | ---------------- | ------------ | ----------------- | ------------- |
-| `0`                   |                  |              |                   |               |
-| `1`                   | ✓                |              |                   |               |
-| `2`                   | ✓                | ✓            |                   |               |
-| `3`                   | ✓                | ✓            | ✓                 | ✓             |
+| `AUDIT_LEVEL` Setting | Metadata | Request Body | Response Body |
+| --------------------- | -------- | ------------ | ------------- |
+| `0`                   |          |              |               |
+| `1`                   | ✓        |              |               |
+| `2`                   | ✓        | ✓            |               |
+| `3`                   | ✓        | ✓            | ✓             |
 
 ## Viewing API Audit Logs
 
