@@ -19,7 +19,7 @@ The pod can be scheduled to any of the hosts you used for your cluster, but that
 
 To test the overlay network, you can launch the following `DaemonSet` definition. This will run a `swiss-army-knife` container on every host (image was developed by Rancher engineers and can be found here: https://github.com/rancherlabs/swiss-army-knife), which we will use to run a `ping` test between containers on all hosts.
 
-> **Note:** This container [does not support ARM nodes](https://github.com/leodotcloud/swiss-army-knife/issues/18), such as a Raspberry Pi. This will be seen in the pod logs as `exec user process caused: exec format error`.
+> **Note:** The `swiss-army-knife` container does not support Windows nodes. It also [does not support ARM nodes](https://github.com/leodotcloud/swiss-army-knife/issues/18), such as a Raspberry Pi. When the test encounters incompatible nodes, this is recorded in the pod logs as an error message, such as `exec user process caused: exec format error` for ARM nodes, or `ImagePullBackOff (Back-off pulling image "rancherlabs/swiss-army-knife)` for Windows nodes.
 
 1. Save the following file as `overlaytest.yml`
 
@@ -103,19 +103,3 @@ When the MTU is incorrectly configured (either on hosts running Rancher, nodes i
 
 See [Google Cloud VPN: MTU Considerations](https://cloud.google.com/vpn/docs/concepts/mtu-considerations#gateway_mtu_vs_system_mtu) for an example how to configure MTU correctly when using Google Cloud VPN between Rancher and cluster nodes.
 
-### Resolved issues
-
-#### Overlay network broken when using Canal/Flannel due to missing node annotations
-
-| | |
-|------------|------------|
-| GitHub issue | [#13644](https://github.com/rancher/rancher/issues/13644) |
-| Resolved in |  v2.1.2 |
-
-To check if your cluster is affected, the following command will list nodes that are broken (this command requires `jq` to be installed):
-
-```
-kubectl get nodes -o json | jq '.items[].metadata | select(.annotations["flannel.alpha.coreos.com/public-ip"] == null or .annotations["flannel.alpha.coreos.com/kube-subnet-manager"] == null or .annotations["flannel.alpha.coreos.com/backend-type"] == null or .annotations["flannel.alpha.coreos.com/backend-data"] == null) | .name'
-```
-
-If there is no output, the cluster is not affected.

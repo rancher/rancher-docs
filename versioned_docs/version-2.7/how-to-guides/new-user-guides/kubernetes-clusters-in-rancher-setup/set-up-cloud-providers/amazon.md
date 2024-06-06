@@ -299,7 +299,7 @@ rancher_kubernetes_engine_config:
     useInstanceMetadataHostname: true
 ```
 
-You must not enable `useInstanceMetadataHostname` when setting custom values for `hostname-override` for custom clusters. When you create a [custom cluster](../../../../pages-for-subheaders/use-existing-nodes.md), add [`--node-name`](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) to the `docker run` node registration command to set `hostname-override` — for example, `"$(hostname -f)"`. This can be done manually or by using **Show Advanced Options** in the Rancher UI to add **Node Name**.
+You must not enable `useInstanceMetadataHostname` when setting custom values for `hostname-override` for custom clusters. When you create a [custom cluster](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes), add [`--node-name`](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) to the `docker run` node registration command to set `hostname-override` — for example, `"$(hostname -f)"`. This can be done manually or by using **Show Advanced Options** in the Rancher UI to add **Node Name**.
 
 2. Select the cloud provider. 
 
@@ -352,9 +352,9 @@ tolerations:
     value: 'true'
   - effect: NoSchedule
     value: 'true'
-    key: node-role.kubernetes.io/controlplane
+    key: node-role.kubernetes.io/control-plane
 nodeSelector:
-  node-role.kubernetes.io/controlplane: 'true'
+  node-role.kubernetes.io/control-plane: 'true'
 args:
   - --configure-cloud-routes=false
   - --use-service-account-credentials=true
@@ -639,7 +639,7 @@ kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
       - get
 ```
 
-9. Rancher-provisioned RKE nodes are tainted `node-role.kubernetes.io/controlplane`. Update tolerations and the nodeSelector:
+9. Rancher-provisioned RKE2 nodes are tainted `node-role.kubernetes.io/control-plane`. Update tolerations and the nodeSelector:
 
 ```yaml
 tolerations:
@@ -648,13 +648,13 @@ tolerations:
     value: 'true'
   - effect: NoSchedule
     value: 'true'
-    key: node-role.kubernetes.io/controlplane
+    key: node-role.kubernetes.io/control-plane
 
 ```
 
 ```yaml
 nodeSelector:
-  node-role.kubernetes.io/controlplane: 'true'
+  node-role.kubernetes.io/control-plane: 'true'
 ```
 
 :::note
@@ -663,7 +663,7 @@ There's currently a [known issue](https://github.com/rancher/dashboard/issues/92
 
 ```yaml
 nodeSelector:
-  node-role.kubernetes.io/controlplane: 'true'
+  node-role.kubernetes.io/control-plane: 'true'
 ```
 
 :::

@@ -21,65 +21,48 @@ To interact with Azure APIs, an AKS cluster requires an Azure Active Directory (
 Before creating the service principal, you need to obtain the following information from the [Microsoft Azure Portal](https://portal.azure.com):
 
 - Subscription ID
-- Client ID
+- Client ID (also known as app ID)
 - Client secret
 
 The below sections describe how to set up these prerequisites using either the Azure command line tool or the Azure portal.
 
 ### Setting Up the Service Principal with the Azure Command Line Tool
 
-You can create the service principal by running this command:
+You must assign roles to the service principal so that it has communication privileges with the AKS API. It also needs access to create and list virtual networks. 
+
+In the following example, the command creates the service principal and gives it the Contributor role. The Contributor role can manage anything on AKS but cannot give access to others. Note that you must provide `scopes` a full path to at least one Azure resource: 
 
 ```
-az ad sp create-for-rbac --skip-assignment
+az ad sp create-for-rbac --role Contributor --scopes /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>
 ```
 
 The result should show information about the new service principal:
 ```
 {
   "appId": "xxxx--xxx",
-  "displayName": "<SERVICE-PRINCIPAL-NAME>",
-  "name": "http://<SERVICE-PRINCIPAL-NAME>",
-  "password": "<SECRET>",
-  "tenant": "<TENANT NAME>"
+  "displayName": "<service-principal-name>",
+  "name": "http://<service-principal-name>",
+  "password": "<secret>",
+  "tenant": "<tenant-name>"
 }
 ```
 
-You also need to add roles to the service principal so that it has privileges for communication with the AKS API. It also needs access to create and list virtual networks.
-
-Below is an example command for assigning the Contributor role to a service principal. Contributors can manage anything on AKS but cannot give access to others:
+The following creates a [Resource Group](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-cli) to contain your Azure resources:
 
 ```
-az role assignment create \
-  --assignee $appId \
-  --scope /subscriptions/$<SUBSCRIPTION-ID>/resourceGroups/$<GROUP> \
-  --role Contributor
-```
-
-You can also create the service principal and give it Contributor privileges by combining the two commands into one. In this command, the scope needs to provide a full path to an Azure resource:
-
-```
-az ad sp create-for-rbac \
-  --scope /subscriptions/$<SUBSCRIPTION-ID>/resourceGroups/$<GROUP> \
-  --role Contributor
-```
-
-Create the Resource Group by running this command:
-
-```
-az group create --location AZURE_LOCATION_NAME --resource-group AZURE_RESOURCE_GROUP_NAME
+az group create --location <azure-location-name> --resource-group <resource-group-name>
 ```
 
 ### Setting Up the Service Principal from the Azure Portal
 
-You can also follow these instructions to set up a service principal and give it role-based access from the Azure Portal.
+Follow these instructions to set up a service principal and give it role-based access from the Azure Portal.
 
 1. Go to the Microsoft Azure Portal [home page](https://portal.azure.com).
 
 1. Click **Azure Active Directory**.
 1. Click **App registrations**.
 1. Click **New registration**.
-1. Enter a name. This will be the name of your service principal.
+1. Enter a name for your service principal.
 1. Optional: Choose which accounts can use the service principal.
 1. Click **Register**.
 1. You should now see the name of your service principal under **Azure Active Directory > App registrations**.
@@ -101,7 +84,7 @@ To give role-based access to your service principal,
 
 **Result:** Your service principal now has access to AKS.
 
-## 1. Create the AKS Cloud Credentials
+## Create the AKS Cloud Credentials
 
 1. In the Rancher UI, click **☰ > Cluster Management**.
 1. Click **Cloud Credentials**.
@@ -110,7 +93,7 @@ To give role-based access to your service principal,
 1. Fill out the form. For help with filling out the form, see the [configuration reference.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration.md#cloud-credentials)
 1. Click **Create**.
 
-## 2. Create the AKS Cluster
+## Create the AKS Cluster
 
 Use Rancher to set up and configure your Kubernetes cluster.
 
@@ -124,7 +107,8 @@ Use Rancher to set up and configure your Kubernetes cluster.
 
 You can access your cluster after its state is updated to **Active**.
 
-## Role-based Access Control
+## Configure Role-based Access Control
+
 When provisioning an AKS cluster in the Rancher UI, RBAC is not configurable because it is required to be enabled.
 
 RBAC is required for AKS clusters that are registered or imported into Rancher.
@@ -135,8 +119,8 @@ Assign the Rancher AKSv2 role to the service principal with the Azure Command Li
 
 ```
 az role assignment create \
---assignee CLIENT_ID \
---scope "/subscriptions/SUBSCRIPTION_ID/resourceGroups/RESOURCE_GROUP_NAME" \
+--assignee <client-id> \
+--scope "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>" \
 --role "Rancher AKSv2"
 ```
 

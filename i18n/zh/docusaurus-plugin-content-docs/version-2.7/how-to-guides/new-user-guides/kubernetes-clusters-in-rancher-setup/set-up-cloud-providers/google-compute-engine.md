@@ -4,7 +4,7 @@ title: 设置 Google Compute Engine 云提供商
 
 在本节中，你将了解如何在 Rancher 中为自定义集群启用 Google Compute Engine (GCE) 云提供商。自定义集群指的是 Rancher 在现有节点上安装 Kubernetes 的集群。
 
-详情请参见 [GCE 云提供商的官方 Kubernetes 文档](https://github.com/kubernetes/website/blob/release-1.18/content/en/docs/concepts/cluster-administration/cloud-providers.md#gce)。
+详情请参见 [GCE 云提供商的官方 Kubernetes 文档](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#gce)。
 
 :::note 先决条件：
 

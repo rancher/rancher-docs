@@ -27,7 +27,7 @@ Using the vSphere out-of-tree cloud provider requires Linux nodes and is not sup
 
 The Cloud Provider Interface (CPI) should be installed first before installing the Cloud Storage Interface (CSI).
 
-### 1. Create a vSphere cluster
+### 1. Create a VMware vSphere cluster
 
 1. On the Clusters page, click on **Add Cluster** and select the **vSphere** option or **Existing Nodes** option.
 1. Under **Cluster Options** in the **Cloud Provider** section, select **External (Out-of-tree)**. This sets the cloud provider option on the Kubernetes cluster to `external` which sets your Kubernetes cluster up to be configured with an out-of-tree cloud provider.

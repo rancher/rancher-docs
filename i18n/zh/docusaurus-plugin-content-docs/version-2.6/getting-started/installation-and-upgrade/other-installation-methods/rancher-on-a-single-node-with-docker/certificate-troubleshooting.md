@@ -2,6 +2,8 @@
 title: 证书故障排除
 ---
 
+<DockerSupportWarning />
+
 ### 如何确定我的证书格式是否为 PEM？
 
 你可以通过以下特征识别 PEM 格式：

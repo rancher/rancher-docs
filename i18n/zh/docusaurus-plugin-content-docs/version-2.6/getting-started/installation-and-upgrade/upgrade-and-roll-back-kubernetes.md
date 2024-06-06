@@ -32,9 +32,9 @@ RKE v1.1.0 改变了集群升级的方式。
 
 :::note 先决条件：
 
-- 以下选项适用于 [Rancher 启动的 Kubernetes 集群](../../pages-for-subheaders/launch-kubernetes-with-rancher.md)和[注册的 K3s Kubernetes 集群](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md#已注册-k3s-集群的附加功能)。
+- 以下选项适用于 [Rancher 启动的 Kubernetes 集群](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)和[注册的 K3s Kubernetes 集群](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md#已注册-k3s-集群的附加功能)。
 - 以下选项也适用于导入且已注册的 RKE2 集群。如果你从外部云平台导入集群但不注册，你将无法在 Rancher 中升级 Kubernetes 版本。
-- 在升级 Kubernetes 之前，先[备份你的集群](../../pages-for-subheaders/backup-restore-and-disaster-recovery.md)。
+- 在升级 Kubernetes 之前，先[备份你的集群](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/backup-restore-and-disaster-recovery.md)。
 
 :::
 

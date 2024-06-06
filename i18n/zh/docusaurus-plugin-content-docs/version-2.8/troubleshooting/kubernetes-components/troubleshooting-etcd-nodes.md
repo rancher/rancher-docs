@@ -2,6 +2,10 @@
 title: etcd 节点故障排除
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/troubleshooting/kubernetes-components/troubleshooting-etcd-nodes"/>
+</head>
+
 本文介绍了对具有 `etcd` 角色的节点进行故障排除的命令和提示。
 
 
@@ -45,13 +49,6 @@ docker logs etcd
 命令：
 ```
 docker exec etcd etcdctl member list
-```
-
-输出示例：
-```
-xxx, started, etcd-xxx, https://IP:2380, https://IP:2379,https://IP:4001
-xxx, started, etcd-xxx, https://IP:2380, https://IP:2379,https://IP:4001
-xxx, started, etcd-xxx, https://IP:2380, https://IP:2379,https://IP:4001
 ```
 
 ### 检查端点状态

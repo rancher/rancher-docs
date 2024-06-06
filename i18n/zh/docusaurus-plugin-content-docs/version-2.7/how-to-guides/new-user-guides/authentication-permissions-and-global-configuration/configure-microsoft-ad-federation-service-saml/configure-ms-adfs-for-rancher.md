@@ -2,7 +2,11 @@
 title: 1. 在 Microsoft AD FS 中配置 Rancher
 ---
 
-在配置 Rancher 以支持 AD FS 用户之前，你必须在 AD FS 中将 Rancher 添加为 [relying party trust](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/technical-reference/understanding-key-ad-fs-concepts)（信赖方信任）。
+<head> 
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/configure-microsoft-ad-federation-service-saml/configure-ms-adfs-for-rancher"/>
+</head>
+
+在配置 Rancher 以支持 Active Directory Federation Service (AD FS) 之前，你必须在 AD FS 中将 Rancher 添加为 [relying party trust](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/technical-reference/understanding-key-ad-fs-concepts)（信赖方信任）。
 
 1. 以管理用户身份登录 AD 服务器。
 
@@ -34,7 +38,7 @@ title: 1. 在 Microsoft AD FS 中配置 Rancher
 
    ![](/img/adfs/adfs-add-rpt-7.png)
 
-1. 本教程不涉及多重身份验证。如果你想配置多重身份验证，请参见 [Microsoft 文档](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs)。
+1. 本教程不涉及多重身份认证。如果你想配置多重身份认证，请参见 [Microsoft 文档](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs)。
 
    ![](/img/adfs/adfs-add-rpt-8.png)
 
@@ -45,7 +49,6 @@ title: 1. 在 Microsoft AD FS 中配置 Rancher
 1. 检查所有设置后，选择 **Next** 来添加信赖方信任。
 
    ![](/img/adfs/adfs-add-rpt-10.png)
-
 
 1. 选择 **Open the Edit Claim Rules...**。然后单击 **Close**。
 
@@ -61,17 +64,19 @@ title: 1. 在 Microsoft AD FS 中配置 Rancher
 
 1. 将 **Claim rule name** 设置为所需的名称（例如 `Rancher Attributes`）并选择 **Active Directory** 作为 **Attribute store**。创建对应下表的映射：
 
-   | LDAP 属性 | 传出声明类型 |
-   | -------------------------------------------- | ------------------- |
-   | Given-Name | Given Name |
-   | User-Principal-Name | UPN |
-   | Token-Groups - Qualified by Long Domain Name | Group |
-   | SAM-Account-Name | 名称 |
+   | LDAP 属性                                    | 传出声明类型 |
+   | -------------------------------------------- | ------------ |
+   | Given-Name                                   | Given Name   |
+   | User-Principal-Name                          | UPN          |
+   | Token-Groups - Qualified by Long Domain Name | Group        |
+   | SAM-Account-Name                             | 名称         |
+
    <br/>
 
    ![](/img/adfs/adfs-add-tcr-2.png)
 
 1. 从 AD 服务器的以下位置下载 `federationmetadata.xml`：
+
 ```
 https://<AD_SERVER>/federationmetadata/2007-06/federationmetadata.xml
 ```

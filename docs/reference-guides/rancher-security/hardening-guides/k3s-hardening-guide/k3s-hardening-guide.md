@@ -1,5 +1,5 @@
 ---
-title: K3s Hardening Guide
+title: K3s Hardening Guides
 ---
 
 <head>
@@ -102,7 +102,7 @@ The `rancher-restricted` template is provided by Rancher to enforce the highly-r
 </TabItem>
 <TabItem value="v1.24 and Older">
 
-K3s v1.24 and older support [Pod Security Policy (PSP)](https://v1-24.docs.kubernetes.io/docs/concepts/security/pod-security-policy/) for controlling pod security.
+K3s v1.24 and older support [Pod Security Policy (PSP)](https://github.com/kubernetes/website/blob/release-1.24/content/en/docs/concepts/security/pod-security-policy.md) for controlling pod security.
 
 You can enable PSPs by passing the following flags in the cluster configuration in Rancher:
 

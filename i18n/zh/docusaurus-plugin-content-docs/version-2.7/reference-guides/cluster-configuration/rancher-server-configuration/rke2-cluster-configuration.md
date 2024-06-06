@@ -140,13 +140,13 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 #### CoreDNS
 
-默认情况下，[CoreDNS](https://coredns.io/) 会安装为默认 DNS 提供程序。如果未安装 CoreDNS，则必须自己安装备用 DNS 提供程序。有关其他 CoreDNS 配置，请参阅 [RKE2 文档](https://docs.rke2.io/networking#coredns)。
+默认情况下，[CoreDNS](https://coredns.io/) 会安装为默认 DNS 提供程序。如果未安装 CoreDNS，则必须自己安装备用 DNS 提供程序。有关其他 CoreDNS 配置，请参阅 [RKE2 文档](https://docs.rke2.io/networking/networking_services#coredns)。
 
 #### NGINX Ingress
 
-如果你想使用高可用性配置来发布应用，并且你使用没有原生负载均衡功能的云提供商来托管主机，请启用此选项以在集群中使用 NGINX Ingress。有关其他配置选项，请参阅 [RKE2 文档](https://docs.rke2.io/networking#nginx-ingress-controller)。
+如果你想使用高可用性配置来发布应用，并且你使用没有原生负载均衡功能的云提供商来托管主机，请启用此选项以在集群中使用 NGINX Ingress。有关其他配置选项，请参阅 [RKE2 文档](https://docs.rke2.io/networking/networking_services#nginx-ingress-controller)。
 
-有关其他配置选项，请参阅 [RKE2 文档](https://docs.rke2.io/networking#nginx-ingress-controller)。
+有关其他配置选项，请参阅 [RKE2 文档](https://docs.rke2.io/networking/networking_services#nginx-ingress-controller)。
 
 #### Metrics Server
 
@@ -160,7 +160,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 ### Agent 环境变量
 
-为 [Rancher agent](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/rancher-agents/) 设置环境变量的选项。你可以使用键值对设置环境变量。有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/reference/linux_agent_config)。
+为 [Rancher agent](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents.md) 设置环境变量的选项。你可以使用键值对设置环境变量。有关详细信息，请参阅 [RKE2 文档](https://docs.rke2.io/reference/linux_agent_config)。
 
 ### etcd
 

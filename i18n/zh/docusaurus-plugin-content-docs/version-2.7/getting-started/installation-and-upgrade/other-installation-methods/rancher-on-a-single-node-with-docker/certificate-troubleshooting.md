@@ -2,19 +2,25 @@
 title: 证书故障排除
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/certificate-troubleshooting"/>
+</head>
+
+<DockerSupportWarning />
+
 ### 如何确定我的证书格式是否为 PEM？
 
 你可以通过以下特征识别 PEM 格式：
 
 - 文件开始的标头：
-   ```
-   -----BEGIN CERTIFICATE-----
-   ```
+  ```
+  -----BEGIN CERTIFICATE-----
+  ```
 - 表头后跟一长串字符。
 - 文件结束的页脚：
-   ```
-   -----END CERTIFICATE-----
-   ```
+  ```
+  -----END CERTIFICATE-----
+  ```
 
 PEM 证书示例：
 

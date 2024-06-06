@@ -4,13 +4,13 @@ title: 在 GKE 集群上安装 Rancher
 
 在本节中，你将学习如何使用 GKE 安装 Rancher。
 
-如果你已经有一个 GKE Kubernetes 集群，请直接跳转到[安装 Ingress](#7-安装-ingress)这个步骤。然后按照[此处](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#安装-rancher-helm-chart)的步骤安装 Rancher Helm Chart。
+如果你已经有一个 GKE Kubernetes 集群，请直接跳转到[安装 Ingress](#7-安装-ingress)这个步骤。然后按照[此处](install-upgrade-on-a-kubernetes-cluster.md#安装-rancher-helm-chart)的步骤安装 Rancher Helm Chart。
 
 ## 先决条件
 
 - 你需要有一个 Google 账号。
 - 你需要有一个 Google Cloud Billing 账号。你可使用 Google Cloud Console 来管理你的 Cloud Billing 账号。有关 Cloud Console 的详情，请参见 [ Console 通用指南](https://support.google.com/cloud/answer/3465889?hl=en&ref_topic=3340599)。
-- 你需要至少一个在用的 IP 地址和至少 2 个 CPU 的云配额。有关 Rancher Server 的硬件要求，请参见[本节](../../../pages-for-subheaders/installation-requirements.md#rke-和托管-kubernetes)。
+- 你需要至少一个在用的 IP 地址和至少 2 个 CPU 的云配额。有关 Rancher Server 的硬件要求，请参见[本节](../installation-requirements/installation-requirements.md)。
 
 ## 1. 启用 Kubernetes Engine API
 

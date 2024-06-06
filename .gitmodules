@@ -1,0 +1,3 @@
+[submodule ".github/styles/suse-vale-styleguide"]
+	path = .github/styles/suse-vale-styleguide
+	url = https://github.com/openSUSE/suse-vale-styleguide

@@ -2,15 +2,11 @@
 title: 创建应用
 ---
 
-Rancher 的应用市场基于 Helm 仓库和 Helm Chart。你可以添加基于 HTTP 的标准 Helm 仓库以及任何包含 Chart 的 Git 仓库。
-
 :::tip
 
 有关开发 Chart 的完整演示，请参阅 Helm 官方文档中的 [Chart 模板开发者指南](https://helm.sh/docs/chart_template_guide/)。
 
 :::
-
-
 
 ## Chart 类型
 
@@ -108,17 +104,10 @@ rancher_max_version: 2.3.99
 | variable | string | true | 定义 `values.yml` 文件中指定的变量名，嵌套对象使用 `foo.bar`。 |
 | label | string | true | 定义 UI 标签。 |
 | description | string | false | 指定变量的描述。 |
-| type | string | false | 如果未指定，则默认为 `string`（支持的类型为 string、multiline、boolean、int、enum、password、storageclass、hostname、pvc 和 secret）。 |
-| required | bool | false | 定义变量是否是必须的（true \| false）。 |
+| type | string | false | 如果未指定，则默认为 `string`（支持的类型为 string、multiline、boolean、int、enum、password、storageclasshostname、pvc、secret 和 cloudcredential）。 |
 | default | string | false | 指定默认值。仅在 `values.yml` 文件中没有对应值时使用。 |
 | group | string | false | 按输入值对问题进行分组。 |
-| min_length | int | false | 最小字符长度。 |
-| max_length | int | false | 最大字符长度。 |
-| min | int | false | 最小整数长度。 |
-| max | int | false | 最大整数长度。 |
 | options | []string | false | 为 `enum` 类型的变量指定选项，例如：options:<br/> - "ClusterIP" <br/> - "NodePort" <br/> - "LoadBalancer" |
-| valid_chars | string | false | 输入字符验证的正则表达式。 |
-| invalid_chars | string | false | 无效输入字符验证的正则表达式。 |
 | subquestions | []subquestion | false | 添加一组子问题。 |
 | show_if | string | false | 如果条件变量为 true，则显示当前变量。例如 `show_if: "serviceType=Nodeport"` |
 | show\_subquestion_if | string | false | 如果为 true 或等于某个选项，则显示子问题。例如 `show_subquestion_if: "true"` |
