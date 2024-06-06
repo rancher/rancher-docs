@@ -14,64 +14,74 @@ Examples of built-in Rancher extensions are Fleet, Explorer, and Harvester. Exam
 
 ## Prerequisites
 
-> You must log in as an admin in order to view and interact with the extensions management page.
+> 1. You must log in as an administrator to view and interact with the extensions management page.
+> 2. You must enable extension support.
+
+## Enabling Extension Support in Rancher
+
+Rancher v2.9.0 and later includes extension support.
+
+You can confirm if extension support is enabled by checking the `uiextension` feature flag. Any changes to this feature flag cause the Rancher pod to restart.
+
+When you enable extension support for the first time, it creates resources, such as the CRDs, so that UI Extensions can work. When extension support is disabled, it disables the endpoints and does not cache any files. However, it does not remove any CRs or delete any extensions that were installed before. If re-enabled, it exposes the required endpoints again and creates CRDs as needed. The extensions that were already installed load after the Rancher pod restarts.
+
+### Caching Extension Files
+
+By default, Rancher caches every extension file in the file system. You can change that behavior by setting `plugin.noCache` to `true`.
+
+Rancher does have a cached file size limit of 20MB. If an extension has a file bigger than that, the cache is disabled and `plugin.noCache` is set to `true`, regardless of user input.
+
 
 ## Installing Extensions
 
 1. Click **☰ > Extensions** under **Configuration**.
 
-2. If not already installed in **Apps**, you must enable the extension operator by clicking the **Enable** button.
+2. On the **Extensions** page, select the **Available** tab to choose the extensions that you want to install.
 
-    - Click **OK** to add the Rancher extension repository if your installation is not air-gapped. Otherwise, uncheck the box to do so and click **OK**.
+3. If no extensions are listed as available, you can manually add the repos:
 
-    ![Rancher extension repository](/img/add-rancher-extension-repo.png)
+    3.1. On the upper right, click **⋮ > Manage Repositories > Create**.
 
-3. On the **Extensions** page, click on the **Available** tab to select which extensions you want to install.
+    3.2. Add the desired repo name, making sure to also specify the Git repo URL and the Git branch.
 
-4. If no extensions are showing as available, you may manually add repos as follows:
-
-    4.1. On the upper right of screen, click on **⋮ > Manage Repositories > Create**.
-
-    4.2. Add the desired repo name, making sure to also specify the Git Repo URL and the Git Branch.
-
-    4.3. Click **Create** in the lower right again to complete.
+    3.3. Click **Create** in the lower right again to complete.
 
     ![Manage repositories](/img/manage-repos.png)
 
-5. Under the **Available** tab, click **Install** on the desired extension and version as in the example below. You can also update your extension from this screen, as the button to **Update** will appear on the extension if one is available.
+4. Under the **Available** tab, click **Install** on the desired extension and version, as in the example below. You can also update your extension from this screen. The button to **Update** appears on the extension card if an update is available.
 
     ![Install Kubewarden](/img/install-kubewarden.png)
 
-6. Click the **Reload** page button that will appear after your extension successfully installs. Note that a logged-in user who has just installed an extension will not see a change to the UI **unless** they reload the page.
+5. Click **Reload** after your extension successfully installs to check its status. Updates to the UI aren't visible until you reload the page.
 
     ![Reload button](/img/reload-button.png)
 
 ## Updating and Upgrading Extensions
 
 1. Click **☰ > Extensions** under **Configuration**.
-1. Select the **Updates** tab. 
-1. Click **Update**.
+2. Select the **Updates** tab. 
+3. Click **Update**.
 
 If there is a new version of the extension, there will also be an **Update** button visible on the associated card for the extension in the **Available** tab.
 
 ## Deleting Extensions
 
 1. Click **☰**, then click on the name of your local cluster.
-1. From the sidebar, select **Apps > Installed Apps**.
-1. Find the name of the chart you want to delete and select the checkbox next to it. 
-1. Click **Delete**.
+2. From the sidebar, select **Apps > Installed Apps**.
+3. Find the name of the chart you want to delete and select the checkbox next to it. 
+4. Click **Delete**.
 
 ## Deleting Extension Repositories
 
 1. Click **☰ > Extensions** under **Configuration**.
-1. On the top right, click **⋮ > Manage Repositories**.
-1. Find the name of the extension repository you want to delete. Select the checkbox next to the repository name, then click **Delete**.
+2. On the top right, click **⋮ > Manage Repositories**.
+3. Find the name of the extension repository you want to delete. Select the checkbox next to the repository name, then click **Delete**.
 
 ## Deleting Extension Repository Container Images
 
 1. Click **☰**, then select **Extensions**, under **Configuration**.
-1. On the top right, click **⋮ > Manage Extension Catalogs**.
-1. Find the name of the container image you want to delete, then click **⋮ > Uninstall**.
+2. On the top right, click **⋮ > Manage Extension Catalogs**.
+3. Find the name of the container image you want to delete, then click **⋮ > Uninstall**.
 
 ## Uninstalling Extensions
 
@@ -81,7 +91,7 @@ There are two ways to uninstall or disable an extension:
 
     ![Uninstall extensions](/img/uninstall-extension.png)
 
-1. On the extensions management page, click **⋮ > Disable Extension Support**. This will disable all installed extensions.
+2. On the extensions management page, click **⋮ > Disable Extension Support**. This will disable all installed extensions.
 
     ![Disable extensions](/img/disable-extension-support.png)
 
@@ -90,6 +100,12 @@ There are two ways to uninstall or disable an extension:
 You must reload the page after disabling extensions or display issues may occur.
 
 :::
+
+## Enabling Unauthenticated Access to an Extension
+
+In Rancher v2.9.0, you can allow unauthenticated access to an extension. You may want to enable unauthenticated access if the extension enables a new locale or adds custom branding. By default, all extensions require user authentication to load. 
+
+To enable unauthenticated access to an extension, set `plugin.noAuth` to `true` in the CR used by the extension.
 
 ## Developing Extensions
 
