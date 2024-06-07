@@ -180,7 +180,7 @@
 
 ## M
 
-<!-- To Do -->
+
 <dl>
     <dt>
         Machine Pool
@@ -213,7 +213,7 @@
 
 ## N
 
-<!-- To Do -->
+
 <dl>
     <dt>
         Neuvector Prime
@@ -229,7 +229,7 @@
     </p>
 </dl>
 
-<!-- To Do -->
+
 <dl>
     <dt>
         Node Template
@@ -247,7 +247,7 @@
 
 ## P
 
-<!-- To Do -->
+
 <dl>
     <dt>
         Prime
@@ -263,7 +263,7 @@
     </p>
 </dl>
 
-<!-- To Do -->
+
 <dl>
     <dt>
         Project
@@ -279,7 +279,7 @@
     </p>
 </dl>
 
-<!-- To Do -->
+
 <dl>
     <dt>
         Project Resource Quotas
@@ -295,7 +295,7 @@
     </p>
 </dl>
 
-<!-- To Do -->
+
 <dl>
     <dt>
         PSA
@@ -311,7 +311,7 @@
     </p>
 </dl>
 
-<!-- To Do -->
+
 <dl>
     <dt>
         PSA Config Template
@@ -327,7 +327,7 @@
     </p>
 </dl>
 
-<!-- To Do -->
+
 <dl>
     <dt>
         PSP
@@ -364,7 +364,7 @@
     <p>
         <b>Related terms:</b> <i>K3s, RKE2</i>
     </p>
-    <!-- To Do -->
+    
     <dl>
         <dt>
             Rancher Chart
@@ -379,7 +379,7 @@
             <b>Related terms:</b> <i>comma list</i>
         </p>
     </dl>
-    <!-- To Do -->
+    
     <dl>
         <dt>
             Rancher Enterprise
