@@ -30,6 +30,14 @@ Within Rancher, each person authenticates as a _user_, which is a login that gra
 
 For more information how authorization works and how to customize roles, see [Roles Based Access Control (RBAC)](manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md).
 
+## User Retention
+
+In Rancher v2.9.0 and later, you can enable user retention. This feature automatically removes inactive users after a configurable period of time. 
+
+The user retention feature is disabled by default.
+
+For more information, see [Enabling User Retention](../../advanced-user-guides/enable-user-retention.md).
+
 ## Pod Security Policies
 
 _Pod Security Policies_ (or PSPs) are objects that control security-sensitive aspects of pod specification, e.g. root privileges. If a pod does not meet the conditions specified in the PSP, Kubernetes will not allow it to start, and Rancher will display an error message.
