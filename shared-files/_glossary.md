@@ -180,6 +180,22 @@
 
 ## M
 
+<!-- To Do -->
+<dl>
+    <dt>
+        Machine Pool
+    </dt>
+    <dd>
+        description
+    </dd>
+    <p>
+        <b>Synonyms:</b> <i>comma list</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>comma list</i>
+    </p>
+</dl>
+
 <dl>
     <dt>
         Managed cluster
@@ -192,6 +208,138 @@
     </p>
     <p>
         <b>Related terms:</b> <i>Hosted cluster, Imported cluster, Rancher server, Registered cluster</i>
+    </p>
+</dl>
+
+## N
+
+<!-- To Do -->
+<dl>
+    <dt>
+        Neuvector Prime
+    </dt>
+    <dd>
+        description
+    </dd>
+    <p>
+        <b>Synonyms:</b> <i>comma list</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>comma list</i>
+    </p>
+</dl>
+
+<!-- To Do -->
+<dl>
+    <dt>
+        Node Template
+    </dt>
+    <dd>
+        description
+    </dd>
+    <p>
+        <b>Synonyms:</b> <i>comma list</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>comma list</i>
+    </p>
+</dl>
+
+## P
+
+<!-- To Do -->
+<dl>
+    <dt>
+        Prime
+    </dt>
+    <dd>
+        description
+    </dd>
+    <p>
+        <b>Synonyms:</b> <i>comma list</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>commar list</i>
+    </p>
+</dl>
+
+<!-- To Do -->
+<dl>
+    <dt>
+        Project
+    </dt>
+    <dd>
+        description
+    </dd>
+    <p>
+        <b>Synonyms:</b> <i>comma list</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>commar list</i>
+    </p>
+</dl>
+
+<!-- To Do -->
+<dl>
+    <dt>
+        Project Resource Quotas
+    </dt>
+    <dd>
+        description
+    </dd>
+    <p>
+        <b>Synonyms:</b> <i>comma list</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>comma list</i>
+    </p>
+</dl>
+
+<!-- To Do -->
+<dl>
+    <dt>
+        PSA
+    </dt>
+    <dd>
+        description
+    </dd>
+    <p>
+        <b>Synonyms:</b> <i>comma list</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>comma list</i>
+    </p>
+</dl>
+
+<!-- To Do -->
+<dl>
+    <dt>
+        PSA Config Template
+    </dt>
+    <dd>
+        description
+    </dd>
+    <p>
+        <b>Synonyms:</b> <i>comma list</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>comma list</i>
+    </p>
+</dl>
+
+<!-- To Do -->
+<dl>
+    <dt>
+        PSP
+    </dt>
+    <dd>
+        description
+    </dd>
+    <p>
+        <b>Synonyms:</b> <i>comma list</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>comma list</i>
     </p>
 </dl>
 
@@ -216,6 +364,36 @@
     <p>
         <b>Related terms:</b> <i>K3s, RKE2</i>
     </p>
+    <!-- To Do -->
+    <dl>
+        <dt>
+            Rancher Chart
+        </dt>
+        <dd>
+            description
+        </dd>
+        <p>
+            <b>Synonyms:</b> <i>comma list</i>
+        </p>
+        <p>
+            <b>Related terms:</b> <i>comma list</i>
+        </p>
+    </dl>
+    <!-- To Do -->
+    <dl>
+        <dt>
+            Rancher Enterprise
+        </dt>
+        <dd>
+            description
+        </dd>
+        <p>
+            <b>Synonyms:</b> <i>comma list</i>
+        </p>
+        <p>
+            <b>Related terms:</b> <i>comma list</i>
+        </p>
+    </dl>
     <dt>
        Rancher Prime
     </dt>
