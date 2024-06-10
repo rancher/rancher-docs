@@ -1,14 +1,14 @@
 ---
-title: Using OCI Helm Chart Registries
+title: Using OCI Helm Chart Repositories
 ---
 
 <head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/helm-charts-in-rancher/oci-registries"/>
 </head>
 
-Helm v3 introduced storing Helm charts as [Open Container Initiative (OCI)](https://opencontainers.org/about/overview/) artifacts in container registries. With Rancher v2.9.0, you can add [OCI-based Helm chart registries](https://helm.sh/docs/topics/registries/) alongside http- and Git-based repositories. This means you can deploy apps that are stored as OCI artifacts.
+Helm v3 introduced storing Helm charts as [Open Container Initiative (OCI)](https://opencontainers.org/about/overview/) artifacts in container registries. With Rancher v2.9.0, you can add [OCI-based Helm chart registries](https://helm.sh/docs/topics/registries/) alongside http- and Git-based repositories. This means that you can deploy apps that are stored as OCI artifacts. As of Rancher v2.9.0, this feature is experimental.
 
-## Add an OCI Registry
+## Add an OCI Repository
 
 To add an OCI registry through the Rancher UI:
 
@@ -16,8 +16,8 @@ To add an OCI registry through the Rancher UI:
 2. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
 3. In the left navigation bar, select **Apps > Repositories**.
 4. Click **Create**.
-5. Enter a **Name** and **Description** for the registry. Select **OCI** as the target.
-6. Enter the URL for the registry. The registry endpoint must not contain anything besides OCI Helm Chart artifacts. If you attempt to add an endpoint that contains any other kinds of files or artifacts, the OCI registry will not be added. 
+5. Enter a **Name** and **Description** for the registry. Select **OCI Repository** as the target.
+6. Enter the URL for the registry. The registry endpoint must not contain anything besides OCI Helm Chart artifacts. The artifacts should all have unique names. If you attempt to add an endpoint that contains any other kinds of files or artifacts, the OCI repository will not be added. 
   
   :::note
   
