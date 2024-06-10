@@ -186,7 +186,7 @@ You'll also need to manually enter the Graph, Token, and Auth Endpoints.
   - **OAuth 2.0 token endpoint (v1)** (Token Endpoint)
   - **OAuth 2.0 authorization endpoint (v1)** (Auth Endpoint)
 
-#### 5. Configure Azure AD in Rancher
+#### 6. Configure Azure AD in Rancher
 
 To complete configuration, enter information about your AD instance in the Rancher UI.
 
@@ -198,7 +198,7 @@ To complete configuration, enter information about your AD instance in the Ranch
 
 1. Click **AzureAD**.
 
-1. Complete the **Configure Azure AD Account** form using the information you copied while completing [Copy Azure Application Data](#4-copy-azure-application-data).
+1. Complete the **Configure Azure AD Account** form using the information you copied while completing [Copy Azure Application Data](#5-copy-azure-application-data).
 
     :::caution
 

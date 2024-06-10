@@ -338,4 +338,3 @@ Token Endpoint   | https://login.partner.microsoftonline.cn/{tenantID}/oauth2/v2
 >- If you don't wish to upgrade to v2.7.0+ after the Azure AD Graph API is retired, you'll need to either:
     - Use the built-in Rancher auth or
     - Use another third-party auth system and set that up in Rancher. Please see the [authentication docs](authentication-config.md) to learn how to configure other open authentication providers.
-
