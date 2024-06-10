@@ -38,7 +38,7 @@ It may take some time for the OCI registry to activate. This is particularly tru
 
 ## Authentication for OCI Registries
 
-Rancher supports BasicAuth for OCI registries. You must create a [**BasicAuth** Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/#basic-authentication-secret). You can [create the secret through the Rancher UI](../kubernetes-resources-setup/secrets.md). 
+Rancher supports BasicAuth for OCI registries. You must create a [**BasicAuth** Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/#basic-authentication-secret). You can also [create the secret through the Rancher UI](../kubernetes-resources-setup/secrets.md). 
 
 Rancher 2.9.0 also adds the `spec.insecurePlainHttp` field, which allows insecure connections to OCI registries. When this field is set to `true`, Rancher connects to the OCI endpoint without performing an SSL check. This works exactly the same as how the `spec.insecurePlainHttp` field works in [ORAS CLI](https://oras.land/docs/commands/use_oras_cli), since Rancher uses the ORAS library.
 
