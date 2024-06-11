@@ -1,16 +1,16 @@
 ---
-title: Using OCI Helm Chart Repositories
+title: Using OCI-Based Helm Chart Repositories
 ---
 
 <head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/helm-charts-in-rancher/oci-registries"/>
 </head>
 
-Helm v3 introduced storing Helm charts as [Open Container Initiative (OCI)](https://opencontainers.org/about/overview/) artifacts in container registries. With Rancher v2.9.0, you can add [OCI-based Helm chart registries](https://helm.sh/docs/topics/registries/) alongside http- and Git-based repositories. This means that you can deploy apps that are stored as OCI artifacts. As of Rancher v2.9.0, this feature is experimental.
+Helm v3 introduced storing Helm charts as [Open Container Initiative (OCI)](https://opencontainers.org/about/overview/) artifacts in container registries. With Rancher v2.9.0, you can add [OCI-based Helm chart repositories](https://helm.sh/docs/topics/registries/) alongside HTTP-based and Git-based repositories. This means that you can deploy apps that are stored as OCI artifacts. As of Rancher v2.9.0, this feature is experimental.
 
-## Add an OCI Repository
+## Add an OCI-Based Helm Chart Repository
 
-To add an OCI registry through the Rancher UI:
+To add an OCI-based Helm chart repository through the Rancher UI:
 
 1. Click **☰ > Cluster Management**.
 2. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
@@ -30,13 +30,13 @@ To add an OCI registry through the Rancher UI:
   
   :::
 
-7. Select **Basicauth** from the authentication field and enter a username and password as required. 
+7. Set up authentication. Select **Basicauth** from the authentication field and enter a username and password as required. Otherwise, create or select an **Authentication** secret. See [Authentication](#authentication-for-oci-based-helm-chart-repositories) for a full description. 
 8. Add any labels and annotations.
 9. Click **Create**.
 
-It may take some time for the OCI registry to activate. This is particularly true if the OCI endpoint contains multiple repositories. 
+It may take some time for the OCI repository to activate. This is particularly true if the OCI endpoint contains multiple namespaces. 
 
-## Authentication for OCI Registries
+## Authentication for OCI-Based Helm Chart Repositories
 
 Rancher supports BasicAuth for OCI registries. You must create a [**BasicAuth** Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/#basic-authentication-secret). You can also [create the secret through the Rancher UI](../kubernetes-resources-setup/secrets.md). 
 
@@ -46,47 +46,54 @@ The CRD that is linked to the OCI Helm registry is `ClusterRepo`.
 
 [Screenshot of the ClusterRepo YAML]<!-- Engineers - Can we get this screenshot? Thank you! -->
 
-## View Helm Charts in OCI Registries
+## View Helm Charts in OCI-Based Helm Chart Repositories
 
-To view Helm charts in the OCI registry after it achieves an `Active` state:
+To view Helm charts in the OCI-based Helm chart repository after it achieves an `Active` state:
 
 1. Click **☰**. Under **Explore Cluster** in the left navigation menu, select a cluster.
 1. Click **Apps > Charts**.
-1. Select the OCI repository from the dropdown.
+1. Select the OCI-based Helm chart repository from the dropdown.
 
-## Refresh an OCI Registry
+## Refresh an OCI-Based Helm Chart Registry
 
-Rancher automatically refreshes the OCI registry every 6 hours. 
+Rancher automatically refreshes the OCI-based Helm chart repository every 6 hours. 
 
-If you need to update immediately, you can perform a manual refresh:
+If you need to update immediately, you can [perform a manual refresh](../helm-charts-in-rancher/helm-charts-in-rancher.md#refresh-chart-repositories).
 
-1. Click **☰ > Cluster Management**.
-1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
-1. In the left navigation bar, select **Apps > Repositories**.
-1. Select the row associated with the OCI registry, and click **Refresh**.
-
-## Update OCI Registry Configuration
+## Update a OCI-Based Helm Chart Repository Configuration
 
 1. Click **☰ > Cluster Management**.
 1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
 1. In the left navigation bar, select **Apps > Repositories**.
-1. Find the row associated with the OCI registry, and click **⋮**.
+1. Find the row associated with the OCI-based Helm chart repository, and click **⋮**.
 1. From the submenu, select **Edit Config**.
 
-## Delete an OCI Registry
+## Delete an OCI-Based Helm Chart Repository
 
 1. Click **☰ > Cluster Management**.
 1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
 1. In the left navigation bar, select **Apps > Repositories**.
-1. Select the row associated with the OCI registry, and click **Delete**.
+1. Select the row associated with the OCI-based Helm chart repository, and click **Delete**.
 
-## Limitations of OCI-based Helm Chart Registries in Rancher
+## Size Limitations of OCI-Based Helm Chart Repositories in Rancher
 
-Due to security concerns, there are limitations on how large of a Helm chart you can deploy through an OCI-based registry, and how much metadata you can use to describe the Helm charts within a single OCI endpoint.
+Due to security concerns, there are limitations on how large of a Helm chart you can deploy through an OCI-based repository, and how much metadata you can use to describe the Helm charts within a single OCI endpoint.
 
 Rancher can deploy OCI Helm charts up to 20 MB in size.
 
-The metadata field in index.yaml can store up to 30 MB of information about the Helm charts within an OCI-based registry.
+## Rate Limiting of OCI-Based Helm Chart Repositories
+
+Different OCI registries implement rate limiting in different ways. 
+
+Most servers return a `Retry-After` header, indicating how long to wait before rate-limiting is lifted. 
+
+Dockerhub returns a `429` status code when it completes all allocated requests. It also returns a `RateLimit-Remaining` header which describes the rate limiting policy. 
+
+Rancher currently checks for the `Retry-After` header. It also handles Dockerhub-style responses and automatically waits before making a new request. When handling Dockerhub-style responses, Rancher ignores `ExponentialBackOff` values. 
+
+If you have a OCI-based Helm chart repository which doesn't implement the `Retry-After` header, or which behaves differently than Dockerhub, provide your response values with the `ExponentialBackOff` field. 
+
+For example, if you have an OCI-based Helm chart repository that doesn't send a HTTP header, but you know that it allows 50 requests in 24 hours, you can provide a `MinWait` value of 86400 seconds, a `MaxWait` of 90000 seconds, and a `Maxretry` of `1`. <!-- I'm not sure what these two sentences from the draft mean? --> This would allow adding the Helm repository complete but it would take 24 hours if Rancher gets rate limited. There is no user intervention needed here.<!-- end -->
 
 ## Troubleshooting OCI-based Helm Registries <!-- Unedited draft -->
 
