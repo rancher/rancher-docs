@@ -51,7 +51,6 @@ You can integrate Okta with Rancher, so that authenticated users can access Ranc
 
     :::
 
-
 1. After you complete the **Configure Okta Account** form, click **Enable**.
 
     Rancher redirects you to the IdP login page. Enter credentials that authenticate with Okta IdP to validate your Rancher Okta configuration.
@@ -109,3 +108,16 @@ The OpenLDAP service account is used for all searches. Rancher users will see us
 1. Under **User and Group Search**, check **Configure an OpenLDAP server**
 
 If you experience issues when you test the connection to the OpenLDAP server, ensure that you entered the credentials for the service account and configured the search base correctly. Inspecting the Rancher logs can help pinpoint the root cause. Debug logs may contain more detailed information about the error. Please refer to [How can I enable debug logging](../../../../faq/technical-items.md#how-can-i-enable-debug-logging) for more information.
+
+## Configuring SAML Single Logout (SLO)
+
+1. Sign into Rancher using a local user assigned the [administrator](https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions) role (i.e., the _local principal_).
+1. In the top left corner, click **☰ > Users & Authentication**.
+1. In the left navigation menu, click **Auth Provider**.
+1. Under the section **Configure Single Logout (SLO)**, choose the appropriate SLO setting as described below:
+
+    | Setting                   | Description                                                                   |
+    | ------------------------- | ----------------------------------------------------------------------------- |
+    | Only log out of Rancher | Choosing this option will only logout the Rancher application and not external authentication providers. |
+    | Log out of Okta (including Rancher and all other application registered with the provider) | Choosing this option will logout Rancher and external authentication providers along with any registered application linked to the provider. |
+    | Allow the user to choose in an extra step | Choosing this option presents users with a choice of logout method as described above. |
