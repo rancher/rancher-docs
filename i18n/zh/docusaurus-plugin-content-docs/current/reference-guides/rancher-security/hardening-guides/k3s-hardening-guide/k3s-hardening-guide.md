@@ -102,7 +102,7 @@ Rancher 提供了 `rancher-restricted` 模板，用于强制执行高度限制�
 </TabItem>
 <TabItem value="v1.24 及更早版本">
 
-K3s v1.24 及更早版本支持 [Pod 安全策略 (PSP)](https://v1-24.docs.kubernetes.io/docs/concepts/security/pod-security-policy/) 以控制 Pod 安全性。
+K3s v1.24 及更早版本支持 [Pod 安全策略 (PSP)](https://github.com/kubernetes/website/blob/release-1.24/content/en/docs/concepts/security/pod-security-policy.md) 以控制 Pod 安全性。
 
 你可以在 Rancher 中通过集群配置，传递以下标志来启用 PSPs：
 

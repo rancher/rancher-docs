@@ -14,20 +14,46 @@ For configuration details, refer to the [official Kubernetes documentation](http
 
 
 <Tabs groupId="k8s-distro">
-<TabItem value="RKE2/K3s" default>
+<TabItem value="RKE2" default>
+
+### Method 1 (Recommended): Set `audit-policy-file` in `machineGlobalConfig`
+
+You can set `audit-policy-file` in the configuration file. Rancher delivers the file to the path `/var/lib/rancher/rke2/etc/config-files/audit-policy-file` in control plane nodes, and sets the proper options in the RKE2 server.
+
+Example:
+```yaml
+apiVersion: provisioning.cattle.io/v1
+kind: Cluster
+spec:
+  rkeConfig:
+    machineGlobalConfig:
+      audit-policy-file: |
+        apiVersion: audit.k8s.io/v1
+        kind: Policy
+        rules:
+          - level: RequestResponse
+            resources:
+              - group: ""
+                resources:
+                  - pods
+```
+
+### Method 2: Use the Directives, `machineSelectorFiles` and `machineGlobalConfig`
 
 :::note
 
-This feature is available in Rancher v2.7.2 and above.
+This feature is available in Rancher v2.7.2 and later.
 
 :::
 
-As a prerequisite, you need to create a secret or configmap which will be the source of the audit policy.
+You can use `machineSelectorFiles` to deliver the audit policy file to the control plane nodes, and `machineGlobalConfig` to set the options on kube-apiserver.
 
-The secret or configmap must meet the following two requirements:
+As a prerequisite, you must create a [secret](../new-user-guides/kubernetes-resources-setup/secrets.md) or [configmap](../new-user-guides/kubernetes-resources-setup/configmaps.md) to be the source of the audit policy.
+
+The secret or configmap must meet the following requirements:
 
 1. It must be in the `fleet-default` namespace where the Cluster object exists.
-2. It must have the annotation `rke.cattle.io/object-authorized-for-clusters: cluster-name1,cluster-name2` which permits the target clusters to use it.
+2. It must have the annotation `rke.cattle.io/object-authorized-for-clusters: <cluster-name1>,<cluster-name2>` which permits the target clusters to use it.
 
 :::tip
 
@@ -46,11 +72,11 @@ kind: Secret
 metadata:
   annotations:
     rke.cattle.io/object-authorized-for-clusters: cluster1
-  name: name1
+  name: <name1>
   namespace: fleet-default
 ```
 
-The audit log can be enabled and configured by editing the cluster in YAML and utilizing the `machineSelectorFiles` and `machineGlobalConfig` directives.
+Enable and configure the audit log by editing the cluster in YAML, and utilizing the `machineSelectorFiles` and `machineGlobalConfig` directives.
 
 Example:
 
@@ -77,7 +103,88 @@ spec:
             rke.cattle.io/control-plane-role: 'true'
 ```
 
-For more information about cluster configuration, refer to the REK2 or K3s cluster configuration reference pages.
+:::tip
+
+You can also use the directive `machineSelectorConfig` with proper machineLabelSelectors to achieve the same effect.
+
+:::
+
+For more information about cluster configuration, refer to the [RKE2 cluster configuration reference](../../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md) pages.
+
+</TabItem>
+
+<TabItem value="K3s">
+
+:::note
+
+This feature is available in Rancher v2.7.2 and later.
+
+:::
+
+You can use `machineSelectorFiles` to deliver the audit policy file to the control plane nodes, and `machineGlobalConfig` to set the options on kube-apiserver.
+
+As a prerequisite, you must create a [secret](../new-user-guides/kubernetes-resources-setup/secrets.md) or [configmap](../new-user-guides/kubernetes-resources-setup/configmaps.md) to be the source of the audit policy.
+
+The secret or configmap must meet the following requirements:
+
+1. It must be in the `fleet-default` namespace where the Cluster object exists.
+2. It must have the annotation `rke.cattle.io/object-authorized-for-clusters: <cluster-name1>,<cluster-name2>` which permits the target clusters to use it.
+
+:::tip
+
+Rancher Dashboard provides an easy-to-use form for creating the [secret](../new-user-guides/kubernetes-resources-setup/secrets.md) or [configmap](../new-user-guides/kubernetes-resources-setup/configmaps.md).
+
+:::
+
+Example:
+
+```yaml
+apiVersion: v1
+data:
+  audit-policy: >-
+    IyBMb2cgYWxsIHJlcXVlc3RzIGF0IHRoZSBNZXRhZGF0YSBsZXZlbC4KYXBpVmVyc2lvbjogYXVkaXQuazhzLmlvL3YxCmtpbmQ6IFBvbGljeQpydWxlczoKLSBsZXZlbDogTWV0YWRhdGE=
+kind: Secret
+metadata:
+  annotations:
+    rke.cattle.io/object-authorized-for-clusters: cluster1
+  name: <name1>
+  namespace: fleet-default
+```
+
+Enable and configure the audit log by editing the cluster in YAML, and utilizing the `machineSelectorFiles` and `machineGlobalConfig` directives.
+
+Example:
+
+```yaml
+apiVersion: provisioning.cattle.io/v1
+kind: Cluster
+spec:
+  rkeConfig:
+    machineGlobalConfig:
+      kube-apiserver-arg:
+        - audit-policy-file=<customized-path>/dev-audit-policy.yaml
+        - audit-log-path=<customized-path>/dev-audit.logs
+    machineSelectorFiles:
+      - fileSources:
+          - configMap:
+              name: ''
+            secret:
+              items:
+                - key: audit-policy
+                  path: <customized-path>/dev-audit-policy.yaml
+              name: dev-audit-policy
+        machineLabelSelector:
+          matchLabels:
+            rke.cattle.io/control-plane-role: 'true'
+```
+
+:::tip
+
+You can also use the directive `machineSelectorConfig` with proper machineLabelSelectors to achieve the same effect.
+
+:::
+
+For more information about cluster configuration, refer to the [K3s cluster configuration reference](../../reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration.md) pages.
 
 </TabItem>
 
@@ -139,4 +246,3 @@ For configuration details, refer to the official [RKE1 documentation](https://rk
 
 </TabItem>
 </Tabs>
-

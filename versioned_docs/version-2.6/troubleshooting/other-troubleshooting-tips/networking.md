@@ -106,20 +106,3 @@ When the MTU is incorrectly configured (either on hosts running Rancher, nodes i
 * `read tcp: i/o timeout`
 
 See [Google Cloud VPN: MTU Considerations](https://cloud.google.com/vpn/docs/concepts/mtu-considerations#gateway_mtu_vs_system_mtu) for an example how to configure MTU correctly when using Google Cloud VPN between Rancher and cluster nodes.
-
-### Resolved issues
-
-#### Overlay network broken when using Canal/Flannel due to missing node annotations
-
-| | |
-|------------|------------|
-| GitHub issue | [#13644](https://github.com/rancher/rancher/issues/13644) |
-| Resolved in |  v2.1.2 |
-
-To check if your cluster is affected, the following command will list nodes that are broken (this command requires `jq` to be installed):
-
-```
-kubectl get nodes -o json | jq '.items[].metadata | select(.annotations["flannel.alpha.coreos.com/public-ip"] == null or .annotations["flannel.alpha.coreos.com/kube-subnet-manager"] == null or .annotations["flannel.alpha.coreos.com/backend-type"] == null or .annotations["flannel.alpha.coreos.com/backend-data"] == null) | .name'
-```
-
-If there is no output, the cluster is not affected.

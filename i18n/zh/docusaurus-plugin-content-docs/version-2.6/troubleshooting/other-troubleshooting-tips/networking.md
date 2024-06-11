@@ -102,20 +102,3 @@ title: 网络
 * `read tcp: i/o timeout`
 
 有关在 Rancher 和集群节点之间使用 Google Cloud VPN 时如何正确配置 MTU 的示例，请参阅 [Google Cloud VPN：MTU 注意事项](https://cloud.google.com/vpn/docs/concepts/mtu-considerations#gateway_mtu_vs_system_mtu)。
-
-### 已解决的问题
-
-#### 由于缺少节点注释，使用 Canal/Flannel 时覆盖网络中断
-
-| | |
-|------------|------------|
-| GitHub issue | [#13644](https://github.com/rancher/rancher/issues/13644) |
-| 解决于 | v2.1.2 |
-
-要检查你的集群是否受到影响，运行以下命令来列出损坏的节点（此命令要求安装 `jq`）：
-
-```
-kubectl get nodes -o json | jq '.items[].metadata | select(.annotations["flannel.alpha.coreos.com/public-ip"] == null or .annotations["flannel.alpha.coreos.com/kube-subnet-manager"] == null or .annotations["flannel.alpha.coreos.com/backend-type"] == null or .annotations["flannel.alpha.coreos.com/backend-data"] == null) | .name'
-```
-
-如果没有输出，则集群没有影响。
