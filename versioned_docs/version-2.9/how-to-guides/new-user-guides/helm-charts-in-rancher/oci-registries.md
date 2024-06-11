@@ -16,8 +16,8 @@ To add an OCI-based Helm chart repository through the Rancher UI:
 2. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
 3. In the left navigation bar, select **Apps > Repositories**.
 4. Click **Create**.
-5. Enter a **Name** and **Description** for the registry. Select **OCI Repository** as the target.
-6. Enter the URL for the registry. The registry endpoint must not contain anything besides OCI Helm Chart artifacts. The artifacts should all have unique names. If you attempt to add an endpoint that contains any other kinds of files or artifacts, the OCI repository will not be added. 
+5. Enter a **Name** for the registry. Select **OCI Repository** as the target.
+6. Enter the **OCI Repository Host URL** for the registry. The registry endpoint must not contain anything besides OCI Helm Chart artifacts. The artifacts should all have unique names. If you attempt to add an endpoint that contains any other kinds of files or artifacts, the OCI repository will not be added. 
   
   :::note
   
@@ -30,9 +30,16 @@ To add an OCI-based Helm chart repository through the Rancher UI:
   
   :::
 
-7. Set up authentication. Select **Basicauth** from the authentication field and enter a username and password as required. Otherwise, create or select an **Authentication** secret. See [Authentication](#authentication-for-oci-based-helm-chart-repositories) for a full description. 
-8. Add any labels and annotations.
-9. Click **Create**.
+7. Set up authentication. Select **Basicauth** from the authentication field and enter a username and password as required. Otherwise, create or select an **Authentication** secret. See [Authentication](#authentication-for-oci-based-helm-chart-repositories) for a full description.
+8. (optional) Enter a base64 encoded DER certificate in the **CA Cert Bundle** field. This field is for cases where you have a private OCI-based Helm chart repository and need Rancher to trust its certificates.   
+9. (optional) To allow insecure connections without performing an SSL check, select **Skip TLS Verification**. To force Rancher to use HTTP instead of HTTPS to send requests to the repsoitory, select **Insecure Plain Http**. See  [Authentication](#authentication-for-oci-based-helm-chart-repositories) for more details.
+10. (optional) If you know that your repository may respond with status code `429 Too Many Requests` (for example, if your repository is on DockerHub), fill out the fields under **Exponential Back Off**:
+  1. **Min Wait**: The default is 1 second.
+  1. **Max Wait**: The default is 1 second.
+  1. **Max Retry**: The default is 5 retries.
+Once these values are set, Rancher responds to the `429` status code by staggering requests based on the minimum and maximum wait values. The wait time between retries increases exponentially, until Rancher has sent the maximum number of retries set. See [Rate Limiting](#rate-limiting-of-oci-based-helm-chart-repositories) for more details.
+11. Add any labels and annotations.
+12. Click **Create**.
 
 It may take some time for the OCI repository to activate. This is particularly true if the OCI endpoint contains multiple namespaces. 
 
@@ -40,11 +47,9 @@ It may take some time for the OCI repository to activate. This is particularly t
 
 Rancher supports BasicAuth for OCI registries. You must create a [**BasicAuth** Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/#basic-authentication-secret). You can also [create the secret through the Rancher UI](../kubernetes-resources-setup/secrets.md). 
 
-Rancher 2.9.0 also adds the `spec.insecurePlainHttp` field, which allows insecure connections to OCI registries. When this field is set to `true`, Rancher connects to the OCI endpoint without performing an SSL check. This works exactly the same as how the `spec.insecurePlainHttp` field works in [ORAS CLI](https://oras.land/docs/commands/use_oras_cli), since Rancher uses the ORAS library.
+Rancher 2.9.0 also adds the `spec.insecurePlainHttp` field, which forces Rancher to use HTTP instead of HTTPS to send requests. This works exactly the same as the `spec.insecurePlainHttp` field in [ORAS CLI](https://oras.land/docs/commands/use_oras_cli), since Rancher uses the ORAS library.
 
 The CRD that is linked to the OCI Helm registry is `ClusterRepo`.
-
-[Screenshot of the ClusterRepo YAML]<!-- Engineers - Can we get this screenshot? Thank you! -->
 
 ## View Helm Charts in OCI-Based Helm Chart Repositories
 
@@ -97,7 +102,6 @@ For example, if you have an OCI-based Helm chart repository that doesn't send a 
 
 ## Troubleshooting OCI-based Helm Registries <!-- Unedited draft -->
 
-To view logs, enable the debug option of rancher 
+To enhance logging information, [enable the debug option](../../../troubleshooting/other-troubleshooting-tips/logging.md#kubernetes-install) while deploying Rancher.
 
-The first option if there is any discrepancy is to refresh a cluster repository 
-The last option is to delete the oci helm repository clusterrepo and readd it. This will not delete any already installed helm charts.
+If there is any discrepancy between the repository contents and Rancher, you should refresh the cluster repository as a first resort. If the discrepancy persists and you've exhausted your options, delete the OCI-based Helm chart repository from Rancher and add it again. Deleting the repository won't delete any Helm charts that are already installed. 
