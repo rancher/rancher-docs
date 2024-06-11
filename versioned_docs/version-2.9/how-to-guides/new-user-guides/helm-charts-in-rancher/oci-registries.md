@@ -36,7 +36,7 @@ To add an OCI-based Helm chart repository through the Rancher UI:
 10. (optional) If you know that your repository may respond with status code `429 Too Many Requests` (for example, if your repository is on DockerHub), fill out the fields under **Exponential Back Off**:
   1. **Min Wait**: The default is 1 second.
   1. **Max Wait**: The default is 1 second.
-  1. **Max Retry**: The default is 5 retries.
+  1. **Max Number of Retries**: The default is 5 retries.
 Once these values are set, Rancher responds to the `429` status code by staggering requests based on the minimum and maximum wait values. The wait time between retries increases exponentially, until Rancher has sent the maximum number of retries set. See [Rate Limiting](#rate-limiting-of-oci-based-helm-chart-repositories) for more details.
 11. Add any labels and annotations.
 12. Click **Create**.
@@ -96,11 +96,11 @@ Dockerhub returns a `429` status code when it completes all allocated requests. 
 
 Rancher currently checks for the `Retry-After` header. It also handles Dockerhub-style responses and automatically waits before making a new request. When handling Dockerhub-style responses, Rancher ignores `ExponentialBackOff` values. 
 
-If you have a OCI-based Helm chart repository which doesn't implement the `Retry-After` header, or which behaves differently than Dockerhub, provide your response values with the `ExponentialBackOff` field. 
+If you have a OCI-based Helm chart repository which doesn't implement the `Retry-After` header, fill out the fields under **Exponential Back Off** when you add the repository. 
 
-For example, if you have an OCI-based Helm chart repository that doesn't send a HTTP header, but you know that it allows 50 requests in 24 hours, you can provide a `MinWait` value of 86400 seconds, a `MaxWait` of 90000 seconds, and a `Maxretry` of `1`. <!-- I'm not sure what these two sentences from the draft mean? --> This would allow adding the Helm repository complete but it would take 24 hours if Rancher gets rate limited. There is no user intervention needed here.<!-- end -->
+For example, if you have an OCI-based Helm chart repository that doesn't return a `Retry-After` header, but you know that the server allows 50 requests in 24 hours, you can provide Rancher a **Min Wait** value of 86400 seconds, a **Max Wait** value of 90000 seconds, and a **Max Number of Retries** value of **1**. Then, if Rancher gets rate limited by the server, Rancher will wait for 24 hours before trying again. The request should succeed as Rancher hasn't sent any other requests in the previous 24 hours.
 
-## Troubleshooting OCI-based Helm Registries <!-- Unedited draft -->
+## Troubleshooting OCI-based Helm Registries
 
 To enhance logging information, [enable the debug option](../../../troubleshooting/other-troubleshooting-tips/logging.md#kubernetes-install) while deploying Rancher.
 
