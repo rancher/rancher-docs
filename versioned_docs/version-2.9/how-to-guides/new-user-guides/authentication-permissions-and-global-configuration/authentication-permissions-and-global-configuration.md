@@ -81,3 +81,5 @@ The following features are available under **Global Configuration**:
 - **Catalogs**
 - **Global DNS Entries**
 - **Global DNS Providers**
+
+As these are legacy features, please see the Rancher v2.0—v2.4 docs on [catalogs](/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md), [global DNS entries](/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns.md#adding-a-global-dns-entry), and [global DNS providers](/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns.md#editing-a-global-dns-provider) for more details.
