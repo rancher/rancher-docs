@@ -32,10 +32,10 @@ To add an OCI-based Helm chart repository through the Rancher UI:
 
 7. Set up authentication. Select **Basicauth** from the authentication field and enter a username and password as required. Otherwise, create or select an **Authentication** secret. See [Authentication](#authentication-for-oci-based-helm-chart-repositories) for a full description.
 8. (optional) Enter a base64 encoded DER certificate in the **CA Cert Bundle** field. This field is for cases where you have a private OCI-based Helm chart repository and need Rancher to trust its certificates.   
-9. (optional) To allow insecure connections without performing an SSL check, select **Skip TLS Verification**. To force Rancher to use HTTP instead of HTTPS to send requests to the repsoitory, select **Insecure Plain Http**. See  [Authentication](#authentication-for-oci-based-helm-chart-repositories) for more details.
+9. (optional) To allow insecure connections without performing an SSL check, select **Skip TLS Verification**. To force Rancher to use HTTP instead of HTTPS to send requests to the repository, select **Insecure Plain Http**.
 10. (optional) If you know that your repository may respond with status code `429 Too Many Requests` (for example, if your repository is on DockerHub), fill out the fields under **Exponential Back Off**:
-  1. **Min Wait**: The default is 1 second.
-  1. **Max Wait**: The default is 1 second.
+  1. **Min Wait**: The minimum duration in seconds that Rancher should wait before retrying.  The default is 1 second.
+  1. **Max Wait**: The maximum duration in seconds that Rancher should wait before retrying.  The default is 5 second.
   1. **Max Number of Retries**: The default is 5 retries.
 Once these values are set, Rancher responds to the `429` status code by staggering requests based on the minimum and maximum wait values. The wait time between retries increases exponentially, until Rancher has sent the maximum number of retries set. See [Rate Limiting](#rate-limiting-of-oci-based-helm-chart-repositories) for more details.
 11. Add any labels and annotations.
@@ -47,7 +47,6 @@ It may take some time for the OCI repository to activate. This is particularly t
 
 Rancher supports BasicAuth for OCI registries. You must create a [**BasicAuth** Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/#basic-authentication-secret). You can also [create the secret through the Rancher UI](../kubernetes-resources-setup/secrets.md). 
 
-Rancher 2.9.0 also adds the `spec.insecurePlainHttp` field, which forces Rancher to use HTTP instead of HTTPS to send requests. This works exactly the same as the `spec.insecurePlainHttp` field in [ORAS CLI](https://oras.land/docs/commands/use_oras_cli), since Rancher uses the ORAS library.
 
 The CRD that is linked to the OCI Helm registry is `ClusterRepo`.
 
@@ -59,7 +58,7 @@ To view Helm charts in the OCI-based Helm chart repository after it achieves an 
 1. Click **Apps > Charts**.
 1. Select the OCI-based Helm chart repository from the dropdown.
 
-## Refresh an OCI-Based Helm Chart Registry
+## Refresh an OCI-Based Helm Chart Repository
 
 Rancher automatically refreshes the OCI-based Helm chart repository every 6 hours. 
 
