@@ -6,7 +6,7 @@ title: Enabling User Retention
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-user-retention.md"/>
 </head>
 
-In Rancher v2.8.5 and later, you can enable user retention to automatically disable or delete inactive user accounts after a configurable time period.
+In Rancher v2.8.5 and later (and v2.7.14 and later in the v2.7.x line), you can enable user retention to automatically disable or delete inactive user accounts after a configurable time period.
 
 The user retention feature is off by default.
 
@@ -35,4 +35,4 @@ The settings, `disable-inactive-user-after` and  `delete-inactive-user-after`, d
 
 ## Optional User Retention Settings
 
-- `UserRetentionDryRun`: If set to `true`, the user retention process runs without actually deleting or disabling any user accounts. This can help test user retention behavior before allowing the process to disable or delete user accounts in a production environment.
+- `user-retention-dry-run`: If set to `true`, the user retention process runs without actually deleting or disabling any user accounts. This can help test user retention behavior before allowing the process to disable or delete user accounts in a production environment.
