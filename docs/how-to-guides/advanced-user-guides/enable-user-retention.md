@@ -35,4 +35,4 @@ The settings, `disable-inactive-user-after` and  `delete-inactive-user-after`, d
 
 ## Optional User Retention Settings
 
-- `UserRetentionDryRun`: If set to `true`, the user retention process runs without actually deleting or disabling any user accounts. This can help test user retention behavior before allowing the process to disable or delete user accounts in a production environment.
+- `user-retention-dry-run`: If set to `true`, the user retention process runs without actually deleting or disabling any user accounts. This can help test user retention behavior before allowing the process to disable or delete user accounts in a production environment.
