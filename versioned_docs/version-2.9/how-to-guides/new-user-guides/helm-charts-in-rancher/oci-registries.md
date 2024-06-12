@@ -48,7 +48,7 @@ It may take some time for the OCI repository to activate. This is particularly t
 Rancher supports BasicAuth for OCI registries. You must create a [**BasicAuth** Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/#basic-authentication-secret). You can also [create the secret through the Rancher UI](../kubernetes-resources-setup/secrets.md). 
 
 
-The CRD that is linked to the OCI Helm registry is `ClusterRepo`.
+The CRD that is linked to the OCI-based Helm repository is `ClusterRepo`.
 
 ## View Helm Charts in OCI-Based Helm Chart Repositories
 
