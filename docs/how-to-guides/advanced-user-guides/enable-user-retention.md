@@ -53,8 +53,8 @@ To enable user retention, you must set `user-retention-cron`. You must also set 
 The following are user-specific overrides to the global settings for special cases. These settings are applied by editing the `UserAttribute` associated with a given account:
 
 ```
-kubectl edit userattribute <user-name> <setting>
+kubectl edit userattribute <user-name>
 ```
 
-- `disable-after`: The user-specific override for `disable-inactive-user-after`. The value is expressed in [time.Duration units](https://pkg.go.dev/time#ParseDuration) units and truncated to the second. If the value is set to `0s` then the account won't be subject to disabling. 
-- `delete-after`: The user-specific override for `delete-inactive-user-after`. The value is expressed in [time.Duration units](https://pkg.go.dev/time#ParseDuration) units and truncated to the second. If the value is set to `0s` then the account won't be subject to deletion.
+- `disableAfter`: The user-specific override for `disable-inactive-user-after`. The value is expressed in [time.Duration units](https://pkg.go.dev/time#ParseDuration) units and truncated to the second. If the value is set to `0s` then the account won't be subject to disabling. 
+- `deleteAfter`: The user-specific override for `delete-inactive-user-after`. The value is expressed in [time.Duration units](https://pkg.go.dev/time#ParseDuration) units and truncated to the second. If the value is set to `0s` then the account won't be subject to deletion.
