@@ -12,11 +12,11 @@ The user retention feature is off by default. It is considered experimental at t
 
 ## Enabling User Retention with Kubectl
 
-To enable user retention, use kubectl to set `user-retention-cron`. Then, set `delete-inactive-user-after`, `disable-inactive-user-after`, or a combination of both. In the following example, `disable-inactive-user-after` alone is set. The example command runs the user retention daemon every hour to disable accounts that have been inactive for 30 days:
+To enable user retention, use kubectl to set `user-retention-cron`. Then, set `delete-inactive-user-after`, `disable-inactive-user-after`, or a combination of both:
 
 ```
-kubectl edit setting user-retention-cron 0 * * * *
-kubectl edit setting disable-inactive-user-after 720h
+kubectl edit setting user-retention-cron 
+kubectl edit setting disable-inactive-user-after
 ```
 
 ## Configuring Rancher to Delete Users, Disable Users, or Combine Operations
