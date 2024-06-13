@@ -8,7 +8,7 @@ title: Enabling User Retention
 
 In Rancher v2.8.5 and later (and v2.7.14 and later in the v2.7.x line), you can enable user retention to automatically disable or delete inactive user accounts after a configurable time period.
 
-The user retention feature is off by default.
+The user retention feature is off by default. It is considered experimental at this time.
 
 ## Enabling User Retention with Kubectl
 
@@ -21,7 +21,7 @@ kubectl edit setting disable-inactive-user-after 720h
 
 ## Configuring Rancher to Delete Users, Disable Users, or Combine Operations
 
-Rancher uses two global user retention settings to determine if and when users are disabled or deleted after a certain period of inactivity.
+Rancher uses two global user retention settings to determine if and when users are disabled or deleted after a certain period of inactivity. Disabled accounts must be re-enabled before users can login again.
 
 The global settings, `disable-inactive-user-after` and  `delete-inactive-user-after`, do not block one another from running. 
 
@@ -29,7 +29,7 @@ For example, you can set both operations to run. If you give `disable-inactive-u
 
 ::: warning
 
-If you haven't set any user-specific RBAC permissions, only use group-based RBAC, and delete an inactive user account without ever disabling it, a user may recreate the deleted account with the same level of permissions by logging in. If you are only using group-based RBAC and want to make sure users are unable to login to a deleted inactive account without administrator input, you must disable the account before it is deleted.
+If you haven't set any user-specific RBAC permissions, only use group-based RBAC, and delete an inactive user account without ever disabling it, a user may login and recreate the deleted account with the same level of permissions as before the deletion. If you are only using group-based RBAC and want to make sure users are unable to login to a deleted inactive account without administrator input, you must disable the account before it is deleted.
 
 :::
 
