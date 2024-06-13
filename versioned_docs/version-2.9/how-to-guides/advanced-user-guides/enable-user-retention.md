@@ -27,12 +27,6 @@ The global settings, `disable-inactive-user-after` and  `delete-inactive-user-af
 
 For example, you can set both operations to run. If you give `disable-inactive-user-after` a shorter duration than `delete-inactive-user-after`, the user retention process disables inactive accounts before deleting them.
 
-::: warning
-
-If you haven't set any user-specific RBAC permissions, only use group-based RBAC, and delete an inactive user account without ever disabling it, a user may recreate the deleted account with the same level of permissions by logging in. If you are only using group-based RBAC and want to make sure users are unable to login to a deleted inactive account without administrator input, you must disable the account before it is deleted.
-
-:::
-
 You can also edit some user retention settings on a specific user's `UserAttribute`. Setting these values overrides the global settings. See [User-specific User Retention Overrides](#user-specific-user-retention-overrides) for more details.
 
 ### Required User Retention Settings
