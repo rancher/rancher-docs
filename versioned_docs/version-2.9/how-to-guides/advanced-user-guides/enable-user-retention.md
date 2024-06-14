@@ -3,7 +3,7 @@ title: Enabling User Retention
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-user-retention.md"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-user-retention"/>
 </head>
 
 In Rancher v2.8.5 and later (and v2.7.14 and later in the v2.7.x line), you can enable user retention to automatically disable or delete inactive user accounts after a configurable time period.
