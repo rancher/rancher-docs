@@ -25,7 +25,7 @@ SQLite-backed caching persists copies of any cached Kubernetes objects to disk. 
 1. In the upper left corner, click **☰ > Global Settings > Performance**.
 1. Go to **Server-side Pagination** and check the **Server-side Pagination** option.
 1. Click **Apply**.
-1. Refresh the page (`CTRL + R`).
+1. Reload the page with the browser button (or the equivalent keyboard combination, typically `CTRL + R` on Windows and Linux, and `⌘ + R` on macOS).
 
 
 ## Encrypting SQLite-backed Caches
