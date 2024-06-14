@@ -1,5 +1,5 @@
 ---
-title: SQLite-backed caching
+title: SQLite-Backed Caching
 ---
 
 <head>
@@ -7,36 +7,35 @@ title: SQLite-backed caching
 </head>
 
 :::caution
-Enabling the SQLite-backed caching of Kubernetes objects is a **highly experimental** feature, it is not yet officially supported in Rancher. It is not intended for any production use. SUSE customers should consult SUSE Support before activating this feature.
+Caching Kubernetes objects with SQLite is not intended for use in production. This feature is considered highly experimental. SUSE customers should consult SUSE Support before activating this feature.
 :::
 
 
-## About this Feature
-This feature enables an optional cache of Kubernetes objects with the aim of improving performance, especially while browsing tabular data in the UI with thousands of rows. It also provides improved UI sorting, filtering and pagination features. 
+SQLite-backed caching provides an optional cache of Kubernetes objects to improve performance, especially while browsing tabular data with thousands of rows. The cache improves UI sorting, filtering, and pagination.
 
-## Enabling instructions
-To enable the feature, perform the following steps:
-1. Log into the Rancher UI.
+This feature creates file system based caches in the `rancher` pods of the upstream cluster, and in the `cattle-cluster-agent` pods of the downstream clusters. In most environments, disk usage and I/O should not be significant. However, you should monitor activity after you enable caching.
+
+SQLite-backed caching persists copies of any cached Kubernetes objects to disk. See [Encrypting SQLite-backed Caching](#encrypting-sqlite-backed-caches) if this is a security concern.
+
+## Enabling SQLite-Backed Caching
+
 1. In the upper left corner, click **☰ > Global Settings > Feature Flags**.
-1. Go to **`ui-sql-cache`** and click **⋮ > Activate > Activate**.
+1. Find **`ui-sql-cache`** and select **⋮ > Activate > Activate**.
 1. Wait for Rancher to restart. This also restarts agents on all downstream clusters.
 1. In the upper left corner, click **☰ > Global Settings > Performance**.
 1. Go to **Server-side Pagination** and check the **Server-side Pagination** option.
-1. Click **Apply**
-1. Refresh the page (`CTRL + R`)
+1. Click **Apply**.
+1. Reload the page with the browser button (or the equivalent keyboard combination, typically `CTRL + R` on Windows and Linux, and `⌘ + R` on macOS).
 
-## Operational notes
-This feature creates file system based caches in the `rancher` pods in the upstream cluster and `cattle-cluster-agent` pods in downstream caches. In most use cases disk usage and I/O should not be significant, however monitoring is recommended.
 
-## Security notes
-This feature persists copies of any cached Kubernetes objects to disk. If this is a security concern, an option exists to have all objects encrypted before being persisted to disk.
+## Encrypting SQLite-backed Caches
 
-Set the environment variable `CATTLE_ENCRYPT_CACHE_ALL` to `true` in the pods that need full encryption (`rancher` pods in the upstream cluster and `cattle-cluster-agent` pods in downstream caches respectively).
+SQLite-backed caching persists copies of any cached Kubernetes objects to disk. If you're concerned about the safety of this data, you can encrypt all objects  before they are persisted to disk, by setting the environment variable `CATTLE_ENCRYPT_CACHE_ALL` to `true` in `rancher` pods in the upstream cluster and `cattle-cluster-agent` pods in the downstream clusters.
 
 Secrets and security Tokens are always encrypted regardless of the above setting.
 
-## Known limitations
-At the time of writing the feature is subject to limitations below:
+## Known Limitations of SQLite-Backed Caching
 
-1. Only the Pods, Secrets, Node, ConfigMap and Event pages make use of the cache.
-1. Automatic refresh of pages is disabled. Table contents can be manually refreshed via a **Refresh** button.
+Only Pods, Secrets, Node, ConfigMap and Event pages make use of the cache.
+
+Pages can't be automatically refreshed. You can manually refresh table contents by clicking the **Refresh** button.
