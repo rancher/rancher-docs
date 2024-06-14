@@ -47,8 +47,8 @@ The following are user-specific overrides to the global settings for special cas
 kubectl edit userattribute <user-name>
 ```
 
-- `disableAfter`: The user-specific override for `disable-inactive-user-after`. The value is expressed in [time.Duration units](https://pkg.go.dev/time#ParseDuration) units and truncated to the second. If the value is set to `0s` then the account won't be subject to disabling. 
-- `deleteAfter`: The user-specific override for `delete-inactive-user-after`. The value is expressed in [time.Duration units](https://pkg.go.dev/time#ParseDuration) units and truncated to the second. If the value is set to `0s` then the account won't be subject to deletion.
+- `disableAfter`: The user-specific override for `disable-inactive-user-after`. The value is expressed in [time.Duration units](https://pkg.go.dev/time#ParseDuration) and truncated to the second. If the value is set to `0s` then the account won't be subject to disabling. 
+- `deleteAfter`: The user-specific override for `delete-inactive-user-after`. The value is expressed in [time.Duration units](https://pkg.go.dev/time#ParseDuration) and truncated to the second. If the value is set to `0s` then the account won't be subject to deletion.
 
 ## Viewing User Retention Settings in the Rancher UI
 
