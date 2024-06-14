@@ -32,9 +32,9 @@ The following are global settings:
  - `disable-inactive-user-after`: The amount of time that a user account can be inactive before the process disables an account. Disabling an account forces the user to request that an administrator re-enable the account before they can log in to use it. Values are expressed in [time.Duration units](https://pkg.go.dev/time#ParseDuration) (for example, `720h` for 720 hours or 30 days). The value must be greater than `auth-user-session-ttl-minutes`, which is `16h` by default. If the value is not set, set to the empty string, or is equal to 0, the process does not disable any inactive accounts.
 - `delete-inactive-user-after`: The amount of time that a user account can be inactive before the process deletes the account. Values are expressed in time.Duration units (for example, `720h` for 720 hours or 30 days). The value must be greater than `auth-user-session-ttl-minutes`, which is `16h` by default. The value should be greater than `336h` (14 days), otherwise it is rejected by the Rancher webhook. If you need the value to be lower than 14 days, you can [bypass the webhook](../../reference-guides/rancher-webhook.md#bypassing-the-webhook). If the value is not set, set to the empty string, or is equal to 0, the process does not delete any inactive accounts.
 
- 
-
 ### Optional User Retention Settings
+
+The following are global settings:
 
 - `user-retention-dry-run`: If set to `true`, the user retention process runs without actually deleting or disabling any user accounts. This can help test user retention behavior before allowing the process to disable or delete user accounts in a production environment.
 - `user-last-login-default`: If a user does not have `UserAttribute.LastLogin` set on their account, this setting is used instead. It provides a predetermined last login time for the account. The value is expressed as an [RFC 3339 date-time](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) truncated to the last second; for example, `2023-03-01T00:00:00Z`. If the value is set to the empty string or is equal to 0, this setting is not used.
