@@ -10,7 +10,7 @@ In Rancher v2.7.14 and later, you can enable user retention to automatically dis
 
 The user retention feature is off by default. It is considered experimental at this time.
 
- ## Enabling User Retention with kubectl
+## Enabling User Retention with kubectl
 
 To enable user retention, you must set `user-retention-cron`. You must also set at least one of  `disable-inactive-user-after` or `delete-inactive-user-after`. You can use `kubectl edit setting <name-of-setting>` to open your editor of choice and set these values.
 
