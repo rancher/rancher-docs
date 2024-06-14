@@ -10,7 +10,7 @@ In Rancher v2.7.14 and later, you can enable user retention to automatically dis
 
 The user retention feature is off by default. It is considered experimental at this time.
 
-## Enabling User Retention with Kubectl
+## Enabling User Retention with kubectl
 
 To enable user retention, use kubectl to set `user-retention-cron`. Then, set `delete-inactive-user-after`, `disable-inactive-user-after`, or a combination of both:
 
@@ -21,7 +21,7 @@ kubectl edit setting disable-inactive-user-after
 
 ## Configuring Rancher to Delete Users, Disable Users, or Combine Operations
 
-Rancher uses two global user retention settings to determine if and when users are disabled or deleted after a certain period of inactivity. Disabled accounts must be re-enabled before users can login again. If an account is deleted without being disabled, users may be able to login through external authentication and the deleted account will be recreated.
+Rancher uses two global user retention settings to determine if and when users are disabled or deleted after a certain period of inactivity. Disabled accounts must be re-enabled before users can log in again. If an account is deleted without being disabled, users may be able to log in through external authentication and the deleted account will be recreated.
 
 The global settings, `disable-inactive-user-after` and  `delete-inactive-user-after`, do not block one another from running. 
 
@@ -37,11 +37,7 @@ The following are global settings:
 - `disable-inactive-user-after`: The amount of time that a user account can be inactive before the process disables an account. Disabling an account forces the user to request that an administrator re-enable the account before they can login to use it. Values are expressed in [time.Duration units](https://pkg.go.dev/time#ParseDuration) (for example, `720h` for 720 hours or 30 days). The value must be greater than `auth-user-session-ttl-minutes`, which is `16h` by default. If the value is not set, set to the empty string, or is equal to 0, the process does not disable any inactive accounts.
 - `delete-inactive-user-after`: The amount of time that a user account can be inactive before the process deletes the account. Values are expressed in time.Duration units (for example, `720h` for 720 hours or 30 days). The value must be greater than `auth-user-session-ttl-minutes`, which is `16h` by default. The value should be greater than `336h` (14 days), otherwise it is rejected by the Rancher webhook. If you need the value to be lower than 14 days, you can [bypass the webhook](../../reference-guides/rancher-webhook.md#bypassing-the-webhook). If the value is not set, set to the empty string, or is equal to 0, the process does not delete any inactive accounts.
 
-::: important
-
-To enable user retention, you must set `user-retention-cron`. You must also set at least one of  `disable-inactive-user-after` or `delete-inactive-user-after`.
-
-:::
+ 
 
 ### Optional User Retention Settings
 
