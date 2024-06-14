@@ -760,6 +760,7 @@
             "how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
             "how-to-guides/advanced-user-guides/enable-api-audit-log",
             "how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters",
+            "how-to-guides/advanced-user-guides/enable-user-retention",
             "how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer"
           ]
         }
