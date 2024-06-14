@@ -49,3 +49,14 @@ kubectl edit userattribute <user-name>
 
 - `disableAfter`: The user-specific override for `disable-inactive-user-after`. The value is expressed in [time.Duration units](https://pkg.go.dev/time#ParseDuration) units and truncated to the second. If the value is set to `0s` then the account won't be subject to disabling. 
 - `deleteAfter`: The user-specific override for `delete-inactive-user-after`. The value is expressed in [time.Duration units](https://pkg.go.dev/time#ParseDuration) units and truncated to the second. If the value is set to `0s` then the account won't be subject to deletion.
+
+## Viewing User Retention Settings in the Rancher UI
+
+You can see which user retention settings are applied to which users. 
+
+1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the left navigation menu, select **Users**. 
+
+The **Disable After** and **Delete After** columns for each user account indicate how long the account can be inactive before it is disabled or deleted from Rancher. There is also a **Last Login** column roughly indicating when the account was last active. 
+
+The same information is available if you click a user's name in the **Users** table and select the **Detail** tab. 
