@@ -16,11 +16,12 @@ Rancher will publish deprecated features as part of the [release notes](https://
 
 | Patch Version |  Release Date |
 |---------------|---------------|
-| [2.8.4](https://github.com/rancher/rancher/releases/tag/v2.8.4) | May 16, 2024 |
-| [2.8.3](https://github.com/rancher/rancher/releases/tag/v2.8.3) | Mar 28, 2024 |
-| [2.8.2](https://github.com/rancher/rancher/releases/tag/v2.8.2) | Feb 8, 2024 |
-| [2.8.1](https://github.com/rancher/rancher/releases/tag/v2.8.1) | Jan 22, 2024 |
-| [2.8.0](https://github.com/rancher/rancher/releases/tag/v2.8.0) | Dec 6, 2023 |
+| [2.8.5](https://github.com/rancher/rancher/releases/tag/v2.8.5) | June 17, 2024 |
+| [2.8.4](https://github.com/rancher/rancher/releases/tag/v2.8.4) | May 16, 2024  |
+| [2.8.3](https://github.com/rancher/rancher/releases/tag/v2.8.3) | Mar 28, 2024  |
+| [2.8.2](https://github.com/rancher/rancher/releases/tag/v2.8.2) | Feb 8, 2024   |
+| [2.8.1](https://github.com/rancher/rancher/releases/tag/v2.8.1) | Jan 22, 2024  |
+| [2.8.0](https://github.com/rancher/rancher/releases/tag/v2.8.0) | Dec 6, 2023   |
 
 ### What can I expect when a feature is marked for deprecation?
 
