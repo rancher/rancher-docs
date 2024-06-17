@@ -185,15 +185,12 @@
     <dt>
         Machine Pool
     </dt>
+    <p>
+        <b>Versions:</b> Rancher v2.6 and later
+    </p>
     <dd>
         A machine pool is a logical grouping of nodes within a Kubernetes cluster, such as an RKE2, K3s, EKS, AKS, or GKE cluster. Each pool can be configured independently, allowing for flexibility in managing different types of workloads and resource requirements. Machine pool configurations include information like Pool Name, Machine Count, and Roles, as well as options like Auto Replace, Drain Before Delete, Kubernetes Node Labels, and Taints.
     </dd>
-    <p>
-        <b>Synonyms:</b> <i>comma list</i>
-    </p>
-    <p>
-        <b>Related terms:</b> <i>comma list</i>
-    </p>
     <dt>
         Managed cluster
     </dt>
@@ -215,14 +212,14 @@
     <dt>
         Neuvector Prime
     </dt>
+    <p>
+        <b>Versions:</b> Rancher v2.8 and later
+    </p>
     <dd>
         Nuevector Prime is an end-to-end container security platform for containers, pods, and hosts. It offers real-time compliance, visibility, and protection for critical applications and data during runtime. NeuVector provides a firewall, container process/file system monitoring, security auditing with CIS benchmarks, and vulnerability scanning.
     </dd>
     <p>
-        <b>Synonyms:</b> <i>comma list</i>
-    </p>
-    <p>
-        <b>Related terms:</b> <i>comma list</i>
+        <b>Related terms:</b> <i>Neuvector</i>
     </p>
     <dt>
         Node Template
@@ -230,29 +227,22 @@
     <dd>
         A node template is the saved configuration for the parameters to use when provisioning nodes in a specific cloud provider. These nodes can be launched from the UI. Rancher uses Docker Machine to provision these nodes. The available cloud providers to create node templates are based on the active node drivers in Rancher. After you create a node template in Rancher, it's saved so that you can use it again to create node pools. Node templates are bound to your login. After you add a template, you can remove it from your user profile.
     </dd>
-    <p>
-        <b>Synonyms:</b> <i>comma list</i>
-    </p>
-    <p>
-        <b>Related terms:</b> <i>comma list</i>
-    </p>
 </dl>
 
 ## P
-
 
 <dl>
     <dt>
         Prime
     </dt>
+    <p>
+        <b>Versions:</b> Rancher v2.7 and later
+    </p>
     <dd>
         Prime represents a new edition of the commercial enterprise offering for Rancher and Nuevector. Rancher Prime and Nuevector Prime are built on the same source code and will, therefore, continue to be 100% open source. Additional value comes from security assurances, extended lifecycles, access to focused architectures, and Kubernetes advisories. These Prime offerings also offer options to get production support for innovative projects and installation assets are hosted on a trusted registry owned and managed by SUSE.
     </dd>
     <p>
-        <b>Synonyms:</b> <i>comma list</i>
-    </p>
-    <p>
-        <b>Related terms:</b> <i>commar list</i>
+        <b>Related terms:</b> <i>Rancher Enterprise, Rancher Prime, Nuevector Prime</i>
     </p>
     <dt>
         Project
@@ -260,12 +250,6 @@
     <dd>
         A project is a group of namespaces, and it is a concept introduced by Rancher. In terms of hierarchy, clusters contain projects and projects contain namespaces. Namespaces provide a mechanism for isolating groups of resources within a single cluster. Projects allow you to manage multiple namespaces as a group and perform Kubernetes operations in them. You can use projects to support multi-tenancy so that a team can access a project within a cluster without having access to other projects in the same cluster.
     </dd>
-    <p>
-        <b>Synonyms:</b> <i>comma list</i>
-    </p>
-    <p>
-        <b>Related terms:</b> <i>commar list</i>
-    </p>
     <dt>
         Project Resource Quotas
     </dt>
@@ -273,49 +257,36 @@
         Similar to how namespaces divide cluster resources among multiple users, a project resource quota limits the cluster resources that a project (and its namespaces) can consume.
     </dd>
     <p>
-        <b>Synonyms:</b> <i>comma list</i>
-    </p>
-    <p>
-        <b>Related terms:</b> <i>comma list</i>
+        <b>Synonyms:</b> <i>Resource quotas</i>
     </p>
     <dt>
-        PSA
+        Pod Security Admission (PSA)
     </dt>
+    <p>
+        <b>Versions:</b> Rancher v2.7.2 and later
+    </p>
     <dd>
         Pod Security Admission (PSA) is a built-in Kubernetes controller that enforces the Pod Security Standards (PSS) on pods running in a namespace. PSA places requirements on a pod's security context and other related fields and categorizes pods into three levels based on their security requirements: Privileged, Baseline, and Restricted.
     </dd>
-    <p>
-        <b>Synonyms:</b> <i>comma list</i>
-    </p>
-    <p>
-        <b>Related terms:</b> <i>comma list</i>
-    </p>
     <dt>
-        PSA Config Template
+        Pod Security Admission (PSA) Config Template
     </dt>
+    <p>
+        <b>Versions:</b> Rancher v2.7.2 and later
+    </p>
     <dd>
         If you have administrator privileges, you can customize security restrictions and permissions by creating additional PSA templates, or by editing existing templates. Pod Security admission (PSA) configuration templates are a Rancher custom-defined resource (CRD), available in Rancher v2.7.2 and above. The templates provide pre-defined security configurations that you can apply to a cluster:
-            - rancher-privileged: The most permissive configuration. It doesn't restrict the behavior of any pods. This allows for known privilege escalations. This policy has no exemptions.
-            - rancher-restricted: A heavily restricted configuration that follows current best practices for hardening pods. You must make namespace-level exemptions for Rancher components.
+        <ul>
+        <li>rancher-privileged: The most permissive configuration. It doesn't restrict the behavior of any pods. This allows for known privilege escalations. This policy has no exemptions.</li>
+        <li>rancher-restricted: A heavily restricted configuration that follows current best practices for hardening pods. You must make namespace-level exemptions for Rancher components.</li>
+        </ul>
     </dd>
-    <p>
-        <b>Synonyms:</b> <i>comma list</i>
-    </p>
-    <p>
-        <b>Related terms:</b> <i>comma list</i>
-    </p>
     <dt>
-        PSP
+        Pod Security Policies (PSP)
     </dt>
     <dd>
-        Pod Security Policies (PSPs) are objects that control security-sensitive aspects of the pod specification (such as root privileges). PodSecurityPolicy was deprecated in Kubernetes v1.21, and removed from Kubernetes in v1.25.
+        Pod Security Policies (PSPs) are objects that control security-sensitive aspects of the pod specification (such as root privileges). If a pod does not meet the conditions specified in the PSP, Kubernetes will not allow it to start. PodSecurityPolicy was deprecated in Kubernetes v1.21, and removed from Kubernetes in v1.25.
     </dd>
-    <p>
-        <b>Synonyms:</b> <i>comma list</i>
-    </p>
-    <p>
-        <b>Related terms:</b> <i>comma list</i>
-    </p>
 </dl>
 
 ## R
@@ -327,12 +298,6 @@
     <dd>
         A Kubernetes management tool to deploy and run clusters anywhere and on any provider. Rancher includes all the software and downstream cluster components used to manage the entire Rancher deployment.
     </dd>
-        <p>
-        <b>Synonyms:</b> <i>comma list</i>
-    </p>
-    <p>
-        <b>Related terms:</b> <i>comma list</i>
-    </p>
     <dt>
         Rancher Kubernetes Engine (RKE)
     </dt>
@@ -348,33 +313,48 @@
     <dt>
         Rancher Chart
     </dt>
-    <dd>
-        Rancher is installed using the Helm package manager for Kubernetes. Helm charts provide templating syntax for Kubernetes YAML manifest documents. With Helm, you can create configurable deployments instead of just using static files.
-    </dd>
     <p>
-        <b>Synonyms:</b> <i>comma list</i>
+        <b>Versions:</b> Rancher v2.6 and later
     </p>
-     <p>
-        <b>Related terms:</b> <i>comma list</i>
-    </p>
+    <dd>
+        Rancher charts differ slightly from Helm charts in their directory structures. They are native Helm charts with two files that enhance user experience: app-readme.md and questions.yaml. Rancher charts add simplified chart descriptions and configuration forms to make application deployment easy, allowing Rancher users to understand how to launch an application without having to read through the entire list of Helm variables.
+    </dd>
+    <dt>
+        Rancher CLI
+    </dt>
+    <dd>
+        The Rancher CLI (Command Line Interface) is a unified tool that you can use to interact with Rancher. With this tool, you can operate Rancher using a command line rather than the GUI.
+    </dd>
     <dt>
         Rancher Enterprise
     </dt>
+    <p>
+        <b>Versions:</b> Rancher v2.7 and later
+    </p>
     <dd>
         Rancher Enterprise, or Rancher Prime, is a new edition of the commercial enterprise offering built on the same source code. Installation assets are hosted on a trusted registry owned and managed by Rancher, with additional value coming from security assurances, extended lifecycles, access to focused architectures, and Kubernetes advisories.
     </dd>
     <p>
-        <b>Synonyms:</b> <i>comma list</i>
+        <b>Synonyms:</b> <i>Rancher Prime</i>
     </p>
     <p>
-        <b>Related terms:</b> <i>comma list</i>
+        <b>Related terms:</b> <i>Prime</i>
     </p>
     <dt>
        Rancher Prime
     </dt>
+    <p>
+        <b>Versions:</b> Rancher v2.7 and later
+    </p>
     <dd>
         Rancher Prime is a new edition of the commercial, enterprise offering built on the the same source code. Installation assets are hosted on a trusted registry owned and managed by Rancher with additional value coming in from security assurances, extended lifecycles, access to focused architectures and Kubernetes advisories.
     </dd>
+    <p>
+        <b>Synonyms:</b> <i>Rancher Enterprise</i>
+    </p>
+    <p>
+        <b>Related terms:</b> <i>Prime</i>
+    </p>
     <dt>
         Rancher server
     </dt>
