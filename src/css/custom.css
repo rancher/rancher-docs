@@ -482,3 +482,11 @@ details p {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
+
+.cardTitle_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module {
+  font-size: 0.88rem !important;
+}
+
+.cardDescription_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module {
+  display: none;
+}
