@@ -93,9 +93,9 @@ Most servers return a `Retry-After` header, indicating how long to wait before r
 
 Dockerhub returns a `429` status code when it completes all allocated requests. It also returns a `RateLimit-Remaining` header which describes the rate limiting policy. 
 
-Rancher currently checks for the `Retry-After` header. It also handles Dockerhub-style responses (status code `429` and the `RateLimit-Remaining` header) and automatically waits before making a new request. When handling Dockerhub-style responses, Rancher ignores `ExponentialBackOff` values. 
+Rancher currently checks for the `Retry-After` header. It also handles Dockerhub-style responses (status code `429` and the `RateLimit-Remaining` header) and automatically waits before making a new request. When handling `Retry-After` or Dockerhub-style responses, Rancher ignores `ExponentialBackOff` values. 
 
-If you have a OCI-based Helm chart repository which doesn't implement the `Retry-After` or `RateLimit-Remaining` headers, fill out the fields under **Exponential Back Off** when you add the repository. 
+If you have a OCI-based Helm chart repository which doesn't implement the `Retry-After` or `RateLimit-Remaining` headers, and think you may be rate-limited at some point, fill out the fields under **Exponential Back Off** when you add the repository. 
 
 For example, if you have an OCI-based Helm chart repository that doesn't return a `Retry-After` header, but you know that the server allows 50 requests in 24 hours, you can provide Rancher a **Min Wait** value of 86400 seconds, a **Max Wait** value of 90000 seconds, and a **Max Number of Retries** value of **1**. Then, if Rancher gets rate limited by the server, Rancher will wait for 24 hours before trying again. The request should succeed as Rancher hasn't sent any other requests in the previous 24 hours.
 
