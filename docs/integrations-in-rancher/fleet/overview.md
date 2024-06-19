@@ -63,6 +63,8 @@ The Helm chart in the git repository must include its dependencies in the charts
 
 - **Temporary Workaround**: By default, user-defined secrets are not backed up in Fleet. It is necessary to recreate secrets if performing a disaster recovery restore or migration of Rancher into a fresh cluster. To modify resourceSet to include extra resources you want to backup, refer to docs [here](https://github.com/rancher/backup-restore-operator#user-flow).
 
+-  **Debug logging**: To enable debug logging of Fleet components, you can create a new **fleet** entry in the existing **rancher-config** ConfigMap in the **cattle-system** namespace with the value `{"debug": "1", "debugLevel": "1"}`. The Fleet application will be restarted after saving the ConfigMap, and debug mode will be enabled.
+
 ## Documentation
 
 The Fleet documentation is at https://fleet.rancher.io/.
