@@ -2735,7 +2735,7 @@ module.exports = {
             from: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/vsphere/configure-out-of-tree-vsphere'
           }, // Redirects for #1279 - 404 in Rancher Dashboard
           {
-            to: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/vsphere/configure-out-of-tree-vsphere',
+            to: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere',
             from: '/v2.8/cluster-provisioning/rke-clusters/cloud-providers/vsphere/out-of-tree'
           }, // # 1279 redirect (end)
           {
