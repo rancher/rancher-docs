@@ -31,7 +31,7 @@ Rancher will allow Windows workload pods to deploy on both Windows and Linux wor
 
 ## General Requirements
 
-The general node requirements for networking and operating systems are the same as the node requirements for a [Rancher installation](../../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md).
+The general networking and operating system requirements for Windows nodes are the same as for other [Rancher installations](../../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md).
 
 ### OS Requirements
 
@@ -41,7 +41,7 @@ For the support lifecycle dates for Windows Server, see the [Microsoft Documenta
 
 ### Kubernetes Version
 
-Information regarding Kubernetes component versions can be viewed in the [support matrices for RKE2 versions](https://www.suse.com/suse-rke2/support-matrix/all-supported-versions/).
+For more information regarding Kubernetes component versions, see the [support matrices for RKE2 versions](https://www.suse.com/suse-rke2/support-matrix/all-supported-versions/).
 
 ### Node Requirements
 
@@ -126,7 +126,7 @@ If you are using the GCE (Google Compute Engine) cloud provider, you must do the
 
 This tutorial describes how to create a Rancher-provisioned cluster with the three nodes in the [recommended architecture.](#recommended-architecture)
 
-When you provision a cluster with Rancher on existing nodes, you will add nodes to the cluster by installing the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) on each one. When you create or edit your cluster from the Rancher UI, run the **Registration Command** on each server to add it to your cluster.
+When you provision a cluster with Rancher on existing nodes, you add nodes to the cluster by installing the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) on each one. To create or edit your cluster from the Rancher UI, run the **Registration Command** on each server to add it to your cluster.
 
 To set up a cluster with support for Windows nodes and containers, you will need to complete the tasks below.
 
@@ -226,7 +226,7 @@ For each Linux worker node added into the cluster, the following taints will be 
 In this section, we run a command to register the Windows worker node to the cluster.
 
 :::note
-The cluster must be up and running with Linux etcd, control plane, and worker nodes before the registration command for adding Windows workers will display.
+The registration command to add the Windows workers only appears after the cluster is running with Linux etcd, control plane, and worker nodes.
 :::
 
 1. After cluster creation, navigate to the **Registration** tab.
