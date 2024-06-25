@@ -6,31 +6,20 @@ title: Launching Kubernetes on Windows Clusters
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters"/>
 </head>
 
-When provisioning a [custom cluster](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md) using Rancher, Rancher uses RKE (the Rancher Kubernetes Engine) to install Kubernetes on your existing nodes.
+When provisioning a [custom cluster](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md) Rancher uses RKE2 to install Kubernetes on your existing nodes.
 
 In a Windows cluster provisioned with Rancher, the cluster must contain both Linux and Windows nodes. The Kubernetes controlplane can only run on Linux nodes, and the Windows nodes can only have the worker role. Windows nodes can only be used for deploying workloads.
 
-Some other requirements for Windows clusters include:
-
-- You can only add Windows nodes to a cluster if Windows support is enabled when the cluster is created. Windows support cannot be enabled for existing clusters.
-- Kubernetes 1.15+ is required.
-- The Flannel network provider must be used.
-- Windows nodes must have 50 GB of disk space.
-
-For the full list of requirements, see [this section.](#requirements-for-windows-clusters)
-
 For a summary of Kubernetes features supported in Windows, see the Kubernetes documentation on [supported functionality and limitations for using Kubernetes with Windows](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#supported-functionality-and-limitations) or the [guide for scheduling Windows containers in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/user-guide-windows-containers/).
 
-### RKE2 Windows
+### RKE2 Features for Windows Clusters
 
-The RKE2 provisioning feature also includes installing RKE2 on Windows clusters. Windows features for RKE2 include:
+Listed below are the primary RKE2 features for Windows cluster provisioning:
 
 - Windows Containers with RKE2 powered by containerd
 - Added provisioning of Windows RKE2 custom clusters directly from the Rancher UI
 - Calico CNI for Windows RKE2 custom clusters
 - SAC releases of Windows Server (2004 and 20H2) are included in the technical preview
-
-Windows Support for RKE2 Custom Clusters requires choosing Calico as the CNI.
 
 :::note
 
@@ -40,11 +29,11 @@ Rancher will allow Windows workload pods to deploy on both Windows and Linux wor
 
 - HostProcess containers in Windows RKE2 are supported in Kubernetes v1.24.1 and up. See [the upstream documentation](https://kubernetes.io/docs/tasks/configure-pod-container/create-hostprocess-pod/) for more information.
 
-## Requirements for Windows Clusters
+## General Requirements
 
-The general node requirements for networking, operating systems, and Docker are the same as the node requirements for a [Rancher installation](../../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md).
+The general networking and operating system requirements for Windows nodes are the same as for other [Rancher installations](../../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md).
 
-### OS and Docker Requirements
+### OS Requirements
 
 Our support for Windows Server and Windows containers match the Microsoft official lifecycle for LTSC (Long-Term Servicing Channel) and SAC (Semi-Annual Channel).
 
@@ -52,9 +41,7 @@ For the support lifecycle dates for Windows Server, see the [Microsoft Documenta
 
 ### Kubernetes Version
 
-Kubernetes v1.15+ is required.
-
-If you are using Kubernetes v1.21 with Windows Server 20H2 Standard Core, the patch "2019-08 Servicing Stack Update for Windows Server" must be installed on the node.
+For more information regarding Kubernetes component versions, see the [support matrices for RKE2 versions](https://www.suse.com/suse-rke2/support-matrix/all-supported-versions/).
 
 ### Node Requirements
 
@@ -70,13 +57,7 @@ Rancher will not provision the node if the node does not meet these requirements
 
 Before provisioning a new cluster, be sure that you have already installed Rancher on a device that accepts inbound network traffic. This is required in order for the cluster nodes to communicate with Rancher. If you have not already installed Rancher, please refer to the [installation documentation](../../../../getting-started/installation-and-upgrade/installation-and-upgrade.md) before proceeding with this guide.
 
-Rancher only supports Windows using Flannel as the network provider.
-
-There are two network options: [**Host Gateway (L2bridge)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#host-gw) and [**VXLAN (Overlay)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#vxlan). The default option is **VXLAN (Overlay)** mode.
-
-For **Host Gateway (L2bridge)** networking, it's best to use the same Layer 2 network for all nodes. Otherwise, you need to configure the route rules for them. For details, refer to the [documentation on configuring cloud-hosted VM routes.](network-requirements-for-host-gateway.md#cloud-hosted-vm-routes-configuration) You will also need to [disable private IP address checks](network-requirements-for-host-gateway.md#disabling-private-ip-address-checks) if you are using Amazon EC2, Google GCE, or Azure VM.
-
-For **VXLAN (Overlay)** networking, the [KB4489899](https://support.microsoft.com/en-us/help/4489899) hotfix must be installed. Most cloud-hosted VMs already have this hotfix.
+Rancher supports Windows using Calico as the network provider.
 
 If you are configuring DHCP options sets for an AWS virtual private cloud, note that in the `domain-name` option field, only one domain name can be specified. According to the DHCP options [documentation:](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html)
 
@@ -145,10 +126,9 @@ If you are using the GCE (Google Compute Engine) cloud provider, you must do the
 
 This tutorial describes how to create a Rancher-provisioned cluster with the three nodes in the [recommended architecture.](#recommended-architecture)
 
-When you provision a cluster with Rancher on existing nodes, you will add nodes to the cluster by installing the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) on each one. When you create or edit your cluster from the Rancher UI, you will see a **Customize Node Run Command** that you can run on each server to add it to your cluster.
+When you provision a cluster with Rancher on existing nodes, you add nodes to the cluster by installing the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) on each one. To create or edit your cluster from the Rancher UI, run the **Registration Command** on each server to add it to your cluster.
 
 To set up a cluster with support for Windows nodes and containers, you will need to complete the tasks below.
-
 
 ### 1. Provision Hosts
 
@@ -182,17 +162,9 @@ The instructions for creating a Windows cluster on existing nodes are very simil
 1. On the **Clusters** page, click **Create**.
 1. Click **Custom**.
 1. Enter a name for your cluster in the **Cluster Name** field.
-1. In the **Kubernetes Version** dropdown menu, select v1.19 or above.
-1. In the **Network Provider** field, select **Flannel**.
-1. In the **Windows Support** section, click **Enabled**.
-1. Optional: After you enable Windows support, you will be able to choose the Flannel backend. There are two network options: [**Host Gateway (L2bridge)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#host-gw) and [**VXLAN (Overlay)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#vxlan). The default option is **VXLAN (Overlay)** mode.
+1. In the **Kubernetes Version** dropdown menu, select a supported Kubernetes version.
+1. In the **Container Network** field, select **Calico**.
 1. Click **Next**.
-
-:::note Important:
-
-For <b>Host Gateway (L2bridge)</b> networking, it's best to use the same Layer 2 network for all nodes. Otherwise, you need to configure the route rules for them. For details, refer to the [documentation on configuring cloud-hosted VM routes.](network-requirements-for-host-gateway.md#cloud-hosted-vm-routes-configuration) You will also need to [disable private IP address checks](network-requirements-for-host-gateway.md#disabling-private-ip-address-checks) if you are using Amazon EC2, Google GCE, or Azure VM.
-
-:::
 
 ### 3. Add Nodes to the Cluster
 
@@ -202,14 +174,13 @@ This section describes how to register your Linux and Worker nodes to your clust
 
 In this section, we fill out a form on the Rancher UI to get a custom command to install the Rancher agent on the Linux master node. Then we will copy the command and run it on our Linux master node to register the node in the cluster.
 
-The first node in your cluster should be a Linux host has both the **Control Plane** and **etcd** roles. At a minimum, both of these roles must be enabled for this node, and this node must be added to your cluster before you can add Windows hosts.
+The first node in your cluster should be a Linux host that has both the **Control Plane** and **etcd** roles. At a minimum, both of these roles must be enabled for this node, and this node must be added to your cluster before you can add Windows hosts.
 
-1. In the **Node Operating System** section, click **Linux**.
-1. In the **Node Role** section, choose at least **etcd** and **Control Plane**. We recommend selecting all three.
+1. After cluster creation, navigate to the **Registration** tab.
+1. In **Step 1** under the **Node Role** section, select at least **etcd** and **Control Plane**. We recommend selecting all three.
 1. Optional: If you click **Show advanced options,** you can customize the settings for the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) and [node labels.](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
-1. Copy the command displayed on the screen to your clipboard.
+1. In **Step 2**, under the **Registration** section, copy the command displayed on the screen to your clipboard.
 1. SSH into your Linux host and run the command that you copied to your clipboard.
-1. When you are finished provisioning your Linux node(s), select **Done**.
 
 **Result:**
 
@@ -222,22 +193,19 @@ You can access your cluster after its state is updated to **Active**.
 - `Default`, containing the `default` namespace
 - `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces
 
-
 It may take a few minutes for the node to be registered in your cluster.
 
 #### Add Linux Worker Node
 
 In this section, we run a command to register the Linux worker node to the cluster.
 
-After the initial provisioning of your cluster, your cluster only has a single Linux host. Next, we add another Linux `worker` host, which will be used to support _Rancher cluster agent_, _Metrics server_, _DNS_ and _Ingress_ for your cluster.
+After the initial provisioning of your cluster, your cluster only has a single Linux host. Add another Linux `worker` host to support the _Rancher cluster agent_, _Metrics server_, _DNS_ and _Ingress_ for your cluster.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
-1. Go to the cluster that you created and click **⋮ > Edit Config**.
-1. Scroll down to **Node Operating System**. Choose **Linux**.
-1. In the **Customize Node Run Command** section, go to the **Node Options** and select the **Worker** role.
-1. Copy the command displayed on screen to your clipboard.
-1. Log in to your Linux host using a remote Terminal connection. Run the command copied to your clipboard.
-1. From **Rancher**, click **Save**.
+1. After cluster creation, navigate to the **Registration** tab.
+1. In **Step 1** under the **Node Role** section, select **Worker**.
+1. Optional: If you click **Show advanced options,** you can customize the settings for the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) and [node labels.](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+1. In **Step 2**, under the **Registration** section, copy the command displayed on the screen to your clipboard.
+1. SSH into your Linux host and run the command that you copied to your clipboard.
 
 **Result:** The **Worker** role is installed on your Linux host, and the node registers with Rancher. It may take a few minutes for the node to be registered in your cluster.
 
@@ -257,14 +225,15 @@ For each Linux worker node added into the cluster, the following taints will be 
 
 In this section, we run a command to register the Windows worker node to the cluster.
 
-You can add Windows hosts to the cluster by editing the cluster and choosing the **Windows** option.
+:::note
+The registration command to add the Windows workers only appears after the cluster is running with Linux etcd, control plane, and worker nodes.
+:::
 
-1. In the upper left corner, click **☰ > Cluster Management**.
-1. Go to the cluster that you created and click **⋮ > Edit Config**.
-1. Scroll down to **Node Operating System**. Choose **Windows**. Note: You will see that the **worker** role is the only available role.
-1. Copy the command displayed on screen to your clipboard.
+1. After cluster creation, navigate to the **Registration** tab.
+1. In **Step 1** under the **Node Role** section, select **Worker**.
+1. Optional: If you click **Show advanced options,** you can customize the settings for the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) and [node labels.](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+1. In **Step 2**, under the **Registration** section, copy the command for Windows workers displayed on the screen to your clipboard.
 1. Log in to your Windows host using your preferred tool, such as [Microsoft Remote Desktop](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients). Run the command copied to your clipboard in the **Command Prompt (CMD)**.
-1. From Rancher, click **Save**.
 1. Optional: Repeat these instructions if you want to add more Windows nodes to your cluster.
 
 **Result:** The **Worker** role is installed on your Windows host, and the node registers with Rancher. It may take a few minutes for the node to be registered in your cluster. You now have a Windows Kubernetes cluster.
