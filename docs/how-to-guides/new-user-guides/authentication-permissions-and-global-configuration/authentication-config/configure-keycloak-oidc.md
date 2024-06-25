@@ -35,6 +35,7 @@ If you have an existing configuration using the SAML protocol and want to switch
     `Name` | `Groups Mapper`
     `Mapper Type` | `Group Membership`
     `Token Claim Name` | `groups`
+    `Full group path` | `OFF`
     `Add to ID token` | `OFF`
     `Add to access token` | `OFF`
     `Add to user info` | `ON`
@@ -46,6 +47,7 @@ If you have an existing configuration using the SAML protocol and want to switch
     `Name` | `Client Audience`
     `Mapper Type` | `Audience`
     `Included Client Audience` | &lt;CLIENT_NAME>
+    `Add to ID token` | `OFF`
     `Add to access token` | `ON`
 
   - Create a new "Groups Path" with the settings below.
@@ -56,7 +58,17 @@ If you have an existing configuration using the SAML protocol and want to switch
     `Mapper Type` | `Group Membership`
     `Token Claim Name` | `full_group_path`
     `Full group path` | `ON`
+    `Add to ID token` | `ON`
+    `Add to access token` | `ON`
     `Add to user info` | `ON`
+
+- Add the following Role Mappings to all users or groups that need to query the Keycloak users
+  ```
+  Role Mappings > Client Roles >  realm-management  
+   + query-users
+   + query-groups
+   + view-users
+  ```
 
 ## Configuring Keycloak in Rancher
 
