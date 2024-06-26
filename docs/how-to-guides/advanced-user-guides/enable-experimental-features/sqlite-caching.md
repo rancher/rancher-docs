@@ -23,7 +23,7 @@ SQLite-backed caching persists copies of any cached Kubernetes objects to disk. 
 1. Find **`ui-sql-cache`** and select **⋮ > Activate > Activate**.
 1. Wait for Rancher to restart. This also restarts agents on all downstream clusters.
 1. In the upper left corner, click **☰ > Global Settings > Performance**.
-1. Go to **Server-side Pagination** and check the **Server-side Pagination** option.
+1. Go to **Server-side Pagination** and check the **Enable Server-side Pagination** option.
 1. Click **Apply**.
 1. Reload the page with the browser button (or the equivalent keyboard combination, typically `CTRL + R` on Windows and Linux, and `⌘ + R` on macOS).
 
@@ -36,6 +36,6 @@ Secrets and security Tokens are always encrypted regardless of the above setting
 
 ## Known Limitations of SQLite-Backed Caching
 
-Only Pods, Secrets, Node, ConfigMap and Event pages make use of the cache.
+This initial release improves the performance of Pods, Secrets, Nodes and ConfigMaps in the Cluster Explorer pages, and most resources in the Explorer's `More Resources` section
 
 Pages can't be automatically refreshed. You can manually refresh table contents by clicking the **Refresh** button.
