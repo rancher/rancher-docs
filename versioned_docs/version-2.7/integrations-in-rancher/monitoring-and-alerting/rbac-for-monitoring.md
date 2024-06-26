@@ -112,7 +112,7 @@ Monitoring also creates additional `ClusterRoles` that aren't assigned to users 
 
 | Role | Purpose  |
 | ------------------------------| ---------------------------|
-| monitoring-ui-view | _Available as of Monitoring v2 14.5.100+_ This ClusterRole allows users with write access to the project to view metrics graphs for the specified cluster in the Rancher UI. This is done by granting Read-only access to external Monitoring UIs. Users with this role have permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Alertmanager, and Grafana UIs through the Rancher proxy. <br/> <br/> This role doesn't grant access to monitoring endpoints. As a result, users with this role won't be able to view cluster monitoring graphs and dashboards in the Rancher UI; however, they are able to access the monitoring Grafana, Prometheus, and Alertmanager UIs if provided those links. |
+| monitoring-ui-view | This ClusterRole allows users with write access to the project to view metrics graphs for the specified cluster in the Rancher UI. This is done by granting Read-only access to external Monitoring UIs. Users with this role have permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Alertmanager, and Grafana UIs through the Rancher proxy. <br/> <br/> This role doesn't grant access to monitoring endpoints. As a result, users with this role won't be able to view cluster monitoring graphs and dashboards in the Rancher UI; however, they are able to access the monitoring Grafana, Prometheus, and Alertmanager UIs if provided those links. |
 
 :::note
 
