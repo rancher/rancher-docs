@@ -11,7 +11,7 @@ Caching Kubernetes objects with SQLite is not intended for use in production. Th
 :::
 
 
-SQLite-backed caching provides an optional cache of Kubernetes objects to improve performance, especially while browsing tabular data with thousands of rows. The cache improves UI sorting, filtering, and pagination.
+SQLite-backed caching provides an optional cache of Kubernetes objects to improve performance. This unlocks sorting, filtering, and pagination features used by the UI to restrict the amount of resources it fetches and stores locally. These features are primarily used to improve list performance for resources with high counts by utilizing server-side pagination.
 
 This feature creates file system based caches in the `rancher` pods of the upstream cluster, and in the `cattle-cluster-agent` pods of the downstream clusters. In most environments, disk usage and I/O should not be significant. However, you should monitor activity after you enable caching.
 
