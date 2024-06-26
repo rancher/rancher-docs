@@ -86,3 +86,20 @@ Example output:
 NAME                 HOLDER                    AGE
 cattle-controllers   rancher-dbc7ff869-gvg6k   6h10m
 ```
+
+#### Configuration
+
+_Available as of Rancher 2.8.3_
+
+In the unfortunate event of Kubernetes API latency degradation, the Rancher replica holding the leader lock may not be able to renew the lease within its validity duration.
+In order to mitigate this, it is possible to modify the default parameters for leader election using environment variables:
+- `CATTLE_ELECTION_LEASE_DURATION` configures the [lease duration](https://pkg.go.dev/k8s.io/client-go/tools/leaderelection#LeaderElectionConfig.LeaseDuration) (defaults to 45s)
+- `CATTLE_ELECTION_RENEW_DEADLINE` configures the [renew deadline](https://pkg.go.dev/k8s.io/client-go/tools/leaderelection#LeaderElectionConfig.RenewDeadline) (defaults to 30s)
+- `CATTLE_ELECTION_RETRY_PERIOD` configures the [retry period](https://pkg.go.dev/k8s.io/client-go/tools/leaderelection#LeaderElectionConfig.RetryPeriod) (defaults to 2s)
+
+Example:
+```
+kubectl -n cattle-system set env deploy/rancher CATTLE_ELECTION_LEASE_DURATION=2m CATTLE_ELECTION_RENEW_DEADLINE=90s CATTLE_ELECTION_RETRY_PERIOD=10s
+```
+This will temporarily increase the lease duration, renew deadline and retry period to 120, 90 and 10 seconds respectively.
+Alternatively, in order to make such changes permanent, these environment variables can be set by [using Helm values](../../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#setting-extra-environment-variables) instead.
