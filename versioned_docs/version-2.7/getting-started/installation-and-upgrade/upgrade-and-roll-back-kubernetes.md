@@ -102,8 +102,6 @@ There is a [known issue](https://github.com/rancher/rancher/issues/25478) in whi
 
 ### Maintaining Availability for Applications During Upgrades
 
-_Available as of RKE v1.1.0_
-
 In [this section of the RKE documentation,](https://rancher.com/docs/rke/latest/en/upgrades/maintaining-availability/) you'll learn the requirements to prevent downtime for your applications when upgrading the cluster.
 
 ### Configuring the Upgrade Strategy in the cluster.yml

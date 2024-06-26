@@ -6,12 +6,6 @@ title: GKE Cluster Configuration Reference
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration"/>
 </head>
 
-## Changes in Rancher v2.6
-
-- Support for additional configuration options:
-  - Project network isolation
-  - Network tags
-
 ## Cluster Location
 
 | Value | Description |

@@ -6,8 +6,6 @@ title: Windows Cluster Support for Monitoring V2
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/monitoring-and-alerting/windows-support"/>
 </head>
 
-_Available as of v2.5.8_
-
 Starting at Monitoring V2 14.5.100 (used by default in Rancher 2.5.8), Monitoring V2 can now be deployed on a Windows cluster and will scrape metrics from Windows nodes using [prometheus-community/windows_exporter](https://github.com/prometheus-community/windows_exporter) (previously named `wmi_exporter`).
 
 ## Cluster Requirements

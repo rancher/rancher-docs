@@ -62,21 +62,6 @@ Install the [`rancher-backup chart`](https://github.com/rancher/backup-restore-o
 
 ### 2. Restore from backup using a Restore custom resource
 
-:::note Important:
-
-Kubernetes v1.22, available as an experimental feature of v2.6.3, does not support restoring from backup files containing CRDs with the apiVersion `apiextensions.k8s.io/v1beta1`. In v1.22, the default `resourceSet` in the rancher-backup app is updated to collect only CRDs that use `apiextensions.k8s.io/v1`. There are currently two ways to work around this issue:
-
-1. Update the default `resourceSet` to collect the CRDs with the apiVersion v1.
-1. Update the default `resourceSet` and the client to use the new APIs internally, with `apiextensions.k8s.io/v1` as the replacement.
-
-    :::note
-
-    When making or restoring backups for v1.22, the Rancher version and the local cluster's Kubernetes version should be the same. The Kubernetes version should be considered when restoring a backup since the supported apiVersion in the cluster and in the backup file could be different.
-
-    :::
-
-:::
-
 1. When using S3 object storage as the backup source for a restore that requires credentials, create a `Secret` object in this cluster to add the S3 credentials. The secret data must have two keys - `accessKey`, and `secretKey`, that contain the S3 credentials.
 
    The secret can be created in any namespace, this example uses the default namespace.

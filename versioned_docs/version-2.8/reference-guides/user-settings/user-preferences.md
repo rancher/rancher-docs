@@ -41,8 +41,6 @@ Choose how certain information is displayed:
 
 ## Confirmation Setting
 
-_Available as of v2.7.2_
-
 Choose whether to ask for confirmation when scaling down node pools.
 
 ## Advanced Features
