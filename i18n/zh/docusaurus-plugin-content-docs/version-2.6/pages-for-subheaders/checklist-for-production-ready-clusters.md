@@ -44,5 +44,5 @@ title: 生产就绪集群检查清单
 
 ### 网络
 
-* 最小化网络延迟。Rancher 建议尽量减少 etcd 节点之间的延迟。`heartbeat-interval` 的默认设置是 `500`，`election-timeout` 的默认设置是 `5000`。这些 [etcd 调优设置](https://coreos.com/etcd/docs/latest/tuning.html) 允许 etcd 在大多数网络（网络延迟特别高的情况下除外）中运行。
+* 最小化网络延迟。Rancher 建议尽量减少 etcd 节点之间的延迟。`heartbeat-interval` 的默认设置是 `500`，`election-timeout` 的默认设置是 `5000`。这些 [etcd 调优设置](https://etcd.io/docs/v3.5/tuning/) 允许 etcd 在大多数网络（网络延迟特别高的情况下除外）中运行。
 * 集群节点应位于单个区域内。大多数云厂商在一个区域内提供多个可用区，这可以提高你集群的可用性。任何角色的节点都可以使用多个可用区。如果你使用 [Kubernetes Cloud Provider](set-up-cloud-providers.md) 资源，请查阅文档以了解限制（即区域存储限制）。
