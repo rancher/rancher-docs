@@ -34,8 +34,8 @@ To add the environment variable to an existing cluster,
 
 1. Click **☰ > Cluster Management**.
 1. Go to the cluster where you want to add environment variables and click **⋮ > Edit Config**.
-1. Click **Advanced Options**.
-1. Click **Add Environment Variable**.
+1. Click **Agent Environment Vars** under **Cluster configuration**.
+1. Click **Add**.
 1. Enter the [required environment variables](#required-environment-variables)
 1. Click **Save**.
 
