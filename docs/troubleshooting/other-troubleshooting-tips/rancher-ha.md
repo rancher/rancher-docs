@@ -91,8 +91,7 @@ cattle-controllers   rancher-dbc7ff869-gvg6k   6h10m
 
 _Available as of Rancher 2.8.3_
 
-If the Kubernetes API experiences latency, the Rancher replica holding the leader lock may not be able to renew the lease before the lease becomes invalid.
-To mitigate this, you can set environment variables in the `rancher` Deployment to modify the default parameters for leader election:
+If the Kubernetes API experiences latency, the Rancher replica holding the leader lock may not be able to renew the lease before the lease becomes invalid. To mitigate this, you can set environment variables in the `rancher` Deployment to modify the default parameters for leader election:
 - `CATTLE_ELECTION_LEASE_DURATION`: The [lease duration](https://pkg.go.dev/k8s.io/client-go/tools/leaderelection#LeaderElectionConfig.LeaseDuration). The default value is 45s.
 - `CATTLE_ELECTION_RENEW_DEADLINE`: The [renew deadline](https://pkg.go.dev/k8s.io/client-go/tools/leaderelection#LeaderElectionConfig.RenewDeadline). The default value is 30s.
 - `CATTLE_ELECTION_RETRY_PERIOD`: The [retry period](https://pkg.go.dev/k8s.io/client-go/tools/leaderelection#LeaderElectionConfig.RetryPeriod). The default value is 2s.
