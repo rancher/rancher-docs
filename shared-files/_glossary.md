@@ -189,7 +189,7 @@
         <b>Versions:</b> Rancher v2.6 and later
     </p>
     <dd>
-        A machine pool is a logical grouping of nodes within a Kubernetes cluster, such as an RKE2, K3s, EKS, AKS, or GKE cluster. Each pool can be configured independently, allowing for flexibility in managing different types of workloads and resource requirements. Machine pool configurations include information like Pool Name, Machine Count, and Roles, as well as options like Auto Replace, Drain Before Delete, Kubernetes Node Labels, and Taints.
+        A machine pool is a logical grouping of nodes within a Kubernetes cluster, such as an RKE2, K3s, EKS, AKS, or GKE cluster. Each pool can be configured independently, allowing for flexibility in managing different types of workloads and resource requirements. Machine pool configurations include information such as Pool Name, Machine Count, and Roles, as well as options such as Auto Replace, Drain Before Delete, Kubernetes Node Labels, and Taints.
     </dd>
     <dt>
         Managed cluster
