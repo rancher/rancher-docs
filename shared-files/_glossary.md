@@ -216,7 +216,7 @@
         <b>Versions:</b> Rancher v2.8 and later
     </p>
     <dd>
-        Nuevector Prime is an end-to-end container security platform for containers, pods, and hosts. It offers real-time compliance, visibility, and protection for critical applications and data during runtime. NeuVector provides a firewall, container process/file system monitoring, security auditing with CIS benchmarks, and vulnerability scanning.
+        The commercial enterprise offering for Neuvector; an end-to-end container security platform for containers, pods, and hosts in enterprise environments. Neuvector Prime offers real-time compliance, visibility, and protection for critical applications and data during runtime, by providing a firewall, container process/file system monitoring, security auditing with CIS benchmarks, and vulnerability scanning.
     </dd>
     <p>
         <b>Related terms:</b> <i>Neuvector</i>
@@ -225,7 +225,7 @@
         Node Template
     </dt>
     <dd>
-        A node template is the saved configuration for the parameters to use when provisioning nodes in a specific cloud provider. These nodes can be launched from the UI. Rancher uses Docker Machine to provision these nodes. The available cloud providers to create node templates are based on the active node drivers in Rancher. After you create a node template in Rancher, it's saved so that you can use it again to create node pools. Node templates are bound to your login. After you add a template, you can remove it from your user profile.
+        A saved configuration of parameters to use when provisioning nodes in a specific cloud provider. Nodes can then be launched through the UI. Rancher uses Docker Machine to provision nodes from node templates. To create a node template, the cloud provider must have a node driver enabled in your Rancher installation. After you create a node template in Rancher, you can use it again to create node pools.
     </dd>
 </dl>
 
@@ -239,22 +239,22 @@
         <b>Versions:</b> Rancher v2.7 and later
     </p>
     <dd>
-        Prime represents a new edition of the commercial enterprise offering for Rancher and Nuevector. Rancher Prime and Nuevector Prime are built on the same source code and will, therefore, continue to be 100% open source. Additional value comes from security assurances, extended lifecycles, access to focused architectures, and Kubernetes advisories. These Prime offerings also offer options to get production support for innovative projects and installation assets are hosted on a trusted registry owned and managed by SUSE.
+        Prime is a new edition of the commercial enterprise offering for Rancher and Neuvector. Rancher Prime and Neuvector Prime are built on the same source code as our non-commercial offerings, and will continue to be 100% open source. Prime provides additional value in the form of security assurances, extended lifecycles, access to focused architectures, and Kubernetes advisories. These Prime offerings also offer options to receive production support for innovative projects. Installation assets are hosted on a trusted registry owned and managed by SUSE.
     </dd>
     <p>
-        <b>Related terms:</b> <i>Rancher Enterprise, Rancher Prime, Nuevector Prime</i>
+        <b>Related terms:</b> <i>Rancher Enterprise, Rancher Prime, Neuvector Prime</i>
     </p>
     <dt>
         Project
     </dt>
     <dd>
-        A project is a group of namespaces, and it is a concept introduced by Rancher. In terms of hierarchy, clusters contain projects and projects contain namespaces. Namespaces provide a mechanism for isolating groups of resources within a single cluster. Projects allow you to manage multiple namespaces as a group and perform Kubernetes operations in them. You can use projects to support multi-tenancy so that a team can access a project within a cluster without having access to other projects in the same cluster.
+        A group of namespaces. Projects allow you to manage multiple namespaces as a group and perform Kubernetes operations in them.  You can use projects to support multi-tenancy, so that a team can access a project within a cluster without having access to other projects in the same cluster.
     </dd>
     <dt>
         Project Resource Quotas
     </dt>
     <dd>
-        Similar to how namespaces divide cluster resources among multiple users, a project resource quota limits the cluster resources that a project (and its namespaces) can consume.
+        A Rancher feature that limits the cluster resources that a project and its namespaces can consume.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Resource quotas</i>
@@ -266,7 +266,7 @@
         <b>Versions:</b> Rancher v2.7.2 and later
     </p>
     <dd>
-        Pod Security Admission (PSA) is a built-in Kubernetes controller that enforces the Pod Security Standards (PSS) on pods running in a namespace. PSA places requirements on a pod's security context and other related fields and categorizes pods into three levels based on their security requirements: Privileged, Baseline, and Restricted.
+        A built-in Kubernetes controller that enforces the Pod Security Standards (PSS) on pods running in a namespace. A PSA places requirements on a pod's security context and other related fields, and categorizes pods into three levels based on their security requirements: Privileged, Baseline, and Restricted.
     </dd>
     <dt>
         Pod Security Admission (PSA) Config Template
@@ -275,7 +275,7 @@
         <b>Versions:</b> Rancher v2.7.2 and later
     </p>
     <dd>
-        If you have administrator privileges, you can customize security restrictions and permissions by creating additional PSA templates, or by editing existing templates. Pod Security admission (PSA) configuration templates are a Rancher custom-defined resource (CRD), available in Rancher v2.7.2 and above. The templates provide pre-defined security configurations that you can apply to a cluster:
+        A Rancher custom-defined resource (CRD) that provide pre-defined security configurations that you can apply to a cluster. If you have administrator privileges, you can customize security restrictions and permissions by creating additional templates, or by editing existing templates. 
         <ul>
         <li>rancher-privileged: The most permissive configuration. It doesn't restrict the behavior of any pods. This allows for known privilege escalations. This policy has no exemptions.</li>
         <li>rancher-restricted: A heavily restricted configuration that follows current best practices for hardening pods. You must make namespace-level exemptions for Rancher components.</li>
@@ -285,7 +285,7 @@
         Pod Security Policies (PSP)
     </dt>
     <dd>
-        Pod Security Policies (PSPs) are objects that control security-sensitive aspects of the pod specification (such as root privileges). If a pod does not meet the conditions specified in the PSP, Kubernetes will not allow it to start. PodSecurityPolicy was deprecated in Kubernetes v1.21, and removed from Kubernetes in v1.25.
+        Kubernetes objects that control security-sensitive aspects of the pod specification, such as root privileges. If a pod does not meet the conditions specified in the PSP, Kubernetes will not allow it to start. PodSecurityPolicy was deprecated in Kubernetes v1.21, and removed from Kubernetes in v1.25.
     </dd>
 </dl>
 
@@ -317,13 +317,13 @@
         <b>Versions:</b> Rancher v2.6 and later
     </p>
     <dd>
-        Rancher charts differ slightly from Helm charts in their directory structures. They are native Helm charts with two files that enhance user experience: app-readme.md and questions.yaml. Rancher charts add simplified chart descriptions and configuration forms to make application deployment easy, allowing Rancher users to understand how to launch an application without having to read through the entire list of Helm variables.
+        Native Helm charts with two files that enhance the Rancher user experience: `app-readme.md` and `questions.yaml`. Rancher charts add simplified chart descriptions and configuration forms to make application deployment easier, allowing users to understand how to launch an application without having to read through the entire list of Helm variables.
     </dd>
     <dt>
         Rancher CLI
     </dt>
     <dd>
-        The Rancher CLI (Command Line Interface) is a unified tool that you can use to interact with Rancher. With this tool, you can operate Rancher using a command line rather than the GUI.
+        A unified tool for interacting with Rancher through a command line rather than the GUI.
     </dd>
     <dt>
         Rancher Enterprise
@@ -332,7 +332,7 @@
         <b>Versions:</b> Rancher v2.7 and later
     </p>
     <dd>
-        Rancher Enterprise, or Rancher Prime, is a new edition of the commercial enterprise offering built on the same source code. Installation assets are hosted on a trusted registry owned and managed by Rancher, with additional value coming from security assurances, extended lifecycles, access to focused architectures, and Kubernetes advisories.
+        Also known as Rancher Prime; a new edition of the commercial enterprise offering built on the same source code. Installation assets are hosted on a trusted registry owned and managed by Rancher, with additional value coming from security assurances, extended lifecycles, access to focused architectures, and Kubernetes advisories.
     </dd>
     <p>
         <b>Synonyms:</b> <i>Rancher Prime</i>
