@@ -210,7 +210,7 @@
 
 <dl>
     <dt>
-        Neuvector Prime
+        NeuVector Prime
     </dt>
     <p>
         <b>Versions:</b> Rancher v2.8 and later
