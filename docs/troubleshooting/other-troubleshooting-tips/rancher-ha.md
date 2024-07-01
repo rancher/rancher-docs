@@ -86,3 +86,27 @@ Example output:
 NAME                 HOLDER                    AGE
 cattle-controllers   rancher-dbc7ff869-gvg6k   6h10m
 ```
+
+#### Configuration
+
+_Available as of Rancher 2.8.3_
+
+If the Kubernetes API experiences latency, the Rancher replica holding the leader lock may not be able to renew the lease before the lease becomes invalid, which can be observed in the Rancher logs:
+```
+E0629 04:13:07.293461      34 leaderelection.go:364] Failed to update lock: Put "https://172.17.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cattle-controllers?timeout=15m0s": context deadline exceeded
+I0629 04:13:07.293594      34 leaderelection.go:280] failed to renew lease kube-system/cattle-controllers: timed out waiting for the condition
+...
+2024/06/29 04:13:10 [FATAL] leaderelection lost for cattle-controllers
+```
+
+To mitigate this, you can set environment variables in the `rancher` Deployment to modify the default parameters for leader election:
+- `CATTLE_ELECTION_LEASE_DURATION`: The [lease duration](https://pkg.go.dev/k8s.io/client-go/tools/leaderelection#LeaderElectionConfig.LeaseDuration). The default value is 45s.
+- `CATTLE_ELECTION_RENEW_DEADLINE`: The [renew deadline](https://pkg.go.dev/k8s.io/client-go/tools/leaderelection#LeaderElectionConfig.RenewDeadline). The default value is 30s.
+- `CATTLE_ELECTION_RETRY_PERIOD`: The [retry period](https://pkg.go.dev/k8s.io/client-go/tools/leaderelection#LeaderElectionConfig.RetryPeriod). The default value is 2s.
+
+Example:
+```
+kubectl -n cattle-system set env deploy/rancher CATTLE_ELECTION_LEASE_DURATION=2m CATTLE_ELECTION_RENEW_DEADLINE=90s CATTLE_ELECTION_RETRY_PERIOD=10s
+```
+This will temporarily increase the lease duration, renew deadline and retry period to 120, 90 and 10 seconds respectively.
+Alternatively, in order to make such changes permanent, these environment variables can be set by [using Helm values](../../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#setting-extra-environment-variables) instead.
