@@ -43,9 +43,13 @@ It also includes the following:
 
 ### Kiali
 
-Kiali is a comprehensive visualization aid used for graphing traffic flow throughout the service mesh. It allows you to see how they are connected, including the traffic rates and latencies between them.
+[Kiali](https://kiali.io/) is a comprehensive visualization aid used for graphing traffic flow throughout the service mesh. It allows you to see how they are connected, including the traffic rates and latencies between them.
 
 You can check the health of the service mesh, or drill down to see the incoming and outgoing requests to a single component.
+
+:::note
+The name of the Kiali service account in Rancher is `kiali`. Use this name if you are writing commands that require you to enter the name of the Kiali service account—for example, if you are trying to generate or retrieve a session token. For more information, refer to the [Kiali token authentication FAQ](https://kiali.io/docs/faq/authentication/).
+:::
 
 ### Jaeger
 
