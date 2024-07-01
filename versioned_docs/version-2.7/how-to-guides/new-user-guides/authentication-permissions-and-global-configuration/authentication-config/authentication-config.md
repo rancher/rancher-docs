@@ -64,7 +64,7 @@ After you configure Rancher to allow sign on using an external authentication se
 
 :::warning 
 
-Only trusted admin-level users should have access to the local cluster. The local cluster manages all of the other clusters in a Rancher instance. Rancher is directly installed on the local cluster, and Rancher's management features allow users on the local cluster to provision, modify, connect to, and view details about downstream clusters. Since the local cluster is key to an Rancher instance's architecture, inappropriate access carries security risks.
+Only trusted admin-level users should have access to the local cluster, which manages all of the other clusters in a Rancher instance. Rancher is directly installed on the local cluster, and Rancher's management features allow admins on the local cluster to provision, modify, connect to, and view details about downstream clusters. Since the local cluster is key to a Rancher instance's architecture, inappropriate access carries security risks.
 
 :::
 
