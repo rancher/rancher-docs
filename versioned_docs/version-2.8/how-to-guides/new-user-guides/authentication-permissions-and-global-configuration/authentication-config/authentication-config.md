@@ -62,6 +62,12 @@ After you configure Rancher to allow sign on using an external authentication se
 | Allow members of Clusters, Projects, plus Authorized Users and Organizations | Any user in the authorization service and any group added as a **Cluster Member** or **Project Member** can log in to Rancher. Additionally, any user in the authentication service or group you add to the **Authorized Users and Organizations** list may log in to Rancher. |
 | Restrict access to only Authorized Users and Organizations | Only users in the authentication service or groups added to the Authorized Users and Organizations can log in to Rancher. |
 
+:::warning 
+
+Only trusted admin-level users should have access to the local cluster. The local cluster manages all of the other clusters in a Rancher instance. Rancher is directly installed on the local cluster, and Rancher's management features allow users on the local cluster to provision, modify, connect to, and view details about downstream clusters. Since the local cluster is key to an Rancher instance's architecture, inappropriate access carries security risks.
+
+:::
+
 To set the Rancher access level for users in the authorization service, follow these steps:
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
