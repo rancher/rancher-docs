@@ -47,6 +47,10 @@ Kiali is a comprehensive visualization aid used for graphing traffic flow throug
 
 You can check the health of the service mesh, or drill down to see the incoming and outgoing requests to a single component.
 
+:::note
+If you are attempting to generate a session token to log into Kiali, note that for the service account name the Rancher deployment uses `kiali` instead of `kiali-service-account` when retrieving the session token.
+:::
+
 ### Jaeger
 
 Our Istio installer includes a quick-start, all-in-one installation of [Jaeger,](https://www.jaegertracing.io/) a tool used for tracing distributed systems.
