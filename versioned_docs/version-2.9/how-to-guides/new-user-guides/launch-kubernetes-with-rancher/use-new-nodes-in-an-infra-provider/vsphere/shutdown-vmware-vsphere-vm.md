@@ -3,7 +3,7 @@ title: Shutting Down VMware Vsphere Virtual Machines
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/PLACEHOLDER"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/shutdown-vmware-vsphere-vm"/>
 </head>
 
 You can configure the graceful shutdown of virtual machines (VMs) for  clusters hosted on VMware vSphere infrastructure.
