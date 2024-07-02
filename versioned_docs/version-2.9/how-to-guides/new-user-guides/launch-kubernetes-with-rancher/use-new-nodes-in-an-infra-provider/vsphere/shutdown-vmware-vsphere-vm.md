@@ -25,5 +25,5 @@ You can configure the graceful shutdown of virtual machines (VMs) for  clusters 
   1. If there are no VMware vSphere node templates listed, click **Add Template** and select **vSphere** to create one.
 1. Under **2. Scheduling**, in the **Graceful Shutdown Timeout** field, enter an integer value greater than 0. The value you enter is the amount of time in seconds Rancher waits before deleting VMs on the cluster. If the value is set to `0`, graceful shutdown is disabled.
 
-</TabItems>
+</TabItem>
 </Tabs>
