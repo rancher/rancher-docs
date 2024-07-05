@@ -6,8 +6,6 @@ title: Generate and View Traffic from Istio
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/istio-setup-guide/generate-and-view-traffic"/>
 </head>
 
-This section describes how to view the traffic that is being managed by Istio.
-
 ## The Kiali Traffic Graph
 
 The Istio overview page provides a link to the Kiali dashboard. From the Kiali dashboard, you are able to view graphs for each namespace. The Kiali graph provides a powerful way to visualize the topology of your Istio service mesh. It shows you which services communicate with each other.
