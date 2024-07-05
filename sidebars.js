@@ -506,6 +506,7 @@ const sidebars = {
                   items: [
                     "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-amazon",
                     "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-vsphere",
+                     "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-azure",
                   ]
                 },
                 "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters",
