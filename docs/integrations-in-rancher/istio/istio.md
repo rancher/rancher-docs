@@ -48,7 +48,7 @@ It also includes the following:
 You can check the health of the service mesh, or drill down to see the incoming and outgoing requests to a single component.
 
 :::note
-The name of the Kiali service account in Rancher is `kiali`. Use this name if you are writing commands that require you to enter the name of the Kiali service account—for example, if you are trying to generate or retrieve a session token. For more information, refer to the [Kiali token authentication FAQ](https://kiali.io/docs/faq/authentication/).
+For Istio installations `103.1.0+up1.19.6` and later, Kiali uses a token value for its authentication strategy. The name of the Kiali service account in Rancher is `kiali`. Use this name if you are writing commands that require you to enter the name of the Kiali service account (for example, if you are trying to generate or retrieve a session token). For more information, refer to the [Kiali token authentication FAQ](https://kiali.io/docs/faq/authentication/).
 :::
 
 ### Jaeger
@@ -74,6 +74,10 @@ To remove Istio components from a cluster, namespace, or workload, refer to the 
 ## Accessing Visualizations
 
 > By default, only cluster-admins have access to Kiali. For instructions on how to allow admin, edit or views roles to access them, see [this section.](rbac-for-istio.md)
+
+:::note
+For Istio installations version `103.1.0+up1.19.6` and later, Kiali uses a token value for its authentication strategy. The name of the Kiali service account in Rancher is `kiali`. Use this name if you are writing commands that require you to enter the name of the Kiali service account (for example, if you are trying to generate or retrieve a session token). For more information, refer to the [Kiali token authentication FAQ](https://kiali.io/docs/faq/authentication/).
+:::
 
 After Istio is set up in a cluster, Grafana, Prometheus, and Kiali are available in the Rancher UI.
 
