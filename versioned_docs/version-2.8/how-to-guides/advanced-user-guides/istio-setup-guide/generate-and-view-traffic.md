@@ -16,9 +16,9 @@ To enable traffic to show up in the graph, ensure that you have Prometheus insta
 
 Additionally, for Istio installations version `103.1.0+up1.19.6` and later, Kiali uses a token value for its authentication strategy. If you are trying to generate or retrieve the token (e.g. for login), note that the name of the Kiali service account in Rancher is `kiali`. For more information, refer to the [Kiali token authentication FAQ](https://kiali.io/docs/faq/authentication/).
 
-Optional: You can configure in which namespaces data scraping occurs by setting the Helm chart options described in [Selectors & Scrape Configs](../../../integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md).
+Optional: You can configure which namespaces data scraping occurs in by setting the Helm chart options described in [Selectors & Scrape Configs](../../../integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md).
 
-### Traffic Visualization
+## Traffic Visualization
 
 To see the traffic graph follow the steps below:
 
