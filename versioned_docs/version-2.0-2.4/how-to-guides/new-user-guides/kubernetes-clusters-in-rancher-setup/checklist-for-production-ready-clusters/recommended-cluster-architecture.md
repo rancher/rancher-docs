@@ -57,7 +57,7 @@ The number of nodes that you can lose at once while maintaining cluster availabi
 
 References:
 
-* [Official etcd documentation on optimal etcd cluster size](https://etcd.io/docs/v3.4.0/faq/#what-is-failure-tolerance)
+* [Official etcd documentation on optimal etcd cluster size](https://etcd.io/docs/v3.3.0/faq/#what-is-failure-tolerance)
 * [Official Kubernetes documentation on operating etcd clusters for Kubernetes](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/)
 
 ### Number of Worker Nodes
