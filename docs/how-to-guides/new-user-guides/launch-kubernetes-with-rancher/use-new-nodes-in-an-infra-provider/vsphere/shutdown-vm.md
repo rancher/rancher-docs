@@ -12,6 +12,12 @@ In RKE2/K3s, you can set up graceful shutdown when you create the cluster, or ed
 
 In RKE, you can edit node templates to similar results.
 
+:::note 
+
+Since Rancher can't detect the platform of an imported cluster, you cannot enable graceful shutdown on VMware vSphere clusters you have imported.
+
+:::
+
 ## Enable Graceful Shutdown During VMware vSphere Cluster Creation 
 
 <Tabs>
@@ -48,7 +54,7 @@ In RKE2/K3s, you can edit the configuration of an existing VMware vSphere cluste
 
 ## Enable Graceful Shutdown in Existing RKE Clusters
 
-In RKE, you can't directly edit an existing cluster's configuration to add graceful shutdown to existing VMware vSphere clusters. However, you can edit the configuration of existing node templates. As noted in [Updating a Node Template](../../../../../reference-guides/user-settings/manage-node-template.mds#updating-a-node-template), all node pools using the node template automatically use the updated information when new nodes are added to the cluster.
+In RKE, you can't directly edit an existing cluster's configuration to add graceful shutdown to existing VMware vSphere clusters. However, you can edit the configuration of existing node templates. As noted in [Updating a Node Template](../../../../../reference-guides/user-settings/manage-node-template.md#updating-a-node-template), all node pools using the node template automatically use the updated information when new nodes are added to the cluster.
 
 To edit an existing node template to enable graceful shutdown:
 
