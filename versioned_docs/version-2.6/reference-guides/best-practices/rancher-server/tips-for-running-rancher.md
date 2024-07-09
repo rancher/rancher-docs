@@ -18,7 +18,10 @@ When you set up your high-availability Rancher installation, consider the follow
 Don't run other workloads or microservices in the Kubernetes cluster that Rancher is installed on.
 
 ### Make sure nodes are configured correctly for Kubernetes
-It's important to follow K8s and etcd best practices when deploying your nodes, including disabling swap, double checking you have full network connectivity between all machines in the cluster, using unique hostnames, MAC addresses, and product_uuids for every node, checking that all correct ports are opened, and deploying with ssd backed etcd. More details can be found in the [kubernetes docs](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#before-you-begin) and [etcd's performance op guide](https://etcd.io/docs/v3.5/op-guide/performance/).
+It's important to follow K8s and etcd best practices when deploying your nodes, including disabling swap, double checking you have full network connectivity between all machines in the cluster, using unique hostnames, MAC addresses, and product_uuids for every node, checking that all correct ports are opened, and deploying with ssd backed etcd. More details can be found in the [kubernetes docs](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#before-you-begin) and etcd's performance op guide. Since details about etcd differ by version, see the [official etcd v3.5 documentation](https://etcd.io/docs/v3.5/op-guide/performance/) if you're running Kubernetes v1.22 and later, or see the [official etcd v3.4 documentation](https://etcd.io/docs/v3.5/op-guide/performance/) if you are running an earlier Kubernetes version.
+
+
+(https://etcd.io/docs/v3.5/op-guide/performance/).
 
 ### When using RKE: Back up the Statefile
 RKE keeps record of the cluster state in a file called `cluster.rkestate`. This file is important for the recovery of a cluster and/or the continued maintenance of the cluster through RKE. Because this file contains certificate material, we strongly recommend encrypting this file before backing up. After each run of `rke up` you should backup the state file.

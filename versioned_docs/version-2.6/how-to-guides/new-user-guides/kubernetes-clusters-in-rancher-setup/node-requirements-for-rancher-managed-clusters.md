@@ -110,6 +110,9 @@ For hardware recommendations for large Kubernetes clusters, refer to the officia
 
 For hardware recommendations for etcd clusters in production, refer to the official [etcd documentation.](https://etcd.io/docs/v3.5/op-guide/hardware/)
 
+
+Hardware recommendations for etcd clusters in production differ by etcd version. For more information, see the [official etcd v3.5 documentation](https://etcd.io/docs/v3.5/op-guide/hardware/) if you're running Kubernetes v1.22 and later. Otherwise, see the [official etcd v3.4 documentation](https://etcd.io/docs/v3.4/op-guide/hardware/).
+
 ## Networking Requirements
 
 For a production cluster, we recommend that you restrict traffic by opening only the ports defined in the port requirements below.
