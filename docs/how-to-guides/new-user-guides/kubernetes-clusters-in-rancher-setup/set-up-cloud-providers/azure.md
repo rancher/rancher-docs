@@ -8,11 +8,11 @@ title: Setting up the Azure Cloud Provider
 
 :::note Important:
 
-In Kubernetes 1.30 and later, you must use an out-of-tree Azure cloud provider. In-tree cloud providers have been deprecated. The Azure cloud provider has been removed completely, and won't work after an upgrade to Kubernetes 1.30. The steps listed below are still required to set up an Azure cloud provider. You can [set up an out-of-tree cloud provider](#using-the-out-of-tree-azure-cloud-provider) after completing the prerequisites for Azure cloud provider.
+In Kubernetes 1.30 and later, you must use an out-of-tree Azure cloud provider. The Azure cloud provider has been [removed completely](https://github.com/kubernetes/kubernetes/pull/122857), and won't work after an upgrade to Kubernetes 1.30. The steps listed below are still required to set up an Azure cloud provider. You can [set up an out-of-tree cloud provider](#using-the-out-of-tree-azure-cloud-provider) after completing the prerequisites for Azure cloud provider.
 
 You can also [migrate from an in-tree to an out-of-tree Azure cloud provider](../migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-azure.md) on Kubernetes 1.29 and earlier. All existing clusters must migrate prior to upgrading to v1.30 in order to stay functional.
 
-Starting with Kubernetes 1.29, you must disable the `DisableCloudProviders` and `DisableKubeletCloudCredentialProvider` to use the in-tree Azure cloud provider. You can do this by setting `feature-gates=DisableCloudProviders=false` as an additional argument for the cluster's Kubelet, Controller Manager, and API Server in the advanced cluster configuration. Additionally, set `DisableKubeletCloudCredentialProvider=false` in the Kubelet's arguments to enable in-tree functionality for authenticating to Azure container registries for image pull credentials.
+Starting with Kubernetes 1.29, in-tree cloud providers have been disabled. you must disable the `DisableCloudProviders` and `DisableKubeletCloudCredentialProvider` to use the in-tree Azure cloud provider. You can do this by setting `feature-gates=DisableCloudProviders=false` as an additional argument for the cluster's Kubelet, Controller Manager, and API Server in the advanced cluster configuration. Additionally, set `DisableKubeletCloudCredentialProvider=false` in the Kubelet's arguments to enable in-tree functionality for authenticating to Azure container registries for image pull credentials. See [upstream docs](https://github.com/kubernetes/kubernetes/pull/117503) for more details.
 
 :::
 

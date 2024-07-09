@@ -53,9 +53,9 @@ spec:
 kubectl cordon -l "node-role.kubernetes.io/control-plane=true"
 ```
 
-3. To deploy Azure cloud controller manager, use any of the available options: 
-- UI: Follow steps 1-10 to [install the cloud controller manager chart](../set-up-cloud-providers/azure.md#helm-chart-installation-from-ui). 
-- CLI: Follow steps 1-4 [install the cloud controller manager chart](../set-up-cloud-providers/azure.md#helm-chart-installation-from-cli).
+3. To deploy the Azure cloud controller manager, use any of the available options: 
+- UI: Follow steps 1-10 of [Helm chart installation from UI](../set-up-cloud-providers/azure.md#helm-chart-installation-from-ui) to install the cloud controller manager chart.
+- CLI: Follow steps 1-4 of [Helm chart installation from CLI](../set-up-cloud-providers/azure.md#helm-chart-installation-from-cli).
 - Update cluster's additional manifest: Follow steps 2-3 to [install the cloud controller manager chart](../set-up-cloud-providers/azure.md#using-the-out-of-tree-azure-cloud-provider).
 
 Confirm that the chart is installed but that the new pods aren't running yet due to cordoned controlplane nodes.
@@ -147,9 +147,9 @@ cloud_provider:
 kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
 ```
 
-3. To install the Azure cloud controller manager, you follow the same steps as when installing Azure cloud provider on a new cluster.
-- UI: Follow steps 1-10 to [install the cloud controller manager chart](../set-up-cloud-providers/azure.md#helm-chart-installation-from-ui).
-- CLI: Follow steps 1-4 [install the cloud controller manager chart](../set-up-cloud-providers/azure.md#helm-chart-installation-from-cli).
+3. To install the Azure cloud controller manager, you follow the same steps as when installing Azure cloud provider on a new cluster:
+- UI: Follow steps 1-10 of [Helm chart installation from UI](../set-up-cloud-providers/azure.md#helm-chart-installation-from-ui) to install the cloud controller manager chart.
+- CLI: Follow steps 1-4 of [Helm chart installation from CLI](../set-up-cloud-providers/azure.md#helm-chart-installation-from-cli) to install the cloud controller manager chart.
 
 4. Confirm that the chart is installed but that the new pods aren't running yet due to cordoned controlplane nodes. After updating the cluster in the next step, RKE will upgrade and uncordon each node, and schedule `cloud-controller-manager` pods.
 
@@ -187,13 +187,13 @@ kubectl rollout status deployment -n kube-system cloud-controller-manager
 kubectl rollout status daemonset -n kube-system cloud-node-manager
 ```
 
-9. The cloud provider is responsible for setting the ProviderID of the node. Check if all nodes are initialized with the ProviderID:
+9. The cloud provider is responsible for setting the ProviderID of the node. Verify that all nodes are initialized with the ProviderID:
 
 ```shell
 kubectl describe nodes | grep "ProviderID"
 ```
 
-10. (Optional) You can also disable leader migration after the upgrade, as leader migration is no longer required due to only one cloud-controller-manager and can be removed.
+10. (Optional) You can also disable leader migration after the upgrade, as leader migration is not required with only one cloud-controller-manager.
 Update the `cloud-controller-manager` deployment to remove leader migration from the container arguments:
 
 ```yaml
