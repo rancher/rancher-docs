@@ -53,7 +53,7 @@ title: 推荐的集群架构
 
 参考：
 
-* [最佳 etcd 集群大小的官方 etcd 文档](https://etcd.io/docs/v3.4/faq/#what-is-failure-tolerance)
+* [最佳 etcd 集群大小的官方 etcd 文档](https://etcd.io/docs/v3.5/faq/#what-is-failure-tolerance)
 * [为 Kubernetes 操作 etcd 集群的官方 Kubernetes 文档](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/)
 
 ### Worker 节点数

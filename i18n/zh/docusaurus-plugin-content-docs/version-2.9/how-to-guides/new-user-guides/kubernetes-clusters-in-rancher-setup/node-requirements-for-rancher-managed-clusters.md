@@ -104,7 +104,7 @@ Windows 节点只能用于 Worker 节点。请参阅[配置 Windows 自定义集
 
 有关大型 Kubernetes 集群的硬件建议，请参阅[构建大型集群](https://kubernetes.io/docs/setup/best-practices/cluster-large/)的官方 Kubernetes 文档。
 
-有关生产环境中 etcd 集群的硬件建议，请参阅官方 [etcd 文档](https://etcd.io/docs/v3.4/op-guide/hardware/)。
+有关生产环境中 etcd 集群的硬件建议，请参阅官方 [etcd 文档](https://etcd.io/docs/v3.5/op-guide/hardware/)。
 
 ## 网络要求
 

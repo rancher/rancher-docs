@@ -56,6 +56,6 @@ Rancher 的大部分逻辑都发生在事件处理程序上。每当更新对象
 与 Rancher 版本类似，我们建议让你的 kubernetes 集群保持使用最新版本。这将确保你的集群能包含可用的性能增强或错误修复。
 
 ### 优化 ETCD
-[ETCD 性能](https://etcd.io/docs/v3.4/op-guide/performance/)的两个主要瓶颈是磁盘速度和网络速度。对任何一个进行优化都应该能提高性能。有关 ETCD 性能的信息，请参阅 [etcd 性能慢（性能测试和优化）](https://www.suse.com/support/kb/doc/?id=000020100)和[为大型安装调优 etcd](https://docs.ranchermanager.rancher.io/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs)。有关磁盘的信息，你也可以参阅[我们的文档](https://docs.Ranchermanager.Rancher.io/v2.5/pages-for-subheaders/installation-requirements#disks)。
+[ETCD 性能](https://etcd.io/docs/v3.5/op-guide/performance/)的两个主要瓶颈是磁盘速度和网络速度。对任何一个进行优化都应该能提高性能。有关 ETCD 性能的信息，请参阅 [etcd 性能慢（性能测试和优化）](https://www.suse.com/support/kb/doc/?id=000020100)和[为大型安装调优 etcd](https://docs.ranchermanager.rancher.io/how-to-guides/advanced-user-guides/tune-etcd-for-large-installs)。有关磁盘的信息，你也可以参阅[我们的文档](https://docs.Ranchermanager.Rancher.io/v2.5/pages-for-subheaders/installation-requirements#disks)。
 
 理论上，ETCD 集群中的节点越多，由于复制要求 [source](https://etcd.io/docs/v3.3/faq)，它就会越慢。这可能与常见的缩放方法相悖。我们还可以推断，ETCD 的性能将受到节点间距离的反面影响，因为这将减慢网络通信。
