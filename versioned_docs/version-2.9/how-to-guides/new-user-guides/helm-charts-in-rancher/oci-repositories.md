@@ -21,12 +21,12 @@ To add an OCI-based Helm chart repository through the Rancher UI:
   
   :::note
   
-  You can use the **OCI URL** field to finetune how many charts from the registry are availabe for installation on Rancher. More generic endpoints target more charts, as the following examples demonstrate:
+  You can use the **OCI URL** field to fine-tune how many charts from the registry are availabe for installation on Rancher. More generic endpoints target more charts, as the following examples demonstrate:
 
-  - **oci://\<registry-host\>/**: Every chart in the registry becomes available for installation, regardless of namespace or tag.
-  - **oci://\<registry-host\>/\<namespace\>**: Every chart in the specified namespace within the registry becomes available for installation.
-  - **oci://\<registry-host\>/\<namespace\>/\<chart-name\>**: Only the specified chart and any associated tags or versions of that chart become available for installation.
-  - **oci://\<registry-host\>/\<namespace\>/\<chart-name\>:\<tag\>**: Only the chart with the specified tag becomes available for installation.
+    - **oci://\<registry-host\>/**: Every chart in the registry becomes available for installation, regardless of namespace or tag.
+    - **oci://\<registry-host\>/\<namespace\>**: Every chart in the specified namespace within the registry becomes available for installation.
+    - **oci://\<registry-host\>/\<namespace\>/\<chart-name\>**: Only the specified chart and any associated tags or versions of that chart become available for installation.
+    - **oci://\<registry-host\>/\<namespace\>/\<chart-name\>:\<tag\>**: Only the chart with the specified tag becomes available for installation.
   
   :::
 
@@ -64,7 +64,7 @@ Rancher automatically refreshes the OCI-based Helm chart repository every 6 hour
 
 If you need to update immediately, you can [perform a manual refresh](../helm-charts-in-rancher/helm-charts-in-rancher.md#refresh-chart-repositories).
 
-## Update a OCI-Based Helm Chart Repository Configuration
+## Update an OCI-Based Helm Chart Repository Configuration
 
 1. Click **☰ > Cluster Management**.
 1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
@@ -95,9 +95,9 @@ Dockerhub returns a `429` status code when it completes all allocated requests. 
 
 Rancher currently checks for the `Retry-After` header. It also handles Dockerhub-style responses (status code `429` and the `RateLimit-Remaining` header) and automatically waits before making a new request. When handling `Retry-After` or Dockerhub-style responses, Rancher ignores `ExponentialBackOff` values. 
 
-If you have a OCI-based Helm chart repository which doesn't implement the `Retry-After` or `RateLimit-Remaining` headers, and think you may be rate-limited at some point, fill out the fields under **Exponential Back Off** when you add the repository. 
+If you have an OCI-based Helm chart repository which doesn't implement the `Retry-After` or `RateLimit-Remaining` headers, and think you may be rate-limited at some point, fill out the fields under **Exponential Back Off** when you add the repository. 
 
-For example, if you have an OCI-based Helm chart repository that doesn't return a `Retry-After` header, but you know that the server allows 50 requests in 24 hours, you can provide Rancher a **Min Wait** value of 86400 seconds, a **Max Wait** value of 90000 seconds, and a **Max Number of Retries** value of **1**. Then, if Rancher gets rate limited by the server, Rancher will wait for 24 hours before trying again. The request should succeed as Rancher hasn't sent any other requests in the previous 24 hours.
+For example, if you have an OCI-based Helm chart repository that doesn't return a `Retry-After` header, but you know that the server allows 50 requests in 24 hours, you can provide Rancher a **Min Wait** value of **86400** seconds, a **Max Wait** value of **90000** seconds, and a **Max Number of Retries** value of **1**. Then, if Rancher gets rate limited by the server, Rancher will wait for 24 hours before trying again. The request should succeed as Rancher hasn't sent any other requests in the previous 24 hours.
 
 ## Troubleshooting OCI-based Helm Registries
 
