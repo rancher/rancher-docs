@@ -595,7 +595,8 @@
                 "id": "how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher"
               },
               "items": [
-                "how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps"
+                "how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps",
+                "how-to-guides/new-user-guides/helm-charts-in-rancher/oci-repositories"
               ]
             },
             {
