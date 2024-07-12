@@ -34,10 +34,11 @@ To add an OCI-based Helm chart repository through the Rancher UI:
 8. (optional) Enter a base64 encoded DER certificate in the **CA Cert Bundle** field. This field is for cases where you have a private OCI-based Helm chart repository and need Rancher to trust its certificates.   
 9. (optional) To allow insecure connections without performing an SSL check, select **Skip TLS Verification**. To force Rancher to use HTTP instead of HTTPS to send requests to the repository, select **Insecure Plain Http**.
 10. (optional) If your repository has a rate-limiting policy and may respond with status code `429 Too Many Requests`, you may want to fill out the fields under **Exponential Back Off**:
-  1. **Min Wait**: The minimum duration in seconds that Rancher should wait before retrying.  The default is 1 second.
-  1. **Max Wait**: The maximum duration in seconds that Rancher should wait before retrying.  The default is 5 second.
-  1. **Max Number of Retries**: The default is 5 retries.
-Once these values are set, Rancher responds to the `429` status code by staggering requests based on the minimum and maximum wait values. The wait time between retries increases exponentially, until Rancher has sent the maximum number of retries set. See [Rate Limiting](#rate-limiting-of-oci-based-helm-chart-repositories) for more details.
+    - **Min Wait**: The minimum duration in seconds that Rancher should wait before retrying. The default is 1 second.
+    - **Max Wait**: The maximum duration in seconds that Rancher should wait before retrying. The default is 5 second.
+    - **Max Number of Retries**: The default is 5 retries.
+
+    Once these values are set, Rancher responds to the `429` status code by staggering requests based on the minimum and maximum wait values. The wait time between retries increases exponentially, until Rancher has sent the maximum number of retries set. See [Rate Limiting](#rate-limiting-of-oci-based-helm-chart-repositories) for more details.
 11. Add any labels and annotations.
 12. Click **Create**.
 
