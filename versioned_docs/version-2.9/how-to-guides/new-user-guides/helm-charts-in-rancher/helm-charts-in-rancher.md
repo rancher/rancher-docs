@@ -165,6 +165,12 @@ spec:
 
 ### Add Custom OCI Chart Repositories
 
+:::caution
+
+This feature is experimental.
+
+:::
+
 Helm v3 introduced storing Helm charts as [Open Container Initiative (OCI)](https://opencontainers.org/about/overview/) artifacts in container registries. With Rancher v2.9.0, you can add [OCI-based Helm chart repositories](https://helm.sh/docs/topics/registries/) alongside HTTP-based and Git-based repositories. This means you can deploy apps that are stored as OCI artifacts. For more information, see [Using OCI Helm Chart Repositories](./oci-repositories.md).
 
 ### Helm Compatibility
