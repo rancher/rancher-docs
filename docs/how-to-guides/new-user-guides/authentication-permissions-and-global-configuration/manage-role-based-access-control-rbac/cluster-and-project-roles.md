@@ -238,3 +238,9 @@ When you revoke the cluster membership for a standard user that's explicitly ass
 - Exercise any [individual project roles](#project-role-reference) they are assigned.
 
 If you want to completely revoke a user's access within a cluster, revoke both their cluster and project memberships.
+
+### External `RoleTemplate` Behavior
+
+In Rancher v2.9.0 and later, external `RoleTemplate` objects can only be created if the backing `ClusterRole` exists in the local cluster or the `ExternalRules` is set in your configuration.
+
+For context, the backing `ClusterRole` holds cluster rules and privileges, and shares the same `metadata.name` used in the `RoleTemplate` in your respective cluster referenced by the `ClusterRoleTemplateBinding/ProjectRoleTemplateBinding`. Additionally, note that `escalate` permissions on `RoleTemplates` are required to create external `RoleTemplates` with `ExternalRules`.
