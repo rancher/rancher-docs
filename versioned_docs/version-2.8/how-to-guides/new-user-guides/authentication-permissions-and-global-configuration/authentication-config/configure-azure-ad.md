@@ -135,7 +135,7 @@ Here are a few examples of permission combinations that satisfy Rancher's needs:
 
 #### 4. Allow Public Client Flows
 
-To login from Rancher CLI you must allow public client flows.
+To login from Rancher CLI you must allow public client flows:
 
 1. From the left navigation menu, select **Authentication**.
 
