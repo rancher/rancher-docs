@@ -232,3 +232,9 @@ To upgrade legacy multi-cluster apps:
 ## Limitations
 
 Dashboard apps or Rancher feature charts can't be installed using the Rancher CLI.
+
+## Known Bugs 
+
+As of now, the **Apps > Installed Apps** page displays the version in `Upgradable` column by combining the versions of the chart from all the Helm repositories installed in Rancher.
+
+For example, if you have cert-manager 1.13.0 helm chart installed and you have two Helm repositories which both have cert-manager helm charts, the first one has the latest version as 1.14.0 and the second Helm repository has latest version as 1.15.0, then Rancher will combine the versions of cert-manager helm charts from both Helm repositories and display the latest version i.e 1.15.0 to upgrade to in the `Installed Apps` page even though you might have installed cert-manager 1.13.0 from the first helm repository.
