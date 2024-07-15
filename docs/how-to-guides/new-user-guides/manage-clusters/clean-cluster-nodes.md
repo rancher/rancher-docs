@@ -122,7 +122,7 @@ Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 
 ## Cleaning up Nodes
 
-<Tabs>
+<Tabs queryString="distro">
 <TabItem value="RKE1">
 
 Before you run the following commands, first remove the node through the Rancher UI.
