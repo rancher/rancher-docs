@@ -202,7 +202,7 @@ This occurs when Rancher was configured with `agent-tls-mode` set to `strict`, b
 
 ### New Cluster Deployment is stuck in "Waiting for Agent to check in"
 
-When using `agent-tls-mode` set to `strict`, new clusters may fail to provision with a generic "Waiting for Agent to check in" error message. The root casuse of this is similar o the above case for TLS errors - Rancher's agent can't determine the which CA Rancher is using (or can't verify that Rancher's cert is actually signed by the provided certificate authority).  
+When Rancher has `agent-tls-mode` set to `strict`, new clusters may fail to provision with a generic "Waiting for Agent to check in" error message. The root cause of this is similar to the above case of TLS errors - Rancher's agent can't determine the which CA Rancher is using (or can't verify that Rancher's cert is actually signed by the provided certificate authority).  
 
-To resolve the issue, set the `agent-tls-mode` to `system-store`, or upload the CA for rancher as described in [Adding TLS Secrets](../resources/add-tls-secrets.md).
+To resolve the issue, set the `agent-tls-mode` to `system-store`, or upload the CA for Rancher as described in [Adding TLS Secrets](../resources/add-tls-secrets.md).
 
