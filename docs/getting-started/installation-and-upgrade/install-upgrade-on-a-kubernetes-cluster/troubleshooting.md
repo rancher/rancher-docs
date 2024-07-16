@@ -193,7 +193,7 @@ The node is not reachable on the configured `address` and `port`.
 
 ### Agent reports TLS errors 
 
-When using Rancher, you may encounter errors in the fleet-agent, system-agent, or cluster-agent like the below:
+When using Rancher, you may encounter error messages from the `fleet-agent`, `system-agent`, or `cluster-agent`, such as the message below:
 ```
 tls: failed to verify certificate: x509: failed to load system roots and no roots provided; readdirent /dev/null: not a directory
 ```
