@@ -19,7 +19,6 @@ Some feature flags require a restart of the Rancher container. Features that req
 The following is a list of feature flags available in Rancher. If you've upgraded from a previous Rancher version, you may see additional flags in the Rancher UI, such as `proxy` or `dashboard` (both [discontinued](/versioned_docs/version-2.5/reference-guides/installation-references/feature-flags.md)):
 
 - `continuous-delivery`: Allows Fleet GitOps to be disabled separately from Fleet. See [Continuous Delivery.](../../../how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery.md) for more information.
-- `external-rules`: This flag affected [external `RoleTemplate` behavior](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#external-roletemplate-behavior). It is removed in Rancher v2.9.0 and later as the behavior is enabled by default.
 - `fleet`: The Rancher provisioning framework in v2.6 and later requires Fleet. The flag will be automatically enabled when you upgrade, even if you disabled this flag in an earlier version of Rancher. See [Continuous Delivery with Fleet](../../../integrations-in-rancher/fleet/fleet.md) for more information.
 - `harvester`: Manages access to the Virtualization Management page, where users can navigate directly to Harvester clusters and access the Harvester UI. See [Harvester Integration Overview](../../../integrations-in-rancher/harvester/overview.md) for more information.
 - `istio-virtual-service-ui`: Enables a [visual interface](../../../how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features.md) to create, read, update, and delete Istio virtual services and destination rules, which are Istio traffic management features.
@@ -32,13 +31,14 @@ The following is a list of feature flags available in Rancher. If you've upgrade
 
 The following table shows the availability and default values for some feature flags in Rancher. Features marked "GA" are generally available:
 
-| Feature Flag Name             | Default Value | Status       | Available As Of |
-| ----------------------------- | ------------- | ------------ | --------------- |
-| `continuous-delivery` | `true` | GA | v2.6.0 |
-| `fleet`  | `true` | Can no longer be disabled | v2.6.0 |
-| `fleet`  | `true` | GA | v2.5.0 |
-| `harvester` | `true` | Experimental | v2.6.1 |
-| `legacy` | `false` for new installs, `true` for upgrades | GA | v2.6.0 |
-| `rke1-custom-node-cleanup`| `true` | GA | v2.6.0 |
-| `rke2` | `true` | Experimental | v2.6.0 |
-| `token-hashing` | `false` for new installs, `true` for upgrades | GA | v2.6.0 |
+| Feature Flag Name             | Default Value | Status       | Available As Of | Additional Information |
+| ----------------------------- | ------------- | ------------ | --------------- | ---------------------- |
+| `continuous-delivery` | `true` | GA | v2.6.0 | |
+| `external-rules` | v2.7.14: `false`, v2.8.5: `true` | Removed | v2.7.14, v2.8.5 | This flag affected [external `RoleTemplate` behavior](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#external-roletemplate-behavior). It is removed in Rancher v2.9.0 and later as the behavior is enabled by default. |
+| `fleet`  | `true` | Can no longer be disabled | v2.6.0 | |
+| `fleet`  | `true` | GA | v2.5.0 | |
+| `harvester` | `true` | Experimental | v2.6.1 | |
+| `legacy` | `false` for new installs, `true` for upgrades | GA | v2.6.0 | |
+| `rke1-custom-node-cleanup`| `true` | GA | v2.6.0 | |
+| `rke2` | `true` | Experimental | v2.6.0 | |
+| `token-hashing` | `false` for new installs, `true` for upgrades | GA | v2.6.0 | |
