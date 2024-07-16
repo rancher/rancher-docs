@@ -79,6 +79,13 @@ Rancher checks the status of all downstream clusters to prevent outages. Overrid
 kubectl get setting agent-tls-mode -o yaml --kubeconfig=local_kubeconfig.yaml > setting.yaml
 ```
 3. Update the `setting.yaml` file, replacing `value` with `strict`. Adding the `cattle.io/force: "true"` annotation will override the cluster condition check, and should only be done with great care:
+
+:::warning
+
+Including the cattle.io/force annotation with any value (including, for example "false") overrides the cluster condition check.
+
+:::
+
 ```yaml
 apiVersion: management.cattle.io/v3
 customized: false
