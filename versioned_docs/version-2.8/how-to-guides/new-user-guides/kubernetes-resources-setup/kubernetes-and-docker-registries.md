@@ -46,7 +46,7 @@ If you need to create a private registry, refer to the documentation pages for y
     :::
 
 1. Select a namespace for the registry.
-1. Select the website that hosts your private registry. Then enter credentials that authenticate with the registry. For example, if you use DockerHub, provide your DockerHub username and password.
+1. Select the website that hosts your private registry. Then enter credentials that authenticate with the registry. For example, if you use Docker Hub, provide your Docker Hub username and password.
 1. Click **Save**.
 
 **Result:**
@@ -89,7 +89,7 @@ Before v2.6, secrets were required to be in a project scope. Projects are no lon
     :::
 
 1. Select a namespace for the registry.
-1. Select the website that hosts your private registry. Then enter credentials that authenticate with the registry. For example, if you use DockerHub, provide your DockerHub username and password.
+1. Select the website that hosts your private registry. Then enter credentials that authenticate with the registry. For example, if you use Docker Hub, provide your Docker Hub username and password.
 1. Click **Save**.
 
 **Result:**

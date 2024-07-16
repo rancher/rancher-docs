@@ -332,7 +332,7 @@ Refer to the offical AWS upstream documentation for the [cloud controller manage
 <Tabs groupId="k8s-distro">
 <TabItem value="RKE2">
 
-Official upstream docs for [Helm chart installation](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager) can be found on Github.
+Official upstream docs for [Helm chart installation](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager) can be found on GitHub.
 
 1. Add the Helm repository:
 
@@ -465,7 +465,7 @@ kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
 
 <TabItem value="RKE">
 
-Official upstream docs for [Helm chart installation](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager) can be found on Github.
+Official upstream docs for [Helm chart installation](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager) can be found on GitHub.
 
 1. Add the Helm repository:
 

@@ -221,7 +221,7 @@ kubectl -n cattle-system apply -R -f ./rancher
 
 ## 5. For Rancher versions before v2.3.0, Configure System Charts
 
-If you are installing Rancher versions before v2.3.0, you will not be able to use the packaged system charts. Since the Rancher system charts are hosted in Github, an air gapped installation will not be able to access these charts. Therefore, you must [configure the Rancher system charts](../../resources/local-system-charts.md).
+If you are installing Rancher versions before v2.3.0, you will not be able to use the packaged system charts. Since the Rancher system charts are hosted in GitHub, an air gapped installation will not be able to access these charts. Therefore, you must [configure the Rancher system charts](../../resources/local-system-charts.md).
 
 ## Additional Resources
 
@@ -357,7 +357,7 @@ If you are installing Rancher v2.3.0+, the installation is complete.
 
 > **Note:** If you don't intend to send telemetry data, opt out [telemetry](../../../../faq/telemetry.md) during the initial login.
 
-If you are installing Rancher versions before v2.3.0, you will not be able to use the packaged system charts. Since the Rancher system charts are hosted in Github, an air gapped installation will not be able to access these charts. Therefore, you must [configure the Rancher system charts](../../resources/local-system-charts.md).
+If you are installing Rancher versions before v2.3.0, you will not be able to use the packaged system charts. Since the Rancher system charts are hosted in GitHub, an air gapped installation will not be able to access these charts. Therefore, you must [configure the Rancher system charts](../../resources/local-system-charts.md).
 
 </TabItem>
 </Tabs>
