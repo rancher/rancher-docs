@@ -107,7 +107,7 @@ The Rancher management server is designed to be secure by default and requires S
 
 :::note
 
-If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](../installation-references/helm-chart-options.md#external-tls-termination). As outlined on that page, this option does have additional requirements for TLS verification.
+If you want to externally terminate SSL/TLS, see [TLS termination on an External Load Balancer](../installation-references/helm-chart-options.md#external-tls-termination). As outlined on that page, this option does have additional requirements for TLS verification.
 
 :::
 
