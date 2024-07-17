@@ -29,10 +29,10 @@ To add an OCI-based Helm chart repository through the Rancher UI:
   
   You can use the **OCI URL** field to fine-tune how many charts from the registry are availabe for installation on Rancher. More generic endpoints target more charts, as the following examples demonstrate:
 
-    - **oci://\<registry-host\>/**: Every chart in the registry becomes available for installation, regardless of namespace or tag.
-    - **oci://\<registry-host\>/\<namespace\>**: Every chart in the specified namespace within the registry becomes available for installation.
-    - **oci://\<registry-host\>/\<namespace\>/\<chart-name\>**: Only the specified chart and any associated tags or versions of that chart become available for installation.
-    - **oci://\<registry-host\>/\<namespace\>/\<chart-name\>:\<tag\>**: Only the chart with the specified tag becomes available for installation.
+    - **oci://<registry-host>/**: Every chart in the registry becomes available for installation, regardless of namespace or tag.
+    - **oci://<registry-host>/<namespace>**: Every chart in the specified namespace within the registry becomes available for installation.
+    - **oci://<registry-host>/<namespace>/<chart-name>**: Only the specified chart and any associated tags or versions of that chart become available for installation.
+    - **oci://<registry-host>/<namespace>/<chart-name>:<tag>**: Only the chart with the specified tag becomes available for installation.
   
   :::
 
