@@ -60,7 +60,7 @@ Depending on your cert setup, additional action may be required, such as uploadi
 
 :::
 
-To change the setting's value through the UI, navigate to the **Global Settings** page, and find the `agent-tls-mode` setting near the bottom of the page. When you change the setting through the UI, Rancher first checks that all downstream clusters have the condition `AgentTlsStrictCheck` set to `True` before allowing the request. This prevents outages from a certificate mismatch.
+To change the setting's value through the UI, navigate to the **Global Settings** page, and find the `agent-tls-mode` setting near the bottom of the page. When you change the setting through the UI, Rancher first checks that all downstream clusters have the condition `AgentTlsStrictCheck` set to `"True"` before allowing the request. This prevents outages from a certificate mismatch.
 
 
 #### Overriding the Setting Validation Checks
