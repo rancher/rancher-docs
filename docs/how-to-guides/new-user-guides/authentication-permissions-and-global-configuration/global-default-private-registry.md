@@ -54,8 +54,20 @@ Since the private registry cannot be configured after the cluster is created, yo
 1. Select **☰ > Cluster Management**.
 1. On the **Clusters** page, click **Create**.
 1. Choose a cluster type.
-1. In the **Cluster Configuration** go to the **Registries** tab and select **Pull images for Rancher from a private registry**.
-1. Enter the registry hostname and credentials.
+1. In the **Cluster Configuration** go to the **Registries** tab.
+1. Check the box next to **Enable cluster scoped container registry for Rancher system container images**.
+1. Enter the registry hostname.
+1. Under **Authentication** select **Create a HTTP Basic Auth Secret** and fill in the credential fields.
 1. Click **Create**.
 
 **Result:** The new cluster pulls images from the private registry.
+
+### Working with Private Registry Credentials
+
+When working with private registries, it is important to ensure that any secrets created for these registries are properly backed up. By default, when you add a private registry credential secret through the process outlined above, it is included in backup operations.
+
+However, if you create credential secrets outside of the Rancher GUI (using kubectl, or Terraform), you must take an extra step to ensure they are backed up effectively. When creating these secrets, make sure to add the `fleet.cattle.io/managed=true` label to indicate that this secret should be included in backups created by Rancher Backups.
+
+For example, if you have a custom private registry named "my-private-registry" and create a secret called "my-reg-creds" for it, apply the `fleet.cattle.io/managed=true` label to this secret. This ensures that your backup process captures this secret providing easy restoration if needed.
+
+By following this guidance, you can ensure that all your private registry credentials are backed up and easily accessible in the event of a restore or migration.
