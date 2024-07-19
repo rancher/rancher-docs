@@ -66,7 +66,7 @@ Since the private registry cannot be configured after the cluster is created, yo
 
 When working with private registries, it is important to ensure that any secrets created for these registries are properly backed up. By default, when you add a private registry credential secret through the process outlined above, it is included in backup operations using Rancher Backups.
 
-However, if you create credential secrets outside of the Rancher GUI (using kubectl, or Terraform), you must take an extra step to ensure they are backed up effectively. When creating these secrets, make sure to add the `fleet.cattle.io/managed=true` label to indicate that this secret should be included in backups created by Rancher Backups.
+However, if you create a credential secret outside of the Rancher GUI, such as by using kubectl or Terraform, you must add the `fleet.cattle.io/managed=true` label to indicate that the secret should be included in backups created by Rancher Backups.
 
 For example, if you have a custom private registry named "my-private-registry" and create a secret called "my-reg-creds" for it, apply the `fleet.cattle.io/managed=true` label to this secret. This ensures that your backup process captures the secret, providing easy restoration if needed.
 
