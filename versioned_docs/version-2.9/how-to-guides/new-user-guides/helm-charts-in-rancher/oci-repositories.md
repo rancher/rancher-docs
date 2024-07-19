@@ -8,7 +8,7 @@ title: Using OCI-Based Helm Chart Repositories
 
 :::caution
 
-This feature is experimental.
+This feature is currently experimental and is not yet officially supported in Rancher.
 
 :::
 
