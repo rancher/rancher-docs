@@ -167,7 +167,7 @@ spec:
 
 :::caution
 
-This feature is currently experimental and is not yet officially supported in Rancher.
+This feature is currently experimental and is not officially supported in Rancher.
 
 :::
 
