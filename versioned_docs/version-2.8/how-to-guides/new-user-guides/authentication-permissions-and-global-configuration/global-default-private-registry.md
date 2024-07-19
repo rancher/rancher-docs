@@ -70,4 +70,4 @@ However, if you create credential secrets outside of the Rancher GUI (using kube
 
 For example, if you have a custom private registry named "my-private-registry" and create a secret called "my-reg-creds" for it, apply the `fleet.cattle.io/managed=true` label to this secret. This ensures that your backup process captures this secret providing easy restoration if needed.
 
-By following this guidance, you can ensure that all your private registry credentials are backed up and easily accessible in the event of a restore or migration.
+By following this guidance, you can ensure that all of your private registry credentials are backed up and easily accessible in the event of a restore or migration.
