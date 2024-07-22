@@ -153,6 +153,16 @@ Here are a few examples of permission combinations that satisfy Rancher's needs:
 
     1. Copy the **Application (Client) ID** and paste it into Rancher as your **Application ID**.
 
+1. (Optional) In Rancher v2.9.0 and later, you can filter logs from Azure AD to reduce the amount of log data generated. Click the checkbox next to **Limit users by group membership** to enable filtering, and enter an [OData filter clause](https://learn.microsoft.com/en-us/odata/concepts/queryoptions-overview#filter) into the **Group Membership Filter** field. For example, if you want to limit logging to group memberships whose name starts with "Rancher," click the checkbox and enter `startswith(displayName,'Rancher')`.
+
+    :::warning
+    
+    Filtering out a group affects more than just logging. 
+
+    Since the filter prevents Rancher from seeing that the user belongs to an excluded group, it also does not see any permissions from that group. This means that filtering a group can have the side effect of denying users permissions they should have.
+
+    :::
+
 1. In most cases, your endpoint options will either be [Standard](#global) or [China](#china). For either of these options, you only need to enter the **Tenant ID**, **Application ID**, and **Application Secret**.
 
 ![Standard Endpoint Options](/img/tenant-application-id-secret.png)
@@ -167,7 +177,7 @@ Custom Endpoints are not tested or fully supported by Rancher.
 
 You'll also need to manually enter the Graph, Token, and Auth Endpoints.
 
-- From <b>App registrations</b>, click <b>Endpoints</b>:
+- From **App registrations**, click **Endpoints**:
 
 ![Click Endpoints](/img/endpoints.png)
 
@@ -313,6 +323,14 @@ Auth Endpoint    | https://login.partner.microsoftonline.cn/{tenantID}/oauth2/v2
 Endpoint         | https://login.partner.microsoftonline.cn/
 Graph Endpoint   | https://microsoftgraph.chinacloudapi.cn
 Token Endpoint   | https://login.partner.microsoftonline.cn/{tenantID}/oauth2/v2.0/token
+
+## Filtering Users by Azure AD Auth Group Memberships
+
+In Rancher v2.9.0 and later, you can filter logs from Azure AD to reduce the amount of log data generated.
+
+If you did not filter group memberships during initial setup, you can still add filters on an existing Azure AD configuration:
+
+1. 
 
 
 ## Deprecated Azure AD Graph API
