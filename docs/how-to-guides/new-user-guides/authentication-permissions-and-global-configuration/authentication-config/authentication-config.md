@@ -21,20 +21,21 @@ The account used to enable the external provider will be granted admin permissio
 
 The Rancher authentication proxy integrates with the following external authentication services.
 
-| Auth Service                                                                                     |
-| ------------------------------------------------------------------------------------------------ |
-| [Microsoft Active Directory](configure-active-directory.md)  |
-| [GitHub](configure-github.md)                  |
-| [Microsoft Azure AD](configure-azure-ad.md)    |
-| [FreeIPA](configure-freeipa.md)                |
-| [OpenLDAP](../configure-openldap/configure-openldap.md)              |
+| Auth Service                                                                                                           |
+|------------------------------------------------------------------------------------------------------------------------|
+| [Microsoft Active Directory](configure-active-directory.md)                                                            |
+| [GitHub](configure-github.md)                                                                                          |
+| [Microsoft Azure AD](configure-azure-ad.md)                                                                            |
+| [FreeIPA](configure-freeipa.md)                                                                                        |
+| [OpenLDAP](../configure-openldap/configure-openldap.md)                                                                |
 | [Microsoft AD FS](../configure-microsoft-ad-federation-service-saml/configure-microsoft-ad-federation-service-saml.md) |
-| [PingIdentity](configure-pingidentity.md)     |
-| [Keycloak (OIDC)](configure-keycloak-oidc.md)  |
-| [Keycloak (SAML)](configure-keycloak-saml.md)  |
-| [Okta](configure-okta-saml.md)                      |
-| [Google OAuth](configure-google-oauth.md)            |
-| [Shibboleth](../configure-shibboleth-saml/configure-shibboleth-saml.md)           |
+| [PingIdentity](configure-pingidentity.md)                                                                              |
+| [Keycloak (OIDC)](configure-keycloak-oidc.md)                                                                          |
+| [Keycloak (SAML)](configure-keycloak-saml.md)                                                                          |
+| [Okta](configure-okta-saml.md)                                                                                         |
+| [Google OAuth](configure-google-oauth.md)                                                                              |
+| [Shibboleth](../configure-shibboleth-saml/configure-shibboleth-saml.md)                                                |
+| [Generic (OIDC)](configure-generic-oidc.md)                                                                       |
 
 However, Rancher also provides [local authentication](create-local-users.md).
 
