@@ -53,6 +53,8 @@ If your organization uses an OIDC provider for user authentication, you can conf
     `Full group path` | `ON`
     `Add to user info` | `ON`
 
+ - Important:  Rancher will use the value received in the "sub" claim to form the PrincipalID which is the unique identifier in Rancher.  It is important to make this a value that will be unique and immutable.
+
 ## Configuring Generic OIDC in Rancher
 
 1. In the Rancher UI, click **☰ > Users & Authentication**.
