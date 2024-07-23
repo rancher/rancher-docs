@@ -8,11 +8,11 @@ title: Setting up the Azure Cloud Provider
 
 :::note Important:
 
-In Kubernetes 1.30 and later, you must use an out-of-tree Azure cloud provider. The Azure cloud provider has been [removed completely](https://github.com/kubernetes/kubernetes/pull/122857), and won't work after an upgrade to Kubernetes 1.30. The steps listed below are still required to set up an Azure cloud provider. You can [set up an out-of-tree cloud provider](#using-the-out-of-tree-azure-cloud-provider) after completing the prerequisites for Azure cloud provider.
+In Kubernetes 1.30 and later, you must use an out-of-tree Azure cloud provider. The Azure cloud provider has been [removed completely](https://github.com/kubernetes/kubernetes/pull/122857), and won't work after an upgrade to Kubernetes 1.30. The steps listed below are still required to set up an Azure cloud provider. You can [set up an out-of-tree cloud provider](#using-the-out-of-tree-azure-cloud-provider) after completing the prerequisites for Azure.
 
 You can also [migrate from an in-tree to an out-of-tree Azure cloud provider](../migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-azure.md) on Kubernetes 1.29 and earlier. All existing clusters must migrate prior to upgrading to v1.30 in order to stay functional.
 
-Starting with Kubernetes 1.29, in-tree cloud providers have been disabled. you must disable the `DisableCloudProviders` and `DisableKubeletCloudCredentialProvider` to use the in-tree Azure cloud provider. You can do this by setting `feature-gates=DisableCloudProviders=false` as an additional argument for the cluster's Kubelet, Controller Manager, and API Server in the advanced cluster configuration. Additionally, set `DisableKubeletCloudCredentialProvider=false` in the Kubelet's arguments to enable in-tree functionality for authenticating to Azure container registries for image pull credentials. See [upstream docs](https://github.com/kubernetes/kubernetes/pull/117503) for more details.
+Starting with Kubernetes 1.29, in-tree cloud providers have been disabled. You must disable `DisableCloudProviders` and `DisableKubeletCloudCredentialProvider` to use the in-tree Azure cloud provider. You can do this by setting `feature-gates=DisableCloudProviders=false` as an additional argument for the cluster's Kubelet, Controller Manager, and API Server in the advanced cluster configuration. Additionally, set `DisableKubeletCloudCredentialProvider=false` in the Kubelet's arguments to enable in-tree functionality for authenticating to Azure container registries for image pull credentials. See [upstream docs](https://github.com/kubernetes/kubernetes/pull/117503) for more details.
 
 :::
 
@@ -87,15 +87,14 @@ Only hosts expected to be load balancer back ends need to be in this group.
 ## RKE2 Cluster Set-up in Rancher
 
 :::note Important: 
-This section is valid only for creating clusters with in-tree cloud provider. 
+This section is valid only for creating clusters with the in-tree cloud provider. 
 ::: 
 
 1. Choose "Azure" from the Cloud Provider drop-down in the Cluster Configuration section.
 
-2. * Supply the Cloud Provider Configuration. Note that Rancher will automatically create a new Network Security Group, Resource Group, Availability Set, Subnet, and Virtual Network. If you already have some or all of these created, you will need to specify them before creating the cluster.
-   * You can click on "Show Advanced" to see more of these automatically generated names and update them if
-   necessary. Your Cloud Provider Configuration **must** match the fields in the Machine Pools section. If you have multiple pools, they must all use the same Resource Group, Availability Set, Subnet, Virtual Network, and Network Security Group.
-   * An example is provided below. You will modify it as needed.
+2. Supply the Cloud Provider Configuration. Note that Rancher automatically creates a new Network Security Group, Resource Group, Availability Set, Subnet, and Virtual Network. If you already have some or all of these created, you must specify them before creating the cluster.
+   * Click **Show Advanced** to view or edit these automatically generated names. Your Cloud Provider Configuration **must** match the fields in the **Machine Pools** section. If you have multiple pools, they must all use the same Resource Group, Availability Set, Subnet, Virtual Network, and Network Security Group.
+   * An example is provided below. Modify it as needed.
 
    <details id="v2.6.0-cloud-provider-config-file">
      <summary>Example Cloud Provider Config</summary>
@@ -126,23 +125,23 @@ This section is valid only for creating clusters with in-tree cloud provider.
 
 3. Under the **Cluster Configuration > Advanced** section, click **Add** under **Additional Controller Manager Args** and add this flag: `--configure-cloud-routes=false`
 
-4. Click the **Create** button to submit the form and create the cluster.
+4. Click **Create** to submit the form and create the cluster.
 
 ## Cloud Provider Configuration
 
-Rancher will automatically create a new Network Security Group, Resource Group, Availability Set, Subnet, and Virtual Network. If you already have some or all of these created, you will need to specify them before creating the cluster. You can check RKE1 Node Templates for or RKE2 Machine Pools to see more of these automatically generated names and update them if necessary.
+Rancher automatically creates a new Network Security Group, Resource Group, Availability Set, Subnet, and Virtual Network. If you already have some or all of these created, you will need to specify them before creating the cluster. You can check **RKE1 Node Templates** or **RKE2 Machine Pools** to view or edit these automatically generated names.
 
 **Refer to the full list of configuration options in the [upstream docs](https://cloud-provider-azure.sigs.k8s.io/install/configs/).**
 
 :::note 
-1. `useInstanceMetadata` must be set to true for `providerID` to be configured correctly by the cloud provider.
-2. `excludeMasterFromStandardLB` must be set to false if nodes labeled `node-role.kubernetes.io/master` are required to be added to the backends of Azure Load Balancer (ALB).
-3. `loadBalancerSku` can be `basic` or `standard`. Basic SKU will be deprecated in September 2025. Refer to the [Azure upstream docs](https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-basic-upgrade-guidance#basic-sku-vs-standard-sku) for more information.
+1. `useInstanceMetadata` must be set to `true` for the cloud provider to correctly configure `providerID`.
+2. `excludeMasterFromStandardLB` must be set to `false` if you need to add nodes labeled `node-role.kubernetes.io/master` to the backend of the Azure Load Balancer (ALB).
+3. `loadBalancerSku` can be set to `basic` or `standard`. Basic SKU will be deprecated in September 2025. Refer to the [Azure upstream docs](https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-basic-upgrade-guidance#basic-sku-vs-standard-sku) for more information.
 :::
 
-Azure cloud provider supports reading the cloud config from Kubernetes secrets. The secret is a serialized version of azure.json file. When the secret is changed, the cloud controller manager will re-constructing itself without restarting the pod. It is recommended for the helm chart to read the Cloud Provider Config from secret.
+Azure supports reading the cloud config from Kubernetes secrets. The secret is a serialized version of the azure.json file. When the secret is changed, the cloud controller manager reconstructs itself without restarting the pod. It is recommended for the Helm chart to read the Cloud Provider Config from the secret.
 
-Note that the chart reads the Cloud Provider Config from a given secret name in the `kube-system` namespace. Since Azure cloud provider would read Kubernetes secrets, RBAC also needs to be configured. An example secret for the Cloud Provider Config is shown below, modify it as needed and create the secret.
+Note that the chart reads the Cloud Provider Config from a given secret name in the `kube-system` namespace. Since Azure reads Kubernetes secrets, RBAC also needs to be configured. An example secret for the Cloud Provider Config is shown below. Modify it as needed and create the secret.
 
   ```yaml
 # azure-cloud-config.yaml
@@ -160,15 +159,15 @@ stringData:
       "subscriptionId": "<subscription-id>",
       "aadClientId": "<client-id>",
       "aadClientSecret": "<tenant-id>",
-      "resourceGroup": "docker-machine-ks",
+      "resourceGroup": "docker-machine",
       "location": "westus",
-      "subnetName": "docker-machine-ks",  
+      "subnetName": "docker-machine",  
       "securityGroupName": "rancher-managed-kqmtsjgJ",
-      "securityGroupResourceGroup": "docker-machine-ks",
-      "vnetName": "docker-machine-ks-vnet",
-      "vnetResourceGroup": "docker-machine-ks",
-      "primaryAvailabilitySetName": "docker-machine-ks",  
-      "routeTableResourceGroup": "docker-machine-ks",
+      "securityGroupResourceGroup": "docker-machine",
+      "vnetName": "docker-machine-vnet",
+      "vnetResourceGroup": "docker-machine",
+      "primaryAvailabilitySetName": "docker-machine",  
+      "routeTableResourceGroup": "docker-machine",
       "cloudProviderBackoff": false,
       "useManagedIdentityExtension": false,
       "useInstanceMetadata": true,
@@ -205,20 +204,19 @@ roleRef:
       namespace: kube-system
    ``` 
 
-## Using the out-of-tree Azure cloud provider
+## Using the Out-of-tree Azure Cloud Provider
 
 <Tabs groupId="k8s-distro">
 <TabItem value="RKE2">
 
-1. Choose **External** from the Cloud Provider drop-down in the **Cluster Configuration** section. 
+1. Select **External** from the **Cloud Provider** drop-down in the **Cluster Configuration** section.
 
-2. - Prepare the Cloud Provider Configuration to set for the Cloud Provider Config in the next step. Note that Rancher will automatically create a new Network Security Group, Resource Group, Availability Set, Subnet, and Virtual Network. If you already have some or all of these created, you will need to specify them before creating the cluster. 
-   - You can click on "Show Advanced" to see more of these automatically generated names and update them if
-   necessary. Your Cloud Provider Configuration **must** match the fields in the Machine Pools section. If you have multiple pools, they must all use the same Resource Group, Availability Set, Subnet, Virtual Network, and Network Security Group.
+2. Prepare the Cloud Provider Configuration to set it in the next step. Note that Rancher automatically creates a new Network Security Group, Resource Group, Availability Set, Subnet, and Virtual Network. If you already have some or all of these created, you must specify them before creating the cluster.
+  - Click **Show Advanced** to view or edit these automatically generated names. Your Cloud Provider Configuration **must** match the fields in the **Machine Pools** section. If you have multiple pools, they must all use the same Resource Group, Availability Set, Subnet, Virtual Network, and Network Security Group.
 
-3. Under the **Cluster Configuration > Add-on Config** section, specify the `cloud-provider-azure` Helm chart in **Additional Manifest**. 
+3. Under **Cluster Configuration > Advanced**, click **Add** under **Additional Controller Manager Args** and add this flag: `--configure-cloud-routes=false`. 
 
-Note that the chart reads the Cloud Provider Config from secret in `kube-system` namespace. An example secret for the Cloud Provider Config is shown below, modify it as needed. Please refer to the full list of configuration options in the [upstream docs](https://cloud-provider-azure.sigs.k8s.io/install/configs/).
+Note that the chart reads the Cloud Provider Config from the secret in the `kube-system` namespace. An example secret for the Cloud Provider Config is shown below. Modify it as needed. Refer to the full list of configuration options in the [upstream docs](https://cloud-provider-azure.sigs.k8s.io/install/configs/).
 
   ```yaml
 apiVersion: helm.cattle.io/v1
@@ -270,15 +268,15 @@ stringData:
       "subscriptionId": "<subscription-id>",
       "aadClientId": "<client-id>",
       "aadClientSecret": "<tenant-id>",
-      "resourceGroup": "docker-machine-ks",
+      "resourceGroup": "docker-machine",
       "location": "westus",
-      "subnetName": "docker-machine-ks",
+      "subnetName": "docker-machine",
       "securityGroupName": "rancher-managed-kqmtsjgJ",
-      "securityGroupResourceGroup": "docker-machine-ks",
-      "vnetName": "docker-machine-ks-vnet",
-      "vnetResourceGroup": "docker-machine-ks",
-      "primaryAvailabilitySetName": "docker-machine-ks",  
-      "routeTableResourceGroup": "docker-machine-ks",
+      "securityGroupResourceGroup": "docker-machine",
+      "vnetName": "docker-machine-vnet",
+      "vnetResourceGroup": "docker-machine",
+      "primaryAvailabilitySetName": "docker-machine",  
+      "routeTableResourceGroup": "docker-machine",
       "cloudProviderBackoff": false,
       "useManagedIdentityExtension": false,
       "useInstanceMetadata": true,
@@ -315,24 +313,24 @@ roleRef:
       namespace: kube-system
   ```
 
-4. Click the **Create** button to submit the form and create the cluster.
+4. Click **Create** to submit the form and create the cluster.
 
 </TabItem>
 
 <TabItem value="RKE1">
 
-1. Choose "External" from the Cloud Provider drop-down in the **Cluster Options** section. This sets `--cloud-provider=external` for Kubernetes components.
+1. Choose **External** from the **Cloud Provider** drop-down in the **Cluster Options** section. This sets `--cloud-provider=external` for Kubernetes components.
 
-2. Install the `cloud-provider-azure` chart after the cluster finishes provisioning. Note that the cluster isn't successfully provisioned and nodes are still in an `uninitialized` state until you deploy the cloud controller manager. This can be done [manually using CLI](#helm-chart-installation-from-cli), or via [Helm charts in UI](#helm-chart-installation-from-ui). 
+2. Install the `cloud-provider-azure` chart after the cluster finishes provisioning. Note that the cluster is not successfully provisioned and nodes are still in an `uninitialized` state until you deploy the cloud controller manager. This can be done [manually using CLI](#helm-chart-installation-from-cli), or via [Helm charts in UI](#helm-chart-installation-from-ui).
 
-Refer to the official Azure upstream documentation for the [cloud provider](https://cloud-provider-azure.sigs.k8s.io/install/azure-ccm/).
+Refer to the [official Azure upstream documentation](https://cloud-provider-azure.sigs.k8s.io/install/azure-ccm/) for more details on deploying the Cloud Controller Manager.
 
 </TabItem>
 </Tabs>
 
 ### Helm Chart Installation from CLI
 
-Official upstream docs for [Helm chart installation](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager) can be found on Github.
+Official upstream docs for [Helm chart installation](https://github.com/kubernetes-sigs/cloud-provider-azure/tree/master/helm/cloud-provider-azure) can be found on Github.
 
 1. Create a `azure-cloud-config` secret with the required [cloud provider config](#cloud-provider-configuration). 
 
@@ -398,7 +396,7 @@ cloudControllerManager:
   replicas: 1
   hostNetworking: true
   nodeSelector:
-    node-role.kubernetes.io/controlplane: 'true'
+    node-role.kubernetes.io/control-plane: 'true'
   tolerations:
     - effect: NoSchedule
       key: node-role.kubernetes.io/controlplane
@@ -452,7 +450,7 @@ kubectl describe nodes | grep "ProviderID"
 
 6. Select the namespace, `kube-system`, and enable **Customize Helm options before install**.
 
-7. Replace `cloudConfig: /etc/kubernetes/azure.json` to read from Cloud Config Secret and enable dynamic reloading.
+7. Replace `cloudConfig: /etc/kubernetes/azure.json` to read from the Cloud Config Secret and enable dynamic reloading:
 
 ```yaml
   cloudConfigSecretName: azure-cloud-config
@@ -470,7 +468,7 @@ kubectl describe nodes | grep "ProviderID"
 <Tabs groupId="k8s-distro">
 <TabItem value="RKE2">
 
-9. Rancher-provisioned RKE2 nodes have selector `node-role.kubernetes.io/control-plane: 'true'`. Update the nodeSelector:
+9. Rancher-provisioned RKE2 nodes have the selector `node-role.kubernetes.io/control-plane` set to `true`. Update the nodeSelector:
 ```yaml
 nodeSelector:
   node-role.kubernetes.io/control-plane: 'true'
@@ -498,7 +496,7 @@ nodeSelector:
 </TabItem>
 </Tabs>
 
-11. Install the chart and confirm that the cloud controller and cloud node manager deploy successfully:
+11. Install the chart and confirm that the cloud controller and cloud node manager deployed successfully:
 
 ```shell
 kubectl rollout status deployment -n kube-system cloud-controller-manager

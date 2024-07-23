@@ -56,19 +56,19 @@ kubectl cordon -l "node-role.kubernetes.io/control-plane=true"
 3. To deploy the Azure cloud controller manager, use any of the available options: 
 - UI: Follow steps 1-10 of [Helm chart installation from UI](../set-up-cloud-providers/azure.md#helm-chart-installation-from-ui) to install the cloud controller manager chart.
 - CLI: Follow steps 1-4 of [Helm chart installation from CLI](../set-up-cloud-providers/azure.md#helm-chart-installation-from-cli).
-- Update cluster's additional manifest: Follow steps 2-3 to [install the cloud controller manager chart](../set-up-cloud-providers/azure.md#using-the-out-of-tree-azure-cloud-provider).
+- Update the cluster's additional manifest: Follow steps 2-3 to [install the cloud controller manager chart](../set-up-cloud-providers/azure.md#using-the-out-of-tree-azure-cloud-provider).
 
 Confirm that the chart is installed but that the new pods aren't running yet due to cordoned controlplane nodes.
 
 4. To enable leader migration, add `--enable-leader-migration` to the container arguments of `cloud-controller-manager`:
 
 ```shell 
--n kube-system patch deployment cloud-controller-manager \
+kubectl -n kube-system patch deployment cloud-controller-manager \
 --type=json \
 -p='[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--enable-leader-migration"}]'
 ```
 
-5. Update the provisioning cluster to change the cloud provider and remove leader migration args from the kube controller.
+5. Update the provisioning cluster to change the cloud provider and remove leader migration args from the kube controller manager.
    If upgrading the Kubernetes version, set the Kubernetes version as well in the `spec.kubernetesVersion` section of the cluster YAML file.
 
 ```yaml
@@ -78,7 +78,7 @@ spec:
       cloud-provider-name: external
 ```
 
-Remove `enable-leader-migration` from:
+Remove `enable-leader-migration` from the kube controller manager:
 
 ```yaml
 spec:
@@ -141,7 +141,7 @@ cloud_provider:
   name: azure
 ```
 
-2. Cordon the control plane nodes, so that AWS cloud controller pods run on nodes only after upgrading to the external cloud provider:
+2. Cordon the control plane nodes, so that Azure cloud controller pods run on nodes only after upgrading to the external cloud provider:
 
 ```shell
 kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
@@ -156,7 +156,7 @@ kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
 5. To enable leader migration, add `--enable-leader-migration` to the container arguments of `cloud-controller-manager`:
 
 ```shell 
--n kube-system patch deployment cloud-controller-manager \
+kubectl -n kube-system patch deployment cloud-controller-manager \
 --type=json \
 -p='[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--enable-leader-migration"}]'
 ```

@@ -680,7 +680,7 @@ nodeSelector:
 
 3. Click the **Create** button.
 
-4. Enter `https://raw.githubusercontent.com/kubernetes-sigs/cloud-provider-azure/master/helm/repo` in the **Index URL** field.
+4. Enter `https://kubernetes.github.io/cloud-provider-aws` in the **Index URL** field.
 
 5. Select **Apps** > **Charts** from the left navigation and install **aws-cloud-controller-manager**.
 
