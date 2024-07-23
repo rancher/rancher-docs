@@ -229,6 +229,26 @@ To upgrade legacy multi-cluster apps:
 1. Click **☰**. 
 1. Under **Legacy Apps**, click **Multi-cluster Apps**.
 
+### Chart-Specific Information
+
+#### sriov Chart Deprecation and Migration
+
+The sriov (SR-IOV network operator) chart from the Rancher Charts repository is deprecated and will be removed in Rancher v2.10. Please migrate to the sriov-network-operator chart from the SUSE Edge repository (https://github.com/suse-edge/charts) instead.
+
+To migrate, follow these steps:
+
+1. Add the SUSE Edge repository to your cluster by following the steps in [Add Custom Git Repositories](#add-custom-git-repositories).
+1. For the **Git Repo URL** field, enter `https://github.com/suse-edge/charts`.
+1. Click **Create**.
+1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Charts**.
+1. Find the `sriov-network-operator` chart and click on it.
+1. Click **Install**.
+1. In the **Name** field, enter the same name you used for your existing `sriov` chart installation.
+1. Click **Next**.
+1. Click **Install**.
+
+**Result:** Rancher redirects to the **Installed Apps** page where your existing installation enters the **Updating** state. The migration is complete when it enters the **Deployed** state.
+
 ## Limitations
 
 Dashboard apps or Rancher feature charts can't be installed using the Rancher CLI.
