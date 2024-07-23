@@ -8,7 +8,7 @@ title: Rancher Webhook
 
 Rancher-Webhook is an essential component of Rancher that works in conjunction with Kubernetes to enhance security and enable critical features for Rancher-managed clusters. 
 
-It integrates with Kubernetes' extensible admission controllers, as described in the [Kubernetes documentation](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/), which allows Rancher-Webhook to inspect specific requests sent to the Kubernetes API server, and add custom, Rancher-specific validation and mutations to the requests that are specific to Rancher. Rancher-Webhook manages the resources to be validated using the `rancher.cattle.io` `ValidatingWebhookConfiguration` and the `rancher.cattle.io` `MutatingWebhookConfiguration`, and will override any manual edits.
+It integrates with Kubernetes' extensible admission controllers, as described in the [Kubernetes documentation](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/), which allows Rancher-Webhook to inspect specific requests sent to the Kubernetes API server, and add custom validations and mutations to the requests that are specific to Rancher. Rancher-Webhook manages the resources to be validated using the `rancher.cattle.io` `ValidatingWebhookConfiguration` and the `rancher.cattle.io` `MutatingWebhookConfiguration` objects, and will override any manual edits.
 
 Rancher deploys Rancher-Webhook as a separate deployment and service in both local and downstream clusters. Rancher manages Rancher-Webhook using Helm. It's important to note that Rancher may override modifications made by users to the Helm release. To safely modify these values see [Customizing Rancher-Webhook Configuration](#customizing-rancher-webhook-configuration).
 
@@ -140,3 +140,64 @@ To help alleviate these issues, you can run the [adjust-downstream-webhook](http
 Project users may not be able to create namespaces in projects. This includes project owners. This issue is caused by Rancher automatically upgrading the webhook to a version compatible with a more recent version of Rancher than the one currently installed. 
 
 To help alleviate these issues, you can run the [adjust-downstream-webhook](https://github.com/rancherlabs/support-tools/tree/master/adjust-downstream-webhook) shell script after roll back. This script selects and installs the proper webhook version (or removes the webhook entirely) for the corresponding Rancher version. 
+
+### Webhook is Unpinned
+
+**Note:** The following affects Rancher v2.8.3 - v2.8.4.
+
+When a Rancher-Webhook deployment is unpinned, it can be automatically updated to a version that is incompatible with the current version of Rancher. This is a known issue for Rancher versions 2.8.3 and 2.8.4. The solution is to *pin* the appropriate version. The following table shows which webhook version to provide for each respective version of Rancher:
+
+
+| Rancher Version | Webhook Version |
+|-----------------|-----------------|
+| v2.8.3          | 103.0.2+up0.4.3 |
+| v2.8.4          | 103.0.4+up0.4.5 |
+
+
+For example, if you are running Rancher v2.8.3, you need to pin Rancher-Webhook to version 103.0.2+up0.4.3.
+
+Note that if you view the Local cluster in Rancher, and then bring up `Workloads | Deployments`, selecting at least `System Namespaces`, you should see a `rancher-webhook` workload in the `cattle-system` namespace. It will probably have an associated version, but this isn't sufficient to determine if the webhook is pinned to a specific version.  To do this, bring up the Rancher kubectl shell, or switch to a terminal session, and run the command
+
+```bash
+kubectl get settings rancher-webhook-version
+```
+
+If the webhook is pinned, you'll see output with a `VALUE` field that matches the `Webhook Version` from the above table:
+
+```text
+NAME                       VALUE
+rancher-webhook-version    103.0.2+up0.4.3
+```
+
+If the webhook is unpinned, the `VALUE` column will be blank.
+
+For helm installations, there are two ways to pin the webhook. If you're using a values file, you would add this block to a YAML file (often called `values.yaml`) to pin the webhook when using Rancher 2.8.3:
+
+```yaml
+extraEnv:
+  - name: CATTLE_RANCHER_WEBHOOK_VERSION
+    value: 103.0.2+up0.4.3
+```
+
+And then run the command
+
+```bash
+helm upgrade --install rancher rancher-latest/rancher --namespace cattle-system --reuse-values --values PATH/TO/values.yaml
+```
+
+You can instead specify the webhook version directly on the command-line:
+
+```bash
+helm upgrade --install rancher rancher-latest/rancher --namespace cattle-system --reuse-values \
+    --set extraEnv[0].name=CATTLE_RANCHER_WEBHOOK_VERSION \
+    --set extraEnv[0].value=103.0.2+up0.4.3
+```
+
+After doing this, the webhook field in the UI should be the value specified in the `helm` command, and the above `kubectl get settings` command should have the same value in the `VALUE` column.
+
+If you're running `rancher` via a `docker` installation, you need to stop and delete the `rancher/rancher` container, and then rerun the `docker run` command, adding the command-line options `--env CATTLE_RANCHER_WEBHOOK_VERSION=<WEBHOOK-VERSION>` somewhere before `rancher/rancher:<VERSION>`.  For example:
+
+```bash
+docker run -d --restart=unless-stopped -p 8080:80 -p 8081:443 --name rancher --privileged \
+    --env CATTLE_RANCHER_WEBHOOK_VERSION=103.0.4+up0.4.5 rancher/rancher:v2.8.4
+```
