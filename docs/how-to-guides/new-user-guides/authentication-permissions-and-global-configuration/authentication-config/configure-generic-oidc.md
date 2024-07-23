@@ -40,10 +40,10 @@ Consult the documentation for your specific IdP to complete the listed prerequis
     `Add to access token` | `OFF`
     `Add to user info` | `ON`
 
-  - Create a new "Client Audience" with the settings below.
+      - Create a new Client Audience with the settings below:
 
     Setting | Value
-        ------------|------------
+    ------------|------------
     `Name` | `Client Audience`
     `Mapper Type` | `Audience`
     `Included Client Audience` | &lt;CLIENT_NAME>
