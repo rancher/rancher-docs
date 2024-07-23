@@ -14,6 +14,7 @@ You can also [migrate from an in-tree to an out-of-tree Azure cloud provider](..
 
 Starting with Kubernetes 1.29, in-tree cloud providers have been disabled. You must disable `DisableCloudProviders` and `DisableKubeletCloudCredentialProvider` to use the in-tree Azure cloud provider. You can do this by setting `feature-gates=DisableCloudProviders=false` as an additional argument for the cluster's Kubelet, Controller Manager, and API Server in the advanced cluster configuration. Additionally, set `DisableKubeletCloudCredentialProvider=false` in the Kubelet's arguments to enable in-tree functionality for authenticating to Azure container registries for image pull credentials. See [upstream docs](https://github.com/kubernetes/kubernetes/pull/117503) for more details.
 
+Starting with Kubernetes version 1.26, in-tree persistent volume types `kubernetes.io/azure-disk` and `kubernetes.io/azure-file` are deprecated and will no longer be supported. For new clusters, [install the CSI drivers](#installing-csi-drivers), or migrate to the corresponding CSI drivers `disk.csi.azure.com` and `file.csi.azure.com` by following the [upstream migration documentation](https://learn.microsoft.com/en-us/azure/aks/csi-migrate-in-tree-volumes).
 :::
 
 When using the `Azure` cloud provider, you can leverage the following capabilities:
@@ -507,4 +508,107 @@ kubectl rollout status daemonset -n kube-system cloud-node-manager
 
 ```shell
 kubectl describe nodes | grep "ProviderID"
+```
+
+### Installing CSI Drivers
+
+Install [Azure Disk CSI driver](https://github.com/kubernetes-sigs/azuredisk-csi-driver) or [Azure File CSI Driver](https://github.com/kubernetes-sigs/azurefile-csi-driver) to access [Azure Disk](https://azure.microsoft.com/en-us/services/storage/disks/) or [Azure File](https://azure.microsoft.com/en-us/services/storage/disks/) volumes respectively.
+
+The steps to install the Azure Disk CSI driver are shown below. You can install the Azure File CSI Driver in a similar manner by following the [helm installation documentation](https://github.com/kubernetes-sigs/azurefile-csi-driver/blob/master/charts/README.md).
+
+::: note Important: 
+
+Clusters must be provisioned using `Managed Disk` to use Azure Disk. You can configure this when creating **RKE1 Node Templates** or **RKE2 Machine Pools*. 
+
+::: 
+
+Official upstream docs for [Helm chart installation](https://github.com/kubernetes-sigs/azuredisk-csi-driver/blob/master/charts/README.md) can be found on Github.
+
+1. Add and update the helm repository:
+
+```shell 
+helm repo add azuredisk-csi-driver https://raw.githubusercontent.com/kubernetes-sigs/azuredisk-csi-driver/master/charts
+helm repo update azuredisk-csi-driver
+``` 
+
+1. Install the chart as shown below, updating the --version argument as needed. Refer to the full list of latest chart configurations in the [upstream docs](https://github.com/kubernetes-sigs/azuredisk-csi-driver/blob/master/charts/README.md#latest-chart-configuration).
+
+```shell
+helm install azuredisk-csi-driver azuredisk-csi-driver/azuredisk-csi-driver --namespace kube-system --version v1.30.1 --set controller.cloudConfigSecretName=azure-cloud-config --set controller.cloudConfigSecretNamespace=kube-system --set controller.runOnControlPlane=true
+``` 
+
+2. (Optional) Verify that the azuredisk-csi-driver installation succeeded: 
+
+```shell 
+kubectl --namespace=kube-system get pods --selector="app.kubernetes.io/name=azuredisk-csi-driver" --watch 
+``` 
+
+3. Provision an example Storage Class: 
+
+```shell
+cat <<EOF | kubectl create -f -
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: standard
+provisioner: kubernetes.io/azure-disk
+parameters:
+  storageaccounttype: Standard_LRS
+  kind: Managed
+EOF
+```
+
+Verify that the storage class has been provisioned: 
+```shell 
+kubectl get storageclasses
+```
+
+4. Create a PersistentVolumeClaim:
+```shell 
+cat <<EOF | kubectl create -f -
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: azure-disk-pvc
+spec:
+  storageClassName: standard
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+EOF
+```
+
+Verify that the PersistentVolumeClaim and PersistentVolume have been created: 
+```shell
+kubectl get persistentvolumeclaim 
+kubectl get persistentvolume
+```
+
+5. Attach the new Azure Disk: 
+
+You can now mount the Kubernetes PersistentVolume into a Kubernetes Pod. The disk can be consumed by any Kubernetes object type, including a Deployment, DaemonSet, or StatefulSet. However, the following example simply mounts the PersistentVolume into a standalone Pod. 
+
+```shell
+cat <<EOF | kubectl create -f -
+kind: Pod
+apiVersion: v1
+metadata:
+  name: mypod-dynamic-azuredisk
+spec:
+  containers:
+    - name: mypod
+      image: nginx
+      ports:
+        - containerPort: 80
+          name: "http-server"
+      volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: storage
+  volumes:
+    - name: storage
+      persistentVolumeClaim:
+        claimName: azure-disk-pvc
+EOF
 ```
