@@ -63,11 +63,11 @@ Consult the documentation for your specific IdP to complete the listed prerequis
 
 ## Configuring Generic OIDC in Rancher
 
-1. In the Rancher UI, click **☰ > Users & Authentication**.
+1. In the upper left corner of the Rancher UI, click **☰ > Users & Authentication**.
 1. In the left navigation bar, click **Auth Provider**.
 1. Select **Generic OIDC**.
 1. Complete the **Configure an OIDC account** form. For help with filling the form, see the [configuration reference](#configuration-reference).
-1. After you complete the **Configure an OIDC account** form, click **Enable**.
+1. Click **Enable**.
 
    Rancher redirects you to the IdP login page. Enter credentials that authenticate with you IdP to validate your Rancher Keycloak configuration.
 
