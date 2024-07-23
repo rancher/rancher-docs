@@ -153,16 +153,6 @@ Here are a few examples of permission combinations that satisfy Rancher's needs:
 
     1. Copy the **Application (Client) ID** and paste it into Rancher as your **Application ID**.
 
-1. (Optional) In Rancher v2.9.0 and later, you can filter logs from Azure AD to reduce the amount of log data generated. Click the checkbox next to **Limit users by group membership** to enable filtering, and enter an [OData filter clause](https://learn.microsoft.com/en-us/odata/concepts/queryoptions-overview#filter) into the **Group Membership Filter** field. For example, if you want to limit logging to group memberships whose name starts with "Rancher," click the checkbox and enter `startswith(displayName,'Rancher')`.
-
-    :::warning
-    
-    Filtering out a group affects more than just logging. 
-
-    Since the filter prevents Rancher from seeing that the user belongs to an excluded group, it also does not see any permissions from that group. This means that filtering a group can have the side effect of denying users permissions they should have.
-
-    :::
-
 1. In most cases, your endpoint options will either be [Standard](#global) or [China](#china). For either of these options, you only need to enter the **Tenant ID**, **Application ID**, and **Application Secret**.
 
 ![Standard Endpoint Options](/img/tenant-application-id-secret.png)
@@ -230,6 +220,18 @@ To complete configuration, enter information about your AD instance in the Ranch
     **Important:** When entering the Graph Endpoint in a custom config, remove the tenant ID from the URL:
 
     <code>http<span>s://g</span>raph.microsoft.com<del>/abb5adde-bee8-4821-8b03-e63efdc7701c</del></code>
+
+1. (Optional) In Rancher v2.9.0 and later, you can filter user group memberships in Azure AD to reduce the amount of log data generated. 
+    
+    :::warning
+    
+    Filtering out a user group membership can have the side effect of denying users permissions they should have.
+
+    :::
+    
+    1. Click the checkbox next to **Limit users by group membership**.
+    
+    1. Enter an [OData filter clause](https://learn.microsoft.com/en-us/odata/concepts/queryoptions-overview#filter) into the **Group Membership Filter** field. For example, if you want to limit logging to group memberships whose name starts with `Rancher`, click the checkbox and enter `startswith(displayName,'Rancher')`.
 
 1. Click **Enable**.
 
@@ -326,12 +328,25 @@ Token Endpoint   | https://login.partner.microsoftonline.cn/{tenantID}/oauth2/v2
 
 ## Filtering Users by Azure AD Auth Group Memberships
 
-In Rancher v2.9.0 and later, you can filter logs from Azure AD to reduce the amount of log data generated.
+In Rancher v2.9.0 and later, you can filter user group memberships from Azure AD to reduce the amount of log data generated. If you did not filter group memberships during initial setup, you can still add filters on an existing Azure AD configuration.
 
-If you did not filter group memberships during initial setup, you can still add filters on an existing Azure AD configuration:
+:::warning
+    
+Filtering out a user group membership affects more than just logging. 
 
-1. 
+Since the filter prevents Rancher from seeing that the user belongs to an excluded group, it also does not see any permissions from that group. This means that excluding a group from the filter can have the side effect of denying users permissions they should have.
 
+:::
+
+1. In Rancher, in the top left corner, click **☰ > Users & Authentication**.
+
+1. In the left navigation menu, click **Auth Provider**.
+
+1. Click **AzureAD**.
+
+1. Click the checkbox next to **Limit users by group membership**.
+    
+1. Enter an [OData filter clause](https://learn.microsoft.com/en-us/odata/concepts/queryoptions-overview#filter) into the **Group Membership Filter** field. For example, if you want to limit logging to group memberships whose name starts with `Rancher`, click the checkbox and enter `startswith(displayName,'Rancher')`.
 
 ## Deprecated Azure AD Graph API
 
