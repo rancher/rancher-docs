@@ -11,7 +11,12 @@ If your organization uses an OIDC provider for user authentication, you can conf
 
 ## Prerequisites
 
-- On Rancher, Generic OIDC is disabled.
+:::note 
+Consult the documentation for your specific IdP to complete the listed prerequisites.
+:::
+
+- In Rancher:
+    - Generic OIDC is disabled.
 - In your authentication provider, create a new client with the settings below (consult the documentation for your specific provider).
 
      Setting | Value
