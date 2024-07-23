@@ -1,6 +1,6 @@
 ---
 title: Configure Generic OIDC
-description: Create a OpenID Connect (OIDC) client and configure Rancher to work with your authentication provider. By the end your users will be able to sign into Rancher using their login from the authentication provider
+description: Create an OpenID Connect (OIDC) client and configure Rancher to work with your authentication provider. Your users can then sign into Rancher using their login from the authentication provider.
 ---
 
 <head> 
