@@ -7,7 +7,7 @@ description: Create an OpenID Connect (OIDC) client and configure Rancher to wor
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-generic-oidc"/>
 </head>
 
-If your organization uses an OIDC provider for user authentication, you can configure Rancher to allow your users to log in using their IdP credentials. Rancher supports integration using the OpenID Connect (OIDC) protocol and the SAML protocol. Both implementations are functionally equivalent when used with Rancher. This page describes the process to configure Rancher to work using the OIDC protocol.
+If your organization uses an OIDC provider for user authentication, you can configure Rancher to allow login using Identity Provider (IdP) credentials. Rancher supports integration with the OpenID Connect (OIDC) protocol and the SAML protocol. Both implementations are functionally equivalent when used with Rancher. The following instructions describe how to configure Rancher to work using the OIDC protocol.
 
 ## Prerequisites
 
