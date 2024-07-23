@@ -52,7 +52,7 @@ Consult the documentation for your specific IdP to complete the listed prerequis
   - Create a new "Groups Path" with the settings below.
 
     Setting | Value
-        ------------|------------
+    ------------|------------
     `Name` | `Group Path`
     `Mapper Type` | `Group Membership`
     `Token Claim Name` | `full_group_path`
