@@ -103,12 +103,10 @@ All Generic OIDC related log entries are prepended with either `[generic oidc]` 
 
 If you fill out the **Configure a Generic OIDC account** form and click on **Enable**, and you are not redirected to your IdP, verify your OIDC client configuration.
 
-* Verify your OIDC client configuration.
-
 ### The generated `Issuer` and `Auth Endpoint` are incorrect
 
-* On the **Configure an OIDC account** form, change **Endpoints** to `Specify (advanced)` and override the `Issuer` value.
+If the `Issuer` and `Auth Endpoint` are generated incorrectly, open the **Configure an OIDC account** form, change **Endpoints** to `Specify (advanced)` and override the `Issuer` value.
 
 ### Error: "Invalid grant_type"
 
-* In some cases, this error message may be misleading and is actually caused by setting the `Valid Redirect URI` incorrectly.
+In some cases, the "Invalid grant_type" error message may be misleading and is actually caused by setting the `Valid Redirect URI` incorrectly.
