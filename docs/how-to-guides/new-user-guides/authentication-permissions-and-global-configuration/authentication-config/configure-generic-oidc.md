@@ -27,8 +27,8 @@ Consult the documentation for your specific IdP to complete the listed prerequis
      `Access Type` | `confidential`
      `Valid Redirect URI` | `https://yourRancherHostURL/verify-auth`
 
-- In the new OIDC client, create mappers to expose the users fields (consult the documentation for your specific provider).
-  - Create a new "Groups Mapper" with the settings below.
+    - In the new OIDC client, create mappers to expose the users fields.
+      - Create a new Groups Mapper with the settings below:
 
     Setting | Value
         ------------|------------
