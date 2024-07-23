@@ -17,10 +17,11 @@ Consult the documentation for your specific IdP to complete the listed prerequis
 
 - In Rancher:
     - Generic OIDC is disabled.
-- In your authentication provider, create a new client with the settings below (consult the documentation for your specific provider).
+- In your IdP:
+      - Create a new client with the settings below:
 
      Setting | Value
-       ------------|------------
+     ------------|------------
      `Client ID` | &lt;CLIENT_ID> (e.g. `rancher`)
      `Name` | &lt;CLIENT_NAME> (e.g. `rancher`)
      `Client Protocol` | `openid-connect`
@@ -31,7 +32,7 @@ Consult the documentation for your specific IdP to complete the listed prerequis
       - Create a new Groups Mapper with the settings below:
 
     Setting | Value
-        ------------|------------
+    ------------|------------
     `Name` | `Groups Mapper`
     `Mapper Type` | `Group Membership`
     `Token Claim Name` | `groups`
