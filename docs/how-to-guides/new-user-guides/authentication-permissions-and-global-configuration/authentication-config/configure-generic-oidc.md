@@ -69,7 +69,7 @@ Consult the documentation for your specific IdP to complete the listed prerequis
 1. Complete the **Configure an OIDC account** form. For help with filling the form, see the [configuration reference](#configuration-reference).
 1. Click **Enable**.
 
-   Rancher redirects you to the IdP login page. Enter credentials that authenticate with you IdP to validate your Rancher Keycloak configuration.
+   Rancher will redirect you to the IdP login page. Enter your IdP credentials to validate your Rancher Keycloak configuration.
 
    :::note
 
