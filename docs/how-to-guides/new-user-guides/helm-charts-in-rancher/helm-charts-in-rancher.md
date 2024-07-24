@@ -233,7 +233,7 @@ To upgrade legacy multi-cluster apps:
 
 #### sriov Chart Deprecation and Migration
 
-The sriov (SR-IOV network operator) chart from the Rancher Charts repository is deprecated and will be removed in Rancher v2.10. Please migrate to the sriov-network-operator chart from the SUSE Edge repository (https://github.com/suse-edge/charts) instead.
+The `sriov` (SR-IOV network operator) chart from the Rancher Charts repository is deprecated and will be removed in Rancher v2.10. Please migrate to the `sriov-network-operator` chart from the SUSE Edge repository (https://github.com/suse-edge/charts) instead.
 
 To migrate, follow these steps:
 

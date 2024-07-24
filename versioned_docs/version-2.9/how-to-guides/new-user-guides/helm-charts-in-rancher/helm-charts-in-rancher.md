@@ -58,7 +58,7 @@ To display prerelease versions:
 | rancher-logging | 100.0.0+up3.12.0 | 100.1.2+up3.17.4 |
 | rancher-longhorn | 100.0.0+up1.1.2 | 100.1.2+up1.2.4 |
 | rancher-monitoring | 100.0.0+up16.6.0 | 100.1.2+up19.0.3 |
-| rancher-sriov (experimental) | 100.0.0+up0.1.0 | 100.0.3+up0.1.0 |
+| rancher-sriov<sup>[1](#sriov-chart-deprecation-and-migration)</sup> (experimental) | 100.0.0+up0.1.0 | 100.0.3+up0.1.0 |
 | rancher-vsphere-cpi | 100.3.0+up1.2.1 | 100.3.0+up1.2.1 |
 | rancher-vsphere-csi | 100.3.0+up2.5.1-rancher1 | 100.3.0+up2.5.1-rancher1 |
 | rancher-wins-upgrader | 0.0.100 | 100.0.1+up0.0.1 |
@@ -233,7 +233,7 @@ To upgrade legacy multi-cluster apps:
 
 #### sriov Chart Deprecation and Migration
 
-The sriov (SR-IOV network operator) chart from the Rancher Charts repository is deprecated and will be removed in Rancher v2.10. Please migrate to the sriov-network-operator chart from the SUSE Edge repository (https://github.com/suse-edge/charts) instead.
+The `sriov` (SR-IOV network operator) chart from the Rancher Charts repository is deprecated and will be removed in Rancher v2.10. Please migrate to the `sriov-network-operator` chart from the SUSE Edge repository (https://github.com/suse-edge/charts) instead.
 
 To migrate, follow these steps:
 
