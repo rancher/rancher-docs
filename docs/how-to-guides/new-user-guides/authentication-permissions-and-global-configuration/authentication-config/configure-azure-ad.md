@@ -336,7 +336,9 @@ Since the filter prevents Rancher from seeing that the user belongs to an exclud
 
 1. Click the checkbox next to **Limit users by group membership**.
     
-1. Enter an [OData filter clause](https://learn.microsoft.com/en-us/odata/concepts/queryoptions-overview#filter) into the **Group Membership Filter** field. For example, if you want to limit logging to group memberships whose name starts with `Rancher`, click the checkbox and enter `startswith(displayName,'Rancher')`.
+1. Enter an [OData filter clause](https://learn.microsoft.com/en-us/odata/concepts/queryoptions-overview#filter) into the **Group Membership Filter** field. For example, if you want to limit logging to group memberships whose name starts with `test`, click the checkbox and enter `startswith(displayName,'test')`.
+
+![Adding a group membership filter to Azure AD](/img/auth-setup-azure-ad-filter.png)
 
 ## Deprecated Azure AD Graph API
 
