@@ -221,17 +221,7 @@ To complete configuration, enter information about your AD instance in the Ranch
 
     <code>http<span>s://g</span>raph.microsoft.com<del>/abb5adde-bee8-4821-8b03-e63efdc7701c</del></code>
 
-1. (Optional) In Rancher v2.9.0 and later, you can filter user group memberships in Azure AD to reduce the amount of log data generated. 
-    
-    :::warning
-    
-    Filtering out a user group membership can have the side effect of denying users permissions they should have.
-
-    :::
-    
-    1. Click the checkbox next to **Limit users by group membership**.
-    
-    1. Enter an [OData filter clause](https://learn.microsoft.com/en-us/odata/concepts/queryoptions-overview#filter) into the **Group Membership Filter** field. For example, if you want to limit logging to group memberships whose name starts with `Rancher`, click the checkbox and enter `startswith(displayName,'Rancher')`.
+1. (Optional) In Rancher v2.9.0 and later, you can filter user group memberships in Azure AD to reduce the amount of log data generated. See steps 4–5 of [Filtering Users by Azure AD Auth Group Memberships](#filtering-users-by-azure-ad-auth-group-memberships) for full instructions.
 
 1. Click **Enable**.
 
