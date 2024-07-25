@@ -397,7 +397,8 @@ cloudControllerManager:
   replicas: 1
   hostNetworking: true
   nodeSelector:
-    node-role.kubernetes.io/control-plane: 'true'
+    node-role.kubernetes.io/controlplane: 'true'
+    node-role.kubernetes.io/control-plane: null
   tolerations:
     - effect: NoSchedule
       key: node-role.kubernetes.io/controlplane

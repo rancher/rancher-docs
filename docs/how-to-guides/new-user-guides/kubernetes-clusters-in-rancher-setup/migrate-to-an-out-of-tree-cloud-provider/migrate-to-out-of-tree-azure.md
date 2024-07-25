@@ -15,9 +15,9 @@ If it's acceptable to have some downtime during migration, follow the instructio
 If your setup can't tolerate any control plane downtime, you must enable leader migration. This facilitates a smooth transition from the controllers in the kube controller manager to their counterparts in the cloud controller manager.
 
 :::note Important:
-The Kubernetes [cloud controller migration documentation](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#before-you-begin) states that it's possible to migrate with the same Kubernetes version, but assumes that the migration is part of a  Kubernetes upgrade. Refer to the Kubernetes documentation on [migrating to use the cloud controller manager](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/) to see if you need to customize your setup before migrating. Confirm your [migration configuration values](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#default-configuration). If your cloud provider provides an implementation of the Node IPAM controller,  you also need to [migrate the IPAM controller](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#node-ipam-controller-migration).
+The Kubernetes [cloud controller migration documentation](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#before-you-begin) states that it's possible to migrate with the same Kubernetes version, but assumes that the migration is part of a Kubernetes upgrade. Refer to the Kubernetes documentation on [migrating to use the cloud controller manager](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/) to see if you need to customize your setup before migrating. Confirm your [migration configuration values](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#default-configuration). If your cloud provider provides an implementation of the Node IPAM controller,  you also need to [migrate the IPAM controller](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#node-ipam-controller-migration).
 
-Starting with Kubernetes version 1.26, in-tree persistent volume types `kubernetes.io/azure-disk` and `kubernetes.io/azure-file` are deprecated and will no longer be supported. Removing these drivers following their deprecation is not planned, however you should migrate to the corresponding CSI drivers `disk.csi.azure.com` and `file.csi.azure.com`. To review the migration options for your storage classes and upgrade your cluster to use Azure Disks and Azure Files CSI drivers, see [Migrate from in-tree to CSI drivers](https://learn.microsoft.com/en-us/azure/aks/csi-migrate-in-tree-volumes).
+Starting with Kubernetes v1.26, in-tree persistent volume types `kubernetes.io/azure-disk` and `kubernetes.io/azure-file` are deprecated and no longer supported. There are no plans to remove these drivers following their deprecation, however you should migrate to the corresponding CSI drivers, `disk.csi.azure.com` and `file.csi.azure.com`. To review the migration options for your storage classes and upgrade your cluster to use Azure Disks and Azure Files CSI drivers, see [Migrate from in-tree to CSI drivers](https://learn.microsoft.com/en-us/azure/aks/csi-migrate-in-tree-volumes).
 :::
 
 <Tabs groupId="k8s-distro">
@@ -116,7 +116,7 @@ kubectl rollout status daemonset -n kube-system cloud-node-manager
 kubectl describe nodes | grep "ProviderID"
 ```
 
-9. (Optional) You can also disable leader migration after the upgrade, as leader migration is no longer required due to only one cloud-controller-manager and can be removed.
+9. You can also disable leader migration after the upgrade, as leader migration is no longer required. Since there is now only one cloud-controller-manager, leader migration can be removed.
     Update the `cloud-controller-manager` deployment to remove leader migration from the container arguments:
 
 ```yaml
@@ -149,7 +149,7 @@ cloud_provider:
 kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
 ```
 
-3. To install the Azure cloud controller manager, you follow the same steps as when installing Azure cloud provider on a new cluster:
+3. To install the Azure cloud controller manager, follow the same steps as when installing Azure cloud provider on a new cluster:
 - UI: Follow steps 1-10 of [Helm chart installation from UI](../set-up-cloud-providers/azure.md#helm-chart-installation-from-ui) to install the cloud controller manager chart.
 - CLI: Follow steps 1-4 of [Helm chart installation from CLI](../set-up-cloud-providers/azure.md#helm-chart-installation-from-cli) to install the cloud controller manager chart.
 
