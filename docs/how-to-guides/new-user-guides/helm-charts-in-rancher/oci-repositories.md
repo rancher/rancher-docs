@@ -108,6 +108,8 @@ For example, if you have an OCI-based Helm chart repository that doesn't return 
 
 ## Troubleshooting OCI-based Helm Registries
 
-To enhance logging information, [enable the debug option](../../../troubleshooting/other-troubleshooting-tips/logging.md#kubernetes-install) while deploying Rancher.
+- To enhance logging information, [enable the debug option](../../../troubleshooting/other-troubleshooting-tips/logging.md#kubernetes-install) while deploying Rancher.
 
-If there is any discrepancy between the repository contents and Rancher, you should refresh the cluster repository as a first resort. If the discrepancy persists and you've exhausted your options, delete the OCI-based Helm chart repository from Rancher and add it again. Deleting the repository won't delete any Helm charts that are already installed. 
+- If there is any discrepancy between the repository contents and Rancher, you should refresh the cluster repository as a first resort. If the discrepancy persists and you've exhausted your options, delete the OCI-based Helm chart repository from Rancher and add it again. Deleting the repository won't delete any Helm charts that are already installed.
+
+- Apps installed through OCI-based Helm chart repositories are subject to a known issue with how Rancher displays upgradeable version information. See the [Limitations](./helm-charts-in-rancher.md#limitations) section of **Helm Charts and Apps** for more deatils.
