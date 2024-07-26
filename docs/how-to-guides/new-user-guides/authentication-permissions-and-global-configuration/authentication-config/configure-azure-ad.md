@@ -221,7 +221,7 @@ To complete configuration, enter information about your AD instance in the Ranch
 
     <code>http<span>s://g</span>raph.microsoft.com<del>/abb5adde-bee8-4821-8b03-e63efdc7701c</del></code>
 
-1. (Optional) In Rancher v2.9.0 and later, you can filter user group memberships in Azure AD to reduce the amount of log data generated. See steps 4–5 of [Filtering Users by Azure AD Auth Group Memberships](#filtering-users-by-azure-ad-auth-group-memberships) for full instructions.
+1. (Optional) In Rancher v2.9.0 and later, you can filter users' group memberships in Azure AD to reduce the amount of log data generated. See steps 4–5 of [Filtering Users by Azure AD Auth Group Memberships](#filtering-users-by-azure-ad-auth-group-memberships) for full instructions.
 
 1. Click **Enable**.
 
@@ -318,7 +318,7 @@ Token Endpoint   | https://login.partner.microsoftonline.cn/{tenantID}/oauth2/v2
 
 ## Filtering Users by Azure AD Auth Group Memberships
 
-In Rancher v2.9.0 and later, you can filter user group memberships from Azure AD to reduce the amount of log data generated. If you did not filter group memberships during initial setup, you can still add filters on an existing Azure AD configuration.
+In Rancher v2.9.0 and later, you can filter users' group memberships from Azure AD to reduce the amount of log data generated. If you did not filter group memberships during initial setup, you can still add filters on an existing Azure AD configuration.
 
 :::warning
     
