@@ -39,7 +39,7 @@ To add an OCI-based Helm chart repository through the Rancher UI:
 7. Set up authentication. Select **Basicauth** from the authentication field and enter a username and password as required. Otherwise, create or select an **Authentication** secret. See [Authentication](#authentication-for-oci-based-helm-chart-repositories) for a full description.
 8. (optional) Enter a base64 encoded DER certificate in the **CA Cert Bundle** field. This field is for cases where you have a private OCI-based Helm chart repository and need Rancher to trust its certificates.   
 9. (optional) To allow insecure connections without performing an SSL check, select **Skip TLS Verification**. To force Rancher to use HTTP instead of HTTPS to send requests to the repository, select **Insecure Plain Http**.
-10. (optional) If your repository has a rate-limiting policy and may respond with status code `429 Too Many Requests`, you may want to fill out the fields under **Exponential Back Off**:
+10. (optional) If your repository has a rate limiting policy and may respond with status code `429 Too Many Requests`, you may want to fill out the fields under **Exponential Back Off**:
     - **Min Wait**: The minimum duration in seconds that Rancher should wait before retrying. The default is 1 second.
     - **Max Wait**: The maximum duration in seconds that Rancher should wait before retrying. The default is 5 seconds.
     - **Max Number of Retries**: The default is 5 retries.
@@ -95,7 +95,7 @@ Rancher can deploy OCI Helm charts up to 20 MB in size.
 
 Different OCI registries implement rate limiting in different ways. 
 
-Most servers return a `Retry-After` header, indicating how long to wait before rate-limiting is lifted. 
+Most servers return a `Retry-After` header, indicating how long to wait before rate limiting is lifted. 
 
 Docker Hub returns a `429` status code when it completes all allocated requests. It also returns a `RateLimit-Remaining` header which describes the rate limiting policy. 
 
