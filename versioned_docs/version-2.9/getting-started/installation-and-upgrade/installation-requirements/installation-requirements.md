@@ -218,9 +218,11 @@ To operate properly, Rancher requires a number of ports to be open on Rancher no
 
 ### Load Balancer Requirements
 
-If you choose to use a load balancer, we recommend that the load balancer be HTTP/2 compatible. Rancher falls back to HTTP/1.1 when HTTP/2 is not available. However, since HTTP/2 offers improved web application performance, using HTTP/1.1 can create performance issues. 
+If you use a load balancer, it should be be HTTP/2 compatible. 
 
-Customers using Rancher Prime must use an HTTP/2 compatible load balancer to receive help from SUSE Support.
+Rancher Prime customers must use an HTTP/2 compatible load balancer to receive help from SUSE Support.
+
+When HTTP/2 is not available, Rancher falls back to HTTP/1.1. However, since HTTP/2 offers improved web application performance, using HTTP/1.1 can create performance issues.
 
 ## Dockershim Support
 
