@@ -98,9 +98,9 @@ Different OCI registries implement rate limiting in different ways.
 
 Most servers return a `Retry-After` header, indicating how long to wait before rate limiting is lifted. 
 
-Dockerhub returns a `429` status code when it completes all allocated requests. It also returns a `RateLimit-Remaining` header which describes the rate limiting policy. 
+Docker Hub returns a `429` status code when it completes all allocated requests. It also returns a `RateLimit-Remaining` header which describes the rate limiting policy. 
 
-Rancher currently checks for the `Retry-After` header. It also handles Dockerhub-style responses (status code `429` and the `RateLimit-Remaining` header) and automatically waits before making a new request. When handling `Retry-After` or Dockerhub-style responses, Rancher ignores `ExponentialBackOff` values. 
+Rancher currently checks for the `Retry-After` header. It also handles Docker Hub-style responses (status code `429` and the `RateLimit-Remaining` header) and automatically waits before making a new request. When handling `Retry-After` or Docker Hub-style responses, Rancher ignores `ExponentialBackOff` values. 
 
 If you have an OCI-based Helm chart repository which doesn't implement the `Retry-After` or `RateLimit-Remaining` headers, and think you may be rate-limited at some point, fill out the fields under **Exponential Back Off** when you add the repository. 
 
