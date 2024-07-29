@@ -10,7 +10,7 @@ Kubernetes is moving away from maintaining cloud providers in-tree.
 
 Starting with Kubernetes 1.29, in-tree cloud providers have been disabled. You must disable `DisableCloudProviders` and `DisableKubeletCloudCredentialProvider` to use the in-tree Azure cloud provider or migrate from in-tree cloud provider to out-of-tree provider. You can disable the required feature gates by setting `feature-gates=DisableCloudProviders=false` as an additional argument for the cluster's Kubelet, Controller Manager, and API Server in the advanced cluster configuration. Additionally, set `DisableKubeletCloudCredentialProvider=false` in the Kubelet's arguments to enable in-tree functionality for authenticating to Azure container registries for image pull credentials. See [upstream docs](https://github.com/kubernetes/kubernetes/pull/117503) for more details.
 
- In Kubernetes v1.30 and later, the in-tree cloud providers have been removed. Rancher allows you to upgrade to Kubernetes v1.30 when you migrate from an in-tree to out-of-tree provider.
+In Kubernetes v1.30 and later, the in-tree cloud providers have been removed. Rancher allows you to upgrade to Kubernetes v1.30 when you migrate from an in-tree to out-of-tree provider.
 
 To migrate from the in-tree cloud provider to the out-of-tree Azure cloud provider, you must stop the existing cluster's kube controller manager and install the Azure cloud controller manager.
 
@@ -19,7 +19,7 @@ If it's acceptable to have some downtime during migration, follow the instructio
 If your setup can't tolerate any control plane downtime, you must enable leader migration. This facilitates a smooth transition from the controllers in the kube controller manager to their counterparts in the cloud controller manager.
 
 :::note Important:
-The Kubernetes [cloud controller migration documentation](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#before-you-begin) states that it's possible to migrate with the same Kubernetes version, but assumes that the migration is part of a Kubernetes upgrade. Refer to the Kubernetes documentation on [migrating to use the cloud controller manager](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/) to see if you need to customize your setup before migrating. Confirm your [migration configuration values](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#default-configuration). If your cloud provider provides an implementation of the Node IPAM controller,  you also need to [migrate the IPAM controller](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#node-ipam-controller-migration).
+The Kubernetes [cloud controller migration documentation](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#before-you-begin) states that it's possible to migrate with the same Kubernetes version, but assumes that the migration is part of a Kubernetes upgrade. Refer to the Kubernetes documentation on [migrating to use the cloud controller manager](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/) to see if you need to customize your setup before migrating. Confirm your [migration configuration values](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#default-configuration). If your cloud provider provides an implementation of the Node IPAM controller, you also need to [migrate the IPAM controller](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#node-ipam-controller-migration).
 
 Starting with Kubernetes v1.26, in-tree persistent volume types `kubernetes.io/azure-disk` and `kubernetes.io/azure-file` are deprecated and no longer supported. There are no plans to remove these drivers following their deprecation, however you should migrate to the corresponding CSI drivers, `disk.csi.azure.com` and `file.csi.azure.com`. To review the migration options for your storage classes and upgrade your cluster to use Azure Disks and Azure Files CSI drivers, see [Migrate from in-tree to CSI drivers](https://learn.microsoft.com/en-us/azure/aks/csi-migrate-in-tree-volumes).
 :::
@@ -120,7 +120,7 @@ kubectl rollout status daemonset -n kube-system cloud-node-manager
 kubectl describe nodes | grep "ProviderID"
 ```
 
-9. You can also disable leader migration after the upgrade, as leader migration is no longer required. Since there is now only one cloud-controller-manager, leader migration can be removed.
+9. (Optional) You can also disable leader migration after the upgrade, as leader migration is not required with only one cloud-controller-manager.
     Update the `cloud-controller-manager` deployment to remove leader migration from the container arguments:
 
 ```yaml
@@ -200,7 +200,7 @@ kubectl describe nodes | grep "ProviderID"
 ```
 
 10. (Optional) You can also disable leader migration after the upgrade, as leader migration is not required with only one cloud-controller-manager.
-Update the `cloud-controller-manager` deployment to remove leader migration from the container arguments:
+    Update the `cloud-controller-manager` deployment to remove leader migration from the container arguments:
 
 ```yaml
 - --enable-leader-migration=true 
