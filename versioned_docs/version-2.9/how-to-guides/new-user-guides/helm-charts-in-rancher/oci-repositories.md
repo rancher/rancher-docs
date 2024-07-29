@@ -27,7 +27,7 @@ To add an OCI-based Helm chart repository through the Rancher UI:
   
   :::note
   
-  You can use the **OCI URL** field to fine-tune how many charts from the registry are availabe for installation on Rancher. More generic endpoints target more charts, as the following examples demonstrate:
+  You can use the **OCI URL** field to fine-tune how many charts from the registry are available for installation on Rancher. More generic endpoints target more charts, as the following examples demonstrate:
 
     - `oci://<registry-host>`: Every chart in the registry becomes available for installation, regardless of namespace or tag.
     - `oci://<registry-host>/<namespace>`: Every chart in the specified namespace within the registry becomes available for installation.
@@ -111,4 +111,4 @@ For example, if you have an OCI-based Helm chart repository that doesn't return 
 
 - If there is any discrepancy between the repository contents and Rancher, you should refresh the cluster repository as a first resort. If the discrepancy persists, delete the OCI-based Helm chart repository from Rancher and add it again. Deleting the repository won't delete any Helm charts that are already installed.
 
-- Apps installed through OCI-based Helm chart repositories are subject to a known issue with how Rancher displays upgradeable version information. See the [Limitations](./helm-charts-in-rancher.md#limitations) section of **Helm Charts and Apps** for more deatils.  
+- Apps installed through OCI-based Helm chart repositories are subject to a known issue with how Rancher displays upgradeable version information. See the [Limitations](./helm-charts-in-rancher.md#limitations) section of **Helm Charts and Apps** for more details.  
