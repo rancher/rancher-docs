@@ -1,5 +1,5 @@
 ---
-title: JWT Authenticaiton
+title: JSON web token (JWT) Authentication
 ---
 <!-- Edit Canonical Link -->
 <head> 
@@ -9,10 +9,6 @@ title: JWT Authenticaiton
 Many 3rd party integrations available for Kubernetes, such as GitLab and HashiCorp Vault, involve giving an external process access to the Kubernetes API using a native Kubernetes Service Account token for authentication.
 
 In Rancher v2.9.0 and later, you can enable a downstream cluster to support JSON web token (JWT) authentication of tokens created for a service account on a downstream cluster through the Rancher authentication proxy. In Rancher versions earlier than  v2.9.0, only Rancher-issued tokens were supported.
-
-:::note
-JWT authentication is also known as service account token authentication.
-:::
 
 To enable this feature, follow these steps:
 
