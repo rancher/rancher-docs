@@ -56,11 +56,11 @@ The notification integrations are configured with the `receiver`, which is expla
 
 By default, AlertManager provides native integration with some receivers, which are listed in [this section.](https://prometheus.io/docs/alerting/latest/configuration/#receiver) All natively supported receivers are configurable through the Rancher UI.
 
-For notification mechaniTelegram not natively supported by AlertManager, integration is achieved using the [webhook receiver.](https://prometheus.io/docs/alerting/latest/configuration/#webhook_config) A list of third-party drivers providing such integrations can be found [here.](https://prometheus.io/docs/operating/integrations/#alertmanager-webhook-receiver) Access to these drivers, and their associated integrations, is provided through the Alerting Drivers app. Once enabled, configuring non-native receivers can also be done through the Rancher UI.
+For notification mechanisms, such as Telegram, that are not natively supported by AlertManager, integration is achieved using the [webhook receiver.](https://prometheus.io/docs/alerting/latest/configuration/#webhook_config) A list of third-party drivers providing such integrations can be found [here.](https://prometheus.io/docs/operating/integrations/#alertmanager-webhook-receiver) Access to these drivers, and their associated integrations, is provided through the Alerting Drivers app. Once enabled, configuring non-native receivers can also be done through the Rancher UI.
 
 Currently the Rancher Alerting Drivers app provides access to the following integrations:
-- Microsoft Teams, based on the [prom2teams](https://github.com/idealista/prom2teams) driver
-- Telegram, based on the [Sachet](https://github.com/messagebird/sachet) driver
+- Microsoft Teams, based on the [prom2teams](https://github.com/idealista/prom2teams) driver.
+- Telegram, based on the [Sachet](https://github.com/messagebird/sachet) driver.
 
 The following types of receivers can be configured in the Rancher UI:
 
