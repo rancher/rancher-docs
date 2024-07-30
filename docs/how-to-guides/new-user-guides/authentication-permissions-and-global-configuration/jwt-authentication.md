@@ -1,5 +1,5 @@
 ---
-title: JSON web token (JWT) Authentication
+title: JSON Web Token (JWT) Authentication
 ---
 <!-- Edit Canonical Link -->
 <head> 
