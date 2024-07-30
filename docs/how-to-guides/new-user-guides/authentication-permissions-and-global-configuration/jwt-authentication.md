@@ -1,7 +1,6 @@
 ---
 title: JSON Web Token (JWT) Authentication
 ---
-<!-- Edit Canonical Link -->
 <head> 
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/jwt-authentication"/>
 </head>
