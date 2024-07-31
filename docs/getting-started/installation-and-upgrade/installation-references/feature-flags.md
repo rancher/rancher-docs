@@ -45,3 +45,4 @@ The following table shows the availability and default values for some feature f
 | `rke1-custom-node-cleanup`| `true` | GA | v2.6.0 | |
 | `rke2` | `true` | Experimental | v2.6.0 | |
 | `token-hashing` | `false` for new installs, `true` for upgrades | GA | v2.6.0 | |
+| `ui-sql-cache` | `false` | Highly experimental | v2.9.0 |
