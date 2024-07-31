@@ -737,7 +737,7 @@ nodeSelector:
 10. Install the chart and confirm that the Daemonset `aws-cloud-controller-manager` deploys successfully:
 
 ```shell
-kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
+kubectl rollout status deployment -n kube-system aws-cloud-controller-manager
 ```
 
 </TabItem>
