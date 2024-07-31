@@ -207,7 +207,7 @@ You may terminate the SSL/TLS on a L7 load balancer external to the Rancher clus
 
 :::note
 
-If you are using a Private CA signed certificate, add `--set privateCA=true` and see [Adding TLS Secrets - Using a Private CA Signed Certificate](../../../getting-started/installation-and-upgrade/resources/add-tls-secrets.md) to add the CA cert for Rancher.
+If you are using a Private CA signed certificate (or if `agent-tls-mode` is set to `strict`), add `--set privateCA=true` and see [Adding TLS Secrets - Using a Private CA Signed Certificate](../../../getting-started/installation-and-upgrade/resources/add-tls-secrets.md) to add the CA cert for Rancher.
 
 :::
 
