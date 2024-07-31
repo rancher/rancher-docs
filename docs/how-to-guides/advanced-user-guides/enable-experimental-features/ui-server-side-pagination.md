@@ -7,7 +7,7 @@ title: UI Server-Side Pagination
 </head>
 
 :::caution
-UI Server-Side Pagination is not intended for use in production at this time. This feature is considered highly experimental. SUSE customers should consult SUSE Support before activating this feature.
+UI server-side pagination is not intended for use in production at this time. This feature is considered highly experimental. SUSE customers should consult SUSE Support before activating this feature.
 :::
 
 
@@ -36,6 +36,6 @@ Secrets and security Tokens are always encrypted regardless of the above setting
 
 ## Known Limitations of UI Server-Side Pagination
 
-This initial release improves the performance of Pods, Secrets, Nodes and ConfigMaps in the Cluster Explorer pages, and most resources in the Explorer's `More Resources` section.
+This initial release improves the performance of Pods, Secrets, Nodes and ConfigMaps in the Cluster Explorer pages, and most resources in the Explorer's **More Resources** section.
 
 Pages can't be automatically refreshed. You can manually refresh table contents by clicking the **Refresh** button.
