@@ -9,6 +9,7 @@ title: Rancher Webhook
 Rancher-Webhook is an essential component of Rancher that works in conjunction with Kubernetes to enhance security and enable critical features for Rancher-managed clusters. 
 
 It integrates with Kubernetes' extensible admission controllers, as described in the [Kubernetes documentation](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/), which allows Rancher-Webhook to inspect specific requests sent to the Kubernetes API server, and add custom validations and mutations to the requests that are specific to Rancher. Rancher-Webhook manages the resources to be validated using the `rancher.cattle.io` `ValidatingWebhookConfiguration` and the `rancher.cattle.io` `MutatingWebhookConfiguration` objects, and will override any manual edits.
+
 Rancher deploys Rancher-Webhook as a separate deployment and service in both local and downstream clusters. Rancher manages Rancher-Webhook using Helm. It's important to note that Rancher may override modifications made by users to the Helm release. To safely modify these values see [Customizing Rancher-Webhook Configuration](#customizing-rancher-webhook-configuration).
 
 Each Rancher version is designed to be compatible with a single version of the webhook. The compatible versions are provided below for convenience.
@@ -55,6 +56,7 @@ kubectl create -f example.yaml --as=system:serviceaccount:cattle-system:rancher-
 ## Customizing Rancher-Webhook Configuration
 
 You can add custom Helm values when you install Rancher-Webhook via Helm. During a Helm install of the Rancher-Webhook chart, Rancher checks for custom Helm values. These custom values must be defined in a ConfigMap named `rancher-config`, in the `cattle-system` namespace, under the data key, `rancher-webhook`. The value of this key must be valid YAML.
+
 ``` yaml
 apiVersion: v1
 kind: ConfigMap
@@ -73,6 +75,7 @@ Rancher redeploys the Rancher-Webhook chart when changes to the ConfigMap values
 ### Customizing Rancher-Webhook During Rancher Installation
 
 When you use Helm to install the Rancher chart, you can add custom Helm values to the Rancher-Webhook of the local cluster. All values in the Rancher-Webhook chart are accessible as nested variables under the `webhook` name.
+
 These values are synced to the `rancher-config` ConfigMap during installation.
 
 ```bash
@@ -149,8 +152,6 @@ To help alleviate these issues, you can run the [adjust-downstream-webhook](http
 ### Pinning the Webhook
 
 :::note
-
-The following affects Rancher v2.8.3 and v2.8.4.
 
 When the `rancher-webhook` deployment is unpinned, it can be automatically updated to a version that is incompatible with the current version of Rancher. This is a known issue for Rancher v2.8.3 and v2.8.4. The solution is to pin the appropriate version. The following table shows which webhook version to pin for each respective version of Rancher:
 
