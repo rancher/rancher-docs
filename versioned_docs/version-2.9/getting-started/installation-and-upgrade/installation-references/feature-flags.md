@@ -28,6 +28,8 @@ The following is a list of feature flags available in Rancher. If you've upgrade
 - `rke2`: Enables provisioning RKE2 clusters. This flag is enabled by default.
 - `token-hashing`: Enables token hashing. Once enabled, existing tokens will be hashed and all new tokens will be hashed automatically with the SHA256 algorithm. Once a token is hashed it can't be undone. This flag can't be disabled after its enabled. See [API Tokens](../../../api/api-tokens.md#token-hashing) for more information.
 - `unsupported-storage-drivers`: Enables types for storage providers and provisioners that aren't enabled by default. See [Allow Unsupported Storage Drivers](../../../how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md) for more information.
+- `ui-sql-cache`: Enables a SQLite-based cache for UI tables. See [UI Server-Side Pagination](../../../how-to-guides/advanced-user-guides/enable-experimental-features/ui-server-side-pagination.md) for more information.
+
 
 The following table shows the availability and default values for some feature flags in Rancher. Features marked "GA" are generally available:
 
@@ -41,3 +43,4 @@ The following table shows the availability and default values for some feature f
 | `rke1-custom-node-cleanup`| `true` | GA | v2.6.0 |
 | `rke2` | `true` | Experimental | v2.6.0 |
 | `token-hashing` | `false` for new installs, `true` for upgrades | GA | v2.6.0 |
+| `ui-sql-cache` | `false` | Highly experimental | v2.9.0 |
