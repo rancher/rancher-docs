@@ -112,7 +112,7 @@ Profiling data (such as advanced memory or CPU analysis) is not present as it is
 
 To enable the Rancher Performance Dashboard:
 
-<Tabs groupid="UIorCLI">
+<Tabs groupId="UIorCLI">
 <TabItem value="Helm">
 
 Use the following options with the Helm CLI:

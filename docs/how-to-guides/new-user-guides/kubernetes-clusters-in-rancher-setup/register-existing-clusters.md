@@ -184,9 +184,7 @@ To prevent issues when upgrading, the [Kubernetes upgrade best practices](https:
 
 ## Authorized Cluster Endpoint Support for RKE2 and K3s Clusters
 
-_Available as of v2.6.3_
-
-Authorized Cluster Endpoint (ACE) support has been added for registered RKE2 and K3s clusters. This support includes manual steps you will perform on the downstream cluster to enable the ACE. For additional information on the authorized cluster endpoint, click [here](../manage-clusters/access-clusters/authorized-cluster-endpoint.md).
+Rancher supports Authorized Cluster Endpoints (ACE) for registered RKE2 and K3s clusters. This support includes manual steps you will perform on the downstream cluster to enable the ACE. For additional information on the authorized cluster endpoint, click [here](../manage-clusters/access-clusters/authorized-cluster-endpoint.md).
 
 :::note Notes:
 

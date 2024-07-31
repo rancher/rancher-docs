@@ -21,7 +21,7 @@ Rancher can be installed on any Kubernetes cluster, including hosted Kubernetes 
 Since Rancher can be installed on any Kubernetes cluster, you can use this backup and restore method to migrate Rancher from one Kubernetes cluster to any other Kubernetes cluster. This method *only* migrates Rancher-related resources and won't affect other applications on the cluster. Refer to the [support matrix](https://www.suse.com/lifecycle/) to identify which Kubernetes cluster types and versions are supported for your Rancher version.
 
 ### 1. Install the rancher-backup Helm chart
-Install version 1.x.x of the rancher-backup chart. The following assumes a connected environment with access to DockerHub:
+Install version 1.x.x of the rancher-backup chart. The following assumes a connected environment with access to Docker Hub:
 
 ```
 helm repo add rancher-charts https://charts.rancher.io

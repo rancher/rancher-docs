@@ -34,7 +34,7 @@ Currently, deployments pull the private registry credentials automatically only 
 
 1. Select a **Scope** for the registry. You can either make the registry available for the entire project or a single namespace.
 
-1. Select the website that hosts your private registry. Then enter credentials that authenticate with the registry. For example, if you use DockerHub, provide your DockerHub username and password.
+1. Select the website that hosts your private registry. Then enter credentials that authenticate with the registry. For example, if you use Docker Hub, provide your Docker Hub username and password.
 
 1. Click **Save**.
 

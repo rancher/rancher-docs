@@ -108,7 +108,10 @@ Regarding CPU and memory, it is recommended that the different planes of Kuberne
 
 For hardware recommendations for large Kubernetes clusters, refer to the official Kubernetes documentation on [building large clusters.](https://kubernetes.io/docs/setup/best-practices/cluster-large/)
 
-For hardware recommendations for etcd clusters in production, refer to the official [etcd documentation.](https://etcd.io/docs/v3.4.0/op-guide/hardware/)
+For hardware recommendations for etcd clusters in production, refer to the official [etcd documentation.](https://etcd.io/docs/v3.5/op-guide/hardware/)
+
+
+Hardware recommendations for etcd clusters in production differ by etcd version. For more information, see the [official etcd v3.5 documentation](https://etcd.io/docs/v3.5/op-guide/hardware/) if you're running Kubernetes v1.22 and later. Otherwise, see the [official etcd v3.4 documentation](https://etcd.io/docs/v3.4/op-guide/hardware/).
 
 ## Networking Requirements
 

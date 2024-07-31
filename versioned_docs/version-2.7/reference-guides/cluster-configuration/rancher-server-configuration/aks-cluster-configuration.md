@@ -6,13 +6,6 @@ title: AKS Cluster Configuration Reference
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration"/>
 </head>
 
-## Changes in Rancher v2.6
-
-- Support for adding more than one node pool
-- Support for private clusters
-- Enabled autoscaling node pools
-- The AKS permissions are now configured in cloud credentials
-
 ## Role-based Access Control
 
 When provisioning an AKS cluster in the Rancher UI, RBAC cannot be disabled. If role-based access control is disabled for the cluster in AKS, the cluster cannot be registered or imported into Rancher.

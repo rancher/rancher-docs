@@ -113,7 +113,7 @@ Select your provider's tab below and follow the directions.
 1. In the dropdown menu in the top navigation bar, select the project where you want to configure pipelines.
 1. In the left navigation bar, click **Legacy > Project > Pipelines**.
 1. Click the **Configuration** tab.
-1. Follow the directions displayed to **Setup a Github application**. Rancher redirects you to Github to set up an OAuth App in Github.
+1. Follow the directions displayed to **Setup a GitHub application**. Rancher redirects you to GitHub to set up an OAuth App in GitHub.
 1. From GitHub, copy the **Client ID** and **Client Secret**. Paste them into Rancher.
 1. If you're using GitHub for enterprise, select **Use a private github enterprise installation**. Enter the host address of your GitHub installation.
 1. Click **Authenticate**.

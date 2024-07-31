@@ -10,6 +10,12 @@ Rancher relies on users and groups to determine who is allowed to log in to Ranc
 
 Access to clusters, projects, multi-cluster apps, and global DNS providers and entries can be controlled by adding either individual users or groups to these resources. When you add a group to a resource, all users who are members of that group in the authentication provider, will be able to access the resource with the permissions that you've specified for the group. For more information on roles and permissions, see [Role Based Access Control](../../manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md).
 
+:::warning 
+
+Only trusted admin-level users should have access to the local cluster, which manages all of the other clusters in a Rancher instance. Rancher is directly installed on the local cluster, and Rancher's management features allow admins on the local cluster to provision, modify, connect to, and view details about downstream clusters. Since the local cluster is key to a Rancher instance's architecture, inappropriate access carries security risks.
+
+:::
+
 ## Managing Members
 
 When adding a user or group to a resource, you can search for users or groups by beginning to type their name. The Rancher server will query the authentication provider to find users and groups that match what you've entered. Searching is limited to the authentication provider that you are currently logged in with. For example, if you've enabled GitHub authentication but are logged in using a [local](create-local-users.md) user account, you will not be able to search for GitHub users or groups.

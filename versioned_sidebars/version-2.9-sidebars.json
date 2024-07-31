@@ -511,7 +511,8 @@
                       "items": [
                         "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere",
                         "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-credentials",
-                        "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-a-vm-template"
+                        "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-a-vm-template",
+                        "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/shutdown-vm"
                       ]
                     },
                     {
@@ -595,7 +596,8 @@
                 "id": "how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher"
               },
               "items": [
-                "how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps"
+                "how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps",
+                "how-to-guides/new-user-guides/helm-charts-in-rancher/oci-repositories"
               ]
             },
             {
