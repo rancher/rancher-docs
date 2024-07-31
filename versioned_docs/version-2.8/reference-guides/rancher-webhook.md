@@ -197,7 +197,7 @@ helm upgrade --install rancher rancher-latest/rancher --namespace cattle-system 
     --set extraEnv[0].value=103.0.2+up0.4.3
 ```
 
-After doing this, the webhook field in the UI should be the value specified in the `helm` command, and the above `kubectl get settings` command should have the same value in the `VALUE` column.
+As a result, the webhook field in the UI should have the value specified in the `helm` command, and the above `kubectl get settings` command should have the same value in the `VALUE` column.
 
 If you're running Rancher via a Docker installation, you need to stop and delete the `rancher/rancher` container, and then rerun the `docker run` command, adding the command-line option `--env CATTLE_RANCHER_WEBHOOK_VERSION=<WEBHOOK-VERSION>` somewhere before `rancher/rancher:<VERSION>`.  For example:
 

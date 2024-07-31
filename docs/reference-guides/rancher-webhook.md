@@ -152,7 +152,7 @@ To help alleviate these issues, you can run the [adjust-downstream-webhook](http
 
 The following affects Rancher v2.8.3 and v2.8.4.
 
-When a Rancher-Webhook deployment is unpinned, it can be automatically updated to a version that is incompatible with the current version of Rancher. This is a known issue for Rancher versions 2.8.3 and 2.8.4. The solution is to *pin* the appropriate version. The following table shows which webhook version to provide for each respective version of Rancher:
+When the `rancher-webhook` deployment is unpinned, it can be automatically updated to a version that is incompatible with the current version of Rancher. This is a known issue for Rancher v2.8.3 and v2.8.4. The solution is to pin the appropriate version. The following table shows which webhook version to pin for each respective version of Rancher:
 
 
 | Rancher Version | Webhook Version |
@@ -163,7 +163,7 @@ When a Rancher-Webhook deployment is unpinned, it can be automatically updated t
 
 For example, if you are running Rancher v2.8.3, you need to pin Rancher-Webhook to version 103.0.2+up0.4.3.
 
-Note that if you view the Local cluster in Rancher, and then bring up `Workloads | Deployments`, selecting at least `System Namespaces`, you should see a `rancher-webhook` workload in the `cattle-system` namespace. It will probably have an associated version, but this isn't sufficient to determine if the webhook is pinned to a specific version.
+Note that if you view the Local cluster in Rancher, and then bring up **Workloads > Deployments**, selecting at least **System Namespaces**, you should see a `rancher-webhook` workload in the `cattle-system` namespace. It will probably have an associated version, but this isn't sufficient to determine if the webhook is pinned to a specific version.
 
 To verify if the webhook is pinned, bring up the Rancher kubectl shell, or switch to a terminal session, and run:
 
@@ -171,7 +171,7 @@ To verify if the webhook is pinned, bring up the Rancher kubectl shell, or switc
 kubectl get settings rancher-webhook-version
 ```
 
-If the webhook is pinned, you'll see output with a `VALUE` field that matches the `Webhook Version` from the above table:
+If the webhook is pinned, you'll see output with a `VALUE` field that matches the **Webhook Version** from the above table:
 
 ```text
 NAME                       VALUE
