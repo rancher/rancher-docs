@@ -35,7 +35,7 @@ The Rancher authentication proxy integrates with the following external authenti
 | [Okta](configure-okta-saml.md)                                                                                         |
 | [Google OAuth](configure-google-oauth.md)                                                                              |
 | [Shibboleth](../configure-shibboleth-saml/configure-shibboleth-saml.md)                                                |
-| [Generic (OIDC)](configure-generic-oidc.md)                                                                       |
+| [Generic (OIDC)](configure-generic-oidc.md)                                                                            |
 
 However, Rancher also provides [local authentication](create-local-users.md).
 

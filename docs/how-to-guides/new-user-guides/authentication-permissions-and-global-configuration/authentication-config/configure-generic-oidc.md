@@ -12,55 +12,55 @@ If your organization uses an OIDC provider for user authentication, you can conf
 ## Prerequisites
 
 - In Rancher:
-    - Generic OIDC is disabled.
+  - Generic OIDC is disabled.
 
-:::note 
+:::note
 Consult the documentation for your specific IdP to complete the listed prerequisites.
 :::
 
 - In your IdP:
-      - Create a new client with the settings below:
-
-     Setting | Value
-     ------------|------------
-     `Client ID` | &lt;CLIENT_ID> (e.g. `rancher`)
-     `Name` | &lt;CLIENT_NAME> (e.g. `rancher`)
-     `Client Protocol` | `openid-connect`
-     `Access Type` | `confidential`
-     `Valid Redirect URI` | `https://yourRancherHostURL/verify-auth`
-
-    - In the new OIDC client, create mappers to expose the users fields.
-      - Create a new Groups Mapper with the settings below:
+  - Create a new client with the settings below:
 
     Setting | Value
     ------------|------------
-    `Name` | `Groups Mapper`
-    `Mapper Type` | `Group Membership`
-    `Token Claim Name` | `groups`
-    `Add to ID token` | `OFF`
-    `Add to access token` | `OFF`
-    `Add to user info` | `ON`
+    `Client ID` | <CLIENT_ID> (e.g. `rancher`)
+    `Name` | <CLIENT_NAME> (e.g. `rancher`)
+    `Client Protocol` | `openid-connect`
+    `Access Type` | `confidential`
+    `Valid Redirect URI` | `https://yourRancherHostURL/verify-auth`
 
-      - Create a new Client Audience with the settings below:
+  - In the new OIDC client, create mappers to expose the users fields.
+    - Create a new Groups Mapper with the settings below:
 
-    Setting | Value
-    ------------|------------
-    `Name` | `Client Audience`
-    `Mapper Type` | `Audience`
-    `Included Client Audience` | &lt;CLIENT_NAME>
-    `Add to access token` | `ON`
+      Setting | Value
+      ------------|------------
+      `Name` | `Groups Mapper`
+      `Mapper Type` | `Group Membership`
+      `Token Claim Name` | `groups`
+      `Add to ID token` | `OFF`
+      `Add to access token` | `OFF`
+      `Add to user info` | `ON`
 
-  - Create a new "Groups Path" with the settings below.
+    - Create a new Client Audience with the settings below:
 
-    Setting | Value
-    ------------|------------
-    `Name` | `Group Path`
-    `Mapper Type` | `Group Membership`
-    `Token Claim Name` | `full_group_path`
-    `Full group path` | `ON`
-    `Add to user info` | `ON`
+      Setting | Value
+      ------------|------------
+      `Name` | `Client Audience`
+      `Mapper Type` | `Audience`
+      `Included Client Audience` | <CLIENT_NAME>
+      `Add to access token` | `ON`
 
- - Important:  Rancher will use the value received in the "sub" claim to form the PrincipalID which is the unique identifier in Rancher.  It is important to make this a value that will be unique and immutable.
+    - Create a new "Groups Path" with the settings below.
+
+      Setting | Value
+      ------------|------------
+      `Name` | `Group Path`
+      `Mapper Type` | `Group Membership`
+      `Token Claim Name` | `full_group_path`
+      `Full group path` | `ON`
+      `Add to user info` | `ON`
+
+- Important:  Rancher will use the value received in the "sub" claim to form the PrincipalID which is the unique identifier in Rancher.  It is important to make this a value that will be unique and immutable.
 
 ## Configuring Generic OIDC in Rancher
 
