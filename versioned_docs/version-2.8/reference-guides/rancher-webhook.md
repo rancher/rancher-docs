@@ -147,6 +147,8 @@ To help alleviate these issues, you can run the [adjust-downstream-webhook](http
 
 The following affects Rancher v2.8.3 and v2.8.4.
 
+:::
+
 When the `rancher-webhook` deployment is unpinned, it can be automatically updated to a version that is incompatible with the current version of Rancher. This is a known issue for Rancher v2.8.3 and v2.8.4. The solution is to pin the appropriate version. The following table shows which webhook version to pin for each respective version of Rancher:
 
 
