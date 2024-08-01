@@ -17,7 +17,7 @@ Our repository doesn't allow you to make changes directly to the `main` branch. 
 
 For most updates, you'll need to edit a file in the `/docs` directory, which represents the ["Latest"](https://ranchermanager.docs.rancher.com/) version of our published documentation. The "Latest" version is a mirror of the most recently released version of Rancher. As of August 2024, the most recently released version of Rancher is 2.9.
 
-Whenever an update is made to `/docs`, you should apply the same change to the corresponding file in `/versioned_docs/version-2.8`. If a change only affects older versions, you don't need to mirror it to the `/docs` directory.
+Whenever an update is made to `/docs`, you should apply the same change to the corresponding file in `/versioned_docs/version-2.9`. If a change only affects older versions, you don't need to mirror it to the `/docs` directory.
 
 If a file is moved or renamed, you'll also need to edit the `sidebars.js` files for each affected version, as well as the list of redirects in `docusaurus.config.js`. See [Moving or Renaming Docs](./moving-or-renaming-docs.md).
 
