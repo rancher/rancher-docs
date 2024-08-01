@@ -216,6 +216,14 @@ Each node used should have a static IP configured, regardless of whether you are
 
 To operate properly, Rancher requires a number of ports to be open on Rancher nodes and on downstream Kubernetes cluster nodes. [Port Requirements](port-requirements.md) lists all the necessary ports for Rancher and Downstream Clusters for the different cluster types.
 
+### Load Balancer Requirements
+
+If you use a load balancer, it should be be HTTP/2 compatible. 
+
+To receive help from SUSE Support, Rancher Prime customers who use load balancers (or any other middleboxes such as firewalls), must use one that is HTTP/2 compatible.
+
+When HTTP/2 is not available, Rancher falls back to HTTP/1.1. However, since HTTP/2 offers improved web application performance, using HTTP/1.1 can create performance issues. 
+
 ## Dockershim Support
 
 For more information on Dockershim support, refer to [this page](dockershim.md).
