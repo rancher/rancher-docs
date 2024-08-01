@@ -15,7 +15,7 @@ To get started, [fork](https://github.com/rancher/rancher-docs/fork) and clone t
 
 Our repository doesn't allow you to make changes directly to the `main` branch. Create a working branch and make pull requests from your fork to [rancher/rancher-docs](https://github.com/rancher/rancher-docs).
 
-For most updates, you'll need to edit a file in the `/docs` directory, which represents the ["Latest"](https://ranchermanager.docs.rancher.com/) version of our published documentation. The "Latest" version is a mirror of the most recently released version of Rancher. As of December 2023, the most recently released version of Rancher is 2.8.
+For most updates, you'll need to edit a file in the `/docs` directory, which represents the ["Latest"](https://ranchermanager.docs.rancher.com/) version of our published documentation. The "Latest" version is a mirror of the most recently released version of Rancher. As of August 2024, the most recently released version of Rancher is 2.9.
 
 Whenever an update is made to `/docs`, you should apply the same change to the corresponding file in `/versioned_docs/version-2.8`. If a change only affects older versions, you don't need to mirror it to the `/docs` directory.
 
