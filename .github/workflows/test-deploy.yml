@@ -2,8 +2,8 @@ name: Test deployment
 
 on:
   pull_request:
-    branches:
-      - main
+    paths-ignore:
+      - '**/README.md'
 
 jobs:
   test-deploy:
