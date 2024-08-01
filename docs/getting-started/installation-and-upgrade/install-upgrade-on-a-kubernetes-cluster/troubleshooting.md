@@ -190,3 +190,19 @@ If you want to use encrypted private keys, you should use `ssh-agent` to load yo
 ### Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
 
 The node is not reachable on the configured `address` and `port`.
+
+### Agent reports TLS errors 
+
+When using Rancher, you may encounter error messages from the `fleet-agent`, `system-agent`, or `cluster-agent`, such as the message below:
+```
+tls: failed to verify certificate: x509: failed to load system roots and no roots provided; readdirent /dev/null: not a directory
+```
+
+This occurs when Rancher was configured with `agent-tls-mode` set to `strict`, but couldn't find cacerts in the `cacert` setting. To resolve the issue, set the `agent-tls-mode` to `system-store`, or upload the CA for Rancher as described in [Adding TLS Secrets](../resources/add-tls-secrets.md).
+
+### New Cluster Deployment is stuck in "Waiting for Agent to check in"
+
+When Rancher has `agent-tls-mode` set to `strict`, new clusters may fail to provision and report a generic "Waiting for Agent to check in" error message. The root cause of this is similar to the above case of TLS errors - Rancher's agent can't determine which CA Rancher is using (or can't verify that Rancher's cert is actually signed by the specified certificate authority).  
+
+To resolve the issue, set the `agent-tls-mode` to `system-store` or upload the CA for Rancher as described in [Adding TLS Secrets](../resources/add-tls-secrets.md).
+
