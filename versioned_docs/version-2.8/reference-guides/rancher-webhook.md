@@ -20,6 +20,7 @@ Each Rancher version is designed to be compatible with a single version of the w
 
 | Rancher Version | Webhook Version | Availability in Prime | Availability in Community |
 |-----------------|-----------------|-----------------------|---------------------------|
+| v2.8.6          |     v0.4.9      | &check;               | &cross;                   |
 | v2.8.5          |     v0.4.7      | &check;               | &check;                   |
 | v2.8.4          |     v0.4.5      | &check;               | &check;                   |
 | v2.8.3          |     v0.4.3      | &check;               | &check;                   |
