@@ -36,7 +36,8 @@ The following table shows the availability and default values for some feature f
 
 | Feature Flag Name             | Default Value | Status       | Available As Of |
 | ----------------------------- | ------------- | ------------ | --------------- |
-| `continuous-delivery` | `true` | GA | v2.6.0 |
+| `continuous-delivery` | `true` | GA | v2.6.0 | |
+| `external-rules` | v2.7.14: `false`, v2.8.5: `true` | Removed | v2.7.14, v2.8.5 | This flag affected [external `RoleTemplate` behavior](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#external-roletemplate-behavior). It is removed in Rancher v2.9.0 and later as the behavior is enabled by default. |
 | `fleet`  | `true` | Can no longer be disabled | v2.6.0 |
 | `fleet`  | `true` | GA | v2.5.0 |
 | `harvester` | `true` | Experimental | v2.6.1 |
