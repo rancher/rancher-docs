@@ -8,7 +8,8 @@ title: Rancher Webhook
 
 Rancher-Webhook is an essential component of Rancher that works in conjunction with Kubernetes to enhance security and enable critical features for Rancher-managed clusters. 
 
-It integrates with Kubernetes' extensible admission controllers, as described in the [Kubernetes documentation](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/), which allows Rancher-Webhook to inspect specific requests sent to the Kubernetes API server, and add custom, Rancher-specific validation and mutations to the requests that are specific to Rancher. Rancher-Webhook manages the resources to be validated using the `rancher.cattle.io` `ValidatingWebhookConfiguration` and the `rancher.cattle.io` `MutatingWebhookConfiguration`, and will override any manual edits.
+It integrates with Kubernetes' extensible admission controllers, as described in the [Kubernetes documentation](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/), which allows Rancher-Webhook to inspect specific requests sent to the Kubernetes API server, and add custom validations and mutations to the requests that are specific to Rancher. Rancher-Webhook manages the resources to be validated using the `rancher.cattle.io` `ValidatingWebhookConfiguration` and the `rancher.cattle.io` `MutatingWebhookConfiguration` objects, and will override any manual edits.
+
 Rancher deploys Rancher-Webhook as a separate deployment and service in both local and downstream clusters. Rancher manages Rancher-Webhook using Helm. It's important to note that Rancher may override modifications made by users to the Helm release. To safely modify these values see [Customizing Rancher-Webhook Configuration](#customizing-rancher-webhook-configuration).
 
 Each Rancher version is designed to be compatible with a single version of the webhook. The compatible versions are provided below for convenience.
@@ -50,6 +51,7 @@ kubectl create -f example.yaml --as=system:serviceaccount:cattle-system:rancher-
 ## Customizing Rancher-Webhook Configuration
 
 You can add custom Helm values when you install Rancher-Webhook via Helm. During a Helm install of the Rancher-Webhook chart, Rancher checks for custom Helm values. These custom values must be defined in a ConfigMap named `rancher-config`, in the `cattle-system` namespace, under the data key, `rancher-webhook`. The value of this key must be valid YAML.
+
 ``` yaml
 apiVersion: v1
 kind: ConfigMap
@@ -68,6 +70,7 @@ Rancher redeploys the Rancher-Webhook chart when changes to the ConfigMap values
 ### Customizing Rancher-Webhook During Rancher Installation
 
 When you use Helm to install the Rancher chart, you can add custom Helm values to the Rancher-Webhook of the local cluster. All values in the Rancher-Webhook chart are accessible as nested variables under the `webhook` name.
+
 These values are synced to the `rancher-config` ConfigMap during installation.
 
 ```bash
@@ -130,13 +133,5 @@ The webhook provides extra validations on [namespaces](https://github.com/ranche
 **Note:** This affects rolling back to Rancher v2.7.5 or earlier.
 
 If you roll back to Rancher v2.7.5 or earlier, you may see webhook versions that are too recent to be compatible with downstream clusters running pre-v2.7.5 version of Rancher. This may cause various incompatibility issues. For example, project members may be unable to create namespaces. In addition, when you roll back to versions before the webhook was installed in downstream clusters, the webhook may remain installed, which can result in similar incompatibility issues.
-
-To help alleviate these issues, you can run the [adjust-downstream-webhook](https://github.com/rancherlabs/support-tools/tree/master/adjust-downstream-webhook) shell script after roll back. This script selects and installs the proper webhook version (or removes the webhook entirely) for the corresponding Rancher version. 
-
-### Project Users Can't Create Namespaces 
-
-**Note:** The following affects Rancher v2.7.2 - v2.7.4.
-
-Project users may not be able to create namespaces in projects. This includes project owners. This issue is caused by Rancher automatically upgrading the webhook to a version compatible with a more recent version of Rancher than the one currently installed. 
 
 To help alleviate these issues, you can run the [adjust-downstream-webhook](https://github.com/rancherlabs/support-tools/tree/master/adjust-downstream-webhook) shell script after roll back. This script selects and installs the proper webhook version (or removes the webhook entirely) for the corresponding Rancher version. 
