@@ -183,7 +183,9 @@ for mount in $(mount | grep tmpfs | grep '/var/lib/kubelet' | awk '{ print $3 }'
 
 </TabItem>
 <TabItem value="RKE2">
-Note: for instructions for cleaning a _Non-Rancher deployed RKE2 cluster_ see: https://docs.rke2.io/install/uninstall
+:::note 
+For instructions on cleaning nodes in RKE2 clusters that weren't deployed by Rancher, see the [official RKE2 documentation](https://docs.rke2.io/install/uninstall) on uninstalling clusters.
+:::
   
 You need to remove the following components from Rancher-provisioned RKE2 nodes:
 
