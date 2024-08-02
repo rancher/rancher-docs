@@ -15,7 +15,7 @@ The recommended infrastructure for the Rancher-only Kubernetes cluster differs d
 To install the Rancher management server on a high-availability RKE2 cluster, we recommend setting up the following infrastructure:
 
 - **Three Linux nodes,** typically virtual machines, in the infrastructure provider of your choice.
-- **A load balancer** to direct traffic to the two nodes.
+- **A load balancer** to direct traffic to the nodes.
 - **A DNS record** to map a URL to the load balancer. This will become the Rancher server URL, and downstream Kubernetes clusters will need to reach it.
 
 ### 1. Set up Linux Nodes
