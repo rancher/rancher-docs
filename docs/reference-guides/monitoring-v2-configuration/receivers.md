@@ -29,7 +29,9 @@ This section assumes familiarity with how monitoring components work together. F
 
 1. Go to the cluster where you want to create receivers. Click **Monitoring -> Alerting -> AlertManagerConfigs**.
 1. Click **Create**.
-1. After creating an AlertManagerConfig, click it to add a receiver.
+1. Enter a **Name** for the new AlertmanagerConfig. 
+1. Click **Create**.
+1. After creating the AlertManagerConfig, click it to add a receiver.
 1. Click **Add Receiver**.
 1. Enter a **Name** for the receiver.
 1. Configure one or more providers for the receiver. For help filling out the forms, refer to the configuration options below.
@@ -217,7 +219,7 @@ url http://rancher-alerting-drivers-sachet.ns-1.svc:9876/alert
 
 ### Enabling the Telegram Receiver for Rancher Managed Clusters
 
-The Telegram receiver is not a native receiver and must be enabled before it can be used. You can enable the Telegram receiver for a Rancher managed cluster by going to the Apps page and installing the rancher-alerting-drivers app with the Telegram option selected.
+The Telegram receiver is not a native receiver. You must enable it before it can be used. You can enable the Telegram receiver for a Rancher-managed cluster by going to the **Apps** page and installing the `rancher-alerting-drivers` app with the **Telegram** option selected:
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to install `rancher-alerting-drivers` and click **Explore**.
@@ -227,54 +229,56 @@ The Telegram receiver is not a native receiver and must be enabled before it can
 1. In the page that opens next, make sure that **Enable SMS** checkbox is selected.
 1. Take note of the namespace used as it will be required in a later step.
 
-### Configure a PrometheusRule
+### Test the Configuration by Configuring a PrometheusRule
 
-To test our Telegram setup, let's create a **PrometheusRule** that will fire all the time. 
+To test our Telegram setup, create a **PrometheusRule** that continuously raises alerts. 
 
 :::caution NOTE
-This rule is suggested only for the purpose of testing if Telegram alerts work as expected. Do not leave it on beyond the purpose of testing.
+This rule is intended only to test if Telegram alerts work as expected. Do not leave it on after testing is completed.
 :::
 
 1. Click on **Monitoring**.
-2. Click on **Advanced**.
-3. Click on **PrometheusRules** and click on **Create** to create a new rule.
-4. Select a namespace to place the rule in; name the rule appropriately; set the group name to `test`. We will use this value later while creating a **Route** in our **AlertManagerConfig**.
-5. Under **Alerting Rules** click on **Add**.
-6. Set an appropriate **Alert Name**.
-7. Enter the following PromQL Expression - `vector(1)`. This will trigger alert immediately and continuously, and is only recommended to test things out.
-8. Under **Labels** add a new one by clicking on **Add Label**. Entre the key `test` and value `alert`. This key-value pair will also be used later.
+1. Click on **Advanced**.
+1. Click on **PrometheusRules > Create**.
+1. Select a namespace to place the rule in and name the rule appropriately. 
+1. Set the group name to `test`. Use this value later when you create a **Route** in the **AlertManagerConfig**.
+1. Under **Alerting Rules** click **Add**.
+1. Set an appropriate **Alert Name**.
+1. To trigger the alert immediately and continuously, enter the following PromQL Expression: `vector(1)`.
+1. Under **Labels**, click **Add Label**. Enter the key `test` and value `alert`. This key-value pair will also be used later.
 
-### Configure an AlertManagerConfig
+#### Configure an AlertManagerConfig
 
-Next up, configure an **AlertManagerConfig** that will contain the **Receiver** and **Route** configuration to be used for the **PrometheusRule** we created above.
+Configure an **AlertManagerConfig** to contain the **Receiver** and **Route** configuration for the **PrometheusRule** created above:
 
-#### Create an AlertManagerConfig
 
-1. Click on **Monitoring**; then click on **Alerting**, and open **AlertManagerConfigs**.
-2. Click on **Create**
+1. Click on **Monitoring > Alerting**, and open **AlertManagerConfigs**.
+1. Click **Create**
 
 #### Create a Receiver in AlertManagerConfig
 
-1. Choose a namespace from the dropdown and set an appropriate name. Click **Create**.
-2. Open the newly created **AlertManagerConfig**. Look for three dots near the top-right of the page and click **Edit Config**.
-3. Create a new Receiver by clicking **Add Receiver**.
-4. Select **Webhook** from the list that shows up on the page **Create Receiver in AlertmanagerConfig**. 
-5. Name the webhook. Then click **Add Webhook**. In the **Select Webhook Type** dropdown select **SMS**. This will automatically populate the **Target** field as `http://rancher-alerting-drivers-sachet.cattle-monitoring-system.svc:9876/alert`. If you installed the **Alerting Drivers** in a namespace other than `cattle-monitoring-system`, above URL will be reflect that. 
-6. Next click **Create** near the bottom of the page.
+1. Choose a namespace from the dropdown and set an appropriate name. 
+1. Click **Create**.
+1. Open the newly created **AlertManagerConfig** and click **⋮ > Edit Config**.
+1. Click **Add Receiver**.
+1. Select **Webhook** from the list on the **Create Receiver in AlertmanagerConfig** page. 
+1. Name the webhook, and click **Add Webhook**. 
+1. In the **Select Webhook Type** dropdown, select **SMS**. This will automatically populate the **Target** field as `http://rancher-alerting-drivers-sachet.cattle-monitoring-system.svc:9876/alert`. If you installed the **Alerting Drivers** in a namespace other than `cattle-monitoring-system`, the target URL will reflect that. 
+1. Click **Create**.
 
 #### Create a Route in AlertManagerConfig
 
-1. After creating a **Receiver** once again look for the three dots near the top-right and click **Edit Config**.
-2. Click on **Route**.
-3. In the dropdown, select the **Receiver** we just created in above step
-4. In the **Labels to Group Alerts By** field, type `test`. We set this group name while creating **PrometheusRule** above.
-5. Under the **Waiting and Intervals** set **Group Wait** value to `1s` and **Group Interval** value to `10s`. This will cause frequent alerts to be sent, if configured correctly. Change the values as appropriate.
-6. Under **Matchers** click on **Add Matcher** and enter the **Name** as `test` and **Value** as `alert`. We used these values as **Label** in the **PrometheusRule** we created earlier. From the **Match Type** dropdown, select `MatchEqual`.
-7. Click **Save**.
+1. Click **⋮ > Edit Config**.
+1. Click **Route**.
+1. In the dropdown, select the **Receiver** you just created.
+1. In the **Labels to Group Alerts By** field, type `test`.
+1. Under **Waiting and Intervals**, set **Group Wait** to `1s` and **Group Interval** to `10s`. This triggers frequent alerts. Change the values as appropriate.
+1. Under **Matchers** click **Add Matcher**. Enter `test` in the **Name** field and `alert` in the **Value** field. From the **Match Type** dropdown, select `MatchEqual`.
+1. Click **Save**.
 
 ### Configuring the Telegram Receiver
 
-The Telegram receiver can be configured by updating the `rancher-alerting-drivers-sachet` ConfigMap in `cattle-monitoring-system` namespace. For example, the following is a minimal Telegram receiver configuration.
+You can configure the Telegram receiver by updating the `rancher-alerting-drivers-sachet` ConfigMap in the `cattle-monitoring-system` namespace. For example, the following is a minimal Telegram receiver configuration:
 
 ```yaml
 providers:
@@ -288,12 +292,12 @@ receivers:
     - '123456789'
 ```
 
-To obtain a Telegram token, you will have to setup a Telegram bot. Refer [this guide](https://core.telegram.org/bots/tutorial) for details.
-When configuration is complete, add the receiver using the steps in [this section](#creating-receivers-in-the-rancher-ui). 
+To obtain a Telegram token, setup a Telegram bot. Refer to the [official Telegram guide](https://core.telegram.org/bots/tutorial) for details.
+After you finish configuring the receiver, [add](#creating-receivers-in-the-rancher-ui) it. 
 
-Use the `<namespace>/<alertmanagerconfig-name>/<receiver-name>` as the name of the receiver above. The numeric `123456789` is the Telegram user ID you would like to send the notifications to. To find this Telegram ID, check out [this Telegram bot](https://telegram.me/userinfobot).
+Name the receiver `<namespace>/<alertmanagerconfig-name>/<receiver-name>`. Enter `123456789` as the Telegram user ID to send the notifications to. To find this Telegram ID, check [the Telegram userinfo bot](https://telegram.me/userinfobot).
 
-With above configuration in place, you should receive Telegram notifications on the user ID configured above. If you don't receive notifications, please check if there are any errors reported in the Pod for the Deployment `rancher-alerting-drivers-sachet` under `cattle-monitoring-system` namespace.
+You should now receive Telegram notifications to the user ID. If you don't receive notifications, please check if there are any errors reported in the Pod for the Deployment `rancher-alerting-drivers-sachet` under the `cattle-monitoring-system` namespace.
 
 ## Configuring Multiple Receivers
 
