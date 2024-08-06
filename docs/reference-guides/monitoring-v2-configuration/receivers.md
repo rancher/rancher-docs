@@ -226,20 +226,20 @@ The Telegram receiver is not a native receiver. You must enable it before it can
 1. In the left navigation bar, click on **Apps**.
 1. Click the **Alerting Drivers** app.
 1. Click on **Install**.
-1. In the page that opens next, make sure that **Enable SMS** checkbox is selected.
+1. In the page that opens next, make sure that **Enable SMS** checkbox is selected. Telegram notifications require you to enable SMS.
 1. Take note of the namespace used as it will be required in a later step.
 
 ### Test the Configuration by Configuring a PrometheusRule
 
-To test our Telegram setup, create a **PrometheusRule** that continuously raises alerts. 
+To test your Telegram setup, create a **PrometheusRule** that continuously raises alerts. 
 
 :::caution NOTE
 This rule is intended only to test if Telegram alerts work as expected. Do not leave it on after testing is completed.
 :::
 
-1. Click on **Monitoring**.
-1. Click on **Advanced**.
-1. Click on **PrometheusRules > Create**.
+1. In the left navigation menu, click **Monitoring**.
+1. Click **Advanced**.
+1. Click **PrometheusRules > Create**.
 1. Select a namespace to place the rule in and name the rule appropriately. 
 1. Set the group name to `test`. Use this value later when you create a **Route** in the **AlertManagerConfig**.
 1. Under **Alerting Rules** click **Add**.
@@ -250,9 +250,7 @@ This rule is intended only to test if Telegram alerts work as expected. Do not l
 #### Configure an AlertManagerConfig
 
 Configure an **AlertManagerConfig** to contain the **Receiver** and **Route** configuration for the **PrometheusRule** created above:
-
-
-1. Click on **Monitoring > Alerting**, and open **AlertManagerConfigs**.
+1. Click **Monitoring > Alerting**, and open **AlertManagerConfigs**.
 1. Click **Create**
 
 #### Create a Receiver in AlertManagerConfig
@@ -295,7 +293,7 @@ receivers:
 To obtain a Telegram token, setup a Telegram bot. Refer to the [official Telegram guide](https://core.telegram.org/bots/tutorial) for details.
 After you finish configuring the receiver, [add](#creating-receivers-in-the-rancher-ui) it. 
 
-Name the receiver `<namespace>/<alertmanagerconfig-name>/<receiver-name>`. Enter `123456789` as the Telegram user ID to send the notifications to. To find this Telegram ID, check [the Telegram userinfo bot](https://telegram.me/userinfobot).
+Name the receiver `<namespace>/<alertmanagerconfig-name>/<receiver-name>`. Enter `123456789` as a placeholder for the Telegram user ID to send the notifications to. To find your Telegram ID, check [the Telegram userinfo bot](https://telegram.me/userinfobot).
 
 You should now receive Telegram notifications to the user ID. If you don't receive notifications, please check if there are any errors reported in the Pod for the Deployment `rancher-alerting-drivers-sachet` under the `cattle-monitoring-system` namespace.
 
