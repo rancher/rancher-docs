@@ -46,6 +46,6 @@ A: You can use a runtime like containerd with Kubernetes that does not require D
 
 Q: If I am already using RKE1 and want to switch to RKE2, what are my migration options?
 
-A: Today, you can stand up a new cluster and migrate workloads to a new RKE2 cluster that uses containerd. Rancher is exploring the possibility of an in-place upgrade path.
+A: Today, you can stand up a new cluster and migrate workloads to a new RKE2 cluster that uses containerd.
 
 <br/>
