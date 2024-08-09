@@ -1156,6 +1156,46 @@
         },
         {
           "type": "category",
+          "label": "Cloud Marketplace Pay-as-you-go (PAYG) Integration",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/cloud-marketplace/cloud-marketplace-payg-integration"
+          },
+          "items": [
+            {
+              "type": "category",
+              "label": "AWS Marketplace Pay-as-you-go (PAYG)",
+              "link": {
+                "type": "doc",
+                "id": "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/aws-marketplace-payg-integration"
+              },
+              "items": [
+                "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/prerequisites",
+                "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/installing-rancher-prime",
+                "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/upgrading-rancher-payg-cluster",
+                "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/troubleshooting",
+                "integrations-in-rancher/cloud-marketplace/aws-marketplace-payg-integration/common-issues"
+              ]
+            },
+            {
+              "type": "category",
+              "label": "Azure Marketplace Pay-as-you-go (PAYG)",
+              "link": {
+                "type": "doc",
+                "id": "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/azure-marketplace-payg-integration"
+              },
+              "items": [
+                "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/prerequisites",
+                "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/installing-rancher-prime",
+                "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/upgrading-rancher-payg-cluster",
+                "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/troubleshooting",
+                "integrations-in-rancher/cloud-marketplace/azure-marketplace-payg-integration/common-issues"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "category",
           "label": "Cluster API (CAPI) with Rancher Turtles",
           "link": {
             "type": "doc",
