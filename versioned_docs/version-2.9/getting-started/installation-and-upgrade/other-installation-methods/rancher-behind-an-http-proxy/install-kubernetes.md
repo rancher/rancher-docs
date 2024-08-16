@@ -27,7 +27,7 @@ First configure the HTTP proxy settings on the K3s systemd service, so that K3s'
 ```
 cat <<'EOF' | sudo tee /etc/default/k3s > /dev/null
 HTTP_PROXY=http://${proxy_host}
-HTTPS_PROXY=http://${proxy_host}"
+HTTPS_PROXY=http://${proxy_host}
 NO_PROXY=127.0.0.0/8,10.0.0.0/8,cattle-system.svc,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local
 EOF
 ```
@@ -71,7 +71,7 @@ Then you have to configure the HTTP proxy settings on the RKE2 systemd service, 
 ```
 cat <<'EOF' | sudo tee /etc/default/rke2-server > /dev/null
 HTTP_PROXY=http://${proxy_host}
-HTTPS_PROXY=http://${proxy_host}"
+HTTPS_PROXY=http://${proxy_host}
 NO_PROXY=127.0.0.0/8,10.0.0.0/8,cattle-system.svc,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local
 EOF
 ```
