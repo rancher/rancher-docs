@@ -148,7 +148,7 @@ To see options on how to customize the cert-manager install (including for cases
 :::
 
 ```
-# If you have installed the CRDs manually instead of with the `--set crds.enabled=true` option added to your Helm install command, you should upgrade your CRD resources before upgrading the Helm chart:
+# If you have installed the CRDs manually, instead of setting `installCRDs` or `crds.enabled` to `true` in your Helm install command, you should upgrade your CRD resources before upgrading the Helm chart:
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/<VERSION>/cert-manager.crds.yaml
 
 # Add the Jetstack Helm repository
