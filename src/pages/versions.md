@@ -88,7 +88,7 @@ Here you can find links to supporting documentation for the current released ver
 
 ### Past Versions
 
-Here you can find links to supporting documentation for previous versions of Rancher v2.8, and their availability for [Rancher Prime](/v2.8/getting-started/quick-start-guides/deploy-rancher-manager/prime) and the Community version of Rancher:
+Here you can find links to supporting documentation for previous versions of Rancher v2.9, and their availability for [Rancher Prime](/v2.9/getting-started/quick-start-guides/deploy-rancher-manager/prime) and the Community version of Rancher:
 
 <table>
   <tr>
