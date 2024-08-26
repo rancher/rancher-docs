@@ -81,7 +81,7 @@ You will need to use a context defined in this kubeconfig file to access the clu
 
 ## Impersonation
 
-:::caution Known Issues
+:::caution Known Issue
 
 Service account impersonation (`--as`) used by lower privileged user accounts to remove privileges is not implemented and is a [feature](https://github.com/rancher/rancher/issues/41988) being tracked.
 
