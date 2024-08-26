@@ -39,9 +39,9 @@ Here you can find links to supporting documentation for the current released ver
     <th>Community</th>
   </tr>
   <tr>
-    <td><b>v2.8.6</b></td>
+    <td><b>v2.8.7</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.8">Documentation</a></td>
-    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.8.6">Release Notes</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.8.7">Release Notes</a></td>
     <td><center>N/A</center></td>
     <td><center>&#10003;</center></td>
     <td><center>N/A</center></td>
@@ -98,6 +98,14 @@ Here you can find links to supporting documentation for previous versions of Ran
     <th>Support Matrix</th>
     <th>Prime</th>
     <th>Community</th>
+  </tr>
+    <tr>
+    <td><b>v2.8.6</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.8">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.8.6">Release Notes</a></td>
+    <td><center>N/A</center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>N/A</center></td>
   </tr>
    <tr>
     <td><b>v2.8.5</b></td>
