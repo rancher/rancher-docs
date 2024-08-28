@@ -1155,6 +1155,7 @@ const sidebars = {
             "integrations-in-rancher/neuvector/overview"
           ]
         },
+        "integrations-in-rancher/suse-observability/suse-observability",
         "integrations-in-rancher/kubewarden/kubewarden",
         "integrations-in-rancher/elemental/elemental",
         {
