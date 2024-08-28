@@ -136,8 +136,6 @@ Opsgenie Responders:
 | Proxy URL | Proxy for the webhook notification. |
 | Enable Send Resolved Alerts | Whether to send a follow-up notification if an alert has been resolved (e.g. [Resolved] High CPU Usage).    |
 
-<!-- TODO add info on webhook for teams and Telegram and link to them -->
-
 ## Custom
 
 The YAML provided here will be directly appended to your receiver within the Alertmanager Config Secret.
