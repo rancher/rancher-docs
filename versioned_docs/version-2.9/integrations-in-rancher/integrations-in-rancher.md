@@ -15,4 +15,4 @@ To learn more and get started with Rancher Prime, please visit [this page](https
 import DocCardList from '@theme/DocCardList';
 import { useCurrentSidebarCategory } from '@docusaurus/theme-common/internal';
 
-<DocCardList items={useCurrentSidebarCategory().items.slice(0,8)} />
+<DocCardList items={useCurrentSidebarCategory().items.slice(0,9)} />
