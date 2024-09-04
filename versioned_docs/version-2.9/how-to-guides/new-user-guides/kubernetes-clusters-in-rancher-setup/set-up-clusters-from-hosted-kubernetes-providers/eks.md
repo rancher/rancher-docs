@@ -314,6 +314,43 @@ These are permissions that are needed by Rancher to create a Virtual Private Clo
 }
 ```
 
+### EBS CSI Driver addon Permissions
+
+Permissions required for Rancher to install the Amazon EBS CSI Driver add-on.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetRole",
+                "eks:DescribeAddonConfiguration",
+                "eks:UpdateAddon",
+                "eks:ListAddons",
+                "iam:CreateRole",
+                "iam:AttachRolePolicy",
+                "eks:DescribeAddon",
+                "iam:CreateOpenIDConnectProvider",
+                "iam:PassRole",
+                "eks:DescribeIdentityProviderConfig",
+                "eks:DeleteAddon",
+                "iam:ListOpenIDConnectProviders",
+                "iam:ListAttachedRolePolicies",
+                "eks:CreateAddon",
+                "eks:DescribeCluster",
+                "eks:DescribeAddonVersions",
+                "sts:AssumeRoleWithWebIdentity",
+                "eks:AssociateIdentityProviderConfig",
+                "eks:ListIdentityProviderConfigs"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
 ## Syncing
 
 The EKS provisioner can synchronize the state of an EKS cluster between Rancher and the provider. For an in-depth technical explanation of how this works, see [Syncing.](../../../../reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters.md)
