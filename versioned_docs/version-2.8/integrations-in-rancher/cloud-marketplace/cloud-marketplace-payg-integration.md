@@ -10,7 +10,7 @@ Rancher Prime integrates with the [AWS Marketplace](https://aws.amazon.com/marke
 
 ## Limitations
 
-Currently, you must be running Rancher v2.8.4. When you deploy a supported PAYG version, you can update to newer versions of Rancher when the listing is updated.
+We currently recommend running Rancher v2.8.4. When you deploy a supported PAYG version, you can update to newer versions of Rancher when the listing is updated.
 
 ## How to Use
 
