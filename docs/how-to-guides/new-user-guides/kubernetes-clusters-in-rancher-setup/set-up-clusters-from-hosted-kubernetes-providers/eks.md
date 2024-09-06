@@ -321,7 +321,7 @@ These are permissions that are needed by Rancher to create a Virtual Private Clo
 
 ### EBS CSI Driver addon Permissions
 
-Permissions required for Rancher to install the Amazon EBS CSI Driver add-on.
+The following are the required permissions for installing the Amazon EBS CSI Driver add-on.
 
 ```json
 {
