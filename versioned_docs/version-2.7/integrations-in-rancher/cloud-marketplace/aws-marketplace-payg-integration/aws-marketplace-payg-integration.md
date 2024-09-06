@@ -13,9 +13,9 @@ Rancher Prime integrates with the [AWS Marketplace](https://aws.amazon.com/marke
 
 For more details on how Rancher pay-as-you-go offerings work, refer to the [pay-as-you-go FAQ](../cloud-marketplace-payg-integration.md#faq).
 
-## Limitations
+## Supported Versions
 
-- Currently, you must be running Rancher v2.7.9. When you deploy a supported PAYG version, you can update to newer versions of Rancher when the listing is updated.
+- Rancher v2.7.9 is still a supported PAYG version. However, the PAYG offering is now available for Rancher v2.8.4, and we recommend using this version for the latest features and security fixes. When you deploy a supported PAYG version, you can update to newer versions of Rancher when the listing is updated.
 
 ## How to Use
 
