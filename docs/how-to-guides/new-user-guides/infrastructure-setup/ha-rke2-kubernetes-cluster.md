@@ -51,7 +51,7 @@ Do not use this load balancer (i.e, the `local` cluster Ingress) to load balance
 
 :::
 
-### 4. Set up the DNS Record
+### 3. Set up the DNS Record
 
 Once you have set up your load balancer, you will need to create a DNS record to send traffic to this load balancer.
 
