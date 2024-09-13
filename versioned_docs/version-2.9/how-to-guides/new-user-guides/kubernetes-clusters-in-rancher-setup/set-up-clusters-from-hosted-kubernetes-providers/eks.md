@@ -95,11 +95,15 @@ This [tutorial](https://aws.amazon.com/blogs/opensource/managing-eks-clusters-ra
 
 These are the minimum set of permissions necessary to access the full functionality of Rancher's EKS driver. You'll need additional permissions for Rancher to provision the `Service Role` and `VPC` resources. If you create these resources **before** you create the cluster, they'll be available when you configure the cluster.
 
+:::note
+In EKS v1.23 and above, you must use the out-of-tree drivers for EBS-backed volumes. You need [specific permissions](#ebs-csi-driver-addon-permissions) to enable this add-on.
+:::
+
 Resource | Description
 ---------|------------
 Service Role | Provides permissions that allow Kubernetes to manage resources on your behalf. Rancher can create the service role with the following [Service Role Permissions](#service-role-permissions).
 VPC | Provides isolated network resources utilised by EKS and worker nodes. Rancher can create the VPC resources with the following [VPC Permissions](#vpc-permissions).
-
+EBS CSI Driver add-on | Provides permissions that allow Kubernetes to interact with EBS and configure the cluster to enable the add-on (required for EKS v1.23 and above). Rancher can install the add-on with the following [EBS CSI Driver addon Permissions](#ebs-csi-driver-addon-permissions).
 
 Resource targeting uses `*` as the ARN of many of the resources created cannot be known before creating the EKS cluster in Rancher.
 
@@ -311,6 +315,43 @@ These are permissions that are needed by Rancher to create a Virtual Private Clo
       "Resource": "*"
     }
   ]
+}
+```
+
+### EBS CSI Driver addon Permissions
+
+The following are the required permissions for installing the Amazon EBS CSI Driver add-on.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetRole",
+                "eks:DescribeAddonConfiguration",
+                "eks:UpdateAddon",
+                "eks:ListAddons",
+                "iam:CreateRole",
+                "iam:AttachRolePolicy",
+                "eks:DescribeAddon",
+                "iam:CreateOpenIDConnectProvider",
+                "iam:PassRole",
+                "eks:DescribeIdentityProviderConfig",
+                "eks:DeleteAddon",
+                "iam:ListOpenIDConnectProviders",
+                "iam:ListAttachedRolePolicies",
+                "eks:CreateAddon",
+                "eks:DescribeCluster",
+                "eks:DescribeAddonVersions",
+                "sts:AssumeRoleWithWebIdentity",
+                "eks:AssociateIdentityProviderConfig",
+                "eks:ListIdentityProviderConfigs"
+            ],
+            "Resource": "*"
+        }
+    ]
 }
 ```
 
