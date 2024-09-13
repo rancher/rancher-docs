@@ -10,7 +10,7 @@ During a RancherD upgrade, there is very little downtime, but it is possible tha
 
 When Rancher is installed with RancherD, the underlying Kubernetes cluster can't be upgraded from the Rancher UI. It needs to be upgraded using the RancherD CLI.
 
-### Upgrading the Rancher Helm Chart without Upgrading the Underlying Cluster
+## Upgrading the Rancher Helm Chart without Upgrading the Underlying Cluster
 
 To upgrade Rancher without upgrading the underlying Kubernetes cluster, follow these steps.
 
@@ -38,7 +38,7 @@ To upgrade Rancher without upgrading the underlying Kubernetes cluster, follow t
 
 If necessary, restore Rancher from backup by following [these steps.](../../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher.md)
 
-### Upgrading Both Rancher and the Underlying Cluster
+## Upgrading Both Rancher and the Underlying Cluster
 
 Upgrade both RancherD and the underlying Kubernetes cluster by re-running the RancherD installation script.
 
@@ -65,5 +65,3 @@ systemctl start rancherd-server
 ```
 
 The upgrade can also be performed by manually installing the binary of the desired version.
-
-
