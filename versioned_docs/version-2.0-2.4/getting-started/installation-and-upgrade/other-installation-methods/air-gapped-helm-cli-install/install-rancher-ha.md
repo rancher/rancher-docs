@@ -182,7 +182,7 @@ Use `kubectl` to create namespaces and apply the rendered manifests.
 
 If you choose to use self-signed certificates in [2. Choose your SSL Configuration](#2-choose-your-ssl-configuration), install cert-manager.
 
-### For Self-Signed Certificate Installs, Install Cert-manager
+### For Self-Signed Certificate Installs, Install cert-manager
 
 <details id="install-cert-manager">
   <summary>Click to expand</summary>
@@ -219,7 +219,7 @@ kubectl -n cattle-system apply -R -f ./rancher
 
 > **Note:** If you don't intend to send telemetry data, opt out [telemetry](../../../../faq/telemetry.md) during the initial login. Leaving this active in an air-gapped environment can cause issues if the sockets cannot be opened successfully.
 
-## 5. For Rancher versions before v2.3.0, Configure System Charts
+## 5. For Rancher Versions Before v2.3.0, Configure System Charts
 
 If you are installing Rancher versions before v2.3.0, you will not be able to use the packaged system charts. Since the Rancher system charts are hosted in GitHub, an air gapped installation will not be able to access these charts. Therefore, you must [configure the Rancher system charts](../../resources/local-system-charts.md).
 
