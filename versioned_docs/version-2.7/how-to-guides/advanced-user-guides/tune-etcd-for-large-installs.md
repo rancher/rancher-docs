@@ -10,7 +10,7 @@ When Rancher is used to manage [a large infrastructure](../../getting-started/in
 
 The etcd data set is automatically cleaned up on a five minute interval by Kubernetes. There are situations, e.g. deployment thrashing, where enough events could be written to etcd and deleted before garbage collection occurs and cleans things up causing the keyspace to fill up. If you see `mvcc: database space exceeded` errors, in the etcd logs or Kubernetes API server logs, you should consider increasing the keyspace size. This can be accomplished by setting the [quota-backend-bytes](https://etcd.io/docs/v3.5/op-guide/maintenance/#space-quota) setting on the etcd servers.
 
-### Example: This snippet of the RKE cluster.yml file increases the keyspace size to 5GB
+## Example: This Snippet of the RKE Cluster.yml file Increases the Keyspace Size to 5GB
 
 ```yaml
 # RKE cluster.yml
@@ -21,7 +21,7 @@ services:
       quota-backend-bytes: 5368709120
 ```
 
-## Scaling etcd disk performance
+## Scaling etcd Disk Performance
 
 You can follow the recommendations from [the etcd docs](https://etcd.io/docs/v3.5/tuning/#disk) on how to tune the disk priority on the host.
 
