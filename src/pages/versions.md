@@ -21,7 +21,7 @@ Here you can find links to supporting documentation for the current released ver
     <td><b>v2.9.1</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.9">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.9.1">Release Notes</a></td>
-    <td><center>N/A</center></td>
+    <td><center>https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-9-1/</center></td>
     <td><center>&#10003;</center></td>
     <td><center>&#10003;</center></td>
   </tr>
@@ -42,7 +42,7 @@ Here you can find links to supporting documentation for the current released ver
     <td><b>v2.8.7</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.8">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.8.7">Release Notes</a></td>
-    <td><center>N/A</center></td>
+    <td><center>https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-8-7/</center></td>
     <td><center>&#10003;</center></td>
     <td><center>N/A</center></td>
   </tr>
