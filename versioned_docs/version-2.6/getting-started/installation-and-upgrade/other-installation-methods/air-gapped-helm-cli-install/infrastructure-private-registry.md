@@ -25,7 +25,7 @@ We recommend setting up the following infrastructure for a high-availability ins
 - **A DNS record** to map a URL to the load balancer. This will become the Rancher server URL, and downstream Kubernetes clusters will need to reach it.
 - **A private Docker registry** to distribute Docker images to your machines.
 
-### 1. Set up Linux Nodes
+## 1. Set up Linux Nodes
 
 These hosts will be disconnected from the internet, but require being able to connect with your private registry.
 
@@ -33,7 +33,7 @@ Make sure that your nodes fulfill the general installation requirements for [OS,
 
 For an example of one way to set up Linux nodes, refer to this [tutorial](../../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md) for setting up nodes as instances in Amazon EC2.
 
-### 2. Set up External Datastore
+## 2. Set up External Datastore
 
 The ability to run Kubernetes using a datastore other than etcd sets K3s apart from other Kubernetes distributions. This feature provides flexibility to Kubernetes operators. The available options allow you to select a datastore that best fits your use case.
 
@@ -49,7 +49,7 @@ For an example of one way to set up the database, refer to this [tutorial](../..
 
 For the complete list of options that are available for configuring a K3s cluster datastore, refer to the [K3s documentation.](https://rancher.com/docs/k3s/latest/en/installation/datastore/)
 
-### 3. Set up the Load Balancer
+## 3. Set up the Load Balancer
 
 You will also need to set up a load balancer to direct traffic to the Rancher replica on both nodes. That will prevent an outage of any single node from taking down communications to the Rancher management server.
 
@@ -72,7 +72,7 @@ Do not use this load balancer (i.e, the `local` cluster Ingress) to load balance
 
 :::
 
-### 4. Set up the DNS Record
+## 4. Set up the DNS Record
 
 Once you have set up your load balancer, you will need to create a DNS record to send traffic to this load balancer.
 
@@ -82,7 +82,7 @@ You will need to specify this hostname in a later step when you install Rancher,
 
 For a how-to guide for setting up a DNS record to route domain traffic to an Amazon ELB load balancer, refer to the [official AWS documentation.](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer)
 
-### 5. Set up a Private Docker Registry
+## 5. Set up a Private Docker Registry
 
 Rancher supports air gap installs using a private registry. You must have your own private registry or other means of distributing Docker images to your machines.
 
@@ -102,13 +102,13 @@ To install the Rancher management server on a high-availability RKE cluster, we 
 
 These nodes must be in the same region/data center. You may place these servers in separate availability zones.
 
-### Why three nodes?
+## Why Three Nodes?
 
 In an RKE cluster, Rancher server data is stored on etcd. This etcd database runs on all three nodes.
 
 The etcd database requires an odd number of nodes so that it can always elect a leader with a majority of the etcd cluster. If the etcd database cannot elect a leader, etcd can suffer from [split brain](https://www.quora.com/What-is-split-brain-in-distributed-systems), requiring the cluster to be restored from backup. If one of the three etcd nodes fails, the two remaining nodes can elect a leader because they have the majority of the total number of etcd nodes.
 
-### 1. Set up Linux Nodes
+## 1. Set up Linux Nodes
 
 These hosts will be disconnected from the internet, but require being able to connect with your private registry.
 
@@ -116,7 +116,7 @@ Make sure that your nodes fulfill the general installation requirements for [OS,
 
 For an example of one way to set up Linux nodes, refer to this [tutorial](../../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md) for setting up nodes as instances in Amazon EC2.
 
-### 2. Set up the Load Balancer
+## 2. Set up the Load Balancer
 
 You will also need to set up a load balancer to direct traffic to the Rancher replica on both nodes. That will prevent an outage of any single node from taking down communications to the Rancher management server.
 
@@ -139,7 +139,7 @@ Do not use this load balancer (i.e, the `local` cluster Ingress) to load balance
 
 :::
 
-### 3. Set up the DNS Record
+## 3. Set up the DNS Record
 
 Once you have set up your load balancer, you will need to create a DNS record to send traffic to this load balancer.
 
@@ -149,7 +149,7 @@ You will need to specify this hostname in a later step when you install Rancher,
 
 For a how-to guide for setting up a DNS record to route domain traffic to an Amazon ELB load balancer, refer to the [official AWS documentation.](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer)
 
-### 4. Set up a Private Docker Registry
+## 4. Set up a Private Docker Registry
 
 Rancher supports air gap installs using a secure Docker private registry. You must have your own private registry or other means of distributing Docker images to your machines.
 
@@ -168,7 +168,7 @@ If you need help with creating a private registry, please refer to the [official
 
 :::
 
-### 1. Set up a Linux Node
+## 1. Set up a Linux Node
 
 This host will be disconnected from the Internet, but needs to be able to connect to your private registry.
 
@@ -176,7 +176,7 @@ Make sure that your node fulfills the general installation requirements for [OS,
 
 For an example of one way to set up Linux nodes, refer to this [tutorial](../../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md) for setting up nodes as instances in Amazon EC2.
 
-### 2. Set up a Private Docker Registry
+## 2. Set up a Private Docker Registry
 
 Rancher supports air gap installs using a Docker private registry on your bastion server. You must have your own private registry or other means of distributing Docker images to your machines.
 
@@ -185,4 +185,4 @@ If you need help with creating a private registry, please refer to the [official
 </TabItem>
 </Tabs>
 
-### [Next: Collect and Publish Images to your Private Registry](publish-images.md)
+## [Next: Collect and Publish Images to your Private Registry](publish-images.md)
