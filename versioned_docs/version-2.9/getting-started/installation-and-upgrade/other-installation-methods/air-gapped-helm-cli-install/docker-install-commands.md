@@ -28,7 +28,7 @@ For security purposes, SSL (Secure Sockets Layer) is required when using Rancher
 
 Choose from the following options:
 
-### Option A: Default Self-Signed Certificate
+## Option A: Default Self-Signed Certificate
 
 <details id="option-a">
   <summary>Click to expand</summary>
@@ -55,7 +55,7 @@ docker run -d --restart=unless-stopped \
 
 </details>
 
-### Option B: Bring Your Own Certificate: Self-Signed
+## Option B: Bring Your Own Certificate: Self-Signed
 
 <details id="option-b">
   <summary>Click to expand</summary>
@@ -98,7 +98,7 @@ docker run -d --restart=unless-stopped \
 
 </details>
 
-### Option C: Bring Your Own Certificate: Signed by Recognized CA
+## Option C: Bring Your Own Certificate: Signed by Recognized CA
 
 <details id="option-c">
   <summary>Click to expand</summary>
