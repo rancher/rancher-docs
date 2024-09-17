@@ -8,7 +8,7 @@ title: 集群配置
 
 使用 Rancher 配置 Kubernetes 集群后，你仍然可以编辑集群的选项和设置。
 
-有关编辑集群成员资格的信息，请转至[此页面](../how-to-guides/new-user-guides/manage-clusters/access-clusters/add-users-to-clusters.md)。
+有关编辑集群成员资格的信息，请转至[此页面](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/add-users-to-clusters.md)。
 
 ### 集群配置参考
 

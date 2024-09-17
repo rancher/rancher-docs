@@ -73,7 +73,7 @@ Rancher 是使用 Kubernetes 的 [Helm](https://helm.sh/) 包管理器安装的�
 
 ### 1. 添加 Helm Chart 仓库
 
-执行 `helm repo add` 命令，以添加包含安装 Rancher 的 Chart 的 Helm Chart 仓库。有关如何选择仓库，以及哪个仓库最适合你的用例，请参见[选择 Rancher 版本](../getting-started/installation-and-upgrade/resources/choose-a-rancher-version.md)。
+执行 `helm repo add` 命令，以添加包含安装 Rancher 的 Chart 的 Helm Chart 仓库。有关如何选择仓库，以及哪个仓库最适合你的用例，请参见[选择 Rancher 版本](../resources/choose-a-rancher-version.md)。
 
 - Latest：建议用于试用最新功能
    ```
@@ -103,7 +103,7 @@ Rancher Management Server 默认需要 SSL/TLS 配置来保证访问的安全性
 
 :::note
 
-如果你想在外部终止 SSL/TLS，请参见[外部负载均衡器的 TLS 终止](../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md#外部-tls-终止)。
+如果你想在外部终止 SSL/TLS，请参见[外部负载均衡器的 TLS 终止](../installation-references/helm-chart-options.md#外部-tls-终止)。
 
 :::
 

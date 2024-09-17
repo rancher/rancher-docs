@@ -69,7 +69,7 @@ description: 要创建具有自定义节点的集群，你需要访问集群中�
 
 :::
 
-8. **可选**：点击**[显示高级选项](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents.md)**来指定注册节点时使用的 IP 地址，覆盖节点的主机名，或将[标签](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)或[污点](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)添加到节点。
+8. **可选**：点击**[显示高级选项](../../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents.md)**来指定注册节点时使用的 IP 地址，覆盖节点的主机名，或将[标签](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)或[污点](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)添加到节点。
 
 9. 将屏幕上显示的命令复制到剪贴板。
 

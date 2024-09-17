@@ -12,7 +12,7 @@ Fleet 是 Rancher 的一个独立项目，可以通过 Helm 安装在任何 Kube
 
 ## 架构
 
-有关 Fleet 如何运作的信息，请参阅[架构](./architecture)页面。
+有关 Fleet 如何运作的信息，请参阅[架构](./architecture.md)页面。
 
 ## 在 Rancher UI 中访问 Fleet
 
@@ -40,7 +40,7 @@ Fleet 预安装在 Rancher 中，并由 Rancher UI 中的**持续交付**选项�
 
 ## Windows 支持
 
-有关对具有 Windows 节点的集群的支持的详细信息，请参阅 [Windows 支持](./windows-support)页面。
+有关对具有 Windows 节点的集群的支持的详细信息，请参阅 [Windows 支持](./windows-support.md)页面。
 
 ## GitHub 仓库
 
@@ -48,7 +48,7 @@ Fleet Helm charts 可在[此处](https://github.com/rancher/fleet/releases)获�
 
 ## 在代理后使用 Fleet
 
-有关在代理后面使用 Fleet 的详细信息，请参阅[在代理后使用 Fleet](./use-fleet-behind-a-proxy) 页面。
+有关在代理后面使用 Fleet 的详细信息，请参阅[在代理后使用 Fleet](./use-fleet-behind-a-proxy.md) 页面。
 
 ## Helm Chart 依赖
 
@@ -58,7 +58,7 @@ git 仓库中的 Helm Chart 必须在 Chart 子目录中包含其依赖。 你�
 
 ## 故障排除
 
-- **已知问题**：Fleet gitrepos 的 clientSecretName 和 helmSecretName 密文不包含在 [backup-restore-operator](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher.md#1-install-the-rancher-backup-operator) 创建的备份或恢复中。一旦有永久的解决方案，我们将更新社区内容。
+- **已知问题**：Fleet gitrepos 的 clientSecretName 和 helmSecretName 密文不包含在 [backup-restore-operator](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher.md#1-安装-rancher-backup-operator) 创建的备份或恢复中。一旦有永久的解决方案，我们将更新社区内容。
 
 - **临时解决方法**：默认情况下，用户定义的密文不会在 Fleet 中备份。如果执行灾难恢复或将 Rancher 迁移到新集群，则有必要重新创建密文。要修改 ResourceSet 以包含要备份的额外资源，请参阅文档[此处](https://github.com/rancher/backup-restore-operator#user-flow)。
 
