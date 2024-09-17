@@ -28,7 +28,7 @@ Harvester 功能开关用于管理对 Rancher 中虚拟化管理（VM）页面�
 
 Harvester 允许通过 Harvester UI 上传和显示 `.ISO` 镜像，但 Rancher UI 是不支持的。这是因为 `.ISO` 镜像通常需要额外的设置，这会干扰干净的部署（即无需用户干预），并且它们通常不用于云环境。
 
-如需了解 Rancher 中主机驱动的更多详细信息，请单击[此处](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/about-provisioning-drivers#主机驱动)。
+如需了解 Rancher 中主机驱动的更多详细信息，请单击[此处](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/about-provisioning-drivers.md#主机驱动)。
 
 ### 端口要求
 
