@@ -21,7 +21,7 @@ The following changes were introduced to logging in Rancher v2.5:
 - We now support writing logs to multiple `Outputs`.
 - We now always collect Control Plane and etcd logs.
 
-### How the Logging Operator Works
+## How the Logging Operator Works
 
 The Logging operator automates the deployment and configuration of a Kubernetes logging pipeline. It deploys and configures a Fluent Bit DaemonSet on every node to collect container and application logs from the node file system.
 
