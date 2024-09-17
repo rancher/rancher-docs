@@ -13,9 +13,9 @@ Rancher 可以在 AOS (AHV) 中配置节点并在其上安装 Kubernetes。在 A
 
 Nutanix 集群可能由多组具有不同属性（例如内存或 vCPU 数量）的 VM 组成。这种分组允许对每个 Kubernetes 角色的节点大小进行细粒度控制。
 
-- [创建 Nutanix 集群](provision-kubernetes-clusters-in-aos.md#creating-a-nutanix-aos-cluster)
-- [配置存储](provision-kubernetes-clusters-in-aos.md)
+- [创建 Nutanix 集群](./provision-kubernetes-clusters-in-aos.md#1-创建节点模板)
+- [配置存储](./provision-kubernetes-clusters-in-aos.md)
 
 ## 创建 Nutanix 集群
 
-在[本节](provision-kubernetes-clusters-in-aos.md)中，你将学习如何使用 Rancher 在 Nutanix AOS 中安装 [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes 集群。
+在[本节](./provision-kubernetes-clusters-in-aos.md)中，你将学习如何使用 Rancher 在 Nutanix AOS 中安装 [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes 集群。

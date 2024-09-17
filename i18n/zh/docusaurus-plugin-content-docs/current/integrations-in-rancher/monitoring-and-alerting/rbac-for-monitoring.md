@@ -107,7 +107,7 @@ Monitoring 还会创建其他 `ClusterRole`，这些角色默认情况下不会�
 
 | 角色 | 用途 |
 | ------------------------------| ---------------------------|
-| monitoring-ui-view | <a id="monitoring-ui-view"></a>_自 Monitoring v2 14.5.100+ 起可用_ 此 ClusterRole 允许用户在 Rancher UI 中查看指定集群的指标图。这是通过授予对外部监控 UI 的只读访问权限来实现的。具有此角色的用户有权限列出 Prometheus、Alertmanager 和 Grafana 端点，并通过 Rancher 代理向 Prometheus、Grafana 和 Alertmanager UI 发出 GET 请求。 |
+| monitoring-ui-view | _自 Monitoring v2 14.5.100+ 起可用_ 此 ClusterRole 允许用户在 Rancher UI 中查看指定集群的指标图。这是通过授予对外部监控 UI 的只读访问权限来实现的。具有此角色的用户有权限列出 Prometheus、Alertmanager 和 Grafana 端点，并通过 Rancher 代理向 Prometheus、Grafana 和 Alertmanager UI 发出 GET 请求。 |
 
 ### 使用 kubectl 分配 Role 和 ClusterRole
 
@@ -203,7 +203,7 @@ Rancher 部署的默认角色（即 cluster-owner、cluster-member、project-own
 
 | Rancher 角色 | Kubernetes ClusterRole | 可用 Rancher 版本 | 可用 Monitoring V2 版本 |
 |--------------------------|-------------------------------|-------|------|
-| 查看 Monitoring\* | [monitoring-ui-view](#monitoring-ui-view) | 2.4.8+ | 9.4.204+ |
+| 查看 Monitoring\* | [monitoring-ui-view](#具有-rancher-权限的用户) | 2.4.8+ | 9.4.204+ |
 
 \* 如果某个用户绑定了 Rancher 的 **View Monitoring** 角色，该用户只有在有 UI 链接时才有权访问外部 Monitoring UI。要访问 Monitoring Pane 以获取这些链接，用户必须是至少一个项目的项目成员。
 

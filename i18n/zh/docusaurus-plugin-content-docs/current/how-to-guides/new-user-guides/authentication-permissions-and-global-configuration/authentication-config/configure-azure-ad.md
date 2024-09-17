@@ -43,7 +43,6 @@ Rancher 中的 Microsoft Graph API 流程正在不断发展。建议你使用最
    ![New App Registration](/img/new-app-registration.png)
 
    1. 输入 **Name**（例如 `Rancher`）。
-      <a id="3.2"></a>
 
    1. 在 **Supported account types** 中，选择 **Accounts in this organizational directory only (AzureADTest only - Single tenant)**。这对应于旧版应用注册选项。
 
@@ -260,7 +259,7 @@ Rancher 未测试也未完全支持自定义端点。
 
 #### 离线环境
 
-在离线环境中，由于 Graph Endpoint URL 正在更改，因此管理员需要确保其端点被[列入白名单](#3.2)。
+在离线环境中，由于 Graph Endpoint URL 正在更改，因此管理员需要确保其端点被[列入白名单](#1-在-azure-注册-rancher)。
 
 #### 回滚迁移
 
