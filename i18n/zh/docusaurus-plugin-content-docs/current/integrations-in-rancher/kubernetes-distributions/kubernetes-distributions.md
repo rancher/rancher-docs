@@ -13,7 +13,7 @@ K3s 是一款轻量级、完全兼容的 Kubernetes 发行版，专为一系列�
 ### K3s 与 Rancher
 
 - Rancher 允许在一系列平台上轻松配置 K3s，包括 Amazon EC2、DigitalOcean、Azure、vSphere 或现有服务器。
-- Kubernetes 集群的标准 Rancher 管理，包括所有概述[集群管理功能](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup#cluster-management-capabilities-by-cluster-type)。
+- Kubernetes 集群的标准 Rancher 管理，包括所有概述[集群管理功能](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md#不同类型集群的管理功能)。
 
 ## RKE2
 
@@ -31,4 +31,4 @@ RKE2 的主要特性包括:
 ## RKE2 与 Rancher
 
 - Rancher 允许在一系列平台上轻松配置 RKE2，包括 Amazon EC2、DigitalOcean、Azure、vSphere 或现有服务器。
-- Kubernetes 集群的标准 Rancher 管理，包括所有概述[集群管理功能](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup#cluster-management-capabilities-by-cluster-type)。
+- Kubernetes 集群的标准 Rancher 管理，包括所有概述[集群管理功能](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md#不同类型集群的管理功能)。
