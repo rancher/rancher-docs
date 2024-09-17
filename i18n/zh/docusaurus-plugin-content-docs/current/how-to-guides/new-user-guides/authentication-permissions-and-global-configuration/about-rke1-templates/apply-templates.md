@@ -13,7 +13,7 @@ RKE 模板可以应用于新集群。
 
 ### 使用 RKE 模板创建集群
 
-要使用 RKE 模板添加[由基础设施提供商托管](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)的集群，请按照以下步骤操作：
+要使用 RKE 模板添加[由基础设施提供商托管](../../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)的集群，请按照以下步骤操作：
 
 1. 在左上角，单击 **☰ > 集群管理**。
 1. 在**集群**页面上，单击**创建**并选择基础设施提供商。
@@ -27,7 +27,7 @@ RKE 模板可以应用于新集群。
 
 模板所有者创建 RKE 模板时，每个设置在 Rancher UI 中都有一个开关，指示用户是否可以覆盖该设置。
 
-- 如果某个设置允许用户覆盖，你可以通过[编辑集群](../../../../pages-for-subheaders/cluster-configuration.md)来更新集群中的设置。
+- 如果某个设置允许用户覆盖，你可以通过[编辑集群](../../../../reference-guides/cluster-configuration/cluster-configuration.md)来更新集群中的设置。
 - 如果该开关处于关闭状态，则除非集群所有者创建了允许你覆盖这些设置的模板修订版，否则你无法更改这些设置。如果你无法更改某些设置，则需要联系模板所有者以获取模板的新修订版。
 
 如果集群是使用 RKE 模板创建的，你可以编辑集群，来将集群更新为模板的新版本。

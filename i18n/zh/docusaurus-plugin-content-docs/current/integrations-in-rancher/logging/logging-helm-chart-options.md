@@ -41,7 +41,7 @@ Logging v2 已在 RHEL/CentOS 7 和 8 上使用 SELinux 进行了测试。
 
 [安全增强型 Linux (SELinux)](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) 是对 Linux 的安全增强。被政府机构使用之后，SELinux 已成为行业标准，并在 CentOS 7 和 8 上默认启用。
 
-要配合使用 Logging V2 与 SELinux，我们建议你根据[此说明](../../pages-for-subheaders/selinux-rpm.md)安装 `rancher-selinux` RPM。
+要配合使用 Logging V2 与 SELinux，我们建议你根据[此说明](../../reference-guides/rancher-security/selinux-rpm/selinux-rpm.md)安装 `rancher-selinux` RPM。
 
 然后，在安装 Logging 应用程序时，在 `values.yaml` 中将 `global.seLinux.enabled` 更改为 `true`，使 Chart 支持 SELinux。
 

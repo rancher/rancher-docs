@@ -34,14 +34,14 @@ Kubernetes 支持由同一个物理集群支持的多个虚拟集群。这些虚
 
 你可以将以下资源直接分配给命名空间：
 
-- [工作负载](../../../pages-for-subheaders/workloads-and-pods.md)
-- [负载均衡器/Ingress](../../../pages-for-subheaders/load-balancer-and-ingress-controller.md)
-- [服务发现记录](../../new-user-guides/kubernetes-resources-setup/create-services.md)
-- [持久卷声明](../../../pages-for-subheaders/create-kubernetes-persistent-storage.md)
-- [证书](../../new-user-guides/kubernetes-resources-setup/encrypt-http-communication.md)
-- [ConfigMap](../../new-user-guides/kubernetes-resources-setup/configmaps.md)
-- [镜像仓库](../../new-user-guides/kubernetes-resources-setup/kubernetes-and-docker-registries.md)
-- [密文](../../new-user-guides/kubernetes-resources-setup/secrets.md)
+- [工作负载](../kubernetes-resources-setup/workloads-and-pods/workloads-and-pods.md)
+- [负载均衡器/Ingress](../kubernetes-resources-setup/load-balancer-and-ingress-controller/load-balancer-and-ingress-controller.md)
+- [服务发现记录](../kubernetes-resources-setup/create-services.md)
+- [持久卷声明](../manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md)
+- [证书](../kubernetes-resources-setup/encrypt-http-communication.md)
+- [ConfigMap](../kubernetes-resources-setup/configmaps.md)
+- [镜像仓库](../kubernetes-resources-setup/kubernetes-and-docker-registries.md)
+- [密文](../kubernetes-resources-setup/secrets.md)
 
 为了在 vanilla Kubernetes 集群中管理权限，集群管理员要为每个命名空间配置基于角色的访问策略。Rancher 在项目级别上分配用户权限，项目中的命名空间会自动继承项目的权限。
 
@@ -176,7 +176,7 @@ Rancher 在 Kubernetes 之上进行了扩展，除了集群级别之外，还允
 1. 在**资源配额**选项卡中，单击**添加资源**。
 1. 选择一个**资源类型**。有关详细信息，请参阅[资源配额](projects-and-namespaces.md)。
 1. 输入**项目限制**和**命名空间默认限制**的值。
-1. **可选**：指定**容器默认资源限制**，这将应用于项目中启动的所有容器。如果资源配额设置了 CPU 或内存限制，则建议使用该参数。可以在单个命名空间或容器级别上覆盖它。有关详细信息，请参阅[容器默认资源限制](../../../pages-for-subheaders/manage-project-resource-quotas.md)。
+1. **可选**：指定**容器默认资源限制**，这将应用于项目中启动的所有容器。如果资源配额设置了 CPU 或内存限制，则建议使用该参数。可以在单个命名空间或容器级别上覆盖它。有关详细信息，请参阅[容器默认资源限制](../../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md)。
 1. 单击**创建**。
 
 **结果**：项目已创建。你可以从集群的**项目/命名空间**视图中查看它。

@@ -4,7 +4,7 @@ title: 持续交付
 
 Rancher 中预装的 [Fleet](../../../integrations-in-rancher/fleet/fleet.md) 无法完全禁用。但是，你可以使用 `continuous-delivery` 功能开关来禁用 GitOps 持续交付的 Fleet 功能。
 
-如需启用或禁用此功能，请参见[启用实验功能主页](../../../pages-for-subheaders/enable-experimental-features.md)中的说明。
+如需启用或禁用此功能，请参见[启用实验功能主页](./enable-experimental-features.md)中的说明。
 
 | 环境变量键 | 默认值 | 描述 |
 ---|---|---

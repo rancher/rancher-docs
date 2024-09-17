@@ -19,11 +19,11 @@ kubeconfig 文件及其内容特定于各个集群。你可以从 Rancher 的**�
 
 下载 kubeconfig 文件后，你将能够使用 kubeconfig 文件及其 Kubernetes [上下文](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-context-and-configuration)访问下游集群。
 
-如果管理员[关闭了 kubeconfig 令牌生成](../../../../reference-guides/about-the-api/api-tokens.md#在生成的-kubeconfig-中禁用令牌)，则 kubeconfig 文件要求 [Rancher CLI](./authorized-cluster-endpoint.md) 存在于你的 PATH 中。
+如果管理员[关闭了 kubeconfig 令牌生成](../../../../api/api-tokens.md#在生成的-kubeconfig-中禁用令牌)，则 kubeconfig 文件要求 [Rancher CLI](./authorized-cluster-endpoint.md) 存在于你的 PATH 中。
 
 ### RKE 集群的两种身份验证方法
 
-如果集群不是 [RKE 集群](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)，kubeconfig 文件只允许你以一种方式访问​​集群，即通过 Rancher Server 进行身份验证，然后 Rancher 允许你在集群上运行 kubectl 命令。
+如果集群不是 [RKE 集群](../../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)，kubeconfig 文件只允许你以一种方式访问​​集群，即通过 Rancher Server 进行身份验证，然后 Rancher 允许你在集群上运行 kubectl 命令。
 
 对于 RKE 集群，kubeconfig 文件允许你通过两种方式进行身份验证：
 

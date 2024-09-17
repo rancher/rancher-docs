@@ -4,7 +4,7 @@ title: 添加 Pod 安全策略
 
 :::note 先决条件：
 
-以下选项仅适用于[使用 RKE 启动的集群](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)。
+以下选项仅适用于[使用 RKE 启动的集群](../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)。
 
 :::
 
@@ -18,7 +18,7 @@ title: 添加 Pod 安全策略
 
    :::note
 
-   此选项仅适用于[由 RKE 配置的集群](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)。
+   此选项仅适用于[由 RKE 配置的集群](../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)。
 
    :::
 

@@ -26,7 +26,7 @@ title: 创建和修改 RKE 模板
 1. 可选：通过将用户添加为成员，来[与其他用户或组共享模板](access-or-share-templates.md#与特定用户或组共享模板)。你还可以将模板公开，从而与 Rancher 中的所有人共享。
 1. 然后按照屏幕上的表格将集群配置参数保存为模板修订的一部分。可以将修订标记为此模板的默认值。
 
-**结果**：配置了具有一个修订版的 RKE 模板。你可以稍后在[配置 Rancher 启动的集群](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)时使用此 RKE 模板修订版。通过 RKE 模板管理集群后，集群无法解除与模板的绑定，并且无法取消选中**使用现有 RKE 模板和修订版**。
+**结果**：配置了具有一个修订版的 RKE 模板。你可以稍后在[配置 Rancher 启动的集群](../../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)时使用此 RKE 模板修订版。通过 RKE 模板管理集群后，集群无法解除与模板的绑定，并且无法取消选中**使用现有 RKE 模板和修订版**。
 
 ### 更新模板
 

@@ -8,14 +8,14 @@ title: 命名空间
 
 可以直接分配给命名空间的资源包括：
 
-- [工作负载](../../pages-for-subheaders/workloads-and-pods.md)
-- [负载均衡器/Ingress](../../pages-for-subheaders/load-balancer-and-ingress-controller.md)
-- [服务发现记录](kubernetes-resources-setup/create-services.md)
-- [持久卷声明](../../pages-for-subheaders/create-kubernetes-persistent-storage.md)
-- [证书](kubernetes-resources-setup/encrypt-http-communication.md)
-- [ConfigMap](kubernetes-resources-setup/configmaps.md)
-- [镜像仓库](kubernetes-resources-setup/kubernetes-and-docker-registries.md)
-- [密文](kubernetes-resources-setup/secrets.md)
+- [工作负载](./kubernetes-resources-setup/workloads-and-pods/workloads-and-pods.md)
+- [负载均衡器/Ingress](./kubernetes-resources-setup/load-balancer-and-ingress-controller/load-balancer-and-ingress-controller.md)
+- [服务发现记录](./kubernetes-resources-setup/create-services.md)
+- [持久卷声明](./manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md)
+- [证书](./kubernetes-resources-setup/encrypt-http-communication.md)
+- [ConfigMap](./kubernetes-resources-setup/configmaps.md)
+- [镜像仓库](./kubernetes-resources-setup/kubernetes-and-docker-registries.md)
+- [密文](./kubernetes-resources-setup/secrets.md)
 
 为了在 vanilla Kubernetes 集群中管理权限，集群管理员要为每个命名空间配置基于角色的访问策略。Rancher 在项目级别上分配用户权限，项目中的命名空间会自动继承项目的权限。
 
@@ -40,7 +40,7 @@ title: 命名空间
 1. 单击**集群 > 项目/命名空间**。
 1. 转到要添加命名空间的项目，并单击**创建命名空间**。或者，你也可以转到**不在项目内**以创建不与项目关联的命名空间。
 
-1. **可选**：如果你的项目具有有效的[资源配额](../../pages-for-subheaders/manage-project-resource-quotas.md)，你可以覆盖默认资源**限制**（限制命名空间可以使用的资源）。
+1. **可选**：如果你的项目具有有效的[资源配额](../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md)，你可以覆盖默认资源**限制**（限制命名空间可以使用的资源）。
 
 1. 输入**名称**，然后单击**创建**。
 
@@ -60,7 +60,7 @@ title: 命名空间
    :::note 注意事项：
 
    - 不要移动 `System` 项目中的命名空间。移动命名空间可能会对集群网络产生不利影响。
-   - 你不能将命名空间移动到已配置[资源配额](../../pages-for-subheaders/manage-project-resource-quotas.md)的项目中。
+   - 你不能将命名空间移动到已配置[资源配额](../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md)的项目中。
    - 如果你将命名空间从已设置配额的项目移动到未设置配额的项目，则会删除该命名空间的配额。
 
 1. 为新命名空间选择一个新项目，然后单击**移动**。你也可以选择**无**，从而将命名空间从所有项目中移除。

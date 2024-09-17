@@ -2,7 +2,7 @@
 title: 在 Amazon EC2 中配置节点
 ---
 
-在本教程中，你将学习一种为 Rancher Mangement Server 创建 Linux 节点的方法。这些节点将满足[操作系统、Docker、硬件和网络的要求](../../../pages-for-subheaders/installation-requirements.md)。
+在本教程中，你将学习一种为 Rancher Mangement Server 创建 Linux 节点的方法。这些节点将满足[操作系统、Docker、硬件和网络的要求](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md)。
 
 如果 Rancher Server 安装在 RKE Kubernetes 集群上，你需要配置三个实例。
 
@@ -12,8 +12,8 @@ title: 在 Amazon EC2 中配置节点
 
 ### 1. 准备工作（可选）
 
-- **创建 IAM 角色**：要允许 Rancher 操作 AWS 资源，例如创建新存储或新节点，你需要将 Amazon 配置为云提供商。要在 EC2 上设置云提供商，你需要进行几个操作，其中包括为 Rancher Server 节点设置 IAM 角色。有关设置云提供商的详情，请参见[本页](../../../pages-for-subheaders/set-up-cloud-providers.md)。
-- **创建安全组**：我们建议为 Rancher 节点设置一个符合 [Rancher 节点端口要求](../../../pages-for-subheaders/installation-requirements.md#端口要求)的安全组。
+- **创建 IAM 角色**：要允许 Rancher 操作 AWS 资源，例如创建新存储或新节点，你需要将 Amazon 配置为云提供商。要在 EC2 上设置云提供商，你需要进行几个操作，其中包括为 Rancher Server 节点设置 IAM 角色。有关设置云提供商的详情，请参见[本页](../kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/set-up-cloud-providers.md)。
+- **创建安全组**：我们建议为 Rancher 节点设置一个符合 [Rancher 节点端口要求](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md#端口要求)的安全组。
 
 ### 2. 配置实例
 
@@ -26,7 +26,7 @@ title: 在 Amazon EC2 中配置节点
 1. 在**实例数量**字段中，输入实例数量。创建高可用 K3s 集群仅需要两个实例，而高可用 RKE 集群则需要三个实例。
 1. 可选：如果你为 Rancher 创建了一个 IAM 角色来操作 AWS 资源，请在 **IAM 角色**字段中选择新 IAM 角色。
 1. 分别点击**下一步：添加存储**，**下一步：添加标签**和**下一步：配置安全组**。
-1. 在**步骤 6：配置安全组**中，选择一个符合 Rancher 节点[端口要求](../../../pages-for-subheaders/installation-requirements.md#端口要求)的安全组。
+1. 在**步骤 6：配置安全组**中，选择一个符合 Rancher 节点[端口要求](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md#端口要求)的安全组。
 1. 点击**查看并启动**。
 1. 点击**启动**。
 1. 选择一个新的或现有的密钥对，用于之后连接到你的实例。如果使用现有密钥对，请确保你有访问私钥的权限。

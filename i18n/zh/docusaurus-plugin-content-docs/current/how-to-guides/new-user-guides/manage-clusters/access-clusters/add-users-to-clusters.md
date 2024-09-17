@@ -31,7 +31,7 @@ title: 将用户添加到集群
 
    如果配置了外部身份验证：
 
-   - 在你键入时，Rancher 会从你的[外部身份验证](../../../../pages-for-subheaders/authentication-config.md)源返回用户。
+   - 在你键入时，Rancher 会从你的[外部身份验证](../../authentication-permissions-and-global-configuration/authentication-config/authentication-config.md)源返回用户。
 
       :::note 使用 AD 但找不到你的用户？
 
@@ -43,7 +43,7 @@ title: 将用户添加到集群
 
       :::note
 
-      如果你以本地用户身份登录，外部用户不会显示在你的搜索结果中。有关详细信息，请参阅[外部身份验证配置和主体用户](../../../../pages-for-subheaders/authentication-config.md#外部身份验证配置和用户主体)。
+      如果你以本地用户身份登录，外部用户不会显示在你的搜索结果中。有关详细信息，请参阅[外部身份验证配置和主体用户](../../authentication-permissions-and-global-configuration/authentication-config/authentication-config.md#外部认证配置和用户主体)。
 
       :::
 

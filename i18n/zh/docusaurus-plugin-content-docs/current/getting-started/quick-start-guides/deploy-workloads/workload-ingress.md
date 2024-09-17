@@ -19,7 +19,7 @@ title: 部署带有 Ingress 的工作负载
 1. 点击 **Deployment**。
 1. 为工作负载设置**名称**。
 1. 在**容器镜像**字段中，输入 `rancher/hello-world`。注意区分大小写。
-1. 在 `Service Type` 点击 **Add Port** 和 `Cluster IP`，并在 **Private Container Port** 字段中输入`80`。你可以将 `Name` 留空或指定名称。通过添加端口，你可以访问集群内外的应用。有关详细信息，请参阅 [Service](../../../pages-for-subheaders/workloads-and-pods.md#services)。
+1. 在 `Service Type` 点击 **Add Port** 和 `Cluster IP`，并在 **Private Container Port** 字段中输入`80`。你可以将 `Name` 留空或指定名称。通过添加端口，你可以访问集群内外的应用。有关详细信息，请参阅 [Service](../../../how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/workloads-and-pods.md#services)。
 1. 单击**创建**。
 
 **结果**：

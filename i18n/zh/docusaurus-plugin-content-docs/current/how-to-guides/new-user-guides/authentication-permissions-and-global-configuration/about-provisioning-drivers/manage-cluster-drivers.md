@@ -1,8 +1,8 @@
 ---
 title: 集群驱动
 ---
-
-集群驱动用于在[托管 Kubernetes 提供商](../../../../pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers.md)（例如 Google GKE）中创建集群。创建集群时可以显示的集群驱动，是由集群驱动的状态定义的。只有 `active` 集群驱动将作为创建集群的选项显示。默认情况下，Rancher 与多个现有的云提供商集群驱动打包在一起，但你也可以将自定义集群驱动添加到 Rancher。
+docs/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/set-up-clusters-from-hosted-kubernetes-providers.md
+集群驱动用于在[托管 Kubernetes 提供商](../../kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/set-up-clusters-from-hosted-kubernetes-providers.md)（例如 Google GKE）中创建集群。创建集群时可以显示的集群驱动，是由集群驱动的状态定义的。只有 `active` 集群驱动将作为创建集群的选项显示。默认情况下，Rancher 与多个现有的云提供商集群驱动打包在一起，但你也可以将自定义集群驱动添加到 Rancher。
 
 如果你不想向用户显示特定的集群驱动，你可以在 Rancher 中停用这些集群驱动，它们将不会作为创建集群的选项出现。
 
