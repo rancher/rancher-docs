@@ -12,7 +12,7 @@ Make sure you configured the correct kubeconfig (for example, `export KUBECONFIG
 
 Before running the DNS checks, check the [default DNS provider](../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#default-dns-provider) for your cluster and make sure that [the overlay network is functioning correctly](networking.md#check-if-overlay-network-is-functioning-correctly) as this can also be the reason why DNS resolution (partly) fails.
 
-### Check if DNS pods are running
+## Check if DNS pods are running
 
 ```
 kubectl -n kube-system get pods -l k8s-app=kube-dns
@@ -30,7 +30,7 @@ NAME                        READY   STATUS    RESTARTS   AGE
 kube-dns-5fd74c7488-h6f7n   3/3     Running   0          4m13s
 ```
 
-### Check if the DNS service is present with the correct cluster-ip
+## Check if the DNS service is present with the correct cluster-ip
 
 ```
 kubectl -n kube-system get svc -l k8s-app=kube-dns
@@ -41,7 +41,7 @@ NAME               TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)         AGE
 service/kube-dns   ClusterIP   10.43.0.10   <none>        53/UDP,53/TCP   4m13s
 ```
 
-### Check if domain names are resolving
+## Check if domain names are resolving
 
 Check if internal cluster names are resolving (in this example, `kubernetes.default`), the IP shown after `Server:` should be the same as the `CLUSTER-IP` from the `kube-dns` service.
 
@@ -132,15 +132,15 @@ command terminated with exit code 1
 
 Cleanup the alpine DaemonSet by running `kubectl delete ds/dnstest`.
 
-### CoreDNS specific
+## CoreDNS specific
 
-#### Check CoreDNS logging
+### Check CoreDNS logging
 
 ```
 kubectl -n kube-system logs -l k8s-app=kube-dns
 ```
 
-#### Check configuration
+### Check configuration
 
 CoreDNS configuration is stored in the configmap `coredns` in the `kube-system` namespace.
 
@@ -148,7 +148,7 @@ CoreDNS configuration is stored in the configmap `coredns` in the `kube-system` 
 kubectl -n kube-system get configmap coredns -o go-template={{.data.Corefile}}
 ```
 
-#### Check upstream nameservers in resolv.conf
+### Check upstream nameservers in resolv.conf
 
 By default, the configured nameservers on the host (in `/etc/resolv.conf`) will be used as upstream nameservers for CoreDNS. You can check this file on the host or run the following Pod with `dnsPolicy` set to `Default`, which will inherit the `/etc/resolv.conf` from the host it is running on.
 
@@ -156,7 +156,7 @@ By default, the configured nameservers on the host (in `/etc/resolv.conf`) will 
 kubectl run -i --restart=Never --rm test-${RANDOM} --image=ubuntu --overrides='{"kind":"Pod", "apiVersion":"v1", "spec": {"dnsPolicy":"Default"}}' -- sh -c 'cat /etc/resolv.conf'
 ```
 
-#### Enable query logging
+### Enable query logging
 
 Enabling query logging can be done by enabling the [log plugin](https://coredns.io/plugins/log/) in the Corefile configuration in the configmap `coredns`. You can do so by using `kubectl -n kube-system edit configmap coredns` or use the command below to replace the configuration in place:
 
@@ -166,9 +166,9 @@ kubectl get configmap -n kube-system coredns -o json | sed -e 's_loadbalance_log
 
 All queries will now be logged and can be checked using the command in [Check CoreDNS logging](#check-coredns-logging).
 
-### kube-dns specific
+## kube-dns specific
 
-#### Check upstream nameservers in kubedns container
+### Check upstream nameservers in kubedns container
 
 By default, the configured nameservers on the host (in `/etc/resolv.conf`) will be used as upstream nameservers for kube-dns. Sometimes the host will run a local caching DNS nameserver, which means the address in `/etc/resolv.conf` will point to an address in the loopback range (`127.0.0.0/8`) which will be unreachable by the container. In case of Ubuntu 18.04, this is done by `systemd-resolved`. We detect if `systemd-resolved` is running, and will automatically use the `/etc/resolv.conf` file with the correct upstream nameservers (which is located at `/run/systemd/resolve/resolv.conf`).
 
