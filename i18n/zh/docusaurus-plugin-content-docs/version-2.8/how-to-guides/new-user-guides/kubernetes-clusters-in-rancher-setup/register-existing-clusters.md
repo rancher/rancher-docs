@@ -13,7 +13,7 @@ Rancher 管理注册集群的范围取决于集群的类型。详情请参见[�
 
 已注册的 RKE Kubernetes 集群必须具有所有三个节点角色，分别是 etcd、controlplane 和 worker。只有 controlplane 组件的集群无法在 Rancher 中注册。
 
-有关 RKE 节点角色的更多信息，请参阅[最佳实践](../../../pages-for-subheaders/checklist-for-production-ready-clusters.md#集群架构)。
+有关 RKE 节点角色的更多信息，请参阅[最佳实践](./checklist-for-production-ready-clusters/checklist-for-production-ready-clusters.md#集群架构)。
 
 ### 权限
 
@@ -106,9 +106,9 @@ Rancher 管理注册集群的范围取决于集群的类型。
 注册集群后，集群所有者可以：
 
 - 通过 RBAC [管理集群访问](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)
-- 启用[Monitoring、告警和 Notifiers](../../../pages-for-subheaders/monitoring-and-alerting.md)
-- 启用 [Logging](../../../pages-for-subheaders/logging.md)
-- 启用 [Istio](../../../pages-for-subheaders/istio.md)
+- 启用[Monitoring、告警和 Notifiers](../../../integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md)
+- 启用 [Logging](../../../integrations-in-rancher/logging/logging.md)
+- 启用 [Istio](../../../integrations-in-rancher/istio/istio.md)
 - 管理项目和工作负载
 
 ### 已注册 RKE2 和 K3s 集群的附加功能
@@ -133,7 +133,7 @@ Rancher 处理注册的 EKS、AKS 或 GKE 集群的方式与处理在 Rancher �
 
 如果你在 Rancher 中创建 EKS、AKS 或 GKE 集群，然后将其删除，Rancher 会销毁该集群。通过 Rancher 删除已注册的集群时，Rancher Server 会_断开_与集群的连接。该集群仍然存在，只是它不再在 Rancher 中。你仍然可以像注册前一样访问已注销的集群。
 
-有关可用于管理已注册集群的功能，请参阅[按集群类型划分的集群管理功能](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)。
+有关可用于管理已注册集群的功能，请参阅[按集群类型划分的集群管理功能](../kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md)。
 
 ## 配置 RKE2 和 K3s 集群升级
 

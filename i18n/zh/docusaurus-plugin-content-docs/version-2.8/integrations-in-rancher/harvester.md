@@ -6,7 +6,7 @@ Harvester 是 Rancher 2.6.1 新增的功能，[Harvester](https://docs.harvester
 
 ### 功能开关
 
-你可以使用 Harvester 的功能开关来管理 Harvester 在 Rancher 虚拟化管理页面的访问，用户可以在该页面直接导航到 Harvester 集群并访问 Harvester UI。Harvester 的功能开关是默认启用的。如需了解 Rancher 中功能开关的更多详细信息，请单击[此处](../pages-for-subheaders/enable-experimental-features.md)。
+你可以使用 Harvester 的功能开关来管理 Harvester 在 Rancher 虚拟化管理页面的访问，用户可以在该页面直接导航到 Harvester 集群并访问 Harvester UI。Harvester 的功能开关是默认启用的。如需了解 Rancher 中功能开关的更多详细信息，请单击[此处](../how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features.md)。
 
 要导航到 Harvester 集群，请单击 **☰ > 虚拟化管理**。在 **Harvester 集群**页面中，单击集群以转到该 Harvester 集群的视图。
 
@@ -24,7 +24,7 @@ Harvester 是 Rancher 2.6.1 新增的功能，[Harvester](https://docs.harvester
 
 Harvester 允许通过 Harvester UI 上传和显示 `.ISO` 镜像，但 Rancher UI 不支持。这是因为 `.ISO` 镜像通常需要额外的设置，这会干扰干净的部署（即无需用户干预），并且它们通常不用于云环境。
 
-如需了解 Rancher 中主机驱动的更多详细信息，请单击[此处](../pages-for-subheaders/about-provisioning-drivers.md#主机驱动)。
+如需了解 Rancher 中主机驱动的更多详细信息，请单击[此处](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/about-provisioning-drivers.md#主机驱动)。
 
 ### 端口要求
 

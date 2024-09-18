@@ -10,14 +10,14 @@ title: 7 层 NGINX 负载均衡器上的 TLS 终止（Docker 安装）
 
 ## 操作系统，Docker，硬件和网络要求
 
-请确保你的节点满足常规的[安装要求](../../pages-for-subheaders/installation-requirements.md)。
+请确保你的节点满足常规的[安装要求](../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md)。
 
 ## 安装概要
 
 
 ## 1. 配置 Linux 主机
 
-根据我们的[要求](../../pages-for-subheaders/installation-requirements.md)配置一个 Linux 主机来启动 Rancher Server。
+根据我们的[要求](../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md)配置一个 Linux 主机来启动 Rancher Server。
 
 ## 2. 选择一个 SSL 选项并安装 Rancher
 
@@ -166,7 +166,7 @@ http {
 ## 后续操作
 
 - **推荐**：检查单节点[备份](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-docker-installed-rancher.md)和[恢复](../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-docker-installed-rancher.md)。你可能暂时没有需要备份的数据，但是我们建议你在常规使用 Rancher 后创建备份。
-- 创建 Kubernetes 集群：[配置 Kubernetes 集群](../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)。
+- 创建 Kubernetes 集群：[配置 Kubernetes 集群](../new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md)。
 
 <br/>
 
@@ -188,7 +188,7 @@ http {
 
 ### 离线环境
 
-如果你访问此页面是为了完成[离线安装](../../pages-for-subheaders/air-gapped-helm-cli-install.md)，则在运行安装命令时，先将你的私有镜像仓库 URL 附加到 Server 标志中。也就是说，在 `rancher/rancher:latest` 前面添加 `<REGISTRY.DOMAIN.COM:PORT>` 和私有镜像仓库 URL。
+如果你访问此页面是为了完成[离线安装](../../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/air-gapped-helm-cli-install.md)，则在运行安装命令时，先将你的私有镜像仓库 URL 附加到 Server 标志中。也就是说，在 `rancher/rancher:latest` 前面添加 `<REGISTRY.DOMAIN.COM:PORT>` 和私有镜像仓库 URL。
 
 **示例**：
 
@@ -208,7 +208,7 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-此操作需要 [privileged 访问](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)。
+此操作需要 [privileged 访问](../../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md#rancher-特权访问)。
 
 这个 7 层 NGINX 配置已经在 NGINX 1.13（Mainline）和 1.14（Stable）版本上进行了测试。
 

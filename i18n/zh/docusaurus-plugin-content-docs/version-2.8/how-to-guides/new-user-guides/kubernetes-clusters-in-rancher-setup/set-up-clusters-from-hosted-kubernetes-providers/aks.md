@@ -146,7 +146,7 @@ Rancher 可以通过以下两种方式之一连接到私有 AKS 集群。
 
 AKS 配置者可以在 Rancher 和提供商之间同步 AKS 集群的状态。有关其工作原理的技术说明，请参阅[同步](../../../../reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters.md)。
 
-有关配置刷新间隔的信息，请参阅[本节](../../../../pages-for-subheaders/gke-cluster-configuration.md#配置刷新间隔)。
+有关配置刷新间隔的信息，请参阅[本节](../../../../reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md#配置刷新间隔)。
 
 ## 以编程方式创建 AKS 集群
 

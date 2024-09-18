@@ -26,7 +26,7 @@ Cloud NAT 将[产生费用](https://cloud.google.com/nat/pricing)。
 
 :::
 
-如果要求限制节点的传入和传出流量，请按照离线安装说明，在集群所在的 VPC 上设置一个私有容器[镜像仓库](../../../../pages-for-subheaders/air-gapped-helm-cli-install.md)，从而允许集群节点访问和下载运行 cluster agent 所需的镜像。如果 controlplane 端点也是私有的，Rancher 将需要[直接访问](#直接访问)它。
+如果要求限制节点的传入和传出流量，请按照离线安装说明，在集群所在的 VPC 上设置一个私有容器[镜像仓库](../../../../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/air-gapped-helm-cli-install.md)，从而允许集群节点访问和下载运行 cluster agent 所需的镜像。如果 controlplane 端点也是私有的，Rancher 将需要[直接访问](#直接访问)它。
 
 ### 私有 controlplane 端点
 

@@ -13,7 +13,7 @@ title: AKS 集群配置参考
 
 在 Rancher UI 中配置 AKS 集群时，无法禁用 RBAC。如果在 AKS 中为集群禁用了 RBAC，则无法在 Rancher 中注册或导入集群。
 
-Rancher 可以使用与其他集群一样的方式为 AKS 集群配置成员角色。有关详细信息，请参阅 [RBAC](../../../pages-for-subheaders/manage-role-based-access-control-rbac.md)。
+Rancher 可以使用与其他集群一样的方式为 AKS 集群配置成员角色。有关详细信息，请参阅 [RBAC](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md)。
 
 ## 云凭证
 

@@ -9,11 +9,11 @@ title: 节点和节点池
 1. 找到要管理其节点的集群，然后单击行末尾的**浏览**按钮。
 1. 从左侧导航中选择**节点**。
 
-不同的集群配置[选项](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)对应不同的可用节点选项。
+不同的集群配置[选项](../kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md)对应不同的可用节点选项。
 
 :::note
 
-如果你想管理 _集群_ 而不是单个节点，请参阅[编辑集群](../../../pages-for-subheaders/cluster-configuration.md)。
+如果你想管理 _集群_ 而不是单个节点，请参阅[编辑集群](../../../reference-guides/cluster-configuration/cluster-configuration.md)。
 
 :::
 
@@ -32,9 +32,9 @@ title: 节点和节点池
 | [下载密钥](#通过-ssh-连接到由基础设施提供商托管的节点) | ✓ |                  |                     |                     |                    | 下载 SSH 密钥以通过 SSH 连接到节点。 |
 | [节点缩放](#扩缩节点) | ✓ |                  |                     | ✓ |                    | 向上或向下扩展节点池中的节点数。 |
 
-[1]: ../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md
-[2]: ../../../pages-for-subheaders/use-existing-nodes.md
-[3]: ../../../pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers.md
+[1]: ../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md
+[2]: ../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md
+[3]: ../kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/set-up-clusters-from-hosted-kubernetes-providers.md
 [4]: ../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md
 [5]: ../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md
 
@@ -43,17 +43,17 @@ title: 节点和节点池
 
 ### 由基础设施提供商托管的节点
 
-在[托管在基础设施提供商](../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)中的节点上配置由 Rancher 启动的 Kubernetes 集群时，你可以使用节点池。
+在[托管在基础设施提供商](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)中的节点上配置由 Rancher 启动的 Kubernetes 集群时，你可以使用节点池。
 
-如果节点池被编辑，通过[节点池选项](../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#节点池)配置的集群可以纵向扩容或缩容。
+如果节点池被编辑，通过[节点池选项](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#节点池)配置的集群可以纵向扩容或缩容。
 
-如果启用[节点自动替换功能](../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#节点自动替换)，节点池还可以自动维护在初始集群配置期间设置的节点规模。该规模决定了 Rancher 为集群维护的 active 节点的数量。
+如果启用[节点自动替换功能](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#节点自动替换)，节点池还可以自动维护在初始集群配置期间设置的节点规模。该规模决定了 Rancher 为集群维护的 active 节点的数量。
 
-Rancher 使用[节点模板](../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#节点模板)来替换节点池中的节点。每个节点模板都使用云提供商凭证来允许 Rancher 在基础设施提供商中设置节点。
+Rancher 使用[节点模板](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#节点模板)来替换节点池中的节点。每个节点模板都使用云提供商凭证来允许 Rancher 在基础设施提供商中设置节点。
 
 ### 由托管 Kubernetes 提供商配置的节点
 
-用于管理[由 Kubernetes 提供商托管](../../../pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers.md)的节点的选项在 Rancher 中有些限制。例如，你不能使用 Rancher UI 向上或向下缩放节点数量，而是需要直接编辑集群。
+用于管理[由 Kubernetes 提供商托管](../kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/set-up-clusters-from-hosted-kubernetes-providers.md)的节点的选项在 Rancher 中有些限制。例如，你不能使用 Rancher UI 向上或向下缩放节点数量，而是需要直接编辑集群。
 
 ### 注册节点
 
@@ -72,13 +72,13 @@ Rancher 使用[节点模板](../../../pages-for-subheaders/use-new-nodes-in-an-i
 
 ## 在 Rancher API 中查看节点
 
-选择此选项以查看节点的 [API 端点](../../../pages-for-subheaders/about-the-api.md)。
+选择此选项以查看节点的 [API 端点](../../../api/quickstart.md)。
 
 ## 删除节点
 
 使用 **Delete** 从云提供商中删除有缺陷的节点。
 
-当你删除有缺陷的节点时，如果该节点在节点池中并启用了[节点自动替换](../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#节点自动替换)，Rancher 可以自动将其替换为具有相同配置的节点。
+当你删除有缺陷的节点时，如果该节点在节点池中并启用了[节点自动替换](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#节点自动替换)，Rancher 可以自动将其替换为具有相同配置的节点。
 
 :::tip
 
@@ -88,11 +88,11 @@ Rancher 使用[节点模板](../../../pages-for-subheaders/use-new-nodes-in-an-i
 
 ## 扩缩节点
 
-对于由基础设施提供商托管的节点，你可以使用缩放控件来缩放每个[节点池](../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#节点池)中的节点数量。此选项不适用于其他集群类型。
+对于由基础设施提供商托管的节点，你可以使用缩放控件来缩放每个[节点池](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#节点池)中的节点数量。此选项不适用于其他集群类型。
 
 ## 通过 SSH 连接到由基础设施提供商托管的节点
 
-对于[由基础设施提供商托管的节点](../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)，你可以选择下载其 SSH 密钥，以便从桌面远程连接到它。
+对于[由基础设施提供商托管的节点](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)，你可以选择下载其 SSH 密钥，以便从桌面远程连接到它。
 
 1. 在左上角，单击 **☰ > 集群管理**。
 1. 在**集群**页面上，转到要通过 SSH 连接到节点的集群，然后单击集群名称。

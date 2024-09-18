@@ -65,7 +65,7 @@ title: 在 vSphere 中配置 Kubernetes 集群
 
 ### 2. 使用云凭证创建节点模板
 
-为 vSphere 创建[节点模板](../../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#节点模板)会允许 Rancher 在 vSphere 中配置新节点。其他集群可以复用节点模板。
+为 vSphere 创建[节点模板](../use-new-nodes-in-an-infra-provider.md#节点模板)会允许 Rancher 在 vSphere 中配置新节点。其他集群可以复用节点模板。
 
 1. 点击 **☰ > 集群管理**。
 1. 单击 **RKE1 配置 > 节点模板**。
@@ -86,7 +86,7 @@ title: 在 vSphere 中配置 Kubernetes 集群
 1. 使用**成员角色**为集群配置用户授权。点击**添加成员**添加可以访问集群的用户。使用**角色**下拉菜单为每个用户设置权限。
 1. 使用**集群选项**选择要安装的 Kubernetes 版本、要使用的网络提供商，以及是否启用项目网络隔离。要查看更多集群选项，请单击**显示高级选项**。如需获取配置集群的帮助，请参阅 [RKE 集群配置参考](../../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)。
 1. 如果你想稍后动态配置持久存储或其他基础设施，你需要修改集群 YAML 文件来启用 vSphere 云提供商。有关更多信息，请参阅[树内 vSphere cloud provider 文档](../../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere.md)和[树外 vSphere cloud provider 文档](../../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere.md)。
-1. 将一个或多个节点池添加到你的集群。每个节点池都使用节点模板来配置新节点。有关节点池的更多信息，包括为节点分配 Kubernetes 角色的最佳实践，请参阅[本节](../../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#节点池)。
+1. 将一个或多个节点池添加到你的集群。每个节点池都使用节点模板来配置新节点。有关节点池的更多信息，包括为节点分配 Kubernetes 角色的最佳实践，请参阅[本节](../use-new-nodes-in-an-infra-provider.md#节点池)。
 1. 检查并确认你的选项。然后单击**创建**。
 
 **结果**：
@@ -107,4 +107,4 @@ title: 在 vSphere 中配置 Kubernetes 集群
 
 - **通过 kubectl CLI 访问你的集群**：按照[这些步骤](../../../../new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#在工作站使用-kubectl-访问集群)在你的工作站上使用 kubectl 访问集群。在这种情况下，你将通过 Rancher Server 的身份验证代理进行身份验证，然后 Rancher 会让你连接到下游集群。此方法允许你在没有 Rancher UI 的情况下管理集群。
 - **通过 kubectl CLI 使用授权的集群端点访问你的集群**：按照[这些步骤](../../../../new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#直接使用下游集群进行身份验证)直接使用 kubectl 访问集群，而无需通过 Rancher 进行身份验证。我们建议设置此替代方法来访问集群，以便在无法连接到 Rancher 时访问集群。
-- **配置存储**：有关如何使用 Rancher 在 vSphere 中配置存储的示例，请参阅[本节](../../../../../pages-for-subheaders/provisioning-storage-examples.md)。要在 vSphere 中动态配置存储，你必须启用 vSphere 云提供商。有关更多信息，请参阅[树内 vSphere cloud provider 文档](../../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere.md)和[树外 vSphere cloud provider 文档](../../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere.md)。
+- **配置存储**：有关如何使用 Rancher 在 vSphere 中配置存储的示例，请参阅[本节](../../../manage-clusters/provisioning-storage-examples/provisioning-storage-examples.md)。要在 vSphere 中动态配置存储，你必须启用 vSphere 云提供商。有关更多信息，请参阅[树内 vSphere cloud provider 文档](../../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere.md)和[树外 vSphere cloud provider 文档](../../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere.md)。

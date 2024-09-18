@@ -49,7 +49,7 @@ Rancher v2.6.4 将 cluster-api 模块从 v0.4.4 升级到 v1.0.2。反过来，c
 1. 在左侧导航栏中，点击 **Rancher 备份 > 还原**。
    :::note
 
-   如果 Rancher Backups 应用不可见，你需要到 **Apps** 的 Charts 页面中安装应用。详情请参见[此处](../../../pages-for-subheaders/helm-charts-in-rancher.md#charts)。
+   如果 Rancher Backups 应用不可见，你需要到 **Apps** 的 Charts 页面中安装应用。详情请参见[此处](../../../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md#访问-charts)。
 
    :::
 

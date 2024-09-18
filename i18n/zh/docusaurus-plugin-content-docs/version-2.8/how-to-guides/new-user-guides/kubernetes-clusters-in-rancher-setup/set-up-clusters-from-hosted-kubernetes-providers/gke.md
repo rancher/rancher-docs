@@ -59,7 +59,7 @@ title: 创建 GKE 集群
 1. 可选：使用**成员角色**为集群配置用户授权。点击**添加成员**添加可以访问集群的用户。使用**角色**下拉菜单为每个用户设置权限。
 1. 可选：将 Kubernetes [标签](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)或[注释](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)添加到集群。
 1. 输入你的 Google 项目 ID 和 Google 云凭证。
-1. 完成表单的其余部分。如需帮助，请参阅 [GKE 集群配置参考](../../../../pages-for-subheaders/gke-cluster-configuration.md)。
+1. 完成表单的其余部分。如需帮助，请参阅 [GKE 集群配置参考](../../../../reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md)。
 1. 单击**创建**。
 
 **结果**：你已成功部署 GKE 集群。
@@ -79,7 +79,7 @@ title: 创建 GKE 集群
 
 ## 配置参考
 
-有关在 Rancher 中配置 GKE 集群的详细信息，请参阅[此页面](../../../../pages-for-subheaders/gke-cluster-configuration.md)。
+有关在 Rancher 中配置 GKE 集群的详细信息，请参阅[此页面](../../../../reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md)。
 ## 更新 Kubernetes 版本
 
 集群的 Kubernetes 版本可以升级到 GKE 集群所在区域或地区中可用的任何版本。升级 Kubernetes 主版本不会自动升级 Worker 节点。节点可以独立升级。
@@ -94,7 +94,7 @@ GKE 在 1.19+ 中取消了基本身份验证。要将集群升级到 1.19+，必
 
 GKE 配置者可以在 Rancher 和提供商之间同步 GKE 集群的状态。有关其工作原理的技术说明，请参阅[同步](../../../../reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters.md)。
 
-有关配置刷新间隔的信息，请参阅[本节](../../../../pages-for-subheaders/gke-cluster-configuration.md#配置刷新间隔)。
+有关配置刷新间隔的信息，请参阅[本节](../../../../reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md#配置刷新间隔)。
 
 ## 以编程方式创建 GKE 集群
 

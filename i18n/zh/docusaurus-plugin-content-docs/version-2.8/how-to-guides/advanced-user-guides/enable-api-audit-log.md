@@ -59,7 +59,7 @@ kubectl -n cattle-system logs -f rancher-84d886bdbb-s4s69 rancher-audit-log
 
 #### 发送审计日志
 
-你可以为集群启用 Rancher 的内置日志收集和传送功能，将审计日志和其他服务日志发送到支持的 endpoint。详情请参见 [Rancher 工具 - Logging](../../pages-for-subheaders/logging.md)。
+你可以为集群启用 Rancher 的内置日志收集和传送功能，将审计日志和其他服务日志发送到支持的 endpoint。详情请参见 [Rancher 工具 - Logging](../../integrations-in-rancher/logging/logging.md)。
 
 ## 审计日志示例
 

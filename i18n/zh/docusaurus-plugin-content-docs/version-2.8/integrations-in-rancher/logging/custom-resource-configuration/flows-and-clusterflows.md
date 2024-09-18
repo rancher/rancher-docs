@@ -4,7 +4,7 @@ title: Flows 和 ClusterFlows
 
 有关如何配置 `Flow` 和 `ClusterFlow` 的完整详细信息，请参阅 [Logging Operator 文档](https://kube-logging.github.io/docs/configuration/flow/)。
 
-有关如何解决 Logging 缓冲区的内存问题，请参阅 [Rancher 与 Logging 服务的集成：故障排除](../../../pages-for-subheaders/logging.md#日志缓冲区导致-pod-过载)。
+有关如何解决 Logging 缓冲区的内存问题，请参阅 [Rancher 与 Logging 服务的集成：故障排除](../logging.md#日志缓冲区导致-pod-过载)。
 
 ## Flows
 

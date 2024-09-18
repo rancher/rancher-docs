@@ -44,7 +44,7 @@ Rancher 会发现并显示由 `kubectl` 创建的资源。但是在发现资源�
 
 ## 直接使用下游集群进行身份验证
 
-本节旨在帮助你设置访问 [RKE 集群的替代方法](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)。
+本节旨在帮助你设置访问 [RKE 集群的替代方法](../../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)。
 
 此方法仅适用于启用了[授权集群端点](../../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-授权集群端点)的 RKE、RKE2 和 K3s集群。在 Rancher 创建集群时，Rancher 会生成一个 kubeconfig 文件，其中包含用于访问集群的额外 kubectl 上下文。该上下文允许你使用 kubectl 通过下游集群进行身份验证，而无需通过 Rancher 进行身份验证。有关授权集群端点如何工作的详细说明，请参阅[此页面](authorized-cluster-endpoint.md)。
 

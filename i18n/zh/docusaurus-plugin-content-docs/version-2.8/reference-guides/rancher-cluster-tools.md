@@ -17,7 +17,7 @@ Logging 支持：
 
 Rancher 可以与 Elasticsearch、splunk、kafka、syslog 和 fluentd 集成。
 
-有关详细信息，请参阅 [Logging 文档](../pages-for-subheaders/logging.md)。
+有关详细信息，请参阅 [Logging 文档](../integrations-in-rancher/logging/logging.md)。
 ## 监控和告警
 
 你可以使用 Rancher，通过业界领先并开源的 [Prometheus](https://prometheus.io/) 来监控集群节点、Kubernetes 组件和软件部署的状态和进程。
@@ -28,7 +28,7 @@ Rancher 可以与 Elasticsearch、splunk、kafka、syslog 和 fluentd 集成。
 
 告警是触发这些通知的规则。在接收告警之前，你必须在 Rancher 中配置一个或多个通知器。你可以在集群或项目级别设置告警范围。
 
-如需更多信息，请参阅[监控文档](../pages-for-subheaders/monitoring-and-alerting.md)。
+如需更多信息，请参阅[监控文档](../integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md)。
 
 ## Istio
 
@@ -36,7 +36,7 @@ Rancher 可以与 Elasticsearch、splunk、kafka、syslog 和 fluentd 集成。
 
 Rancher v2.5 改进了与 Istio 的集成。
 
-如需更多信息，请参阅 [Istio 文档](../pages-for-subheaders/istio.md)。
+如需更多信息，请参阅 [Istio 文档](../integrations-in-rancher/istio/istio.md)。
 ## OPA Gatekeeper
 
 [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper) 是一个开源项目，它对 OPA 和 Kubernetes 进行了集成，以通过许可控制器 Webhook 提供策略控制。有关如何在 Rancher 中启用 Gatekeeper 的详细信息，请参阅 [OPA Gatekeeper](../integrations-in-rancher/opa-gatekeeper.md)。
@@ -45,4 +45,4 @@ Rancher v2.5 改进了与 Istio 的集成。
 
 Rancher 可以通过运行安全扫描来检查 Kubernetes 是否按照 CIS Kubernetes Benchmark 中定义的安全最佳实践进行部署。
 
-如需更多信息，请参阅 [CIS 扫描文档](../pages-for-subheaders/cis-scan-guides.md)。
+如需更多信息，请参阅 [CIS 扫描文档](../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md)。
