@@ -19,7 +19,7 @@ When a cluster scan is run, you need to select a Profile which points to a speci
 
 Follow all the steps below to add a custom Benchmark Version and run a scan using it.
 
-### 1. Prepare the Custom Benchmark Version ConfigMap
+## 1. Prepare the Custom Benchmark Version ConfigMap
 
 To create a custom benchmark version, first you need to create a ConfigMap containing the benchmark version's config files and upload it to your Kubernetes cluster where you want to run the scan.
 
@@ -44,7 +44,7 @@ To prepare a custom benchmark version ConfigMap, suppose we want to add a custom
     kubectl create configmap -n <namespace> foo --from-file=<path to directory foo>
     ```
 
-### 2. Add a Custom Benchmark Version to a Cluster
+## 2. Add a Custom Benchmark Version to a Cluster
 
 1. Once the ConfigMap has been created in your cluster, navigate to the **Cluster Explorer** in the Rancher UI.
 1. In the top left dropdown menu, click **Cluster Explorer > CIS Benchmark.**
@@ -55,7 +55,7 @@ To prepare a custom benchmark version ConfigMap, suppose we want to add a custom
 1. Add the minimum and maximum Kubernetes version limits applicable, if any.
 1. Click **Create.**
 
-### 3. Create a New Profile for the Custom Benchmark Version
+## 3. Create a New Profile for the Custom Benchmark Version
 
 To run a scan using your custom benchmark version, you need to add a new Profile pointing to this benchmark version.
 
@@ -66,7 +66,7 @@ To run a scan using your custom benchmark version, you need to add a new Profile
 1. Choose the Benchmark Version `foo` from the dropdown.
 1. Click **Create.**
 
-### 4. Run a Scan Using the Custom Benchmark Version
+## 4. Run a Scan Using the Custom Benchmark Version
 
 Once the Profile pointing to your custom benchmark version `foo` has been created, you can create a new Scan to run the custom test configs in the Benchmark Version.
 

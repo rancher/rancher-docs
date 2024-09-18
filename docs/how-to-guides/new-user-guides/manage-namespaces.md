@@ -29,7 +29,7 @@ If you create a namespace with `kubectl`, it may be unusable because `kubectl` d
 
 :::
 
-### Creating Namespaces
+## Creating Namespaces
 
 Create a new namespace to isolate apps and resources in a project.
 
@@ -50,7 +50,7 @@ When working with project resources that you can assign to a namespace (i.e., [w
 
 **Result:** Your namespace is added to the project. You can begin assigning cluster resources to the namespace.
 
-### Moving Namespaces to Another Project
+## Moving Namespaces to Another Project
 
 Cluster admins and members may occasionally need to move a namespace to another project, such as when you want a different team to start using the application.
 
@@ -71,7 +71,7 @@ Cluster admins and members may occasionally need to move a namespace to another 
 
 **Result:** Your namespace is moved to a different project (or is unattached from all projects). If any project resources are attached to the namespace, the namespace releases them and then attached resources from the new project.
 
-### Editing Namespace Resource Quotas
+## Editing Namespace Resource Quotas
 
 You can always override the namespace default limit to provide a specific namespace with access to more (or less) project resources.
 

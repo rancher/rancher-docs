@@ -8,7 +8,7 @@ title: 4. Install Rancher
 
 This section is about how to deploy Rancher for your air gapped environment in a high-availability Kubernetes installation. An air gapped environment could be where Rancher server will be installed offline, behind a firewall, or behind a proxy.
 
-### Privileged Access for Rancher
+## Privileged Access for Rancher
 
 When the Rancher server is deployed in the Docker container, a local Kubernetes cluster is installed within the container for Rancher to use. Because many features of Rancher run as deployments, and privileged mode is required to run containers within containers, you will need to install Rancher with the `--privileged` option.
 
@@ -92,7 +92,7 @@ Recent changes to cert-manager require an upgrade. If you are upgrading Rancher 
 
 :::
 
-##### 1. Add the cert-manager repo
+##### 1. Add the cert-manager Repo
 
 From a system connected to the internet, add the cert-manager repo to Helm:
 
@@ -101,7 +101,7 @@ helm repo add jetstack https://charts.jetstack.io
 helm repo update
 ```
 
-##### 2. Fetch the cert-manager chart
+##### 2. Fetch the cert-manager Chart
 
 Fetch the latest cert-manager chart available from the [Helm chart repository](https://artifacthub.io/packages/helm/cert-manager/cert-manager).
 
@@ -109,7 +109,7 @@ Fetch the latest cert-manager chart available from the [Helm chart repository](h
 helm fetch jetstack/cert-manager --version v1.11.0
 ```
 
-##### 3. Retrieve the Cert-Manager CRDs
+##### 3. Retrieve the cert-manager CRDs
 
 Download the required CRD file for cert-manager:
    ```plain
@@ -120,7 +120,7 @@ Download the required CRD file for cert-manager:
 
 Copy the fetched charts to a system that has access to the Rancher server cluster to complete installation.
 
-##### 1. Install Cert-Manager
+#### 1. Install cert-manager
 
 Install cert-manager with the same options you would use to install the chart. Remember to set the `image.repository` option to pull the image from your private registry.
 
@@ -160,7 +160,8 @@ If you are using self-signed certificates, install cert-manager:
 
 </details>
 
-##### 2. Install Rancher
+#### 2. Install Rancher
+
 First, refer to [Adding TLS Secrets](../../resources/add-tls-secrets.md) to publish the certificate files so Rancher and the ingress controller can use them.
 
 Then, create the namespace for Rancher using kubectl:
@@ -192,9 +193,9 @@ Placeholder | Description
 
 **Optional**: To install a specific Rancher version, set the `rancherImageTag` value, example: `--set rancherImageTag=v2.5.8`
 
-#### Option B: Certificates From Files using Kubernetes Secrets
+#### Option B: Certificates From Files Using Kubernetes Secrets
 
-##### 1. Create secrets
+##### 1. Create Secrets
 
 Create Kubernetes secrets from your own certificates for Rancher to use. The common name for the cert will need to match the `hostname` option in the command below, or the ingress controller will fail to provision the site for Rancher.
 

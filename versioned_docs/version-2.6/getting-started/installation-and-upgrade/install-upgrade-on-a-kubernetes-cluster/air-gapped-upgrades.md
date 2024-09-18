@@ -12,7 +12,7 @@ These instructions assume you have already followed the instructions for a Kuber
 
 :::
 
-### Rancher Helm Upgrade Options
+## Rancher Helm Upgrade Options
 
 To upgrade with Helm, apply the same options that you used when installing Rancher. Refer to the reference table below to replace each placeholder. Rancher needs to be configured to use the private registry in order to provision any Rancher launched Kubernetes clusters or Rancher tools.
 

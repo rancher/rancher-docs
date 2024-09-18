@@ -6,7 +6,7 @@ title: rancher-logging Helm Chart Options
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/logging/logging-helm-chart-options"/>
 </head>
 
-### Enable/Disable Windows Node Logging
+## Enable/Disable Windows Node Logging
 
 _Available as of v2.5.8_
 
@@ -19,7 +19,7 @@ When disabled, logs will still be collected from Linux nodes within the Windows 
 
 > Note: Currently an [issue](https://github.com/rancher/rancher/issues/32325) exists where Windows nodeAgents are not deleted when performing a `helm upgrade` after disabling Windows logging in a Windows cluster. In this scenario, users may need to manually remove the Windows nodeAgents if they are already installed.
 
-### Working with a Custom Docker Root Directory
+## Working with a Custom Docker Root Directory
 
 _Applies to v2.5.6+_
 
@@ -31,11 +31,11 @@ Note that this only affects Linux nodes.
 
 If there are any Windows nodes in the cluster, the change will not be applicable to those nodes.
 
-### Adding NodeSelector Settings and Tolerations for Custom Taints
+## Adding NodeSelector Settings and Tolerations for Custom Taints
 
 You can add your own `nodeSelector` settings and add `tolerations` for additional taints by editing the logging Helm chart values. For details, see [this page.](taints-and-tolerations.md)
 
-### Enabling the Logging Application to Work with SELinux
+## Enabling the Logging Application to Work with SELinux
 
 _Available as of v2.5.8_
 
@@ -47,7 +47,7 @@ To use Logging v2 with SELinux, we recommend installing the `rancher-selinux` RP
 
 Then, when installing the logging application, configure the chart to be SELinux aware by changing `global.seLinux.enabled` to `true` in the `values.yaml`.
 
-### Additional Logging Sources
+## Additional Logging Sources
 
 By default, Rancher collects logs for [control plane components](https://kubernetes.io/docs/concepts/overview/components/#control-plane-components) and [node components](https://kubernetes.io/docs/concepts/overview/components/#node-components) for all cluster types.
 

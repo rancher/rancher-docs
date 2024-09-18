@@ -8,11 +8,11 @@ title: Installing and Configuring kubectl
 
 `kubectl` is a CLI utility for running commands against Kubernetes clusters. It's required for many maintenance and administrative tasks in Rancher 2.x.
 
-### Installation
+## Installation
 
 See [kubectl Installation](https://kubernetes.io/docs/tasks/tools/install-kubectl/) for installation on your operating system.
 
-### Configuration
+## Configuration
 
 When you create a Kubernetes cluster with RKE, RKE creates a `kube_config_rancher-cluster.yml` in the local directory that contains credentials to connect to your new cluster with tools like `kubectl` or `helm`.
 

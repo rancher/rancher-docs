@@ -6,11 +6,11 @@ title: Telemetry FAQ
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/faq/telemetry"/>
 </head>
 
-### What is Telemetry?
+## What is Telemetry?
 
 Telemetry collects aggregate information about the size of Rancher installations, versions of components used, and which features are used.  This information is used by Rancher Labs to help make the product better and is not shared with third-parties.
 
-### What information is collected?
+## What information is collected?
 
 No specific identifying information like usernames, passwords, or the names or addresses of user resources will ever be collected.
 
@@ -24,12 +24,12 @@ The primary things collected include:
   - The image name & version of Rancher that is running.
   - A unique randomly-generated identifier for this installation.
 
-### Can I see the information that is being sent?
+## Can I see the information that is being sent?
 
 If Telemetry is enabled, you can go to `https://<your rancher server>/v1-telemetry` in your installation to see the current data.
 
 If Telemetry is not enabled, the process that collects the data is not running, so there is nothing being collected to look at.
 
-### How do I turn it on or off?
+## How do I turn it on or off?
 
 After initial setup, an administrator can go to the `Settings` page in the `Global` section of the UI and click Edit to change the `telemetry-opt` setting to either `in` or `out`.

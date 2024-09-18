@@ -18,7 +18,7 @@ This section assumes familiarity with how monitoring components work together. F
 
 :::
 
-### ServiceMonitors
+## ServiceMonitors
 
 This pseudo-CRD maps to a section of the Prometheus custom resource configuration. It declaratively specifies how groups of Kubernetes services should be monitored.
 
@@ -28,7 +28,7 @@ Any Services in your cluster that match the labels located within the ServiceMon
 
 For more information about how ServiceMonitors work, refer to the [Prometheus Operator documentation.](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/running-exporters.md)
 
-### PodMonitors
+## PodMonitors
 
 This pseudo-CRD maps to a section of the Prometheus custom resource configuration. It declaratively specifies how group of pods should be monitored.
 
