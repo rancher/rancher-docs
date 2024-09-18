@@ -4,7 +4,7 @@ title: 一般故障排除
 
 本文用于帮助你解决使用 Rancher 时遇到的问题。
 
-- [Kubernetes 组件](../pages-for-subheaders/kubernetes-components.md)
+- [Kubernetes 组件](./kubernetes-components/kubernetes-components.md)
 
    对以下核心 Kubernetes 集群组件进行故障排除：
    * `etcd`
@@ -29,7 +29,7 @@ title: 一般故障排除
 
 - [对安装在 Kubernetes 上的 Rancher 进行故障排除](other-troubleshooting-tips/rancher-ha.md)
 
-   解决[安装在 Kubernetes 上的 Rancher Server](../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md) 的问题。
+   解决[安装在 Kubernetes 上的 Rancher Server](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md) 的问题。
 
 - [Logging](other-troubleshooting-tips/logging.md)
 

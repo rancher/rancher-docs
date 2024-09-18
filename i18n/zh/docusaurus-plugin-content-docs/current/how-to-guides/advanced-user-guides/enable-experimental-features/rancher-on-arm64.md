@@ -11,7 +11,7 @@ title: "在 ARM64 上运行 Rancher（实验性）"
 如果你的节点使用 ARM64 架构，你可以使用以下选项：
 
 - 在 ARM64 架构的节点上运行 Rancher
-   - 此选项仅适用于 Docker 安装。请知悉，以下安装命令取代了 [Docker 安装链接](../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md)中的示例：
+   - 此选项仅适用于 Docker 安装。请知悉，以下安装命令取代了 [Docker 安装链接](../../../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md)中的示例：
 
    ```
    # 在最后一行 `rancher/rancher:vX.Y.Z` 中，请务必将 "X.Y.Z" 替换为包含 ARM64 版本的发布版本。例如，如果你的匹配版本是 v2.5.8，请在此行填写 `rancher/rancher:v2.5.8`。

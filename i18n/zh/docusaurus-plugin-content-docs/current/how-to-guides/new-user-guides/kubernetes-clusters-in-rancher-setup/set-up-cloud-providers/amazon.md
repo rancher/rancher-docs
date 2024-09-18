@@ -30,7 +30,7 @@ weight: 1
 
 在创建 [Amazon EC2 集群](../../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md)时，你必须在创建**节点模板**时填写创建的 IAM 角色的 **IAM Instance Profile Name**（不是 ARN）。
 
-创建[自定义集群](../../../../pages-for-subheaders/use-existing-nodes.md)时，你必须手动将 IAM 角色附加到实例。
+创建[自定义集群](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md)时，你必须手动将 IAM 角色附加到实例。
 
 具有 `controlplane` 角色的节点的 IAM 策略：
 

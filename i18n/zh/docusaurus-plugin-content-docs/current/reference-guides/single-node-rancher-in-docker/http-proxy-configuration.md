@@ -20,7 +20,7 @@ title: HTTP 代理配置
 
 ## 基于 Docker 安装
 
-你可使用 `-e KEY=VALUE` 或 `--env KEY=VALUE`将环境变量传给 Rancher 容器。在 [Docker 安装](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md)中，`NO_PROXY` 必须的值为：
+你可使用 `-e KEY=VALUE` 或 `--env KEY=VALUE`将环境变量传给 Rancher 容器。在 [Docker 安装](../../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md)中，`NO_PROXY` 必须的值为：
 
 - `localhost`
 - `127.0.0.1`
@@ -42,7 +42,7 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-特权访问是[必须](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](../../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 
 ### 离线代理配置
 

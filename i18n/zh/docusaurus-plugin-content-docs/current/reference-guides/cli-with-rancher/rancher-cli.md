@@ -65,16 +65,16 @@ INFO[0005] Saving config to /Users/markbishop/.ranchcli2.json
 | 命令 | 结果 |
 |---|---|
 | `apps, [app]` | 对商店应用（即单个 [Helm Chart](https://docs.helm.sh/developing_charts/)）或 Rancher Chart 执行操作。 |
-| `catalog` | 对[应用商店](../../pages-for-subheaders/helm-charts-in-rancher.md)执行操作。 |
-| `clusters, [cluster]` | 对[集群](../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)执行操作。 |
+| `catalog` | 对[应用商店](../../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md)执行操作。 |
+| `clusters, [cluster]` | 对[集群](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md)执行操作。 |
 | `context` | 在 Rancher [项目](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md)之间切换。有关示例，请参阅[项目选择](#项目选择)。 |
-| `inspect [OPTIONS] [RESOURCEID RESOURCENAME]` | 显示 [Kubernetes 资源](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#resource-types)或 Rancher 资源（即[项目](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md)和[工作负载](../../pages-for-subheaders/workloads-and-pods.md)）的详细信息。按名称或 ID 指定资源。 |
+| `inspect [OPTIONS] [RESOURCEID RESOURCENAME]` | 显示 [Kubernetes 资源](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#resource-types)或 Rancher 资源（即[项目](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md)和[工作负载](../../how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/workloads-and-pods.md)）的详细信息。按名称或 ID 指定资源。 |
 | `kubectl` | 运行 [kubectl 命令](https://kubernetes.io/docs/reference/kubectl/overview/#operations)。 |
 | `login, [l]` | 登录 Rancher Server。有关示例，请参阅 [CLI 身份验证](#cli-身份验证)。 |
 | `namespaces, [namespace]` | 执行命名空间操作。 |
 | `nodes, [node]` | 执行节点空间操作。 |
 | `projects, [project]` | 执行[项目](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md)操作。 |
-| `ps` | 显示项目中的[工作负载](../../pages-for-subheaders/workloads-and-pods.md)。 |
+| `ps` | 显示项目中的[工作负载](../../how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/workloads-and-pods.md)。 |
 | `settings, [setting]` | 显示 Rancher Server 的当前设置。 |
 | `ssh` | 使用 SSH 协议连接到你的某个集群节点。 |
 | `help, [h]` | 显示命令列表或某个命令的帮助。 |
@@ -88,4 +88,4 @@ INFO[0005] Saving config to /Users/markbishop/.ranchcli2.json
 
 ### 限制
 
-Rancher CLI **不能**用于安装[仪表板应用程序或 Rancher 功能 Chart](../../pages-for-subheaders/helm-charts-in-rancher.md)。
+Rancher CLI **不能**用于安装[仪表板应用程序或 Rancher 功能 Chart](../../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md)。

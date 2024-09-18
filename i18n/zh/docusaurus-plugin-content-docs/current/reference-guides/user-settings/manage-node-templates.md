@@ -2,10 +2,10 @@
 title: 管理节点模板
 ---
 
-如果要配置[由基础设施提供商托管](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)的集群，则可以使用[节点模板](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#节点模板)来配置集群节点。这些模板使用 Docker Machine 配置选项来定义节点的操作系统镜像以及设置/参数。你可以在两种情况下创建节点模板：
+如果要配置[由基础设施提供商托管](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)的集群，则可以使用[节点模板](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#节点模板)来配置集群节点。这些模板使用 Docker Machine 配置选项来定义节点的操作系统镜像以及设置/参数。你可以在两种情况下创建节点模板：
 
-- [配置节点池集群](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)。
-- 在任何时间使用[用户设置](../../pages-for-subheaders/user-settings.md)。
+- [配置节点池集群](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)。
+- 在任何时间使用[用户设置](./user-settings.md)。
 
 创建节点模板时，它会绑定到你的用户配置文件。节点模板不能在用户之间共享。你可以从用户设置中删除不再使用的旧节点模板。
 
@@ -16,7 +16,7 @@ title: 管理节点模板
 1. 单击**添加模板**。
 1. 选择一个可用的云提供商。然后按照屏幕上的说明配置模板。
 
-**结果**：模板已配置。你可以稍后在[配置节点池集群](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)时使用该模板。
+**结果**：模板已配置。你可以稍后在[配置节点池集群](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)时使用该模板。
 
 ## 更新节点模板
 
@@ -26,7 +26,7 @@ title: 管理节点模板
 
    :::note
 
-   默认的 `active` [主机驱动](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md)和任何标记了 `password` 字段的主机驱动都需要使用[云凭证](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#云凭证)。
+   默认的 `active` [主机驱动](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/manage-node-drivers.md)和任何标记了 `password` 字段的主机驱动都需要使用[云凭证](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#云凭证)。
 
    :::
 
@@ -43,7 +43,7 @@ title: 管理节点模板
 1. 找到要克隆的模板。然后选择 **⋮ > 克隆**。
 1. 填写表单的其余部分。
 
-**结果**：已克隆和配置模板。你可以稍后在[配置节点池集群](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)时使用该模板。
+**结果**：已克隆和配置模板。你可以稍后在[配置节点池集群](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)时使用该模板。
 
 ## 删除节点模板
 

@@ -321,5 +321,5 @@ Rancher 未测试也未完全支持自定义端点。
 >
 > - 如果你不想在 Azure AD Graph API 停用后升级到 v2.7.0+，你需要：
 >    - 使用内置的 Rancher 身份认证，或者
->    - 使用另一个第三方身份认证系统并在 Rancher 中进行设置。请参阅[身份验证文档](../../../../pages-for-subheaders/authentication-config.md)，了解如何配置其他开放式身份验证提供程序。
+>    - 使用另一个第三方身份认证系统并在 Rancher 中进行设置。请参阅[身份验证文档](./authentication-config.md)，了解如何配置其他开放式身份验证提供程序。
 

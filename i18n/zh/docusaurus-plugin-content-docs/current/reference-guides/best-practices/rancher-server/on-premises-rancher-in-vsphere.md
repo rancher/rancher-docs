@@ -39,7 +39,7 @@ title: 在 vSphere 环境中安装 Rancher
 
 ### 根据 Rancher 文档确定虚拟机的大小
 
-请参阅[安装要求](../../../pages-for-subheaders/installation-requirements.md)。
+请参阅[安装要求](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md)。
 
 ### 利用虚拟机模板来构建环境
 

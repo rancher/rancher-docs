@@ -4,7 +4,7 @@ title: 监控最佳实践
 
 配置合理的监控和告警规则对于安全、可靠地运行生产环境中的工作负载至关重要。在使用 Kubernetes 和 Rancher 时也是如此。幸运的是，你可以使用集成的监控和告警功能来简化整个过程。
 
-[Rancher 监控文档](../../../pages-for-subheaders/monitoring-and-alerting.md)描述了如何设置完整的 Prometheus 和 Grafana。这是开箱即用的功能，它将从集群中的所有系统和 Kubernetes 组件中抓取监控数据，并提供合理的仪表板和告警。但为了实现可靠的设置，你还需要监控你的工作负载并使 Prometheus 和 Grafana 适应你的特定用例和集群规模。本文档将为你提供这方面的最佳实践。
+[Rancher 监控文档](../../../integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md)描述了如何设置完整的 Prometheus 和 Grafana。这是开箱即用的功能，它将从集群中的所有系统和 Kubernetes 组件中抓取监控数据，并提供合理的仪表板和告警。但为了实现可靠的设置，你还需要监控你的工作负载并使 Prometheus 和 Grafana 适应你的特定用例和集群规模。本文档将为你提供这方面的最佳实践。
 
 ## 监控内容
 
@@ -86,7 +86,7 @@ Prometheus 不是用于长期存储指标的，它只用于短期存储。
 
 如果你有一个（微）服务架构，在该架构中集群的多个单独的工作负载相互通信，那么拥有这些流量的详细指标和跟踪是非常重要的，因为这可以帮助你了解所有这些工作负载之间的通信方式，以及问题或瓶颈可能出现的地方。
 
-当然，你可以监控所有工作负载中的所有内部流量，并将这些指标暴露给 Prometheus，但这相当耗费精力。像 Istio 这样的服务网格（可以通过[单击](../../../pages-for-subheaders/istio.md)在 Rancher 中安装）可以自动完成这项工作，并提供所有 Service 之间流量的丰富的遥测数据。
+当然，你可以监控所有工作负载中的所有内部流量，并将这些指标暴露给 Prometheus，但这相当耗费精力。像 Istio 这样的服务网格（可以通过[单击](../../../integrations-in-rancher/istio/istio.md)在 Rancher 中安装）可以自动完成这项工作，并提供所有 Service 之间流量的丰富的遥测数据。
 
 ## 真实用户监控
 
@@ -94,7 +94,7 @@ Prometheus 不是用于长期存储指标的，它只用于短期存储。
 
 ## 安全监控
 
-除了通过监控工作负载来检测性能、可用性或可扩展性之外，你还应该监控集群和运行在集群中的工作负载，来发现潜在的安全问题。一个好的做法是经常运行 [CIS 扫描](../../../pages-for-subheaders/cis-scan-guides.md)并发出告警，来检查集群是否按照安全最佳实践进行配置。
+除了通过监控工作负载来检测性能、可用性或可扩展性之外，你还应该监控集群和运行在集群中的工作负载，来发现潜在的安全问题。一个好的做法是经常运行 [CIS 扫描](../../../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md)并发出告警，来检查集群是否按照安全最佳实践进行配置。
 
 对于工作负载，你可以查看 Kubernetes 和 Container 安全解决方案，例如 [NeuVector](https://www.suse.com/products/neuvector/)、[Falco](https://falco.org/)、[Aqua Kubernetes Security](https://www.aquasec.com/solutions/kubernetes-container-security/) 和 [SysDig](https://sysdig.com/)。
 
@@ -108,4 +108,4 @@ Prometheus 不是用于长期存储指标的，它只用于短期存储。
 
 如果告警开始发送，但你暂时无法处理，你也可以将告警静默一定时间，以便以后查看。
 
-如果需要了解更多关于如何设置告警和通知通道的信息，请访问 [Rancher 文档中心](../../../pages-for-subheaders/monitoring-and-alerting.md)。
+如果需要了解更多关于如何设置告警和通知通道的信息，请访问 [Rancher 文档中心](../../../integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md)。
