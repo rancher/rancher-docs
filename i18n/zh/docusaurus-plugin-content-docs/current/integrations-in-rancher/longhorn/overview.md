@@ -25,7 +25,7 @@ Longhorn 是免费的开源软件。它最初由 Rancher Labs 开发，现在被
 
 ![Longhorn 仪表板](/img/longhorn-screenshot.png)
 
-### 使用 Rancher 安装 Longhorn
+## 使用 Rancher 安装 Longhorn
 
 1. 满足所有[安装要求](https://longhorn.io/docs/latest/deploy/install/#installation-requirements)。
 1. 转到要安装 Longhorn 的集群。
@@ -37,14 +37,14 @@ Longhorn 是免费的开源软件。它最初由 Rancher Labs 开发，现在被
 
 **结果**：Longhorn 已部署到 Kubernetes 集群中。
 
-### 从 Rancher UI 访问 Longhorn
+## 从 Rancher UI 访问 Longhorn
 
 1. 转到安装了 Longhorn 的集群。在左侧导航菜单中，单击 **Longhorn**。
 1. 在此页面上，你可以编辑 Longhorn 管理的 Kubernetes 资源。要查看 Longhorn UI，请单击**概述**中的 **Longhorn** 按钮。
 
 **结果**：你将转到 Longhorn UI，在这里你可以管理 Kubernetes 集群中的 Longhorn 卷及其副本，以及可能存在于另一个 Kubernetes 集群或 S3 中的 Longhorn 存储辅助备份。
 
-### 从 Rancher UI 卸载 Longhorn
+## 从 Rancher UI 卸载 Longhorn
 
 1. 转到安装了 Longhorn 的集群，然后单击 **Apps**。
 1. 点击**已安装的应用**。
@@ -53,15 +53,15 @@ Longhorn 是免费的开源软件。它最初由 Rancher Labs 开发，现在被
 
 **结果**：Longhorn 已被卸载。
 
-### GitHub 仓库
+## GitHub 仓库
 
 Longhorn 项目可在[此处](https://github.com/longhorn/longhorn)获取。
 
-### 文档
+## 文档
 
 Longhorn 文档在[此处](https://longhorn.io/docs/)。
 
-### 架构
+## 架构
 
 Longhorn 为每个卷创建专用的存储控制器，并在多个节点上存储的多个副本之间同步复制该卷。
 

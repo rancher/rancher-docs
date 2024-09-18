@@ -5,6 +5,7 @@ title: 还原 Rancher
 本页概述了如何使用 Rancher 执行恢复。
 
 在以下情况下，请按照本页中的说明进行操作：
+
 - 正在运行的 Rancher 实例与备份时的版本相同。
 - 上游（本地）集群与备份的位置相同。
 
@@ -21,7 +22,7 @@ title: 还原 Rancher
 
 :::
 
-### 创建 Restore 自定义资源
+## 创建 Restore 自定义资源
 
 还原是通过创建 Restore 自定义资源实现的。
 
@@ -60,7 +61,7 @@ title: 还原 Rancher
 2. 集群范围资源
 3. 命名空间资源
 
-### 日志
+## 日志
 
 如需查看还原的处理方式，请检查 Operator 的日志。查看日志的命令如下：
 
@@ -68,11 +69,11 @@ title: 还原 Rancher
 kubectl logs -n cattle-resources-system -l app.kubernetes.io/name=rancher-backup -f
 ```
 
-### 清理
+## 清理
 
 如果你使用 kubectl 创建了 Restore 资源，请删除该资源以防止与未来的还原发生命名冲突。
 
-### 已知问题
+## 已知问题
 在某些情况下，恢复备份后，Rancher 日志会显示类似以下的错误：
 ```
 2021/10/05 21:30:45 [ERROR] error syncing 'c-89d82/m-4067aa68dd78': handler rke-worker-upgrader: clusters.management.cattle.io "c-89d82" not found, requeuing

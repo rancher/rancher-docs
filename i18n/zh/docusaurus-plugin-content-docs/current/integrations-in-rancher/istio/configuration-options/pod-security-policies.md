@@ -19,7 +19,7 @@ Istio CNI 插件不再要求每个应用 pod 具有特权 `NET_ADMIN` 容器。�
 2. [启用 CNI](#2-启用-cni)
 3. [验证 CNI 是否正常工作](#3-验证-cni-是否正常工作)
 
-### 1. 将 PodSecurityPolicy 设置为不受限制
+## 1. 将 PodSecurityPolicy 设置为不受限制
 
 不受限制的 PSP 支持安装 Istio。
 
@@ -31,7 +31,7 @@ Istio CNI 插件不再要求每个应用 pod 具有特权 `NET_ADMIN` 容器。�
 1. 找到**项目: System**，然后选择 **⋮ > 编辑配置**。
 1. 将 Pod 安全策略选项更改为不受限制，然后单击**保存**。
 
-### 2. 启用 CNI
+## 2. 启用 CNI
 
 通过 **Apps** 安装或升级 Istio 时：
 
@@ -47,7 +47,7 @@ istio_cni.enabled: true
 
 在集群中启用 CNI 后，Istio 应该能成功安装。
 
-### 3. 验证 CNI 是否正常工作
+## 3. 验证 CNI 是否正常工作
 
 通过部署[示例应用](https://istio.io/latest/docs/examples/bookinfo/)或部署你自己的应用，来验证 CNI 是否正常工作。
 

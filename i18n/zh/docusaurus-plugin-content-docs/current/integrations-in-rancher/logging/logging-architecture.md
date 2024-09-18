@@ -6,7 +6,7 @@ title: 架构
 
 有关 Logging Operator 工作原理的更多详细信息，请参阅[官方文档](https://kube-logging.github.io/docs/#architecture)。
 
-### Logging Operator 工作原理
+## Logging Operator 工作原理
 
 Logging Operator 自动部署和配置 Kubernetes 日志流水线。它会在每个节点上部署和配置一个 Fluent Bit DaemonSet，从而收集节点文件系统中的容器和应用程序日志。
 
