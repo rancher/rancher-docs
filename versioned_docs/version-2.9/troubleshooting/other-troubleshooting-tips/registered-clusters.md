@@ -10,13 +10,13 @@ The commands/steps listed on this page can be used to check clusters that you ar
 
 Make sure you configured the correct kubeconfig (for example, `export KUBECONFIG=$PWD/kubeconfig_from_imported_cluster.yml`)
 
-### Rancher agents
+## Rancher Agents
 
 Communication to the cluster (Kubernetes API via cattle-cluster-agent) and communication to the nodes is done through Rancher agents.
 
 If the cattle-cluster-agent cannot connect to the configured `server-url`, the cluster will remain in **Pending** state, showing `Waiting for full cluster configuration`.
 
-#### cattle-node-agent
+### cattle-node-agent
 
 :::note
 
@@ -49,7 +49,7 @@ Check logging of a specific cattle-node-agent pod or all cattle-node-agent pods:
 kubectl -n cattle-system logs -l app=cattle-agent
 ```
 
-#### cattle-cluster-agent
+### cattle-cluster-agent
 
 Check if the cattle-cluster-agent pod is present in the cluster, has status **Running** and doesn't have a high count of Restarts:
 
