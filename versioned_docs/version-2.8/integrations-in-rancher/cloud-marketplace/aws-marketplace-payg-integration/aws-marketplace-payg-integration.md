@@ -15,7 +15,12 @@ For more details on how Rancher pay-as-you-go offerings work, refer to the [pay-
 
 ## Supported Versions
 
-- We currently recommend running Rancher v2.8.4. When you deploy a supported PAYG version, you can update to newer versions of Rancher when the listing is updated.
+- Rancher v2.8.4
+- Rancher v2.7.9
+
+We recommend using v2.8.4 for the latest features and security fixes.
+
+When you deploy a supported PAYG version, you can update to newer versions of Rancher when the listing is updated.
 
 ## How to Use
 
