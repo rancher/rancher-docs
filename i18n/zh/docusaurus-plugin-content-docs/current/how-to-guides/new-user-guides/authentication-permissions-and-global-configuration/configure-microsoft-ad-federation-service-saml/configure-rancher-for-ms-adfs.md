@@ -44,8 +44,6 @@ title: 2. 在 Rancher 中配置 Microsoft AD FS
 | 私钥/证书        | 在 Rancher 和你的 AD FS 之间创建安全外壳（SSH）的密钥/证书对。确保将 Common Name (CN) 设置为 Rancher Server URL。<br/><br/>[证书创建命令](#example-certificate-creation-command)     |
 | 元数据 XML       | 从 AD FS 服务器导出的 `federationmetadata.xml` 文件。<br/><br/>你可以在 `https://<AD_SERVER>/federationmetadata/2007-06/federationmetadata.xml` 找到该文件。 |
 
-<a id="cert-command"></a>
-
 ### Example Certificate Creation Command
 
 你可以使用 openssl 命令生成证书。例如：

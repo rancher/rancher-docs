@@ -101,4 +101,4 @@ SAML 协议不支持用户或用户组的搜索或查找。因此，如果你没
 
 ## 故障排除
 
-如果在测试与 OpenLDAP 服务器的连接时遇到问题，请首先仔细检查为 ServiceAccount 输入的凭证以及搜索库配置。你还可以检查 Rancher 日志来查明问题的原因。调试日志可能包含有关错误的更详细信息。详情请参见[如何启用调试日志](../../../../faq/technical-items.md#how-can-i-enable-debug-logging)。
+如果在测试与 OpenLDAP 服务器的连接时遇到问题，请首先仔细检查为 ServiceAccount 输入的凭证以及搜索库配置。你还可以检查 Rancher 日志来查明问题的原因。调试日志可能包含有关错误的更详细信息。详情请参见[如何启用调试日志](../../../../faq/technical-items.md#如何启用调试日志记录)。

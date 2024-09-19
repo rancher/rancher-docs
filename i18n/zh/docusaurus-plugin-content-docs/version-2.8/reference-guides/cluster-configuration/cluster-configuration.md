@@ -14,12 +14,12 @@ title: 集群配置
 
 集群配置选项取决于 Kubernetes 集群的类型：
 
-- [RKE 集群配置](rancher-server-configuration/rke1-cluster-configuration.md)
-- [RKE2 集群配置](rancher-server-configuration/rke2-cluster-configuration.md)
-- [K3s 集群配置](rancher-server-configuration/k3s-cluster-configuration.md)
-- [EKS 集群配置](rancher-server-configuration/eks-cluster-configuration.md)
-- [GKE 集群配置](gke-cluster-configuration.md)
-- [AKS 集群配置](rancher-server-configuration/aks-cluster-configuration.md)
+- [RKE 集群配置](./rancher-server-configuration/rke1-cluster-configuration.md)
+- [RKE2 集群配置](./rancher-server-configuration/rke2-cluster-configuration.md)
+- [K3s 集群配置](./rancher-server-configuration/k3s-cluster-configuration.md)
+- [EKS 集群配置](./rancher-server-configuration/eks-cluster-configuration.md)
+- [GKE 集群配置](./rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md)
+- [AKS 集群配置](./rancher-server-configuration/aks-cluster-configuration.md)
 
 ## 不同类型集群的管理功能
 

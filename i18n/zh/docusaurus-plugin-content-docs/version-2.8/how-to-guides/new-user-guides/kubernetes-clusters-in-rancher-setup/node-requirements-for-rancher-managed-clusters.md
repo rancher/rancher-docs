@@ -6,7 +6,7 @@ title: Rancher 管理集群的节点要求
 
 :::note
 
-如果 Rancher 安装在高可用的 Kubernetes 集群上，Rancher Server 的三节点集群和下游集群有不同的要求。有关 Rancher 的安装要求，请参考[安装文档](../../../pages-for-subheaders/installation-requirements.md)中的节点要求。
+如果 Rancher 安装在高可用的 Kubernetes 集群上，Rancher Server 的三节点集群和下游集群有不同的要求。有关 Rancher 的安装要求，请参考[安装文档](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md)中的节点要求。
 
 :::
 
@@ -43,7 +43,7 @@ SUSE Linux 可能有一个防火墙，默认情况下会阻止所有端口。在
 
 ### Flatcar Container Linux 节点
 
-使用 Flatcar Container Linux 节点[通过 Rancher 启动 Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) 时，需要在 [Cluster Config 文件](../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#rke-集群配置文件参考)中使用如下配置：
+使用 Flatcar Container Linux 节点[通过 Rancher 启动 Kubernetes](../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) 时，需要在 [Cluster Config 文件](../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#rke-集群配置文件参考)中使用如下配置：
 
 <Tabs>
 <TabItem value="Canal">
@@ -88,13 +88,13 @@ rancher_kubernetes_engine_config:
 systemctl enable docker.service
 ```
 
-使用[主机驱动](../../../pages-for-subheaders/about-provisioning-drivers.md#主机驱动)时会自动启用 Docker 服务。
+使用[主机驱动](../authentication-permissions-and-global-configuration/about-provisioning-drivers/about-provisioning-drivers.md#主机驱动)时会自动启用 Docker 服务。
 
 ### Windows 节点
 
 运行 Windows Server 节点必须使用 Docker 企业版。
 
-Windows 节点只能用于 Worker 节点。请参阅[配置 Windows 自定义集群](../../../pages-for-subheaders/use-windows-clusters.md)。
+Windows 节点只能用于 Worker 节点。请参阅[配置 Windows 自定义集群](../kubernetes-clusters-in-rancher-setup/use-windows-clusters/use-windows-clusters.md)。
 
 ## 硬件要求
 
@@ -110,7 +110,7 @@ Windows 节点只能用于 Worker 节点。请参阅[配置 Windows 自定义集
 
 对于生产集群，我们建议你通过仅打开以下端口要求中定义的端口来限制流量。
 
-需要开放的端口根据下游集群的启动方式而有所不同。以下列出了需要为不同[集群创建选项](../../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)打开的端口。
+需要开放的端口根据下游集群的启动方式而有所不同。以下列出了需要为不同[集群创建选项](../kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md)打开的端口。
 
 有关 Kubernetes 集群中 etcd 节点、controlplane 节点和 Worker 节点的端口要求的详细信息，请参阅 [Rancher Kubernetes Engine 的端口要求](https://rancher.com/docs/rke/latest/en/os/#ports)。
 
@@ -126,4 +126,4 @@ Windows 节点只能用于 Worker 节点。请参阅[配置 Windows 自定义集
 
 如果你要配置符合 CIS（互联网安全中心）Kubernetes 基准的 Kubernetes 集群，我们建议你在安装 Kubernetes 之前按照我们的强化指南来配置节点。
 
-有关强化指南的更多信息，以及了解哪个指南版本对应于你的 Rancher 和 Kubernetes 版本，请参阅[安全](../../../pages-for-subheaders/rancher-security.md#rancher-强化指南)。
+有关强化指南的更多信息，以及了解哪个指南版本对应于你的 Rancher 和 Kubernetes 版本，请参阅[安全](../../../reference-guides/rancher-security/rancher-security.md#rancher-加固指南)。

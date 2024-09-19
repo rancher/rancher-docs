@@ -19,7 +19,7 @@ title: 在 Rancher 中动态配置新存储
 
 - 设置持久存储需要`管理卷`的[角色](../../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色参考)。
 - 如果你要为云集群配置存储，则存储和集群主机必须使用相同的云提供商。
-- 必须启用云提供商。有关启用云提供商的详细信息，请参阅[此页面](../../../../../pages-for-subheaders/set-up-cloud-providers.md)。
+- 必须启用云提供商。有关启用云提供商的详细信息，请参阅[此页面](../../../kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/set-up-cloud-providers.md)。
 - 确保你的存储卷插件可以启用。
 
 默认情况下启用以下存储卷插件：

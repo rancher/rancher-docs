@@ -110,13 +110,13 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 所有 CNI 网络插件都支持[双栈](https://docs.rke2.io/install/network_options#dual-stack-configuration)网络。要在双栈模式下配置 RKE2，请为你的[集群 CIDR](#集群-cidr) 和/或 [Service CIDR](#service-cidr) 设置有效的 IPv4/IPv6 CIDR。
 
-###### 额外配置 {#dual-stack-additional-config}
+###### 额外配置
 
 使用 `cilium` 或 `multus,cilium` 作为容器网络接口提供商时，请确保**启用 IPv6 支持**选项。
 
 #### 云提供商
 
-你可以配置 [Kubernetes 云提供商](../../../pages-for-subheaders/set-up-cloud-providers.md)。如果你想在 Kubernetes 中使用动态配置的[卷和存储](../../../pages-for-subheaders/create-kubernetes-persistent-storage.md)，你通常需要选择特定的云提供商。例如，如果你想使用 Amazon EBS，则需要选择 `aws` 云提供商。
+你可以配置 [Kubernetes 云提供商](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/set-up-cloud-providers.md)。如果你想在 Kubernetes 中使用动态配置的[卷和存储](../../../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md)，你通常需要选择特定的云提供商。例如，如果你想使用 Amazon EBS，则需要选择 `aws` 云提供商。
 
 :::note
 
@@ -130,7 +130,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 #### Worker CIS 配置文件
 
-选择一个 [CIS benchmark](../../../pages-for-subheaders/cis-scan-guides.md) 来验证系统配置。
+选择一个 [CIS benchmark](../../../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md) 来验证系统配置。
 
 #### 项目网络隔离
 
@@ -182,7 +182,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 要配置[双栈](https://docs.rke2.io/install/network_options#dual-stack-configuration)模式，请输入有效的 IPv4/IPv6 CIDR。例如 `10.42.0.0/16,2001:cafe:42:0::/56`。
 
-使用 `cilium` 或 `multus,cilium` 作为[容器网络](#容器网络提供商)接口提供商时，你需要进行[附加配置](#dual-stack-additional-config)。
+使用 `cilium` 或 `multus,cilium` 作为[容器网络](#容器网络提供商)接口提供商时，你需要进行[附加配置](#额外配置)。
 
 #### Service CIDR
 
@@ -192,7 +192,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 要配置[双栈](https://docs.rke2.io/install/network_options#dual-stack-configuration)模式，请输入有效的 IPv4/IPv6 CIDR。例如 `10.42.0.0/16,2001:cafe:42:0::/56`。
 
-使用 `cilium` 或 `multus,cilium` 作为[容器网络](#容器网络提供商)接口提供商时，你需要进行[附加配置](#dual-stack-additional-config)。
+使用 `cilium` 或 `multus,cilium` 作为[容器网络](#容器网络提供商)接口提供商时，你需要进行[附加配置](#额外配置)。
 
 #### 集群 DNS
 

@@ -152,7 +152,7 @@ Kubernetes v1.22 是 Rancher 2.6.3 的实验功能，不支持使用 apiVersion 
 
 ## 3. 安装 cert-manager
 
-按照在 Kubernetes 上安装 cert-manager的步骤[安装 cert-manager](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#4-安装-cert-manager)。
+按照在 Kubernetes 上安装 cert-manager的步骤[安装 cert-manager](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md#4-安装-cert-manager)。
 
 ## 4. 使用 Helm 安装 Rancher
 

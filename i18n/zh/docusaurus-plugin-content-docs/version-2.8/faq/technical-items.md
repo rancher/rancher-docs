@@ -55,7 +55,7 @@ ClusterIP 是一个虚拟 IP，不会响应 ping。要测试 ClusterIP 是否配
 
 ## 为什么我的四层负载均衡器处于 `Pending` 状态？
 
-四层负载均衡器创建为 `type: LoadBalancer`。Kubernetes 需要一个可以满足这些请求的云提供商或控制器，否则这些请求将永远处于 `Pending` 状态。有关更多信息，请参阅[云提供商](../pages-for-subheaders/set-up-cloud-providers.md)或[创建外部负载均衡器](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/)。
+四层负载均衡器创建为 `type: LoadBalancer`。Kubernetes 需要一个可以满足这些请求的云提供商或控制器，否则这些请求将永远处于 `Pending` 状态。有关更多信息，请参阅[云提供商](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/set-up-cloud-providers.md)或[创建外部负载均衡器](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/)。
 
 ## Rancher 的状态存储在哪里？
 

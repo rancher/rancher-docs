@@ -15,7 +15,7 @@ title: Docker 安装高级选项
 
 在以下示例将位于 `/host/certs` 主机目录中的 CA 证书，挂载到 Rancher 容器内的 `/container/certs` 上。
 
-特权访问是[必须](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](../../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 
 ```
 docker run -d --restart=unless-stopped \
@@ -34,7 +34,7 @@ API 审计日志记录了通过 Rancher Server 进行的所有用户和系统事
 
 有关更多信息和选项，请参见 [API 审计日志](../../how-to-guides/advanced-user-guides/enable-api-audit-log.md)。
 
-特权访问是[必须](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](../../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 
 ```
 docker run -d --restart=unless-stopped \
@@ -57,7 +57,7 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-特权访问是[必须](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](../../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 
 参见 [TLS 设置](../../getting-started/installation-and-upgrade/installation-references/tls-settings.md)了解更多信息和选项。
 
@@ -83,7 +83,7 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-特权访问是[必须](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](../../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 
 ## 在同一个节点中运行 `rancher/rancher` 和 `rancher/rancher-agent`
 
@@ -102,4 +102,4 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-特权访问是[必须](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](../../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。

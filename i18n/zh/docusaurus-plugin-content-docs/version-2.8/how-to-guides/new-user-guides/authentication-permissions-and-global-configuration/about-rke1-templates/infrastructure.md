@@ -53,7 +53,7 @@ Terraform 是用扩展名为 `.tf` 的文件编写的。它是用 HashiCorp 配�
 
 本节描述了一种方法，可以使安全合规相关的配置文件成为集群的标准配置文件。
 
-在你创建[符合 CIS 基准的集群](../../../../pages-for-subheaders/rancher-security.md)时，你有一个加密配置文件和一个审计日志配置文件。
+在你创建[符合 CIS 基准的集群](../../../../reference-guides/rancher-security/rancher-security.md)时，你有一个加密配置文件和一个审计日志配置文件。
 
 你的基础设施预配系统可以将这些文件写入磁盘。然后在你的 RKE 模板中，你需要指定这些文件的位置，然后将你的加密配置文件和审计日志配置文件作为额外的挂载添加到 `kube-api-server`。
 

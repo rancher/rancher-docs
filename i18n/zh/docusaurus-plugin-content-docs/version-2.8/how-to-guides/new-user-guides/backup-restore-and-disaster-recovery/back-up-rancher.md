@@ -36,7 +36,7 @@ Rancher 必须是 2.5.0 或更高版本。
 
 :::note
 
-使用 `backup-restore` operator 执行恢复后，Fleet 中会出现一个已知问题：用于 `clientSecretName` 和 `helmSecretName` 的密文不包含在 Fleet 的 Git 仓库中。请参见[此处](../deploy-apps-across-clusters/fleet.md#故障排除)获得解决方法。
+使用 `backup-restore` operator 执行恢复后，Fleet 中会出现一个已知问题：用于 `clientSecretName` 和 `helmSecretName` 的密文不包含在 Fleet 的 Git 仓库中。请参见[此处](../../../integrations-in-rancher/fleet/overview.md#故障排除)获得解决方法。
 
 :::
 

@@ -4,7 +4,7 @@ title: Pod 安全策略
 
 :::note
 
-本文介绍的集群选项仅适用于 [Rancher 已在其中启动 Kubernetes 的集群](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)。
+本文介绍的集群选项仅适用于 [Rancher 已在其中启动 Kubernetes 的集群](../../new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)。
 
 :::
 

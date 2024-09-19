@@ -4,7 +4,7 @@ title: 使用非默认支持的存储驱动
 
 此功能允许你使用不是默认启用的存储提供商和卷插件。
 
-如需启用或禁用此功能，请参见[启用实验功能主页](../../../pages-for-subheaders/enable-experimental-features.md)中的说明。
+如需启用或禁用此功能，请参见[启用实验功能主页](./enable-experimental-features.md)中的说明。
 
 | 环境变量键 | 默认值 | 描述 |
 |---|---|---|

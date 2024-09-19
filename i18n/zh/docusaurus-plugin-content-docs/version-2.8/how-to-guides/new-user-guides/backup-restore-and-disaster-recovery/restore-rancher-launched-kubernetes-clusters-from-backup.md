@@ -2,7 +2,7 @@
 title: 使用备份恢复集群
 ---
 
-你可以轻松备份和恢复 [Rancher 启动的 Kubernetes 集群](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)的 etcd。etcd 数据库的快照会保存在 etcd 节点或 S3 兼容目标上。配置 S3 的好处是，如果所有 etcd 节点都丢失了，你的快照会保存到远端并能用于恢复集群。
+你可以轻松备份和恢复 [Rancher 启动的 Kubernetes 集群](../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)的 etcd。etcd 数据库的快照会保存在 etcd 节点或 S3 兼容目标上。配置 S3 的好处是，如果所有 etcd 节点都丢失了，你的快照会保存到远端并能用于恢复集群。
 
 Rancher 建议启用 [etcd 定期快照的功能](back-up-rancher-launched-kubernetes-clusters.md#配置定期快照)，但你也可以轻松创建[一次性快照](back-up-rancher-launched-kubernetes-clusters.md#单次快照)。Rancher 允许使用[保存的快照](#使用快照恢复集群)进行恢复。如果你没有任何快照，你仍然可以[恢复 etcd](#在没有快照的情况下恢复-etcdrke)。
 
@@ -126,4 +126,4 @@ Rancher UI 中提供了集群所有可用快照的列表：
 
 5. 运行修改后的命令。
 
-6. 在单个节点启动并运行后，Rancher 建议向你的集群添加额外的 etcd 节点。如果你有一个[自定义集群](../../../pages-for-subheaders/use-existing-nodes.md)，并且想要复用旧节点，则需要先[清理节点](../manage-clusters/clean-cluster-nodes.md)，然后再尝试将它们重新添加到集群中。
+6. 在单个节点启动并运行后，Rancher 建议向你的集群添加额外的 etcd 节点。如果你有一个[自定义集群](../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md)，并且想要复用旧节点，则需要先[清理节点](../manage-clusters/clean-cluster-nodes.md)，然后再尝试将它们重新添加到集群中。

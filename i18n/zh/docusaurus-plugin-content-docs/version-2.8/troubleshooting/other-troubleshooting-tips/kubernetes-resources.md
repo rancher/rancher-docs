@@ -2,7 +2,7 @@
 title: Kubernetes 资源
 ---
 
-本文列出的命令/步骤可用于检查最重要的 Kubernetes 资源，并应用于 [Rancher 启动的 Kubernetes](../../pages-for-subheaders/launch-kubernetes-with-rancher.md) 集群。
+本文列出的命令/步骤可用于检查最重要的 Kubernetes 资源，并应用于 [Rancher 启动的 Kubernetes](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) 集群。
 
 请确保你配置了正确的 kubeconfig（例如，为 Rancher HA 配置了 `export KUBECONFIG=$PWD/kube_config_cluster.yml`）或通过 UI 使用了嵌入式 kubectl。
 

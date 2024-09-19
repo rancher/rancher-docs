@@ -20,7 +20,7 @@ title: 为高可用 RKE2 Kubernetes 集群设置基础设施
 
 ## 1. 配置 Linux 节点
 
-请确保你的节点满足[操作系统，容器运行时，硬件和网络](../../../pages-for-subheaders/installation-requirements.md)的常规要求。
+请确保你的节点满足[操作系统，容器运行时，硬件和网络](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md)的常规要求。
 
 如需获取配置 Linux 节点的示例，请参见[在 Amazon EC2 中配置节点](nodes-in-amazon-ec2.md)的教程。
 

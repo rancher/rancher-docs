@@ -8,7 +8,7 @@ title: vSphere 存储
 
 ## 先决条件
 
-为了在 [Rancher Kubernetes Engine (RKE)](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) 集群中配置 vSphere 卷，[vSphere cloud provider](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/vsphere) 必须在[集群选项](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)中显式启用。
+为了在 [Rancher Kubernetes Engine (RKE)](../../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) 集群中配置 vSphere 卷，[vSphere cloud provider](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/vsphere) 必须在[集群选项](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)中显式启用。
 
 ## 创建一个 StorageClass
 
