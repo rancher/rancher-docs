@@ -10,7 +10,7 @@ Rancher 可以运行在任何 Kubernetes 集群上，包括托管的 Kubernetes�
 
 :::
 
-如果系统无法直接访问互联网，请参见[离线环境：Kubernetes 安装](../../../pages-for-subheaders/air-gapped-helm-cli-install.md)。
+如果系统无法直接访问互联网，请参见[离线环境：Kubernetes 安装](../../../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/air-gapped-helm-cli-install.md)。
 
 :::tip 单节点安装提示：
 
@@ -189,5 +189,5 @@ kube-system     rke-network-plugin-deploy-job-6pbgj       0/1       Completed   
 
 
 ### 后续操作
-[安装 Rancher](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md)
+[安装 Rancher](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md)
 

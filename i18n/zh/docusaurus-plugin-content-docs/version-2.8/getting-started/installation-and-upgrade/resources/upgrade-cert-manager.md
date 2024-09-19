@@ -264,7 +264,7 @@ cert-manager-webhook-787858fcdb-nlzsq      1/1     Running   0          2m
 
 ---
 
-Rancher 现在支持 cert-manager 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为 v 1.6.x 将在 2022 年 3 月 30 日结束生命周期。详情请参见 [cert-manager 文档](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#4-安装-cert-manager)。有关将 cert-manager 从 1.5 升级到 1.6 的说明，请参见上游的 [cert-manager 文档](https://cert-manager.io/docs/installation/upgrading/upgrading-1.5-1.6/)。有关将 cert-manager 从 1.6 升级到 1.7 的说明，请参见上游的 [cert-manager 文档](https://cert-manager.io/docs/installation/upgrading/upgrading-1.6-1.7/)。
+Rancher 现在支持 cert-manager 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为 v 1.6.x 将在 2022 年 3 月 30 日结束生命周期。详情请参见 [cert-manager 文档](../install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md#4-安装-cert-manager)。有关将 cert-manager 从 1.5 升级到 1.6 的说明，请参见上游的 [cert-manager 文档](https://cert-manager.io/docs/installation/upgrading/upgrading-1.5-1.6/)。有关将 cert-manager 从 1.6 升级到 1.7 的说明，请参见上游的 [cert-manager 文档](https://cert-manager.io/docs/installation/upgrading/upgrading-1.6-1.7/)。
 
 ---
 

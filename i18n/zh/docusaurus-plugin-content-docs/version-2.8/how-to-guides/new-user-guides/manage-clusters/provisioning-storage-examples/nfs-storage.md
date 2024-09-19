@@ -6,7 +6,7 @@ title: NFS 存储
 
 :::note
 
-- 如果你已经拥有 NFS 共享，则无需配置新的 NFS 服务器即可在 Rancher 中使用 NFS 卷插件。这样的话，你可以跳过此过程的其余部分并直接[添加存储](../../../../pages-for-subheaders/create-kubernetes-persistent-storage.md)。
+- 如果你已经拥有 NFS 共享，则无需配置新的 NFS 服务器即可在 Rancher 中使用 NFS 卷插件。这样的话，你可以跳过此过程的其余部分并直接[添加存储](../create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md)。
 
 - 此教程演示了如何使用 Ubuntu 设置 NFS 服务器。你也应该能够将这些说明用于其他 Linux 发行版（例如 Debian、RHEL、Arch Linux 等）。有关如何使用另一个 Linux 发行版创建 NFS 服务器的官方说明，请参阅发行版的文档。
 

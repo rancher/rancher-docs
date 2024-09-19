@@ -112,7 +112,7 @@ Rancher 支持使用私有镜像仓库进行离线安装。你必须有自己的
 
 这些主机会断开互联网链接，但需要能与你的私有镜像仓库连接。
 
-请确保你的节点满足[操作系统，容器运行时，硬件和网络](../../../../pages-for-subheaders/installation-requirements.md)的常规要求。
+请确保你的节点满足[操作系统，容器运行时，硬件和网络](../../installation-requirements/installation-requirements.md)的常规要求。
 
 如需获取配置 Linux 节点的示例，请参见[在 Amazon EC2 中配置节点](../../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md)的教程。
 
@@ -176,7 +176,7 @@ Rancher 支持使用安全的私有镜像仓库进行离线安装。你必须有
 
 此主机会断开互联网链接，但需要能与你的私有镜像仓库连接。
 
-请确保你的节点满足[操作系统，容器，硬件和网络](../../../../pages-for-subheaders/installation-requirements.md)的常规安装要求。
+请确保你的节点满足[操作系统，容器，硬件和网络](../../installation-requirements/installation-requirements.md)的常规安装要求。
 
 如需获取配置 Linux 节点的示例，请参见[在 Amazon EC2 中配置节点](../../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md)的教程。
 

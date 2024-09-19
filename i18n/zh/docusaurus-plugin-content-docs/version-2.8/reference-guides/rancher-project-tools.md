@@ -25,8 +25,8 @@ Logging 支持：
 
 Rancher 可以与 Elasticsearch、splunk、kafka、syslog 和 fluentd 集成。
 
-有关详细信息，请参阅 [Logging](../pages-for-subheaders/logging.md)。
+有关详细信息，请参阅 [Logging](../integrations-in-rancher/logging/logging.md)。
 
 ## Monitoring
 
-你可以使用 Rancher，通过业界领先并开源的 [Prometheus](https://prometheus.io/) 来监控集群节点、Kubernetes 组件和软件部署的状态和进程。有关详细信息，请参阅 [Monitoring](../pages-for-subheaders/monitoring-and-alerting.md)。
+你可以使用 Rancher，通过业界领先并开源的 [Prometheus](https://prometheus.io/) 来监控集群节点、Kubernetes 组件和软件部署的状态和进程。有关详细信息，请参阅 [Monitoring](../integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md)。

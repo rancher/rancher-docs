@@ -254,7 +254,7 @@ inheritedClusterRoles:
 
 只有在以下情况下，你才能将全局角色分配给组：
 
-- 你已设置[外部认证](../authentication-config/authentication-config.md#external-vs-local-authentication)
+- 你已设置[外部认证](../authentication-config/authentication-config.md#外部认证与本地认证)
 - 外部认证服务支持[用户组](../authentication-config/manage-users-and-groups.md)
 - 你已使用外部认证服务设置了至少一个用户组。
 

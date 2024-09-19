@@ -8,7 +8,7 @@ title: 配置 FreeIPA
 
 - 你必须配置了 [FreeIPA 服务器](https://www.freeipa.org/)。
 - 在 FreeIPA 中创建一个具有 `read-only` 访问权限的 ServiceAccount 。当用户使用 API​​ 密钥发出请求时，Rancher 使用此账号来验证组成员身份。
-- 参见[外部身份验证配置和主体用户](../../../../pages-for-subheaders/authentication-config.md#外部身份验证配置和用户主体)。
+- 参见[外部身份验证配置和主体用户](./authentication-config.md#外部认证配置和用户主体)。
 
 :::
 

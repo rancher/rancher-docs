@@ -234,7 +234,7 @@ title: 通过 AWS EC2 Auto Scaling 组使用 Cluster Autoscaler
 
 我们配置 AWS 后，我们需要创建虚拟机来引导集群：
 
-* master (etcd+controlplane)：根据需要部署三个适当大小的 master 实例。详情请参见[生产就绪集群的建议](../../../../pages-for-subheaders/checklist-for-production-ready-clusters.md)。
+* master (etcd+controlplane)：根据需要部署三个适当大小的 master 实例。详情请参见[生产就绪集群的建议](../../kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters/checklist-for-production-ready-clusters.md)。
    * IAM 角色：`K8sMasterRole`
    * 安全组：`K8sMasterSg`
    * 标签：

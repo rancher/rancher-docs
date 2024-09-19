@@ -6,7 +6,7 @@ title: 为高可用 K3s Kubernetes 集群设置基础设施
 
 我们根据 Rancher 的安装位置（K3s Kubernetes 集群、RKE Kubernetes 集群或单个 Docker 容器）为专用于 Rancher 的 Kubernetes 集群推荐不同基础设施。
 
-有关每个安装选项的详情，请参见[本页](../../../pages-for-subheaders/installation-and-upgrade.md)。
+有关每个安装选项的详情，请参见[本页](../../../getting-started/installation-and-upgrade/installation-and-upgrade.md)。
 
 :::note 重要提示：
 
@@ -23,7 +23,7 @@ title: 为高可用 K3s Kubernetes 集群设置基础设施
 
 ### 1. 配置 Linux 节点
 
-请确保你的节点满足[操作系统，容器运行时，硬件和网络](../../../pages-for-subheaders/installation-requirements.md)的常规要求。
+请确保你的节点满足[操作系统，容器运行时，硬件和网络](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md)的常规要求。
 
 如需获取配置 Linux 节点的示例，请参见[在 Amazon EC2 中配置节点](nodes-in-amazon-ec2.md)的教程。
 

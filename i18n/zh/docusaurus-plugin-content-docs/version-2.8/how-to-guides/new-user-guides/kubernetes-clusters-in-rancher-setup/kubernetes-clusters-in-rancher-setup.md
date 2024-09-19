@@ -45,11 +45,11 @@ import ClusterCapabilitiesTable from '../../../shared-files/\_cluster-capabiliti
 
 Rancher 可以在亚马逊 EC2、DigitalOcean、Azure 或 vSphere 等基础设施提供商中动态调配节点，然后在这些节点上安装 Kubernetes。
 
-使用 Rancher，你可以基于[节点模板](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#node-templates)创建节点池。该模板定义了用于在云提供商中启动节点的参数。
+使用 Rancher，你可以基于[节点模板](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#节点模板)创建节点池。该模板定义了用于在云提供商中启动节点的参数。
 
 使用基础设施提供商托管的节点的一个好处是，如果某个节点失去了与集群的连接，Rancher 可以自动替换掉它，从而保持预期的集群配置。
 
-可用于创建节点模板的云提供商是由 Rancher UI 中激活的[节点驱动程序](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#node-drivers)决定的。
+可用于创建节点模板的云提供商是由 Rancher UI 中激活的[节点驱动程序](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#主机驱动)决定的。
 
 有关详细信息，请参阅[基础设施提供商托管的节点](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)部分。
 
