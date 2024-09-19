@@ -16,11 +16,11 @@ Want to provide a user with access to _all_ projects within a cluster? See [Addi
 
 :::
 
-### Adding Members to a New Project
+## Adding Members to a New Project
 
 You can add members to a project as you create it (recommended if possible). For details on creating a new project, refer to the [cluster administration section.](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md)
 
-### Adding Members to an Existing Project
+## Adding Members to an Existing Project
 
 Following project creation, you can add users as project members so that they can access its resources.
 
