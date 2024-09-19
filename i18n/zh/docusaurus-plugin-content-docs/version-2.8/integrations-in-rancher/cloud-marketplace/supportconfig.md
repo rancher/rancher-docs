@@ -8,7 +8,7 @@ title: Supportconfig Bundle
 
 > **注意**：无论采用何种方法，只有管理员可以生成/下载 Supportconfig Bundle。
 
-### 通过 Rancher 访问
+## 通过 Rancher 访问
 
 首先，点击汉堡菜单。然后单击 `Get Support` 按钮。
 
@@ -20,7 +20,7 @@ title: Supportconfig Bundle
 
 ![Get Support](/img/generate-support-config.png)
 
-### 不通过 Rancher 进行访问
+## 不通过 Rancher 进行访问
 
 首先，为安装 Rancher 的集群生成 kubeconfig。
 

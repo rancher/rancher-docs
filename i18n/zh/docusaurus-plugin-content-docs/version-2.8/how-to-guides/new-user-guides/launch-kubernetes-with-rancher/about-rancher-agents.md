@@ -9,15 +9,15 @@ Rancher 管理的集群上部署了两种不同的 Agent 资源：
 
 有关 Rancher Server 如何配置集群并与集群通信的概述，请参阅[产品架构](../../../pages-for-subheaders/rancher-manager-architecture.md)。
 
-### cattle-cluster-agent
+## cattle-cluster-agent
 
 `cattle-cluster-agent` 用于连接 [Rancher 启动的 Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) 集群的 Kubernetes API。`cattle-cluster-agent` 使用 Deployment 资源进行部署。
 
-### cattle-node-agent
+## cattle-node-agent
 
 `cattle-node-agent` 用于在执行集群操作时与 [Rancher 启动的 Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) 集群中的节点进行交互。集群操作包括升级 Kubernetes 版本和创建/恢复 etcd 快照。`cattle-node-agent` 使用 DaemonSet 资源进行部署，以确保能在每个节点上运行。当 `cattle-cluster-agent` 不可用时，`cattle-node-agent` 可以作为备选方案，用来连接 [Rancher 启动的 Kubernetes](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) 集群的 Kubernetes API。
 
-### 调度规则
+## 调度规则
 
 `cattle-cluster-agent` 使用一组固定的容忍度，或基于应用于 control plane 节点的污点动态添加的容忍度。这种结构允许[基于污点进行驱逐](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/#taint-based-evictions)为 `cattle-cluster-agent` 正常工作。
 

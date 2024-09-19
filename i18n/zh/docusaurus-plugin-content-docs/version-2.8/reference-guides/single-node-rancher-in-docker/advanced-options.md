@@ -2,7 +2,7 @@
 title: Docker 安装高级选项
 ---
 
-### 自定义 CA 证书
+## 自定义 CA 证书
 
 如需 Rancher 在验证服务时使用 CA 根证书，请在启动 Rancher 容器时共享包含 CA 根证书的目录。
 
@@ -26,7 +26,7 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-### API 审计日志
+## API 审计日志
 
 API 审计日志记录了通过 Rancher Server 进行的所有用户和系统事务。
 
@@ -45,7 +45,7 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-### TLS 设置
+## TLS 设置
 
 如需使用不同的 TLS 配置，你可使用 `CATTLE_TLS_MIN_VERSION` 和 `CATTLE_TLS_CIPHERS` 环境变量。例如，将 TLS 1.0 设为可接受的最低 TLS 版本，如下：
 
@@ -61,7 +61,7 @@ docker run -d --restart=unless-stopped \
 
 参见 [TLS 设置](../../getting-started/installation-and-upgrade/installation-references/tls-settings.md)了解更多信息和选项。
 
-### 离线环境
+## 离线环境
 
 如果要访问此页面以完成离线安装，在运行安装命令时，你必须把私有镜像仓库的 URL 添加到 Server 标志前面。例如，将带有私有镜像仓库 URL 的 `<REGISTRY.DOMAIN.COM:PORT>` 添加到 `rancher/rancher:latest` 前面。
 
@@ -69,7 +69,7 @@ docker run -d --restart=unless-stopped \
 
      <REGISTRY.DOMAIN.COM:PORT>/rancher/rancher:latest
 
-### 持久化数据
+## 持久化数据
 
 Rancher 使用 etcd 作为数据存储。如果 Rancher 是使用 Docker 安装的，Rancher 会使用嵌入式 etcd。持久化数据位于容器的 `/var/lib/rancher` 路径中。
 
@@ -85,7 +85,7 @@ docker run -d --restart=unless-stopped \
 
 特权访问是[必须](../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 
-### 在同一个节点中运行 `rancher/rancher` 和 `rancher/rancher-agent`
+## 在同一个节点中运行 `rancher/rancher` 和 `rancher/rancher-agent`
 
 如需使用单个节点运行 Rancher 并将同一个节点添加到集群，你必须调整映射给 `rancher/rancher` 容器的主机端口。
 

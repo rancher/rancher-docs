@@ -2,7 +2,7 @@
 title: EKS 集群配置参考
 ---
 
-### 账号访问
+## 账号访问
 
 使用获取的信息为 IAM 策略填写每个下拉列表和字段：
 
@@ -11,7 +11,7 @@ title: EKS 集群配置参考
 | 区域 | 从下拉列表中选择构建集群的地理区域。 |
 | 云凭证 | 选择为 IAM 策略创建的云凭证。有关在 Rancher 中创建云凭证的更多信息，请参阅[此页面](../../user-settings/manage-cloud-credentials.md)。 |
 
-### 服务角色
+## 服务角色
 
 选择一个[服务角色](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html)。
 
@@ -20,15 +20,15 @@ title: EKS 集群配置参考
 | Standard：Rancher 生成的服务角色 | 如果选择此角色，Rancher 会自动添加一个服务角色以供集群使用。 |
 | 自定义：从现有的服务角色中选择 | 如果选择此角色，Rancher 将允许你从已在 AWS 中创建的服务角色中进行选择。有关在 AWS 中创建自定义服务角色的更多信息，请参阅 [Amazon 文档](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#create-service-linked-role)。 |
 
-### 密文加密
+## 密文加密
 
 可选：要加密密文，请选择或输入在 [AWS 密钥管理服务 (KMS)](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) 中创建的密钥。
 
-### API Server 端点访问
+## API Server 端点访问
 
 配置公共/私有 API 访问是一个高级用例。有关详细信息，请参阅 [EKS 集群端点访问控制文档](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html)。
 
-### 专用 API 端点
+## 专用 API 端点
 
 如果你在创建集群时启用了私有 API 端点访问，并禁用了公共 API 端点访问，那么你必须进行额外的步骤才能使 Rancher 成功连接到集群。在这种情况下，一个弹窗将会显示，其中包含需要在要注册到 Rancher 的集群上运行的命令。配置集群后，你可以在任何能连接到集群的 Kubernetes API 的地方运行显示的命令。
 
@@ -36,7 +36,7 @@ title: EKS 集群配置参考
 - 在创建集群时，创建具有私有和公共 API 端点访问权限的集群。在集群创建并处于 active 状态后，你可以禁用公共访问，Rancher 将能继续与 EKS 集群通信。
 - 确保 Rancher 与 EKS 集群共享同一个子网。然后，你可以使用安全组使 Rancher 能够与集群的 API 端点进行通信。在这种情况下，你不需要运行注册集群的命令，Rancher 就能够与你的集群通信。有关配置安全组的更多信息，请参阅[安全组文档](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html)。
 
-### 公共访问端点
+## 公共访问端点
 
 你也可以选择通过显式 CIDR 块来限制对公共端点的访问。
 
@@ -48,7 +48,7 @@ title: EKS 集群配置参考
 
 有关对集群端点的公共和私有访问的更多信息，请参阅 [Amazon EKS 文档](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html)。
 
-### 子网
+## 子网
 
 | 选项 | 描述 |
 | ------- | ------------ |
@@ -60,7 +60,7 @@ title: EKS 集群配置参考
 - [什么是 Amazon VPC？](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
 - [VPC 和子网](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html)
 
-### 安全组
+## 安全组
 
 Amazon 文档：
 
@@ -68,7 +68,7 @@ Amazon 文档：
 - [VPC 的安全组](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html)
 - [创建安全组](https://docs.aws.amazon.com/vpc/latest/userguide/getting-started-ipv4.html#getting-started-create-security-group)
 
-### Logging
+## Logging
 
 将 controlplane 日志配置为发送到 Amazon CloudWatch。如果你将集群日志发送到 CloudWatch Logs，你需要按照 standard CloudWatch Logs 支付数据引入和存储费用。
 
@@ -76,13 +76,13 @@ Amazon 文档：
 
 有关 EKS controlplane 日志管理的更多信息，请参阅[官方文档](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)。
 
-### 托管节点组
+## 托管节点组
 
 Amazon EKS 托管的节点组自动为 Amazon EKS Kubernetes 集群的节点（Amazon EC2 实例）进行预置和生命周期管理。
 
 有关节点组如何工作以及如何配置的更多信息，请参阅 [EKS 文档](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html)。
 
-#### 使用你自己的启动模板
+### 使用你自己的启动模板
 
 你可以提供启动模板 ID 和版本，以便轻松配置节点组中的 EC2 实例。如果你提供了启动模板，则以下设置都无法在 Rancher 中进行配置。因此，如果你使用启动模板，则需要在启动模板中指定以下列表中的所有必须和所需的设置。另请注意，如果提供了启动模板 ID 和版本，则只能更新模板版本。如果要使用新模板 ID，则需要创建新的托管节点组。
 
@@ -95,11 +95,11 @@ Amazon EKS 托管的节点组自动为 Amazon EKS Kubernetes 集群的节点（A
 | 用户数据 | [MIME 多部分格式](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html#launch-template-user-data)的 Cloud init 脚本。 | 选填 |
 | 实例资源标签 | 标记节点组中的每个 EC2 实例。 | 选填 |
 
-#### Rancher 管理的启动模板
+### Rancher 管理的启动模板
 
 如果你不指定启动模板，你将能够在 Rancher UI 中配置上述选项，并且可以在创建后更新所有这些选项。为了利用所有这些选项，Rancher 将为你创建和管理启动模板。Rancher 中的所有集群都将有一个 Rancher 管理的启动模板。此外，每个没有指定启动模板的托管节点组都将具有一个管理的启动模板版本。此启动模板的名称将具有 “rancher-managed-lt-” 前缀，后面是集群的显示名称。此外，Rancher 管理的启动模板将使用 “rancher-managed-template” 键和 “do-not-modify-or-delete” 值来进行标记，以将其识别为 Rancher 管理的启动模板。请注意，不要修改或删除此启动模板，或将此启动模板与其他集群或托管节点组一起使用。因为这可能会使你的节点组“降级”并需要销毁和重新创建。
 
-#### 自定义 AMI
+### 自定义 AMI
 
 如果你在启动模板或 Rancher 中指定了自定义 AMI，则必须[正确配置](https://aws.amazon.com/premiumsupport/knowledge-center/eks-custom-linux-ami/)镜像，并且必须提供用户数据以[引导节点](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html#launch-template-custom-ami)。这是一个高级用例，因此你必须要了解其要求。
 
@@ -111,7 +111,7 @@ Amazon EKS 托管的节点组自动为 Amazon EKS Kubernetes 集群的节点（A
 
 :::
 
-#### Spot 实例
+### Spot 实例
 
 Spot 实例现在[受 EKS 支持](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html#managed-node-group-capacity-types-spot)。如果你指定了启动模板，Amazon 建议不要在模板中提供实例类型。相反，Amazon 建议提供多种实例类型。如果你为节点组启用了“请求 Spot 实例”复选框，那么你将有机会提供多种实例类型。
 
@@ -121,7 +121,7 @@ Spot 实例现在[受 EKS 支持](https://docs.aws.amazon.com/eks/latest/usergui
 
 :::
 
-#### 节点组设置
+### 节点组设置
 
 以下设置也是可配置的。在创建节点组后，除“节点组名称”外的所有选项都是可编辑的。
 
@@ -135,7 +135,7 @@ Spot 实例现在[受 EKS 支持](https://docs.aws.amazon.com/eks/latest/usergui
 | Tags | 管理的节点组的标签，这些标签不会传播到任何相关资源。 |
 
 
-### 配置刷新间隔
+## 配置刷新间隔
 
 `eks-refresh-cron` 设置已弃用。它已迁移到 `eks-refresh` 设置，这是一个表示秒的整数。
 

@@ -4,7 +4,7 @@ title: Host Gateway (L2bridge) 的网络要求
 
 本节介绍如何配置使用 *Host Gateway (L2bridge)* 模式的自定义 Windows 集群。
 
-### 禁用私有 IP 地址检查
+## 禁用私有 IP 地址检查
 
 如果你使用 *Host Gateway (L2bridge)* 模式，并将节点托管在下面列出的云服务上，则必须在启动时禁用 Linux 或 Windows 主机的私有 IP 地址检查。要为每个节点禁用此检查，请按照以下各个云服务对应的说明进行操作：
 
@@ -14,7 +14,7 @@ title: Host Gateway (L2bridge) 的网络要求
 | Google GCE | [为实例启用 IP 转发](https://cloud.google.com/vpc/docs/using-routes#canipforward)（默认情况下，VM 无法转发由另一个 VM 发起的数据包） |
 | Azure VM | [启用或禁用 IP 转发](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface#enable-or-disable-ip-forwarding) |
 
-### 云托管虚拟机的路由配置
+## 云托管虚拟机的路由配置
 
 如果是使用 Flannel 的 [**Host Gateway (L2bridge)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#host-gw) 后端，同一节点上的所有容器都属于私有子网，流量通过主机网络从一个节点上的子网路由到在另一个节点上的子网。
 

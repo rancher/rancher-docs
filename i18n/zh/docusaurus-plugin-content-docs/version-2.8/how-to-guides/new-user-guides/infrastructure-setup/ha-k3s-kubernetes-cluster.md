@@ -21,13 +21,13 @@ title: 为高可用 K3s Kubernetes 集群设置基础设施
 - **1 个负载均衡器**：用于将流量转发到这两个节点中。
 - **1 个 DNS 记录**：用于将 URL 映射到负载均衡器。此 DNS 记录将成为 Rancher Server 的 URL，下游集群需要可以访问到这个地址。
 
-### 1. 配置 Linux 节点
+## 1. 配置 Linux 节点
 
 请确保你的节点满足[操作系统，容器运行时，硬件和网络](../../../pages-for-subheaders/installation-requirements.md)的常规要求。
 
 如需获取配置 Linux 节点的示例，请参见[在 Amazon EC2 中配置节点](nodes-in-amazon-ec2.md)的教程。
 
-### 2. 配置外部数据库
+## 2. 配置外部数据库
 
 K3s 与其他 Kubernetes 发行版不同，在于其支持使用 etcd 以外的数据库来运行 Kubernetes。该功能让 Kubernetes 运维更加灵活。你可以根据实际情况选择合适的数据库。
 
@@ -39,7 +39,7 @@ K3s 与其他 Kubernetes 发行版不同，在于其支持使用 etcd 以外的�
 
 如需获取配置 K3s 集群数据库的所有可用选项，请参见 [K3s 官方文档](https://rancher.com/docs/k3s/latest/en/installation/datastore/)。
 
-### 3. 配置负载均衡器
+## 3. 配置负载均衡器
 
 你还需要设置一个负载均衡器，来将流量重定向到两个节点上的 Rancher 副本。配置后，当单个节点不可用时，继续保障与 Rancher Management Server 的通信。
 
@@ -62,7 +62,7 @@ K3s 与其他 Kubernetes 发行版不同，在于其支持使用 etcd 以外的�
 
 :::
 
-### 4. 配置 DNS 记录
+## 4. 配置 DNS 记录
 
 配置完负载均衡器后，你将需要创建 DNS 记录，以将流量发送到该负载均衡器。
 

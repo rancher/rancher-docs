@@ -2,13 +2,13 @@
 title: NeuVector 集成
 ---
 
-### Rancher 中的 NeuVector 集成
+## Rancher 中的 NeuVector 集成
 
 [NeuVector 5.x](https://open-docs.neuvector.com/) 是一个开源的，以容器为中心的安全应用程序，Rancher 已集成 NeuVector。NeuVector 在运行时为关键应用程序和数据提供实时的合规、可见和保护功能。NeuVector 提供具有 CIS Benchmark 和漏洞扫描的防火墙、容器进程/文件系统监控和安全审计。有关 Rancher 安全性的更多信息，请参阅[安全文档](../pages-for-subheaders/rancher-security.md)。
 
 NeuVector 可以通过 Helm Chart 启用。你可以在 **Apps** 或 Rancher UI 中的 **Cluster Tools** 中安装该 Chart。安装 Helm Chart 后，用户可以轻松地[在 Rancher 中部署和管理 NeuVector 集群](https://open-docs.neuvector.com/deploying/rancher#deploy-and-manage-neuvector-through-rancher-apps-marketplace)。
 
-### 使用 Rancher 安装 NeuVector
+## 使用 Rancher 安装 NeuVector
 
 Harvester Helm Chart 用于管理 Rancher 中 NeuVector UI 的访问，用户可以在 Rancher 中直接跳转，然后部署和管理 NeuVector 集群。
 
@@ -40,12 +40,12 @@ Harvester Helm Chart 用于管理 Rancher 中 NeuVector UI 的访问，用户可
 1. 点击左侧导航栏底部的**集群工具**。
 1. 按照上面的步骤 4 相应地选择你的容器运行时，然后再次单击**安装**。
 
-### 从 Rancher UI 访问 NeuVector
+## 从 Rancher UI 访问 NeuVector
 
 1. 导航到安装了 NeuVector 的集群的 Cluster Explorer。在左侧导航栏中，单击 **NeuVector**。
 1. 单击外部链接以转到 NeuVector UI。选择链接后，用户必须接受`最终用户许可协议`才能访问 NeuVector UI。
 
-### 从 Rancher UI 卸载 NeuVector
+## 从 Rancher UI 卸载 NeuVector
 
 **通过 "Apps" 卸载**：
 
@@ -58,15 +58,15 @@ Harvester Helm Chart 用于管理 Rancher 中 NeuVector UI 的访问，用户可
 1. 点击 **☰ > 集群管理**。
 1. 单击屏幕左下角的**集群工具**，然后单击 NeuVector Chart 下方的垃圾桶图标。如果需要，选择`删除与此应用关联的 CRD`，然后单击**删除**。
 
-### GitHub 仓库
+## GitHub 仓库
 
 NeuVector 项目在[这里](https://github.com/neuvector/neuvector)。
 
-### 文档
+## 文档
 
 NeuVector 文档在[这里](https://open-docs.neuvector.com/)。
 
-### 架构
+## 架构
 
 NeuVector 安全解决方案包含四种类型的安全容器，分别是 Controller、Enforcer、Manager 和 Scanner。它还提供了一个称为 All-in-One 的特殊容器（主要用于 Docker 原生部署），能将 Controller、Enforcer 和 Manager 功能组合在一个容器中。此外，还有一个 Updater，运行该程序时会更新 CVE 数据库。
 
@@ -87,7 +87,7 @@ NeuVector 安全解决方案包含四种类型的安全容器，分别是 Contro
 
 要了解有关 NeuVector 架构的更多信息，请参阅[此处](https://open-docs.neuvector.com/basics/overview#architecture)。
 
-### CPU 和内存分配
+## CPU 和内存分配
 
 以下是默认 NeuVector Chart 安装部署的最低计算资源推荐。请注意，未设置资源限制。
 
@@ -101,7 +101,7 @@ NeuVector 安全解决方案包含四种类型的安全容器，分别是 Contro
 \* Controller、Manager 和 Scanner 容器合计至少需要 1GB 内存。
 
 
-### 强化集群支持 - Calico 和 Canal
+## 强化集群支持 - Calico 和 Canal
 
 <Tabs>
 <TabItem value="RKE1">
@@ -158,7 +158,7 @@ kubectl patch cronjob neuvector-updater-pod -n cattle-neuvector-system --patch '
 </Tabs>
 
 
-### 启用 SELinux 的集群支持 - Calico 和 Canal
+## 启用 SELinux 的集群支持 - Calico 和 Canal
 
 要在 RKE2 集群上启用 SELinux，请执行以下步骤：
 
@@ -175,12 +175,12 @@ kubectl patch deploy neuvector-scanner-pod -n cattle-neuvector-system --patch '{
 kubectl patch cronjob neuvector-updater-pod -n cattle-neuvector-system --patch '{"spec":{"jobTemplate":{"spec":{"template":{"spec":{"securityContext":{"runAsUser": 5400}}}}}}}'
 ```
 
-### 离线环境中的集群支持
+## 离线环境中的集群支持
 
 - 所有 NeuVector 组件都可部署在离线环境中的集群上，无需任何额外配置。
 
 
-### 支持限制
+## 支持限制
 
 * 目前仅支持管理员和集群所有者。
 
@@ -189,7 +189,7 @@ kubectl patch cronjob neuvector-updater-pod -n cattle-neuvector-system --patch '
 * Windows 集群不支持 NeuVector。
 
 
-### 其他限制
+## 其他限制
 
 * 目前，如果 NeuVector partner Chart 已存在，则 NeuVector 功能 Chart 的安装会失败。要解决此问题，请卸载 NeuVector partner Chart 并重新安装 NeuVector 功能 Chart。
 

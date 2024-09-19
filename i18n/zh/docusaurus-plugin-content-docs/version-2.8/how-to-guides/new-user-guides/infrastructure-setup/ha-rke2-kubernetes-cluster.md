@@ -18,13 +18,13 @@ title: 为高可用 RKE2 Kubernetes 集群设置基础设施
 - **1 个负载均衡器**：用于将流量转发到这两个节点中。
 - **1 个 DNS 记录**：用于将 URL 映射到负载均衡器。此 DNS 记录将成为 Rancher Server 的 URL，下游集群需要可以访问到这个地址。
 
-### 1. 配置 Linux 节点
+## 1. 配置 Linux 节点
 
 请确保你的节点满足[操作系统，容器运行时，硬件和网络](../../../pages-for-subheaders/installation-requirements.md)的常规要求。
 
 如需获取配置 Linux 节点的示例，请参见[在 Amazon EC2 中配置节点](nodes-in-amazon-ec2.md)的教程。
 
-### 2. 配置负载均衡器
+## 2. 配置负载均衡器
 
 你还需要设置一个负载均衡器，来将流量重定向到所有节点上的 Rancher 副本。配置后，当单个节点不可用时，继续保障与 Rancher Management Server 的通信。
 
@@ -47,7 +47,7 @@ title: 为高可用 RKE2 Kubernetes 集群设置基础设施
 
 :::
 
-### 4. 配置 DNS 记录
+## 4. 配置 DNS 记录
 
 配置完负载均衡器后，你将需要创建 DNS 记录，以将流量发送到该负载均衡器。
 

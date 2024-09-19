@@ -47,7 +47,7 @@ title: 证书轮换
 
 :::
 
-### 证书轮换
+## 证书轮换
 
 Rancher 启动的 Kubernetes 集群能够通过 UI 轮换自动生成的证书。
 
@@ -62,7 +62,7 @@ Rancher 启动的 Kubernetes 集群能够通过 UI 轮换自动生成的证书�
 
 **结果**：将轮换所选证书，相关服务将重新启动以使用新证书。
 
-### 补充说明
+## 补充说明
 
 <Tabs>
 <TabItem value="RKE">

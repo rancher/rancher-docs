@@ -17,6 +17,8 @@ title: 与下游集群通信
 3. [Node Agents](#3-node-agents)
 4. [授权集群端点](#4-授权集群端点)
 
+## Components
+
 ### 1. 认证代理
 
 在此图中，名为 Bob 的用户希望查看在名为 User Cluster 1 的下游集群上运行的所有 Pod。在 Rancher 中，他可以运行 `kubectl` 命令来查看

@@ -4,7 +4,7 @@ title: Harvester 集成
 
 Harvester 是 Rancher 2.6.1 新增的功能，[Harvester](https://docs.harvesterhci.io/) 是基于 Kubernetes 构建的开源超融合基础架构 (HCI) 软件。Harvester 安装在裸金属服务器上，提供集成的虚拟化和分布式存储功能。虽然 Harvester 使用 Kubernetes 运行，但它不需要用户了解 Kubernetes 概念，因此是一个更加用户友好的应用。
 
-### 功能开关
+## 功能开关
 
 你可以使用 Harvester 的功能开关来管理 Harvester 在 Rancher 虚拟化管理页面的访问，用户可以在该页面直接导航到 Harvester 集群并访问 Harvester UI。Harvester 的功能开关是默认启用的。如需了解 Rancher 中功能开关的更多详细信息，请单击[此处](../pages-for-subheaders/enable-experimental-features.md)。
 
@@ -18,7 +18,7 @@ Harvester 是 Rancher 2.6.1 新增的功能，[Harvester](https://docs.harvester
 
 * 用户只能在**虚拟化管理**页面上导入 Harvester 集群。在**集群管理**页面上导入集群是不支持的，而且会出现警告。建议你返回**虚拟化管理**页面执行此操作。
 
-### Harvester 主机驱动
+## Harvester 主机驱动
 
 [Harvester 主机驱动](https://docs.harvesterhci.io/v1.1/rancher/node/node-driver/) 通常可用于 Rancher 中的 RKE 和 RKE2 选项。无论 Harvester 功能开关是否启用，主机驱动都是可用的。请注意，默认情况下主机驱动是关闭的。用户只能通过**集群管理**页面在 Harvester 上创建 RKE 或 RKE2 集群。
 
@@ -26,7 +26,7 @@ Harvester 允许通过 Harvester UI 上传和显示 `.ISO` 镜像，但 Rancher 
 
 如需了解 Rancher 中主机驱动的更多详细信息，请单击[此处](../pages-for-subheaders/about-provisioning-drivers.md#主机驱动)。
 
-### 端口要求
+## 端口要求
 
 可以在[此处](https://docs.harvesterhci.io/v1.1/install/requirements#networking)找到 Harvester 集群的端口要求。
 
@@ -37,7 +37,7 @@ Harvester 允许通过 Harvester UI 上传和显示 `.ISO` 镜像，但 Rancher 
 
 对于其他集群（例如 K3s 和 RKE1）的其他端口要求，请参阅[这些文档](https://docs.harvesterhci.io/v1.1/install/requirements/#guest-clusters)。
 
-### 限制
+## 限制
 
 ---
 **仅适用于 Rancher v2.6.1 和 v2.6.2**：

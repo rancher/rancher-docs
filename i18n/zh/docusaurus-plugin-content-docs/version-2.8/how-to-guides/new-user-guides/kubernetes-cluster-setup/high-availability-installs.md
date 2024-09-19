@@ -12,7 +12,7 @@ Rancher Server 的数据存储在 etcd 中。etcd 数据库可以在所有三个
 
 有关 Rancher 如何工作的详情（与安装方法无关），请参见[架构](../../../pages-for-subheaders/rancher-manager-architecture.md)。
 
-### 推荐架构
+## 推荐架构
 
 - Rancher 的 DNS 应该解析为 4 层负载均衡器。
 - 负载均衡器应该把 TCP/80 端口和 TCP/443 端口的流量转发到 Kubernetes 集群的全部 3 个节点上。

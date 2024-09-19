@@ -4,7 +4,7 @@ title: 授权集群端点的工作原理
 
 本文介绍 kubectl CLI、kubeconfig 文件和授权集群端点如何协同工作，使你可以直接访问下游 Kubernetes 集群，而无需通过 Rancher Server 进行身份验证。本文旨在为[设置 kubectl 以直接访问集群的说明](use-kubectl-and-kubeconfig.md#直接使用下游集群进行身份验证)提供背景信息和上下文。
 
-### Kubeconfig 文件说明
+## Kubeconfig 文件说明
 
 kubeconfig 文件是与 kubectl 命令行工具（或其他客户端）结合使用时用于配置 Kubernetes 访问的文件。
 
@@ -21,7 +21,7 @@ kubeconfig 文件及其内容特定于各个集群。你可以从 Rancher 的**�
 
 如果管理员[关闭了 kubeconfig 令牌生成](../../../../reference-guides/about-the-api/api-tokens.md#在生成的-kubeconfig-中禁用令牌)，则 kubeconfig 文件要求 [Rancher CLI](./authorized-cluster-endpoint.md) 存在于你的 PATH 中。
 
-### RKE 集群的两种身份验证方法
+## RKE 集群的两种身份验证方法
 
 如果集群不是 [RKE 集群](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)，kubeconfig 文件只允许你以一种方式访问​​集群，即通过 Rancher Server 进行身份验证，然后 Rancher 允许你在集群上运行 kubectl 命令。
 
@@ -36,7 +36,7 @@ kubeconfig 文件及其内容特定于各个集群。你可以从 Rancher 的**�
 
 [架构介绍](../../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md)也详细解释了这些与下游 Kubernetes 集群通信的方法，并介绍了 Rancher 的工作原理以及 Rancher 如何与下游集群通信的详细信息。
 
-### 关于 kube-api-auth 身份验证 Webhook
+## 关于 kube-api-auth 身份验证 Webhook
 
 `kube-api-auth` 微服务是为[授权集群端点](../../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-授权集群端点)提供用户认证功能而部署的。当你使用 `kubectl` 访问下游集群时，集群的 Kubernetes API server 会使用 `kube-api-auth` 服务作为 webhook 对你进行身份验证。
 

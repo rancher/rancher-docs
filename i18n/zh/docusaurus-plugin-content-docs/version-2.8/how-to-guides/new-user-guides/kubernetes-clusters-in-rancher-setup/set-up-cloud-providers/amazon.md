@@ -21,7 +21,7 @@ weight: 1
 
 :::
 
-### 1. 创建 IAM 角色并附加到实例
+## 1. 创建 IAM 角色并附加到实例
 
 添加到集群的所有节点都必须能够与 EC2 交互，以便它们可以创建和删除资源。你可以使用附加到实例的 IAM 角色来启用交互。请参阅 [Amazon 文档：创建 IAM 角色](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html#create-iam-role) 来创建 IAM 角色。有两个示例策略：
 
@@ -129,7 +129,7 @@ weight: 1
 }
 ```
 
-### 2. 创建 ClusterID
+## 2. 创建 ClusterID
 
 以下资源需要使用 `ClusterID` 进行标记：
 
@@ -155,6 +155,6 @@ weight: 1
 
 **Key** = `kubernetes.io/cluster/CLUSTERID` **Value** = `shared`.
 
-### 使用 Amazon Elastic Container Registry (ECR)
+## 使用 Amazon Elastic Container Registry (ECR)
 
 在将[创建 IAM 角色并附加到实例](#1-创建-iam-角色并附加到实例)中的 IAM 配置文件附加到实例时，kubelet 组件能够自动获取 ECR 凭证。使用低于 v1.15.0 的 Kubernetes 版本时，需要在集群中配置 Amazon 云提供商。从 Kubernetes 版本 v1.15.0 开始，kubelet 无需在集群中配置 Amazon 云提供商即可获取 ECR 凭证。

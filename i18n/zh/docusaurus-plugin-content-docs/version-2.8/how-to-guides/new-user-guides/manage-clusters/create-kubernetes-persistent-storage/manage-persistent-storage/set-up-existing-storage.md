@@ -16,12 +16,12 @@ title: 设置现有存储
 2. [添加一个引用持久存储的 PersistentVolume](#2-添加一个引用持久存储的-persistentvolume)。
 3. [为使用 StatefulSet 部署的 Pod 使用存储类](#3-为使用-statefulset-部署的-pod-使用存储类)
 
-### 先决条件
+## 先决条件
 
 - 要将持久卷创建为 Kubernetes 资源，你必须具有`管理卷`的[角色。](../../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色参考)
 - 如果你要为云集群配置存储，则存储和集群主机必须使用相同的云提供商。
 
-### 1. 设置持久存储
+## 1. 设置持久存储
 
 在 Rancher 中创建持久卷不会创建存储卷。它只创建映射到现有卷的 Kubernetes 资源。因此，在你可以将持久卷创建为 Kubernetes 资源之前，你必须先配置存储。
 
@@ -29,7 +29,7 @@ title: 设置现有存储
 
 如果你有一个块存储池并且不想使用云提供商，你可以使用 Longhorn 为 Kubernetes 集群提供持久存储。详情请参见[本页面](../../../../../integrations-in-rancher/longhorn.md)。
 
-### 2. 添加一个引用持久存储的 PersistentVolume
+## 2. 添加一个引用持久存储的 PersistentVolume
 
 这些步骤描述了如何在 Kubernetes 的集群级别设置 PersistentVolume。
 
@@ -48,7 +48,7 @@ title: 设置现有存储
 **结果**：已创建你的新持久卷。
 
 
-### 3. 为使用 StatefulSet 部署的 Pod 使用存储类
+## 3. 为使用 StatefulSet 部署的 Pod 使用存储类
 
 StatefulSet 管理 Pod 的部署和扩展，同时为每个 Pod 维护一个粘性标识。在这个 StatefulSet 中，我们将配置一个 VolumeClaimTemplate。StatefulSet 管理的每个 Pod 都将部署一个基于此 VolumeClaimTemplate 的 PersistentVolumeClaim。PersistentVolumeClaim 将引用我们创建的 PersistentVolume。因此，在部署 StatefulSet 管理的每个 Pod 时，都会绑定一个 PersistentVolumeClaim 中定义的 PersistentVolume。
 
