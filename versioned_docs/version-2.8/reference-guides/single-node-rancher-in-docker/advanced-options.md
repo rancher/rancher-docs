@@ -6,7 +6,7 @@ title: Advanced Options for Docker Installs
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/single-node-rancher-in-docker/advanced-options"/>
 </head>
 
-### Custom CA Certificate
+## Custom CA Certificate
 
 If you want to configure Rancher to use a CA root certificate to be used when validating services, you would start the Rancher container sharing the directory that contains the CA root certificate.
 
@@ -30,7 +30,7 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-### API Audit Log
+## API Audit Log
 
 The API Audit Log records all the user and system transactions made through Rancher server.
 
@@ -49,7 +49,7 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-### TLS settings
+## TLS settings
 
 To set a different TLS configuration, you can use the `CATTLE_TLS_MIN_VERSION` and `CATTLE_TLS_CIPHERS` environment variables. For example, to configure TLS 1.0 as minimum accepted TLS version:
 
@@ -65,7 +65,7 @@ Privileged access is [required.](../../getting-started/installation-and-upgrade/
 
 See [TLS settings](../../getting-started/installation-and-upgrade/installation-references/tls-settings.md) for more information and options.
 
-### Air Gap
+## Air Gap
 
 If you are visiting this page to complete an air gap installation, you must prepend your private registry URL to the server tag when running the installation command in the option that you choose. Add `<REGISTRY.DOMAIN.COM:PORT>` with your private registry URL in front of `rancher/rancher:latest`.
 
@@ -73,7 +73,7 @@ If you are visiting this page to complete an air gap installation, you must prep
 
      <REGISTRY.DOMAIN.COM:PORT>/rancher/rancher:latest
 
-### Persistent Data
+## Persistent Data
 
 Rancher uses etcd as a datastore. When Rancher is installed with Docker, the embedded etcd is being used. The persistent data is at the following path in the container: `/var/lib/rancher`.
 
@@ -89,7 +89,7 @@ docker run -d --restart=unless-stopped \
 
 Privileged access is [required.](../../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md#privileged-access-for-rancher)
 
-### Running `rancher/rancher` and `rancher/rancher-agent` on the Same Node
+## Running `rancher/rancher` and `rancher/rancher-agent` on the Same Node
 
 In the situation where you want to use a single node to run Rancher and to be able to add the same node to a cluster, you have to adjust the host ports mapped for the `rancher/rancher` container.
 
