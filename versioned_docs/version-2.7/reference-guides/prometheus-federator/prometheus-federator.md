@@ -26,18 +26,18 @@ Prometheus Federator is designed to be deployed alongside an existing Prometheus
 2. On seeing each ProjectHelmChartCR, the operator will automatically deploy a Project Prometheus stack on the Project Owner's behalf in the **Project Release Namespace (`cattle-project-<id>-monitoring`)** based on a HelmChart CR and a HelmRelease CR automatically created by the ProjectHelmChart controller in the **Operator / System Namespace**.
 3. RBAC will automatically be assigned in the Project Release Namespace to allow users to view the Prometheus, Alertmanager, and Grafana UIs of the Project Monitoring Stack deployed; this will be based on RBAC defined on the Project Registration Namespace against the [default Kubernetes user-facing roles](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles). For more information, see the section on [configuring RBAC](rbac.md).
 
-### What is a Project?
+## What is a Project?
 
 In Prometheus Federator, a Project is a group of namespaces that can be identified by a `metav1.LabelSelector`. By default, the label used to identify projects is `field.cattle.io/projectId`, the label used to identify namespaces that are contained within a given Rancher Project.
 
-### Configuring the Helm release created by a ProjectHelmChart
+## Configuring the Helm release created by a ProjectHelmChart
 
 The `spec.values` of this ProjectHelmChart's resources will correspond to the `values.yaml` override to be supplied to the underlying Helm chart deployed by the operator on the user's behalf; to see the underlying chart's `values.yaml` spec, either:
 
 - View the chart's definition located at [`rancher/prometheus-federator` under `charts/rancher-project-monitoring`](https://github.com/rancher/prometheus-federator/blob/main/charts/rancher-project-monitoring) (where the chart version will be tied to the version of this operator).
 - Look for the ConfigMap named `monitoring.cattle.io.v1alpha1` that is automatically created in each Project Registration Namespace, which will contain both the `values.yaml` and `questions.yaml` that was used to configure the chart (which was embedded directly into the `prometheus-federator` binary).
 
-### Namespaces
+## Namespaces
 
 As a Project Operator based on [rancher/helm-project-operator](https://github.com/rancher/helm-project-operator), Prometheus Federator has three different classifications of namespaces that the operator looks out for:
 
@@ -65,7 +65,7 @@ As a Project Operator based on [rancher/helm-project-operator](https://github.co
 
     :::
 
-### Helm Resources (HelmChart, HelmRelease)
+## Helm Resources (HelmChart, HelmRelease)
 
 On deploying a ProjectHelmChart, the Prometheus Federator will automatically create and manage two child custom resources that manage the underlying Helm resources in turn:
 
@@ -87,7 +87,7 @@ HelmRelease CRs emit Kubernetes Events that detect when an underlying Helm relea
 
 Both of these resources are created for all Helm charts in the Operator / System namespaces to avoid escalation of privileges to underprivileged users.
 
-### Advanced Helm Project Operator Configuration
+## Advanced Helm Project Operator Configuration
 
 For more information on advanced configurations, refer to [this page](https://github.com/rancher/prometheus-federator/blob/main/charts/prometheus-federator/0.0.1/README.md#advanced-helm-project-operator-configuration).
 
@@ -103,6 +103,6 @@ For more information on advanced configurations, refer to [this page](https://gi
 |`helmProjectOperator.hardenedNamespaces.configuration`| The configuration to be supplied to the default ServiceAccount or auto-generated NetworkPolicy on managing a namespace. |
 -->
 
-### Prometheus Federator on the Local Cluster
+## Prometheus Federator on the Local Cluster
 
 Prometheus Federator is a resource intensive application. Installing it to the local cluster is possible, but **not recommended**.
