@@ -2,13 +2,13 @@
 title: 其他安装方式
 ---
 
-### 离线安装
+## 离线安装
 
 按照[以下步骤](air-gapped-helm-cli-install/air-gapped-helm-cli-install.md)在离线环境中安装 Rancher Server。
 
 离线环境可以是 Rancher Server 离线安装、防火墙后面或代理后面。
 
-### Docker 安装
+## Docker 安装
 
 [单节点 Docker 安装](rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md)适用于想要测试 Rancher 的用户。你无需使用 Helm 在 Kubernetes 集群上运行 Rancher，你可以使用 `docker run` 命令，把 Rancher Server 组件安装到单个节点上。
 

@@ -72,5 +72,6 @@ spec:
 
 **结果**：生成流到该服务的流量时（例如，刷新 Ingress Gateway URL），你可以在 Kiali 流量图中看到流到 `reviews` 服务的流量被平均分配到了 `v1` 和 `v3`。
 
-### 后续步骤
+## 后续步骤
+
 [生成和查看流量](generate-and-view-traffic.md)

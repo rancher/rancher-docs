@@ -18,19 +18,19 @@ title: 为高可用 RKE Kubernetes 集群设置基础设施
 
 这些节点必须位于同一个区域或数据中心。但是你可以把这些服务器放在不同的可用区。
 
-### 为什么使用三个节点？
+## 为什么使用三个节点？
 
 在 RKE 集群中，Rancher Server 的数据存储在 etcd 中。而这个 etcd 数据库在这三个节点上运行。
 
 为了选举出大多数 etcd 节点认可的 etcd 集群 leader，etcd 数据库需要奇数个节点。如果 etcd 数据库无法选出 leader，etcd 可能会出现[脑裂（split brain）](https://www.quora.com/What-is-split-brain-in-distributed-systems)的问题，此时你需要使用备份恢复集群。如果三个 etcd 节点之一发生故障，其余两个节点可以选择一个 leader，因为它们是 etcd 节点总数的大多数部分。
 
-### 1. 配置 Linux 节点
+## 1. 配置 Linux 节点
 
 请确保你的节点满足[操作系统，容器运行时，硬件和网络](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md)的常规要求。
 
 如需获取配置 Linux 节点的示例，请参见[在 Amazon EC2 中配置节点](nodes-in-amazon-ec2.md)的教程。
 
-### 2. 配置负载均衡器
+## 2. 配置负载均衡器
 
 你还需要设置一个负载均衡器，来将流量重定向到三个节点中的任意一个节点上的 Rancher 副本。配置后，当单个节点不可用时，继续保障与 Rancher Management Server 的通信。
 
@@ -53,7 +53,7 @@ title: 为高可用 RKE Kubernetes 集群设置基础设施
 
 :::
 
-### 3. 配置 DNS 记录
+## 3. 配置 DNS 记录
 
 配置完负载均衡器后，你将需要创建 DNS 记录，以将流量发送到该负载均衡器。
 

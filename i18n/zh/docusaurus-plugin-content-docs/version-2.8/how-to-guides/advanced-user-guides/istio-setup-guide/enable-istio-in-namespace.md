@@ -19,11 +19,11 @@ title: 2. 在命名空间中启用 Istio
 
 **结果**：命名空间带有了 `istio-injection=enabled` 标签。默认情况下，部署在此命名空间中的所有新工作负载都将注入 Istio sidecar。
 
-### 验证是否启用了自动 Istio Sidecar 注入
+## 验证是否启用了自动 Istio Sidecar 注入
 
 要验证 Istio 是否已启用，请在命名空间中部署一个 hello-world 工作负载。转到工作负载并单击 pod 名称。在**容器**中，你应该能看到 `istio-proxy` 容器。
 
-### 排除工作负载的 Istio Sidecar 注入
+## 排除工作负载的 Istio Sidecar 注入
 
 要排除 Istio sidecar 被注入某工作负载，请在工作负载上使用以下注释：
 
@@ -49,5 +49,5 @@ sidecar.istio.io/inject: “false”
 :::
 
 
-### 后续步骤
+## 后续步骤
 [使用 Istio Sidecar 添加部署](use-istio-sidecar.md)

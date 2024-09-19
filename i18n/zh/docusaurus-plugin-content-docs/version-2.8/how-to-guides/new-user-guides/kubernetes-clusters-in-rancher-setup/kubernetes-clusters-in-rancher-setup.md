@@ -13,7 +13,7 @@ Rancher 简化了集群的创建，允许你通过 Rancher UI 而不是更复杂
 
 有关 Rancher 服务如何配置集群以及使用哪些工具配置集群的概念性概述，请参阅[架构](../../../reference-guides/rancher-manager-architecture/rancher-manager-architecture.md)页面。
 
-### 按集群类型划分的集群管理功能
+## 按集群类型划分的集群管理功能
 
 下表总结了每种集群类型的可用选项和设置：
 

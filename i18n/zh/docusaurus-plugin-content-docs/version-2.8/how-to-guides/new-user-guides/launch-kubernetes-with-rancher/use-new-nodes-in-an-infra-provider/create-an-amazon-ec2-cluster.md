@@ -9,7 +9,7 @@ description: 了解使用 Rancher 创建 Amazon EC2 集群所需的先决条件�
 
 然后，在 Rancher 中创建一个 EC2 集群，并在配置新集群时为集群定义节点池。每个节点池都有一个 etcd、controlplane 或 worker 的 Kubernetes 角色。Rancher 会在新节点上安装 RKE Kubernetes，并为每个节点设置节点池定义的 Kubernetes 角色。
 
-### 先决条件
+## 先决条件
 
 - **AWS EC2 访问密钥和密文密钥**，用于创建实例。请参阅 [Amazon 文档：创建访问密钥](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)来创建访问密钥和密文密钥。
 - **已创建 IAM 策略**，用于为用户添加的访问密钥和密文密钥。请参阅 [Amazon 文档：创建 IAM 策略（控制台）](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html#access_policies_create-start)来创建 IAM 策略。参阅下面的三个示例 JSON 策略：

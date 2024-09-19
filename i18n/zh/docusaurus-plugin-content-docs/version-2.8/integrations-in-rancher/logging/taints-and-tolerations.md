@@ -16,7 +16,7 @@ title: 处理污点和容忍度
 - [为自定义污点添加 NodeSelector 设置和容忍度](#为自定义污点添加-nodeselector-设置和容忍度)
 
 
-### Rancher 日志堆栈中的默认实现
+## Rancher 日志堆栈中的默认实现
 
 默认情况下，Rancher 使用 `cattle.io/os=linux` 来将污点应用到所有 Linux 节点，而不影响 Windows 节点。
 日志堆栈 pod 具有针对此污点的`容忍度`，因此它们能够运行在 Linux 节点上。
@@ -43,7 +43,7 @@ spec:
 
 你可以对 Rancher 现有的污点或你自己的自定义污点执行相同的操作。
 
-### 为自定义污点添加 NodeSelector 设置和容忍度
+## 为自定义污点添加 NodeSelector 设置和容忍度
 
 如果要添加你自己的 `nodeSelector` 设置，或者要为其他污点添加 `容忍度`，你可以将以下内容传递给 Chart 的值：
 

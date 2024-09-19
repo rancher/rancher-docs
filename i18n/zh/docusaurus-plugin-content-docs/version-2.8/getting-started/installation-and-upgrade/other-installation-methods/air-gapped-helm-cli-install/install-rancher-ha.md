@@ -4,7 +4,7 @@ title: 4. 安装 Rancher
 
 本文介绍如何在高可用 Kubernetes 安装的离线环境部署 Rancher。离线环境可以是 Rancher Server 离线安装、防火墙后面或代理后面。
 
-### Rancher 特权访问
+## Rancher 特权访问
 
 当 Rancher Server 部署在 Docker 容器中时，容器内会安装一个本地 Kubernetes 集群供 Rancher 使用。为 Rancher 的很多功能都是以 deployment 的方式运行的，而在容器内运行容器是需要特权模式的，因此你需要在安装 Rancher 时添加 `--privileged` 选项。
 
@@ -116,7 +116,7 @@ curl -L -o cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/re
 
 将获取的 Chart 复制到有权访问 Rancher Server 集群的系统以完成安装。
 
-##### 1. 安装 Cert-Manager
+#### 1. 安装 Cert-Manager
 
 使用要用于安装 Chart 的选项来安装 cert-manager。记住要设置 `image.repository` 选项，以从你的私有镜像仓库拉取镜像。此操作会创建一个包含 Kubernetes manifest 文件的 `cert-manager` 目录。
 
@@ -156,7 +156,8 @@ curl -L -o cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/re
 
 </details>
 
-##### 2. 安装 Rancher
+### 2. 安装 Rancher
+
 首先，参见[添加 TLS 密文](../../resources/add-tls-secrets.md)发布证书文件，以便 Rancher 和 Ingress Controller 可以使用它们。
 
 然后，使用 kubectl 为 Rancher 创建命名空间：

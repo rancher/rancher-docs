@@ -14,7 +14,7 @@ title: 项目资源配额
 
 Rancher 中的资源配额包含与 [Kubernetes 原生版本](https://kubernetes.io/docs/concepts/policy/resource-quotas/)相同的功能。Rancher 还扩展了资源配额的功能，从而让你将资源配额应用于项目。有关资源配额如何与 Rancher 中的项目一起使用的详细信息，请参阅[此页面](about-project-resource-quotas.md)。
 
-### 将资源配额应用于现有项目
+## 将资源配额应用于现有项目
 
 修改资源配额的使用场景如下：
 
