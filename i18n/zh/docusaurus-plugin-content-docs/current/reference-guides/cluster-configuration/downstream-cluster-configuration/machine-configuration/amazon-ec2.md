@@ -4,6 +4,8 @@ title: EC2 主机配置参考
 
 有关 EC2 和节点的更多详细信息，请参阅 [EC2 管理控制台](https://aws.amazon.com/ec2)的官方文档。
 
+## Machine Pools
+
 ### 区域
 
 构建集群的地理[区域](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)。

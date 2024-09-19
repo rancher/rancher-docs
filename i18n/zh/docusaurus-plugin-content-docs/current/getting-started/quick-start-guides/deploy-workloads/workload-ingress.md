@@ -2,11 +2,11 @@
 title: 部署带有 Ingress 的工作负载
 ---
 
-### 先决条件
+## 先决条件
 
 你已有一个正在运行的集群，且该集群中有至少一个节点。
 
-### 1. 部署工作负载
+## 1. 部署工作负载
 
 你可以开始创建你的第一个 Kubernetes [工作负载](https://kubernetes.io/docs/concepts/workloads/)。工作负载是一个对象，其中包含 pod 以及部署应用所需的其他文件和信息。
 
@@ -27,7 +27,7 @@ title: 部署带有 Ingress 的工作负载
 * 工作负载已部署。此过程可能需要几分钟。
 * 当工作负载完成部署后，它的状态会变为 **Active**。你可以从项目的**工作负载**页面查看其状态。
 
-### 2. 通过 Ingress 暴露应用
+## 2. 通过 Ingress 暴露应用
 
 现在应用已启动并运行，你需要暴露应用以让其他服务连接到它。
 
@@ -53,17 +53,17 @@ title: 部署带有 Ingress 的工作负载
 **结果**：应用分配到了一个 `sslip.io` 地址并暴露。这可能需要一两分钟。
 
 
-### 查看应用
+## 查看应用
 
 在 **Deployments** 页面中，找到你 deployment 的 **endpoint** 列，然后单击一个 endpoint。可用的 endpoint 取决于你添加到 deployment 中的端口配置。如果你看不到随机分配端口的 endpoint，请将你在创建 Ingress 时指定的路径尾附到 IP 地址上。例如，如果你的 endpoint 是 `xxx.xxx.xxx.xxx` 或 `https://xxx.xxx.xxx.xxx`，把它修改为 `xxx.xxx.xxx.xxx/hello` 或 `https://xxx.xxx.xxx.xxx/hello`。
 
 应用将在另一个窗口中打开。
 
-#### 已完成！
+### 已完成！
 
 恭喜！你已成功通过 Ingress 部署工作负载。
 
-#### 后续操作
+### 后续操作
 
 使用完沙盒后，你需要清理 Rancher Server 和集群。详情请参见：
 

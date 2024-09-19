@@ -4,11 +4,11 @@ title: 安装和配置 kubectl
 
 `kubectl` 是一个 CLI 工具，用于运行 Kubernetes 集群相关的命令。Rancher 2.x 中的许多维护和管理任务都需要它。
 
-### 安装
+## 安装
 
 请参阅 [kubectl 安装](https://kubernetes.io/docs/tasks/tools/install-kubectl/)将 kubectl 安装到你的操作系统上。
 
-### 配置
+## 配置
 
 使用 RKE 创建 Kubernetes 集群时，RKE 会在本地目录中创建一个 `kube_config_cluster.yml`，该文件包含使用 `kubectl` 或 `helm` 等工具连接到新集群的凭证。
 

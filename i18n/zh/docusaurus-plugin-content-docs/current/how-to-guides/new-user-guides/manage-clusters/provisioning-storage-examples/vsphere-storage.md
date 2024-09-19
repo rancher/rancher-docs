@@ -6,12 +6,11 @@ title: vSphere 存储
 
 为了在 vSphere 中动态调配存储，必须启用 vSphere 提供商。有关更多信息，请参阅[树外 vSphere](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere.md) 和[树内 vSphere](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-in-tree-vsphere.md)。
 
-
-### 先决条件
+## 先决条件
 
 为了在 [Rancher Kubernetes Engine (RKE)](../../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) 集群中配置 vSphere 卷，[vSphere cloud provider](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/vsphere) 必须在[集群选项](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)中显式启用。
 
-### 创建一个 StorageClass
+## 创建一个 StorageClass
 
 :::tip
 
@@ -31,7 +30,7 @@ title: vSphere 存储
 5. 可选地，你可以在**参数**下指定存储类的其他属性。有关详细信息，请参阅 [vSphere 存储文档](https://github.com/vmware-archive/vsphere-storage-for-kubernetes/blob/master/documentation/storageclass.md)。
 5. 单击**创建**。
 
-### 创建使用 vSphere 卷的工作负载
+## 创建使用 vSphere 卷的工作负载
 
 1. 在左侧导航栏中，单击**工作负载**。
 1. 单击**创建**。
@@ -43,7 +42,7 @@ title: vSphere 存储
 7. 在**挂载点**字段中指定路径。这是卷将安装在容器文件系统中的完整路径，例如 `/persistent`。
 8. 单击**创建**。
 
-### 验证卷的持久性
+## 验证卷的持久性
 
 1. 在左侧导航栏中，单击**工作负载 > Pod**。
 1. 转到你刚刚创建的工作负载，然后单击 **⋮ > 执行命令行**。
@@ -58,7 +57,7 @@ title: vSphere 存储
 
    ![workload-persistent-data](/img/workload-persistent-data.png)
 
-### 为什么使用 StatefulSet 替代 Deployment
+## 为什么使用 StatefulSet 替代 Deployment
 
 对于消耗 vSphere 存储的工作负载，你应该始终使用 [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)，因为这种资源类型旨在解决 VMDK 块存储警告。
 
@@ -66,7 +65,7 @@ title: vSphere 存储
 
 即使使用仅具有单个副本的 deployment 资源也可能在更新 deployment 时出现死锁情况。如果更新的 pod 被调度到不同的节点，由于 VMDK 仍然连接到另一个节点，因此 pod 将无法启动。
 
-### 相关链接
+## 相关链接
 
 - [用于 Kubernetes 的 vSphere 存储](https://github.com/vmware-archive/vsphere-storage-for-kubernetes/tree/master/documentation)
 - [Kubernetes 持久卷](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
