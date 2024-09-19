@@ -19,7 +19,7 @@ To provision new storage for your workloads, follow these steps:
 1. [Add a storage class and configure it to use your storage.](#1-add-a-storage-class-and-configure-it-to-use-your-storage)
 2. [Use the Storage Class for Pods Deployed with a StatefulSet.](#2-use-the-storage-class-for-pods-deployed-with-a-statefulset)
 
-### Prerequisites
+## Prerequisites
 
 - To set up persistent storage, the `Manage Volumes` [role](../../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-role-reference) is required.
 - If you are provisioning storage for a cluster hosted in the cloud, the storage and cluster hosts must have the same cloud provider.
@@ -42,7 +42,7 @@ hostPath | `host-path`
 
 To use a storage provisioner that is not on the above list, you will need to use a [feature flag to enable unsupported storage drivers.](../../../../advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md)
 
-### 1. Add a storage class and configure it to use your storage
+## 1. Add a storage class and configure it to use your storage
 
 These steps describe how to set up a storage class at the cluster level.
 
@@ -59,7 +59,7 @@ These steps describe how to set up a storage class at the cluster level.
 
 For full information about the storage class parameters, refer to the official [Kubernetes documentation.](https://kubernetes.io/docs/concepts/storage/storage-classes/#parameters).
 
-### 2. Use the Storage Class for Pods Deployed with a StatefulSet
+## 2. Use the Storage Class for Pods Deployed with a StatefulSet
 
 StatefulSets manage the deployment and scaling of Pods while maintaining a sticky identity for each Pod. In this StatefulSet, we will configure a VolumeClaimTemplate. Each Pod managed by the StatefulSet will be deployed with a PersistentVolumeClaim based on this VolumeClaimTemplate. The PersistentVolumeClaim will refer to the StorageClass that we created. Therefore, when each Pod managed by the StatefulSet is deployed, it will be bound to dynamically provisioned storage using the StorageClass defined in its PersistentVolumeClaim.
 
