@@ -8,11 +8,11 @@ title: DigitalOcean Node Template Configuration
 
 Account access information is stored as a cloud credential. Cloud credentials are stored as Kubernetes secrets. Multiple node templates can use the same cloud credential. You can use an existing cloud credential or create a new one.
 
-### Droplet Options
+## Droplet Options
 
 The **Droplet Options** provision your cluster's geographical region and specifications.
 
-### Docker Daemon
+## Docker Daemon
 
 If you use Docker, the [Docker daemon](https://docs.docker.com/engine/docker-overview/#the-docker-daemon) configuration options include:
 
