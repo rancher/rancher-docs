@@ -10,11 +10,12 @@ The commands/steps listed on this page can be used to check networking related i
 
 Make sure you configured the correct kubeconfig (for example, `export KUBECONFIG=$PWD/kube_config_cluster.yml` for Rancher HA) or are using the embedded kubectl via the UI.
 
-### Double check if all the required ports are opened in your (host) firewall
+## Double Check if All the Required Ports are Opened in Your (Host) Firewall
 
 Double check if all the [required ports](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md#networking-requirements) are opened in your (host) firewall. The overlay network uses UDP in comparison to all other required ports which are TCP.
 
-### Check if overlay network is functioning correctly
+
+## Check if Overlay Network is Functioning Correctly
 
 The pod can be scheduled to any of the hosts you used for your cluster, but that means that the NGINX ingress controller needs to be able to route the request from `NODE_1` to `NODE_2`. This happens over the overlay network. If the overlay network is not functioning, you will experience intermittent TCP/HTTP connection failures due to the NGINX ingress controller not being able to route to the pod.
 
@@ -98,7 +99,7 @@ The `swiss-army-knife` container does not support Windows nodes. It also [does n
 6. You can now clean up the DaemonSet by running `kubectl delete ds/overlaytest`.
 
 
-### Check if MTU is correctly configured on hosts and on peering/tunnel appliances/devices
+### Check if MTU is Correctly Configured on Hosts and on Peering/Tunnel Appliances/Devices
 
 When the MTU is incorrectly configured (either on hosts running Rancher, nodes in created/imported clusters or on appliances/devices in between), error messages will be logged in Rancher and in the agents, similar to:
 
