@@ -16,7 +16,7 @@ Make sure `NO_PROXY` contains the network addresses, network address ranges and 
 | HTTPS_PROXY          | Proxy address to use when initiating HTTPS connection(s)                                                                |
 | NO_PROXY             | Network address(es), network address range(s) and domains to exclude from using the proxy when initiating connection(s) |
 
-:::note Important:
+:::note
 
 NO_PROXY must be in uppercase to use network range (CIDR) notation.
 
