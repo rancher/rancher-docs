@@ -80,11 +80,11 @@ If you use a certificate signed by a recognized CA, installing your certificate 
 
 1.  Enter the following command.
 
-        ```
-        docker run -d --restart=unless-stopped \
-        -p 80:80 -p 443:443 \
-        rancher/rancher:latest --no-cacerts
-        ```
+    ```
+    docker run -d --restart=unless-stopped \
+      -p 80:80 -p 443:443 \
+      rancher/rancher:latest --no-cacerts
+    ```
 
 </details>
 
