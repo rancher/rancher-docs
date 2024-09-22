@@ -23,7 +23,7 @@ You will need a separate kubeconfig file for each cluster that you have access t
 
 After you download the kubeconfig file, you will be able to use the kubeconfig file and its Kubernetes [contexts](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-context-and-configuration) to access your downstream cluster.
 
-If admins have [kubeconfig token generation turned off](../../../../reference-guides/about-the-api/api-tokens.md#disable-tokens-in-generated-kubeconfigs), the kubeconfig file requires [rancher cli](./authorized-cluster-endpoint.md) to be present in your PATH.
+If admins have [kubeconfig token generation turned off](../../../../reference-guides/about-the-api/api-tokens.md#disable-tokens-in-generated-kubeconfigs), the kubeconfig file requires [rancher cli](../../../../reference-guides/cli-with-rancher/rancher-cli.md) to be present in your PATH.
 
 ### Two Authentication Methods for RKE Clusters
 
