@@ -60,4 +60,4 @@ To convert an existing cluster to use an RKE template,
 
 - A new RKE template is created.
 - The cluster is converted to use the new template.
-- New clusters can be [created from the new template.](apply-templates.md#creating-a-cluster-from-an-rke-template)
+- New clusters can be [created from the new template.](#creating-a-cluster-from-an-rke-template)

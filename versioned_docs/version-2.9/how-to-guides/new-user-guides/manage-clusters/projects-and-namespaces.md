@@ -173,7 +173,7 @@ To add members:
 
 ### 4. Optional: Add Resource Quotas
 
-Resource quotas limit the resources that a project (and its namespaces) can consume. For more information, see [Resource Quotas](projects-and-namespaces.md).
+Resource quotas limit the resources that a project (and its namespaces) can consume. For more information, see [Resource Quotas](../../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md).
 
 To add a resource quota,
 
