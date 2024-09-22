@@ -25,7 +25,7 @@ To manage permissions in a vanilla Kubernetes cluster, cluster admins configure 
 
 :::note
 
-If you create a namespace with `kubectl`, it may be unusable because `kubectl` doesn't require your new namespace to be scoped within a project that you have access to. If your permissions are restricted to the project level, it is better to [create a namespace through Rancher](manage-namespaces.md) to ensure that you will have permission to access the namespace.
+If you create a namespace with `kubectl`, it may be unusable because `kubectl` doesn't require your new namespace to be scoped within a project that you have access to. If your permissions are restricted to the project level, it is better to [create a namespace through Rancher](#creating-namespaces) to ensure that you will have permission to access the namespace.
 
 :::
 
