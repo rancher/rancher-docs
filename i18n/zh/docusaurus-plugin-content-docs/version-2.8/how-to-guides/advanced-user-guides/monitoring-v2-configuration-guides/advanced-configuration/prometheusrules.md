@@ -10,7 +10,7 @@ PrometheusRule 定义了一组 Prometheus 告警和/或记录规则。
 
 :::
 
-### 在 Rancher UI 中创建 PrometheusRule
+## 在 Rancher UI 中创建 PrometheusRule
 
 :::note 先决条件：
 
@@ -28,7 +28,7 @@ PrometheusRule 定义了一组 Prometheus 告警和/或记录规则。
 
 **结果**：告警可以向接收器发送通知。
 
-### 关于 PrometheusRule 自定义资源
+## 关于 PrometheusRule 自定义资源
 
 当你定义规则时（在 PrometheusRule 资源的 RuleGroup 中声明），[规则本身的规范](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#rule)会包含标签，然后 Alertmanager 会使用这些标签来确定接收此告警的路由。例如，标签为 `team: front-end` 的告警将​​发送到与该标签匹配的所有路由。
 

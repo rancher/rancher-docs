@@ -10,7 +10,7 @@ After you provision a Kubernetes cluster using Rancher, you can still edit optio
 
 For information on editing cluster membership, go to [this page.](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/add-users-to-clusters.md)
 
-### Cluster Configuration References
+## Cluster Configuration References
 
 The cluster configuration options depend on the type of Kubernetes cluster:
 
@@ -21,7 +21,7 @@ The cluster configuration options depend on the type of Kubernetes cluster:
 - [GKE Cluster Configuration](rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md)
 - [AKS Cluster Configuration](rancher-server-configuration/aks-cluster-configuration.md)
 
-### Cluster Management Capabilities by Cluster Type
+## Cluster Management Capabilities by Cluster Type
 
 The options and settings available for an existing cluster change based on the method that you used to provision it.
 

@@ -22,7 +22,7 @@ Starting with version 1.24, the above defaults to true.
 
 For users looking to use another container runtime, Rancher has the edge-focused K3s and datacenter-focused RKE2 Kubernetes distributions that use containerd as the default runtime. Imported RKE2 and K3s Kubernetes clusters can then be upgraded and managed through Rancher going forward.
 
-### FAQ
+## FAQ
 
 <br/>
 

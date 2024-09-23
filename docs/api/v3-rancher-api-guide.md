@@ -10,7 +10,7 @@ Rancher v2.8.0 introduced the Rancher Kubernetes API (RK-API). The previous v3 R
 
 ## How to Use the API
 
-The previous v3 API has its own user interface accessible from a [web browser](./v3-rancher-api-guide.md#enable-view-in-api). This is an easy way to see resources, perform actions, and see the equivalent `curl` or HTTP request & response. To access it:
+The previous v3 API has its own user interface accessible from a [web browser](#enable-view-in-api). This is an easy way to see resources, perform actions, and see the equivalent `curl` or HTTP request & response. To access it:
 
 <Tabs>
 <TabItem value="Rancher v2.6.4+">

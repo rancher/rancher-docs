@@ -6,10 +6,11 @@ title: 网络
 
 请确保你配置了正确的 kubeconfig（例如，为 Rancher HA 配置了 `export KUBECONFIG=$PWD/kube_config_cluster.yml`）或通过 UI 使用了嵌入式 kubectl。
 
-### 仔细检查你的（主机）防火墙中是否打开了所有必需的端口
+## 仔细检查你的（主机）防火墙中是否打开了所有必需的端口
 
 仔细检查你的（主机）防火墙中是否打开了所有[必需的端口](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md#网络要求)。其他所需的端口都使用 TCP，而覆盖网络使用 UDP。
-### 检查覆盖网络是否正常运行
+
+## 检查覆盖网络是否正常运行
 
 你可以将 Pod 调度到集群中的任何主机，但是 NGINX Ingress Controller 需要能够将 `NODE_1` 请求路由到 `NODE_2`。这会在覆盖网络上进行。如果覆盖网络无法正常工作，由于 NGINX Ingress Controller 无法路由到 pod，因此 TCP/HTTP 连接会间歇性失败。
 
@@ -92,8 +93,7 @@ title: 网络
    如果你在输出中看到错误，则说明两台主机上的 Pod 路由存在问题。在上面的输出中，节点 `wk2` 在覆盖网络上没有连接。原因可能是没有为 `wk2` 打开覆盖网络的[必需端口](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md#网络要求)。
 6. 你现在可以通过运行 `kubectl delete ds/overlaytest` 来清理 DaemonSet。
 
-
-### 检查主机和对等/隧道设备/设备上的 MTU 是否正确配置
+## 检查主机和对等/隧道设备/设备上的 MTU 是否正确配置
 
 如果 MTU 在运行 Rancher 的主机、创建/导入集群中的节点或两者之间的设备上配置不正确，Rancher 和 Agent 会记录类似以下的错误信息：
 

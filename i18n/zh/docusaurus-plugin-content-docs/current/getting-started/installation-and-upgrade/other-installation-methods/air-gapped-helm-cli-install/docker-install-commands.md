@@ -24,7 +24,7 @@ Docker 安装适用于想要测试 Rancher 的用户。
 
 选择以下的选项之一：
 
-### 选项 A：使用 Rancher 默认的自签名证书
+## 选项 A：使用 Rancher 默认的自签名证书
 
 <details id="option-a">
   <summary>单击展开</summary>
@@ -51,7 +51,7 @@ docker run -d --restart=unless-stopped \
 
 </details>
 
-### 选项 B：使用你自己的证书 - 自签名
+## 选项 B：使用你自己的证书 - 自签名
 
 <details id="option-b">
   <summary>单击展开</summary>
@@ -94,7 +94,7 @@ docker run -d --restart=unless-stopped \
 
 </details>
 
-### 选项 C：使用你自己的证书 - 可信 CA 签名的证书
+## 选项 C：使用你自己的证书 - 可信 CA 签名的证书
 
 <details id="option-c">
   <summary>单击展开</summary>

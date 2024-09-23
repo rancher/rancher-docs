@@ -6,13 +6,13 @@ title: 注册集群
 
 请确保你配置了正确的 kubeconfig（例如，`export KUBECONFIG=$PWD/kubeconfig_from_imported_cluster.yml`）。
 
-### Rancher Agents
+## Rancher Agents
 
 Rancher Agent 用于实现与集群的通信（通过 cattle-cluster-agent 的 Kubernetes API）和与节点的通信。
 
 如果 cattle-cluster-agent 无法连接到配置的 `server-url`，集群将保持在 **Pending** 状态并显示 `Waiting for full cluster configuration`。
 
-#### cattle-node-agent
+### cattle-node-agent
 
 :::note
 
@@ -45,7 +45,7 @@ cattle-node-agent-t8mtz   1/1       Running   0          2h        x.x.x.x      
 kubectl -n cattle-system logs -l app=cattle-agent
 ```
 
-#### cattle-cluster-agent
+### cattle-cluster-agent
 
 检查 cattle-cluster-agent pod 是否存在于集群中，状态是否为 **Running**，并且重启次数不多：
 

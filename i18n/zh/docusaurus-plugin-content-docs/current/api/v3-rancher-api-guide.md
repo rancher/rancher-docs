@@ -2,6 +2,10 @@
 title: API
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/reference-guides/about-the-api"/>
+</head>
+
 ## 如何使用 API
 
 API 有自己的用户界面，你可以从 Web 浏览器访问它。这是查看资源、执行操作以及查看等效 cURL 或 HTTP 请求和响应的一种简单的方法。要访问它：
@@ -21,11 +25,11 @@ API 有自己的用户界面，你可以从 Web 浏览器访问它。这是查�
 </TabItem>
 </Tabs>
 
-## 身份验证
+## 认证
 
-API 请求必须包含身份验证信息。身份验证是通过 [API 密钥](../reference-guides/user-settings/api-keys.md)使用 HTTP 基本身份验证完成的。API 密钥可以创建新集群并通过 `/v3/clusters/` 访问多个集群。[集群和项目角色](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)会应用于这些键，并限制账号可以查看的集群和项目以及可以执行的操作。
+API 请求必须包含认证信息。认证是通过 [API 密钥](../reference-guides/user-settings/api-keys.md)使用 HTTP 基本认证完成的。API 密钥可以创建新集群并通过 `/v3/clusters/` 访问多个集群。[集群和项目角色](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)会应用于这些键，并限制账号可以查看的集群和项目以及可以执行的操作。
 
-默认情况下，某些集群级别的 API 令牌是使用无限期 TTL（`ttl=0`）生成的。换言之，除非你让令牌失效，否则 `ttl=0` 的 API 令牌永远不会过期。有关如何使 API 令牌失效的详细信息，请参阅 [API 令牌](../reference-guides/about-the-api/api-tokens.md)。
+默认情况下，某些集群级别的 API 令牌是使用无限期 TTL（`ttl=0`）生成的。换言之，除非你让令牌失效，否则 `ttl=0` 的 API 令牌永远不会过期。有关如何使 API 令牌失效的详细信息，请参阅 [API 令牌](api-tokens.md)。
 
 ## 发出请求
 
@@ -78,3 +82,12 @@ API 请求必须包含身份验证信息。身份验证是通过 [API 密钥](..
 1. 在 Rancher UI 中，单击**创建**。在开发者工具中，你应该会看到一个名为 `cluster?_replace=true` 的新网络请求。
 1. 右键单击 `cluster?_replace=true` 并单击**复制 > 复制为 cURL**。
 1. 将结果粘贴到文本编辑器中。你将能够看到 POST 请求，包括被发送到的 URL、所有标头以及请求的完整正文。此命令可用于从命令行创建集群。请注意，请求包含凭证，因此请将请求存储在安全的地方。
+
+### 启用在 API 中查看
+
+你还可以查看针对各自集群和资源捕获的 Rancher API 调用。 默认情况下不启用此功能。 要启用它：
+
+1. 单击 UI 右上角的 **用户图标**，然后从下拉菜单中选择 **偏好设置**
+1. 在**高级功能**部分下，单击**启用"在 API 中查看"**
+
+选中后，**在 API 中查看**链接现在将显示在 UI 资源页面上的 **⋮** 子菜单下。

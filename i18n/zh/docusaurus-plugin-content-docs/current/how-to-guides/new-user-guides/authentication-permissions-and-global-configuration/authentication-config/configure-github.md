@@ -6,7 +6,7 @@ title: 配置 GitHub
 
 :::note 先决条件：
 
-参见[外部身份验证配置和主体用户](../../../../pages-for-subheaders/authentication-config.md#外部身份验证配置和用户主体)。
+参见[外部身份验证配置和主体用户](./authentication-config.md#外部认证配置和用户主体)。
 
 :::
 

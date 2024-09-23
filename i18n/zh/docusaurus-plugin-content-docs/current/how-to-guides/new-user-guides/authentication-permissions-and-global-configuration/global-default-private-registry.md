@@ -5,7 +5,7 @@ title: 配置全局默认私有镜像仓库
 :::note
 本页介绍了安装 Rancher 后如何从 Rancher UI 配置全局默认私有镜像仓库。
 
-有关如何在 Rancher 安装期间设置私有镜像仓库的说明，请参阅[离线安装指南](../../../pages-for-subheaders/air-gapped-helm-cli-install.md)。
+有关如何在 Rancher 安装期间设置私有镜像仓库的说明，请参阅[离线安装指南](../../../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/air-gapped-helm-cli-install.md)。
 
 :::
 

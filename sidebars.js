@@ -791,6 +791,7 @@ const sidebars = {
                 id: "how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features",
               },
               items: [
+                "how-to-guides/advanced-user-guides/enable-experimental-features/ui-server-side-pagination",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features",

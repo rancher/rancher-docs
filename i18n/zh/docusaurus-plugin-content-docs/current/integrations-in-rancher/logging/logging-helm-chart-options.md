@@ -2,7 +2,7 @@
 title: rancher-logging Helm Chart 选项
 ---
 
-### 启用/禁用 Windows 节点 Logging
+## 启用/禁用 Windows 节点 Logging
 
 要启用或禁用 Windows 节点 Logging，你可以在 `values.yaml` 中将 `global.cattle.windows.enabled` 设置为 `true` 或 `false`。
 
@@ -17,7 +17,7 @@ title: rancher-logging Helm Chart 选项
 
 :::
 
-### 使用自定义 Docker 根目录
+## 使用自定义 Docker 根目录
 
 如果使用了自定义 Docker 根目录，你可以在 `values.yaml` 中设置 `global.dockerRootDirectory`。
 
@@ -27,11 +27,11 @@ title: rancher-logging Helm Chart 选项
 
 如果集群中有任何 Windows 节点，则更改将不适用于这些节点。
 
-### 为自定义污点添加 NodeSelector 设置和容忍度
+## 为自定义污点添加 NodeSelector 设置和容忍度
 
 你可以添加 `nodeSelector` 设置，并通过编辑 Logging Helm Chart 值来添加其他`容忍度`。有关详细信息，请参阅[此页面](taints-and-tolerations.md)。
 
-### 启用 Logging 应用程序以使用 SELinux
+## 启用 Logging 应用程序以使用 SELinux
 
 :::note 要求：
 
@@ -41,11 +41,11 @@ Logging v2 已在 RHEL/CentOS 7 和 8 上使用 SELinux 进行了测试。
 
 [安全增强型 Linux (SELinux)](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) 是对 Linux 的安全增强。被政府机构使用之后，SELinux 已成为行业标准，并在 CentOS 7 和 8 上默认启用。
 
-要配合使用 Logging V2 与 SELinux，我们建议你根据[此说明](../../pages-for-subheaders/selinux-rpm.md)安装 `rancher-selinux` RPM。
+要配合使用 Logging V2 与 SELinux，我们建议你根据[此说明](../../reference-guides/rancher-security/selinux-rpm/selinux-rpm.md)安装 `rancher-selinux` RPM。
 
 然后，在安装 Logging 应用程序时，在 `values.yaml` 中将 `global.seLinux.enabled` 更改为 `true`，使 Chart 支持 SELinux。
 
-### 其他日志来源
+## 其他日志来源
 
 默认情况下，Rancher 会收集所有类型集群的 [controlplane 组件](https://kubernetes.io/docs/concepts/overview/components/#control-plane-components)和[节点组件](https://kubernetes.io/docs/concepts/overview/components/#node-components)的日志。
 
@@ -68,7 +68,7 @@ Logging v2 已在 RHEL/CentOS 7 和 8 上使用 SELinux 进行了测试。
 
 如果你已经使用了云提供商的日志解决方案，例如 AWS CloudWatch 或 Google Cloud Operations Suite（以前称为 Stackdriver），由于原生解决方案可以不受限制地访问所有日志，因此你无需启用此选项。
 
-### Systemd 配置
+## Systemd 配置
 
 在 Rancher Logging 中，你必须为 K3s 和 RKE2 Kubernetes 发行版配置 `SystemdLogPath`。
 

@@ -22,7 +22,7 @@ title: 功能开关
 - `multi-cluster-management`：允许配置和管理多个 Kubernetes 集群。此标志只能在安装时设置。后续无法启用或禁用它。
 - `rke1-custom-node-cleanup`：清除已删除的 RKE1 自定义节点。建议你启用此标志，以防止已删除的节点尝试重新加入集群。
 - `rke2`：启用配置 RKE2 集群。此标志默认启用。
-- `token-hashing`：启用令牌哈希。启用后，会使用 SHA256 算法对现有 Token 和所有新 Token 进行哈希处理。一旦对 Token 进行哈希处理，就无法撤消操作。此标志在启用后无法禁用。有关详细信息，请参阅 [API 令牌](../../../reference-guides/about-the-api/api-tokens.md#令牌哈希)。
+- `token-hashing`：启用令牌哈希。启用后，会使用 SHA256 算法对现有 Token 和所有新 Token 进行哈希处理。一旦对 Token 进行哈希处理，就无法撤消操作。此标志在启用后无法禁用。有关详细信息，请参阅 [API 令牌](../../../api/api-tokens.md#令牌哈希)。
 - `unsupported-storage-drivers`：允许启用非默认启用的存储提供程序和卷插件。有关详细信息，请参阅[允许使用不受支持的存储驱动程序](../../../how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md)。
 
 下表介绍了 Rancher 中功能开关的可用性和默认值。标记为“GA”的功能已普遍可用：

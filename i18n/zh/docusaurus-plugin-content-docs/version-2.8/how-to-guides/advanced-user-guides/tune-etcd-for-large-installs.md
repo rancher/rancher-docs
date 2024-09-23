@@ -6,7 +6,7 @@ title: 为大型安装进行 etcd 调优
 
 Kubernetes 每隔五分钟会自动清理 etcd 数据集。在某些情况下（例如发生部署抖动），在垃圾回收发生并进行清理之前会有大量事件写入 etcd 并删除，从而导致 Keyspace 填满。如果你在 etcd 日志或 Kubernetes API Server 日志中看到 `mvcc: database space exceeded` 错误，你可以在 etcd 服务器上设置 [quota-backend-bytes](https://etcd.io/docs/v3.5/op-guide/maintenance/#space-quota) 来增加 Keyspace 的大小。
 
-### 示例：此 RKE cluster.yml 文件的代码片段将 Keyspace 的大小增加到 5GB
+## 示例：此 RKE cluster.yml 文件的代码片段将 Keyspace 的大小增加到 5GB
 
 ```yaml
 # RKE cluster.yml

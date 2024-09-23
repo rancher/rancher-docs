@@ -12,7 +12,7 @@ These bundles can be created through Rancher or through direct access to the clu
 
 > **Note:** Only admin users can generate/download supportconfig bundles, regardless of method.
 
-## Accessing through Rancher
+## Accessing Through Rancher
 
 First, click on the hamburger menu. Then click the `Get Support` button.
 
@@ -24,7 +24,7 @@ In the next page, click on the `Generate Support Config` button.
 
 ![Get Support](/img/generate-support-config.png)
 
-## Accessing without Rancher
+## Accessing Without Rancher
 
 First, generate a kubeconfig for the cluster that Rancher is installed on.
 

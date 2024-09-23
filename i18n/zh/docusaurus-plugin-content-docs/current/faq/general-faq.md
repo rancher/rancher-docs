@@ -24,7 +24,7 @@ Rancher 支持 Windows Server 1809 容器。有关如何使用 Windows Worker �
 
 ## Rancher 是否支持 Istio？
 
-Rancher 支持 [Istio](../pages-for-subheaders/istio.md)。
+Rancher 支持 [Istio](../integrations-in-rancher/istio/istio.md)。
 
 ## Rancher 2.x 是否支持使用 Hashicorp 的 Vault 来存储密文？
 

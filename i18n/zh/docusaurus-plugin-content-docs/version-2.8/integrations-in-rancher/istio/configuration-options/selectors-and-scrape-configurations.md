@@ -9,7 +9,7 @@ Monitoring 应用设置了 `prometheus.prometheusSpec.ignoreNamespaceSelectors=f
 如果你想将 Prometheus 限制为特定的命名空间，请设置 `prometheus.prometheusSpec.ignoreNamespaceSelectors=true`。完成此操作后，你需要添加其他配置来继续监控你的资源。
 
 
-### 通过将 ignoreNamespaceSelectors 设置为 True 来限制对特定命名空间的监控
+## 通过将 ignoreNamespaceSelectors 设置为 True 来限制对特定命名空间的监控
 
 要限制对特定命名空间的监控，你需要编辑 `ignoreNamespaceSelectors` Helm Chart 选项。你可以在安装或升级 Monitoring Helm Chart 时配置此选项：
 
@@ -18,14 +18,14 @@ Monitoring 应用设置了 `prometheus.prometheusSpec.ignoreNamespaceSelectors=f
 
 **结果**：Prometheus 将仅用于特定命名空间。换言之，你需要设置以下配置之一才能继续在各种仪表板中查看数据。
 
-### 让 Prometheus 检测其他命名空间中的资源
+## 让 Prometheus 检测其他命名空间中的资源
 
 如果设置了 `prometheus.prometheusSpec.ignoreNamespaceSelectors=true`，则有两种方法让 Prometheus 检测其他命名空间中的资源：
 
 - **监控特定的命名空间**：在命名空间中添加一个 ServiceMonitor 或 PodMonitor 以及要抓取的目标。
 - **跨命名空间监控**：将 `additionalScrapeConfig` 添加到你的 rancher-monitoring 实例，从而抓取所有命名空间中的所有目标。
 
-### 监控特定命名空间：创建 ServiceMonitor 或 PodMonitor
+## 监控特定命名空间：创建 ServiceMonitor 或 PodMonitor
 
 此选项用于定义在特定命名空间中要监控的服务或 pod。
 
@@ -81,7 +81,7 @@ spec:
       targetLabel: pod_name
 ```
 
-### 跨命名空间监控：将 ignoreNamespaceSelectors 设置为 False
+## 跨命名空间监控：将 ignoreNamespaceSelectors 设置为 False
 
 此设置为 Prometheus 提供额外的抓取配置来实现跨命名空间监控。
 

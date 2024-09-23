@@ -17,7 +17,7 @@ API 密钥由四个组件组成：
 
 :::note
 
-用户可以选择启用[令牌哈希（token hashing）](../about-the-api/api-tokens.md)。
+用户可以选择启用[令牌哈希（token hashing）](../../api/api-tokens.md)。
 
 :::
 
@@ -47,7 +47,7 @@ API 密钥由四个组件组成：
 
 - 将 API 密钥信息输入到将向 Rancher API 发送请求的应用程序中。
 - 要了解 Rancher 端点和参数的更多信息，你可以为 Rancher UI 中的对象选择**在 API 中查看**。
-- API 密钥可用于 API 调用和 [Rancher CLI](../../pages-for-subheaders/cli-with-rancher.md)。
+- API 密钥可用于 API 调用和 [Rancher CLI](../cli-with-rancher/cli-with-rancher.md)。
 
 ## 删除 API 密钥
 

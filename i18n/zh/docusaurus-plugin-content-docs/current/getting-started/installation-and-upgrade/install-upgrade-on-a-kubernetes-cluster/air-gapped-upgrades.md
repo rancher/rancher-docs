@@ -8,7 +8,7 @@ title: 在离线环境中升级
 
 :::
 
-### Rancher Helm 模板选项
+## Rancher Helm 模板选项
 
 使用安装 Rancher 时选择的选项来渲染 Rancher 模板。参考下表来替换每个占位符。Rancher 需要配置为使用私有镜像仓库，以便配置所有 Rancher 启动的 Kubernetes 集群或 Rancher 工具。
 
@@ -20,7 +20,6 @@ title: 在离线环境中升级
 | `<RANCHER.YOURDOMAIN.COM>` | 指向负载均衡器的 DNS 名称。 |
 | `<REGISTRY.YOURDOMAIN.COM:PORT>` | 你的私有镜像仓库的 DNS 名称。 |
 | `<CERTMANAGER_VERSION>` | 在 K8s 集群上运行的 cert-manager 版本。 |
-
 
 ### 选项 A：使用默认的自签名证书
 

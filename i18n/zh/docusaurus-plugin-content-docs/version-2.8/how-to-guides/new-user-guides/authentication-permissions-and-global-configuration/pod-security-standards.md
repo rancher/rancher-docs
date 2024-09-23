@@ -15,12 +15,12 @@ PSS 定义了工作负载的安全级别。PSA 描述了 Pod 安全上下文和�
 必须在删除 PodSecurityPolicy 对象_之前_添加新的策略执行机制。否则，你可能会为集群内的特权升级攻击创造机会。
 :::
 
-### 从 Rancher 维护的应用程序和市场工作负载中删除 PodSecurityPolicies {#remove-psp-rancher-workloads}
+### 从 Rancher 维护的应用程序和市场工作负载中删除 PodSecurityPolicies
 
 Rancher v2.7.2 提供了 Rancher 维护的 Helm Chart 的新主要版本。v102.x.y 允许你删除与以前的 Chart 版本一起安装的 PSP。这个新版本使用标准化的 `global.cattle.psp.enabled` 开关（默认关闭）替换了非标准的 PSP 开关。
 
 你必须在_仍使用 Kubernetes v1.24_ 时执行以下步骤：
-1. 根据需要配置 PSA 控制器。你可以使用 Rancher 的内置 [PSA 配置模板](#psa-config-templates)，或创建自定义模板并将其应用于正在迁移的集群。
+1. 根据需要配置 PSA 控制器。你可以使用 Rancher 的内置 [PSA 配置模板](#pod-安全准入配置模板)，或创建自定义模板并将其应用于正在迁移的集群。
 
 1. 将活动的 PSP 映射到 Pod 安全标准：
    1. 查看集群中哪些 PSP 仍处于活动状态：
@@ -108,14 +108,14 @@ Helm 尝试在集群中查询存储在先前版本的数据 blob 中的对象时
 
 #### 将 Chart 升级到支持 Kubernetes v1.25 的版本
 
-清理了具有 PSP 的所有版本后，你就可以继续升级了。对于 Rancher 维护的工作负载，请按照本文档[从 Rancher 维护的应用程序和市场工作负载中删除 PodSecurityPolicies](#remove-psp-rancher-workloads) 部分中的步骤进行操作。
+清理了具有 PSP 的所有版本后，你就可以继续升级了。对于 Rancher 维护的工作负载，请按照本文档[从 Rancher 维护的应用程序和市场工作负载中删除 PodSecurityPolicies](#从-rancher-维护的应用程序和市场工作负载中删除-podsecuritypolicies) 部分中的步骤进行操作。
 如果工作负载不是由 Rancher 维护的，请参阅对应的提供商的文档。
 
 :::caution
 不要跳过此步骤。与 Kubernetes v1.25 不兼容的应用程序不能保证在清理后正常工作。
 :::
 
-## Pod 安全准入配置模板 {#psa-config-templates}
+## Pod 安全准入配置模板
 
 Rancher 提供了 PSA 配置模板。它们是可以应用到集群的预定义安全配置。Rancher 管理员（或具有权限的人员）可以[创建、管理和编辑](./psa-config-templates.md) PSA 模板。
 

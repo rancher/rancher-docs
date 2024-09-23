@@ -97,7 +97,6 @@ To be able to fully deploy Monitoring V2 for Windows, all of your Windows hosts 
 
 For more details on how to upgrade wins on existing Windows hosts, see [Windows cluster support for Monitoring V2.](windows-support.md).
 
-
 ## Known Issues
 
 There is a [known issue](https://github.com/rancher/rancher/issues/28787#issuecomment-693611821) that K3s clusters require more than the allotted default memory. If you enable monitoring on a K3s cluster, set `prometheus.prometheusSpec.resources.memory.limit` to 2500 Mi and `prometheus.prometheusSpec.resources.memory.request` to 1750 Mi.

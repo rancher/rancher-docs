@@ -53,7 +53,7 @@ controlplane 节点上运行 Kubernetes API server、scheduler 和 Controller Ma
 - **Kubelets**：监控节点状态的 Agent，确保你的容器处于健康状态。
 - **工作负载**：承载应用和其他 deployment 的容器和 Pod。
 
-Worker 节点也运行存储和网络驱动，有必要时也会运行 Ingress Controller。你可以根据需要，创建尽可能多的 worker 节点来运行你的[工作负载](../pages-for-subheaders/workloads-and-pods.md)。
+Worker 节点也运行存储和网络驱动，有必要时也会运行 Ingress Controller。你可以根据需要，创建尽可能多的 worker 节点来运行你的[工作负载](../how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/workloads-and-pods.md)。
 
 ## 关于 Helm
 

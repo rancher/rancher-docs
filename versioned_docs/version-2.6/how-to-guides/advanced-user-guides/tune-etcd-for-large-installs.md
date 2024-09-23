@@ -12,7 +12,7 @@ The etcd data set is automatically cleaned up on a five minute interval by Kuber
 
 Details about `quota-backend-bytes` differs by etcd version. For more information, see the [official etcd v3.5 documentation](https://etcd.io/docs/v3.5/op-guide/maintenance/#space-quota) if you're running Kubernetes v1.22 and later. Otherwise, see the [official etcd v3.4 documentation](https://etcd.io/docs/v3.4/op-guide/maintenance/#space-quota).
 
-### Example: This snippet of the RKE cluster.yml file increases the keyspace size to 5GB
+## Example: This Snippet of the RKE Cluster.yml file Increases the Keyspace Size to 5GB
 
 ```yaml
 # RKE cluster.yml
@@ -23,7 +23,7 @@ services:
       quota-backend-bytes: 5368709120
 ```
 
-## Scaling etcd disk performance
+## Scaling etcd Disk Performance
 
 You can follow the recommendations from [the etcd docs](https://etcd.io/docs/v3.5/tuning/#disk) on how to tune the disk priority on the host.
 

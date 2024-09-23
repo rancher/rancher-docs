@@ -20,7 +20,7 @@ Both provide choice for the what node(s) the pod will run on.
 - [Adding NodeSelector Settings and Tolerations for Custom Taints](#adding-nodeselector-settings-and-tolerations-for-custom-taints)
 
 
-### Default Implementation in Rancher's Logging Stack
+## Default Implementation in Rancher's Logging Stack
 
 <Tabs>
 <TabItem value="Rancher v2.5.8+">
@@ -61,7 +61,7 @@ In the above example, we ensure that our pod only runs on Linux nodes, and we ad
 
 You can do the same with Rancher's existing taints, or with your own custom ones.
 
-### Adding NodeSelector Settings and Tolerations for Custom Taints
+## Adding NodeSelector Settings and Tolerations for Custom Taints
 
 If you would like to add your own `nodeSelector` settings, or if you would like to add `tolerations` for additional taints, you can pass the following to the chart's values.
 

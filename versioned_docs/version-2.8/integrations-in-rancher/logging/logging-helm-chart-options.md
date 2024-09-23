@@ -31,7 +31,7 @@ Note that this only affects Linux nodes.
 
 If there are any Windows nodes in the cluster, the change will not be applicable to those nodes.
 
-### Adding NodeSelector Settings and Tolerations for Custom Taints
+## Adding NodeSelector Settings and Tolerations for Custom Taints
 
 You can add your own `nodeSelector` settings and add `tolerations` for additional taints by editing the logging Helm chart values. For details, see [this page.](taints-and-tolerations.md)
 

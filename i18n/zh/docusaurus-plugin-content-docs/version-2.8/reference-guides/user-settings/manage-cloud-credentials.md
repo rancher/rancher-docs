@@ -2,7 +2,7 @@
 title: 管理云凭证
 ---
 
-如果要创建[由基础设施提供商托管](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)的集群，则可以使用[节点模板](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#节点模板)来配置集群节点。这些模板使用 Docker Machine 配置选项来定义节点的操作系统镜像以及设置/参数。
+如果要创建[由基础设施提供商托管](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)的集群，则可以使用[节点模板](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#节点模板)来配置集群节点。这些模板使用 Docker Machine 配置选项来定义节点的操作系统镜像以及设置/参数。
 
 节点模板可以使用云凭证来访问在基础设施提供商中配置节点所需的凭证信息。多个节点模板可以使用相同的云凭证。云凭证省去了为同一云提供商重新输入访问密钥的麻烦。云凭证存储在 Kubernetes 密文中。
 
@@ -10,7 +10,7 @@ title: 管理云凭证
 
 你可以在两种情况下创建云凭证：
 
-- [在为集群创建节点模板期间](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#节点模板)。
+- [在为集群创建节点模板期间](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#节点模板)。
 - 在**用户设置**中。
 
 所有云凭证都绑定到创建者的用户配置文件。**不能**与其他用户共享。
@@ -25,7 +25,7 @@ title: 管理云凭证
 1. 根据所选的云凭证类型输入所需的值，从而向基础设施提供商进行身份验证。
 1. 单击**创建**。
 
-**结果**：已创建云凭证，它可以立即用于[创建节点模板](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#节点模板)。
+**结果**：已创建云凭证，它可以立即用于[创建节点模板](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#节点模板)。
 
 ## 更新云凭证
 
@@ -36,7 +36,7 @@ title: 管理云凭证
 1. 选择要编辑的云凭证，然后单击 **⋮ > 编辑配置**。
 1. 更新凭证信息并单击**保存**。
 
-**结果**：已使用新的访问凭证更新云凭证。[添加新节点](../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)时，所有使用此云凭证的现有节点模板都会自动使用更新的信息。
+**结果**：已使用新的访问凭证更新云凭证。[添加新节点](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)时，所有使用此云凭证的现有节点模板都会自动使用更新的信息。
 
 ## 删除云凭证
 

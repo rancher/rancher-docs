@@ -108,7 +108,6 @@ You'll use the backup as a restoration point if something goes wrong during upgr
 
     > **Note:** If you want to switch to a different Helm chart repository, please follow the [steps on how to switch repositories](../../resources/choose-a-rancher-version.md#switching-to-a-different-helm-chart-repository). If you switch repositories, make sure to list the repositories again before continuing onto Step 3 to ensure you have the correct one added.
 
-
 1. Fetch the latest chart to install Rancher from the Helm chart repository.
 
     This command will pull down the latest charts and save it in the current directory as a `.tgz` file.
@@ -188,7 +187,6 @@ If you are currently running the cert-manager whose version is older than v0.11,
     --set hostname=rancher.my.org
     ```
 
-
 </TabItem>
 <TabItem value="Kubernetes Air Gap Upgrade">
 
@@ -202,7 +200,6 @@ Placeholder | Description
 `<RANCHER.YOURDOMAIN.COM>` | The DNS name you pointed at your load balancer.
 `<REGISTRY.YOURDOMAIN.COM:PORT>` | The DNS name for your private registry.
 `<CERTMANAGER_VERSION>` | Cert-manager version running on k8s cluster.
-
 
 ### Option A: Default Self-signed Certificate
 

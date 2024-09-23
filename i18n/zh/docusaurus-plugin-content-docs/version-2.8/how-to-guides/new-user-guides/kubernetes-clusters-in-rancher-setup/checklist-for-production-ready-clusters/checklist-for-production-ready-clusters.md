@@ -14,15 +14,15 @@ title: 生产就绪集群检查清单
 
 如需获取推荐的所有最佳实践的完整列表，请参阅[最佳实践](../../../../reference-guides/best-practices/best-practices.md)部分。
 
-### 节点要求
+## 节点要求
 
 - 确保你的节点满足所有[节点要求](../node-requirements-for-rancher-managed-clusters.md)，包括端口要求。
 
-### 备份 etcd
+## 备份 etcd
 
 * 启用 etcd 快照。验证是否正在创建快照，并执行灾难恢复方案，从而验证快照是否有效。etcd 是存储集群状态的位置，丢失 etcd 数据意味着丢失集群。因此，请确保为集群配置 etcd 的定期快照，并确保快照也是存储在外部（节点外）的。
 
-### 集群架构
+## 集群架构
 
 * 节点应具有以下角色配置之一：
    * `etcd`
@@ -37,16 +37,16 @@ title: 生产就绪集群检查清单
 
 有关每个 Kubernetes 角色的节点数的详细信息，请参阅[推荐架构](../../../../reference-guides/rancher-manager-architecture/architecture-recommendations.md)部分。
 
-### Logging 和 Monitoring
+## Logging 和 Monitoring
 
 * 为 Kubernetes 组件（系统服务）配置告警/通知程序。
 * 为集群分析和事后剖析配置 Logging。
 
-### 可靠性
+## 可靠性
 
 * 在集群上执行负载测试，以验证硬件是否可以支持你的工作负载。
 
-### 网络
+## 网络
 
 * 最小化网络延迟。Rancher 建议尽量减少 etcd 节点之间的延迟。`heartbeat-interval` 的默认设置是 `500`，`election-timeout` 的默认设置是 `5000`。这些 [etcd 调优设置](https://etcd.io/docs/v3.5/tuning/) 允许 etcd 在大多数网络（网络延迟特别高的情况下除外）中运行。
 * 集群节点应位于单个区域内。大多数云厂商在一个区域内提供多个可用区，这可以提高你集群的可用性。任何角色的节点都可以使用多个可用区。如果你使用 (../set-up-cloud-providers/set-up-cloud-providers.md) 资源，请查阅文档以了解限制（即区域存储限制）。

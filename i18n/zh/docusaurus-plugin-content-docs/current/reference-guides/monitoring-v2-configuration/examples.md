@@ -2,15 +2,15 @@
 title: 示例
 ---
 
-### ServiceMonitor
+## ServiceMonitor
 
 你可以在[此处](https://github.com/prometheus-operator/prometheus-operator/blob/master/example/prometheus-operator-crd/monitoring.coreos.com_servicemonitors.yaml)找到 ServiceMonitor 自定义资源的示例。
 
-### PodMonitor
+## PodMonitor
 
 你可以在[此处](https://github.com/prometheus-operator/prometheus-operator/blob/master/example/user-guides/getting-started/example-app-pod-monitor.yaml)找到 PodMonitor 示例，还可以在[此处](https://github.com/prometheus-operator/prometheus-operator/blob/master/example/user-guides/getting-started/prometheus-pod-monitor.yaml)找到引用它的 Prometheus 资源示例。
 
-### PrometheusRule
+## PrometheusRule
 
 PrometheusRule 包含你通常放置在 [Prometheus 规则文件](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/)中的告警和记录规则。
 
@@ -18,6 +18,6 @@ PrometheusRule 包含你通常放置在 [Prometheus 规则文件](https://promet
 
 你可以在[此页面](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/alerting.md)找到 PrometheusRule 示例。
 
-### Alertmanager 配置
+## Alertmanager 配置
 
 有关示例配置，请参阅[本节](./receivers.md#alertmanager-配置示例)。

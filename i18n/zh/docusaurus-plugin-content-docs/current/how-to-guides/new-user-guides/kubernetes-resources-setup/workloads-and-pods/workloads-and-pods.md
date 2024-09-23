@@ -9,16 +9,16 @@ description: "了解在 Kubernetes 中构建复杂容器化应用程序的两种
 
 你可以使用两种基本结构（pod 和工作负载）在 Kubernetes 中构建复杂的容器化应用程序。构建应用程序后，你可以使用第三种结构（service）在集群中或互联网上公开应用程序。
 
-### Pod
+## Pod
 
 [_Pod_](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/) 是一个或多个共享网络命名空间和存储卷的容器。大多数 pod 只有一个容器。因此，我们讨论的 _pod_ 通常等同于 _容器_。扩展 pod 的方式与扩展容器的方式相同，即配置实现服务的同一 pod 的多个实例。通常，Pod 会根据工作负载进行扩展和管理。
 
-### 工作负载
+## 工作负载
 
 _工作负载_ 是为 pod 设置部署规则的对象。Kubernetes 基于这些规则执行部署，并根据应用程序的当前状态来更新工作负载。
 工作负载让你可以定义应用程序调度、扩展和升级的规则。
 
-#### 工作负载类型
+### 工作负载类型
 
 Kubernetes 将工作负载分为不同的类型。Kubernetes 支持的最流行的类型是：
 
@@ -42,7 +42,7 @@ Kubernetes 将工作负载分为不同的类型。Kubernetes 支持的最流行�
 
    _CronJobs_ 与 Job 类似。但是，CronJob 会基于 cron 的计划运行到完成状态。
 
-### Services
+## Services
 
 在许多用例中，工作负载必须：
 
@@ -51,7 +51,7 @@ Kubernetes 将工作负载分为不同的类型。Kubernetes 支持的最流行�
 
 你可以通过创建一个 _Service_ 实现这些目的。Service 使用[选择器/标签（查看代码示例）](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#service-and-replicationcontroller)来映射到底层工作负载的 pod。Rancher UI 使用你选择的服务端口和类型来自动创建 service 以及工作负载，从而简化此映射过程。
 
-#### Service 类型
+### Service 类型
 
 Rancher 中有几种可用的 Service 类型。以下描述来自 [Kubernetes 文档](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types)。
 

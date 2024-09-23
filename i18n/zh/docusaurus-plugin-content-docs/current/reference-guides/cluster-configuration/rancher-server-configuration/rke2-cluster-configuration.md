@@ -116,7 +116,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 #### 云提供商
 
-你可以配置 [Kubernetes 云提供商](../../../pages-for-subheaders/set-up-cloud-providers.md)。如果你想在 Kubernetes 中使用动态配置的[卷和存储](../../../pages-for-subheaders/create-kubernetes-persistent-storage.md)，你通常需要选择特定的云提供商。例如，如果你想使用 Amazon EBS，则需要选择 `aws` 云提供商。
+你可以配置 [Kubernetes 云提供商](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/set-up-cloud-providers.md)。如果你想在 Kubernetes 中使用动态配置的[卷和存储](../../../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md)，你通常需要选择特定的云提供商。例如，如果你想使用 Amazon EBS，则需要选择 `aws` 云提供商。
 
 :::note
 
@@ -130,7 +130,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 #### Worker CIS 配置文件
 
-选择一个 [CIS benchmark](../../../pages-for-subheaders/cis-scan-guides.md) 来验证系统配置。
+选择一个 [CIS benchmark](../../../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md) 来验证系统配置。
 
 #### 项目网络隔离
 

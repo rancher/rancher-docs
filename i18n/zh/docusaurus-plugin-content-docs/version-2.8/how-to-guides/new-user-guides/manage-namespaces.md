@@ -8,10 +8,10 @@ title: 命名空间
 
 可以直接分配给命名空间的资源包括：
 
-- [工作负载](../../pages-for-subheaders/workloads-and-pods.md)
-- [负载均衡器/Ingress](../../pages-for-subheaders/load-balancer-and-ingress-controller.md)
+- [工作负载](./kubernetes-resources-setup/workloads-and-pods/workloads-and-pods.md)
+- [负载均衡器/Ingress](./kubernetes-resources-setup/load-balancer-and-ingress-controller/load-balancer-and-ingress-controller.md)
 - [服务发现记录](kubernetes-resources-setup/create-services.md)
-- [持久卷声明](../../pages-for-subheaders/create-kubernetes-persistent-storage.md)
+- [持久卷声明](./manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md)
 - [证书](kubernetes-resources-setup/encrypt-http-communication.md)
 - [ConfigMap](kubernetes-resources-setup/configmaps.md)
 - [镜像仓库](kubernetes-resources-setup/kubernetes-and-docker-registries.md)
@@ -21,11 +21,11 @@ title: 命名空间
 
 :::note
 
-如果你使用 `kubectl`创建命名空间，由于 `kubectl` 不要求将新命名空间限定在你可以访问的项目内，因此你可能无法使用该命名空间。如果你的权限仅限于项目级别，则最好[通过 Rancher 创建命名空间](manage-namespaces.md)，以确保你有权访问该命名空间。
+如果你使用 `kubectl`创建命名空间，由于 `kubectl` 不要求将新命名空间限定在你可以访问的项目内，因此你可能无法使用该命名空间。如果你的权限仅限于项目级别，则最好[通过 Rancher 创建命名空间](#创建命名空间)，以确保你有权访问该命名空间。
 
 :::
 
-### 创建命名空间
+## 创建命名空间
 
 创建一个新的命名空间来隔离项目中的应用和资源。
 
@@ -40,13 +40,13 @@ title: 命名空间
 1. 单击**集群 > 项目/命名空间**。
 1. 转到要添加命名空间的项目，并单击**创建命名空间**。或者，你也可以转到**不在项目内**以创建不与项目关联的命名空间。
 
-1. **可选**：如果你的项目具有有效的[资源配额](../../pages-for-subheaders/manage-project-resource-quotas.md)，你可以覆盖默认资源**限制**（限制命名空间可以使用的资源）。
+1. **可选**：如果你的项目具有有效的[资源配额](../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md)，你可以覆盖默认资源**限制**（限制命名空间可以使用的资源）。
 
 1. 输入**名称**，然后单击**创建**。
 
 **结果**：已将命名空间添加到项目中。你可以开始将集群资源分配给命名空间。
 
-### 将命名空间移动到另一个项目
+## 将命名空间移动到另一个项目
 
 在某些情况下（例如希望其他团队使用该应用时），集群管理员和成员可能需要将命名空间移动到另一个项目：
 
@@ -60,14 +60,14 @@ title: 命名空间
    :::note 注意事项：
 
    - 不要移动 `System` 项目中的命名空间。移动命名空间可能会对集群网络产生不利影响。
-   - 你不能将命名空间移动到已配置[资源配额](../../pages-for-subheaders/manage-project-resource-quotas.md)的项目中。
+   - 你不能将命名空间移动到已配置[资源配额](../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md)的项目中。
    - 如果你将命名空间从已设置配额的项目移动到未设置配额的项目，则会删除该命名空间的配额。
 
 1. 为新命名空间选择一个新项目，然后单击**移动**。你也可以选择**无**，从而将命名空间从所有项目中移除。
 
 **结果**：你的命名空间已移至其他项目（或从所有项目中移除）。如果命名空间绑定了项目资源，命名空间会释放这些资源，然后绑定新项目的资源。
 
-### 编辑命名空间资源配额
+## 编辑命名空间资源配额
 
 你可以覆盖命名空间默认限制，从而为特定命名空间提供对更多（或更少）项目资源的访问权限：
 

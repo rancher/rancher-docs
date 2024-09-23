@@ -15,7 +15,7 @@ description: Prometheus 允许你查看来自不同 Rancher 和 Kubernetes 对�
 
 使用 `rancher-monitoring` 应用程序，你可以快速部署领先的开源监控和告警解决方案到你的集群上。
 
-### 功能
+## 功能
 
 Prometheus 支持查看 Rancher 和 Kubernetes 对象的指标。通过使用时间戳，Prometheus 能让你通过 Rancher UI 或 Grafana（与 Prometheus 一起部署的分析查看平台）以更容易阅读的图表和视觉形式来查询和查看这些指标。
 

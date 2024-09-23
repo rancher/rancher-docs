@@ -4,6 +4,8 @@ title: Azure 主机配置
 
 有关 Azure 的更多信息，请参阅官方 [Azure 文档](https://docs.microsoft.com/en-us/azure/?product=featured)。
 
+## Machine Pools
+
 ### 环境
 
 Microsoft 提供了多个[云](https://docs.microsoft.com/en-us/cli/azure/cloud?view=azure-cli-latest)来满足地区法律的要求：

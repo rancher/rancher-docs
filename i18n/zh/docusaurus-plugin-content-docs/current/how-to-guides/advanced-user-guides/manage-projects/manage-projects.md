@@ -26,7 +26,7 @@ _项目_ 是 Rancher 中引入的对象，可帮助你更有组织地管理 Kube
 - [配置工具](../../../reference-guides/rancher-project-tools.md)
 - [配置 Pod 安全策略](manage-pod-security-policies.md)
 
-### 授权
+## 授权
 
 非管理者用户只有在[管理员](../../new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)、[集群所有者或成员](../../new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#集群角色)或[项目所有者](../../new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色)将非管理员用户添加到项目的**成员**选项卡后，才能获取项目的访问权限。
 

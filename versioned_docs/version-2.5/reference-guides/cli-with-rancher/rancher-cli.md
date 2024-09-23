@@ -9,18 +9,18 @@ description: Interact with Rancher using command line interface (CLI) tools from
 
 The Rancher CLI (Command Line Interface) is a unified tool that you can use to interact with Rancher. With this tool, you can operate Rancher using a command line rather than the GUI.
 
-### Download Rancher CLI
+## Download Rancher CLI
 
 The binary can be downloaded directly from the UI. The link can be found in the right hand side of the footer in the UI. We have binaries for Windows, Mac, and Linux. You can also check the [releases page for our CLI](https://github.com/rancher/cli/releases) for direct downloads of the binary.
 
-### Requirements
+## Requirements
 
 After you download the Rancher CLI, you need to make a few configurations. Rancher CLI requires:
 
 - Your Rancher Server URL, which is used to connect to Rancher Server.
 - An API Bearer Token, which is used to authenticate with Rancher. For more information about obtaining a Bearer Token, see [Creating an API Key](../../reference-guides/user-settings/api-keys.md).
 
-### CLI Authentication
+## CLI Authentication
 
 Before you can use Rancher CLI to control your Rancher Server, you must authenticate using an API Bearer Token. Log in using the following command (replace `<BEARER_TOKEN>` and `<SERVER_URL>` with your information):
 
@@ -30,7 +30,7 @@ $ ./rancher login https://<SERVER_URL> --token <BEARER_TOKEN>
 
 If Rancher Server uses a self-signed certificate, Rancher CLI prompts you to continue with the connection.
 
-### Project Selection
+## Project Selection
 
 Before you can perform any commands, you must select a Rancher project to perform those commands against. To select a [project](../../how-to-guides/advanced-user-guides/manage-clusters/projects-and-namespaces.md) to work on, use the command `./rancher context switch`. When you enter this command, a list of available projects displays. Enter a number to choose your project.
 
@@ -54,7 +54,7 @@ INFO[0005] Saving config to /Users/markbishop/.ranchcli2.json
 
 Ensure you can run `rancher kubectl get pods` successfully.
 
-### Commands
+## Commands
 
 The following commands are available for use in Rancher CLI.
 
@@ -76,12 +76,12 @@ The following commands are available for use in Rancher CLI.
 | `help, [h]`  | Shows a list of commands or help for one command.  |
 
 
-### Rancher CLI Help
+## Rancher CLI Help
 
 Once logged into Rancher Server using the CLI, enter `./rancher --help` for a list of commands.
 
 All commands accept the `--help` flag, which documents each command's usage.
 
-### Limitations
+## Limitations
 
 The Rancher CLI **cannot** be used to install [dashboard apps or Rancher feature charts](../../how-to-guides/new-user-guides/helm-charts-in-rancher.md).

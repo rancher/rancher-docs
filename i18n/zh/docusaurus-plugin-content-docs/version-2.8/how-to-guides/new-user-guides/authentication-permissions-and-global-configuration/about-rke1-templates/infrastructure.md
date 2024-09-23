@@ -8,11 +8,11 @@ title: RKE 模板和基础设施
 
 如果要标准化集群中的硬件，请将 RKE 模板与节点模板或服务器配置工具 (如 Terraform) 结合使用。
 
-### 节点模板
+## 节点模板
 
 [节点模板](../../../../reference-guides/user-settings/manage-node-templates.md)负责 Rancher 中的节点配置和节点预配。你可以在用户配置文件中设置节点模板，从而定义在每个节点池中使用的模板。启用节点池后，可以确保每个节点池中都有所需数量的节点，并确保池中的所有节点都相同。
 
-### Terraform
+## Terraform
 
 Terraform 是一个服务器配置工具。它使用基础架构即代码，支持使用 Terraform 配置文件创建几乎所有的基础设施。它可以自动执行服务器配置，这种方式是自文档化的，并且在版本控制中易于跟踪。
 
@@ -27,7 +27,7 @@ Terraform 支持：
 - 将基础架构更改纳入标准开发实践
 - 防止由于配置偏移，导致一些服务器的配置与其他服务器不同
 
-## Terraform 工作原理
+### Terraform 工作原理
 
 Terraform 是用扩展名为 `.tf` 的文件编写的。它是用 HashiCorp 配置语言编写的。HashiCorp 配置语言是一种声明性语言，支持定义集群中所需的基础设施、正在使用的云提供商以及提供商的凭证。然后 Terraform 向提供商发出 API 调用，以便有效地创建基础设施。
 
@@ -37,7 +37,7 @@ Terraform 是用扩展名为 `.tf` 的文件编写的。它是用 HashiCorp 配�
 
 如果你需要对基础设施进行更改，你可以在 Terraform 配置文件中进行更改，而不是手动更新服务器。然后，可以将这些文件提交给版本控制、验证，并根据需要进行检查。然后，当你运行 `terraform apply` 时，更改将会被部署。
 
-## 使用 Terraform 的技巧
+### 使用 Terraform 的技巧
 
 - [Rancher 2 提供商文档](https://www.terraform.io/docs/providers/rancher2/)提供了如何配置集群大部分的示例。
 
@@ -53,7 +53,7 @@ Terraform 是用扩展名为 `.tf` 的文件编写的。它是用 HashiCorp 配�
 
 本节描述了一种方法，可以使安全合规相关的配置文件成为集群的标准配置文件。
 
-在你创建[符合 CIS 基准的集群](../../../../pages-for-subheaders/rancher-security.md)时，你有一个加密配置文件和一个审计日志配置文件。
+在你创建[符合 CIS 基准的集群](../../../../reference-guides/rancher-security/rancher-security.md)时，你有一个加密配置文件和一个审计日志配置文件。
 
 你的基础设施预配系统可以将这些文件写入磁盘。然后在你的 RKE 模板中，你需要指定这些文件的位置，然后将你的加密配置文件和审计日志配置文件作为额外的挂载添加到 `kube-api-server`。
 

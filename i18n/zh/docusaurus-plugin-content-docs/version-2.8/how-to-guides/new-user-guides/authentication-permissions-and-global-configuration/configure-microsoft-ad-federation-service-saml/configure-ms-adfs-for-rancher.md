@@ -83,6 +83,6 @@ https://<AD_SERVER>/federationmetadata/2007-06/federationmetadata.xml
 
 **结果**：你已将 Rancher 添加为依赖信任方。现在你可以配置 Rancher 来使用 AD。
 
-### 后续操作
+## 后续操作
 
 [在 Rancher 中配置 Microsoft AD FS ](configure-rancher-for-ms-adfs.md)

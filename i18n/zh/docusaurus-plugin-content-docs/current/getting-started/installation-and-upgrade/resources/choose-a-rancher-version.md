@@ -95,7 +95,7 @@ Rancher Helm Chart 版本与 Rancher 版本（即 `appVersion`）对应。添加
 </TabItem>
 <TabItem value="Docker 镜像">
 
-在执行 [Docker 安装](../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md)、升级或回滚时，你可以使用 _tags_ 来安装特定版本的 Rancher。
+在执行 [Docker 安装](../other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md)、升级或回滚时，你可以使用 _tags_ 来安装特定版本的 Rancher。
 
 ### Server 标签
 

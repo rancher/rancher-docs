@@ -4,7 +4,7 @@ title: 用户和组
 
 Rancher 依赖用户和组来决定允许登录到 Rancher 的用户，以及他们可以访问哪些资源。你配置外部身份验证提供程序后，该提供程序的用户将能够登录到你的 Rancher Server。用户登录时，验证提供程序将向你的 Rancher Server 提供该用户所属的组列表。
 
-你可以通过向资源添加用户或组，来控制其对集群、项目、全局 DNS 提供程序和相关资源的访问。将组添加到资源时，身份验证提供程序中属于该组的所有用户都将能够使用组的权限访问该资源。有关角色和权限的更多信息，请参见 [RBAC](../../../../pages-for-subheaders/manage-role-based-access-control-rbac.md)。
+你可以通过向资源添加用户或组，来控制其对集群、项目、全局 DNS 提供程序和相关资源的访问。将组添加到资源时，身份验证提供程序中属于该组的所有用户都将能够使用组的权限访问该资源。有关角色和权限的更多信息，请参见 [RBAC](../manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md)。
 
 ## 管理成员
 

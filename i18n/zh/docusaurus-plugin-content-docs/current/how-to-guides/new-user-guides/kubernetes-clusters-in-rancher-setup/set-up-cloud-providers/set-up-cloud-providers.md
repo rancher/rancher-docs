@@ -21,23 +21,23 @@ _cloud provider_ 是 Kubernetes 中的一个模块，它提供了一个用于管
 * GCE (Google Compute Engine)
 * vSphere
 
-### 设置 Amazon 云提供商
+## 设置 Amazon 云提供商
 
 有关启用 Amazon 云提供商的详细信息，请参阅[此页面](amazon.md)。
 
-### 设置 Azure 云提供商
+## 设置 Azure 云提供商
 
 有关启用 Azure 云提供商的详细信息，请参阅[此页面](azure.md)。
 
-### 设置 GCE 云提供商
+## 设置 GCE 云提供商
 
 有关启用 Google Compute Engine 云提供商的详细信息，请参阅[此页面](google-compute-engine.md)。
 
-### 设置 vSphere 云提供商
+## 设置 vSphere 云提供商
 
 有关启用 vSphere 云提供商的详细信息，请参阅[树内 vSphere 配置](configure-in-tree-vsphere.md) 和 [树外 vSphere 配置](configure-out-of-tree-vsphere.md)。
 
-### 设置自定义云提供商
+## 设置自定义云提供商
 
 如果您想配置其他 Kubernetes 云提供商，则可使用 `自定义` 云提供商。
 
