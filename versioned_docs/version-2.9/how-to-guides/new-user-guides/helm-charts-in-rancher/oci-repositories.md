@@ -68,7 +68,7 @@ To view Helm charts in the OCI-based Helm chart repository after it achieves an 
 
 Rancher automatically refreshes the OCI-based Helm chart repository every 6 hours. 
 
-If you need to update immediately, you can [perform a manual refresh](../helm-charts-in-rancher/helm-charts-in-rancher.md#refresh-chart-repositories).
+If you need to update immediately, you can [perform a manual refresh](./helm-charts-in-rancher.md#refresh-chart-repositories).
 
 ## Update an OCI-Based Helm Chart Repository Configuration
 

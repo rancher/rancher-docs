@@ -22,15 +22,15 @@ For users looking to use another container runtime, Rancher has the edge-focused
 
 <br/>
 
-Q. Do I have to upgrade Rancher to get Rancher’s support of the upstream Dockershim?
+Q: Do I have to upgrade Rancher to get Rancher’s support of the upstream Dockershim?
 
 The upstream support of Dockershim begins for RKE in Kubernetes 1.21. You will need to be on Rancher 2.6 or above to have support for RKE with Kubernetes 1.21. See our [support matrix](https://rancher.com/support-maintenance-terms/all-supported-versions/rancher-v2.6.0/) for details.
 
 <br/>
 
-Q. I am currently on RKE with Kubernetes 1.20. Do I need to upgrade to RKE with Kubernetes 1.21 sooner to avoid being out of support for Dockershim?
+Q: I am currently on RKE with Kubernetes 1.20. Do I need to upgrade to RKE with Kubernetes 1.21 sooner to avoid being out of support for Dockershim?
 
-A. The version of Dockershim in RKE with Kubernetes 1.20 will continue to work and is not scheduled for removal upstream until Kubernetes 1.24. It will only emit a warning of its future deprecation, which Rancher has mitigated in RKE with Kubernetes 1.21. You can plan your upgrade to Kubernetes 1.21 as you would normally, but should consider enabling the external Dockershim by Kubernetes 1.22. The external Dockershim will need to be enabled before upgrading to Kubernetes 1.24, at which point the existing implementation will be removed.
+A: The version of Dockershim in RKE with Kubernetes 1.20 will continue to work and is not scheduled for removal upstream until Kubernetes 1.24. It will only emit a warning of its future deprecation, which Rancher has mitigated in RKE with Kubernetes 1.21. You can plan your upgrade to Kubernetes 1.21 as you would normally, but should consider enabling the external Dockershim by Kubernetes 1.22. The external Dockershim will need to be enabled before upgrading to Kubernetes 1.24, at which point the existing implementation will be removed.
 
 For more information on the deprecation and its timeline, see the [Kubernetes Dockershim Deprecation FAQ](https://kubernetes.io/blog/2020/12/02/dockershim-faq/#when-will-dockershim-be-removed).
 

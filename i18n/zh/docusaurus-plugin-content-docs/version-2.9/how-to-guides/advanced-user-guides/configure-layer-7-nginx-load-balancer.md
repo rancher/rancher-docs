@@ -76,11 +76,11 @@ title: 7 层 NGINX 负载均衡器上的 TLS 终止（Docker 安装）
 
 1. 输入以下命令：
 
-       ```
-       docker run -d --restart=unless-stopped \
-       -p 80:80 -p 443:443 \
-       rancher/rancher:latest --no-cacerts
-       ```
+    ```
+    docker run -d --restart=unless-stopped \
+      -p 80:80 -p 443:443 \
+      rancher/rancher:latest --no-cacerts
+    ```
 
 </details>
 

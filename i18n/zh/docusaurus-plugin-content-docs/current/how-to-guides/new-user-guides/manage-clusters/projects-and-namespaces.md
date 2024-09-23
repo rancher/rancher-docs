@@ -169,12 +169,12 @@ Rancher 在 Kubernetes 之上进行了扩展，除了集群级别之外，还允
 
 ### 4. 可选：添加资源配额
 
-资源配额用于限制项目（及其命名空间）可以使用的资源。有关详细信息，请参阅[资源配额](projects-and-namespaces.md)。
+资源配额用于限制项目（及其命名空间）可以使用的资源。有关详细信息，请参阅[资源配额](../../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md)。
 
 要添加资源配额：
 
 1. 在**资源配额**选项卡中，单击**添加资源**。
-1. 选择一个**资源类型**。有关详细信息，请参阅[资源配额](projects-and-namespaces.md)。
+1. 选择一个**资源类型**。有关详细信息，请参阅[资源配额](../../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md)。
 1. 输入**项目限制**和**命名空间默认限制**的值。
 1. **可选**：指定**容器默认资源限制**，这将应用于项目中启动的所有容器。如果资源配额设置了 CPU 或内存限制，则建议使用该参数。可以在单个命名空间或容器级别上覆盖它。有关详细信息，请参阅[容器默认资源限制](../../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md)。
 1. 单击**创建**。
