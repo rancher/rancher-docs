@@ -87,7 +87,7 @@ K3s and RKE2 Kubernetes distributions log to journald, which is the subsystem of
   * If `/var/log/journal` exists, then use `/var/log/journal`.
   * If `/var/log/journal` does not exist, then use `/run/log/journal`.
 
-:::note Notes:
+:::note
 
 If any value not described above is returned, Rancher Logging will not be able to collect control plane logs. To address this issue, you will need to perform the following actions on every control plane node:
 

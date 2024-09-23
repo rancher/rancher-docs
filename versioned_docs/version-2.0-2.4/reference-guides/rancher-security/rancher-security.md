@@ -33,7 +33,7 @@ On this page, we provide security-related documentation along with resources to 
 - [Third-party penetration test reports](#third-party-penetration-test-reports)
 - [Rancher CVEs and resolutions](#rancher-cves-and-resolutions)
 
-### Running a CIS Security Scan on a Kubernetes Cluster
+## Running a CIS Security Scan on a Kubernetes Cluster
 
 _Available as of v2.4.0_
 
@@ -51,7 +51,7 @@ When Rancher runs a CIS security scan on a cluster, it generates a report showin
 
 For details, refer to the section on [security scans.](../../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md)
 
-### Rancher Hardening Guide
+## Rancher Hardening Guide
 
 The Rancher Hardening Guide is based on controls and best practices found in the <a href="https://www.cisecurity.org/benchmark/kubernetes/" target="_blank">CIS Kubernetes Benchmark</a> from the Center for Internet Security.
 
@@ -70,7 +70,7 @@ Hardening Guide Version | Rancher Version | CIS Benchmark Version | Kubernetes V
 [Hardening Guide v2.2](rancher-v2.2-hardening-guides/hardening-guide-with-cis-v1.4-benchmark.md) | Rancher v2.2.x | Benchmark v1.4.1 and 1.4.0 | Kubernetes v1.13
 [Hardening Guide v2.1](rancher-v2.1-hardening-guides/hardening-guide-with-cis-v1.3-benchmark.md) | Rancher v2.1.x | Benchmark v1.3.0 | Kubernetes v1.11
 
-### The CIS Benchmark and Self-Assessment
+## The CIS Benchmark and Self-Assessment
 
 The benchmark self-assessment is a companion to the Rancher security hardening guide. While the hardening guide shows you how to harden the cluster, the benchmark guide is meant to help you evaluate the level of security of the hardened cluster.
 
@@ -87,7 +87,7 @@ Self Assessment Guide Version | Rancher Version | Hardening Guide Version | Kube
 [Self Assessment Guide v2.2](rancher-v2.2-hardening-guides/self-assessment-guide-with-cis-v1.4-benchmark.md) | Rancher v2.2.x | Hardening Guide v2.2 | Kubernetes v1.13 | Benchmark v1.4.0 and v1.4.1
 [Self Assessment Guide v2.1](rancher-v2.1-hardening-guides/self-assessment-guide-with-cis-v1.3-benchmark.md) | Rancher v2.1.x | Hardening Guide v2.1 | Kubernetes v1.11 | Benchmark 1.3.0
 
-### Third-party Penetration Test Reports
+## Third-party Penetration Test Reports
 
 Rancher periodically hires third parties to perform security audits and penetration tests of the Rancher 2.x software stack. The environments under test follow the Rancher provided hardening guides at the time of the testing. Previous penetration test reports are available below.
 
@@ -96,6 +96,6 @@ Results:
 - [Cure53 Pen Test - 7/2019](https://releases.rancher.com/documents/security/pen-tests/2019/RAN-01-cure53-report.final.pdf)
 - [Untamed Theory Pen Test- 3/2019](https://releases.rancher.com/documents/security/pen-tests/2019/UntamedTheory-Rancher_SecurityAssessment-20190712_v5.pdf)
 
-### Rancher CVEs and Resolutions
+## Rancher CVEs and Resolutions
 
 Rancher is committed to informing the community of security issues in our products. For the list of CVEs (Common Vulnerabilities and Exposures) for issues we have resolved, refer to [this page.](security-advisories-and-cves.md)

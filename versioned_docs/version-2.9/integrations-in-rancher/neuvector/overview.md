@@ -196,4 +196,3 @@ kubectl patch cronjob neuvector-updater-pod -n cattle-neuvector-system --patch '
 * Sometimes when the controllers are not ready, the NeuVector UI is not accessible from the Rancher UI. During this time, controllers will try to restart, and it takes a few minutes for the controllers to be active.
 
 * Container runtime is not auto-detected for different cluster types when installing the NeuVector chart. To work around this, you can specify the runtime manually.
-

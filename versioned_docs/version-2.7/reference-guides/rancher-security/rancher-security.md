@@ -28,11 +28,11 @@ Security is at the heart of all Rancher features. From integrating with all the 
 
 On this page, we provide security related documentation along with resources to help you secure your Rancher installation and your downstream Kubernetes clusters.
 
-### NeuVector Integration with Rancher
+## NeuVector Integration with Rancher
 
 NeuVector is an open-source, container-focused security application that is now integrated into Rancher. NeuVector provides production security, DevOps vulnerability protection, and a container firewall, et al. Please see the [Rancher docs](../../integrations-in-rancher/neuvector.md) and the [NeuVector docs](https://open-docs.neuvector.com/) for more information.
 
-### Running a CIS Security Scan on a Kubernetes Cluster
+## Running a CIS Security Scan on a Kubernetes Cluster
 
 Rancher leverages [kube-bench](https://github.com/aquasecurity/kube-bench) to run a security scan to check whether Kubernetes is deployed according to security best practices as defined in the [CIS](https://www.cisecurity.org/cis-benchmarks/) (Center for Internet Security) Kubernetes Benchmark.
 
@@ -48,13 +48,13 @@ When Rancher runs a CIS security scan on a cluster, it generates a report showin
 
 For details, refer to the section on [security scans](../../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md).
 
-### SELinux RPM
+## SELinux RPM
 
 [Security-Enhanced Linux (SELinux)](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) is a security enhancement to Linux. After being historically used by government agencies, SELinux is now industry standard and is enabled by default on CentOS 7 and 8.
 
 We provide two RPMs (Red Hat packages) that enable Rancher products to function properly on SELinux-enforcing hosts: `rancher-selinux` and `rke2-selinux`. For details, see [this page](selinux-rpm/selinux-rpm.md).
 
-### Rancher Hardening Guide
+## Rancher Hardening Guide
 
 The Rancher Hardening Guide is based on controls and best practices found in the <a href="https://www.cisecurity.org/benchmark/kubernetes/" target="_blank">CIS Kubernetes Benchmark</a> from the Center for Internet Security.
 
@@ -64,7 +64,7 @@ The hardening guides provide prescriptive guidance for hardening a production in
 
 Each version of the hardening guide is intended to be used with specific versions of the CIS Kubernetes Benchmark, Kubernetes, and Rancher.
 
-### The CIS Benchmark and Self-Assessment
+## The CIS Benchmark and Self-Assessment
 
 The benchmark self-assessment is a companion to the Rancher security hardening guide. While the hardening guide shows you how to harden the cluster, the benchmark guide is meant to help you evaluate the level of security of the hardened cluster.
 
@@ -72,7 +72,7 @@ Because Rancher and RKE install Kubernetes services as Docker containers, many o
 
 Each version of Rancher's self-assessment guide corresponds to specific versions of the hardening guide, Rancher, Kubernetes, and the CIS Benchmark.
 
-### Third-party Penetration Test Reports
+## Third-party Penetration Test Reports
 
 Rancher periodically hires third parties to perform security audits and penetration tests of the Rancher software stack. The environments under test follow the Rancher provided hardening guides at the time of the testing. Previous penetration test reports are available below.
 
@@ -83,14 +83,14 @@ Results:
 
 Please note that new reports are no longer shared or made publicly available.
 
-### Rancher Security Advisories and CVEs
+## Rancher Security Advisories and CVEs
 
 Rancher is committed to informing the community of security issues in our products. For the list of CVEs (Common Vulnerabilities and Exposures) for issues we have resolved, refer to [this page.](security-advisories-and-cves.md)
 
-### Kubernetes Security Best Practices
+## Kubernetes Security Best Practices
 
 For recommendations on securing your Kubernetes cluster, refer to the [Kubernetes Security Best Practices](kubernetes-security-best-practices.md) guide.
 
-### Rancher Security Best Practices
+## Rancher Security Best Practices
 
 For recommendations on securing your Rancher Manager deployments, refer to the [Rancher Security Best Practices](rancher-security-best-practices.md) guide.

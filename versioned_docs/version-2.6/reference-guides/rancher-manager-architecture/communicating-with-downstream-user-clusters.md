@@ -21,7 +21,7 @@ The following descriptions correspond to the numbers in the diagram above:
 3. [Node Agents](#3-node-agents)
 4. [Authorized Cluster Endpoint](#4-authorized-cluster-endpoint)
 
-### 1. The Authentication Proxy
+## 1. The Authentication Proxy
 
 In this diagram, a user named Bob wants to see all pods running on a downstream user cluster called User Cluster 1. From within Rancher, he can run a `kubectl` command to see
 the pods. Bob is authenticated through Rancher's authentication proxy.
@@ -32,7 +32,7 @@ Rancher communicates with Kubernetes clusters using a [service account](https://
 
 By default, Rancher generates a [kubeconfig file](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md) that contains credentials for proxying through the Rancher server to connect to the Kubernetes API server on a downstream user cluster. The kubeconfig file (`kube_config_rancher-cluster.yml`) contains full access to the cluster.
 
-### 2. Cluster Controllers and Cluster Agents
+## 2. Cluster Controllers and Cluster Agents
 
 Each downstream user cluster has a cluster agent, which opens a tunnel to the corresponding cluster controller within the Rancher server.
 
@@ -52,13 +52,13 @@ The cluster agent, also called `cattle-cluster-agent`, is a component that runs 
 -  Applies the roles and bindings defined in each cluster's global policies
 - Communicates between the cluster and Rancher server (through a tunnel to the cluster controller) about events, stats, node info, and health
 
-### 3. Node Agents
+## 3. Node Agents
 
 If the cluster agent (also called `cattle-cluster-agent`) is not available, one of the node agents creates a tunnel to the cluster controller to communicate with Rancher.
 
 The `cattle-node-agent` is deployed using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) resource to make sure it runs on every node in a Rancher-launched Kubernetes cluster. It is used to interact with the nodes when performing cluster operations. Examples of cluster operations include upgrading the Kubernetes version and creating or restoring etcd snapshots.
 
-### 4. Authorized Cluster Endpoint
+## 4. Authorized Cluster Endpoint
 
 An authorized cluster endpoint (ACE) allows users to connect to the Kubernetes API server of a downstream cluster without having to route their requests through the Rancher authentication proxy.
 
