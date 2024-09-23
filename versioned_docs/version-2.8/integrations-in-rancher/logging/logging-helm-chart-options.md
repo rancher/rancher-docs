@@ -6,7 +6,7 @@ title: rancher-logging Helm Chart Options
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/logging/logging-helm-chart-options"/>
 </head>
 
-### Enable/Disable Windows Node Logging
+## Enable/Disable Windows Node Logging
 
 You can enable or disable Windows node logging by setting `global.cattle.windows.enabled` to either `true` or `false` in the `values.yaml`.
 
@@ -21,7 +21,7 @@ Currently an [issue](https://github.com/rancher/rancher/issues/32325) exists whe
 
 :::
 
-### Working with a Custom Docker Root Directory
+## Working with a Custom Docker Root Directory
 
 If using a custom Docker root directory, you can set `global.dockerRootDirectory` in `values.yaml`.
 
@@ -35,7 +35,7 @@ If there are any Windows nodes in the cluster, the change will not be applicable
 
 You can add your own `nodeSelector` settings and add `tolerations` for additional taints by editing the logging Helm chart values. For details, see [this page.](taints-and-tolerations.md)
 
-### Enabling the Logging Application to Work with SELinux
+## Enabling the Logging Application to Work with SELinux
 
 :::note Requirements:
 
@@ -49,7 +49,7 @@ To use Logging v2 with SELinux, we recommend installing the `rancher-selinux` RP
 
 Then, when installing the logging application, configure the chart to be SELinux aware by changing `global.seLinux.enabled` to `true` in the `values.yaml`.
 
-### Additional Logging Sources
+## Additional Logging Sources
 
 By default, Rancher collects logs for [control plane components](https://kubernetes.io/docs/concepts/overview/components/#control-plane-components) and [node components](https://kubernetes.io/docs/concepts/overview/components/#node-components) for all cluster types.
 
@@ -72,7 +72,7 @@ When enabled, Rancher collects all additional node and control plane logs the pr
 
 If you're already using a cloud provider's own logging solution such as AWS CloudWatch or Google Cloud operations suite (formerly Stackdriver), it is not necessary to enable this option as the native solution will have unrestricted access to all logs.
 
-### Systemd Configuration
+## Systemd Configuration
 
 In Rancher logging, `SystemdLogPath` must be configured for K3s and RKE2 Kubernetes distributions.
 
@@ -87,7 +87,7 @@ K3s and RKE2 Kubernetes distributions log to journald, which is the subsystem of
   * If `/var/log/journal` exists, then use `/var/log/journal`.
   * If `/var/log/journal` does not exist, then use `/run/log/journal`.
 
-:::note Notes:
+:::note
 
 If any value not described above is returned, Rancher Logging will not be able to collect control plane logs. To address this issue, you will need to perform the following actions on every control plane node:
 
