@@ -14,7 +14,7 @@ To configure the custom resources, go to the **Cluster Dashboard** To configure 
 1. On the **Clusters** page, go to the cluster where you want to configure CIS scans and click **Explore**.
 1. In the left navigation bar, click **CIS Benchmark**.
 
-### Scans
+## Scans
 
 A scan is created to trigger a CIS scan on the cluster based on the defined profile. A report is created after the scan is completed.
 
@@ -31,7 +31,7 @@ spec:
   scanProfileName: rke-profile-hardened
 ```
 
-### Profiles
+## Profiles
 
 A profile contains the configuration for the CIS scan, which includes the benchmark version to use and any specific tests to skip in that benchmark.
 
@@ -66,7 +66,7 @@ spec:
     - "1.1.21"
 ```
 
-### Benchmark Versions
+## Benchmark Versions
 
 A benchmark version is the name of benchmark to run using `kube-bench`, as well as the valid configuration parameters for that benchmark.
 
