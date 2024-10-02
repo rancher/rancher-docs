@@ -194,6 +194,29 @@ Non-Airgap Rancher installations upon refresh will reflect any chart repository 
 
 Airgap installations where Rancher is configured to use the packaged copy of Helm system charts ([`useBundledSystemChart=true`](../../../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha.md#helm-chart-options-for-air-gap-installations)) will only refer to the [system-chart](https://github.com/rancher/system-charts) repository that comes bundled and will not be able to be refreshed or synced.
 
+### Enable/Disable Helm Chart Repositories
+
+Rancher v2.10.0 adds the ability to enable and disable Helm repositories. Helm repositories are enabled by default.
+
+To disable a chart repository:
+
+1. Click **☰ > Cluster Management**.
+1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
+1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
+1. Find the repository you want to disable, and click **⋮ > Edit YAML**.
+1. Set the **Enabled** field under **Spec** to **false**.
+1. Click **Save**.
+1. When you disable a repository, updates are disabled and new changes to the clusterRepo are not applied.
+
+To enable a chart repository:
+
+1. Click **☰ > Cluster Management**.
+1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
+1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
+1. Find the repository you want to disable, and click **⋮ > Edit YAML**.
+1. Set the **Enabled** field under **Spec** to **true**.
+1. Click **Save**.
+
 ## Deploy and Upgrade Charts
 
 To install and deploy a chart:
