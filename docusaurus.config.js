@@ -2394,6 +2394,19 @@ module.exports = {
             to: '/how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods',
             from: '/pages-for-subheaders/workloads-and-pods'
           }, // Redirects for pages-for-subheaders removal [latest] (end)
+
+          { // Redirects for dashboard#12040 (start)
+            to: '/v2.9/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-google-oauth',
+            from: '/v2.9/admin-settings/authentication/google',
+          },
+          {
+            to: '/v2.9/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides',
+            from: '/v2.9/monitoring-alerting/configuration',
+          }, 
+          {
+            to: '/v2.9/integrations-in-rancher/monitoring-and-alerting',
+            from: '/v2.9/monitoring-alerting',
+          }, // Redirects for dashboard#12040 (end)
           { // Redirects for dashboard#9970
             to: '/v2.8/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences',
             from: '/v2.8/cluster-provisioning/rke-clusters/behavior-differences-between-rke1-and-rke2/'
