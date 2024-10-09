@@ -3,7 +3,7 @@ title: Cloud Marketplace Pay-as-you-go (PAYG) Integration
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/v2.7/integrations-in-rancher/cloud-marketplace/cloud-marketplace-payg-integration"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/v2.8/integrations-in-rancher/cloud-marketplace/cloud-marketplace-payg-integration"/>
 </head>
 
 Rancher Prime integrates with the [AWS Marketplace](https://aws.amazon.com/marketplace) and [Azure Marketplace](https://azuremarketplace.microsoft.com/) as a pay-as-you-go (PAYG) offering. This brings the value of running and managing Kubernetes environments to cloud customers, who benefit from a new pay-monthly pricing model available through their preferred cloud provider's marketplace. This listing will enable you to manage any CNCF-certified Kubernetes distribution in AWS, Azure, on-prem, or at the edge.
