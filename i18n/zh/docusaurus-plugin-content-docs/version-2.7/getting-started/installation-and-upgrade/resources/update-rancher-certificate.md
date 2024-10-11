@@ -190,7 +190,7 @@ kubectl edit -n cattle-system deployment/cattle-cluster-agent
 
 ### 5. 强制更新 Fleet 集群，从而将 fleet-agent 重新连接到 Rancher
 
-在 Rancher UI 的[持续交付](../../../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md#在-rancher-ui-中访问-fleet)中，为集群选择“强制更新”，来允许下游集群中的 fleet-agent 成功连接到 Rancher。
+在 Rancher UI 的[持续交付](../../../integrations-in-rancher/fleet-gitops-at-scale/fleet-gitops-at-scale#在-rancher-ui-中访问-fleet)中，为集群选择“强制更新”，来允许下游集群中的 fleet-agent 成功连接到 Rancher。
 
 #### 为什么要执行这一步骤？
 
@@ -275,7 +275,7 @@ helm ls -n cattle-system
 
 ### 5. 强制更新 Fleet 集群，从而将 fleet-agent 重新连接到 Rancher
 
-在 Rancher UI 的[持续交付](../../../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md#在-rancher-ui-中访问-fleet)中，为集群选择“强制更新”，来允许下游集群中的 fleet-agent 成功连接到 Rancher。
+在 Rancher UI 的[持续交付](../../../integrations-in-rancher/fleet-gitops-at-scale/fleet-gitops-at-scale.md#在-rancher-ui-中访问-fleet)中，为集群选择“强制更新”，来允许下游集群中的 fleet-agent 成功连接到 Rancher。
 
 #### 为什么要执行这一步骤？
 

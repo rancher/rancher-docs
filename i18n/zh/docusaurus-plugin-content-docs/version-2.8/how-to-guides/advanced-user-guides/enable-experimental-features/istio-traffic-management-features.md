@@ -4,9 +4,9 @@ title: UI 管理 Istio 虚拟服务和目标规则
 
 此功能可启动一个 UI，用于管理 Istio 的流量，其中包括创建、读取、更新和删除虚拟服务（Virtual Service）和目标规则（Destination Rule）。
 
-> **注意**：启用此功能并不会启用 Istio。集群管理员需要[为集群启用 Istio](../../../pages-for-subheaders/istio-setup-guide.md) 才能使用该功能。
+> **注意**：启用此功能并不会启用 Istio。集群管理员需要[为集群启用 Istio](../istio-setup-guide/istio-setup-guide.md) 才能使用该功能。
 
-如需启用或禁用此功能，请参见[启用实验功能主页](../../../pages-for-subheaders/enable-experimental-features.md)中的说明。
+如需启用或禁用此功能，请参见[启用实验功能主页](./enable-experimental-features.md)中的说明。
 
 | 环境变量键 | 默认值 | 状态 | 可用于 |
 ---|---|---|---

@@ -49,7 +49,7 @@ See the [rancher/rancher-cleanup repo](https://github.com/rancher/rancher-cleanu
 ### Step 2: Restore the Backup and Bring Up Rancher
 
 At this point, there should be no Rancher-related resources on the upstream cluster. Therefore, the next step will be the same as if you were migrating Rancher to a new cluster that contains no Rancher resources.
-/home/btat/rancher-docs/docs/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md
+
 Follow these [instructions](../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md) to install the Rancher-Backup Helm chart and restore Rancher to its previous state.
 Please keep in mind that:
 1. Step 3 can be skipped, because the Cert-Manager app should still exist on the upstream (local) cluster if it was installed before.

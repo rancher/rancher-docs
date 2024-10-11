@@ -14,13 +14,13 @@ title: 备份 Rancher
 
 :::
 
-### 先决条件
+## 先决条件
 
 Rancher 必须是 2.5.0 或更高版本。
 
 请参见[此处](migrate-rancher-to-new-cluster.md#2-使用-restore-自定义资源来还原备份)获取在 Rancher 2.6.3 中将现有备份文件恢复到 v1.22 集群的帮助。
 
-### 1. 安装 Rancher Backup Operator
+## 1. 安装 Rancher Backup Operator
 
 备份存储位置是 operator 级别的设置，所以需要在安装或升级 `rancher backup` 应用时进行配置。
 
@@ -36,11 +36,11 @@ Rancher 必须是 2.5.0 或更高版本。
 
 :::note
 
-使用 `backup-restore` operator 执行恢复后，Fleet 中会出现一个已知问题：用于 `clientSecretName` 和 `helmSecretName` 的密文不包含在 Fleet 的 Git 仓库中。请参见[此处](../deploy-apps-across-clusters/fleet.md#故障排除)获得解决方法。
+使用 `backup-restore` operator 执行恢复后，Fleet 中会出现一个已知问题：用于 `clientSecretName` 和 `helmSecretName` 的密文不包含在 Fleet 的 Git 仓库中。请参见[此处](../../../integrations-in-rancher/fleet/overview.md#故障排除)获得解决方法。
 
 :::
 
-### 2. 执行备份
+## 2. 执行备份
 
 要执行备份，必须创建 Backup 类型的自定义资源。
 

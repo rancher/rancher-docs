@@ -27,11 +27,11 @@ title: 安全
 
 本文介绍了安全相关的文档以及资源，让你的 Rancher 安装和下游 Kubernetes 集群更加安全。
 
-### NeuVector 与 Rancher 的集成
+## NeuVector 与 Rancher 的集成
 
 NeuVector 是一个开源的、以容器为中心的安全应用程序，现已集成到 Rancher 中。NeuVector 提供生产安全、DevOps 漏洞保护和容器防火墙等功能。请参阅 [Rancher 文档](../../integrations-in-rancher/neuvector/neuvector.md) 和 [NeuVector 文档](https://open-docs.neuvector.com/)了解更多信息。
 
-### 在 Kubernetes 集群上运行 CIS 安全扫描
+## 在 Kubernetes 集群上运行 CIS 安全扫描
 
 Rancher 使用 [kube-bench](https://github.com/aquasecurity/kube-bench) 来运行安全扫描，从而检查 Kubernetes 是否按照 [CIS](https://www.cisecurity.org/cis-benchmarks/)（Center for Internet Security，互联网安全中心）Kubernetes Benchmark 中定义的安全最佳实践进行部署。
 
@@ -47,13 +47,13 @@ Rancher 在集群上运行 CIS 安全扫描时会生成一份报告，该报告�
 
 有关详细信息，请参阅[安全扫描](../../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md)。
 
-### SELinux RPM
+## SELinux RPM
 
 [安全增强型 Linux (SELinux)](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) 是对 Linux 的安全增强。被政府机构使用之后，SELinux 已成为行业标准，并在 CentOS 7 和 8 上默认启用。
 
 我们提供了 `rancher-selinux` 和 `rke2-selinux` 两个 RPM（Red Hat 软件包），让 Rancher 产品能够在 SELinux 主机上正常运行。有关详细信息，请参阅[此页面](selinux-rpm/selinux-rpm.md)。
 
-### Rancher 加固指南
+## Rancher 加固指南
 
 Rancher 加固指南基于 <a href="https://www.cisecurity.org/benchmark/kubernetes/" target="_blank">CIS Kubernetes Benchmark</a>。
 
@@ -63,7 +63,7 @@ Rancher 加固指南基于 <a href="https://www.cisecurity.org/benchmark/kuberne
 
 每个加固指南版本都针对特定的 CIS Kubernetes Benchmark、Kubernetes 和 Rancher 版本。
 
-### CIS Benchmark 和自我评估
+## CIS Benchmark 和自我评估
 
 Benchmark 自我评估是 Rancher 安全加固指南的辅助。加固指南展示了如何加固集群，而 Benchmark 指南旨在帮助你评估加固集群的安全级别。
 
@@ -71,7 +71,7 @@ Benchmark 自我评估是 Rancher 安全加固指南的辅助。加固指南展�
 
 Rancher 自我评估指南的每个版本都对应于强化指南、Rancher、Kubernetes 和 CIS Benchmark 的特定版本。
 
-### 第三方渗透测试报告
+## 第三方渗透测试报告
 
 Rancher 会定期聘请第三方对 Rancher 软件栈进行安全审计和渗透测试。被测环境遵循 Rancher 在测试时提供的强化指南。以前的渗透测试报告如下。
 
@@ -82,14 +82,14 @@ Rancher 会定期聘请第三方对 Rancher 软件栈进行安全审计和渗透
 
 请注意，新报告不再共享或公开发布。
 
-### Rancher 安全公告和 CVE
+## Rancher 安全公告和 CVE
 
 Rancher 致力于向社区通报我们产品中的安全问题。有关我们已解决的问题的 CVE（常见漏洞和暴露）列表，请参阅[此页](security-advisories-and-cves.md)。
 
-### Kubernetes 安全最佳实践
+## Kubernetes 安全最佳实践
 
 有关保护 Kubernetes 集群的建议，请参阅 [Kubernetes 安全最佳实践](kubernetes-security-best-practices.md)指南。
 
-### Rancher 安全最佳实践
+## Rancher 安全最佳实践
 
 有关保护 Rancher Manager 部署的建议，请参阅 [Rancher 安全最佳实践](rancher-security-best-practices.md)指南。

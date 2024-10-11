@@ -22,10 +22,9 @@ Resources that you can assign directly to namespaces include:
 
 To manage permissions in a vanilla Kubernetes cluster, cluster admins configure role-based access policies for each namespace. With Rancher, user permissions are assigned on the project level instead, and permissions are automatically inherited by any namespace owned by the particular project.
 
-> **Note:** If you create a namespace with `kubectl`, it may be unusable because `kubectl` doesn't require your new namespace to be scoped within a project that you have access to. If your permissions are restricted to the project level, it is better to [create a namespace through Rancher](manage-namespaces.md) to ensure that you will have permission to access the namespace.
+> **Note:** If you create a namespace with `kubectl`, it may be unusable because `kubectl` doesn't require your new namespace to be scoped within a project that you have access to. If your permissions are restricted to the project level, it is better to [create a namespace through Rancher](#creating-namespaces) to ensure that you will have permission to access the namespace.
 
-
-### Creating Namespaces
+## Creating Namespaces
 
 Create a new namespace to isolate apps and resources in a project.
 
@@ -43,7 +42,7 @@ Create a new namespace to isolate apps and resources in a project.
 
 **Result:** Your namespace is added to the project. You can begin assigning cluster resources to the namespace.
 
-### Moving Namespaces to Another Project
+## Moving Namespaces to Another Project
 
 Cluster admins and members may occasionally need to move a namespace to another project, such as when you want a different team to start using the application.
 
@@ -63,7 +62,7 @@ Cluster admins and members may occasionally need to move a namespace to another 
 
 **Result:** Your namespace is moved to a different project (or is unattached from all projects). If any project resources are attached to the namespace, the namespace releases them and then attached resources from the new project.
 
-### Editing Namespace Resource Quotas
+## Editing Namespace Resource Quotas
 
 You can always override the namespace default limit to provide a specific namespace with access to more (or less) project resources.
 

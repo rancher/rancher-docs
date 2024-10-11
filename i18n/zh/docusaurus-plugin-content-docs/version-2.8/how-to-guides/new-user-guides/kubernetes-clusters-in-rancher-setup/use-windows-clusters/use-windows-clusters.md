@@ -21,7 +21,7 @@ Windows 集群的其他要求如下：
 
 有关支持 Windows 的 Kubernetes 功能摘要，请参阅[在 Windows 中使用 Kubernetes 支持的功能和限制](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#supported-functionality-and-limitations) 的 Kubernetes 文档，或[在 Kubernetes 中调度 Windows 容器的指南](https://kubernetes.io/docs/setup/production-environment/windows/user-guide-windows-containers/)。
 
-### RKE2 Windows
+## RKE2 Windows
 
 RKE2 配置功能还包括在 Windows 集群上安装 RKE2。RKE2 的 Windows 功能包括：
 

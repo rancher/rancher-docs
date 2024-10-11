@@ -16,7 +16,7 @@ Rancher 2.6 增强了审计日志，在 Rancher 和下游 Kubernetes 审计日�
 如果集群传出了审计日志，日志系统的用户就能够识别外部身份提供程序中的用户。
 Rancher 管理员现在能够查看 Rancher 审计日志，并使用外部身份提供程序用户名来跟踪 Kubernetes 审计日志。
 
-### 功能描述
+## 功能描述
 
 - 在下游集群启用了 Kubernetes 审计日志后，会在“元数据”级别为每个请求记录外部身份提供程序的用户名。
 - 在 Rancher 启用 Rancher API 审计日志后，每个到达 Rancher API Server 的请求记录（包括登录请求）对应的外部身份提供程序用户名也会记录在 `auditLog.level=1` 中。

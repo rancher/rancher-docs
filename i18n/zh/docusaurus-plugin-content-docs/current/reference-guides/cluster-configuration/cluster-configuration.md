@@ -8,9 +8,9 @@ title: 集群配置
 
 使用 Rancher 配置 Kubernetes 集群后，你仍然可以编辑集群的选项和设置。
 
-有关编辑集群成员资格的信息，请转至[此页面](../how-to-guides/new-user-guides/manage-clusters/access-clusters/add-users-to-clusters.md)。
+有关编辑集群成员资格的信息，请转至[此页面](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/add-users-to-clusters.md)。
 
-### 集群配置参考
+## 集群配置参考
 
 集群配置选项取决于 Kubernetes 集群的类型：
 
@@ -21,7 +21,7 @@ title: 集群配置
 - [GKE 集群配置](rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration.md)
 - [AKS 集群配置](rancher-server-configuration/aks-cluster-configuration.md)
 
-### 不同类型集群的管理功能
+## 不同类型集群的管理功能
 
 对于已有集群而言，可提供的选项和设置取决于你配置集群的方法。
 

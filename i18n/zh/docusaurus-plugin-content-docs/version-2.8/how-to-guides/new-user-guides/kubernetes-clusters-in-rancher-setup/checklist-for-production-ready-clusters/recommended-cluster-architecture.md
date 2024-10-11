@@ -53,7 +53,7 @@ title: 推荐的集群架构
 
 参考：
 
-* [最佳 etcd 集群大小的官方 etcd 文档](https://etcd.io/docs/v3.4.0/faq/#what-is-failure-tolerance)
+* [最佳 etcd 集群大小的官方 etcd 文档](https://etcd.io/docs/v3.5/faq/#what-is-failure-tolerance)
 * [为 Kubernetes 操作 etcd 集群的官方 Kubernetes 文档](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/)
 
 ### Worker 节点数
@@ -62,7 +62,7 @@ title: 推荐的集群架构
 
 ### 为什么 Rancher 集群和运行应用的集群的生产要求不同
 
-你可能已经注意到我们的 [Kubernetes 安装](../../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md)说明并不符合我们对生产就绪集群的要求，这是因为 `worker` 角色没有专用节点。然而，你 Rancher 中的这个三节点集群是有效的，因为：
+你可能已经注意到我们的 [Kubernetes 安装](../../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md)说明并不符合我们对生产就绪集群的要求，这是因为 `worker` 角色没有专用节点。然而，你 Rancher 中的这个三节点集群是有效的，因为：
 
 * 它允许一个 `etcd` 节点故障。
 * 它通过多个 `controlplane` 节点来维护 master 组件的多个实例。

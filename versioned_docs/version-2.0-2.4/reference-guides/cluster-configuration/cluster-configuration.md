@@ -15,7 +15,7 @@ For information on editing cluster membership, go to [this page.](../../how-to-g
 - [Editing Clusters with YAML](#editing-clusters-with-yaml)
 - [Updating ingress-nginx](#updating-ingress-nginx)
 
-### Cluster Management Capabilities by Cluster Type
+## Cluster Management Capabilities by Cluster Type
 
 The options and settings available for an existing cluster change based on the method that you used to provision it. For example, only clusters [provisioned by RKE](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) have **Cluster Options** available for editing.
 
@@ -25,7 +25,7 @@ import ClusterCapabilitiesTable from '../../shared-files/_cluster-capabilities-t
 
 <ClusterCapabilitiesTable />
 
-### Editing Clusters in the Rancher UI
+## Editing Clusters in the Rancher UI
 
 To edit your cluster, open the **Global** view, make sure the **Clusters** tab is selected, and then select **&#8942; > Edit** for the cluster that you want to edit.
 
@@ -46,7 +46,7 @@ Option | Description |
  Default Pod Security Policy | If you enable **Pod Security Policy Support**, use this drop-down to choose the pod security policy that's applied to the cluster. |
  Cloud Provider | If you're using a cloud provider to host cluster nodes launched by RKE, enable [this option](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/set-up-cloud-providers.md) so that you can use the cloud provider's native features. If you want to store persistent data for your cloud-hosted cluster, this option is required.  |
 
-### Editing Clusters with YAML
+## Editing Clusters with YAML
 
 Instead of using the Rancher UI to choose Kubernetes options for the cluster, advanced users can create an RKE config file. Using a config file allows you to set any of the options available in an RKE installation, except for system_images configuration, by specifying them in YAML.
 
@@ -63,10 +63,7 @@ In Rancher v2.0.0-v2.2.x, the config file is identical to the  [cluster config f
 
 >**Note:** In Rancher v2.0.5 and v2.0.6, the names of services in the Config File (YAML) should contain underscores only: `kube_api` and `kube_controller`.
 
-
-
-
-### Updating ingress-nginx
+## Updating ingress-nginx
 
 Clusters that were created before Kubernetes 1.16 will have an `ingress-nginx` `updateStrategy` of `OnDelete`. Clusters that were created with Kubernetes 1.16 or newer will have `RollingUpdate`.
 

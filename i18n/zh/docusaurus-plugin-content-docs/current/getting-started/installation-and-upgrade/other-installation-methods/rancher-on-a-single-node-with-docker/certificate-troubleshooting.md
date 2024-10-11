@@ -4,7 +4,7 @@ title: 证书故障排除
 
 <DockerSupportWarning />
 
-### 如何确定我的证书格式是否为 PEM？
+## 如何确定我的证书格式是否为 PEM？
 
 你可以通过以下特征识别 PEM 格式：
 
@@ -48,7 +48,7 @@ VWQqljhfacYPgp8KJUJENQ9h5hZ2nSCrI+W00Jcw4QcEdCI8HL5wmg==
 -----END PRIVATE KEY-----
 ```
 
-### 将 PKCS8 证书密钥转换为 PKCS1
+## 将 PKCS8 证书密钥转换为 PKCS1
 
 如果你使用的是 PKCS8 证书密钥文件，Rancher 将打印以下日志：
 
@@ -64,7 +64,7 @@ openssl rsa -in key.pem -out convertedkey.pem
 
 你可使用 `convertedkey.pem` 作为 Rancher 证书密钥文件。
 
-### 添加中间证书的顺序是什么？
+## 添加中间证书的顺序是什么？
 
 添加证书的顺序如下：
 
@@ -77,7 +77,7 @@ openssl rsa -in key.pem -out convertedkey.pem
 -----END CERTIFICATE-----
 ```
 
-### 如何验证我的证书链？
+## 如何验证我的证书链？
 
 你可使用 `openssl` 二进制文件来验证证书链。如果命令的输出以 `Verify return code: 0 (ok)` 结尾（参见以下示例），你的证书链是有效的。`ca.pem` 文件必须与你添加到 `rancher/rancher` 容器中的文件一致。
 

@@ -16,7 +16,7 @@ title: 一般常见问题解答
 
 ## 是否可以使用 Rancher 2.x 管理 Azure Kubernetes 服务？
 
-是的。请参阅我们的[集群管理]((../how-to-guides/new-user-guides/manage-clusters/manage-clusters.md))指南，了解 AKS 上可用的 Rancher 功能，以及相关的 [AKS 的文档](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks.md)
+是的。请参阅我们的[集群管理](../how-to-guides/new-user-guides/manage-clusters/manage-clusters.md)指南，了解 AKS 上可用的 Rancher 功能，以及相关的 [AKS 的文档](../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks.md)
 
 ## Rancher 是否支持 Windows？
 
@@ -24,7 +24,7 @@ Rancher 支持 Windows Server 1809 容器。有关如何使用 Windows Worker �
 
 ## Rancher 是否支持 Istio？
 
-Rancher 支持 [Istio](../pages-for-subheaders/istio.md)。
+Rancher 支持 [Istio](../integrations-in-rancher/istio/istio.md)。
 
 ## Rancher 2.x 是否支持使用 Hashicorp 的 Vault 来存储密文？
 

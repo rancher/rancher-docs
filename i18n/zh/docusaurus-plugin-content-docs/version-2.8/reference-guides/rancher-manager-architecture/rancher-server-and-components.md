@@ -6,9 +6,9 @@ title: Rancher Server 和 Components
 
 下图展示了 Rancher 2.x 的上层架构。下图中，Rancher Server 管理两个下游 Kubernetes 集群，其中一个由 RKE 创建，另一个由 Amazon EKS 创建。
 
-为了达到最佳性能和安全性，我们建议你为 Rancher Management Server 创建一个专用的 Kubernetes 集群。不建议在此集群上运行用户工作负载。部署 Rancher 后，你可以[创建或导入集群](../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)来运行你的工作负载。
+为了达到最佳性能和安全性，我们建议你为 Rancher Management Server 创建一个专用的 Kubernetes 集群。不建议在此集群上运行用户工作负载。部署 Rancher 后，你可以[创建或导入集群](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md)来运行你的工作负载。
 
-下图介绍了用户如何通过 Rancher 的认证代理管理 [Rancher 启动的 Kubernetes](../../pages-for-subheaders/launch-kubernetes-with-rancher.md) 集群和[托管的 Kubernetes](../../pages-for-subheaders/set-up-clusters-from-hosted-kubernetes-providers.md) 集群：
+下图介绍了用户如何通过 Rancher 的认证代理管理 [Rancher 启动的 Kubernetes](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) 集群和[托管的 Kubernetes](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/set-up-clusters-from-hosted-kubernetes-providers.md) 集群：
 
 <figcaption>通过 Rancher 的认证代理管理 Kubernetes 集群</figcaption>
 

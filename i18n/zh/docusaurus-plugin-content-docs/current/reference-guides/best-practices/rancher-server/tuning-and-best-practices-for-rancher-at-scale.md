@@ -110,7 +110,7 @@ Rancher 的大部分逻辑发生在 Event Handler 上。每当资源对象产生
 
 Etcd 是 Kubernetes 和 Rancher 的后端数据库，在 Rancher 性能中扮演重要的角色。
 
-[Etcd 性能](https://etcd.io/docs/v3.4/op-guide/performance/)的两个主要瓶颈是磁盘和网络速度。Etcd 应当在具有高速网络和高读写速度 (IOPS) SSD 硬盘的专用节点上运行。有关 etcd 性能的更多信息，请参阅 [etcd 性能缓慢（性能测试和优化）](https://www.suse.com/support/kb/doc/?id=000020100)和[为大型安装进行 etcd 调优](../../../how-to-guides/advanced-user-guides/tune-etcd-for-large-installs.md)。有关磁盘的信息可以在[安装要求](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md#磁盘)中找到。
+[Etcd 性能](https://etcd.io/docs/v3.5/op-guide/performance/)的两个主要瓶颈是磁盘和网络速度。Etcd 应当在具有高速网络和高读写速度 (IOPS) SSD 硬盘的专用节点上运行。有关 etcd 性能的更多信息，请参阅 [etcd 性能缓慢（性能测试和优化）](https://www.suse.com/support/kb/doc/?id=000020100)和[为大型安装进行 etcd 调优](../../../how-to-guides/advanced-user-guides/tune-etcd-for-large-installs.md)。有关磁盘的信息可以在[安装要求](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md#磁盘)中找到。
 
 根据 etcd 的[复制机制](https://etcd.io/docs/v3.5/faq/#what-is-maximum-cluster-size)，建议在三个节点上运行 etcd，运行在更多的节点上反而会降低速度。
 

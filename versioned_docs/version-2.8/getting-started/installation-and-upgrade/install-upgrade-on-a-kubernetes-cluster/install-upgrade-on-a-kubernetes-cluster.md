@@ -107,15 +107,15 @@ The Rancher management server is designed to be secure by default and requires S
 
 :::note
 
-If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](../installation-references/helm-chart-options.md#external-tls-termination).
+If you want to externally terminate SSL/TLS, see [TLS termination on an External Load Balancer](../installation-references/helm-chart-options.md#external-tls-termination). As outlined on that page, this option does have additional requirements for TLS verification.
 
 :::
 
 There are three recommended options for the source of the certificate used for TLS termination at the Rancher server:
 
-- **Rancher-generated TLS certificate:** In this case, you will need to install `cert-manager` into the cluster. Rancher utilizes `cert-manager` to issue and maintain its certificates. Rancher will generate a CA certificate of its own, and sign a cert using that CA. `cert-manager` is then responsible for managing that certificate.
-- **Let's Encrypt:** The Let's Encrypt option also uses `cert-manager`. However, in this case, cert-manager is combined with a special Issuer for Let's Encrypt that performs all actions (including request and validation) necessary for getting a Let's Encrypt issued cert. This configuration uses HTTP validation (`HTTP-01`), so the load balancer must have a public DNS record and be accessible from the internet.
-- **Bring your own certificate:** This option allows you to bring your own public- or private-CA signed certificate. Rancher will use that certificate to secure websocket and HTTPS traffic. In this case, you must upload this certificate (and associated key) as PEM-encoded files with the name `tls.crt` and `tls.key`. If you are using a private CA, you must also upload that certificate. This is due to the fact that this private CA may not be trusted by your nodes. Rancher will take that CA certificate, and generate a checksum from it, which the various Rancher components will use to validate their connection to Rancher.
+- **Rancher-generated TLS certificate:** In this case, you will need to install `cert-manager` into the cluster. Rancher utilizes `cert-manager` to issue and maintain its certificates. Rancher will generate a CA certificate of its own, and sign a cert using that CA. `cert-manager` is then responsible for managing that certificate. No extra action is needed when `agent-tls-mode` is set to strict. More information can be found on this setting in [Agent TLS Enforcement](../installation-references/tls-settings.md#agent-tls-enforcement).
+- **Let's Encrypt:** The Let's Encrypt option also uses `cert-manager`. However, in this case, cert-manager is combined with a special Issuer for Let's Encrypt that performs all actions (including request and validation) necessary for getting a Let's Encrypt issued cert. This configuration uses HTTP validation (`HTTP-01`), so the load balancer must have a public DNS record and be accessible from the internet. When setting `agent-tls-mode` to `strict`, you must also specify `--privateCA=true` and upload the Let's Encrypt CA as described in [Adding TLS Secrets](../resources/add-tls-secrets.md). More information can be found on this setting in [Agent TLS Enforcement](../installation-references/tls-settings.md#agent-tls-enforcement).
+- **Bring your own certificate:** This option allows you to bring your own public- or private-CA signed certificate. Rancher will use that certificate to secure websocket and HTTPS traffic. In this case, you must upload this certificate (and associated key) as PEM-encoded files with the name `tls.crt` and `tls.key`. If you are using a private CA, you must also upload that certificate. This is due to the fact that this private CA may not be trusted by your nodes. Rancher will take that CA certificate, and generate a checksum from it, which the various Rancher components will use to validate their connection to Rancher. If `agent-tls-mode` is set to `strict`, the CA must be uploaded, so that downstream clusters can successfully connect. More information can be found on this setting in [Agent TLS Enforcement](../installation-references/tls-settings.md#agent-tls-enforcement).
 
 
 | Configuration                  | Helm Chart Option           | Requires cert-manager                 |
@@ -148,7 +148,7 @@ To see options on how to customize the cert-manager install (including for cases
 :::
 
 ```
-# If you have installed the CRDs manually instead of with the `--set installCRDs=true` option added to your Helm install command, you should upgrade your CRD resources before upgrading the Helm chart:
+# If you have installed the CRDs manually, instead of setting `installCRDs` or `crds.enabled` to `true` in your Helm install command, you should upgrade your CRD resources before upgrading the Helm chart:
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/<VERSION>/cert-manager.crds.yaml
 
 # Add the Jetstack Helm repository
@@ -161,7 +161,7 @@ helm repo update
 helm install cert-manager jetstack/cert-manager \
   --namespace cert-manager \
   --create-namespace \
-  --set installCRDs=true
+  --set crds.enabled=true
 ```
 
 Once you’ve installed cert-manager, you can verify it is deployed correctly by checking the cert-manager namespace for running pods:
@@ -241,6 +241,12 @@ In the following command,
 - `letsEncrypt.email` is set to the email address used for communication about your certificate (for example, expiry notices)
 - Set `letsEncrypt.ingress.class` to whatever your ingress controller is, e.g., `traefik`, `nginx`, `haproxy`, etc.
 - For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
+
+:::warning
+
+When `agent-tls-mode` is set to `strict`, you must supply the `privateCA=true` chart value (e.x. through `--set privateCA=true`) and upload the Let's Encrypt Certificate Authority as outlined in [Adding TLS Secrets](../resources/add-tls-secrets.md). Information on identifying the Let's Encrypt Root CA can be found in the Let's Encrypt [docs](https://letsencrypt.org/certificates/). If you don't upload the CA, then Rancher may fail to connect to new or existing downstream clusters.
+
+:::
 
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \

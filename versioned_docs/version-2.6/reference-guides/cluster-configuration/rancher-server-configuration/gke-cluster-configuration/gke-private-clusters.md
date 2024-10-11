@@ -20,7 +20,7 @@ Cloud NAT will [incur charges](https://cloud.google.com/nat/pricing).
 
 :::
 
-If restricting outgoing internet access is not a concern for your organization, use Google's [Cloud NAT](https://cloud.google.com/nat/docs/using-nat) service to allow nodes in the private network to access the internet, enabling them to download the required images from Dockerhub and contact the Rancher management server. This is the simplest solution.
+If restricting outgoing internet access is not a concern for your organization, use Google's [Cloud NAT](https://cloud.google.com/nat/docs/using-nat) service to allow nodes in the private network to access the internet, enabling them to download the required images from Docker Hub and contact the Rancher management server. This is the simplest solution.
 
 #### Private registry
 

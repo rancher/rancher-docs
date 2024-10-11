@@ -42,7 +42,7 @@ Rancher 认证代理可以与以下外部认证服务集成。
 
 ## 用户和组
 
-Rancher 依赖用户和组来决定允许谁登录 Rancher 以及他们可以访问哪些资源。当使用外部认证时，外部认证系统会根据用户提供组的信息。这些用户和组被赋予了集群、项目、多集群应用以及全局 DNS 提供商和条目等资源的特定角色。当你对组进行授权时，在认证服务中所有属于这个组中的用户都有访问指定的资源的权限。有关角色和权限的更多信息，请查看 [RBAC](../manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md)。
+Rancher 依赖用户和组来决定允许谁登录 Rancher 以及他们可以访问哪些资源。当使用外部认证时，外部认证系统会根据用户提供组的信息。这些用户和组被赋予了集群、项目及全局 DNS 提供商和条目等资源的特定角色。当你对组进行授权时，在认证服务中所有属于这个组中的用户都有访问指定的资源的权限。有关角色和权限的更多信息，请查看 [RBAC](../manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md)。
 
 :::note
 

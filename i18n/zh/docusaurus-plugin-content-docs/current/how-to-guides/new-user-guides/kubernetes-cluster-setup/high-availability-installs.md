@@ -10,9 +10,9 @@ title: 高可用安装
 
 Rancher Server 的数据存储在 etcd 中。etcd 数据库可以在所有三个节点上运行。为了选举出大多数 etcd 节点认同的 etcd 集群 leader，节点的数量需要是奇数。如果 etcd 数据库不能选出 leader，etcd 可能会失败。这时候就需要使用备份来还原集群。
 
-有关 Rancher 如何工作的详情（与安装方法无关），请参见[架构](../../../pages-for-subheaders/rancher-manager-architecture.md)。
+有关 Rancher 如何工作的详情（与安装方法无关），请参见[架构](../../../reference-guides/rancher-manager-architecture/rancher-manager-architecture.md)。
 
-### 推荐架构
+## 推荐架构
 
 - Rancher 的 DNS 应该解析为 4 层负载均衡器。
 - 负载均衡器应该把 TCP/80 端口和 TCP/443 端口的流量转发到 Kubernetes 集群的全部 3 个节点上。

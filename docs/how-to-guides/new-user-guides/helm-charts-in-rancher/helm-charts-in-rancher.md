@@ -58,7 +58,7 @@ To display prerelease versions:
 | rancher-logging | 100.0.0+up3.12.0 | 100.1.2+up3.17.4 |
 | rancher-longhorn | 100.0.0+up1.1.2 | 100.1.2+up1.2.4 |
 | rancher-monitoring | 100.0.0+up16.6.0 | 100.1.2+up19.0.3 |
-| rancher-sriov (experimental) | 100.0.0+up0.1.0 | 100.0.3+up0.1.0 |
+| rancher-sriov<sup>[1](#sriov-chart-deprecation-and-migration)</sup> | 100.0.0+up0.1.0 | 100.0.3+up0.1.0 |
 | rancher-vsphere-cpi | 100.3.0+up1.2.1 | 100.3.0+up1.2.1 |
 | rancher-vsphere-csi | 100.3.0+up2.5.1-rancher1 | 100.3.0+up2.5.1-rancher1 |
 | rancher-wins-upgrader | 0.0.100 | 100.0.1+up0.0.1 |
@@ -163,6 +163,16 @@ spec:
 
 :::
 
+### Add Custom OCI Chart Repositories
+
+:::caution
+
+This feature is currently experimental and is not officially supported in Rancher.
+
+:::
+
+Helm v3 introduced storing Helm charts as [Open Container Initiative (OCI)](https://opencontainers.org/about/overview/) artifacts in container registries. With Rancher v2.9.0, you can add [OCI-based Helm chart repositories](https://helm.sh/docs/topics/registries/) alongside HTTP-based and Git-based repositories. This means you can deploy apps that are stored as OCI artifacts. For more information, see [Using OCI Helm Chart Repositories](./oci-repositories.md).
+
 ### Helm Compatibility
 
 Only Helm 3 compatible charts are supported.
@@ -229,6 +239,31 @@ To upgrade legacy multi-cluster apps:
 1. Click **☰**. 
 1. Under **Legacy Apps**, click **Multi-cluster Apps**.
 
+### Chart-Specific Information
+
+#### sriov Chart Deprecation and Migration
+
+The `sriov` (SR-IOV network operator) chart from the Rancher Charts repository is deprecated and will be removed in Rancher v2.10. Please migrate to the `sriov-network-operator` chart from the SUSE Edge repository (https://github.com/suse-edge/charts) instead.
+
+To migrate, follow these steps:
+
+1. Add the SUSE Edge repository to your cluster by following the steps in [Add Custom Git Repositories](#add-custom-git-repositories).
+1. For the **Git Repo URL** field, enter `https://github.com/suse-edge/charts`.
+1. Click **Create**.
+1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Charts**.
+1. Find the `sriov-network-operator` chart and click on it.
+1. Click **Install**.
+1. In the **Name** field, enter the same name you used for your existing `sriov` chart installation.
+1. Click **Next**.
+1. Click **Install**.
+
+**Result:** Rancher redirects to the **Installed Apps** page where your existing installation enters the **Updating** state. The migration is complete when it enters the **Deployed** state.
+
 ## Limitations
 
-Dashboard apps or Rancher feature charts can't be installed using the Rancher CLI.
+- Dashboard apps or Rancher feature charts can't be installed using the Rancher CLI.
+
+- When determining the most recent version to display for the **Upgradable** column on the **Apps > Installed Apps** page, rather than only considering versions of the Helm chart from the repository it was installed from, Rancher considers versions of the Helm chart from all repositories on the cluster.
+
+  For example, suppose you install `cert-manager` v1.13.0 from repository A, where v1.14.0 is now the most recent version available. In this case, you expect **Upgradable** to display v1.14.0. However, if the cluster also has access to repository B where v1.15.0 of `cert-manager` is available, then **Upgradable** displays v1.15.0 even though the original installation used repository A.
+  

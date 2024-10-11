@@ -22,7 +22,7 @@ Starting with version 1.24, the above defaults to true.
 
 For users looking to use another container runtime, Rancher has the edge-focused K3s and datacenter-focused RKE2 Kubernetes distributions that use containerd as the default runtime. Imported RKE2 and K3s Kubernetes clusters can then be upgraded and managed through Rancher going forward.
 
-### FAQ
+## FAQ
 
 <br/>
 
@@ -46,6 +46,6 @@ A: You can use a runtime like containerd with Kubernetes that does not require D
 
 Q: If I am already using RKE1 and want to switch to RKE2, what are my migration options?
 
-A: Today, you can stand up a new cluster and migrate workloads to a new RKE2 cluster that uses containerd. Rancher is exploring the possibility of an in-place upgrade path.
+A: Today, you can stand up a new cluster and migrate workloads to a new RKE2 cluster that uses containerd. For details, see the [RKE to RKE2 Replatforming Guide](https://links.imagerelay.com/cdn/3404/ql/5606a3da2365422ab2250d348aa07112/rke_to_rke2_replatforming_guide.pdf).
 
 <br/>

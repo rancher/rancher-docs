@@ -32,6 +32,7 @@ For information on enabling experimental features, refer to [this page.](../../.
 | ------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `additionalTrustedCAs`         | false                                                 | `bool` - See [Additional Trusted CAs](#additional-trusted-cas)                                                                                    |
 | `addLocal`                     | "true"                                                | `string` - Have Rancher detect and import the "local" (upstream) Rancher server cluster.  _Note: This option is no longer available in v2.5.0. Consider using the `restrictedAdmin` option to prevent users from modifying the local cluster._              |
+| `agentTLSMode`                 | ""                                                    | `string` - either `system-store` or `strict`. See [Agent TLS Enforcement](./tls-settings.md#agent-tls-enforcement) |
 | `antiAffinity`                 | "preferred"                                           | `string` - AntiAffinity rule for Rancher pods - "preferred, required"                                                                             |
 | `auditLog.destination`         | "sidecar"                                             | `string` - Stream to sidecar container console or hostPath volume - "sidecar, hostPath"                                                           |
 | `auditLog.hostPath`            | "/var/log/rancher/audit"                              | `string` - log file destination on host (only applies when `auditLog.destination` is set to `hostPath`)                                           |
@@ -206,7 +207,7 @@ You may terminate the SSL/TLS on a L7 load balancer external to the Rancher clus
 
 :::note
 
-If you are using a Private CA signed certificate, add `--set privateCA=true` and see [Adding TLS Secrets - Using a Private CA Signed Certificate](../../../getting-started/installation-and-upgrade/resources/add-tls-secrets.md) to add the CA cert for Rancher.
+If you are using a Private CA signed certificate (or if `agent-tls-mode` is set to `strict`), add `--set privateCA=true` and see [Adding TLS Secrets - Using a Private CA Signed Certificate](../../../getting-started/installation-and-upgrade/resources/add-tls-secrets.md) to add the CA cert for Rancher. 
 
 :::
 

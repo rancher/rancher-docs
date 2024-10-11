@@ -32,7 +32,7 @@ title: Pod 安全准入 (PSA) 配置模板
 
 ### 加固集群
 
-如果选择 **rancher-restricted** 模板但不选择 **CIS 配置文件**，你将无法满足 CIS Benchmark。有关详细信息，请参阅 [RKE2 加固指南](../../../pages-for-subheaders/rke2-hardening-guide.md)。
+如果选择 **rancher-restricted** 模板但不选择 **CIS 配置文件**，你将无法满足 CIS Benchmark。有关详细信息，请参阅 [RKE2 加固指南](../../../reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-hardening-guide.md)。
 
 </TabItem>
 <TabItem value="RKE1">

@@ -542,7 +542,7 @@ For your convenience, the following variables are available for your pipeline co
 
 Variable Name           | Description
 ------------------------|------------------------------------------------------------
-`CICD_GIT_REPO_NAME`      | Repository name (Github organization omitted).
+`CICD_GIT_REPO_NAME`      | Repository name (GitHub organization omitted).
 `CICD_GIT_URL`            | URL of the Git repository.
 `CICD_GIT_COMMIT`         | Git commit ID being executed.
 `CICD_GIT_BRANCH`         | Git branch of this event.

@@ -133,7 +133,17 @@ Here are a few examples of permission combinations that satisfy Rancher's needs:
 
 :::
 
-#### 4. Copy Azure Application Data
+#### 4. Allow Public Client Flows
+
+To login from Rancher CLI you must allow public client flows:
+
+1. From the left navigation menu, select **Authentication**.
+
+1. Under **Advanced Settings**, select **Yes** on the toggle next to **Allow public client flows**.
+
+    ![Allow Public Client Flows](/img/azure-public-client-flows.png)
+
+#### 5. Copy Azure Application Data
 
 ![Application ID](/img/app-configuration.png)
 
@@ -167,7 +177,7 @@ Custom Endpoints are not tested or fully supported by Rancher.
 
 You'll also need to manually enter the Graph, Token, and Auth Endpoints.
 
-- From <b>App registrations</b>, click <b>Endpoints</b>:
+- From **App registrations**, click **Endpoints**:
 
 ![Click Endpoints](/img/endpoints.png)
 
@@ -176,7 +186,7 @@ You'll also need to manually enter the Graph, Token, and Auth Endpoints.
   - **OAuth 2.0 token endpoint (v1)** (Token Endpoint)
   - **OAuth 2.0 authorization endpoint (v1)** (Auth Endpoint)
 
-#### 5. Configure Azure AD in Rancher
+#### 6. Configure Azure AD in Rancher
 
 To complete configuration, enter information about your AD instance in the Rancher UI.
 
@@ -188,7 +198,7 @@ To complete configuration, enter information about your AD instance in the Ranch
 
 1. Click **AzureAD**.
 
-1. Complete the **Configure Azure AD Account** form using the information you copied while completing [Copy Azure Application Data](#4-copy-azure-application-data).
+1. Complete the **Configure Azure AD Account** form using the information you copied while completing [Copy Azure Application Data](#5-copy-azure-application-data).
 
     :::caution
 
@@ -220,6 +230,8 @@ To complete configuration, enter information about your AD instance in the Ranch
     **Important:** When entering the Graph Endpoint in a custom config, remove the tenant ID from the URL:
 
     <code>http<span>s://g</span>raph.microsoft.com<del>/abb5adde-bee8-4821-8b03-e63efdc7701c</del></code>
+
+1. (Optional) In Rancher v2.9.0 and later, you can filter users' group memberships in Azure AD to reduce the amount of log data generated. See steps 4–5 of [Filtering Users by Azure AD Auth Group Memberships](#filtering-users-by-azure-ad-auth-group-memberships) for full instructions.
 
 1. Click **Enable**.
 
@@ -314,6 +326,29 @@ Endpoint         | https://login.partner.microsoftonline.cn/
 Graph Endpoint   | https://microsoftgraph.chinacloudapi.cn
 Token Endpoint   | https://login.partner.microsoftonline.cn/{tenantID}/oauth2/v2.0/token
 
+## Filtering Users by Azure AD Auth Group Memberships
+
+In Rancher v2.9.0 and later, you can filter users' group memberships from Azure AD to reduce the amount of log data generated. If you did not filter group memberships during initial setup, you can still add filters on an existing Azure AD configuration.
+
+:::warning
+    
+Filtering out a user group membership affects more than just logging. 
+
+Since the filter prevents Rancher from seeing that the user belongs to an excluded group, it also does not see any permissions from that group. This means that excluding a group from the filter can have the side effect of denying users permissions they should have.
+
+:::
+
+1. In Rancher, in the top left corner, click **☰ > Users & Authentication**.
+
+1. In the left navigation menu, click **Auth Provider**.
+
+1. Click **AzureAD**.
+
+1. Click the checkbox next to **Limit users by group membership**.
+    
+1. Enter an [OData filter clause](https://learn.microsoft.com/en-us/odata/concepts/queryoptions-overview#filter) into the **Group Membership Filter** field. For example, if you want to limit logging to group memberships whose name starts with `test`, click the checkbox and enter `startswith(displayName,'test')`.
+
+![Adding a group membership filter to Azure AD](/img/auth-setup-azure-ad-filter.png)
 
 ## Deprecated Azure AD Graph API
 
@@ -328,4 +363,3 @@ Token Endpoint   | https://login.partner.microsoftonline.cn/{tenantID}/oauth2/v2
 >- If you don't wish to upgrade to v2.7.0+ after the Azure AD Graph API is retired, you'll need to either:
     - Use the built-in Rancher auth or
     - Use another third-party auth system and set that up in Rancher. Please see the [authentication docs](authentication-config.md) to learn how to configure other open authentication providers.
-

@@ -28,7 +28,7 @@ title: 创建 DigitalOcean 集群
 
 ### 2. 使用云凭证创建节点模板
 
-为 DigitalOcean 创建[节点模板](../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#节点模板) 会允许 Rancher 在 DigitalOcean 中配置新节点。其他集群可以复用节点模板。
+为 DigitalOcean 创建[节点模板](./use-new-nodes-in-an-infra-provider.md#节点模板) 会允许 Rancher 在 DigitalOcean 中配置新节点。其他集群可以复用节点模板。
 
 1. 点击 **☰ > 集群管理**。
 1. 单击 **RKE1 配置 > 节点模板**。
@@ -42,7 +42,7 @@ title: 创建 DigitalOcean 集群
 1. 在**集群**页面上，单击**创建**。
 1. 单击 **DigitalOcean**。
 1. 输入**集群名称**。
-1. 将一个或多个节点池添加到你的集群。将一个或多个节点池添加到你的集群。每个节点池都使用节点模板来配置新节点。有关节点池的更多信息，包括为节点分配 Kubernetes 角色的最佳实践，请参阅[本节](../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)。
+1. 将一个或多个节点池添加到你的集群。将一个或多个节点池添加到你的集群。每个节点池都使用节点模板来配置新节点。有关节点池的更多信息，包括为节点分配 Kubernetes 角色的最佳实践，请参阅[本节](./use-new-nodes-in-an-infra-provider.md)。
 1. 在**集群配置**中，选择要安装的 Kubernetes 版本、要使用的网络提供商，以及是否启用项目网络隔离。要查看更多集群选项，请单击**显示高级选项**。如需获取配置集群的帮助，请参阅 [RKE 集群配置参考](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)。
 1. 使用**成员角色**为集群配置用户授权。点击**添加成员**添加可以访问集群的用户。使用**角色**下拉菜单为每个用户设置权限。
 1. 单击**创建**。
@@ -71,7 +71,7 @@ title: 创建 DigitalOcean 集群
 1. 单击 **DigitalOcean**。
 1. 选择一个**云凭证**。如果存在多个则需要选择。否则，它是预选的。
 1. 输入**集群名称**。
-1. 为每个 Kubernetes 角色创建一个主机池。请参阅[最佳实践](../../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md#节点角色)了解角色分配和计数的建议。
+1. 为每个 Kubernetes 角色创建一个主机池。请参阅[最佳实践](./use-new-nodes-in-an-infra-provider.md#节点角色)了解角色分配和计数的建议。
    1. 为每个主机池定义主机配置。有关配置选项的信息，请参阅 [DigitalOcean 主机配置参考](../../../../reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/digitalocean.md)。
 1. 使用**集群配置**，选择要安装的 Kubernetes 版本、要使用的网络提供商，以及是否启用项目网络隔离。有关配置集群的帮助，请参阅 [RKE2 集群配置参考](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md)。
 1. 使用**成员角色**为集群配置用户授权。点击**添加成员**添加可以访问集群的用户。使用**角色**下拉菜单为每个用户设置权限。

@@ -96,7 +96,7 @@ OpenLDAP ServiceAccount 用于所有搜索。无论用户个人的 SAML 权限�
 
 [配置 OpenLDAP Server、组和用户的设置](../configure-openldap/openldap-config-reference.md)。请注意，不支持嵌套组成员。
 
-> 在继续配置之前，请熟悉[外部身份认证配置和主要用户](../../../../pages-for-subheaders/authentication-config.md#外部身份验证配置和用户主体)。
+> 在继续配置之前，请熟悉[外部身份认证配置和主要用户](./authentication-config.md#外部认证配置和用户主体)。
 
 1. 使用分配了 [administrator](https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions) 角色（即 _本地主体_）的本地用户登录到 Rancher。
 1. 在左上角，单击 **☰ > 用户 & 认证**。

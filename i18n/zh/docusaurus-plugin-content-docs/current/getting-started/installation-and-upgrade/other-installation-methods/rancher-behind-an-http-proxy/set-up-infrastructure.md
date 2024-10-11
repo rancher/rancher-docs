@@ -12,13 +12,13 @@ title: '1. 配置基础设施'
 
 这些节点必须位于同一个区域或数据中心。但是你可以把这些服务器放在不同的可用区。
 
-### 为什么使用三个节点？
+## 为什么使用三个节点？
 
 在 RKE 集群中，Rancher Server 的数据存储在 etcd 中。而这个 etcd 数据库在这三个节点上运行。
 
 为了选举出大多数 etcd 节点认可的 etcd 集群 leader，etcd 数据库需要奇数个节点。如果 etcd 数据库无法选出 leader，etcd 可能会出现[脑裂（split brain）](https://www.quora.com/What-is-split-brain-in-distributed-systems)的问题，此时你需要使用备份恢复集群。如果三个 etcd 节点之一发生故障，其余两个节点可以选择一个 leader，因为它们是 etcd 节点总数的大多数部分。
 
-### 1. 配置 Linux 节点
+## 1. 配置 Linux 节点
 
 这些主机将通过 HTTP 代理连接到互联网。
 
@@ -26,7 +26,7 @@ title: '1. 配置基础设施'
 
 如需获取配置 Linux 节点的示例，请参见[在 Amazon EC2 中配置节点](../../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md)的教程。
 
-### 2. 配置负载均衡器
+## 2. 配置负载均衡器
 
 你还需要设置一个负载均衡器，来将流量重定向到两个节点上的 Rancher 副本。配置后，当单个节点不可用时，继续保障与 Rancher Management Server 的通信。
 
@@ -49,7 +49,7 @@ title: '1. 配置基础设施'
 
 :::
 
-### 3. 配置 DNS 记录
+## 3. 配置 DNS 记录
 
 配置完负载均衡器后，你将需要创建 DNS 记录，以将流量发送到该负载均衡器。
 
@@ -60,5 +60,5 @@ title: '1. 配置基础设施'
 有关设置 DNS 记录以将域流量转发到 Amazon ELB 负载均衡器的指南，请参见 [AWS 官方文档](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer)。
 
 
-### 后续操作
+## 后续操作
 [配置 Kubernetes 集群](install-kubernetes.md)

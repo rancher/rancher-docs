@@ -4,7 +4,7 @@ title: RBAC
 
 本文介绍 Prometheus Federator RBAC。
 
-如[命名空间](../../pages-for-subheaders/prometheus-federator.md#命名空间)部分所述，Prometheus Federator 期望集群中具有项目级别权限（例如，具有由单个标签选择器确定的命名空间组的权限）的项目所有者、项目成员和其他用户，除了项目 Registration 命名空间（默认导入到项目中）和那些已经包含其项目的命名空间之外，在任何其他命名空间中都只有最低权限。因此，为了让项目所有者将特定 Chart 权限分配给其项目命名空间中的其他用户，Helm Project Operator 将自动监视以下绑定：
+如[命名空间](./prometheus-federator.md#命名空间)部分所述，Prometheus Federator 期望集群中具有项目级别权限（例如，具有由单个标签选择器确定的命名空间组的权限）的项目所有者、项目成员和其他用户，除了项目 Registration 命名空间（默认导入到项目中）和那些已经包含其项目的命名空间之外，在任何其他命名空间中都只有最低权限。因此，为了让项目所有者将特定 Chart 权限分配给其项目命名空间中的其他用户，Helm Project Operator 将自动监视以下绑定：
 
 - ClusterRoleBindings
 - 项目发布命名空​​间中的 RoleBindings

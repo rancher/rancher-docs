@@ -4,7 +4,7 @@ title: 将 Rancher 迁移到新集群
 
 如果你要将 Rancher 迁移到一个新的 Kubernetes 集群，先不要在新集群上安装 Rancher。这是因为如果将 Rancher 还原到已安装 Rancher 的新集群，可能会导致问题。
 
-### 先决条件
+## 先决条件
 
 以下说明假设你已经完成[备份创建](back-up-rancher.md)，并且已经安装了用于部署 Rancher 的新 Kubernetes 集群。
 
@@ -21,7 +21,7 @@ Rancher 可以安装到任意 Kubernetes 集群上，包括托管的 Kubernetes 
 - [RKE Kubernetes 安装文档](https://rancher.com/docs/rke/latest/en/installation/)
 - [K3s Kubernetes 安装文档](https://rancher.com/docs/k3s/latest/en/installation/)
 
-### 1. 安装 rancher-backup Helm Chart
+## 1. 安装 rancher-backup Helm Chart
 安装 [rancher-backup chart](https://github.com/rancher/backup-restore-operator/tags)，请使用 2.x.x 主要版本内的版本：
 
 1. 添加 helm 仓库：
@@ -55,7 +55,7 @@ Rancher 可以安装到任意 Kubernetes 集群上，包括托管的 Kubernetes 
 
    :::
 
-### 2. 使用 Restore 自定义资源来还原备份
+## 2. 使用 Restore 自定义资源来还原备份
 
 :::note 重要提示：
 
@@ -150,11 +150,11 @@ Kubernetes v1.22 是 Rancher 2.6.3 的实验功能，不支持使用 apiVersion 
 
    1. Restore 资源的状态变成 `Completed` 后，你可以继续安装 cert-manager 和 Rancher。
 
-### 3. 安装 cert-manager
+## 3. 安装 cert-manager
 
-按照在 Kubernetes 上安装 cert-manager的步骤[安装 cert-manager](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#4-安装-cert-manager)。
+按照在 Kubernetes 上安装 cert-manager的步骤[安装 cert-manager](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md#4-安装-cert-manager)。
 
-### 4. 使用 Helm 安装 Rancher
+## 4. 使用 Helm 安装 Rancher
 
 使用与第一个集群上使用的相同版本的 Helm 来安装 Rancher：
 

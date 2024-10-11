@@ -31,7 +31,7 @@ target     prot opt source               destination
 sudo iptables --list
 ```
 
-下文介绍如何使用 `firewalld`，将[防火墙端口规则](../../pages-for-subheaders/installation-requirements.md#端口要求)应用到高可用 Rancher Server 集群中的节点。
+下文介绍如何使用 `firewalld`，将[防火墙端口规则](../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md#端口要求)应用到高可用 Rancher Server 集群中的节点。
 
 ## 先决条件
 

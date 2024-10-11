@@ -14,7 +14,7 @@ ServiceMonitor 比 PodMonitor 更常用，推荐用于大多数用例。
 
 :::
 
-### ServiceMonitor
+## ServiceMonitor
 
 这个伪 CRD 映射到 Prometheus 自定义资源配置的一部分。它以声明方式指定应如何监控 Kubernetes 服务组。
 
@@ -24,7 +24,7 @@ ServiceMonitor 比 PodMonitor 更常用，推荐用于大多数用例。
 
 有关 ServiceMonitor 工作原理的更多信息，请参阅 [Prometheus Operator 文档](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/running-exporters.md)。
 
-### PodMonitor
+## PodMonitor
 
 这个伪 CRD 映射到 Prometheus 自定义资源配置的一部分。它以声明方式指定应如何监控 Pod 组。
 

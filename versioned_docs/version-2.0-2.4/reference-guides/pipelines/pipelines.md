@@ -86,7 +86,7 @@ Select your provider's tab below and follow the directions.
 
 1. Select **Tools > Pipelines** in the navigation bar. In versions before v2.2.0, you can select **Resources > Pipelines**.
 
-1. Follow the directions displayed to **Setup a Github application**. Rancher redirects you to Github to setup an OAuth App in Github.
+1. Follow the directions displayed to **Setup a GitHub application**. Rancher redirects you to GitHub to setup an OAuth App in GitHub.
 
 1. From GitHub, copy the **Client ID** and **Client Secret**. Paste them into Rancher.
 

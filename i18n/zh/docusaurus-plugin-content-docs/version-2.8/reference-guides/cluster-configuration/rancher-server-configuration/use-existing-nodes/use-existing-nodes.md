@@ -17,7 +17,7 @@ description: 要创建具有自定义节点的集群，你需要访问集群中�
 
 :::note 使用 Windows 主机作为 Kubernetes Worker 节点？
 
-在开始之前，请参阅[配置 Windows 自定义集群](use-windows-clusters.md)。
+在开始之前，请参阅[配置 Windows 自定义集群](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/use-windows-clusters.md)。
 
 :::
 
@@ -137,5 +137,5 @@ Key=kubernetes.io/cluster/CLUSTERID, Value=shared
 
 创建集群后，你可以通过 Rancher UI 访问集群。最佳实践建议你设置以下访问集群的备用方式：
 
-- **通过 kubectl CLI 访问你的集群**：按照[这些步骤](../../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#accessing-clusters-with-kubectl-from-your-workstation)在你的工作站上使用 kubectl 访问集群。在这种情况下，你将通过 Rancher Server 的认证代理进行认证，然后 Rancher 会让你连接到下游集群。此方法允许你在没有 Rancher UI 的情况下管理集群。
-- **通过 kubectl CLI 使用授权的集群端点访问你的集群**：按照[这些步骤](../../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster)直接使用 kubectl 访问集群，而无需通过 Rancher 进行认证。我们建议设置此替代方法来访问集群，以便在无法连接到 Rancher 时访问集群。
+- **通过 kubectl CLI 访问你的集群**：按照[这些步骤](../../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#在工作站使用-kubectl-访问集群)在你的工作站上使用 kubectl 访问集群。在这种情况下，你将通过 Rancher Server 的认证代理进行认证，然后 Rancher 会让你连接到下游集群。此方法允许你在没有 Rancher UI 的情况下管理集群。
+- **通过 kubectl CLI 使用授权的集群端点访问你的集群**：按照[这些步骤](../../../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#直接使用下游集群进行身份验证)直接使用 kubectl 访问集群，而无需通过 Rancher 进行认证。我们建议设置此替代方法来访问集群，以便在无法连接到 Rancher 时访问集群。

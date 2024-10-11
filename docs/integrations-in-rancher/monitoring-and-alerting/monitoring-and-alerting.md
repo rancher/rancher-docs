@@ -15,7 +15,7 @@ For information on V1 monitoring and alerting, available in Rancher v2.2 up to v
 
 Using the `rancher-monitoring` application, you can quickly deploy leading open-source monitoring and alerting solutions onto your cluster.
 
-### Features
+## Features
 
 Prometheus lets you view metrics from your Rancher and Kubernetes objects. Using timestamps, Prometheus lets you query and view these metrics in easy-to-read graphs and visuals, either through the Rancher UI or Grafana, which is an analytics viewing platform deployed along with Prometheus.
 
@@ -96,7 +96,6 @@ When deployed onto an RKE1 Windows cluster, Monitoring V2 will now automatically
 To be able to fully deploy Monitoring V2 for Windows, all of your Windows hosts must have a minimum [wins](https://github.com/rancher/wins) version of v0.1.0.
 
 For more details on how to upgrade wins on existing Windows hosts, see [Windows cluster support for Monitoring V2.](windows-support.md).
-
 
 ## Known Issues
 

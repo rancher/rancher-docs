@@ -6,7 +6,7 @@ title: Rancher HA
 
 请确保你配置了正确的 kubeconfig（例如，`export KUBECONFIG=$PWD/kube_config_cluster.yml`）。
 
-### 检查 Rancher Pod
+## 检查 Rancher Pod
 
 Rancher pod 会部署为 `cattle-system` 命名空间中的一个 Deployment。
 
@@ -27,25 +27,25 @@ rancher-7dbd7875f7-qw7wb   1/1     Running   0          8m    x.x.x.x     x.x.x.
 
 如果 pod 无法运行（即状态不是 **Running**，Ready 状态未显示 `1/1`，或者有大量 Restarts），请检查 pod 详细信息，日志和命名空间事件。
 
-#### Pod 详细信息
+### Pod 详细信息
 
 ```
 kubectl -n cattle-system describe pods -l app=rancher
 ```
 
-#### Pod 容器日志
+### Pod 容器日志
 
 ```
 kubectl -n cattle-system logs -l app=rancher
 ```
 
-#### 命名空间事件
+### 命名空间事件
 
 ```
 kubectl -n cattle-system get events
 ```
 
-### 检查 Ingress
+## 检查 Ingress
 
 Ingress 应该具有正确的 `HOSTS`（显示配置的 FQDN）和 `ADDRESS`（将被路由到该主机地址）：
 
@@ -60,7 +60,7 @@ NAME      HOSTS                    ADDRESS                   PORTS     AGE
 rancher   rancher.yourdomain.com   x.x.x.x,x.x.x.x,x.x.x.x   80, 443   2m
 ```
 
-### 检查 Ingress Controller 日志
+## 检查 Ingress Controller 日志
 
 如果访问你配置的 Rancher FQDN 时没有显示 UI，请检查 Ingress Controller 日志以查看尝试访问 Rancher 时发生了什么：
 
@@ -68,7 +68,7 @@ rancher   rancher.yourdomain.com   x.x.x.x,x.x.x.x,x.x.x.x   80, 443   2m
 kubectl -n ingress-nginx logs -l app=ingress-nginx
 ```
 
-### Leader 选举
+## Leader 选举
 
 Leader 由 Leader 选举确定。确定 Leader 后，Leader（`holderIdentity`）会保存在 `cattle-controllers` ConfigMap 中（在本例中为 `rancher-7dbd7875f7-qbj5k`）：
 

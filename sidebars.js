@@ -237,6 +237,7 @@ const sidebars = {
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-keycloak-saml",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-pingidentity",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-okta-saml",
+                    "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-generic-oidc",
                   ]
                 },
                 {
@@ -287,6 +288,7 @@ const sidebars = {
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/locked-roles",
                   ]
                 },
+                "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/jwt-authentication",
                 {
                   type: 'category',
                   label: 'About Provisioning Drivers',
@@ -321,7 +323,6 @@ const sidebars = {
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards",
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates",
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry",
-
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding",
               ]
             },
@@ -506,6 +507,7 @@ const sidebars = {
                   items: [
                     "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-amazon",
                     "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-vsphere",
+                    "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-azure",
                   ]
                 },
                 "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters",
@@ -543,6 +545,7 @@ const sidebars = {
                         "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere",
                         "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-credentials",
                         "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-a-vm-template",
+                        "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/shutdown-vm"
                       ]
                     },
                     {
@@ -632,6 +635,7 @@ const sidebars = {
               },
               items: [
                 "how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps",
+                "how-to-guides/new-user-guides/helm-charts-in-rancher/oci-repositories"
               ]
             },
             {
@@ -787,6 +791,7 @@ const sidebars = {
                 id: "how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features",
               },
               items: [
+                "how-to-guides/advanced-user-guides/enable-experimental-features/ui-server-side-pagination",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features",
@@ -797,6 +802,7 @@ const sidebars = {
             "how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
             "how-to-guides/advanced-user-guides/enable-api-audit-log",
             "how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters",
+            "how-to-guides/advanced-user-guides/enable-user-retention",
             "how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
           ]
         }
@@ -1150,6 +1156,7 @@ const sidebars = {
             "integrations-in-rancher/neuvector/overview"
           ]
         },
+        "integrations-in-rancher/suse-observability/suse-observability",
         "integrations-in-rancher/kubewarden/kubewarden",
         "integrations-in-rancher/elemental/elemental",
         {

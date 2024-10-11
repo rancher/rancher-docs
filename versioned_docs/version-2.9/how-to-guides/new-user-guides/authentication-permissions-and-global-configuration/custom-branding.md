@@ -23,7 +23,7 @@ This option replaces "Rancher" with the value you provide in most places. Files 
 
 ### Support Links
 
-Use a url address to send new "File an Issue" reports instead of sending users to the Github issues page. Optionally show Rancher community support links.
+Use a url address to send new "File an Issue" reports instead of sending users to the GitHub issues page. Optionally show Rancher community support links.
 
 ### Logo
 

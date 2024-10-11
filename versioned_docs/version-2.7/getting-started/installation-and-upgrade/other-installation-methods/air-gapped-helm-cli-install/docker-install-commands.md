@@ -143,8 +143,6 @@ docker run -d --restart=unless-stopped \
 
 </details>
 
-
-
 :::note
 
 If you don't intend to send telemetry data, opt out [telemetry](../../../../faq/telemetry.md) during the initial login.

@@ -8,7 +8,7 @@ title: Overview
 
 Introduced in Rancher v2.6.1, [Harvester](https://docs.harvesterhci.io/) is an open-source hyper-converged infrastructure (HCI) software built on Kubernetes. Harvester installs on bare metal servers and provides integrated virtualization and distributed storage capabilities. Although Harvester operates using Kubernetes, it does not require users to know Kubernetes concepts, making it a more user-friendly application.
 
-### Feature Flag
+## Feature Flag
 
 The Harvester feature flag is used to manage access to the Virtualization Management (VM) page in Rancher where users can navigate directly to Harvester clusters and access the Harvester UI. The Harvester feature flag is enabled by default. Click [here](../../how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features.md) for more information on feature flags in Rancher.
 
@@ -22,7 +22,7 @@ To navigate to the Harvester cluster, click **☰ > Virtualization Management**.
 
 * Users may import a Harvester cluster only on the Virtualization Management page. Importing a cluster on the Cluster Management page is not supported, and a warning will advise you to return to the VM page to do so.
 
-### Harvester Node Driver
+## Harvester Node Driver
 
 The [Harvester node driver](https://docs.harvesterhci.io/v1.1/rancher/node/node-driver/) is generally available for RKE and RKE2 options in Rancher. The node driver is available whether or not the Harvester feature flag is enabled. Note that the node driver is off by default. Users may create RKE or RKE2 clusters on Harvester only from the Cluster Management page.
 
@@ -30,7 +30,7 @@ Harvester allows `.ISO` images to be uploaded and displayed through the Harveste
 
 See [Provisioning Drivers](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-provisioning-drivers/about-provisioning-drivers.md#node-drivers) for more information on node drivers in Rancher.
 
-### Port Requirements
+## Port Requirements
 
 The port requirements for the Harvester cluster can be found [here](https://docs.harvesterhci.io/v1.1/install/requirements#networking).
 

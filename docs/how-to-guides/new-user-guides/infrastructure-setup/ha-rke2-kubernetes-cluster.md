@@ -19,7 +19,7 @@ These nodes must be in the same region. You may place these servers in separate 
 To install the Rancher management server on a high-availability RKE2 cluster, we recommend setting up the following infrastructure:
 
 - **Three Linux nodes,** typically virtual machines, in the infrastructure provider of your choice.
-- **A load balancer** to direct traffic to the two nodes.
+- **A load balancer** to direct traffic to the nodes.
 - **A DNS record** to map a URL to the load balancer. This will become the Rancher server URL, and downstream Kubernetes clusters will need to reach it.
 
 ### 1. Set up Linux Nodes
@@ -51,7 +51,7 @@ Do not use this load balancer (i.e, the `local` cluster Ingress) to load balance
 
 :::
 
-### 4. Set up the DNS Record
+### 3. Set up the DNS Record
 
 Once you have set up your load balancer, you will need to create a DNS record to send traffic to this load balancer.
 
