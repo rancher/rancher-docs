@@ -2,9 +2,10 @@
 title: 技术
 ---
 
-### 如何重置管理员密码？
+## 如何重置管理员密码？
 
 Docker 安装：
+
 ```
 $ docker exec -ti <container_id> reset-password
 New password for default administrator (user-xxxxx):
@@ -12,6 +13,7 @@ New password for default administrator (user-xxxxx):
 ```
 
 Kubernetes 安装（Helm）：
+
 ```
 $ KUBECONFIG=./kube_config_cluster.yml
 $ kubectl --kubeconfig $KUBECONFIG -n cattle-system exec $(kubectl --kubeconfig $KUBECONFIG -n cattle-system get pods -l app=rancher --no-headers | head -1 | awk '{ print $1 }') -c rancher -- reset-password
@@ -19,10 +21,10 @@ New password for default administrator (user-xxxxx):
 <new_password>
 ```
 
+## 我删除/停用了最后一个 admin，该如何解决？
 
-
-### 我删除/停用了最后一个 admin，该如何解决？
 Docker 安装：
+
 ```
 $ docker exec -ti <container_id> ensure-default-admin
 New default administrator (user-xxxxx)
@@ -31,38 +33,40 @@ New password for default administrator (user-xxxxx):
 ```
 
 Kubernetes 安装（Helm）：
+
 ```
 $ KUBECONFIG=./kube_config_cluster.yml
 $ kubectl --kubeconfig $KUBECONFIG -n cattle-system exec $(kubectl --kubeconfig $KUBECONFIG -n cattle-system get pods -l app=rancher | grep '1/1' | head -1 | awk '{ print $1 }') -- ensure-default-admin
 New password for default administrator (user-xxxxx):
 <new_password>
 ```
-### 如何启用调试日志记录？
+
+## 如何启用调试日志记录？
 
 请参阅[故障排除：日志记录](../troubleshooting/other-troubleshooting-tips/logging.md)。
 
-### 我的 ClusterIP 不响应 ping，该如何解决？
+## 我的 ClusterIP 不响应 ping，该如何解决？
 
 ClusterIP 是一个虚拟 IP，不会响应 ping。要测试 ClusterIP 是否配置正确，最好的方法是使用 `curl` 访问 IP 和端口并检查它是否响应。
 
-### 在哪里管理节点模板？
+## 在哪里管理节点模板？
 
 打开你的账号菜单（右上角）并选择`节点模板`。
 
-### 为什么我的四层负载均衡器处于 `Pending` 状态？
+## 为什么我的四层负载均衡器处于 `Pending` 状态？
 
-四层负载均衡器创建为 `type: LoadBalancer`。Kubernetes 需要一个可以满足这些请求的云提供商或控制器，否则这些请求将永远处于 `Pending` 状态。有关更多信息，请参阅[云提供商](../pages-for-subheaders/set-up-cloud-providers.md)或[创建外部负载均衡器](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/)。
+四层负载均衡器创建为 `type: LoadBalancer`。Kubernetes 需要一个可以满足这些请求的云提供商或控制器，否则这些请求将永远处于 `Pending` 状态。有关更多信息，请参阅[云提供商](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/set-up-cloud-providers.md)或[创建外部负载均衡器](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/)。
 
-### Rancher 的状态存储在哪里？
+## Rancher 的状态存储在哪里？
 
 - Docker 安装：在 `rancher/rancher` 容器的嵌入式 etcd 中，位于 `/var/lib/rancher`。
 - Kubernetes install：在为运行 Rancher 而创建的 RKE 集群的 etcd 中。
 
-### 支持的 Docker 版本是如何确定的？
+## 支持的 Docker 版本是如何确定的？
 
 我们遵循上游 Kubernetes 版本验证过的 Docker 版本。如果需要获取验证过的版本，请查看 Kubernetes 版本 CHANGELOG.md 中的 [External Dependencies](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.10.md#external-dependencies)。
 
-### 如何访问 Rancher 创建的节点？
+## 如何访问 Rancher 创建的节点？
 
 你可以转到**节点**视图，然后下载用于访问 Rancher 创建的节点的 SSH 密钥。选择要访问的节点并单击行尾 **⋮** 按钮，然后选择**下载密钥**，如下图所示。
 
@@ -74,14 +78,14 @@ ClusterIP 是一个虚拟 IP，不会响应 ping。要测试 ClusterIP 是否配
 $ ssh -i id_rsa user@ip_of_node
 ```
 
-### 如何在 Rancher 中自动化任务 X？
+## 如何在 Rancher 中自动化任务 X？
 
 UI 由静态文件组成，并根据 API 的响应工作。换言之，UI 中可以执行的每个操作/任务都可以通过 API 进行自动化。有两种方法可以实现这一点：
 
 * 访问 `https://your_rancher_ip/v3` 并浏览 API 选项。
 * 在使用 UI 时捕获 API 调用（通常使用 [Chrome 开发者工具](https://developers.google.com/web/tools/chrome-devtools/#network)，但你也可以使用其他工具）。
 
-### 节点的 IP 地址改变了，该如何恢复？
+## 节点的 IP 地址改变了，该如何恢复？
 
 节点需要配置静态 IP（或使用 DHCP 保留的 IP）。如果节点的 IP 已更改，你必须在集群中删除并重新添加它。删除后，Rancher 会将集群更新为正确的状态。如果集群不再处于 `Provisioning` 状态，则已从集群删除该节点。
 
@@ -89,11 +93,11 @@ UI 由静态文件组成，并根据 API 的响应工作。换言之，UI 中可
 
 在集群中移除并清理节点时，你可以将节点重新添加到集群中。
 
-### 如何将其他参数/绑定/环境变量添加到 Rancher 启动的 Kubernetes 集群的 Kubernetes 组件中？
+## 如何将其他参数/绑定/环境变量添加到 Rancher 启动的 Kubernetes 集群的 Kubernetes 组件中？
 
 你可以使用集群选项中的[配置文件](../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#rke-集群配置文件参考)选项来添加其他参数/​​绑定/环境变量。有关详细信息，请参阅 RKE 文档中的[其他参数、绑定和环境变量](https://rancher.com/docs/rke/latest/en/config-options/services/services-extras/)，或浏览 [Cluster.ymls 示例](https://rancher.com/docs/rke/latest/en/example-yamls/)。
 
-### 如何检查证书链是否有效？
+## 如何检查证书链是否有效？
 
 使用 `openssl verify` 命令来验证你的证书链：
 
@@ -134,7 +138,7 @@ subject= /C=GB/ST=England/O=Alice Ltd/CN=rancher.yourdomain.com
 issuer= /C=GB/ST=England/O=Alice Ltd/CN=Alice Intermediate CA
 ```
 
-### 如何在服务器证书中检查 `Common Name` 和 `Subject Alternative Names`？
+## 如何在服务器证书中检查 `Common Name` 和 `Subject Alternative Names`？
 
 虽然技术上仅需要 `Subject Alternative Names` 中有一个条目，但在 `Common Name` 和 `Subject Alternative Names` 中都包含主机名可以最大程度地提高与旧版浏览器/应用程序的兼容性。
 
@@ -152,7 +156,7 @@ openssl x509 -noout -in cert.pem -text | grep DNS
                 DNS:rancher.my.org
 ```
 
-### 为什么节点发生故障时重新调度一个 pod 需要 5 分钟以上的时间？
+## 为什么节点发生故障时重新调度一个 pod 需要 5 分钟以上的时间？
 
 这是以下默认 Kubernetes 设置的组合导致的：
 
@@ -171,6 +175,6 @@ Kubernetes 1.13 默认启用 `TaintBasedEvictions` 功能。有关详细信息�
    * `default-not-ready-toleration-seconds`：表示 `notReady:NoExecute` 的容忍度的 `tolerationSeconds`，该设置默认添加到还没有该容忍度的 pod。
    * `default-unreachable-toleration-seconds`：表示 `unreachable:NoExecute` 的容忍度的 `tolerationSeconds`，该设置默认添加到还没有该容忍度的 pod。
 
-### 我可以在 UI 中使用键盘快捷键吗？
+## 我可以在 UI 中使用键盘快捷键吗？
 
 是的，你可以使用键盘快捷键访问 UI 的大部分内容。要查看快捷方式的概览，请在 UI 任意位置按 `?`。

@@ -8,7 +8,7 @@ Kubernetes 正在逐渐不在树内维护云提供商。vSphere 有一个树外�
 
 本文遵循官方 [vSphere 迁移文档](https://vsphere-csi-driver.sigs.k8s.io/features/vsphere_csi_migration.html)中提供的步骤，并介绍了要在 Rancher 中执行的步骤。
 
-### Cloud-config 格式限制
+## Cloud-config 格式限制
 
 由于 vSphere CSI 中的现有错误，使用以下 cloud-config 格式配置的现有卷将不会迁移。
 

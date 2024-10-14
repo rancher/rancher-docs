@@ -98,7 +98,7 @@ title: 自定义角色
 
 只有在以下情况下，你才能将全局角色分配给组：
 
-* 你已设置[外部身份验证提供程序](../../../../pages-for-subheaders/authentication-config.md#外部验证与本地验证)。
+* 你已设置[外部身份验证提供程序](../authentication-config/authentication-config.md#外部认证与本地认证)。
 * 外部身份验证提供程序支持[用户组](../../authentication-permissions-and-global-configuration/authentication-config/manage-users-and-groups.md)。
 * 你已使用身份验证提供程序设置了至少一个用户组。
 

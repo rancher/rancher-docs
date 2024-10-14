@@ -4,9 +4,9 @@ title: Tuning etcd for Large Installations
 
 When running larger Rancher installations with 15 or more clusters it is recommended to increase the default keyspace for etcd from the default 2GB. The maximum setting is 8GB and the host should have enough RAM to keep the entire dataset in memory. When increasing this value you should also increase the size of the host. The keyspace size can also be adjusted in smaller installations if you anticipate a high rate of change of pods during the garbage collection interval.
 
-The etcd data set is automatically cleaned up on a five minute interval by Kubernetes. There are situations, e.g. deployment thrashing, where enough events could be written to etcd and deleted before garbage collection occurs and cleans things up causing the keyspace to fill up. If you see `mvcc: database space exceeded` errors, in the etcd logs or Kubernetes API server logs, you should consider increasing the keyspace size. This can be accomplished by setting the [quota-backend-bytes](https://etcd.io/docs/v3.4.0/op-guide/maintenance/#space-quota) setting on the etcd servers.
+The etcd data set is automatically cleaned up on a five minute interval by Kubernetes. There are situations, e.g. deployment thrashing, where enough events could be written to etcd and deleted before garbage collection occurs and cleans things up causing the keyspace to fill up. If you see `mvcc: database space exceeded` errors, in the etcd logs or Kubernetes API server logs, you should consider increasing the keyspace size. This can be accomplished by setting the [quota-backend-bytes](https://etcd.io/docs/v3.3/op-guide/maintenance/#space-quota) setting on the etcd servers.
 
-### Example: This snippet of the RKE cluster.yml file increases the keyspace size to 5GB
+## Example: This Snippet of the RKE Cluster.yml file Increases the Keyspace Size to 5GB
 
 ```yaml
 # RKE cluster.yml
@@ -17,9 +17,9 @@ services:
       quota-backend-bytes: 5368709120
 ```
 
-## Scaling etcd disk performance
+## Scaling etcd Disk Performance
 
-You can follow the recommendations from [the etcd docs](https://etcd.io/docs/v3.4.0/tuning/#disk) on how to tune the disk priority on the host.
+You can follow the recommendations from [the etcd docs](https://etcd.io/docs/v3.3/tuning/#disk) on how to tune the disk priority on the host.
 
 Additionally, to reduce IO contention on the disks for etcd, you can use a dedicated device for the data and wal directory. Based on etcd best practices, mirroring RAID configurations are unnecessary because etcd replicates data between the nodes in the cluster. You can use striping RAID configurations to increase available IOPS.
 

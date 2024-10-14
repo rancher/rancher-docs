@@ -21,20 +21,21 @@ The account used to enable the external provider will be granted admin permissio
 
 The Rancher authentication proxy integrates with the following external authentication services.
 
-| Auth Service                                                                                     |
-| ------------------------------------------------------------------------------------------------ |
-| [Microsoft Active Directory](configure-active-directory.md)  |
-| [GitHub](configure-github.md)                  |
-| [Microsoft Azure AD](configure-azure-ad.md)    |
-| [FreeIPA](configure-freeipa.md)                |
-| [OpenLDAP](../configure-openldap/configure-openldap.md)              |
+| Auth Service                                                                                                           |
+|------------------------------------------------------------------------------------------------------------------------|
+| [Microsoft Active Directory](configure-active-directory.md)                                                            |
+| [GitHub](configure-github.md)                                                                                          |
+| [Microsoft Azure AD](configure-azure-ad.md)                                                                            |
+| [FreeIPA](configure-freeipa.md)                                                                                        |
+| [OpenLDAP](../configure-openldap/configure-openldap.md)                                                                |
 | [Microsoft AD FS](../configure-microsoft-ad-federation-service-saml/configure-microsoft-ad-federation-service-saml.md) |
-| [PingIdentity](configure-pingidentity.md)     |
-| [Keycloak (OIDC)](configure-keycloak-oidc.md)  |
-| [Keycloak (SAML)](configure-keycloak-saml.md)  |
-| [Okta](configure-okta-saml.md)                      |
-| [Google OAuth](configure-google-oauth.md)            |
-| [Shibboleth](../configure-shibboleth-saml/configure-shibboleth-saml.md)           |
+| [PingIdentity](configure-pingidentity.md)                                                                              |
+| [Keycloak (OIDC)](configure-keycloak-oidc.md)                                                                          |
+| [Keycloak (SAML)](configure-keycloak-saml.md)                                                                          |
+| [Okta](configure-okta-saml.md)                                                                                         |
+| [Google OAuth](configure-google-oauth.md)                                                                              |
+| [Shibboleth](../configure-shibboleth-saml/configure-shibboleth-saml.md)                                                |
+| [Generic (OIDC)](configure-generic-oidc.md)                                                                            |
 
 However, Rancher also provides [local authentication](create-local-users.md).
 
@@ -61,6 +62,12 @@ After you configure Rancher to allow sign on using an external authentication se
 | Allow any valid Users                   | _Any_ user in the authorization service can access Rancher. We generally discourage use of this setting! |
 | Allow members of Clusters, Projects, plus Authorized Users and Organizations | Any user in the authorization service and any group added as a **Cluster Member** or **Project Member** can log in to Rancher. Additionally, any user in the authentication service or group you add to the **Authorized Users and Organizations** list may log in to Rancher. |
 | Restrict access to only Authorized Users and Organizations | Only users in the authentication service or groups added to the Authorized Users and Organizations can log in to Rancher. |
+
+:::warning 
+
+Only trusted admin-level users should have access to the local cluster, which manages all of the other clusters in a Rancher instance. Rancher is directly installed on the local cluster, and Rancher's management features allow admins on the local cluster to provision, modify, connect to, and view details about downstream clusters. Since the local cluster is key to a Rancher instance's architecture, inappropriate access carries security risks.
+
+:::
 
 To set the Rancher access level for users in the authorization service, follow these steps:
 

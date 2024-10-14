@@ -185,7 +185,7 @@ Placeholder | Description
 
 **Optional**: To install a specific Rancher version, set the `rancherImageTag` value, example: `--set rancherImageTag=v2.5.8`
 
-#### Option B: Certificates From Files using Kubernetes Secrets
+#### Option B: Certificates From Files Using Kubernetes Secrets
 
 ##### 1. Create secrets
 

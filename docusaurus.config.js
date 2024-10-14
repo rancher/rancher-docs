@@ -184,6 +184,11 @@ module.exports = {
             current: {
               label: 'Latest',
             },
+            2.9: {
+              label: 'v2.9',
+              path: 'v2.9',
+              banner: 'none'
+            },
             2.8: {
               label: 'v2.8',
               path: 'v2.8',
@@ -1718,10 +1723,6 @@ module.exports = {
             from: '/v2.8/pages-for-subheaders/about-rke1-templates'
           },
           {
-            to: '/v2.8/reference-guides/about-the-api',
-            from: '/v2.8/pages-for-subheaders/about-the-api'
-          },
-          {
             to: '/v2.8/how-to-guides/new-user-guides/manage-clusters/access-clusters',
             from: '/v2.8/pages-for-subheaders/access-clusters'
           },
@@ -2062,10 +2063,6 @@ module.exports = {
             from: '/pages-for-subheaders/about-rke1-templates'
           },
           {
-            to: '/reference-guides/about-the-api',
-            from: '/pages-for-subheaders/about-the-api'
-          },
-          {
             to: '/how-to-guides/new-user-guides/manage-clusters/access-clusters',
             from: '/pages-for-subheaders/access-clusters'
           },
@@ -2397,6 +2394,19 @@ module.exports = {
             to: '/how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods',
             from: '/pages-for-subheaders/workloads-and-pods'
           }, // Redirects for pages-for-subheaders removal [latest] (end)
+
+          { // Redirects for dashboard#12040 (start)
+            to: '/v2.9/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-google-oauth',
+            from: '/v2.9/admin-settings/authentication/google',
+          },
+          {
+            to: '/v2.9/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides',
+            from: '/v2.9/monitoring-alerting/configuration',
+          }, 
+          {
+            to: '/v2.9/integrations-in-rancher/monitoring-and-alerting',
+            from: '/v2.9/monitoring-alerting',
+          }, // Redirects for dashboard#12040 (end)
           { // Redirects for dashboard#9970
             to: '/v2.8/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences',
             from: '/v2.8/cluster-provisioning/rke-clusters/behavior-differences-between-rke1-and-rke2/'
@@ -3452,7 +3462,25 @@ module.exports = {
           {
             to: '/v2.7/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale',
             from: '/v2.7/reference-guides/best-practices/rancher-server/tips-for-scaling-rancher'
+          },
+          // Redirects for restructure from PR #1147 (start)
+          {
+            to: '/v2.8/api/v3-rancher-api-guide',
+            from: ['/v2.8/reference-guides/about-the-api', '/v2.8/pages-for-subheaders/about-the-api']
+          },
+          {
+            to: '/v2.8/api/api-tokens',
+            from: '/v2.8/reference-guides/about-the-api/api-tokens'
+          },
+          {
+            to: '/api/v3-rancher-api-guide',
+            from: ['/reference-guides/about-the-api', '/pages-for-subheaders/about-the-api']
+          },
+          {
+            to: '/api/api-tokens',
+            from: '/reference-guides/about-the-api/api-tokens'
           }
+          // Redirects for restructure from PR #1147 (end)
         ],
       },
     ],

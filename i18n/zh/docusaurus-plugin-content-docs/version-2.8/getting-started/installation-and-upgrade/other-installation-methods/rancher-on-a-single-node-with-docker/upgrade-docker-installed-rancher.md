@@ -147,7 +147,7 @@ docker run -d --volumes-from rancher-data \
   rancher/rancher:<RANCHER_VERSION_TAG>
 ```
 
-特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](./rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 
 </details>
 
@@ -183,7 +183,7 @@ docker run -d --volumes-from rancher-data \
   rancher/rancher:<RANCHER_VERSION_TAG>
 ```
 
-特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](./rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 
 </details>
 
@@ -218,7 +218,7 @@ docker run -d --volumes-from rancher-data \
   --no-cacerts
 ```
 
-特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](./rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 </details>
 
 #### 选项 D：Let's Encrypt 证书
@@ -255,7 +255,7 @@ docker run -d --volumes-from rancher-data \
   --acme-domain <YOUR.DNS.NAME>
 ```
 
-特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](./rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 
 </details>
 
@@ -288,7 +288,7 @@ docker run -d --volumes-from rancher-data \
       <REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher:<RANCHER_VERSION_TAG>
 ```
 
-特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](./rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 </details>
 
 #### 选项 B：使用你自己的证书 - 自签名
@@ -324,7 +324,7 @@ docker run -d --restart=unless-stopped \
     --privileged \
     <REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher:<RANCHER_VERSION_TAG>
 ```
-特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](./rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 </details>
 
 #### 选项 C：使用你自己的证书 - 可信 CA 签名的证书
@@ -366,7 +366,7 @@ docker run -d --volumes-from rancher-data \
      --privileged
      <REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher:<RANCHER_VERSION_TAG>
 ```
-特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](./rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 </details>
 
 </TabItem>

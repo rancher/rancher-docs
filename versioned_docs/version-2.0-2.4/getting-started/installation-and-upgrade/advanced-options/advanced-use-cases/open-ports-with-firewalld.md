@@ -2,7 +2,13 @@
 title: Opening Ports with firewalld
 ---
 
-> We recommend disabling firewalld. For Kubernetes 1.19.x and higher, firewalld must be turned off.
+:::danger
+
+Enabling firewalld can cause serious network communication problems. 
+
+CNIs in Kubernetes dynamically update iptables and networking rules independently of any external firewalls, such as firewalld. This can cause unexpected behavior when the CNI and the external firewall conflict.
+
+:::
 
 Some distributions of Linux [derived from RHEL,](https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux#Rebuilds) including Oracle Linux, may have default firewall rules that block communication with Helm.
 

@@ -73,7 +73,7 @@ docker run -d --restart=unless-stopped \
 使用 [OpenSSL](https://www.openssl.org/) 或其他方法创建自签名证书。
 
 - 证书文件的格式必须是 PEM。
-- 在你的证书文件中，包括链中的所有中间证书。你需要对你的证书进行排序，把你的证书放在最前面，后面跟着中间证书。如需查看示例，请参见[证书故障排除](../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/certificate-troubleshooting.md)。
+- 在你的证书文件中，包括链中的所有中间证书。你需要对你的证书进行排序，把你的证书放在最前面，后面跟着中间证书。如需查看示例，请参见[证书故障排除](./certificate-troubleshooting.md)。
 
 :::
 
@@ -107,7 +107,7 @@ docker run -d --restart=unless-stopped \
 :::note 先决条件：
 
 - 证书文件的格式必须是 PEM。
-- 在你的证书文件中，包括可信 CA 提供的所有中间证书。你需要对你的证书进行排序，把你的证书放在最前面，后面跟着中间证书。如需查看示例，请参见[证书故障排除](../getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/certificate-troubleshooting.md)。
+- 在你的证书文件中，包括可信 CA 提供的所有中间证书。你需要对你的证书进行排序，把你的证书放在最前面，后面跟着中间证书。如需查看示例，请参见[证书故障排除](./certificate-troubleshooting.md)。
 
 :::
 

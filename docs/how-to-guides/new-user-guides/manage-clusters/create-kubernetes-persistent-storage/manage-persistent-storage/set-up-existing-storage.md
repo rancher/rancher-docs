@@ -20,12 +20,12 @@ To set up storage, follow these steps:
 2. [Add a PersistentVolume that refers to the persistent storage.](#2-add-a-persistentvolume-that-refers-to-the-persistent-storage)
 3. [Use the Storage Class for Pods Deployed with a StatefulSet.](#3-use-the-storage-class-for-pods-deployed-with-a-statefulset)
 
-### Prerequisites
+## Prerequisites
 
 - To create a persistent volume as a Kubernetes resource, you must have the `Manage Volumes` [role.](../../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-role-reference)
 - If you are provisioning storage for a cluster hosted in the cloud, the storage and cluster hosts must have the same cloud provider.
 
-### 1. Set up persistent storage
+## 1. Set up persistent storage
 
 Creating a persistent volume in Rancher will not create a storage volume. It only creates a Kubernetes resource that maps to an existing volume. Therefore, before you can create a persistent volume as a Kubernetes resource, you must have storage provisioned.
 
@@ -33,7 +33,7 @@ The steps to set up a persistent storage device will differ based on your infras
 
 If you have a pool of block storage, and you don't want to use a cloud provider, Longhorn could help you provide persistent storage to your Kubernetes cluster. For more information, see [Cloud Native Storage with Longhorn](../../../../../integrations-in-rancher/longhorn/longhorn.md).
 
-### 2. Add a PersistentVolume that refers to the persistent storage
+## 2. Add a PersistentVolume that refers to the persistent storage
 
 These steps describe how to set up a PersistentVolume at the cluster level in Kubernetes.
 
@@ -52,7 +52,7 @@ These steps describe how to set up a PersistentVolume at the cluster level in Ku
 **Result:** Your new persistent volume is created.
 
 
-### 3. Use the Storage Class for Pods Deployed with a StatefulSet
+## 3. Use the Storage Class for Pods Deployed with a StatefulSet
 
 StatefulSets manage the deployment and scaling of Pods while maintaining a sticky identity for each Pod. In this StatefulSet, we will configure a VolumeClaimTemplate. Each Pod managed by the StatefulSet will be deployed with a PersistentVolumeClaim based on this VolumeClaimTemplate. The PersistentVolumeClaim will refer to the PersistentVolume that we created. Therefore, when each Pod managed by the StatefulSet is deployed, it will be bound a PersistentVolume as defined in its PersistentVolumeClaim.
 

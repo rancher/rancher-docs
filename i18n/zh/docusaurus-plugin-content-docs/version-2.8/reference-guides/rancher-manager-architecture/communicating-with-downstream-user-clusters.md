@@ -17,6 +17,8 @@ title: 与下游集群通信
 3. [Node Agents](#3-node-agents)
 4. [授权集群端点](#4-授权集群端点)
 
+## Components
+
 ### 1. 认证代理
 
 在此图中，名为 Bob 的用户希望查看在名为 User Cluster 1 的下游集群上运行的所有 Pod。在 Rancher 中，他可以运行 `kubectl` 命令来查看
@@ -58,7 +60,7 @@ Cluster Agent，也叫做 `cattle-cluster-agent`，是运行在下游集群中�
 
 授权集群端点（ACE）可连接到下游集群的 Kubernetes API Server，而不用通过 Rancher 认证代理调度请求。
 
-> 授权集群端点仅适用于 Rancher 启动的 Kubernetes 集群，即只适用于 Rancher [使用 RKE](../../pages-for-subheaders/launch-kubernetes-with-rancher.md) 来配置的集群。它不适用于导入的集群，也不适用于托管在 Kubernetes 提供商中的集群（例如 Amazon 的 EKS）。
+> 授权集群端点仅适用于 Rancher 启动的 Kubernetes 集群，即只适用于 Rancher [使用 RKE](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) 来配置的集群。它不适用于导入的集群，也不适用于托管在 Kubernetes 提供商中的集群（例如 Amazon 的 EKS）。
 
 授权集群端点的主要用途：
 

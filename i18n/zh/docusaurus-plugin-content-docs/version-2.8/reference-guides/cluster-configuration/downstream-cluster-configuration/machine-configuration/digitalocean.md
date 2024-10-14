@@ -4,6 +4,8 @@ title: DigitalOcean 主机配置
 
 有关 DigitalOcean、Droplet 的更多详细信息，请参阅[官方文档](https://docs.digitalocean.com/products/compute/)。
 
+## Machine Pools
+
 ### 区域
 
 配置创建 Droplet 的[区域](https://docs.digitalocean.com/glossary/region/)。

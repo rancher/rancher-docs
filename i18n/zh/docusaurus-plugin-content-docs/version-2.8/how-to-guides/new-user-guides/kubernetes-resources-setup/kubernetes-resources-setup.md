@@ -30,10 +30,10 @@ title: Kubernetes 资源
 
 Rancher 支持两种类型的负载均衡器：
 
-- [Layer-4 负载均衡器](load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md#layer-4-load-balancer#四层负载均衡器)
-- [Layer-7 负载均衡器](load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md#七层负载均衡器)
+- [Layer-4 负载均衡器](./load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md#四层负载均衡器)
+- [Layer-7 负载均衡器](./load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md#七层负载均衡器)
 
-有关详细信息，请参阅[负载均衡器](load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md)。
+有关详细信息，请参阅[负载均衡器](./load-balancer-and-ingress-controller/layer-4-and-layer-7-load-balancing.md)。
 
 #### Ingress
 

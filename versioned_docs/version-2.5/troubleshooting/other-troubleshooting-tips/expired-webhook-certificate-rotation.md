@@ -10,14 +10,15 @@ For Rancher versions that have `rancher-webhook` installed, certain versions cre
 
 In Rancher v2.5.12 and up, rancher-webhook deployments will automatically renew their TLS certificate when it is within 30 or fewer days of its expiration date. If you are using v2.5.11 or below, there are two methods to work around this issue:
 
-##### 1. Users with cluster access, run the following commands:
+## 1. Users with Cluster Access, Run the Following Commands:
+
 ```
 kubectl delete secret -n cattle-system cattle-webhook-tls
 kubectl delete mutatingwebhookconfigurations.admissionregistration.k8s.io --ignore-not-found=true rancher.cattle.io
 kubectl delete pod -n cattle-system -l app=rancher-webhook
 ```
 
-##### 2. Users with no cluster access via `kubectl`:
+## 2. Users with No Cluster Access Via `kubectl`:
 
 1. Delete the `cattle-webhook-tls` secret in the `cattle-system` namespace in the local cluster.
 

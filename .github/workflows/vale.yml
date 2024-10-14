@@ -5,7 +5,10 @@
 # It uses Vale (https://vale.sh/docs/vale-cli/installation/) to provide feedback base off the SUSE Style Guide / OpenSUSE style rules (https://github.com/openSUSE/suse-vale-styleguide)
 
 name: Style check
-on: [pull_request]
+on:
+  pull_request:
+    paths-ignore:
+      - '**/README.md'
 
 jobs:
   vale-lint:

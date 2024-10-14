@@ -49,7 +49,6 @@ This is typical in Rancher, as many operations create new `RoleBinding` objects 
 
 You can reduce the number of `RoleBindings` in the upstream cluster in the following ways:
 * Limit the use of the [Restricted Admin](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#restricted-admin) role. Apply other roles wherever possible.
-* If you use [external authentication](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/authentication-config.md), use groups to assign roles.
 * Only add users to clusters and projects when necessary.
 * Remove clusters and projects when they are no longer needed.
 * Only use custom roles if necessary.
@@ -58,6 +57,12 @@ You can reduce the number of `RoleBindings` in the upstream cluster in the follo
 * Consider using less, but more powerful, clusters.
 * Kubernetes permissions are always "additive" (allow-list) rather than "subtractive" (deny-list). Try to minimize configurations that gives access to all but one aspect of a cluster, project, or namespace, as that will result in the creation of a high number of `RoleBinding` objects.
 * Experiment to see if creating new projects or clusters manifests in fewer `RoleBindings` for your specific use case.
+
+### Using External Authentication
+
+If you have fifty or more users, you should configure an [external authentication provider](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/authentication-config.md). This is necessary for better performance.
+
+After you configure external authentication, make sure to assign permissions to groups instead of to individual users. This helps reduce the `RoleBinding` object count.
 
 ### RoleBinding Count Estimation
 
@@ -83,7 +88,7 @@ An [Authorized Cluster Endpoint](../../../reference-guides/rancher-manager-archi
 
 ### Reducing Event Handler Executions
 
-The bulk of Rancher's logic occurs on event handlers. These event handlers run on an object whenever the object is updated, and when Rancher is started. Additionally, they run every 15 hours when Rancher syncs caches. In scaled setups these scheduled runs come with huge performance costs because every handler is being run on every applicable object. However, the scheduled handler execution can be disabled with the `CATTLE_SYNC_ONLY_CHANGED_OBJECTS` environment variable. If resource allocation spikes are seen every 15 hours, this setting can help.
+The bulk of Rancher's logic occurs on event handlers. These event handlers run on an object whenever the object is updated, and when Rancher is started. Additionally, they run every 10 hours when Rancher syncs caches. In scaled setups these scheduled runs come with huge performance costs because every handler is being run on every applicable object. However, the scheduled handler execution can be disabled with the `CATTLE_SYNC_ONLY_CHANGED_OBJECTS` environment variable. If resource allocation spikes are seen every 10 hours, this setting can help.
 
 The value for `CATTLE_SYNC_ONLY_CHANGED_OBJECTS` can be a comma separated list of the following options. The values refer to types of handlers and controllers (the structures that contain and run handlers). Adding the controller types to the variable disables that set of controllers from running their handlers as part of cache resyncing.
 
@@ -91,7 +96,7 @@ The value for `CATTLE_SYNC_ONLY_CHANGED_OBJECTS` can be a comma separated list o
 * `user` refers to user controllers which run for every cluster. Some of these run on the same node as management controllers, while others run in the downstream cluster. This option targets the former.
 * `scaled` refers to scaled controllers which run on every Rancher node. You should avoid setting this value, as the scaled handlers are responsible for critical functions and changes may disrupt cluster stability.
 
-In short, if you notice CPU usage peaks every 15 hours, add the `CATTLE_SYNC_ONLY_CHANGED_OBJECTS` environment variable to your Rancher deployment (in the `spec.containers.env` list) with the value `mgmt,user`
+In short, if you notice CPU usage peaks every 10 hours, add the `CATTLE_SYNC_ONLY_CHANGED_OBJECTS` environment variable to your Rancher deployment (in the `spec.containers.env` list) with the value `mgmt,user`
 
 ## Optimizations Outside of Rancher
 
@@ -105,6 +110,14 @@ Although managed Kubernetes services make it easier to deploy and run Kubernetes
 
 Use RKE2 for large scale use cases.
 
+### Keep all Upstream Cluster Nodes co-located
+
+To provide high availability, Kubernetes is designed to run nodes and control components in different zones. However, if nodes and control plane components are located in different zones, network traffic may be slower.
+
+Traffic between Rancher components and the Kubernetes API is especially sensitive to network latency, as is etcd traffic between nodes.
+
+To improve performance, run all upstream node clusters in the same location. In particular, make sure that latency between etcd nodes and Rancher is as low as possible.
+
 ### Keeping Kubernetes Versions Up to Date
 
 You should keep the local Kubernetes cluster up to date. This will ensure that your cluster has all available performance enhancements and bug fixes.
@@ -113,8 +126,18 @@ You should keep the local Kubernetes cluster up to date. This will ensure that y
 
 Etcd is the backend database for Kubernetes and for Rancher. It plays a very important role in Rancher performance.
 
-The two main bottlenecks to [etcd performance](https://etcd.io/docs/v3.4/op-guide/performance/) are disk and network speed. Etcd should run on dedicated nodes with a fast network setup and with SSDs that have high input/output operations per second (IOPS). For more information regarding etcd performance, see [Slow etcd performance (performance testing and optimization)](https://www.suse.com/support/kb/doc/?id=000020100) and [Tuning etcd for Large Installations](../../../how-to-guides/advanced-user-guides/tune-etcd-for-large-installs.md). Information on disks can also be found in the [Installation Requirements](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md#disks).
+The two main bottlenecks to [etcd performance](https://etcd.io/docs/v3.5/op-guide/performance/) are disk and network speed. Etcd should run on dedicated nodes with a fast network setup and with SSDs that have high input/output operations per second (IOPS). For more information regarding etcd performance, see [Slow etcd performance (performance testing and optimization)](https://www.suse.com/support/kb/doc/?id=000020100) and [Tuning etcd for Large Installations](../../../how-to-guides/advanced-user-guides/tune-etcd-for-large-installs.md). Information on disks can also be found in the [Installation Requirements](../../../getting-started/installation-and-upgrade/installation-requirements/installation-requirements.md#disks).
 
 It's best to run etcd on exactly three nodes, as adding more nodes will reduce operation speed. This may be counter-intuitive to common scaling approaches, but it's due to etcd's [replication mechanisms](https://etcd.io/docs/v3.5/faq/#what-is-maximum-cluster-size).
 
 Etcd performance will also be negatively affected by network latency between nodes as that will slow down network communication. Etcd nodes should be located together with Rancher nodes.
+
+### Browser Requirements
+
+At high scale, Rancher transfers more data from the upstream cluster to UI components running in the browser, and those components also need to perform more processing.
+
+For best performance, ensure that the host running the hardware meets these requirements:
+ - 2020 i5 10th generation Intel (4 cores) or equivalent
+ - 8 GB RAM
+ - Total network bandwith to the upstream cluster: 72 Mb/s (equivalent to a single 802.11n Wi-Fi 4 link stream, ~8 MB/s http download throughput)
+ - Round-trip time (ping time) from browser to upstream cluster: 150 ms or less

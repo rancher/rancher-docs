@@ -19,7 +19,7 @@ title: 3. 使用 Istio Sidecar 添加部署和服务
 
 等待几分钟，然后工作负载将升级并具有 Istio sidecar。单击它并转到**容器**。你应该能看到该工作负载旁边的 `istio-proxy`。这意味着为工作负载启用了 Istio sidecar。Istio 正在为 Sidecar Envoy 做所有的接线工作。如果你现在在 yaml 中启用它们，Istio 可以自动执行所有功能。
 
-### 添加部署和服务
+## 添加部署和服务
 
 以下是在命名空间中添加新 **Deployment** 的几种方法：
 
@@ -46,7 +46,7 @@ title: 3. 使用 Istio Sidecar 添加部署和服务
 1. 如果你的文件存储在本地集群中，运行 `kubectl create -f <name of service/deployment file>.yaml`。
 1. 或运行 `cat<< EOF | kubectl apply -f -`，将文件内容粘贴到终端，然后运行 `EOF` 来完成命令。
 
-### 部署和服务示例
+## 部署和服务示例
 
 接下来，我们为 Istio 文档中的 BookInfo 应用的示例部署和服务添加 Kubernetes 资源：
 
@@ -87,7 +87,7 @@ Productpage 服务和部署：
 - 一个 `bookinfo-productpage` 的 ServiceAccount。
 - 一个 `productpage-v1` Deployment。
 
-### 资源 YAML
+## 资源 YAML
 
 ```yaml
 # Copyright 2017 Istio Authors
@@ -356,5 +356,6 @@ spec:
 ---
 ```
 
-### 后续步骤
+## 后续步骤
+
 [设置 Istio Gateway](set-up-istio-gateway.md)

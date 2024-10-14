@@ -49,7 +49,6 @@ For [air-gapped installs only,](../other-installation-methods/air-gapped-helm-cl
 
 Follow the steps to upgrade Rancher server:
 
-
 ### 1. Back up Your Kubernetes Cluster that is Running Rancher Server
 
 Use the [backup application](../../../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher.md) to back up Rancher.
@@ -118,7 +117,6 @@ This section describes how to upgrade normal (Internet-connected) or air-gapped 
 If you are installing Rancher in an air-gapped environment, skip the rest of this page and render the Helm template by following the instructions on [this page.](air-gapped-upgrades.md)
 
 :::
-
 
 Get the values, which were passed with `--set`, from the current Rancher Helm chart that is installed.
 

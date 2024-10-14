@@ -16,7 +16,7 @@ title: 集群管理
 
 ## 在 Rancher 中管理集群
 
-将集群[配置到 Rancher](../kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md) 之后，[集群所有者](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#cluster-roles)需要管理这些集群。管理集群的选项如下：
+将集群[配置到 Rancher](../kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md) 之后，[集群所有者](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#集群角色)需要管理这些集群。管理集群的选项如下：
 
 import ClusterCapabilitiesTable from '../../../shared-files/_cluster-capabilities-table.md';
 

@@ -105,7 +105,7 @@ Rancher Server is distributed as a Docker image, which have tags attached to the
 | -------------------------- | ------ |
 | `rancher/rancher:latest`   | Our latest development release. These builds are validated through our CI automation framework. These releases are not recommended for production environments. |
 | `rancher/rancher:stable`   | Our newest stable release. This tag is recommended for production.                                                                                              |
-| `rancher/rancher:<v2.X.X>` | You can install specific versions of Rancher by using the tag from a previous release. See what's available at DockerHub.                                       |
+| `rancher/rancher:<v2.X.X>` | You can install specific versions of Rancher by using the tag from a previous release. See what's available at Docker Hub.                                       |
 
 > **Notes:**
 >

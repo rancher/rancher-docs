@@ -56,9 +56,9 @@ Rancher 内置了三个默认 Pod 安全策略 (PSP)，分别是 `restricted-nor
 
 ### 要求
 
-Rancher 只能为[使用 RKE 启动的集群](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)分配 PSP。
+Rancher 只能为[使用 RKE 启动的集群](../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)分配 PSP。
 
-你必须先在集群级别启用 PSP，然后才能将它们分配给项目。这可以通过[编辑集群](../../../pages-for-subheaders/cluster-configuration.md)来配置。
+你必须先在集群级别启用 PSP，然后才能将它们分配给项目。这可以通过[编辑集群](../../../reference-guides/cluster-configuration/cluster-configuration.md)来配置。
 
 最好的做法是在集群级别设置 PSP。
 

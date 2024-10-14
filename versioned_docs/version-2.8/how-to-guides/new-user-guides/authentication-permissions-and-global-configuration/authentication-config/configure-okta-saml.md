@@ -51,7 +51,6 @@ You can integrate Okta with Rancher, so that authenticated users can access Ranc
 
     :::
 
-
 1. After you complete the **Configure Okta Account** form, click **Enable**.
 
     Rancher redirects you to the IdP login page. Enter credentials that authenticate with Okta IdP to validate your Rancher Okta configuration.

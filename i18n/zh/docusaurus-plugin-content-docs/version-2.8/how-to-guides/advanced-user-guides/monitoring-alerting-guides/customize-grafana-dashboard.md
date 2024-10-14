@@ -4,13 +4,13 @@ title: 自定义 Grafana 仪表板
 
 在本文中，你将学习通过自定义 Grafana 仪表板来显示特定容器的指标。
 
-### 先决条件
+## 先决条件
 
 在自定义 Grafana 仪表板之前，你必须先安装 `rancher-monitoring` 应用。
 
 要查看指向外部监控 UI（包括 Grafana 仪表板）的链接，你至少需要一个 [project-member 角色](../../../integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring.md#具有-rancher-权限的用户)。
 
-### 登录 Grafana
+## 登录 Grafana
 
 1. 在 Rancher UI 中，转到要自定义的仪表板的集群。
 1. 在左侧导航栏中，单击**监控**。
@@ -19,7 +19,7 @@ title: 自定义 Grafana 仪表板
 1. 登录到 Grafana。Grafana 实例的默认 Admin 用户名和密码是 `admin/prom-operator`（无论谁拥有密码，都需要 Rancher 的集群管理员权限才能访问 Grafana 实例）。你还可以在部署或升级 Chart 时替换凭证。
 
 
-### 获取支持 Grafana 面板的 PromQL 查询
+## 获取支持 Grafana 面板的 PromQL 查询
 
 对于任何面板，你可以单击标题并单击 **Explore** 以获取支持图形的 PromQL 查询。
 

@@ -6,14 +6,14 @@ title: 高级配置
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/advanced-configuration"/>
 </head>
 
-### Alertmanager
+## Alertmanager
 
 有关配置 Alertmanager 自定义资源的信息，请参阅[此页面。](alertmanager.md)
 
-### Prometheus
+## Prometheus
 
 有关配置 Prometheus 自定义资源的信息，请参阅[此页面。](prometheus.md)
 
-### PrometheusRules
+## PrometheusRules
 
 有关配置 PrometheusRules 自定义资源的信息，请参阅[此页面。](prometheusrules.md)

@@ -4,11 +4,11 @@ title: 配置 Active Directory (AD)
 
 如果你的组织使用 Microsoft Active Directory 作为中心用户仓库，你可以将 Rancher 配置为与 Active Directory 服务器通信，从而对用户进行身份验证。这使 Rancher 管理员可以对外部用户系统中的用户和组进行集群和项目的访问控制，同时允许最终用户在登录 Rancher UI 时使用 Active Directory 凭证进行身份验证。
 
-Rancher 使用 LDAP 与 Active Directory 服务器通信。因此，Active Directory 与 [OpenLDAP 身份验证](../../../../pages-for-subheaders/configure-openldap.md)的流程相同。
+Rancher 使用 LDAP 与 Active Directory 服务器通信。因此，Active Directory 与 [OpenLDAP 身份验证](../configure-openldap/configure-openldap.md)的流程相同。
 
 :::note
 
-在开始之前，请熟悉[外部身份验证配置和主体用户](../../../../pages-for-subheaders/authentication-config.md#外部身份验证配置和用户主体)的概念。
+在开始之前，请熟悉[外部身份验证配置和主体用户](./authentication-config.md#外部认证配置和用户主体)的概念。
 
 :::
 

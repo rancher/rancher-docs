@@ -12,7 +12,6 @@ For the instructions to upgrade Rancher installed with Docker, refer to [this pa
 
 To upgrade the components in your Kubernetes cluster, or the definition of the [Kubernetes services](https://rancher.com/docs/rke/latest/en/config-options/services/) or [add-ons](https://rancher.com/docs/rke/latest/en/config-options/add-ons/), refer to the [upgrade documentation for RKE](https://rancher.com/docs/rke/latest/en/upgrades/), the Rancher Kubernetes Engine.
 
-
 ## Prerequisites
 
 ### Access to kubeconfig
@@ -118,7 +117,6 @@ This section describes how to upgrade normal (Internet-connected) or air-gapped 
 If you are installing Rancher in an air-gapped environment, skip the rest of this page and render the Helm template by following the instructions on [this page.](air-gapped-upgrades.md)
 
 :::
-
 
 Get the values, which were passed with `--set`, from the current Rancher Helm chart that is installed.
 

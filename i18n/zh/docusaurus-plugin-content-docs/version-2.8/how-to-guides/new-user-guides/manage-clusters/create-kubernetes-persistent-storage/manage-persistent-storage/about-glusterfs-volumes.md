@@ -4,7 +4,7 @@ title: GlusterFS 卷
 
 :::note
 
-本文仅适用于 [RKE 集群](../../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)。
+本文仅适用于 [RKE 集群](../../../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)。
 
 :::
 

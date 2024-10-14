@@ -4,7 +4,7 @@ title: 启用 Prometheus Federator
 
 ## 要求
 
-默认情况下，Prometheus Federator 已配置并旨在与 [rancher-monitoring](../../../../pages-for-subheaders/monitoring-and-alerting.md) 一起部署。rancher-monitoring 同时部署了 Prometheus Operator 和 Cluster Prometheus，每个项目监控堆栈（Project Monitoring Stack）默认会联合命名空间范围的指标。
+默认情况下，Prometheus Federator 已配置并旨在与 [rancher-monitoring](../../../../integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md) 一起部署。rancher-monitoring 同时部署了 Prometheus Operator 和 Cluster Prometheus，每个项目监控堆栈（Project Monitoring Stack）默认会联合命名空间范围的指标。
 
 有关安装 rancher-monitoring 的说明，请参阅[此页面](../enable-monitoring.md)。
 

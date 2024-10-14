@@ -17,7 +17,7 @@ description: 阅读此步骤指南以部署工作负载。部署工作负载以�
 
 1. 选择现有命名空间，或单击**添加到新命名空间**并输入新命名空间。
 
-1. 点击**添加端口**进入端口映射，这让你可以访问集群内外的应用程序。如需更多信息，请参阅 [Service](../../../../pages-for-subheaders/workloads-and-pods.md#services)。
+1. 点击**添加端口**进入端口映射，这让你可以访问集群内外的应用程序。如需更多信息，请参阅 [Service](./workloads-and-pods.md#services)。
 
 1. 配置其余选项：
 
@@ -41,7 +41,7 @@ description: 阅读此步骤指南以部署工作负载。部署工作负载以�
 
    - 在 [AWS](https://aws.amazon.com/) 中，节点必须位于同一可用区中并具有附加/分离卷的 IAM 权限。
 
-   - 集群必须使用 [AWS 云提供商](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#aws)选项。有关启用此选项的更多信息，请参阅[创建 AWS EC2 集群](../../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md)或[创建自定义集群](../../../../pages-for-subheaders/use-existing-nodes.md)。
+   - 集群必须使用 [AWS 云提供商](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#aws)选项。有关启用此选项的更多信息，请参阅[创建 AWS EC2 集群](../../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster.md)或[创建自定义集群](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md)。
 
    :::
 

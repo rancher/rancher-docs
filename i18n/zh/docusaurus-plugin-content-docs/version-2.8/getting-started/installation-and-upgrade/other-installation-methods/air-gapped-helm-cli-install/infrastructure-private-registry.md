@@ -21,7 +21,7 @@ Rancher 可以安装在任何 Kubernetes 集群上。为了阅读方便，我们
 - **1 个 DNS 记录**：用于将 URL 映射到负载均衡器。此 DNS 记录将成为 Rancher Server 的 URL，下游集群需要可以访问到这个地址。
 - **私有镜像仓库**，用于将容器镜像分发到你的主机。
 
-### 1. 配置 Linux 节点
+## 1. 配置 Linux 节点
 
 这些主机会断开互联网链接，但需要能与你的私有镜像仓库连接。
 
@@ -29,7 +29,7 @@ Rancher 可以安装在任何 Kubernetes 集群上。为了阅读方便，我们
 
 如需获取配置 Linux 节点的示例，请参见[在 Amazon EC2 中配置节点](../../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md)的教程。
 
-### 2. 配置外部数据库
+## 2. 配置外部数据库
 
 K3s 与其他 Kubernetes 发行版不同，在于其支持使用 etcd 以外的数据库来运行 Kubernetes。该功能让 Kubernetes 运维更加灵活。你可以根据实际情况选择合适的数据库。
 
@@ -45,7 +45,7 @@ K3s 与其他 Kubernetes 发行版不同，在于其支持使用 etcd 以外的�
 
 如需获取配置 K3s 集群数据库的所有可用选项，请参见 [K3s 官方文档](https://rancher.com/docs/k3s/latest/en/installation/datastore/)。
 
-### 3. 配置负载均衡器
+## 3. 配置负载均衡器
 
 你还需要设置一个负载均衡器，来将流量重定向到两个节点上的 Rancher 副本。配置后，当单个节点不可用时，继续保障与 Rancher Management Server 的通信。
 
@@ -68,7 +68,7 @@ K3s 与其他 Kubernetes 发行版不同，在于其支持使用 etcd 以外的�
 
 :::
 
-### 4. 配置 DNS 记录
+## 4. 配置 DNS 记录
 
 配置完负载均衡器后，你将需要创建 DNS 记录，以将流量发送到该负载均衡器。
 
@@ -78,7 +78,7 @@ K3s 与其他 Kubernetes 发行版不同，在于其支持使用 etcd 以外的�
 
 有关设置 DNS 记录以将域流量转发到 Amazon ELB 负载均衡器的指南，请参见 [AWS 官方文档](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer)。
 
-### 5. 配置私有镜像仓库
+## 5. 配置私有镜像仓库
 
 Rancher 支持使用私有镜像仓库进行离线安装。你必须有自己的私有镜像仓库或使用其他方式将容器镜像分发到主机。
 
@@ -102,21 +102,21 @@ Rancher 支持使用私有镜像仓库进行离线安装。你必须有自己的
 
 这些节点必须位于同一个区域或数据中心。但是你可以把这些服务器放在不同的可用区。
 
-### 为什么使用三个节点？
+## 为什么使用三个节点？
 
 在 RKE 集群中，Rancher Server 的数据存储在 etcd 中。而这个 etcd 数据库在这三个节点上运行。
 
 为了选举出大多数 etcd 节点认可的 etcd 集群 leader，etcd 数据库需要奇数个节点。如果 etcd 数据库无法选出 leader，etcd 可能会出现[脑裂（split brain）](https://www.quora.com/What-is-split-brain-in-distributed-systems)的问题，此时你需要使用备份恢复集群。如果三个 etcd 节点之一发生故障，其余两个节点可以选择一个 leader，因为它们是 etcd 节点总数的大多数部分。
 
-### 1. 配置 Linux 节点
+## 1. 配置 Linux 节点
 
 这些主机会断开互联网链接，但需要能与你的私有镜像仓库连接。
 
-请确保你的节点满足[操作系统，容器运行时，硬件和网络](../../../../pages-for-subheaders/installation-requirements.md)的常规要求。
+请确保你的节点满足[操作系统，容器运行时，硬件和网络](../../installation-requirements/installation-requirements.md)的常规要求。
 
 如需获取配置 Linux 节点的示例，请参见[在 Amazon EC2 中配置节点](../../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md)的教程。
 
-### 2. 配置负载均衡器
+## 2. 配置负载均衡器
 
 你还需要设置一个负载均衡器，来将流量重定向到两个节点上的 Rancher 副本。配置后，当单个节点不可用时，继续保障与 Rancher Management Server 的通信。
 
@@ -139,7 +139,7 @@ Rancher 支持使用私有镜像仓库进行离线安装。你必须有自己的
 
 :::
 
-### 3. 配置 DNS 记录
+## 3. 配置 DNS 记录
 
 配置完负载均衡器后，你将需要创建 DNS 记录，以将流量发送到该负载均衡器。
 
@@ -149,7 +149,7 @@ Rancher 支持使用私有镜像仓库进行离线安装。你必须有自己的
 
 有关设置 DNS 记录以将域流量转发到 Amazon ELB 负载均衡器的指南，请参见 [AWS 官方文档](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer)。
 
-### 4. 配置私有镜像仓库
+## 4. 配置私有镜像仓库
 
 Rancher 支持使用安全的私有镜像仓库进行离线安装。你必须有自己的私有镜像仓库或使用其他方式将容器镜像分发到主机。
 
@@ -172,15 +172,15 @@ Rancher 支持使用安全的私有镜像仓库进行离线安装。你必须有
 
 :::
 
-### 1. 配置 Linux 节点
+## 1. 配置 Linux 节点
 
 此主机会断开互联网链接，但需要能与你的私有镜像仓库连接。
 
-请确保你的节点满足[操作系统，容器，硬件和网络](../../../../pages-for-subheaders/installation-requirements.md)的常规安装要求。
+请确保你的节点满足[操作系统，容器，硬件和网络](../../installation-requirements/installation-requirements.md)的常规安装要求。
 
 如需获取配置 Linux 节点的示例，请参见[在 Amazon EC2 中配置节点](../../../../how-to-guides/new-user-guides/infrastructure-setup/nodes-in-amazon-ec2.md)的教程。
 
-### 2. 配置私有 Docker 镜像仓库
+## 2. 配置私有 Docker 镜像仓库
 
 Rancher 支持使用私有镜像仓库在堡垒服务器中进行离线安装。你必须有自己的私有镜像仓库或使用其他方式将容器镜像分发到主机。
 
@@ -189,5 +189,5 @@ Rancher 支持使用私有镜像仓库在堡垒服务器中进行离线安装。
 </TabItem>
 </Tabs>
 
-### 后续操作
+## 后续操作
 [收集镜像并发布到你的私有镜像仓库](publish-images.md)

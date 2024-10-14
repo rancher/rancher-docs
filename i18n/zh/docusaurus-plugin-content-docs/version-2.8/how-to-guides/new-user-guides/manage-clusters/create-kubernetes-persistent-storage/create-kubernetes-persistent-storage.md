@@ -11,7 +11,7 @@ description: "了解在 Kubernetes 中创建持久存储的两种方法：持久
 
 本文假设你已了解 Kubernetes 的持久卷、持久卷声明和存储类的概念。如需更多信息，请参阅[存储的工作原理](manage-persistent-storage/about-persistent-storage.md)部分。
 
-### 先决条件
+## 先决条件
 
 设置持久存储需要`管理卷`的[角色](../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色参考)。
 
@@ -21,7 +21,7 @@ description: "了解在 Kubernetes 中创建持久存储的两种方法：持久
 
 如果要将现有的持久存储连接到集群，则不需要启用云提供商。
 
-### 设置现有存储
+## 设置现有存储
 
 设置现有存储的总体流程如下：
 
@@ -32,7 +32,7 @@ description: "了解在 Kubernetes 中创建持久存储的两种方法：持久
 
 有关详细信息和先决条件，请参阅[此页面](manage-persistent-storage/set-up-existing-storage.md)。
 
-### 在 Rancher 中动态配置新存储
+## 在 Rancher 中动态配置新存储
 
 配置新存储的总体流程如下：
 
@@ -42,7 +42,7 @@ description: "了解在 Kubernetes 中创建持久存储的两种方法：持久
 
 有关详细信息和先决条件，请参阅[此页面](manage-persistent-storage/dynamically-provision-new-storage.md)。
 
-### Longhorn 存储
+## Longhorn 存储
 
 [Longhorn](https://longhorn.io/) 是一个轻量级、可靠、易用的 Kubernetes 分布式块存储系统。
 
@@ -52,28 +52,28 @@ Longhorn 是免费的开源软件。Longhorn 最初由 Rancher Labs 开发，现
 
 Rancher v2.5 简化了在 Rancher 管理的集群上安装 Longhorn 的过程。详情请参见[本页面](../../../../integrations-in-rancher/longhorn/longhorn.md)。
 
-### 配置存储示例
+## 配置存储示例
 
 我们提供了如何使用 [NFS](../provisioning-storage-examples/nfs-storage.md)， [vSphere](../provisioning-storage-examples/vsphere-storage.md)，和 [Amazon 的 EBS](../provisioning-storage-examples/persistent-storage-in-amazon-ebs.md) 来配置存储的示例。
 
-### GlusterFS 卷
+## GlusterFS 卷
 
 在将数据存储在 GlusterFS 卷上的集群中，你可能会遇到重启 `kubelet` 后 pod 无法挂载卷的问题。有关避免此情况发生的详细信息，请参阅[此页面](manage-persistent-storage/about-glusterfs-volumes.md)。
 
-### iSCSI 卷
+## iSCSI 卷
 
 在将数据存储在 iSCSI 卷上的 [Rancher 启动的 Kubernetes 集群](../../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)中，你可能会遇到 kubelet 无法自动连接 iSCSI 卷的问题。有关解决此问题的详细信息，请参阅[此页面](manage-persistent-storage/install-iscsi-volumes.md)。
 
-### hostPath 卷
+## hostPath 卷
 
 在创建 hostPath 卷之前，你需要在集群配置中设置 [extra_bind](https://rancher.com/docs/rke/latest/en/config-options/services/services-extras/#extra-binds/)。这会将路径作为卷安装在你的 kubelet 中，可用于工作负载中的 hostPath 卷。
 
-### 将 vSphere Cloud Provider 从树内迁移到树外
+## 将 vSphere Cloud Provider 从树内迁移到树外
 
 Kubernetes 正在逐渐不在树内维护云提供商。vSphere 有一个树外云提供商，可通过安装 vSphere 云提供商和云存储插件来使用。
 
 有关如何从树内 vSphere 云提供商迁移到树外，以及如何在迁移后管理现有虚拟机，请参阅[此页面](../../kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/configure-out-of-tree-vsphere.md)。
 
-### 相关链接
+## 相关链接
 
 - [Kubernetes 文档: 存储](https://kubernetes.io/docs/concepts/storage/)

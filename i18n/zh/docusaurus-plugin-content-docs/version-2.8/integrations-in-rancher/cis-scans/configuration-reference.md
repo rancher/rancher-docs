@@ -10,7 +10,7 @@ title: 配置
 1. 在**集群**页面上，转到要配置 CIS 扫描的集群，然后单击 **Explore**。
 1. 在左侧导航栏中，单击 **CIS Benchmark**。
 
-### 扫描
+## 扫描
 
 扫描是用来根据定义的配置文件，在集群上触发 CIS 扫描的。扫描完成后会创建一份报告。
 
@@ -27,7 +27,7 @@ spec:
   scanProfileName: rke-profile-hardened
 ```
 
-### 配置文件
+## 配置文件
 
 配置文件包含 CIS 扫描的配置，包括要使用的 Benchmark 测试版本以及要在该 Benchmark 测试中跳过的测试。
 
@@ -62,7 +62,7 @@ spec:
     - "1.1.21"
 ```
 
-### Benchmark 版本
+## Benchmark 版本
 
 Benchmark 版本是指使用 `kube-bench` 运行的 Benchmark 名称，以及该 Benchmark 的有效配置参数。
 

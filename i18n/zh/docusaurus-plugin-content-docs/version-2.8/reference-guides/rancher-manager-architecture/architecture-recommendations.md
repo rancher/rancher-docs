@@ -53,7 +53,7 @@ title: 架构推荐
 
 我们强烈建议你把 Rancher 安装到托管在云提供商（如 AWS EC2 和 Google Compute Engine（GCE）等）上的 Kubernetes 集群上。
 
-为了达到最佳性能和安全性，我们建议你为 Rancher Management Server 创建一个专用的 Kubernetes 集群。不建议在此集群上运行用户工作负载。部署 Rancher 后，你可以[创建或导入集群](../../pages-for-subheaders/kubernetes-clusters-in-rancher-setup.md)来运行你的工作负载。
+为了达到最佳性能和安全性，我们建议你为 Rancher Management Server 创建一个专用的 Kubernetes 集群。不建议在此集群上运行用户工作负载。部署 Rancher 后，你可以[创建或导入集群](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md)来运行你的工作负载。
 
 ## Kubernetes 安装的推荐节点角色
 
@@ -95,7 +95,7 @@ RKE 每个角色至少需要一个节点，但并不强制每个节点只能有�
 
 由于 Rancher Server 集群中没有部署其他工作负载，因此在大多数情况下，这个集群都不需要使用我们出于可扩展性和可用性的考虑，而为下游集群推荐的架构。
 
-有关下游集群的最佳实践，请查看[生产环境清单](../../pages-for-subheaders/checklist-for-production-ready-clusters.md)或[最佳实践](../../pages-for-subheaders/best-practices.md)。
+有关下游集群的最佳实践，请查看[生产环境清单](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters/checklist-for-production-ready-clusters.md)或[最佳实践](../best-practices/best-practices.md)。
 
 ## 授权集群端点架构
 

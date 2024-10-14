@@ -2,7 +2,7 @@
 title: RKE 集群配置参考
 ---
 
-Rancher 安装 Kubernetes 时，它使用 [RKE](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) 或 [RKE2](https://docs.rke2.io/) 作为 Kubernetes 发行版。
+Rancher 安装 Kubernetes 时，它使用 [RKE](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) 或 [RKE2](https://docs.rke2.io/) 作为 Kubernetes 发行版。
 
 本文介绍 Rancher 中可用于新的或现有的 RKE Kubernetes 集群的配置选项。
 
@@ -16,7 +16,7 @@ Rancher 安装 Kubernetes 时，它使用 [RKE](../../../pages-for-subheaders/la
 
 RKE 集群配置选项嵌套在 `rancher_kubernetes_engine_config` 参数下。有关详细信息，请参阅[集群配置文件](#rke-集群配置文件参考)。
 
-在 [RKE 启动的集群](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)中，你可以编辑任何后续剩余的选项。
+在 [RKE 启动的集群](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)中，你可以编辑任何后续剩余的选项。
 
 有关 RKE 配置文件语法的示例，请参阅 [RKE 文档](https://rancher.com/docs/rke/latest/en/example-yamls/)。
 
@@ -88,7 +88,7 @@ Rancher 与以下开箱即用的网络提供商兼容：
 
 ### Kubernetes 云提供商
 
-你可以配置 [Kubernetes 云提供商](../../../pages-for-subheaders/set-up-cloud-providers.md)。如果你想在 Kubernetes 中使用动态配置的[卷和存储](../../../pages-for-subheaders/create-kubernetes-persistent-storage.md)，你通常需要选择特定的云提供商。例如，如果你想使用 Amazon EBS，则需要选择 `aws` 云提供商。
+你可以配置 [Kubernetes 云提供商](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/set-up-cloud-providers.md)。如果你想在 Kubernetes 中使用动态配置的[卷和存储](../../../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md)，你通常需要选择特定的云提供商。例如，如果你想使用 Amazon EBS，则需要选择 `aws` 云提供商。
 
 :::note
 
@@ -131,7 +131,7 @@ Rancher v2.6 引入了[为 RKE 集群配置 ECR 镜像仓库](https://rancher.co
 
 ### 节点池
 
-有关使用 Rancher UI 在 RKE 集群中设置节点池的信息，请参阅[此页面](../../../pages-for-subheaders/use-new-nodes-in-an-infra-provider.md)。
+有关使用 Rancher UI 在 RKE 集群中设置节点池的信息，请参阅[此页面](../../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)。
 
 ### NGINX Ingress
 
@@ -325,7 +325,7 @@ windows_prefered_cluster: false
 
 ### enable_cluster_monitoring
 
-启用或禁用[集群监控](../../../pages-for-subheaders/monitoring-and-alerting.md)的选项。
+启用或禁用[集群监控](../../../integrations-in-rancher/monitoring-and-alerting/monitoring-and-alerting.md)的选项。
 
 ### enable_network_policy
 

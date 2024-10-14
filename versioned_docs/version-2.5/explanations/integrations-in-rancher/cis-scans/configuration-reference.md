@@ -10,7 +10,7 @@ This configuration reference is intended to help you manage the custom resources
 
 To configure the custom resources, go to the **Cluster Explorer** in the Rancher UI. In dropdown menu in the top left corner, click **Cluster Explorer > CIS Benchmark.**
 
-### Scans
+## Scans
 
 A scan is created to trigger a CIS scan on the cluster based on the defined profile. A report is created after the scan is completed.
 
@@ -27,7 +27,7 @@ spec:
   scanProfileName: rke-profile-hardened
 ```
 
-### Profiles
+## Profiles
 
 A profile contains the configuration for the CIS scan, which includes the benchmark version to use and any specific tests to skip in that benchmark.
 
@@ -58,7 +58,7 @@ spec:
     - "1.1.21"
 ```
 
-### Benchmark Versions
+## Benchmark Versions
 
 A benchmark version is the name of benchmark to run using `kube-bench`, as well as the valid configuration parameters for that benchmark.
 

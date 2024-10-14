@@ -511,7 +511,8 @@
                       "items": [
                         "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere",
                         "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-credentials",
-                        "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-a-vm-template"
+                        "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-a-vm-template",
+                        "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/shutdown-vm"
                       ]
                     },
                     {
@@ -760,6 +761,7 @@
             "how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
             "how-to-guides/advanced-user-guides/enable-api-audit-log",
             "how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters",
+            "how-to-guides/advanced-user-guides/enable-user-retention",
             "how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer"
           ]
         }
@@ -983,17 +985,6 @@
           "items": [
             "reference-guides/cli-with-rancher/rancher-cli",
             "reference-guides/cli-with-rancher/kubectl-utility"
-          ]
-        },
-        {
-          "type": "category",
-          "label": "About the API",
-          "link": {
-            "type": "doc",
-            "id": "reference-guides/about-the-api/about-the-api"
-          },
-          "items": [
-            "reference-guides/about-the-api/api-tokens"
           ]
         },
         "reference-guides/rancher-cluster-tools",
@@ -1322,9 +1313,12 @@
             "api/workflows/projects"
           ]
         },
-        "api/api-reference"
+        "api/api-reference",
+        "api/api-tokens",
+        "api/v3-rancher-api-guide"
       ]
     },
-    "contribute-to-rancher"
+    "contribute-to-rancher",
+    "glossary"
   ]
 }

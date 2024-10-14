@@ -4,7 +4,7 @@ title: Kubernetes 中节点的角色
 
 本节介绍 Kubernetes 中 etcd 节点、controlplane 节点和 worker 节点的角色，以及这些角色如何在集群中协同工作。
 
-此图适用于 [Rancher 通过 RKE 部署的 Kubernetes 集群](../../../../pages-for-subheaders/launch-kubernetes-with-rancher.md)：
+此图适用于 [Rancher 通过 RKE 部署的 Kubernetes 集群](../../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)：
 
 ![集群图](/img/clusterdiagram.svg)<br/>
 <sup>线条表示组件之间的通信。而颜色纯粹用于视觉辅助。</sup>

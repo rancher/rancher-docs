@@ -15,9 +15,9 @@ Rancher can provision nodes in vSphere and install Kubernetes on them. When crea
 
 A vSphere cluster may consist of multiple groups of VMs with distinct properties, such as the amount of memory or the number of vCPUs. This grouping allows for fine-grained control over the sizing of nodes for each Kubernetes role.
 
-## VMware vSphere Enhancements in Rancher v2.3
+## VMware vSphere Enhancements
 
-The vSphere node templates have been updated, allowing you to bring cloud operations on-premises with the following enhancements:
+The vSphere node templates allow you to bring cloud operations on-premises with the following enhancements:
 
 ### Self-healing Node Pools
 
@@ -38,12 +38,6 @@ For the fields to be populated, your setup needs to fulfill the [prerequisites.]
 ### More Supported Operating Systems
 
 You can provision VMs with any operating system that supports `cloud-init`. Only YAML format is supported for the [cloud config.](https://cloudinit.readthedocs.io/en/latest/topics/examples.html)
-
-### Video Walkthrough of v2.3.3 Node Template Features
-
-In this YouTube video, we demonstrate how to set up a node template with the new features designed to help you bring cloud operations to on-premises clusters.
-
-<YouTube id="dPIwg6x1AlU"/>
 
 ## Creating a VMware vSphere Cluster
 

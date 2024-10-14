@@ -173,12 +173,12 @@ To add members:
 
 ### 4. Optional: Add Resource Quotas
 
-Resource quotas limit the resources that a project (and its namespaces) can consume. For more information, see [Resource Quotas](projects-and-namespaces.md).
+Resource quotas limit the resources that a project (and its namespaces) can consume. For more information, see [Resource Quotas](../../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md).
 
 To add a resource quota,
 
 1. In the **Resource Quotas** tab, click **Add Resource**.
-1. Select a **Resource Type**. For more information, see [Resource Quotas.](projects-and-namespaces.md).
+1. Select a **Resource Type**. For more information, see [Resource Quotas.](../../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md).
 1. Enter values for the **Project Limit** and the **Namespace Default Limit**.
 1. **Optional:** Specify **Container Default Resource Limit**, which will be applied to every container started in the project. The parameter is recommended if you have CPU or Memory limits set by the Resource Quota. It can be overridden on per an individual namespace or a container level. For more information, see [Container Default Resource Limit](../../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md)
 1. Click **Create**.

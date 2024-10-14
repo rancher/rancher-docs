@@ -6,7 +6,7 @@ Rancher 首次启动时，会为第一个管理员用户随机生成一个密码
 
 如果你在安装过程中没有使用变量来设置引导密码，则会随机生成引导密码。如需了解使用变量设置引导密码的详情，请参见下文。
 
-### 在 Helm 安装中指定引导密码
+## 在 Helm 安装中指定引导密码
 
 Helm 安装的情况下，你可以使用 `.Values.bootstrapPassword` 在 Helm Chart 值中指定引导密码变量。
 
@@ -16,7 +16,7 @@ Helm 安装的情况下，你可以使用 `.Values.bootstrapPassword` 在 Helm C
 kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{ .data.bootstrapPassword|base64decode}}{{ "\n" }}'
 ```
 
-### 在 Docker 安装中指定引导密码
+## 在 Docker 安装中指定引导密码
 
 如果 Rancher 是使用 Docker 安装的，你可以通过在 Docker 安装命令中传递 `-e CATTLE_BOOTSTRAP_PASSWORD=password` 来指定引导密码。
 
