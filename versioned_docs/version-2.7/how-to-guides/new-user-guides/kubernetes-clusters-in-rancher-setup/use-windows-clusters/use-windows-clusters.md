@@ -115,7 +115,7 @@ Windows requires that containers must be built on the same Windows Server versio
 
 ### Cloud Provider Specific Requirements
 
-If you set a Kubernetes cloud provider in your cluster, some additional steps are required. You might want to set a cloud provider if you want to want to leverage a cloud provider's capabilities, for example, to automatically provision storage, load balancers, or other infrastructure for your cluster. Refer to [this page](../set-up-cloud-providers/set-up-cloud-providers.md) for details on how to configure a cloud provider cluster of nodes that meet the prerequisites.
+If you set a Kubernetes cloud provider in your cluster, some additional steps are required. You may wish to setup a cloud provider to leverage capabilities to automatically provision storage, load balancers, or other infrastructure for your cluster. Refer to [this page](../set-up-cloud-providers/set-up-cloud-providers.md) for details on how to configure a cloud provider cluster of nodes that meet the prerequisites.
 
 If you are using the GCE (Google Compute Engine) cloud provider, you must do the following:
 
