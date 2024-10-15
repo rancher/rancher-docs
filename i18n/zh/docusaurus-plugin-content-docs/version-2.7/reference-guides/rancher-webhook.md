@@ -129,6 +129,8 @@ webhook 在 [namespaces](https://github.com/rancher/webhook/blob/release/v0.4/do
 - 具有适当权限的用户帐户可以使用适当的配置预先创建命名空间。
   - 此选项取决于应用程序处理现有资源的能力。
 
+Another one of these validations ensures that the user has the proper permissions to update the `field.cattle.io/projectId` annotation on a namespace. This is the `manage-namespaces` permission for `projects` in `management.cattle.io`.
+
 ## 特定版本的问题
 
 **注意：** 以下是影响特定 Rancher/webhook 版本的高严重性问题的不完整列表。在大多数情况下，这些问题可以通过升级到更新的 Rancher 版本来解决。

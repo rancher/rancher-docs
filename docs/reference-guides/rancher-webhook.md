@@ -126,7 +126,7 @@ The webhook provides extra validations on [namespaces](https://github.com/ranche
 - A user account with the proper permissions can pre-create the namespace with the appropriate configuration.
   - This option depends on the ability of the application to handle existing resources.
 
-Another one of these validations ensures that the user has the proper permissions to update the `field.cattle.io/projectId` annotation on a namespace. These permissions would be `manage-namespaces` for `projects` in `management.cattle.io`
+Another one of these validations ensures that the user has the proper permissions to update the `field.cattle.io/projectId` annotation on a namespace. This is the `manage-namespaces` permission for `projects` in `management.cattle.io`.
 
 ## Issues on Specific Versions
 
