@@ -184,6 +184,11 @@ module.exports = {
             current: {
               label: 'Latest',
             },
+            2.10: {
+              label: 'v2.10 (Preview)',
+              path: 'v2.10',
+              banner: 'unreleased'
+            },
             2.9: {
               label: 'v2.9',
               path: 'v2.9',
