@@ -38,7 +38,7 @@ Deploying to Linode will incur charges.
 
 4. Edit `terraform.tfvars` and customize the following variables:
   - `linode_token` - The Linode Personal Access Token mentioned above.
-  - `rancher_server_admin_password` - Admin password for created Rancher server. See [Setting up the Bootstrap Password](../../installation-and-upgrade/resources/bootstrap-password.md#password-requirements) for password requirments.
+  - `rancher_server_admin_password` - Admin password for created Rancher server. See [Setting up the Bootstrap Password](../../installation-and-upgrade/resources/bootstrap-password.md#password-requirements) for password requirements.
 
 5. **Optional:** Modify optional variables within `terraform.tfvars`.
    See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [Linode Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/linode) for more information. Suggestions include:

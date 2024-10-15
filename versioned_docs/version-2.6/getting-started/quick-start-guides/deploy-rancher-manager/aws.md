@@ -57,7 +57,7 @@ The AWS module just creates an EC2 KeyPair, an EC2 SecurityGroup and an EC2 inst
 
     - `aws_access_key` - Amazon AWS Access Key
     - `aws_secret_key` - Amazon AWS Secret Key
-    - `rancher_server_admin_password` - Admin password for created Rancher server. See [Setting up the Bootstrap Password](../../installation-and-upgrade/resources/bootstrap-password.md#password-requirements) for password requirments.
+    - `rancher_server_admin_password` - Admin password for created Rancher server. See [Setting up the Bootstrap Password](../../installation-and-upgrade/resources/bootstrap-password.md#password-requirements) for password requirements.
     
 5. **Optional:** Modify optional variables within `terraform.tfvars`. See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [AWS Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/aws) for more information.
 Suggestions include:
