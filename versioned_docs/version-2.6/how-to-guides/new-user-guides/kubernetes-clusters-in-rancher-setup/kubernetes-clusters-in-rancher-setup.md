@@ -37,7 +37,7 @@ Rancher uses the [Rancher Kubernetes Engine (RKE)](https://rancher.com/docs/rke/
 
 In RKE clusters, Rancher manages the deployment of Kubernetes. These clusters can be deployed on any bare metal server, cloud provider, or virtualization platform.
 
-These nodes can be dynamically provisioned through Rancher's UI, which calls [Docker Machine](https://docs.docker.com/machine/) to launch nodes on various cloud providers.
+These nodes can be dynamically provisioned through Rancher's UI, which calls [Docker Machine](https://github.com/docker/docs/blob/vnext-engine/machine/overview.md) to launch nodes on various cloud providers.
 
 If you already have a node that you want to add to an RKE cluster, you can add it to the cluster by running a Rancher agent container on it.
 

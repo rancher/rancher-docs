@@ -17,7 +17,7 @@ title: 在云厂商的新节点上启动 Kubernetes
 
 ### 节点模板
 
-节点模板保存了用于在特定云提供商中配置节点时要使用的参数。这些节点可以从 UI 启动。Rancher 使用 [Docker Machine](https://docs.docker.com/machine/) 来配置这些节点。可用于创建节点模板的云提供商取决于 Rancher 中状态是 Active 的主机驱动。
+节点模板保存了用于在特定云提供商中配置节点时要使用的参数。这些节点可以从 UI 启动。Rancher 使用 [Docker Machine](https://github.com/docker/docs/blob/vnext-engine/machine/overview.md) 来配置这些节点。可用于创建节点模板的云提供商取决于 Rancher 中状态是 Active 的主机驱动。
 
 在 Rancher 中创建节点模板后，模板会被保存，以便你可以再次使用该模板来创建节点池。节点模板绑定到你的登录名。添加模板后，你可以将其从用户配置文件中删除。
 
