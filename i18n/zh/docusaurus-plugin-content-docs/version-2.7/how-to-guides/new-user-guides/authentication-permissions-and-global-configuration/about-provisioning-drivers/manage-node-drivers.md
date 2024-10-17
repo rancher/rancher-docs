@@ -2,7 +2,7 @@
 title: 主机驱动
 ---
 
-主机驱动用于配置主机，Rancher 使用这些主机启动和管理 Kubernetes 集群。主机驱动与 [Docker Machine 驱动](https://docs.docker.com/machine/drivers/)相同。创建主机模板时可以显示的主机驱动，是由主机驱动的状态定义的。只有 `active` 主机驱动将显示为创建节点模板的选项。默认情况下，Rancher 与许多现有的 Docker Machine 驱动打包在一起，但你也可以创建自定义主机驱动并添加到 Rancher。
+主机驱动用于配置主机，Rancher 使用这些主机启动和管理 Kubernetes 集群。主机驱动与 [Docker Machine 驱动](https://github.com/docker/docs/blob/vnext-engine/machine/drivers/index.md)相同。创建主机模板时可以显示的主机驱动，是由主机驱动的状态定义的。只有 `active` 主机驱动将显示为创建节点模板的选项。默认情况下，Rancher 与许多现有的 Docker Machine 驱动打包在一起，但你也可以创建自定义主机驱动并添加到 Rancher。
 
 如果你不想向用户显示特定的主机驱动，则需要停用这些主机驱动。
 
@@ -38,4 +38,4 @@ title: 主机驱动
 
 ### 开发自己的主机驱动
 
-主机驱动使用 [Docker Machine](https://docs.docker.com/machine/) 来实现。
+主机驱动使用 [Docker Machine](https://github.com/docker/docs/blob/vnext-engine/machine/overview.md) 来实现。
