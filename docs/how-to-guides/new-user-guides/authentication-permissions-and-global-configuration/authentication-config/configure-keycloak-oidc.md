@@ -62,13 +62,10 @@ If you have an existing configuration using the SAML protocol and want to switch
     `Add to access token` | `ON`
     `Add to user info` | `ON`
 
-- Add the following Role Mappings to all users or groups that need to query the Keycloak users
-  ```
-  Role Mappings > Client Roles >  realm-management  
-   + query-users
-   + query-groups
-   + view-users
-  ```
+- Go to **Role Mappings > Client Roles >  realm-management** and add the following Role Mappings to all users or groups that need to query the Keycloak users.
+  - query-users
+  - query-groups
+  - view-users
 
 ## Configuring Keycloak in Rancher
 
