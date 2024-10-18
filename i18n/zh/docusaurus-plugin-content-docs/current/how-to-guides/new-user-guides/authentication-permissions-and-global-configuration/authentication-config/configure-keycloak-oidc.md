@@ -31,6 +31,7 @@ description: 创建 Keycloak OpenID Connect (OIDC) 客户端并配置 Rancher �
       | `Name` | `Groups Mapper` |
       | `Mapper Type` | `Group Membership` |
       | `Token Claim Name` | `groups` |
+      | `Full group path` | `OFF` |
       | `Add to ID token` | `OFF` |
       | `Add to access token` | `OFF` |
       | `Add to user info` | `ON` |
@@ -42,6 +43,7 @@ description: 创建 Keycloak OpenID Connect (OIDC) 客户端并配置 Rancher �
       | `Name` | `Client Audience` |
       | `Mapper Type` | `Audience` |
       | `Included Client Audience` | &lt;CLIENT_NAME> |
+      | `Add to ID token` | `OFF` |
       | `Add to access token` | `ON` |
 
    - 使用以下设置创建一个新的 "Groups Path"：
@@ -52,8 +54,15 @@ description: 创建 Keycloak OpenID Connect (OIDC) 客户端并配置 Rancher �
       | `Mapper Type` | `Group Membership` |
       | `Token Claim Name` | `full_group_path` |
       | `Full group path` | `ON` |
+      | `Add to ID token` | `ON` |
+      | `Add to access token` | `ON` |
       | `Add to user info` | `ON` |
 
+- Go to **Role Mappings > Client Roles >  realm-management** and add the following Role Mappings to all users or groups that need to query the Keycloak users.
+  - query-users
+  - query-groups
+  - view-users
+  
 ## 在 Rancher 中配置 Keycloak
 
 1. 在 Rancher UI 中，单击 **☰ > 用户 & 认证**。
