@@ -33,7 +33,7 @@ import ClusterCapabilitiesTable from '../shared-files/_cluster-capabilities-tabl
 
 在 RKE 集群中，Rancher 管理 Kubernetes 的部署。这些集群可以部署在任何裸机服务器、云提供商或虚拟化平台上。
 
-这些节点可以通过 Rancher 的 UI 动态配置，该 UI 调用 [Docker Machine](https://docs.docker.com/machine/) 在各种云提供商上启动节点。
+这些节点可以通过 Rancher 的 UI 动态配置，该 UI 调用 [Docker Machine](https://github.com/docker/docs/blob/vnext-engine/machine/overview.md) 在各种云提供商上启动节点。
 
 如果你已经有一个想要添加到 RKE 集群的节点，你可以通过在节点上运行 Rancher Agent 容器将节点添加到集群中。
 
