@@ -29,7 +29,7 @@ When you enable extension support for the first time, it creates resources, such
 
 By default, Rancher caches every extension file in the file system. You can change that behavior by setting `plugin.noCache` to `true`.
 
-Rancher does have a cached file size limit of 20MB. If an extension has a file bigger than that, the cache is disabled and `plugin.noCache` is set to `true`, regardless of user input.
+Rancher does have a cached file size limit of 30MB. If an extension has a file bigger than that, the cache is disabled and `plugin.noCache` is set to `true`, regardless of user input.
 
 
 ## Installing Extensions
