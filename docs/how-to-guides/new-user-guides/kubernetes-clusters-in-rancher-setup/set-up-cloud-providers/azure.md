@@ -100,7 +100,7 @@ This section is valid only for creating clusters with the in-tree cloud provider
    <details id="v2.6.0-cloud-provider-config-file">
      <summary>Example Cloud Provider Config</summary>
 
-    ```yaml
+```yaml
     {
         "cloud":"AzurePublicCloud",
         "tenantId": "YOUR TENANTID HERE",
@@ -120,7 +120,7 @@ This section is valid only for creating clusters with the in-tree cloud provider
         "useManagedIdentityExtension": false,
         "useInstanceMetadata": true
     }
-    ```
+```
 
     </details>
 
@@ -144,7 +144,7 @@ Azure supports reading the cloud config from Kubernetes secrets. The secret is a
 
 Note that the chart reads the Cloud Provider Config from a given secret name in the `kube-system` namespace. Since Azure reads Kubernetes secrets, RBAC also needs to be configured. An example secret for the Cloud Provider Config is shown below. Modify it as needed and create the secret.
 
-  ```yaml
+```yaml
 # azure-cloud-config.yaml
 apiVersion: v1
 kind: Secret
@@ -203,7 +203,7 @@ roleRef:
     - kind: ServiceAccount
       name: azure-cloud-config
       namespace: kube-system
-   ``` 
+``` 
 
 ## Using the Out-of-tree Azure Cloud Provider
 
@@ -212,6 +212,10 @@ roleRef:
 
 1. Select **External** from the **Cloud Provider** drop-down in the **Cluster Configuration** section.
 
+:::note
+When setting **Cloud Provider** to **External**, all nodes will automatically be tainted with node.cloudprovider.kubernetes.io/uninitialized=true until the Cloud Provder is installed. It is recommended to deploy the CPI as an add-on job as described below.
+:::
+
 2. Prepare the Cloud Provider Configuration to set it in the next step. Note that Rancher automatically creates a new Network Security Group, Resource Group, Availability Set, Subnet, and Virtual Network. If you already have some or all of these created, you must specify them before creating the cluster.
   - Click **Show Advanced** to view or edit these automatically generated names. Your Cloud Provider Configuration **must** match the fields in the **Machine Pools** section. If you have multiple pools, they must all use the same Resource Group, Availability Set, Subnet, Virtual Network, and Network Security Group.
 
@@ -219,7 +223,7 @@ roleRef:
 
 Note that the chart reads the Cloud Provider Config from the secret in the `kube-system` namespace. An example secret for the Cloud Provider Config is shown below. Modify it as needed. Refer to the full list of configuration options in the [upstream docs](https://cloud-provider-azure.sigs.k8s.io/install/configs/).
 
-  ```yaml
+```yaml
 apiVersion: helm.cattle.io/v1
 kind: HelmChart
 metadata:
@@ -312,7 +316,7 @@ roleRef:
     - kind: ServiceAccount
       name: azure-cloud-config
       namespace: kube-system
-  ```
+```
 
 4. Click **Create** to submit the form and create the cluster.
 
