@@ -29,7 +29,10 @@ Following project creation, you can add users as project members so that they ca
 1. Click **Cluster > Projects/Namespaces**.
 1. Go to the project where you want to add members. Next to the **Create Namespace** button above the project name, click **☰**. Select **Edit Config**.
 1. In the **Members** tab, click **Add**.
-1. Search for the user or group that you want to add to the project.
+1. Search for the user or group that you want to add to the project. Note that:
+  * At least 2 characters must be typed in the search box for results to appear
+  * Users can be searched based on their username or display name
+  * Search is case-sensitive
 
     If external authentication is configured:
 
