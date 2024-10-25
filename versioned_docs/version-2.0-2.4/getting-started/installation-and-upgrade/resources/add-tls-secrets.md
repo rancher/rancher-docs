@@ -31,7 +31,7 @@ Create a file named `cacerts.pem` that only contains the root CA certificate or 
 
 ```
 kubectl -n cattle-system create secret generic tls-ca \
-  --from-file=cacerts.pem=./cacerts.pem
+  --from-file=cacerts.pem
 ```
 
 > **Note:** The configured `tls-ca` secret is retrieved when Rancher starts. On a running Rancher installation the updated CA will take effect after new Rancher pods are started.
