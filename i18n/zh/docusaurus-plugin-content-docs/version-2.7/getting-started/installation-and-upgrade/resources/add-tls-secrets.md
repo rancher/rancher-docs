@@ -35,7 +35,7 @@ kubectl -n cattle-system create secret tls tls-rancher-ingress \
 
 ```
 kubectl -n cattle-system create secret generic tls-ca \
-  --from-file=cacerts.pem=./cacerts.pem
+  --from-file=cacerts.pem
 ```
 
 :::note
