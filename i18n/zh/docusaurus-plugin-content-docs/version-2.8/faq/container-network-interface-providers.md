@@ -181,15 +181,15 @@ spec:
 
 ## CNI 社区人气
 
-下表总结了不同的 GitHub 指标，让你了解每个项目的受欢迎程度和活动。数据收集于 2022 年 1 月。
+下表总结了不同的 GitHub 指标，让你了解每个项目的受欢迎程度和活动。数据收集于 2024 年 10 月。
 
 | 提供商 | 项目 | Stars | Forks | Contributors |
 | ---- | ---- | ---- | ---- | ---- |
-| Canal | https://github.com/projectcalico/canal | 679 | 100 | 21 |
-| Flannel | https://github.com/flannel-io/flannel | 7k | 2.5k | 185 |
-| Calico | https://github.com/projectcalico/calico | 3.1k | 741 | 224 |
-| Weave | https://github.com/weaveworks/weave/ | 6.2k | 635 | 84 |
-| Cilium | https://github.com/cilium/cilium | 10.6k | 1.3k | 352 |
+| Canal | https://github.com/projectcalico/canal | 716 | 100 | 20 |
+| Flannel | https://github.com/flannel-io/flannel | 8.8k | 2.9k | 234 |
+| Calico | https://github.com/projectcalico/calico | 6.0k | 1.3k | 353 |
+| Weave | https://github.com/weaveworks/weave/ | 6.6k | 670 | 85 |
+| Cilium | https://github.com/cilium/cilium | 20.0k | 2.9k | 832 |
 
 <br/>
 
