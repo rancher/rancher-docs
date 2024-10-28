@@ -34,7 +34,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
 本安装指南假定你使用的是 Helm 3。
 
-如果你使用 Helm 2，请参见 [Helm 2 迁移到 Helm 3 文档](https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/)。如果你不能升级到 Helm 3，[Helm 2 升级页面](/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/helm2.md)提供了使用 Helm 2 升级的旧升级指南。
+如果你使用 Helm 2，请参见 [Helm 2 迁移到 Helm 3 文档](https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/)。如果你不能升级到 Helm 3，[Helm 2 升级页面](https://github.com/rancher/rancher-docs/tree/main/archived_docs/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/helm2.md)提供了使用 Helm 2 升级的旧升级指南。
 
 ### 离线安装：推送镜像到私有镜像仓库
 
@@ -205,7 +205,7 @@ helm upgrade rancher-stable rancher-<CHART_REPO>/rancher \
 
 升级后出现网络问题？
 
-请参见[恢复集群网络](/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md)。
+请参见[恢复集群网络](https://github.com/rancher/rancher-docs/tree/main/archived_docs/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md)。
 
 :::
 
