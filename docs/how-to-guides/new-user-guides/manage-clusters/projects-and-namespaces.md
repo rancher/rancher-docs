@@ -168,12 +168,15 @@ By default, your user is added as the project `Owner`.
 To add members:
 
 1. In the **Members** tab, click **Add**.
-1. From the **Select Member** field, search for a user or group that you want to assign project access. Keep in mind that:
-  * You can only search for groups if external authentication is enabled
-  * At least 2 characters must be typed in the search box for results to appear
-  * Users can be searched based on their username or display name
-  * Search is prefix-based (eg. a user named `Stan Dard` will appear when searching for `Sta`, but not when searching
-    for `Dar`) and case-sensitive
+1. From the **Select Member** field, search for a user or group that you want to assign project access. You can only search for groups if external authentication is enabled.
+
+    :::note Notes:
+
+    - At least 2 characters must be typed in the search box for results to appear
+    - Users can be searched based on their username or display name
+    - Search is prefix-based (eg. a user named `Stan Dard` will appear when searching for `Sta`, but not when searching for `Dar`) and case-sensitive
+
+    :::
 1. In the **Project Permissions** section, choose a role. For more information, refer to the [documentation on project roles.](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)
 
 ### 4. Optional: Add Resource Quotas

@@ -31,11 +31,15 @@ Cluster administrators can edit the membership for a cluster, controlling which 
 1. Click **☰ > Cluster Management**.
 1. Go to the cluster you want to add members to and click **⋮ > Edit Config**.
 1. In the **Member Roles** tab, click **Add Member**.
-1. Search for the user or group that you want to add to the cluster. Note that:
-  * At least 2 characters must be typed in the search box for results to appear
-  * Users can be searched based on their username or display name
-  * Search is prefix-based (eg. a user named `Stan Dard` will appear when searching for `Sta`, but not when searching
-    for `Dar`) and case-sensitive
+1. Search for the user or group that you want to add to the cluster.
+
+    :::note Notes:
+
+    - At least 2 characters must be typed in the search box for results to appear
+    - Users can be searched based on their username or display name
+    - Search is prefix-based (eg. a user named `Stan Dard` will appear when searching for `Sta`, but not when searching for `Dar`) and case-sensitive
+
+    :::
 
     If external authentication is configured:
 
