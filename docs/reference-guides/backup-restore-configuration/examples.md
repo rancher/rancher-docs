@@ -250,10 +250,26 @@ spec:
 
 The snippet below demonstrates two different types of secrets and their relevance with respect to Backup and Restore of custom resources.
 
-The first example is that of a secret that is used to encrypt the backup files. The backup operator, in this case, will not be able to read the secrets encryption file. It only uses the contents of the secret.
+The first example is that of a secret used to encrypt the backup files. The backup operator will read the contents of the **encryption-provider-config.yaml** key, which contains the definition of an EncryptionConfiguration resource encoded as Base64. Creating the secret can be done with the following command:
 
-The second example is that of a Kubernetes secrets encryption config file that is used to encrypt secrets when stored in etcd. **When backing up the etcd datastore, be sure to also back up the EncryptionConfiguration.** Failure to do so will result in an inability to use the restored data if secrets encryption was in use at the time the data was backed up.
+```plain
+kubectl create secret generic example-encryptionconfig \
+  --from-file=./encryption-provider-config.yaml \
+  -n cattle-resources-system
+```
 
+The second example is that of the Kubernetes EncryptionConfiguration file itself, which is also used to encrypt secrets when stored in etcd. **When backing up the etcd datastore, be sure to also back up the EncryptionConfiguration.** Failure to do so will result in an inability to use the restored data if secrets encryption was in use at the time the data was backed up.
+
+```yaml
+apiVersion: v1
+data:
+  encryption-provider-config.yaml: YXBpVmVyc2lvbjogYXBpc2VydmVyLmNvbmZpZy5rOHMuaW8vdjEKa2luZDogRW5jcnlwdGlvbkNvbmZpZ3VyYXRpb24KcmVzb3VyY2VzOgogIC0gcmVzb3VyY2VzOgogICAgICAtICIqLmFwcHMiCiAgICBwcm92aWRlcnM6CiAgICAgIC0gc2VjcmV0Ym94OgogICAgICAgICAga2V5czoKICAgICAgICAgICAgLSBuYW1lOiBrZXkxCiAgICAgICAgICAgICAgc2VjcmV0OiBZV0pqWkdWbVoyaHBhbXRzYlc1dmNIRnljM1IxZG5kNGVYb3hNak0wTlRZPQo=
+kind: Secret
+metadata:
+  name: encryptionconfig
+  namespace: cattle-resources-system
+type: Opaque
+```
 
 ```yaml
 apiVersion: apiserver.config.k8s.io/v1
@@ -279,6 +295,3 @@ resources:
             - name: key1
               secret: YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXoxMjM0NTY=
 ```
-
-
-
