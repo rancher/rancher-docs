@@ -2545,10 +2545,6 @@ module.exports = {
             from: '/explanations/integrations-in-rancher/neuvector'
           },
           {
-            to: '/integrations-in-rancher/opa-gatekeeper',
-            from: '/explanations/integrations-in-rancher/opa-gatekeeper'
-          },
-          {
             to: '/v2.6/faq/general-faq',
             from: '/v2.6/faq'
           },
