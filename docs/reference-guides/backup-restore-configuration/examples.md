@@ -250,7 +250,7 @@ spec:
 
 The snippet below demonstrates two different types of secrets and their relevance with respect to Backup and Restore of custom resources.
 
-The first example is that of a secret used to encrypt the backup files. The backup operator will read the contents of the **encryption-provider-config.yaml** key, which contains the definition of an EncryptionConfiguration resource encoded as Base64. Creating the secret can be done with the following command:
+The first example is that of a secret used to encrypt the backup files. The backup operator will read the contents of the **encryption-provider-config.yaml** key, which contains the definition of an EncryptionConfiguration resource encoded as Base64. Creating this secret can be done with the following command:
 
 ```plain
 kubectl create secret generic example-encryptionconfig \
@@ -263,10 +263,10 @@ The second example is that of the Kubernetes EncryptionConfiguration file itself
 ```yaml
 apiVersion: v1
 data:
-  encryption-provider-config.yaml: YXBpVmVyc2lvbjogYXBpc2VydmVyLmNvbmZpZy5rOHMuaW8vdjEKa2luZDogRW5jcnlwdGlvbkNvbmZpZ3VyYXRpb24KcmVzb3VyY2VzOgogIC0gcmVzb3VyY2VzOgogICAgICAtICIqLmFwcHMiCiAgICBwcm92aWRlcnM6CiAgICAgIC0gc2VjcmV0Ym94OgogICAgICAgICAga2V5czoKICAgICAgICAgICAgLSBuYW1lOiBrZXkxCiAgICAgICAgICAgICAgc2VjcmV0OiBZV0pqWkdWbVoyaHBhbXRzYlc1dmNIRnljM1IxZG5kNGVYb3hNak0wTlRZPQo=
+  encryption-provider-config.yaml: YXBpVmVyc2lvbjogYXBpc2VydmVyLmNvbmZpZy5rOHMuaW8vdjEKa2luZDogRW5jcnlwdGlvbkNvbmZpZ3VyYXRpb24KcmVzb3VyY2VzOgogIC0gcmVzb3VyY2VzOgogICAgICAtIHNlY3JldHMKICAgICAgLSAqLmFwcHMKICAgIHByb3ZpZGVyczoKICAgICAgLSBhZXNnY206CiAgICAgICAgICBrZXlzOgogICAgICAgICAgICAtIG5hbWU6IGtleTEKICAgICAgICAgICAgICBzZWNyZXQ6IGMyVmpjbVYwSUdseklITmxZM1Z5WlE9PQogICAgICAgICAgICAtIG5hbWU6IGtleTIKICAgICAgICAgICAgICBzZWNyZXQ6IGRHaHBjeUJwY3lCd1lYTnpkMjl5WkE9PQogICAgICAtIGFlc2NiYzoKICAgICAgICAgIGtleXM6CiAgICAgICAgICAgIC0gbmFtZToga2V5MQogICAgICAgICAgICAgIHNlY3JldDogYzJWamNtVjBJR2x6SUhObFkzVnlaUT09CiAgICAgICAgICAgIC0gbmFtZToga2V5MgogICAgICAgICAgICAgIHNlY3JldDogZEdocGN5QnBjeUJ3WVhOemQyOXlaQT09CiAgICAgIC0gc2VjcmV0Ym94OgogICAgICAgICAga2V5czoKICAgICAgICAgICAgLSBuYW1lOiBrZXkxCiAgICAgICAgICAgICAgc2VjcmV0OiBZV0pqWkdWbVoyaHBhbXRzYlc1dmNIRnljM1IxZG5kNGVYb3hNak0wTlRZPQo=
 kind: Secret
 metadata:
-  name: encryptionconfig
+  name: example-encryptionconfig
   namespace: cattle-resources-system
 type: Opaque
 ```
@@ -277,6 +277,7 @@ kind: EncryptionConfiguration
 resources:
   - resources:
       - secrets
+      - *.apps
     providers:
       - aesgcm:
           keys:
