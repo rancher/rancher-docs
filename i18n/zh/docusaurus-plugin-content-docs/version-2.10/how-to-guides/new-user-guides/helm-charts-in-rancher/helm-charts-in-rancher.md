@@ -161,9 +161,49 @@ spec:
 
 :::
 
+### Add Custom OCI Chart Repositories
+
+:::caution
+
+This feature is currently experimental and is not officially supported in Rancher.
+
+:::
+
+Helm v3 introduced storing Helm charts as [Open Container Initiative (OCI)](https://opencontainers.org/about/overview/) artifacts in container registries. With Rancher v2.9.0, you can add [OCI-based Helm chart repositories](https://helm.sh/docs/topics/registries/) alongside HTTP-based and Git-based repositories. This means you can deploy apps that are stored as OCI artifacts. For more information, see [Using OCI Helm Chart Repositories](./oci-repositories.md).
+
 ### Helm 兼容性
 
 仅支持 Helm 3 兼容 Chart 。
+
+### Refresh Chart Repositories
+
+The **Refresh** button can be used to sync changes from selected Helm chart repositories on the **Repositories** page.
+
+To refresh a chart repository:
+
+1. Click **☰ > Cluster Management**.
+1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
+1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
+1. Use the toggle next to the **State** field to select all repositories, or toggle specified chart repositories to sync changes.
+1. Click **Refresh**.
+1. The **⋮** at the end of each chart repository row also includes a **Refresh** option, which can be clicked to refresh the respective repository.
+
+Non-Airgap Rancher installations upon refresh will reflect any chart repository changes immediately and you will see the **State** field for updated repositories move from `In Progress` to `Active` once the action is completed.
+
+Airgap installations where Rancher is configured to use the packaged copy of Helm system charts ([`useBundledSystemChart=true`](../../../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha.md#helm-chart-options-for-air-gap-installations)) will only refer to the [system-chart](https://github.com/rancher/system-charts) repository that comes bundled and will not be able to be refreshed or synced.
+
+#### Refresh Interval
+
+Rancher v2.10.0 adds the `refreshInterval` field to the `ClusterRepo` CRD. The default value is 3600 seconds, meaning that Rancher syncs each Helm repository every 3600 seconds.
+
+To modify the refresh interval of a chart repository:
+
+1. Click **☰ > Cluster Management**.
+1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
+1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
+1. Find the repository you want to modify, and click **⋮ > Edit YAML**.
+1. Set the **refreshInterval** field under **Spec** to the desired value in seconds.
+1. Click **Save**.
 
 ### 部署和升级 Chart
 

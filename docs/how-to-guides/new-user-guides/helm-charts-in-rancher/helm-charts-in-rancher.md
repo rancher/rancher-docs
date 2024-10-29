@@ -194,6 +194,19 @@ Non-Airgap Rancher installations upon refresh will reflect any chart repository 
 
 Airgap installations where Rancher is configured to use the packaged copy of Helm system charts ([`useBundledSystemChart=true`](../../../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha.md#helm-chart-options-for-air-gap-installations)) will only refer to the [system-chart](https://github.com/rancher/system-charts) repository that comes bundled and will not be able to be refreshed or synced.
 
+#### Refresh Interval
+
+Rancher v2.10.0 adds the `refreshInterval` field to the `ClusterRepo` CRD. The default value is 3600 seconds, meaning that Rancher syncs each Helm repository every 3600 seconds.
+
+To modify the refresh interval of a chart repository:
+
+1. Click **☰ > Cluster Management**.
+1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
+1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
+1. Find the repository you want to modify, and click **⋮ > Edit YAML**.
+1. Set the **refreshInterval** field under **Spec** to the desired value in seconds.
+1. Click **Save**.
+
 ## Deploy and Upgrade Charts
 
 To install and deploy a chart:
@@ -201,7 +214,7 @@ To install and deploy a chart:
 1. Click **☰ > Cluster Management**.
 1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
 1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Charts**.
-1. Select a chart, and click **Install**. 
+1. Select a chart, and click **Install**.
 
 Rancher and Partner charts may have extra configurations available through custom pages or questions.yaml files. However, all chart installations can modify the values.yaml and other basic settings. After you click **Install**, a Helm operation job is deployed, and the console for the job is displayed.
 
