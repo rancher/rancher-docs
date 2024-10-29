@@ -161,9 +161,32 @@ spec:
 
 :::
 
+### Add Custom OCI Chart Repositories
+
+:::caution
+
+This feature is currently experimental and is not officially supported in Rancher.
+
+:::
+
+Helm v3 introduced storing Helm charts as [Open Container Initiative (OCI)](https://opencontainers.org/about/overview/) artifacts in container registries. With Rancher v2.9.0, you can add [OCI-based Helm chart repositories](https://helm.sh/docs/topics/registries/) alongside HTTP-based and Git-based repositories. This means you can deploy apps that are stored as OCI artifacts. For more information, see [Using OCI Helm Chart Repositories](./oci-repositories.md).
+
 ### Helm 兼容性
 
 仅支持 Helm 3 兼容 Chart 。
+
+#### Refresh Interval
+
+Rancher v2.10.0 adds the `refreshInterval` field to the `ClusterRepo` CRD. The default value is 3600 seconds, meaning that Rancher syncs each Helm repository every 3600 seconds.
+
+To modify the refresh interval of a chart repository:
+
+1. Click **☰ > Cluster Management**.
+1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
+1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
+1. Find the repository you want to modify, and click **⋮ > Edit YAML**.
+1. Set the **refreshInterval** field under **Spec** to the desired value in seconds.
+1. Click **Save**.
 
 ### Enable/Disable Helm Chart Repositories
 
