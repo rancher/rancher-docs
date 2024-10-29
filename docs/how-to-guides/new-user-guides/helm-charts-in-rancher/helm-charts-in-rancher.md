@@ -224,7 +224,7 @@ To install and deploy a chart:
 1. Click **☰ > Cluster Management**.
 1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
 1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Charts**.
-1. Select a chart, and click **Install**. 
+1. Select a chart, and click **Install**.
 
 Rancher and Partner charts may have extra configurations available through custom pages or questions.yaml files. However, all chart installations can modify the values.yaml and other basic settings. After you click **Install**, a Helm operation job is deployed, and the console for the job is displayed.
 
