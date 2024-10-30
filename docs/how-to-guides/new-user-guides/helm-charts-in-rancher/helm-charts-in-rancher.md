@@ -207,6 +207,29 @@ To modify the refresh interval of a chart repository:
 1. Set the **refreshInterval** field under **Spec** to the desired value in seconds.
 1. Click **Save**.
 
+### Enable/Disable Helm Chart Repositories
+
+Rancher v2.10.0 adds the ability to enable and disable Helm repositories. Helm repositories are enabled by default.
+
+To disable a chart repository:
+
+1. Click **☰ > Cluster Management**.
+1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
+1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
+1. Find the repository you want to disable, and click **⋮ > Edit YAML**.
+1. Set the **Enabled** field under **Spec** to **false**.
+1. Click **Save**.
+1. When you disable a repository, updates are disabled and new changes to the clusterRepo are not applied.
+
+To enable a chart repository:
+
+1. Click **☰ > Cluster Management**.
+1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
+1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
+1. Find the repository you want to disable, and click **⋮ > Edit YAML**.
+1. Set the **Enabled** field under **Spec** to **true**.
+1. Click **Save**.
+
 ## Deploy and Upgrade Charts
 
 To install and deploy a chart:
