@@ -2024,7 +2024,18 @@ module.exports = {
             to: '/how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods',
             from: '/pages-for-subheaders/workloads-and-pods'
           }, // Redirects for pages-for-subheaders removal [latest] (end)
-
+          { // Redirects for dashboard#11114 (start)
+            to: '/v2.10/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-google-oauth',
+            from: '/v2.10/admin-settings/authentication/google',
+          },
+          {
+            to: '/v2.10/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides',
+            from: '/v2.10/monitoring-alerting/configuration',
+          }, 
+          {
+            to: '/v2.10/integrations-in-rancher/monitoring-and-alerting',
+            from: '/v2.10/monitoring-alerting',
+          }, // Redirects for dashboard#11114 (end)
           { // Redirects for dashboard#12040 (start)
             to: '/v2.9/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-google-oauth',
             from: '/v2.9/admin-settings/authentication/google',
