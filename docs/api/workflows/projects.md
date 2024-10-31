@@ -48,6 +48,9 @@ EOF
 ```
 
 Setting the `field.cattle.io/creatorId` field allows the cluster member account to see project resources with the `get` command and view the project in the Rancher UI. Cluster owner and admin accounts don't need to set this annotation to perform these tasks.
+Setting the  `field.cattle.io/creator-principal-name` annotation to the user's principal preserves it in a projectroletemplatebinding automatically created for the project owner.
+
+If you don't want the creator to be added as the owner member (e.g. if the creator is a cluster administrator) to the project you may set the `field.cattle.io/no-creator-rbac` annotation to `true`, which will prevent the corresponding projectroletemplatebinding from being created.
 
 ### Creating a Project With a Resource Quota
 
@@ -91,6 +94,77 @@ spec:
     limitsMemory: 100Mi
     requestsCpu:  50m
     requestsMemory: 50Mi
+EOF
+```
+
+## Adding a Member to a Project
+
+Look up the project ID to specify the `metadata.namespace` field and `projectName` field values.
+
+```bash
+kubectl --namespace c-m-abcde get projects
+```
+
+Look up the role template ID to specify the `roleTemplateName` field value (e.g. `project-member` or `project-owner`).
+
+```bash
+kubectl get roletemplates
+```
+
+When adding a user member specify the `userPrincipalName` field:
+
+```bash
+kubectl create -f - <<EOF
+apiVersion: management.cattle.io/v3
+kind: ProjectRoleTemplateBinding
+metadata:
+  generateName: prtb-
+  namespace: p-vwxyz
+projectName: c-m-abcde:p-vwxyz
+roleTemplateName: project-member
+userPrincipalName: keycloak_user://user
+EOF
+```
+
+When adding a group member specify the `groupPrincipalName` field instead:
+
+```bash
+kubectl create -f - <<EOF
+apiVersion: management.cattle.io/v3
+kind: ProjectRoleTemplateBinding
+metadata:
+  generateName: prtb-
+  namespace: p-vwxyz
+projectName: c-m-abcde:p-vwxyz
+roleTemplateName: project-member
+groupPrincipalName: keycloak_group://group
+EOF
+```
+
+Create a projectroletemplatebinding for each role you want to assign to the project member.
+
+## Listing Project Members
+
+Look up the project ID:
+
+```bash
+kubectl --namespace c-m-abcde get projects
+```
+
+to list projectroletemplatebindings in the project's namespace:
+
+```bash
+kubectl --namespace p-vwxyz get projectroletemplatebindings
+```
+
+## Deleting a Member From a Project
+
+Lookup the projectroletemplatebinding IDs containing the member in the project's namespace as decribed in the [Listing Project Members](#listing-project-members) section.
+
+Delete the projectroletemplatebinding from the project's namespace:
+
+```bash
+kubectl --namespace p-vwxyz delete projectroletemplatebindings prtb-qx874 prtb-7zw7s
 ```
 
 ## Creating a Namespace in a Project
@@ -132,4 +206,4 @@ Delete the project under the cluster namespace:
 kubectl --namespace c-m-abcde delete project p-vwxyz
 ```
 
-Note that this command doesn't delete the namespaces and resources that formerly belonged to the project. 
+Note that this command doesn't delete the namespaces and resources that formerly belonged to the project.
