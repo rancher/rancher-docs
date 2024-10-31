@@ -216,7 +216,8 @@ module.exports = {
             '2.0-2.4': {
               label: 'v2.0-v2.4 (Archived)',
               path: 'v2.0-v2.4',
-              banner: 'none'
+              banner: 'none',
+              noIndex: true
             },
           },
         },
