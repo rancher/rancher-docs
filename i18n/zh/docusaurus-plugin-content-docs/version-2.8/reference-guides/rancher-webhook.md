@@ -20,10 +20,16 @@ Rancher 将 Rancher-Webhook 作为单独的 deployment 和服务部署在 local 
 
 | Rancher Version | Webhook Version | Availability in Prime | Availability in Community |
 | --------------- | --------------- | --------------------- | ------------------------- |
-| v2.8.3          | v0.4.3          | &check;               | &check;                   |
-| v2.8.2          | v0.4.2          | &check;               | &check;                   |
-| v2.8.1          | v0.4.2          | &check;               | &check;                   |
-| v2.8.0          | v0.4.2          | &cross;               | &check;                   |
+| v2.8.9          |     v0.4.12     | &check;               | &cross;                   |
+| v2.8.8          |     v0.4.11     | &check;               | &cross;                   |
+| v2.8.7          |     v0.4.10     | &check;               | &cross;                   |
+| v2.8.6          |     v0.4.9      | &check;               | &cross;                   |
+| v2.8.5          |     v0.4.7      | &check;               | &check;                   |
+| v2.8.4          |     v0.4.5      | &check;               | &check;                   |
+| v2.8.3          |     v0.4.3      | &check;               | &check;                   |
+| v2.8.2          |     v0.4.2      | &check;               | &check;                   |
+| v2.8.1          |     v0.4.2      | &check;               | &check;                   |
+| v2.8.0          |     v0.4.2      | &cross;               | &check;                   |
 
 ## 为什么我们需要它？
 
@@ -119,6 +125,8 @@ webhook 在 [namespaces](https://github.com/rancher/webhook/blob/release/v0.4/do
   - 此选项将引入安全风险，因为运营商现在将能够为其有权访问的命名空间设置 PSA。这可能允许操作员部署特权 Pod，或通过其他方式实现集群接管。
 - 具有适当权限的用户帐户可以使用适当的配置预先创建命名空间。
   - 此选项取决于应用程序处理现有资源的能力。
+
+Another one of these validations ensures that the user has the proper permissions to update the `field.cattle.io/projectId` annotation on a namespace. This is the `manage-namespaces` permission for `projects` in `management.cattle.io`.
 
 ## 特定版本的问题
 

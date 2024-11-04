@@ -291,7 +291,7 @@ You can enable notifications to any notifiers based on the build status of a pip
 
 1. Select the conditions for the notification. You can select to get a notification for the following statuses: `Failed`, `Success`, `Changed`. For example, if you want to receive notifications when an execution fails, select **Failed**.
 
-1. If you don't have any existing notifiers, Rancher will provide a warning that no notifiers are set up and provide a link to be able to go to the notifiers page. Follow the [instructions](../../../version-2.0-2.4/explanations/integrations-in-rancher/notifiers.md) to add a notifier. If you  already have notifiers, you can add them to the notification by clicking the **Add Recipient** button.
+1. If you don't have any existing notifiers, Rancher will provide a warning that no notifiers are set up and provide a link to be able to go to the notifiers page. Follow the [instructions](https://github.com/rancher/rancher-docs/tree/main/archived_docs/version-2.0-2.4/explanations/integrations-in-rancher/notifiers.md) to add a notifier. If you  already have notifiers, you can add them to the notification by clicking the **Add Recipient** button.
 
     :::note
 

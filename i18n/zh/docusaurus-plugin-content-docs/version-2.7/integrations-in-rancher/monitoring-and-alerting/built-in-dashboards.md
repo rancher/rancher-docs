@@ -114,4 +114,4 @@ Alertmanager UI 可让你查看最近触发的告警。
 
 ## 旧版 UI
 
-有关在引入 `rancher-monitoring` 应用程序之前 Rancher v2.2 到 v2.4 中可用仪表板的信息，请参阅 [Rancher v2.0—v2.4 文档](/versioned_docs/version-2.0-2.4/explanations/integrations-in-rancher/cluster-monitoring/viewing-metrics.md)。
+有关在引入 `rancher-monitoring` 应用程序之前 Rancher v2.2 到 v2.4 中可用仪表板的信息，请参阅 [Rancher v2.0—v2.4 文档](https://github.com/rancher/rancher-docs/tree/main/archived_docs/version-2.0-2.4/explanations/integrations-in-rancher/cluster-monitoring/viewing-metrics.md)。

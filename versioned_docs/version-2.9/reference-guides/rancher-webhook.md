@@ -20,6 +20,7 @@ Each Rancher version is designed to be compatible with a single version of the w
 
 | Rancher Version | Webhook Version | Availability in Prime | Availability in Community |
 |-----------------|-----------------|-----------------------|---------------------------|
+| v2.9.3          |     v0.5.3      | &check;               | &check;                   |
 | v2.9.2          |     v0.5.2      | &check;               | &check;                   |
 | v2.9.1          |     v0.5.1      | &check;               | &check;                   |
 | v2.9.0          |     v0.5.0      | &cross;               | &check;                   |
@@ -125,6 +126,8 @@ The webhook provides extra validations on [namespaces](https://github.com/ranche
   - This option will introduce security risks, since the operator will now be able to set the PSA for the namespaces it has access to. This could allow the operator to deploy a privileged pod, or effect cluster takeover through other means.
 - A user account with the proper permissions can pre-create the namespace with the appropriate configuration.
   - This option depends on the ability of the application to handle existing resources.
+
+Another one of these validations ensures that the user has the proper permissions to update the `field.cattle.io/projectId` annotation on a namespace. This is the `manage-namespaces` permission for `projects` in `management.cattle.io`.
 
 ## Issues on Specific Versions
 

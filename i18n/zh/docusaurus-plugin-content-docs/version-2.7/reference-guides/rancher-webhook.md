@@ -19,20 +19,24 @@ Rancher 将 Rancher-Webhook 作为单独的 deployment 和服务部署在 local 
 <!-- releaseTask -->
 
 | Rancher Version | Webhook Version | Availability in Prime | Availability in Community |
-| --------------- | --------------- | --------------------- | ------------------------- |
-| v2.7.12         | v0.3.7          | &check;               | N/A                       |
-| v2.7.11         | v0.3.7          | &check;               | N/A                       |
-| v2.7.10         | v0.3.6          | &check;               | &check;                   |
-| v2.7.9          | v0.3.6          | &cross;               | &check;                   |
-| v2.7.8          | v0.3.6          | &cross;               | &check;                   |
-| v2.7.7          | v0.3.6          | &check;               | &check;                   |
-| v2.7.6          | v0.3.5          | &check;               | &check;                   |
-| v2.7.5          | v0.3.5          | &check;               | &check;                   |
-| v2.7.4          | v0.3.4          | &check;               | &check;                   |
-| v2.7.3          | v0.3.3          | &check;               | &check;                   |
-| v2.7.2          | v0.3.2          | &check;               | &check;                   |
-| v2.7.1          | v0.3.0          | &check;               | &check;                   |
-| v2.7.0          | v0.3.0          | &check;               | &check;                   |
+|-----------------|-----------------|-----------------------|---------------------------|
+| v2.7.16         |     v0.3.12     | &check;               | N/A                       |
+| v2.7.15         |     v0.3.11     | &check;               | N/A                       |
+| v2.7.14         |     v0.3.11     | &check;               | N/A                       |
+| v2.7.13         |     v0.3.8      | &check;               | N/A                       |
+| v2.7.12         |     v0.3.7      | &check;               | N/A                       |
+| v2.7.11         |     v0.3.7      | &check;               | N/A                       |
+| v2.7.10         |     v0.3.6      | &check;               | &check;                   |
+| v2.7.9          |     v0.3.6      | &cross;               | &check;                   |
+| v2.7.8          |     v0.3.6      | &cross;               | &check;                   |
+| v2.7.7          |     v0.3.6      | &check;               | &check;                   |
+| v2.7.6          |     v0.3.5      | &check;               | &check;                   |
+| v2.7.5          |     v0.3.5      | &check;               | &check;                   |
+| v2.7.4          |     v0.3.4      | &check;               | &check;                   |
+| v2.7.3          |     v0.3.3      | &check;               | &check;                   |
+| v2.7.2          |     v0.3.2      | &check;               | &check;                   |
+| v2.7.1          |     v0.3.0      | &check;               | &check;                   |
+| v2.7.0          |     v0.3.0      | &check;               | &check;                   |
 
 ## 为什么我们需要它？
 
@@ -128,6 +132,8 @@ webhook 在 [namespaces](https://github.com/rancher/webhook/blob/release/v0.4/do
   - 此选项将引入安全风险，因为运营商现在将能够为其有权访问的命名空间设置 PSA。这可能允许操作员部署特权 Pod，或通过其他方式实现集群接管。
 - 具有适当权限的用户帐户可以使用适当的配置预先创建命名空间。
   - 此选项取决于应用程序处理现有资源的能力。
+
+Another one of these validations ensures that the user has the proper permissions to update the `field.cattle.io/projectId` annotation on a namespace. This is the `manage-namespaces` permission for `projects` in `management.cattle.io`.
 
 ## 特定版本的问题
 

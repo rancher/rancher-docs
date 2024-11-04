@@ -7,7 +7,7 @@ description: Prometheus 允许你查看来自不同 Rancher 和 Kubernetes 对�
 
 该应用程序在 Rancher v2.5 中引入，由 [Prometheus](https://prometheus.io/)、[Grafana](https://grafana.com/grafana/)、[Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/)、[Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator) 和 [Prometheus Adapter](https://github.com/DirectXMan12/k8s-prometheus-adapter) 提供支持。
 
-有关 Rancher v2.2 至 v2.4 中 V1 monitoring 和 alerting 的信息，请参阅有关[集群监控](/versioned_docs/version-2.0-2.4/pages-for-subheaders/cluster-monitoring.md)、[告警](/versioned_docs/version-2.0-2.4/pages-for-subheaders/cluster-alerts.md)、[notifiers](/versioned_docs/version-2.0-2.4/explanations/integrations-in-rancher/notifiers.md) 和其他[工具](/versioned_docs/version-2.0-2.4/pages-for-subheaders/project-tools.md)的 Rancher v2.0-v2.4 文档。
+有关 Rancher v2.2 至 v2.4 中 V1 monitoring 和 alerting 的信息，请参阅有关[集群监控](https://github.com/rancher/rancher-docs/tree/main/archived_docs/version-2.0-2.4/pages-for-subheaders/cluster-monitoring.md)、[告警](https://github.com/rancher/rancher-docs/tree/main/archived_docs/version-2.0-2.4/pages-for-subheaders/cluster-alerts.md)、[notifiers](https://github.com/rancher/rancher-docs/tree/main/archived_docs/version-2.0-2.4/explanations/integrations-in-rancher/notifiers.md) 和其他[工具](https://github.com/rancher/rancher-docs/tree/main/archived_docs/version-2.0-2.4/pages-for-subheaders/project-tools.md)的 Rancher v2.0-v2.4 文档。
 
 你可以使用 `rancher-monitoring` 应用，将业界领先的开源监控和告警解决方案快速部署到你的集群中。
 
