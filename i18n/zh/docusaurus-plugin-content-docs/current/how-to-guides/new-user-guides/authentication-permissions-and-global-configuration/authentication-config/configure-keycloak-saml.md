@@ -188,3 +188,7 @@ openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout myservice.ke
 
 * 检查你的 Keycloak 日志。
 * 如果日志显示 `request validation failed: org.keycloak.common.VerificationException: SigAlg was null`，请在 Keycloak 客户端中将 `Client Signature Required` 设为 `OFF`。
+
+## Configuring SAML Single Logout (SLO)
+
+<ConfigureSLO />
