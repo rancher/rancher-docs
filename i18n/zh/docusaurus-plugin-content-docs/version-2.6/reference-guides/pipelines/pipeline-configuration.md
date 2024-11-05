@@ -291,7 +291,7 @@ timeout: 30
 
 1. 选择通知的条件。你可以选择接收以下状态的通知：`失败`、`成功`或`已更改`。例如，如果你想在执行失败时接收通知，请选择**失败**。
 
-1. 如果你没有现有的通知器，Rancher 会提示未设置通知器的警告，并显示跳转到通知器页面的链接。你可以按照[说明](https://github.com/rancher/rancher-docs/tree/main/archived_docs/version-2.0-2.4/explanations/integrations-in-rancher/notifiers.md)添加通知器。如果你已经有通知器，你可以单击**添加收件人**按钮，将他们添加到通知中。
+1. 如果你没有现有的通知器，Rancher 会提示未设置通知器的警告，并显示跳转到通知器页面的链接。你可以按照[说明](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/explanations/integrations-in-rancher/notifiers.md)添加通知器。如果你已经有通知器，你可以单击**添加收件人**按钮，将他们添加到通知中。
 
    :::note
 
