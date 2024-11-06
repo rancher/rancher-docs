@@ -16,7 +16,7 @@ Rancher uses a catalog-like system to import bundles of charts from repositories
 
 ### Catalogs, Apps, and the Rancher UI
 
-[Rancher v2.4 and earlier](https://github.com/rancher/rancher-docs/tree/main/archived_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md), repositories of ready-to-deploy applications were called "catalogs". These repositories were managed through the **Catalogs** section of the UI. 
+[Rancher v2.4 and earlier](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md), repositories of ready-to-deploy applications were called "catalogs". These repositories were managed through the **Catalogs** section of the UI. 
 
 Rancher v2.5 replaced the former catalog system with a new **Apps & Marketplace** feature. 
 
