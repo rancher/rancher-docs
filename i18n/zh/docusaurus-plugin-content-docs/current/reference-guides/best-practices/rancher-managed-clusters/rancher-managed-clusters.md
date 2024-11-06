@@ -14,6 +14,10 @@ title: Rancher 管理集群的最佳实践
 
 配置合理的监控和告警规则对于安全、可靠地运行生产环境中的工作负载至关重要。有关更多建议，请参阅[最佳实践](monitoring-best-practices.md)。
 
+### Disconnected clusters
+
+Rancher supports managing clusters that may not always be online due to network disruptions, control plane availability, or because all cluster nodes are down. Refer to this [guide](disconnected-clusters.md) for our recommendations.
+
 ## 设置容器的技巧
 
 配置良好的容器可以极大地提高环境的整体性能和安全性。有关容器设置的建议，请参见[设置容器的技巧](tips-to-set-up-containers.md)。
