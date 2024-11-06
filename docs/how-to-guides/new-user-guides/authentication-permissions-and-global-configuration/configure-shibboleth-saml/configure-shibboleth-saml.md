@@ -77,6 +77,10 @@ If you configure Shibboleth without OpenLDAP, the following caveats apply due to
 
 To enable searching for groups when assigning permissions in Rancher, you will need to configure a back end for the SAML provider that supports groups, such as OpenLDAP.
 
+### Configuring SAML Single Logout (SLO)
+
+<ConfigureSLO />
+
 ## Setting up OpenLDAP in Rancher
 
 If you also configure OpenLDAP as the back end to Shibboleth, it will return a SAML assertion to Rancher with user attributes that include groups. Then authenticated users will be able to access resources in Rancher that their groups have permissions for.
