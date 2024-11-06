@@ -48,6 +48,7 @@ EOF
 ```
 
 Setting the `field.cattle.io/creatorId` field allows the cluster member account to see project resources with the `get` command and view the project in the Rancher UI. Cluster owner and admin accounts don't need to set this annotation to perform these tasks.
+
 Setting the  `field.cattle.io/creator-principal-name` annotation to the user's principal preserves it in a projectroletemplatebinding automatically created for the project owner.
 
 If you don't want the creator to be added as the owner member (e.g. if the creator is a cluster administrator) to the project you may set the `field.cattle.io/no-creator-rbac` annotation to `true`, which will prevent the corresponding projectroletemplatebinding from being created.
