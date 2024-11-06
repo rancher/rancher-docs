@@ -16,4 +16,4 @@ While a managed cluster is disconnected from Rancher, management operations will
 
 - **Cleaning Up Disconnected Clusters**: Regularly remove clusters that will no longer reconnect to Rancher (e.g., clusters that have been decommissioned or destroyed). Keeping such clusters in the Rancher management system consumes unnecessary resources, which could impact Rancher's performance over time.
 
-- **Certificate Rotation Considerations**: When designing processes that involve regularly shutting down clusters, whether connected to Rancher or not, keep into account for certificate rotation policies. For example, RKE/RKE2/k3s clusters may rotate certificates on startup if they exceeded their lifetime.
+- **Certificate Rotation Considerations**: When designing processes that involve regularly shutting down clusters, whether connected to Rancher or not, take into account certificate rotation policies. For example, RKE/RKE2/K3s clusters may rotate certificates on startup if they exceeded their lifetime.
