@@ -105,3 +105,7 @@ OpenLDAP ServiceAccount 用于所有搜索。无论用户个人的 SAML 权限�
 1. 在**用户和组搜索**下，选中**配置 OpenLDAP Server**。
 
 如果你在测试与 OpenLDAP Server 的连接时遇到问题，请确保你输入了ServiceAccount 的凭证并正确配置了搜索库。你可以检查 Rancher 日志来查明根本原因。调试日志可能包含有关错误的更详细信息。请参阅[如何启用调试日志](../../../../faq/technical-items.md#如何启用调试日志记录)了解更多信息。
+
+## Configuring SAML Single Logout (SLO)
+
+<ConfigureSLO />
