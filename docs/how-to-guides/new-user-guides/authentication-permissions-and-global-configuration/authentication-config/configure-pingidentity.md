@@ -64,7 +64,3 @@ Note that these URLs will not return valid data until the authentication configu
 - The group drop-down shows only the groups that you are a member of. You will not be able to add groups that you are not a member of.
 
 :::
-
-## Configuring SAML Single Logout (SLO)
-
-<ConfigureSLO />

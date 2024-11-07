@@ -31,5 +31,6 @@ Rancher contains a variety of tools that aren't included in Kubernetes to assist
 - Logging
 - Monitoring
 - Istio Service Mesh
+- OPA Gatekeeper
 
 Tools can be installed through **Apps.**

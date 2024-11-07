@@ -76,10 +76,6 @@ SAML 协议不支持用户或用户组的搜索或查找。因此，如果你没
 
 要在 Rancher 中分配权限时启用搜索组，你需要为 SAML 身份认证服务配置支持组的后端（例如 OpenLDAP）。
 
-### Configuring SAML Single Logout (SLO)
-
-<ConfigureSLO />
-
 # 在 Rancher 中设置 OpenLDAP
 
 如果你将 OpenLDAP 配置为 Shibboleth 的后端，SAML 断言会返回到 Rancher，其中包括用于引用组的用户属性。然后，通过认证的用户将能够访问其所在的组有权访问的 Rancher 资源。

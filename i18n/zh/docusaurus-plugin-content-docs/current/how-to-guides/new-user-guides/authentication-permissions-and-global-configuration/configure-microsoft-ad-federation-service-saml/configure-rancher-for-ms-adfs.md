@@ -51,7 +51,3 @@ title: 2. 在 Rancher 中配置 Microsoft AD FS
 ```
 openssl req -x509 -newkey rsa:2048 -keyout myservice.key -out myservice.cert -days 365 -nodes -subj "/CN=myservice.example.com"
 ```
-
-## Configuring SAML Single Logout (SLO)
-
-<ConfigureSLO />

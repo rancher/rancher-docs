@@ -60,7 +60,3 @@ title: 配置 PingIdentity (SAML)
 - 用户组下拉列表仅显示你所属的用户组。如果你不是某个组的成员，你将无法添加该组。
 
 :::
-
-## Configuring SAML Single Logout (SLO)
-
-<ConfigureSLO />

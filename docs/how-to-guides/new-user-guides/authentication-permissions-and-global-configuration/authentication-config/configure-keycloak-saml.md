@@ -192,7 +192,3 @@ Try configuring and saving keycloak as your SAML provider and then accessing the
 
   * Check your Keycloak log.
   * If the log displays `request validation failed: org.keycloak.common.VerificationException: SigAlg was null`, set `Client Signature Required` to `OFF` in your Keycloak client.
-
-## Configuring SAML Single Logout (SLO)
-
-<ConfigureSLO />

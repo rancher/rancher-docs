@@ -108,7 +108,3 @@ The OpenLDAP service account is used for all searches. Rancher users will see us
 1. Under **User and Group Search**, check **Configure an OpenLDAP server**
 
 If you experience issues when you test the connection to the OpenLDAP server, ensure that you entered the credentials for the service account and configured the search base correctly. Inspecting the Rancher logs can help pinpoint the root cause. Debug logs may contain more detailed information about the error. Please refer to [How can I enable debug logging](../../../../faq/technical-items.md#how-can-i-enable-debug-logging) for more information.
-
-## Configuring SAML Single Logout (SLO)
-
-<ConfigureSLO />

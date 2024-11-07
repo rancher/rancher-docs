@@ -9,7 +9,7 @@ PSS 定义了工作负载的安全级别。PSA 描述了 Pod 安全上下文和�
 
 ## 升级到 Pod 安全标准 (PSS)
 
-确保将所有 PSP 都迁移到了另一个工作负载安全机制，包括将你当前的 PSP 映射到 Pod 安全标准，以便使用 [PSA 控制器](https://kubernetes.io/docs/concepts/security/pod-security-admission/)执行。如果 PSA 控制器不能满足企业的所有需求，建议你使用策略引擎，例如 [Kubewarden](https://www.kubewarden.io/)、[Kyverno](https://kyverno.io/) 或 [NeuVector](https://neuvector.com/)。有关如何迁移 PSP 的更多信息，请参阅你选择的策略引擎的文档。
+确保将所有 PSP 都迁移到了另一个工作负载安全机制，包括将你当前的 PSP 映射到 Pod 安全标准，以便使用 [PSA 控制器](https://kubernetes.io/docs/concepts/security/pod-security-admission/)执行。如果 PSA 控制器不能满足企业的所有需求，建议你使用策略引擎，例如 [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper)、[Kubewarden](https://www.kubewarden.io/)、[Kyverno](https://kyverno.io/) 或 [NeuVector](https://neuvector.com/)。有关如何迁移 PSP 的更多信息，请参阅你选择的策略引擎的文档。
 
 :::caution
 必须在删除 PodSecurityPolicy 对象_之前_添加新的策略执行机制。否则，你可能会为集群内的特权升级攻击创造机会。

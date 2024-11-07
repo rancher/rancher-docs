@@ -4,6 +4,7 @@ title: 集群工具：Logging，Monitoring 和可视化
 
 Rancher 包含 Kubernetes 中未包含的各种工具来协助你进行 DevOps 操作。Rancher 可以与外部服务集成，让你的集群更高效地运行。工具分为以下几类：
 
+
 ## Logging
 
 Logging 支持：
@@ -17,7 +18,6 @@ Logging 支持：
 Rancher 可以与 Elasticsearch、splunk、kafka、syslog 和 fluentd 集成。
 
 有关详细信息，请参阅 [Logging 文档](../integrations-in-rancher/logging/logging.md)。
-
 ## 监控和告警
 
 你可以使用 Rancher，通过业界领先并开源的 [Prometheus](https://prometheus.io/) 来监控集群节点、Kubernetes 组件和软件部署的状态和进程。
@@ -37,6 +37,9 @@ Rancher 可以与 Elasticsearch、splunk、kafka、syslog 和 fluentd 集成。
 Rancher v2.5 改进了与 Istio 的集成。
 
 如需更多信息，请参阅 [Istio 文档](..//integrations-in-rancher/istio/istio.md)。
+## OPA Gatekeeper
+
+[OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper) 是一个开源项目，它对 OPA 和 Kubernetes 进行了集成，以通过许可控制器 Webhook 提供策略控制。有关如何在 Rancher 中启用 Gatekeeper 的详细信息，请参阅 [OPA Gatekeeper](../integrations-in-rancher/opa-gatekeeper.md)。
 
 ## CIS 扫描
 

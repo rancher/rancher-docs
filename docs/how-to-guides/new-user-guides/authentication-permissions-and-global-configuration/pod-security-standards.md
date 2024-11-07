@@ -13,7 +13,7 @@ PSS define security levels for workloads. PSAs describe requirements for pod sec
 
 ## Upgrade to Pod Security Standards (PSS)
 
-Ensure that you migrate all PSPs to another workload security mechanism. This includes mapping your current PSPs to Pod Security Standards for enforcement with the [PSA controller](https://kubernetes.io/docs/concepts/security/pod-security-admission/). If the PSA controller won't meet all of your organization's needs, we recommend that you use a policy engine, such as [Kubewarden](https://www.kubewarden.io/), [Kyverno](https://kyverno.io/), or [NeuVector](https://neuvector.com/). Refer to the documentation of your policy engine of choice for more information on how to migrate from PSPs.
+Ensure that you migrate all PSPs to another workload security mechanism. This includes mapping your current PSPs to Pod Security Standards for enforcement with the [PSA controller](https://kubernetes.io/docs/concepts/security/pod-security-admission/). If the PSA controller won't meet all of your organization's needs, we recommend that you use a policy engine, such as [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper), [Kubewarden](https://www.kubewarden.io/), [Kyverno](https://kyverno.io/), or [NeuVector](https://neuvector.com/). Refer to the documentation of your policy engine of choice for more information on how to migrate from PSPs.
 
 :::caution
 You must add your new policy enforcement mechanisms _before_ you remove the PodSecurityPolicy objects. If you don't, you may create an opportunity for privilege escalation attacks within the cluster.
