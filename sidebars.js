@@ -845,8 +845,7 @@ const sidebars = {
                 "reference-guides/best-practices/rancher-managed-clusters/logging-best-practices",
                 "reference-guides/best-practices/rancher-managed-clusters/monitoring-best-practices",
                 "reference-guides/best-practices/rancher-managed-clusters/tips-to-set-up-containers",
-                "reference-guides/best-practices/rancher-managed-clusters/rancher-managed-clusters-in-vsphere",
-                "reference-guides/best-practices/rancher-managed-clusters/disconnected-clusters"
+                "reference-guides/best-practices/rancher-managed-clusters/rancher-managed-clusters-in-vsphere"
               ]
             }
           ]
