@@ -1,5 +1,9 @@
 Rancher supports the ability to configure SAML SLO. Options include logging out of the Rancher application only, logging out of Rancher and registered applications tied to the external authentication provider, or a prompt asking the user to choose between the previous options. The steps below outline configuration from the application GUI:
 
+:::note
+The **Log Out behavior** configuration section only appears if the SAML authentication provider allows for `SAML SLO`.
+:::
+
 1. Sign in to Rancher using a standard user or an administrator role to configure SAML SLO.
 1. In the top left corner, click **☰ > Users & Authentication**.
 1. In the left navigation menu, click **Auth Provider**.
