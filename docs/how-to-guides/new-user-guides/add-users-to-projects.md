@@ -33,9 +33,9 @@ Following project creation, you can add users as project members so that they ca
 
     :::note Notes:
 
-    - At least 2 characters must be typed in the search box for results to appear
-    - Users can be searched based on their username or display name
-    - Search is prefix-based (eg. a user named `Stan Dard` will appear when searching for `Sta`, but not when searching for `Dar`) and case-sensitive
+    - At least 2 characters must be typed in the search box for results to appear.
+    - Users can be searched based on their username or display name.
+    - Search is prefix-based (e.g., a user named `Stan Dard` will appear when searching for `Sta`, but not when searching for `Dar`) and case-sensitive.
 
     :::
 

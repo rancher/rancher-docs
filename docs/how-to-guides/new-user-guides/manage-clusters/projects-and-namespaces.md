@@ -172,9 +172,9 @@ To add members:
 
     :::note Notes:
 
-    - At least 2 characters must be typed in the search box for results to appear
-    - Users can be searched based on their username or display name
-    - Search is prefix-based (eg. a user named `Stan Dard` will appear when searching for `Sta`, but not when searching for `Dar`) and case-sensitive
+    - At least 2 characters must be typed in the search box for results to appear.
+    - Users can be searched based on their username or display name.
+    - Search is prefix-based (e.g., a user named `Stan Dard` will appear when searching for `Sta`, but not when searching for `Dar`) and case-sensitive.
 
     :::
 1. In the **Project Permissions** section, choose a role. For more information, refer to the [documentation on project roles.](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)
