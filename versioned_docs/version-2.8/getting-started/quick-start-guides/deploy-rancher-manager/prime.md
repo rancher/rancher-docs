@@ -11,3 +11,5 @@ SUSE Rancher introduces Rancher Prime – an evolution of Rancher – from versi
 Prime also offers options for production support, as well as add-ons to your subscription that tailor to your commercial needs.
 
 To learn more and get started with Rancher Prime, please visit [this page](https://www.rancher.com/quick-start).
+
+At a minimum, users are expected to have a working knowledge of Kubernetes and peripheral functions such as Permissions, Roles and RBAC.
