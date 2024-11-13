@@ -53,8 +53,7 @@ To display prerelease versions:
 | rancher-alerting-drivers | 100.0.0 | 100.0.2 |
 | rancher-backup | 2.0.1 | 2.1.2 |
 | rancher-cis-benchmark | 2.0.1 | 2.0.4 |
-| rancher-gatekeeper | 100.0.0+up3.6.0 | 100.1.0+up3.7.1 |
-| rancher-istio | 100.0.0+up1.10.4 | 100.3.0+up1.13.3 |
+| rancher-istio | 105.0.0+up1.19.6 | 105.4.0+up1.23.2 |
 | rancher-logging | 100.0.0+up3.12.0 | 100.1.2+up3.17.4 |
 | rancher-longhorn | 100.0.0+up1.1.2 | 100.1.2+up1.2.4 |
 | rancher-monitoring | 100.0.0+up16.6.0 | 100.1.2+up19.0.3 |
