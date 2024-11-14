@@ -95,12 +95,6 @@ kubectl rollout status deployment -n cattle-system rancher
 
 You can now navigate to `https://rancher.example.com` and start using Rancher.
 
-:::caution
-
-If you don't intend to send telemetry data, opt out [telemetry](../../../../faq/telemetry.md) during the initial login. Leaving this active in an air-gapped environment can cause issues if the sockets cannot be opened successfully.
-
-:::
-
 ### Additional Resources
 
 These resources could be helpful when installing Rancher:
