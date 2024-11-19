@@ -147,7 +147,7 @@ helm rollback rancher 3 -n cattle-system
 
 ## 回滚到 Rancher 2.2-2.4+
 
-要回滚到 2.5 之前的 Rancher 版本，参考此处的步骤[恢复备份 — Kubernetes 安装](https://github.com/rancher/rancher-docs/tree/main/archived_docs/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md)。如果恢复 Rancher Server 的集群的某个快照，Rancher 的版本以及状态均会恢复回到快照时的版本和状态。
+要回滚到 2.5 之前的 Rancher 版本，参考此处的步骤[恢复备份 — Kubernetes 安装](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md)。如果恢复 Rancher Server 的集群的某个快照，Rancher 的版本以及状态均会恢复回到快照时的版本和状态。
 
 有关回滚 Docker 安装的 Rancher，请参见[本页](../other-installation-methods/rancher-on-a-single-node-with-docker/roll-back-docker-installed-rancher.md)。
 
@@ -159,4 +159,4 @@ helm rollback rancher 3 -n cattle-system
 
 ## 回滚到 Rancher 2.0-2.1
 
-我们不再支持回滚到 Rancher 2.0-2.1。回滚到这些版本的说明保留在[此处](https://github.com/rancher/rancher-docs/tree/main/archived_docs/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup/roll-back-to-v2.0-v2.1.md)，仅用于无法升级到 v2.2 的情况。
+我们不再支持回滚到 Rancher 2.0-2.1。回滚到这些版本的说明保留在[此处](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup/roll-back-to-v2.0-v2.1.md)，仅用于无法升级到 v2.2 的情况。

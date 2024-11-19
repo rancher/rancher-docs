@@ -16,7 +16,7 @@ Rancher uses a catalog-like system to import bundles of charts from repositories
 
 ### Catalogs, Apps, and the Rancher UI
 
-[Rancher v2.4 and earlier](https://github.com/rancher/rancher-docs/tree/main/archived_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md), repositories of ready-to-deploy applications were called "catalogs". These repositories were managed through the **Catalogs** section of the UI. 
+[Rancher v2.4 and earlier](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md), repositories of ready-to-deploy applications were called "catalogs". These repositories were managed through the **Catalogs** section of the UI. 
 
 Rancher v2.5 replaced the former catalog system with a new **Apps & Marketplace** feature. 
 
@@ -53,8 +53,7 @@ To display prerelease versions:
 | rancher-alerting-drivers | 100.0.0 | 100.0.2 |
 | rancher-backup | 2.0.1 | 2.1.2 |
 | rancher-cis-benchmark | 2.0.1 | 2.0.4 |
-| rancher-gatekeeper | 100.0.0+up3.6.0 | 100.1.0+up3.7.1 |
-| rancher-istio | 100.0.0+up1.10.4 | 100.3.0+up1.13.3 |
+| rancher-istio | 105.0.0+up1.19.6 | 105.4.0+up1.23.2 |
 | rancher-logging | 100.0.0+up3.12.0 | 100.1.2+up3.17.4 |
 | rancher-longhorn | 100.0.0+up1.1.2 | 100.1.2+up1.2.4 |
 | rancher-monitoring | 100.0.0+up16.6.0 | 100.1.2+up19.0.3 |
@@ -194,6 +193,42 @@ Non-Airgap Rancher installations upon refresh will reflect any chart repository 
 
 Airgap installations where Rancher is configured to use the packaged copy of Helm system charts ([`useBundledSystemChart=true`](../../../getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha.md#helm-chart-options-for-air-gap-installations)) will only refer to the [system-chart](https://github.com/rancher/system-charts) repository that comes bundled and will not be able to be refreshed or synced.
 
+#### Refresh Interval
+
+Rancher v2.10.0 adds the `refreshInterval` field to the `ClusterRepo` CRD. The default value is 3600 seconds, meaning that Rancher syncs each Helm repository every 3600 seconds.
+
+To modify the refresh interval of a chart repository:
+
+1. Click **☰ > Cluster Management**.
+1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
+1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
+1. Find the repository you want to modify, and click **⋮ > Edit YAML**.
+1. Set the **refreshInterval** field under **Spec** to the desired value in seconds.
+1. Click **Save**.
+
+### Enable/Disable Helm Chart Repositories
+
+Rancher v2.10.0 adds the ability to enable and disable Helm repositories. Helm repositories are enabled by default.
+
+To disable a chart repository:
+
+1. Click **☰ > Cluster Management**.
+1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
+1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
+1. Find the repository you want to disable, and click **⋮ > Edit YAML**.
+1. Set the **Enabled** field under **Spec** to **false**.
+1. Click **Save**.
+1. When you disable a repository, updates are disabled and new changes to the clusterRepo are not applied.
+
+To enable a chart repository:
+
+1. Click **☰ > Cluster Management**.
+1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
+1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Repositories**.
+1. Find the repository you want to disable, and click **⋮ > Edit YAML**.
+1. Set the **Enabled** field under **Spec** to **true**.
+1. Click **Save**.
+
 ## Deploy and Upgrade Charts
 
 To install and deploy a chart:
@@ -201,7 +236,7 @@ To install and deploy a chart:
 1. Click **☰ > Cluster Management**.
 1. Find the name of the cluster whose repositories you want to access. Click **Explore** at the end of the cluster's row.
 1. In the left navigation menu on the **Cluster Dashboard**, click **Apps > Charts**.
-1. Select a chart, and click **Install**. 
+1. Select a chart, and click **Install**.
 
 Rancher and Partner charts may have extra configurations available through custom pages or questions.yaml files. However, all chart installations can modify the values.yaml and other basic settings. After you click **Install**, a Helm operation job is deployed, and the console for the job is displayed.
 

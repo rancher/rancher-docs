@@ -24,6 +24,8 @@ Yes. Rancher supports [Istio](../integrations-in-rancher/istio/istio.md).
 
 ## Will Rancher v2.x support Hashicorp's Vault for storing secrets?
 
+As of Rancher v2.9, Rancher [supports authentication with service account tokens](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/jwt-authentication.md), which is used by Vault and other integrations.
+
 Secrets management is on our roadmap but we haven't assigned it to a specific release yet.
 
 ## Does Rancher v2.x support RKT containers as well?

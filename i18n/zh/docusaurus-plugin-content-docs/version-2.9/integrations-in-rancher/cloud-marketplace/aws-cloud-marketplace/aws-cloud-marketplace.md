@@ -10,6 +10,10 @@ title: AWS Marketplace 集成
 
 Rancher 提供与 AWS Marketplace 的集成，允许用户购买 SUSE 的支持合同。当你开始支持更多集群时，这种集成使你可以轻松调整支持需求。
 
+## Required Skills
+
+At a minimum, users are expected to have a working knowledge of EKS and peripheral functions such as IAM Policies and Roles, Route 53 DNS, and the use of awscli and Helm commands.
+
 ## 限制
 
 - 你必须运行 Rancher v2.6.7 或更高版本。

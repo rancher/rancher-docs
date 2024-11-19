@@ -117,7 +117,7 @@ helm rollback rancher 3 -n cattle-system
 
 ## Rolling Back to Rancher v2.2-v2.4+
 
-To roll back to Rancher before v2.5, follow the procedure detailed here: [Restoring Backups — Kubernetes installs](https://github.com/rancher/rancher-docs/tree/main/archived_docs/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md) Restoring a snapshot of the Rancher server cluster will revert Rancher to the version and state at the time of the snapshot.
+To roll back to Rancher before v2.5, follow the procedure detailed here: [Restoring Backups — Kubernetes installs](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md) Restoring a snapshot of the Rancher server cluster will revert Rancher to the version and state at the time of the snapshot.
 
 For information on how to roll back Rancher installed with Docker, refer to [this page.](../other-installation-methods/rancher-on-a-single-node-with-docker/roll-back-docker-installed-rancher.md)
 
@@ -129,4 +129,4 @@ Managed clusters are authoritative for their state. This means restoring the Ran
 
 ## Rolling Back to Rancher v2.0-v2.1
 
-Rolling back to Rancher v2.0-v2.1 is no longer supported. The instructions for rolling back to these versions are preserved [here](https://github.com/rancher/rancher-docs/tree/main/archived_docs/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup/roll-back-to-v2.0-v2.1.md) and are intended to be used only in cases where upgrading to Rancher v2.2+ is not feasible.
+Rolling back to Rancher v2.0-v2.1 is no longer supported. The instructions for rolling back to these versions are preserved [here](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup/roll-back-to-v2.0-v2.1.md) and are intended to be used only in cases where upgrading to Rancher v2.2+ is not feasible.
