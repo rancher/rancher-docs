@@ -23,6 +23,7 @@ The following is a list of feature flags available in Rancher. If you've upgrade
 - `harvester`: Manages access to the Virtualization Management page, where users can navigate directly to Harvester clusters and access the Harvester UI. See [Harvester Integration Overview](../../../integrations-in-rancher/harvester/overview.md) for more information.
 - `istio-virtual-service-ui`: Enables a [visual interface](../../../how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features.md) to create, read, update, and delete Istio virtual services and destination rules, which are Istio traffic management features.
 - `legacy`: Enables a set of features from 2.5.x and earlier, that are slowly being phased out in favor of newer implementations. These are a mix of deprecated features as well as features that will eventually be available to newer versions. This flag is disabled by default on new Rancher installations. If you're upgrading from a previous version of Rancher, this flag is enabled.
+- `managed-system-upgrade-controller`: Enables the installation of the system-upgrade-controller app in downstream RKE2/K3s clusters, currently limited to imported clusters and the local cluster, with plans to expand support to node-driver clusters.
 - `multi-cluster-management`: Allows multi-cluster provisioning and management of Kubernetes clusters. This flag can only be set at install time. It can't be enabled or disabled later.
 - `rke1-custom-node-cleanup`: Enables cleanup of deleted RKE1 custom nodes. We recommend that you keep this flag enabled, to prevent removed nodes from attempting to rejoin the cluster.
 - `rke2`: Enables provisioning RKE2 clusters. This flag is enabled by default.
@@ -42,8 +43,9 @@ The following table shows the availability and default values for some feature f
 | `fleet`  | `true` | GA | v2.5.0 | |
 | `harvester` | `true` | Experimental | v2.6.1 | |
 | `legacy` | `false` for new installs, `true` for upgrades | GA | v2.6.0 | |
+| `managed-system-upgrade-controller` | `true` | GA | v2.10.0 | |
 | `rke1-custom-node-cleanup`| `true` | GA | v2.6.0 | |
 | `rke2` | `true` | Experimental | v2.6.0 | |
 | `token-hashing` | `false` for new installs, `true` for upgrades | GA | v2.6.0 | |
-| `uiextension` | `true` | GA | v2.9.0 |
-| `ui-sql-cache` | `false` | Highly experimental | v2.9.0 |
+| `uiextension` | `true` | GA | v2.9.0 | |
+| `ui-sql-cache` | `false` | Highly experimental | v2.9.0 | |

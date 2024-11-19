@@ -3,8 +3,8 @@ The following table summarizes different GitHub metrics to give you an idea of e
 
 | Provider | Project | Stars | Forks | Contributors |
 | ---- | ---- | ---- | ---- | ---- |
-| Canal | https://github.com/projectcalico/canal | 716 | 100 | 20 |
-| Flannel | https://github.com/flannel-io/flannel | 8.8k | 2.9k | 234 |
-| Calico | https://github.com/projectcalico/calico | 6.0k | 1.3k | 353 |
-| Weave | https://github.com/weaveworks/weave/ | 6.6k | 670 | 85 |
-| Cilium | https://github.com/cilium/cilium | 20.0k | 2.9k | 832 |
+| Canal | https://github.com/projectcalico/canal | 717 | 100 | 20 |
+| Flannel | https://github.com/flannel-io/flannel | 8.8k | 2.9k | 235 |
+| Calico | https://github.com/projectcalico/calico | 6.0k | 1.3k | 356 |
+| Weave | https://github.com/weaveworks/weave/ | 6.6k | 670 | 84 |
+| Cilium | https://github.com/cilium/cilium | 20.2k | 3k | 853 |

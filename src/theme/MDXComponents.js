@@ -11,6 +11,7 @@ import DeprecationOPAGatekeeper from '/shared-files/_deprecation-opa-gatekeeper.
 import DeprecationWeave from '/shared-files/_deprecation-weave.md';
 import DeprecationHelm2 from '/shared-files/_deprecation-helm2.md';
 import DockerSupportWarning from '/shared-files/_docker-support-warning.md';
+import ConfigureSLO from '/shared-files/_configure-slo.md';
 
 export default {
   // Re-use the default mapping
@@ -23,6 +24,7 @@ export default {
   Card,
 
   CNIPopularityTable,
+  ConfigureSLO,
   DeprecationOPAGatekeeper,
   DeprecationWeave,
   DeprecationHelm2,

@@ -1293,7 +1293,6 @@ const sidebars = {
             "integrations-in-rancher/monitoring-and-alerting/promql-expressions",
           ]
         },
-        "integrations-in-rancher/opa-gatekeeper",
         "integrations-in-rancher/rancher-extensions",
       ]
     },
