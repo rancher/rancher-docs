@@ -19,7 +19,5 @@ Rancher Server 的数据存储在 etcd 中。etcd 数据库可以在所有三个
 - Ingress Controller 会把 HTTP 重定向到 HTTPS，在 TCP/443 端口终结 SSL/TLS。
 - Ingress Controller 会把流量转发到 Rancher deployment 的 Pod 上的 TCP/80 端口。
 
-<figcaption>使用 4 层负载均衡器在 Kubernetes 集群中安装 Rancher：Ingress Controller 的 SSL 终止：</figcaption>
-
 ![Rancher 的高可用 Kubernetes 安装](/img/ha/rancher2ha.svg)
 <sup>使用 4 层负载均衡器在 Kubernetes 集群中安装 Rancher：Ingress Controller 的 SSL 终止</sup>
