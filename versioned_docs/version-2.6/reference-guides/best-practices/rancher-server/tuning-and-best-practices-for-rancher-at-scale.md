@@ -139,5 +139,5 @@ At high scale, Rancher transfers more data from the upstream cluster to UI compo
 For best performance, ensure that the host running the hardware meets these requirements:
  - 2020 i5 10th generation Intel (4 cores) or equivalent
  - 8 GB RAM
- - Total network bandwith to the upstream cluster: 72 Mb/s (equivalent to a single 802.11n Wi-Fi 4 link stream, ~8 MB/s http download throughput)
+ - Total network bandwidth to the upstream cluster: 72 Mb/s (equivalent to a single 802.11n Wi-Fi 4 link stream, ~8 MB/s http download throughput)
  - Round-trip time (ping time) from browser to upstream cluster: 150 ms or less
