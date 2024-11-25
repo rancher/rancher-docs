@@ -105,113 +105,114 @@ Resource targeting uses `*` as the ARN of many of the resources created cannot b
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "EC2Permissions",
-            "Effect": "Allow",
-            "Action": [
-                "ec2:RunInstances",
-                "ec2:RevokeSecurityGroupIngress",
-                "ec2:RevokeSecurityGroupEgress",
-                "ec2:DescribeInstanceTypes",
-                "ec2:DescribeRegions",
-                "ec2:DescribeVpcs",
-                "ec2:DescribeTags",
-                "ec2:DescribeSubnets",
-                "ec2:DescribeSecurityGroups",
-                "ec2:DescribeRouteTables",
-                "ec2:DescribeLaunchTemplateVersions",
-                "ec2:DescribeLaunchTemplates",
-                "ec2:DescribeKeyPairs",
-                "ec2:DescribeInternetGateways",
-                "ec2:DescribeImages",
-                "ec2:DescribeAvailabilityZones",
-                "ec2:DescribeAccountAttributes",
-                "ec2:DeleteTags",
-                "ec2:DeleteLaunchTemplateVersions",
-                "ec2:DeleteLaunchTemplate",
-                "ec2:DeleteSecurityGroup",
-                "ec2:DeleteKeyPair",
-                "ec2:CreateTags",
-                "ec2:CreateSecurityGroup",
-                "ec2:CreateLaunchTemplateVersion",
-                "ec2:CreateLaunchTemplate",
-                "ec2:CreateKeyPair",
-                "ec2:AuthorizeSecurityGroupIngress",
-                "ec2:AuthorizeSecurityGroupEgress"
-            ],
-            "Resource": "*"
-        },
-        {
-            "Sid": "CloudFormationPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "cloudformation:ListStacks",
-                "cloudformation:ListStackResources",
-                "cloudformation:DescribeStacks",
-                "cloudformation:DescribeStackResources",
-                "cloudformation:DescribeStackResource",
-                "cloudformation:DeleteStack",
-                "cloudformation:CreateStackSet",
-                "cloudformation:CreateStack"
-            ],
-            "Resource": "*"
-        },
-        {
-            "Sid": "IAMPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "iam:PassRole",
-                "iam:ListRoles",
-                "iam:ListRoleTags",
-                "iam:ListInstanceProfilesForRole",
-                "iam:ListInstanceProfiles",
-                "iam:ListAttachedRolePolicies",
-                "iam:GetRole",
-                "iam:GetInstanceProfile",
-                "iam:DetachRolePolicy",
-                "iam:DeleteRole",
-                "iam:CreateRole",
-                "iam:AttachRolePolicy"
-            ],
-            "Resource": "*"
-        },
-        {
-            "Sid": "KMSPermissions",
-            "Effect": "Allow",
-            "Action": "kms:ListKeys",
-            "Resource": "*"
-        },
-        {
-            "Sid": "EKSPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "eks:UpdateNodegroupVersion",
-                "eks:UpdateNodegroupConfig",
-                "eks:UpdateClusterVersion",
-                "eks:UpdateClusterConfig",
-                "eks:UntagResource",
-                "eks:TagResource",
-                "eks:ListUpdates",
-                "eks:ListTagsForResource",
-                "eks:ListNodegroups",
-                "eks:ListFargateProfiles",
-                "eks:ListClusters",
-                "eks:DescribeUpdate",
-                "eks:DescribeNodegroup",
-                "eks:DescribeFargateProfile",
-                "eks:DescribeCluster",
-                "eks:DeleteNodegroup",
-                "eks:DeleteFargateProfile",
-                "eks:DeleteCluster",
-                "eks:CreateNodegroup",
-                "eks:CreateFargateProfile",
-                "eks:CreateCluster"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "EC2Permissions",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:AuthorizeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:CreateKeyPair",
+        "ec2:CreateLaunchTemplate",
+        "ec2:CreateLaunchTemplateVersion",
+        "ec2:CreateSecurityGroup",
+        "ec2:CreateTags",
+        "ec2:DeleteKeyPair",
+        "ec2:DeleteLaunchTemplate",
+        "ec2:DeleteLaunchTemplateVersions",
+        "ec2:DeleteSecurityGroup",
+        "ec2:DeleteTags",
+        "ec2:DescribeAccountAttributes",
+        "ec2:DescribeAvailabilityZones",
+        "ec2:DescribeImages",
+        "ec2:DescribeInternetGateways",
+        "ec2:DescribeInstanceTypes",
+        "ec2:DescribeKeyPairs",
+        "ec2:DescribeLaunchTemplateVersions",
+        "ec2:DescribeLaunchTemplates",
+        "ec2:DescribeRegions",
+        "ec2:DescribeRouteTables",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeTags",
+        "ec2:DescribeVpcs",
+        "ec2:RevokeSecurityGroupEgress",
+        "ec2:RevokeSecurityGroupIngress",
+        "ec2:RunInstances"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "CloudFormationPermissions",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:CreateStackSet",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStackResource",
+        "cloudformation:DescribeStackResources",
+        "cloudformation:DescribeStacks",
+        "cloudformation:ListStackResources",
+        "cloudformation:ListStacks"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "IAMPermissions",
+      "Effect": "Allow",
+      "Action": [
+        "iam:AttachRolePolicy",
+        "iam:CreateRole",
+        "iam:DetachRolePolicy",
+        "iam:DeleteRole",
+        "iam:GetRole",
+        "iam:GetInstanceProfile",
+        "iam:ListAttachedRolePolicies",
+        "iam:ListInstanceProfilesForRole",
+        "iam:ListInstanceProfiles",
+        "iam:ListRoles",
+        "iam:ListRoleTags",
+        "iam:PassRole"
+        "iam:TagRole"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "KMSPermissions",
+      "Effect": "Allow",
+      "Action": "kms:ListKeys",
+      "Resource": "*"
+    },
+    {
+      "Sid": "EKSPermissions",
+      "Effect": "Allow",
+      "Action": [
+        "eks:CreateCluster",
+        "eks:CreateFargateProfile",
+        "eks:CreateNodegroup",
+        "eks:DeleteCluster",
+        "eks:DeleteFargateProfile",
+        "eks:DeleteNodegroup",
+        "eks:DescribeCluster",
+        "eks:DescribeFargateProfile",
+        "eks:DescribeNodegroup",
+        "eks:DescribeUpdate",
+        "eks:ListClusters",
+        "eks:ListFargateProfiles",
+        "eks:ListNodegroups",
+        "eks:ListTagsForResource",
+        "eks:ListUpdates",
+        "eks:TagResource",
+        "eks:UntagResource",
+        "eks:UpdateClusterConfig",
+        "eks:UpdateClusterVersion",
+        "eks:UpdateNodegroupConfig",
+        "eks:UpdateNodegroupVersion"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ```
 
@@ -243,7 +244,8 @@ These are permissions that are needed during EKS cluster creation, so Rancher ca
         "iam:ListRoles",
         "iam:ListRoleTags",
         "iam:PassRole",
-        "iam:RemoveRoleFromInstanceProfile"
+        "iam:RemoveRoleFromInstanceProfile",
+        "iam:TagRole"
       ],
       "Resource": "*"
     }
@@ -288,26 +290,26 @@ These are permissions that are needed by Rancher to create a Virtual Private Clo
       "Sid": "VPCPermissions",
       "Effect": "Allow",
       "Action": [
-        "ec2:ReplaceRoute",
-        "ec2:ModifyVpcAttribute",
-        "ec2:ModifySubnetAttribute",
-        "ec2:DisassociateRouteTable",
-        "ec2:DetachInternetGateway",
-        "ec2:DescribeVpcs",
-        "ec2:DeleteVpc",
-        "ec2:DeleteTags",
-        "ec2:DeleteSubnet",
-        "ec2:DeleteRouteTable",
-        "ec2:DeleteRoute",
-        "ec2:DeleteInternetGateway",
-        "ec2:CreateVpc",
-        "ec2:CreateSubnet",
-        "ec2:CreateSecurityGroup",
-        "ec2:CreateRouteTable",
-        "ec2:CreateRoute",
-        "ec2:CreateInternetGateway",
+        "ec2:AssociateRouteTable",
         "ec2:AttachInternetGateway",
-        "ec2:AssociateRouteTable"
+        "ec2:CreateInternetGateway",
+        "ec2:CreateRoute",
+        "ec2:CreateRouteTable",
+        "ec2:CreateSecurityGroup",
+        "ec2:CreateSubnet",
+        "ec2:CreateVpc",
+        "ec2:DeleteInternetGateway",
+        "ec2:DeleteRoute",
+        "ec2:DeleteRouteTable",
+        "ec2:DeleteSubnet",
+        "ec2:DeleteTags",
+        "ec2:DeleteVpc",
+        "ec2:DescribeVpcs",
+        "ec2:DetachInternetGateway",
+        "ec2:DisassociateRouteTable",
+        "ec2:ModifySubnetAttribute",
+        "ec2:ModifyVpcAttribute",
+        "ec2:ReplaceRoute"
       ],
       "Resource": "*"
     }
