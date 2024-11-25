@@ -61,9 +61,6 @@ Once Prometheus determines that an alert needs to be fired, alerts are forwarded
 
 - Routes and receivers are also stored in the Kubernetes API via the Alertmanager Secret. When the Secret is updated, Alertmanager is also updated automatically. Note that routing occurs via labels only (not via annotations, etc.).
 
-<figcaption>How data flows through the monitoring application:</figcaption>
-
-
 ## 2. How Prometheus Works
 
 ### Storing Time Series Data
