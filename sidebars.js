@@ -1306,7 +1306,6 @@ const sidebars = {
         "faq/dockershim",
         "faq/technical-items",
         "faq/security",
-        "faq/telemetry",
         "faq/container-network-interface-providers",
         "faq/rancher-is-no-longer-needed",
       ]

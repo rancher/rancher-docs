@@ -30,7 +30,6 @@ The following is a complete list of tokens generated with `ttl=0`:
 | `agent-*`         | Token for agent deployment                                                             |
 | `compose-token-*` | Token for compose                                                                      |
 | `helm-token-*`    | Token for Helm chart deployment                                                        |
-| `telemetry-*`     | Telemetry token                                                                        |
 | `drain-node-*`    | Token for drain (Rancher uses `kubectl` for drain because there is no native Kubernetes API). |
 
 ## Setting TTL on Kubeconfig Tokens

@@ -234,13 +234,7 @@ If you are using a Private CA signed cert, add `--set privateCA=true` following 
     --set useBundledSystemChart=true # Use the packaged Rancher system charts
 ```
 
-
 The installation is complete.
-:::caution
-
-If you don't intend to send telemetry data, opt out [telemetry](../../../../faq/telemetry.md) during the initial login. Leaving this active in an air-gapped environment can cause issues if the sockets cannot be opened successfully.
-
-:::
 
 ## Additional Resources
 
