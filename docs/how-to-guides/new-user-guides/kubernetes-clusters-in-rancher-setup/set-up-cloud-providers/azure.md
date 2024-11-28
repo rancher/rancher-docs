@@ -175,34 +175,6 @@ stringData:
       "loadBalancerSku": "standard",
       "excludeMasterFromStandardLB": false,
     }
----
-apiVersion: rbac.authorization.k8s.io/v1beta1
-kind: ClusterRole
-metadata:
-  labels:
-    kubernetes.io/cluster-service: "true"
-  name: system:azure-cloud-provider-secret-getter
-rules:
-  - apiGroups: [""]
-resources: ["secrets"]
-resourceNames: ["azure-cloud-config"]
-verbs:
-  - get
----
-apiVersion: rbac.authorization.k8s.io/v1beta1
-kind: ClusterRoleBinding
-metadata:
-  labels:
-    kubernetes.io/cluster-service: "true"
-  name: system:azure-cloud-provider-secret-getter
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: system:azure-cloud-provider-secret-getter
-  subjects:
-    - kind: ServiceAccount
-      name: azure-cloud-config
-      namespace: kube-system
    ``` 
 
 ## Using the Out-of-tree Azure Cloud Provider
@@ -212,12 +184,15 @@ roleRef:
 
 1. Select **External** from the **Cloud Provider** drop-down in the **Cluster Configuration** section.
 
-2. Prepare the Cloud Provider Configuration to set it in the next step. Note that Rancher automatically creates a new Network Security Group, Resource Group, Availability Set, Subnet, and Virtual Network. If you already have some or all of these created, you must specify them before creating the cluster.
+2. Under **Cluster Configuration > Advanced**, click **Add** under **Additional Controller Manager Args** and add this flag: `--configure-cloud-routes=false`.
+
+3. Prepare the Cloud Provider Configuration to set it in the next step. Note that Rancher automatically creates a new Network Security Group, Resource Group, Availability Set, Subnet, and Virtual Network. If you already have some or all of these created, you must specify them before creating the cluster.
   - Click **Show Advanced** to view or edit these automatically generated names. Your Cloud Provider Configuration **must** match the fields in the **Machine Pools** section. If you have multiple pools, they must all use the same Resource Group, Availability Set, Subnet, Virtual Network, and Network Security Group.
 
-3. Under **Cluster Configuration > Advanced**, click **Add** under **Additional Controller Manager Args** and add this flag: `--configure-cloud-routes=false`. 
+4. Under **Cluster Configuration > Add-on Config**, add the cloud controller manager manifest shown below into **Additional Manifest**.
+Note that this chart reads the Cloud Provider Config from the secret in the `kube-system` namespace. An example secret for the Cloud Provider Config is shown below; modify it as needed. Refer to the full list of configuration options in the [upstream docs](https://cloud-provider-azure.sigs.k8s.io/install/configs/).
 
-Note that the chart reads the Cloud Provider Config from the secret in the `kube-system` namespace. An example secret for the Cloud Provider Config is shown below. Modify it as needed. Refer to the full list of configuration options in the [upstream docs](https://cloud-provider-azure.sigs.k8s.io/install/configs/).
+Alternatively, you can also install the cloud controller manager using the [Helm CLI](#helm-chart-installation-from-cli).
 
   ```yaml
 apiVersion: helm.cattle.io/v1
@@ -284,34 +259,6 @@ stringData:
       "loadBalancerSku": "standard",
       "excludeMasterFromStandardLB": false,
     }
----
-apiVersion: rbac.authorization.k8s.io/v1beta1
-kind: ClusterRole
-metadata:
-  labels:
-    kubernetes.io/cluster-service: "true"
-  name: system:azure-cloud-provider-secret-getter
-rules:
-  - apiGroups: [""]
-resources: ["secrets"]
-resourceNames: ["azure-cloud-config"]
-verbs:
-  - get
----
-apiVersion: rbac.authorization.k8s.io/v1beta1
-kind: ClusterRoleBinding
-metadata:
-  labels:
-    kubernetes.io/cluster-service: "true"
-  name: system:azure-cloud-provider-secret-getter
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: system:azure-cloud-provider-secret-getter
-  subjects:
-    - kind: ServiceAccount
-      name: azure-cloud-config
-      namespace: kube-system
   ```
 
 4. Click **Create** to submit the form and create the cluster.
