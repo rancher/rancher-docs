@@ -93,7 +93,7 @@ This [tutorial](https://aws.amazon.com/blogs/opensource/managing-eks-clusters-ra
 
 ## Minimum EKS Permissions
 
-These are the minimum set of permissions necessary to access the full functionality of Rancher's EKS driver. You'll need additional permissions for Rancher to provision the `Service Role` and `VPC` resources. If you create these resources **before** you create the cluster, they'll be available when you configure the cluster.
+These are the minimum set of permissions necessary to access the full functionality of Rancher's EKS driver. These permissions allow Rancher to create the Service Role and Virtual Private Cloud (VPC) resources on the users' behalf, if necessary.
 
 :::note
 In EKS v1.23 and above, you must use the out-of-tree drivers for EBS-backed volumes. You need [specific permissions](#ebs-csi-driver-addon-permissions) to enable this add-on.
@@ -101,8 +101,6 @@ In EKS v1.23 and above, you must use the out-of-tree drivers for EBS-backed volu
 
 Resource | Description
 ---------|------------
-Service Role | Provides permissions that allow Kubernetes to manage resources on your behalf. Rancher can create the service role with the following [Service Role Permissions](#service-role-permissions).
-VPC | Provides isolated network resources utilised by EKS and worker nodes. Rancher can create the VPC resources with the following [VPC Permissions](#vpc-permissions).
 EBS CSI Driver add-on | Provides permissions that allow Kubernetes to interact with EBS and configure the cluster to enable the add-on (required for EKS v1.23 and above). Rancher can install the add-on with the following [EBS CSI Driver addon Permissions](#ebs-csi-driver-addon-permissions).
 
 
@@ -167,18 +165,23 @@ Resource targeting uses `*` as the ARN of many of the resources created cannot b
       "Sid": "IAMPermissions",
       "Effect": "Allow",
       "Action": [
+        "iam:AddRoleToInstanceProfile",
         "iam:AttachRolePolicy",
+        "iam:CreateInstanceProfile",
         "iam:CreateRole",
-        "iam:DetachRolePolicy",
+        "iam:CreateServiceLinkedRole",
+        "iam:DeleteInstanceProfile",
         "iam:DeleteRole",
-        "iam:GetRole",
+        "iam:DetachRolePolicy",
         "iam:GetInstanceProfile",
+        "iam:GetRole",
         "iam:ListAttachedRolePolicies",
-        "iam:ListInstanceProfilesForRole",
         "iam:ListInstanceProfiles",
+        "iam:ListInstanceProfilesForRole",
         "iam:ListRoles",
         "iam:ListRoleTags",
         "iam:PassRole",
+        "iam:RemoveRoleFromInstanceProfile",
         "iam:TagRole"
       ],
       "Resource": "*"
@@ -217,41 +220,31 @@ Resource targeting uses `*` as the ARN of many of the resources created cannot b
         "eks:UpdateNodegroupVersion"
       ],
       "Resource": "*"
-    }
-  ]
-}
-```
-
-### Service Role Permissions
-
-These are permissions that are needed during EKS cluster creation, so Rancher can create a service role on the users' behalf.
-
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
+    },
     {
-      "Sid": "IAMPermissions",
+      "Sid": "VPCPermissions",
       "Effect": "Allow",
       "Action": [
-        "iam:AddRoleToInstanceProfile",
-        "iam:AttachRolePolicy",
-        "iam:CreateInstanceProfile",
-        "iam:CreateRole",
-        "iam:CreateServiceLinkedRole",
-        "iam:DeleteInstanceProfile",
-        "iam:DeleteRole",
-        "iam:DetachRolePolicy",
-        "iam:GetInstanceProfile",
-        "iam:GetRole",
-        "iam:ListAttachedRolePolicies",
-        "iam:ListInstanceProfiles",
-        "iam:ListInstanceProfilesForRole",
-        "iam:ListRoles",
-        "iam:ListRoleTags",
-        "iam:PassRole",
-        "iam:RemoveRoleFromInstanceProfile",
-        "iam:TagRole"
+        "ec2:AssociateRouteTable",
+        "ec2:AttachInternetGateway",
+        "ec2:CreateInternetGateway",
+        "ec2:CreateRoute",
+        "ec2:CreateRouteTable",
+        "ec2:CreateSecurityGroup",
+        "ec2:CreateSubnet",
+        "ec2:CreateVpc",
+        "ec2:DeleteInternetGateway",
+        "ec2:DeleteRoute",
+        "ec2:DeleteRouteTable",
+        "ec2:DeleteSubnet",
+        "ec2:DeleteTags",
+        "ec2:DeleteVpc",
+        "ec2:DescribeVpcs",
+        "ec2:DetachInternetGateway",
+        "ec2:DisassociateRouteTable",
+        "ec2:ModifySubnetAttribute",
+        "ec2:ModifyVpcAttribute",
+        "ec2:ReplaceRoute"
       ],
       "Resource": "*"
     }
@@ -282,45 +275,6 @@ This role also has two role policy attachments with the following policies' ARNs
 ```
 arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
 arn:aws:iam::aws:policy/AmazonEKSServicePolicy
-```
-
-### VPC Permissions
-
-These are permissions that are needed by Rancher to create a Virtual Private Cloud (VPC) and associated resources.
-
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "VPCPermissions",
-      "Effect": "Allow",
-      "Action": [
-        "ec2:AssociateRouteTable",
-        "ec2:AttachInternetGateway",
-        "ec2:CreateInternetGateway",
-        "ec2:CreateRoute",
-        "ec2:CreateRouteTable",
-        "ec2:CreateSecurityGroup",
-        "ec2:CreateSubnet",
-        "ec2:CreateVpc",
-        "ec2:DeleteInternetGateway",
-        "ec2:DeleteRoute",
-        "ec2:DeleteRouteTable",
-        "ec2:DeleteSubnet",
-        "ec2:DeleteTags",
-        "ec2:DeleteVpc",
-        "ec2:DescribeVpcs",
-        "ec2:DetachInternetGateway",
-        "ec2:DisassociateRouteTable",
-        "ec2:ModifySubnetAttribute",
-        "ec2:ModifyVpcAttribute",
-        "ec2:ReplaceRoute"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
 ```
 
 ### EBS CSI Driver addon Permissions
