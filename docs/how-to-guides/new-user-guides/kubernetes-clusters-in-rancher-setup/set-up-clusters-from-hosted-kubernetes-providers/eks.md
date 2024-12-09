@@ -178,7 +178,7 @@ Resource targeting uses `*` as the ARN of many of the resources created cannot b
         "iam:ListInstanceProfiles",
         "iam:ListRoles",
         "iam:ListRoleTags",
-        "iam:PassRole"
+        "iam:PassRole",
         "iam:TagRole"
       ],
       "Resource": "*"
@@ -199,6 +199,7 @@ Resource targeting uses `*` as the ARN of many of the resources created cannot b
         "eks:DeleteCluster",
         "eks:DeleteFargateProfile",
         "eks:DeleteNodegroup",
+        "eks:DescribeAddon",
         "eks:DescribeCluster",
         "eks:DescribeFargateProfile",
         "eks:DescribeNodegroup",
@@ -336,7 +337,6 @@ The following are the required permissions for installing the Amazon EBS CSI Dri
         "eks:AssociateIdentityProviderConfig",
         "eks:CreateAddon",
         "eks:DeleteAddon",
-        "eks:DescribeAddon",
         "eks:DescribeAddonConfiguration",
         "eks:DescribeAddonVersions",
         "eks:DescribeCluster",
