@@ -110,6 +110,7 @@ Here you can find links to supporting documentation for previous versions of Ran
     <td><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-9-4/">Support Matrix</a></td>
     <td><center>&#10003;</center></td>
     <td><center>N/A</center></td>
+  </tr>
   <tr>
     <td><b>v2.9.3</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.9">Documentation</a></td>
