@@ -52,6 +52,12 @@ If you have a cluster with DRS enabled, setting up [VM-VM Affinity Rules](https:
 
 ## Creating a VMware vSphere Cluster
 
+:::note
+
+vSphere node driver or custom clusters created prior to v2.9.1 may have resulted in user-data.iso files being orphaned on node deletion. While [this issue](https://github.com/rancher/rancher/issues/25073) will no longer occur, no automatic cleanup exists for these previously orphaned files. vSphere administrators can manually remove orphaned files, however care should be taken not to remove files in use by existing machines, as this may cause outages for downstream virtual machines.
+
+:::
+
 1. [Create your cloud credentials](#1-create-your-cloud-credentials)
 2. [Create a node template with your cloud credentials](#2-create-a-node-template-with-your-cloud-credentials)
 3. [Create a cluster with node pools using the node template](#3-create-a-cluster-with-node-pools-using-the-node-template)
