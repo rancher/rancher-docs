@@ -296,7 +296,8 @@ This section lists some of the most common errors that may occur when importing 
 ### AKS
 
 #### Error: Getting static credential is not allowed because this cluster is set to disable local accounts.
-
+  ```sh
+  Error: Getting static credential is not allowed because this cluster is set to disable local accounts.
   To resolve this issue, enable local accounts before attempting to [import the cluster](#registering-a-cluster) again.
 
     ```sh
