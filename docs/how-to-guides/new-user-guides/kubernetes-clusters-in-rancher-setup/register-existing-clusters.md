@@ -299,6 +299,6 @@ This section lists some of the most common errors that may occur when importing 
 
 * This may occur if your cluster has disabled local accounts. Enable local accounts before attempting to import the cluster again:
 
-  ```
-  az aks update --resource-group <resource-group> --name <cluster-name> --enable-local-accounts
-  ```
+    ```sh
+    az aks update --resource-group <resource-group> --name <cluster-name> --enable-local-accounts
+    ```
