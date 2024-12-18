@@ -35,7 +35,7 @@ Since, by default, Google Kubernetes Engine (GKE) doesn't grant the `cluster-adm
 
 To successfully import or provision EKS, AKS, and GKE clusters from Rancher, the cluster must have at least one managed node group. 
 
-AKS clusters can be imported only if local accounts are enabled. If a cluster is configured to use Microsoft Entra ID for authentication, then Rancher will not be able to import it and report an error.
+AKS clusters can only be imported if local accounts are enabled. If a cluster is configured to use Microsoft Entra ID for authentication, Rancher will not be able to import the cluster and report an error.
 
 EKS Anywhere clusters can be imported/registered into Rancher with an API address and credentials, as with any downstream cluster. EKS Anywhere clusters are treated as imported clusters and do not have full lifecycle support from Rancher. 
 
@@ -295,10 +295,11 @@ This section lists some of the most common errors that may occur when importing 
 
 ### AKS
 
-#### Error: Getting static credential is not allowed because this cluster is set to disable local accounts.
+- The following error  may occur if local accounts are disabled in your cluster.
+  ```sh
+  Error: Getting static credential is not allowed because this cluster is set to disable local accounts.
+  To resolve this issue, enable local accounts before attempting to [import the cluster](#registering-a-cluster) again.
 
-* This may occur if your cluster has disabled local accounts. Enable local accounts before attempting to import the cluster again:
-
-  ```
-  az aks update --resource-group <resource-group> --name <cluster-name> --enable-local-accounts
-  ```
+    ```sh
+    az aks update --resource-group <resource-group> --name <cluster-name> --enable-local-accounts
+    ```
