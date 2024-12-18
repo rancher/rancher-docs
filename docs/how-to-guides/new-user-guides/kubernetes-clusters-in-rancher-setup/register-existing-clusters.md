@@ -297,7 +297,7 @@ This section lists some of the most common errors that may occur when importing 
 
 #### Error: Getting static credential is not allowed because this cluster is set to disable local accounts.
 
-* This may occur if your cluster has disabled local accounts. Enable local accounts before attempting to import the cluster again:
+  To resolve this issue, enable local accounts before attempting to [import the cluster](#registering-a-cluster) again.
 
     ```sh
     az aks update --resource-group <resource-group> --name <cluster-name> --enable-local-accounts
