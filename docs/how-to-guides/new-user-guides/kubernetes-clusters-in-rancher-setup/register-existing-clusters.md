@@ -35,7 +35,7 @@ Since, by default, Google Kubernetes Engine (GKE) doesn't grant the `cluster-adm
 
 To successfully import or provision EKS, AKS, and GKE clusters from Rancher, the cluster must have at least one managed node group. 
 
-AKS clusters can be imported only if local accounts are enabled. If a cluster is configured to use Microsoft Entra ID for authentication, then Rancher will not be able to import it and report an error.
+AKS clusters can only be imported if local accounts are enabled. If a cluster is configured to use Microsoft Entra ID for authentication, Rancher will not be able to import the cluster and report an error.
 
 EKS Anywhere clusters can be imported/registered into Rancher with an API address and credentials, as with any downstream cluster. EKS Anywhere clusters are treated as imported clusters and do not have full lifecycle support from Rancher. 
 
