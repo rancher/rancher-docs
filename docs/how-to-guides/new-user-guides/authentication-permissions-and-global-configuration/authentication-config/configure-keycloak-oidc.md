@@ -156,3 +156,16 @@ When you fill the **Configure a Keycloak OIDC account** form and click on **Enab
 ### Keycloak Error: "Invalid grant_type"
 
   * In some cases, this error message may be misleading and is actually caused by setting the `Valid Redirect URI` incorrectly.
+
+### Unable to See Groups When Assigning Global Roles
+
+When setting up an Keycloak OIDC, if the user isn't part of any groups, `groupSearchEnabled` is disabled, preventing group search in Assign Global Roles. 
+This can't be updated through the UI. You can do one of the following workaround.
+
+- **Workaround 1:** Edit the `authconfig/keycloakoidc` on Rancher local:
+   ```bash
+   kubectl edit authconfigs.management.cattle.io keycloakoidc
+   ```
+   Set `groupSearchEnabled: true`.
+
+- **Workaround 2:** Reconfigure the Keycloak OIDC setup using a user that is assigned to at least one group in Keycloak.
