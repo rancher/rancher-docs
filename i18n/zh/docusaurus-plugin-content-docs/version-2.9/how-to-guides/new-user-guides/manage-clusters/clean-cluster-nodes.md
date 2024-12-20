@@ -259,7 +259,7 @@ sudo k3s-uninstall.sh
 
 **清理目录**：
 
-```
+```shell
 rm -rf /etc/ceph \
        /etc/cni \
        /etc/kubernetes \
