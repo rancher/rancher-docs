@@ -236,10 +236,8 @@ sudo k3s-uninstall.sh
 
 The following directories are used when adding a node to a cluster, and should be removed. You can remove a directory using `rm -rf /directory_name`.
 
-:::note
-
-Depending on the role you assigned to the node, some of the directories will or won't be present on the node.
-
+:::important
+Depending on the role you assigned to the node, certain directories may or may not be present on the node.
 :::
 
 | Directories                  |
@@ -250,11 +248,9 @@ Depending on the role you assigned to the node, some of the directories will or 
 | `/etc/rancher`               |
 | `/opt/cni`                   |
 | `/opt/rke`                   |
-| `/run/secrets/kubernetes.io` |
 | `/run/calico`                |
 | `/run/flannel`               |
 | `/var/lib/calico`            |
-| `/var/lib/etcd`              |
 | `/var/lib/cni`               |
 | `/var/lib/kubelet`           |
 | `/var/lib/rancher`           |
@@ -265,18 +261,16 @@ Depending on the role you assigned to the node, some of the directories will or 
 
 **To clean the directories:**
 
-```
+```shell
 rm -rf /etc/ceph \
        /etc/cni \
        /etc/kubernetes \
        /etc/rancher \
        /opt/cni \
        /opt/rke \
-       /run/secrets/kubernetes.io \
        /run/calico \
        /run/flannel \
        /var/lib/calico \
-       /var/lib/etcd \
        /var/lib/cni \
        /var/lib/kubelet \
        /var/lib/rancher\
