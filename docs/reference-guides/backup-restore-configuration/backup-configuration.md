@@ -25,6 +25,24 @@ Select the first option to perform a one-time backup, or select the second optio
 | `schedule` |  Provide the cron string for scheduling recurring backups.  |
 | `retentionCount` |  Provide the number of backup files to be retained.  |
 
+## ResourceSet
+
+While users can create their own resourceSets to backup custom applications, two resourceSets for backing up Rancher itself are officially maintained and are created by default with the `rancher-backup` operator. These are called `rancher-resource-set-basic` and `rancher-resource-set-full`. The difference between them is whether they include secrets or not in the backups. 
+
+When choosing the basic option, no Kubernetes Secrets will be backed up to prevent confidential information from being inserted in the backup files, so the user is responsible for keeping and re-deploying them safely. 
+
+The full option, however, backs up all essential Secrets to ensure Rancher continues running smoothly after a restore or migration. In this case the user is heavily advised to enable encryption with a strong key to prevent sensitive information from being stored in plain-text.
+
+:::note Important:
+
+A third resourceSet `rancher-resource-set` is also included by default with the Operator. This is a legacy definition, currently deprecated and no longer maintained, being kept only for compatibility reasons. It will be removed in Rancher v2.12. Please update your Backup CRs to use either `rancher-resource-set-full` or `rancher-resource-set-basic`.
+
+:::
+
+| YAML Directive Name | Description |
+| ---------------- | ---------------- |
+| `resourceSetName` |  Provide the name of the ResourceSet to define which resources will be included in this backup. |
+
 ## Encryption
 
 The rancher-backup gathers resources by making calls to the kube-apiserver. Objects returned by apiserver are decrypted, so even if [encryption at rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/) is enabled, even the encrypted objects gathered by the backup will be in plaintext.
