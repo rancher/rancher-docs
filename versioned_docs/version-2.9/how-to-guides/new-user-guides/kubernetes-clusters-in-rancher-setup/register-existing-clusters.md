@@ -291,14 +291,17 @@ To annotate a registered cluster,
 
 ## Troubleshooting
 
-This section lists some of the most common errors that may occur when importing a cluster, along with steps to troubleshoot them.
+This section lists some of the most common errors that may occur when importing a cluster and provides steps to troubleshoot them.
 
 ### AKS
 
-#### Error: Getting static credential is not allowed because this cluster is set to disable local accounts.
-
-* This may occur if your cluster has disabled local accounts. Enable local accounts before attempting to import the cluster again:
-
+- The following error may occur if local accounts are disabled in your cluster.
+  ```sh
+  Error: Getting static credential is not allowed because this cluster is set to disable local accounts. 
   ```
+
+  To resolve this issue, enable local accounts before attempting to [import the cluster](#registering-a-cluster) again.
+
+  ```sh
   az aks update --resource-group <resource-group> --name <cluster-name> --enable-local-accounts
   ```
