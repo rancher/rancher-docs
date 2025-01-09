@@ -29,7 +29,7 @@ Select the first option to perform a one-time backup, or select the second optio
 
 While you can create your own ResourceSets to back up custom applications, two ResourceSets specifically for backing up Rancher are officially maintained and created by default by the `rancher-backup` operator. We refer to these as `rancher-resource-set-basic` and `rancher-resource-set-full`.  The difference between them is whether they include secrets or not in the backups. 
 
-When choosing the basic option, no Kubernetes Secrets will be backed up to prevent confidential information from being inserted in the backup files, so the user is responsible for keeping and re-deploying them safely. 
+`rancher-resource-set-basic` does not include any secrets in the backup files to safeguard confidential information. You are responsible for recording any secrets and redeploying them safely. 
 
 The full option, however, backs up all essential Secrets to ensure Rancher continues running smoothly after a restore or migration. In this case the user is heavily advised to enable encryption with a strong key to prevent sensitive information from being stored in plain-text.
 
