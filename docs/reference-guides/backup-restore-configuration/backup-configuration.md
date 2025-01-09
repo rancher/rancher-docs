@@ -35,7 +35,7 @@ While you can create your own ResourceSets to back up custom applications, two R
 
 :::note Important:
 
-A third resourceSet `rancher-resource-set` is also included by default with the Operator. This is a legacy definition, currently deprecated and no longer maintained, being kept only for compatibility reasons. It will be removed in Rancher v2.12. Please update your Backup CRs to use either `rancher-resource-set-full` or `rancher-resource-set-basic`.
+`rancher-resource-set` is also included by default with the `rancher-backup` operator. However, this ResourceSet is deprecated and is only being kept for backwards compatibility reasons. `rancher-resource-set` will be removed in Rancher v2.12. Please update your Backup custom resources to use either `rancher-resource-set-full` or `rancher-resource-set-basic`.
 
 :::
 
