@@ -31,7 +31,7 @@ While you can create your own ResourceSets to back up custom applications, two R
 
 `rancher-resource-set-basic` does not include any secrets in the backup files to safeguard confidential information. You are responsible for recording any secrets and redeploying them safely. 
 
-The full option, however, backs up all essential Secrets to ensure Rancher continues running smoothly after a restore or migration. In this case the user is heavily advised to enable encryption with a strong key to prevent sensitive information from being stored in plain-text.
+`rancher-resource-set-full` includes all essential secrets in the backup files to ensure Rancher continues running smoothly after a restore or migration. To avoid storing sensitive information in plain text, we strongly advise you to enable encryption with a strong key.
 
 :::note Important:
 
