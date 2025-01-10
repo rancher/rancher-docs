@@ -26,7 +26,7 @@ kind: Backup
 metadata:
   name: default-location-encrypted-backup
 spec:
-  resourceSetName: rancher-resource-set
+  resourceSetName: rancher-resource-set-full
   encryptionConfigSecretName: encryptionconfig
 ```
 
@@ -38,7 +38,7 @@ kind: Backup
 metadata:
   name: default-location-recurring-backup
 spec:
-  resourceSetName: rancher-resource-set
+  resourceSetName: rancher-resource-set-basic
   schedule: "@every 1h"
   retentionCount: 10
 ```
@@ -51,7 +51,7 @@ kind: Backup
 metadata:
   name: default-enc-recurring-backup
 spec:
-  resourceSetName: rancher-resource-set
+  resourceSetName: rancher-resource-set-full
   encryptionConfigSecretName: encryptionconfig
   schedule: "@every 1h"
   retentionCount: 3
@@ -72,7 +72,7 @@ spec:
       bucketName: rancherbackups
       endpoint: minio.xip.io
       endpointCA: <base64-encoded-cert>
-  resourceSetName: rancher-resource-set
+  resourceSetName: rancher-resource-set-full
   encryptionConfigSecretName: encryptionconfig
 ```
 
@@ -92,7 +92,7 @@ spec:
       folder: ecm1
       region: us-west-2
       endpoint: s3.us-west-2.amazonaws.com
-  resourceSetName: rancher-resource-set
+  resourceSetName: rancher-resource-set-full
   encryptionConfigSecretName: encryptionconfig
 ```
 
@@ -112,7 +112,7 @@ spec:
       folder: ecm1
       region: us-west-2
       endpoint: s3.us-west-2.amazonaws.com
-  resourceSetName: rancher-resource-set
+  resourceSetName: rancher-resource-set-full
   encryptionConfigSecretName: encryptionconfig
   schedule: "@every 1h"
   retentionCount: 10
@@ -134,7 +134,7 @@ spec:
       folder: ecm1
       region: us-west-2
       endpoint: s3.us-west-2.amazonaws.com
-  resourceSetName: rancher-resource-set
+  resourceSetName: rancher-resource-set-full
   encryptionConfigSecretName: encryptionconfig
 ```
 
