@@ -31,6 +31,7 @@ The following is a list of feature flags available in Rancher. If you've upgrade
 - `uiextension`: Enables UI extensions. This flag is enabled by default. Enabling or disabling the flag forces the Rancher pod to restart. The first time this flag is set to `true`, it creates a CRD and enables the controllers and endpoints necessary for the feature to work. If set to `false`, it disables the previously mentioned controllers and endpoints. Setting `uiextension` to `false` has no effect on the CRD -- it does not create a CRD if it does not yet exist, nor does it delete the CRD if it already exists. 
 - `unsupported-storage-drivers`: Enables types for storage providers and provisioners that aren't enabled by default. See [Allow Unsupported Storage Drivers](../../../how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md) for more information.
 - `ui-sql-cache`: Enables a SQLite-based cache for UI tables. See [UI Server-Side Pagination](../../../how-to-guides/advanced-user-guides/enable-experimental-features/ui-server-side-pagination.md) for more information.
+- `clean-stale-secrets`: Removes stale secrets from the `cattle-impersonation-sytem` namespace. This will slowly cleanup old secrets which are no longer being used by the impersonation system.
 
 
 The following table shows the availability and default values for some feature flags in Rancher. Features marked "GA" are generally available:
@@ -49,3 +50,4 @@ The following table shows the availability and default values for some feature f
 | `token-hashing` | `false` for new installs, `true` for upgrades | GA | v2.6.0 | |
 | `uiextension` | `true` | GA | v2.9.0 | |
 | `ui-sql-cache` | `false` | Highly experimental | v2.9.0 | |
+| `clean-stale-secrets` | `true` | FA | v2.9.6 | |
