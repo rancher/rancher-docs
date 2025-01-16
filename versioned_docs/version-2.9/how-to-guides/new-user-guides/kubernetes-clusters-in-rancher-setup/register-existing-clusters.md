@@ -35,6 +35,8 @@ Since, by default, Google Kubernetes Engine (GKE) doesn't grant the `cluster-adm
 
 To successfully import or provision EKS, AKS, and GKE clusters from Rancher, the cluster must have at least one managed node group. 
 
+AKS clusters can be imported only if local accounts are enabled. If a cluster is configured to use Microsoft Entra ID for authentication, then Rancher will not be able to import it and report an error.
+
 EKS Anywhere clusters can be imported/registered into Rancher with an API address and credentials, as with any downstream cluster. EKS Anywhere clusters are treated as imported clusters and do not have full lifecycle support from Rancher. 
 
 GKE Autopilot clusters aren't supported. See [Compare GKE Autopilot and Standard](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison) for more information about the differences between GKE modes.
@@ -286,3 +288,20 @@ To annotate a registered cluster,
 6. Click **Save**.
 
 **Result:** The annotation does not give the capabilities to the cluster, but it does indicate to Rancher that the cluster has those capabilities.
+
+## Troubleshooting
+
+This section lists some of the most common errors that may occur when importing a cluster and provides steps to troubleshoot them.
+
+### AKS
+
+- The following error may occur if local accounts are disabled in your cluster.
+  ```sh
+  Error: Getting static credential is not allowed because this cluster is set to disable local accounts. 
+  ```
+
+  To resolve this issue, enable local accounts before attempting to [import the cluster](#registering-a-cluster) again.
+
+  ```sh
+  az aks update --resource-group <resource-group> --name <cluster-name> --enable-local-accounts
+  ```
