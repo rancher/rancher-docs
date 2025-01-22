@@ -50,4 +50,4 @@ The following table shows the availability and default values for some feature f
 | `token-hashing` | `false` for new installs, `true` for upgrades | GA | v2.6.0 | |
 | `uiextension` | `true` | GA | v2.9.0 | |
 | `ui-sql-cache` | `false` | Highly experimental | v2.9.0 | |
-| `clean-stale-secrets` | `true` | FA | v2.9.6 | |
+| `clean-stale-secrets` | `true` | GA | v2.9.6 | |
