@@ -19,6 +19,7 @@ In order to deploy and run the adapter successfully, you need to ensure its vers
 
 | Rancher Version | Adapter Version  |
 |-----------------|------------------|
+| v2.10.2         | v105.0.0+up5.0.1 |
 | v2.10.1         | v105.0.0+up5.0.1 |
 | v2.10.0         | v105.0.0+up5.0.1 |
 
