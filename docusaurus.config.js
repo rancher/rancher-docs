@@ -209,7 +209,8 @@ module.exports = {
             },
             2.5: {
               label: 'v2.5',
-              path: 'v2.5'
+              path: 'v2.5',
+              className: 'toArchive' // Field used to denote documentation archival
             },
             '2.0-2.4': {
               label: 'v2.0-v2.4 (Archived)',
