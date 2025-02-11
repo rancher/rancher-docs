@@ -28,6 +28,7 @@ function UnreleasedVersionLabel({siteTitle, versionMetadata}) {
   );
 }
 function UnmaintainedVersionLabel({siteTitle, versionMetadata}) {
+  // Start of custom unmaintained archived version label. The purpose of this custom addition is to display a banner for docs versions that are scheduled for archiving.
   if (versionMetadata.className === "toArchive") {
     return (
       <Translate
@@ -57,6 +58,7 @@ function UnmaintainedVersionLabel({siteTitle, versionMetadata}) {
       </Translate>
     );
   }
+  // End of custom unmaintained archived version label.
 }
 const BannerLabelComponents = {
   unreleased: UnreleasedVersionLabel,
