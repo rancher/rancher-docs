@@ -1,7 +1,7 @@
-name: Create issue to port to Product docs
+name: Create issue to track porting between Community and Product docs
 
 on:
-  pull_request:
+  pull_request_target:
     types:
       - closed
     branches: 
@@ -18,7 +18,7 @@ jobs:
     if: github.event.pull_request.merged == true && contains( github.event.pull_request.labels.*.name, 'port/community-product')
     runs-on: ubuntu-latest
     steps:
-    - name: Create issue to track porting between Community and Product docs
+    - name: Create issue
       env:
         GH_TOKEN: ${{ github.token }}
       run: |
