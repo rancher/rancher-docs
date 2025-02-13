@@ -1,0 +1,29 @@
+name: Create issue to port to Product docs
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches: 
+      - main
+    paths-ignore:
+      - '**/README.md'
+
+permissions:
+  issues: write
+  pull-requests: read
+
+jobs:
+  create_issue:
+    if: github.event.pull_request.merged == true && contains( github.event.pull_request.labels.*.name, 'port/community-product')
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create issue to track porting between Community and Product docs
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        gh issue create \
+          --repo rancher/rancher-docs \
+          --title 'Port Community docs PR #${{github.event.pull_request.number}}: ${{github.event.pull_request.title}}' \
+          --body 'Reference: https://github.com/${{github.repository}}/pull/${{github.event.pull_request.number}}' \
+          --label port/community-product 
