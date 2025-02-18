@@ -45,8 +45,7 @@ Rancher 认证代理可以与以下外部认证服务集成。
 :::note
 
 - Local authentication does not support creating or managing groups.
-
-- Once an external authentication provider is configured, note that local Rancher scoped administrative users only display resources such as users and groups that they are a member of in the respective authentication provider.
+- After an external authentication provider is configured, note that local Rancher scoped administrative users only display resources such as users and groups that they are a member of in the respective authentication provider.
 
 :::
 
