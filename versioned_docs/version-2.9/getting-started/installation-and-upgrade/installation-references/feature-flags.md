@@ -16,7 +16,7 @@ Some feature flags require a restart of the Rancher container. Features that req
 
 :::
 
-The following is a list of feature flags available in Rancher. If you've upgraded from a previous Rancher version, you may see additional flags in the Rancher UI, such as `proxy` or `dashboard` (both [discontinued](/versioned_docs/version-2.5/reference-guides/installation-references/feature-flags.md)):
+The following is a list of feature flags available in Rancher. If you've upgraded from a previous Rancher version, you may see additional flags in the Rancher UI, such as `proxy` or `dashboard` (both [discontinued](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.5/reference-guides/installation-references/feature-flags.md)):
 
 - `clean-stale-secrets`: Removes stale secrets from the `cattle-impersonation-system` namespace. This slowly cleans up old secrets which are no longer being used by the impersonation system.
 - `continuous-delivery`: Allows Fleet GitOps to be disabled separately from Fleet. See [Continuous Delivery.](../../../how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery.md) for more information.

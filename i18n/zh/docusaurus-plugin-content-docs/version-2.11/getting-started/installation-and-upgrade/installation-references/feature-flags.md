@@ -12,7 +12,7 @@ title: 功能开关
 
 :::
 
-以下是 Rancher 中可用的功能开关列表。如果你是从旧 Rancher 版本升级的，你可能会在 Rancher UI 中看到其他功能，例如 `proxy` 或 `dashboard`（均[已中断](/versioned_docs/version-2.5/reference-guides/installation-references/feature-flags.md)）：
+以下是 Rancher 中可用的功能开关列表。如果你是从旧 Rancher 版本升级的，你可能会在 Rancher UI 中看到其他功能，例如 `proxy` 或 `dashboard`（均[已中断](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.5/reference-guides/installation-references/feature-flags.md)）：
 
 - `clean-stale-secrets`: Removes stale secrets from the `cattle-impersonation-system` namespace. This slowly cleans up old secrets which are no longer being used by the impersonation system.
 - `continuous-delivery`：允许从 Fleet 中单独禁用 Fleet GitOps。有关详细信息，请参阅[持续交付](../../../how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery.md)。

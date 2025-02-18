@@ -1174,6 +1174,17 @@ const sidebars = {
             "integrations-in-rancher/fleet/use-fleet-behind-a-proxy"
           ]
         },
+        {
+          "type": "category",
+          "label": "Cluster API (CAPI) with Rancher Turtles",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/cluster-api/cluster-api"
+          },
+          "items": [
+            "integrations-in-rancher/cluster-api/overview"
+          ]
+        },
         "integrations-in-rancher/rancher-desktop",
         {
           type: 'category',
@@ -1198,17 +1209,6 @@ const sidebars = {
               ]
             },
             'integrations-in-rancher/cloud-marketplace/supportconfig'
-          ]
-        },
-        {
-          "type": "category",
-          "label": "Cluster API (CAPI) with Rancher Turtles",
-          "link": {
-            "type": "doc",
-            "id": "integrations-in-rancher/cluster-api/cluster-api"
-          },
-          "items": [
-            "integrations-in-rancher/cluster-api/overview"
           ]
         },
         {

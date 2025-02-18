@@ -15,4 +15,4 @@ Prime 还提供生产支持选项，以及根据你的商业需求定制的订�
 import DocCardList from '@theme/DocCardList';
 import { useCurrentSidebarCategory } from '@docusaurus/theme-common/internal';
 
-<DocCardList items={useCurrentSidebarCategory().items.slice(0,8)} />
+<DocCardList items={useCurrentSidebarCategory().items.slice(0,10)} />

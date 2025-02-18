@@ -13,55 +13,88 @@ description: 创建 Keycloak OpenID Connect (OIDC) 客户端并配置 Rancher �
 
 - 已在 Rancher 上禁用 Keycloak (SAML)。
 - 你必须配置了 [Keycloak IdP 服务器](https://www.keycloak.org/guides#getting-started)。
-- 在 Keycloak 中，使用以下设置创建一个[新的 OIDC 客户端](https://www.keycloak.org/docs/latest/server_admin/#oidc-clients)。如需获取帮助，请参见 [Keycloak 文档](https://www.keycloak.org/docs/latest/server_admin/#oidc-clients)。
+- Follow the [Keycloak documentation](https://www.keycloak.org/docs/latest/server_admin/#proc-creating-oidc-client_server_administration_guide) to create a new OIDC client with the settings below.
 
-   | 设置 | 值 |
-   ------------|------------
-   | `Client ID` | &lt;CLIENT_ID> (例如 `rancher`) |
-   | `Name` | &lt;CLIENT_NAME> (例如 `rancher`) |
-   | `Client Protocol` | `openid-connect` |
-   | `Access Type` | `confidential` |
-   | `Valid Redirect URI` | `https://yourRancherHostURL/verify-auth` |
+    | 设置 | 值 |
+    |------------|------------|
+    | `Client ID` | &lt;client-id> (例如 `rancher`) |
+    | `Name` | &lt;client-name> (例如 `rancher`) |
+    | `Client type` | `OpenID Connect` |
+    | `Client authentication` | `ON` |
+    | `Valid Redirect URI` | `https://yourRancherHostURL/verify-auth` |
 
 - 在新的 OIDC 客户端中，创建 [Mappers](https://www.keycloak.org/docs/latest/server_admin/#_protocol-mappers) 来公开用户字段。
-   - 使用以下设置创建一个新的 "Groups Mapper"：
+    1. In the navigation menu, click **Clients**.
+    1. Click the **Clients list** tab.
+    1. Find and click the client you created.
+    1. Click the **Client scopes** tab.
+    1. Find and click the link labeled `<client-name>-dedicated`. For example, if you named your client `rancher`, look for the link named `rancher-dedicated`.
+    1. Click the **Mappers** tab.
+    1. Click **Configure a new mapper**. If you already have existing mappers configured, click the arrow next to **Add mapper** and select **By configuration**. Repeat this process and create these mappers:
+        - From the mappings table, select **Group Membership** and configure a new "Groups Mapper" with the settings below. For settings that are not mentioned, use the default value.
 
-      | 设置 | 值 |
-      ------------|------------
-      | `Name` | `Groups Mapper` |
-      | `Mapper Type` | `Group Membership` |
-      | `Token Claim Name` | `groups` |
-      | `Full group path` | `OFF` |
-      | `Add to ID token` | `OFF` |
-      | `Add to access token` | `OFF` |
-      | `Add to user info` | `ON` |
+          | Setting | Value |
+          | ------------|------------|
+          | `Name` | `Groups Mapper` |
+          | `Mapper Type` | `Group Membership` |
+          | `Token Claim Name` | `groups` |
+          | `Full group path` | `OFF` |
+          | `Add to ID token` | `OFF` |
+          | `Add to access token` | `OFF` |
+          | `Add to user info` | `ON` |
 
-   - 使用以下设置创建一个新的 "Client Audience" ：
+        - From the mappings table, select **Audience** and configure a new "Client Audience" with the settings below. For settings that are not mentioned, use the default value.
 
-      | 设置 | 值 |
-      ------------|------------
-      | `Name` | `Client Audience` |
-      | `Mapper Type` | `Audience` |
-      | `Included Client Audience` | &lt;CLIENT_NAME> |
-      | `Add to ID token` | `OFF` |
-      | `Add to access token` | `ON` |
+          | Setting | Value |
+          | ------------|------------|
+          | `Name` | `Client Audience` |
+          | `Mapper Type` | `Audience` |
+          | `Included Client Audience` | &lt;client-name> |
+          | `Add to ID token` | `OFF` |
+          | `Add to access token` | `ON` |
 
-   - 使用以下设置创建一个新的 "Groups Path"：
+        - From the mappings table, select **Group Membership** and configure a new "Groups Path" with the settings below. For settings that are not mentioned, use the default value.
 
-      | 设置 | 值 |
-      ------------|------------
-      | `Name` | `Group Path` |
-      | `Mapper Type` | `Group Membership` |
-      | `Token Claim Name` | `full_group_path` |
-      | `Full group path` | `ON` |
-      | `Add to ID token` | `ON` |
-      | `Add to access token` | `ON` |
-      | `Add to user info` | `ON` |
+          | Setting | Value |
+          | ------------|------------|
+          | `Name` | `Group Path` |
+          | `Mapper Type` | `Group Membership` |
+          | `Token Claim Name` | `full_group_path` |
+          | `Full group path` | `ON` |
+          | `Add to ID token` | `ON` |
+          | `Add to access token` | `ON` |
+          | `Add to user info` | `ON` |
 
-- Go to **Role Mappings > Client Roles >  realm-management** and add the following Role Mappings to all users or groups that need to query the Keycloak users.
-  - query-users
-  - query-groups
-  - view-users
+- Add the following role mappings to all users or groups that need to query the Keycloak users.
+
+<Tabs>
+<TabItem value="Users">
+
+1. In the navigation menu, click **Users**.
+1. Click the user you want to add role mappings to.
+1. Click the **Role mapping** tab.
+1. Click **Assign role**.
+1. Select the following roles:
+    - query-users
+    - query-groups
+    - view-users
+1. Click **Assign**.
+
+</TabItem>
+<TabItem value="Groups">
+
+1. In the navigation menu, click **Groups**.
+1. Click the group  you want to add role mappings to.
+1. Click the **Role mapping** tab.
+1. Click **Assign role**.
+1. Select the following roles:
+    - query-users
+    - query-groups
+    - view-users
+1. Click **Assign**.
+
+</TabItem>
+</Tabs>
   
 ## 在 Rancher 中配置 Keycloak
 
@@ -69,15 +102,22 @@ description: 创建 Keycloak OpenID Connect (OIDC) 客户端并配置 Rancher �
 1. 单击左侧导航栏的**认证**。
 1. 选择 **Keycloak (OIDC)**。
 1. 填写**配置 Keycloak OIDC 账号**表单。有关填写表单的帮助，请参见[配置参考](#配置参考)。
+
+    :::note
+
+    When configuring the **Endpoints** section using the **Generate** option, Rancher includes `/auth` as part of the context path in the **Issuer** and **Auth Endpoint** fields, which is only valid for Keycloak 16 or older. You must configure endpoints using the **Specify** option for [Keycloak 17](https://www.keycloak.org/docs/latest/release_notes/index.html#keycloak-17-0-0) and newer, which have [migrated to Quarkus](https://www.keycloak.org/migration/migrating-to-quarkus).  
+
+    :::
+
 1. 完成**配置 Keycloak OIDC 账号**表单后，单击**启用**。
 
-   Rancher 会将你重定向到 IdP 登录页面。输入使用 Keycloak IdP 进行身份验证的凭证，来验证你的 Rancher Keycloak 配置。
+    Rancher 会将你重定向到 IdP 登录页面。输入使用 Keycloak IdP 进行身份验证的凭证，来验证你的 Rancher Keycloak 配置。
 
-   :::note
+    :::note
 
-   你可能需要禁用弹出窗口阻止程序才能看到 IdP 登录页面。
+    你可能需要禁用弹出窗口阻止程序才能看到 IdP 登录页面。
 
-   :::
+    :::
 
 **结果**：已将 Rancher 配置为使用 OIDC 协议与 Keycloak 一起工作。你的用户现在可以使用 Keycloak 登录名登录 Rancher。
 
@@ -99,35 +139,17 @@ description: 创建 Keycloak OpenID Connect (OIDC) 客户端并配置 Rancher �
 
 本节描述了将使用 Keycloak (SAML) 的 Rancher 过渡到 Keycloak (OIDC) 的过程。
 
-### 重新配置 Keycloak
+1. Reconfigure Keycloak.
+    1. Configure a new `OpenID Connect` client according to the [Prerequisites](#先决条件). Ensure the same `Valid Redirect URIs` are set.
+    1. Configure mappers for the new client according to the [Prerequisites](#先决条件).
+1. Before configuring Rancher to use Keycloak (OIDC), Keycloak (SAML) must be first disabled.
+    1. In the Rancher UI, click **☰ > Users & Authentication**.
+    1. In the left navigation bar, click **Auth Provider**.
+    1. Select **Keycloak (SAML)**.
+    1. Click **Disable**.
+1. Follow the steps in [Configuring Keycloak in Rancher](#在-rancher-中配置-keycloak).
 
-1. 将现有客户端更改为使用 OIDC 协议。在 Keycloak 控制台中，单击 **Clients**，选择要迁移的 SAML 客户端，选择 **Settings** 选项卡，将 `Client Protocol` 从 `saml` 更改为 `openid-connect`，然后点击 **Save**。
-
-1. 验证 `Valid Redirect URIs` 是否仍然有效。
-
-1. 选择 **Mappers** 选项卡并使用以下设置创建一个新的 Mapper：
-
-   | 设置 | 值 |
-   ------------|------------
-   | `Name` | `Groups Mapper` |
-   | `Mapper Type` | `Group Membership` |
-   | `Token Claim Name` | `groups` |
-   | `Add to ID token` | `ON` |
-   | `Add to access token` | `ON` |
-   | `Add to user info` | `ON` |
-
-### 重新配置 Rancher
-
-在将 Rancher 配置为使用 Keycloak (OIDC) 之前，必须先禁用 Keycloak (SAML)：
-
-1. 在 Rancher UI 中，单击 **☰ > 用户 & 认证**。
-1. 单击左侧导航栏的**认证**。
-1. 选择 **Keycloak (SAML)**。
-1. 单击**禁用**。
-
-按照[本节](#在-rancher-中配置-keycloak)中的步骤将 Rancher 配置为使用 Keycloak (OIDC)。
-
-:::note
+:::caution
 
 配置完成后，由于用户权限不会自动迁移，你需要重新申请 Rancher 用户权限。
 
@@ -143,12 +165,12 @@ description: 创建 Keycloak OpenID Connect (OIDC) 客户端并配置 Rancher �
 
 完成**配置 Keycloak OIDC 账号**表单并单击**启用**后，你没有被重定向到你的 IdP。
 
-* 验证你的 Keycloak 客户端配置。
+验证你的 Keycloak 客户端配置。
 
 ### 生成的 `Issuer` 和 `Auth 端点`不正确
 
-* 在**配置 Keycloak OIDC 账号**表单中，将**端点**更改为`指定（高级设置）`并覆盖`发行者` 和 `Auth 端点`的值。要查找这些值，前往 Keycloak 控制台并选择 **Realm Settings**，选择 **General** 选项卡，然后单击 **OpenID Endpoint Configuration**。JSON 输出将显示 `issuer` 和 `authorization_endpoint` 的值。
+在**配置 Keycloak OIDC 账号**表单中，将**端点**更改为`指定（高级设置）`并覆盖`发行者` 和 `Auth 端点`的值。要查找这些值，前往 Keycloak 控制台并选择 **Realm Settings**，选择 **General** 选项卡，然后单击 **OpenID Endpoint Configuration**。JSON 输出将显示 `issuer` 和 `authorization_endpoint` 的值。
 
 ### Keycloak 错误："Invalid grant_type"
 
-* 在某些情况下，这条错误提示信息可能有误导性，实际上造成错误的原因是 `Valid Redirect URI` 配置错误。
+在某些情况下，这条错误提示信息可能有误导性，实际上造成错误的原因是 `Valid Redirect URI` 配置错误。
