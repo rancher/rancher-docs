@@ -202,10 +202,12 @@ module.exports = {
             2.7: {
               label: 'v2.7',
               path: 'v2.7',
+              className: 'toArchive'
             },
             2.6: {
               label: 'v2.6',
               path: 'v2.6',
+              className: 'toArchive'
             },
             2.5: {
               label: 'v2.5 (Archived)',

@@ -16,7 +16,7 @@ title: 概述
 
 [SLSA](https://slsa.dev/spec/v1.0/about) 是一套由行业共识制定的可逐步采用的供应链安全指南。SLSA 制定的规范对软件生产者和消费者都很有用：生产者可以遵循 SLSA 的指导方针，使他们的软件供应链更加安全，消费者可以使用 SLSA 来决定是否信任软件包。
 
-Rancher Turtles 满足 [SLSA Level 3](https://slsa.dev/spec/v1.0/levels#build-l3) 对适当的构建平台、一致的构建过程和来源分布的要求。更多信息请参阅 [Rancher Turtles 安全](https://turtles.docs.rancher.com/security/slsa)文档。
+Rancher Turtles 满足 [SLSA Level 3](https://slsa.dev/spec/v1.0/levels#build-l3) 对适当的构建平台、一致的构建过程和来源分布的要求。更多信息请参阅 [Rancher Turtles 安全](https://turtles.docs.rancher.com/turtles/next/en/security/slsa.html)文档。
 
 ## 先决条件
 
@@ -92,7 +92,7 @@ kubectl apply -f feature.yaml
 1. 点击 **Rancher Turtles - the Cluster API Extension**。
 1. 点击 **Install > Next > Install**.
 
-此过程使用 Helm chart 的默认值，这些值适用于大部分的安装场景。如果你的配置需要覆盖其中一些默认值，你可以在安装期间通过 Rancher UI 指定这些值，也可以通过 [Helm 手动安装 Chart](#通过-helm-安装)。有关可用的 values 设置的详细信息，请参阅 Rancher Turtles 的 [Helm chart 参考指南](https://turtles.docs.rancher.com/reference-guides/rancher-turtles-chart/values)。
+此过程使用 Helm chart 的默认值，这些值适用于大部分的安装场景。如果你的配置需要覆盖其中一些默认值，你可以在安装期间通过 Rancher UI 指定这些值，也可以通过 [Helm 手动安装 Chart](#通过-helm-安装)。有关可用的 values 设置的详细信息，请参阅 Rancher Turtles 的 [Helm chart 参考指南](https://turtles.docs.rancher.com/turtles/next/en/reference-guides/rancher-turtles-chart/values.html)。
 
 安装可能需要几分钟时间，安装完成后，你可以在集群中看到以下新部署：
 
@@ -177,7 +177,7 @@ stringData:
 
 :::info
 
-有关 chart 支持的 values 及其用法的详细信息，请参阅 [Helm chart 选项](https://turtles.docs.rancher.com/reference-guides/rancher-turtles-chart/values)
+有关 chart 支持的 values 及其用法的详细信息，请参阅 [Helm chart 选项](https://turtles.docs.rancher.com/turtles/next/en/reference-guides/rancher-turtles-chart/values.html)
 
 :::
 
@@ -185,7 +185,7 @@ stringData:
 
 :::note
 
-请记住，如果使用此安装选项，你必须自行管理 CAPI Operator 的安装。你可以参照 Rancher Turtles 文档中的 [CAPI Operator 指南](https://turtles.docs.rancher.com/contributing/install_capi_operator)
+请记住，如果使用此安装选项，你必须自行管理 CAPI Operator 的安装。你可以参照 Rancher Turtles 文档中的 [CAPI Operator 指南](https://turtles.docs.rancher.com/turtles/next/en/contributing/install_capi_operator.html)
 
 :::
 
