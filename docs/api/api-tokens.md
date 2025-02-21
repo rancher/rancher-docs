@@ -74,8 +74,8 @@ Time to live (TTL) duration in minutes, used to determine when a user auth sessi
 
 ### auth-user-session-idle-ttl-minutes
 
-Time to live (TTL) without user activity for tokens controlling a login session, in minutes.
-By default, the value for [`auth-user-session-idle-ttl-minutes`](#auth-user-session-idle-ttl-minutes) is be set to the same value as [`auth-user-session-ttl-minutes`](#auth-user-session-ttl-minutes) (for backward compatibility reasons), and it must never be greater than this value.
+Time to live (TTL) without user activity for login sessions tokens, in minutes.
+By default, [`auth-user-session-idle-ttl-minutes`](#auth-user-session-idle-ttl-minutes) is set to the same value as [`auth-user-session-ttl-minutes`](#auth-user-session-ttl-minutes) (for backward compatibility). It must never exceed the value of `auth-user-session-ttl-minutes`.
 
 ### kubeconfig-default-token-ttl-minutes
 
