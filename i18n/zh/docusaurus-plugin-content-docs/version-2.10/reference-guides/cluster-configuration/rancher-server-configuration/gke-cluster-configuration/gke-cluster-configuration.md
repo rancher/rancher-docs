@@ -204,7 +204,7 @@ _可变：是_
 
 :::note
 
-默认选项是 “Container-Optimized OS with Docker”。GCP Container-Optimized OS 上的只读文件系统与 Rancher 中的 [legacy logging](/versioned_docs/version-2.0-2.4/pages-for-subheaders/cluster-logging.md) 实现不兼容。如果你需要使用旧版日志管理功能，请选择 “Ubuntu with Docker” 或 “Ubuntu with Containerd”。[current logging feature](../../../../integrations-in-rancher/logging/logging.md) 与 Container-Optimized OS 镜像兼容。
+默认选项是 “Container-Optimized OS with Docker”。GCP Container-Optimized OS 上的只读文件系统与 Rancher 中的 [legacy logging](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/pages-for-subheaders/cluster-logging.md) 实现不兼容。如果你需要使用旧版日志管理功能，请选择 “Ubuntu with Docker” 或 “Ubuntu with Containerd”。[current logging feature](../../../../integrations-in-rancher/logging/logging.md) 与 Container-Optimized OS 镜像兼容。
 
 :::
 

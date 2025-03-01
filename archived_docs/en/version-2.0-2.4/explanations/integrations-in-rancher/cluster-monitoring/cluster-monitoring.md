@@ -52,7 +52,7 @@ As an [administrator](../../../how-to-guides/advanced-user-guides/authentication
 > | 10252 | Controlplane | Kube controller manager |
 > | 2379 | Etcd | Etcd server |
 
-> Monitoring V1 requires a Kubernetes verison less than or equal to v1.20.x. To install monitoring on Kubernetes v1.21+, you will need to [migrate to Monitoring V2.](/versioned_docs/version-2.5/how-to-guides/advanced-user-guides/monitoring-alerting-guides/migrate-to-rancher-v2.5%2B-monitoring.md)
+> Monitoring V1 requires a Kubernetes verison less than or equal to v1.20.x. To install monitoring on Kubernetes v1.21+, you will need to [migrate to Monitoring V2.](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.5/how-to-guides/advanced-user-guides/monitoring-alerting-guides/migrate-to-rancher-v2.5%2B-monitoring.md)
 
 1. From the **Global** view, navigate to the cluster that you want to configure cluster monitoring.
 
