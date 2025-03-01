@@ -198,7 +198,7 @@ The node operating system image. For more information for the node image options
 
 :::note
 
-The default option is "Container-Optimized OS with Docker". The read-only filesystem on GCP's Container-Optimized OS is not compatible with the [legacy logging](/versioned_docs/version-2.0-2.4/explanations/integrations-in-rancher/cluster-logging/cluster-logging.md) implementation in Rancher. If you need to use the legacy logging feature, select "Ubuntu with Docker" or "Ubuntu with Containerd". The [current logging feature](../../../../integrations-in-rancher/logging/logging.md) is compatible with the Container-Optimized OS image.
+The default option is "Container-Optimized OS with Docker". The read-only filesystem on GCP's Container-Optimized OS is not compatible with the [legacy logging](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/explanations/integrations-in-rancher/cluster-logging/cluster-logging.md) implementation in Rancher. If you need to use the legacy logging feature, select "Ubuntu with Docker" or "Ubuntu with Containerd". The [current logging feature](../../../../integrations-in-rancher/logging/logging.md) is compatible with the Container-Optimized OS image.
 
 :::
 
