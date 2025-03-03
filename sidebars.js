@@ -1174,6 +1174,17 @@ const sidebars = {
             "integrations-in-rancher/fleet/use-fleet-behind-a-proxy"
           ]
         },
+        {
+          "type": "category",
+          "label": "Cluster API (CAPI) with Rancher Turtles",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/cluster-api/cluster-api"
+          },
+          "items": [
+            "integrations-in-rancher/cluster-api/overview"
+          ]
+        },
         "integrations-in-rancher/rancher-desktop",
         {
           type: 'category',
@@ -1198,17 +1209,6 @@ const sidebars = {
               ]
             },
             'integrations-in-rancher/cloud-marketplace/supportconfig'
-          ]
-        },
-        {
-          "type": "category",
-          "label": "Cluster API (CAPI) with Rancher Turtles",
-          "link": {
-            "type": "doc",
-            "id": "integrations-in-rancher/cluster-api/cluster-api"
-          },
-          "items": [
-            "integrations-in-rancher/cluster-api/overview"
           ]
         },
         {
@@ -1293,7 +1293,6 @@ const sidebars = {
             "integrations-in-rancher/monitoring-and-alerting/promql-expressions",
           ]
         },
-        "integrations-in-rancher/opa-gatekeeper",
         "integrations-in-rancher/rancher-extensions",
       ]
     },
@@ -1307,7 +1306,6 @@ const sidebars = {
         "faq/dockershim",
         "faq/technical-items",
         "faq/security",
-        "faq/telemetry",
         "faq/container-network-interface-providers",
         "faq/rancher-is-no-longer-needed",
       ]

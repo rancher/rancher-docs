@@ -93,7 +93,7 @@ This [tutorial](https://aws.amazon.com/blogs/opensource/managing-eks-clusters-ra
 
 ## Minimum EKS Permissions
 
-These are the minimum set of permissions necessary to access the full functionality of Rancher's EKS driver. You'll need additional permissions for Rancher to provision the `Service Role` and `VPC` resources. If you create these resources **before** you create the cluster, they'll be available when you configure the cluster.
+These are the minimum set of permissions necessary to access the full functionality of Rancher's EKS driver. These permissions allow Rancher to create the Service Role and Virtual Private Cloud (VPC) resources on the users' behalf, if necessary.
 
 :::note
 In EKS v1.23 and above, you must use the out-of-tree drivers for EBS-backed volumes. You need [specific permissions](#ebs-csi-driver-addon-permissions) to enable this add-on.
@@ -101,8 +101,6 @@ In EKS v1.23 and above, you must use the out-of-tree drivers for EBS-backed volu
 
 Resource | Description
 ---------|------------
-Service Role | Provides permissions that allow Kubernetes to manage resources on your behalf. Rancher can create the service role with the following [Service Role Permissions](#service-role-permissions).
-VPC | Provides isolated network resources utilised by EKS and worker nodes. Rancher can create the VPC resources with the following [VPC Permissions](#vpc-permissions).
 EBS CSI Driver add-on | Provides permissions that allow Kubernetes to interact with EBS and configure the cluster to enable the add-on (required for EKS v1.23 and above). Rancher can install the add-on with the following [EBS CSI Driver addon Permissions](#ebs-csi-driver-addon-permissions).
 
 
@@ -110,124 +108,59 @@ Resource targeting uses `*` as the ARN of many of the resources created cannot b
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "EC2Permissions",
-            "Effect": "Allow",
-            "Action": [
-                "ec2:RunInstances",
-                "ec2:RevokeSecurityGroupIngress",
-                "ec2:RevokeSecurityGroupEgress",
-                "ec2:DescribeInstanceTypes",
-                "ec2:DescribeRegions",
-                "ec2:DescribeVpcs",
-                "ec2:DescribeTags",
-                "ec2:DescribeSubnets",
-                "ec2:DescribeSecurityGroups",
-                "ec2:DescribeRouteTables",
-                "ec2:DescribeLaunchTemplateVersions",
-                "ec2:DescribeLaunchTemplates",
-                "ec2:DescribeKeyPairs",
-                "ec2:DescribeInternetGateways",
-                "ec2:DescribeImages",
-                "ec2:DescribeAvailabilityZones",
-                "ec2:DescribeAccountAttributes",
-                "ec2:DeleteTags",
-                "ec2:DeleteLaunchTemplateVersions",
-                "ec2:DeleteLaunchTemplate",
-                "ec2:DeleteSecurityGroup",
-                "ec2:DeleteKeyPair",
-                "ec2:CreateTags",
-                "ec2:CreateSecurityGroup",
-                "ec2:CreateLaunchTemplateVersion",
-                "ec2:CreateLaunchTemplate",
-                "ec2:CreateKeyPair",
-                "ec2:AuthorizeSecurityGroupIngress",
-                "ec2:AuthorizeSecurityGroupEgress"
-            ],
-            "Resource": "*"
-        },
-        {
-            "Sid": "CloudFormationPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "cloudformation:ListStacks",
-                "cloudformation:ListStackResources",
-                "cloudformation:DescribeStacks",
-                "cloudformation:DescribeStackResources",
-                "cloudformation:DescribeStackResource",
-                "cloudformation:DeleteStack",
-                "cloudformation:CreateStackSet",
-                "cloudformation:CreateStack"
-            ],
-            "Resource": "*"
-        },
-        {
-            "Sid": "IAMPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "iam:PassRole",
-                "iam:ListRoles",
-                "iam:ListRoleTags",
-                "iam:ListInstanceProfilesForRole",
-                "iam:ListInstanceProfiles",
-                "iam:ListAttachedRolePolicies",
-                "iam:GetRole",
-                "iam:GetInstanceProfile",
-                "iam:DetachRolePolicy",
-                "iam:DeleteRole",
-                "iam:CreateRole",
-                "iam:AttachRolePolicy"
-            ],
-            "Resource": "*"
-        },
-        {
-            "Sid": "KMSPermissions",
-            "Effect": "Allow",
-            "Action": "kms:ListKeys",
-            "Resource": "*"
-        },
-        {
-            "Sid": "EKSPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "eks:UpdateNodegroupVersion",
-                "eks:UpdateNodegroupConfig",
-                "eks:UpdateClusterVersion",
-                "eks:UpdateClusterConfig",
-                "eks:UntagResource",
-                "eks:TagResource",
-                "eks:ListUpdates",
-                "eks:ListTagsForResource",
-                "eks:ListNodegroups",
-                "eks:ListFargateProfiles",
-                "eks:ListClusters",
-                "eks:DescribeUpdate",
-                "eks:DescribeNodegroup",
-                "eks:DescribeFargateProfile",
-                "eks:DescribeCluster",
-                "eks:DeleteNodegroup",
-                "eks:DeleteFargateProfile",
-                "eks:DeleteCluster",
-                "eks:CreateNodegroup",
-                "eks:CreateFargateProfile",
-                "eks:CreateCluster"
-            ],
-            "Resource": "*"
-        }
-    ]
-}
-```
-
-### Service Role Permissions
-
-These are permissions that are needed during EKS cluster creation, so Rancher can create a service role on the users' behalf.
-
-```json
-{
   "Version": "2012-10-17",
   "Statement": [
+    {
+      "Sid": "EC2Permissions",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:AuthorizeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:CreateKeyPair",
+        "ec2:CreateLaunchTemplate",
+        "ec2:CreateLaunchTemplateVersion",
+        "ec2:CreateSecurityGroup",
+        "ec2:CreateTags",
+        "ec2:DeleteKeyPair",
+        "ec2:DeleteLaunchTemplate",
+        "ec2:DeleteLaunchTemplateVersions",
+        "ec2:DeleteSecurityGroup",
+        "ec2:DeleteTags",
+        "ec2:DescribeAccountAttributes",
+        "ec2:DescribeAvailabilityZones",
+        "ec2:DescribeImages",
+        "ec2:DescribeInternetGateways",
+        "ec2:DescribeInstanceTypes",
+        "ec2:DescribeKeyPairs",
+        "ec2:DescribeLaunchTemplateVersions",
+        "ec2:DescribeLaunchTemplates",
+        "ec2:DescribeRegions",
+        "ec2:DescribeRouteTables",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeTags",
+        "ec2:DescribeVpcs",
+        "ec2:RevokeSecurityGroupEgress",
+        "ec2:RevokeSecurityGroupIngress",
+        "ec2:RunInstances"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "CloudFormationPermissions",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:CreateStackSet",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStackResource",
+        "cloudformation:DescribeStackResources",
+        "cloudformation:DescribeStacks",
+        "cloudformation:ListStackResources",
+        "cloudformation:ListStacks"
+      ],
+      "Resource": "*"
+    },
     {
       "Sid": "IAMPermissions",
       "Effect": "Allow",
@@ -248,7 +181,70 @@ These are permissions that are needed during EKS cluster creation, so Rancher ca
         "iam:ListRoles",
         "iam:ListRoleTags",
         "iam:PassRole",
-        "iam:RemoveRoleFromInstanceProfile"
+        "iam:RemoveRoleFromInstanceProfile",
+        "iam:TagRole"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "KMSPermissions",
+      "Effect": "Allow",
+      "Action": "kms:ListKeys",
+      "Resource": "*"
+    },
+    {
+      "Sid": "EKSPermissions",
+      "Effect": "Allow",
+      "Action": [
+        "eks:CreateCluster",
+        "eks:CreateFargateProfile",
+        "eks:CreateNodegroup",
+        "eks:DeleteCluster",
+        "eks:DeleteFargateProfile",
+        "eks:DeleteNodegroup",
+        "eks:DescribeAddon",
+        "eks:DescribeCluster",
+        "eks:DescribeFargateProfile",
+        "eks:DescribeNodegroup",
+        "eks:DescribeUpdate",
+        "eks:ListClusters",
+        "eks:ListFargateProfiles",
+        "eks:ListNodegroups",
+        "eks:ListTagsForResource",
+        "eks:ListUpdates",
+        "eks:TagResource",
+        "eks:UntagResource",
+        "eks:UpdateClusterConfig",
+        "eks:UpdateClusterVersion",
+        "eks:UpdateNodegroupConfig",
+        "eks:UpdateNodegroupVersion"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "VPCPermissions",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:AssociateRouteTable",
+        "ec2:AttachInternetGateway",
+        "ec2:CreateInternetGateway",
+        "ec2:CreateRoute",
+        "ec2:CreateRouteTable",
+        "ec2:CreateSecurityGroup",
+        "ec2:CreateSubnet",
+        "ec2:CreateVpc",
+        "ec2:DeleteInternetGateway",
+        "ec2:DeleteRoute",
+        "ec2:DeleteRouteTable",
+        "ec2:DeleteSubnet",
+        "ec2:DeleteTags",
+        "ec2:DeleteVpc",
+        "ec2:DescribeVpcs",
+        "ec2:DetachInternetGateway",
+        "ec2:DisassociateRouteTable",
+        "ec2:ModifySubnetAttribute",
+        "ec2:ModifyVpcAttribute",
+        "ec2:ReplaceRoute"
       ],
       "Resource": "*"
     }
@@ -281,79 +277,33 @@ arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
 arn:aws:iam::aws:policy/AmazonEKSServicePolicy
 ```
 
-### VPC Permissions
-
-These are permissions that are needed by Rancher to create a Virtual Private Cloud (VPC) and associated resources.
-
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "VPCPermissions",
-      "Effect": "Allow",
-      "Action": [
-        "ec2:ReplaceRoute",
-        "ec2:ModifyVpcAttribute",
-        "ec2:ModifySubnetAttribute",
-        "ec2:DisassociateRouteTable",
-        "ec2:DetachInternetGateway",
-        "ec2:DescribeVpcs",
-        "ec2:DeleteVpc",
-        "ec2:DeleteTags",
-        "ec2:DeleteSubnet",
-        "ec2:DeleteRouteTable",
-        "ec2:DeleteRoute",
-        "ec2:DeleteInternetGateway",
-        "ec2:CreateVpc",
-        "ec2:CreateSubnet",
-        "ec2:CreateSecurityGroup",
-        "ec2:CreateRouteTable",
-        "ec2:CreateRoute",
-        "ec2:CreateInternetGateway",
-        "ec2:AttachInternetGateway",
-        "ec2:AssociateRouteTable"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
-```
-
 ### EBS CSI Driver addon Permissions
 
 The following are the required permissions for installing the Amazon EBS CSI Driver add-on.
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "iam:GetRole",
-                "eks:DescribeAddonConfiguration",
-                "eks:UpdateAddon",
-                "eks:ListAddons",
-                "iam:CreateRole",
-                "iam:AttachRolePolicy",
-                "eks:DescribeAddon",
-                "iam:CreateOpenIDConnectProvider",
-                "iam:PassRole",
-                "eks:DescribeIdentityProviderConfig",
-                "eks:DeleteAddon",
-                "iam:ListOpenIDConnectProviders",
-                "iam:ListAttachedRolePolicies",
-                "eks:CreateAddon",
-                "eks:DescribeCluster",
-                "eks:DescribeAddonVersions",
-                "sts:AssumeRoleWithWebIdentity",
-                "eks:AssociateIdentityProviderConfig",
-                "eks:ListIdentityProviderConfigs"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "eks:AssociateIdentityProviderConfig",
+        "eks:CreateAddon",
+        "eks:DeleteAddon",
+        "eks:DescribeAddonConfiguration",
+        "eks:DescribeAddonVersions",
+        "eks:DescribeIdentityProviderConfig",
+        "eks:ListAddons",
+        "eks:ListIdentityProviderConfigs",
+        "eks:UpdateAddon",
+        "iam:CreateOpenIDConnectProvider",
+        "iam:ListOpenIDConnectProviders",
+        "sts:AssumeRoleWithWebIdentity"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ```
 

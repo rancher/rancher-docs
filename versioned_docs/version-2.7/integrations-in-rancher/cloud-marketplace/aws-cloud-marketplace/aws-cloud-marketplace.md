@@ -10,6 +10,10 @@ title: AWS Marketplace Integration
 
 Rancher offers an integration with the AWS Marketplace which allows users to purchase a support contract with SUSE. This integration allows you easily adjust your support needs as you start to support more clusters.
 
+## Required Skills
+
+At a minimum, users are expected to have a working knowledge of EKS and peripheral functions such as IAM Policies and Roles, Route 53 DNS, and the use of awscli and Helm commands.
+
 ## Limitations
 
 - You must be running Rancher v2.6.7 or higher

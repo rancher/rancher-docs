@@ -16,13 +16,15 @@ Some feature flags require a restart of the Rancher container. Features that req
 
 :::
 
-The following is a list of feature flags available in Rancher. If you've upgraded from a previous Rancher version, you may see additional flags in the Rancher UI, such as `proxy` or `dashboard` (both [discontinued](/versioned_docs/version-2.5/reference-guides/installation-references/feature-flags.md)):
+The following is a list of feature flags available in Rancher. If you've upgraded from a previous Rancher version, you may see additional flags in the Rancher UI, such as `proxy` or `dashboard` (both [discontinued](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.5/reference-guides/installation-references/feature-flags.md)):
 
+- `clean-stale-secrets`: Removes stale secrets from the `cattle-impersonation-system` namespace. This slowly cleans up old secrets which are no longer being used by the impersonation system.
 - `continuous-delivery`: Allows Fleet GitOps to be disabled separately from Fleet. See [Continuous Delivery.](../../../how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery.md) for more information.
 - `fleet`: The Rancher provisioning framework in v2.6 and later requires Fleet. The flag will be automatically enabled when you upgrade, even if you disabled this flag in an earlier version of Rancher. See [Continuous Delivery with Fleet](../../../integrations-in-rancher/fleet/fleet.md) for more information.
 - `harvester`: Manages access to the Virtualization Management page, where users can navigate directly to Harvester clusters and access the Harvester UI. See [Harvester Integration Overview](../../../integrations-in-rancher/harvester/overview.md) for more information.
 - `istio-virtual-service-ui`: Enables a [visual interface](../../../how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features.md) to create, read, update, and delete Istio virtual services and destination rules, which are Istio traffic management features.
 - `legacy`: Enables a set of features from 2.5.x and earlier, that are slowly being phased out in favor of newer implementations. These are a mix of deprecated features as well as features that will eventually be available to newer versions. This flag is disabled by default on new Rancher installations. If you're upgrading from a previous version of Rancher, this flag is enabled.
+- `managed-system-upgrade-controller`: Enables the installation of the system-upgrade-controller app in downstream RKE2/K3s clusters, currently limited to imported clusters and the local cluster, with plans to expand support to node-driver clusters.
 - `multi-cluster-management`: Allows multi-cluster provisioning and management of Kubernetes clusters. This flag can only be set at install time. It can't be enabled or disabled later.
 - `rke1-custom-node-cleanup`: Enables cleanup of deleted RKE1 custom nodes. We recommend that you keep this flag enabled, to prevent removed nodes from attempting to rejoin the cluster.
 - `rke2`: Enables provisioning RKE2 clusters. This flag is enabled by default.
@@ -36,14 +38,16 @@ The following table shows the availability and default values for some feature f
 
 | Feature Flag Name             | Default Value | Status       | Available As Of | Additional Information |
 | ----------------------------- | ------------- | ------------ | --------------- | ---------------------- |
+| `clean-stale-secrets` | `true` | GA | v2.10.2 | |
 | `continuous-delivery` | `true` | GA | v2.6.0 | |
 | `external-rules` | v2.7.14: `false`, v2.8.5: `true` | Removed | v2.7.14, v2.8.5 | This flag affected [external `RoleTemplate` behavior](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#external-roletemplate-behavior). It is removed in Rancher v2.9.0 and later as the behavior is enabled by default. |
 | `fleet`  | `true` | Can no longer be disabled | v2.6.0 | |
 | `fleet`  | `true` | GA | v2.5.0 | |
 | `harvester` | `true` | Experimental | v2.6.1 | |
 | `legacy` | `false` for new installs, `true` for upgrades | GA | v2.6.0 | |
+| `managed-system-upgrade-controller` | `true` | GA | v2.10.0 | |
 | `rke1-custom-node-cleanup`| `true` | GA | v2.6.0 | |
 | `rke2` | `true` | Experimental | v2.6.0 | |
 | `token-hashing` | `false` for new installs, `true` for upgrades | GA | v2.6.0 | |
-| `uiextension` | `true` | GA | v2.9.0 |
-| `ui-sql-cache` | `false` | Highly experimental | v2.9.0 |
+| `uiextension` | `true` | GA | v2.9.0 | |
+| `ui-sql-cache` | `false` | Highly experimental | v2.9.0 | |

@@ -1,4 +1,8 @@
 {
+  "theme.docs.versions.unmaintainedArchivedVersionLabel": {
+    "message": "This is documentation for {siteTitle} {versionLabel}, which is no longer actively maintained and is scheduled to be archived.",
+    "description": "The label used to tell the user that he's browsing an unmaintained doc version"
+  },
   "theme.ErrorPageContent.title": {
     "message": "页面已崩溃。",
     "description": "The title of the fallback page when the page crashed"

@@ -56,9 +56,6 @@ PrometheusRule 用于定义指标或时间序列数据库查询触发告警的�
 
 - 路由和接收器也通过 Alertmanager Secret 存储在 Kubernetes API 中。当 Secret 更新时，Alertmanager 也会自动更新。请注意，路由仅通过标签发生（而不是通过注释等）。
 
-<figcaption>数据如何流经 Monitoring 应用程序</figcaption>
-
-
 ## 2. Prometheus 的工作原理
 
 ### 存储时间序列数据
