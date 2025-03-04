@@ -16,7 +16,7 @@ Rancher 使用应用商店系统导入一系列的 charts 包到仓库里，然�
 
 ### Catalogs, Apps, Rancher UI
 
-[在 Rancher v2.4 及更早版本中](/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md), 存储部署的应用程序的仓库被称为 "catalogs"。这些仓库是通过 UI 的 **Catalogs** 进行管理的。
+[在 Rancher v2.4 及更早版本中](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md), 存储部署的应用程序的仓库被称为 "catalogs"。这些仓库是通过 UI 的 **Catalogs** 进行管理的。
 
 Rancher v2.5 用新的 **Apps & Marketplace** 功能替代了之前的 **应用商店**。
 
