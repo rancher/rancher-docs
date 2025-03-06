@@ -2,7 +2,7 @@
 title: 将用户添加到集群
 ---
 
-如果你想为用户提供对集群内 _所有_ 项目、节点和资源的访问权限，请为用户分配集群成员资格。
+To provide a user access to view certain cluster-level resources and create new projects, assign the user a **Cluster Membership**. Cluster members can create projects and manage resources in those projects. However, not all resources, namespaces and workloads in a cluster are accessible by cluster members.
 
 :::tip
 

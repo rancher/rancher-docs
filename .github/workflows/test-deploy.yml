@@ -4,6 +4,7 @@ on:
   pull_request:
     paths-ignore:
       - '**/README.md'
+      - '**/.github/ISSUE_TEMPLATE/**'
 
 jobs:
   test-deploy:
