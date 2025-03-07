@@ -176,74 +176,74 @@ stringData:
 4. Under **Cluster Configuration > Add-on Config**, add the cloud controller manager manifest shown below into **Additional Manifest**.
 Note that this chart reads the Cloud Provider Config from the secret in the `kube-system` namespace. An example secret for the Cloud Provider Config is shown below; modify it as needed. Refer to the full list of configuration options in the [upstream docs](https://cloud-provider-azure.sigs.k8s.io/install/configs/).
 
-    Alternatively, you can also install the cloud controller manager using the [Helm CLI](#helm-chart-installation-from-cli).
+  Alternatively, you can also install the cloud controller manager using the [Helm CLI](#helm-chart-installation-from-cli).
 
-    ```yaml
-    apiVersion: helm.cattle.io/v1
-    kind: HelmChart
-    metadata:
-      name: azure-cloud-controller-manager
-      namespace: kube-system
-    spec:
-      chart: cloud-provider-azure
-      repo: https://raw.githubusercontent.com/kubernetes-sigs/cloud-provider-azure/master/helm/repo
-      targetNamespace: kube-system
-      bootstrap: true
-      valuesContent: |-
-        infra:
-          clusterName: <cluster-name>
-        cloudControllerManager:
-          cloudConfigSecretName: azure-cloud-config
-          cloudConfig: null
-          clusterCIDR: null
-          enableDynamicReloading: 'true'
-          nodeSelector: 
-            node-role.kubernetes.io/control-plane: 'true'
-          allocateNodeCidrs: 'false' 
-          hostNetworking: true
-          caCertDir: /etc/ssl
-          configureCloudRoutes: 'false'
-          enabled: true
-          tolerations:
-            - effect: NoSchedule
-              key: node-role.kubernetes.io/master
-            - effect: NoSchedule
-              key: node-role.kubernetes.io/control-plane
-              value: 'true'
-            - effect: NoSchedule
-              key: node.cloudprovider.kubernetes.io/uninitialized
-              value: 'true'
-    ---
-    apiVersion: v1
-    kind: Secret
-    metadata:
-      name: azure-cloud-config
-      namespace: kube-system
-    type: Opaque
-    stringData:
-      cloud-config: |-
-        {
-          "cloud": "AzurePublicCloud",
-          "tenantId": "<tenant-id>",
-          "subscriptionId": "<subscription-id>",
-          "aadClientId": "<client-id>",
-          "aadClientSecret": "<tenant-id>",
-          "resourceGroup": "docker-machine",
-          "location": "westus",
-          "subnetName": "docker-machine",
-          "securityGroupName": "rancher-managed-kqmtsjgJ",
-          "securityGroupResourceGroup": "docker-machine",
-          "vnetName": "docker-machine-vnet",
-          "vnetResourceGroup": "docker-machine",
-          "primaryAvailabilitySetName": "docker-machine",  
-          "routeTableResourceGroup": "docker-machine",
-          "cloudProviderBackoff": false,
-          "useManagedIdentityExtension": false,
-          "useInstanceMetadata": true,
-          "loadBalancerSku": "standard",
-          "excludeMasterFromStandardLB": false,
-        }
-    ```
+  ```yaml
+  apiVersion: helm.cattle.io/v1
+  kind: HelmChart
+  metadata:
+    name: azure-cloud-controller-manager
+    namespace: kube-system
+  spec:
+    chart: cloud-provider-azure
+    repo: https://raw.githubusercontent.com/kubernetes-sigs/cloud-provider-azure/master/helm/repo
+    targetNamespace: kube-system
+    bootstrap: true
+    valuesContent: |-
+      infra:
+        clusterName: <cluster-name>
+      cloudControllerManager:
+        cloudConfigSecretName: azure-cloud-config
+        cloudConfig: null
+        clusterCIDR: null
+        enableDynamicReloading: 'true'
+        nodeSelector: 
+          node-role.kubernetes.io/control-plane: 'true'
+        allocateNodeCidrs: 'false' 
+        hostNetworking: true
+        caCertDir: /etc/ssl
+        configureCloudRoutes: 'false'
+        enabled: true
+        tolerations:
+          - effect: NoSchedule
+            key: node-role.kubernetes.io/master
+          - effect: NoSchedule
+            key: node-role.kubernetes.io/control-plane
+            value: 'true'
+          - effect: NoSchedule
+            key: node.cloudprovider.kubernetes.io/uninitialized
+            value: 'true'
+  ---
+  apiVersion: v1
+  kind: Secret
+  metadata:
+    name: azure-cloud-config
+    namespace: kube-system
+  type: Opaque
+  stringData:
+    cloud-config: |-
+      {
+        "cloud": "AzurePublicCloud",
+        "tenantId": "<tenant-id>",
+        "subscriptionId": "<subscription-id>",
+        "aadClientId": "<client-id>",
+        "aadClientSecret": "<tenant-id>",
+        "resourceGroup": "docker-machine",
+        "location": "westus",
+        "subnetName": "docker-machine",
+        "securityGroupName": "rancher-managed-kqmtsjgJ",
+        "securityGroupResourceGroup": "docker-machine",
+        "vnetName": "docker-machine-vnet",
+        "vnetResourceGroup": "docker-machine",
+        "primaryAvailabilitySetName": "docker-machine",  
+        "routeTableResourceGroup": "docker-machine",
+        "cloudProviderBackoff": false,
+        "useManagedIdentityExtension": false,
+        "useInstanceMetadata": true,
+        "loadBalancerSku": "standard",
+        "excludeMasterFromStandardLB": false,
+      }
+  ```
 
 5. Click **Create** to submit the form and create the cluster.
 
