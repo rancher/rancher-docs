@@ -803,6 +803,7 @@ const sidebars = {
             "how-to-guides/advanced-user-guides/enable-api-audit-log",
             "how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters",
             "how-to-guides/advanced-user-guides/enable-user-retention",
+            "how-to-guides/advanced-user-guides/enable-cluster-agent-scheduling-customization",
             "how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
           ]
         }
