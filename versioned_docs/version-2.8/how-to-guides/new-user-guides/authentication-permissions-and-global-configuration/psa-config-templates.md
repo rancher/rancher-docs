@@ -8,6 +8,10 @@ title: Pod Security Admission (PSA) Configuration Templates
 
 [Pod Security admission (PSA)](./pod-security-standards.md) configuration templates are a Rancher custom-defined resource (CRD), available in Rancher v2.7.2 and above. The templates provide pre-defined security configurations that you can apply to a cluster:
 
+:::info important
+The policies shipped by default in Rancher aim to provide a trade-off between security and convenience. If a more strict policy configuration is needed, users are able to craft such policies themselves based on their specific requirements. In the case Rancher policies are preferred, you will need to deploy admission controllers that block the creation of any [exempted namespaces](#exempting-required-rancher-namespaces) that won't be used within your environments.
+:::
+
 - `rancher-privileged`: The most permissive configuration. It doesn't restrict the behavior of any pods. This allows for known privilege escalations. This policy has no exemptions.
 - `rancher-restricted`: A heavily restricted configuration that follows current best practices for hardening pods. You must make [namespace-level exemptions](./pod-security-standards.md#rancher-on-psa-restricted-clusters) for Rancher components.
 
