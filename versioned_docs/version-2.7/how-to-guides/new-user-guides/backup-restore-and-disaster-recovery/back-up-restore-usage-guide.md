@@ -10,6 +10,14 @@ The Rancher Backups chart is our solution for disaster recovery and migration. T
 
 This chart is a very simple tool which has its hands in many different areas of the Rancher ecosystem. As a result, edge cases have arisen which lead to undocumented functionality. The purpose of this document is to highlight the proper and defined usage for Rancher Backups, as well as discussing some of these edge cases we’ve run into.
 
+:::caution
+
+While Kubernetes distributions like k3s and RKE2 offer [cluster configuration backups](https://docs.rke2.io/datastore/backup_restore) (etcd snapshots), these can sometimes cause issues with Rancher.
+
+For a reliable Rancher backup, we recommend using the Rancher Backup functionality described in this guide. Consider etcd snapshots as a last resort option.
+
+:::
+
 ## Functionality Overview
 
 ### Backup
