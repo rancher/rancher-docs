@@ -48,7 +48,6 @@ Etcd is the backing database for Kubernetes and for Rancher. The database may ev
 This is typical in Rancher, as many operations create new `RoleBinding` objects in the upstream cluster as a side effect.
 
 You can reduce the number of `RoleBindings` in the upstream cluster in the following ways:
-* Limit the use of the [Restricted Admin](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#restricted-admin) role. Apply other roles wherever possible.
 * Only add users to clusters and projects when necessary.
 * Remove clusters and projects when they are no longer needed.
 * Only use custom roles if necessary.
@@ -73,7 +72,6 @@ Predicting how many `RoleBinding` objects a given configuration will create is c
   * `Ua` is the average number of users with a membership on a cluster.
   * `P` is the total number of projects.
   * `Pa` is the average number of users with a membership on a project.
-* The Restricted Admin role follows a different formula, as every user with this role results in at least `7C + 2P + 2` additional `RoleBinding` objects.
 * The number of `RoleBindings` increases linearly with the number of clusters, projects, and users.
 
 ### Using New Apps Over Legacy Apps
