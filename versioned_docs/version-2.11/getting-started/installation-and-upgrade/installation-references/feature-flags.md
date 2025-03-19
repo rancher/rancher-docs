@@ -18,6 +18,7 @@ Some feature flags require a restart of the Rancher container. Features that req
 
 The following is a list of feature flags available in Rancher. If you've upgraded from a previous Rancher version, you may see additional flags in the Rancher UI, such as `proxy` or `dashboard` (both [discontinued](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.5/reference-guides/installation-references/feature-flags.md)):
 
+- `aggregated-roletemplates`: Use cluster role aggregation architecture for RoleTemplates, ProjectRoleTemplateBindings, and ClusterRoleTemplateBindings. See [Cluster Role Aggregation](../../../how-to-guides/advanced-user-guides/enable-experimental-features/cluster-role-aggregation.md) for more information.
 - `clean-stale-secrets`: Removes stale secrets from the `cattle-impersonation-system` namespace. This slowly cleans up old secrets which are no longer being used by the impersonation system.
 - `continuous-delivery`: Allows Fleet GitOps to be disabled separately from Fleet. See [Continuous Delivery.](../../../how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery.md) for more information.
 - `fleet`: The Rancher provisioning framework in v2.6 and later requires Fleet. The flag will be automatically enabled when you upgrade, even if you disabled this flag in an earlier version of Rancher. See [Continuous Delivery with Fleet](../../../integrations-in-rancher/fleet/fleet.md) for more information.
@@ -38,6 +39,7 @@ The following table shows the availability and default values for some feature f
 
 | Feature Flag Name             | Default Value | Status       | Available As Of | Additional Information |
 | ----------------------------- | ------------- | ------------ | --------------- | ---------------------- |
+| `aggregated-roletemplates` | `false` | Highly experimentatl | v2.11.0 | This flag value is locked on install and can't be changed. |
 | `clean-stale-secrets` | `true` | GA | v2.10.2 | |
 | `continuous-delivery` | `true` | GA | v2.6.0 | |
 | `external-rules` | v2.7.14: `false`, v2.8.5: `true` | Removed | v2.7.14, v2.8.5 | This flag affected [external `RoleTemplate` behavior](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#external-roletemplate-behavior). It is removed in Rancher v2.9.0 and later as the behavior is enabled by default. |

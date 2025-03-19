@@ -796,6 +796,7 @@ const sidebars = {
                 "how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery",
+                "how-to-guides/advanced-user-guides/enable-experimental-features/cluster-role-aggregation",
               ]
             },
             "how-to-guides/advanced-user-guides/open-ports-with-firewalld",
