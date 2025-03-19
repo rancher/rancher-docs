@@ -6,6 +6,8 @@ title: RKE 自我评估指南 - CIS Benchmark v1.24 - K8s v1.24
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.24-k8s-v1.24"/>
 </head>
 
+<EOLRKE1Warning />
+
 本文档是 [RKE 加固指南](rke1-hardening-guide.md)的配套文档，该指南提供了关于如何加固正在生产环境中运行并由 Rancher 管理的 RKE 集群的指导方针。本 benchmark 指南可帮助你根据 CIS Kubernetes Benchmark 中的每个 control 来评估加固集群的安全性。
 
 本指南对应以下版本的 Rancher、CIS Benchmarks 和 Kubernetes：
