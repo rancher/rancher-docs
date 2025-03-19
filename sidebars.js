@@ -1360,6 +1360,7 @@ const sidebars = {
         },
         "api/api-reference",
         "api/api-tokens",
+        "api/extension-apiserver",
         "api/v3-rancher-api-guide",
       ]
     },
