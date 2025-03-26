@@ -153,7 +153,7 @@ kubectl edit clusters.management.cattle.io local
 1. Remove the entire `status.version` map.
 1. Remove the label with the key `provider.cattle.io` in `metadata.labels`.
 1. Remove the annotation with the key `management.cattle.io/current-cluster-controllers-version` in `metadata.annotations`.
-1. Remove any of `spec.rke2Config` or `spec.k3sConfig`, the entire map, if present.
+1. Remove the entire `spec.rke2Config` or `spec.k3sConfig` map, if present.
 1. Save the changes.
 
 Note that removing `spec.rke2Config` or `spec.k3sConfig` will erase your distribution-specific upgrade configuration for the local cluster. It can be [reconfigured](../../../getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes.md) if the new distribution is configurable for the local cluster.
