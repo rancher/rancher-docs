@@ -142,7 +142,7 @@ Install the [`rancher-backup chart`](https://github.com/rancher/backup-restore-o
 
 :::note Important:
 
-When migrating Rancher between different Kubernetes distributions (e.g. from K3s to RKE2), the object representing the local cluster has to be modified to allow Rancher to detect the new distribution. After the restoration is completed, and **before** bringing up Rancher on the new cluster, edit the local cluster object:
+When migrating Rancher between any two different Kubernetes distributions (e.g. from K3s to RKE2), the object representing the local cluster has to be modified to allow Rancher to detect the new distribution. After the restoration is completed, and **before** bringing up Rancher on the new cluster, edit the local cluster object:
 
 ```bash
 kubectl edit clusters.management.cattle.io local
