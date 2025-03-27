@@ -16,7 +16,7 @@ Rancher will publish deprecated features as part of the [release notes](https://
 
 | Patch Version |  Release Date |
 |---------------|---------------|
-| [2.11.0](https://github.com/rancher/rancher/releases/tag/v2.11.0) | Mar 26, 2025 |
+| [2.11.0](https://github.com/rancher/rancher/releases/tag/v2.11.0) | Mar 28, 2025 |
 
 ## What can I expect when a feature is marked for deprecation?
 
