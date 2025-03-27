@@ -6,6 +6,8 @@ title: Creating and Revising RKE Templates
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/manage-rke1-templates"/>
 </head>
 
+<EOLRKE1Warning />
+
 This section describes how to manage RKE templates and revisions. You an create, share, update, and delete templates from the **Cluster Management** view under **RKE1 Configuration > RKE Templates**.
 
 Template updates are handled through a revision system. When template owners want to change or update a template, they create a new revision of the template. Individual revisions cannot be edited. However, if you want to prevent a revision from being used to create a new cluster, you can disable it.

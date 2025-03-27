@@ -4,6 +4,10 @@ title: Pod 安全准入 (PSA) 配置模板
 
 [Pod Security admission (PSA)](./pod-security-standards.md) 配置模板是 Rancher 自定义资源 (CRD)，在 Rancher v2.7.2 及更高版本中可用。这些模板提供了可应用于集群的预定义安全配置：
 
+:::info important
+The policies shipped by default in Rancher aim to provide a trade-off between security and convenience. If a more strict policy configuration is needed, users are able to craft such policies themselves based on their specific requirements. In the case Rancher policies are preferred, you will need to deploy admission controllers that block the creation of any [exempted namespaces](#豁免必须的-rancher-命名空间) that won't be used within your environments.
+:::
+
 - `rancher-privileged`：最宽松的配置。它不限制任何 Pod 行为，允许已知的权限升级。该策略没有豁免。
 - `rancher-restricted`：严格限制的配置，遵循当前加固 pod 的最佳实践。你必须对 Rancher 组件进行[命名空间级别豁免](./pod-security-standards.md#受-psa-限制的集群上的-rancher)。
 

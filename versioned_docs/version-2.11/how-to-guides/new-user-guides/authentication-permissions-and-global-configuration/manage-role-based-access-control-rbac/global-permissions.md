@@ -8,11 +8,9 @@ title: Global Permissions
 
 _Permissions_ are individual access rights that you can assign when selecting a custom permission for a user.
 
-Global Permissions define user authorization outside the scope of any particular cluster. Out-of-the-box, there are four default global permissions: `Administrator`, `Restricted Admin`,`Standard User` and `User-base`.
+Global Permissions define user authorization outside the scope of any particular cluster. Out-of-the-box, there are four default global permissions: `Administrator`, `Standard User` and `User-base`.
 
 - **Administrator:** These users have full control over the entire Rancher system and all clusters within it.
-
-- **Restricted Admin (Deprecated) :** These users have full control over downstream clusters, but cannot alter the local Kubernetes cluster.
 
 - **Standard User:** These users can create new clusters and use them. Standard users can also assign other users permissions to their clusters.
 
@@ -286,79 +284,3 @@ To refresh group memberships,
 1. Click **Refresh Group Memberships**.
 
 **Result:** Any changes to the group members' permissions will take effect.
-
-## Restricted Admin
-
-:::warning Deprecated
-
-The Restricted Admin role is deprecated, and will be removed in a future version of Rancher (2.10 or higher). You should make a custom role with the desired permissions instead of relying on this built-in role.
-
-:::
-
-A new `restricted-admin` role was created in Rancher v2.5 in order to prevent privilege escalation on the local Rancher server Kubernetes cluster. This role has full administrator access to all downstream clusters managed by Rancher, but it does not have permission to alter the local Kubernetes cluster.
-
-The `restricted-admin` can create other `restricted-admin` users with an equal level of access.
-
-A new setting was added to Rancher to set the initial bootstrapped administrator to have the `restricted-admin` role. This applies to the first user created when the Rancher server is started for the first time. If the environment variable is set, then no global administrator would be created, and it would be impossible to create the global administrator through Rancher.
-
-To bootstrap Rancher with the `restricted-admin` as the initial user, the Rancher server should be started with the following environment variable:
-
-```
-CATTLE_RESTRICTED_DEFAULT_ADMIN=true
-```
-### List of `restricted-admin` Permissions
-
-The following table lists the permissions and actions that a `restricted-admin` should have in comparison with the `Administrator` and `Standard User` roles:
-
-| Category | Action | Global Admin | Standard User | Restricted Admin | Notes for Restricted Admin role |
-| -------- | ------ | ------------ | ------------- | ---------------- | ------------------------------- |
-| Local Cluster functions | Manage Local Cluster (List, Edit, Import Host) | Yes | No | No | |
-| | Create Projects/namespaces | Yes | No | No | |
-| | Add cluster/project members | Yes | No | No | |
-| | Global DNS | Yes | No | No | |
-| | Access to management cluster for CRDs and CRs | Yes | No | Yes | |
-| | Save as RKE Template | Yes | No | No | |
-| Security | | | | | |
-| Enable auth | Configure Authentication | Yes | No | Yes | |
-| Roles	| Create/Assign GlobalRoles | Yes | No (Can list) | Yes | Auth webhook allows creating globalrole for perms already present |
-| | Create/Assign ClusterRoles | Yes | No (Can list) | Yes | Not in local cluster |
-| | Create/Assign ProjectRoles | Yes | No (Can list) | Yes | Not in local cluster |
-| Users	| Add User/Edit/Delete/Deactivate User | Yes | No | Yes | |
-| Groups | Assign Global role to groups | Yes | No | Yes | As allowed by the webhook |
-| | Refresh Groups | Yes | No | Yes | |
-| PSP's | Manage PSP templates | Yes | No (Can list) | Yes | Same privileges as Global Admin for PSPs |
-| Tools | | | | | |
-| | Manage RKE Templates | Yes | No | Yes | |
-| | Manage Global Catalogs | Yes | No | Yes | Cannot edit/delete built-in system catalog. Can manage Helm library |
-| | Cluster Drivers | Yes | No | Yes | |
-| | Node Drivers | Yes | No | Yes | |
-| | GlobalDNS Providers | Yes | Yes (Self) | Yes | |
-| | GlobalDNS Entries | Yes | Yes (Self) | Yes | |
-| Settings | | | | | |
-| | Manage Settings | Yes | No (Can list) | No (Can list) | |
-| User | | | | | |
-| | Manage API Keys | Yes (Manage all) | Yes (Manage self) | Yes (Manage self) | |
-| | Manage Node Templates | Yes | Yes (Manage self) | Yes (Manage self) | Can only manage their own node templates and not those created by other users |
-| | Manage Cloud Credentials | Yes | Yes (Manage self) | Yes (Manage self) | Can only manage their own cloud credentials and not those created by other users |
-| Downstream Cluster | Create Cluster | Yes | Yes | Yes | |
-| | Edit Cluster | Yes | Yes | Yes | |
-| | Rotate Certificates	| Yes | | Yes | |
-| | Snapshot Now | Yes | | Yes | |
-| | Restore Snapshot | Yes | | Yes | |
-| | Save as RKE Template | Yes | No | Yes | |
-| | Run CIS Scan | Yes | Yes | Yes | |
-| | Add Members	| Yes | Yes | Yes | |
-| | Create Projects | Yes | Yes | Yes | |
-| Feature Charts since v2.5 | | | | | |
-| | Install Fleet | Yes | | Yes | Should not be able to run Fleet in local cluster |
-| | Deploy EKS cluster | Yes | Yes | Yes | |
-| | Deploy GKE cluster | Yes | Yes | Yes | |
-| | Deploy AKS cluster | Yes | Yes | Yes | |
-
-### Changing Global Administrators to Restricted Admins
-
-In previous version, the docs recommended that all users should be changed over to Restricted Admin if the role was in use. Users are now encouraged to use a custom-built role using the cluster permissions feature, and migrate any current restricted admins to use that approach. 
-
-This can be done through **Security > Users** and moving any Administrator role over to Restricted Administrator.
-
-Signed-in users can change themselves over to the `restricted-admin` if they wish, but they should only do that as the last step, otherwise they won't have the permissions to do so.

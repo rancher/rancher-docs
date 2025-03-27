@@ -6,6 +6,8 @@ title: About RKE1 Templates
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates"/>
 </head>
 
+<EOLRKE1Warning />
+
 RKE templates are designed to allow DevOps and security teams to standardize and simplify the creation of Kubernetes clusters.
 
 RKE is the [Rancher Kubernetes Engine,](https://rancher.com/docs/rke/latest/en/) which is the tool that Rancher uses to provision Kubernetes clusters.

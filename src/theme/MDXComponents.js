@@ -12,6 +12,7 @@ import DeprecationWeave from '/shared-files/_deprecation-weave.md';
 import DeprecationHelm2 from '/shared-files/_deprecation-helm2.md';
 import DockerSupportWarning from '/shared-files/_docker-support-warning.md';
 import ConfigureSLO from '/shared-files/_configure-slo.md';
+import EOLRKE1Warning from '/shared-files/_eol-rke1-warning.md';
 
 export default {
   // Re-use the default mapping
@@ -29,4 +30,5 @@ export default {
   DeprecationWeave,
   DeprecationHelm2,
   DockerSupportWarning,
+  EOLRKE1Warning,
 };

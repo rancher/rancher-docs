@@ -2,6 +2,8 @@
 title: RKE 模板
 ---
 
+<EOLRKE1Warning />
+
 RKE 模板旨在让 DevOps 和安全团队标准化和简化 Kubernetes 集群创建的流程。
 
 RKE 的全称是 [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/)，它是 Rancher 用来配置 Kubernetes 集群的工具。

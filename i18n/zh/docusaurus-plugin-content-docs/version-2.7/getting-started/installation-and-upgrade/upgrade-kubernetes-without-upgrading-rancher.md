@@ -2,6 +2,8 @@
 title: 在不升级 Rancher 的情况下升级 Kubernetes
 ---
 
+<EOLRKE1Warning />
+
 <head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/getting-started/installation-and-upgrade/upgrade-kubernetes-without-upgrading-rancher"/>
 </head>

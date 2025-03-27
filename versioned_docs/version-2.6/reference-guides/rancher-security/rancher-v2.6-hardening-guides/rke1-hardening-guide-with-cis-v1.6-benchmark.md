@@ -2,6 +2,8 @@
 title: RKE Hardening Guide with CIS v1.6 Benchmark
 ---
 
+<EOLRKE1Warning />
+
 This document provides prescriptive guidance for hardening a production installation of a RKE cluster to be used with Rancher v2.6. It outlines the configurations and controls required to address Kubernetes benchmark controls from the Center for Information Security (CIS).
 
 :::note

@@ -2,6 +2,8 @@
 title: RKE CIS v1.6 Benchmark - Self-Assessment Guide - Rancher v2.6
 ---
 
+<EOLRKE1Warning />
+
 ### RKE CIS v1.6 Kubernetes Benchmark - Rancher v2.6 with Kubernetes v1.18 to v1.23
 
 [Click here to download a PDF version of this document](https://releases.rancher.com/documents/security/2.6/Rancher_v2-6_CIS_v1-6_Benchmark_Assessment.pdf).

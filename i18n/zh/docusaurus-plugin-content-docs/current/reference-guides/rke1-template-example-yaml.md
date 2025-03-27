@@ -2,6 +2,8 @@
 title: RKE1 示例 YAML
 ---
 
+<EOLRKE1Warning />
+
 以下是一个供参考的 RKE 模板配置文件示例。
 
 RKE 模板中的 YAML 使用与创建 RKE 集群时相同的自定义项。但是，由于 YAML 位于 Rancher 配置的 RKE 集群的上下文中，因此 RKE 文档中的自定义项需要嵌套在 `rancher_kubernetes_engine` 指令下。

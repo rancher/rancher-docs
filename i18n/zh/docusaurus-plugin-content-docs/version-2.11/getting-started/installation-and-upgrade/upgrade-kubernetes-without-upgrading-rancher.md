@@ -2,6 +2,8 @@
 title: 在不升级 Rancher 的情况下升级 Kubernetes
 ---
 
+<EOLRKE1Warning />
+
 RKE 元数据功能允许你在新版本 Kubernetes 发布后立即为集群配置新版本，而无需升级 Rancher。此功能对于使用 Kubernetes 的补丁版本非常有用，例如，在原本支持 Kubernetes v1.14.6 的 Rancher Server 版本中，将 Kubernetes 升级到 v1.14.7。
 
 :::note

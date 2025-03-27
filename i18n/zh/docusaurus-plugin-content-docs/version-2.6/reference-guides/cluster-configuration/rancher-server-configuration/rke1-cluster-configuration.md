@@ -2,6 +2,8 @@
 title: RKE 集群配置参考
 ---
 
+<EOLRKE1Warning />
+
 Rancher 安装 Kubernetes 时，它使用 [RKE](../../../pages-for-subheaders/launch-kubernetes-with-rancher.md) 或 [RKE2](https://docs.rke2.io/) 作为 Kubernetes 发行版。
 
 本文介绍 Rancher 中可用于新的或现有的 RKE Kubernetes 集群的配置选项。
