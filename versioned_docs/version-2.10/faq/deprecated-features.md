@@ -16,7 +16,7 @@ Rancher will publish deprecated features as part of the [release notes](https://
 
 | Patch Version |  Release Date |
 |---------------|---------------|
-| [2.10.4](https://github.com/rancher/rancher/releases/tag/v2.10.4) | Mar 26, 2025 |
+| [2.10.4](https://github.com/rancher/rancher/releases/tag/v2.10.4) | Mar 28, 2025 |
 | [2.10.3](https://github.com/rancher/rancher/releases/tag/v2.10.3) | Feb 27, 2025 |
 | [2.10.2](https://github.com/rancher/rancher/releases/tag/v2.10.2) | Jan 29, 2025 |
 | [2.10.1](https://github.com/rancher/rancher/releases/tag/v2.10.1) | Dec 19, 2024 |
