@@ -6,6 +6,8 @@ title: Setting up Infrastructure for a High Availability RKE Kubernetes Cluster
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster"/>
 </head>
 
+<EOLRKE1Warning />
+
 This tutorial is intended to help you create a high-availability RKE cluster that can be used to install a Rancher server.
 
 :::note Important:

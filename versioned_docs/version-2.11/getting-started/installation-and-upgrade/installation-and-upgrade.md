@@ -18,8 +18,6 @@ In this section,
 - **K3s (Lightweight Kubernetes)** is also a fully compliant Kubernetes distribution. It is newer than RKE, easier to use, and more lightweight, with a binary size of less than 100 MB.
 - **RKE2** is a fully conformant Kubernetes distribution that focuses on security and compliance within the U.S. Federal Government sector.
 
-Note the `restrictedAdmin` Helm chart option available for **the Rancher Server**. When this option is set to true, the initial Rancher user has restricted access to the local Kubernetes cluster to prevent privilege escalation. For more information, see the section about the [restricted-admin role.](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md#restricted-admin)
-
 ## Overview of Installation Options
 
 Rancher can be installed on these main architectures:

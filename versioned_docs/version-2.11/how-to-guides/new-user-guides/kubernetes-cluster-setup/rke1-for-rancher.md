@@ -6,6 +6,8 @@ title: Setting up a High-availability RKE Kubernetes Cluster
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher"/>
 </head>
 
+<EOLRKE1Warning />
+
 This section describes how to install a Kubernetes cluster. This cluster should be dedicated to run only the Rancher server.
 
 :::note
