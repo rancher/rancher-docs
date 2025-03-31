@@ -35,7 +35,7 @@ The packages that need to be installed on the template are listed below. These w
 * cloud-init
 * cloud-guest-utils
 * cloud-image-utils
-* growpart
+* growpart (part of cloud-guest-utils)
 * cloud-initramfs-growroot
 * open-iscsi
 * openssh-server
