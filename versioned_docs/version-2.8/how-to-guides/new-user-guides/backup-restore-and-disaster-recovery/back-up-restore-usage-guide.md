@@ -6,17 +6,25 @@ title: Backup Restore Usage Guide
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide"/>
 </head>
 
+:::caution
+
+If the local cluster fails, you might need to restore Rancher to a previous version.
+
+You can restore Rancher using two supported methods: cluster Datastore Restores (available for [k3s](https://docs.k3s.io/datastore/backup-restore) and [RKE2](https://docs.rke2.io/datastore/backup_restore) distributions) and Rancher's Backup, as described on this page.
+
+Datastore Restores are suitable when no changes have been made to downstream (managed) clusters since the snapshot. For example, if a local cluster change causes an outage after a snapshot, use Datastore Restore.
+
+However, if you take a Datastore snapshot and then upgrade a downstream cluster's Kubernetes version, a Datastore Restore will revert the downstream cluster's Kubernetes version in the datastore, creating a version mismatch between data in the local cluster and the actual downstream cluster nodes.
+Rancher will then attempt to reconcile the versions, potentially causing unexpected behavior and data loss.
+Similarly, if you take a Datastore snapshot, rotate nodes in a Rancher-provisioned downstream cluster, and then restore from the snapshot, the rotated nodes may become orphaned, possibly making the cluster inoperable. *Recovery from these scenarios is not supported*.
+
+Generally, if you've made changes that directly or indirectly affect downstream clusters (e.g., installing charts/apps, performing "day 2" operations, creating or deleting clusters or nodes, or rotating Rancher certificates), use Rancher's Backup restore, as described on this page.
+
+:::
+
 The Rancher Backups chart is our solution for disaster recovery and migration. This chart allows you to take backups of your Kubernetes resources and save them to a variety of persistent storage locations.
 
 This chart is a very simple tool which has its hands in many different areas of the Rancher ecosystem. As a result, edge cases have arisen which lead to undocumented functionality. The purpose of this document is to highlight the proper and defined usage for Rancher Backups, as well as discussing some of these edge cases we’ve run into.
-
-:::caution
-
-While Kubernetes distributions like k3s and RKE2 offer [cluster configuration backups](https://docs.rke2.io/datastore/backup_restore) (etcd snapshots), these can sometimes cause issues with Rancher.
-
-For a reliable Rancher backup, we recommend using the Rancher Backup functionality described in this guide. Consider etcd snapshots as a last resort option.
-
-:::
 
 ## Functionality Overview
 
