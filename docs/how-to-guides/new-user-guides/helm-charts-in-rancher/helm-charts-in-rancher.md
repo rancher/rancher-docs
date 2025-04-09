@@ -242,7 +242,7 @@ Rancher and Partner charts may have extra configurations available through custo
 
 To view all recent changes, click **Apps > Recent Operations** in the left navigation menu. From there you can view the calls, conditions, events, and logs.
 
-After installing a chart, you can view it by clicking **Apps > Installed Apps** in the left navigation menu. You can upgrade or delete the installation, and see further details. Upgrading uses the same forms and values as you saw during inital installation. 
+After installing a chart, you can view it by clicking **Apps > Installed Apps** in the left navigation menu. You can upgrade or delete the installation, and see further details. Upgrading uses the same forms and values as you saw during initial installation.
 
 Most Rancher tools have additional pages located in the toolbar below the **Apps** section to help manage and use the features. These pages include links to dashboards, forms to easily add Custom Resources, and additional information.
 
@@ -301,4 +301,3 @@ To migrate, follow these steps:
 - When determining the most recent version to display for the **Upgradable** column on the **Apps > Installed Apps** page, rather than only considering versions of the Helm chart from the repository it was installed from, Rancher considers versions of the Helm chart from all repositories on the cluster.
 
   For example, suppose you install `cert-manager` v1.13.0 from repository A, where v1.14.0 is now the most recent version available. In this case, you expect **Upgradable** to display v1.14.0. However, if the cluster also has access to repository B where v1.15.0 of `cert-manager` is available, then **Upgradable** displays v1.15.0 even though the original installation used repository A.
-  
