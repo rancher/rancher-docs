@@ -16,26 +16,28 @@ When you set up your high-availability Rancher installation, consider the follow
 
 ### Minimize Third-Party Software on the Upstream Cluster
 
-Running Rancher, especially as the number of managed clusters, nodes, and workloads increases, can place a significant load on core Kubernetes components like `etcd` and `kube-apiserver` on the upstream cluster. Third-party software can interfere with the performance of these components and Rancher itself, potentially causing issues.
+We generally recommend running Rancher on a dedicated cluster, free of other workloads, to avoid potential performance and compatibility issues.
 
-Every third-party application introduces a risk of interference. To minimize performance and incompatibility issues on the upstream cluster, avoid deploying any applications or components other than essential Kubernetes system components and Rancher.
+Rancher, especially when managing a growing number of clusters, nodes, and workloads, places a significant load on core Kubernetes components like `etcd` and `kube-apiserver` on the upstream cluster. Third-party software can interfere with the performance of these components and Rancher, potentially leading to instability.
 
-The following applications and components generally do not interfere with Rancher or Kubernetes system performance:
+Furthermore, third-party software can functionally interfere with Rancher. To minimize compatibility risks, deploy only essential Kubernetes system components and Rancher on the upstream cluster.
+
+The following applications and components generally do not interfere with Rancher or the Kubernetes system:
  * Rancher internal components, such as Fleet
  * Rancher extensions
  * Cluster API components
- * CNIs
+ * CNIs, CPIs, CSIs
  * Cloud controller managers
  * Observability and monitoring tools (with the exception of prometheus-rancher-exporter)
- * the [SUSE Private Registry](https://documentation.suse.com/cloudnative/suse-private-registry/html/private-registry/index.html)
+ * the [Harbor](https://goharbor.io/) container registry
 
-Remember that each of these has its own minimum resource requirements, which must be met in addition to Rancher's requirements.
+Note that each of these components has its own minimum resource requirements, which must be met in addition to Rancher's.
 
-In particular, SUSE Private Registry can require significant bandwidth for serving images. Ensure sufficient bandwidth is available (and ideally, reserved using Quality of Service mechanisms) for Rancher.
+Container registries, in particular, can require significant bandwidth for serving images. Ensure sufficient bandwidth is available, ideally reserved using Quality of Service (QoS) mechanisms, for Rancher.
 
-In high-scale scenarios, consider dedicating separate nodes to non-Rancher software to minimize interference.
+For high-scale deployments, consider dedicating separate nodes to non-Rancher software using [taints and tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) to minimize interference.
 
-The following software has been found to interfere with Rancher performance at scale and is therefore discouraged on the upstream cluster:
+The following software can interfere with Rancher performance at scale and is therefore discouraged on the upstream cluster:
  * [CrossPlane](https://www.crossplane.io/)
  * [Argo CD](https://argoproj.github.io/cd/)
  * [Flux](https://fluxcd.io/)
