@@ -120,7 +120,7 @@ Select the image repository to pull Rancher images from. For more details and co
 
 ### Upgrade Strategy
 
-#### Controle Plane Concurrency
+#### Control Plane Concurrency
 
 Select how many nodes can be upgraded at the same time. Can be a fixed number or percentage.
 

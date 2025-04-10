@@ -23,7 +23,7 @@ Users can leverage continuous delivery to deploy their applications to the Kuber
 
 Follow the steps below to access Continuous Delivery in the Rancher UI:
 
-1. Click **☰ > Continous Delivery**.
+1. Click **☰ > Continuous Delivery**.
 
 1. Select your namespace at the top of the menu, noting the following:
 

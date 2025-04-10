@@ -160,7 +160,7 @@ kubectl --namespace p-vwxyz get projectroletemplatebindings
 
 ## Deleting a Member From a Project
 
-Lookup the projectroletemplatebinding IDs containing the member in the project's namespace as decribed in the [Listing Project Members](#listing-project-members) section.
+Lookup the projectroletemplatebinding IDs containing the member in the project's namespace as described in the [Listing Project Members](#listing-project-members) section.
 
 Delete the projectroletemplatebinding from the project's namespace:
 
