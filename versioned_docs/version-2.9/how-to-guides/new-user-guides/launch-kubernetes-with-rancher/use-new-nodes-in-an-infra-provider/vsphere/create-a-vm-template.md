@@ -131,7 +131,7 @@ cloud-init clean -s -l
 
 ### Windows Preparation
 
-Windows has a utility called [sysprep](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation) that is used to generalize an image and reset the same items listed above for Linux. The command is as follows:
+Windows has a utility called [sysprep](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation?view=windows-11) that is used to generalize an image and reset the same items listed above for Linux. The command is as follows:
 
 ```PowerShell
 sysprep.exe /generalize /shutdown /oobe

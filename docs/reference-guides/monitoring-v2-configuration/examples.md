@@ -12,7 +12,7 @@ See the official prometheus-operator GitHub repo for an example [ServiceMonitor]
 
 ## PodMonitor
 
-See the [Prometheus Operator documentation](https://prometheus-operator.dev/docs/user-guides/getting-started/#using-podmonitors) for an example PodMonitor and an example Prometheus resource that refers to a PodMonitor.
+See the [Prometheus Operator documentation](https://prometheus-operator.dev/docs/developer/getting-started/#using-podmonitors) for an example PodMonitor and an example Prometheus resource that refers to a PodMonitor.
 
 ## PrometheusRule
 
@@ -20,7 +20,7 @@ A PrometheusRule contains the alerting and recording rules that you would usuall
 
 For a more fine-grained approach, the `ruleSelector` field on a Prometheus resource can select which PrometheusRules should be loaded onto Prometheus, based on the labels attached to the PrometheusRules resources.
 
-See the [Prometheus Operator documentation](https://prometheus-operator.dev/docs/user-guides/alerting/) for an example PrometheusRule.
+See the [Prometheus Operator documentation](https://prometheus-operator.dev/docs/developer/alerting/) for an example PrometheusRule.
 
 ## Alertmanager Config
 

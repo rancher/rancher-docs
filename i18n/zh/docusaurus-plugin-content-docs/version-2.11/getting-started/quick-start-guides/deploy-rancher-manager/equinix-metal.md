@@ -23,15 +23,13 @@ title: Rancher Equinix Metal 快速入门
 
 ## 先决条件
 
-- [Equinix Metal 账号](https://metal.equinix.com/developers/docs/accounts/users/)
-- [Equinix Metal 项目](https://metal.equinix.com/developers/docs/accounts/projects/)
+- [Equinix Metal 账号](https://deploy.equinix.com/developers/docs/metal/identity-access-management/users/)
+- [Equinix Metal 项目](https://deploy.equinix.com/developers/docs/metal/projects/creating-a-project/)
 
 
 ### 1. 配置 Equinix Metal 主机
 
-开始部署 Equinix Metal 主机。你可以使用 Equinix Metal 控制台、CLI 或 API 来配置 Equinix Metal Server。如果你需要了解每种 Deployment 类型的说明，请参见 [Equinix Metal 部署](https://metal.equinix.com/developers/docs/deploy/on-demand/)。以下链接介绍 Equinix Metal Server 的类型以及价格：
-- [Equinix Metal Server 类型](https://metal.equinix.com/developers/docs/servers/about/)
-- [Equinix Metal 价格](https://metal.equinix.com/developers/docs/servers/server-specs/)
+开始部署 Equinix Metal 主机。你可以使用 Equinix Metal 控制台、CLI 或 API 来配置 Equinix Metal Server。如果你需要了解每种 Deployment 类型的说明，请参见 [Equinix Metal 部署](https://metal.equinix.com/developers/docs/deploy/on-demand/)。You can find additional information on Equinix Metal server types in the [Equinix Metal Documentation](https://deploy.equinix.com/developers/docs/metal/hardware/standard-servers/).
 
 :::note 注意事项：
 

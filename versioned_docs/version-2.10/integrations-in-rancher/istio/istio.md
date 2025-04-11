@@ -55,7 +55,7 @@ For Istio installations `103.1.0+up1.19.6` and later, Kiali uses a token value f
 
 Our Istio installer includes a quick-start, all-in-one installation of [Jaeger,](https://www.jaegertracing.io/) a tool used for tracing distributed systems.
 
-Note that this is not a production-qualified deployment of Jaeger. This deployment uses an in-memory storage component, while a persistent storage component is recommended for production. For more information on which deployment strategy you may need, refer to the [Jaeger documentation.](https://www.jaegertracing.io/docs/latest/operator/#production-strategy)
+Note that this is not a production-qualified deployment of Jaeger. This deployment uses an in-memory storage component, while a persistent storage component is recommended for production. For more information on which deployment strategy you may need, refer to the [Jaeger documentation.](https://www.jaegertracing.io/docs/1.65/operator/#production-strategy)
 
 ## Prerequisites
 
