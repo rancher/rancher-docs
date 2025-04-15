@@ -1352,7 +1352,7 @@ In this file, choose aescbc, kms or secretbox as the encryption provider.
 ```bash
 #!/usr/bin/env bash
 
-# This script is used to check the encrption provider config is set to aesbc
+# This script is used to check the encryption provider config is set to aesbc
 #
 # outputs:
 #   true/false
@@ -2884,8 +2884,8 @@ it is set to an empty array.
 **Result:** warn
 
 **Remediation:**
-Review the use of capabilites in applications running on your cluster. Where a namespace
-contains applicaions which do not require any Linux capabities to operate consider adding
+Review the use of capabilities in applications running on your cluster. Where a namespace
+contains applications which do not require any Linux capabities to operate consider adding
 a PSP which forbids the admission of containers which do not drop all capabilities.
 
 ### 5.2.11 Minimize the admission of Windows HostProcess containers (Manual)

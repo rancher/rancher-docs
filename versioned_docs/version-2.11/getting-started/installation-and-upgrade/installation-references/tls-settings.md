@@ -40,7 +40,7 @@ In Rancher v2.9.0 and later, this setting defaults to `strict` on new installs. 
 Each cluster contains a condition in the status field called `AgentTlsStrictCheck`. If `AgentTlsStrictCheck` is set to `"True"`, this indicates that the agents for the cluster are ready to operate in `strict` mode. You can manually inspect each cluster to see if they are ready using the Rancher UI or a kubectl command such as the following:
 
 ```bash
-## the below command skips ouputs $CLUSTER_NAME,$STATUS for all non-local clusters
+## the below command skips outputs $CLUSTER_NAME,$STATUS for all non-local clusters
 kubectl get cluster.management.cattle.io -o jsonpath='{range .items[?(@.metadata.name!="local")]}{.metadata.name},{.status.conditions[?(@.type=="AgentTlsStrictCheck")].status}{"\n"}{end}'
 ```
 

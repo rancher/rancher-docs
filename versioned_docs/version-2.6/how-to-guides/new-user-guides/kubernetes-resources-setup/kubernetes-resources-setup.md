@@ -47,7 +47,7 @@ When using ingresses in a project, you can program the ingress hostname to an ex
 
 ## Service Discovery
 
-After you expose your cluster to external requests using a load balancer and/or ingress, it's only available by IP address. To create a resolveable hostname, you must create a service record, which is a record that maps an IP address, external hostname, DNS record alias, workload(s), or labelled pods to a specific hostname.
+After you expose your cluster to external requests using a load balancer and/or ingress, it's only available by IP address. To create a resolvable hostname, you must create a service record, which is a record that maps an IP address, external hostname, DNS record alias, workload(s), or labelled pods to a specific hostname.
 
 For more information, see [Service Discovery](create-services.md).
 
