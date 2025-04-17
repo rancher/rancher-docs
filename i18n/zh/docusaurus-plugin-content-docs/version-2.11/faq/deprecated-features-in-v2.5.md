@@ -10,15 +10,10 @@ title: Rancher 弃用的功能
 
 Rancher 会在 GitHub 上的[发行说明](https://github.com/rancher/rancher/releases)中公布已弃用的功能。请参阅以下补丁版本了解已弃用的功能：
 
-| 补丁版本 | 发布日期 |
-|---------------|---------------|
-| [2.6.0](https://github.com/rancher/rancher/releases/tag/v2.6.0) | 2021 年 8 月 31 日 |
-| [2.6.1](https://github.com/rancher/rancher/releases/tag/v2.6.1) | 2021 年 10 月 11 日 |
-| [2.6.2](https://github.com/rancher/rancher/releases/tag/v2.6.2) | 2021 年 10 月 19 日 |
-| [2.6.3](https://github.com/rancher/rancher/releases/tag/v2.6.3) | 2021 年 12 月 21 日 |
-| [2.6.4](https://github.com/rancher/rancher/releases/tag/v2.6.4) | 2022 年 3 月 31 日 |
-| [2.6.5](https://github.com/rancher/rancher/releases/tag/v2.6.5) | 2022 年 5 月 12 日 |
-| [2.6.6](https://github.com/rancher/rancher/releases/tag/v2.6.6) | 2022 年 6 月 30 日 |
+| Patch 版本                                                         | 发布时间            |
+| ----------------------------------------------------------------- | ------------------ |
+| [2.11.1](https://github.com/rancher/rancher/releases/tag/v2.11.1) | 2024 年 4 月 23 日  |
+| [2.11.0](https://github.com/rancher/rancher/releases/tag/v2.11.0) | 2024 年 3 月 31 日  |
 
 ## 如果某个功能标记为弃用，我要怎么做？
 
