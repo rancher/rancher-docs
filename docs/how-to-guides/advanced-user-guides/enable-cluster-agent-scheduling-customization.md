@@ -6,7 +6,7 @@ title: Enabling Cluster Agent Scheduling Customization
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-cluster-agent-scheduling-customization"/>
 </head>
 
-In Rancher v2.11.0 and later, you can enable the automatic deployment of a Priority Class and Pod Disruption Budget for the `cattle-cluster-agent`.
+The `cattle-cluster-agent` allows enabling automatic deployment of a Priority Class and Pod Disruption Budget.
 
 When this feature is enabled, all newly provisioned Node Driver, Custom, and Imported RKE2 and K3s clusters will automatically deploy a Priority Class and Pod Disruption Budget during the provisioning process. Existing clusters can be gradually updated with this new behavior using the [Rancher UI or by setting a specific annotation](#updating-existing-clusters) on cluster objects.
 
