@@ -62,7 +62,7 @@ Prometheus 不是用于长期存储指标的，它只用于短期存储。
 
 ### 关于 Prometheus Exporters
 
-许多第三方工作负载（如数据库、队列或 Web 服务器）要么已经支持以 Prometheus 格式公开指标，要么有所谓的 exporter，来对工具的指标格式和 Prometheus 理解的指标格式进行转换。通常，你可以将这些 exporter 作为额外的 Sidecar 容器添加到工作负载的 Pod 中。很多 Helm Chart 已经包含了部署 exporter 的选项。此外，你还可以在 [promcat.io](https://promcat.io/) 和 [ExporterHub](https://exporterhub.io/) 上找到一个由 SysDig 策划的 exporter 列表。
+许多第三方工作负载（如数据库、队列或 Web 服务器）要么已经支持以 Prometheus 格式公开指标，要么有所谓的 exporter，来对工具的指标格式和 Prometheus 理解的指标格式进行转换。通常，你可以将这些 exporter 作为额外的 Sidecar 容器添加到工作负载的 Pod 中。很多 Helm Chart 已经包含了部署 exporter 的选项。此外，你还可以在 [ExporterHub](https://exporterhub.io/) 上找到一个策划的 exporter 列表。
 
 ### Prometheus 的编程语言和框架支持
 

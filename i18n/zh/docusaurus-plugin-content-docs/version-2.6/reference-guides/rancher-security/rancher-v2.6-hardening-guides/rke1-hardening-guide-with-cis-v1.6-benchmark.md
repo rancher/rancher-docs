@@ -2,6 +2,8 @@
 title: 使用 CIS 1.6 Benchmark 的 RKE 强化指南
 ---
 
+<EOLRKE1Warning />
+
 本文档提供了用于强化 RKE 集群（使用 Rancher 2.6 进行配置）生产安装的说明。此处概述了遵循 CIS 的 Kubernetes Benchmark 管控所需的配置和控制。
 
 :::note

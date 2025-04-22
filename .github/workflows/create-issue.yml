@@ -21,9 +21,11 @@ jobs:
     - name: Create issue
       env:
         GH_TOKEN: ${{ github.token }}
+        REPO_TYPE: ${{ contains( github.repository, 'product-docs') && 'Product' || 'Community' }}
+        PR_TITLE: ${{ github.event.pull_request.title }}
       run: |
         gh issue create \
-          --repo rancher/rancher-docs \
-          --title 'Port Community docs PR #${{github.event.pull_request.number}}: ${{github.event.pull_request.title}}' \
-          --body 'Reference: https://github.com/${{github.repository}}/pull/${{github.event.pull_request.number}}' \
-          --label port/community-product 
+          --repo ${{ github.repository }} \
+          --title "Port $REPO_TYPE docs PR #${{ github.event.pull_request.number }}: $PR_TITLE" \
+          --body "Reference: https://github.com/${{ github.repository }}/pull/${{ github.event.pull_request.number }}" \
+          --label port/community-product

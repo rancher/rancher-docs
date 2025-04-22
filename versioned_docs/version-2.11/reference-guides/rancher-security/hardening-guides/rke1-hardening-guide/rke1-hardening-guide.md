@@ -2,6 +2,8 @@
 title: RKE Hardening Guides
 ---
 
+<EOLRKE1Warning />
+
 <head>
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide"/>
 </head>

@@ -95,7 +95,7 @@ Once edited, either press `ctrl+s` or go to `File > Save` to save your work.
 
 ## Install Rancher with Helm
 
-Then from your local workstation, run the following commands. You will need to have [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl) and [helm.](https://helm.sh/docs/intro/install/) installed.
+Then from your local workstation, run the following commands. You will need to have [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl) and [helm](https://helm.sh/docs/intro/install/) installed.
 
 :::note
 

@@ -52,12 +52,6 @@ In this section, you'll learn how to add the cluster template to the `local` clu
 
 **Result:** The cluster template available from the **Apps** in Rancher's `local` cluster. It can now be used to deploy clusters.
 
-:::note Restricted Admin access:
-
-If you are a restricted admin and don’t have access to the `local` cluster, you may still add new RKE2 templates and manage cluster repositories. To navigate to the chart repository, go to the left navigation bar and click **☰ > Cluster Management >  Advanced > Repositories**. You will bypass steps 1 - 6 above, then proceed to follow steps 7 - 12 to create the cluster template.
-
-:::
-
 ## Creating a Cluster from a Cluster Template
 
 :::note Prerequisites:

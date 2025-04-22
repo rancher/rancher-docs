@@ -185,9 +185,9 @@ module.exports = {
               label: 'Latest',
             },
             '2.11': {
-              label: 'v2.11 (Preview)',
+              label: 'v2.11',
               path: 'v2.11',
-              banner: 'unreleased'
+              banner: 'none'
             },
             '2.10': {
               label: 'v2.10',
@@ -202,7 +202,7 @@ module.exports = {
             2.8: {
               label: 'v2.8',
               path: 'v2.8',
-              banner: 'none'
+              className: 'toArchive'
             },
             2.7: {
               label: 'v2.7',

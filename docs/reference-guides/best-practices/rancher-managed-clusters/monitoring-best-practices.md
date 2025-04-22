@@ -66,7 +66,7 @@ In general, you want to scrape data from all the workloads running in your clust
 
 ### About Prometheus Exporters
 
-Many 3rd party workloads, such as databases, queues, and web-servers, already support exposing metrics in a Prometheus format, or offer exporters that translate between the tool's metrics and a format that Prometheus understands. You can usually add these exporters as additional sidecar containers to the workload's Pods. Many Helm charts already include options to deploy the correct exporter. You can find a curated list of exports by SysDig on [promcat.io](https://promcat.io/) and on [ExporterHub](https://exporterhub.io/).
+Many 3rd party workloads, such as databases, queues, and web-servers, already support exposing metrics in a Prometheus format, or offer exporters that translate between the tool's metrics and a format that Prometheus understands. You can usually add these exporters as additional sidecar containers to the workload's Pods. Many Helm charts already include options to deploy the correct exporter. You can find a curated list of exports on [ExporterHub](https://exporterhub.io/).
 
 ### Prometheus support in Programming Languages and Frameworks
 

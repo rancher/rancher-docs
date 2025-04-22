@@ -6,6 +6,8 @@ title: RKE 加固指南
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide"/>
 </head>
 
+<EOLRKE1Warning />
+
 本文档提供了针对生产环境的 RKE 集群进行加固的具体指导，以便在使用 Rancher 部署之前进行配置。它概述了满足信息安全中心（Center for Information Security, CIS）Kubernetes benchmark controls 所需的配置和控制。
 
 :::note

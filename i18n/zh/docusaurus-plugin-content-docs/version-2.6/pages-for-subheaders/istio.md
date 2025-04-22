@@ -47,7 +47,7 @@ Kiali 是一个全面的可视化辅助工具，用于绘制整个服务网格�
 
 Jaeger 是用于跟踪分布式系统的工具。我们的 Istio 安装程序包括能快速启动的一体化 [Jaeger](https://www.jaegertracing.io/) 安装。
 
-请注意，这不是符合 Jaeger 生产要求的部署。此部署使用在内存中的存储组件，而 Jaeger 推荐在生产环境中使用持久存储组件。有关你所需的部署策略的更多信息，请参阅 [Jaeger 文档](https://www.jaegertracing.io/docs/latest/operator/#production-strategy)。
+请注意，这不是符合 Jaeger 生产要求的部署。此部署使用在内存中的存储组件，而 Jaeger 推荐在生产环境中使用持久存储组件。有关你所需的部署策略的更多信息，请参阅 [Jaeger 文档](https://www.jaegertracing.io/docs/1.65/operator/#production-strategy)。
 
 ## 先决条件
 

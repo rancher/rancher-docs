@@ -2,6 +2,8 @@
 title: RKE CIS 1.6 Benchmark - 自我评估指南 - Rancher 2.6
 ---
 
+<EOLRKE1Warning />
+
 ### RKE CIS 1.6 Kubernetes Benchmark - Rancher 2.6 与 Kubernetes 1.18 到 1.23
 
 [点击此处下载本文档的 PDF 版本](https://releases.rancher.com/documents/security/2.6/Rancher_v2-6_CIS_v1-6_Benchmark_Assessment.pdf)。

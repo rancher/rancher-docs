@@ -2,6 +2,8 @@
 title: 配置高可用的 RKE Kubernetes 集群
 ---
 
+<EOLRKE1Warning />
+
 本文介绍如何安装 Kubernetes 集群。该集群应专用于运行 Rancher Server。
 
 :::note
