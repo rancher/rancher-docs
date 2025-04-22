@@ -6,6 +6,14 @@ title: Set up Istio's Components for Traffic Management
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/istio-setup-guide/set-up-traffic-management"/>
 </head>
 
+:::warning
+
+[Rancher-Istio](https://github.com/rancher/charts/tree/release-v2.11/charts/rancher-istio) will be deprecated in Rancher v2.12.0; turn to the [SUSE Rancher Application Collection](https://apps.rancher.io) build of Istio for enhanced security (included in SUSE Rancher Prime subscriptions).
+
+Detailed information can be found in [this announcement](https://forums.suse.com/t/deprecation-of-rancher-istio/45043).
+
+:::
+
 A central advantage of traffic management in Istio is that it allows dynamic request routing. Some common applications for dynamic request routing include canary deployments and blue/green deployments. The two key resources in Istio traffic management are *virtual services* and *destination rules*.
 
 - [Virtual services](https://istio.io/docs/reference/config/networking/v1alpha3/virtual-service/) intercept and direct traffic to your Kubernetes services, allowing you to divide percentages of traffic from a request to different services. You can use them to define a set of routing rules to apply when a host is addressed.
