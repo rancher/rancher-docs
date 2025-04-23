@@ -100,7 +100,7 @@ If you want to check resolving of domain names on all of the hosts, execute the 
           - image: busybox:1.28
             imagePullPolicy: Always
             name: alpine
-            command: ["sh", "-c", "tail -f /dev/null"]
+            command: ["sleep", "infinity"]
             terminationMessagePath: /dev/termination-log
     ```
 
