@@ -14,18 +14,24 @@ title: Rancher 中已弃用的功能
 
 Rancher 将在 GitHub 上发布的 Rancher 的[发版说明](https://github.com/rancher/rancher/releases)中发布已弃用的功能。有关已弃用的功能，请参阅以下的补丁版本：
 
-| Patch 版本                                                      | 发布时间           |
-| --------------------------------------------------------------- | ------------------|
-| [2.8.9](https://github.com/rancher/rancher/releases/tag/v2.8.9) | 2024 年 10 月 24   |
-| [2.8.8](https://github.com/rancher/rancher/releases/tag/v2.8.8) | 2024 年 9 月 19    |
-| [2.8.7](https://github.com/rancher/rancher/releases/tag/v2.8.7) | 2024 年 9 月 26    |
-| [2.8.6](https://github.com/rancher/rancher/releases/tag/v2.8.6) | 2024 年 7 月 31    |
-| [2.8.5](https://github.com/rancher/rancher/releases/tag/v2.8.5) | 2024 年 6 月 17    |
-| [2.8.4](https://github.com/rancher/rancher/releases/tag/v2.8.4) | 2024 年 5 月 16    |
-| [2.8.3](https://github.com/rancher/rancher/releases/tag/v2.8.3) | 2024 年 3 月 28 日 |
-| [2.8.2](https://github.com/rancher/rancher/releases/tag/v2.8.2) | 2024 年 2 月 8 日  |
-| [2.8.1](https://github.com/rancher/rancher/releases/tag/v2.8.1) | 2024 年 1 月 22 日 |
-| [2.8.0](https://github.com/rancher/rancher/releases/tag/v2.8.0) | 2023 年 12 月 6 日 |
+| Patch 版本                                                      | 发布时间              |
+| --------------------------------------------------------------- | ---------------------|
+| [2.8.15](https://github.com/rancher/rancher/releases/tag/v2.8.15) | 2025 年 4 24 日    |
+| [2.8.14](https://github.com/rancher/rancher/releases/tag/v2.8.14) | 2025 年 3 31 日    |
+| [2.8.13](https://github.com/rancher/rancher/releases/tag/v2.8.13) | 2025 年 2 27 日    |
+| [2.8.12](https://github.com/rancher/rancher/releases/tag/v2.8.12) | 2025 年 1 29 日    |
+| [2.8.11](https://github.com/rancher/rancher/releases/tag/v2.8.11) | 2024 年 12 18 日   |
+| [2.8.10](https://github.com/rancher/rancher/releases/tag/v2.8.10) | 2024 年 11 18 日   |
+| [2.8.9](https://github.com/rancher/rancher/releases/tag/v2.8.9)   | 2024 年 10 月 24 日 |
+| [2.8.8](https://github.com/rancher/rancher/releases/tag/v2.8.8)   | 2024 年 9 月 19 日  |
+| [2.8.7](https://github.com/rancher/rancher/releases/tag/v2.8.7)   | 2024 年 9 月 26 日  |
+| [2.8.6](https://github.com/rancher/rancher/releases/tag/v2.8.6)   | 2024 年 7 月 31 日  |
+| [2.8.5](https://github.com/rancher/rancher/releases/tag/v2.8.5)   | 2024 年 6 月 17 日  |
+| [2.8.4](https://github.com/rancher/rancher/releases/tag/v2.8.4)   | 2024 年 5 月 16 日  |
+| [2.8.3](https://github.com/rancher/rancher/releases/tag/v2.8.3)   | 2024 年 3 月 28 日  |
+| [2.8.2](https://github.com/rancher/rancher/releases/tag/v2.8.2)   | 2024 年 2 月 8 日   |
+| [2.8.1](https://github.com/rancher/rancher/releases/tag/v2.8.1)   | 2024 年 1 月 22 日  |
+| [2.8.0](https://github.com/rancher/rancher/releases/tag/v2.8.0)   | 2023 年 12 月 6 日  |
 
 ## 当一个功能被标记为弃用我可以得到什么样的预期？
 
