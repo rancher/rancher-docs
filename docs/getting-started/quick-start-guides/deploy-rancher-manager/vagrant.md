@@ -20,12 +20,10 @@ The intent of these guides is to quickly launch a sandbox that you can use to ev
 - [Virtualbox](https://www.virtualbox.org): The virtual machines that Vagrant provisions need to be provisioned to VirtualBox.
 - At least 4GB of free RAM.
 
-### Note
-- Vagrant will require plugins to create VirtualBox VMs. Install them with the following commands:
+>**Note:** Vagrant requires plugins to create VirtualBox VMs. Install them with the following commands:
 
-  `vagrant plugin install vagrant-vboxmanage`
-
-  `vagrant plugin install vagrant-vbguest`
+  * `vagrant plugin install vagrant-vboxmanage`
+  * `vagrant plugin install vagrant-vbguest`
 
 ## Getting Started
 

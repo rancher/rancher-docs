@@ -16,12 +16,10 @@ The following steps quickly deploy a Rancher Server with a single node cluster a
 - [Virtualbox](https://www.virtualbox.org): The virtual machines that Vagrant provisions need to be provisioned to VirtualBox.
 - At least 4GB of free RAM.
 
-### Note
-- Vagrant will require plugins to create VirtualBox VMs. Install them with the following commands:
+>**Note:** Vagrant requires plugins to create VirtualBox VMs. Install them with the following commands:
 
-  `vagrant plugin install vagrant-vboxmanage`
-
-  `vagrant plugin install vagrant-vbguest`
+  * `vagrant plugin install vagrant-vboxmanage`
+  * `vagrant plugin install vagrant-vbguest`
 
 ## Getting Started
 
