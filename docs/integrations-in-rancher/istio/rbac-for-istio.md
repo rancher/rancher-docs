@@ -6,6 +6,14 @@ title: Role-based Access Control
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/istio/rbac-for-istio"/>
 </head>
 
+:::warning
+
+[Rancher-Istio](https://github.com/rancher/charts/tree/release-v2.11/charts/rancher-istio) will be deprecated in Rancher v2.12.0; turn to the [SUSE Rancher Application Collection](https://apps.rancher.io) build of Istio for enhanced security (included in SUSE Rancher Prime subscriptions).
+
+Detailed information can be found in [this announcement](https://forums.suse.com/t/deprecation-of-rancher-istio/45043).
+
+:::
+
 This section describes the permissions required to access Istio features.
 
 The rancher istio chart installs three `ClusterRoles`

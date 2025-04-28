@@ -6,6 +6,14 @@ title: Add Deployments and Services with the Istio Sidecar
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/istio-setup-guide/use-istio-sidecar"/>
 </head>
 
+:::warning
+
+[Rancher-Istio](https://github.com/rancher/charts/tree/release-v2.11/charts/rancher-istio) will be deprecated in Rancher v2.12.0; turn to the [SUSE Rancher Application Collection](https://apps.rancher.io) build of Istio for enhanced security (included in SUSE Rancher Prime subscriptions).
+
+Detailed information can be found in [this announcement](https://forums.suse.com/t/deprecation-of-rancher-istio/45043).
+
+:::
+
 :::note Prerequisite:
 
 To enable Istio for a workload, the cluster and namespace must have the Istio app installed.

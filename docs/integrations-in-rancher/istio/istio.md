@@ -6,7 +6,7 @@ title: Istio
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/istio"/>
 </head>
 
-:::note
+:::warning
 
 [Rancher-Istio](https://github.com/rancher/charts/tree/release-v2.11/charts/rancher-istio) will be deprecated in Rancher v2.12.0; turn to the [SUSE Rancher Application Collection](https://apps.rancher.io) build of Istio for enhanced security (included in SUSE Rancher Prime subscriptions).
 
