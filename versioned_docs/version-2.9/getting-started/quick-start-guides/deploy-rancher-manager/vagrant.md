@@ -24,7 +24,7 @@ The intent of these guides is to quickly launch a sandbox that you can use to ev
 
   * `vagrant plugin install vagrant-vboxmanage`
   * `vagrant plugin install vagrant-vbguest`
-
+ 
 ## Getting Started
 
 1. Clone [Rancher Quickstart](https://github.com/rancher/quickstart) to a folder using `git clone https://github.com/rancher/quickstart`.
