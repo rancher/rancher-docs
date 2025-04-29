@@ -89,7 +89,7 @@ After new Kubernetes versions are loaded into the Rancher setup, additional step
 To download the system images for the private registry: 
 
 1. Click **☰** in the top left corner.
-1. Click **version number** at the bottom of the left navigation.
+1. At the bottom of the left navigation, click the Rancher version number.
 1. Download the OS specific image lists for Linux or Windows.
 1. Download `rancher-images.txt`.
 1. Prepare the private registry using the same steps during the [air gap install](other-installation-methods/air-gapped-helm-cli-install/publish-images.md), but instead of using the `rancher-images.txt` from the releases page, use the one obtained from the previous steps.
