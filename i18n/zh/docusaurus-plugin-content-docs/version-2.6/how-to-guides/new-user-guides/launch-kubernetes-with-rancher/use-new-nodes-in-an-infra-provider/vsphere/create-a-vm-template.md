@@ -31,7 +31,7 @@ Linux 和 Windows 虚拟机都需要特定工具才能供 vSphere 主机驱动�
 * cloud-init
 * cloud-guest-utils
 * cloud-image-utils
-* growpart
+* growpart (part of cloud-guest-utils)
 * cloud-initramfs-growroot
 * open-iscsi
 * openssh-server
