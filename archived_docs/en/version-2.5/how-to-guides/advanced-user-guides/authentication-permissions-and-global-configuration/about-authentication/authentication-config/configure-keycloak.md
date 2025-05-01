@@ -164,7 +164,7 @@ If you are experiencing issues while testing the connection to the Keycloak serv
 When you click on **Authenticate with Keycloak**, you are not redirected to your IdP.
 
   * Verify your Keycloak client configuration.
-  * Make sure `Force Post Binding` set to `OFF`.
+  * Make sure `Force Post Binding` is set to `OFF`.
 
 
 ### Forbidden message displayed after IdP login
