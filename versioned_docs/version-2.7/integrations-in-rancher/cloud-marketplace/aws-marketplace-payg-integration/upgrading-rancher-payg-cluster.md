@@ -8,7 +8,7 @@ To upgrade the deployed Helm chart to the latest version, run the following Helm
 
 ```shell
 helm upgrade -n cattle-rancher-csp-deployer-system rancher-cloud --create-namespace \
-oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/suse/<respository>/rancher-cloud-helm/rancher-cloud \
+oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/suse/<repository>/rancher-cloud-helm/rancher-cloud \
   --version <upgraded-chart-version> \
   --set rancherHostname=<host-name> \
   --set rancherServerURL=https://<host-name> \

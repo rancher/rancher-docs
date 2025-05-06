@@ -340,14 +340,14 @@ route:
  routes:
   - match:
       service: database
-    receiver: 'database-notifcations'
+    receiver: 'database-notifications'
 
 receivers:
 - name: 'pagerduty-notifications'
   pagerduty_configs:
   - service_key: 'primary-integration-key'
 
-- name: 'database-notifcations'
+- name: 'database-notifications'
   pagerduty_configs:
   - service_key: 'database-integration-key'
 ```

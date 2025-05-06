@@ -337,7 +337,7 @@ Alternatives, such as using a HelmChartConfig to customize the system charts via
 
 Specify the values for the system charts installed by K3s.
 
-For more information about how K3s manges packaged components, please refer to [K3s documentation](https://docs.k3s.io/installation/packaged-components).
+For more information about how K3s manages packaged components, please refer to [K3s documentation](https://docs.k3s.io/installation/packaged-components).
 
 Example:
 
