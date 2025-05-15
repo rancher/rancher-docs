@@ -82,7 +82,7 @@ This section outlines the guidelines for the proper usage of the Rancher Backups
 ### Restores
 
 - A restore refers to restoring a backup to the same cluster it was taken from. This can be with Rancher installed (**prune must be enabled**) or with it not installed (no special instructions).
-- One thing to note when restoring is that you may find yourself needing to “wipe” the cluster of any Rancher resources. This can be done by deploying the [Rancher cleanup script](https://github.com/rancher/rancher-cleanup) script as a job to the cluster. This allows you to install Rancher Backups again and restore to a completely fresh cluster.
+- One thing to note when restoring is that you may find yourself needing to “wipe” the cluster of any Rancher resources. This can be done by deploying the [Rancher cleanup script](https://github.com/rancher/rancher-cleanup) as a job to the cluster. This allows you to install Rancher Backups again and restore to a completely fresh cluster.
   - Make sure to use kubectl to deploy the scripts.
 
 ### Migrations
