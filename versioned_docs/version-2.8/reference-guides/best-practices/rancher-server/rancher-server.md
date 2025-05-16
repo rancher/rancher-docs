@@ -10,7 +10,7 @@ This guide contains our recommendations for running the Rancher server, and is i
 
 ### Recommended Architecture and Infrastructure
 
-Refer to this [guide](tips-for-running-rancher.md) for our general advice for setting up the Rancher server on a high-availability Kubernetes cluster.
+Refer to this [guide](tips-for-running-rancher.md) for our general advice for setting up the Rancher server for a production installation.
 
 ### Deployment Strategies
 
