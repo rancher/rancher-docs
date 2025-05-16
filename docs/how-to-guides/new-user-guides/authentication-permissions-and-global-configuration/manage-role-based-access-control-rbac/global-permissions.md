@@ -100,6 +100,12 @@ For details on which Kubernetes resources correspond to each global permission,
 
 :::
 
+:::danger
+
+The built-in GlobalRole `Manage Users` allows users to create, modify and delete other users within the Rancher environment. While this permission may be necessary for administrative workflows in trusted environments, granting it to non-trusted or lower-privileged users, such as standard users, poses a serious security risk and may result in privilege escalation.
+
+:::
+
 ### Custom GlobalRoles
 
 You can create custom GlobalRoles to satisfy use cases not directly addressed by built-in GlobalRoles. 
