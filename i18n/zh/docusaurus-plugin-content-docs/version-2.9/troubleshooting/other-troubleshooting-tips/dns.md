@@ -96,7 +96,7 @@ pod "busybox" deleted
          - image: busybox:1.28
            imagePullPolicy: Always
            name: alpine
-           command: ["sh", "-c", "tail -f /dev/null"]
+           command: ["sleep", "infinity"]
            terminationMessagePath: /dev/termination-log
    ```
 

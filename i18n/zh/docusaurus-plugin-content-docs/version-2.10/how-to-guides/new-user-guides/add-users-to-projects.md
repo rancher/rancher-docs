@@ -27,6 +27,14 @@ title: 添加项目成员
 1. 在**成员**选项卡中，单击**添加**。
 1. 搜索要添加到项目的用户或组。
 
+   :::note Notes:
+
+   - At least 2 characters must be typed in the search box for results to appear.
+   - Users can be searched based on their username or display name.
+   - Search is prefix-based (e.g., a user named `Stan Dard` will appear when searching for `Sta`, but not when searching for `Dar`) and case-sensitive.
+
+   :::
+
    如果配置了外部身份验证：
 
    - 在你键入时，Rancher 会从你的外部身份验证源返回用户。

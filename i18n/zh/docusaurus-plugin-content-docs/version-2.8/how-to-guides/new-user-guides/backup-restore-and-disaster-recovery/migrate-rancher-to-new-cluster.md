@@ -47,10 +47,10 @@ Rancher 可以安装到任意 Kubernetes 集群上，包括托管的 Kubernetes 
 
    以上假设你的环境具有到 Docker Hub 的出站连接。
 
-   对于**离线环境**，在安装 rancher-backup Helm Chart 时，使用下面的 Helm 值从你的私有镜像仓库中拉取 `backup-restore-operator` 镜像。
+   对于**离线环境**，在安装 rancher-backup Helm Chart 时，使用下面的 Helm 值从你的私有镜像仓库中拉取 `backup-restore-operator` 和 `kubectl` 镜像。
 
    ```bash
-   --set image.repository $REGISTRY/rancher/backup-restore-operator
+   --set image.repository <registry>/rancher/backup-restore-operator --set global.kubectl.repository=<registry>/rancher/kubectl
    ```
 
    :::

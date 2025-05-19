@@ -164,7 +164,15 @@ Rancher 在 Kubernetes 之上进行了扩展，除了集群级别之外，还允
 要添加成员：
 
 1. 在**成员**选项卡中，单击**添加**。
-1. 在**选择成员**字段中，搜索要分配项目访问权限的用户或组。请注意，如果你启用了外部身份验证，则只能搜索组。
+1. 在**选择成员**字段中，搜索要分配项目访问权限的用户或组。如果你启用了外部身份验证，则只能搜索组。
+
+   :::note Notes:
+
+   - At least 2 characters must be typed in the search box for results to appear.
+   - Users can be searched based on their username or display name.
+   - Search is prefix-based (e.g., a user named `Stan Dard` will appear when searching for `Sta`, but not when searching for `Dar`) and case-sensitive.
+
+   :::
 1. 在**项目权限**中选择一个角色。如需更多信息，请参阅[项目角色文档](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)。
 
 ### 4. 可选：添加资源配额

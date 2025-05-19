@@ -184,6 +184,12 @@ for mount in $(mount | grep tmpfs | grep '/var/lib/kubelet' | awk '{ print $3 }'
 </TabItem>
 <TabItem value="RKE2">
 
+:::note
+
+For instructions on cleaning nodes in RKE2 clusters that weren't deployed by Rancher, see the [official RKE2 documentation](https://docs.rke2.io/install/uninstall) on uninstalling clusters.
+
+:::
+  
 You need to remove the following components from Rancher-provisioned RKE2 nodes:
 
 * The rancher-system-agent, which connects to Rancher and installs and manages RKE2.

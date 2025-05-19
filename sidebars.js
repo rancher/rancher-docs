@@ -796,6 +796,7 @@ const sidebars = {
                 "how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery",
+                "how-to-guides/advanced-user-guides/enable-experimental-features/cluster-role-aggregation",
               ]
             },
             "how-to-guides/advanced-user-guides/open-ports-with-firewalld",
@@ -803,6 +804,7 @@ const sidebars = {
             "how-to-guides/advanced-user-guides/enable-api-audit-log",
             "how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters",
             "how-to-guides/advanced-user-guides/enable-user-retention",
+            "how-to-guides/advanced-user-guides/enable-cluster-agent-scheduling-customization",
             "how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
           ]
         }
@@ -1174,6 +1176,17 @@ const sidebars = {
             "integrations-in-rancher/fleet/use-fleet-behind-a-proxy"
           ]
         },
+        {
+          "type": "category",
+          "label": "Cluster API (CAPI) with Rancher Turtles",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/cluster-api/cluster-api"
+          },
+          "items": [
+            "integrations-in-rancher/cluster-api/overview"
+          ]
+        },
         "integrations-in-rancher/rancher-desktop",
         {
           type: 'category',
@@ -1198,17 +1211,6 @@ const sidebars = {
               ]
             },
             'integrations-in-rancher/cloud-marketplace/supportconfig'
-          ]
-        },
-        {
-          "type": "category",
-          "label": "Cluster API (CAPI) with Rancher Turtles",
-          "link": {
-            "type": "doc",
-            "id": "integrations-in-rancher/cluster-api/cluster-api"
-          },
-          "items": [
-            "integrations-in-rancher/cluster-api/overview"
           ]
         },
         {
@@ -1359,6 +1361,7 @@ const sidebars = {
         },
         "api/api-reference",
         "api/api-tokens",
+        "api/extension-apiserver",
         "api/v3-rancher-api-guide",
       ]
     },

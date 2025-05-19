@@ -35,7 +35,7 @@ The packages that need to be installed on the template are listed below. These w
 * cloud-init
 * cloud-guest-utils
 * cloud-image-utils
-* growpart
+* growpart (part of cloud-guest-utils)
 * cloud-initramfs-growroot
 * open-iscsi
 * openssh-server
@@ -131,7 +131,7 @@ cloud-init clean -s -l
 
 ### Windows Preparation
 
-Windows has a utility called [sysprep](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation) that is used to generalize an image and reset the same items listed above for Linux. The command is as follows:
+Windows has a utility called [sysprep](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation?view=windows-11) that is used to generalize an image and reset the same items listed above for Linux. The command is as follows:
 
 ```PowerShell
 sysprep.exe /generalize /shutdown /oobe

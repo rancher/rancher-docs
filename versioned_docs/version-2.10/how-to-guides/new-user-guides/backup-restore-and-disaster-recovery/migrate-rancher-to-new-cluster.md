@@ -52,10 +52,10 @@ Install the [`rancher-backup chart`](https://github.com/rancher/backup-restore-o
 
      The above assumes an environment with outbound connectivity to Docker Hub.
 
-     For an **air-gapped environment**, use the following Helm value to pull the `backup-restore-operator` image from your private registry when you install the rancher-backup Helm chart.
+     For an **air-gapped environment**, use the following Helm values to pull the `backup-restore-operator` and `kubectl` images from your private registry when you install the rancher-backup Helm chart.
 
      ```bash
-     --set image.repository <registry>/rancher/backup-restore-operator
+     --set image.repository <registry>/rancher/backup-restore-operator --set global.kubectl.repository=<registry>/rancher/kubectl
      ```
 
      :::
@@ -139,6 +139,26 @@ Install the [`rancher-backup chart`](https://github.com/rancher/backup-restore-o
       ```
 
    1. Once the Restore resource has the status `Completed`, you can continue the cert-manager and Rancher installation.
+
+:::note Important:
+
+When migrating Rancher between any two different Kubernetes distributions (e.g. from K3s to RKE2), the object representing the local cluster has to be modified to allow Rancher to detect the new distribution. After the restoration is completed, and **before** bringing up Rancher on the new cluster, edit the local cluster object:
+
+```bash
+kubectl edit clusters.management.cattle.io local
+```
+
+1. Change the value of `status.driver` to `imported`.
+1. Remove `status.provider`.
+1. Remove the entire `status.version` map.
+1. Remove the label with the key `provider.cattle.io` in `metadata.labels`.
+1. Remove the annotation with the key `management.cattle.io/current-cluster-controllers-version` in `metadata.annotations`.
+1. Remove the entire `spec.rke2Config` or `spec.k3sConfig` map, if present.
+1. Save the changes.
+
+Note that removing `spec.rke2Config` or `spec.k3sConfig` will erase your distribution-specific upgrade configuration for the local cluster. It can be [reconfigured](../../../getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes.md) if the new distribution is configurable for the local cluster.
+
+:::
 
 ### 3. Install cert-manager
 

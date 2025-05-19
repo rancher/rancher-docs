@@ -2,6 +2,8 @@
 title: 为高可用 RKE Kubernetes 集群设置基础设施
 ---
 
+<EOLRKE1Warning />
+
 本教程旨在帮助你创建一个高可用的 RKE 集群，用于安装 Rancher Server。
 
 :::note 重要提示：

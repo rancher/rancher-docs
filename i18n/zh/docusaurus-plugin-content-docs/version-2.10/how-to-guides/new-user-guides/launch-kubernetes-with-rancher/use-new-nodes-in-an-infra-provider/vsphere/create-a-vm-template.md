@@ -31,7 +31,7 @@ Linux 和 Windows 虚拟机都需要特定工具才能供 vSphere 主机驱动�
 * cloud-init
 * cloud-guest-utils
 * cloud-image-utils
-* growpart
+* growpart (part of cloud-guest-utils)
 * cloud-initramfs-growroot
 * open-iscsi
 * openssh-server
@@ -129,7 +129,7 @@ cloud-init clean -s -l
 
 ### Windows 准备
 
-Windows 有一个名为 [sysprep](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation) 的实用程序，用于一般化镜像并重置上述 Linux 项目。命令如下：
+Windows 有一个名为 [sysprep](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation?view=windows-11) 的实用程序，用于一般化镜像并重置上述 Linux 项目。命令如下：
 
 ```PowerShell
 sysprep.exe /generalize /shutdown /oobe

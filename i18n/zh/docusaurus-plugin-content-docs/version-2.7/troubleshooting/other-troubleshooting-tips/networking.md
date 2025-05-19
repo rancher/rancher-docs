@@ -43,7 +43,7 @@ title: 网络
          - image: rancherlabs/swiss-army-knife
            imagePullPolicy: Always
            name: overlaytest
-           command: ["sh", "-c", "tail -f /dev/null"]
+           command: ["sleep", "infinity"]
            terminationMessagePath: /dev/termination-log
 
    ```

@@ -2,6 +2,8 @@
 title: 在不升级 Rancher 的情况下升级 Kubernetes
 ---
 
+<EOLRKE1Warning />
+
 RKE 元数据功能允许你在新版本 Kubernetes 发布后立即为集群配置新版本，而无需升级 Rancher。此功能对于使用 Kubernetes 的补丁版本非常有用，例如，在原本支持 Kubernetes v1.14.6 的 Rancher Server 版本中，将 Kubernetes 升级到 v1.14.7。
 
 :::note
@@ -83,7 +85,7 @@ Rancher Server 会定期刷新 `rke-metadata-config` 来下载新的 Kubernetes 
 要下载私有镜像仓库的系统镜像：
 
 1. 点击左上角的 **☰**。
-1. 点击左侧导航底部的**简介**。
+1. 点击左侧导航底部的Rancher版本号。
 1. 下载适用于 Linux 或 Windows 操作系统的镜像。
 1. 下载 `rancher-images.txt`。
 1. 使用[离线环境安装](other-installation-methods/air-gapped-helm-cli-install/publish-images.md)时使用的步骤准备私有镜像仓库，但不要使用发布页面中的 `rancher-images.txt`，而是使用上一个步骤中获取的文件。

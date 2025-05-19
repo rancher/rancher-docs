@@ -16,7 +16,7 @@ PrometheusRule 包含你通常放置在 [Prometheus 规则文件](https://promet
 
 要在集群中更细粒度地应用 PrometheusRules，你可以使用 Prometheus 资源的 ruleSelector 字段，从而根据添加到 PrometheusRules 资源的标签来选择要加载到 Prometheus 上的 PrometheusRule。
 
-你可以在[此页面](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/alerting.md)找到 PrometheusRule 示例。
+你可以在[此页面](https://prometheus-operator.dev/docs/developer/alerting/)找到 PrometheusRule 示例。
 
 ## Alertmanager 配置
 
