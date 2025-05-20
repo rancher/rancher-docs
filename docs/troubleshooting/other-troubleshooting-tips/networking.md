@@ -14,6 +14,11 @@ Make sure you configured the correct kubeconfig (for example, `export KUBECONFIG
 
 Double check if all the [required ports](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md#networking-requirements) are opened in your (host) firewall. The overlay network uses UDP in comparison to all other required ports which are TCP.
 
+## Check if your downstream node can communicate to Rancher Manager
+Rancher components with HTTP endpoints generally contain a `ping` liveness probe which you can use to test connectivity.  Replace the $RANCHER_URL as appropriate and run the following from a node to check that it has connectivity to Rancher Manager's servers in the `local` cluster.  If successfully it should return `pong`.
+```
+curl -k https://$RANCHER_URL/ping 
+```
 
 ## Check if Overlay Network is Functioning Correctly
 
