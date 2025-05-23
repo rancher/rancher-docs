@@ -138,7 +138,7 @@ Option to set environment variables for [K3s agents](https://rancher.com/docs/k3
 
 ##### Automatic Snapshots
 
-Option to enable or disable recurring etcd snapshots. If enabled, users have the option to configure the frequency of snapshots. For details, refer to the [K3s documentation](https://rancher.com/docs/k3s/latest/en/backup-restore/#creating-snapshots).
+Option to enable or disable recurring etcd snapshots. If enabled, users have the option to configure the frequency of snapshots. For details, refer to the [K3s documentation](https://docs.k3s.io/cli/etcd-snapshot#creating-snapshots).
 
 ##### Metrics
 

@@ -46,7 +46,7 @@ Rancher 使用以下 Kubernetes 发行版：
 | Rancher provisioned K3s cluster | Kubernetes v1.23 | CIS v1.23 | [链接](k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.23.md) | [链接](k3s-hardening-guide/k3s-hardening-guide.md) |
 | Rancher provisioned K3s cluster | Kubernetes v1.24 | CIS v1.24 | [链接](k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.24-k8s-v1.24.md) | [链接](k3s-hardening-guide/k3s-hardening-guide.md) |
 | Rancher provisioned K3s cluster | Kubernetes v1.25/v1.26/v1.27 | CIS v1.7 | [链接](k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27.md) | [链接](k3s-hardening-guide/k3s-hardening-guide.md) |
-| Standalone K3s | Kubernetes v1.22 up to v1.24 | CIS v1.23 | [链接](https://docs.k3s.io/security/self-assessment) | [链接](https://docs.k3s.io/security/hardening-guide) |
+| Standalone K3s | Kubernetes v1.22 up to v1.24 | CIS v1.23 | [链接](https://docs.k3s.io/security/self-assessment-1.8) | [链接](https://docs.k3s.io/security/hardening-guide) |
 
 ## 在 SELinux 上使用 Rancher
 

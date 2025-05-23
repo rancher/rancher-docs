@@ -70,7 +70,7 @@ title: K3s 集群配置参考
 
 #### 自动快照
 
-启用或禁用定期 etcd 快照的选项。如果启用，用户可以配置快照的频率。有关详细信息，请参阅 [K3s 文档](https://rancher.com/docs/k3s/latest/en/backup-restore/#creating-snapshots)。
+启用或禁用定期 etcd 快照的选项。如果启用，用户可以配置快照的频率。有关详细信息，请参阅 [K3s 文档](https://docs.k3s.io/cli/etcd-snapshot#creating-snapshots)。
 
 #### 指标
 

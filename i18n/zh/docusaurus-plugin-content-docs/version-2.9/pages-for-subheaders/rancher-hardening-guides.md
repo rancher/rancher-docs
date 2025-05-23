@@ -42,7 +42,7 @@ Each self-assessment guide is accompanied by a hardening guide. These guides wer
 | Rancher provisioned K3s cluster | Kubernetes v1.23 | CIS v1.23 | [Link](../reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.23.md) | [Link](k3s-hardening-guide.md) |
 | Rancher provisioned K3s cluster | Kubernetes v1.24 | CIS v1.23 | [Link](../reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.24.md) | [Link](k3s-hardening-guide.md) |
 | Rancher provisioned K3s cluster | Kubernetes v1.25 | CIS v1.23 | [Link](../reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25.md) | [Link](k3s-hardening-guide.md) |
-| Standalone K3s | Kubernetes v1.22 up to v1.24 | CIS v1.23 | [Link](https://docs.k3s.io/security/self-assessment) | [Link](https://docs.k3s.io/security/hardening-guide) |
+| Standalone K3s | Kubernetes v1.22 up to v1.24 | CIS v1.23 | [Link](https://docs.k3s.io/security/self-assessment-1.8) | [Link](https://docs.k3s.io/security/hardening-guide) |
 
 ## Rancher with SELinux
 
