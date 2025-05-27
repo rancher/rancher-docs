@@ -242,11 +242,61 @@ sudo k3s-uninstall.sh
 
 The following directories are used when adding a node to a cluster, and should be removed. You can remove a directory using `rm -rf /directory_name`.
 
-:::note
+:::important
 
-Depending on the role you assigned to the node, some of the directories will or won't be present on the node.
+Depending on the role you assigned to the node, certain directories may or may not be present on the node.
 
 :::
+
+<Tabs>
+<TabItem value="RKE1">
+
+| Directories                  |
+|------------------------------|
+| `/etc/ceph`                  |
+| `/etc/cni`                   |
+| `/etc/kubernetes`            |
+| `/opt/cni`                   |
+| `/opt/rke`                   |
+| `/run/calico`                |
+| `/run/flannel`               |
+| `/run/secrets/kubernetes.io` |
+| `/var/lib/calico`            |
+| `/var/lib/cni`               |
+| `/var/lib/etcd`              |
+| `/var/lib/kubelet`           |
+| `/var/lib/rancher/rke`       |
+| `/var/lib/weave`             |
+| `/var/log/containers`        |
+| `/var/log/kube-audit`        |
+| `/var/log/pods`              |
+| `/var/run/calico`            |
+
+**To clean the directories:**
+
+```shell
+rm -rf /etc/ceph \
+       /etc/cni \
+       /etc/kubernetes \
+       /opt/cni \
+       /opt/rke \
+       /run/calico \
+       /run/flannel \
+       /run/secrets/kubernetes.io \
+       /var/lib/calico \
+       /var/lib/cni \
+       /var/lib/etcd \
+       /var/lib/kubelet \
+       /var/lib/rancher/rke \
+       /var/lib/weave \
+       /var/log/containers \
+       /var/log/kube-audit \
+       /var/log/pods \
+       /var/run/calico
+```
+
+</TabItem>
+<TabItem value="RKE2">
 
 | Directories                  |
 |------------------------------|
@@ -255,42 +305,92 @@ Depending on the role you assigned to the node, some of the directories will or 
 | `/etc/kubernetes`            |
 | `/etc/rancher`               |
 | `/opt/cni`                   |
-| `/opt/rke`                   |
-| `/run/secrets/kubernetes.io` |
 | `/run/calico`                |
 | `/run/flannel`               |
+| `/run/secrets/kubernetes.io` |
 | `/var/lib/calico`            |
-| `/var/lib/etcd`              |
 | `/var/lib/cni`               |
+| `/var/lib/etcd`              |
 | `/var/lib/kubelet`           |
 | `/var/lib/rancher`           |
+| `/var/lib/weave`             |
 | `/var/log/containers`        |
-| `/var/log/kube-audit`        |
 | `/var/log/pods`              |
 | `/var/run/calico`            |
 
 **To clean the directories:**
 
-```
+```shell
 rm -rf /etc/ceph \
        /etc/cni \
        /etc/kubernetes \
        /etc/rancher \
        /opt/cni \
-       /opt/rke \
-       /run/secrets/kubernetes.io \
        /run/calico \
        /run/flannel \
+       /run/secrets/kubernetes.io \
        /var/lib/calico \
-       /var/lib/etcd \
        /var/lib/cni \
+       /var/lib/etcd \
        /var/lib/kubelet \
-       /var/lib/rancher\
+       /var/lib/rancher \
+       /var/lib/weave \
        /var/log/containers \
-       /var/log/kube-audit \
        /var/log/pods \
        /var/run/calico
 ```
+
+</TabItem>
+<TabItem value="K3s">
+
+| Directories                  |
+|------------------------------|
+| `/etc/ceph`                  |
+| `/etc/cni`                   |
+| `/etc/kubernetes`            |
+| `/etc/rancher`               |
+| `/etc/systemd/system/k3s`    |
+| `/opt/cni`                   |
+| `/run/calico`                |
+| `/run/flannel`               |
+| `/run/secrets/kubernetes.io` |
+| `/usr/local/bin/k3s`         |
+| `/var/lib/calico`            |
+| `/var/lib/cni`               |
+| `/var/lib/etcd`              |
+| `/var/lib/kubelet`           |
+| `/var/lib/rancher`           |
+| `/var/lib/weave`             |
+| `/var/log/containers`        |
+| `/var/log/pods`              |
+| `/var/run/calico`            |
+
+**To clean the directories:**
+
+```shell
+rm -rf /etc/ceph \
+       /etc/cni \
+       /etc/kubernetes \
+       /etc/rancher \
+       /etc/systemd/system/k3s \
+       /opt/cni \
+       /run/calico \
+       /run/flannel \
+       /run/secrets/kubernetes.io \
+       /usr/local/bin/k3s \
+       /var/lib/calico \
+       /var/lib/cni \
+       /var/lib/etcd \
+       /var/lib/kubelet \
+       /var/lib/rancher \
+       /var/lib/weave \
+       /var/log/containers \
+       /var/log/pods \
+       /var/run/calico
+```
+
+</TabItem>
+</Tabs>
 
 ### Network Interfaces and Iptables
 
