@@ -20,7 +20,7 @@ For information about how Fleet works, see [this page.](../../../integrations-in
 
 ## Accessing Fleet in the Rancher UI
 
-Fleet comes preinstalled in Rancher and is managed by the **Continous Delivery** option in the Rancher UI. For additional information on Continuous Delivery and other Fleet troubleshooting tips, refer [here](https://fleet.rancher.io/troubleshooting).
+Fleet comes preinstalled in Rancher and is managed by the **Continuous Delivery** option in the Rancher UI. For additional information on Continuous Delivery and other Fleet troubleshooting tips, refer [here](https://fleet.rancher.io/troubleshooting).
 
 Users can leverage continuous delivery to deploy their applications to the Kubernetes clusters in the git repository without any manual operation by following **gitops** practice.
 

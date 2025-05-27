@@ -23,7 +23,7 @@ The diagram below illustrates how members of an OpenLDAP group can access resour
 
 For example, a cluster owner could add an OpenLDAP group to a cluster so that they have permissions view most cluster level resources and create new projects. Then the OpenLDAP group members will have access to the cluster as soon as they log in to Rancher.
 
-In this scenario, OpenLDAP allows the cluster owner to search for groups when assigning persmissions. Without OpenLDAP, the functionality to search for groups would not be supported.
+In this scenario, OpenLDAP allows the cluster owner to search for groups when assigning permissions. Without OpenLDAP, the functionality to search for groups would not be supported.
 
 When a member of the OpenLDAP group logs in to Rancher, she is redirected to Shibboleth and enters her username and password.
 
