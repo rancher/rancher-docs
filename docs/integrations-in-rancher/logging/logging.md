@@ -55,6 +55,37 @@ For help with configuring `Flows` and `ClusterFlows`, see [this page.](custom-re
 
 For help with configuring `Outputs` and `ClusterOutputs`, see [this page.](custom-resource-configuration/outputs-and-clusteroutputs.md)
 
+## Using a custom HostTailer image
+
+To use a custom image for the `HostTailer` resource, you need to specify the image in the `containerOverrides` section of each `fileTailer` of the `HostTailer` resource.
+
+```yaml
+apiVersion: logging-extensions.banzaicloud.io/v1alpha1
+kind: HostTailer
+metadata:
+  name: cluster-system-log
+spec:
+  workloadMetaOverrides:
+    annotations: {}
+    labels: {}
+  fileTailers:
+    - disabled: false
+      name: kubelet-log
+      path: /var/lib/rancher/rke2/agent/logs/*.log
+      containerOverrides:
+        image: <your_registry>/<your_image>:<your_tag>
+    - disabled: false
+      name: containerd-log
+      path: /var/lib/rancher/rke2/agent/containerd/*.log
+      containerOverrides:
+        image: <your_registry>/<your_image>:<your_tag>
+    - name: kube-audit
+      path: /var/log/kube-audit/audit-log.json
+      disabled: false
+      containerOverrides:
+        image: <your_registry>/<your_image>:<your_tag>
+```
+
 ## Configuring the Logging Helm Chart
 
 For a list of options that can be configured when the logging application is installed or upgraded, see [this page.](logging-helm-chart-options.md)
