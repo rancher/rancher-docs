@@ -89,7 +89,7 @@ HelmRelease CR 会发出 Kubernetes 事件，用于检测底层 Helm 版本修�
 
 ### 高级 Helm Project Operator 配置
 
-有关高级配置的更多信息，请参阅[此页面](https://github.com/rancher/prometheus-federator/blob/main/charts/prometheus-federator/0.0.1/README.md#advanced-helm-project-operator-configuration)。
+有关高级配置的更多信息，请参阅[此页面](https://github.com/rancher/prometheus-federator/blob/main/charts/prometheus-federator/README.md#advanced-helm-project-operator-configuration)。
 
 <!--
 |Value|Configuration|
