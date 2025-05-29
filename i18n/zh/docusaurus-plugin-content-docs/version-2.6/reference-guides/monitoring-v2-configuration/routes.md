@@ -45,7 +45,7 @@ Alerting Drivers 为 Alertmanager 将告警代理到非原生接收器，例如 
 
 :::note
 
-从 Rancher 2.6.5 开始，`分组依据`开始接受字符串列表而不是键值对。有关详细信息，请参阅[上游文档](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#route)。
+从 Rancher 2.6.5 开始，`分组依据`开始接受字符串列表而不是键值对。有关详细信息，请参阅[上游文档](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#route)。
 
 :::
 

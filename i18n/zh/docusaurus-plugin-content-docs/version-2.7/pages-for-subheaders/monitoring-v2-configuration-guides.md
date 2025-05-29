@@ -4,7 +4,7 @@ title: 配置
 
 本文介绍在 Rancher UI 中配置 Monitoring V2 的一些最重要选项。
 
-有关为 Prometheus 配置自定义抓取目标和规则的信息，请参阅 [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator) 的上游文档。Prometheus Operator [设计文档](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/design.md)中解释了一些最重要的自定义资源。Prometheus Operator 文档还可以帮助你设置 RBAC、Thanos 或进行自定义配置。
+有关为 Prometheus 配置自定义抓取目标和规则的信息，请参阅 [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator) 的上游文档。Prometheus Operator [设计文档](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/getting-started/design.md)中解释了一些最重要的自定义资源。Prometheus Operator 文档还可以帮助你设置 RBAC、Thanos 或进行自定义配置。
 
 ## 设置资源限制和请求
 

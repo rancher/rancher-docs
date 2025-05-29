@@ -74,7 +74,7 @@ To see the Prometheus Targets, install `rancher-monitoring`. Then go to the **Cl
 
 ### Viewing the PrometheusRules
 
-When you define a Rule (which is declared within a RuleGroup in a PrometheusRule resource), the [spec of the Rule itself](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#rule) contains labels that are used by Alertmanager to figure out which Route should receive a certain Alert.
+When you define a Rule (which is declared within a RuleGroup in a PrometheusRule resource), the [spec of the Rule itself](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#rule) contains labels that are used by Alertmanager to figure out which Route should receive a certain Alert.
 
 To see the PrometheusRules, install `rancher-monitoring`. Then go to the **Cluster Explorer.** In the top left corner, click **Cluster Explorer > Monitoring.** Then click **Prometheus Rules.**
 

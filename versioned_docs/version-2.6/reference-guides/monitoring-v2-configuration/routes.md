@@ -49,7 +49,7 @@ The route needs to refer to a [receiver](./receivers.md) that has already been c
 
 :::note
 
-As of Rancher v2.6.5, `Group By` now accepts a list of strings instead of key-value pairs. See the [upstream documentation](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#route) for details.
+As of Rancher v2.6.5, `Group By` now accepts a list of strings instead of key-value pairs. See the [upstream documentation](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#route) for details.
 
 :::
 

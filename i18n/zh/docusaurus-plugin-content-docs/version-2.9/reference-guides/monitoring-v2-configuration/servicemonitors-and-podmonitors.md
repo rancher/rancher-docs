@@ -22,7 +22,7 @@ ServiceMonitor 比 PodMonitor 更常用，推荐用于大多数用例。
 
 如果集群中的任何 Service 与 ServiceMonitor `selector` 字段中的标签匹配，则会根据 ServiceMonitor 指定的 `endpoints` 进行监控。有关可以指定的字段的更多信息，请查看 Prometheus Operator 的[规范](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#servicemonitor)。
 
-有关 ServiceMonitor 工作原理的更多信息，请参阅 [Prometheus Operator 文档](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/running-exporters.md)。
+有关 ServiceMonitor 工作原理的更多信息，请参阅 [Prometheus Operator 文档](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/user-guides/running-exporters.md)。
 
 ### PodMonitor
 

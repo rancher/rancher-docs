@@ -30,7 +30,7 @@ PrometheusRule 定义了一组 Prometheus 告警和/或记录规则。
 
 ## 关于 PrometheusRule 自定义资源
 
-当你定义规则时（在 PrometheusRule 资源的 RuleGroup 中声明），[规则本身的规范](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#rule)会包含标签，然后 Alertmanager 会使用这些标签来确定接收此告警的路由。例如，标签为 `team: front-end` 的告警将​​发送到与该标签匹配的所有路由。
+当你定义规则时（在 PrometheusRule 资源的 RuleGroup 中声明），[规则本身的规范](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#rule)会包含标签，然后 Alertmanager 会使用这些标签来确定接收此告警的路由。例如，标签为 `team: front-end` 的告警将​​发送到与该标签匹配的所有路由。
 
 Prometheus 规则文件保存在 PrometheusRule 自定义资源中。PrometheusRule 支持定义一个或多个 RuleGroup。每个 RuleGroup 由一组 Rule 对象组成，每个 Rule 对象均能表示告警或记录规则，并具有以下字段：
 
@@ -39,7 +39,7 @@ Prometheus 规则文件保存在 PrometheusRule 自定义资源中。PrometheusR
 - 用于标记告警或记录的标签（例如集群名称或严重性）
 - 对需要在告警通知上显示的其他重要信息进行编码的注释（例如摘要、描述、消息、Runbook URL 等）。记录规则不需要此字段。
 
-有关可以指定的字段的更多信息，请查看 [Prometheus Operator 规范。](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#prometheusrulespec)
+有关可以指定的字段的更多信息，请查看 [Prometheus Operator 规范。](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#prometheusrulespec)
 
 你可以使用 Prometheus 对象中的标签选择器字段 `ruleSelector` 来定义要挂载到 Prometheus 的规则文件。
 

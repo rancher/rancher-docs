@@ -80,7 +80,7 @@ PrometheusRule 支持定义一个或多个 RuleGroup。每个 RuleGroup 由一�
 - 用于标记告警或记录的标签（例如集群名称或严重性）
 - 对需要在告警通知上显示的其他重要信息进行编码的注释（例如摘要、描述、消息、Runbook URL 等）。记录规则不需要此字段。
 
-在评估[规则](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#rule)时，Prometheus 将执行配置的 PromQL 查询，添加其他标签（或注释 - 仅用于告警规则），并为规则执行所需的操作。例如，如果某个告警规则将 `team:front-end` 作为标签添加到配置的 PromQL 查询，该标签会尾附到触发的告警，这将允许 Alertmanager 将告警转发到正确的接收器。
+在评估[规则](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#rule)时，Prometheus 将执行配置的 PromQL 查询，添加其他标签（或注释 - 仅用于告警规则），并为规则执行所需的操作。例如，如果某个告警规则将 `team:front-end` 作为标签添加到配置的 PromQL 查询，该标签会尾附到触发的告警，这将允许 Alertmanager 将告警转发到正确的接收器。
 
 ### 告警和记录规则
 
@@ -178,7 +178,7 @@ PushProx 允许 Prometheus 跨网络边界抓取指标，这样，用户就不�
 
 ### 定义要抓取的指标
 
-ServiceMonitor 和 PodMonitor 定义了 Prometheus 要抓取的目标。[Prometheus 自定义资源](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/design.md#prometheus)告诉 Prometheus 应该使用哪个 ServiceMonitor 或 PodMonitor 来确定从哪里抓取指标。
+ServiceMonitor 和 PodMonitor 定义了 Prometheus 要抓取的目标。[Prometheus 自定义资源](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/getting-started/design.md#prometheus)告诉 Prometheus 应该使用哪个 ServiceMonitor 或 PodMonitor 来确定从哪里抓取指标。
 
 Prometheus Operator 观察 ServiceMonitor 和 PodMonitor。当它观察到二者被创建或更新时，它会调用 Prometheus API 来更新 Prometheus 自定义资源中的抓取配置，并使该配置与 ServiceMonitor 或 PodMonitor 中的抓取配置保持同步。此抓取配置告诉 Prometheus 从哪些端点抓取指标，以及如何标记这些端点的指标。
 

@@ -95,7 +95,7 @@ Alertmanager UI 可让你查看最近触发的告警。
 
 ### 查看 PrometheusRules
 
-当你定义规则时（在 PrometheusRule 资源的 RuleGroup 中声明），[规则本身的规范](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#rule)会包含标签，然后 Alertmanager 会使用这些标签来确定接收对应告警的路由。
+当你定义规则时（在 PrometheusRule 资源的 RuleGroup 中声明），[规则本身的规范](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#rule)会包含标签，然后 Alertmanager 会使用这些标签来确定接收对应告警的路由。
 
 要查看 PrometheusRule，请安装 `rancher-monitoring`。然后：
 
