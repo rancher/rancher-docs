@@ -6,9 +6,9 @@ title: About rancher-selinux
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-security/selinux-rpm/about-rancher-selinux"/>
 </head>
 
-To allow Rancher to work with SELinux, some functionality has to be manually enabled for the SELinux nodes. To help with that, Rancher provides a SELinux RPM. 
+To allow Rancher to work with SELinux, some functionality has to be manually enabled for the SELinux nodes. To help with that, Rancher provides an SELinux RPM.
 
-The `rancher-selinux` RPM only contains policies for the [rancher-logging application.](https://github.com/rancher/charts/tree/dev-v2.5/charts/rancher-logging)
+The `rancher-selinux` RPM contains a set of SELinux policies designed to grant the necessary privileges to various Rancher components running on Linux systems with SELinux enabled.
 
 The `rancher-selinux` GitHub repository is [here.](https://github.com/rancher/rancher-selinux)
 
