@@ -4,7 +4,7 @@ title: 关于 rancher-selinux
 
 要让 Rancher 使用 SELinux，你必须手动为 SELinux 节点启用一些功能。为了解决这个问题，Rancher 提供了一个 SELinux RPM。
 
-`rancher-selinux` RPM 仅包含 [rancher-logging 应用程序](https://github.com/rancher/charts/tree/dev-v2.5/charts/rancher-logging)的策略。
+The `rancher-selinux` RPM contains a set of SELinux policies designed to grant the necessary privileges to various Rancher components running on Linux systems with SELinux enabled.
 
 `rancher-selinux` 的 GitHub 仓库在[这里](https://github.com/rancher/rancher-selinux)。
 
