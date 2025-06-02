@@ -42,7 +42,7 @@ Alerting Drivers 为 Alertmanager 将告警代理到非原生接收器，例如 
 
 | 字段 | 默认 | 描述 |
 |-------|--------------|---------|
-| 分组依据 | N/A | 用于分组的标签列表。所有标签都必须是唯一的。如果提供了特殊标签“...”（由所有可能的标签聚合），标签必须在列表中是唯一的元素。接受字符串列表。有关详细信息，请参阅[上游文档](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#route)。 |
+| 分组依据 | N/A | 用于分组的标签列表。所有标签都必须是唯一的。如果提供了特殊标签“...”（由所有可能的标签聚合），标签必须在列表中是唯一的元素。接受字符串列表。有关详细信息，请参阅[上游文档](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#route)。 |
 | 组等待时长 | 30s | 在发送之前，缓冲同一组告警的等待时间。 |
 | 组间隔 | 5m | 等待多长时间才发送已添加到告警组的告警，其中该告警组的初次通知已被发送。 |
 | 重复间隔 | 4h | 等待多长时间后，才重新发送已发送的告警。 |

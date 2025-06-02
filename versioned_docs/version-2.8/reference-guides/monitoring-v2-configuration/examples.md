@@ -8,7 +8,7 @@ title: Monitoring Configuration Examples
 
 ## ServiceMonitor
 
-See the official prometheus-operator GitHub repo for an example [ServiceMonitor](https://github.com/prometheus-operator/prometheus-operator/blob/master/example/prometheus-operator-crd/monitoring.coreos.com_servicemonitors.yaml) YAML.
+See the official prometheus-operator GitHub repo for an example [ServiceMonitor](https://github.com/prometheus-operator/prometheus-operator/blob/main/example/prometheus-operator-crd/monitoring.coreos.com_servicemonitors.yaml) YAML.
 
 ## PodMonitor
 

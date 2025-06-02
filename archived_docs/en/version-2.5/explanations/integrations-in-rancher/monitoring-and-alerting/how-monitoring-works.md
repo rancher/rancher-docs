@@ -85,7 +85,7 @@ A PrometheusRule allows you to define one or more RuleGroups. Each RuleGroup con
 - Labels that should be attached to the alert or record that identify it (e.g. cluster name or severity)
 - Annotations that encode any additional important pieces of information that need to be displayed on the notification for an alert (e.g. summary, description, message, runbook URL, etc.). This field is not required for recording rules.
 
-Upon evaluating a [rule](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#rule), Prometheus runs the provided PromQL query, adds the provided labels, and runs the appropriate action for the rule. If the rule triggers an alert, Prometheus also adds the provided annotations. For example, an Alerting Rule that adds `team: front-end` as a label to the provided PromQL query will append that label to the fired alert, which will allow Alertmanager to forward the alert to the correct Receiver.
+Upon evaluating a [rule](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#rule), Prometheus runs the provided PromQL query, adds the provided labels, and runs the appropriate action for the rule. If the rule triggers an alert, Prometheus also adds the provided annotations. For example, an Alerting Rule that adds `team: front-end` as a label to the provided PromQL query will append that label to the fired alert, which will allow Alertmanager to forward the alert to the correct Receiver.
 
 ### Alerting and Recording Rules
 
@@ -183,7 +183,7 @@ Refer to [Scraping Metrics with PushProx](#scraping-metrics-with-pushprox) for m
 
 ### Defining what Metrics are Scraped
 
-ServiceMonitors and PodMonitors define targets that are intended for Prometheus to scrape. The [Prometheus custom resource](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/design.md#prometheus) tells Prometheus which ServiceMonitors or PodMonitors it should use to find out where to scrape metrics from.
+ServiceMonitors and PodMonitors define targets that are intended for Prometheus to scrape. The [Prometheus custom resource](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/getting-started/design.md#prometheus) tells Prometheus which ServiceMonitors or PodMonitors it should use to find out where to scrape metrics from.
 
 The Prometheus Operator observes the ServiceMonitors and PodMonitors. When it observes that they are created or updated, it calls the Prometheus API to update the scrape configuration in the Prometheus custom resource and keep it in sync with the scrape configuration in the ServiceMonitors or PodMonitors. This scrape configuration tells Prometheus which endpoints to scrape metrics from and how it will label the metrics from those endpoints.
 

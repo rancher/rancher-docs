@@ -4,11 +4,11 @@ title: 示例
 
 ## ServiceMonitor
 
-你可以在[此处](https://github.com/prometheus-operator/prometheus-operator/blob/master/example/prometheus-operator-crd/monitoring.coreos.com_servicemonitors.yaml)找到 ServiceMonitor 自定义资源的示例。
+你可以在[此处](https://github.com/prometheus-operator/prometheus-operator/blob/main/example/prometheus-operator-crd/monitoring.coreos.com_servicemonitors.yaml)找到 ServiceMonitor 自定义资源的示例。
 
 ## PodMonitor
 
-你可以在[此处](https://github.com/prometheus-operator/prometheus-operator/blob/master/example/user-guides/getting-started/example-app-pod-monitor.yaml)找到 PodMonitor 示例，还可以在[此处](https://github.com/prometheus-operator/prometheus-operator/blob/master/example/user-guides/getting-started/prometheus-pod-monitor.yaml)找到引用它的 Prometheus 资源示例。
+你可以在[此处](https://github.com/prometheus-operator/prometheus-operator/blob/main/example/user-guides/getting-started/example-app-pod-monitor.yaml)找到 PodMonitor 示例，还可以在[此处](https://github.com/prometheus-operator/prometheus-operator/blob/main/example/user-guides/getting-started/prometheus-pod-monitor.yaml)找到引用它的 Prometheus 资源示例。
 
 ## PrometheusRule
 
