@@ -322,7 +322,7 @@ Existing clusters that use an **External** cloud provider will set `--cloud-prov
 
 3. Install the AWS cloud controller manager after the cluster finishes provisioning. Note that the cluster isn't successfully provisioned and nodes are still in an `uninitialized` state until you deploy the cloud controller manager. This can be done manually, or via [Helm charts in UI](#helm-chart-installation-from-ui).
 
-Refer to the offical AWS upstream documentation for the [cloud controller manager](https://kubernetes.github.io/cloud-provider-aws).
+Refer to the official AWS upstream documentation for the [cloud controller manager](https://kubernetes.github.io/cloud-provider-aws).
 
 </TabItem>
 </Tabs>

@@ -35,7 +35,7 @@ On the **Basics** tab, specify the **Project details** and **Instance details**:
 
 ### Rancher Configuration
 
-On the **Rancher Configuraion** tab, specify the following information:
+On the **Rancher Configuration** tab, specify the following information:
 
 ![Rancher Configuration](/img/install-rancher-prime-bootstrap-password.png)
 
