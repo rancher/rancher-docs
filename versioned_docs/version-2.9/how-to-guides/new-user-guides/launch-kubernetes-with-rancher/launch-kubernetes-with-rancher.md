@@ -65,7 +65,7 @@ RKE2 provisioning also includes installing RKE2 on clusters with Windows nodes.
 Windows features for RKE2 include:
 
 - Windows supports the vSphere node driver
-- Calico CNI for Windows RKE2 custom clusters
+- Calico and Flannel CNI for Windows RKE2 custom clusters
 - Project Network Isolation (PNI) for Calico
 - Windows Containers with RKE2 powered by containerd
 - Provisioning of Windows RKE2 clusters through Terraform
