@@ -120,6 +120,7 @@ When you run Rancher on a Kubernetes cluster that enforces a restrictive securit
 - `cert-manager`
 - `cis-operator-system`
 - `fleet-default`
+- `fleet-local`
 - `ingress-nginx`
 - `istio-system`
 - `kube-node-lease`
