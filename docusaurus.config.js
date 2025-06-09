@@ -244,11 +244,6 @@ module.exports = {
         // Plugin Options for loading OpenAPI files
         specs: [
           {
-            id: 'rancher-api',
-            spec: 'openapi/swagger.json',
-            // route: '/api/',
-          },
-          {
             id: 'rancher-api-v2-11',
             spec: 'openapi/swagger-v2.11.json',
             // route: '/api/',
