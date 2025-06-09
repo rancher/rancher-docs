@@ -42,26 +42,6 @@ To display prerelease versions:
 1. Click **Preferences**.
 1. Under **Helm Charts**, select **Include Prerelease Versions**.
 
-### Feature Charts
-
-| **Name** | **Supported Minimum Version** | **Supported Maximum Version** |
-| ---------------- | ------------ | ------------ |
-| external-ip-webhook | 100.0.0+up1.0.0 | 100.0.1+up1.0.1 |
-| harvester-cloud-provider | 100.0.2+up0.1.12 | 100.0.2+up0.1.12 |
-| harvester-csi-driver | 100.0.2+up0.1.11 | 100.0.2+up0.1.11 |
-| neuvector | 100.0.0+up2.2.0 | 100.0.0+up2.2.0 |
-| rancher-alerting-drivers | 100.0.0 | 100.0.2 |
-| rancher-backup | 2.0.1 | 2.1.2 |
-| rancher-cis-benchmark | 2.0.1 | 2.0.4 |
-| rancher-istio | 105.0.0+up1.19.6 | 105.4.0+up1.23.2 |
-| rancher-logging | 100.0.0+up3.12.0 | 100.1.2+up3.17.4 |
-| rancher-longhorn | 100.0.0+up1.1.2 | 100.1.2+up1.2.4 |
-| rancher-monitoring | 100.0.0+up16.6.0 | 100.1.2+up19.0.3 |
-| rancher-sriov<sup>[1](#sriov-chart-deprecation-and-migration)</sup> | 100.0.0+up0.1.0 | 100.0.3+up0.1.0 |
-| rancher-vsphere-cpi | 100.3.0+up1.2.1 | 100.3.0+up1.2.1 |
-| rancher-vsphere-csi | 100.3.0+up2.5.1-rancher1 | 100.3.0+up2.5.1-rancher1 |
-| rancher-wins-upgrader | 0.0.100 | 100.0.1+up0.0.1 |
-
 ## Access Charts
 
 The **Charts** page contains all Rancher, Partner, and Custom charts. You can filter charts by selecting the left-most dropdown menu:
@@ -236,7 +216,7 @@ Rancher and Partner charts may have extra configurations available through custo
 
 To view all recent changes, click **Apps > Recent Operations** in the left navigation menu. From there you can view the calls, conditions, events, and logs.
 
-After installing a chart, you can view it by clicking **Apps > Installed Apps** in the left navigation menu. You can upgrade or delete the installation, and see further details. Upgrading uses the same forms and values as you saw during inital installation. 
+After installing a chart, you can view it by clicking **Apps > Installed Apps** in the left navigation menu. You can upgrade or delete the installation, and see further details. Upgrading uses the same forms and values as you saw during initial installation.
 
 Most Rancher tools have additional pages located in the toolbar below the **Apps** section to help manage and use the features. These pages include links to dashboards, forms to easily add Custom Resources, and additional information.
 
@@ -295,4 +275,4 @@ To migrate, follow these steps:
 - When determining the most recent version to display for the **Upgradable** column on the **Apps > Installed Apps** page, rather than only considering versions of the Helm chart from the repository it was installed from, Rancher considers versions of the Helm chart from all repositories on the cluster.
 
   For example, suppose you install `cert-manager` v1.13.0 from repository A, where v1.14.0 is now the most recent version available. In this case, you expect **Upgradable** to display v1.14.0. However, if the cluster also has access to repository B where v1.15.0 of `cert-manager` is available, then **Upgradable** displays v1.15.0 even though the original installation used repository A.
-  
+
