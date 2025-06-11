@@ -413,7 +413,7 @@ Here you can find links to supporting documentation for previous versions of Ran
 
 ### Legacy Versions (EOL)
 
-Here you can find links to supporting documentation for legacy versions of Rancher v2.7, and its availability for [Rancher Prime](/v2.7/getting-started/quick-start-guides/deploy-rancher-manager/prime) and the Community version of Rancher:
+Here you can find links to supporting documentation for legacy versions of Rancher v2.7, and its availability for [Rancher Prime](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.7/getting-started/quick-start-guides/deploy-rancher-manager/prime.md) and the Community version of Rancher:
 
 <table>
   <tr>
