@@ -242,7 +242,7 @@ Rancher and Partner charts may have extra configurations available through custo
 
 To view all recent changes, click **Apps > Recent Operations** in the left navigation menu. From there you can view the calls, conditions, events, and logs.
 
-After installing a chart, you can view it by clicking **Apps > Installed Apps** in the left navigation menu. You can upgrade or delete the installation, and see further details. Upgrading uses the same forms and values as you saw during inital installation. 
+After installing a chart, you can view it by clicking **Apps > Installed Apps** in the left navigation menu. You can upgrade or delete the installation, and see further details. Upgrading uses the same forms and values as you saw during initial installation. 
 
 Most Rancher tools have additional pages located in the toolbar below the **Apps** section to help manage and use the features. These pages include links to dashboards, forms to easily add Custom Resources, and additional information.
 
