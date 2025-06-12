@@ -12,11 +12,10 @@ If the local cluster fails, you might need to restore Rancher to a previous vers
 
 You can restore Rancher using two supported methods: cluster Datastore Restores (available for [k3s](https://docs.k3s.io/datastore/backup-restore) and [RKE2](https://docs.rke2.io/datastore/backup_restore) distributions) and Rancher's Backup, as described on this page.
 
-Datastore Restores are suitable when no changes have been made to downstream (managed) clusters since the snapshot. For example, if a local cluster change causes an outage after a snapshot, use Datastore Restore.
-
-However, if you take a Datastore snapshot and then upgrade a downstream cluster's Kubernetes version, a Datastore Restore will revert the downstream cluster's Kubernetes version in the datastore, creating a version mismatch between data in the local cluster and the actual downstream cluster nodes.
-Rancher will then attempt to reconcile the versions, potentially causing unexpected behavior and data loss.
-Similarly, if you take a Datastore snapshot, rotate nodes in a Rancher-provisioned downstream cluster, and then restore from the snapshot, the rotated nodes may become orphaned, possibly making the cluster inoperable. *Recovery from these scenarios is not supported*.
+Both methods are suitable when no changes have been made to downstream (managed) clusters since the last snapshot or backup. For example, if a local cluster change such as a version upgrade causes an outage, either a Datastore Restore or a Rancher's backup restore can be used.
+However, if you take a snapshot or backup and then upgrade a downstream cluster's Kubernetes version, a subsequent restore will revert the downstream cluster's Kubernetes version in the datastore, creating a version mismatch between data in the local cluster and the actual downstream cluster nodes.
+Rancher will then attempt to reconcile the versions, potentially causing unexpected behavior and data loss. Similar considerations apply to other changes to downstream clusters. *Recovery from these scenarios is not supported*.
+Rancher's backups are more flexible in those cases, as they allow to selectively restore information from a backup. For example, it is possible to optionally prune resources that were created after the backup, or specifying a set of resources to restore via the "ResourceSet" capability.
 
 Generally, if you've made changes that directly or indirectly affect downstream clusters (e.g., installing charts/apps, performing "day 2" operations, creating or deleting clusters or nodes, or rotating Rancher certificates), use Rancher's Backup restore, as described on this page.
 
