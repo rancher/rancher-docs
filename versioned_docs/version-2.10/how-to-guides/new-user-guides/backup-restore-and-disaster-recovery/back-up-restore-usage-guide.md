@@ -6,6 +6,21 @@ title: Backup Restore Usage Guide
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-restore-usage-guide"/>
 </head>
 
+:::caution
+
+If the local cluster fails, you might need to restore Rancher to a previous version.
+
+You can restore Rancher using two supported methods: cluster Datastore Restores (available for [k3s](https://docs.k3s.io/datastore/backup-restore) and [RKE2](https://docs.rke2.io/datastore/backup_restore) distributions) and Rancher's Backup, as described on this page.
+
+Both methods are suitable when no changes have been made to downstream (managed) clusters since the last snapshot or backup. For example, if a local cluster change such as a version upgrade causes an outage, either a Datastore Restore or a Rancher's backup restore can be used.
+However, if you take a snapshot or backup and then upgrade a downstream cluster's Kubernetes version, a subsequent restore will revert the downstream cluster's Kubernetes version in the datastore, creating a version mismatch between data in the local cluster and the actual downstream cluster nodes.
+Rancher will then attempt to reconcile the versions, potentially causing unexpected behavior and data loss. Similar considerations apply to other changes to downstream clusters. *Recovery from these scenarios is not supported*.
+Rancher's backups are more flexible in those cases, as they allow to selectively restore information from a backup. For example, it is possible to optionally prune resources that were created after the backup, or specifying a set of resources to restore via the "ResourceSet" capability.
+
+Generally, if you've made changes that directly or indirectly affect downstream clusters (e.g., installing charts/apps, performing "day 2" operations, creating or deleting clusters or nodes, or rotating Rancher certificates), use Rancher's Backup restore, as described on this page.
+
+:::
+
 The Rancher Backups chart is our solution for disaster recovery and migration. This chart allows you to take backups of your Kubernetes resources and save them to a variety of persistent storage locations.
 
 This chart is a very simple tool which has its hands in many different areas of the Rancher ecosystem. As a result, edge cases have arisen which lead to undocumented functionality. The purpose of this document is to highlight the proper and defined usage for Rancher Backups, as well as discussing some of these edge cases we’ve run into.
