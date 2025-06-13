@@ -244,8 +244,23 @@ module.exports = {
         // Plugin Options for loading OpenAPI files
         specs: [
           {
-            id: 'rancher-api',
-            spec: 'openapi/swagger.json',
+            id: 'rancher-api-v2-11',
+            spec: 'openapi/swagger-v2.11.json',
+            // route: '/api/',
+          },
+          {
+            id: 'rancher-api-v2-10',
+            spec: 'openapi/swagger-v2.10.json',
+            // route: '/api/',
+          },
+          {
+            id: 'rancher-api-v2-9',
+            spec: 'openapi/swagger-v2.9.json',
+            // route: '/api/',
+          },
+          {
+            id: 'rancher-api-v2-8',
+            spec: 'openapi/swagger-v2.8.json',
             // route: '/api/',
           },
         ],
@@ -271,7 +286,7 @@ module.exports = {
           {
             to: '/v2.8/integrations-in-rancher/fleet',
             from: ['/v2.8/pages-for-subheaders/deploy-apps-across-clusters', '/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters', '/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet', '/v2.8/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps']
-          }, 
+          },
           {
             to: '/v2.7/integrations-in-rancher/fleet-gitops-at-scale',
             from: ['/v2.7/pages-for-subheaders/deploy-apps-across-clusters', '/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters', '/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet', '/v2.7/how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps']
@@ -1679,7 +1694,7 @@ module.exports = {
           {
             to: '/v2.11/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides',
             from: '/v2.11/monitoring-alerting/configuration',
-          }, 
+          },
           {
             to: '/v2.11/integrations-in-rancher/monitoring-and-alerting',
             from: '/v2.11/monitoring-alerting',
@@ -1691,7 +1706,7 @@ module.exports = {
           {
             to: '/v2.10/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides',
             from: '/v2.10/monitoring-alerting/configuration',
-          }, 
+          },
           {
             to: '/v2.10/integrations-in-rancher/monitoring-and-alerting',
             from: '/v2.10/monitoring-alerting',
@@ -1703,7 +1718,7 @@ module.exports = {
           {
             to: '/v2.9/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides',
             from: '/v2.9/monitoring-alerting/configuration',
-          }, 
+          },
           {
             to: '/v2.9/integrations-in-rancher/monitoring-and-alerting',
             from: '/v2.9/monitoring-alerting',
@@ -2056,7 +2071,7 @@ module.exports = {
             to: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-vsphere',
             from: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/migrate-to-out-of-tree-vsphere',
           },
-          { to: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-vsphere', 
+          { to: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/migrate-to-an-out-of-tree-cloud-provider/migrate-to-out-of-tree-vsphere',
             from: '/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/migrate-from-in-tree-to-out-of-tree'
           },
           {
