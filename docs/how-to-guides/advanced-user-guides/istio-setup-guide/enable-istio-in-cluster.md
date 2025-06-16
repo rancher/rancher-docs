@@ -6,6 +6,14 @@ title: Enable Istio in the Cluster
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/istio-setup-guide/enable-istio-in-cluster"/>
 </head>
 
+:::warning
+
+[Rancher-Istio](https://github.com/rancher/charts/tree/release-v2.11/charts/rancher-istio) will be deprecated in Rancher v2.12.0; turn to the [SUSE Rancher Application Collection](https://apps.rancher.io) build of Istio for enhanced security (included in SUSE Rancher Prime subscriptions).
+
+Detailed information can be found in [this announcement](https://forums.suse.com/t/deprecation-of-rancher-istio/45043).
+
+:::
+
 :::note Prerequisites:
 
 - Only a user with the `cluster-admin` [Kubernetes default role](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles) assigned can configure and install Istio in a Kubernetes cluster.

@@ -89,7 +89,7 @@ Both of these resources are created for all Helm charts in the Operator / System
 
 ## Advanced Helm Project Operator Configuration
 
-For more information on advanced configurations, refer to [this page](https://github.com/rancher/prometheus-federator/blob/main/charts/prometheus-federator/0.0.1/README.md#advanced-helm-project-operator-configuration).
+For more information on advanced configurations, refer to [this page](https://github.com/rancher/prometheus-federator/blob/main/charts/prometheus-federator/README.md#advanced-helm-project-operator-configuration).
 
 <!--
 |Value|Configuration|

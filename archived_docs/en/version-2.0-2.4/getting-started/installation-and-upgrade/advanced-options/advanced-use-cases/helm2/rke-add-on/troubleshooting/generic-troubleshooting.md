@@ -121,7 +121,7 @@ To test the overlay network, you can launch the following `DaemonSet` definition
           - image: alpine
             imagePullPolicy: Always
             name: alpine
-            command: ["sh", "-c", "tail -f /dev/null"]
+            command: ["sleep", "infinity"]
             terminationMessagePath: /dev/termination-log
     ```
 

@@ -43,7 +43,7 @@ To test the overlay network, you can launch the following `DaemonSet` definition
           - image: rancherlabs/swiss-army-knife
             imagePullPolicy: Always
             name: overlaytest
-            command: ["sh", "-c", "tail -f /dev/null"]
+            command: ["sleep", "infinity"]
             terminationMessagePath: /dev/termination-log
 
     ```

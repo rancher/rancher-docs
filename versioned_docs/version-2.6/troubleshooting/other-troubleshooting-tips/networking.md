@@ -47,7 +47,7 @@ The `swiss-army-knife` container does not support Windows nodes. It also [does n
           - image: rancherlabs/swiss-army-knife
             imagePullPolicy: Always
             name: overlaytest
-            command: ["sh", "-c", "tail -f /dev/null"]
+            command: ["sleep", "infinity"]
             terminationMessagePath: /dev/termination-log
 
     ```

@@ -20,13 +20,13 @@ title: Vagrant 快速入门
 - [Virtualbox](https://www.virtualbox.org)：需要把 Vagrant 配置的虚拟机配置到 VirtualBox。
 - 至少 4GB 的可用内存。
 
-### 注意
+::: 注意
 
-- Vagrant 需要使用插件来创建 VirtualBox 虚拟机。请执行以下命令进行安装：
+Vagrant 需要使用插件来创建 VirtualBox 虚拟机。请执行以下命令进行安装：
+- `vagrant plugin install vagrant-vboxmanage` 
+- `vagrant plugin install vagrant-vbguest` 
 
-  `vagrant plugin install vagrant-vboxmanage`
-
-  `vagrant plugin install vagrant-vbguest`
+:::
 
 ## 开始使用
 

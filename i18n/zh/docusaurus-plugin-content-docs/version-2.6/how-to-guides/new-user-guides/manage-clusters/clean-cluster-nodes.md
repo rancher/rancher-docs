@@ -218,55 +218,155 @@ sudo k3s-uninstall.sh
 
 以下目录在将节点添加到集群时使用，应将该目录删除。你可以使用 `rm -rf /directory_name` 来删除目录。
 
-:::note
+:::important
 
 节点分配的角色决定了出现在节点上的目录。
 
 :::
 
+<Tabs>
+<TabItem value="RKE1">
+
 | 目录 |
 |------------------------------|
-| `/etc/ceph` |
-| `/etc/cni` |
-| `/etc/kubernetes` |
-| `/etc/rancher` |
-| `/opt/cni` |
-| `/opt/rke` |
+| `/etc/ceph`                  |
+| `/etc/cni`                   |
+| `/etc/kubernetes`            |
+| `/opt/cni`                   |
+| `/opt/rke`                   |
+| `/run/calico`                |
+| `/run/flannel`               |
 | `/run/secrets/kubernetes.io` |
-| `/run/calico` |
-| `/run/flannel` |
-| `/var/lib/calico` |
-| `/var/lib/etcd` |
-| `/var/lib/cni` |
-| `/var/lib/kubelet` |
-| `/var/lib/rancher` |
-| `/var/log/containers` |
-| `/var/log/kube-audit` |
-| `/var/log/pods` |
-| `/var/run/calico` |
+| `/var/lib/calico`            |
+| `/var/lib/cni`               |
+| `/var/lib/etcd`              |
+| `/var/lib/kubelet`           |
+| `/var/lib/rancher/rke`       |
+| `/var/lib/weave`             |
+| `/var/log/containers`        |
+| `/var/log/kube-audit`        |
+| `/var/log/pods`              |
+| `/var/run/calico`            |
 
 **清理目录**：
 
-```
+```shell
 rm -rf /etc/ceph \
        /etc/cni \
        /etc/kubernetes \
-       /etc/rancher \
        /opt/cni \
        /opt/rke \
-       /run/secrets/kubernetes.io \
        /run/calico \
        /run/flannel \
+       /run/secrets/kubernetes.io \
        /var/lib/calico \
-       /var/lib/etcd \
        /var/lib/cni \
+       /var/lib/etcd \
        /var/lib/kubelet \
-       /var/lib/rancher\
+       /var/lib/rancher/rke \
+       /var/lib/weave \
        /var/log/containers \
        /var/log/kube-audit \
        /var/log/pods \
        /var/run/calico
 ```
+
+</TabItem>
+<TabItem value="RKE2">
+
+| 目录 |
+|------------------------------|
+| `/etc/ceph`                  |
+| `/etc/cni`                   |
+| `/etc/kubernetes`            |
+| `/etc/rancher`               |
+| `/opt/cni`                   |
+| `/run/calico`                |
+| `/run/flannel`               |
+| `/run/secrets/kubernetes.io` |
+| `/var/lib/calico`            |
+| `/var/lib/cni`               |
+| `/var/lib/etcd`              |
+| `/var/lib/kubelet`           |
+| `/var/lib/rancher`           |
+| `/var/lib/weave`             |
+| `/var/log/containers`        |
+| `/var/log/pods`              |
+| `/var/run/calico`            |
+
+**清理目录**：
+
+```shell
+rm -rf /etc/ceph \
+       /etc/cni \
+       /etc/kubernetes \
+       /etc/rancher \
+       /opt/cni \
+       /run/calico \
+       /run/flannel \
+       /run/secrets/kubernetes.io \
+       /var/lib/calico \
+       /var/lib/cni \
+       /var/lib/etcd \
+       /var/lib/kubelet \
+       /var/lib/rancher \
+       /var/lib/weave \
+       /var/log/containers \
+       /var/log/pods \
+       /var/run/calico
+```
+
+</TabItem>
+<TabItem value="K3s">
+
+| 目录 |
+|------------------------------|
+| `/etc/ceph`                  |
+| `/etc/cni`                   |
+| `/etc/kubernetes`            |
+| `/etc/rancher`               |
+| `/etc/systemd/system/k3s`    |
+| `/opt/cni`                   |
+| `/run/calico`                |
+| `/run/flannel`               |
+| `/run/secrets/kubernetes.io` |
+| `/usr/local/bin/k3s`         |
+| `/var/lib/calico`            |
+| `/var/lib/cni`               |
+| `/var/lib/etcd`              |
+| `/var/lib/kubelet`           |
+| `/var/lib/rancher`           |
+| `/var/lib/weave`             |
+| `/var/log/containers`        |
+| `/var/log/pods`              |
+| `/var/run/calico`            |
+
+**清理目录**：
+
+```shell
+rm -rf /etc/ceph \
+       /etc/cni \
+       /etc/kubernetes \
+       /etc/rancher \
+       /etc/systemd/system/k3s \
+       /opt/cni \
+       /run/calico \
+       /run/flannel \
+       /run/secrets/kubernetes.io \
+       /usr/local/bin/k3s \
+       /var/lib/calico \
+       /var/lib/cni \
+       /var/lib/etcd \
+       /var/lib/kubelet \
+       /var/lib/rancher \
+       /var/lib/weave \
+       /var/log/containers \
+       /var/log/pods \
+       /var/run/calico
+```
+
+</TabItem>
+</Tabs>
 
 ### 网络接口和 iptables
 

@@ -7,7 +7,7 @@ title: ClusterRole Aggregation
 </head>
 
 :::caution
-ClusterRole aggregation is a highly experimental feature that changes the RBAC architecture used for RoleTemplates, ClusterRoleTemplateBindings and ProjectRoleTemplateBindings. **It is not supported for production environments**. This feature is meant exclusively for internal testing in v2.11. It is expected to be available as a beta for users in v2.12 with a prospective GA in Rancher v2.13.
+ClusterRole aggregation is a highly experimental feature that changes the RBAC architecture used for RoleTemplates, ClusterRoleTemplateBindings and ProjectRoleTemplateBindings. **It is not supported for production environments**. This feature is meant exclusively for internal testing in v2.11 and v2.12. It is expected to be available as a beta for users in v2.13.
 :::
 
 ClusterRole aggregation implements RoleTemplates, ClusterRoleTemplateBindings and ProjectRoleTemplateBindings using the Kubernetes feature [Aggregated ClusterRoles](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#aggregated-clusterroles). The new architecture results in a net reduction in RBAC objects (Roles, RoleBindings, ClusterRoles and ClusterRoleBindings) both in the Rancher cluster and the downstream clusters.

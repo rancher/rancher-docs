@@ -6,6 +6,14 @@ title: Additional Steps for Project Network Isolation
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/istio/configuration-options/project-network-isolation"/>
 </head>
 
+:::warning
+
+[Rancher-Istio](https://github.com/rancher/charts/tree/release-v2.11/charts/rancher-istio) will be deprecated in Rancher v2.12.0; turn to the [SUSE Rancher Application Collection](https://apps.rancher.io) build of Istio for enhanced security (included in SUSE Rancher Prime subscriptions).
+
+Detailed information can be found in [this announcement](https://forums.suse.com/t/deprecation-of-rancher-istio/45043).
+
+:::
+
 In clusters where:
 
 - You are using the Canal network plugin with Rancher before v2.5.8, or you are using Rancher v2.5.8+ with an any RKE network plug-in that supports the enforcement of Kubernetes network policies, such as Canal or the Cisco ACI plugin

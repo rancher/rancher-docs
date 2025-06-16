@@ -46,7 +46,7 @@ The route needs to refer to a [receiver](./receivers.md) that has already been c
 
 | Field |    Default | Description |
 |-------|--------------|---------|
-| Group By |  N/a | List of labels to group by. Labels must be unique. Special label "..." (aggregate by all possible labels), if provided, must be the only element in the list. Accepts a list of strings. See the [upstream documentation](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#route) for details. |
+| Group By |  N/a | List of labels to group by. Labels must be unique. Special label "..." (aggregate by all possible labels), if provided, must be the only element in the list. Accepts a list of strings. See the [upstream documentation](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#route) for details. |
 | Group Wait | 30s | How long to wait to buffer alerts of the same group before sending initially. |
 | Group Interval | 5m | How long to wait before sending an alert that has been added to a group of alerts for which an initial notification has already been sent. |
 | Repeat Interval |  4h | How long to wait before re-sending a given alert that has already been sent. |
