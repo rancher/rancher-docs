@@ -196,6 +196,34 @@ As previously mentioned, custom roles can be defined for use at the cluster or p
 
 When defining a custom role, you can grant access to specific resources or specify roles from which the custom role should inherit. A custom role can be made up of a combination of specific grants and inherited roles. All grants are additive. This means that defining a narrower grant for a specific resource **will not** override a broader grant defined in a role that the custom role is inheriting from.
 
+#### Updatepsa For Project Level
+
+About defining custom roles, you can grant permission to a user to create/update *PSA* policies when defining namespaces within Projects.
+To do so, you can use the following `RoleTemplate` to be applied on the cluster:
+
+```yaml
+apiVersion: management.cattle.io/v3
+builtin: false
+context: project
+description: enable updatepsa for project level
+displayName: UpdatePSA
+external: false
+hidden: false
+kind: RoleTemplate
+metadata:
+  name: updatepsa-for-project-level
+rules:
+  - apiGroups:
+      - management.cattle.io
+    resources:
+      - projects
+    verbs:
+      - updatepsa
+```
+
+When creating a new Project (from the *Members* tab) click *Add* to add the user and select `Custom` > `Create Namespaces` (to allow the user to create namespaces).
+Then click *Add* again and select `UpdatePSA` project role template from the list of **Project Permissions**.
+
 ### Default Cluster and Project Roles
 
 By default, when a standard user creates a new cluster or project, they are automatically assigned an ownership role: either [cluster owner](#cluster-roles) or [project owner](#project-roles). However, in some organizations, these roles may overextend administrative access. In this use case, you can change the default role to something more restrictive, such as a set of individual roles or a custom role.
