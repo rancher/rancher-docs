@@ -205,13 +205,13 @@ To do so, you can use the following `RoleTemplate` to be applied on the cluster:
 apiVersion: management.cattle.io/v3
 builtin: false
 context: project
-description: enable updatepsa for project level
-displayName: UpdatePSA
+description: ''
+displayName: Manage PSA Labels
 external: false
 hidden: false
 kind: RoleTemplate
 metadata:
-  name: updatepsa-for-project-level
+  name: namespaces-psa
 rules:
   - apiGroups:
       - management.cattle.io
