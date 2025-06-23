@@ -23,6 +23,7 @@ Mounted secrets will be updated automatically unless they are mounted as subpath
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. Go to the cluster where you want to add a secret and click **Explore**.
 1. To navigate to secrets, you may click either **Storage > Secrets** or **More Resources > Core > Secrets**.
+1. Select the **Namespaced** tab.
 1. Click **Create**.
 1. Select the type of secret you want to create.
 1. Select a **Namespace** for the secret.
@@ -53,27 +54,61 @@ Mounted secrets will be updated automatically unless they are mounted as subpath
 
 ## Creating Secrets in Projects
 
-Before v2.6, secrets were required to be in a project scope. Projects are no longer required, and you may use the namespace scope instead. As a result, the Rancher UI was updated to reflect this new functionality. However, you may still create project-scoped secrets if desired. Note that you have to first enable the `legacy` feature flag and look at a single project to do so. Use the following steps to set up your project-level secret:
+When creating a secret in a project scope, the secret will be copied into all namespaces within the project.
 
-1. In the upper left corner, click **☰ > Global Settings** in the dropdown.
-1. Click **Feature Flags**.
-1. Go to the `legacy` feature flag and click **Activate**.
-1. In the upper left corner, click **☰ > Cluster Management** in the dropdown.
-1. Go to the cluster that you created and click **Explore.**
-1. Click **Legacy > Projects**.
-1. In the top navigation bar, filter to see only one project.
-1. In the left navigation bar, click **Secrets**.
-1. Click **Add Secret**.
+### Creating a Project Scoped Secret in the UI
 
-**Result:** Your secret is added to the individual project you chose. You can view the secret in the Rancher UI by clicking either **Storage > Secrets** or **More Resources > Core > Secrets**.
+1. In the upper left corner, click **☰ > Cluster Management**.
+1. Go to the cluster where you want to add a secret and click **Explore**.
+1. To navigate to secrets, you may click either **Storage > Secrets** or **More Resources > Core > Secrets**.
+1. Select the **Project Scoped** tab.
+1. Click **Create Project Scoped Secret**.
+1. Select the type of secret you want to create.
+1. Select a **Project** for the secret.
+1. Enter a **Name** for the secret.
 
-Since project-scoped secrets are set at the project level, any changes made at the namespace level will be overwritten.
+    :::note
 
-:::note
+    Kubernetes classifies secrets, certificates, and registries all as [secrets](https://kubernetes.io/docs/concepts/configuration/secret/), and no two secrets in a namespace can have duplicate names. If you create a project scoped secret that has the same name as an existing secret in one of the project namespaces, the existing secret will be overwritten.
 
-Project-scoped secrets on the local cluster are only visible when a single project is selected.
+    :::
 
-:::
+1. From **Data**, click **Add** to add a key-value pair. Add as many values as you need.
+
+    :::tip
+
+    You can add multiple key value pairs to the secret by copying and pasting.
+
+    :::
+
+    ![](/img/bulk-key-values.gif)
+
+1. Click **Save**.
+
+**Result:** Your secret is added each namespace within the project. You can view the secret in the Rancher UI by clicking either **Storage > Secrets** or **More Resources > Core > Secrets**.
+
+### Creating a Project Scoped Secret with kubectl
+
+Project scoped secrets works by creating the original secret on the management cluster in what's known as the "Project Backing Namespace". Rancher stores important project related information in this namespace. You can find it in the `status.backingNamespace` field in the project CRD, or by doing `kubectl get projects -A` in the management cluster.
+
+In order for the secret to be acknowledged by Rancher as a project scoped secret, it also needs the label `management.cattle.io/project-scoped-secret: <projectID>`.
+
+Example yaml:
+
+```
+apiVersion: v1
+data:
+  key: ZG9n
+kind: Secret
+metadata:
+  labels:
+    management.cattle.io/project-scoped-secret: p-vwxyz
+  name: test-secret
+  namespace: c-abc123-p-vwxyz
+type: Opaque
+```
+
+In the above yaml, the namespace is the backing namespace of project `p-vwxyz` and the project scoped secret label references the projectID. When applied to the management cluster, all namespaces within the project `p-vwxyz` will contain a copy of `test-secret`.
 
 ## What's Next?
 
