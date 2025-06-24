@@ -17,6 +17,7 @@ kubectl patch feature ext-kubeconfigs -p '{"spec":{"value":false}}'
 ## Creating a Kubeconfig
 
 Only a **valid and active** Rancher user can create a Kubeconfig.
+E.g. using a service account `system:admin` will lead to the following error: 
 
 ```bash
 kubectl create -o jsonpath='{.status.value}' -f -<<EOF
@@ -118,13 +119,17 @@ kubectl delete kubeconfig kubeconfig-zp786
 kubeconfig.ext.cattle.io "kubeconfig-zp786" deleted
 ```
 
-To delete a Kubeconfig using a precondition:
+To delete a Kubeconfig using preconditions:
 ```sh
-kubectl delete --raw /apis/ext.cattle.io/v1/kubeconfigs -f -<<EOF
-apiVersion: v1
-kind: DeleteOptions
-preconditions:
-    uid: 52183e05-d382-47d2-b4b9-d0735823ce90
+cat <<EOF | k delete --raw /apis/ext.cattle.io/v1/kubeconfigs/kubeconfig-zp786 -f -
+{
+  "apiVersion": "v1",
+  "kind": "DeleteOptions",
+  "preconditions": {
+    "uid": "52183e05-d382-47d2-b4b9-d0735823ce90",
+    "resourceVersion": "31331505"
+  }
+}
 EOF
 ```
 
