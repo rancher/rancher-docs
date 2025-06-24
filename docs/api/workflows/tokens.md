@@ -35,9 +35,9 @@ The default is empty.
 
 The `spec.kind` field can be set to the kind of token.
 The value "session" indicates a login token.
-All other kinds, including the default (empy string) indicate some kind of derived token.
+All other kinds, including the default (empty string) indicate some kind of derived token.
 
-The `name` and `generateName` fields of the new token are ignored. The system automatically choosen a name using the prefix `token-`.
+The `name` and `generateName` fields of the new token are ignored. The system automatically chooses a name using the prefix `token-`.
 
 ```bash
 kubectl create -o jsonpath='{.status.value}' -f -<<EOF
@@ -77,6 +77,7 @@ token-8nbrm          90d   14s
 Use `-o wide` to get more details:
 
 ```sh
+kubectl get tokens.ext.cattle.io -o wide
 NAME          USER         KIND   TTL   AGE   DESCRIPTION
 token-chjc9   user-jtghh          90d   24s   example
 token-6fzgj   user-jtghh          90d   22s   box
