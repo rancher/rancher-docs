@@ -27,6 +27,12 @@ EOF
 Error from server (Forbidden): error when creating "STDIN": kubeconfigs.ext.cattle.io is forbidden: user system:admin is not a Rancher user
 ```
 
+:::note Important:
+
+The kubeconfig content is generated and returned in the `.status.value` field **only once** when the Kubeconfig is successfully created because it contains secret values for created tokens. Therefore it has to be captured by using an appropriate output options, such as `-o jsonpath='{.status.value}'` or `-o yaml`.
+
+:::
+
 A kubeconfig can be created for more than one cluster at a time by specifying a list of cluster names in the `spec.clusters` field.  
 Note: Cluster names can be retrieved by listing `clusters.management.cattle.io` resources.
 
