@@ -85,7 +85,7 @@ When creating a secret in a project scope, the secret will be copied into all na
 
 1. Click **Save**.
 
-**Result:** Your secret is added each namespace within the project. You can view the secret in the Rancher UI by clicking either **Storage > Secrets** or **More Resources > Core > Secrets**.
+**Result:** Your secret is added to each namespace within the project. You can view the secret in the Rancher UI by clicking either **Storage > Secrets** or **More Resources > Core > Secrets**.
 
 ### Creating a Project Scoped Secret with kubectl
 
