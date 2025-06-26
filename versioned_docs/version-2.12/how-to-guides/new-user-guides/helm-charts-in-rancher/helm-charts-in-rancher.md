@@ -42,26 +42,6 @@ To display prerelease versions:
 1. Click **Preferences**.
 1. Under **Helm Charts**, select **Include Prerelease Versions**.
 
-### Feature Charts
-
-| **Name** | **Supported Minimum Version** | **Supported Maximum Version** |
-| ---------------- | ------------ | ------------ |
-| external-ip-webhook | 100.0.0+up1.0.0 | 100.0.1+up1.0.1 |
-| harvester-cloud-provider | 100.0.2+up0.1.12 | 100.0.2+up0.1.12 |
-| harvester-csi-driver | 100.0.2+up0.1.11 | 100.0.2+up0.1.11 |
-| neuvector | 100.0.0+up2.2.0 | 100.0.0+up2.2.0 |
-| rancher-alerting-drivers | 100.0.0 | 100.0.2 |
-| rancher-backup | 2.0.1 | 2.1.2 |
-| rancher-cis-benchmark | 2.0.1 | 2.0.4 |
-| rancher-istio | 105.0.0+up1.19.6 | 105.4.0+up1.23.2 |
-| rancher-logging | 100.0.0+up3.12.0 | 100.1.2+up3.17.4 |
-| rancher-longhorn | 100.0.0+up1.1.2 | 100.1.2+up1.2.4 |
-| rancher-monitoring | 100.0.0+up16.6.0 | 100.1.2+up19.0.3 |
-| rancher-sriov<sup>[1](#sriov-chart-deprecation-and-migration)</sup> | 100.0.0+up0.1.0 | 100.0.3+up0.1.0 |
-| rancher-vsphere-cpi | 100.3.0+up1.2.1 | 100.3.0+up1.2.1 |
-| rancher-vsphere-csi | 100.3.0+up2.5.1-rancher1 | 100.3.0+up2.5.1-rancher1 |
-| rancher-wins-upgrader | 0.0.100 | 100.0.1+up0.0.1 |
-
 ## Access Charts
 
 The **Charts** page contains all Rancher, Partner, and Custom charts. You can filter charts by selecting the left-most dropdown menu:
