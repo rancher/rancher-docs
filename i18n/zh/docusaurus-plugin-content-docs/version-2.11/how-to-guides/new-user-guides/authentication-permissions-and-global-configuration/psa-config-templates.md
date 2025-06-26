@@ -113,6 +113,7 @@ The policies shipped by default in Rancher aim to provide a trade-off between se
 - `cert-manager`
 - `cis-operator-system`
 - `fleet-default`
+- `fleet-local`
 - `ingress-nginx`
 - `istio-system`
 - `kube-node-lease`
