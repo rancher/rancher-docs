@@ -156,16 +156,10 @@ kubectl delete --raw /apis/ext.cattle.io/v1/kubeconfigs?labelSelector=foo%3Dbar
 
 #### Updating a Kubeconfig
 
-Only the metadata and the `spec.description` field can be updated. All other `spec` fields are immutable.
+Only the `metadata`, e.g. adding a label or an annotation, and the `spec.description` field can be updated. All other `spec` fields are immutable.
 
-To add a label to a Kubeconfig:
-
-```sh
-kubectl patch kubeconfig kubeconfig-zp786 -p '{"metadata":{"labels":{"foo":"bar"}}}'
-```
-
-To change the description of a Kubeconfig:
+To edit a Kubeconfig:
 
 ```sh
-kubectl patch kubeconfig kubeconfig-zp786 -p '{"spec":{"description":"Updated description"}}'
+kubectl edit kubeconfig kubeconfig-zp786
 ```
