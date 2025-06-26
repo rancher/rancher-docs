@@ -37,7 +37,7 @@ The `spec.kind` field can be set to the kind of token.
 The value "session" indicates a login token.
 All other kinds, including the default (empty string) indicate some kind of derived token.
 
-The `name` and `generateName` fields of the new token are ignored. The system automatically chooses a name using the prefix `token-`.
+The `metadata.name` and `metadata.generateName` fields are ignored and the name of the new Token is automatically generated using the prefix `token-`.
 
 ```bash
 kubectl create -o jsonpath='{.status.value}' -f -<<EOF
@@ -118,14 +118,7 @@ Only the metadata, the `spec.description` field, the `spec.ttl` field, and the `
 All other `spec` fields are immutable.
 Admins are able to extend the `spec.ttl` field, while regular users can only reduce the value.
 
-To add a label to a Token:
+To edit a Token:
 
 ```sh
-kubectl patch token token-zp786 -p '{"metadata":{"labels":{"foo":"bar"}}}'
-```
-
-To change the description of a Token:
-
-```sh
-kubectl patch token token-zp786 -p '{"spec":{"description":"Updated description"}}'
-```
+kubectl edit tokens.ext.cattle.io token-zp786
