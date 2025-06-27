@@ -36,6 +36,8 @@ The kubeconfig content is generated and returned in the `.status.value` field **
 A kubeconfig can be created for more than one cluster at a time by specifying a list of cluster names in the `spec.clusters` field.  
 Note: Cluster names can be retrieved by listing `clusters.management.cattle.io` resources.
 
+The `metadata.name` and `metadata.generateName` fields are ignored and the name of the new Kubeconfig is automatically generated using the prefix `kubeconfig-`.
+
 The `spec.currentContext` field can be used to set the cluster name that will be set as the current context in the kubeconfig.  
 If the `spec.currentContext` field is not set, then the first cluster in the `spec.clusters` list will be used as the current context. For ACE-enabled clusters that don't have an FQDN set, the first control plane node will be used as the current context.
 
@@ -162,4 +164,24 @@ To edit a Kubeconfig:
 
 ```sh
 kubectl edit kubeconfig kubeconfig-zp786
+```
+
+To patch a Kubeconfig and update its description:
+
+```sh
+kubectl patch kubeconfig kubeconfig-zp786 -type merge -p '{"spec":{"description":"Updated description"}}'
+kubeconfig.ext.cattle.io/kubeconfig-zp786 patched
+
+kubectl get kubeconfig kubeconfig-fdcpl -o jsonpath='{.spec.description}'
+Updated description
+```
+
+To patch a Kubeconfig and add a label:
+
+```sh
+kubectl patch kubeconfig kubeconfig-zp786 -type merge -p '{"metadata":{"labels":{"foo":"bar"}}}'
+kubeconfig.ext.cattle.io/kubeconfig-zp786 patched
+
+kubectl get kubeconfig kubeconfig-zp786 -o jsonpath='{.metadata.labels.foo}'
+bar
 ```
