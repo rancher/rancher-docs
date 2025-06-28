@@ -33,12 +33,6 @@ While you can create your own ResourceSets to back up custom applications, two R
 
 `rancher-resource-set-full` includes all essential secrets in the backup files to ensure Rancher continues running smoothly after a restore or migration. To avoid storing sensitive information in plain text, we strongly advise you to enable encryption with a strong key.
 
-:::note Important:
-
-`rancher-resource-set` is also included by default with the `rancher-backup` operator. However, this ResourceSet is deprecated and is only being kept for backwards compatibility reasons. `rancher-resource-set` will be removed in Rancher v2.12. Please update your Backup custom resources to use either `rancher-resource-set-full` or `rancher-resource-set-basic`.
-
-:::
-
 | YAML Directive Name | Description |
 | ---------------- | ---------------- |
 | `resourceSetName` |  Provide the name of the ResourceSet to define which resources will be included in this backup. |
