@@ -36,7 +36,8 @@ For information on enabling experimental features, refer to [this page.](../../.
 | `antiAffinity`                 | "preferred"                                           | `string` - AntiAffinity rule for Rancher pods - "preferred, required"                                                                             |
 | `auditLog.destination`         | "sidecar"                                             | `string` - Stream to sidecar container console or hostPath volume - "sidecar, hostPath"                                                           |
 | `auditLog.hostPath`            | "/var/log/rancher/audit"                              | `string` - log file destination on host (only applies when `auditLog.destination` is set to `hostPath`)                                           |
-| `auditLog.level`               | 0                                                     | `int` - set the [API Audit Log](../../../how-to-guides/advanced-user-guides/enable-api-audit-log.md) level. 0 is off. [0-3]                                   |
+| `auditLog.enabled`            |  false                            | `bool` - Enables / disables audit logging                                            |
+| `auditLog.level`               | 0                                                     | `int` - set the [API Audit Log](../../../how-to-guides/advanced-user-guides/enable-api-audit-log.md) level.  [0-3]                                   |
 | `auditLog.maxAge`              | 1                                                     | `int` - maximum number of days to retain old audit log files (only applies when `auditLog.destination` is set to `hostPath`)                      |
 | `auditLog.maxBackup`           | 1                                                     | `int` - maximum number of audit log files to retain (only applies when `auditLog.destination` is set to `hostPath`)                               |
 | `auditLog.maxSize`             | 100                                                   | `int` - maximum size in megabytes of the audit log file before it gets rotated (only applies when `auditLog.destination` is set to `hostPath`)    |
@@ -62,6 +63,10 @@ For information on enabling experimental features, refer to [this page.](../../.
 | `systemDefaultRegistry`        | ""                                                    | `string` - private registry to be used for all system container images, e.g., http://registry.example.com/                   |
 | `tls`                          | "ingress"                                             | `string` - See [External TLS Termination](#external-tls-termination) for details. - "ingress, external"                                           |
 | `useBundledSystemChart`        | `false`                                               | `bool` - select to use the system-charts packaged with Rancher server. This option is used for air gapped installations.  |
+
+
+When using Rancher v2.12.0 and above, Rancher will use an audit logging controller that watches `AuditPolicy` CRs for configuring additional redactions, for more info see [API Audit Log](../../../how-to-guides/advanced-user-guides/enable-api-audit-log.md).
+
 
 ### Bootstrap Password
 
