@@ -33,8 +33,13 @@ The kubeconfig content is generated and returned in the `.status.value` field **
 
 :::
 
-A kubeconfig can be created for more than one cluster at a time by specifying a list of cluster names in the `spec.clusters` field.  
-Note: Cluster names can be retrieved by listing `clusters.management.cattle.io` resources.
+A kubeconfig can be created for more than one cluster at a time by specifying a list of cluster names in the `spec.clusters` field. Cluster names can be looked up by listing `clusters.management.cattle.io` resources e.g.
+
+```sh
+kubectl get clusters.management.cattle.io -o=jsonpath="{.items[*]['metadata.name', 'spec.displayName']}{'\n'}"
+local local
+c-m-p66cdvlj downstream1
+```
 
 The `metadata.name` and `metadata.generateName` fields are ignored and the name of the new Kubeconfig is automatically generated using the prefix `kubeconfig-`.
 
@@ -93,6 +98,7 @@ kubeconfig-jznml   30d   1/1      Complete   12d
 Use `-o wide` to get more details:
 
 ```sh
+kubectl get kubeconfig -o wide
 NAME               TTL   TOKENS   STATUS     AGE     USER         CLUSTERS       DESCRIPTION
 kubeconfig-zp786   30d   2/2      Complete   18d     user-w5gcf   *              all clusters
 kubeconfig-7zvzp   30d   1/1      Complete   12d     u-w7drc      *
