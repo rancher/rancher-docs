@@ -196,7 +196,7 @@ As previously mentioned, custom roles can be defined for use at the cluster or p
 
 When defining a custom role, you can grant access to specific resources or specify roles from which the custom role should inherit. A custom role can be made up of a combination of specific grants and inherited roles. All grants are additive. This means that defining a narrower grant for a specific resource **will not** override a broader grant defined in a role that the custom role is inheriting from.
 
-#### Updatepsa For Project Level
+#### UpdatePSA For Project Level
 
 About defining custom roles, you can grant permission to a user to create/update *PSA* policies when defining namespaces within Projects.
 To do so, you can use the following `RoleTemplate` to be applied on the cluster:
