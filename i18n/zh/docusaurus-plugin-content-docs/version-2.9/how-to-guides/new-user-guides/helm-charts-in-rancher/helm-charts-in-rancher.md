@@ -42,27 +42,6 @@ Rancher chart 的版本设计方案主要围绕 charts 的主要版本以及与�
 2. 点击 **Preferences**.
 3. 在 **Helm Charts** 下, 选择 **Include Prerelease Versions**.
 
-### 版本控制方案
-
-| **Name** | **支持的最低版本** | **支持的最高版本** |
-| ---------------- | ------------ | ------------ |
-| external-ip-webhook | 100.0.0+up1.0.0 | 100.0.1+up1.0.1 |
-| harvester-cloud-provider | 100.0.2+up0.1.12 | 100.0.2+up0.1.12 |
-| harvester-csi-driver | 100.0.2+up0.1.11 | 100.0.2+up0.1.11 |
-| neuvector | 100.0.0+up2.2.0 | 100.0.0+up2.2.0 |
-| rancher-alerting-drivers | 100.0.0 | 100.0.2 |
-| rancher-backup | 2.0.1 | 2.1.2 |
-| rancher-cis-benchmark | 2.0.1 | 2.0.4 |
-| rancher-gatekeeper | 100.0.0+up3.6.0 | 100.1.0+up3.7.1 |
-| rancher-istio | 100.0.0+up1.10.4 | 100.3.0+up1.13.3 |
-| rancher-logging | 100.0.0+up3.12.0 | 100.1.2+up3.17.4 |
-| rancher-longhorn | 100.0.0+up1.1.2 | 100.1.2+up1.2.4 |
-| rancher-monitoring | 100.0.0+up16.6.0 | 100.1.2+up19.0.3 |
-| rancher-sriov (experimental) | 100.0.0+up0.1.0 | 100.0.3+up0.1.0 |
-| rancher-vsphere-cpi | 100.3.0+up1.2.1 | 100.3.0+up1.2.1 |
-| rancher-vsphere-csi | 100.3.0+up2.5.1-rancher1 | 100.3.0+up2.5.1-rancher1 |
-| rancher-wins-upgrader | 0.0.100 | 100.0.1+up0.0.1 |
-
 ## 访问 Charts
 
 **Charts** 页面包含所有 Rancher、Rancher 合作伙伴和自定义 Chart。你可以通过选择左侧的下拉菜单来筛选 Chart：
