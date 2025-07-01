@@ -198,7 +198,7 @@ When defining a custom role, you can grant access to specific resources or speci
 
 #### UpdatePSA For Project Level
 
-About defining custom roles, you can grant permission to a user to create/update *PSA* policies when defining namespaces within Projects.
+About defining custom roles, you can grant permission to a user to create or update *PSA* policies when defining namespaces within projects.
 To do so, you can use the following `RoleTemplate` to be applied on the cluster:
 
 ```yaml
