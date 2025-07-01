@@ -221,7 +221,7 @@ rules:
       - updatepsa
 ```
 
-When creating a new Project (from the *Members* tab) click *Add* to add the user and select `Custom` > `Create Namespaces` (to allow the user to create namespaces).
+When creating a new project (from the **Members** tab), click **Add** to add the user and select **Custom** > **Create Namespaces** (to allow the user to create namespaces).
 Then click *Add* again and select `UpdatePSA` project role template from the list of **Project Permissions**.
 
 ### Default Cluster and Project Roles
