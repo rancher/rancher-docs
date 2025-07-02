@@ -51,6 +51,8 @@ Audit log policies allow end users to configure redactions using `AuditPolicy` c
 
 All configured audit log policies are additive.
 
+Redaction policies for headers use a regex engine to redact headers, while a JsonPath engine is used to redact request/response headers.
+
 The structure of an audit policy CR is as follows:
 
 ```yaml
@@ -65,10 +67,12 @@ spec:
       requestURI: "/foo/.*"
   # additionalRedactions allows configuration of redactions on headers using `jsonpath` expressions
   additionalRedactions:
+    # redacts headers based on regex expressions
     - headers:
-      - asdfjaklsd
+      - "Cache.*"
+      # paths redacts information from request and response bodies based on json path expressions
       paths: 
-      - asdklajsdkl
+      - "$.gitCommit"
   verbosity:
     level : 0 # matches the levels in the above audit log table
     # request allows fine-grained control over which request data 
@@ -101,7 +105,7 @@ spec:
 ```
 
 
-The following example shows how to redact specific fields containing `gitCommint` in headers and request/response bodies:
+The following example shows how to redact specific fields containing `gitCommint` in request/response bodies:
 
 ```yaml
 apiVersion: auditlog.cattle.io/v1
@@ -158,7 +162,7 @@ Generic body regex redactor:
 
 #### Cluster Driver
 
-By default any API request with fields tied to cluster drivers will have any non `public*` ir `optional*` fields redacted by the audit log controller.
+By default any API request with fields tied to cluster drivers will have any non `public*` or `optional*` fields redacted by the audit log controller.
 
 #### Redacted URIs
 
