@@ -11,13 +11,13 @@ This can be used for enabling single sign-on (SSO) across Rancher Prime componen
 
 The OIDC provider can be enabled with the `oidc-provider` feature flag. When this flag is on the following endpoints are available:
 
-`https://{rancher-url}/oidc/authorize`: This endpoint initiates the authentication flow. If a user is already logged into Rancher, it returns an authorization code. Otherwise, it redirects the user to the Rancher login page. Authorization codes and related request information are securely stored in session secrets. Codes are single-use and expire after 10 minutes.
+- `https://{rancher-url}/oidc/authorize`: This endpoint initiates the authentication flow. If a user is already logged into Rancher, it returns an authorization code. Otherwise, it redirects the user to the Rancher login page. Authorization codes and related request information are securely stored in session secrets. Codes are single-use and expire after 10 minutes.
 
-`https://{rancher-url}/oidc/token`: This endpoint exchanges an authorization code for an id_token, access_token, and refresh_token.
+- `https://{rancher-url}/oidc/token`: This endpoint exchanges an authorization code for an `id_token`, `access_token`, and `refresh_token`.
 
-`https://{rancher-url}/oidc/.well-known/openid-configuration`: This endpoint returns a JSON document containing the OIDC provider's configuration, including endpoint URLs, supported scopes, claims, and other relevant details.
+- `https://{rancher-url}/oidc/.well-known/openid-configuration`: This endpoint returns a JSON document containing the OIDC provider's configuration, including endpoint URLs, supported scopes, claims, and other relevant details.
 
-`https://{rancher-url}/oidc/userinfo`: This endpoint provides information about the authenticated user.
+- `https://{rancher-url}/oidc/userinfo`: This endpoint provides information about the authenticated user.
 
 The OIDC provider supports the OIDC Authentication Code Flow with PKCE.
 
@@ -90,7 +90,7 @@ You can manage multiple client secrets per `OIDCClient`. Use annotations on the 
 
 Create an OIDCClient:
 
-1.	In the top left corner, click **☰ > Users & Authentication**.
+1. In the top left corner, click **☰ > Users & Authentication**.
 1. In the left navigation menu, click **OIDC Apps**.
 1. Click **Add Application**. Fill out the **Create OIDC App** form.
 1. Click **Add Application**.
