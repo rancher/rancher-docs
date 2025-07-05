@@ -213,15 +213,32 @@ If you are using a Private CA signed certificate (or if `agent-tls-mode` is set 
 
 Your load balancer must support long lived websocket connections and will need to insert proxy headers so Rancher can route links correctly.
 
-### Configuring Ingress for External TLS when Using NGINX v0.25
+### Configuring Ingress for External TLS when Using NGINX v0.22
 
-In NGINX v0.25, the behavior of NGINX has [changed](https://github.com/kubernetes/ingress-nginx/blob/master/Changelog.md#0220) regarding forwarding headers and external TLS termination. Therefore, in the scenario that you are using external TLS termination configuration with NGINX v0.25, you must edit the `cluster.yml` to enable the `use-forwarded-headers` option for ingress:
+In NGINX v0.22, the behavior of NGINX has [changed](https://github.com/kubernetes/ingress-nginx/blob/06efac9f0b6f8f84b553f58ccecf79dc42c75cc6/Changelog.md) regarding forwarding headers and external TLS termination. Therefore, in the scenario that you are using external TLS termination configuration with NGINX v0.22, you must enable the `use-forwarded-headers` option for ingress:
 
+For RKE installations, edit the `cluster.yml` to add the following settings.
 ```yaml
 ingress:
   provider: nginx
   options:
     use-forwarded-headers: 'true'
+```
+
+For RKE2 installations, you can create a custom `rke2-ingress-nginx-config.yaml` file at `/var/lib/rancher/rke2/server/manifests/rke2-ingress-nginx-config.yaml` containing this required setting to enable using forwarded headers with external TLS termination. Without this required setting applied, the external LB will continuously respond with redirect loops it receives from the ingress controller. (This can be created before or after rancher is installed, rke2 server agent will notice this addition and automatically apply it.)
+
+```yaml
+---
+apiVersion: helm.cattle.io/v1
+kind: HelmChartConfig
+metadata:
+  name: rke2-ingress-nginx
+  namespace: kube-system
+spec:
+  valuesContent: |-
+    controller:
+      config:
+        use-forwarded-headers: "true"
 ```
 
 ### Required Headers
