@@ -12,7 +12,7 @@ Rancher extends Kubernetes with additional APIs by registering an extension API 
 
 The API aggregation layer must be configured on the local Kubernetes cluster for the `imperative-api-extension` `APISertvice` to work correctly. If the `APIService` does not receive a registration request after the Rancher server starts, the pod will crash with a log entry indicating the error. If your pods are consistently failing to detect registration despite having a correctly configured cluster, you can increase the timeout by setting the `.Values.aggregationRegistrationTimeout` in helm.
 
-See the [Kubernetes Aggregation Layer docs](https://kubernetes.io/docs/tasks/extend-kubernetes/configure-aggregation-layer/) for information on configuring the aggregation layer.
+All versions of k8s supported by Rancher with the feature will have the aggregation layer configured by default. If you suspect you cluster may not be configured properlly see [Kubernetes Aggregation Layer docs](https://kubernetes.io/docs/tasks/extend-kubernetes/configure-aggregation-layer/) for information on configuring the aggregation layer.
 
 :::note
 
