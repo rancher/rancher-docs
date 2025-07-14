@@ -166,7 +166,7 @@
         <b>Versions:</b> Rancher v2.12.0 and later
     </p>
     <dd>
-        A Rancher resource <code>kubeconfigs.ext.cattle.io<code> used to generate kubeconfigs.
+        A Rancher resource <code>kubeconfigs.ext.cattle.io</code> used to generate kubeconfigs.
     </dd>
     <dt>
         kubeconfig
