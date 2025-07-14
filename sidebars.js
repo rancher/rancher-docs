@@ -1356,7 +1356,8 @@ const sidebars = {
           "type": "category",
           "label": "Example Workflows",
           "items": [
-            "api/workflows/projects"
+            "api/workflows/projects",
+            "api/workflows/kubeconfigs"
           ]
         },
         "api/api-reference",
