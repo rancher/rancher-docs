@@ -34,25 +34,25 @@ A Token is always created for the user making the request. Attempting to create 
 
 - The `metadata.name` and `metadata.generateName` fields are ignored and the name of the new Token is automatically generated using the prefix `token-`.
 
-```bash
-kubectl create -o jsonpath='{.status.value}' -f -<<EOF
-apiVersion: ext.cattle.io/v1
-kind: Token
-spec:
-  description: My Token
-EOF
-```
+	```bash
+	kubectl create -o jsonpath='{.status.value}' -f -<<EOF
+	apiVersion: ext.cattle.io/v1
+	kind: Token
+	spec:
+	  description: My Token
+	EOF
+	```
 
 - If the `spec.ttl` is not specified, the Token will be created with the expiration time defined in the `auth-token-max-ttl-minutes` setting. This is 90 days by default. If `spec.ttl` is specified, it should be greater than 0 and less than or equal to the value of the `auth-token-max-ttl-minutes` setting expressed in milliseconds.
 
-```bash
-kubectl create -o jsonpath='{.status.value}' -f -<<EOF
-apiVersion: ext.cattle.io/v1
-kind: Token
-spec:
-  ttl: 7200000 # 2 hours
-EOF
-```
+	```bash
+	kubectl create -o jsonpath='{.status.value}' -f -<<EOF
+	apiVersion: ext.cattle.io/v1
+	kind: Token
+	spec:
+	  ttl: 7200000 # 2 hours
+	EOF
+	```
 
 ## Listing Tokens
 
