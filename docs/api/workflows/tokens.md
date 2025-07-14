@@ -8,8 +8,7 @@ title: Tokens
 
 ## Feature Flag
 
-The Tokens Public API is available since Rancher v2.12.0 and is enabled by default.
-It can be disabled by setting the `ext-tokens` feature flag to `false`.
+The Tokens Public API is available for Rancher v2.12.0 and later, and is enabled by default. It can be disabled by setting the `ext-tokens` feature flag to `false` as shown in the example `kubectl` command below:
 
 ```sh
 kubectl patch feature ext-tokens -p '{"spec":{"value":false}}'
@@ -17,7 +16,7 @@ kubectl patch feature ext-tokens -p '{"spec":{"value":false}}'
 
 ## Creating a Token
 
-Only a **valid and active** Rancher user can create a Token.
+Only a **valid and active** Rancher user can create a Token, otherwise you will get an error displayed (`Error from server (Forbidden)...`) when attempting to create a Token.
 
 ```bash
 kubectl create -o jsonpath='{.status.value}' -f -<<EOF
@@ -27,17 +26,13 @@ EOF
 Error from server (Forbidden): error when creating "STDIN": tokens.ext.cattle.io is forbidden: user system:admin is not a Rancher user
 ```
 
-A token is always created for the user making the request.
-Attempting to create a token for a different user, by specifying a different `spec.userID`, is forbidden and will fail.
+A Token is always created for the user making the request. Attempting to create a Token for a different user, by specifying a different `spec.userID`, is forbidden and will fail.
 
-The `spec.description` field can be set to an arbitrary human-readable description of the (purpose of the) token.
-The default is empty.
+- The `spec.description` field can be set to an arbitrary human-readable description of the Tokens purpose. The default value is set to empty.
 
-The `spec.kind` field can be set to the kind of token.
-The value "session" indicates a login token.
-All other kinds, including the default (empty string) indicate some kind of derived token.
+- The `spec.kind` field can be set to the kind of Token. The value `session` indicates a login Token. All other values, including the default empty string, indicate some kind of derived Token.
 
-The `metadata.name` and `metadata.generateName` fields are ignored and the name of the new Token is automatically generated using the prefix `token-`.
+- The `metadata.name` and `metadata.generateName` fields are ignored and the name of the new Token is automatically generated using the prefix `token-`.
 
 ```bash
 kubectl create -o jsonpath='{.status.value}' -f -<<EOF
@@ -48,9 +43,7 @@ spec:
 EOF
 ```
 
-If `spec.ttl` is not specified, the tokens will be created with the expiration time defined in the `auth-token-max-ttl-minutes` setting.
-This is 90 days by default.
-If `spec.ttl` is specified, it should be greater than 0 and less than or equal to the value of the `auth-token-max-ttl-minutes` setting expressed in milliseconds.
+- If the `spec.ttl` is not specified, the Token will be created with the expiration time defined in the `auth-token-max-ttl-minutes` setting. This is 90 days by default. If `spec.ttl` is specified, it should be greater than 0 and less than or equal to the value of the `auth-token-max-ttl-minutes` setting expressed in milliseconds.
 
 ```bash
 kubectl create -o jsonpath='{.status.value}' -f -<<EOF
@@ -63,8 +56,7 @@ EOF
 
 ## Listing Tokens
 
-Listing previously generated Tokens can be useful in order to clean up Tokens which are no longer needed (e.g., it was issued temporarily).  
-Admins can list all Tokens, while regular users can only see their own.
+Listing previously generated Tokens can be useful in order to clean up Tokens which are no longer needed (e.g., it was issued temporarily). Admins can list all Tokens, while regular users can only see their own.
 
 ```sh
 kubectl get tokens.ext.cattle.io
@@ -114,11 +106,9 @@ token.ext.cattle.io "token-chjc9" deleted
 
 #### Updating a Token
 
-Only the metadata, the `spec.description` field, the `spec.ttl` field, and the `spec.enabled` can be updated.
-All other `spec` fields are immutable.
-Admins are able to extend the `spec.ttl` field, while regular users can only reduce the value.
+Only the metadata fields `spec.description`, `spec.ttl`, and `spec.enabled` can be updated. All other `spec` fields are immutable. Admins are able to extend the `spec.ttl` field, while regular users can only reduce the value.
 
-To edit a Token:
+An example `kubectl` command to edit a Token:
 
 ```sh
 kubectl edit tokens.ext.cattle.io token-zp786
