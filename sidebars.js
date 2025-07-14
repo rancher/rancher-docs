@@ -1345,7 +1345,8 @@ const sidebars = {
           "label": "Example Workflows",
           "items": [
             "api/workflows/projects",
-            "api/workflows/kubeconfigs"
+            "api/workflows/kubeconfigs",
+            "api/workflows/tokens"
           ]
         },
         "api/api-reference",
