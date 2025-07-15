@@ -3,7 +3,7 @@ title: Skipped and Not Applicable Tests
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cis-scans/skipped-and-not-applicable-tests"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/compliance-scans/skipped-and-not-applicable-tests"/>
 </head>
 
 This section lists the tests that are skipped in the permissive test profile for RKE.
