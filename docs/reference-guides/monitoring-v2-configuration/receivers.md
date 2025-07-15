@@ -351,29 +351,29 @@ receivers:
   - service_key: 'database-integration-key'
 ```
 
-## Example Route Config for CIS Scan Alerts
+## Example Route Config for Compliance Scan Alerts
 
-While configuring the routes for `rancher-cis-benchmark` alerts, you can specify the matching using the key-value pair `job: rancher-cis-scan`.
+While configuring the routes for `rancher-compliance` alerts, you can specify the matching using the key-value pair `job: rancher-compliance-scan`.
 
-For example, the following example route configuration could be used with a Slack receiver named `test-cis`:
+For example, the following example route configuration could be used with a Slack receiver named `test-compliance`:
 
 ```yaml
 spec:
-  receiver: test-cis
+  receiver: test-compliance
   group_by:
 #    - string
   group_wait: 30s
   group_interval: 30s
   repeat_interval: 30s
   match:
-    job: rancher-cis-scan
+    job: rancher-compliance-scan
 #    key: string
   match_re:
     {}
 #    key: string
 ```
 
-For more information on enabling alerting for `rancher-cis-benchmark`, see [this section.](../../how-to-guides/advanced-user-guides/cis-scan-guides/enable-alerting-for-rancher-cis-benchmark.md)
+For more information on enabling alerting for `rancher-cis-benchmark`, see [this section.](../../how-to-guides/advanced-user-guides/cis-scan-guides/enable-alerting-for-rancher-compliance.md)
 
 ## Trusted CA for Notifiers
 
