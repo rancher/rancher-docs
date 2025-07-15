@@ -13,6 +13,7 @@ Kubeconfig is a Rancher resource `kubeconfigs.ext.cattle.io` that allows generat
 ```sh
 kubectl api-resources --api-group=ext.cattle.io
 ```
+To get the structure and a description of fields of the Kubeconfig resource:
 
 ```sh
 kubectl explain kubeconfigs.ext.cattle.io
