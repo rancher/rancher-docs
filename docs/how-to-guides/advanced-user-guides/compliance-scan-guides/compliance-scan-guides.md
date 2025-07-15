@@ -14,4 +14,4 @@ title: Compliance Scan Guides
 - [View Reports](view-reports.md)
 - [Enable Alerting for rancher-compliance](enable-alerting-for-rancher-compliance.md)
 - [Configure Alerts for Periodic Scan on a Schedule](configure-alerts-for-periodic-scan-on-a-schedule.md)
-- [Create a Custom Benchmark Version to Run](create-a-custom-benchmark-version-to-run.md)
+- [Create a Custom Benchmark Version to Run](create-a-custom-compliance-version-to-run.md)

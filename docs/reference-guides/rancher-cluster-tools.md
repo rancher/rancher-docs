@@ -46,4 +46,4 @@ For more information, refer to the Istio documentation [here.](../integrations-i
 
 Rancher can run a security scan to check whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark.
 
-For more information, refer to the CIS scan documentation [here.](../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md)
+For more information, refer to the Compliance scan documentation [here.](../how-to-guides/advanced-user-guides/compliance-scan-guides/compliance-scan-guides.md)
