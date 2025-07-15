@@ -1,14 +1,14 @@
 ---
-title: CIS Scans
+title: Compliance Scans
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cis-scans"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/compliance-scans"/>
 </head>
 
-Rancher can run a security scan to check whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark. The CIS scans can run on any Kubernetes cluster, including hosted Kubernetes providers such as EKS, AKS, and GKE.
+Rancher can run a security scan to check whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark. The Compliance scans can run on any Kubernetes cluster, including hosted Kubernetes providers such as EKS, AKS, and GKE.
 
-The `rancher-cis-benchmark` app leverages <a href="https://github.com/aquasecurity/kube-bench" target="_blank">kube-bench,</a> an open-source tool from Aqua Security, to check clusters for CIS Kubernetes Benchmark compliance. Also, to generate a cluster-wide report, the application utilizes <a href="https://github.com/vmware-tanzu/sonobuoy" target="_blank">Sonobuoy</a> for report aggregation.
+The `rancher-compliance` app leverages <a href="https://github.com/aquasecurity/kube-bench" target="_blank">kube-bench,</a> an open-source tool from Aqua Security, to check clusters for CIS Kubernetes Benchmark compliance. Also, to generate a cluster-wide report, the application utilizes <a href="https://github.com/vmware-tanzu/sonobuoy" target="_blank">Sonobuoy</a> for report aggregation.
 
 
 ## About the CIS Benchmark
@@ -94,7 +94,7 @@ In order to pass the "Hardened" profile, you will need to follow the steps on th
 
 The default profile and the supported CIS benchmark version depends on the type of cluster that will be scanned:
 
-The `rancher-cis-benchmark` supports the CIS 1.6 Benchmark version.
+The `rancher-compliance` supports the CIS 1.6 Benchmark version.
 
 - For RKE Kubernetes clusters, the RKE Permissive 1.6 profile is the default.
 - EKS and GKE have their own CIS Benchmarks published by `kube-bench`. The corresponding test profiles are used by default for those clusters.
@@ -103,7 +103,7 @@ The `rancher-cis-benchmark` supports the CIS 1.6 Benchmark version.
 
 ## About Skipped and Not Applicable Tests
 
-For a list of skipped and not applicable tests, refer to [this page](../../how-to-guides/advanced-user-guides/cis-scan-guides/skip-tests.md).
+For a list of skipped and not applicable tests, refer to [this page](../../how-to-guides/advanced-user-guides/compliance-scan-guides/skip-tests.md).
 
 For now, only user-defined skipped tests are marked as skipped in the generated report.
 
@@ -111,7 +111,7 @@ Any skipped tests that are defined as being skipped by one of the default profil
 
 ## Roles-based Access Control
 
-For information about permissions, refer to [this page](rbac-for-cis-scans.md)
+For information about permissions, refer to [this page](rbac-for-compliance-scans.md)
 
 ## Configuration
 
@@ -119,4 +119,4 @@ For more information about configuring the custom resources for the scans, profi
 
 ## How-to Guides
 
-Please refer to the [CIS Scan Guides](../../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md) to learn how to run CIS scans.
+Please refer to the [CIS Scan Guides](../../how-to-guides/advanced-user-guides/compliance-scan-guides/compliance-scan-guides.md) to learn how to run CIS scans.
