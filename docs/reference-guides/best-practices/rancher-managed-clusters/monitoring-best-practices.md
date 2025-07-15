@@ -98,7 +98,7 @@ Monitoring the availability and performance of all your internal workloads is vi
 
 ## Security Monitoring
 
-In addition to monitoring workloads to detect performance, availability or scalability problems, the cluster and the workloads running into it should also be monitored for potential security problems. A good starting point is to frequently run and alert on [CIS Scans](../../../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md) which check if the cluster is configured according to security best practices.
+In addition to monitoring workloads to detect performance, availability or scalability problems, the cluster and the workloads running into it should also be monitored for potential security problems. A good starting point is to frequently run and alert on [CIS Scans](../../../how-to-guides/advanced-user-guides/compliance-scan-guides/compliance-scan-guides.md) which check if the cluster is configured according to security best practices.
 
 For the workloads, you can have a look at Kubernetes and Container security solutions like [NeuVector](https://www.suse.com/products/neuvector/), [Falco](https://falco.org/), [Aqua Kubernetes Security](https://www.aquasec.com/solutions/kubernetes-container-security/), [SysDig](https://sysdig.com/).
 

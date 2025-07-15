@@ -137,9 +137,9 @@ The default [pod security policy](../../../how-to-guides/new-user-guides/authent
 
 The default [pod security admission configuration template](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates.md) for the cluster.
 
-##### Worker CIS Profile
+##### Worker compliance Profile
 
-Select a [CIS benchmark](../../../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md) to validate the system configuration against.
+Select a [compliance benchmark](../../../how-to-guides/advanced-user-guides/compliance-scan-guides/compliance-scan-guides.md) to validate the system configuration against.
 
 ##### Project Network Isolation
 

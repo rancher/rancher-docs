@@ -103,7 +103,7 @@ The `rancher-cis-benchmark` supports the CIS 1.6 Benchmark version.
 
 ## About Skipped and Not Applicable Tests
 
-For a list of skipped and not applicable tests, refer to [this page](../../how-to-guides/advanced-user-guides/cis-scan-guides/skip-tests.md).
+For a list of skipped and not applicable tests, refer to [this page](../../how-to-guides/advanced-user-guides/compliance-scan-guides/skip-tests.md).
 
 For now, only user-defined skipped tests are marked as skipped in the generated report.
 
@@ -119,4 +119,4 @@ For more information about configuring the custom resources for the scans, profi
 
 ## How-to Guides
 
-Please refer to the [CIS Scan Guides](../../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md) to learn how to run CIS scans.
+Please refer to the [CIS Scan Guides](../../how-to-guides/advanced-user-guides/compliance-scan-guides/compliance-scan-guides.md) to learn how to run CIS scans.

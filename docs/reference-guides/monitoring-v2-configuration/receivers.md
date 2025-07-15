@@ -373,7 +373,7 @@ spec:
 #    key: string
 ```
 
-For more information on enabling alerting for `rancher-cis-benchmark`, see [this section.](../../how-to-guides/advanced-user-guides/cis-scan-guides/enable-alerting-for-rancher-compliance.md)
+For more information on enabling alerting for `rancher-compliance-benchmark`, see [this section.](../../how-to-guides/advanced-user-guides/compliance-scan-guides/enable-alerting-for-rancher-compliance.md)
 
 ## Trusted CA for Notifiers
 
