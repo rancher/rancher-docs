@@ -1196,16 +1196,16 @@ const sidebars = {
         },
         {
           type: "category",
-          label: "CIS Scans",
+          label: "Compliance Scans",
           link: {
             type: "doc",
-            id: "integrations-in-rancher/cis-scans/cis-scans",
+            id: "integrations-in-rancher/compliance-scans/compliance-scans",
           },
           items: [
-            "integrations-in-rancher/cis-scans/configuration-reference",
-            "integrations-in-rancher/cis-scans/rbac-for-cis-scans",
-            "integrations-in-rancher/cis-scans/skipped-and-not-applicable-tests",
-            "integrations-in-rancher/cis-scans/custom-benchmark",
+            "integrations-in-rancher/compliance-scans/configuration-reference",
+            "integrations-in-rancher/compliance-scans/rbac-for-compliance-scans",
+            "integrations-in-rancher/compliance-scans/skipped-and-not-applicable-tests",
+            "integrations-in-rancher/compliance-scans/custom-benchmark",
           ],
         },
         {

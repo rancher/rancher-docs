@@ -3,15 +3,15 @@ title: Creating a Custom Benchmark Version for Running a Cluster Scan
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/cis-scans/custom-benchmark"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/compliance-scans/custom-benchmark"/>
 </head>
 
-Each Benchmark Version defines a set of test configuration files that define the CIS tests to be run by the <a href="https://github.com/aquasecurity/kube-bench" target="_blank">kube-bench</a> tool.
-The `rancher-cis-benchmark` application installs a few default Benchmark Versions which are listed under CIS Benchmark application menu.
+Each Benchmark Version defines a set of test configuration files that define the Compliance tests to be run by the <a href="https://github.com/aquasecurity/kube-bench" target="_blank">kube-bench</a> tool.
+The `rancher-compliance` application installs a few default Benchmark Versions which are listed under Compliance application menu.
 
 But there could be some Kubernetes cluster setups that require custom configurations of the Benchmark tests. For example, the path to the Kubernetes config files or certs might be different than the standard location where the upstream CIS Benchmarks look for them.
 
-It is now possible to create a custom Benchmark Version for running a cluster scan using the `rancher-cis-benchmark` application.
+It is now possible to create a custom Benchmark Version for running a cluster scan using the `rancher-compliance` application.
 
 When a cluster scan is run, you need to select a Profile which points to a specific Benchmark Version.
 
@@ -46,7 +46,7 @@ To prepare a custom benchmark version ConfigMap, suppose we want to add a custom
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to add a custom benchmark and click **Explore**.
-1. In the left navigation bar, click **CIS Benchmark > Benchmark Version**.
+1. In the left navigation bar, click **Compliance > Benchmark Version**.
 1. Click **Create**.
 1. Enter the **Name** and a description for your custom benchmark version.
 1. Choose the cluster provider that your benchmark version applies to.
@@ -60,7 +60,7 @@ To run a scan using your custom benchmark version, you need to add a new Profile
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to add a custom benchmark and click **Explore**.
-1. In the left navigation bar, click **CIS Benchmark > Profile**.
+1. In the left navigation bar, click **Compliance > Profile**.
 1. Click **Create**.
 1. Provide a **Name** and description. In this example, we name it `foo-profile`.
 1. Choose the Benchmark Version from the dropdown.
@@ -74,7 +74,7 @@ To run a scan,
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to add a custom benchmark and click **Explore**.
-1. In the left navigation bar, click **CIS Benchmark > Scan**.
+1. In the left navigation bar, click **Compliance > Scan**.
 1. Click **Create**.
 1. Choose the new cluster scan profile.
 1. Click **Create**.

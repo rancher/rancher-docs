@@ -1628,8 +1628,20 @@ module.exports = {
             to: "/how-to-guides/advanced-user-guides/compliance-scan-guides/create-a-custom-compliance-version-to-run",
           },
           {
-            from: "/how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides",
-            to: "/how-to-guides/advanced-user-guides/compliance-scan-guides/compliance-scan-guides",
+            from: "/integrations-in-rancher/cis-scans/configuration-reference",
+            to: "/integrations-in-rancher/compliance-scans/configuration-reference",
+          },
+          {
+            from: "/integrations-in-rancher/cis-scans/rbac-for-cis-scans",
+            to: "/integrations-in-rancher/compliance-scans/rbac-for-compliance-scans",
+          },
+          {
+            from: "/integrations-in-rancher/cis-scans/skipped-and-not-applicable-tests",
+            to: "/integrations-in-rancher/compliance-scans/skipped-and-not-applicable-tests",
+          },
+          {
+            from: "/integrations-in-rancher/cis-scans/custom-benchmark",
+            to: "/integrations-in-rancher/compliance-scans/custom-benchmark",
           },
         ],
       },

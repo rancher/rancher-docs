@@ -10,4 +10,4 @@ There could be some Kubernetes cluster setups that require custom configurations
 
 It is now possible to create a custom compliance version for running a cluster scan using the `rancher-compliance` application.
 
-For details, see [this page.](../../../integrations-in-rancher/cis-scans/custom-benchmark.md)
+For details, see [this page.](../../../integrations-in-rancher/compliance-scans/custom-benchmark.md)
