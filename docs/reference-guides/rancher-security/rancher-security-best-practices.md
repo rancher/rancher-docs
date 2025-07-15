@@ -28,3 +28,52 @@ You should protect the following ports behind an [external load balancer](../../
 - **RKE and RKE2:** Port 6443, used by the Kubernetes API, and port 9345, used for node registration. 
 
 These ports have TLS SAN certificates which list nodes' public IP addresses. An attacker could use that information to gain unauthorized access or monitor activity on the cluster. Protecting these ports helps mitigate against nodes' public IP addresses being disclosed to potential attackers.
+
+## Rancher Username Policy
+
+By default, Kubernetes does not provide enforcement mechanisms for baseline username policies. In Rancher, this means that any enforcement of username formats, naming conventions, or baseline policies is expected to be handled by the external identity provider's policies, if such policies are in place.
+
+Examples of potential baseline policies include:
+- Requiring usernames to follow an organizational convention (e.g., `firstname.lastname`)
+- Enforcing minimum or maximum length requirements
+- Disallowing certain special characters
+- Preventing impersonation by disallowing reserved names (e.g., `admin`, `root`)
+
+Without these controls at the identity provider layer, there is a risk of inconsistent or insecure username practices, which can complicate access audits and lead to privilege escalation attempts.
+
+**Recommendation:**
+We strongly recommend that customers:
+- Review and configure username baseline policies directly in their external identity providers (e.g., LDAP, Active Directory, SAML, or OIDC).
+- Ensure that those policies align with the organization’s security and compliance requirements.
+- Regularly audit user accounts to detect naming inconsistencies or policy violations.
+
+For more information, see:
+- [OWASP Cheat Sheet: Authentication](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+- [OWASP Identity Management](https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication)
+
+## WAF Rules
+
+Rancher is designed to support a wide range of deployment scenarios, including environments where customers may programmatically automate the creation or provisioning of large numbers of clusters. Imposing strict application-level limits within Rancher itself could interfere with legitimate workloads that require dynamic scaling.
+
+For example:
+- CI/CD pipelines may create and tear down clusters frequently.
+- Self-service portals could provision clusters on-demand for developers.
+- Test environments may generate high volumes of API calls.
+
+**Risk:**
+Without appropriate rate limiting, adversaries could exploit unauthenticated or authenticated endpoints to:
+- Exhaust resources (Denial of Service).
+- Inflate storage costs.
+- Degrade performance for legitimate users.
+
+**Recommendation:**
+The most effective way to mitigate this risk is to implement rate limiting and abuse protection at the infrastructure or Web Application Firewall (WAF) layer. This approach allows thresholds to be tuned for each environment's expected usage and scaling characteristics.
+
+We recommend:
+- Configuring a Web Application Firewall or API Gateway to enforce rate limits on sensitive operations, such as cluster creation and provisioning.
+- Defining thresholds based on baseline workload expectations (e.g., max requests per minute per client).
+- Monitoring logs and alerting on anomalies to detect potential abuse.
+
+For more information, see:
+- [OWASP API Security Top 10 - API4:2019 - Lack of Resources & Rate Limiting](https://owasp.org/API-Security/editions/2023/en/0xa4-lack-of-resources-rate-limiting/)
+- [OWASP Cheat Sheet: Rate Limiting](https://cheatsheetseries.owasp.org/cheatsheets/Rate_Limiting_Cheat_Sheet.html)
