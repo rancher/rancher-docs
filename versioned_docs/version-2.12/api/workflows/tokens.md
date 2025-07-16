@@ -76,7 +76,7 @@ token-6fzgj   user-jtghh          90d   22s   box
 token-8nbrm   user-jtghh          90d   20s   jinx
 ```
 
-#### Viewing a Token
+## Viewing a Token
 
 Admins can get any Token, while regular users can only get their own.
 
@@ -94,7 +94,7 @@ NAME          USER         KIND   TTL   AGE   DESCRIPTION
 token-chjc9   user-jtghh          90d   24s   example
 ```
 
-#### Deleting a Token
+## Deleting a Token
 
 Admins can delete any Token, while regular users can only delete their own.  
 
@@ -103,8 +103,7 @@ kubectl delete tokens.ext.cattle.io token-chjc9
 token.ext.cattle.io "token-chjc9" deleted
 ```
 
-
-#### Updating a Token
+## Updating a Token
 
 Only the metadata fields `spec.description`, `spec.ttl`, and `spec.enabled` can be updated. All other `spec` fields are immutable. Admins are able to extend the `spec.ttl` field, while regular users can only reduce the value.
 
