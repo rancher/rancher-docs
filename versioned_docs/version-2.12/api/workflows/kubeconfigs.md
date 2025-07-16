@@ -40,13 +40,13 @@ EOF
 Error from server (Forbidden): error when creating "STDIN": kubeconfigs.ext.cattle.io is forbidden: user system:admin is not a Rancher user
 ```
 
-:::warning Important:
+:::warning Important
 
-The kubeconfig content is generated and returned in the `.status.value` field **only once** when the Kubeconfig is successfully created because it contains secret values for created tokens. Therefore it has to be captured by using an appropriate output options, such as `-o jsonpath='{.status.value}'` or `-o yaml`.
+The kubeconfig content is generated and returned in the `.status.value` field **only once** when the Kubeconfig is successfully created because it contains secret values for created tokens. Therefore it has to be captured by using an appropriate output option, such as `-o jsonpath='{.status.value}'` or `-o yaml`.
 
 :::
 
-A kubeconfig can be created for more than one cluster at a time by specifying a list of cluster names in the `spec.clusters` field. Cluster names can be looked up by listing `clusters.management.cattle.io` resources e.g.
+A kubeconfig can be created for more than one cluster at a time by specifying a list of cluster names in the `spec.clusters` field. Cluster names can be looked up by listing `clusters.management.cattle.io` resources:
 
 ```sh
 kubectl get clusters.management.cattle.io -o=jsonpath="{.items[*]['metadata.name', 'spec.displayName']}{'\n'}"
@@ -98,8 +98,7 @@ EOF
 
 ## Listing Kubeconfigs
 
-Listing previously generated Kubeconfigs can be useful in order to clean up backing tokens if the Kubeconfig is no longer needed (e.g., it was issued temporarily).  
-Admins can list all Kubeconfigs, while regular users can only see theirs.
+Listing previously generated Kubeconfigs can be useful in order to clean up backing tokens if the Kubeconfig is no longer needed (e.g., it was issued temporarily). Admins can list all Kubeconfigs, while regular users can only see theirs.
 
 ```sh
 kubectl get kubeconfig
@@ -138,8 +137,7 @@ kubeconfig-zp786   30d   2/2      Complete   18d     user-w5gcf   *             
 
 ## Deleting a Kubeconfig
 
-Admins can delete any Kubeconfig, while regular users can only delete theirs.  
-When a Kubeconfig is deleted, the kubeconfig tokens are also deleted.
+Admins can delete any Kubeconfig, while regular users can only delete theirs. When a Kubeconfig is deleted, the kubeconfig tokens are also deleted.
 
 ```sh
 kubectl delete kubeconfig kubeconfig-zp786
@@ -147,6 +145,7 @@ kubeconfig.ext.cattle.io "kubeconfig-zp786" deleted
 ```
 
 To delete a Kubeconfig using preconditions:
+
 ```sh
 cat <<EOF | k delete --raw /apis/ext.cattle.io/v1/kubeconfigs/kubeconfig-zp786 -f -
 {
