@@ -53,6 +53,10 @@ You can obtain `<RANCHER_CONTAINER_TAG>` and `<RANCHER_CONTAINER_NAME>` by loggi
 
 ## Upgrade
 
+:::danger 
+The Rancher upgrade to version 2.12 will be blocked if any RKE1-related resources are detected.  
+For detailed cleanup and recovery steps, refer to the [RKE1 Resource Validation and Upgrade Requirements](#rke1-resource-validation-and-upgrade-requirements-in-rancher-v212).
+:::
 During upgrade, you create a copy of the data from your current Rancher container and a backup in case something goes wrong. Then you deploy the new version of Rancher in a new container using your existing data.
 ### 1. Create a copy of the data from your Rancher server container
 
@@ -387,6 +391,185 @@ See [Restoring Cluster Networking](https://github.com/rancher/rancher-docs/tree/
 ### 6. Clean up Your Old Rancher Server Container
 
 Remove the previous Rancher server container. If you only stop the previous Rancher server container (and don't remove it), the container may restart after the next server reboot.
+
+## RKE1 Resource Validation and Upgrade Requirements in Rancher v2.12
+
+Starting in Rancher v2.12, support for RKE1 (Rancher Kubernetes Engine v1) has been removed. During upgrade, Rancher validates the cluster resources and blocks the upgrade if any RKE1-related resources are detected.
+
+This validation affects the following resource types:
+
+- Clusters with `rkeConfig` (`clusters.management.cattle.io`)
+- NodeTemplates (`nodetemplates.management.cattle.io`)
+- ClusterTemplates (`clustertemplates.management.cattle.io`)
+
+This is particularly relevant for single-node Docker installations, where Rancher is not running during the upgrade. In such cases, controllers are not available to clean up deprecated resources automatically, and the upgrade process will fail early with an error listing the blocking resources.
+
+### 1. Pre-upgrade (Recommended)
+
+Before upgrading, while Rancher is still running:
+
+- Run the pre-upgrade cleanup script to delete all RKE1 clusters and templates.
+- This allows Rancher to clean up associated resources and finalizers.
+
+```
+#!/bin/bash
+
+set -eo pipefail
+
+# Global counters
+declare -A COUNTS
+RESOURCES_FOUND=false
+
+check_prerequisites() {
+  if ! command -v kubectl &>/dev/null; then
+    echo "Missing required tool: kubectl"
+    exit 1
+  fi
+}
+
+print_resource_table() {
+  local kind="$1"
+  local items="$2"
+  local -a headers=("${@:3}")
+
+  local count
+  count=$(wc -l <<< "$items")
+  COUNTS["$kind"]=$count
+  RESOURCES_FOUND=true
+
+  echo "Found $count $kind resource(s):"
+  echo
+
+  IFS=$'\n' read -r -d '' -a lines < <(printf '%s\0' "$items")
+
+  # Initialize max_lengths array with header lengths
+  local -a max_lengths
+  for i in "${!headers[@]}"; do
+    max_lengths[i]=${#headers[i]}
+  done
+
+  # Calculate max width for each column
+  for line in "${lines[@]}"; do
+    IFS=$'\t' read -r -a cols <<< "$line"
+    for i in "${!cols[@]}"; do
+      (( ${#cols[i]} > max_lengths[i] )) && max_lengths[i]=${#cols[i]}
+    done
+  done
+
+  for i in "${!headers[@]}"; do
+    printf "%-${max_lengths[i]}s  " "${headers[i]}"
+  done
+  printf "\n"
+
+  for i in "${!headers[@]}"; do
+    printf "%-${max_lengths[i]}s  " "$(printf '%*s' "${max_lengths[i]}" '' | tr ' ' '-')"
+  done
+  printf "\n"
+
+  for line in "${lines[@]}"; do
+    IFS=$'\t' read -r -a cols <<< "$line"
+    for i in "${!cols[@]}"; do
+      printf "%-${max_lengths[i]}s  " "${cols[i]}"
+    done
+    printf "\n"
+  done
+
+  echo
+}
+
+detect_resource() {
+  local crd="$1"
+  local kind="$2"
+  local jsonpath="$3"
+  local -a headers=("${@:4}")
+
+  echo "Checking for $kind resources..."
+
+  local output
+  if ! output=$(kubectl get "$crd" --all-namespaces -o=jsonpath="$jsonpath" 2>&1); then
+    if grep -q "the server doesn't have a resource type" <<< "$output"; then
+      echo "Resource type $crd not found. Skipping."
+      echo
+      return 0
+    else
+      echo "Error retrieving $kind resources: $output"
+      exit 1
+    fi
+  fi
+
+  if [ -z "$output" ]; then
+    echo "No $kind resources found."
+    echo
+  else
+    print_resource_table "$kind" "$output" "${headers[@]}"
+  fi
+}
+
+print_summary() {
+  echo "===== SUMMARY ====="
+  local total=0
+  for kind in "${!COUNTS[@]}"; do
+    local count=${COUNTS[$kind]}
+    echo "$kind: $count"
+    total=$((total + count))
+  done
+
+  echo "Total resources detected: $total"
+
+  if [ "$RESOURCES_FOUND" = true ]; then
+    echo "Error: Rancher v2.12+ does not support RKE1.
+Detected RKE1-related resources (listed above).
+Please migrate these clusters to RKE2 or K3s, or delete the related resources.
+More info: https://www.suse.com/c/rke-end-of-life-by-july-2025-replatform-to-rke2-or-k3s"
+    exit 1
+  else
+    echo "No RKE related resources found."
+  fi
+}
+
+main() {
+  check_prerequisites
+
+  detect_resource "clusters.management.cattle.io" "RKE Management Cluster" \
+    '{range .items[?(@.spec.rancherKubernetesEngineConfig)]}{.metadata.name}{"\t"}{.spec.displayName}{"\n"}{end}' \
+    "NAME" "DISPLAY NAME"
+
+  detect_resource "nodetemplates.management.cattle.io" "NodeTemplate" \
+    '{range .items[*]}{.metadata.namespace}{"\t"}{.metadata.name}{"\t"}{.spec.displayName}{"\n"}{end}' \
+    "NAMESPACE" "NAME" "DISPLAY NAME"
+
+  detect_resource "clustertemplates.management.cattle.io" "ClusterTemplate" \
+    '{range .items[*]}{.metadata.namespace}{"\t"}{.metadata.name}{"\t"}{.spec.displayName}{"\n"}{end}' \
+    "NAMESPACE" "NAME" "DISPLAY NAME"
+
+  print_summary
+  exit 1
+}
+
+main
+
+```
+
+### 2. Post-Upgrade Failure Due to Residual RKE1 Resources
+
+If the upgrade to Rancher v2.12 is attempted without prior cleanup of RKE1 resources:
+
+
+- The upgrade will fail and display an error listing the resource names that are preventing the upgrade.
+- This occurs because Rancher includes validation to detect and block upgrades when unsupported RKE1 resources are still present.
+- To proceed, [rollback](#rolling-back) to the previous Rancher version, delete the identified resources, and then retry after [manual cleanup](#manual-cleanup-after-rollback).
+
+:::note Helm-based Rancher
+Helm-based Rancher installations are not affected by this issue, as Rancher remains available during the upgrade and can perform resource cleanup as needed.
+:::
+
+### Manual Cleanup After Rollback
+
+Users should take the following steps after rolling back to a previous Rancher version:
+
+- **Manually delete** the resources listed in the upgrade error message (e.g., RKE1 clusters, NodeTemplates, ClusterTemplates).
+- If deletion is blocked due to **finalizers**, edit the resources and remove the `metadata.finalizers` field.
+- If a **validating webhook** prevents deletion (e.g., for the `system-project`), please refer to this [documentation](https://ranchermanager.docs.rancher.com/reference-guides/rancher-webhook#bypassing-the-webhook)
 
 ## Rolling Back
 
