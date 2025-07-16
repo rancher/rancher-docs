@@ -118,7 +118,7 @@ kubeconfig-7zvzp   30d   1/1      Complete   12d     u-w7drc      *
 kubeconfig-jznml   30d   1/1      Complete   12d     u-w7drc      *
 ```
 
-#### Viewing a Kubeconfig
+## Viewing a Kubeconfig
 
 Admins can get any Kubeconfig, while regular users can only get theirs.
 
@@ -136,7 +136,7 @@ NAME               TTL   TOKENS   STATUS     AGE     USER         CLUSTERS      
 kubeconfig-zp786   30d   2/2      Complete   18d     user-w5gcf   *              all clusters
 ```
 
-#### Deleting a Kubeconfig
+## Deleting a Kubeconfig
 
 Admins can delete any Kubeconfig, while regular users can only delete theirs.  
 When a Kubeconfig is deleted, the kubeconfig tokens are also deleted.
@@ -160,7 +160,7 @@ cat <<EOF | k delete --raw /apis/ext.cattle.io/v1/kubeconfigs/kubeconfig-zp786 -
 EOF
 ```
 
-#### Deleting a Collection of Kubeconfigs
+## Deleting a Collection of Kubeconfigs
 
 Admins can delete any Kubeconfig, while regular users can only delete theirs.
 
@@ -175,7 +175,7 @@ To delete a collection of Kubeconfigs by label:
 kubectl delete --raw /apis/ext.cattle.io/v1/kubeconfigs?labelSelector=foo%3Dbar
 ```
 
-#### Updating a Kubeconfig
+## Updating a Kubeconfig
 
 Only the `metadata`, e.g. adding a label or an annotation, and the `spec.description` field can be updated. All other `spec` fields are immutable.
 
