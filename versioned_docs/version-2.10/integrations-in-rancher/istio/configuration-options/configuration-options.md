@@ -30,10 +30,6 @@ If you would like to limit Prometheus to specific namespaces, set `prometheus.pr
 
 For details, refer to [this section.](selectors-and-scrape-configurations.md)
 
-### Enable Istio with Pod Security Policies
-
-Refer to [this section.](pod-security-policies.md)
-
 ### Additional Steps for Installing Istio on an RKE2 Cluster
 
 Refer to [this section.](install-istio-on-rke2-cluster.md)

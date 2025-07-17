@@ -145,12 +145,6 @@ Rancher v2.6 引入了[为 RKE 集群配置 ECR 镜像仓库](https://rancher.co
 
 每个能够使用 RKE 启动集群的云提供商都可以收集指标并监控你的集群节点。如果启用此选项，你可以从你的云提供商门户查看你的节点指标。
 
-### Pod 安全策略支持
-
-为集群启用 [pod 安全策略](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)。启用此选项后，使用**默认 Pod 安全策略**下拉菜单选择一个策略。
-
-你必须有已配置的 Pod 安全策略才能使用此选项。
-
 ### 节点上的 Docker 版本
 
 表示是否允许节点运行 Rancher 不正式支持的 Docker 版本。

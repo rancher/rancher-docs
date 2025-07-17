@@ -1179,10 +1179,6 @@ module.exports = {
             from: '/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases'
           },
           {
-            to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies',
-            from: '/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies'
-          },
-          {
             to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry',
             from: '/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry'
           },
@@ -1265,14 +1261,6 @@ module.exports = {
           {
             to: '/how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes',
             from: '/how-to-guides/advanced-user-guides/manage-clusters/clean-cluster-nodes'
-          },
-          {
-            to: '/how-to-guides/new-user-guides/manage-clusters/add-a-pod-security-policy',
-            from: '/how-to-guides/advanced-user-guides/manage-clusters/add-a-pod-security-policy'
-          },
-          {
-            to: '/how-to-guides/new-user-guides/manage-clusters/assign-pod-security-policies',
-            from: '/how-to-guides/advanced-user-guides/manage-clusters/assign-pod-security-policies'
           },
           {
             to: '/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster',
@@ -1448,10 +1436,6 @@ module.exports = {
           {
             to: '/integrations-in-rancher/istio/disable-istio',
             from: '/explanations/integrations-in-rancher/istio/disable-istio'
-          },
-          {
-            to: '/integrations-in-rancher/istio/configuration-options/pod-security-policies',
-            from: '/explanations/integrations-in-rancher/istio/configuration-options/pod-security-policies'
           },
           {
             to: '/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations',

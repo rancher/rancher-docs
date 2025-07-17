@@ -319,7 +319,6 @@ const sidebars = {
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases",
                   ]
                 },
-                "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies",
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards",
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates",
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry",
@@ -398,10 +397,6 @@ const sidebars = {
                 "how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
 
                 "how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes",
-
-                "how-to-guides/new-user-guides/manage-clusters/add-a-pod-security-policy",
-
-                "how-to-guides/new-user-guides/manage-clusters/assign-pod-security-policies",
               ]
             },
             {
@@ -677,7 +672,6 @@ const sidebars = {
                 id: "how-to-guides/advanced-user-guides/manage-projects/manage-projects",
               },
               items: [
-                "how-to-guides/advanced-user-guides/manage-projects/manage-pod-security-policies",
                 {
                   type: 'category',
                   label: 'Project Resource Quotas',
@@ -1246,7 +1240,6 @@ const sidebars = {
                 id: "integrations-in-rancher/istio/configuration-options/configuration-options",
               },
               items: [
-                "integrations-in-rancher/istio/configuration-options/pod-security-policies",
                 "integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations",
                 "integrations-in-rancher/istio/configuration-options/install-istio-on-rke2-cluster",
                 "integrations-in-rancher/istio/configuration-options/project-network-isolation",
