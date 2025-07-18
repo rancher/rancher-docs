@@ -103,8 +103,6 @@ The `rancher-compliance` supports the CIS 1.6 Benchmark version.
 
 ## About Skipped and Not Applicable Tests
 
-For a list of skipped and not applicable tests, refer to [this page](../../how-to-guides/advanced-user-guides/compliance-scan-guides/skip-tests.md).
-
 For now, only user-defined skipped tests are marked as skipped in the generated report.
 
 Any skipped tests that are defined as being skipped by one of the default profiles are marked as not applicable.
