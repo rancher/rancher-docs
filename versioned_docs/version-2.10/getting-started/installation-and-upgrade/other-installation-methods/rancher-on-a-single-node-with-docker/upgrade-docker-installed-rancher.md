@@ -53,6 +53,10 @@ You can obtain `<RANCHER_CONTAINER_TAG>` and `<RANCHER_CONTAINER_NAME>` by loggi
 
 ## Upgrade
 
+:::danger 
+Rancher upgrades to version 2.12.0 and later will be blocked if any RKE1-related resources are detected as the Rancher Kubernetes Engine (RKE/RKE1) is end of life as of **July 31, 2025**. For detailed cleanup and recovery steps, refer to the [RKE1 Resource Validation and Upgrade Requirements in Rancher v2.12](#rke1-resource-validation-and-upgrade-requirements-in-rancher-v212).
+:::
+
 During upgrade, you create a copy of the data from your current Rancher container and a backup in case something goes wrong. Then you deploy the new version of Rancher in a new container using your existing data.
 ### 1. Create a copy of the data from your Rancher server container
 
@@ -387,6 +391,45 @@ See [Restoring Cluster Networking](https://github.com/rancher/rancher-docs/tree/
 ### 6. Clean up Your Old Rancher Server Container
 
 Remove the previous Rancher server container. If you only stop the previous Rancher server container (and don't remove it), the container may restart after the next server reboot.
+
+## RKE1 Resource Validation and Upgrade Requirements in Rancher v2.12
+
+Rancher v2.12.0 and later has removed support for the Rancher Kubernetes Engine (RKE/RKE1). During upgrade, Rancher validates the cluster resources and blocks the upgrade if any RKE1-related resources are detected.
+
+This validation affects the following resource types:
+
+- Clusters with `rkeConfig` (`clusters.management.cattle.io`)
+- NodeTemplates (`nodetemplates.management.cattle.io`)
+- ClusterTemplates (`clustertemplates.management.cattle.io`)
+
+This is particularly relevant for single-node Docker installations, where Rancher is not running during the upgrade. In such cases, controllers are not available to clean up deprecated resources automatically, and the upgrade process will fail early with an error listing the blocking resources.
+
+### 1. Pre-Upgrade (Recommended)
+
+Before upgrading, while Rancher is still running:
+
+- Run the `pre-upgrade-hook` cleanup script to delete all RKE1 clusters and templates. You can find the script in the Rancher GitHub repository: [pre-upgrade-hook.sh](https://github.com/rancher/rancher/blob/v2.12.0/chart/scripts/pre-upgrade-hook.sh).
+- This allows Rancher to clean up associated resources and finalizers.
+
+### 2. Post-Upgrade Failure Due to Residual RKE1 Resources
+
+If the upgrade to Rancher v2.12.0 or later is attempted without prior cleanup of RKE1 resources:
+
+- The upgrade will fail and display an error listing the resource names that are preventing the upgrade.
+- This occurs because Rancher includes validation to detect and block upgrades when unsupported RKE1 resources are still present.
+- To proceed, [rollback](#rolling-back) to the previous Rancher version, delete the identified resources, and then retry after [manual cleanup](#manual-cleanup-after-rollback).
+
+:::note Helm-based Rancher
+Helm-based Rancher installations are not affected by this issue, as Rancher remains available during the upgrade and can perform resource cleanup as needed.
+:::
+
+### Manual Cleanup After Rollback
+
+Users should take the following steps after rolling back to a previous Rancher version:
+
+- **Manually delete** the resources listed in the upgrade error message (e.g., RKE1 clusters, NodeTemplates, ClusterTemplates).
+- If deletion is blocked due to **finalizers**, edit the resources and remove the `metadata.finalizers` field.
+- If a **validating webhook** prevents deletion (e.g., for the `system-project`), please refer to the [Bypassing the Webhook](../../../../reference-guides/rancher-webhook.md#bypassing-the-webhook)
 
 ## Rolling Back
 
