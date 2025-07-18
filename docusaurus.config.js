@@ -708,14 +708,6 @@ module.exports = {
             from: "/pages-for-subheaders/checklist-for-production-ready-clusters",
           },
           {
-            to: "/how-to-guides/advanced-user-guides/cis-scan-guides",
-            from: "/pages-for-subheaders/cis-scan-guides",
-          },
-          {
-            to: "/integrations-in-rancher/cis-scans",
-            from: "/pages-for-subheaders/cis-scans",
-          },
-          {
             to: "/reference-guides/cli-with-rancher",
             from: "/pages-for-subheaders/cli-with-rancher",
           },
@@ -1426,22 +1418,6 @@ module.exports = {
           {
             to: "/integrations-in-rancher/cloud-marketplace/supportconfig",
             from: "/explanations/integrations-in-rancher/cloud-marketplace/supportconfig",
-          },
-          {
-            to: "/integrations-in-rancher/cis-scans/configuration-reference",
-            from: "/explanations/integrations-in-rancher/cis-scans/configuration-reference",
-          },
-          {
-            to: "/integrations-in-rancher/cis-scans/rbac-for-cis-scans",
-            from: "/explanations/integrations-in-rancher/cis-scans/rbac-for-cis-scans",
-          },
-          {
-            to: "/integrations-in-rancher/cis-scans/skipped-and-not-applicable-tests",
-            from: "/explanations/integrations-in-rancher/cis-scans/skipped-and-not-applicable-tests",
-          },
-          {
-            to: "/integrations-in-rancher/cis-scans/custom-benchmark",
-            from: "/explanations/integrations-in-rancher/cis-scans/custom-benchmark",
           },
           {
             to: "/integrations-in-rancher/fleet/architecture",
