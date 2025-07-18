@@ -199,7 +199,6 @@ Because `rancher` is the default option for `ingress.tls.source`, we are not spe
 - Set the `hostname` to the DNS name you pointed at your load balancer.
 - Set the `bootstrapPassword` to something unique for the `admin` user.
 - To install a specific Rancher version, use the `--version` flag, example: `--version 2.7.0`
-- For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \
@@ -240,7 +239,6 @@ In the following command,
 - `ingress.tls.source` is set to `letsEncrypt`
 - `letsEncrypt.email` is set to the email address used for communication about your certificate (for example, expiry notices)
 - Set `letsEncrypt.ingress.class` to whatever your ingress controller is, e.g., `traefik`, `nginx`, `haproxy`, etc.
-- For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
 :::warning
 
@@ -289,7 +287,6 @@ If you want to check if your certificates are correct, see [How do I check Commo
 - Set the `hostname`.
 - Set the `bootstrapPassword` to something unique for the `admin` user.
 - Set `ingress.tls.source` to `secret`.
-- For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \
