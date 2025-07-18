@@ -118,7 +118,6 @@ const sidebars = {
                 "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks",
                 "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks",
                 "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-gke",
-                "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrade-a-hardened-cluster-to-k8s-v1-25",
                 "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/troubleshooting",
               ]
             },
