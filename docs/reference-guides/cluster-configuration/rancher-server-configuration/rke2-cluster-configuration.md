@@ -137,7 +137,7 @@ The default [pod security policy](../../../how-to-guides/new-user-guides/authent
 
 The default [pod security admission configuration template](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates.md) for the cluster.
 
-##### Worker compliance Profile
+##### Worker Compliance Profile
 
 Select a [compliance benchmark](../../../how-to-guides/advanced-user-guides/compliance-scan-guides/compliance-scan-guides.md) to validate the system configuration against.
 

@@ -119,4 +119,4 @@ For more information about configuring the custom resources for the scans, profi
 
 ## How-to Guides
 
-Please refer to the [CIS Scan Guides](../../how-to-guides/advanced-user-guides/compliance-scan-guides/compliance-scan-guides.md) to learn how to run CIS scans.
+Please refer to the [Compliance Scan Guides](../../how-to-guides/advanced-user-guides/compliance-scan-guides/compliance-scan-guides.md) to learn how to run Compliance scans.

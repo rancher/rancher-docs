@@ -72,7 +72,7 @@ A benchmark version is the name of benchmark to run using `kube-bench`, as well 
 
 A `ClusterScanBenchmark` defines the Compliance `BenchmarkVersion` name and test configurations. The `BenchmarkVersion` name is a parameter provided to the `kube-bench` tool.
 
-By default, a few `BenchmarkVersion` names and test configurations are packaged as part of the CIS scan application. When this feature is enabled, these default BenchmarkVersions will be automatically installed and available for users to create a ClusterScanProfile.
+By default, a few `BenchmarkVersion` names and test configurations are packaged as part of the Compliance scan application. When this feature is enabled, these default BenchmarkVersions will be automatically installed and available for users to create a ClusterScanProfile.
 
 :::caution
 
