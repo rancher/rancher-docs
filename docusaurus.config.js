@@ -1588,10 +1588,6 @@ module.exports = {
             to: "/how-to-guides/advanced-user-guides/compliance-scan-guides/run-a-scan-periodically-on-a-schedule",
           },
           {
-            from: "/how-to-guides/advanced-user-guides/cis-scan-guides/skip-tests",
-            to: "/how-to-guides/advanced-user-guides/compliance-scan-guides/skip-tests",
-          },
-          {
             from: "/how-to-guides/advanced-user-guides/cis-scan-guides/view-reports",
             to: "/how-to-guides/advanced-user-guides/compliance-scan-guides/view-reports",
           },
