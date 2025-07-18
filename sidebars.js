@@ -1204,7 +1204,6 @@ const sidebars = {
           items: [
             "integrations-in-rancher/compliance-scans/configuration-reference",
             "integrations-in-rancher/compliance-scans/rbac-for-compliance-scans",
-            "integrations-in-rancher/compliance-scans/skipped-and-not-applicable-tests",
             "integrations-in-rancher/compliance-scans/custom-benchmark",
           ],
         },
