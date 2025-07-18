@@ -9,13 +9,14 @@ title: Creating a Custom Benchmark Version for Running a Cluster Scan
 Each Benchmark Version defines a set of test configuration files that define the Compliance tests to be run by the <a href="https://github.com/aquasecurity/kube-bench" target="_blank">kube-bench</a> tool.
 The `rancher-compliance` application installs a few default Benchmark Versions which are listed under Compliance application menu.
 
-But there could be some Kubernetes cluster setups that require custom configurations of the Benchmark tests. For example, the path to the Kubernetes config files or certs might be different than the standard location where the upstream CIS Benchmarks look for them.
 
-It is now possible to create a custom Benchmark Version for running a cluster scan using the `rancher-compliance` application.
+But in the following cases, a custom configuration or remediation may be required:
 
-When a cluster scan is run, you need to select a Profile which points to a specific Benchmark Version.
+- Non-standard file locations: When Kubernetes binaries, configuration or certificate paths deviate from upstream benchmark defaults.
+Example: Unlike traditional Kubernetes, K3s bundles control plane components into a single binary. Therefore,` --anonymous-auth` flag presence and configuration should be verified in K3s' logs (`journalctl`), not via `kube-apiserver` process checks (`ps`).
 
-Follow all the steps below to add a custom Benchmark Version and run a scan using it.
+- Alternative risk mitigations: If a setup doesn't meet a check but has an equally effective compensating control with justification. Or simply is not concerned by the check requirement because of its design.
+Example: By default, K3s embeds the api server within the k3s process. There is no API server pod specification file, so verifying the latter's file permissions is not required.
 
 ## 1. Prepare the Custom Benchmark Version ConfigMap
 
