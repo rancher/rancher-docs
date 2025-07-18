@@ -118,7 +118,6 @@ const sidebars = {
                 "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks",
                 "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks",
                 "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-gke",
-                "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrade-a-hardened-cluster-to-k8s-v1-25",
                 "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/troubleshooting",
               ]
             },
@@ -1057,8 +1056,6 @@ const sidebars = {
                     id: "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-hardening-guide",
                   },
                   items: [
-                    "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
-                    "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
                     "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
                   ],
                 },
@@ -1070,8 +1067,6 @@ const sidebars = {
                     id: "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-hardening-guide",
                   },
                   items: [
-                    "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
-                    "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
                     "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
                   ],
                 },
@@ -1083,8 +1078,6 @@ const sidebars = {
                     id: "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-hardening-guide",
                   },
                   items: [
-                    "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
-                    "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
                     "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
                   ],
                 },
