@@ -6,12 +6,12 @@ title: Skip Tests
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/compliance-scan-guides/skip-tests"/>
 </head>
 
-Compliancescans can be run using test profiles with user-defined skips.
+Compliance scans can be run using test profiles with user-defined skips.
 
-To skip tests, you will create a custom Compliancescan profile. A profile contains the configuration for the Compliancescan, which includes the benchmark versions to use and any specific tests to skip in that benchmark.
+To skip tests, you will create a custom Compliance scan profile. A profile contains the configuration for the Compliance scan, which includes the benchmark versions to use and any specific tests to skip in that benchmark.
 
 1. In the upper left corner, click **☰ > Cluster Management**.
-1. On the **Clusters** page, go to the cluster where you want to run a Compliancescan and click **Explore**.
+1. the **Clusters** page, go to the cluster where you want to run a Compliance scan and click **Explore**.
 1. Click **Compliance > Profile**.
 1. From here, you can create a profile in multiple ways. To make a new profile, click **Create** and fill out the form in the UI. To make a new profile based on an existing profile, go to the existing profile and click **⋮ Clone**.  If you are filling out the form, add the tests to skip using the test IDs, using the relevant Compliance as a reference. If you are creating the new test profile as YAML, you will add the IDs of the tests to skip in the `skipTests` directive. You will also give the profile a name:
 

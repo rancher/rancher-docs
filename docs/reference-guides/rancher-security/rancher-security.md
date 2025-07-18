@@ -33,17 +33,9 @@ NeuVector is an open-source, container-focused security application that is now 
 
 ## Running a Compliance Security Scan on a Kubernetes Cluster
 
-Rancher leverages [kube-bench](https://github.com/aquasecurity/kube-bench) to run a security scan to check whether Kubernetes is deployed according to security best practices as defined in the [CIS](https://www.cisecurity.org/cis-benchmarks/) (Center for Internet Security) Kubernetes Benchmark.
+Rancher leverages [kube-bench](https://github.com/aquasecurity/kube-bench) to run a security scan to check whether Kubernetes is deployed according to security best practices.
 
-The CIS Kubernetes Benchmark is a reference document that can be used to establish a secure configuration baseline for Kubernetes.
-
-The Center for Internet Security (CIS) is a 501(c\)(3) non-profit organization, formed in October 2000, with a mission to "identify, develop, validate, promote, and sustain best practice solutions for cyber defense and build and lead communities to enable an environment of trust in cyberspace".
-
-CIS Benchmarks are best practices for the secure configuration of a target system. CIS Benchmarks are developed through the generous volunteer efforts of subject matter experts, technology vendors, public and private community members, and the CIS Benchmark Development team.
-
-The Benchmark provides recommendations of two types: Automated and Manual. We run tests related to only Automated recommendations.
-
-When Rancher runs a CIS security scan on a cluster, it generates a report showing the results of each test, including a summary with the number of passed, skipped and failed tests. The report also includes remediation steps for any failed tests.
+When Rancher runs a Compliance scan on a cluster, it generates a report showing the results of each test, including a summary with the number of passed, skipped and failed tests. The report also includes remediation steps for any failed tests.
 
 For details, refer to the section on [security scans](../../how-to-guides/advanced-user-guides/compliance-scan-guides/compliance-scan-guides.md).
 `
