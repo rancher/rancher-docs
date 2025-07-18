@@ -736,7 +736,6 @@
                 "how-to-guides/advanced-user-guides/compliance-scan-guides/uninstall-rancher-compliance",
                 "how-to-guides/advanced-user-guides/compliance-scan-guides/run-a-scan",
                 "how-to-guides/advanced-user-guides/compliance-scan-guides/run-a-scan-periodically-on-a-schedule",
-                "how-to-guides/advanced-user-guides/compliance-scan-guides/skip-tests",
                 "how-to-guides/advanced-user-guides/compliance-scan-guides/view-reports",
                 "how-to-guides/advanced-user-guides/compliance-scan-guides/enable-alerting-for-rancher-compliance",
                 "how-to-guides/advanced-user-guides/compliance-scan-guides/configure-alerts-for-periodic-scan-on-a-schedule",
