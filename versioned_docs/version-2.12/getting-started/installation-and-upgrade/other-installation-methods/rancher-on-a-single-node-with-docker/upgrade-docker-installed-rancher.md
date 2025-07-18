@@ -54,9 +54,9 @@ You can obtain `<RANCHER_CONTAINER_TAG>` and `<RANCHER_CONTAINER_NAME>` by loggi
 ## Upgrade
 
 :::danger 
-The Rancher upgrade to version 2.12 will be blocked if any RKE1-related resources are detected.  
-For detailed cleanup and recovery steps, refer to the [RKE1 Resource Validation and Upgrade Requirements](#rke1-resource-validation-and-upgrade-requirements-in-rancher-v212).
+Rancher upgrades to version 2.12.0 and later will be blocked if any RKE1-related resources are detected as the Rancher Kubernetes Engine (RKE/RKE1) is end of life as of **July 31, 2025**. For detailed cleanup and recovery steps, refer to the [RKE1 Resource Validation and Upgrade Requirements in Rancher v2.12](#rke1-resource-validation-and-upgrade-requirements-in-rancher-v212).
 :::
+
 During upgrade, you create a copy of the data from your current Rancher container and a backup in case something goes wrong. Then you deploy the new version of Rancher in a new container using your existing data.
 ### 1. Create a copy of the data from your Rancher server container
 
@@ -394,7 +394,7 @@ Remove the previous Rancher server container. If you only stop the previous Ranc
 
 ## RKE1 Resource Validation and Upgrade Requirements in Rancher v2.12
 
-Starting in Rancher v2.12, support for RKE1 (Rancher Kubernetes Engine v1) has been removed. During upgrade, Rancher validates the cluster resources and blocks the upgrade if any RKE1-related resources are detected.
+Rancher v2.12.0 and later has removed support for the Rancher Kubernetes Engine (RKE/RKE1). During upgrade, Rancher validates the cluster resources and blocks the upgrade if any RKE1-related resources are detected.
 
 This validation affects the following resource types:
 
@@ -404,16 +404,16 @@ This validation affects the following resource types:
 
 This is particularly relevant for single-node Docker installations, where Rancher is not running during the upgrade. In such cases, controllers are not available to clean up deprecated resources automatically, and the upgrade process will fail early with an error listing the blocking resources.
 
-### 1. Pre-upgrade (Recommended)
+### 1. Pre-Upgrade (Recommended)
 
 Before upgrading, while Rancher is still running:
 
-- Run the pre-upgrade cleanup script to delete all RKE1 clusters and templates. You can find the script [here](https://github.com/rancher/rancher/blob/v2.12.0/chart/scripts/pre-upgrade-hook.sh).
+- Run the `pre-upgrade-hook` cleanup script to delete all RKE1 clusters and templates. You can find the script in the Rancher GitHub repository: [pre-upgrade-hook.sh](https://github.com/rancher/rancher/blob/v2.12.0/chart/scripts/pre-upgrade-hook.sh).
 - This allows Rancher to clean up associated resources and finalizers.
 
 ### 2. Post-Upgrade Failure Due to Residual RKE1 Resources
 
-If the upgrade to Rancher v2.12 is attempted without prior cleanup of RKE1 resources:
+If the upgrade to Rancher v2.12.0 or later is attempted without prior cleanup of RKE1 resources:
 
 - The upgrade will fail and display an error listing the resource names that are preventing the upgrade.
 - This occurs because Rancher includes validation to detect and block upgrades when unsupported RKE1 resources are still present.
@@ -429,7 +429,7 @@ Users should take the following steps after rolling back to a previous Rancher v
 
 - **Manually delete** the resources listed in the upgrade error message (e.g., RKE1 clusters, NodeTemplates, ClusterTemplates).
 - If deletion is blocked due to **finalizers**, edit the resources and remove the `metadata.finalizers` field.
-- If a **validating webhook** prevents deletion (e.g., for the `system-project`), please refer to this [documentation](https://ranchermanager.docs.rancher.com/reference-guides/rancher-webhook#bypassing-the-webhook)
+- If a **validating webhook** prevents deletion (e.g., for the `system-project`), please refer to the [Bypassing the Webhook](../../../../reference-guides/rancher-webhook.md#bypassing-the-webhook)
 
 ## Rolling Back
 
