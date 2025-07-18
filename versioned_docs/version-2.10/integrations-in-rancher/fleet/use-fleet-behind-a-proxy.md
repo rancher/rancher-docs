@@ -22,6 +22,14 @@ For private nodes or private clusters, the environment variables need to be set 
 
 When adding Fleet agent environment variables for the proxy, replace <PROXY_IP> with your private proxy IP.
 
+:::caution
+
+The `NO_PROXY` environment variable is not standardized, and the accepted format of the value can differ between applications. When configuring the `NO_PROXY` variable in Rancher, the value must adhere to the format expected by Golang.
+
+Specifically, the value should be a comma-delimited string which only contains IP addresses, CIDR notation, domain names, or special DNS labels (e.g. `*`). For a full description of the expected value format, refer to the [**upstream Golang documentation**](https://pkg.go.dev/golang.org/x/net/http/httpproxy#Config)
+
+:::
+
 | Variable Name | Value |
 |------------------|--------|
 | `HTTP_PROXY` | http://<PROXY_IP>:8888 |
