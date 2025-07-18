@@ -1636,10 +1636,6 @@ module.exports = {
             to: "/integrations-in-rancher/compliance-scans/rbac-for-compliance-scans",
           },
           {
-            from: "/integrations-in-rancher/cis-scans/skipped-and-not-applicable-tests",
-            to: "/integrations-in-rancher/compliance-scans/skipped-and-not-applicable-tests",
-          },
-          {
             from: "/integrations-in-rancher/cis-scans/custom-benchmark",
             to: "/integrations-in-rancher/compliance-scans/custom-benchmark",
           },
