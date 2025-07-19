@@ -26,7 +26,31 @@ The following is a list of feature flags available in Rancher. If you've upgrade
 - `imperative-api-extension`: Enables Rancher's [extension API server](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/apiserver-aggregation/) to register new APIs to Kubernetes. This flag is enabled by default. See the [Extension API Server](../../../api/extension-apiserver.md) page for more information.
 - `istio-virtual-service-ui`: Enables a [visual interface](../../../how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features.md) to create, read, update, and delete Istio virtual services and destination rules, which are Istio traffic management features.
 - `legacy`: Enables a set of features from 2.5.x and earlier, that are slowly being phased out in favor of newer implementations. These are a mix of deprecated features as well as features that will eventually be available to newer versions. This flag is disabled by default on new Rancher installations. If you're upgrading from a previous version of Rancher, this flag is enabled.
-- `managed-system-upgrade-controller`: Enables the installation of the system-upgrade-controller app in downstream RKE2/K3s clusters, currently limited to imported clusters and the local cluster, with plans to expand support to node-driver clusters.
+- `managed-system-upgrade-controller`: Enables the installation of the system-upgrade-controller app in downstream imported RKE2/K3s clusters, as well as in the local cluster if it is an RKE2/K3s cluster.
+
+:::note Important:
+
+This `managed-system-upgrade-controller` flag is intended for **internal use only** and does not have an associated Feature CR. Use with caution.
+
+To control whether Rancher should manage the Kubernetes version of imported RKE2/K3s clusters, it is recommended to use the [imported-cluster-version-management](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters#configuring-version-management-for-rke2-and-k3s-clusters) feature that is available in Rancher 2.11.0 or newer.
+
+:::
+
+:::danger
+
+If the `managed-system-upgrade-controller` flag was **disabled** in Rancher v2.10.x, and any imported RKE2/K3s clusters were upgraded **outside of Rancher**, follow the steps below to prevent the unexpected installation of the system-upgrade-controller app and to ensure the [imported-cluster-version-management](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters#configuring-version-management-for-rke2-and-k3s-clusters) feature works correctly:
+
+1. Upgrade Rancher to v2.11.0 or later, making sure to **retain** the `managed-system-upgrade-controller=false` feature flag in Helm values if it was set during the v2.10.x installation.
+1. After Rancher is fully up and running, disable the `imported-cluster-version-management` setting. You can do this either through the Rancher UI:
+   Global Settings > Settings > imported-cluster-version-management, or by editing the corresponding `Setting.management.cattle.io/v3` custom resource via kubectl.
+1. Perform a second Helm upgrade, this time omitting the `managed-system-upgrade-controller=false` feature flag.
+
+Now, Imported cluster version management is disabled by default, and Rancher no longer installs the system-upgrade-controller app on imported clusters automatically.
+
+You can enable this feature on a per-cluster basis. For more information, please refer to the [documentation](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters#configuring-version-management-for-rke2-and-k3s-clusters).
+
+:::
+
 - `multi-cluster-management`: Allows multi-cluster provisioning and management of Kubernetes clusters. This flag can only be set at install time. It can't be enabled or disabled later.
 - `rke1-custom-node-cleanup`: Enables cleanup of deleted RKE1 custom nodes. We recommend that you keep this flag enabled, to prevent removed nodes from attempting to rejoin the cluster.
 - `rke2`: Enables provisioning RKE2 clusters. This flag is enabled by default.

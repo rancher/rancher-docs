@@ -24,7 +24,19 @@ The following is a list of feature flags available in Rancher. If you've upgrade
 - `harvester`: Manages access to the Virtualization Management page, where users can navigate directly to Harvester clusters and access the Harvester UI. See [Harvester Integration Overview](../../../integrations-in-rancher/harvester/overview.md) for more information.
 - `istio-virtual-service-ui`: Enables a [visual interface](../../../how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features.md) to create, read, update, and delete Istio virtual services and destination rules, which are Istio traffic management features.
 - `legacy`: Enables a set of features from 2.5.x and earlier, that are slowly being phased out in favor of newer implementations. These are a mix of deprecated features as well as features that will eventually be available to newer versions. This flag is disabled by default on new Rancher installations. If you're upgrading from a previous version of Rancher, this flag is enabled.
-- `managed-system-upgrade-controller`: Enables the installation of the system-upgrade-controller app in downstream RKE2/K3s clusters, currently limited to imported clusters and the local cluster, with plans to expand support to node-driver clusters.
+- `managed-system-upgrade-controller`: Enables the installation of the system-upgrade-controller app in downstream imported RKE2/K3s clusters, as well as in the local cluster if it is an RKE2/K3s cluster.
+
+:::note Important:
+
+This `managed-system-upgrade-controller` flag is intended for **internal use only** and does not have an associated Feature CR. Use with caution.
+
+To control whether Rancher should manage the Kubernetes version of imported RKE2/K3s clusters, it is recommended to use the **imported-cluster-version-management** feature that is available in Rancher 2.11.0 or newer.
+
+For more details, please refer to the Rancher documentation for version 2.11 or newer.
+
+:::
+
+
 - `multi-cluster-management`: Allows multi-cluster provisioning and management of Kubernetes clusters. This flag can only be set at install time. It can't be enabled or disabled later.
 - `rke1-custom-node-cleanup`: Enables cleanup of deleted RKE1 custom nodes. We recommend that you keep this flag enabled, to prevent removed nodes from attempting to rejoin the cluster.
 - `rke2`: Enables provisioning RKE2 clusters. This flag is enabled by default.
