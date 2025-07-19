@@ -79,7 +79,7 @@ kernel.panic_on_oops=1
 
 ## Kubernetes 运行时要求
 
-CIS Benchmark 的运行时要求主要围绕 Pod 安全（通过 PSP 或 PSA）、网络策略和 API 服务器审计日志展开。
+CIS Benchmark 的运行时要求主要围绕 Pod 安全（通过 PSA）、网络策略和 API 服务器审计日志展开。
 
 默认情况下，K3s 不包含任何 Pod 安全或网络策略。然而，K3s 附带一个控制器，可以强制执行你创建的任何网络策略。默认情况下，K3s 启用了 `PodSecurity` 和 `NodeRestriction` 等多个准入控制器。
 

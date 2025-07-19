@@ -1179,10 +1179,6 @@ module.exports = {
             from: '/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases'
           },
           {
-            to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies',
-            from: '/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies'
-          },
-          {
             to: '/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry',
             from: '/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry'
           },
@@ -1265,14 +1261,6 @@ module.exports = {
           {
             to: '/how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes',
             from: '/how-to-guides/advanced-user-guides/manage-clusters/clean-cluster-nodes'
-          },
-          {
-            to: '/how-to-guides/new-user-guides/manage-clusters/add-a-pod-security-policy',
-            from: '/how-to-guides/advanced-user-guides/manage-clusters/add-a-pod-security-policy'
-          },
-          {
-            to: '/how-to-guides/new-user-guides/manage-clusters/assign-pod-security-policies',
-            from: '/how-to-guides/advanced-user-guides/manage-clusters/assign-pod-security-policies'
           },
           {
             to: '/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster',
@@ -1450,10 +1438,6 @@ module.exports = {
             from: '/explanations/integrations-in-rancher/istio/disable-istio'
           },
           {
-            to: '/integrations-in-rancher/istio/configuration-options/pod-security-policies',
-            from: '/explanations/integrations-in-rancher/istio/configuration-options/pod-security-policies'
-          },
-          {
             to: '/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations',
             from: '/explanations/integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations'
           },
@@ -1517,26 +1501,6 @@ module.exports = {
             to: '/integrations-in-rancher/neuvector',
             from: '/explanations/integrations-in-rancher/neuvector'
           }, // Redirects for restructure from PR #234 (end)
-          {
-            to: '/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.24-k8s-v1.24',
-            from: '/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.24'
-          },
-          {
-            to: '/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27',
-            from: '/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.25'
-          },
-          {
-            to: '/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.24-k8s-v1.24',
-            from: '/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.24'
-          },
-          {
-            to: '/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27',
-            from: '/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.25'
-          },
-          {
-            to: '/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.24-k8s-v1.24',
-            from: '/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.24'
-          },
           {
             to: '/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27',
             from: '/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25'

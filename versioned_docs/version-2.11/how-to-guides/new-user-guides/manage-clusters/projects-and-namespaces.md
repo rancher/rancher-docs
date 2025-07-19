@@ -126,12 +126,11 @@ Rancher extends Kubernetes to allow the application of [Pod Security Policies](h
 
 This section describes how to create a new project with a name and with optional pod security policy, members, and resource quotas.
 
-1. [Name a new project.](#1-name-a-new-project)
-2. [Optional: Select a pod security policy.](#2-optional-select-a-pod-security-policy)
-3. [Recommended: Add project members.](#3-recommended-add-project-members)
-4. [Optional: Add resource quotas.](#4-optional-add-resource-quotas)
+1. [Name a new project.](#name-a-new-project)
+1. [Recommended: Add project members.](#recommended-add-project-members)
+1. [Optional: Add resource quotas.](#optional-add-resource-quotas)
 
-### 1. Name a New Project
+### Name a New Project
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the cluster you want to project in and click **Explore**.
@@ -139,17 +138,7 @@ This section describes how to create a new project with a name and with optional
 1. Click **Create Project**.
 1. Enter a **Project Name**.
 
-### 2. Optional: Select a Pod Security Policy
-
-This option is only available if you've already created a Pod Security Policy. For instruction, see [Creating Pod Security Policies](../authentication-permissions-and-global-configuration/create-pod-security-policies.md).
-
-Assigning a PSP to a project will:
-
-- Override the cluster's default PSP.
-- Apply the PSP to the project.
-- Apply the PSP to any namespaces you add to the project later.
-
-### 3. Recommended: Add Project Members
+### Recommended: Add Project Members
 
 Use the **Members** section to provide other users with project access and roles.
 
@@ -179,7 +168,7 @@ To add members:
     :::
 1. In the **Project Permissions** section, choose a role. For more information, refer to the [documentation on project roles.](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)
 
-### 4. Optional: Add Resource Quotas
+### Optional: Add Resource Quotas
 
 Resource quotas limit the resources that a project (and its namespaces) can consume. For more information, see [Resource Quotas](../../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md).
 

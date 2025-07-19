@@ -35,7 +35,7 @@ The Rancher API server is built on top of an embedded Kubernetes API server and 
 ### Authorization and Role-Based Access Control
 
 - **User management:** The Rancher API server [manages user identities](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/authentication-config.md) that correspond to external authentication providers like Active Directory or GitHub, in addition to local users.
-- **Authorization:** The Rancher API server manages [access control](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md) and [security](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) policies.
+- **Authorization:** The Rancher API server manages [access control](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md) and [security](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards.md) standards.
 
 ### Working with Kubernetes
 

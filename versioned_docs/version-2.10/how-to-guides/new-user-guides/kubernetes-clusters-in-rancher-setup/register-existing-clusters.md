@@ -248,15 +248,7 @@ Therefore, when Rancher registers a cluster, it assumes that several capabilitie
 
 However, if the cluster has a certain capability, such as the ability to use a pod security policy, a user of that cluster might still want to select pod security policies for the cluster in the Rancher UI. In order to do that, the user will need to manually indicate to Rancher that pod security policies are enabled for the cluster.
 
-By annotating a registered cluster, it is possible to indicate to Rancher that a cluster was given a pod security policy, or another capability, outside of Rancher.
-
-This example annotation indicates that a pod security policy is enabled:
-
-```json
-"capabilities.cattle.io/pspEnabled": "true"
-```
-
-The following annotation indicates Ingress capabilities. Note that the values of non-primitive objects need to be JSON encoded, with quotations escaped.
+By annotating a registered cluster, it is possible to indicate to Rancher that a cluster was given Ingress capabilities, or another capability, outside of Rancher. The following annotation indicates Ingress capabilities. Note that the values of non-primitive objects need to be JSON encoded, with quotations escaped.
 
 ```json
 "capabilities.cattle.io/ingressCapabilities": "[
@@ -273,7 +265,6 @@ These capabilities can be annotated for the cluster:
 - `loadBalancerCapabilities`
 - `nodePoolScalingSupported`
 - `nodePortRange`
-- `pspEnabled`
 - `taintSupport`
 
 All the capabilities and their type definitions can be viewed in the Rancher API view, at `[Rancher Server URL]/v3/schemas/capabilities`.
