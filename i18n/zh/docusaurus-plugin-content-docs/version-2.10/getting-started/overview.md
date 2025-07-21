@@ -31,7 +31,7 @@ Rancher API Server 是基于嵌入式 Kubernetes API Server 和 etcd 数据库�
 ### 授权和基于角色的权限控制（RBAC）
 
 - **用户管理**：Rancher API Server 除了管理本地用户，还[管理用户用来访问外部服务所需的认证信息](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/authentication-config.md)，如登录 Active Directory 和 GitHub 所需的账号密码。
-- **授权**：Rancher API Server 可以管理[访问控制策略](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md)和[安全策略](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)。
+- **授权**：Rancher API Server 可以管理[访问控制策略](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md)和[安全标准](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards.md)。
 
 ### 使用 Kubernetes 的功能
 

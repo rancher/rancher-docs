@@ -118,7 +118,6 @@ const sidebars = {
                 "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks",
                 "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks",
                 "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-gke",
-                "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrade-a-hardened-cluster-to-k8s-v1-25",
                 "getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/troubleshooting",
               ]
             },
@@ -319,7 +318,6 @@ const sidebars = {
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates/example-use-cases",
                   ]
                 },
-                "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies",
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards",
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates",
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry",
@@ -398,10 +396,6 @@ const sidebars = {
                 "how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
 
                 "how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes",
-
-                "how-to-guides/new-user-guides/manage-clusters/add-a-pod-security-policy",
-
-                "how-to-guides/new-user-guides/manage-clusters/assign-pod-security-policies",
               ]
             },
             {
@@ -677,7 +671,6 @@ const sidebars = {
                 id: "how-to-guides/advanced-user-guides/manage-projects/manage-projects",
               },
               items: [
-                "how-to-guides/advanced-user-guides/manage-projects/manage-pod-security-policies",
                 {
                   type: 'category',
                   label: 'Project Resource Quotas',
@@ -1063,8 +1056,6 @@ const sidebars = {
                     id: "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-hardening-guide",
                   },
                   items: [
-                    "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
-                    "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
                     "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
                   ],
                 },
@@ -1076,8 +1067,6 @@ const sidebars = {
                     id: "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-hardening-guide",
                   },
                   items: [
-                    "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
-                    "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
                     "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
                   ],
                 },
@@ -1089,8 +1078,6 @@ const sidebars = {
                     id: "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-hardening-guide",
                   },
                   items: [
-                    "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
-                    "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
                     "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
                   ],
                 },
@@ -1246,7 +1233,6 @@ const sidebars = {
                 id: "integrations-in-rancher/istio/configuration-options/configuration-options",
               },
               items: [
-                "integrations-in-rancher/istio/configuration-options/pod-security-policies",
                 "integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations",
                 "integrations-in-rancher/istio/configuration-options/install-istio-on-rke2-cluster",
                 "integrations-in-rancher/istio/configuration-options/project-network-isolation",
