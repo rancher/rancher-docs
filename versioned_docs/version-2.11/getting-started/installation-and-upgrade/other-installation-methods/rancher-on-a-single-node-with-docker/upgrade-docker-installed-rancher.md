@@ -429,7 +429,7 @@ Users should take the following steps after rolling back to a previous Rancher v
 
 - **Manually delete** the resources listed in the upgrade error message (e.g., RKE1 clusters, NodeTemplates, ClusterTemplates).
 - If deletion is blocked due to **finalizers**, edit the resources and remove the `metadata.finalizers` field.
-- If a **validating webhook** prevents deletion (e.g., for the `system-project`), please refer to the [Bypassing the Webhook](../../../../reference-guides/rancher-webhook.md#bypassing-the-webhook)
+- If a **validating webhook** prevents deletion (e.g., for the `system-project`), please refer to the [Bypassing the Webhook](../../../../reference-guides/rancher-webhook.md#bypassing-the-webhook) documentation.
 
 ## Rolling Back
 
