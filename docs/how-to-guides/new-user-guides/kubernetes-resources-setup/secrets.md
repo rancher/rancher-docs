@@ -14,9 +14,9 @@ This page is about secrets in general. For details on setting up a private regis
 
 :::
 
-When configuring a workload, you'll be able to choose which secrets to include. Like config maps, secrets can be referenced by workloads as either an environment variable or a volume mount.
+When configuring a workload, you are able to choose which secrets to include. Like config maps, secrets can be referenced by workloads as either an environment variable or a volume mount.
 
-Mounted secrets will be updated automatically unless they are mounted as subpath volumes. For details on how updated secrets are propagated, refer to the [Kubernetes documentation.](https://kubernetes.io/docs/concepts/configuration/secret/#mounted-secrets-are-updated-automatically)
+Mounted secrets are updated automatically unless they are mounted as subpath volumes. For details on how updated secrets are propagated, refer to the [Kubernetes documentation.](https://kubernetes.io/docs/concepts/configuration/secret/#mounted-secrets-are-updated-automatically)
 
 ## Creating Secrets in Namespaces
 
@@ -49,12 +49,12 @@ Mounted secrets will be updated automatically unless they are mounted as subpath
 
 **Result:** Your secret is added to the namespace you chose. You can view the secret in the Rancher UI by clicking either **Storage > Secrets** or **More Resources > Core > Secrets**.
 
-Mounted secrets will be updated automatically unless they are mounted as subpath volumes. For details on how updated secrets are propagated, refer to the [Kubernetes documentation.](https://kubernetes.io/docs/concepts/configuration/secret/#mounted-secrets-are-updated-automatically)
+Mounted secrets are updated automatically unless they are mounted as subpath volumes. For details on how updated secrets are propagated, refer to the [Kubernetes documentation.](https://kubernetes.io/docs/concepts/configuration/secret/#mounted-secrets-are-updated-automatically)
 
 
 ## Creating Secrets in Projects
 
-When creating a secret in a project scope, the secret will be copied into all namespaces within the project.
+When creating a secret in a project scope, the secret is copied into all namespaces within the project.
 
 ### Creating a Project Scoped Secret in the UI
 
@@ -69,7 +69,7 @@ When creating a secret in a project scope, the secret will be copied into all na
 
     :::note
 
-    Kubernetes classifies secrets, certificates, and registries all as [secrets](https://kubernetes.io/docs/concepts/configuration/secret/), and no two secrets in a namespace can have duplicate names. If you create a project scoped secret that has the same name as an existing secret in one of the project namespaces, the existing secret will be overwritten.
+    Kubernetes classifies secrets, certificates, and registries all as [secrets](https://kubernetes.io/docs/concepts/configuration/secret/), and no two secrets in a namespace can have duplicate names. If you create a project scoped secret that has the same name as an existing secret in one of the project namespaces, the existing secret is overwritten.
 
     :::
 
@@ -77,7 +77,7 @@ When creating a secret in a project scope, the secret will be copied into all na
 
     :::tip
 
-    You can add multiple key value pairs to the secret by copying and pasting.
+    You can add multiple key-value pairs to the secret by copying and pasting.
 
     :::
 
@@ -108,7 +108,7 @@ metadata:
 type: Opaque
 ```
 
-In the above yaml, the namespace is the backing namespace of project `p-vwxyz` and the project scoped secret label references the projectID. When applied to the management cluster, all namespaces within the project `p-vwxyz` will contain a copy of `test-secret`.
+In the above YAML, the namespace is the backing namespace of project `p-vwxyz` and the project scoped secret label references the projectID. When applied to the management cluster, all namespaces within the project `p-vwxyz` contain a copy of `test-secret`.
 
 ## What's Next?
 
