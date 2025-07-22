@@ -13,7 +13,7 @@ Kubeconfig is a Rancher resource `kubeconfigs.ext.cattle.io` that allows generat
 ```sh
 kubectl api-resources --api-group=ext.cattle.io
 ```
-To get the structure and a description of fields of the Kubeconfig resource:
+To get a description of the fields and structure of the Kubeconfig resource, run:
 
 ```sh
 kubectl explain kubeconfigs.ext.cattle.io
@@ -29,7 +29,7 @@ kubectl patch feature ext-kubeconfigs -p '{"spec":{"value":false}}'
 
 ## Creating a Kubeconfig
 
-Only a **valid and active** Rancher user can create a Kubeconfig.
+Admins can delete any Kubeconfig, while regular users can only delete their own. When a Kubeconfig is deleted, the kubeconfig tokens are also deleted.
 E.g. using a service account `system:admin` will lead to the following error: 
 
 ```bash
@@ -42,11 +42,11 @@ Error from server (Forbidden): error when creating "STDIN": kubeconfigs.ext.catt
 
 :::warning Important
 
-The kubeconfig content is generated and returned in the `.status.value` field **only once** when the Kubeconfig is successfully created because it contains secret values for created tokens. Therefore it has to be captured by using an appropriate output option, such as `-o jsonpath='{.status.value}'` or `-o yaml`.
+The kubeconfig content is generated and returned in the `.status.value` field **only once** when the Kubeconfig is successfully created because it contains secret values for created tokens. Therefore it has to be captured by using an appropriate output option, such as `-o jsonpath='{.status.value}'`, or `-o yaml`.
 
 :::
 
-A kubeconfig can be created for more than one cluster at a time by specifying a list of cluster names in the `spec.clusters` field. Cluster names can be looked up by listing `clusters.management.cattle.io` resources:
+A kubeconfig can be created for more than one cluster at a time by specifying a list of cluster names in the `spec.clusters` field. You can look up cluster names by listing `clusters.management.cattle.io` resources.
 
 ```sh
 kubectl get clusters.management.cattle.io -o=jsonpath="{.items[*]['metadata.name', 'spec.displayName']}{'\n'}"
@@ -54,10 +54,9 @@ local local
 c-m-p66cdvlj downstream1
 ```
 
-The `metadata.name` and `metadata.generateName` fields are ignored and the name of the new Kubeconfig is automatically generated using the prefix `kubeconfig-`.
+The `metadata.name` and `metadata.generateName` fields are ignored, and the name of the new Kubeconfig is automatically generated using the prefix `kubeconfig-`.
 
-The `spec.currentContext` field can be used to set the cluster name that will be set as the current context in the kubeconfig.  
-If the `spec.currentContext` field is not set, then the first cluster in the `spec.clusters` list will be used as the current context. For ACE-enabled clusters that don't have an FQDN set, the first control plane node will be used as the current context.
+You can use the `spec.currentContext` field to set the cluster name, and it is used to set the current context in the kubeconfig. If you do not set the `spec.currentContext` field, then the first cluster in the `spec.clusters` list will be used as the current context. For ACE-enabled clusters that don't have an FQDN set, the first control plane node will be used as the current context.
 
 For ACE-enabled clusters, if the FQDN is set, then that will be used as a cluster entry in the kubeconfig; otherwise, entries for all control plane nodes will be created.
 
@@ -98,7 +97,7 @@ EOF
 
 ## Listing Kubeconfigs
 
-Listing previously generated Kubeconfigs can be useful in order to clean up backing tokens if the Kubeconfig is no longer needed (e.g., it was issued temporarily). Admins can list all Kubeconfigs, while regular users can only see theirs.
+Listing previously generated Kubeconfigs can be useful for cleaning up backing tokens if the Kubeconfig is no longer needed (e.g., it was issued temporarily). Admins can list all Kubeconfigs, while regular users can only view their own.
 
 ```sh
 kubectl get kubeconfig
@@ -119,7 +118,7 @@ kubeconfig-jznml   30d   1/1      Complete   12d     u-w7drc      *
 
 ## Viewing a Kubeconfig
 
-Admins can get any Kubeconfig, while regular users can only get theirs.
+Admins can get any Kubeconfig, while regular users can only get their own.
 
 ```sh
 kubectl get kubeconfig kubeconfig-zp786
@@ -137,7 +136,7 @@ kubeconfig-zp786   30d   2/2      Complete   18d     user-w5gcf   *             
 
 ## Deleting a Kubeconfig
 
-Admins can delete any Kubeconfig, while regular users can only delete theirs. When a Kubeconfig is deleted, the kubeconfig tokens are also deleted.
+Admins can delete any Kubeconfig, while regular users can only delete their own. When a Kubeconfig is deleted, the kubeconfig tokens are also deleted.
 
 ```sh
 kubectl delete kubeconfig kubeconfig-zp786
@@ -161,9 +160,10 @@ EOF
 
 ## Deleting a Collection of Kubeconfigs
 
-Admins can delete any Kubeconfig, while regular users can only delete theirs.
+Admins can delete any Kubeconfig, while regular users can only delete their own.
 
 To delete all Kubeconfigs:
+
 ```sh
 kubectl delete --raw /apis/ext.cattle.io/v1/kubeconfigs
 ```
