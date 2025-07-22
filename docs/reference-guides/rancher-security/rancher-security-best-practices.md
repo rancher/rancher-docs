@@ -33,6 +33,8 @@ These ports have TLS SAN certificates which list nodes' public IP addresses. An 
 
 By default, Kubernetes does not provide enforcement mechanisms for baseline username policies. In Rancher, this means that any enforcement of username formats, naming conventions, or baseline policies is expected to be handled by the external identity provider's policies, if such policies are in place.
 
+In Rancher, `admin` is the default username for the Administrator user, as highlighted [here](https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/resources/bootstrap-password)
+
 Examples of potential baseline policies include:
 - Requiring usernames to follow an organizational convention (e.g., `firstname.lastname`)
 - Enforcing minimum or maximum length requirements
@@ -41,8 +43,10 @@ Examples of potential baseline policies include:
 
 Without these controls at the identity provider layer, there is a risk of inconsistent or insecure username practices, which can complicate access audits and lead to privilege escalation attempts.
 
+Important: Rancher currently enforces only a [minimum password length](https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/manage-users-and-groups#minimum-password-length)
+
 **Recommendation:**
-We strongly recommend that customers:
+We strongly advice that customers:
 - Review and configure username baseline policies directly in their external identity providers (e.g., LDAP, Active Directory, SAML, or OIDC).
 - Ensure that those policies align with the organization’s security and compliance requirements.
 - Regularly audit user accounts to detect naming inconsistencies or policy violations.
@@ -67,13 +71,14 @@ Without appropriate rate limiting, adversaries could exploit unauthenticated or 
 - Degrade performance for legitimate users.
 
 **Recommendation:**
-The most effective way to mitigate this risk is to implement rate limiting and abuse protection at the infrastructure or Web Application Firewall (WAF) layer. This approach allows thresholds to be tuned for each environment's expected usage and scaling characteristics.
+The most effective way to mitigate this risk is to implement rate limiting and abuse protection at the infrastructure or Web Application Firewall (WAF) layer. This approach allows thresholds to be tuned for each environment's expected usage and scaling characteristics. Some examples of controls can be:
 
-We recommend:
 - Configuring a Web Application Firewall or API Gateway to enforce rate limits on sensitive operations, such as cluster creation and provisioning.
 - Defining thresholds based on baseline workload expectations (e.g., max requests per minute per client).
 - Monitoring logs and alerting on anomalies to detect potential abuse.
+- Apply a resource quota, which is a Rancher feature that limits the resources available to a project or namespace.
 
 For more information, see:
+- [Project Resource Quotas](https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/manage-projects/manage-project-resource-quotas)
 - [OWASP API Security Top 10 - API4:2019 - Lack of Resources & Rate Limiting](https://owasp.org/API-Security/editions/2023/en/0xa4-lack-of-resources-rate-limiting/)
 - [OWASP Cheat Sheet: Rate Limiting](https://cheatsheetseries.owasp.org/cheatsheets/Rate_Limiting_Cheat_Sheet.html)
