@@ -54,7 +54,7 @@ You can obtain `<RANCHER_CONTAINER_TAG>` and `<RANCHER_CONTAINER_NAME>` by loggi
 ## Upgrade
 
 :::danger 
-Rancher upgrades to version 2.12.0 and later will be blocked if any RKE1-related resources are detected as the Rancher Kubernetes Engine (RKE/RKE1) is end of life as of **July 31, 2025**. For detailed cleanup and recovery steps, refer to the [RKE1 Resource Validation and Upgrade Requirements in Rancher v2.12](#rke1-resource-validation-and-upgrade-requirements-in-rancher-v212).
+Rancher upgrades to version 2.12.0 and later will be blocked if any RKE1-related resources are detected, as the Rancher Kubernetes Engine (RKE/RKE1) is end of life as of **July 31, 2025**. For detailed cleanup and recovery steps, refer to the [RKE1 Resource Validation and Upgrade Requirements in Rancher v2.12](#rke1-resource-validation-and-upgrade-requirements-in-rancher-v212).
 :::
 
 During upgrade, you create a copy of the data from your current Rancher container and a backup in case something goes wrong. Then you deploy the new version of Rancher in a new container using your existing data.
@@ -402,7 +402,7 @@ This validation affects the following resource types:
 - NodeTemplates (`nodetemplates.management.cattle.io`)
 - ClusterTemplates (`clustertemplates.management.cattle.io`)
 
-This is particularly relevant for single-node Docker installations, where Rancher is not running during the upgrade. In such cases, controllers are not available to clean up deprecated resources automatically, and the upgrade process will fail early with an error listing the blocking resources.
+This is particularly relevant for single-node Docker installations, where Rancher is not running during the upgrade. In such cases, controllers are not available to automatically clean up deprecated resources, and the upgrade process will fail early with an error listing the blocking resources.
 
 ### 1. Pre-Upgrade (Recommended)
 
@@ -425,7 +425,7 @@ Helm-based Rancher installations are not affected by this issue, as Rancher rema
 
 ### Manual Cleanup After Rollback
 
-Users should take the following steps after rolling back to a previous Rancher version:
+Users should perform the following steps after rolling back to a previous Rancher version:
 
 - **Manually delete** the resources listed in the upgrade error message (e.g., RKE1 clusters, NodeTemplates, ClusterTemplates).
 - If deletion is blocked due to **finalizers**, edit the resources and remove the `metadata.finalizers` field.
