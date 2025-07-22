@@ -534,6 +534,8 @@ const sidebars = {
                     "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-a-digitalocean-cluster",
 
                     "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster",
+
+                    "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-a-google-compute-engine-cluster",
                     {
                       type: 'category',
                       label: 'Creating a VMware vSphere Cluster',
@@ -946,6 +948,7 @@ const sidebars = {
                     "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/amazon-ec2",
                     "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/digitalocean",
                     "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/azure",
+                    "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/google-gce"
                   ]
                 }
               ]
