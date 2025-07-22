@@ -942,11 +942,11 @@ const sidebars = {
                     "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/digitalocean",
                     "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/azure",
                     "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/google-gce"
-                  ],
-                },
-              ],
-            },
-          ],
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           type: "category",
