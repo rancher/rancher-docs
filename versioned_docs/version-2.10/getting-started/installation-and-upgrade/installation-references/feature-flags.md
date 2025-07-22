@@ -30,9 +30,9 @@ The following is a list of feature flags available in Rancher. If you've upgrade
 
 This `managed-system-upgrade-controller` flag is intended for **internal use only** and does not have an associated Feature CR. Use with caution.
 
-To control whether Rancher should manage the Kubernetes version of imported RKE2/K3s clusters, it is recommended to use the **imported-cluster-version-management** feature that is available in Rancher 2.11.0 or newer.
+To control whether Rancher should manage the Kubernetes version of imported RKE2/K3s clusters, it is recommended to use the **imported-cluster-version-management** feature that is available in Rancher v2.11.0 or newer.
 
-For more details, please refer to the Rancher documentation for version 2.11 or newer.
+For more details, please refer to the Rancher documentation for version v2.11 or newer.
 
 :::
 

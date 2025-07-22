@@ -32,7 +32,7 @@ The following is a list of feature flags available in Rancher. If you've upgrade
 
 This `managed-system-upgrade-controller` flag is intended for **internal use only** and does not have an associated Feature CR. Use with caution.
 
-To control whether Rancher should manage the Kubernetes version of imported RKE2/K3s clusters, it is recommended to use the [imported-cluster-version-management](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md#configuring-version-management-for-rke2-and-k3s-clusters) feature that is available in Rancher 2.11.0 or newer.
+To control whether Rancher should manage the Kubernetes version of imported RKE2/K3s clusters, it is recommended to use the [imported-cluster-version-management](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md#configuring-version-management-for-rke2-and-k3s-clusters) feature that is available in Rancher v2.11.0 or newer.
 
 :::
 
@@ -40,7 +40,7 @@ To control whether Rancher should manage the Kubernetes version of imported RKE2
 
 If the `managed-system-upgrade-controller` flag was **disabled** in Rancher v2.10.x, and any imported RKE2/K3s clusters were upgraded **outside of Rancher**, follow the steps below to prevent the unexpected installation of the system-upgrade-controller app and to ensure the [imported-cluster-version-management](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md#configuring-version-management-for-rke2-and-k3s-clusters) feature works correctly:
 
-1. Upgrade Rancher to v2.11.0 or later, making sure to **retain** the `managed-system-upgrade-controller=false` feature flag in Helm values if it was set during the v2.10.x installation.
+1. Upgrade Rancher to v2.11.0 or newer, making sure to **retain** the `managed-system-upgrade-controller=false` feature flag in Helm values if it was set during the v2.10.x installation.
 1. After Rancher is fully up and running, disable the `imported-cluster-version-management` setting. You can do this either through the Rancher UI by clicking **☰ > Global Settings > Settings > imported-cluster-version-management**, or by editing the corresponding `Setting.management.cattle.io/v3` custom resource via kubectl.
 1. Perform a second Helm upgrade, this time omitting the `managed-system-upgrade-controller=false` feature flag.
 
