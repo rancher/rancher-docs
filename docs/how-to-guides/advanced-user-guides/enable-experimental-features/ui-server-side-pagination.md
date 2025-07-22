@@ -6,27 +6,25 @@ title: UI Server-Side Pagination
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-experimental-features/ui-server-side-pagination"/>
 </head>
 
-:::caution
-UI server-side pagination is not intended for use in production at this time. This feature is considered highly experimental. SUSE customers should consult SUSE Support before activating this feature.
-:::
-
-
-UI server-side pagination caching provides an optional SQLite-backed cache of Kubernetes objects to improve performance. This unlocks sorting, filtering and pagination features used by the UI to restrict the amount of resources it fetches and stores in browser memory. These features are primarily used to improve list performance for resources with high counts.
+The feature flag `ui-sql-cache` is enabled by default and implements the UI server-side pagination caching. The functionality provides an SQLite-backed cache of Kubernetes objects to improve performance. This adds sorting, filtering and pagination features used by the UI to restrict the amount of resources it fetches and stores in browser memory. These features are primarily used to improve list performance for resources with high counts.
 
 This feature creates file system based caches in the `rancher` pods of the upstream cluster, and in the `cattle-cluster-agent` pods of the downstream clusters. In most environments, disk usage and I/O should not be significant. However, you should monitor activity after you enable caching.
 
 SQLite-backed caching persists copies of any cached Kubernetes objects to disk. See [Encrypting SQLite-backed Caching](#encrypting-sqlite-backed-caches) if this is a security concern.
 
-## Enabling UI Server-Side Pagination
+## Enabling via UI: `ui-sql-cache` and Server-Side Pagination
 
 1. In the upper left corner, click **☰ > Global Settings > Feature Flags**.
 1. Find **`ui-sql-cache`** and select **⋮ > Activate > Activate**.
 1. Wait for Rancher to restart. This also restarts agents on all downstream clusters.
-1. In the upper left corner, click **☰ > Global Settings > Performance**.
-1. Go to **Server-side Pagination** and check the **Enable Server-side Pagination** option.
-1. Click **Apply**.
 1. Reload the page with the browser button (or the equivalent keyboard combination, typically `CTRL + R` on Windows and Linux, and `⌘ + R` on macOS).
 
+## Disabling via UI: `ui-sql-cache` and Server-Side Pagination
+
+1. In the upper left corner, click **☰ > Global Settings > Feature Flags**.
+1. Find **`ui-sql-cache`** and select **⋮ > Deactivate > Deactivate**.
+1. Wait for Rancher to restart. This also restarts agents on all downstream clusters.
+1. Reload the page with the browser button (or the equivalent keyboard combination, typically `CTRL + R` on Windows and Linux, and `⌘ + R` on macOS).
 
 ## Encrypting SQLite-backed Caches
 
@@ -39,3 +37,31 @@ Secrets and security Tokens are always encrypted regardless of the above setting
 This initial release improves the performance of Pods, Secrets, Nodes and ConfigMaps in the Cluster Explorer pages, and most resources in the Explorer's **More Resources** section.
 
 Pages can't be automatically refreshed. You can manually refresh table contents by clicking the **Refresh** button.
+
+### Regressions
+
+There were performance regressions following the resource cache support changes, and they are outlined below:
+
+- All lists that utilize Server-Side Pagination:
+  - `State` column sort and filter features work on the resources `metadata.state.name` field instead of one deduced locally by the UI.
+  - Updates are shown every 5 seconds, rather than instantly.
+- Cluster Explorer:
+  - `Cluster` group --> `Nodes` page
+    - The following columns are now not sortable or filterable: `Roles`, `External/Internal IP`, `CPU`, `RAM` (logic to determine their value is calculated in the browser)
+  - `Workloads` list:
+    - The `Workloads` list, which showed multiple different resource types has been removed.
+      - Server-Side Pagination of multiple resources is not currently possible.
+  - `Workloads` group --> All lists
+    - `Pod Restarts` and `Workload Health` columns have been removed.
+      - [Re-enable Pod Restart Count and Pod Health columns for Workload lists #14211](https://github.com/rancher/dashboard/issues/14211)
+  - `Workloads` group / `Job` List
+    - `Duration` is now not sortable (sorting on a duration).
+      - [Implement more complex server-side pagination sorting #12815](https://github.com/rancher/dashboard/issues/12815)
+  - `Workloads` group / `Pod` List
+    - `Images` is now not sortable (sorting on an array).
+  - `Service Discovery` group / `Ingresses`
+    - `Default` is now not sortable/filterable (logic to determine their value is calculated in the browser).
+  - `Storage` group / `ConfigMaps`
+    - `Data` is now not sortable/filterable (logic to determine their value is calculated in the browser).
+  - `Storage` group / `Secrets`
+    - `Data` is now not sortable/filterable (logic to determine their value is calculated in the browser).
