@@ -71,7 +71,7 @@ API 请求必须包含认证信息。认证是通过 [API 密钥](../reference-g
 
 ## 捕获 Rancher API 调用
 
-你可以使用浏览器开发人员工具来捕获 Rancher API 的调用方式。例如，你可以按照以下步骤使用 Chrome 开发人员工具来获取用于配置 RKE 集群的 API 调用：
+You can use browser developer tools to capture how the v3 API is called. For example, you could follow these steps to use the Chrome developer tools to get the API call for provisioning a Rancher Kubernetes distribution cluster:
 
 1. 在 Rancher UI 中，转到**集群管理**并单击**创建**。
 1. 单击某个集群类型。此示例使用 Digital Ocean。
