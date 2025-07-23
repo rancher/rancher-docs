@@ -111,3 +111,4 @@ An example `kubectl` command to edit a Token:
 
 ```sh
 kubectl edit tokens.ext.cattle.io token-zp786
+```
