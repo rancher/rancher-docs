@@ -18,6 +18,11 @@ While restoring Rancher on the same setup, the operator will scale down the Ranc
 
 :::
 
+:::note Warning for Fleet users
+A few steps must be taken when restoring a Rancher setup with running Fleet workloads. See [this
+page](http://fleet.rancher.io/0.10/gitrepo-add#backing-up-and-restoring) for more details.
+:::
+
 :::tip
 
 * Follow those steps to [migrate Rancher](migrate-rancher-to-new-cluster.md).
