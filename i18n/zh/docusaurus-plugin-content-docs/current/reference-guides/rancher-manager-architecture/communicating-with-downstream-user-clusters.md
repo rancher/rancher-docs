@@ -39,7 +39,7 @@ Rancher 使用 [ServiceAccount](https://kubernetes.io/docs/tasks/configure-pod-c
 - 检测下游集群中的资源变化
 - 将下游集群的当前状态变更到目标状态
 - 配置集群和项目的访问控制策略
-- 通过调用所需的 Docker Machine 驱动和 Kubernetes 引擎（例如 RKE 和 GKE）来配置集群
+- 通过调用所需的 Docker Machine 驱动和 Kubernetes 引擎（例如，GKE）来配置集群
 
 默认情况下，Cluster Controller 连接到 Cluster Agent，Rancher 才能与下游集群通信。如果 Cluster Agent 不可用，Cluster Controller 可以连接到 [Node Agent](#3-node-agents)。
 
@@ -60,7 +60,7 @@ Cluster Agent，也叫做 `cattle-cluster-agent`，是运行在下游集群中�
 
 授权集群端点（ACE）可连接到下游集群的 Kubernetes API Server，而不用通过 Rancher 认证代理调度请求。
 
-> 授权集群端点仅适用于 Rancher 启动的 Kubernetes 集群，即只适用于 Rancher [使用 RKE](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) 来配置的集群。它不适用于导入的集群，也不适用于托管在 Kubernetes 提供商中的集群（例如 Amazon 的 EKS）。
+> 授权集群端点仅适用于 Rancher 启动的 Kubernetes 集群，即 [Rancher 配置的集群](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) 它不适用于导入的集群，也不适用于托管在 Kubernetes 提供商中的集群（例如 Amazon 的 EKS）。
 
 授权集群端点的主要用途：
 
@@ -81,11 +81,7 @@ Cluster Agent，也叫做 `cattle-cluster-agent`，是运行在下游集群中�
 
 维护、排除问题和升级集群需要用到以下文件，请妥善保管这些文件：
 
-- `rancher-cluster.yml`：RKE 集群配置文件。
 - `kube_config_rancher-cluster.yml`：集群的 Kubeconfig 文件，包含完全访问集群的凭证。如果 Rancher 出现问题时，你可以使用此文件认证由 Rancher 启动的 Kubernetes 集群。
-- `rancher-cluster.rkestate`：Kubernetes 集群状态文件，文件包含用于完全访问集群的凭证。注意：仅在使用 RKE v0.2.0 或更高版本时，才会创建此该文件。
-
-> **注意**：后两个文件名中的 `rancher-cluster` 部分取决于你命名 RKE 集群配置文件的方式。
 
 有关在没有 Rancher 认证代理和其他配置选项的情况下连接到集群的更多信息，请参见 [kubeconfig 文件](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)。
 
@@ -97,13 +93,7 @@ Rancher 使用什么工具配置下游集群，取决于集群的类型。
 
 Rancher 可以动态启动云上（如 Amazon EC2、DigitalOcean、Azure 或 vSphere 等）的节点，然后在节点上安装 Kubernetes。
 
-Rancher 使用 [RKE](https://github.com/rancher/rke) 和 [docker-machine](https://github.com/rancher/machine) 来配置这类型的集群。
-
-### Rancher 为自定义节点启动 Kubernetes
-
-在配置此类集群时，Rancher 会在现有节点上安装 Kubernetes，从而创建自定义集群。
-
-Rancher 使用 [RKE](https://github.com/rancher/rke) 来启动此类集群。
+Rancher 使用 [docker-machine](https://github.com/rancher/machine) 来配置这类型的集群。
 
 ### 托管的 Kubernetes 提供商
 

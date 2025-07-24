@@ -41,7 +41,7 @@ There is one cluster controller and one cluster agent for each downstream cluste
 - Watches for resource changes in the downstream cluster
 - Brings the current state of the downstream cluster to the desired state
 -  Configures access control policies to clusters and projects
--  Provisions clusters by calling the required Docker machine drivers and Kubernetes engines, such as RKE and GKE
+-  Provisions clusters by calling the required Docker machine drivers and Kubernetes engines, such as GKE
 
 By default, to enable Rancher to communicate with a downstream cluster, the cluster controller connects to the cluster agent. If the cluster agent is not available, the cluster controller can connect to a [node agent](#3-node-agents) instead.
 
@@ -62,7 +62,7 @@ The `cattle-node-agent` is deployed using a [DaemonSet](https://kubernetes.io/do
 
 An authorized cluster endpoint (ACE) allows users to connect to the Kubernetes API server of a downstream cluster without having to route their requests through the Rancher authentication proxy.
 
-> ACE is available on RKE, RKE2, and K3s clusters that are provisioned or registered with Rancher. It's not available on  clusters in a hosted Kubernetes provider, such as Amazon's EKS.
+> ACE is available on RKE2 and K3s clusters that are provisioned or registered with Rancher. It's not available on  clusters in a hosted Kubernetes provider, such as Amazon's EKS.
 
 There are two main reasons why a user might need the authorized cluster endpoint:
 
@@ -178,11 +178,7 @@ If you see an error related to "impersonation" in the UI, pay close attention to
 
 The files mentioned below are needed to maintain, troubleshoot and upgrade your cluster:
 
-- `rancher-cluster.yml`: The RKE cluster configuration file.
 - `kube_config_rancher-cluster.yml`: The Kubeconfig file for the cluster, this file contains credentials for full access to the cluster. You can use this file to authenticate with a Rancher-launched Kubernetes cluster if Rancher goes down.
-- `rancher-cluster.rkestate`: The Kubernetes cluster state file. This file contains credentials for full access to the cluster. Note: This state file is only created when using RKE v0.2.0 or higher.
-
-> **Note:** The "rancher-cluster" parts of the two latter file names are dependent on how you name the RKE cluster configuration file.
 
 For more information on connecting to a cluster without the Rancher authentication proxy and other configuration options, refer to the [kubeconfig file](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md) documentation.
 
@@ -194,13 +190,7 @@ The tools that Rancher uses to provision downstream user clusters depends on the
 
 Rancher can dynamically provision nodes in a provider such as Amazon EC2, DigitalOcean, Azure, or vSphere, then install Kubernetes on them.
 
-Rancher provisions this type of cluster using [RKE](https://github.com/rancher/rke) and [docker-machine.](https://github.com/rancher/machine)
-
-### Rancher Launched Kubernetes for Custom Nodes
-
-When setting up this type of cluster, Rancher installs Kubernetes on existing nodes, which creates a custom cluster.
-
-Rancher provisions this type of cluster using [RKE.](https://github.com/rancher/rke)
+Rancher provisions this type of cluster using [docker-machine.](https://github.com/rancher/machine)
 
 ### Hosted Kubernetes Providers
 
