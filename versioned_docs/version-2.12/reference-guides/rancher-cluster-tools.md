@@ -44,6 +44,6 @@ For more information, refer to the Istio documentation [here.](../integrations-i
 
 ## Compliance Scans
 
-Rancher can run a security scan to check whether Kubernetes is deployed according to security best practices as defined in most recognized Kubernetes Security Benchmarks, such as STIG.
+Rancher can run a security scan to check whether a cluster is deployed according to security best practices as defined in Kubernetes security benchmarks, such as the ones provided by STIG, BSI or CIS.
 
 For more information, refer to the Compliance scan documentation [here.](../how-to-guides/advanced-user-guides/compliance-scan-guides/compliance-scan-guides.md)
