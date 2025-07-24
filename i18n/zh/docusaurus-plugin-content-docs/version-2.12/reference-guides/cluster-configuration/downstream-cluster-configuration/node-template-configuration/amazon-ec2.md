@@ -34,7 +34,7 @@ title: EC2 节点模板配置
 
 请参考[使用主机驱动时的 Amazon EC2 安全组](../../../../getting-started/installation-and-upgrade/installation-requirements/port-requirements.md#rancher-aws-ec2-安全组)，了解 `rancher-nodes` 安全组中创建的规则。
 
-如果你自行为 EC2 实例提供安全组，Rancher 不会对其进行修改。因此，你需要让你的安全组允许 [Rancher 配置实例所需的端口](../../../../getting-started/installation-and-upgrade/installation-requirements/port-requirements.md#rancher-节点)。有关使用安全组控制 EC2 实例的入站和出站流量的更多信息，请参阅[这里](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#WorkingWithSecurityGroups)。
+如果你自行为 EC2 实例提供安全组，Rancher 不会对其进行修改。因此，你需要让你的安全组允许 [Rancher 配置实例所需的端口](../../../../getting-started/installation-and-upgrade/installation-requirements/port-requirements.md#rke-上-rancher-server-节点的端口)。有关使用安全组控制 EC2 实例的入站和出站流量的更多信息，请参阅[这里](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#WorkingWithSecurityGroups)。
 
 ## 实例选项
 
