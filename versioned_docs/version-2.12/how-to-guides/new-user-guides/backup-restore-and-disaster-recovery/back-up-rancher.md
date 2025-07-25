@@ -70,7 +70,7 @@ To perform a backup, a custom resource of type Backup must be created.
           folder: rancher
           region: us-west-2
           endpoint: s3.us-west-2.amazonaws.com
-      resourceSetName: rancher-resource-set
+      resourceSetName: rancher-resource-set-full
       encryptionConfigSecretName: encryptionconfig
       schedule: "@every 1h"
       retentionCount: 10
@@ -78,7 +78,7 @@ To perform a backup, a custom resource of type Backup must be created.
 
     :::note
 
-    When creating the Backup resource using YAML editor, the `resourceSetName` must be set to `rancher-resource-set`
+    When creating the Backup resource using YAML editor, the `resourceSetName` must be set to `rancher-resource-set-full` or `rancher-resource-set-basic`.
 
     :::
 

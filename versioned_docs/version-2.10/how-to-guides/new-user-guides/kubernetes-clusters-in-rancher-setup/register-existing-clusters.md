@@ -56,6 +56,15 @@ GKE Autopilot clusters aren't supported. See [Compare GKE Autopilot and Standard
 9. If you are using self-signed certificates, you will receive the message `certificate signed by unknown authority`. To work around this validation, copy the command starting with `curl` displayed in Rancher to your clipboard. Then run the command on a node where kubeconfig is configured to point to the cluster you want to import.
 10. When you finish running the command(s) on your node, click **Done**.
 
+:::important
+
+The `NO_PROXY` environment variable is not standardized, and the accepted format of the value can differ between applications. When configuring the `NO_PROXY` variable in Rancher, the value must adhere to the format expected by Golang.
+
+Specifically, the value should be a comma-delimited string which only contains IP addresses, CIDR notation, domain names, or special DNS labels (e.g. `*`). For a full description of the expected value format, refer to the [**upstream Golang documentation**](https://pkg.go.dev/golang.org/x/net/http/httpproxy#Config)
+
+:::
+
+
 **Result:**
 
 - Your cluster is registered and assigned a state of **Pending**. Rancher is deploying resources to manage your cluster.
@@ -248,15 +257,7 @@ Therefore, when Rancher registers a cluster, it assumes that several capabilitie
 
 However, if the cluster has a certain capability, such as the ability to use a pod security policy, a user of that cluster might still want to select pod security policies for the cluster in the Rancher UI. In order to do that, the user will need to manually indicate to Rancher that pod security policies are enabled for the cluster.
 
-By annotating a registered cluster, it is possible to indicate to Rancher that a cluster was given a pod security policy, or another capability, outside of Rancher.
-
-This example annotation indicates that a pod security policy is enabled:
-
-```json
-"capabilities.cattle.io/pspEnabled": "true"
-```
-
-The following annotation indicates Ingress capabilities. Note that the values of non-primitive objects need to be JSON encoded, with quotations escaped.
+By annotating a registered cluster, it is possible to indicate to Rancher that a cluster was given Ingress capabilities, or another capability, outside of Rancher. The following annotation indicates Ingress capabilities. Note that the values of non-primitive objects need to be JSON encoded, with quotations escaped.
 
 ```json
 "capabilities.cattle.io/ingressCapabilities": "[
@@ -273,7 +274,6 @@ These capabilities can be annotated for the cluster:
 - `loadBalancerCapabilities`
 - `nodePoolScalingSupported`
 - `nodePortRange`
-- `pspEnabled`
 - `taintSupport`
 
 All the capabilities and their type definitions can be viewed in the Rancher API view, at `[Rancher Server URL]/v3/schemas/capabilities`.

@@ -152,8 +152,6 @@ Upgrade Rancher to the latest version with all your settings.
 
 Take all the values from the previous step and append them to the command using `--set key=value`.
 
-For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
-
 ```
 helm upgrade rancher rancher-<CHART_REPO>/rancher \
   --namespace cattle-system \
@@ -185,8 +183,6 @@ Alternatively, it's possible to export the current values to a file and referenc
     helm get values rancher -n cattle-system -o yaml > values.yaml
     ```
 1. Update only the Rancher version:
-
-    For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
     ```
     helm upgrade rancher rancher-<CHART_REPO>/rancher \
