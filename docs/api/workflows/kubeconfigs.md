@@ -29,7 +29,7 @@ kubectl patch feature ext-kubeconfigs -p '{"spec":{"value":false}}'
 
 ## Creating a Kubeconfig
 
-Only a **valid and active** Rancher user can create a Kubeconfig. E.g. trying to create a Kubeconfig using `system:admin` service account will lead to an error:
+Only a **valid and active** Rancher user can create a Kubeconfig. For example, trying to create a Kubeconfig using a `system:admin` service account will lead to an error:
 
 ```bash
 kubectl create -o jsonpath='{.status.value}' -f -<<EOF
