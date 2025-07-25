@@ -29,8 +29,7 @@ kubectl patch feature ext-kubeconfigs -p '{"spec":{"value":false}}'
 
 ## Creating a Kubeconfig
 
-Admins can delete any Kubeconfig, while regular users can only delete their own. When a Kubeconfig is deleted, the kubeconfig tokens are also deleted.
-E.g. using a service account `system:admin` will lead to the following error: 
+Only a **valid and active** Rancher user can create a Kubeconfig. E.g. trying to create a Kubeconfig using `system:admin` service account will lead to an error:
 
 ```bash
 kubectl create -o jsonpath='{.status.value}' -f -<<EOF
