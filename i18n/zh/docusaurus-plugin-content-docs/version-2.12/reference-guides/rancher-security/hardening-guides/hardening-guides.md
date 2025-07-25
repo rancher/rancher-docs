@@ -12,7 +12,6 @@ Rancher 为每个受支持的 Rancher 版本的 Kubernetes 发行版提供了特
 
 Rancher 使用以下 Kubernetes 发行版：
 
-- [**RKE**](https://rancher.com/docs/rke/latest/en/)（Rancher Kubernetes Engine）是经过 CNCF 认证的 Kubernetes 发行版，完全在 Docker 容器中运行。
 - [**RKE2**](https://docs.rke2.io/) 是一个完全合规的 Kubernetes 发行版，专注于安全和合规性。
 - [**K3s**](https://docs.k3s.io/) 是一个完全合规的，轻量级 Kubernetes 发行版。它易于安装，内存需求只有上游 Kubernetes 的一半，所有组件都在一个小于 100 MB 的二进制文件中。
 
@@ -21,12 +20,6 @@ Rancher 使用以下 Kubernetes 发行版：
 ## 加固指南和 Benchmark 版本
 
 每个自我评估指南都附有强化指南。这些指南与列出的 Rancher 版本一起进行了测试。每个自我评估指南都在特定的 Kubernetes 版本和 CIS Benchmark 版本上进行了测试。如果 CIS Benchmark 尚未针对你的 Kubernetes 版本进行验证，你可以使用现有指南，直到添加适合你的版本的指南。
-
-### RKE 指南
-
-| Kubernetes 版本 | CIS Benchmark 版本 | 自我评估指南 | 加固指南 |
-|--------------------|-----------------------|-----------------------|------------------|
-| Kubernetes v1.25/v1.26/v1.27 | CIS v1.7 | [链接](rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27.md) | [链接](rke1-hardening-guide/rke1-hardening-guide.md) |
 
 ### RKE2 指南
 

@@ -26,9 +26,7 @@ Rancher Logging 使用的是 [Logging Operator](https://github.com/kube-logging/
 
 ### Kubernetes 组件
 
-_ClusterFlows_ 能够收集 Kubernetes 集群中所有主机上所有容器的日志。如果这些容器包含在 Kubernetes Pod 中，这个方法是适用的。但是，RKE 容器不存在于 Kubernetes 内。
-
-目前，Rancher 能搜集 RKE 容器的日志，但不能轻易过滤。这是因为这些日志不包含源容器的信息（例如 `etcd` 或 `kube-apiserver`）。
+_ClusterFlows_ 能够收集 Kubernetes 集群中所有主机上所有容器的日志。如果这些容器包含在 Kubernetes Pod 中，这个方法是适用的。
 
 Rancher 的未来版本将包含源容器名称，来支持过滤这些组件的日志。该功能实现之后，你将能够自定义 _ClusterFlow_ 来**仅**检索 Kubernetes 组件日志，并将日志发送到适当的输出位置。
 
