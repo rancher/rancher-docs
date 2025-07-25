@@ -396,9 +396,6 @@ const sidebars = {
 
                 "how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes",
 
-                "how-to-guides/new-user-guides/manage-clusters/add-a-pod-security-policy",
-
-                "how-to-guides/new-user-guides/manage-clusters/assign-pod-security-policies",
               ],
             },
             {
