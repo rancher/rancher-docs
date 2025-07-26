@@ -49,3 +49,4 @@ Rancher supports several major cloud providers, but by default, these node drive
 There are several other node drivers that are disabled by default, but are packaged in Rancher:
 
 *   [Harvester](../../../../integrations-in-rancher/harvester/overview.md#harvester-node-driver/), available as of Rancher v2.6.1
+*   [Google GCE](../../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-a-google-compute-engine-cluster.md), available as of Rancher v2.12.0

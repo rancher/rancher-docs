@@ -39,7 +39,6 @@ User Interface | https://github.com/rancher/dashboard/ | This repository is the 
 (Rancher) Docker Machine | https://github.com/rancher/machine | This repository is the source of the Docker Machine binary used when using Node Drivers. This is a fork of the `docker/machine` repository.
 machine-package | https://github.com/rancher/machine-package | This repository is used to build the Rancher Docker Machine binary.
 kontainer-engine | https://github.com/rancher/kontainer-engine | This repository is the source of kontainer-engine, the tool to provision hosted Kubernetes clusters.
-RKE repository | https://github.com/rancher/rke | This repository is the source of Rancher Kubernetes Engine, the tool to provision Kubernetes clusters on any machine.
 CLI | https://github.com/rancher/cli | This repository is the source code for the Rancher CLI used in Rancher 2.x.
 (Rancher) Helm repository | https://github.com/rancher/helm | This repository is the source of the packaged Helm binary. This is a fork of the `helm/helm` repository.
 loglevel repository | https://github.com/rancher/loglevel | This repository is the source of the loglevel binary, used to dynamically change log levels.
@@ -108,27 +107,6 @@ Please remove any sensitive data as it will be publicly viewable.
         logs \
         -l app=rancher \
         --timestamps=true
-        ```
-        - Docker install using `docker` on each of the nodes in the RKE cluster
-
-        ```
-        docker logs \
-        --timestamps \
-        $(docker ps | grep -E "rancher/rancher@|rancher_rancher" | awk '{ print $1 }')
-        ```
-        - Kubernetes Install with RKE Add-On
-
-        :::note
-
-        Make sure you configured the correct kubeconfig (for example, `export KUBECONFIG=$PWD/kube_config_cluster.yml` if the Rancher server is installed on a Kubernetes cluster) or are using the embedded kubectl via the UI.
-
-        :::
-
-        ```
-        kubectl -n cattle-system \
-        logs \
-        --timestamps=true \
-        -f $(kubectl --kubeconfig $KUBECONFIG get pods -n cattle-system -o json | jq -r '.items[] | select(.spec.containers[].name="cattle-server") | .metadata.name')
         ```
     - System logging (these might not all exist, depending on operating system)
         - `/var/log/messages`

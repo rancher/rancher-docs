@@ -170,6 +170,13 @@ You can define the default behavior for newly created clusters or existing ones 
 
 Changes to the global **imported-cluster-version-management** setting take effect during the cluster’s next reconciliation cycle.
 
+:::note
+
+If version management is enabled for a cluster, Rancher will deploy the system-upgrade-controller app, along with the associated Plans and other required Kubernetes resources, to the cluster.
+If version management is disabled, Rancher will remove these components from the cluster.
+
+:::
+
 ## Configuring RKE2 and K3s Cluster Upgrades
 
 :::tip
