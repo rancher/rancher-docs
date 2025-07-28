@@ -2861,3 +2861,4 @@ Containers.
 **Remediation:**
 Ensure that namespaces are created to allow for appropriate segregation of Kubernetes
 resources and that all new resources are created in a specific namespace.
+
