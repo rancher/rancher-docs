@@ -178,7 +178,8 @@ If you see an error related to "impersonation" in the UI, pay close attention to
 
 The files mentioned below are needed to maintain, troubleshoot and upgrade your cluster:
 
-- `kube_config_rancher-cluster.yml`: The Kubeconfig file for the cluster, this file contains credentials for full access to the cluster. You can use this file to authenticate with a Rancher-launched Kubernetes cluster if Rancher goes down.
+- `config.yaml`: The RKE2 and K3s cluster configuration file.
+- `rke2.yaml` or `k3s.yaml`: The Kubeconfig file for your RKE2 or K3s cluster. This file contains credentials for full access to the cluster. You can use this file to authenticate with a Rancher-launched Kubernetes cluster if Rancher goes down.
 
 For more information on connecting to a cluster without the Rancher authentication proxy and other configuration options, refer to the [kubeconfig file](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md) documentation.
 

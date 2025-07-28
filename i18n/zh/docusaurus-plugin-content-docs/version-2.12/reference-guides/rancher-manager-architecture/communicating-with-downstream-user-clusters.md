@@ -81,7 +81,9 @@ Cluster Agent，也叫做 `cattle-cluster-agent`，是运行在下游集群中�
 
 维护、排除问题和升级集群需要用到以下文件，请妥善保管这些文件：
 
-- `kube_config_rancher-cluster.yml`：集群的 Kubeconfig 文件，包含完全访问集群的凭证。如果 Rancher 出现问题时，你可以使用此文件认证由 Rancher 启动的 Kubernetes 集群。
+
+- `config.yaml`: The RKE2 and K3s cluster configuration file.
+- `rke2.yaml` or `k3s.yaml`: The Kubeconfig file for your RKE2 or K3s cluster. This file contains credentials for full access to the cluster. You can use this file to authenticate with a Rancher-launched Kubernetes cluster if Rancher goes down.
 
 有关在没有 Rancher 认证代理和其他配置选项的情况下连接到集群的更多信息，请参见 [kubeconfig 文件](../../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md)。
 
