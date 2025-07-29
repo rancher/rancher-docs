@@ -6,7 +6,6 @@ title: Rancher Server 配置
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/reference-guides/cluster-configuration/rancher-server-configuration"/>
 </head>
 
-- [RKE1 集群配置](rke1-cluster-configuration.md)
 - [RKE2 集群配置](rke2-cluster-configuration.md)
 - [K3s 集群配置](k3s-cluster-configuration.md)
 - [EKS 集群配置](eks-cluster-configuration.md)
