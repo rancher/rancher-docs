@@ -4,6 +4,16 @@ title: Kubernetes 概念
 
 本文解释了 Kubernetes 的相关概念，以便让你更好地了解 Rancher 的运行机制。本文仅对 Kubernetes 组件进行了简单的描述。如需了解更多详情，请参见 [Kubernetes 组件的官方文档](https://kubernetes.io/docs/concepts/overview/components/)。
 
+## 关于 Docker
+
+Docker 是容器打包和运行时系统的标准。开发者在 Dockerfiles 中构建容器镜像，并在 Docker 镜像仓库中分发容器镜像。[Docker Hub](https://hub.docker.com) 是市面上主流的公有镜像仓库。许多企业还创建私有 Docker 镜像仓库。Docker 主要用于管理单个节点上的容器。
+
+:::note
+
+由于 Kubernetes 已经成为了容器管理的主流工具，所以从 Rancher 2.x 版本开始，我们不再支持 Docker Swarm。如果你有使用 Docker 管理容器的需求，可以安装 Rancher 1.6 进行操作。
+
+:::
+
 ## 关于 Kubernetes
 
 Kubernetes 是容器和集群管理的标准。YAML 文件规定了组成一个应用所需的容器和其他资源。Kubernetes 提供了调度、伸缩、服务发现、健康检查、密文管理和配置管理等功能。
