@@ -10,13 +10,7 @@ This page explains concepts related to Kubernetes that are important for underst
 
 ## About Docker
 
-Docker is the container packaging and runtime standard. Developers build container images from Dockerfiles and distribute container images from Docker registries. [Docker Hub](https://hub.docker.com) is the most popular public registry. Many organizations also set up private Docker registries. Docker is primarily used to manage containers on individual nodes.
-
-:::note
-
-Although Rancher 1.6 supported Docker Swarm clustering technology, it is no longer supported in Rancher 2.x due to the success of Kubernetes.
-
-:::
+Docker is a container packaging and runtime standard. Developers can build container images from Dockerfiles and distribute container images from Docker registries. [Docker Hub](https://hub.docker.com) is a popular public registry. Many organizations also set up private Docker registries. Docker is primarily used to manage containers on individual nodes.
 
 ## About Kubernetes
 

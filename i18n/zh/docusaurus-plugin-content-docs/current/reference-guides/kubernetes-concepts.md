@@ -6,13 +6,7 @@ title: Kubernetes 概念
 
 ## 关于 Docker
 
-Docker 是容器打包和运行时系统的标准。开发者在 Dockerfiles 中构建容器镜像，并在 Docker 镜像仓库中分发容器镜像。[Docker Hub](https://hub.docker.com) 是市面上主流的公有镜像仓库。许多企业还创建私有 Docker 镜像仓库。Docker 主要用于管理单个节点上的容器。
-
-:::note
-
-由于 Kubernetes 已经成为了容器管理的主流工具，所以从 Rancher 2.x 版本开始，我们不再支持 Docker Swarm。如果你有使用 Docker 管理容器的需求，可以安装 Rancher 1.6 进行操作。
-
-:::
+Docker 是一个容器打包和运行时标准。开发者可以使用 Dockerfile 构建容器镜像，并从 Docker 镜像仓库分发容器镜像。[Docker Hub](https://hub.docker.com) 是一个流行的公共镜像仓库。许多组织也建立了私有 Docker 镜像仓库。Docker 主要用于管理单个节点上的容器。
 
 ## 关于 Kubernetes
 
