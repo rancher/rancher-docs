@@ -10,11 +10,12 @@ If you operate Rancher behind a proxy and you want to access services through th
 
 Make sure `NO_PROXY` contains the network addresses, network address ranges and domains that should be excluded from using the proxy.
 
-| Environment variable | Purpose                                                                                                                                                                                                                                                                                                                                                                                                                              |
-|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| HTTP_PROXY           | Proxy address to use when initiating HTTP connection(s)                                                                                                                                                                                                                                                                                                                                                                              |
-| HTTPS_PROXY          | Proxy address to use when initiating HTTPS connection(s)                                                                                                                                                                                                                                                                                                                                                                             |
-| NO_PROXY             | Network address(es), network address range(s) and domains to exclude from using the proxy when initiating connection(s). <br/><br/> The value must be a comma-delimited string which contains IP addresses, CIDR notation, domain names, or special DNS labels (*). For a full description of the expected value format, refer to the [**upstream Golang documentation**](https://pkg.go.dev/golang.org/x/net/http/httpproxy#Config) |
+| Environment variable | Purpose                                                                                                                 |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| HTTP_PROXY           | Proxy address to use when initiating HTTP connection(s)                                                                 |
+| HTTPS_PROXY          | Proxy address to use when initiating HTTPS connection(s)                                                                |
+| NO_PROXY             | Network address(es), network address range(s) and domains to exclude from using the proxy when initiating connection(s) |
+
 :::note Important:
 
 NO_PROXY must be in uppercase to use network range (CIDR) notation.
