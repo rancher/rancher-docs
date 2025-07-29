@@ -25,7 +25,7 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build website
         env:
-          NODE_OPTIONS: "--max_old_space_size=7168"
+          NODE_OPTIONS: "--max_old_space_size=8168"
         run: yarn build --no-minify
 
       - name: Upload Build Artifact
