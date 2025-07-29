@@ -12,7 +12,6 @@ Rancher provides specific security hardening guides for each supported Rancher v
 
 Rancher uses the following Kubernetes distributions:
 
-- [**RKE**](https://rancher.com/docs/rke/latest/en/), Rancher Kubernetes Engine, is a CNCF-certified Kubernetes distribution that runs entirely within Docker containers.
 - [**RKE2**](https://docs.rke2.io/) is a fully conformant Kubernetes distribution that focuses on security and compliance within the U.S. Federal Government sector.
 - [**K3s**](https://docs.k3s.io/) is a fully conformant, lightweight Kubernetes distribution. It is easy to install, with half the memory requirement of upstream Kubernetes, all in a binary of less than 100 MB.
 
@@ -21,12 +20,6 @@ To harden a Kubernetes cluster that's running a distribution other than those li
 ## Hardening Guides and Benchmark Versions
 
 Each self-assessment guide is accompanied by a hardening guide. These guides were tested alongside the listed Rancher releases. Each self-assessment guides was tested on a specific Kubernetes version and CIS benchmark version. If a CIS benchmark has not been validated for your Kubernetes version, you can use the existing guides until a guide for your version is added.
-
-### RKE Guides
-
-| Kubernetes Version | CIS Benchmark Version | Self Assessment Guide | Hardening Guides |
-|--------------------|-----------------------|-----------------------|------------------|
-| Kubernetes v1.25/v1.26/v1.27 | CIS v1.7 | [Link](rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27.md) | [Link](rke1-hardening-guide/rke1-hardening-guide.md) |
 
 ### RKE2 Guides
 

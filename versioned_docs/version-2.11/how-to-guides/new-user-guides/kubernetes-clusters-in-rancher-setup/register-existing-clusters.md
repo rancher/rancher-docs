@@ -57,6 +57,14 @@ GKE Autopilot clusters aren't supported. See [Compare GKE Autopilot and Standard
 9. If you are using self-signed certificates, you will receive the message `certificate signed by unknown authority`. To work around this validation, copy the command starting with `curl` displayed in Rancher to your clipboard. Then run the command on a node where kubeconfig is configured to point to the cluster you want to import.
 10. When you finish running the command(s) on your node, click **Done**.
 
+:::important
+
+The `NO_PROXY` environment variable is not standardized, and the accepted format of the value can differ between applications. When configuring the `NO_PROXY` variable in Rancher, the value must adhere to the format expected by Golang.
+
+Specifically, the value should be a comma-delimited string which only contains IP addresses, CIDR notation, domain names, or special DNS labels (e.g. `*`). For a full description of the expected value format, refer to the [**upstream Golang documentation**](https://pkg.go.dev/golang.org/x/net/http/httpproxy#Config)
+
+:::
+
 **Result:**
 
 - Your cluster is registered and assigned a state of **Pending**. Rancher is deploying resources to manage your cluster.

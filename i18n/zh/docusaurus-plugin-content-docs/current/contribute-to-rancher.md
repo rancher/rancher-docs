@@ -35,7 +35,6 @@ title: 参与 Rancher 社区贡献
 | (Rancher) Docker Machine | https://github.com/rancher/machine | 使用主机驱动时使用的 Docker Machine 二进制文件的源码仓库。这是 `docker/machine` 仓库的一个 fork。 |
 | machine-package | https://github.com/rancher/machine-package | 用于构建 Rancher Docker Machine 二进制文件。 |
 | kontainer-engine | https://github.com/rancher/kontainer-engine | kontainer-engine 的源码仓库，它是配置托管 Kubernetes 集群的工具。 |
-| RKE repository | https://github.com/rancher/rke | Rancher Kubernetes Engine 的源码仓库，该工具可在任何主机上配置 Kubernetes 集群。 |
 | CLI | https://github.com/rancher/cli | Rancher 2.x 中使用的 Rancher CLI 的源码仓库。 |
 | (Rancher) Helm repository | https://github.com/rancher/helm | 打包的 Helm 二进制文件的源码仓库。这是 `helm/helm` 仓库的一个 fork。 |
 | Telemetry repository | https://github.com/rancher/telemetry | Telemetry 二进制文件的源码仓库。 |
@@ -105,27 +104,6 @@ title: 参与 Rancher 社区贡献
       logs \
       -l app=rancher \
       --timestamps=true
-      ```
-      - 在 RKE 集群的每个节点上使用 `docker` 的 Docker 安装
-
-      ```
-      docker logs \
-      --timestamps \
-      $(docker ps | grep -E "rancher/rancher@|rancher_rancher" | awk '{ print $1 }')
-      ```
-      - 使用 RKE 附加组件的 Kubernetes 安装
-
-      :::note
-
-      确保你配置了正确的 kubeconfig（例如，如果 Rancher Server 安装在 Kubernetes 集群上，则 `export KUBECONFIG=$PWD/kube_config_cluster.yml`）或通过 UI 使用了嵌入式 kubectl。
-
-      :::
-
-      ```
-      kubectl -n cattle-system \
-      logs \
-      --timestamps=true \
-      -f $(kubectl --kubeconfig $KUBECONFIG get pods -n cattle-system -o json | jq -r '.items[] | select(.spec.containers[].name="cattle-server") | .metadata.name')
       ```
    - 系统日志记录（可能不存在，取决于操作系统）
       - `/var/log/messages`
