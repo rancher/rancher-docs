@@ -53,6 +53,8 @@ All configured audit log policies are additive.
 
 Redaction policies for headers utilize a regular expression (regex) engine to redact headers, while a JSONPath engine is used to redact request/response headers.
 
+The JSONPath engine does not support the script or filter expressions. For getting started with JSONPath expressions, a good resource to consult is [Stafan Goessner's article on JSONPath](https://goessner.net/articles/JsonPath/).
+
 The structure of an audit policy CR is as follows:
 
 ```yaml
