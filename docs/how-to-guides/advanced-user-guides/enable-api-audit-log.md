@@ -24,8 +24,8 @@ The usage below defines rules about what the audit log should record and what da
 
 | Parameter                             | Description                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `AUDIT_LOG_ENABLED` | `false` - Disable audit log (default setting).<br/>`true` - Enable audit log |
-| `AUDIT_LEVEL` | `0` - Log request and response metadata (default setting).<br/>`1` - Log request and response headers <br/>`2` - Log request body .<br/>`3` - Log response body. Each log level is cumulative : each subsequent level logs the previous level data. Each log transaction for a request/response pair uses the same `auditID` value.<br/><br/>See [Audit Level Logging](#audit-log-levels) for a table that displays what each setting logs. |
+| `AUDIT_LOG_ENABLED` | `false` - Disables the audit log (default setting).<br/>`true` - Enables the audit log. |
+| `AUDIT_LEVEL` | `0` - Log request and response metadata (default setting).<br/>`1` - Log request and response headers.<br/>`2` - Log request body.<br/>`3` - Log response body. Each log level is cumulative and each subsequent level logs the previous level data. Each log transaction for a request/response pair uses the same `auditID` value.<br/><br/>See [Audit Level Logging](#audit-log-levels) for a table that displays what each setting logs. |
 | `AUDIT_LOG_PATH`                      | Log path for Rancher Server API. Default path is `/var/log/auditlog/rancher-api-audit.log`. You can mount the log directory to host. <br/><br/>Usage Example: `AUDIT_LOG_PATH=/my/custom/path/`<br/>                                                                                                                                                                           |
 | `AUDIT_LOG_MAXAGE`                    | Defined the maximum number of days to retain old audit log files. Default is 10 days.                                                                                                                                                                                                                                                                                          |
 | `AUDIT_LOG_MAXBACKUP`                 | Defines the maximum number of audit log files to retain. Default is 10.                                                                                                                                                                                                                                                                                                        |
@@ -47,11 +47,11 @@ The following table displays what parts of API transactions are logged for each 
 
 ## Audit Log policies
 
-Audit log policies allow end users to configure redactions using `AuditPolicy` cluster-scoped CRs in addition to the [defaults](#default-redactions--filters).
+Audit log policies allow end users to configure redactions using `AuditPolicy` cluster-scoped CRs in addition to the [default redactions and filters](#default-redactions--filters).
 
 All configured audit log policies are additive.
 
-Redaction policies for headers use a regex engine to redact headers, while a JsonPath engine is used to redact request/response headers.
+Redaction policies for headers utilize a regular expression (regex) engine to redact headers, while a JSONPath engine is used to redact request/response headers.
 
 The structure of an audit policy CR is as follows:
 
@@ -104,7 +104,6 @@ spec:
       requestUri: ".*login.*"
 ```
 
-
 The following example shows how to redact specific fields containing `gitCommint` in request/response bodies:
 
 ```yaml
@@ -120,7 +119,7 @@ spec:
 
 ### Default redactions & filters
 
-The audit log controller comes with default built-in redactions for common-sensitive information.
+The audit log controller comes with default built-in redactions for common sensitive information.
 
 #### Redacted headers
 
@@ -162,12 +161,11 @@ Generic body regex redactor:
 
 #### Cluster Driver
 
-By default any API request with fields tied to cluster drivers will have any non `public*` or `optional*` fields redacted by the audit log controller.
+By default, any API request with fields tied to cluster drivers will have any non `public*` or `optional*` fields redacted by the audit log controller.
 
 #### Redacted URIs
 
-Any endpoint containing `secrets`,or `configmaps` will have relevant fields stripped from both request and response bodies.
-In addition, any endpoint containing `/v3/imports/*`, will have redacted information in its URI.
+Any endpoint containing `secrets` or `configmaps` will have relevant fields stripped from both the request and response bodies. Additionally, any endpoint containing `/v3/imports/*` will have its URI redacted.
 
 
 ## Viewing API Audit Logs
@@ -198,7 +196,7 @@ After you enable auditing, each API request or response is logged by Rancher in 
 
 ### Metadata Level
 
-If you set your `AUDIT_LEVEL` to `0`, Rancher logs the metadata header for every API request, but neither the body nor the request/response headers. The metadata provides basic information about the API transaction, such as the transaction's ID, who initiated the transaction, the time it occurred, etc.
+If you set your `AUDIT_LEVEL` to `0`, Rancher logs the metadata header for every API request, but neither the body nor the request and response headers. The metadata provides basic information about the API transaction, such as the transaction ID, the initiator of the transaction, the time it occurred, etc. 
 
 ```json
 {
@@ -235,7 +233,7 @@ If you set your `AUDIT_LEVEL` to `0`, Rancher logs the metadata header for every
 
 ### Metadata and headers level
 
-If you set your `AUDIT_LEVEL` to `1`, Rancher logs the metadata, and request/response headers for every API request.
+If you set your `AUDIT_LEVEL` to `1`, Rancher logs the metadata and the request and response headers for every API request.
 
 ```json
 {
@@ -330,7 +328,7 @@ If you set your `AUDIT_LEVEL` to `1`, Rancher logs the metadata, and request/res
 
 ### Metadata, headers and  Request Body Level
 
-If you set your `AUDIT_LEVEL` to `2`, Rancher logs the metadata, request/response headers and request body for every API request.
+If you set your `AUDIT_LEVEL` to `2`, Rancher logs the metadata, the request and response headers and the request body for every API request.
 
 The code sample below depicts an API request, with both its metadata, headers and request body.
 
@@ -469,7 +467,7 @@ The code sample below depicts an API request, with both its metadata, headers an
 
 ### Metadata, Headers, Request Body and Response Body Level
 
-If you set your `AUDIT_LEVEL` to `3`, Rancher logs the metadata, request/response headers, request body and request reponse.
+If you set your `AUDIT_LEVEL` to `3`, Rancher logs the metadata, request and response headers and request body and response.
 
 The code sample below depicts an example of an API request with that information logged.
 
