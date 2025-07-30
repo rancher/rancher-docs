@@ -8,7 +8,7 @@ title: Tokens
 
 ## Token Resource
 
-Rancher has an imperative API resource `tokens.ext.cattle.io` that allows for generating tokens for authenticating with Rancher.
+Rancher has an imperative API resource `tokens.ext.cattle.io` that allows you to generate tokens for authenticating with Rancher.
 
 ```sh
 kubectl api-resources --api-group=ext.cattle.io
