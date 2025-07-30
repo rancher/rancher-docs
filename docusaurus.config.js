@@ -809,10 +809,6 @@ module.exports = {
             from: "/pages-for-subheaders/istio",
           },
           {
-            to: "/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide",
-            from: "/pages-for-subheaders/k3s-hardening-guide",
-          },
-          {
             to: "/how-to-guides/new-user-guides/kubernetes-cluster-setup",
             from: "/pages-for-subheaders/kubernetes-cluster-setup",
           },
@@ -913,10 +909,6 @@ module.exports = {
             from: "/pages-for-subheaders/rancher-behind-an-http-proxy",
           },
           {
-            to: "/reference-guides/rancher-security/hardening-guides",
-            from: "/pages-for-subheaders/rancher-hardening-guides",
-          },
-          {
             to: "/reference-guides/best-practices/rancher-managed-clusters",
             from: "/pages-for-subheaders/rancher-managed-clusters",
           },
@@ -943,14 +935,6 @@ module.exports = {
           {
             to: "/getting-started/installation-and-upgrade/resources",
             from: "/pages-for-subheaders/resources",
-          },
-          {
-            to: "/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide",
-            from: "/pages-for-subheaders/rke1-hardening-guide",
-          },
-          {
-            to: "/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide",
-            from: "/pages-for-subheaders/rke2-hardening-guide",
           },
           {
             to: "/reference-guides/rancher-security/selinux-rpm",
@@ -1503,18 +1487,6 @@ module.exports = {
           {
             to: "/integrations-in-rancher/neuvector",
             from: "/explanations/integrations-in-rancher/neuvector",
-          }, // Redirects for restructure from PR #234 (end)
-          {
-            to: "/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
-            from: "/reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.25",
-          },
-          {
-            to: "/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
-            from: "/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.25",
-          },
-          {
-            to: "/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
-            from: "/reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.25",
           },
           {
             to: "/reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale",
