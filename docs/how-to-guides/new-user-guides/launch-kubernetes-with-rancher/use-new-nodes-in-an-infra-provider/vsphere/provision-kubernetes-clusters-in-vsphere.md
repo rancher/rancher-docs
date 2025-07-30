@@ -17,7 +17,9 @@ Then you will create a vSphere cluster in Rancher, and when configuring the new 
 
 ## Preparation in VMware vSphere
 
-This section describes the requirements for setting up vSphere so that Rancher can provision VMs and clusters.### Create Credentials in VMware vSphere
+This section describes the requirements for setting up vSphere so that Rancher can provision VMs and clusters.
+
+### Create Credentials in VMware vSphere
 
 Before proceeding to create a cluster, you must ensure that you have a vSphere user with sufficient permissions.
 
