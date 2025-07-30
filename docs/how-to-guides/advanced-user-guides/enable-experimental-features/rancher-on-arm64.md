@@ -37,7 +37,7 @@ version's release notes in the following two ways:
 
 - Create custom cluster and adding ARM64 based node(s)
   - Kubernetes cluster version must be 1.12 or higher
-  - CNI Network Provider must be Flannel
+  - CNI Network Provider must be [Flannel](../../../faq/container-network-interface-providers.md#flannel)
 - Importing clusters that contain ARM64 based nodes
   - Kubernetes cluster version must be 1.12 or higher
 

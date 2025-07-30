@@ -49,7 +49,7 @@ CNI network providers using this network model include Calico and Cilium. Cilium
 
 ### RKE2 Kubernetes clusters
 
-Out-of-the-box, Rancher provides the following CNI network providers for RKE2 Kubernetes clusters: Calico, Canal, and Cilium.
+Out-of-the-box, Rancher provides the following CNI network providers for RKE2 Kubernetes clusters: Calico, Canal, Cilium, and Flannel.
 
 You can choose your CNI network provider when you create new Kubernetes clusters from Rancher.
 
@@ -120,6 +120,23 @@ spec:
     - fromEntities:
       - remote-node
 ```
+
+#### Flannel
+
+![Flannel Logo](/img/flannel-logo.png)
+
+Flannel is a simple and easy way to configure L3 network fabric designed for Kubernetes. Flannel runs a single binary agent named flanneld on each host, which is responsible for allocating a subnet lease to each host out of a larger, preconfigured address space. Flannel uses either the Kubernetes API or etcd directly to store the network configuration, the allocated subnets, and any auxiliary data (such as the host's public IP). Packets are forwarded using one of several backend mechanisms, with the default encapsulation being [VXLAN](https://github.com/flannel-io/flannel/blob/master/Documentation/backends.md#vxlan).
+
+Encapsulated traffic is unencrypted by default. Flannel provides two solutions for encryption:
+
+* [IPSec](https://github.com/flannel-io/flannel/blob/master/Documentation/backends.md#ipsec), which makes use of [strongSwan](https://www.strongswan.org/) to establish encrypted IPSec tunnels between Kubernetes workers. It is an experimental backend for encryption.
+* [WireGuard](https://github.com/flannel-io/flannel/blob/master/Documentation/backends.md#wireguard), which is a more faster-performing alternative to strongSwan.
+
+Kubernetes workers should open UDP port `8472` (VXLAN). See [the port requirements for user clusters](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md#networking-requirements) for more details.
+
+![Flannel Diagram](/img/flannel-diagram.png)
+
+For more information, see the [Flannel GitHub Page](https://github.com/flannel-io/flannel).
 
 ## CNI Features by Provider
 
