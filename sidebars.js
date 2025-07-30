@@ -558,8 +558,6 @@ const sidebars = {
                     },
                   ],
                 },
-                "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences",
-
                 "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents",
               ],
             },
