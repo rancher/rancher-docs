@@ -1293,10 +1293,6 @@ module.exports = {
             from: "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/provision-kubernetes-clusters-in-aos",
           },
           {
-            to: "/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences",
-            from: "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/rke1-vs-rke2-differences",
-          },
-          {
             to: "/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents",
             from: "/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/about-rancher-agents",
           },
