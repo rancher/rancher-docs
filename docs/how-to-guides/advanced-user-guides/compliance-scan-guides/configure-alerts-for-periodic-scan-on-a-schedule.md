@@ -32,7 +32,7 @@ To configure alerts for a scan that runs on a schedule,
 1. On the **Clusters** page, go to the cluster where you want to run a Compliance scan and click **Explore**.
 1. Click **compliance > Scan**.
 1. Click **Create**.
-1. Choose a cluster scan profile. The profile determines which compliance version will be used and which tests will be performed. If you choose the Default profile, then the Compliance Operator will choose a profile applicable to the type of Kubernetes cluster it is installed on.
+1. Choose a cluster scan profile. The profile determines which CIS Benchmark version will be used and which tests will be performed. If you choose the Default profile, then the Compliance Operator will choose a profile applicable to the type of Kubernetes cluster it is installed on.
 1. Choose the option **Run scan on a schedule**.
 1. Enter a valid [cron schedule expression](https://en.wikipedia.org/wiki/Cron#CRON_expression) in the field **Schedule**.
 1. Check the boxes next to the Alert types under **Alerting**.
