@@ -8,11 +8,12 @@ title: Kubeconfigs
 
 ## Kubeconfig Resource
 
-Kubeconfig is a Rancher resource `kubeconfigs.ext.cattle.io` that allows generating  `v1.Config` kubeconfig files for interacting with Rancher and clusters managed by Rancher.
+Kubeconfig is a Rancher resource `kubeconfigs.ext.cattle.io` that allows generating `v1.Config` kubeconfig files for interacting with Rancher and clusters managed by Rancher.
 
 ```sh
 kubectl api-resources --api-group=ext.cattle.io
 ```
+
 To get a description of the fields and structure of the Kubeconfig resource, run:
 
 ```sh
