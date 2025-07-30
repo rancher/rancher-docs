@@ -943,11 +943,11 @@ const sidebars = {
                     "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/digitalocean",
                     "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/azure",
                     "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/google-gce"
-                  ],
-                },
-              ],
-            },
-          ],
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           type: "category",
@@ -1042,49 +1042,6 @@ const sidebars = {
             id: "reference-guides/rancher-security/rancher-security",
           },
           items: [
-            {
-              type: "category",
-              label: "Hardening Guides",
-              link: {
-                type: "doc",
-                id: "reference-guides/rancher-security/hardening-guides/hardening-guides",
-              },
-              items: [
-                {
-                  type: "category",
-                  label: "RKE Hardening Guides",
-                  link: {
-                    type: "doc",
-                    id: "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-hardening-guide",
-                  },
-                  items: [
-                    "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
-                  ],
-                },
-                {
-                  type: "category",
-                  label: "RKE2 Hardening Guides",
-                  link: {
-                    type: "doc",
-                    id: "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-hardening-guide",
-                  },
-                  items: [
-                    "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
-                  ],
-                },
-                {
-                  type: "category",
-                  label: "K3s Hardening Guides",
-                  link: {
-                    type: "doc",
-                    id: "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-hardening-guide",
-                  },
-                  items: [
-                    "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27",
-                  ],
-                },
-              ],
-            },
             {
               type: "category",
               label: "SELinux RPM",

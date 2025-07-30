@@ -94,11 +94,11 @@ In order to pass the "Hardened" profile, you will need to follow the steps on th
 
 The default profile and the supported CIS benchmark version depends on the type of cluster that will be scanned:
 
-The `rancher-compliance` supports the CIS 1.6 Benchmark version.
+The `rancher-compliance` supports the CIS 1.9 Benchmark version.
 
-- For RKE Kubernetes clusters, the RKE Permissive 1.6 profile is the default.
+- For RKE Kubernetes clusters, the RKE Permissive 1.9 profile is the default.
 - EKS and GKE have their own CIS Benchmarks published by `kube-bench`. The corresponding test profiles are used by default for those clusters.
-- For RKE2 Kubernetes clusters, the RKE2 Permissive 1.6 profile is the default.
+- For RKE2 Kubernetes clusters, the RKE2 Permissive 1.9 profile is the default.
 - For cluster types other than RKE, RKE2, EKS and GKE, the Generic CIS 1.5 profile will be used by default.
 
 ## About Skipped and Not Applicable Tests

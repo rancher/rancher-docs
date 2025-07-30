@@ -20,7 +20,7 @@ To run a scan,
 1. On the **Clusters** page, go to the cluster where you want to run a compliance scan and click **Explore**.
 1. Click **Compliance > Scan**.
 1. Click **Create**.
-1. Choose a cluster scan profile. The profile determines which Compliance version will be used and which tests will be performed. If you choose the Default profile, then the Compliance Operator will choose a profile applicable to the type of Kubernetes cluster it is installed on.
+1. Choose a cluster scan profile. The profile determines which CIS Benchmark version will be used and which tests will be performed. If you choose the Default profile, then the Compliance Operator will choose a profile applicable to the type of Kubernetes cluster it is installed on.
 1. Click **Create**.
 
 **Result:** A report is generated with the scan results. To see the results, click the name of the scan that appears.
