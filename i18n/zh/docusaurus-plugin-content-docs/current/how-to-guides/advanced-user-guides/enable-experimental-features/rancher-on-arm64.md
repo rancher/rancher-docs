@@ -32,7 +32,7 @@ title: "在 ARM64 上运行 Rancher（实验性）"
 
 - 创建自定义集群并添加使用 ARM64 架构的节点
    - Kubernetes 集群必须为 1.12 或更高版本
-   - CNI 网络插件必须是 [Flannel](../../../faq/container-network-interface-providers.md#flannel)
+   - CNI 网络插件必须是 Flannel
 - 导入包含使用 ARM64 架构的节点的集群
    - Kubernetes 集群必须为 1.12 或更高版本
 
