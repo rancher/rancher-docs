@@ -786,7 +786,6 @@ const sidebars = {
                 id: "how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features",
               },
               items: [
-                "how-to-guides/advanced-user-guides/enable-experimental-features/ui-server-side-pagination",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features",
@@ -802,6 +801,7 @@ const sidebars = {
             "how-to-guides/advanced-user-guides/enable-cluster-agent-scheduling-customization",
             "how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
             "how-to-guides/advanced-user-guides/configure-oidc-provider",
+            "how-to-guides/advanced-user-guides/ui-server-side-pagination"
           ],
         },
       ],

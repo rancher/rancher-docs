@@ -54,27 +54,26 @@ You can enable this feature on a per-cluster basis. For more information, please
 - `rke1-custom-node-cleanup`: Enables cleanup of deleted RKE1 custom nodes. We recommend that you keep this flag enabled, to prevent removed nodes from attempting to rejoin the cluster.
 - `rke2`: Enables provisioning RKE2 clusters. This flag is enabled by default.
 - `token-hashing`: Enables token hashing. Once enabled, existing tokens will be hashed and all new tokens will be hashed automatically with the SHA256 algorithm. Once a token is hashed it can't be undone. This flag can't be disabled after its enabled. See [API Tokens](../../../api/api-tokens.md#token-hashing) for more information.
-- `uiextension`: Enables UI extensions. This flag is enabled by default. Enabling or disabling the flag forces the Rancher pod to restart. The first time this flag is set to `true`, it creates a CRD and enables the controllers and endpoints necessary for the feature to work. If set to `false`, it disables the previously mentioned controllers and endpoints. Setting `uiextension` to `false` has no effect on the CRD -- it does not create a CRD if it does not yet exist, nor does it delete the CRD if it already exists. 
+- `uiextension`: Enables UI extensions. This flag is enabled by default. Enabling or disabling the flag forces the Rancher pod to restart. The first time this flag is set to `Active`, it creates a CRD and enables the controllers and endpoints necessary for the feature to work. If set to `Disabled`, it disables the previously mentioned controllers and endpoints. Setting `uiextension` to `Disabled` has no effect on the CRD -- it does not create a CRD if it does not yet exist, nor does it delete the CRD if it already exists. 
 - `unsupported-storage-drivers`: Enables types for storage providers and provisioners that aren't enabled by default. See [Allow Unsupported Storage Drivers](../../../how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md) for more information.
-- `ui-sql-cache`: Enables a SQLite-based cache for UI tables. See [UI Server-Side Pagination](../../../how-to-guides/advanced-user-guides/enable-experimental-features/ui-server-side-pagination.md) for more information.
-
+- `ui-sql-cache`: Enables an SQLite-based cache for UI tables and Server-Side Pagination. See [UI Server-Side Pagination](../../../how-to-guides/advanced-user-guides/ui-server-side-pagination.md) for more information.
 
 The following table shows the availability and default values for some feature flags in Rancher. Features marked "GA" are generally available:
 
 | Feature Flag Name             | Default Value | Status       | Available As Of | Additional Information |
 | ----------------------------- | ------------- | ------------ | --------------- | ---------------------- |
-| `aggregated-roletemplates` | `false` | Highly experimentatl | v2.11.0 | This flag value is locked on install and can't be changed. |
-| `clean-stale-secrets` | `true` | GA | v2.10.2 | |
-| `continuous-delivery` | `true` | GA | v2.6.0 | |
-| `external-rules` | v2.7.14: `false`, v2.8.5: `true` | Removed | v2.7.14, v2.8.5 | This flag affected [external `RoleTemplate` behavior](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#external-roletemplate-behavior). It is removed in Rancher v2.9.0 and later as the behavior is enabled by default. |
-| `fleet`  | `true` | Can no longer be disabled | v2.6.0 | |
-| `fleet`  | `true` | GA | v2.5.0 | |
-| `harvester` | `true` | Experimental | v2.6.1 | |
-| `imperative-api-extension` | `true` | GA | v2.11.0 | |
-| `legacy` | `false` for new installs, `true` for upgrades | GA | v2.6.0 | |
-| `managed-system-upgrade-controller` | `true` | GA | v2.10.0 | |
+| `aggregated-roletemplates` | `Disabled` | Highly experimental | v2.11.0 | This flag value is locked on install and can't be changed. |
+| `clean-stale-secrets` | `Active` | GA | v2.10.2 | |
+| `continuous-delivery` | `Active` | GA | v2.6.0 | |
+| `external-rules` | v2.7.14: `Disabled`, v2.8.5: `Active` | Removed | v2.7.14, v2.8.5 | This flag affected [external `RoleTemplate` behavior](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#external-roletemplate-behavior). It is removed in Rancher v2.9.0 and later as the behavior is enabled by default. |
+| `fleet`  | `Active` | Can no longer be disabled | v2.6.0 | |
+| `fleet`  | `Active` | GA | v2.5.0 | |
+| `harvester` | `Active` | Experimental | v2.6.1 | |
+| `imperative-api-extension` | `Active` | GA | v2.11.0 | |
+| `legacy` | `Disabled` for new installs, `Active` for upgrades | GA | v2.6.0 | |
+| `managed-system-upgrade-controller` | `Active` | GA | v2.10.0 | |
 | `rke1-custom-node-cleanup`| `true` | GA | v2.6.0 | |
 | `rke2` | `true` | Experimental | v2.6.0 | |
-| `token-hashing` | `false` for new installs, `true` for upgrades | GA | v2.6.0 | |
-| `uiextension` | `true` | GA | v2.9.0 | |
-| `ui-sql-cache` | `false` | Highly experimental | v2.9.0 | |
+| `token-hashing` | `Disabled` for new installs, `Active` for upgrades | GA | v2.6.0 | |
+| `uiextension` | `Active` | GA | v2.9.0 | |
+| `ui-sql-cache` | `Active` | GA | v2.9.0 | |
