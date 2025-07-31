@@ -54,11 +54,17 @@ If you use RKE2 to set up a cluster, your nodes must meet the [requirements](htt
 
 ### Launching Kubernetes on New Nodes in an Infrastructure Provider
 
-RKE2 provisioning is built on top of a new provisioning framework that leverages the upstream [Cluster API](https://github.com/kubernetes-sigs/cluster-api) project. With this new provisioning framework, you can:
+RKE2 provisioning is built on top of a new provisioning framework that leverages the upstream [Cluster API (CAPI)](https://github.com/kubernetes-sigs/cluster-api) project. With this new provisioning framework, you can:
 
 - Provision RKE2 clusters onto any provider for which Rancher has a node driver
 - Fully configure RKE2 clusters within Rancher
 - Choose CNI options Calico, Cilium, and Multus in addition to Canal
+
+When you make changes to your cluster configuration in RKE2, this may result in nodes reprovisioning. This is controlled by CAPI controllers and not by Rancher itself. Note that for etcd nodes, the same behavior does not apply.
+
+The following are some specific example configuration changes that may cause the described behavior:
+
+- When editing the cluster and enabling drain before delete, the existing control plane nodes and worker are deleted and new nodes are created.
 
 RKE2 provisioning also includes installing RKE2 on clusters with Windows nodes.
 
