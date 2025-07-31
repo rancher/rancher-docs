@@ -12,8 +12,9 @@ title: 卸载 Rancher
 
 如果删除了 Rancher，访问下游集群的方式取决于集群的类型和集群的创建方式。总而言之：
 
-- **注册集群**：集群不受影响，你可以注册集群前的方法访问该集群。
+- **Registered/Imported clusters:** The cluster will be unaffected and you can access the cluster using the same methods that you did before the cluster was registered into Rancher.
 - **托管的 Kubernetes 集群**：如果你在 Kubernetes 云提供商（例如 EKS、GKE 或 AKS）中创建集群，你可以继续使用提供商的云凭证来管理集群。
+- **Rancher provisioned clusters:** To access an [RKE2/K3s cluster](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) the cluster must have the [authorized cluster endpoint](../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint) enabled, and you must have already downloaded the cluster's kubeconfig file from the Rancher UI. With this endpoint, you can access your cluster with kubectl directly instead of communicating through the Rancher server's [authentication proxy.](../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#1-the-authentication-proxy) For instructions on how to configure kubectl to use the authorized cluster endpoint, refer to the section about directly accessing clusters with [kubectl and the kubeconfig file.](../how-to-guides/new-user-guides/manage-clusters/access-clusters/use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster) These clusters will use a snapshot of the authentication as it was configured when Rancher was removed.
 
 ## 如果我不想再使用 Rancher 了该怎么做？
 
@@ -49,3 +50,11 @@ title: 卸载 Rancher
 3. 单击**删除**。
 
 **结果**：注册的集群已与 Rancher 分离，并在 Rancher 外正常运行。
+
+## What if I don't want my hosted Kubernetes cluster managed by Rancher?
+
+目前，我们没有将这些集群从 Rancher 中分离出来的功能。在这种情况下，“分离”指的是将 Rancher 组件移除出集群，并独立于 Rancher 管理对集群的访问。
+
+[此 issue](https://github.com/rancher/rancher/issues/25234) 跟踪了在没有 Rancher 的情况下管理这些集群的功能。
+
+有关如何在删除 Rancher Server 后访问集群的更多信息，请参阅[本节](#如果删除了-rancher-server该如何访问下游集群)。
