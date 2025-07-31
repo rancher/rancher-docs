@@ -215,7 +215,8 @@
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-keycloak-saml",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-pingidentity",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-okta-saml",
-                    "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-generic-oidc"
+                    "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-generic-oidc",
+                    "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-amazon-cognito"
                   ]
                 },
                 {
@@ -300,7 +301,8 @@
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards",
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates",
                 "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/global-default-private-registry",
-                "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding"
+                "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/custom-branding",
+                "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/notification-center"
               ]
             },
             {
@@ -500,6 +502,7 @@
                     "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster",
                     "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-a-digitalocean-cluster",
                     "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster",
+                    "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-a-google-compute-engine-cluster",
                     {
                       "type": "category",
                       "label": "Creating a VMware vSphere Cluster",
@@ -527,7 +530,6 @@
                     }
                   ]
                 },
-                "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/rke1-vs-rke2-differences",
                 "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/about-rancher-agents"
               ]
             },
@@ -725,21 +727,20 @@
             },
             {
               "type": "category",
-              "label": "CIS Scan Guides",
+              "label": "Compliance Scan Guides",
               "link": {
                 "type": "doc",
-                "id": "how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides"
+                "id": "how-to-guides/advanced-user-guides/compliance-scan-guides/compliance-scan-guides"
               },
               "items": [
-                "how-to-guides/advanced-user-guides/cis-scan-guides/install-rancher-cis-benchmark",
-                "how-to-guides/advanced-user-guides/cis-scan-guides/uninstall-rancher-cis-benchmark",
-                "how-to-guides/advanced-user-guides/cis-scan-guides/run-a-scan",
-                "how-to-guides/advanced-user-guides/cis-scan-guides/run-a-scan-periodically-on-a-schedule",
-                "how-to-guides/advanced-user-guides/cis-scan-guides/skip-tests",
-                "how-to-guides/advanced-user-guides/cis-scan-guides/view-reports",
-                "how-to-guides/advanced-user-guides/cis-scan-guides/enable-alerting-for-rancher-cis-benchmark",
-                "how-to-guides/advanced-user-guides/cis-scan-guides/configure-alerts-for-periodic-scan-on-a-schedule",
-                "how-to-guides/advanced-user-guides/cis-scan-guides/create-a-custom-benchmark-version-to-run"
+                "how-to-guides/advanced-user-guides/compliance-scan-guides/install-rancher-compliance",
+                "how-to-guides/advanced-user-guides/compliance-scan-guides/uninstall-rancher-compliance",
+                "how-to-guides/advanced-user-guides/compliance-scan-guides/run-a-scan",
+                "how-to-guides/advanced-user-guides/compliance-scan-guides/run-a-scan-periodically-on-a-schedule",
+                "how-to-guides/advanced-user-guides/compliance-scan-guides/view-reports",
+                "how-to-guides/advanced-user-guides/compliance-scan-guides/enable-alerting-for-rancher-compliance",
+                "how-to-guides/advanced-user-guides/compliance-scan-guides/configure-alerts-for-periodic-scan-on-a-schedule",
+                "how-to-guides/advanced-user-guides/compliance-scan-guides/create-a-custom-compliance-version-to-run"
               ]
             },
             {
@@ -750,7 +751,6 @@
                 "id": "how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features"
               },
               "items": [
-                "how-to-guides/advanced-user-guides/enable-experimental-features/ui-server-side-pagination",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features",
@@ -764,7 +764,9 @@
             "how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters",
             "how-to-guides/advanced-user-guides/enable-user-retention",
             "how-to-guides/advanced-user-guides/enable-cluster-agent-scheduling-customization",
-            "how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer"
+            "how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer",
+            "how-to-guides/advanced-user-guides/configure-oidc-provider",
+            "how-to-guides/advanced-user-guides/ui-server-side-pagination"
           ]
         }
       ]
@@ -904,7 +906,8 @@
                   "items": [
                     "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/amazon-ec2",
                     "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/digitalocean",
-                    "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/azure"
+                    "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/azure",
+                    "reference-guides/cluster-configuration/downstream-cluster-configuration/machine-configuration/google-gce"
                   ]
                 }
               ]
@@ -1003,49 +1006,6 @@
             "id": "reference-guides/rancher-security/rancher-security"
           },
           "items": [
-            {
-              "type": "category",
-              "label": "Hardening Guides",
-              "link": {
-                "type": "doc",
-                "id": "reference-guides/rancher-security/hardening-guides/hardening-guides"
-              },
-              "items": [
-                {
-                  "type": "category",
-                  "label": "RKE Hardening Guides",
-                  "link": {
-                    "type": "doc",
-                    "id": "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-hardening-guide"
-                  },
-                  "items": [
-                    "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27"
-                  ]
-                },
-                {
-                  "type": "category",
-                  "label": "RKE2 Hardening Guides",
-                  "link": {
-                    "type": "doc",
-                    "id": "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-hardening-guide"
-                  },
-                  "items": [
-                    "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27"
-                  ]
-                },
-                {
-                  "type": "category",
-                  "label": "K3s Hardening Guides",
-                  "link": {
-                    "type": "doc",
-                    "id": "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-hardening-guide"
-                  },
-                  "items": [
-                    "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27"
-                  ]
-                }
-              ]
-            },
             {
               "type": "category",
               "label": "SELinux RPM",
@@ -1165,16 +1125,15 @@
         },
         {
           "type": "category",
-          "label": "CIS Scans",
+          "label": "Compliance Scans",
           "link": {
             "type": "doc",
-            "id": "integrations-in-rancher/cis-scans/cis-scans"
+            "id": "integrations-in-rancher/compliance-scans/compliance-scans"
           },
           "items": [
-            "integrations-in-rancher/cis-scans/configuration-reference",
-            "integrations-in-rancher/cis-scans/rbac-for-cis-scans",
-            "integrations-in-rancher/cis-scans/skipped-and-not-applicable-tests",
-            "integrations-in-rancher/cis-scans/custom-benchmark"
+            "integrations-in-rancher/compliance-scans/configuration-reference",
+            "integrations-in-rancher/compliance-scans/rbac-for-compliance-scans",
+            "integrations-in-rancher/compliance-scans/custom-benchmark"
           ]
         },
         {
@@ -1254,7 +1213,6 @@
         "faq/general-faq",
         "faq/deprecated-features",
         "faq/install-and-configure-kubectl",
-        "faq/dockershim",
         "faq/technical-items",
         "faq/security",
         "faq/container-network-interface-providers",
@@ -1305,7 +1263,9 @@
           "type": "category",
           "label": "Example Workflows",
           "items": [
-            "api/workflows/projects"
+            "api/workflows/projects",
+            "api/workflows/kubeconfigs",
+            "api/workflows/tokens"
           ]
         },
         "api/api-reference",

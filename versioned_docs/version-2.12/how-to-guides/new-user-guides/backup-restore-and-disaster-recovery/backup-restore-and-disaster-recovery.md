@@ -28,7 +28,7 @@ The `rancher-backup` operator introduces three custom resources: Backups, Restor
 
 The ResourceSet defines which Kubernetes resources need to be backed up. The ResourceSet is not available to be configured in the Rancher UI because the values required to back up Rancher are predefined. This ResourceSet should not be modified.
 
-When a Backup custom resource is created, the `rancher-backup` operator calls the `kube-apiserver` to get the resources in the ResourceSet (specifically, the predefined `rancher-resource-set`) that the Backup custom resource refers to.
+When a Backup custom resource is created, the `rancher-backup` operator calls the `kube-apiserver` to get the resources in the ResourceSet that the Backup custom resource refers to.
 
 The operator then creates the backup file in the .tar.gz format and stores it in the location configured in the Backup resource.
 

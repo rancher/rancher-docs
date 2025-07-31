@@ -14,7 +14,6 @@ For information on editing cluster membership, go to [this page.](../../how-to-g
 
 The cluster configuration options depend on the type of Kubernetes cluster:
 
-- [RKE Cluster Configuration](rancher-server-configuration/rke1-cluster-configuration.md)
 - [RKE2 Cluster Configuration](rancher-server-configuration/rke2-cluster-configuration.md)
 - [K3s Cluster Configuration](rancher-server-configuration/k3s-cluster-configuration.md)
 - [EKS Cluster Configuration](rancher-server-configuration/eks-cluster-configuration.md)

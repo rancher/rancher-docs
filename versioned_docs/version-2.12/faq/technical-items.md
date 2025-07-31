@@ -64,7 +64,7 @@ The Layer-4 Load Balancer is created as `type: LoadBalancer`. In Kubernetes, thi
 ## Where is the state of Rancher stored?
 
 - Docker Install: in the embedded etcd of the `rancher/rancher` container, located at `/var/lib/rancher`.
-- Kubernetes install: in the etcd of the RKE cluster created to run Rancher.
+- Kubernetes install: default location is in the `/var/lib/rancher/rke2` or `/var/lib/rancher/k3s` directories of the respective RKE2/K3s cluster created to run Rancher.
 
 ## How are the supported Docker versions determined?
 
@@ -99,7 +99,7 @@ When the node is removed from the cluster, and the node is cleaned, you can add 
 
 ## How can I add more arguments/binds/environment variables to Kubernetes components in a Rancher Launched Kubernetes cluster?
 
-You can add more arguments/binds/environment variables via the [Config File](../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#rke-cluster-config-file-reference) option in Cluster Options. For more information, see the [Extra Args, Extra Binds, and Extra Environment Variables](https://rancher.com/docs/rke/latest/en/config-options/services/services-extras/) in the RKE documentation or browse the [Example Cluster.ymls](https://rancher.com/docs/rke/latest/en/example-yamls/).
+You can add more arguments/binds/environment variables via the respective [RKE2 Config File](../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md#cluster-configuration) or [K3s Config File](../reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration.md#cluster-configuration).
 
 ## How do I check if my certificate chain is valid?
 
