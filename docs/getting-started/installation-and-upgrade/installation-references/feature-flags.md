@@ -51,7 +51,6 @@ You can enable this feature on a per-cluster basis. For more information, please
 :::
 
 - `multi-cluster-management`: Allows multi-cluster provisioning and management of Kubernetes clusters. This flag can only be set at install time. It can't be enabled or disabled later.
-- `rke1-custom-node-cleanup`: Enables cleanup of deleted RKE1 custom nodes. We recommend that you keep this flag enabled, to prevent removed nodes from attempting to rejoin the cluster.
 - `rke2`: Enables provisioning RKE2 clusters. This flag is enabled by default.
 - `token-hashing`: Enables token hashing. Once enabled, existing tokens will be hashed and all new tokens will be hashed automatically with the SHA256 algorithm. Once a token is hashed it can't be undone. This flag can't be disabled after its enabled. See [API Tokens](../../../api/api-tokens.md#token-hashing) for more information.
 - `uiextension`: Enables UI extensions. This flag is enabled by default. Enabling or disabling the flag forces the Rancher pod to restart. The first time this flag is set to `Active`, it creates a CRD and enables the controllers and endpoints necessary for the feature to work. If set to `Disabled`, it disables the previously mentioned controllers and endpoints. Setting `uiextension` to `Disabled` has no effect on the CRD -- it does not create a CRD if it does not yet exist, nor does it delete the CRD if it already exists. 
@@ -72,7 +71,6 @@ The following table shows the availability and default values for some feature f
 | `imperative-api-extension` | `Active` | GA | v2.11.0 | |
 | `legacy` | `Disabled` for new installs, `Active` for upgrades | GA | v2.6.0 | |
 | `managed-system-upgrade-controller` | `Active` | GA | v2.10.0 | |
-| `rke1-custom-node-cleanup`| `true` | GA | v2.6.0 | |
 | `rke2` | `true` | Experimental | v2.6.0 | |
 | `token-hashing` | `Disabled` for new installs, `Active` for upgrades | GA | v2.6.0 | |
 | `uiextension` | `Active` | GA | v2.9.0 | |

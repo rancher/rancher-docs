@@ -20,7 +20,6 @@ Rancher 可以安装在任何 Kubernetes 集群上。这个集群可以使用上
 
 你可参考以下教程，以获得设置 Kubernetes 集群的帮助：
 
-- **RKE**：[安装 RKE Kubernetes 集群的教程](../../../how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher.md)；[为高可用 RKE 集群设置基础设施的教程](../../../how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster.md)。
 - **K3s**：[安装 K3s Kubernetes 集群的教程](../../../how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher.md)；[设置高可用 K3s 集群的基础设施的教程](../../../how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster.md)。
 - **RKE2:** ：[安装 RKE2 Kubernetes 集群的教程](../../../how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher.md)；[设置高可用 RKE2 集群的基础设施的教程](../../../how-to-guides/new-user-guides/infrastructure-setup/ha-rke2-kubernetes-cluster.md)。
 - **Amazon EKS**：[在 Amazon EKS 上安装 Rancher 以及如何安装 Ingress Controller 以访问 Rancher Server](rancher-on-amazon-eks.md)。
@@ -32,7 +31,7 @@ Rancher 可以安装在任何 Kubernetes 集群上。这个集群可以使用上
 
 Rancher UI 和 API 通过 Ingress 公开。换言之，安装 Rancher 的 Kubernetes 集群必须包含一个 Ingress Controller。
 
-对于 RKE、RKE2 和 K3s，你不需要手动安装 Ingress Controller，因为它是默认安装的。
+对于 RKE2 和 K3s，你不需要手动安装 Ingress Controller，因为它是默认安装的。
 
 对于默认不包含 Ingress Controller 的发行版（例如 EKS、GKE 或 AKS 等托管 Kubernetes 集群），你必须先部署 Ingress Controller。请注意，Rancher Helm Chart 默认情况下不会在 Ingress 上设置 `ingressClassName`。因此，你必须将 Ingress Controller 配置为在没有 `ingressClassName` 的情况下也可以监视 Ingress。
 
