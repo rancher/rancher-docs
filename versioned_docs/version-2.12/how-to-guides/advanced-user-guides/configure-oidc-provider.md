@@ -7,7 +7,7 @@ title: Configure Rancher as an OIDC provider
 </head>
 
 Rancher can function as a standard OpenID Connect (OIDC) provider, allowing external applications to use Rancher for authentication.
-This can be used for enabling single sign-on (SSO) across Rancher Prime components. For example, see the [documentation](https://documentation.suse.com/cloudnative/suse-observability/next/en/setup/security/authentication/oidc.html) for configuring the OIDC provider for SUSE Observability.
+This can be used for enabling single sign-on (SSO) across Rancher Prime components. For example, see the [documentation](https://documentation.suse.com/cloudnative/suse-observability/latest/en/setup/security/authentication/oidc.html) for configuring the OIDC provider for SUSE Observability.
 
 The OIDC provider can be enabled with the `oidc-provider` feature flag. When this flag is on the following endpoints are available:
 
