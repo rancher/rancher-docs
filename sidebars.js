@@ -1241,7 +1241,6 @@ const sidebars = {
         "faq/general-faq",
         "faq/deprecated-features",
         "faq/install-and-configure-kubectl",
-        "faq/dockershim",
         "faq/technical-items",
         "faq/security",
         "faq/container-network-interface-providers",
