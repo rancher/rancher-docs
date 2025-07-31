@@ -21,7 +21,6 @@ title: 功能开关
 - `istio-virtual-service-ui`：启用[可视界面](../../../how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features.md)来创建、读取、更新和删除 Istio 虚拟服务和目标规则，这些都是 Istio 流量管理功能。
 - `legacy`：启用 2.5.x 及更早版本的一组功能，这些功能正逐渐被新的实现淘汰。它们是已弃用以及后续可用于新版本的功能组合。新的 Rancher 安装会默认禁用此标志。如果你从以前版本的 Rancher 升级，此标志会启用。
 - `multi-cluster-management`：允许配置和管理多个 Kubernetes 集群。此标志只能在安装时设置。后续无法启用或禁用它。
-- `rke1-custom-node-cleanup`：清除已删除的 RKE1 自定义节点。建议你启用此标志，以防止已删除的节点尝试重新加入集群。
 - `rke2`：启用配置 RKE2 集群。此标志默认启用。
 - `token-hashing`：启用令牌哈希。启用后，会使用 SHA256 算法对现有 Token 和所有新 Token 进行哈希处理。一旦对 Token 进行哈希处理，就无法撤消操作。此标志在启用后无法禁用。有关详细信息，请参阅 [API 令牌](../../../api/api-tokens.md#令牌哈希)。
 - `uiextension`: Enables UI extensions. This flag is enabled by default. Enabling or disabling the flag forces the Rancher pod to restart. The first time this flag is set to `true`, it creates a CRD and enables the controllers and endpoints necessary for the feature to work. If set to `false`, it disables the previously mentioned controllers and endpoints. Setting `uiextension` to `false` has no effect on the CRD -- it does not create a CRD if it does not yet exist, nor does it delete the CRD if it already exists. 
@@ -38,7 +37,6 @@ title: 功能开关
 | `fleet` | `true` | GA | v2.5.0 |
 | `harvester` | `true` | 实验功能 | v2.6.1 |
 | `legacy` | 新安装：`false`；升级：`true` | GA | v2.6.0 |
-| `rke1-custom-node-cleanup` | `true` | GA | v2.6.0 |
 | `rke2` | `true` | 实验功能 | v2.6.0 |
 | `token-hashing` | 新安装：`false`；升级：`true` | GA | v2.6.0 |
 | `uiextension` | `true` | GA | v2.9.0 | |
