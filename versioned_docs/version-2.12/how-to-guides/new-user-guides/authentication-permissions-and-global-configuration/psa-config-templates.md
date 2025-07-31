@@ -38,9 +38,6 @@ You can assign a PSA template at the same time that you create a downstream clus
 1. In the **Pod Security Admission Configuration Template** dropdown menu, select the template you want to assign.
 1. Click **Save**.
 
-### Hardening the Cluster
-
-If you select the **rancher-restricted** template but don't select a **CIS Profile**, you won't meet required CIS benchmarks. See the [RKE2 hardening guide](../../../reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-hardening-guide.md) for more details.
 
 </TabItem>
 <TabItem value="RKE1">

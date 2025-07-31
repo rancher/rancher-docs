@@ -76,7 +76,7 @@ Rancher 使用两个 Kubernetes 应用程序资源：`apps.projects.cattle.io` �
 
 ### 使用授权集群端点 (ACE)
 
-[授权集群端点](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-授权集群端点) (ACE) 提供了 Rancher 部署的 RKE、RKE2 和 K3s 集群的 Kubernetes API 访问。启用后，ACE 会为生成的 `kubeconfig` 文件配置直接访问下游集群 Endpoint，从而绕过 Rancher 代理。在可以直接访问下游集群 Kubernetes API 的场景下，可以减少 Rancher 负载。有关更多信息，请参阅[授权集群端点](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-授权集群端点)配置说明。
+[授权集群端点](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-授权集群端点) (ACE) 提供了 Rancher 部署的 RKE2 和 K3s 集群的 Kubernetes API 访问。启用后，ACE 会为生成的 `kubeconfig` 文件配置直接访问下游集群 Endpoint，从而绕过 Rancher 代理。在可以直接访问下游集群 Kubernetes API 的场景下，可以减少 Rancher 负载。有关更多信息，请参阅[授权集群端点](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-授权集群端点)配置说明。
 
 ### 减少 Event Handler 执行
 

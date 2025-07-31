@@ -30,9 +30,7 @@ Once you have created these _ClusterOutput_ objects, create a _ClusterFlow_ to c
 
 ### Kubernetes Components
 
-_ClusterFlows_ have the ability to collect logs from all containers on all hosts in the Kubernetes cluster. This works well in cases where those containers are part of a Kubernetes pod; however, RKE containers exist outside of the scope of Kubernetes.
-
-Currently the logs from RKE containers are collected, but are not able to easily be filtered. This is because those logs do not contain information as to the source container (e.g. `etcd` or `kube-apiserver`).
+_ClusterFlows_ have the ability to collect logs from all containers on all hosts in the Kubernetes cluster. This works well in cases where those containers are part of a Kubernetes pod.
 
 A future release of Rancher will include the source container name which will enable filtering of these component logs. Once that change is made, you will be able to customize a _ClusterFlow_ to retrieve **only** the Kubernetes component logs, and direct them to an appropriate output.
 
