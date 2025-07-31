@@ -47,60 +47,9 @@ CNI network providers using this network model include Calico and Cilium. Cilium
 
 ## What CNI Providers are Provided by Rancher?
 
-### RKE Kubernetes clusters
-
-Out-of-the-box, Rancher provides the following CNI network providers for RKE Kubernetes clusters: Canal, Flannel, Calico, and Weave.
-
-You can choose your CNI network provider when you create new Kubernetes clusters from Rancher.
-
-#### Canal
-
-![Canal Logo](/img/canal-logo.png)
-
-Canal is a CNI network provider that gives you the best of Flannel and Calico. It allows users to easily deploy Calico and Flannel networking together as a unified networking solution, combining Calico’s network policy enforcement with the rich superset of Calico (unencapsulated) and/or Flannel (encapsulated) network connectivity options.
-
-In Rancher, Canal is the default CNI network provider combined with Flannel and VXLAN encapsulation.
-
-Kubernetes workers should open UDP port `8472` (VXLAN) and TCP port `9099` (health checks). If using Wireguard, you should open UDP ports `51820` and `51821`. For more details, refer to [the port requirements for user clusters](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md).
-
-![](/img/canal-diagram.png)
-
-For more information, see the [Canal GitHub Page.](https://github.com/projectcalico/canal)
-
-#### Flannel
-
-![Flannel Logo](/img/flannel-logo.png)
-
-Flannel is a simple and easy way to configure L3 network fabric designed for Kubernetes. Flannel runs a single binary agent named flanneld on each host, which is responsible for allocating a subnet lease to each host out of a larger, preconfigured address space. Flannel uses either the Kubernetes API or etcd directly to store the network configuration, the allocated subnets, and any auxiliary data (such as the host's public IP). Packets are forwarded using one of several backend mechanisms, with the default encapsulation being [VXLAN](https://github.com/flannel-io/flannel/blob/master/Documentation/backends.md#vxlan).
-
-Encapsulated traffic is unencrypted by default. Flannel provides two solutions for encryption:
-
-* [IPSec](https://github.com/flannel-io/flannel/blob/master/Documentation/backends.md#ipsec), which makes use of [strongSwan](https://www.strongswan.org/) to establish encrypted IPSec tunnels between Kubernetes workers. It is an experimental backend for encryption.
-* [WireGuard](https://github.com/flannel-io/flannel/blob/master/Documentation/backends.md#wireguard), which is a more faster-performing alternative to strongSwan.
-
-Kubernetes workers should open UDP port `8472` (VXLAN). See [the port requirements for user clusters](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md#networking-requirements) for more details.
-
-![Flannel Diagram](/img/flannel-diagram.png)
-
-For more information, see the [Flannel GitHub Page](https://github.com/flannel-io/flannel).
-
-#### Weave
-
-<DeprecationWeave />
-
-![Weave Logo](/img/weave-logo.png)
-
-Weave enables networking and network policy in Kubernetes clusters across the cloud. Additionally, it support encrypting traffic between the peers.
-
-Kubernetes workers should open TCP port `6783` (control port), UDP port `6783` and UDP port `6784` (data ports). See the [port requirements for user clusters](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md#networking-requirements) for more details.
-
-For more information, see the following pages:
-
-- [Weave Net Official Site](https://github.com/weaveworks/weave/blob/master/site/overview.md)
-
 ### RKE2 Kubernetes clusters
 
-Out-of-the-box, Rancher provides the following CNI network providers for RKE2 Kubernetes clusters: [Canal](#canal) (see above section), Calico, and Cilium.
+Out-of-the-box, Rancher provides the following CNI network providers for RKE2 Kubernetes clusters: Calico, Canal, Cilium, and Flannel.
 
 You can choose your CNI network provider when you create new Kubernetes clusters from Rancher.
 
@@ -131,6 +80,20 @@ For more information, see the following pages:
 - [Project Calico Official Site](https://www.projectcalico.org/)
 - [Project Calico GitHub Page](https://github.com/projectcalico/calico)
 
+#### Canal
+
+![Canal Logo](/img/canal-logo.png)
+
+Canal is a CNI network provider that gives you the best of Flannel and Calico. It allows users to easily deploy Calico and Flannel networking together as a unified networking solution, combining Calico’s network policy enforcement with the rich superset of Calico (unencapsulated) and/or Flannel (encapsulated) network connectivity options.
+
+In Rancher, Canal is the default CNI network provider combined with Flannel and VXLAN encapsulation.
+
+Kubernetes workers should open UDP port `8472` (VXLAN) and TCP port `9099` (health checks). If using Wireguard, you should open UDP ports `51820` and `51821`. For more details, refer to [the port requirements for user clusters](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md).
+
+![](/img/canal-diagram.png)
+
+For more information, see the [Canal GitHub Page.](https://github.com/projectcalico/canal)
+
 #### Cilium
 
 ![Cilium Logo](/img/cilium-logo.png)
@@ -157,6 +120,23 @@ spec:
     - fromEntities:
       - remote-node
 ```
+
+#### Flannel
+
+![Flannel Logo](/img/flannel-logo.png)
+
+Flannel is a simple and easy way to configure L3 network fabric designed for Kubernetes. Flannel runs a single binary agent named flanneld on each host, which is responsible for allocating a subnet lease to each host out of a larger, preconfigured address space. Flannel uses either the Kubernetes API or etcd directly to store the network configuration, the allocated subnets, and any auxiliary data (such as the host's public IP). Packets are forwarded using one of several backend mechanisms, with the default encapsulation being [VXLAN](https://github.com/flannel-io/flannel/blob/master/Documentation/backends.md#vxlan).
+
+Encapsulated traffic is unencrypted by default. Flannel provides two solutions for encryption:
+
+* [IPSec](https://github.com/flannel-io/flannel/blob/master/Documentation/backends.md#ipsec), which makes use of [strongSwan](https://www.strongswan.org/) to establish encrypted IPSec tunnels between Kubernetes workers. It is an experimental backend for encryption.
+* [WireGuard](https://github.com/flannel-io/flannel/blob/master/Documentation/backends.md#wireguard), which is a more faster-performing alternative to strongSwan.
+
+Kubernetes workers should open UDP port `8472` (VXLAN). See [the port requirements for user clusters](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md#networking-requirements) for more details.
+
+![Flannel Diagram](/img/flannel-diagram.png)
+
+For more information, see the [Flannel GitHub Page](https://github.com/flannel-io/flannel).
 
 ## CNI Features by Provider
 
@@ -196,4 +176,4 @@ Canal is the default CNI network provider. We recommend it for most use cases. I
 
 ## How can I configure a CNI network provider?
 
-Please see [Cluster Options](../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md) on how to configure a network provider for your cluster. For more advanced configuration options, please see how to configure your cluster using a [Config File](../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#rke-cluster-config-file-reference) and the options for [Network Plug-ins](https://rancher.com/docs/rke/latest/en/config-options/add-ons/network-plugins/).
+Please see [Cluster Options](../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md) on how to configure a network provider for your cluster. For more advanced configuration options, please see how to configure your cluster using a [Config File](../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md#cluster-config-file-reference).
