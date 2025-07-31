@@ -123,65 +123,6 @@ Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 ## Cleaning up Nodes
 
 <Tabs groupId="k8s-distro" queryString>
-<TabItem value="RKE1">
-
-Before you run the following commands, first remove the node through the Rancher UI.
-
-To remove a node:
-
-1. Click **☰** and select **Cluster Management**.
-1. In the table of clusters, click the name of the cluster the node belongs to.
-1. In the first tab, click the checkbox next to the node's state.
-1. Click **Delete**.
-
-If you remove the entire cluster instead of an individual node, or skip rermoving the node through the Rancher UI, follow these steps:
-
-1. [Remove](#docker-containers-images-and-volumes) the Docker containers from the node and [unmount](#mounts) any volumes.
-1. Reboot the node.
-1. [Remove](#directories-and-files) any remaining files.
-1. Confirm that network interfaces and IP tables were properly cleaned after the reboot. If not, reboot one more time.
-
-### Windows Nodes
-
-To clean up a Windows node, run the script in `c:\etc\rancher`. This script deletes Kubernetes-generated resources and the execution binary. It also drops the firewall rules and network settings:
-
-```
-pushd c:\etc\rancher
-.\cleanup.ps1
-popd
-```
-
-After you run this script, the node is reset and can be re-added to a Kubernetes cluster.
-
-### Docker Containers, Images, and Volumes
-
-:::caution
-
-Be careful when cleaning up Docker containers. The following command will remove *all* Docker containers, images, and volumes on the node, including non-Rancher related containers:
-
-:::
-
-```
-docker rm -f $(docker ps -qa)
-docker rmi -f $(docker images -q)
-docker volume rm $(docker volume ls -q)
-```
-
-### Mounts
-
-Kubernetes components and secrets leave behind the following mounts:
-
-* `/var/lib/kubelet`
-* `/var/lib/rancher`
-* Miscellaneous mounts in `/var/lib/kubelet/pods/`
-
-To unmount all mounts, run: 
-
-```
-for mount in $(mount | grep tmpfs | grep '/var/lib/kubelet' | awk '{ print $3 }') /var/lib/kubelet /var/lib/rancher; do umount $mount; done
-```
-
-</TabItem>
 <TabItem value="RKE2">
 
 :::note
@@ -248,54 +189,7 @@ Depending on the role you assigned to the node, certain directories may or may n
 
 :::
 
-<Tabs>
-<TabItem value="RKE1">
-
-| Directories                  |
-|------------------------------|
-| `/etc/ceph`                  |
-| `/etc/cni`                   |
-| `/etc/kubernetes`            |
-| `/opt/cni`                   |
-| `/opt/rke`                   |
-| `/run/calico`                |
-| `/run/flannel`               |
-| `/run/secrets/kubernetes.io` |
-| `/var/lib/calico`            |
-| `/var/lib/cni`               |
-| `/var/lib/etcd`              |
-| `/var/lib/kubelet`           |
-| `/var/lib/rancher/rke`       |
-| `/var/lib/weave`             |
-| `/var/log/containers`        |
-| `/var/log/kube-audit`        |
-| `/var/log/pods`              |
-| `/var/run/calico`            |
-
-**To clean the directories:**
-
-```shell
-rm -rf /etc/ceph \
-       /etc/cni \
-       /etc/kubernetes \
-       /opt/cni \
-       /opt/rke \
-       /run/calico \
-       /run/flannel \
-       /run/secrets/kubernetes.io \
-       /var/lib/calico \
-       /var/lib/cni \
-       /var/lib/etcd \
-       /var/lib/kubelet \
-       /var/lib/rancher/rke \
-       /var/lib/weave \
-       /var/log/containers \
-       /var/log/kube-audit \
-       /var/log/pods \
-       /var/run/calico
-```
-
-</TabItem>
+<Tabs groupId="k8s-distro" queryString>
 <TabItem value="RKE2">
 
 | Directories                  |
