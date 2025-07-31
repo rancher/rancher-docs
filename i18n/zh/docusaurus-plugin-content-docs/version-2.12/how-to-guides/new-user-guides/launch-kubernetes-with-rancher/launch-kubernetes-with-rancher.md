@@ -60,6 +60,12 @@ RKE2 基于使用上游[集群 API](https://github.com/kubernetes-sigs/cluster-a
 - 完全在 Rancher 中配置 RKE2 集群
 - 除了 Canal 之外，还可以选择 CNI 选项， Calico、Cilium 和 Multus
 
+When you make changes to your cluster configuration in RKE2, this may result in nodes reprovisioning. This is controlled by CAPI controllers and not by Rancher itself. Note that for etcd nodes, the same behavior does not apply.
+
+The following are some specific example configuration changes that may cause the described behavior:
+
+- When editing the cluster and enabling drain before delete, the existing control plane nodes and worker are deleted and new nodes are created.
+
 RKE2 配置还包括在具有 Windows 节点的集群上安装 RKE2。
 
 RKE2 的 Windows 功能包括：
