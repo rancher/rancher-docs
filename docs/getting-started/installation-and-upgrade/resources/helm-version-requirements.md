@@ -12,7 +12,7 @@ This section contains the requirements for Helm, which is the tool used to insta
 
 <DeprecationHelm2 />
 
-## Identifying the proper Helm 3 version
+## Identifying the Proper Helm v3 Version
 
 Select any Helm 3 version that is officially compatible with the Kubernetes version range you are using from our supported list.
 
