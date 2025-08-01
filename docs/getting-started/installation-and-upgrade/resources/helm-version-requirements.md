@@ -29,6 +29,4 @@ To apply this rule, you may need to reference two external resources:
 ## Additional Notes
 
 - Helm v3.2.x or higher is required to install or upgrade Rancher v2.5.
-- Helm v2.16.0 or higher is required for Kubernetes v1.16. For the default Kubernetes version, refer to the [release notes](https://github.com/rancher/rke/releases) for the version of RKE that you are using.
-- Helm v2.15.0 should not be used, because of an issue with converting/comparing numbers.
-- Helm v2.12.0 should not be used, because of an issue with `cert-manager`.
+- Helm v2 support was removed in Rancher v2.9.z
