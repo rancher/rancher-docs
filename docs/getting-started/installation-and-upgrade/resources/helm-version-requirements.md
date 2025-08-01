@@ -14,7 +14,7 @@ This section contains the requirements for Helm, which is the tool used to insta
 
 ## Identifying the Proper Helm v3 Version
 
-Select any Helm 3 version that is officially compatible with the Kubernetes version range you are using from our supported list.
+Select any Helm v3 version that is officially compatible with the Kubernetes version range you are using from our [Rancher Support Matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions).
 
 To apply this rule, you may need to reference two external resources:
 - **Helm Version Compatibility:** Refer to the [Helm Version Support Policy](https://helm.sh/docs/topics/version_skew/) and select the version matching the rule for your Rancher minor target.
