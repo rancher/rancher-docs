@@ -25,7 +25,7 @@ To apply this rule, you may need to reference two external resources:
 - **Scenario:** You are targeting Rancher v2.11.4, which supports Kubernetes versions 1.30 through 1.32.
 - **Application:** Our rule requires a Helm version that supports this range. You can verify this by checking the Helm version's compatibility with the highest version in the range, Kubernetes 1.32.
 - **Result:** You find that both Helm 3.17 and Helm 3.18 support the Kubernetes 1.30-1.32 range.
-- Both will work, however selecting 3.18 is preferred because it is the newest Helm minor with overlapping support range.
+- Although both work, we recommend Helm v3.18 because it is the newest Helm minor version overlapping the supported Kubernetes range.
 
 ## Additional Notes
 
