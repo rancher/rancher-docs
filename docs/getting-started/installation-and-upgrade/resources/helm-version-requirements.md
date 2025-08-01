@@ -30,3 +30,4 @@ To apply this rule, you may need to reference two external resources:
 
 - Helm v3.2.x or higher is required to install or upgrade Rancher v2.5.
 - Helm v2 support was removed in Rancher v2.9.z
+- When using tools that run Helm commands for you (like Terraform), you must make sure they are configured to use the correct Helm version.
