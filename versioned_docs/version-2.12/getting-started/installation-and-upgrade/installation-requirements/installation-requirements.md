@@ -23,7 +23,7 @@ See our page on [best practices](../../../reference-guides/best-practices/ranche
 
 Rancher needs to be installed on a supported Kubernetes version. Consult the [Rancher support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions) to ensure that your intended version of Kubernetes is supported.
 
-Regardless of version and distrobution, the kubernetes cluster must have the aggregation api layer properlly configured to support the [extension api](../../../api/extension-apiserver.md) used by rancher.
+Regardless of version and distribution, the Kubernetes cluster must have the aggregation API layer properly configured to support the [extension API](../../../api/extension-apiserver.md) used by Rancher.
 
 ### Install Rancher on a Hardened Kubernetes cluster
 
