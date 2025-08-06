@@ -55,7 +55,6 @@ Logging v2 已在 RHEL/CentOS 7 和 8 上使用 SELinux 进行了测试。
 
 | 日志来源 | Linux 节点（包括在 Windows 集群中） | Windows 节点 |
 | --- | --- | ---|
-| RKE | ✓ | ✓ |
 | RKE2 | ✓ | |
 | K3s | ✓ | |
 | AKS | ✓ | |
