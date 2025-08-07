@@ -81,7 +81,7 @@ Enabling the [API Audit Log](../../../how-to-guides/advanced-user-guides/enable-
 You can collect this log as you would any container log. Enable [logging](../../../integrations-in-rancher/logging/logging.md) for the `System` Project on the Rancher server cluster.
 
 ```plain
---set auditLog.level=1
+--set auditLog.enabled=true --set auditLog.level=1
 ```
 
 By default enabling Audit Logging will create a sidecar container in the Rancher pod. This container (`rancher-audit-log`) will stream the log to `stdout`. You can collect this log as you would any container log. When using the sidecar as the audit log destination, the `hostPath`, `maxAge`, `maxBackups`, and `maxSize` options do not apply. It's advised to use your OS or Docker daemon's log rotation features to control disk space use. Enable [logging](../../../integrations-in-rancher/logging/logging.md) for the Rancher server cluster or System Project.
