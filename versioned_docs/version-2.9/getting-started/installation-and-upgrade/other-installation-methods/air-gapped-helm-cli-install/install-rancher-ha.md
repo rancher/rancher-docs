@@ -171,7 +171,6 @@ kubectl create namespace cattle-system
 
 Next, install Rancher, declaring your chosen options. Use the reference table below to replace each placeholder. Rancher needs to be configured to use the private registry in order to provision any Rancher launched Kubernetes clusters or Rancher tools.
 
-For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
 Placeholder | Description
 ------------|-------------
@@ -202,7 +201,6 @@ Create Kubernetes secrets from your own certificates for Rancher to use. The com
 
 Install Rancher, declaring your chosen options. Use the reference table below to replace each placeholder. Rancher needs to be configured to use the private registry in order to provision any Rancher launched Kubernetes clusters or Rancher tools.
 
-For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
 | Placeholder                      | Description                                     |
 | -------------------------------- | ----------------------------------------------- |

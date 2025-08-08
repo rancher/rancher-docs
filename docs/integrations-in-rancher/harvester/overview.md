@@ -24,7 +24,7 @@ To navigate to the Harvester cluster, click **☰ > Virtualization Management**.
 
 ## Harvester Node Driver
 
-The [Harvester node driver](https://docs.harvesterhci.io/v1.1/rancher/node/node-driver/) is generally available for RKE and RKE2 options in Rancher. The node driver is available whether or not the Harvester feature flag is enabled. Note that the node driver is off by default. Users may create RKE or RKE2 clusters on Harvester only from the Cluster Management page.
+The [Harvester node driver](https://docs.harvesterhci.io/v1.5/rancher/node/node-driver/) is generally available for K3s and RKE2 options in Rancher. The node driver is available whether or not the Harvester feature flag is enabled. Note that the node driver is off by default. Users may create K3s or RKE2 clusters on Harvester only from the Cluster Management page.
 
 Harvester allows `.ISO` images to be uploaded and displayed through the Harvester UI, but this is not supported in the Rancher UI. This is because `.ISO` images usually require additional setup that interferes with a clean deployment (without requiring user intervention), and they are not typically used in cloud environments.
 
@@ -32,11 +32,11 @@ See [Provisioning Drivers](../../how-to-guides/new-user-guides/authentication-pe
 
 ## Port Requirements
 
-The port requirements for the Harvester cluster can be found [here](https://docs.harvesterhci.io/v1.1/install/requirements#networking).
+The port requirements for the Harvester cluster can be found [here](https://docs.harvesterhci.io/v1.5/install/requirements#networking).
 
 In addition, other networking considerations are as follows:
 
 - Be sure to enable VLAN trunk ports of the physical switch for VM VLAN networks.
-- Follow the networking setup guidance [here](https://docs.harvesterhci.io/v1.1/networking/index).
+- Follow the networking setup guidance [here](https://docs.harvesterhci.io/v1.5/networking/index).
 
-For other port requirements for other guest clusters, such as K3s and RKE1, please see [these docs](https://docs.harvesterhci.io/v1.1/install/requirements/#guest-clusters).
+For other port requirements for other guest clusters, such as K3s and RKE2, please see [these docs](https://docs.harvesterhci.io/v1.5/install/requirements/#guest-clusters).

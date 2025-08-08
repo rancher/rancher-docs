@@ -26,10 +26,6 @@ Monitoring 应用设置了 `prometheus.prometheusSpec.ignoreNamespaceSelectors=f
 
 详情请参阅[本节](../integrations-in-rancher/istio/configuration-options/selectors-and-scrape-configurations.md)。
 
-### 在具有 Pod 安全策略的情况下启用 Istio
-
-详情请参阅[本节](../integrations-in-rancher/istio/configuration-options/pod-security-policies.md)。
-
 ### 在 RKE2 集群上安装 Istio 的其他步骤
 
 详情请参阅[本节](../integrations-in-rancher/istio/configuration-options/install-istio-on-rke2-cluster.md)。

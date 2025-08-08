@@ -124,8 +124,6 @@ helm install cert-manager jetstack/cert-manager `
 
 要安装特定的 Rancher 版本，请使用 `--version` 标志（例如，`--version 2.6.6`）。否则，默认安装最新的 Rancher。请参阅[选择 Rancher 版本](../../installation-and-upgrade/resources/choose-a-rancher-version.md)。
 
-对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
-
 请注意，密码至少需要 12 个字符。
 
 ```

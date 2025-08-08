@@ -25,7 +25,6 @@ Harvester Helm Chart 用于管理 Rancher 中 NeuVector UI 的访问，用户可
 
 以下是一些例子：
 
-- RKE1：`docker`
 - K3s 和 RKE2：`k3scontainerd`
 - AKS：`containerd` 适用于 v1.19 及更高版本
 - EKS：`docker` 适用于 v1.22 及以下版本；`containerd` 适用于 v1.23 及更高版本

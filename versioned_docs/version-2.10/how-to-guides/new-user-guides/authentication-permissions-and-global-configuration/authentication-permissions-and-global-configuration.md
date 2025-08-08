@@ -38,12 +38,6 @@ The user retention feature is disabled by default.
 
 For more information, see [Enabling User Retention](../../advanced-user-guides/enable-user-retention.md).
 
-## Pod Security Policies
-
-_Pod Security Policies_ (or PSPs) are objects that control security-sensitive aspects of pod specification, e.g. root privileges. If a pod does not meet the conditions specified in the PSP, Kubernetes will not allow it to start, and Rancher will display an error message.
-
-For more information how to create and use PSPs, see [Pod Security Policies](create-pod-security-policies.md).
-
 ## Provisioning Drivers
 
 Drivers in Rancher allow you to manage which providers can be used to provision [hosted Kubernetes clusters](../kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/set-up-clusters-from-hosted-kubernetes-providers.md) or [nodes in an infrastructure provider](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md) to allow Rancher to deploy and manage Kubernetes.

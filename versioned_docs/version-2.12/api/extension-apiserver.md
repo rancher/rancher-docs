@@ -8,8 +8,12 @@ title: Extension API Server
 
 Rancher extends Kubernetes with additional APIs by registering an extension API server using the [Kubernetes API Aggregation Layer](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/apiserver-aggregation/).
 
-## Disabling the extension API server
+## Aggregation Layer is Required
 
-The [aggregation layer must be configured](https://kubernetes.io/docs/tasks/extend-kubernetes/configure-aggregation-layer/) on the local Kubernetes cluster for the `imperative-api-extension` feature to be enabled and to work correctly. The feature assumes this is configured and is enabled by default. If it is not possible to configure the aggregation layer for your local Kubernetes cluster, then you must disable the feature. The `imperative-api-extension` feature flag can be disabled by either using the [Rancher UI](../how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features.md#disabling-features-with-the-rancher-ui) or [Rancher API](../how-to-guides/advanced-user-guides/enable-experimental-features/enable-experimental-features.md#disabling-features-with-the-rancher-api).
+The API aggregation layer must be configured on the local Kubernetes cluster for the `v1.ext.cattle.io` `APIService` to work correctly. If the `APIService` does not receive a registration request after the Rancher server starts, the pod will crash with a log entry indicating the error. If your pods are consistently failing to detect registration despite having a correctly configured cluster, you can increase the timeout by setting the `.Values.aggregationRegistrationTimeout` in Helm.
 
-It will still be possible to access the additional APIs when the feature is disabled. The additional APIs are available at `https://<rancher url>/ext` and they are compatible with the Kubernetes apiserver. This means you can use `curl` or `kubectl` to interact with the APIs.
+All versions of Kubernetes supported in this Rancher versions K8s distributions (RKE2/K3s) will have the aggregation layer configured and enabled by default. However, if you suspect that your cluster configuration is incorrect, refer to the [Kubernetes Aggregation Layer documentation](https://kubernetes.io/docs/tasks/extend-kubernetes/configure-aggregation-layer/) for information on configuring the aggregation layer.
+
+:::note
+If the underlying Kubernetes distribution does not support the aggregation layer, you must migrate to a Kubernetes distribution that does before upgrading.
+:::

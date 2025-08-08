@@ -129,17 +129,13 @@ If the cloud provider you want to use is not listed as an option, you will need 
 
 :::
 
-##### Default Pod Security Policy
-
-The default [pod security policy](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) for the cluster. Please refer to the [RKE2 documentation](https://docs.rke2.io/security/pod_security_policies) on the specifications of each available policy.
-
 ##### Pod Security Admission Configuration Template
 
 The default [pod security admission configuration template](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates.md) for the cluster.
 
-##### Worker CIS Profile
+##### Worker Compliance Profile
 
-Select a [CIS benchmark](../../../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md) to validate the system configuration against.
+Select a [compliance benchmark](../../../how-to-guides/advanced-user-guides/compliance-scan-guides/compliance-scan-guides.md) to validate the system configuration against.
 
 ##### Project Network Isolation
 

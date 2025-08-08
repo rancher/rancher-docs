@@ -39,7 +39,6 @@ Values set from the Rancher API will override the value passed in through the co
 
 When installing Rancher with a Helm chart, use the `--set` option. In the below example, two features are enabled by passing the feature flag names in a comma separated list:
 
-For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
 ```
 helm install rancher rancher-latest/rancher \

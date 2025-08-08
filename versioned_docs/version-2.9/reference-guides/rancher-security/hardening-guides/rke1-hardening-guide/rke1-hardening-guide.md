@@ -153,7 +153,6 @@ Execute this script to apply the `default-allow-all.yaml` configuration with the
 ## Known Limitations
 
 - Rancher **exec shell** and **view logs** for pods are **not** functional in a hardened setup when only a public IP is provided when registering custom nodes. This functionality requires a private IP to be provided when registering the custom nodes.
-- When setting `default_pod_security_policy_template_id:` to `restricted` or `restricted-noroot`, based on the pod security policies (PSP) [provided](../../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) by Rancher, Rancher creates `RoleBindings` and `ClusterRoleBindings` on the `default` service accounts. The CIS check 5.1.5 requires that the `default` service accounts have no roles or cluster roles bound to it apart from the defaults. In addition, the `default` service accounts should be configured such that it does not provide a service account token and does not have any explicit rights assignments.
 
 ## Reference Hardened RKE `cluster.yml` Configuration
 

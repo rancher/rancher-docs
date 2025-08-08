@@ -14,17 +14,11 @@ See [kubectl Installation](https://kubernetes.io/docs/tasks/tools/install-kubect
 
 ## Configuration
 
-When you create a Kubernetes cluster with RKE, RKE creates a `kube_config_cluster.yml` in the local directory that contains credentials to connect to your new cluster with tools like `kubectl` or `helm`.
-
-You can copy this file as `$HOME/.kube/config` or if you are working with multiple Kubernetes clusters, set the `KUBECONFIG` environmental variable to the path of `kube_config_cluster.yml`.
-
-```
-export KUBECONFIG=$(pwd)/kube_config_cluster.yml
-```
+When you create a Kubernetes cluster with RKE2/K3s, the Kubeconfig file is stored at `/etc/rancher/rke2/rke2.yaml` or `/etc/rancher/k3s/k3s.yaml` depending on your chosen distribution. These files are used to configure access to the Kubernetes cluster.
 
 Test your connectivity with `kubectl` and see if you can get the list of nodes back.
 
-```
+```shell
 kubectl get nodes
  NAME                          STATUS    ROLES                      AGE       VERSION
 165.227.114.63                Ready     controlplane,etcd,worker   11m       v1.10.1

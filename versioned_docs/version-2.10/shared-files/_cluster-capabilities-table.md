@@ -12,7 +12,6 @@
 | [Ability to rotate certificates](../how-to-guides/new-user-guides/manage-clusters/rotate-certificates.md) | ✓ | ✓  |  | |
 | Ability to [backup](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters.md) and [restore](../how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup.md) Rancher-launched clusters | ✓ | ✓ |  | ✓<sup>4</sup> |
 | [Cleaning Kubernetes components when clusters are no longer reachable from Rancher](../how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes.md) | ✓ | | | |
-| [Configuring Pod Security Policies](../how-to-guides/new-user-guides/manage-clusters/add-a-pod-security-policy.md) | ✓ | ✓ |  ||
 
 1. Registered EKS, GKE and AKS clusters have the same options available as EKS, GKE and AKS clusters created from the Rancher UI. The  difference is that when a registered cluster is deleted from the Rancher UI, it is not destroyed.
 

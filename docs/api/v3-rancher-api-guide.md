@@ -72,7 +72,7 @@ API responses are paginated with a limit of 100 resources per page by default. T
 
 ## Capturing v3 API Calls
 
-You can use browser developer tools to capture how the v3 API is called. For example, you could follow these steps to use the Chrome developer tools to get the API call for provisioning an RKE cluster:
+You can use browser developer tools to capture how the v3 API is called. For example, you could follow these steps to use the Chrome developer tools to get the API call for provisioning a Rancher Kubernetes distribution cluster:
 
 1. In the Rancher UI, go to **Cluster Management** and click **Create.**
 1. Click one of the cluster types. This example uses Digital Ocean.

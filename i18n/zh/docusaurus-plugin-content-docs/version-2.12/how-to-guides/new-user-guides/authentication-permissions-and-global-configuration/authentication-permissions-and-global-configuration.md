@@ -29,13 +29,6 @@ Rancher 为 Kubernetes 增加了一项关键特性是集中式的用户认证。
 在 Rancher 中，每个人都是以 _用户_ 的身份进行鉴权，这是一个授予你访问 Rancher 的登录身份。用户登录 Rancher 后，他们的 _授权_ 或者他们在系统中的访问权限由用户的角色决定。Rancher 提供了内置的角色，允许你你轻松地配置用户对资源的权限，但是 Rancher 还提供了为每个 Kubernetes 资源自定义角色的功能。
 
 更多关于授权的工作原理以及自定义角色的使用，请参考 [RBAC](manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md)。
-
-## Pod 安全策略
-
-_Pod 安全策略_ (或 PSPs) 是控制 Pod 安全敏感方面规范的对象，例如 root 权限。如果一个 Pod 不满足 PSP 中指定的条件，Kubernetes 将不允许 Pod 启动，同时 Rancher 会显示一条错误信息。
-
-更多关于如何创建和使用 PSPs 的内容，请参考 [Pod 安全策略](create-pod-security-policies.md)。
-
 ## Provisioning Drivers
 
 Rancher 中的驱动允许你管理哪些程序可以预置[托管的 Kubernetes 集群](../kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/set-up-clusters-from-hosted-kubernetes-providers.md) 或 [云服务器节点](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)，允许 Rancher 部署和管理 Kubernetes。

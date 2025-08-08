@@ -118,66 +118,7 @@ $ sudo shutdown -r now
 
 ## 清理节点
 
-<Tabs>
-<TabItem value="RKE1">
-
-在运行以下命令之前，首先通过 Rancher UI 删除节点。
-
-要删除节点：
-
-1. 点击 **☰** 并选择**集群管理**。
-1. 在集群表中，单击节点所属集群的名称。
-1. 在第一个选项卡中，单击节点状态旁边的复选框。
-1. 单击**删除**。
-
-要删除整个集群而不是单个节点，或者不使用 Rancher UI 重新移动节点，请按照以下步骤操作：
-
-1. 从节点中[删除](#docker-容器镜像和卷) Docker 容器并[卸载](#挂载)任何卷。
-1. 重启节点。
-1. [删除](#目录和文件)所有剩余的文件。
-1. 确认在重新启动后已正确清理网络接口和 IP 表。否则请再重启一次。
-
-### Windows 节点
-
-要清理 Windows 节点，请运行 `c:\\etc\\rancher` 中的脚本。此脚本删除 Kubernetes 生成的资源和执行二进制文件，还会删除防火墙规则和网络设置：
-
-```
-pushd c:\etc\rancher
-.\cleanup.ps1
-popd
-```
-
-运行此脚本后，节点将重置并可以重新添加到 Kubernetes 集群。
-
-### Docker 容器、镜像和卷
-
-:::caution
-
-清理 Docker 容器时要小心。以下命令将删除节点上的*所有* Docker 容器、镜像和卷，包括与 Rancher 无关的容器：
-
-:::
-
-```
-docker rm -f $(docker ps -qa)
-docker rmi -f $(docker images -q)
-docker volume rm $(docker volume ls -q)
-```
-
-### 挂载
-
-Kubernetes 组件和 secret 会留下以下挂载：
-
-* `/var/lib/kubelet`
-* `/var/lib/rancher`
-* `/var/lib/kubelet/pods/` 中的其他挂载
-
-要卸载所有挂载，请运行：
-
-```
-for mount in $(mount | grep tmpfs | grep '/var/lib/kubelet' | awk '{ print $3 }') /var/lib/kubelet /var/lib/rancher; do umount $mount; done
-```
-
-</TabItem>
+<Tabs groupId="k8s-distro" queryString>
 <TabItem value="RKE2">
 
 :::note
@@ -245,53 +186,6 @@ sudo k3s-uninstall.sh
 :::
 
 <Tabs>
-<TabItem value="RKE1">
-
-| 目录 |
-|------------------------------|
-| `/etc/ceph`                  |
-| `/etc/cni`                   |
-| `/etc/kubernetes`            |
-| `/opt/cni`                   |
-| `/opt/rke`                   |
-| `/run/calico`                |
-| `/run/flannel`               |
-| `/run/secrets/kubernetes.io` |
-| `/var/lib/calico`            |
-| `/var/lib/cni`               |
-| `/var/lib/etcd`              |
-| `/var/lib/kubelet`           |
-| `/var/lib/rancher/rke`       |
-| `/var/lib/weave`             |
-| `/var/log/containers`        |
-| `/var/log/kube-audit`        |
-| `/var/log/pods`              |
-| `/var/run/calico`            |
-
-**清理目录**：
-
-```shell
-rm -rf /etc/ceph \
-       /etc/cni \
-       /etc/kubernetes \
-       /opt/cni \
-       /opt/rke \
-       /run/calico \
-       /run/flannel \
-       /run/secrets/kubernetes.io \
-       /var/lib/calico \
-       /var/lib/cni \
-       /var/lib/etcd \
-       /var/lib/kubelet \
-       /var/lib/rancher/rke \
-       /var/lib/weave \
-       /var/log/containers \
-       /var/log/kube-audit \
-       /var/log/pods \
-       /var/run/calico
-```
-
-</TabItem>
 <TabItem value="RKE2">
 
 | 目录 |

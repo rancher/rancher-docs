@@ -23,17 +23,16 @@ The Harvester Helm Chart is used to manage access to the NeuVector UI in Rancher
 
 Some examples are as follows:
 
-   - RKE1: `docker`
-   - K3s and RKE2: `k3scontainerd`
-   - AKS: `containerd` for v1.19 and up
-   - EKS: `docker` for v1.22 and below; `containerd` for v1.23 and up
-   - GKE: `containerd` (see the [Google docs](https://cloud.google.com/kubernetes-engine/docs/concepts/using-containerd) for more)
+- K3s and RKE2: `k3scontainerd`
+- AKS: `containerd` for v1.19 and up
+- EKS: `docker` for v1.22 and below; `containerd` for v1.23 and up
+- GKE: `containerd` (see the [Google docs](https://cloud.google.com/kubernetes-engine/docs/concepts/using-containerd) for more)
 
-    :::note
+  :::note
 
-    Only one container runtime engine may be selected at a time during installation.
+  Only one container runtime engine may be selected at a time during installation.
 
-    :::
+  :::
 
 **To navigate to and install the NeuVector chart through Cluster Tools:**
 

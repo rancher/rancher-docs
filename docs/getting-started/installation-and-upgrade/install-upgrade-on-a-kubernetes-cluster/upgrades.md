@@ -10,18 +10,15 @@ The following instructions will guide you through upgrading a Rancher server tha
 
 For the instructions to upgrade Rancher installed with Docker, refer to [this page.](../other-installation-methods/rancher-on-a-single-node-with-docker/upgrade-docker-installed-rancher.md)
 
-To upgrade the components in your Kubernetes cluster, or the definition of the [Kubernetes services](https://rancher.com/docs/rke/latest/en/config-options/services/) or [add-ons](https://rancher.com/docs/rke/latest/en/config-options/add-ons/), refer to the [upgrade documentation for RKE](https://rancher.com/docs/rke/latest/en/upgrades/), the Rancher Kubernetes Engine.
-
-
 ## Prerequisites
 
-### Access to kubeconfig
+### Access to Kubeconfig
 
-Helm should be run from the same location as your kubeconfig file, or the same location where you run your kubectl commands from.
+Helm should be run from the same location as your Kubeconfig file, or the same location where you run your `kubectl` commands from.
 
-If you installed Kubernetes with RKE, the config will have been created in the directory you ran `rke up` in.
+If you installed Kubernetes with RKE2/K3s, the Kubeconfig is stored in the `/etc/rancher/rke2/rke2.yaml` or `/etc/rancher/k3s/k3s.yaml` directory depending on your chosen distribution.
 
-The kubeconfig can also be manually targeted for the intended cluster with the `--kubeconfig` tag (see: https://helm.sh/docs/helm/helm/)
+The Kubeconfig can also be manually targeted for the intended cluster with the `--kubeconfig` tag (see: https://helm.sh/docs/helm/helm/)
 
 ### Review Known Issues
 
@@ -152,7 +149,6 @@ Upgrade Rancher to the latest version with all your settings.
 
 Take all the values from the previous step and append them to the command using `--set key=value`.
 
-For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
 ```
 helm upgrade rancher rancher-<CHART_REPO>/rancher \
@@ -186,8 +182,7 @@ Alternatively, it's possible to export the current values to a file and referenc
     ```
 1. Update only the Rancher version:
 
-    For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
-
+    
     ```
     helm upgrade rancher rancher-<CHART_REPO>/rancher \
       --namespace cattle-system \

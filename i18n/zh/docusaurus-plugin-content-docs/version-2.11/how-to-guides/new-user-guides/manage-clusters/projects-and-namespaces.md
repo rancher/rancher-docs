@@ -122,12 +122,11 @@ Rancher 在 Kubernetes 之上进行了扩展，除了集群级别之外，还允
 
 本节介绍如何创建具有名称以及可选 pod 安全策略、成员和资源配额的新项目。
 
-1. [命名新项目](#1-命名新项目)
-2. [可选：选择 pod 安全策略](#2-可选选择-pod-安全策略)
-3. [推荐：添加项目成员](#3-推荐添加项目成员)
-4. [可选：添加资源配额](#4-可选添加资源配额)
+1. [命名新项目](#命名新项目)
+1. [推荐：添加项目成员](#推荐添加项目成员)
+1. [可选：添加资源配额](#可选添加资源配额)
 
-### 1. 命名新项目
+### 命名新项目
 
 1. 在左上角，单击 **☰ > 集群管理**。
 1. 在**集群**页面上，转到要在其中创建项目的集群，然后单击 **Explore**。
@@ -135,17 +134,7 @@ Rancher 在 Kubernetes 之上进行了扩展，除了集群级别之外，还允
 1. 单击**创建项目**。
 1. 输入**项目名称**。
 
-### 2. 可选：选择 Pod 安全策略
-
-此选项仅在 Pod 安全策略已创建时可用。有关说明，请参阅[创建 Pod 安全策略](../authentication-permissions-and-global-configuration/create-pod-security-policies.md)。
-
-将 PSP 分配给项目将：
-
-- 覆盖集群的默认 PSP。
-- 将 PSP 应用于项目。
-- 将 PSP 应用到后续添加到项目中的命名空间。
-
-### 3. 推荐：添加项目成员
+### 推荐：添加项目成员
 
 使用**成员**为其他用户提供项目访问权限和角色。
 
@@ -175,7 +164,7 @@ Rancher 在 Kubernetes 之上进行了扩展，除了集群级别之外，还允
    :::
 1. 在**项目权限**中选择一个角色。如需更多信息，请参阅[项目角色文档](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)。
 
-### 4. 可选：添加资源配额
+### 可选：添加资源配额
 
 资源配额用于限制项目（及其命名空间）可以使用的资源。有关详细信息，请参阅[资源配额](../../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md)。
 

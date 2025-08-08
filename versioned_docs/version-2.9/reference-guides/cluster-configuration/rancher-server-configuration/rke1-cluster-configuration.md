@@ -151,10 +151,6 @@ Option to enable or disable [Metrics Server](https://rancher.com/docs/rke/latest
 
 Each cloud provider capable of launching a cluster using RKE can collect metrics and monitor for your cluster nodes. Enable this option to view your node metrics from your cloud provider's portal.
 
-### Pod Security Policy Support
-
-Enables [pod security policies](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) for the cluster. After enabling this option, choose a policy using the **Default Pod Security Policy** drop-down.
-
 You must have an existing Pod Security Policy configured before you can use this option.
 
 ### Docker Version on Nodes

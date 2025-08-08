@@ -6,9 +6,9 @@ title: Creating a VMware vSphere Virtual Machine Template
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-a-vm-template"/>
 </head>
 
-Creating virtual machines in a repeatable and reliable fashion can often be difficult. VMware vSphere offers the ability to build one VM that can then be converted to a template. The template can then be used to create identically configured VMs. Rancher leverages this capability within node pools to create identical RKE1 and RKE2 nodes.
+Creating virtual machines in a repeatable and reliable fashion can often be difficult. VMware vSphere offers the ability to build one VM that can then be converted to a template. The template can then be used to create identically configured VMs. Rancher leverages this capability to create identical RKE/K3s nodes.
 
-In order to leverage the template to create new VMs, Rancher has some [specific requirements](#requirements) that the VM must have pre-installed. After you configure the VM with these requirements, you will next need to [prepare the VM](#preparing-your-vm) before [creating the template](#creating-a-template). Finally, once preparation is complete, the VM can be [converted to a template](#converting-to-a-template) and [moved into a content library](#moving-to-a-content-library), ready for Rancher node pool usage.
+In order to leverage the template to create new VMs, Rancher has some [specific requirements](#requirements) that the VM must have pre-installed. After you configure the VM with these requirements, you will next need to [prepare the VM](#preparing-your-vm) before [creating the template](#creating-a-template). Finally, once preparation is complete, the VM can be [converted to a template](#converting-to-a-template) and [moved into a content library](#moving-to-a-content-library).
 
 
 ## Requirements
@@ -47,14 +47,6 @@ The list of packages that need to be installed on the template is as follows:
 
 * Windows Container Feature
 * [cloudbase-init](https://cloudbase.it/cloudbase-init/#download)
-* [Docker EE](https://docs.microsoft.com/en-us/virtualization/windowscontainers/quick-start/set-up-environment?tabs=Windows-Server#install-docker) - RKE1 Only
-
-:::note About the configuration for Windows templates varies between RKE1 and RKE2:
-
-- RKE1 leverages Docker, so any RKE1 templates need to have Docker EE pre-installed as well
-- RKE2 does not require Docker EE, and thus it does not need to be installed
-
-:::
 
 ## Creating a Template
 

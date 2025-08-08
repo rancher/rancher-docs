@@ -211,7 +211,7 @@ Prometheus 直接抓取以下 Kubernetes 组件：
 
 \* 你可以选择通过 `hardenedKubelet.enabled` 来使用 PushProx，但这不是默认设置。
 
-\*\* RKE 和 RKE2 集群默认部署 ingress-nginx，并将其视为内部 Kubernetes 组件。
+\*\* RKE2 集群默认部署 ingress-nginx，并将其视为内部 Kubernetes 组件。
 
 
 ### 基于 Kubernetes 发行版抓取指标
@@ -220,18 +220,18 @@ Prometheus 直接抓取以下 Kubernetes 组件：
 
 <figcaption>指标如何暴露给 Prometheus</figcaption>
 
-| Kubernetes 组件 | RKE | RKE2 | KubeADM | K3s |
+| Kubernetes 组件 | RKE2 | KubeADM | K3s |
 |-----|-----|-----|-----|-----|
-| kube-controller-manager | rkeControllerManager.enabled | rke2ControllerManager.enabled | kubeAdmControllerManager.enabled | k3sServer.enabled |
-| kube-scheduler | rkeScheduler.enabled | rke2Scheduler.enabled | kubeAdmScheduler.enabled | k3sServer.enabled |
-| etcd | rkeEtcd.enabled | rke2Etcd.enabled | kubeAdmEtcd.enabled | 不可用 |
-| kube-proxy | rkeProxy.enabled | rke2Proxy.enabled | kubeAdmProxy.enabled | k3sServer.enabled |
-| kubelet | 收集 kubelet 直接公开的指标 | 收集 kubelet 直接公开的指标 | 收集 kubelet 直接公开的指标 | 收集 kubelet 直接公开的指标 |
-| ingress-nginx* | 收集 kubelet 直接公开的指标，由 rkeIngressNginx.enabled 公开 | 收集 kubelet 直接公开的指标，由 rke2IngressNginx.enabled 公开 | 不可用 | 不可用 |
-| coreDns/kubeDns | 收集 coreDns/kubeDns 直接公开的指标 | 收集 coreDns/kubeDns 直接公开的指标 | 收集 coreDns/kubeDns 直接公开的指标 | 收集 coreDns/kubeDns 直接公开的指标 |
-| kube-api-server | 收集 kube-api-server 直接公开的指标 | 收集 kube-api-server 直接公开的指标 | 收集 kube-appi-server 直接公开的指标 | 收集 kube-api-server 直接公开的指标 |
+| kube-controller-manager | rke2ControllerManager.enabled | kubeAdmControllerManager.enabled | k3sServer.enabled |
+| kube-scheduler | rke2Scheduler.enabled | kubeAdmScheduler.enabled | k3sServer.enabled |
+| etcd | rke2Etcd.enabled | kubeAdmEtcd.enabled | 不可用 |
+| kube-proxy | rke2Proxy.enabled | kubeAdmProxy.enabled | k3sServer.enabled |
+| kubelet | 收集 kubelet 直接公开的指标 | 收集 kubelet 直接公开的指标 | 收集 kubelet 直接公开的指标 |
+| ingress-nginx* | 收集 kubelet 直接公开的指标，由 rke2IngressNginx.enabled 公开 | 不可用 | 不可用 |
+| coreDns/kubeDns | 收集 coreDns/kubeDns 直接公开的指标 | 收集 coreDns/kubeDns 直接公开的指标 | 收集 coreDns/kubeDns 直接公开的指标 |
+| kube-api-server | 收集 kube-api-server 直接公开的指标 | 收集 kube-appi-server 直接公开的指标 | 收集 kube-api-server 直接公开的指标 |
 
-\* RKE 和 RKE2 集群默认部署 ingress-nginx，并将其视为内部 Kubernetes 组件。
+\* RKE2 集群默认部署 ingress-nginx，并将其视为内部 Kubernetes 组件。
 
 ### 名词解释
 

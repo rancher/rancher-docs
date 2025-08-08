@@ -15,33 +15,9 @@ Rancher can provision nodes in vSphere and install Kubernetes on them. When crea
 
 A vSphere cluster may consist of multiple groups of VMs with distinct properties, such as the amount of memory or the number of vCPUs. This grouping allows for fine-grained control over the sizing of nodes for each Kubernetes role.
 
-## VMware vSphere Enhancements
-
-The vSphere node templates allow you to bring cloud operations on-premises with the following enhancements:
-
-### Self-healing Node Pools
-
-One of the biggest advantages of provisioning vSphere nodes with Rancher is that it allows you to take advantage of Rancher's self-healing node pools, also called the [node auto-replace feature,](../use-new-nodes-in-an-infra-provider.md#about-node-auto-replace) in your on-premises clusters. Self-healing node pools are designed to help you replace worker nodes for stateless applications. When Rancher provisions nodes from a node template, Rancher can automatically replace unreachable nodes.
-
-:::caution
-
-It is not recommended to enable node auto-replace on a node pool of master nodes or nodes with persistent volumes attached, because VMs are treated ephemerally. When a node in a node pool loses connectivity with the cluster, its persistent volumes are destroyed, resulting in data loss for stateful applications.
-
-:::
-
-### Dynamically Populated Options for Instances and Scheduling
-
-Node templates for vSphere have been updated so that when you create a node template with your vSphere credentials, the template is automatically populated with the same options for provisioning VMs that you have access to in the vSphere console.
-
-For the fields to be populated, your setup needs to fulfill the [prerequisites.](provision-kubernetes-clusters-in-vsphere.md#preparation-in-vmware-vsphere)
-
-### More Supported Operating Systems
-
-You can provision VMs with any operating system that supports `cloud-init`. Only YAML format is supported for the [cloud config.](https://cloudinit.readthedocs.io/en/latest/topics/examples.html)
-
 ## Creating a VMware vSphere Cluster
 
-In [this section,](provision-kubernetes-clusters-in-vsphere.md) you'll learn how to use Rancher to install an [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes cluster in vSphere.
+In [this section,](provision-kubernetes-clusters-in-vsphere.md) you'll learn how to use Rancher to install an [RKE2](https://docs.rke2.io/)/[K3s](https://docs.k3s.io/) Kubernetes cluster in vSphere.
 
 ## Provisioning Storage
 

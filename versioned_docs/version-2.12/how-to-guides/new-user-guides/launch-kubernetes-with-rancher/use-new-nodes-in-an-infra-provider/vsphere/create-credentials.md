@@ -34,7 +34,7 @@ The following steps create a role with the required privileges and then assign i
 
 4. Go to the **Users and Groups** tab.
 
-5. Create a new user. Fill out the form and then click **OK**. Make sure to note the username and password, because you will need it when configuring node templates in Rancher.
+5. Create a new user. Fill out the form and then click **OK**. Make sure to note the username and password, because you will need it when creating cloud credentials in Rancher.
 
     ![](/img/rancheruser.png)
 

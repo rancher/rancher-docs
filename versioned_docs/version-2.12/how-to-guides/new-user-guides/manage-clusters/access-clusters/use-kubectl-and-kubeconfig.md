@@ -48,14 +48,13 @@ Rancher will discover and show resources created by `kubectl`. However, these re
 
 ## Authenticating Directly with a Downstream Cluster
 
-This section intended to help you set up an alternative method to access an [RKE cluster.](../../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)
+This section intended to help you set up an alternative method to access a [Rancher-launched cluster.](../../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)
 
-This method is only available for RKE, RKE2, and K3s clusters that have the [authorized cluster endpoint](../../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint) enabled. When Rancher creates the cluster, it generates a kubeconfig file that includes additional kubectl context(s) for accessing your cluster. This additional context allows you to use kubectl to authenticate with the downstream cluster without authenticating through Rancher. For a longer explanation of how the authorized cluster endpoint works, refer to [this page](authorized-cluster-endpoint.md).
+This method is only available RKE2 and K3s clusters that have the [authorized cluster endpoint](../../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint) enabled. When Rancher creates the cluster, it generates a kubeconfig file that includes additional kubectl context(s) for accessing your cluster. This additional context allows you to use kubectl to authenticate with the downstream cluster without authenticating through Rancher. For a longer explanation of how the authorized cluster endpoint works, refer to [this page](authorized-cluster-endpoint.md).
 
 On RKE2 and K3s clusters, you need to [manually enable](../../kubernetes-clusters-in-rancher-setup/register-existing-clusters.md#authorized-cluster-endpoint-support-for-rke2-and-k3s-clusters) authorized cluster endpoints.
 
-We recommend that as a best practice, you should set up this method to access your RKE, RKE2, and K3s clusters, so that just in case you can’t connect to Rancher, you can still access the cluster.
-
+We recommend that as a best practice, you should set up this method to access your RKE2 and K3s clusters, so that just in case you can’t connect to Rancher, you can still access the cluster.
 
 :::note Prerequisites:
 
@@ -74,7 +73,7 @@ CURRENT   NAME                        CLUSTER                     AUTHINFO     N
 
 In this example, when you use `kubectl` with the first context, `my-cluster`, you will be authenticated through the Rancher server.
 
-With the second context, `my-cluster-controlplane-1`, you would authenticate with the authorized cluster endpoint, communicating with an downstream RKE cluster directly.
+With the second context, `my-cluster-controlplane-1`, you would authenticate with the authorized cluster endpoint, communicating with an downstream RKE/K3s cluster directly.
 
 We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.](../../../../reference-guides/rancher-manager-architecture/architecture-recommendations.md#architecture-for-an-authorized-cluster-endpoint-ace)
 

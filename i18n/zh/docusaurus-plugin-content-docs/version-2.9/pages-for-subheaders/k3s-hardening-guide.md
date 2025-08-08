@@ -62,7 +62,7 @@ This configuration needs to be done before setting the kubelet flag, otherwise K
 
 ## Kubernetes Runtime Requirements
 
-The CIS Benchmark runtime requirements center around pod security (via PSP or PSA), network policies and API Server auditing logs.
+The CIS Benchmark runtime requirements center around pod security (via PSA), network policies and API Server auditing logs.
 
 By default, K3s does not include any pod security or network policies. However, K3s ships with a controller that enforces any network policies you create. By default, K3s enables both the `PodSecurity` and `NodeRestriction` admission controllers, among others.
 

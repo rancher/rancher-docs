@@ -12,20 +12,6 @@ title: 证书轮换
 
 可以为以下服务轮换证书：
 
-<Tabs>
-<TabItem value="RKE">
-
-- etcd
-- kubelet（节点证书）
-- kubelet（服务证书，如果[启用](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-options)）
-- kube-apiserver
-- kube-proxy
-- kube-scheduler
-- kube-controller-manager
-
-</TabItem>
-<TabItem value="RKE2">
-
 - admin
 - api-server
 - controller-manager
@@ -37,9 +23,6 @@ title: 证书轮换
 - auth-proxy
 - kubelet
 - kube-proxy
-
-</TabItem>
-</Tabs>
 
 :::note
 
@@ -64,15 +47,4 @@ Rancher 启动的 Kubernetes 集群能够通过 UI 轮换自动生成的证书�
 
 ## 补充说明
 
-<Tabs>
-<TabItem value="RKE">
-
-虽然 RKE CLI 可以为 Kubernetes 集群组件使用自定义证书，但 Rancher 目前不允许在 Rancher 启动的 Kubernetes 集群中上传这些证书。
-
-</TabItem>
-<TabItem value="RKE2">
-
-在 RKE2 中，etcd 和 controlplane 节点都被视为相同的 `server`。因此，如果你轮换其中一个组件的服务证书，则两者的证书都会被轮换。证书只会针对指定的服务更改，但你会看到两个组件的节点都进入更新状态。你可能还会看到仅 Worker 节点进入更新状态。这是在证书更改后重启 Worker，以确保他们获得最新的客户端证书。
-
-</TabItem>
-</Tabs>
+在 RKE2/K3s 中，etcd 和 controlplane 节点都被视为相同的 `server`。因此，如果你轮换其中一个组件的服务证书，则两者的证书都会被轮换。证书只会针对指定的服务更改，但你会看到两个组件的节点都进入更新状态。你可能还会看到仅 Worker 节点进入更新状态。这是在证书更改后重启 Worker，以确保他们获得最新的客户端证书。

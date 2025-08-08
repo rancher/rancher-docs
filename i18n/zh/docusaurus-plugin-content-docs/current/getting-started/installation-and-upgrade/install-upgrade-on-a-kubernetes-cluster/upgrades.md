@@ -6,18 +6,15 @@ title: 升级
 
 有关使用 Docker 安装的 Rancher 的升级说明，请参见[本页。](../other-installation-methods/rancher-on-a-single-node-with-docker/upgrade-docker-installed-rancher.md)
 
-如需升级 Kubernetes 集群中的组件，或 [Kubernetes services](https://rancher.com/docs/rke/latest/en/config-options/services/) 或 [附加组件（add-on）](https://rancher.com/docs/rke/latest/en/config-options/add-ons/)的定义，请参见 [RKE 升级文档](https://rancher.com/docs/rke/latest/en/upgrades/)的 Rancher Kubernetes 引擎。
-
-
 ## 先决条件
 
-### 访问 kubeconfig
+### 访问 Kubeconfig
 
-Helm 的运行位置，应该与你的 kubeconfig 文件，或你运行 kubectl 命令的位置相同。
+Helm 的运行位置，应该与你的 Kubeconfig 文件，或你运行 kubectl 命令的位置相同。
 
-如果你在安装 Kubernetes 时使用了 RKE，那么 config 将会在你运行 `rke up` 的目录下创建。
+If you installed Kubernetes with RKE2/K3s, the Kubeconfig is stored in the `/etc/rancher/rke2/rke2.yaml` or `/etc/rancher/k3s/k3s.yaml` directory depending on your chosen distribution.
 
-kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.sh/docs/helm/helm/ ）来手动指定所需的集群。
+Kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.sh/docs/helm/helm/ ）来手动指定所需的集群。
 
 ### 查看已知问题
 
@@ -149,8 +146,6 @@ hostname: rancher.my.org
 
 将上一步中的所有值用 `--set key=value` 追加到命令中。
 
-对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
-
 ```
 helm upgrade rancher rancher-<CHART_REPO>/rancher \
   --namespace cattle-system \
@@ -182,8 +177,6 @@ helm upgrade rancher-stable rancher-<CHART_REPO>/rancher \
    helm get values rancher -n cattle-system -o yaml > values.yaml
    ```
 1. 只更新 Rancher 版本：
-
-   对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
 
    ```
    helm upgrade rancher rancher-<CHART_REPO>/rancher \

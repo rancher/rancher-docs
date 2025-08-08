@@ -58,8 +58,6 @@ keywords: [rancher helm chart, rancher helm 选项, rancher helm chart 选项, h
 | `systemDefaultRegistry` | "" | `string` - 用于所有系统容器镜像的私有仓库，例如 http://registry.example.com/ |
 | `tls` | "ingress" | `string` - 详情请参见[外部 TLS 终止](#外部-tls-终止)。- "ingress, external" |
 | `useBundledSystemChart` | `false` | `bool` - 选择 Rancher Server 打包的 system-charts。此参数用于离线环境安装。 |
-| `global.cattle.psp.enabled` | `true` | `bool` - 使用 Rancher v2.7.2-v2.7.4 时，选择 `false` 以禁用 Kubernetes v1.25 及更高版本的 PSP。使用 Rancher v2.7.5 及更高版本时，Rancher 会尝试检测集群是否运行不支持 PSP 的 Kubernetes 版本，如果确定集群不支持 PSP，则将默认 PSP 的使用设置为 false。你仍然可以通过显式提供此值的 `true` 或 `false` 来手动覆盖此值。在支持 PSP 的集群中（例如使用 Kubernetes v1.24 或更低版本的集群），Rancher 仍将默认使用 PSP。 |
-
 
 ### 引导密码
 

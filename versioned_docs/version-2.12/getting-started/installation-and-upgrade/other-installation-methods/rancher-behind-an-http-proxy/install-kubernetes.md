@@ -10,7 +10,15 @@ Once the infrastructure is ready, you can continue with setting up a Kubernetes 
 
 The steps to set up RKE, RKE2, or K3s are shown below.
 
-For convenience, export the IP address and port of your proxy into an environment variable and set up the HTTP_PROXY variables for your current shell on every node:
+For convenience, export the IP address and port of your proxy into an environment variable and set up the `HTTP_PROXY` variables for your current shell on every node:
+
+:::caution
+
+The `NO_PROXY` environment variable is not standardized, and the accepted format of the value can differ between applications. When configuring the `NO_PROXY` variable for Rancher, the value must adhere to the format expected by Golang. 
+
+Specifically, the value should be a comma-delimited string which only contains IP addresses, CIDR notation, domain names, or special DNS labels (e.g. `*`). For a full description of the expected value format, refer to the [**upstream Golang documentation**](https://pkg.go.dev/golang.org/x/net/http/httpproxy#Config)
+
+:::
 
 ```
 export proxy_host="10.0.0.5:8888"

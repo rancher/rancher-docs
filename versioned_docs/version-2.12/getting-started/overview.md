@@ -10,7 +10,7 @@ Rancher is a container management platform built for organizations that deploy c
 
 ## Run Kubernetes Everywhere
 
-Kubernetes has become the container orchestration standard. Most cloud and virtualization vendors now offer it as standard infrastructure. Rancher users have the choice of creating Kubernetes clusters with Rancher Kubernetes Engine (RKE) or cloud Kubernetes services, such as GKE, AKS, and EKS. Rancher users can also import and manage their existing Kubernetes clusters created using any Kubernetes distribution or installer.
+Kubernetes has become the container orchestration standard. Most cloud and virtualization vendors now offer it as standard infrastructure. Rancher users have the choice of creating Kubernetes clusters with Rancher Kubernetes distributions (RKE2/K3s) or cloud Kubernetes services, such as GKE, AKS, and EKS. Rancher users can also import and manage their existing Kubernetes clusters created using any Kubernetes distribution or installer.
 
 ## Meet IT Requirements
 
@@ -35,7 +35,7 @@ The Rancher API server is built on top of an embedded Kubernetes API server and 
 ### Authorization and Role-Based Access Control
 
 - **User management:** The Rancher API server [manages user identities](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/authentication-config.md) that correspond to external authentication providers like Active Directory or GitHub, in addition to local users.
-- **Authorization:** The Rancher API server manages [access control](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md) and [security](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) policies.
+- **Authorization:** The Rancher API server manages [access control](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md) and [security](../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/pod-security-standards.md) standards.
 
 ### Working with Kubernetes
 
@@ -58,7 +58,7 @@ The Rancher API server is built on top of an embedded Kubernetes API server and 
 
 ## Editing Downstream Clusters with Rancher
 
-The options and settings available for an existing cluster change based on the method that you used to provision it. For example, only clusters [provisioned by RKE](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) have **Cluster Options** available for editing.
+The options and settings available for an existing cluster change based on the method that you used to provision it.
 
 After a cluster is created with Rancher, a cluster administrator can manage cluster membership or manage node pools, among [other options.](../reference-guides/cluster-configuration/cluster-configuration.md)
 

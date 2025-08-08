@@ -18,4 +18,4 @@ A Nutanix cluster may consist of multiple groups of VMs with distinct properties
 
 ## Creating a Nutanix Cluster
 
-In [this section,](provision-kubernetes-clusters-in-aos.md) you'll learn how to use Rancher to install an [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes cluster in Nutanix AOS.
+In [this section,](provision-kubernetes-clusters-in-aos.md) you'll learn how to use Rancher to install an [RKE2](https://docs.rke2.io/)/[K3s](https://docs.k3s.io/) Kubernetes cluster in Nutanix AOS.

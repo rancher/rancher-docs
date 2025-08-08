@@ -128,7 +128,6 @@ The final command to install Rancher is below. The command requires a domain nam
 
 To install a specific Rancher version, use the `--version` flag (e.g., `--version 2.6.6`). Otherwise, the latest Rancher is installed by default. Refer to [Choosing a Rancher Version](../../installation-and-upgrade/resources/choose-a-rancher-version.md).
 
-For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
 See [Setting up the Bootstrap Password](../../installation-and-upgrade/resources/bootstrap-password.md#password-requirements) for password requirements.
 

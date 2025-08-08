@@ -16,20 +16,6 @@ By default, Kubernetes clusters require certificates and Rancher launched Kubern
 
 Certificates can be rotated for the following services:
 
-<Tabs>
-<TabItem value="RKE">
-
-- etcd
-- kubelet (node certificate)
-- kubelet (serving certificate, if [enabled](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-options))
-- kube-apiserver
-- kube-proxy
-- kube-scheduler
-- kube-controller-manager
-
-</TabItem>
-<TabItem value="RKE2">
-
 - admin
 - api-server
 - controller-manager
@@ -41,9 +27,6 @@ Certificates can be rotated for the following services:
 - auth-proxy
 - kubelet
 - kube-proxy
-
-</TabItem>
-</Tabs>
 
 :::note
 
@@ -68,15 +51,4 @@ Rancher launched Kubernetes clusters have the ability to rotate the auto-generat
 
 ### Additional Notes
 
-<Tabs>
-<TabItem value="RKE">
-
-Even though the RKE CLI can use custom certificates for the Kubernetes cluster components, Rancher currently doesn't allow the ability to upload these in Rancher launched Kubernetes clusters.
-
-</TabItem>
-<TabItem value="RKE2">
-
-In RKE2, both etcd and control plane nodes are treated as the same `server` concept. As such, when rotating certificates of services specific to either of these components will result in certificates being rotated on both. The certificates will only change for the specified service, but you will see nodes for both components go into an updating state. You may also see worker only nodes go into an updating state. This is to restart the workers after a certificate change to ensure they get the latest client certs.
-
-</TabItem>
-</Tabs>
+In RKE2/K3s, both etcd and control plane nodes are treated as the same `server` concept. As such, when rotating certificates of services specific to either of these components will result in certificates being rotated on both. The certificates will only change for the specified service, but you will see nodes for both components go into an updating state. You may also see worker only nodes go into an updating state. This is to restart the workers after a certificate change to ensure they get the latest client certs.

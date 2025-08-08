@@ -60,7 +60,7 @@ ClusterIP 是一个虚拟 IP，不会响应 ping。要测试 ClusterIP 是否配
 ## Rancher 的状态存储在哪里？
 
 - Docker 安装：在 `rancher/rancher` 容器的嵌入式 etcd 中，位于 `/var/lib/rancher`。
-- Kubernetes install：在为运行 Rancher 而创建的 RKE 集群的 etcd 中。
+- Kubernetes install: default location is in the `/var/lib/rancher/rke2` or `/var/lib/rancher/k3s` directories of the respective RKE2/K3s cluster created to run Rancher.
 
 ## 支持的 Docker 版本是如何确定的？
 
@@ -95,7 +95,7 @@ UI 由静态文件组成，并根据 API 的响应工作。换言之，UI 中可
 
 ## 如何将其他参数/绑定/环境变量添加到 Rancher 启动的 Kubernetes 集群的 Kubernetes 组件中？
 
-你可以使用集群选项中的[配置文件](../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#rke-集群配置文件参考)选项来添加其他参数/​​绑定/环境变量。有关详细信息，请参阅 RKE 文档中的[其他参数、绑定和环境变量](https://rancher.com/docs/rke/latest/en/config-options/services/services-extras/)，或浏览 [Cluster.ymls 示例](https://rancher.com/docs/rke/latest/en/example-yamls/)。
+You can add more arguments/binds/environment variables via the respective [RKE2 Config File](../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md#cluster-configuration) or [K3s Config File](../reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration.md#cluster-configuration).
 
 ## 如何检查证书链是否有效？
 

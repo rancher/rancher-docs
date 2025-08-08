@@ -155,7 +155,6 @@ done
 ## 已知限制
 
 - 当注册自定义节点仅提供公共 IP 时，Rancher **exec shell** 和 **查看 pod 日志** 在加固设置中**不起作用**。 此功能需要在注册自定义节点时提供私有 IP。
-- 当根据 Rancher [提供](../../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md)的 Pod 安全策略 (Pod Security Policies, PSP) 将 `default_pod_security_policy_template_id:` 设置为 `restricted` 或 `restricted-noroot` 时，Rancher 会在 `default` service accounts 上创建 `RoleBindings` 和 `ClusterRoleBindings`。CIS 检查 5.1.5 要求除了默认角色之外，`default` service accounts 不应绑定其他角色或集群角色。此外，`default` service accounts 应配置为不提供服务账户令牌，也不具有任何明确的权限分配。
 
 ## 加固的 RKE `cluster.yml` 配置参考
 
