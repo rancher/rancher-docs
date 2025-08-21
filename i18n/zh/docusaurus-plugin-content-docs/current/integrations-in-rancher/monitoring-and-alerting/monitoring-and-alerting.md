@@ -92,8 +92,6 @@ Rancher 和 Project 的读取权限并不一定适用于监控相关资源. 查�
 
 ## Windows 集群支持
 
-如果 Monitoring 部署到 RKE1 Windows 集群，Monitoring V2 将自动部署 [windows-exporter](https://github.com/prometheus-community/windows_exporter) DaemonSet 并设置 ServiceMonitor，以从每个部署的 Pod 中收集指标。这将使用 `windows_` 指标填充 Prometheus，这些指标与 [node_exporter](https://github.com/prometheus/node_exporter) 为 Linux 主机导出的 `node_` 指标类似。
-
 为了能够为 Windows 完全部署 Monitoring V2，你的所有 Windows 主机都必须至少具有 v0.1.0 的 [wins](https://github.com/rancher/wins) 版本。
 
 有关如何在现有 Windows 主机上升级 wins 版本的更多信息，请参阅 [Windows 集群对 Monitoring V2 的支持](windows-support.md)。
