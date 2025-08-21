@@ -200,7 +200,7 @@ Full instructions on how to redirect traffic to the migrated cluster differ base
 
 ### 6. Scale down the original Rancher instance
 
-After redirecting traffic to the new Rancher environment, **scale the original Rancher instance to 0 replicas** so it no longer contacts with your managed clusters.  
+After redirecting traffic to the new Rancher environment, **scale the original Rancher instance to 0 replicas** so it no longer contacts your managed clusters.  
 
 Leaving the old server up can cause agents to keep contacting the original `server-url`, which often leaves clusters stuck in **Updating** in the new environment.
 
