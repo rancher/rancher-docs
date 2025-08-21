@@ -198,7 +198,7 @@ After migration completes, update your DNS records and any load balancers, so th
 
 Full instructions on how to redirect traffic to the migrated cluster differ based on your specific environment. Refer to your hosting provider's documentation for more details.
 
-### 6. Scale down the original Rancher instance
+### 6. Scale Down the Original Rancher Instance
 
 After redirecting traffic to the new Rancher environment, **scale the original Rancher instance to 0 replicas** so it no longer contacts your managed clusters.  
 
