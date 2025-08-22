@@ -128,6 +128,35 @@ Trying to delete and restore a downstream cluster can lead to a variety of issue
 
 Other services, which are backed up by Rancher Backups, often change and evolve. As this happens, their resources and backup needs may change as well. Some resources may not need to be backed up and some may not be backed up at all. It is important for teams to consider this in their development process and assess whether their related resourceSets are correctly capturing the proper set of resources for their services to be restored correctly.
 
+## Monitoring backups and restores
+
+Rancher offers out-of-the box monitoring features for the Backup Operator. They are disabled by default but can be easily enabled when deploying the operator Helm Chart.
+
+### Metrics
+
+Metrics can be enabled by setting `monitoring.metrics.enabled: true` and `monitoring.serviceMonitor.enabled: true` in the Helm Chart values. When enabled, the Operator exports the following metrics. Note that *rancher-monitoring* needs to be previously installed for the metrics to be properly exported.
+
+| **Metric Name**                                    | **Description**                                                                                                                              |
+|----------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| `rancher_backup_info`                              | Details on a specific Rancher Backup CR (labels: `name`, `status`, `resourceSetName`, `retentionCount`, `backupType`, `filename`, `storageLocation`, `nextSnapshot`, `lastSnapshot`). Type *GaugeVec*.                    |
+| `rancher_backup_count`                             | Number of existing Rancher Backup CRs. Type *Gauge*.                                                                                         |
+| `rancher_backups_attempted_total`                  | Total number of Rancher Backups processed by the Operator (labels: `name`). Type *CounterVec*.                                               |
+| `rancher_backups_failed_total`                     | Total number of failed Rancher Backups processed by this operator (labels: `name`). Type *CounterVec*.                                       |
+| `rancher_backup_duration_seconds`                  | Duration of each backup processed by the Operator in seconds (labels: `name`). Type *HistogramVec*, buckets can be customized by the user.   |
+| `rancher_backup_last_processed_timestamp_seconds`  | Unix time of when the last Backup was processed (in seconds) (labels: `name`). Type *GaugeVec*.                                              |
+| `rancher_restore_info`                             | Details on a specific Rancher Restore CR (labels: `name`, `status`, `fileName`, `prune`, `storageLocation`, `restoreTime`). Type *GaugeVec*. |
+| `rancher_restore_count`                            | Number of existing Rancher Restore CRs. Type *Gauge*.                                                                                        |
+
+### Alerting
+
+Only one alert is provided by default, 'BackupFailed', which warns users when a Backup fails to be processed by the Operator. It can be enabled by setting `monitoring.prometheusRules.defaultAlert.enabled: true`.
+
+Users can also deploy their own alerting rules by setting `monitoring.prometheusRules.customRules.enabled: true` and defining them under `monitoring.prometheusRules.customRules.rules`.
+
+### Dashboards
+
+Rancher also provides Grafana dashboards to help monitor the Backup Operator health. These, however, can only be deployed by the *rancher-monitoring* Helm Chart. To do so `rancherBackupMonitoring.dashboards.enabled: true` needs to be set.
+
 ## Conclusion
 
 Rancher Backups is a very useful tool, however it is somewhat limited in its scope and intended purposes. In order to avoid possible difficulties, it is important to follow the specific procedures described to ensure the proper operation of the chart.
