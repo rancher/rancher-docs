@@ -193,6 +193,12 @@ Rancher can dynamically provision nodes in a provider such as Amazon EC2, Digita
 
 Rancher provisions this type of cluster using [docker-machine.](https://github.com/rancher/machine)
 
+### Rancher Launched Kubernetes for Custom Nodes
+
+When setting up this type of cluster, Rancher installs Kubernetes on existing nodes, which creates a custom cluster.
+
+Rancher provisions this type of cluster using https://github.com/rancher/rke2[RKE2] or https://github.com/rancher/k3s[K3s].
+
 ### Hosted Kubernetes Providers
 
 When setting up this type of cluster, Kubernetes is installed by providers such as Google Kubernetes Engine, Amazon Elastic Container Service for Kubernetes, or Azure Kubernetes Service.

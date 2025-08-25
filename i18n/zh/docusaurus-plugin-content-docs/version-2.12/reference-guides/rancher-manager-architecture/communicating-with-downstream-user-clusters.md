@@ -97,6 +97,12 @@ Rancher 可以动态启动云上（如 Amazon EC2、DigitalOcean、Azure 或 vSp
 
 Rancher 使用 [docker-machine](https://github.com/rancher/machine) 来配置这类型的集群。
 
+### Rancher Launched Kubernetes for Custom Nodes
+
+When setting up this type of cluster, Rancher installs Kubernetes on existing nodes, which creates a custom cluster.
+
+Rancher provisions this type of cluster using https://github.com/rancher/rke2[RKE2] or https://github.com/rancher/k3s[K3s].
+
 ### 托管的 Kubernetes 提供商
 
 配置此类集群时，Kubernetes 由云提供商安装，如 GKE、ECS 或 AKS 等。
