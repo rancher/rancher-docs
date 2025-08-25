@@ -73,7 +73,7 @@ CURRENT   NAME                        CLUSTER                     AUTHINFO     N
 
 In this example, when you use `kubectl` with the first context, `my-cluster`, you will be authenticated through the Rancher server.
 
-With the second context, `my-cluster-controlplane-1`, you would authenticate with the authorized cluster endpoint, communicating with an downstream RKE/K3s cluster directly.
+With the second context, `my-cluster-controlplane-1`, you would authenticate with the authorized cluster endpoint, communicating with an downstream RKE2/K3s cluster directly.
 
 We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.](../../../../reference-guides/rancher-manager-architecture/architecture-recommendations.md#architecture-for-an-authorized-cluster-endpoint-ace)
 
