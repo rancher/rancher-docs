@@ -42,7 +42,23 @@ kubectl -n cattle-system create secret generic tls-ca \
 
 The configured `tls-ca` secret is retrieved when Rancher starts. On a running Rancher installation the updated CA will take effect after new Rancher pods are started.
 
+The certificate chain must be properly formatted, or components may fail to download resources from the Rancher server. 
+
 :::
+
+## Adding Additional CA Certificates
+
+If you are using a node driver which makes API requests using a different CA than the one configured for Rancher, additional root certificates and certificate chains can be added. 
+
+Create a unique file ending in `.pem` for each certificate that is required, and use kubectl to create the 
+`tls-additional` secret in the `cattle-system` namespace.
+
+```
+kubectl -n cattle-system create secret generic tls-additional \
+  --from-file=cacerts1.pem=cacerts1.pem --from-file=cacerts2.pem=cacerts2.pem
+```
+
+These CA root certificates and certificate chains will be mounted into the node driver pod during provisioning.
 
 ## Updating a Private CA Certificate
 
