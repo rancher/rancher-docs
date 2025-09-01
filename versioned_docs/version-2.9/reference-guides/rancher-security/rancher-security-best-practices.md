@@ -44,8 +44,11 @@ Examples of potential baseline policies include:
 
 Without these controls at the identity provider layer, there is a risk of inconsistent or insecure username practices, which can complicate access audits and lead to privilege escalation attempts.
 
-> [!IMPORTANT]  
-> Rancher currently enforces only a [minimum password length](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/manage-users-and-groups#minimum-password-length.md)
+:::note Important
+
+Rancher currently enforces only a [minimum password length](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/manage-users-and-groups.md#minimum-password-length).
+
+:::
 
 **Recommendation:**
 We strongly advice that customers:
