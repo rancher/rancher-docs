@@ -101,7 +101,7 @@ Rancher 使用 [docker-machine](https://github.com/rancher/machine) 来配置这
 
 When setting up this type of cluster, Rancher installs Kubernetes on existing nodes, which creates a custom cluster.
 
-Rancher provisions this type of cluster using https://github.com/rancher/rke2[RKE2] or https://github.com/rancher/k3s[K3s].
+Rancher provisions this type of cluster using [RKE2](https://github.com/rancher/rke2) or [K3s](https://github.com/rancher/k3s).
 
 ### 托管的 Kubernetes 提供商
 

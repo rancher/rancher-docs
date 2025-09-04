@@ -197,7 +197,7 @@ Rancher provisions this type of cluster using [docker-machine.](https://github.c
 
 When setting up this type of cluster, Rancher installs Kubernetes on existing nodes, which creates a custom cluster.
 
-Rancher provisions this type of cluster using https://github.com/rancher/rke2[RKE2] or https://github.com/rancher/k3s[K3s].
+Rancher provisions this type of cluster using [RKE2](https://github.com/rancher/rke2) or [K3s](https://github.com/rancher/k3s).
 
 ### Hosted Kubernetes Providers
 
