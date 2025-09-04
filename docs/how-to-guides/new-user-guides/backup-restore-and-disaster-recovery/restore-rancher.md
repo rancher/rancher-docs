@@ -18,6 +18,12 @@ While restoring Rancher on the same setup, the operator will scale down the Ranc
 
 :::
 
+:::note Warning for Fleet users
+You must consider how to handle Kubernetes API server availability and paused GitRepos when restoring a Rancher setup
+that is running Fleet workloads. See the [Fleet
+documentation](http://fleet.rancher.io/gitrepo-add#backing-up-and-restoring) for more details.
+:::
+
 :::tip
 
 * Follow those steps to [migrate Rancher](migrate-rancher-to-new-cluster.md).
