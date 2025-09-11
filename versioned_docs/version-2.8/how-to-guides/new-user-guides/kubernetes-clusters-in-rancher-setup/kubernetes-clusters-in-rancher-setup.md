@@ -1,10 +1,10 @@
 ---
-title: Setting up Kubernetes Clusters in Rancher
+title: Kubernetes Clusters in Rancher Setup
 description: Provisioning Kubernetes Clusters
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/kubernetes-clusters-in-rancher-setup"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup"/>
 </head>
 
 Rancher simplifies the creation of clusters by allowing you to create them through the Rancher UI rather than more complex alternatives. Rancher provides multiple options for launching a cluster. Use the option that best fits your use case.
@@ -37,7 +37,7 @@ Rancher uses the [Rancher Kubernetes Engine (RKE)](https://rancher.com/docs/rke/
 
 In RKE clusters, Rancher manages the deployment of Kubernetes. These clusters can be deployed on any bare metal server, cloud provider, or virtualization platform.
 
-These nodes can be dynamically provisioned through Rancher's UI, which calls [Docker Machine](https://docs.docker.com/machine/) to launch nodes on various cloud providers.
+These nodes can be dynamically provisioned through Rancher's UI, which calls [Docker Machine](https://github.com/docker/docs/blob/vnext-engine/machine/overview.md) to launch nodes on various cloud providers.
 
 If you already have a node that you want to add to an RKE cluster, you can add it to the cluster by running a Rancher agent container on it.
 

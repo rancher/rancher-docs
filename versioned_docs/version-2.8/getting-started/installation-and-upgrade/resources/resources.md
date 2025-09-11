@@ -3,7 +3,7 @@ title: Resources
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/resources"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/resources"/>
 </head>
 
 ### Docker Installations

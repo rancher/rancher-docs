@@ -6,13 +6,11 @@ title: Overview
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/neuvector/overview"/>
 </head>
 
-### NeuVector Integration in Rancher
-
 [NeuVector 5.x](https://open-docs.neuvector.com/) is an open-source container-centric security platform that is integrated with Rancher. NeuVector offers real-time compliance, visibility, and protection for critical applications and data during runtime. NeuVector provides a firewall, container process/file system monitoring, security auditing with CIS benchmarks, and vulnerability scanning. For more information on Rancher security, please see the [security documentation](../../reference-guides/rancher-security/rancher-security.md).
 
 NeuVector can be enabled through a Helm chart that may be installed either through **Apps** or through the **Cluster Tools** button in the Rancher UI. Once the Helm chart is installed, users can easily [deploy and manage NeuVector clusters within Rancher](https://open-docs.neuvector.com/deploying/rancher#deploy-and-manage-neuvector-through-rancher-apps-marketplace).
 
-### Installing NeuVector with Rancher
+## Installing NeuVector with Rancher
 
 The Harvester Helm Chart is used to manage access to the NeuVector UI in Rancher where users can navigate directly to deploy and manage their NeuVector clusters.
 
@@ -25,17 +23,16 @@ The Harvester Helm Chart is used to manage access to the NeuVector UI in Rancher
 
 Some examples are as follows:
 
-   - RKE1: `docker`
-   - K3s and RKE2: `k3scontainerd`
-   - AKS: `containerd` for v1.19 and up
-   - EKS: `docker` for v1.22 and below; `containerd` for v1.23 and up
-   - GKE: `containerd` (see the [Google docs](https://cloud.google.com/kubernetes-engine/docs/concepts/using-containerd) for more)
+- K3s and RKE2: `k3scontainerd`
+- AKS: `containerd` for v1.19 and up
+- EKS: `docker` for v1.22 and below; `containerd` for v1.23 and up
+- GKE: `containerd` (see the [Google docs](https://cloud.google.com/kubernetes-engine/docs/concepts/using-containerd) for more)
 
-    :::note
+  :::note
 
-    Only one container runtime engine may be selected at a time during installation.
+  Only one container runtime engine may be selected at a time during installation.
 
-    :::
+  :::
 
 **To navigate to and install the NeuVector chart through Cluster Tools:**
 
@@ -44,12 +41,12 @@ Some examples are as follows:
 1. Click on **Cluster Tools** at the bottom of the left navigation bar.
 1. Repeat step 4 above to select your container runtime accordingly, then click **Install** again.
 
-### Accessing NeuVector from the Rancher UI
+## Accessing NeuVector from the Rancher UI
 
 1. Navigate to the cluster explorer of the cluster where NeuVector is installed. In the left navigation bar, click **NeuVector**.
 1. Click the external link to go to the NeuVector UI. Once the link is selected, users must accept the `END USER LICENSE AGREEMENT` to access the NeuVector UI.
 
-### Uninstalling NeuVector from the Rancher UI
+## Uninstalling NeuVector from the Rancher UI
 
 **To uninstall from Apps:**
 
@@ -62,15 +59,15 @@ Some examples are as follows:
 1. Click **☰ > Cluster Management**.
 1. Click on **Cluster Tools** at the bottom-left of the screen, then click on the trash can icon under the NeuVector chart. Select `Delete the CRD associated with this app` if desired, then click **Delete**.
 
-### GitHub Repository
+## GitHub Repository
 
 The NeuVector project is available [here](https://github.com/neuvector/neuvector).
 
-### Documentation
+## Documentation
 
 The NeuVector documentation is [here](https://open-docs.neuvector.com/).
 
-### Architecture
+## Architecture
 
 The NeuVector security solution contains four types of security containers: Controllers, Enforcers, Managers, and Scanners. A special container called an All-in-One is also provided to combine the Controller, Enforcer, and Manager functions all in one container, primarily for Docker-native deployments. There is also an Updater which, when run, will update the CVE database.
 
@@ -91,7 +88,7 @@ The NeuVector security solution contains four types of security containers: Cont
 
 To learn more about NeuVector's architecture, please refer [here](https://open-docs.neuvector.com/basics/overview#architecture).
 
-### CPU and Memory Allocations
+## CPU and Memory Allocations
 
 Below are the minimum recommended computing resources for the NeuVector chart installation in a default deployment. Note that the resource limit is not set.
 
@@ -104,65 +101,38 @@ Below are the minimum recommended computing resources for the NeuVector chart in
 
 \* Minimum 1GB of memory total required for Controller, Manager, and Scanner containers combined.
 
+## Hardened Cluster Support - Calico and Canal
 
-### Hardened Cluster Support - Calico and Canal
+NeuVector components Controller and Enforcer are deployable if PSP is set to true.
 
-<Tabs>
-<TabItem value="RKE1">
+**Applicable to NeuVector chart version 100.0.0+up2.2.0 only:**
 
-  - All NeuVector components are deployable if PSP is set to true.
+For Manager, Scanner, and Updater components, additional configuration is required as shown below:
 
-  You will need to set additional configuration for your hardened cluster environment as follows:
+```sh
+kubectl patch deploy neuvector-manager-pod -n cattle-neuvector-system --patch '{"spec":{"template":{"spec":{"securityContext":{"runAsUser": 5400}}}}}'
+kubectl patch deploy neuvector-scanner-pod -n cattle-neuvector-system --patch '{"spec":{"template":{"spec":{"securityContext":{"runAsUser": 5400}}}}}'
+kubectl patch cronjob neuvector-updater-pod -n cattle-neuvector-system --patch '{"spec":{"jobTemplate":{"spec":{"template":{"spec":{"securityContext":{"runAsUser": 5400}}}}}}}'
+```
 
-  1. Click **☰ > Cluster Management**.
-  1. Go to the cluster that you created and click **Explore**.
-  1. In the left navigation bar, click **Apps**.
-  1. Install (or upgrade to) NeuVector version `100.0.1+up2.2.2`.
+You will need to set additional configuration for your hardened cluster environment.
 
-  - Under **Edit Options** > **Other Configuration**, enable **Pod Security Policy** by checking the box (no other config needed):
+:::note
+You must update your config in both RKE2 and K3s hardened clusters as shown below.
+:::
 
-      ![Enable PSP for RKE1 Hardened Cluster](/img/psp-nv-rke.png)
+1. Click **☰ > Cluster Management**.
+1. Go to the cluster that you created and click **Explore**.
+1. In the left navigation bar, click **Apps**.
+1. Install (or upgrade to) NeuVector version `100.0.1+up2.2.2`.
 
-  1. Click **Install** at the bottom-right to complete.
+- Under **Edit Options** > **Other Configuration**, enable **Pod Security Policy** by checking the box. Note that you must also enter a value greater than `zero` for `Manager runAsUser ID`, `Scanner runAsUser ID`, and `Updater runAsUser ID`:
 
+    ![Enable PSP for RKE2 and K3s Hardened Clusters](/img/psp-nv-rke2.png)
 
-</TabItem>
-<TabItem value="RKE2">
+1. Click **Install** at the bottom-right to complete.
 
-  - NeuVector components Controller and Enforcer are deployable if PSP is set to true.
-
-
-  **Applicable to NeuVector chart version 100.0.0+up2.2.0 only:**
-
-  - For Manager, Scanner, and Updater components, additional configuration is required as shown below:
-
-  ```
-  kubectl patch deploy neuvector-manager-pod -n cattle-neuvector-system --patch '{"spec":{"template":{"spec":{"securityContext":{"runAsUser": 5400}}}}}'
-  kubectl patch deploy neuvector-scanner-pod -n cattle-neuvector-system --patch '{"spec":{"template":{"spec":{"securityContext":{"runAsUser": 5400}}}}}'
-  kubectl patch cronjob neuvector-updater-pod -n cattle-neuvector-system --patch '{"spec":{"jobTemplate":{"spec":{"template":{"spec":{"securityContext":{"runAsUser": 5400}}}}}}}'
-  ```
-  <br/>
-
-  You will need to set additional configuration for your hardened cluster environment.
-
-  >**Note:** You must update your config in both RKE2 and K3s hardened clusters as shown below.
-
-  1. Click **☰ > Cluster Management**.
-  1. Go to the cluster that you created and click **Explore**.
-  1. In the left navigation bar, click **Apps**.
-  1. Install (or upgrade to) NeuVector version `100.0.1+up2.2.2`.
-
-  - Under **Edit Options** > **Other Configuration**, enable **Pod Security Policy** by checking the box. Note that you must also enter a value greater than `zero` for `Manager runAsUser ID`, `Scanner runAsUser ID`, and `Updater runAsUser ID`:
-
-      ![Enable PSP for RKE2 and K3s Hardened Clusters](/img/psp-nv-rke2.png)
-
-  1. Click **Install** at the bottom-right to complete.
-
-</TabItem>
-</Tabs>
-
-
-### SELinux-enabled Cluster Support - Calico and Canal
+## SELinux-enabled Cluster Support - Calico and Canal
 
 To enable SELinux on RKE2 clusters, follow the steps below:
 
@@ -179,12 +149,11 @@ kubectl patch deploy neuvector-scanner-pod -n cattle-neuvector-system --patch '{
 kubectl patch cronjob neuvector-updater-pod -n cattle-neuvector-system --patch '{"spec":{"jobTemplate":{"spec":{"template":{"spec":{"securityContext":{"runAsUser": 5400}}}}}}}'
 ```
 
-### Cluster Support in an Air-Gapped Environment
+## Cluster Support in an Air-Gapped Environment
 
 - All NeuVector components are deployable on a cluster in an air-gapped environment without any additional configuration needed.
 
-
-### Support Limitations
+## Support Limitations
 
 * Only admins and cluster owners are currently supported.
 
@@ -192,12 +161,10 @@ kubectl patch cronjob neuvector-updater-pod -n cattle-neuvector-system --patch '
 
 * NeuVector is not supported on a Windows cluster.
 
-
-### Other Limitations
+## Other Limitations
 
 * Currently, NeuVector feature chart installation fails when a NeuVector partner chart already exists. To work around this issue, uninstall the NeuVector partner chart and reinstall the NeuVector feature chart.
 
 * Sometimes when the controllers are not ready, the NeuVector UI is not accessible from the Rancher UI. During this time, controllers will try to restart, and it takes a few minutes for the controllers to be active.
 
 * Container runtime is not auto-detected for different cluster types when installing the NeuVector chart. To work around this, you can specify the runtime manually.
-

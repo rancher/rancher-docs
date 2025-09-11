@@ -25,7 +25,7 @@ With Longhorn, you can:
 
 ![Longhorn Dashboard](/img/longhorn-screenshot.png)
 
-### Installing Longhorn with Rancher
+## Installing Longhorn with Rancher
 
 1. Fulfill all [Installation Requirements.](https://longhorn.io/docs/latest/deploy/install/#installation-requirements)
 1. Go to the cluster where you want to install Longhorn.
@@ -37,14 +37,14 @@ With Longhorn, you can:
 
 **Result:** Longhorn is deployed in the Kubernetes cluster.
 
-### Accessing Longhorn from the Rancher UI
+## Accessing Longhorn from the Rancher UI
 
 1. Go to the cluster where Longhorn is installed. In the left navigation menu, click **Longhorn**.
 1. On this page, you can edit Kubernetes resources managed by Longhorn. To view the Longhorn UI, click the **Longhorn** button in the **Overview** section.
 
 **Result:** You will be taken to the Longhorn UI, where you can manage your Longhorn volumes and their replicas in the Kubernetes cluster, as well as secondary backups of your Longhorn storage that may exist in another Kubernetes cluster or in S3.
 
-### Uninstalling Longhorn from the Rancher UI
+## Uninstalling Longhorn from the Rancher UI
 
 1. Go to the cluster where Longhorn is installed and click **Apps**.
 1. Click **Installed Apps**.
@@ -53,15 +53,15 @@ With Longhorn, you can:
 
 **Result:** Longhorn is uninstalled.
 
-### GitHub Repository
+## GitHub Repository
 
 The Longhorn project is available [here.](https://github.com/longhorn/longhorn)
 
-### Documentation
+## Documentation
 
 The Longhorn documentation is [here.](https://longhorn.io/docs/)
 
-### Architecture
+## Architecture
 
 Longhorn creates a dedicated storage controller for each volume and synchronously replicates the volume across multiple replicas stored on multiple nodes.
 

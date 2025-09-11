@@ -11,7 +11,7 @@ Cluster and project roles define user authorization inside a cluster or project.
 To manage these roles,
 
 1. Click **☰ > Users & Authentication**.
-1. In the left navigation bar, click **Roles** and go to the **Cluster** or **Project/Namespaces** tab.
+1. In the left navigation bar, click **Role Templates** and go to the **Cluster** or **Project/Namespaces** tab.
 
 ### Membership and Role Assignment
 
@@ -73,7 +73,7 @@ The following table lists the permissions available for the `Manage Nodes` role 
 For details on how each cluster role can access Kubernetes resources, you can look them up in the Rancher UI:
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
-1. In the left navigation bar, click **Roles**.
+1. In the left navigation bar, click **Role Templates**.
 1. Click the **Cluster** tab.
 1. Click the name of an individual role. The table shows all of the operations and resources that are permitted by the role.
 
@@ -196,6 +196,34 @@ As previously mentioned, custom roles can be defined for use at the cluster or p
 
 When defining a custom role, you can grant access to specific resources or specify roles from which the custom role should inherit. A custom role can be made up of a combination of specific grants and inherited roles. All grants are additive. This means that defining a narrower grant for a specific resource **will not** override a broader grant defined in a role that the custom role is inheriting from.
 
+#### UpdatePSA For Project Level
+
+About defining custom roles, you can grant permission to a user to create or update *PSA* policies when defining namespaces within projects.
+
+To do so, you can use the following `RoleTemplate` to be applied on the cluster:
+
+```yaml
+apiVersion: management.cattle.io/v3
+builtin: false
+context: project
+description: ''
+displayName: Manage PSA Labels
+external: false
+hidden: false
+kind: RoleTemplate
+metadata:
+  name: namespaces-psa
+rules:
+  - apiGroups:
+      - management.cattle.io
+    resources:
+      - projects
+    verbs:
+      - updatepsa
+```
+
+When creating a new project (from the **Members** tab), click **Add** to add the user and select **Custom** > **Create Namespaces** (to allow the user to create namespaces). Then click **Add** again and select `UpdatePSA` project role template from the list of **Project Permissions**.
+
 ### Default Cluster and Project Roles
 
 By default, when a standard user creates a new cluster or project, they are automatically assigned an ownership role: either [cluster owner](#cluster-roles) or [project owner](#project-roles). However, in some organizations, these roles may overextend administrative access. In this use case, you can change the default role to something more restrictive, such as a set of individual roles or a custom role.
@@ -220,7 +248,7 @@ There are two methods for changing default cluster/project roles:
 You can change the cluster or project role(s) that are automatically assigned to the creating user.
 
 1. In the upper left corner, click **☰ > Users & Authentication**.
-1. In the left navigation bar, click **Roles**.
+1. In the left navigation bar, click **Role Templates**.
 1. Click the **Cluster** or **Project/Namespaces** tab.
 1. Find the custom or individual role that you want to use as default. Then edit the role by selecting **⋮ > Edit Config**.
 1. In the **Cluster Creator Default** or **Project Creator Default** section, enable the role as the default.
@@ -238,3 +266,9 @@ When you revoke the cluster membership for a standard user that's explicitly ass
 - Exercise any [individual project roles](#project-role-reference) they are assigned.
 
 If you want to completely revoke a user's access within a cluster, revoke both their cluster and project memberships.
+
+### External `RoleTemplate` Behavior
+
+In Rancher v2.9.0 and later, external `RoleTemplate` objects can only be created if the backing `ClusterRole` exists in the local cluster or the `ExternalRules` is set in your configuration.
+
+For context, the backing `ClusterRole` holds cluster rules and privileges, and shares the same `metadata.name` used in the `RoleTemplate` in your respective cluster referenced by the `ClusterRoleTemplateBinding/ProjectRoleTemplateBinding`. Additionally, note that `escalate` permissions on `RoleTemplates` are required to create external `RoleTemplates` with `ExternalRules`.

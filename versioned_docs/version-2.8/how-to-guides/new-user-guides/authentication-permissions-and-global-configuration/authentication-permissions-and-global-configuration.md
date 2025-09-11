@@ -3,14 +3,14 @@ title: Authentication, Permissions and Global Settings
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/authentication-permissions-and-global-configuration"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration"/>
 </head>
 
 After installation, the [system administrator](manage-role-based-access-control-rbac/global-permissions.md) should configure Rancher to configure authentication, authorization, security, default settings, security policies, drivers and global DNS entries.
 
 ## First Log In
 
-After you log into Rancher for the first time, Rancher will prompt you for a **Rancher Server URL**.You should set the URL to the main entry point to the Rancher Server. When a load balancer sits in front a Rancher Server cluster, the URL should resolve to the load balancer. The system will automatically try to infer the Rancher Server URL from the IP address or host name of the host running the Rancher Server. This is only correct if you are running a single node Rancher Server installation. In most cases, therefore, you need to set the Rancher Server URL to the correct value yourself.
+After you log into Rancher for the first time, Rancher will prompt you for a **Rancher Server URL**. You should set the URL to the main entry point to the Rancher Server. When a load balancer sits in front a Rancher Server cluster, the URL should resolve to the load balancer. The system will automatically try to infer the Rancher Server URL from the IP address or host name of the host running the Rancher Server. This is only correct if you are running a single node Rancher Server installation. In most cases, therefore, you need to set the Rancher Server URL to the correct value yourself.
 
 :::danger
 
@@ -29,6 +29,14 @@ For more information how authentication works and how to configure each provider
 Within Rancher, each person authenticates as a _user_, which is a login that grants you access to Rancher. Once the user logs in to Rancher, their _authorization_, or their access rights within the system, is determined by the user's role. Rancher provides built-in roles to allow you to easily configure a user's permissions to resources, but Rancher also provides the ability to customize the roles for each Kubernetes resource.
 
 For more information how authorization works and how to customize roles, see [Roles Based Access Control (RBAC)](manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md).
+
+## User Retention
+
+In Rancher v2.8.5 and later, you can enable user retention. This feature automatically removes inactive users after a configurable period of time.
+
+The user retention feature is disabled by default.
+
+For more information, see [Enabling User Retention](../../advanced-user-guides/enable-user-retention.md).
 
 ## Pod Security Policies
 
@@ -82,4 +90,4 @@ The following features are available under **Global Configuration**:
 - **Global DNS Entries**
 - **Global DNS Providers**
 
-As these are legacy features, please see the Rancher v2.0—v2.4 docs on [catalogs](/versioned_docs/version-2.0-2.4/pages-for-subheaders/helm-charts-in-rancher.md), [global DNS entries](/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns.md#adding-a-global-dns-entry), and [global DNS providers](/versioned_docs/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns.md#editing-a-global-dns-provider) for more details.
+As these are legacy features, please see the Rancher v2.0—v2.4 docs on [catalogs](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md), [global DNS entries](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns.md#adding-a-global-dns-entry), and [global DNS providers](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns.md#editing-a-global-dns-provider) for more details.

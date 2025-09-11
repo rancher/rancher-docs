@@ -332,7 +332,7 @@ Refer to the offical AWS upstream documentation for the [cloud controller manage
 <Tabs groupId="k8s-distro">
 <TabItem value="RKE2">
 
-Official upstream docs for [Helm chart installation](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager) can be found on Github.
+Official upstream docs for [Helm chart installation](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager) can be found on GitHub.
 
 1. Add the Helm repository:
 
@@ -352,9 +352,9 @@ tolerations:
     value: 'true'
   - effect: NoSchedule
     value: 'true'
-    key: node-role.kubernetes.io/controlplane
+    key: node-role.kubernetes.io/control-plane
 nodeSelector:
-  node-role.kubernetes.io/controlplane: 'true'
+  node-role.kubernetes.io/control-plane: 'true'
 args:
   - --configure-cloud-routes=false
   - --use-service-account-credentials=true
@@ -465,7 +465,7 @@ kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
 
 <TabItem value="RKE">
 
-Official upstream docs for [Helm chart installation](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager) can be found on Github.
+Official upstream docs for [Helm chart installation](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager) can be found on GitHub.
 
 1. Add the Helm repository:
 
@@ -639,7 +639,7 @@ kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
       - get
 ```
 
-9. Rancher-provisioned RKE nodes are tainted `node-role.kubernetes.io/controlplane`. Update tolerations and the nodeSelector:
+9. Rancher-provisioned RKE2 nodes are tainted `node-role.kubernetes.io/control-plane`. Update tolerations and the nodeSelector:
 
 ```yaml
 tolerations:
@@ -648,13 +648,13 @@ tolerations:
     value: 'true'
   - effect: NoSchedule
     value: 'true'
-    key: node-role.kubernetes.io/controlplane
+    key: node-role.kubernetes.io/control-plane
 
 ```
 
 ```yaml
 nodeSelector:
-  node-role.kubernetes.io/controlplane: 'true'
+  node-role.kubernetes.io/control-plane: 'true'
 ```
 
 :::note
@@ -663,7 +663,7 @@ There's currently a [known issue](https://github.com/rancher/dashboard/issues/92
 
 ```yaml
 nodeSelector:
-  node-role.kubernetes.io/controlplane: 'true'
+  node-role.kubernetes.io/control-plane: 'true'
 ```
 
 :::

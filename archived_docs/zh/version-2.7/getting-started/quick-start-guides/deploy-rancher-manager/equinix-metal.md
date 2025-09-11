@@ -1,0 +1,108 @@
+---
+title: Rancher Equinix Metal 快速入门
+---
+
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/getting-started/quick-start-guides/deploy-rancher-manager/equinix-metal"/>
+</head>
+
+## 本章节引导你：
+
+- 配置 Equinix Metal server
+- 安装 Rancher 2.x
+- 创建你的第一个集群
+- 部署一个 Nginx 应用
+
+:::caution
+
+本章节中提供的指南，旨在帮助你快速启动一个用于 Rancher 的沙盒，以评估 Rancher 是否能满足你的使用需求。不建议将 Docker 安装用于生产环境。如果你需要获取生产环境的操作指导，请参见[安装](../../installation-and-upgrade/installation-and-upgrade.md)。
+
+:::
+
+## 快速入门概述
+
+本指南划分为不同任务，以便于使用。
+
+<br/>
+
+## 先决条件
+
+- [Equinix Metal 账号](https://deploy.equinix.com/developers/docs/metal/identity-access-management/users/)
+- [Equinix Metal 项目](https://deploy.equinix.com/developers/docs/metal/projects/creating-a-project/)
+
+
+### 1. 配置 Equinix Metal 主机
+
+开始部署 Equinix Metal 主机。你可以使用 Equinix Metal 控制台、CLI 或 API 来配置 Equinix Metal Server。如果你需要了解每种 Deployment 类型的说明，请参见 [Equinix Metal 部署](https://metal.equinix.com/developers/docs/deploy/on-demand/)。You can find additional information on Equinix Metal server types in the [Equinix Metal Documentation](https://deploy.equinix.com/developers/docs/metal/hardware/standard-servers/).
+
+:::note 注意事项：
+
+- 如果使用 CLI 或 API 配置新的 Equinix Metal Server，你需要提供项目 ID、计划、metro 和操作系统。
+- 当使用云主机的虚拟机时，你需要允许 80 和 443 端口的入站 TCP 通信。有关端口配置的信息，请参见你的云主机的文档。
+- 如需了解所有端口要求，请参见 [Docker 安装](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md)。
+- 根据我们的[要求](../../installation-and-upgrade/installation-requirements/installation-requirements.md)配置主机。
+
+:::
+### 2. 安装 Rancher
+
+要在 Equinix Metal 主机上安装 Rancher，先与它连接，然后使用 shell 进行安装。
+
+1. 使用你惯用的 shell（例如 PuTTy 或远程终端）登录到你的 Equinix Metal 主机。
+
+2. 在 shell 中执行以下命令：
+
+   ```
+   sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 --privileged rancher/rancher
+   ```
+
+**结果**：Rancher 已安装。
+
+### 3. 登录
+
+登录到 Rancher 后，你还需要进行一些一次性配置。
+
+1. 打开 Web 浏览器并输入主机的 IP 地址`https://<SERVER_IP>`。
+
+   将 `<SERVER_IP>` 替换为你的主机 IP 地址。
+
+2. 出现提示时，为默认 `admin` 账号创建密码。
+
+3. 设置 **Rancher Server URL**。URL 可以是 IP 地址或主机名。需要注意，添加到集群中的每个节点都必须能够连接到此 URL。<br/><br/>如果你在 URL 中使用主机名，则此主机名必须在 DNS 中解析到你需要添加到集群的节点上。
+
+<br/>
+
+### 4. 创建集群
+
+欢迎使用 Rancher！现在，你可以创建你的第一个 Kubernetes 集群了。
+
+在此任务中，你可以使用**自定义**选项。此选项允许你把 _任意_ Linux 主机（云虚拟机、本地虚拟机或裸机）添加到集群中。
+
+1. 点击 **☰ > 集群管理**。
+1. 在**集群**页面，点击**创建**。
+1. 选择**自定义**。
+1. 输入**集群名称**。
+1. 点击**下一步**。
+1. 在**节点角色**中，选择 _全部_ 角色，即 **etcd**，**Control** 和 **Worker**。
+   - **可选**：Rancher 会自动检测用于 Rancher 通信和集群通信的 IP 地址。你可以使用**节点地址**处的`公有地址`和`内网地址`进行覆盖。
+1. 将注册命令复制到剪贴板。
+1. 使用你惯用的 shell（例如 PuTTy 或远程终端）登录到你的 Linux 主机。粘贴剪贴板的命令并运行。
+1. 在 Linux 主机上运行完命令后，单击**完成**。
+
+**结果**：
+
+你已创建集群，集群的状态是**配置中**。Rancher 已在你的集群中。
+
+当集群状态变为 **Active** 后，你可访问集群。
+
+**Active** 状态的集群会分配到两个项目：
+
+- `Default`：包含 `default` 命名空间
+- `System`：包含 `cattle-system`，`ingress-nginx`，`kube-public` 和 `kube-system` 命名空间。
+
+#### 已完成！
+
+恭喜！你已创建第一个集群。
+
+#### 后续操作
+
+使用 Rancher 创建 deployment。详情请参见[创建 Deployment](../deploy-workloads/deploy-workloads.md)。

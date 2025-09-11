@@ -19,7 +19,7 @@ To provision new storage for your workloads, follow these steps:
 1. [Add a storage class and configure it to use your storage.](#1-add-a-storage-class-and-configure-it-to-use-your-storage)
 2. [Use the Storage Class for Pods Deployed with a StatefulSet.](#2-use-the-storage-class-for-pods-deployed-with-a-statefulset)
 
-### Prerequisites
+## Prerequisites
 
 - To set up persistent storage, the `Manage Volumes` [role](../../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-role-reference) is required.
 - If you are provisioning storage for a cluster hosted in the cloud, the storage and cluster hosts must have the same cloud provider.
@@ -42,7 +42,7 @@ hostPath | `host-path`
 
 To use a storage provisioner that is not on the above list, you will need to use a [feature flag to enable unsupported storage drivers.](../../../../advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md)
 
-### 1. Add a storage class and configure it to use your storage
+## 1. Add a storage class and configure it to use your storage
 
 These steps describe how to set up a storage class at the cluster level.
 
@@ -59,7 +59,7 @@ These steps describe how to set up a storage class at the cluster level.
 
 For full information about the storage class parameters, refer to the official [Kubernetes documentation.](https://kubernetes.io/docs/concepts/storage/storage-classes/#parameters).
 
-### 2. Use the Storage Class for Pods Deployed with a StatefulSet
+## 2. Use the Storage Class for Pods Deployed with a StatefulSet
 
 StatefulSets manage the deployment and scaling of Pods while maintaining a sticky identity for each Pod. In this StatefulSet, we will configure a VolumeClaimTemplate. Each Pod managed by the StatefulSet will be deployed with a PersistentVolumeClaim based on this VolumeClaimTemplate. The PersistentVolumeClaim will refer to the StorageClass that we created. Therefore, when each Pod managed by the StatefulSet is deployed, it will be bound to dynamically provisioned storage using the StorageClass defined in its PersistentVolumeClaim.
 
@@ -70,7 +70,7 @@ StatefulSets manage the deployment and scaling of Pods while maintaining a stick
 1. Click **StatefulSet**.
 1. In the **Volume Claim Templates** tab, click **Add Claim Template**.
 1. Enter a name for the persistent volume.
-1. In the **StorageClass* field, select the StorageClass that will dynamically provision storage for pods managed by this StatefulSet.
+1. In the **StorageClass** field, select the StorageClass that will dynamically provision storage for pods managed by this StatefulSet.
 1. In the **Mount Point** field, enter the path that the workload will use to access the volume.
 1. Click **Launch**.
 
@@ -84,7 +84,7 @@ To attach the PVC to an existing workload,
 1. Go to the workload that will use storage provisioned with the StorageClass that you cared at click **⋮ > Edit Config**.
 1. In the **Volume Claim Templates** section, click **Add Claim Template**.
 1. Enter a persistent volume name.
-1. In the **StorageClass* field, select the StorageClass that will dynamically provision storage for pods managed by this StatefulSet.
+1. In the **StorageClass** field, select the StorageClass that will dynamically provision storage for pods managed by this StatefulSet.
 1. In the **Mount Point** field, enter the path that the workload will use to access the volume.
 1. Click **Save**.
 

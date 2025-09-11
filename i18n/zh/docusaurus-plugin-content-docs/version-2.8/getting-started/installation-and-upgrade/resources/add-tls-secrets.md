@@ -31,7 +31,7 @@ kubectl -n cattle-system create secret tls tls-rancher-ingress \
 
 ```
 kubectl -n cattle-system create secret generic tls-ca \
-  --from-file=cacerts.pem=./cacerts.pem
+  --from-file=cacerts.pem
 ```
 
 :::note
@@ -42,4 +42,4 @@ Rancher 启动时会检索配置的 `tls-ca` 密文。如果 Rancher 在运行�
 
 ## 更新私有 CA 证书
 
-按照[步骤](update-rancher-certificate.md)更新 [Rancher 高可用 Kubernetes 安装](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md)中的 Ingress，或从默认自签名证书切换到自定义证书。
+按照[步骤](update-rancher-certificate.md)更新 [Rancher 高可用 Kubernetes 安装](../install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md)中的 Ingress，或从默认自签名证书切换到自定义证书。

@@ -43,7 +43,7 @@ Deploying to Microsoft Azure will incur charges.
     - `azure_client_id` - Microsoft Azure Client ID
     - `azure_client_secret` - Microsoft Azure Client Secret
     - `azure_tenant_id` - Microsoft Azure Tenant ID
-    - `rancher_server_admin_password` - Admin password for created Rancher server (minimum 12 characters)
+    - `rancher_server_admin_password` - Admin password for created Rancher server. See [Setting up the Bootstrap Password](../../installation-and-upgrade/resources/bootstrap-password.md#password-requirements) for password requirements.
 
 5. **Optional:** Modify optional variables within `terraform.tfvars`.
 See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [Azure Quickstart Readme](https://github.com/rancher/quickstart/tree/master/rancher/azure) for more information. Suggestions include:

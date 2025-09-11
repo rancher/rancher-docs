@@ -13,7 +13,7 @@ title: 升级 Docker 安装的 Rancher
 ## 先决条件
 
 - 在 Rancher 文档中**检查[已知升级问题](../../install-upgrade-on-a-kubernetes-cluster/upgrades.md#已知升级问题)**，了解升级 Rancher 时最需要注意的问题。你可以在 [GitHub](https://github.com/rancher/rancher/releases) 发布说明以及 [Rancher 论坛](https://forums.rancher.com/c/announcements/12)中找到每个 Rancher 版本的已知问题。不支持升级或升级到 [rancher-alpha 仓库](../../resources/choose-a-rancher-version.md#helm-chart-仓库)中的任何 Chart。
-- **[仅适用于离线安装](../../../../pages-for-subheaders/air-gapped-helm-cli-install.md)：为新的 Rancher Server 版本收集和推送镜像**。按照指南为你想要升级的目标 Rancher 版本[推送镜像到私有镜像仓库](../air-gapped-helm-cli-install/publish-images.md)。
+- **[仅适用于离线安装](../air-gapped-helm-cli-install/air-gapped-helm-cli-install.md)：为新的 Rancher Server 版本收集和推送镜像**。按照指南为你想要升级的目标 Rancher 版本[推送镜像到私有镜像仓库](../air-gapped-helm-cli-install/publish-images.md)。
 
 ## 占位符
 
@@ -147,7 +147,7 @@ docker run -d --volumes-from rancher-data \
   rancher/rancher:<RANCHER_VERSION_TAG>
 ```
 
-特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](./rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 
 </details>
 
@@ -183,7 +183,7 @@ docker run -d --volumes-from rancher-data \
   rancher/rancher:<RANCHER_VERSION_TAG>
 ```
 
-特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](./rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 
 </details>
 
@@ -218,7 +218,7 @@ docker run -d --volumes-from rancher-data \
   --no-cacerts
 ```
 
-特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](./rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 </details>
 
 #### 选项 D：Let's Encrypt 证书
@@ -255,7 +255,7 @@ docker run -d --volumes-from rancher-data \
   --acme-domain <YOUR.DNS.NAME>
 ```
 
-特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](./rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 
 </details>
 
@@ -288,7 +288,7 @@ docker run -d --volumes-from rancher-data \
       <REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher:<RANCHER_VERSION_TAG>
 ```
 
-特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](./rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 </details>
 
 #### 选项 B：使用你自己的证书 - 自签名
@@ -324,7 +324,7 @@ docker run -d --restart=unless-stopped \
     --privileged \
     <REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher:<RANCHER_VERSION_TAG>
 ```
-特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](./rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 </details>
 
 #### 选项 C：使用你自己的证书 - 可信 CA 签名的证书
@@ -366,7 +366,7 @@ docker run -d --volumes-from rancher-data \
      --privileged
      <REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher:<RANCHER_VERSION_TAG>
 ```
-特权访问是[必须](../../../../pages-for-subheaders/rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
+特权访问是[必须](./rancher-on-a-single-node-with-docker.md#rancher-特权访问)的。
 </details>
 
 </TabItem>
@@ -380,7 +380,7 @@ docker run -d --volumes-from rancher-data \
 
 :::note 升级后下游集群出现网络问题？
 
-请参见[恢复集群网络](/versioned_docs/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md)。
+请参见[恢复集群网络](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md)。
 
 :::
 

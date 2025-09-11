@@ -16,7 +16,7 @@
           "items": [
             {
               "type": "category",
-              "label": "Deploying Rancher",
+              "label": "Deploying Rancher Server",
               "link": {
                 "type": "doc",
                 "id": "getting-started/quick-start-guides/deploy-rancher-manager/deploy-rancher-manager"
@@ -376,7 +376,7 @@
             },
             {
               "type": "category",
-              "label": "Kubernetes Cluster Setup",
+              "label": "Setting up a Kubernetes Cluster for Rancher Server",
               "link": {
                 "type": "doc",
                 "id": "how-to-guides/new-user-guides/kubernetes-cluster-setup/kubernetes-cluster-setup"
@@ -436,10 +436,7 @@
                   "items": [
                     "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/eks",
                     "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/gke",
-                    "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/aks",
-                    "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/alibaba",
-                    "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/tencent",
-                    "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/huawei"
+                    "how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/aks"
                   ]
                 },
                 {
@@ -503,7 +500,7 @@
                     "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-azure-cluster",
                     {
                       "type": "category",
-                      "label": "vSphere",
+                      "label": "Creating a VMware vSphere Cluster",
                       "link": {
                         "type": "doc",
                         "id": "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/vsphere"
@@ -511,12 +508,13 @@
                       "items": [
                         "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/provision-kubernetes-clusters-in-vsphere",
                         "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-credentials",
-                        "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-a-vm-template"
+                        "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-a-vm-template",
+                        "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/shutdown-vm"
                       ]
                     },
                     {
                       "type": "category",
-                      "label": "Nutanix",
+                      "label": "Creating a Nutanix AOS Cluster",
                       "link": {
                         "type": "doc",
                         "id": "how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/nutanix/nutanix"
@@ -589,25 +587,13 @@
             },
             {
               "type": "category",
-              "label": "Helm Charts in Rancher",
+              "label": "Helm Charts and Apps",
               "link": {
                 "type": "doc",
                 "id": "how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher"
               },
               "items": [
                 "how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps"
-              ]
-            },
-            {
-              "type": "category",
-              "label": "Deploying Apps Across Clusters",
-              "link": {
-                "type": "doc",
-                "id": "how-to-guides/new-user-guides/deploy-apps-across-clusters/deploy-apps-across-clusters"
-              },
-              "items": [
-                "how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet",
-                "how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps"
               ]
             },
             {
@@ -698,7 +684,7 @@
             },
             {
               "type": "category",
-              "label": "Monitoring V2 Configuration Guides",
+              "label": "Monitoring Configuration Guides",
               "link": {
                 "type": "doc",
                 "id": "how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides/monitoring-v2-configuration-guides"
@@ -721,7 +707,7 @@
             },
             {
               "type": "category",
-              "label": "Istio Setup Guide",
+              "label": "Istio Setup Guides",
               "link": {
                 "type": "doc",
                 "id": "how-to-guides/advanced-user-guides/istio-setup-guide/istio-setup-guide"
@@ -772,6 +758,7 @@
             "how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
             "how-to-guides/advanced-user-guides/enable-api-audit-log",
             "how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters",
+            "how-to-guides/advanced-user-guides/enable-user-retention",
             "how-to-guides/advanced-user-guides/configure-layer-7-nginx-load-balancer"
           ]
         }
@@ -783,7 +770,7 @@
       "items": [
         {
           "type": "category",
-          "label": "Best Practices",
+          "label": "Best Practice Guides",
           "link": {
             "type": "doc",
             "id": "reference-guides/best-practices/best-practices"
@@ -814,7 +801,8 @@
                 "reference-guides/best-practices/rancher-managed-clusters/logging-best-practices",
                 "reference-guides/best-practices/rancher-managed-clusters/monitoring-best-practices",
                 "reference-guides/best-practices/rancher-managed-clusters/tips-to-set-up-containers",
-                "reference-guides/best-practices/rancher-managed-clusters/rancher-managed-clusters-in-vsphere"
+                "reference-guides/best-practices/rancher-managed-clusters/rancher-managed-clusters-in-vsphere",
+                "reference-guides/best-practices/rancher-managed-clusters/disconnected-clusters"
               ]
             }
           ]
@@ -855,7 +843,7 @@
                 "reference-guides/cluster-configuration/rancher-server-configuration/aks-cluster-configuration",
                 {
                   "type": "category",
-                  "label": "GKE Cluster Configuration",
+                  "label": "GKE Cluster Configuration Reference",
                   "link": {
                     "type": "doc",
                     "id": "reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-cluster-configuration"
@@ -947,7 +935,7 @@
         "reference-guides/kubernetes-concepts",
         {
           "type": "category",
-          "label": "Monitoring V2 Configuration",
+          "label": "Monitoring Configuration Reference",
           "link": {
             "type": "doc",
             "id": "reference-guides/monitoring-v2-configuration/monitoring-v2-configuration"
@@ -997,17 +985,6 @@
             "reference-guides/cli-with-rancher/kubectl-utility"
           ]
         },
-        {
-          "type": "category",
-          "label": "About the API",
-          "link": {
-            "type": "doc",
-            "id": "reference-guides/about-the-api/about-the-api"
-          },
-          "items": [
-            "reference-guides/about-the-api/api-tokens"
-          ]
-        },
         "reference-guides/rancher-cluster-tools",
         "reference-guides/rancher-project-tools",
         "reference-guides/system-tools",
@@ -1015,7 +992,7 @@
         "reference-guides/rancher-webhook",
         {
           "type": "category",
-          "label": "Rancher Security",
+          "label": "Rancher Security Guides",
           "link": {
             "type": "doc",
             "id": "reference-guides/rancher-security/rancher-security"
@@ -1037,8 +1014,6 @@
                     "id": "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-hardening-guide"
                   },
                   "items": [
-                    "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
-                    "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
                     "reference-guides/rancher-security/hardening-guides/rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27"
                   ]
                 },
@@ -1050,8 +1025,6 @@
                     "id": "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-hardening-guide"
                   },
                   "items": [
-                    "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
-                    "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
                     "reference-guides/rancher-security/hardening-guides/rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27"
                   ]
                 },
@@ -1063,8 +1036,6 @@
                     "id": "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-hardening-guide"
                   },
                   "items": [
-                    "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.23",
-                    "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.24-k8s-v1.24",
                     "reference-guides/rancher-security/hardening-guides/k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27"
                   ]
                 }
@@ -1147,6 +1118,17 @@
             "integrations-in-rancher/fleet/architecture",
             "integrations-in-rancher/fleet/windows-support",
             "integrations-in-rancher/fleet/use-fleet-behind-a-proxy"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Cluster API (CAPI) with Rancher Turtles",
+          "link": {
+            "type": "doc",
+            "id": "integrations-in-rancher/cluster-api/cluster-api"
+          },
+          "items": [
+            "integrations-in-rancher/cluster-api/overview"
           ]
         },
         "integrations-in-rancher/rancher-desktop",
@@ -1266,7 +1248,7 @@
       "label": "FAQ",
       "items": [
         "faq/general-faq",
-        "faq/deprecated-features-in-v2.5",
+        "faq/deprecated-features",
         "faq/install-and-configure-kubectl",
         "faq/dockershim",
         "faq/technical-items",
@@ -1323,9 +1305,12 @@
             "api/workflows/projects"
           ]
         },
-        "api/api-reference"
+        "api/api-reference",
+        "api/api-tokens",
+        "api/v3-rancher-api-guide"
       ]
     },
-    "contribute-to-rancher"
+    "contribute-to-rancher",
+    "glossary"
   ]
 }

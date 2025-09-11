@@ -2,6 +2,10 @@
 title: Operating System Management with Elemental
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/elemental"/>
+</head>
+
 Elemental enables cloud-native host management. Elemental allows you to onboard any machine in any location, whether its in a datacenter or on the edge, and integrate them seamlessly into Kubernetes while managing your workflows (e.g., OS updates). 
 
 ## Elemental with Rancher 

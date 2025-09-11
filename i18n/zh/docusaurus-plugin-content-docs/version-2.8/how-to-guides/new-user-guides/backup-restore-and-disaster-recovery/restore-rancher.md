@@ -4,39 +4,24 @@ title: 还原 Rancher
 
 本页概述了如何使用 Rancher 执行恢复。
 
-:::note 重要提示：
+在以下情况下，请按照本页中的说明进行操作：
+- 正在运行的 Rancher 实例与备份时的版本相同。
+- 上游（本地）集群与备份的位置相同。
 
-* 请按照此页面上的说明在已备份的同一集群上还原 Rancher。要把 Rancher 迁移到新集群，请参照步骤[迁移 Rancher](migrate-rancher-to-new-cluster.md)。
-* 在使用相同设置还原 Rancher 时，operator 将在还原开始时缩减 Rancher deployment，还原完成后又会扩展 deployment。因此，Rancher 在还原期间将不可用。
+:::note 重要提示
+
+在使用相同设置还原 Rancher 时，operator 将在还原开始时缩减 Rancher deployment，还原完成后又会扩展 deployment。因此，Rancher 在还原期间将不可用。
+
+:::
+
+:::tip
+
+* 按照以下步骤[迁移 Rancher](migrate-rancher-to-new-cluster.md)。
 * 如果你需要在升级后将 Rancher 还原到先前版本，请参见[回滚](../../../getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rollbacks.md)。
 
 :::
 
-## 使用 Rancher 2.6.4+ 进行回滚的其他步骤
-
-Rancher v2.6.4 将 cluster-api 模块从 v0.4.4 升级到 v1.0.2。反过来，cluster-api 的 v1.0.2 版本将集群 API 的自定义资源定义 (CRD) 从 `cluster.x-k8s.io/v1alpha4` 升级到 `cluster.x-k8s.io/v1beta1`。当你尝试将 Rancher v2.6.4 回滚到以前版本的 Rancher v2.6.x 时，CRD 升级到 v1beta1 会导致回滚失败。这是因为使用旧 apiVersion (v1alpha4) 的 CRD 与 v1beta1 不兼容。
-
-要避免回滚失败，你需要在尝试恢复操作或回滚**之前**运行以下 Rancher 脚本：
-
-* `verify.sh`：检查集群中是否有任何与 Rancher 相关的资源。
-* `cleanup.sh`：清理集群。
-
-有关详细信息和源代码，请参阅 [rancher/rancher-cleanup repo](https://github.com/rancher/rancher-cleanup)。
-
-:::caution
-
-`cleanup.sh` 运行的时候会有停机时间，这是因为脚本会删除 Rancher 创建的资源。
-
-:::
-
-### 从 v2.6.4+ 回滚到较低版本的 v2.6.x
-
-1. 按照[说明](https://github.com/rancher/rancher-cleanup/blob/main/README.md)运行脚本。
-1. 按照[说明](../backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster.md)在现有集群上安装 rancher-backup Helm Chart 并恢复之前的状态。
-   1. 省略步骤 3。
-   1. 执行到步骤 4 时，在要回滚到的 local 集群上安装 Rancher 2.6.x 版本。
-
-### 创建 Restore 自定义资源
+## 创建 Restore 自定义资源
 
 还原是通过创建 Restore 自定义资源实现的。
 
@@ -75,7 +60,7 @@ Rancher v2.6.4 将 cluster-api 模块从 v0.4.4 升级到 v1.0.2。反过来，c
 2. 集群范围资源
 3. 命名空间资源
 
-### 日志
+## 日志
 
 如需查看还原的处理方式，请检查 Operator 的日志。查看日志的命令如下：
 
@@ -83,11 +68,11 @@ Rancher v2.6.4 将 cluster-api 模块从 v0.4.4 升级到 v1.0.2。反过来，c
 kubectl logs -n cattle-resources-system -l app.kubernetes.io/name=rancher-backup -f
 ```
 
-### 清理
+## 清理
 
 如果你使用 kubectl 创建了 Restore 资源，请删除该资源以防止与未来的还原发生命名冲突。
 
-### 已知问题
+## 已知问题
 在某些情况下，恢复备份后，Rancher 日志会显示类似以下的错误：
 ```
 2021/10/05 21:30:45 [ERROR] error syncing 'c-89d82/m-4067aa68dd78': handler rke-worker-upgrader: clusters.management.cattle.io "c-89d82" not found, requeuing

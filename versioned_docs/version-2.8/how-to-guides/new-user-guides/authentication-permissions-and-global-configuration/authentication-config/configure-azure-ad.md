@@ -133,7 +133,17 @@ Here are a few examples of permission combinations that satisfy Rancher's needs:
 
 :::
 
-#### 4. Copy Azure Application Data
+#### 4. Allow Public Client Flows
+
+To login from Rancher CLI you must allow public client flows:
+
+1. From the left navigation menu, select **Authentication**.
+
+1. Under **Advanced Settings**, select **Yes** on the toggle next to **Allow public client flows**.
+
+    ![Allow Public Client Flows](/img/azure-public-client-flows.png)
+
+#### 5. Copy Azure Application Data
 
 ![Application ID](/img/app-configuration.png)
 
@@ -176,7 +186,7 @@ You'll also need to manually enter the Graph, Token, and Auth Endpoints.
   - **OAuth 2.0 token endpoint (v1)** (Token Endpoint)
   - **OAuth 2.0 authorization endpoint (v1)** (Auth Endpoint)
 
-#### 5. Configure Azure AD in Rancher
+#### 6. Configure Azure AD in Rancher
 
 To complete configuration, enter information about your AD instance in the Rancher UI.
 
@@ -188,7 +198,7 @@ To complete configuration, enter information about your AD instance in the Ranch
 
 1. Click **AzureAD**.
 
-1. Complete the **Configure Azure AD Account** form using the information you copied while completing [Copy Azure Application Data](#4-copy-azure-application-data).
+1. Complete the **Configure Azure AD Account** form using the information you copied while completing [Copy Azure Application Data](#5-copy-azure-application-data).
 
     :::caution
 
@@ -225,6 +235,9 @@ To complete configuration, enter information about your AD instance in the Ranch
 
 **Result:** Azure Active Directory authentication is configured.
 
+#### (Optional) Configure Authentication with Multiple Rancher Domains
+
+If you have multiple Rancher domains, it's not possible to configure multiple redirect URIs through the Rancher UI. The Azure AD configuration file, `azuread`, only allows one redirect URI by default. You must manually edit `azuread` to set the redirect URI as needed for any other domains. If you don't manually edit `azuread`, then upon a successful login attempt to any domain, Rancher automatically redirects the user to the **Redirect URI** value you set when you registered the app in [Step 1. Register Rancher with Azure](#1-register-rancher-with-azure).
 
 ### Migrating from Azure AD Graph API to Microsoft Graph API
 

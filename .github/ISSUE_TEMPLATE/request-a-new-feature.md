@@ -1,9 +1,6 @@
 ---
 name: Request a New Feature
 about: For requesting new feature(s) to be added to the docs.
-title: ''
-labels: ''
-assignees: ''
 ---
 
 ## Related Issues

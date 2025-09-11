@@ -12,11 +12,11 @@ title: 添加项目成员
 
 :::
 
-### 将成员添加到新项目
+## 将成员添加到新项目
 
 你可以在创建项目时将成员添加到项目中（建议）。有关创建新项目的详细信息，请参阅[集群管理](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md)。
 
-### 将成员添加到现有项目
+## 将成员添加到现有项目
 
 创建项目后，你可以将用户添加为项目成员，以便用户可以访问项目的资源：
 
@@ -26,6 +26,14 @@ title: 添加项目成员
 1. 转到要添加成员的项目。在项目名称上方的**创建命名空间**按钮旁边，单击 **☰**。选择 **编辑配置**。
 1. 在**成员**选项卡中，单击**添加**。
 1. 搜索要添加到项目的用户或组。
+
+   :::note Notes:
+
+   - At least 2 characters must be typed in the search box for results to appear.
+   - Users can be searched based on their username or display name.
+   - Search is prefix-based (e.g., a user named `Stan Dard` will appear when searching for `Sta`, but not when searching for `Dar`) and case-sensitive.
+
+   :::
 
    如果配置了外部身份验证：
 

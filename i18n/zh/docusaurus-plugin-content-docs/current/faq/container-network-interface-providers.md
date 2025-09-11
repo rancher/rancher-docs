@@ -43,58 +43,9 @@ CNI 网络插件使用封装网络模型（例如 Virtual Extensible Lan，缩�
 
 ## Rancher 提供哪些 CNI 插件？
 
-### RKE Kubernetes 集群
-
-Rancher 开箱即用地为 RKE Kubernetes 集群提供了几个 CNI 网络插件，分别是 Canal、Flannel、Calico 和 Weave。
-
-如果你使用 Rancher 创建新的 Kubernetes 集群，你可以选择你的 CNI 网络插件。
-
-#### Canal
-
-![Canal Logo](/img/canal-logo.png)
-
-Canal 是一个 CNI 网络插件，它很好地结合了 Flannel 和 Calico 的优点。它让你轻松地将 Calico 和 Flannel 网络部署为统一的网络解决方案，将 Calico 的网络策略执行与 Calico（未封装）和 Flannel（封装）丰富的网络连接选项结合起来。
-
-Canal 是 Rancher 默认的 CNI 网络插件，并采用了 Flannel 和 VXLAN 封装。
-
-Kubernetes Worker 需要打开 UDP 端口 `8472` (VXLAN) 和 TCP 端口 `9099`（健康检查）。如果使用 Wireguard，则需要打开 UDP 端口 `51820` 和 `51821`。有关详细信息，请参阅[下游集群的端口要求](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md)。
-
-![](/img/canal-diagram.png)
-
-有关详细信息，请参阅 [Canal GitHub 页面](https://github.com/projectcalico/canal)。
-
-#### Flannel
-
-![Flannel Logo](/img/flannel-logo.png)
-
-Flannel 是为 Kubernetes 配置 L3 网络结构的简单方法。Flannel 在每台主机上运行一个名为 flanneld 的二进制 Agent，该 Agent 负责从更大的预配置地址空间中为每台主机分配子网租约。Flannel 通过 Kubernetes API 或直接使用 etcd 来存储网络配置、分配的子网、以及其他辅助数据（例如主机的公共 IP）。数据包使用某种后端机制来转发，默认封装为 [VXLAN](https://github.com/flannel-io/flannel/blob/master/Documentation/backends.md#vxlan)。
-
-默认情况下，封装的流量是不加密的。Flannel 提供了两种加密方案：
-
-* [IPSec](https://github.com/flannel-io/flannel/blob/master/Documentation/backends.md#ipsec)：使用 [strongSwan](https://www.strongswan.org/) 在 Kubernetes worker 之间建立加密的 IPSec 隧道。它是加密的实验性后端。
-* [WireGuard](https://github.com/flannel-io/flannel/blob/master/Documentation/backends.md#wireguard)：比 strongSwan 更快的替代方案。
-
-Kubernetes Worker 需要打开 UDP 端口 `8472` (VXLAN)。有关详细信息，请参阅[下游集群的端口要求](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md#网络要求)。
-
-![Flannel Diagram](/img/flannel-diagram.png)
-
-有关详细信息，请参阅 [Flannel GitHub 页面](https://github.com/flannel-io/flannel)。
-
-#### Weave
-
-![Weave Logo](/img/weave-logo.png)
-
-Weave 在云上的 Kubernetes 集群中启用网络和网络策略。此外，它还支持加密对等节点之间的流量。
-
-Kubernetes worker 需要打开 TCP 端口 `6783`（控制端口）、UDP 端口 `6783` 和 UDP 端口 `6784`（数据端口）。有关详细信息，请参阅[下游集群的端口要求](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md#网络要求)。
-
-有关详细信息，请参阅以下页面：
-
-- [Weave Net 官网](https://www.weave.works/)
-
 ### RKE2 Kubernetes 集群
 
-Rancher 开箱即用地为 RKE2 Kubernetes 集群提供了几个 CNI 网络插件，分别是 [Canal](#canal)（见上一节）、Calico 和 Cilium。
+Rancher 开箱即用地为 RKE2 Kubernetes 集群提供了几个 CNI 网络插件，分别是 Canal、Calico 和 Cilium。
 
 如果你使用 Rancher 创建新的 Kubernetes 集群，你可以选择你的 CNI 网络插件。
 
@@ -124,6 +75,20 @@ Calico 还提供了一种无状态的 IP-in-IP 或 VXLAN 封装模式。如果�
 
 - [Project Calico 官方网站](https://www.projectcalico.org/)
 - [Calico 项目 GitHub 页面](https://github.com/projectcalico/calico)
+
+#### Canal
+
+![Canal Logo](/img/canal-logo.png)
+
+Canal 是一个 CNI 网络插件，它很好地结合了 Flannel 和 Calico 的优点。它让你轻松地将 Calico 和 Flannel 网络部署为统一的网络解决方案，将 Calico 的网络策略执行与 Calico（未封装）和 Flannel（封装）丰富的网络连接选项结合起来。
+
+Canal 是 Rancher 默认的 CNI 网络插件，并采用了 Flannel 和 VXLAN 封装。
+
+Kubernetes Worker 需要打开 UDP 端口 `8472` (VXLAN) 和 TCP 端口 `9099`（健康检查）。如果使用 Wireguard，则需要打开 UDP 端口 `51820` 和 `51821`。有关详细信息，请参阅[下游集群的端口要求](../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md)。
+
+![](/img/canal-diagram.png)
+
+有关详细信息，请参阅 [Canal GitHub 页面](https://github.com/projectcalico/canal)
 
 #### Cilium
 

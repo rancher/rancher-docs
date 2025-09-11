@@ -1,9 +1,11 @@
 ---
-title: RKE Hardening Guide
+title: RKE Hardening Guides
 ---
 
+<EOLRKE1Warning />
+
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/rke1-hardening-guide"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-security/hardening-guides/rke1-hardening-guide"/>
 </head>
 
 This document provides prescriptive guidance for how to harden an RKE cluster intended for production, before provisioning it with Rancher. It outlines the configurations and controls required for Center for Information Security (CIS) Kubernetes benchmark controls.

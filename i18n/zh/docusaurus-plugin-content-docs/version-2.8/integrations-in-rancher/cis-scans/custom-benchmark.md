@@ -13,7 +13,7 @@ title: 为集群扫描创建自定义 Benchmark 版本
 
 按照以下所有步骤添加自定义 Benchmark 版本并使用它运行扫描。
 
-### 1. 准备自定义 Benchmark 版本 ConfigMap
+## 1. 准备自定义 Benchmark 版本 ConfigMap
 
 要创建自定义 Benchmark 版本，你需要先创建一个包含 Benchmark 版本配置文件的 ConfigMap，并将其上传到要运行扫描的 Kubernetes 集群。
 
@@ -38,7 +38,7 @@ title: 为集群扫描创建自定义 Benchmark 版本
    kubectl create configmap -n <namespace> foo --from-file=<path to directory foo>
    ```
 
-### 2. 将自定义 Benchmark 版本添加到集群
+## 2. 将自定义 Benchmark 版本添加到集群
 
 1. 在左上角，单击 **☰ > 集群管理**。
 1. 在**集群**页面上，转到要添加自定义 Benchmark 的集群，然后单击 **Explore**。
@@ -50,7 +50,7 @@ title: 为集群扫描创建自定义 Benchmark 版本
 1. 添加最低和最高 Kubernetes 版本限制（如果有）。
 1. 单击**创建**。
 
-### 3. 为自定义 Benchmark 版本创建新配置文件
+## 3. 为自定义 Benchmark 版本创建新配置文件
 
 要使用你的自定义 Benchmark 版本运行扫描，你需要添加一个指向此 Benchmark 版本的新配置文件：
 
@@ -62,7 +62,7 @@ title: 为集群扫描创建自定义 Benchmark 版本
 1. 在下拉列表中选择 Benchmark 版本。
 1. 单击**创建**。
 
-### 4. 使用自定义 Benchmark 版本运行扫描
+## 4. 使用自定义 Benchmark 版本运行扫描
 
 指向你的自定义 Benchmark 版本的 `foo` 配置文件创建完成后，你可以创建一个新的扫描，从而在 Benchmark 版本中运行自定义测试。
 

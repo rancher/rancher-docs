@@ -8,7 +8,7 @@ title: DNS
 
 在运行 DNS 检查之前，请检查集群的[默认 DNS 提供商](../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#默认-dns-提供商)，并确保[覆盖网络正常运行](networking.md#检查覆盖网络是否正常运行)，因为这也可能导致 DNS 解析（部分）失败。
 
-### 检查 DNS pod 是否正在运行
+## 检查 DNS pod 是否正在运行
 
 ```
 kubectl -n kube-system get pods -l k8s-app=kube-dns
@@ -26,7 +26,7 @@ NAME                        READY   STATUS    RESTARTS   AGE
 kube-dns-5fd74c7488-h6f7n   3/3     Running   0          4m13s
 ```
 
-### 检查 DNS 服务是否显示正确的 cluster-ip
+## 检查 DNS 服务是否显示正确的 cluster-ip
 
 ```
 kubectl -n kube-system get svc -l k8s-app=kube-dns
@@ -37,7 +37,7 @@ NAME               TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)         AGE
 service/kube-dns   ClusterIP   10.43.0.10   <none>        53/UDP,53/TCP   4m13s
 ```
 
-### 检查是否正在解析域名
+## 检查是否正在解析域名
 
 检查是否正在解析内部集群名称（在本例中为 `kubernetes.default`），`Server:` 后面显示的 IP 应与 `kube-dns` 服务的 `CLUSTER-IP` 一致。
 
@@ -96,7 +96,7 @@ pod "busybox" deleted
          - image: busybox:1.28
            imagePullPolicy: Always
            name: alpine
-           command: ["sh", "-c", "tail -f /dev/null"]
+           command: ["sleep", "infinity"]
            terminationMessagePath: /dev/termination-log
    ```
 
@@ -128,15 +128,15 @@ command terminated with exit code 1
 
 运行 `kubectl delete ds/dnstest` 清理 alpine DaemonSet。
 
-### CoreDNS 相关
+## CoreDNS 相关
 
-#### 检查 CoreDNS 日志记录
+### 检查 CoreDNS 日志记录
 
 ```
 kubectl -n kube-system logs -l k8s-app=kube-dns
 ```
 
-#### 检查配置
+### 检查配置
 
 CoreDNS 配置存储在 `kube-system` 命名空间中 configmap 的 `coredns` 中。
 
@@ -144,7 +144,7 @@ CoreDNS 配置存储在 `kube-system` 命名空间中 configmap 的 `coredns` �
 kubectl -n kube-system get configmap coredns -o go-template={{.data.Corefile}}
 ```
 
-#### 检查 resolv.conf 中的上游名称服务器
+### 检查 resolv.conf 中的上游名称服务器
 
 默认情况下，配置在主机（在 `/etc/resolv.conf` 里）上的名称服务器会用作 CoreDNS 的上游名称服务器。你可以在主机上检查此文件，或将 `dnsPolicy` 设置为 `Default`（将继承其主机的 `/etc/resolv.conf`）并运行以下 Pod：
 
@@ -152,7 +152,7 @@ kubectl -n kube-system get configmap coredns -o go-template={{.data.Corefile}}
 kubectl run -i --restart=Never --rm test-${RANDOM} --image=ubuntu --overrides='{"kind":"Pod", "apiVersion":"v1", "spec": {"dnsPolicy":"Default"}}' -- sh -c 'cat /etc/resolv.conf'
 ```
 
-#### 启用日志查询
+### 启用日志查询
 
 你可以通过在 configmap `coredns` 的 Corefile 配置中启用 [log plugin](https://coredns.io/plugins/log/) 来启用日志查询。为此，你可以使用 `kubectl -n kube-system edit configmap coredns`，或运行以下命令来替换配置：
 
@@ -162,9 +162,9 @@ kubectl get configmap -n kube-system coredns -o json | sed -e 's_loadbalance_log
 
 这样，所有查询都会记入日志，并且可以使用[检查 CoreDNS 日志记录](#检查-coredns-日志记录)中的命令进行检查。
 
-### kube-dns 相关
+## kube-dns 相关
 
-#### 检查 kubedns 容器中的上游名称服务器
+### 检查 kubedns 容器中的上游名称服务器
 
 默认情况下，配置在主机（在 `/etc/resolv.conf` 里）上的名称服务器会用作 kube-dns 的上游名称服务器。有时，主机会运行本地缓存 DNS 名称服务器，这意味着 `/etc/resolv.conf` 中的地址将指向 Loopback 范围（`127.0.0.0/8`）内的地址，而容器将无法访问该范围。对于 Ubuntu 18.04，这是由 `systemd-resolved` 进行的。我们会检测 `systemd-resolved` 是否正在运行，并自动使用具有正确上游名称服务器的 `/etc/resolv.conf` 文件（位于 `/run /systemd/resolve/resolv.conf`）。
 

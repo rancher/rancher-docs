@@ -168,17 +168,25 @@ By default, your user is added as the project `Owner`.
 To add members:
 
 1. In the **Members** tab, click **Add**.
-1. From the **Select Member** field, search for a user or group that you want to assign project access. Note: You can only search for groups if external authentication is enabled.
+1. From the **Select Member** field, search for a user or group that you want to assign project access. You can only search for groups if external authentication is enabled.
+
+    :::note Notes:
+
+    - At least 2 characters must be typed in the search box for results to appear.
+    - Users can be searched based on their username or display name.
+    - Search is prefix-based (e.g., a user named `Stan Dard` will appear when searching for `Sta`, but not when searching for `Dar`) and case-sensitive.
+
+    :::
 1. In the **Project Permissions** section, choose a role. For more information, refer to the [documentation on project roles.](../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md)
 
 ### 4. Optional: Add Resource Quotas
 
-Resource quotas limit the resources that a project (and its namespaces) can consume. For more information, see [Resource Quotas](projects-and-namespaces.md).
+Resource quotas limit the resources that a project (and its namespaces) can consume. For more information, see [Resource Quotas](../../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md).
 
 To add a resource quota,
 
 1. In the **Resource Quotas** tab, click **Add Resource**.
-1. Select a **Resource Type**. For more information, see [Resource Quotas.](projects-and-namespaces.md).
+1. Select a **Resource Type**. For more information, see [Resource Quotas.](../../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md).
 1. Enter values for the **Project Limit** and the **Namespace Default Limit**.
 1. **Optional:** Specify **Container Default Resource Limit**, which will be applied to every container started in the project. The parameter is recommended if you have CPU or Memory limits set by the Resource Quota. It can be overridden on per an individual namespace or a container level. For more information, see [Container Default Resource Limit](../../advanced-user-guides/manage-projects/manage-project-resource-quotas/manage-project-resource-quotas.md)
 1. Click **Create**.

@@ -10,7 +10,7 @@ Fixes #[issue_number]
 
 - Verify if changes pertain to other versions of Rancher. If they do, finalize the edits on one version of the page, then apply the edits to the other versions.
 
-- If the pull request is dependent on an upcoming release, make sure to target the release branch instead of `main`.
+- If the pull request is dependent on an upcoming release, remember to add a "MERGE ON RELEASE" label and set the proper milestone.
 
 ## Description
 

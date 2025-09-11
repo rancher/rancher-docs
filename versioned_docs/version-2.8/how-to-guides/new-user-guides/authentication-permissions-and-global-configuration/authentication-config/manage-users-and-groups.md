@@ -8,7 +8,7 @@ title: Users and Groups
 
 Rancher relies on users and groups to determine who is allowed to log in to Rancher and which resources they can access. When you configure an external authentication provider, users from that provider will be able to log in to your Rancher server. When a user logs in, the authentication provider will supply your Rancher server with a list of groups to which the user belongs.
 
-Access to clusters, projects, multi-cluster apps, and global DNS providers and entries can be controlled by adding either individual users or groups to these resources. When you add a group to a resource, all users who are members of that group in the authentication provider, will be able to access the resource with the permissions that you've specified for the group. For more information on roles and permissions, see [Role Based Access Control](../manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md).
+Access to clusters, projects, and global DNS providers and entries can be controlled by adding either individual users or groups to these resources. When you add a group to a resource, all users who are members of that group in the authentication provider, will be able to access the resource with the permissions that you've specified for the group. For more information on roles and permissions, see [Role Based Access Control](../manage-role-based-access-control-rbac/manage-role-based-access-control-rbac.md).
 
 ## Managing Members
 
@@ -69,6 +69,14 @@ If you are not sure the last time Rancher performed an automatic refresh of user
 Since SAML does not support user lookup, SAML-based authentication providers do not support the ability to manually refresh user information. User information will only be refreshed when the user logs into the Rancher UI.
 
 :::
+
+## Minimum Password Length
+
+By default, user passwords must be at least 12 characters long. However, you can customize the password length requirement:
+
+1. In the upper left corner, click **☰ > Global Settings**.
+1. Go to **`password-min-length`** and click **⋮ > Edit Setting**.
+1. Enter an integer value between 2 and 256, and click **Save**.
 
 ## Session Length
 

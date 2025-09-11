@@ -1,10 +1,10 @@
 ---
-title: Backups and Disaster Recovery
+title: Backup, Restore, and Disaster Recovery
 keywords: [rancher backup restore, rancher backup and restore, backup restore rancher, rancher backup and restore rancher]
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/backup-restore-and-disaster-recovery"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/backup-restore-and-disaster-recovery"/>
 </head>
 
 In this section, you'll learn how to create backups of Rancher, how to restore Rancher from backup, and how to migrate Rancher to a new Kubernetes cluster.
@@ -91,10 +91,10 @@ A migration is performed by following [these steps.](migrate-rancher-to-new-clus
 
 ## Default Storage Location Configuration
 
-Configure a storage location where all backups are saved by default. You will have the option to override this with each backup, but will be limited to using an S3-compatible or Minio object store.
+Configure a default storage location for your backups. There are various configuration options, such as specifying an S3-compatible object store as the location for individual backups or choosing an existing `StorageClass` during installation of the `backup-restore-operator` Helm chart. You also have the option to override the configured storage location with each backup, but are limited to using an S3-compatible or Minio object store.
 
 For information on configuring these options, refer to [this page.](../../../reference-guides/backup-restore-configuration/storage-configuration.md)
 
-### Example values.yaml for the rancher-backup Helm Chart
+### Example YAML File: Rancher Backup Helm Chart
 
-The example [values.yaml file](../../../reference-guides/backup-restore-configuration/storage-configuration.md#example-valuesyaml-for-the-rancher-backup-helm-chart) can be used to configure the `rancher-backup` operator when the Helm CLI is used to install it.
+The example [values.yaml file](../../../reference-guides/backup-restore-configuration/storage-configuration.md#example-yaml-file-rancher-backup-helm-chart) can be used to configure the `backup-restore-operator` when the Helm CLI is used to install it.

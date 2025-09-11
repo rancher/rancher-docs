@@ -25,7 +25,6 @@ This section focuses on how to use Terraform with the [Rancher 2 Terraform provi
 Terraform allows you to:
 
 - Define almost any kind of infrastructure-as-code, including servers, databases, load balancers, monitoring, firewall settings, and SSL certificates
-- Leverage catalog apps and multi-cluster apps
 - Codify infrastructure across many platforms, including Rancher and major cloud providers
 - Commit infrastructure-as-code to version control
 - Easily repeat configuration and setup of infrastructure
@@ -51,8 +50,6 @@ When you need to make changes to your infrastructure, instead of manually updati
 - You can also modify auth in the Terraform provider.
 
 - You can reverse engineer how to do define a setting in Terraform by changing the setting in Rancher, then going back and checking your Terraform state file to see how it maps to the current state of your infrastructure.
-
-- If you want to manage Kubernetes cluster settings, Rancher settings, and hardware settings all in one place, use [Terraform modules](https://github.com/rancher/terraform-modules). You can pass a cluster configuration YAML file or an RKE template configuration file to a Terraform module so that the Terraform module will create it. In that case, you could use your infrastructure-as-code to manage the version control and revision history of both your Kubernetes cluster and its underlying hardware.
 
 ## Tip for Creating CIS Benchmark Compliant Clusters
 

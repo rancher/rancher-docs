@@ -3,7 +3,7 @@ title: Prometheus Federator Guides
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/prometheus-federator-guides"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides"/>
 </head>
 
 - [Enable Prometheus Operator](enable-prometheus-federator.md)

@@ -4,7 +4,7 @@ title: 更新 Rancher 证书
 
 ## 更新私有 CA 证书
 
-按照以下步骤轮换[安装在 Kubernetes 集群上](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md)、由 Rancher 使用的 SSL 证书和私有 CA，或转用由私有 CA 签发的 SSL 证书。
+按照以下步骤轮换[安装在 Kubernetes 集群上](../install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md)、由 Rancher 使用的 SSL 证书和私有 CA，或转用由私有 CA 签发的 SSL 证书。
 
 步骤概述：
 
@@ -176,7 +176,7 @@ kubectl edit -n cattle-system deployment/cattle-cluster-agent
 
 ### 5. 强制更新 Fleet 集群，从而将 fleet-agent 重新连接到 Rancher
 
-在 Rancher UI 的[持续交付](../../../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md#在-rancher-ui-中访问-fleet)中，为集群选择“强制更新”，来允许下游集群中的 fleet-agent 成功连接到 Rancher。
+在 Rancher UI 的[持续交付](../../../integrations-in-rancher/fleet/overview.md#在-rancher-ui-中访问-fleet)中，为集群选择“强制更新”，来允许下游集群中的 fleet-agent 成功连接到 Rancher。
 
 #### 为什么要执行这一步骤？
 
@@ -256,7 +256,7 @@ helm ls -n cattle-system
 
 ### 5. 强制更新 Fleet 集群，从而将 fleet-agent 重新连接到 Rancher
 
-在 Rancher UI 的[持续交付](../../../how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet.md#在-rancher-ui-中访问-fleet)中，为集群选择“强制更新”，来允许下游集群中的 fleet-agent 成功连接到 Rancher。
+在 Rancher UI 的[持续交付](../../../integrations-in-rancher/fleet/overview.md#在-rancher-ui-中访问-fleet)中，为集群选择“强制更新”，来允许下游集群中的 fleet-agent 成功连接到 Rancher。
 
 #### 为什么要执行这一步骤？
 

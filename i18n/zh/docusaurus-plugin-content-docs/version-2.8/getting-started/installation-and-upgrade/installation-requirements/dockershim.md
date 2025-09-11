@@ -18,7 +18,7 @@ enable_cri_dockerd: true
 
 如果你想使用其他容器运行时，Rancher 也提供使用 Containerd 作为默认运行时的，以边缘为中心的 K3s，和以数据中心为中心的 RKE2 Kubernetes 发行版。然后，你就可以通过 Rancher 对导入的 RKE2 和 K3s Kubernetes 集群进行升级和管理。
 
-### 常见问题
+## 常见问题
 
 <br/>
 

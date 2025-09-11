@@ -18,7 +18,7 @@ Rancher supports two different types of charts: Helm charts and Rancher charts.
 
 ### Helm Charts
 
-Native Helm charts include an application along with other software required to run it. When deploying native Helm charts, you' can provide the chart's parameter values in a YAML editor.
+Native Helm charts include an application along with other software required to run it. When deploying native Helm charts, you can provide the chart's parameter values in a YAML editor.
 
 ### Rancher Charts
 
@@ -109,22 +109,19 @@ This reference contains variables that you can use in `questions.yml` nested und
 | 	label             | string  | true      |  Define the UI label. |
 | 	description       | string  | false      |  Specify the description of the variable.|
 | 	type              | string  | false      |  Default to `string` if not specified (current supported types are string, multiline, boolean, int, enum, password, storageclass, hostname, pvc, secret and cloudcredential).|
+| 	required          | bool    | false      |  Define if the variable is required or not (true \| false)|
 | 	default           | string  | false      |  Specify the default value. Only used if there is no corresponding value in the `values.yml` file. |
 | 	group             | string  | false      |  Group questions by input value. |
-| 	options           | []string | false     |  Specify the options when the variable type is `enum`, for example: options:<br/> - "ClusterIP" <br/> - "NodePort" <br/> - "LoadBalancer"|
-| 	subquestions      | []subquestion | false|  Add an array of subquestions.|
-| 	show_if           | string      | false  | Show current variable if conditional variable is true. For example `show_if: "serviceType=Nodeport"` |
-| 	show\_subquestion_if |  string  | false     | Show subquestions if is true or equal to one of the options. for example `show_subquestion_if: "true"`|
-
-<!-- The following values are not yet supported and are pending a merge of https://github.com/rancher/dashboard/issues/5754
 | 	min_length        | int     | false      |  Min character length.|
 | 	max_length        | int     | false      | Max character length.|
 | 	min               | int     | false      |  Min integer value. |
 | 	max               | int     | false      |  Max integer value. |
 | 	valid_chars       | string   | false     |  Regular expression for input chars validation. |
 | 	invalid_chars     | string   | false     |  Regular expression for invalid input chars validation.|
-| 	required          | bool    | false      |  Define if the variable is required or not (true \| false)|
--->
+| 	options           | []string | false     |  Specify the options when the variable type is `enum`, for example: options:<br/> - "ClusterIP" <br/> - "NodePort" <br/> - "LoadBalancer"|
+| 	subquestions      | []subquestion | false|  Add an array of subquestions.|
+| 	show_if           | string      | false  | Show current variable if conditional variable is true. For example `show_if: "serviceType=Nodeport"` |
+| 	show\_subquestion_if |  string  | false     | Show subquestions if is true or equal to one of the options. for example `show_subquestion_if: "true"`|
 
 :::note
 

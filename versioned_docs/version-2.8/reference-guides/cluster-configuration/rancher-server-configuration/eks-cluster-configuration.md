@@ -101,6 +101,12 @@ Also, if you provide the launch template, you can only update the template versi
 | User Data | Cloud init script in [MIME multi-part format](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html#launch-template-user-data) | Optional |
 | Instance Resource Tags | Tag each EC2 instance and its volumes in the node group | Optional |
 
+:::caution
+
+You can't directly update a node group to a newer Kubernetes version if the node group was created from a custom launch template. You must create a new launch template with the proper Kubernetes version, and associate the node group with the new template.
+
+:::
+
 #### Rancher-managed Launch Templates
 
 If you do not specify a launch template, then you will be able to configure the above options in the Rancher UI and all of them can be updated after creation. In order to take advantage of all of these options, Rancher will create and manage a launch template for you. Each cluster in Rancher will have one Rancher-managed launch template and each managed node group that does not have a specified launch template will have one version of the managed launch template. The name of this launch template will have the prefix "rancher-managed-lt-" followed by the display name of the cluster. In addition, the Rancher-managed launch template will be tagged with the key "rancher-managed-template" and value "do-not-modify-or-delete" to help identify it as Rancher-managed. It is important that this launch template and its versions not be modified, deleted, or used with any other clusters or managed node groups. Doing so could result in your node groups being "degraded" and needing to be destroyed and recreated.
@@ -140,6 +146,25 @@ The following settings are also configurable. All of these except for the "Node 
 | Labels | Kubernetes labels applied to the nodes in the managed node group. |
 | Tags | These are tags for the managed node group and do not propagate to any of the associated resources. |
 
+### Self-managed Amazon Linux Nodes
+
+You can register an EKS cluster containing self-managed Amazon Linux nodes. You must configure this type of cluster according to the instructions in the official AWS documentation for [launching self-managed Amazon Linux nodes](https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html). EKS clusters containing self-managed Amazon Linux nodes are usually operated by the [Karpenter](https://karpenter.sh/docs/) project. After you provision an EKS cluster containing self-managed Amazon Linux nodes, [register the cluster](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/register-existing-clusters.md) so it can be managed by Rancher. However, the nodes won't be visible in the Rancher UI.
+
+### IAM Roles for Service Accounts
+
+An Applications Deployment running on an EKS cluster can make requests to AWS services via IAM permissions. These applications must sign their requests with AWS credentials. IAM roles for service accounts manage these credentials using an AWS OIDC endpoint. Rather than distributing AWS credentials to containers or relying on an EC2 instance's role, you can link an [IAM role to a Kubernetes service account](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) and configure your Pods to use this account.
+
+:::note
+
+Linking to an IAM role is not supported for Rancher pods in an EKS cluster.
+
+:::
+
+To enable IAM roles for service accounts:
+1. [Create an IAM OIDC provider for your cluster](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html)
+1. [Configure a Kubernetes service account to assume an IAM role](https://docs.aws.amazon.com/eks/latest/userguide/associate-service-account-role.html)
+1. [Configure Pods to use a Kubernetes service account](https://docs.aws.amazon.com/eks/latest/userguide/pod-configuration.html)
+1. [Use a supported AWS SDK](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts-minimum-sdk.html)
 
 ### Configuring the Refresh Interval
 

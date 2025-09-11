@@ -2,6 +2,10 @@
 title: Using Fleet Behind a Proxy
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/fleet/use-fleet-behind-a-proxy"/>
+</head>
+
 In this section, you'll learn how to enable Fleet in a setup that has a Rancher server with a public IP a Kubernetes cluster that has no public IP, but is configured to use a proxy.
 
 Rancher does not establish connections with registered downstream clusters. The Rancher agent deployed on the downstream cluster must be able to establish the connection with Rancher.
@@ -26,7 +30,20 @@ When adding Fleet agent environment variables for the proxy, replace <PROXY_IP> 
 
 ## Setting Environment Variables in the Rancher UI
 
-To add the environment variable to an existing cluster,
+To add the environment variable to an existing cluster:
+
+<Tabs groupId="k8s-distro">
+<TabItem value="RKE2/K3s" default>
+
+1. Click **☰ > Cluster Management**.
+1. Go to the cluster where you want to add environment variables and click **⋮ > Edit Config**.
+1. Click **Agent Environment Vars** under **Cluster configuration**.
+1. Click **Add**.
+1. Enter the [required environment variables](#required-environment-variables)
+1. Click **Save**.
+
+</TabItem>
+<TabItem value="RKE">
 
 1. Click **☰ > Cluster Management**.
 1. Go to the cluster where you want to add environment variables and click **⋮ > Edit Config**.
@@ -34,6 +51,9 @@ To add the environment variable to an existing cluster,
 1. Click **Add Environment Variable**.
 1. Enter the [required environment variables](#required-environment-variables)
 1. Click **Save**.
+
+</TabItem>
+</Tabs>
 
 **Result:** The Fleet agent works behind a proxy.
 

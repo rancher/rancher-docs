@@ -2,6 +2,8 @@
 title: 在不升级 Rancher 的情况下升级 Kubernetes
 ---
 
+<EOLRKE1Warning />
+
 RKE 元数据功能允许你在新版本 Kubernetes 发布后立即为集群配置新版本，而无需升级 Rancher。此功能对于使用 Kubernetes 的补丁版本非常有用，例如，在原本支持 Kubernetes v1.14.6 的 Rancher Server 版本中，将 Kubernetes 升级到 v1.14.7。
 
 :::note
@@ -10,7 +12,7 @@ Kubernetes API 可以在次要版本之间更改。因此，我们不支持引�
 
 :::
 
-Rancher 的 Kubernetes 元数据包含 Rancher 用于配置 [RKE 集群](../../pages-for-subheaders/launch-kubernetes-with-rancher.md)的 Kubernetes 版本信息。Rancher 会定期同步数据并为 **系统镜像**、**服务选项**和**插件模板**创建自定义资源定义 (CRD)。因此，当新的 Kubernetes 版本与 Rancher Server 版本兼容时，Kubernetes 元数据可以使 Rancher 使用新版本来配置集群。元数据概述了 [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/) (RKE) 用于部署各种 Kubernetes 版本的信息。
+Rancher 的 Kubernetes 元数据包含 Rancher 用于配置 [RKE 集群](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)的 Kubernetes 版本信息。Rancher 会定期同步数据并为 **系统镜像**、**服务选项**和**插件模板**创建自定义资源定义 (CRD)。因此，当新的 Kubernetes 版本与 Rancher Server 版本兼容时，Kubernetes 元数据可以使 Rancher 使用新版本来配置集群。元数据概述了 [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/) (RKE) 用于部署各种 Kubernetes 版本的信息。
 
 下表描述了受周期性数据同步影响的 CRD。
 
@@ -32,7 +34,7 @@ Rancher 的 Kubernetes 元数据包含 Rancher 用于配置 [RKE 集群](../../p
 - 更改 Rancher 用于同步元数据的 URL。适用于要让 Rancher 从本地同步而不是与 GitHub 同步的情况。这在离线环境下非常有用。
 - 防止 Rancher 自动同步元数据。这可以防止在 Rancher 中使用新的/不受支持的 Kubernetes 版本。
 
-### 刷新 Kubernetes 元数据
+## 刷新 Kubernetes 元数据
 
 默认情况下，管理员或具有**管理集群驱动**[全局角色](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions.md)的用户，可以刷新 Kubernetes 元数据。
 
@@ -44,7 +46,7 @@ Rancher 的 Kubernetes 元数据包含 Rancher 用于配置 [RKE 集群](../../p
 
 你可以将 `refresh-interval-minutes` 设置为 `0`（见下文），将 Rancher 配置为仅在需要时刷新元数据，并在需要时使用此按钮手动执行元数据刷新。
 
-### 配置元数据同步
+## 配置元数据同步
 
 :::caution
 
@@ -70,7 +72,7 @@ RKE 元数据的配置控制 Rancher 同步元数据的频率以及从何处下�
 
 但是，如果你有[离线设置](#离线设置)需求，你需要将 Kubernetes 元数据仓库镜像到 Rancher 可用的位置。然后，你需要更改 URL 来指向 JSON 文件的新位置。
 
-### 离线设置
+## 离线设置
 
 Rancher Server 会定期刷新 `rke-metadata-config` 来下载新的 Kubernetes 版本元数据。有关 Kubernetes 和 Rancher 版本的兼容性表，请参阅[服务条款](https://rancher.com/support-maintenance-terms/all-supported-versions/rancher-v2.2.8/)。
 

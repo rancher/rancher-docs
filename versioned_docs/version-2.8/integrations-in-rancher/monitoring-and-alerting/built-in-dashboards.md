@@ -99,7 +99,7 @@ To see the Prometheus Targets, install `rancher-monitoring`. Then:
 
 ### Viewing the PrometheusRules
 
-When you define a Rule (which is declared within a RuleGroup in a PrometheusRule resource), the [spec of the Rule itself](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#rule) contains labels that are used by Alertmanager to figure out which Route should receive a certain Alert.
+When you define a Rule (which is declared within a RuleGroup in a PrometheusRule resource), the [spec of the Rule itself](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#rule) contains labels that are used by Alertmanager to figure out which Route should receive a certain Alert.
 
 To see the PrometheusRules, install `rancher-monitoring`. Then:
 
@@ -118,4 +118,4 @@ For more information on configuring PrometheusRules in Rancher, see [this page.]
 
 ## Legacy UI
 
-For information on the dashboards available in v2.2 to v2.4 of Rancher, before the introduction of the `rancher-monitoring` application, see the [Rancher v2.0—v2.4 docs](/versioned_docs/version-2.0-2.4/explanations/integrations-in-rancher/cluster-monitoring/viewing-metrics.md).
+For information on the dashboards available in v2.2 to v2.4 of Rancher, before the introduction of the `rancher-monitoring` application, see the [Rancher v2.0—v2.4 docs](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/explanations/integrations-in-rancher/cluster-monitoring/viewing-metrics.md).

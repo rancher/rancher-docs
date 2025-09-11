@@ -4,7 +4,7 @@ title: 安装 Adapter
 
 > **重要提示**：如果你尝试重新安装 Adapter，你可能会在长达一小时的时间内收到不合规的错误消息。
 
-### Rancher 与 Adapter 的兼容性矩阵
+## Rancher 与 Adapter 的兼容性矩阵
 
 :::note 重要提示：
 
@@ -14,16 +14,20 @@ title: 安装 Adapter
 :::
 
 | Rancher 版本 | Adapter 版本 |
-|-----------------|:---------------:|
-| v2.7.0 | v2.0.0 |
-| v2.7.1 | v2.0.0 |
-| v2.7.2 | v2.0.1 |
-| v2.7.3 | v2.0.1 |
-| v2.7.4 | v2.0.1 |
-| v2.7.5 | v2.0.2 |
+|-----------------|------------------|
+| v2.8.9          | v103.0.1+up3.0.1 |
+| v2.8.8          | v103.0.1+up3.0.1 |
+| v2.8.7          | v103.0.1+up3.0.1 |
+| v2.8.6          | v103.0.1+up3.0.1 |
+| v2.8.5          | v103.0.1+up3.0.1 |
+| v2.8.4          | v103.0.1+up3.0.1 |
+| v2.8.3          | v103.0.1+up3.0.1 |
+| v2.8.2          | v103.0.0+up3.0.0 |
+| v2.8.1          | v103.0.0+up3.0.0 |
+| v2.8.0          | v103.0.0+up3.0.0 |
 
 
-### 1. 获取对 Local 集群的访问权限
+## 1. 获取对 Local 集群的访问权限
 
 > **注意**：只有管理员用户才能访问 Local 集群。因为 CSP Adapter 必须安装在 Local 集群中，所以此安装必须由管理员用户执行。
 
@@ -33,7 +37,7 @@ title: 安装 Adapter
 export KUBECONFIG=$TOKEN_PATH
 ```
 
-### 2. 创建 Adapter 命名空间
+## 2. 创建 Adapter 命名空间
 
 创建要安装 Adapter 的命名空间：
 
@@ -41,7 +45,7 @@ export KUBECONFIG=$TOKEN_PATH
 kubectl create ns cattle-csp-adapter-system
 ```
 
-### 3. 创建证书密文
+## 3. 创建证书密文
 
 Adapter 需要访问 Rancher 用来与 Rancher Server 通信的根 CA。有关 Rancher 支持的证书选项的更多信息，请参阅 [Chart 选项页面](../../../getting-started/installation-and-upgrade/installation-references/helm-chart-options.md)。
 
@@ -63,7 +67,7 @@ kubectl -n cattle-csp-adapter-system create secret generic tls-ca-additional --f
 
 > **重要提示**：不要更改文件名或创建的密文的名称，否则可能会导致 Adapter 运行出错。
 
-### 4. 安装 Chart
+## 4. 安装 Chart
 
 首先，使用以下命令添加 `rancher/charts` 仓库：
 
@@ -134,7 +138,7 @@ helm install rancher-csp-adapter rancher-charts/rancher-csp-adapter -f values.ya
 </TabItem>
 </Tabs>
 
-### 5. 管理证书更新
+## 5. 管理证书更新
 
 如果你在[步骤 3](#3-创建证书密文) 中创建了一个用于存储自定义证书的密文，则随着证书的轮换，你将需要更新此密文。
 

@@ -2,6 +2,10 @@
 title: Hardening the Rancher Webhook
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/rancher-security/rancher-webhook-hardening"/>
+</head>
+
 Rancher Webhook is an important component within Rancher, playing a role in enforcing security requirements for Rancher and its workloads. To decrease its attack surface, access to it should be limited to the only valid caller it has: the Kubernetes API server. This can be done by using network policies and authentication independently or in conjunction with each other to harden the webhook against attacks.
 
 ## Block External Traffic Using Network Policies

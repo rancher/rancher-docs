@@ -10,10 +10,11 @@ The commands/steps listed on this page can be used to check networking related i
 
 Make sure you configured the correct kubeconfig (for example, `export KUBECONFIG=$PWD/kube_config_cluster.yml` for Rancher HA) or are using the embedded kubectl via the UI.
 
-### Double check if all the required ports are opened in your (host) firewall
+## Double check if all the required ports are opened in your (host) firewall
 
 Double check if all the [required ports](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md#networking-requirements) are opened in your (host) firewall. The overlay network uses UDP in comparison to all other required ports which are TCP.
-### Check if overlay network is functioning correctly
+
+## Check if overlay network is functioning correctly
 
 The pod can be scheduled to any of the hosts you used for your cluster, but that means that the NGINX ingress controller needs to be able to route the request from `NODE_1` to `NODE_2`. This happens over the overlay network. If the overlay network is not functioning, you will experience intermittent TCP/HTTP connection failures due to the NGINX ingress controller not being able to route to the pod.
 
@@ -21,7 +22,7 @@ To test the overlay network, you can launch the following `DaemonSet` definition
 
 :::note
 
-This container [does not support ARM nodes](https://github.com/leodotcloud/swiss-army-knife/issues/18), such as a Raspberry Pi. This will be seen in the pod logs as `exec user process caused: exec format error`.
+The `swiss-army-knife` container does not support Windows nodes. It also [does not support ARM nodes](https://github.com/leodotcloud/swiss-army-knife/issues/18), such as a Raspberry Pi. When the test encounters incompatible nodes, this is recorded in the pod logs as an error message, such as `exec user process caused: exec format error` for ARM nodes, or `ImagePullBackOff (Back-off pulling image "rancherlabs/swiss-army-knife)` for Windows nodes.
 
 :::
 
@@ -47,7 +48,7 @@ This container [does not support ARM nodes](https://github.com/leodotcloud/swiss
           - image: rancherlabs/swiss-army-knife
             imagePullPolicy: Always
             name: overlaytest
-            command: ["sh", "-c", "tail -f /dev/null"]
+            command: ["sleep", "infinity"]
             terminationMessagePath: /dev/termination-log
 
     ```
@@ -97,7 +98,7 @@ This container [does not support ARM nodes](https://github.com/leodotcloud/swiss
 6. You can now clean up the DaemonSet by running `kubectl delete ds/overlaytest`.
 
 
-### Check if MTU is correctly configured on hosts and on peering/tunnel appliances/devices
+## Check if MTU is Correctly Configured on Hosts and on Peering/Tunnel Appliances/Devices
 
 When the MTU is incorrectly configured (either on hosts running Rancher, nodes in created/imported clusters or on appliances/devices in between), error messages will be logged in Rancher and in the agents, similar to:
 
@@ -106,20 +107,3 @@ When the MTU is incorrectly configured (either on hosts running Rancher, nodes i
 * `read tcp: i/o timeout`
 
 See [Google Cloud VPN: MTU Considerations](https://cloud.google.com/vpn/docs/concepts/mtu-considerations#gateway_mtu_vs_system_mtu) for an example how to configure MTU correctly when using Google Cloud VPN between Rancher and cluster nodes.
-
-### Resolved issues
-
-#### Overlay network broken when using Canal/Flannel due to missing node annotations
-
-| | |
-|------------|------------|
-| GitHub issue | [#13644](https://github.com/rancher/rancher/issues/13644) |
-| Resolved in |  v2.1.2 |
-
-To check if your cluster is affected, the following command will list nodes that are broken (this command requires `jq` to be installed):
-
-```
-kubectl get nodes -o json | jq '.items[].metadata | select(.annotations["flannel.alpha.coreos.com/public-ip"] == null or .annotations["flannel.alpha.coreos.com/kube-subnet-manager"] == null or .annotations["flannel.alpha.coreos.com/backend-type"] == null or .annotations["flannel.alpha.coreos.com/backend-data"] == null) | .name'
-```
-
-If there is no output, the cluster is not affected.

@@ -1,10 +1,10 @@
 ---
-title: Set Up Load Balancer and Ingress Controller within Rancher
+title: Load Balancer and Ingress Controller Setup within Rancher
 description: Learn how you can set up load balancers and ingress controllers to redirect service requests within Rancher, and learn about the limitations of load balancers
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/load-balancer-and-ingress-controller"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-resources-setup/load-balancer-and-ingress-controller"/>
 </head>
 
 Within Rancher, you can set up load balancers and ingress controllers to redirect service requests.

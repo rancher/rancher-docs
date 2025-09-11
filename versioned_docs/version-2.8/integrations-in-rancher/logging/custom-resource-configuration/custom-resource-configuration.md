@@ -3,7 +3,7 @@ title: Custom Resource Configuration
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/custom-resource-configuration"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/logging/custom-resource-configuration"/>
 </head>
 
 The following Custom Resource Definitions are used to configure logging:

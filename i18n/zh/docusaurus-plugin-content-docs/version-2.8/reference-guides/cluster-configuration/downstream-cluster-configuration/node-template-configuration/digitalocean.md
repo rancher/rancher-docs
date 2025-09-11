@@ -4,11 +4,11 @@ title: DigitalOcean 节点模板配置
 
 账户访问信息存储在云凭证中。云凭证存储在 Kubernetes 密文中。多个节点模板可以使用相同的云凭证。你可以使用现有的云凭证或创建新的凭证。
 
-### Droplet 选项
+## Droplet 选项
 
 **Droplet 选项**用于配置集群的地理区域和规范。
 
-### Docker Daemon
+## Docker Daemon
 
 如果你使用 Docker，[Docker daemon](https://docs.docker.com/engine/docker-overview/#the-docker-daemon) 配置选项包括：
 

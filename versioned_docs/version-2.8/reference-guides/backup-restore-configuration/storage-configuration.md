@@ -52,9 +52,8 @@ It is highly recommended to use a Persistent Volume with a reclaim policy of "Re
 
 :::
 
-## Example values.yaml for the rancher-backup Helm Chart
+## Example YAML File: Rancher Backup Helm Chart
 
-The documented `values.yaml` file that can be used to configure `rancher-backup` operator when the Helm CLI is used can be found in the [backup-restore-operator repository.](https://github.com/rancher/backup-restore-operator/blob/master/charts/rancher-backup/values.yaml)
+The documented `values.yaml` file that can be used to configure the `backup-restore-operator` when the Helm CLI is used can be found in the [backup-restore-operator repository.](https://github.com/rancher/backup-restore-operator/blob/master/charts/rancher-backup/values.yaml)
 
 For more information about `values.yaml` files and configuring Helm charts during installation, refer to the [Helm documentation.](https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing)
-

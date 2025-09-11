@@ -1,5 +1,5 @@
 ---
-title: Architecture
+title: Logging Architecture
 ---
 
 <head>
@@ -10,7 +10,7 @@ This section summarizes the architecture of the Rancher logging application.
 
 For more details about how the Logging operator works, see the [official documentation.](https://kube-logging.github.io/docs/#architecture)
 
-### How the Logging Operator Works
+## How the Logging Operator Works
 
 The Logging operator automates the deployment and configuration of a Kubernetes logging pipeline. It deploys and configures a Fluent Bit DaemonSet on every node to collect container and application logs from the node file system.
 

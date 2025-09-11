@@ -65,6 +65,15 @@
     @apply font-sans antialiased;
   }
 
+  table td:nth-child(1) {
+    overflow-wrap: normal;
+  }
+
+  td {
+    width: auto;
+    overflow-wrap: anywhere; /* For browser compatibility */
+  }
+
   .homepage a {
     --ifm-link-hover-color: currentColor;
   }
@@ -133,6 +142,23 @@ h1, h2, h3, h4, h5, h6 {
 
 code {
   font-family: 'Roboto Mono', monospace;
+}
+
+dd {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+dl p {
+  font-size: .9rem;
+  font-weight: lighter;
+  margin-inline-start: 40px; /*This is intended to match the margin spacing for the dd element*/
+  margin-bottom: 0;
 }
 
 hr {
@@ -455,4 +481,12 @@ details p {
   .two-cols .section-content {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+}
+
+.cardTitle_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module {
+  font-size: 0.88rem !important;
+}
+
+.cardDescription_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module {
+  display: none;
 }

@@ -15,11 +15,11 @@ title: 在 Rancher 中动态配置新存储
 1. [添加一个存储类并将其配置为使用你的存储](#1-添加一个存储类并将其配置为使用你的存储)
 2. [为使用 StatefulSet 部署的 Pod 使用存储类](#2-为使用-statefulset-部署的-pod-使用存储类)
 
-### 先决条件
+## 先决条件
 
 - 设置持久存储需要`管理卷`的[角色](../../../authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#项目角色参考)。
 - 如果你要为云集群配置存储，则存储和集群主机必须使用相同的云提供商。
-- 必须启用云提供商。有关启用云提供商的详细信息，请参阅[此页面](../../../../../pages-for-subheaders/set-up-cloud-providers.md)。
+- 必须启用云提供商。有关启用云提供商的详细信息，请参阅[此页面](../../../kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/set-up-cloud-providers.md)。
 - 确保你的存储卷插件可以启用。
 
 默认情况下启用以下存储卷插件：
@@ -38,7 +38,7 @@ title: 在 Rancher 中动态配置新存储
 
 如果你的存储卷插件没有在上述列表中，你需要[使用功能开关来启用不受支持的存储驱动](../../../../advanced-user-guides/enable-experimental-features/unsupported-storage-drivers.md)。
 
-### 1. 添加一个存储类并将其配置为使用你的存储
+## 1. 添加一个存储类并将其配置为使用你的存储
 
 这些步骤描述了如何在集群级别设置存储类：
 
@@ -55,7 +55,7 @@ title: 在 Rancher 中动态配置新存储
 
 有关存储类参数的完整信息，请参阅官方 [Kubernetes 文档](https://kubernetes.io/docs/concepts/storage/storage-classes/#parameters)。
 
-### 2. 为使用 StatefulSet 部署的 Pod 使用存储类
+## 2. 为使用 StatefulSet 部署的 Pod 使用存储类
 
 StatefulSet 管理 Pod 的部署和扩展，同时为每个 Pod 维护一个粘性标识。在这个 StatefulSet 中，我们将配置一个 VolumeClaimTemplate。StatefulSet 管理的每个 Pod 都将部署一个基于此 VolumeClaimTemplate 的 PersistentVolumeClaim。PersistentVolumeClaim 将引用我们创建的 StorageClass。因此，在部署 StatefulSet 管理的每个 Pod 时，都会使用 PersistentVolumeClaim 中定义的 StorageClass 来绑定到动态配置的存储。
 
@@ -66,7 +66,7 @@ StatefulSet 管理 Pod 的部署和扩展，同时为每个 Pod 维护一个粘�
 1. 单击 **StatefulSet**。
 1. 在**卷声明模板**选项卡上，单击**添加声明模板**。
 1. 输入持久卷的名称。
-1. 在*存储类*\*字段中，选择将为此 StatefulSet 管理的 pod 动态配置存储的 StorageClass。
+1. 在**存储类**字段中，选择将为此 StatefulSet 管理的 pod 动态配置存储的 StorageClass。
 1. 在**挂载点**字段中，输入工作负载将用于访问卷的路径。
 1. 点击**启动**。
 
@@ -80,7 +80,7 @@ StatefulSet 管理 Pod 的部署和扩展，同时为每个 Pod 维护一个粘�
 1. 单击 **⋮ > 编辑配置**，转到使用由 StorageClass 配置的存储的工作负载。
 1. 在**卷声明模板**中，单击**添加声明模板**。
 1. 输入持久卷名称。
-1. 在*存储类*\*字段中，选择将为此 StatefulSet 管理的 pod 动态配置存储的 StorageClass。
+1. 在**存储类**字段中，选择将为此 StatefulSet 管理的 pod 动态配置存储的 StorageClass。
 1. 在**挂载点**字段中，输入工作负载将用于访问卷的路径。
 1. 单击**保存**。
 

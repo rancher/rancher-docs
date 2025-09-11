@@ -17,7 +17,7 @@ For information on enabling experimental features, refer to [this page.](../../.
 
 | Option                    | Default Value | Description                                                                        |
 | ------------------------- | ------------- | ---------------------------------------------------------------------------------- |
-| `bootstrapPassword`       | " "           | `string` - Set the [bootstrap password](#bootstrap-password) for the first admin user. After logging in, the admin will need to reset their password. A randomly generated bootstrap password is used if this value is not set.
+| `bootstrapPassword`       | " "           | `string` - Set the [bootstrap password](#bootstrap-password) for the first admin user. After logging in, the admin should reset their password. A randomly generated bootstrap password is used if this value is not set.
 | `hostname`                | " "           | `string` - the Fully Qualified Domain Name for your Rancher Server                 |
 | `ingress.tls.source`      | "rancher"     | `string` - Where to get the cert for the ingress. - "rancher, letsEncrypt, secret" |
 | `letsEncrypt.email`       | " "           | `string` - Your email address                                                      |
@@ -32,6 +32,7 @@ For information on enabling experimental features, refer to [this page.](../../.
 | ------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `additionalTrustedCAs`         | false                                                 | `bool` - See [Additional Trusted CAs](#additional-trusted-cas)                                                                                    |
 | `addLocal`                     | "true"                                                | `string` - Have Rancher detect and import the "local" (upstream) Rancher server cluster.  _Note: This option is no longer available in v2.5.0.               |
+| `agentTLSMode`                 | ""                                                    | `string` - either `system-store` or `strict`. See [Agent TLS Enforcement](./tls-settings.md#agent-tls-enforcement) |
 | `antiAffinity`                 | "preferred"                                           | `string` - AntiAffinity rule for Rancher pods - "preferred, required"                                                                             |
 | `auditLog.destination`         | "sidecar"                                             | `string` - Stream to sidecar container console or hostPath volume - "sidecar, hostPath"                                                           |
 | `auditLog.hostPath`            | "/var/log/rancher/audit"                              | `string` - log file destination on host (only applies when `auditLog.destination` is set to `hostPath`)                                           |
@@ -67,19 +68,9 @@ For information on enabling experimental features, refer to [this page.](../../.
 
 ### Bootstrap Password
 
-When Rancher starts for the first time, a password is randomly generated for the first admin user. When the admin first logs in to Rancher, the UI shows commands that can be used to retrieve the bootstrap password. The admin needs to run those commands and log in with the bootstrap password. Then Rancher gives the admin an opportunity to reset the password.
+You can [set a specific bootstrap password](../resources/bootstrap-password.md) during Rancher installation. If you don't set a specific bootstrap password, Rancher randomly generates a password for the first admin account.
 
-If you want to use a specific bootstrap password instead of a randomly generated one, provide the password.
-
-```plain
---set bootstrapPassword="rancher"
-```
-
-The password, whether provided or generated, will be stored in a Kubernetes secret. After Rancher is installed, the UI will show instructions for how to retrieve the password using kubectl:
-
-```
-kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{ .data.bootstrapPassword|base64decode}}{{ "\n" }}'
-```
+When you log in for the first time, use the bootstrap password you set to log in. If you did not set a bootstrap password, the Rancher UI shows commands that can be used to [retrieve the bootstrap password](../resources/bootstrap-password.md#retrieving-the-bootstrap-password). Run those commands and log in to the account. After you log in for the first time, you are asked to reset the admin password.
 
 ### API Audit Log
 
@@ -163,7 +154,7 @@ Rancher supports CIDR notation ranges in this list.
 
 When not including sensitive data, the `proxy` or `extraEnv` chart options can be used. When using `extraEnv` the `noProxy` Helm option is ignored. Therefore, the `NO_PROXY` environment variable must also be set with `extraEnv`.
 
-The following is an example of setting proxy using the `extraEnv` chart option:
+The following is an example of setting proxy using the `proxy` chart option:
 
 ```plain
 --set proxy="http://<proxy_url:proxy_port>/"
@@ -216,21 +207,38 @@ You may terminate the SSL/TLS on a L7 load balancer external to the Rancher clus
 
 :::note
 
-If you are using a Private CA signed certificate, add `--set privateCA=true` and see [Adding TLS Secrets - Using a Private CA Signed Certificate](../../../getting-started/installation-and-upgrade/resources/add-tls-secrets.md) to add the CA cert for Rancher.
+If you are using a Private CA signed certificate (or if `agent-tls-mode` is set to `strict`), add `--set privateCA=true` and see [Adding TLS Secrets - Using a Private CA Signed Certificate](../../../getting-started/installation-and-upgrade/resources/add-tls-secrets.md) to add the CA cert for Rancher.
 
 :::
 
 Your load balancer must support long lived websocket connections and will need to insert proxy headers so Rancher can route links correctly.
 
-### Configuring Ingress for External TLS when Using NGINX v0.25
+### Configuring Ingress for External TLS when Using NGINX v0.22
 
-In NGINX v0.25, the behavior of NGINX has [changed](https://github.com/kubernetes/ingress-nginx/blob/master/Changelog.md#0220) regarding forwarding headers and external TLS termination. Therefore, in the scenario that you are using external TLS termination configuration with NGINX v0.25, you must edit the `cluster.yml` to enable the `use-forwarded-headers` option for ingress:
+In NGINX v0.22, the behavior of NGINX has [changed](https://github.com/kubernetes/ingress-nginx/blob/06efac9f0b6f8f84b553f58ccecf79dc42c75cc6/Changelog.md) regarding forwarding headers and external TLS termination. Therefore, in the scenario that you are using external TLS termination configuration with NGINX v0.22, you must enable the `use-forwarded-headers` option for ingress:
 
+For RKE installations, edit the `cluster.yml` to add the following settings.
 ```yaml
 ingress:
   provider: nginx
   options:
     use-forwarded-headers: 'true'
+```
+
+For RKE2 installations, you can create a custom `rke2-ingress-nginx-config.yaml` file at `/var/lib/rancher/rke2/server/manifests/rke2-ingress-nginx-config.yaml` containing this required setting to enable using forwarded headers with external TLS termination. Without this required setting applied, the external LB will continuously respond with redirect loops it receives from the ingress controller. (This can be created before or after rancher is installed, rke2 server agent will notice this addition and automatically apply it.)
+
+```yaml
+---
+apiVersion: helm.cattle.io/v1
+kind: HelmChartConfig
+metadata:
+  name: rke2-ingress-nginx
+  namespace: kube-system
+spec:
+  valuesContent: |-
+    controller:
+      config:
+        use-forwarded-headers: "true"
 ```
 
 ### Required Headers

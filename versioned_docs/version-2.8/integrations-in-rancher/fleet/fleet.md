@@ -2,6 +2,10 @@
 title: Continuous Delivery with Fleet
 ---
 
+<head>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/fleet"/>
+</head>
+
 Fleet orchestrates and manages the continuous delivery of applications through the supply chain for fleets of clusters. Fleet organizes the supply chain to help teams deliver with confidence and trust in a timely manner using GitOps as a safe operating model. 
 
 ## Fleet with Rancher

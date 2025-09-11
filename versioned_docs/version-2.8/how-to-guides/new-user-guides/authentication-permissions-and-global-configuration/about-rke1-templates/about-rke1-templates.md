@@ -1,10 +1,12 @@
 ---
-title: RKE Templates
+title: About RKE1 Templates
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/about-rke1-templates"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/about-rke1-templates"/>
 </head>
+
+<EOLRKE1Warning />
 
 RKE templates are designed to allow DevOps and security teams to standardize and simplify the creation of Kubernetes clusters.
 

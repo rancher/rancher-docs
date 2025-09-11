@@ -2,7 +2,7 @@
 title: 将用户添加到集群
 ---
 
-如果你想为用户提供对集群内 _所有_ 项目、节点和资源的访问权限，请为用户分配集群成员资格。
+To provide a user access to view certain cluster-level resources and create new projects, assign the user a **Cluster Membership**. Cluster members can create projects and manage resources in those projects. However, not all resources, namespaces and workloads in a cluster are accessible by cluster members.
 
 :::tip
 
@@ -29,9 +29,17 @@ title: 将用户添加到集群
 1. 在**成员角色**选项卡中，单击**添加成员**。
 1. 搜索要添加到集群的用户或组。
 
+   :::note Notes:
+
+   - At least 2 characters must be typed in the search box for results to appear.
+   - Users can be searched based on their username or display name.
+   - Search is prefix-based (e.g., a user named `Stan Dard` will appear when searching for `Sta`, but not when searching for `Dar`) and case-sensitive.
+
+   :::
+   
    如果配置了外部身份验证：
 
-   - 在你键入时，Rancher 会从你的[外部身份验证](../../../../pages-for-subheaders/authentication-config.md)源返回用户。
+   - 在你键入时，Rancher 会从你的[外部身份验证](../../authentication-permissions-and-global-configuration/authentication-config/authentication-config.md)源返回用户。
 
       :::note 使用 AD 但找不到你的用户？
 
@@ -43,7 +51,7 @@ title: 将用户添加到集群
 
       :::note
 
-      如果你以本地用户身份登录，外部用户不会显示在你的搜索结果中。有关详细信息，请参阅[外部身份验证配置和主体用户](../../../../pages-for-subheaders/authentication-config.md#外部身份验证配置和用户主体)。
+      如果你以本地用户身份登录，外部用户不会显示在你的搜索结果中。有关详细信息，请参阅[外部身份验证配置和主体用户](../../authentication-permissions-and-global-configuration/authentication-config/authentication-config.md#外部认证配置和用户主体)。
 
       :::
 

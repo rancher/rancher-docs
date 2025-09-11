@@ -2,6 +2,8 @@
 title: 升级 Cert-Manager
 ---
 
+Rancher 适配 API 版本 `cert-manager.io/v1` 并且在 cert-manager  v1.13.1 版本上进行了测试。
+
 Rancher 使用 cert-manager 为 Rancher 高可用部署自动生成和续期 TLS 证书。从 2019 秋季开始，cert-manager 发生了以下的三个重要变更。如果你在此时间段前创建了 Rancher 高可用部署，请进行相关操作。
 
 1. [从 2019 年 11 月 1 日开始，Let's Encrypt 已阻止低于 0.8.0 的 cert-manager 实例。](https://community.letsencrypt.org/t/blocking-old-cert-manager-versions/98753)
@@ -92,8 +94,7 @@ Rancher 使用 cert-manager 为 Rancher 高可用部署自动生成和续期 TLS
    ```plain
    helm install \
      cert-manager jetstack/cert-manager \
-     --namespace cert-manager \
-     --version v1.11.0
+     --namespace cert-manager
    ```
 
 1. [恢复备份资源](https://cert-manager.io/docs/tutorials/backup/#restoring-resources)：
@@ -125,7 +126,7 @@ Rancher 使用 cert-manager 为 Rancher 高可用部署自动生成和续期 TLS
 1. 从 [Helm Chart 仓库](https://artifacthub.io/packages/helm/cert-manager/cert-manager)中获取最新可用的 cert-manager Chart：
 
    ```plain
-   helm fetch jetstack/cert-manager --version v1.11.0
+   helm fetch jetstack/cert-manager
    ```
 
 1. 使用安装 Chart 的选项来渲染 cert-manager 模板。记住要设置 `image.repository` 选项，以从你的私有镜像仓库拉取镜像。此操作会创建一个包含 Kubernetes manifest 文件的 `cert-manager` 目录。
@@ -139,6 +140,8 @@ Rancher 使用 cert-manager 为 Rancher 高可用部署自动生成和续期 TLS
    --set webhook.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-webhook
    --set cainjector.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-cainjector
    ```
+
+   <DeprecationHelm2 />
 
    Helm 2 命令如下：
 
@@ -261,7 +264,7 @@ cert-manager-webhook-787858fcdb-nlzsq      1/1     Running   0          2m
 
 ---
 
-Rancher 现在支持 cert-manager 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为 v 1.6.x 将在 2022 年 3 月 30 日结束生命周期。详情请参见 [cert-manager 文档](../../../pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster.md#4-安装-cert-manager)。有关将 cert-manager 从 1.5 升级到 1.6 的说明，请参见上游的 [cert-manager 文档](https://cert-manager.io/docs/installation/upgrading/upgrading-1.5-1.6/)。有关将 cert-manager 从 1.6 升级到 1.7 的说明，请参见上游的 [cert-manager 文档](https://cert-manager.io/docs/installation/upgrading/upgrading-1.6-1.7/)。
+Rancher 现在支持 cert-manager 1.6.2 和 1.7.1。推荐使用 v1.7.x，因为 v 1.6.x 将在 2022 年 3 月 30 日结束生命周期。详情请参见 [cert-manager 文档](../install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md#4-安装-cert-manager)。有关将 cert-manager 从 1.5 升级到 1.6 的说明，请参见上游的 [cert-manager 文档](https://cert-manager.io/docs/installation/upgrading/upgrading-1.5-1.6/)。有关将 cert-manager 从 1.6 升级到 1.7 的说明，请参见上游的 [cert-manager 文档](https://cert-manager.io/docs/installation/upgrading/upgrading-1.6-1.7/)。
 
 ---
 

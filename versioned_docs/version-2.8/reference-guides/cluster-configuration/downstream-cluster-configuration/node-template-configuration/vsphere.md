@@ -1,5 +1,5 @@
 ---
-title: VSphere Node Template Configuration
+title: VMware vSphere Node Template Configuration
 ---
 
 <head>
@@ -33,6 +33,7 @@ The fields in the **Scheduling** section should auto-populate with the data cent
 | Data Store | * | If you have a data store cluster, you can toggle the **Data Store** field. This lets you select a data store cluster where your VM will be scheduled to. If the field is not toggled, you can select an individual disk. |
 | Folder |    |  Name of a folder in the datacenter to create the VMs in. Must already exist. The VM folders in this dropdown menu directly correspond to your VM folders in vSphere. The folder name should be prefaced with `vm/` in your vSphere config file. |
 | Host |  | The IP of the host system to schedule VMs in. Leave this field blank for a standalone ESXi or for a cluster with DRS (Distributed Resource Scheduler). If specified, the host system's pool will be used and the **Resource Pool** parameter will be ignored.   |
+| Graceful Shutdown Timeout | | The amount of time, in seconds, that Rancher waits before deleting virtual machines on a cluster. If set to `0`, graceful shutdown is disabled. Only accepts integer values. |
 
 ## Instance Options
 

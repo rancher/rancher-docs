@@ -19,11 +19,11 @@ The kubeconfig file and its contents are specific to each cluster. It can be dow
 1. Find the cluster whose kubeconfig you want to download, and select **⁝** at the end of the row. 
 1. Select **Download KubeConfig** from the submenu.
 
-You will need a separate kubeconfig file for each cluster that you have access to in Rancher.
+You need a separate kubeconfig file for each cluster that you have access to in Rancher.
 
-After you download the kubeconfig file, you will be able to use the kubeconfig file and its Kubernetes [contexts](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-context-and-configuration) to access your downstream cluster.
+After you download the kubeconfig file, you are then able to use the kubeconfig file and its Kubernetes [contexts](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-context-and-configuration) to access your downstream cluster.
 
-If admins have [kubeconfig token generation turned off](../../../../reference-guides/about-the-api/api-tokens.md#disable-tokens-in-generated-kubeconfigs), the kubeconfig file requires [rancher cli](./authorized-cluster-endpoint.md) to be present in your PATH.
+If admins have [kubeconfig token generation turned off](../../../../api/api-tokens.md#disable-tokens-in-generated-kubeconfigs), the kubeconfig file requires that the [Rancher CLI](../../../../reference-guides/cli-with-rancher/rancher-cli.md) to be present in your PATH.
 
 ### Two Authentication Methods for RKE Clusters
 
@@ -36,13 +36,13 @@ For RKE clusters, the kubeconfig file allows you to be authenticated in two ways
 
 This second method, the capability to connect directly to the cluster's Kubernetes API server, is important because it lets you access your downstream cluster if you can't connect to Rancher.
 
-To use the authorized cluster endpoint, you will need to configure kubectl to use the extra kubectl context in the kubeconfig file that Rancher generates for you when the RKE cluster is created. This file can be downloaded from the cluster view in the Rancher UI, and the instructions for configuring kubectl are on [this page.](use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster)
+To use the authorized cluster endpoint, you need to configure kubectl to use the extra kubectl context in the kubeconfig file that Rancher generates for you when the RKE cluster is created. This file can be downloaded from the cluster view in the Rancher UI, and the instructions for configuring kubectl are on [this page.](use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster)
 
 These methods of communicating with downstream Kubernetes clusters are also explained in the [architecture page](../../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md) in the larger context of explaining how Rancher works and how Rancher communicates with downstream clusters.
 
 ### About the kube-api-auth Authentication Webhook
 
-The `kube-api-auth` microservice is deployed to provide the user authentication functionality for the [authorized cluster endpoint,](../../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint). When you access the user cluster using `kubectl`, the cluster's Kubernetes API server authenticates you by using the `kube-api-auth` service as a webhook.
+The `kube-api-auth` microservice is deployed to provide the user authentication functionality for the [authorized cluster endpoint](../../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint). When you access the user cluster using `kubectl`, the cluster's Kubernetes API server authenticates you by using the `kube-api-auth` service as a webhook.
 
 During cluster provisioning, the file `/etc/kubernetes/kube-api-authn-webhook.yaml` is deployed and `kube-apiserver` is configured with `--authentication-token-webhook-config-file=/etc/kubernetes/kube-api-authn-webhook.yaml`. This configures the `kube-apiserver` to query `http://127.0.0.1:6440/v1/authenticate` to determine authentication for bearer tokens.
 

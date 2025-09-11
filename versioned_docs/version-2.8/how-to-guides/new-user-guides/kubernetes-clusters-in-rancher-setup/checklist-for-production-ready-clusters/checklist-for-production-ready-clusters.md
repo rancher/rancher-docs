@@ -3,7 +3,7 @@ title: Checklist for Production-Ready Clusters
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/checklist-for-production-ready-clusters"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters"/>
 </head>
 
 In this section, we recommend best practices for creating the production-ready Kubernetes clusters that will run your apps and services.
@@ -49,5 +49,5 @@ number of nodes for each Kubernetes role, refer to the section on [recommended a
 
 ### Networking
 
-* Minimize network latency. Rancher recommends minimizing latency between the etcd nodes. The default setting for `heartbeat-interval` is `500`, and the default setting for `election-timeout` is `5000`. These [settings for etcd tuning](https://coreos.com/etcd/docs/latest/tuning.html) allow etcd to run in most networks (except really high latency networks).
+* Minimize network latency. Rancher recommends minimizing latency between the etcd nodes. The default setting for `heartbeat-interval` is `500`, and the default setting for `election-timeout` is `5000`. These [settings for etcd tuning](https://etcd.io/docs/v3.5/tuning/) allow etcd to run in most networks (except really high latency networks).
 * Cluster nodes should be located within a single region. Most cloud providers provide multiple availability zones within a region, which can be used to create higher availability for your cluster. Using multiple availability zones is fine for nodes with any role. If you are using [Kubernetes Cloud Provider](../set-up-cloud-providers/set-up-cloud-providers.md) resources, consult the documentation for any restrictions (i.e. zone storage restrictions).

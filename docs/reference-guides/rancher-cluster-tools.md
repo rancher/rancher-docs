@@ -17,7 +17,7 @@ Logging is helpful because it allows you to:
 - Look for trends in your environment
 - Save your logs to a safe location outside of your cluster
 - Stay informed of events like a container crashing, a pod eviction, or a node dying
-- More easily debugg and troubleshoot problems
+- More easily debug and troubleshoot problems
 
 Rancher can integrate with Elasticsearch, splunk, kafka, syslog, and fluentd.
 
@@ -41,12 +41,9 @@ For more information, refer to the monitoring documentation [here.](../integrati
 Rancher's integration with Istio was improved in Rancher v2.5.
 
 For more information, refer to the Istio documentation [here.](../integrations-in-rancher/istio/istio.md)
-## OPA Gatekeeper
 
-[OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper) is an open-source project that provides integration between OPA and Kubernetes to provide policy control via admission controller webhooks. For details on how to enable Gatekeeper in Rancher, refer to the [OPA Gatekeeper section.](../integrations-in-rancher/opa-gatekeeper.md)
+## Compliance Scans
 
-## CIS Scans
+Rancher can run a security scan to check whether Kubernetes is deployed according to security best practices as defined in most recognized Kubernetes Security Benchmarks, such as STIG.
 
-Rancher can run a security scan to check whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark.
-
-For more information, refer to the CIS scan documentation [here.](../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md)
+For more information, refer to the Compliance scan documentation [here.](../how-to-guides/advanced-user-guides/compliance-scan-guides/compliance-scan-guides.md)

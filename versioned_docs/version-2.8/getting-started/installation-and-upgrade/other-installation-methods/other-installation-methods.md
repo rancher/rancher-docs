@@ -3,7 +3,7 @@ title: Other Installation Methods
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/other-installation-methods"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods"/>
 </head>
 
 ### Air Gapped Installations
