@@ -89,12 +89,6 @@ We recommend exporting the kubeconfig file so that if Rancher goes down, you can
 
 ## Impersonation
 
-:::caution Known Issue
-
-Service account impersonation (`--as`) used by lower privileged user accounts to remove privileges is not implemented and is a [feature](https://github.com/rancher/rancher/issues/41988) being tracked.
-
-:::
-
 Users technically exist only on the upstream cluster. Rancher creates [RoleBindings and ClusterRoleBindings](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding) that refer to Rancher users, even though there is [no actual User resource](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#users-in-kubernetes) on the downstream cluster.
 
 When users interact with a downstream cluster through the authentication proxy, there needs to be some entity downstream to serve as the actor for those requests. Rancher creates service accounts to be that entity. Each service account is only granted one permission, which is to **impersonate** the user they belong to. If there was only one service account that could impersonate any user, then it would be possible for a malicious user to corrupt that account and escalate their privileges by impersonating another user. This issue was the basis for a [CVE](https://github.com/rancher/rancher/security/advisories/GHSA-pvxj-25m6-7vqr).
