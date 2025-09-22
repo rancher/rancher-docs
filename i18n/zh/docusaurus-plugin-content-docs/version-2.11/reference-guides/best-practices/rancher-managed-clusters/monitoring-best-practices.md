@@ -96,7 +96,7 @@ Prometheus 不是用于长期存储指标的，它只用于短期存储。
 
 除了通过监控工作负载来检测性能、可用性或可扩展性之外，你还应该监控集群和运行在集群中的工作负载，来发现潜在的安全问题。一个好的做法是经常运行 [CIS 扫描](../../../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md)并发出告警，来检查集群是否按照安全最佳实践进行配置。
 
-对于工作负载，你可以查看 Kubernetes 和 Container 安全解决方案，例如 [NeuVector](https://www.suse.com/products/neuvector/)、[Falco](https://falco.org/)、[Aqua Kubernetes Security](https://www.aquasec.com/solutions/kubernetes-container-security/) 和 [SysDig](https://sysdig.com/)。
+对于工作负载，你可以查看 Kubernetes 和 Container 安全解决方案，例如 [NeuVector](https://www.suse.com/products/neuvector/)、[Falco](https://falco.org/)、[Aqua Kubernetes Security](https://www.aquasec.com/products/kubernetes-security/) 和 [SysDig](https://sysdig.com/)。
 
 ## 设置告警
 

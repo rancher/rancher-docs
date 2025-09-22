@@ -21,7 +21,7 @@ description: 阅读此分步 Rancher Hetzner Cloud 指南，以快速部署带�
 
 - [Hetzner Cloud 账号](https://www.hetzner.com)：用于运行服务器和集群。
 - [Hetzner API 访问密钥](https://docs.hetzner.cloud/#getting-started)：如果你没有的话，请参考说明创建一个。
-- [Terraform](https://www.terraform.io/downloads.html)：用于在 Hetzner 中配置服务器和集群。
+- [Terraform](https://developer.hashicorp.com/terraform/install)：用于在 Hetzner 中配置服务器和集群。
 
 
 ## 开始使用

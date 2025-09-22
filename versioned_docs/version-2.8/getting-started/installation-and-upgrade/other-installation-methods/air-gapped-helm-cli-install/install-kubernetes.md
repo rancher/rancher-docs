@@ -212,7 +212,7 @@ configs:
       ca_file: <path to the ca file used in the registry>
 ```
 
-For more information on private registries configuration file for RKE2, refer to the [RKE2 documentation.](https://docs.rke2.io/install/containerd_registry_configuration)
+For more information on private registries configuration file for RKE2, refer to the [RKE2 documentation.](https://docs.rke2.io/install/private_registry)
 
 ## 3. Install RKE2
 

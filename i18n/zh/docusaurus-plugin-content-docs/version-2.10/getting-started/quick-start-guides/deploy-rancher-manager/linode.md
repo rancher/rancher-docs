@@ -19,9 +19,9 @@ description: 阅读此分步 Rancher Linode 指南，以快速部署带有单节
 
 :::
 
-- [Linode 账号](https://linode.com): 用于运行服务器和集群。
-- [Linode 访问密钥](https://www.linode.com/docs/products/tools/api/guides/manage-api-tokens/): 用于权限认证的 Linode 访问密钥。
-- [Terraform](https://www.terraform.io/downloads.html): 用于在 Linode 中配置服务器和集群。
+- [Linode 账号](https://www.linode.com/): 用于运行服务器和集群。
+- [Linode 访问密钥](https://techdocs.akamai.com/cloud-computing/docs/manage-personal-access-tokens): 用于权限认证的 Linode 访问密钥。
+- [Terraform](https://developer.hashicorp.com/terraform/install): 用于在 Linode 中配置服务器和集群。
 
 
 ## 开始使用
@@ -45,7 +45,7 @@ description: 阅读此分步 Rancher Linode 指南，以快速部署带有单节
    - `prefix` - 所有创建资源的前缀
    - `linode_type` - 所有的 Linode 资源使用的类型/计划
      - 默认: `g6-standard-2` 
-     - 完整的计划列表, 请参照[官方的计划类型页面](https://www.linode.com/docs/products/compute/compute-instances/plans/).
+     - 完整的计划列表, 请参照[官方的计划类型页面](https://techdocs.akamai.com/cloud-computing/docs/compute-instance-plan-types).
 
 6. 执行 `terraform init`。
 

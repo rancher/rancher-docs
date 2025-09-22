@@ -12,7 +12,7 @@ title: Vagrant 快速入门
 
 ## 先决条件
 
-- [Vagrant](https://www.vagrantup.com)：Vagrant 是必需的，用于根据 Vagrantfile 配置主机。
+- [Vagrant](https://developer.hashicorp.com/vagrant)：Vagrant 是必需的，用于根据 Vagrantfile 配置主机。
 - [Virtualbox](https://www.virtualbox.org)：需要把 Vagrant 配置的虚拟机配置到 VirtualBox。
 - 至少 4GB 的可用内存。
 

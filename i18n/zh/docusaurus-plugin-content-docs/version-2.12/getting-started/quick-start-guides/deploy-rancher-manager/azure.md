@@ -23,7 +23,7 @@ description: 阅读此分步 Rancher Azure 指南，以快速部署带有单节�
 - [Microsoft Azure 订阅](https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/create-subscription#create-a-subscription-in-the-azure-portal)：如果你没有的话，请访问此链接查看如何创建 Microsoft Azure 订阅。
 - [Micsoroft Azure 租户](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-create-new-tenant)：访问此链接并参考教程以创建 Microsoft Azure 租户。
 - [Microsoft Azure 客户端 ID/密文](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal)：访问此链接并参考教程以创建 Microsoft Azure 客户端和密文。
-- [Terraform](https://www.terraform.io/downloads.html)：用于在 Microsoft Azure 中配置服务器和集群。
+- [Terraform](https://developer.hashicorp.com/terraform/install)：用于在 Microsoft Azure 中配置服务器和集群。
 
 
 ## 开始使用
