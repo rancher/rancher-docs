@@ -237,7 +237,7 @@ spec:
 
 ### Configuring Ingress for External TLS when using Traefik
 
-For K3s installations, you can create a custom `traefik-config.yaml` file at `/var/lib/rancher/k3s/server/manifests` containing this required setting to enable using forwarded headers with external TLS termination. Without this setting applied, the external load balancer will continuously respond with redirect loops it receives from the ingress controller. You can create a custom `traefik-config.yaml` file before or after you install Rancher as the RKE2 server agent will notice this addition and automatically apply it.
+For K3s installations, you can create a custom `traefik-config.yaml` file at `/var/lib/rancher/k3s/server/manifests` containing this required setting to enable using forwarded headers with external TLS termination. Without this setting applied, the external load balancer will continuously respond with redirect loops it receives from the ingress controller. You can create a custom `traefik-config.yaml` file before or after you install Rancher as the K3s server agent will notice this addition and automatically apply it.
 
 ```yaml
 apiVersion: helm.cattle.io/v1
