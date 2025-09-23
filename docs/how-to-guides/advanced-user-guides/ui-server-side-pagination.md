@@ -59,6 +59,7 @@ Additionally, the following limitations are present when the feature is enabled.
   - `State` column sort and filter features work on the resources `metadata.state.name` field instead of one deduced locally by the UI.
   - Updates are shown every 5 seconds, rather than instantly.
 - Cluster Explorer:
+  - Project/Namespace filter does not support filtering namespaces by all namespaces not in a project via the `Not in a Project` entry.
   - `Cluster` group --> `Nodes` page
     - The following columns are not sortable or filterable: `Roles`, `External/Internal IP`, `CPU`, `RAM` (logic to determine their value is calculated in the browser)
   - `Workloads` list:
