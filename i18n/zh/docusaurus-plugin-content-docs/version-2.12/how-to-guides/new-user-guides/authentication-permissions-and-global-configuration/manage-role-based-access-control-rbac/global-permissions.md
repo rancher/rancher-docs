@@ -6,6 +6,8 @@ title: 全局权限
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/zh/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions"/>
 </head>
 
+<PermissionsWarning />
+
 _权限_ 是你在为用户选择自定义权限时可以分配的个人访问权限。
 
 全局权限定义用户在任何特定集群之外的授权。Rancher 提供四种开箱即用的默认全局权限：`Administrator` (管理员)、`Restricted Admin` (受限管理员)、`Standard User` (标准用户) 和 `User-Base` 用户。
