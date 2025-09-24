@@ -213,7 +213,7 @@ If you are using a Private CA signed certificate (or if `agent-tls-mode` is set 
 
 :::
 
-Your load balancer must support long-lived WebSocket connections and will need to insert proxy headers so Rancher can route links correctly. Additionally, your ingress must support passing through the required headers listed below.
+Your load balancer must support long-lived WebSocket connections and will need to insert proxy headers so Rancher can route links correctly. Additionally, your ingress must be configured to use those proxy headers.
 
 ### Configuring Ingress for External TLS when Using NGINX v0.22
 
