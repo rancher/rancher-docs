@@ -662,9 +662,7 @@
         "produces": [
           "application/json",
           "application/yaml",
-          "application/vnd.kubernetes.protobuf",
-          "application/json;stream=watch",
-          "application/vnd.kubernetes.protobuf;stream=watch"
+          "application/json;stream=watch"
         ],
         "schemes": [
           "https"
@@ -727,8 +725,7 @@
         ],
         "produces": [
           "application/json",
-          "application/yaml",
-          "application/vnd.kubernetes.protobuf"
+          "application/yaml"
         ],
         "schemes": [
           "https"
@@ -798,8 +795,7 @@
         ],
         "produces": [
           "application/json",
-          "application/yaml",
-          "application/vnd.kubernetes.protobuf"
+          "application/yaml"
         ],
         "schemes": [
           "https"
@@ -885,8 +881,7 @@
         ],
         "produces": [
           "application/json",
-          "application/yaml",
-          "application/vnd.kubernetes.protobuf"
+          "application/yaml"
         ],
         "schemes": [
           "https"
@@ -917,8 +912,7 @@
         ],
         "produces": [
           "application/json",
-          "application/yaml",
-          "application/vnd.kubernetes.protobuf"
+          "application/yaml"
         ],
         "schemes": [
           "https"
@@ -982,8 +976,7 @@
         ],
         "produces": [
           "application/json",
-          "application/yaml",
-          "application/vnd.kubernetes.protobuf"
+          "application/yaml"
         ],
         "schemes": [
           "https"
@@ -1047,8 +1040,7 @@
         ],
         "produces": [
           "application/json",
-          "application/yaml",
-          "application/vnd.kubernetes.protobuf"
+          "application/yaml"
         ],
         "schemes": [
           "https"
@@ -1126,9 +1118,7 @@
         "produces": [
           "application/json",
           "application/yaml",
-          "application/vnd.kubernetes.protobuf",
-          "application/json;stream=watch",
-          "application/vnd.kubernetes.protobuf;stream=watch"
+          "application/json;stream=watch"
         ],
         "schemes": [
           "https"
@@ -1191,8 +1181,7 @@
         ],
         "produces": [
           "application/json",
-          "application/yaml",
-          "application/vnd.kubernetes.protobuf"
+          "application/yaml"
         ],
         "schemes": [
           "https"
@@ -1269,8 +1258,7 @@
         ],
         "produces": [
           "application/json",
-          "application/yaml",
-          "application/vnd.kubernetes.protobuf"
+          "application/yaml"
         ],
         "schemes": [
           "https"
@@ -1301,8 +1289,7 @@
         ],
         "produces": [
           "application/json",
-          "application/yaml",
-          "application/vnd.kubernetes.protobuf"
+          "application/yaml"
         ],
         "schemes": [
           "https"
@@ -1366,8 +1353,7 @@
         ],
         "produces": [
           "application/json",
-          "application/yaml",
-          "application/vnd.kubernetes.protobuf"
+          "application/yaml"
         ],
         "schemes": [
           "https"
@@ -1431,8 +1417,7 @@
         ],
         "produces": [
           "application/json",
-          "application/yaml",
-          "application/vnd.kubernetes.protobuf"
+          "application/yaml"
         ],
         "schemes": [
           "https"
@@ -1510,9 +1495,7 @@
         "produces": [
           "application/json",
           "application/yaml",
-          "application/vnd.kubernetes.protobuf",
-          "application/json;stream=watch",
-          "application/vnd.kubernetes.protobuf;stream=watch"
+          "application/json;stream=watch"
         ],
         "schemes": [
           "https"
@@ -1581,9 +1564,7 @@
         "produces": [
           "application/json",
           "application/yaml",
-          "application/vnd.kubernetes.protobuf",
-          "application/json;stream=watch",
-          "application/vnd.kubernetes.protobuf;stream=watch"
+          "application/json;stream=watch"
         ],
         "schemes": [
           "https"
@@ -1660,9 +1641,7 @@
         "produces": [
           "application/json",
           "application/yaml",
-          "application/vnd.kubernetes.protobuf",
-          "application/json;stream=watch",
-          "application/vnd.kubernetes.protobuf;stream=watch"
+          "application/json;stream=watch"
         ],
         "schemes": [
           "https"
@@ -1731,9 +1710,7 @@
         "produces": [
           "application/json",
           "application/yaml",
-          "application/vnd.kubernetes.protobuf",
-          "application/json;stream=watch",
-          "application/vnd.kubernetes.protobuf;stream=watch"
+          "application/json;stream=watch"
         ],
         "schemes": [
           "https"
@@ -7773,11 +7750,6 @@
           "version": "v1"
         },
         {
-          "group": "scc.cattle.io",
-          "kind": "DeleteOptions",
-          "version": "v1"
-        },
-        {
           "group": "scheduling.k8s.io",
           "kind": "DeleteOptions",
           "version": "v1"
@@ -7811,6 +7783,11 @@
           "group": "storagemigration.k8s.io",
           "kind": "DeleteOptions",
           "version": "v1alpha1"
+        },
+        {
+          "group": "telemetry.cattle.io",
+          "kind": "DeleteOptions",
+          "version": "v1"
         },
         {
           "group": "upgrade.cattle.io",
@@ -8500,11 +8477,6 @@
           "version": "v1"
         },
         {
-          "group": "scc.cattle.io",
-          "kind": "WatchEvent",
-          "version": "v1"
-        },
-        {
           "group": "scheduling.k8s.io",
           "kind": "WatchEvent",
           "version": "v1"
@@ -8538,6 +8510,11 @@
           "group": "storagemigration.k8s.io",
           "kind": "WatchEvent",
           "version": "v1alpha1"
+        },
+        {
+          "group": "telemetry.cattle.io",
+          "kind": "WatchEvent",
+          "version": "v1"
         },
         {
           "group": "upgrade.cattle.io",
