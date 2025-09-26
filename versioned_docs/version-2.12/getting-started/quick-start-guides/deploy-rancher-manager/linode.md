@@ -23,9 +23,9 @@ Deploying to Linode will incur charges.
 
 :::
 
-- [Linode Account](https://linode.com): The Linode account to run provision server and cluster under.
-- [Linode Personal Access Token](https://www.linode.com/docs/products/tools/api/guides/manage-api-tokens/): A Linode Personal Access Token to authenticate with.
-- [Terraform](https://www.terraform.io/downloads.html): Used to provision the server and cluster on Linode.
+- [Linode Account](https://www.linode.com/): The Linode account to run provision server and cluster under.
+- [Linode Personal Access Token](https://techdocs.akamai.com/cloud-computing/docs/manage-personal-access-tokens): A Linode Personal Access Token to authenticate with.
+- [Terraform](https://developer.hashicorp.com/terraform/install): Used to provision the server and cluster on Linode.
 
 
 ## Getting Started
@@ -48,7 +48,7 @@ See the [Quickstart Readme](https://github.com/rancher/quickstart) and the [Lino
    - `prefix` - The prefix for all created infrastructure.
    - `linode_type` - The type/plan that all infrastructure Linodes should use.
      - Default: `g6-standard-2` 
-     - For a complete list of plans, see the [official Plan Types page](https://www.linode.com/docs/products/compute/compute-instances/plans/).
+     - For a complete list of plans, see the [official Plan Types page](https://techdocs.akamai.com/cloud-computing/docs/compute-instance-plan-types).
 
 6. Run `terraform init`.
 

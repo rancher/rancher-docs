@@ -146,7 +146,7 @@ Rancher 使用 LDAP 查询来搜索和检索关于 Active Directory 中的用户
 
 为了成功配置 AD 身份验证，你必须提供 AD 服务器的层次结构和 Schema 的正确配置。
 
-[`ldapsearch`](https://manpages.ubuntu.com/manpages/kinetic/en/man1/ldapsearch.1.html) 工具允许你查询你的 AD 服务器，从而了解用于用户和组对象的 Schema。
+[`ldapsearch`](https://manpages.ubuntu.com/manpages/jammy/en/man1/ldapsearch.1.html) 工具允许你查询你的 AD 服务器，从而了解用于用户和组对象的 Schema。
 
 在下面的示例命令中，我们假设：
 

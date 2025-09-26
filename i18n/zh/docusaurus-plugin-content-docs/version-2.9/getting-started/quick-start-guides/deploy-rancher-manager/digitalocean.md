@@ -21,7 +21,7 @@ description: 阅读此分步 Rancher DigitalOcean 指南，以快速部署带有
 
 - [DigitalOcean 账号](https://www.digitalocean.com)：用于运行服务器和集群。
 - [DigitalOcean 访问密钥](https://www.digitalocean.com/community/tutorials/how-to-create-a-digitalocean-space-and-api-key)：如果你没有的话，请访问此链接创建一个。
-- [Terraform](https://www.terraform.io/downloads.html)：用于在 DigitalOcean 中配置服务器和集群。
+- [Terraform](https://developer.hashicorp.com/terraform/install)：用于在 DigitalOcean 中配置服务器和集群。
 
 
 ## 开始使用

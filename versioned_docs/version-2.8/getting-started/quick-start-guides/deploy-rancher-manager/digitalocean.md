@@ -25,7 +25,7 @@ Deploying to DigitalOcean will incur charges.
 
 - [DigitalOcean Account](https://www.digitalocean.com): You will require an account on DigitalOcean as this is where the server and cluster will run.
 - [DigitalOcean Access Key](https://www.digitalocean.com/community/tutorials/how-to-create-a-digitalocean-space-and-api-key): Use this link to create a DigitalOcean Access Key if you don't have one.
-- [Terraform](https://www.terraform.io/downloads.html): Used to provision the server and cluster to DigitalOcean.
+- [Terraform](https://developer.hashicorp.com/terraform/install): Used to provision the server and cluster to DigitalOcean.
 
 
 ## Getting Started

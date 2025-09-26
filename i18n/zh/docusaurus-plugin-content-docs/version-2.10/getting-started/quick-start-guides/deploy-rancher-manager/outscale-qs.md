@@ -21,7 +21,7 @@ description: 阅读此分步 Rancher Outscale 指南，以快速部署带有单�
 
 - [Outscale 账号](https://en.outscale.com/)：用于运行服务器和集群。
 - [Outscale 访问密钥](https://docs.outscale.com/en/userguide/About-Access-Keys.html)：如果你没有的话，请按照说明创建一个 Outscale 访问密钥。
-- [Terraform](https://www.terraform.io/downloads.html)：用于在 Outscale 中配置服务器和集群。
+- [Terraform](https://developer.hashicorp.com/terraform/install)：用于在 Outscale 中配置服务器和集群。
 
 
 ## 开始使用
