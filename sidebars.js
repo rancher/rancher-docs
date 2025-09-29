@@ -789,6 +789,7 @@ const sidebars = {
               ],
             },
             "how-to-guides/advanced-user-guides/open-ports-with-firewalld",
+            "how-to-guides/advanced-user-guides/configure-your-firewall",
             "how-to-guides/advanced-user-guides/tune-etcd-for-large-installs",
             "how-to-guides/advanced-user-guides/enable-api-audit-log",
             "how-to-guides/advanced-user-guides/enable-api-audit-log-in-downstream-clusters",
