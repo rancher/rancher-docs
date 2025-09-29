@@ -147,7 +147,7 @@ On AWS EC2, we should create a few objects to configure our system. We've define
     * Security group: `K8sMasterSg`. More info at [RKE2 ports (custom nodes tab)](../../../../getting-started/installation-and-upgrade/installation-requirements/port-requirements.md#downstream-kubernetes-cluster-nodes).
     * Tags:
       `kubernetes.io/cluster/<clusterID>: owned`
-    * User data: `K8sMasterUserData` Ubuntu 18.04(ami-0e11cbb34015ff725), installs Docker and add etcd+controlplane node to the k8s cluster.
+    * User data: `K8sMasterUserData` Ubuntu 18.04(ami-0e11cbb34015ff725), installs Docker and add etcd+controlplane node to the K8s cluster.
 
       ```sh
       #!/bin/bash -x
@@ -206,7 +206,7 @@ On AWS EC2, we should create a few objects to configure our system. We've define
     * `kubernetes.io/cluster/<clusterID>: owned`
     * `k8s.io/cluster-autoscaler/<clusterName>: true`
     * `k8s.io/cluster-autoscaler/enabled: true`
-  * User data: `K8sWorkerUserData` Ubuntu 18.04(ami-0e11cbb34015ff725), installs Docker and add worker node to the k8s cluster.
+  * User data: `K8sWorkerUserData` Ubuntu 18.04(ami-0e11cbb34015ff725), installs Docker and add worker node to the K8s cluster.
 
       ```sh
       #!/bin/bash -x

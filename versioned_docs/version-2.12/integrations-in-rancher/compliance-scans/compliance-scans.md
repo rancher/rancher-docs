@@ -29,7 +29,7 @@ The Benchmark version is included in the generated report.
 
 The Benchmark provides recommendations of two types: Automated and Manual. Recommendations marked as Manual in the Benchmark are not included in the generated report.
 
-Some tests are designated as "Not Applicable." These tests will not be run on any CIS scan because of the way that Rancher provisions RKE2 clusters. For information on how test results can be audited, and why some tests are designated to be not applicable, refer to Rancher's [self-assessment guide](../../reference-guides/rancher-security/rancher-security.md#the-cis-benchmark-and-self-assessment) for the corresponding Kubernetes version.
+Some tests are designated as "Not Applicable." These tests will not be run on any CIS scan because of the way that Rancher provisions RKE2/K3s clusters. For information on how test results can be audited, and why some tests are designated to be not applicable, refer to Rancher's [self-assessment guide](../../reference-guides/rancher-security/rancher-security.md#the-cis-benchmark-and-self-assessment) for the corresponding Kubernetes version.
 
 The report contains the following information:
 
@@ -75,11 +75,11 @@ The following profiles are available:
 
 You also have the ability to customize a profile by saving a set of tests to skip.
 
-All profiles will have a set of not applicable tests that will be skipped during the CIS scan. These tests are not applicable based on how a RKE2 cluster manages Kubernetes.
+All profiles will have a set of not applicable tests that will be skipped during the CIS scan. These tests are not applicable based on how a RKE2/K3s cluster manages Kubernetes.
 
-There are two types of RKE2 cluster scan profiles:
+There are two types of RKE2/K3s cluster scan profiles:
 
-- **Permissive:** This profile has a set of tests that have been will be skipped as these tests will fail on a default RKE2 Kubernetes cluster. Besides the list of skipped tests, the profile will also not run the not applicable tests.
+- **Permissive:** This profile has a set of tests that have been will be skipped as these tests will fail on a default RKE2/K3s Kubernetes cluster. Besides the list of skipped tests, the profile will also not run the not applicable tests.
 - **Hardened:** This profile will not skip any tests, except for the non-applicable tests.
 
 The EKS and GKE cluster scan profiles are based on CIS Benchmark versions that are specific to those types of clusters.

@@ -107,7 +107,7 @@ The `system` project:
 
 :::note
 
-In RKE2 clusters where the project network isolation option is enabled, the `system` project overrides the project network isolation option so that it can communicate with other projects, collect logs, and check health.
+In RKE2/K3s clusters where the project network isolation option is enabled, the `system` project overrides the project network isolation option so that it can communicate with other projects, collect logs, and check health.
 
 :::
 
