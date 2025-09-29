@@ -19,6 +19,8 @@ In order to deploy and run the adapter successfully, you need to ensure its vers
 
 | Rancher Version | Adapter Version  |
 |-----------------|------------------|
+| v2.12.2         |  107.0.0+up7.0.0 |
+| v2.12.1         |  107.0.0+up7.0.0 |
 | v2.12.0         |  107.0.0+up7.0.0 |
 
 ### 1. Gain Access to the Local Cluster

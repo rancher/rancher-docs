@@ -26,7 +26,7 @@ Deploying to Google GCP will incur charges.
 - [Google GCP Account](https://console.cloud.google.com/): A Google GCP Account is required to create resources for deploying Rancher and Kubernetes.
 - [Google GCP Project](https://cloud.google.com/appengine/docs/standard/nodejs/building-app/creating-project): Use this link to follow a tutorial to create a GCP Project if you don't have one yet.
 - [Google GCP Service Account](https://cloud.google.com/iam/docs/creating-managing-service-account-keys): Use this link and follow instructions to create a GCP service account and token file.
-- [Terraform](https://www.terraform.io/downloads.html): Used to provision the server and cluster in Google GCP.
+- [Terraform](https://developer.hashicorp.com/terraform/install): Used to provision the server and cluster in Google GCP.
 
 
 ## Getting Started

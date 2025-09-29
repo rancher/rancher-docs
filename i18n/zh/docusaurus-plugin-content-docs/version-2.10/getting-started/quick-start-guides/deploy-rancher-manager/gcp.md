@@ -22,7 +22,7 @@ description: 阅读此分步 Rancher GCP 指南，以快速部署带有单节点
 - [Google GCP Account](https://console.cloud.google.com/)：用于创建部署 Rancher 和 Kubernetes 的资源。
 - [Google GCP 项目](https://cloud.google.com/appengine/docs/standard/nodejs/building-app/creating-project)：如果你没有的话，请访问此链接查看如何创建 GCP 项目。
 - [Google GCP  ServiceAccount](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)：请访问此链接查看如何创建 GCP  ServiceAccount 和 Token 文件。
-- [Terraform](https://www.terraform.io/downloads.html)：用于在 Google GCP 中配置服务器和集群。
+- [Terraform](https://developer.hashicorp.com/terraform/install)：用于在 Google GCP 中配置服务器和集群。
 
 
 ## 开始使用

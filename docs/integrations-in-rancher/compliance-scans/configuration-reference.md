@@ -26,9 +26,9 @@ An example ClusterScan custom resource is below:
 apiVersion: compliance.cattle.io/v1
 kind: ClusterScan
 metadata:
-  name: rke-cis
+  name: scan-smnr9
 spec:
-  scanProfileName: rke-profile-hardened
+  scanProfileName: cis-1.10-profile
 ```
 
 ## Profiles
@@ -54,16 +54,21 @@ apiVersion: compliance.cattle.io/v1
 kind: ClusterScanProfile
 metadata:
   annotations:
-    meta.helm.sh/release-name: clusterscan-operator
+    clusterscanprofile.compliance.cattle.io/builtin: 'true'
+    meta.helm.sh/release-name: rancher-compliance
     meta.helm.sh/release-namespace: compliance-operator-system
+  creationTimestamp: '2025-09-15T18:09:52Z'
+  generation: 1
   labels:
     app.kubernetes.io/managed-by: Helm
-  name: "<example-profile>"
+  name: cis-1.10-profile
+  resourceVersion: '93582'
+  uid: 0baad187-1157-46ac-982d-014338847c27
 spec:
-  benchmarkVersion: cis-1.5
+  benchmarkVersion: cis-1.10
   skipTests:
-    - "1.1.20"
-    - "1.1.21"
+    - '1.1.20'
+    - '1.1.21'
 ```
 
 ## Benchmark Versions
@@ -82,7 +87,7 @@ If the default BenchmarkVersions are edited, the next chart update will reset th
 
 A ClusterScanBenchmark consists of the fields:
 
-- `ClusterProvider`: This is the cluster provider name for which this benchmark is applicable. For example: RKE, EKS, GKE, etc. Leave it empty if this benchmark can be run on any cluster type.
+- `ClusterProvider`: This is the cluster provider name for which this benchmark is applicable. For example: RKE2, EKS, GKE, etc. Leave it empty if this benchmark can be run on any cluster type.
 - `MinKubernetesVersion`: Specifies the cluster's minimum kubernetes version necessary to run this benchmark. Leave it empty if there is no dependency on a particular Kubernetes version.
 - `MaxKubernetesVersion`: Specifies the cluster's maximum Kubernetes version necessary to run this benchmark. Leave it empty if there is no dependency on a particular k8s version.
 
@@ -93,17 +98,16 @@ apiVersion: compliance.cattle.io/v1
 kind: ClusterScanBenchmark
 metadata:
   annotations:
-    meta.helm.sh/release-name: clusterscan-operator
+    meta.helm.sh/release-name: rancher-compliance
     meta.helm.sh/release-namespace: compliance-operator-system
-  creationTimestamp: "2020-08-28T18:18:07Z"
+  creationTimestamp: '2025-09-15T18:09:52Z'
   generation: 1
   labels:
     app.kubernetes.io/managed-by: Helm
-  name: cis-1.5
-  resourceVersion: "203878"
-  selfLink: /apis/cis.cattle.io/v1/clusterscanbenchmarks/cis-1.5
+  name: cis-1.10
+  resourceVersion: '93569'
   uid: 309e543e-9102-4091-be91-08d7af7fb7a7
 spec:
-  clusterProvider: ""
-  minKubernetesVersion: 1.15.0
+  clusterProvider: ''
+  minKubernetesVersion: 1.28.0
 ```

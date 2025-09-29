@@ -11,57 +11,6 @@ They became available and were turned on by default in Kubernetes v1.23, and rep
 
 PSS define security levels for workloads. PSAs describe requirements for pod security contexts and related fields. PSAs reference PSS levels to define security restrictions.
 
-#### Install `helm-mapkubeapis`
-
-1. Open your terminal in the machine you intend to use `helm-mapkubeapis` from and install the plugin:
-    ```shell
-    helm plugin install https://github.com/helm/helm-mapkubeapis
-    ```
-    
-    You will see output similar to the following:
-    ```console
-    Downloading and installing helm-mapkubeapis v0.4.1 ...
-    https://github.com/helm/helm-mapkubeapis/releases/download/v0.4.1/helm-mapkubeapis_0.4.1_darwin_amd64.tar.gz
-    Installed plugin: mapkubeapis
-    ```
-   
-    :::info important
-    Ensure that the `helm-mapkubeapis` plugin is at least v0.4.1, as older versions _do not_ support removal of resources.
-    :::
-
-1. Verify that the plugin was correctly installed:
-    ```shell
-    helm mapkubeapis --help
-    ```
-    
-    You will see output similar to the following:
-    ```console
-    Map release deprecated or removed Kubernetes APIs in-place
-    
-    Usage:
-    mapkubeapis [flags] RELEASE
-    
-    Flags:
-    --dry-run               simulate a command
-    -h, --help              help for mapkubeapis
-    --kube-context string   name of the kubeconfig context to use
-    --kubeconfig string     path to the kubeconfig file
-    --mapfile string        path to the API mapping file
-    --namespace string      namespace scope of the release
-    ```
-
-#### Cleaning Up Broken Releases
-
-After you install the `helm-mapkubeapis` plugin, clean up the releases that became broken after the upgrade to Kubernetes v1.25.
-
-1. Open your preferred terminal and make sure it's connected to the cluster you wish to target by running `kubectl cluster-info`.
-
-1. List all the releases you have installed in your cluster by running `helm list --all-namespaces`.
-
-1. Perform a dry run for each release you would like to clean up by running `helm mapkubeapis --dry-run <release-name> --namespace <release-namespace>`. The result of this command will inform you what resources are going to be replaced or removed.
-
-1. Finally, after reviewing the changes, perform a full run with `helm mapkubeapis <release-name> --namespace <release-namespace>`.
-
 ## Pod Security Admission Configuration Templates
 
 Rancher offers PSA configuration templates. These are pre-defined security configurations that you can apply to a cluster. Rancher admins (or those with the right permissions) can [create, manage, and edit](./psa-config-templates.md) PSA templates.

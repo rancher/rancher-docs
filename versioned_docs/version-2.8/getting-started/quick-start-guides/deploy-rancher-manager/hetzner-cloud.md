@@ -25,7 +25,7 @@ Deploying to Hetzner Cloud will incur charges.
 
 - [Hetzner Cloud Account](https://www.hetzner.com): You will require an account on Hetzner as this is where the server and cluster will run.
 - [Hetzner API Access Key](https://docs.hetzner.cloud/#getting-started): Use these instructions to create a Hetzner Cloud API Key if you don't have one.
-- [Terraform](https://www.terraform.io/downloads.html): Used to provision the server and cluster to Hetzner.
+- [Terraform](https://developer.hashicorp.com/terraform/install): Used to provision the server and cluster to Hetzner.
 
 
 ## Getting Started
