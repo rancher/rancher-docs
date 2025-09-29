@@ -36,7 +36,7 @@ title: "在 ARM64 上运行 Rancher（实验性）"
 - 导入包含使用 ARM64 架构的节点的集群
    - Kubernetes 集群必须为 1.12 或更高版本
 
-如需了解如何配置集群选项，请参见[集群选项](../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)。
+Depending on your cluster provisioning refer to [RKE2 cluster configuration options](../../../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md) or [K3s cluster configuration options](../../../reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration.md) for more information.
 
 以下是未经测试的功能：
 

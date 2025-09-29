@@ -27,8 +27,7 @@ The following options are available when using an ARM64 platform:
 
 :::note
 
-To check if your specific released version is compatible with the ARM64 architecture, you may navigate to your
-version's release notes in the following two ways:
+To check if your specific released version is compatible with the ARM64 architecture, you may navigate to your version's release notes in the following two ways:
 
 - Manually find your version using https://github.com/rancher/rancher/releases.
 - Go directly to your version using the tag and the specific version number. If you plan to use v2.5.8, for example, you may navigate to https://github.com/rancher/rancher/releases/tag/v2.5.8.
@@ -41,7 +40,7 @@ version's release notes in the following two ways:
 - Importing clusters that contain ARM64 based nodes
   - Kubernetes cluster version must be 1.12 or higher
 
-Please see [Cluster Options](../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md) how to configure the cluster options.
+Depending on your cluster provisioning refer to [RKE2 cluster configuration options](../../../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md) or [K3s cluster configuration options](../../../reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration.md) for more information.
 
 The following features are not tested:
 
