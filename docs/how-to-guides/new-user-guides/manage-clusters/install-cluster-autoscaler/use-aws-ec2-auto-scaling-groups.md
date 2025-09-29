@@ -8,7 +8,7 @@ title: Cluster Autoscaler with AWS EC2 Auto Scaling Groups
 
 This guide will show you how to install and use [Kubernetes cluster-autoscaler](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/) on Rancher custom clusters using AWS EC2 Auto Scaling Groups.
 
-We are going to install a Rancher RKE custom cluster with a fixed number of nodes with the etcd and controlplane roles, and a variable nodes with the worker role, managed by `cluster-autoscaler`.
+We are going to install a Rancher RKE2 custom cluster with a fixed number of nodes with the etcd and controlplane roles, and a variable nodes with the worker role, managed by `cluster-autoscaler`.
 
 
 ## Prerequisites
@@ -143,11 +143,11 @@ On AWS EC2, we should create a few objects to configure our system. We've define
       }
       ```
 
-    * IAM role: `K8sMasterRole: [K8sMasterProfile,K8sAutoscalerProfile]`
-    * Security group: `K8sMasterSg` More info at [RKE ports (custom nodes tab)](../../../../getting-started/installation-and-upgrade/installation-requirements/port-requirements.md#downstream-kubernetes-cluster-nodes)
+    * IAM role: `K8sMasterRole: [K8sMasterProfile,K8sAutoscalerProfile]`.
+    * Security group: `K8sMasterSg`. More info at [RKE2 ports (custom nodes tab)](../../../../getting-started/installation-and-upgrade/installation-requirements/port-requirements.md#downstream-kubernetes-cluster-nodes).
     * Tags:
       `kubernetes.io/cluster/<clusterID>: owned`
-    * User data: `K8sMasterUserData` Ubuntu 18.04(ami-0e11cbb34015ff725), installs docker and add etcd+controlplane node to the k8s cluster
+    * User data: `K8sMasterUserData` Ubuntu 18.04(ami-0e11cbb34015ff725), installs Docker and add etcd+controlplane node to the K8s cluster.
 
       ```sh
       #!/bin/bash -x
@@ -200,13 +200,13 @@ On AWS EC2, we should create a few objects to configure our system. We've define
       }
       ```
 
-  * IAM role: `K8sWorkerRole: [K8sWorkerProfile]`
-  * Security group: `K8sWorkerSg` More info at [RKE ports (custom nodes tab)](../../../../getting-started/installation-and-upgrade/installation-requirements/port-requirements.md#downstream-kubernetes-cluster-nodes)
+  * IAM role: `K8sWorkerRole: [K8sWorkerProfile]`.
+  * Security group: `K8sWorkerSg` More info at [RKE2 ports (custom nodes tab)](../../../../getting-started/installation-and-upgrade/installation-requirements/port-requirements.md#downstream-kubernetes-cluster-nodes).
   * Tags:
     * `kubernetes.io/cluster/<clusterID>: owned`
     * `k8s.io/cluster-autoscaler/<clusterName>: true`
     * `k8s.io/cluster-autoscaler/enabled: true`
-  * User data: `K8sWorkerUserData` Ubuntu 18.04(ami-0e11cbb34015ff725), installs docker and add worker node to the k8s cluster
+  * User data: `K8sWorkerUserData` Ubuntu 18.04(ami-0e11cbb34015ff725), installs Docker and add worker node to the K8s cluster.
 
       ```sh
       #!/bin/bash -x
@@ -232,7 +232,7 @@ On AWS EC2, we should create a few objects to configure our system. We've define
       sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:<RANCHER_VERSION> --server https://<RANCHER_URL> --token <RANCHER_TOKEN> --ca-checksum <RANCHER_CA_CHECKCSUM> --address ${PUBLIC_IP} --internal-address ${PRIVATE_IP} ${K8S_ROLES}
       ```
 
-More info is at [RKE clusters on AWS](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon.md) and [Cluster Autoscaler on AWS.](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md)
+More info is at [RKE2 clusters on AWS](../../../new-user-guides/kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/amazon.md) and [Cluster Autoscaler on AWS](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md).
 
 ### 3. Deploy Nodes
 
