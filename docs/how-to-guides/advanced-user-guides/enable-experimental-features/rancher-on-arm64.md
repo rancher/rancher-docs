@@ -19,7 +19,7 @@ The following options are available when using an ARM64 platform:
 - Importing clusters that contain ARM64 based nodes
   - Kubernetes cluster version must be 1.12 or higher
 
-Please refer to the [Cluster Configuration documentation](../../../reference-guides/cluster-configuration/cluster-configuration.md) for cluster options and configuration information.
+Depending on your cluster provisioning refer to [RKE2 cluster configuration options](../../../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md) or [K3s cluster configuration options](../../../reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration.md) for more information.
 
 The following features are not tested:
 
