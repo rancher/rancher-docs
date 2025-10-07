@@ -14,14 +14,12 @@ Running on an ARM64 mixed architecture platform is currently an experimental fea
 
 The following options are available when using an ARM64 platform:
 
-:::
-
 - Create custom cluster and adding ARM64 based node(s)
   - Kubernetes cluster version must be 1.12 or higher
 - Importing clusters that contain ARM64 based nodes
   - Kubernetes cluster version must be 1.12 or higher
 
-Depending on your cluster provisioning refer to [RKE2 cluster configuration options](../../../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md) or [K3s cluster configuration options](../../../reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration.md) for more information.
+Please refer to the [Cluster Configuration documentation](../../../reference-guides/cluster-configuration/cluster-configuration.md) for cluster options and configuration information.
 
 The following features are not tested:
 
