@@ -80,7 +80,7 @@ Rancher is committed to informing the community of security issues in our produc
 
 ## Kubernetes Security Best Practices
 
-For recommendations on securing your Kubernetes cluster, refer to the [Kubernetes Security Best Practices](kubernetes-security-best-practices.md) guide.
+For recommendations on securing your Kubernetes cluster, refer to the [Kubernetes Cluster Security Best Practices](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/) guide.
 
 ## Rancher Security Best Practices
 
