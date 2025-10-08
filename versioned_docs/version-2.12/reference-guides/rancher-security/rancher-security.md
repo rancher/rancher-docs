@@ -85,3 +85,35 @@ For recommendations on securing your Kubernetes cluster, refer to the [Kubernete
 ## Rancher Security Best Practices
 
 For recommendations on securing your Rancher Manager deployments, refer to the [Rancher Security Best Practices](rancher-security-best-practices.md) guide.
+
+## Rancher Kubernetes Distributions (K3s/RKE2) Self-Assessment and Hardening Guides
+
+Rancher uses the following Kubernetes distributions:
+
+- [**RKE2**](https://docs.rke2.io/) is a fully conformant Kubernetes distribution that focuses on security and compliance within the U.S. Federal Government sector.
+- [**K3s**](https://docs.k3s.io/) is a fully conformant, lightweight Kubernetes distribution. It is easy to install, with half the memory requirement of upstream Kubernetes, all in a binary of less than 100 MB.
+
+To harden a Kubernetes cluster that's running a distribution other than those listed, refer to your Kubernetes provider docs.
+
+### Hardening Guides and Benchmark Versions
+
+Each self-assessment guide is accompanied by a hardening guide. These guides were tested alongside the listed Rancher releases. Each self-assessment guides was tested on a specific Kubernetes version and CIS benchmark version. If a CIS benchmark has not been validated for your Kubernetes version, you can use the existing guides until a guide for your version is added.
+
+### RKE2 Guides
+
+| Type | Kubernetes Version | CIS Benchmark Version | Self Assessment Guide | Hardening Guide |
+|------|--------------------|-----------------------|-----------------------|------------------|
+| Standalone RKE2 | Kubernetes v1.26 | CIS v1.8 | [Link](https://docs.rke2.io/security/cis_self_assessment18) | [Link](https://docs.rke2.io/security/hardening_guide) |
+| Standalone RKE2 | Kubernetes v1.27 | CIS v1.9 | [Link](https://docs.rke2.io/security/cis_self_assessment19) | [Link](https://docs.rke2.io/security/hardening_guide) |
+| Standalone RKE2 | Kubernetes v1.28 | CIS v1.10 | [Link](https://docs.rke2.io/security/cis_self_assessment110) | [Link](https://docs.rke2.io/security/hardening_guide) |
+| Standalone RKE2 | Kubernetes v1.29 and above | CIS v1.11 | [Link](https://docs.rke2.io/security/cis_self_assessment111) | [Link](https://docs.rke2.io/security/hardening_guide) |
+
+
+### K3s Guides
+
+| Type | Kubernetes Version | CIS Benchmark Version | Self Assessment Guide | Hardening Guide |
+|------|--------------------|-----------------------|-----------------------|------------------|
+| Standalone K3s | Kubernetes v1.26 | CIS v1.8 | [Link](https://docs.k3s.io/security/self-assessment-1.8) | [Link](https://docs.k3s.io/security/hardening-guide) |
+| Standalone K3s | Kubernetes v1.27 | CIS v1.9 | [Link](https://docs.k3s.io/security/self-assessment-1.9) | [Link](https://docs.k3s.io/security/hardening-guide) |
+| Standalone K3s | Kubernetes v1.28 | CIS v1.10 | [Link](https://docs.k3s.io/security/self-assessment-1.10) | [Link](https://docs.k3s.io/security/hardening-guide) |
+| Standalone K3s | Kubernetes v1.29 and above | CIS v1.11 | [Link](https://docs.k3s.io/security/self-assessment-1.11) | [Link](https://docs.k3s.io/security/hardening-guide) |
