@@ -41,9 +41,7 @@ For details, refer to the section on [security scans](../../how-to-guides/advanc
 `
 ## SELinux RPM
 
-[Security-Enhanced Linux (SELinux)](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) is a security enhancement to Linux. After being historically used by government agencies, SELinux is now industry standard and is enabled by default on CentOS 7 and 8.
-
-We provide two RPMs (Red Hat packages) that enable Rancher products to function properly on SELinux-enforcing hosts: `rancher-selinux` and `rke2-selinux`. For details, see [this page](selinux-rpm/selinux-rpm.md).
+We provide three RPMs (Red Hat packages) that enable Rancher products to function properly on SELinux-enforcing hosts: `rancher-selinux`, `rke2-selinux` and `k3s-selinux`. For details, see [this page](selinux-rpm/selinux-rpm.md).
 
 ## Rancher Hardening Guide
 
@@ -107,7 +105,6 @@ Each self-assessment guide is accompanied by a hardening guide. These guides wer
 | Standalone RKE2 | Kubernetes v1.27 | CIS v1.9 | [Link](https://docs.rke2.io/security/cis_self_assessment19) | [Link](https://docs.rke2.io/security/hardening_guide) |
 | Standalone RKE2 | Kubernetes v1.28 | CIS v1.10 | [Link](https://docs.rke2.io/security/cis_self_assessment110) | [Link](https://docs.rke2.io/security/hardening_guide) |
 | Standalone RKE2 | Kubernetes v1.29 and above | CIS v1.11 | [Link](https://docs.rke2.io/security/cis_self_assessment111) | [Link](https://docs.rke2.io/security/hardening_guide) |
-
 
 ### K3s Guides
 
