@@ -8,6 +8,6 @@ title: About k3s-selinux
 
 `k3s-selinux` provides policies for K3s. It is installed automatically when the K3s installer script detects that it is running on an RPM-based distro.
 
-The `k3s-selinux` GitHub repository is [here.](https://github.com/rancher/k3s-selinux)
+The `k3s-selinux` GitHub repository is [here](https://github.com/rancher/k3s-selinux).
 
-For more information about installing K3s on SELinux-enabled hosts, see the [K3s documentation.](https://docs.k3s.io/advanced#selinux-support)
+For more information about installing K3s on SELinux-enabled hosts, see the [K3s documentation](https://docs.k3s.io/advanced#selinux-support).

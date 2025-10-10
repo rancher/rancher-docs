@@ -62,10 +62,10 @@ yum -y install rancher-selinux
 
 :::note Requirement:
 
-Logging v2 and Monitoring V2 were tested with SELinux on RHEL/CentOS 7, 8 and 9 and Tumbleweed.
+Logging v2 and Monitoring v2 were tested with SELinux on RHEL/CentOS 7, 8 and 9 and Tumbleweed.
 
 :::
 
 Applications do not automatically work once the `rancher-selinux` RPM is installed on the host. They need to be configured to run in an allowed SELinux container domain provided by the RPM. 
 
-To configure the `rancher-logging` or the `rancher-monitoring` chart to be SELinux aware, change `global.seLinux.enabled` to true in the `values.yaml` when installing the chart.
+To configure the `rancher-logging` or the `rancher-monitoring` chart to be SELinux aware, change `global.seLinux.enabled` to true in the `values.yaml` when installing the charts.
