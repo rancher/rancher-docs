@@ -781,10 +781,6 @@ module.exports = {
             from: "/pages-for-subheaders/infrastructure-setup",
           },
           {
-            to: "/how-to-guides/new-user-guides/manage-clusters/install-cluster-autoscaler",
-            from: "/pages-for-subheaders/install-cluster-autoscaler",
-          },
-          {
             to: "/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster",
             from: "/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster",
           },
@@ -1196,10 +1192,6 @@ module.exports = {
           {
             to: "/how-to-guides/new-user-guides/manage-clusters/access-clusters/add-users-to-clusters",
             from: "/how-to-guides/advanced-user-guides/manage-clusters/access-clusters/add-users-to-clusters",
-          },
-          {
-            to: "/how-to-guides/new-user-guides/manage-clusters/install-cluster-autoscaler/use-aws-ec2-auto-scaling-groups",
-            from: "/how-to-guides/advanced-user-guides/manage-clusters/install-cluster-autoscaler/use-aws-ec2-auto-scaling-groups",
           },
           {
             to: "/how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/manage-persistent-storage/about-persistent-storage",
