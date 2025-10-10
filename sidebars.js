@@ -882,9 +882,7 @@ const sidebars = {
                     type: "doc",
                     id: "reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes",
                   },
-                  items: [
-                    "reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options",
-                  ],
+                  items: [],
                 },
                 "reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters",
               ],
@@ -1012,6 +1010,8 @@ const sidebars = {
         "reference-guides/rancher-project-tools",
 
         "reference-guides/system-tools",
+
+        "reference-guides/dual-stack",
 
         "reference-guides/rke1-template-example-yaml",
         "reference-guides/rancher-webhook",
