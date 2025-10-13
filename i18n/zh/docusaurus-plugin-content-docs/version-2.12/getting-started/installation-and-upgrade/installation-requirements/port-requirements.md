@@ -15,7 +15,7 @@ import PortsImportedHosted from '@site/src/components/PortsImportedHosted'
 
 不同的 Rancher Server 架构有不同的端口要求。
 
-Rancher 可以安装在任何 Kubernetes 集群上。如果你的 Rancher 安装在 K3s、RKE 或 RKE2 Kubernetes 集群上，请参考下面的标签页。对于其他 Kubernetes 发行版，请参见该发行版的文档，了解集群节点的端口要求。
+Rancher 可以安装在任何 Kubernetes 集群上。如果你的 Rancher 安装在 K3s 或 RKE2 Kubernetes 集群上，请参考下面的标签页。对于其他 Kubernetes 发行版，请参见该发行版的文档，了解集群节点的端口要求。
 
 :::note 注意事项：
 
@@ -63,54 +63,6 @@ K3s server 需要开放端口 6443 才能供节点访问。
 | TCP | 443 | git.rancher.io | Rancher catalog |
 | TCP | 2376 | 使用 Node Driver 创建的节点的任何节点 IP | Docker Machine 使用的 Docker daemon TLS 端口 |
 | TCP | 6443 | 托管/导入的 Kubernetes API | Kubernetes API Server |
-
-</details>
-
-### RKE 上 Rancher Server 节点的端口
-
-<details>
-  <summary>单击展开</summary>
-
-通常情况下，Rancher 安装在三个 RKE 节点上，这些节点都有 etcd、controlplane 和 worker 角色。
-
-
-
-下表描述了 Rancher 节点之间流量的端口要求：
-
-<figcaption>Rancher 节点的流量规则</figcaption>
-
-| 协议 | 端口 | 描述 |
-|-----|-----|----------------|
-| TCP | 443 | Rancher Agents |
-| TCP | 2379 | etcd 客户端请求 |
-| TCP | 2380 | etcd 对等通信 |
-| TCP | 6443 | Kubernetes apiserver |
-| TCP | 8443 | NGINX Ingress 的验证 Webhook |
-| UDP | 8472 | Canal/Flannel VXLAN 覆盖网络 |
-| TCP | 9099 | Canal/Flannel livenessProbe/readinessProbe |
-| TCP | 10250 | Metrics Server 与所有节点的通信 |
-| TCP | 10254 | Ingress controller livenessProbe/readinessProbe |
-
-下表描述了入站和出站流量的端口要求：
-
-<figcaption>Rancher 节点的入站规则</figcaption>
-
-| 协议 | 端口 | 源 | 描述 |
-|-----|-----|----------------|---|
-| TCP | 22 | RKE CLI | RKE 通过 SSH 配置节点 |
-| TCP | 80 | 负载均衡器/反向代理 | 到 Rancher UI/API 的 HTTP 流量 |
-| TCP | 443 | <ul><li>负载均衡器/反向代理</li><li>所有集群节点和其他 API/UI 客户端的 IP</li></ul> | 到 Rancher UI/API 的 HTTPS 流量 |
-| TCP | 6443 | Kubernetes API 客户端 | 到 Kubernetes API 的 HTTPS 流量 |
-
-<figcaption>Rancher 节点的出站规则</figcaption>
-
-| 协议 | 端口 | 目标 | 描述 |
-|-----|-----|----------------|---|
-| TCP | 443 | git.rancher.io | Rancher catalog |
-| TCP | 22 | 使用 Node Driver 创建的任何节点 | Node Driver 通过 SSH 配置节点 |
-| TCP | 2376 | 使用 Node Driver 创建的任何节点 | Node Driver 使用的 Docker daemon TLS 端口 |
-| TCP | 6443 | 托管/导入的 Kubernetes API | Kubernetes API Server |
-| TCP | 提供商依赖 | 托管集群中 Kubernetes API 端点的端口 | Kubernetes API |
 
 </details>
 
