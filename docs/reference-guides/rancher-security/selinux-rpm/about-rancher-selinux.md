@@ -16,7 +16,7 @@ The `rancher-selinux` GitHub repository is [here.](https://github.com/rancher/ra
 
 :::note Requirement:
 
-The rancher-selinux RPM was tested with openSUSE Tumbleweed and RHEL-based distribution such as Centos/RockyLinux 7, 8 and 9. 
+The `rancher-selinux` RPM was tested with openSUSE Tumbleweed and RHEL-based distributions such as Centos/RockyLinux 7, 8 and 9. 
 
 :::
 
