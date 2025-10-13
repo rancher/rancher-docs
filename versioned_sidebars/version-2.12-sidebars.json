@@ -328,17 +328,6 @@
                 },
                 {
                   "type": "category",
-                  "label": "Install Cluster Autoscaler",
-                  "link": {
-                    "type": "doc",
-                    "id": "how-to-guides/new-user-guides/manage-clusters/install-cluster-autoscaler/install-cluster-autoscaler"
-                  },
-                  "items": [
-                    "how-to-guides/new-user-guides/manage-clusters/install-cluster-autoscaler/use-aws-ec2-auto-scaling-groups"
-                  ]
-                },
-                {
-                  "type": "category",
                   "label": "Create Kubernetes Persistent Storage",
                   "link": {
                     "type": "doc",
