@@ -27,12 +27,12 @@ Setting up Microsoft AD FS with Rancher Server requires configuring AD FS on you
 - [1. Configuring Microsoft AD FS for Rancher](configure-ms-adfs-for-rancher.md)
 - [2. Configuring Rancher for Microsoft AD FS](configure-rancher-for-ms-adfs.md)
 
-:::note SAML Provider Caveats:
+:::note SAML Provider Caveats
 
-- SAML Protocol does not support search or lookup for users or groups. Therefore, there is no validation on users or groups when adding them to Rancher.
+- Users and groups aren't validated when you assign permissions to them in Rancher.
 - When adding users, the exact user IDs (i.e. `UID Field`) must be entered correctly. As you type the user ID, there will be no search for other  user IDs that may match.
 - When adding groups, you must select the group from the drop-down that is next to the text box. Rancher assumes that any input from the text box is a user.
-- The group drop-down shows only the groups that you are a member of. You will not be able to add groups that you are not a member of.
+- The group drop-down shows only the groups that you are a member of. However, if you have Administrator permissions or restricted Administrator permissions, you can join a group that you are not a member of.
 
 :::
 
