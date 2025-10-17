@@ -12,7 +12,7 @@ title: '3. 安装 Kubernetes（Docker 安装请跳过）'
 
 Rancher 可以安装在任何 Kubernetes 集群上，包括托管的 Kubernetes。
 
-在 RKE、RKE2 或 K3s 上离线安装 Kubernetes 集群的步骤如下所示：
+在 RKE2 或 K3s 上离线安装 Kubernetes 集群的步骤如下所示：
 
 <Tabs>
 <TabItem value="K3s">
@@ -204,7 +204,7 @@ configs:
       ca_file: <镜像仓库所用的 CA 文件路径>
 ```
 
-有关 RKE2 的私有镜像仓库配置文件的详情，请参见 [RKE2 官方文档](https://docs.rke2.io/install/containerd_registry_configuration)。
+有关 RKE2 的私有镜像仓库配置文件的详情，请参见 [RKE2 官方文档](https://docs.rke2.io/install/private_registry)。
 
 ### 3. 安装 RKE2
 
@@ -284,100 +284,7 @@ kubectl --kubeconfig ~/.kube/config/rke2.yaml get pods --all-namespaces
 3. 重启 RKE2 服务。
 
 </TabItem>
-<TabItem value="RKE">
-我们将使用 Rancher Kubernetes Engine (RKE) 创建一个 Kubernetes 集群。在启动 Kubernetes 集群之前，你需要安装 RKE 并创建 RKE 配置文件。
-
-### 1. 安装 RKE
-
-参照 [RKE 官方文档](https://rancher.com/docs/rke/latest/en/installation/)的说明安装 RKE。
-
-:::note
-
-你可以在 [Rancher 支持矩阵](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/)中找到基于 Rancher 版本的 RKE 认证版本。
-
-:::
-
-### 2. 创建 RKE 配置文件
-
-在可访问你 Linux 主机节点上的 22/TCP 端口和 6443/TCP 端口的系统上，使用以下示例创建一个名为 `rancher-cluster.yml` 的新文件。
-
-该文件是 RKE 配置文件，用于配置你要部署 Rancher 的集群。
-
-参考下方的 _RKE 选项_ 表格，修改代码示例中的参数。使用你创建的三个节点的 IP 地址或 DNS 名称。
-
-:::tip
-
-如需获取可用选项的详情，请参见 RKE [配置选项](https://rancher.com/docs/rke/latest/en/config-options/)。
-
-:::
-
-<figcaption>RKE 选项</figcaption>
-
-| 选项 | 必填 | 描述 |
-| ------------------ | -------------------- | --------------------------------------------------------------------------------------- |
-| `address` | ✓ | 离线环境中节点的 DNS 或 IP 地址 |
-| `user` | ✓ | 可运行 Docker 命令的用户 |
-| `role` | ✓ | 分配给节点的 Kubernetes 角色列表 |
-| `internal_address` | 可选<sup>1</sup> | 用于集群内部流量的 DNS 或 IP 地址 |
-| `ssh_key_path` |                      | 用来验证节点的 SSH 私钥文件路径（默认值为 `~/.ssh/id_rsa`） |
-
-> <sup>1</sup> 如果你想使用引用安全组或防火墙，某些服务（如 AWS EC2）要求设置 `internal_address`。
-
-```yaml
-nodes:
-  - address: 10.10.3.187 # 离线环境节点 IP
-    internal_address: 172.31.7.22 # 节点内网 IP
-    user: rancher
-    role: ['controlplane', 'etcd', 'worker']
-    ssh_key_path: /home/user/.ssh/id_rsa
-  - address: 10.10.3.254 # 离线环境节点 IP
-    internal_address: 172.31.13.132 # 节点内网 IP
-    user: rancher
-    role: ['controlplane', 'etcd', 'worker']
-    ssh_key_path: /home/user/.ssh/id_rsa
-  - address: 10.10.3.89 # 离线环境节点 IP
-    internal_address: 172.31.3.216 # 节点内网 IP
-    user: rancher
-    role: ['controlplane', 'etcd', 'worker']
-    ssh_key_path: /home/user/.ssh/id_rsa
-
-private_registries:
-  - url: <REGISTRY.YOURDOMAIN.COM:PORT> # 私有镜像仓库 URL
-    user: rancher
-    password: '*********'
-    is_default: true
-```
-
-### 3. 运行 RKE
-
-配置 `rancher-cluster.yml`后，启动你的 Kubernetes 集群：
-
-```
-rke up --config ./rancher-cluster.yml
-```
-
-### 4. 保存你的文件
-
-:::note 重要提示：
-
-维护、排除问题和升级集群需要用到以下文件，请妥善保管这些文件：
-
-:::
-
-将以下文件的副本保存在安全位置：
-
-- `rancher-cluster.yml`：RKE 集群配置文件。
-- `kube_config_cluster.yml`：集群的 [Kubeconfig 文件](https://rancher.com/docs/rke/latest/en/kubeconfig/)。该文件包含可完全访问集群的凭证。
-- `rancher-cluster.rkestate`：[Kubernetes 集群状态文件](https://rancher.com/docs/rke/latest/en/installation/#kubernetes-cluster-state)。该文件包含集群的当前状态，包括 RKE 配置以及证书<br/>。<br/>_Kubernetes 集群状态文件仅在使用 RKE 0.2.0 或更高版本时创建。_
-
-</TabItem>
 </Tabs>
-
-:::note
-
-后两个文件名中的 `rancher-cluster` 部分取决于你命名 RKE 集群配置文件的方式。
-
-:::
 
 ### 故障排除
 

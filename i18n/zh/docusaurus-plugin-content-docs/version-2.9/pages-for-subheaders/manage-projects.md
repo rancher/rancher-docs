@@ -20,7 +20,6 @@ _项目_ 是 Rancher 中引入的对象，可帮助你更有组织地管理 Kube
 - [设置资源配额](manage-project-resource-quotas.md)
 - [管理命名空间](../how-to-guides/new-user-guides/manage-namespaces.md)
 - [配置工具](../reference-guides/rancher-project-tools.md)
-- [配置 Pod 安全策略](../how-to-guides/advanced-user-guides/manage-projects/manage-pod-security-policies.md)
 
 ### 授权
 

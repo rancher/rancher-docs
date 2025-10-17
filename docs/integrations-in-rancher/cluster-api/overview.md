@@ -16,7 +16,7 @@ Below is a visual representation of the key components of Rancher Turtles and th
 
 As defined by [Supply-chain Levels for Software Artifacts (SLSA)](https://slsa.dev/spec/v1.0/about), SLSA is a set of incrementally adoptable guidelines for supply chain security, established by industry consensus. The specification set by SLSA is useful for both software producers and consumers: producers can follow SLSA’s guidelines to make their software supply chain more secure, and consumers can use SLSA to make decisions about whether to trust a software package.
 
-Rancher Turtles meets [SLSA Level 3](https://slsa.dev/spec/v1.0/levels#build-l3) requirements as an appropriate hardened build platform, with consistent build processes, and provenance distribution. For more information, visit the [Rancher Turtles Security](https://turtles.docs.rancher.com/turtles/next/en/security/slsa.html) document.
+Rancher Turtles meets [SLSA Level 3](https://slsa.dev/spec/v1.0/levels#build-l3) requirements as an appropriate hardened build platform, with consistent build processes, and provenance distribution. For more information, visit the [Rancher Turtles Security](https://turtles.docs.rancher.com/turtles/stable/en/security/slsa.html) document.
 
 ## Prerequisites
 
@@ -92,7 +92,7 @@ By adding the Turtles repository via the Rancher UI, Rancher can process the ins
 1. Click **Rancher Turtles - the Cluster API Extension**.
 1. Click **Install > Next > Install**.
 
-This process uses the default values for the Helm chart, which are good for most installations. If your configuration requires overriding some of these defaults, you can either specify the values during installation from the Rancher UI or you can [manually install the chart via Helm](#installing-via-helm). For details about available values, see the Rancher Turtles [Helm chart reference guide](https://turtles.docs.rancher.com/turtles/next/en/reference-guides/rancher-turtles-chart/values.html).
+This process uses the default values for the Helm chart, which are good for most installations. If your configuration requires overriding some of these defaults, you can either specify the values during installation from the Rancher UI or you can [manually install the chart via Helm](#installing-via-helm). For details about available values, see the Rancher Turtles [Helm chart reference guide](https://turtles.docs.rancher.com/turtles/stable/en/operator/chart.html).
 
 The installation may take a few minutes and after completing you can see the following new deployments in the cluster:
 
@@ -115,7 +115,7 @@ There are two ways to install Rancher Turtles with Helm, depending on whether yo
 
 The CAPI Operator is required for installing Rancher Turtles. You can choose whether you want to take care of this dependency yourself or let the Rancher Turtles Helm chart manage it for you. [Installing Turtles as a dependency](#installing-rancher-turtles-with-cluster-api-capi-operator-as-a-helm-dependency) is simpler, but your best option depends on your specific configuration.
 
-The CAPI Operator allows for handling the lifecycle of [CAPI providers](https://turtles.docs.rancher.com/turtles/next/en/tasks/capi-operator/installing_core_provider.html) using a declarative approach, extending the capabilities of `clusterctl`. If you want to learn more about it, you can refer to [Cluster API Operator book](https://cluster-api-operator.sigs.k8s.io/).
+The CAPI Operator allows for handling the lifecycle of [CAPI providers](https://turtles.docs.rancher.com/turtles/stable/en/operator/manual.html) using a declarative approach, extending the capabilities of `clusterctl`. If you want to learn more about it, you can refer to [Cluster API Operator book](https://cluster-api-operator.sigs.k8s.io/).
 
 #### Installing Rancher Turtles with `Cluster API (CAPI) Operator` as a Helm dependency
 
@@ -177,7 +177,7 @@ stringData:
 
 :::info
 
-For detailed information on the values supported by the chart and their usage, refer to [Helm chart options](https://turtles.docs.rancher.com/turtles/next/en/reference-guides/rancher-turtles-chart/values.html)
+For detailed information on the values supported by the chart and their usage, refer to [Helm chart options](https://turtles.docs.rancher.com/turtles/stable/en/operator/chart.html).
 
 :::
 
@@ -185,7 +185,7 @@ For detailed information on the values supported by the chart and their usage, r
 
 :::note
 
-Remember that if you opt for this installation option, you must manage the CAPI Operator installation yourself. You can follow the [CAPI Operator guide](https://turtles.docs.rancher.com/turtles/next/en/contributing/install_capi_operator.html) in the Rancher Turtles documentation for assistance.
+Remember that if you opt for this installation option, you must manage the CAPI Operator installation yourself. You can follow the [manual installation guide](https://turtles.docs.rancher.com/turtles/stable/en/operator/manual.html) in the Rancher Turtles documentation for assistance.
 
 :::
 
@@ -219,7 +219,7 @@ The previous commands tell Helm to ignore installing `cluster-api-operator` as a
 
 When installing Rancher Turtles in your Rancher environment, by default, Rancher Turtles enables the CAPI Operator cleanup. This includes cleaning up CAPI Operator specific webhooks and deployments that otherwise cause issues with Rancher provisioning.
 
-To simplify uninstalling Rancher Turtles (via Rancher or Helm command), the official Rancher Turtles Helm chart includes a `post-delete` hook that that removes the following:
+To simplify uninstalling Rancher Turtles (via Rancher or Helm command), the official Rancher Turtles Helm chart includes a `post-delete` hook that removes the following:
 
 - Deletes the `mutating-webhook-configuration` and `validating-webhook-configuration` webhooks that are no longer needed.
 - Deletes the CAPI `deployments` that are no longer needed.

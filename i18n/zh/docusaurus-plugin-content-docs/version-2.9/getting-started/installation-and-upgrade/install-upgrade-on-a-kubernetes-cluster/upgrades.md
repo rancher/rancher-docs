@@ -149,8 +149,6 @@ hostname: rancher.my.org
 
 将上一步中的所有值用 `--set key=value` 追加到命令中。
 
-对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
-
 ```
 helm upgrade rancher rancher-<CHART_REPO>/rancher \
   --namespace cattle-system \
@@ -182,8 +180,6 @@ helm upgrade rancher-stable rancher-<CHART_REPO>/rancher \
    helm get values rancher -n cattle-system -o yaml > values.yaml
    ```
 1. 只更新 Rancher 版本：
-
-   对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
 
    ```
    helm upgrade rancher rancher-<CHART_REPO>/rancher \

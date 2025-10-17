@@ -204,7 +204,7 @@ configs:
       ca_file: <镜像仓库所用的 CA 文件路径>
 ```
 
-有关 RKE2 的私有镜像仓库配置文件的详情，请参见 [RKE2 官方文档](https://docs.rke2.io/install/containerd_registry_configuration)。
+有关 RKE2 的私有镜像仓库配置文件的详情，请参见 [RKE2 官方文档](https://docs.rke2.io/install/private_registry)。
 
 ### 3. 安装 RKE2
 

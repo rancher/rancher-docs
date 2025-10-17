@@ -25,7 +25,7 @@ Deploying to Outscale will incur charges.
 
 - [Outscale Account](https://en.outscale.com/): You will require an account on Outscale as this is where the server and cluster will run.
 - [Outscale Access Key](https://docs.outscale.com/en/userguide/About-Access-Keys.html): Use these instructions to create an Outscale Access Key if you don't have one.
-- [Terraform](https://www.terraform.io/downloads.html): Used to provision the server and cluster in Outscale.
+- [Terraform](https://developer.hashicorp.com/terraform/install): Used to provision the server and cluster in Outscale.
 
 
 ## Getting Started

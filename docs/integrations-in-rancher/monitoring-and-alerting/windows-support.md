@@ -12,8 +12,6 @@ Monitoring V2 can be deployed on a Windows cluster to scrape metrics from Window
 
 Monitoring V2 for Windows can only scrape metrics from Windows hosts that have a minimum `wins` version of v0.1.0.  To be able to fully deploy Monitoring V2 for Windows, all of your hosts must meet this requirement.
 
-If you provision a fresh RKE1 cluster in Rancher 2.5.8, your cluster should already meet this requirement.
-
 ### Upgrading Existing Clusters to wins v0.1.0
 
 If the cluster was provisioned before Rancher 2.5.8 (even if the current Rancher version is 2.5.8), you will not be able to successfully deploy Monitoring V2 for Windows until you upgrade the wins version on each host to at least v0.1.0.
@@ -21,6 +19,7 @@ If the cluster was provisioned before Rancher 2.5.8 (even if the current Rancher
 To facilitate this upgrade, Rancher 2.5.8 has released a brand new Helm chart called `rancher-wins-upgrader`.
 
 1. Deploy `rancher-wins-upgrader` with the following override:
+
     ```yaml
     # Masquerading bootstraps the wins-upgrader installation via
     # a previously whitelisted process path since the normal install path,
@@ -31,15 +30,9 @@ To facilitate this upgrade, Rancher 2.5.8 has released a brand new Helm chart ca
       enabled: true
       as: c:\\etc\wmi-exporter\wmi-exporter.exe
     ```
-    :::note Note for Non-Default Windows Prefix Path:
-
-    - If you set up the RKE cluster with a `cluster.yml` that has a non-default `win_prefix_path`, you will need to update the `masquerade.as` field with your prefix path in place of  `c:\\`.
-
-    - For example, if you have `win_prefix_path: 'c:\host\opt\'`, then you will need to set `as: c:\host\opt\etc\wmi-exporter\wmi-exporter.exe`.
-
-    :::
 
 2. Once all your hosts have been successfully upgraded, please ensure that you deploy the Helm chart once again with default values to avoid conflicts with the following settings:
+
     ```yaml
     masquerade:
       enabled: false

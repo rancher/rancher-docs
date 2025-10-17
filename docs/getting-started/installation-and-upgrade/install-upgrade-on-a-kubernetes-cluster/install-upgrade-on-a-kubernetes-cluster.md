@@ -24,7 +24,6 @@ Rancher can be installed on any Kubernetes cluster. This cluster can use upstrea
 
 For help setting up a Kubernetes cluster, we provide these tutorials:
 
-- **RKE:** For the tutorial to install an RKE Kubernetes cluster, refer to [this page.](../../../how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher.md) For help setting up the infrastructure for a high-availability RKE cluster, refer to [this page.](../../../how-to-guides/new-user-guides/infrastructure-setup/ha-rke1-kubernetes-cluster.md)
 - **K3s:** For the tutorial to install a K3s Kubernetes cluster, refer to [this page.](../../../how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher.md) For help setting up the infrastructure for a high-availability K3s cluster, refer to [this page.](../../../how-to-guides/new-user-guides/infrastructure-setup/ha-k3s-kubernetes-cluster.md)
 - **RKE2:** For the tutorial to install an RKE2 Kubernetes cluster, refer to [this page.](../../../how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher.md) For help setting up the infrastructure for a high-availability RKE2 cluster, refer to [this page.](../../../how-to-guides/new-user-guides/infrastructure-setup/ha-rke2-kubernetes-cluster.md)
 - **Amazon EKS:** For details on how to install Rancher on Amazon EKS, including how to install an Ingress controller so that the Rancher server can be accessed, refer to [this page.](rancher-on-amazon-eks.md)
@@ -36,7 +35,7 @@ For help setting up a Kubernetes cluster, we provide these tutorials:
 
 The Rancher UI and API are exposed through an Ingress. This means the Kubernetes cluster that you install Rancher in must contain an Ingress controller.
 
-For RKE, RKE2, and K3s installations, you don't have to install the Ingress controller manually because one is installed by default.
+For RKE2 and K3s installations, you don't have to install the Ingress controller manually because one is installed by default.
 
 For distributions that do not include an Ingress Controller by default, like a hosted Kubernetes cluster such as EKS, GKE, or AKS, you have to deploy an Ingress controller first. Note that the Rancher Helm chart does not set an `ingressClassName` on the ingress by default. Because of this, you have to configure the Ingress controller to also watch ingresses without an `ingressClassName`.
 
@@ -199,7 +198,6 @@ Because `rancher` is the default option for `ingress.tls.source`, we are not spe
 - Set the `hostname` to the DNS name you pointed at your load balancer.
 - Set the `bootstrapPassword` to something unique for the `admin` user.
 - To install a specific Rancher version, use the `--version` flag, example: `--version 2.7.0`
-- For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \
@@ -240,7 +238,6 @@ In the following command,
 - `ingress.tls.source` is set to `letsEncrypt`
 - `letsEncrypt.email` is set to the email address used for communication about your certificate (for example, expiry notices)
 - Set `letsEncrypt.ingress.class` to whatever your ingress controller is, e.g., `traefik`, `nginx`, `haproxy`, etc.
-- For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
 :::warning
 
@@ -289,7 +286,6 @@ If you want to check if your certificates are correct, see [How do I check Commo
 - Set the `hostname`.
 - Set the `bootstrapPassword` to something unique for the `admin` user.
 - Set `ingress.tls.source` to `secret`.
-- For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
 ```
 helm install rancher rancher-<CHART_REPO>/rancher \

@@ -6,10 +6,10 @@ title: 为大型安装进行 etcd 调优
 
 Kubernetes 每隔五分钟会自动清理 etcd 数据集。在某些情况下（例如发生部署抖动），在垃圾回收发生并进行清理之前会有大量事件写入 etcd 并删除，从而导致 Keyspace 填满。如果你在 etcd 日志或 Kubernetes API Server 日志中看到 `mvcc: database space exceeded` 错误，你可以在 etcd 服务器上设置 [quota-backend-bytes](https://etcd.io/docs/v3.5/op-guide/maintenance/#space-quota) 来增加 Keyspace 的大小。
 
-## 示例：此 RKE cluster.yml 文件的代码片段将 Keyspace 的大小增加到 5GB
+## 示例：此 RKE2/K3s config.yaml 文件的代码片段将 Keyspace 的大小增加到 5GB
 
 ```yaml
-# RKE cluster.yml
+# RKE2/K3s config.yaml
 ---
 services:
   etcd:
@@ -23,10 +23,10 @@ services:
 
 此外，为了减少 etcd 磁盘上的 IO 争用，你可以为 data 和 wal 目录使用专用设备。etcd 最佳实践不建议配置 Mirror RAID（因为 etcd 在集群中的节点之间复制数据）。你可以使用 striping RAID 配置来增加可用的 IOPS。
 
-要在 RKE 集群中实现此解决方案，你需要在底层主机上为 `/var/lib/etcd/data` 和 `/var/lib/etcd/wal` 目录挂载并格式化磁盘。`etcd` 服务的 `extra_args` 指令中必须包含 `wal_dir` 目录。如果不指定 `wal_dir`，etcd 进程会尝试在权限不足的情况下操作底层的 `wal` 挂载。
+要在 RKE2/K3s 集群中实现此解决方案，你需要在底层主机上为 `/var/lib/etcd/data` 和 `/var/lib/etcd/wal` 目录挂载并格式化磁盘。`etcd` 服务的 `extra_args` 指令中必须包含 `wal_dir` 目录。如果不指定 `wal_dir`，etcd 进程会尝试在权限不足的情况下操作底层的 `wal` 挂载。
 
 ```yaml
-# RKE cluster.yml
+# RKE2/K3s config.yaml
 ---
 services:
   etcd:

@@ -36,7 +36,8 @@ For information on enabling experimental features, refer to [this page.](../../.
 | `antiAffinity`                 | "preferred"                                           | `string` - AntiAffinity rule for Rancher pods - "preferred, required"                                                                             |
 | `auditLog.destination`         | "sidecar"                                             | `string` - Stream to sidecar container console or hostPath volume - "sidecar, hostPath"                                                           |
 | `auditLog.hostPath`            | "/var/log/rancher/audit"                              | `string` - log file destination on host (only applies when `auditLog.destination` is set to `hostPath`)                                           |
-| `auditLog.level`               | 0                                                     | `int` - set the [API Audit Log](../../../how-to-guides/advanced-user-guides/enable-api-audit-log.md) level. 0 is off. [0-3]                                   |
+| `auditLog.enabled`            |  false                            | `bool` - Enables / disables audit logging.                                           |
+| `auditLog.level`               | 0                                                     | `int` - Sets the [API Audit Log](../../../how-to-guides/advanced-user-guides/enable-api-audit-log.md) level [0-3].                                  |
 | `auditLog.maxAge`              | 1                                                     | `int` - maximum number of days to retain old audit log files (only applies when `auditLog.destination` is set to `hostPath`)                      |
 | `auditLog.maxBackup`           | 1                                                     | `int` - maximum number of audit log files to retain (only applies when `auditLog.destination` is set to `hostPath`)                               |
 | `auditLog.maxSize`             | 100                                                   | `int` - maximum size in megabytes of the audit log file before it gets rotated (only applies when `auditLog.destination` is set to `hostPath`)    |
@@ -62,7 +63,9 @@ For information on enabling experimental features, refer to [this page.](../../.
 | `systemDefaultRegistry`        | ""                                                    | `string` - private registry to be used for all system container images, e.g., http://registry.example.com/                   |
 | `tls`                          | "ingress"                                             | `string` - See [External TLS Termination](#external-tls-termination) for details. - "ingress, external"                                           |
 | `useBundledSystemChart`        | `false`                                               | `bool` - select to use the system-charts packaged with Rancher server. This option is used for air gapped installations.  |
-| `global.cattle.psp.enabled`        | `true`                                               | `bool` - select 'false' to disable PSPs for Kubernetes v1.25 and above when using Rancher v2.7.2-v2.7.4. When using Rancher v2.7.5 and above, Rancher attempts to detect if a cluster is running a Kubernetes version where PSPs are not supported, and will default it's usage of PSPs to false if it can determine that PSPs are not supported in the cluster. Users can still manually override this by explicitly providing `true` or `false` for this value. Rancher will still use PSPs by default in clusters which support PSPs (such as clusters running Kubernetes v1.24 or lower). |
+
+
+When using Rancher v2.12.0 and above, Rancher will use an audit logging controller that watches `AuditPolicy` CRs for configuring additional redactions, for more info see [API Audit Log](../../../how-to-guides/advanced-user-guides/enable-api-audit-log.md).
 
 
 ### Bootstrap Password
@@ -78,7 +81,7 @@ Enabling the [API Audit Log](../../../how-to-guides/advanced-user-guides/enable-
 You can collect this log as you would any container log. Enable [logging](../../../integrations-in-rancher/logging/logging.md) for the `System` Project on the Rancher server cluster.
 
 ```plain
---set auditLog.level=1
+--set auditLog.enabled=true --set auditLog.level=1
 ```
 
 By default enabling Audit Logging will create a sidecar container in the Rancher pod. This container (`rancher-audit-log`) will stream the log to `stdout`. You can collect this log as you would any container log. When using the sidecar as the audit log destination, the `hostPath`, `maxAge`, `maxBackups`, and `maxSize` options do not apply. It's advised to use your OS or Docker daemon's log rotation features to control disk space use. Enable [logging](../../../integrations-in-rancher/logging/logging.md) for the Rancher server cluster or System Project.
@@ -215,14 +218,6 @@ Your load balancer must support long lived websocket connections and will need t
 ### Configuring Ingress for External TLS when Using NGINX v0.22
 
 In NGINX v0.22, the behavior of NGINX has [changed](https://github.com/kubernetes/ingress-nginx/blob/06efac9f0b6f8f84b553f58ccecf79dc42c75cc6/Changelog.md) regarding forwarding headers and external TLS termination. Therefore, in the scenario that you are using external TLS termination configuration with NGINX v0.22, you must enable the `use-forwarded-headers` option for ingress:
-
-For RKE installations, edit the `cluster.yml` to add the following settings.
-```yaml
-ingress:
-  provider: nginx
-  options:
-    use-forwarded-headers: 'true'
-```
 
 For RKE2 installations, you can create a custom `rke2-ingress-nginx-config.yaml` file at `/var/lib/rancher/rke2/server/manifests/rke2-ingress-nginx-config.yaml` containing this required setting to enable using forwarded headers with external TLS termination. Without this required setting applied, the external LB will continuously respond with redirect loops it receives from the ingress controller. (This can be created before or after rancher is installed, rke2 server agent will notice this addition and automatically apply it.)
 

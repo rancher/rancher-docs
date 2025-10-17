@@ -4,7 +4,7 @@ title: '1. 配置基础设施'
 
 在本节中，你将为 Rancher Management Server 配置底层基础设施，并使其通过 HTTP 代理访问互联网。
 
-如需在高可用 RKE 集群中安装 Rancher Management Server，我们建议配置以下基础设施：
+如需在高可用 RKE2/K3s 集群中安装 Rancher Management Server，我们建议配置以下基础设施：
 
 - **3 个 Linux 节点**：可以是你的云提供商（例如 Amazon EC2，GCE 或 vSphere）中的虚拟机。
 - **1 个负载均衡器**：用于将前端流量转发到这三个节点中。
@@ -14,7 +14,7 @@ title: '1. 配置基础设施'
 
 ## 为什么使用三个节点？
 
-在 RKE 集群中，Rancher Server 的数据存储在 etcd 中。而这个 etcd 数据库在这三个节点上运行。
+在 RKE2/K3s 集群中，Rancher Server 的数据存储在 etcd 中。而这个 etcd 数据库在这三个节点上运行。
 
 为了选举出大多数 etcd 节点认可的 etcd 集群 leader，etcd 数据库需要奇数个节点。如果 etcd 数据库无法选出 leader，etcd 可能会出现[脑裂（split brain）](https://www.quora.com/What-is-split-brain-in-distributed-systems)的问题，此时你需要使用备份恢复集群。如果三个 etcd 节点之一发生故障，其余两个节点可以选择一个 leader，因为它们是 etcd 节点总数的大多数部分。
 
@@ -30,7 +30,7 @@ title: '1. 配置基础设施'
 
 你还需要设置一个负载均衡器，来将流量重定向到两个节点上的 Rancher 副本。配置后，当单个节点不可用时，继续保障与 Rancher Management Server 的通信。
 
-在后续步骤中配置 Kubernetes 时，RKE 工具会部署一个 NGINX Ingress Controller。该 Controller 将侦听 worker 节点的 80 端口和 443 端口，以响应发送给特定主机名的流量。
+在后续步骤中配置 Kubernetes 时，RKE2/K3s 工具会部署一个 NGINX Ingress Controller。该 Controller 将侦听 worker 节点的 80 端口和 443 端口，以响应发送给特定主机名的流量。
 
 在安装 Rancher 后（也是在后续步骤中），Rancher 系统将创建一个 Ingress 资源。该 Ingress 通知 NGINX Ingress Controller 监听发往 Rancher 主机名的流量。NGINX Ingress Controller 在收到发往 Rancher 主机名的流量时，会将其转发到集群中正在运行的 Rancher Server Pod。
 

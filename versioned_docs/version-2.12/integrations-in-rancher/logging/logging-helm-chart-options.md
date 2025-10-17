@@ -59,7 +59,6 @@ The following table summarizes the sources where additional logs may be collecte
 
 | Logging Source | Linux Nodes (including in Windows cluster) | Windows Nodes |
 | --- | --- | ---|
-| RKE | ✓ | ✓ |
 | RKE2 | ✓ | |
 | K3s | ✓ | |
 | AKS | ✓ | |

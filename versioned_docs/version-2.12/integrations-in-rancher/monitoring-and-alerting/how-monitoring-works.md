@@ -216,8 +216,7 @@ The following Kubernetes components are directly scraped by Prometheus:
 
 \* You can optionally use `hardenedKubelet.enabled` to use a PushProx, but that is not the default.
 
-** For RKE and RKE2 clusters, ingress-nginx is deployed by default and treated as an internal Kubernetes component.
-
+** For RKE2 clusters, ingress-nginx is deployed by default and treated as an internal Kubernetes component.
 
 ### Scraping Metrics Based on Kubernetes Distribution
 
@@ -225,18 +224,18 @@ Metrics are scraped differently based on the Kubernetes distribution. For help w
 
 <figcaption>How Metrics are Exposed to Prometheus</figcaption>
 
-| Kubernetes Component | RKE | RKE2 | KubeADM | K3s |
+| Kubernetes Component | RKE2 | KubeADM | K3s |
 |-----|-----|-----|-----|-----|
-| kube-controller-manager	| rkeControllerManager.enabled	|rke2ControllerManager.enabled |	kubeAdmControllerManager.enabled |	k3sServer.enabled |
-| kube-scheduler	| rkeScheduler.enabled |	rke2Scheduler.enabled	|kubeAdmScheduler.enabled	| k3sServer.enabled |
-| etcd	| rkeEtcd.enabled	| rke2Etcd.enabled	| kubeAdmEtcd.enabled |	Not available |
-| kube-proxy	| rkeProxy.enabled	| rke2Proxy.enabled	| kubeAdmProxy.enabled |	k3sServer.enabled |
-| kubelet	| Collects metrics directly exposed by kubelet	| Collects metrics directly exposed by kubelet	| Collects metrics directly exposed by kubelet	| Collects metrics directly exposed by kubelet |
-| ingress-nginx*	| Collects metrics directly exposed by kubelet, exposed by rkeIngressNginx.enabled	| Collects metrics directly exposed by kubelet, Exposed by rke2IngressNginx.enabled	| Not available	| Not available |
-| coreDns/kubeDns	| Collects metrics directly exposed by coreDns/kubeDns	| Collects metrics directly exposed by coreDns/kubeDns	| Collects metrics directly exposed by coreDns/kubeDns	| Collects metrics directly exposed by coreDns/kubeDns |
-| kube-api-server	| Collects metrics directly exposed by kube-api-server	|Collects metrics directly exposed by kube-api-server	| Collects metrics directly exposed by kube-appi-server	| Collects metrics directly exposed by kube-api-server |
+| kube-controller-manager | rke2ControllerManager.enabled |	kubeAdmControllerManager.enabled | k3sServer.enabled |
+| kube-scheduler	| rke2Scheduler.enabled	|kubeAdmScheduler.enabled	| k3sServer.enabled |
+| etcd	| rke2Etcd.enabled	| kubeAdmEtcd.enabled |	Not available |
+| kube-proxy	| rke2Proxy.enabled	| kubeAdmProxy.enabled |	k3sServer.enabled |
+| kubelet	| Collects metrics directly exposed by kubelet	| Collects metrics directly exposed by kubelet	| Collects metrics directly exposed by kubelet |
+| ingress-nginx*	| Collects metrics directly exposed by kubelet, Exposed by rke2IngressNginx.enabled	| Not available	| Not available |
+| coreDns/kubeDns	| Collects metrics directly exposed by coreDns/kubeDns	| Collects metrics directly exposed by coreDns/kubeDns	| Collects metrics directly exposed by coreDns/kubeDns |
+| kube-api-server	| Collects metrics directly exposed by kube-api-server	| Collects metrics directly exposed by kube-appi-server	| Collects metrics directly exposed by kube-api-server |
 
-\* For RKE and RKE2 clusters, ingress-nginx is deployed by default and treated as an internal Kubernetes component.
+\* For RKE2 clusters, ingress-nginx is deployed by default and treated as an internal Kubernetes component.
 
 ### Terminology
 

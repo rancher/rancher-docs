@@ -24,7 +24,7 @@ Harvester 功能开关用于管理对 Rancher 中虚拟化管理（VM）页面�
 
 ## Harvester 主机驱动
 
-[Harvester 主机驱动](https://docs.harvesterhci.io/v1.1/rancher/node/node-driver/)通常可用于 Rancher 中的 RKE 和 RKE2 选项。无论 Harvester 功能开关是否启用，主机驱动都是可用的。请注意，主机驱动默认处于关闭状态。用户只能通过集群管理页面在 Harvester 上创建 RKE 或 RKE2 集群。
+[Harvester 主机驱动](https://docs.harvesterhci.io/v1.5/rancher/node/node-driver/)通常可用于 Rancher 中的 K3s 和 RKE2 选项。无论 Harvester 功能开关是否启用，主机驱动都是可用的。请注意，主机驱动默认处于关闭状态。用户只能通过集群管理页面在 Harvester 上创建 K3s 或 RKE2 集群。
 
 Harvester 允许通过 Harvester UI 上传和显示 `.ISO` 镜像，但 Rancher UI 是不支持的。这是因为 `.ISO` 镜像通常需要额外的设置，这会干扰干净的部署（即无需用户干预），并且它们通常不用于云环境。
 
@@ -32,11 +32,11 @@ Harvester 允许通过 Harvester UI 上传和显示 `.ISO` 镜像，但 Rancher 
 
 ## 端口要求
 
-Harvester 集群的端口要求可以在[此处](https://docs.harvesterhci.io/v1.1/install/requirements#networking)找到。
+Harvester 集群的端口要求可以在[此处](https://docs.harvesterhci.io/v1.5/install/requirements#networking)找到。
 
 此外，其他网络注意事项如下：
 
 - 请务必为 VM VLAN 网络启用物理交换机的 VLAN 中继端口。
-- 按照[此处](https://docs.harvesterhci.io/v1.1/networking/index)的网络设置指南进行操作。
+- 按照[此处](https://docs.harvesterhci.io/v1.5/networking/index)的网络设置指南进行操作。
 
-对于其他集群（例如 K3s 和 RKE1）的其他端口要求，请参阅[这些文档](https://docs.harvesterhci.io/v1.1/install/requirements/#guest-clusters)。
+对于其他集群（例如 K3s 和 RKE2）的其他端口要求，请参阅[这些文档](https://docs.harvesterhci.io/v1.5/install/requirements/#guest-clusters)。

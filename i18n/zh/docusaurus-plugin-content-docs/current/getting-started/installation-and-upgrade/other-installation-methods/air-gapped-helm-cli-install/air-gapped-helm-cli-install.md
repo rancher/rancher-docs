@@ -4,7 +4,7 @@ title: 离线 Helm CLI 安装
 
 本文介绍如何使用 Helm CLI 在离线环境中安装 Rancher Server。离线环境可以是 Rancher Server 离线安装、防火墙后面或代理后面。
 
-Rancher 安装在 RKE Kubernetes 集群、K3s Kubernetes 集群，或单个 Docker 容器上对应的安装步骤会有所不同。
+Rancher 安装在 K3s Kubernetes 集群，或单个 Docker 容器上对应的安装步骤会有所不同。
 
 如需了解各个安装方式的更多信息，请参见[本页](../../installation-and-upgrade.md)。
 

@@ -168,8 +168,6 @@ kubectl create namespace cattle-system
 
 然后安装 Rancher，并声明你选择的选项。参考下表来替换每个占位符。Rancher 需要配置为使用私有镜像仓库，以便配置所有 Rancher 启动的 Kubernetes 集群或 Rancher 工具。
 
-对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
-
 | 占位符 | 描述 |
 ------------|-------------
 | `<VERSION>` | 输出压缩包的版本号。 |
@@ -198,8 +196,6 @@ kubectl create namespace cattle-system
 ##### 2. 安装 Rancher
 
 安装 Rancher，并声明你选择的选项。参考下表来替换每个占位符。Rancher 需要配置为使用私有镜像仓库，以便配置所有 Rancher 启动的 Kubernetes 集群或 Rancher 工具。
-
-对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
 
 | 占位符 | 描述 |
 | -------------------------------- | ----------------------------------------------- |

@@ -67,7 +67,7 @@ Rancher 加固指南基于 <a href="https://www.cisecurity.org/benchmark/kuberne
 
 Benchmark 自我评估是 Rancher 安全加固指南的辅助。加固指南展示了如何加固集群，而 Benchmark 指南旨在帮助你评估加固集群的安全级别。
 
-由于 Rancher 和 RKE 将 Kubernetes 服务安装为 Docker 容器，因此 CIS Kubernetes Benchmark 中的许多管控验证检查都不适用。本指南将介绍各种 controls，并提供更新的示例命令来审计 Rancher 创建的集群的合规性。你可以前往 [CIS 网站](https://www.cisecurity.org/benchmark/kubernetes/)下载原始的 Benchmark 文档。
+本指南将介绍各种 controls，并提供更新的示例命令来审计 Rancher 创建的集群的合规性。你可以前往 [CIS 网站](https://www.cisecurity.org/benchmark/kubernetes/)下载原始的 Benchmark 文档。
 
 Rancher 自我评估指南的每个版本都对应于强化指南、Rancher、Kubernetes 和 CIS Benchmark 的特定版本。
 

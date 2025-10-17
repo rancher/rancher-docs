@@ -171,17 +171,9 @@ $ nc xxx.xxx.xxx.xxx 22
 SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.10
 ```
 
-## Failed to dial ssh using address [xxx.xxx.xxx.xxx:xx]: Error configuring SSH: ssh: no key found
-
-`ssh_key_path` 密钥文件无法访问：请确保你已经指定了私钥文件（不是公钥 `.pub`），而且运行 `rke` 命令的用户可以访问该私钥文件。
-
 ## Failed to dial ssh using address [xxx.xxx.xxx.xxx:xx]: ssh: handshake failed: ssh: unable to authenticate, attempted methods [none publickey], no supported methods remain
 
 `ssh_key_path` 密钥文件不是访问节点的正确文件：请仔细检查，确保你已为节点指定了正确的 `ssh_key_path` 和连接用户。
-
-## Failed to dial ssh using address [xxx.xxx.xxx.xxx:xx]: Error configuring SSH: ssh: cannot decode encrypted private keys
-
-如需使用加密的私钥，请使用 `ssh-agent` 来使用密码来加载密钥。如果在运行 `rke` 命令的环境中找到 `SSH_AUTH_SOCK` 环境变量，它将自动用于连接到节点。
 
 ## Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
 

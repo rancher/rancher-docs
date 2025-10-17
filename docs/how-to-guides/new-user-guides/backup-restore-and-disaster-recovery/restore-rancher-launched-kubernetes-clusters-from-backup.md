@@ -8,7 +8,7 @@ title: Restoring a Cluster from Backup
 
 Etcd backup and recovery for [Rancher launched Kubernetes clusters](../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) can be easily performed. Snapshots of the etcd database are taken and saved either locally onto the etcd nodes or to a S3 compatible target. The advantages of configuring S3 is that if all etcd nodes are lost, your snapshot is saved remotely and can be used to restore the cluster.
 
-Rancher recommends enabling the [ability to set up recurring snapshots of etcd](back-up-rancher-launched-kubernetes-clusters.md#configuring-recurring-snapshots), but [one-time snapshots](back-up-rancher-launched-kubernetes-clusters.md#one-time-snapshots) can easily be taken as well. Rancher allows restore from [saved snapshots](#restoring-a-cluster-from-a-snapshot) or if you don't have any snapshots, you can still [restore etcd](#recovering-etcd-without-a-snapshot-rke).
+Rancher recommends enabling the [ability to set up recurring snapshots of etcd](back-up-rancher-launched-kubernetes-clusters.md#configuring-recurring-snapshots), but [one-time snapshots](back-up-rancher-launched-kubernetes-clusters.md#one-time-snapshots) can easily be taken as well. Rancher allows restore from [saved snapshots](#restoring-a-cluster-from-a-snapshot).
 
 Clusters can also be restored to a prior Kubernetes version and cluster configuration.
 
@@ -51,21 +51,7 @@ To restore snapshots from S3, the cluster needs to be configured to [take recurr
 
 In a disaster recovery scenario, the control plane and etcd nodes managed by Rancher in a downstream cluster may no longer be available or functioning. The cluster can be rebuilt by adding control plane and etcd nodes again, followed by restoring from an available snapshot.
 
-<Tabs groupId="k8s-distro">
-<TabItem value="RKE">
-
-Follow the procedure described in the [SUSE Knowledgebase](https://www.suse.com/support/kb/doc/?id=000020695).
-
-</TabItem>
-<TabItem value="RKE2/K3s">
-
 If you have a complete cluster failure, you must remove all etcd nodes/machines from your cluster before you can add a "new" etcd node for restore.
-
-:::note
-
-Due to a [known issue](https://github.com/rancher/rancher/issues/41080), this procedure requires Rancher v2.7.5 or newer.
-
-:::
 
 :::note
 
@@ -111,36 +97,3 @@ If you are using [local snapshots](./back-up-rancher-launched-kubernetes-cluster
       ```
 
 1. After restoration is successful, you can scale your etcd nodes back up to the desired redundancy.
-
-</TabItem>
-</Tabs>
-
-## Recovering etcd without a Snapshot (RKE)
-
-If the group of etcd nodes loses quorum, the Kubernetes cluster will report a failure because no operations, e.g. deploying workloads, can be executed in the Kubernetes cluster. The cluster should have three etcd nodes to prevent a loss of quorum. If you want to recover your set of etcd nodes, follow these instructions:
-
-1. Keep only one etcd node in the cluster by removing all other etcd nodes.
-
-2. On the single remaining etcd node, run the following command:
-
-    ```bash
-    docker run --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike etcd
-    ```
-
-    This command outputs the running command for etcd, save this command to use later.
-
-3. Stop the running `etcd` container and rename it to `etcd-old`.
-
-    ```bash
-    docker stop etcd
-    docker rename etcd etcd-old
-    ```
-
-4. Take the saved command from Step 2 and revise it:
-
-    - If you originally had more than 1 etcd node, then you need to change `--initial-cluster` to only contain the node that remains.
-    - Add `--force-new-cluster` to the end of the command.
-
-5. Run the revised command.
-
-6. After the single nodes is up and running, Rancher recommends adding additional etcd nodes to your cluster. If you have a [custom cluster](../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes.md) and you want to reuse an old node, you are required to [clean up the nodes](../manage-clusters/clean-cluster-nodes.md) before attempting to add them back into a cluster.

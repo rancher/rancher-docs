@@ -16,7 +16,7 @@ This section describes how to install a Kubernetes cluster according to our [bes
 
 Rancher can be installed on any Kubernetes cluster, including hosted Kubernetes providers.
 
-The steps to set up an air-gapped Kubernetes cluster on RKE, RKE2, or K3s are shown below.
+The steps to set up an air-gapped Kubernetes cluster on RKE2 or K3s are shown below.
 
 <Tabs>
 <TabItem value="K3s">
@@ -212,7 +212,7 @@ configs:
       ca_file: <path to the ca file used in the registry>
 ```
 
-For more information on private registries configuration file for RKE2, refer to the [RKE2 documentation.](https://docs.rke2.io/install/containerd_registry_configuration)
+For more information on private registries configuration file for RKE2, refer to the [RKE2 documentation.](https://docs.rke2.io/install/private_registry)
 
 ## 3. Install RKE2
 
@@ -292,100 +292,7 @@ Upgrading an air-gap environment can be accomplished in the following manner:
 3. Restart the RKE2 service.
 
 </TabItem>
-<TabItem value="RKE">
-We will create a Kubernetes cluster using Rancher Kubernetes Engine (RKE). Before being able to start your Kubernetes cluster, you’ll need to install RKE and create a RKE config file.
-
-## 1. Install RKE
-
-Install RKE by following the instructions in the [RKE documentation.](https://rancher.com/docs/rke/latest/en/installation/)
-
-:::note
-
-Certified version(s) of RKE based on the Rancher version can be found in the [Rancher Support Matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/).
-
-:::
-
-## 2. Create an RKE Config File
-
-From a system that can access ports 22/TCP and 6443/TCP on the Linux host node(s) that you set up in a previous step, use the sample below to create a new file named `rancher-cluster.yml`.
-
-This file is an RKE configuration file, which is a configuration for the cluster you're deploying Rancher to.
-
-Replace values in the code sample below with help of the _RKE Options_ table. Use the IP address or DNS names of the three nodes you created.
-
-:::tip
-
-For more details on the options available, see the RKE [Config Options](https://rancher.com/docs/rke/latest/en/config-options/).
-
-:::
-
-<figcaption>RKE Options</figcaption>
-
-| Option             | Required             | Description                                                                             |
-| ------------------ | -------------------- | --------------------------------------------------------------------------------------- |
-| `address`          | ✓                    | The DNS or IP address for the node within the air gapped network.                          |
-| `user`             | ✓                    | A user that can run Docker commands.                                                    |
-| `role`             | ✓                    | List of Kubernetes roles assigned to the node.                                          |
-| `internal_address` | optional<sup>1</sup> | The DNS or IP address used for internal cluster traffic.                                |
-| `ssh_key_path`     |                      | Path to the SSH private key used to authenticate to the node (defaults to `~/.ssh/id_rsa`). |
-
-> <sup>1</sup> Some services like AWS EC2 require setting the `internal_address` if you want to use self-referencing security groups or firewalls.
-
-```yaml
-nodes:
-  - address: 10.10.3.187 # node air gap network IP
-    internal_address: 172.31.7.22 # node intra-cluster IP
-    user: rancher
-    role: ['controlplane', 'etcd', 'worker']
-    ssh_key_path: /home/user/.ssh/id_rsa
-  - address: 10.10.3.254 # node air gap network IP
-    internal_address: 172.31.13.132 # node intra-cluster IP
-    user: rancher
-    role: ['controlplane', 'etcd', 'worker']
-    ssh_key_path: /home/user/.ssh/id_rsa
-  - address: 10.10.3.89 # node air gap network IP
-    internal_address: 172.31.3.216 # node intra-cluster IP
-    user: rancher
-    role: ['controlplane', 'etcd', 'worker']
-    ssh_key_path: /home/user/.ssh/id_rsa
-
-private_registries:
-  - url: <REGISTRY.YOURDOMAIN.COM:PORT> # private registry url
-    user: rancher
-    password: '*********'
-    is_default: true
-```
-
-## 3. Run RKE
-
-After configuring `rancher-cluster.yml`, bring up your Kubernetes cluster:
-
-```
-rke up --config ./rancher-cluster.yml
-```
-
-## 4. Save Your Files
-
-:::note Important:
-
-The files mentioned below are needed to maintain, troubleshoot, and upgrade your cluster.
-
-:::
-
-Save a copy of the following files in a secure location:
-
-- `rancher-cluster.yml`: The RKE cluster configuration file.
-- `kube_config_cluster.yml`: The [Kubeconfig file](https://rancher.com/docs/rke/latest/en/kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
-- `rancher-cluster.rkestate`: The [Kubernetes Cluster State file](https://rancher.com/docs/rke/latest/en/installation/#kubernetes-cluster-state), this file contains the current state of the cluster including the RKE configuration and the certificates.<br/><br/>_The Kubernetes Cluster State file is only created when using RKE v0.2.0 or higher._
-
-</TabItem>
 </Tabs>
-
-:::note
-
-The "rancher-cluster" parts of the two latter file names are dependent on how you name the RKE cluster configuration file.
-
-:::
 
 ## Issues or Errors?
 

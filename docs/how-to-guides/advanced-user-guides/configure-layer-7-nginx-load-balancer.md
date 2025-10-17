@@ -185,6 +185,7 @@ For help troubleshooting certificates, see [this section.](../../getting-started
 If you want to record all transactions with the Rancher API, enable the [API Auditing](enable-api-audit-log.md) feature by adding the flags below into your install command.
 
     -e AUDIT_LEVEL=1 \
+    -e AUDIT_LOG_ENABLED=true \
     -e AUDIT_LOG_PATH=/var/log/auditlog/rancher-api-audit.log \
     -e AUDIT_LOG_MAXAGE=20 \
     -e AUDIT_LOG_MAXBACKUP=20 \
