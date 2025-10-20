@@ -65,16 +65,18 @@ title: 配置 Shibboleth (SAML)
 
 **结果**：已将 Rancher 配置为使用 Shibboleth。你的用户现在可以使用 Shibboleth 登录名登录 Rancher。
 
-### SAML 提供商注意事项
+:::note SAML Provider Caveats
 
 SAML 协议不支持用户或用户组的搜索或查找。因此，如果你没有为 Shibboleth 配置 OpenLDAP，则请留意以下警告。
 
 - 在 Rancher 中为用户或组分配权限时，不会对用户或组进行验证。
 - 添加用户时，必须正确输入准确的用户 ID（即 UID 字段）。在你输入用户 ID 时，将不会搜索可能匹配的其他用户 ID。
 - 添加组时，必须从文本框旁边的下拉列表中选择组。Rancher 假定来自文本框的任何输入都是用户。
-- 用户组下拉列表仅显示你所属的用户组。如果你不是某个组的成员，你将无法添加该组。
+- The group drop-down shows only the groups that you are a member of. However, if you have Administrator permissions or restricted Administrator permissions, you can join a group that you are not a member of.
 
 要在 Rancher 中分配权限时启用搜索组，你需要为 SAML 身份认证服务配置支持组的后端（例如 OpenLDAP）。
+
+:::
 
 # 在 Rancher 中设置 OpenLDAP
 
