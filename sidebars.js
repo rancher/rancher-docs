@@ -84,8 +84,6 @@ const sidebars = {
                 id: "getting-started/installation-and-upgrade/installation-requirements/installation-requirements",
               },
               items: [
-                "getting-started/installation-and-upgrade/installation-requirements/install-docker",
-                "getting-started/installation-and-upgrade/installation-requirements/dockershim",
                 "getting-started/installation-and-upgrade/installation-requirements/port-requirements",
               ],
             },
@@ -398,7 +396,6 @@ const sidebars = {
               items: [
                 "how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs",
                 "how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher",
-                "how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher",
                 "how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher",
               ],
             },

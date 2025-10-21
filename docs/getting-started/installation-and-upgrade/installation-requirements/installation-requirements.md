@@ -1,6 +1,6 @@
 ---
 title: Installation Requirements
-description: Learn the node requirements for each node running Rancher server when you’re configuring  Rancher to run either in a Docker or Kubernetes setup
+description: Learn the node requirements for each node running Rancher server when you’re configuring  Rancher to run either in a Kubernetes setup
 ---
 
 <head>
@@ -33,9 +33,7 @@ If you install Rancher on a hardened Kubernetes cluster, check the [Exempting Re
 
 All supported operating systems are 64-bit x86. Rancher should work with any modern Linux distribution.
 
-The [Rancher support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions) lists which OS and Docker versions were tested for each Rancher version.
-
-Docker is required for nodes that will run RKE clusters. It is not required for RKE2 or K3s clusters.
+The [Rancher support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions) lists which OS versions were tested for each Rancher version.
 
 The `ntp` (Network Time Protocol) package should be installed. This prevents errors with certificate validation that can occur when the time is not synchronized between the client and server.
 
@@ -47,7 +45,7 @@ If you plan to run Rancher on ARM64, see [Running on ARM64 (Experimental).](../.
 
 ### RKE2 Specific Requirements
 
-RKE2 bundles its own container runtime, containerd. Docker is not required for RKE2 installs.
+RKE2 bundles its own container runtime, containerd.
 
 For details on which OS versions were tested with RKE2, refer to the [Rancher support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions).
 
@@ -60,12 +58,6 @@ Rancher needs to be installed on a supported Kubernetes version. To find out whi
 If you are installing Rancher on a K3s cluster with **Raspbian Buster**, follow [these steps](https://rancher.com/docs/k3s/latest/en/advanced/#enabling-legacy-iptables-on-raspbian-buster) to switch to legacy iptables.
 
 If you are installing Rancher on a K3s cluster with Alpine Linux, follow [these steps](https://rancher.com/docs/k3s/latest/en/advanced/#additional-preparation-for-alpine-linux-setup) for additional setup.
-
-### RKE Specific Requirements
-
-RKE requires a Docker container runtime. Supported Docker versions are specified in the [Support Matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/) page.
-
-For more information, see [Installing Docker](install-docker.md).
 
 ## Hardware Requirements
 
@@ -155,40 +147,13 @@ These requirements apply to hosted Kubernetes clusters such as Amazon Elastic Ku
 
 (*): Large deployments require that you [follow best practices](../../../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md) for adequate performance.
 
-### RKE
-
-The following table lists minimum CPU and memory requirements for each node in the [upstream cluster](../install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md).
-
-Please note that a highly available setup with at least three nodes is required for production.
-
-| Managed Infrastructure Size | Maximum Number of Clusters | Maximum Number of Nodes | vCPUs | RAM   |
-|-----------------------------|----------------------------|-------------------------|-------|-------|
-| Small                       | 150                        | 1500                    | 4     | 16 GB |
-| Medium                      | 300                        | 3000                    | 8     | 32 GB |
-| Large (*)                   | 500                        | 5000                    | 16    | 64 GB |
-
-(*): Large deployments require that you [follow best practices](../../../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md) for adequate performance.
-
-Refer to the RKE documentation for more detailed information on [general requirements](https://rke.docs.rancher.com/os).
-
-### Docker
-
-The following table lists minimum CPU and memory requirements for a [single Docker node installation of Rancher](../other-installation-methods/rancher-on-a-single-node-with-docker/rancher-on-a-single-node-with-docker.md).
-
-Please note that a Docker installation is only suitable for development or testing purposes and is not meant to be used in production environments.
-
-| Managed Infrastructure Size | Maximum Number of Clusters | Maximum Number of Nodes | vCPUs | RAM  |
-|-----------------------------|----------------------------|-------------------------|-------|------|
-| Small                       | 5                          | 50                      | 1     | 4 GB |
-| Medium                      | 15                         | 200                     | 2     | 8 GB |
-
 ## Ingress
 
 Each node in the Kubernetes cluster that Rancher is installed on should run an Ingress.
 
 The Ingress should be deployed as DaemonSet to ensure your load balancer can successfully route traffic to all nodes.
 
-For RKE, RKE2 and K3s installations, you don't have to install the Ingress manually because it is installed by default.
+For RKE2 and K3s installations, you don't have to install the Ingress manually because it is installed by default.
 
 For hosted Kubernetes clusters (EKS, GKE, AKS), you will need to set up the ingress.
 
@@ -224,8 +189,4 @@ If you use a load balancer, it should be be HTTP/2 compatible.
 
 To receive help from SUSE Support, Rancher Prime customers who use load balancers (or any other middleboxes such as firewalls), must use one that is HTTP/2 compatible.
 
-When HTTP/2 is not available, Rancher falls back to HTTP/1.1. However, since HTTP/2 offers improved web application performance, using HTTP/1.1 can create performance issues. 
-
-## Dockershim Support
-
-For more information on Dockershim support, refer to [this page](dockershim.md).
+When HTTP/2 is not available, Rancher falls back to HTTP/1.1. However, since HTTP/2 offers improved web application performance, using HTTP/1.1 can create performance issues.
