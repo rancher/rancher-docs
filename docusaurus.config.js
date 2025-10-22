@@ -205,7 +205,7 @@ module.exports = {
               banner: "none",
             },
             2.8: {
-              label: "v2.8",
+              label: "v2.8 (Archived)",
               path: "v2.8",
               className: "toArchive",
             },
