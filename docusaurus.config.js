@@ -207,7 +207,8 @@ module.exports = {
             2.8: {
               label: "v2.8 (Archived)",
               path: "v2.8",
-              className: "toArchive",
+              banner: `none`,
+              noIndex: true,
             },
             2.7: {
               label: "v2.7 (Archived)",
