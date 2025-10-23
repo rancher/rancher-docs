@@ -1,5 +1,5 @@
 ---
-title: "Rancher 2.6 (Archived)"
+title: "Rancher 2.7 (Archived)"
 slug: /
 ---
 
