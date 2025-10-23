@@ -10,7 +10,7 @@ title: Rancher 中已弃用的功能
 
 我们已经在支持的[服务条款](https://rancher.com/support-maintenance-terms)中发布了官方的弃用策略。
 
-## 在哪里可以了解 Rancher 中已弃用哪些功能3
+## 在哪里可以了解 Rancher 中已弃用哪些功能？
 
 Rancher 将在 GitHub 上发布的 Rancher 的[发版说明](https://github.com/rancher/rancher/releases)中发布已弃用的功能。有关已弃用的功能，请参阅以下的补丁版本：
 
