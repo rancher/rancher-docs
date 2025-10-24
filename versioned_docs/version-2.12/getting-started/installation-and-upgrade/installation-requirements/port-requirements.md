@@ -19,7 +19,7 @@ The following table lists the ports that need to be open to and from nodes that 
 
 The port requirements differ based on the Rancher server architecture.
 
-Rancher can be installed on any Kubernetes cluster. For Rancher installs on a K3s, RKE, or RKE2 Kubernetes cluster, refer to the tabs below. For other Kubernetes distributions, refer to the distribution's documentation for the port requirements for cluster nodes.
+Rancher can be installed on any Kubernetes cluster. For Rancher installs on a K3s or RKE2 Kubernetes cluster, refer to the tabs below. For other Kubernetes distributions, refer to the distribution's documentation for the port requirements for cluster nodes.
 
 :::note Notes:
 
@@ -67,52 +67,6 @@ The following tables break down the port requirements for inbound and outbound t
 | TCP      | 443  | git.rancher.io |  Rancher catalog                     |
 | TCP      | 2376 | Any node IP from a node created using Node driver        | Docker daemon TLS port used by Docker Machine |
 | TCP      | 6443 | Hosted/Imported Kubernetes API                           | Kubernetes API server                         |
-
-</details>
-
-### Ports for Rancher Server Nodes on RKE
-
-<details>
-  <summary>Click to expand</summary>
-
-Typically Rancher is installed on three RKE nodes that all have the etcd, control plane and worker roles.
-
-The following tables break down the port requirements for traffic between the Rancher nodes:
-
-<figcaption>Rules for traffic between Rancher nodes</figcaption>
-
-| Protocol | Port | Description |
-|-----|-----|----------------|
-| TCP | 443 | Rancher agents |
-| TCP | 2379 | etcd client requests |
-| TCP | 2380 | etcd peer communication |
-| TCP | 6443 | Kubernetes apiserver |
-| TCP | 8443 | Nginx Ingress's Validating Webhook |
-| UDP | 8472 | Canal/Flannel VXLAN overlay networking |
-| TCP | 9099 | Canal/Flannel livenessProbe/readinessProbe |
-| TCP | 10250 | Metrics server communication with all nodes |
-| TCP | 10254 | Ingress controller livenessProbe/readinessProbe |
-
-The following tables break down the port requirements for inbound and outbound traffic:
-
-<figcaption>Inbound Rules for Rancher Nodes</figcaption>
-
-| Protocol | Port | Source | Description |
-|-----|-----|----------------|---|
-| TCP | 22 | RKE CLI | SSH provisioning of node by RKE |
-| TCP | 80 | Load Balancer/Reverse Proxy | HTTP traffic to Rancher UI/API |
-| TCP | 443 | <ul><li>Load Balancer/Reverse Proxy</li><li>IPs of all cluster nodes and other API/UI clients</li></ul> | HTTPS traffic to Rancher UI/API |
-| TCP | 6443 | Kubernetes API clients | HTTPS traffic to Kubernetes API |
-
-<figcaption>Outbound Rules for Rancher Nodes</figcaption>
-
-| Protocol | Port | Destination | Description |
-|-----|-----|----------------|---|
-| TCP | 443 | git.rancher.io | Rancher catalog |
-| TCP | 22 | Any node created using a node driver | SSH provisioning of node by node driver |
-| TCP | 2376 | Any node created using a node driver | Docker daemon TLS port used by node driver |
-| TCP | 6443 | Hosted/Imported Kubernetes API                           | Kubernetes API server                         |
-| TCP | Provider dependent | Port of the Kubernetes API endpoint in hosted cluster | Kubernetes API |
 
 </details>
 

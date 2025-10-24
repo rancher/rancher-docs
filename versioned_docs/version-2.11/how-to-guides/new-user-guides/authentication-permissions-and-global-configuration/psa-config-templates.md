@@ -129,6 +129,7 @@ When you run Rancher on a Kubernetes cluster that enforces a restrictive securit
 - `longhorn-system`
 - `rancher-alerting-drivers`
 - `security-scan`
+- `sr-operator-system`
 - `tigera-operator`
 
 Rancher, some Rancher owned charts, and RKE2 and K3s distributions all use these namespaces. A subset of the listed namespaces are already exempt in the built-in Rancher `rancher-restricted` policy, for use in downstream clusters. For a complete template which has all the exemptions you need to run Rancher, please refer to this [sample Admission Configuration](../../../reference-guides/rancher-security/psa-restricted-exemptions.md).

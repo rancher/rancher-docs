@@ -12,12 +12,12 @@ Rancher 依赖用户和组来决定允许登录到 Rancher 的用户，以及他
 
 你可以查看和管理所有用户，包括本地用户和来自身份验证提供程序的用户。在左上角，单击 **☰ > 用户 & 认证**。在左侧导航栏中单击**用户**。
 
-:::note SAML 身份提供商注意事项
+:::note SAML 认证警告
 
-- SAML 协议不支持搜索或查找用户或组。因此，将用户或组添加到 Rancher 时不会对其进行验证。
-- 添加用户时，必须正确输入确切的用户 ID（即 `UID` 字段）。键入用户 ID 时，将不会搜索可能匹配的其他用户 ID。
+- Users and groups aren't validated when you assign permissions to them in Rancher.
+- 添加用户时，必须正确输入确切的用户 ID（即 UID 字段）。键入用户 ID 时，将不会搜索可能匹配的其他用户 ID。
 - 添加组时，必须从文本框旁边的下拉列表中选择组。Rancher 假定来自文本框的任何输入都是用户。
-- 用户组下拉列表仅显示你所属的用户组。如果你不是某个组的成员，你将无法添加该组。
+- The group drop-down shows only the groups that you are a member of. However, if you have Administrator permissions or Restricted Administrator permissions, you can join a group that you are not a member of.
 
 :::
 

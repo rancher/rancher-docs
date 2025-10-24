@@ -121,6 +121,15 @@ description: 创建 Keycloak OpenID Connect (OIDC) 客户端并配置 Rancher �
 
 **结果**：已将 Rancher 配置为使用 OIDC 协议与 Keycloak 一起工作。你的用户现在可以使用 Keycloak 登录名登录 Rancher。
 
+:::note SAML 认证警告
+
+- Users and groups aren't validated when you assign permissions to them in Rancher.
+- 添加用户时，必须正确输入确切的用户 ID（即 UID 字段）。键入用户 ID 时，将不会搜索可能匹配的其他用户 ID。
+- 添加组时，必须从文本框旁边的下拉列表中选择组。Rancher 假定来自文本框的任何输入都是用户。
+- The group drop-down shows only the groups that you are a member of. However, if you have Administrator permissions or Restricted Administrator permissions, you can join a group that you are not a member of.
+
+:::
+
 ## 配置参考
 
 | 字段 | 描述 |

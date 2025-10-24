@@ -8,7 +8,7 @@ title: '1. Set up Infrastructure'
 
 In this section, you will provision the underlying infrastructure for your Rancher management server with internet access through a HTTP proxy.
 
-To install the Rancher management server on a high-availability RKE cluster, we recommend setting up the following infrastructure:
+To install the Rancher management server on a high-availability RKE2/K3s cluster, we recommend setting up the following infrastructure:
 
 - **Three Linux nodes,** typically virtual machines, in an infrastructure provider such as Amazon's EC2, Google Compute Engine, or vSphere.
 - **A load balancer** to direct front-end traffic to the three nodes.
@@ -18,7 +18,7 @@ These nodes must be in the same region/data center. You may place these servers 
 
 ### Why three nodes?
 
-In an RKE cluster, Rancher server data is stored on etcd. This etcd database runs on all three nodes.
+In an RKE2/K3s cluster, Rancher server data is stored on etcd. This etcd database runs on all three nodes.
 
 The etcd database requires an odd number of nodes so that it can always elect a leader with a majority of the etcd cluster. If the etcd database cannot elect a leader, etcd can suffer from [split brain](https://www.quora.com/What-is-split-brain-in-distributed-systems), requiring the cluster to be restored from backup. If one of the three etcd nodes fails, the two remaining nodes can elect a leader because they have the majority of the total number of etcd nodes.
 
@@ -34,7 +34,7 @@ For an example of one way to set up Linux nodes, refer to this [tutorial](../../
 
 You will also need to set up a load balancer to direct traffic to the Rancher replica on both nodes. That will prevent an outage of any single node from taking down communications to the Rancher management server.
 
-When Kubernetes gets set up in a later step, the RKE tool will deploy an NGINX Ingress controller. This controller will listen on ports 80 and 443 of the worker nodes, answering traffic destined for specific hostnames.
+When Kubernetes gets set up in a later step, the RKE2/K3s tool will deploy an NGINX Ingress controller. This controller will listen on ports 80 and 443 of the worker nodes, answering traffic destined for specific hostnames.
 
 When Rancher is installed (also in a later step), the Rancher system creates an Ingress resource. That Ingress tells the NGINX Ingress controller to listen for traffic destined for the Rancher hostname. The NGINX Ingress controller, when receiving traffic destined for the Rancher hostname, will forward that traffic to the running Rancher pods in the cluster.
 

@@ -1,6 +1,6 @@
 ---
 title: 安装要求
-description: 如果 Rancher 配置在 Docker 或 Kubernetes 中运行时，了解运行 Rancher Server 的每个节点的节点要求
+description: Learn the node requirements for each node running Rancher server when you’re configuring  Rancher to run either in a Kubernetes setup
 ---
 
 本文描述了对需要安装 Rancher Server 的节点的软件、硬件和网络要求。Rancher Server 可以安装在单个节点或高可用的 Kubernetes 集群上。
@@ -27,7 +27,7 @@ Rancher 需要安装在支持的 Kubernetes 版本上。请查阅 [Rancher 支�
 
 所有支持的操作系统都使用 64-bit x86 架构。Rancher 兼容当前所有的主流 Linux 发行版。
 
-[Rancher 支持矩阵](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions)列出了每个 Rancher 版本测试过的操作系统和 Docker 版本。
+The [Rancher support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions) lists which OS versions were tested for each Rancher version.
 
 运行 RKE 集群的节点需要安装 Docker。RKE2 或 K3s 集群不需要它。
 
@@ -41,7 +41,7 @@ Rancher 需要安装在支持的 Kubernetes 版本上。请查阅 [Rancher 支�
 
 ### RKE2 要求
 
-对于容器运行时，RKE2 附带了自己的 containerd。RKE2 安装不需要 Docker。
+对于容器运行时，RKE2 附带了自己的 containerd.
 
 如需了解 RKE2 通过了哪些操作系统版本的测试，请参见 [Rancher 支持矩阵](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions)。
 
@@ -150,41 +150,13 @@ Rancher 的代码库不断发展，用例不断变化，Rancher 积累的经验�
 
 (*)：大规模的部署需要你[遵循最佳实践](../../../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md)以获得足够的性能。
 
-
-### RKE
-
-下面的表格列出了[上游集群](../install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md)中每个节点最小的 CPU 和内存要求。
-
-请注意，生产环境下的高可用安装最少需要 3 个节点。
-
-| 部署规模 | 最大集群数量 | 最大节点数量 | vCPUs | 内存   |
-|-----------------------------|----------------------------|-------------------------|-------|-------|
-| 小                       | 150                        | 1500                    | 4     | 16 GB |
-| 中                      | 300                        | 3000                    | 8     | 32 GB |
-| 大 (*)                   | 500                        | 5000                    | 16    | 64 GB |
-
-(*)： 大规模的部署需要你[遵循最佳实践](../../../reference-guides/best-practices/rancher-server/tuning-and-best-practices-for-rancher-at-scale.md)以获得足够的性能。
-
-有关 RKE 一般要求的更多详细信息，请参见 [RKE 文档](https://rke.docs.rancher.com/os)。
-
-### Docker
-
-下面的表格列出了[上游集群](../install-upgrade-on-a-kubernetes-cluster/install-upgrade-on-a-kubernetes-cluster.md)中每个节点最小的 CPU 和内存要求。
-
-请注意，在 Docker 中安装 Rancher 仅适用于开发或测试目的。不建议在生产环境中使用。
-
-| 部署规模 | 最大集群数量 | 最大节点数量 | vCPUs | 内存  |
-|-----------------------------|----------------------------|-------------------------|-------|------|
-| 小                       | 5                          | 50                      | 1     | 4 GB |
-| 中                      | 15                         | 200                     | 2     | 8 GB |
-
 ## Ingress
 
 安装 Rancher 的 Kubernetes 集群中的每个节点都应该运行一个 Ingress。
 
 Ingress 需要部署为 DaemonSet 以确保负载均衡器能成功把流量转发到各个节点。
 
-如果是 RKE，RKE2 和 K3s 安装，你不需要手动安装 Ingress，因为它是默认安装的。
+如果是 RKE2 和 K3s 安装，你不需要手动安装 Ingress，因为它是默认安装的。
 
 对于托管的 Kubernetes 集群（EKS、GKE、AKS），你需要设置 Ingress。
 
@@ -213,7 +185,3 @@ etcd 在集群中的性能决定了 Rancher 的性能。因此，为了获得最
 ### 端口要求
 
 为了确保能正常运行，Rancher 需要在 Rancher 节点和下游 Kubernetes 集群节点上开放一些端口。不同集群类型的 Rancher 和下游集群的所有必要端口，请参见[端口要求](port-requirements.md)。
-
-## Dockershim 支持
-
-有关 Dockershim 支持的详情，请参见[此页面](dockershim.md)。
