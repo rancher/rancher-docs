@@ -20,14 +20,6 @@ To get a description of the fields and structure of the Kubeconfig resource, run
 kubectl explain kubeconfigs.ext.cattle.io
 ```
 
-## Feature Flag
-
-The Kubeconfigs Public API is available since Rancher v2.12.0 and is enabled by default. It can be disabled by setting the `ext-kubeconfigs` feature flag to `false`.
-
-```sh
-kubectl patch feature ext-kubeconfigs -p '{"spec":{"value":false}}'
-```
-
 ## Creating a Kubeconfig
 
 Only a **valid and active** Rancher user can create a Kubeconfig. For example, trying to create a Kubeconfig using a `system:admin` service account will lead to an error:
