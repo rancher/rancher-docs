@@ -1033,9 +1033,9 @@ const sidebars = {
               items: [
                 "reference-guides/rancher-security/selinux-rpm/about-rancher-selinux",
                 "reference-guides/rancher-security/selinux-rpm/about-rke2-selinux",
+                "reference-guides/rancher-security/selinux-rpm/about-k3s-selinux",
               ],
             },
-            "reference-guides/rancher-security/kubernetes-security-best-practices",
             "reference-guides/rancher-security/rancher-security-best-practices",
             "reference-guides/rancher-security/security-advisories-and-cves",
             "reference-guides/rancher-security/psa-restricted-exemptions",
