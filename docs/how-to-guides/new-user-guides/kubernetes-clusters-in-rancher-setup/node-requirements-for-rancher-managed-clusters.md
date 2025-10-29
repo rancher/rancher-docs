@@ -122,7 +122,7 @@ Details on which ports are used in each situation are found under [Downstream Cl
 
 ### IPv6 Address Requirements
 
-Rancher supports clusters configured with single-stack IPv4, single-stack IPv6, or dual-stack networking.
+Rancher supports clusters configured with IPv4-only, IPv6-only, or dual-stack networking.
 
 Each node must be provisioned with at least one valid IPv4 address, one IPv6 address, or both, according to the cluster networking configuration.
 

@@ -6,8 +6,8 @@ title: IPv4/IPv6 Dual-stack
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/dual-stack/"/>
 </head>
 
-Kubernetes supports single-stack IPv4, single-stack IPv6, and dual-stack networking configurations.
-For more details, refer to the official [Kubernetes Dual-Stack documentation](https://kubernetes.io/docs/concepts/services-networking/dual-stack/).
+Kubernetes supports IPv4-only, IPv6-only, and dual-stack networking configurations.
+For more details, refer to the official [Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/dual-stack/).
 
 ## Installing Rancher on IPv6-Only or Dual-Stack Clusters
 
@@ -45,7 +45,7 @@ To enable IPv6-only or dual-stack networking, you must configure:
 
 - Cluster CIDR
 - Service CIDR
-- Relevant networking parameters
+- Stack Preference
 
 Configuration references:
 

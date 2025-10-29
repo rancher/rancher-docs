@@ -152,8 +152,8 @@ Option to choose whether to expose etcd metrics to the public or only within the
 IPv4/IPv6 network CIDRs to use for pod IPs (default: `10.42.0.0/16`).
 
 Example values:
-- Single-stack IPv4: `10.42.0.0/16`
-- Single-stack IPv6: `2001:cafe:42::/56`
+- IPv4-only: `10.42.0.0/16`
+- IPv6-only: `2001:cafe:42::/56`
 - Dual-stack: `10.42.0.0/16,2001:cafe:42::/56`
 
 For additional requirements and limitations related to dual-stack or IPv6-only networking, see the following resources:
@@ -171,8 +171,8 @@ Cluster CIDR must be configured when the cluster is first created. It cannot be 
 IPv4/IPv6 network CIDRs to use for service IPs (default: `10.43.0.0/16`).
 
 Example values:
-- Single-stack IPv4: `10.43.0.0/16` 
-- Single-stack IPv6: `2001:cafe:43::/112` 
+- IPv4-only: `10.43.0.0/16` 
+- IPv6-only: `2001:cafe:43::/112` 
 - Dual-stack: `10.43.0.0/16,2001:cafe:43::/112`
 
 For additional requirements and limitations related to dual-stack or IPv6-only networking, see the following resources:
@@ -215,6 +215,33 @@ Authorized Cluster Endpoint can be used to directly access the Kubernetes API se
 For more detail on how an authorized cluster endpoint works and why it is used, refer to the [architecture section.](../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint)
 
 We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.](../../rancher-manager-architecture/architecture-recommendations.md#architecture-for-an-authorized-cluster-endpoint-ace)
+
+##### Stack Preference
+
+Choose the networking stack for the cluster. This option affects:
+
+- The address used for health and readiness probes of components such as Calico, etcd, kube-apiserver, kube-scheduler, kube-controller-manager, and kubelet
+- The server URL in the `authentication-token-webhook-config-file` for the Authorized Cluster Endpoint
+- The `advertise-client-urls` setting for etcd during snapshot restoration
+
+Options are `ipv4`, `ipv6`, `dual`:
+
+- When set to `ipv4`, the cluster uses `127.0.0.1`
+- When set to `ipv6`, the cluster uses `[::1]`
+- When set to `dual`, the cluster uses `localhost`
+
+The stack preference must match the cluster’s networking configuration:
+
+- Set to `ipv4` for IPv4-only clusters
+- Set to `ipv6` for IPv6-only clusters
+- Set to `dual` for dual-stack clusters
+
+:::caution
+
+Ensuring the loopback address configuration is correct is critical for successful cluster provisioning.
+For more information, refer to the [Node Requirements](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md) page.
+
+:::
 
 #### Registries
 
