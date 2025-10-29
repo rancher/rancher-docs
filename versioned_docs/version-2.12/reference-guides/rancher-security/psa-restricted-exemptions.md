@@ -55,6 +55,7 @@ plugins:
                      cert-manager,
                      cis-operator-system,
                      fleet-default,
+                     fleet-local,
                      ingress-nginx,
                      istio-system,
                      kube-node-lease,
@@ -63,5 +64,6 @@ plugins:
                      longhorn-system,
                      rancher-alerting-drivers,
                      security-scan,
+                     sr-operator-system,
                      tigera-operator]
 ```
