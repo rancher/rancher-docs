@@ -66,8 +66,8 @@ For more information, see the [Kubernetes Documentation](https://kubernetes.io/d
 
 K3s does **not** support Windows ([FAQ](https://docs.k3s.io/faq#does-k3s-support-windows))
 
-RKE2 supports Windows, but requires using either `Calico` or `Flannel` as the CNI.
-Note that dual-stack and BGP are currently not supported in Windows installations of RKE2.
+RKE2 supports Windows, but requires using either `Calico` or `Flannel` as the CNI.  
+Note that dual-stack clusters using BGP are not currently supported on Windows installations of RKE2.  
 For more details, see [RKE2 Network Options](https://docs.rke2.io/networking/basic_network_options).
 
 

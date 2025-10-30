@@ -103,11 +103,11 @@ The `worker` nodes, which is where your workloads will be deployed on, will typi
 
 We recommend the minimum three-node architecture listed in the table below, but you can always add more Linux and Windows workers to scale up your cluster for redundancy:
 
-| Node   | Operating System                                    | Kubernetes Cluster Role(s)                                                                                                                                                                                                                         | Purpose                                                                             |
-| ------ | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| Node 1 | Linux (Ubuntu Server 18.04 recommended)             | Control plane, etcd, worker | Manage the Kubernetes cluster                                                       |
-| Node 2 | Linux (Ubuntu Server 18.04 recommended)             | Worker                                                                                                                                                                       | Support the Rancher Cluster agent, Metrics server, DNS, and Ingress for the cluster |
-| Node 3 | Windows (Windows Server core version 1809 or above) | Worker                                                                                                                                                                       | Run your Windows containers                                                         |
+| Node   | Operating System                                                                       | Kubernetes Cluster Role(s)  | Purpose                                                                             |
+|--------|----------------------------------------------------------------------------------------|-----------------------------|-------------------------------------------------------------------------------------|
+| Node 1 | Linux (Ubuntu Server 18.04 recommended)                                                | Control plane, etcd, worker | Manage the Kubernetes cluster                                                       |
+| Node 2 | Linux (Ubuntu Server 18.04 recommended)                                                | Worker                      | Support the Rancher Cluster agent, Metrics server, DNS, and Ingress for the cluster |
+| Node 3 | Windows (Windows Server core version 1809 or above required, version 2022 recommended) | Worker                      | Run your Windows containers                                                         |
 
 ### Container Requirements
 
@@ -140,15 +140,15 @@ Your hosts can be:
 
 You will provision three nodes:
 
-- One Linux node, which manages the Kubernetes control plane, stores your `etcd`, and be a worker node
+- One Linux node, which manages the Kubernetes control plane, stores your `etcd`, and optionally be a worker node
 - A second Linux node, which will be another worker node
 - The Windows node, which will run your Windows containers as a worker node
 
-| Node   | Operating System                                             |
-|--------|--------------------------------------------------------------|
-| Node 1 | Linux (Ubuntu Server 18.04 recommended)                      |
-| Node 2 | Linux (Ubuntu Server 18.04 recommended)                      |
-| Node 3 | Windows (Windows Server core version 1809 or above required) |
+| Node   | Operating System                                                                       |
+|--------|----------------------------------------------------------------------------------------|
+| Node 1 | Linux (Ubuntu Server 18.04 recommended)                                                |
+| Node 2 | Linux (Ubuntu Server 18.04 recommended)                                                |
+| Node 3 | Windows (Windows Server core version 1809 or above required, version 2022 recommended) |
 
 If your nodes are hosted by a **Cloud Provider** and you want automation support such as loadbalancers or persistent storage devices, your nodes have additional configuration requirements. For details, see [Selecting Cloud Providers.](../set-up-cloud-providers/set-up-cloud-providers.md)
 
@@ -176,7 +176,7 @@ The first node in your cluster should be a Linux host that has both the **Contro
 
 1. After cluster creation, navigate to the **Registration** tab.
 1. In **Step 1** under the **Node Role** section, select all three roles. Although you can choose only the **etcd** and **Control Plane** roles, we recommend selecting all three.
-1. Optional: If you click **Show Advanced**, you can configure additional settings such as specifying the IP address(es), overriding the node hostname, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
+1. Optional: If you click **Show Advanced**, you can configure additional settings such as specifying the IP address(es), overriding the node hostname, or adding [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
 1. In **Step 2**, under the **Registration** section, copy the command displayed on the screen to your clipboard.
 1. SSH into your Linux host and run the command that you copied to your clipboard.
 
@@ -226,9 +226,9 @@ The registration command to add the Windows workers only appears after the clust
 
 1. After cluster creation, navigate to the **Registration** tab.
 1. In **Step 1** under the **Node Role** section, select **Worker**.
-1. Optional: If you click **Show Advanced**, you can configure additional settings such as specifying the IP address(es), overriding the node hostname, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
+1. Optional: If you click **Show Advanced**, you can configure additional settings such as specifying the IP address(es), overriding the node hostname, or adding [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
 1. In **Step 2**, under the **Registration** section, copy the command for Windows workers displayed on the screen to your clipboard.
-1. Log in to your Windows host using your preferred tool, such as [Microsoft Remote Desktop](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients). Run the command copied to your clipboard in the **Command Prompt (CMD)**.
+1. Log in to your Windows host using your preferred tool, such as [Microsoft Remote Desktop](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients). Run the command copied to your clipboard in the **PowerShell Console** as an Administrator.
 1. Optional: Repeat these instructions if you want to add more Windows nodes to your cluster.
 
 **Results:** 
