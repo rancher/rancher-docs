@@ -137,7 +137,8 @@ For instructions on cleaning nodes in RKE2 clusters that weren't deployed by Ran
 要删除 rancher-system-agent，请运行 [system-agent-uninstall.sh](https://github.com/rancher/system-agent/blob/main/system-agent-uninstall.sh) 脚本：
 
 ```
-curl https://raw.githubusercontent.com/rancher/system-agent/main/system-agent-uninstall.sh | sudo sh
+curl https://raw.githubusercontent.com/rancher/system-agent/main/system-agent-uninstall.sh > system-agent-uninstall.sh
+sudo sh system-agent-uninstall.sh
 ```
 
 ### 删除 RKE2
@@ -161,7 +162,8 @@ sudo rke2-uninstall.sh
 要删除 rancher-system-agent，请运行 [system-agent-uninstall.sh](https://github.com/rancher/system-agent/blob/main/system-agent-uninstall.sh) 脚本：
 
 ```
-curl https://raw.githubusercontent.com/rancher/system-agent/main/system-agent-uninstall.sh | sudo sh
+curl https://raw.githubusercontent.com/rancher/system-agent/main/system-agent-uninstall.sh > system-agent-uninstall.sh
+sudo sh system-agent-uninstall.sh
 ```
 
 ### 删除 K3s

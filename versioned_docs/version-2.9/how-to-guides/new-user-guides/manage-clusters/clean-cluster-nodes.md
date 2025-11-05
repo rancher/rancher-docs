@@ -200,7 +200,8 @@ You need to remove the following components from Rancher-provisioned RKE2 nodes:
 To remove the rancher-system-agent, run the [system-agent-uninstall.sh](https://github.com/rancher/system-agent/blob/main/system-agent-uninstall.sh) script:
 
 ```
-curl https://raw.githubusercontent.com/rancher/system-agent/main/system-agent-uninstall.sh | sudo sh
+curl https://raw.githubusercontent.com/rancher/system-agent/main/system-agent-uninstall.sh > system-agent-uninstall.sh
+sudo sh system-agent-uninstall.sh
 ```
 
 ### Removing RKE2
@@ -224,7 +225,8 @@ You need to remove the following components from Rancher-provisioned K3s nodes:
 To remove the rancher-system-agent, run the [system-agent-uninstall.sh](https://github.com/rancher/system-agent/blob/main/system-agent-uninstall.sh) script:
 
 ```
-curl https://raw.githubusercontent.com/rancher/system-agent/main/system-agent-uninstall.sh | sudo sh
+curl https://raw.githubusercontent.com/rancher/system-agent/main/system-agent-uninstall.sh > system-agent-uninstall.sh
+sudo sh system-agent-uninstall.sh
 ```
 
 ### Removing K3s
