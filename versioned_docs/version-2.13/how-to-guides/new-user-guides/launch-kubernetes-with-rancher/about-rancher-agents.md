@@ -27,38 +27,11 @@ The `cattle-cluster-agent` pod does not define the default CPU and memory reques
 
 To configure request values through the UI:
 
-<Tabs groupId="k8s-distro">
-<TabItem value="RKE">
-
-1. When you [create](./launch-kubernetes-with-rancher.md) or edit an existing cluster, go to the **Cluster Options** section.
-1. Expand the **Cluster Configuration** subsection.
-1. Configure your request values using the **CPU Requests** and **Memory Requests** fields as needed.
-
-</TabItem>
-<TabItem value="RKE2/K3s">
-
 1. When you [create](./launch-kubernetes-with-rancher.md) or edit an existing cluster, go to the **Cluster Configuration**.
 1. Select the **Cluster Agent** subsection.
 1. Configure your request values using the **CPU Reservation** and **Memory Reservation** fields as needed.
 
-</TabItem>
-</Tabs>
-
 If you prefer to configure via YAML, add the following snippet to your configuration file:
-
-<Tabs groupId="k8s-distro">
-<TabItem value="RKE">
-
-```yaml
-cluster_agent_deployment_customization:
-  override_resource_requirements:
-    requests:
-      cpu: 50m
-      memory: 100Mi
-```
-
-</TabItem>
-<TabItem value="RKE2/K3s">
 
 ```yaml
 spec:
@@ -68,9 +41,6 @@ spec:
         cpu: 50m
         memory: 100Mi 
 ```
-
-</TabItem>
-</Tabs>
 
 ### Scheduling rules
 
