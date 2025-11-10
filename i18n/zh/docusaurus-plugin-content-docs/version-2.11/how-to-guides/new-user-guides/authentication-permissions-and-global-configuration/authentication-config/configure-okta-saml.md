@@ -67,7 +67,7 @@ Okta 集成仅支持服务提供商发起的登录。
 - 在 Rancher 中为用户和组分配权限时将不会验证用户和组。
 - 添加用户时，必须正确输入确切的用户 ID（即 `UID` 字段）。键入用户 ID 时，将不会搜索可能匹配的其他用户 ID。
 - 添加组时，必须从文本框旁边的下拉列表中选择组。Rancher 假定来自文本框的任何输入都是用户。
-- 用户组下拉列表仅显示你所属的用户组。如果你不是某个组的成员，你将无法添加该组。
+- The group drop-down shows only the groups that you are a member of. However, if you have Administrator permissions or restricted Administrator permissions, you can join a group that you are not a member of.
 
 :::
 

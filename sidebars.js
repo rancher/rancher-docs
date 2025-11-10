@@ -84,8 +84,6 @@ const sidebars = {
                 id: "getting-started/installation-and-upgrade/installation-requirements/installation-requirements",
               },
               items: [
-                "getting-started/installation-and-upgrade/installation-requirements/install-docker",
-                "getting-started/installation-and-upgrade/installation-requirements/dockershim",
                 "getting-started/installation-and-upgrade/installation-requirements/port-requirements",
               ],
             },
@@ -347,17 +345,6 @@ const sidebars = {
                 },
                 {
                   type: "category",
-                  label: "Install Cluster Autoscaler",
-                  link: {
-                    type: "doc",
-                    id: "how-to-guides/new-user-guides/manage-clusters/install-cluster-autoscaler/install-cluster-autoscaler",
-                  },
-                  items: [
-                    "how-to-guides/new-user-guides/manage-clusters/install-cluster-autoscaler/use-aws-ec2-auto-scaling-groups",
-                  ],
-                },
-                {
-                  type: "category",
                   label: "Create Kubernetes Persistent Storage",
                   link: {
                     type: "doc",
@@ -409,7 +396,6 @@ const sidebars = {
               items: [
                 "how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs",
                 "how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher",
-                "how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher",
                 "how-to-guides/new-user-guides/kubernetes-cluster-setup/rke2-for-rancher",
               ],
             },
@@ -1047,9 +1033,9 @@ const sidebars = {
               items: [
                 "reference-guides/rancher-security/selinux-rpm/about-rancher-selinux",
                 "reference-guides/rancher-security/selinux-rpm/about-rke2-selinux",
+                "reference-guides/rancher-security/selinux-rpm/about-k3s-selinux",
               ],
             },
-            "reference-guides/rancher-security/kubernetes-security-best-practices",
             "reference-guides/rancher-security/rancher-security-best-practices",
             "reference-guides/rancher-security/security-advisories-and-cves",
             "reference-guides/rancher-security/psa-restricted-exemptions",

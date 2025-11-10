@@ -66,16 +66,18 @@ If your organization uses Shibboleth for user authentication, you can configure 
 
 **Result:** Rancher is configured to work with Shibboleth. Your users can now sign into Rancher using their Shibboleth logins.
 
-### SAML Provider Caveats
+:::note SAML Provider Caveats
 
 If you configure Shibboleth without OpenLDAP, the following caveats apply due to the fact that SAML Protocol does not support search or lookup for users or groups.
 
 - There is no validation on users or groups when assigning permissions to them in Rancher.
 - When adding users, the exact user IDs (i.e. UID Field) must be entered correctly. As you type the user ID, there will be no search for other user IDs that may match.
 - When adding groups, you must select the group from the drop-down that is next to the text box. Rancher assumes that any input from the text box is a user.
-- The group drop-down shows only the groups that you are a member of. You will not be able to add groups that you are not a member of.
+- The group drop-down shows only the groups that you are a member of. However, if you have Administrator permissions or restricted Administrator permissions, you can join a group that you are not a member of.
 
 To enable searching for groups when assigning permissions in Rancher, you will need to configure a back end for the SAML provider that supports groups, such as OpenLDAP.
+
+:::
 
 ## Setting up OpenLDAP in Rancher
 
