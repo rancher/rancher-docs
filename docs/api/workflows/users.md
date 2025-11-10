@@ -18,7 +18,7 @@ Creating a local user is a two-step process: you must create the `User` resource
 Only a user with sufficient permissions can create a User resource.
 
 ```bash
-kubectl create  -f -<<EOF
+kubectl create -f -<<EOF
 apiVersion: management.cattle.io/v3
 kind: User
 metadata:
@@ -31,12 +31,12 @@ The user's password must be provided in a `Secret` object within the `cattle-loc
 
 :::important
 
-Important The `Secret` must have the same name as the metadata.name (and spec.username) of the `User` resource. 
+Important: The `Secret` must have the same name as the metadata.name (and username) of the `User` resource. 
 
 :::
 
 ```bash
-kubectl create  -f -<<EOF
+kubectl create -f -<<EOF
 apiVersion: v1
 kind: Secret
 metadata:
