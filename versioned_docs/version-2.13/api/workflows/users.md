@@ -156,7 +156,7 @@ EOF
         }
     ],
     "summary": "Completed"
-}```
+}
 ```
 
 ### For all users
@@ -181,5 +181,5 @@ EOF
         }
     ],
     "summary": "Completed"
-}```
+}
 ```
