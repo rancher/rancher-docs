@@ -48,7 +48,8 @@ stringData:
 EOF
 ```
 
-After the plaintext password is submitted, the Rancher webhook automatically hashes it, transforming the Secret's content:
+After the plaintext password is submitted, the Rancher webhook automatically hashes it, replacing the Secret's content 
+and ensuring that the plaintext password is never stored:
 
 ```yaml
 apiVersion: v1
@@ -69,9 +70,11 @@ metadata:
   uid: bade9f0a-b06f-4a77-9a39-4284dc2349c5
 type: Opaque
 ```
+
 ## Updating user's password
 
 To change a user's password, you must use the `PasswordChangeRequest` resource, which handles the secure updating of the password.
+
 ```yaml
 kubectl create  -f -<<EOF
 apiVersion: ext.cattle.io/v1
