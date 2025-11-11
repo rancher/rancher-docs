@@ -69,7 +69,7 @@ metadata:
   uid: bade9f0a-b06f-4a77-9a39-4284dc2349c5
 type: Opaque
 ```
-## Password update
+## Updating user's password
 
 To change a user's password, you must use the `PasswordChangeRequest` resource, which handles the secure updating of the password.
 ```yaml
@@ -127,10 +127,10 @@ EOF
 testuser
 ```
 
-## Group membership refresh request
+## Refreshing the group membership
 
-The `GroupMembershipRefreshRequest` resource is used to trigger an update of group memberships for users, typically relevant 
-when using external authentication providers. 
+The `GroupMembershipRefreshRequest` resource is used to trigger an update of group memberships for users.
+Note: group membership is only supported for external authentication providers. 
 
 ### For a single user
 
@@ -142,7 +142,18 @@ spec:
   userId: testuser
 EOF
 
-{"conditions":[{"lastTransitionTime":"2025-11-10T12:01:03Z","message":"","reason":"","status":"True","type":"UserRefreshInitiated"}],"summary":"Completed"}
+{
+    "conditions": [
+        {
+            "lastTransitionTime": "2025-11-10T12:01:03Z",
+            "message": "",
+            "reason": "",
+            "status": "True",
+            "type": "UserRefreshInitiated"
+        }
+    ],
+    "summary": "Completed"
+}```
 ```
 
 ### For all users
@@ -156,5 +167,16 @@ spec:
    userId: "*"
 EOF
 
-{"conditions":[{"lastTransitionTime":"2025-11-10T12:01:59Z","message":"","reason":"","status":"True","type":"UserRefreshInitiated"}],"summary":"Completed"}
+{
+    "conditions": [
+        {
+            "lastTransitionTime": "2025-11-10T12:01:59Z",
+            "message": "",
+            "reason": "",
+            "status": "True",
+            "type": "UserRefreshInitiated"
+        }
+    ],
+    "summary": "Completed"
+}```
 ```
