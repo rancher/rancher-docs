@@ -1249,7 +1249,8 @@
           "items": [
             "api/workflows/projects",
             "api/workflows/kubeconfigs",
-            "api/workflows/tokens"
+            "api/workflows/tokens",
+            "api/workflows/users"
           ]
         },
         "api/api-reference",
