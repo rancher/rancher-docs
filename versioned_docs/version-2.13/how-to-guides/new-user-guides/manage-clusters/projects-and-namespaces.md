@@ -196,3 +196,7 @@ To add a resource quota,
 1. Select **Delete**.
 
 When you delete a project, any namespaces that were formerly associated with the project will remain on the cluster. You can find these namespaces in the Rancher UI, in the **Not in a Project** tab of the **Projects/Namespaces** page. You can reassign these namespaces to a project by [moving](../manage-namespaces.md#moving-namespaces-to-another-project) them.
+
+## Further Reading
+
+Projects and project members can be created more programmatically via the [Public API](../../../api/quickstart.md). See the [project workflow doc](../../../api/workflows/projects.md) for more information.
