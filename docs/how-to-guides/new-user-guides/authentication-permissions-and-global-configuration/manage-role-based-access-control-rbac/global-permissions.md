@@ -114,6 +114,8 @@ You can create custom GlobalRoles to satisfy use cases not directly addressed by
 
 Create custom GlobalRoles through the UI or through automation (such as the Rancher Kubernetes API). You can specify the same type of rules as the rules for upstream roles and clusterRoles. 
 
+See the list [Global Resources](global-resources.md) for relevant resources.
+
 #### Escalate and Bind verbs
 
 When giving permissions on GlobalRoles, keep in mind that Rancher respects the `escalate` and `bind` verbs, in a similar fashion to [Kubernetes](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#restrictions-on-role-creation-or-update).
