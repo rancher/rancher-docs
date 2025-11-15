@@ -25,9 +25,11 @@ spec:
 EOF
 ```
 
-To ensure a unique project ID, use `metadata.generateName`, but note that `kubectl apply` does not work with `metadata.generateName`, so `kubectl create` must be used instead. Alternatively, specifying the `metadata.name` is allowed, but will get denied if there already exists a project with that name.
+When creating a new project, you have two primary options for setting the name:
 
-The field `spec.displayName` is the name used for the project in the UI. The field `metadate.name` will be used in it's absence.
+- **Automatic Generation:** Use `metadata.generateName` to ensure a unique project ID. However, note that you must use `kubectl create` (instead of `kubectl apply`) with this option, as `kubectl apply` does not support it.
+- **Manual Naming:** You can explicitly set the project ID using `metadata.name`. If a project with that exact name already exists, the name request is denied.
+The display name seen in the UI is set by `spec.displayName`. If `spec.displayName` is not provided, the field `metadata.name` is used instead.
 
 Set `metadata.namespace` and `spec.clusterName` to the ID for the cluster the project belongs to.
 
@@ -49,7 +51,7 @@ spec:
 EOF
 ```
 
-Setting the `field.cattle.io/creatorId` field creates a ProjectRoleTemplateBinding that allows the specified user to see project resources with the `get` command and view the project in the Rancher UI. Cluster owner and admin accounts don't need to set this annotation to perform these tasks.
+Setting the `field.cattle.io/creatorId` field creates a `ProjectRoleTemplateBinding` that grants the specified user the ability to see project resources with the `get` command and view the project in the Rancher UI. Cluster owner and admin accounts don't need to set this annotation to perform these tasks.
 
 Setting the  `field.cattle.io/creator-principal-name` annotation to the user's principal preserves it in a projectroletemplatebinding automatically created for the project owner.
 
@@ -102,7 +104,7 @@ EOF
 
 ### Backing Namespace
 
-After being created, the field `status.backingNamespace` gets populated. This represents the namespace in the management cluster that is created to manage project related resources. Examples of resources stored in the backing namespace are [project scoped secrets](../../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md#creating-secrets-in-projects) and [project role template bindings](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-roles).
+After creating the project, the field `status.backingNamespace` gets populated. This represents the namespace in the management cluster that is created to manage project related resources. Examples of resources stored in the backing namespace are [project scoped secrets](../../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md#creating-secrets-in-projects) and [project role template bindings](../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#project-roles).
 
 ## Adding a Member to a Project
 
@@ -215,4 +217,4 @@ kubectl --namespace c-m-abcde delete project p-vwxyz
 
 Note that this command doesn't delete the namespaces and resources that formerly belonged to the project.
 
-It does delete all projectroletemplatebindings to the projects, so recreating the project will not restore membership of the project. Those will need to be recreated.
+It does delete all project role template bindings for the projects, so recreating the project will not restore members added to the project, and you have to add users as members again.

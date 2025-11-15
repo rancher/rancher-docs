@@ -13,7 +13,7 @@ A project is a group of namespaces, and it is a concept introduced by Rancher. P
 
 :::note
 
-Projects are de-emphasized on the UI because it is not required to create Kubernetes resources within a project scope. However, resources such as [Secrets](../../new-user-guides/kubernetes-resources-setup/secrets.md#creating-secrets-in-projects) can still be created in a project scope if the legacy feature flag is enabled.
+Projects are de-emphasized on the UI because it is not required to create Kubernetes resources within a project scope. However, resources such as [Secrets](../../new-user-guides/kubernetes-resources-setup/secrets.md#creating-secrets-in-projects) can still be created in a project scope.
 
 :::
 
@@ -199,4 +199,4 @@ When you delete a project, any namespaces that were formerly associated with the
 
 ## Further Reading
 
-Projects and project members can be created more programmatically via the [Public API](../../../api/quickstart.md). See the [project workflow doc](../../../api/workflows/projects.md) for more information.
+You can create projects and project members more programmatically via the [Public API](../../../api/quickstart.md). See the [project workflow doc](../../../api/workflows/projects.md) for more information.

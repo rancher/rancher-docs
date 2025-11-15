@@ -199,4 +199,4 @@ When you delete a project, any namespaces that were formerly associated with the
 
 ## Further Reading
 
-Projects and project members can be created more programmatically via the [Public API](../../../api/quickstart.md). See the [project workflow doc](../../../api/workflows/projects.md) for more information.
+You can create projects and project members more programmatically via the [Public API](../../../api/quickstart.md). See the [project workflow doc](../../../api/workflows/projects.md) for more information.
