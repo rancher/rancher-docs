@@ -7,60 +7,69 @@ description: Create an OpenID Connect (OIDC) client and configure Rancher to wor
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-generic-oidc"/>
 </head>
 
-If your organization uses an OIDC provider for user authentication, you can configure Rancher to allow login using Identity Provider (IdP) credentials. Rancher supports integration with the OpenID Connect (OIDC) protocol and the SAML protocol. Both implementations are functionally equivalent when used with Rancher. The following instructions describe how to configure Rancher to work using the OIDC protocol.
+Generic OpenID Connect (OIDC) allows users to sign in to Rancher using their credentials from their existing account at an OIDC Identity Provider (IdP). Rancher supports integration with the OIDC protocol and the SAML protocol. Both implementations are functionally equivalent when used with Rancher. The following instructions describe how to create an OpenID Connect (OIDC) client and configure Rancher to work with your authentication provider or your own custom IdP. Users can then sign into Rancher using their login from the OIDC IdP.
 
 ## Prerequisites
 
-- In Rancher:
-  - Generic OIDC is disabled.
+In Rancher, Generic OIDC is disabled.
 
 :::note
+
 Consult the documentation for your specific IdP to complete the listed prerequisites.
+
 :::
 
-- In your IdP:
-  - Create a new client with the settings below:
+### Identity Provider
+
+In your IdP, create a new client with the settings below:
+
+  Setting | Value
+  ------------|------------
+  `Client ID` | <CLIENT_ID> (e.g. `rancher`)
+  `Name` | <CLIENT_NAME> (e.g. `rancher`)
+  `Client Protocol` | `openid-connect`
+  `Access Type` | `confidential`
+  `Valid Redirect URI` | `https://yourRancherHostURL/verify-auth`
+
+### OIDC client
+
+In the new OIDC client, create mappers to expose the users fields.
+
+  1. Create a new Groups Mapper with the settings below:
 
     Setting | Value
     ------------|------------
-    `Client ID` | <CLIENT_ID> (e.g. `rancher`)
-    `Name` | <CLIENT_NAME> (e.g. `rancher`)
-    `Client Protocol` | `openid-connect`
-    `Access Type` | `confidential`
-    `Valid Redirect URI` | `https://yourRancherHostURL/verify-auth`
+    `Name` | `Groups Mapper`
+    `Mapper Type` | `Group Membership`
+    `Token Claim Name` | `groups`
+    `Add to ID token` | `OFF`
+    `Add to access token` | `OFF`
+    `Add to user info` | `ON`
 
-  - In the new OIDC client, create mappers to expose the users fields.
-    - Create a new Groups Mapper with the settings below:
+  1. Create a new Client Audience with the settings below:
 
-      Setting | Value
-      ------------|------------
-      `Name` | `Groups Mapper`
-      `Mapper Type` | `Group Membership`
-      `Token Claim Name` | `groups`
-      `Add to ID token` | `OFF`
-      `Add to access token` | `OFF`
-      `Add to user info` | `ON`
+    Setting | Value
+    ------------|------------
+    `Name` | `Client Audience`
+    `Mapper Type` | `Audience`
+    `Included Client Audience` | `CLIENT_NAME`
+    `Add to access token` | `ON`
 
-    - Create a new Client Audience with the settings below:
+  1. Create a new Groups Path with the settings below.
 
-      Setting | Value
-      ------------|------------
-      `Name` | `Client Audience`
-      `Mapper Type` | `Audience`
-      `Included Client Audience` | <CLIENT_NAME>
-      `Add to access token` | `ON`
+    Setting | Value
+    ------------|------------
+    `Name` | `Group Path`
+    `Mapper Type` | `Group Membership`
+    `Token Claim Name` | `full_group_path`
+    `Full group path` | `ON`
+    `Add to user info` | `ON`
 
-    - Create a new "Groups Path" with the settings below.
+:::warning
 
-      Setting | Value
-      ------------|------------
-      `Name` | `Group Path`
-      `Mapper Type` | `Group Membership`
-      `Token Claim Name` | `full_group_path`
-      `Full group path` | `ON`
-      `Add to user info` | `ON`
+Rancher will use the value received in the "sub" claim to form the PrincipalID which is the unique identifier in Rancher.  It is important to make this a value that will be unique and immutable.
 
-- Important:  Rancher will use the value received in the "sub" claim to form the PrincipalID which is the unique identifier in Rancher.  It is important to make this a value that will be unique and immutable.
+:::
 
 ## Configuring Generic OIDC in Rancher
 
@@ -80,7 +89,7 @@ Consult the documentation for your specific IdP to complete the listed prerequis
 
 **Result:** Rancher is configured to work with your provider using the OIDC protocol. Your users can now sign into Rancher using their IdP logins.
 
-## Configuration Reference
+### Configuration Reference
 
 | Field                     | Description                                                                                                                                        |
 | ------------------------- |----------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -91,6 +100,24 @@ Consult the documentation for your specific IdP to complete the listed prerequis
 | Rancher URL               | The URL for your Rancher Server.                                                                                                                   |
 | Issuer                    | The URL of your IdP.  If your provider has discovery enabled, Rancher uses the Issuer URL to fetch all of the required URLs.                   |
 | Auth Endpoint             | The URL where users are redirected to authenticate.                                                                                                |
+
+### Custom Claim Mapping
+
+As of Rancher v2.13.0, custom claim mapping within the Generic OIDC configuration is supported for name, email and groups claims. This allows you to manually map these OIDC claims when your IdP doesn't use standard names in tokens.
+
+When on the **Configure an OIDC account** form:
+
+1. Select **Add custom claims**.
+1. Add your custom name, email or groups claims to the appropriate **Custom Claim** field.
+
+  | Custom Claim Field | Default OIDC Claim | Custom Claim Description |
+  | ------------- | ------------------ | ------------------------ |
+  | Custom Name Claim | name           | The name of the claim in the OIDC token that contains the user's full name or display name. |
+  | Custom Email Claim | email | The name of the claim in the OIDC token that contains the user's email address. |
+  | Custom Groups Claim | groups | The name of the claim in the OIDC token that contains the user's group memberships (used for RBAC). |
+
+For example, if your IdP sends groups in a claim called `custom_roles`, enter `custom_roles` into the **Custom Groups Claim** field. Rancher then looks for that specific claim when processing the user's token.
+
 ## Troubleshooting
 
 If you are experiencing issues while testing the connection to the OIDC server, first double-check the configuration options of your OIDC client. You can also inspect the Rancher logs to help pinpoint what's causing issues. Debug logs may contain more detailed information about the error. Please refer to [How can I enable debug logging](../../../../faq/technical-items.md#how-can-i-enable-debug-logging) in this documentation.
