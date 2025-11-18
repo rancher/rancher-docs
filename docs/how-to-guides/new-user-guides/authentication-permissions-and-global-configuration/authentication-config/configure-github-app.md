@@ -8,7 +8,7 @@ title: Configure GitHub App
 
 In environments using GitHub, you can configure the new GitHub App authentication provider in the Rancher, which allows users to authenticate against a GitHub Organization account using a dedicated [GitHub App](https://docs.github.com/en/apps/overview). This new provider runs alongside the existing standard GitHub authentication provider, offering increased security and better management of permissions based on GitHub Organization teams.
 
-## Prerequisites (GitHub)
+## Prerequisites
 
 :::warning
 
@@ -42,7 +42,7 @@ Generate a [client secret](https://docs.github.com/en/rest/authentication/authen
 
 ### Generate a Private Key
 
-Generate a [private key](https://docs.github.com/en/enterprise-server@3.14/apps/creating-github-apps/authenticating-with-a-github-app/managing-private-keys-for-github-apps#generating-private-keys) on the settings page for your app.
+Generate a [private key](https://docs.github.com/en/enterprise-server/apps/creating-github-apps/authenticating-with-a-github-app/managing-private-keys-for-github-apps#generating-private-keys) on the settings page for your app.
 
 1. Go to your GitHub App.
 1. Next to **Private Keys**, click **Generate a private key**.
