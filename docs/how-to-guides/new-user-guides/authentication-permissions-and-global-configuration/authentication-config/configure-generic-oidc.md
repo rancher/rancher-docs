@@ -7,7 +7,7 @@ description: Create an OpenID Connect (OIDC) client and configure Rancher to wor
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-generic-oidc"/>
 </head>
 
-Generic OpenID Connect (OIDC) allows users to sign in to Rancher using their credentials from their existing account at an OIDC Identity Provider (IdP). Rancher supports integration with the OIDC protocol and the SAML protocol. Both implementations are functionally equivalent when used with Rancher. The following instructions describe how to create an OIDC client and configure Rancher to work with your authentication provider or your own custom IdP. Users can then sign into Rancher using their login from the OIDC IdP.
+Generic OpenID Connect (OIDC) allows users to sign in to Rancher using their credentials from their existing account at an OIDC Identity Provider (IdP). Rancher supports integration with the OIDC protocol and the SAML protocol. Both implementations are functionally equivalent when used with Rancher. The following instructions describe how to create an OIDC client and configure Rancher to work with your authentication provider. Users can then sign into Rancher using their login from the OIDC IdP.
 
 ## Prerequisites
 
@@ -22,6 +22,7 @@ Consult the documentation for your specific IdP to complete the listed prerequis
 ### Identity Provider
 
 #### OIDC Client
+
 In your IdP, create a new client with the settings below:
 
   Setting | Value
@@ -31,7 +32,6 @@ In your IdP, create a new client with the settings below:
   `Client Protocol` | `openid-connect`
   `Access Type` | `confidential`
   `Valid Redirect URI` | `https://yourRancherHostURL/verify-auth`
-
 
 In the new OIDC client, create mappers to expose the user's fields.
 
