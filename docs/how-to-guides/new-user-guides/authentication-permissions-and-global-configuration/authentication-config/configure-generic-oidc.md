@@ -11,6 +11,8 @@ Generic OpenID Connect (OIDC) allows users to sign in to Rancher using their cre
 
 ## Prerequisites
 
+### Identity Provider
+
 In Rancher, Generic OIDC is disabled.
 
 :::note
@@ -18,8 +20,6 @@ In Rancher, Generic OIDC is disabled.
 Consult the documentation for your specific IdP to complete the listed prerequisites.
 
 :::
-
-### Identity Provider
 
 #### OIDC Client
 
