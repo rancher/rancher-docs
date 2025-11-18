@@ -89,6 +89,17 @@ Rancher uses the value received in the "sub" claim to form the PrincipalID which
 
 **Result:** Rancher is configured to work with your provider using the OIDC protocol. Your users can now sign into Rancher using their IdP logins.
 
+### Custom Claim Mapping
+
+Custom claim mapping within the Generic OIDC configuration is supported for `name`, `email` and `groups` claims. This allows you to manually map these OIDC claims when your IdP doesn't use standard names in tokens.
+
+When on the **Configure an OIDC account** form:
+
+1. Select **Add custom claims**.
+1. Add your custom `name`, `email` or `groups` claims to the appropriate **Custom Claims** field.
+
+For example, if your IdP sends `groups` in a claim called `custom_roles`, enter `custom_roles` into the **Custom Groups Claim** field. Rancher then looks for that specific claim when processing the user's token.
+
 ### Configuration Reference
 
 | Field                     | Description                                                                                                                                        |
@@ -101,22 +112,13 @@ Rancher uses the value received in the "sub" claim to form the PrincipalID which
 | Issuer                    | The URL of your IdP.  If your provider has discovery enabled, Rancher uses the Issuer URL to fetch all of the required URLs.                   |
 | Auth Endpoint             | The URL where users are redirected to authenticate.                                                                                                |
 
-### Custom Claim Mapping
+#### Custom Claims
 
-Custom claim mapping within the Generic OIDC configuration is supported for `name`, `email` and `groups` claims. This allows you to manually map these OIDC claims when your IdP doesn't use standard names in tokens.
-
-When on the **Configure an OIDC account** form:
-
-1. Select **Add custom claims**.
-1. Add your custom name, email or `groups` claims to the appropriate **Custom Claim** field.
-
-  | Custom Claim Field | Default OIDC Claim | Custom Claim Description |
-  | ------------- | ------------------ | ------------------------ |
-  | Custom Name Claim | `name`           | The name of the claim in the OIDC token that contains the user's full name or display name. |
-  | Custom Email Claim | `email` | The name of the claim in the OIDC token that contains the user's email address. |
-  | Custom Groups Claim | `groups` | The name of the claim in the OIDC token that contains the user's group memberships (used for RBAC). |
-
-For example, if your IdP sends `groups` in a claim called `custom_roles`, enter `custom_roles` into the **Custom Groups Claim** field. Rancher then looks for that specific claim when processing the user's token.
+| Custom Claim Field | Default OIDC Claim | Custom Claim Description |
+| ------------- | ------------------ | ------------------------ |
+| Custom Name Claim | `name`           | The name of the claim in the OIDC token that contains the user's full name or display name. |
+| Custom Email Claim | `email` | The name of the claim in the OIDC token that contains the user's email address. |
+| Custom Groups Claim | `groups` | The name of the claim in the OIDC token that contains the user's group memberships (used for RBAC). |
 
 ## Troubleshooting
 
