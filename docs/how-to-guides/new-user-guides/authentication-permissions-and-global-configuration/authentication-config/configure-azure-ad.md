@@ -364,9 +364,9 @@ Since the filter prevents Rancher from seeing that the user belongs to an exclud
     - Use the built-in Rancher auth or
     - Use another third-party auth system and set that up in Rancher. Please see the [authentication docs](authentication-config.md) to learn how to configure other open authentication providers.
 
-## Utilizing Azure AD Roles Claims
+## Azure AD Roles Claims
 
-As of Rancher v2.13.0, you can utilize the Roles claim provided by the Azure AD OIDC provider, allowing for complete delegation of Role-Based Access Control (RBAC) to Azure AD. Previously, the Azure AD OIDC in Rancher only processed the Groups claims (FullGroupPath or Groups) to determine a user's group membership. This enhancement extends the logic to also include the Roles claim within the user's OIDC token.
+Rancher supports the Roles claim provided by the Azure AD OIDC provider token, allowing for complete delegation of Role-Based Access Control (RBAC) to Azure AD. Previously, Rancher only processed the `Groups` claim to determine a user's `group` membership. This enhancement extends the logic to also include the Roles claim within the user's OIDC token.
 
 By including the Roles claim, administrators can:
 
@@ -379,6 +379,6 @@ For example, consider the following role structure in Azure AD:
 | Azure AD Role Name | Members        |
 |--------------------|----------------|
 | project-alpha-dev  | User A, User C |
-| project-beta-ops   | User A, User C |
 
-User A logs into Rancher via Azure AD. The OIDC token includes a Roles claim, ["project-alpha-dev"]. The Rancher logic processes the token, and the internal list of groups/roles for User A includes `project-alpha-dev`. An administrator has created a Project Role Binding that maps the Azure AD Role `project-alpha-dev` to the Project Role `Dev Member` for Project Alpha. User A is automatically granted the `Dev Member` role in Project Alpha.
+
+User A logs into Rancher via Azure AD. The OIDC token includes a Roles claim, [`project-alpha-dev`]. The Rancher logic processes the token, and the internal list of `groups`/roles for User A which includes `project-alpha-dev`. An administrator has created a Project Role Binding that maps the Azure AD Role `project-alpha-dev` to the Project Role `Dev Member` for Project Alpha. User A is automatically granted the `Dev Member` role in Project Alpha.
