@@ -33,9 +33,9 @@ In your IdP, create a new client with the settings below:
 
 ### OIDC client
 
-In the new OIDC client, create mappers to expose the users fields.
+In the new OIDC client, create mappers to expose the user's fields.
 
-  1. Create a new Groups Mapper with the settings below:
+  1. Create a new `Groups Mapper` with the settings below:
 
     Setting | Value
     ------------|------------
@@ -46,7 +46,7 @@ In the new OIDC client, create mappers to expose the users fields.
     `Add to access token` | `OFF`
     `Add to user info` | `ON`
 
-  1. Create a new Client Audience with the settings below:
+  1. Create a new `Client Audience` with the settings below:
 
     Setting | Value
     ------------|------------
@@ -55,7 +55,7 @@ In the new OIDC client, create mappers to expose the users fields.
     `Included Client Audience` | `CLIENT_NAME`
     `Add to access token` | `ON`
 
-  1. Create a new Groups Path with the settings below.
+  1. Create a new `Groups Path` with the settings below.
 
     Setting | Value
     ------------|------------
@@ -67,7 +67,7 @@ In the new OIDC client, create mappers to expose the users fields.
 
 :::warning
 
-Rancher will use the value received in the "sub" claim to form the PrincipalID which is the unique identifier in Rancher.  It is important to make this a value that will be unique and immutable.
+Rancher uses the value received in the "sub" claim to form the PrincipalID which is the unique identifier in Rancher.  It is important to make this a value that is unique and immutable.
 
 :::
 
@@ -103,20 +103,20 @@ Rancher will use the value received in the "sub" claim to form the PrincipalID w
 
 ### Custom Claim Mapping
 
-As of Rancher v2.13.0, custom claim mapping within the Generic OIDC configuration is supported for name, email and groups claims. This allows you to manually map these OIDC claims when your IdP doesn't use standard names in tokens.
+Custom claim mapping within the Generic OIDC configuration is supported for `name`, `email` and `groups` claims. This allows you to manually map these OIDC claims when your IdP doesn't use standard names in tokens.
 
 When on the **Configure an OIDC account** form:
 
 1. Select **Add custom claims**.
-1. Add your custom name, email or groups claims to the appropriate **Custom Claim** field.
+1. Add your custom name, email or `groups` claims to the appropriate **Custom Claim** field.
 
   | Custom Claim Field | Default OIDC Claim | Custom Claim Description |
   | ------------- | ------------------ | ------------------------ |
-  | Custom Name Claim | name           | The name of the claim in the OIDC token that contains the user's full name or display name. |
-  | Custom Email Claim | email | The name of the claim in the OIDC token that contains the user's email address. |
-  | Custom Groups Claim | groups | The name of the claim in the OIDC token that contains the user's group memberships (used for RBAC). |
+  | Custom Name Claim | `name`           | The name of the claim in the OIDC token that contains the user's full name or display name. |
+  | Custom Email Claim | `email` | The name of the claim in the OIDC token that contains the user's email address. |
+  | Custom Groups Claim | `groups` | The name of the claim in the OIDC token that contains the user's group memberships (used for RBAC). |
 
-For example, if your IdP sends groups in a claim called `custom_roles`, enter `custom_roles` into the **Custom Groups Claim** field. Rancher then looks for that specific claim when processing the user's token.
+For example, if your IdP sends `groups` in a claim called `custom_roles`, enter `custom_roles` into the **Custom Groups Claim** field. Rancher then looks for that specific claim when processing the user's token.
 
 ## Troubleshooting
 
