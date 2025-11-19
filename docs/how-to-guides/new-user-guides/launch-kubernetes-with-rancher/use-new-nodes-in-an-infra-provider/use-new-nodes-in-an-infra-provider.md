@@ -6,7 +6,7 @@ title: Launching Kubernetes on New Nodes in an Infrastructure Provider
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider"/>
 </head>
 
-When you create an RKE2 cluster using a node template in Rancher, each resulting node pool is shown in a new **Machine Pools** tab. You can see the machine pools by doing the following:
+When you [create an RKE2 cluster](../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md#cluster-config-file-reference) using a machine config in Rancher, each resulting node pool is shown in a new **Machine Pools** tab. You can see the machine pools by doing the following:
 
 1. Click **☰ > Cluster Management**.
 1. Click the name of the RKE2 cluster.
