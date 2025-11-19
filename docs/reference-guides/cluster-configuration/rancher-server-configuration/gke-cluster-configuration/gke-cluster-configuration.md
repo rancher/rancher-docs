@@ -67,11 +67,11 @@ Choose whether to enable or disable inter-project communication.
 
 #### Imported Clusters
 
-For imported clusters, Project Network Isolation (PNI) requires Kubernetes Network Policy to be enabled on the cluster beforehand.  
+For imported clusters, Project Network Isolation (PNI) requires Kubernetes Network Policy to be enabled on the cluster beforehand.
 For clusters created by Rancher, Rancher enables Kubernetes Network Policy automatically.
 
-1. In GKE, enable Network Policy at the cluster level. (Refer to the official GKE guide)[https://cloud.google.com/kubernetes-engine/docs/how-to/network-policy]
-2. After enabling Network Policy, import the cluster into Rancher and enable PNI for project-level isolation.
+1. In GKE, enable Network Policy at the cluster level. Refer to the [official GKE guide](https://cloud.google.com/kubernetes-engine/docs/how-to/network-policy) for instructions.
+1. After enabling Network Policy, import the cluster into Rancher and enable PNI for project-level isolation.
 
 ### Node Ipv4 CIDR Block
 
