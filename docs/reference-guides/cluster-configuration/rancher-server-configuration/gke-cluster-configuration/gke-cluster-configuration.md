@@ -63,16 +63,15 @@ Enable network policy enforcement on the cluster. A network policy defines the l
 
 _Mutable: yes_
 
-choose whether to enable or disable inter-project communication.
+Choose whether to enable or disable inter-project communication.
 
-:::note
+#### Imported Clusters
 
-For **imported GKE clusters**, Project Network Isolation (PNI) requires Kubernetes Network Policy to be enabled on the cluster beforehand.  
-- Rancher will enable Network Policy automatically when creating clusters in Rancher (downstream), so this step is only needed for imported clusters.  
-- In GKE, enable network policy (Calico) on **both master and worker nodes**: **Networking → Network security and observability → Enable Calico Kubernetes Network Policy**.  
-- After enabling, import the cluster into Rancher and enable PNI for project-level isolation.
+For imported clusters, Project Network Isolation (PNI) requires Kubernetes Network Policy to be enabled on the cluster beforehand.  
+For clusters created by Rancher, Rancher enables Kubernetes Network Policy automatically.
 
-:::
+1. In GKE, enable Network Policy at the cluster level. (Refer to the official GKE guide)[https://cloud.google.com/kubernetes-engine/docs/how-to/network-policy]
+2. After enabling Network Policy, import the cluster into Rancher and enable PNI for project-level isolation.
 
 ### Node Ipv4 CIDR Block
 
