@@ -6,7 +6,7 @@ title: Configure GitHub App
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-github-app"/>
 </head>
 
-In environments using GitHub, you can configure the new GitHub App authentication provider in the Rancher, which allows users to authenticate against a GitHub Organization account using a dedicated [GitHub App](https://docs.github.com/en/apps/overview). This new provider runs alongside the existing standard GitHub authentication provider, offering increased security and better management of permissions based on GitHub Organization teams.
+In environments using GitHub, you can configure the new GitHub App authentication provider in Rancher, which allows users to authenticate against a GitHub Organization account using a dedicated [GitHub App](https://docs.github.com/en/apps/overview). This new provider runs alongside the existing standard GitHub authentication provider, offering increased security and better management of permissions based on GitHub Organization teams.
 
 ## Prerequisites
 
@@ -66,7 +66,7 @@ To set up the GitHub App Auth Provider in Rancher, follow these steps:
 
 1. Select **Enable**. Rancher attempts to validate the credentials and, upon success, activates the GitHub App provider.
 
-After its enabled, users logging in via the GitHub App provider are automatically identified and you can leverage your GitHub Organization's teams and users to configure Role-Based Access Control (RBAC) and to assign permissions to projects and clusters.
+After it is enabled, users logging in via the GitHub App provider are automatically identified and you can leverage your GitHub Organization's teams and users to configure Role-Based Access Control (RBAC) and to assign permissions to projects and clusters.
 
 :::note
 
