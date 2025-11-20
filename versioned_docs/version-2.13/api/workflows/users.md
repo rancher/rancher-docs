@@ -13,9 +13,9 @@ kubectl explain users.management.cattle.io
 
 ## Creating a User
 
-Creating a local user is a two-step process: you must create the `User` resource itself, and then you must separately provide a password using a Kubernetes `Secret`.
+Creating a local user is a two-step process: you must create the `User` resource, then provide a password via a Kubernetes `Secret`.
 
-Only a user with sufficient permissions can create a User resource.
+Only a user with sufficient permissions can create a `User` resource.
 
 ```bash
 kubectl create -f -<<EOF
@@ -48,8 +48,7 @@ stringData:
 EOF
 ```
 
-After the plaintext password is submitted, the Rancher webhook automatically hashes it, replacing the Secret's content 
-and ensuring that the plaintext password is never stored:
+After the plaintext password is submitted, the Rancher-Webhook automatically hashes it, replacing the content of the `Secret`, ensuring that the plaintext password is never stored:
 
 ```yaml
 apiVersion: v1
@@ -71,9 +70,9 @@ metadata:
 type: Opaque
 ```
 
-## Updating user's password
+## Updating User's Password
 
-To change a user's password, you must use the `PasswordChangeRequest` resource, which handles the secure updating of the password.
+To change a user's password, use the `PasswordChangeRequest` resource, which handles secure password updates.
 
 ```yaml
 kubectl create  -f -<<EOF
@@ -116,10 +115,9 @@ kubectl delete user testuser
 user.management.cattle.io "testuser" deleted
 ```
 
-## Get current user information
+## Get a Current User's Information
 
-The `SelfUser` resource is used by a client to retrieve information about the currently authenticated user without knowing
-their ID. The user ID is returned in the `.status.userID` field.
+A client uses the `SelfUser` resource to retrieve information about the currently authenticated user without knowing their ID. The user ID is returned in the `.status.userID` field.
 
 ```bash
 kubectl create -o jsonpath='{.status.userID}'  -f -<<EOF
@@ -130,12 +128,15 @@ EOF
 testuser
 ```
 
-## Refreshing the group membership
+## Refreshing a User's Group Membership
 
-The `GroupMembershipRefreshRequest` resource is used to trigger an update of group memberships for users.
-Note: group membership is only supported for external authentication providers. 
+Updates to user group memberships are triggered by the `GroupMembershipRefreshRequest` resource.
 
-### For a single user
+:::note
+Group membership is only supported for external authentication providers.
+:::
+
+### For a Single User
 
 ```bash
 kubectl create -o jsonpath='{.status}'  -f -<<EOF
@@ -159,7 +160,7 @@ EOF
 }
 ```
 
-### For all users
+### For All Users
 
 ```bash
 
