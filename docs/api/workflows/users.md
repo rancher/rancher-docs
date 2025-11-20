@@ -7,6 +7,7 @@ title: Users
 The `User` resource (users.management.cattle.io) represents a user account in Rancher.
 
 To get a description of the fields and structure of the `User` resource, run:
+
 ```sh
 kubectl explain users.management.cattle.io
 ```
