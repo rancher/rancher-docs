@@ -28,6 +28,8 @@ Enable the DigitalOcean agent for additional [monitoring](https://docs.digitaloc
 
 Enable IPv6 for Droplets.
 
+For more information, refer to the [Digital Ocean IPv6 documentation](https://docs.digitalocean.com/products/networking/ipv6).
+
 ### Private Networking
 
 Enable private networking for Droplets.

@@ -20,19 +20,13 @@ To get a description of the fields and structure of the Token resource, run:
 kubectl explain tokens.ext.cattle.io
 ```
 
-## Feature Flag
-
-The Tokens Public API is available for Rancher v2.12.0 and later, and is enabled by default. You can disable the Tokens Public API by setting the `ext-tokens` feature flag to `false` as shown in the example `kubectl` command below:
-
-```sh
-kubectl patch feature ext-tokens -p '{"spec":{"value":false}}'
-```
-
 ## Creating a Token
 
 :::caution
 The Token value is only returned once in the `status.value` field.
 :::
+
+Since Rancher v2.13.0 the `status.bearerToken` now contains a fully formed and ready-to-use Bearer token that can be used to authenticate to [Rancher API](../v3-rancher-api-guide.md).
 
 Only a **valid and active** Rancher user can create a Token. Otherwise, you will get an error displayed (`Error from server (Forbidden)...`) when attempting to create a Token.
 

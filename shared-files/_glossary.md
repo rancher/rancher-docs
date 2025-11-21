@@ -308,6 +308,12 @@
     <p>
         <b>Related terms:</b> <i>Downstream cluster, Hosted cluster, Imported cluster, Managed cluster, Registered cluster</i>
     </p>
+    <dt>
+        User
+    </dt>
+    <dd>
+        A Rancher resource <code>users.management.cattle.io</code> that defines a user within Rancher.
+    </dd>
 </dl>
 
 ## W

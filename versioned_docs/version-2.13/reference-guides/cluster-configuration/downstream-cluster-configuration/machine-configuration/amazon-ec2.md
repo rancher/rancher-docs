@@ -80,3 +80,18 @@ Use [Instance Metadata Service Version 2 (IMDSv2)](https://docs.aws.amazon.com/A
 
 Add metadata using [tags](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html) to categorize resources.
 
+### IPv6 Address Count
+
+Specify how many IPv6 addresses to assign to the instance’s network interface.
+
+### IPv6 Address Only
+
+Enable this option if the instance should use IPv6 exclusively. IPv6-only VPCs or subnets require this. When enabled, the instance will have IPv6 as its sole address, and the IPv6 Address Count must be greater than zero.
+
+### HTTP Protocol IPv6
+
+Enable or disable IPv6 endpoints for the instance metadata service.
+
+### Enable Primary IPv6
+
+Enable this option to designate the first assigned IPv6 address as the primary address. This ensures a consistent, non-changing IPv6 address for the instance. It does not control whether IPv6 addresses are assigned.

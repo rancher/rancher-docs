@@ -103,11 +103,11 @@ The `worker` nodes, which is where your workloads will be deployed on, will typi
 
 We recommend the minimum three-node architecture listed in the table below, but you can always add more Linux and Windows workers to scale up your cluster for redundancy:
 
-| Node   | Operating System                                    | Kubernetes Cluster Role(s)                                                                                                                                                                                                                         | Purpose                                                                             |
-| ------ | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| Node 1 | Linux (Ubuntu Server 18.04 recommended)             | Control plane, etcd, worker | Manage the Kubernetes cluster                                                       |
-| Node 2 | Linux (Ubuntu Server 18.04 recommended)             | Worker                                                                                                                                                                       | Support the Rancher Cluster agent, Metrics server, DNS, and Ingress for the cluster |
-| Node 3 | Windows (Windows Server core version 1809 or above) | Worker                                                                                                                                                                       | Run your Windows containers                                                         |
+| Node   | Operating System                                                                       | Kubernetes Cluster Role(s)  | Purpose                                                                             |
+|--------|----------------------------------------------------------------------------------------|-----------------------------|-------------------------------------------------------------------------------------|
+| Node 1 | Linux (Ubuntu Server 18.04 recommended)                                                | Control plane, etcd, worker | Manage the Kubernetes cluster                                                       |
+| Node 2 | Linux (Ubuntu Server 18.04 recommended)                                                | Worker                      | Support the Rancher Cluster agent, Metrics server, DNS, and Ingress for the cluster |
+| Node 3 | Windows (Windows Server core version 1809 or above required, version 2022 recommended) | Worker                      | Run your Windows containers                                                         |
 
 ### Container Requirements
 
@@ -126,8 +126,6 @@ If you are using the GCE (Google Compute Engine) cloud provider, you must do the
 
 This tutorial describes how to create a Rancher-provisioned cluster with the three nodes in the [recommended architecture.](#recommended-architecture)
 
-When you provision a cluster with Rancher on existing nodes, you add nodes to the cluster by installing the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) on each one. To create or edit your cluster from the Rancher UI, run the **Registration Command** on each server to add it to your cluster.
-
 To set up a cluster with support for Windows nodes and containers, you will need to complete the tasks below.
 
 ### 1. Provision Hosts
@@ -142,15 +140,15 @@ Your hosts can be:
 
 You will provision three nodes:
 
-- One Linux node, which manages the Kubernetes control plane and stores your `etcd`
+- One Linux node, which manages the Kubernetes control plane, stores your `etcd`, and optionally be a worker node
 - A second Linux node, which will be another worker node
 - The Windows node, which will run your Windows containers as a worker node
 
-| Node   | Operating System                                             |
-| ------ | ------------------------------------------------------------ |
-| Node 1 | Linux (Ubuntu Server 18.04 recommended)                      |
-| Node 2 | Linux (Ubuntu Server 18.04 recommended)                      |
-| Node 3 | Windows (Windows Server core version 1809 or above required) |
+| Node   | Operating System                                                                       |
+|--------|----------------------------------------------------------------------------------------|
+| Node 1 | Linux (Ubuntu Server 18.04 recommended)                                                |
+| Node 2 | Linux (Ubuntu Server 18.04 recommended)                                                |
+| Node 3 | Windows (Windows Server core version 1809 or above required, version 2022 recommended) |
 
 If your nodes are hosted by a **Cloud Provider** and you want automation support such as loadbalancers or persistent storage devices, your nodes have additional configuration requirements. For details, see [Selecting Cloud Providers.](../set-up-cloud-providers/set-up-cloud-providers.md)
 
@@ -164,11 +162,11 @@ The instructions for creating a Windows cluster on existing nodes are very simil
 1. Enter a name for your cluster in the **Cluster Name** field.
 1. In the **Kubernetes Version** dropdown menu, select a supported Kubernetes version.
 1. In the **Container Network** field, select either **Calico** or **Flannel**.
-1. Click **Next**.
+1. Click **Create**.
 
 ### 3. Add Nodes to the Cluster
 
-This section describes how to register your Linux and Worker nodes to your cluster. You will run a command on each node, which will install the Rancher agent and allow Rancher to manage each node.
+This section describes how to register your Linux and Worker nodes to your cluster. You will run a command on each node, which will install the rancher system agent and allow Rancher to manage each node.
 
 #### Add Linux Master Node
 
@@ -177,23 +175,18 @@ In this section, we fill out a form on the Rancher UI to get a custom command to
 The first node in your cluster should be a Linux host that has both the **Control Plane** and **etcd** roles. At a minimum, both of these roles must be enabled for this node, and this node must be added to your cluster before you can add Windows hosts.
 
 1. After cluster creation, navigate to the **Registration** tab.
-1. In **Step 1** under the **Node Role** section, select at least **etcd** and **Control Plane**. We recommend selecting all three.
-1. Optional: If you click **Show advanced options,** you can customize the settings for the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) and [node labels.](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+1. In **Step 1** under the **Node Role** section, select all three roles. Although you can choose only the **etcd** and **Control Plane** roles, we recommend selecting all three.
+1. Optional: If you click **Show Advanced**, you can configure additional settings such as specifying the IP address(es), overriding the node hostname, or adding [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
 1. In **Step 2**, under the **Registration** section, copy the command displayed on the screen to your clipboard.
 1. SSH into your Linux host and run the command that you copied to your clipboard.
 
-**Result:**
+**Results:**
 
-Your cluster is created and assigned a state of **Provisioning**. Rancher is standing up your cluster.
+Your cluster is created and assigned a state of **Updating**. Rancher is standing up your cluster.
 
-You can access your cluster after its state is updated to **Active**.
+It may take a few minutes for the node to register and appear under the **Machines** tab.
 
-**Active** clusters are assigned two Projects:
-
-- `Default`, containing the `default` namespace
-- `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces
-
-It may take a few minutes for the node to be registered in your cluster.
+You’ll be able to access the cluster once its state changes to **Active**.
 
 #### Add Linux Worker Node
 
@@ -203,11 +196,13 @@ After the initial provisioning of your cluster, your cluster only has a single L
 
 1. After cluster creation, navigate to the **Registration** tab.
 1. In **Step 1** under the **Node Role** section, select **Worker**.
-1. Optional: If you click **Show advanced options,** you can customize the settings for the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) and [node labels.](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+1. Optional: If you click **Show Advanced**, you can configure additional settings such as specifying the IP address(es), overriding the node hostname, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
 1. In **Step 2**, under the **Registration** section, copy the command displayed on the screen to your clipboard.
 1. SSH into your Linux host and run the command that you copied to your clipboard.
 
-**Result:** The **Worker** role is installed on your Linux host, and the node registers with Rancher. It may take a few minutes for the node to be registered in your cluster.
+**Results:** 
+
+The **Worker** role is installed on your Linux host, and the node registers with Rancher. It may take a few minutes for the node to be registered in your cluster.
 
 :::note
 
@@ -216,7 +211,7 @@ Taints on Linux Worker Nodes
 For each Linux worker node added into the cluster, the following taints will be added to Linux worker node. By adding this taint to the Linux worker node, any workloads added to the Windows cluster will be automatically scheduled to the Windows worker node. If you want to schedule workloads specifically onto the Linux worker node, you will need to add tolerations to those workloads.
 
 | Taint Key      | Taint Value | Taint Effect |
-| -------------- | ----------- | ------------ |
+|----------------|-------------|--------------|
 | `cattle.io/os` | `linux`     | `NoSchedule` |
 
 :::
@@ -231,12 +226,16 @@ The registration command to add the Windows workers only appears after the clust
 
 1. After cluster creation, navigate to the **Registration** tab.
 1. In **Step 1** under the **Node Role** section, select **Worker**.
-1. Optional: If you click **Show advanced options,** you can customize the settings for the [Rancher agent](../../../../reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options.md) and [node labels.](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+1. Optional: If you click **Show Advanced**, you can configure additional settings such as specifying the IP address(es), overriding the node hostname, or adding [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
 1. In **Step 2**, under the **Registration** section, copy the command for Windows workers displayed on the screen to your clipboard.
-1. Log in to your Windows host using your preferred tool, such as [Microsoft Remote Desktop](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients). Run the command copied to your clipboard in the **Command Prompt (CMD)**.
+1. Log in to your Windows host using your preferred tool, such as [Microsoft Remote Desktop](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients). Run the command copied to your clipboard in the **PowerShell Console** as an Administrator.
 1. Optional: Repeat these instructions if you want to add more Windows nodes to your cluster.
 
-**Result:** The **Worker** role is installed on your Windows host, and the node registers with Rancher. It may take a few minutes for the node to be registered in your cluster. You now have a Windows Kubernetes cluster.
+**Results:** 
+
+The **Worker** role is installed on your Windows host, and the node registers with Rancher. It may take a few minutes for the node to be registered in your cluster. 
+
+You now have a Windows Kubernetes cluster.
 
 ### Optional Next Steps
 

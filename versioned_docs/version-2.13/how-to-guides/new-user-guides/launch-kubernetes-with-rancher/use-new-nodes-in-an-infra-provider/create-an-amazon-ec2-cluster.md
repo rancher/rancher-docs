@@ -20,7 +20,8 @@ Then you will create an EC2 cluster in Rancher, and when configuring the new clu
   - [Example IAM Policy](#example-iam-policy)
   - [Example IAM Policy with PassRole](#example-iam-policy-with-passrole) (needed if you want to use [Kubernetes Cloud Provider](../../kubernetes-clusters-in-rancher-setup/set-up-cloud-providers/set-up-cloud-providers.md) or want to pass an IAM Profile to an instance)
   - [Example IAM Policy to allow encrypted EBS volumes](#example-iam-policy-to-allow-encrypted-ebs-volumes)
-- **IAM Policy added as Permission** to the user. See [Amazon Documentation: Adding Permissions to a User (Console)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_change-permissions.html#users_change_permissions-add-console) how to attach it to an user.
+- **IAM Policy added as Permission** to the user. See [Amazon Documentation: Adding Permissions to a User (Console)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_change-permissions.html#users_change_permissions-add-console) how to attach it to a user.
+- **IPv4-only or IPv6-only or dual-stack subnet and/or VPC** where nodes can be provisioned and assigned IPv4 and/or IPv6 addresses. See [Amazon Documentation: IPv6 support for your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-migrate-ipv6.html).
 
 ## Creating an EC2 Cluster
 
