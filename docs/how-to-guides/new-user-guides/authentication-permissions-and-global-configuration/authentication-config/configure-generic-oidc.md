@@ -108,3 +108,7 @@ If the `Issuer` and `Auth Endpoint` are generated incorrectly, open the **Config
 ### Error: "Invalid grant_type"
 
 In some cases, the "Invalid grant_type" error message may be misleading and is actually caused by setting the `Valid Redirect URI` incorrectly.
+
+## Configuring OIDC Single Logout (SLO)
+
+<ConfigureSLOOidc />

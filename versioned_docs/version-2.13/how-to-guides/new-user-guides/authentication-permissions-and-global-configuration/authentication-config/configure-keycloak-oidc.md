@@ -203,3 +203,7 @@ To resolve this, you can either:
     3. Save your changes.
  
 2. Reconfigure your Keycloak OIDC setup using a user that is assigned to at least one group in Keycloak.
+
+## Configuring OIDC Single Logout (SLO)
+
+<ConfigureSLOOidc />
