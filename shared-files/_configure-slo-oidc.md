@@ -30,4 +30,10 @@ The `end_session_endpoint` is one of the specific URLs published within a standa
 
 1. Obtain the Discovery URL by appending the IdP Issuer URL with the well-known path (`.well-known/openid-configuration`).
 1. Send an HTTP `GET` request to the Discovery URL.
-1. In the JSON object, look for the key named `end_session_endpoint`.
+1. In the JSON object, look for the key named `end_session_endpoint` and retrieve the URL.
+
+    You can also use a `curl` command to retrieve `end_session_endpoint`:
+
+    ```sh
+    curl -s <ISSUER_URL>/.well-known/openid-configuration | jq '.end_session_endpoint'
+    ```
