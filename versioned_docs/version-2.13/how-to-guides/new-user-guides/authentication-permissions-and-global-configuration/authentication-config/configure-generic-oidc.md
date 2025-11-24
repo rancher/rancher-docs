@@ -93,12 +93,25 @@ Rancher uses the value received in the "sub" claim to form the PrincipalID which
 
 Custom claim mapping within the Generic OIDC configuration is supported for `name`, `email` and `groups` claims. This allows you to manually map these OIDC claims when your IdP doesn't use standard names in tokens.
 
+#### How a Custom Groups Claim Works
+
+A custom groups claim influences how user groups work:
+
+- If both the standard OIDC `groups` claim and the custom groups claim are present in the user's token, the custom claim supplements the list of groups provided by the standard claim.
+- If there is no standard groups claim in the token, the groups listed in the custom claim will form the user's only groups.
+
+:::note
+There is no search functionality available for groups sourced from a custom claim. To assign a role to one of these groups, you must manually enter the group's exact name into the RBAC field.
+:::
+
+#### Configuring Custom Claims
+
 When on the **Configure an OIDC account** form:
 
 1. Select **Add custom claims**.
 1. Add your custom `name`, `email` or `groups` claims to the appropriate **Custom Claims** field.
 
-For example, if your IdP sends `groups` in a claim called `custom_roles`, enter `custom_roles` into the **Custom Groups Claim** field. Rancher then looks for that specific claim when processing the user's token.
+For example, if your IdP sends `groups` in a claim called `custom_roles`, enter `custom_roles` into the **Custom Groups Claim** field. Rancher then supplements the standard OIDC `groups` claim or looks for that specific claim when processing the user's token.
 
 ### Configuration Reference
 
