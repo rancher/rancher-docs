@@ -209,6 +209,7 @@
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-freeipa",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-azure-ad",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-github",
+                    "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-github-app",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-keycloak-oidc",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-keycloak-saml",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-pingidentity",
