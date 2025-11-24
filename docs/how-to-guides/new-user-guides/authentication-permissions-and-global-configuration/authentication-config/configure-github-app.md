@@ -66,7 +66,7 @@ To set up the GitHub App Auth Provider in Rancher, follow these steps:
 
   :::note
 
-  A GitHub App can be installed across multiple Organizations, and each installation has a unique Installation ID. If you want to restrict authentication to a single App installation and GitHub Organization, provide the Installation ID during configuration. If you do not provide an Installation ID, the user's permissions will be aggregated across all installations.
+  A GitHub App can be installed across multiple Organizations, and each installation has a unique Installation ID. If you want to restrict authentication to a single App installation and GitHub Organization, provide the Installation ID during configuration. If you do not provide an Installation ID, the user's permissions are aggregated across all installations.
 
   :::
 
@@ -81,4 +81,4 @@ Ensure that the users and teams you intend to use for authorization exist within
 :::
 
 - **Users**: Individual GitHub users who are members of the GitHub Organization where the App is installed can log in.
-- **Groups**: GitHub Organization teams will be mapped to Rancher Groups, allowing you to assign entire teams permissions within Rancher projects and clusters.
+- **Groups**: GitHub Organization teams are mapped to Rancher Groups, allowing you to assign entire teams permissions within Rancher projects and clusters.
