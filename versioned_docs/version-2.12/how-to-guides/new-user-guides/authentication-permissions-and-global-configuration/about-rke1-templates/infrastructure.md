@@ -14,7 +14,7 @@ If you want to standardize the hardware in your clusters, use RKE templates conj
 
 ### Node Templates
 
-[Node templates](../../../../reference-guides/user-settings/manage-node-templates.md) are responsible for node configuration and node provisioning in Rancher. From your user profile, you can set up node templates to define which templates are used in each of your node pools. With node pools enabled, you can make sure you have the required number of nodes in each node pool, and ensure that all nodes in the pool are the same.
+Node templates are responsible for node configuration and node provisioning in Rancher. From your user profile, you can set up node templates to define which templates are used in each of your node pools. With node pools enabled, you can make sure you have the required number of nodes in each node pool, and ensure that all nodes in the pool are the same.
 
 ### Terraform
 
