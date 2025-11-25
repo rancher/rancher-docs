@@ -6,16 +6,7 @@ title: Managing Cloud Credentials
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/reference-guides/user-settings/manage-cloud-credentials"/>
 </head>
 
-When you create a cluster [hosted by an infrastructure provider](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md), [node templates](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#node-templates) are used to provision the cluster nodes. These templates use Docker Machine configuration options to define an operating system image and settings/parameters for the node.
-
-Node templates can use cloud credentials to access the credential information required to provision nodes in the infrastructure providers. The same cloud credential can be used by multiple node templates. By using a cloud credential, you do not have to re-enter access keys for the same cloud provider. Cloud credentials are stored as Kubernetes secrets.
-
-Cloud credentials are only used by node templates if there are fields marked as `password`. The default `active` node drivers have their account access fields marked as `password`, but there may be some `inactive` node drivers, which are not using them yet. These node drivers will not use cloud credentials.
-
-You can create cloud credentials in two contexts:
-
-- [During creation of a node template](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#node-templates) for a cluster.
-- In the **User Settings**
+You can create cloud credentials in the **User Settings**.
 
 Cloud credentials are bound to their creator's user profile. They **cannot** be shared between non-admin users. However, admins can view and manage the cloud credentials of other users.
 
@@ -29,22 +20,18 @@ Cloud credentials are bound to their creator's user profile. They **cannot** be 
 1. Based on the selected cloud credential type, enter the required values to authenticate with the infrastructure provider.
 1. Click **Create**.
 
-**Result:** The cloud credential is created and can immediately be used to [create node templates](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#node-templates).
+**Result:** The cloud credential is created.
 
 ## Updating a Cloud Credential
-
-When access credentials are changed or compromised, updating a cloud credential allows you to rotate those credentials while keeping the same node template.
 
 1. Click **☰ > Cluster Management**.
 1. Click **Cloud Credentials**.
 1. Choose the cloud credential you want to edit and click the **⋮ > Edit Config**.
 1. Update the credential information and click **Save**.
 
-**Result:** The cloud credential is updated with the new access credentials. All existing node templates using this cloud credential will automatically use the updated information whenever [new nodes are added](../../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md).
+**Result:** The cloud credential is updated with the new access credentials.
 
 ## Deleting a Cloud Credential
-
-In order to delete cloud credentials, there must not be any node template associated with it. If you are unable to delete the cloud credential, [delete any node templates](manage-node-templates.md#deleting-a-node-template) that are still associated to that cloud credential.
 
 1. Click **☰ > Cluster Management**.
 1. Click **Cloud Credentials**.
