@@ -1184,6 +1184,12 @@ module.exports = {
             from: "/integrations-in-rancher/cis-scans/custom-benchmark",
             to: "/integrations-in-rancher/compliance-scans/custom-benchmark",
           },
+          // Redirects for renaming nodes-and-machine-pools.md (start)
+          {
+            from: "/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
+            to: "/how-to-guides/new-user-guides/manage-clusters/nodes-and-machine-pools",
+          },
+          // Redirects for renaming nodes-and-machine-pools.md (end)
         ],
       },
     ],

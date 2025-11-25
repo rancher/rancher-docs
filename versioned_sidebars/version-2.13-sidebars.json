@@ -357,7 +357,7 @@
                 "how-to-guides/new-user-guides/manage-clusters/rotate-certificates",
                 "how-to-guides/new-user-guides/manage-clusters/rotate-encryption-key",
                 "how-to-guides/new-user-guides/manage-clusters/manage-cluster-templates",
-                "how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
+                "how-to-guides/new-user-guides/manage-clusters/nodes-and-machine-pools",
                 "how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes"
               ]
             },
