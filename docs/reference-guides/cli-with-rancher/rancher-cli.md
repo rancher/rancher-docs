@@ -71,7 +71,7 @@ The following commands are available for use in Rancher CLI.
 | `login, [l]`  | Logs into a Rancher Server. For an example, see [CLI Authentication](#cli-authentication).  |
 | `machines, [machine]`  | Performs operations on machines.  |
 | `namespaces, [namespace]`  | Performs operations on [namespaces](../../how-to-guides/new-user-guides/manage-namespaces.md).  |
-| `nodes, [node]`  | Performs operations on [nodes](../../how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools.md).  |
+| `nodes, [node]`  | Performs operations on [nodes](../../how-to-guides/new-user-guides/manage-clusters/nodes-and-machine-pools.md).  |
 | `projects, [project]`  | Performs operations on [projects](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md).  |
 | `ps`  | Displays [workloads](../../how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/workloads-and-pods.md) in a project.  |
 | `server`  | Performs operations for the server.  |
