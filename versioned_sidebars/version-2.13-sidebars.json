@@ -959,7 +959,6 @@
           },
           "items": [
             "reference-guides/user-settings/api-keys",
-            "reference-guides/user-settings/manage-node-templates",
             "reference-guides/user-settings/manage-cloud-credentials",
             "reference-guides/user-settings/user-preferences"
           ]
