@@ -58,3 +58,7 @@ if the user has not yet logged in to Rancher. However, if the user has previousl
 ### You are not redirected to your authentication provider
 
 If you fill out the **Configure an Amazon Cognito account** form and click on **Enable**, and you are not redirected to Amazon Cognito, verify your Amazon Cognito configuration.
+
+## Configuring OIDC Single Logout (SLO)
+
+<ConfigureSLOOidc />
