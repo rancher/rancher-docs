@@ -48,17 +48,17 @@ The certificate chain must be properly formatted, or components may fail to down
 
 ## Adding Additional CA Certificates
 
-If you are using a node driver which makes API requests using a different CA than the one configured for Rancher, additional root certificates and certificate chains can be added. 
+If you are using a node driver that makes API requests with a different CA than the one configured for Rancher, you can add additional root certificates and certificate chains. 
 
 Create a unique file ending in `.pem` for each certificate that is required, and use kubectl to create the 
 `tls-additional` secret in the `cattle-system` namespace.
 
-```
+```console
 kubectl -n cattle-system create secret generic tls-additional \
   --from-file=cacerts1.pem=cacerts1.pem --from-file=cacerts2.pem=cacerts2.pem
 ```
 
-These CA root certificates and certificate chains will be mounted into the node driver pod during provisioning.
+Rancher mounts these CA root certificates and certificate chains into the node driver pod during provisioning.
 
 ## Updating a Private CA Certificate
 
