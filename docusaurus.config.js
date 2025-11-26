@@ -1186,8 +1186,12 @@ module.exports = {
           },
           // Redirects for renaming nodes-and-machine-pools.md (start)
           {
-            from: "/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
-            to: "/how-to-guides/new-user-guides/manage-clusters/nodes-and-machine-pools",
+            to: "/v2.12/how-to-guides/new-user-guides/manage-clusters/nodes-and-machine-pools",
+            from: "/v2.12/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
+          },
+          {
+            to: "/v2.13/how-to-guides/new-user-guides/manage-clusters/nodes-and-machine-pools",
+            from: "/v2.13/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
           },
           // Redirects for renaming nodes-and-machine-pools.md (end)
         ],
