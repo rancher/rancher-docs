@@ -896,8 +896,12 @@ module.exports = {
             ],
           },
           {
-            to: "/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
-            from: "/how-to-guides/advanced-user-guides/manage-clusters/nodes-and-node-pools",
+            to: "/v2.10/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
+            from: "/v2.10/how-to-guides/advanced-user-guides/manage-clusters/nodes-and-node-pools",
+          },
+          {
+            to: "/v2.11/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
+            from: "/v2.11/how-to-guides/advanced-user-guides/manage-clusters/nodes-and-node-pools",
           },
           {
             to: "/how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes",
