@@ -27,7 +27,7 @@ Deploying to Microsoft Azure will incur charges.
 - [Microsoft Azure Subscription](https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/create-subscription#create-a-subscription-in-the-azure-portal): Use this link to follow a tutorial to create a Microsoft Azure subscription if you don't have one yet.
 - [Micsoroft Azure Tenant](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-create-new-tenant): Use this link and follow instructions to create a Microsoft Azure tenant.
 - [Microsoft Azure Client ID/Secret](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal): Use this link and follow instructions to create a Microsoft Azure client and secret.
-- [Terraform](https://www.terraform.io/downloads.html): Used to provision the server and cluster in Microsoft Azure.
+- [Terraform](https://developer.hashicorp.com/terraform/install): Used to provision the server and cluster in Microsoft Azure.
 
 
 ## Getting Started

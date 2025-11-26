@@ -123,67 +123,14 @@ Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 ## Cleaning up Nodes
 
 <Tabs groupId="k8s-distro" queryString>
-<TabItem value="RKE1">
-
-Before you run the following commands, first remove the node through the Rancher UI.
-
-To remove a node:
-
-1. Click **☰** and select **Cluster Management**.
-1. In the table of clusters, click the name of the cluster the node belongs to.
-1. In the first tab, click the checkbox next to the node's state.
-1. Click **Delete**.
-
-If you remove the entire cluster instead of an individual node, or skip rermoving the node through the Rancher UI, follow these steps:
-
-1. [Remove](#docker-containers-images-and-volumes) the Docker containers from the node and [unmount](#mounts) any volumes.
-1. Reboot the node.
-1. [Remove](#directories-and-files) any remaining files.
-1. Confirm that network interfaces and IP tables were properly cleaned after the reboot. If not, reboot one more time.
-
-### Windows Nodes
-
-To clean up a Windows node, run the script in `c:\etc\rancher`. This script deletes Kubernetes-generated resources and the execution binary. It also drops the firewall rules and network settings:
-
-```
-pushd c:\etc\rancher
-.\cleanup.ps1
-popd
-```
-
-After you run this script, the node is reset and can be re-added to a Kubernetes cluster.
-
-### Docker Containers, Images, and Volumes
-
-:::caution
-
-Be careful when cleaning up Docker containers. The following command will remove *all* Docker containers, images, and volumes on the node, including non-Rancher related containers:
-
-:::
-
-```
-docker rm -f $(docker ps -qa)
-docker rmi -f $(docker images -q)
-docker volume rm $(docker volume ls -q)
-```
-
-### Mounts
-
-Kubernetes components and secrets leave behind the following mounts:
-
-* `/var/lib/kubelet`
-* `/var/lib/rancher`
-* Miscellaneous mounts in `/var/lib/kubelet/pods/`
-
-To unmount all mounts, run: 
-
-```
-for mount in $(mount | grep tmpfs | grep '/var/lib/kubelet' | awk '{ print $3 }') /var/lib/kubelet /var/lib/rancher; do umount $mount; done
-```
-
-</TabItem>
 <TabItem value="RKE2">
 
+:::note
+
+For instructions on cleaning nodes in RKE2 clusters that weren't deployed by Rancher, see the [official RKE2 documentation](https://docs.rke2.io/install/uninstall) on uninstalling clusters.
+
+:::
+  
 You need to remove the following components from Rancher-provisioned RKE2 nodes:
 
 * The rancher-system-agent, which connects to Rancher and installs and manages RKE2.
@@ -194,7 +141,8 @@ You need to remove the following components from Rancher-provisioned RKE2 nodes:
 To remove the rancher-system-agent, run the [system-agent-uninstall.sh](https://github.com/rancher/system-agent/blob/main/system-agent-uninstall.sh) script:
 
 ```
-curl https://raw.githubusercontent.com/rancher/system-agent/main/system-agent-uninstall.sh | sudo sh
+curl https://raw.githubusercontent.com/rancher/system-agent/main/system-agent-uninstall.sh > system-agent-uninstall.sh
+sudo sh system-agent-uninstall.sh
 ```
 
 ### Removing RKE2
@@ -218,7 +166,8 @@ You need to remove the following components from Rancher-provisioned K3s nodes:
 To remove the rancher-system-agent, run the [system-agent-uninstall.sh](https://github.com/rancher/system-agent/blob/main/system-agent-uninstall.sh) script:
 
 ```
-curl https://raw.githubusercontent.com/rancher/system-agent/main/system-agent-uninstall.sh | sudo sh
+curl https://raw.githubusercontent.com/rancher/system-agent/main/system-agent-uninstall.sh > system-agent-uninstall.sh
+sudo sh system-agent-uninstall.sh 
 ```
 
 ### Removing K3s
@@ -236,11 +185,14 @@ sudo k3s-uninstall.sh
 
 The following directories are used when adding a node to a cluster, and should be removed. You can remove a directory using `rm -rf /directory_name`.
 
-:::note
+:::important
 
-Depending on the role you assigned to the node, some of the directories will or won't be present on the node.
+Depending on the role you assigned to the node, certain directories may or may not be present on the node.
 
 :::
+
+<Tabs groupId="k8s-distro" queryString>
+<TabItem value="RKE2">
 
 | Directories                  |
 |------------------------------|
@@ -249,42 +201,92 @@ Depending on the role you assigned to the node, some of the directories will or 
 | `/etc/kubernetes`            |
 | `/etc/rancher`               |
 | `/opt/cni`                   |
-| `/opt/rke`                   |
-| `/run/secrets/kubernetes.io` |
 | `/run/calico`                |
 | `/run/flannel`               |
+| `/run/secrets/kubernetes.io` |
 | `/var/lib/calico`            |
-| `/var/lib/etcd`              |
 | `/var/lib/cni`               |
+| `/var/lib/etcd`              |
 | `/var/lib/kubelet`           |
 | `/var/lib/rancher`           |
+| `/var/lib/weave`             |
 | `/var/log/containers`        |
-| `/var/log/kube-audit`        |
 | `/var/log/pods`              |
 | `/var/run/calico`            |
 
 **To clean the directories:**
 
-```
+```shell
 rm -rf /etc/ceph \
        /etc/cni \
        /etc/kubernetes \
        /etc/rancher \
        /opt/cni \
-       /opt/rke \
-       /run/secrets/kubernetes.io \
        /run/calico \
        /run/flannel \
+       /run/secrets/kubernetes.io \
        /var/lib/calico \
-       /var/lib/etcd \
        /var/lib/cni \
+       /var/lib/etcd \
        /var/lib/kubelet \
-       /var/lib/rancher\
+       /var/lib/rancher \
+       /var/lib/weave \
        /var/log/containers \
-       /var/log/kube-audit \
        /var/log/pods \
        /var/run/calico
 ```
+
+</TabItem>
+<TabItem value="K3s">
+
+| Directories                  |
+|------------------------------|
+| `/etc/ceph`                  |
+| `/etc/cni`                   |
+| `/etc/kubernetes`            |
+| `/etc/rancher`               |
+| `/etc/systemd/system/k3s`    |
+| `/opt/cni`                   |
+| `/run/calico`                |
+| `/run/flannel`               |
+| `/run/secrets/kubernetes.io` |
+| `/usr/local/bin/k3s`         |
+| `/var/lib/calico`            |
+| `/var/lib/cni`               |
+| `/var/lib/etcd`              |
+| `/var/lib/kubelet`           |
+| `/var/lib/rancher`           |
+| `/var/lib/weave`             |
+| `/var/log/containers`        |
+| `/var/log/pods`              |
+| `/var/run/calico`            |
+
+**To clean the directories:**
+
+```shell
+rm -rf /etc/ceph \
+       /etc/cni \
+       /etc/kubernetes \
+       /etc/rancher \
+       /etc/systemd/system/k3s \
+       /opt/cni \
+       /run/calico \
+       /run/flannel \
+       /run/secrets/kubernetes.io \
+       /usr/local/bin/k3s \
+       /var/lib/calico \
+       /var/lib/cni \
+       /var/lib/etcd \
+       /var/lib/kubelet \
+       /var/lib/rancher \
+       /var/lib/weave \
+       /var/log/containers \
+       /var/log/pods \
+       /var/run/calico
+```
+
+</TabItem>
+</Tabs>
 
 ### Network Interfaces and Iptables
 

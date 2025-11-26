@@ -47,10 +47,10 @@ Rancher 可以安装到任意 Kubernetes 集群上，包括托管的 Kubernetes 
 
    以上假设你的环境具有到 Docker Hub 的出站连接。
 
-   对于**离线环境**，在安装 rancher-backup Helm Chart 时，使用下面的 Helm 值从你的私有镜像仓库中拉取 `backup-restore-operator` 镜像。
+   对于**离线环境**，在安装 rancher-backup Helm Chart 时，使用下面的 Helm 值从你的私有镜像仓库中拉取 `backup-restore-operator` 和 `kubectl` 镜像。
 
    ```bash
-   --set image.repository $REGISTRY/rancher/backup-restore-operator
+   --set image.repository <registry>/rancher/backup-restore-operator --set global.kubectl.repository=<registry>/rancher/kubectl
    ```
 
    :::
@@ -157,8 +157,6 @@ Kubernetes v1.22 是 Rancher 2.6.3 的实验功能，不支持使用 apiVersion 
 ### 4. 使用 Helm 安装 Rancher
 
 使用与第一个集群上使用的相同版本的 Helm 来安装 Rancher：
-
-对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
 
 ```bash
 helm install rancher rancher-latest/rancher \

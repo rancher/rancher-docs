@@ -32,7 +32,7 @@ To edit your cluster,
 
 ### Editing Clusters in YAML
 
-For a complete reference of configurable options for K3s clusters in YAML, see the [K3s documentation.](https://rancher.com/docs/k3s/latest/en/installation/install-options/)
+For a complete reference of configurable options for RKE2 clusters in YAML, see the [RKE2 documentation](https://docs.rke2.io/install/configuration).
 
 To edit your cluster in YAML:
 
@@ -48,7 +48,8 @@ This subsection covers generic machine pool configurations. For specific infrast
 
 - [Azure](../downstream-cluster-configuration/machine-configuration/azure.md)
 - [DigitalOcean](../downstream-cluster-configuration/machine-configuration/digitalocean.md)
-- [EC2](../downstream-cluster-configuration/machine-configuration/amazon-ec2.md)
+- [Amazon EC2](../downstream-cluster-configuration/machine-configuration/amazon-ec2.md)
+- [Google GCE](../downstream-cluster-configuration/machine-configuration/google-gce.md)
 
 ##### Pool Name
 
@@ -86,9 +87,9 @@ Add [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-tolerat
 #### Basics
 ##### Kubernetes Version
 
-The version of Kubernetes installed on your cluster nodes. Rancher packages its own version of Kubernetes based on [hyperkube](https://github.com/rancher/hyperkube).
+The version of Kubernetes installed on your cluster nodes.
 
-For more detail, see [Upgrading Kubernetes](../../../getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes.md).
+For details on upgrading or rolling back Kubernetes, refer to [this guide](../../../getting-started/installation-and-upgrade/upgrade-and-roll-back-kubernetes.md).
 
 ##### Container Network Provider
 
@@ -105,19 +106,18 @@ Out of the box, Rancher is compatible with the following network providers:
 - [Canal](https://github.com/projectcalico/canal)
 - [Cilium](https://cilium.io/)*
 - [Calico](https://docs.projectcalico.org/v3.11/introduction/)
+- [Flannel](https://github.com/flannel-io/flannel)
 - [Multus](https://github.com/k8snetworkplumbingwg/multus-cni)
 
 \* When using [project network isolation](#project-network-isolation) in the [Cilium CNI](../../../faq/container-network-interface-providers.md#cilium), it is possible to enable cross-node ingress routing. Click the [CNI provider docs](../../../faq/container-network-interface-providers.md#ingress-routing-across-nodes-in-cilium) to learn more.
 
-For more details on the different networking providers and how to configure them, please view our [RKE2 documentation](https://docs.rke2.io/install/network_options).
+For more details on the different networking providers and how to configure them, please view our [RKE2 documentation](https://docs.rke2.io/networking/basic_network_options).
 
-###### Dual-stack Networking
-
-[Dual-stack](https://docs.rke2.io/install/network_options#dual-stack-configuration) networking is supported for all CNI providers. To configure RKE2 in dual-stack mode, set valid IPv4/IPv6 CIDRs for your [Cluster CIDR](#cluster-cidr) and/or [Service CIDR](#service-cidr).
-
-###### Dual-stack Additional Configuration
+:::caution
 
 When using `cilium` or `multus,cilium` as your container network interface provider, ensure the **Enable IPv6 Support** option is also enabled.
+
+:::
 
 ##### Cloud Provider
 
@@ -129,17 +129,13 @@ If the cloud provider you want to use is not listed as an option, you will need 
 
 :::
 
-##### Default Pod Security Policy
-
-The default [pod security policy](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) for the cluster. Please refer to the [RKE2 documentation](https://docs.rke2.io/security/pod_security_policies) on the specifications of each available policy.
-
 ##### Pod Security Admission Configuration Template
 
 The default [pod security admission configuration template](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates.md) for the cluster.
 
-##### Worker CIS Profile
+##### Worker Compliance Profile
 
-Select a [CIS benchmark](../../../how-to-guides/advanced-user-guides/cis-scan-guides/cis-scan-guides.md) to validate the system configuration against.
+Select a [compliance benchmark](../../../how-to-guides/advanced-user-guides/compliance-scan-guides/compliance-scan-guides.md) to validate the system configuration against.
 
 ##### Project Network Isolation
 
@@ -175,7 +171,7 @@ Option to set environment variables for [Rancher agents](../../../how-to-guides/
 
 ##### Automatic Snapshots
 
-Option to enable or disable recurring etcd snapshots. If enabled, users have the option to configure the frequency of snapshots. For details, refer to the [RKE2 documentation](https://docs.rke2.io/backup_restore#creating-snapshots). Note that with RKE2, snapshots are stored on each etcd node. This varies from RKE1 which only stores one snapshot per cluster.
+Option to enable or disable recurring etcd snapshots. If enabled, users have the option to configure the frequency of snapshots. For details, refer to the [RKE2 documentation](https://docs.rke2.io/datastore/backup_restore#creating-snapshots). Note that with RKE2, snapshots are stored on each etcd node. This varies from RKE1 which only stores one snapshot per cluster.
 
 ##### Metrics
 
@@ -185,27 +181,62 @@ Option to choose whether to expose etcd metrics to the public or only within the
 
 ##### Cluster CIDR
 
-IPv4 and/or IPv6 network CIDRs to use for pod IPs (default: 10.42.0.0/16).
+IPv4 and/or IPv6 network CIDRs to use for pod IPs (default: `10.42.0.0/16`).
 
-###### Dual-stack Networking
+Example values:
 
-To configure [dual-stack](https://docs.rke2.io/install/network_options#dual-stack-configuration) mode, enter a valid IPv4/IPv6 CIDR. For example `10.42.0.0/16,2001:cafe:42:0::/56`.
+- IPv4-only: `10.42.0.0/16`
+- IPv6-only: `2001:cafe:42::/56`
+- Dual-stack: `10.42.0.0/16,2001:cafe:42::/56`
 
-[Additional configuration](#dual-stack-additional-configuration) is required when using `cilium` or `multus,cilium` as your [container network](#container-network-provider) interface provider.
+
+For additional requirements and limitations related to dual-stack or IPv6-only networking, see the following resources:
+
+- [RKE2 documentation: Dual-stack configuration](https://docs.rke2.io/networking/basic_network_options#dual-stack-configuration)
+- [RKE2 documentation: IPv6-only setup](https://docs.rke2.io/networking/basic_network_options#ipv6-setup)
+
+:::caution
+
+You must configure the Service CIDR when you first create the cluster. You cannot enable the Service CIDR on an existing cluster after it starts.
+
+:::
+
+:::caution
+
+When using `cilium` or `multus,cilium` as your container network interface provider, ensure the **Enable IPv6 Support** option is also enabled.
+
+:::
 
 ##### Service CIDR
 
-IPv4/IPv6 network CIDRs to use for service IPs (default: 10.43.0.0/16).
+IPv4/IPv6 network CIDRs to use for service IPs (default: `10.43.0.0/16`).
 
-###### Dual-stack Networking
+Example values:
 
-To configure [dual-stack](https://docs.rke2.io/install/network_options#dual-stack-configuration) mode, enter a valid IPv4/IPv6 CIDR. For example `10.42.0.0/16,2001:cafe:42:0::/56`.
+- IPv4-only: `10.43.0.0/16`
+- IPv6-only: `2001:cafe:43::/112`
+- Dual-stack: `10.43.0.0/16,2001:cafe:43::/112`
 
-[Additional configuration](#dual-stack-additional-configuration) is required when using `cilium ` or `multus,cilium` as your [container network](#container-network-provider) interface provider.
+For additional requirements and limitations related to dual-stack or IPv6-only networking, see the following resources:
+
+- [RKE2 documentation: Dual-stack configuration](https://docs.rke2.io/networking/basic_network_options#dual-stack-configuration)
+- [RKE2 documentation: IPv6-only setup](https://docs.rke2.io/networking/basic_network_options#ipv6-setup)
+
+:::caution
+
+You must configure the Service CIDR when you first create the cluster. You cannot enable the Service CIDR on an existing cluster after it starts.
+
+:::
+
+:::caution
+
+When using `cilium` or `multus,cilium` as your container network interface provider, ensure the **Enable IPv6 Support** option is also enabled.
+
+:::
 
 ##### Cluster DNS
 
-IPv4 Cluster IP for coredns service. Should be in your service-cidr range (default: 10.43.0.10).
+IPv4 Cluster IP for coredns service. Should be in your service-cidr range (default: `10.43.0.10`).
 
 ##### Cluster Domain
 
@@ -217,11 +248,11 @@ Option to change the range of ports that can be used for [NodePort services](htt
 
 ##### Truncate Hostnames
 
-Option to truncate hostnames to 15 characters or less. You can only set this field during the initial creation of the cluster. You can't enable or disable the 15 character limit after cluster creation.
+Option to truncate hostnames to 15 characters or fewer. You can only set this field during the initial creation of the cluster. You can't enable or disable the 15-character limit after cluster creation.
 
 This setting only affects machine-provisioned clusters. Since custom clusters set hostnames during their own node creation process, which occurs outside of Rancher, this field doesn't restrict custom cluster hostname length.
 
-Truncating hostnames in a cluster improves compatibility with Windows-based systems. Although Kubernetes allows hostnames up to 63 characters in length, systems that use NetBIOS restrict hostnames to 15 characters or less.
+Truncating hostnames in a cluster improves compatibility with Windows-based systems. Although Kubernetes allows hostnames up to 63 characters in length, systems that use NetBIOS restrict hostnames to 15 characters or fewer.
 
 ##### TLS Alternate Names
 
@@ -237,9 +268,36 @@ For more detail on how an authorized cluster endpoint works and why it is used, 
 
 We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.](../../rancher-manager-architecture/architecture-recommendations.md#architecture-for-an-authorized-cluster-endpoint-ace)
 
+##### Stack Preference
+
+Choose the networking stack for the cluster. This option affects:
+
+- The address used for health and readiness probes of components such as Calico, etcd, kube-apiserver, kube-scheduler, kube-controller-manager, and kubelet.
+- The server URL in the `authentication-token-webhook-config-file` for the Authorized Cluster Endpoint.
+- The `advertise-client-urls` setting for etcd during snapshot restoration.
+
+Options are `ipv4`, `ipv6`, `dual`:
+
+- When set to `ipv4`, the cluster uses `127.0.0.1`
+- When set to `ipv6`, the cluster uses `[::1]`
+- When set to `dual`, the cluster uses `localhost`
+
+The stack preference must match the cluster’s networking configuration:
+
+- Set to `ipv4` for IPv4-only clusters
+- Set to `ipv6` for IPv6-only clusters
+- Set to `dual` for dual-stack clusters
+
+:::caution
+
+Ensuring the loopback address configuration is correct is critical for successful cluster provisioning.
+For more information, refer to the [Node Requirements](../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md) page.
+
+:::
+
 #### Registries
 
-Select the image repository to pull Rancher images from. For more details and configuration options, see the [RKE2 documentation](https://docs.rke2.io/install/containerd_registry_configuration).
+Select the image repository to pull Rancher images from. For more details and configuration options, see the [RKE2 documentation](https://docs.rke2.io/install/private_registry).
 
 #### Upgrade Strategy
 

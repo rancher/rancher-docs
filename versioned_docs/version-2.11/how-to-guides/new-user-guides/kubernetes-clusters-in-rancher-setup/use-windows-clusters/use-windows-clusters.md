@@ -18,7 +18,7 @@ Listed below are the primary RKE2 features for Windows cluster provisioning:
 
 - Windows Containers with RKE2 powered by containerd
 - Added provisioning of Windows RKE2 custom clusters directly from the Rancher UI
-- Calico CNI for Windows RKE2 custom clusters
+- Calico and Flannel CNI for Windows RKE2 custom clusters
 - SAC releases of Windows Server (2004 and 20H2) are included in the technical preview
 
 :::note
@@ -57,7 +57,7 @@ Rancher will not provision the node if the node does not meet these requirements
 
 Before provisioning a new cluster, be sure that you have already installed Rancher on a device that accepts inbound network traffic. This is required in order for the cluster nodes to communicate with Rancher. If you have not already installed Rancher, please refer to the [installation documentation](../../../../getting-started/installation-and-upgrade/installation-and-upgrade.md) before proceeding with this guide.
 
-Rancher supports Windows using Calico as the network provider.
+Rancher supports Windows using Calico and Flannel as network providers.
 
 If you are configuring DHCP options sets for an AWS virtual private cloud, note that in the `domain-name` option field, only one domain name can be specified. According to the DHCP options [documentation:](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html)
 
@@ -163,7 +163,7 @@ The instructions for creating a Windows cluster on existing nodes are very simil
 1. Click **Custom**.
 1. Enter a name for your cluster in the **Cluster Name** field.
 1. In the **Kubernetes Version** dropdown menu, select a supported Kubernetes version.
-1. In the **Container Network** field, select **Calico**.
+1. In the **Container Network** field, select either **Calico** or **Flannel**.
 1. Click **Next**.
 
 ### 3. Add Nodes to the Cluster

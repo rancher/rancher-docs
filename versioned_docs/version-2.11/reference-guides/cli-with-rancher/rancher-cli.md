@@ -14,7 +14,7 @@ The Rancher CLI (Command Line Interface) is a unified tool that you can use to i
 The binary can be downloaded directly from the UI.
 
 1. In the upper left corner, click **☰**.
-1. At the bottom of the navigation sidebar menu, click **About**.
+1. At the bottom of the navigation sidebar menu, click the Rancher version number.
 1. Under the **CLI Downloads section**, there are links to download the binaries for Windows, Mac, and Linux. You can also check the [releases page for our CLI](https://github.com/rancher/cli/releases) for direct downloads of the binary.
 
 ## Requirements
@@ -64,16 +64,12 @@ The following commands are available for use in Rancher CLI.
 
 | Command  | Result  |
 |---|---|
-| `apps, [app]`  | Performs operations on catalog applications (i.e., individual [Helm charts](https://docs.helm.sh/developing_charts/)) or Rancher charts.  |
-| `catalog`  | Performs operations on [catalogs](../../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md).  |
 | `clusters, [cluster]`  | Performs operations on your [clusters](../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/kubernetes-clusters-in-rancher-setup.md).  |
 | `context`  | Switches between Rancher [projects](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md). For an example, see [Project Selection](#project-selection).  |
-| `globaldns`  | Performs operations on global DNS providers and entries.  |
 | `inspect [OPTIONS] [RESOURCEID RESOURCENAME]`  | Displays details about [Kubernetes resources](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#resource-types) or Rancher resources (i.e.: [projects](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md) and [workloads](../../how-to-guides/new-user-guides/kubernetes-resources-setup/workloads-and-pods/workloads-and-pods.md)). Specify resources by name or ID.  |
 | `kubectl`  | Runs [kubectl commands](https://kubernetes.io/docs/reference/kubectl/overview/#operations).   |
 | `login, [l]`  | Logs into a Rancher Server. For an example, see [CLI Authentication](#cli-authentication).  |
 | `machines, [machine]`  | Performs operations on machines.  |
-| `multiclusterapps, [multiclusterapp mcapps mcapp]`  | Performs operations with multi-cluster apps.  |
 | `namespaces, [namespace]`  | Performs operations on [namespaces](../../how-to-guides/new-user-guides/manage-namespaces.md).  |
 | `nodes, [node]`  | Performs operations on [nodes](../../how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools.md).  |
 | `projects, [project]`  | Performs operations on [projects](../../how-to-guides/new-user-guides/manage-clusters/projects-and-namespaces.md).  |

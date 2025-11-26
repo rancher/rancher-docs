@@ -30,7 +30,7 @@ kubeconfig 也可以通过 `--kubeconfig` 标签（详情请参见 https://helm.
 
 <DeprecationHelm2 />
 
-如果你使用 Helm 2，请参见 [Helm 2 迁移到 Helm 3 文档](https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/)。如果你不能升级到 Helm 3，[Helm 2 升级页面](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/helm2.md)提供了使用 Helm 2 升级的旧升级指南。
+如果你使用 Helm 2，请参见 [Helm 2 迁移到 Helm 3 文档](https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/)。如果你不能升级到 Helm 3，[Helm 2 升级页面](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/helm2.md) 提供了使用 Helm 2 升级的旧升级指南。
 
 ### 离线安装：推送镜像到私有镜像仓库
 
@@ -149,8 +149,6 @@ hostname: rancher.my.org
 
 将上一步中的所有值用 `--set key=value` 追加到命令中。
 
-对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
-
 ```
 helm upgrade rancher rancher-<CHART_REPO>/rancher \
   --namespace cattle-system \
@@ -182,8 +180,6 @@ helm upgrade rancher-stable rancher-<CHART_REPO>/rancher \
    helm get values rancher -n cattle-system -o yaml > values.yaml
    ```
 1. 只更新 Rancher 版本：
-
-   对于 Kubernetes v1.25 或更高版本，使用 Rancher v2.7.2-v2.7.4 时，将 `global.cattle.psp.enabled` 设置为 `false`。对于 Rancher v2.7.5 及更高版本来说，这不是必需的，但你仍然可以手动设置该选项。
 
    ```
    helm upgrade rancher rancher-<CHART_REPO>/rancher \

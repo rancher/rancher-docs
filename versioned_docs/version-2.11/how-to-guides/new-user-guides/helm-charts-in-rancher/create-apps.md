@@ -18,7 +18,7 @@ Rancher supports two different types of charts: Helm charts and Rancher charts.
 
 ### Helm Charts
 
-Native Helm charts include an application along with other software required to run it. When deploying native Helm charts, you' can provide the chart's parameter values in a YAML editor.
+Native Helm charts include an application along with other software required to run it. When deploying native Helm charts, you can provide the chart's parameter values in a YAML editor.
 
 ### Rancher Charts
 

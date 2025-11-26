@@ -10,7 +10,7 @@ After installation, the [system administrator](manage-role-based-access-control-
 
 ## First Log In
 
-After you log into Rancher for the first time, Rancher will prompt you for a **Rancher Server URL**.You should set the URL to the main entry point to the Rancher Server. When a load balancer sits in front a Rancher Server cluster, the URL should resolve to the load balancer. The system will automatically try to infer the Rancher Server URL from the IP address or host name of the host running the Rancher Server. This is only correct if you are running a single node Rancher Server installation. In most cases, therefore, you need to set the Rancher Server URL to the correct value yourself.
+After you log into Rancher for the first time, Rancher will prompt you for a **Rancher Server URL**. You should set the URL to the main entry point to the Rancher Server. When a load balancer sits in front a Rancher Server cluster, the URL should resolve to the load balancer. The system will automatically try to infer the Rancher Server URL from the IP address or host name of the host running the Rancher Server. This is only correct if you are running a single node Rancher Server installation. In most cases, therefore, you need to set the Rancher Server URL to the correct value yourself.
 
 :::danger
 
@@ -37,12 +37,6 @@ This feature automatically removes inactive users after a configurable period of
 The user retention feature is disabled by default.
 
 For more information, see [Enabling User Retention](../../advanced-user-guides/enable-user-retention.md).
-
-## Pod Security Policies
-
-_Pod Security Policies_ (or PSPs) are objects that control security-sensitive aspects of pod specification, e.g. root privileges. If a pod does not meet the conditions specified in the PSP, Kubernetes will not allow it to start, and Rancher will display an error message.
-
-For more information how to create and use PSPs, see [Pod Security Policies](create-pod-security-policies.md).
 
 ## Provisioning Drivers
 

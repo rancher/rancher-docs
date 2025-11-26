@@ -129,10 +129,6 @@ If the cloud provider you want to use is not listed as an option, you will need 
 
 :::
 
-##### Default Pod Security Policy
-
-The default [pod security policy](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/create-pod-security-policies.md) for the cluster. Please refer to the [RKE2 documentation](https://docs.rke2.io/security/pod_security_policies) on the specifications of each available policy.
-
 ##### Pod Security Admission Configuration Template
 
 The default [pod security admission configuration template](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates.md) for the cluster.
@@ -175,7 +171,7 @@ Option to set environment variables for [Rancher agents](../../../how-to-guides/
 
 ##### Automatic Snapshots
 
-Option to enable or disable recurring etcd snapshots. If enabled, users have the option to configure the frequency of snapshots. For details, refer to the [RKE2 documentation](https://docs.rke2.io/backup_restore#creating-snapshots). Note that with RKE2, snapshots are stored on each etcd node. This varies from RKE1 which only stores one snapshot per cluster.
+Option to enable or disable recurring etcd snapshots. If enabled, users have the option to configure the frequency of snapshots. For details, refer to the [RKE2 documentation](https://docs.rke2.io/datastore/backup_restore#creating-snapshots). Note that with RKE2, snapshots are stored on each etcd node. This varies from RKE1 which only stores one snapshot per cluster.
 
 ##### Metrics
 
@@ -239,7 +235,7 @@ We recommend using a load balancer with the authorized cluster endpoint. For det
 
 #### Registries
 
-Select the image repository to pull Rancher images from. For more details and configuration options, see the [RKE2 documentation](https://docs.rke2.io/install/containerd_registry_configuration).
+Select the image repository to pull Rancher images from. For more details and configuration options, see the [RKE2 documentation](https://docs.rke2.io/install/private_registry).
 
 #### Upgrade Strategy
 

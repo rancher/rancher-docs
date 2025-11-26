@@ -52,10 +52,10 @@ Install the [`rancher-backup chart`](https://github.com/rancher/backup-restore-o
 
      The above assumes an environment with outbound connectivity to Docker Hub.
 
-     For an **air-gapped environment**, use the following Helm value to pull the `backup-restore-operator` image from your private registry when you install the rancher-backup Helm chart.
+     For an **air-gapped environment**, use the following Helm values to pull the `backup-restore-operator` and `kubectl` images from your private registry when you install the rancher-backup Helm chart.
 
      ```bash
-     --set image.repository <registry>/rancher/backup-restore-operator
+     --set image.repository <registry>/rancher/backup-restore-operator --set global.kubectl.repository=<registry>/rancher/kubectl
      ```
 
      :::
@@ -148,7 +148,6 @@ Follow the steps to [install cert-manager](../../../getting-started/installation
 
 Use the same version of Helm to install Rancher, that was used on the first cluster.
 
-For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
 ```bash
 helm install rancher rancher-latest/rancher \
@@ -178,3 +177,31 @@ helm install rancher rancher-latest/rancher -n cattle-system -f rancher-values.y
 After migration completes, update your DNS records and any load balancers, so that traffic is routed correctly to the migrated cluster. Remember that you must use the same hostname that was set as the server URL in the original cluster.
 
 Full instructions on how to redirect traffic to the migrated cluster differ based on your specific environment. Refer to your hosting provider's documentation for more details.
+
+### 6. Scale Down the Original Rancher Instance
+
+After redirecting traffic to the new Rancher environment, **scale the original Rancher instance to 0 replicas** so it no longer contacts your managed clusters.  
+
+Leaving the old server up can cause agents to keep contacting the original `server-url`, which often leaves clusters stuck in **Updating** in the new environment.
+
+```bash
+kubectl scale deployment rancher -n cattle-system --replicas=0
+```
+
+If you originally ran Rancher in Docker:
+
+```bash
+docker stop <original-rancher-container>
+```
+
+:::note
+
+If you wish to keep the original Rancher environment running, you can also restart the cattle-cluster-agent pods on each cluster connected to your Rancher environment.
+
+```bash
+kubectl rollout restart deployment cattle-cluster-agent -n cattle-system
+```
+
+This triggers a rolling restart of the agent so it re-establishes the connection to the new Rancher environment.
+
+:::

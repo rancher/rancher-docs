@@ -5,6 +5,48 @@ title: Rancher Documentation Versions
 <!-- releaseTask -->
 ### Current Versions
 
+Here you can find links to supporting documentation for the current released version of Rancher v2.13, and its availability for [Rancher Prime](/v2.13/getting-started/quick-start-guides/deploy-rancher-manager/prime) and the Community version of Rancher:
+
+<table>
+  <tr>
+    <th>Version</th>
+    <th>Documentation</th>
+    <th>Release Notes</th>
+    <th>Support Matrix</th>
+    <th>Prime</th>
+    <th>Community</th>
+  </tr>
+  <tr>
+    <td><b>v2.13.0</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.13">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.13.0">Release Notes</a></td>
+    <td><center>N/A</center></td>
+    <td><center>N/A</center></td>
+    <td><center>&#10003;</center></td>
+  </tr>
+</table>
+
+Here you can find links to supporting documentation for the current released version of Rancher v2.12, and its availability for [Rancher Prime](/v2.12/getting-started/quick-start-guides/deploy-rancher-manager/prime) and the Community version of Rancher:
+
+<table>
+  <tr>
+    <th>Version</th>
+    <th>Documentation</th>
+    <th>Release Notes</th>
+    <th>Support Matrix</th>
+    <th>Prime</th>
+    <th>Community</th>
+  </tr>
+  <tr>
+    <td><b>v2.12.4</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.12">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.12.4">Release Notes</a></td>
+    <td><center>N/A</center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>N/A</center></td>
+  </tr>
+</table>
+
 Here you can find links to supporting documentation for the current released version of Rancher v2.11, and its availability for [Rancher Prime](/v2.11/getting-started/quick-start-guides/deploy-rancher-manager/prime) and the Community version of Rancher:
 
 <table>
@@ -17,12 +59,12 @@ Here you can find links to supporting documentation for the current released ver
     <th>Community</th>
   </tr>
   <tr>
-    <td><b>v2.11.0</b></td>
+    <td><b>v2.11.8</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.11">Documentation</a></td>
-    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.11.0">Release Notes</a></td>
-    <td><center>N/A</center></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.11.8">Release Notes</a></td>
     <td><center>N/A</center></td>
     <td><center>&#10003;</center></td>
+    <td><center>NA</center></td>
   </tr>
 </table>
 
@@ -38,9 +80,9 @@ Here you can find links to supporting documentation for the current released ver
     <th>Community</th>
   </tr>
   <tr>
-    <td><b>v2.10.4</b></td>
+    <td><b>v2.10.10</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.10">Documentation</a></td>
-    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.10.4">Release Notes</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.10.10">Release Notes</a></td>
     <td><center>N/A</center></td>
     <td><center>&#10003;</center></td>
     <td><center>N/A</center></td>
@@ -59,16 +101,18 @@ Here you can find links to supporting documentation for the current released ver
     <th>Community</th>
   </tr>
   <tr>
-    <td><b>v2.9.8</b></td>
+    <td><b>v2.9.12</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.9">Documentation</a></td>
-    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.9.8">Release Notes</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.9.12">Release Notes</a></td>
     <td><center>N/A</center></td>
     <td><center>&#10003;</center></td>
     <td><center>N/A</center></td>
   </tr>
 </table>
 
-Here you can find links to supporting documentation for the current released version of Rancher v2.8, and its availability for [Rancher Prime](/v2.8/getting-started/quick-start-guides/deploy-rancher-manager/prime) and the Community version of Rancher:
+### Past Versions
+
+Here you can find links to supporting documentation for previous versions of Rancher v2.12, and their availability for [Rancher Prime](/v2.12/getting-started/quick-start-guides/deploy-rancher-manager/prime) and the Community version of Rancher:
 
 <table>
   <tr>
@@ -80,16 +124,115 @@ Here you can find links to supporting documentation for the current released ver
     <th>Community</th>
   </tr>
   <tr>
-    <td><b>v2.8.14</b></td>
-    <td><a href="https://ranchermanager.docs.rancher.com/v2.8">Documentation</a></td>
-    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.8.14">Release Notes</a></td>
+    <td><b>v2.12.3</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.12">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.12.3">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-12-3/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>&#10003;</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.12.2</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.12">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.12.2">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-12-2/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>&#10003;</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.12.1</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.12">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.12.1">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-12-1/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>&#10003;</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.12.0</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.12">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.12.0">Release Notes</a></td>
+    <td><center>N/A</center></td>
     <td><center>N/A</center></td>
     <td><center>&#10003;</center></td>
-    <td><center>N/A</center></td>
   </tr>
 </table>
 
-### Past Versions
+Here you can find links to supporting documentation for previous versions of Rancher v2.11, and their availability for [Rancher Prime](/v2.11/getting-started/quick-start-guides/deploy-rancher-manager/prime) and the Community version of Rancher:
+
+<table>
+  <tr>
+    <th>Version</th>
+    <th>Documentation</th>
+    <th>Release Notes</th>
+    <th>Support Matrix</th>
+    <th>Prime</th>
+    <th>Community</th>
+  </tr>
+  <tr>
+    <td><b>v2.11.7</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.11">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.11.7">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-11-7/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>NA</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.11.6</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.11">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.11.6">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-11-6/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>NA</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.11.5</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.11">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.11.5">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-11-5/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>NA</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.11.4</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.11">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.11.4">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-11-4/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>NA</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.11.3</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.11">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.11.3">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-11-3/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>&#10003;</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.11.2</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.11">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.11.2">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-11-2/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>&#10003;</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.11.1</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.11">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.11.1">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-11-1/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>&#10003;</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.11.0</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.11">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.11.0">Release Notes</a></td>
+    <td><center>N/A</center></td>
+    <td><center>N/A</center></td>
+    <td><center>&#10003;</center></td>
+  </tr>
+</table>
 
 Here you can find links to supporting documentation for previous versions of Rancher v2.10, and their availability for [Rancher Prime](/v2.10/getting-started/quick-start-guides/deploy-rancher-manager/prime) and the Community version of Rancher:
 
@@ -101,6 +244,54 @@ Here you can find links to supporting documentation for previous versions of Ran
     <th>Support Matrix</th>
     <th>Prime</th>
     <th>Community</th>
+  </tr>
+  <tr>
+    <td><b>v2.10.9</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.10">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.10.9">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-10-9/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>N/A</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.10.8</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.10">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.10.8">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-10-8/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>N/A</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.10.7</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.10">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.10.7">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-10-7/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>N/A</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.10.6</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.10">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.10.6">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-10-6/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>N/A</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.10.5</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.10">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.10.5">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-10-5/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>N/A</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.10.4</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.10">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.10.4">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-10-4/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>N/A</center></td>
   </tr>
   <tr>
     <td><b>v2.10.3</b></td>
@@ -146,6 +337,38 @@ Here you can find links to supporting documentation for previous versions of Ran
     <th>Support Matrix</th>
     <th>Prime</th>
     <th>Community</th>
+  </tr>
+  <tr>
+    <td><b>v2.9.11</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.9">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.9.11">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-9-11/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>N/A</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.9.10</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.9">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.9.10">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-9-10/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>N/A</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.9.9</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.9">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.9.9">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-9-9/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>N/A</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.9.8</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.9">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.9.8">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-9-8/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>N/A</center></td>
   </tr>
   <tr>
     <td><b>v2.9.7</b></td>
@@ -215,7 +438,9 @@ Here you can find links to supporting documentation for previous versions of Ran
   </tr>
 </table>
 
-Here you can find links to supporting documentation for previous versions of Rancher v2.8, and their availability for [Rancher Prime](/v2.8/getting-started/quick-start-guides/deploy-rancher-manager/prime) and the Community version of Rancher:
+Here you can find links to supporting documentation for previous versions of Rancher v2.8, and their availability for [Rancher Prime](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.8/getting-started/quick-start-guides/deploy-rancher-manager/prime.md) and the Community version of Rancher:
+
+Here you can find links to supporting documentation for the current released version of Rancher v2.8, and its availability for [Rancher Prime](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.8/getting-started/quick-start-guides/deploy-rancher-manager/prime.md) and the Community version of Rancher:
 
 <table>
   <tr>
@@ -225,6 +450,22 @@ Here you can find links to supporting documentation for previous versions of Ran
     <th>Support Matrix</th>
     <th>Prime</th>
     <th>Community</th>
+  </tr>
+  <tr>
+    <td><b>v2.8.15</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.8">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.8.15">Release Notes</a></td>
+    <td><center>N/A</center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>N/A</center></td>
+  </tr>
+  <tr>
+    <td><b>v2.8.14</b></td>
+    <td><a href="https://ranchermanager.docs.rancher.com/v2.8">Documentation</a></td>
+    <td><a href="https://github.com/rancher/rancher/releases/tag/v2.8.14">Release Notes</a></td>
+    <td><center><a href="https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-8-14/">Support Matrix</a></center></td>
+    <td><center>&#10003;</center></td>
+    <td><center>N/A</center></td>
   </tr>
   <tr>
     <td><b>v2.8.13</b></td>
@@ -344,7 +585,7 @@ Here you can find links to supporting documentation for previous versions of Ran
 
 ### Legacy Versions (EOL)
 
-Here you can find links to supporting documentation for legacy versions of Rancher v2.7, and its availability for [Rancher Prime](/v2.7/getting-started/quick-start-guides/deploy-rancher-manager/prime) and the Community version of Rancher:
+Here you can find links to supporting documentation for legacy versions of Rancher v2.7, and its availability for [Rancher Prime](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.7/getting-started/quick-start-guides/deploy-rancher-manager/prime.md) and the Community version of Rancher:
 
 <table>
   <tr>

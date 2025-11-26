@@ -16,16 +16,17 @@ The intent of these guides is to quickly launch a sandbox that you can use to ev
 
 ## Prerequisites
 
-- [Vagrant](https://www.vagrantup.com): Vagrant is required as this is used to provision the machine based on the Vagrantfile.
+- [Vagrant](https://developer.hashicorp.com/vagrant): Vagrant is required as this is used to provision the machine based on the Vagrantfile.
 - [Virtualbox](https://www.virtualbox.org): The virtual machines that Vagrant provisions need to be provisioned to VirtualBox.
 - At least 4GB of free RAM.
 
-### Note
-- Vagrant will require plugins to create VirtualBox VMs. Install them with the following commands:
+:::note 
 
-  `vagrant plugin install vagrant-vboxmanage`
+Vagrant requires plugins to create VirtualBox VMs. Install them with the following commands: 
+- `vagrant plugin install vagrant-vboxmanage` 
+- `vagrant plugin install vagrant-vbguest` 
 
-  `vagrant plugin install vagrant-vbguest`
+:::
 
 ## Getting Started
 

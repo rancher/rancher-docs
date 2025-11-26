@@ -24,7 +24,6 @@ You can use projects to perform actions like:
 - [Set resource quotas](manage-project-resource-quotas/manage-project-resource-quotas.md)
 - [Manage namespaces](../../new-user-guides/manage-namespaces.md)
 - [Configure tools](../../../reference-guides/rancher-project-tools.md)
-- [Configure pod security policies](manage-pod-security-policies.md)
 
 ### Authorization
 

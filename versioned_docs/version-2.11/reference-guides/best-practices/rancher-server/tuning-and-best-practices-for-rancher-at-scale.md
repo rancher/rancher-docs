@@ -23,23 +23,7 @@ When scaling up Rancher, one typical bottleneck is resource growth in the upstre
 
 ### Minimizing Third-Party Software on the Upstream Cluster
 
-Running Rancher at scale can put significant load on internal Kubernetes components, such as `etcd` or `kubeapiserver`. Issues may arise if third-party software interferes with the performance of those components or with Rancher.
-
-Every third-party piece of software carries a risk of interference. To prevent performance issues on the upstream cluster, you should avoid running any other apps or components, beyond Kubernetes system components and Rancher itself.
-
-Software in the following categories generally won't interfere with Rancher or Kubernetes system performance:
- * Rancher internal components, such as Fleet
- * Rancher extensions
- * Cluster API components
- * CNIs
- * Cloud controller managers
- * Observability and monitoring tools (with the exception of prometheus-rancher-exporter)
-
-On the other hand, the following software are found to interfere with Rancher performance at scale:
- * [CrossPlane](https://www.crossplane.io/)
- * [Argo CD](https://argoproj.github.io/cd/)
- * [Flux](https://fluxcd.io/)
- * [prometheus-rancher-exporter](https://github.com/David-VTUK/prometheus-rancher-exporter) (see [issue 33](https://github.com/David-VTUK/prometheus-rancher-exporter/issues/33))
+Recommendations outlined in the [general Rancher recommendations](./tips-for-running-rancher.md#minimize-third-party-software-on-the-upstream-cluster) are particularly important in a high scale context.
 
 ### Managing Your Object Counts
 

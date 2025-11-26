@@ -41,7 +41,7 @@ Prometheus RemoteRead and RemoteWrite can be configured as custom answers in the
 
 For more information on remote endpoints and storage, refer to the [Prometheus documentation.](https://prometheus.io/docs/operating/integrations/#remote-endpoints-and-storage)
 
-The Prometheus operator documentation contains the full [RemoteReadSpec](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#remotereadspec) and [RemoteWriteSpec.](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#remotewritespec)
+The Prometheus operator documentation contains the full [RemoteReadSpec](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#remotereadspec) and [RemoteWriteSpec.](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#remotewritespec)
 
 An example configuration would be:
 

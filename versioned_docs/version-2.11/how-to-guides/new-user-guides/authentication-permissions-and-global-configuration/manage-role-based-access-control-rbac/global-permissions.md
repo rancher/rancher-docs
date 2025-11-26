@@ -6,6 +6,8 @@ title: Global Permissions
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions"/>
 </head>
 
+<PermissionsWarning />
+
 _Permissions_ are individual access rights that you can assign when selecting a custom permission for a user.
 
 Global Permissions define user authorization outside the scope of any particular cluster. Out-of-the-box, there are four default global permissions: `Administrator`, `Standard User` and `User-base`.
@@ -97,6 +99,12 @@ For details on which Kubernetes resources correspond to each global permission,
 
 - Each permission listed above is comprised of multiple individual permissions not listed in the Rancher UI. For a full list of these permissions and the rules they are comprised of, access through the API at `/v3/globalRoles`.
 - When viewing the resources associated with default roles created by Rancher, if there are multiple Kubernetes API resources on one line item, the resource will have `(Custom)` appended to it. These are not custom resources but just an indication that there are multiple Kubernetes API resources as one resource.
+
+:::
+
+:::danger
+
+The built-in GlobalRole `Manage Users` allows users to create, modify and delete other users within the Rancher environment. While this permission may be necessary for administrative workflows in trusted environments, granting it to non-trusted or lower-privileged users, such as standard users, poses a serious security risk and may result in privilege escalation.
 
 :::
 

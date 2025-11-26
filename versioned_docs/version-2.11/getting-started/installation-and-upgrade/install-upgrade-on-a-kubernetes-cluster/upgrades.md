@@ -35,7 +35,7 @@ The upgrade instructions assume you are using Helm 3.
 
 <DeprecationHelm2 />
 
-For migration of installs started with Helm 2, refer to the official [Helm 2 to 3 migration docs.](https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/) The [Helm 2 upgrade page here](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/helm2.md)provides a copy of the older upgrade instructions that used Helm 2, and it is intended to be used if upgrading to Helm 3 is not feasible.
+For migration of installs started with Helm 2, refer to the official [Helm 2 to 3 migration docs.](https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/) The [Helm 2 upgrade page here](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/helm2.md) provides a copy of the older upgrade instructions that used Helm 2, and it is intended to be used if upgrading to Helm 3 is not feasible.
 
 ### For air-gapped installs: Populate private registry
 
@@ -152,7 +152,6 @@ Upgrade Rancher to the latest version with all your settings.
 
 Take all the values from the previous step and append them to the command using `--set key=value`.
 
-For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
 
 ```
 helm upgrade rancher rancher-<CHART_REPO>/rancher \
@@ -186,8 +185,7 @@ Alternatively, it's possible to export the current values to a file and referenc
     ```
 1. Update only the Rancher version:
 
-    For Kubernetes v1.25 or later, set `global.cattle.psp.enabled` to `false` when using Rancher v2.7.2-v2.7.4. This is not necessary for Rancher v2.7.5 and above, but you can still manually set the option if you choose.
-
+    
     ```
     helm upgrade rancher rancher-<CHART_REPO>/rancher \
       --namespace cattle-system \

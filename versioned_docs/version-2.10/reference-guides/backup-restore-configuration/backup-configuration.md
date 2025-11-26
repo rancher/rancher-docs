@@ -25,6 +25,24 @@ Select the first option to perform a one-time backup, or select the second optio
 | `schedule` |  Provide the cron string for scheduling recurring backups.  |
 | `retentionCount` |  Provide the number of backup files to be retained.  |
 
+## ResourceSet
+
+While you can create your own ResourceSets to back up custom applications, two ResourceSets specifically for backing up Rancher are officially maintained and created by default by the `rancher-backup` operator. We refer to these as `rancher-resource-set-basic` and `rancher-resource-set-full`.  The difference between them is whether they include secrets or not in the backups. 
+
+`rancher-resource-set-basic` does not include any secrets in the backup files to safeguard confidential information. You are responsible for recording any secrets and redeploying them safely. 
+
+`rancher-resource-set-full` includes all essential secrets in the backup files to ensure Rancher continues running smoothly after a restore or migration. To avoid storing sensitive information in plain text, we strongly advise you to enable encryption with a strong key.
+
+:::note Important:
+
+`rancher-resource-set` is also included by default with the `rancher-backup` operator. However, this ResourceSet is deprecated and is only being kept for backwards compatibility reasons. `rancher-resource-set` will be removed in Rancher v2.12. Please update your Backup custom resources to use either `rancher-resource-set-full` or `rancher-resource-set-basic`.
+
+:::
+
+| YAML Directive Name | Description |
+| ---------------- | ---------------- |
+| `resourceSetName` |  Provide the name of the ResourceSet to define which resources will be included in this backup. |
+
 ## Encryption
 
 The rancher-backup gathers resources by making calls to the kube-apiserver. Objects returned by apiserver are decrypted, so even if [encryption at rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/) is enabled, even the encrypted objects gathered by the backup will be in plaintext.

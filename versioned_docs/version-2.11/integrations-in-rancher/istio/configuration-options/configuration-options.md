@@ -6,6 +6,14 @@ title: Configuration Options
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/istio/configuration-options"/>
 </head>
 
+:::warning
+
+[Rancher-Istio](https://github.com/rancher/charts/tree/release-v2.11/charts/rancher-istio) will be deprecated in Rancher v2.12.0; turn to the [SUSE Rancher Application Collection](https://apps.rancher.io) build of Istio for enhanced security (included in SUSE Rancher Prime subscriptions).
+
+Detailed information can be found in [this announcement](https://forums.suse.com/t/deprecation-of-rancher-istio/45043).
+
+:::
+
 ### Egress Support
 
 By default the Egress gateway is disabled, but can be enabled on install or upgrade through the values.yaml or via the [overlay file](#overlay-file).
@@ -29,10 +37,6 @@ The Monitoring app sets `prometheus.prometheusSpec.ignoreNamespaceSelectors=fals
 If you would like to limit Prometheus to specific namespaces, set `prometheus.prometheusSpec.ignoreNamespaceSelectors=true`. Once you do this, you must perform some additional configuration to continue to monitor your resources.
 
 For details, refer to [this section.](selectors-and-scrape-configurations.md)
-
-### Enable Istio with Pod Security Policies
-
-Refer to [this section.](pod-security-policies.md)
 
 ### Additional Steps for Installing Istio on an RKE2 Cluster
 

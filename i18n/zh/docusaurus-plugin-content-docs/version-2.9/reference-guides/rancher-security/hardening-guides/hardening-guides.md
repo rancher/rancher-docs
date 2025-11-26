@@ -26,27 +26,21 @@ Rancher 使用以下 Kubernetes 发行版：
 
 | Kubernetes 版本 | CIS Benchmark 版本 | 自我评估指南 | 加固指南 |
 |--------------------|-----------------------|-----------------------|------------------|
-| Kubernetes v1.23 | CIS v1.23 | [链接](rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.23-k8s-v1.23.md) | [链接](rke1-hardening-guide/rke1-hardening-guide.md) |
-| Kubernetes v1.24 | CIS v1.24 | [链接](rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.24-k8s-v1.24.md) | [链接](rke1-hardening-guide/rke1-hardening-guide.md) |
 | Kubernetes v1.25/v1.26/v1.27 | CIS v1.7 | [链接](rke1-hardening-guide/rke1-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27.md) | [链接](rke1-hardening-guide/rke1-hardening-guide.md) |
 
 ### RKE2 指南
 
 | 类型 | Kubernetes 版本 | CIS Benchmark 版本 | 自我评估指南 | 加固指南 |
 |------|--------------------|-----------------------|-----------------------|------------------|
-| Rancher provisioned RKE2 | Kubernetes v1.23 | CIS v1.23 | [链接](rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.23-k8s-v1.23.md) | [链接](rke2-hardening-guide/rke2-hardening-guide.md) |
-| Rancher provisioned RKE2 | Kubernetes v1.24 | CIS v1.24 | [链接](rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.24-k8s-v1.24.md) | [链接](rke2-hardening-guide/rke2-hardening-guide.md) |
 | Rancher provisioned RKE2 | Kubernetes v1.25/v1.26/v1.27 | CIS v1.7 | [链接](rke2-hardening-guide/rke2-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27.md) | [链接](rke2-hardening-guide/rke2-hardening-guide.md) |
-| Standalone RKE2 | Kubernetes v1.25/v1.26/v1.27 | CIS v1.7 | [链接](https://docs.rke2.io/security/cis_self_assessment123) | [链接](https://docs.rke2.io/security/hardening_guide) |
+| Standalone RKE2 | Kubernetes v1.27-v1.32 | CIS v1.9 | [链接](https://docs.rke2.io/security/cis_self_assessment19) | [链接](https://docs.rke2.io/security/hardening_guide) |
 
 ### K3s 指南
 
 | 类型 | Kubernetes 版本 | CIS Benchmark 版本 | 自我评估指南 | 加固指南 |
 |------|--------------------|-----------------------|-----------------------|------------------|
-| Rancher provisioned K3s cluster | Kubernetes v1.23 | CIS v1.23 | [链接](k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.23-k8s-v1.23.md) | [链接](k3s-hardening-guide/k3s-hardening-guide.md) |
-| Rancher provisioned K3s cluster | Kubernetes v1.24 | CIS v1.24 | [链接](k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.24-k8s-v1.24.md) | [链接](k3s-hardening-guide/k3s-hardening-guide.md) |
 | Rancher provisioned K3s cluster | Kubernetes v1.25/v1.26/v1.27 | CIS v1.7 | [链接](k3s-hardening-guide/k3s-self-assessment-guide-with-cis-v1.7-k8s-v1.25-v1.26-v1.27.md) | [链接](k3s-hardening-guide/k3s-hardening-guide.md) |
-| Standalone K3s | Kubernetes v1.22 up to v1.24 | CIS v1.23 | [链接](https://docs.k3s.io/security/self-assessment) | [链接](https://docs.k3s.io/security/hardening-guide) |
+| Standalone K3s | Kubernetes v1.26 up to v1.29 | CIS v1.8 | [链接](https://docs.k3s.io/security/self-assessment-1.8) | [链接](https://docs.k3s.io/security/hardening-guide) |
 
 ## 在 SELinux 上使用 Rancher
 

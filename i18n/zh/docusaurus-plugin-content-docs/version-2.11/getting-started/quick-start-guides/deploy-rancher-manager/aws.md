@@ -22,7 +22,7 @@ description: 阅读此分步 Rancher AWS 指南，以快速部署带有单节点
 - [Amazon AWS 账号](https://aws.amazon.com/account/): 用于创建部署 Rancher Server 和 Kubernetes 的资源。
 - [Amazon AWS 访问密钥](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html)：如果你没有的话，请访问此链接查看相关指南。
 - [已创建 IAM 策略](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html#access_policies_create-start)：定义附加此策略的账号所具有的权限。
-- [Terraform](https://www.terraform.io/downloads.html): 用于在 Amazon AWS 中配置服务器和集群。
+- [Terraform](https://developer.hashicorp.com/terraform/install): 用于在 Amazon AWS 中配置服务器和集群。
 
 ### IAM 策略示例
 
