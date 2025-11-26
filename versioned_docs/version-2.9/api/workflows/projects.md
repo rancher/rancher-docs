@@ -37,8 +37,7 @@ apiVersion: management.cattle.io/v3
 kind: Project
 metadata:
   annotations: 
-  field.cattle.io/creatorId:
-    user-id
+    field.cattle.io/creatorId: user-id
   generateName: p-
   namespace: c-m-abcde
 spec:
