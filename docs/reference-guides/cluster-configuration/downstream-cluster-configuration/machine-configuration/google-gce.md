@@ -71,7 +71,7 @@ Tags is a list of _network tags_, which can be used to associate preexisting Fir
 
 ### Labels
 
-A comma seperated list of custom labels to be attached to all VMs within a given machine pool. Unlike Tags, Labels do not influence networking behavior and only serve to organize cloud resources.
+A comma separated list of custom labels to be attached to all VMs within a given machine pool. Unlike Tags, Labels do not influence networking behavior and only serve to organize cloud resources.
 
 ## Advanced Options
 

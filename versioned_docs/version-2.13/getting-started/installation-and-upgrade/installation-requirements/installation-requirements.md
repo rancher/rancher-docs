@@ -25,9 +25,15 @@ Rancher needs to be installed on a supported Kubernetes version. Consult the [Ra
 
 Regardless of version and distribution, the Kubernetes cluster must have the aggregation API layer properly configured to support the [extension API](../../../api/extension-apiserver.md) used by Rancher.
 
-### Install Rancher on a Hardened Kubernetes cluster
+### Install Rancher on a Hardened Kubernetes Cluster
 
 If you install Rancher on a hardened Kubernetes cluster, check the [Exempting Required Rancher Namespaces](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/psa-config-templates.md#exempting-required-rancher-namespaces) section for detailed requirements.
+
+### Install Rancher on an IPv6-only or Dual-stack Kubernetes Cluster
+
+You can deploy Rancher on an IPv6-only or dual-stack Kubernetes cluster.
+
+For details on Rancher’s IPv6-only and dual-stack support, see the [IPv4/IPv6 Dual-stack](../../../reference-guides/dual-stack.md) page.
 
 ## Operating Systems and Container Runtime Requirements
 
