@@ -66,7 +66,8 @@ Before you create your own custom catalog, you should have a basic understanding
     ![values.yaml](/static/img/helm-app-2.6.png)
 
 
-### Chart.yaml annotations
+### Chart.yaml
+#### Annotations
 
 Rancher supports additional annotations that you can add to the `Chart.yaml` file. These annotations allow you to define application dependencies or configure additional UI defaults:
 
@@ -79,6 +80,10 @@ Rancher supports additional annotations that you can add to the `Chart.yaml` fil
 | catalog.cattle.io/requests-cpu    | Total amount of CPU that should be unreserverd in the cluster. If less CPU is available, a warning will be shown | 2000m |
 | catalog.cattle.io/requests-memory | Total amount of memory that should be unreserverd in the cluster. If less memory is available, a warning will be shown | 2Gi |
 | catalog.cattle.io/os              | Restricts the OS where this chart can be installed. Possible values: `linux`, `windows`. Default: no restriction | linux |
+
+### Keywords
+
+With the `keywords` option in the `Chart.yaml` file it is possible to provide a list of categories for sorting your appication in the Rancher UI, like `infrastructure`, `monitoring` and more.
 
 ### questions.yml
 
