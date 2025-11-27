@@ -62,8 +62,8 @@ Before you create your own custom catalog, you should have a basic understanding
 
     <figcaption>Rancher Chart with <code>questions.yml</code> (top) vs. Helm Chart without (bottom)</figcaption>
 
-    ![questions.yml](/img/rancher-app-2.6.png)
-    ![values.yaml](/img/helm-app-2.6.png)
+    ![questions.yml](/static/img/rancher-app-2.6.png)
+    ![values.yaml](/static/img/helm-app-2.6.png)
 
 
 ### Chart.yaml annotations
