@@ -35,7 +35,7 @@ The global default registry is intended to be used in air-gapped setups, for reg
 
 Most private registries should work, by default, with RKE2 downstream clusters.
 
-However, you'll need to do some additional steps if you're trying to set a namespaced private registry whose URL is formated like this: `website/subdomain:portnumber`.
+However, you'll need to do some additional steps if you're trying to set a namespaced private registry whose URL is formatted like this: `website/subdomain:portnumber`.
 
 1. Select **☰ > Cluster Management**.
 1. Find the RKE2 cluster in the list and click **⋮ >Edit Config**.
