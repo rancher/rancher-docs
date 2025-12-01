@@ -160,7 +160,7 @@ Look up the project backing namespace:
 kubectl --namespace c-m-abcde get projects
 ```
 
-to list projectroletemplatebindings in the project's backing namespace:
+To list projectroletemplatebindings in the project's backing namespace:
 
 ```bash
 kubectl --namespace c-m-abcde-p-vwxyz get projectroletemplatebindings
