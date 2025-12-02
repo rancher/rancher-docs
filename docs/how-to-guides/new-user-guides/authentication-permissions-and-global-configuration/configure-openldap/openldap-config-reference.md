@@ -62,6 +62,8 @@ The table below details the parameters for the user schema configuration.
 | Login Attribute | The attribute whose value matches the username part of credentials entered by your users when logging in to Rancher. This is typically `uid`. |
 | User Member Attribute | The user attribute containing the Distinguished Name of groups a user is member of. Usually this is one of `memberOf` or `isMemberOf`. |
 | Search Attribute | When a user enters text to add users or groups in the UI, Rancher queries the LDAP server and attempts to match users by the attributes provided in this setting. Multiple attributes can be specified by separating them with the pipe ("\|") symbol. |
+| Search Filter | This filter gets applied to the list of users that is searched when Rancher attempts to add users to a site access list or tries to add members to clusters or projects. The filter must be a valid LDAP filter expression enclosed in parentheses. |
+| Login Filter | An optional LDAP filter expression that narrows down which users can log in to Rancher based on user LDAP attributes. The User Login Filter must be a valid LDAP filter expression enclosed in parentheses that evaluates to true. Note: The User Login Filter is independent of the User Search Filter but in many cases should either match it or produce a subset of results of the latter. |
 | User Enabled Attribute | If the schema of your OpenLDAP server supports a user attribute whose value can be evaluated to determine if the account is disabled or locked, enter the name of that attribute. The default OpenLDAP schema does not support this and the field should usually be left empty. |
 | Disabled Status Bitmask | This is the value for a disabled/locked user account. The parameter is ignored if `User Enabled Attribute` is empty. |
 
@@ -78,5 +80,6 @@ The table below details the parameters for the group schema configuration.
 | Group Member User Attribute | The name of the **user attribute** whose format matches the group members in the `Group Member Mapping Attribute`. |
 | Group Member Mapping Attribute | The name of the group attribute containing the members of a group. |
 | Search Attribute | Attribute used to construct search filters when adding groups to clusters or projects in the UI. See description of user schema `Search Attribute`. |
+| Search Filter | This filter gets applied to the list of groups that is searched when Rancher attempts to add groups to a site access list or tries to add groups to clusters or projects. The filter must be a valid LDAP filter expression enclosed in parentheses. |
 | Group DN Attribute | The name of the group attribute whose format matches the values in the user's group membership attribute. See  `User Member Attribute`. |
 | Nested Group Membership | This settings defines whether Rancher should resolve nested group memberships. Use only if your organization makes use of these nested memberships (ie. you have groups that contain other groups as members). This option is disabled if you are using Shibboleth. |
