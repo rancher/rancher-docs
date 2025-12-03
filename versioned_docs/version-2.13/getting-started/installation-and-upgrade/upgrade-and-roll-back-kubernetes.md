@@ -87,7 +87,7 @@ To enable draining each node during a cluster upgrade,
 1. On the **Clusters** page, go to the cluster you want to enable node draining and click **⋮ > Edit Config**.
 1. Click **⋮ > Edit**.
 1. In the **Upgrade Strategy** tab, go to the **Drain nodes** field and click **Yes**. Node draining is configured separately for control plane and worker nodes.
-1. Configure the options for how pods are deleted. For more information about each option, refer to [this section.](../../how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools.md#aggressive-and-safe-draining-options)
+1. Configure the options for how pods are deleted. For more information about each option, refer to [this section.](../../how-to-guides/new-user-guides/manage-clusters/nodes-and-machine-pools.md#aggressive-and-safe-draining-options)
 1. Optionally, configure a grace period. The grace period is the timeout given to each pod for cleaning things up, so they will have chance to exit gracefully. Pods might need to finish any outstanding requests, roll back transactions or save state to some external storage. If this value is negative, the default value specified in the pod will be used.
 1. Optionally, configure a timeout, which is the amount of time the drain should continue to wait before giving up.
 1. Click **Save**.

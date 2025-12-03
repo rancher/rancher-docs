@@ -1,12 +1,12 @@
 ---
-title: Nodes and Node Pools
+title: Nodes and Machine Pools
 ---
 
 <head>
-  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools"/>
+  <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/nodes-and-machine-pools"/>
 </head>
 
-After you launch a Kubernetes cluster in Rancher, you can manage individual nodes from the cluster's **Node** tab. 
+After you launch a Kubernetes cluster in Rancher, you can manage individual nodes from the cluster's **Node** tab.
 
 1. Click **☰** in the top left corner.
 1. Select **Cluster Management**.
@@ -47,13 +47,7 @@ The following table lists which node options are available for each type of clus
 
 ### Nodes Hosted by an Infrastructure Provider
 
-Node pools are available when you provision Rancher-launched Kubernetes clusters on nodes that are [hosted in an infrastructure provider.](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)
-
-Clusters provisioned using [one of the node pool options](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#node-pools) can be scaled up or down if the node pool is edited.
-
-A node pool can also automatically maintain the node scale that's set during the initial cluster provisioning if [node auto-replace is enabled.](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#about-node-auto-replace) This scale determines the number of active nodes that Rancher maintains for the cluster.
-
-Rancher uses [node templates](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#node-templates) to replace nodes in the node pool. Each node template uses cloud provider credentials to allow Rancher to set up the node in the infrastructure provider.
+Machine pools are available when you provision Rancher-launched Kubernetes clusters on nodes that are [hosted in an infrastructure provider.](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)
 
 ### Nodes Provisioned by Hosted Kubernetes Providers
 
@@ -82,7 +76,7 @@ Select this option to view the node's [API endpoints](../../../api/quickstart.md
 
 Use **Delete** to remove defective nodes from the cloud provider.
 
-When you the delete a defective node, Rancher can automatically replace it with an identically provisioned node if the node is in a node pool and [node auto-replace is enabled.](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#about-node-auto-replace)
+When you delete a defective node, Rancher can automatically replace it with an identically provisioned node if the node is in a machine pool and [auto-replace is enabled](../../../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md#auto-replace).
 
 :::tip
 
@@ -92,7 +86,7 @@ If your cluster is hosted by an infrastructure provider, and you want to scale y
 
 ## Scaling Nodes
 
-For nodes hosted by an infrastructure provider, you can scale the number of nodes in each [node pool](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#node-pools) by using the scale controls. This option isn't available for other cluster types.
+For nodes hosted by an infrastructure provider, you can scale the number of nodes in each machine pool by using the scale controls. This option isn't available for other cluster types.
 
 ## SSH into a Node Hosted by an Infrastructure Provider
 
