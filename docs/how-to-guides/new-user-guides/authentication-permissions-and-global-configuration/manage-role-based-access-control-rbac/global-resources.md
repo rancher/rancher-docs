@@ -6,9 +6,18 @@ title: Global Resources
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-resources"/>
 </head>
 
-Global Resources are resources provided by Rancher which are not namespaced.
+Global Resources are non-namespaced resources provided by Rancher. Users who are
+cluster-owners/project-owners have by default no have access to several of
+these. For example principals and roletemplates.
 
-Users who are cluster-owners/project-owners do not have access to them by default.
+The resources are documented here to support administrators creating and/or
+modifying custom sets of permissions with finding the minimum set of permissions
+needed for a particular task in the dashboard.
+
+As an example, to use the cluster/project permissions pages of the dashboard
+requires permissions on principals to search/display a readable name for users,
+and on roleTemplates, to see a list of usable roleTemplates as well as to
+display a readable name for the role.
 
 Please see the list below to determine what permissions you may need when creating a least-privilege user.
 
