@@ -8,7 +8,7 @@ title: Deprecated Features in Rancher
 
 ## What is Rancher's deprecation policy?
 
-We have published our official deprecation policy in the support [terms of service](https://rancher.com/support-maintenance-terms).
+The community version of Rancher follows the same deprecation policy as Rancher Prime. The official deprecation policy is documented in the [Rancher Prime Deprecation Policy](https://www.suse.com/support/rancher-prime/#Rancher-Prime-Deprecation-Policy).
 
 ## Where can I find out which features have been deprecated in Rancher?
 
