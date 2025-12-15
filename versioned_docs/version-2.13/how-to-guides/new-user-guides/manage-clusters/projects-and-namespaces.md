@@ -13,7 +13,7 @@ A project is a group of namespaces, and it is a concept introduced by Rancher. P
 
 :::note
 
-Projects are de-emphasized on the UI because it is not required to create Kubernetes resources within a project scope. However, resources such as [Secrets](../../new-user-guides/kubernetes-resources-setup/secrets.md#creating-secrets-in-projects) can still be created in a project scope if the legacy feature flag is enabled.
+Projects are de-emphasized on the UI because it is not required to create Kubernetes resources within a project scope. However, resources such as [Secrets](../../new-user-guides/kubernetes-resources-setup/secrets.md#creating-secrets-in-projects) can still be created in a project scope.
 
 :::
 
@@ -196,3 +196,7 @@ To add a resource quota,
 1. Select **Delete**.
 
 When you delete a project, any namespaces that were formerly associated with the project will remain on the cluster. You can find these namespaces in the Rancher UI, in the **Not in a Project** tab of the **Projects/Namespaces** page. You can reassign these namespaces to a project by [moving](../manage-namespaces.md#moving-namespaces-to-another-project) them.
+
+## Further Reading
+
+You can create projects and project members more programmatically via the [Public API](../../../api/quickstart.md). See the [project workflow doc](../../../api/workflows/projects.md) for more information.
