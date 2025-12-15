@@ -228,6 +228,7 @@ const sidebars = {
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-freeipa",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-azure-ad",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-github",
+                    "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-github-app",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-keycloak-oidc",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-keycloak-saml",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-pingidentity",
@@ -771,7 +772,7 @@ const sidebars = {
                 "how-to-guides/advanced-user-guides/enable-experimental-features/unsupported-storage-drivers",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/istio-traffic-management-features",
                 "how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery",
-                "how-to-guides/advanced-user-guides/enable-experimental-features/cluster-role-aggregation",
+                "how-to-guides/advanced-user-guides/enable-experimental-features/role-template-aggregation",
               ],
             },
             "how-to-guides/advanced-user-guides/open-ports-with-firewalld",
@@ -882,9 +883,7 @@ const sidebars = {
                     type: "doc",
                     id: "reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/use-existing-nodes",
                   },
-                  items: [
-                    "reference-guides/cluster-configuration/rancher-server-configuration/use-existing-nodes/rancher-agent-options",
-                  ],
+                  items: [],
                 },
                 "reference-guides/cluster-configuration/rancher-server-configuration/sync-clusters",
               ],
@@ -1012,6 +1011,8 @@ const sidebars = {
         "reference-guides/rancher-project-tools",
 
         "reference-guides/system-tools",
+
+        "reference-guides/dual-stack",
 
         "reference-guides/rke1-template-example-yaml",
         "reference-guides/rancher-webhook",
@@ -1273,7 +1274,8 @@ const sidebars = {
           label: "Example Workflows",
           items: ["api/workflows/projects",
             "api/workflows/kubeconfigs",
-            "api/workflows/tokens"],
+            "api/workflows/tokens",
+            "api/workflows/users"],
         },
         "api/api-reference",
         "api/api-tokens",

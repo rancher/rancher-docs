@@ -9,7 +9,7 @@ description: To create a cluster with custom nodes, you’ll need to access serv
 
 When you create a custom cluster, Rancher can use RKE2/K3s to create a Kubernetes cluster in on-prem bare-metal servers, on-prem virtual machines, or in any node hosted by an infrastructure provider.
 
-To use this option you'll need access to servers you intend to use in your Kubernetes cluster. Provision each server according to the [requirements](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md), which includes some hardware specifications and Docker. After you install Docker on each server, you willl also run the command provided in the Rancher UI on each server to turn each one into a Kubernetes node.
+To use this option, you need access to the servers that will be part of your Kubernetes cluster. Provision each server according to the [requirements](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md). Then, run the command provided in the Rancher UI on each server to convert it into a Kubernetes node.
 
 This section describes how to set up a custom cluster.
 
@@ -33,7 +33,15 @@ If you want to reuse a node from a previous custom cluster, [clean the node](../
 
 Provision the host according to the [installation requirements](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/node-requirements-for-rancher-managed-clusters.md) and the [checklist for production-ready clusters.](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters/checklist-for-production-ready-clusters.md)
 
-If you're using Amazon EC2 as your host and want to use the [dual-stack](https://kubernetes.io/docs/concepts/services-networking/dual-stack/) feature, there are additional [requirements](https://rancher.com/docs/rke//latest/en/config-options/dual-stack#requirements) when provisioning the host.
+:::note IPv6-only cluster
+
+For an IPv6-only cluster, ensure that your operating system correctly configures the `/etc/hosts` file.
+
+```
+::1       localhost
+```
+
+:::
 
 ### 2. Create the Custom Cluster
 
@@ -41,39 +49,43 @@ If you're using Amazon EC2 as your host and want to use the [dual-stack](https:/
 1. On the **Clusters** page, click **Create**.
 1. Click **Custom**.
 1. Enter a **Cluster Name**.
-1. Use **Cluster Configuration** section to choose the version of Kubernetes, what network provider will be used and if you want to enable project network isolation. To see more cluster options, click on **Show advanced options**.
+1. Use the **Cluster Configuration** section to set up the cluster. For more information, see [RKE2 Cluster Configuration Reference](../rke2-cluster-configuration.md) and [K3s Cluster Configuration Reference](../k3s-cluster-configuration.md).
 
-    :::note Using Windows nodes as Kubernetes workers?
+   :::note Windows nodes
 
-    - See [Enable the Windows Support Option](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/use-windows-clusters.md).
-    - The only Network Provider available for clusters with Windows support is Flannel.
+   To learn more about using Windows nodes as Kubernetes workers, see [Launching Kubernetes on Windows Clusters](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/use-windows-clusters.md).
 
-    :::
+   :::
 
-    :::note Dual-stack on Amazon EC2:
+1. Click **Create**.
 
-    If you're using Amazon EC2 as your host and want to use the [dual-stack](https://kubernetes.io/docs/concepts/services-networking/dual-stack/) feature, there are additional [requirements](https://rancher.com/docs/rke//latest/en/config-options/dual-stack#requirements) when configuring RKE.
+**Result:** The UI redirects to the **Registration** page, where you can generate the registration command for your nodes.
 
-    :::
+1. From **Node Role**, select the roles you want a cluster node to fill. You must provision at least one node for each role: etcd, worker, and control plane. A custom cluster requires all three roles to finish provisioning. For more information on roles, see [Roles for Nodes in Kubernetes Clusters](../../../kubernetes-concepts.md#roles-for-nodes-in-kubernetes-clusters).
 
-6. Click **Next**.
+   :::note  Bare-Metal Server
 
-4. Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.
+   If you plan to dedicate bare-metal servers to each role, you must provision a bare-metal server for each role (i.e., provision multiple bare-metal servers).
 
-7.	From **Node Role**, choose the roles that you want filled by a cluster node. You must provision at least one node for each role: `etcd`, `worker`, and `control plane`. All three roles are required for a custom cluster to finish provisioning. For more information on roles, see [this section.](../../../kubernetes-concepts.md#roles-for-nodes-in-kubernetes-clusters)
+   :::note
 
-:::note
+1. **Optional**: Click **Show Advanced** to configure additional settings such as specifying the IP address(es), overriding the node hostname, or adding [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node
 
-- Using Windows nodes as Kubernetes workers? See [this section](../../../../how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/use-windows-clusters/use-windows-clusters.md).
-- Bare-Metal Server Reminder: If you plan on dedicating bare-metal servers to each role, you must provision a bare-metal server for each role (i.e. provision multiple bare-metal servers).
+   :::note
 
-:::
+   The **Node Public IP** and **Node Private IP** fields can accept either a single address or a comma-separated list of addresses (for example: `10.0.0.5,2001:db8::1`). 
 
-8. **Optional**: Click **[Show advanced options](rancher-agent-options.md)** to specify IP address(es) to use when registering the node, override the hostname of the node, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
+   :::
 
-9. Copy the command displayed on screen to your clipboard.
+   :::note Ipv6-only or Dual-stack Cluster
 
-10. Log in to your Linux host using your preferred shell, such as PuTTy or a remote Terminal connection. Run the command copied to your clipboard.
+   In both IPv6-only and dual-stack clusters, you should specify the node’s **IPv6 address** as the **Node Private IP**.
+
+   :::
+
+1. Copy the command displayed on screen to your clipboard.
+
+1. Log in to your Linux host using your preferred shell, such as PuTTy or a remote Terminal connection. Run the command copied to your clipboard.
 
 :::note
 
@@ -81,11 +93,9 @@ Repeat steps 7-10 if you want to dedicate specific hosts to specific node roles.
 
 :::
 
-11. When you finish running the command(s) on your Linux host(s), click **Done**.
-
 **Result:**
 
-Your cluster is created and assigned a state of **Provisioning**. Rancher is standing up your cluster.
+The cluster is created and transitions to the **Updating** state while Rancher initializes and provisions cluster components.
 
 You can access your cluster after its state is updated to **Active**.
 

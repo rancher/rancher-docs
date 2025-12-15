@@ -63,6 +63,7 @@ title: API 令牌
 | 设置 | 描述 |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [`auth-user-session-ttl-minutes`](#auth-user-session-ttl-minutes) | 用户认证会话令牌的 TTL（单位：分钟）。 |
+| [`auth-user-session-idle-ttl-minutes`](#auth-user-session-idle-ttl-minutes) | TTL in minutes on a user auth session token, without user activity. |
 | [`kubeconfig-default-token-TTL-minutes`](#kubeconfig-default-token-ttl-minutes) | 默认 TTL，应用于所有 kubeconfig 令牌（除了[由 Rancher CLI 生成的令牌](#在生成的-kubeconfig-中禁用令牌)）。**此设置从 2.6.6 版本开始引入。** |
 | [`kubeconfig-token-ttl-minutes`](#kubeconfig-token-ttl-minutes) | 在 CLI 中生成的令牌 TTL。**自 2.6.6 起已弃用，并将在 2.8.0 中删除**。请知悉，`kubeconfig-default-token-TTL-minutes` 将用于所有 kubeconfig 令牌。 |
 | [`auth-token-max-ttl-minutes`](#auth-token-max-ttl-minutes) | 除了由 [`auth-user-session-ttl-minutes`](#auth-user-session-ttl-minutes) 控制的令牌外，所有令牌的最大 TTL。 |
@@ -70,6 +71,11 @@ title: API 令牌
 
 ### auth-user-session-ttl-minutes
 存活时间（TTL）（单位：分钟），用于确定用户身份验证会话令牌的到期时间。过期后，用户将需要登录并获取新令牌。此设置不受 [`auth-token-max-ttl-minutes`](#auth-token-max-ttl-minutes) 的影响。会话令牌是在用户登录 Rancher 时创建的。
+
+### auth-user-session-idle-ttl-minutes
+
+Time to live (TTL) without user activity for login sessions tokens, in minutes.
+By default, `auth-user-session-idle-ttl-minutes` is set to the same value as [`auth-user-session-ttl-minutes`](#auth-user-session-ttl-minutes) (for backward compatibility). It must never exceed the value of `auth-user-session-ttl-minutes`.
 
 ### kubeconfig-default-token-TTL-minutes
 存活时间（TTL）（单位：分钟），用于确定 kubeconfig 令牌的到期时间。令牌过期后，API 将拒绝令牌。此设置的值不能大于 [`auth-token-max-ttl-minutes`](#auth-token-max-ttl-minutes) 的值。此设置适用于在请求的 kubeconfig 文件中生成的令牌，不包括[由 Rancher CLI 生成的](#在生成的-kubeconfig-中禁用令牌)令牌。
