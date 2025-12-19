@@ -11,10 +11,8 @@ Kubernetes 每隔五分钟会自动清理 etcd 数据集。在某些情况下（
 ```yaml
 # RKE2/K3s config.yaml
 ---
-services:
-  etcd:
-    extra_args:
-      quota-backend-bytes: 5368709120
+etcd-args:
+  - "quota-backend-bytes=5368709120"
 ```
 
 ## 扩展 etcd 磁盘性能
@@ -28,12 +26,7 @@ services:
 ```yaml
 # RKE2/K3s config.yaml
 ---
-services:
-  etcd:
-    extra_args:
-      data-dir: '/var/lib/rancher/etcd/data/'
-      wal-dir: '/var/lib/rancher/etcd/wal/wal_dir'
-    extra_binds:
-      - '/var/lib/etcd/data:/var/lib/rancher/etcd/data'
-      - '/var/lib/etcd/wal:/var/lib/rancher/etcd/wal'
+etcd-args:
+  - "data-dir=/var/lib/etcd/data"
+  - "wal-dir=/var/lib/etcd/wal"
 ```
