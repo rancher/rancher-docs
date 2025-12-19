@@ -15,10 +15,8 @@ The etcd data set is automatically cleaned up on a five-minute interval by Kuber
 ```yaml
 # RKE2/K3s config.yaml
 ---
-services:
-  etcd:
-    extra_args:
-      quota-backend-bytes: 5368709120
+etcd-args:
+  - "quota-backend-bytes=5368709120"
 ```
 
 ## Scaling etcd Disk Performance
@@ -32,12 +30,7 @@ To implement this solution in an RKE2/K3s cluster, the `/var/lib/etcd/data` and 
 ```yaml
 # RKE2/K3s config.yaml
 ---
-services:
-  etcd:
-    extra_args:
-      data-dir: '/var/lib/rancher/etcd/data/'
-      wal-dir: '/var/lib/rancher/etcd/wal/wal_dir'
-    extra_binds:
-      - '/var/lib/etcd/data:/var/lib/rancher/etcd/data'
-      - '/var/lib/etcd/wal:/var/lib/rancher/etcd/wal'
+etcd-args:
+  - "data-dir=/var/lib/etcd/data"
+  - "wal-dir=/var/lib/etcd/wal"
 ```
