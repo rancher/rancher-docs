@@ -28,6 +28,38 @@ Note that upgrades _to_ or _from_ any chart in the [rancher-alpha repository](..
 
 ### Helm Version
 
+:::important
+
+**Important:** In Rancher Community v2.13.1 if your registry configuration is one of the following you may see Rancher generate the `cattle-cluster-agent` image with an incorrect `docker.io` path segment:
+
+- Environments where a **cluster-scoped container registry** is configured for system images.
+- Environments where a **global `system-default-registry`** is configured (e.g. airgap setups), even if no cluster-scoped registry is set.
+
+**Workaround for Affected Setups:** As a workaround, override the `cattle-cluster-agent` image via the `CATTLE_AGENT_IMAGE` environment variable. This value must **not** contain any registry prefix (Rancher will handle that automatically). It should be set only to the repository and tag, for example:`rancher/rancher-agent:v2.13.1`
+
+**Helm `install` example:**
+
+```bash
+helm install rancher rancher-latest/rancher \
+...
+ --set extraEnv[0].name=CATTLE_AGENT_IMAGE \
+ --set extraEnv[0].value=rancher/rancher-agent:v2.13.1
+```
+
+**Helm `upgrade` example:**
+
+```bash
+helm upgrade rancher rancher-latest/rancher \
+...
+ --set extraEnv[0].name=CATTLE_AGENT_IMAGE \
+ --set extraEnv[0].value=rancher/rancher-agent:v2.13.1
+```
+
+**Important Upgrade Note:**
+
+The `CATTLE_AGENT_IMAGE` override is intended only as a temporary workaround for the affected configurations. Once a Rancher version is available that corrects this behavior, the `CATTLE_AGENT_IMAGE` override should be **removed** from Helm values, so that Rancher can resume managing the agent image normally and automatically track future image and tag changes. See [#53187](https://github.com/rancher/rancher/issues/53187#issuecomment-3676484603) for further information.
+:::
+
 The upgrade instructions assume you are using Helm 3.
 
 <DeprecationHelm2 />
