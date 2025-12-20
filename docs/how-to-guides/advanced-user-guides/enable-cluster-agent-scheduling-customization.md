@@ -6,7 +6,7 @@ title: Enabling Cluster Agent Scheduling Customization
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-cluster-agent-scheduling-customization"/>
 </head>
 
-The `cattle-cluster-agent` allows enabling automatic deployment of a Priority Class and Pod Disruption Budget.
+Both, the `cattle-cluster-agent` and `fleet-agent` allow enabling automatic deployment of a Priority Class and Pod Disruption Budget.
 
 When this feature is enabled, all newly provisioned Node Driver, Custom, and Imported RKE2 and K3s clusters will automatically deploy a Priority Class and Pod Disruption Budget during the provisioning process. Existing clusters can be gradually updated with this new behavior using the [Rancher UI or by setting a specific annotation](#updating-existing-clusters) on cluster objects.
 
@@ -24,7 +24,9 @@ Enabling or disabling this feature only impacts new clusters. Existing downstrea
 
 ## Configuring the Global Settings
 
-You can customize the default Priority Class (PC) and Pod Disruption Budget (PDB) by updating the `cluster-agent-default-priority-class` and `cluster-agent-default-pod-disruption-budget` global settings in the Rancher UI. Note that both the Priority Class and Pod Disruption Budget have configuration restrictions:
+You can customize the default PriorityClass (PC) and PodDisruptionBudget (PDB) by updating the `cluster-agent-default-priority-class` and `cluster-agent-default-pod-disruption-budget` global settings in the Rancher UI for the `cattle-cluster-agent`. For the `fleet-agent`, update the `fleet-agent-default-priority-class` and `fleet-agent-default-pod-disruption-budget` global settings.
+
+Note that both the Priority Class and Pod Disruption Budget have configuration restrictions:
 
 + The `Value` set for the default PC cannot be less than negative 1 billion, or greater than 1 billion.
 + The `PreemptionPolicy` set for the PC must be equal to `PreemptLowerPriority` or `Never`.
@@ -64,10 +66,13 @@ In order to prevent unexpected changes in scheduler behavior, Rancher does not u
 
 ## Downstream Objects
 
-When this feature is enabled for a given cluster, two downstream resources will be automatically created by Rancher:
+When this feature is enabled for a given cluster, four downstream resources will be automatically created by Rancher:
 
-+ A Pod Disruption Budget will be automatically created in the `cattle-system` namespace, named `cattle-cluster-agent-pod-disruption-budget`.
-+ A Priority Class will be automatically created, named `cattle-cluster-agent-priority-class`.
++ Two Pod Disruption Budgets will be automatically created in 
+  - the `cattle-system` namespace, named `cattle-cluster-agent-pod-disruption-budget` and
+  - the `cattle-fleet-system` namespace, named `fleet-agent-pod-disruption-budget`.
+  
++ Two Priority Classes will be automatically created, named `cattle-cluster-agent-priority-class` and `fleet-agent-priority-class`.
 
 These objects are maintained by Rancher and must not be modified or deleted. The Rancher server will automatically update these objects to match the configuration set on the Cluster object and remove them when they are no longer needed.
 
