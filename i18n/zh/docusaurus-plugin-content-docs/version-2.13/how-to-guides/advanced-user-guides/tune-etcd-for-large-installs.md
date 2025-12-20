@@ -11,7 +11,7 @@ Kubernetes 每隔五分钟会自动清理 etcd 数据集。在某些情况下（
 ```yaml
 # RKE2/K3s config.yaml
 ---
-etcd-args:
+etcd-arg:
   - "quota-backend-bytes=5368709120"
 ```
 
