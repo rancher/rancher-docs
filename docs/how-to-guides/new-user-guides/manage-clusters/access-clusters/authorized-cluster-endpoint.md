@@ -25,21 +25,6 @@ After you download the kubeconfig file, you are able to use the kubeconfig file 
 
 If admins have [kubeconfig token generation turned off](../../../../api/api-tokens.md#disable-tokens-in-generated-kubeconfigs), the kubeconfig file requires that the [Rancher CLI](../../../../reference-guides/cli-with-rancher/rancher-cli.md) to be present in your PATH.
 
-### Two Authentication Methods for RKE Clusters
-
-If the cluster is not an [RKE cluster,](../../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) the kubeconfig file allows you to access the cluster in only one way: it lets you be authenticated with the Rancher server, then Rancher allows you to run kubectl commands on the cluster.
-
-For RKE clusters, the kubeconfig file allows you to be authenticated in two ways:
-
-- **Through the Rancher server authentication proxy:** Rancher's authentication proxy validates your identity, then connects you to the downstream cluster that you want to access.
-- **Directly with the downstream cluster's API server:** RKE clusters have an authorized cluster endpoint enabled by default. This endpoint allows you to access your downstream Kubernetes cluster with the kubectl CLI and a kubeconfig file, and it is enabled by default for RKE clusters. In this scenario, the downstream cluster's Kubernetes API server authenticates you by calling a webhook (the `kube-api-auth` microservice) that Rancher set up.
-
-This second method, the capability to connect directly to the cluster's Kubernetes API server, is important because it lets you access your downstream cluster if you can't connect to Rancher.
-
-To use the authorized cluster endpoint, you need to configure kubectl to use the extra kubectl context in the kubeconfig file that Rancher generates for you when the RKE cluster is created. This file can be downloaded from the cluster view in the Rancher UI, and the instructions for configuring kubectl are on [this page.](use-kubectl-and-kubeconfig.md#authenticating-directly-with-a-downstream-cluster)
-
-These methods of communicating with downstream Kubernetes clusters are also explained in the [architecture page](../../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md) in the larger context of explaining how Rancher works and how Rancher communicates with downstream clusters.
-
 ### About the kube-api-auth Authentication Webhook
 
 The `kube-api-auth` microservice is deployed to provide the user authentication functionality for the [authorized cluster endpoint](../../../../reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters.md#4-authorized-cluster-endpoint). When you access the user cluster using `kubectl`, the cluster's Kubernetes API server authenticates you by using the `kube-api-auth` service as a webhook.

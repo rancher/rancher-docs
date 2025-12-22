@@ -33,27 +33,21 @@ For more information, refer to the section on [hosted Kubernetes clusters.](set-
 
 ## Launching Kubernetes with Rancher
 
-Rancher uses the [Rancher Kubernetes Engine (RKE)](https://rancher.com/docs/rke/latest/en/) as a library when provisioning Kubernetes on your own nodes. RKE is Rancher’s own lightweight Kubernetes installer.
+Rancher uses [RKE2](https://docs.rke2.io/) or [K3s](https://docs.k3s.io/) as a library when provisioning Kubernetes on your own nodes. RKE2 is Rancher’s own lightweight Kubernetes installer.
 
-In RKE clusters, Rancher manages the deployment of Kubernetes. These clusters can be deployed on any bare metal server, cloud provider, or virtualization platform.
+In RKE2 clusters, Rancher manages the deployment of Kubernetes. These clusters can be deployed on any bare metal server, cloud provider, or virtualization platform.
 
-These nodes can be dynamically provisioned through Rancher's UI, which calls [Docker Machine](https://github.com/docker/docs/blob/vnext-engine/machine/overview.md) to launch nodes on various cloud providers.
+If you already have a node that you want to add to an RKE2 cluster, you can add it to the cluster by running a Rancher RKE2 agent container on it.
 
-If you already have a node that you want to add to an RKE cluster, you can add it to the cluster by running a Rancher agent container on it.
-
-For more information, refer to the section on [RKE clusters.](../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)
+For more information, refer to [Launching Kubernetes with Rancher](../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md).
 
 ### Launching Kubernetes and Provisioning Nodes in an Infrastructure Provider
 
 Rancher can dynamically provision nodes in infrastructure providers such as Amazon EC2, DigitalOcean, Azure, or vSphere, then install Kubernetes on them.
 
-Using Rancher, you can create pools of nodes based on a [node template](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#node-templates). This template defines the parameters used to launch nodes in your cloud providers.
-
 One benefit of using nodes hosted by an infrastructure provider is that if a node loses connectivity with the cluster, Rancher can automatically replace it, thus maintaining the expected cluster configuration.
 
-The cloud providers available for creating a node template are decided based on the [node drivers](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#node-drivers) active in the Rancher UI.
-
-For more information, refer to the section on [nodes hosted by an infrastructure provider](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)
+For more information, refer to [Launching Kubernetes on New Nodes in an Infrastructure Provider](../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md)
 
 ### Launching Kubernetes on Existing Custom Nodes
 
@@ -71,10 +65,10 @@ Registering EKS clusters now provides additional benefits. For the most part, re
 
 When you delete an EKS cluster that was created in Rancher, the cluster is destroyed. When you delete an EKS cluster that was registered in Rancher, it is disconnected from the Rancher server, but it still exists and you can still access it in the same way you did before it was registered in Rancher.
 
-For more information, see [this page.](register-existing-clusters.md)
+For more information, refer to [Registering Existing Clusters](register-existing-clusters.md).
 
 ## Programmatically Creating Clusters
 
-The most common way to programmatically deploy Kubernetes clusters through Rancher is by using the Rancher2 Terraform provider. The documentation for creating clusters with Terraform is [here.](https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster)
+The most common way to programmatically deploy Kubernetes clusters through Rancher is by using the Rancher2 Terraform provider. Refer to the documentation for [creating clusters with Terraform](https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster).
 
-EKS, GKE, AKS clusters and RKE clusters can be created or imported with Terraform.
+EKS, GKE, and AKS clusters can be created or imported with Terraform.

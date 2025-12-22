@@ -64,10 +64,6 @@ Rancher v2.5 简化了在 Rancher 管理的集群上安装 Longhorn 的过程。
 
 在将数据存储在 iSCSI 卷上的 [Rancher 启动的 Kubernetes 集群](../../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md)中，你可能会遇到 kubelet 无法自动连接 iSCSI 卷的问题。有关解决此问题的详细信息，请参阅[此页面](manage-persistent-storage/install-iscsi-volumes.md)。
 
-## hostPath 卷
-
-在创建 hostPath 卷之前，你需要在集群配置中设置 [extra_bind](https://rancher.com/docs/rke/latest/en/config-options/services/services-extras/#extra-binds/)。这会将路径作为卷安装在你的 kubelet 中，可用于工作负载中的 hostPath 卷。
-
 ## 将 vSphere Cloud Provider 从树内迁移到树外
 
 Kubernetes 正在逐渐不在树内维护云提供商。vSphere 有一个树外云提供商，可通过安装 vSphere 云提供商和云存储插件来使用。
