@@ -21,7 +21,7 @@ Here you can find links to supporting documentation for the current released ver
     <td><a href="https://ranchermanager.docs.rancher.com/v2.13">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.13.1">Release Notes</a></td>
     <td><center>N/A</center></td>
-    <td><center>&#10003</center></td>
+    <td><center>&#10003;</center></td>
     <td><center>&#10003;</center></td>
   </tr>
 </table>
