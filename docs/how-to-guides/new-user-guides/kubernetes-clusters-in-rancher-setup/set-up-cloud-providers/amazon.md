@@ -54,6 +54,7 @@ IAM Policy for nodes with the `controlplane` role:
         "autoscaling:DescribeTags",
         "ec2:DescribeInstances",
         "ec2:DescribeRegions",
+        "ec2:DescribeAvailabilityZones",
         "ec2:DescribeRouteTables",
         "ec2:DescribeSecurityGroups",
         "ec2:DescribeSubnets",
@@ -123,6 +124,7 @@ IAM policy for nodes with the `etcd` or `worker` role:
       "Action": [
         "ec2:DescribeInstances",
         "ec2:DescribeRegions",
+        "ec2:DescribeAvailabilityZones",
         "ecr:GetAuthorizationToken",
         "ecr:BatchCheckLayerAvailability",
         "ecr:GetDownloadUrlForLayer",
