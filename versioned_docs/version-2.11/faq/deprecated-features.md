@@ -8,7 +8,7 @@ title: Deprecated Features in Rancher
 
 ## What is Rancher's deprecation policy?
 
-We have published our official deprecation policy in the support [terms of service](https://rancher.com/support-maintenance-terms).
+The community version of Rancher follows the same deprecation policy as Rancher Prime. The official deprecation policy is documented in the [Rancher Prime Deprecation Policy](https://www.suse.com/support/rancher-prime/#Rancher-Prime-Deprecation-Policy).
 
 ## Where can I find out which features have been deprecated in Rancher?
 
@@ -16,6 +16,7 @@ Rancher will publish deprecated features as part of the [release notes](https://
 
 | Patch Version |  Release Date |
 |---------------|---------------|
+| [2.11.9](https://github.com/rancher/rancher/releases/tag/v2.11.9) | December 18, 2025 |
 | [2.11.8](https://github.com/rancher/rancher/releases/tag/v2.11.8) | November 24, 2025 |
 | [2.11.7](https://github.com/rancher/rancher/releases/tag/v2.11.7) | October 23, 2025 |
 | [2.11.6](https://github.com/rancher/rancher/releases/tag/v2.11.6) | September 25, 2025 |
