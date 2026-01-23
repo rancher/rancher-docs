@@ -7,8 +7,8 @@ title: Global Resources
 </head>
 
 Global Resources are non-namespaced resources provided by Rancher. Users who are
-cluster-owners/project-owners have by default no have access to several of
-these. For example principals and roletemplates.
+cluster-owners/project-owners do not have access to several of these by
+default. For example principals and roletemplates.
 
 The resources are documented here to support administrators creating and/or
 modifying custom sets of permissions with finding the minimum set of permissions
