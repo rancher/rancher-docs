@@ -138,7 +138,7 @@ When you disable an auth provider, Rancher deletes all resources associated with
 - External users associated with the provider, who never logged in as local users to Rancher
 
 As this operation may lead to a loss of many resources, you may want to add a safeguard on the provider.
-To ensure this cleanup process doesn't run when the auth provider is disabled, add a special annoation to the corresponding auth config.
+To ensure this cleanup process doesn't run when the auth provider is disabled, add a special annotation to the corresponding auth config.
 
 For example, to add a safeguard to the Azure AD provider, annotate the `azuread` authconfig object:
 

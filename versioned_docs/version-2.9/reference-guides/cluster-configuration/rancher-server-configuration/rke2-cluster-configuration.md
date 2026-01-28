@@ -363,7 +363,7 @@ Alternatives, such as using a HelmChartConfig to customize the system charts via
 
 Specify the values for the system charts installed by RKE2.
 
-For more information about how RKE2 manges packaged components, please refer to [RKE2 documentation](https://docs.rke2.io/helm).
+For more information about how RKE2 manages packaged components, please refer to [RKE2 documentation](https://docs.rke2.io/helm).
 
 Example:
 
