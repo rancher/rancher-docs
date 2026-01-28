@@ -47,7 +47,7 @@ The Rancher API server is built on top of an embedded Kubernetes API server and 
 
 ### Working with Cloud Infrastructure
 
-- **Tracking nodes:** The Rancher API server tracks identities of all the [nodes](../how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools.md) in all clusters.
+- **Tracking nodes:** The Rancher API server tracks identities of all the [nodes](../how-to-guides/new-user-guides/manage-clusters/nodes-and-machine-pools.md) in all clusters.
 - **Setting up infrastructure:**  When configured to use a cloud provider, Rancher can dynamically provision [new nodes](../how-to-guides/new-user-guides/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md) and [persistent storage](../how-to-guides/new-user-guides/manage-clusters/create-kubernetes-persistent-storage/create-kubernetes-persistent-storage.md) in the cloud.
 
 ### Cluster Visibility

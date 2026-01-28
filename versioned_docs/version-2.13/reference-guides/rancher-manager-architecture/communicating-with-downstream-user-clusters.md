@@ -8,7 +8,7 @@ title: Communicating with Downstream User Clusters
 
 This section describes how Rancher provisions and manages the downstream user clusters that run your apps and services.
 
-The below diagram shows how the cluster controllers, cluster agents, and node agents allow Rancher to control downstream clusters.
+The below diagram shows how the cluster controllers, cluster agents, and Rancher system agent allow Rancher to control downstream clusters.
 
 <figcaption>Communicating with Downstream Clusters</figcaption>
 
@@ -18,7 +18,7 @@ The following descriptions correspond to the numbers in the diagram above:
 
 1. [The Authentication Proxy](#1-the-authentication-proxy)
 2. [Cluster Controllers and Cluster Agents](#2-cluster-controllers-and-cluster-agents)
-3. [Node Agents](#3-node-agents)
+3. [Rancher System Agent](#3-rancher-system-agent)
 4. [Authorized Cluster Endpoint](#4-authorized-cluster-endpoint)
 
 ## 1. The Authentication Proxy
@@ -43,7 +43,7 @@ There is one cluster controller and one cluster agent for each downstream cluste
 -  Configures access control policies to clusters and projects
 -  Provisions clusters by calling the required Docker machine drivers and Kubernetes engines, such as GKE
 
-By default, to enable Rancher to communicate with a downstream cluster, the cluster controller connects to the cluster agent. If the cluster agent is not available, the cluster controller can connect to a [node agent](#3-node-agents) instead.
+By default, to enable Rancher to communicate with a downstream cluster, the cluster controller connects to the cluster agent. If the cluster agent is not available, the cluster controller can connect to a [Rancher system agent](#3-rancher-system-agent) instead.
 
 The cluster agent, also called `cattle-cluster-agent`, is a component that runs in a downstream user cluster. It performs the following tasks:
 
@@ -52,11 +52,11 @@ The cluster agent, also called `cattle-cluster-agent`, is a component that runs 
 -  Applies the roles and bindings defined in each cluster's global policies
 - Communicates between the cluster and Rancher server (through a tunnel to the cluster controller) about events, stats, node info, and health
 
-## 3. Node Agents
+## 3. Rancher System Agent
 
-If the cluster agent (also called `cattle-cluster-agent`) is not available, one of the node agents creates a tunnel to the cluster controller to communicate with Rancher.
+If the cluster agent (also called `cattle-cluster-agent`) is not available, the Rancher system agent creates a tunnel to the cluster controller to communicate with Rancher.
 
-The `cattle-node-agent` is deployed using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) resource to make sure it runs on every node in a Rancher-launched Kubernetes cluster. It is used to interact with the nodes when performing cluster operations. Examples of cluster operations include upgrading the Kubernetes version and creating or restoring etcd snapshots.
+The `rancher-system-agent` runs on every node in RKE2 and K3s Kubernetes clusters. It is used to interact with the nodes when performing cluster operations. Examples of cluster operations include upgrading the Kubernetes version and creating or restoring etcd snapshots.
 
 ## 4. Authorized Cluster Endpoint
 

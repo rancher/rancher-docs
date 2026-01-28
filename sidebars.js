@@ -381,7 +381,7 @@ const sidebars = {
 
                 "how-to-guides/new-user-guides/manage-clusters/manage-cluster-templates",
 
-                "how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
+                "how-to-guides/new-user-guides/manage-clusters/nodes-and-machine-pools",
 
                 "how-to-guides/new-user-guides/manage-clusters/clean-cluster-nodes",
 
@@ -989,7 +989,6 @@ const sidebars = {
           },
           items: [
             "reference-guides/user-settings/api-keys",
-            "reference-guides/user-settings/manage-node-templates",
             "reference-guides/user-settings/manage-cloud-credentials",
             "reference-guides/user-settings/user-preferences",
           ],

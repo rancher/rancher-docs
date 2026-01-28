@@ -9,7 +9,7 @@ title: Rancher Agents
 There are two different agent resources deployed on Rancher managed clusters:
 
 - [cattle-cluster-agent](#cattle-cluster-agent)
-- [cattle-node-agent](#cattle-node-agent)
+- [rancher-system-agent](#rancher-system-agent)
 
 For a conceptual overview of how the Rancher server provisions clusters and communicates with them, refer to the [architecture](../../../reference-guides/rancher-manager-architecture/rancher-manager-architecture.md).
 
@@ -17,9 +17,9 @@ For a conceptual overview of how the Rancher server provisions clusters and comm
 
 The `cattle-cluster-agent` is used to connect to the Kubernetes API of [Rancher Launched Kubernetes](launch-kubernetes-with-rancher.md) clusters. The `cattle-cluster-agent` is deployed using a Deployment resource.
 
-### cattle-node-agent
+### rancher-system-agent
 
-The `cattle-node-agent` is used to interact with nodes in a [Rancher Launched Kubernetes](launch-kubernetes-with-rancher.md) cluster when performing cluster operations. Examples of cluster operations are upgrading Kubernetes version and creating/restoring etcd snapshots. The `cattle-node-agent` is deployed using a DaemonSet resource to make sure it runs on every node. The `cattle-node-agent` is used as fallback option to connect to the Kubernetes API of [Rancher Launched Kubernetes](launch-kubernetes-with-rancher.md) clusters when `cattle-cluster-agent` is unavailable.
+The `rancher-system-agent` is a daemon used to manage nodes in a Rancher provisioned RKE2/K3s Kubernetes cluster when performing cluster lifecycle operations. Examples of cluster operations include upgrading the Kubernetes version and creating/restoring etcd snapshots. The `rancher-system-agent` is designed to apply plans to the Rancher system and can support both local and remote plans.
 
 ### Requests
 
@@ -27,38 +27,11 @@ The `cattle-cluster-agent` pod does not define the default CPU and memory reques
 
 To configure request values through the UI:
 
-<Tabs groupId="k8s-distro">
-<TabItem value="RKE">
-
-1. When you [create](./launch-kubernetes-with-rancher.md) or edit an existing cluster, go to the **Cluster Options** section.
-1. Expand the **Cluster Configuration** subsection.
-1. Configure your request values using the **CPU Requests** and **Memory Requests** fields as needed.
-
-</TabItem>
-<TabItem value="RKE2/K3s">
-
 1. When you [create](./launch-kubernetes-with-rancher.md) or edit an existing cluster, go to the **Cluster Configuration**.
 1. Select the **Cluster Agent** subsection.
 1. Configure your request values using the **CPU Reservation** and **Memory Reservation** fields as needed.
 
-</TabItem>
-</Tabs>
-
 If you prefer to configure via YAML, add the following snippet to your configuration file:
-
-<Tabs groupId="k8s-distro">
-<TabItem value="RKE">
-
-```yaml
-cluster_agent_deployment_customization:
-  override_resource_requirements:
-    requests:
-      cpu: 50m
-      memory: 100Mi
-```
-
-</TabItem>
-<TabItem value="RKE2/K3s">
 
 ```yaml
 spec:
@@ -69,9 +42,6 @@ spec:
         memory: 100Mi 
 ```
 
-</TabItem>
-</Tabs>
-
 ### Scheduling rules
 
 The `cattle-cluster-agent` uses either a fixed set of tolerations, or dynamically-added tolerations based on taints applied to the control plane nodes. This structure allows [Taint based Evictions](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/#taint-based-evictions) to work properly for `cattle-cluster-agent`.
@@ -81,7 +51,6 @@ If control plane nodes are present in the cluster, the default tolerations will 
 | Component              | nodeAffinity nodeSelectorTerms             | nodeSelector | Tolerations                                                                    |
 | ---------------------- | ------------------------------------------ | ------------ | ------------------------------------------------------------------------------ |
 | `cattle-cluster-agent` | `beta.kubernetes.io/os:NotIn:windows`      | none         | **Note:** These are the default tolerations, and will be replaced by tolerations matching taints applied to controlplane nodes.<br/><br/>`effect:NoSchedule`<br/>`key:node-role.kubernetes.io/controlplane`<br/>`value:true`<br/><br/>`effect:NoSchedule`<br/>`key:node-role.kubernetes.io/control-plane`<br/>`operator:Exists`<br/><br/>`effect:NoSchedule`<br/>`key:node-role.kubernetes.io/master`<br/>`operator:Exists` |
-| `cattle-node-agent`    | `beta.kubernetes.io/os:NotIn:windows`      | none         | `operator:Exists`                                                              |
 
 The `cattle-cluster-agent` Deployment has preferred scheduling rules using `preferredDuringSchedulingIgnoredDuringExecution`, favoring to be scheduled on nodes with the `controlplane` node. When there are no controlplane nodes visible in the cluster (this is usually the case when using [Clusters from Hosted Kubernetes Providers](../kubernetes-clusters-in-rancher-setup/set-up-clusters-from-hosted-kubernetes-providers/set-up-clusters-from-hosted-kubernetes-providers.md)), you can add the label `cattle.io/cluster-agent=true` on a node to prefer scheduling the `cattle-cluster-agent` pod to that node.
 
