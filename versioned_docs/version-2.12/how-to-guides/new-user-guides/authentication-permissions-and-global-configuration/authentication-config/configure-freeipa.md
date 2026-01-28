@@ -55,6 +55,12 @@ If your organization uses FreeIPA for user authentication, you can configure Ran
 
     :::
 
+    :::note User Login Filter
+
+    The User Login Filter is an optional LDAP filter expression that narrows down which users can log in to Rancher based on user LDAP attributes. The User Login Filter must be a valid LDAP filter expression enclosed in parentheses that evaluates to true. The User Login Filter is independent of the User Search Filter but in many cases should either match it or produce a subset of results of the latter.
+
+    :::
+
 1. Enter your FreeIPA username and password in **Authenticate with FreeIPA** to confirm that Rancher is configured to use FreeIPA authentication.
 1. Click **Enable**.
 
