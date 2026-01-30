@@ -8,7 +8,7 @@ title: Overriding the Default Limit for a Namespace
 
 Although the **Namespace Default Limit** propagates from the project to each namespace when created, in some cases, you may need to increase (or decrease) the quotas for a specific namespace. In this situation, you can override the default limits by editing the namespace.
 
-In the diagram below, the Rancher administrator has a resource quota in effect for their project. However, the administrator wants to override the namespace limits for `Namespace 3` so that it has more resources available. Therefore, the administrator [raises the namespace limits](../../../new-user-guides/manage-clusters/projects-and-namespaces.md) for `Namespace 3` so that the namespace can access more resources.
+In the diagram below, the Rancher administrator has a resource quota in effect for their project. However, the administrator wants to override the cpu limits for `Namespace 3` so that it has more resources available. Therefore, the administrator [raises the cpu limits](../../../new-user-guides/manage-clusters/projects-and-namespaces.md) for `Namespace 3` so that the namespace can access more resources.
 
 <sup>Namespace Default Limit Override</sup>
 
