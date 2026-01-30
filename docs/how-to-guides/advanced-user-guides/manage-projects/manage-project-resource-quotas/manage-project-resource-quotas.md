@@ -48,3 +48,27 @@ Edit resource quotas when:
 1. Click **Create**.
 
 **Result:** The resource quota is applied to your project and namespaces. When you add more namespaces in the future, Rancher validates that the project can accommodate the namespace. If the project can't allocate the resources, you may still create namespaces, but they will be given a resource quota of 0. Subsequently, Rancher will not allow you to create any resources restricted by this quota.
+
+### Advanced: Beyond the basic Resource Quotas
+
+The set of resource quotas directly available through **Edit Config** is quite basic. For quotas outside of that set it is necessary to use the `Extended` field. This field is currently only available through the **Edit Yaml** action.
+
+I.e. select **Edit YAML** instead of **Edit Config** in Step 6 of the preceding section. For **Project Limits** then add or extend (sic!) the field `spec.resourceQuota.limit.extended` with the desired quotas. For example:
+
+```
+spec:
+  resourceQuota:
+    limit:
+      extended:
+        requests.nvidia.com/gpu: 4
+        gold.storageclass.storage.k8s.io/requests.storage: 500Gi
+        count/podtemplates: 10
+```
+
+For **Namespace Default Limits** edit the field `spec.namespaceDefaultResourceQuota.limit.extended` instead.
+
+:::warning
+
+While it is possible to specify quotas in `extended` which refer to quotas in the basic builtin set it is currently **strongly** recommended to use the builtin fields for them instead. Also, in case of conflicts, i.e. specifying a quota for a resource in boths its builtin field, and via `extended`, the data found in the builtin field has priority and the data in `extended` is ignored.
+
+:::
