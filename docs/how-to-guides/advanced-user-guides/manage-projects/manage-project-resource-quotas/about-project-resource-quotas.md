@@ -61,14 +61,12 @@ metadata:
 ```
 In this example, if the project's quota does not include configMaps in its list of resources, then Rancher will ignore `configMaps` in this override.
 
-Users are advised to create dedicated `ResourceQuota` objects in namespaces to configure additional custom limits for resources not defined on the project.
-Resource quotas are native Kubernetes objects, and Rancher will ignore user-defined quotas in namespaces belonging to a project with a quota,
-thus giving users more control.
+Users are advised to either use the `extended` map to configure additional custom limits for resources not built into the project, for all namespaces in the project, or to create dedicated `ResourceQuota` objects in specific namespaces for the same, just for these namespaces. Resource quotas are native Kubernetes objects, and Rancher will ignore user-defined quotas in namespaces belonging to a project with a quota, thus giving users more control.
 
 The following table explains the key differences between the two quota types.
 
 | Rancher Resource Quotas                                    | Kubernetes Resource Quotas                               |
 | ---------------------------------------------------------- | -------------------------------------------------------- |
-| Applies to projects and namespace.                         | Applies to namespaces only.                              |
-| Creates resource pool for all namespaces in project.       | Applies static resource limits to individual namespaces. |
+| Applies to projects and namespaces.                        | Applies to namespaces only.                              |
+| Creates resource pool for all namespaces in a project.     | Applies static resource limits to individual namespaces. |
 | Applies resource quotas to namespaces through propagation. | Applies only to the assigned namespace.
