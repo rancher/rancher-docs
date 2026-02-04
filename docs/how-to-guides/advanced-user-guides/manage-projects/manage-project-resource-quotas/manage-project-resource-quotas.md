@@ -51,9 +51,9 @@ Edit resource quotas when:
 
 ### Advanced: Beyond the basic Resource Quotas
 
-The set of resource quotas directly available through **Edit Config** is quite basic. For quotas outside of that set it is necessary to use the `Extended` field. This field is currently only available through the **Edit Yaml** action.
+The set of resource quotas directly available through **Edit Config** is limited. For quotas outside of that set it is necessary to use the `Extended` field. This field is currently only available through the **Edit Yaml** action.
 
-I.e. select **Edit YAML** instead of **Edit Config** in Step 6 of the preceding section. For **Project Limits** then add or extend (sic!) the field `spec.resourceQuota.limit.extended` with the desired quotas. For example:
+I.e. select **Edit YAML** instead of **Edit Config** in Step 6 of the preceding section. For **Project Limits** then add or extend the field `spec.resourceQuota.limit.extended` with the desired quotas. For example:
 
 ```
 spec:
