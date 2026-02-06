@@ -51,24 +51,14 @@ Edit resource quotas when:
 
 ### Advanced: Beyond the basic Resource Quotas
 
-The set of resource quotas directly available through **Edit Config** is limited. For quotas outside of that set it is necessary to use the `Extended` field. This field is currently only available through the **Edit Yaml** action.
+The set of resource quotas listed in the **Resource Type** dropdown of **Edit Config** is limited. For quotas outside of that set use **Edit Config** and **Add Resource** as already described, and select **Custom** as the resource type. This enables the edit field **Resource Identifier** for the entry of the necessary identifier. Some examples of identifiers are:
 
-I.e. select **Edit YAML** instead of **Edit Config** in Step 6 of the preceding section. For **Project Limits** then add or extend the field `spec.resourceQuota.limit.extended` with the desired quotas. For example:
-
-```
-spec:
-  resourceQuota:
-    limit:
-      extended:
-        requests.nvidia.com/gpu: 4
-        gold.storageclass.storage.k8s.io/requests.storage: 500Gi
-        count/podtemplates: 10
-```
-
-For **Namespace Default Limits** edit the field `spec.namespaceDefaultResourceQuota.limit.extended` instead.
+- `requests.nvidia.com/gpu`
+- `gold.storageclass.storage.k8s.io/requests.storage`
+- `count/podtemplates`
 
 :::warning
 
-While it is possible to specify quotas in `extended` which refer to quotas in the basic builtin set it is currently **strongly** recommended to use the builtin fields for them instead. Also, in case of conflicts, i.e. specifying a quota for a resource in boths its builtin field, and via `extended`, the data found in the builtin field has priority and the data in `extended` is ignored.
+While it is possible to specify`Custom` which refer to quotas in the basic builtin set it is currently **strongly** recommended to use the builtin fields for them instead. Also, in case of conflicts, i.e. specifying a quota for a resource in boths its builtin field, and via `Custom`, the data found in the builtin field has priority and the data in `Custom` is ignored.
 
 :::

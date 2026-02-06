@@ -24,7 +24,7 @@ When you create a resource quota, you are configuring the pool of resources avai
 | Replications Controllers | The maximum number of replication controllers that can exist in the project/namespace.                                                                                                            |
 | Secrets                  | The maximum number of secrets that can exist in the project/namespace.                                                                                                                            |
 |                          |                                                                                                                                                                                                   |
-| Extended\*\*             | An object/map for the specification of arbitrary resources and their quotas, beyond the resource types built into projects, as listed above.                                                      |
+| Custom\*\*               | The specification of arbitrary resources and their quotas, beyond the resource types built into projects, as listed above.                                                      		       |
 
 :::note **<sup>*</sup>**
 
