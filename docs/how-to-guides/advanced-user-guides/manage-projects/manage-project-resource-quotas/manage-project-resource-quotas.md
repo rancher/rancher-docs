@@ -59,6 +59,6 @@ The set of resource quotas listed in the **Resource Type** dropdown of **Edit Co
 
 :::warning
 
-While it is possible to specify`Custom` which refer to quotas in the basic builtin set it is currently **strongly** recommended to use the builtin fields for them instead. Also, in case of conflicts, i.e. specifying a quota for a resource in boths its builtin field, and via `Custom`, the data found in the builtin field has priority and the data in `Custom` is ignored.
+While it is possible to specify `Custom` which refer to quotas in the basic builtin set it is currently **strongly** recommended to use the builtin fields for them instead. Also, in case of conflicts, i.e. specifying a quota for a resource in both its builtin field and via `Custom`, the data found in the builtin field has priority and the data in `Custom` is ignored.
 
 :::
