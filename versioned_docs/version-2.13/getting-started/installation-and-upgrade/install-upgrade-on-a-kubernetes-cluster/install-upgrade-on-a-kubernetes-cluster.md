@@ -50,6 +50,38 @@ The following CLI tools are required for setting up the Kubernetes cluster. Plea
 
 ## Install the Rancher Helm Chart
 
+:::important
+
+**Important:** In Rancher Community v2.13.1 if your registry configuration is one of the following you may see Rancher generate the `cattle-cluster-agent` image with an incorrect `docker.io` path segment:
+
+- Environments where a **cluster-scoped container registry** is configured for system images.
+- Environments where a **global `system-default-registry`** is configured (e.g. airgap setups), even if no cluster-scoped registry is set.
+
+**Workaround for Affected Setups:** As a workaround, override the `cattle-cluster-agent` image via the `CATTLE_AGENT_IMAGE` environment variable. This value must **not** contain any registry prefix (Rancher will handle that automatically). It should be set only to the repository and tag, for example:`rancher/rancher-agent:v2.13.1`
+
+**Helm `install` example:**
+
+```bash
+helm install rancher rancher-latest/rancher \
+...
+ --set extraEnv[0].name=CATTLE_AGENT_IMAGE \
+ --set extraEnv[0].value=rancher/rancher-agent:v2.13.1
+```
+
+**Helm `upgrade` example:**
+
+```bash
+helm upgrade rancher rancher-latest/rancher \
+...
+ --set extraEnv[0].name=CATTLE_AGENT_IMAGE \
+ --set extraEnv[0].value=rancher/rancher-agent:v2.13.1
+```
+
+**Important Upgrade Note:**
+
+The `CATTLE_AGENT_IMAGE` override is intended only as a temporary workaround for the affected configurations. Once a Rancher version is available that corrects this behavior, the `CATTLE_AGENT_IMAGE` override should be **removed** from Helm values, so that Rancher can resume managing the agent image normally and automatically track future image and tag changes. See [#53187](https://github.com/rancher/rancher/issues/53187#issuecomment-3676484603) for further information.
+:::
+
 Rancher is installed using the [Helm](https://helm.sh/) package manager for Kubernetes. Helm charts provide templating syntax for Kubernetes YAML manifest documents. With Helm, we can create configurable deployments instead of just using static files.
 
 For systems without direct internet access, see [Air Gap: Kubernetes install](../other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha.md).

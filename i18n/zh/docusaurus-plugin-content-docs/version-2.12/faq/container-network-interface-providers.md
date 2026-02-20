@@ -88,7 +88,7 @@ Kubernetes Worker 需要打开 UDP 端口 `8472` (VXLAN) 和 TCP 端口 `9099`�
 
 ![](/img/canal-diagram.png)
 
-有关详细信息，请参阅 [Canal GitHub 页面](https://github.com/projectcalico/canal)
+For more information, refer to the [Rancher maintained Canal source](https://github.com/rancher/rke2-charts/tree/main-source/packages/rke2-canal) and the [Canal GitHub Page](https://github.com/projectcalico/canal).
 
 #### Cilium
 

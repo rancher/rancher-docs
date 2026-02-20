@@ -42,7 +42,7 @@ Install the [`rancher-backup chart`](https://github.com/rancher/backup-restore-o
      ```
 
   1. Install the charts:
-   
+
      ```bash
      helm install rancher-backup-crd rancher-charts/rancher-backup-crd -n cattle-resources-system --create-namespace --version $CHART_VERSION
      helm install rancher-backup rancher-charts/rancher-backup -n cattle-resources-system --version $CHART_VERSION
@@ -55,7 +55,25 @@ Install the [`rancher-backup chart`](https://github.com/rancher/backup-restore-o
      For an **air-gapped environment**, use the following Helm values to pull the `backup-restore-operator` and `kubectl` images from your private registry when you install the rancher-backup Helm chart.
 
      ```bash
-     --set image.repository <registry>/rancher/backup-restore-operator --set global.kubectl.repository=<registry>/rancher/kubectl
+     --set image.repository=<registry>/rancher/backup-restore-operator --set global.kubectl.repository=<registry>/rancher/kubectl
+     ```
+
+     If the host running the Helm commands is **also air-gapped and cannot reach charts.rancher.io**, download the charts on a non-air-gapped host and then install them from local files on the air-gapped host.
+
+     On a non-air-gapped host:
+
+     ```bash
+     helm repo add rancher-charts https://charts.rancher.io
+     helm repo update
+     helm fetch rancher-charts/rancher-backup-crd --version $CHART_VERSION
+     helm fetch rancher-charts/rancher-backup --version $CHART_VERSION
+     ```
+
+     Copy the `rancher-backup-crd-<chart-version>.tgz` and `rancher-backup-<chart-version>.tgz` files to the air-gapped host, then use them to install the charts:
+
+     ```bash
+     helm install rancher-backup-crd ./rancher-backup-crd-<chart-version>.tgz -n cattle-resources-system --create-namespace
+     helm install rancher-backup ./rancher-backup-<chart-version>.tgz -n cattle-resources-system --set image.repository=<registry>/rancher/backup-restore-operator --set global.kubectl.repository=<registry>/rancher/kubectl
      ```
 
      :::
@@ -200,7 +218,7 @@ Full instructions on how to redirect traffic to the migrated cluster differ base
 
 ### 6. Scale Down the Original Rancher Instance
 
-After redirecting traffic to the new Rancher environment, **scale the original Rancher instance to 0 replicas** so it no longer contacts your managed clusters.  
+After redirecting traffic to the new Rancher environment, **scale the original Rancher instance to 0 replicas** so it no longer contacts your managed clusters.
 
 Leaving the old server up can cause agents to keep contacting the original `server-url`, which often leaves clusters stuck in **Updating** in the new environment.
 

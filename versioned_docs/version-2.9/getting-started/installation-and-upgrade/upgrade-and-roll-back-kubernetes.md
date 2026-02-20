@@ -96,7 +96,8 @@ To enable draining each node during a cluster upgrade,
 
 :::note
 
-There is a [known issue](https://github.com/rancher/rancher/issues/25478) in which the Rancher UI doesn't show the state of etcd and controlplane as drained, even though they are being drained.
+- There is a [known issue](https://github.com/rancher/rancher/issues/25478) in which the Rancher UI doesn't show the state of etcd and controlplane as drained, even though they are being drained.
+- During an upgrade, nodes may be drained even when no user-visible YAML changes are present. This can occur if non-dynamic configuration files are updated or if a new `system-agent-installer` image is introduced. In such cases, Rancher generates a new upgrade plan, resulting in a new plan hash. When `Upgrade Strategy` is set to `Drain nodes`, this plan change can trigger node draining.
 
 :::
 

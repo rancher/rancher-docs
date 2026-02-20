@@ -65,7 +65,7 @@ Kubernetes workers should open UDP port `8472` (VXLAN) and TCP port `9099` (heal
 
 ![](/img/canal-diagram.png)
 
-For more information, see the [Canal GitHub Page.](https://github.com/projectcalico/canal)
+For more information, refer to the [Rancher maintained Canal source](https://github.com/rancher/rke2-charts/tree/main-source/packages/rke2-canal) and the [Canal GitHub Page](https://github.com/projectcalico/canal).
 
 #### Flannel
 

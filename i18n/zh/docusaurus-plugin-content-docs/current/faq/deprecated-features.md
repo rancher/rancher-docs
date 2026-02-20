@@ -16,6 +16,8 @@ Rancher 将在 GitHub 上发布的 Rancher 的[发版说明](https://github.com/
 
 | Patch 版本                                                         | 发布时间            |
 | ----------------------------------------------------------------- | ------------------ |
+| [2.13.2](https://github.com/rancher/rancher/releases/tag/v2.13.2) | 2026 年 01 月 29 日 |
+| [2.13.1](https://github.com/rancher/rancher/releases/tag/v2.13.1) | 2025 年 12 月 18 日 |
 | [2.13.0](https://github.com/rancher/rancher/releases/tag/v2.13.0) | 2025 年 11 月 25 日  |
 
 ## 当一个功能被标记为弃用我可以得到什么样的预期？
