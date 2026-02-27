@@ -209,7 +209,7 @@ If you are using a Private CA signed certificate (or if `agent-tls-mode` is set 
 
 :::
 
-Your load balancer must support long lived websocket connections and will need to insert proxy headers so Rancher can route links correctly.
+Your load balancer must support long-lived WebSocket connections and will need to insert proxy headers so Rancher can route links correctly. Additionally, your ingress must be configured to use those proxy headers.
 
 ### Configuring Ingress for External TLS when Using NGINX v0.22
 
@@ -237,6 +237,29 @@ spec:
     controller:
       config:
         use-forwarded-headers: "true"
+```
+
+### Configuring Ingress for External TLS when using Traefik
+
+For K3s installations, you can create a custom `traefik-config.yaml` file at `/var/lib/rancher/k3s/server/manifests` containing this required setting to enable using forwarded headers with external TLS termination. Without this setting applied, the external load balancer will continuously respond with redirect loops it receives from the ingress controller. You can create a custom `traefik-config.yaml` file before or after you install Rancher as the K3s server agent will notice this addition and automatically apply it.
+
+```yaml
+apiVersion: helm.cattle.io/v1
+kind: HelmChartConfig
+metadata:
+  name: traefik
+  namespace: kube-system
+spec:
+  valuesContent: |-
+    image:
+      repository: docker.io/library/traefik
+    ports:
+      web:
+        forwardedHeaders:
+          trustedIPs:
+            - 10.0.0.0/8
+            - 172.16.0.0/12
+            - 192.168.0.0/16
 ```
 
 ### Required Headers
