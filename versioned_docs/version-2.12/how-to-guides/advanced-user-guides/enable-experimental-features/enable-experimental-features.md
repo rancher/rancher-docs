@@ -64,7 +64,7 @@ When you install the Helm chart, you should pass in feature flag names in a comm
 helm install rancher ./rancher-<VERSION>.tgz \
   --namespace cattle-system \
   --set hostname=<RANCHER.YOURDOMAIN.COM> \
-  --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
+  --set image.registry=<REGISTRY.YOURDOMAIN.COM:PORT> \
   --set ingress.tls.source=secret \
   --set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \ # Set a default private registry to be used in Rancher
   --set useBundledSystemChart=true # Use the packaged Rancher system charts

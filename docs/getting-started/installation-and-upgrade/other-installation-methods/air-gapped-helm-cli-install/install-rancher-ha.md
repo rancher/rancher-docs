@@ -185,12 +185,12 @@ Placeholder | Description
     --namespace cattle-system \
     --set hostname=<RANCHER.YOURDOMAIN.COM> \
     --set certmanager.version=<CERTMANAGER_VERSION> \
-    --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
+    --set image.registry=<REGISTRY.YOURDOMAIN.COM:PORT> \
     --set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \ # Set a default private registry to be used in Rancher
     --set useBundledSystemChart=true # Use the packaged Rancher system charts
 ```
 
-**Optional**: To install a specific Rancher version, set the `rancherImageTag` value, example: `--set rancherImageTag=v2.5.8`
+**Optional**: To install a specific Rancher version, set the `image.tag` value, example: `--set image.tag=v2.10.3`
 
 #### Option B: Certificates From Files Using Kubernetes Secrets
 
@@ -213,7 +213,7 @@ Install Rancher, declaring your chosen options. Use the reference table below to
    helm install rancher ./rancher-<VERSION>.tgz \
     --namespace cattle-system \
     --set hostname=<RANCHER.YOURDOMAIN.COM> \
-    --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
+    --set image.registry=<REGISTRY.YOURDOMAIN.COM:PORT> \
     --set ingress.tls.source=secret \
     --set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \ # Set a default private registry to be used in Rancher
     --set useBundledSystemChart=true # Use the packaged Rancher system charts
@@ -225,7 +225,7 @@ If you are using a Private CA signed cert, add `--set privateCA=true` following 
    helm install rancher ./rancher-<VERSION>.tgz \
     --namespace cattle-system \
     --set hostname=<RANCHER.YOURDOMAIN.COM> \
-    --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
+    --set image.registry=<REGISTRY.YOURDOMAIN.COM:PORT> \
     --set ingress.tls.source=secret \
     --set privateCA=true \
     --set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \ # Set a default private registry to be used in Rancher
