@@ -52,8 +52,6 @@ Then enter the following values:
 
 To create an EKS cluster, run the following command. Use the AWS region that applies to your use case. When choosing a Kubernetes version, be sure to first consult the [support matrix](https://rancher.com/support-matrix/) to find the highest version of Kubernetes that has been validated for your Rancher version.
 
-**Note:** If you're updating from an older version of Kubernetes, to Kubernetes v1.22 or above, you also need to [update](https://kubernetes.github.io/ingress-nginx/user-guide/k8s-122-migration/) ingress-nginx.
-
 ```
 eksctl create cluster \
   --name rancher-server \
@@ -88,46 +86,48 @@ rancher-server-cluster		us-west-2	True
 
 ### 5. Install an Ingress
 
-The cluster needs an Ingress so that Rancher can be accessed from outside the cluster.
+The cluster needs an Ingress so that Rancher can be accessed from outside the cluster. Installing an Ingress requires allocating a public IP address. Ensure you have sufficient quota, otherwise it will fail to assign the IP address. Limits for public IP addresses are applicable at a regional level per subscription. You can use a managed ingress controller provided by AWS (ALB) or a third-party ingress controller like Traefik.
 
-To make sure that you choose the correct Ingress-NGINX Helm chart, first find an `Ingress-NGINX version` that's compatible with your Kubernetes version in the [Kubernetes/ingress-nginx support table](https://github.com/kubernetes/ingress-nginx#supported-versions-table).
+:::warning
+It is not recommended to install a third-party ingress controller, like Traefik, if a managed ingress controller (ALB) is already being used.
+:::
 
-Then, list the Helm charts available to you by running the following command:
 
-```
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+:::warning
+**Ingress-NGINX EOL:** The community `ingress-nginx` controller reaches End-of-Life (EOL) in March 2026. This page uses Traefik, which is the recommended migration path for Rancher environments. 
+:::
+
+Traefik includes a native Ingress NGINX provider. This allows you to migrate from NGINX without rewriting your existing Ingress objects, as Traefik will automatically interpret `nginx.ingress.kubernetes.io` annotations. If you are upgrading a cluster that is already using `ingress-nginx`, follow this [guide](https://doc.traefik.io/traefik/migrate/nginx-to-traefik/) for more information.
+
+To install Traefik (chart version 39.0.0) on a fresh cluster, run the following `helm` commands:
+```bash
+helm repo add traefik https://traefik.github.io/charts
 helm repo update
-helm search repo ingress-nginx -l
-```
-
-The `helm search` command's output contains an `APP VERSION` column. The versions under this column are equivalent to the `Ingress-NGINX version` you chose earlier. Using the app version, select a chart version that bundles an app compatible with your Kubernetes install. For example, if you have Kubernetes v1.23, you can select the v4.6.0 Helm chart, since Ingress-NGINX v1.7.0 comes bundled with that chart, and v1.7.0 is compatible with Kubernetes v1.23. When in doubt, select the most recent compatible version.
-
-Now that you know which Helm chart `version` you need, run the following command. It installs an `nginx-ingress-controller` with a Kubernetes load balancer service:
-
-```
 helm upgrade --install \
-  ingress-nginx ingress-nginx/ingress-nginx \
-  --namespace ingress-nginx \
-  --set controller.service.type=LoadBalancer \
-  --version 4.6.0 \
-  --create-namespace
+  traefik traefik/traefik \
+  --namespace traefik \
+  --version 39.0.0 \
+  --create-namespace \
+  --set service.type=LoadBalancer \
+  --set ping.enabled=true \
 ```
+
 
 ### 6. Get Load Balancer IP
 
 To get the address of the load balancer, run:
 
-```
-kubectl get service ingress-nginx-controller --namespace=ingress-nginx
+```bash
+kubectl get service traefik --namespace=traefik
 ```
 
 The result should look similar to the following:
 
-```
-NAME                       TYPE           CLUSTER-IP     EXTERNAL-IP                                                              PORT(S)
+```bash
+NAME                       TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)
  AGE
-ingress-nginx-controller   LoadBalancer   10.100.90.18   a904a952c73bf4f668a17c46ac7c56ab-962521486.us-west-2.elb.amazonaws.com   80:31229/TCP,443:31050/TCP
- 27m
+traefik  LoadBalancer   10.100.90.18   a904a952c73bf4f668a17c46ac7c56ab-962521486.us-west-2.elb.amazonaws.com   80:31229/TCP,443:31050/TCP
+ 67s
 ```
 
 Save the `EXTERNAL-IP`.
@@ -149,7 +149,7 @@ Use that DNS name from the previous step as the Rancher server URL when you inst
 When installing Rancher on top of this setup, you will also need to pass the value below into the Rancher Helm install command in order to set the name of the ingress controller to be used with Rancher's ingress resource:
 
 ```
---set ingress.ingressClassName=nginx
+--set ingress.ingressClassName=traefik
 ```
 
 Refer [here for the Helm install command](install-upgrade-on-a-kubernetes-cluster.md#5-install-rancher-with-helm-and-your-chosen-certificate-option) for your chosen certificate option.

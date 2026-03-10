@@ -124,7 +124,6 @@ When choosing a Kubernetes version, be sure to first consult the [support matrix
 
 To successfully create a GKE cluster with Rancher, your GKE must be in Standard mode. GKE has two modes of operation when creating a Kubernetes cluster, Autopilot and Standard mode. The cluster configuration for Autopilot mode has restrictions on editing the kube-system namespace. However, Rancher needs to create resources in the kube-system namespace during installation. As a result, you will not be able to install Rancher on a GKE cluster created in Autopilot mode. For more information about the difference between GKE Autopilot mode and Standard mode, visit [Compare GKE Autopilot and Standard.](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison)
 
-**Note:** If you're updating from an older version of Kubernetes, to Kubernetes v1.22 or above, you also need to [update](https://kubernetes.github.io/ingress-nginx/user-guide/k8s-122-migration/) ingress-nginx.
 
 ```
 gcloud container clusters create cluster-name --num-nodes=3 --cluster-version=<VERSION>
@@ -140,36 +139,48 @@ gcloud container clusters get-credentials cluster-name
 
 This command configures `kubectl` to use the cluster you created.
 
+
 ## 7. Install an Ingress
 
-The cluster needs an Ingress so that Rancher can be accessed from outside the cluster.
+The cluster needs an Ingress so that Rancher can be accessed from outside the cluster. Installing an Ingress requires allocating a public IP address. Ensure you have sufficient quota, otherwise it will fail to assign the IP address. Limits for public IP addresses are applicable at a regional level per subscription. You can use a managed ingress controller provided by GCP or a third-party ingress controller like Traefik.
 
-The following command installs an `nginx-ingress-controller` with a LoadBalancer service:
+:::warning
+It is not recommended to install a third-party ingress controller, like Traefik, if a managed ingress controller is already being used.
+:::
 
-```
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+:::warning
+**Ingress-NGINX EOL:** The community `ingress-nginx` controller reaches End-of-Life (EOL) in March 2026. This page uses Traefik, which is the recommended migration path for Rancher environments. 
+:::
+
+Traefik includes a native Ingress NGINX provider. This allows you to migrate from NGINX without rewriting your existing Ingress objects, as Traefik will automatically interpret `nginx.ingress.kubernetes.io` annotations. If you are upgrading a cluster that is already using `ingress-nginx`, follow this [guide](https://doc.traefik.io/traefik/migrate/nginx-to-traefik/) for more information.
+
+To install Traefik (chart version 39.0.0) on a fresh cluster, run the following `helm` commands:
+```bash
+helm repo add traefik https://traefik.github.io/charts
 helm repo update
 helm upgrade --install \
-  ingress-nginx ingress-nginx/ingress-nginx \
-  --namespace ingress-nginx \
-  --set controller.service.type=LoadBalancer \
-  --version 4.0.18 \
-  --create-namespace
+  traefik traefik/traefik \
+  --namespace traefik \
+  --version 39.0.0 \
+  --create-namespace \
+  --set service.type=LoadBalancer \
+  --set ping.enabled=true \
 ```
 
-## 8. Get the Load Balancer IP
+
+## 8. Get Load Balancer IP
 
 To get the address of the load balancer, run:
 
-```
-kubectl get service ingress-nginx-controller --namespace=ingress-nginx
+```bash
+kubectl get service traefik --namespace=traefik
 ```
 
 The result should look similar to the following:
 
 ```
 NAME                       TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)                      AGE
-ingress-nginx-controller   LoadBalancer   10.3.244.156   35.233.206.34   80:31876/TCP,443:32497/TCP   81s
+traefik   LoadBalancer   10.3.244.156   35.233.206.34   80:31876/TCP,443:32497/TCP    81s
 ```
 
 Save the `EXTERNAL-IP`.
@@ -191,7 +202,7 @@ Use the DNS name from the previous step as the Rancher server URL when you insta
 When installing Rancher on top of this setup, you will also need to set the name of the ingress controller to be used with Rancher's ingress resource:
 
 ```
---set ingress.ingressClassName=nginx
+--set ingress.ingressClassName=traefik
 ```
 
 Refer [here for the Helm install command](install-upgrade-on-a-kubernetes-cluster.md#5-install-rancher-with-helm-and-your-chosen-certificate-option) for your chosen certificate option.
