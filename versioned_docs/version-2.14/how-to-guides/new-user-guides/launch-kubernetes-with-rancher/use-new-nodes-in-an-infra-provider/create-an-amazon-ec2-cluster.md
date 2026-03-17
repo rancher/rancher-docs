@@ -65,7 +65,7 @@ You can access your cluster after its state is updated to **Active**.
 **Active** clusters are assigned two Projects:
 
 - `Default`, containing the `default` namespace
-- `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces
+- `System`, containing the `cattle-system`, `traefik`, `kube-public`, and `kube-system` namespaces
 
 ### Optional Next Steps
 
