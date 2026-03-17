@@ -132,16 +132,12 @@ This option is only effective on the initial Rancher install. See [Issue 16522](
 
 To customize or use a different ingress with Rancher server you can set your own Ingress annotations.
 
+Please refer to the Traefik documentation for the full list of Ingress NGINX annotations that are [supported](https://doc.traefik.io/traefik/reference/routing-configuration/kubernetes/ingress-nginx/#annotations-support) and [unsupported](https://doc.traefik.io/traefik/reference/routing-configuration/kubernetes/ingress-nginx/#unsupported-annotations) by Traefik's kubernetesIngressNginx provider.
+
 Example on setting a custom certificate issuer:
 
 ```plain
 --set ingress.extraAnnotations.'cert-manager\.io/cluster-issuer'=issuer-name
-```
-
-Example on setting a static proxy header with `ingress.configurationSnippet`. This value is parsed like a template so variables can be used.
-
-```plain
---set ingress.configurationSnippet='more_set_input_headers X-Forwarded-Host {{ .Values.hostname }};'
 ```
 
 ### HTTP Proxy
