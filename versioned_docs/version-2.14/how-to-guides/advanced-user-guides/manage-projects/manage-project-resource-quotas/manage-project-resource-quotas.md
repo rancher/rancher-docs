@@ -48,3 +48,17 @@ Edit resource quotas when:
 1. Click **Create**.
 
 **Result:** The resource quota is applied to your project and namespaces. When you add more namespaces in the future, Rancher validates that the project can accommodate the namespace. If the project can't allocate the resources, you may still create namespaces, but they will be given a resource quota of 0. Subsequently, Rancher will not allow you to create any resources restricted by this quota.
+
+### Advanced: Beyond the basic Resource Quotas
+
+The set of resource quotas listed in the **Resource Type** dropdown of **Edit Config** is limited. For quotas outside of that set use **Edit Config** and **Add Resource** as already described, and select **Custom** as the resource type. This enables the edit field **Resource Identifier** for the entry of the necessary identifier. Some examples of identifiers are:
+
+- `requests.nvidia.com/gpu`
+- `gold.storageclass.storage.k8s.io/requests.storage`
+- `count/podtemplates`
+
+:::warning
+
+While it is possible to specify `Custom` which refer to quotas in the basic builtin set it is currently **strongly** recommended to use the builtin fields for them instead. Also, in case of conflicts, i.e. specifying a quota for a resource in both its builtin field and via `Custom`, the data found in the builtin field has priority and the data in `Custom` is ignored.
+
+:::
