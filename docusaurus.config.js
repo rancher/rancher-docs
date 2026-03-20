@@ -185,9 +185,9 @@ module.exports = {
               label: "Latest",
             },
             "2.14": {
-              label: 'v2.14 (Preview)',
+              label: 'v2.14',
               path: 'v2.14',
-              banner: 'unreleased'
+              banner: 'none'
             },
             "2.13": {
               label: "v2.13",
