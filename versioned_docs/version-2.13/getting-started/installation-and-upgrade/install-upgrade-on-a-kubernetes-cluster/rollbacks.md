@@ -24,10 +24,13 @@ Follow the instructions from this page when:
 Alternative steps need to be performed for rollbacks in the following scenarios:
 - Rolling back from v2.6.4 and later to an earlier version of v2.6.x.
 - Rolling back from v2.7.7 and later to an earlier version of v2.7.x.
+- Rolling back from v2.14.0 and later to an earlier version of v2.13.x.
 
 In Rancher v2.6.4, the cluster-api module is upgraded from v0.4.4 to v1.0.2. The cluster-api v1.0.2, in turn, upgrades the apiVersions of its Custom Resource Definitions (CRDs) from `cluster.x-k8s.io/v1alpha4` to `cluster.x-k8s.io/v1beta1`. Custom Resources (CRs) that use the older apiVersion (v1alpha4) are incompatible with v1beta1, which  causes rollbacks to fail when you attempt to move from Rancher v2.6.4 to any previous version of Rancher v2.6.x.
 
 In Rancher v2.7.7, the app `rancher-provisioning-capi` is installed on the upstream (local) cluster automatically as a replacement for the embedded cluster-api controllers. Conflicts and unexpected errors will occur if the upstream cluster contains both the app, and Rancher v2.7.6 and earlier. Therefore, alternative steps are needed if you attempt to move from Rancher v2.7.7 to any previous version of Rancher v2.7.x.
+
+In Rancher v2.14.0, the cluster-api module is upgraded from v1.10.6 to v1.12.2. The cluster-api v1.12.2, in turn, upgrades the apiVersions of its Custom Resource Definitions (CRDs) from `cluster.x-k8s.io/v1beta1` to `cluster.x-k8s.io/v1beta2`. Rancher backup files include Cluster API CRDs. When restoring backup data from Rancher v2.13.x to a local cluster after upgrading to v2.14.0, the Rancher Backup application first restores the v1beta1 CRDs. This fails because the v1beta2 version cannot be removed from the CRDs while v1beta2 custom resources are present in the cluster.
 
 ### Step 1: Clean Up the Upstream (Local) Cluster
 
