@@ -96,7 +96,7 @@ spec:
 
 For these examples, a single machine pool with all roles (control plane, etcd and worker) are used, but the examples can be adapted by specifying more machine pools and separate roles.
 
-Create the resources in your Rancher cluster, and replace values within `<>` brackets.
+Create the resources in your upstream cluster, and replace values within `<>` brackets.
 
 :::caution
 
@@ -110,7 +110,7 @@ First, configure IAM as required by CAPA. These roles are assumed by downstream 
 
 To do this, CAPA provides the `clusterawsadm` tool to generate and apply the required objects. Refer to the CAPA manual for more [details](https://cluster-api-aws.sigs.k8s.io/topics/using-clusterawsadm-to-fulfill-prerequisites).
 
-Then, configure the provider identity in the Rancher cluster so that the CAPA provider can create resources on AWS. Refer to the manual for all [options](https://cluster-api-aws.sigs.k8s.io/topics/multitenancy).
+Then, configure the provider identity in the upstream cluster so that the CAPA provider can create resources on AWS. Refer to the manual for all [options](https://cluster-api-aws.sigs.k8s.io/topics/multitenancy).
 
 In this example, we'll use `AWSClusterStaticIdentity`.
 
@@ -272,7 +272,7 @@ spec:
 
 ### CAPV
 
-First, configure the provider identity in the Rancher cluster so that the CAPV provider can create resources on your vSphere server. Refer to the manual for all identity [options](https://github.com/kubernetes-sigs/cluster-api-provider-vsphere/blob/v1.15.2/docs/identity_management.md), and for general vSphere [requirements](https://github.com/kubernetes-sigs/cluster-api-provider-vsphere/blob/v1.15.2/docs/getting_started.md).
+First, configure the provider identity in the upstream cluster so that the CAPV provider can create resources on your vSphere server. Refer to the manual for all identity [options](https://github.com/kubernetes-sigs/cluster-api-provider-vsphere/blob/v1.15.2/docs/identity_management.md), and for general vSphere [requirements](https://github.com/kubernetes-sigs/cluster-api-provider-vsphere/blob/v1.15.2/docs/getting_started.md).
 
 In this example, we'll use `VSphereClusterIdentity`.
 
