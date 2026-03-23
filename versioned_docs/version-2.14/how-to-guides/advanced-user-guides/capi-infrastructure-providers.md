@@ -69,6 +69,8 @@ metadata:
 spec:
   type: infrastructure
   variables:
+    # Global credentials for the provider are not needed
+    # as these examples define credentials for the AWSCluster.
     AWS_B64ENCODED_CREDENTIALS: ""
 ```
 
@@ -88,6 +90,8 @@ metadata:
 spec:
   type: infrastructure
   variables:
+    # Global credentials for the provider are not needed
+    # as these examples define credentials for the VsphereCluster.
     VSPHERE_USERNAME: ""
     VSPHERE_PASSWORD: ""
 ```
@@ -165,7 +169,7 @@ spec:
     healthCheckProtocol: TCP
     loadBalancerType: nlb
 
-  region: <your region>
+  region: <e.g. us-east-1>
 
   # These two additional rules allow all incoming traffic
   # from other nodes.
