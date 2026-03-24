@@ -92,7 +92,7 @@ Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 
 :::
 
-1. Open a web browser, navigate to [GitHub](https://github.com/rancher/rancher/blob/master/cleanup/user-cluster.sh), and download `user-cluster.sh`.
+1. Open a web browser, navigate to [GitHub](https://github.com/rancher/rancher/blob/main/cleanup/user-cluster.sh), and download `user-cluster.sh`.
 
 1. Make the script executable by running the following command from the same directory as `user-cluster.sh`:
 
