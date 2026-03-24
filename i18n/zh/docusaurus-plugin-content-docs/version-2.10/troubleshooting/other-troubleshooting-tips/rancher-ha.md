@@ -65,7 +65,7 @@ rancher   rancher.yourdomain.com   x.x.x.x,x.x.x.x,x.x.x.x   80, 443   2m
 如果访问你配置的 Rancher FQDN 时没有显示 UI，请检查 Ingress Controller 日志以查看尝试访问 Rancher 时发生了什么：
 
 ```
-kubectl -n ingress-nginx logs -l app=ingress-nginx
+kubectl -n traefik logs -l app=traefik
 ```
 
 ## Leader 选举

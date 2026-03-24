@@ -20,43 +20,51 @@ plugins:
         warn: "restricted"
         warn-version: "latest"
       exemptions:
-        usernames: []
+        namespaces:
+        - calico-apiserver
+        - calico-system
+        - cattle-alerting
+        - cattle-capi-system
+        - cattle-csp-adapter-system
+        - cattle-elemental-system
+        - cattle-epinio-system
+        - cattle-externalip-system
+        - cattle-fleet-local-system
+        - cattle-fleet-system
+        - cattle-gatekeeper-system
+        - cattle-global-data
+        - cattle-global-nt
+        - cattle-impersonation-system
+        - cattle-istio
+        - cattle-istio-system
+        - cattle-logging
+        - cattle-logging-system
+        - cattle-monitoring-system
+        - cattle-neuvector-system
+        - cattle-prometheus
+        - cattle-provisioning-capi-system
+        - cattle-resources-system
+        - cattle-sriov-system
+        - cattle-system
+        - cattle-turtles-system
+        - cattle-ui-plugin-system
+        - cattle-windows-gmsa-system
+        - cert-manager
+        - cis-operator-system
+        - compliance-operator-system
+        - fleet-default
+        - fleet-local
+        - istio-system
+        - kube-node-lease
+        - kube-public
+        - kube-system
+        - longhorn-system
+        - rancher-alerting-drivers
+        - rancher-compliance-system
+        - security-scan
+        - sr-operator-system
+        - tigera-operator
+        - traefik
         runtimeClasses: []
-        namespaces: [calico-apiserver,
-                     calico-system,
-                     cattle-alerting,
-                     cattle-csp-adapter-system,
-                     cattle-elemental-system,
-                     cattle-epinio-system,
-                     cattle-externalip-system,
-                     cattle-fleet-local-system,
-                     cattle-fleet-system,
-                     cattle-gatekeeper-system,
-                     cattle-global-data,
-                     cattle-global-nt,
-                     cattle-impersonation-system,
-                     cattle-istio,
-                     cattle-istio-system,
-                     cattle-logging,
-                     cattle-logging-system,
-                     cattle-monitoring-system,
-                     cattle-neuvector-system,
-                     cattle-prometheus,
-                     cattle-resources-system,
-                     cattle-sriov-system,
-                     cattle-system,
-                     cattle-ui-plugin-system,
-                     cattle-windows-gmsa-system,
-                     cert-manager,
-                     cis-operator-system,
-                     fleet-default,
-                     ingress-nginx,
-                     istio-system,
-                     kube-node-lease,
-                     kube-public,
-                     kube-system,
-                     longhorn-system,
-                     rancher-alerting-drivers,
-                     security-scan,
-                     tigera-operator]
+        usernames: []
 ```

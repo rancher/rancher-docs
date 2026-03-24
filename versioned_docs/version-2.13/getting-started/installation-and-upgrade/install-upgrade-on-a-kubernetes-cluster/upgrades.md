@@ -136,8 +136,21 @@ You'll use the backup as a restore point if something goes wrong during upgrade.
     ```plain
     helm fetch rancher-<CHART_REPO>/rancher --version=2.6.8
     ```
+### 3. Review Rancher Feature Chart Versions Before Upgrade
 
-### 3. Upgrade Rancher
+Rancher feature charts follow specific release lines that align with Rancher versions. Major versions of feature charts correspond to Rancher minor versions and follow a defined versioning scheme.
+
+Before upgrading Rancher, review any installed Rancher feature charts and upgrade them to the latest available version within their current chart release line. This helps ensure compatibility and avoids potential issues during or after the Rancher upgrade.
+
+To review installed feature charts:
+
+1. In the Rancher UI, go to **Apps & Marketplace**.
+2. Select **Installed Apps**.
+3. Review the chart versions and upgrade to the latest patch release within the same chart major version if needed.
+
+For more information, see the [Helm Charts in Rancher – Versioning Scheme](../../../how-to-guides/new-user-guides/helm-charts-in-rancher/helm-charts-in-rancher.md#versioning-scheme).
+
+### 4. Upgrade Rancher
 
 This section describes how to upgrade normal (Internet-connected) or air-gapped installations of Rancher with Helm.
 
@@ -222,7 +235,7 @@ Alternatively, it's possible to export the current values to a file and referenc
       --version=2.6.8
     ```
 
-### 4. Verify the Upgrade
+### 5. Verify the Upgrade
 
 Log into Rancher to confirm that the upgrade succeeded.
 

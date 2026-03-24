@@ -6,10 +6,7 @@ title: TLS 设置
 
 ## 在高可用 Kubernetes 集群中运行 Rancher
 
-当你在 Kubernetes 集群内安装 Rancher 时，TLS 会在集群的 Ingress Controller 上卸载。可用的 TLS 设置取决于使用的 Ingress Controller：
-
-* nginx-ingress-controller（default RKE2 默认）：[默认的 TLS 版本和密码](https://kubernetes.github.io/ingress-nginx/user-guide/tls/#default-tls-version-and-ciphers)。
-* traefik（K3s 默认）：[TLS 选项](https://doc.traefik.io/traefik/https/tls/#tls-options)。
+When you install a Rancher managed Kubernetes cluster, TLS is offloaded at the cluster's ingress controller. Traefik is the default ingress for K3s and can be used with RKE2, refer to [TLS Options](https://doc.traefik.io/traefik/https/tls/#tls-options) for further information.
 
 ## 在单个 Docker 容器中运行 Rancher
 

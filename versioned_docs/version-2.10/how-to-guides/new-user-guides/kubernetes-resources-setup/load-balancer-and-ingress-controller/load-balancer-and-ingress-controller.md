@@ -36,13 +36,21 @@ Load Balancers have a couple of limitations you should be aware of:
 
 ## Ingress
 
+:::warning
+
+**Ingress-NGINX EOL:** The community `ingress-nginx` controller reaches End-of-Life (EOL) in March 2026. Traefik is the recommended migration path for Rancher environments.
+
+Traefik includes a native Ingress NGINX provider. This allows you to migrate from NGINX without rewriting your existing Ingress objects, as Traefik will automatically interpret `nginx.ingress.kubernetes.io` annotations. If you are upgrading a cluster that is already using `ingress-nginx`, follow this [guide](https://doc.traefik.io/traefik/migrate/nginx-to-traefik/) for more information.
+
+:::
+
 As mentioned in the limitations above, the disadvantages of using a load balancer are:
 
 - Load Balancers can only handle one IP address per service.
 - If you run multiple services in your cluster, you must have a load balancer for each service.
 - It can be expensive to have a load balancer for every service.
 
-In contrast, when an ingress is used as the entrypoint into a cluster, the ingress can route traffic to multiple services with greater flexibility. It can map multiple HTTP requests to services without individual IP addresses for each service.
+In contrast, when an ingress is used as the entry point into a cluster, the ingress can route traffic to multiple services with greater flexibility. It can map multiple HTTP requests to services without individual IP addresses for each service.
 
 Therefore, it is useful to have an ingress if you want multiple services to be exposed with the same IP address, the same Layer 7 protocol, or the same privileged node-ports: 80 and 443.
 

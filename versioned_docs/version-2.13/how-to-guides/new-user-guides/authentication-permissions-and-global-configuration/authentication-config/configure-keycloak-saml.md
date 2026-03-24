@@ -196,3 +196,7 @@ Try configuring and saving keycloak as your SAML provider and then accessing the
 ## Configuring SAML Single Logout (SLO)
 
 <ConfigureSLO />
+
+## SAML and OpenLDAP Group Permissions
+
+<SamlOpenLDAPGroupPermissions />

@@ -91,7 +91,7 @@ To use this `kubeconfig` file,
 
 1. Install [kubectl,](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) a Kubernetes command-line tool.
 2. Copy the file at `/etc/rancher/rke2/rke2.yaml` and save it to the directory `~/.kube/config` on your local machine.
-3. In the kubeconfig file, the `server` directive is defined as localhost. Configure the server as the DNS of your control-plane load balancer, on port 6443. (The RKE2 Kubernetes API Server uses port 6443, while the Rancher server will be served via the NGINX Ingress on ports 80 and 443.) Here is an example `rke2.yaml`:
+3. In the kubeconfig file, the `server` directive is defined as localhost. Configure the server as the DNS of your control-plane load balancer, on port 6443. (The RKE2 Kubernetes API Server uses port 6443, while the Rancher server will be served via the Traefik Ingress on ports 80 and 443.) Here is an example `rke2.yaml`:
 
 ```yml
 apiVersion: v1
@@ -140,7 +140,8 @@ kube-system   etcd-rke2-server-2                                      1/1     Ru
 kube-system   etcd-rke2-server-3                                      1/1     Running     0          56s
 kube-system   helm-install-rke2-canal-hs6sx                           0/1     Completed   0          2m17s
 kube-system   helm-install-rke2-coredns-xmzm8                         0/1     Completed   0          2m17s
-kube-system   helm-install-rke2-ingress-nginx-flwnl                   0/1     Completed   0          2m17s
+kube-system   helm-install-traefik-crd-z8vsz                          0/1     Completed   0          2m17s
+kube-system   helm-install-traefik-flwnl                              0/1     Completed   0          2m17s
 kube-system   helm-install-rke2-metrics-server-7sggn                  0/1     Completed   0          2m17s
 kube-system   kube-apiserver-rke2-server-1                            1/1     Running     0          116s
 kube-system   kube-apiserver-rke2-server-2                            1/1     Running     0          66s
@@ -160,9 +161,8 @@ kube-system   rke2-canal-swfmq                                        2/2     Ru
 kube-system   rke2-coredns-rke2-coredns-547d5499cb-6tvwb              1/1     Running     0          92s
 kube-system   rke2-coredns-rke2-coredns-547d5499cb-rdttj              1/1     Running     0          2m8s
 kube-system   rke2-coredns-rke2-coredns-autoscaler-65c9bb465d-85sq5   1/1     Running     0          2m8s
-kube-system   rke2-ingress-nginx-controller-69qxc                     1/1     Running     0          52s
-kube-system   rke2-ingress-nginx-controller-7hprp                     1/1     Running     0          52s
-kube-system   rke2-ingress-nginx-controller-x658h                     1/1     Running     0          52s
+kube-system   traefik-7c844b766f-m9p2w                                1/1     Running     0          52s
+kube-system   traefik-7c844b766f-s4l9k                                1/1     Running     0          52s
 kube-system   rke2-metrics-server-6564db4569-vdfkn                    1/1     Running     0          66s
 ```
 

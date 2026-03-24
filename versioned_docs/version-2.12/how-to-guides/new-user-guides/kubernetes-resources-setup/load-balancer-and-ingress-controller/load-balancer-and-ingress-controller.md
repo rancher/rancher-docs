@@ -42,23 +42,15 @@ As mentioned in the limitations above, the disadvantages of using a load balance
 - If you run multiple services in your cluster, you must have a load balancer for each service.
 - It can be expensive to have a load balancer for every service.
 
-In contrast, when an ingress is used as the entrypoint into a cluster, the ingress can route traffic to multiple services with greater flexibility. It can map multiple HTTP requests to services without individual IP addresses for each service.
+In contrast, when an ingress is used as the entry point into a cluster, the ingress can route traffic to multiple services with greater flexibility. It can map multiple HTTP requests to services without individual IP addresses for each service.
 
 Therefore, it is useful to have an ingress if you want multiple services to be exposed with the same IP address, the same Layer 7 protocol, or the same privileged node-ports: 80 and 443.
 
 Ingress works in conjunction with one or more ingress controllers to dynamically route service requests. When the ingress receives a request, the ingress controller(s) in your cluster direct the request to the correct service based on service subdomains or path rules that you've configured.
 
-Each Kubernetes Ingress resource corresponds roughly to a file in `/etc/nginx/sites-available/` containing a `server{}` configuration block, where requests for specific files and folders are configured.
-
-Your ingress, which creates a port of entry to your cluster similar to a load balancer, can reside within your cluster or externally. Ingress and ingress controllers residing in RKE-launched clusters are powered by [Nginx](https://www.nginx.com/).
+Your ingress, which creates a port of entry to your cluster similar to a load balancer, can reside within your cluster or externally.
 
 Ingress can provide other functionality as well, such as SSL termination, name-based virtual hosting, and more.
-
-:::note Using Rancher in a High Availability Configuration?
-
-Refrain from adding an Ingress to the `local` cluster. The Nginx Ingress Controller that Rancher uses acts as a global entry point for _all_ clusters managed by Rancher, including the `local` cluster.  Therefore, when users try to access an application, your Rancher connection may drop due to the Nginx configuration being reloaded. We recommend working around this issue by deploying applications only in clusters that you launch using Rancher.
-
-:::
 
 - For more information on how to set up ingress in Rancher, see [Ingress](add-ingresses.md).
 - For complete information about ingress and ingress controllers, see the [Kubernetes Ingress Documentation](https://kubernetes.io/docs/concepts/services-networking/ingress/)

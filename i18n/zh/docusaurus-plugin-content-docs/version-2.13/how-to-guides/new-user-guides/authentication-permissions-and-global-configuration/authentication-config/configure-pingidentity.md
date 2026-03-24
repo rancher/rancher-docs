@@ -64,3 +64,7 @@ title: 配置 PingIdentity (SAML)
 ## Configuring SAML Single Logout (SLO)
 
 <ConfigureSLO />
+
+## SAML and OpenLDAP Group Permissions
+
+<SamlOpenLDAPGroupPermissions />

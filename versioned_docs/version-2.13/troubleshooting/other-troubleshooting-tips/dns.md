@@ -10,7 +10,7 @@ The commands/steps listed on this page can be used to check name resolution issu
 
 Make sure you configured the correct kubeconfig (for example, `export KUBECONFIG=$PWD/kube_config_cluster.yml` for Rancher HA) or are using the embedded kubectl via the UI.
 
-Before running the DNS checks, check the [default DNS provider](../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#default-dns-provider) for your cluster and make sure that [the overlay network is functioning correctly](networking.md#check-if-overlay-network-is-functioning-correctly) as this can also be the reason why DNS resolution (partly) fails.
+Before running the DNS checks, make sure that [the overlay network is functioning correctly](networking.md#check-if-overlay-network-is-functioning-correctly) for your DNS provider as this can also be the reason why DNS resolution (partly) fails.
 
 ## Check if DNS pods are running
 
@@ -203,7 +203,7 @@ As the `kubelet` is running inside a container, the path for files located in `/
 
 :::
 
-See [Editing Cluster as YAML](../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#editing-clusters-with-yaml) how to apply this change. When the provisioning of the cluster has finished, you have to remove the kube-dns pod to activate the new setting in the pod:
+See Editing Cluster as YAML how to apply this change. When the provisioning of the cluster has finished, you have to remove the kube-dns pod to activate the new setting in the pod:
 
 ```
 kubectl delete pods -n kube-system -l k8s-app=kube-dns

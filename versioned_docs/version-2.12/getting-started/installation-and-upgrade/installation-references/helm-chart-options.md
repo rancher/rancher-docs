@@ -32,37 +32,41 @@ For information on enabling experimental features, refer to [this page.](../../.
 | ------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `additionalTrustedCAs`         | false                                                 | `bool` - See [Additional Trusted CAs](#additional-trusted-cas)                                                                                    |
 | `addLocal`                     | "true"                                                | `string` - Have Rancher detect and import the "local" (upstream) Rancher server cluster.  _Note: This option is no longer available in v2.5.0. Consider using the `restrictedAdmin` option to prevent users from modifying the local cluster._              |
-| `agentTLSMode`                 | ""                                                    | `string` - either `system-store` or `strict`. See [Agent TLS Enforcement](./tls-settings.md#agent-tls-enforcement) |
+| `agentTLSMode`                 | ""                                                    | `string` - either `system-store` or `strict`. See [Agent TLS Enforcement](./tls-settings.md#agent-tls-enforcement)                                |
 | `antiAffinity`                 | "preferred"                                           | `string` - AntiAffinity rule for Rancher pods - "preferred, required"                                                                             |
 | `auditLog.destination`         | "sidecar"                                             | `string` - Stream to sidecar container console or hostPath volume - "sidecar, hostPath"                                                           |
 | `auditLog.hostPath`            | "/var/log/rancher/audit"                              | `string` - log file destination on host (only applies when `auditLog.destination` is set to `hostPath`)                                           |
-| `auditLog.enabled`            |  false                            | `bool` - Enables / disables audit logging.                                           |
-| `auditLog.level`               | 0                                                     | `int` - Sets the [API Audit Log](../../../how-to-guides/advanced-user-guides/enable-api-audit-log.md) level [0-3].                                  |
+| `auditLog.enabled`             |  false                                                | `bool` - Enables / disables audit logging.                                                                                                        |
+| `auditLog.level`               | 0                                                     | `int` - Sets the [API Audit Log](../../../how-to-guides/advanced-user-guides/enable-api-audit-log.md) level [0-3].                                |
 | `auditLog.maxAge`              | 1                                                     | `int` - maximum number of days to retain old audit log files (only applies when `auditLog.destination` is set to `hostPath`)                      |
 | `auditLog.maxBackup`           | 1                                                     | `int` - maximum number of audit log files to retain (only applies when `auditLog.destination` is set to `hostPath`)                               |
 | `auditLog.maxSize`             | 100                                                   | `int` - maximum size in megabytes of the audit log file before it gets rotated (only applies when `auditLog.destination` is set to `hostPath`)    |
 | `auditLog.image.repository`    | "registry.suse.com/bci/bci-micro"                     | `string` - Location for the image used to collect audit logs.                                                                                     |
 | `auditLog.image.tag`           | "15.4.14.3"                                           | `string` - Tag for the image used to collect audit logs.                                                                                          |
-| `auditLog.image.pullPolicy`    | "IfNotPresent"                                        | `string` - Override imagePullPolicy for auditLog images - "Always", "Never", "IfNotPresent".                                                   |
-| `busyboxImage`                 | ""                                             | `string` - Image location for busybox image used to collect audit logs. _Note: This option is deprecated use `auditLog.image.repository` to control auditing sidecar image._        |
+| `auditLog.image.pullPolicy`    | "IfNotPresent"                                        | `string` - Override imagePullPolicy for auditLog images - "Always", "Never", "IfNotPresent".                                                      |
+| `busyboxImage`                 | ""                                                    | `string` - Image location for busybox image used to collect audit logs. _Note: This option is deprecated use `auditLog.image.repository` to control auditing sidecar image._        |
 | `certmanager.version`          | ""                                                    | `string` - set cert-manager compatibility                                                                                                         |
 | `debug`                        | false                                                 | `bool` - set debug flag on rancher server                                                                                                         |
-| `extraEnv`                     | []                                                    | `list` - set additional environment variables for Rancher                                                          |
+| `extraEnv`                     | []                                                    | `list` - set additional environment variables for Rancher                                                                                         |
 | `imagePullSecrets`             | []                                                    | `list` - list of names of Secret resource containing private registry credentials                                                                 |
-| `ingress.configurationSnippet` | ""                                                    | `string` - additional Nginx configuration. Can be used for proxy configuration.   |
+| `ingress.configurationSnippet` | ""                                                    | `string` - additional Nginx configuration. Can be used for proxy configuration.                                                                   |
 | `ingress.extraAnnotations`     | {}                                                    | `map` - additional annotations to customize the ingress                                                                                           |
-|  `ingress.enabled` |  true   |    When set to false, Helm will not install a Rancher ingress. Set the option to false to deploy your own ingress.   |
+|  `ingress.enabled`             |  true                                                 | `string` - When set to false, Helm will not install a Rancher ingress. Set the option to false to deploy your own ingress.                        |
 | `letsEncrypt.ingress.class`    | ""                                                    | `string` - optional ingress class for the cert-manager acmesolver ingress that responds to the Let's Encrypt ACME challenges. Options: traefik, nginx.       |                      |
-| `noProxy`                      | "127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local,cattle-system.svc" | `string` - comma separated list of hostnames or ip address not to use the proxy                              |                                     |
+| `noProxy`                      | "127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local,cattle-system.svc" | `string` - comma separated list of hostnames or ip address not to use the proxy |                           |
 | `proxy`                        | ""                                                    | `string` - HTTP[S] proxy server for Rancher                                                                                                       |
-| `rancherImage`                 | "rancher/rancher"                                     | `string` - rancher image source                                                                                                                   |
-| `rancherImagePullPolicy`       | "IfNotPresent"                                        | `string` - Override imagePullPolicy for rancher server images - "Always", "Never", "IfNotPresent"                                                 |
-| `rancherImageTag`              | same as chart version                                 | `string` - rancher/rancher image tag                                                                                                              |
-| `replicas`                     | 3                                                     | `int` - Number of Rancher server replicas. Setting to -1 will dynamically choose 1, 2, or 3 based on the number of available nodes in the cluster.                                                                                                        |
+| `rancherImage`                 | "rancher/rancher"                                     | `string` - rancher image source _Note: This option is deprecated in v2.12.0. Use `image.repository` instead._                                     |
+| `rancherImagePullPolicy`       | "IfNotPresent"                                        | `string` - Override imagePullPolicy for rancher server images - "Always", "Never", "IfNotPresent" _Note: This option is deprecated as of v2.12.0. Use `image.pullPolicy` instead._        |
+| `rancherImageTag`              | same as chart version                                 | `string` - rancher/rancher image tag _Note: This option is deprecated in v2.12.0. Use `image.tag` instead._                                       |
+| `image.registry`               | ""                                                    | `string` - Override rancher image-specific registry, e.g, http://registry.example.com/                                                            |
+| `image.repository`             | "rancher/rancher"                                     | `string` - Rancher image source                                                                                                                   |
+| `image.pullPolicy`             | "IfNotPresent"                                        | `string` - Override imagePullPolicy for rancher server images - "Always", "Never", "IfNotPresent"                                                 |
+| `image.tag`                    | ""                                                    | `string` - Defaults to .Chart.appVersion for rancher/rancher image tag                                                                            |
+| `replicas`                     | 3                                                     | `int` - Number of Rancher server replicas. Setting to -1 will dynamically choose 1, 2, or 3 based on the number of available nodes in the cluster.|
 | `resources`                    | {}                                                    | `map` - rancher pod resource requests & limits                                                                                                    |
-| `systemDefaultRegistry`        | ""                                                    | `string` - private registry to be used for all system container images, e.g., http://registry.example.com/                   |
+| `systemDefaultRegistry`        | ""                                                    | `string` - private registry to be used for all system container images, e.g., http://registry.example.com/                                        |
 | `tls`                          | "ingress"                                             | `string` - See [External TLS Termination](#external-tls-termination) for details. - "ingress, external"                                           |
-| `useBundledSystemChart`        | `false`                                               | `bool` - select to use the system-charts packaged with Rancher server. This option is used for air gapped installations.  |
+| `useBundledSystemChart`        | `false`                                               | `bool` - select to use the system-charts packaged with Rancher server. This option is used for air gapped installations.                          |
 
 
 When using Rancher v2.12.0 and above, Rancher will use an audit logging controller that watches `AuditPolicy` CRs for configuring additional redactions, for more info see [API Audit Log](../../../how-to-guides/advanced-user-guides/enable-api-audit-log.md).
@@ -131,16 +135,12 @@ This option is only effective on the initial Rancher install. See [Issue 16522](
 
 To customize or use a different ingress with Rancher server you can set your own Ingress annotations.
 
+Please refer to the Traefik documentation for the full list of Ingress NGINX annotations that are [supported](https://doc.traefik.io/traefik/reference/routing-configuration/kubernetes/ingress-nginx/#annotations-support) and [unsupported](https://doc.traefik.io/traefik/reference/routing-configuration/kubernetes/ingress-nginx/#unsupported-annotations) by Traefik's kubernetesIngressNginx provider.
+
 Example on setting a custom certificate issuer:
 
 ```plain
 --set ingress.extraAnnotations.'cert-manager\.io/cluster-issuer'=issuer-name
-```
-
-Example on setting a static proxy header with `ingress.configurationSnippet`. This value is parsed like a template so variables can be used.
-
-```plain
---set ingress.configurationSnippet='more_set_input_headers X-Forwarded-Host {{ .Values.hostname }};'
 ```
 
 ### HTTP Proxy
@@ -215,26 +215,6 @@ If you are using a Private CA signed certificate (or if `agent-tls-mode` is set 
 
 Your load balancer must support long lived websocket connections and will need to insert proxy headers so Rancher can route links correctly.
 
-### Configuring Ingress for External TLS when Using NGINX v0.22
-
-In NGINX v0.22, the behavior of NGINX has [changed](https://github.com/kubernetes/ingress-nginx/blob/06efac9f0b6f8f84b553f58ccecf79dc42c75cc6/Changelog.md) regarding forwarding headers and external TLS termination. Therefore, in the scenario that you are using external TLS termination configuration with NGINX v0.22, you must enable the `use-forwarded-headers` option for ingress:
-
-For RKE2 installations, you can create a custom `rke2-ingress-nginx-config.yaml` file at `/var/lib/rancher/rke2/server/manifests/rke2-ingress-nginx-config.yaml` containing this required setting to enable using forwarded headers with external TLS termination. Without this required setting applied, the external LB will continuously respond with redirect loops it receives from the ingress controller. (This can be created before or after rancher is installed, rke2 server agent will notice this addition and automatically apply it.)
-
-```yaml
----
-apiVersion: helm.cattle.io/v1
-kind: HelmChartConfig
-metadata:
-  name: rke2-ingress-nginx
-  namespace: kube-system
-spec:
-  valuesContent: |-
-    controller:
-      config:
-        use-forwarded-headers: "true"
-```
-
 ### Required Headers
 
 - `Host`
@@ -251,66 +231,3 @@ spec:
 ### Health Checks
 
 Rancher will respond `200` to health checks on the `/healthz` endpoint.
-
-### Example NGINX config
-
-This NGINX configuration is tested on NGINX 1.14.
-
-:::caution
-
-This NGINX configuration is only an example and may not suit your environment. For complete documentation, see [NGINX Load Balancing - HTTP Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/).
-
-:::
-
-- Replace `IP_NODE1`, `IP_NODE2` and `IP_NODE3` with the IP addresses of the nodes in your cluster.
-- Replace both occurrences of `FQDN` to the DNS name for Rancher.
-- Replace `/certs/fullchain.pem` and `/certs/privkey.pem` to the location of the server certificate and the server certificate key respectively.
-
-```
-worker_processes 4;
-worker_rlimit_nofile 40000;
-
-events {
-    worker_connections 8192;
-}
-
-http {
-    upstream rancher {
-        server IP_NODE_1:80;
-        server IP_NODE_2:80;
-        server IP_NODE_3:80;
-    }
-
-    map $http_upgrade $connection_upgrade {
-        default Upgrade;
-        ''      close;
-    }
-
-    server {
-        listen 443 ssl http2;
-        server_name FQDN;
-        ssl_certificate /certs/fullchain.pem;
-        ssl_certificate_key /certs/privkey.pem;
-
-        location / {
-            proxy_set_header Host $host;
-            proxy_set_header X-Forwarded-Proto $scheme;
-            proxy_set_header X-Forwarded-Port $server_port;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_pass http://rancher;
-            proxy_http_version 1.1;
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection $connection_upgrade;
-            # This allows the ability for the execute shell window to remain open for up to 15 minutes. Without this parameter, the default is 1 minute and will automatically close.
-            proxy_read_timeout 900s;
-            proxy_buffering off;
-        }
-    }
-
-    server {
-        listen 80;
-        server_name FQDN;
-        return 301 https://$server_name$request_uri;
-    }
-}
-```

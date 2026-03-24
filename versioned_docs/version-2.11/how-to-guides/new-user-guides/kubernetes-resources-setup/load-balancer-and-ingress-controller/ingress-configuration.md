@@ -40,6 +40,4 @@ You must have an SSL certificate that Ingress can use to encrypt and decrypt com
 
 ## Labels and Annotations
 
-Add [Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) and/or [Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) to provide metadata for your Ingress controller.
-
-For a list of annotations available for use, see the [Nginx Ingress Controller Documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/).
+Please refer to the Traefik documentation for the full list of Ingress NGINX annotations that are [supported](https://doc.traefik.io/traefik/reference/routing-configuration/kubernetes/ingress-nginx/#annotations-support) and [unsupported](https://doc.traefik.io/traefik/reference/routing-configuration/kubernetes/ingress-nginx/#unsupported-annotations) by Traefik's kubernetesIngressNginx provider.

@@ -4,13 +4,11 @@ title: 设置 Amazon NLB 网络负载均衡器
 
 本文介绍了如何在 Amazon EC2 服务中设置 Amazon NLB 网络负载均衡器，用于将流量转发到 EC2 上的多个实例中。
 
-这些示例中，负载均衡器将流量转发到三个 Rancher Server 节点。如果 Rancher 安装在 RKE Kubernetes 集群上，则需要三个节点。如果 Rancher 安装在 K3s Kubernetes 集群上，则只需要两个节点。
+这些示例中，负载均衡器将流量转发到三个 Rancher Server 节点。如果 Rancher 安装在 K3s Kubernetes 集群上，则只需要两个节点。
 
 本文介绍的只是配置负载均衡器的其中一种方式。其他负载均衡器如传统负载路由器（Classic Load Balancer）和应用负载路由器（Application Load Balancer），也可以将流量转发到 Rancher Server 节点。
 
 Rancher 仅支持使用 Amazon NLB 以 `TCP` 模式终止 443 端口的流量，而不支持 `TLS` 模式。这试因为在 NLB 终止时，NLB 不会将正确的标头注入请求中。如果你想使用由 Amazon Certificate Manager (ACM) 托管的证书，请使用 ALB。
-
-
 
 ## 要求
 
@@ -22,7 +20,7 @@ Rancher 仅支持使用 Amazon NLB 以 `TCP` 模式终止 443 端口的流量，
 
 配置 NLB 的第一个步骤是创建两个目标组。一般来说，只需要端口 443 就可以访问 Rancher。但是，由于端口 80 的流量会被自动重定向到端口 443，因此，你也可以为端口 80 也添加一个监听器。
 
-不管使用的是 NGINX Ingress 还是 Traefik Ingress Controller，Ingress 都应该将端口 80 的流量重定向到端口 443。以下为操作步骤：
+The Traefik Ingress should redirect traffic from port 80 to port 443.
 
 1. 登录到 [Amazon AWS 控制台](https://console.aws.amazon.com/ec2/)。确保选择的**区域**是你创建 EC2 实例 （Linux 节点）的区域。
 1. 选择**服务** > **EC2**，找到**负载均衡器**并打开**目标组**。
@@ -30,7 +28,7 @@ Rancher 仅支持使用 Amazon NLB 以 `TCP` 模式终止 443 端口的流量，
 
 :::note
 
-不同 Ingress 的健康检查处理方法不同。详情请参阅[本节](#nginx-ingress-和-traefik-ingress-的健康检查路径)。
+For details on Traefik Ingress health checks, refer to [this section.](#health-check-paths-for-traefik-ingresses)
 
 :::
 
@@ -163,13 +161,10 @@ AWS 完成 NLB 创建后，单击**关闭**。
 
 6. 单击右上角的**保存**。
 
-## NGINX Ingress 和 Traefik Ingress 的健康检查路径
+## Health Check Paths for Traefik Ingresses
 
-K3s 和 RKE Kubernetes 集群使用的默认 Ingress 不同，因此对应的健康检查方式也不同。
+K3s Kubernetes clusters use Traefik as the default Ingress.
 
-RKE Kubernetes 集群默认使用 NGINX Ingress，而 K3s Kubernetes 集群默认使用 Traefik Ingress。
+The health check path is `/ping`. By default `/ping` is always matched (regardless of Host), and a response from [Traefik itself](https://docs.traefik.io/operations/ping/) is always served.
 
-- **Traefik**：默认健康检查路径是 `/ping`。默认情况下，不管主机如何，`/ping` 总是匹配，而且 [Traefik 自身](https://docs.traefik.io/operations/ping/)总会响应。
-- **NGINX Ingress**：NGINX Ingress Controller 的默认后端有一个 `/healthz` 端点。默认情况下，不管主机如何，`/healthz` 总是匹配，而且 [`ingress-nginx` 自身](https://github.com/kubernetes/ingress-nginx/blob/0cbe783f43a9313c9c26136e888324b1ee91a72f/charts/ingress-nginx/values.yaml#L212)总会响应。
-
-想要精确模拟健康检查，最好是使用 Host 标头（Rancher hostname）加上 `/ping` 或 `/healthz`（分别对应 K3s 和 RKE 集群）来获取 Rancher Pod 的响应，而不是 Ingress 的响应。
+To simulate an accurate health check, it is a best practice to use the Host header (Rancher hostname) combined with `/ping` or `/healthz` wherever possible, to get a response from the Rancher Pods, not the Ingress.

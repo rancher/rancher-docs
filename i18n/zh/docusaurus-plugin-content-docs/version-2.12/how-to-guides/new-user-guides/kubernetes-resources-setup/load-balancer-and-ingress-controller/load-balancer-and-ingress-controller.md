@@ -48,17 +48,9 @@ Rancher 支持两种类型的负载均衡器：
 
 Ingress 与一个或多个 Ingress Controller 一起动态路由 service 的请求。Ingress 收到请求时，集群中的 Ingress Controller 会根据你配置的 service 子域或路径规则将请求定向到正确的 service。
 
-每个 Kubernetes Ingress 资源都对应一个 `/etc/nginx/sites-available/` 中的文件，其中包含一个配置对特定文件和文件夹的请求的 `server{}` 配置块。
-
-Ingress 能为你的集群创建一个入口端口（与负载均衡器类似），可以位于集群的内部或外部。RKE 启动的集群中的 Ingress 和 Ingress Controller 由 [Nginx](https://www.nginx.com/) 提供支持。
+Ingress 能为你的集群创建一个入口端口（与负载均衡器类似），可以位于集群的内部或外部。
 
 Ingress 还支持其他功能，例如 SSL 终止、基于名称的虚拟主机等。
-
-:::note 在高可用性配置中使用 Rancher：
-
-请避免将 Ingress 添加到 `local` 集群。Rancher 将 Nginx Ingress Controller 作为 Rancher 管理的 _所有_ 集群的全局入口点，其中包括 `local` 集群。因此，当用户尝试访问应用程序时，Rancher 可能会由于重新加载 Nginx 配置而断开连接。要解决这个问题，我们建议你仅在通过 Rancher 启动的集群中部署应用程序。
-
-:::
 
 - 有关如何在 Rancher 中设置 Ingress 的更多信息，请参阅 [Ingress](add-ingresses.md)。
 - 有关 Ingress 和 Ingress Controller 的完整信息，请参阅 [Kubernetes Ingress 文档](https://kubernetes.io/docs/concepts/services-networking/ingress/)。

@@ -78,22 +78,22 @@ kubectl -n kube-system get endpoints kube-scheduler -o jsonpath='{.metadata.anno
 
 ## Ingress Controller
 
-The default Ingress Controller is NGINX and is deployed as a DaemonSet in the `ingress-nginx` namespace. The pods are only scheduled to nodes with the `worker` role.
+The default Ingress Controller is Traefik and is deployed as a DaemonSet in the `traefik` namespace. The pods are only scheduled to nodes with the `worker` role.
 
 Check if the pods are running on all nodes:
 
 ```
-kubectl -n ingress-nginx get pods -o wide
+kubectl -n traefik get pods -o wide
 ```
 
 Example output:
 
 ```
-kubectl -n ingress-nginx get pods -o wide
+kubectl -n traefik get pods -o wide
 NAME                                    READY     STATUS    RESTARTS   AGE       IP               NODE
 default-http-backend-797c5bc547-kwwlq   1/1       Running   0          17m       x.x.x.x          worker-1
-nginx-ingress-controller-4qd64          1/1       Running   0          14m       x.x.x.x          worker-1
-nginx-ingress-controller-8wxhm          1/1       Running   0          13m       x.x.x.x          worker-0
+traefik-4qd64                           1/1       Running   0          14m       x.x.x.x          worker-1
+traefik-8wxhm                           1/1       Running   0          13m       x.x.x.x          worker-0
 ```
 
 If a pod is unable to run (Status is not **Running**, Ready status is not showing `1/1` or you see a high count of Restarts), check the pod details, logs and namespace events.
@@ -101,27 +101,27 @@ If a pod is unable to run (Status is not **Running**, Ready status is not showin
 ### Pod details
 
 ```
-kubectl -n ingress-nginx describe pods -l app=ingress-nginx
+kubectl -n traefik describe pods -l app=traefik
 ```
 
 ### Pod container logs
 
-The below command can show the logs of all the pods labeled "app=ingress-nginx", but it will display only 10 lines of log because of the restrictions of the `kubectl logs` command. Refer to `--tail` of `kubectl logs -h` for more information.
+The below command can show the logs of all the pods labeled "app=traefik", but it will display only 10 lines of log because of the restrictions of the `kubectl logs` command. Refer to `--tail` of `kubectl logs -h` for more information.
 
 ```
-kubectl -n ingress-nginx logs -l app=ingress-nginx
+kubectl -n traefik logs -l app=traefik
 ```
 
 If the full log is needed, specify the pod name in the trailing command:
 
 ```
-kubectl -n ingress-nginx logs <pod name>
+kubectl -n traefik logs <pod name>
 ```
 
 ### Namespace events
 
 ```
-kubectl -n ingress-nginx get events
+kubectl -n traefik get events
 ```
 
 ### Debug logging
@@ -129,7 +129,7 @@ kubectl -n ingress-nginx get events
 To enable debug logging:
 
 ```
-kubectl -n ingress-nginx patch ds nginx-ingress-controller --type='json' -p='[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--v=5"}]'
+kubectl -n traefik patch ds traefik --type='json' -p='[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--v=5"}]'
 ```
 
 ### Check configuration
@@ -137,7 +137,7 @@ kubectl -n ingress-nginx patch ds nginx-ingress-controller --type='json' -p='[{"
 Retrieve generated configuration in each pod:
 
 ```
-kubectl -n ingress-nginx get pods -l app=ingress-nginx --no-headers -o custom-columns=.NAME:.metadata.name | while read pod; do kubectl -n ingress-nginx exec $pod -- cat /etc/nginx/nginx.conf; done
+kubectl -n traefik get pods -l app=traefik --no-headers -o custom-columns=.NAME:.metadata.name | while read pod; do kubectl -n traefik exec $pod -- cat /etc/nginx/nginx.conf; done
 ```
 
 ## Rancher agents

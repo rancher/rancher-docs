@@ -36,6 +36,14 @@ Rancher 支持两种类型的负载均衡器：
 
 ## Ingress
 
+:::warning
+
+**Ingress-NGINX EOL:** The community `ingress-nginx` controller reaches End-of-Life (EOL) in March 2026. Traefik is the recommended migration path for Rancher environments.
+
+Traefik includes a native Ingress NGINX provider. This allows you to migrate from NGINX without rewriting your existing Ingress objects, as Traefik will automatically interpret `nginx.ingress.kubernetes.io` annotations. If you are upgrading a cluster that is already using `ingress-nginx`, follow this [guide](https://doc.traefik.io/traefik/migrate/nginx-to-traefik/) for more information.
+
+:::
+
 如上所述，使用负载均衡器的缺点是：
 
 - 每个服务负载均衡器只能处理一个 IP 地址。

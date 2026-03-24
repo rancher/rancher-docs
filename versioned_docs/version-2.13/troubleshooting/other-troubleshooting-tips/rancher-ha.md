@@ -69,7 +69,7 @@ rancher   rancher.yourdomain.com   x.x.x.x,x.x.x.x,x.x.x.x   80, 443   2m
 When accessing your configured Rancher FQDN does not show you the UI, check the ingress controller logging to see what happens when you try to access Rancher:
 
 ```
-kubectl -n ingress-nginx logs -l app=ingress-nginx
+kubectl -n traefik logs -l app=traefik
 ```
 
 ## Leader Election

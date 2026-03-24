@@ -68,3 +68,7 @@ Note that these URLs will not return valid data until the authentication configu
 ## Configuring SAML Single Logout (SLO)
 
 <ConfigureSLO />
+
+## SAML and OpenLDAP Group Permissions
+
+<SamlOpenLDAPGroupPermissions />

@@ -36,6 +36,4 @@ description: Ingress 配置
 
 ## 标签和注释
 
-添加[标签](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)和/或[注释](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)来为你的 Ingress Controller 提供元数据。
-
-有关可用的注释列表，请参阅 [Nginx Ingress Controller 文档](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/)。
+Please refer to the Traefik documentation for the full list of Ingress NGINX annotations that are [supported](https://doc.traefik.io/traefik/reference/routing-configuration/kubernetes/ingress-nginx/#annotations-support) and [unsupported](https://doc.traefik.io/traefik/reference/routing-configuration/kubernetes/ingress-nginx/#unsupported-annotations) by Traefik's kubernetesIngressNginx provider.

@@ -184,6 +184,11 @@ module.exports = {
             current: {
               label: "Latest",
             },
+            "2.14": {
+              label: 'v2.14 (Preview)',
+              path: 'v2.14',
+              banner: 'unreleased'
+            },
             "2.13": {
               label: "v2.13",
               path: "v2.13",
@@ -192,20 +197,18 @@ module.exports = {
             "2.12": {
               label: "v2.12",
               path: "v2.12",
-              banner: "none"
             },
             2.11: {
               label: "v2.11",
-              path: "v2.11",
-              banner: "none",
+              path: "v2.11"
             },
             "2.10": {
               label: "v2.10",
               path: "v2.10",
-              banner: "none",
+              className: 'toArchive'
             },
             2.9: {
-              label: "v2.9",
+              label: "v2.9 (Archived)",
               path: "v2.9",
               banner: "none",
             },
@@ -655,19 +658,6 @@ module.exports = {
             to: "/v2.10/integrations-in-rancher/monitoring-and-alerting",
             from: "/v2.10/monitoring-alerting",
           }, // Redirects for dashboard#11114 (end)
-          {
-            // Redirects for dashboard#12040 (start)
-            to: "/v2.9/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-google-oauth",
-            from: "/v2.9/admin-settings/authentication/google",
-          },
-          {
-            to: "/v2.9/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides",
-            from: "/v2.9/monitoring-alerting/configuration",
-          },
-          {
-            to: "/v2.9/integrations-in-rancher/monitoring-and-alerting",
-            from: "/v2.9/monitoring-alerting",
-          }, // Redirects for dashboard#12040 (end)
           {
             // Redirects for restructure from PR #234 (start)
             to: "/faq/general-faq",

@@ -10,14 +10,14 @@ Because Shibboleth is a SAML provider, it doesn't support searching for groups. 
 
 One solution to this problem is to configure an OpenLDAP identity provider. With an OpenLDAP back end for Shibboleth, you will be able to search for groups in Rancher and assign them to resources such as clusters, projects, or namespaces from the Rancher UI.
 
-### Terminology
+## Terminology
 
 - **Shibboleth** is a single sign-on log-in system for computer networks and the Internet. It allows people to sign in using just one identity to various systems. It validates user credentials, but does not, on its own, handle group memberships.
 - **SAML:** Security Assertion Markup Language, an open standard for exchanging authentication and authorization data between an identity provider and a service provider.
 - **OpenLDAP:** a free, open-source implementation of the Lightweight Directory Access Protocol (LDAP). It is used to manage an organization’s computers and users. OpenLDAP is useful for Rancher users because it supports groups. In Rancher, it is possible to assign permissions to groups so that they can access resources such as clusters, projects, or namespaces, as long as the groups already exist in the identity provider.
 - **IdP or IDP:** An identity provider. OpenLDAP is an example of an identity provider.
 
-### Adding OpenLDAP Group Permissions to Rancher Resources
+## Adding OpenLDAP Group Permissions to Rancher Resources
 
 The diagram below illustrates how members of an OpenLDAP group can access resources in Rancher that the group has permissions for.
 
@@ -30,3 +30,7 @@ When a member of the OpenLDAP group logs in to Rancher, she is redirected to Shi
 Shibboleth validates her credentials, and retrieves user attributes from OpenLDAP, including groups. Then Shibboleth sends a SAML assertion to Rancher including the user attributes. Rancher uses the group data so that she can access all of the resources and permissions that her groups have permissions for.
 
 ![Adding OpenLDAP Group Permissions to Rancher Resources](/img/shibboleth-with-openldap-groups.svg)
+
+## SAML and OpenLDAP Group Permissions
+
+<SamlOpenLDAPGroupPermissions />

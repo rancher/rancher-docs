@@ -210,13 +210,13 @@ Certain internal Kubernetes components are scraped via a proxy deployed as part 
 The following Kubernetes components are directly scraped by Prometheus:
 
 - kubelet*
-- ingress-nginx**
+- Traefik**
 - coreDns/kubeDns
 - kube-api-server
 
 \* You can optionally use `hardenedKubelet.enabled` to use a PushProx, but that is not the default.
 
-** For RKE2 clusters, ingress-nginx is deployed by default and treated as an internal Kubernetes component.
+** For RKE2 clusters, Traefik is deployed by default and treated as an internal Kubernetes component.
 
 ### Scraping Metrics Based on Kubernetes Distribution
 
@@ -231,11 +231,11 @@ Metrics are scraped differently based on the Kubernetes distribution. For help w
 | etcd	| rke2Etcd.enabled	| kubeAdmEtcd.enabled |	Not available |
 | kube-proxy	| rke2Proxy.enabled	| kubeAdmProxy.enabled |	k3sServer.enabled |
 | kubelet	| Collects metrics directly exposed by kubelet	| Collects metrics directly exposed by kubelet	| Collects metrics directly exposed by kubelet |
-| ingress-nginx*	| Collects metrics directly exposed by kubelet, Exposed by rke2IngressNginx.enabled	| Not available	| Not available |
+| Traefik* | Collects metrics directly exposed by kubelet	| Not available	| Not available |
 | coreDns/kubeDns	| Collects metrics directly exposed by coreDns/kubeDns	| Collects metrics directly exposed by coreDns/kubeDns	| Collects metrics directly exposed by coreDns/kubeDns |
 | kube-api-server	| Collects metrics directly exposed by kube-api-server	| Collects metrics directly exposed by kube-appi-server	| Collects metrics directly exposed by kube-api-server |
 
-\* For RKE2 clusters, ingress-nginx is deployed by default and treated as an internal Kubernetes component.
+\* For RKE2 clusters, Traefik is deployed by default and treated as an internal Kubernetes component.
 
 ### Terminology
 
@@ -244,6 +244,6 @@ Metrics are scraped differently based on the Kubernetes distribution. For help w
 - **etcd:** The internal Kubernetes component that is the distributed key/value store which Kubernetes uses for persistent storage of all cluster information.
 - **kube-proxy:** The internal Kubernetes component that watches the API server for pods/services changes in order to maintain the network up to date.
 - **kubelet:** The internal Kubernetes component that watches the API server for pods on a node and makes sure they are running.
-- **ingress-nginx:** An Ingress controller for Kubernetes using NGINX as a reverse proxy and load balancer.
+- **Traefik:** An Ingress controller for Kubernetes that can be used as a reverse proxy and load balancer.
 - **coreDns/kubeDns:** The internal Kubernetes component responsible for DNS.
 - **kube-api-server:** The main internal Kubernetes component that is responsible for exposing APIs for the other master components.

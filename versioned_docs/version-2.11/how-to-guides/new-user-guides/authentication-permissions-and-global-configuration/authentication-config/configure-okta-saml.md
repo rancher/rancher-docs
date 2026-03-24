@@ -112,3 +112,7 @@ If you experience issues when you test the connection to the OpenLDAP server, en
 ## Configuring SAML Single Logout (SLO)
 
 <ConfigureSLO />
+
+## SAML and OpenLDAP Group Permissions
+
+<SamlOpenLDAPGroupPermissions />

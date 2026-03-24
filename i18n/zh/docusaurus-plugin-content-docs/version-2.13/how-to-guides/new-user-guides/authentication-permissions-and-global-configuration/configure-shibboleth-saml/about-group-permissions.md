@@ -30,3 +30,7 @@ title: Shibboleth 和 OpenLDAP 的组权限
 Shibboleth 会验证用户的凭证，并从 OpenLDAP 检索用户属性，其中包括用户所在的组信息。然后 Shibboleth 将向 Rancher 发送一个包含用户属性的 SAML 断言。Rancher 会使用组数据，以便用户可以访问他所在的组有权访问的所有资源。
 
 ![Adding OpenLDAP Group Permissions to Rancher Resources](/img/shibboleth-with-openldap-groups.svg)
+
+## SAML and OpenLDAP Group Permissions
+
+<SamlOpenLDAPGroupPermissions />

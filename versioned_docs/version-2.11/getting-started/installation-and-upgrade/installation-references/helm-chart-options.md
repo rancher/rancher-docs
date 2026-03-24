@@ -126,16 +126,12 @@ This option is only effective on the initial Rancher install. See [Issue 16522](
 
 To customize or use a different ingress with Rancher server you can set your own Ingress annotations.
 
+Please refer to the Traefik documentation for the full list of Ingress NGINX annotations that are [supported](https://doc.traefik.io/traefik/reference/routing-configuration/kubernetes/ingress-nginx/#annotations-support) and [unsupported](https://doc.traefik.io/traefik/reference/routing-configuration/kubernetes/ingress-nginx/#unsupported-annotations) by Traefik's kubernetesIngressNginx provider.
+
 Example on setting a custom certificate issuer:
 
 ```plain
 --set ingress.extraAnnotations.'cert-manager\.io/cluster-issuer'=issuer-name
-```
-
-Example on setting a static proxy header with `ingress.configurationSnippet`. This value is parsed like a template so variables can be used.
-
-```plain
---set ingress.configurationSnippet='more_set_input_headers X-Forwarded-Host {{ .Values.hostname }};'
 ```
 
 ### HTTP Proxy
@@ -210,34 +206,6 @@ If you are using a Private CA signed certificate (or if `agent-tls-mode` is set 
 
 Your load balancer must support long lived websocket connections and will need to insert proxy headers so Rancher can route links correctly.
 
-### Configuring Ingress for External TLS when Using NGINX v0.22
-
-In NGINX v0.22, the behavior of NGINX has [changed](https://github.com/kubernetes/ingress-nginx/blob/06efac9f0b6f8f84b553f58ccecf79dc42c75cc6/Changelog.md) regarding forwarding headers and external TLS termination. Therefore, in the scenario that you are using external TLS termination configuration with NGINX v0.22, you must enable the `use-forwarded-headers` option for ingress:
-
-For RKE installations, edit the `cluster.yml` to add the following settings.
-```yaml
-ingress:
-  provider: nginx
-  options:
-    use-forwarded-headers: 'true'
-```
-
-For RKE2 installations, you can create a custom `rke2-ingress-nginx-config.yaml` file at `/var/lib/rancher/rke2/server/manifests/rke2-ingress-nginx-config.yaml` containing this required setting to enable using forwarded headers with external TLS termination. Without this required setting applied, the external LB will continuously respond with redirect loops it receives from the ingress controller. (This can be created before or after rancher is installed, rke2 server agent will notice this addition and automatically apply it.)
-
-```yaml
----
-apiVersion: helm.cattle.io/v1
-kind: HelmChartConfig
-metadata:
-  name: rke2-ingress-nginx
-  namespace: kube-system
-spec:
-  valuesContent: |-
-    controller:
-      config:
-        use-forwarded-headers: "true"
-```
-
 ### Required Headers
 
 - `Host`
@@ -254,66 +222,3 @@ spec:
 ### Health Checks
 
 Rancher will respond `200` to health checks on the `/healthz` endpoint.
-
-### Example NGINX config
-
-This NGINX configuration is tested on NGINX 1.14.
-
-:::caution
-
-This NGINX configuration is only an example and may not suit your environment. For complete documentation, see [NGINX Load Balancing - HTTP Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/).
-
-:::
-
-- Replace `IP_NODE1`, `IP_NODE2` and `IP_NODE3` with the IP addresses of the nodes in your cluster.
-- Replace both occurrences of `FQDN` to the DNS name for Rancher.
-- Replace `/certs/fullchain.pem` and `/certs/privkey.pem` to the location of the server certificate and the server certificate key respectively.
-
-```
-worker_processes 4;
-worker_rlimit_nofile 40000;
-
-events {
-    worker_connections 8192;
-}
-
-http {
-    upstream rancher {
-        server IP_NODE_1:80;
-        server IP_NODE_2:80;
-        server IP_NODE_3:80;
-    }
-
-    map $http_upgrade $connection_upgrade {
-        default Upgrade;
-        ''      close;
-    }
-
-    server {
-        listen 443 ssl http2;
-        server_name FQDN;
-        ssl_certificate /certs/fullchain.pem;
-        ssl_certificate_key /certs/privkey.pem;
-
-        location / {
-            proxy_set_header Host $host;
-            proxy_set_header X-Forwarded-Proto $scheme;
-            proxy_set_header X-Forwarded-Port $server_port;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_pass http://rancher;
-            proxy_http_version 1.1;
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection $connection_upgrade;
-            # This allows the ability for the execute shell window to remain open for up to 15 minutes. Without this parameter, the default is 1 minute and will automatically close.
-            proxy_read_timeout 900s;
-            proxy_buffering off;
-        }
-    }
-
-    server {
-        listen 80;
-        server_name FQDN;
-        return 301 https://$server_name$request_uri;
-    }
-}
-```

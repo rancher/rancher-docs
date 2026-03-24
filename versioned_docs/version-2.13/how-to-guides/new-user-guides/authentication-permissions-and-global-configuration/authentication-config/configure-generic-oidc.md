@@ -139,6 +139,10 @@ For example, if your IdP sends `groups` in a claim called `custom_roles`, enter 
 | Custom Email Claim | `email` | The name of the claim in the OIDC token that contains the user's email address. |
 | Custom Groups Claim | `groups` | The name of the claim in the OIDC token that contains the user's group memberships (used for RBAC). |
 
+## Configuring OIDC Single Logout (SLO)
+
+<ConfigureSLOOidc />
+
 ## Troubleshooting
 
 If you are experiencing issues while testing the connection to the OIDC server, first double-check the configuration options of your OIDC client. You can also inspect the Rancher logs to help pinpoint what's causing issues. Debug logs may contain more detailed information about the error. Please refer to [How can I enable debug logging](../../../../faq/technical-items.md#how-can-i-enable-debug-logging) in this documentation.
@@ -156,7 +160,3 @@ If the `Issuer` and `Auth Endpoint` are generated incorrectly, open the **Config
 ### Error: "Invalid grant_type"
 
 In some cases, the "Invalid grant_type" error message may be misleading and is actually caused by setting the `Valid Redirect URI` incorrectly.
-
-## Configuring OIDC Single Logout (SLO)
-
-<ConfigureSLOOidc />

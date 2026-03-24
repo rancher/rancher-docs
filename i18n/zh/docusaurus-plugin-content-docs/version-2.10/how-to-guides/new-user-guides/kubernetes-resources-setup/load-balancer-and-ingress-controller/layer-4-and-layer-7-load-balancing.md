@@ -11,6 +11,14 @@ Kubernetes 支持四层负载均衡和七层负载均衡。
 
 通常情况下，四层负载均衡器由底层云提供商支持，因此，如果你在裸金属服务器和 vSphere 集群上部署 RKE 集群，则不支持四层负载均衡器。但是，单个[全局管理的 config-map](https://kubernetes.github.io/ingress-nginx/user-guide/exposing-tcp-udp-services/) 可用于在 NGINX 或第三方 Ingress 上公开服务。
 
+:::warning
+
+**Ingress-NGINX EOL:** The community `ingress-nginx` controller reaches End-of-Life (EOL) in March 2026. Traefik is the recommended migration path for Rancher environments.
+
+Traefik includes a native Ingress NGINX provider. This allows you to migrate from NGINX without rewriting your existing Ingress objects, as Traefik will automatically interpret `nginx.ingress.kubernetes.io` annotations. If you are upgrading a cluster that is already using `ingress-nginx`, follow this [guide](https://doc.traefik.io/traefik/migrate/nginx-to-traefik/) for more information.
+
+:::
+
 :::note
 
 你可以使用非云负载均衡器（例如 [MetalLB](https://metallb.universe.tf/)）来部署集群。但是，该用例比云提供商支持的四层负载均衡器更高级，而且不可以在 Rancher 或 RKE 中配置。

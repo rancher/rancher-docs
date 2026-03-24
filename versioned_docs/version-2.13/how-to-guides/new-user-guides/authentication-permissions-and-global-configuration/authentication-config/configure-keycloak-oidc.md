@@ -168,6 +168,10 @@ After configuration is completed, Rancher user permissions need to be reapplied 
 
 :::
 
+## Configuring OIDC Single Logout (SLO)
+
+<ConfigureSLOOidc />
+
 ## Annex: Troubleshooting
 
 If you are experiencing issues while testing the connection to the Keycloak server, first double-check the configuration options of your OIDC client. You may also inspect the Rancher logs to help pinpoint what's causing issues. Debug logs may contain more detailed information about the error. Please refer to [How can I enable debug logging](../../../../faq/technical-items.md#how-can-i-enable-debug-logging) in this documentation.
@@ -203,7 +207,3 @@ To resolve this, you can either:
     3. Save your changes.
  
 2. Reconfigure your Keycloak OIDC setup using a user that is assigned to at least one group in Keycloak.
-
-## Configuring OIDC Single Logout (SLO)
-
-<ConfigureSLOOidc />

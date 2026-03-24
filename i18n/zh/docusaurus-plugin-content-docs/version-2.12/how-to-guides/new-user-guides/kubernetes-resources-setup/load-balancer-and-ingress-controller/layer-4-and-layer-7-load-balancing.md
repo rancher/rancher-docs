@@ -7,13 +7,11 @@ Kubernetes 支持四层负载均衡和七层负载均衡。
 
 ## 四层负载均衡器
 
-四层负载均衡器（或外部负载均衡器）将流量转发到 Nodeport。四层负载均衡器支持转发 HTTP 和 TCP 流量。
-
-通常情况下，四层负载均衡器由底层云提供商支持，因此，如果你在裸金属服务器和 vSphere 集群上部署 RKE 集群，则不支持四层负载均衡器。但是，单个[全局管理的 config-map](https://kubernetes.github.io/ingress-nginx/user-guide/exposing-tcp-udp-services/) 可用于在 NGINX 或第三方 Ingress 上公开服务。
+Layer-4 load balancer (or the external load balancer) forwards traffic to NodePorts. Layer-4 load balancer allows you to forward both HTTP and TCP traffic.
 
 :::note
 
-你可以使用非云负载均衡器（例如 [MetalLB](https://metallb.universe.tf/)）来部署集群。但是，该用例比云提供商支持的四层负载均衡器更高级，而且不可以在 Rancher 或 RKE 中配置。
+It is possible to deploy a cluster with a non-cloud load balancer, such as [MetalLB.](https://metallb.universe.tf/) However, that use case is more advanced than the Layer-4 load balancer supported by a cloud provider, and it is not configurable in Rancher.
 
 :::
 
@@ -26,17 +24,13 @@ Kubernetes 支持四层负载均衡和七层负载均衡。
 | Amazon EKS | 由 AWS 云提供商支持 |
 | Google GKE | 由 GCE 云提供商支持 |
 | Azure AKS | 由 Azure 云提供商支持 |
-| EC2 上的 RKE | 由 AWS 云提供商支持 |
-| DigitalOcean 上的 RKE | 受限的 NGINX 或第三方 Ingress\* |
-| vSphere 上的 RKE | 受限的 NGINX 或第三方 Ingress\* |
-| 自定义主机上的 RKE<br/>（例如裸金属服务器） | 受限的 NGINX 或第三方 Ingress\* |
-| 第三方 MetalLB | 受限的 NGINX 或第三方 Ingress\* |
+| 第三方 MetalLB | third-party Ingress\* |
 
 \* 可以通过单个[全局管理的 config-map](https://kubernetes.github.io/ingress-nginx/user-guide/exposing-tcp-udp-services/) 来公开服务。
 
 ## 七层负载均衡器
 
-七层负载均衡器（或 Ingress Controller）支持基于主机和路径的负载均衡和 SSL 终止。七层负载均衡器仅转发 HTTP 和 HTTPS 流量，因此它们仅侦听端口 80 和 443。亚马逊和谷歌等云提供商支持七层负载均衡器。此外，RKE 集群部署了 Nginx Ingress Controller。
+Layer-7 load balancer (or the ingress controller) supports host and path-based load balancing and SSL termination. Layer-7 load balancer only forwards HTTP and HTTPS traffic and therefore they listen on ports 80 and 443 only. Cloud providers such as Amazon and Google support layer-7 load balancer.
 
 ### 七层负载均衡支持
 
@@ -47,16 +41,12 @@ Kubernetes 支持四层负载均衡和七层负载均衡。
 | Amazon EKS | 由 AWS 云提供商支持 |
 | Google GKE | 由 GKE 云提供商支持 |
 | Azure AKS | 不支持 |
-| EC2 上的 RKE | Nginx Ingress Controller |
-| DigitalOcean 上的 RKE | Nginx Ingress Controller |
-| vSphere 上的 RKE | Nginx Ingress Controller |
-| 自定义主机上的 RKE<br/>（例如裸金属服务器） | Nginx Ingress Controller |
 
 ### 七层负载均衡器中的主机名
 
 一些托管在云上的七层负载均衡器（例如 AWS 上的 ALB Ingress Controller）会为 Ingress 规则公开 DNS 地址。你需要（使用 CNAME）将你的域名映射到七层负载均衡器生成的 DNS 地址。
 
-其他七层负载均衡器（例如 Google Load Balancer 或 Nginx Ingress Controller）会直接公开一个或多个 IP 地址。Google Load Balancer 提供了一个可路由的 IP 地址。Nginx Ingress Controller 公开了运行 Nginx Ingress Controller 的所有节点的外部 IP。你可以执行以下任一操作：
+Other layer-7 load balancers, such as the Google Load Balancer, directly expose one or more IP addresses. Google Load Balancer provides a single routable IP address. You can do either of the following:
 
 1. 配置你自己的 DNS，从而（使用 A 记录）将你的域名映射到七层负载均衡器公开的 IP 地址。
 2. 让 Rancher 为你的 Ingress 规则生成一个 xip.io 主机名。Rancher 将使用你公开的其中一个 IP（假设是 `a.b.c.d`）生成一个主机名（即 `<ingressname>.<namespace>.a.b.c.d.xip.io`）。

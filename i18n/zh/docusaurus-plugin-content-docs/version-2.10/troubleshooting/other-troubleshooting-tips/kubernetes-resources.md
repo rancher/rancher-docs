@@ -74,22 +74,22 @@ kubectl -n kube-system get endpoints kube-scheduler -o jsonpath='{.metadata.anno
 
 ## Ingress Controller
 
-默认的 Ingress Controller 是 NGINX，作为 DaemonSet 部署在 `ingress-nginx` 命名空间中。Pod 仅会调度到具有 `worker` 角色的节点。
+默认的 Ingress Controller 是 Traefik，作为 DaemonSet 部署在 `traefik` 命名空间中。Pod 仅会调度到具有 `worker` 角色的节点。
 
 检查 pod 是否运行在所有节点上：
 
 ```
-kubectl -n ingress-nginx get pods -o wide
+kubectl -n traefik get pods -o wide
 ```
 
 输出示例：
 
 ```
-kubectl -n ingress-nginx get pods -o wide
+kubectl -n traefik get pods -o wide
 NAME                                    READY     STATUS    RESTARTS   AGE       IP               NODE
 default-http-backend-797c5bc547-kwwlq   1/1       Running   0          17m       x.x.x.x          worker-1
-nginx-ingress-controller-4qd64          1/1       Running   0          14m       x.x.x.x          worker-1
-nginx-ingress-controller-8wxhm          1/1       Running   0          13m       x.x.x.x          worker-0
+traefik-4qd64                           1/1       Running   0          14m       x.x.x.x          worker-1
+traefik-8wxhm                           1/1       Running   0          13m       x.x.x.x          worker-0
 ```
 
 如果 pod 无法运行（即状态不是 **Running**，Ready 状态未显示 `1/1`，或者有大量 Restarts），请检查 pod 详细信息，日志和命名空间事件。
@@ -97,27 +97,27 @@ nginx-ingress-controller-8wxhm          1/1       Running   0          13m      
 ### Pod 详细信息
 
 ```
-kubectl -n ingress-nginx describe pods -l app=ingress-nginx
+kubectl -n traefik describe pods -l app=traefik
 ```
 
 ### Pod 容器日志
 
-下面的命令可以显示所有标记为 “app=ingress-nginx” 的 pod 的日志，但是由于 `kubectl logs` 命令的限制，它只会显示 10 行日志。有关详细信息，请参阅 `kubectl logs -h` 的 `--tail`。
+下面的命令可以显示所有标记为 “app=traefik” 的 pod 的日志，但是由于 `kubectl logs` 命令的限制，它只会显示 10 行日志。有关详细信息，请参阅 `kubectl logs -h` 的 `--tail`。
 
 ```
-kubectl -n ingress-nginx logs -l app=ingress-nginx
+kubectl -n traefik logs -l app=traefik
 ```
 
 如果需要查看完整的日志，请在命令中尾随 pod 名称：
 
 ```
-kubectl -n ingress-nginx logs <pod name>
+kubectl -n traefik logs <pod name>
 ```
 
 ### 命名空间事件
 
 ```
-kubectl -n ingress-nginx get events
+kubectl -n traefik get events
 ```
 
 ### 调试日志
@@ -125,7 +125,7 @@ kubectl -n ingress-nginx get events
 要启用调试日志：
 
 ```
-kubectl -n ingress-nginx patch ds nginx-ingress-controller --type='json' -p='[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--v=5"}]'
+kubectl -n traefik patch ds traefik --type='json' -p='[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--v=5"}]'
 ```
 
 ### 检查配置
@@ -133,7 +133,7 @@ kubectl -n ingress-nginx patch ds nginx-ingress-controller --type='json' -p='[{"
 在每个 pod 中检索生成的配置：
 
 ```
-kubectl -n ingress-nginx get pods -l app=ingress-nginx --no-headers -o custom-columns=.NAME:.metadata.name | while read pod; do kubectl -n ingress-nginx exec $pod -- cat /etc/nginx/nginx.conf; done
+kubectl -n traefik get pods -l app=traefik --no-headers -o custom-columns=.NAME:.metadata.name | while read pod; do kubectl -n traefik exec $pod -- cat /etc/nginx/nginx.conf; done
 ```
 
 ## Rancher Agents

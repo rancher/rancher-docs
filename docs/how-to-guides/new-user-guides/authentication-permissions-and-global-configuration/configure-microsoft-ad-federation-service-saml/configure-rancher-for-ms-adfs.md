@@ -55,3 +55,7 @@ openssl req -x509 -newkey rsa:2048 -keyout myservice.key -out myservice.cert -da
 ## Configuring SAML Single Logout (SLO)
 
 <ConfigureSLO />
+
+## SAML and OpenLDAP Group Permissions
+
+<SamlOpenLDAPGroupPermissions />

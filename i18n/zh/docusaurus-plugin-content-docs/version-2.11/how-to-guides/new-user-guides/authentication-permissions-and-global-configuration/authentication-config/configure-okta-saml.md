@@ -109,3 +109,7 @@ OpenLDAP ServiceAccount 用于所有搜索。无论用户个人的 SAML 权限�
 ## Configuring SAML Single Logout (SLO)
 
 <ConfigureSLO />
+
+## SAML and OpenLDAP Group Permissions
+
+<SamlOpenLDAPGroupPermissions />

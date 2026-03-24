@@ -10,10 +10,7 @@ Changing the default TLS settings depends on the chosen installation method.
 
 ## Running Rancher in a highly available Kubernetes cluster
 
-When you install Rancher inside of a Kubernetes cluster, TLS is offloaded at the cluster's ingress controller. The possible TLS settings depend on the used ingress controller:
-
-* nginx-ingress-controller (default for RKE2): [Default TLS Version and Ciphers](https://kubernetes.github.io/ingress-nginx/user-guide/tls/#default-tls-version-and-ciphers).
-* traefik (default for K3s): [TLS Options](https://doc.traefik.io/traefik/https/tls/#tls-options).
+When you install a Rancher managed Kubernetes cluster, TLS is offloaded at the cluster's ingress controller. Traefik is the default ingress for K3s and can be used with RKE2, refer to [TLS Options](https://doc.traefik.io/traefik/https/tls/#tls-options) for further information.
 
 ## Running Rancher in a single Docker container
 

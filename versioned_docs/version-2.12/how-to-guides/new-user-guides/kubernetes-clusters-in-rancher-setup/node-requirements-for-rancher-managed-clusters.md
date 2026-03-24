@@ -47,7 +47,7 @@ SUSE Linux may have a firewall that blocks all ports by default. In that situati
 
 ### Flatcar Container Linux Nodes
 
-When [Launching Kubernetes with Rancher](../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) using Flatcar Container Linux nodes, it is required to use the following configuration in the [Cluster Config File](../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#rke-cluster-config-file-reference)
+When [Launching Kubernetes with Rancher](../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) using Flatcar Container Linux nodes, it is required to use the following configuration in the Cluster Config File.
 
 <Tabs>
 <TabItem value="Canal">

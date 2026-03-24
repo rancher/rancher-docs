@@ -280,6 +280,7 @@ const sidebars = {
                   },
                   items: [
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-permissions",
+                    "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/global-resources",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/custom-roles",
                     "how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/locked-roles",
@@ -860,7 +861,6 @@ const sidebars = {
                 id: "reference-guides/cluster-configuration/rancher-server-configuration/rancher-server-configuration",
               },
               items: [
-                "reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration",
                 "reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration",
                 "reference-guides/cluster-configuration/rancher-server-configuration/k3s-cluster-configuration",
                 "reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration",

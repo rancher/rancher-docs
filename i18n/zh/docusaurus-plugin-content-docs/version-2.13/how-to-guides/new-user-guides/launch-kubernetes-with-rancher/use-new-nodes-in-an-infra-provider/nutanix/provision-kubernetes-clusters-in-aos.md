@@ -12,7 +12,7 @@ title: 在 Nutanix AOS 中配置 Kubernetes 集群
 
 有关配置 Nutanix AOS 节点模板的详细信息，请参阅 [Nutanix AOS 节点模板配置参考](../../../../../reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/nutanix.md)。
 
-有关在 Rancher 中配置 RKE Kubernetes 集群的详细信息，请参阅[集群配置参考](../../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)。
+有关在 Rancher 中配置 RKE Kubernetes 集群的详细信息，请参阅集群配置参考。
 
 - [Nutanix AOS 中的准备工作](#nutanix-aos-中的准备工作)
 - [创建 Nutanix AOS 集群](#创建-nutanix-aos-集群)

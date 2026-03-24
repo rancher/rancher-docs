@@ -12,7 +12,7 @@ title: 在 Nutanix AOS 中配置 Kubernetes 集群
 
 有关配置 Nutanix AOS 节点模板的详细信息，请参阅 [Nutanix AOS 节点模板配置参考](../../../../../reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/nutanix.md)。
 
-有关在 Rancher 中配置 RKE Kubernetes 集群的详细信息，请参阅[集群配置参考](../../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)。
+有关在 Rancher 中配置 RKE Kubernetes 集群的详细信息，请参阅集群配置参考。
 
 - [Nutanix AOS 中的准备工作](#nutanix-aos-中的准备工作)
 - [创建 Nutanix AOS 集群](#创建-nutanix-aos-集群)
@@ -70,7 +70,7 @@ title: 在 Nutanix AOS 中配置 Kubernetes 集群
 1. 单击 **Nutanix**。
 1. 输入**集群名称**，然后点击**继续**。
 1. 使用**成员角色**为集群配置用户授权。点击**添加成员**添加可以访问集群的用户。使用**角色**下拉菜单为每个用户设置权限。
-1. 使用**集群选项**选择要安装的 Kubernetes 版本、要使用的网络提供商，以及是否启用项目网络隔离。要查看更多集群选项，请单击**显示高级选项**。如需获取配置集群的帮助，请参阅 [RKE 集群配置参考](../../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)。
+1. 使用**集群选项**选择要安装的 Kubernetes 版本、要使用的网络提供商，以及是否启用项目网络隔离。要查看更多集群选项，请单击**显示高级选项**。如需获取配置集群的帮助，请参阅 RKE 集群配置参考。
 1. 将一个或多个节点池添加到你的集群。每个节点池都使用节点模板来配置新节点。有关节点池的更多信息，包括为节点分配 Kubernetes 角色的最佳实践，请参阅[本节](../../../launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/use-new-nodes-in-an-infra-provider.md#节点池)。
 1. 检查并确认你的选项。然后单击**创建**。
 

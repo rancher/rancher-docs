@@ -43,7 +43,7 @@ SUSE Linux 可能有一个防火墙，默认情况下会阻止所有端口。在
 
 ### Flatcar Container Linux 节点
 
-使用 Flatcar Container Linux 节点[通过 Rancher 启动 Kubernetes](../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) 时，需要在 [Cluster Config 文件](../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#rke-集群配置文件参考)中使用如下配置：
+使用 Flatcar Container Linux 节点[通过 Rancher 启动 Kubernetes](../launch-kubernetes-with-rancher/launch-kubernetes-with-rancher.md) 时，需要在 Cluster Config 文件 中使用如下配置：
 
 <Tabs>
 <TabItem value="Canal">

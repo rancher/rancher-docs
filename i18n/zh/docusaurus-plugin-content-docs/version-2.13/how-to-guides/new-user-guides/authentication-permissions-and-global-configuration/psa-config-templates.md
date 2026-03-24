@@ -90,7 +90,9 @@ The policies shipped by default in Rancher aim to provide a trade-off between se
 - `calico-apiserver`
 - `calico-system`
 - `cattle-alerting`
+- `cattle-capi-system`
 - `cattle-csp-adapter-system`
+- `cattle-elemental-system`
 - `cattle-epinio-system`
 - `cattle-externalip-system`
 - `cattle-fleet-local-system`
@@ -106,23 +108,29 @@ The policies shipped by default in Rancher aim to provide a trade-off between se
 - `cattle-monitoring-system`
 - `cattle-neuvector-system`
 - `cattle-prometheus`
+- `cattle-provisioning-capi-system`
+- `cattle-resources-system`
 - `cattle-sriov-system`
 - `cattle-system`
+- `cattle-turtles-system`
 - `cattle-ui-plugin-system`
 - `cattle-windows-gmsa-system`
 - `cert-manager`
 - `cis-operator-system`
+- `compliance-operator-system`
 - `fleet-default`
 - `fleet-local`
-- `ingress-nginx`
 - `istio-system`
 - `kube-node-lease`
 - `kube-public`
 - `kube-system`
 - `longhorn-system`
 - `rancher-alerting-drivers`
+- `rancher-compliance-system`
 - `security-scan`
+- `sr-operator-system`
 - `tigera-operator`
+- `traefik`
 
 Rancher、Rancher 拥有的一些 Chart 以及 RKE2 和 K3s 发行版都使用这些命名空间。列出的命名空间的一个子集已经在内置的 Rancher `rancher-restricted` 策略中被豁免，用于下游集群。有关运行 Rancher 所需的所有豁免的完整模板，请参阅此[准入配置示例](../../../reference-guides/rancher-security/psa-restricted-exemptions.md)。
 

@@ -16,7 +16,7 @@ To use Rancher to install an [RKE](https://rancher.com/docs/rke/latest/en/) Kube
 
 For details on configuring the Nutanix AOS node template, refer to the [Nutanix AOS node template configuration reference.](../../../../../reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/nutanix.md)
 
-For details on configuring RKE Kubernetes clusters in Rancher, refer to the [cluster configuration reference.](../../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)
+For details on configuring RKE Kubernetes clusters in Rancher, refer to the cluster configuration reference.
 
 - [Preparation in Nutanix AOS](#preparation-in-nutanix-aos)
 - [Creating a Nutanix AOS Cluster](#creating-a-nutanix-aos-cluster)
@@ -74,7 +74,7 @@ Use Rancher to create a Kubernetes cluster in Nutanix AOS.
 1. Click **Nutanix**.
 1. Enter a **Cluster Name**, then click **Continue**.
 1. Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users who can access the cluster. Use the **Role** drop-down to set permissions for each user.
-1. Use **Cluster Options** to choose the version of Kubernetes that will be installed, what network provider will be used, and whether you want to enable project network isolation. To see more cluster options, click on **Show advanced options**. For help configuring the cluster, refer to the [RKE cluster configuration reference.](../../../../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md)
+1. Use **Cluster Options** to choose the version of Kubernetes that will be installed, what network provider will be used, and whether you want to enable project network isolation. To see more cluster options, click on **Show advanced options**. For help configuring the cluster, refer to the RKE cluster configuration reference.
 1. Add one or more node pools to your cluster. Each node pool uses a node template to provision new nodes. For more information about node pools, including best practices for assigning Kubernetes roles to the nodes, see [this section.](../use-new-nodes-in-an-infra-provider.md#node-pools)
 1. Review your options to confirm they're correct. Then click **Create**.
 
@@ -85,7 +85,7 @@ You can access your cluster after its state is updated to **Active**.
 **Active** clusters are assigned two Projects:
 
 - `Default`, containing the `default` namespace
-- `System`, containing the `cattle-system`, `ingress-nginx`, `kube-public`, and `kube-system` namespaces
+- `System`, containing the `cattle-system`, `traefik`, `kube-public`, and `kube-system` namespaces
 
 ## Optional Next Steps
 

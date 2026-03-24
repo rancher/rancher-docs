@@ -6,7 +6,7 @@ title: DNS
 
 请确保你配置了正确的 kubeconfig（例如，为 Rancher HA 配置了 `export KUBECONFIG=$PWD/kube_config_cluster.yml`）或通过 UI 使用了嵌入式 kubectl。
 
-在运行 DNS 检查之前，请检查集群的[默认 DNS 提供商](../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#默认-dns-提供商)，并确保[覆盖网络正常运行](networking.md#检查覆盖网络是否正常运行)，因为这也可能导致 DNS 解析（部分）失败。
+Before running the DNS checks, make sure that [the overlay network is functioning correctly](networking.md#check-if-overlay-network-is-functioning-correctly) for your DNS provider as this can also be the reason why DNS resolution (partly) fails.
 
 ## 检查 DNS pod 是否正在运行
 
@@ -199,7 +199,7 @@ services:
 
 :::
 
-请参阅[使用 YAML 编辑集群](../../reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration.md#使用-yaml-编辑集群)了解如何应用此修改。集群配置完成后，你必须删除 kube-dns pod 以激活 pod 中的新设置：
+请参阅使用 YAML 编辑集群了解如何应用此修改。集群配置完成后，你必须删除 kube-dns pod 以激活 pod 中的新设置：
 
 ```
 kubectl delete pods -n kube-system -l k8s-app=kube-dns

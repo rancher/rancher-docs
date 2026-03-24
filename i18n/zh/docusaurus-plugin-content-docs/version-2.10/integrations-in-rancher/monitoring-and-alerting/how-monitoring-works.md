@@ -206,12 +206,13 @@ Prometheus 直接抓取以下 Kubernetes 组件：
 
 - kubelet\*
 - ingress-nginx\*\*
+- Traefik\*\*
 - coreDns/kubeDns
 - kube-api-server
 
 \* 你可以选择通过 `hardenedKubelet.enabled` 来使用 PushProx，但这不是默认设置。
 
-\*\* RKE 和 RKE2 集群默认部署 ingress-nginx，并将其视为内部 Kubernetes 组件。
+\*\* For RKE clusters, ingress-nginx is deployed by default and treated as an internal Kubernetes component. For RKE2 clusters, Traefik is deployed by default and treated as an internal Kubernetes component.
 
 
 ### 基于 Kubernetes 发行版抓取指标
@@ -228,10 +229,11 @@ Prometheus 直接抓取以下 Kubernetes 组件：
 | kube-proxy | rkeProxy.enabled | rke2Proxy.enabled | kubeAdmProxy.enabled | k3sServer.enabled |
 | kubelet | 收集 kubelet 直接公开的指标 | 收集 kubelet 直接公开的指标 | 收集 kubelet 直接公开的指标 | 收集 kubelet 直接公开的指标 |
 | ingress-nginx* | 收集 kubelet 直接公开的指标，由 rkeIngressNginx.enabled 公开 | 收集 kubelet 直接公开的指标，由 rke2IngressNginx.enabled 公开 | 不可用 | 不可用 |
+| Traefik* | Collects metrics directly exposed by kubelet | Collects metrics directly exposed by kubelet, Exposed by rke2IngressNginx.enabled	| Not available	| Not available |
 | coreDns/kubeDns | 收集 coreDns/kubeDns 直接公开的指标 | 收集 coreDns/kubeDns 直接公开的指标 | 收集 coreDns/kubeDns 直接公开的指标 | 收集 coreDns/kubeDns 直接公开的指标 |
 | kube-api-server | 收集 kube-api-server 直接公开的指标 | 收集 kube-api-server 直接公开的指标 | 收集 kube-appi-server 直接公开的指标 | 收集 kube-api-server 直接公开的指标 |
 
-\* RKE 和 RKE2 集群默认部署 ingress-nginx，并将其视为内部 Kubernetes 组件。
+\* For RKE clusters, ingress-nginx is deployed by default and treated as an internal Kubernetes component. For RKE2 clusters, Traefik is deployed by default and treated as an internal Kubernetes component.
 
 ### 名词解释
 
@@ -241,5 +243,6 @@ Prometheus 直接抓取以下 Kubernetes 组件：
 - **kube-proxy**：内部 Kubernetes 组件，用于监控 API server 的 pod/service 更改以保持网络最新状态。
 - **kubelet**：内部 Kubernetes 组件，用于为 pod 监视节点上的 API server 并确保这些 pod 能运行。
 - **ingress-nginx**：用于 Kubernetes 的 Ingress controller，使用 NGINX 作为反向代理和负载均衡器。
+- **Traefik:** An Ingress controller for Kubernetes that can be used as a reverse proxy and load balancer.
 - **coreDns/kubeDns**：负责 DNS 的内部 Kubernetes 组件。
 - **kube-api-server**：负责为其他 master 组件公开 API 的主要内部 Kubernetes 组件。
