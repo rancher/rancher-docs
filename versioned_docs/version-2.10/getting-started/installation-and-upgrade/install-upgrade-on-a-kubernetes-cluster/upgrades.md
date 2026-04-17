@@ -210,14 +210,6 @@ Alternatively, it's possible to export the current values to a file and referenc
 
 Log into Rancher to confirm that the upgrade succeeded.
 
-:::tip
-
-Having network issues following upgrade?
-
-See [Restoring Cluster Networking](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/namespace-migration.md).
-
-:::
-
 ## Known Upgrade Issues
 
 A list of known issues for each Rancher version can be found in the release notes on [GitHub](https://github.com/rancher/rancher/releases) and on the [Rancher forums.](https://forums.rancher.com/c/announcements/12)
