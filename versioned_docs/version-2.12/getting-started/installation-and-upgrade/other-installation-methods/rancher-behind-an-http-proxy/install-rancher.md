@@ -10,8 +10,6 @@ Now that you have a running RKE2/K3s cluster, you can install Rancher in it. For
 
 ### Install the Helm CLI
 
-<DeprecationHelm2 />
-
 Install the [Helm](https://helm.sh/docs/intro/install/) CLI on a host where you have a kubeconfig to access your Kubernetes cluster:
 
 ```

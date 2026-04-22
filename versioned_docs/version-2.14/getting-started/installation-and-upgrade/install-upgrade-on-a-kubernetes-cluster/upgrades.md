@@ -62,10 +62,6 @@ The `CATTLE_AGENT_IMAGE` override is intended only as a temporary workaround for
 
 The upgrade instructions assume you are using Helm 3.
 
-<DeprecationHelm2 />
-
-For migration of installs started with Helm 2, refer to the official [Helm 2 to 3 migration docs.](https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/) The [Helm 2 upgrade page here](https://github.com/rancher/rancher-docs/tree/main/archived_docs/en/version-2.0-2.4/getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/upgrades/helm2.md) provides a copy of the older upgrade instructions that used Helm 2, and it is intended to be used if upgrading to Helm 3 is not feasible.
-
 ### For air-gapped installs: Populate private registry
 
 For [air-gapped installs only,](../other-installation-methods/air-gapped-helm-cli-install/air-gapped-helm-cli-install.md) collect and populate images for the new Rancher server version. Follow the guide to [populate your private registry](../other-installation-methods/air-gapped-helm-cli-install/publish-images.md) with the images for the Rancher version that you want to upgrade to.

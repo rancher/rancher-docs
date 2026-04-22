@@ -145,18 +145,6 @@ Before you can perform the upgrade, you must prepare your air gapped environment
     --set cainjector.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-cainjector
     ```
 
-    <DeprecationHelm2 />
-    
-    The Helm 2 command is as follows:
-
-    ```plain
-    helm template ./cert-manager-v0.12.0.tgz --output-dir . \
-    --name cert-manager --namespace cert-manager \
-    --set image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-controller
-    --set webhook.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-webhook
-    --set cainjector.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-cainjector
-    ```
-
 1. Download the required CRD file for cert-manager (old and new)
 
     ```plain
