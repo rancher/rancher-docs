@@ -216,6 +216,92 @@ Using this field on [default GlobalRoles](#configuring-default-global-permission
 
 :::
 
+#### GlobalRole Permissions in Specific Namespaces
+
+GlobalRoles can grant access to resources in specific namespaces through two fields, `namespacedRules` and `inheritedNamespacedRules`. The first, `namespacedRules`, is used to provide access to namespaces within the management cluster.
+
+For example, the following GlobalRole when assigned to a user would allow that user to read secrets in the namespace `my-secrets-namespace` on the management cluster.
+
+```yaml
+apiVersion: management.cattle.io/v3
+kind: GlobalRole
+displayName: Secret Reader
+metadata:
+  name: secret-reader
+namespacedRules:
+  my-secrets-namespace:
+    - apiGroups:
+      - ""
+      resources:
+      - secrets
+      verbs:
+      - "get"
+      - "list"
+      - "watch"
+```
+
+The second field, `inheritedNamespacedRules`, works similarly, but is intended for namespaces within all downstream clusters. The following example shows a GlobalRole that gives full access to the `cattle-monitoring-system` namespace on every cluster.
+
+```yaml
+apiVersion: management.cattle.io/v3
+kind: GlobalRole
+displayName: Edit Monitoring User
+metadata:
+  name: monitoring-role
+inheritedNamespacedRules:
+  cattle-monitoring-system:
+    - apiGroups:
+      - "*"
+      resources:
+      - "*"
+      verbs:
+      - "*"
+```
+
+If a cluster does not have the namespace `cattle-monitoring-system`, then no permissions will be provided. If the namespace is then created later on the cluster, the permissions will automatically be added for the user bound to the above GlobalRole.
+
+Both fields are maps of whose keys are namespaces and values are an array of PolicyRules. That way, multiple namespaces and rules per namespace can be specified.
+
+#### GlobalRole Permissions for Fleet Workspaces
+
+GlobalRoles can grant access to Fleet workspaces in each downstream cluster with the field `inheritedFleetWorkspacePermissions`. This allows users to deploy Fleet resources in all workspaces except `fleet-local`. The field is made up of two parts: 
+
+- `resourceRules` which grants rules to Fleet resources
+- `workspaceVerbs` which grants permissions to the cluster-wide `fleetworkspace` resources.
+
+Example:
+
+```yaml
+apiVersion: management.cattle.io/v3
+kind: GlobalRole
+metadata:
+  name: fleet-permissions
+inheritedClusterRoles:
+   - cluster-owner
+inheritedFleetWorkspacePermissions:
+  resourceRules:
+    - apiGroups:
+        - fleet.cattle.io
+      resources:
+        - clusterregistrationtokens
+        - gitreporestrictions
+        - clusterregistrations
+        - clusters
+        - gitrepos
+        - bundles
+        - clustergroups
+      verbs:
+        - "*"
+  workspaceVerbs:
+    - get
+    - list
+    - update
+    - create
+    - delete
+    - patch
+    - fleetaddcluster
+```
+
 ### Configuring Default Global Permissions
 
 If you want to restrict the default permissions for new users, you can remove the `user` permission as default role and then assign multiple individual permissions as default instead. Conversely, you can also add administrative permissions on top of a set of other standard permissions.
