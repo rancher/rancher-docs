@@ -185,12 +185,12 @@ After you successfully set up these resources, you can install the extensions fr
 ### Importing and Installing Extensions in an Air-gapped Environment
 
 1. Find the address of the container image repository that you want to import as an extension. You should import and use the latest tagged version of the image to ensure you receive the latest features and security updates.
-  - **(Optional)** If the container image is private: [Create](../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) a registry secret within the `cattle-ui-plugin-system` namespace. Enter the domain of the image address in the **Registry Domain Name** field.
+    - **(Optional)** If the container image is private: [Create](../how-to-guides/new-user-guides/kubernetes-resources-setup/secrets.md) a registry secret within the `cattle-ui-plugin-system` namespace. Enter the domain of the image address in the **Registry Domain Name** field.
 1. Click **☰**, then select **Extensions**, under **Configuration**.
 1. On the top right, click **⋮ > Manage Extension Catalogs**.
 1. Select the **Import Extension Catalog** button.
 1. Enter the image address in the **Catalog Image Reference** field.
-  * **(Optional)** If the container image is private, select the secret you just created from the **Pull Secrets** drop-down menu.
+    - **(Optional)** If the container image is private, select the secret you just created from the **Pull Secrets** drop-down menu.
 1. Click **Load**. The extension will now be **Pending**.
 1. Return to the **Extensions** page.
 1. Select the **Available** tab, and click **Reload** to make sure that the list of extensions is up to date.
