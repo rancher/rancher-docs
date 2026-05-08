@@ -33,7 +33,7 @@ To use a premade dashboard, go to [https://grafana.com/grafana/dashboards](https
 To use your own dashboard:
 
 1. Click on the link to open Grafana. On the cluster detail page, click **Monitoring**.
-1. Log in to Grafana. Note: The default Admin username and password for the Grafana instance is `admin/prom-operator`. Alternative credentials can also be supplied on deploying or upgrading the chart.
+1. Log in to Grafana. Note: The default Admin username and password for the Grafana instance is `admin` and `prom-operator`. Alternative credentials can also be supplied on deploying or upgrading the chart.
 
     :::note
 
@@ -113,7 +113,7 @@ Note that the RBAC roles exposed by the Monitoring chart to add Grafana Dashboar
 1. On the **Clusters** page, go to the cluster where you want to configure the Grafana namespace and click **Explore**.
 1. In the left navigation bar, click **Monitoring**.
 1. Click **Grafana**.
-1. Log in to Grafana. Note: The default Admin username and password for the Grafana instance is `admin/prom-operator`. Alternative credentials can also be supplied on deploying or upgrading the chart.
+1. Log in to Grafana. Note: The default Admin username and password for the Grafana instance is `admin` and `prom-operator`. Alternative credentials can also be supplied on deploying or upgrading the chart.
 
     :::note
 
