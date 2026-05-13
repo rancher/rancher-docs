@@ -234,7 +234,7 @@ docker stop <original-rancher-container>
 
 :::note
 
-If you wish to keep the original Rancher environment running, you can also restart the cattle-cluster-agent pods on each cluster connected to your Rancher environment.
+If clusters do not automatically reconnect to the new environment after you have redirected traffic, for example if there is a delay in scaling down the original Rancher instance, you can also restart the cattle-cluster-agent pods on each cluster connected to your Rancher environment.
 
 ```bash
 kubectl rollout restart deployment cattle-cluster-agent -n cattle-system
