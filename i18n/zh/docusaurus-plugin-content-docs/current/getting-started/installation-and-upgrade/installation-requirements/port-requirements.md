@@ -236,19 +236,24 @@ import CommonPortsTable from '../../../shared-files/_common-ports-table.md';
 
 | 类型 | 协议 | 端口范围 | 源/目标 | 规则类型 |
 |-----------------|:--------:|:-----------:|------------------------|:---------:|
-| SSH | TCP | 22 | 0.0.0.0/0 | 入站 |
-| HTTP | TCP | 80 | 0.0.0.0/0 | 入站 |
-| 自定义 TCP 规则 | TCP | 443 | 0.0.0.0/0 | 入站 |
-| 自定义 TCP 规则 | TCP | 2376 | 0.0.0.0/0 | 入站 |
+| SSH | TCP | 22 | 0.0.0.0/0 and ::/0 | 入站 |
+| HTTP | TCP | 80 | 0.0.0.0/0 and ::/0 | 入站 |
+| 自定义 TCP 规则 | TCP | 443 | 0.0.0.0/0 and ::/0 | 入站 |
+| 自定义 TCP 规则 | TCP | 8443 | 0.0.0.0/0 and ::/0 | 入站 |
+| 自定义 TCP 规则 | TCP | 2376 | 0.0.0.0/0 and ::/0 | 入站 |
 | 自定义 TCP 规则 | TCP | 2379-2380 | sg-xxx (rancher-nodes) | 入站 |
 | 自定义 UDP 规则 | UDP | 4789 | sg-xxx (rancher-nodes) | 入站 |
-| 自定义 TCP 规则 | TCP | 6443 | 0.0.0.0/0 | 入站 |
+| 自定义 TCP 规则 | TCP | 6443 | 0.0.0.0/0 and ::/0 | 入站 |
 | 自定义 UDP 规则 | UDP | 8472 | sg-xxx (rancher-nodes) | 入站 |
+| 自定义 TCP 规则 | TCP | 179 | sg-xxx (rancher-nodes) | 入站 |
+| 自定义 TCP 规则 | TCP | 5473 | sg-xxx (rancher-nodes) | 入站 |
+| 自定义 TCP 规则 | TCP | 9345 | sg-xxx (rancher-nodes) | 入站 |
+| 自定义 TCP 规则 | TCP | 9796 | sg-xxx (rancher-nodes) | 入站 |
 | 自定义 TCP 规则 | TCP | 10250-10252 | sg-xxx (rancher-nodes) | 入站 |
 | 自定义 TCP 规则 | TCP | 10256 | sg-xxx (rancher-nodes) | 入站 |
-| 自定义 TCP 规则 | TCP | 30000-32767 | 0.0.0.0/0 | 入站 |
-| 自定义 UDP 规则 | UDP | 30000-32767 | 0.0.0.0/0 | 入站 |
-| 所有流量 | 全部 | 全部 | 0.0.0.0/0 | 出站 |
+| 自定义 TCP 规则 | TCP | 30000-32767 | 0.0.0.0/0 and ::/0 | 入站 |
+| 自定义 UDP 规则 | UDP | 30000-32767 | 0.0.0.0/0 and ::/0 | 入站 |
+| 所有流量 | 全部 | 全部 | 0.0.0.0/0 and ::/0 | 出站 |
 
 ### 打开 SUSE Linux 端口
 

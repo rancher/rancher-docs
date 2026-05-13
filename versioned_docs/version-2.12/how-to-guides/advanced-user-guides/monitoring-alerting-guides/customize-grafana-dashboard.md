@@ -20,7 +20,7 @@ To see the links to the external monitoring UIs, including Grafana dashboards, y
 1. In the left navigation menu, click **Monitoring.**
 1. Click **Grafana.** The Grafana dashboard should open in a new tab.
 1. Go to the log in icon in the lower left corner and click **Sign In.**
-1. Log in to Grafana. The default Admin username and password for the Grafana instance is `admin/prom-operator`. (Regardless of who has the password, cluster administrator permission in Rancher is still required access the Grafana instance.) Alternative credentials can also be supplied on deploying or upgrading the chart.
+1. Log in to Grafana. The default Admin username and password for the Grafana instance is `admin` and `prom-operator`. (Regardless of who has the password, cluster administrator permission in Rancher is still required access the Grafana instance.) Alternative credentials can also be supplied on deploying or upgrading the chart.
 
 
 ### Getting the PromQL Query Powering a Grafana Panel

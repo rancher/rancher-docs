@@ -243,15 +243,18 @@ When using the [AWS EC2 node driver](../../../how-to-guides/new-user-guides/laun
 | SSH             |   TCP    |     22      | 0.0.0.0/0 and ::/0     |  Inbound  |
 | HTTP            |   TCP    |     80      | 0.0.0.0/0 and ::/0     |  Inbound  |
 | Custom TCP Rule |   TCP    |     443     | 0.0.0.0/0 and ::/0     |  Inbound  |
+| Custom TCP Rule |   TCP    |    8443     | 0.0.0.0/0 and ::/0     |  Inbound  |
 | Custom TCP Rule |   TCP    |    2376     | 0.0.0.0/0 and ::/0     |  Inbound  |
 | Custom TCP Rule |   TCP    |    6443     | 0.0.0.0/0 and ::/0     |  Inbound  |
 | Custom TCP Rule |   TCP    |     179     | sg-xxx (rancher-nodes) |  Inbound  |
+| Custom TCP Rule |   TCP    |    5473     | sg-xxx (rancher-nodes) |  Inbound  |
 | Custom TCP Rule |   TCP    |    9345     | sg-xxx (rancher-nodes) |  Inbound  |
 | Custom TCP Rule |   TCP    |  2379-2380  | sg-xxx (rancher-nodes) |  Inbound  |
 | Custom TCP Rule |   TCP    | 10250-10252 | sg-xxx (rancher-nodes) |  Inbound  |
 | Custom TCP Rule |   TCP    |    10256    | sg-xxx (rancher-nodes) |  Inbound  |
 | Custom UDP Rule |   UDP    |    4789     | sg-xxx (rancher-nodes) |  Inbound  |
 | Custom UDP Rule |   UDP    |    8472     | sg-xxx (rancher-nodes) |  Inbound  |
+| Custom TCP Rule |   TCP    |    9796     | sg-xxx (rancher-nodes) |  Inbound  |
 | Custom TCP Rule |   TCP    | 30000-32767 | 0.0.0.0/0 and ::/0     |  Inbound  |
 | Custom UDP Rule |   UDP    | 30000-32767 | 0.0.0.0/0 and ::/0     |  Inbound  |
 | All traffic     |   All    |     All     | 0.0.0.0/0 and ::/0     | Outbound  |

@@ -31,11 +31,17 @@ _Cluster roles_ are roles that you can assign to users, granting them access to 
 
 - **Cluster Owner:**
 
-    These users have full control over the cluster and all resources in it.
+  These users have full control over the cluster and all resources in it.
 
 - **Cluster Member:**
 
-    These users can view most cluster level resources and create new projects.
+  These users can view most cluster level resources and create new projects.
+
+  :::warning
+  
+  When a Cluster Member creates a project, the user is automatically assigned [Project Owner privileges](#project-roles). This grants them comprehensive control over the project and its associated resources, including permissions to deploy workloads. Without enforced [Pod Security Standards (PSS) and Pod Security Admission (PSA)](../pod-security-standards.md), a Cluster Member is able to execute privileged containers in the cluster.
+  
+  :::
 
 #### Custom Cluster Roles
 
