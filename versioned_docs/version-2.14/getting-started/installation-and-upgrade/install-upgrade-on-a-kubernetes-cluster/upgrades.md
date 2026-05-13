@@ -26,6 +26,31 @@ Review the list of known issues for each Rancher version, which can be found in 
 
 Note that upgrades _to_ or _from_ any chart in the [rancher-alpha repository](../resources/choose-a-rancher-version.md#helm-chart-repositories) aren't supported.
 
+### Upgrade Path
+
+:::important
+
+**Important:** The only tested and supported Rancher upgrade path between minor versions (e.g. v2.13.x to v2.14.x) is to upgrade from the latest available patch version of your current running minor release to the latest available patch version of the next minor release.
+
+Before initiating an upgrade, verify that you are running the most recent patch release of your current version.
+
+You can query the available chart versions with the Helm CLI:
+
+1. Update your local Helm repo cache.
+
+    ```
+    helm repo update
+    ```
+
+1. Search for available versions in your [specific repository](../resources/choose-a-rancher-version.md#helm-chart-repositories) (e.g., rancher-stable):
+
+    ```
+    helm repo search rancher-<CHART_REPO>/rancher --versions
+    ```
+
+If your installation is not on the latest patch version of the current minor release, you must upgrade to that version before proceeding to the next minor version.
+:::
+
 ### Helm Version
 
 :::important
@@ -170,17 +195,17 @@ There will be more values that are listed with this command. This is just an exa
 
 :::
 
-:::tip 
+:::tip
 
-Your deployment name may vary; for example, if you're deploying Rancher through the AWS Marketplace, the deployment name is 'rancher-stable'. 
-Thus: 
+Your deployment name may vary; for example, if you're deploying Rancher through the AWS Marketplace, the deployment name is 'rancher-stable'.
+Thus:
 ```
 helm get values rancher-stable -n cattle-system
 
 hostname: rancher.my.org
 ```
 
-::: 
+:::
 
 If you are upgrading cert-manager to the latest version from v1.5 or below, follow the [cert-manager upgrade docs](../resources/upgrade-cert-manager.md#option-c-upgrade-cert-manager-from-versions-15-and-below) to learn how to upgrade cert-manager without needing to perform an uninstall or reinstall of Rancher. Otherwise, follow the [steps to upgrade Rancher](#steps-to-upgrade-rancher) below.
 
@@ -203,17 +228,17 @@ The above is an example, there may be more values from the previous step that ne
 
 :::
 
-:::tip 
+:::tip
 
-If you deploy Rancher through the AWS Marketplace, the deployment name is 'rancher-stable'. 
-Thus: 
+If you deploy Rancher through the AWS Marketplace, the deployment name is 'rancher-stable'.
+Thus:
 ```
 helm upgrade rancher-stable rancher-<CHART_REPO>/rancher \
   --namespace cattle-system \
   --set hostname=rancher.my.org
 ```
 
-::: 
+:::
 
 Alternatively, it's possible to export the current values to a file and reference that file during upgrade. For example, to only change the Rancher version:
 
@@ -223,7 +248,7 @@ Alternatively, it's possible to export the current values to a file and referenc
     ```
 1. Update only the Rancher version:
 
-    
+
     ```
     helm upgrade rancher rancher-<CHART_REPO>/rancher \
       --namespace cattle-system \
