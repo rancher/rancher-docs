@@ -262,6 +262,12 @@ If a cluster does not have the namespace `cattle-monitoring-system`, then no per
 
 Both fields are maps of whose keys are namespaces and values are an array of PolicyRules. That way, multiple namespaces and rules per namespace can be specified.
 
+:::note Notes:
+
+This field alone does not provide access to the cluster directly. Users still need to be provided permissions to access the cluster, either via `inheritedClusterRoles` or ClusterRoleTemplateBindings.
+
+:::
+
 #### GlobalRole Permissions for Fleet Workspaces
 
 GlobalRoles can grant access to Fleet workspaces in each downstream cluster with the field `inheritedFleetWorkspacePermissions`. This allows users to deploy Fleet resources in all workspaces except `fleet-local`. The field is made up of two parts: 
