@@ -35,7 +35,7 @@ Note that upgrades _to_ or _from_ any chart in the [rancher-alpha repository](..
 
 **Important:** The only tested and supported Rancher upgrade path between minor versions (e.g. v2.9.x to v2.10.x) is to upgrade from the latest available patch version of your current running minor release to the latest available patch version of the next minor release.
 
-Before initiating an upgrade, verify that you are running the most recent patch release of your current version.
+Before initiating a minor version upgrade, verify that you are running the most recent patch release of your current version.
 
 You can query the available chart versions with the Helm CLI:
 
@@ -48,7 +48,7 @@ You can query the available chart versions with the Helm CLI:
 1. Search for available versions in your [specific repository](../resources/choose-a-rancher-version.md#helm-chart-repositories) (e.g., rancher-stable):
 
     ```
-    helm repo search rancher-<CHART_REPO>/rancher --versions
+    helm search repo rancher-<CHART_REPO>/rancher --versions
     ```
 
 If your installation is not on the latest patch version of the current minor release, you must upgrade to that version before proceeding to the next minor version.
