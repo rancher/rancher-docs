@@ -78,66 +78,137 @@ kubectl -n kube-system get endpoints kube-scheduler -o jsonpath='{.metadata.anno
 
 ## Ingress Controller
 
-The default Ingress Controller is Traefik and is deployed as a DaemonSet in the `traefik` namespace. The pods are only scheduled to nodes with the `worker` role.
+The default Ingress Controller is Traefik and is deployed as a DaemonSet in the `kube-system` namespace. The pods are only scheduled to nodes with the `worker` role.
 
 Check if the pods are running on all nodes:
 
 ```
-kubectl -n traefik get pods -o wide
+kubectl -n kube-system get pods -o wide
 ```
 
-Example output:
+Example RKE2 output:
 
 ```
-kubectl -n traefik get pods -o wide
+kubectl -n kube-system get pods -o wide
 NAME                                    READY     STATUS    RESTARTS   AGE       IP               NODE
-default-http-backend-797c5bc547-kwwlq   1/1       Running   0          17m       x.x.x.x          worker-1
-traefik-4qd64                           1/1       Running   0          14m       x.x.x.x          worker-1
-traefik-8wxhm                           1/1       Running   0          13m       x.x.x.x          worker-0
+local-path-provisioner-xxxxxxxxxx-xxxxx 1/1       Running   0          17m       x.x.x.x          worker-1
+rke2-traefik-xxxxxxxxxx-xxxxx           1/1       Running   0          14m       x.x.x.x          worker-1
+svclb-rke2-traefik-xxxxxxxx-xxxxx       1/1       Running   0          13m       x.x.x.x          worker-0
+...
+```
+
+Example K3s output:
+
+```
+kubectl -n kube-system get pods -o wide
+NAME                                    READY     STATUS    RESTARTS   AGE       IP               NODE
+local-path-provisioner-xxxxxxxxxx-xxxxx 1/1       Running   0          17m       x.x.x.x          worker-1
+traefik-xxxxxxxxxx-xxxxx                1/1       Running   0          14m       x.x.x.x          worker-1
+svclb-traefik-xxxxxxxx-xxxxx            1/1       Running   0          13m       x.x.x.x          worker-0
+...
 ```
 
 If a pod is unable to run (Status is not **Running**, Ready status is not showing `1/1` or you see a high count of Restarts), check the pod details, logs and namespace events.
 
 ### Pod details
 
+RKE2 example:
+
 ```
-kubectl -n traefik describe pods -l app=traefik
+kubectl -n kube-system describe pods -l app.kubernetes.io/name=rke2-traefik
+```
+
+K3s example:
+
+```
+kubectl -n kube-system describe pods -l app.kubernetes.io/name=traefik
 ```
 
 ### Pod container logs
 
-The below command can show the logs of all the pods labeled "app=traefik", but it will display only 10 lines of log because of the restrictions of the `kubectl logs` command. Refer to `--tail` of `kubectl logs -h` for more information.
+The below command can show the logs of all the pods labeled "app.kubernetes.io/name=rke2-traefik" if using RKE2 or "app.kubernetes.io/name=traefik" if using K3s, but it will display only 10 lines of log because of the restrictions of the `kubectl logs` command. Refer to `--tail` of `kubectl logs -h` for more information.
+
+RKE2 example:
 
 ```
-kubectl -n traefik logs -l app=traefik
+kubectl -n kube-system logs -l app.kubernetes.io/name=rke2-traefik
+```
+
+K3s example:
+
+```
+kubectl -n kube-system logs -l app.kubernetes.io/name=traefik
 ```
 
 If the full log is needed, specify the pod name in the trailing command:
 
 ```
-kubectl -n traefik logs <pod name>
+kubectl -n kube-system logs <pod name>
 ```
 
 ### Namespace events
 
 ```
-kubectl -n traefik get events
+kubectl -n kube-system get events
 ```
 
 ### Debug logging
 
 To enable debug logging:
 
+RKE2 example:
+
 ```
-kubectl -n traefik patch ds traefik --type='json' -p='[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--v=5"}]'
+cat <<EOF | kubectl apply -f -
+apiVersion: helm.cattle.io/v1
+kind: HelmChartConfig
+metadata:
+  name: rke2-traefik
+  namespace: kube-system
+spec:
+  valuesContent: |-
+    additionalArguments:
+      - "--log.level=DEBUG"
+EOF
+```
+
+K3s example:
+
+```
+cat <<EOF | kubectl apply -f -
+apiVersion: helm.cattle.io/v1
+kind: HelmChartConfig
+metadata:
+  name: traefik
+  namespace: kube-system
+spec:
+  valuesContent: |-
+    logs:
+      general:
+        level: "DEBUG"
+EOF
 ```
 
 ### Check configuration
 
 Retrieve generated configuration in each pod:
 
+RKE2 example for manual Traefik configuration file check:
+
 ```
-kubectl -n traefik get pods -l app=traefik --no-headers -o custom-columns=.NAME:.metadata.name | while read pod; do kubectl -n traefik exec $pod -- cat /etc/nginx/nginx.conf; done
+kubectl exec -n kube-system pod/traefik-xxxxxxxxx-xxxxx -- cat /var/lib/rancher/rke2/server/manifests/rke2-traefik-config.yaml
+```
+
+K3s example for manual Traefik configuration file check:
+
+```
+kubectl exec -n kube-system pod/traefik-xxxxxxxxx-xxxxx -- cat /var/lib/rancher/k3s/server/manifests/k3s-traefik-config.yaml
+```
+
+RKE2/K3s example for Traefik CLI argument configuration check:
+
+```
+kubectl get pod traefik-xxxxxxxxx-xxxxx -n kube-system -o jsonpath='{.spec.containers[0].args}'
 ```
 
 ## Rancher agents
