@@ -116,6 +116,19 @@ By default, Rancher collects logs for control plane components and node componen
 
 ## Troubleshooting
 
+### Resource Exhaustion of `inotify` Watchers and File Descriptors
+
+When enabling the **Logging** app on Linux systems that heavily monitor the filesystem, you may encounter `Too many open files` or `CrashLoopBackOff` failures related to applications that leverage `inotify` to watch for file changes.
+
+This happens because the Linux kernel caps the number of files a user can open and the number of directory paths a subsystem can watch simultaneously. To resolve this, you must explicitly increase your `inotify` system limits.
+
+Below are example commands an admin user can run to increase system limits for `inotify` user instances and watches:
+
+```shell
+sysctl -w fs.inotify.max_user_instances=8192
+sysctl -w fs.inotify.max_user_watches=524288
+```
+
 ### The Logging Buffer Overloads Pods
 
 Depending on your configuration, the default buffer size may be too large and cause pod failures. One way to reduce the load is to lower the logger's flush interval. This prevents logs from overfilling the buffer. You can also add more flush threads to handle moments when many logs are attempting to fill the buffer at once.
