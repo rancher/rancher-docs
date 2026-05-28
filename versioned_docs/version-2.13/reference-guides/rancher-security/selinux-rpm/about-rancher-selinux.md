@@ -77,23 +77,16 @@ Install the RPM:
 yum -y install rancher-selinux
 ```
 
-## Configuring the Logging and Monitoring Applications to Work with SELinux
+## Configuring Applications to Work with SELinux
 
 :::note Requirement:
 
-Logging v2 and Monitoring v2 were tested with SELinux on RHEL/CentOS 8, 9, 10, and Tumbleweed.
+Logging v2, Monitoring v2, and Rancher AI were tested with SELinux on RHEL/CentOS 8, 9, 10, and Tumbleweed.
 
 :::
 
-Applications do not automatically work once the `rancher-selinux` RPM is installed on the host. They need to be configured to run in an allowed SELinux container domain provided by the RPM. 
+The `rancher-selinux` RPM currently covers the following charts: **Logging**, **Monitoring**, and **Rancher AI**.
 
-To configure the `rancher-logging` or the `rancher-monitoring` chart to be SELinux aware, change `global.seLinux.enabled` to true in the `values.yaml` when installing the charts.
+Applications do not automatically work once the `rancher-selinux` RPM is installed on the host. They need to be configured to run in an allowed SELinux container domain provided by the RPM.
 
-## Rancher AI SELinux Policies
-
-Starting with `rancher-selinux` v0.9, SELinux policies are included for Rancher AI components:
-
-- **rancher-ai-agent** — runs under the `rancher_aiagent_container_t` SELinux domain
-- **rancher-ai-mcp** — runs under the `rancher_aimcp_container_t` SELinux domain
-
-These policies are supported on all platforms: EL9, EL10, Fedora 42, and MicroOS.
+To configure these charts to be SELinux aware, change `global.seLinux.enabled` to true in the `values.yaml` when installing the charts.
