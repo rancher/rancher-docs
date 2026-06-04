@@ -20,6 +20,7 @@ The following is a list of feature flags available in Rancher. If you've upgrade
 
 - `aggregated-roletemplates`: Use cluster role aggregation architecture for RoleTemplates, ProjectRoleTemplateBindings, and ClusterRoleTemplateBindings. See [RoleTemplate Aggregation](../../../how-to-guides/advanced-user-guides/enable-experimental-features/role-template-aggregation.md) for more information.
 - `clean-stale-secrets`: Removes stale secrets from the `cattle-impersonation-system` namespace. This slowly cleans up old secrets which are no longer being used by the impersonation system.
+- `cluster-shell`: Enables the Rancher cluster shell feature, which allows users to access a kubectl shell directly from the Rancher UI to manage cluster resources.
 - `continuous-delivery`: Allows Fleet GitOps to be disabled separately from Fleet. See [Continuous Delivery.](../../../how-to-guides/advanced-user-guides/enable-experimental-features/continuous-delivery.md) for more information.
 - `fleet`: The Rancher provisioning framework in v2.6 and later requires Fleet. The flag will be automatically enabled when you upgrade, even if you disabled this flag in an earlier version of Rancher. See [Continuous Delivery with Fleet](../../../integrations-in-rancher/fleet/fleet.md) for more information.
 - `harvester`: Manages access to the Virtualization Management page, where users can navigate directly to Harvester clusters and access the Harvester UI. See [Harvester Integration Overview](../../../integrations-in-rancher/harvester/overview.md) for more information.
@@ -51,6 +52,8 @@ You can enable this feature on a per-cluster basis. For more information, please
 :::
 
 - `multi-cluster-management`: Allows multi-cluster provisioning and management of Kubernetes clusters. This flag can only be set at install time. It can't be enabled or disabled later.
+- `node-shell`: Enables the Rancher node shell feature, which allows users to SSH into provisioned cluster nodes directly from the Rancher UI.
+- `pod-shell`: Enables the Rancher pod shell feature, which allows users to execute shell commands inside pods directly from the Rancher UI.
 - `rke2`: Enables provisioning RKE2 clusters. This flag is enabled by default.
 - `token-hashing`: Enables token hashing. Once enabled, existing tokens will be hashed and all new tokens will be hashed automatically with the SHA256 algorithm. Once a token is hashed it can't be undone. This flag can't be disabled after its enabled. See [API Tokens](../../../api/api-tokens.md#token-hashing) for more information.
 - `uiextension`: Enables UI extensions. This flag is enabled by default. Enabling or disabling the flag forces the Rancher pod to restart. The first time this flag is set to `Active`, it creates a CRD and enables the controllers and endpoints necessary for the feature to work. If set to `Disabled`, it disables the previously mentioned controllers and endpoints. Setting `uiextension` to `Disabled` has no effect on the CRD -- it does not create a CRD if it does not yet exist, nor does it delete the CRD if it already exists. 
@@ -63,6 +66,7 @@ The following table shows the availability and default values for some feature f
 | ----------------------------- | ------------- | ------------ | --------------- | ---------------------- |
 | `aggregated-roletemplates` | `Disabled` | Experimental | v2.11.0 | This flag value is locked on install and can't be changed. |
 | `clean-stale-secrets` | `Active` | GA | v2.10.2 | |
+| `cluster-shell` | `Active` | GA | v2.15.0 | |
 | `continuous-delivery` | `Active` | GA | v2.6.0 | |
 | `external-rules` | v2.7.14: `Disabled`, v2.8.5: `Active` | Removed | v2.7.14, v2.8.5 | This flag affected [external `RoleTemplate` behavior](../../../how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-role-based-access-control-rbac/cluster-and-project-roles.md#external-roletemplate-behavior). It is removed in Rancher v2.9.0 and later as the behavior is enabled by default. |
 | `fleet`  | `Active` | Can no longer be disabled | v2.6.0 | |
@@ -71,6 +75,8 @@ The following table shows the availability and default values for some feature f
 | `imperative-api-extension` | `Active` | GA | v2.11.0 | |
 | `legacy` | `Disabled` for new installs, `Active` for upgrades | GA | v2.6.0 | |
 | `managed-system-upgrade-controller` | `Active` | GA | v2.10.0 | |
+| `node-shell` | `Active` | GA | v2.15.0 | |
+| `pod-shell` | `Active` | GA | v2.15.0 | |
 | `rke2` | `true` | Experimental | v2.6.0 | |
 | `token-hashing` | `Disabled` for new installs, `Active` for upgrades | GA | v2.6.0 | |
 | `uiextension` | `Active` | GA | v2.9.0 | |
