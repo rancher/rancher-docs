@@ -12,6 +12,7 @@ Rancher 将在 GitHub 上发布的 Rancher 的[发版说明](https://github.com/
 
 | Patch 版本                                                      | 发布时间           |
 | --------------------------------------------------------------- | ------------------ |
+| [2.11.15](https://github.com/rancher/rancher/releases/tag/v2.11.15) | 2026 年 06 月 24 日 |
 | [2.11.14](https://github.com/rancher/rancher/releases/tag/v2.11.14) | 2026 年 05 月 27 日 |
 | [2.11.13](https://github.com/rancher/rancher/releases/tag/v2.11.13) | 2026 年 04 月 30 日 |
 | [2.11.12](https://github.com/rancher/rancher/releases/tag/v2.11.12) | 2026 年 03 月 25 日 |
