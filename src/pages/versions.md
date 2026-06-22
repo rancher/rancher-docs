@@ -123,7 +123,7 @@ Here you can find links to supporting documentation for previous versions of Ran
     <th>Prime</th>
     <th>Community</th>
   </tr>
-    <tr>
+   <tr>
     <td><b>v2.14.2</b></td>
     <td><a href="https://ranchermanager.docs.rancher.com/v2.14">Documentation</a></td>
     <td><a href="https://github.com/rancher/rancher/releases/tag/v2.14.2">Release Notes</a></td>
