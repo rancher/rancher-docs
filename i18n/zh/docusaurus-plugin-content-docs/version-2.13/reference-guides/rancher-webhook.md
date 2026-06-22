@@ -20,6 +20,7 @@ Rancher 将 Rancher-Webhook 作为单独的 deployment 和服务部署在 local 
 
 | Rancher Version | Webhook Version | Availability in Prime | Availability in Community |
 |-----------------|-----------------|-----------------------|---------------------------|
+| v2.13.7         |     v0.9.6      | &check;               | &cross;                   |
 | v2.13.6         |     v0.9.5      | &check;               | &cross;                   |
 | v2.13.5         |     v0.9.4      | &check;               | &cross;                   |
 | v2.13.4         |     v0.9.3      | &check;               | &cross;                   |
