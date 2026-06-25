@@ -153,6 +153,12 @@ kubectl patch cronjob neuvector-updater-pod -n cattle-neuvector-system --patch '
 
 - All NeuVector components are deployable on a cluster in an air-gapped environment without any additional configuration needed.
 
+:::note
+
+When installing NeuVector through Rancher in an air-gapped environment, point the Helm chart's registry value at your internal registry (e.g. Harbor) rather than the default public registry. The built-in CVE database **Updater** CronJob will fail silently if it cannot reach the public NeuVector update endpoint — this is expected in air-gapped setups and does not indicate an installation problem.
+
+:::
+
 ## Support Limitations
 
 * Only admins and cluster owners are currently supported.
