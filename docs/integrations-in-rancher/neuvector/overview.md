@@ -155,7 +155,11 @@ kubectl patch cronjob neuvector-updater-pod -n cattle-neuvector-system --patch '
 
 :::note
 
-When installing NeuVector through Rancher in an air-gapped environment, point the Helm chart's registry value at your internal registry (e.g. Harbor) rather than the default public registry. The built-in CVE database **Updater** CronJob will fail silently if it cannot reach the public NeuVector update endpoint — this is expected in air-gapped setups and does not indicate an installation problem.
+When installing NeuVector through Rancher in an air-gapped environment, point the Helm chart's registry value at your internal registry (e.g. Harbor) rather than the default public registry.
+
+Note that the **Updater** CronJob does not download CVE data — it simply restarts the scanner deployment, forcing Kubernetes to re-pull the `neuvector/scanner` image ([source](https://open-docs.neuvector.com/scanning/updating)). The CVE database itself lives inside that image, rebuilt nightly by NeuVector from public feeds such as NVD and various OS/language vendor advisories ([source](https://open-docs.neuvector.com/scanning/cve_sources)).
+
+In an air-gapped cluster, the scanner image in your internal registry only contains whatever CVE data existed the last time you pulled and re-pushed it — nothing updates it automatically once it's mirrored. Because the CronJob's only job is to trigger a restart, it has no way to detect that the database is outdated, so it will report success indefinitely even if the underlying data is months old. Treat refreshing the mirrored scanner image as a recurring task, not a one-time setup step.
 
 :::
 
