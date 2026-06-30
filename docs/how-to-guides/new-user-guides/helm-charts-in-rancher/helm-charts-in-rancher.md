@@ -214,6 +214,10 @@ To install and deploy a chart:
 
 Rancher and Partner charts may have extra configurations available through custom pages or questions.yaml files. However, all chart installations can modify the values.yaml and other basic settings. After you click **Install**, a Helm operation job is deployed, and the console for the job is displayed.
 
+:::note
+If the cluster is configured to use an [authenticated registry](../../advanced-user-guides/rancher-deployment-guides/authenticated-private-registries.md#authenticated-registries-and-chart-installation), Rancher automatically injects the required pull secrets into the Helm values of charts from the built-in Rancher catalog. This does not apply to charts from custom repositories.
+:::
+
 To view all recent changes, click **Apps > Recent Operations** in the left navigation menu. From there you can view the calls, conditions, events, and logs.
 
 After installing a chart, you can view it by clicking **Apps > Installed Apps** in the left navigation menu. You can upgrade or delete the installation, and see further details. Upgrading uses the same forms and values as you saw during initial installation.

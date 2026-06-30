@@ -59,7 +59,7 @@ When Rancher is installed on an air gapped Kubernetes cluster, there are two rec
 
 :::note
 
-If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](../../installation-references/helm-chart-options.md#external-tls-termination).
+If you want to terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](../../installation-references/helm-chart-options.md#external-tls-termination).
 
 :::
 
@@ -72,19 +72,16 @@ If you want terminate SSL/TLS externally, see [TLS termination on an External Lo
 
 When setting up the Rancher Helm template, there are several options in the Helm chart that are designed specifically for air gap installations.
 
-| Chart Option            | Chart Value                      | Description   |
-| ----------------------- | -------------------------------- | ---- |
-| `certmanager.version` | `<version>` | Configure proper Rancher TLS issuer depending of running cert-manager version. |
-| `systemDefaultRegistry` | `<REGISTRY.YOURDOMAIN.COM:PORT>` | Configure Rancher server to always pull from your private registry when provisioning clusters.  |
-| `useBundledSystemChart` | `true`                           | Configure Rancher server to use the packaged copy of Helm system charts. The [system charts](https://github.com/rancher/system-charts) repository contains all the catalog items required for features such as monitoring, logging, alerting and global DNS. These [Helm charts](https://github.com/rancher/system-charts) are located in GitHub, but since you are in an air gapped environment, using the charts that are bundled within Rancher is much easier than setting up a Git mirror. |
+| Chart Option                        | Chart Value                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|-------------------------------------|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `certmanager.version`               | `<version>`                      | Configure proper Rancher TLS issuer depending of running cert-manager version.                                                                                                                                                                                                                                                                                                                                                                                              |
+| `systemDefaultRegistry`             | `<REGISTRY.YOURDOMAIN.COM:PORT>` | Configure Rancher server to always pull from your private registry when deploying resources onto the local cluster and provisioning downstream clusters.                                                                                                                                                                                                                                                                                                                    |
+| `systemRegistryInheritsPullSecrets` | `<BOOLEAN>`                      | Sets the default value of the `system-default-registry-pull-secrets` global setting to the same image pull secrets used for the Rancher installation. This can be used when node-level registry configuration is not possible, and when these credentials should be propagated to all downstream clusters by default.                                                                                                                                                       |
+| `useBundledSystemChart`             | `true`                           | Configure the Rancher server to use the packaged copy of Helm system charts. The [system charts](https://github.com/rancher/charts) repository contains all the catalog items required for features such as monitoring, logging, alerting and global DNS. These [Helm charts](https://github.com/rancher/charts) are located in GitHub. However, in an air gapped environment using the charts that are bundled within Rancher is much easier than setting up a Git mirror. |
 
 ### 3. Fetch the Cert-Manager Chart
 
-Based on the choice your made in [2. Choose your SSL Configuration](#2-choose-your-ssl-configuration), complete one of the procedures below.
-
-#### Option A: Default Self-Signed Certificate
-
-By default, Rancher generates a CA and uses cert-manager to issue the certificate for access to the Rancher server interface.
+Based on the choice you made in [2. Choose your SSL Configuration](#2-choose-your-ssl-configuration), you may need to install `cert-manager`. 
 
 :::note
 
@@ -120,7 +117,34 @@ Download the required CRD file for cert-manager:
 
 Copy the fetched charts to a system that has access to the Rancher server cluster to complete installation.
 
-#### 1. Install cert-manager
+#### 2. Install Rancher
+
+First, refer to [Adding TLS Secrets](../../resources/add-tls-secrets.md) to publish the certificate files so Rancher and the ingress controller can use them.
+
+Then, create the namespace for Rancher using kubectl:
+
+```plain
+kubectl create namespace cattle-system
+```
+
+Next, install Rancher, declaring your chosen options. Use the reference table below to replace each placeholder. Rancher needs to be configured to use the private registry in order to provision any Rancher launched Kubernetes clusters or Rancher tools.
+
+
+Placeholder | Description
+------------|-------------
+`<VERSION>` | The version number of the output tarball.
+`<RANCHER.YOURDOMAIN.COM>` | The DNS name you pointed at your load balancer.
+`<REGISTRY.YOURDOMAIN.COM:PORT>` | The DNS name for your private registry.
+`<CERTMANAGER_VERSION>` | Cert-manager version running on k8s cluster.
+
+Then, based on the choice you made in [2. Choose your SSL Configuration](#2-choose-your-ssl-configuration), configure the Rancher certificates appropriately
+
+<Tabs>
+<TabItem value="Default Self-Signed Certificate">
+
+##### 1. Install cert-manager
+
+By default, Rancher generates a CA and uses cert-manager to issue the certificate for access to the Rancher server interface.
 
 Install cert-manager with the same options you would use to install the chart. Remember to set the `image.repository` option to pull the image from your private registry.
 
@@ -160,25 +184,7 @@ If you are using self-signed certificates, install cert-manager:
 
 </details>
 
-#### 2. Install Rancher
-
-First, refer to [Adding TLS Secrets](../../resources/add-tls-secrets.md) to publish the certificate files so Rancher and the ingress controller can use them.
-
-Then, create the namespace for Rancher using kubectl:
-
-```plain
-kubectl create namespace cattle-system
-```
-
-Next, install Rancher, declaring your chosen options. Use the reference table below to replace each placeholder. Rancher needs to be configured to use the private registry in order to provision any Rancher launched Kubernetes clusters or Rancher tools.
-
-
-Placeholder | Description
-------------|-------------
-`<VERSION>` | The version number of the output tarball.
-`<RANCHER.YOURDOMAIN.COM>` | The DNS name you pointed at your load balancer.
-`<REGISTRY.YOURDOMAIN.COM:PORT>` | The DNS name for your private registry.
-`<CERTMANAGER_VERSION>` | Cert-manager version running on k8s cluster.
+##### 2. Install Rancher
 
 ```plain
    helm install rancher ./rancher-<VERSION>.tgz \
@@ -191,8 +197,8 @@ Placeholder | Description
 ```
 
 **Optional**: To install a specific Rancher version, set the `image.tag` value, example: `--set image.tag=v2.10.3`
-
-#### Option B: Certificates From Files Using Kubernetes Secrets
+</TabItem>
+<TabItem value="Certificates From Files Using Kubernetes Secrets">
 
 ##### 1. Create Secrets
 
@@ -232,7 +238,59 @@ If you are using a Private CA signed cert, add `--set privateCA=true` following 
     --set useBundledSystemChart=true # Use the packaged Rancher system charts
 ```
 
-The installation is complete.
+</TabItem>
+</Tabs>
+
+### Optional: Installing Rancher with an authenticated Global Default Registry
+
+Starting with `v2.15.0`, Rancher is able to leverage an authenticated `systemDefaultRegistry` using Kubernetes image pull secrets. This configuration differs from the top level `imagePullSecrets` and associated `image.repository` values offered, which only impact the primary Rancher deployment. 
+
+Pointing the `systemDefaultRegistry` value to a host which requires authentication, and properly configuring the `system-default-registry-pull-secrets` global setting, will ensure that all subsequent core components deployed by Rancher also authenticate with and pull from your private registry. 
+
+This configuration also ensures that all downstream clusters pull core system images from the configured `systemDefaultRegistry` host by default. 
+
+The default registry pull secrets may also be configured after installation. For more detailed information on how Rancher works with authenticated global registries and pull secrets, refer to [this page](/how-to-guides/advanced-user-guides/rancher-deployment-guides/authenticated-private-registries)
+
+
+#### Using an Authenticated Global Registry with Pull Secrets
+
+If your private registry requires authentication, and you cannot configure credentials at the node level, or want to automatically distribute credentials to downstream clusters by default, you can configure both the `system-default-registry` and `system-default-registry-pull-secrets` settings.
+
+
+There are two main approaches to configure default pull secrets this when installing Rancher using Helm:
+
+**Configuration 1: `systemRegistryInheritsPullSecrets` Helm option**
+
+When set to `true`, Rancher sets the default value of the `system-default-registry-pull-secrets` global setting to the same image pull secrets used for the Rancher installation itself. The setting remains editable post-install via **Global Settings** in the Rancher UI.
+
+```plain
+helm install rancher ./rancher-<VERSION>.tgz \
+  --namespace cattle-system \
+  --set hostname=<RANCHER.YOURDOMAIN.COM> \
+  --set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \
+  --set systemRegistryInheritsPullSecrets=true \
+  --set useBundledSystemChart=true
+```
+
+**Configuration 2: `CATTLE_BASE_REGISTRY_PULL_SECRETS` environment variable**
+
+This environment variable can be used to set the default value of the `system-default-registry-pull-secrets` global setting to arbitrary pull secret(s) located in the `cattle-system` namespace. The setting remains editable post-install via **Global Settings** in the Rancher UI.
+
+```plain
+helm install rancher ./rancher-<VERSION>.tgz \
+  --namespace cattle-system \
+  --set hostname=<RANCHER.YOURDOMAIN.COM> \
+  --set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \
+  --set extraEnv[0].name=CATTLE_BASE_REGISTRY_PULL_SECRETS \
+  --set extraEnv[0].value='<SECRET1>,<SECRET2>' \
+  --set useBundledSystemChart=true
+```
+
+:::note
+The above configurations set the _default_ values for the `system-default-registry` and `system-default-registry-pull-secrets` settings. 
+
+Before these settings can be reset to an empty value, the associated helm value (e.g. `systemDefaultRegistry`) or environment variable (e.g. `CATTLE_BASE_REGISTRY_PULL_SECRETS`) must be removed from the Helm deployment.
+:::
 
 ## Additional Resources
 
@@ -242,3 +300,4 @@ These resources could be helpful when installing Rancher:
 - [Rancher Helm chart options](../../installation-references/helm-chart-options.md)
 - [Adding TLS secrets](../../resources/add-tls-secrets.md)
 - [Troubleshooting Rancher Kubernetes Installations](../../install-upgrade-on-a-kubernetes-cluster/troubleshooting.md)
+- [Using Authenticated Global Default Registries](/how-to-guides/advanced-user-guides/rancher-deployment-guides/authenticated-private-registries)
