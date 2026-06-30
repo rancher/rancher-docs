@@ -46,7 +46,7 @@ However, this is not the case with namespaces created **_outside_** of Rancher's
 will assign a resource quota that has a **zero** amount for any resource that requested more capacity than what remains in the project.
 
 To create a namespace in an existing project via `kubectl`, use the `field.cattle.io/projectId` annotation. To override the default
-requested quota limit, use the `field.cattle.io/resourceQuota` annotation.
+requested quota limit, use the `field.cattle.io/resourceQuota` annotation. This can of course also be [done through the dashboard](override-default-limit-in-namespaces.md).
 
 Note that Rancher will only override limits for resources that are defined on the project quota.
 
@@ -70,3 +70,34 @@ The following table explains the key differences between the two quota types.
 | Applies to projects and namespaces.                        | Applies to namespaces only.                              |
 | Creates resource pool for all namespaces in a project.     | Applies static resource limits to individual namespaces. |
 | Applies resource quotas to namespaces through propagation. | Applies only to the assigned namespace.
+
+### The `field.cattle.io/resourceQuota` annotation
+
+The `field.cattle.io/resourceQuota` annotation is a JSON object with a single key, `limit`.  The value of this key is a JSON object again, supporting the following keys, each of which maps to a [resource quota type](resource-quota-types.md).  Their values are always strings, except for `extended`, whose value is a JSON object with arbitrary resource references as its keys, and strings as values.
+
+| Field Key                | Resource Quota Type      |
+| ------------------------ | ------------------------ |
+| `limitsCpu`              | CPU Limit                |
+| `requestsCpu`            | CPU Reservation          |
+| `limitsMemory`           | Memory Limit             |
+| `requestsMemory`         | Memory Reservation       |
+| `requestsStorage`        | Storage Reservation      |
+| `servicesLoadBalancers`  | Services Load Balancers  |
+| `servicesNodePorts`      | Services Node Ports      |
+| `pods`                   | Pods                     |
+| `services`               | Services                 |
+| `configmaps`             | ConfigMaps               |
+| `persistentVolumeClaims` | Persistent Volume Claims |
+| `replicationControllers` | Replications Controllers |
+| `secrets`                | Secrets                  |
+| `extended`               | Custom\*\*               |
+
+```
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    [...]
+    field.cattle.io/resourceQuota: '{"limit":{"limitsCpu":"100m","extended":{"requests.nvidia.com/gpu":"4"}}}'
+[...]
+```
