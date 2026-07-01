@@ -659,6 +659,7 @@ const sidebars = {
               },
               items: [
                     "how-to-guides/advanced-user-guides/rancher-deployment-guides/configure-with-existing-gateway",
+                    "how-to-guides/advanced-user-guides/rancher-deployment-guides/authenticated-private-registries",
               ],
             },
             {

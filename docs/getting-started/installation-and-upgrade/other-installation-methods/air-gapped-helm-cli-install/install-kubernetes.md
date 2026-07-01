@@ -68,6 +68,12 @@ Note, at this time only secure registries are supported with K3s (SSL with custo
 
 For more information on private registries configuration file for K3s, refer to the [K3s documentation.](https://rancher.com/docs/k3s/latest/en/installation/private-registry/)
 
+:::note
+
+The `registries.yaml` approach configures registry credentials at the node level and is specific to K3s and RKE2. If you are installing Rancher on a different Kubernetes distribution, or if node-level registry configuration is not feasible in your environment, see [Helm Chart Options for Air Gap Installations](install-rancher-ha.md#helm-chart-options-for-air-gap-installations) for an alternative using the `systemRegistryInheritsPullSecrets` Helm option.
+
+:::
+
 ## 3. Install K3s
 
 Rancher needs to be installed on a supported Kubernetes version. To find out which versions of Kubernetes are supported for your Rancher version, refer to the [Rancher Support Matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/).
