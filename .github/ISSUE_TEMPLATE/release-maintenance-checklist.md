@@ -4,6 +4,13 @@ about: Track tasks that need to be done every release.
 title: '<VERSION> - Rancher Manager Release Maintenance Task Checklist'
 ---
 
+> [!IMPORTANT]
+> Hello, our team is currently in the process of consolidating our Rancher documentation repositories. With this change, the contents of this repository will be moved to [rancher/rancher-product-docs](https://github.com/rancher/rancher-product-docs).
+>
+> We understand this is a significant change and disruption to the standard process and wish to note our team is here to assist in any way it can to make the transition process straight forward. Going forward, we kindly ask that any new issue reports or contributions be made to the rancher-product-docs repository instead. If you wish to make contributions, please refer to our updated [README](https://github.com/rancher/rancher-product-docs/blob/main/README.md) for guidance.
+>
+> Please note as part of this change, we will be dropping the Chinese portion of the site. No URLs for the Community documentation site are expected to change.
+
 This issue is to track tasks that need to be done every release regardless of whether the release has new feature content or not.
 
 - [ ] Create a new branch for the release. Release-specific updates should use this branch as its base

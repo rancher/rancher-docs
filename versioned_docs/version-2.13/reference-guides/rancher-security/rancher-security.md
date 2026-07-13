@@ -104,7 +104,8 @@ Each self-assessment guide is accompanied by a hardening guide. These guides wer
 | Standalone RKE2 | Kubernetes v1.26 | CIS v1.8 | [Link](https://docs.rke2.io/security/cis_self_assessment18) | [Link](https://docs.rke2.io/security/hardening_guide) |
 | Standalone RKE2 | Kubernetes v1.27 | CIS v1.9 | [Link](https://docs.rke2.io/security/cis_self_assessment19) | [Link](https://docs.rke2.io/security/hardening_guide) |
 | Standalone RKE2 | Kubernetes v1.28 | CIS v1.10 | [Link](https://docs.rke2.io/security/cis_self_assessment110) | [Link](https://docs.rke2.io/security/hardening_guide) |
-| Standalone RKE2 | Kubernetes v1.29 and above | CIS v1.11 | [Link](https://docs.rke2.io/security/cis_self_assessment111) | [Link](https://docs.rke2.io/security/hardening_guide) |
+| Standalone RKE2 | Kubernetes v1.29 to v1.31 | CIS v1.11 | [Link](https://docs.rke2.io/security/cis_self_assessment111) | [Link](https://docs.rke2.io/security/hardening_guide) |
+| Standalone RKE2 | Kubernetes v1.32 and above | CIS v1.12 | [Link](https://docs.rke2.io/security/cis_self_assessment112) | [Link](https://docs.rke2.io/security/hardening_guide) |
 
 ### K3s Guides
 
@@ -113,4 +114,6 @@ Each self-assessment guide is accompanied by a hardening guide. These guides wer
 | Standalone K3s | Kubernetes v1.26 | CIS v1.8 | [Link](https://docs.k3s.io/security/self-assessment-1.8) | [Link](https://docs.k3s.io/security/hardening-guide) |
 | Standalone K3s | Kubernetes v1.27 | CIS v1.9 | [Link](https://docs.k3s.io/security/self-assessment-1.9) | [Link](https://docs.k3s.io/security/hardening-guide) |
 | Standalone K3s | Kubernetes v1.28 | CIS v1.10 | [Link](https://docs.k3s.io/security/self-assessment-1.10) | [Link](https://docs.k3s.io/security/hardening-guide) |
-| Standalone K3s | Kubernetes v1.29 and above | CIS v1.11 | [Link](https://docs.k3s.io/security/self-assessment-1.11) | [Link](https://docs.k3s.io/security/hardening-guide) |
+| Standalone K3s | Kubernetes v1.29 to v1.31 | CIS v1.11 | [Link](https://docs.k3s.io/security/self-assessment-1.11) | [Link](https://docs.k3s.io/security/hardening-guide) |
+| Standalone K3s | Kubernetes v1.32 and above | CIS v1.12 | [Link](https://docs.k3s.io/security/self-assessment-1.12) | [Link](https://docs.k3s.io/security/hardening-guide) |
+
