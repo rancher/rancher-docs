@@ -89,9 +89,13 @@ The UI won't offer `monitoring-admin`, `monitoring-edit`, and `monitoring-view` 
 
     1.3 In the **Name** field, create a custom role such as `View Monitoring`, `Edit Monitoring`, or `Admin Monitoring`.
 
-    1.4 Click **Inherit From > Add Resource**, then select the Kubernetes role, as applicable, from the dropdown.
+    1.4 Click **Grant Resources > Add Resource**, then select `get` as `Verbs` and `services/proxy` as `Resource`
 
-    1.5 Click **Create**.
+    1.5 Click **Grant Resources > Add Resource**, then select `list` as `Verbs` and `endpoints` as `Resource`  
+
+    1.6 Click **Inherit From > Add Resource**, then select the Kubernetes role, as applicable, from the dropdown.
+
+    1.7 Click **Create**.
 
 
   2. Assign the custom role to a new user:
