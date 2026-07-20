@@ -284,7 +284,7 @@ helm install rancher rancher-<CHART_REPO>/rancher \
   --set bootstrapPassword=admin \
   --set ingress.tls.source=letsEncrypt \
   --set letsEncrypt.email=me@example.org \
-  --set letsEncrypt.ingress.class=nginx
+  --set ingress.ingressClassName=nginx
 ```
 
 If you are installing an alpha version, Helm requires adding the `--devel` option to the install command:
