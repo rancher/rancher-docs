@@ -37,6 +37,17 @@ To prepare a custom benchmark version ConfigMap, suppose we want to add a custom
         - "etcd"
         - "policies"
     ```
+
+1. (Optional) To enrich XCCDF report output with benchmark metadata, create a `metadata.yaml` file in the same directory and include it in the ConfigMap. For example:
+
+    ```yaml
+    title: "My Custom Benchmark"
+    publisher: "My Organization"
+    platform: "cpe:/a:kubernetes:kubernetes"
+    ```
+
+    Refer to [Configuration Reference](./configuration-reference.md#xccdf-metadata-for-custom-benchmarks) for all supported fields.
+
 1. Upload this directory to your Kubernetes Cluster by creating a ConfigMap:
 
     ```yaml
