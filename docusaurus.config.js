@@ -184,6 +184,11 @@ module.exports = {
             current: {
               label: "Latest",
             },
+            '2.15': {
+              label: 'v2.15 (Preview)',
+              path: 'v2.15',
+              banner: 'unreleased'
+            },
             "2.14": {
               label: 'v2.14',
               path: 'v2.14',
@@ -203,14 +208,16 @@ module.exports = {
               path: "v2.11"
             },
             "2.10": {
-              label: "v2.10",
+              label: "v2.10 (Archived)",
               path: "v2.10",
-              className: 'toArchive'
+              banner: "none",
+              noIndex: true,
             },
             2.9: {
               label: "v2.9 (Archived)",
               path: "v2.9",
               banner: "none",
+              noIndex: true,
             },
             2.8: {
               label: "v2.8 (Archived)",
@@ -646,19 +653,6 @@ module.exports = {
             from: "/v2.11/monitoring-alerting",
           }, // Redirects for dashboard v2.11 Preview (end)
           {
-            // Redirects for dashboard#11114 (start)
-            to: "/v2.10/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-google-oauth",
-            from: "/v2.10/admin-settings/authentication/google",
-          },
-          {
-            to: "/v2.10/how-to-guides/advanced-user-guides/monitoring-v2-configuration-guides",
-            from: "/v2.10/monitoring-alerting/configuration",
-          },
-          {
-            to: "/v2.10/integrations-in-rancher/monitoring-and-alerting",
-            from: "/v2.10/monitoring-alerting",
-          }, // Redirects for dashboard#11114 (end)
-          {
             // Redirects for restructure from PR #234 (start)
             to: "/faq/general-faq",
             from: "/faq",
@@ -889,10 +883,6 @@ module.exports = {
               "/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates",
               "/how-to-guides/advanced-user-guides/authentication-permissions-and-global-configuration/manage-cluster-templates",
             ],
-          },
-          {
-            to: "/v2.10/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
-            from: "/v2.10/how-to-guides/advanced-user-guides/manage-clusters/nodes-and-node-pools",
           },
           {
             to: "/v2.11/how-to-guides/new-user-guides/manage-clusters/nodes-and-node-pools",
