@@ -42,6 +42,32 @@ spec:
         memory: 100Mi 
 ```
 
+### Reconnection backoff
+
+The `cattle-cluster-agent` holds a WebSocket tunnel to the Rancher server and reconnects whenever that tunnel drops. By default it retries every 10 seconds for as long as the cluster is disconnected. On clusters with unreliable or high-latency uplinks, such as edge deployments, a long outage can produce hundreds of failed connection attempts.
+
+Two optional environment variables control the retry timing:
+
+| Variable | Default | Description |
+| -------- | ------- | ----------- |
+| `CATTLE_CONNECT_RETRY_MIN` | `10s` | Delay after the first failed attempt. |
+| `CATTLE_CONNECT_RETRY_MAX` | none | Upper limit for the delay. When set, the delay doubles after each consecutive failure until it reaches this value. |
+
+Both accept a Go duration string, such as `30s`, `5m`, or `1h30m`. A value without a unit, such as `30`, is invalid and the default is used instead. Each delay is randomized by plus or minus 10% so that agents across a fleet do not all reconnect at the same moment.
+
+If you set only `CATTLE_CONNECT_RETRY_MIN`, the agent retries at that fixed interval. If you set both, the delay grows between them. For example, `CATTLE_CONNECT_RETRY_MIN=5s` with `CATTLE_CONNECT_RETRY_MAX=5m` produces delays of 5s, 10s, 20s, 40s, and so on, up to a maximum of 5 minutes.
+
+Set these per cluster using [Agent Environment Vars](../../../reference-guides/cluster-configuration/rancher-server-configuration/rke2-cluster-configuration.md#agent-environment-vars):
+
+```yaml
+spec:
+  agentEnvVars:
+    - name: CATTLE_CONNECT_RETRY_MIN
+      value: 5s
+    - name: CATTLE_CONNECT_RETRY_MAX
+      value: 5m
+```
+
 ### Scheduling rules
 
 The `cattle-cluster-agent` uses either a fixed set of tolerations, or dynamically-added tolerations based on taints applied to the control plane nodes. This structure allows [Taint based Evictions](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/#taint-based-evictions) to work properly for `cattle-cluster-agent`.
