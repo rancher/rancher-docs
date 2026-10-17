@@ -13,6 +13,11 @@ The `rancher-backup` operator is used to backup and restore Rancher on any Kuber
 
 The backup-restore operator needs to be installed in the local cluster, and only backs up the Rancher app. The backup and restore operations are performed only in the local Kubernetes cluster.
 
+:::note
+
+`rancher-backup` handles the backup and restore of Rancher's core components only. It does not include applications deployed from the local cluster repositories, such as `rancher-monitoring` or `rancher-logging`, in the backup process. To back up these applications, consider using third-party tools or manually exporting and redeploying Helm charts and custom resources.
+
+:::
 
 ## Backup and Restore for Rancher installed with Docker
 
