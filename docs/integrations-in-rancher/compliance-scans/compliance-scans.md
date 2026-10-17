@@ -21,7 +21,7 @@ CIS Benchmarks are best practices for the secure configuration of a target syste
 
 ## About the Generated Report
 
-Each scan generates a report can be viewed in the Rancher UI and can be downloaded in CSV format.
+Each scan generates a report that can be viewed in the Rancher UI and downloaded in CSV or XCCDF format.
 
 By default, the CIS Benchmark v1.6 is used.
 
@@ -31,7 +31,18 @@ The Benchmark provides recommendations of two types: Automated and Manual. Recom
 
 Some tests are designated as "Not Applicable." These tests will not be run on any CIS scan because of the way that Rancher provisions RKE2/K3s clusters. For information on how test results can be audited, and why some tests are designated to be not applicable, refer to Rancher's [self-assessment guide](../../reference-guides/rancher-security/rancher-security.md#the-cis-benchmark-and-self-assessment) for the corresponding Kubernetes version.
 
-The report contains the following information:
+### Report Formats
+
+Compliance scan reports can be downloaded in two formats from the Rancher UI:
+
+- **CSV:** A flat file containing all test results for the scan. This is the default download format.
+- **XCCDF (XML):** A per-node report in [XCCDF 1.2](https://csrc.nist.gov/projects/security-content-automation-protocol/specifications/xccdf) format, packaged as a `.zip` file containing one `.xml` file per node in the cluster. XCCDF output is compatible with compliance management tools such as [STIG Manager](https://github.com/nuwcdivnpt/stig-manager) and is suitable for submission to security assessors.
+
+XCCDF output is available for any benchmark format, including CIS and STIG. To include additional metadata in the XCCDF output (such as title, publisher, platform, or STIG-specific check and CCI identifiers), add an optional `metadata.yaml` file to the benchmark's ConfigMap. Refer to [Creating a Custom Benchmark Version](../../how-to-guides/advanced-user-guides/compliance-scan-guides/create-a-custom-compliance-version-to-run.md) for details.
+
+For information on how to download reports in either format, refer to [View Reports](../../how-to-guides/advanced-user-guides/compliance-scan-guides/view-reports.md).
+
+The CSV report contains the following information:
 
 | Column in Report  | Description                                                                                                                                                                             |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
