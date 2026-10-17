@@ -6,6 +6,14 @@ title: "Running on ARM64 Mixed Architecture (Experimental)"
   <link rel="canonical" href="https://ranchermanager.docs.rancher.com/how-to-guides/advanced-user-guides/enable-experimental-features/rancher-on-arm64"/>
 </head>
 
+:::note
+
+ARM64 only is supported
+
+see [Rancher Support Matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-13-1/)
+
+:::
+
 :::caution
 
 Running on an ARM64 mixed architecture platform is currently an experimental feature and is not yet officially supported in Rancher. Therefore, we do not recommend using ARM64 mixed architecture based nodes in a production environment.
